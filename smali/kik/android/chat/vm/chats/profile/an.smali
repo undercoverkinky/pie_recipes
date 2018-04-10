@@ -58,7 +58,7 @@
     invoke-direct {p0}, Lkik/android/chat/vm/e;-><init>()V
 
     .line 37
-    invoke-static {}, Lrx/subjects/a;->l()Lrx/subjects/a;
+    invoke-static {}, Lrx/subjects/a;->m()Lrx/subjects/a;
 
     move-result-object v0
 
@@ -245,11 +245,11 @@
     .line 79
     iget-object v0, p0, Lkik/android/chat/vm/chats/profile/an;->a:Lcom/kik/metrics/c/d;
 
-    invoke-static {}, Lcom/kik/metrics/b/be;->b()Lcom/kik/metrics/b/be$a;
+    invoke-static {}, Lcom/kik/metrics/b/bf;->b()Lcom/kik/metrics/b/bf$a;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/kik/metrics/b/be$a;->a()Lcom/kik/metrics/b/be;
+    invoke-virtual {v1}, Lcom/kik/metrics/b/bf$a;->a()Lcom/kik/metrics/b/bf;
 
     move-result-object v1
 
@@ -274,11 +274,11 @@
     :cond_0
     iget-object v0, p0, Lkik/android/chat/vm/chats/profile/an;->a:Lcom/kik/metrics/c/d;
 
-    invoke-static {}, Lcom/kik/metrics/b/bf;->b()Lcom/kik/metrics/b/bf$a;
+    invoke-static {}, Lcom/kik/metrics/b/bg;->b()Lcom/kik/metrics/b/bg$a;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/kik/metrics/b/bf$a;->a()Lcom/kik/metrics/b/bf;
+    invoke-virtual {v1}, Lcom/kik/metrics/b/bg$a;->a()Lcom/kik/metrics/b/bg;
 
     move-result-object v1
 

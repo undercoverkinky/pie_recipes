@@ -1,5 +1,5 @@
 .class public final Lcom/kik/metrics/b/ad$a;
-.super Lcom/kik/metrics/b/ay;
+.super Lcom/kik/metrics/b/az;
 .source "SourceFile"
 
 
@@ -30,7 +30,7 @@
 
     .prologue
     .line 100
-    invoke-direct {p0}, Lcom/kik/metrics/b/ay;-><init>()V
+    invoke-direct {p0}, Lcom/kik/metrics/b/az;-><init>()V
 
     return-void
 .end method
@@ -90,21 +90,21 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcom/kik/metrics/b/ad;-><init>(Lcom/kik/metrics/b/ay;B)V
+    invoke-direct {v0, p0, v1}, Lcom/kik/metrics/b/ad;-><init>(Lcom/kik/metrics/b/az;B)V
 
     .line 136
-    invoke-virtual {p0, v0}, Lcom/kik/metrics/b/ad$a;->a(Lcom/kik/metrics/b/az;)V
+    invoke-virtual {p0, v0}, Lcom/kik/metrics/b/ad$a;->a(Lcom/kik/metrics/b/ba;)V
 
     .line 137
     return-object v0
 .end method
 
-.method protected final a(Lcom/kik/metrics/b/az;)V
+.method protected final a(Lcom/kik/metrics/b/ba;)V
     .locals 3
 
     .prologue
     .line 142
-    invoke-super {p0, p1}, Lcom/kik/metrics/b/ay;->a(Lcom/kik/metrics/b/az;)V
+    invoke-super {p0, p1}, Lcom/kik/metrics/b/az;->a(Lcom/kik/metrics/b/ba;)V
 
     .line 143
     check-cast p1, Lcom/kik/metrics/b/ad;

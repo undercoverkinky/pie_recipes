@@ -15,11 +15,11 @@
 
 
 # static fields
-.field public static final fab_size_mini:I = 0x7f0a00aa
+.field public static final fab_size_mini:I = 0x7f0a00a8
 
-.field public static final fab_size_normal:I = 0x7f0a00ab
+.field public static final fab_size_normal:I = 0x7f0a00a9
 
-.field public static final labels_text_size:I = 0x7f0a00da
+.field public static final labels_text_size:I = 0x7f0a00d8
 
 
 # direct methods

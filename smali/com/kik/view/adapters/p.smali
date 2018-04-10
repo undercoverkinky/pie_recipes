@@ -303,7 +303,7 @@
     .line 88
     iget-object v1, v0, Lcom/kik/view/adapters/g;->d:Landroid/widget/ImageView;
 
-    const v2, 0x7f0201c1
+    const v2, 0x7f0201b4
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -329,7 +329,7 @@
     .line 92
     iget-object v1, v0, Lcom/kik/view/adapters/g;->d:Landroid/widget/ImageView;
 
-    const v2, 0x7f02020a
+    const v2, 0x7f0201fd
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -356,7 +356,7 @@
 
     .prologue
     .line 105
-    const v0, 0x7f0400fc
+    const v0, 0x7f0400f4
 
     return v0
 .end method

@@ -1635,7 +1635,7 @@
 
     const-string v3, "GcmTickleListenerService.GcmTickleTimeMs"
 
-    invoke-interface {v2, v3}, Lkik/core/interfaces/ad;->v(Ljava/lang/String;)Ljava/lang/Long;
+    invoke-interface {v2, v3}, Lkik/core/interfaces/ad;->u(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v2
 
@@ -1715,7 +1715,7 @@
 
     const-string v3, "GcmTickleListenerService.GcmTickleTimeMs"
 
-    invoke-interface {v2, v3}, Lkik/core/interfaces/ad;->v(Ljava/lang/String;)Ljava/lang/Long;
+    invoke-interface {v2, v3}, Lkik/core/interfaces/ad;->u(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v2
 

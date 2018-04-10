@@ -201,7 +201,7 @@
 
     const-string v1, ":)"
 
-    const v2, 0x7f020345
+    const v2, 0x7f020332
 
     invoke-static {v1, v2}, Lcom/kik/android/b/d;->a(Ljava/lang/String;I)Lcom/kik/android/b/d;
 
@@ -214,7 +214,7 @@
 
     const-string v1, ";)"
 
-    const v2, 0x7f02036b
+    const v2, 0x7f020358
 
     invoke-static {v1, v2}, Lcom/kik/android/b/d;->a(Ljava/lang/String;I)Lcom/kik/android/b/d;
 
@@ -227,7 +227,7 @@
 
     const-string v1, ":("
 
-    const v2, 0x7f02034f
+    const v2, 0x7f02033c
 
     invoke-static {v1, v2}, Lcom/kik/android/b/d;->a(Ljava/lang/String;I)Lcom/kik/android/b/d;
 
@@ -240,7 +240,7 @@
 
     const-string v1, ":D"
 
-    const v2, 0x7f020347
+    const v2, 0x7f020334
 
     invoke-static {v1, v2}, Lcom/kik/android/b/d;->a(Ljava/lang/String;I)Lcom/kik/android/b/d;
 
@@ -253,7 +253,7 @@
 
     const-string v1, ":P"
 
-    const v2, 0x7f020351
+    const v2, 0x7f02033e
 
     invoke-static {v1, v2}, Lcom/kik/android/b/d;->a(Ljava/lang/String;I)Lcom/kik/android/b/d;
 
@@ -266,7 +266,7 @@
 
     const-string v1, ":|"
 
-    const v2, 0x7f020353
+    const v2, 0x7f020340
 
     invoke-static {v1, v2}, Lcom/kik/android/b/d;->a(Ljava/lang/String;I)Lcom/kik/android/b/d;
 
@@ -279,7 +279,7 @@
 
     const-string v1, ":/"
 
-    const v2, 0x7f020357
+    const v2, 0x7f020344
 
     invoke-static {v1, v2}, Lcom/kik/android/b/d;->a(Ljava/lang/String;I)Lcom/kik/android/b/d;
 
@@ -292,7 +292,7 @@
 
     const-string v1, ">:("
 
-    const v2, 0x7f020363
+    const v2, 0x7f020350
 
     invoke-static {v1, v2}, Lcom/kik/android/b/d;->a(Ljava/lang/String;I)Lcom/kik/android/b/d;
 
@@ -305,7 +305,7 @@
 
     const-string v1, ":X"
 
-    const v2, 0x7f02035d
+    const v2, 0x7f02034a
 
     invoke-static {v1, v2}, Lcom/kik/android/b/d;->a(Ljava/lang/String;I)Lcom/kik/android/b/d;
 
@@ -318,7 +318,7 @@
 
     const-string v1, "<3"
 
-    const v2, 0x7f020369
+    const v2, 0x7f020356
 
     invoke-static {v1, v2}, Lcom/kik/android/b/d;->a(Ljava/lang/String;I)Lcom/kik/android/b/d;
 
@@ -331,7 +331,7 @@
 
     const-string v1, "</3"
 
-    const v2, 0x7f020367
+    const v2, 0x7f020354
 
     invoke-static {v1, v2}, Lcom/kik/android/b/d;->a(Ljava/lang/String;I)Lcom/kik/android/b/d;
 
@@ -344,7 +344,7 @@
 
     const-string v1, "B)"
 
-    const v2, 0x7f020341
+    const v2, 0x7f02032e
 
     invoke-static {v1, v2}, Lcom/kik/android/b/d;->a(Ljava/lang/String;I)Lcom/kik/android/b/d;
 
@@ -357,7 +357,7 @@
 
     const-string v1, ":3"
 
-    const v2, 0x7f02035b
+    const v2, 0x7f020348
 
     invoke-static {v1, v2}, Lcom/kik/android/b/d;->a(Ljava/lang/String;I)Lcom/kik/android/b/d;
 
@@ -370,7 +370,7 @@
 
     const-string v1, ":\'("
 
-    const v2, 0x7f020343
+    const v2, 0x7f020330
 
     invoke-static {v1, v2}, Lcom/kik/android/b/d;->a(Ljava/lang/String;I)Lcom/kik/android/b/d;
 
@@ -383,7 +383,7 @@
 
     const-string v1, ":O"
 
-    const v2, 0x7f02034d
+    const v2, 0x7f02033a
 
     invoke-static {v1, v2}, Lcom/kik/android/b/d;->a(Ljava/lang/String;I)Lcom/kik/android/b/d;
 
@@ -396,7 +396,7 @@
 
     const-string v1, ":S"
 
-    const v2, 0x7f020355
+    const v2, 0x7f020342
 
     invoke-static {v1, v2}, Lcom/kik/android/b/d;->a(Ljava/lang/String;I)Lcom/kik/android/b/d;
 
@@ -409,7 +409,7 @@
 
     const-string v1, ":$"
 
-    const v2, 0x7f020349
+    const v2, 0x7f020336
 
     invoke-static {v1, v2}, Lcom/kik/android/b/d;->a(Ljava/lang/String;I)Lcom/kik/android/b/d;
 
@@ -422,7 +422,7 @@
 
     const-string v1, ":*"
 
-    const v2, 0x7f020359
+    const v2, 0x7f020346
 
     invoke-static {v1, v2}, Lcom/kik/android/b/d;->a(Ljava/lang/String;I)Lcom/kik/android/b/d;
 
@@ -435,7 +435,7 @@
 
     const-string v1, ">:)"
 
-    const v2, 0x7f020361
+    const v2, 0x7f02034e
 
     invoke-static {v1, v2}, Lcom/kik/android/b/d;->a(Ljava/lang/String;I)Lcom/kik/android/b/d;
 
@@ -448,7 +448,7 @@
 
     const-string v1, ":E"
 
-    const v2, 0x7f02034b
+    const v2, 0x7f020338
 
     invoke-static {v1, v2}, Lcom/kik/android/b/d;->a(Ljava/lang/String;I)Lcom/kik/android/b/d;
 
@@ -461,7 +461,7 @@
 
     const-string v1, "D:"
 
-    const v2, 0x7f02035f
+    const v2, 0x7f02034c
 
     invoke-static {v1, v2}, Lcom/kik/android/b/d;->a(Ljava/lang/String;I)Lcom/kik/android/b/d;
 
@@ -474,7 +474,7 @@
 
     const-string v1, ":)"
 
-    const v2, 0x7f020346
+    const v2, 0x7f020333
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -487,7 +487,7 @@
 
     const-string v1, ";)"
 
-    const v2, 0x7f02036c
+    const v2, 0x7f020359
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -500,7 +500,7 @@
 
     const-string v1, ":("
 
-    const v2, 0x7f020350
+    const v2, 0x7f02033d
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -513,7 +513,7 @@
 
     const-string v1, ":D"
 
-    const v2, 0x7f020348
+    const v2, 0x7f020335
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -526,7 +526,7 @@
 
     const-string v1, ":P"
 
-    const v2, 0x7f020352
+    const v2, 0x7f02033f
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -539,7 +539,7 @@
 
     const-string v1, ":|"
 
-    const v2, 0x7f020354
+    const v2, 0x7f020341
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -552,7 +552,7 @@
 
     const-string v1, ":/"
 
-    const v2, 0x7f020358
+    const v2, 0x7f020345
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -565,7 +565,7 @@
 
     const-string v1, ">:("
 
-    const v2, 0x7f020364
+    const v2, 0x7f020351
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -578,7 +578,7 @@
 
     const-string v1, ":X"
 
-    const v2, 0x7f02035e
+    const v2, 0x7f02034b
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -591,7 +591,7 @@
 
     const-string v1, "<3"
 
-    const v2, 0x7f02036a
+    const v2, 0x7f020357
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -604,7 +604,7 @@
 
     const-string v1, "</3"
 
-    const v2, 0x7f020368
+    const v2, 0x7f020355
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -617,7 +617,7 @@
 
     const-string v1, "B)"
 
-    const v2, 0x7f020342
+    const v2, 0x7f02032f
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -630,7 +630,7 @@
 
     const-string v1, ":3"
 
-    const v2, 0x7f02035c
+    const v2, 0x7f020349
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -643,7 +643,7 @@
 
     const-string v1, ":\'("
 
-    const v2, 0x7f020344
+    const v2, 0x7f020331
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -656,7 +656,7 @@
 
     const-string v1, ":O"
 
-    const v2, 0x7f02034e
+    const v2, 0x7f02033b
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -669,7 +669,7 @@
 
     const-string v1, ":S"
 
-    const v2, 0x7f020356
+    const v2, 0x7f020343
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -682,7 +682,7 @@
 
     const-string v1, ":$"
 
-    const v2, 0x7f02034a
+    const v2, 0x7f020337
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -695,7 +695,7 @@
 
     const-string v1, ":*"
 
-    const v2, 0x7f02035a
+    const v2, 0x7f020347
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -708,7 +708,7 @@
 
     const-string v1, ">:)"
 
-    const v2, 0x7f020362
+    const v2, 0x7f02034f
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -721,7 +721,7 @@
 
     const-string v1, ":E"
 
-    const v2, 0x7f02034c
+    const v2, 0x7f020339
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -734,7 +734,7 @@
 
     const-string v1, "D:"
 
-    const v2, 0x7f020360
+    const v2, 0x7f02034d
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -751,11 +751,11 @@
 
     const-string v2, "d87e73fd"
 
-    const v3, 0x7f0202ce
+    const v3, 0x7f0202c0
 
-    const v4, 0x7f0202cf
+    const v4, 0x7f0202c1
 
-    const v5, 0x7f0202d0
+    const v5, 0x7f0202c2
 
     invoke-direct/range {v0 .. v5}, Lcom/kik/android/b/g$d;-><init>(Ljava/lang/String;Ljava/lang/String;III)V
 
@@ -770,11 +770,11 @@
 
     const-string v2, "49015869"
 
-    const v3, 0x7f0202d1
+    const v3, 0x7f0202c3
 
-    const v4, 0x7f0202d2
+    const v4, 0x7f0202c4
 
-    const v5, 0x7f0202d3
+    const v5, 0x7f0202c5
 
     invoke-direct/range {v0 .. v5}, Lcom/kik/android/b/g$d;-><init>(Ljava/lang/String;Ljava/lang/String;III)V
 
@@ -789,11 +789,11 @@
 
     const-string v2, "55f986b0"
 
-    const v3, 0x7f0202d4
+    const v3, 0x7f0202c6
 
-    const v4, 0x7f0202d5
+    const v4, 0x7f0202c7
 
-    const v5, 0x7f0202d6
+    const v5, 0x7f0202c8
 
     invoke-direct/range {v0 .. v5}, Lcom/kik/android/b/g$d;-><init>(Ljava/lang/String;Ljava/lang/String;III)V
 
@@ -808,11 +808,11 @@
 
     const-string v2, "d751b6d8"
 
-    const v3, 0x7f020324
+    const v3, 0x7f020311
 
-    const v4, 0x7f020325
+    const v4, 0x7f020312
 
-    const v5, 0x7f020326
+    const v5, 0x7f020313
 
     invoke-direct/range {v0 .. v5}, Lcom/kik/android/b/g$d;-><init>(Ljava/lang/String;Ljava/lang/String;III)V
 
@@ -827,11 +827,11 @@
 
     const-string v2, "12b64657"
 
-    const v3, 0x7f020327
+    const v3, 0x7f020314
 
-    const v4, 0x7f020328
+    const v4, 0x7f020315
 
-    const v5, 0x7f020329
+    const v5, 0x7f020316
 
     invoke-direct/range {v0 .. v5}, Lcom/kik/android/b/g$d;-><init>(Ljava/lang/String;Ljava/lang/String;III)V
 
@@ -846,11 +846,11 @@
 
     const-string v2, "20cd967c"
 
-    const v3, 0x7f02032a
+    const v3, 0x7f020317
 
-    const v4, 0x7f02032b
+    const v4, 0x7f020318
 
-    const v5, 0x7f02032c
+    const v5, 0x7f020319
 
     invoke-direct/range {v0 .. v5}, Lcom/kik/android/b/g$d;-><init>(Ljava/lang/String;Ljava/lang/String;III)V
 
@@ -932,14 +932,14 @@
     iput-object v0, p0, Lcom/kik/android/b/g;->o:Lcom/kik/events/d;
 
     .line 109
-    invoke-static {}, Lrx/subjects/a;->l()Lrx/subjects/a;
+    invoke-static {}, Lrx/subjects/a;->m()Lrx/subjects/a;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/android/b/g;->r:Lrx/subjects/a;
 
     .line 110
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
@@ -1034,7 +1034,7 @@
     sput-object v1, Lcom/kik/android/b/g;->e:Lcom/android/volley/g;
 
     .line 397
-    invoke-static {}, Lcom/kik/util/ct;->a()Lcom/kik/cache/SimpleLruBitmapCache;
+    invoke-static {}, Lcom/kik/util/cp;->a()Lcom/kik/cache/SimpleLruBitmapCache;
 
     move-result-object v0
 
@@ -1911,7 +1911,7 @@
     if-eqz p4, :cond_9
 
     .line 1246
-    new-instance v1, Lkik/android/widget/au;
+    new-instance v1, Lkik/android/widget/ae;
 
     invoke-virtual {v14}, Lcom/kik/message/model/attachments/RenderInstruction;->c()Ljava/lang/Integer;
 
@@ -1933,7 +1933,7 @@
 
     move-object/from16 v5, p5
 
-    invoke-direct/range {v1 .. v7}, Lkik/android/widget/au;-><init>(Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/String;Lkik/android/f/i;IZ)V
+    invoke-direct/range {v1 .. v7}, Lkik/android/widget/ae;-><init>(Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/String;Lkik/android/f/i;IZ)V
 
     .line 1263
     :goto_4
@@ -1996,7 +1996,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f020370
+    const v3, 0x7f02035d
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -3015,7 +3015,7 @@
 
     const/16 v2, 0x64
 
-    invoke-static {p1, v1, v2}, Lcom/kik/util/ct;->b(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap$CompressFormat;I)[B
+    invoke-static {p1, v1, v2}, Lcom/kik/util/cp;->b(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap$CompressFormat;I)[B
 
     move-result-object v1
 

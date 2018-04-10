@@ -642,7 +642,7 @@
 
     const-string v1, "abLastFetched"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->v(Ljava/lang/String;)Ljava/lang/Long;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->u(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v0
 
@@ -662,7 +662,7 @@
 
     const-string v1, "abUpgradeFetchTimestamp"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->v(Ljava/lang/String;)Ljava/lang/Long;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->u(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v0
 

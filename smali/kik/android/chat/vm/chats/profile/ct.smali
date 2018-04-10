@@ -341,21 +341,21 @@
     .line 59
     iget-object v0, p0, Lkik/android/chat/vm/chats/profile/ct;->a:Lcom/kik/metrics/c/d;
 
-    invoke-static {}, Lcom/kik/metrics/b/bd;->b()Lcom/kik/metrics/b/bd$a;
+    invoke-static {}, Lcom/kik/metrics/b/be;->b()Lcom/kik/metrics/b/be$a;
 
     move-result-object v1
 
-    new-instance v2, Lcom/kik/metrics/b/bd$b;
+    new-instance v2, Lcom/kik/metrics/b/be$b;
 
     iget-object v3, p0, Lkik/android/chat/vm/chats/profile/ct;->c:Ljava/lang/String;
 
-    invoke-direct {v2, v3}, Lcom/kik/metrics/b/bd$b;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Lcom/kik/metrics/b/be$b;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Lcom/kik/metrics/b/bd$a;->a(Lcom/kik/metrics/b/bd$b;)Lcom/kik/metrics/b/bd$a;
+    invoke-virtual {v1, v2}, Lcom/kik/metrics/b/be$a;->a(Lcom/kik/metrics/b/be$b;)Lcom/kik/metrics/b/be$a;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/kik/metrics/b/bd$a;->a()Lcom/kik/metrics/b/bd;
+    invoke-virtual {v1}, Lcom/kik/metrics/b/be$a;->a()Lcom/kik/metrics/b/be;
 
     move-result-object v1
 

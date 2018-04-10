@@ -1063,11 +1063,11 @@
     .line 444
     iget-object v0, p0, Lkik/android/chat/fragment/ConversationsBaseFragment;->_metricsService:Lcom/kik/metrics/c/d;
 
-    invoke-static {}, Lcom/kik/metrics/b/ax;->b()Lcom/kik/metrics/b/ax$a;
+    invoke-static {}, Lcom/kik/metrics/b/ay;->b()Lcom/kik/metrics/b/ay$a;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/kik/metrics/b/ax$a;->a()Lcom/kik/metrics/b/ax;
+    invoke-virtual {v1}, Lcom/kik/metrics/b/ay$a;->a()Lcom/kik/metrics/b/ay;
 
     move-result-object v1
 

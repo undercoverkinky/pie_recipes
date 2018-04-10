@@ -36,7 +36,7 @@
 
 .field _groupMembersList:Landroid/widget/ListView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10012a
+        value = 0x7f100131
     .end annotation
 .end field
 
@@ -304,7 +304,7 @@
 
     .line 369
     :cond_0
-    invoke-static {p0}, Lkik/android/chat/fragment/ce;->a(Lkik/android/chat/fragment/KikGroupMembersListFragment;)Ljava/lang/Runnable;
+    invoke-static {p0}, Lkik/android/chat/fragment/cd;->a(Lkik/android/chat/fragment/KikGroupMembersListFragment;)Ljava/lang/Runnable;
 
     move-result-object v0
 
@@ -895,7 +895,7 @@
     :cond_d
     iget-object v0, p0, Lkik/android/chat/fragment/KikGroupMembersListFragment;->x:Landroid/widget/PopupMenu;
 
-    invoke-static {p0, v6, v7, p2}, Lkik/android/chat/fragment/cf;->a(Lkik/android/chat/fragment/KikGroupMembersListFragment;Ljava/util/List;Ljava/util/List;Lkik/core/datatypes/GroupContactInfoHolder;)Landroid/widget/PopupMenu$OnMenuItemClickListener;
+    invoke-static {p0, v6, v7, p2}, Lkik/android/chat/fragment/ce;->a(Lkik/android/chat/fragment/KikGroupMembersListFragment;Ljava/util/List;Ljava/util/List;Lkik/core/datatypes/GroupContactInfoHolder;)Landroid/widget/PopupMenu$OnMenuItemClickListener;
 
     move-result-object v1
 
@@ -1675,7 +1675,7 @@
 
     move-result-object v3
 
-    invoke-static {p0, v0, v1}, Lkik/android/chat/fragment/ci;->a(Lkik/android/chat/fragment/KikGroupMembersListFragment;Ljava/lang/String;Lkik/android/chat/vm/ReportDialogViewModel$ReportContext;)Ljava/lang/Runnable;
+    invoke-static {p0, v0, v1}, Lkik/android/chat/fragment/ch;->a(Lkik/android/chat/fragment/KikGroupMembersListFragment;Ljava/lang/String;Lkik/android/chat/vm/ReportDialogViewModel$ReportContext;)Ljava/lang/Runnable;
 
     move-result-object v0
 
@@ -1731,11 +1731,11 @@
     .line 2846
     iget-object v0, p0, Lkik/android/chat/fragment/KikGroupMembersListFragment;->_metricsService:Lcom/kik/metrics/c/d;
 
-    invoke-static {}, Lcom/kik/metrics/b/ax;->b()Lcom/kik/metrics/b/ax$a;
+    invoke-static {}, Lcom/kik/metrics/b/ay;->b()Lcom/kik/metrics/b/ay$a;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/kik/metrics/b/ax$a;->a()Lcom/kik/metrics/b/ax;
+    invoke-virtual {v1}, Lcom/kik/metrics/b/ay$a;->a()Lcom/kik/metrics/b/ay;
 
     move-result-object v1
 
@@ -1844,7 +1844,7 @@
 
     const v1, 0x7f090447
 
-    invoke-static {p0, v11}, Lkik/android/chat/fragment/cg;->a(Lkik/android/chat/fragment/KikGroupMembersListFragment;Lkik/core/datatypes/l;)Landroid/content/DialogInterface$OnClickListener;
+    invoke-static {p0, v11}, Lkik/android/chat/fragment/cf;->a(Lkik/android/chat/fragment/KikGroupMembersListFragment;Lkik/core/datatypes/l;)Landroid/content/DialogInterface$OnClickListener;
 
     move-result-object v2
 
@@ -1855,7 +1855,7 @@
 
     const v1, 0x7f0903d7
 
-    invoke-static {p0}, Lkik/android/chat/fragment/ch;->a(Lkik/android/chat/fragment/KikGroupMembersListFragment;)Landroid/content/DialogInterface$OnClickListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/cg;->a(Lkik/android/chat/fragment/KikGroupMembersListFragment;)Landroid/content/DialogInterface$OnClickListener;
 
     move-result-object v2
 
@@ -2154,7 +2154,7 @@
 
     .line 370
     .line 4329
-    invoke-static {}, Lkik/android/chat/fragment/cd;->a()Ljava/util/Comparator;
+    invoke-static {}, Lkik/android/chat/fragment/cc;->a()Ljava/util/Comparator;
 
     move-result-object v1
 
@@ -2732,7 +2732,7 @@
     .locals 6
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f100129
+            0x7f100130
         }
     .end annotation
 

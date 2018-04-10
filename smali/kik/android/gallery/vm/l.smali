@@ -116,14 +116,14 @@
     iput-object v0, p0, Lkik/android/gallery/vm/l;->j:Lrx/subjects/a;
 
     .line 50
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/gallery/vm/l;->k:Lrx/subjects/PublishSubject;
 
     .line 51
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
@@ -230,7 +230,7 @@
     iput-object p1, p0, Lkik/android/gallery/vm/l;->f:Landroid/database/Cursor;
 
     .line 80
-    invoke-virtual {p0}, Lkik/android/gallery/vm/l;->aE_()V
+    invoke-virtual {p0}, Lkik/android/gallery/vm/l;->aL_()V
 
     .line 81
     iget-object v1, p0, Lkik/android/gallery/vm/l;->j:Lrx/subjects/a;

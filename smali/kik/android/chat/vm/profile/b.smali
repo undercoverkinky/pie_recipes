@@ -133,7 +133,7 @@
     iput-object v0, p0, Lkik/android/chat/vm/profile/b;->l:Lrx/subjects/a;
 
     .line 66
-    invoke-static {}, Lrx/subjects/a;->l()Lrx/subjects/a;
+    invoke-static {}, Lrx/subjects/a;->m()Lrx/subjects/a;
 
     move-result-object v0
 

@@ -681,7 +681,7 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {p0, v0}, Lkik/android/chat/fragment/as;->a(Lkik/android/chat/fragment/KikContactsListFragment;Landroid/database/Cursor;)Landroid/content/DialogInterface$OnClickListener;
+    invoke-static {p0, v0}, Lkik/android/chat/fragment/ar;->a(Lkik/android/chat/fragment/KikContactsListFragment;Landroid/database/Cursor;)Landroid/content/DialogInterface$OnClickListener;
 
     move-result-object v0
 
@@ -976,7 +976,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lkik/android/chat/fragment/aq;->a()Lrx/functions/g;
+    invoke-static {}, Lkik/android/chat/fragment/ap;->a()Lrx/functions/g;
 
     move-result-object v1
 
@@ -989,7 +989,7 @@
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v1}, Lkik/android/chat/fragment/ar;->a(Lkik/android/chat/presentation/g;)Lrx/functions/b;
+    invoke-static {v1}, Lkik/android/chat/fragment/aq;->a(Lkik/android/chat/presentation/g;)Lrx/functions/b;
 
     move-result-object v1
 
@@ -1262,7 +1262,7 @@
     .line 300
     iget-object v0, p0, Lkik/android/chat/fragment/KikContactsListFragment;->c:Landroid/widget/ListView;
 
-    invoke-static {v0}, Lcom/kik/util/cv;->b(Landroid/widget/ListView;)I
+    invoke-static {v0}, Lcom/kik/util/cr;->b(Landroid/widget/ListView;)I
 
     move-result v0
 
@@ -1291,7 +1291,7 @@
     const/4 v2, 0x0
 
     .line 333
-    const v0, 0x7f1001a4
+    const v0, 0x7f100190
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1302,7 +1302,7 @@
     iput-object v0, p0, Lkik/android/chat/fragment/KikContactsListFragment;->e:Landroid/widget/TextView;
 
     .line 334
-    const v0, 0x7f100305
+    const v0, 0x7f1002f1
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1311,7 +1311,7 @@
     iput-object v0, p0, Lkik/android/chat/fragment/KikContactsListFragment;->d:Landroid/view/View;
 
     .line 336
-    const v0, 0x7f1000ff
+    const v0, 0x7f100106
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1347,7 +1347,7 @@
     .line 360
     iget-object v0, p0, Lkik/android/chat/fragment/KikContactsListFragment;->c:Landroid/widget/ListView;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/ap;->a(Lkik/android/chat/fragment/KikContactsListFragment;)Landroid/widget/AdapterView$OnItemLongClickListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/ao;->a(Lkik/android/chat/fragment/KikContactsListFragment;)Landroid/widget/AdapterView$OnItemLongClickListener;
 
     move-result-object v1
 
@@ -1361,7 +1361,7 @@
     if-eqz v0, :cond_2
 
     .line 382
-    const v0, 0x7f100100
+    const v0, 0x7f100107
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1394,7 +1394,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a010c
+    const v1, 0x7f0a0107
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1423,7 +1423,7 @@
 
     .line 385
     :cond_2
-    const v0, 0x7f100102
+    const v0, 0x7f100109
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

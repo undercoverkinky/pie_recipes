@@ -17,7 +17,7 @@
     .end annotation
 .end field
 
-.field private h:Lkik/android/e/bh;
+.field private h:Lkik/android/e/bg;
 
 .field private i:Lkik/android/chat/vm/ay;
 
@@ -223,7 +223,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0400f3
+    const v2, 0x7f0400eb
 
     const/4 v3, 0x0
 
@@ -231,21 +231,21 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/android/e/bh;
+    check-cast v0, Lkik/android/e/bg;
 
-    iput-object v0, p0, Lkik/android/chat/fragment/SuggestInterestDialogFragment;->h:Lkik/android/e/bh;
+    iput-object v0, p0, Lkik/android/chat/fragment/SuggestInterestDialogFragment;->h:Lkik/android/e/bg;
 
     .line 54
-    iget-object v0, p0, Lkik/android/chat/fragment/SuggestInterestDialogFragment;->h:Lkik/android/e/bh;
+    iget-object v0, p0, Lkik/android/chat/fragment/SuggestInterestDialogFragment;->h:Lkik/android/e/bg;
 
     iget-object v2, p0, Lkik/android/chat/fragment/SuggestInterestDialogFragment;->j:Lkik/android/chat/vm/chats/profile/ct;
 
-    invoke-virtual {v0, v2}, Lkik/android/e/bh;->a(Lkik/android/chat/vm/chats/profile/IValidateableInputEditorViewModel;)V
+    invoke-virtual {v0, v2}, Lkik/android/e/bg;->a(Lkik/android/chat/vm/chats/profile/IValidateableInputEditorViewModel;)V
 
     .line 56
-    iget-object v0, p0, Lkik/android/chat/fragment/SuggestInterestDialogFragment;->h:Lkik/android/e/bh;
+    iget-object v0, p0, Lkik/android/chat/fragment/SuggestInterestDialogFragment;->h:Lkik/android/e/bg;
 
-    invoke-virtual {v0}, Lkik/android/e/bh;->getRoot()Landroid/view/View;
+    invoke-virtual {v0}, Lkik/android/e/bg;->getRoot()Landroid/view/View;
 
     move-result-object v0
 
@@ -261,7 +261,7 @@
     invoke-virtual {v1}, Landroid/support/v7/app/AlertDialog$Builder;->c()Landroid/support/v7/app/AlertDialog$Builder;
 
     .line 61
-    invoke-static {p0}, Lkik/android/chat/fragment/fr;->a(Lkik/android/chat/fragment/SuggestInterestDialogFragment;)Landroid/content/DialogInterface$OnCancelListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/fq;->a(Lkik/android/chat/fragment/SuggestInterestDialogFragment;)Landroid/content/DialogInterface$OnCancelListener;
 
     move-result-object v0
 
@@ -338,9 +338,9 @@
     if-eqz v1, :cond_0
 
     .line 133
-    iget-object v1, p0, Lkik/android/chat/fragment/SuggestInterestDialogFragment;->h:Lkik/android/e/bh;
+    iget-object v1, p0, Lkik/android/chat/fragment/SuggestInterestDialogFragment;->h:Lkik/android/e/bg;
 
-    iget-object v1, v1, Lkik/android/e/bh;->a:Lkik/android/chat/view/ValidateableInputView;
+    iget-object v1, v1, Lkik/android/e/bg;->a:Lkik/android/chat/view/ValidateableInputView;
 
     check-cast v0, Lkik/android/util/KeyboardManipulator;
 
@@ -365,7 +365,7 @@
 
     move-result-object v0
 
-    invoke-static {p0}, Lkik/android/chat/fragment/fs;->a(Lkik/android/chat/fragment/SuggestInterestDialogFragment;)Lrx/functions/b;
+    invoke-static {p0}, Lkik/android/chat/fragment/fr;->a(Lkik/android/chat/fragment/SuggestInterestDialogFragment;)Lrx/functions/b;
 
     move-result-object v1
 
@@ -388,7 +388,7 @@
 
     move-result-object v0
 
-    invoke-static {p0}, Lkik/android/chat/fragment/ft;->a(Lkik/android/chat/fragment/SuggestInterestDialogFragment;)Landroid/view/View$OnClickListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/fs;->a(Lkik/android/chat/fragment/SuggestInterestDialogFragment;)Landroid/view/View$OnClickListener;
 
     move-result-object v1
 
@@ -407,7 +407,7 @@
 
     move-result-object v0
 
-    invoke-static {p0}, Lkik/android/chat/fragment/fu;->a(Lkik/android/chat/fragment/SuggestInterestDialogFragment;)Landroid/view/View$OnClickListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/ft;->a(Lkik/android/chat/fragment/SuggestInterestDialogFragment;)Landroid/view/View$OnClickListener;
 
     move-result-object v1
 

@@ -1068,11 +1068,11 @@
     .line 11274
     iget-object v0, p0, Lkik/android/chat/vm/profile/gridvm/t;->l:Lcom/kik/metrics/c/d;
 
-    invoke-static {}, Lcom/kik/metrics/b/ax;->b()Lcom/kik/metrics/b/ax$a;
+    invoke-static {}, Lcom/kik/metrics/b/ay;->b()Lcom/kik/metrics/b/ay$a;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/kik/metrics/b/ax$a;->a()Lcom/kik/metrics/b/ax;
+    invoke-virtual {v2}, Lcom/kik/metrics/b/ay$a;->a()Lcom/kik/metrics/b/ay;
 
     move-result-object v2
 

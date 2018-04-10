@@ -23,25 +23,25 @@
 # instance fields
 .field protected _cameraErrorCover:Landroid/view/View;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100176
+        value = 0x7f100162
     .end annotation
 .end field
 
 .field protected _cameraIconBarView:Lkik/android/chat/view/m;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100177
+        value = 0x7f100163
     .end annotation
 .end field
 
 .field protected _liveCameraContainer:Lkik/android/chat/view/s;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100174
+        value = 0x7f100160
     .end annotation
 .end field
 
 .field protected _previewContainer:Lkik/android/chat/view/af;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100175
+        value = 0x7f100161
     .end annotation
 .end field
 
@@ -236,7 +236,7 @@
 
     .prologue
     .line 103
-    const v0, 0x7f040041
+    const v0, 0x7f040039
 
     const/4 v1, 0x0
 

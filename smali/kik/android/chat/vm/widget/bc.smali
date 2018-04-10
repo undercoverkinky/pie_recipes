@@ -89,12 +89,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lkik/core/datatypes/y;Lkik/android/chat/fragment/KikChatFragment$b;Ljava/lang/String;Lkik/android/widget/ca;)V
+.method public constructor <init>(Lkik/core/datatypes/y;Lkik/android/chat/fragment/KikChatFragment$b;Ljava/lang/String;Lkik/android/widget/bk;)V
     .locals 1
 
     .prologue
     .line 66
-    invoke-direct {p0, p4}, Lkik/android/chat/vm/widget/a;-><init>(Lkik/android/widget/ca;)V
+    invoke-direct {p0, p4}, Lkik/android/chat/vm/widget/a;-><init>(Lkik/android/widget/bk;)V
 
     .line 39
     const-string v0, "Pack"
@@ -107,7 +107,7 @@
     iput-object v0, p0, Lkik/android/chat/vm/widget/bc;->i:Ljava/lang/String;
 
     .line 56
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
@@ -123,7 +123,7 @@
     iput-object v0, p0, Lkik/android/chat/vm/widget/bc;->n:Lrx/b;
 
     .line 59
-    invoke-static {}, Lrx/subjects/a;->l()Lrx/subjects/a;
+    invoke-static {}, Lrx/subjects/a;->m()Lrx/subjects/a;
 
     move-result-object v0
 
@@ -405,7 +405,7 @@
     goto :goto_0
 .end method
 
-.method public final aF_()Lrx/b;
+.method public final aM_()Lrx/b;
     .locals 1
 
     .prologue

@@ -686,14 +686,14 @@
 
     .line 1206
     :cond_0
-    const v0, 0x7f040097
+    const v0, 0x7f04008f
 
     invoke-virtual {p1, v0, v5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v3
 
     .line 1208
-    const v0, 0x7f100107
+    const v0, 0x7f10010e
 
     invoke-virtual {v3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -702,7 +702,7 @@
     iput-object v0, p0, Lkik/android/chat/fragment/settings/PreferenceFragment;->g:Landroid/view/View;
 
     .line 1209
-    const v0, 0x7f1000d6
+    const v0, 0x7f1000dd
 
     invoke-virtual {v3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -769,7 +769,7 @@
     invoke-virtual {v0, v4}, Landroid/widget/ListView;->setScrollBarStyle(I)V
 
     .line 1226
-    const v0, 0x7f10011b
+    const v0, 0x7f100122
 
     invoke-virtual {v3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1197,11 +1197,11 @@
 
     .line 131
     :pswitch_1
-    invoke-static {}, Lcom/kik/metrics/b/am;->b()Lcom/kik/metrics/b/am$a;
+    invoke-static {}, Lcom/kik/metrics/b/an;->b()Lcom/kik/metrics/b/an$a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/kik/metrics/b/am$a;->a()Lcom/kik/metrics/b/am;
+    invoke-virtual {v0}, Lcom/kik/metrics/b/an$a;->a()Lcom/kik/metrics/b/an;
 
     move-result-object v0
 
@@ -1221,11 +1221,11 @@
 
     .line 135
     :pswitch_3
-    invoke-static {}, Lcom/kik/metrics/b/ar;->b()Lcom/kik/metrics/b/ar$a;
+    invoke-static {}, Lcom/kik/metrics/b/as;->b()Lcom/kik/metrics/b/as$a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/kik/metrics/b/ar$a;->a()Lcom/kik/metrics/b/ar;
+    invoke-virtual {v0}, Lcom/kik/metrics/b/as$a;->a()Lcom/kik/metrics/b/as;
 
     move-result-object v0
 

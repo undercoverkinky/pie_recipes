@@ -466,7 +466,7 @@
 
     .prologue
     .line 274
-    invoke-virtual {p0}, Lokio/a;->aM_()Z
+    invoke-virtual {p0}, Lokio/a;->aT_()Z
 
     move-result v0
 
@@ -488,7 +488,7 @@
     return-void
 .end method
 
-.method public final aM_()Z
+.method public final aT_()Z
     .locals 2
 
     .prologue
@@ -525,7 +525,7 @@
 
     .prologue
     .line 284
-    invoke-virtual {p0}, Lokio/a;->aM_()Z
+    invoke-virtual {p0}, Lokio/a;->aT_()Z
 
     move-result v0
 
@@ -562,12 +562,12 @@
 
     .line 74
     :cond_0
-    invoke-virtual {p0}, Lokio/a;->aN_()J
+    invoke-virtual {p0}, Lokio/a;->aU_()J
 
     move-result-wide v0
 
     .line 75
-    invoke-virtual {p0}, Lokio/a;->aO_()Z
+    invoke-virtual {p0}, Lokio/a;->aV_()Z
 
     move-result v2
 

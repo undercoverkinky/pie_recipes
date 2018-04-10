@@ -293,7 +293,7 @@
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
     .line 95
-    invoke-virtual {p0}, Lkik/android/gifs/vm/ab;->aE_()V
+    invoke-virtual {p0}, Lkik/android/gifs/vm/ab;->aL_()V
 
     .line 1158
     new-instance v1, Lcom/kik/events/Promise;
@@ -366,7 +366,7 @@
     goto :goto_0
 .end method
 
-.method protected final aE_()V
+.method protected final aL_()V
     .locals 2
 
     .prologue
@@ -399,7 +399,7 @@
 
     .line 153
     :cond_0
-    invoke-super {p0}, Lkik/android/gifs/vm/c;->aE_()V
+    invoke-super {p0}, Lkik/android/gifs/vm/c;->aL_()V
 
     .line 154
     return-void

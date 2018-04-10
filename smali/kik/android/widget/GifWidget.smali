@@ -88,7 +88,7 @@
     if-eqz v0, :cond_0
 
     .line 165
-    invoke-static {p0}, Lkik/android/widget/bx;->a(Lkik/android/widget/GifWidget;)Ljava/lang/Runnable;
+    invoke-static {p0}, Lkik/android/widget/bh;->a(Lkik/android/widget/GifWidget;)Ljava/lang/Runnable;
 
     move-result-object v0
 
@@ -377,7 +377,7 @@
     if-nez v0, :cond_0
 
     .line 215
-    invoke-static {p0}, Lkik/android/widget/bv;->a(Lkik/android/widget/GifWidget;)Ljava/lang/Runnable;
+    invoke-static {p0}, Lkik/android/widget/bf;->a(Lkik/android/widget/GifWidget;)Ljava/lang/Runnable;
 
     move-result-object v0
 
@@ -407,7 +407,7 @@
     if-nez v0, :cond_0
 
     .line 225
-    invoke-static {p0}, Lkik/android/widget/bw;->a(Lkik/android/widget/GifWidget;)Ljava/lang/Runnable;
+    invoke-static {p0}, Lkik/android/widget/bg;->a(Lkik/android/widget/GifWidget;)Ljava/lang/Runnable;
 
     move-result-object v0
 
@@ -492,7 +492,7 @@
 
     .prologue
     .line 69
-    const v0, 0x7f04009f
+    const v0, 0x7f040097
 
     const/4 v1, 0x0
 
@@ -523,7 +523,7 @@
     invoke-virtual {v1, v2, v3}, Lkik/android/gifs/vm/aj;->a(Lcom/kik/components/CoreComponent;Lkik/android/chat/vm/ay;)V
 
     .line 74
-    const/16 v1, 0xe
+    const/16 v1, 0xd
 
     invoke-direct {p0}, Lkik/android/widget/GifWidget;->g()Lkik/android/gifs/vm/aj;
 
@@ -532,7 +532,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/databinding/ViewDataBinding;->setVariable(ILjava/lang/Object;)Z
 
     .line 75
-    const/16 v1, 0x10
+    const/16 v1, 0xf
 
     invoke-direct {p0}, Lkik/android/widget/GifWidget;->g()Lkik/android/gifs/vm/aj;
 
@@ -545,7 +545,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/databinding/ViewDataBinding;->setVariable(ILjava/lang/Object;)Z
 
     .line 76
-    const/16 v1, 0x11
+    const/16 v1, 0x10
 
     invoke-direct {p0}, Lkik/android/widget/GifWidget;->g()Lkik/android/gifs/vm/aj;
 
@@ -558,7 +558,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/databinding/ViewDataBinding;->setVariable(ILjava/lang/Object;)Z
 
     .line 77
-    const/16 v1, 0x8
+    const/4 v1, 0x7
 
     invoke-direct {p0}, Lkik/android/widget/GifWidget;->g()Lkik/android/gifs/vm/aj;
 
@@ -571,7 +571,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/databinding/ViewDataBinding;->setVariable(ILjava/lang/Object;)Z
 
     .line 78
-    const/16 v1, 0x9
+    const/16 v1, 0x8
 
     invoke-direct {p0}, Lkik/android/widget/GifWidget;->g()Lkik/android/gifs/vm/aj;
 
@@ -584,7 +584,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/databinding/ViewDataBinding;->setVariable(ILjava/lang/Object;)Z
 
     .line 79
-    const/4 v1, 0x6
+    const/4 v1, 0x5
 
     invoke-direct {p0}, Lkik/android/widget/GifWidget;->g()Lkik/android/gifs/vm/aj;
 
@@ -597,7 +597,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/databinding/ViewDataBinding;->setVariable(ILjava/lang/Object;)Z
 
     .line 80
-    const/16 v1, 0x15
+    const/16 v1, 0x14
 
     invoke-direct {p0}, Lkik/android/widget/GifWidget;->g()Lkik/android/gifs/vm/aj;
 
@@ -610,7 +610,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/databinding/ViewDataBinding;->setVariable(ILjava/lang/Object;)Z
 
     .line 81
-    const/16 v1, 0xa
+    const/16 v1, 0x9
 
     invoke-direct {p0}, Lkik/android/widget/GifWidget;->g()Lkik/android/gifs/vm/aj;
 
@@ -694,7 +694,7 @@
 
     move-result-object v0
 
-    invoke-static {p0}, Lkik/android/widget/bu;->a(Lkik/android/widget/GifWidget;)Lcom/kik/events/e;
+    invoke-static {p0}, Lkik/android/widget/be;->a(Lkik/android/widget/GifWidget;)Lcom/kik/events/e;
 
     move-result-object v1
 

@@ -127,7 +127,7 @@
 
     const-string v2, "kik.upgradetime"
 
-    invoke-interface {v1, v2}, Lkik/core/interfaces/ad;->v(Ljava/lang/String;)Ljava/lang/Long;
+    invoke-interface {v1, v2}, Lkik/core/interfaces/ad;->u(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v1
 

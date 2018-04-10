@@ -52,16 +52,16 @@
     return-object v0
 .end method
 
-.method final c()Lcom/kik/util/cq;
+.method final c()Lcom/kik/util/cm;
     .locals 2
 
     .prologue
     .line 43
-    new-instance v0, Lcom/kik/util/cl;
+    new-instance v0, Lcom/kik/util/ch;
 
     iget-object v1, p0, Lcom/kik/f/dn;->a:Landroid/content/Context;
 
-    invoke-direct {v0, v1}, Lcom/kik/util/cl;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/kik/util/ch;-><init>(Landroid/content/Context;)V
 
     return-object v0
 .end method

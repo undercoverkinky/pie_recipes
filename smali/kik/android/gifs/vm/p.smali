@@ -122,7 +122,7 @@
 
     .prologue
     .line 27
-    invoke-virtual {p0}, Lkik/android/gifs/vm/p;->aE_()V
+    invoke-virtual {p0}, Lkik/android/gifs/vm/p;->aL_()V
 
     return-void
 .end method
@@ -412,7 +412,7 @@
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
     .line 95
-    invoke-virtual {p0}, Lkik/android/gifs/vm/p;->aE_()V
+    invoke-virtual {p0}, Lkik/android/gifs/vm/p;->aL_()V
 
     .line 97
     iget-object v0, p0, Lkik/android/gifs/vm/p;->f:Lkik/android/gifs/api/GifApiProvider;

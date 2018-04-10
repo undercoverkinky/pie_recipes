@@ -118,7 +118,7 @@
 .end method
 
 .method public final b()V
-    .locals 5
+    .locals 6
 
     .prologue
     .line 50
@@ -167,8 +167,38 @@
 
     move-result-object v4
 
-    .line 60
-    invoke-virtual {v1, v2, v3, v4}, Lrx/d;->a(Lrx/functions/b;Lrx/functions/b;Lrx/functions/a;)Lrx/k;
+    .line 11190
+    if-nez v2, :cond_0
+
+    .line 11191
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "onNext can not be null"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 11193
+    :cond_0
+    if-nez v3, :cond_1
+
+    .line 11194
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "onError can not be null"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 11200
+    :cond_1
+    new-instance v5, Lrx/internal/util/b;
+
+    invoke-direct {v5, v2, v3, v4}, Lrx/internal/util/b;-><init>(Lrx/functions/b;Lrx/functions/b;Lrx/functions/a;)V
+
+    invoke-virtual {v1, v5}, Lrx/d;->b(Lrx/j;)Lrx/k;
 
     move-result-object v1
 

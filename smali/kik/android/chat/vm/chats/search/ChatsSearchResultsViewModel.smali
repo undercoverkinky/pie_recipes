@@ -158,7 +158,7 @@
     iput-object v0, p0, Lkik/android/chat/vm/chats/search/ChatsSearchResultsViewModel;->i:Ljava/lang/Object;
 
     .line 124
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
@@ -287,7 +287,7 @@
     invoke-virtual {v1, v0}, Lrx/subjects/a;->a(Ljava/lang/Object;)V
 
     .line 366
-    invoke-virtual {p0}, Lkik/android/chat/vm/chats/search/ChatsSearchResultsViewModel;->aE_()V
+    invoke-virtual {p0}, Lkik/android/chat/vm/chats/search/ChatsSearchResultsViewModel;->aL_()V
 
     .line 367
     return-void

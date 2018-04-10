@@ -55,7 +55,7 @@
     return-void
 .end method
 
-.method public static a(JJLjava/util/concurrent/TimeUnit;Lrx/g;)Lrx/d;
+.method private static a(JJLjava/util/concurrent/TimeUnit;Lrx/g;)Lrx/d;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -312,38 +312,6 @@
     move-result-object v5
 
     move-object v4, p0
-
-    invoke-static/range {v0 .. v5}, Lrx/d;->a(JJLjava/util/concurrent/TimeUnit;Lrx/g;)Lrx/d;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static a(Ljava/util/concurrent/TimeUnit;Lrx/g;)Lrx/d;
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/concurrent/TimeUnit;",
-            "Lrx/g;",
-            ")",
-            "Lrx/d",
-            "<",
-            "Ljava/lang/Long;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    const-wide/16 v0, 0x411b
-
-    .line 2087
-    move-wide v2, v0
-
-    move-object v4, p0
-
-    move-object v5, p1
 
     invoke-static/range {v0 .. v5}, Lrx/d;->a(JJLjava/util/concurrent/TimeUnit;Lrx/g;)Lrx/d;
 
@@ -962,7 +930,7 @@
 
     .line 10336
     :cond_1
-    invoke-virtual {p0}, Lrx/j;->aQ_()V
+    invoke-virtual {p0}, Lrx/j;->aX_()V
 
     .line 10343
     instance-of v0, p0, Lrx/c/c;
@@ -1391,29 +1359,6 @@
 
 
 # virtual methods
-.method public final a(I)Lrx/d;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I)",
-            "Lrx/d",
-            "<TT;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 10532
-    new-instance v0, Lrx/internal/operators/ah;
-
-    invoke-direct {v0, p1}, Lrx/internal/operators/ah;-><init>(I)V
-
-    invoke-virtual {p0, v0}, Lrx/d;->a(Lrx/d$b;)Lrx/d;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public final a(Ljava/lang/Class;)Lrx/d;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
@@ -1545,46 +1490,6 @@
     invoke-direct {v0, p1, p2}, Lrx/internal/operators/ak;-><init>(Lrx/d;Lrx/functions/h;)V
 
     invoke-virtual {p0, v0}, Lrx/d;->a(Lrx/d$b;)Lrx/d;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final a(Lrx/functions/a;)Lrx/d;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lrx/functions/a;",
-            ")",
-            "Lrx/d",
-            "<TT;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 5794
-    invoke-static {}, Lrx/functions/Actions;->a()Lrx/functions/Actions$a;
-
-    move-result-object v0
-
-    .line 5795
-    invoke-static {}, Lrx/functions/Actions;->a()Lrx/functions/Actions$a;
-
-    move-result-object v1
-
-    .line 5796
-    new-instance v2, Lrx/internal/util/a;
-
-    invoke-direct {v2, v0, v1, p1}, Lrx/internal/util/a;-><init>(Lrx/functions/b;Lrx/functions/b;Lrx/functions/a;)V
-
-    .line 5798
-    new-instance v0, Lrx/internal/operators/d;
-
-    invoke-direct {v0, p0, v2}, Lrx/internal/operators/d;-><init>(Lrx/d;Lrx/e;)V
-
-    invoke-static {v0}, Lrx/d;->b(Lrx/d$a;)Lrx/d;
 
     move-result-object v0
 
@@ -1793,7 +1698,7 @@
     .line 10222
     check-cast p1, Lrx/j;
 
-    .line 26319
+    .line 25319
     invoke-static {p1, p0}, Lrx/d;->a(Lrx/j;Lrx/d;)Lrx/k;
 
     move-result-object v0
@@ -1821,7 +1726,7 @@
 
     invoke-direct {v0, p1}, Lrx/internal/util/c;-><init>(Lrx/e;)V
 
-    .line 27319
+    .line 26319
     invoke-static {v0, p0}, Lrx/d;->a(Lrx/j;Lrx/d;)Lrx/k;
 
     move-result-object v0
@@ -1890,77 +1795,6 @@
     return-object v0
 .end method
 
-.method public final a(Lrx/functions/b;Lrx/functions/b;Lrx/functions/a;)Lrx/k;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lrx/functions/b",
-            "<-TT;>;",
-            "Lrx/functions/b",
-            "<",
-            "Ljava/lang/Throwable;",
-            ">;",
-            "Lrx/functions/a;",
-            ")",
-            "Lrx/k;"
-        }
-    .end annotation
-
-    .prologue
-    .line 10190
-    if-nez p1, :cond_0
-
-    .line 10191
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "onNext can not be null"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 10193
-    :cond_0
-    if-nez p2, :cond_1
-
-    .line 10194
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "onError can not be null"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 10196
-    :cond_1
-    if-nez p3, :cond_2
-
-    .line 10197
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "onComplete can not be null"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 10200
-    :cond_2
-    new-instance v0, Lrx/internal/util/b;
-
-    invoke-direct {v0, p1, p2, p3}, Lrx/internal/util/b;-><init>(Lrx/functions/b;Lrx/functions/b;Lrx/functions/a;)V
-
-    .line 25319
-    invoke-static {v0, p0}, Lrx/d;->a(Lrx/j;Lrx/d;)Lrx/k;
-
-    move-result-object v0
-
-    .line 10200
-    return-object v0
-.end method
-
 .method public final a(Lrx/j;)Lrx/k;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
@@ -1975,7 +1809,7 @@
     .prologue
     .line 10254
     :try_start_0
-    invoke-virtual {p1}, Lrx/j;->aQ_()V
+    invoke-virtual {p1}, Lrx/j;->aX_()V
 
     .line 10256
     iget-object v0, p0, Lrx/d;->a:Lrx/d$a;
@@ -2167,13 +2001,13 @@
 
     const/4 v0, 0x1
 
-    .line 27439
+    .line 26439
     :goto_0
     instance-of v1, p0, Lrx/internal/util/ScalarSynchronousObservable;
 
     if-eqz v1, :cond_1
 
-    .line 27440
+    .line 26440
     check-cast p0, Lrx/internal/util/ScalarSynchronousObservable;
 
     invoke-virtual {p0, p1}, Lrx/internal/util/ScalarSynchronousObservable;->c(Lrx/g;)Lrx/d;
@@ -2189,7 +2023,7 @@
 
     goto :goto_0
 
-    .line 27442
+    .line 26442
     :cond_1
     new-instance v1, Lrx/internal/operators/ag;
 
@@ -2546,9 +2380,7 @@
 
     .prologue
     .line 6613
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lrx/d;->a(I)Lrx/d;
+    invoke-virtual {p0}, Lrx/d;->l()Lrx/d;
 
     move-result-object v0
 
@@ -2723,5 +2555,28 @@
     move-result-object v0
 
     .line 10094
+    return-object v0
+.end method
+
+.method public final l()Lrx/d;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lrx/d",
+            "<TT;>;"
+        }
+    .end annotation
+
+    .prologue
+    .line 10532
+    new-instance v0, Lrx/internal/operators/ah;
+
+    invoke-direct {v0}, Lrx/internal/operators/ah;-><init>()V
+
+    invoke-virtual {p0, v0}, Lrx/d;->a(Lrx/d$b;)Lrx/d;
+
+    move-result-object v0
+
     return-object v0
 .end method

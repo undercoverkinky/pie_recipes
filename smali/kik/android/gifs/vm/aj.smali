@@ -171,7 +171,7 @@
     iput-object v0, p0, Lkik/android/gifs/vm/aj;->s:Lrx/subjects/a;
 
     .line 67
-    invoke-static {}, Lrx/subjects/a;->l()Lrx/subjects/a;
+    invoke-static {}, Lrx/subjects/a;->m()Lrx/subjects/a;
 
     move-result-object v0
 
@@ -893,9 +893,7 @@
 
     move-result-object v0
 
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lrx/d;->a(I)Lrx/d;
+    invoke-virtual {v0}, Lrx/d;->l()Lrx/d;
 
     move-result-object v0
 

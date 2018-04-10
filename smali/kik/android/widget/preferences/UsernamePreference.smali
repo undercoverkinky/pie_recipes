@@ -79,7 +79,7 @@
     invoke-super {p0, p1}, Lkik/android/widget/preferences/KikModalPreference;->onBindView(Landroid/view/View;)V
 
     .line 57
-    const v0, 0x7f1003a0
+    const v0, 0x7f100388
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -101,7 +101,7 @@
 
 .field private t:Lkik/core/datatypes/y;
 
-.field private u:Lkik/android/widget/ca;
+.field private u:Lkik/android/widget/bk;
 
 
 # direct methods
@@ -155,7 +155,7 @@
     iput-object v0, p0, Lkik/android/chat/vm/widget/StickerWidgetViewModel;->l:Lrx/subjects/a;
 
     .line 45
-    invoke-static {}, Lrx/subjects/a;->l()Lrx/subjects/a;
+    invoke-static {}, Lrx/subjects/a;->m()Lrx/subjects/a;
 
     move-result-object v0
 
@@ -171,7 +171,7 @@
 
     invoke-direct {v0, p0}, Lkik/android/chat/vm/widget/StickerWidgetViewModel$1;-><init>(Lkik/android/chat/vm/widget/StickerWidgetViewModel;)V
 
-    iput-object v0, p0, Lkik/android/chat/vm/widget/StickerWidgetViewModel;->u:Lkik/android/widget/ca;
+    iput-object v0, p0, Lkik/android/chat/vm/widget/StickerWidgetViewModel;->u:Lkik/android/widget/bk;
 
     .line 73
     iput-object p1, p0, Lkik/android/chat/vm/widget/StickerWidgetViewModel;->p:Lkik/android/chat/fragment/PopUpResultCallback;
@@ -278,7 +278,7 @@
     const/4 v2, 0x1
 
     .line 102
-    invoke-virtual {p0}, Lkik/android/chat/vm/widget/StickerWidgetViewModel;->aE_()V
+    invoke-virtual {p0}, Lkik/android/chat/vm/widget/StickerWidgetViewModel;->aL_()V
 
     .line 103
     iget-object v0, p0, Lkik/android/chat/vm/widget/StickerWidgetViewModel;->m:Lrx/subjects/a;
@@ -313,7 +313,7 @@
 
     .prologue
     .line 92
-    invoke-virtual {p0}, Lkik/android/chat/vm/widget/StickerWidgetViewModel;->aE_()V
+    invoke-virtual {p0}, Lkik/android/chat/vm/widget/StickerWidgetViewModel;->aL_()V
 
     .line 94
     iget-object v0, p0, Lkik/android/chat/vm/widget/StickerWidgetViewModel;->t:Lkik/core/datatypes/y;
@@ -524,9 +524,9 @@
 
     iget-object v3, p0, Lkik/android/chat/vm/widget/StickerWidgetViewModel;->r:Ljava/lang/String;
 
-    iget-object v4, p0, Lkik/android/chat/vm/widget/StickerWidgetViewModel;->u:Lkik/android/widget/ca;
+    iget-object v4, p0, Lkik/android/chat/vm/widget/StickerWidgetViewModel;->u:Lkik/android/widget/bk;
 
-    invoke-direct {v1, v0, v2, v3, v4}, Lkik/android/chat/vm/widget/bc;-><init>(Lkik/core/datatypes/y;Lkik/android/chat/fragment/KikChatFragment$b;Ljava/lang/String;Lkik/android/widget/ca;)V
+    invoke-direct {v1, v0, v2, v3, v4}, Lkik/android/chat/vm/widget/bc;-><init>(Lkik/core/datatypes/y;Lkik/android/chat/fragment/KikChatFragment$b;Ljava/lang/String;Lkik/android/widget/bk;)V
 
     .line 1157
     iget-object v0, p0, Lkik/android/chat/vm/widget/StickerWidgetViewModel;->n:Lkik/core/interfaces/h;
@@ -694,7 +694,7 @@
     return-void
 .end method
 
-.method public final aI_()Lrx/d;
+.method public final aP_()Lrx/d;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -717,7 +717,7 @@
     return-object v0
 .end method
 
-.method public final aJ_()Lrx/d;
+.method public final aQ_()Lrx/d;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -880,11 +880,11 @@
     .line 195
     iget-object v0, p0, Lkik/android/chat/vm/widget/StickerWidgetViewModel;->e:Lcom/kik/metrics/c/d;
 
-    invoke-static {}, Lcom/kik/metrics/b/bm;->b()Lcom/kik/metrics/b/bm$a;
+    invoke-static {}, Lcom/kik/metrics/b/bn;->b()Lcom/kik/metrics/b/bn$a;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/kik/metrics/b/bm$a;->a()Lcom/kik/metrics/b/bm;
+    invoke-virtual {v1}, Lcom/kik/metrics/b/bn$a;->a()Lcom/kik/metrics/b/bn;
 
     move-result-object v1
 

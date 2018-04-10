@@ -7,7 +7,7 @@
 
 
 # static fields
-.field private static final j:Lkik/android/widget/ca;
+.field private static final j:Lkik/android/widget/bk;
 
 
 # instance fields
@@ -82,7 +82,7 @@
 
     invoke-direct {v0}, Lkik/android/chat/vm/widget/bn$1;-><init>()V
 
-    sput-object v0, Lkik/android/chat/vm/widget/bn;->j:Lkik/android/widget/ca;
+    sput-object v0, Lkik/android/chat/vm/widget/bn;->j:Lkik/android/widget/bk;
 
     return-void
 .end method
@@ -92,9 +92,9 @@
 
     .prologue
     .line 80
-    sget-object v0, Lkik/android/chat/vm/widget/bn;->j:Lkik/android/widget/ca;
+    sget-object v0, Lkik/android/chat/vm/widget/bn;->j:Lkik/android/widget/bk;
 
-    invoke-direct {p0, v0}, Lkik/android/chat/vm/widget/a;-><init>(Lkik/android/widget/ca;)V
+    invoke-direct {p0, v0}, Lkik/android/chat/vm/widget/a;-><init>(Lkik/android/widget/bk;)V
 
     .line 72
     new-instance v0, Ljava/util/ArrayList;
@@ -214,7 +214,7 @@
 
     const-string v1, "kik.chat.fragment.contacts.chatted.with"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->t(Ljava/lang/String;)Ljava/util/Set;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/util/Set;
 
     move-result-object v0
 
@@ -225,7 +225,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lkik/android/chat/vm/widget/bn;->aH_()Z
+    invoke-virtual {p0}, Lkik/android/chat/vm/widget/bn;->aO_()Z
 
     move-result v0
 
@@ -517,7 +517,7 @@
     return-void
 .end method
 
-.method public final aH_()Z
+.method public final aO_()Z
     .locals 3
 
     .prologue

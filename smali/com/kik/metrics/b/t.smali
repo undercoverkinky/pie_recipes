@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/kik/metrics/b/az;
+.implements Lcom/kik/metrics/b/ba;
 
 
 # virtual methods

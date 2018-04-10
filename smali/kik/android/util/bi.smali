@@ -1029,7 +1029,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f040063
+    const v2, 0x7f04005b
 
     const-wide/16 v4, 0x3e8
 
@@ -1863,10 +1863,8 @@
     .end annotation
 
     .prologue
-    const/4 v2, 0x1
-
     .line 131
-    invoke-virtual {p3, v2}, Lrx/d;->a(I)Lrx/d;
+    invoke-virtual {p3}, Lrx/d;->l()Lrx/d;
 
     move-result-object v0
 
@@ -1878,7 +1876,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Lrx/d;->a(I)Lrx/d;
+    invoke-virtual {v0}, Lrx/d;->l()Lrx/d;
 
     move-result-object v0
 

@@ -31,10 +31,10 @@
     .locals 0
 
     .prologue
-    .line 194
+    .line 192
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 195
+    .line 193
     return-void
 .end method
 
@@ -46,16 +46,16 @@
     .end param
 
     .prologue
-    .line 198
+    .line 196
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 199
+    .line 197
     iput-object p1, p0, Lkik/core/datatypes/messageExtensions/ContentMessage$ContextualLinkAction;->a:Lkik/core/datatypes/messageExtensions/ContentMessage$ContextualLinkAction$ActionType;
 
-    .line 200
+    .line 198
     iput-object p2, p0, Lkik/core/datatypes/messageExtensions/ContentMessage$ContextualLinkAction;->b:Ljava/lang/String;
 
-    .line 201
+    .line 199
     return-void
 .end method
 
@@ -65,7 +65,7 @@
     .locals 1
 
     .prologue
-    .line 205
+    .line 203
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage$ContextualLinkAction;->a:Lkik/core/datatypes/messageExtensions/ContentMessage$ContextualLinkAction$ActionType;
 
     return-object v0
@@ -77,7 +77,7 @@
     .end annotation
 
     .prologue
-    .line 211
+    .line 209
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage$ContextualLinkAction;->b:Ljava/lang/String;
 
     return-object v0

@@ -89,7 +89,7 @@
 
     .prologue
     .line 43
-    const v0, 0x7f04013f
+    const v0, 0x7f040136
 
     invoke-virtual {p0, v0}, Lkik/android/widget/preferences/KikEmailPreference;->setLayoutResource(I)V
 
@@ -147,7 +147,7 @@
     move-result-object v1
 
     .line 71
-    const v0, 0x7f1003a0
+    const v0, 0x7f100388
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

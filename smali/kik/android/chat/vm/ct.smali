@@ -102,28 +102,28 @@
     invoke-direct {p0}, Lkik/android/chat/vm/e;-><init>()V
 
     .line 48
-    invoke-static {}, Lrx/subjects/a;->l()Lrx/subjects/a;
+    invoke-static {}, Lrx/subjects/a;->m()Lrx/subjects/a;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/chat/vm/ct;->f:Lrx/subjects/a;
 
     .line 49
-    invoke-static {}, Lrx/subjects/a;->l()Lrx/subjects/a;
+    invoke-static {}, Lrx/subjects/a;->m()Lrx/subjects/a;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/chat/vm/ct;->g:Lrx/subjects/a;
 
     .line 50
-    invoke-static {}, Lrx/subjects/a;->l()Lrx/subjects/a;
+    invoke-static {}, Lrx/subjects/a;->m()Lrx/subjects/a;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/chat/vm/ct;->h:Lrx/subjects/a;
 
     .line 51
-    invoke-static {}, Lrx/subjects/a;->l()Lrx/subjects/a;
+    invoke-static {}, Lrx/subjects/a;->m()Lrx/subjects/a;
 
     move-result-object v0
 

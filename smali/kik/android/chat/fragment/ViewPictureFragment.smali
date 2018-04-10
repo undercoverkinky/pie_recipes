@@ -67,31 +67,31 @@
 
 .field _saveButton:Landroid/widget/ImageButton;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10013c
+        value = 0x7f100143
     .end annotation
 .end field
 
 .field _topbar:Landroid/view/ViewGroup;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100136
+        value = 0x7f10013d
     .end annotation
 .end field
 
 .field _videoPlayIcon:Landroid/widget/ImageView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100139
+        value = 0x7f100140
     .end annotation
 .end field
 
 .field _videoView:Landroid/widget/VideoView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100138
+        value = 0x7f10013f
     .end annotation
 .end field
 
 .field _videoViewContainer:Landroid/widget/FrameLayout;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100135
+        value = 0x7f10013c
     .end annotation
 .end field
 
@@ -115,7 +115,7 @@
 
 .field contentImageView:Lcom/kik/cache/ContentImageView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10013e
+        value = 0x7f100145
     .end annotation
 .end field
 
@@ -166,7 +166,7 @@
 
 .field openButton:Landroid/view/ViewGroup;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100140
+        value = 0x7f100147
     .end annotation
 .end field
 
@@ -174,7 +174,7 @@
 
 .field profImageView:Lcom/kik/cache/ProfileImageView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10013f
+        value = 0x7f100146
     .end annotation
 .end field
 
@@ -188,7 +188,7 @@
 
 .field title:Landroid/widget/TextView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10013d
+        value = 0x7f100144
     .end annotation
 .end field
 
@@ -530,7 +530,7 @@
 
     iget-object v1, p0, Lkik/android/chat/fragment/ViewPictureFragment;->q:Ljava/lang/String;
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->C(Ljava/lang/String;)[B
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->B(Ljava/lang/String;)[B
 
     move-result-object v0
 
@@ -1568,7 +1568,7 @@
 
     move-result-object v3
 
-    invoke-interface {v0, v3}, Lcom/kik/storage/s;->d(Ljava/lang/String;)Z
+    invoke-interface {v0, v3}, Lcom/kik/storage/s;->c(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -2021,7 +2021,7 @@
     :goto_3
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment;->l:Landroid/view/View;
 
-    const v1, 0x7f100142
+    const v1, 0x7f100149
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2032,7 +2032,7 @@
     .line 580
     iget-object v1, p0, Lkik/android/chat/fragment/ViewPictureFragment;->l:Landroid/view/View;
 
-    const v2, 0x7f100141
+    const v2, 0x7f100148
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2330,7 +2330,7 @@
 
     const/4 v2, -0x1
 
-    invoke-static {v0, v1, v2}, Lcom/kik/util/ct;->a(Ljava/lang/String;II)Landroid/graphics/Bitmap;
+    invoke-static {v0, v1, v2}, Lcom/kik/util/cp;->a(Ljava/lang/String;II)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -2585,7 +2585,7 @@
     .line 638
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment;->_saveButton:Landroid/widget/ImageButton;
 
-    const v1, 0x7f02032e
+    const v1, 0x7f02031b
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageResource(I)V
 
@@ -2607,7 +2607,7 @@
     .line 642
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment;->_saveButton:Landroid/widget/ImageButton;
 
-    const v1, 0x7f0200e2
+    const v1, 0x7f0200d6
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageResource(I)V
 
@@ -2661,7 +2661,7 @@
     :cond_17
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment;->_saveButton:Landroid/widget/ImageButton;
 
-    const v1, 0x7f02032e
+    const v1, 0x7f02031b
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageResource(I)V
 
@@ -2721,7 +2721,7 @@
     :cond_1a
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment;->_saveButton:Landroid/widget/ImageButton;
 
-    const v1, 0x7f02032e
+    const v1, 0x7f02031b
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageResource(I)V
 
@@ -2997,11 +2997,11 @@
 
     .line 223
     :pswitch_1
-    invoke-static {}, Lcom/kik/metrics/b/br;->b()Lcom/kik/metrics/b/br$a;
+    invoke-static {}, Lcom/kik/metrics/b/bs;->b()Lcom/kik/metrics/b/bs$a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/kik/metrics/b/br$a;->a()Lcom/kik/metrics/b/br;
+    invoke-virtual {v0}, Lcom/kik/metrics/b/bs$a;->a()Lcom/kik/metrics/b/bs;
 
     move-result-object v0
 
@@ -3028,11 +3028,11 @@
 
     .line 229
     :cond_0
-    invoke-static {}, Lcom/kik/metrics/b/bq;->b()Lcom/kik/metrics/b/bq$a;
+    invoke-static {}, Lcom/kik/metrics/b/br;->b()Lcom/kik/metrics/b/br$a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/kik/metrics/b/bq$a;->a()Lcom/kik/metrics/b/bq;
+    invoke-virtual {v0}, Lcom/kik/metrics/b/br$a;->a()Lcom/kik/metrics/b/br;
 
     move-result-object v0
 

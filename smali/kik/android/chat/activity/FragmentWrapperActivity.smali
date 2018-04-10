@@ -297,7 +297,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f100128
+    const v2, 0x7f10012f
 
     invoke-virtual {v0, v2, v1}, Landroid/support/v4/app/FragmentTransaction;->replace(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/FragmentTransaction;
 
@@ -744,7 +744,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100128
+    const v1, 0x7f10012f
 
     invoke-virtual {v0, v1}, Landroid/support/v4/app/FragmentManager;->findFragmentById(I)Landroid/support/v4/app/Fragment;
 
@@ -1227,9 +1227,9 @@
 
     move-result-object v0
 
-    new-instance v3, Lkik/android/widget/el;
+    new-instance v3, Lkik/android/widget/dq;
 
-    invoke-direct {v3}, Lkik/android/widget/el;-><init>()V
+    invoke-direct {v3}, Lkik/android/widget/dq;-><init>()V
 
     invoke-virtual {v0, v3}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
@@ -1435,7 +1435,7 @@
 
     .line 2621
     :cond_5
-    const v0, 0x7f0e00cd
+    const v0, 0x7f0e00c9
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->d(I)I
 

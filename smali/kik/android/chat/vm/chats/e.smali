@@ -173,7 +173,7 @@
 
     .line 50
     :cond_3
-    invoke-virtual {p0}, Lkik/android/chat/vm/chats/e;->aE_()V
+    invoke-virtual {p0}, Lkik/android/chat/vm/chats/e;->aL_()V
 
     goto :goto_1
 .end method

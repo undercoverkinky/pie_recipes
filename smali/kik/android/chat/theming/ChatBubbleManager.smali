@@ -916,7 +916,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0e009b
+    const v3, 0x7f0e0098
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -975,7 +975,7 @@
 
     const-string v1, "kik.chat.bubble.color"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->x(Ljava/lang/String;)Z
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->w(Ljava/lang/String;)Z
 
     .line 151
     :cond_1
@@ -1136,7 +1136,7 @@
 
     const-string v1, "kik.chat.bubble.color"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->r(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

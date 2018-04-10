@@ -6,61 +6,61 @@
 # instance fields
 .field _body:Lkik/android/widget/RobotoTextView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003fa
+        value = 0x7f1003e5
     .end annotation
 .end field
 
 .field _button:Landroid/widget/Button;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100405
+        value = 0x7f1003f0
     .end annotation
 .end field
 
 .field _countdownButtonLayout:Landroid/widget/LinearLayout;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003fb
+        value = 0x7f1003e6
     .end annotation
 .end field
 
 .field _dayCount:Lkik/android/widget/RobotoTextView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003fd
+        value = 0x7f1003e8
     .end annotation
 .end field
 
 .field _dayLetter:Lkik/android/widget/RobotoTextView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003fe
+        value = 0x7f1003e9
     .end annotation
 .end field
 
 .field _hourCount:Lkik/android/widget/RobotoTextView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003ff
+        value = 0x7f1003ea
     .end annotation
 .end field
 
 .field _minCount:Lkik/android/widget/RobotoTextView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100401
+        value = 0x7f1003ec
     .end annotation
 .end field
 
 .field _secCount:Lkik/android/widget/RobotoTextView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100403
+        value = 0x7f1003ee
     .end annotation
 .end field
 
 .field _timerText:Lkik/android/widget/RobotoTextView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003fc
+        value = 0x7f1003e7
     .end annotation
 .end field
 
 .field _title:Lkik/android/widget/RobotoTextView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003f9
+        value = 0x7f1003e4
     .end annotation
 .end field
 
@@ -948,7 +948,7 @@
     .line 1262
     iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->_button:Landroid/widget/Button;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/gg;->a(Lkik/android/chat/fragment/TemporaryBanDialog;)Landroid/view/View$OnClickListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/gf;->a(Lkik/android/chat/fragment/TemporaryBanDialog;)Landroid/view/View$OnClickListener;
 
     move-result-object v1
 
@@ -1009,7 +1009,7 @@
 
     .line 139
     :cond_0
-    invoke-static {p0}, Lkik/android/chat/fragment/ge;->a(Lkik/android/chat/fragment/TemporaryBanDialog;)Ljava/lang/Runnable;
+    invoke-static {p0}, Lkik/android/chat/fragment/gd;->a(Lkik/android/chat/fragment/TemporaryBanDialog;)Ljava/lang/Runnable;
 
     move-result-object v1
 
@@ -1038,7 +1038,7 @@
     if-eqz v0, :cond_0
 
     .line 1150
-    invoke-static {p0, p1}, Lkik/android/chat/fragment/gf;->a(Lkik/android/chat/fragment/TemporaryBanDialog;Lkik/core/net/outgoing/p;)Ljava/lang/Runnable;
+    invoke-static {p0, p1}, Lkik/android/chat/fragment/ge;->a(Lkik/android/chat/fragment/TemporaryBanDialog;Lkik/core/net/outgoing/p;)Ljava/lang/Runnable;
 
     move-result-object v1
 
@@ -1124,7 +1124,7 @@
     invoke-super {p0, p1, p2, p3}, Lkik/android/chat/fragment/CustomDialogFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     .line 90
-    const v0, 0x7f040179
+    const v0, 0x7f040171
 
     invoke-virtual {p1, v0, p2, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -1140,7 +1140,7 @@
     .line 93
     iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->g:Landroid/view/View;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/gd;->a(Lkik/android/chat/fragment/TemporaryBanDialog;)Landroid/view/View$OnLayoutChangeListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/gc;->a(Lkik/android/chat/fragment/TemporaryBanDialog;)Landroid/view/View$OnLayoutChangeListener;
 
     move-result-object v1
 

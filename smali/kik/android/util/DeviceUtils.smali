@@ -1209,7 +1209,7 @@
     .locals 1
 
     .prologue
-    .line 412
+    .line 408
     const-string v0, "activity"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1218,12 +1218,12 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 413
+    .line 409
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getMemoryClass()I
 
     move-result v0
 
-    .line 414
+    .line 410
     mul-int/lit16 v0, v0, 0x400
 
     mul-int/lit16 v0, v0, 0x400
@@ -1267,31 +1267,11 @@
     goto :goto_0
 .end method
 
-.method public static g(Landroid/content/Context;)Landroid/view/Display;
-    .locals 1
-
-    .prologue
-    .line 419
-    const-string v0, "window"
-
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/WindowManager;
-
-    invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public static g()V
     .locals 3
 
     .prologue
-    .line 397
+    .line 393
     sget-object v0, Lkik/android/util/DeviceUtils;->g:Landroid/media/AudioManager;
 
     const/4 v1, 0x3
@@ -1300,7 +1280,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/media/AudioManager;->setStreamMute(IZ)V
 
-    .line 398
+    .line 394
     return-void
 .end method
 
@@ -1308,7 +1288,7 @@
     .locals 3
 
     .prologue
-    .line 402
+    .line 398
     sget-object v0, Lkik/android/util/DeviceUtils;->g:Landroid/media/AudioManager;
 
     const/4 v1, 0x3
@@ -1317,6 +1297,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/media/AudioManager;->setStreamMute(IZ)V
 
-    .line 403
+    .line 399
     return-void
 .end method

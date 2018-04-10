@@ -29,25 +29,25 @@
 
 .field protected _anchor:Landroid/view/View;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1001ec
+        value = 0x7f1001d8
     .end annotation
 .end field
 
 .field protected _friendsList:Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1001ed
+        value = 0x7f1001d9
     .end annotation
 .end field
 
 .field protected _overflowButton:Landroid/widget/ImageView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10010c
+        value = 0x7f100113
     .end annotation
 .end field
 
 .field protected _searchBarView:Lkik/android/chat/view/SearchBarViewImpl;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1001ee
+        value = 0x7f1001da
     .end annotation
 .end field
 
@@ -447,11 +447,11 @@
     .line 730
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->_metricsService:Lcom/kik/metrics/c/d;
 
-    invoke-static {}, Lcom/kik/metrics/b/bo;->b()Lcom/kik/metrics/b/bo$a;
+    invoke-static {}, Lcom/kik/metrics/b/bp;->b()Lcom/kik/metrics/b/bp$a;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/kik/metrics/b/bo$a;->a()Lcom/kik/metrics/b/bo;
+    invoke-virtual {v1}, Lcom/kik/metrics/b/bp$a;->a()Lcom/kik/metrics/b/bp;
 
     move-result-object v1
 
@@ -1329,7 +1329,7 @@
 
     .prologue
     .line 672
-    const v0, 0x7f040085
+    const v0, 0x7f04007d
 
     return v0
 .end method
@@ -1571,7 +1571,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0a00dd
+    const v5, 0x7f0a00db
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1672,7 +1672,7 @@
     .line 461
     check-cast v1, Landroid/view/View;
 
-    const v2, 0x7f1000b7
+    const v2, 0x7f1000be
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1774,7 +1774,7 @@
     .locals 5
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f10010c
+            0x7f100113
         }
     .end annotation
 

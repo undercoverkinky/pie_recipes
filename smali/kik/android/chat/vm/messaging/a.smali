@@ -131,7 +131,7 @@
     move-result-object v3
 
     .line 88
-    invoke-virtual {p0}, Lkik/android/chat/vm/messaging/a;->u()Lkik/core/datatypes/Message;
+    invoke-virtual {p0}, Lkik/android/chat/vm/messaging/a;->q()Lkik/core/datatypes/Message;
 
     move-result-object v4
 
@@ -167,7 +167,7 @@
 
     .line 100
     :cond_1
-    iget-object v0, p0, Lkik/android/chat/vm/messaging/a;->q:Lcom/kik/android/Mixpanel;
+    iget-object v0, p0, Lkik/android/chat/vm/messaging/a;->o:Lcom/kik/android/Mixpanel;
 
     const-string v5, "Forward Tapped"
 
@@ -325,7 +325,7 @@
 
     .prologue
     .line 61
-    invoke-virtual {p0}, Lkik/android/chat/vm/messaging/a;->u()Lkik/core/datatypes/Message;
+    invoke-virtual {p0}, Lkik/android/chat/vm/messaging/a;->q()Lkik/core/datatypes/Message;
 
     move-result-object v0
 

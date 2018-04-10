@@ -34,7 +34,7 @@
     .locals 0
 
     .prologue
-    .line 640
+    .line 638
     iput-object p1, p0, Lkik/android/chat/KikApplication$34$1;->e:Lkik/android/chat/KikApplication$34;
 
     iput-object p2, p0, Lkik/android/chat/KikApplication$34$1;->a:Lkik/core/datatypes/f;
@@ -56,7 +56,7 @@
     .locals 4
 
     .prologue
-    .line 644
+    .line 642
     iget-object v0, p0, Lkik/android/chat/KikApplication$34$1;->a:Lkik/core/datatypes/f;
 
     invoke-virtual {v0}, Lkik/core/datatypes/f;->y()Z
@@ -65,7 +65,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 645
+    .line 643
     invoke-static {}, Lkik/android/chat/KikApplication;->z()Lkik/android/KikNotificationHandler;
 
     move-result-object v0
@@ -78,7 +78,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/Message;ZZ)V
 
-    .line 647
+    .line 645
     :cond_0
     return-void
 .end method

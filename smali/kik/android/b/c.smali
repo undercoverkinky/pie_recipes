@@ -181,7 +181,7 @@
     .line 67
     new-instance v0, Lcom/kik/cache/KikVolleyImageLoader;
 
-    invoke-static {}, Lcom/kik/util/ct;->a()Lcom/kik/cache/SimpleLruBitmapCache;
+    invoke-static {}, Lcom/kik/util/cp;->a()Lcom/kik/cache/SimpleLruBitmapCache;
 
     move-result-object v1
 

@@ -58,7 +58,7 @@
     if-eqz v0, :cond_0
 
     .line 51
-    invoke-static {p0}, Lkik/android/widget/preferences/h;->a(Lkik/android/widget/preferences/NamePreference;)Ljava/lang/Runnable;
+    invoke-static {p0}, Lkik/android/widget/preferences/i;->a(Lkik/android/widget/preferences/NamePreference;)Ljava/lang/Runnable;
 
     move-result-object v1
 
@@ -84,7 +84,7 @@
 
     .prologue
     .line 41
-    const v0, 0x7f04013f
+    const v0, 0x7f040136
 
     invoke-virtual {p0, v0}, Lkik/android/widget/preferences/NamePreference;->setLayoutResource(I)V
 
@@ -117,7 +117,7 @@
 
     move-result-object v1
 
-    invoke-static {p0}, Lkik/android/widget/preferences/g;->a(Lkik/android/widget/preferences/NamePreference;)Lcom/kik/events/e;
+    invoke-static {p0}, Lkik/android/widget/preferences/h;->a(Lkik/android/widget/preferences/NamePreference;)Lcom/kik/events/e;
 
     move-result-object v2
 
@@ -148,7 +148,7 @@
     iget-object v2, v0, Lkik/core/datatypes/aa;->e:Ljava/lang/String;
 
     .line 71
-    const v0, 0x7f1003a0
+    const v0, 0x7f100388
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

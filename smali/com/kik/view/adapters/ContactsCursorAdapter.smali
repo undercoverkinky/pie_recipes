@@ -84,7 +84,7 @@
 
     .prologue
     .line 58
-    const v0, 0x7f0400fa
+    const v0, 0x7f0400f2
 
     return v0
 .end method
@@ -186,7 +186,7 @@
     invoke-interface {v5, v6, v7}, Lkik/android/chat/vm/a/e;->a(Lcom/kik/components/CoreComponent;Lkik/android/chat/vm/ay;)V
 
     .line 103
-    const/16 v6, 0xe
+    const/16 v6, 0xd
 
     invoke-virtual {v2, v6, v5}, Landroid/databinding/ViewDataBinding;->setVariable(ILjava/lang/Object;)Z
 

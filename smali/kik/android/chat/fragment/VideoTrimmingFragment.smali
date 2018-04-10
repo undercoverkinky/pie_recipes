@@ -15,37 +15,37 @@
 # instance fields
 .field _editedSizeText:Landroid/widget/TextView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10013b
+        value = 0x7f100142
     .end annotation
 .end field
 
 .field _saveButton:Landroid/view/View;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10013c
+        value = 0x7f100143
     .end annotation
 .end field
 
 .field _videoKeyFrameView:Lkik/android/widget/VideoKeyFrameView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100137
+        value = 0x7f10013e
     .end annotation
 .end field
 
 .field _videoPlayIcon:Landroid/widget/ImageView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100139
+        value = 0x7f100140
     .end annotation
 .end field
 
 .field _videoView:Landroid/widget/VideoView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100138
+        value = 0x7f10013f
     .end annotation
 .end field
 
 .field _videoViewContainer:Landroid/widget/FrameLayout;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100135
+        value = 0x7f10013c
     .end annotation
 .end field
 
@@ -966,7 +966,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f020393
+    const v4, 0x7f020380
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -979,7 +979,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f020394
+    const v5, 0x7f020381
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -992,7 +992,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f0203a5
+    const v6, 0x7f020392
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1374,11 +1374,11 @@
 
     .prologue
     .line 109
-    invoke-static {}, Lcom/kik/metrics/b/bn;->b()Lcom/kik/metrics/b/bn$a;
+    invoke-static {}, Lcom/kik/metrics/b/bo;->b()Lcom/kik/metrics/b/bo$a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/kik/metrics/b/bn$a;->a()Lcom/kik/metrics/b/bn;
+    invoke-virtual {v0}, Lcom/kik/metrics/b/bo$a;->a()Lcom/kik/metrics/b/bo;
 
     move-result-object v0
 

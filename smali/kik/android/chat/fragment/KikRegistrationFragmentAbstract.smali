@@ -81,73 +81,73 @@
 
 .field _appBarShadow:Landroid/view/ViewGroup;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100350
+        value = 0x7f10033c
     .end annotation
 .end field
 
 .field _backButton:Landroid/view/View;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100119
+        value = 0x7f100120
     .end annotation
 .end field
 
 .field protected _birthdayField:Lkik/android/chat/view/ValidateableInputView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003ba
+        value = 0x7f1003a5
     .end annotation
 .end field
 
 .field protected _emailField:Lkik/android/chat/view/AutoCompleteValidateableInputView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003b8
+        value = 0x7f1003a3
     .end annotation
 .end field
 
 .field protected _firstnameField:Lkik/android/chat/view/ValidateableInputView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003b5
+        value = 0x7f1003a0
     .end annotation
 .end field
 
 .field protected _lastnameField:Lkik/android/chat/view/ValidateableInputView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003b6
+        value = 0x7f1003a1
     .end annotation
 .end field
 
 .field protected _passwordField:Lkik/android/chat/view/ValidateableInputView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003b9
+        value = 0x7f1003a4
     .end annotation
 .end field
 
 .field _phoneField:Lkik/android/chat/view/ValidateableInputView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003bb
+        value = 0x7f1003a6
     .end annotation
 .end field
 
 .field protected _registerButton:Landroid/widget/Button;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003bc
+        value = 0x7f1003a7
     .end annotation
 .end field
 
 .field protected _scrollView:Lcom/github/ksoichiro/android/observablescrollview/ObservableScrollView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003b3
+        value = 0x7f10039e
     .end annotation
 .end field
 
 .field _setProfilePhotoView:Lkik/android/chat/view/SetProfilePhotoView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003b4
+        value = 0x7f10039f
     .end annotation
 .end field
 
 .field protected _usernameField:Lkik/android/chat/view/ValidateableInputView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003b7
+        value = 0x7f1003a2
     .end annotation
 .end field
 
@@ -289,7 +289,7 @@
     iput-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->P:Landroid/view/View$OnClickListener;
 
     .line 184
-    invoke-static {p0}, Lkik/android/chat/fragment/dg;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Landroid/view/View$OnClickListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/df;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Landroid/view/View$OnClickListener;
 
     move-result-object v0
 
@@ -545,7 +545,7 @@
     .line 569
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->_lastnameField:Lkik/android/chat/view/ValidateableInputView;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/dt;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Ljava/lang/Runnable;
+    invoke-static {p0}, Lkik/android/chat/fragment/ds;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Ljava/lang/Runnable;
 
     move-result-object v1
 
@@ -614,7 +614,7 @@
 
     move-result-object v0
 
-    invoke-static {p0, p1, p2}, Lkik/android/chat/fragment/do;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;Ljava/lang/String;Ljava/lang/String;)Lrx/functions/g;
+    invoke-static {p0, p1, p2}, Lkik/android/chat/fragment/dn;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;Ljava/lang/String;Ljava/lang/String;)Lrx/functions/g;
 
     move-result-object v1
 
@@ -864,7 +864,7 @@
     iput-boolean v0, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->x:Z
 
     .line 12939
-    invoke-static {}, Lkik/android/widget/cm;->c()V
+    invoke-static {}, Lkik/android/widget/bw;->c()V
 
     .line 12942
     iget-object v2, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->n:Lkik/core/interfaces/ag;
@@ -1130,7 +1130,7 @@
     .line 12985
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->_emailField:Lkik/android/chat/view/AutoCompleteValidateableInputView;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/dp;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Ljava/lang/Runnable;
+    invoke-static {p0}, Lkik/android/chat/fragment/do;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Ljava/lang/Runnable;
 
     move-result-object v1
 
@@ -1441,7 +1441,7 @@
 
     move-result-object v0
 
-    invoke-static {p0}, Lkik/android/chat/fragment/dn;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Lrx/functions/g;
+    invoke-static {p0}, Lkik/android/chat/fragment/dm;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Lrx/functions/g;
 
     move-result-object v1
 
@@ -1465,7 +1465,7 @@
 
     const/4 v1, 0x1
 
-    invoke-static {p0}, Lkik/android/chat/fragment/dr;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Landroid/content/DialogInterface$OnClickListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/dq;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Landroid/content/DialogInterface$OnClickListener;
 
     move-result-object v2
 
@@ -1592,7 +1592,7 @@
     :cond_1
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->_emailField:Lkik/android/chat/view/AutoCompleteValidateableInputView;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/ds;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Ljava/lang/Runnable;
+    invoke-static {p0}, Lkik/android/chat/fragment/dr;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Ljava/lang/Runnable;
 
     move-result-object v1
 
@@ -2489,7 +2489,7 @@
 
     move-result-object v0
 
-    invoke-static {p0}, Lkik/android/chat/fragment/dm;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Lrx/functions/g;
+    invoke-static {p0}, Lkik/android/chat/fragment/dl;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Lrx/functions/g;
 
     move-result-object v1
 
@@ -2891,7 +2891,7 @@
     .line 245
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->_emailField:Lkik/android/chat/view/AutoCompleteValidateableInputView;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/du;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Ljava/lang/Runnable;
+    invoke-static {p0}, Lkik/android/chat/fragment/dt;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Ljava/lang/Runnable;
 
     move-result-object v1
 
@@ -4015,7 +4015,7 @@
     :cond_0
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->_emailField:Lkik/android/chat/view/AutoCompleteValidateableInputView;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/dq;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Ljava/lang/Runnable;
+    invoke-static {p0}, Lkik/android/chat/fragment/dp;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Ljava/lang/Runnable;
 
     move-result-object v1
 
@@ -4947,7 +4947,7 @@
     .line 562
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->_backButton:Landroid/view/View;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/dv;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Landroid/view/View$OnClickListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/du;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Landroid/view/View$OnClickListener;
 
     move-result-object v5
 
@@ -4977,7 +4977,7 @@
     .line 567
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->_firstnameField:Lkik/android/chat/view/ValidateableInputView;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/dw;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Lkik/android/chat/view/ValidateableInputView$a;
+    invoke-static {p0}, Lkik/android/chat/fragment/dv;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Lkik/android/chat/view/ValidateableInputView$a;
 
     move-result-object v5
 
@@ -4986,7 +4986,7 @@
     .line 573
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->_firstnameField:Lkik/android/chat/view/ValidateableInputView;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/dx;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Lkik/android/chat/view/ValidateableInputView$b;
+    invoke-static {p0}, Lkik/android/chat/fragment/dw;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Lkik/android/chat/view/ValidateableInputView$b;
 
     move-result-object v5
 
@@ -4995,7 +4995,7 @@
     .line 586
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->_lastnameField:Lkik/android/chat/view/ValidateableInputView;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/dy;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Lkik/android/chat/view/ValidateableInputView$b;
+    invoke-static {p0}, Lkik/android/chat/fragment/dx;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Lkik/android/chat/view/ValidateableInputView$b;
 
     move-result-object v5
 
@@ -5004,7 +5004,7 @@
     .line 599
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->_usernameField:Lkik/android/chat/view/ValidateableInputView;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/dz;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Lkik/android/chat/view/ValidateableInputView$b;
+    invoke-static {p0}, Lkik/android/chat/fragment/dy;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Lkik/android/chat/view/ValidateableInputView$b;
 
     move-result-object v5
 
@@ -5013,7 +5013,7 @@
     .line 633
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->_emailField:Lkik/android/chat/view/AutoCompleteValidateableInputView;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/ea;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Lkik/android/chat/view/ValidateableInputView$b;
+    invoke-static {p0}, Lkik/android/chat/fragment/dz;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Lkik/android/chat/view/ValidateableInputView$b;
 
     move-result-object v5
 
@@ -5022,7 +5022,7 @@
     .line 644
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->_passwordField:Lkik/android/chat/view/ValidateableInputView;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/dh;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Lkik/android/chat/view/ValidateableInputView$b;
+    invoke-static {p0}, Lkik/android/chat/fragment/dg;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Lkik/android/chat/view/ValidateableInputView$b;
 
     move-result-object v5
 
@@ -5031,7 +5031,7 @@
     .line 662
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->_passwordField:Lkik/android/chat/view/ValidateableInputView;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/di;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Landroid/widget/TextView$OnEditorActionListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/dh;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Landroid/widget/TextView$OnEditorActionListener;
 
     move-result-object v5
 
@@ -5149,7 +5149,7 @@
     .line 683
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->_emailField:Lkik/android/chat/view/AutoCompleteValidateableInputView;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/dj;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Landroid/view/View$OnFocusChangeListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/di;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Landroid/view/View$OnFocusChangeListener;
 
     move-result-object v5
 
@@ -5158,7 +5158,7 @@
     .line 704
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->_emailField:Lkik/android/chat/view/AutoCompleteValidateableInputView;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/dk;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Lkik/core/interfaces/ai;
+    invoke-static {p0}, Lkik/android/chat/fragment/dj;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Lkik/core/interfaces/ai;
 
     move-result-object v5
 
@@ -5172,7 +5172,7 @@
     invoke-virtual {v0, v5}, Lcom/kik/view/adapters/n;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
 
     .line 709
-    const v0, 0x7f100215
+    const v0, 0x7f100201
 
     invoke-virtual {v4, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -5344,7 +5344,7 @@
     .line 736
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->_phoneField:Lkik/android/chat/view/ValidateableInputView;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/dl;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Landroid/view/View$OnFocusChangeListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/dk;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Landroid/view/View$OnFocusChangeListener;
 
     move-result-object v1
 

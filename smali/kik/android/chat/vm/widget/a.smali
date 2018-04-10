@@ -35,11 +35,11 @@
 
 .field protected c:Lkik/core/interfaces/h;
 
-.field private d:Lkik/android/widget/ca;
+.field private d:Lkik/android/widget/bk;
 
 
 # direct methods
-.method public constructor <init>(Lkik/android/widget/ca;)V
+.method public constructor <init>(Lkik/android/widget/bk;)V
     .locals 0
 
     .prologue
@@ -47,7 +47,7 @@
     invoke-direct {p0}, Lkik/android/chat/vm/c;-><init>()V
 
     .line 40
-    iput-object p1, p0, Lkik/android/chat/vm/widget/a;->d:Lkik/android/widget/ca;
+    iput-object p1, p0, Lkik/android/chat/vm/widget/a;->d:Lkik/android/widget/bk;
 
     .line 41
     return-void
@@ -74,7 +74,7 @@
 
     .prologue
     .line 61
-    iget-object v0, p0, Lkik/android/chat/vm/widget/a;->d:Lkik/android/widget/ca;
+    iget-object v0, p0, Lkik/android/chat/vm/widget/a;->d:Lkik/android/widget/bk;
 
     if-nez v0, :cond_1
 
@@ -90,9 +90,9 @@
     move-result-wide v0
 
     .line 68
-    iget-object v2, p0, Lkik/android/chat/vm/widget/a;->d:Lkik/android/widget/ca;
+    iget-object v2, p0, Lkik/android/chat/vm/widget/a;->d:Lkik/android/widget/bk;
 
-    invoke-interface {v2}, Lkik/android/widget/ca;->a()J
+    invoke-interface {v2}, Lkik/android/widget/bk;->a()J
 
     move-result-wide v2
 
@@ -130,9 +130,9 @@
     invoke-virtual {v3, v2, v4}, Lcom/kik/cache/KikVolleyImageLoader;->a(Lcom/kik/cache/KikImageBytesRequest;Lcom/kik/cache/KikVolleyImageLoader$b;)V
 
     .line 70
-    iget-object v2, p0, Lkik/android/chat/vm/widget/a;->d:Lkik/android/widget/ca;
+    iget-object v2, p0, Lkik/android/chat/vm/widget/a;->d:Lkik/android/widget/bk;
 
-    invoke-interface {v2, v0, v1}, Lkik/android/widget/ca;->a(J)V
+    invoke-interface {v2, v0, v1}, Lkik/android/widget/bk;->a(J)V
 
     goto :goto_0
 .end method
@@ -155,7 +155,7 @@
     const/4 v0, 0x0
 
     .line 53
-    iput-object v0, p0, Lkik/android/chat/vm/widget/a;->d:Lkik/android/widget/ca;
+    iput-object v0, p0, Lkik/android/chat/vm/widget/a;->d:Lkik/android/widget/bk;
 
     .line 54
     iput-object v0, p0, Lkik/android/chat/vm/widget/a;->c:Lkik/core/interfaces/h;

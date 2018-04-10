@@ -152,12 +152,12 @@
     .line 1167
     if-eqz v0, :cond_22
 
-    .line 1387
+    .line 1386
     if-eqz v0, :cond_0
 
     const-string v1, "kikapi"
 
-    .line 1388
+    .line 1387
     invoke-virtual {v0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v2
@@ -193,39 +193,39 @@
 
     if-eqz v1, :cond_21
 
-    .line 1390
+    .line 1389
     :cond_1
     invoke-virtual {v0}, Landroid/net/Uri;->getEncodedQuery()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1391
+    .line 1390
     invoke-virtual {v0}, Landroid/net/Uri;->getEncodedSchemeSpecificPart()Ljava/lang/String;
 
-    .line 1392
+    .line 1391
     new-instance v3, Landroid/net/UrlQuerySanitizer;
 
     invoke-direct {v3}, Landroid/net/UrlQuerySanitizer;-><init>()V
 
-    .line 1393
+    .line 1392
     invoke-virtual {v3, v10}, Landroid/net/UrlQuerySanitizer;->setAllowUnregisteredParamaters(Z)V
 
-    .line 1394
+    .line 1393
     invoke-static {}, Landroid/net/UrlQuerySanitizer;->getUrlAndSpaceLegal()Landroid/net/UrlQuerySanitizer$ValueSanitizer;
 
     move-result-object v0
 
     invoke-virtual {v3, v0}, Landroid/net/UrlQuerySanitizer;->setUnregisteredParameterValueSanitizer(Landroid/net/UrlQuerySanitizer$ValueSanitizer;)V
 
-    .line 1395
+    .line 1394
     invoke-virtual {v3, v1}, Landroid/net/UrlQuerySanitizer;->parseQuery(Ljava/lang/String;)V
 
-    .line 1397
+    .line 1396
     invoke-virtual {v3}, Landroid/net/UrlQuerySanitizer;->getParameterSet()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 1399
+    .line 1398
     const-string v1, "app-id"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -275,7 +275,7 @@
 
     const-string v2, "temporary.ban.manager.exists"
 
-    invoke-interface {v0, v2}, Lkik/core/interfaces/ad;->w(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-interface {v0, v2}, Lkik/core/interfaces/ad;->v(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -312,7 +312,7 @@
     :goto_2
     return-void
 
-    .line 1404
+    .line 1403
     :cond_3
     const-string v1, "app-id"
 
@@ -320,66 +320,66 @@
 
     move-result-object v2
 
-    .line 1405
+    .line 1404
     const-string v1, "app-name"
 
     invoke-virtual {v3, v1}, Landroid/net/UrlQuerySanitizer;->getValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1406
+    .line 1405
     const-string v4, "uri"
 
     invoke-virtual {v3, v4}, Landroid/net/UrlQuerySanitizer;->getValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 1407
+    .line 1406
     const-string v4, "text"
 
     invoke-virtual {v3, v4}, Landroid/net/UrlQuerySanitizer;->getValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 1408
+    .line 1407
     const-string v5, "title"
 
     invoke-virtual {v3, v5}, Landroid/net/UrlQuerySanitizer;->getValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 1410
+    .line 1409
     new-instance v5, Ljava/util/Hashtable;
 
     invoke-direct {v5}, Ljava/util/Hashtable;-><init>()V
 
-    .line 1411
+    .line 1410
     if-eqz v7, :cond_4
 
-    .line 1412
+    .line 1411
     const-string v8, "title"
 
     invoke-virtual {v5, v8, v7}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1415
+    .line 1414
     :cond_4
     if-eqz v4, :cond_5
 
-    .line 1416
+    .line 1415
     const-string v7, "text"
 
     invoke-virtual {v5, v7, v4}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1419
+    .line 1418
     :cond_5
     if-eqz v1, :cond_6
 
-    .line 1420
+    .line 1419
     const-string v4, "app-name"
 
     invoke-virtual {v5, v4, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1423
+    .line 1422
     :cond_6
     const-string v1, "allow-forward"
 
@@ -387,20 +387,20 @@
 
     invoke-virtual {v5, v1, v4}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1425
+    .line 1424
     new-instance v7, Ljava/util/Hashtable;
 
     invoke-direct {v7}, Ljava/util/Hashtable;-><init>()V
 
-    .line 1426
+    .line 1425
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1427
+    .line 1426
     const-string v1, "extra-"
 
-    .line 1428
+    .line 1427
     new-instance v8, Lcom/kik/contentlink/model/attachments/ContentUri;
 
     const-string v13, "app-name"
@@ -409,7 +409,7 @@
 
     invoke-virtual {v4, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1429
+    .line 1428
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
@@ -428,19 +428,19 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 1430
+    .line 1429
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v8
 
     if-eqz v8, :cond_9
 
-    .line 1431
+    .line 1430
     invoke-virtual {v3, v0}, Landroid/net/UrlQuerySanitizer;->getValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 1432
+    .line 1431
     if-eqz v8, :cond_8
 
     const-string v13, ""
@@ -451,7 +451,7 @@
 
     if-nez v13, :cond_8
 
-    .line 1433
+    .line 1432
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v13
@@ -464,7 +464,7 @@
 
     goto :goto_3
 
-    .line 1437
+    .line 1436
     :cond_8
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -480,7 +480,7 @@
 
     goto :goto_3
 
-    .line 1440
+    .line 1439
     :cond_9
     const-string v8, "android-uri"
 
@@ -490,7 +490,7 @@
 
     if-eqz v8, :cond_a
 
-    .line 1441
+    .line 1440
     new-instance v8, Lcom/kik/contentlink/model/attachments/ContentUri;
 
     invoke-virtual {v3, v0}, Landroid/net/UrlQuerySanitizer;->getValue(Ljava/lang/String;)Ljava/lang/String;
@@ -501,17 +501,17 @@
 
     invoke-direct {v8, v0, v13}, Lcom/kik/contentlink/model/attachments/ContentUri;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1442
+    .line 1441
     const-string v0, "android"
 
     invoke-virtual {v8, v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->a(Ljava/lang/String;)Lcom/kik/contentlink/model/attachments/ContentUri;
 
-    .line 1443
+    .line 1442
     invoke-virtual {v4, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_3
 
-    .line 1445
+    .line 1444
     :cond_a
     const-string v8, "iphone-uri"
 
@@ -521,7 +521,7 @@
 
     if-eqz v8, :cond_7
 
-    .line 1446
+    .line 1445
     new-instance v8, Lcom/kik/contentlink/model/attachments/ContentUri;
 
     invoke-virtual {v3, v0}, Landroid/net/UrlQuerySanitizer;->getValue(Ljava/lang/String;)Ljava/lang/String;
@@ -532,17 +532,17 @@
 
     invoke-direct {v8, v0, v13}, Lcom/kik/contentlink/model/attachments/ContentUri;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1447
+    .line 1446
     const-string v0, "iphone"
 
     invoke-virtual {v8, v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->a(Ljava/lang/String;)Lcom/kik/contentlink/model/attachments/ContentUri;
 
-    .line 1448
+    .line 1447
     invoke-virtual {v4, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_3
 
-    .line 1452
+    .line 1451
     :cond_b
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
@@ -552,7 +552,7 @@
 
     move-result-object v1
 
-    .line 1453
+    .line 1452
     new-instance v0, Lkik/core/datatypes/messageExtensions/ContentMessage;
 
     const-string v3, "2"
@@ -567,12 +567,12 @@
 
     invoke-direct/range {v0 .. v8}, Lkik/core/datatypes/messageExtensions/ContentMessage;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;)V
 
-    .line 1454
+    .line 1453
     const-string v1, "icon"
 
     new-instance v2, Lkik/core/datatypes/b;
 
-    const v3, 0x7f020206
+    const v3, 0x7f0201f9
 
     invoke-static {v3}, Lkik/android/chat/KikApplication;->b(I)Landroid/graphics/Bitmap;
 
@@ -590,7 +590,7 @@
 
     invoke-virtual {v0, v1, v2}, Lkik/core/datatypes/messageExtensions/ContentMessage;->a(Ljava/lang/String;Lkik/core/datatypes/q;)V
 
-    .line 1455
+    .line 1454
     const-string v1, "app-pkg"
 
     const-string v2, "WebApp"

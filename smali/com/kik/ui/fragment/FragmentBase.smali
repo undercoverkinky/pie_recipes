@@ -188,7 +188,7 @@
     if-eqz p1, :cond_1
 
     .line 121
-    const v0, 0x7f100119
+    const v0, 0x7f100120
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -206,7 +206,7 @@
 
     .line 132
     :cond_0
-    const v0, 0x7f10011b
+    const v0, 0x7f100122
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -693,7 +693,7 @@
 
     .prologue
     .line 515
-    const v0, 0x7f0e00cd
+    const v0, 0x7f0e00c9
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->d(I)I
 

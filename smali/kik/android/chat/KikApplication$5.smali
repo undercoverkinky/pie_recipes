@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 761
+    .line 759
     iput-object p1, p0, Lkik/android/chat/KikApplication$5;->a:Lkik/android/chat/KikApplication;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,32 +50,32 @@
     .locals 1
 
     .prologue
-    .line 761
+    .line 759
     check-cast p2, Ljava/lang/Boolean;
 
-    .line 1765
+    .line 1763
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1766
+    .line 1764
     iget-object v0, p0, Lkik/android/chat/KikApplication$5;->a:Lkik/android/chat/KikApplication;
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->A(Lkik/android/chat/KikApplication;)Z
 
-    .line 1767
+    .line 1765
     iget-object v0, p0, Lkik/android/chat/KikApplication$5;->a:Lkik/android/chat/KikApplication;
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->m(Lkik/android/chat/KikApplication;)V
 
-    .line 1768
+    .line 1766
     iget-object v0, p0, Lkik/android/chat/KikApplication$5;->a:Lkik/android/chat/KikApplication;
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->B(Lkik/android/chat/KikApplication;)V
 
-    .line 761
+    .line 759
     :cond_0
     return-void
 .end method

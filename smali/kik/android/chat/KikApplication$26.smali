@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 2012
+    .line 2006
     iput-object p1, p0, Lkik/android/chat/KikApplication$26;->a:Lkik/android/chat/KikApplication;
 
     invoke-direct {p0}, Lrx/i;-><init>()V
@@ -46,10 +46,10 @@
     .locals 4
 
     .prologue
-    .line 2012
+    .line 2006
     check-cast p1, Lcom/kik/featureconfig/rpc/FeatureConfigService$GetFeatureConfigsResponse;
 
-    .line 3016
+    .line 3010
     iget-object v0, p0, Lkik/android/chat/KikApplication$26;->a:Lkik/android/chat/KikApplication;
 
     iget-object v0, v0, Lkik/android/chat/KikApplication;->q:Ldagger/a;
@@ -62,7 +62,7 @@
 
     invoke-interface {v0, p1}, Lcom/kik/core/a/c;->a(Lcom/kik/featureconfig/rpc/FeatureConfigService$GetFeatureConfigsResponse;)V
 
-    .line 3017
+    .line 3011
     iget-object v0, p0, Lkik/android/chat/KikApplication$26;->a:Lkik/android/chat/KikApplication;
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->p(Lkik/android/chat/KikApplication;)Lkik/core/interfaces/ad;
@@ -81,7 +81,7 @@
 
     invoke-interface {v0, v1, v2}, Lkik/core/interfaces/ad;->a(Ljava/lang/String;Ljava/lang/Long;)Z
 
-    .line 2012
+    .line 2006
     return-void
 .end method
 
@@ -89,6 +89,6 @@
     .locals 0
 
     .prologue
-    .line 2024
+    .line 2018
     return-void
 .end method

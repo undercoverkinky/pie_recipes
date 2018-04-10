@@ -93,10 +93,10 @@
 .method public abstract b(Landroid/graphics/Bitmap;Ljava/lang/String;)V
 .end method
 
-.method public abstract c(Ljava/lang/String;)Ljava/lang/String;
+.method public abstract c(Landroid/graphics/Bitmap;Ljava/lang/String;)V
 .end method
 
-.method public abstract c(Landroid/graphics/Bitmap;Ljava/lang/String;)V
+.method public abstract c(Ljava/lang/String;)Z
 .end method
 
 .method public abstract d(Ljava/lang/String;)Z
@@ -108,10 +108,10 @@
 .method public abstract f(Ljava/lang/String;)Z
 .end method
 
-.method public abstract g(Ljava/lang/String;)Z
+.method public abstract g(Ljava/lang/String;)Ljava/io/File;
 .end method
 
-.method public abstract h(Ljava/lang/String;)Ljava/io/File;
+.method public abstract h(Ljava/lang/String;)Landroid/graphics/Bitmap;
 .end method
 
 .method public abstract i(Ljava/lang/String;)Landroid/graphics/Bitmap;
@@ -120,8 +120,5 @@
 .method public abstract j(Ljava/lang/String;)Landroid/graphics/Bitmap;
 .end method
 
-.method public abstract k(Ljava/lang/String;)Landroid/graphics/Bitmap;
-.end method
-
-.method public abstract l(Ljava/lang/String;)V
+.method public abstract k(Ljava/lang/String;)V
 .end method

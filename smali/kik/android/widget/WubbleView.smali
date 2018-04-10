@@ -119,11 +119,11 @@
 
     .prologue
     .line 64
-    const v0, 0x7f010027
+    const v0, 0x7f010053
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p0}, Lkik/android/widget/em;->a(Lkik/android/widget/WubbleView;)Lrx/functions/b;
+    invoke-static {p0}, Lkik/android/widget/dr;->a(Lkik/android/widget/WubbleView;)Lrx/functions/b;
 
     move-result-object v1
 
@@ -139,30 +139,30 @@
     .locals 2
 
     .prologue
-    .line 183
+    .line 182
     invoke-virtual {p0}, Lkik/android/widget/WubbleView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 185
+    .line 184
     :goto_0
     instance-of v1, v0, Landroid/content/ContextWrapper;
 
     if-eqz v1, :cond_1
 
-    .line 186
+    .line 185
     instance-of v1, v0, Landroid/app/Activity;
 
     if-eqz v1, :cond_0
 
-    .line 187
+    .line 186
     check-cast v0, Landroid/app/Activity;
 
-    .line 193
+    .line 192
     :goto_1
     return-object v0
 
-    .line 190
+    .line 189
     :cond_0
     check-cast v0, Landroid/content/ContextWrapper;
 
@@ -172,7 +172,7 @@
 
     goto :goto_0
 
-    .line 193
+    .line 192
     :cond_1
     const/4 v0, 0x0
 
@@ -195,7 +195,7 @@
     .locals 0
 
     .prologue
-    .line 219
+    .line 218
     return-void
 .end method
 
@@ -341,16 +341,20 @@
     invoke-virtual {v0, v1}, Lcom/kik/cards/web/v;->b(Lcom/kik/cards/web/n;)V
 
     .line 1132
-    const-string v1, "about:none"
+    const-string v1, ""
 
-    invoke-virtual {v0, v1}, Lcom/kik/cards/web/v;->loadUrl(Ljava/lang/String;)V
+    const-string v2, "text/html"
 
-    .line 1166
+    const-string v3, "UTF-8"
+
+    invoke-virtual {v0, v1, v2, v3}, Lcom/kik/cards/web/v;->loadData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1165
     iget-object v1, p0, Lkik/android/widget/WubbleView;->i:Ljava/lang/String;
 
     if-eqz v1, :cond_3
 
-    .line 1170
+    .line 1169
     iget-object v1, p0, Lkik/android/widget/WubbleView;->a:Lkik/core/interfaces/IConversation;
 
     iget-object v2, p0, Lkik/android/widget/WubbleView;->h:Ljava/lang/String;
@@ -359,7 +363,7 @@
 
     move-result-object v1
 
-    .line 1172
+    .line 1171
     invoke-virtual {v1}, Lkik/core/datatypes/f;->h()Ljava/util/Vector;
 
     move-result-object v1
@@ -381,7 +385,7 @@
 
     check-cast v1, Lkik/core/datatypes/Message;
 
-    .line 1173
+    .line 1172
     invoke-virtual {v1}, Lkik/core/datatypes/Message;->b()Ljava/lang/String;
 
     move-result-object v3
@@ -394,7 +398,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 1174
+    .line 1173
     const-class v2, Lkik/core/datatypes/messageExtensions/ContentMessage;
 
     invoke-static {v1, v2}, Lkik/core/datatypes/messageExtensions/MessageAttachment;->getAttachment(Lkik/core/datatypes/Message;Ljava/lang/Class;)Lkik/core/datatypes/messageExtensions/MessageAttachment;
@@ -428,7 +432,7 @@
 
     invoke-virtual {p0, v0, v1}, Lkik/android/widget/WubbleView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1161
+    .line 1160
     :cond_1
     iget-object v0, p0, Lkik/android/widget/WubbleView;->k:Lcom/kik/cards/web/v;
 
@@ -441,7 +445,7 @@
     :cond_3
     move-object v1, v7
 
-    .line 1178
+    .line 1177
     goto :goto_0
 .end method
 
@@ -449,14 +453,14 @@
     .locals 2
 
     .prologue
-    .line 200
+    .line 199
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-interface {p2, p1, v0, v1}, Landroid/webkit/GeolocationPermissions$Callback;->invoke(Ljava/lang/String;ZZ)V
 
-    .line 201
+    .line 200
     return-void
 .end method
 
@@ -464,7 +468,7 @@
     .locals 0
 
     .prologue
-    .line 213
+    .line 212
     return-void
 .end method
 
@@ -472,7 +476,7 @@
     .locals 0
 
     .prologue
-    .line 225
+    .line 224
     return-void
 .end method
 
@@ -502,7 +506,7 @@
     .locals 1
 
     .prologue
-    .line 206
+    .line 205
     sget-object v0, Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;->None:Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;
 
     return-object v0
@@ -512,6 +516,6 @@
     .locals 0
 
     .prologue
-    .line 231
+    .line 230
     return-void
 .end method

@@ -61,7 +61,7 @@
 
     const-string v1, "kik.logintime"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->v(Ljava/lang/String;)Ljava/lang/Long;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->u(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v0
 
@@ -248,7 +248,7 @@
 
     const-string v3, "kik.publicgroup.helper"
 
-    invoke-interface {v0, v3}, Lkik/core/interfaces/ad;->w(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-interface {v0, v3}, Lkik/core/interfaces/ad;->v(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -272,7 +272,7 @@
 
     const-string v4, "kik.friend.helper"
 
-    invoke-interface {v3, v4}, Lkik/core/interfaces/ad;->w(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-interface {v3, v4}, Lkik/core/interfaces/ad;->v(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v3
 

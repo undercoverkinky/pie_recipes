@@ -19,13 +19,13 @@
 # instance fields
 .field protected _testsList:Landroid/widget/ListView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1000d5
+        value = 0x7f1000dc
     .end annotation
 .end field
 
 .field protected _title:Landroid/widget/TextView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10011b
+        value = 0x7f100122
     .end annotation
 .end field
 
@@ -554,7 +554,7 @@
     invoke-virtual {v0, v1, v3}, Lcom/kik/view/adapters/x;->d(Ljava/lang/String;Landroid/widget/Adapter;)V
 
     .line 104
-    const v0, 0x7f04013f
+    const v0, 0x7f040136
 
     const/4 v1, 0x0
 

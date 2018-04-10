@@ -1750,7 +1750,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f020314
+    const v1, 0x7f020303
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -3337,7 +3337,7 @@
 
     const-string v1, "kik.developer.mode"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->w(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->v(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -4404,7 +4404,7 @@
     invoke-direct {p0}, Lcom/kik/cards/web/CardsWebViewFragment;->p()V
 
     .line 961
-    const v0, 0x7f04003f
+    const v0, 0x7f040037
 
     invoke-virtual {p1, v0, v7}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -4417,7 +4417,7 @@
     .line 963
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment;->G:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f10016f
+    const v1, 0x7f10015b
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -4428,7 +4428,7 @@
     .line 964
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment;->G:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f10041e
+    const v1, 0x7f100402
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -4441,7 +4441,7 @@
     .line 965
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment;->G:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f100420
+    const v1, 0x7f100404
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -4454,7 +4454,7 @@
     .line 966
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment;->G:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f10041f
+    const v1, 0x7f100403
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -4479,7 +4479,7 @@
     .line 969
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment;->G:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f10016e
+    const v1, 0x7f10015a
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -4492,7 +4492,7 @@
     .line 970
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment;->G:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f1000fd
+    const v1, 0x7f100104
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -4505,7 +4505,7 @@
     .line 971
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment;->Y:Landroid/view/ViewGroup;
 
-    const v1, 0x7f10011b
+    const v1, 0x7f100122
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -4518,7 +4518,7 @@
     .line 972
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment;->Y:Landroid/view/ViewGroup;
 
-    const v1, 0x7f100169
+    const v1, 0x7f100155
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -4529,7 +4529,7 @@
     .line 974
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment;->G:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f10016b
+    const v1, 0x7f100157
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -4540,7 +4540,7 @@
     .line 975
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment;->G:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f100170
+    const v1, 0x7f10015c
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -4558,7 +4558,7 @@
     .line 978
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment;->Y:Landroid/view/ViewGroup;
 
-    const v1, 0x7f10010c
+    const v1, 0x7f100113
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -4571,7 +4571,7 @@
     .line 980
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment;->Y:Landroid/view/ViewGroup;
 
-    const v1, 0x7f1000b5
+    const v1, 0x7f1000bc
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -4584,7 +4584,7 @@
     .line 982
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment;->G:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f10016d
+    const v1, 0x7f100159
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -4597,7 +4597,7 @@
     .line 983
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment;->G:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f10016c
+    const v1, 0x7f100158
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -4610,7 +4610,7 @@
     .line 984
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment;->G:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f10016a
+    const v1, 0x7f100156
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -4623,7 +4623,7 @@
     .line 986
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment;->G:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f100140
+    const v1, 0x7f100147
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -4636,7 +4636,7 @@
     .line 987
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment;->G:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f100142
+    const v1, 0x7f100149
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -4649,7 +4649,7 @@
     .line 988
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment;->G:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f100141
+    const v1, 0x7f100148
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -4837,7 +4837,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f040047
+    const v1, 0x7f04003f
 
     invoke-static {v0, v1, v7}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 

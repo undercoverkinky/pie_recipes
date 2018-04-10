@@ -37,7 +37,7 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 56
-    const v0, 0x7f04013f
+    const v0, 0x7f040136
 
     invoke-virtual {p0, v0}, Lkik/android/widget/preferences/KikModalPreference;->setLayoutResource(I)V
 
@@ -59,7 +59,7 @@
     iput v1, p0, Lkik/android/widget/preferences/KikModalPreference;->e:I
 
     .line 64
-    invoke-static {}, Lkik/android/widget/preferences/d;->a()Landroid/preference/Preference$OnPreferenceClickListener;
+    invoke-static {}, Lkik/android/widget/preferences/e;->a()Landroid/preference/Preference$OnPreferenceClickListener;
 
     move-result-object v1
 
@@ -220,7 +220,7 @@
 
     .prologue
     .line 82
-    invoke-static {p0, p1}, Lkik/android/widget/preferences/e;->a(Lkik/android/widget/preferences/KikModalPreference;Landroid/preference/Preference$OnPreferenceClickListener;)Landroid/preference/Preference$OnPreferenceClickListener;
+    invoke-static {p0, p1}, Lkik/android/widget/preferences/f;->a(Lkik/android/widget/preferences/KikModalPreference;Landroid/preference/Preference$OnPreferenceClickListener;)Landroid/preference/Preference$OnPreferenceClickListener;
 
     move-result-object v0
 

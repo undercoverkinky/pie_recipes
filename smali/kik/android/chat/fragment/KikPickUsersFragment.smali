@@ -1066,11 +1066,11 @@
 
     move-result-object v0
 
-    invoke-static {p0, p1}, Lkik/android/chat/fragment/cy;->a(Lkik/android/chat/fragment/KikPickUsersFragment;Lkik/core/datatypes/l;)Lrx/functions/b;
+    invoke-static {p0, p1}, Lkik/android/chat/fragment/cx;->a(Lkik/android/chat/fragment/KikPickUsersFragment;Lkik/core/datatypes/l;)Lrx/functions/b;
 
     move-result-object v1
 
-    invoke-static {}, Lkik/android/chat/fragment/cz;->a()Lrx/functions/b;
+    invoke-static {}, Lkik/android/chat/fragment/cy;->a()Lrx/functions/b;
 
     move-result-object v2
 
@@ -1798,11 +1798,11 @@
 
     .prologue
     .line 74
-    invoke-static {}, Lcom/kik/metrics/b/bb;->b()Lcom/kik/metrics/b/bb$a;
+    invoke-static {}, Lcom/kik/metrics/b/bc;->b()Lcom/kik/metrics/b/bc$a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/kik/metrics/b/bb$a;->a()Lcom/kik/metrics/b/bb;
+    invoke-virtual {v0}, Lcom/kik/metrics/b/bc$a;->a()Lcom/kik/metrics/b/bc;
 
     move-result-object v0
 

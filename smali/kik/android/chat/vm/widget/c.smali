@@ -723,11 +723,11 @@
     .line 353
     iget-object v0, p0, Lkik/android/chat/vm/widget/c;->g:Lcom/kik/metrics/c/d;
 
-    invoke-static {}, Lcom/kik/metrics/b/ax;->b()Lcom/kik/metrics/b/ax$a;
+    invoke-static {}, Lcom/kik/metrics/b/ay;->b()Lcom/kik/metrics/b/ay$a;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/kik/metrics/b/ax$a;->a()Lcom/kik/metrics/b/ax;
+    invoke-virtual {v1}, Lcom/kik/metrics/b/ay$a;->a()Lcom/kik/metrics/b/ay;
 
     move-result-object v1
 
@@ -850,7 +850,7 @@
 
     const-string v2, "kik.chat.fragment.contacts.chatted.with"
 
-    invoke-interface {v1, v2}, Lkik/core/interfaces/ad;->t(Ljava/lang/String;)Ljava/util/Set;
+    invoke-interface {v1, v2}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/util/Set;
 
     move-result-object v1
 

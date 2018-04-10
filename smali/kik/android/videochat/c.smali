@@ -142,15 +142,3 @@
 
 .method public abstract h()Z
 .end method
-
-.method public abstract i()Lrx/d;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lrx/d",
-            "<",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-.end method

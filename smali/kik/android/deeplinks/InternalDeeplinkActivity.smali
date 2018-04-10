@@ -184,12 +184,12 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 40
-    const v0, 0x7f0400d6
+    const v0, 0x7f0400ce
 
     invoke-virtual {p0, v0}, Lkik/android/deeplinks/InternalDeeplinkActivity;->setContentView(I)V
 
     .line 42
-    const v0, 0x7f1002f5
+    const v0, 0x7f1002e1
 
     invoke-virtual {p0, v0}, Lkik/android/deeplinks/InternalDeeplinkActivity;->findViewById(I)Landroid/view/View;
 

@@ -93,37 +93,37 @@
 
 .field _editTextLayouts:Landroid/widget/LinearLayout;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10012e
+        value = 0x7f100135
     .end annotation
 .end field
 
 .field _groupContactView:Landroid/widget/ImageView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10012f
+        value = 0x7f100136
     .end annotation
 .end field
 
 .field _groupHashtagEditText:Lkik/android/chat/view/ValidateableInputView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100131
+        value = 0x7f100138
     .end annotation
 .end field
 
 .field _groupNameEditText:Lkik/android/chat/view/ValidateableInputView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100130
+        value = 0x7f100137
     .end annotation
 .end field
 
 .field _groupNamingContainerView:Landroid/view/View;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10012d
+        value = 0x7f100134
     .end annotation
 .end field
 
 .field _rootLayout:Landroid/view/ViewGroup;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10012b
+        value = 0x7f100132
     .end annotation
 .end field
 
@@ -418,7 +418,7 @@
     .line 243
     iget-object v0, p0, Lkik/android/chat/fragment/KikStartGroupFragment;->_groupHashtagEditText:Lkik/android/chat/view/ValidateableInputView;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/ek;->a(Lkik/android/chat/fragment/KikStartGroupFragment;)Ljava/lang/Runnable;
+    invoke-static {p0}, Lkik/android/chat/fragment/ej;->a(Lkik/android/chat/fragment/KikStartGroupFragment;)Ljava/lang/Runnable;
 
     move-result-object v1
 
@@ -441,7 +441,7 @@
     :cond_0
     iget-object v0, p0, Lkik/android/chat/fragment/KikStartGroupFragment;->_groupHashtagEditText:Lkik/android/chat/view/ValidateableInputView;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/el;->a(Lkik/android/chat/fragment/KikStartGroupFragment;)Ljava/lang/Runnable;
+    invoke-static {p0}, Lkik/android/chat/fragment/ek;->a(Lkik/android/chat/fragment/KikStartGroupFragment;)Ljava/lang/Runnable;
 
     move-result-object v1
 
@@ -527,7 +527,7 @@
 
     move-result-object v0
 
-    invoke-static {p0}, Lkik/android/chat/fragment/eh;->a(Lkik/android/chat/fragment/KikStartGroupFragment;)Lrx/functions/g;
+    invoke-static {p0}, Lkik/android/chat/fragment/eg;->a(Lkik/android/chat/fragment/KikStartGroupFragment;)Lrx/functions/g;
 
     move-result-object v1
 
@@ -536,7 +536,7 @@
 
     move-result-object v0
 
-    invoke-static {p0}, Lkik/android/chat/fragment/ei;->a(Lkik/android/chat/fragment/KikStartGroupFragment;)Lrx/functions/b;
+    invoke-static {p0}, Lkik/android/chat/fragment/eh;->a(Lkik/android/chat/fragment/KikStartGroupFragment;)Lrx/functions/b;
 
     move-result-object v1
 
@@ -734,7 +734,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0201da
+    const v2, 0x7f0201cd
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1203,7 +1203,7 @@
     .line 494
     iget-object v0, p0, Lkik/android/chat/fragment/KikStartGroupFragment;->_groupContactView:Landroid/widget/ImageView;
 
-    const v1, 0x7f02022a
+    const v1, 0x7f02021d
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -2065,7 +2065,7 @@
 
     .line 404
     :try_start_0
-    new-instance v0, Lkik/android/widget/ag;
+    new-instance v0, Lkik/android/widget/q;
 
     .line 405
     invoke-static {}, Lkik/android/util/g;->a()Lkik/android/util/g;
@@ -2076,7 +2076,7 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lkik/android/widget/ag;-><init>(Landroid/graphics/Bitmap;)V
+    invoke-direct {v0, v1}, Lkik/android/widget/q;-><init>(Landroid/graphics/Bitmap;)V
 
     .line 406
     iget-object v1, p0, Lkik/android/chat/fragment/KikStartGroupFragment;->_groupContactView:Landroid/widget/ImageView;
@@ -2404,7 +2404,7 @@
     .line 7817
     iget-object v1, p0, Lkik/android/chat/fragment/KikStartGroupFragment;->ag:Landroid/view/View;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/ej;->a(Lkik/android/chat/fragment/KikStartGroupFragment;)Ljava/lang/Runnable;
+    invoke-static {p0}, Lkik/android/chat/fragment/ei;->a(Lkik/android/chat/fragment/KikStartGroupFragment;)Ljava/lang/Runnable;
 
     move-result-object v2
 
@@ -2483,9 +2483,9 @@
     if-eqz v1, :cond_1
 
     .line 204
-    new-instance v2, Lkik/android/widget/ag;
+    new-instance v2, Lkik/android/widget/q;
 
-    invoke-direct {v2, v1}, Lkik/android/widget/ag;-><init>(Landroid/graphics/Bitmap;)V
+    invoke-direct {v2, v1}, Lkik/android/widget/q;-><init>(Landroid/graphics/Bitmap;)V
 
     .line 205
     iget-object v1, p0, Lkik/android/chat/fragment/KikStartGroupFragment;->_groupContactView:Landroid/widget/ImageView;
@@ -2564,7 +2564,7 @@
     .line 218
     iget-object v1, p0, Lkik/android/chat/fragment/KikStartGroupFragment;->_groupHashtagEditText:Lkik/android/chat/view/ValidateableInputView;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/ed;->a(Lkik/android/chat/fragment/KikStartGroupFragment;)Lkik/android/chat/view/ValidateableInputView$a;
+    invoke-static {p0}, Lkik/android/chat/fragment/ec;->a(Lkik/android/chat/fragment/KikStartGroupFragment;)Lkik/android/chat/view/ValidateableInputView$a;
 
     move-result-object v2
 
@@ -2573,7 +2573,7 @@
     .line 239
     iget-object v1, p0, Lkik/android/chat/fragment/KikStartGroupFragment;->_groupHashtagEditText:Lkik/android/chat/view/ValidateableInputView;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/ee;->a(Lkik/android/chat/fragment/KikStartGroupFragment;)Lkik/android/chat/view/ValidateableInputView$b;
+    invoke-static {p0}, Lkik/android/chat/fragment/ed;->a(Lkik/android/chat/fragment/KikStartGroupFragment;)Lkik/android/chat/view/ValidateableInputView$b;
 
     move-result-object v2
 
@@ -2589,7 +2589,7 @@
 
     .line 273
     :cond_3
-    invoke-static {p0}, Lkik/android/chat/fragment/ef;->a(Lkik/android/chat/fragment/KikStartGroupFragment;)Ljava/lang/Runnable;
+    invoke-static {p0}, Lkik/android/chat/fragment/ee;->a(Lkik/android/chat/fragment/KikStartGroupFragment;)Ljava/lang/Runnable;
 
     move-result-object v1
 
@@ -2604,7 +2604,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a0103
+    const v2, 0x7f0a0100
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2652,7 +2652,7 @@
     .line 283
     iget-object v0, p0, Lkik/android/chat/fragment/KikStartGroupFragment;->ag:Landroid/view/View;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/eg;->a(Lkik/android/chat/fragment/KikStartGroupFragment;)Ljava/lang/Runnable;
+    invoke-static {p0}, Lkik/android/chat/fragment/ef;->a(Lkik/android/chat/fragment/KikStartGroupFragment;)Ljava/lang/Runnable;
 
     move-result-object v1
 
@@ -2672,11 +2672,11 @@
     if-eqz v0, :cond_0
 
     .line 156
-    invoke-static {}, Lcom/kik/metrics/b/bl;->b()Lcom/kik/metrics/b/bl$a;
+    invoke-static {}, Lcom/kik/metrics/b/bm;->b()Lcom/kik/metrics/b/bm$a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/kik/metrics/b/bl$a;->a()Lcom/kik/metrics/b/bl;
+    invoke-virtual {v0}, Lcom/kik/metrics/b/bm$a;->a()Lcom/kik/metrics/b/bm;
 
     move-result-object v0
 
@@ -2685,11 +2685,11 @@
     return-object v0
 
     :cond_0
-    invoke-static {}, Lcom/kik/metrics/b/bk;->b()Lcom/kik/metrics/b/bk$a;
+    invoke-static {}, Lcom/kik/metrics/b/bl;->b()Lcom/kik/metrics/b/bl$a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/kik/metrics/b/bk$a;->a()Lcom/kik/metrics/b/bk;
+    invoke-virtual {v0}, Lcom/kik/metrics/b/bl$a;->a()Lcom/kik/metrics/b/bl;
 
     move-result-object v0
 
@@ -2700,7 +2700,7 @@
     .locals 2
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f10012f
+            0x7f100136
         }
     .end annotation
 

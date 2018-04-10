@@ -14,19 +14,19 @@
 # instance fields
 .field protected _emailInput:Lkik/android/chat/view/ValidateableInputView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1001f1
+        value = 0x7f1001dd
     .end annotation
 .end field
 
 .field protected _emailStatus:Landroid/widget/TextView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1001f3
+        value = 0x7f1001df
     .end annotation
 .end field
 
 .field protected _saveButton:Landroid/view/View;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1001f0
+        value = 0x7f1001dc
     .end annotation
 .end field
 
@@ -182,7 +182,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f04007f
+    const v1, 0x7f040077
 
     const-wide/16 v2, 0x3e8
 
@@ -235,7 +235,7 @@
 
     .prologue
     .line 78
-    const v0, 0x7f040086
+    const v0, 0x7f04007e
 
     const/4 v1, 0x0
 
@@ -314,7 +314,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0e00d5
+    const v3, 0x7f0e00d1
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -349,7 +349,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0e00d6
+    const v3, 0x7f0e00d2
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -364,7 +364,7 @@
     .locals 4
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f1001f2
+            0x7f1001de
         }
     .end annotation
 
@@ -390,7 +390,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f04007e
+    const v1, 0x7f040076
 
     const-wide/16 v2, 0x3e8
 
@@ -489,7 +489,7 @@
     .locals 4
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f1001f0
+            0x7f1001dc
         }
     .end annotation
 

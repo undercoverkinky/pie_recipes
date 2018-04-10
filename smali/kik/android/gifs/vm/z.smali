@@ -128,21 +128,21 @@
     iput-object v0, p0, Lkik/android/gifs/vm/z;->d:Ljava/lang/String;
 
     .line 37
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/gifs/vm/z;->e:Lrx/subjects/PublishSubject;
 
     .line 38
-    invoke-static {}, Lrx/subjects/a;->l()Lrx/subjects/a;
+    invoke-static {}, Lrx/subjects/a;->m()Lrx/subjects/a;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/gifs/vm/z;->f:Lrx/subjects/a;
 
     .line 40
-    invoke-static {}, Lrx/subjects/a;->l()Lrx/subjects/a;
+    invoke-static {}, Lrx/subjects/a;->m()Lrx/subjects/a;
 
     move-result-object v0
 
@@ -158,7 +158,7 @@
     iput-object v0, p0, Lkik/android/gifs/vm/z;->h:Lrx/subjects/a;
 
     .line 42
-    invoke-static {}, Lrx/subjects/a;->l()Lrx/subjects/a;
+    invoke-static {}, Lrx/subjects/a;->m()Lrx/subjects/a;
 
     move-result-object v0
 

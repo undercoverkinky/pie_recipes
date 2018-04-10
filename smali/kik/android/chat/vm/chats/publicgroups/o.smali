@@ -414,7 +414,7 @@
     invoke-direct {p0}, Lkik/android/chat/vm/chats/publicgroups/o;->l()V
 
     .line 147
-    invoke-virtual {p0}, Lkik/android/chat/vm/chats/publicgroups/o;->aE_()V
+    invoke-virtual {p0}, Lkik/android/chat/vm/chats/publicgroups/o;->aL_()V
 
     goto :goto_0
 
@@ -458,7 +458,7 @@
     invoke-direct {p0}, Lkik/android/chat/vm/chats/publicgroups/o;->l()V
 
     .line 4268
-    invoke-virtual {p0}, Lkik/android/chat/vm/chats/publicgroups/o;->aE_()V
+    invoke-virtual {p0}, Lkik/android/chat/vm/chats/publicgroups/o;->aL_()V
 
     .line 38
     return-void
@@ -569,7 +569,7 @@
 
     .prologue
     .line 38
-    invoke-virtual {p0}, Lkik/android/chat/vm/chats/publicgroups/o;->aE_()V
+    invoke-virtual {p0}, Lkik/android/chat/vm/chats/publicgroups/o;->aL_()V
 
     return-void
 .end method

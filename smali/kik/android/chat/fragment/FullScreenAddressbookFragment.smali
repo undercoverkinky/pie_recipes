@@ -14,25 +14,25 @@
 # instance fields
 .field protected _abmImage:Landroid/widget/ImageView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1001e8
+        value = 0x7f1001d4
     .end annotation
 .end field
 
 .field protected _abmPhoneNumberField:Lkik/android/chat/view/ValidateableInputView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1001eb
+        value = 0x7f1001d7
     .end annotation
 .end field
 
 .field _bigDevicePhoneNumberImage:Landroid/view/View;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1000c9
+        value = 0x7f1000d0
     .end annotation
 .end field
 
 .field protected _scrollView:Landroid/widget/ScrollView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10002d
+        value = 0x7f100035
     .end annotation
 .end field
 
@@ -483,7 +483,7 @@
 
     .prologue
     .line 221
-    const v0, 0x7f040084
+    const v0, 0x7f04007c
 
     return v0
 .end method
@@ -681,7 +681,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f040166
+    const v1, 0x7f04015e
 
     const-wide/16 v2, 0x3e8
 
@@ -854,7 +854,7 @@
     .locals 0
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f1001e7
+            0x7f1001d3
         }
     .end annotation
 
@@ -871,11 +871,11 @@
 
     .prologue
     .line 174
-    invoke-static {}, Lcom/kik/metrics/b/ao;->b()Lcom/kik/metrics/b/ao$a;
+    invoke-static {}, Lcom/kik/metrics/b/ap;->b()Lcom/kik/metrics/b/ap$a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/kik/metrics/b/ao$a;->a()Lcom/kik/metrics/b/ao;
+    invoke-virtual {v0}, Lcom/kik/metrics/b/ap$a;->a()Lcom/kik/metrics/b/ap;
 
     move-result-object v0
 
@@ -886,7 +886,7 @@
     .locals 2
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f1000cc
+            0x7f1000d3
         }
     .end annotation
 

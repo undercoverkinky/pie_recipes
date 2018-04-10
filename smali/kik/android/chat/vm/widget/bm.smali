@@ -240,7 +240,7 @@
     return-void
 .end method
 
-.method public final aG_()V
+.method public final aN_()V
     .locals 2
 
     .prologue
@@ -341,7 +341,7 @@
     if-ge v0, v1, :cond_0
 
     .line 1059
-    invoke-virtual {p0}, Lkik/android/chat/vm/widget/bm;->aG_()V
+    invoke-virtual {p0}, Lkik/android/chat/vm/widget/bm;->aN_()V
 
     .line 1058
     add-int/lit8 v0, v0, 0x1

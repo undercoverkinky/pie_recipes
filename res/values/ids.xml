@@ -226,33 +226,6 @@
     <item type="id" name="bubble">false</item>
     <item type="id" name="message_content_stub">false</item>
     <item type="id" name="bubble_remove">false</item>
-    <item type="id" name="effect_baby">false</item>
-    <item type="id" name="effect_robot">false</item>
-    <item type="id" name="effect_alien">false</item>
-    <item type="id" name="effect_evil">false</item>
-    <item type="id" name="effect_bunny">false</item>
-    <item type="id" name="effect_none">false</item>
-    <item type="id" name="tooltip_stub">false</item>
-    <item type="id" name="tooltip_audio_effects">false</item>
-    <item type="id" name="garbage_layout">false</item>
-    <item type="id" name="bin_lid">false</item>
-    <item type="id" name="bin_body">false</item>
-    <item type="id" name="cake">false</item>
-    <item type="id" name="led">false</item>
-    <item type="id" name="mic_layout">false</item>
-    <item type="id" name="mic_recording_bg">false</item>
-    <item type="id" name="mic">false</item>
-    <item type="id" name="tooltip_mic">false</item>
-    <item type="id" name="slide_to_cancel">false</item>
-    <item type="id" name="glow">false</item>
-    <item type="id" name="layout">false</item>
-    <item type="id" name="timer_clock">false</item>
-    <item type="id" name="audio_recording_view">false</item>
-    <item type="id" name="recording_layout">false</item>
-    <item type="id" name="audio_timer">false</item>
-    <item type="id" name="trash_audio">false</item>
-    <item type="id" name="button_send_recording">false</item>
-    <item type="id" name="effects_layout">false</item>
     <item type="id" name="validateable_text_view_hint">false</item>
     <item type="id" name="validateable_text_view">false</item>
     <item type="id" name="validateable_text_view_clear_button">false</item>
@@ -764,14 +737,12 @@
     <item type="id" name="bot_tooltip_anchor">false</item>
     <item type="id" name="content_attach_section">false</item>
     <item type="id" name="content_attach_cover">false</item>
-    <item type="id" name="main_media_container">false</item>
     <item type="id" name="text_media_container">false</item>
     <item type="id" name="text_layout">false</item>
     <item type="id" name="txt_new_message">false</item>
     <item type="id" name="button_send_message">false</item>
     <item type="id" name="button_show_suggested_responses">false</item>
     <item type="id" name="sticker_tab_icon">false</item>
-    <item type="id" name="audio_message_tray">false</item>
     <item type="id" name="prev">false</item>
     <item type="id" name="rew">false</item>
     <item type="id" name="ffwd">false</item>
@@ -785,8 +756,6 @@
     <item type="id" name="suggested_response_list_view">false</item>
     <item type="id" name="empty_media_item_area">false</item>
     <item type="id" name="media_viewpager">false</item>
-    <item type="id" name="audio_bubble_frame_container">false</item>
-    <item type="id" name="audio_player_view">false</item>
     <item type="id" name="clickable_view_group">false</item>
     <item type="id" name="inlineVideoPlayerView">false</item>
     <item type="id" name="unmute_icon">false</item>
@@ -829,6 +798,9 @@
     <item type="id" name="bottom_divider">false</item>
     <item type="id" name="preference_list_item">false</item>
     <item type="id" name="preference_current">false</item>
+    <item type="id" name="custom_icon">false</item>
+    <item type="id" name="custom_title">false</item>
+    <item type="id" name="custom_summary">false</item>
     <item type="id" name="summary">false</item>
     <item type="id" name="loading_screen">false</item>
     <item type="id" name="profile_pic_placeholder">false</item>
@@ -947,13 +919,6 @@
     <item type="id" name="full_screen_layout">false</item>
     <item type="id" name="sticker_loader">false</item>
     <item type="id" name="video_mode_slide_panel">false</item>
-    <item type="id" name="action_frame_container">false</item>
-    <item type="id" name="play_audio_button">false</item>
-    <item type="id" name="pause_audio_button">false</item>
-    <item type="id" name="audio_loader">false</item>
-    <item type="id" name="time_line">false</item>
-    <item type="id" name="thumb">false</item>
-    <item type="id" name="timer_text">false</item>
     <item type="id" name="error_page_image">false</item>
     <item type="id" name="refresh_button">false</item>
     <item type="id" name="spinner_container">false</item>
@@ -968,6 +933,4 @@
     <item type="id" name="visible">false</item>
     <item type="id" name="masked">false</item>
     <item type="id" name="floating_search_background_shadow">false</item>
-	<item type="id" name="mod_tab">false</item>
-	<item type="id" name="dev_tab">false</item>
 </resources>

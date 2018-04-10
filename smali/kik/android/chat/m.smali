@@ -240,7 +240,7 @@
     .line 50
     iget-object v0, p0, Lkik/android/chat/m;->f:Lrx/subjects/a;
 
-    invoke-virtual {v0}, Lrx/subjects/a;->o()Ljava/lang/Object;
+    invoke-virtual {v0}, Lrx/subjects/a;->p()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -570,7 +570,7 @@
 
     move-result-object v4
 
-    invoke-interface {v3, v4}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v3, v4}, Lkik/core/interfaces/ad;->r(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -610,7 +610,7 @@
 
     const-string v1, "kik.android.chat.SuggestedChatsManager.ignored_chat_jids"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->t(Ljava/lang/String;)Ljava/util/Set;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/util/Set;
 
     move-result-object v0
 

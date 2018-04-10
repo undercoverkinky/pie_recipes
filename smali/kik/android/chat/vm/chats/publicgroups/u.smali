@@ -208,7 +208,7 @@
     iput-object v0, p0, Lkik/android/chat/vm/chats/publicgroups/u;->l:Lrx/subjects/a;
 
     .line 56
-    invoke-static {}, Lrx/subjects/a;->l()Lrx/subjects/a;
+    invoke-static {}, Lrx/subjects/a;->m()Lrx/subjects/a;
 
     move-result-object v0
 
@@ -614,7 +614,7 @@
     .line 217
     iget-object v0, p0, Lkik/android/chat/vm/chats/publicgroups/u;->m:Lrx/subjects/a;
 
-    invoke-virtual {v0}, Lrx/subjects/a;->o()Ljava/lang/Object;
+    invoke-virtual {v0}, Lrx/subjects/a;->p()Ljava/lang/Object;
 
     move-result-object v0
 

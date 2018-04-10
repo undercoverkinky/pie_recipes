@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static final cpv_default_thickness:I = 0x7f0a007f
+.field public static final cpv_default_thickness:I = 0x7f0a007d
 
 
 # direct methods

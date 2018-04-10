@@ -84,7 +84,7 @@
 
     .line 47
     :cond_0
-    invoke-static {p1}, Lkik/android/widget/dq;->a(Lrx/functions/g;)Landroid/view/View$OnTouchListener;
+    invoke-static {p1}, Lkik/android/widget/cz;->a(Lrx/functions/g;)Landroid/view/View$OnTouchListener;
 
     move-result-object v0
 
@@ -226,7 +226,7 @@
     .line 168
     iget-object v0, p0, Lkik/android/widget/SmileyWidget;->j:Landroid/view/LayoutInflater;
 
-    const v2, 0x7f04013c
+    const v2, 0x7f040133
 
     iget-object v3, p0, Lkik/android/widget/SmileyWidget;->d:Landroid/view/ViewGroup;
 
@@ -236,15 +236,15 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/android/e/cn;
+    check-cast v0, Lkik/android/e/cl;
 
     .line 169
-    invoke-virtual {v0, v1}, Lkik/android/e/cn;->a(Lkik/android/chat/vm/widget/x;)V
+    invoke-virtual {v0, v1}, Lkik/android/e/cl;->a(Lkik/android/chat/vm/widget/x;)V
 
     .line 171
     iget-object v1, p0, Lkik/android/widget/SmileyWidget;->e:Lkik/android/f/b;
 
-    invoke-virtual {v0}, Lkik/android/e/cn;->getRoot()Landroid/view/View;
+    invoke-virtual {v0}, Lkik/android/e/cl;->getRoot()Landroid/view/View;
 
     move-result-object v0
 
@@ -453,7 +453,7 @@
     .line 76
     iget-object v0, p0, Lkik/android/widget/SmileyWidget;->j:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f04016a
+    const v1, 0x7f040162
 
     const/4 v2, 0x0
 
@@ -461,7 +461,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/android/e/dl;
+    check-cast v0, Lkik/android/e/dj;
 
     .line 77
     new-instance v1, Lkik/android/chat/vm/widget/ax;
@@ -486,10 +486,10 @@
     .line 79
     iget-object v1, p0, Lkik/android/widget/SmileyWidget;->h:Lkik/android/chat/vm/widget/y;
 
-    invoke-virtual {v0, v1}, Lkik/android/e/dl;->a(Lkik/android/chat/vm/widget/y;)V
+    invoke-virtual {v0, v1}, Lkik/android/e/dj;->a(Lkik/android/chat/vm/widget/y;)V
 
     .line 81
-    invoke-virtual {v0}, Lkik/android/e/dl;->getRoot()Landroid/view/View;
+    invoke-virtual {v0}, Lkik/android/e/dj;->getRoot()Landroid/view/View;
 
     move-result-object v1
 
@@ -507,7 +507,7 @@
 
     .line 87
     :cond_0
-    invoke-virtual {v0}, Lkik/android/e/dl;->getRoot()Landroid/view/View;
+    invoke-virtual {v0}, Lkik/android/e/dj;->getRoot()Landroid/view/View;
 
     move-result-object v0
 

@@ -15,13 +15,13 @@
 # instance fields
 .field _bubbleList:Landroid/widget/ListView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1000d8
+        value = 0x7f1000df
     .end annotation
 .end field
 
 .field _title:Landroid/widget/TextView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10011b
+        value = 0x7f100122
     .end annotation
 .end field
 

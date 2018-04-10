@@ -77,28 +77,28 @@
     :cond_1
     const-string v1, "CredentialData.jid"
 
-    invoke-interface {p0, v1}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p0, v1}, Lkik/core/interfaces/ad;->r(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     .line 44
     const-string v2, "CredentialData.password"
 
-    invoke-interface {p0, v2}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p0, v2}, Lkik/core/interfaces/ad;->r(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     .line 45
     const-string v3, "CredentialData.username_passkey"
 
-    invoke-interface {p0, v3}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p0, v3}, Lkik/core/interfaces/ad;->r(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     .line 46
     const-string v4, "CredentialData.email_passkey"
 
-    invoke-interface {p0, v4}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p0, v4}, Lkik/core/interfaces/ad;->r(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 

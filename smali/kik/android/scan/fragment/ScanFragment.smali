@@ -18,79 +18,79 @@
 
 .field protected _animationContainer:Landroid/view/View;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1002c3
+        value = 0x7f1002af
     .end annotation
 .end field
 
 .field protected _callToActionTextView:Landroid/widget/TextView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003d0
+        value = 0x7f1003bb
     .end annotation
 .end field
 
 .field protected _cameraBlurView:Landroid/widget/ImageView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003cd
+        value = 0x7f1003b8
     .end annotation
 .end field
 
 .field protected _cameraErrorCover:Landroid/view/View;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100176
+        value = 0x7f100162
     .end annotation
 .end field
 
 .field protected _errorImage:Landroid/view/View;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003d3
+        value = 0x7f1003be
     .end annotation
 .end field
 
 .field protected _errorRetryButton:Landroid/widget/TextView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003d6
+        value = 0x7f1003c1
     .end annotation
 .end field
 
 .field protected _errorText:Landroid/widget/TextView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003d5
+        value = 0x7f1003c0
     .end annotation
 .end field
 
 .field protected _errorTitle:Landroid/widget/TextView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003d4
+        value = 0x7f1003bf
     .end annotation
 .end field
 
 .field protected _loadingContainer:Landroid/view/View;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003d1
+        value = 0x7f1003bc
     .end annotation
 .end field
 
 .field protected _progress:Landroid/widget/ProgressBar;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003d2
+        value = 0x7f1003bd
     .end annotation
 .end field
 
 .field protected _resultImageView:Landroid/widget/ImageView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003ce
+        value = 0x7f1003b9
     .end annotation
 .end field
 
 .field protected _scanContainer:Landroid/view/ViewGroup;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003cc
+        value = 0x7f1003b7
     .end annotation
 .end field
 
 .field protected _scanFinder:Lkik/android/scan/widget/ScannerViewFinder;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003cf
+        value = 0x7f1003ba
     .end annotation
 .end field
 
@@ -2463,7 +2463,7 @@
     const/4 v4, -0x1
 
     .line 228
-    const v0, 0x7f04015c
+    const v0, 0x7f040154
 
     invoke-virtual {p1, v0, p2, v5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 

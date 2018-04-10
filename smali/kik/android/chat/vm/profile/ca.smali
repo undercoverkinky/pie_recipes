@@ -446,7 +446,7 @@
     .line 6263
     const-string v0, "You shouldn\'t be modifying list data from a non-main thread!"
 
-    invoke-static {v0}, Lcom/kik/util/dd;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/kik/util/cz;->b(Ljava/lang/String;)V
 
     .line 6264
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -660,11 +660,11 @@
     .line 3489
     iget-object v0, p0, Lkik/android/chat/vm/profile/ca;->i:Lcom/kik/metrics/c/d;
 
-    invoke-static {}, Lcom/kik/metrics/b/ax;->b()Lcom/kik/metrics/b/ax$a;
+    invoke-static {}, Lcom/kik/metrics/b/ay;->b()Lcom/kik/metrics/b/ay$a;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/kik/metrics/b/ax$a;->a()Lcom/kik/metrics/b/ax;
+    invoke-virtual {v1}, Lcom/kik/metrics/b/ay$a;->a()Lcom/kik/metrics/b/ay;
 
     move-result-object v1
 
@@ -965,7 +965,7 @@
     .line 157
     const-string v2, "You shouldn\'t be modifying list data from a non-main thread!"
 
-    invoke-static {v2}, Lcom/kik/util/dd;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/kik/util/cz;->b(Ljava/lang/String;)V
 
     .line 159
     invoke-interface {p1}, Lcom/kik/core/domain/a/a/c;->m()Z
@@ -1189,7 +1189,7 @@
     .line 6238
     const-string v0, "You shouldn\'t be modifying list data from a non-main thread!"
 
-    invoke-static {v0}, Lcom/kik/util/dd;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/kik/util/cz;->b(Ljava/lang/String;)V
 
     .line 6240
     iget-object v0, p0, Lkik/android/chat/vm/profile/ca;->D:Lrx/k;
@@ -1590,8 +1590,6 @@
     .locals 4
 
     .prologue
-    const/4 v1, 0x1
-
     .line 130
     invoke-interface {p1, p0}, Lcom/kik/components/CoreComponent;->a(Lkik/android/chat/vm/profile/ca;)V
 
@@ -1608,9 +1606,9 @@
 
     invoke-virtual {p0}, Lkik/android/chat/vm/profile/ca;->o()Lcom/kik/core/network/xmpp/jid/a;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-interface {v0, v2}, Lcom/kik/core/domain/a/c;->a(Lcom/kik/core/network/xmpp/jid/a;)Lrx/d;
+    invoke-interface {v0, v1}, Lcom/kik/core/domain/a/c;->a(Lcom/kik/core/network/xmpp/jid/a;)Lrx/d;
 
     move-result-object v0
 
@@ -1621,22 +1619,22 @@
 
     invoke-virtual {p0}, Lkik/android/chat/vm/profile/ca;->o()Lcom/kik/core/network/xmpp/jid/a;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-interface {v0, v2}, Lkik/core/xiphias/c;->a(Lcom/kik/core/network/xmpp/jid/a;)Lrx/d;
+    invoke-interface {v0, v1}, Lkik/core/xiphias/c;->a(Lcom/kik/core/network/xmpp/jid/a;)Lrx/d;
 
     move-result-object v0
 
     invoke-static {p0}, Lkik/android/chat/vm/profile/cm;->a(Lkik/android/chat/vm/profile/ca;)Lrx/functions/b;
 
-    move-result-object v2
+    move-result-object v1
 
     invoke-static {}, Lkik/android/chat/vm/profile/cx;->a()Lrx/functions/b;
 
-    move-result-object v3
+    move-result-object v2
 
     .line 137
-    invoke-virtual {v0, v2, v3}, Lrx/d;->a(Lrx/functions/b;Lrx/functions/b;)Lrx/k;
+    invoke-virtual {v0, v1, v2}, Lrx/d;->a(Lrx/functions/b;Lrx/functions/b;)Lrx/k;
 
     .line 138
     iget-object v0, p0, Lkik/android/chat/vm/profile/ca;->r:Lkik/core/interfaces/ad;
@@ -1660,11 +1658,11 @@
     .line 1524
     iget-object v0, p0, Lkik/android/chat/vm/profile/ca;->v:Lkik/core/interfaces/b;
 
-    const-string v2, "group_descriptions"
+    const-string v1, "group_descriptions"
 
-    const-string v3, "list"
+    const-string v2, "list"
 
-    invoke-interface {v0, v2, v3}, Lkik/core/interfaces/b;->a(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-interface {v0, v1, v2}, Lkik/core/interfaces/b;->a(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1672,18 +1670,18 @@
 
     iget-object v0, p0, Lkik/android/chat/vm/profile/ca;->v:Lkik/core/interfaces/b;
 
-    const-string v2, "group_descriptions"
+    const-string v1, "group_descriptions"
 
-    const-string v3, "inline"
+    const-string v2, "inline"
 
-    invoke-interface {v0, v2, v3}, Lkik/core/interfaces/b;->a(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-interface {v0, v1, v2}, Lkik/core/interfaces/b;->a(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
     :cond_0
-    move v0, v1
+    const/4 v0, 0x1
 
     .line 140
     :goto_0
@@ -1694,11 +1692,11 @@
 
     invoke-virtual {p0}, Lkik/android/chat/vm/profile/ca;->o()Lcom/kik/core/network/xmpp/jid/a;
 
-    move-result-object v2
+    move-result-object v1
 
-    iget-object v3, p0, Lkik/android/chat/vm/profile/ca;->A:Lrx/d;
+    iget-object v2, p0, Lkik/android/chat/vm/profile/ca;->A:Lrx/d;
 
-    invoke-direct {v0, v2, v3}, Lkik/android/chat/vm/chats/profile/by;-><init>(Lcom/kik/core/network/xmpp/jid/a;Lrx/d;)V
+    invoke-direct {v0, v1, v2}, Lkik/android/chat/vm/chats/profile/by;-><init>(Lcom/kik/core/network/xmpp/jid/a;Lrx/d;)V
 
     iput-object v0, p0, Lkik/android/chat/vm/profile/ca;->C:Lkik/android/chat/vm/chats/profile/cr;
 
@@ -1713,9 +1711,9 @@
 
     move-result-object v0
 
-    iget-object v2, p0, Lkik/android/chat/vm/profile/ca;->A:Lrx/d;
+    iget-object v1, p0, Lkik/android/chat/vm/profile/ca;->A:Lrx/d;
 
-    invoke-virtual {v2, v1}, Lrx/d;->a(I)Lrx/d;
+    invoke-virtual {v1}, Lrx/d;->l()Lrx/d;
 
     move-result-object v1
 

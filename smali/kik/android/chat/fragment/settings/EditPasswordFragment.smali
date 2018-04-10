@@ -14,25 +14,25 @@
 # instance fields
 .field protected _existingPasswordField:Lkik/android/chat/view/ValidateableInputView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1001f8
+        value = 0x7f1001e4
     .end annotation
 .end field
 
 .field protected _newPasswordField:Lkik/android/chat/view/ValidateableInputView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1001f9
+        value = 0x7f1001e5
     .end annotation
 .end field
 
 .field protected _retypePasswordField:Lkik/android/chat/view/ValidateableInputView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1001fa
+        value = 0x7f1001e6
     .end annotation
 .end field
 
 .field protected _saveButton:Landroid/view/View;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1001f7
+        value = 0x7f1001e3
     .end annotation
 .end field
 
@@ -298,7 +298,7 @@
 
     .prologue
     .line 74
-    const v0, 0x7f040088
+    const v0, 0x7f040080
 
     const/4 v1, 0x0
 
@@ -391,7 +391,7 @@
     .locals 7
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f1001f7
+            0x7f1001e3
         }
     .end annotation
 

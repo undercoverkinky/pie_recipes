@@ -90,14 +90,14 @@
     iput v1, p0, Lkik/android/gifs/vm/c;->h:I
 
     .line 29
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/gifs/vm/c;->b:Lrx/subjects/PublishSubject;
 
     .line 30
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 

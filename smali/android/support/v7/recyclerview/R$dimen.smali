@@ -15,11 +15,11 @@
 
 
 # static fields
-.field public static final item_touch_helper_max_drag_scroll_per_frame:I = 0x7f0a00d7
+.field public static final item_touch_helper_max_drag_scroll_per_frame:I = 0x7f0a00d5
 
-.field public static final item_touch_helper_swipe_escape_max_velocity:I = 0x7f0a00d8
+.field public static final item_touch_helper_swipe_escape_max_velocity:I = 0x7f0a00d6
 
-.field public static final item_touch_helper_swipe_escape_velocity:I = 0x7f0a00d9
+.field public static final item_touch_helper_swipe_escape_velocity:I = 0x7f0a00d7
 
 
 # direct methods

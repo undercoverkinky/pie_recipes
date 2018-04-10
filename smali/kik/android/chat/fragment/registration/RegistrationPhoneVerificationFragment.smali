@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/android/chat/presentation/bt$a;
+.implements Lkik/android/chat/presentation/br$a;
 
 
 # annotations
@@ -17,11 +17,11 @@
 # instance fields
 .field _enterNumberView:Lkik/android/chat/view/ae;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100220
+        value = 0x7f10020c
     .end annotation
 .end field
 
-.field a:Lkik/android/chat/presentation/bt;
+.field a:Lkik/android/chat/presentation/br;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
@@ -708,7 +708,7 @@
     const/4 v7, 0x0
 
     .line 70
-    const v0, 0x7f040092
+    const v0, 0x7f04008a
 
     invoke-virtual {p1, v0, p2, v7}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -718,14 +718,14 @@
     invoke-static {p0, v8}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)Lbutterknife/Unbinder;
 
     .line 72
-    iget-object v0, p0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;->a:Lkik/android/chat/presentation/bt;
+    iget-object v0, p0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;->a:Lkik/android/chat/presentation/br;
 
     iget-object v1, p0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;->_enterNumberView:Lkik/android/chat/view/ae;
 
-    invoke-interface {v0, v1}, Lkik/android/chat/presentation/bt;->a(Ljava/lang/Object;)V
+    invoke-interface {v0, v1}, Lkik/android/chat/presentation/br;->a(Ljava/lang/Object;)V
 
     .line 73
-    iget-object v0, p0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;->a:Lkik/android/chat/presentation/bt;
+    iget-object v0, p0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;->a:Lkik/android/chat/presentation/br;
 
     .line 1378
     invoke-direct {p0}, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;->e()Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment$a;
@@ -755,7 +755,7 @@
 
     move-object v6, p0
 
-    invoke-interface/range {v0 .. v6}, Lkik/android/chat/presentation/bt;->a(Lkik/android/challenge/PhoneNumberModel;Lkik/android/util/KeyboardManipulator;Lkik/android/challenge/PhoneVerificationNetworkProvider;Lkik/android/chat/presentation/bt$a;Landroid/content/Context;Lkik/android/chat/presentation/r;)V
+    invoke-interface/range {v0 .. v6}, Lkik/android/chat/presentation/br;->a(Lkik/android/challenge/PhoneNumberModel;Lkik/android/util/KeyboardManipulator;Lkik/android/challenge/PhoneVerificationNetworkProvider;Lkik/android/chat/presentation/br$a;Landroid/content/Context;Lkik/android/chat/presentation/r;)V
 
     .line 75
     invoke-direct {p0}, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;->e()Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment$a;
@@ -862,7 +862,7 @@
     .locals 3
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f10021f
+            0x7f10020b
         }
     .end annotation
 
@@ -905,11 +905,11 @@
 
     .prologue
     .line 90
-    invoke-static {}, Lcom/kik/metrics/b/ap;->b()Lcom/kik/metrics/b/ap$a;
+    invoke-static {}, Lcom/kik/metrics/b/aq;->b()Lcom/kik/metrics/b/aq$a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/kik/metrics/b/ap$a;->a()Lcom/kik/metrics/b/ap;
+    invoke-virtual {v0}, Lcom/kik/metrics/b/aq$a;->a()Lcom/kik/metrics/b/aq;
 
     move-result-object v0
 

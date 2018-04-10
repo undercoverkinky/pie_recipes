@@ -6,79 +6,79 @@
 # instance fields
 .field _contentImageView:Lcom/kik/cache/ContentImageView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10013e
+        value = 0x7f100145
     .end annotation
 .end field
 
 .field _fullscreenCurrentTime:Landroid/widget/TextView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100232
+        value = 0x7f10021e
     .end annotation
 .end field
 
 .field _fullscreenProgressBar:Landroid/widget/SeekBar;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100233
+        value = 0x7f10021f
     .end annotation
 .end field
 
 .field _fullscreenScrubber:Landroid/widget/RelativeLayout;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100231
+        value = 0x7f10021d
     .end annotation
 .end field
 
 .field _fullscreenTotalTime:Landroid/widget/TextView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100234
+        value = 0x7f100220
     .end annotation
 .end field
 
 .field _openButton:Landroid/view/ViewGroup;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100235
+        value = 0x7f100221
     .end annotation
 .end field
 
 .field _openIcon:Landroid/widget/ImageView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100141
+        value = 0x7f100148
     .end annotation
 .end field
 
 .field _openText:Lkik/android/widget/EllipsizingTextView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100142
+        value = 0x7f100149
     .end annotation
 .end field
 
 .field _textureView:Lkik/android/widget/KikTextureVideoView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10022e
+        value = 0x7f10021a
     .end annotation
 .end field
 
 .field _videoPauseIcon:Landroid/widget/ImageView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100230
+        value = 0x7f10021c
     .end annotation
 .end field
 
 .field _videoPlayIcon:Landroid/widget/ImageView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100139
+        value = 0x7f100140
     .end annotation
 .end field
 
 .field _videoProgressBar:Lcom/github/rahatarmanahmed/cpv/CircularProgressView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10022f
+        value = 0x7f10021b
     .end annotation
 .end field
 
 .field _viewRoot:Landroid/widget/FrameLayout;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10022d
+        value = 0x7f100219
     .end annotation
 .end field
 
@@ -1089,7 +1089,7 @@
 
     iget-object v2, p0, Lkik/android/chat/fragment/MediaItemFragment;->s:Ljava/lang/String;
 
-    invoke-interface {v1, v2}, Lkik/core/interfaces/ad;->C(Ljava/lang/String;)[B
+    invoke-interface {v1, v2}, Lkik/core/interfaces/ad;->B(Ljava/lang/String;)[B
 
     move-result-object v1
 
@@ -1234,7 +1234,7 @@
     .line 354
     iget-object v0, p0, Lkik/android/chat/fragment/MediaItemFragment;->h:Lkik/android/f/e;
 
-    const v1, 0x7f02032e
+    const v1, 0x7f02031b
 
     invoke-interface {v0, v1}, Lkik/android/f/e;->b(I)V
 
@@ -1312,7 +1312,7 @@
     const/4 v3, 0x0
 
     .line 195
-    const v0, 0x7f040096
+    const v0, 0x7f04008e
 
     invoke-virtual {p1, v0, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 

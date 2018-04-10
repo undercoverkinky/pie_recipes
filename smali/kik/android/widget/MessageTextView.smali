@@ -182,11 +182,11 @@
 
     .prologue
     .line 38
-    const v0, 0x7f0100ed
+    const v0, 0x7f01010d
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p0}, Lkik/android/widget/db;->a(Lkik/android/widget/MessageTextView;)Lrx/functions/b;
+    invoke-static {p0}, Lkik/android/widget/ck;->a(Lkik/android/widget/MessageTextView;)Lrx/functions/b;
 
     move-result-object v1
 
@@ -282,11 +282,11 @@
 
     .prologue
     .line 92
-    const v0, 0x7f0101cc
+    const v0, 0x7f0101ec
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p0}, Lkik/android/widget/dc;->a(Lkik/android/widget/MessageTextView;)Lrx/functions/b;
+    invoke-static {p0}, Lkik/android/widget/cl;->a(Lkik/android/widget/MessageTextView;)Lrx/functions/b;
 
     move-result-object v1
 
@@ -647,7 +647,7 @@
 
     move-result-object v1
 
-    invoke-static {p0}, Lkik/android/widget/dd;->a(Lkik/android/widget/MessageTextView;)Lkik/android/util/au$a;
+    invoke-static {p0}, Lkik/android/widget/cm;->a(Lkik/android/widget/MessageTextView;)Lkik/android/util/au$a;
 
     move-result-object v2
 
@@ -666,7 +666,7 @@
 
     aput-object v3, v1, v2
 
-    invoke-static {p0}, Lkik/android/widget/de;->a(Lkik/android/widget/MessageTextView;)Lkik/android/util/au$a;
+    invoke-static {p0}, Lkik/android/widget/cn;->a(Lkik/android/widget/MessageTextView;)Lkik/android/util/au$a;
 
     move-result-object v2
 

@@ -143,7 +143,7 @@
     invoke-direct {p0}, Lkik/android/chat/vm/e;-><init>()V
 
     .line 54
-    invoke-static {}, Lrx/subjects/a;->l()Lrx/subjects/a;
+    invoke-static {}, Lrx/subjects/a;->m()Lrx/subjects/a;
 
     move-result-object v0
 
@@ -183,7 +183,7 @@
     iput-object v0, p0, Lkik/android/chat/vm/widget/SmileyItemViewModel;->k:Lrx/subjects/a;
 
     .line 58
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
@@ -348,7 +348,7 @@
 
     move-result-object v4
 
-    invoke-interface {v1, v4}, Lkik/core/interfaces/ad;->n(Ljava/lang/String;)J
+    invoke-interface {v1, v4}, Lkik/core/interfaces/ad;->m(Ljava/lang/String;)J
 
     move-result-wide v4
 
@@ -456,7 +456,7 @@
 
     .line 105
     :pswitch_0
-    const v0, 0x7f02036d
+    const v0, 0x7f02035a
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -466,7 +466,7 @@
 
     .line 108
     :pswitch_1
-    const v0, 0x7f02036e
+    const v0, 0x7f02035b
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -675,7 +675,7 @@
     return-void
 .end method
 
-.method public final aC_()Lrx/d;
+.method public final aJ_()Lrx/d;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {

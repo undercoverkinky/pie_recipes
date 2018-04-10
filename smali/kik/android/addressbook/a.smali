@@ -781,7 +781,7 @@
 
     const-string v1, "AddressIntegration.LAST_ADDRESS_BOOK_UPDATE_KEY"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->r(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -873,7 +873,7 @@
 
     const-string v1, "AddressIntegration.LAST_ADDRESS_BOOK_FULL_UPDATE_KEY"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->r(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -979,7 +979,7 @@
 
     const-string v1, "AddressIntegration.LAST_ADDRESS_BOOK_UPDATE_KEY"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->r(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1656,7 +1656,7 @@
 
     const-string v1, "AddressIntegration.UPLOAD_MY_INFO_OPT_IN_KEY"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->r(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1779,7 +1779,7 @@
 
     const-string v1, "kik.address.book.integration.manually.set"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->w(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->v(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 

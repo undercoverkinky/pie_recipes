@@ -128,7 +128,7 @@
 
     iget-object v3, p0, Lkik/android/chat/vm/widget/cf;->a:Landroid/content/res/Resources;
 
-    const v4, 0x7f0a0120
+    const v4, 0x7f0a011b
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -201,7 +201,7 @@
     return-void
 .end method
 
-.method public final aK_()Lrx/functions/h;
+.method public final aR_()Lrx/functions/h;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {

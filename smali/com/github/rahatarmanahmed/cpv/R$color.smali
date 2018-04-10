@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static final cpv_default_color:I = 0x7f0e003f
+.field public static final cpv_default_color:I = 0x7f0e003c
 
 
 # direct methods

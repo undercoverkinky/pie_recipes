@@ -146,7 +146,7 @@
     iput-object v0, p0, Lcom/github/a/a/a;->f:Ljava/util/HashMap;
 
     .line 97
-    invoke-static {}, Lrx/subjects/a;->l()Lrx/subjects/a;
+    invoke-static {}, Lrx/subjects/a;->m()Lrx/subjects/a;
 
     move-result-object v0
 
@@ -357,7 +357,7 @@
     .line 110
     :cond_0
     :try_start_1
-    invoke-static {}, Lrx/subjects/a;->l()Lrx/subjects/a;
+    invoke-static {}, Lrx/subjects/a;->m()Lrx/subjects/a;
 
     move-result-object v1
 

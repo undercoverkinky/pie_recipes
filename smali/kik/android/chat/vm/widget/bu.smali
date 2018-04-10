@@ -68,7 +68,7 @@
     invoke-direct {p0}, Lkik/android/chat/vm/e;-><init>()V
 
     .line 36
-    invoke-static {}, Lrx/subjects/a;->l()Lrx/subjects/a;
+    invoke-static {}, Lrx/subjects/a;->m()Lrx/subjects/a;
 
     move-result-object v0
 
@@ -266,7 +266,7 @@
     if-eqz v0, :cond_1
 
     .line 79
-    const v0, 0x7f02021a
+    const v0, 0x7f02020d
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->b(I)Landroid/graphics/Bitmap;
 

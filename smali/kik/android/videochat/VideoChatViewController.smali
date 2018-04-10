@@ -41,37 +41,37 @@
 
 .field protected _activeIconAnimationContainer:Landroid/view/View;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1000e6
+        value = 0x7f1000ed
     .end annotation
 .end field
 
 .field protected _chatScreenToolTipRelativeLayout:Lcom/nhaarman/supertooltips/ToolTipRelativeLayout;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1000fc
+        value = 0x7f100103
     .end annotation
 .end field
 
 .field protected _mediaBarView:Landroid/view/ViewGroup;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10036f
+        value = 0x7f100359
     .end annotation
 .end field
 
 .field protected _videoChatBar:Landroid/view/ViewGroup;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1000fb
+        value = 0x7f100102
     .end annotation
 .end field
 
 .field protected _videoSwitch:Landroid/support/v7/widget/SwitchCompat;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1000e5
+        value = 0x7f1000ec
     .end annotation
 .end field
 
 .field protected _videoSwitchHolder:Landroid/view/ViewGroup;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1000e4
+        value = 0x7f1000eb
     .end annotation
 .end field
 
@@ -1916,7 +1916,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e0069
+    const v1, 0x7f0e0066
 
     .line 900
     invoke-static {v1}, Lkik/android/chat/KikApplication;->d(I)I
@@ -1989,7 +1989,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e00e6
+    const v1, 0x7f0e00e2
 
     invoke-static {v1}, Lkik/android/chat/KikApplication;->d(I)I
 

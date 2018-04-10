@@ -46,7 +46,7 @@
     .line 65
     const-string v0, "user_profile_email"
 
-    invoke-interface {p0, v0}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p0, v0}, Lkik/core/interfaces/ad;->r(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -59,7 +59,7 @@
 
     const-string v3, "user_profile_email_emailConfirmed"
 
-    invoke-interface {p0, v3}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p0, v3}, Lkik/core/interfaces/ad;->r(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -74,7 +74,7 @@
     .line 67
     const-string v0, "user_profile_username"
 
-    invoke-interface {p0, v0}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p0, v0}, Lkik/core/interfaces/ad;->r(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -83,7 +83,7 @@
     .line 68
     const-string v0, "user_profile_firstName"
 
-    invoke-interface {p0, v0}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p0, v0}, Lkik/core/interfaces/ad;->r(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -92,7 +92,7 @@
     .line 69
     const-string v0, "user_profile_lastName"
 
-    invoke-interface {p0, v0}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p0, v0}, Lkik/core/interfaces/ad;->r(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -101,7 +101,7 @@
     .line 70
     const-string v0, "user_profile_photoUrl"
 
-    invoke-interface {p0, v0}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p0, v0}, Lkik/core/interfaces/ad;->r(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -114,7 +114,7 @@
 
     const-string v3, "user_profile_is_updated"
 
-    invoke-interface {p0, v3}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p0, v3}, Lkik/core/interfaces/ad;->r(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -133,7 +133,7 @@
 
     const-string v3, "notify_new_people"
 
-    invoke-interface {p0, v3}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p0, v3}, Lkik/core/interfaces/ad;->r(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -157,7 +157,7 @@
 
     const-string v3, "user_profile_verified"
 
-    invoke-interface {p0, v3}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p0, v3}, Lkik/core/interfaces/ad;->r(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 

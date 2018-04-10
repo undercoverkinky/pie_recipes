@@ -430,7 +430,7 @@
 
     const v3, 0x7f0903d7
 
-    invoke-static {p0}, Lkik/android/widget/preferences/i;->a(Lkik/android/widget/preferences/NotifyNewPeoplePreference;)Landroid/view/View$OnClickListener;
+    invoke-static {p0}, Lkik/android/widget/preferences/j;->a(Lkik/android/widget/preferences/NotifyNewPeoplePreference;)Landroid/view/View$OnClickListener;
 
     move-result-object v4
 
@@ -441,7 +441,7 @@
 
     const v3, 0x7f090489
 
-    invoke-static {p0}, Lkik/android/widget/preferences/j;->a(Lkik/android/widget/preferences/NotifyNewPeoplePreference;)Landroid/view/View$OnClickListener;
+    invoke-static {p0}, Lkik/android/widget/preferences/k;->a(Lkik/android/widget/preferences/NotifyNewPeoplePreference;)Landroid/view/View$OnClickListener;
 
     move-result-object v4
 

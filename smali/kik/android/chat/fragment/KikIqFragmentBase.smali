@@ -461,7 +461,7 @@
     move-result-object v0
 
     .line 146
-    invoke-static {p0}, Lkik/android/chat/fragment/cj;->a(Lkik/android/chat/fragment/KikIqFragmentBase;)Landroid/content/DialogInterface$OnCancelListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/ci;->a(Lkik/android/chat/fragment/KikIqFragmentBase;)Landroid/content/DialogInterface$OnCancelListener;
 
     move-result-object v1
 

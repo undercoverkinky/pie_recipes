@@ -244,7 +244,7 @@
 
     .prologue
     .line 75
-    const v0, 0x7f0400fa
+    const v0, 0x7f0400f2
 
     return v0
 .end method

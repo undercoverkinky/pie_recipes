@@ -125,28 +125,28 @@
     invoke-direct {p0}, Lkik/android/chat/vm/e;-><init>()V
 
     .line 39
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/gifs/vm/t;->d:Lrx/subjects/PublishSubject;
 
     .line 40
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/gifs/vm/t;->e:Lrx/subjects/PublishSubject;
 
     .line 41
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/gifs/vm/t;->f:Lrx/subjects/PublishSubject;
 
     .line 42
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
@@ -423,9 +423,7 @@
 
     move-result-object v0
 
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lrx/d;->a(I)Lrx/d;
+    invoke-virtual {v0}, Lrx/d;->l()Lrx/d;
 
     move-result-object v0
 
@@ -812,9 +810,7 @@
 
     move-result-object v0
 
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lrx/d;->a(I)Lrx/d;
+    invoke-virtual {v0}, Lrx/d;->l()Lrx/d;
 
     move-result-object v0
 

@@ -176,7 +176,7 @@
     .line 1043
     const/4 v0, 0x0
 
-    invoke-static {v0}, Lcom/kik/util/dd;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/kik/util/cz;->a(Ljava/lang/String;)V
 
     .line 550
     iget-object v0, p0, Lkik/android/chat/fragment/KikScopedDialogFragment;->_attachedVms:Ljava/util/List;
@@ -360,7 +360,7 @@
     .line 537
     const-string v0, "You must attach view models from the main thread"
 
-    invoke-static {v0}, Lcom/kik/util/dd;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/kik/util/cz;->a(Ljava/lang/String;)V
 
     .line 539
     if-nez p1, :cond_0
@@ -584,7 +584,7 @@
     if-eq v1, v2, :cond_1
 
     .line 503
-    invoke-static {p0, p1, p2, p3}, Lkik/android/chat/fragment/eb;->a(Lkik/android/chat/fragment/KikScopedDialogFragment;Lkik/android/chat/fragment/KikDialogFragment$a;Landroid/content/DialogInterface$OnClickListener;Ljava/lang/String;)Ljava/lang/Runnable;
+    invoke-static {p0, p1, p2, p3}, Lkik/android/chat/fragment/ea;->a(Lkik/android/chat/fragment/KikScopedDialogFragment;Lkik/android/chat/fragment/KikDialogFragment$a;Landroid/content/DialogInterface$OnClickListener;Ljava/lang/String;)Ljava/lang/Runnable;
 
     move-result-object v1
 
@@ -601,7 +601,7 @@
     .line 508
     if-nez p2, :cond_2
 
-    invoke-static {}, Lkik/android/chat/fragment/ec;->a()Landroid/content/DialogInterface$OnClickListener;
+    invoke-static {}, Lkik/android/chat/fragment/eb;->a()Landroid/content/DialogInterface$OnClickListener;
 
     move-result-object p2
 
@@ -899,7 +899,7 @@
 
     .prologue
     .line 221
-    invoke-static {}, Lkik/android/widget/cm;->a()V
+    invoke-static {}, Lkik/android/widget/bw;->a()V
 
     .line 223
     invoke-super {p0}, Lkik/android/chat/fragment/KikFragmentBase;->onPause()V
@@ -947,7 +947,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p0}, Lkik/android/widget/cm;->a(Landroid/content/Context;Lkik/android/chat/fragment/KikScopedDialogFragment;)V
+    invoke-static {v0, p0}, Lkik/android/widget/bw;->a(Landroid/content/Context;Lkik/android/chat/fragment/KikScopedDialogFragment;)V
 
     .line 216
     return-void

@@ -81,7 +81,7 @@
 
     const-string v2, "GCM_PUSH_TOKEN"
 
-    invoke-interface {v1, v2}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v1, v2}, Lkik/core/interfaces/ad;->r(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 

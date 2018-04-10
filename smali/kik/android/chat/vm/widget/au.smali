@@ -192,7 +192,7 @@
 
     move-result-object v5
 
-    invoke-interface {v4, v5}, Lkik/core/interfaces/ad;->n(Ljava/lang/String;)J
+    invoke-interface {v4, v5}, Lkik/core/interfaces/ad;->m(Ljava/lang/String;)J
 
     move-result-wide v4
 

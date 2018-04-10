@@ -55,7 +55,7 @@
 
     new-instance v2, Lkik/core/net/k;
 
-    const-string v3, "12.7.1.7291"
+    const-string v3, "12.8.0.7334"
 
     invoke-direct {v2, v3}, Lkik/core/net/k;-><init>(Ljava/lang/String;)V
 
@@ -103,7 +103,7 @@
 
     new-instance v2, Lkik/android/config/c$1;
 
-    const-string v3, "12.7.1.7291"
+    const-string v3, "12.8.0.7334"
 
     invoke-direct {v2, v3}, Lkik/android/config/c$1;-><init>(Ljava/lang/String;)V
 

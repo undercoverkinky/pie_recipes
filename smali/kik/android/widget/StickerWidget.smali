@@ -37,7 +37,7 @@
 
     .prologue
     .line 31
-    const v0, 0x7f0a0112
+    const v0, 0x7f0a010d
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->c(I)I
 
@@ -46,7 +46,7 @@
     sput v0, Lkik/android/widget/StickerWidget;->a:I
 
     .line 32
-    const v0, 0x7f0a0117
+    const v0, 0x7f0a0112
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->c(I)I
 
@@ -55,7 +55,7 @@
     sput v0, Lkik/android/widget/StickerWidget;->b:I
 
     .line 33
-    const v0, 0x7f0a0116
+    const v0, 0x7f0a0111
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->c(I)I
 
@@ -287,7 +287,7 @@
 
     .prologue
     .line 54
-    const v0, 0x7f040172
+    const v0, 0x7f04016a
 
     const/4 v1, 0x0
 
@@ -311,7 +311,7 @@
     invoke-virtual {v1, v2, v3}, Lkik/android/chat/vm/widget/StickerWidgetViewModel;->a(Lcom/kik/components/CoreComponent;Lkik/android/chat/vm/ay;)V
 
     .line 58
-    const/16 v1, 0xe
+    const/16 v1, 0xd
 
     invoke-direct {p0}, Lkik/android/widget/StickerWidget;->d()Lkik/android/chat/vm/widget/StickerWidgetViewModel;
 
@@ -320,7 +320,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/databinding/ViewDataBinding;->setVariable(ILjava/lang/Object;)Z
 
     .line 59
-    const/16 v1, 0x16
+    const/16 v1, 0x15
 
     invoke-direct {p0}, Lkik/android/widget/StickerWidget;->d()Lkik/android/chat/vm/widget/StickerWidgetViewModel;
 

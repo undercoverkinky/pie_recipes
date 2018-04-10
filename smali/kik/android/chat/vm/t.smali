@@ -236,29 +236,29 @@
     check-cast v0, Lkik/android/chat/vm/chats/profile/cp;
 
     .line 74
-    const v1, 0x7f040081
+    const v1, 0x7f040079
 
     invoke-static {v4, v1, p0, v3}, Landroid/databinding/DataBindingUtil;->inflate(Landroid/view/LayoutInflater;ILandroid/view/ViewGroup;Z)Landroid/databinding/ViewDataBinding;
 
     move-result-object v1
 
-    check-cast v1, Lkik/android/e/aa;
+    check-cast v1, Lkik/android/e/z;
 
     .line 75
-    invoke-virtual {v1, v0}, Lkik/android/e/aa;->a(Lkik/android/chat/vm/chats/profile/cp;)V
+    invoke-virtual {v1, v0}, Lkik/android/e/z;->a(Lkik/android/chat/vm/chats/profile/cp;)V
 
     .line 76
-    invoke-virtual {v1}, Lkik/android/e/aa;->executePendingBindings()V
+    invoke-virtual {v1}, Lkik/android/e/z;->executePendingBindings()V
 
     .line 77
-    invoke-virtual {v1}, Lkik/android/e/aa;->getRoot()Landroid/view/View;
+    invoke-virtual {v1}, Lkik/android/e/z;->getRoot()Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lorg/apmem/tools/layouts/FlowLayout;->addView(Landroid/view/View;)V
 
     .line 79
-    invoke-virtual {v1}, Lkik/android/e/aa;->getRoot()Landroid/view/View;
+    invoke-virtual {v1}, Lkik/android/e/z;->getRoot()Landroid/view/View;
 
     move-result-object v0
 
@@ -278,7 +278,7 @@
     .line 81
     new-instance v5, Lkik/android/chat/vm/t$1;
 
-    invoke-direct {v5, v1, p0}, Lkik/android/chat/vm/t$1;-><init>(Lkik/android/e/aa;Lorg/apmem/tools/layouts/FlowLayout;)V
+    invoke-direct {v5, v1, p0}, Lkik/android/chat/vm/t$1;-><init>(Lkik/android/e/z;Lorg/apmem/tools/layouts/FlowLayout;)V
 
     invoke-virtual {v0, v5}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
@@ -313,7 +313,7 @@
     move-result-object v0
 
     .line 99
-    invoke-virtual {v1}, Lkik/android/e/aa;->getRoot()Landroid/view/View;
+    invoke-virtual {v1}, Lkik/android/e/z;->getRoot()Landroid/view/View;
 
     move-result-object v1
 

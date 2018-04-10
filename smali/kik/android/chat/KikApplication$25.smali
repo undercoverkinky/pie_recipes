@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 1968
+    .line 1962
     iput-object p1, p0, Lkik/android/chat/KikApplication$25;->a:Lkik/android/chat/KikApplication;
 
     invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
@@ -46,11 +46,11 @@
     .locals 1
 
     .prologue
-    .line 1972
+    .line 1966
     const-string v0, "Unexpected failure storing chat IDs to XData."
 
     invoke-static {v0}, Lkik/android/util/av;->a(Ljava/lang/String;)V
 
-    .line 1974
+    .line 1968
     return-void
 .end method

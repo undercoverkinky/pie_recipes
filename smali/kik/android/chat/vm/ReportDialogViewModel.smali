@@ -136,28 +136,28 @@
     iput-boolean v0, p0, Lkik/android/chat/vm/ReportDialogViewModel;->i:Z
 
     .line 230
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/chat/vm/ReportDialogViewModel;->r:Lrx/subjects/PublishSubject;
 
     .line 231
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/chat/vm/ReportDialogViewModel;->s:Lrx/subjects/PublishSubject;
 
     .line 232
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/chat/vm/ReportDialogViewModel;->t:Lrx/subjects/PublishSubject;
 
     .line 233
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 

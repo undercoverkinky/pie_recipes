@@ -124,35 +124,35 @@
     invoke-direct {p0}, Lkik/android/chat/vm/e;-><init>()V
 
     .line 44
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/chat/vm/cq;->d:Lrx/subjects/PublishSubject;
 
     .line 45
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/chat/vm/cq;->e:Lrx/subjects/PublishSubject;
 
     .line 46
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/chat/vm/cq;->f:Lrx/subjects/PublishSubject;
 
     .line 47
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/chat/vm/cq;->g:Lrx/subjects/PublishSubject;
 
     .line 48
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
@@ -284,7 +284,7 @@
     .line 102
     iget-object v2, p0, Lkik/android/chat/vm/cq;->c:Landroid/content/res/Resources;
 
-    const v3, 0x7f0a00ef
+    const v3, 0x7f0a00ed
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -443,7 +443,7 @@
     .line 70
     iget-object v0, p0, Lkik/android/chat/vm/cq;->m:Ljava/util/List;
 
-    const v1, 0x7f0201a1
+    const v1, 0x7f020193
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -454,7 +454,7 @@
     .line 71
     iget-object v0, p0, Lkik/android/chat/vm/cq;->m:Ljava/util/List;
 
-    const v1, 0x7f020095
+    const v1, 0x7f02008a
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -473,7 +473,7 @@
     .line 75
     iget-object v0, p0, Lkik/android/chat/vm/cq;->m:Ljava/util/List;
 
-    const v1, 0x7f0201a6
+    const v1, 0x7f020198
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -491,7 +491,7 @@
     .line 77
     iget-object v0, p0, Lkik/android/chat/vm/cq;->m:Ljava/util/List;
 
-    const v1, 0x7f02037e
+    const v1, 0x7f02036b
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -509,7 +509,7 @@
     .line 79
     iget-object v0, p0, Lkik/android/chat/vm/cq;->m:Ljava/util/List;
 
-    const v1, 0x7f020365
+    const v1, 0x7f020352
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -534,7 +534,7 @@
     .line 83
     iget-object v0, p0, Lkik/android/chat/vm/cq;->m:Ljava/util/List;
 
-    const v1, 0x7f0203b0
+    const v1, 0x7f020393
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

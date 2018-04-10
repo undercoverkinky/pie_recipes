@@ -274,7 +274,7 @@
     .line 313
     iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment;->i:Landroid/view/View;
 
-    const v1, 0x7f1000da
+    const v1, 0x7f1000e1
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

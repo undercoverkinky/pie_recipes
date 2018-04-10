@@ -20,13 +20,13 @@
 # instance fields
 .field protected _previewImage:Lkik/android/widget/AspectRatioImageView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10017e
+        value = 0x7f10016a
     .end annotation
 .end field
 
 .field protected _videoView:Lkik/android/widget/KikTextureVideoView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10017f
+        value = 0x7f10016b
     .end annotation
 .end field
 
@@ -602,7 +602,7 @@
 
     .prologue
     .line 226
-    const v0, 0x7f040045
+    const v0, 0x7f04003d
 
     invoke-static {p1, v0, p0}, Lkik/android/chat/view/PreviewResultsViewImpl;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -1271,7 +1271,7 @@
 
     const-string v1, "STORAGE_HINT_COUNT"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->u(Ljava/lang/String;)Ljava/lang/Integer;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->t(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -1284,7 +1284,7 @@
 
     const-string v2, "STORAGE_HINT_TIMESTAMP"
 
-    invoke-interface {v0, v2}, Lkik/core/interfaces/ad;->v(Ljava/lang/String;)Ljava/lang/Long;
+    invoke-interface {v0, v2}, Lkik/core/interfaces/ad;->u(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v0
 
@@ -1327,7 +1327,7 @@
     check-cast v0, Landroid/view/LayoutInflater;
 
     .line 487
-    const v2, 0x7f0400a4
+    const v2, 0x7f04009c
 
     const/4 v3, 0x0
 
@@ -1345,21 +1345,21 @@
     .line 490
     iget-object v0, p0, Lkik/android/chat/view/PreviewResultsViewImpl;->j:Landroid/view/View;
 
-    const v2, 0x7f10025f
+    const v2, 0x7f10024b
 
     invoke-direct {p0, v0, v2, v10}, Lkik/android/chat/view/PreviewResultsViewImpl;->a(Landroid/view/View;II)V
 
     .line 491
     iget-object v0, p0, Lkik/android/chat/view/PreviewResultsViewImpl;->j:Landroid/view/View;
 
-    const v2, 0x7f100260
+    const v2, 0x7f10024c
 
     invoke-direct {p0, v0, v2, v8}, Lkik/android/chat/view/PreviewResultsViewImpl;->a(Landroid/view/View;II)V
 
     .line 492
     iget-object v0, p0, Lkik/android/chat/view/PreviewResultsViewImpl;->j:Landroid/view/View;
 
-    const v2, 0x7f100261
+    const v2, 0x7f10024d
 
     invoke-direct {p0, v0, v2, v9}, Lkik/android/chat/view/PreviewResultsViewImpl;->a(Landroid/view/View;II)V
 
@@ -1946,7 +1946,7 @@
 
     const-string v1, "STORAGE_HINT_COUNT"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->u(Ljava/lang/String;)Ljava/lang/Integer;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->t(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v0
 

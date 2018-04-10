@@ -22,7 +22,7 @@
     .end annotation
 .end field
 
-.field private i:Lkik/android/e/bh;
+.field private i:Lkik/android/e/bg;
 
 .field private j:Lkik/android/chat/vm/ay;
 
@@ -513,11 +513,11 @@
 
     move-result-object v2
 
-    invoke-static {p0, v0}, Lkik/android/chat/fragment/fh;->a(Lkik/android/chat/fragment/ProfileEditBioDialogFragment;Lkik/android/chat/vm/chats/profile/IValidateableInputEditorViewModel$ErrorType;)Lrx/functions/b;
+    invoke-static {p0, v0}, Lkik/android/chat/fragment/fg;->a(Lkik/android/chat/fragment/ProfileEditBioDialogFragment;Lkik/android/chat/vm/chats/profile/IValidateableInputEditorViewModel$ErrorType;)Lrx/functions/b;
 
     move-result-object v0
 
-    invoke-static {}, Lkik/android/chat/fragment/fi;->a()Lrx/functions/b;
+    invoke-static {}, Lkik/android/chat/fragment/fh;->a()Lrx/functions/b;
 
     move-result-object v3
 
@@ -557,11 +557,11 @@
 
     move-result-object v2
 
-    invoke-static {p0, v0}, Lkik/android/chat/fragment/ff;->a(Lkik/android/chat/fragment/ProfileEditBioDialogFragment;Lkik/android/chat/vm/chats/profile/IValidateableInputEditorViewModel$ErrorType;)Lrx/functions/b;
+    invoke-static {p0, v0}, Lkik/android/chat/fragment/fe;->a(Lkik/android/chat/fragment/ProfileEditBioDialogFragment;Lkik/android/chat/vm/chats/profile/IValidateableInputEditorViewModel$ErrorType;)Lrx/functions/b;
 
     move-result-object v0
 
-    invoke-static {}, Lkik/android/chat/fragment/fg;->a()Lrx/functions/b;
+    invoke-static {}, Lkik/android/chat/fragment/ff;->a()Lrx/functions/b;
 
     move-result-object v3
 
@@ -671,7 +671,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0400f3
+    const v2, 0x7f0400eb
 
     const/4 v3, 0x0
 
@@ -679,30 +679,30 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/android/e/bh;
+    check-cast v0, Lkik/android/e/bg;
 
-    iput-object v0, p0, Lkik/android/chat/fragment/ProfileEditBioDialogFragment;->i:Lkik/android/e/bh;
+    iput-object v0, p0, Lkik/android/chat/fragment/ProfileEditBioDialogFragment;->i:Lkik/android/e/bg;
 
     .line 75
-    iget-object v0, p0, Lkik/android/chat/fragment/ProfileEditBioDialogFragment;->i:Lkik/android/e/bh;
+    iget-object v0, p0, Lkik/android/chat/fragment/ProfileEditBioDialogFragment;->i:Lkik/android/e/bg;
 
-    iget-object v0, v0, Lkik/android/e/bh;->a:Lkik/android/chat/view/ValidateableInputView;
+    iget-object v0, v0, Lkik/android/e/bg;->a:Lkik/android/chat/view/ValidateableInputView;
 
     iget-object v2, p0, Lkik/android/chat/fragment/ProfileEditBioDialogFragment;->m:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Lkik/android/chat/view/ValidateableInputView;->e(Ljava/lang/CharSequence;)V
 
     .line 76
-    iget-object v0, p0, Lkik/android/chat/fragment/ProfileEditBioDialogFragment;->i:Lkik/android/e/bh;
+    iget-object v0, p0, Lkik/android/chat/fragment/ProfileEditBioDialogFragment;->i:Lkik/android/e/bg;
 
     iget-object v2, p0, Lkik/android/chat/fragment/ProfileEditBioDialogFragment;->k:Lkik/android/chat/vm/chats/profile/IValidateableInputEditorViewModel;
 
-    invoke-virtual {v0, v2}, Lkik/android/e/bh;->a(Lkik/android/chat/vm/chats/profile/IValidateableInputEditorViewModel;)V
+    invoke-virtual {v0, v2}, Lkik/android/e/bg;->a(Lkik/android/chat/vm/chats/profile/IValidateableInputEditorViewModel;)V
 
     .line 78
-    iget-object v0, p0, Lkik/android/chat/fragment/ProfileEditBioDialogFragment;->i:Lkik/android/e/bh;
+    iget-object v0, p0, Lkik/android/chat/fragment/ProfileEditBioDialogFragment;->i:Lkik/android/e/bg;
 
-    invoke-virtual {v0}, Lkik/android/e/bh;->getRoot()Landroid/view/View;
+    invoke-virtual {v0}, Lkik/android/e/bg;->getRoot()Landroid/view/View;
 
     move-result-object v0
 
@@ -732,7 +732,7 @@
     invoke-virtual {v0, v4}, Landroid/support/v7/app/AlertDialog;->setCanceledOnTouchOutside(Z)V
 
     .line 89
-    invoke-static {p0}, Lkik/android/chat/fragment/fa;->a(Lkik/android/chat/fragment/ProfileEditBioDialogFragment;)Landroid/content/DialogInterface$OnKeyListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/ez;->a(Lkik/android/chat/fragment/ProfileEditBioDialogFragment;)Landroid/content/DialogInterface$OnKeyListener;
 
     move-result-object v1
 
@@ -818,9 +818,9 @@
     invoke-interface {v0, v2}, Lkik/android/util/KeyboardManipulator;->setInputMode(Lkik/android/util/KeyboardManipulator$InputMode;)V
 
     .line 197
-    iget-object v0, p0, Lkik/android/chat/fragment/ProfileEditBioDialogFragment;->i:Lkik/android/e/bh;
+    iget-object v0, p0, Lkik/android/chat/fragment/ProfileEditBioDialogFragment;->i:Lkik/android/e/bg;
 
-    iget-object v0, v0, Lkik/android/e/bh;->a:Lkik/android/chat/view/ValidateableInputView;
+    iget-object v0, v0, Lkik/android/e/bg;->a:Lkik/android/chat/view/ValidateableInputView;
 
     check-cast v1, Lkik/android/util/KeyboardManipulator;
 
@@ -854,7 +854,7 @@
 
     move-result-object v3
 
-    invoke-static {p0}, Lkik/android/chat/fragment/fb;->a(Lkik/android/chat/fragment/ProfileEditBioDialogFragment;)Lrx/functions/b;
+    invoke-static {p0}, Lkik/android/chat/fragment/fa;->a(Lkik/android/chat/fragment/ProfileEditBioDialogFragment;)Lrx/functions/b;
 
     move-result-object v4
 
@@ -873,7 +873,7 @@
 
     move-result-object v3
 
-    invoke-static {p0}, Lkik/android/chat/fragment/fc;->a(Lkik/android/chat/fragment/ProfileEditBioDialogFragment;)Lrx/functions/b;
+    invoke-static {p0}, Lkik/android/chat/fragment/fb;->a(Lkik/android/chat/fragment/ProfileEditBioDialogFragment;)Lrx/functions/b;
 
     move-result-object v4
 
@@ -900,7 +900,7 @@
 
     move-result-object v0
 
-    invoke-static {p0}, Lkik/android/chat/fragment/fd;->a(Lkik/android/chat/fragment/ProfileEditBioDialogFragment;)Landroid/view/View$OnClickListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/fc;->a(Lkik/android/chat/fragment/ProfileEditBioDialogFragment;)Landroid/view/View$OnClickListener;
 
     move-result-object v1
 
@@ -919,7 +919,7 @@
 
     move-result-object v0
 
-    invoke-static {p0}, Lkik/android/chat/fragment/fe;->a(Lkik/android/chat/fragment/ProfileEditBioDialogFragment;)Landroid/view/View$OnClickListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/fd;->a(Lkik/android/chat/fragment/ProfileEditBioDialogFragment;)Landroid/view/View$OnClickListener;
 
     move-result-object v1
 

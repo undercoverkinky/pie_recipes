@@ -3,6 +3,7 @@
     <attr name="aspectRatio" format="reference" />
     <attr name="backgroundColor" format="integer" />
     <attr name="bottom_translate_visibility" format="boolean" />
+    <attr name="constraintSet" format="reference" />
     <attr name="drawerArrowStyle" format="reference" />
     <attr name="fade_visibility" format="boolean" />
     <attr name="file" format="reference|string|integer|boolean|color|float|dimension|fraction" />
@@ -33,13 +34,101 @@
     <attr name="interestsListEditable" format="reference" />
     <attr name="interestsModel" format="reference" />
     <attr name="isLightTheme" format="boolean" />
+    <attr name="layout_constraintBaseline_creator" format="integer" />
+    <attr name="layout_constraintBaseline_toBaselineOf" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="layout_constraintBottom_creator" format="integer" />
+    <attr name="layout_constraintBottom_toBottomOf" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="layout_constraintBottom_toTopOf" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="layout_constraintDimensionRatio" format="string" />
+    <attr name="layout_constraintEnd_toEndOf" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="layout_constraintEnd_toStartOf" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="layout_constraintGuide_begin" format="dimension" />
+    <attr name="layout_constraintGuide_end" format="dimension" />
+    <attr name="layout_constraintGuide_percent" format="float" />
+    <attr name="layout_constraintHeight_default">
+        <enum name="spread" value="0" />
+        <enum name="wrap" value="1" />
+    </attr>
+    <attr name="layout_constraintHeight_max" format="dimension" />
+    <attr name="layout_constraintHeight_min" format="dimension" />
+    <attr name="layout_constraintHorizontal_bias" format="float" />
+    <attr name="layout_constraintHorizontal_chainStyle">
+        <enum name="spread" value="0" />
+        <enum name="packed" value="2" />
+        <enum name="spread_inside" value="1" />
+    </attr>
+    <attr name="layout_constraintHorizontal_weight" format="float" />
+    <attr name="layout_constraintLeft_creator" format="integer" />
+    <attr name="layout_constraintLeft_toLeftOf" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="layout_constraintLeft_toRightOf" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="layout_constraintRight_creator" format="integer" />
+    <attr name="layout_constraintRight_toLeftOf" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="layout_constraintRight_toRightOf" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="layout_constraintStart_toEndOf" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="layout_constraintStart_toStartOf" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="layout_constraintTop_creator" format="integer" />
+    <attr name="layout_constraintTop_toBottomOf" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="layout_constraintTop_toTopOf" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="layout_constraintVertical_bias" format="float" />
+    <attr name="layout_constraintVertical_chainStyle">
+        <enum name="spread" value="0" />
+        <enum name="packed" value="2" />
+        <enum name="spread_inside" value="1" />
+    </attr>
+    <attr name="layout_constraintVertical_weight" format="float" />
+    <attr name="layout_constraintWidth_default">
+        <enum name="spread" value="0" />
+        <enum name="wrap" value="1" />
+    </attr>
+    <attr name="layout_constraintWidth_max" format="dimension" />
+    <attr name="layout_constraintWidth_min" format="dimension" />
+    <attr name="layout_editor_absoluteX" format="dimension" />
+    <attr name="layout_editor_absoluteY" format="dimension" />
+    <attr name="layout_goneMarginBottom" format="dimension" />
+    <attr name="layout_goneMarginEnd" format="dimension" />
+    <attr name="layout_goneMarginLeft" format="dimension" />
+    <attr name="layout_goneMarginRight" format="dimension" />
+    <attr name="layout_goneMarginStart" format="dimension" />
+    <attr name="layout_goneMarginTop" format="dimension" />
+    <attr name="layout_optimizationLevel">
+        <flag name="all" value="0x00000002" />
+        <flag name="basic" value="0x00000004" />
+        <flag name="chains" value="0x00000008" />
+        <flag name="none" value="0x00000001" />
+    </attr>
     <attr name="muted" format="boolean" />
     <attr name="playing" format="boolean" />
     <attr name="pref_divider">
+        <flag name="none" value="0x00000000" />
         <flag name="bottom" value="0x00000002" />
         <flag name="full_bottom" value="0x00000008" />
         <flag name="full_top" value="0x00000004" />
-        <flag name="none" value="0x00000000" />
         <flag name="top" value="0x00000001" />
     </attr>
     <attr name="seek" format="integer" />
@@ -250,18 +339,6 @@
     <attr name="spinnerStyle" format="reference" />
     <attr name="switchStyle" format="reference" />
     <attr name="listMenuViewStyle" format="reference" />
-    <attr name="onClearEffect" format="reference" />
-    <attr name="onRecordingDeleted" format="reference" />
-    <attr name="onPresentDeleteOption" format="reference" />
-    <attr name="isCancelingRecording" format="boolean" />
-    <attr name="seconds" format="integer" />
-    <attr name="color" format="color" />
-    <attr name="onRecordingStarted" format="reference" />
-    <attr name="onPreCancelingRecording" format="reference" />
-    <attr name="onRecordingCancel" format="reference" />
-    <attr name="onRecordingCompleted" format="reference" />
-    <attr name="isRecording" format="boolean" />
-    <attr name="isDeletingStarted" format="boolean" />
     <attr name="num_headers" format="integer" />
     <attr name="item_position" format="integer" />
     <attr name="autoScroll" format="boolean" />
@@ -389,8 +466,8 @@
         <flag name="fill_horizontal" value="0x00000007" />
     </attr>
     <attr name="layout_insetEdge">
-        <enum name="bottom" value="80" />
         <enum name="none" value="0" />
+        <enum name="bottom" value="80" />
         <enum name="top" value="48" />
         <enum name="left" value="3" />
         <enum name="right" value="3" />
@@ -398,14 +475,14 @@
         <enum name="start" value="8388611" />
     </attr>
     <attr name="layout_dodgeInsetEdges">
-        <flag name="bottom" value="0x00000050" />
+        <flag name="all" value="0x00000077" />
         <flag name="none" value="0x00000000" />
+        <flag name="bottom" value="0x00000050" />
         <flag name="top" value="0x00000030" />
         <flag name="left" value="0x00000003" />
         <flag name="right" value="0x00000003" />
         <flag name="end" value="0x00800005" />
         <flag name="start" value="0x00800003" />
-        <flag name="all" value="0x00000077" />
     </attr>
     <attr name="state_dark" format="boolean" />
     <attr name="bottomSheetDialogTheme" format="reference" />
@@ -415,6 +492,7 @@
     <attr name="appearOnScroll" format="boolean" />
     <attr name="isInstalling" format="boolean" />
     <attr name="onClickLogic" format="reference" />
+    <attr name="color" format="color" />
     <attr name="spinBars" format="boolean" />
     <attr name="drawableSize" format="dimension" />
     <attr name="gapBetweenBars" format="dimension" />
@@ -583,7 +661,6 @@
         <enum name="undo" value="25" />
     </attr>
     <attr name="minLength" format="dimension" />
-    <attr name="animateLoading" format="boolean" />
     <attr name="pref_icon" format="reference" />
     <attr name="preference_screen" format="reference" />
     <attr name="screen_icon" format="reference" />
@@ -849,7 +926,6 @@
         <enum name="src_in" value="5" />
         <enum name="src_over" value="3" />
     </attr>
-    <attr name="controls_color" format="integer" />
     <attr name="webAppCount" format="integer" />
     <attr name="onTouch" format="reference" />
 </resources>

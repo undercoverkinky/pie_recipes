@@ -67,7 +67,7 @@
     .locals 2
 
     .prologue
-    const v1, 0x7f020262
+    const v1, 0x7f020255
 
     .line 32
     invoke-direct {p0, v1}, Lkik/android/chat/vm/d;->b(I)V

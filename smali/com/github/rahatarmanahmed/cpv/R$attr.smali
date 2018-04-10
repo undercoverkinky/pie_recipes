@@ -15,27 +15,27 @@
 
 
 # static fields
-.field public static final cpv_animAutostart:I = 0x7f010103
+.field public static final cpv_animAutostart:I = 0x7f010123
 
-.field public static final cpv_animDuration:I = 0x7f0100fd
+.field public static final cpv_animDuration:I = 0x7f01011d
 
-.field public static final cpv_animSteps:I = 0x7f010104
+.field public static final cpv_animSteps:I = 0x7f010124
 
-.field public static final cpv_animSwoopDuration:I = 0x7f0100fe
+.field public static final cpv_animSwoopDuration:I = 0x7f01011e
 
-.field public static final cpv_animSyncDuration:I = 0x7f0100ff
+.field public static final cpv_animSyncDuration:I = 0x7f01011f
 
-.field public static final cpv_color:I = 0x7f010100
+.field public static final cpv_color:I = 0x7f010120
 
-.field public static final cpv_indeterminate:I = 0x7f010102
+.field public static final cpv_indeterminate:I = 0x7f010122
 
-.field public static final cpv_maxProgress:I = 0x7f0100fc
+.field public static final cpv_maxProgress:I = 0x7f01011c
 
-.field public static final cpv_progress:I = 0x7f0100fb
+.field public static final cpv_progress:I = 0x7f01011b
 
-.field public static final cpv_startAngle:I = 0x7f010105
+.field public static final cpv_startAngle:I = 0x7f010125
 
-.field public static final cpv_thickness:I = 0x7f010101
+.field public static final cpv_thickness:I = 0x7f010121
 
 
 # direct methods

@@ -23,7 +23,7 @@
 
     const-string v1, "inline_bot_search_results"
 
-    invoke-interface {p1, v1}, Lkik/core/interfaces/ad;->m(Ljava/lang/String;)Ljava/io/File;
+    invoke-interface {p1, v1}, Lkik/core/interfaces/ad;->l(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v1
 

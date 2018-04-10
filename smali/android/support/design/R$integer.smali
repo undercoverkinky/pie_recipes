@@ -21,17 +21,17 @@
 
 .field public static final app_bar_elevation_anim_duration:I = 0x7f0c0004
 
-.field public static final bottom_sheet_slide_duration:I = 0x7f0c0006
+.field public static final bottom_sheet_slide_duration:I = 0x7f0c0005
 
-.field public static final cancel_button_image_alpha:I = 0x7f0c0007
+.field public static final cancel_button_image_alpha:I = 0x7f0c0006
 
 .field public static final design_snackbar_text_max_lines:I = 0x7f0c0001
 
-.field public static final hide_password_duration:I = 0x7f0c0011
+.field public static final hide_password_duration:I = 0x7f0c0010
 
-.field public static final show_password_duration:I = 0x7f0c0014
+.field public static final show_password_duration:I = 0x7f0c0013
 
-.field public static final status_bar_notification_info_maxnum:I = 0x7f0c0015
+.field public static final status_bar_notification_info_maxnum:I = 0x7f0c0014
 
 
 # direct methods

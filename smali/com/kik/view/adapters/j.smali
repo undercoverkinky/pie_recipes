@@ -170,7 +170,7 @@
     invoke-direct {v2, v0}, Lcom/kik/view/adapters/j$a;-><init>(B)V
 
     .line 382
-    const v0, 0x7f10032e
+    const v0, 0x7f10031a
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -181,7 +181,7 @@
     iput-object v0, v2, Lcom/kik/view/adapters/j$a;->g:Lcom/kik/cache/ContactImageView;
 
     .line 383
-    const v0, 0x7f10019a
+    const v0, 0x7f100186
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -192,7 +192,7 @@
     iput-object v0, v2, Lcom/kik/view/adapters/j$a;->h:Landroid/widget/ImageView;
 
     .line 384
-    const v0, 0x7f100229
+    const v0, 0x7f100215
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -203,7 +203,7 @@
     iput-object v0, v2, Lcom/kik/view/adapters/j$a;->o:Lkik/android/widget/EmojiStatusCircleView;
 
     .line 385
-    const v0, 0x7f100335
+    const v0, 0x7f100321
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -214,7 +214,7 @@
     iput-object v0, v2, Lcom/kik/view/adapters/j$a;->a:Landroid/widget/ImageView;
 
     .line 386
-    const v0, 0x7f100332
+    const v0, 0x7f10031e
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -225,7 +225,7 @@
     iput-object v0, v2, Lcom/kik/view/adapters/j$a;->f:Landroid/widget/TextView;
 
     .line 387
-    const v0, 0x7f100338
+    const v0, 0x7f100324
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -236,7 +236,7 @@
     iput-object v0, v2, Lcom/kik/view/adapters/j$a;->d:Landroid/widget/TextView;
 
     .line 388
-    const v0, 0x7f100337
+    const v0, 0x7f100323
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -245,7 +245,7 @@
     iput-object v0, v2, Lcom/kik/view/adapters/j$a;->e:Landroid/view/View;
 
     .line 389
-    const v0, 0x7f100334
+    const v0, 0x7f100320
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -256,7 +256,7 @@
     iput-object v0, v2, Lcom/kik/view/adapters/j$a;->i:Landroid/widget/TextView;
 
     .line 390
-    const v0, 0x7f10032f
+    const v0, 0x7f10031b
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -267,7 +267,7 @@
     iput-object v0, v2, Lcom/kik/view/adapters/j$a;->b:Landroid/widget/ImageView;
 
     .line 391
-    const v0, 0x7f100336
+    const v0, 0x7f100322
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -278,7 +278,7 @@
     iput-object v0, v2, Lcom/kik/view/adapters/j$a;->c:Lkik/android/widget/IconImageView;
 
     .line 392
-    const v0, 0x7f100333
+    const v0, 0x7f10031f
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -289,7 +289,7 @@
     iput-object v0, v2, Lcom/kik/view/adapters/j$a;->j:Landroid/widget/TextView;
 
     .line 393
-    const v0, 0x7f100339
+    const v0, 0x7f100325
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -300,7 +300,7 @@
     iput-object v0, v2, Lcom/kik/view/adapters/j$a;->k:Landroid/widget/ImageView;
 
     .line 394
-    const v0, 0x7f10033b
+    const v0, 0x7f100327
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -309,7 +309,7 @@
     iput-object v0, v2, Lcom/kik/view/adapters/j$a;->l:Landroid/view/View;
 
     .line 395
-    const v0, 0x7f100330
+    const v0, 0x7f10031c
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -451,7 +451,7 @@
     .line 142
     iget-object v0, v7, Lcom/kik/view/adapters/j$a;->g:Lcom/kik/cache/ContactImageView;
 
-    const v1, 0x7f0203b6
+    const v1, 0x7f020399
 
     invoke-virtual {v0, v1}, Lcom/kik/cache/ContactImageView;->a(I)V
 
@@ -474,7 +474,7 @@
     .line 146
     iget-object v0, v7, Lcom/kik/view/adapters/j$a;->g:Lcom/kik/cache/ContactImageView;
 
-    const v1, 0x7f02025c
+    const v1, 0x7f02024f
 
     invoke-virtual {v0, v1}, Lcom/kik/cache/ContactImageView;->a(I)V
 
@@ -522,9 +522,9 @@
 
     .line 155
     :goto_2
-    if-eqz v11, :cond_2d
+    if-eqz v11, :cond_2c
 
-    if-nez v9, :cond_2d
+    if-nez v9, :cond_2c
 
     .line 157
     iget-object v0, p0, Lcom/kik/view/adapters/j;->c:Lkik/core/interfaces/v;
@@ -657,11 +657,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_30
+    if-eqz v0, :cond_2f
 
     iget-boolean v0, p0, Lcom/kik/view/adapters/j;->k:Z
 
-    if-eqz v0, :cond_30
+    if-eqz v0, :cond_2f
 
     .line 289
     iget-object v0, v7, Lcom/kik/view/adapters/j$a;->b:Landroid/widget/ImageView;
@@ -694,13 +694,13 @@
 
     instance-of v0, v8, Lkik/core/datatypes/p;
 
-    if-nez v0, :cond_31
+    if-nez v0, :cond_30
 
     invoke-virtual {v8}, Lkik/core/datatypes/l;->f()Z
 
     move-result v0
 
-    if-eqz v0, :cond_31
+    if-eqz v0, :cond_30
 
     const/4 v0, 0x0
 
@@ -710,7 +710,7 @@
     .line 300
     if-eqz v11, :cond_6
 
-    if-eqz v9, :cond_32
+    if-eqz v9, :cond_31
 
     .line 302
     :cond_6
@@ -729,7 +729,7 @@
     .line 2459
     add-int/lit8 v0, v0, -0x1
 
-    if-ne p1, v0, :cond_34
+    if-ne p1, v0, :cond_33
 
     .line 2460
     const/4 v0, 0x1
@@ -748,7 +748,7 @@
     :goto_7
     iget-object v0, p0, Lcom/kik/view/adapters/j;->g:Lkik/android/videochat/c;
 
-    if-eqz v0, :cond_35
+    if-eqz v0, :cond_34
 
     iget-object v0, p0, Lcom/kik/view/adapters/j;->g:Lkik/android/videochat/c;
 
@@ -760,7 +760,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_35
+    if-nez v0, :cond_34
 
     .line 339
     const/4 v0, 0x1
@@ -825,7 +825,7 @@
     :goto_8
     iget-object v0, p0, Lcom/kik/view/adapters/j;->n:Lkik/core/chat/c;
 
-    if-eqz v0, :cond_38
+    if-eqz v0, :cond_37
 
     iget-object v0, p0, Lcom/kik/view/adapters/j;->n:Lkik/core/chat/c;
 
@@ -837,7 +837,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_38
+    if-eqz v0, :cond_37
 
     .line 365
     iget-object v0, v7, Lcom/kik/view/adapters/j$a;->f:Landroid/widget/TextView;
@@ -846,7 +846,7 @@
 
     const/4 v2, 0x0
 
-    const v3, 0x7f02008f
+    const v3, 0x7f020084
 
     const/4 v4, 0x0
 
@@ -882,7 +882,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_39
+    if-eqz v1, :cond_38
 
     .line 3405
     :cond_8
@@ -1028,7 +1028,7 @@
 
     .line 171
     :cond_f
-    if-eqz v0, :cond_21
+    if-eqz v0, :cond_20
 
     .line 172
     iget-object v1, v7, Lcom/kik/view/adapters/j$a;->d:Landroid/widget/TextView;
@@ -1065,7 +1065,7 @@
     .line 179
     instance-of v2, v0, Lkik/core/datatypes/b;
 
-    if-eqz v2, :cond_3c
+    if-eqz v2, :cond_3b
 
     .line 180
     check-cast v0, Lkik/core/datatypes/b;
@@ -1089,7 +1089,7 @@
 
     .line 189
     :goto_f
-    if-eqz v0, :cond_20
+    if-eqz v0, :cond_1f
 
     .line 190
     iget-object v0, v7, Lcom/kik/view/adapters/j$a;->c:Lkik/android/widget/IconImageView;
@@ -1135,28 +1135,10 @@
     :cond_13
     const/4 v1, 0x0
 
-    .line 1055
-    invoke-virtual {v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->E()Z
+    .line 1093
+    if-eqz v0, :cond_15
 
-    move-result v2
-
-    if-eqz v2, :cond_14
-
-    .line 1056
-    const v0, 0x7f0203af
-
-    invoke-virtual {v3, v0}, Lkik/android/widget/IconImageView;->setImageResource(I)V
-
-    .line 1057
-    const/4 v0, 0x1
-
-    goto :goto_f
-
-    .line 1097
-    :cond_14
-    if-eqz v0, :cond_16
-
-    .line 1100
+    .line 1096
     const-string v2, "com.kik.ext.gallery"
 
     invoke-virtual {v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->v()Ljava/lang/String;
@@ -1167,11 +1149,11 @@
 
     move-result v2
 
-    if-nez v2, :cond_15
+    if-nez v2, :cond_14
 
     const-string v2, "com.kik.ext.video-gallery"
 
-    .line 1101
+    .line 1097
     invoke-virtual {v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->v()Ljava/lang/String;
 
     move-result-object v5
@@ -1180,36 +1162,36 @@
 
     move-result v2
 
-    if-eqz v2, :cond_16
+    if-eqz v2, :cond_15
 
-    :cond_15
+    :cond_14
     const/4 v2, 0x1
 
-    .line 1059
+    .line 1055
     :goto_10
-    if-eqz v2, :cond_17
+    if-eqz v2, :cond_16
 
-    .line 1060
-    const v0, 0x7f020204
+    .line 1056
+    const v0, 0x7f0201f7
 
     invoke-virtual {v3, v0}, Lkik/android/widget/IconImageView;->setImageResource(I)V
 
-    .line 1061
+    .line 1057
     const/4 v0, 0x1
 
     goto :goto_f
 
-    .line 1101
-    :cond_16
+    .line 1097
+    :cond_15
     const/4 v2, 0x0
 
     goto :goto_10
 
-    .line 2088
-    :cond_17
-    if-eqz v0, :cond_19
+    .line 2084
+    :cond_16
+    if-eqz v0, :cond_18
 
-    .line 2091
+    .line 2087
     const-string v2, "com.kik.ext.camera"
 
     invoke-virtual {v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->v()Ljava/lang/String;
@@ -1220,11 +1202,11 @@
 
     move-result v2
 
-    if-nez v2, :cond_18
+    if-nez v2, :cond_17
 
     const-string v2, "com.kik.ext.video-camera"
 
-    .line 2092
+    .line 2088
     invoke-virtual {v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->v()Ljava/lang/String;
 
     move-result-object v5
@@ -1233,17 +1215,44 @@
 
     move-result v2
 
-    if-eqz v2, :cond_19
+    if-eqz v2, :cond_18
 
-    :cond_18
+    :cond_17
     const/4 v2, 0x1
 
-    .line 1063
+    .line 1059
     :goto_11
-    if-eqz v2, :cond_1a
+    if-eqz v2, :cond_19
+
+    .line 1060
+    const v0, 0x7f0201f6
+
+    invoke-virtual {v3, v0}, Lkik/android/widget/IconImageView;->setImageResource(I)V
+
+    .line 1061
+    const/4 v0, 0x1
+
+    goto :goto_f
+
+    .line 2088
+    :cond_18
+    const/4 v2, 0x0
+
+    goto :goto_11
+
+    .line 2102
+    :cond_19
+    if-nez v0, :cond_1a
+
+    .line 2103
+    const/4 v2, 0x0
+
+    .line 1063
+    :goto_12
+    if-eqz v2, :cond_1b
 
     .line 1064
-    const v0, 0x7f020203
+    const v0, 0x7f0201f8
 
     invoke-virtual {v3, v0}, Lkik/android/widget/IconImageView;->setImageResource(I)V
 
@@ -1252,35 +1261,8 @@
 
     goto :goto_f
 
-    .line 2092
-    :cond_19
-    const/4 v2, 0x0
-
-    goto :goto_11
-
-    .line 2106
+    .line 2105
     :cond_1a
-    if-nez v0, :cond_1b
-
-    .line 2107
-    const/4 v2, 0x0
-
-    .line 1067
-    :goto_12
-    if-eqz v2, :cond_1c
-
-    .line 1068
-    const v0, 0x7f020205
-
-    invoke-virtual {v3, v0}, Lkik/android/widget/IconImageView;->setImageResource(I)V
-
-    .line 1069
-    const/4 v0, 0x1
-
-    goto/16 :goto_f
-
-    .line 2109
-    :cond_1b
     const-string v2, "com.kik.ext.gif"
 
     invoke-virtual {v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->v()Ljava/lang/String;
@@ -1293,23 +1275,23 @@
 
     goto :goto_12
 
-    .line 1073
-    :cond_1c
+    .line 1069
+    :cond_1b
     const-string v2, "icon"
 
     invoke-virtual {v0, v2}, Lkik/core/datatypes/messageExtensions/ContentMessage;->a(Ljava/lang/String;)Lkik/core/datatypes/q;
 
     move-result-object v0
 
-    .line 1074
-    if-eqz v0, :cond_1d
+    .line 1070
+    if-eqz v0, :cond_1c
 
     instance-of v2, v0, Lkik/core/datatypes/b;
 
-    if-nez v2, :cond_1e
+    if-nez v2, :cond_1d
 
-    .line 1075
-    :cond_1d
+    .line 1071
+    :cond_1c
     const/4 v0, 0x0
 
     invoke-virtual {v3, v0, v4}, Lkik/android/widget/IconImageView;->a(Ljava/lang/String;Lkik/core/interfaces/n;)V
@@ -1318,35 +1300,35 @@
 
     goto/16 :goto_f
 
-    .line 1078
-    :cond_1e
+    .line 1074
+    :cond_1d
     check-cast v0, Lkik/core/datatypes/b;
 
-    .line 1079
+    .line 1075
     invoke-virtual {v0}, Lkik/core/datatypes/b;->b()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v3, v1, v4}, Lkik/android/widget/IconImageView;->a(Ljava/lang/String;Lkik/core/interfaces/n;)V
 
-    .line 1080
+    .line 1076
     invoke-virtual {v0}, Lkik/core/datatypes/b;->b()Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1f
+    if-eqz v0, :cond_1e
 
     const/4 v0, 0x1
 
     goto/16 :goto_f
 
-    :cond_1f
+    :cond_1e
     const/4 v0, 0x0
 
     goto/16 :goto_f
 
     .line 193
-    :cond_20
+    :cond_1f
     iget-object v0, v7, Lcom/kik/view/adapters/j$a;->c:Lkik/android/widget/IconImageView;
 
     const/16 v1, 0x8
@@ -1356,8 +1338,8 @@
     goto/16 :goto_3
 
     .line 196
-    :cond_21
-    if-eqz v1, :cond_24
+    :cond_20
+    if-eqz v1, :cond_23
 
     .line 197
     iget-object v0, v7, Lcom/kik/view/adapters/j$a;->d:Landroid/widget/TextView;
@@ -1377,18 +1359,18 @@
 
     move-result v0
 
-    if-nez v0, :cond_23
+    if-nez v0, :cond_22
 
     .line 199
     iget-object v1, v7, Lcom/kik/view/adapters/j$a;->h:Landroid/widget/ImageView;
 
-    if-eqz v4, :cond_22
+    if-eqz v4, :cond_21
 
     invoke-virtual {v4}, Lkik/core/datatypes/l;->f()Z
 
     move-result v0
 
-    if-eqz v0, :cond_22
+    if-eqz v0, :cond_21
 
     const/4 v0, 0x0
 
@@ -1412,13 +1394,13 @@
     goto/16 :goto_3
 
     .line 199
-    :cond_22
+    :cond_21
     const/16 v0, 0x8
 
     goto :goto_13
 
     .line 202
-    :cond_23
+    :cond_22
     iget-object v0, v7, Lcom/kik/view/adapters/j$a;->h:Landroid/widget/ImageView;
 
     const/16 v1, 0x8
@@ -1428,8 +1410,8 @@
     goto :goto_14
 
     .line 206
-    :cond_24
-    if-eqz v2, :cond_25
+    :cond_23
+    if-eqz v2, :cond_24
 
     .line 207
     iget-object v0, v7, Lcom/kik/view/adapters/j$a;->d:Landroid/widget/TextView;
@@ -1456,14 +1438,14 @@
     goto/16 :goto_3
 
     .line 210
-    :cond_25
-    if-eqz v3, :cond_26
+    :cond_24
+    if-eqz v3, :cond_25
 
     invoke-virtual {v3}, Lkik/core/datatypes/messageExtensions/FriendAttributeMessageAttachment;->shouldDisplay()Z
 
     move-result v0
 
-    if-eqz v0, :cond_26
+    if-eqz v0, :cond_25
 
     .line 211
     iget-object v0, v7, Lcom/kik/view/adapters/j$a;->d:Landroid/widget/TextView;
@@ -1490,7 +1472,7 @@
     goto/16 :goto_3
 
     .line 215
-    :cond_26
+    :cond_25
     const/4 v1, 0x0
 
     .line 216
@@ -1525,7 +1507,7 @@
     check-cast v0, Lkik/core/datatypes/messageExtensions/h;
 
     .line 224
-    if-eqz v0, :cond_3b
+    if-eqz v0, :cond_3a
 
     .line 227
     invoke-virtual {v0}, Lkik/core/datatypes/messageExtensions/h;->a()I
@@ -1534,7 +1516,7 @@
 
     const/4 v4, 0x1
 
-    if-ne v2, v4, :cond_27
+    if-ne v2, v4, :cond_26
 
     .line 228
     invoke-virtual {p0}, Lcom/kik/view/adapters/j;->a()Landroid/content/Context;
@@ -1549,7 +1531,7 @@
 
     .line 237
     :goto_15
-    if-eqz v0, :cond_2c
+    if-eqz v0, :cond_2b
 
     .line 238
     const/4 v2, 0x0
@@ -1563,7 +1545,7 @@
     :goto_16
     const/16 v4, 0xa
 
-    if-ge v3, v4, :cond_28
+    if-ge v3, v4, :cond_27
 
     .line 239
     const/16 v4, 0x20
@@ -1577,7 +1559,7 @@
     .line 240
     const/4 v4, -0x1
 
-    if-eq v2, v4, :cond_28
+    if-eq v2, v4, :cond_27
 
     .line 238
     add-int/lit8 v3, v3, 0x1
@@ -1585,7 +1567,7 @@
     goto :goto_16
 
     .line 231
-    :cond_27
+    :cond_26
     invoke-virtual {p0}, Lcom/kik/view/adapters/j;->a()Landroid/content/Context;
 
     move-result-object v2
@@ -1615,10 +1597,10 @@
     goto :goto_15
 
     .line 244
-    :cond_28
+    :cond_27
     const/4 v3, -0x1
 
-    if-eq v2, v3, :cond_29
+    if-eq v2, v3, :cond_28
 
     .line 245
     const/4 v1, 0x1
@@ -1631,14 +1613,14 @@
     move-result-object v0
 
     .line 248
-    :cond_29
+    :cond_28
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v2
 
     const/16 v3, 0x3c
 
-    if-le v2, v3, :cond_3a
+    if-le v2, v3, :cond_39
 
     .line 249
     const/4 v2, 0x1
@@ -1656,7 +1638,7 @@
 
     .line 252
     :goto_17
-    if-eqz v0, :cond_2a
+    if-eqz v0, :cond_29
 
     .line 253
     const-string v0, "..."
@@ -1666,7 +1648,7 @@
     move-result-object v1
 
     .line 260
-    :cond_2a
+    :cond_29
     :goto_18
     const/4 v2, 0x0
 
@@ -1680,7 +1662,7 @@
     check-cast v0, Lkik/core/net/messageExtensions/RenderInstructionAttachment;
 
     .line 262
-    if-eqz v0, :cond_2b
+    if-eqz v0, :cond_2a
 
     .line 263
     invoke-virtual {v0}, Lkik/core/net/messageExtensions/RenderInstructionAttachment;->getInstructions()Lcom/kik/message/model/attachments/RenderInstructionSet;
@@ -1688,7 +1670,7 @@
     move-result-object v2
 
     .line 265
-    :cond_2b
+    :cond_2a
     iget-object v0, v7, Lcom/kik/view/adapters/j$a;->d:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
@@ -1723,17 +1705,17 @@
     goto/16 :goto_3
 
     .line 257
-    :cond_2c
+    :cond_2b
     const-string v1, ""
 
     goto :goto_18
 
     .line 271
-    :cond_2d
-    if-eqz v9, :cond_2f
+    :cond_2c
+    if-eqz v9, :cond_2e
 
     .line 272
-    if-eqz v11, :cond_2e
+    if-eqz v11, :cond_2d
 
     .line 273
     iget-object v0, v7, Lcom/kik/view/adapters/j$a;->i:Landroid/widget/TextView;
@@ -1753,7 +1735,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 275
-    :cond_2e
+    :cond_2d
     iget-object v0, v7, Lcom/kik/view/adapters/j$a;->d:Landroid/widget/TextView;
 
     const v1, 0x7f090532
@@ -1788,7 +1770,7 @@
     goto/16 :goto_3
 
     .line 281
-    :cond_2f
+    :cond_2e
     iget-object v0, v7, Lcom/kik/view/adapters/j$a;->i:Landroid/widget/TextView;
 
     const-string v1, ""
@@ -1826,7 +1808,7 @@
     goto/16 :goto_3
 
     .line 292
-    :cond_30
+    :cond_2f
     iget-object v0, v7, Lcom/kik/view/adapters/j$a;->b:Landroid/widget/ImageView;
 
     const/4 v1, 0x4
@@ -1836,18 +1818,18 @@
     goto/16 :goto_4
 
     .line 298
-    :cond_31
+    :cond_30
     const/16 v0, 0x8
 
     goto/16 :goto_5
 
     .line 304
-    :cond_32
+    :cond_31
     invoke-virtual {v11}, Lkik/core/datatypes/Message;->d()Z
 
     move-result v0
 
-    if-nez v0, :cond_33
+    if-nez v0, :cond_32
 
     .line 306
     iget-object v0, v7, Lcom/kik/view/adapters/j$a;->a:Landroid/widget/ImageView;
@@ -1867,7 +1849,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f020216
+    const v2, 0x7f020209
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1878,7 +1860,7 @@
     goto/16 :goto_6
 
     .line 311
-    :cond_33
+    :cond_32
     iget-object v0, v7, Lcom/kik/view/adapters/j$a;->a:Landroid/widget/ImageView;
 
     const/4 v1, 0x0
@@ -1907,7 +1889,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f020214
+    const v2, 0x7f020207
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1929,7 +1911,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f020219
+    const v2, 0x7f02020c
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1951,7 +1933,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f020218
+    const v2, 0x7f02020b
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1973,7 +1955,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f020217
+    const v2, 0x7f02020a
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1995,7 +1977,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f020213
+    const v2, 0x7f020206
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2017,7 +1999,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f020215
+    const v2, 0x7f020208
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2039,7 +2021,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f020215
+    const v2, 0x7f020208
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -2050,7 +2032,7 @@
     goto/16 :goto_6
 
     .line 2463
-    :cond_34
+    :cond_33
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/view/View;
@@ -2066,7 +2048,7 @@
     goto/16 :goto_7
 
     .line 349
-    :cond_35
+    :cond_34
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/view/View;
@@ -2082,7 +2064,7 @@
     .line 350
     iget-object v0, v7, Lcom/kik/view/adapters/j$a;->n:Lcom/kik/view/a;
 
-    if-eqz v0, :cond_36
+    if-eqz v0, :cond_35
 
     .line 351
     iget-object v0, v7, Lcom/kik/view/adapters/j$a;->n:Lcom/kik/view/a;
@@ -2095,7 +2077,7 @@
     iput-object v0, v7, Lcom/kik/view/adapters/j$a;->n:Lcom/kik/view/a;
 
     .line 354
-    :cond_36
+    :cond_35
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/view/View;
@@ -2113,7 +2095,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_37
+    if-eqz v0, :cond_36
 
     .line 357
     iget-object v0, v7, Lcom/kik/view/adapters/j$a;->k:Landroid/widget/ImageView;
@@ -2125,7 +2107,7 @@
     goto/16 :goto_8
 
     .line 360
-    :cond_37
+    :cond_36
     iget-object v0, v7, Lcom/kik/view/adapters/j$a;->k:Landroid/widget/ImageView;
 
     const/16 v1, 0x8
@@ -2135,7 +2117,7 @@
     goto/16 :goto_8
 
     .line 369
-    :cond_38
+    :cond_37
     iget-object v0, v7, Lcom/kik/view/adapters/j$a;->f:Landroid/widget/TextView;
 
     const/4 v1, 0x0
@@ -2151,7 +2133,7 @@
     goto/16 :goto_9
 
     .line 3409
-    :cond_39
+    :cond_38
     iget-object v1, p0, Lcom/kik/view/adapters/j;->f:Lcom/kik/core/domain/users/a;
 
     invoke-virtual {v8}, Lkik/core/datatypes/l;->j()Lkik/core/datatypes/k;
@@ -2190,7 +2172,7 @@
 
     goto/16 :goto_a
 
-    :cond_3a
+    :cond_39
     move-object v12, v0
 
     move v0, v1
@@ -2199,17 +2181,19 @@
 
     goto/16 :goto_17
 
-    :cond_3b
+    :cond_3a
     move-object v0, v2
 
     goto/16 :goto_15
 
-    :cond_3c
+    :cond_3b
     move-object v0, v1
 
     goto/16 :goto_e
 
     .line 312
+    nop
+
     :sswitch_data_0
     .sparse-switch
         -0x64 -> :sswitch_5
@@ -2226,7 +2210,7 @@
 
     .prologue
     .line 435
-    const v0, 0x7f0400fd
+    const v0, 0x7f0400f5
 
     return v0
 .end method

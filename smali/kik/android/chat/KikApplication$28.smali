@@ -42,7 +42,7 @@
     .locals 0
 
     .prologue
-    .line 2310
+    .line 2304
     iput-object p1, p0, Lkik/android/chat/KikApplication$28;->d:Lkik/android/chat/KikApplication;
 
     iput-object p2, p0, Lkik/android/chat/KikApplication$28;->a:Lcom/kik/events/d;
@@ -62,13 +62,13 @@
     .locals 3
 
     .prologue
-    .line 2310
-    .line 3315
+    .line 2304
+    .line 3309
     iget-object v0, p0, Lkik/android/chat/KikApplication$28;->a:Lcom/kik/events/d;
 
     invoke-virtual {v0}, Lcom/kik/events/d;->a()V
 
-    .line 3316
+    .line 3310
     iget-object v0, p0, Lkik/android/chat/KikApplication$28;->b:Lkik/core/interfaces/ICommunication;
 
     new-instance v1, Lkik/core/net/outgoing/UserProfileRequest$a;
@@ -89,6 +89,6 @@
 
     invoke-interface {v0, v1}, Lkik/core/interfaces/ICommunication;->a(Lkik/core/net/outgoing/j;)Lcom/kik/events/Promise;
 
-    .line 2310
+    .line 2304
     return-void
 .end method

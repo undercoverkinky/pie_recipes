@@ -88,14 +88,14 @@
     invoke-direct {p0}, Lkik/android/chat/vm/c;-><init>()V
 
     .line 47
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/chat/vm/widget/ax;->h:Lrx/subjects/PublishSubject;
 
     .line 48
-    invoke-static {}, Lrx/subjects/a;->l()Lrx/subjects/a;
+    invoke-static {}, Lrx/subjects/a;->m()Lrx/subjects/a;
 
     move-result-object v0
 
@@ -129,7 +129,7 @@
 
     iget-object v1, p0, Lkik/android/chat/vm/widget/ax;->c:Landroid/content/res/Resources;
 
-    const v2, 0x7f0201c5
+    const v2, 0x7f0201b8
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -182,7 +182,7 @@
 
     iget-object v1, p0, Lkik/android/chat/vm/widget/ax;->c:Landroid/content/res/Resources;
 
-    const v2, 0x7f0201c4
+    const v2, 0x7f0201b7
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -386,7 +386,7 @@
 
     iget-object v1, p0, Lkik/android/chat/vm/widget/ax;->c:Landroid/content/res/Resources;
 
-    const v2, 0x7f0201c4
+    const v2, 0x7f0201b7
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -420,7 +420,7 @@
     return-void
 .end method
 
-.method public final aD_()Z
+.method public final aK_()Z
     .locals 1
 
     .prologue
@@ -572,11 +572,11 @@
     .line 141
     iget-object v0, p0, Lkik/android/chat/vm/widget/ax;->d:Lcom/kik/metrics/c/d;
 
-    invoke-static {}, Lcom/kik/metrics/b/bj;->b()Lcom/kik/metrics/b/bj$a;
+    invoke-static {}, Lcom/kik/metrics/b/bk;->b()Lcom/kik/metrics/b/bk$a;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/kik/metrics/b/bj$a;->a()Lcom/kik/metrics/b/bj;
+    invoke-virtual {v1}, Lcom/kik/metrics/b/bk$a;->a()Lcom/kik/metrics/b/bk;
 
     move-result-object v1
 

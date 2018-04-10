@@ -717,7 +717,7 @@
     .line 445
     const v0, 0x1010137
 
-    invoke-static {p0}, Lkik/android/widget/dg;->a(Lkik/android/widget/ProgressWheel;)Lrx/functions/b;
+    invoke-static {p0}, Lkik/android/widget/cp;->a(Lkik/android/widget/ProgressWheel;)Lrx/functions/b;
 
     move-result-object v1
 

@@ -635,14 +635,14 @@
     iput-object v0, p0, Lkik/core/chat/profile/n;->c:Ljava/lang/Object;
 
     .line 130
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/core/chat/profile/n;->f:Lrx/subjects/PublishSubject;
 
     .line 131
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
@@ -787,7 +787,7 @@
     iput-object v0, p0, Lkik/core/chat/profile/n;->b:Ljava/util/List;
 
     .line 321
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
@@ -1499,7 +1499,7 @@
             "(",
             "Ljava/util/List",
             "<",
-            "Lcom/kik/util/cy",
+            "Lcom/kik/util/cu",
             "<",
             "Ljava/lang/String;",
             "Ljava/lang/Long;",
@@ -1547,12 +1547,12 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/kik/util/cy;
+    check-cast v0, Lcom/kik/util/cu;
 
     .line 1293
     iget-object v3, p0, Lkik/core/chat/profile/n;->w:Ljava/util/Hashtable;
 
-    iget-object v0, v0, Lcom/kik/util/cy;->a:Ljava/lang/Object;
+    iget-object v0, v0, Lcom/kik/util/cu;->a:Ljava/lang/Object;
 
     invoke-virtual {v3, v0}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2278,7 +2278,7 @@
     .line 1783
     iget-object v0, p0, Lkik/core/chat/profile/n;->k:Lkik/core/interfaces/ad;
 
-    invoke-interface {v0, p1}, Lkik/core/interfaces/ad;->p(Ljava/lang/String;)Z
+    invoke-interface {v0, p1}, Lkik/core/interfaces/ad;->o(Ljava/lang/String;)Z
 
     .line 1784
     iget-object v0, p0, Lkik/core/chat/profile/n;->L:Lcom/kik/events/g;
@@ -5266,7 +5266,7 @@
 
     const-string v1, "ConversationManager.missedconvos.watermark"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->r(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -5585,7 +5585,7 @@
 
     const-string v1, "ConversationManager.QOS_POLLING_INTERVAL"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->r(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -6027,7 +6027,7 @@
     if-eqz v3, :cond_0
 
     .line 1145
-    new-instance v3, Lcom/kik/util/cy;
+    new-instance v3, Lcom/kik/util/cu;
 
     invoke-virtual {v2}, Lkik/core/datatypes/f;->g()Ljava/lang/String;
 
@@ -6041,7 +6041,7 @@
 
     move-result-object v2
 
-    invoke-direct {v3, v4, v2}, Lcom/kik/util/cy;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v3, v4, v2}, Lcom/kik/util/cu;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     invoke-interface {v8, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -6272,7 +6272,7 @@
     if-eqz v3, :cond_1
 
     .line 1193
-    new-instance v3, Lcom/kik/util/cy;
+    new-instance v3, Lcom/kik/util/cu;
 
     invoke-virtual {v2}, Lkik/core/datatypes/f;->g()Ljava/lang/String;
 
@@ -6286,7 +6286,7 @@
 
     move-result-object v2
 
-    invoke-direct {v3, v4, v2}, Lcom/kik/util/cy;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v3, v4, v2}, Lcom/kik/util/cu;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     invoke-interface {v5, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -6495,7 +6495,7 @@
     if-nez v1, :cond_3
 
     .line 1267
-    new-instance v1, Lcom/kik/util/cy;
+    new-instance v1, Lcom/kik/util/cu;
 
     invoke-virtual {v0}, Lkik/core/datatypes/f;->g()Ljava/lang/String;
 
@@ -6509,7 +6509,7 @@
 
     move-result-object v0
 
-    invoke-direct {v1, v5, v0}, Lcom/kik/util/cy;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v1, v5, v0}, Lcom/kik/util/cu;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 

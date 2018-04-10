@@ -14,13 +14,13 @@
 # instance fields
 .field _confirmNameButton:Landroid/view/View;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1000dc
+        value = 0x7f1000e3
     .end annotation
 .end field
 
 .field _groupNameField:Lkik/android/chat/view/ValidateableInputView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1000dd
+        value = 0x7f1000e4
     .end annotation
 .end field
 

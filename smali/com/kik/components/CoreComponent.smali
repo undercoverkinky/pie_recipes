@@ -324,37 +324,31 @@
 .method public abstract a(Lkik/android/chat/vm/messaging/AbstractMessageViewModel;)V
 .end method
 
-.method public abstract a(Lkik/android/chat/vm/messaging/ca;)V
+.method public abstract a(Lkik/android/chat/vm/messaging/bx;)V
 .end method
 
-.method public abstract a(Lkik/android/chat/vm/messaging/cb;)V
+.method public abstract a(Lkik/android/chat/vm/messaging/cu;)V
 .end method
 
-.method public abstract a(Lkik/android/chat/vm/messaging/cr;)V
+.method public abstract a(Lkik/android/chat/vm/messaging/de;)V
 .end method
 
-.method public abstract a(Lkik/android/chat/vm/messaging/dq;)V
+.method public abstract a(Lkik/android/chat/vm/messaging/dx;)V
 .end method
 
-.method public abstract a(Lkik/android/chat/vm/messaging/ea;)V
+.method public abstract a(Lkik/android/chat/vm/messaging/es;)V
 .end method
 
-.method public abstract a(Lkik/android/chat/vm/messaging/ev;)V
+.method public abstract a(Lkik/android/chat/vm/messaging/eu;)V
 .end method
 
-.method public abstract a(Lkik/android/chat/vm/messaging/fq;)V
+.method public abstract a(Lkik/android/chat/vm/messaging/ex;)V
 .end method
 
-.method public abstract a(Lkik/android/chat/vm/messaging/fs;)V
+.method public abstract a(Lkik/android/chat/vm/messaging/fh;)V
 .end method
 
-.method public abstract a(Lkik/android/chat/vm/messaging/fv;)V
-.end method
-
-.method public abstract a(Lkik/android/chat/vm/messaging/gf;)V
-.end method
-
-.method public abstract a(Lkik/android/chat/vm/messaging/gl;)V
+.method public abstract a(Lkik/android/chat/vm/messaging/fr;)V
 .end method
 
 .method public abstract a(Lkik/android/chat/vm/n;)V
@@ -561,9 +555,6 @@
 .method public abstract a(Lkik/android/videochat/VideoChatViewController;)V
 .end method
 
-.method public abstract a(Lkik/android/widget/AudioMicLayoutView;)V
-.end method
-
 .method public abstract a(Lkik/android/widget/BugmeBarView;)V
 .end method
 
@@ -601,6 +592,9 @@
 .end method
 
 .method public abstract a(Lkik/android/widget/preferences/KikModalPreference;)V
+.end method
+
+.method public abstract a(Lkik/android/widget/preferences/KikNotificationHelpNotice;)V
 .end method
 
 .method public abstract a(Lkik/android/widget/preferences/KikPreference;)V
@@ -652,7 +646,4 @@
 .end method
 
 .method public abstract a(Lkik/android/widget/preferences/WebHistoryPreference;)V
-.end method
-
-.method public abstract a(Lkik/android/widget/vm/a;)V
 .end method

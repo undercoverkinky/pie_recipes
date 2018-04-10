@@ -17,49 +17,49 @@
 # instance fields
 .field _backButton:Landroid/view/View;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100119
+        value = 0x7f100120
     .end annotation
 .end field
 
 .field _backButtonImage:Landroid/widget/ImageView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10011a
+        value = 0x7f100121
     .end annotation
 .end field
 
 .field _cameraIcon:Landroid/widget/ImageView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100312
+        value = 0x7f1002fe
     .end annotation
 .end field
 
 .field _codeIcon:Landroid/widget/ImageView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100313
+        value = 0x7f1002ff
     .end annotation
 .end field
 
 .field _scanToggle:Landroid/widget/SeekBar;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1003da
+        value = 0x7f1003c5
     .end annotation
 .end field
 
 .field _toggleHolder:Landroid/widget/LinearLayout;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100311
+        value = 0x7f1002fd
     .end annotation
 .end field
 
 .field _topBar:Landroid/view/View;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100136
+        value = 0x7f10013d
     .end annotation
 .end field
 
 .field _viewPager:Lkik/android/widget/VelocityControlledViewPager;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100310
+        value = 0x7f1002fc
     .end annotation
 .end field
 
@@ -558,7 +558,7 @@
     invoke-virtual {v3, v0}, Lkik/android/chat/fragment/ScanCodeTabFragment$a;->a(Landroid/os/Bundle;)V
 
     .line 251
-    const v0, 0x7f0400ed
+    const v0, 0x7f0400e5
 
     invoke-virtual {p1, v0, p2, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 

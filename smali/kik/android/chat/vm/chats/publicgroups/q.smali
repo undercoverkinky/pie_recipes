@@ -180,7 +180,7 @@
 
     iget-object v6, p0, Lkik/android/chat/vm/chats/publicgroups/q;->b:Landroid/content/res/Resources;
 
-    const v7, 0x7f0e00de
+    const v7, 0x7f0e00da
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -195,7 +195,7 @@
 
     iget-object v5, p0, Lkik/android/chat/vm/chats/publicgroups/q;->b:Landroid/content/res/Resources;
 
-    const v6, 0x7f0e0066
+    const v6, 0x7f0e0063
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getColor(I)I
 

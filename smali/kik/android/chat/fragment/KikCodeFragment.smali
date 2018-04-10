@@ -16,79 +16,79 @@
 # instance fields
 .field _codeContainer:Landroid/view/ViewGroup;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100201
+        value = 0x7f1001ed
     .end annotation
 .end field
 
 .field _codeInfo:Landroid/view/ViewGroup;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100206
+        value = 0x7f1001f2
     .end annotation
 .end field
 
 .field _drawArea:Lkik/android/widget/KikFinderCodeImageView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100203
+        value = 0x7f1001ef
     .end annotation
 .end field
 
 .field _errorHolder:Landroid/widget/LinearLayout;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100209
+        value = 0x7f1001f5
     .end annotation
 .end field
 
 .field _fakeCode:Lkik/android/widget/KikCodeBackgroundImageView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100202
+        value = 0x7f1001ee
     .end annotation
 .end field
 
 .field _nameText:Landroid/widget/TextView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100184
+        value = 0x7f100170
     .end annotation
 .end field
 
 .field _profilePic:Lcom/kik/cache/ContactImageView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1001fd
+        value = 0x7f1001e9
     .end annotation
 .end field
 
 .field _retryImage:Landroid/widget/ImageView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100205
+        value = 0x7f1001f1
     .end annotation
 .end field
 
 .field _scanText:Landroid/widget/TextView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100208
+        value = 0x7f1001f4
     .end annotation
 .end field
 
 .field _spinner:Landroid/widget/ProgressBar;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100204
+        value = 0x7f1001f0
     .end annotation
 .end field
 
 .field _tellAFriendImage:Landroid/widget/ImageView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100200
+        value = 0x7f1001ec
     .end annotation
 .end field
 
 .field _usernameText:Landroid/widget/TextView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100185
+        value = 0x7f100171
     .end annotation
 .end field
 
 .field _wipeContainer:Landroid/view/View;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10020a
+        value = 0x7f1001f6
     .end annotation
 .end field
 
@@ -1501,7 +1501,7 @@
     const/4 v3, 0x0
 
     .line 176
-    const v0, 0x7f04008b
+    const v0, 0x7f040083
 
     invoke-virtual {p1, v0, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 

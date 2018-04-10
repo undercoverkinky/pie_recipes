@@ -179,7 +179,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 80
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 

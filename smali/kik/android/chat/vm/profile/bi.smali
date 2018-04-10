@@ -295,7 +295,7 @@
     .line 3408
     iget-object v0, p0, Lkik/android/chat/vm/profile/bi;->a:Landroid/content/res/Resources;
 
-    const v1, 0x7f0a00b8
+    const v1, 0x7f0a00b6
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -309,7 +309,7 @@
     .line 3410
     iget-object v0, p0, Lkik/android/chat/vm/profile/bi;->a:Landroid/content/res/Resources;
 
-    const v1, 0x7f02025d
+    const v1, 0x7f020250
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -329,7 +329,7 @@
     :cond_1
     iget-object v0, p0, Lkik/android/chat/vm/profile/bi;->a:Landroid/content/res/Resources;
 
-    const v1, 0x7f02025c
+    const v1, 0x7f02024f
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -813,11 +813,11 @@
     .line 2352
     iget-object v0, p0, Lkik/android/chat/vm/profile/bi;->i:Lcom/kik/metrics/c/d;
 
-    invoke-static {}, Lcom/kik/metrics/b/ax;->b()Lcom/kik/metrics/b/ax$a;
+    invoke-static {}, Lcom/kik/metrics/b/ay;->b()Lcom/kik/metrics/b/ay$a;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/kik/metrics/b/ax$a;->a()Lcom/kik/metrics/b/ax;
+    invoke-virtual {v1}, Lcom/kik/metrics/b/ay$a;->a()Lcom/kik/metrics/b/ay;
 
     move-result-object v1
 

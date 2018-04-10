@@ -34,7 +34,7 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 123
-    const v0, 0x7f04013d
+    const v0, 0x7f040134
 
     invoke-virtual {p0, v0}, Lkik/android/widget/preferences/KikPreference;->setLayoutResource(I)V
 
@@ -116,14 +116,14 @@
     const/4 v3, 0x0
 
     .line 65
-    const v0, 0x7f10039c
+    const v0, 0x7f100384
 
     invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     .line 66
-    const v0, 0x7f10039e
+    const v0, 0x7f100386
 
     invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -345,7 +345,7 @@
     invoke-static {p1, v0}, Lkik/android/widget/preferences/KikPreference;->a(Landroid/view/View;I)V
 
     .line 149
-    const v0, 0x7f100087
+    const v0, 0x7f10008e
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

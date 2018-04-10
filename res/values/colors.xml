@@ -15,8 +15,6 @@
     <color name="android_grey">#ff808080</color>
     <color name="appbar_background">@color/gray_1</color>
     <color name="appbar_text">@color/text_primary</color>
-    <color name="audio_timer_text_color">#ff474b5f</color>
-    <color name="audio_tooltip_shadow">#1e0d455c</color>
     <color name="background_downstate_pressed">@color/light_gray</color>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
     <color name="background_floating_material_light">@android:color/white</color>
@@ -44,7 +42,6 @@
     <color name="camera_send_selector_pressed">#ffe0e1e9</color>
     <color name="camera_white_transparent">#4dffffff</color>
     <color name="chat_background_color">#ffeeeeee</color>
-    <color name="chat_bubble_audio">#ff8241f3</color>
     <color name="chat_bubble_colour_black">#ff000000</color>
     <color name="chat_bubble_colour_charcoal">#ff373a4b</color>
     <color name="chat_info_background">#ffeeeeee</color>
@@ -183,7 +180,6 @@
     <color name="primary_text_default_material_light">#de000000</color>
     <color name="primary_text_disabled_material_dark">#4dffffff</color>
     <color name="primary_text_disabled_material_light">#39000000</color>
-    <color name="record_audio_circle_color">#ffff005f</color>
     <color name="reg_redesign_hint_color">#42000000</color>
     <color name="reg_redesign_tos_text_color">#ffb0afb7</color>
     <color name="registration_divider_color">#ff313131</color>

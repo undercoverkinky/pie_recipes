@@ -354,7 +354,7 @@
     invoke-super {p0, p1, p2, p3}, Lkik/android/chat/fragment/KikScopedDialogFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     .line 60
-    const v0, 0x7f040099
+    const v0, 0x7f040091
 
     const/4 v1, 0x0
 
@@ -402,7 +402,7 @@
     invoke-virtual {v1, v2}, Lkik/android/gallery/vm/l;->a(Lkik/core/interfaces/h;)V
 
     .line 67
-    const/16 v1, 0xe
+    const/16 v1, 0xd
 
     invoke-direct {p0}, Lkik/android/widget/GalleryWidget;->f()Lkik/android/gallery/vm/l;
 

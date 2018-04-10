@@ -158,7 +158,7 @@
     invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
 
     .line 1102
-    invoke-static {p0}, Lkik/android/widget/preferences/m;->a(Lkik/android/widget/preferences/ResetKikPreference;)Lkik/core/manager/n$b;
+    invoke-static {p0}, Lkik/android/widget/preferences/n;->a(Lkik/android/widget/preferences/ResetKikPreference;)Lkik/core/manager/n$b;
 
     move-result-object v0
 
@@ -248,7 +248,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e00e7
+    const v2, 0x7f0e00e3
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -283,7 +283,7 @@
 
     const v2, 0x7f090489
 
-    invoke-static {p0}, Lkik/android/widget/preferences/k;->a(Lkik/android/widget/preferences/ResetKikPreference;)Landroid/view/View$OnClickListener;
+    invoke-static {p0}, Lkik/android/widget/preferences/l;->a(Lkik/android/widget/preferences/ResetKikPreference;)Landroid/view/View$OnClickListener;
 
     move-result-object v3
 
@@ -294,7 +294,7 @@
 
     const v2, 0x7f09042c
 
-    invoke-static {p0}, Lkik/android/widget/preferences/l;->a(Lkik/android/widget/preferences/ResetKikPreference;)Landroid/view/View$OnClickListener;
+    invoke-static {p0}, Lkik/android/widget/preferences/m;->a(Lkik/android/widget/preferences/ResetKikPreference;)Landroid/view/View$OnClickListener;
 
     move-result-object v3
 

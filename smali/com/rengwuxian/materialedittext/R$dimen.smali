@@ -85,25 +85,25 @@
 
 .field public static final abc_text_size_title_material_toolbar:I = 0x7f0a0005
 
-.field public static final bottom_ellipsis_height:I = 0x7f0a006c
+.field public static final bottom_ellipsis_height:I = 0x7f0a006a
 
-.field public static final bottom_text_size:I = 0x7f0a006d
+.field public static final bottom_text_size:I = 0x7f0a006b
 
-.field public static final default_padding_bottom:I = 0x7f0a0081
+.field public static final default_padding_bottom:I = 0x7f0a007f
 
-.field public static final default_padding_top:I = 0x7f0a0082
+.field public static final default_padding_top:I = 0x7f0a0080
 
-.field public static final disabled_alpha_material_dark:I = 0x7f0a00a2
+.field public static final disabled_alpha_material_dark:I = 0x7f0a00a0
 
-.field public static final disabled_alpha_material_light:I = 0x7f0a00a3
+.field public static final disabled_alpha_material_light:I = 0x7f0a00a1
 
-.field public static final floating_label_text_size:I = 0x7f0a00ad
+.field public static final floating_label_text_size:I = 0x7f0a00ab
 
-.field public static final inner_components_spacing:I = 0x7f0a00c1
+.field public static final inner_components_spacing:I = 0x7f0a00bf
 
-.field public static final inner_padding_left:I = 0x7f0a00c2
+.field public static final inner_padding_left:I = 0x7f0a00c0
 
-.field public static final inner_padding_right:I = 0x7f0a00c3
+.field public static final inner_padding_right:I = 0x7f0a00c1
 
 
 # direct methods

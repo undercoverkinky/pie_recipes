@@ -549,7 +549,7 @@
     if-eqz v0, :cond_0
 
     .line 890
-    invoke-static {p0}, Lcom/kik/util/ct;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    invoke-static {p0}, Lcom/kik/util/cp;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
@@ -663,7 +663,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0e0082
+    const v4, 0x7f0e007f
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -673,7 +673,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f02020d
+    const v3, 0x7f020200
 
     .line 456
     invoke-virtual {v2, v3}, Landroid/support/v4/app/NotificationCompat$Builder;->setSmallIcon(I)Landroid/support/v4/app/NotificationCompat$Builder;
@@ -1004,7 +1004,7 @@
 
     const-string v1, "GcmTickleListenerService.GcmTickleTimeMs"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->v(Ljava/lang/String;)Ljava/lang/Long;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->u(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v0
 
@@ -1024,7 +1024,7 @@
 
     if-lez v4, :cond_0
 
-    const-wide/16 v4, 0x1388
+    const-wide/16 v4, 0x2710
 
     cmp-long v2, v2, v4
 
@@ -1060,7 +1060,7 @@
     .line 8529
     iget-object v2, p0, Lkik/android/KikNotificationHandler;->h:Lcom/kik/metrics/c/d;
 
-    invoke-static {}, Lcom/kik/metrics/b/al;->b()Lcom/kik/metrics/b/al$a;
+    invoke-static {}, Lcom/kik/metrics/b/am;->b()Lcom/kik/metrics/b/am$a;
 
     move-result-object v3
 
@@ -1077,12 +1077,12 @@
 
     invoke-direct {v4, v0}, Lcom/kik/metrics/b/o$a;-><init>(Ljava/lang/Double;)V
 
-    invoke-virtual {v3, v4}, Lcom/kik/metrics/b/al$a;->a(Lcom/kik/metrics/b/o$a;)Lcom/kik/metrics/b/al$a;
+    invoke-virtual {v3, v4}, Lcom/kik/metrics/b/am$a;->a(Lcom/kik/metrics/b/o$a;)Lcom/kik/metrics/b/am$a;
 
     move-result-object v0
 
     .line 8531
-    invoke-virtual {v0}, Lcom/kik/metrics/b/al$a;->a()Lcom/kik/metrics/b/al;
+    invoke-virtual {v0}, Lcom/kik/metrics/b/am$a;->a()Lcom/kik/metrics/b/am;
 
     move-result-object v0
 
@@ -2121,7 +2121,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0e0082
+    const v5, 0x7f0e007f
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -2190,7 +2190,7 @@
 
     const-string v2, "kik.vibrate"
 
-    invoke-interface {v0, v2}, Lkik/core/interfaces/ad;->w(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-interface {v0, v2}, Lkik/core/interfaces/ad;->v(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -2245,7 +2245,7 @@
 
     const-string v2, "kik.sound"
 
-    invoke-interface {v0, v2}, Lkik/core/interfaces/ad;->w(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-interface {v0, v2}, Lkik/core/interfaces/ad;->v(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -2616,7 +2616,7 @@
     .line 825
     :cond_b
     :goto_6
-    const v0, 0x7f02020d
+    const v0, 0x7f020200
 
     .line 826
     invoke-virtual {v6, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setSmallIcon(I)Landroid/support/v4/app/NotificationCompat$Builder;
@@ -2639,7 +2639,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e0082
+    const v2, 0x7f0e007f
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -2798,7 +2798,7 @@
 
     const-string v1, "kik.led.color"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->r(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2830,7 +2830,7 @@
 
     const-string v2, "kik.led.color"
 
-    invoke-interface {v1, v2}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v1, v2}, Lkik/core/interfaces/ad;->r(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -3262,7 +3262,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f020061
+    const v2, 0x7f02005f
 
     invoke-static {v1, v2}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -3609,7 +3609,7 @@
 
     .line 1080
     :cond_0
-    const v0, 0x7f0203b6
+    const v0, 0x7f020399
 
     .line 1081
     invoke-virtual {p1}, Lkik/core/datatypes/l;->B()Z
@@ -3627,7 +3627,7 @@
     if-eqz v1, :cond_1
 
     .line 1082
-    const v0, 0x7f0201b7
+    const v0, 0x7f0201a9
 
     .line 1084
     :cond_1
@@ -4201,7 +4201,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0201b8
+    const v2, 0x7f0201aa
 
     invoke-static {v1, v2}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
     :try_end_0
@@ -4241,7 +4241,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0201b9
+    const v2, 0x7f0201ab
 
     invoke-static {v1, v2}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
     :try_end_0
@@ -4390,7 +4390,7 @@
     const-string v1, "kik.sound"
 
     .line 1449
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->w(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->v(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -4562,7 +4562,7 @@
     const-string v6, "kik.sound"
 
     .line 1467
-    invoke-interface {v0, v6}, Lkik/core/interfaces/ad;->w(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-interface {v0, v6}, Lkik/core/interfaces/ad;->v(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -4584,7 +4584,7 @@
     const-string v6, "kik.vibrate"
 
     .line 1468
-    invoke-interface {v5, v6}, Lkik/core/interfaces/ad;->w(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-interface {v5, v6}, Lkik/core/interfaces/ad;->v(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v5
 
@@ -4911,7 +4911,7 @@
 
     move-result-object v1
 
-    const v6, 0x7f0e0082
+    const v6, 0x7f0e007f
 
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -4921,7 +4921,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f02020d
+    const v1, 0x7f020200
 
     .line 14497
     invoke-virtual {v0, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setSmallIcon(I)Landroid/support/v4/app/NotificationCompat$Builder;

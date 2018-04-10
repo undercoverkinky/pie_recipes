@@ -121,7 +121,7 @@
     invoke-interface {v1, p1}, Lkik/android/util/ah;->a(Ljava/util/List;)V
 
     .line 184
-    invoke-virtual {p0}, Lkik/android/gifs/vm/d;->aE_()V
+    invoke-virtual {p0}, Lkik/android/gifs/vm/d;->aL_()V
 
     .line 187
     :cond_0
@@ -173,7 +173,7 @@
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     .line 55
-    invoke-virtual {p0}, Lkik/android/gifs/vm/d;->aE_()V
+    invoke-virtual {p0}, Lkik/android/gifs/vm/d;->aL_()V
 
     .line 56
     invoke-virtual {p0}, Lkik/android/gifs/vm/d;->l()V

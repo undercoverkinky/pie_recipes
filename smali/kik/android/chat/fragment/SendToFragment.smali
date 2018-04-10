@@ -34,61 +34,61 @@
 
 .field _backButton:Landroid/view/View;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100119
+        value = 0x7f100120
     .end annotation
 .end field
 
 .field _chatList:Landroid/widget/ListView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100109
+        value = 0x7f100110
     .end annotation
 .end field
 
 .field _emptyViewContainer:Landroid/widget/FrameLayout;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100108
+        value = 0x7f10010f
     .end annotation
 .end field
 
 .field _emptyViewTextView:Landroid/widget/TextView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100224
+        value = 0x7f100210
     .end annotation
 .end field
 
 .field _listViewAnimHelperView:Landroid/view/View;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100221
+        value = 0x7f10020d
     .end annotation
 .end field
 
 .field _navigationBar:Landroid/view/View;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f1000fd
+        value = 0x7f100104
     .end annotation
 .end field
 
 .field _searchBar:Lkik/android/chat/view/TransitionableSearchBarViewImpl;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100100
+        value = 0x7f100107
     .end annotation
 .end field
 
 .field _searchBarBackground:Landroid/widget/ImageView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100223
+        value = 0x7f10020f
     .end annotation
 .end field
 
 .field _searchResults:Landroid/support/v7/widget/RecyclerView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100198
+        value = 0x7f100184
     .end annotation
 .end field
 
 .field _titleText:Landroid/widget/TextView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10011b
+        value = 0x7f100122
     .end annotation
 .end field
 
@@ -172,7 +172,7 @@
 
 .field private final t:Lkik/android/chat/fragment/SendToFragment$a;
 
-.field private u:Lkik/android/chat/fragment/gh;
+.field private u:Lkik/android/chat/fragment/gg;
 
 .field private v:Lkik/android/chat/vm/chats/search/ChatsSearchResultsViewModel;
 
@@ -246,14 +246,14 @@
     iput-boolean v3, p0, Lkik/android/chat/fragment/SendToFragment;->z:Z
 
     .line 137
-    invoke-static {p0}, Lkik/android/chat/fragment/fo;->a(Lkik/android/chat/fragment/SendToFragment;)Landroid/view/View$OnClickListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/fn;->a(Lkik/android/chat/fragment/SendToFragment;)Landroid/view/View$OnClickListener;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/chat/fragment/SendToFragment;->B:Landroid/view/View$OnClickListener;
 
     .line 138
-    invoke-static {p0}, Lkik/android/chat/fragment/fp;->a(Lkik/android/chat/fragment/SendToFragment;)Landroid/view/View$OnClickListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/fo;->a(Lkik/android/chat/fragment/SendToFragment;)Landroid/view/View$OnClickListener;
 
     move-result-object v0
 
@@ -392,9 +392,9 @@
     iput-boolean p1, p0, Lkik/android/chat/fragment/SendToFragment;->x:Z
 
     .line 335
-    iget-object v0, p0, Lkik/android/chat/fragment/SendToFragment;->u:Lkik/android/chat/fragment/gh;
+    iget-object v0, p0, Lkik/android/chat/fragment/SendToFragment;->u:Lkik/android/chat/fragment/gg;
 
-    invoke-virtual {v0, p1}, Lkik/android/chat/fragment/gh;->a(Z)Landroid/animation/AnimatorSet;
+    invoke-virtual {v0, p1}, Lkik/android/chat/fragment/gg;->a(Z)Landroid/animation/AnimatorSet;
 
     move-result-object v1
 
@@ -526,7 +526,7 @@
 
     iget-object v2, p0, Lkik/android/chat/fragment/SendToFragment;->_chatList:Landroid/widget/ListView;
 
-    invoke-static {v2}, Lcom/kik/util/cv;->b(Landroid/widget/ListView;)I
+    invoke-static {v2}, Lcom/kik/util/cr;->b(Landroid/widget/ListView;)I
 
     move-result v2
 
@@ -1170,16 +1170,16 @@
     const/4 v7, 0x0
 
     .line 163
-    const v0, 0x7f040093
+    const v0, 0x7f04008b
 
     invoke-static {p1, v0, p2, v7}, Landroid/databinding/DataBindingUtil;->inflate(Landroid/view/LayoutInflater;ILandroid/view/ViewGroup;Z)Landroid/databinding/ViewDataBinding;
 
     move-result-object v0
 
-    check-cast v0, Lkik/android/e/ae;
+    check-cast v0, Lkik/android/e/ad;
 
     .line 164
-    invoke-virtual {v0}, Lkik/android/e/ae;->getRoot()Landroid/view/View;
+    invoke-virtual {v0}, Lkik/android/e/ad;->getRoot()Landroid/view/View;
 
     move-result-object v1
 
@@ -1256,7 +1256,7 @@
     .line 173
     iget-object v1, p0, Lkik/android/chat/fragment/SendToFragment;->v:Lkik/android/chat/vm/chats/search/ChatsSearchResultsViewModel;
 
-    invoke-virtual {v0, v1}, Lkik/android/e/ae;->a(Lkik/android/chat/vm/chats/search/f;)V
+    invoke-virtual {v0, v1}, Lkik/android/e/ad;->a(Lkik/android/chat/vm/chats/search/f;)V
 
     .line 175
     invoke-static {p0, v8}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)Lbutterknife/Unbinder;
@@ -1310,7 +1310,7 @@
     .line 184
     iget-object v0, p0, Lkik/android/chat/fragment/SendToFragment;->_chatList:Landroid/widget/ListView;
 
-    const v1, 0x7f100108
+    const v1, 0x7f10010f
 
     invoke-virtual {v8, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -1328,7 +1328,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 202
-    new-instance v0, Lkik/android/chat/fragment/gh;
+    new-instance v0, Lkik/android/chat/fragment/gg;
 
     iget-object v1, p0, Lkik/android/chat/fragment/SendToFragment;->_searchBarBackground:Landroid/widget/ImageView;
 
@@ -1361,9 +1361,9 @@
 
     iget-object v7, p0, Lkik/android/chat/fragment/SendToFragment;->_listViewAnimHelperView:Landroid/view/View;
 
-    invoke-direct/range {v0 .. v7}, Lkik/android/chat/fragment/gh;-><init>(Landroid/widget/ImageView;Landroid/view/View;Lkik/android/chat/view/TransitionableSearchBarViewImpl;Landroid/view/View;Ljava/util/List;Landroid/widget/ListView;Landroid/view/View;)V
+    invoke-direct/range {v0 .. v7}, Lkik/android/chat/fragment/gg;-><init>(Landroid/widget/ImageView;Landroid/view/View;Lkik/android/chat/view/TransitionableSearchBarViewImpl;Landroid/view/View;Ljava/util/List;Landroid/widget/ListView;Landroid/view/View;)V
 
-    iput-object v0, p0, Lkik/android/chat/fragment/SendToFragment;->u:Lkik/android/chat/fragment/gh;
+    iput-object v0, p0, Lkik/android/chat/fragment/SendToFragment;->u:Lkik/android/chat/fragment/gg;
 
     .line 205
     new-instance v0, Lkik/android/chat/vm/l;

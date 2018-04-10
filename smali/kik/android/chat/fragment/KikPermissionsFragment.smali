@@ -85,7 +85,7 @@
     .locals 12
 
     .prologue
-    const v11, 0x7f100212
+    const v11, 0x7f1001fe
 
     const v10, 0x7f090499
 
@@ -96,7 +96,7 @@
     const/4 v8, 0x0
 
     .line 46
-    const v0, 0x7f04008d
+    const v0, 0x7f040085
 
     invoke-virtual {p1, v0, p2, v6}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -112,7 +112,7 @@
     invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikPermissionsFragment$a;->a(Landroid/os/Bundle;)V
 
     .line 50
-    const v0, 0x7f1001fd
+    const v0, 0x7f1001e9
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -135,7 +135,7 @@
     invoke-virtual {v0, v3, v1, v4}, Lcom/kik/cache/ContactImageView;->a(Lkik/core/datatypes/aa;Lcom/kik/cache/KikVolleyImageLoader;Lcom/kik/android/Mixpanel;)V
 
     .line 55
-    const v0, 0x7f100213
+    const v0, 0x7f1001ff
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -172,7 +172,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 56
-    const v0, 0x7f100214
+    const v0, 0x7f100200
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -185,7 +185,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 58
-    const v0, 0x7f100210
+    const v0, 0x7f1001fc
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -225,7 +225,7 @@
     move-result-object v1
 
     .line 63
-    const v0, 0x7f100211
+    const v0, 0x7f1001fd
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -257,7 +257,7 @@
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 65
-    const v0, 0x7f10020f
+    const v0, 0x7f1001fb
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -280,7 +280,7 @@
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 67
-    const v0, 0x7f100215
+    const v0, 0x7f100201
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -460,7 +460,7 @@
 
     .line 90
     :cond_2
-    const v0, 0x7f100120
+    const v0, 0x7f100127
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -473,7 +473,7 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 103
-    const v0, 0x7f100119
+    const v0, 0x7f100120
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -491,7 +491,7 @@
 
     .line 115
     :cond_3
-    const v0, 0x7f10011b
+    const v0, 0x7f100122
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

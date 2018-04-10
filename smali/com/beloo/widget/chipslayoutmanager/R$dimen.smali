@@ -163,59 +163,59 @@
 
 .field public static final abc_text_size_title_material_toolbar:I = 0x7f0a0005
 
-.field public static final disabled_alpha_material_dark:I = 0x7f0a00a2
+.field public static final disabled_alpha_material_dark:I = 0x7f0a00a0
 
-.field public static final disabled_alpha_material_light:I = 0x7f0a00a3
+.field public static final disabled_alpha_material_light:I = 0x7f0a00a1
 
-.field public static final highlight_alpha_material_colored:I = 0x7f0a00b9
+.field public static final highlight_alpha_material_colored:I = 0x7f0a00b7
 
-.field public static final highlight_alpha_material_dark:I = 0x7f0a00ba
+.field public static final highlight_alpha_material_dark:I = 0x7f0a00b8
 
-.field public static final highlight_alpha_material_light:I = 0x7f0a00bb
+.field public static final highlight_alpha_material_light:I = 0x7f0a00b9
 
-.field public static final hint_alpha_material_dark:I = 0x7f0a00bc
+.field public static final hint_alpha_material_dark:I = 0x7f0a00ba
 
-.field public static final hint_alpha_material_light:I = 0x7f0a00bd
+.field public static final hint_alpha_material_light:I = 0x7f0a00bb
 
-.field public static final hint_pressed_alpha_material_dark:I = 0x7f0a00be
+.field public static final hint_pressed_alpha_material_dark:I = 0x7f0a00bc
 
-.field public static final hint_pressed_alpha_material_light:I = 0x7f0a00bf
+.field public static final hint_pressed_alpha_material_light:I = 0x7f0a00bd
 
-.field public static final item_touch_helper_max_drag_scroll_per_frame:I = 0x7f0a00d7
+.field public static final item_touch_helper_max_drag_scroll_per_frame:I = 0x7f0a00d5
 
-.field public static final item_touch_helper_swipe_escape_max_velocity:I = 0x7f0a00d8
+.field public static final item_touch_helper_swipe_escape_max_velocity:I = 0x7f0a00d6
 
-.field public static final item_touch_helper_swipe_escape_velocity:I = 0x7f0a00d9
+.field public static final item_touch_helper_swipe_escape_velocity:I = 0x7f0a00d7
 
-.field public static final notification_action_icon_size:I = 0x7f0a00f7
+.field public static final notification_action_icon_size:I = 0x7f0a00f4
 
-.field public static final notification_action_text_size:I = 0x7f0a00f8
+.field public static final notification_action_text_size:I = 0x7f0a00f5
 
-.field public static final notification_big_circle_margin:I = 0x7f0a00f9
+.field public static final notification_big_circle_margin:I = 0x7f0a00f6
 
 .field public static final notification_content_margin_start:I = 0x7f0a0025
 
-.field public static final notification_large_icon_height:I = 0x7f0a00fa
+.field public static final notification_large_icon_height:I = 0x7f0a00f7
 
-.field public static final notification_large_icon_width:I = 0x7f0a00fb
+.field public static final notification_large_icon_width:I = 0x7f0a00f8
 
 .field public static final notification_main_column_padding_top:I = 0x7f0a0026
 
 .field public static final notification_media_narrow_margin:I = 0x7f0a0027
 
-.field public static final notification_right_icon_size:I = 0x7f0a00fc
+.field public static final notification_right_icon_size:I = 0x7f0a00f9
 
 .field public static final notification_right_side_padding_top:I = 0x7f0a0023
 
-.field public static final notification_small_icon_background_padding:I = 0x7f0a00fd
+.field public static final notification_small_icon_background_padding:I = 0x7f0a00fa
 
-.field public static final notification_small_icon_size_as_large:I = 0x7f0a00fe
+.field public static final notification_small_icon_size_as_large:I = 0x7f0a00fb
 
-.field public static final notification_subtext_size:I = 0x7f0a00ff
+.field public static final notification_subtext_size:I = 0x7f0a00fc
 
-.field public static final notification_top_pad:I = 0x7f0a0100
+.field public static final notification_top_pad:I = 0x7f0a00fd
 
-.field public static final notification_top_pad_large_text:I = 0x7f0a0101
+.field public static final notification_top_pad_large_text:I = 0x7f0a00fe
 
 
 # direct methods

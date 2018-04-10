@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 1433
+    .line 1431
     iput-object p1, p0, Lkik/android/chat/KikApplication$21;->a:Lkik/android/chat/KikApplication;
 
     invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
@@ -46,7 +46,7 @@
     .prologue
     const/high16 v6, 0x447a0000    # 1000.0f
 
-    .line 1438
+    .line 1436
     iget-object v0, p0, Lkik/android/chat/KikApplication$21;->a:Lkik/android/chat/KikApplication;
 
     iget-object v0, v0, Lkik/android/chat/KikApplication;->a:Lcom/kik/android/Mixpanel;
@@ -55,7 +55,7 @@
 
     invoke-virtual {v0, v1}, Lcom/kik/android/Mixpanel;->a(Ljava/lang/String;)Lcom/kik/android/Mixpanel;
 
-    .line 1440
+    .line 1438
     iget-object v0, p0, Lkik/android/chat/KikApplication$21;->a:Lkik/android/chat/KikApplication;
 
     iget-object v0, v0, Lkik/android/chat/KikApplication;->a:Lcom/kik/android/Mixpanel;
@@ -68,7 +68,7 @@
 
     move-result-wide v0
 
-    .line 1442
+    .line 1440
     iget-object v2, p0, Lkik/android/chat/KikApplication$21;->a:Lkik/android/chat/KikApplication;
 
     iget-object v2, v2, Lkik/android/chat/KikApplication;->a:Lcom/kik/android/Mixpanel;
@@ -83,7 +83,7 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/kik/android/Mixpanel;->a(Ljava/lang/String;FF)Lcom/kik/android/Mixpanel;
 
-    .line 1443
+    .line 1441
     iget-object v2, p0, Lkik/android/chat/KikApplication$21;->a:Lkik/android/chat/KikApplication;
 
     iget-object v2, v2, Lkik/android/chat/KikApplication;->a:Lcom/kik/android/Mixpanel;
@@ -98,7 +98,7 @@
 
     invoke-virtual {v2, v3, v0, v1}, Lcom/kik/android/Mixpanel;->a(Ljava/lang/String;FF)Lcom/kik/android/Mixpanel;
 
-    .line 1444
+    .line 1442
     return-void
 .end method
 
@@ -108,7 +108,7 @@
     .locals 2
 
     .prologue
-    .line 1437
+    .line 1435
     iget-object v0, p0, Lkik/android/chat/KikApplication$21;->a:Lkik/android/chat/KikApplication;
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->g(Lkik/android/chat/KikApplication;)Landroid/os/Handler;
@@ -121,6 +121,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1445
+    .line 1443
     return-void
 .end method

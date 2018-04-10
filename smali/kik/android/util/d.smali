@@ -1562,7 +1562,7 @@
     :try_start_0
     iget-object v0, p0, Lkik/android/util/d;->e:Lkik/core/interfaces/ad;
 
-    invoke-interface {v0, p2}, Lkik/core/interfaces/ad;->B(Ljava/lang/String;)Z
+    invoke-interface {v0, p2}, Lkik/core/interfaces/ad;->A(Ljava/lang/String;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

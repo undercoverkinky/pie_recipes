@@ -17,13 +17,13 @@
 # instance fields
 .field protected _emojiStatusCircleView:Lkik/android/widget/EmojiStatusCircleView;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f100229
+        value = 0x7f100215
     .end annotation
 .end field
 
 .field protected _toolTipParentView:Lcom/nhaarman/supertooltips/ToolTipRelativeLayout;
     .annotation build Lbutterknife/BindView;
-        value = 0x7f10022b
+        value = 0x7f100217
     .end annotation
 .end field
 
@@ -122,7 +122,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0400d7
+    const v2, 0x7f0400cf
 
     invoke-virtual {v1, v2}, Lkik/android/chat/fragment/settings/PreferenceFragment$a;->b(I)Lkik/android/chat/fragment/settings/PreferenceFragment$a;
 
@@ -154,7 +154,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f04017b
+    const v1, 0x7f040173
 
     const/4 v2, 0x0
 
@@ -209,7 +209,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0e0069
+    const v2, 0x7f0e0066
 
     .line 494
     invoke-static {v2}, Lkik/android/chat/KikApplication;->d(I)I
@@ -270,7 +270,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e00ca
+    const v1, 0x7f0e00c6
 
     .line 501
     invoke-static {v1}, Lkik/android/chat/KikApplication;->d(I)I
@@ -306,7 +306,7 @@
     .line 505
     iget-object v0, p0, Lkik/android/chat/fragment/UserProfileFragment;->m:Lcom/nhaarman/supertooltips/a;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/go;->a(Lkik/android/chat/fragment/UserProfileFragment;)Lcom/nhaarman/supertooltips/a$c;
+    invoke-static {p0}, Lkik/android/chat/fragment/gn;->a(Lkik/android/chat/fragment/UserProfileFragment;)Lcom/nhaarman/supertooltips/a$c;
 
     move-result-object v1
 
@@ -323,7 +323,7 @@
     .line 507
     iget-object v0, p0, Lkik/android/chat/fragment/UserProfileFragment;->_emojiStatusCircleView:Lkik/android/widget/EmojiStatusCircleView;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/gp;->a(Lkik/android/chat/fragment/UserProfileFragment;)Ljava/lang/Runnable;
+    invoke-static {p0}, Lkik/android/chat/fragment/go;->a(Lkik/android/chat/fragment/UserProfileFragment;)Ljava/lang/Runnable;
 
     move-result-object v1
 
@@ -414,7 +414,7 @@
 
     .line 2303
     :goto_0
-    invoke-static {p0, p1, v0, v1}, Lkik/android/chat/fragment/gk;->a(Lkik/android/chat/fragment/UserProfileFragment;Lkik/android/chat/vm/bq;[Ljava/lang/CharSequence;Lcom/kik/events/k;)Landroid/content/DialogInterface$OnClickListener;
+    invoke-static {p0, p1, v0, v1}, Lkik/android/chat/fragment/gj;->a(Lkik/android/chat/fragment/UserProfileFragment;Lkik/android/chat/vm/bq;[Ljava/lang/CharSequence;Lcom/kik/events/k;)Landroid/content/DialogInterface$OnClickListener;
 
     move-result-object v1
 
@@ -765,7 +765,7 @@
 
     move-result-object v1
 
-    invoke-static {v0}, Lkik/android/chat/fragment/gl;->a(Lkik/android/util/g$a;)Landroid/content/DialogInterface$OnCancelListener;
+    invoke-static {v0}, Lkik/android/chat/fragment/gk;->a(Lkik/android/util/g$a;)Landroid/content/DialogInterface$OnCancelListener;
 
     move-result-object v0
 
@@ -1005,7 +1005,7 @@
 
     const v1, 0x7f09044f
 
-    invoke-static {p0}, Lkik/android/chat/fragment/gm;->a(Lkik/android/chat/fragment/UserProfileFragment;)Landroid/content/DialogInterface$OnClickListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/gl;->a(Lkik/android/chat/fragment/UserProfileFragment;)Landroid/content/DialogInterface$OnClickListener;
 
     move-result-object v2
 
@@ -1016,7 +1016,7 @@
 
     const v1, 0x7f0903d7
 
-    invoke-static {}, Lkik/android/chat/fragment/gn;->a()Landroid/content/DialogInterface$OnClickListener;
+    invoke-static {}, Lkik/android/chat/fragment/gm;->a()Landroid/content/DialogInterface$OnClickListener;
 
     move-result-object v2
 
@@ -1041,7 +1041,7 @@
     .locals 1
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f100309
+            0x7f1002f5
         }
     .end annotation
 
@@ -1059,7 +1059,7 @@
     .locals 4
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f10030d
+            0x7f1002f9
         }
     .end annotation
 
@@ -1194,7 +1194,7 @@
 
     const-string v1, "kik.web.home.preloaded"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->D(Ljava/lang/String;)Z
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->C(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1234,7 +1234,7 @@
 
     .prologue
     .line 127
-    const v0, 0x7f040095
+    const v0, 0x7f04008d
 
     const/4 v1, 0x0
 
@@ -1285,7 +1285,7 @@
     move-result-object v2
 
     .line 136
-    invoke-static {p0}, Lkik/android/chat/fragment/gj;->a(Lkik/android/chat/fragment/UserProfileFragment;)Lkik/core/util/a;
+    invoke-static {p0}, Lkik/android/chat/fragment/gi;->a(Lkik/android/chat/fragment/UserProfileFragment;)Lkik/core/util/a;
 
     move-result-object v3
 
@@ -1297,7 +1297,7 @@
     iput-object v4, p0, Lkik/android/chat/fragment/UserProfileFragment;->k:Lkik/android/chat/vm/chats/profile/au;
 
     .line 140
-    const/16 v3, 0x17
+    const/16 v3, 0x16
 
     iget-object v4, p0, Lkik/android/chat/fragment/UserProfileFragment;->k:Lkik/android/chat/vm/chats/profile/au;
 
@@ -1308,7 +1308,7 @@
     invoke-virtual {v0, v3, v4}, Landroid/databinding/ViewDataBinding;->setVariable(ILjava/lang/Object;)Z
 
     .line 141
-    const/16 v3, 0xc
+    const/16 v3, 0xb
 
     new-instance v4, Lkik/android/chat/vm/chats/profile/an;
 
@@ -1334,7 +1334,7 @@
     if-eqz v3, :cond_3
 
     .line 143
-    const/4 v3, 0x2
+    const/4 v3, 0x1
 
     new-instance v4, Lkik/android/chat/vm/chats/profile/ai;
 
@@ -1377,7 +1377,7 @@
     if-eqz v3, :cond_2
 
     .line 146
-    const/4 v3, 0x5
+    const/4 v3, 0x4
 
     new-instance v4, Lkik/android/chat/vm/profile/aq;
 
@@ -1412,7 +1412,7 @@
     .locals 1
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f10030f
+            0x7f1002fb
         }
     .end annotation
 
@@ -1430,7 +1430,7 @@
     .locals 2
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f10030a
+            0x7f1002f6
         }
     .end annotation
 
@@ -1472,7 +1472,7 @@
     .locals 1
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f10030c
+            0x7f1002f8
         }
     .end annotation
 
@@ -1490,7 +1490,7 @@
     .locals 1
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f10030e
+            0x7f1002fa
         }
     .end annotation
 
@@ -1508,7 +1508,7 @@
     .locals 4
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f10030b
+            0x7f1002f7
         }
     .end annotation
 
@@ -1622,11 +1622,11 @@
 
     .prologue
     .line 120
-    invoke-static {}, Lcom/kik/metrics/b/bi;->b()Lcom/kik/metrics/b/bi$a;
+    invoke-static {}, Lcom/kik/metrics/b/bj;->b()Lcom/kik/metrics/b/bj$a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/kik/metrics/b/bi$a;->a()Lcom/kik/metrics/b/bi;
+    invoke-virtual {v0}, Lcom/kik/metrics/b/bj$a;->a()Lcom/kik/metrics/b/bj;
 
     move-result-object v0
 

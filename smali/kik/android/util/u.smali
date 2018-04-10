@@ -131,21 +131,21 @@
     iput v0, p0, Lkik/android/util/u;->g:I
 
     .line 62
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/util/u;->i:Lrx/subjects/PublishSubject;
 
     .line 63
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/util/u;->j:Lrx/subjects/PublishSubject;
 
     .line 64
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
@@ -200,7 +200,7 @@
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
     .line 87
-    invoke-static {}, Lcom/kik/util/ct;->a()Lcom/kik/cache/SimpleLruBitmapCache;
+    invoke-static {}, Lcom/kik/util/cp;->a()Lcom/kik/cache/SimpleLruBitmapCache;
 
     move-result-object v0
 
@@ -209,7 +209,7 @@
     .line 89
     iget-object v0, p0, Lkik/android/util/u;->n:Landroid/content/res/Resources;
 
-    const v1, 0x7f0a00b1
+    const v1, 0x7f0a00af
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -614,7 +614,7 @@
     .line 1404
     iget-object v0, p0, Lkik/android/util/u;->o:Lcom/kik/storage/s;
 
-    invoke-interface {v0, v3}, Lcom/kik/storage/s;->j(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-interface {v0, v3}, Lcom/kik/storage/s;->i(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -1039,7 +1039,7 @@
 
     move-result-object v6
 
-    invoke-interface {v1, v6}, Lcom/kik/storage/s;->e(Ljava/lang/String;)Z
+    invoke-interface {v1, v6}, Lcom/kik/storage/s;->d(Ljava/lang/String;)Z
 
     move-result v1
 

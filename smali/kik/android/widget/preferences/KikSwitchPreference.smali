@@ -44,7 +44,7 @@
     iput-boolean v1, p0, Lkik/android/widget/preferences/KikSwitchPreference;->e:Z
 
     .line 62
-    const v0, 0x7f040140
+    const v0, 0x7f040138
 
     invoke-virtual {p0, v0}, Lkik/android/widget/preferences/KikSwitchPreference;->setLayoutResource(I)V
 
@@ -241,7 +241,7 @@
     .line 83
     iget-object v0, p0, Lkik/android/widget/preferences/KikSwitchPreference;->g:Landroid/view/View;
 
-    const v1, 0x7f1002f8
+    const v1, 0x7f1002e4
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -338,7 +338,7 @@
 
     .prologue
     .line 108
-    invoke-static {p0, p1}, Lkik/android/widget/preferences/f;->a(Lkik/android/widget/preferences/KikSwitchPreference;Landroid/preference/Preference$OnPreferenceChangeListener;)Landroid/preference/Preference$OnPreferenceChangeListener;
+    invoke-static {p0, p1}, Lkik/android/widget/preferences/g;->a(Lkik/android/widget/preferences/KikSwitchPreference;Landroid/preference/Preference$OnPreferenceChangeListener;)Landroid/preference/Preference$OnPreferenceChangeListener;
 
     move-result-object v0
 

@@ -100,8 +100,6 @@
     <dimen name="abm_matches_bar_height">48.0dip</dimen>
     <dimen name="abm_opt_in_hint_text_size_opted_in">14.0sp</dimen>
     <dimen name="attribution_text_size">12.0sp</dimen>
-    <dimen name="audio_effect_button_size">32.0dip</dimen>
-    <dimen name="audio_message_tray_height">84.0dip</dimen>
     <dimen name="bg_tooltip_padding_bottom">10.0dip</dimen>
     <dimen name="bg_tooltip_padding_left">5.0dip</dimen>
     <dimen name="bg_tooltip_padding_right">5.0dip</dimen>
@@ -242,7 +240,6 @@
     <dimen name="message_timestamp_height_if_not_padded_above">32.0sp</dimen>
     <dimen name="message_timestamp_height_if_padded_above">22.0sp</dimen>
     <dimen name="message_timestamp_size">13.0sp</dimen>
-    <dimen name="mic_record_bg">68.0dip</dimen>
     <dimen name="multi_page_reg_margin_top">36.0dip</dimen>
     <dimen name="native_topbar_height">56.0dip</dimen>
     <item type="dimen" name="navbar_underline_height">@dimen/half_dp</item>
@@ -259,8 +256,6 @@
     <dimen name="notification_top_pad_large_text">5.0dip</dimen>
     <dimen name="preview_sticker_bubble_max_size">140.0dip</dimen>
     <dimen name="private_start_group_header_minimum_height">74.0dip</dimen>
-    <dimen name="recording_tray_height">41.0dip</dimen>
-    <dimen name="recording_tray_margin_bottom">43.0dip</dimen>
     <dimen name="reply_button_text_size">14.0sp</dimen>
     <dimen name="ring_max_size">130.0dip</dimen>
     <dimen name="ring_mute_icon_size">35.0dip</dimen>

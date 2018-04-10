@@ -54,7 +54,7 @@
     iput v0, p0, Lkik/android/chat/vm/widget/bq;->b:I
 
     .line 22
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
@@ -72,7 +72,7 @@
 
     .prologue
     .line 38
-    invoke-virtual {p0}, Lkik/android/chat/vm/widget/bq;->aE_()V
+    invoke-virtual {p0}, Lkik/android/chat/vm/widget/bq;->aL_()V
 
     return-void
 .end method
@@ -82,7 +82,7 @@
 
     .prologue
     .line 37
-    invoke-virtual {p0}, Lkik/android/chat/vm/widget/bq;->aE_()V
+    invoke-virtual {p0}, Lkik/android/chat/vm/widget/bq;->aL_()V
 
     return-void
 .end method

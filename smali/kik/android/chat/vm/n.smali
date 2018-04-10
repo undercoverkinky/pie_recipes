@@ -67,7 +67,7 @@
     invoke-direct {p0}, Lkik/android/chat/vm/c;-><init>()V
 
     .line 20
-    invoke-static {}, Lrx/subjects/PublishSubject;->l()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
