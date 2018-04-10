@@ -6074,4 +6074,6 @@
     <public type="id" name="visible" id="0x7f100429" />
     <public type="id" name="masked" id="0x7f10042a" />
     <public type="id" name="floating_search_background_shadow" id="0x7f10042b" />
+	<public type="id" name="mod_tab" id="0x7f10042c" />
+	<public type="id" name="dev_tab" id="0x7f10042d" />
 </resources>
