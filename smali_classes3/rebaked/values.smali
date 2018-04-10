@@ -106,9 +106,9 @@
     .line 32
     sget-object v0, Lkik/android/chat/KikApplication;->w:Lkik/android/chat/KikApplication;
 
-    iget-object v1, v0, Lkik/android/chat/KikApplication;->aK:Lkik/android/util/bq;
+    iget-object v1, v0, Lkik/android/chat/KikApplication;->aK:Lkik/android/util/bo;
 
-    invoke-virtual {v1}, Lkik/android/util/bq;->b()Landroid/content/SharedPreferences;
+    invoke-virtual {v1}, Lkik/android/util/bo;->b()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
