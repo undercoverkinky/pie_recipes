@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="pluto_is_white">#ffffffff</color>
+	<color name="kinky_is_black">#ff000000</color>
+	<color name="status_bar">#ff002a55</color>
+	<color name="topbars">#ff0054aa</color>
+	<color name="navigation_bar">#ff000000</color>
+	<color name="period_blood">#ffff0000</color>
+	<color name="main_bg">#ff1d1d1d</color>
+	<color name="sub_bg">#ff474747</color>
+	<color name="fake_white">#ffeeeeee</color>
+	<color name="blue_waffle">#ff0054aa</color>
+	<color name="trans">@android:color/transparent</color>
+</resources>

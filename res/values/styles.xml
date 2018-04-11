@@ -1105,7 +1105,7 @@
         <item name="tabPaddingStart">12.0dip</item>
         <item name="tabPaddingEnd">12.0dip</item>
     </style>
-    <style name="BaseAppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+    <style name="BaseAppTheme" parent="@style/Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@color/white</item>
         <item name="android:windowNoTitle">false</item>
         <item name="android:windowContentOverlay">@null</item>
@@ -1422,7 +1422,7 @@
     <style name="KikAlertDialog.List" parent="@style/KikAlertDialog">
         <item name="android:textColorSecondary">@color/gray_2</item>
     </style>
-    <style name="KikAlertDialogBase" parent="@style/Theme.AppCompat.Light.Dialog.Alert">
+    <style name="KikAlertDialogBase" parent="@style/Theme.AppCompat.Dialog.Alert">
         <item name="android:textColorPrimary">@color/gray_5</item>
         <item name="android:windowTitleStyle">@style/KikAlertDialogTitle</item>
         <item name="android:checkboxStyle">@style/KikCheckboxStyle</item>
