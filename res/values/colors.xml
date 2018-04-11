@@ -86,8 +86,6 @@
     <color name="edit_text_underline_resting">@color/gray_3</color>
     <color name="expression_bar_background_color">#21a9adc1</color>
     <color name="expression_text_color">@color/hashtags_divider</color>
-    <color name="fab_menu_screen_overlay">#ccffffff</color>
-    <color name="fab_shadow">#1f000000</color>
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
     <color name="forty_percent_black">#66000000</color>
@@ -127,12 +125,10 @@
     <color name="kik_blue">#ff26beff</color>
     <color name="kik_blue_50pc_opacity">#8026beff</color>
     <color name="kik_code_username">#ccffffff</color>
-    <color name="kik_green">#ff5dcd11</color>
     <color name="kik_shrek_green">#ff91d013</color>
     <color name="kik_star_rating_yellow">#ffffb922</color>
     <color name="light_gray">#ffeeeeee</color>
     <color name="light_theme_status_bar_color">#ffc5c6c7</color>
-    <color name="list_divider_color">@color/gray_2</color>
     <color name="mask_bg">#80000000</color>
     <color name="material_blue">#ff2196f3</color>
     <color name="material_blue_grey_800">#ff37474f</color>
@@ -199,9 +195,6 @@
     <color name="smiley_help_blue">@color/camera_blue</color>
     <color name="smiley_notification_grey">#ffd9dce3</color>
     <color name="smiley_shadow_color">#140c445c</color>
-    <color name="smiley_tray_overlay">@color/kik_code_username</color>
-    <color name="status_bar_grey">#ff999999</color>
-    <color name="status_bar_grey_v2">#3d37394b</color>
     <color name="stripe_label_color">#ffb2b1b6</color>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
@@ -224,10 +217,8 @@
     <color name="title_text_color">#ff3a3b40</color>
     <color name="top_bar_text_color">@color/appbar_text</color>
     <color name="top_bar_text_color_white">#ffffffff</color>
-    <color name="trans">#00000000</color>
     <color name="underline_color">#26000000</color>
     <color name="video_tooltip_shadow">#1e000000</color>
-    <color name="warning_red">#fffa0164</color>
     <color name="web_error_page_text_color">#ff979797</color>
     <color name="white">#ffffffff</color>
     <color name="white_transparent">#00ffffff</color>
