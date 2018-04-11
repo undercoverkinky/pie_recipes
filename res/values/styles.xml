@@ -1106,17 +1106,17 @@
         <item name="tabPaddingEnd">12.0dip</item>
     </style>
     <style name="BaseAppTheme" parent="@style/Theme.AppCompat.NoActionBar">
-        <item name="android:windowBackground">@color/white</item>
-        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowBackground">@color/main_bg</item>
+        <item name="android:windowNoTitle">true</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowTitleSize">@dimen/native_topbar_height</item>
         <item name="android:windowTitleStyle">@style/invisible</item>
         <item name="android:windowTitleBackgroundStyle">@style/KikTitleBarStyle</item>
         <item name="android:checkboxStyle">@style/KikCheckboxStyle</item>
         <item name="android:windowActionBar">false</item>
-        <item name="colorPrimary">@color/gray_1</item>
-        <item name="colorPrimaryDark">@color/gray_5</item>
-        <item name="colorAccent">@color/kik_blue</item>
+        <item name="colorPrimary">@color/blue_waffle</item>
+        <item name="colorPrimaryDark">@color/status_bar</item>
+        <item name="colorAccent">@color/blue_waffle</item>
     </style>
     <style name="ChatsSearchUsernameDrawable">
         <item name="android:layout_width">16.0dip</item>
@@ -1144,7 +1144,7 @@
     </style>
     <style name="FloatingActionButtonLabel">
         <item name="android:textSize">14.0sp</item>
-        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textColor">@color/blue_to_white</item>
         <item name="android:ellipsize">end</item>
         <item name="android:background">@drawable/fab_label_selector</item>
         <item name="android:layout_width">wrap_content</item>
@@ -1156,8 +1156,8 @@
     <style name="FloatingActionButtonMenuItem">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="fab_colorNormal">@color/kik_blue</item>
-        <item name="fab_colorPressed">@color/kik_blue</item>
+        <item name="fab_colorNormal">@color/fab_buttons</item>
+        <item name="fab_colorPressed">@color/blue_waffle</item>
         <item name="fab_shadowColor">@color/fab_shadow</item>
         <item name="fab_size">mini</item>
         <item name="fab_showAnimation">@anim/slide_in_from_right_and_rotate</item>
@@ -1602,28 +1602,28 @@
     </style>
     <style name="KikTextView.ChatList.ConversationName" parent="@style/KikTextView.ChatList">
         <item name="android:textSize">16.0sp</item>
-        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColor">@color/pluto_is_white</item>
         <item name="android:ellipsize">end</item>
     </style>
     <style name="KikTextView.ChatList.MessagePreview" parent="@style/KikTextView.ChatList">
         <item name="android:textSize">14.0sp</item>
-        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textColor">@color/fake_white</item>
         <item name="android:ellipsize">end</item>
         <item name="android:singleLine">true</item>
     </style>
     <style name="KikTextView.ChatList.NoHistory" parent="@style/KikTextView.ChatList">
         <item name="android:textSize">14.0sp</item>
         <item name="android:textStyle">italic</item>
-        <item name="android:textColor">@color/text_tertiary</item>
+        <item name="android:textColor">@color/blue_waffle</item>
         <item name="android:ellipsize">end</item>
     </style>
     <style name="KikTextView.ChatList.Timestamp" parent="@style/KikTextView.ChatList">
         <item name="android:textSize">14.0sp</item>
-        <item name="android:textColor">@color/text_tertiary</item>
+        <item name="android:textColor">@color/fake_white</item>
     </style>
     <style name="KikTextView.ChatList.TypingStatus" parent="@style/KikTextView.ChatList">
         <item name="android:textSize">16.0sp</item>
-        <item name="android:textColor">@color/text_tertiary</item>
+        <item name="android:textColor">@color/fake_white</item>
         <item name="android:ellipsize">end</item>
     </style>
     <style name="KikTextView.ChatSearch" parent="@style/KikTextView">
@@ -1906,7 +1906,7 @@
         <item name="android:layout_height">25.0dip</item>
         <item name="android:layout_marginLeft">25.0dip</item>
     </style>
-    <style name="SplashTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+    <style name="SplashTheme" parent="@style/Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_background</item>
         <item name="colorPrimaryDark">@color/status_bar_grey_v2</item>
     </style>
