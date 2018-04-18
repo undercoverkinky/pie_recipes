@@ -1,11 +1,11 @@
 .class final Lcom/kik/cards/web/CardsWebViewFragment$15;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/cards/web/CardsWebViewFragment;->a(Ljava/lang/String;Landroid/content/Context;Lkik/core/interfaces/s;)Lcom/kik/events/Promise;
+    value = Lcom/kik/cards/web/CardsWebViewFragment;->a(Ljava/lang/String;Landroid/content/Context;Lkik/core/interfaces/u;)Lcom/kik/events/Promise;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Ljava/lang/Void;",
         ">;"
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 684
+    .line 651
     iput-object p1, p0, Lcom/kik/cards/web/CardsWebViewFragment$15;->a:Lcom/kik/events/d;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -46,11 +46,11 @@
     .locals 1
 
     .prologue
-    .line 688
+    .line 655
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$15;->a:Lcom/kik/events/d;
 
     invoke-virtual {v0}, Lcom/kik/events/d;->a()V
 
-    .line 689
+    .line 656
     return-void
 .end method

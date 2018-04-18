@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/gif_trending_button" android:layout_width="fill_parent" android:layout_height="@dimen/gif_button_bar_height" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/gif_trending_button_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_trending_off" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/gif_featured_button" android:layout_width="fill_parent" android:layout_height="@dimen/gif_button_bar_height" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/gif_featured_button_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_featured_off" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/gif_emoji_button" android:layout_width="fill_parent" android:layout_height="@dimen/gif_button_bar_height" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/gif_emoji_button_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_gif_emoji_off" />
+    </FrameLayout>
+</merge>

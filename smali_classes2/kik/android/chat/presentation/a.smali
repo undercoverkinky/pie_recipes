@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/android/chat/presentation/bt;
+.implements Lkik/android/chat/presentation/ca;
 
 
 # annotations
@@ -16,7 +16,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkik/android/chat/presentation/bt",
+        "Lkik/android/chat/presentation/ca",
         "<",
         "Lkik/android/chat/view/a;",
         ">;"
@@ -34,7 +34,7 @@
             "(",
             "Ljava/util/Collection",
             "<",
-            "Lkik/core/datatypes/l;",
+            "Lkik/core/datatypes/o;",
             ">;)V"
         }
     .end annotation

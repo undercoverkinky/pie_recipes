@@ -15,9 +15,6 @@
 
 
 # virtual methods
-.method public abstract getCallingPackage()Ljava/lang/String;
-.end method
-
 .method public abstract getMediaSession()Ljava/lang/Object;
 .end method
 
@@ -40,9 +37,6 @@
 .end method
 
 .method public abstract setCallback(Landroid/support/v4/media/session/MediaSessionCompat$Callback;Landroid/os/Handler;)V
-.end method
-
-.method public abstract setCaptioningEnabled(Z)V
 .end method
 
 .method public abstract setExtras(Landroid/os/Bundle;)V
@@ -84,11 +78,5 @@
 .method public abstract setRatingType(I)V
 .end method
 
-.method public abstract setRepeatMode(I)V
-.end method
-
 .method public abstract setSessionActivity(Landroid/app/PendingIntent;)V
-.end method
-
-.method public abstract setShuffleModeEnabled(Z)V
 .end method

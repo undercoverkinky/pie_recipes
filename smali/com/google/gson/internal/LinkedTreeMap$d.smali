@@ -293,9 +293,9 @@
     :goto_1
     xor-int/2addr v0, v1
 
-    .line 491
     return v0
 
+    .line 491
     :cond_0
     iget-object v0, p0, Lcom/google/gson/internal/LinkedTreeMap$d;->f:Ljava/lang/Object;
 

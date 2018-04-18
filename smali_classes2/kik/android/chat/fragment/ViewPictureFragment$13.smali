@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 919
+    .line 859
     iput-object p1, p0, Lkik/android/chat/fragment/ViewPictureFragment$13;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 3
 
     .prologue
-    .line 934
+    .line 874
     const/4 v0, 0x2
 
     new-array v0, v0, [Landroid/view/View;
@@ -63,7 +63,7 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
 
-    .line 935
+    .line 875
     return-void
 .end method
 
@@ -71,7 +71,7 @@
     .locals 0
 
     .prologue
-    .line 929
+    .line 869
     return-void
 .end method
 
@@ -79,6 +79,6 @@
     .locals 0
 
     .prologue
-    .line 924
+    .line 864
     return-void
 .end method

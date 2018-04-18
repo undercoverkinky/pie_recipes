@@ -36,7 +36,7 @@
     .line 77
     iget-object v0, p0, Lkik/android/chat/fragment/KikBasicDialog$a;->a:Lkik/android/chat/fragment/KikBasicDialog;
 
-    const v1, 0x7f04006f
+    const v1, 0x7f04006c
 
     const/4 v2, 0x0
 
@@ -57,7 +57,7 @@
 
     .prologue
     .line 158
-    const v0, 0x7f02024a
+    const v0, 0x7f0201f3
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->f(I)Landroid/graphics/drawable/Drawable;
 
@@ -371,7 +371,7 @@
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikBasicDialog;->_body:Lkik/android/widget/RobotoTextView;
 
-    invoke-static {v0}, Lkik/android/chat/view/text/d;->a(Landroid/widget/TextView;)V
+    invoke-static {v0}, Lkik/android/chat/view/text/c;->a(Landroid/widget/TextView;)V
 
     .line 112
     const/4 v0, 0x1

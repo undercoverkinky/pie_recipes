@@ -21,7 +21,7 @@
 .end annotation
 
 .annotation runtime Ljavax/annotation/meta/TypeQualifier;
-    applicableTo = Ljava/lang/CharSequence;
+    applicableTo = Ljava/lang/String;
 .end annotation
 
 

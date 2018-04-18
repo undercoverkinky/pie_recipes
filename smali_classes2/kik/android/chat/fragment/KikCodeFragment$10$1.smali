@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 798
+    .line 765
     iput-object p1, p0, Lkik/android/chat/fragment/KikCodeFragment$10$1;->a:Lkik/android/chat/fragment/KikCodeFragment$10;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,14 +37,16 @@
 
 # virtual methods
 .method public final run()V
-    .locals 4
+    .locals 6
 
     .prologue
+    const-wide/16 v4, 0xc8
+
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 802
+    .line 769
     new-array v0, v3, [Landroid/view/View;
 
     iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment$10$1;->a:Lkik/android/chat/fragment/KikCodeFragment$10;
@@ -55,9 +57,9 @@
 
     aput-object v1, v0, v2
 
-    invoke-static {v0}, Lkik/android/util/an;->b([Landroid/view/View;)V
+    invoke-static {v4, v5, v0}, Lkik/android/util/am;->b(J[Landroid/view/View;)V
 
-    .line 803
+    .line 770
     const/4 v0, 0x2
 
     new-array v0, v0, [Landroid/view/View;
@@ -78,8 +80,8 @@
 
     aput-object v1, v0, v3
 
-    invoke-static {v0}, Lkik/android/util/an;->a([Landroid/view/View;)V
+    invoke-static {v4, v5, v0}, Lkik/android/util/am;->a(J[Landroid/view/View;)V
 
-    .line 804
+    .line 771
     return-void
 .end method

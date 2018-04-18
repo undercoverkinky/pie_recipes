@@ -1,5 +1,5 @@
 .class public final Lcom/kik/view/adapters/z;
-.super Lcom/kik/view/adapters/h;
+.super Lcom/kik/view/adapters/g;
 .source "SourceFile"
 
 
@@ -18,18 +18,14 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/kik/components/CoreComponent;Lkik/android/chat/vm/ay;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/kik/cache/aa;Lkik/core/interfaces/x;Lcom/kik/android/Mixpanel;)V
     .locals 6
 
     .prologue
-    .line 24
-    invoke-static {}, Lkik/android/chat/vm/a/b;->j()Lkik/android/chat/vm/a/b;
+    .line 26
+    new-instance v2, Ljava/util/ArrayList;
 
-    move-result-object v2
-
-    new-instance v5, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v5}, Ljava/util/LinkedHashMap;-><init>()V
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     move-object v0, p0
 
@@ -39,78 +35,104 @@
 
     move-object v4, p3
 
-    invoke-direct/range {v0 .. v5}, Lcom/kik/view/adapters/z;-><init>(Landroid/content/Context;Lkik/android/chat/vm/a/b;Lcom/kik/components/CoreComponent;Lkik/android/chat/vm/ay;Ljava/util/Map;)V
+    move-object v5, p4
 
-    .line 25
+    invoke-direct/range {v0 .. v5}, Lcom/kik/view/adapters/g;-><init>(Landroid/content/Context;Ljava/util/List;Lcom/kik/cache/aa;Lkik/core/interfaces/x;Lcom/kik/android/Mixpanel;)V
+
+    .line 27
+    new-instance v0, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/kik/view/adapters/z;->a:Ljava/util/Map;
+
+    .line 28
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lkik/android/chat/vm/a/b;Lcom/kik/components/CoreComponent;Lkik/android/chat/vm/ay;Ljava/util/Map;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Ljava/util/ArrayList;Ljava/util/Map;Lcom/kik/cache/aa;Lkik/core/interfaces/x;Lcom/kik/android/Mixpanel;)V
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lkik/android/chat/vm/a/b;",
-            "Lcom/kik/components/CoreComponent;",
-            "Lkik/android/chat/vm/ay;",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lkik/core/datatypes/o;",
+            ">;",
             "Ljava/util/Map",
             "<",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
-            ">;)V"
+            ">;",
+            "Lcom/kik/cache/aa;",
+            "Lkik/core/interfaces/x;",
+            "Lcom/kik/android/Mixpanel;",
+            ")V"
         }
     .end annotation
 
     .prologue
-    .line 30
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/kik/view/adapters/h;-><init>(Landroid/content/Context;Lkik/android/chat/vm/a/b;Lcom/kik/components/CoreComponent;Lkik/android/chat/vm/ay;)V
-
-    .line 31
-    iput-object p5, p0, Lcom/kik/view/adapters/z;->a:Ljava/util/Map;
-
     .line 32
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p4
+
+    move-object v4, p5
+
+    move-object v5, p6
+
+    invoke-direct/range {v0 .. v5}, Lcom/kik/view/adapters/g;-><init>(Landroid/content/Context;Ljava/util/List;Lcom/kik/cache/aa;Lkik/core/interfaces/x;Lcom/kik/android/Mixpanel;)V
+
+    .line 33
+    iput-object p3, p0, Lcom/kik/view/adapters/z;->a:Ljava/util/Map;
+
+    .line 34
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a(Lcom/kik/view/adapters/g;Lkik/core/datatypes/l;)V
+.method protected final a(Lcom/kik/view/adapters/f;Lkik/core/datatypes/o;)V
     .locals 2
 
     .prologue
-    .line 38
-    invoke-virtual {p2}, Lkik/core/datatypes/l;->o()Z
+    .line 47
+    invoke-virtual {p2}, Lkik/core/datatypes/o;->g()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 39
-    invoke-virtual {p0}, Lcom/kik/view/adapters/z;->a()Landroid/content/Context;
+    .line 48
+    invoke-virtual {p0}, Lcom/kik/view/adapters/z;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f09031b
+    const v1, 0x7f0a0307
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 44
+    .line 53
     :goto_0
-    iget-object v1, p1, Lcom/kik/view/adapters/g;->f:Landroid/widget/TextView;
+    iget-object v1, p1, Lcom/kik/view/adapters/f;->f:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 45
+    .line 54
     return-void
 
-    .line 42
+    .line 51
     :cond_0
     iget-object v0, p0, Lcom/kik/view/adapters/z;->a:Ljava/util/Map;
 
-    invoke-virtual {p2}, Lkik/core/datatypes/l;->k()Ljava/lang/String;
+    invoke-virtual {p2}, Lkik/core/datatypes/o;->b()Ljava/lang/String;
 
     move-result-object v1
 
@@ -122,7 +144,7 @@
 
     iget-object v0, p0, Lcom/kik/view/adapters/z;->a:Ljava/util/Map;
 
-    invoke-virtual {p2}, Lkik/core/datatypes/l;->k()Ljava/lang/String;
+    invoke-virtual {p2}, Lkik/core/datatypes/o;->b()Ljava/lang/String;
 
     move-result-object v1
 
@@ -135,9 +157,39 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p2}, Lkik/core/datatypes/l;->l()Ljava/lang/String;
+    invoke-virtual {p2}, Lkik/core/datatypes/o;->d()Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
+.end method
+
+.method public final a(Ljava/util/List;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lkik/core/datatypes/o;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 38
+    iget-object v0, p0, Lcom/kik/view/adapters/z;->c:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    .line 39
+    iget-object v0, p0, Lcom/kik/view/adapters/z;->c:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    .line 40
+    invoke-virtual {p0}, Lcom/kik/view/adapters/z;->notifyDataSetChanged()V
+
+    .line 41
+    return-void
 .end method

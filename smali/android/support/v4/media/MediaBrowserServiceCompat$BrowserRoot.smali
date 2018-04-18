@@ -21,11 +21,6 @@
 
 .field public static final EXTRA_SUGGESTED:Ljava/lang/String; = "android.service.media.extra.SUGGESTED"
 
-.field public static final EXTRA_SUGGESTION_KEYWORDS:Ljava/lang/String; = "android.service.media.extra.SUGGESTION_KEYWORDS"
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
-
 
 # instance fields
 .field private final mExtras:Landroid/os/Bundle;
@@ -38,13 +33,13 @@
     .locals 2
 
     .prologue
-    .line 1435
+    .line 1009
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1436
+    .line 1010
     if-nez p1, :cond_0
 
-    .line 1437
+    .line 1011
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "The root id in BrowserRoot cannot be null. Use null for BrowserRoot instead."
@@ -53,14 +48,14 @@
 
     throw v0
 
-    .line 1440
+    .line 1014
     :cond_0
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$BrowserRoot;->mRootId:Ljava/lang/String;
 
-    .line 1441
+    .line 1015
     iput-object p2, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$BrowserRoot;->mExtras:Landroid/os/Bundle;
 
-    .line 1442
+    .line 1016
     return-void
 .end method
 
@@ -70,7 +65,7 @@
     .locals 1
 
     .prologue
-    .line 1455
+    .line 1029
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$BrowserRoot;->mExtras:Landroid/os/Bundle;
 
     return-object v0
@@ -80,7 +75,7 @@
     .locals 1
 
     .prologue
-    .line 1448
+    .line 1022
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$BrowserRoot;->mRootId:Ljava/lang/String;
 
     return-object v0

@@ -19,8 +19,6 @@
 
 .field private static final MSG_EVENT:I = 0x1
 
-.field private static final MSG_UPDATE_CAPTIONING_ENABLED:I = 0xb
-
 .field private static final MSG_UPDATE_EXTRAS:I = 0x7
 
 .field private static final MSG_UPDATE_METADATA:I = 0x3
@@ -30,10 +28,6 @@
 .field private static final MSG_UPDATE_QUEUE:I = 0x5
 
 .field private static final MSG_UPDATE_QUEUE_TITLE:I = 0x6
-
-.field private static final MSG_UPDATE_REPEAT_MODE:I = 0x9
-
-.field private static final MSG_UPDATE_SHUFFLE_MODE:I = 0xa
 
 .field private static final MSG_UPDATE_VOLUME:I = 0x4
 
@@ -47,13 +41,13 @@
     .locals 0
 
     .prologue
-    .line 809
+    .line 522
     iput-object p1, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;->this$0:Landroid/support/v4/media/session/MediaControllerCompat$Callback;
 
-    .line 810
+    .line 523
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 811
+    .line 524
     return-void
 .end method
 
@@ -63,18 +57,20 @@
     .locals 3
 
     .prologue
-    .line 815
+    .line 528
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;->this$0:Landroid/support/v4/media/session/MediaControllerCompat$Callback;
 
-    iget-boolean v0, v0, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->mRegistered:Z
+    invoke-static {v0}, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->access$300(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)Z
+
+    move-result v0
 
     if-nez v0, :cond_0
 
-    .line 853
+    .line 557
     :goto_0
     return-void
 
-    .line 818
+    .line 531
     :cond_0
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -82,7 +78,7 @@
 
     goto :goto_0
 
-    .line 820
+    .line 533
     :pswitch_0
     iget-object v1, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;->this$0:Landroid/support/v4/media/session/MediaControllerCompat$Callback;
 
@@ -98,7 +94,7 @@
 
     goto :goto_0
 
-    .line 823
+    .line 536
     :pswitch_1
     iget-object v1, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;->this$0:Landroid/support/v4/media/session/MediaControllerCompat$Callback;
 
@@ -110,7 +106,7 @@
 
     goto :goto_0
 
-    .line 826
+    .line 539
     :pswitch_2
     iget-object v1, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;->this$0:Landroid/support/v4/media/session/MediaControllerCompat$Callback;
 
@@ -122,7 +118,7 @@
 
     goto :goto_0
 
-    .line 829
+    .line 542
     :pswitch_3
     iget-object v1, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;->this$0:Landroid/support/v4/media/session/MediaControllerCompat$Callback;
 
@@ -134,7 +130,7 @@
 
     goto :goto_0
 
-    .line 832
+    .line 545
     :pswitch_4
     iget-object v1, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;->this$0:Landroid/support/v4/media/session/MediaControllerCompat$Callback;
 
@@ -146,56 +142,8 @@
 
     goto :goto_0
 
-    .line 835
+    .line 548
     :pswitch_5
-    iget-object v1, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;->this$0:Landroid/support/v4/media/session/MediaControllerCompat$Callback;
-
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    invoke-virtual {v1, v0}, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->onCaptioningEnabledChanged(Z)V
-
-    goto :goto_0
-
-    .line 838
-    :pswitch_6
-    iget-object v1, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;->this$0:Landroid/support/v4/media/session/MediaControllerCompat$Callback;
-
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    invoke-virtual {v1, v0}, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->onRepeatModeChanged(I)V
-
-    goto :goto_0
-
-    .line 841
-    :pswitch_7
-    iget-object v1, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;->this$0:Landroid/support/v4/media/session/MediaControllerCompat$Callback;
-
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    invoke-virtual {v1, v0}, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->onShuffleModeChanged(Z)V
-
-    goto :goto_0
-
-    .line 844
-    :pswitch_8
     iget-object v1, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;->this$0:Landroid/support/v4/media/session/MediaControllerCompat$Callback;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -206,8 +154,8 @@
 
     goto :goto_0
 
-    .line 847
-    :pswitch_9
+    .line 551
+    :pswitch_6
     iget-object v1, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;->this$0:Landroid/support/v4/media/session/MediaControllerCompat$Callback;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -218,15 +166,15 @@
 
     goto :goto_0
 
-    .line 850
-    :pswitch_a
+    .line 554
+    :pswitch_7
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;->this$0:Landroid/support/v4/media/session/MediaControllerCompat$Callback;
 
     invoke-virtual {v0}, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->onSessionDestroyed()V
 
     goto :goto_0
 
-    .line 818
+    .line 531
     nop
 
     :pswitch_data_0
@@ -234,14 +182,11 @@
         :pswitch_0
         :pswitch_1
         :pswitch_2
-        :pswitch_9
+        :pswitch_6
         :pswitch_3
         :pswitch_4
-        :pswitch_8
-        :pswitch_a
-        :pswitch_6
-        :pswitch_7
         :pswitch_5
+        :pswitch_7
     .end packed-switch
 .end method
 
@@ -249,17 +194,17 @@
     .locals 1
 
     .prologue
-    .line 856
+    .line 560
     invoke-virtual {p0, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 857
+    .line 561
     invoke-virtual {v0, p3}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 858
+    .line 562
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 859
+    .line 563
     return-void
 .end method

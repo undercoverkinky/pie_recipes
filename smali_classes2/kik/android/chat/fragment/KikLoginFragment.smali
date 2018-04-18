@@ -8,7 +8,7 @@
     .locals 0
 
     .prologue
-    .line 25
+    .line 21
     invoke-direct {p0}, Lkik/android/chat/fragment/KikLoginFragmentAbstract;-><init>()V
 
     return-void
@@ -16,18 +16,46 @@
 
 
 # virtual methods
-.method protected final a()I
+.method protected final a(Ljava/lang/String;Lkik/android/chat/view/ValidateableInputView;)V
+    .locals 1
+
+    .prologue
+    .line 63
+    invoke-virtual {p2, p1}, Lkik/android/chat/view/ValidateableInputView;->a(Ljava/lang/CharSequence;)V
+
+    .line 64
+    invoke-virtual {p2}, Lkik/android/chat/view/ValidateableInputView;->i()V
+
+    .line 65
+    const v0, 0x7f0a0408
+
+    .line 2082
+    invoke-static {v0}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 65
+    invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikLoginFragment;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 66
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikLoginFragment;->c()V
+
+    .line 67
+    return-void
+.end method
+
+.method protected final b()I
     .locals 3
 
     .prologue
-    .line 33
-    .line 1082
-    iget-object v0, p0, Lkik/android/chat/fragment/KikLoginFragment;->k:Lkik/core/interfaces/b;
+    .line 29
+    .line 1071
+    iget-object v0, p0, Lkik/android/chat/fragment/KikLoginFragment;->i:Lkik/core/interfaces/b;
 
     if-eqz v0, :cond_1
 
-    .line 1085
-    iget-object v0, p0, Lkik/android/chat/fragment/KikLoginFragment;->k:Lkik/core/interfaces/b;
+    .line 1074
+    iget-object v0, p0, Lkik/android/chat/fragment/KikLoginFragment;->i:Lkik/core/interfaces/b;
 
     const-string v1, "pre_registration_seven_page"
 
@@ -39,13 +67,13 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lkik/android/chat/fragment/KikLoginFragment;->k:Lkik/core/interfaces/b;
+    iget-object v0, p0, Lkik/android/chat/fragment/KikLoginFragment;->i:Lkik/core/interfaces/b;
 
     const-string v1, "pre_registration_three_page"
 
     const-string v2, "show"
 
-    .line 1086
+    .line 1075
     invoke-interface {v0, v1, v2}, Lkik/core/interfaces/b;->a(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
@@ -55,54 +83,28 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 33
+    .line 29
     :goto_0
     if-eqz v0, :cond_2
 
-    .line 34
-    const v0, 0x7f04010a
+    .line 30
+    const v0, 0x7f0400e4
 
-    .line 36
+    .line 32
     :goto_1
     return v0
 
-    .line 1086
+    .line 1075
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 36
+    .line 32
     :cond_2
-    const v0, 0x7f04010b
+    const v0, 0x7f0400e5
 
     goto :goto_1
-.end method
-
-.method protected final a(Ljava/lang/String;Lkik/android/chat/view/ValidateableInputView;)V
-    .locals 1
-
-    .prologue
-    .line 74
-    invoke-virtual {p2, p1}, Lkik/android/chat/view/ValidateableInputView;->a(Ljava/lang/CharSequence;)V
-
-    .line 75
-    invoke-virtual {p2}, Lkik/android/chat/view/ValidateableInputView;->k()V
-
-    .line 76
-    const v0, 0x7f09041c
-
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikLoginFragment;->getStringFromResource(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikLoginFragment;->displayErrorDialog(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 77
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikLoginFragment;->b()V
-
-    .line 78
-    return-void
 .end method
 
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
@@ -111,36 +113,36 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 42
+    .line 38
     invoke-super {p0, p1, p2, p3}, Lkik/android/chat/fragment/KikLoginFragmentAbstract;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v2
 
-    .line 43
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikLoginFragment;->getRequestedStatusBarColor()I
+    .line 39
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikLoginFragment;->p()I
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikLoginFragment;->setStatusBarColor(I)V
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikLoginFragment;->c(I)V
 
-    .line 2067
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikLoginFragment;->getPortraitScreenHeightInDip()I
+    .line 2056
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikLoginFragment;->A()I
 
     move-result v0
 
-    .line 2068
+    .line 2057
     const/16 v3, 0x21c
 
     if-ge v0, v3, :cond_0
 
     move v0, v1
 
-    .line 44
+    .line 40
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 45
-    const v0, 0x7f10033b
+    .line 41
+    const v0, 0x7f1102d9
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -158,17 +160,17 @@
 
     invoke-virtual {v0, v1}, Lkik/android/util/bz$b;->a(I)Lkik/android/util/bz$b;
 
-    .line 55
+    .line 51
     :goto_1
     return-object v2
 
-    .line 2068
+    .line 2057
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 47
+    .line 43
     :cond_1
     iget-object v0, p0, Lkik/android/chat/fragment/KikLoginFragment;->_userEmailField:Lkik/android/chat/view/ValidateableInputView;
 
@@ -182,44 +184,28 @@
 
     if-lez v0, :cond_2
 
-    .line 48
+    .line 44
     iget-object v0, p0, Lkik/android/chat/fragment/KikLoginFragment;->_passwordField:Lkik/android/chat/view/ValidateableInputView;
 
-    invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/KikLoginFragment;->setKeyboardMode(Landroid/view/View;I)V
+    invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/KikLoginFragment;->a(Landroid/view/View;I)V
 
-    .line 49
+    .line 45
     iget-object v0, p0, Lkik/android/chat/fragment/KikLoginFragment;->_passwordField:Lkik/android/chat/view/ValidateableInputView;
 
-    invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/KikLoginFragment;->showKeyBoard(Landroid/view/View;Z)V
+    invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/KikLoginFragment;->a(Landroid/view/View;Z)V
 
     goto :goto_1
 
-    .line 52
+    .line 48
     :cond_2
     iget-object v0, p0, Lkik/android/chat/fragment/KikLoginFragment;->_userEmailField:Lkik/android/chat/view/ValidateableInputView;
 
-    invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/KikLoginFragment;->setKeyboardMode(Landroid/view/View;I)V
+    invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/KikLoginFragment;->a(Landroid/view/View;I)V
 
-    .line 53
+    .line 49
     iget-object v0, p0, Lkik/android/chat/fragment/KikLoginFragment;->_userEmailField:Lkik/android/chat/view/ValidateableInputView;
 
-    invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/KikLoginFragment;->showKeyBoard(Landroid/view/View;Z)V
+    invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/KikLoginFragment;->a(Landroid/view/View;Z)V
 
     goto :goto_1
-.end method
-
-.method protected screenOpenedEvent()Lcom/kik/metrics/b/t;
-    .locals 1
-
-    .prologue
-    .line 62
-    invoke-static {}, Lcom/kik/metrics/b/ai;->b()Lcom/kik/metrics/b/ai$a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/kik/metrics/b/ai$a;->a()Lcom/kik/metrics/b/ai;
-
-    move-result-object v0
-
-    return-object v0
 .end method

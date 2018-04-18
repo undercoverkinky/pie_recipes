@@ -7,17 +7,14 @@
 
 
 # virtual methods
-.method public abstract Z_()Lrx/d;
+.method public abstract K_()Lrx/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lrx/d",
+            "Lrx/c",
             "<",
             "Ljava/lang/Boolean;",
             ">;"
         }
     .end annotation
-.end method
-
-.method public abstract g()Lkik/android/chat/vm/IBadgeViewModel;
 .end method

@@ -1,47 +1,110 @@
-.class final synthetic Lkik/android/chat/vm/s;
+.class public interface abstract Lkik/android/chat/vm/s;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Lrx/functions/g;
-
-
-# instance fields
-.field private final a:Lkik/android/chat/vm/r;
-
-
-# direct methods
-.method private constructor <init>(Lkik/android/chat/vm/r;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lkik/android/chat/vm/s;->a:Lkik/android/chat/vm/r;
-
-    return-void
-.end method
-
-.method public static a(Lkik/android/chat/vm/r;)Lrx/functions/g;
-    .locals 1
-
-    new-instance v0, Lkik/android/chat/vm/s;
-
-    invoke-direct {v0, p0}, Lkik/android/chat/vm/s;-><init>(Lkik/android/chat/vm/r;)V
-
-    return-object v0
-.end method
+.source "SourceFile"
 
 
 # virtual methods
-.method public final call(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public abstract a(Lkik/android/chat/vm/ac;)Lrx/c;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkik/android/chat/vm/ac;",
+            ")",
+            "Lrx/c",
+            "<",
+            "Landroid/os/Bundle;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    iget-object v0, p0, Lkik/android/chat/vm/s;->a:Lkik/android/chat/vm/r;
+.method public abstract a(Lkik/android/chat/vm/i;)Lrx/c;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkik/android/chat/vm/i;",
+            ")",
+            "Lrx/c",
+            "<",
+            "Landroid/os/Bundle;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    check-cast p1, Lkik/core/chat/profile/EmojiStatus;
+.method public abstract a(Lkik/android/chat/vm/m;)Lrx/c;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkik/android/chat/vm/m;",
+            ")",
+            "Lrx/c",
+            "<",
+            "Landroid/os/Bundle;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    invoke-static {v0, p1}, Lkik/android/chat/vm/r;->a(Lkik/android/chat/vm/r;Lkik/core/chat/profile/EmojiStatus;)Ljava/lang/Boolean;
+.method public abstract a()V
+.end method
 
-    move-result-object v0
+.method public abstract a(Ljava/lang/String;)V
+.end method
 
-    return-object v0
+.method public abstract a(Lkik/android/chat/vm/DialogViewModel;)V
+.end method
+
+.method public abstract a(Lkik/android/chat/vm/j;)V
+.end method
+
+.method public abstract a(Lkik/android/chat/vm/k;)V
+.end method
+
+.method public abstract a(Lkik/android/chat/vm/n;)V
+.end method
+
+.method public abstract a(Lkik/android/chat/vm/o;)V
+.end method
+
+.method public abstract a(Lkik/android/chat/vm/q;)V
+.end method
+
+.method public abstract a(Lkik/android/chat/vm/u;)V
+.end method
+
+.method public abstract a(Lkik/android/chat/vm/v;)V
+.end method
+
+.method public abstract a(Lkik/android/chat/vm/w;)V
+.end method
+
+.method public abstract a(Lkik/android/chat/vm/z;)V
+.end method
+
+.method public abstract b()Lcom/kik/events/c;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/kik/events/c",
+            "<",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end method
+
+.method public abstract c()V
+.end method
+
+.method public abstract d()V
+.end method
+
+.method public abstract e()V
+.end method
+
+.method public abstract f()V
+.end method
+
+.method public abstract g()V
 .end method

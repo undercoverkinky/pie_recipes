@@ -44,48 +44,48 @@
 
     aput-object v1, v0, v4
 
-    const-string v1, "(\u00082\u0085\u0001\n\tAbTesting\u0012x\n\u001bGetParticipatingExperiments\u0012*.mobile.abtesting.v1.GetExperimentsRequest\u001a+.mobile.abtesting.v1.GetExperimentsResponse\"\u0000Bi\n\u0015com.kik.abtesting.rpcZPgithub.com/kikinteractive/xiphias-api-mobile/generated/go/abtesting/v1;abtestingb\u0006proto3"
+    const-string v1, "(\u00082\u0085\u0001\n\tAbTesting\u0012x\n\u001bGetParticipatingExperiments\u0012*.mobile.abtesting.v1.GetExperimentsRequest\u001a+.mobile.abtesting.v1.GetExperimentsResponse\"\u0000B\u0017\n\u0015com.kik.abtesting.rpcb\u0006proto3"
 
     aput-object v1, v0, v5
 
-    .line 2155
+    .line 2153
     new-instance v1, Lcom/kik/abtesting/rpc/AbService$1;
 
     invoke-direct {v1}, Lcom/kik/abtesting/rpc/AbService$1;-><init>()V
 
-    .line 2163
+    .line 2161
     const/4 v2, 0x3
 
     new-array v2, v2, [Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 2166
+    .line 2164
     invoke-static {}, Lcom/kik/ximodel/CommonModelProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v3
 
     aput-object v3, v2, v4
 
-    .line 2167
+    .line 2165
     invoke-static {}, Lcom/kik/abtesting/rpc/AbTestingShared;->a()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v3
 
     aput-object v3, v2, v5
 
-    .line 2168
+    .line 2166
     invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation;->a()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v3
 
     aput-object v3, v2, v6
 
-    .line 2164
+    .line 2162
     invoke-static {v0, v2, v1}, Lcom/google/protobuf/Descriptors$FileDescriptor;->internalBuildGeneratedFileFrom([Ljava/lang/String;[Lcom/google/protobuf/Descriptors$FileDescriptor;Lcom/google/protobuf/Descriptors$FileDescriptor$InternalDescriptorAssigner;)V
 
     .line 3131
     sget-object v0, Lcom/kik/abtesting/rpc/AbService;->e:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 2171
+    .line 2169
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getMessageTypes()Ljava/util/List;
 
     move-result-object v0
@@ -98,7 +98,7 @@
 
     sput-object v0, Lcom/kik/abtesting/rpc/AbService;->a:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 2172
+    .line 2170
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/abtesting/rpc/AbService;->a:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -120,7 +120,7 @@
     .line 4131
     sget-object v0, Lcom/kik/abtesting/rpc/AbService;->e:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 2177
+    .line 2175
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getMessageTypes()Ljava/util/List;
 
     move-result-object v0
@@ -133,7 +133,7 @@
 
     sput-object v0, Lcom/kik/abtesting/rpc/AbService;->c:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 2178
+    .line 2176
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/abtesting/rpc/AbService;->c:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -152,32 +152,32 @@
 
     sput-object v0, Lcom/kik/abtesting/rpc/AbService;->d:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 2183
+    .line 2181
     invoke-static {}, Lcom/google/protobuf/ExtensionRegistry;->newInstance()Lcom/google/protobuf/ExtensionRegistry;
 
     move-result-object v0
 
-    .line 2184
+    .line 2182
     sget-object v1, Lcom/kik/protovalidation/ProtobufValidation;->a:Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;
 
     invoke-virtual {v0, v1}, Lcom/google/protobuf/ExtensionRegistry;->add(Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;)V
 
-    .line 2185
+    .line 2183
     sget-object v1, Lcom/kik/abtesting/rpc/AbService;->e:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 2186
+    .line 2184
     invoke-static {v1, v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->internalUpdateFileDescriptor(Lcom/google/protobuf/Descriptors$FileDescriptor;Lcom/google/protobuf/ExtensionRegistry;)V
 
-    .line 2187
+    .line 2185
     invoke-static {}, Lcom/kik/ximodel/CommonModelProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 2188
+    .line 2186
     invoke-static {}, Lcom/kik/abtesting/rpc/AbTestingShared;->a()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 2189
+    .line 2187
     invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation;->a()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 2190
+    .line 2188
     return-void
 .end method
 

@@ -105,6 +105,25 @@
 
 
 # virtual methods
+.method public final a()Lcom/dyuproject/protostuff/u;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/dyuproject/protostuff/u",
+            "<",
+            "Lcom/kik/contentlink/model/attachments/ContentUri;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 177
+    sget-object v0, Lcom/kik/contentlink/model/attachments/ContentUri;->b:Lcom/dyuproject/protostuff/u;
+
+    return-object v0
+.end method
+
 .method public final a(Ljava/lang/String;)Lcom/kik/contentlink/model/attachments/ContentUri;
     .locals 0
 
@@ -114,16 +133,6 @@
 
     .line 69
     return-object p0
-.end method
-
-.method public final a()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 63
-    iget-object v0, p0, Lcom/kik/contentlink/model/attachments/ContentUri;->platform:Ljava/lang/String;
-
-    return-object v0
 .end method
 
 .method public final b(Ljava/lang/String;)Lcom/kik/contentlink/model/attachments/ContentUri;
@@ -141,8 +150,8 @@
     .locals 1
 
     .prologue
-    .line 76
-    iget-object v0, p0, Lcom/kik/contentlink/model/attachments/ContentUri;->type:Ljava/lang/String;
+    .line 63
+    iget-object v0, p0, Lcom/kik/contentlink/model/attachments/ContentUri;->platform:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -162,27 +171,8 @@
     .locals 1
 
     .prologue
-    .line 89
-    iget-object v0, p0, Lcom/kik/contentlink/model/attachments/ContentUri;->byline:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final cachedSchema()Lcom/dyuproject/protostuff/u;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/dyuproject/protostuff/u",
-            "<",
-            "Lcom/kik/contentlink/model/attachments/ContentUri;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 177
-    sget-object v0, Lcom/kik/contentlink/model/attachments/ContentUri;->b:Lcom/dyuproject/protostuff/u;
+    .line 76
+    iget-object v0, p0, Lcom/kik/contentlink/model/attachments/ContentUri;->type:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -202,8 +192,8 @@
     .locals 1
 
     .prologue
-    .line 102
-    iget-object v0, p0, Lcom/kik/contentlink/model/attachments/ContentUri;->url:Ljava/lang/String;
+    .line 89
+    iget-object v0, p0, Lcom/kik/contentlink/model/attachments/ContentUri;->byline:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -223,8 +213,8 @@
     .locals 1
 
     .prologue
-    .line 115
-    iget-object v0, p0, Lcom/kik/contentlink/model/attachments/ContentUri;->iconUrl:Ljava/lang/String;
+    .line 102
+    iget-object v0, p0, Lcom/kik/contentlink/model/attachments/ContentUri;->url:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -244,13 +234,23 @@
     .locals 1
 
     .prologue
+    .line 115
+    iget-object v0, p0, Lcom/kik/contentlink/model/attachments/ContentUri;->iconUrl:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final g()Ljava/lang/String;
+    .locals 1
+
+    .prologue
     .line 128
     iget-object v0, p0, Lcom/kik/contentlink/model/attachments/ContentUri;->appName:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final g()Ljava/lang/String;
+.method public final h()Ljava/lang/String;
     .locals 1
 
     .prologue
@@ -260,7 +260,7 @@
     return-object v0
 .end method
 
-.method public final h()Ljava/lang/String;
+.method public final i()Ljava/lang/String;
     .locals 1
 
     .prologue

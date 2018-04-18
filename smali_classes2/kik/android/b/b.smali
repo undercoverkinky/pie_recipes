@@ -36,11 +36,11 @@
 
 
 # instance fields
-.field d:Lkik/android/f/a;
+.field d:Lkik/android/e/a;
 
 .field private final e:Ljava/lang/String;
 
-.field private f:Lkik/android/f/a;
+.field private f:Lkik/android/e/a;
 
 
 # direct methods
@@ -183,7 +183,7 @@
 
     aput-object v1, v0, v3
 
-    invoke-static {v0}, Lcom/google/common/collect/o;->a([Ljava/lang/Object;)Ljava/util/HashSet;
+    invoke-static {v0}, Lcom/google/common/collect/r;->a([Ljava/lang/Object;)Ljava/util/HashSet;
 
     move-result-object v0
 
@@ -196,7 +196,7 @@
 
     aput-object v1, v0, v3
 
-    invoke-static {v0}, Lcom/google/common/collect/o;->a([Ljava/lang/Object;)Ljava/util/HashSet;
+    invoke-static {v0}, Lcom/google/common/collect/r;->a([Ljava/lang/Object;)Ljava/util/HashSet;
 
     move-result-object v0
 
@@ -222,12 +222,12 @@
 
     invoke-direct {v0, p0}, Lkik/android/b/b$1;-><init>(Lkik/android/b/b;)V
 
-    iput-object v0, p0, Lkik/android/b/b;->d:Lkik/android/f/a;
+    iput-object v0, p0, Lkik/android/b/b;->d:Lkik/android/e/a;
 
     .line 121
-    iget-object v0, p0, Lkik/android/b/b;->d:Lkik/android/f/a;
+    iget-object v0, p0, Lkik/android/b/b;->d:Lkik/android/e/a;
 
-    iput-object v0, p0, Lkik/android/b/b;->f:Lkik/android/f/a;
+    iput-object v0, p0, Lkik/android/b/b;->f:Lkik/android/e/a;
 
     .line 126
     return-void
@@ -255,13 +255,13 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 369
-    .line 372
+    .line 370
+    .line 373
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v3
 
-    .line 375
+    .line 376
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -281,17 +281,17 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 381
+    .line 382
     if-nez v0, :cond_0
 
-    .line 427
+    .line 428
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
 
-    .line 388
+    .line 389
     :cond_0
     :try_start_0
     const-string v2, "http"
@@ -310,13 +310,13 @@
 
     if-nez v2, :cond_2
 
-    .line 390
+    .line 391
     :cond_1
     new-instance v2, Lcom/kik/cards/web/CardsWebViewFragment$a;
 
     invoke-direct {v2}, Lcom/kik/cards/web/CardsWebViewFragment$a;-><init>()V
 
-    .line 391
+    .line 392
     invoke-virtual {v2, v0}, Lcom/kik/cards/web/CardsWebViewFragment$a;->a(Ljava/lang/String;)Lcom/kik/cards/web/CardsWebViewFragment$a;
 
     move-result-object v5
@@ -327,8 +327,8 @@
 
     invoke-virtual {v5, v0}, Lcom/kik/cards/web/CardsWebViewFragment$a;->b(Ljava/lang/String;)Lcom/kik/cards/web/CardsWebViewFragment$a;
 
-    .line 392
-    invoke-static {v2, p0}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ad;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    .line 393
+    invoke-static {v2, p0}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v0
 
@@ -338,7 +338,7 @@
 
     move-object v2, v0
 
-    .line 401
+    .line 402
     :goto_1
     const/4 v0, 0x0
 
@@ -352,14 +352,14 @@
 
     if-nez v0, :cond_3
 
-    .line 427
+    .line 428
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
 
-    .line 395
+    .line 396
     :cond_2
     new-instance v2, Landroid/content/Intent;
 
@@ -371,14 +371,14 @@
 
     invoke-direct {v2, v5, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 396
+    .line 397
     const/high16 v0, 0x200000
 
     invoke-virtual {v2, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     goto :goto_1
 
-    .line 427
+    .line 428
     :catch_0
     move-exception v0
 
@@ -386,40 +386,40 @@
 
     move v1, v0
 
-    .line 428
+    .line 429
     goto :goto_0
 
-    .line 405
+    .line 406
     :cond_3
     new-instance v0, Lcom/kik/events/Promise;
 
     invoke-direct {v0}, Lcom/kik/events/Promise;-><init>()V
 
-    .line 407
+    .line 408
     if-eqz v1, :cond_4
 
-    invoke-static {}, Lkik/android/internal/platform/PlatformHelper;->a()Lkik/android/internal/platform/PlatformHelper;
+    invoke-static {}, Lkik/android/internal/platform/b;->a()Lkik/android/internal/platform/b;
 
     move-result-object v5
 
-    invoke-virtual {v5, p2}, Lkik/android/internal/platform/PlatformHelper;->e(Ljava/lang/String;)Z
+    invoke-virtual {v5, p2}, Lkik/android/internal/platform/b;->f(Ljava/lang/String;)Z
 
     move-result v5
 
     if-eqz v5, :cond_5
 
-    .line 408
+    .line 409
     :cond_4
     invoke-virtual {v0, v2}, Lcom/kik/events/Promise;->a(Ljava/lang/Object;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 431
+    .line 432
     :goto_2
     return-object v0
 
-    .line 412
+    .line 413
     :cond_5
     :try_start_1
     invoke-virtual {v0, v2}, Lcom/kik/events/Promise;->a(Ljava/lang/Object;)V
@@ -429,18 +429,18 @@
 
     goto :goto_2
 
-    .line 416
+    .line 417
     :catch_1
     move-exception v2
 
-    const v2, 0x7f090147
+    const v2, 0x7f0a0146
 
     const/4 v5, 0x1
 
     :try_start_2
     invoke-static {p0, v2, v5}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
-    .line 417
+    .line 418
     new-instance v2, Ljava/lang/Throwable;
 
     invoke-direct {v2}, Ljava/lang/Throwable;-><init>()V
@@ -458,7 +458,7 @@
 
     throw v0
 
-    .line 431
+    .line 432
     :cond_6
     const/4 v0, 0x0
 
@@ -469,14 +469,14 @@
     .locals 4
 
     .prologue
-    .line 262
+    .line 263
     const-string v0, "android"
 
-    invoke-virtual {p0, v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->d(Ljava/lang/String;)Ljava/util/List;
+    invoke-virtual {p0, v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->c(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 263
+    .line 264
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -494,19 +494,19 @@
 
     check-cast v0, Lcom/kik/contentlink/model/attachments/ContentUri;
 
-    .line 264
+    .line 265
     invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->v()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 265
+    .line 266
     invoke-static {v2}, Lkik/core/datatypes/messageExtensions/a;->a(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_4
 
-    .line 1436
+    .line 1437
     if-eqz p0, :cond_2
 
     const-string v0, "com.kik.ext.video-camera"
@@ -536,34 +536,34 @@
     :cond_1
     const/4 v0, 0x1
 
-    .line 266
+    .line 267
     :goto_0
     if-eqz v0, :cond_3
 
-    .line 267
-    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->i()Ljava/lang/String;
+    .line 268
+    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->h()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 283
+    .line 284
     :goto_1
     return-object v0
 
-    .line 1436
+    .line 1437
     :cond_2
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 270
+    .line 271
     :cond_3
-    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->h()Ljava/lang/String;
+    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->g()Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_1
 
-    .line 272
+    .line 273
     :cond_4
     if-eqz v2, :cond_5
 
@@ -602,22 +602,22 @@
 
     if-eqz v2, :cond_6
 
-    .line 273
-    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->h()Ljava/lang/String;
+    .line 274
+    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->g()Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_1
 
-    .line 275
+    .line 276
     :cond_6
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->b()Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_7
 
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->b()Ljava/lang/String;
 
     move-result-object v2
 
@@ -630,7 +630,7 @@
     if-nez v2, :cond_8
 
     :cond_7
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->e()Ljava/lang/String;
 
     move-result-object v2
 
@@ -642,7 +642,7 @@
 
     if-nez v2, :cond_8
 
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->e()Ljava/lang/String;
 
     move-result-object v2
 
@@ -654,16 +654,16 @@
 
     if-nez v2, :cond_8
 
-    .line 276
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->d()Ljava/lang/String;
+    .line 277
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->e()Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_1
 
-    .line 278
+    .line 279
     :cond_8
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->e()Ljava/lang/String;
 
     move-result-object v2
 
@@ -675,14 +675,14 @@
 
     if-nez v2, :cond_0
 
-    .line 279
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->d()Ljava/lang/String;
+    .line 280
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->e()Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_1
 
-    .line 283
+    .line 284
     :cond_9
     const-string v0, ""
 
@@ -710,19 +710,19 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 231
+    .line 232
     if-nez p2, :cond_1
 
-    .line 257
+    .line 258
     :cond_0
     :goto_0
     return-object v0
 
-    .line 236
+    .line 237
     :cond_1
     const-string v1, "image"
 
-    invoke-virtual {p2}, Lcom/kik/contentlink/model/attachments/ContentUri;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/kik/contentlink/model/attachments/ContentUri;->c()Ljava/lang/String;
 
     move-result-object v2
 
@@ -732,13 +732,13 @@
 
     if-eqz v1, :cond_2
 
-    .line 237
+    .line 238
     new-instance v0, Lkik/android/chat/fragment/ViewPictureFragment$a;
 
     invoke-direct {v0}, Lkik/android/chat/fragment/ViewPictureFragment$a;-><init>()V
 
-    .line 238
-    invoke-virtual {p2}, Lcom/kik/contentlink/model/attachments/ContentUri;->d()Ljava/lang/String;
+    .line 239
+    invoke-virtual {p2}, Lcom/kik/contentlink/model/attachments/ContentUri;->e()Ljava/lang/String;
 
     move-result-object v1
 
@@ -748,8 +748,8 @@
 
     invoke-virtual {v1}, Lkik/android/chat/fragment/ViewPictureFragment$a;->c()Lkik/android/chat/fragment/ViewPictureFragment$a;
 
-    .line 239
-    invoke-static {v0, p1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ad;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    .line 240
+    invoke-static {v0, p1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v0
 
@@ -757,28 +757,28 @@
 
     move-result-object v0
 
-    .line 240
-    invoke-static {v0}, Lcom/kik/events/l;->a(Ljava/lang/Object;)Lcom/kik/events/Promise;
+    .line 241
+    invoke-static {v0}, Lcom/kik/events/m;->a(Ljava/lang/Object;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 243
+    .line 244
     :cond_2
-    invoke-virtual {p2}, Lcom/kik/contentlink/model/attachments/ContentUri;->a()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/kik/contentlink/model/attachments/ContentUri;->b()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {p2}, Lcom/kik/contentlink/model/attachments/ContentUri;->d()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/kik/contentlink/model/attachments/ContentUri;->e()Ljava/lang/String;
 
     move-result-object v2
 
+    invoke-virtual {p2}, Lcom/kik/contentlink/model/attachments/ContentUri;->g()Ljava/lang/String;
+
     invoke-virtual {p2}, Lcom/kik/contentlink/model/attachments/ContentUri;->f()Ljava/lang/String;
 
-    invoke-virtual {p2}, Lcom/kik/contentlink/model/attachments/ContentUri;->e()Ljava/lang/String;
-
-    .line 1290
+    .line 1291
     if-eqz v1, :cond_3
 
     const-string v3, "cards"
@@ -806,85 +806,85 @@
 
     if-eqz v1, :cond_5
 
-    .line 1297
+    .line 1298
     :cond_4
-    iget-object v1, p0, Lkik/android/b/b;->f:Lkik/android/f/a;
+    iget-object v1, p0, Lkik/android/b/b;->f:Lkik/android/e/a;
 
-    invoke-interface {v1, p1, v2, p3}, Lkik/android/f/a;->a(Landroid/content/Context;Ljava/lang/String;Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;)Landroid/content/Intent;
+    invoke-interface {v1, p1, v2, p3}, Lkik/android/e/a;->a(Landroid/content/Context;Ljava/lang/String;Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;)Landroid/content/Intent;
 
     move-result-object v2
 
-    .line 1299
+    .line 1300
     if-eqz v2, :cond_5
 
-    .line 1301
+    .line 1302
     new-instance v1, Lcom/kik/events/Promise;
 
     invoke-direct {v1}, Lcom/kik/events/Promise;-><init>()V
 
-    .line 1303
+    .line 1304
     invoke-virtual {v1, v2}, Lcom/kik/events/Promise;->a(Ljava/lang/Object;)V
 
-    .line 243
+    .line 244
     :goto_1
     if-eqz v1, :cond_6
 
     move-object v0, v1
 
-    .line 244
+    .line 245
     goto :goto_0
 
     :cond_5
     move-object v1, v0
 
-    .line 1308
+    .line 1309
     goto :goto_1
 
-    .line 246
+    .line 247
     :cond_6
-    invoke-virtual {p2}, Lcom/kik/contentlink/model/attachments/ContentUri;->d()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/kik/contentlink/model/attachments/ContentUri;->e()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1313
+    .line 1314
     if-nez v1, :cond_8
 
-    .line 246
+    .line 247
     :cond_7
     :goto_2
     if-nez v0, :cond_0
 
-    .line 249
-    invoke-virtual {p2}, Lcom/kik/contentlink/model/attachments/ContentUri;->d()Ljava/lang/String;
+    .line 250
+    invoke-virtual {p2}, Lcom/kik/contentlink/model/attachments/ContentUri;->e()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lcom/kik/contentlink/model/attachments/ContentUri;->f()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/kik/contentlink/model/attachments/ContentUri;->g()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1336
+    .line 1337
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1338
+    .line 1339
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1340
+    .line 1341
     invoke-static {p1, v2, v1}, Lkik/android/b/b;->a(Landroid/content/Context;Ljava/util/Collection;Ljava/lang/String;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
-    .line 249
+    .line 250
     if-nez v0, :cond_0
 
-    .line 254
+    .line 255
     new-instance v0, Lcom/kik/events/Promise;
 
     invoke-direct {v0}, Lcom/kik/events/Promise;-><init>()V
 
-    .line 255
+    .line 256
     new-instance v1, Ljava/lang/Throwable;
 
     invoke-direct {v1}, Ljava/lang/Throwable;-><init>()V
@@ -893,7 +893,7 @@
 
     goto/16 :goto_0
 
-    .line 1318
+    .line 1319
     :cond_8
     const-string v2, "http"
 
@@ -911,13 +911,13 @@
 
     if-nez v2, :cond_7
 
-    .line 1319
+    .line 1320
     :cond_9
     new-instance v2, Lcom/kik/cards/web/CardsWebViewFragment$a;
 
     invoke-direct {v2}, Lcom/kik/cards/web/CardsWebViewFragment$a;-><init>()V
 
-    .line 1320
+    .line 1321
     invoke-virtual {v2, v1}, Lcom/kik/cards/web/CardsWebViewFragment$a;->a(Ljava/lang/String;)Lcom/kik/cards/web/CardsWebViewFragment$a;
 
     move-result-object v3
@@ -936,8 +936,8 @@
 
     invoke-virtual {v1, v0}, Lcom/kik/cards/web/CardsWebViewFragment$a;->a(Lcom/kik/cards/web/kik/KikContentMessageParcelable;)Lcom/kik/cards/web/CardsWebViewFragment$a;
 
-    .line 1321
-    invoke-static {v2, p1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ad;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    .line 1322
+    invoke-static {v2, p1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v0
 
@@ -945,12 +945,12 @@
 
     move-result-object v1
 
-    .line 1328
+    .line 1329
     new-instance v0, Lcom/kik/events/Promise;
 
     invoke-direct {v0}, Lcom/kik/events/Promise;-><init>()V
 
-    .line 1329
+    .line 1330
     invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Ljava/lang/Object;)V
 
     goto :goto_2

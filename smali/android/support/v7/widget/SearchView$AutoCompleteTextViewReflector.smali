@@ -29,10 +29,10 @@
     .locals 5
 
     .prologue
-    .line 2016
+    .line 1748
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2018
+    .line 1750
     :try_start_0
     const-class v0, Landroid/widget/AutoCompleteTextView;
 
@@ -42,14 +42,13 @@
 
     new-array v2, v2, [Ljava/lang/Class;
 
-    .line 2019
     invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/support/v7/widget/SearchView$AutoCompleteTextViewReflector;->a:Ljava/lang/reflect/Method;
 
-    .line 2020
+    .line 1752
     iget-object v0, p0, Landroid/support/v7/widget/SearchView$AutoCompleteTextViewReflector;->a:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
@@ -58,7 +57,7 @@
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_3
 
-    .line 2025
+    .line 1757
     :goto_0
     :try_start_1
     const-class v0, Landroid/widget/AutoCompleteTextView;
@@ -69,14 +68,13 @@
 
     new-array v2, v2, [Ljava/lang/Class;
 
-    .line 2026
     invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/support/v7/widget/SearchView$AutoCompleteTextViewReflector;->b:Ljava/lang/reflect/Method;
 
-    .line 2027
+    .line 1759
     iget-object v0, p0, Landroid/support/v7/widget/SearchView$AutoCompleteTextViewReflector;->b:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
@@ -85,7 +83,7 @@
     :try_end_1
     .catch Ljava/lang/NoSuchMethodException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 2032
+    .line 1764
     :goto_1
     :try_start_2
     const-class v0, Landroid/widget/AutoCompleteTextView;
@@ -102,14 +100,13 @@
 
     aput-object v4, v2, v3
 
-    .line 2033
     invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/support/v7/widget/SearchView$AutoCompleteTextViewReflector;->c:Ljava/lang/reflect/Method;
 
-    .line 2034
+    .line 1766
     iget-object v0, p0, Landroid/support/v7/widget/SearchView$AutoCompleteTextViewReflector;->c:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
@@ -118,7 +115,7 @@
     :try_end_2
     .catch Ljava/lang/NoSuchMethodException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 2039
+    .line 1771
     :goto_2
     :try_start_3
     const-class v0, Landroid/view/inputmethod/InputMethodManager;
@@ -147,7 +144,7 @@
 
     iput-object v0, p0, Landroid/support/v7/widget/SearchView$AutoCompleteTextViewReflector;->d:Ljava/lang/reflect/Method;
 
-    .line 2041
+    .line 1773
     iget-object v0, p0, Landroid/support/v7/widget/SearchView$AutoCompleteTextViewReflector;->d:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
@@ -156,7 +153,7 @@
     :try_end_3
     .catch Ljava/lang/NoSuchMethodException; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 2045
+    .line 1777
     :goto_3
     return-void
 
@@ -189,12 +186,12 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2075
+    .line 1807
     iget-object v0, p0, Landroid/support/v7/widget/SearchView$AutoCompleteTextViewReflector;->d:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
-    .line 2077
+    .line 1809
     :try_start_0
     iget-object v0, p0, Landroid/support/v7/widget/SearchView$AutoCompleteTextViewReflector;->d:Ljava/lang/reflect/Method;
 
@@ -222,14 +219,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2085
+    .line 1817
     :goto_0
     return-void
 
     :catch_0
     move-exception v0
 
-    .line 2084
+    .line 1816
     :cond_0
     invoke-virtual {p1, p2, v4}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
 
@@ -240,12 +237,12 @@
     .locals 2
 
     .prologue
-    .line 2048
+    .line 1780
     iget-object v0, p0, Landroid/support/v7/widget/SearchView$AutoCompleteTextViewReflector;->a:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
-    .line 2050
+    .line 1782
     :try_start_0
     iget-object v0, p0, Landroid/support/v7/widget/SearchView$AutoCompleteTextViewReflector;->a:Ljava/lang/reflect/Method;
 
@@ -257,7 +254,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2054
+    .line 1786
     :cond_0
     :goto_0
     return-void
@@ -272,12 +269,12 @@
     .locals 2
 
     .prologue
-    .line 2057
+    .line 1789
     iget-object v0, p0, Landroid/support/v7/widget/SearchView$AutoCompleteTextViewReflector;->b:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
-    .line 2059
+    .line 1791
     :try_start_0
     iget-object v0, p0, Landroid/support/v7/widget/SearchView$AutoCompleteTextViewReflector;->b:Ljava/lang/reflect/Method;
 
@@ -289,7 +286,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2063
+    .line 1795
     :cond_0
     :goto_0
     return-void
@@ -304,12 +301,12 @@
     .locals 4
 
     .prologue
-    .line 2066
+    .line 1798
     iget-object v0, p0, Landroid/support/v7/widget/SearchView$AutoCompleteTextViewReflector;->c:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
-    .line 2068
+    .line 1800
     :try_start_0
     iget-object v0, p0, Landroid/support/v7/widget/SearchView$AutoCompleteTextViewReflector;->c:Ljava/lang/reflect/Method;
 
@@ -331,7 +328,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2072
+    .line 1804
     :cond_0
     :goto_0
     return-void

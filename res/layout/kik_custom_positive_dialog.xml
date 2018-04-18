@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/rounded_dialogue_bg" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/descriptive_dialog_container" android:background="@drawable/rounded_dialogue_bg" android:paddingLeft="22.0dip" android:paddingRight="22.0dip" android:fadingEdgeLength="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/kik_custom_positive_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" />
+        <kik.android.widget.RobotoTextView android:textSize="22.0sp" android:textColor="#ff3a3b40" android:layout_gravity="center_horizontal" android:id="@id/kik_custom_positive_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" style="@style/EulaTextViewStyle" />
+        <kik.android.widget.RobotoTextView android:textSize="16.0sp" android:textColor="#ffb0afb7" android:gravity="center_horizontal" android:id="@id/kik_custom_positive_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="24.0dip" style="@style/EulaTextViewStyle" />
+        <Button android:id="@id/kik_custom_positive_button" android:layout_width="196.0dip" android:layout_height="wrap_content" android:layout_marginBottom="24.0dip" android:text="Ok" style="@style/KikCustomBlueButton" />
+    </LinearLayout>
+</RelativeLayout>

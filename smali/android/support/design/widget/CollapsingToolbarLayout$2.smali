@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Landroid/support/design/widget/CollapsingToolbarLayout;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroid/support/design/widget/CollapsingToolbarLayout;->a(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 604
+    .line 406
     iput-object p1, p0, Landroid/support/design/widget/CollapsingToolbarLayout$2;->a:Landroid/support/design/widget/CollapsingToolbarLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,15 +40,15 @@
     .locals 2
 
     .prologue
-    .line 607
+    .line 409
     iget-object v0, p0, Landroid/support/design/widget/CollapsingToolbarLayout$2;->a:Landroid/support/design/widget/CollapsingToolbarLayout;
 
     invoke-virtual {p1}, Landroid/support/design/widget/ValueAnimatorCompat;->c()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/CollapsingToolbarLayout;->a(I)V
+    invoke-static {v0, v1}, Landroid/support/design/widget/CollapsingToolbarLayout;->a(Landroid/support/design/widget/CollapsingToolbarLayout;I)V
 
-    .line 608
+    .line 410
     return-void
 .end method

@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 38
+    .line 40
     invoke-direct {p0}, Ljava/io/Reader;-><init>()V
 
     return-void
@@ -36,7 +36,7 @@
     .end annotation
 
     .prologue
-    .line 43
+    .line 45
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
@@ -53,7 +53,7 @@
     .end annotation
 
     .prologue
-    .line 40
+    .line 42
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V

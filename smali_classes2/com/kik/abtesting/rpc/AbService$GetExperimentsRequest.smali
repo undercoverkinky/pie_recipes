@@ -24,11 +24,9 @@
 
 
 # static fields
-.field private static final DEFAULT_INSTANCE:Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
+.field private static final a:Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
 
-.field public static final JID_FIELD_NUMBER:I = 0x1
-
-.field private static final PARSER:Lcom/google/protobuf/Parser;
+.field private static final b:Lcom/google/protobuf/Parser;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/protobuf/Parser",
@@ -38,8 +36,6 @@
         }
     .end annotation
 .end field
-
-.field public static final PARTICIPATING_EXPERIMENTS_FIELD_NUMBER:I = 0x2
 
 .field private static final serialVersionUID:J
 
@@ -73,14 +69,14 @@
 
     invoke-direct {v0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;-><init>()V
 
-    sput-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->DEFAULT_INSTANCE:Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
+    sput-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->a:Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
 
     .line 1140
     new-instance v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$1;
 
     invoke-direct {v0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$1;-><init>()V
 
-    sput-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->PARSER:Lcom/google/protobuf/Parser;
+    sput-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->b:Lcom/google/protobuf/Parser;
 
     return-void
 .end method
@@ -250,7 +246,6 @@
     :cond_0
     invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->makeExtensionsImmutable()V
 
-    .line 172
     throw v0
 
     .line 152
@@ -403,7 +398,7 @@
     .end sparse-switch
 .end method
 
-.method synthetic constructor <init>(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;Lcom/kik/abtesting/rpc/AbService$1;)V
+.method synthetic constructor <init>(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;B)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -441,7 +436,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;Lcom/kik/abtesting/rpc/AbService$1;)V
+.method synthetic constructor <init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;B)V
     .locals 0
 
     .prologue
@@ -451,27 +446,19 @@
     return-void
 .end method
 
-.method static synthetic access$1000()Lcom/google/protobuf/Parser;
+.method static synthetic a(Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;)I
     .locals 1
 
     .prologue
     .line 101
-    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->PARSER:Lcom/google/protobuf/Parser;
+    const/4 v0, 0x0
 
-    return-object v0
-.end method
-
-.method static synthetic access$400()Z
-    .locals 1
-
-    .prologue
-    .line 101
-    sget-boolean v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->alwaysUseFieldBuilders:Z
+    iput v0, p0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->bitField0_:I
 
     return v0
 .end method
 
-.method static synthetic access$602(Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;Lcom/kik/ximodel/XiBareUserJid;)Lcom/kik/ximodel/XiBareUserJid;
+.method static synthetic a(Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;Lcom/kik/ximodel/XiBareUserJid;)Lcom/kik/ximodel/XiBareUserJid;
     .locals 0
 
     .prologue
@@ -481,17 +468,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$700(Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;)Ljava/util/List;
-    .locals 1
-
-    .prologue
-    .line 101
-    iget-object v0, p0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->participatingExperiments_:Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method static synthetic access$702(Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;Ljava/util/List;)Ljava/util/List;
+.method static synthetic a(Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;Ljava/util/List;)Ljava/util/List;
     .locals 0
 
     .prologue
@@ -501,17 +478,41 @@
     return-object p1
 .end method
 
-.method static synthetic access$802(Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;I)I
-    .locals 0
+.method static synthetic b(Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;)Ljava/util/List;
+    .locals 1
 
     .prologue
     .line 101
-    iput p1, p0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->bitField0_:I
+    iget-object v0, p0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->participatingExperiments_:Ljava/util/List;
 
-    return p1
+    return-object v0
 .end method
 
-.method static synthetic access$900()Z
+.method public static c()Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
+    .locals 1
+
+    .prologue
+    .line 423
+    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->a:Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
+
+    invoke-direct {v0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->h()Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static d()Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
+    .locals 1
+
+    .prologue
+    .line 1136
+    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->a:Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
+
+    return-object v0
+.end method
+
+.method static synthetic e()Z
     .locals 1
 
     .prologue
@@ -521,303 +522,101 @@
     return v0
 .end method
 
-.method public static getDefaultInstance()Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
+.method static synthetic f()Z
     .locals 1
 
     .prologue
-    .line 1136
-    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->DEFAULT_INSTANCE:Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
+    .line 101
+    sget-boolean v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->alwaysUseFieldBuilders:Z
+
+    return v0
+.end method
+
+.method static synthetic g()Lcom/google/protobuf/Parser;
+    .locals 1
+
+    .prologue
+    .line 101
+    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->b:Lcom/google/protobuf/Parser;
 
     return-object v0
 .end method
 
-.method public static final getDescriptor()Lcom/google/protobuf/Descriptors$Descriptor;
-    .locals 1
+.method private h()Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
+    .locals 2
 
     .prologue
-    .line 176
-    invoke-static {}, Lcom/kik/abtesting/rpc/AbService;->a()Lcom/google/protobuf/Descriptors$Descriptor;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    .line 429
+    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->a:Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
 
+    if-ne p0, v0, :cond_0
+
+    new-instance v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
+
+    invoke-direct {v0, v1}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;-><init>(B)V
+
+    :goto_0
     return-object v0
-.end method
 
-.method public static newBuilder()Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
-    .locals 1
+    :cond_0
+    new-instance v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
 
-    .prologue
-    .line 423
-    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->DEFAULT_INSTANCE:Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
+    invoke-direct {v0, v1}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;-><init>(B)V
 
-    invoke-virtual {v0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->toBuilder()Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static newBuilder(Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;)Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
-    .locals 1
-
-    .prologue
-    .line 426
-    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->DEFAULT_INSTANCE:Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-
-    invoke-virtual {v0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->toBuilder()Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
-
-    move-result-object v0
-
+    .line 430
     invoke-virtual {v0, p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;->a(Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;)Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
 
     move-result-object v0
 
-    return-object v0
-.end method
-
-.method public static parseDelimitedFrom(Ljava/io/InputStream;)Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .prologue
-    .line 397
-    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->PARSER:Lcom/google/protobuf/Parser;
-
-    .line 398
-    invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageV3;->parseDelimitedWithIOException(Lcom/google/protobuf/Parser;Ljava/io/InputStream;)Lcom/google/protobuf/Message;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-
-    .line 397
-    return-object v0
-.end method
-
-.method public static parseDelimitedFrom(Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .prologue
-    .line 404
-    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->PARSER:Lcom/google/protobuf/Parser;
-
-    .line 405
-    invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->parseDelimitedWithIOException(Lcom/google/protobuf/Parser;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Message;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-
-    .line 404
-    return-object v0
-.end method
-
-.method public static parseFrom(Lcom/google/protobuf/ByteString;)Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/google/protobuf/InvalidProtocolBufferException;
-        }
-    .end annotation
-
-    .prologue
-    .line 365
-    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->PARSER:Lcom/google/protobuf/Parser;
-
-    invoke-interface {v0, p0}, Lcom/google/protobuf/Parser;->parseFrom(Lcom/google/protobuf/ByteString;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-
-    return-object v0
-.end method
-
-.method public static parseFrom(Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/google/protobuf/InvalidProtocolBufferException;
-        }
-    .end annotation
-
-    .prologue
-    .line 371
-    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->PARSER:Lcom/google/protobuf/Parser;
-
-    invoke-interface {v0, p0, p1}, Lcom/google/protobuf/Parser;->parseFrom(Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-
-    return-object v0
-.end method
-
-.method public static parseFrom(Lcom/google/protobuf/CodedInputStream;)Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .prologue
-    .line 410
-    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->PARSER:Lcom/google/protobuf/Parser;
-
-    .line 411
-    invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageV3;->parseWithIOException(Lcom/google/protobuf/Parser;Lcom/google/protobuf/CodedInputStream;)Lcom/google/protobuf/Message;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-
-    .line 410
-    return-object v0
-.end method
-
-.method public static parseFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .prologue
-    .line 417
-    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->PARSER:Lcom/google/protobuf/Parser;
-
-    .line 418
-    invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->parseWithIOException(Lcom/google/protobuf/Parser;Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Message;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-
-    .line 417
-    return-object v0
-.end method
-
-.method public static parseFrom(Ljava/io/InputStream;)Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .prologue
-    .line 385
-    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->PARSER:Lcom/google/protobuf/Parser;
-
-    .line 386
-    invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageV3;->parseWithIOException(Lcom/google/protobuf/Parser;Ljava/io/InputStream;)Lcom/google/protobuf/Message;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-
-    .line 385
-    return-object v0
-.end method
-
-.method public static parseFrom(Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .prologue
-    .line 392
-    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->PARSER:Lcom/google/protobuf/Parser;
-
-    .line 393
-    invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->parseWithIOException(Lcom/google/protobuf/Parser;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Message;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-
-    .line 392
-    return-object v0
-.end method
-
-.method public static parseFrom([B)Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/google/protobuf/InvalidProtocolBufferException;
-        }
-    .end annotation
-
-    .prologue
-    .line 375
-    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->PARSER:Lcom/google/protobuf/Parser;
-
-    invoke-interface {v0, p0}, Lcom/google/protobuf/Parser;->parseFrom([B)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-
-    return-object v0
-.end method
-
-.method public static parseFrom([BLcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/google/protobuf/InvalidProtocolBufferException;
-        }
-    .end annotation
-
-    .prologue
-    .line 381
-    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->PARSER:Lcom/google/protobuf/Parser;
-
-    invoke-interface {v0, p0, p1}, Lcom/google/protobuf/Parser;->parseFrom([BLcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-
-    return-object v0
-.end method
-
-.method public static parser()Lcom/google/protobuf/Parser;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/google/protobuf/Parser",
-            "<",
-            "Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 1150
-    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->PARSER:Lcom/google/protobuf/Parser;
-
-    return-object v0
+    goto :goto_0
 .end method
 
 
 # virtual methods
+.method public final a()Z
+    .locals 1
+
+    .prologue
+    .line 198
+    iget-object v0, p0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->jid_:Lcom/kik/ximodel/XiBareUserJid;
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final b()Lcom/kik/ximodel/XiBareUserJid;
+    .locals 1
+
+    .prologue
+    .line 209
+    iget-object v0, p0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->jid_:Lcom/kik/ximodel/XiBareUserJid;
+
+    if-nez v0, :cond_0
+
+    invoke-static {}, Lcom/kik/ximodel/XiBareUserJid;->getDefaultInstance()Lcom/kik/ximodel/XiBareUserJid;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->jid_:Lcom/kik/ximodel/XiBareUserJid;
+
+    goto :goto_0
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
@@ -852,11 +651,11 @@
     check-cast p1, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
 
     .line 332
-    invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->hasJid()Z
+    invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->a()Z
 
     move-result v0
 
-    invoke-virtual {p1}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->hasJid()Z
+    invoke-virtual {p1}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->a()Z
 
     move-result v3
 
@@ -866,7 +665,7 @@
 
     .line 333
     :goto_1
-    invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->hasJid()Z
+    invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->a()Z
 
     move-result v3
 
@@ -875,12 +674,12 @@
     .line 334
     if-eqz v0, :cond_6
 
-    invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->getJid()Lcom/kik/ximodel/XiBareUserJid;
+    invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->b()Lcom/kik/ximodel/XiBareUserJid;
 
     move-result-object v0
 
     .line 335
-    invoke-virtual {p1}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->getJid()Lcom/kik/ximodel/XiBareUserJid;
+    invoke-virtual {p1}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->b()Lcom/kik/ximodel/XiBareUserJid;
 
     move-result-object v3
 
@@ -897,15 +696,13 @@
     :goto_2
     if-eqz v0, :cond_4
 
-    invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->getParticipatingExperimentsList()Ljava/util/List;
+    .line 1234
+    iget-object v0, p0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->participatingExperiments_:Ljava/util/List;
 
-    move-result-object v0
+    .line 2234
+    iget-object v3, p1, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->participatingExperiments_:Ljava/util/List;
 
     .line 338
-    invoke-virtual {p1}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->getParticipatingExperimentsList()Ljava/util/List;
-
-    move-result-object v3
-
     invoke-interface {v0, v3}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -935,11 +732,10 @@
     .locals 1
 
     .prologue
+    .line 7159
+    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->a:Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
+
     .line 101
-    invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->getDefaultInstanceForType()Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-
-    move-result-object v0
-
     return-object v0
 .end method
 
@@ -947,55 +743,10 @@
     .locals 1
 
     .prologue
+    .line 6159
+    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->a:Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
+
     .line 101
-    invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->getDefaultInstanceForType()Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getDefaultInstanceForType()Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-    .locals 1
-
-    .prologue
-    .line 1159
-    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->DEFAULT_INSTANCE:Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-
-    return-object v0
-.end method
-
-.method public final getJid()Lcom/kik/ximodel/XiBareUserJid;
-    .locals 1
-
-    .prologue
-    .line 209
-    iget-object v0, p0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->jid_:Lcom/kik/ximodel/XiBareUserJid;
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Lcom/kik/ximodel/XiBareUserJid;->getDefaultInstance()Lcom/kik/ximodel/XiBareUserJid;
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->jid_:Lcom/kik/ximodel/XiBareUserJid;
-
-    goto :goto_0
-.end method
-
-.method public final getJidOrBuilder()Lcom/kik/ximodel/XiBareUserJidOrBuilder;
-    .locals 1
-
-    .prologue
-    .line 220
-    invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->getJid()Lcom/kik/ximodel/XiBareUserJid;
-
-    move-result-object v0
-
     return-object v0
 .end method
 
@@ -1013,91 +764,7 @@
 
     .prologue
     .line 1155
-    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->PARSER:Lcom/google/protobuf/Parser;
-
-    return-object v0
-.end method
-
-.method public final getParticipatingExperiments(I)Lcom/kik/abtesting/rpc/AbTestingShared$Experiment;
-    .locals 1
-
-    .prologue
-    .line 268
-    iget-object v0, p0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->participatingExperiments_:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/kik/abtesting/rpc/AbTestingShared$Experiment;
-
-    return-object v0
-.end method
-
-.method public final getParticipatingExperimentsCount()I
-    .locals 1
-
-    .prologue
-    .line 257
-    iget-object v0, p0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->participatingExperiments_:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final getParticipatingExperimentsList()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcom/kik/abtesting/rpc/AbTestingShared$Experiment;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 234
-    iget-object v0, p0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->participatingExperiments_:Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method public final getParticipatingExperimentsOrBuilder(I)Lcom/kik/abtesting/rpc/AbTestingShared$a;
-    .locals 1
-
-    .prologue
-    .line 280
-    iget-object v0, p0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->participatingExperiments_:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/kik/abtesting/rpc/AbTestingShared$a;
-
-    return-object v0
-.end method
-
-.method public final getParticipatingExperimentsOrBuilderList()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<+",
-            "Lcom/kik/abtesting/rpc/AbTestingShared$a;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 246
-    iget-object v0, p0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->participatingExperiments_:Ljava/util/List;
+    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->b:Lcom/google/protobuf/Parser;
 
     return-object v0
 .end method
@@ -1130,7 +797,7 @@
     const/4 v0, 0x1
 
     .line 310
-    invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->getJid()Lcom/kik/ximodel/XiBareUserJid;
+    invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->b()Lcom/kik/ximodel/XiBareUserJid;
 
     move-result-object v2
 
@@ -1202,26 +869,6 @@
     return-object v0
 .end method
 
-.method public final hasJid()Z
-    .locals 1
-
-    .prologue
-    .line 198
-    iget-object v0, p0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->jid_:Lcom/kik/ximodel/XiBareUserJid;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
 .method public final hashCode()I
     .locals 2
 
@@ -1251,7 +898,7 @@
     add-int/lit16 v0, v0, 0x30b
 
     .line 349
-    invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->hasJid()Z
+    invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->a()Z
 
     move-result v1
 
@@ -1265,7 +912,7 @@
     .line 351
     mul-int/lit8 v0, v0, 0x35
 
-    invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->getJid()Lcom/kik/ximodel/XiBareUserJid;
+    invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->b()Lcom/kik/ximodel/XiBareUserJid;
 
     move-result-object v1
 
@@ -1275,12 +922,15 @@
 
     add-int/2addr v0, v1
 
-    .line 353
+    .line 2257
     :cond_1
-    invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->getParticipatingExperimentsCount()I
+    iget-object v1, p0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->participatingExperiments_:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v1
 
+    .line 353
     if-lez v1, :cond_2
 
     .line 354
@@ -1291,10 +941,10 @@
     .line 355
     mul-int/lit8 v0, v0, 0x35
 
-    invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->getParticipatingExperimentsList()Ljava/util/List;
+    .line 3234
+    iget-object v1, p0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->participatingExperiments_:Ljava/util/List;
 
-    move-result-object v1
-
+    .line 355
     invoke-interface {v1}, Ljava/util/List;->hashCode()I
 
     move-result v1
@@ -1372,122 +1022,73 @@
     goto :goto_0
 .end method
 
-.method public final bridge synthetic newBuilderForType()Lcom/google/protobuf/Message$Builder;
+.method public final synthetic newBuilderForType()Lcom/google/protobuf/Message$Builder;
     .locals 1
 
     .prologue
+    .line 4423
+    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->a:Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
+
+    invoke-direct {v0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->h()Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
+
+    move-result-object v0
+
     .line 101
-    invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->newBuilderForType()Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
-
-    move-result-object v0
-
     return-object v0
 .end method
 
-.method protected final bridge synthetic newBuilderForType(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)Lcom/google/protobuf/Message$Builder;
-    .locals 1
-
-    .prologue
-    .line 101
-    invoke-virtual {p0, p1}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->newBuilderForType(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final bridge synthetic newBuilderForType()Lcom/google/protobuf/MessageLite$Builder;
-    .locals 1
-
-    .prologue
-    .line 101
-    invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->newBuilderForType()Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final newBuilderForType()Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
-    .locals 1
-
-    .prologue
-    .line 421
-    invoke-static {}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->newBuilder()Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method protected final newBuilderForType(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
+.method protected final synthetic newBuilderForType(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)Lcom/google/protobuf/Message$Builder;
     .locals 2
 
     .prologue
-    .line 436
+    .line 3436
     new-instance v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p1, v1}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;B)V
 
-    .line 437
+    .line 101
     return-object v0
 .end method
 
-.method public final bridge synthetic toBuilder()Lcom/google/protobuf/Message$Builder;
+.method public final synthetic newBuilderForType()Lcom/google/protobuf/MessageLite$Builder;
+    .locals 1
+
+    .prologue
+    .line 5423
+    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->a:Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
+
+    invoke-direct {v0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->h()Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
+
+    move-result-object v0
+
+    .line 101
+    return-object v0
+.end method
+
+.method public final synthetic toBuilder()Lcom/google/protobuf/Message$Builder;
     .locals 1
 
     .prologue
     .line 101
-    invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->toBuilder()Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
+    invoke-direct {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->h()Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final bridge synthetic toBuilder()Lcom/google/protobuf/MessageLite$Builder;
+.method public final synthetic toBuilder()Lcom/google/protobuf/MessageLite$Builder;
     .locals 1
 
     .prologue
     .line 101
-    invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->toBuilder()Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
+    invoke-direct {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->h()Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
 
     move-result-object v0
 
     return-object v0
-.end method
-
-.method public final toBuilder()Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
-    .locals 2
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 429
-    sget-object v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->DEFAULT_INSTANCE:Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;
-
-    if-ne p0, v0, :cond_0
-
-    new-instance v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
-
-    invoke-direct {v0, v1}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;-><init>(B)V
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    new-instance v0, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
-
-    invoke-direct {v0, v1}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;-><init>(B)V
-
-    .line 430
-    invoke-virtual {v0, p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;->a(Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;)Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
-
-    move-result-object v0
-
-    goto :goto_0
 .end method
 
 .method public final writeTo(Lcom/google/protobuf/CodedOutputStream;)V
@@ -1507,7 +1108,7 @@
     .line 296
     const/4 v0, 0x1
 
-    invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->getJid()Lcom/kik/ximodel/XiBareUserJid;
+    invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->b()Lcom/kik/ximodel/XiBareUserJid;
 
     move-result-object v1
 

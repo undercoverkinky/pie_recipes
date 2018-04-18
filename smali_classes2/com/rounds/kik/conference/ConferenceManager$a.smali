@@ -27,16 +27,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 64
+    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
+    .line 66
     iput-boolean v0, p0, Lcom/rounds/kik/conference/ConferenceManager$a;->a:Z
 
-    .line 66
+    .line 67
     iput-boolean v0, p0, Lcom/rounds/kik/conference/ConferenceManager$a;->b:Z
 
-    .line 67
+    .line 68
     return-void
 .end method
 
@@ -46,10 +46,10 @@
     .locals 0
 
     .prologue
-    .line 71
+    .line 72
     iput-boolean p1, p0, Lcom/rounds/kik/conference/ConferenceManager$a;->a:Z
 
-    .line 72
+    .line 73
     return-void
 .end method
 
@@ -59,7 +59,7 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 81
+    .line 82
     iget-boolean v1, p0, Lcom/rounds/kik/conference/ConferenceManager$a;->b:Z
 
     if-nez v1, :cond_0
@@ -68,7 +68,7 @@
 
     if-ne v1, v0, :cond_0
 
-    .line 85
+    .line 86
     :goto_0
     return v0
 
@@ -82,10 +82,10 @@
     .locals 0
 
     .prologue
-    .line 76
+    .line 77
     iput-boolean p1, p0, Lcom/rounds/kik/conference/ConferenceManager$a;->b:Z
 
-    .line 77
+    .line 78
     return-void
 .end method
 
@@ -93,7 +93,7 @@
     .locals 1
 
     .prologue
-    .line 91
+    .line 92
     iget-boolean v0, p0, Lcom/rounds/kik/conference/ConferenceManager$a;->b:Z
 
     return v0

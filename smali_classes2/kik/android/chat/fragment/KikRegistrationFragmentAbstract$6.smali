@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/fragment/KikRegistrationFragmentAbstract$6;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Landroid/os/Bundle;",
         ">;"
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 1054
+    .line 1028
     iput-object p1, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract$6;->a:Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -46,13 +46,13 @@
     .locals 3
 
     .prologue
-    .line 1054
+    .line 1028
     check-cast p1, Landroid/os/Bundle;
 
-    .line 2058
-    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Object;)V
+    .line 2032
+    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Object;)V
 
-    .line 2059
+    .line 2033
     const-string v0, "phone-verification-result"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -71,12 +71,12 @@
     :goto_0
     packed-switch v0, :pswitch_data_0
 
-    .line 2065
+    .line 2039
     :goto_1
     :pswitch_0
     return-void
 
-    .line 2059
+    .line 2033
     :sswitch_0
     const-string v2, "result-success"
 
@@ -116,7 +116,7 @@
 
     goto :goto_0
 
-    .line 2061
+    .line 2035
     :pswitch_1
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract$6;->a:Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;
 
@@ -126,29 +126,29 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->b(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 2062
+    .line 2036
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract$6;->a:Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;
 
-    invoke-static {v0}, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->i(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)V
+    invoke-static {v0}, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)V
 
     goto :goto_1
 
-    .line 2067
+    .line 2041
     :pswitch_2
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract$6;->a:Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;
 
-    invoke-static {v0}, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->m(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Z
+    invoke-static {v0}, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->e(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)Z
 
-    .line 2068
+    .line 2042
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract$6;->a:Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;
 
-    invoke-static {v0}, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->i(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)V
+    invoke-static {v0}, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->a(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)V
 
     goto :goto_1
 
-    .line 2059
+    .line 2033
     nop
 
     :sswitch_data_0

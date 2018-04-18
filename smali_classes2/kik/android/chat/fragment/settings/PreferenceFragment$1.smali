@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 92
+    .line 84
     iput-object p1, p0, Lkik/android/chat/fragment/settings/PreferenceFragment$1;->a:Lkik/android/chat/fragment/settings/PreferenceFragment;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -37,17 +37,17 @@
     .locals 1
 
     .prologue
-    .line 96
+    .line 88
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 105
+    .line 97
     :cond_0
     :goto_0
     return-void
 
-    .line 100
+    .line 92
     :pswitch_0
     iget-object v0, p0, Lkik/android/chat/fragment/settings/PreferenceFragment$1;->a:Lkik/android/chat/fragment/settings/PreferenceFragment;
 
@@ -57,14 +57,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 101
+    .line 93
     iget-object v0, p0, Lkik/android/chat/fragment/settings/PreferenceFragment$1;->a:Lkik/android/chat/fragment/settings/PreferenceFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/settings/PreferenceFragment;->a(Lkik/android/chat/fragment/settings/PreferenceFragment;)V
 
     goto :goto_0
 
-    .line 96
+    .line 88
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

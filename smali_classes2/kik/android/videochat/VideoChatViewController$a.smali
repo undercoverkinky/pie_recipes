@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 932
+    .line 798
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +33,7 @@
     .locals 0
 
     .prologue
-    .line 932
+    .line 798
     invoke-direct {p0}, Lkik/android/videochat/VideoChatViewController$a;-><init>()V
 
     return-void
@@ -43,7 +43,7 @@
     .locals 1
 
     .prologue
-    .line 938
+    .line 804
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
     move-result-object v0
@@ -58,7 +58,7 @@
 
     iput-object v0, p0, Lkik/android/videochat/VideoChatViewController$a;->a:Ljava/lang/String;
 
-    .line 939
+    .line 805
     iget-object v0, p0, Lkik/android/videochat/VideoChatViewController$a;->a:Ljava/lang/String;
 
     return-object v0
@@ -68,24 +68,24 @@
     .locals 2
 
     .prologue
-    .line 932
-    .line 1944
+    .line 798
+    .line 1810
     iget-object v0, p0, Lkik/android/videochat/VideoChatViewController$a;->a:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Lkik/android/videochat/VideoChatViewController$a;->a:Ljava/lang/String;
 
-    .line 1945
+    .line 1811
     :goto_0
     const/4 v1, 0x0
 
     iput-object v1, p0, Lkik/android/videochat/VideoChatViewController$a;->a:Ljava/lang/String;
 
-    .line 932
+    .line 798
     return-object v0
 
-    .line 1944
+    .line 1810
     :cond_0
     invoke-direct {p0}, Lkik/android/videochat/VideoChatViewController$a;->a()Ljava/lang/String;
 
@@ -98,7 +98,7 @@
     .locals 1
 
     .prologue
-    .line 932
+    .line 798
     invoke-direct {p0}, Lkik/android/videochat/VideoChatViewController$a;->a()Ljava/lang/String;
 
     move-result-object v0
@@ -112,7 +112,7 @@
     .locals 1
 
     .prologue
-    .line 952
+    .line 818
     iget-object v0, p0, Lkik/android/videochat/VideoChatViewController$a;->a:Ljava/lang/String;
 
     return-object v0

@@ -48,7 +48,7 @@
 
     const/4 v4, 0x0
 
-    .line 27
+    .line 29
     new-instance v0, Lkik/android/util/NativeGalleryPickerPlatformUtils$DocumentContentType;
 
     const-string v1, "PICTURE"
@@ -63,7 +63,7 @@
 
     sput-object v0, Lkik/android/util/NativeGalleryPickerPlatformUtils$DocumentContentType;->PICTURE:Lkik/android/util/NativeGalleryPickerPlatformUtils$DocumentContentType;
 
-    .line 28
+    .line 30
     new-instance v0, Lkik/android/util/NativeGalleryPickerPlatformUtils$DocumentContentType;
 
     const-string v1, "VIDEO"
@@ -78,7 +78,7 @@
 
     sput-object v0, Lkik/android/util/NativeGalleryPickerPlatformUtils$DocumentContentType;->VIDEO:Lkik/android/util/NativeGalleryPickerPlatformUtils$DocumentContentType;
 
-    .line 29
+    .line 31
     new-instance v0, Lkik/android/util/NativeGalleryPickerPlatformUtils$DocumentContentType;
 
     const-string v1, "ALL"
@@ -97,7 +97,7 @@
 
     sput-object v0, Lkik/android/util/NativeGalleryPickerPlatformUtils$DocumentContentType;->ALL:Lkik/android/util/NativeGalleryPickerPlatformUtils$DocumentContentType;
 
-    .line 26
+    .line 28
     const/4 v0, 0x3
 
     new-array v0, v0, [Lkik/android/util/NativeGalleryPickerPlatformUtils$DocumentContentType;
@@ -130,13 +130,13 @@
     .end annotation
 
     .prologue
-    .line 34
+    .line 36
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 35
+    .line 37
     iput-object p3, p0, Lkik/android/util/NativeGalleryPickerPlatformUtils$DocumentContentType;->contentTypes:[Ljava/lang/String;
 
-    .line 36
+    .line 38
     return-void
 .end method
 
@@ -144,7 +144,7 @@
     .locals 1
 
     .prologue
-    .line 26
+    .line 28
     const-class v0, Lkik/android/util/NativeGalleryPickerPlatformUtils$DocumentContentType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -160,7 +160,7 @@
     .locals 1
 
     .prologue
-    .line 26
+    .line 28
     sget-object v0, Lkik/android/util/NativeGalleryPickerPlatformUtils$DocumentContentType;->$VALUES:[Lkik/android/util/NativeGalleryPickerPlatformUtils$DocumentContentType;
 
     invoke-virtual {v0}, [Lkik/android/util/NativeGalleryPickerPlatformUtils$DocumentContentType;->clone()Ljava/lang/Object;
@@ -178,7 +178,7 @@
     .locals 1
 
     .prologue
-    .line 40
+    .line 42
     iget-object v0, p0, Lkik/android/util/NativeGalleryPickerPlatformUtils$DocumentContentType;->contentTypes:[Ljava/lang/String;
 
     return-object v0
@@ -188,10 +188,10 @@
     .locals 6
 
     .prologue
-    .line 45
+    .line 47
     const-string v1, ""
 
-    .line 46
+    .line 48
     iget-object v2, p0, Lkik/android/util/NativeGalleryPickerPlatformUtils$DocumentContentType;->contentTypes:[Ljava/lang/String;
 
     array-length v3, v2
@@ -203,7 +203,7 @@
 
     aget-object v4, v2, v0
 
-    .line 47
+    .line 49
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -226,12 +226,12 @@
 
     move-result-object v1
 
-    .line 46
+    .line 48
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 50
+    .line 52
     :cond_0
     invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
 

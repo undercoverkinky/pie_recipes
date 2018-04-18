@@ -1,6 +1,9 @@
 .class final Lkik/android/chat/vm/conversations/emptyview/c$1;
-.super Lcom/kik/events/k;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lkik/android/chat/vm/u;
 
 
 # annotations
@@ -13,15 +16,6 @@
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/kik/events/k",
-        "<",
-        "Ljava/lang/Boolean;",
-        ">;"
-    }
-.end annotation
-
 
 # instance fields
 .field final synthetic a:Lkik/android/chat/vm/conversations/emptyview/c;
@@ -32,36 +26,58 @@
     .locals 0
 
     .prologue
-    .line 37
+    .line 36
     iput-object p1, p0, Lkik/android/chat/vm/conversations/emptyview/c$1;->a:Lkik/android/chat/vm/conversations/emptyview/c;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic b(Ljava/lang/Object;)V
-    .locals 2
+.method public final a()Ljava/lang/String;
+    .locals 1
 
     .prologue
-    .line 37
-    check-cast p1, Ljava/lang/Boolean;
+    .line 41
+    const-string v0, "Empty Chat List"
 
-    .line 1041
+    return-object v0
+.end method
+
+.method public final b()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 47
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final c()Z
+    .locals 1
+
+    .prologue
+    .line 53
     iget-object v0, p0, Lkik/android/chat/vm/conversations/emptyview/c$1;->a:Lkik/android/chat/vm/conversations/emptyview/c;
 
-    invoke-static {v0}, Lkik/android/chat/vm/conversations/emptyview/c;->a(Lkik/android/chat/vm/conversations/emptyview/c;)Lkik/android/chat/vm/ay;
+    iget-object v0, v0, Lkik/android/chat/vm/conversations/emptyview/c;->a:Lkik/core/g/c;
 
-    move-result-object v0
+    invoke-interface {v0}, Lkik/core/g/c;->a()Z
 
-    new-instance v1, Lkik/android/chat/vm/conversations/emptyview/c$1$1;
+    move-result v0
 
-    invoke-direct {v1, p0, p1}, Lkik/android/chat/vm/conversations/emptyview/c$1$1;-><init>(Lkik/android/chat/vm/conversations/emptyview/c$1;Ljava/lang/Boolean;)V
+    if-nez v0, :cond_0
 
-    invoke-interface {v0, v1}, Lkik/android/chat/vm/ay;->a(Lkik/android/chat/vm/bd;)V
+    const/4 v0, 0x1
 
-    .line 37
-    return-void
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

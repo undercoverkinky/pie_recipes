@@ -19,10 +19,10 @@
     .locals 0
 
     .prologue
-    .line 2005
+    .line 1881
     invoke-direct {p0}, Lcom/kik/ui/fragment/FragmentBase$FragmentBundle;-><init>()V
 
-    .line 2006
+    .line 1882
     return-void
 .end method
 
@@ -30,11 +30,11 @@
     .locals 1
 
     .prologue
-    .line 1987
-    .line 3125
+    .line 1864
+    .line 3001
     const-string v0, "returnToMissedConvos"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikChatFragment$a;->g(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikChatFragment$a;->k(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -42,7 +42,7 @@
 
     move-result v0
 
-    .line 1987
+    .line 1864
     return v0
 .end method
 
@@ -50,8 +50,8 @@
     .locals 2
 
     .prologue
-    .line 1987
-    .line 3169
+    .line 1864
+    .line 3045
     const-string v0, "KikChatFragment.CardIndex"
 
     const/4 v1, -0x1
@@ -60,7 +60,7 @@
 
     move-result v0
 
-    .line 1987
+    .line 1864
     return v0
 .end method
 
@@ -68,15 +68,15 @@
     .locals 1
 
     .prologue
-    .line 1987
-    .line 4114
+    .line 1864
+    .line 3990
     const-string v0, "chatGroupJID"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikChatFragment$a;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikChatFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1987
+    .line 1864
     return-object v0
 .end method
 
@@ -84,15 +84,15 @@
     .locals 1
 
     .prologue
-    .line 1987
-    .line 5109
+    .line 1864
+    .line 4985
     const-string v0, "chatContactJID"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikChatFragment$a;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikChatFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1987
+    .line 1864
     return-object v0
 .end method
 
@@ -100,11 +100,11 @@
     .locals 1
 
     .prologue
-    .line 1987
-    .line 5136
+    .line 1864
+    .line 5012
     const-string v0, "showKeyBoard"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikChatFragment$a;->g(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikChatFragment$a;->k(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -112,7 +112,7 @@
 
     move-result v0
 
-    .line 1987
+    .line 1864
     return v0
 .end method
 
@@ -120,11 +120,11 @@
     .locals 1
 
     .prologue
-    .line 1987
-    .line 5228
+    .line 1864
+    .line 5104
     const-string v0, "kik.chat.is-forward"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikChatFragment$a;->g(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikChatFragment$a;->k(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -132,7 +132,7 @@
 
     move-result v0
 
-    .line 1987
+    .line 1864
     return v0
 .end method
 
@@ -140,8 +140,8 @@
     .locals 2
 
     .prologue
-    .line 1987
-    .line 6181
+    .line 1864
+    .line 6057
     const-string v0, "kik.chat.close.on.block"
 
     const/4 v1, 0x1
@@ -154,7 +154,7 @@
 
     move-result v0
 
-    .line 1987
+    .line 1864
     return v0
 .end method
 
@@ -164,27 +164,27 @@
     .locals 6
 
     .prologue
-    .line 2011
+    .line 1887
     invoke-super {p0}, Lcom/kik/ui/fragment/FragmentBase$FragmentBundle;->a()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 2014
+    .line 1890
     :try_start_0
     const-string v0, "jid"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikChatFragment$a;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikChatFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
-    .line 2015
+    .line 1891
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2017
+    .line 1893
     invoke-virtual {v1}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v0
@@ -206,19 +206,19 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 2018
+    .line 1894
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
 
     move-result v4
 
     if-lez v4, :cond_0
 
-    .line 2019
+    .line 1895
     const-string v4, ", "
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2021
+    .line 1897
     :cond_0
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -252,17 +252,17 @@
 
     goto :goto_0
 
-    .line 2028
+    .line 1904
     :catch_0
     move-exception v0
 
     invoke-static {v0}, Lcom/crashlytics/android/a;->a(Ljava/lang/Throwable;)V
 
-    .line 2031
+    .line 1907
     :cond_1
     return-object v1
 
-    .line 2024
+    .line 1900
     :cond_2
     :try_start_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
@@ -296,55 +296,55 @@
     .locals 1
 
     .prologue
-    .line 2041
+    .line 1917
     const-string v0, "jid"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2042
+    .line 1918
     return-object p0
 .end method
 
-.method public final a(Lkik/core/datatypes/f;Lkik/core/interfaces/l;)Lkik/android/chat/fragment/KikChatFragment$a;
+.method public final a(Lkik/core/datatypes/f;Lkik/core/interfaces/m;)Lkik/android/chat/fragment/KikChatFragment$a;
     .locals 2
 
     .prologue
-    .line 2063
+    .line 1939
     if-eqz p2, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 2075
+    .line 1951
     :cond_0
     :goto_0
     return-object p0
 
-    .line 2066
+    .line 1942
     :cond_1
-    invoke-virtual {p1}, Lkik/core/datatypes/f;->g()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/f;->d()Ljava/lang/String;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-interface {p2, v0, v1}, Lkik/core/interfaces/l;->a(Ljava/lang/String;Z)Lkik/core/datatypes/p;
+    invoke-interface {p2, v0, v1}, Lkik/core/interfaces/m;->a(Ljava/lang/String;Z)Lkik/core/datatypes/s;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    .line 2067
+    .line 1943
     const-string v0, "chatGroupJID"
 
-    invoke-virtual {p1}, Lkik/core/datatypes/f;->g()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/f;->d()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2073
+    .line 1949
     :goto_1
-    invoke-virtual {p1}, Lkik/core/datatypes/f;->g()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/f;->d()Ljava/lang/String;
 
     move-result-object v0
 
@@ -352,11 +352,11 @@
 
     goto :goto_0
 
-    .line 2070
+    .line 1946
     :cond_2
     const-string v0, "chatContactJID"
 
-    invoke-virtual {p1}, Lkik/core/datatypes/f;->g()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/f;->d()Ljava/lang/String;
 
     move-result-object v1
 
@@ -365,30 +365,30 @@
     goto :goto_1
 .end method
 
-.method public final a(Lkik/core/datatypes/l;)Lkik/android/chat/fragment/KikChatFragment$a;
+.method public final a(Lkik/core/datatypes/o;)Lkik/android/chat/fragment/KikChatFragment$a;
     .locals 2
 
     .prologue
-    .line 2089
+    .line 1965
     if-eqz p1, :cond_0
 
-    .line 2090
+    .line 1966
     const-string v0, "chatContactJID"
 
-    invoke-virtual {p1}, Lkik/core/datatypes/l;->k()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/o;->b()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2091
-    invoke-virtual {p1}, Lkik/core/datatypes/l;->k()Ljava/lang/String;
+    .line 1967
+    invoke-virtual {p1}, Lkik/core/datatypes/o;->b()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Ljava/lang/String;)Lkik/android/chat/fragment/KikChatFragment$a;
 
-    .line 2093
+    .line 1969
     :cond_0
     return-object p0
 .end method
@@ -397,12 +397,12 @@
     .locals 1
 
     .prologue
-    .line 2098
+    .line 1974
     const-string v0, "kik.chat.should-join-conference"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikChatFragment$a;->b(Ljava/lang/String;Z)V
 
-    .line 2099
+    .line 1975
     return-object p0
 .end method
 
@@ -410,30 +410,46 @@
     .locals 1
 
     .prologue
-    .line 2233
+    .line 2109
     const-string v0, "kik.chat.add-to-roster"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikChatFragment$a;->b(Ljava/lang/String;Z)V
 
-    .line 2234
+    .line 2110
     const-string v0, "kik.chat.add-to-roster-source"
 
     invoke-virtual {p0, v0, p2}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2235
+    .line 2111
     return-object p0
+.end method
+
+.method public final b()Ljava/lang/String;
+    .locals 2
+
+    .prologue
+    .line 1929
+    const-string v0, "kik.chat.origin"
+
+    const-string v1, "kik.chat.origin.unknown"
+
+    invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/KikChatFragment$a;->b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method public final b(Ljava/lang/String;)Lkik/android/chat/fragment/KikChatFragment$a;
     .locals 1
 
     .prologue
-    .line 2047
+    .line 1923
     const-string v0, "kik.chat.origin"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2048
+    .line 1924
     return-object p0
 .end method
 
@@ -441,23 +457,56 @@
     .locals 1
 
     .prologue
-    .line 2130
+    .line 2006
     const-string v0, "showKeyBoard"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikChatFragment$a;->b(Ljava/lang/String;Z)V
 
-    .line 2131
+    .line 2007
     return-object p0
 .end method
 
-.method public final b()Z
+.method public final c(Ljava/lang/String;)Lkik/android/chat/fragment/KikChatFragment$a;
     .locals 1
 
     .prologue
-    .line 2104
+    .line 1956
+    if-eqz p1, :cond_0
+
+    .line 1957
+    const-string v0, "chatContactJID"
+
+    invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1958
+    invoke-virtual {p0, p1}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Ljava/lang/String;)Lkik/android/chat/fragment/KikChatFragment$a;
+
+    .line 1960
+    :cond_0
+    return-object p0
+.end method
+
+.method public final c(Z)Lkik/android/chat/fragment/KikChatFragment$a;
+    .locals 1
+
+    .prologue
+    .line 2017
+    const-string v0, "kikchatPluginOpenedDirectly"
+
+    invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikChatFragment$a;->b(Ljava/lang/String;Z)V
+
+    .line 2018
+    return-object p0
+.end method
+
+.method public final c()Z
+    .locals 1
+
+    .prologue
+    .line 1980
     const-string v0, "kik.chat.should-join-conference"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikChatFragment$a;->g(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikChatFragment$a;->k(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -468,51 +517,18 @@
     return v0
 .end method
 
-.method public final c()Lkik/android/chat/fragment/KikChatFragment$a;
+.method public final d()Lkik/android/chat/fragment/KikChatFragment$a;
     .locals 2
 
     .prologue
-    .line 2119
+    .line 1995
     const-string v0, "returnToMissedConvos"
 
     const/4 v1, 0x1
 
     invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/KikChatFragment$a;->b(Ljava/lang/String;Z)V
 
-    .line 2120
-    return-object p0
-.end method
-
-.method public final c(Ljava/lang/String;)Lkik/android/chat/fragment/KikChatFragment$a;
-    .locals 1
-
-    .prologue
-    .line 2080
-    if-eqz p1, :cond_0
-
-    .line 2081
-    const-string v0, "chatContactJID"
-
-    invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 2082
-    invoke-virtual {p0, p1}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Ljava/lang/String;)Lkik/android/chat/fragment/KikChatFragment$a;
-
-    .line 2084
-    :cond_0
-    return-object p0
-.end method
-
-.method public final c(Z)Lkik/android/chat/fragment/KikChatFragment$a;
-    .locals 1
-
-    .prologue
-    .line 2141
-    const-string v0, "kikchatPluginOpenedDirectly"
-
-    invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikChatFragment$a;->b(Ljava/lang/String;Z)V
-
-    .line 2142
+    .line 1996
     return-object p0
 .end method
 
@@ -520,12 +536,12 @@
     .locals 1
 
     .prologue
-    .line 2186
+    .line 2062
     const-string v0, "name"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2187
+    .line 2063
     return-object p0
 .end method
 
@@ -533,20 +549,46 @@
     .locals 1
 
     .prologue
-    .line 2152
+    .line 2028
     const-string v0, "skipTalkToCover"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikChatFragment$a;->b(Ljava/lang/String;Z)V
 
-    .line 2153
+    .line 2029
     return-object p0
 .end method
 
-.method public final d()Z
+.method public final e(Ljava/lang/String;)Lkik/android/chat/fragment/KikChatFragment$a;
+    .locals 1
+
+    .prologue
+    .line 2073
+    const-string v0, "url"
+
+    invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2074
+    return-object p0
+.end method
+
+.method public final e(Z)Lkik/android/chat/fragment/KikChatFragment$a;
+    .locals 1
+
+    .prologue
+    .line 2050
+    const-string v0, "kik.chat.close.on.block"
+
+    invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikChatFragment$a;->b(Ljava/lang/String;Z)V
+
+    .line 2051
+    return-object p0
+.end method
+
+.method public final e()Z
     .locals 2
 
     .prologue
-    .line 2158
+    .line 2034
     const-string v0, "skipTalkToCover"
 
     const/4 v1, 0x0
@@ -562,11 +604,65 @@
     return v0
 .end method
 
-.method public final e()Ljava/lang/String;
+.method public final f()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 2068
+    const-string v0, "name"
+
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikChatFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final f(Ljava/lang/String;)Lkik/android/chat/fragment/KikChatFragment$a;
+    .locals 1
+
+    .prologue
+    .line 2090
+    const-string v0, "kik.chat.source"
+
+    invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2091
+    return-object p0
+.end method
+
+.method public final f(Z)Lkik/android/chat/fragment/KikChatFragment$a;
+    .locals 1
+
+    .prologue
+    .line 2084
+    const-string v0, "kik.chat.is-forward"
+
+    invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikChatFragment$a;->b(Ljava/lang/String;Z)V
+
+    .line 2085
+    return-object p0
+.end method
+
+.method public final g()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 2079
+    const-string v0, "url"
+
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikChatFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final h()Ljava/lang/String;
     .locals 2
 
     .prologue
-    .line 2223
+    .line 2099
     const-string v0, "kik.chat.source"
 
     const/4 v1, 0x0
@@ -578,66 +674,14 @@
     return-object v0
 .end method
 
-.method public final e(Ljava/lang/String;)Lkik/android/chat/fragment/KikChatFragment$a;
+.method public final j()Z
     .locals 1
 
     .prologue
-    .line 2197
-    const-string v0, "url"
-
-    invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 2198
-    return-object p0
-.end method
-
-.method public final e(Z)Lkik/android/chat/fragment/KikChatFragment$a;
-    .locals 1
-
-    .prologue
-    .line 2174
-    const-string v0, "kik.chat.close.on.block"
-
-    invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikChatFragment$a;->b(Ljava/lang/String;Z)V
-
-    .line 2175
-    return-object p0
-.end method
-
-.method public final f(Ljava/lang/String;)Lkik/android/chat/fragment/KikChatFragment$a;
-    .locals 1
-
-    .prologue
-    .line 2214
-    const-string v0, "kik.chat.source"
-
-    invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 2215
-    return-object p0
-.end method
-
-.method public final f(Z)Lkik/android/chat/fragment/KikChatFragment$a;
-    .locals 1
-
-    .prologue
-    .line 2208
-    const-string v0, "kik.chat.is-forward"
-
-    invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikChatFragment$a;->b(Ljava/lang/String;Z)V
-
-    .line 2209
-    return-object p0
-.end method
-
-.method public final f()Z
-    .locals 1
-
-    .prologue
-    .line 2240
+    .line 2116
     const-string v0, "kik.chat.add-to-roster"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikChatFragment$a;->g(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikChatFragment$a;->k(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -648,51 +692,16 @@
     return v0
 .end method
 
-.method public final g()Ljava/lang/String;
+.method public final k()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 2245
+    .line 2121
     const-string v0, "kik.chat.add-to-roster-source"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikChatFragment$a;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikChatFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-.end method
-
-.method public final h()Lkik/android/chat/fragment/KikChatFragment$a;
-    .locals 2
-
-    .prologue
-    .line 2250
-    const-string v0, "kik.chat.from.convo.list"
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/KikChatFragment$a;->b(Ljava/lang/String;Z)V
-
-    .line 2251
-    return-object p0
-.end method
-
-.method public final j()Z
-    .locals 2
-
-    .prologue
-    .line 2256
-    const-string v0, "kik.chat.from.convo.list"
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/KikChatFragment$a;->c(Ljava/lang/String;Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    return v0
 .end method

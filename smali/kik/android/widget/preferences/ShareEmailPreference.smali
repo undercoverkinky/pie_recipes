@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field a:Lkik/core/interfaces/ag;
+.field a:Lkik/core/interfaces/af;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
@@ -50,7 +50,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f090365
+    const v1, 0x7f0a0351
 
     invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikScopedDialogFragment;->getString(I)Ljava/lang/String;
 
@@ -58,13 +58,13 @@
 
     new-array v1, v3, [Ljava/lang/Object;
 
-    iget-object v2, p0, Lkik/android/widget/preferences/ShareEmailPreference;->a:Lkik/core/interfaces/ag;
+    iget-object v2, p0, Lkik/android/widget/preferences/ShareEmailPreference;->a:Lkik/core/interfaces/af;
 
-    invoke-interface {v2}, Lkik/core/interfaces/ag;->d()Lkik/core/datatypes/aa;
+    invoke-interface {v2}, Lkik/core/interfaces/af;->d()Lkik/core/datatypes/ad;
 
     move-result-object v2
 
-    iget-object v2, v2, Lkik/core/datatypes/aa;->c:Ljava/lang/String;
+    iget-object v2, v2, Lkik/core/datatypes/ad;->c:Ljava/lang/String;
 
     aput-object v2, v1, v4
 
@@ -77,7 +77,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f09036a
+    const v2, 0x7f0a0356
 
     invoke-virtual {v1, v2}, Lkik/android/chat/fragment/KikScopedDialogFragment;->getString(I)Ljava/lang/String;
 
@@ -85,13 +85,13 @@
 
     new-array v2, v3, [Ljava/lang/Object;
 
-    iget-object v3, p0, Lkik/android/widget/preferences/ShareEmailPreference;->a:Lkik/core/interfaces/ag;
+    iget-object v3, p0, Lkik/android/widget/preferences/ShareEmailPreference;->a:Lkik/core/interfaces/af;
 
-    invoke-interface {v3}, Lkik/core/interfaces/ag;->d()Lkik/core/datatypes/aa;
+    invoke-interface {v3}, Lkik/core/interfaces/af;->d()Lkik/core/datatypes/ad;
 
     move-result-object v3
 
-    iget-object v3, v3, Lkik/core/datatypes/aa;->c:Ljava/lang/String;
+    iget-object v3, v3, Lkik/core/datatypes/ad;->c:Ljava/lang/String;
 
     aput-object v3, v2, v4
 
@@ -118,7 +118,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f090369
+    const v3, 0x7f0a0355
 
     invoke-virtual {v2, v3}, Lkik/android/chat/fragment/KikScopedDialogFragment;->getString(I)Ljava/lang/String;
 

@@ -4,10 +4,6 @@
 
 
 # annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x15
-.end annotation
-
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/support/v4/widget/DrawerLayoutCompatApi21$InsetsListener;
@@ -24,7 +20,7 @@
     .locals 3
 
     .prologue
-    .line 37
+    .line 33
     const/4 v0, 0x1
 
     new-array v0, v0, [I
@@ -44,10 +40,10 @@
     .locals 0
 
     .prologue
-    .line 35
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 90
+    .line 86
     return-void
 .end method
 
@@ -57,20 +53,19 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 63
+    .line 59
     check-cast p1, Landroid/view/WindowInsets;
 
-    .line 64
+    .line 60
     const/4 v0, 0x3
 
     if-ne p2, v0, :cond_1
 
-    .line 65
+    .line 61
     invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetLeft()I
 
     move-result v0
 
-    .line 66
     invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetTop()I
 
     move-result v1
@@ -79,12 +74,11 @@
 
     move-result v2
 
-    .line 65
     invoke-virtual {p1, v0, v1, v3, v2}, Landroid/view/WindowInsets;->replaceSystemWindowInsets(IIII)Landroid/view/WindowInsets;
 
     move-result-object p1
 
-    .line 71
+    .line 67
     :cond_0
     :goto_0
     invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetLeft()I
@@ -93,42 +87,41 @@
 
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    .line 72
+    .line 68
     invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetTop()I
 
     move-result v0
 
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    .line 73
+    .line 69
     invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetRight()I
 
     move-result v0
 
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
-    .line 74
+    .line 70
     invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetBottom()I
 
     move-result v0
 
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    .line 75
+    .line 71
     return-void
 
-    .line 67
+    .line 63
     :cond_1
     const/4 v0, 0x5
 
     if-ne p2, v0, :cond_0
 
-    .line 68
+    .line 64
     invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetTop()I
 
     move-result v0
 
-    .line 69
     invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetRight()I
 
     move-result v1
@@ -137,7 +130,6 @@
 
     move-result v2
 
-    .line 68
     invoke-virtual {p1, v3, v0, v1, v2}, Landroid/view/WindowInsets;->replaceSystemWindowInsets(IIII)Landroid/view/WindowInsets;
 
     move-result-object p1
@@ -149,24 +141,24 @@
     .locals 1
 
     .prologue
-    .line 42
+    .line 38
     instance-of v0, p0, Landroid/support/v4/widget/DrawerLayoutImpl;
 
     if-eqz v0, :cond_0
 
-    .line 43
+    .line 39
     new-instance v0, Landroid/support/v4/widget/DrawerLayoutCompatApi21$InsetsListener;
 
     invoke-direct {v0}, Landroid/support/v4/widget/DrawerLayoutCompatApi21$InsetsListener;-><init>()V
 
     invoke-virtual {p0, v0}, Landroid/view/View;->setOnApplyWindowInsetsListener(Landroid/view/View$OnApplyWindowInsetsListener;)V
 
-    .line 44
+    .line 40
     const/16 v0, 0x500
 
     invoke-virtual {p0, v0}, Landroid/view/View;->setSystemUiVisibility(I)V
 
-    .line 47
+    .line 43
     :cond_0
     return-void
 .end method
@@ -177,20 +169,19 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 50
+    .line 46
     check-cast p1, Landroid/view/WindowInsets;
 
-    .line 51
+    .line 47
     const/4 v0, 0x3
 
     if-ne p2, v0, :cond_1
 
-    .line 52
+    .line 48
     invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetLeft()I
 
     move-result v0
 
-    .line 53
     invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetTop()I
 
     move-result v1
@@ -199,31 +190,29 @@
 
     move-result v2
 
-    .line 52
     invoke-virtual {p1, v0, v1, v3, v2}, Landroid/view/WindowInsets;->replaceSystemWindowInsets(IIII)Landroid/view/WindowInsets;
 
     move-result-object p1
 
-    .line 58
+    .line 54
     :cond_0
     :goto_0
     invoke-virtual {p0, p1}, Landroid/view/View;->dispatchApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
 
-    .line 59
+    .line 55
     return-void
 
-    .line 54
+    .line 50
     :cond_1
     const/4 v0, 0x5
 
     if-ne p2, v0, :cond_0
 
-    .line 55
+    .line 51
     invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetTop()I
 
     move-result v0
 
-    .line 56
     invoke-virtual {p1}, Landroid/view/WindowInsets;->getSystemWindowInsetRight()I
 
     move-result v1
@@ -232,7 +221,6 @@
 
     move-result v2
 
-    .line 55
     invoke-virtual {p1, v3, v0, v1, v2}, Landroid/view/WindowInsets;->replaceSystemWindowInsets(IIII)Landroid/view/WindowInsets;
 
     move-result-object p1
@@ -244,14 +232,14 @@
     .locals 2
 
     .prologue
-    .line 82
+    .line 78
     sget-object v0, Landroid/support/v4/widget/DrawerLayoutCompatApi21;->THEME_ATTRS:[I
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 84
+    .line 80
     const/4 v1, 0x0
 
     :try_start_0
@@ -261,7 +249,7 @@
 
     move-result-object v1
 
-    .line 86
+    .line 82
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
     return-object v1
@@ -278,7 +266,7 @@
     .locals 1
 
     .prologue
-    .line 78
+    .line 74
     if-eqz p0, :cond_0
 
     check-cast p0, Landroid/view/WindowInsets;

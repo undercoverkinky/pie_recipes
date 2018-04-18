@@ -12,7 +12,7 @@
     packed-switch p0, :pswitch_data_0
 
     .line 31
-    const v0, 0x7f0900fd
+    const v0, 0x7f0a00fc
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
@@ -23,7 +23,7 @@
 
     .line 21
     :pswitch_0
-    const v0, 0x7f0900fe
+    const v0, 0x7f0a00fd
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 

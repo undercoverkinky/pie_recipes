@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lrx/functions/g;
+.implements Lrx/b/f;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/cache/s;->a(Lcom/kik/cache/s;IILkik/core/datatypes/p;)Lrx/d;
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/kik/cache/s;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lrx/functions/g",
+        "Lrx/b/f",
         "<",
         "Landroid/graphics/Bitmap;",
         "Landroid/graphics/Bitmap;",
@@ -31,7 +31,7 @@
 # instance fields
 .field a:Z
 
-.field final synthetic b:Lkik/core/datatypes/p;
+.field final synthetic b:Lkik/core/datatypes/s;
 
 .field final synthetic c:I
 
@@ -41,14 +41,14 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/kik/cache/s;Lkik/core/datatypes/p;II)V
+.method constructor <init>(Lcom/kik/cache/s;Lkik/core/datatypes/s;II)V
     .locals 1
 
     .prologue
-    .line 101
+    .line 97
     iput-object p1, p0, Lcom/kik/cache/s$1;->e:Lcom/kik/cache/s;
 
-    iput-object p2, p0, Lcom/kik/cache/s$1;->b:Lkik/core/datatypes/p;
+    iput-object p2, p0, Lcom/kik/cache/s$1;->b:Lkik/core/datatypes/s;
 
     iput p3, p0, Lcom/kik/cache/s$1;->c:I
 
@@ -56,7 +56,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 102
+    .line 98
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/kik/cache/s$1;->a:Z
@@ -70,35 +70,35 @@
     .locals 4
 
     .prologue
-    .line 101
+    .line 97
     check-cast p1, Landroid/graphics/Bitmap;
 
-    .line 1108
+    .line 1104
     if-nez p1, :cond_0
 
     iget-boolean v0, p0, Lcom/kik/cache/s$1;->a:Z
 
     if-eqz v0, :cond_0
 
-    .line 1109
+    .line 1105
     iget-object v0, p0, Lcom/kik/cache/s$1;->e:Lcom/kik/cache/s;
 
-    iget-object v1, p0, Lcom/kik/cache/s$1;->b:Lkik/core/datatypes/p;
+    iget-object v1, p0, Lcom/kik/cache/s$1;->b:Lkik/core/datatypes/s;
 
     iget v2, p0, Lcom/kik/cache/s$1;->c:I
 
     iget v3, p0, Lcom/kik/cache/s$1;->d:I
 
-    invoke-static {v0, v1, v2, v3}, Lcom/kik/cache/s;->a(Lcom/kik/cache/s;Lkik/core/datatypes/p;II)Landroid/graphics/Bitmap;
+    invoke-static {v0, v1, v2, v3}, Lcom/kik/cache/s;->a(Lcom/kik/cache/s;Lkik/core/datatypes/s;II)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
-    .line 1111
+    .line 1107
     :cond_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/kik/cache/s$1;->a:Z
 
-    .line 101
+    .line 97
     return-object p1
 .end method

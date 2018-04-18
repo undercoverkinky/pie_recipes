@@ -1,114 +1,71 @@
-.class public final Lkik/android/net/http/g;
-.super Ljava/lang/Object;
+.class public abstract Lkik/android/net/http/g;
+.super Lorg/apache/http/client/methods/HttpEntityEnclosingRequestBase;
 .source "SourceFile"
-
-# interfaces
-.implements Lkik/android/net/http/c;
-
-
-# instance fields
-.field private final a:Ljava/io/RandomAccessFile;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;Ljava/lang/String;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
+.method public constructor <init>(Ljava/lang/String;Lkik/core/x;)V
+    .locals 2
 
     .prologue
-    .line 22
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 15
+    invoke-direct {p0}, Lorg/apache/http/client/methods/HttpEntityEnclosingRequestBase;-><init>()V
 
-    .line 23
-    new-instance v0, Ljava/io/RandomAccessFile;
+    .line 16
+    invoke-static {p1}, Ljava/net/URI;->create(Ljava/lang/String;)Ljava/net/URI;
 
-    invoke-direct {v0, p1, p2}, Ljava/io/RandomAccessFile;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    move-result-object v0
 
-    iput-object v0, p0, Lkik/android/net/http/g;->a:Ljava/io/RandomAccessFile;
+    invoke-virtual {p0, v0}, Lkik/android/net/http/g;->setURI(Ljava/net/URI;)V
 
-    .line 24
+    .line 18
+    const-string v0, "x-kik-jid"
+
+    invoke-virtual {p2}, Lkik/core/x;->a()Lkik/core/datatypes/n;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lkik/core/datatypes/n;->a()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v0, v1}, Lkik/android/net/http/g;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 19
+    const-string v0, "x-kik-password"
+
+    invoke-virtual {p2}, Lkik/core/x;->b()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v0, v1}, Lkik/android/net/http/g;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 20
     return-void
 .end method
 
 
 # virtual methods
-.method public final a([BI)I
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;,
-            Lkik/core/net/EncryptionException;
-        }
-    .end annotation
-
-    .prologue
-    .line 29
-    iget-object v0, p0, Lkik/android/net/http/g;->a:Ljava/io/RandomAccessFile;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p1, v1, p2}, Ljava/io/RandomAccessFile;->read([BII)I
-
-    move-result v0
-
-    return v0
-.end method
-
 .method public final a()V
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .prologue
-    .line 35
-    iget-object v0, p0, Lkik/android/net/http/g;->a:Ljava/io/RandomAccessFile;
-
-    invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
-
-    .line 36
-    return-void
-.end method
-
-.method public final a(J)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .prologue
-    .line 41
-    iget-object v0, p0, Lkik/android/net/http/g;->a:Ljava/io/RandomAccessFile;
-
-    invoke-virtual {v0, p1, p2}, Ljava/io/RandomAccessFile;->seek(J)V
-
-    .line 42
-    return-void
-.end method
-
-.method public final b()J
     .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     .prologue
-    .line 47
-    iget-object v0, p0, Lkik/android/net/http/g;->a:Ljava/io/RandomAccessFile;
+    const/16 v1, 0x4e20
 
-    invoke-virtual {v0}, Ljava/io/RandomAccessFile;->length()J
+    .line 28
+    invoke-virtual {p0}, Lkik/android/net/http/g;->getParams()Lorg/apache/http/params/HttpParams;
 
-    move-result-wide v0
+    move-result-object v0
 
-    return-wide v0
+    .line 29
+    invoke-static {v0, v1}, Lorg/apache/http/params/HttpConnectionParams;->setSoTimeout(Lorg/apache/http/params/HttpParams;I)V
+
+    .line 30
+    invoke-static {v0, v1}, Lorg/apache/http/params/HttpConnectionParams;->setConnectionTimeout(Lorg/apache/http/params/HttpParams;I)V
+
+    .line 31
+    invoke-virtual {p0, v0}, Lkik/android/net/http/g;->setParams(Lorg/apache/http/params/HttpParams;)V
+
+    .line 32
+    return-void
 .end method

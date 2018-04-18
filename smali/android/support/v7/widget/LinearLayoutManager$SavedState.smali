@@ -31,11 +31,11 @@
 
 
 # instance fields
-.field mAnchorLayoutFromEnd:Z
+.field a:I
 
-.field mAnchorOffset:I
+.field b:I
 
-.field mAnchorPosition:I
+.field c:Z
 
 
 # direct methods
@@ -43,7 +43,7 @@
     .locals 1
 
     .prologue
-    .line 2349
+    .line 2118
     new-instance v0, Landroid/support/v7/widget/LinearLayoutManager$SavedState$1;
 
     invoke-direct {v0}, Landroid/support/v7/widget/LinearLayoutManager$SavedState$1;-><init>()V
@@ -57,10 +57,10 @@
     .locals 0
 
     .prologue
-    .line 2313
+    .line 2082
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2315
+    .line 2084
     return-void
 .end method
 
@@ -70,24 +70,24 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 2317
+    .line 2086
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2318
+    .line 2087
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    iput v1, p0, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->mAnchorPosition:I
+    iput v1, p0, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->a:I
 
-    .line 2319
+    .line 2088
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    iput v1, p0, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->mAnchorOffset:I
+    iput v1, p0, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->b:I
 
-    .line 2320
+    .line 2089
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -95,12 +95,12 @@
     if-ne v1, v0, :cond_0
 
     :goto_0
-    iput-boolean v0, p0, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->mAnchorLayoutFromEnd:Z
+    iput-boolean v0, p0, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->c:Z
 
-    .line 2321
+    .line 2090
     return-void
 
-    .line 2320
+    .line 2089
     :cond_0
     const/4 v0, 0x0
 
@@ -111,46 +111,36 @@
     .locals 1
 
     .prologue
-    .line 2323
+    .line 2092
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2324
-    iget v0, p1, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->mAnchorPosition:I
+    .line 2093
+    iget v0, p1, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->a:I
 
-    iput v0, p0, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->mAnchorPosition:I
+    iput v0, p0, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->a:I
 
-    .line 2325
-    iget v0, p1, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->mAnchorOffset:I
+    .line 2094
+    iget v0, p1, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->b:I
 
-    iput v0, p0, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->mAnchorOffset:I
+    iput v0, p0, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->b:I
 
-    .line 2326
-    iget-boolean v0, p1, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->mAnchorLayoutFromEnd:Z
+    .line 2095
+    iget-boolean v0, p1, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->c:Z
 
-    iput-boolean v0, p0, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->mAnchorLayoutFromEnd:Z
+    iput-boolean v0, p0, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->c:Z
 
-    .line 2327
+    .line 2096
     return-void
 .end method
 
 
 # virtual methods
-.method public describeContents()I
+.method final a()Z
     .locals 1
 
     .prologue
-    .line 2339
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method hasValidAnchor()Z
-    .locals 1
-
-    .prologue
-    .line 2330
-    iget v0, p0, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->mAnchorPosition:I
+    .line 2099
+    iget v0, p0, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->a:I
 
     if-ltz v0, :cond_0
 
@@ -165,35 +155,32 @@
     goto :goto_0
 .end method
 
-.method invalidateAnchor()V
+.method public describeContents()I
     .locals 1
 
     .prologue
-    .line 2334
-    const/4 v0, -0x1
+    .line 2108
+    const/4 v0, 0x0
 
-    iput v0, p0, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->mAnchorPosition:I
-
-    .line 2335
-    return-void
+    return v0
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
     .prologue
-    .line 2344
-    iget v0, p0, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->mAnchorPosition:I
+    .line 2113
+    iget v0, p0, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->a:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2345
-    iget v0, p0, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->mAnchorOffset:I
+    .line 2114
+    iget v0, p0, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->b:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2346
-    iget-boolean v0, p0, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->mAnchorLayoutFromEnd:Z
+    .line 2115
+    iget-boolean v0, p0, Landroid/support/v7/widget/LinearLayoutManager$SavedState;->c:Z
 
     if-eqz v0, :cond_0
 
@@ -202,10 +189,10 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2347
+    .line 2116
     return-void
 
-    .line 2346
+    .line 2115
     :cond_0
     const/4 v0, 0x0
 

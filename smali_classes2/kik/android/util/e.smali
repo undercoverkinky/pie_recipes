@@ -1,5 +1,5 @@
 .class public final Lkik/android/util/e;
-.super Lkik/core/util/c;
+.super Lkik/core/util/d;
 .source "SourceFile"
 
 
@@ -11,7 +11,7 @@
     const/4 v0, 0x1
 
     .line 49
-    .line 1030
+    .line 1027
     if-nez p0, :cond_2
 
     .line 49
@@ -24,7 +24,7 @@
     :goto_1
     return-void
 
-    .line 1033
+    .line 1030
     :cond_2
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
@@ -83,6 +83,8 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
+    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
+
     goto :goto_1
 .end method
 
@@ -122,7 +124,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {p1, v1, v2}, Lkik/core/util/c;->a(Ljava/io/File;ZLorg/slf4j/b;)Z
+    invoke-static {p1, v1, v2}, Lkik/core/util/d;->a(Ljava/io/File;ZLorg/slf4j/b;)Z
 
     .line 29
     :cond_2

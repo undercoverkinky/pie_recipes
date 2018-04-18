@@ -19,7 +19,7 @@
     .locals 1
 
     .prologue
-    .line 92
+    .line 90
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/common/hash/BloomFilterStrategies;-><init>(Ljava/lang/String;ILcom/google/common/hash/BloomFilterStrategies$1;)V
@@ -31,7 +31,7 @@
     .locals 8
 
     .prologue
-    .line 131
+    .line 129
     const/4 v0, 0x7
 
     aget-byte v0, p1, v0
@@ -75,7 +75,7 @@
     .locals 8
 
     .prologue
-    .line 136
+    .line 134
     const/16 v0, 0xf
 
     aget-byte v0, p1, v0
@@ -134,12 +134,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 114
+    .line 112
     invoke-virtual {p4}, Lcom/google/common/hash/BloomFilterStrategies$a;->a()J
 
     move-result-wide v4
 
-    .line 115
+    .line 113
     invoke-static {}, Lcom/google/common/hash/f;->a()Lcom/google/common/hash/d;
 
     move-result-object v1
@@ -152,23 +152,23 @@
 
     move-result-object v1
 
-    .line 116
+    .line 114
     invoke-direct {p0, v1}, Lcom/google/common/hash/BloomFilterStrategies$2;->lowerEight([B)J
 
     move-result-wide v2
 
-    .line 117
+    .line 115
     invoke-direct {p0, v1}, Lcom/google/common/hash/BloomFilterStrategies$2;->upperEight([B)J
 
     move-result-wide v6
 
     move v1, v0
 
-    .line 120
+    .line 118
     :goto_0
     if-ge v1, p3, :cond_1
 
-    .line 122
+    .line 120
     const-wide v8, 0x7fffffffffffffffL
 
     and-long/2addr v8, v2
@@ -181,20 +181,20 @@
 
     if-nez v8, :cond_0
 
-    .line 127
+    .line 125
     :goto_1
     return v0
 
-    .line 125
+    .line 123
     :cond_0
     add-long/2addr v2, v6
 
-    .line 120
+    .line 118
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 127
+    .line 125
     :cond_1
     const/4 v0, 0x1
 
@@ -218,12 +218,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 96
+    .line 94
     invoke-virtual {p4}, Lcom/google/common/hash/BloomFilterStrategies$a;->a()J
 
     move-result-wide v4
 
-    .line 97
+    .line 95
     invoke-static {}, Lcom/google/common/hash/f;->a()Lcom/google/common/hash/d;
 
     move-result-object v0
@@ -236,23 +236,23 @@
 
     move-result-object v3
 
-    .line 98
+    .line 96
     invoke-direct {p0, v3}, Lcom/google/common/hash/BloomFilterStrategies$2;->lowerEight([B)J
 
     move-result-wide v0
 
-    .line 99
+    .line 97
     invoke-direct {p0, v3}, Lcom/google/common/hash/BloomFilterStrategies$2;->upperEight([B)J
 
     move-result-wide v6
 
     move v3, v2
 
-    .line 103
+    .line 101
     :goto_0
     if-ge v2, p3, :cond_0
 
-    .line 105
+    .line 103
     const-wide v8, 0x7fffffffffffffffL
 
     and-long/2addr v8, v0
@@ -265,15 +265,15 @@
 
     or-int/2addr v3, v8
 
-    .line 106
+    .line 104
     add-long/2addr v0, v6
 
-    .line 103
+    .line 101
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 108
+    .line 106
     :cond_0
     return v3
 .end method

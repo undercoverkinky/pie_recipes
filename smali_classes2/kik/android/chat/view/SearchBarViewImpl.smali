@@ -5,41 +5,36 @@
 # interfaces
 .implements Landroid/text/TextWatcher;
 .implements Landroid/view/View$OnFocusChangeListener;
-.implements Lkik/android/chat/view/aj;
-.implements Lkik/core/interfaces/ai;
+.implements Lkik/android/chat/view/aa;
+.implements Lkik/core/interfaces/ah;
 
 
 # instance fields
 .field _clearSearch:Landroid/view/View;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f1003c4
-    .end annotation
-.end field
-
-.field _searchField:Lkik/android/widget/RobotoEditText;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f1003c3
-    .end annotation
-.end field
-
-.field _searchIconView:Landroid/widget/ImageView;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f1003c2
-    .end annotation
-.end field
-
-.field private a:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
+    .annotation build Lbutterknife/Bind;
         value = {
-            "Ljava/util/List",
-            "<",
-            "Lkik/android/chat/view/aj$a;",
-            ">;"
+            0x7f11034e
         }
     .end annotation
 .end field
 
-.field private b:Z
+.field _searchField:Lkik/android/widget/RobotoEditText;
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f11034d
+        }
+    .end annotation
+.end field
+
+.field _searchIconView:Landroid/widget/ImageView;
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f11034c
+        }
+    .end annotation
+.end field
+
+.field private a:Lkik/android/chat/view/aa$a;
 
 
 # direct methods
@@ -47,88 +42,57 @@
     .locals 1
 
     .prologue
-    .line 50
+    .line 45
     invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 45
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->a:Ljava/util/List;
-
-    .line 51
+    .line 46
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lkik/android/chat/view/SearchBarViewImpl;->a(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 52
+    .line 47
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 56
+    .line 51
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 45
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->a:Ljava/util/List;
-
-    .line 57
+    .line 52
     invoke-virtual {p0, p1, p2}, Lkik/android/chat/view/SearchBarViewImpl;->a(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 58
+    .line 53
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 62
+    .line 57
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 45
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->a:Ljava/util/List;
-
-    .line 63
+    .line 58
     invoke-virtual {p0, p1, p2}, Lkik/android/chat/view/SearchBarViewImpl;->a(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 64
+    .line 59
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
-    .locals 1
-    .annotation build Landroid/annotation/TargetApi;
-        value = 0x15
-    .end annotation
+    .locals 0
 
     .prologue
-    .line 69
+    .line 63
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 45
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->a:Ljava/util/List;
-
-    .line 70
+    .line 64
     invoke-virtual {p0, p1, p2}, Lkik/android/chat/view/SearchBarViewImpl;->a(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 71
+    .line 65
     return-void
 .end method
 
@@ -138,12 +102,12 @@
     .locals 1
 
     .prologue
-    .line 137
+    .line 124
     iget-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->_searchField:Lkik/android/widget/RobotoEditText;
 
     invoke-virtual {v0}, Lkik/android/widget/RobotoEditText;->clearFocus()V
 
-    .line 138
+    .line 125
     return-void
 .end method
 
@@ -151,7 +115,7 @@
     .locals 2
 
     .prologue
-    .line 267
+    .line 244
     const/16 v0, 0x15
 
     invoke-static {v0}, Lcom/kik/sdkutils/c;->a(I)Z
@@ -160,7 +124,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 268
+    .line 245
     const/high16 v0, 0x40000000    # 2.0f
 
     mul-float/2addr v0, p1
@@ -173,25 +137,25 @@
 
     invoke-static {p0, v0}, Landroid/support/v4/view/ViewCompat;->setElevation(Landroid/view/View;F)V
 
-    .line 276
+    .line 253
     :cond_0
     :goto_0
     return-void
 
-    .line 271
+    .line 248
     :cond_1
     invoke-virtual {p0}, Lkik/android/chat/view/SearchBarViewImpl;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 272
+    .line 249
     if-eqz v0, :cond_0
 
     instance-of v1, v0, Landroid/graphics/drawable/LayerDrawable;
 
     if-eqz v1, :cond_0
 
-    .line 273
+    .line 250
     check-cast v0, Landroid/graphics/drawable/LayerDrawable;
 
     const/4 v1, 0x0
@@ -217,25 +181,25 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 75
+    .line 69
     invoke-virtual {p0, v0}, Lkik/android/chat/view/SearchBarViewImpl;->setOrientation(I)V
 
-    .line 76
+    .line 70
     const/16 v0, 0x10
 
     invoke-virtual {p0, v0}, Lkik/android/chat/view/SearchBarViewImpl;->setGravity(I)V
 
-    .line 77
-    const v0, 0x7f02018c
+    .line 71
+    const v0, 0x7f020159
 
     invoke-virtual {p0, v0}, Lkik/android/chat/view/SearchBarViewImpl;->setBackgroundResource(I)V
 
-    .line 78
+    .line 72
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0a0107
+    const v1, 0x7f0b00b6
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -243,45 +207,45 @@
 
     invoke-virtual {p0, v0}, Lkik/android/chat/view/SearchBarViewImpl;->setMinimumHeight(I)V
 
-    .line 79
-    const v0, 0x7f040156
+    .line 73
+    const v0, 0x7f040117
 
     invoke-static {p1, v0, p0}, Lkik/android/chat/view/SearchBarViewImpl;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    .line 80
-    invoke-static {p0}, Lbutterknife/ButterKnife;->bind(Landroid/view/View;)Lbutterknife/Unbinder;
+    .line 74
+    invoke-static {p0}, Lbutterknife/ButterKnife;->bind(Landroid/view/View;)V
 
-    .line 81
+    .line 75
     iget-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->_searchField:Lkik/android/widget/RobotoEditText;
 
     invoke-virtual {v0, p0}, Lkik/android/widget/RobotoEditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    .line 82
+    .line 76
     iget-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->_searchField:Lkik/android/widget/RobotoEditText;
 
     invoke-virtual {v0, p0}, Lkik/android/widget/RobotoEditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
-    .line 83
+    .line 77
     iget-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->_searchField:Lkik/android/widget/RobotoEditText;
 
-    invoke-virtual {v0, p0}, Lkik/android/widget/RobotoEditText;->a(Lkik/core/interfaces/ai;)V
+    invoke-virtual {v0, p0}, Lkik/android/widget/RobotoEditText;->a(Lkik/core/interfaces/ah;)V
 
-    .line 84
+    .line 78
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lkik/android/chat/view/SearchBarViewImpl;->a(F)V
 
-    .line 86
+    .line 80
     if-eqz p2, :cond_0
 
-    .line 87
-    sget-object v0, Lkik/android/R$styleable;->SearchBarViewImpl:[I
+    .line 81
+    sget-object v0, Lkik/android/m$a;->aj:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v1
 
-    .line 89
+    .line 83
     const/4 v0, 0x0
 
     :try_start_0
@@ -289,10 +253,10 @@
 
     move-result-object v0
 
-    .line 90
+    .line 84
     invoke-virtual {p0, v0}, Lkik/android/chat/view/SearchBarViewImpl;->b(Ljava/lang/String;)V
 
-    .line 91
+    .line 85
     const/4 v0, 0x1
 
     const/16 v2, 0x90
@@ -301,38 +265,26 @@
 
     move-result v0
 
-    .line 92
+    .line 86
     iget-object v2, p0, Lkik/android/chat/view/SearchBarViewImpl;->_searchField:Lkik/android/widget/RobotoEditText;
 
     invoke-virtual {v2, v0}, Lkik/android/widget/RobotoEditText;->setInputType(I)V
-
-    .line 93
-    const/4 v0, 0x2
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v0, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->b:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 96
+    .line 89
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 99
+    .line 92
     :cond_0
     return-void
 
-    .line 96
+    .line 89
     :catchall_0
     move-exception v0
 
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 97
     throw v0
 .end method
 
@@ -342,15 +294,15 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 242
+    .line 219
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
-    .line 243
+    .line 220
     invoke-virtual {p0, v0}, Lkik/android/chat/view/SearchBarViewImpl;->getLocationOnScreen([I)V
 
-    .line 244
+    .line 221
     aget v1, v0, v3
 
     invoke-virtual {p0}, Lkik/android/chat/view/SearchBarViewImpl;->getHeight()I
@@ -359,71 +311,71 @@
 
     add-int/2addr v1, v2
 
-    .line 245
+    .line 222
     invoke-virtual {p1, v0}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 246
+    .line 223
     aget v0, v0, v3
 
-    .line 247
+    .line 224
     sub-int v0, v1, v0
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->a(I)I
 
     move-result v0
 
-    .line 248
+    .line 225
     if-gtz v0, :cond_0
 
-    .line 249
+    .line 226
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lkik/android/chat/view/SearchBarViewImpl;->a(F)V
 
-    .line 263
+    .line 240
     :goto_0
     return-void
 
-    .line 251
+    .line 228
     :cond_0
     const/16 v1, 0xa
 
     if-gt v0, v1, :cond_1
 
-    .line 252
+    .line 229
     const/high16 v0, 0x3e800000    # 0.25f
 
     invoke-virtual {p0, v0}, Lkik/android/chat/view/SearchBarViewImpl;->a(F)V
 
     goto :goto_0
 
-    .line 254
+    .line 231
     :cond_1
     const/16 v1, 0x14
 
     if-gt v0, v1, :cond_2
 
-    .line 255
+    .line 232
     const/high16 v0, 0x3f000000    # 0.5f
 
     invoke-virtual {p0, v0}, Lkik/android/chat/view/SearchBarViewImpl;->a(F)V
 
     goto :goto_0
 
-    .line 257
+    .line 234
     :cond_2
     const/16 v1, 0x1e
 
     if-gt v0, v1, :cond_3
 
-    .line 258
+    .line 235
     const/high16 v0, 0x3f400000    # 0.75f
 
     invoke-virtual {p0, v0}, Lkik/android/chat/view/SearchBarViewImpl;->a(F)V
 
     goto :goto_0
 
-    .line 261
+    .line 238
     :cond_3
     const/high16 v0, 0x3f800000    # 1.0f
 
@@ -438,42 +390,42 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 213
+    .line 190
     if-nez p1, :cond_0
 
-    .line 238
+    .line 215
     :goto_0
     return-void
 
-    .line 218
+    .line 195
     :cond_0
     if-gtz p2, :cond_2
 
-    .line 220
+    .line 197
     invoke-virtual {p0, v0}, Lkik/android/chat/view/SearchBarViewImpl;->a(F)V
 
-    .line 237
+    .line 214
     :cond_1
     :goto_1
     invoke-virtual {p0, v0}, Lkik/android/chat/view/SearchBarViewImpl;->setTranslationY(F)V
 
     goto :goto_0
 
-    .line 223
+    .line 200
     :cond_2
     invoke-virtual {p1}, Landroid/widget/ListView;->getPaddingTop()I
 
     move-result v0
 
-    .line 224
+    .line 201
     invoke-virtual {p0}, Lkik/android/chat/view/SearchBarViewImpl;->getHeight()I
 
     move-result v1
 
-    .line 225
+    .line 202
     sub-int/2addr v0, v1
 
-    .line 226
+    .line 203
     invoke-static {v0, p2}, Ljava/lang/Math;->min(II)I
 
     move-result v0
@@ -482,22 +434,22 @@
 
     int-to-float v0, v0
 
-    .line 228
+    .line 205
     invoke-virtual {p1}, Landroid/widget/ListView;->getFirstVisiblePosition()I
 
     move-result v1
 
-    .line 229
+    .line 206
     if-lez v1, :cond_3
 
-    .line 230
+    .line 207
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-virtual {p0, v1}, Lkik/android/chat/view/SearchBarViewImpl;->a(F)V
 
     goto :goto_1
 
-    .line 232
+    .line 209
     :cond_3
     invoke-virtual {p1}, Landroid/widget/ListView;->getChildCount()I
 
@@ -505,14 +457,14 @@
 
     if-lez v1, :cond_1
 
-    .line 233
+    .line 210
     const/4 v1, 0x0
 
     invoke-virtual {p1, v1}, Landroid/widget/ListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 234
+    .line 211
     invoke-virtual {p0, v1}, Lkik/android/chat/view/SearchBarViewImpl;->a(Landroid/view/View;)V
 
     goto :goto_1
@@ -522,25 +474,23 @@
     .locals 1
 
     .prologue
-    .line 121
+    .line 108
     iget-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->_searchField:Lkik/android/widget/RobotoEditText;
 
     invoke-virtual {v0, p1}, Lkik/android/widget/RobotoEditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 122
+    .line 109
     return-void
 .end method
 
-.method public final a(Lkik/android/chat/view/aj$a;)V
-    .locals 1
+.method public final a(Lkik/android/chat/view/aa$a;)V
+    .locals 0
 
     .prologue
-    .line 104
-    iget-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->a:Ljava/util/List;
+    .line 97
+    iput-object p1, p0, Lkik/android/chat/view/SearchBarViewImpl;->a:Lkik/android/chat/view/aa$a;
 
-    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 105
+    .line 98
     return-void
 .end method
 
@@ -548,105 +498,82 @@
     .locals 3
 
     .prologue
-    .line 165
+    .line 150
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 166
-    invoke-static {v1}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 1126
-    iget-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->_clearSearch:Landroid/view/View;
-
-    const/16 v2, 0x8
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    .line 172
-    :cond_0
-    :goto_0
-    iget-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->a:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :cond_1
-    :goto_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkik/android/chat/view/aj$a;
+    .line 151
+    invoke-static {v0}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
 
-    .line 173
-    if-eqz v0, :cond_1
+    move-result v1
 
-    .line 174
-    invoke-interface {v0, v1}, Lkik/android/chat/view/aj$a;->a(Ljava/lang/String;)V
+    if-eqz v1, :cond_2
 
-    goto :goto_1
+    .line 1113
+    iget-object v1, p0, Lkik/android/chat/view/SearchBarViewImpl;->_clearSearch:Landroid/view/View;
 
-    .line 169
+    const/16 v2, 0x8
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    .line 157
+    :cond_0
+    :goto_0
+    iget-object v1, p0, Lkik/android/chat/view/SearchBarViewImpl;->a:Lkik/android/chat/view/aa$a;
+
+    if-eqz v1, :cond_1
+
+    .line 158
+    iget-object v1, p0, Lkik/android/chat/view/SearchBarViewImpl;->a:Lkik/android/chat/view/aa$a;
+
+    invoke-interface {v1, v0}, Lkik/android/chat/view/aa$a;->a(Ljava/lang/String;)V
+
+    .line 160
+    :cond_1
+    return-void
+
+    .line 154
     :cond_2
-    iget-boolean v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->b:Z
+    iget-object v1, p0, Lkik/android/chat/view/SearchBarViewImpl;->_searchField:Lkik/android/widget/RobotoEditText;
 
-    if-eqz v0, :cond_3
+    invoke-virtual {v1}, Lkik/android/widget/RobotoEditText;->hasFocus()Z
 
-    iget-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->_searchField:Lkik/android/widget/RobotoEditText;
+    move-result v1
 
-    invoke-virtual {v0}, Lkik/android/widget/RobotoEditText;->hasFocus()Z
+    if-eqz v1, :cond_0
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 1131
-    :cond_3
-    iget-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->_clearSearch:Landroid/view/View;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    .line 155
+    invoke-virtual {p0}, Lkik/android/chat/view/SearchBarViewImpl;->b()V
 
     goto :goto_0
-
-    .line 177
-    :cond_4
-    return-void
 .end method
 
-.method public final b()Lkik/android/widget/RobotoEditText;
-    .locals 1
+.method public final b()V
+    .locals 2
 
     .prologue
-    .line 203
-    iget-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->_searchField:Lkik/android/widget/RobotoEditText;
+    .line 118
+    iget-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->_clearSearch:Landroid/view/View;
 
-    return-object v0
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 119
+    return-void
 .end method
 
 .method public final b(Ljava/lang/String;)V
     .locals 1
 
     .prologue
-    .line 115
+    .line 102
     iget-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->_searchField:Lkik/android/widget/RobotoEditText;
 
     invoke-virtual {v0, p1}, Lkik/android/widget/RobotoEditText;->setHint(Ljava/lang/CharSequence;)V
 
-    .line 116
+    .line 103
     return-void
 .end method
 
@@ -654,141 +581,93 @@
     .locals 0
 
     .prologue
-    .line 154
+    .line 139
     return-void
 .end method
 
 .method public final c()V
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 194
-    iget-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->a:Ljava/util/List;
+    .line 173
+    iget-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->a:Lkik/android/chat/view/aa$a;
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkik/android/chat/view/aj$a;
-
-    .line 195
     if-eqz v0, :cond_0
 
-    .line 196
-    invoke-interface {v0}, Lkik/android/chat/view/aj$a;->a()V
+    .line 174
+    iget-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->a:Lkik/android/chat/view/aa$a;
 
-    goto :goto_0
+    invoke-interface {v0}, Lkik/android/chat/view/aa$a;->a()V
 
-    .line 199
-    :cond_1
+    .line 176
+    :cond_0
     return-void
 .end method
 
 .method public clearSearch()V
-    .locals 2
+    .locals 1
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f1003c4
+            0x7f11034e
         }
     .end annotation
 
     .prologue
-    .line 143
-    iget-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->a:Ljava/util/List;
+    .line 130
+    iget-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->a:Lkik/android/chat/view/aa$a;
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkik/android/chat/view/aj$a;
-
-    .line 144
     if-eqz v0, :cond_0
 
-    .line 145
-    invoke-interface {v0}, Lkik/android/chat/view/aj$a;->b()V
+    .line 131
+    iget-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->a:Lkik/android/chat/view/aa$a;
 
-    goto :goto_0
+    invoke-interface {v0}, Lkik/android/chat/view/aa$a;->b()V
 
-    .line 148
-    :cond_1
+    .line 133
+    :cond_0
     return-void
 .end method
 
-.method public final d()Landroid/widget/ImageView;
+.method public final d()Lkik/android/widget/RobotoEditText;
     .locals 1
 
     .prologue
-    .line 208
+    .line 180
+    iget-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->_searchField:Lkik/android/widget/RobotoEditText;
+
+    return-object v0
+.end method
+
+.method public final e()Landroid/widget/ImageView;
+    .locals 1
+
+    .prologue
+    .line 185
     iget-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->_searchIconView:Landroid/widget/ImageView;
 
     return-object v0
 .end method
 
 .method public onFocusChange(Landroid/view/View;Z)V
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 182
+    .line 165
     iget-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->_searchField:Lkik/android/widget/RobotoEditText;
 
-    if-ne p1, v0, :cond_1
+    if-ne p1, v0, :cond_0
 
-    .line 183
-    iget-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->a:Ljava/util/List;
+    iget-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->a:Lkik/android/chat/view/aa$a;
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkik/android/chat/view/aj$a;
-
-    .line 184
     if-eqz v0, :cond_0
 
-    .line 185
-    invoke-interface {v0, p2}, Lkik/android/chat/view/aj$a;->a(Z)V
+    .line 166
+    iget-object v0, p0, Lkik/android/chat/view/SearchBarViewImpl;->a:Lkik/android/chat/view/aa$a;
 
-    goto :goto_0
+    invoke-interface {v0, p2}, Lkik/android/chat/view/aa$a;->a(Z)V
 
-    .line 189
-    :cond_1
+    .line 168
+    :cond_0
     return-void
 .end method
 
@@ -796,6 +675,6 @@
     .locals 0
 
     .prologue
-    .line 160
+    .line 145
     return-void
 .end method

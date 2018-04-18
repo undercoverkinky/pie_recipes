@@ -3,18 +3,12 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x16
-.end annotation
-
-
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 30
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +18,7 @@
     .locals 1
 
     .prologue
-    .line 45
+    .line 40
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getTraversalAfter()Landroid/view/accessibility/AccessibilityNodeInfo;
@@ -38,7 +32,7 @@
     .locals 1
 
     .prologue
-    .line 33
+    .line 28
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getTraversalBefore()Landroid/view/accessibility/AccessibilityNodeInfo;
@@ -52,12 +46,12 @@
     .locals 0
 
     .prologue
-    .line 49
+    .line 44
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setTraversalAfter(Landroid/view/View;)V
 
-    .line 50
+    .line 45
     return-void
 .end method
 
@@ -65,12 +59,12 @@
     .locals 0
 
     .prologue
-    .line 53
+    .line 48
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0, p1, p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->setTraversalAfter(Landroid/view/View;I)V
 
-    .line 54
+    .line 49
     return-void
 .end method
 
@@ -78,12 +72,12 @@
     .locals 0
 
     .prologue
-    .line 37
+    .line 32
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setTraversalBefore(Landroid/view/View;)V
 
-    .line 38
+    .line 33
     return-void
 .end method
 
@@ -91,11 +85,11 @@
     .locals 0
 
     .prologue
-    .line 41
+    .line 36
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0, p1, p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->setTraversalBefore(Landroid/view/View;I)V
 
-    .line 42
+    .line 37
     return-void
 .end method

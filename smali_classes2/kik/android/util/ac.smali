@@ -1,613 +1,312 @@
-.class public abstract Lkik/android/util/ac;
-.super Ljava/lang/Object;
+.class public final Lkik/android/util/ac;
+.super Lkik/android/util/m;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field protected a:Landroid/widget/FrameLayout;
+.field private f:Lkik/android/chat/fragment/p;
 
-.field protected b:I
+.field private g:Lkik/core/interfaces/af;
 
-.field protected c:I
-
-.field protected d:I
-
-.field private e:Landroid/support/v4/view/GestureDetectorCompat;
-
-.field private f:Z
-
-.field private g:Z
-
-.field private final h:I
-
-.field private final i:I
+.field private h:Lkik/core/interfaces/x;
 
 
 # direct methods
-.method protected constructor <init>(Landroid/widget/FrameLayout;)V
-    .locals 3
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 43
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 34
-    iput-boolean v0, p0, Lkik/android/util/ac;->f:Z
-
-    .line 35
-    iput-boolean v0, p0, Lkik/android/util/ac;->g:Z
-
-    .line 39
-    const/high16 v0, 0x41800000    # 16.0f
-
-    invoke-static {v0}, Lkik/android/chat/KikApplication;->a(F)I
-
-    move-result v0
-
-    iput v0, p0, Lkik/android/util/ac;->h:I
-
-    .line 40
-    const/high16 v0, 0x42200000    # 40.0f
-
-    invoke-static {v0}, Lkik/android/chat/KikApplication;->a(F)I
-
-    move-result v0
-
-    iput v0, p0, Lkik/android/util/ac;->i:I
-
-    .line 44
-    iput-object p1, p0, Lkik/android/util/ac;->a:Landroid/widget/FrameLayout;
-
-    .line 45
-    new-instance v0, Landroid/support/v4/view/GestureDetectorCompat;
-
-    invoke-virtual {p1}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    new-instance v2, Lkik/android/util/ac$1;
-
-    invoke-direct {v2, p0}, Lkik/android/util/ac$1;-><init>(Lkik/android/util/ac;)V
-
-    invoke-direct {v0, v1, v2}, Landroid/support/v4/view/GestureDetectorCompat;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
-
-    iput-object v0, p0, Lkik/android/util/ac;->e:Landroid/support/v4/view/GestureDetectorCompat;
-
-    .line 72
-    return-void
-.end method
-
-.method private a(III)V
-    .locals 10
-
-    .prologue
-    .line 188
-    sub-int v1, p1, p2
-
-    .line 190
-    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
-
-    move-result v0
-
-    iget v2, p0, Lkik/android/util/ac;->i:I
-
-    if-ge v0, v2, :cond_0
-
-    .line 191
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lkik/android/util/ac;->g:Z
-
-    .line 233
-    :goto_0
-    return-void
-
-    .line 195
-    :cond_0
-    invoke-virtual {p0}, Lkik/android/util/ac;->a()Landroid/graphics/Point;
-
-    move-result-object v0
-
-    .line 198
-    if-nez v0, :cond_2
-
-    .line 200
-    iget-object v0, p0, Lkik/android/util/ac;->a:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getHeight()I
-
-    move-result v0
-
-    .line 206
-    :goto_1
-    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
-
-    move-result v2
-
-    sub-int/2addr v0, v2
-
-    invoke-static {v0}, Ljava/lang/Math;->abs(I)I
-
-    move-result v0
-
-    .line 207
-    invoke-static {v0}, Lkik/android/chat/KikApplication;->a(I)I
-
-    move-result v2
-
-    .line 209
-    invoke-static {p3}, Lkik/android/chat/KikApplication;->a(I)I
-
-    move-result v3
-
-    .line 210
-    const-wide v4, 0x4094500000000000L    # 1300.0
-
-    int-to-double v6, v3
-
-    const-wide/high16 v8, 0x3ff8000000000000L    # 1.5
-
-    mul-double/2addr v6, v8
-
-    add-double/2addr v4, v6
-
-    .line 211
-    int-to-double v2, v2
-
-    const-wide v6, 0x408f400000000000L    # 1000.0
-
-    mul-double/2addr v2, v6
-
-    div-double/2addr v2, v4
-
-    double-to-int v2, v2
-
-    const/16 v3, 0x12c
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->min(II)I
-
-    move-result v2
-
-    .line 213
-    new-instance v3, Lkik/android/util/ac$2;
-
-    invoke-direct {v3, p0, v2}, Lkik/android/util/ac$2;-><init>(Lkik/android/util/ac;I)V
-
-    .line 227
-    if-lez v1, :cond_1
-
-    .line 229
-    mul-int/lit8 v0, v0, -0x1
-
-    .line 232
-    :cond_1
-    iget-object v1, p0, Lkik/android/util/ac;->a:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v1}, Landroid/widget/FrameLayout;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v1
-
-    int-to-float v0, v0
-
-    invoke-virtual {v1, v0}, Landroid/view/ViewPropertyAnimator;->translationYBy(F)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v0
-
-    int-to-long v4, v2
-
-    invoke-virtual {v0, v4, v5}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v0
-
-    new-instance v1, Landroid/view/animation/LinearInterpolator;
-
-    invoke-direct {v1}, Landroid/view/animation/LinearInterpolator;-><init>()V
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
-
-    goto :goto_0
-
-    .line 203
-    :cond_2
-    iget-object v2, p0, Lkik/android/util/ac;->a:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v2}, Landroid/widget/FrameLayout;->getHeight()I
-
-    move-result v2
-
-    div-int/lit8 v2, v2, 0x2
-
-    iget v0, v0, Landroid/graphics/Point;->y:I
-
-    div-int/lit8 v0, v0, 0x2
-
-    add-int/2addr v0, v2
-
-    goto :goto_1
-.end method
-
-.method static synthetic a(Lkik/android/util/ac;III)V
+.method public constructor <init>(Landroid/content/Context;Lcom/kik/cache/aa;Lkik/core/interfaces/af;Lkik/core/interfaces/x;)V
     .locals 0
 
     .prologue
-    .line 20
-    invoke-direct {p0, p1, p2, p3}, Lkik/android/util/ac;->a(III)V
+    .line 38
+    invoke-direct {p0, p1, p2}, Lkik/android/util/m;-><init>(Landroid/content/Context;Lcom/kik/cache/aa;)V
 
+    .line 39
+    iput-object p3, p0, Lkik/android/util/ac;->g:Lkik/core/interfaces/af;
+
+    .line 40
+    iput-object p4, p0, Lkik/android/util/ac;->h:Lkik/core/interfaces/x;
+
+    .line 41
     return-void
 .end method
 
-.method private f()V
-    .locals 4
+.method static synthetic a(Lkik/core/datatypes/o;Lkik/core/datatypes/o;)I
+    .locals 2
 
     .prologue
-    .line 141
-    invoke-virtual {p0}, Lkik/android/util/ac;->d()V
+    .line 0
+    .line 2096
+    invoke-static {p0}, Lkik/android/util/bq;->a(Lkik/core/datatypes/o;)Ljava/lang/String;
 
-    .line 142
-    iget v0, p0, Lkik/android/util/ac;->d:I
+    move-result-object v0
 
-    iget v1, p0, Lkik/android/util/ac;->c:I
+    invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
-    sub-int/2addr v0, v1
+    move-result-object v0
 
-    .line 143
+    invoke-static {p1}, Lkik/android/util/bq;->a(Lkik/core/datatypes/o;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+
+    move-result v0
+
+    .line 0
+    return v0
+.end method
+
+.method private a(Ljava/util/List;)Ljava/util/List;
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;)",
+            "Ljava/util/List",
+            "<",
+            "Lkik/core/datatypes/o;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v1, 0x1
+
+    .line 95
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    .line 96
+    invoke-static {}, Lkik/android/util/ad;->a()Ljava/util/Comparator;
+
+    move-result-object v3
+
+    .line 98
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
+
+    :cond_0
+    :goto_0
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    .line 99
+    iget-object v5, p0, Lkik/android/util/ac;->h:Lkik/core/interfaces/x;
+
+    invoke-interface {v5, v0, v1}, Lkik/core/interfaces/x;->a(Ljava/lang/String;Z)Lkik/core/datatypes/o;
+
+    move-result-object v5
+
+    .line 1111
+    iget-object v0, p0, Lkik/android/util/ac;->g:Lkik/core/interfaces/af;
+
+    invoke-interface {v0}, Lkik/core/interfaces/af;->d()Lkik/core/datatypes/ad;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lkik/core/datatypes/ad;->c:Ljava/lang/String;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lkik/android/util/ac;->g:Lkik/core/interfaces/af;
+
+    invoke-interface {v0}, Lkik/core/interfaces/af;->d()Lkik/core/datatypes/ad;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lkik/core/datatypes/ad;->c:Ljava/lang/String;
+
+    invoke-virtual {v5}, Lkik/core/datatypes/o;->d()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    :cond_1
+    move v0, v1
+
+    .line 100
+    :goto_1
     if-eqz v0, :cond_0
 
-    .line 144
-    iget-object v0, p0, Lkik/android/util/ac;->a:Landroid/widget/FrameLayout;
+    .line 101
+    invoke-interface {v2, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->animate()Landroid/view/ViewPropertyAnimator;
+    goto :goto_0
 
-    move-result-object v0
+    .line 1111
+    :cond_2
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    goto :goto_1
 
-    invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->y(F)Landroid/view/ViewPropertyAnimator;
+    .line 105
+    :cond_3
+    invoke-static {v2, v3}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    move-result-object v0
-
-    const-wide/16 v2, 0x12c
-
-    invoke-virtual {v0, v2, v3}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
-
-    .line 145
-    iget v0, p0, Lkik/android/util/ac;->c:I
-
-    iput v0, p0, Lkik/android/util/ac;->d:I
-
-    .line 147
-    :cond_0
-    return-void
+    .line 106
+    return-object v2
 .end method
 
 
 # virtual methods
-.method protected abstract a()Landroid/graphics/Point;
-.end method
-
-.method protected abstract a(I)V
-.end method
-
-.method protected abstract b()V
-.end method
-
-.method protected abstract c()V
-.end method
-
-.method protected abstract d()V
-.end method
-
-.method protected abstract e()V
-.end method
-
-.method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 6
+.method public final a(ZLkik/core/datatypes/o;Landroid/widget/ListView;Lkik/android/util/ab;Lcom/kik/android/Mixpanel;Lkik/core/interfaces/b;)V
+    .locals 12
 
     .prologue
-    const/4 v2, 0x1
+    .line 59
+    invoke-virtual {p0}, Lkik/android/util/ac;->a()I
 
-    const/4 v1, 0x0
+    move-result v6
 
-    .line 78
-    .line 1157
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+    .line 60
+    invoke-virtual {p0, v6}, Lkik/android/util/ac;->a(I)I
+
+    move-result v7
+
+    .line 62
+    invoke-virtual {p2}, Lkik/core/datatypes/o;->v()Z
+
+    move-result v8
+
+    .line 64
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    .line 65
+    invoke-virtual {p2}, Lkik/core/datatypes/o;->v()Z
 
     move-result v0
 
-    and-int/lit16 v0, v0, 0xff
-
-    sparse-switch v0, :sswitch_data_0
-
-    .line 1165
-    :goto_0
-    iget-boolean v0, p0, Lkik/android/util/ac;->f:Z
-
-    .line 78
     if-eqz v0, :cond_0
 
-    .line 79
-    invoke-direct {p0}, Lkik/android/util/ac;->f()V
+    move-object v0, p2
 
-    move v0, v1
+    .line 66
+    check-cast v0, Lkik/core/datatypes/s;
 
-    .line 131
-    :goto_1
-    return v0
+    .line 1083
+    new-instance v2, Ljava/util/ArrayList;
 
-    .line 1159
-    :sswitch_0
-    iput-boolean v2, p0, Lkik/android/util/ac;->f:Z
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    goto :goto_0
+    .line 1084
+    invoke-virtual {v0}, Lkik/core/datatypes/s;->C()Ljava/util/List;
 
-    .line 1162
-    :sswitch_1
-    iput-boolean v1, p0, Lkik/android/util/ac;->f:Z
+    move-result-object v1
 
-    goto :goto_0
+    invoke-direct {p0, v1}, Lkik/android/util/ac;->a(Ljava/util/List;)Ljava/util/List;
 
-    .line 84
+    move-result-object v1
+
+    .line 1085
+    invoke-virtual {v0}, Lkik/core/datatypes/s;->B()Ljava/util/List;
+
+    move-result-object v3
+
+    invoke-direct {p0, v3}, Lkik/android/util/ac;->a(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v3
+
+    .line 1086
+    invoke-virtual {v0}, Lkik/core/datatypes/s;->z()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lkik/android/util/ac;->a(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+
+    .line 1087
+    invoke-interface {v2, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    .line 1088
+    invoke-interface {v2, v3}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    .line 1089
+    invoke-interface {v2, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    .line 67
+    const/4 v0, -0x1
+
+    invoke-virtual {p3, v0}, Landroid/widget/ListView;->setBackgroundColor(I)V
+
+    .line 70
     :cond_0
-    iget-object v0, p0, Lkik/android/util/ac;->e:Landroid/support/v4/view/GestureDetectorCompat;
-
-    invoke-virtual {v0, p2}, Landroid/support/v4/view/GestureDetectorCompat;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result v0
+    iget-object v0, p0, Lkik/android/util/ac;->f:Lkik/android/chat/fragment/p;
 
     if-eqz v0, :cond_1
 
-    iget-boolean v0, p0, Lkik/android/util/ac;->g:Z
+    invoke-virtual {p3}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
 
-    if-nez v0, :cond_1
+    move-result-object v0
 
-    move v0, v2
+    if-eqz v0, :cond_1
 
-    .line 85
-    goto :goto_1
+    if-eqz p1, :cond_2
 
-    .line 87
+    .line 71
     :cond_1
-    iput-boolean v1, p0, Lkik/android/util/ac;->g:Z
+    new-instance v0, Lkik/android/chat/fragment/p;
 
-    .line 89
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawY()F
+    iget-object v3, p0, Lkik/android/util/ac;->g:Lkik/core/interfaces/af;
 
-    move-result v0
+    iget-object v4, p0, Lkik/android/util/ac;->e:Lcom/kik/cache/aa;
 
-    float-to-int v3, v0
+    iget-object v9, p0, Lkik/android/util/ac;->h:Lkik/core/interfaces/x;
 
-    .line 90
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+    move-object v1, p2
 
-    move-result v0
+    move-object/from16 v5, p4
 
-    and-int/lit16 v0, v0, 0xff
+    move-object/from16 v10, p5
 
-    packed-switch v0, :pswitch_data_0
+    move-object/from16 v11, p6
 
-    move v0, v1
+    invoke-direct/range {v0 .. v11}, Lkik/android/chat/fragment/p;-><init>(Lkik/core/datatypes/o;Ljava/util/List;Lkik/core/interfaces/af;Lcom/kik/cache/aa;Lkik/android/util/ab;IIZLkik/core/interfaces/x;Lcom/kik/android/Mixpanel;Lkik/core/interfaces/b;)V
 
-    .line 131
-    goto :goto_1
+    iput-object v0, p0, Lkik/android/util/ac;->f:Lkik/android/chat/fragment/p;
 
-    .line 92
-    :pswitch_0
-    iget-object v0, p0, Lkik/android/util/ac;->a:Landroid/widget/FrameLayout;
+    .line 72
+    iget-object v0, p0, Lkik/android/util/ac;->f:Lkik/android/chat/fragment/p;
 
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {p3, v0}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    move-result-object v0
+    .line 77
+    :goto_0
+    return-void
 
-    check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
-
-    .line 93
-    iget v0, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
-
-    sub-int v0, v3, v0
-
-    iput v0, p0, Lkik/android/util/ac;->b:I
-
-    .line 94
-    iput v3, p0, Lkik/android/util/ac;->c:I
-
-    .line 95
-    iput v3, p0, Lkik/android/util/ac;->d:I
-
-    move v0, v1
-
-    .line 96
-    goto :goto_1
-
-    .line 98
-    :pswitch_1
-    iget-object v0, p0, Lkik/android/util/ac;->a:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
-
-    .line 99
-    iput v3, p0, Lkik/android/util/ac;->d:I
-
-    .line 100
-    iget v4, p0, Lkik/android/util/ac;->c:I
-
-    iget v5, p0, Lkik/android/util/ac;->d:I
-
-    sub-int/2addr v4, v5
-
-    invoke-static {v4}, Ljava/lang/Math;->abs(I)I
-
-    move-result v4
-
-    iget v5, p0, Lkik/android/util/ac;->h:I
-
-    if-le v4, v5, :cond_3
-
-    .line 102
-    iget v4, p0, Lkik/android/util/ac;->d:I
-
-    iget v5, p0, Lkik/android/util/ac;->c:I
-
-    if-le v4, v5, :cond_4
-
-    .line 103
-    iget v4, p0, Lkik/android/util/ac;->d:I
-
-    iget v5, p0, Lkik/android/util/ac;->b:I
-
-    sub-int/2addr v4, v5
-
-    iget v5, p0, Lkik/android/util/ac;->h:I
-
-    sub-int/2addr v4, v5
-
-    iput v4, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
-
-    .line 108
-    :goto_2
-    iget v4, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
-
-    neg-int v4, v4
-
-    iput v4, v0, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
-
-    .line 109
-    iget-object v4, p0, Lkik/android/util/ac;->a:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v4, v0}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 110
-    iget-object v0, p0, Lkik/android/util/ac;->a:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->requestLayout()V
-
-    .line 1178
-    iget v0, p0, Lkik/android/util/ac;->c:I
-
-    sub-int v0, v3, v0
-
-    invoke-static {v0}, Ljava/lang/Math;->abs(I)I
-
-    move-result v0
-
-    .line 1179
-    iget v3, p0, Lkik/android/util/ac;->h:I
-
-    if-lt v0, v3, :cond_2
-
-    move v1, v2
-
-    .line 112
+    .line 75
     :cond_2
-    if-eqz v1, :cond_3
+    iget-object v4, p0, Lkik/android/util/ac;->f:Lkik/android/chat/fragment/p;
 
-    .line 113
-    invoke-virtual {p0}, Lkik/android/util/ac;->b()V
+    move-object v5, v2
 
-    :cond_3
-    move v0, v2
+    move-object v9, p2
 
-    .line 116
-    goto/16 :goto_1
+    invoke-virtual/range {v4 .. v9}, Lkik/android/chat/fragment/p;->a(Ljava/util/List;IIZLkik/core/datatypes/o;)V
 
-    .line 106
-    :cond_4
-    iget v4, p0, Lkik/android/util/ac;->d:I
-
-    iget v5, p0, Lkik/android/util/ac;->b:I
-
-    sub-int/2addr v4, v5
-
-    iget v5, p0, Lkik/android/util/ac;->h:I
-
-    add-int/2addr v4, v5
-
-    iput v4, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
-
-    goto :goto_2
-
-    .line 118
-    :pswitch_2
-    iget v0, p0, Lkik/android/util/ac;->c:I
-
-    iget v2, p0, Lkik/android/util/ac;->d:I
-
-    sub-int/2addr v0, v2
-
-    invoke-static {v0}, Ljava/lang/Math;->abs(I)I
-
-    move-result v0
-
-    .line 120
-    iget-object v2, p0, Lkik/android/util/ac;->a:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v2}, Landroid/widget/FrameLayout;->getHeight()I
-
-    move-result v2
-
-    div-int/lit8 v2, v2, 0x3
-
-    if-le v0, v2, :cond_5
-
-    .line 121
-    iget v0, p0, Lkik/android/util/ac;->c:I
-
-    iget v2, p0, Lkik/android/util/ac;->d:I
-
-    invoke-direct {p0, v0, v2, v1}, Lkik/android/util/ac;->a(III)V
-
-    :goto_3
-    move v0, v1
-
-    .line 126
-    goto/16 :goto_1
-
-    .line 124
-    :cond_5
-    invoke-direct {p0}, Lkik/android/util/ac;->f()V
-
-    goto :goto_3
-
-    .line 128
-    :pswitch_3
-    invoke-direct {p0}, Lkik/android/util/ac;->f()V
-
-    move v0, v1
-
-    .line 129
-    goto/16 :goto_1
-
-    .line 1157
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        0x1 -> :sswitch_1
-        0x5 -> :sswitch_0
-    .end sparse-switch
-
-    .line 90
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_3
-    .end packed-switch
+    goto :goto_0
 .end method

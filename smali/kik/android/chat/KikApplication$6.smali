@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Lcom/kik/events/e",
         "<",
-        "Ljava/lang/Long;",
+        "Ljava/lang/Boolean;",
         ">;"
     }
 .end annotation
@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 771
+    .line 701
     iput-object p1, p0, Lkik/android/chat/KikApplication$6;->a:Lkik/android/chat/KikApplication;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,31 +47,35 @@
 
 # virtual methods
 .method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 4
+    .locals 1
 
     .prologue
-    .line 771
-    check-cast p2, Ljava/lang/Long;
+    .line 701
+    check-cast p2, Ljava/lang/Boolean;
 
-    .line 1775
+    .line 1705
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 1706
     iget-object v0, p0, Lkik/android/chat/KikApplication$6;->a:Lkik/android/chat/KikApplication;
 
-    invoke-static {v0}, Lkik/android/chat/KikApplication;->C(Lkik/android/chat/KikApplication;)Z
+    invoke-static {v0}, Lkik/android/chat/KikApplication;->w(Lkik/android/chat/KikApplication;)Z
 
-    .line 1776
+    .line 1707
     iget-object v0, p0, Lkik/android/chat/KikApplication$6;->a:Lkik/android/chat/KikApplication;
 
-    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+    invoke-static {v0}, Lkik/android/chat/KikApplication;->j(Lkik/android/chat/KikApplication;)V
 
-    move-result-wide v2
-
-    invoke-static {v0, v2, v3}, Lkik/android/chat/KikApplication;->e(Lkik/android/chat/KikApplication;J)J
-
-    .line 1777
+    .line 1708
     iget-object v0, p0, Lkik/android/chat/KikApplication$6;->a:Lkik/android/chat/KikApplication;
 
-    invoke-static {v0}, Lkik/android/chat/KikApplication;->m(Lkik/android/chat/KikApplication;)V
+    invoke-static {v0}, Lkik/android/chat/KikApplication;->x(Lkik/android/chat/KikApplication;)V
 
-    .line 771
+    .line 701
+    :cond_0
     return-void
 .end method

@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field a:Lkik/core/interfaces/ag;
+.field a:Lkik/core/interfaces/af;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field

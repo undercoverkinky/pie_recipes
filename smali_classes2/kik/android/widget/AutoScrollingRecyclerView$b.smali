@@ -74,7 +74,7 @@
 
     iget-object v1, p0, Lkik/android/widget/AutoScrollingRecyclerView$b;->b:Landroid/widget/EditText;
 
-    invoke-interface {v0, v1}, Lkik/android/util/KeyboardManipulator;->hideKeyBoard(Landroid/view/View;)V
+    invoke-interface {v0, v1}, Lkik/android/util/KeyboardManipulator;->b(Landroid/view/View;)V
 
     goto :goto_0
 .end method

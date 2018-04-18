@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 2347
+    .line 2292
     iput-object p1, p0, Lcom/kik/cards/web/CardsWebViewFragment$40;->b:Lcom/kik/cards/web/CardsWebViewFragment;
 
     iput-object p2, p0, Lcom/kik/cards/web/CardsWebViewFragment$40;->a:Lcom/kik/events/Promise;
@@ -44,13 +44,13 @@
     .locals 2
 
     .prologue
-    .line 2352
+    .line 2297
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$40;->a:Lcom/kik/events/Promise;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Ljava/lang/Throwable;)V
 
-    .line 2353
+    .line 2298
     return-void
 .end method

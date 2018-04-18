@@ -50,7 +50,7 @@
 
     sput-object v0, Lcom/google/common/hash/BloomFilterStrategies;->MURMUR128_MITZ_32:Lcom/google/common/hash/BloomFilterStrategies;
 
-    .line 92
+    .line 90
     new-instance v0, Lcom/google/common/hash/BloomFilterStrategies$2;
 
     const-string v1, "MURMUR128_MITZ_64"
@@ -89,6 +89,7 @@
     .line 38
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 140
     return-void
 .end method
 

@@ -3,43 +3,25 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x12
-.end annotation
-
-
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 29
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-.method public static getCompoundDrawablesRelative(Landroid/widget/TextView;)[Landroid/graphics/drawable/Drawable;
-    .locals 1
-
-    .prologue
-    .line 50
-    invoke-virtual {p0}, Landroid/widget/TextView;->getCompoundDrawablesRelative()[Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    return-object v0
 .end method
 
 .method public static setCompoundDrawablesRelative(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
     .prologue
-    .line 34
+    .line 30
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/widget/TextView;->setCompoundDrawablesRelative(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 35
+    .line 31
     return-void
 .end method
 
@@ -47,10 +29,10 @@
     .locals 0
 
     .prologue
-    .line 46
+    .line 42
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/widget/TextView;->setCompoundDrawablesRelativeWithIntrinsicBounds(IIII)V
 
-    .line 47
+    .line 43
     return-void
 .end method
 
@@ -58,9 +40,9 @@
     .locals 0
 
     .prologue
-    .line 40
+    .line 36
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/widget/TextView;->setCompoundDrawablesRelativeWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 41
+    .line 37
     return-void
 .end method

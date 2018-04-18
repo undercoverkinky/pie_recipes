@@ -37,10 +37,10 @@
     .locals 0
 
     .prologue
-    .line 138
+    .line 142
     invoke-direct {p0}, Lorg/json/JSONObject;-><init>()V
 
-    .line 139
+    .line 143
     return-void
 .end method
 
@@ -59,7 +59,7 @@
     .end annotation
 
     .prologue
-    .line 164
+    .line 168
     iget-object v0, p0, Lio/branch/referral/f;->a:Ljava/util/Collection;
 
     return-object v0
@@ -69,7 +69,7 @@
     .locals 1
 
     .prologue
-    .line 182
+    .line 186
     iget-object v0, p0, Lio/branch/referral/f;->b:Ljava/lang/String;
 
     return-object v0
@@ -79,7 +79,7 @@
     .locals 1
 
     .prologue
-    .line 205
+    .line 209
     iget v0, p0, Lio/branch/referral/f;->c:I
 
     return v0
@@ -89,7 +89,7 @@
     .locals 1
 
     .prologue
-    .line 225
+    .line 229
     iget v0, p0, Lio/branch/referral/f;->i:I
 
     return v0
@@ -99,7 +99,7 @@
     .locals 1
 
     .prologue
-    .line 245
+    .line 249
     iget-object v0, p0, Lio/branch/referral/f;->d:Ljava/lang/String;
 
     return-object v0
@@ -113,24 +113,24 @@
 
     const/4 v1, 0x0
 
-    .line 331
+    .line 335
     if-ne p0, p1, :cond_1
 
-    .line 379
+    .line 383
     :cond_0
     :goto_0
     return v0
 
-    .line 333
+    .line 337
     :cond_1
     if-nez p1, :cond_2
 
     move v0, v1
 
-    .line 334
+    .line 338
     goto :goto_0
 
-    .line 335
+    .line 339
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -144,29 +144,29 @@
 
     move v0, v1
 
-    .line 336
+    .line 340
     goto :goto_0
 
-    .line 337
+    .line 341
     :cond_3
     check-cast p1, Lio/branch/referral/f;
 
-    .line 338
+    .line 342
     iget-object v2, p0, Lio/branch/referral/f;->b:Ljava/lang/String;
 
     if-nez v2, :cond_4
 
-    .line 339
+    .line 343
     iget-object v2, p1, Lio/branch/referral/f;->b:Ljava/lang/String;
 
     if-eqz v2, :cond_5
 
     move v0, v1
 
-    .line 340
+    .line 344
     goto :goto_0
 
-    .line 341
+    .line 345
     :cond_4
     iget-object v2, p0, Lio/branch/referral/f;->b:Ljava/lang/String;
 
@@ -180,26 +180,26 @@
 
     move v0, v1
 
-    .line 342
+    .line 346
     goto :goto_0
 
-    .line 343
+    .line 347
     :cond_5
     iget-object v2, p0, Lio/branch/referral/f;->d:Ljava/lang/String;
 
     if-nez v2, :cond_6
 
-    .line 344
+    .line 348
     iget-object v2, p1, Lio/branch/referral/f;->d:Ljava/lang/String;
 
     if-eqz v2, :cond_7
 
     move v0, v1
 
-    .line 345
+    .line 349
     goto :goto_0
 
-    .line 346
+    .line 350
     :cond_6
     iget-object v2, p0, Lio/branch/referral/f;->d:Ljava/lang/String;
 
@@ -213,26 +213,26 @@
 
     move v0, v1
 
-    .line 347
+    .line 351
     goto :goto_0
 
-    .line 348
+    .line 352
     :cond_7
     iget-object v2, p0, Lio/branch/referral/f;->e:Ljava/lang/String;
 
     if-nez v2, :cond_8
 
-    .line 349
+    .line 353
     iget-object v2, p1, Lio/branch/referral/f;->e:Ljava/lang/String;
 
     if-eqz v2, :cond_9
 
     move v0, v1
 
-    .line 350
+    .line 354
     goto :goto_0
 
-    .line 351
+    .line 355
     :cond_8
     iget-object v2, p0, Lio/branch/referral/f;->e:Ljava/lang/String;
 
@@ -246,26 +246,26 @@
 
     move v0, v1
 
-    .line 352
+    .line 356
     goto :goto_0
 
-    .line 353
+    .line 357
     :cond_9
     iget-object v2, p0, Lio/branch/referral/f;->h:Ljava/lang/String;
 
     if-nez v2, :cond_a
 
-    .line 354
+    .line 358
     iget-object v2, p1, Lio/branch/referral/f;->h:Ljava/lang/String;
 
     if-eqz v2, :cond_b
 
     move v0, v1
 
-    .line 355
+    .line 359
     goto :goto_0
 
-    .line 356
+    .line 360
     :cond_a
     iget-object v2, p0, Lio/branch/referral/f;->h:Ljava/lang/String;
 
@@ -279,26 +279,26 @@
 
     move v0, v1
 
-    .line 357
+    .line 361
     goto :goto_0
 
-    .line 358
+    .line 362
     :cond_b
     iget-object v2, p0, Lio/branch/referral/f;->f:Ljava/lang/String;
 
     if-nez v2, :cond_c
 
-    .line 359
+    .line 363
     iget-object v2, p1, Lio/branch/referral/f;->f:Ljava/lang/String;
 
     if-eqz v2, :cond_d
 
     move v0, v1
 
-    .line 360
+    .line 364
     goto :goto_0
 
-    .line 361
+    .line 365
     :cond_c
     iget-object v2, p0, Lio/branch/referral/f;->f:Ljava/lang/String;
 
@@ -312,26 +312,26 @@
 
     move v0, v1
 
-    .line 362
+    .line 366
     goto :goto_0
 
-    .line 363
+    .line 367
     :cond_d
     iget-object v2, p0, Lio/branch/referral/f;->g:Ljava/lang/String;
 
     if-nez v2, :cond_e
 
-    .line 364
+    .line 368
     iget-object v2, p1, Lio/branch/referral/f;->g:Ljava/lang/String;
 
     if-eqz v2, :cond_f
 
     move v0, v1
 
-    .line 365
+    .line 369
     goto/16 :goto_0
 
-    .line 366
+    .line 370
     :cond_e
     iget-object v2, p0, Lio/branch/referral/f;->g:Ljava/lang/String;
 
@@ -345,10 +345,10 @@
 
     move v0, v1
 
-    .line 367
+    .line 371
     goto/16 :goto_0
 
-    .line 368
+    .line 372
     :cond_f
     iget v2, p0, Lio/branch/referral/f;->c:I
 
@@ -358,10 +358,10 @@
 
     move v0, v1
 
-    .line 369
+    .line 373
     goto/16 :goto_0
 
-    .line 370
+    .line 374
     :cond_10
     iget v2, p0, Lio/branch/referral/f;->i:I
 
@@ -371,26 +371,26 @@
 
     move v0, v1
 
-    .line 371
+    .line 375
     goto/16 :goto_0
 
-    .line 373
+    .line 377
     :cond_11
     iget-object v2, p0, Lio/branch/referral/f;->a:Ljava/util/Collection;
 
     if-nez v2, :cond_12
 
-    .line 374
+    .line 378
     iget-object v2, p1, Lio/branch/referral/f;->a:Ljava/util/Collection;
 
     if-eqz v2, :cond_0
 
     move v0, v1
 
-    .line 375
+    .line 379
     goto/16 :goto_0
 
-    .line 376
+    .line 380
     :cond_12
     iget-object v2, p0, Lio/branch/referral/f;->a:Ljava/util/Collection;
 
@@ -412,7 +412,7 @@
 
     move v0, v1
 
-    .line 377
+    .line 381
     goto/16 :goto_0
 .end method
 
@@ -420,7 +420,7 @@
     .locals 1
 
     .prologue
-    .line 264
+    .line 268
     iget-object v0, p0, Lio/branch/referral/f;->e:Ljava/lang/String;
 
     return-object v0
@@ -430,7 +430,7 @@
     .locals 1
 
     .prologue
-    .line 283
+    .line 287
     iget-object v0, p0, Lio/branch/referral/f;->f:Ljava/lang/String;
 
     return-object v0
@@ -440,7 +440,7 @@
     .locals 1
 
     .prologue
-    .line 301
+    .line 305
     iget-object v0, p0, Lio/branch/referral/f;->g:Ljava/lang/String;
 
     return-object v0
@@ -457,12 +457,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 408
+    .line 415
     iget v0, p0, Lio/branch/referral/f;->c:I
 
     add-int/lit8 v0, v0, 0x13
 
-    .line 409
+    .line 416
     mul-int/lit8 v2, v0, 0x13
 
     iget-object v0, p0, Lio/branch/referral/f;->b:Ljava/lang/String;
@@ -471,11 +471,11 @@
 
     move v0, v1
 
-    .line 410
+    .line 417
     :goto_0
     add-int/2addr v0, v2
 
-    .line 411
+    .line 418
     mul-int/lit8 v2, v0, 0x13
 
     iget-object v0, p0, Lio/branch/referral/f;->d:Ljava/lang/String;
@@ -484,11 +484,11 @@
 
     move v0, v1
 
-    .line 412
+    .line 419
     :goto_1
     add-int/2addr v0, v2
 
-    .line 413
+    .line 420
     mul-int/lit8 v2, v0, 0x13
 
     iget-object v0, p0, Lio/branch/referral/f;->e:Ljava/lang/String;
@@ -497,11 +497,11 @@
 
     move v0, v1
 
-    .line 414
+    .line 421
     :goto_2
     add-int/2addr v0, v2
 
-    .line 415
+    .line 422
     mul-int/lit8 v2, v0, 0x13
 
     iget-object v0, p0, Lio/branch/referral/f;->f:Ljava/lang/String;
@@ -510,11 +510,11 @@
 
     move v0, v1
 
-    .line 416
+    .line 423
     :goto_3
     add-int/2addr v0, v2
 
-    .line 417
+    .line 424
     mul-int/lit8 v2, v0, 0x13
 
     iget-object v0, p0, Lio/branch/referral/f;->g:Ljava/lang/String;
@@ -523,34 +523,34 @@
 
     move v0, v1
 
-    .line 418
+    .line 425
     :goto_4
     add-int/2addr v0, v2
 
-    .line 419
+    .line 426
     mul-int/lit8 v0, v0, 0x13
 
     iget-object v2, p0, Lio/branch/referral/f;->h:Ljava/lang/String;
 
     if-nez v2, :cond_5
 
-    .line 420
+    .line 427
     :goto_5
     add-int/2addr v0, v1
 
-    .line 421
+    .line 428
     mul-int/lit8 v0, v0, 0x13
 
     iget v1, p0, Lio/branch/referral/f;->i:I
 
     add-int/2addr v0, v1
 
-    .line 423
+    .line 430
     iget-object v1, p0, Lio/branch/referral/f;->a:Ljava/util/Collection;
 
     if-eqz v1, :cond_6
 
-    .line 424
+    .line 431
     iget-object v1, p0, Lio/branch/referral/f;->a:Ljava/util/Collection;
 
     invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
@@ -572,7 +572,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 425
+    .line 432
     mul-int/lit8 v1, v1, 0x13
 
     invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
@@ -587,14 +587,14 @@
 
     move v1, v0
 
-    .line 426
+    .line 433
     goto :goto_6
 
-    .line 409
+    .line 416
     :cond_0
     iget-object v0, p0, Lio/branch/referral/f;->b:Ljava/lang/String;
 
-    .line 410
+    .line 417
     invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v0
@@ -605,11 +605,11 @@
 
     goto :goto_0
 
-    .line 411
+    .line 418
     :cond_1
     iget-object v0, p0, Lio/branch/referral/f;->d:Ljava/lang/String;
 
-    .line 412
+    .line 419
     invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v0
@@ -620,11 +620,11 @@
 
     goto :goto_1
 
-    .line 413
+    .line 420
     :cond_2
     iget-object v0, p0, Lio/branch/referral/f;->e:Ljava/lang/String;
 
-    .line 414
+    .line 421
     invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v0
@@ -635,11 +635,11 @@
 
     goto :goto_2
 
-    .line 415
+    .line 422
     :cond_3
     iget-object v0, p0, Lio/branch/referral/f;->f:Ljava/lang/String;
 
-    .line 416
+    .line 423
     invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v0
@@ -650,11 +650,11 @@
 
     goto :goto_3
 
-    .line 417
+    .line 424
     :cond_4
     iget-object v0, p0, Lio/branch/referral/f;->g:Ljava/lang/String;
 
-    .line 418
+    .line 425
     invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v0
@@ -665,11 +665,11 @@
 
     goto :goto_4
 
-    .line 419
+    .line 426
     :cond_5
     iget-object v1, p0, Lio/branch/referral/f;->h:Ljava/lang/String;
 
-    .line 420
+    .line 427
     invoke-virtual {v1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v1
@@ -683,7 +683,7 @@
     :cond_6
     move v1, v0
 
-    .line 429
+    .line 436
     :cond_7
     return v1
 .end method
@@ -692,7 +692,7 @@
     .locals 1
 
     .prologue
-    .line 317
+    .line 321
     iget-object v0, p0, Lio/branch/referral/f;->h:Ljava/lang/String;
 
     return-object v0
@@ -702,12 +702,12 @@
     .locals 3
 
     .prologue
-    .line 438
+    .line 445
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    .line 440
+    .line 447
     :try_start_0
     iget-object v1, p0, Lio/branch/referral/f;->d:Ljava/lang/String;
 
@@ -717,7 +717,7 @@
 
     if-nez v1, :cond_0
 
-    .line 441
+    .line 448
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "~"
@@ -742,7 +742,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 443
+    .line 450
     :cond_0
     iget-object v1, p0, Lio/branch/referral/f;->b:Ljava/lang/String;
 
@@ -752,7 +752,7 @@
 
     if-nez v1, :cond_1
 
-    .line 444
+    .line 451
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "~"
@@ -777,7 +777,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 446
+    .line 453
     :cond_1
     iget-object v1, p0, Lio/branch/referral/f;->e:Ljava/lang/String;
 
@@ -787,7 +787,7 @@
 
     if-nez v1, :cond_2
 
-    .line 447
+    .line 454
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "~"
@@ -812,7 +812,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 449
+    .line 456
     :cond_2
     iget-object v1, p0, Lio/branch/referral/f;->f:Ljava/lang/String;
 
@@ -822,7 +822,7 @@
 
     if-nez v1, :cond_3
 
-    .line 450
+    .line 457
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "~"
@@ -847,7 +847,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 452
+    .line 459
     :cond_3
     iget-object v1, p0, Lio/branch/referral/f;->g:Ljava/lang/String;
 
@@ -857,7 +857,7 @@
 
     if-nez v1, :cond_4
 
-    .line 453
+    .line 460
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "~"
@@ -882,7 +882,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 455
+    .line 462
     :cond_4
     sget-object v1, Lio/branch/referral/Defines$LinkParam;->Tags:Lio/branch/referral/Defines$LinkParam;
 
@@ -896,7 +896,7 @@
 
     if-eqz v1, :cond_5
 
-    .line 456
+    .line 463
     sget-object v1, Lio/branch/referral/Defines$LinkParam;->Tags:Lio/branch/referral/Defines$LinkParam;
 
     invoke-virtual {v1}, Lio/branch/referral/Defines$LinkParam;->getKey()Ljava/lang/String;
@@ -915,7 +915,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 458
+    .line 465
     :cond_5
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -941,7 +941,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 459
+    .line 466
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "~"
@@ -968,7 +968,7 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 462
+    .line 469
     :goto_0
     return-object v0
 

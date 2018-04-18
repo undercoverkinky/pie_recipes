@@ -28,11 +28,11 @@
 
 
 # direct methods
-.method constructor <init>(Lkik/android/config/c;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Lkik/android/util/ai;)V
+.method constructor <init>(Lkik/android/config/c;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Lkik/android/util/ah;)V
     .locals 6
 
     .prologue
-    .line 266
+    .line 265
     iput-object p1, p0, Lkik/android/config/c$6;->a:Lkik/android/config/c;
 
     const/4 v4, 0x0
@@ -47,7 +47,7 @@
 
     move-object v5, p5
 
-    invoke-direct/range {v0 .. v5}, Lkik/android/config/Configuration;-><init>(Ljava/lang/String;Ljava/lang/Object;[Ljava/lang/Object;Ljava/lang/Runnable;Lkik/android/util/ai;)V
+    invoke-direct/range {v0 .. v5}, Lkik/android/config/Configuration;-><init>(Ljava/lang/String;Ljava/lang/Object;[Ljava/lang/Object;Ljava/lang/Runnable;Lkik/android/util/ah;)V
 
     return-void
 .end method
@@ -58,18 +58,18 @@
     .locals 1
 
     .prologue
-    .line 270
+    .line 269
     sget-object v0, Lkik/android/config/Configuration$Type;->String:Lkik/android/config/Configuration$Type;
 
     return-object v0
 .end method
 
-.method protected final a(Lkik/android/util/ai;)V
+.method protected final a(Lkik/android/util/ah;)V
     .locals 3
 
     .prologue
-    .line 282
-    invoke-interface {p1}, Lkik/android/util/ai;->b()Landroid/content/SharedPreferences;
+    .line 281
+    invoke-interface {p1}, Lkik/android/util/ah;->b()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -77,7 +77,7 @@
 
     move-result-object v1
 
-    .line 283
+    .line 282
     const-string v2, "kik.abm_reminder_time_unit"
 
     invoke-virtual {p0}, Lkik/android/config/c$6;->b()Ljava/lang/Object;
@@ -88,20 +88,20 @@
 
     invoke-interface {v1, v2, v0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 284
+    .line 283
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 285
+    .line 284
     return-void
 .end method
 
-.method protected final synthetic b(Lkik/android/util/ai;)Ljava/lang/Object;
+.method protected final synthetic b(Lkik/android/util/ah;)Ljava/lang/Object;
     .locals 3
 
     .prologue
-    .line 266
-    .line 1276
-    invoke-interface {p1}, Lkik/android/util/ai;->b()Landroid/content/SharedPreferences;
+    .line 265
+    .line 1275
+    invoke-interface {p1}, Lkik/android/util/ah;->b()Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -117,6 +117,6 @@
 
     move-result-object v0
 
-    .line 266
+    .line 265
     return-object v0
 .end method

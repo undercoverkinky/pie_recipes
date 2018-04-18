@@ -1,44 +1,42 @@
 .class public Lcom/kik/cards/web/advertising/AdvertisingPlugin;
-.super Lcom/kik/cards/web/plugin/BridgePlugin;
+.super Lcom/kik/cards/web/plugin/d;
 .source "SourceFile"
 
 
 # instance fields
-.field private final _adManager:Lcom/kik/cards/web/advertising/a;
+.field private final a:Z
 
-.field private _context:Landroid/app/Activity;
+.field private b:Landroid/app/Activity;
 
-.field private final _isDebug:Z
+.field private final d:Lcom/kik/cards/web/advertising/a;
 
 
 # direct methods
 .method public constructor <init>(Landroid/app/Activity;)V
-    .locals 2
+    .locals 1
 
     .prologue
     .line 28
-    const/4 v0, 0x1
+    const-string v0, "Advertising"
 
-    const-string v1, "Advertising"
-
-    invoke-direct {p0, v0, v1}, Lcom/kik/cards/web/plugin/BridgePlugin;-><init>(ILjava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/kik/cards/web/plugin/d;-><init>(Ljava/lang/String;)V
 
     .line 29
-    iput-object p1, p0, Lcom/kik/cards/web/advertising/AdvertisingPlugin;->_context:Landroid/app/Activity;
+    iput-object p1, p0, Lcom/kik/cards/web/advertising/AdvertisingPlugin;->b:Landroid/app/Activity;
 
     .line 30
     invoke-static {}, Lkik/android/util/DeviceUtils;->f()Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/kik/cards/web/advertising/AdvertisingPlugin;->_isDebug:Z
+    iput-boolean v0, p0, Lcom/kik/cards/web/advertising/AdvertisingPlugin;->a:Z
 
     .line 31
     new-instance v0, Lcom/kik/cards/web/advertising/a;
 
     invoke-direct {v0}, Lcom/kik/cards/web/advertising/a;-><init>()V
 
-    iput-object v0, p0, Lcom/kik/cards/web/advertising/AdvertisingPlugin;->_adManager:Lcom/kik/cards/web/advertising/a;
+    iput-object v0, p0, Lcom/kik/cards/web/advertising/AdvertisingPlugin;->d:Lcom/kik/cards/web/advertising/a;
 
     .line 32
     return-void
@@ -46,7 +44,7 @@
 
 
 # virtual methods
-.method public getAdvertisingInfo(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;Ljava/lang/String;)Lcom/kik/cards/web/plugin/g;
+.method public getAdvertisingInfo(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;Ljava/lang/String;)Lcom/kik/cards/web/plugin/h;
     .locals 4
     .annotation runtime Lcom/kik/cards/web/plugin/c;
     .end annotation
@@ -65,7 +63,7 @@
 
     .line 40
     :goto_0
-    iget-boolean v1, p0, Lcom/kik/cards/web/advertising/AdvertisingPlugin;->_isDebug:Z
+    iget-boolean v1, p0, Lcom/kik/cards/web/advertising/AdvertisingPlugin;->a:Z
 
     if-nez v1, :cond_2
 
@@ -85,7 +83,7 @@
 
     aput-object v3, v1, v2
 
-    invoke-static {v0, v1}, Lcom/kik/cards/web/s;->a(Ljava/lang/String;[Ljava/lang/String;)Z
+    invoke-static {v0, v1}, Lcom/kik/cards/web/r;->a(Ljava/lang/String;[Ljava/lang/String;)Z
 
     move-result v0
 
@@ -93,11 +91,11 @@
 
     .line 41
     :cond_0
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
     const/16 v1, 0x191
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
     .line 68
     :goto_1
@@ -113,9 +111,9 @@
 
     .line 44
     :cond_2
-    iget-object v0, p0, Lcom/kik/cards/web/advertising/AdvertisingPlugin;->_adManager:Lcom/kik/cards/web/advertising/a;
+    iget-object v0, p0, Lcom/kik/cards/web/advertising/AdvertisingPlugin;->d:Lcom/kik/cards/web/advertising/a;
 
-    iget-object v1, p0, Lcom/kik/cards/web/advertising/AdvertisingPlugin;->_context:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/kik/cards/web/advertising/AdvertisingPlugin;->b:Landroid/app/Activity;
 
     new-instance v2, Lcom/kik/cards/web/advertising/AdvertisingPlugin$1;
 
@@ -124,11 +122,11 @@
     invoke-virtual {v0, v1, v2}, Lcom/kik/cards/web/advertising/a;->a(Landroid/content/Context;Lcom/kik/cards/web/advertising/b;)V
 
     .line 68
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
     const/16 v1, 0xca
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
     goto :goto_1
 .end method

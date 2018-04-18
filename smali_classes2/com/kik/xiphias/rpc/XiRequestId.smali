@@ -200,10 +200,8 @@
 
     invoke-virtual {p0}, Lcom/kik/xiphias/rpc/XiRequestId;->makeExtensionsImmutable()V
 
-    .line 78
     throw v0
 
-    .line 77
     :cond_1
     invoke-virtual {p0}, Lcom/kik/xiphias/rpc/XiRequestId;->makeExtensionsImmutable()V
 

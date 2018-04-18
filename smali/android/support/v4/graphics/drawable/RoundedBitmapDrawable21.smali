@@ -3,21 +3,15 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x15
-.end annotation
-
-
 # direct methods
 .method protected constructor <init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
     .locals 0
 
     .prologue
-    .line 32
+    .line 28
     invoke-direct {p0, p1, p2}, Landroid/support/v4/graphics/drawable/RoundedBitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    .line 33
+    .line 29
     return-void
 .end method
 
@@ -27,10 +21,10 @@
     .locals 2
 
     .prologue
-    .line 37
+    .line 33
     invoke-virtual {p0}, Landroid/support/v4/graphics/drawable/RoundedBitmapDrawable21;->updateDstRect()V
 
-    .line 38
+    .line 34
     iget-object v0, p0, Landroid/support/v4/graphics/drawable/RoundedBitmapDrawable21;->mDstRect:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Landroid/support/v4/graphics/drawable/RoundedBitmapDrawable21;->getCornerRadius()F
@@ -39,7 +33,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Outline;->setRoundRect(Landroid/graphics/Rect;F)V
 
-    .line 39
+    .line 35
     return-void
 .end method
 
@@ -47,7 +41,7 @@
     .locals 6
 
     .prologue
-    .line 57
+    .line 53
     const/4 v5, 0x0
 
     move v0, p1
@@ -62,7 +56,7 @@
 
     invoke-static/range {v0 .. v5}, Landroid/view/Gravity;->apply(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
 
-    .line 59
+    .line 55
     return-void
 .end method
 
@@ -70,7 +64,7 @@
     .locals 1
 
     .prologue
-    .line 51
+    .line 47
     iget-object v0, p0, Landroid/support/v4/graphics/drawable/RoundedBitmapDrawable21;->mBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
@@ -98,20 +92,20 @@
     .locals 1
 
     .prologue
-    .line 43
+    .line 39
     iget-object v0, p0, Landroid/support/v4/graphics/drawable/RoundedBitmapDrawable21;->mBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    .line 44
+    .line 40
     iget-object v0, p0, Landroid/support/v4/graphics/drawable/RoundedBitmapDrawable21;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Bitmap;->setHasMipMap(Z)V
 
-    .line 45
+    .line 41
     invoke-virtual {p0}, Landroid/support/v4/graphics/drawable/RoundedBitmapDrawable21;->invalidateSelf()V
 
-    .line 47
+    .line 43
     :cond_0
     return-void
 .end method

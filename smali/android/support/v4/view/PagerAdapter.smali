@@ -37,11 +37,9 @@
 # virtual methods
 .method public destroyItem(Landroid/view/View;ILjava/lang/Object;)V
     .locals 2
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 
     .prologue
-    .line 196
+    .line 193
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Required method destroyItem was not overridden"
@@ -64,11 +62,9 @@
 
 .method public finishUpdate(Landroid/view/View;)V
     .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 
     .prologue
-    .line 225
+    .line 220
     return-void
 .end method
 
@@ -90,7 +86,7 @@
     .locals 1
 
     .prologue
-    .line 274
+    .line 269
     const/4 v0, -0x1
 
     return v0
@@ -100,7 +96,7 @@
     .locals 1
 
     .prologue
-    .line 324
+    .line 319
     const/4 v0, 0x0
 
     return-object v0
@@ -110,7 +106,7 @@
     .locals 1
 
     .prologue
-    .line 335
+    .line 330
     const/high16 v0, 0x3f800000    # 1.0f
 
     return v0
@@ -118,11 +114,9 @@
 
 .method public instantiateItem(Landroid/view/View;I)Ljava/lang/Object;
     .locals 2
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 
     .prologue
-    .line 178
+    .line 176
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Required method instantiateItem was not overridden"
@@ -151,35 +145,35 @@
     .locals 1
 
     .prologue
-    .line 282
+    .line 277
     monitor-enter p0
 
-    .line 283
+    .line 278
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/view/PagerAdapter;->mViewPagerObserver:Landroid/database/DataSetObserver;
 
     if-eqz v0, :cond_0
 
-    .line 284
+    .line 279
     iget-object v0, p0, Landroid/support/v4/view/PagerAdapter;->mViewPagerObserver:Landroid/database/DataSetObserver;
 
     invoke-virtual {v0}, Landroid/database/DataSetObserver;->onChanged()V
 
-    .line 286
+    .line 281
     :cond_0
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 287
+    .line 282
     iget-object v0, p0, Landroid/support/v4/view/PagerAdapter;->mObservable:Landroid/database/DataSetObservable;
 
     invoke-virtual {v0}, Landroid/database/DataSetObservable;->notifyChanged()V
 
-    .line 288
+    .line 283
     return-void
 
-    .line 286
+    .line 281
     :catchall_0
     move-exception v0
 
@@ -195,12 +189,12 @@
     .locals 1
 
     .prologue
-    .line 296
+    .line 291
     iget-object v0, p0, Landroid/support/v4/view/PagerAdapter;->mObservable:Landroid/database/DataSetObservable;
 
     invoke-virtual {v0, p1}, Landroid/database/DataSetObservable;->registerObserver(Ljava/lang/Object;)V
 
-    .line 297
+    .line 292
     return-void
 .end method
 
@@ -208,7 +202,7 @@
     .locals 0
 
     .prologue
-    .line 256
+    .line 251
     return-void
 .end method
 
@@ -216,7 +210,7 @@
     .locals 1
 
     .prologue
-    .line 245
+    .line 240
     const/4 v0, 0x0
 
     return-object v0
@@ -224,11 +218,9 @@
 
 .method public setPrimaryItem(Landroid/view/View;ILjava/lang/Object;)V
     .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 
     .prologue
-    .line 212
+    .line 208
     return-void
 .end method
 
@@ -247,14 +239,14 @@
     .locals 1
 
     .prologue
-    .line 309
+    .line 304
     monitor-enter p0
 
-    .line 310
+    .line 305
     :try_start_0
     iput-object p1, p0, Landroid/support/v4/view/PagerAdapter;->mViewPagerObserver:Landroid/database/DataSetObserver;
 
-    .line 311
+    .line 306
     monitor-exit p0
 
     return-void
@@ -271,11 +263,9 @@
 
 .method public startUpdate(Landroid/view/View;)V
     .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 
     .prologue
-    .line 161
+    .line 160
     return-void
 .end method
 
@@ -294,11 +284,11 @@
     .locals 1
 
     .prologue
-    .line 305
+    .line 300
     iget-object v0, p0, Landroid/support/v4/view/PagerAdapter;->mObservable:Landroid/database/DataSetObservable;
 
     invoke-virtual {v0, p1}, Landroid/database/DataSetObservable;->unregisterObserver(Ljava/lang/Object;)V
 
-    .line 306
+    .line 301
     return-void
 .end method

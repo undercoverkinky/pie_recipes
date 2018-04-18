@@ -23,12 +23,12 @@
 
 
 # instance fields
-.field private final b:Ljavax/inject/Provider;
+.field private final b:Ldagger/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljavax/inject/Provider",
+            "Ldagger/b",
             "<",
-            "Lkik/core/ICoreEvents;",
+            "Lkik/android/chat/fragment/SimpleFragmentWrapperActivity;",
             ">;"
         }
     .end annotation
@@ -73,14 +73,14 @@
     goto :goto_0
 .end method
 
-.method private constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+.method private constructor <init>(Ldagger/b;Ljavax/inject/Provider;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ljavax/inject/Provider",
+            "Ldagger/b",
             "<",
-            "Lkik/core/ICoreEvents;",
+            "Lkik/android/chat/fragment/SimpleFragmentWrapperActivity;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
@@ -90,10 +90,10 @@
     .end annotation
 
     .prologue
-    .line 20
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
+    .line 15
     sget-boolean v0, Lkik/android/chat/activity/KikWelcomeFragmentActivity_MembersInjector;->a:Z
 
     if-nez v0, :cond_0
@@ -106,11 +106,11 @@
 
     throw v0
 
-    .line 22
+    .line 16
     :cond_0
-    iput-object p1, p0, Lkik/android/chat/activity/KikWelcomeFragmentActivity_MembersInjector;->b:Ljavax/inject/Provider;
+    iput-object p1, p0, Lkik/android/chat/activity/KikWelcomeFragmentActivity_MembersInjector;->b:Ldagger/b;
 
-    .line 23
+    .line 17
     sget-boolean v0, Lkik/android/chat/activity/KikWelcomeFragmentActivity_MembersInjector;->a:Z
 
     if-nez v0, :cond_1
@@ -123,22 +123,22 @@
 
     throw v0
 
-    .line 24
+    .line 18
     :cond_1
     iput-object p2, p0, Lkik/android/chat/activity/KikWelcomeFragmentActivity_MembersInjector;->c:Ljavax/inject/Provider;
 
-    .line 25
+    .line 19
     return-void
 .end method
 
-.method public static a(Ljavax/inject/Provider;Ljavax/inject/Provider;)Ldagger/b;
+.method public static a(Ldagger/b;Ljavax/inject/Provider;)Ldagger/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ljavax/inject/Provider",
+            "Ldagger/b",
             "<",
-            "Lkik/core/ICoreEvents;",
+            "Lkik/android/chat/fragment/SimpleFragmentWrapperActivity;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
@@ -152,10 +152,10 @@
     .end annotation
 
     .prologue
-    .line 29
+    .line 31
     new-instance v0, Lkik/android/chat/activity/KikWelcomeFragmentActivity_MembersInjector;
 
-    invoke-direct {v0, p0, p1}, Lkik/android/chat/activity/KikWelcomeFragmentActivity_MembersInjector;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+    invoke-direct {v0, p0, p1}, Lkik/android/chat/activity/KikWelcomeFragmentActivity_MembersInjector;-><init>(Ldagger/b;Ljavax/inject/Provider;)V
 
     return-object v0
 .end method
@@ -169,10 +169,10 @@
     .line 9
     check-cast p1, Lkik/android/chat/activity/KikWelcomeFragmentActivity;
 
-    .line 1034
+    .line 1023
     if-nez p1, :cond_0
 
-    .line 1035
+    .line 1024
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "Cannot inject members into a null reference"
@@ -181,13 +181,13 @@
 
     throw v0
 
-    .line 1037
+    .line 1026
     :cond_0
-    iget-object v0, p0, Lkik/android/chat/activity/KikWelcomeFragmentActivity_MembersInjector;->b:Ljavax/inject/Provider;
+    iget-object v0, p0, Lkik/android/chat/activity/KikWelcomeFragmentActivity_MembersInjector;->b:Ldagger/b;
 
-    invoke-static {p1, v0}, Lkik/android/chat/fragment/SimpleFragmentWrapperActivity_MembersInjector;->a(Lkik/android/chat/fragment/SimpleFragmentWrapperActivity;Ljavax/inject/Provider;)V
+    invoke-interface {v0, p1}, Ldagger/b;->injectMembers(Ljava/lang/Object;)V
 
-    .line 1039
+    .line 1027
     iget-object v0, p0, Lkik/android/chat/activity/KikWelcomeFragmentActivity_MembersInjector;->c:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;

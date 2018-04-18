@@ -29,8 +29,6 @@
 
 .field public static final enum VIDEOCHAT_STREAM_LONGPRESS:Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;
 
-.field public static final enum VIDEOCHAT_STREAM_RESIZE:Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;
-
 
 # instance fields
 .field private final mEventName:Ljava/lang/String;
@@ -38,11 +36,9 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 7
+    .locals 6
 
     .prologue
-    const/4 v6, 0x3
-
     const/4 v5, 0x2
 
     const/4 v4, 0x1
@@ -52,67 +48,52 @@
     .line 12
     new-instance v0, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;
 
-    const-string v1, "VIDEOCHAT_STREAM_LONGPRESS"
-
-    const-string v2, "videochat_stream_longpress"
-
-    invoke-direct {v0, v1, v3, v2}, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;->VIDEOCHAT_STREAM_LONGPRESS:Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;
-
-    .line 13
-    new-instance v0, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;
-
     const-string v1, "VIDEOCHAT_STREAM_DOUBLETAP"
 
     const-string v2, "videochat_stream_doubletap"
 
-    invoke-direct {v0, v1, v4, v2}, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v0, v1, v3, v2}, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;->VIDEOCHAT_STREAM_DOUBLETAP:Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;
 
-    .line 14
-    new-instance v0, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;
-
-    const-string v1, "VIDEOCHAT_STREAM_RESIZE"
-
-    const-string v2, "videochat_stream_resize"
-
-    invoke-direct {v0, v1, v5, v2}, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;->VIDEOCHAT_STREAM_RESIZE:Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;
-
-    .line 15
+    .line 13
     new-instance v0, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;
 
     const-string v1, "VIDEOCHAT_STREAM_DRAG"
 
     const-string v2, "videochat_stream_drag"
 
-    invoke-direct {v0, v1, v6, v2}, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v0, v1, v4, v2}, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;->VIDEOCHAT_STREAM_DRAG:Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;
 
+    .line 14
+    new-instance v0, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;
+
+    const-string v1, "VIDEOCHAT_STREAM_LONGPRESS"
+
+    const-string v2, "videochat_stream_longpress"
+
+    invoke-direct {v0, v1, v5, v2}, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;->VIDEOCHAT_STREAM_LONGPRESS:Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;
+
     .line 10
-    const/4 v0, 0x4
+    const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;
 
-    sget-object v1, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;->VIDEOCHAT_STREAM_LONGPRESS:Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;
+    sget-object v1, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;->VIDEOCHAT_STREAM_DOUBLETAP:Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;
 
     aput-object v1, v0, v3
 
-    sget-object v1, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;->VIDEOCHAT_STREAM_DOUBLETAP:Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;
+    sget-object v1, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;->VIDEOCHAT_STREAM_DRAG:Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;
 
     aput-object v1, v0, v4
 
-    sget-object v1, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;->VIDEOCHAT_STREAM_RESIZE:Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;
+    sget-object v1, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;->VIDEOCHAT_STREAM_LONGPRESS:Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;
 
     aput-object v1, v0, v5
-
-    sget-object v1, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;->VIDEOCHAT_STREAM_DRAG:Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;
-
-    aput-object v1, v0, v6
 
     sput-object v0, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;->$VALUES:[Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;
 
@@ -130,13 +111,13 @@
     .end annotation
 
     .prologue
-    .line 21
+    .line 19
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 22
+    .line 20
     iput-object p3, p0, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;->mEventName:Ljava/lang/String;
 
-    .line 23
+    .line 21
     return-void
 .end method
 
@@ -187,7 +168,7 @@
     .end annotation
 
     .prologue
-    .line 27
+    .line 25
     iget-object v0, p0, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents;->mEventName:Ljava/lang/String;
 
     const-class v1, Lcom/rounds/kik/analytics/group/conference/OwnStreamEvents$Builder;

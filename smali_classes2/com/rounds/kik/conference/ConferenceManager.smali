@@ -45,7 +45,7 @@
 
 .field private mConnected:Z
 
-.field private final mGson:Lcom/google/gson/e;
+.field private final mGson:Lcom/google/gson/d;
 
 .field private volatile mIsInCall:Z
 
@@ -59,7 +59,7 @@
     .locals 1
 
     .prologue
-    .line 29
+    .line 30
     const-class v0, Lcom/rounds/kik/conference/ConferenceManager;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -79,18 +79,18 @@
     .locals 3
 
     .prologue
-    .line 96
+    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 97
+    .line 98
     sput-object p0, Lcom/rounds/kik/conference/ConferenceManager;->sInstance:Lcom/rounds/kik/conference/ConferenceManager;
 
-    .line 98
+    .line 99
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mIsInCall:Z
 
-    .line 99
+    .line 100
     sget-object v0, Lcom/rounds/kik/conference/ConferenceManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "ConferenceManager constructor mConnected = {}"
@@ -103,10 +103,10 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 100
-    new-instance v0, Lcom/google/gson/f;
+    .line 101
+    new-instance v0, Lcom/google/gson/e;
 
-    invoke-direct {v0}, Lcom/google/gson/f;-><init>()V
+    invoke-direct {v0}, Lcom/google/gson/e;-><init>()V
 
     const-class v1, Lcom/rounds/kik/conference/messaging/BaseVidyoMessage;
 
@@ -114,27 +114,27 @@
 
     invoke-direct {v2}, Lcom/rounds/kik/conference/messaging/VidyoMessageDeserializer;-><init>()V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/f;->a(Ljava/lang/reflect/Type;Ljava/lang/Object;)Lcom/google/gson/f;
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/e;->a(Ljava/lang/reflect/Type;Ljava/lang/Object;)Lcom/google/gson/e;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/gson/f;->b()Lcom/google/gson/e;
+    invoke-virtual {v0}, Lcom/google/gson/e;->b()Lcom/google/gson/d;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mGson:Lcom/google/gson/e;
-
-    .line 101
-    iput-object p1, p0, Lcom/rounds/kik/conference/ConferenceManager;->mObserver:Lcom/rounds/kik/conference/ConferenceObserver;
+    iput-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mGson:Lcom/google/gson/d;
 
     .line 102
+    iput-object p1, p0, Lcom/rounds/kik/conference/ConferenceManager;->mObserver:Lcom/rounds/kik/conference/ConferenceObserver;
+
+    .line 103
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mClients:Ljava/util/HashMap;
 
-    .line 103
+    .line 104
     return-void
 .end method
 
@@ -142,7 +142,7 @@
     .locals 1
 
     .prologue
-    .line 151
+    .line 152
     sget-object v0, Lcom/rounds/kik/conference/ConferenceManager;->sInstance:Lcom/rounds/kik/conference/ConferenceManager;
 
     if-eqz v0, :cond_0
@@ -166,7 +166,7 @@
     .locals 1
 
     .prologue
-    .line 156
+    .line 157
     sget-object v0, Lcom/rounds/kik/conference/ConferenceManager;->sInstance:Lcom/rounds/kik/conference/ConferenceManager;
 
     if-eqz v0, :cond_0
@@ -190,7 +190,7 @@
     .locals 1
 
     .prologue
-    .line 136
+    .line 137
     sget-object v0, Lcom/rounds/kik/conference/ConferenceManager;->sInstance:Lcom/rounds/kik/conference/ConferenceManager;
 
     return-object v0
@@ -200,7 +200,7 @@
     .locals 1
 
     .prologue
-    .line 141
+    .line 142
     sget-object v0, Lcom/rounds/kik/conference/ConferenceManager;->sInstance:Lcom/rounds/kik/conference/ConferenceManager;
 
     return-object v0
@@ -210,12 +210,12 @@
     .locals 2
 
     .prologue
-    .line 289
+    .line 290
     new-instance v1, Lcom/rounds/kik/conference/messaging/BackgroundStatusMessage;
 
     invoke-direct {v1}, Lcom/rounds/kik/conference/messaging/BackgroundStatusMessage;-><init>()V
 
-    .line 290
+    .line 291
     if-eqz p0, :cond_0
 
     sget-object v0, Lcom/rounds/kik/conference/messaging/BackgroundStatusMessage$Status;->IN_BACKGROUND:Lcom/rounds/kik/conference/messaging/BackgroundStatusMessage$Status;
@@ -223,18 +223,18 @@
     :goto_0
     invoke-virtual {v1, v0}, Lcom/rounds/kik/conference/messaging/BackgroundStatusMessage;->setStatus(Lcom/rounds/kik/conference/messaging/BackgroundStatusMessage$Status;)V
 
-    .line 291
+    .line 292
     sget-object v0, Lcom/rounds/kik/conference/ConferenceManager;->sInstance:Lcom/rounds/kik/conference/ConferenceManager;
 
-    iget-object v0, v0, Lcom/rounds/kik/conference/ConferenceManager;->mGson:Lcom/google/gson/e;
+    iget-object v0, v0, Lcom/rounds/kik/conference/ConferenceManager;->mGson:Lcom/google/gson/d;
 
-    invoke-virtual {v0, v1}, Lcom/google/gson/e;->a(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/google/gson/d;->a(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    .line 290
+    .line 291
     :cond_0
     sget-object v0, Lcom/rounds/kik/conference/messaging/BackgroundStatusMessage$Status;->IN_FOREGROUND:Lcom/rounds/kik/conference/messaging/BackgroundStatusMessage$Status;
 
@@ -245,20 +245,20 @@
     .locals 2
 
     .prologue
-    .line 296
+    .line 297
     new-instance v0, Lcom/rounds/kik/conference/messaging/PhoneStateMessage;
 
     invoke-direct {v0}, Lcom/rounds/kik/conference/messaging/PhoneStateMessage;-><init>()V
 
-    .line 297
+    .line 298
     invoke-virtual {v0, p0}, Lcom/rounds/kik/conference/messaging/PhoneStateMessage;->setStatus(Z)V
 
-    .line 298
+    .line 299
     sget-object v1, Lcom/rounds/kik/conference/ConferenceManager;->sInstance:Lcom/rounds/kik/conference/ConferenceManager;
 
-    iget-object v1, v1, Lcom/rounds/kik/conference/ConferenceManager;->mGson:Lcom/google/gson/e;
+    iget-object v1, v1, Lcom/rounds/kik/conference/ConferenceManager;->mGson:Lcom/google/gson/d;
 
-    invoke-virtual {v1, v0}, Lcom/google/gson/e;->a(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Lcom/google/gson/d;->a(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -269,15 +269,15 @@
     .locals 1
 
     .prologue
-    .line 161
+    .line 162
     sget-object v0, Lcom/rounds/kik/conference/ConferenceManager;->sInstance:Lcom/rounds/kik/conference/ConferenceManager;
 
     if-nez v0, :cond_0
 
-    .line 162
+    .line 163
     const/4 v0, 0x0
 
-    .line 165
+    .line 166
     :goto_0
     return-object v0
 
@@ -310,7 +310,7 @@
     .locals 3
 
     .prologue
-    .line 314
+    .line 311
     iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mClients:Ljava/util/HashMap;
 
     invoke-virtual {v0, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -319,10 +319,10 @@
 
     check-cast v0, Lcom/rounds/kik/conference/ConferenceManager$a;
 
-    .line 316
+    .line 313
     if-nez v0, :cond_0
 
-    .line 317
+    .line 314
     sget-object v0, Lcom/rounds/kik/conference/ConferenceManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -341,20 +341,20 @@
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->warn(Ljava/lang/String;)V
 
-    .line 326
+    .line 323
     :goto_0
     return-void
 
-    .line 321
+    .line 318
     :cond_0
     invoke-virtual {p1}, Lcom/rounds/kik/conference/messaging/BackgroundStatusMessage;->getBackgroundStatus()Z
 
     move-result v1
 
-    .line 322
+    .line 319
     invoke-virtual {v0, v1}, Lcom/rounds/kik/conference/ConferenceManager$a;->a(Z)V
 
-    .line 324
+    .line 321
     invoke-direct {p0, p2, v0}, Lcom/rounds/kik/conference/ConferenceManager;->setIconsVisibility(Ljava/lang/String;Lcom/rounds/kik/conference/ConferenceManager$a;)V
 
     goto :goto_0
@@ -364,7 +364,7 @@
     .locals 3
 
     .prologue
-    .line 330
+    .line 327
     iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mClients:Ljava/util/HashMap;
 
     invoke-virtual {v0, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -373,10 +373,10 @@
 
     check-cast v0, Lcom/rounds/kik/conference/ConferenceManager$a;
 
-    .line 332
+    .line 329
     if-nez v0, :cond_0
 
-    .line 333
+    .line 330
     sget-object v0, Lcom/rounds/kik/conference/ConferenceManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -395,20 +395,20 @@
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->warn(Ljava/lang/String;)V
 
-    .line 342
+    .line 339
     :goto_0
     return-void
 
-    .line 337
+    .line 334
     :cond_0
     invoke-virtual {p1}, Lcom/rounds/kik/conference/messaging/PhoneStateMessage;->getStatus()Z
 
     move-result v1
 
-    .line 338
+    .line 335
     invoke-virtual {v0, v1}, Lcom/rounds/kik/conference/ConferenceManager$a;->b(Z)V
 
-    .line 340
+    .line 337
     invoke-direct {p0, p2, v0}, Lcom/rounds/kik/conference/ConferenceManager;->setIconsVisibility(Ljava/lang/String;Lcom/rounds/kik/conference/ConferenceManager$a;)V
 
     goto :goto_0
@@ -418,7 +418,7 @@
     .locals 1
 
     .prologue
-    .line 146
+    .line 147
     invoke-static {}, Lcom/rounds/kik/conference/ConferenceManager;->activeConference()Lcom/rounds/kik/conference/Conference;
 
     move-result-object v0
@@ -440,17 +440,17 @@
     .locals 1
 
     .prologue
-    .line 44
+    .line 45
     sget-object v0, Lcom/rounds/kik/conference/ConferenceManager;->sInstance:Lcom/rounds/kik/conference/ConferenceManager;
 
     if-eqz v0, :cond_0
 
-    .line 45
+    .line 46
     sget-object v0, Lcom/rounds/kik/conference/ConferenceManager;->sInstance:Lcom/rounds/kik/conference/ConferenceManager;
 
     iget-boolean v0, v0, Lcom/rounds/kik/conference/ConferenceManager;->mIsInCall:Z
 
-    .line 48
+    .line 49
     :goto_0
     return v0
 
@@ -464,14 +464,14 @@
     .locals 1
 
     .prologue
-    .line 272
+    .line 273
     invoke-static {p0}, Lcom/rounds/kik/conference/ConferenceManager;->createInBackgroundJsonMessage(Z)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0}, Lcom/rounds/kik/conference/ConferenceManager;->sendPublicMessage(Ljava/lang/String;)V
 
-    .line 273
+    .line 274
     return-void
 .end method
 
@@ -479,14 +479,14 @@
     .locals 1
 
     .prologue
-    .line 267
+    .line 268
     invoke-static {p0}, Lcom/rounds/kik/conference/ConferenceManager;->createInBackgroundJsonMessage(Z)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0, p1}, Lcom/rounds/kik/conference/ConferenceManager;->sendPrivateMessage(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 268
+    .line 269
     return-void
 .end method
 
@@ -494,19 +494,19 @@
     .locals 1
 
     .prologue
-    .line 282
+    .line 283
     sget-object v0, Lcom/rounds/kik/conference/ConferenceManager;->sInstance:Lcom/rounds/kik/conference/ConferenceManager;
 
     if-eqz v0, :cond_0
 
-    .line 283
+    .line 284
     invoke-static {p0}, Lcom/rounds/kik/conference/ConferenceManager;->createInCallJsonMessage(Z)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0, p1}, Lcom/rounds/kik/conference/ConferenceManager;->sendPrivateMessage(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 285
+    .line 286
     :cond_0
     return-void
 .end method
@@ -515,14 +515,14 @@
     .locals 1
 
     .prologue
-    .line 253
+    .line 254
     invoke-static {}, Lcom/rounds/kik/conference/ConferenceManager;->activeConference()Lcom/rounds/kik/conference/Conference;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 254
+    .line 255
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->INSTANCE:Lcom/rounds/kik/media/MediaBroker;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/MediaBroker;->vidyoHandler()Lcom/rounds/kik/media/VidyoHandler;
@@ -531,7 +531,7 @@
 
     invoke-virtual {v0, p0, p1}, Lcom/rounds/kik/media/VidyoHandler;->sendPrivateMessage(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 256
+    .line 257
     :cond_0
     return-void
 .end method
@@ -540,14 +540,14 @@
     .locals 1
 
     .prologue
-    .line 260
+    .line 261
     invoke-static {}, Lcom/rounds/kik/conference/ConferenceManager;->activeConference()Lcom/rounds/kik/conference/Conference;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 261
+    .line 262
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->INSTANCE:Lcom/rounds/kik/media/MediaBroker;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/MediaBroker;->vidyoHandler()Lcom/rounds/kik/media/VidyoHandler;
@@ -556,103 +556,55 @@
 
     invoke-virtual {v0, p0}, Lcom/rounds/kik/media/VidyoHandler;->sendPublicMessage(Ljava/lang/String;)V
 
-    .line 263
+    .line 264
     :cond_0
     return-void
 .end method
 
 .method private setIconsVisibility(Ljava/lang/String;Lcom/rounds/kik/conference/ConferenceManager$a;)V
-    .locals 4
+    .locals 3
 
     .prologue
     const/high16 v1, 0x3f800000    # 1.0f
 
     const/4 v2, 0x0
 
-    .line 303
-    iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mObserver:Lcom/rounds/kik/conference/ConferenceObserver;
-
-    invoke-virtual {p2}, Lcom/rounds/kik/conference/ConferenceManager$a;->a()Z
-
-    move-result v3
-
-    invoke-interface {v0, p1, v3}, Lcom/rounds/kik/conference/ConferenceObserver;->onParticipantInBackground(Ljava/lang/String;Z)V
-
     .line 304
-    iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mObserver:Lcom/rounds/kik/conference/ConferenceObserver;
-
-    invoke-virtual {p2}, Lcom/rounds/kik/conference/ConferenceManager$a;->b()Z
-
-    move-result v3
-
-    invoke-interface {v0, p1, v3}, Lcom/rounds/kik/conference/ConferenceObserver;->onParticipantInCall(Ljava/lang/String;Z)V
-
-    .line 305
     invoke-virtual {p2}, Lcom/rounds/kik/conference/ConferenceManager$a;->a()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     move v0, v1
 
     :goto_0
     invoke-static {p1, v0}, Lcom/rounds/kik/media/NativeRoundsVidyoClient;->R3DSetNoCameraIconVisibility(Ljava/lang/String;F)V
 
-    .line 306
+    .line 305
     invoke-virtual {p2}, Lcom/rounds/kik/conference/ConferenceManager$a;->b()Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
     :goto_1
     invoke-static {p1, v1}, Lcom/rounds/kik/media/NativeRoundsVidyoClient;->R3DSetInCallIconVisibility(Ljava/lang/String;F)V
 
-    .line 307
-    invoke-virtual {p2}, Lcom/rounds/kik/conference/ConferenceManager$a;->b()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p2}, Lcom/rounds/kik/conference/ConferenceManager$a;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 308
-    :goto_2
-    int-to-float v0, v0
-
-    const/16 v1, 0x190
-
-    invoke-static {p1, v0, v1}, Lcom/rounds/kik/media/NativeRoundsVidyoClient;->R3DSwitchBlackOverlayViewMode(Ljava/lang/String;FI)V
-
-    .line 309
+    .line 306
     return-void
 
-    :cond_1
+    :cond_0
     move v0, v2
 
-    .line 305
+    .line 304
     goto :goto_0
 
-    :cond_2
+    :cond_1
     move v1, v2
 
-    .line 306
+    .line 305
     goto :goto_1
-
-    .line 307
-    :cond_3
-    const/4 v0, 0x0
-
-    goto :goto_2
 .end method
 
 
@@ -661,28 +613,28 @@
     .locals 2
 
     .prologue
-    .line 107
+    .line 108
     new-instance v0, Lcom/rounds/kik/conference/Conference;
 
     invoke-direct {v0, p1, p2}, Lcom/rounds/kik/conference/Conference;-><init>(Lcom/rounds/kik/conference/ConferenceUri;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mActiveConference:Lcom/rounds/kik/conference/Conference;
 
-    .line 108
+    .line 109
     sget-object v0, Lcom/rounds/kik/conference/ConferenceManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "connect to: {}"
 
     invoke-virtual {v0, v1, p1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 109
+    .line 110
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->INSTANCE:Lcom/rounds/kik/media/MediaBroker;
 
     iget-object v1, p0, Lcom/rounds/kik/conference/ConferenceManager;->mActiveConference:Lcom/rounds/kik/conference/Conference;
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/media/MediaBroker;->connectConference(Lcom/rounds/kik/conference/Conference;)V
 
-    .line 110
+    .line 111
     return-void
 .end method
 
@@ -690,21 +642,21 @@
     .locals 2
 
     .prologue
-    .line 130
+    .line 131
     sget-object v0, Lcom/rounds/kik/conference/ConferenceManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "disconnect"
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 131
+    .line 132
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->INSTANCE:Lcom/rounds/kik/media/MediaBroker;
 
     iget-object v1, p0, Lcom/rounds/kik/conference/ConferenceManager;->mActiveConference:Lcom/rounds/kik/conference/Conference;
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/media/MediaBroker;->disconnectConference(Lcom/rounds/kik/conference/Conference;)V
 
-    .line 132
+    .line 133
     return-void
 .end method
 
@@ -712,7 +664,7 @@
     .locals 1
 
     .prologue
-    .line 239
+    .line 240
     iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mActiveConference:Lcom/rounds/kik/conference/Conference;
 
     return-object v0
@@ -722,39 +674,39 @@
     .locals 1
 
     .prologue
-    .line 244
-    iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mActiveConference:Lcom/rounds/kik/conference/Conference;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mActiveConference:Lcom/rounds/kik/conference/Conference;
-
-    invoke-virtual {v0}, Lcom/rounds/kik/conference/Conference;->uri()Lcom/rounds/kik/conference/ConferenceUri;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mActiveConference:Lcom/rounds/kik/conference/Conference;
-
-    invoke-virtual {v0}, Lcom/rounds/kik/conference/Conference;->uri()Lcom/rounds/kik/conference/ConferenceUri;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/rounds/kik/conference/ConferenceUri;->id:Ljava/lang/String;
-
-    if-eqz v0, :cond_0
-
     .line 245
     iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mActiveConference:Lcom/rounds/kik/conference/Conference;
 
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mActiveConference:Lcom/rounds/kik/conference/Conference;
+
+    invoke-virtual {v0}, Lcom/rounds/kik/conference/Conference;->uri()Lcom/rounds/kik/conference/ConferenceUri;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mActiveConference:Lcom/rounds/kik/conference/Conference;
+
     invoke-virtual {v0}, Lcom/rounds/kik/conference/Conference;->uri()Lcom/rounds/kik/conference/ConferenceUri;
 
     move-result-object v0
 
     iget-object v0, v0, Lcom/rounds/kik/conference/ConferenceUri;->id:Ljava/lang/String;
 
-    .line 248
+    if-eqz v0, :cond_0
+
+    .line 246
+    iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mActiveConference:Lcom/rounds/kik/conference/Conference;
+
+    invoke-virtual {v0}, Lcom/rounds/kik/conference/Conference;->uri()Lcom/rounds/kik/conference/ConferenceUri;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/rounds/kik/conference/ConferenceUri;->id:Ljava/lang/String;
+
+    .line 249
     :goto_0
     return-object v0
 
@@ -768,13 +720,13 @@
     .locals 0
 
     .prologue
-    .line 54
+    .line 55
     iput-boolean p1, p0, Lcom/rounds/kik/conference/ConferenceManager;->mIsInCall:Z
 
-    .line 55
+    .line 56
     invoke-virtual {p0, p1}, Lcom/rounds/kik/conference/ConferenceManager;->sendInCallStatusMessage(Z)V
 
-    .line 56
+    .line 57
     return-void
 .end method
 
@@ -782,12 +734,12 @@
     .locals 4
 
     .prologue
-    .line 197
+    .line 198
     iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mObserver:Lcom/rounds/kik/conference/ConferenceObserver;
 
     invoke-interface {v0, p1}, Lcom/rounds/kik/conference/ConferenceObserver;->onConferenceInitiationFailed(Lcom/rounds/kik/conference/DisconnectReason;)V
 
-    .line 198
+    .line 199
     sget-object v0, Lcom/rounds/kik/conference/ConferenceManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "onConferenceLeft end of method mActiveConferece={}, mConnected={}"
@@ -802,7 +754,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 199
+    .line 200
     return-void
 .end method
 
@@ -810,36 +762,36 @@
     .locals 1
 
     .prologue
-    .line 171
+    .line 172
     iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mActiveConference:Lcom/rounds/kik/conference/Conference;
 
     if-eqz v0, :cond_0
 
-    .line 172
+    .line 173
     iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mActiveConference:Lcom/rounds/kik/conference/Conference;
 
     invoke-virtual {v0}, Lcom/rounds/kik/conference/Conference;->connected()V
 
-    .line 173
+    .line 174
     iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mObserver:Lcom/rounds/kik/conference/ConferenceObserver;
 
     invoke-interface {v0}, Lcom/rounds/kik/conference/ConferenceObserver;->onConnected()V
 
-    .line 174
+    .line 175
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mConnected:Z
 
-    .line 176
+    .line 177
     :cond_0
     return-void
 .end method
 
-.method public onConferenceLeft(ILcom/rounds/kik/conference/DisconnectReason;)V
+.method public onConferenceLeft(ZLcom/rounds/kik/conference/DisconnectReason;)V
     .locals 4
 
     .prologue
-    .line 181
+    .line 182
     sget-object v0, Lcom/rounds/kik/conference/ConferenceManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "onConferenceLeft mActiveConferece={}, mConferenceState={}"
@@ -854,7 +806,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 183
+    .line 184
     iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mActiveConference:Lcom/rounds/kik/conference/Conference;
 
     if-eqz v0, :cond_0
@@ -863,12 +815,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 184
+    .line 185
     iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mActiveConference:Lcom/rounds/kik/conference/Conference;
 
     invoke-virtual {v0}, Lcom/rounds/kik/conference/Conference;->disconnected()V
 
-    .line 185
+    .line 186
     iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mActiveConference:Lcom/rounds/kik/conference/Conference;
 
     invoke-virtual {v0}, Lcom/rounds/kik/conference/Conference;->info()Lcom/rounds/kik/conference/Conference$Info;
@@ -877,12 +829,12 @@
 
     iput-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mPreviousConferenceInfo:Lcom/rounds/kik/conference/Conference$Info;
 
-    .line 186
+    .line 187
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mActiveConference:Lcom/rounds/kik/conference/Conference;
 
-    .line 187
+    .line 188
     iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mObserver:Lcom/rounds/kik/conference/ConferenceObserver;
 
     new-instance v1, Lcom/rounds/kik/conference/EndOfCallStatus;
@@ -893,12 +845,12 @@
 
     invoke-interface {v0, p2, v1}, Lcom/rounds/kik/conference/ConferenceObserver;->onDisconnected(Lcom/rounds/kik/conference/DisconnectReason;Lcom/rounds/kik/conference/EndOfCallStatus;)V
 
-    .line 188
+    .line 189
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mConnected:Z
 
-    .line 191
+    .line 192
     :cond_0
     sget-object v0, Lcom/rounds/kik/conference/ConferenceManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
@@ -914,7 +866,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 192
+    .line 193
     return-void
 .end method
 
@@ -922,7 +874,7 @@
     .locals 4
 
     .prologue
-    .line 204
+    .line 205
     sget-object v0, Lcom/rounds/kik/conference/ConferenceManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "onParticipantAdded mActiveConferece={}, mConnected={}"
@@ -937,7 +889,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 206
+    .line 207
     iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mActiveConference:Lcom/rounds/kik/conference/Conference;
 
     if-eqz v0, :cond_0
@@ -946,12 +898,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 207
+    .line 208
     iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mActiveConference:Lcom/rounds/kik/conference/Conference;
 
     invoke-virtual {v0}, Lcom/rounds/kik/conference/Conference;->participantAdded()V
 
-    .line 208
+    .line 209
     iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mObserver:Lcom/rounds/kik/conference/ConferenceObserver;
 
     new-instance v1, Lcom/rounds/kik/participants/RemoteParticipant;
@@ -960,7 +912,7 @@
 
     invoke-interface {v0, v1}, Lcom/rounds/kik/conference/ConferenceObserver;->onParticipantAdded(Lcom/rounds/kik/participants/RemoteParticipant;)V
 
-    .line 209
+    .line 210
     iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mClients:Ljava/util/HashMap;
 
     iget-object v1, p1, Lcom/rounds/kik/participants/ParticipantUri;->clientId:Ljava/lang/String;
@@ -971,7 +923,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 211
+    .line 212
     :cond_0
     return-void
 .end method
@@ -980,7 +932,7 @@
     .locals 4
 
     .prologue
-    .line 216
+    .line 217
     sget-object v0, Lcom/rounds/kik/conference/ConferenceManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "onParticipantLeft mActiveConference={}, mConnected={}"
@@ -995,7 +947,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 218
+    .line 219
     iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mActiveConference:Lcom/rounds/kik/conference/Conference;
 
     if-eqz v0, :cond_0
@@ -1004,12 +956,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 219
+    .line 220
     iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mActiveConference:Lcom/rounds/kik/conference/Conference;
 
     invoke-virtual {v0}, Lcom/rounds/kik/conference/Conference;->participantRemoved()V
 
-    .line 220
+    .line 221
     iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mObserver:Lcom/rounds/kik/conference/ConferenceObserver;
 
     new-instance v1, Lcom/rounds/kik/participants/RemoteParticipant;
@@ -1018,14 +970,14 @@
 
     invoke-interface {v0, v1}, Lcom/rounds/kik/conference/ConferenceObserver;->onParticipantRemoved(Lcom/rounds/kik/participants/RemoteParticipant;)V
 
-    .line 221
+    .line 222
     iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mClients:Ljava/util/HashMap;
 
     iget-object v1, p1, Lcom/rounds/kik/participants/ParticipantUri;->clientId:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 223
+    .line 224
     :cond_0
     return-void
 .end method
@@ -1034,19 +986,19 @@
     .locals 4
 
     .prologue
-    .line 375
+    .line 372
     :try_start_0
-    iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mGson:Lcom/google/gson/e;
+    iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mGson:Lcom/google/gson/d;
 
     const-class v1, Lcom/rounds/kik/conference/messaging/BaseVidyoMessage;
 
-    invoke-virtual {v0, p1, v1}, Lcom/google/gson/e;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, v1}, Lcom/google/gson/d;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/rounds/kik/conference/messaging/BaseVidyoMessage;
 
-    .line 376
+    .line 373
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Lcom/rounds/kik/conference/messaging/BaseVidyoMessage;->messageType()Lcom/rounds/kik/conference/messaging/BaseVidyoMessage$MessageType;
@@ -1055,7 +1007,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 377
+    .line 374
     sget-object v1, Lcom/rounds/kik/conference/ConferenceManager$1;->a:[I
 
     invoke-virtual {v0}, Lcom/rounds/kik/conference/messaging/BaseVidyoMessage;->messageType()Lcom/rounds/kik/conference/messaging/BaseVidyoMessage$MessageType;
@@ -1070,19 +1022,19 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 387
+    .line 384
     sget-object v0, Lcom/rounds/kik/conference/ConferenceManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "unknown message type, ignoring."
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->warn(Ljava/lang/String;)V
 
-    .line 396
+    .line 393
     :cond_0
     :goto_0
     return-void
 
-    .line 379
+    .line 376
     :pswitch_0
     sget-object v1, Lcom/rounds/kik/conference/ConferenceManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
@@ -1090,7 +1042,7 @@
 
     invoke-virtual {v1, v2}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 380
+    .line 377
     check-cast v0, Lcom/rounds/kik/conference/messaging/BackgroundStatusMessage;
 
     invoke-direct {p0, v0, p2}, Lcom/rounds/kik/conference/ConferenceManager;->handleInBackgroundMessage(Lcom/rounds/kik/conference/messaging/BackgroundStatusMessage;Ljava/lang/String;)V
@@ -1099,14 +1051,14 @@
 
     goto :goto_0
 
-    .line 392
+    .line 389
     :catch_0
     move-exception v0
 
-    .line 393
+    .line 390
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 394
+    .line 391
     sget-object v1, Lcom/rounds/kik/conference/ConferenceManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1137,7 +1089,7 @@
 
     goto :goto_0
 
-    .line 383
+    .line 380
     :pswitch_1
     :try_start_1
     sget-object v1, Lcom/rounds/kik/conference/ConferenceManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
@@ -1146,7 +1098,7 @@
 
     invoke-virtual {v1, v2}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 384
+    .line 381
     check-cast v0, Lcom/rounds/kik/conference/messaging/PhoneStateMessage;
 
     invoke-direct {p0, v0, p2}, Lcom/rounds/kik/conference/ConferenceManager;->handlePhoneStateMessage(Lcom/rounds/kik/conference/messaging/PhoneStateMessage;Ljava/lang/String;)V
@@ -1155,7 +1107,7 @@
 
     goto :goto_0
 
-    .line 377
+    .line 374
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1167,19 +1119,19 @@
     .locals 4
 
     .prologue
-    .line 348
+    .line 345
     :try_start_0
-    iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mGson:Lcom/google/gson/e;
+    iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mGson:Lcom/google/gson/d;
 
     const-class v1, Lcom/rounds/kik/conference/messaging/BaseVidyoMessage;
 
-    invoke-virtual {v0, p1, v1}, Lcom/google/gson/e;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, v1}, Lcom/google/gson/d;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/rounds/kik/conference/messaging/BaseVidyoMessage;
 
-    .line 349
+    .line 346
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Lcom/rounds/kik/conference/messaging/BaseVidyoMessage;->messageType()Lcom/rounds/kik/conference/messaging/BaseVidyoMessage$MessageType;
@@ -1188,7 +1140,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 350
+    .line 347
     sget-object v1, Lcom/rounds/kik/conference/ConferenceManager$1;->a:[I
 
     invoke-virtual {v0}, Lcom/rounds/kik/conference/messaging/BaseVidyoMessage;->messageType()Lcom/rounds/kik/conference/messaging/BaseVidyoMessage$MessageType;
@@ -1203,19 +1155,19 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 360
+    .line 357
     sget-object v0, Lcom/rounds/kik/conference/ConferenceManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "unknown message type, ignoring."
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->warn(Ljava/lang/String;)V
 
-    .line 369
+    .line 366
     :cond_0
     :goto_0
     return-void
 
-    .line 352
+    .line 349
     :pswitch_0
     sget-object v1, Lcom/rounds/kik/conference/ConferenceManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
@@ -1223,7 +1175,7 @@
 
     invoke-virtual {v1, v2}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 353
+    .line 350
     check-cast v0, Lcom/rounds/kik/conference/messaging/BackgroundStatusMessage;
 
     invoke-direct {p0, v0, p2}, Lcom/rounds/kik/conference/ConferenceManager;->handleInBackgroundMessage(Lcom/rounds/kik/conference/messaging/BackgroundStatusMessage;Ljava/lang/String;)V
@@ -1232,14 +1184,14 @@
 
     goto :goto_0
 
-    .line 365
+    .line 362
     :catch_0
     move-exception v0
 
-    .line 366
+    .line 363
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 367
+    .line 364
     sget-object v1, Lcom/rounds/kik/conference/ConferenceManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1270,7 +1222,7 @@
 
     goto :goto_0
 
-    .line 356
+    .line 353
     :pswitch_1
     :try_start_1
     sget-object v1, Lcom/rounds/kik/conference/ConferenceManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
@@ -1279,7 +1231,7 @@
 
     invoke-virtual {v1, v2}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 357
+    .line 354
     check-cast v0, Lcom/rounds/kik/conference/messaging/PhoneStateMessage;
 
     invoke-direct {p0, v0, p2}, Lcom/rounds/kik/conference/ConferenceManager;->handlePhoneStateMessage(Lcom/rounds/kik/conference/messaging/PhoneStateMessage;Ljava/lang/String;)V
@@ -1288,7 +1240,7 @@
 
     goto :goto_0
 
-    .line 350
+    .line 347
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1300,12 +1252,12 @@
     .locals 1
 
     .prologue
-    .line 228
+    .line 229
     iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mObserver:Lcom/rounds/kik/conference/ConferenceObserver;
 
     invoke-interface {v0, p1, p2}, Lcom/rounds/kik/conference/ConferenceObserver;->onRemoteCameraChanged(Ljava/lang/String;Z)V
 
-    .line 229
+    .line 230
     return-void
 .end method
 
@@ -1313,12 +1265,12 @@
     .locals 1
 
     .prologue
-    .line 234
+    .line 235
     iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mObserver:Lcom/rounds/kik/conference/ConferenceObserver;
 
     invoke-interface {v0, p1, p2}, Lcom/rounds/kik/conference/ConferenceObserver;->onRemoteMicChanged(Ljava/lang/String;Z)V
 
-    .line 235
+    .line 236
     return-void
 .end method
 
@@ -1326,12 +1278,12 @@
     .locals 4
 
     .prologue
-    .line 120
+    .line 121
     iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mActiveConference:Lcom/rounds/kik/conference/Conference;
 
     if-nez v0, :cond_0
 
-    .line 121
+    .line 122
     iget-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mObserver:Lcom/rounds/kik/conference/ConferenceObserver;
 
     sget-object v1, Lcom/rounds/kik/conference/DisconnectReason;->STREAM_ERROR:Lcom/rounds/kik/conference/DisconnectReason;
@@ -1344,7 +1296,7 @@
 
     invoke-interface {v0, v1, v2}, Lcom/rounds/kik/conference/ConferenceObserver;->onDisconnected(Lcom/rounds/kik/conference/DisconnectReason;Lcom/rounds/kik/conference/EndOfCallStatus;)V
 
-    .line 124
+    .line 125
     :cond_0
     sget-object v0, Lcom/rounds/kik/conference/ConferenceManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
@@ -1362,14 +1314,14 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 125
+    .line 126
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->INSTANCE:Lcom/rounds/kik/media/MediaBroker;
 
     iget-object v1, p0, Lcom/rounds/kik/conference/ConferenceManager;->mActiveConference:Lcom/rounds/kik/conference/Conference;
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/media/MediaBroker;->connectConference(Lcom/rounds/kik/conference/Conference;)V
 
-    .line 126
+    .line 127
     return-void
 .end method
 
@@ -1377,17 +1329,17 @@
     .locals 1
 
     .prologue
-    .line 114
+    .line 115
     new-instance v0, Lcom/rounds/kik/conference/Conference;
 
     invoke-direct {v0, p1, p2}, Lcom/rounds/kik/conference/Conference;-><init>(Lcom/rounds/kik/conference/ConferenceUri;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/rounds/kik/conference/ConferenceManager;->mActiveConference:Lcom/rounds/kik/conference/Conference;
 
-    .line 115
+    .line 116
     invoke-virtual {p0}, Lcom/rounds/kik/conference/ConferenceManager;->reconnect()V
 
-    .line 116
+    .line 117
     return-void
 .end method
 
@@ -1395,13 +1347,13 @@
     .locals 1
 
     .prologue
-    .line 277
+    .line 278
     invoke-static {p1}, Lcom/rounds/kik/conference/ConferenceManager;->createInCallJsonMessage(Z)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0}, Lcom/rounds/kik/conference/ConferenceManager;->sendPublicMessage(Ljava/lang/String;)V
 
-    .line 278
+    .line 279
     return-void
 .end method

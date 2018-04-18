@@ -174,10 +174,8 @@
 
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$FindGroupsRequest;->makeExtensionsImmutable()V
 
-    .line 534
     throw v0
 
-    .line 533
     :cond_1
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$FindGroupsRequest;->makeExtensionsImmutable()V
 

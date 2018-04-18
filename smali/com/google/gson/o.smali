@@ -27,12 +27,12 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)Lcom/google/gson/k;
+.method public final a(Ljava/lang/Object;)Lcom/google/gson/j;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)",
-            "Lcom/google/gson/k;"
+            "Lcom/google/gson/j;"
         }
     .end annotation
 
@@ -47,7 +47,7 @@
     invoke-virtual {p0, v0, p1}, Lcom/google/gson/o;->a(Lcom/google/gson/stream/b;Ljava/lang/Object;)V
 
     .line 235
-    invoke-virtual {v0}, Lcom/google/gson/internal/bind/d;->a()Lcom/google/gson/k;
+    invoke-virtual {v0}, Lcom/google/gson/internal/bind/d;->a()Lcom/google/gson/j;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 

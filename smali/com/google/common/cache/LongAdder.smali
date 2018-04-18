@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/google/common/cache/b;
+.implements Lcom/google/common/cache/e;
 .implements Ljava/io/Serializable;
 
 
@@ -16,11 +16,55 @@
     .locals 0
 
     .prologue
-    .line 60
+    .line 61
     invoke-direct {p0}, Lcom/google/common/cache/Striped64;-><init>()V
 
-    .line 61
+    .line 62
     return-void
+.end method
+
+.method private d()J
+    .locals 8
+
+    .prologue
+    .line 105
+    iget-wide v0, p0, Lcom/google/common/cache/LongAdder;->e:J
+
+    .line 106
+    iget-object v3, p0, Lcom/google/common/cache/LongAdder;->d:[Lcom/google/common/cache/Striped64$a;
+
+    .line 107
+    if-eqz v3, :cond_1
+
+    .line 108
+    array-length v4, v3
+
+    .line 109
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v4, :cond_1
+
+    .line 110
+    aget-object v5, v3, v2
+
+    .line 111
+    if-eqz v5, :cond_0
+
+    .line 112
+    iget-wide v6, v5, Lcom/google/common/cache/Striped64$a;->a:J
+
+    add-long/2addr v0, v6
+
+    .line 109
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    .line 115
+    :cond_1
+    return-wide v0
 .end method
 
 .method private readObject(Ljava/io/ObjectInputStream;)V
@@ -33,27 +77,27 @@
     .end annotation
 
     .prologue
-    .line 203
-    invoke-virtual {p1}, Ljava/io/ObjectInputStream;->defaultReadObject()V
-
     .line 204
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/google/common/cache/LongAdder;->f:I
+    invoke-virtual {p1}, Ljava/io/ObjectInputStream;->defaultReadObject()V
 
     .line 205
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/google/common/cache/LongAdder;->d:[Lcom/google/common/cache/Striped64$a;
+    iput v0, p0, Lcom/google/common/cache/LongAdder;->f:I
 
     .line 206
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/google/common/cache/LongAdder;->d:[Lcom/google/common/cache/Striped64$a;
+
+    .line 207
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/google/common/cache/LongAdder;->e:J
 
-    .line 207
+    .line 208
     return-void
 .end method
 
@@ -66,17 +110,17 @@
     .end annotation
 
     .prologue
-    .line 197
+    .line 198
     invoke-virtual {p1}, Ljava/io/ObjectOutputStream;->defaultWriteObject()V
 
-    .line 198
-    invoke-virtual {p0}, Lcom/google/common/cache/LongAdder;->b()J
+    .line 199
+    invoke-direct {p0}, Lcom/google/common/cache/LongAdder;->d()J
 
     move-result-wide v0
 
     invoke-virtual {p1, v0, v1}, Ljava/io/ObjectOutputStream;->writeLong(J)V
 
-    .line 199
+    .line 200
     return-void
 .end method
 
@@ -86,7 +130,7 @@
     .locals 3
 
     .prologue
-    .line 55
+    .line 56
     add-long v0, p1, p3
 
     return-wide v0
@@ -96,12 +140,12 @@
     .locals 2
 
     .prologue
-    .line 84
+    .line 85
     const-wide/16 v0, 0x1
 
     invoke-virtual {p0, v0, v1}, Lcom/google/common/cache/LongAdder;->a(J)V
 
-    .line 85
+    .line 86
     return-void
 .end method
 
@@ -109,7 +153,7 @@
     .locals 13
 
     .prologue
-    .line 70
+    .line 71
     iget-object v1, p0, Lcom/google/common/cache/LongAdder;->d:[Lcom/google/common/cache/Striped64$a;
 
     if-nez v1, :cond_0
@@ -124,11 +168,11 @@
 
     if-nez v0, :cond_5
 
-    .line 71
+    .line 72
     :cond_0
     const/4 v3, 0x1
 
-    .line 72
+    .line 73
     sget-object v0, Lcom/google/common/cache/LongAdder;->a:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -161,18 +205,17 @@
 
     add-long v4, v2, p1
 
-    .line 75
     invoke-virtual {v1, v2, v3, v4, v5}, Lcom/google/common/cache/Striped64$a;->a(JJ)Z
 
     move-result v3
 
     if-nez v3, :cond_5
 
-    .line 1197
+    .line 1195
     :cond_1
     if-nez v0, :cond_6
 
-    .line 1198
+    .line 1196
     sget-object v0, Lcom/google/common/cache/Striped64;->a:Ljava/lang/ThreadLocal;
 
     const/4 v1, 0x1
@@ -181,14 +224,14 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
-    .line 1199
+    .line 1197
     sget-object v0, Lcom/google/common/cache/Striped64;->b:Ljava/util/Random;
 
     invoke-virtual {v0}, Ljava/util/Random;->nextInt()I
 
     move-result v0
 
-    .line 1200
+    .line 1198
     const/4 v2, 0x0
 
     if-nez v0, :cond_2
@@ -198,7 +241,7 @@
     :cond_2
     aput v0, v1, v2
 
-    .line 1204
+    .line 1202
     :goto_0
     const/4 v2, 0x0
 
@@ -206,7 +249,7 @@
 
     move v3, v0
 
-    .line 1207
+    .line 1205
     :cond_3
     :goto_1
     iget-object v5, p0, Lcom/google/common/cache/Striped64;->d:[Lcom/google/common/cache/Striped64$a;
@@ -217,7 +260,7 @@
 
     if-lez v6, :cond_f
 
-    .line 1208
+    .line 1206
     add-int/lit8 v0, v6, -0x1
 
     and-int/2addr v0, v3
@@ -226,31 +269,31 @@
 
     if-nez v0, :cond_8
 
+    .line 1207
+    iget v0, p0, Lcom/google/common/cache/Striped64;->f:I
+
+    if-nez v0, :cond_7
+
+    .line 1208
+    new-instance v5, Lcom/google/common/cache/Striped64$a;
+
+    invoke-direct {v5, p1, p2}, Lcom/google/common/cache/Striped64$a;-><init>(J)V
+
     .line 1209
     iget v0, p0, Lcom/google/common/cache/Striped64;->f:I
 
     if-nez v0, :cond_7
 
-    .line 1210
-    new-instance v5, Lcom/google/common/cache/Striped64$a;
-
-    invoke-direct {v5, p1, p2}, Lcom/google/common/cache/Striped64$a;-><init>(J)V
-
-    .line 1211
-    iget v0, p0, Lcom/google/common/cache/Striped64;->f:I
-
-    if-nez v0, :cond_7
-
-    invoke-virtual {p0}, Lcom/google/common/cache/Striped64;->c()Z
+    invoke-virtual {p0}, Lcom/google/common/cache/Striped64;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
-    .line 1212
+    .line 1210
     const/4 v0, 0x0
 
-    .line 1215
+    .line 1213
     :try_start_0
     iget-object v6, p0, Lcom/google/common/cache/Striped64;->d:[Lcom/google/common/cache/Striped64$a;
 
@@ -268,29 +311,29 @@
 
     if-nez v8, :cond_4
 
-    .line 1218
+    .line 1216
     aput-object v5, v6, v7
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1219
+    .line 1217
     const/4 v0, 0x1
 
-    .line 1222
+    .line 1220
     :cond_4
     const/4 v5, 0x0
 
     iput v5, p0, Lcom/google/common/cache/Striped64;->f:I
 
-    .line 1224
+    .line 1222
     if-eqz v0, :cond_3
 
-    .line 1225
+    .line 1223
     :cond_5
     :goto_2
     return-void
 
-    .line 1203
+    .line 1201
     :cond_6
     const/4 v1, 0x0
 
@@ -304,7 +347,7 @@
 
     goto :goto_0
 
-    .line 1222
+    .line 1220
     :catchall_0
     move-exception v0
 
@@ -314,29 +357,29 @@
 
     throw v0
 
-    .line 1229
+    .line 1227
     :cond_7
     const/4 v2, 0x0
 
     move v0, v2
 
-    .line 1253
+    .line 1251
     :goto_3
     shl-int/lit8 v2, v3, 0xd
 
     xor-int/2addr v2, v3
 
-    .line 1254
+    .line 1252
     ushr-int/lit8 v3, v2, 0x11
 
     xor-int/2addr v2, v3
 
-    .line 1255
+    .line 1253
     shl-int/lit8 v3, v2, 0x5
 
     xor-int/2addr v2, v3
 
-    .line 1256
+    .line 1254
     const/4 v3, 0x0
 
     aput v2, v1, v3
@@ -347,18 +390,18 @@
 
     goto :goto_1
 
-    .line 1231
+    .line 1229
     :cond_8
     if-nez v4, :cond_9
 
-    .line 1232
+    .line 1230
     const/4 v4, 0x1
 
     move v0, v2
 
     goto :goto_3
 
-    .line 1233
+    .line 1231
     :cond_9
     iget-wide v8, v0, Lcom/google/common/cache/Striped64$a;->a:J
 
@@ -372,7 +415,7 @@
 
     if-nez v0, :cond_5
 
-    .line 1235
+    .line 1233
     sget v0, Lcom/google/common/cache/Striped64;->c:I
 
     if-ge v6, v0, :cond_a
@@ -381,7 +424,7 @@
 
     if-eq v0, v5, :cond_b
 
-    .line 1236
+    .line 1234
     :cond_a
     const/4 v2, 0x0
 
@@ -389,77 +432,77 @@
 
     goto :goto_3
 
-    .line 1237
+    .line 1235
     :cond_b
     if-nez v2, :cond_c
 
-    .line 1238
+    .line 1236
     const/4 v2, 0x1
 
     move v0, v2
 
     goto :goto_3
 
-    .line 1239
+    .line 1237
     :cond_c
     iget v0, p0, Lcom/google/common/cache/Striped64;->f:I
 
     if-nez v0, :cond_12
 
-    invoke-virtual {p0}, Lcom/google/common/cache/Striped64;->c()Z
+    invoke-virtual {p0}, Lcom/google/common/cache/Striped64;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_12
 
-    .line 1241
+    .line 1239
     :try_start_1
     iget-object v0, p0, Lcom/google/common/cache/Striped64;->d:[Lcom/google/common/cache/Striped64$a;
 
     if-ne v0, v5, :cond_e
 
-    .line 1242
+    .line 1240
     shl-int/lit8 v0, v6, 0x1
 
     new-array v2, v0, [Lcom/google/common/cache/Striped64$a;
 
-    .line 1243
+    .line 1241
     const/4 v0, 0x0
 
     :goto_4
     if-ge v0, v6, :cond_d
 
-    .line 1244
+    .line 1242
     aget-object v7, v5, v0
 
     aput-object v7, v2, v0
 
-    .line 1243
+    .line 1241
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_4
 
-    .line 1245
+    .line 1243
     :cond_d
     iput-object v2, p0, Lcom/google/common/cache/Striped64;->d:[Lcom/google/common/cache/Striped64$a;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1248
+    .line 1246
     :cond_e
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/google/common/cache/Striped64;->f:I
 
-    .line 1250
+    .line 1248
     const/4 v0, 0x0
 
     move v2, v0
 
-    .line 1251
+    .line 1249
     goto/16 :goto_1
 
-    .line 1248
+    .line 1246
     :catchall_1
     move-exception v0
 
@@ -469,7 +512,7 @@
 
     throw v0
 
-    .line 1258
+    .line 1256
     :cond_f
     iget v0, p0, Lcom/google/common/cache/Striped64;->f:I
 
@@ -479,27 +522,27 @@
 
     if-ne v0, v5, :cond_11
 
-    invoke-virtual {p0}, Lcom/google/common/cache/Striped64;->c()Z
+    invoke-virtual {p0}, Lcom/google/common/cache/Striped64;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_11
 
-    .line 1259
+    .line 1257
     const/4 v0, 0x0
 
-    .line 1261
+    .line 1259
     :try_start_2
     iget-object v6, p0, Lcom/google/common/cache/Striped64;->d:[Lcom/google/common/cache/Striped64$a;
 
     if-ne v6, v5, :cond_10
 
-    .line 1262
+    .line 1260
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/google/common/cache/Striped64$a;
 
-    .line 1263
+    .line 1261
     and-int/lit8 v5, v3, 0x1
 
     new-instance v6, Lcom/google/common/cache/Striped64$a;
@@ -508,26 +551,26 @@
 
     aput-object v6, v0, v5
 
-    .line 1264
+    .line 1262
     iput-object v0, p0, Lcom/google/common/cache/Striped64;->d:[Lcom/google/common/cache/Striped64$a;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 1265
+    .line 1263
     const/4 v0, 0x1
 
-    .line 1268
+    .line 1266
     :cond_10
     const/4 v5, 0x0
 
     iput v5, p0, Lcom/google/common/cache/Striped64;->f:I
 
-    .line 1270
+    .line 1268
     if-nez v0, :cond_5
 
     goto/16 :goto_1
 
-    .line 1268
+    .line 1266
     :catchall_2
     move-exception v0
 
@@ -537,7 +580,7 @@
 
     throw v0
 
-    .line 1273
+    .line 1271
     :cond_11
     iget-wide v6, p0, Lcom/google/common/cache/Striped64;->e:J
 
@@ -559,56 +602,12 @@
     goto/16 :goto_3
 .end method
 
-.method public final b()J
-    .locals 8
-
-    .prologue
-    .line 104
-    iget-wide v0, p0, Lcom/google/common/cache/LongAdder;->e:J
-
-    .line 105
-    iget-object v3, p0, Lcom/google/common/cache/LongAdder;->d:[Lcom/google/common/cache/Striped64$a;
-
-    .line 106
-    if-eqz v3, :cond_1
-
-    .line 107
-    array-length v4, v3
-
-    .line 108
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v4, :cond_1
-
-    .line 109
-    aget-object v5, v3, v2
-
-    .line 110
-    if-eqz v5, :cond_0
-
-    .line 111
-    iget-wide v6, v5, Lcom/google/common/cache/Striped64$a;->a:J
-
-    add-long/2addr v0, v6
-
-    .line 108
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    .line 114
-    :cond_1
-    return-wide v0
-.end method
-
 .method public final doubleValue()D
     .locals 2
 
     .prologue
-    .line 193
-    invoke-virtual {p0}, Lcom/google/common/cache/LongAdder;->b()J
+    .line 194
+    invoke-direct {p0}, Lcom/google/common/cache/LongAdder;->d()J
 
     move-result-wide v0
 
@@ -621,8 +620,8 @@
     .locals 2
 
     .prologue
-    .line 185
-    invoke-virtual {p0}, Lcom/google/common/cache/LongAdder;->b()J
+    .line 186
+    invoke-direct {p0}, Lcom/google/common/cache/LongAdder;->d()J
 
     move-result-wide v0
 
@@ -635,8 +634,8 @@
     .locals 2
 
     .prologue
-    .line 177
-    invoke-virtual {p0}, Lcom/google/common/cache/LongAdder;->b()J
+    .line 178
+    invoke-direct {p0}, Lcom/google/common/cache/LongAdder;->d()J
 
     move-result-wide v0
 
@@ -649,8 +648,8 @@
     .locals 2
 
     .prologue
-    .line 169
-    invoke-virtual {p0}, Lcom/google/common/cache/LongAdder;->b()J
+    .line 170
+    invoke-direct {p0}, Lcom/google/common/cache/LongAdder;->d()J
 
     move-result-wide v0
 
@@ -661,8 +660,8 @@
     .locals 2
 
     .prologue
-    .line 160
-    invoke-virtual {p0}, Lcom/google/common/cache/LongAdder;->b()J
+    .line 161
+    invoke-direct {p0}, Lcom/google/common/cache/LongAdder;->d()J
 
     move-result-wide v0
 

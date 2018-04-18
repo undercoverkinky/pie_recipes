@@ -3,22 +3,10 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lio/branch/referral/InstallListener$a;
-    }
-.end annotation
-
-
 # static fields
 .field private static a:Ljava/lang/String;
 
-.field private static b:Lio/branch/referral/InstallListener$a;
-
-.field private static c:Z
-
-.field private static d:Z
+.field private static b:Ljava/lang/String;
 
 
 # direct methods
@@ -26,15 +14,15 @@
     .locals 1
 
     .prologue
-    .line 27
+    .line 26
     const-string v0, "bnc_no_value"
 
     sput-object v0, Lio/branch/referral/InstallListener;->a:Ljava/lang/String;
 
-    .line 28
-    const/4 v0, 0x0
+    .line 29
+    const-string v0, "bnc_no_value"
 
-    sput-object v0, Lio/branch/referral/InstallListener;->b:Lio/branch/referral/InstallListener$a;
+    sput-object v0, Lio/branch/referral/InstallListener;->b:Ljava/lang/String;
 
     return-void
 .end method
@@ -43,7 +31,7 @@
     .locals 0
 
     .prologue
-    .line 24
+    .line 23
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -53,119 +41,43 @@
     .locals 1
 
     .prologue
-    .line 101
+    .line 65
     sget-object v0, Lio/branch/referral/InstallListener;->a:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public static a(J)V
-    .locals 2
-
-    .prologue
-    .line 37
-    sget-boolean v0, Lio/branch/referral/InstallListener;->d:Z
-
-    if-eqz v0, :cond_0
-
-    .line 38
-    invoke-static {}, Lio/branch/referral/InstallListener;->c()V
-
-    .line 48
-    :goto_0
-    return-void
-
-    .line 40
-    :cond_0
-    const/4 v0, 0x1
-
-    sput-boolean v0, Lio/branch/referral/InstallListener;->c:Z
-
-    .line 41
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
-
-    new-instance v1, Lio/branch/referral/InstallListener$1;
-
-    invoke-direct {v1}, Lio/branch/referral/InstallListener$1;-><init>()V
-
-    invoke-virtual {v0, v1, p0, p1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    goto :goto_0
-.end method
-
-.method public static a(Lio/branch/referral/InstallListener$a;)V
-    .locals 0
-
-    .prologue
-    .line 113
-    sput-object p0, Lio/branch/referral/InstallListener;->b:Lio/branch/referral/InstallListener$a;
-
-    .line 114
-    return-void
-.end method
-
-.method static synthetic b()V
-    .locals 0
-
-    .prologue
-    .line 24
-    invoke-static {}, Lio/branch/referral/InstallListener;->c()V
-
-    return-void
-.end method
-
-.method private static c()V
+.method public static b()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 105
-    sget-object v0, Lio/branch/referral/InstallListener;->b:Lio/branch/referral/InstallListener$a;
+    .line 69
+    sget-object v0, Lio/branch/referral/InstallListener;->b:Ljava/lang/String;
 
-    if-eqz v0, :cond_0
-
-    .line 106
-    sget-object v0, Lio/branch/referral/InstallListener;->b:Lio/branch/referral/InstallListener$a;
-
-    invoke-interface {v0}, Lio/branch/referral/InstallListener$a;->d()V
-
-    .line 107
-    const/4 v0, 0x0
-
-    sput-object v0, Lio/branch/referral/InstallListener;->b:Lio/branch/referral/InstallListener$a;
-
-    .line 108
-    const/4 v0, 0x0
-
-    sput-boolean v0, Lio/branch/referral/InstallListener;->d:Z
-
-    .line 110
-    :cond_0
-    return-void
+    return-object v0
 .end method
 
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 9
+    .locals 8
 
     .prologue
+    const/4 v7, 0x1
+
     const/4 v0, 0x0
 
-    const/4 v8, 0x1
-
-    .line 52
+    .line 33
     const-string v1, "referrer"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 53
-    if-eqz v1, :cond_5
+    .line 34
+    if-eqz v1, :cond_3
 
-    .line 55
+    .line 36
     :try_start_0
     const-string v2, "UTF-8"
 
@@ -173,72 +85,69 @@
 
     move-result-object v1
 
-    .line 56
+    .line 37
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
-    .line 57
+    .line 38
     const-string v3, "&"
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v1
 
-    .line 59
-    array-length v4, v3
+    .line 40
+    array-length v3, v1
 
     :goto_0
-    if-ge v0, v4, :cond_1
+    if-ge v0, v3, :cond_1
 
-    aget-object v5, v3, v0
+    aget-object v4, v1, v0
 
-    .line 60
-    const-string v6, "="
+    .line 41
+    const-string v5, "="
 
-    invoke-virtual {v5, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    invoke-virtual {v4, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v4
 
-    .line 61
-    array-length v6, v5
+    .line 42
+    array-length v5, v4
 
-    if-le v6, v8, :cond_0
+    if-le v5, v7, :cond_0
 
-    .line 62
-    const/4 v6, 0x0
+    .line 43
+    const/4 v5, 0x0
 
-    aget-object v6, v5, v6
+    aget-object v5, v4, v5
 
-    const-string v7, "UTF-8"
+    const-string v6, "UTF-8"
 
-    invoke-static {v6, v7}, Ljava/net/URLDecoder;->decode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    const/4 v7, 0x1
-
-    aget-object v5, v5, v7
-
-    const-string v7, "UTF-8"
-
-    invoke-static {v5, v7}, Ljava/net/URLDecoder;->decode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v5, v6}, Ljava/net/URLDecoder;->decode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-virtual {v2, v6, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v6, 0x1
 
-    .line 59
+    aget-object v4, v4, v6
+
+    const-string v6, "UTF-8"
+
+    invoke-static {v4, v6}, Ljava/net/URLDecoder;->decode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v5, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 40
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 66
+    .line 47
     :cond_1
-    invoke-static {p1}, Lio/branch/referral/m;->a(Landroid/content/Context;)Lio/branch/referral/m;
-
-    .line 68
     sget-object v0, Lio/branch/referral/Defines$Jsonkey;->LinkClickID:Lio/branch/referral/Defines$Jsonkey;
 
     invoke-virtual {v0}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
@@ -251,7 +160,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 69
+    .line 48
     sget-object v0, Lio/branch/referral/Defines$Jsonkey;->LinkClickID:Lio/branch/referral/Defines$Jsonkey;
 
     invoke-virtual {v0}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
@@ -264,74 +173,10 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 70
     sput-object v0, Lio/branch/referral/InstallListener;->a:Ljava/lang/String;
 
-    invoke-static {v0}, Lio/branch/referral/m;->i(Ljava/lang/String;)V
-
-    .line 74
+    .line 51
     :cond_2
-    sget-object v0, Lio/branch/referral/Defines$Jsonkey;->IsFullAppConv:Lio/branch/referral/Defines$Jsonkey;
-
-    invoke-virtual {v0}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    sget-object v0, Lio/branch/referral/Defines$Jsonkey;->ReferringLink:Lio/branch/referral/Defines$Jsonkey;
-
-    .line 75
-    invoke-virtual {v0}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    .line 76
-    sget-object v0, Lio/branch/referral/Defines$Jsonkey;->IsFullAppConv:Lio/branch/referral/Defines$Jsonkey;
-
-    invoke-virtual {v0}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-static {v0}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
-
-    move-result v0
-
-    invoke-static {v0}, Lio/branch/referral/m;->b(Z)V
-
-    .line 77
-    sget-object v0, Lio/branch/referral/Defines$Jsonkey;->ReferringLink:Lio/branch/referral/Defines$Jsonkey;
-
-    invoke-virtual {v0}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-static {v0}, Lio/branch/referral/m;->l(Ljava/lang/String;)V
-
-    .line 80
-    :cond_3
     sget-object v0, Lio/branch/referral/Defines$Jsonkey;->GoogleSearchInstallReferrer:Lio/branch/referral/Defines$Jsonkey;
 
     invoke-virtual {v0}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
@@ -342,9 +187,9 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_3
 
-    .line 81
+    .line 52
     sget-object v0, Lio/branch/referral/Defines$Jsonkey;->GoogleSearchInstallReferrer:Lio/branch/referral/Defines$Jsonkey;
 
     invoke-virtual {v0}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
@@ -357,34 +202,17 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lio/branch/referral/m;->j(Ljava/lang/String;)V
-
-    .line 82
-    invoke-static {v1}, Lio/branch/referral/m;->k(Ljava/lang/String;)V
-
-    .line 84
-    :cond_4
-    const/4 v0, 0x1
-
-    sput-boolean v0, Lio/branch/referral/InstallListener;->d:Z
-
-    .line 86
-    sget-boolean v0, Lio/branch/referral/InstallListener;->c:Z
-
-    if-eqz v0, :cond_5
-
-    .line 87
-    invoke-static {}, Lio/branch/referral/InstallListener;->c()V
+    sput-object v0, Lio/branch/referral/InstallListener;->b:Ljava/lang/String;
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 98
-    :cond_5
+    .line 62
+    :cond_3
     :goto_1
     return-void
 
-    .line 91
+    .line 55
     :catch_0
     move-exception v0
 
@@ -392,13 +220,13 @@
 
     goto :goto_1
 
-    .line 93
+    .line 57
     :catch_1
     move-exception v0
 
     invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
 
-    .line 94
+    .line 58
     const-string v0, "BranchSDK"
 
     const-string v1, "Illegal characters in url encoded string"

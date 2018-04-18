@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic a:Landroid/support/v7/app/AlertController$RecycleListView;
+.field final synthetic a:Landroid/widget/ListView;
 
 .field final synthetic b:Landroid/support/v7/app/AlertController;
 
@@ -26,14 +26,14 @@
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v7/app/AlertController$AlertParams;Landroid/support/v7/app/AlertController$RecycleListView;Landroid/support/v7/app/AlertController;)V
+.method constructor <init>(Landroid/support/v7/app/AlertController$AlertParams;Landroid/widget/ListView;Landroid/support/v7/app/AlertController;)V
     .locals 0
 
     .prologue
-    .line 1053
+    .line 814
     iput-object p1, p0, Landroid/support/v7/app/AlertController$AlertParams$4;->c:Landroid/support/v7/app/AlertController$AlertParams;
 
-    iput-object p2, p0, Landroid/support/v7/app/AlertController$AlertParams$4;->a:Landroid/support/v7/app/AlertController$RecycleListView;
+    iput-object p2, p0, Landroid/support/v7/app/AlertController$AlertParams$4;->a:Landroid/widget/ListView;
 
     iput-object p3, p0, Landroid/support/v7/app/AlertController$AlertParams$4;->b:Landroid/support/v7/app/AlertController;
 
@@ -57,27 +57,27 @@
     .end annotation
 
     .prologue
-    .line 1056
+    .line 817
     iget-object v0, p0, Landroid/support/v7/app/AlertController$AlertParams$4;->c:Landroid/support/v7/app/AlertController$AlertParams;
 
     iget-object v0, v0, Landroid/support/v7/app/AlertController$AlertParams;->C:[Z
 
     if-eqz v0, :cond_0
 
-    .line 1057
+    .line 818
     iget-object v0, p0, Landroid/support/v7/app/AlertController$AlertParams$4;->c:Landroid/support/v7/app/AlertController$AlertParams;
 
     iget-object v0, v0, Landroid/support/v7/app/AlertController$AlertParams;->C:[Z
 
-    iget-object v1, p0, Landroid/support/v7/app/AlertController$AlertParams$4;->a:Landroid/support/v7/app/AlertController$RecycleListView;
+    iget-object v1, p0, Landroid/support/v7/app/AlertController$AlertParams$4;->a:Landroid/widget/ListView;
 
-    invoke-virtual {v1, p3}, Landroid/support/v7/app/AlertController$RecycleListView;->isItemChecked(I)Z
+    invoke-virtual {v1, p3}, Landroid/widget/ListView;->isItemChecked(I)Z
 
     move-result v1
 
     aput-boolean v1, v0, p3
 
-    .line 1059
+    .line 820
     :cond_0
     iget-object v0, p0, Landroid/support/v7/app/AlertController$AlertParams$4;->c:Landroid/support/v7/app/AlertController$AlertParams;
 
@@ -85,18 +85,18 @@
 
     iget-object v1, p0, Landroid/support/v7/app/AlertController$AlertParams$4;->b:Landroid/support/v7/app/AlertController;
 
-    iget-object v1, v1, Landroid/support/v7/app/AlertController;->a:Landroid/support/v7/app/AppCompatDialog;
+    invoke-static {v1}, Landroid/support/v7/app/AlertController;->g(Landroid/support/v7/app/AlertController;)Landroid/support/v7/app/AppCompatDialog;
 
-    iget-object v2, p0, Landroid/support/v7/app/AlertController$AlertParams$4;->a:Landroid/support/v7/app/AlertController$RecycleListView;
+    move-result-object v1
 
-    .line 1060
-    invoke-virtual {v2, p3}, Landroid/support/v7/app/AlertController$RecycleListView;->isItemChecked(I)Z
+    iget-object v2, p0, Landroid/support/v7/app/AlertController$AlertParams$4;->a:Landroid/widget/ListView;
+
+    invoke-virtual {v2, p3}, Landroid/widget/ListView;->isItemChecked(I)Z
 
     move-result v2
 
-    .line 1059
     invoke-interface {v0, v1, p3, v2}, Landroid/content/DialogInterface$OnMultiChoiceClickListener;->onClick(Landroid/content/DialogInterface;IZ)V
 
-    .line 1061
+    .line 822
     return-void
 .end method

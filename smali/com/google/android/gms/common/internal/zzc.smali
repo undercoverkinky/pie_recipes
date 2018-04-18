@@ -1,109 +1,198 @@
-.class public final Lcom/google/android/gms/common/internal/zzc;
+.class public Lcom/google/android/gms/common/internal/zzc;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Lcom/google/android/gms/common/internal/AuthAccountRequest;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method public static zzbg(Z)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
-    if-nez p0, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
-
-    :cond_0
     return-void
 .end method
 
-.method public static zzfx(Ljava/lang/String;)V
-    .locals 5
+.method static zza(Lcom/google/android/gms/common/internal/AuthAccountRequest;Landroid/os/Parcel;I)V
+    .locals 4
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    const/4 v3, 0x0
+
+    invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzar(Landroid/os/Parcel;)I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    iget v2, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->mVersionCode:I
+
+    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzc(Landroid/os/Parcel;II)V
+
+    const/4 v1, 0x2
+
+    iget-object v2, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->zzaqo:Landroid/os/IBinder;
+
+    invoke-static {p1, v1, v2, v3}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zza(Landroid/os/Parcel;ILandroid/os/IBinder;Z)V
+
+    const/4 v1, 0x3
+
+    iget-object v2, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->zzakD:[Lcom/google/android/gms/common/api/Scope;
+
+    invoke-static {p1, v1, v2, p2, v3}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zza(Landroid/os/Parcel;I[Landroid/os/Parcelable;IZ)V
+
+    const/4 v1, 0x4
+
+    iget-object v2, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->zzaqp:Ljava/lang/Integer;
+
+    invoke-static {p1, v1, v2, v3}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zza(Landroid/os/Parcel;ILjava/lang/Integer;Z)V
+
+    const/4 v1, 0x5
+
+    iget-object v2, p0, Lcom/google/android/gms/common/internal/AuthAccountRequest;->zzaqq:Ljava/lang/Integer;
+
+    invoke-static {p1, v1, v2, v3}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zza(Landroid/os/Parcel;ILjava/lang/Integer;Z)V
+
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzJ(Landroid/os/Parcel;I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Lcom/google/android/gms/common/internal/zzc;->zzai(Landroid/os/Parcel;)Lcom/google/android/gms/common/internal/AuthAccountRequest;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
+    return-object v0
+.end method
+
+.method public synthetic newArray(I)[Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Lcom/google/android/gms/common/internal/zzc;->zzbY(I)[Lcom/google/android/gms/common/internal/AuthAccountRequest;
 
     move-result-object v0
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    return-object v0
+.end method
 
-    move-result-object v1
+.method public zzai(Landroid/os/Parcel;)Lcom/google/android/gms/common/internal/AuthAccountRequest;
+    .locals 8
 
-    if-eq v0, v1, :cond_0
+    const/4 v5, 0x0
 
-    const-string v0, "Asserts"
+    invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/zza;->zzaq(Landroid/os/Parcel;)I
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    move-result v6
 
-    move-result-object v1
+    const/4 v1, 0x0
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    move-object v4, v5
 
-    move-result-object v1
+    move-object v3, v5
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    move-object v2, v5
+
+    :goto_0
+    invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
+
+    move-result v0
+
+    if-ge v0, v6, :cond_0
+
+    invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/zza;->zzap(Landroid/os/Parcel;)I
+
+    move-result v0
+
+    invoke-static {v0}, Lcom/google/android/gms/common/internal/safeparcel/zza;->zzcj(I)I
+
+    move-result v7
+
+    packed-switch v7, :pswitch_data_0
+
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zza;->zzb(Landroid/os/Parcel;I)V
+
+    goto :goto_0
+
+    :pswitch_0
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zza;->zzg(Landroid/os/Parcel;I)I
+
+    move-result v1
+
+    goto :goto_0
+
+    :pswitch_1
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zza;->zzr(Landroid/os/Parcel;I)Landroid/os/IBinder;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
+    goto :goto_0
 
-    move-result-object v2
+    :pswitch_2
+    sget-object v3, Lcom/google/android/gms/common/api/Scope;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1, v0, v3}, Lcom/google/android/gms/common/internal/safeparcel/zza;->zzb(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)[Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    check-cast v0, [Lcom/google/android/gms/common/api/Scope;
 
-    move-result-object v3
+    move-object v3, v0
 
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
+    goto :goto_0
 
-    move-result v3
-
-    add-int/lit8 v3, v3, 0x39
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    :pswitch_3
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zza;->zzh(Landroid/os/Parcel;I)Ljava/lang/Integer;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
+    goto :goto_0
 
-    move-result v4
+    :pswitch_4
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zza;->zzh(Landroid/os/Parcel;I)Ljava/lang/Integer;
 
-    add-int/2addr v3, v4
+    move-result-object v5
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    invoke-direct {v4, v3}, Ljava/lang/StringBuilder;-><init>(I)V
+    :cond_0
+    invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
-    const-string v3, "checkMainThread: current thread "
+    move-result v0
 
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eq v0, v6, :cond_1
 
-    move-result-object v3
+    new-instance v0, Lcom/google/android/gms/common/internal/safeparcel/zza$zza;
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    const/16 v2, 0x25
 
-    const-string v3, " IS NOT the main thread "
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "!"
+    const-string v2, "Overread allowed size end="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -111,31 +200,33 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1, p1}, Lcom/google/android/gms/common/internal/safeparcel/zza$zza;-><init>(Ljava/lang/String;Landroid/os/Parcel;)V
 
     throw v0
 
-    :cond_0
-    return-void
+    :cond_1
+    new-instance v0, Lcom/google/android/gms/common/internal/AuthAccountRequest;
+
+    invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/common/internal/AuthAccountRequest;-><init>(ILandroid/os/IBinder;[Lcom/google/android/gms/common/api/Scope;Ljava/lang/Integer;Ljava/lang/Integer;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+        :pswitch_4
+    .end packed-switch
 .end method
 
-.method public static zzr(Ljava/lang/Object;)V
-    .locals 2
+.method public zzbY(I)[Lcom/google/android/gms/common/internal/AuthAccountRequest;
+    .locals 1
 
-    if-nez p0, :cond_0
+    new-array v0, p1, [Lcom/google/android/gms/common/internal/AuthAccountRequest;
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "null reference"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

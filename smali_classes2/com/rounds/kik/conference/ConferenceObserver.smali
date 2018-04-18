@@ -13,12 +13,6 @@
 .method public abstract onParticipantAdded(Lcom/rounds/kik/participants/RemoteParticipant;)V
 .end method
 
-.method public abstract onParticipantInBackground(Ljava/lang/String;Z)V
-.end method
-
-.method public abstract onParticipantInCall(Ljava/lang/String;Z)V
-.end method
-
 .method public abstract onParticipantRemoved(Lcom/rounds/kik/participants/RemoteParticipant;)V
 .end method
 

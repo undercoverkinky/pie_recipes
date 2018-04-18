@@ -46,7 +46,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 161
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -57,19 +56,17 @@
 
     move-result v1
 
-    .line 163
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
 
-    .line 162
     invoke-static {p0, p1, v1, v2, v0}, Landroid/support/v4/content/PermissionChecker;->checkPermission(Landroid/content/Context;Ljava/lang/String;IILjava/lang/String;)I
 
     move-result v0
 
     return v0
 
-    .line 161
+    .line 160
     :cond_0
     const/4 v0, 0x0
 
@@ -103,12 +100,10 @@
 
     move-result v0
 
-    .line 146
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 145
     invoke-static {p0, p1, v0, v1, p2}, Landroid/support/v4/content/PermissionChecker;->checkPermission(Landroid/content/Context;Ljava/lang/String;IILjava/lang/String;)I
 
     move-result v0
@@ -202,7 +197,6 @@
 
     move-result v0
 
-    .line 126
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v1
@@ -211,7 +205,6 @@
 
     move-result-object v2
 
-    .line 125
     invoke-static {p0, p1, v0, v1, v2}, Landroid/support/v4/content/PermissionChecker;->checkPermission(Landroid/content/Context;Ljava/lang/String;IILjava/lang/String;)I
 
     move-result v0

@@ -1,5 +1,5 @@
 .class final Lkik/android/video/f$1;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Ljava/io/File;",
         ">;"
@@ -67,7 +67,7 @@
 
     iput-wide p10, p0, Lkik/android/video/f$1;->h:J
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -84,11 +84,11 @@
     .line 1137
     iget-object v0, p0, Lkik/android/video/f$1;->i:Lkik/android/video/f;
 
-    iget-object v0, v0, Lkik/android/video/f;->a:Lcom/kik/storage/s;
+    iget-object v0, v0, Lkik/android/video/f;->a:Lcom/kik/e/p;
 
     iget-object v1, p0, Lkik/android/video/f$1;->b:Ljava/lang/String;
 
-    invoke-interface {v0, v1}, Lcom/kik/storage/s;->f(Ljava/lang/String;)Z
+    invoke-interface {v0, v1}, Lcom/kik/e/p;->f(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -117,7 +117,7 @@
     .line 1143
     iget-object v2, p0, Lkik/android/video/f$1;->i:Lkik/android/video/f;
 
-    iget-object v2, v2, Lkik/android/video/f;->a:Lcom/kik/storage/s;
+    iget-object v2, v2, Lkik/android/video/f;->a:Lcom/kik/e/p;
 
     iget-object v3, p0, Lkik/android/video/f$1;->d:Ljava/lang/String;
 
@@ -125,7 +125,7 @@
 
     move-result-object v4
 
-    invoke-interface {v2, v3, v4}, Lcom/kik/storage/s;->a(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-interface {v2, v3, v4}, Lcom/kik/e/p;->a(Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 1145
     new-instance v2, Landroid/media/MediaMetadataRetriever;
@@ -143,28 +143,28 @@
     .line 1148
     const/16 v3, 0x14
 
-    invoke-static {v2, v3}, Lkik/android/util/bv;->a(Landroid/media/MediaMetadataRetriever;I)I
+    invoke-static {v2, v3}, Lkik/android/util/bx;->a(Landroid/media/MediaMetadataRetriever;I)I
 
     move-result v3
 
     .line 1149
     const/16 v4, 0x9
 
-    invoke-static {v2, v4}, Lkik/android/util/bv;->a(Landroid/media/MediaMetadataRetriever;I)I
+    invoke-static {v2, v4}, Lkik/android/util/bx;->a(Landroid/media/MediaMetadataRetriever;I)I
 
     move-result v4
 
     .line 1150
     const/16 v5, 0x12
 
-    invoke-static {v2, v5}, Lkik/android/util/bv;->a(Landroid/media/MediaMetadataRetriever;I)I
+    invoke-static {v2, v5}, Lkik/android/util/bx;->a(Landroid/media/MediaMetadataRetriever;I)I
 
     move-result v5
 
     .line 1151
     const/16 v6, 0x13
 
-    invoke-static {v2, v6}, Lkik/android/util/bv;->a(Landroid/media/MediaMetadataRetriever;I)I
+    invoke-static {v2, v6}, Lkik/android/util/bx;->a(Landroid/media/MediaMetadataRetriever;I)I
 
     move-result v6
 
@@ -309,7 +309,6 @@
 
     invoke-virtual {v2}, Landroid/media/MediaMetadataRetriever;->release()V
 
-    .line 1169
     throw v0
 .end method
 

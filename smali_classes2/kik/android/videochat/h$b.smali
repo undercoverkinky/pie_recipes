@@ -89,7 +89,7 @@
     :cond_0
     aget-object v0, p3, v2
 
-    instance-of v0, v0, Lkik/core/datatypes/l;
+    instance-of v0, v0, Lkik/core/datatypes/o;
 
     if-eqz v0, :cond_1
 
@@ -98,9 +98,9 @@
 
     aget-object v0, p3, v2
 
-    check-cast v0, Lkik/core/datatypes/l;
+    check-cast v0, Lkik/core/datatypes/o;
 
-    invoke-virtual {v1, v0}, Lkik/android/videochat/h;->a(Lkik/core/datatypes/l;)Lcom/rounds/kik/Conversation;
+    invoke-virtual {v1, v0}, Lkik/android/videochat/h;->a(Lkik/core/datatypes/o;)Lcom/rounds/kik/Conversation;
 
     move-result-object v0
 

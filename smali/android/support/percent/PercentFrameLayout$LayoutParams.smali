@@ -26,10 +26,10 @@
     .locals 0
 
     .prologue
-    .line 129
+    .line 127
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    .line 130
+    .line 128
     return-void
 .end method
 
@@ -37,10 +37,10 @@
     .locals 0
 
     .prologue
-    .line 133
+    .line 131
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
 
-    .line 134
+    .line 132
     return-void
 .end method
 
@@ -48,36 +48,33 @@
     .locals 1
 
     .prologue
-    .line 124
+    .line 122
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 125
+    .line 123
     invoke-static {p1, p2}, Landroid/support/percent/PercentLayoutHelper;->getPercentLayoutInfo(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/support/percent/PercentFrameLayout$LayoutParams;->mPercentLayoutInfo:Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;
 
-    .line 126
+    .line 124
     return-void
 .end method
 
 .method public constructor <init>(Landroid/support/percent/PercentFrameLayout$LayoutParams;)V
     .locals 1
-    .annotation build Landroid/annotation/TargetApi;
-        value = 0x13
-    .end annotation
 
     .prologue
-    .line 153
+    .line 148
     invoke-direct {p0, p1}, Landroid/support/percent/PercentFrameLayout$LayoutParams;-><init>(Landroid/widget/FrameLayout$LayoutParams;)V
 
-    .line 154
+    .line 149
     iget-object v0, p1, Landroid/support/percent/PercentFrameLayout$LayoutParams;->mPercentLayoutInfo:Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;
 
     iput-object v0, p0, Landroid/support/percent/PercentFrameLayout$LayoutParams;->mPercentLayoutInfo:Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;
 
-    .line 155
+    .line 150
     return-void
 .end method
 
@@ -85,10 +82,10 @@
     .locals 0
 
     .prologue
-    .line 137
+    .line 135
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 138
+    .line 136
     return-void
 .end method
 
@@ -96,10 +93,10 @@
     .locals 0
 
     .prologue
-    .line 141
+    .line 139
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
 
-    .line 142
+    .line 140
     return-void
 .end method
 
@@ -107,15 +104,15 @@
     .locals 1
 
     .prologue
-    .line 145
+    .line 143
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
 
-    .line 146
+    .line 144
     iget v0, p1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
     iput v0, p0, Landroid/support/percent/PercentFrameLayout$LayoutParams;->gravity:I
 
-    .line 147
+    .line 145
     return-void
 .end method
 
@@ -125,19 +122,19 @@
     .locals 1
 
     .prologue
-    .line 159
+    .line 154
     iget-object v0, p0, Landroid/support/percent/PercentFrameLayout$LayoutParams;->mPercentLayoutInfo:Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;
 
     if-nez v0, :cond_0
 
-    .line 160
+    .line 155
     new-instance v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;
 
     invoke-direct {v0}, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;-><init>()V
 
     iput-object v0, p0, Landroid/support/percent/PercentFrameLayout$LayoutParams;->mPercentLayoutInfo:Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;
 
-    .line 163
+    .line 158
     :cond_0
     iget-object v0, p0, Landroid/support/percent/PercentFrameLayout$LayoutParams;->mPercentLayoutInfo:Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;
 
@@ -148,9 +145,9 @@
     .locals 0
 
     .prologue
-    .line 168
+    .line 163
     invoke-static {p0, p1, p2, p3}, Landroid/support/percent/PercentLayoutHelper;->fetchWidthAndHeight(Landroid/view/ViewGroup$LayoutParams;Landroid/content/res/TypedArray;II)V
 
-    .line 169
+    .line 164
     return-void
 .end method

@@ -4,8 +4,7 @@
 # interfaces
 .implements Lcom/google/android/gms/ads/formats/NativeAppInstallAd$OnAppInstallAdLoadedListener;
 .implements Lcom/google/android/gms/ads/formats/NativeContentAd$OnContentAdLoadedListener;
-.implements Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd$OnCustomClickListener;
-.implements Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd$OnCustomTemplateAdLoadedListener;
+.implements Lcom/google/android/gms/ads/internal/client/zza;
 
 
 # annotations
@@ -20,9 +19,9 @@
 
 
 # instance fields
-.field private a:Lcom/google/ads/mediation/AbstractAdViewAdapter;
+.field final a:Lcom/google/ads/mediation/AbstractAdViewAdapter;
 
-.field private b:Lcom/google/android/gms/ads/mediation/MediationNativeListener;
+.field final b:Lcom/google/android/gms/ads/mediation/MediationNativeListener;
 
 
 # direct methods
@@ -72,18 +71,6 @@
     iget-object v1, p0, Lcom/google/ads/mediation/AbstractAdViewAdapter$e;->a:Lcom/google/ads/mediation/AbstractAdViewAdapter;
 
     invoke-interface {v0, v1, p1}, Lcom/google/android/gms/ads/mediation/MediationNativeListener;->onAdFailedToLoad(Lcom/google/android/gms/ads/mediation/MediationNativeAdapter;I)V
-
-    return-void
-.end method
-
-.method public final onAdImpression()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/google/ads/mediation/AbstractAdViewAdapter$e;->b:Lcom/google/android/gms/ads/mediation/MediationNativeListener;
-
-    iget-object v1, p0, Lcom/google/ads/mediation/AbstractAdViewAdapter$e;->a:Lcom/google/ads/mediation/AbstractAdViewAdapter;
-
-    invoke-interface {v0, v1}, Lcom/google/android/gms/ads/mediation/MediationNativeListener;->onAdImpression(Lcom/google/android/gms/ads/mediation/MediationNativeAdapter;)V
 
     return-void
 .end method
@@ -146,30 +133,6 @@
     invoke-direct {v2, p1}, Lcom/google/ads/mediation/AbstractAdViewAdapter$b;-><init>(Lcom/google/android/gms/ads/formats/NativeContentAd;)V
 
     invoke-interface {v0, v1, v2}, Lcom/google/android/gms/ads/mediation/MediationNativeListener;->onAdLoaded(Lcom/google/android/gms/ads/mediation/MediationNativeAdapter;Lcom/google/android/gms/ads/mediation/NativeAdMapper;)V
-
-    return-void
-.end method
-
-.method public final onCustomClick(Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd;Ljava/lang/String;)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/google/ads/mediation/AbstractAdViewAdapter$e;->b:Lcom/google/android/gms/ads/mediation/MediationNativeListener;
-
-    iget-object v1, p0, Lcom/google/ads/mediation/AbstractAdViewAdapter$e;->a:Lcom/google/ads/mediation/AbstractAdViewAdapter;
-
-    invoke-interface {v0, v1, p1, p2}, Lcom/google/android/gms/ads/mediation/MediationNativeListener;->zza(Lcom/google/android/gms/ads/mediation/MediationNativeAdapter;Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final onCustomTemplateAdLoaded(Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd;)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/google/ads/mediation/AbstractAdViewAdapter$e;->b:Lcom/google/android/gms/ads/mediation/MediationNativeListener;
-
-    iget-object v1, p0, Lcom/google/ads/mediation/AbstractAdViewAdapter$e;->a:Lcom/google/ads/mediation/AbstractAdViewAdapter;
-
-    invoke-interface {v0, v1, p1}, Lcom/google/android/gms/ads/mediation/MediationNativeListener;->zza(Lcom/google/android/gms/ads/mediation/MediationNativeAdapter;Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd;)V
 
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class final Lcom/kik/android/b/j$b;
-.super Lkik/android/i/c;
+.super Lkik/android/g/c;
 .source "SourceFile"
 
 
@@ -23,17 +23,17 @@
     .locals 2
 
     .prologue
-    .line 328
+    .line 323
     iput-object p1, p0, Lcom/kik/android/b/j$b;->a:Lcom/kik/android/b/j;
 
-    .line 329
+    .line 324
     const-string v0, "smileyTable"
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, p2, v0, v1, p3}, Lkik/android/i/c;-><init>(Landroid/content/Context;Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {p0, p2, v0, v1, p3}, Lkik/android/g/c;-><init>(Landroid/content/Context;Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 330
+    .line 325
     return-void
 .end method
 
@@ -45,7 +45,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 348
+    .line 343
     const-string v1, "smileyTable"
 
     move-object v0, p1
@@ -64,45 +64,45 @@
 
     move-result-object v0
 
-    .line 350
+    .line 345
     const-string v1, "smileyTable"
 
     const-string v2, "smiley_id"
 
     invoke-static {v0, p1, v1, v2}, Lcom/kik/android/b/j$b;->a(Landroid/database/Cursor;Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 351
+    .line 346
     const-string v1, "smileyTable"
 
     const-string v2, "smiley_text"
 
     invoke-static {v0, p1, v1, v2}, Lcom/kik/android/b/j$b;->a(Landroid/database/Cursor;Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 352
+    .line 347
     const-string v1, "smileyTable"
 
     const-string v2, "smiley_title"
 
     invoke-static {v0, p1, v1, v2}, Lcom/kik/android/b/j$b;->a(Landroid/database/Cursor;Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 353
+    .line 348
     const-string v1, "smileyTable"
 
     const-string v2, "smiley_category"
 
     invoke-static {v0, p1, v1, v2}, Lcom/kik/android/b/j$b;->a(Landroid/database/Cursor;Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 354
+    .line 349
     const-string v1, "smileyTable"
 
     const-string v2, "smiley_install_date"
 
     invoke-static {v0, p1, v1, v2}, Lcom/kik/android/b/j$b;->c(Landroid/database/Cursor;Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 356
+    .line 351
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 357
+    .line 352
     return-void
 .end method
 
@@ -110,7 +110,7 @@
     .locals 4
 
     .prologue
-    .line 335
+    .line 330
     const-string v0, "CREATE TABLE %s (%s VARCHAR, %s VARCHAR, %s VARCHAR, %s VARCHAR, %s LONG);"
 
     const/4 v1, 0x6
@@ -157,10 +157,10 @@
 
     move-result-object v0
 
-    .line 336
+    .line 331
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 337
+    .line 332
     return-void
 .end method
 
@@ -168,6 +168,6 @@
     .locals 0
 
     .prologue
-    .line 343
+    .line 338
     return-void
 .end method

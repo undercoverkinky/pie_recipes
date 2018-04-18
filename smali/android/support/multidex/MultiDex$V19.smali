@@ -36,32 +36,32 @@
 
     const/4 v7, 0x0
 
-    .line 461
-    .line 1473
+    .line 369
+    .line 1380
     const-string v0, "pathList"
 
     invoke-static {p0, v0}, Landroid/support/multidex/MultiDex;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
-    .line 1474
+    .line 1381
     invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v1
 
-    .line 1475
-    new-instance v3, Ljava/util/ArrayList;
+    .line 1382
+    new-instance v2, Ljava/util/ArrayList;
 
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1476
-    const-string v1, "dexElements"
+    .line 1383
+    const-string v3, "dexElements"
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 1515
+    .line 1422
     const-string v4, "makeDexElements"
 
     new-array v5, v10, [Ljava/lang/Class;
@@ -78,38 +78,37 @@
 
     aput-object v6, v5, v9
 
-    .line 1516
-    invoke-static {v2, v4, v5}, Landroid/support/multidex/MultiDex;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-static {v1, v4, v5}, Landroid/support/multidex/MultiDex;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v4
 
-    .line 1519
+    .line 1426
     new-array v5, v10, [Ljava/lang/Object;
 
     aput-object v0, v5, v7
 
     aput-object p2, v5, v8
 
-    aput-object v3, v5, v9
+    aput-object v2, v5, v9
 
-    invoke-virtual {v4, v2, v5}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v4, v1, v5}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [Ljava/lang/Object;
 
-    .line 1476
-    invoke-static {v2, v1, v0}, Landroid/support/multidex/MultiDex;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 1383
+    invoke-static {v1, v3, v0}, Landroid/support/multidex/MultiDex;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1479
-    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
+    .line 1386
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
     if-lez v0, :cond_1
 
-    .line 1480
-    invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    .line 1387
+    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
@@ -126,83 +125,80 @@
 
     check-cast v0, Ljava/io/IOException;
 
-    .line 1481
-    const-string v4, "MultiDex"
+    .line 1388
+    const-string v3, "MultiDex"
 
-    const-string v5, "Exception in makeDexElement"
+    const-string v4, "Exception in makeDexElement"
 
-    invoke-static {v4, v5, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v3, v4, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 1483
+    .line 1390
     :cond_0
     const-string v0, "dexElementsSuppressedExceptions"
 
-    .line 1484
-    invoke-static {v2, v0}, Landroid/support/multidex/MultiDex;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/reflect/Field;
+    invoke-static {p0, v0}, Landroid/support/multidex/MultiDex;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
-    move-result-object v4
+    move-result-object v3
 
-    .line 1486
-    invoke-virtual {v4, v2}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 1392
+    invoke-virtual {v3, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [Ljava/io/IOException;
 
-    .line 1488
+    .line 1395
     if-nez v0, :cond_2
 
-    .line 1491
-    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
+    .line 1396
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
     new-array v0, v0, [Ljava/io/IOException;
 
-    .line 1490
-    invoke-virtual {v3, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [Ljava/io/IOException;
 
-    .line 1502
+    .line 1409
     :goto_1
-    invoke-virtual {v4, v2, v0}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v3, p0, v0}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 461
+    .line 369
     :cond_1
     return-void
 
-    .line 1494
+    .line 1400
     :cond_2
-    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    array-length v5, v0
+    array-length v4, v0
 
-    add-int/2addr v1, v5
+    add-int/2addr v1, v4
 
     new-array v1, v1, [Ljava/io/IOException;
 
-    .line 1496
-    invoke-virtual {v3, v1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .line 1403
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 1498
-    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
+    .line 1404
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
-    move-result v3
+    move-result v2
 
-    array-length v5, v0
+    array-length v4, v0
 
-    .line 1497
-    invoke-static {v0, v7, v1, v3, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-static {v0, v7, v1, v2, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     move-object v0, v1
 
-    .line 1499
+    .line 1406
     goto :goto_1
 .end method

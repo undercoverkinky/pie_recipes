@@ -3,18 +3,12 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0xf
-.end annotation
-
-
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 29
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +18,7 @@
     .locals 1
 
     .prologue
-    .line 31
+    .line 30
     invoke-virtual {p0}, Landroid/view/View;->hasOnClickListeners()Z
 
     move-result v0

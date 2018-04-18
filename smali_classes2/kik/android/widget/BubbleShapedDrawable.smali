@@ -1,5 +1,5 @@
 .class public final Lkik/android/widget/BubbleShapedDrawable;
-.super Lkik/android/widget/q;
+.super Lkik/android/widget/o;
 .source "SourceFile"
 
 
@@ -97,7 +97,7 @@
     const/4 v2, 0x0
 
     .line 70
-    invoke-direct {p0, p1}, Lkik/android/widget/q;-><init>(Landroid/graphics/Bitmap;)V
+    invoke-direct {p0, p1}, Lkik/android/widget/o;-><init>(Landroid/graphics/Bitmap;)V
 
     .line 27
     new-instance v0, Landroid/graphics/Point;
@@ -181,7 +181,7 @@
     iput-object v0, p0, Lkik/android/widget/BubbleShapedDrawable;->q:Landroid/graphics/ColorFilter;
 
     .line 66
-    const v0, 0x7f0a00ac
+    const v0, 0x7f0b007e
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->c(I)I
 
@@ -231,7 +231,7 @@
 
     .prologue
     .line 98
-    invoke-super {p0, p1, p2}, Lkik/android/widget/q;->a(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
+    invoke-super {p0, p1, p2}, Lkik/android/widget/o;->a(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
 
     .line 99
     return-void
@@ -789,7 +789,7 @@
 
     .prologue
     .line 237
-    invoke-super {p0}, Lkik/android/widget/q;->getIntrinsicHeight()I
+    invoke-super {p0}, Lkik/android/widget/o;->getIntrinsicHeight()I
 
     move-result v0
 
@@ -821,7 +821,7 @@
 
     .prologue
     .line 248
-    invoke-super {p0}, Lkik/android/widget/q;->getIntrinsicWidth()I
+    invoke-super {p0}, Lkik/android/widget/o;->getIntrinsicWidth()I
 
     move-result v0
 
@@ -866,7 +866,7 @@
     invoke-virtual {p0}, Lkik/android/widget/BubbleShapedDrawable;->invalidateSelf()V
 
     .line 230
-    invoke-super {p0, p1}, Lkik/android/widget/q;->onStateChange([I)Z
+    invoke-super {p0, p1}, Lkik/android/widget/o;->onStateChange([I)Z
 
     move-result v0
 
@@ -878,7 +878,7 @@
 
     .prologue
     .line 271
-    invoke-super {p0, p1}, Lkik/android/widget/q;->setState([I)Z
+    invoke-super {p0, p1}, Lkik/android/widget/o;->setState([I)Z
 
     move-result v0
 

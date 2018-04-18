@@ -1,5 +1,5 @@
 .class abstract Lcom/google/common/collect/a;
-.super Lcom/google/common/collect/t;
+.super Lcom/google/common/collect/y;
 .source "SourceFile"
 
 
@@ -9,7 +9,7 @@
         "<E:",
         "Ljava/lang/Object;",
         ">",
-        "Lcom/google/common/collect/t",
+        "Lcom/google/common/collect/y",
         "<TE;>;"
     }
 .end annotation
@@ -26,19 +26,19 @@
     .locals 0
 
     .prologue
-    .line 66
-    invoke-direct {p0}, Lcom/google/common/collect/t;-><init>()V
-
-    .line 67
-    invoke-static {p2, p1}, Lcom/google/common/base/Preconditions;->checkPositionIndex(II)I
-
     .line 68
-    iput p1, p0, Lcom/google/common/collect/a;->a:I
+    invoke-direct {p0}, Lcom/google/common/collect/y;-><init>()V
 
     .line 69
-    iput p2, p0, Lcom/google/common/collect/a;->b:I
+    invoke-static {p2, p1}, Lcom/google/common/base/h;->b(II)I
 
     .line 70
+    iput p1, p0, Lcom/google/common/collect/a;->a:I
+
+    .line 71
+    iput p2, p0, Lcom/google/common/collect/a;->b:I
+
+    .line 72
     return-void
 .end method
 
@@ -56,7 +56,7 @@
     .locals 2
 
     .prologue
-    .line 74
+    .line 76
     iget v0, p0, Lcom/google/common/collect/a;->b:I
 
     iget v1, p0, Lcom/google/common/collect/a;->a:I
@@ -78,7 +78,7 @@
     .locals 1
 
     .prologue
-    .line 92
+    .line 94
     iget v0, p0, Lcom/google/common/collect/a;->b:I
 
     if-lez v0, :cond_0
@@ -103,21 +103,21 @@
     .end annotation
 
     .prologue
-    .line 79
+    .line 81
     invoke-virtual {p0}, Lcom/google/common/collect/a;->hasNext()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 80
+    .line 82
     new-instance v0, Ljava/util/NoSuchElementException;
 
     invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
     throw v0
 
-    .line 82
+    .line 84
     :cond_0
     iget v0, p0, Lcom/google/common/collect/a;->b:I
 
@@ -136,7 +136,7 @@
     .locals 1
 
     .prologue
-    .line 87
+    .line 89
     iget v0, p0, Lcom/google/common/collect/a;->b:I
 
     return v0
@@ -151,21 +151,21 @@
     .end annotation
 
     .prologue
-    .line 97
+    .line 99
     invoke-virtual {p0}, Lcom/google/common/collect/a;->hasPrevious()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 98
+    .line 100
     new-instance v0, Ljava/util/NoSuchElementException;
 
     invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
     throw v0
 
-    .line 100
+    .line 102
     :cond_0
     iget v0, p0, Lcom/google/common/collect/a;->b:I
 
@@ -184,7 +184,7 @@
     .locals 1
 
     .prologue
-    .line 105
+    .line 107
     iget v0, p0, Lcom/google/common/collect/a;->b:I
 
     add-int/lit8 v0, v0, -0x1

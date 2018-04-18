@@ -3,18 +3,12 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x13
-.end annotation
-
-
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 31
+    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +18,7 @@
     .locals 1
 
     .prologue
-    .line 33
+    .line 28
     check-cast p0, Landroid/widget/ListPopupWindow;
 
     invoke-virtual {p0, p1}, Landroid/widget/ListPopupWindow;->createDragToOpenListener(Landroid/view/View;)Landroid/view/View$OnTouchListener;

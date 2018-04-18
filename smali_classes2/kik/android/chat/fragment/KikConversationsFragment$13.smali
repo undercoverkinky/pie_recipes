@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/fragment/KikConversationsFragment$13;
-.super Landroid/view/GestureDetector$SimpleOnGestureListener;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
 
@@ -23,84 +23,29 @@
     .locals 0
 
     .prologue
-    .line 972
+    .line 982
     iput-object p1, p0, Lkik/android/chat/fragment/KikConversationsFragment$13;->a:Lkik/android/chat/fragment/KikConversationsFragment;
 
-    invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDown(Landroid/view/MotionEvent;)Z
-    .locals 1
-
-    .prologue
-    .line 991
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
     .prologue
-    .line 976
+    .line 986
     iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$13;->a:Lkik/android/chat/fragment/KikConversationsFragment;
 
-    iget-object v0, v0, Lkik/android/chat/fragment/KikConversationsFragment;->_suggestedChatsView:Landroid/view/View;
+    iget-object v0, v0, Lkik/android/chat/fragment/KikConversationsFragment;->_searchBarBackIcon:Landroid/widget/ImageView;
 
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+    const/4 v1, 0x0
 
-    move-result v0
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    neg-int v0, v0
-
-    mul-int/lit8 v0, v0, 0x2
-
-    int-to-float v0, v0
-
-    cmpg-float v0, p4, v0
-
-    if-gez v0, :cond_0
-
-    .line 978
-    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$13;->a:Lkik/android/chat/fragment/KikConversationsFragment;
-
-    iget-object v0, v0, Lkik/android/chat/fragment/KikConversationsFragment;->_mixpanel:Lcom/kik/android/Mixpanel;
-
-    const-string v1, "Pull to Search Closed"
-
-    invoke-virtual {v0, v1}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;)Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    .line 979
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    .line 980
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
-
-    .line 981
-    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$13;->a:Lkik/android/chat/fragment/KikConversationsFragment;
-
-    iget-object v0, v0, Lkik/android/chat/fragment/KikConversationsFragment;->_pullToSearch:Lkik/android/widget/PullToRevealView;
-
-    invoke-virtual {v0}, Lkik/android/widget/PullToRevealView;->c()V
-
-    .line 982
-    const/4 v0, 0x1
-
-    .line 984
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+    .line 987
+    return-void
 .end method

@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static a(Lcom/google/gson/stream/a;)Lcom/google/gson/k;
+.method public static a(Lcom/google/gson/stream/a;)Lcom/google/gson/j;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -30,7 +30,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/gson/k;
+    check-cast v0, Lcom/google/gson/j;
     :try_end_0
     .catch Ljava/io/EOFException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Lcom/google/gson/stream/MalformedJsonException; {:try_start_0 .. :try_end_0} :catch_1
@@ -49,7 +49,7 @@
     if-eqz v1, :cond_0
 
     .line 55
-    sget-object v0, Lcom/google/gson/l;->a:Lcom/google/gson/l;
+    sget-object v0, Lcom/google/gson/k;->a:Lcom/google/gson/k;
 
     goto :goto_0
 
@@ -95,7 +95,7 @@
     throw v1
 .end method
 
-.method public static a(Lcom/google/gson/k;Lcom/google/gson/stream/b;)V
+.method public static a(Lcom/google/gson/j;Lcom/google/gson/stream/b;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {

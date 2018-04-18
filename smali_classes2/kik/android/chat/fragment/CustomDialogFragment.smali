@@ -120,7 +120,7 @@
 
     .prologue
     .line 39
-    const v0, 0x7f0b0112
+    const v0, 0x7f0c00dd
 
     return v0
 .end method

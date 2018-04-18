@@ -1,5 +1,5 @@
 .class final Lkik/android/scan/fragment/ScanFragment$5$1;
-.super Lcom/kik/util/g;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -13,52 +13,56 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/kik/events/l",
+        "<",
+        "Landroid/os/Bundle;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic a:Lkik/android/scan/fragment/ScanFragment$5;
+.field final synthetic a:Z
+
+.field final synthetic b:Lkik/android/scan/fragment/ScanFragment$5;
 
 
 # direct methods
-.method constructor <init>(Lkik/android/scan/fragment/ScanFragment$5;)V
+.method constructor <init>(Lkik/android/scan/fragment/ScanFragment$5;Z)V
     .locals 0
 
     .prologue
-    .line 603
-    iput-object p1, p0, Lkik/android/scan/fragment/ScanFragment$5$1;->a:Lkik/android/scan/fragment/ScanFragment$5;
+    .line 539
+    iput-object p1, p0, Lkik/android/scan/fragment/ScanFragment$5$1;->b:Lkik/android/scan/fragment/ScanFragment$5;
 
-    invoke-direct {p0}, Lcom/kik/util/g;-><init>()V
+    iput-boolean p2, p0, Lkik/android/scan/fragment/ScanFragment$5$1;->a:Z
+
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 4
+.method public final b()V
+    .locals 1
 
     .prologue
-    .line 607
-    iget-object v0, p0, Lkik/android/scan/fragment/ScanFragment$5$1;->a:Lkik/android/scan/fragment/ScanFragment$5;
+    .line 543
+    iget-boolean v0, p0, Lkik/android/scan/fragment/ScanFragment$5$1;->a:Z
+
+    if-eqz v0, :cond_0
+
+    .line 544
+    iget-object v0, p0, Lkik/android/scan/fragment/ScanFragment$5$1;->b:Lkik/android/scan/fragment/ScanFragment$5;
 
     iget-object v0, v0, Lkik/android/scan/fragment/ScanFragment$5;->b:Lkik/android/scan/fragment/ScanFragment;
 
-    invoke-static {v0}, Lkik/android/scan/fragment/ScanFragment;->j(Lkik/android/scan/fragment/ScanFragment;)V
+    invoke-virtual {v0}, Lkik/android/scan/fragment/ScanFragment;->D()V
 
-    .line 608
-    iget-object v0, p0, Lkik/android/scan/fragment/ScanFragment$5$1;->a:Lkik/android/scan/fragment/ScanFragment$5;
-
-    iget-object v0, v0, Lkik/android/scan/fragment/ScanFragment$5;->b:Lkik/android/scan/fragment/ScanFragment;
-
-    iget-object v0, v0, Lkik/android/scan/fragment/ScanFragment;->_animationContainer:Landroid/view/View;
-
-    new-instance v1, Lkik/android/scan/fragment/ScanFragment$5$1$1;
-
-    invoke-direct {v1, p0}, Lkik/android/scan/fragment/ScanFragment$5$1$1;-><init>(Lkik/android/scan/fragment/ScanFragment$5$1;)V
-
-    const-wide/16 v2, 0xc8
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    .line 617
+    .line 546
+    :cond_0
     return-void
 .end method

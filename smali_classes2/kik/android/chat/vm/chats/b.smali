@@ -19,11 +19,11 @@
 
 
 # virtual methods
-.method public abstract L_()Lrx/d;
+.method public abstract F_()Lrx/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lrx/d",
+            "Lrx/c",
             "<",
             "Ljava/lang/Boolean;",
             ">;"

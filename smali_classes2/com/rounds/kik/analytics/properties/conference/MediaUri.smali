@@ -12,19 +12,19 @@
     .locals 1
 
     .prologue
-    .line 16
+    .line 15
     const-string v0, "media_uri"
 
     invoke-direct {p0, v0, p1}, Lcom/rounds/kik/analytics/properties/primitives/StringProperty;-><init>(Ljava/lang/String;Z)V
 
-    .line 17
+    .line 16
     invoke-static {}, Lcom/rounds/kik/analytics/properties/conference/MediaUri;->getDefaultValue()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/rounds/kik/analytics/properties/conference/MediaUri;->mValue:Ljava/lang/Object;
 
-    .line 18
+    .line 17
     return-void
 .end method
 
@@ -32,26 +32,12 @@
     .locals 1
 
     .prologue
-    .line 28
-    invoke-static {}, Lcom/rounds/kik/VideoAppModule;->isReporterReady()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 29
-    const-string v0, "-1"
-
-    .line 31
-    :goto_0
-    return-object v0
-
-    :cond_0
+    .line 27
     invoke-static {}, Lcom/rounds/kik/conference/ConferenceManager;->hasActiveConference()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     invoke-static {}, Lcom/rounds/kik/conference/ConferenceManager;->activeConference()Lcom/rounds/kik/conference/Conference;
 
@@ -65,9 +51,10 @@
 
     move-result-object v0
 
-    goto :goto_0
+    :goto_0
+    return-object v0
 
-    :cond_1
+    :cond_0
     const-string v0, "-1"
 
     goto :goto_0
@@ -79,7 +66,7 @@
     .locals 0
 
     .prologue
-    .line 10
+    .line 9
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/rounds/kik/analytics/properties/conference/MediaUri;->setValue(Ljava/lang/String;)V
@@ -91,7 +78,7 @@
     .locals 0
 
     .prologue
-    .line 23
+    .line 22
     if-nez p1, :cond_0
 
     const-string p1, "-1"
@@ -99,6 +86,6 @@
     :cond_0
     iput-object p1, p0, Lcom/rounds/kik/analytics/properties/conference/MediaUri;->mValue:Ljava/lang/Object;
 
-    .line 24
+    .line 23
     return-void
 .end method

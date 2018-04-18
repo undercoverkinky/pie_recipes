@@ -19,9 +19,10 @@
     .locals 0
 
     .prologue
-    .line 34
+    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 77
     return-void
 .end method
 
@@ -61,7 +62,7 @@
     .locals 1
 
     .prologue
-    .line 62
+    .line 57
     invoke-virtual {p0}, Lcom/google/common/hash/c;->a()Lcom/google/common/hash/e;
 
     move-result-object v0

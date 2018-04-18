@@ -3,18 +3,12 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x11
-.end annotation
-
-
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 27
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,10 +18,10 @@
     .locals 0
 
     .prologue
-    .line 40
+    .line 36
     invoke-static/range {p0 .. p7}, Landroid/view/Gravity;->apply(IIILandroid/graphics/Rect;IILandroid/graphics/Rect;I)V
 
-    .line 41
+    .line 37
     return-void
 .end method
 
@@ -35,10 +29,10 @@
     .locals 0
 
     .prologue
-    .line 35
+    .line 31
     invoke-static/range {p0 .. p5}, Landroid/view/Gravity;->apply(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
 
-    .line 36
+    .line 32
     return-void
 .end method
 
@@ -46,10 +40,10 @@
     .locals 0
 
     .prologue
-    .line 44
+    .line 40
     invoke-static {p0, p1, p2, p3}, Landroid/view/Gravity;->applyDisplay(ILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
 
-    .line 45
+    .line 41
     return-void
 .end method
 
@@ -57,7 +51,7 @@
     .locals 1
 
     .prologue
-    .line 30
+    .line 26
     invoke-static {p0, p1}, Landroid/view/Gravity;->getAbsoluteGravity(II)I
 
     move-result v0

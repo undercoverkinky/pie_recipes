@@ -16,14 +16,18 @@
 
 # instance fields
 .field _progressView:Lcom/github/rahatarmanahmed/cpv/CircularProgressView;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f1001ad
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f110184
+        }
     .end annotation
 .end field
 
 .field _text:Landroid/widget/TextView;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f1001ae
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f110185
+        }
     .end annotation
 .end field
 
@@ -46,7 +50,7 @@
     iput-object v0, p0, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;->a:Lkik/android/chat/fragment/KikDialogFragment$a;
 
     .line 34
-    const v0, 0x7f04006c
+    const v0, 0x7f040069
 
     const/4 v1, 0x0
 
@@ -60,7 +64,7 @@
     invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikDialogFragment$a;->a(Landroid/view/View;)Lkik/android/chat/fragment/KikDialogFragment$a;
 
     .line 36
-    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)Lbutterknife/Unbinder;
+    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)V
 
     .line 37
     iget-object v0, p0, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;->a:Lkik/android/chat/fragment/KikDialogFragment$a;
@@ -99,6 +103,19 @@
     invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;->a(Ljava/lang/String;)Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;
 
     .line 43
+    return-object p0
+.end method
+
+.method public final a(Landroid/content/DialogInterface$OnCancelListener;)Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;
+    .locals 1
+
+    .prologue
+    .line 63
+    iget-object v0, p0, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;->a:Lkik/android/chat/fragment/KikDialogFragment$a;
+
+    invoke-virtual {v0, p1}, Lkik/android/chat/fragment/KikDialogFragment$a;->a(Landroid/content/DialogInterface$OnCancelListener;)Lkik/android/chat/fragment/KikDialogFragment$a;
+
+    .line 64
     return-object p0
 .end method
 

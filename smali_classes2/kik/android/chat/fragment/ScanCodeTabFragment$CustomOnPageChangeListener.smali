@@ -30,17 +30,17 @@
     .locals 1
 
     .prologue
-    .line 150
+    .line 146
     iput-object p1, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->c:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 152
+    .line 148
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->a:Z
 
-    .line 153
+    .line 149
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->b:Z
@@ -54,14 +54,14 @@
     .locals 1
 
     .prologue
-    .line 222
+    .line 214
     packed-switch p1, :pswitch_data_0
 
-    .line 227
+    .line 219
     :goto_0
     return-void
 
-    .line 224
+    .line 216
     :pswitch_0
     iget-object v0, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->c:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
@@ -69,11 +69,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/KikCodeFragment;->c()V
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikCodeFragment;->d()V
 
     goto :goto_0
 
-    .line 222
+    .line 214
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -84,7 +84,7 @@
     .locals 0
 
     .prologue
-    .line 164
+    .line 160
     return-void
 .end method
 
@@ -96,7 +96,7 @@
 
     const/4 v1, 0x0
 
-    .line 169
+    .line 165
     iget-object v2, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->c:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
     invoke-static {v2}, Lkik/android/chat/fragment/ScanCodeTabFragment;->d(Lkik/android/chat/fragment/ScanCodeTabFragment;)I
@@ -105,7 +105,7 @@
 
     if-ne p1, v2, :cond_3
 
-    .line 1203
+    .line 1196
     iget-object v2, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->c:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
     invoke-static {v2}, Lkik/android/chat/fragment/ScanCodeTabFragment;->h(Lkik/android/chat/fragment/ScanCodeTabFragment;)Lkik/android/scan/fragment/ScanFragment;
@@ -114,7 +114,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 1204
+    .line 1197
     iget-object v2, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->c:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
     invoke-static {v2}, Lkik/android/chat/fragment/ScanCodeTabFragment;->h(Lkik/android/chat/fragment/ScanCodeTabFragment;)Lkik/android/scan/fragment/ScanFragment;
@@ -123,22 +123,22 @@
 
     invoke-virtual {v2, v1}, Lkik/android/scan/fragment/ScanFragment;->a(Z)V
 
-    .line 1206
+    .line 1199
     :cond_0
     iget-boolean v2, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->b:Z
 
     if-nez v2, :cond_1
 
-    .line 1207
+    .line 1200
     iget-object v2, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->c:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
     invoke-static {v2}, Lkik/android/chat/fragment/ScanCodeTabFragment;->e(Lkik/android/chat/fragment/ScanCodeTabFragment;)Lkik/android/chat/fragment/KikCodeFragment;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lkik/android/chat/fragment/KikCodeFragment;->a()V
+    invoke-virtual {v2}, Lkik/android/chat/fragment/KikCodeFragment;->b()V
 
-    .line 1208
+    .line 1201
     iget-object v2, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->c:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
     iget-object v2, v2, Lkik/android/chat/fragment/ScanCodeTabFragment;->a:Lcom/kik/android/Mixpanel;
@@ -162,36 +162,21 @@
 
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 1209
+    .line 1202
     const-string v0, "Toggle"
 
     iget-object v2, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->c:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
     iget-object v2, v2, Lkik/android/chat/fragment/ScanCodeTabFragment;->a:Lcom/kik/android/Mixpanel;
 
-    invoke-static {v0, v2}, Lkik/android/util/ay;->a(Ljava/lang/String;Lcom/kik/android/Mixpanel;)Lcom/kik/android/Mixpanel$d;
+    invoke-static {v0, v2}, Lkik/android/util/az;->a(Ljava/lang/String;Lcom/kik/android/Mixpanel;)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 1212
+    .line 1205
     :cond_1
-    iget-object v0, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->c:Lkik/android/chat/fragment/ScanCodeTabFragment;
-
-    iget-object v0, v0, Lkik/android/chat/fragment/ScanCodeTabFragment;->_metricsService:Lcom/kik/metrics/c/d;
-
-    invoke-static {}, Lcom/kik/metrics/b/ae;->b()Lcom/kik/metrics/b/ae$a;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/kik/metrics/b/ae$a;->a()Lcom/kik/metrics/b/ae;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lcom/kik/metrics/c/d;->a(Lcom/kik/metrics/b/t;)V
-
-    .line 1213
     iget-object v0, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->c:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/ScanCodeTabFragment;->a:Lcom/kik/android/Mixpanel;
@@ -211,7 +196,7 @@
 
     aget-object v3, v3, v1
 
-    .line 1214
+    .line 1206
     invoke-virtual {v3}, Lkik/android/chat/theming/AccentColourManager$AccentColours;->getColourName()Ljava/lang/String;
 
     move-result-object v3
@@ -224,7 +209,7 @@
 
     iget-object v3, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->c:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
-    .line 1215
+    .line 1207
     invoke-static {v3}, Lkik/android/chat/fragment/ScanCodeTabFragment;->f(Lkik/android/chat/fragment/ScanCodeTabFragment;)Lkik/android/chat/fragment/ScanCodeTabFragment$a;
 
     move-result-object v3
@@ -237,10 +222,10 @@
 
     move-result-object v0
 
-    .line 1216
+    .line 1208
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 171
+    .line 167
     iget-object v0, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->c:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/ScanCodeTabFragment;->_scanToggle:Landroid/widget/SeekBar;
@@ -255,23 +240,23 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/SeekBar;->setProgress(I)V
 
-    .line 178
+    .line 174
     :goto_1
     iput-boolean v1, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->a:Z
 
-    .line 179
+    .line 175
     iput-boolean v1, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->b:Z
 
-    .line 180
+    .line 176
     return-void
 
     :cond_2
     move v0, v1
 
-    .line 1208
+    .line 1201
     goto :goto_0
 
-    .line 2184
+    .line 2180
     :cond_3
     iget-object v2, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->c:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
@@ -281,16 +266,16 @@
 
     if-eqz v2, :cond_4
 
-    .line 2185
+    .line 2181
     iget-object v2, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->c:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
     invoke-static {v2}, Lkik/android/chat/fragment/ScanCodeTabFragment;->e(Lkik/android/chat/fragment/ScanCodeTabFragment;)Lkik/android/chat/fragment/KikCodeFragment;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lkik/android/chat/fragment/KikCodeFragment;->b()V
+    invoke-virtual {v2}, Lkik/android/chat/fragment/KikCodeFragment;->c()V
 
-    .line 2188
+    .line 2184
     :cond_4
     iget-object v2, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->c:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
@@ -310,12 +295,12 @@
 
     move-result v2
 
-    if-eqz v2, :cond_9
+    if-eqz v2, :cond_8
 
     :cond_5
     move v2, v0
 
-    .line 2189
+    .line 2185
     :goto_2
     iget-object v3, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->c:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
@@ -325,7 +310,7 @@
 
     if-eqz v3, :cond_6
 
-    .line 2190
+    .line 2186
     iget-object v3, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->c:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
     invoke-static {v3}, Lkik/android/chat/fragment/ScanCodeTabFragment;->h(Lkik/android/chat/fragment/ScanCodeTabFragment;)Lkik/android/scan/fragment/ScanFragment;
@@ -334,41 +319,22 @@
 
     invoke-virtual {v3, v2}, Lkik/android/scan/fragment/ScanFragment;->a(Z)V
 
-    .line 2192
+    .line 2188
     :cond_6
-    if-eqz v2, :cond_7
-
-    .line 2193
-    iget-object v2, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->c:Lkik/android/chat/fragment/ScanCodeTabFragment;
-
-    iget-object v2, v2, Lkik/android/chat/fragment/ScanCodeTabFragment;->_metricsService:Lcom/kik/metrics/c/d;
-
-    invoke-static {}, Lcom/kik/metrics/b/af;->b()Lcom/kik/metrics/b/af$a;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcom/kik/metrics/b/af$a;->a()Lcom/kik/metrics/b/af;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Lcom/kik/metrics/c/d;->a(Lcom/kik/metrics/b/t;)V
-
-    .line 2195
-    :cond_7
     iget-boolean v2, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->b:Z
 
-    if-nez v2, :cond_8
+    if-nez v2, :cond_7
 
-    .line 2196
+    .line 2189
     iget-object v2, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->c:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
     invoke-static {v2}, Lkik/android/chat/fragment/ScanCodeTabFragment;->e(Lkik/android/chat/fragment/ScanCodeTabFragment;)Lkik/android/chat/fragment/KikCodeFragment;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lkik/android/chat/fragment/KikCodeFragment;->d()V
+    invoke-virtual {v2}, Lkik/android/chat/fragment/KikCodeFragment;->f()V
 
-    .line 2197
+    .line 2190
     iget-object v2, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->c:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
     iget-object v2, v2, Lkik/android/chat/fragment/ScanCodeTabFragment;->a:Lcom/kik/android/Mixpanel;
@@ -383,7 +349,7 @@
 
     iget-boolean v4, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->a:Z
 
-    if-nez v4, :cond_a
+    if-nez v4, :cond_9
 
     :goto_3
     invoke-virtual {v2, v3, v0}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Z)Lcom/kik/android/Mixpanel$d;
@@ -392,8 +358,8 @@
 
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 175
-    :cond_8
+    .line 171
+    :cond_7
     iget-object v0, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$CustomOnPageChangeListener;->c:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/ScanCodeTabFragment;->_scanToggle:Landroid/widget/SeekBar;
@@ -402,15 +368,15 @@
 
     goto :goto_1
 
-    :cond_9
+    :cond_8
     move v2, v1
 
-    .line 2188
+    .line 2184
     goto :goto_2
 
-    :cond_a
+    :cond_9
     move v0, v1
 
-    .line 2197
+    .line 2190
     goto :goto_3
 .end method

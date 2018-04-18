@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:id="@id/contact_not_found_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/contacts_list_item_height" style="@style/KikSelectableCellStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/failed_icon" android:paddingLeft="22.0dip" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_add" android:scaleType="centerInside" android:layout_centerVertical="true" />
+    <kik.android.widget.EllipsizingTextView android:ellipsize="marquee" android:id="@id/group_not_found_text" android:paddingLeft="18.0dip" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:text="@string/create_group" android:maxLines="1" android:layout_toRightOf="@id/failed_icon" android:layout_centerVertical="true" style="@style/KikTextView.ContactListEntry.Create" />
+    <include android:id="@id/public_group_divider_long" android:layout_width="fill_parent" android:layout_height="@dimen/list_divider_line_height" android:layout_alignParentBottom="true" layout="@layout/list_divider" />
+</RelativeLayout>

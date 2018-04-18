@@ -216,7 +216,6 @@
 
     invoke-virtual {p0}, Lcom/kik/xiphias/rpc/SelfDescribingMessage;->makeExtensionsImmutable()V
 
-    .line 80
     throw v0
 
     .line 61

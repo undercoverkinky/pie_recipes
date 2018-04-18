@@ -13,9 +13,6 @@
     name = "DelegateProvider"
 .end annotation
 
-.annotation runtime Ljava/lang/Deprecated;
-.end annotation
-
 
 # virtual methods
 .method public abstract getDrawerToggleDelegate()Landroid/support/v4/app/ActionBarDrawerToggle$Delegate;

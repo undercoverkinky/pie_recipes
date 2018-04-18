@@ -1,129 +1,206 @@
-.class public abstract Lcom/google/android/gms/internal/zzjy;
-.super Lcom/google/android/gms/internal/zzef;
+.class public final Lcom/google/android/gms/internal/zzjy;
+.super Ljava/lang/Object;
 
-# interfaces
-.implements Lcom/google/android/gms/internal/zzjx;
+
+# annotations
+.annotation runtime Lcom/google/android/gms/internal/zzig;
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/google/android/gms/internal/zzjy$a;,
+        Lcom/google/android/gms/internal/zzjy$zzb;
+    }
+.end annotation
 
 
 # direct methods
-.method public constructor <init>()V
+.method public static zza(Landroid/content/Context;Lcom/google/android/gms/internal/zzjy$zzb;)Ljava/util/concurrent/Future;
     .locals 1
 
-    invoke-direct {p0}, Lcom/google/android/gms/internal/zzef;-><init>()V
+    new-instance v0, Lcom/google/android/gms/internal/zzjy$7;
 
-    const-string v0, "com.google.android.gms.ads.internal.client.IAdLoader"
+    invoke-direct {v0, p0, p1}, Lcom/google/android/gms/internal/zzjy$7;-><init>(Landroid/content/Context;Lcom/google/android/gms/internal/zzjy$zzb;)V
 
-    invoke-virtual {p0, p0, v0}, Lcom/google/android/gms/internal/zzjy;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/zzjv;->zzhs()Ljava/lang/Object;
 
-    return-void
+    move-result-object v0
+
+    check-cast v0, Ljava/util/concurrent/Future;
+
+    return-object v0
 .end method
 
+.method public static zza(Landroid/content/Context;Ljava/lang/String;J)Ljava/util/concurrent/Future;
+    .locals 2
 
-# virtual methods
-.method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-    .locals 3
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
+    new-instance v0, Lcom/google/android/gms/internal/zzjy$5;
 
-    const/4 v1, 0x1
+    invoke-direct {v0, p0, p1, p2, p3}, Lcom/google/android/gms/internal/zzjy$5;-><init>(Landroid/content/Context;Ljava/lang/String;J)V
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/android/gms/internal/zzef;->zza(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    move v0, v1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    packed-switch p1, :pswitch_data_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :pswitch_0
-    sget-object v0, Lcom/google/android/gms/internal/zzix;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-static {p2, v0}, Lcom/google/android/gms/internal/zzeg;->zza(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/zzjv;->zzhs()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/android/gms/internal/zzix;
+    check-cast v0, Ljava/util/concurrent/Future;
 
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/zzjy;->zzd(Lcom/google/android/gms/internal/zzix;)V
+    return-object v0
+.end method
 
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+.method public static zzb(Landroid/content/Context;Lcom/google/android/gms/internal/zzjy$zzb;)Ljava/util/concurrent/Future;
+    .locals 1
 
-    :goto_1
-    move v0, v1
+    new-instance v0, Lcom/google/android/gms/internal/zzjy$8;
 
-    goto :goto_0
+    invoke-direct {v0, p0, p1}, Lcom/google/android/gms/internal/zzjy$8;-><init>(Landroid/content/Context;Lcom/google/android/gms/internal/zzjy$zzb;)V
 
-    :pswitch_1
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzjy;->getMediationAdapterClassName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :pswitch_2
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzjy;->isLoading()Z
-
-    move-result v0
-
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    invoke-static {p3, v0}, Lcom/google/android/gms/internal/zzeg;->zza(Landroid/os/Parcel;Z)V
-
-    goto :goto_1
-
-    :pswitch_3
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzjy;->zzch()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/zzjv;->zzhs()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+    check-cast v0, Ljava/util/concurrent/Future;
 
-    invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    return-object v0
+.end method
 
-    goto :goto_1
+.method public static zzc(Landroid/content/Context;Lcom/google/android/gms/internal/zzjy$zzb;)Ljava/util/concurrent/Future;
+    .locals 1
 
-    :pswitch_4
-    sget-object v0, Lcom/google/android/gms/internal/zzix;->CREATOR:Landroid/os/Parcelable$Creator;
+    new-instance v0, Lcom/google/android/gms/internal/zzjy$10;
 
-    invoke-static {p2, v0}, Lcom/google/android/gms/internal/zzeg;->zza(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+    invoke-direct {v0, p0, p1}, Lcom/google/android/gms/internal/zzjy$10;-><init>(Landroid/content/Context;Lcom/google/android/gms/internal/zzjy$zzb;)V
+
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/zzjv;->zzhs()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/android/gms/internal/zzix;
+    check-cast v0, Ljava/util/concurrent/Future;
 
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+    return-object v0
+.end method
 
-    move-result v2
+.method public static zzc(Landroid/content/Context;Z)Ljava/util/concurrent/Future;
+    .locals 1
 
-    invoke-virtual {p0, v0, v2}, Lcom/google/android/gms/internal/zzjy;->zza(Lcom/google/android/gms/internal/zzix;I)V
+    new-instance v0, Lcom/google/android/gms/internal/zzjy$1;
 
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+    invoke-direct {v0, p0, p1}, Lcom/google/android/gms/internal/zzjy$1;-><init>(Landroid/content/Context;Z)V
 
-    goto :goto_1
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/zzjv;->zzhs()Ljava/lang/Object;
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-    .end packed-switch
+    move-result-object v0
+
+    check-cast v0, Ljava/util/concurrent/Future;
+
+    return-object v0
+.end method
+
+.method public static zzd(Landroid/content/Context;Lcom/google/android/gms/internal/zzjy$zzb;)Ljava/util/concurrent/Future;
+    .locals 1
+
+    new-instance v0, Lcom/google/android/gms/internal/zzjy$2;
+
+    invoke-direct {v0, p0, p1}, Lcom/google/android/gms/internal/zzjy$2;-><init>(Landroid/content/Context;Lcom/google/android/gms/internal/zzjy$zzb;)V
+
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/zzjv;->zzhs()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/concurrent/Future;
+
+    return-object v0
+.end method
+
+.method public static zze(Landroid/content/Context;Lcom/google/android/gms/internal/zzjy$zzb;)Ljava/util/concurrent/Future;
+    .locals 1
+
+    new-instance v0, Lcom/google/android/gms/internal/zzjy$4;
+
+    invoke-direct {v0, p0, p1}, Lcom/google/android/gms/internal/zzjy$4;-><init>(Landroid/content/Context;Lcom/google/android/gms/internal/zzjy$zzb;)V
+
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/zzjv;->zzhs()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/concurrent/Future;
+
+    return-object v0
+.end method
+
+.method public static zze(Landroid/content/Context;Z)Ljava/util/concurrent/Future;
+    .locals 1
+
+    new-instance v0, Lcom/google/android/gms/internal/zzjy$9;
+
+    invoke-direct {v0, p0, p1}, Lcom/google/android/gms/internal/zzjy$9;-><init>(Landroid/content/Context;Z)V
+
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/zzjv;->zzhs()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/concurrent/Future;
+
+    return-object v0
+.end method
+
+.method public static zzf(Landroid/content/Context;Lcom/google/android/gms/internal/zzjy$zzb;)Ljava/util/concurrent/Future;
+    .locals 1
+
+    new-instance v0, Lcom/google/android/gms/internal/zzjy$6;
+
+    invoke-direct {v0, p0, p1}, Lcom/google/android/gms/internal/zzjy$6;-><init>(Landroid/content/Context;Lcom/google/android/gms/internal/zzjy$zzb;)V
+
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/zzjv;->zzhs()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/concurrent/Future;
+
+    return-object v0
+.end method
+
+.method public static zzf(Landroid/content/Context;Ljava/lang/String;)Ljava/util/concurrent/Future;
+    .locals 1
+
+    new-instance v0, Lcom/google/android/gms/internal/zzjy$11;
+
+    invoke-direct {v0, p0, p1}, Lcom/google/android/gms/internal/zzjy$11;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/zzjv;->zzhs()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/concurrent/Future;
+
+    return-object v0
+.end method
+
+.method public static zzf(Landroid/content/Context;Z)Ljava/util/concurrent/Future;
+    .locals 1
+
+    new-instance v0, Lcom/google/android/gms/internal/zzjy$3;
+
+    invoke-direct {v0, p0, p1}, Lcom/google/android/gms/internal/zzjy$3;-><init>(Landroid/content/Context;Z)V
+
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/zzjv;->zzhs()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/concurrent/Future;
+
+    return-object v0
+.end method
+
+.method public static zzn(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    .locals 2
+
+    const-string v0, "admob"
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    return-object v0
 .end method

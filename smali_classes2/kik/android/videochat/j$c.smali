@@ -17,7 +17,7 @@
 # instance fields
 .field protected b:Lcom/kik/events/d;
 
-.field protected c:Lkik/core/interfaces/IConversation;
+.field protected c:Lkik/core/interfaces/j;
 
 .field protected d:Lkik/android/videochat/c;
 
@@ -25,41 +25,41 @@
 
 .field protected f:Z
 
-.field protected g:Lkik/core/datatypes/l;
+.field protected g:Lkik/core/datatypes/o;
 
 .field final synthetic h:Lkik/android/videochat/j;
 
 
 # direct methods
-.method public constructor <init>(Lkik/android/videochat/j;Lkik/android/videochat/c;Lkik/core/datatypes/l;Lkik/core/interfaces/IConversation;Lkik/android/videochat/j$b;)V
+.method public constructor <init>(Lkik/android/videochat/j;Lkik/android/videochat/c;Lkik/core/datatypes/o;Lkik/core/interfaces/j;Lkik/android/videochat/j$b;)V
     .locals 1
 
     .prologue
-    .line 58
+    .line 50
     iput-object p1, p0, Lkik/android/videochat/j$c;->h:Lkik/android/videochat/j;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
+    .line 42
     new-instance v0, Lcom/kik/events/d;
 
     invoke-direct {v0}, Lcom/kik/events/d;-><init>()V
 
     iput-object v0, p0, Lkik/android/videochat/j$c;->b:Lcom/kik/events/d;
 
-    .line 59
+    .line 51
     iput-object p2, p0, Lkik/android/videochat/j$c;->d:Lkik/android/videochat/c;
 
-    .line 60
-    iput-object p4, p0, Lkik/android/videochat/j$c;->c:Lkik/core/interfaces/IConversation;
+    .line 52
+    iput-object p4, p0, Lkik/android/videochat/j$c;->c:Lkik/core/interfaces/j;
 
-    .line 61
-    iput-object p3, p0, Lkik/android/videochat/j$c;->g:Lkik/core/datatypes/l;
+    .line 53
+    iput-object p3, p0, Lkik/android/videochat/j$c;->g:Lkik/core/datatypes/o;
 
-    .line 62
+    .line 54
     iput-object p5, p0, Lkik/android/videochat/j$c;->e:Lkik/android/videochat/j$b;
 
-    .line 63
+    .line 55
     return-void
 .end method
 
@@ -72,17 +72,17 @@
     .locals 2
 
     .prologue
-    .line 69
+    .line 61
     iget-object v0, p0, Lkik/android/videochat/j$c;->d:Lkik/android/videochat/c;
 
     invoke-interface {v0}, Lkik/android/videochat/c;->f()Lkik/core/interfaces/ad;
 
     move-result-object v0
 
-    .line 70
+    .line 62
     const-string v1, "vc_seen_toggle_tooltip_count"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->t(Ljava/lang/String;)Ljava/lang/Integer;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -97,12 +97,12 @@
     .locals 4
 
     .prologue
-    .line 75
+    .line 67
     iget-object v0, p0, Lkik/android/videochat/j$c;->e:Lkik/android/videochat/j$b;
 
-    invoke-interface {v0}, Lkik/android/videochat/j$b;->b()V
+    invoke-interface {v0}, Lkik/android/videochat/j$b;->a()V
 
-    .line 76
+    .line 68
     iget-object v0, p0, Lkik/android/videochat/j$c;->d:Lkik/android/videochat/c;
 
     invoke-interface {v0}, Lkik/android/videochat/c;->f()Lkik/core/interfaces/ad;
@@ -113,7 +113,7 @@
 
     invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->x(Ljava/lang/String;)Z
 
-    .line 77
+    .line 69
     iget-object v0, p0, Lkik/android/videochat/j$c;->d:Lkik/android/videochat/c;
 
     invoke-interface {v0}, Lkik/android/videochat/c;->f()Lkik/core/interfaces/ad;
@@ -122,7 +122,7 @@
 
     const-string v1, "vc_last_seen_toggle_tooltip_timeStamp"
 
-    invoke-static {}, Lkik/core/util/v;->b()J
+    invoke-static {}, Lkik/core/util/x;->b()J
 
     move-result-wide v2
 
@@ -132,12 +132,12 @@
 
     invoke-interface {v0, v1, v2}, Lkik/core/interfaces/ad;->a(Ljava/lang/String;Ljava/lang/Long;)Z
 
-    .line 78
+    .line 70
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lkik/android/videochat/j$c;->f:Z
 
-    .line 79
+    .line 71
     return-void
 .end method
 
@@ -145,12 +145,12 @@
     .locals 2
 
     .prologue
-    .line 83
+    .line 75
     iget-object v0, p0, Lkik/android/videochat/j$c;->d:Lkik/android/videochat/c;
 
-    iget-object v1, p0, Lkik/android/videochat/j$c;->g:Lkik/core/datatypes/l;
+    iget-object v1, p0, Lkik/android/videochat/j$c;->g:Lkik/core/datatypes/o;
 
-    invoke-interface {v0, v1}, Lkik/android/videochat/c;->c(Lkik/core/datatypes/l;)Z
+    invoke-interface {v0, v1}, Lkik/android/videochat/c;->c(Lkik/core/datatypes/o;)Z
 
     move-result v0
 

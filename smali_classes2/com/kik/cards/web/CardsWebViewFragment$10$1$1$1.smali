@@ -1,5 +1,5 @@
 .class final Lcom/kik/cards/web/CardsWebViewFragment$10$1$1$1;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Lkik/core/datatypes/messageExtensions/ContentMessage;",
         ">;"
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 580
+    .line 551
     iput-object p1, p0, Lcom/kik/cards/web/CardsWebViewFragment$10$1$1$1;->a:Lcom/kik/cards/web/CardsWebViewFragment$10$1$1;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -43,25 +43,27 @@
 
 # virtual methods
 .method public final synthetic a(Ljava/lang/Object;)V
-    .locals 2
+    .locals 3
 
     .prologue
-    .line 580
+    .line 551
     check-cast p1, Lkik/core/datatypes/messageExtensions/ContentMessage;
 
-    .line 1584
-    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Object;)V
+    .line 1555
+    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Object;)V
 
-    .line 1585
-    invoke-static {}, Lkik/android/internal/platform/PlatformHelper;->a()Lkik/android/internal/platform/PlatformHelper;
+    .line 1556
+    invoke-static {}, Lkik/android/internal/platform/b;->a()Lkik/android/internal/platform/b;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p1, v1}, Lkik/android/internal/platform/PlatformHelper;->a(Lkik/core/datatypes/messageExtensions/ContentMessage;Z)V
+    const/4 v2, 0x0
 
-    .line 1586
+    invoke-virtual {v0, p1, v1, v2}, Lkik/android/internal/platform/b;->a(Lkik/core/datatypes/messageExtensions/ContentMessage;Z[B)V
+
+    .line 1557
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$10$1$1$1;->a:Lcom/kik/cards/web/CardsWebViewFragment$10$1$1;
 
     iget-object v0, v0, Lcom/kik/cards/web/CardsWebViewFragment$10$1$1;->a:Lcom/kik/cards/web/CardsWebViewFragment$10$1;
@@ -74,9 +76,9 @@
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/kik/cards/web/CardsWebViewFragment;->setResultData(Landroid/os/Bundle;)V
+    invoke-virtual {v0, v1}, Lcom/kik/cards/web/CardsWebViewFragment;->a(Landroid/os/Bundle;)V
 
-    .line 580
+    .line 551
     return-void
 .end method
 
@@ -84,10 +86,10 @@
     .locals 1
 
     .prologue
-    .line 592
-    invoke-super {p0}, Lcom/kik/events/k;->b()V
+    .line 563
+    invoke-super {p0}, Lcom/kik/events/l;->b()V
 
-    .line 593
+    .line 564
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$10$1$1$1;->a:Lcom/kik/cards/web/CardsWebViewFragment$10$1$1;
 
     iget-object v0, v0, Lcom/kik/cards/web/CardsWebViewFragment$10$1$1;->a:Lcom/kik/cards/web/CardsWebViewFragment$10$1;
@@ -96,8 +98,8 @@
 
     iget-object v0, v0, Lcom/kik/cards/web/CardsWebViewFragment$10;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
-    invoke-virtual {v0}, Lcom/kik/cards/web/CardsWebViewFragment;->finish()V
+    invoke-virtual {v0}, Lcom/kik/cards/web/CardsWebViewFragment;->D()V
 
-    .line 594
+    .line 565
     return-void
 .end method

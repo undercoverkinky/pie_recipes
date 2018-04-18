@@ -124,24 +124,24 @@
 
     iput v0, p0, Lkik/android/video/e;->f:I
 
-    .line 1110
+    .line 1098
     :cond_2
     iget v1, p3, Landroid/graphics/Point;->x:I
 
-    .line 1111
+    .line 1099
     iget v0, p3, Landroid/graphics/Point;->y:I
 
-    .line 1113
+    .line 1101
     invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
 
     move-result v2
 
-    .line 1114
+    .line 1102
     const/16 v3, 0x280
 
     if-gt v2, v3, :cond_4
 
-    .line 1141
+    .line 1129
     :cond_3
     :goto_0
     new-instance v2, Landroid/graphics/Point;
@@ -154,39 +154,39 @@
     .line 68
     return-void
 
-    .line 1119
+    .line 1107
     :cond_4
     invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
 
     move-result v0
 
-    .line 1120
+    .line 1108
     int-to-double v4, v0
 
     int-to-double v6, v2
 
     div-double/2addr v4, v6
 
-    .line 1121
+    .line 1109
     if-ne v2, v1, :cond_6
 
-    .line 1122
+    .line 1110
     const/16 v1, 0x280
 
-    .line 1123
+    .line 1111
     const-wide/high16 v2, 0x4084000000000000L    # 640.0
 
     mul-double/2addr v2, v4
 
     double-to-int v0, v2
 
-    .line 1133
+    .line 1121
     :goto_1
     rem-int/lit8 v2, v1, 0x10
 
     if-eqz v2, :cond_5
 
-    .line 1134
+    .line 1122
     int-to-float v1, v1
 
     const/high16 v2, 0x41800000    # 16.0f
@@ -199,13 +199,13 @@
 
     mul-int/lit8 v1, v1, 0x10
 
-    .line 1136
+    .line 1124
     :cond_5
     rem-int/lit8 v2, v0, 0x10
 
     if-eqz v2, :cond_3
 
-    .line 1137
+    .line 1125
     int-to-float v0, v0
 
     const/high16 v2, 0x41800000    # 16.0f
@@ -220,11 +220,11 @@
 
     goto :goto_0
 
-    .line 1126
+    .line 1114
     :cond_6
     const/16 v0, 0x280
 
-    .line 1127
+    .line 1115
     const-wide/high16 v2, 0x4084000000000000L    # 640.0
 
     mul-double/2addr v2, v4
@@ -503,7 +503,7 @@
 
     move-object/from16 v0, v22
 
-    invoke-static {v0, v4}, Lkik/android/util/z;->a(Landroid/media/MediaExtractor;Z)I
+    invoke-static {v0, v4}, Lkik/android/util/w;->a(Landroid/media/MediaExtractor;Z)I
 
     move-result v7
 
@@ -512,7 +512,7 @@
 
     move-object/from16 v0, v22
 
-    invoke-static {v0, v4}, Lkik/android/util/z;->a(Landroid/media/MediaExtractor;Z)I
+    invoke-static {v0, v4}, Lkik/android/util/w;->a(Landroid/media/MediaExtractor;Z)I
 
     move-result v18
 
@@ -1378,7 +1378,7 @@
 
     move/from16 v2, v17
 
-    invoke-static {v0, v12, v1, v2}, Lkik/android/util/z;->a(Landroid/media/MediaExtractor;Landroid/media/MediaMuxer;II)V
+    invoke-static {v0, v12, v1, v2}, Lkik/android/util/w;->a(Landroid/media/MediaExtractor;Landroid/media/MediaMuxer;II)V
 
     .line 268
     :cond_19
@@ -1617,7 +1617,6 @@
     .line 299
     invoke-virtual {v6}, Landroid/media/MediaMuxer;->release()V
 
-    .line 301
     :cond_29
     throw v4
 

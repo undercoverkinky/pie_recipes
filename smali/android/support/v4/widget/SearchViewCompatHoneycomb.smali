@@ -4,10 +4,6 @@
 
 
 # annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0xb
-.end annotation
-
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/support/v4/widget/SearchViewCompatHoneycomb$OnCloseListenerCompatBridge;,
@@ -21,46 +17,10 @@
     .locals 0
 
     .prologue
-    .line 35
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
-    return-void
-.end method
-
-.method public static checkIfLegalArg(Landroid/view/View;)V
-    .locals 2
-
-    .prologue
-    .line 38
-    if-nez p0, :cond_0
-
-    .line 39
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "searchView must be non-null"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 41
-    :cond_0
-    instance-of v0, p0, Landroid/widget/SearchView;
-
-    if-nez v0, :cond_1
-
-    .line 42
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "searchView must be an instance ofandroid.widget.SearchView"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 45
-    :cond_1
+    .line 37
     return-void
 .end method
 
@@ -68,7 +28,7 @@
     .locals 1
 
     .prologue
-    .line 99
+    .line 84
     check-cast p0, Landroid/widget/SearchView;
 
     invoke-virtual {p0}, Landroid/widget/SearchView;->getQuery()Ljava/lang/CharSequence;
@@ -82,7 +42,7 @@
     .locals 1
 
     .prologue
-    .line 115
+    .line 100
     check-cast p0, Landroid/widget/SearchView;
 
     invoke-virtual {p0}, Landroid/widget/SearchView;->isIconified()Z
@@ -96,7 +56,7 @@
     .locals 1
 
     .prologue
-    .line 131
+    .line 116
     check-cast p0, Landroid/widget/SearchView;
 
     invoke-virtual {p0}, Landroid/widget/SearchView;->isQueryRefinementEnabled()Z
@@ -110,7 +70,7 @@
     .locals 1
 
     .prologue
-    .line 123
+    .line 108
     check-cast p0, Landroid/widget/SearchView;
 
     invoke-virtual {p0}, Landroid/widget/SearchView;->isSubmitButtonEnabled()Z
@@ -124,7 +84,7 @@
     .locals 1
 
     .prologue
-    .line 86
+    .line 71
     new-instance v0, Landroid/support/v4/widget/SearchViewCompatHoneycomb$2;
 
     invoke-direct {v0, p0}, Landroid/support/v4/widget/SearchViewCompatHoneycomb$2;-><init>(Landroid/support/v4/widget/SearchViewCompatHoneycomb$OnCloseListenerCompatBridge;)V
@@ -136,7 +96,7 @@
     .locals 1
 
     .prologue
-    .line 68
+    .line 53
     new-instance v0, Landroid/support/v4/widget/SearchViewCompatHoneycomb$1;
 
     invoke-direct {v0, p0}, Landroid/support/v4/widget/SearchViewCompatHoneycomb$1;-><init>(Landroid/support/v4/widget/SearchViewCompatHoneycomb$OnQueryTextListenerCompatBridge;)V
@@ -148,7 +108,7 @@
     .locals 1
 
     .prologue
-    .line 57
+    .line 42
     new-instance v0, Landroid/widget/SearchView;
 
     invoke-direct {v0, p0}, Landroid/widget/SearchView;-><init>(Landroid/content/Context;)V
@@ -160,12 +120,12 @@
     .locals 0
 
     .prologue
-    .line 111
+    .line 96
     check-cast p0, Landroid/widget/SearchView;
 
     invoke-virtual {p0, p1}, Landroid/widget/SearchView;->setIconified(Z)V
 
-    .line 112
+    .line 97
     return-void
 .end method
 
@@ -173,42 +133,42 @@
     .locals 0
 
     .prologue
-    .line 135
+    .line 120
     check-cast p0, Landroid/widget/SearchView;
 
     invoke-virtual {p0, p1}, Landroid/widget/SearchView;->setMaxWidth(I)V
 
-    .line 136
+    .line 121
     return-void
 .end method
 
-.method public static setOnCloseListener(Landroid/view/View;Ljava/lang/Object;)V
+.method public static setOnCloseListener(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
     .prologue
-    .line 95
+    .line 80
     check-cast p0, Landroid/widget/SearchView;
 
     check-cast p1, Landroid/widget/SearchView$OnCloseListener;
 
     invoke-virtual {p0, p1}, Landroid/widget/SearchView;->setOnCloseListener(Landroid/widget/SearchView$OnCloseListener;)V
 
-    .line 96
+    .line 81
     return-void
 .end method
 
-.method public static setOnQueryTextListener(Landroid/view/View;Ljava/lang/Object;)V
+.method public static setOnQueryTextListener(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
     .prologue
-    .line 82
+    .line 67
     check-cast p0, Landroid/widget/SearchView;
 
     check-cast p1, Landroid/widget/SearchView$OnQueryTextListener;
 
     invoke-virtual {p0, p1}, Landroid/widget/SearchView;->setOnQueryTextListener(Landroid/widget/SearchView$OnQueryTextListener;)V
 
-    .line 83
+    .line 68
     return-void
 .end method
 
@@ -216,12 +176,12 @@
     .locals 0
 
     .prologue
-    .line 103
+    .line 88
     check-cast p0, Landroid/widget/SearchView;
 
     invoke-virtual {p0, p1, p2}, Landroid/widget/SearchView;->setQuery(Ljava/lang/CharSequence;Z)V
 
-    .line 104
+    .line 89
     return-void
 .end method
 
@@ -229,12 +189,12 @@
     .locals 0
 
     .prologue
-    .line 107
+    .line 92
     check-cast p0, Landroid/widget/SearchView;
 
     invoke-virtual {p0, p1}, Landroid/widget/SearchView;->setQueryHint(Ljava/lang/CharSequence;)V
 
-    .line 108
+    .line 93
     return-void
 .end method
 
@@ -242,12 +202,12 @@
     .locals 0
 
     .prologue
-    .line 127
+    .line 112
     check-cast p0, Landroid/widget/SearchView;
 
     invoke-virtual {p0, p1}, Landroid/widget/SearchView;->setQueryRefinementEnabled(Z)V
 
-    .line 128
+    .line 113
     return-void
 .end method
 
@@ -255,10 +215,10 @@
     .locals 2
 
     .prologue
-    .line 61
+    .line 46
     check-cast p0, Landroid/widget/SearchView;
 
-    .line 63
+    .line 47
     invoke-virtual {p0}, Landroid/widget/SearchView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -271,14 +231,14 @@
 
     check-cast v0, Landroid/app/SearchManager;
 
-    .line 64
+    .line 49
     invoke-virtual {v0, p1}, Landroid/app/SearchManager;->getSearchableInfo(Landroid/content/ComponentName;)Landroid/app/SearchableInfo;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Landroid/widget/SearchView;->setSearchableInfo(Landroid/app/SearchableInfo;)V
 
-    .line 65
+    .line 50
     return-void
 .end method
 
@@ -286,11 +246,11 @@
     .locals 0
 
     .prologue
-    .line 119
+    .line 104
     check-cast p0, Landroid/widget/SearchView;
 
     invoke-virtual {p0, p1}, Landroid/widget/SearchView;->setSubmitButtonEnabled(Z)V
 
-    .line 120
+    .line 105
     return-void
 .end method

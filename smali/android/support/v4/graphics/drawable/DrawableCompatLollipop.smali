@@ -3,18 +3,12 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x15
-.end annotation
-
-
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 41
+    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,10 +18,10 @@
     .locals 0
 
     .prologue
-    .line 72
+    .line 64
     invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->applyTheme(Landroid/content/res/Resources$Theme;)V
 
-    .line 73
+    .line 65
     return-void
 .end method
 
@@ -35,7 +29,7 @@
     .locals 1
 
     .prologue
-    .line 76
+    .line 68
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->canApplyTheme()Z
 
     move-result v0
@@ -43,101 +37,11 @@
     return v0
 .end method
 
-.method public static clearColorFilter(Landroid/graphics/drawable/Drawable;)V
-    .locals 4
-
-    .prologue
-    .line 84
-    move-object v0, p0
-
-    :goto_0
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->clearColorFilter()V
-
-    .line 90
-    instance-of v1, v0, Landroid/graphics/drawable/InsetDrawable;
-
-    if-eqz v1, :cond_0
-
-    .line 91
-    check-cast v0, Landroid/graphics/drawable/InsetDrawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/InsetDrawable;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    .line 92
-    :cond_0
-    instance-of v1, v0, Landroid/support/v4/graphics/drawable/DrawableWrapper;
-
-    if-eqz v1, :cond_1
-
-    .line 93
-    check-cast v0, Landroid/support/v4/graphics/drawable/DrawableWrapper;
-
-    invoke-interface {v0}, Landroid/support/v4/graphics/drawable/DrawableWrapper;->getWrappedDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    .line 94
-    :cond_1
-    instance-of v1, v0, Landroid/graphics/drawable/DrawableContainer;
-
-    if-eqz v1, :cond_3
-
-    .line 95
-    check-cast v0, Landroid/graphics/drawable/DrawableContainer;
-
-    .line 97
-    invoke-virtual {v0}, Landroid/graphics/drawable/DrawableContainer;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;
-
-    .line 98
-    if-eqz v0, :cond_3
-
-    .line 100
-    const/4 v1, 0x0
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;->getChildCount()I
-
-    move-result v2
-
-    :goto_1
-    if-ge v1, v2, :cond_3
-
-    .line 101
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/DrawableContainer$DrawableContainerState;->getChild(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v3
-
-    .line 102
-    if-eqz v3, :cond_2
-
-    .line 103
-    invoke-static {v3}, Landroid/support/v4/graphics/drawable/DrawableCompatLollipop;->clearColorFilter(Landroid/graphics/drawable/Drawable;)V
-
-    .line 100
-    :cond_2
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    .line 108
-    :cond_3
-    return-void
-.end method
-
 .method public static getColorFilter(Landroid/graphics/drawable/Drawable;)Landroid/graphics/ColorFilter;
     .locals 1
 
     .prologue
-    .line 80
+    .line 72
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getColorFilter()Landroid/graphics/ColorFilter;
 
     move-result-object v0
@@ -155,10 +59,10 @@
     .end annotation
 
     .prologue
-    .line 113
+    .line 78
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->inflate(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
 
-    .line 114
+    .line 79
     return-void
 .end method
 
@@ -166,10 +70,10 @@
     .locals 0
 
     .prologue
-    .line 44
+    .line 36
     invoke-virtual {p0, p1, p2}, Landroid/graphics/drawable/Drawable;->setHotspot(FF)V
 
-    .line 45
+    .line 37
     return-void
 .end method
 
@@ -177,10 +81,10 @@
     .locals 0
 
     .prologue
-    .line 49
+    .line 41
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->setHotspotBounds(IIII)V
 
-    .line 50
+    .line 42
     return-void
 .end method
 
@@ -188,10 +92,10 @@
     .locals 0
 
     .prologue
-    .line 53
+    .line 45
     invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
 
-    .line 54
+    .line 46
     return-void
 .end method
 
@@ -199,10 +103,10 @@
     .locals 0
 
     .prologue
-    .line 57
+    .line 49
     invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setTintList(Landroid/content/res/ColorStateList;)V
 
-    .line 58
+    .line 50
     return-void
 .end method
 
@@ -210,10 +114,10 @@
     .locals 0
 
     .prologue
-    .line 61
+    .line 53
     invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setTintMode(Landroid/graphics/PorterDuff$Mode;)V
 
-    .line 62
+    .line 54
     return-void
 .end method
 
@@ -221,19 +125,19 @@
     .locals 1
 
     .prologue
-    .line 65
+    .line 57
     instance-of v0, p0, Landroid/support/v4/graphics/drawable/TintAwareDrawable;
 
     if-nez v0, :cond_0
 
-    .line 66
+    .line 58
     new-instance v0, Landroid/support/v4/graphics/drawable/DrawableWrapperLollipop;
 
     invoke-direct {v0, p0}, Landroid/support/v4/graphics/drawable/DrawableWrapperLollipop;-><init>(Landroid/graphics/drawable/Drawable;)V
 
     move-object p0, v0
 
-    .line 68
+    .line 60
     :cond_0
     return-object p0
 .end method

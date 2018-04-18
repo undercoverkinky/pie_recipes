@@ -1,149 +1,311 @@
-.class public final Lcom/google/android/gms/internal/zzdi;
-.super Lcom/google/android/gms/internal/zzbs;
+.class public Lcom/google/android/gms/internal/zzdi;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcom/google/android/gms/internal/zzamr;
 
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
+.annotation runtime Lcom/google/android/gms/internal/zzig;
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        "Lcom/google/android/gms/internal/zzbs",
-        "<",
-        "Ljava/lang/Integer;",
-        "Ljava/lang/Long;",
-        ">;"
+        Lcom/google/android/gms/internal/zzdi$zza;
     }
 .end annotation
 
 
 # instance fields
-.field public zzaji:Ljava/lang/Long;
+.field private zzAl:Landroid/support/customtabs/CustomTabsSession;
 
-.field public zzfv:Ljava/lang/Long;
+.field private zzAm:Landroid/support/customtabs/CustomTabsClient;
 
-.field public zzfw:Ljava/lang/Long;
+.field private zzAn:Landroid/support/customtabs/CustomTabsServiceConnection;
+
+.field private zzAo:Lcom/google/android/gms/internal/zzdi$zza;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/google/android/gms/internal/zzbs;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method public static zzo(Landroid/content/Context;)Z
+    .locals 6
 
-    invoke-direct {p0}, Lcom/google/android/gms/internal/zzbs;-><init>()V
+    const/4 v2, 0x0
 
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/zzbs;->zzi(Ljava/lang/String;)V
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    return-void
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    :goto_0
+    return v2
+
+    :cond_1
+    new-instance v1, Landroid/content/Intent;
+
+    const-string v3, "android.intent.action.VIEW"
+
+    const-string v4, "http://www.example.com"
+
+    invoke-static {v4}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v4
+
+    invoke-direct {v1, v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/pm/PackageManager;->resolveActivity(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
+
+    move-result-object v3
+
+    const/high16 v4, 0x10000
+
+    invoke-virtual {v0, v1, v4}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_0
+
+    if-eqz v3, :cond_0
+
+    move v1, v2
+
+    :goto_1
+    invoke-interface {v4}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-ge v1, v0, :cond_0
+
+    invoke-interface {v4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/pm/ResolveInfo;
+
+    iget-object v5, v3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v5, v5, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
+
+    iget-object v0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v0, v0, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
+
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, v3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v0, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+
+    invoke-static {p0}, Lcom/google/android/gms/internal/zzamp;->zzbH(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    goto :goto_0
+
+    :cond_2
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_1
 .end method
 
 
 # virtual methods
-.method protected final zzi(Ljava/lang/String;)V
+.method public mayLaunchUrl(Landroid/net/Uri;Landroid/os/Bundle;Ljava/util/List;)Z
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/net/Uri;",
+            "Landroid/os/Bundle;",
+            "Ljava/util/List",
+            "<",
+            "Landroid/os/Bundle;",
+            ">;)Z"
+        }
+    .end annotation
 
-    invoke-static {p1}, Lcom/google/android/gms/internal/zzdi;->zzj(Ljava/lang/String;)Ljava/util/HashMap;
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/zzdi;->zzAm:Landroid/support/customtabs/CustomTabsClient;
+
+    if-nez v1, :cond_1
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzdi;->zzeF()Landroid/support/customtabs/CustomTabsSession;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    const/4 v0, 0x0
+    invoke-virtual {v1, p1, p2, p3}, Landroid/support/customtabs/CustomTabsSession;->mayLaunchUrl(Landroid/net/Uri;Landroid/os/Bundle;Ljava/util/List;)Z
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result v0
 
-    move-result-object v0
+    goto :goto_0
+.end method
 
-    invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+.method public zza(Landroid/support/customtabs/CustomTabsClient;)V
+    .locals 4
 
-    move-result-object v0
+    iput-object p1, p0, Lcom/google/android/gms/internal/zzdi;->zzAm:Landroid/support/customtabs/CustomTabsClient;
 
-    check-cast v0, Ljava/lang/Long;
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdi;->zzAm:Landroid/support/customtabs/CustomTabsClient;
 
-    iput-object v0, p0, Lcom/google/android/gms/internal/zzdi;->zzaji:Ljava/lang/Long;
+    const-wide/16 v2, 0x0
 
-    const/4 v0, 0x1
+    invoke-virtual {v0, v2, v3}, Landroid/support/customtabs/CustomTabsClient;->warmup(J)Z
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdi;->zzAo:Lcom/google/android/gms/internal/zzdi$zza;
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdi;->zzAo:Lcom/google/android/gms/internal/zzdi$zza;
 
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/zzdi;->zzfv:Ljava/lang/Long;
-
-    const/4 v0, 0x2
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/zzdi;->zzfw:Ljava/lang/Long;
+    invoke-interface {v0}, Lcom/google/android/gms/internal/zzdi$zza;->zzeH()V
 
     :cond_0
     return-void
 .end method
 
-.method protected final zzv()Ljava/util/HashMap;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/HashMap",
-            "<",
-            "Ljava/lang/Integer;",
-            "Ljava/lang/Long;",
-            ">;"
-        }
-    .end annotation
+.method public zza(Lcom/google/android/gms/internal/zzdi$zza;)V
+    .locals 0
 
-    new-instance v0, Ljava/util/HashMap;
+    iput-object p1, p0, Lcom/google/android/gms/internal/zzdi;->zzAo:Lcom/google/android/gms/internal/zzdi$zza;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    return-void
+.end method
+
+.method public zzd(Landroid/app/Activity;)V
+    .locals 2
 
     const/4 v1, 0x0
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdi;->zzAn:Landroid/support/customtabs/CustomTabsServiceConnection;
 
-    move-result-object v1
+    if-nez v0, :cond_0
 
-    iget-object v2, p0, Lcom/google/android/gms/internal/zzdi;->zzaji:Ljava/lang/Long;
+    :goto_0
+    return-void
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdi;->zzAn:Landroid/support/customtabs/CustomTabsServiceConnection;
 
-    const/4 v1, 0x1
+    invoke-virtual {p1, v0}, Landroid/app/Activity;->unbindService(Landroid/content/ServiceConnection;)V
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iput-object v1, p0, Lcom/google/android/gms/internal/zzdi;->zzAm:Landroid/support/customtabs/CustomTabsClient;
 
-    move-result-object v1
+    iput-object v1, p0, Lcom/google/android/gms/internal/zzdi;->zzAl:Landroid/support/customtabs/CustomTabsSession;
 
-    iget-object v2, p0, Lcom/google/android/gms/internal/zzdi;->zzfv:Ljava/lang/Long;
+    iput-object v1, p0, Lcom/google/android/gms/internal/zzdi;->zzAn:Landroid/support/customtabs/CustomTabsServiceConnection;
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    goto :goto_0
+.end method
 
-    const/4 v1, 0x2
+.method public zze(Landroid/app/Activity;)V
+    .locals 2
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdi;->zzAm:Landroid/support/customtabs/CustomTabsClient;
 
-    move-result-object v1
+    if-eqz v0, :cond_1
 
-    iget-object v2, p0, Lcom/google/android/gms/internal/zzdi;->zzfw:Ljava/lang/Long;
+    :cond_0
+    :goto_0
+    return-void
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_1
+    invoke-static {p1}, Lcom/google/android/gms/internal/zzamp;->zzbH(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v1, Lcom/google/android/gms/internal/zzamq;
+
+    invoke-direct {v1, p0}, Lcom/google/android/gms/internal/zzamq;-><init>(Lcom/google/android/gms/internal/zzamr;)V
+
+    iput-object v1, p0, Lcom/google/android/gms/internal/zzdi;->zzAn:Landroid/support/customtabs/CustomTabsServiceConnection;
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/zzdi;->zzAn:Landroid/support/customtabs/CustomTabsServiceConnection;
+
+    invoke-static {p1, v0, v1}, Landroid/support/customtabs/CustomTabsClient;->bindCustomTabsService(Landroid/content/Context;Ljava/lang/String;Landroid/support/customtabs/CustomTabsServiceConnection;)Z
+
+    goto :goto_0
+.end method
+
+.method public zzeF()Landroid/support/customtabs/CustomTabsSession;
+    .locals 2
+
+    const/4 v1, 0x0
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdi;->zzAm:Landroid/support/customtabs/CustomTabsClient;
+
+    if-nez v0, :cond_1
+
+    iput-object v1, p0, Lcom/google/android/gms/internal/zzdi;->zzAl:Landroid/support/customtabs/CustomTabsSession;
+
+    :cond_0
+    :goto_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdi;->zzAl:Landroid/support/customtabs/CustomTabsSession;
 
     return-object v0
+
+    :cond_1
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdi;->zzAl:Landroid/support/customtabs/CustomTabsSession;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdi;->zzAm:Landroid/support/customtabs/CustomTabsClient;
+
+    invoke-virtual {v0, v1}, Landroid/support/customtabs/CustomTabsClient;->newSession(Landroid/support/customtabs/CustomTabsCallback;)Landroid/support/customtabs/CustomTabsSession;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzdi;->zzAl:Landroid/support/customtabs/CustomTabsSession;
+
+    goto :goto_0
+.end method
+
+.method public zzeG()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzdi;->zzAm:Landroid/support/customtabs/CustomTabsClient;
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzdi;->zzAl:Landroid/support/customtabs/CustomTabsSession;
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdi;->zzAo:Lcom/google/android/gms/internal/zzdi$zza;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdi;->zzAo:Lcom/google/android/gms/internal/zzdi$zza;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/zzdi$zza;->zzeI()V
+
+    :cond_0
+    return-void
 .end method

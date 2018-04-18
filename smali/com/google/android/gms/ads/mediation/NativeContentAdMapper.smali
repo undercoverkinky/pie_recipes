@@ -1,13 +1,11 @@
-.class public Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;
+.class public abstract Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;
 .super Lcom/google/android/gms/ads/mediation/NativeAdMapper;
 
 
 # instance fields
-.field private zzbeb:Lcom/google/android/gms/ads/VideoController;
+.field private zzAC:Ljava/lang/String;
 
-.field private zzbrq:Ljava/lang/String;
-
-.field private zzbrr:Ljava/util/List;
+.field private zzAD:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
@@ -18,13 +16,13 @@
     .end annotation
 .end field
 
-.field private zzbrs:Ljava/lang/String;
+.field private zzAE:Ljava/lang/String;
 
-.field private zzbru:Ljava/lang/String;
+.field private zzAG:Ljava/lang/String;
 
-.field private zzbse:Ljava/lang/String;
+.field private zzAN:Ljava/lang/String;
 
-.field private zzdim:Lcom/google/android/gms/ads/formats/NativeAd$Image;
+.field private zzTh:Lcom/google/android/gms/ads/formats/NativeAd$Image;
 
 
 # direct methods
@@ -41,7 +39,7 @@
 .method public final getAdvertiser()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzbse:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzAN:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -49,7 +47,7 @@
 .method public final getBody()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzbrs:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzAE:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -57,7 +55,7 @@
 .method public final getCallToAction()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzbru:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzAG:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -65,7 +63,7 @@
 .method public final getHeadline()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzbrq:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzAC:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -82,7 +80,7 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzbrr:Ljava/util/List;
+    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzAD:Ljava/util/List;
 
     return-object v0
 .end method
@@ -90,15 +88,7 @@
 .method public final getLogo()Lcom/google/android/gms/ads/formats/NativeAd$Image;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzdim:Lcom/google/android/gms/ads/formats/NativeAd$Image;
-
-    return-object v0
-.end method
-
-.method public final getVideoController()Lcom/google/android/gms/ads/VideoController;
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzbeb:Lcom/google/android/gms/ads/VideoController;
+    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzTh:Lcom/google/android/gms/ads/formats/NativeAd$Image;
 
     return-object v0
 .end method
@@ -106,7 +96,7 @@
 .method public final setAdvertiser(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzbse:Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzAN:Ljava/lang/String;
 
     return-void
 .end method
@@ -114,7 +104,7 @@
 .method public final setBody(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzbrs:Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzAE:Ljava/lang/String;
 
     return-void
 .end method
@@ -122,7 +112,7 @@
 .method public final setCallToAction(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzbru:Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzAG:Ljava/lang/String;
 
     return-void
 .end method
@@ -130,7 +120,7 @@
 .method public final setHeadline(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzbrq:Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzAC:Ljava/lang/String;
 
     return-void
 .end method
@@ -147,7 +137,7 @@
         }
     .end annotation
 
-    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzbrr:Ljava/util/List;
+    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzAD:Ljava/util/List;
 
     return-void
 .end method
@@ -155,15 +145,7 @@
 .method public final setLogo(Lcom/google/android/gms/ads/formats/NativeAd$Image;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzdim:Lcom/google/android/gms/ads/formats/NativeAd$Image;
-
-    return-void
-.end method
-
-.method public final zza(Lcom/google/android/gms/ads/VideoController;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzbeb:Lcom/google/android/gms/ads/VideoController;
+    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zzTh:Lcom/google/android/gms/ads/formats/NativeAd$Image;
 
     return-void
 .end method

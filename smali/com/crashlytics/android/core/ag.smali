@@ -14,17 +14,16 @@
     .locals 1
 
     .prologue
-    .line 21
+    .line 22
     const-string v0, "0"
 
-    .line 22
     invoke-static {v0}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
 
     move-result-object v0
 
     sput-object v0, Lcom/crashlytics/android/core/ag;->a:Lcom/crashlytics/android/core/b;
 
-    .line 24
+    .line 25
     const-string v0, "Unity"
 
     invoke-static {v0}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
@@ -40,7 +39,7 @@
     .locals 4
 
     .prologue
-    .line 648
+    .line 650
     const/4 v0, 0x1
 
     sget-object v1, Lcom/crashlytics/android/core/ag;->a:Lcom/crashlytics/android/core/b;
@@ -51,7 +50,7 @@
 
     add-int/lit8 v0, v0, 0x0
 
-    .line 649
+    .line 651
     const/4 v1, 0x2
 
     sget-object v2, Lcom/crashlytics/android/core/ag;->a:Lcom/crashlytics/android/core/b;
@@ -62,7 +61,7 @@
 
     add-int/2addr v0, v1
 
-    .line 650
+    .line 652
     const/4 v1, 0x3
 
     const-wide/16 v2, 0x0
@@ -73,7 +72,7 @@
 
     add-int/2addr v0, v1
 
-    .line 652
+    .line 654
     return v0
 .end method
 
@@ -85,28 +84,26 @@
 
     const/4 v1, 0x0
 
-    .line 605
+    .line 607
     iget-object v0, p0, Lcom/crashlytics/android/core/aj;->b:Ljava/lang/String;
 
-    .line 606
     invoke-static {v0}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
 
     move-result-object v0
 
-    .line 605
     invoke-static {v8, v0}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
 
     move-result v0
 
     add-int/lit8 v0, v0, 0x0
 
-    .line 609
+    .line 611
     iget-object v2, p0, Lcom/crashlytics/android/core/aj;->a:Ljava/lang/String;
 
-    .line 610
+    .line 612
     if-eqz v2, :cond_0
 
-    .line 611
+    .line 613
     const/4 v3, 0x3
 
     invoke-static {v2}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
@@ -119,7 +116,7 @@
 
     add-int/2addr v0, v2
 
-    .line 614
+    .line 616
     :cond_0
     iget-object v4, p0, Lcom/crashlytics/android/core/aj;->c:[Ljava/lang/StackTraceElement;
 
@@ -132,19 +129,18 @@
 
     aget-object v3, v4, v2
 
-    .line 615
+    .line 617
     invoke-static {v3, v8}, Lcom/crashlytics/android/core/ag;->a(Ljava/lang/StackTraceElement;Z)I
 
     move-result v3
 
-    .line 616
+    .line 618
     const/4 v6, 0x4
 
     invoke-static {v6}, Lcom/crashlytics/android/core/CodedOutputStream;->d(I)I
 
     move-result v6
 
-    .line 617
     invoke-static {v3}, Lcom/crashlytics/android/core/CodedOutputStream;->f(I)I
 
     move-result v7
@@ -155,7 +151,7 @@
 
     add-int/2addr v3, v0
 
-    .line 614
+    .line 616
     add-int/lit8 v0, v2, 0x1
 
     move v2, v0
@@ -164,31 +160,30 @@
 
     goto :goto_0
 
-    .line 622
+    .line 624
     :cond_1
     iget-object v2, p0, Lcom/crashlytics/android/core/aj;->d:Lcom/crashlytics/android/core/aj;
 
-    .line 623
+    .line 625
     if-eqz v2, :cond_2
 
-    .line 624
+    .line 626
     if-ge p1, p2, :cond_3
 
-    .line 625
+    .line 627
     add-int/lit8 v1, p1, 0x1
 
     invoke-static {v2, v1, p2}, Lcom/crashlytics/android/core/ag;->a(Lcom/crashlytics/android/core/aj;II)I
 
     move-result v1
 
-    .line 627
+    .line 629
     const/4 v2, 0x6
 
     invoke-static {v2}, Lcom/crashlytics/android/core/CodedOutputStream;->d(I)I
 
     move-result v2
 
-    .line 628
     invoke-static {v1}, Lcom/crashlytics/android/core/CodedOutputStream;->f(I)I
 
     move-result v3
@@ -199,25 +194,25 @@
 
     add-int/2addr v0, v1
 
-    .line 642
+    .line 644
     :cond_2
     :goto_1
     return v0
 
-    .line 633
+    .line 635
     :cond_3
     :goto_2
     if-eqz v2, :cond_4
 
-    .line 634
+    .line 636
     iget-object v2, v2, Lcom/crashlytics/android/core/aj;->d:Lcom/crashlytics/android/core/aj;
 
-    .line 635
+    .line 637
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 638
+    .line 640
     :cond_4
     const/4 v2, 0x7
 
@@ -258,19 +253,18 @@
 
     const/4 v7, 0x1
 
-    .line 543
+    .line 545
     const/4 v0, 0x4
 
     invoke-static {p1, p2, v0, v7}, Lcom/crashlytics/android/core/ag;->a(Ljava/lang/Thread;[Ljava/lang/StackTraceElement;IZ)I
 
     move-result v0
 
-    .line 544
+    .line 546
     invoke-static {v7}, Lcom/crashlytics/android/core/CodedOutputStream;->d(I)I
 
     move-result v1
 
-    .line 545
     invoke-static {v0}, Lcom/crashlytics/android/core/CodedOutputStream;->f(I)I
 
     move-result v3
@@ -281,21 +275,21 @@
 
     add-int/lit8 v0, v0, 0x0
 
-    .line 547
+    .line 549
     array-length v4, p3
 
     move v1, v2
 
     move v3, v0
 
-    .line 548
+    .line 550
     :goto_0
     if-ge v1, v4, :cond_0
 
-    .line 549
+    .line 551
     aget-object v5, p3, v1
 
-    .line 550
+    .line 552
     invoke-interface {p4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -306,12 +300,11 @@
 
     move-result v0
 
-    .line 551
+    .line 553
     invoke-static {v7}, Lcom/crashlytics/android/core/CodedOutputStream;->d(I)I
 
     move-result v5
 
-    .line 552
     invoke-static {v0}, Lcom/crashlytics/android/core/CodedOutputStream;->f(I)I
 
     move-result v6
@@ -322,14 +315,14 @@
 
     add-int/2addr v3, v0
 
-    .line 548
+    .line 550
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
 
-    .line 555
+    .line 557
     :cond_0
     const/16 v0, 0x8
 
@@ -337,14 +330,13 @@
 
     move-result v0
 
-    .line 557
+    .line 559
     const/4 v1, 0x2
 
     invoke-static {v1}, Lcom/crashlytics/android/core/CodedOutputStream;->d(I)I
 
     move-result v1
 
-    .line 558
     invoke-static {v0}, Lcom/crashlytics/android/core/CodedOutputStream;->f(I)I
 
     move-result v2
@@ -355,17 +347,16 @@
 
     add-int/2addr v0, v3
 
-    .line 560
+    .line 562
     invoke-static {}, Lcom/crashlytics/android/core/ag;->a()I
 
     move-result v1
 
-    .line 561
+    .line 563
     invoke-static {v8}, Lcom/crashlytics/android/core/CodedOutputStream;->d(I)I
 
     move-result v2
 
-    .line 562
     invoke-static {v1}, Lcom/crashlytics/android/core/CodedOutputStream;->f(I)I
 
     move-result v3
@@ -376,17 +367,16 @@
 
     add-int/2addr v0, v1
 
-    .line 564
+    .line 566
     invoke-static {p5, p6}, Lcom/crashlytics/android/core/ag;->a(Lcom/crashlytics/android/core/b;Lcom/crashlytics/android/core/b;)I
 
     move-result v1
 
-    .line 565
+    .line 567
     invoke-static {v8}, Lcom/crashlytics/android/core/CodedOutputStream;->d(I)I
 
     move-result v2
 
-    .line 566
     invoke-static {v1}, Lcom/crashlytics/android/core/CodedOutputStream;->f(I)I
 
     move-result v3
@@ -397,7 +387,7 @@
 
     add-int/2addr v0, v1
 
-    .line 568
+    .line 570
     return v0
 .end method
 
@@ -429,19 +419,18 @@
     .end annotation
 
     .prologue
-    .line 511
+    .line 513
     invoke-static/range {p0 .. p6}, Lcom/crashlytics/android/core/ag;->a(Lcom/crashlytics/android/core/aj;Ljava/lang/Thread;[Ljava/lang/StackTraceElement;[Ljava/lang/Thread;Ljava/util/List;Lcom/crashlytics/android/core/b;Lcom/crashlytics/android/core/b;)I
 
     move-result v0
 
-    .line 514
+    .line 516
     const/4 v1, 0x1
 
     invoke-static {v1}, Lcom/crashlytics/android/core/CodedOutputStream;->d(I)I
 
     move-result v1
 
-    .line 515
     invoke-static {v0}, Lcom/crashlytics/android/core/CodedOutputStream;->f(I)I
 
     move-result v2
@@ -452,10 +441,10 @@
 
     add-int/lit8 v0, v0, 0x0
 
-    .line 517
+    .line 519
     if-eqz p7, :cond_1
 
-    .line 518
+    .line 520
     invoke-interface {p7}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v1
@@ -481,7 +470,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 520
+    .line 521
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -494,19 +483,17 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 519
     invoke-static {v0, v1}, Lcom/crashlytics/android/core/ag;->a(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
-    .line 521
+    .line 523
     const/4 v1, 0x2
 
     invoke-static {v1}, Lcom/crashlytics/android/core/CodedOutputStream;->d(I)I
 
     move-result v1
 
-    .line 522
     invoke-static {v0}, Lcom/crashlytics/android/core/CodedOutputStream;->f(I)I
 
     move-result v4
@@ -519,17 +506,17 @@
 
     move v2, v0
 
-    .line 523
+    .line 525
     goto :goto_0
 
     :cond_0
     move v0, v2
 
-    .line 527
+    .line 529
     :cond_1
     if-eqz p8, :cond_2
 
-    .line 528
+    .line 530
     const/4 v1, 0x3
 
     iget v2, p8, Landroid/app/ActivityManager$RunningAppProcessInfo;->importance:I
@@ -540,7 +527,7 @@
 
     add-int/2addr v0, v1
 
-    .line 532
+    .line 534
     :cond_2
     const/4 v1, 0x4
 
@@ -550,7 +537,7 @@
 
     add-int/2addr v0, v1
 
-    .line 534
+    .line 536
     return v0
 .end method
 
@@ -560,7 +547,7 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 461
+    .line 463
     const/4 v0, 0x1
 
     invoke-static {v0, v2, v3}, Lcom/crashlytics/android/core/CodedOutputStream;->b(IJ)I
@@ -569,7 +556,7 @@
 
     add-int/lit8 v0, v0, 0x0
 
-    .line 462
+    .line 464
     const/4 v1, 0x2
 
     invoke-static {v1, v2, v3}, Lcom/crashlytics/android/core/CodedOutputStream;->b(IJ)I
@@ -578,7 +565,7 @@
 
     add-int/2addr v0, v1
 
-    .line 463
+    .line 465
     const/4 v1, 0x3
 
     invoke-static {v1, p0}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
@@ -587,10 +574,10 @@
 
     add-int/2addr v0, v1
 
-    .line 464
+    .line 466
     if-eqz p1, :cond_0
 
-    .line 465
+    .line 467
     const/4 v1, 0x4
 
     invoke-static {v1, p1}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
@@ -599,7 +586,7 @@
 
     add-int/2addr v0, v1
 
-    .line 468
+    .line 470
     :cond_0
     return v0
 .end method
@@ -608,7 +595,7 @@
     .locals 3
 
     .prologue
-    .line 425
+    .line 426
     const/4 v0, 0x1
 
     iget v1, p0, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;->protobufIndex:I
@@ -617,7 +604,7 @@
 
     move-result v0
 
-    .line 426
+    .line 427
     const/4 v1, 0x2
 
     invoke-static {p1}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
@@ -630,7 +617,7 @@
 
     add-int/2addr v0, v1
 
-    .line 428
+    .line 429
     return v0
 .end method
 
@@ -638,13 +625,13 @@
     .locals 3
 
     .prologue
-    .line 580
+    .line 582
     const/4 v0, 0x0
 
-    .line 582
+    .line 584
     if-eqz p0, :cond_0
 
-    .line 583
+    .line 585
     invoke-virtual {p0}, Ljava/lang/Float;->floatValue()F
 
     invoke-static {}, Lcom/crashlytics/android/core/CodedOutputStream;->a()I
@@ -653,7 +640,7 @@
 
     add-int/lit8 v0, v0, 0x0
 
-    .line 585
+    .line 587
     :cond_0
     invoke-static {p1}, Lcom/crashlytics/android/core/CodedOutputStream;->c(I)I
 
@@ -661,7 +648,7 @@
 
     add-int/2addr v0, v1
 
-    .line 586
+    .line 588
     const/4 v1, 0x3
 
     invoke-static {v1}, Lcom/crashlytics/android/core/CodedOutputStream;->b(I)I
@@ -670,7 +657,7 @@
 
     add-int/2addr v0, v1
 
-    .line 587
+    .line 589
     const/4 v1, 0x4
 
     invoke-static {v1, p2}, Lcom/crashlytics/android/core/CodedOutputStream;->c(II)I
@@ -679,7 +666,7 @@
 
     add-int/2addr v0, v1
 
-    .line 588
+    .line 590
     const/4 v1, 0x5
 
     invoke-static {v1, p3, p4}, Lcom/crashlytics/android/core/CodedOutputStream;->b(IJ)I
@@ -688,7 +675,7 @@
 
     add-int/2addr v0, v1
 
-    .line 589
+    .line 591
     const/4 v1, 0x6
 
     invoke-static {v1, p5, p6}, Lcom/crashlytics/android/core/CodedOutputStream;->b(IJ)I
@@ -697,7 +684,7 @@
 
     add-int/2addr v0, v1
 
-    .line 591
+    .line 593
     return v0
 .end method
 
@@ -711,14 +698,14 @@
 
     const/4 v2, 0x0
 
-    .line 658
+    .line 660
     invoke-virtual {p0}, Ljava/lang/StackTraceElement;->isNativeMethod()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 660
+    .line 662
     invoke-virtual {p0}, Ljava/lang/StackTraceElement;->getLineNumber()I
 
     move-result v0
@@ -735,13 +722,12 @@
 
     add-int/lit8 v0, v0, 0x0
 
-    .line 665
+    .line 667
     :goto_0
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 666
     invoke-virtual {p0}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
 
     move-result-object v4
@@ -772,24 +758,22 @@
 
     move-result-object v3
 
-    .line 665
     invoke-static {v1, v3}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
 
     move-result v3
 
     add-int/2addr v0, v3
 
-    .line 668
+    .line 670
     invoke-virtual {p0}, Ljava/lang/StackTraceElement;->getFileName()Ljava/lang/String;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    .line 669
+    .line 671
     const/4 v3, 0x3
 
-    .line 670
     invoke-virtual {p0}, Ljava/lang/StackTraceElement;->getFileName()Ljava/lang/String;
 
     move-result-object v4
@@ -798,14 +782,13 @@
 
     move-result-object v4
 
-    .line 669
     invoke-static {v3, v4}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
 
     move-result v3
 
     add-int/2addr v0, v3
 
-    .line 673
+    .line 675
     :cond_0
     invoke-virtual {p0}, Ljava/lang/StackTraceElement;->isNativeMethod()Z
 
@@ -819,7 +802,7 @@
 
     if-lez v3, :cond_3
 
-    .line 675
+    .line 677
     const/4 v3, 0x4
 
     invoke-virtual {p0}, Ljava/lang/StackTraceElement;->getLineNumber()I
@@ -836,7 +819,7 @@
 
     move v3, v0
 
-    .line 677
+    .line 679
     :goto_1
     const/4 v4, 0x5
 
@@ -851,10 +834,10 @@
 
     add-int/2addr v0, v3
 
-    .line 679
+    .line 681
     return v0
 
-    .line 662
+    .line 664
     :cond_1
     const-wide/16 v4, 0x0
 
@@ -869,7 +852,7 @@
     :cond_2
     move v0, v2
 
-    .line 677
+    .line 679
     goto :goto_2
 
     :cond_3
@@ -882,7 +865,7 @@
     .locals 3
 
     .prologue
-    .line 572
+    .line 574
     const/4 v0, 0x1
 
     invoke-static {p0}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
@@ -893,27 +876,25 @@
 
     move-result v0
 
-    .line 573
+    .line 575
     const/4 v1, 0x2
 
     if-nez p1, :cond_0
 
     const-string p1, ""
 
-    .line 574
     :cond_0
     invoke-static {p1}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
 
     move-result-object v2
 
-    .line 573
     invoke-static {v1, v2}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 575
+    .line 577
     return v0
 .end method
 
@@ -921,7 +902,7 @@
     .locals 6
 
     .prologue
-    .line 684
+    .line 686
     const/4 v0, 0x1
 
     invoke-virtual {p0}, Ljava/lang/Thread;->getName()Ljava/lang/String;
@@ -936,7 +917,7 @@
 
     move-result v0
 
-    .line 685
+    .line 687
     const/4 v1, 0x2
 
     invoke-static {v1, p2}, Lcom/crashlytics/android/core/CodedOutputStream;->c(II)I
@@ -945,7 +926,7 @@
 
     add-int/2addr v1, v0
 
-    .line 687
+    .line 689
     array-length v2, p1
 
     const/4 v0, 0x0
@@ -955,19 +936,18 @@
 
     aget-object v3, p1, v0
 
-    .line 688
+    .line 690
     invoke-static {v3, p3}, Lcom/crashlytics/android/core/ag;->a(Ljava/lang/StackTraceElement;Z)I
 
     move-result v3
 
-    .line 689
+    .line 691
     const/4 v4, 0x3
 
     invoke-static {v4}, Lcom/crashlytics/android/core/CodedOutputStream;->d(I)I
 
     move-result v4
 
-    .line 690
     invoke-static {v3}, Lcom/crashlytics/android/core/CodedOutputStream;->f(I)I
 
     move-result v5
@@ -978,12 +958,12 @@
 
     add-int/2addr v1, v3
 
-    .line 687
+    .line 689
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 693
+    .line 695
     :cond_0
     return v1
 .end method
@@ -992,7 +972,7 @@
     .locals 1
 
     .prologue
-    .line 697
+    .line 699
     if-nez p0, :cond_0
 
     const/4 v0, 0x0
@@ -1025,24 +1005,24 @@
 
     const/4 v1, 0x0
 
-    .line 329
+    .line 330
     invoke-virtual {p0, p1, v5}, Lcom/crashlytics/android/core/CodedOutputStream;->e(II)V
 
-    .line 330
+    .line 331
     invoke-static {p2, p3}, Lcom/crashlytics/android/core/ag;->a(Ljava/lang/StackTraceElement;Z)I
 
     move-result v2
 
     invoke-virtual {p0, v2}, Lcom/crashlytics/android/core/CodedOutputStream;->e(I)V
 
-    .line 332
+    .line 333
     invoke-virtual {p2}, Ljava/lang/StackTraceElement;->isNativeMethod()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 335
+    .line 336
     invoke-virtual {p2}, Ljava/lang/StackTraceElement;->getLineNumber()I
 
     move-result v2
@@ -1055,13 +1035,12 @@
 
     invoke-virtual {p0, v4, v2, v3}, Lcom/crashlytics/android/core/CodedOutputStream;->a(IJ)V
 
-    .line 340
+    .line 341
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 341
     invoke-virtual {p2}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
 
     move-result-object v3
@@ -1092,17 +1071,16 @@
 
     move-result-object v2
 
-    .line 340
     invoke-virtual {p0, v5, v2}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
 
-    .line 343
+    .line 344
     invoke-virtual {p2}, Ljava/lang/StackTraceElement;->getFileName()Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 344
+    .line 345
     const/4 v2, 0x3
 
     invoke-virtual {p2}, Ljava/lang/StackTraceElement;->getFileName()Ljava/lang/String;
@@ -1115,7 +1093,7 @@
 
     invoke-virtual {p0, v2, v3}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
 
-    .line 349
+    .line 350
     :cond_0
     invoke-virtual {p2}, Ljava/lang/StackTraceElement;->isNativeMethod()Z
 
@@ -1129,7 +1107,7 @@
 
     if-lez v2, :cond_1
 
-    .line 350
+    .line 351
     invoke-virtual {p2}, Ljava/lang/StackTraceElement;->getLineNumber()I
 
     move-result v2
@@ -1138,7 +1116,7 @@
 
     invoke-virtual {p0, v0, v2, v3}, Lcom/crashlytics/android/core/CodedOutputStream;->a(IJ)V
 
-    .line 356
+    .line 357
     :cond_1
     const/4 v2, 0x5
 
@@ -1147,10 +1125,10 @@
     :goto_1
     invoke-virtual {p0, v2, v0}, Lcom/crashlytics/android/core/CodedOutputStream;->a(II)V
 
-    .line 357
+    .line 358
     return-void
 
-    .line 337
+    .line 338
     :cond_2
     const-wide/16 v2, 0x0
 
@@ -1161,387 +1139,8 @@
     :cond_3
     move v0, v1
 
-    .line 356
+    .line 357
     goto :goto_1
-.end method
-
-.method public static a(Lcom/crashlytics/android/core/CodedOutputStream;ILjava/lang/String;IJJZLjava/util/Map;ILjava/lang/String;Ljava/lang/String;)V
-    .locals 10
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/crashlytics/android/core/CodedOutputStream;",
-            "I",
-            "Ljava/lang/String;",
-            "IJJZ",
-            "Ljava/util/Map",
-            "<",
-            "Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;",
-            "Ljava/lang/String;",
-            ">;I",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ")V"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Exception;
-        }
-    .end annotation
-
-    .prologue
-    .line 87
-    invoke-static {p2}, Lcom/crashlytics/android/core/ag;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
-
-    move-result-object v5
-
-    .line 88
-    invoke-static/range {p12 .. p12}, Lcom/crashlytics/android/core/ag;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
-
-    move-result-object v6
-
-    .line 89
-    invoke-static/range {p11 .. p11}, Lcom/crashlytics/android/core/ag;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
-
-    move-result-object v7
-
-    .line 91
-    const/16 v2, 0x9
-
-    const/4 v3, 0x2
-
-    invoke-virtual {p0, v2, v3}, Lcom/crashlytics/android/core/CodedOutputStream;->e(II)V
-
-    .line 2437
-    const/4 v2, 0x3
-
-    invoke-static {v2, p1}, Lcom/crashlytics/android/core/CodedOutputStream;->d(II)I
-
-    move-result v2
-
-    add-int/lit8 v3, v2, 0x0
-
-    .line 2438
-    if-nez v5, :cond_0
-
-    const/4 v2, 0x0
-
-    :goto_0
-    add-int/2addr v2, v3
-
-    .line 2439
-    const/4 v3, 0x5
-
-    invoke-static {v3, p3}, Lcom/crashlytics/android/core/CodedOutputStream;->c(II)I
-
-    move-result v3
-
-    add-int/2addr v2, v3
-
-    .line 2440
-    const/4 v3, 0x6
-
-    invoke-static {v3, p4, p5}, Lcom/crashlytics/android/core/CodedOutputStream;->b(IJ)I
-
-    move-result v3
-
-    add-int/2addr v2, v3
-
-    .line 2441
-    const/4 v3, 0x7
-
-    move-wide/from16 v0, p6
-
-    invoke-static {v3, v0, v1}, Lcom/crashlytics/android/core/CodedOutputStream;->b(IJ)I
-
-    move-result v3
-
-    add-int/2addr v2, v3
-
-    .line 2442
-    const/16 v3, 0xa
-
-    invoke-static {v3}, Lcom/crashlytics/android/core/CodedOutputStream;->b(I)I
-
-    move-result v3
-
-    add-int/2addr v2, v3
-
-    .line 2443
-    if-eqz p9, :cond_1
-
-    .line 2444
-    invoke-interface/range {p9 .. p9}, Ljava/util/Map;->entrySet()Ljava/util/Set;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v8
-
-    move v4, v2
-
-    :goto_1
-    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/util/Map$Entry;
-
-    .line 2445
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
-
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    invoke-static {v3, v2}, Lcom/crashlytics/android/core/ag;->a(Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;Ljava/lang/String;)I
-
-    move-result v2
-
-    .line 2446
-    const/16 v3, 0xb
-
-    invoke-static {v3}, Lcom/crashlytics/android/core/CodedOutputStream;->d(I)I
-
-    move-result v3
-
-    .line 2447
-    invoke-static {v2}, Lcom/crashlytics/android/core/CodedOutputStream;->f(I)I
-
-    move-result v9
-
-    add-int/2addr v3, v9
-
-    add-int/2addr v2, v3
-
-    add-int/2addr v2, v4
-
-    move v4, v2
-
-    .line 2448
-    goto :goto_1
-
-    .line 2438
-    :cond_0
-    const/4 v2, 0x4
-
-    invoke-static {v2, v5}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
-
-    move-result v2
-
-    goto :goto_0
-
-    :cond_1
-    move v4, v2
-
-    .line 2450
-    :cond_2
-    const/16 v2, 0xc
-
-    move/from16 v0, p10
-
-    invoke-static {v2, v0}, Lcom/crashlytics/android/core/CodedOutputStream;->c(II)I
-
-    move-result v2
-
-    add-int v3, v4, v2
-
-    .line 2451
-    if-nez v7, :cond_3
-
-    const/4 v2, 0x0
-
-    :goto_2
-    add-int/2addr v3, v2
-
-    .line 2452
-    if-nez v6, :cond_4
-
-    const/4 v2, 0x0
-
-    :goto_3
-    add-int/2addr v2, v3
-
-    .line 93
-    invoke-virtual {p0, v2}, Lcom/crashlytics/android/core/CodedOutputStream;->e(I)V
-
-    .line 99
-    const/4 v2, 0x3
-
-    invoke-virtual {p0, v2, p1}, Lcom/crashlytics/android/core/CodedOutputStream;->b(II)V
-
-    .line 100
-    const/4 v2, 0x4
-
-    invoke-virtual {p0, v2, v5}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
-
-    .line 101
-    const/4 v2, 0x5
-
-    invoke-virtual {p0, v2, p3}, Lcom/crashlytics/android/core/CodedOutputStream;->a(II)V
-
-    .line 102
-    const/4 v2, 0x6
-
-    invoke-virtual {p0, v2, p4, p5}, Lcom/crashlytics/android/core/CodedOutputStream;->a(IJ)V
-
-    .line 103
-    const/4 v2, 0x7
-
-    move-wide/from16 v0, p6
-
-    invoke-virtual {p0, v2, v0, v1}, Lcom/crashlytics/android/core/CodedOutputStream;->a(IJ)V
-
-    .line 104
-    const/16 v2, 0xa
-
-    move/from16 v0, p8
-
-    invoke-virtual {p0, v2, v0}, Lcom/crashlytics/android/core/CodedOutputStream;->a(IZ)V
-
-    .line 106
-    invoke-interface/range {p9 .. p9}, Ljava/util/Map;->entrySet()Ljava/util/Set;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v5
-
-    :goto_4
-    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
-
-    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    move-object v4, v2
-
-    check-cast v4, Ljava/util/Map$Entry;
-
-    .line 107
-    const/16 v2, 0xb
-
-    const/4 v3, 0x2
-
-    invoke-virtual {p0, v2, v3}, Lcom/crashlytics/android/core/CodedOutputStream;->e(II)V
-
-    .line 108
-    invoke-interface {v4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
-
-    invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    invoke-static {v2, v3}, Lcom/crashlytics/android/core/ag;->a(Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;Ljava/lang/String;)I
-
-    move-result v2
-
-    invoke-virtual {p0, v2}, Lcom/crashlytics/android/core/CodedOutputStream;->e(I)V
-
-    .line 110
-    const/4 v3, 0x1
-
-    invoke-interface {v4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
-
-    iget v2, v2, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;->protobufIndex:I
-
-    invoke-virtual {p0, v3, v2}, Lcom/crashlytics/android/core/CodedOutputStream;->b(II)V
-
-    .line 111
-    const/4 v3, 0x2
-
-    invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    invoke-static {v2}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v3, v2}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
-
-    goto :goto_4
-
-    .line 2451
-    :cond_3
-    const/16 v2, 0xd
-
-    invoke-static {v2, v7}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
-
-    move-result v2
-
-    goto :goto_2
-
-    .line 2452
-    :cond_4
-    const/16 v2, 0xe
-
-    invoke-static {v2, v6}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
-
-    move-result v2
-
-    goto :goto_3
-
-    .line 113
-    :cond_5
-    const/16 v2, 0xc
-
-    move/from16 v0, p10
-
-    invoke-virtual {p0, v2, v0}, Lcom/crashlytics/android/core/CodedOutputStream;->a(II)V
-
-    .line 115
-    if-eqz v7, :cond_6
-
-    .line 116
-    const/16 v2, 0xd
-
-    invoke-virtual {p0, v2, v7}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
-
-    .line 118
-    :cond_6
-    if-eqz v6, :cond_7
-
-    .line 119
-    const/16 v2, 0xe
-
-    invoke-virtual {p0, v2, v6}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
-
-    .line 121
-    :cond_7
-    return-void
 .end method
 
 .method public static a(Lcom/crashlytics/android/core/CodedOutputStream;JLjava/lang/String;Lcom/crashlytics/android/core/aj;Ljava/lang/Thread;[Ljava/lang/StackTraceElement;[Ljava/lang/Thread;Ljava/util/List;Ljava/util/Map;Lcom/crashlytics/android/core/u;Landroid/app/ActivityManager$RunningAppProcessInfo;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Float;IZJJ)V
@@ -1584,33 +1183,33 @@
     .end annotation
 
     .prologue
-    .line 159
+    .line 160
     invoke-static/range {p13 .. p13}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
 
     move-result-object v9
 
-    .line 160
+    .line 161
     if-nez p14, :cond_2
 
     const/4 v10, 0x0
 
-    .line 163
+    .line 164
     :goto_0
     invoke-virtual/range {p10 .. p10}, Lcom/crashlytics/android/core/u;->a()Lcom/crashlytics/android/core/b;
 
     move-result-object v18
 
-    .line 165
+    .line 166
     if-nez v18, :cond_0
 
-    .line 166
+    .line 167
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
-    .line 170
+    .line 171
     :cond_0
     invoke-virtual/range {p10 .. p10}, Lcom/crashlytics/android/core/u;->b()V
 
-    .line 179
+    .line 180
     const/16 v4, 0xa
 
     const/4 v5, 0x2
@@ -1619,7 +1218,7 @@
 
     invoke-virtual {v0, v4, v5}, Lcom/crashlytics/android/core/CodedOutputStream;->e(II)V
 
-    .line 2482
+    .line 2484
     const/4 v4, 0x1
 
     move-wide/from16 v0, p1
@@ -1630,7 +1229,7 @@
 
     add-int/lit8 v4, v4, 0x0
 
-    .line 2483
+    .line 2485
     const/4 v5, 0x2
 
     invoke-static/range {p3 .. p3}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
@@ -1659,19 +1258,18 @@
 
     move/from16 v13, p12
 
-    .line 2484
+    .line 2486
     invoke-static/range {v4 .. v13}, Lcom/crashlytics/android/core/ag;->a(Lcom/crashlytics/android/core/aj;Ljava/lang/Thread;[Ljava/lang/StackTraceElement;[Ljava/lang/Thread;Ljava/util/List;Lcom/crashlytics/android/core/b;Lcom/crashlytics/android/core/b;Ljava/util/Map;Landroid/app/ActivityManager$RunningAppProcessInfo;I)I
 
     move-result v4
 
-    .line 2487
+    .line 2489
     const/4 v5, 0x3
 
     invoke-static {v5}, Lcom/crashlytics/android/core/CodedOutputStream;->d(I)I
 
     move-result v5
 
-    .line 2488
     invoke-static {v4}, Lcom/crashlytics/android/core/CodedOutputStream;->f(I)I
 
     move-result v6
@@ -1692,19 +1290,18 @@
 
     move-wide/from16 v16, p20
 
-    .line 2489
+    .line 2491
     invoke-static/range {v11 .. v17}, Lcom/crashlytics/android/core/ag;->a(Ljava/lang/Float;IIJJ)I
 
     move-result v5
 
-    .line 2491
+    .line 2493
     const/4 v6, 0x5
 
     invoke-static {v6}, Lcom/crashlytics/android/core/CodedOutputStream;->d(I)I
 
     move-result v6
 
-    .line 2492
     invoke-static {v5}, Lcom/crashlytics/android/core/CodedOutputStream;->f(I)I
 
     move-result v7
@@ -1715,10 +1312,10 @@
 
     add-int/2addr v4, v5
 
-    .line 2494
+    .line 2496
     if-eqz v18, :cond_1
 
-    .line 2598
+    .line 2600
     const/4 v5, 0x1
 
     move-object/from16 v0, v18
@@ -1727,14 +1324,13 @@
 
     move-result v5
 
-    .line 2496
+    .line 2498
     const/4 v6, 0x6
 
     invoke-static {v6}, Lcom/crashlytics/android/core/CodedOutputStream;->d(I)I
 
     move-result v6
 
-    .line 2497
     invoke-static {v5}, Lcom/crashlytics/android/core/CodedOutputStream;->f(I)I
 
     move-result v7
@@ -1745,13 +1341,13 @@
 
     add-int/2addr v4, v5
 
-    .line 180
+    .line 181
     :cond_1
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v4}, Lcom/crashlytics/android/core/CodedOutputStream;->e(I)V
 
-    .line 185
+    .line 186
     const/4 v4, 0x1
 
     move-object/from16 v0, p0
@@ -1760,7 +1356,7 @@
 
     invoke-virtual {v0, v4, v1, v2}, Lcom/crashlytics/android/core/CodedOutputStream;->a(IJ)V
 
-    .line 186
+    .line 187
     const/4 v4, 0x2
 
     invoke-static/range {p3 .. p3}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
@@ -1771,7 +1367,7 @@
 
     invoke-virtual {v0, v4, v5}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
 
-    .line 3203
+    .line 3204
     const/4 v4, 0x3
 
     const/4 v5, 0x2
@@ -1796,7 +1392,7 @@
 
     move/from16 v13, p12
 
-    .line 3204
+    .line 3205
     invoke-static/range {v4 .. v13}, Lcom/crashlytics/android/core/ag;->a(Lcom/crashlytics/android/core/aj;Ljava/lang/Thread;[Ljava/lang/StackTraceElement;[Ljava/lang/Thread;Ljava/util/List;Lcom/crashlytics/android/core/b;Lcom/crashlytics/android/core/b;Ljava/util/Map;Landroid/app/ActivityManager$RunningAppProcessInfo;I)I
 
     move-result v4
@@ -1805,7 +1401,7 @@
 
     invoke-virtual {v0, v4}, Lcom/crashlytics/android/core/CodedOutputStream;->e(I)V
 
-    .line 3231
+    .line 3232
     const/4 v4, 0x1
 
     const/4 v5, 0x2
@@ -1824,7 +1420,7 @@
 
     move-object/from16 v8, p8
 
-    .line 3232
+    .line 3233
     invoke-static/range {v4 .. v10}, Lcom/crashlytics/android/core/ag;->a(Lcom/crashlytics/android/core/aj;Ljava/lang/Thread;[Ljava/lang/StackTraceElement;[Ljava/lang/Thread;Ljava/util/List;Lcom/crashlytics/android/core/b;Lcom/crashlytics/android/core/b;)I
 
     move-result v4
@@ -1833,7 +1429,7 @@
 
     invoke-virtual {v0, v4}, Lcom/crashlytics/android/core/CodedOutputStream;->e(I)V
 
-    .line 3236
+    .line 3237
     const/4 v4, 0x4
 
     const/4 v5, 0x1
@@ -1846,12 +1442,12 @@
 
     invoke-static {v0, v1, v2, v4, v5}, Lcom/crashlytics/android/core/ag;->a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/lang/Thread;[Ljava/lang/StackTraceElement;IZ)V
 
-    .line 3240
+    .line 3241
     move-object/from16 v0, p7
 
     array-length v6, v0
 
-    .line 3241
+    .line 3242
     const/4 v4, 0x0
 
     move v5, v4
@@ -1859,10 +1455,10 @@
     :goto_1
     if-ge v5, v6, :cond_3
 
-    .line 3242
+    .line 3243
     aget-object v7, p7, v5
 
-    .line 3243
+    .line 3244
     move-object/from16 v0, p8
 
     invoke-interface {v0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1879,20 +1475,19 @@
 
     invoke-static {v0, v7, v4, v8, v11}, Lcom/crashlytics/android/core/ag;->a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/lang/Thread;[Ljava/lang/StackTraceElement;IZ)V
 
-    .line 3241
+    .line 3242
     add-int/lit8 v4, v5, 0x1
 
     move v5, v4
 
     goto :goto_1
 
-    .line 160
+    .line 161
     :cond_2
     const-string v4, "-"
 
     const-string v5, ""
 
-    .line 161
     move-object/from16 v0, p14
 
     invoke-virtual {v0, v4, v5}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
@@ -1905,7 +1500,7 @@
 
     goto/16 :goto_0
 
-    .line 3246
+    .line 3247
     :cond_3
     const/4 v5, 0x1
 
@@ -1913,28 +1508,26 @@
 
     move-object/from16 v6, p0
 
-    .line 3281
+    .line 3282
     :goto_2
     const/4 v7, 0x2
 
     invoke-virtual {v6, v4, v7}, Lcom/crashlytics/android/core/CodedOutputStream;->e(II)V
 
-    .line 3282
+    .line 3283
     const/4 v4, 0x1
 
     const/16 v7, 0x8
 
-    .line 3283
     move-object/from16 v0, p4
 
     invoke-static {v0, v4, v7}, Lcom/crashlytics/android/core/ag;->a(Lcom/crashlytics/android/core/aj;II)I
 
     move-result v4
 
-    .line 3282
     invoke-virtual {v6, v4}, Lcom/crashlytics/android/core/CodedOutputStream;->e(I)V
 
-    .line 3285
+    .line 3286
     const/4 v4, 0x1
 
     move-object/from16 v0, p4
@@ -1947,15 +1540,15 @@
 
     invoke-virtual {v6, v4, v7}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
 
-    .line 3286
+    .line 3287
     move-object/from16 v0, p4
 
     iget-object v4, v0, Lcom/crashlytics/android/core/aj;->a:Ljava/lang/String;
 
-    .line 3287
+    .line 3288
     if-eqz v4, :cond_4
 
-    .line 3288
+    .line 3289
     const/4 v7, 0x3
 
     invoke-static {v4}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
@@ -1964,7 +1557,7 @@
 
     invoke-virtual {v6, v7, v4}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
 
-    .line 3291
+    .line 3292
     :cond_4
     move-object/from16 v0, p4
 
@@ -1979,19 +1572,19 @@
 
     aget-object v11, v7, v4
 
-    .line 3292
+    .line 3293
     const/4 v12, 0x4
 
     const/4 v13, 0x1
 
     invoke-static {v6, v12, v11, v13}, Lcom/crashlytics/android/core/ag;->a(Lcom/crashlytics/android/core/CodedOutputStream;ILjava/lang/StackTraceElement;Z)V
 
-    .line 3291
+    .line 3292
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_3
 
-    .line 3295
+    .line 3296
     :cond_5
     move-object/from16 v0, p4
 
@@ -1999,48 +1592,48 @@
 
     move-object/from16 p4, v0
 
-    .line 3296
+    .line 3297
     if-eqz p4, :cond_8
 
-    .line 3297
+    .line 3298
     const/16 v4, 0x8
 
     if-ge v5, v4, :cond_6
 
-    .line 3298
+    .line 3299
     add-int/lit8 v5, v5, 0x1
 
     const/4 v4, 0x6
 
     goto :goto_2
 
-    .line 3303
+    .line 3304
     :cond_6
     const/4 v4, 0x0
 
-    .line 3304
+    .line 3305
     :goto_4
     if-eqz p4, :cond_7
 
-    .line 3305
+    .line 3306
     move-object/from16 v0, p4
 
     iget-object v0, v0, Lcom/crashlytics/android/core/aj;->d:Lcom/crashlytics/android/core/aj;
 
     move-object/from16 p4, v0
 
-    .line 3306
+    .line 3307
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_4
 
-    .line 3308
+    .line 3309
     :cond_7
     const/4 v5, 0x7
 
     invoke-virtual {v6, v5, v4}, Lcom/crashlytics/android/core/CodedOutputStream;->a(II)V
 
-    .line 3248
+    .line 3249
     :cond_8
     const/4 v4, 0x3
 
@@ -2050,7 +1643,7 @@
 
     invoke-virtual {v0, v4, v5}, Lcom/crashlytics/android/core/CodedOutputStream;->e(II)V
 
-    .line 3249
+    .line 3250
     invoke-static {}, Lcom/crashlytics/android/core/ag;->a()I
 
     move-result v4
@@ -2059,17 +1652,8 @@
 
     invoke-virtual {v0, v4}, Lcom/crashlytics/android/core/CodedOutputStream;->e(I)V
 
-    .line 3250
-    const/4 v4, 0x1
-
-    sget-object v5, Lcom/crashlytics/android/core/ag;->a:Lcom/crashlytics/android/core/b;
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v4, v5}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
-
     .line 3251
-    const/4 v4, 0x2
+    const/4 v4, 0x1
 
     sget-object v5, Lcom/crashlytics/android/core/ag;->a:Lcom/crashlytics/android/core/b;
 
@@ -2078,6 +1662,15 @@
     invoke-virtual {v0, v4, v5}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
 
     .line 3252
+    const/4 v4, 0x2
+
+    sget-object v5, Lcom/crashlytics/android/core/ag;->a:Lcom/crashlytics/android/core/b;
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v4, v5}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
+
+    .line 3253
     const/4 v4, 0x3
 
     const-wide/16 v6, 0x0
@@ -2086,7 +1679,7 @@
 
     invoke-virtual {v0, v4, v6, v7}, Lcom/crashlytics/android/core/CodedOutputStream;->a(IJ)V
 
-    .line 3254
+    .line 3255
     const/4 v4, 0x4
 
     const/4 v5, 0x2
@@ -2095,7 +1688,7 @@
 
     invoke-virtual {v0, v4, v5}, Lcom/crashlytics/android/core/CodedOutputStream;->e(II)V
 
-    .line 3255
+    .line 3256
     invoke-static {v9, v10}, Lcom/crashlytics/android/core/ag;->a(Lcom/crashlytics/android/core/b;Lcom/crashlytics/android/core/b;)I
 
     move-result v4
@@ -2104,7 +1697,7 @@
 
     invoke-virtual {v0, v4}, Lcom/crashlytics/android/core/CodedOutputStream;->e(I)V
 
-    .line 3256
+    .line 3257
     const/4 v4, 0x1
 
     const-wide/16 v6, 0x0
@@ -2113,7 +1706,7 @@
 
     invoke-virtual {v0, v4, v6, v7}, Lcom/crashlytics/android/core/CodedOutputStream;->a(IJ)V
 
-    .line 3257
+    .line 3258
     const/4 v4, 0x2
 
     const-wide/16 v6, 0x0
@@ -2122,24 +1715,24 @@
 
     invoke-virtual {v0, v4, v6, v7}, Lcom/crashlytics/android/core/CodedOutputStream;->a(IJ)V
 
-    .line 3258
+    .line 3259
     const/4 v4, 0x3
 
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v4, v9}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
 
-    .line 3259
+    .line 3260
     if-eqz v10, :cond_9
 
-    .line 3260
+    .line 3261
     const/4 v4, 0x4
 
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v4, v10}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
 
-    .line 3212
+    .line 3213
     :cond_9
     if-eqz p9, :cond_b
 
@@ -2149,7 +1742,7 @@
 
     if-nez v4, :cond_b
 
-    .line 4267
+    .line 4268
     invoke-interface/range {p9 .. p9}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v4
@@ -2171,7 +1764,7 @@
 
     check-cast v4, Ljava/util/Map$Entry;
 
-    .line 4268
+    .line 4269
     const/4 v5, 0x2
 
     const/4 v6, 0x2
@@ -2180,21 +1773,19 @@
 
     invoke-virtual {v0, v5, v6}, Lcom/crashlytics/android/core/CodedOutputStream;->e(II)V
 
-    .line 4269
+    .line 4270
     invoke-interface {v4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Ljava/lang/String;
 
-    .line 4270
     invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Ljava/lang/String;
 
-    .line 4269
     invoke-static {v5, v6}, Lcom/crashlytics/android/core/ag;->a(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v5
@@ -2203,7 +1794,7 @@
 
     invoke-virtual {v0, v5}, Lcom/crashlytics/android/core/CodedOutputStream;->e(I)V
 
-    .line 4272
+    .line 4273
     const/4 v6, 0x1
 
     invoke-interface {v4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -2220,14 +1811,14 @@
 
     invoke-virtual {v0, v6, v5}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
 
-    .line 4273
+    .line 4274
     invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Ljava/lang/String;
 
-    .line 4274
+    .line 4275
     const/4 v5, 0x2
 
     if-nez v4, :cond_a
@@ -2245,11 +1836,11 @@
 
     goto :goto_5
 
-    .line 3217
+    .line 3218
     :cond_b
     if-eqz p11, :cond_c
 
-    .line 3219
+    .line 3220
     const/4 v5, 0x3
 
     move-object/from16 v0, p11
@@ -2267,7 +1858,7 @@
 
     invoke-virtual {v0, v5, v4}, Lcom/crashlytics/android/core/CodedOutputStream;->a(IZ)V
 
-    .line 3223
+    .line 3224
     :cond_c
     const/4 v4, 0x4
 
@@ -2277,7 +1868,7 @@
 
     invoke-virtual {v0, v4, v1}, Lcom/crashlytics/android/core/CodedOutputStream;->a(II)V
 
-    .line 4362
+    .line 4363
     const/4 v4, 0x5
 
     const/4 v5, 0x2
@@ -2296,7 +1887,7 @@
 
     move-wide/from16 v10, p20
 
-    .line 4363
+    .line 4364
     invoke-static/range {v5 .. v11}, Lcom/crashlytics/android/core/ag;->a(Ljava/lang/Float;IIJJ)I
 
     move-result v4
@@ -2305,10 +1896,10 @@
 
     invoke-virtual {v0, v4}, Lcom/crashlytics/android/core/CodedOutputStream;->e(I)V
 
-    .line 4365
+    .line 4366
     if-eqz p15, :cond_d
 
-    .line 4366
+    .line 4367
     invoke-virtual/range {p15 .. p15}, Ljava/lang/Float;->floatValue()F
 
     move-result v4
@@ -2317,7 +1908,7 @@
 
     invoke-virtual {v0, v4}, Lcom/crashlytics/android/core/CodedOutputStream;->a(F)V
 
-    .line 4368
+    .line 4369
     :cond_d
     move-object/from16 v0, p0
 
@@ -2325,7 +1916,7 @@
 
     invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/CodedOutputStream;->a(I)V
 
-    .line 4369
+    .line 4370
     const/4 v4, 0x3
 
     move-object/from16 v0, p0
@@ -2334,7 +1925,7 @@
 
     invoke-virtual {v0, v4, v1}, Lcom/crashlytics/android/core/CodedOutputStream;->a(IZ)V
 
-    .line 4370
+    .line 4371
     const/4 v4, 0x4
 
     move-object/from16 v0, p0
@@ -2343,7 +1934,7 @@
 
     invoke-virtual {v0, v4, v1}, Lcom/crashlytics/android/core/CodedOutputStream;->a(II)V
 
-    .line 4371
+    .line 4372
     const/4 v4, 0x5
 
     move-object/from16 v0, p0
@@ -2352,7 +1943,7 @@
 
     invoke-virtual {v0, v4, v1, v2}, Lcom/crashlytics/android/core/CodedOutputStream;->a(IJ)V
 
-    .line 4372
+    .line 4373
     const/4 v4, 0x6
 
     move-object/from16 v0, p0
@@ -2361,10 +1952,10 @@
 
     invoke-virtual {v0, v4, v1, v2}, Lcom/crashlytics/android/core/CodedOutputStream;->a(IJ)V
 
-    .line 4377
+    .line 4378
     if-eqz v18, :cond_e
 
-    .line 4378
+    .line 4379
     const/4 v4, 0x6
 
     const/4 v5, 0x2
@@ -2373,7 +1964,7 @@
 
     invoke-virtual {v0, v4, v5}, Lcom/crashlytics/android/core/CodedOutputStream;->e(II)V
 
-    .line 4598
+    .line 4600
     const/4 v4, 0x1
 
     move-object/from16 v0, v18
@@ -2382,12 +1973,12 @@
 
     move-result v4
 
-    .line 4379
+    .line 4380
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v4}, Lcom/crashlytics/android/core/CodedOutputStream;->e(I)V
 
-    .line 4380
+    .line 4381
     const/4 v4, 0x1
 
     move-object/from16 v0, p0
@@ -2396,15 +1987,419 @@
 
     invoke-virtual {v0, v4, v1}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
 
-    .line 194
+    .line 195
     :cond_e
     return-void
 
-    .line 3219
+    .line 3220
     :cond_f
     const/4 v4, 0x0
 
     goto :goto_6
+.end method
+
+.method public static a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/lang/String;ILjava/lang/String;IJJZLjava/util/Map;ILjava/lang/String;Ljava/lang/String;)V
+    .locals 11
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/crashlytics/android/core/CodedOutputStream;",
+            "Ljava/lang/String;",
+            "I",
+            "Ljava/lang/String;",
+            "IJJZ",
+            "Ljava/util/Map",
+            "<",
+            "Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;",
+            "Ljava/lang/String;",
+            ">;I",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ")V"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    .prologue
+    .line 87
+    invoke-static {p1}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
+
+    move-result-object v5
+
+    .line 88
+    invoke-static {p3}, Lcom/crashlytics/android/core/ag;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
+
+    move-result-object v6
+
+    .line 89
+    invoke-static/range {p13 .. p13}, Lcom/crashlytics/android/core/ag;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
+
+    move-result-object v7
+
+    .line 90
+    invoke-static/range {p12 .. p12}, Lcom/crashlytics/android/core/ag;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
+
+    move-result-object v8
+
+    .line 92
+    const/16 v2, 0x9
+
+    const/4 v3, 0x2
+
+    invoke-virtual {p0, v2, v3}, Lcom/crashlytics/android/core/CodedOutputStream;->e(II)V
+
+    .line 2438
+    const/4 v2, 0x1
+
+    invoke-static {v2, v5}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, 0x0
+
+    .line 2439
+    const/4 v3, 0x3
+
+    invoke-static {v3, p2}, Lcom/crashlytics/android/core/CodedOutputStream;->d(II)I
+
+    move-result v3
+
+    add-int/2addr v3, v2
+
+    .line 2440
+    if-nez v6, :cond_0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    add-int/2addr v2, v3
+
+    .line 2441
+    const/4 v3, 0x5
+
+    invoke-static {v3, p4}, Lcom/crashlytics/android/core/CodedOutputStream;->c(II)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    .line 2442
+    const/4 v3, 0x6
+
+    move-wide/from16 v0, p5
+
+    invoke-static {v3, v0, v1}, Lcom/crashlytics/android/core/CodedOutputStream;->b(IJ)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    .line 2443
+    const/4 v3, 0x7
+
+    move-wide/from16 v0, p7
+
+    invoke-static {v3, v0, v1}, Lcom/crashlytics/android/core/CodedOutputStream;->b(IJ)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    .line 2444
+    const/16 v3, 0xa
+
+    invoke-static {v3}, Lcom/crashlytics/android/core/CodedOutputStream;->b(I)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    .line 2445
+    if-eqz p10, :cond_1
+
+    .line 2446
+    invoke-interface/range {p10 .. p10}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v9
+
+    move v4, v2
+
+    :goto_1
+    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v3, v2
+
+    check-cast v3, Ljava/util/Map$Entry;
+
+    .line 2447
+    invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
+
+    invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    invoke-static {v2, v3}, Lcom/crashlytics/android/core/ag;->a(Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;Ljava/lang/String;)I
+
+    move-result v2
+
+    .line 2448
+    const/16 v3, 0xb
+
+    invoke-static {v3}, Lcom/crashlytics/android/core/CodedOutputStream;->d(I)I
+
+    move-result v3
+
+    invoke-static {v2}, Lcom/crashlytics/android/core/CodedOutputStream;->f(I)I
+
+    move-result v10
+
+    add-int/2addr v3, v10
+
+    add-int/2addr v2, v3
+
+    add-int/2addr v2, v4
+
+    move v4, v2
+
+    .line 2450
+    goto :goto_1
+
+    .line 2440
+    :cond_0
+    const/4 v2, 0x4
+
+    invoke-static {v2, v6}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
+
+    move-result v2
+
+    goto :goto_0
+
+    :cond_1
+    move v4, v2
+
+    .line 2452
+    :cond_2
+    const/16 v2, 0xc
+
+    move/from16 v0, p11
+
+    invoke-static {v2, v0}, Lcom/crashlytics/android/core/CodedOutputStream;->c(II)I
+
+    move-result v2
+
+    add-int v3, v4, v2
+
+    .line 2453
+    if-nez v8, :cond_3
+
+    const/4 v2, 0x0
+
+    :goto_2
+    add-int/2addr v3, v2
+
+    .line 2454
+    if-nez v7, :cond_4
+
+    const/4 v2, 0x0
+
+    :goto_3
+    add-int/2addr v2, v3
+
+    .line 94
+    invoke-virtual {p0, v2}, Lcom/crashlytics/android/core/CodedOutputStream;->e(I)V
+
+    .line 98
+    const/4 v2, 0x1
+
+    invoke-virtual {p0, v2, v5}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
+
+    .line 100
+    const/4 v2, 0x3
+
+    invoke-virtual {p0, v2, p2}, Lcom/crashlytics/android/core/CodedOutputStream;->b(II)V
+
+    .line 101
+    const/4 v2, 0x4
+
+    invoke-virtual {p0, v2, v6}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
+
+    .line 102
+    const/4 v2, 0x5
+
+    invoke-virtual {p0, v2, p4}, Lcom/crashlytics/android/core/CodedOutputStream;->a(II)V
+
+    .line 103
+    const/4 v2, 0x6
+
+    move-wide/from16 v0, p5
+
+    invoke-virtual {p0, v2, v0, v1}, Lcom/crashlytics/android/core/CodedOutputStream;->a(IJ)V
+
+    .line 104
+    const/4 v2, 0x7
+
+    move-wide/from16 v0, p7
+
+    invoke-virtual {p0, v2, v0, v1}, Lcom/crashlytics/android/core/CodedOutputStream;->a(IJ)V
+
+    .line 105
+    const/16 v2, 0xa
+
+    move/from16 v0, p9
+
+    invoke-virtual {p0, v2, v0}, Lcom/crashlytics/android/core/CodedOutputStream;->a(IZ)V
+
+    .line 107
+    invoke-interface/range {p10 .. p10}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v5
+
+    :goto_4
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v4, v2
+
+    check-cast v4, Ljava/util/Map$Entry;
+
+    .line 108
+    const/16 v2, 0xb
+
+    const/4 v3, 0x2
+
+    invoke-virtual {p0, v2, v3}, Lcom/crashlytics/android/core/CodedOutputStream;->e(II)V
+
+    .line 109
+    invoke-interface {v4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
+
+    invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    invoke-static {v2, v3}, Lcom/crashlytics/android/core/ag;->a(Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;Ljava/lang/String;)I
+
+    move-result v2
+
+    invoke-virtual {p0, v2}, Lcom/crashlytics/android/core/CodedOutputStream;->e(I)V
+
+    .line 111
+    const/4 v3, 0x1
+
+    invoke-interface {v4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
+
+    iget v2, v2, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;->protobufIndex:I
+
+    invoke-virtual {p0, v3, v2}, Lcom/crashlytics/android/core/CodedOutputStream;->b(II)V
+
+    .line 112
+    const/4 v3, 0x2
+
+    invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    invoke-static {v2}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v3, v2}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
+
+    goto :goto_4
+
+    .line 2453
+    :cond_3
+    const/16 v2, 0xd
+
+    invoke-static {v2, v8}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
+
+    move-result v2
+
+    goto :goto_2
+
+    .line 2454
+    :cond_4
+    const/16 v2, 0xe
+
+    invoke-static {v2, v7}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
+
+    move-result v2
+
+    goto :goto_3
+
+    .line 114
+    :cond_5
+    const/16 v2, 0xc
+
+    move/from16 v0, p11
+
+    invoke-virtual {p0, v2, v0}, Lcom/crashlytics/android/core/CodedOutputStream;->a(II)V
+
+    .line 116
+    if-eqz v8, :cond_6
+
+    .line 117
+    const/16 v2, 0xd
+
+    invoke-virtual {p0, v2, v8}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
+
+    .line 119
+    :cond_6
+    if-eqz v7, :cond_7
+
+    .line 120
+    const/16 v2, 0xe
+
+    invoke-virtual {p0, v2, v7}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
+
+    .line 122
+    :cond_7
+    return-void
 .end method
 
 .method public static a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/lang/String;Ljava/lang/String;J)V
@@ -2416,7 +2411,7 @@
     .end annotation
 
     .prologue
-    .line 30
+    .line 31
     const/4 v0, 0x1
 
     invoke-static {p2}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
@@ -2425,7 +2420,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
 
-    .line 31
+    .line 32
     const/4 v0, 0x2
 
     invoke-static {p1}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
@@ -2434,12 +2429,12 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
 
-    .line 32
+    .line 33
     const/4 v0, 0x3
 
     invoke-virtual {p0, v0, p3, p4}, Lcom/crashlytics/android/core/CodedOutputStream;->a(IJ)V
 
-    .line 33
+    .line 34
     return-void
 .end method
 
@@ -2458,7 +2453,7 @@
 
     const/4 v5, 0x2
 
-    .line 126
+    .line 127
     if-nez p1, :cond_0
 
     const-string p1, ""
@@ -2468,70 +2463,70 @@
 
     move-result-object v1
 
-    .line 127
+    .line 128
     invoke-static {p2}, Lcom/crashlytics/android/core/ag;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
 
     move-result-object v2
 
-    .line 128
+    .line 129
     invoke-static {p3}, Lcom/crashlytics/android/core/ag;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
 
     move-result-object v3
 
-    .line 131
+    .line 132
     invoke-static {v6, v1}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
 
     move-result v0
 
     add-int/lit8 v0, v0, 0x0
 
-    .line 132
+    .line 133
     if-eqz p2, :cond_1
 
-    .line 133
+    .line 134
     invoke-static {v5, v2}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
 
     move-result v4
 
     add-int/2addr v0, v4
 
-    .line 135
+    .line 136
     :cond_1
     if-eqz p3, :cond_2
 
-    .line 136
+    .line 137
     invoke-static {v7, v3}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
 
     move-result v4
 
     add-int/2addr v0, v4
 
-    .line 139
+    .line 140
     :cond_2
     const/4 v4, 0x6
 
     invoke-virtual {p0, v4, v5}, Lcom/crashlytics/android/core/CodedOutputStream;->e(II)V
 
-    .line 140
+    .line 141
     invoke-virtual {p0, v0}, Lcom/crashlytics/android/core/CodedOutputStream;->e(I)V
 
-    .line 141
+    .line 142
     invoke-virtual {p0, v6, v1}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
 
-    .line 142
+    .line 143
     if-eqz p2, :cond_3
 
-    .line 143
+    .line 144
     invoke-virtual {p0, v5, v2}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
 
-    .line 145
+    .line 146
     :cond_3
     if-eqz p3, :cond_4
 
-    .line 146
+    .line 147
     invoke-virtual {p0, v7, v3}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
 
-    .line 148
+    .line 149
     :cond_4
     return-void
 .end method
@@ -2545,40 +2540,39 @@
     .end annotation
 
     .prologue
-    .line 38
+    .line 39
     invoke-static {p1}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
 
     move-result-object v3
 
-    .line 39
+    .line 40
     invoke-static {p2}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
 
     move-result-object v4
 
-    .line 40
+    .line 41
     invoke-static {p3}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
 
     move-result-object v5
 
-    .line 41
+    .line 42
     invoke-static {p4}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
 
     move-result-object v6
 
-    .line 42
+    .line 43
     invoke-static/range {p5 .. p5}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
 
     move-result-object v7
 
-    .line 43
+    .line 44
     if-eqz p7, :cond_2
 
-    .line 44
     invoke-static/range {p7 .. p7}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
 
     move-result-object v1
 
-    .line 47
+    .line 48
     :goto_0
     const/4 v2, 0x7
 
@@ -2586,7 +2580,7 @@
 
     invoke-virtual {p0, v2, v8}, Lcom/crashlytics/android/core/CodedOutputStream;->e(II)V
 
-    .line 1389
+    .line 1390
     const/4 v2, 0x1
 
     invoke-static {v2, v3}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
@@ -2595,7 +2589,7 @@
 
     add-int/lit8 v2, v2, 0x0
 
-    .line 1390
+    .line 1391
     const/4 v8, 0x2
 
     invoke-static {v8, v5}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
@@ -2604,7 +2598,7 @@
 
     add-int/2addr v2, v8
 
-    .line 1391
+    .line 1392
     const/4 v8, 0x3
 
     invoke-static {v8, v6}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
@@ -2613,7 +2607,7 @@
 
     add-int/2addr v2, v8
 
-    .line 1409
+    .line 1410
     const/4 v8, 0x1
 
     invoke-static {v8, v4}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
@@ -2622,14 +2616,13 @@
 
     add-int/lit8 v8, v8, 0x0
 
-    .line 1393
+    .line 1394
     const/4 v9, 0x5
 
     invoke-static {v9}, Lcom/crashlytics/android/core/CodedOutputStream;->d(I)I
 
     move-result v9
 
-    .line 1394
     invoke-static {v8}, Lcom/crashlytics/android/core/CodedOutputStream;->f(I)I
 
     move-result v10
@@ -2640,7 +2633,7 @@
 
     add-int/2addr v2, v8
 
-    .line 1395
+    .line 1396
     const/4 v8, 0x6
 
     invoke-static {v8, v7}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
@@ -2649,10 +2642,10 @@
 
     add-int/2addr v2, v8
 
-    .line 1397
+    .line 1398
     if-eqz v1, :cond_0
 
-    .line 1398
+    .line 1399
     const/16 v8, 0x8
 
     sget-object v9, Lcom/crashlytics/android/core/ag;->b:Lcom/crashlytics/android/core/b;
@@ -2663,7 +2656,7 @@
 
     add-int/2addr v2, v8
 
-    .line 1399
+    .line 1400
     const/16 v8, 0x9
 
     invoke-static {v8, v1}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
@@ -2672,7 +2665,7 @@
 
     add-int/2addr v2, v8
 
-    .line 1402
+    .line 1403
     :cond_0
     const/16 v8, 0xa
 
@@ -2684,32 +2677,32 @@
 
     add-int/2addr v2, v8
 
-    .line 48
+    .line 49
     invoke-virtual {p0, v2}, Lcom/crashlytics/android/core/CodedOutputStream;->e(I)V
 
-    .line 50
+    .line 51
     const/4 v2, 0x1
 
     invoke-virtual {p0, v2, v3}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
 
-    .line 51
+    .line 52
     const/4 v2, 0x2
 
     invoke-virtual {p0, v2, v5}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
 
-    .line 52
+    .line 53
     const/4 v2, 0x3
 
     invoke-virtual {p0, v2, v6}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
 
-    .line 55
+    .line 56
     const/4 v2, 0x5
 
     const/4 v3, 0x2
 
     invoke-virtual {p0, v2, v3}, Lcom/crashlytics/android/core/CodedOutputStream;->e(II)V
 
-    .line 2409
+    .line 2410
     const/4 v2, 0x1
 
     invoke-static {v2, v4}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
@@ -2718,35 +2711,35 @@
 
     add-int/lit8 v2, v2, 0x0
 
-    .line 56
+    .line 57
     invoke-virtual {p0, v2}, Lcom/crashlytics/android/core/CodedOutputStream;->e(I)V
 
-    .line 57
+    .line 58
     const/4 v2, 0x1
 
     invoke-virtual {p0, v2, v4}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
 
-    .line 60
+    .line 61
     const/4 v2, 0x6
 
     invoke-virtual {p0, v2, v7}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
 
-    .line 62
+    .line 63
     if-eqz v1, :cond_1
 
-    .line 63
+    .line 64
     const/16 v2, 0x8
 
     sget-object v3, Lcom/crashlytics/android/core/ag;->b:Lcom/crashlytics/android/core/b;
 
     invoke-virtual {p0, v2, v3}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
 
-    .line 64
+    .line 65
     const/16 v2, 0x9
 
     invoke-virtual {p0, v2, v1}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
 
-    .line 67
+    .line 68
     :cond_1
     const/16 v1, 0xa
 
@@ -2754,7 +2747,7 @@
 
     invoke-virtual {p0, v1, v0}, Lcom/crashlytics/android/core/CodedOutputStream;->b(II)V
 
-    .line 68
+    .line 69
     return-void
 
     .line 44
@@ -2764,7 +2757,70 @@
     goto/16 :goto_0
 .end method
 
-.method public static a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/lang/String;Ljava/lang/String;Z)V
+.method private static a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/lang/Thread;[Ljava/lang/StackTraceElement;IZ)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    .prologue
+    const/4 v2, 0x2
+
+    const/4 v1, 0x1
+
+    .line 317
+    invoke-virtual {p0, v1, v2}, Lcom/crashlytics/android/core/CodedOutputStream;->e(II)V
+
+    .line 318
+    invoke-static {p1, p2, p3, p4}, Lcom/crashlytics/android/core/ag;->a(Ljava/lang/Thread;[Ljava/lang/StackTraceElement;IZ)I
+
+    move-result v0
+
+    .line 319
+    invoke-virtual {p0, v0}, Lcom/crashlytics/android/core/CodedOutputStream;->e(I)V
+
+    .line 320
+    invoke-virtual {p1}, Ljava/lang/Thread;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v1, v0}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
+
+    .line 321
+    invoke-virtual {p0, v2, p3}, Lcom/crashlytics/android/core/CodedOutputStream;->a(II)V
+
+    .line 323
+    array-length v1, p2
+
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, v1, :cond_0
+
+    aget-object v2, p2, v0
+
+    .line 324
+    const/4 v3, 0x3
+
+    invoke-static {p0, v3, v2, p4}, Lcom/crashlytics/android/core/ag;->a(Lcom/crashlytics/android/core/CodedOutputStream;ILjava/lang/StackTraceElement;Z)V
+
+    .line 323
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    .line 326
+    :cond_0
+    return-void
+.end method
+
+.method public static a(Lcom/crashlytics/android/core/CodedOutputStream;Z)V
     .locals 8
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -2782,12 +2838,16 @@
     const/4 v4, 0x3
 
     .line 72
-    invoke-static {p1}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
+    sget-object v0, Landroid/os/Build$VERSION;->RELEASE:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
 
     move-result-object v0
 
     .line 73
-    invoke-static {p2}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
+    sget-object v1, Landroid/os/Build$VERSION;->CODENAME:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
 
     move-result-object v1
 
@@ -2796,28 +2856,28 @@
 
     invoke-virtual {p0, v2, v5}, Lcom/crashlytics/android/core/CodedOutputStream;->e(II)V
 
-    .line 2416
+    .line 2417
     invoke-static {v6, v4}, Lcom/crashlytics/android/core/CodedOutputStream;->d(II)I
 
     move-result v2
 
     add-int/lit8 v2, v2, 0x0
 
-    .line 2417
+    .line 2418
     invoke-static {v5, v0}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
 
     move-result v3
 
     add-int/2addr v2, v3
 
-    .line 2418
+    .line 2419
     invoke-static {v4, v1}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
 
     move-result v3
 
     add-int/2addr v2, v3
 
-    .line 2419
+    .line 2420
     invoke-static {v7}, Lcom/crashlytics/android/core/CodedOutputStream;->b(I)I
 
     move-result v3
@@ -2837,71 +2897,8 @@
     invoke-virtual {p0, v4, v1}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
 
     .line 80
-    invoke-virtual {p0, v7, p3}, Lcom/crashlytics/android/core/CodedOutputStream;->a(IZ)V
+    invoke-virtual {p0, v7, p1}, Lcom/crashlytics/android/core/CodedOutputStream;->a(IZ)V
 
     .line 81
-    return-void
-.end method
-
-.method private static a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/lang/Thread;[Ljava/lang/StackTraceElement;IZ)V
-    .locals 4
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Exception;
-        }
-    .end annotation
-
-    .prologue
-    const/4 v2, 0x2
-
-    const/4 v1, 0x1
-
-    .line 316
-    invoke-virtual {p0, v1, v2}, Lcom/crashlytics/android/core/CodedOutputStream;->e(II)V
-
-    .line 317
-    invoke-static {p1, p2, p3, p4}, Lcom/crashlytics/android/core/ag;->a(Ljava/lang/Thread;[Ljava/lang/StackTraceElement;IZ)I
-
-    move-result v0
-
-    .line 318
-    invoke-virtual {p0, v0}, Lcom/crashlytics/android/core/CodedOutputStream;->e(I)V
-
-    .line 319
-    invoke-virtual {p1}, Ljava/lang/Thread;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v1, v0}, Lcom/crashlytics/android/core/CodedOutputStream;->a(ILcom/crashlytics/android/core/b;)V
-
-    .line 320
-    invoke-virtual {p0, v2, p3}, Lcom/crashlytics/android/core/CodedOutputStream;->a(II)V
-
-    .line 322
-    array-length v1, p2
-
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, v1, :cond_0
-
-    aget-object v2, p2, v0
-
-    .line 323
-    const/4 v3, 0x3
-
-    invoke-static {p0, v3, v2, p4}, Lcom/crashlytics/android/core/ag;->a(Lcom/crashlytics/android/core/CodedOutputStream;ILjava/lang/StackTraceElement;Z)V
-
-    .line 322
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    .line 325
-    :cond_0
     return-void
 .end method

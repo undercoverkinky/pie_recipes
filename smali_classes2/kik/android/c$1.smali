@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/c;->a(Lkik/core/interfaces/ad;Lkik/core/interfaces/ICommunication;Lkik/core/interfaces/ag;)Lkik/core/interfaces/IAddressBookIntegration;
+    value = Lkik/android/c;->a(Lkik/core/interfaces/ad;Lkik/core/interfaces/ICommunication;Lkik/core/interfaces/af;)Lkik/core/interfaces/IAddressBookIntegration;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 123
+    .line 130
     iput-object p1, p0, Lkik/android/c$1;->b:Lkik/android/c;
 
     iput-object p2, p0, Lkik/android/c$1;->a:Lkik/android/addressbook/a;
@@ -44,13 +44,13 @@
     .locals 2
 
     .prologue
-    .line 127
+    .line 134
     iget-object v0, p0, Lkik/android/c$1;->a:Lkik/android/addressbook/a;
 
     const-string v1, "differential"
 
     invoke-virtual {v0, v1}, Lkik/android/addressbook/a;->d(Ljava/lang/String;)V
 
-    .line 128
+    .line 135
     return-void
 .end method

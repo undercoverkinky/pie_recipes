@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 166
+    .line 169
     invoke-direct {p0}, Landroid/support/v4/graphics/drawable/DrawableCompat$HoneycombDrawableImpl;-><init>()V
 
     return-void
@@ -31,12 +31,12 @@
     .locals 1
 
     .prologue
-    .line 174
+    .line 177
     invoke-static {p1}, Landroid/support/v4/graphics/drawable/DrawableCompatJellybeanMr1;->getLayoutDirection(Landroid/graphics/drawable/Drawable;)I
 
     move-result v0
 
-    .line 175
+    .line 178
     if-ltz v0, :cond_0
 
     :goto_0
@@ -48,14 +48,13 @@
     goto :goto_0
 .end method
 
-.method public setLayoutDirection(Landroid/graphics/drawable/Drawable;I)Z
-    .locals 1
+.method public setLayoutDirection(Landroid/graphics/drawable/Drawable;I)V
+    .locals 0
 
     .prologue
-    .line 169
-    invoke-static {p1, p2}, Landroid/support/v4/graphics/drawable/DrawableCompatJellybeanMr1;->setLayoutDirection(Landroid/graphics/drawable/Drawable;I)Z
+    .line 172
+    invoke-static {p1, p2}, Landroid/support/v4/graphics/drawable/DrawableCompatJellybeanMr1;->setLayoutDirection(Landroid/graphics/drawable/Drawable;I)V
 
-    move-result v0
-
-    return v0
+    .line 173
+    return-void
 .end method

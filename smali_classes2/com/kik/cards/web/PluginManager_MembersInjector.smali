@@ -12,7 +12,7 @@
         "Ljava/lang/Object;",
         "Ldagger/b",
         "<",
-        "Lcom/kik/cards/web/n;",
+        "Lcom/kik/cards/web/p;",
         ">;"
     }
 .end annotation
@@ -28,7 +28,7 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/v;",
+            "Lkik/core/interfaces/x;",
             ">;"
         }
     .end annotation
@@ -39,7 +39,7 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/ag;",
+            "Lkik/core/interfaces/af;",
             ">;"
         }
     .end annotation
@@ -50,7 +50,7 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/e/d;",
+            "Lkik/core/g/d;",
             ">;"
         }
     .end annotation
@@ -72,7 +72,7 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/d/b;",
+            "Lkik/core/f/b;",
             ">;"
         }
     .end annotation
@@ -83,7 +83,7 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/ab;",
+            "Lkik/core/interfaces/ac;",
             ">;"
         }
     .end annotation
@@ -105,7 +105,7 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/m;",
+            "Lkik/core/interfaces/n;",
             ">;"
         }
     .end annotation
@@ -116,7 +116,7 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/android/util/ai;",
+            "Lkik/android/util/ah;",
             ">;"
         }
     .end annotation
@@ -144,35 +144,13 @@
     .end annotation
 .end field
 
-.field private final m:Ljavax/inject/Provider;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljavax/inject/Provider",
-            "<",
-            "Lcom/kik/core/domain/b/b;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final n:Ljavax/inject/Provider;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljavax/inject/Provider",
-            "<",
-            "Lcom/kik/core/domain/b/a;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
     .prologue
-    .line 21
+    .line 18
     const-class v0, Lcom/kik/cards/web/PluginManager_MembersInjector;
 
     invoke-virtual {v0}, Ljava/lang/Class;->desiredAssertionStatus()Z
@@ -194,22 +172,22 @@
     goto :goto_0
 .end method
 
-.method private constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+.method private constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/v;",
+            "Lkik/core/interfaces/x;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/ag;",
+            "Lkik/core/interfaces/af;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/e/d;",
+            "Lkik/core/g/d;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
@@ -217,11 +195,11 @@
             ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/d/b;",
+            "Lkik/core/f/b;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/ab;",
+            "Lkik/core/interfaces/ac;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
@@ -229,11 +207,11 @@
             ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/m;",
+            "Lkik/core/interfaces/n;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/android/util/ai;",
+            "Lkik/android/util/ah;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
@@ -242,23 +220,15 @@
             "Ljavax/inject/Provider",
             "<",
             "Lcom/kik/android/Mixpanel;",
-            ">;",
-            "Ljavax/inject/Provider",
-            "<",
-            "Lcom/kik/core/domain/b/b;",
-            ">;",
-            "Ljavax/inject/Provider",
-            "<",
-            "Lcom/kik/core/domain/b/a;",
             ">;)V"
         }
     .end annotation
 
     .prologue
-    .line 65
+    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 66
+    .line 33
     sget-boolean v0, Lcom/kik/cards/web/PluginManager_MembersInjector;->a:Z
 
     if-nez v0, :cond_0
@@ -271,11 +241,11 @@
 
     throw v0
 
-    .line 67
+    .line 34
     :cond_0
     iput-object p1, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->b:Ljavax/inject/Provider;
 
-    .line 68
+    .line 35
     sget-boolean v0, Lcom/kik/cards/web/PluginManager_MembersInjector;->a:Z
 
     if-nez v0, :cond_1
@@ -288,11 +258,11 @@
 
     throw v0
 
-    .line 69
+    .line 36
     :cond_1
     iput-object p2, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->c:Ljavax/inject/Provider;
 
-    .line 70
+    .line 37
     sget-boolean v0, Lcom/kik/cards/web/PluginManager_MembersInjector;->a:Z
 
     if-nez v0, :cond_2
@@ -305,11 +275,11 @@
 
     throw v0
 
-    .line 71
+    .line 38
     :cond_2
     iput-object p3, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->d:Ljavax/inject/Provider;
 
-    .line 72
+    .line 39
     sget-boolean v0, Lcom/kik/cards/web/PluginManager_MembersInjector;->a:Z
 
     if-nez v0, :cond_3
@@ -322,11 +292,11 @@
 
     throw v0
 
-    .line 73
+    .line 40
     :cond_3
     iput-object p4, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->e:Ljavax/inject/Provider;
 
-    .line 74
+    .line 41
     sget-boolean v0, Lcom/kik/cards/web/PluginManager_MembersInjector;->a:Z
 
     if-nez v0, :cond_4
@@ -339,11 +309,11 @@
 
     throw v0
 
-    .line 75
+    .line 42
     :cond_4
     iput-object p5, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->f:Ljavax/inject/Provider;
 
-    .line 76
+    .line 43
     sget-boolean v0, Lcom/kik/cards/web/PluginManager_MembersInjector;->a:Z
 
     if-nez v0, :cond_5
@@ -356,11 +326,11 @@
 
     throw v0
 
-    .line 77
+    .line 44
     :cond_5
     iput-object p6, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->g:Ljavax/inject/Provider;
 
-    .line 78
+    .line 45
     sget-boolean v0, Lcom/kik/cards/web/PluginManager_MembersInjector;->a:Z
 
     if-nez v0, :cond_6
@@ -373,11 +343,11 @@
 
     throw v0
 
-    .line 79
+    .line 46
     :cond_6
     iput-object p7, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->h:Ljavax/inject/Provider;
 
-    .line 80
+    .line 47
     sget-boolean v0, Lcom/kik/cards/web/PluginManager_MembersInjector;->a:Z
 
     if-nez v0, :cond_7
@@ -390,11 +360,11 @@
 
     throw v0
 
-    .line 81
+    .line 48
     :cond_7
     iput-object p8, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->i:Ljavax/inject/Provider;
 
-    .line 82
+    .line 49
     sget-boolean v0, Lcom/kik/cards/web/PluginManager_MembersInjector;->a:Z
 
     if-nez v0, :cond_8
@@ -407,11 +377,11 @@
 
     throw v0
 
-    .line 83
+    .line 50
     :cond_8
     iput-object p9, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->j:Ljavax/inject/Provider;
 
-    .line 84
+    .line 51
     sget-boolean v0, Lcom/kik/cards/web/PluginManager_MembersInjector;->a:Z
 
     if-nez v0, :cond_9
@@ -424,11 +394,11 @@
 
     throw v0
 
-    .line 85
+    .line 52
     :cond_9
     iput-object p10, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->k:Ljavax/inject/Provider;
 
-    .line 86
+    .line 53
     sget-boolean v0, Lcom/kik/cards/web/PluginManager_MembersInjector;->a:Z
 
     if-nez v0, :cond_a
@@ -441,64 +411,30 @@
 
     throw v0
 
-    .line 87
+    .line 54
     :cond_a
     iput-object p11, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->l:Ljavax/inject/Provider;
 
-    .line 88
-    sget-boolean v0, Lcom/kik/cards/web/PluginManager_MembersInjector;->a:Z
-
-    if-nez v0, :cond_b
-
-    if-nez p12, :cond_b
-
-    new-instance v0, Ljava/lang/AssertionError;
-
-    invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
-
-    throw v0
-
-    .line 89
-    :cond_b
-    iput-object p12, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->m:Ljavax/inject/Provider;
-
-    .line 90
-    sget-boolean v0, Lcom/kik/cards/web/PluginManager_MembersInjector;->a:Z
-
-    if-nez v0, :cond_c
-
-    if-nez p13, :cond_c
-
-    new-instance v0, Ljava/lang/AssertionError;
-
-    invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
-
-    throw v0
-
-    .line 91
-    :cond_c
-    iput-object p13, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->n:Ljavax/inject/Provider;
-
-    .line 92
+    .line 55
     return-void
 .end method
 
-.method public static a(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Ldagger/b;
-    .locals 14
+.method public static a(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Ldagger/b;
+    .locals 12
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/v;",
+            "Lkik/core/interfaces/x;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/ag;",
+            "Lkik/core/interfaces/af;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/e/d;",
+            "Lkik/core/g/d;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
@@ -506,11 +442,11 @@
             ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/d/b;",
+            "Lkik/core/f/b;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/ab;",
+            "Lkik/core/interfaces/ac;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
@@ -518,11 +454,11 @@
             ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/m;",
+            "Lkik/core/interfaces/n;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/android/util/ai;",
+            "Lkik/android/util/ah;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
@@ -531,33 +467,25 @@
             "Ljavax/inject/Provider",
             "<",
             "Lcom/kik/android/Mixpanel;",
-            ">;",
-            "Ljavax/inject/Provider",
-            "<",
-            "Lcom/kik/core/domain/b/b;",
-            ">;",
-            "Ljavax/inject/Provider",
-            "<",
-            "Lcom/kik/core/domain/b/a;",
             ">;)",
             "Ldagger/b",
             "<",
-            "Lcom/kik/cards/web/n;",
+            "Lcom/kik/cards/web/p;",
             ">;"
         }
     .end annotation
 
     .prologue
-    .line 108
+    .line 76
     new-instance v0, Lcom/kik/cards/web/PluginManager_MembersInjector;
 
     move-object v1, p0
 
     move-object v2, p1
 
-    move-object/from16 v3, p2
+    move-object v3, p2
 
-    move-object/from16 v4, p3
+    move-object v4, p3
 
     move-object/from16 v5, p4
 
@@ -573,11 +501,7 @@
 
     move-object/from16 v11, p10
 
-    move-object/from16 v12, p11
-
-    move-object/from16 v13, p12
-
-    invoke-direct/range {v0 .. v13}, Lcom/kik/cards/web/PluginManager_MembersInjector;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+    invoke-direct/range {v0 .. v11}, Lcom/kik/cards/web/PluginManager_MembersInjector;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
 
     return-object v0
 .end method
@@ -588,13 +512,13 @@
     .locals 2
 
     .prologue
-    .line 21
-    check-cast p1, Lcom/kik/cards/web/n;
+    .line 18
+    check-cast p1, Lcom/kik/cards/web/p;
 
-    .line 1126
+    .line 1059
     if-nez p1, :cond_0
 
-    .line 1127
+    .line 1060
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "Cannot inject members into a null reference"
@@ -603,7 +527,7 @@
 
     throw v0
 
-    .line 1129
+    .line 1062
     :cond_0
     iget-object v0, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->b:Ljavax/inject/Provider;
 
@@ -611,33 +535,33 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/interfaces/v;
+    check-cast v0, Lkik/core/interfaces/x;
 
-    iput-object v0, p1, Lcom/kik/cards/web/n;->a:Lkik/core/interfaces/v;
+    iput-object v0, p1, Lcom/kik/cards/web/p;->a:Lkik/core/interfaces/x;
 
-    .line 1130
+    .line 1063
     iget-object v0, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->c:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/interfaces/ag;
+    check-cast v0, Lkik/core/interfaces/af;
 
-    iput-object v0, p1, Lcom/kik/cards/web/n;->b:Lkik/core/interfaces/ag;
+    iput-object v0, p1, Lcom/kik/cards/web/p;->b:Lkik/core/interfaces/af;
 
-    .line 1131
+    .line 1064
     iget-object v0, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->d:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/e/d;
+    check-cast v0, Lkik/core/g/d;
 
-    iput-object v0, p1, Lcom/kik/cards/web/n;->c:Lkik/core/e/d;
+    iput-object v0, p1, Lcom/kik/cards/web/p;->c:Lkik/core/g/d;
 
-    .line 1132
+    .line 1065
     iget-object v0, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->e:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
@@ -646,31 +570,31 @@
 
     check-cast v0, Lkik/core/interfaces/e;
 
-    iput-object v0, p1, Lcom/kik/cards/web/n;->d:Lkik/core/interfaces/e;
+    iput-object v0, p1, Lcom/kik/cards/web/p;->d:Lkik/core/interfaces/e;
 
-    .line 1133
+    .line 1066
     iget-object v0, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->f:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/d/b;
+    check-cast v0, Lkik/core/f/b;
 
-    iput-object v0, p1, Lcom/kik/cards/web/n;->e:Lkik/core/d/b;
+    iput-object v0, p1, Lcom/kik/cards/web/p;->e:Lkik/core/f/b;
 
-    .line 1134
+    .line 1067
     iget-object v0, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->g:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/interfaces/ab;
+    check-cast v0, Lkik/core/interfaces/ac;
 
-    iput-object v0, p1, Lcom/kik/cards/web/n;->f:Lkik/core/interfaces/ab;
+    iput-object v0, p1, Lcom/kik/cards/web/p;->f:Lkik/core/interfaces/ac;
 
-    .line 1135
+    .line 1068
     iget-object v0, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->h:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
@@ -679,31 +603,31 @@
 
     check-cast v0, Lkik/core/interfaces/ad;
 
-    iput-object v0, p1, Lcom/kik/cards/web/n;->g:Lkik/core/interfaces/ad;
+    iput-object v0, p1, Lcom/kik/cards/web/p;->g:Lkik/core/interfaces/ad;
 
-    .line 1136
+    .line 1069
     iget-object v0, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->i:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/interfaces/m;
+    check-cast v0, Lkik/core/interfaces/n;
 
-    iput-object v0, p1, Lcom/kik/cards/web/n;->h:Lkik/core/interfaces/m;
+    iput-object v0, p1, Lcom/kik/cards/web/p;->h:Lkik/core/interfaces/n;
 
-    .line 1137
+    .line 1070
     iget-object v0, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->j:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkik/android/util/ai;
+    check-cast v0, Lkik/android/util/ah;
 
-    iput-object v0, p1, Lcom/kik/cards/web/n;->i:Lkik/android/util/ai;
+    iput-object v0, p1, Lcom/kik/cards/web/p;->i:Lkik/android/util/ah;
 
-    .line 1138
+    .line 1071
     iget-object v0, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->k:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
@@ -712,9 +636,9 @@
 
     check-cast v0, Lcom/kik/android/b/g;
 
-    iput-object v0, p1, Lcom/kik/cards/web/n;->j:Lcom/kik/android/b/g;
+    iput-object v0, p1, Lcom/kik/cards/web/p;->j:Lcom/kik/android/b/g;
 
-    .line 1139
+    .line 1072
     iget-object v0, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->l:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
@@ -723,26 +647,8 @@
 
     check-cast v0, Lcom/kik/android/Mixpanel;
 
-    iput-object v0, p1, Lcom/kik/cards/web/n;->k:Lcom/kik/android/Mixpanel;
+    iput-object v0, p1, Lcom/kik/cards/web/p;->k:Lcom/kik/android/Mixpanel;
 
-    .line 1140
-    iget-object v0, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->m:Ljavax/inject/Provider;
-
-    invoke-static {v0}, Ldagger/internal/a;->b(Ljavax/inject/Provider;)Ldagger/a;
-
-    move-result-object v0
-
-    iput-object v0, p1, Lcom/kik/cards/web/n;->l:Ldagger/a;
-
-    .line 1141
-    iget-object v0, p0, Lcom/kik/cards/web/PluginManager_MembersInjector;->n:Ljavax/inject/Provider;
-
-    invoke-static {v0}, Ldagger/internal/a;->b(Ljavax/inject/Provider;)Ldagger/a;
-
-    move-result-object v0
-
-    iput-object v0, p1, Lcom/kik/cards/web/n;->m:Ldagger/a;
-
-    .line 21
+    .line 18
     return-void
 .end method

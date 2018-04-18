@@ -24,7 +24,7 @@
     invoke-super {p0, p1}, Lkik/android/chat/activity/FragmentWrapperActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 20
-    invoke-static {}, Lkik/android/util/p;->a()V
+    invoke-static {}, Lkik/android/util/q;->a()V
 
     .line 21
     invoke-virtual {p0}, Lkik/android/chat/activity/ConversationsActivity;->getApplication()Landroid/app/Application;

@@ -224,7 +224,6 @@
     :cond_1
     invoke-virtual {p0}, Lcom/kik/groups/GroupSuggestService$GetSuggestedGroupSearchTermsResponse;->makeExtensionsImmutable()V
 
-    .line 487
     throw v0
 
     .line 467

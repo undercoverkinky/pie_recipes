@@ -8,7 +8,7 @@
     .locals 0
 
     .prologue
-    .line 21
+    .line 17
     invoke-direct {p0}, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;-><init>()V
 
     return-void
@@ -18,7 +18,7 @@
     .locals 2
 
     .prologue
-    .line 42
+    .line 3038
     invoke-static {}, Lkik/android/util/g;->a()Lkik/android/util/g;
 
     move-result-object v0
@@ -29,17 +29,18 @@
 
     invoke-virtual {v0, p0, v1}, Lkik/android/util/g;->a(Lkik/android/chat/fragment/KikScopedDialogFragment;Landroid/content/Context;)V
 
+    .line 0
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()I
+.method protected final E()I
     .locals 1
 
     .prologue
-    .line 48
-    const v0, 0x7f040150
+    .line 56
+    const v0, 0x7f0a0448
 
     return v0
 .end method
@@ -48,8 +49,8 @@
     .locals 3
 
     .prologue
-    .line 54
-    const v0, 0x7f090171
+    .line 50
+    const v0, 0x7f0a0170
 
     const/4 v1, 0x1
 
@@ -59,36 +60,50 @@
 
     aput-object p1, v1, v2
 
-    invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/KikRegistrationFragment;->getStringFromResource(I[Ljava/lang/Object;)Ljava/lang/String;
+    .line 1092
+    invoke-static {v0, v1}, Lkik/android/chat/KikApplication;->a(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 50
     return-object v0
 .end method
 
-.method protected final b()V
+.method protected final b()I
+    .locals 1
+
+    .prologue
+    .line 44
+    const v0, 0x7f040111
+
+    return v0
+.end method
+
+.method protected final c()V
     .locals 4
 
     .prologue
-    .line 66
-    invoke-super {p0}, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->b()V
+    .line 62
+    invoke-super {p0}, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->c()V
 
-    .line 67
+    .line 63
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragment;->e:Lkik/android/widget/KikDatePickerDialog;
 
     const/4 v1, -0x1
 
-    const v2, 0x7f0903f4
+    const v2, 0x7f0a03e0
 
-    invoke-virtual {p0, v2}, Lkik/android/chat/fragment/KikRegistrationFragment;->getStringFromResource(I)Ljava/lang/String;
+    .line 2082
+    invoke-static {v2}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 63
     iget-object v3, p0, Lkik/android/chat/fragment/KikRegistrationFragment;->e:Lkik/android/widget/KikDatePickerDialog;
 
     invoke-virtual {v0, v1, v2, v3}, Lkik/android/widget/KikDatePickerDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 69
+    .line 65
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragment;->e:Lkik/android/widget/KikDatePickerDialog;
 
     const/4 v1, -0x2
@@ -99,30 +114,30 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lkik/android/widget/KikDatePickerDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 70
+    .line 66
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragment;->e:Lkik/android/widget/KikDatePickerDialog;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lkik/android/widget/KikDatePickerDialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 71
+    .line 67
     return-void
 .end method
 
-.method protected final c()V
+.method protected final d()V
     .locals 3
 
     .prologue
-    .line 76
+    .line 72
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragment;->_setProfilePhotoView:Lkik/android/chat/view/SetProfilePhotoView;
 
     invoke-virtual {v0}, Lkik/android/chat/view/SetProfilePhotoView;->a()V
 
-    .line 77
+    .line 73
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragment;->_setProfilePhotoView:Lkik/android/chat/view/SetProfilePhotoView;
 
-    new-instance v1, Lkik/android/widget/q;
+    new-instance v1, Lkik/android/widget/o;
 
     invoke-static {}, Lkik/android/util/g;->a()Lkik/android/util/g;
 
@@ -132,39 +147,29 @@
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lkik/android/widget/q;-><init>(Landroid/graphics/Bitmap;)V
+    invoke-direct {v1, v2}, Lkik/android/widget/o;-><init>(Landroid/graphics/Bitmap;)V
 
     invoke-virtual {v0, v1}, Lkik/android/chat/view/SetProfilePhotoView;->a(Landroid/graphics/drawable/Drawable;)V
 
-    .line 78
+    .line 74
     return-void
-.end method
-
-.method protected getTitleResource()I
-    .locals 1
-
-    .prologue
-    .line 60
-    const v0, 0x7f09045c
-
-    return v0
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 1
 
     .prologue
-    .line 41
+    .line 37
     invoke-super {p0, p1}, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->onCreate(Landroid/os/Bundle;)V
 
-    .line 42
-    invoke-static {p0}, Lkik/android/chat/fragment/de;->a(Lkik/android/chat/fragment/KikRegistrationFragment;)Landroid/view/View$OnClickListener;
+    .line 38
+    invoke-static {p0}, Lkik/android/chat/fragment/ep;->a(Lkik/android/chat/fragment/KikRegistrationFragment;)Landroid/view/View$OnClickListener;
 
     move-result-object v0
 
-    iput-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragment;->g:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragment;->f:Landroid/view/View$OnClickListener;
 
-    .line 43
+    .line 39
     return-void
 .end method
 
@@ -172,19 +177,19 @@
     .locals 2
 
     .prologue
-    .line 26
+    .line 22
     invoke-super {p0, p1, p2, p3}, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v0
 
-    .line 27
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikRegistrationFragment;->getRequestedStatusBarColor()I
+    .line 23
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikRegistrationFragment;->p()I
 
     move-result v1
 
-    invoke-virtual {p0, v1}, Lkik/android/chat/fragment/KikRegistrationFragment;->setStatusBarColor(I)V
+    invoke-virtual {p0, v1}, Lkik/android/chat/fragment/KikRegistrationFragment;->c(I)V
 
-    .line 29
+    .line 25
     return-object v0
 .end method
 
@@ -192,25 +197,9 @@
     .locals 0
 
     .prologue
-    .line 35
+    .line 31
     invoke-super {p0}, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->onDestroyView()V
 
-    .line 36
+    .line 32
     return-void
-.end method
-
-.method protected screenOpenedEvent()Lcom/kik/metrics/b/t;
-    .locals 1
-
-    .prologue
-    .line 84
-    invoke-static {}, Lcom/kik/metrics/b/ax;->b()Lcom/kik/metrics/b/ax$a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/kik/metrics/b/ax$a;->a()Lcom/kik/metrics/b/ax;
-
-    move-result-object v0
-
-    return-object v0
 .end method

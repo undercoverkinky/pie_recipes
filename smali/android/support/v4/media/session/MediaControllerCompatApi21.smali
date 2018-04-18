@@ -4,10 +4,6 @@
 
 
 # annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x15
-.end annotation
-
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/support/v4/media/session/MediaControllerCompatApi21$CallbackProxy;,
@@ -23,10 +19,10 @@
     .locals 0
 
     .prologue
-    .line 41
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 275
+    .line 254
     return-void
 .end method
 
@@ -34,12 +30,12 @@
     .locals 0
 
     .prologue
-    .line 126
+    .line 109
     check-cast p0, Landroid/media/session/MediaController;
 
     invoke-virtual {p0, p1, p2}, Landroid/media/session/MediaController;->adjustVolume(II)V
 
-    .line 127
+    .line 110
     return-void
 .end method
 
@@ -47,7 +43,7 @@
     .locals 1
 
     .prologue
-    .line 47
+    .line 42
     new-instance v0, Landroid/support/v4/media/session/MediaControllerCompatApi21$CallbackProxy;
 
     invoke-direct {v0, p0}, Landroid/support/v4/media/session/MediaControllerCompatApi21$CallbackProxy;-><init>(Landroid/support/v4/media/session/MediaControllerCompatApi21$Callback;)V
@@ -59,7 +55,7 @@
     .locals 1
 
     .prologue
-    .line 118
+    .line 101
     check-cast p0, Landroid/media/session/MediaController;
 
     invoke-virtual {p0, p1}, Landroid/media/session/MediaController;->dispatchMediaButtonEvent(Landroid/view/KeyEvent;)Z
@@ -73,7 +69,7 @@
     .locals 1
 
     .prologue
-    .line 43
+    .line 38
     new-instance v0, Landroid/media/session/MediaController;
 
     check-cast p1, Landroid/media/session/MediaSession$Token;
@@ -87,7 +83,7 @@
     .locals 1
 
     .prologue
-    .line 98
+    .line 81
     check-cast p0, Landroid/media/session/MediaController;
 
     invoke-virtual {p0}, Landroid/media/session/MediaController;->getExtras()Landroid/os/Bundle;
@@ -101,7 +97,7 @@
     .locals 2
 
     .prologue
-    .line 106
+    .line 89
     check-cast p0, Landroid/media/session/MediaController;
 
     invoke-virtual {p0}, Landroid/media/session/MediaController;->getFlags()J
@@ -111,23 +107,11 @@
     return-wide v0
 .end method
 
-.method public static getMediaController(Landroid/app/Activity;)Ljava/lang/Object;
-    .locals 1
-
-    .prologue
-    .line 65
-    invoke-virtual {p0}, Landroid/app/Activity;->getMediaController()Landroid/media/session/MediaController;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public static getMetadata(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
     .prologue
-    .line 81
+    .line 64
     check-cast p0, Landroid/media/session/MediaController;
 
     invoke-virtual {p0}, Landroid/media/session/MediaController;->getMetadata()Landroid/media/MediaMetadata;
@@ -141,7 +125,7 @@
     .locals 1
 
     .prologue
-    .line 135
+    .line 118
     check-cast p0, Landroid/media/session/MediaController;
 
     invoke-virtual {p0}, Landroid/media/session/MediaController;->getPackageName()Ljava/lang/String;
@@ -155,7 +139,7 @@
     .locals 1
 
     .prologue
-    .line 110
+    .line 93
     check-cast p0, Landroid/media/session/MediaController;
 
     invoke-virtual {p0}, Landroid/media/session/MediaController;->getPlaybackInfo()Landroid/media/session/MediaController$PlaybackInfo;
@@ -169,7 +153,7 @@
     .locals 1
 
     .prologue
-    .line 77
+    .line 60
     check-cast p0, Landroid/media/session/MediaController;
 
     invoke-virtual {p0}, Landroid/media/session/MediaController;->getPlaybackState()Landroid/media/session/PlaybackState;
@@ -194,24 +178,24 @@
     .end annotation
 
     .prologue
-    .line 85
+    .line 68
     check-cast p0, Landroid/media/session/MediaController;
 
     invoke-virtual {p0}, Landroid/media/session/MediaController;->getQueue()Ljava/util/List;
 
     move-result-object v1
 
-    .line 86
+    .line 69
     if-nez v1, :cond_0
 
-    .line 87
+    .line 70
     const/4 v0, 0x0
 
-    .line 90
+    .line 73
     :goto_0
     return-object v0
 
-    .line 89
+    .line 72
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -224,7 +208,7 @@
     .locals 1
 
     .prologue
-    .line 94
+    .line 77
     check-cast p0, Landroid/media/session/MediaController;
 
     invoke-virtual {p0}, Landroid/media/session/MediaController;->getQueueTitle()Ljava/lang/CharSequence;
@@ -238,7 +222,7 @@
     .locals 1
 
     .prologue
-    .line 102
+    .line 85
     check-cast p0, Landroid/media/session/MediaController;
 
     invoke-virtual {p0}, Landroid/media/session/MediaController;->getRatingType()I
@@ -252,24 +236,10 @@
     .locals 1
 
     .prologue
-    .line 114
+    .line 97
     check-cast p0, Landroid/media/session/MediaController;
 
     invoke-virtual {p0}, Landroid/media/session/MediaController;->getSessionActivity()Landroid/app/PendingIntent;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static getSessionToken(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    .prologue
-    .line 69
-    check-cast p0, Landroid/media/session/MediaController;
-
-    invoke-virtual {p0}, Landroid/media/session/MediaController;->getSessionToken()Landroid/media/session/MediaSession$Token;
 
     move-result-object v0
 
@@ -280,7 +250,7 @@
     .locals 1
 
     .prologue
-    .line 73
+    .line 56
     check-cast p0, Landroid/media/session/MediaController;
 
     invoke-virtual {p0}, Landroid/media/session/MediaController;->getTransportControls()Landroid/media/session/MediaController$TransportControls;
@@ -294,14 +264,14 @@
     .locals 0
 
     .prologue
-    .line 51
+    .line 46
     check-cast p0, Landroid/media/session/MediaController;
 
     check-cast p1, Landroid/media/session/MediaController$Callback;
 
     invoke-virtual {p0, p1, p2}, Landroid/media/session/MediaController;->registerCallback(Landroid/media/session/MediaController$Callback;Landroid/os/Handler;)V
 
-    .line 53
+    .line 48
     return-void
 .end method
 
@@ -309,25 +279,12 @@
     .locals 0
 
     .prologue
-    .line 131
+    .line 114
     check-cast p0, Landroid/media/session/MediaController;
 
     invoke-virtual {p0, p1, p2, p3}, Landroid/media/session/MediaController;->sendCommand(Ljava/lang/String;Landroid/os/Bundle;Landroid/os/ResultReceiver;)V
 
-    .line 132
-    return-void
-.end method
-
-.method public static setMediaController(Landroid/app/Activity;Ljava/lang/Object;)V
-    .locals 0
-
-    .prologue
-    .line 61
-    check-cast p1, Landroid/media/session/MediaController;
-
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->setMediaController(Landroid/media/session/MediaController;)V
-
-    .line 62
+    .line 115
     return-void
 .end method
 
@@ -335,12 +292,12 @@
     .locals 0
 
     .prologue
-    .line 122
+    .line 105
     check-cast p0, Landroid/media/session/MediaController;
 
     invoke-virtual {p0, p1, p2}, Landroid/media/session/MediaController;->setVolumeTo(II)V
 
-    .line 123
+    .line 106
     return-void
 .end method
 
@@ -348,14 +305,13 @@
     .locals 0
 
     .prologue
-    .line 56
+    .line 51
     check-cast p0, Landroid/media/session/MediaController;
 
     check-cast p1, Landroid/media/session/MediaController$Callback;
 
-    .line 57
     invoke-virtual {p0, p1}, Landroid/media/session/MediaController;->unregisterCallback(Landroid/media/session/MediaController$Callback;)V
 
-    .line 58
+    .line 53
     return-void
 .end method

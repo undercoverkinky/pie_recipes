@@ -1,53 +1,52 @@
-.class public interface abstract Lkik/android/chat/vm/ax;
-.super Ljava/lang/Object;
+.class public final Lkik/android/chat/vm/ax;
+.super Lkik/android/chat/vm/DialogViewModel;
 .source "SourceFile"
+
+# interfaces
+.implements Lkik/android/chat/vm/w;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lkik/android/chat/vm/ax$a;
+    }
+.end annotation
+
+
+# instance fields
+.field private a:Lkik/android/chat/vm/ReportDialogViewModel$ReportReason;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 7
+    invoke-direct {p0}, Lkik/android/chat/vm/DialogViewModel;-><init>()V
+
+    return-void
+.end method
+
+.method static synthetic a(Lkik/android/chat/vm/ax;Lkik/android/chat/vm/ReportDialogViewModel$ReportReason;)Lkik/android/chat/vm/ReportDialogViewModel$ReportReason;
+    .locals 0
+
+    .prologue
+    .line 7
+    iput-object p1, p0, Lkik/android/chat/vm/ax;->a:Lkik/android/chat/vm/ReportDialogViewModel$ReportReason;
+
+    return-object p1
+.end method
 
 
 # virtual methods
-.method public abstract a()Ljava/lang/String;
-.end method
+.method public final a()Lkik/android/chat/vm/ReportDialogViewModel$ReportReason;
+    .locals 1
 
-.method public abstract b()Lrx/d;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lrx/d",
-            "<",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-.end method
+    .prologue
+    .line 33
+    iget-object v0, p0, Lkik/android/chat/vm/ax;->a:Lkik/android/chat/vm/ReportDialogViewModel$ReportReason;
 
-.method public abstract d()Lrx/d;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lrx/d",
-            "<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end method
-
-.method public abstract e()Lrx/d;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lrx/d",
-            "<",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-.end method
-
-.method public abstract g()V
-.end method
-
-.method public abstract v_()V
-.end method
-
-.method public abstract w_()V
+    return-object v0
 .end method

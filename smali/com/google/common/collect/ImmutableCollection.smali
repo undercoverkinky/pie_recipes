@@ -26,30 +26,23 @@
 .end annotation
 
 
-# static fields
-.field private static final a:[Ljava/lang/Object;
+# instance fields
+.field private transient a:Lcom/google/common/collect/ImmutableList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/common/collect/ImmutableList",
+            "<TE;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    .prologue
-    .line 165
-    const/4 v0, 0x0
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    sput-object v0, Lcom/google/common/collect/ImmutableCollection;->a:[Ljava/lang/Object;
-
-    return-void
-.end method
-
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 157
+    .line 50
     invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
     return-void
@@ -59,12 +52,10 @@
 # virtual methods
 .method a([Ljava/lang/Object;I)I
     .locals 3
-    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
-    .end annotation
 
     .prologue
-    .line 300
-    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->a()Lcom/google/common/collect/s;
+    .line 199
+    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
@@ -79,26 +70,26 @@
 
     move-result-object v2
 
-    .line 301
+    .line 200
     add-int/lit8 v0, p2, 0x1
 
     aput-object v2, p1, p2
 
     move p2, v0
 
-    .line 302
+    .line 201
     goto :goto_0
 
-    .line 303
+    .line 202
     :cond_0
     return p2
 .end method
 
-.method public abstract a()Lcom/google/common/collect/s;
+.method public abstract a()Lcom/google/common/collect/x;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/google/common/collect/s",
+            "Lcom/google/common/collect/x",
             "<TE;>;"
         }
     .end annotation
@@ -106,9 +97,6 @@
 
 .method public final add(Ljava/lang/Object;)Z
     .locals 1
-    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TE;)Z"
@@ -119,7 +107,7 @@
     .end annotation
 
     .prologue
-    .line 205
+    .line 96
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -129,9 +117,6 @@
 
 .method public final addAll(Ljava/util/Collection;)Z
     .locals 1
-    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -144,7 +129,7 @@
     .end annotation
 
     .prologue
-    .line 231
+    .line 120
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -163,33 +148,20 @@
     .end annotation
 
     .prologue
-    .line 283
-    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->isEmpty()Z
+    .line 171
+    iget-object v0, p0, Lcom/google/common/collect/ImmutableCollection;->a:Lcom/google/common/collect/ImmutableList;
 
-    move-result v0
+    .line 172
+    if-nez v0, :cond_0
 
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Lcom/google/common/collect/ImmutableList;->d()Lcom/google/common/collect/ImmutableList;
+    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->f()Lcom/google/common/collect/ImmutableList;
 
     move-result-object v0
 
-    :goto_0
-    return-object v0
+    iput-object v0, p0, Lcom/google/common/collect/ImmutableCollection;->a:Lcom/google/common/collect/ImmutableList;
 
     :cond_0
-    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->toArray()[Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->b([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
-
-    move-result-object v0
-
-    goto :goto_0
-.end method
-
-.method abstract c()Z
+    return-object v0
 .end method
 
 .method public final clear()V
@@ -198,7 +170,7 @@
     .end annotation
 
     .prologue
-    .line 269
+    .line 156
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -206,19 +178,107 @@
     throw v0
 .end method
 
-.method public abstract contains(Ljava/lang/Object;)Z
+.method public contains(Ljava/lang/Object;)Z
+    .locals 1
     .param p1    # Ljava/lang/Object;
         .annotation runtime Ljavax/annotation/Nullable;
         .end annotation
     .end param
+
+    .prologue
+    .line 84
+    if-eqz p1, :cond_0
+
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method abstract e()Z
+.end method
+
+.method f()Lcom/google/common/collect/ImmutableList;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/google/common/collect/ImmutableList",
+            "<TE;>;"
+        }
+    .end annotation
+
+    .prologue
+    .line 176
+    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->size()I
+
+    move-result v0
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 182
+    new-instance v0, Lcom/google/common/collect/RegularImmutableAsList;
+
+    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->toArray()[Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-direct {v0, p0, v1}, Lcom/google/common/collect/RegularImmutableAsList;-><init>(Lcom/google/common/collect/ImmutableCollection;[Ljava/lang/Object;)V
+
+    :goto_0
+    return-object v0
+
+    .line 178
+    :pswitch_0
+    invoke-static {}, Lcom/google/common/collect/ImmutableList;->d()Lcom/google/common/collect/ImmutableList;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 180
+    :pswitch_1
+    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->a()Lcom/google/common/collect/x;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/common/collect/x;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->a(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 176
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method
 
 .method public synthetic iterator()Ljava/util/Iterator;
     .locals 1
 
     .prologue
-    .line 151
-    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->a()Lcom/google/common/collect/s;
+    .line 45
+    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->a()Lcom/google/common/collect/x;
 
     move-result-object v0
 
@@ -227,14 +287,11 @@
 
 .method public final remove(Ljava/lang/Object;)Z
     .locals 1
-    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
-    .end annotation
-
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .prologue
-    .line 218
+    .line 108
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -244,9 +301,6 @@
 
 .method public final removeAll(Ljava/util/Collection;)Z
     .locals 1
-    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -259,7 +313,7 @@
     .end annotation
 
     .prologue
-    .line 244
+    .line 132
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -269,9 +323,6 @@
 
 .method public final retainAll(Ljava/util/Collection;)Z
     .locals 1
-    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -284,7 +335,7 @@
     .end annotation
 
     .prologue
-    .line 257
+    .line 144
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -296,26 +347,26 @@
     .locals 2
 
     .prologue
-    .line 169
+    .line 60
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->size()I
 
     move-result v0
 
-    .line 170
+    .line 61
     if-nez v0, :cond_0
 
-    .line 171
-    sget-object v0, Lcom/google/common/collect/ImmutableCollection;->a:[Ljava/lang/Object;
+    .line 62
+    sget-object v0, Lcom/google/common/collect/o;->a:[Ljava/lang/Object;
 
-    .line 175
+    .line 66
     :goto_0
     return-object v0
 
-    .line 173
+    .line 64
     :cond_0
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 174
+    .line 65
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/google/common/collect/ImmutableCollection;->a([Ljava/lang/Object;I)I
@@ -325,9 +376,6 @@
 
 .method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
     .locals 2
-    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -337,54 +385,41 @@
     .end annotation
 
     .prologue
-    .line 181
-    invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 71
+    invoke-static {p1}, Lcom/google/common/base/h;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 182
+    .line 72
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->size()I
 
     move-result v0
 
-    .line 183
+    .line 73
     array-length v1, p1
 
     if-ge v1, v0, :cond_1
 
-    .line 2037
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 74
+    invoke-static {p1, v0}, Lcom/google/common/collect/o;->a([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p1
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
-
-    move-result-object v1
-
-    .line 2042
-    invoke-static {v1, v0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ljava/lang/Object;
-
-    move-object p1, v0
-
-    .line 188
+    .line 78
     :cond_0
     :goto_0
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/google/common/collect/ImmutableCollection;->a([Ljava/lang/Object;I)I
 
-    .line 189
+    .line 79
     return-object p1
 
-    .line 185
+    .line 75
     :cond_1
     array-length v1, p1
 
     if-le v1, v0, :cond_0
 
-    .line 186
+    .line 76
     const/4 v1, 0x0
 
     aput-object v1, p1, v0
@@ -396,7 +431,7 @@
     .locals 2
 
     .prologue
-    .line 308
+    .line 207
     new-instance v0, Lcom/google/common/collect/ImmutableList$SerializedForm;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->toArray()[Ljava/lang/Object;

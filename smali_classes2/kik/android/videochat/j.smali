@@ -14,25 +14,18 @@
 
 
 # instance fields
-.field private a:Z
-
-.field private b:Lkik/android/videochat/j$c;
+.field private a:Lkik/android/videochat/j$c;
 
 
 # direct methods
-.method public constructor <init>(Lkik/android/videochat/c;Lkik/core/datatypes/l;Lkik/core/interfaces/IConversation;Lkik/android/videochat/j$b;)V
+.method public constructor <init>(Lkik/android/videochat/c;Lkik/core/datatypes/o;Lkik/core/interfaces/j;Lkik/android/videochat/j$b;)V
     .locals 6
 
     .prologue
-    .line 28
+    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lkik/android/videochat/j;->a:Z
-
-    .line 29
+    .line 27
     new-instance v0, Lkik/android/videochat/j$a;
 
     move-object v1, p0
@@ -45,22 +38,12 @@
 
     move-object v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lkik/android/videochat/j$a;-><init>(Lkik/android/videochat/j;Lkik/android/videochat/c;Lkik/core/datatypes/l;Lkik/core/interfaces/IConversation;Lkik/android/videochat/j$b;)V
+    invoke-direct/range {v0 .. v5}, Lkik/android/videochat/j$a;-><init>(Lkik/android/videochat/j;Lkik/android/videochat/c;Lkik/core/datatypes/o;Lkik/core/interfaces/j;Lkik/android/videochat/j$b;)V
 
-    iput-object v0, p0, Lkik/android/videochat/j;->b:Lkik/android/videochat/j$c;
+    iput-object v0, p0, Lkik/android/videochat/j;->a:Lkik/android/videochat/j$c;
 
-    .line 30
+    .line 28
     return-void
-.end method
-
-.method static synthetic a(Lkik/android/videochat/j;)Z
-    .locals 1
-
-    .prologue
-    .line 15
-    iget-boolean v0, p0, Lkik/android/videochat/j;->a:Z
-
-    return v0
 .end method
 
 
@@ -69,22 +52,11 @@
     .locals 1
 
     .prologue
-    .line 34
-    iget-object v0, p0, Lkik/android/videochat/j;->b:Lkik/android/videochat/j$c;
+    .line 31
+    iget-object v0, p0, Lkik/android/videochat/j;->a:Lkik/android/videochat/j$c;
 
     invoke-virtual {v0}, Lkik/android/videochat/j$c;->a()V
 
-    .line 35
-    return-void
-.end method
-
-.method public final a(Z)V
-    .locals 0
-
-    .prologue
-    .line 39
-    iput-boolean p1, p0, Lkik/android/videochat/j;->a:Z
-
-    .line 40
+    .line 32
     return-void
 .end method

@@ -10,7 +10,10 @@
 .method public abstract B(Ljava/lang/String;)[B
 .end method
 
-.method public abstract C(Ljava/lang/String;)Z
+.method public abstract C(Ljava/lang/String;)Ljava/io/File;
+.end method
+
+.method public abstract D(Ljava/lang/String;)Z
 .end method
 
 .method public abstract a(Lkik/core/datatypes/f;)J
@@ -19,13 +22,24 @@
 .method public abstract a(Ljava/lang/String;Ljava/lang/Object;ZZZ)Ljava/io/File;
 .end method
 
-.method public abstract a(Ljava/lang/String;Z)Ljava/lang/Boolean;
-.end method
-
 .method public abstract a(Ljava/lang/String;I)Ljava/lang/Integer;
 .end method
 
-.method public abstract a(Lkik/core/datatypes/e;)Lrx/b;
+.method public abstract a(Ljava/lang/String;Z)Ljava/lang/Object;
+.end method
+
+.method public abstract a(Lkik/core/datatypes/e;)Lrx/c;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkik/core/datatypes/e;",
+            ")",
+            "Lrx/c",
+            "<",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
 .end method
 
 .method public abstract a(Ljava/lang/Integer;)V
@@ -37,22 +51,19 @@
 .method public abstract a(Ljava/util/UUID;Ljava/io/File;)V
 .end method
 
-.method public abstract a(Lkik/core/datatypes/aa;)V
+.method public abstract a(Lkik/core/datatypes/ad;)V
 .end method
 
 .method public abstract a(Lkik/core/datatypes/f;Lkik/core/datatypes/Message;)V
 .end method
 
-.method public abstract a([BLkik/core/datatypes/aa;)V
+.method public abstract a([BLkik/core/datatypes/ad;)V
 .end method
 
-.method public abstract a([BLkik/core/datatypes/p;)V
+.method public abstract a([BLkik/core/datatypes/s;)V
 .end method
 
 .method public abstract a(Ljava/io/File;)Z
-.end method
-
-.method public abstract a(Ljava/lang/Long;)Z
 .end method
 
 .method public abstract a(Ljava/lang/String;Ljava/lang/Boolean;)Z
@@ -86,7 +97,7 @@
             "(",
             "Ljava/util/ArrayList",
             "<",
-            "Lkik/core/datatypes/h;",
+            "Lkik/core/datatypes/j;",
             ">;)Z"
         }
     .end annotation
@@ -98,7 +109,7 @@
             "(",
             "Ljava/util/List",
             "<",
-            "Lkik/core/datatypes/l;",
+            "Lkik/core/datatypes/o;",
             ">;)Z"
         }
     .end annotation
@@ -110,13 +121,10 @@
 .method public abstract a(Lkik/core/datatypes/Message;)Z
 .end method
 
-.method public abstract a(Lkik/core/datatypes/h;)Z
-.end method
-
 .method public abstract a(Lkik/core/datatypes/j;)Z
 .end method
 
-.method public abstract b(Ljava/lang/String;Z)Ljava/lang/Object;
+.method public abstract a(Lkik/core/datatypes/m;)Z
 .end method
 
 .method public abstract b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -131,7 +139,7 @@
 .method public abstract b(Lkik/core/datatypes/f;)V
 .end method
 
-.method public abstract b([BLkik/core/datatypes/aa;)V
+.method public abstract b([BLkik/core/datatypes/ad;)V
 .end method
 
 .method public abstract b(Ljava/util/List;)Z
@@ -140,7 +148,7 @@
             "(",
             "Ljava/util/List",
             "<",
-            "Lkik/core/datatypes/p;",
+            "Lkik/core/datatypes/s;",
             ">;)Z"
         }
     .end annotation
@@ -154,7 +162,7 @@
     .end annotation
 .end method
 
-.method public abstract b(Lkik/core/datatypes/l;)Z
+.method public abstract b(Lkik/core/datatypes/o;)Z
 .end method
 
 .method public abstract c()Lcom/kik/events/c;
@@ -163,7 +171,23 @@
             "()",
             "Lcom/kik/events/c",
             "<",
-            "Lkik/core/datatypes/l;",
+            "Lkik/core/datatypes/o;",
+            ">;"
+        }
+    .end annotation
+.end method
+
+.method public abstract c(Ljava/util/List;)Lrx/c;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lkik/core/datatypes/Message;",
+            ">;)",
+            "Lrx/c",
+            "<",
+            "Ljava/lang/Boolean;",
             ">;"
         }
     .end annotation
@@ -175,28 +199,13 @@
 .method public abstract c(Ljava/lang/String;Ljava/lang/String;)Z
 .end method
 
-.method public abstract c(Ljava/util/List;)Z
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lkik/core/datatypes/Message;",
-            ">;)Z"
-        }
-    .end annotation
-
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end method
-
 .method public abstract c(Lkik/core/datatypes/Message;)Z
 .end method
 
 .method public abstract c(Lkik/core/datatypes/f;)Z
 .end method
 
-.method public abstract c(Lkik/core/datatypes/l;)Z
+.method public abstract c(Lkik/core/datatypes/o;)Z
 .end method
 
 .method public abstract d()Lcom/kik/events/c;
@@ -205,7 +214,7 @@
             "()",
             "Lcom/kik/events/c",
             "<",
-            "Lkik/core/datatypes/m;",
+            "Lkik/core/datatypes/p;",
             ">;"
         }
     .end annotation
@@ -214,7 +223,7 @@
 .method public abstract d(Lkik/core/datatypes/Message;)Lkik/core/datatypes/Message;
 .end method
 
-.method public abstract d(Lkik/core/datatypes/l;)V
+.method public abstract d(Lkik/core/datatypes/o;)V
 .end method
 
 .method public abstract d(Ljava/util/List;)Z
@@ -226,6 +235,9 @@
             "Lkik/core/datatypes/Message;",
             ">;)Z"
         }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end method
 
@@ -241,42 +253,54 @@
     .end annotation
 .end method
 
-.method public abstract f()J
+.method public abstract e(Ljava/util/List;)Z
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lkik/core/datatypes/Message;",
+            ">;)Z"
+        }
+    .end annotation
 .end method
 
-.method public abstract g()V
+.method public abstract f()V
 .end method
 
-.method public abstract h()Ljava/util/Hashtable;
+.method public abstract g()Ljava/util/Hashtable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
             "Ljava/util/Hashtable",
             "<",
             "Ljava/lang/String;",
-            "Lkik/core/datatypes/h;",
+            "Lkik/core/datatypes/j;",
             ">;"
         }
     .end annotation
 .end method
 
-.method public abstract i()V
+.method public abstract h()V
 .end method
 
-.method public abstract j()Z
+.method public abstract i()Z
 .end method
 
-.method public abstract k()Ljava/util/Hashtable;
+.method public abstract j()Ljava/util/Hashtable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
             "Ljava/util/Hashtable",
             "<",
             "Ljava/lang/String;",
-            "Lkik/core/datatypes/l;",
+            "Lkik/core/datatypes/o;",
             ">;"
         }
     .end annotation
+.end method
+
+.method public abstract k()J
 .end method
 
 .method public abstract l()J
@@ -285,25 +309,13 @@
 .method public abstract l(Ljava/lang/String;)Ljava/io/File;
 .end method
 
-.method public abstract m()J
+.method public abstract m(Ljava/lang/String;)Lkik/core/datatypes/m;
 .end method
 
-.method public abstract m(Ljava/lang/String;)J
+.method public abstract m()V
 .end method
 
-.method public abstract n()J
-.end method
-
-.method public abstract n(Ljava/lang/String;)Lkik/core/datatypes/j;
-.end method
-
-.method public abstract o()V
-.end method
-
-.method public abstract o(Ljava/lang/String;)Z
-.end method
-
-.method public abstract p()Ljava/util/Hashtable;
+.method public abstract n()Ljava/util/Hashtable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -316,22 +328,31 @@
     .end annotation
 .end method
 
-.method public abstract p(Ljava/lang/String;)Lkik/core/datatypes/l;
+.method public abstract n(Ljava/lang/String;)Z
 .end method
 
-.method public abstract q()Ljava/lang/String;
+.method public abstract o()Ljava/lang/String;
 .end method
 
-.method public abstract q(Ljava/lang/String;)Z
+.method public abstract o(Ljava/lang/String;)Lkik/core/datatypes/o;
 .end method
 
-.method public abstract r(Ljava/lang/String;)Ljava/lang/String;
+.method public abstract p()Lkik/core/interfaces/i;
 .end method
 
-.method public abstract r()Lkik/core/interfaces/i;
+.method public abstract p(Ljava/lang/String;)Z
 .end method
 
-.method public abstract s(Ljava/lang/String;)Ljava/util/Set;
+.method public abstract q(Ljava/lang/String;)Ljava/lang/String;
+.end method
+
+.method public abstract q()Z
+.end method
+
+.method public abstract r()Ljava/io/File;
+.end method
+
+.method public abstract r(Ljava/lang/String;)Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -345,16 +366,13 @@
     .end annotation
 .end method
 
-.method public abstract s()Z
+.method public abstract s(Ljava/lang/String;)Ljava/lang/Integer;
 .end method
 
-.method public abstract t()Ljava/io/File;
+.method public abstract t(Ljava/lang/String;)Ljava/lang/Long;
 .end method
 
-.method public abstract t(Ljava/lang/String;)Ljava/lang/Integer;
-.end method
-
-.method public abstract u(Ljava/lang/String;)Ljava/lang/Long;
+.method public abstract u(Ljava/lang/String;)Ljava/lang/Boolean;
 .end method
 
 .method public abstract v(Ljava/lang/String;)Ljava/lang/Boolean;

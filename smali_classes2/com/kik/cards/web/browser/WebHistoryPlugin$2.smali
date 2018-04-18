@@ -1,11 +1,11 @@
 .class final Lcom/kik/cards/web/browser/WebHistoryPlugin$2;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/cards/web/browser/WebHistoryPlugin;->deleteHistoryItems(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/g;
+    value = Lcom/kik/cards/web/browser/WebHistoryPlugin;->deleteHistoryItems(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/h;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Ljava/lang/Void;",
         ">;"
@@ -39,7 +39,7 @@
 
     iput-object p2, p0, Lcom/kik/cards/web/browser/WebHistoryPlugin$2;->a:Lcom/kik/cards/web/plugin/a;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -54,11 +54,11 @@
     .line 1091
     iget-object v0, p0, Lcom/kik/cards/web/browser/WebHistoryPlugin$2;->a:Lcom/kik/cards/web/plugin/a;
 
-    new-instance v1, Lcom/kik/cards/web/plugin/g;
+    new-instance v1, Lcom/kik/cards/web/plugin/h;
 
-    invoke-direct {v1}, Lcom/kik/cards/web/plugin/g;-><init>()V
+    invoke-direct {v1}, Lcom/kik/cards/web/plugin/h;-><init>()V
 
-    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/g;)V
+    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/h;)V
 
     .line 87
     return-void
@@ -71,13 +71,13 @@
     .line 97
     iget-object v0, p0, Lcom/kik/cards/web/browser/WebHistoryPlugin$2;->a:Lcom/kik/cards/web/plugin/a;
 
-    new-instance v1, Lcom/kik/cards/web/plugin/g;
+    new-instance v1, Lcom/kik/cards/web/plugin/h;
 
     const/16 v2, 0x1f4
 
-    invoke-direct {v1, v2}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v1, v2}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
-    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/g;)V
+    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/h;)V
 
     .line 98
     return-void

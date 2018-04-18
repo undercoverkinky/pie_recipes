@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/android/volley/h$a;
+.implements Lcom/android/volley/i$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/util/f;->a(Ljava/util/ArrayList;ILcom/kik/cache/KikVolleyImageLoader;)Lkik/android/util/f$a;
+    value = Lkik/android/util/f;->a(Ljava/util/ArrayList;ILcom/kik/cache/aa;)Lkik/android/util/f$a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 613
+    .line 606
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,6 +34,6 @@
     .locals 0
 
     .prologue
-    .line 617
+    .line 610
     return-void
 .end method

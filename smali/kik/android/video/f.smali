@@ -14,7 +14,7 @@
 
 
 # instance fields
-.field protected a:Lcom/kik/storage/s;
+.field protected a:Lcom/kik/e/p;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
@@ -224,35 +224,35 @@
     const/16 v1, 0x14
 
     :try_start_3
-    invoke-static {v0, v1}, Lkik/android/util/bv;->a(Landroid/media/MediaMetadataRetriever;I)I
+    invoke-static {v0, v1}, Lkik/android/util/bx;->a(Landroid/media/MediaMetadataRetriever;I)I
 
     move-result v9
 
     .line 101
     const/16 v1, 0x12
 
-    invoke-static {v0, v1}, Lkik/android/util/bv;->a(Landroid/media/MediaMetadataRetriever;I)I
+    invoke-static {v0, v1}, Lkik/android/util/bx;->a(Landroid/media/MediaMetadataRetriever;I)I
 
     move-result v7
 
     .line 102
     const/16 v1, 0x13
 
-    invoke-static {v0, v1}, Lkik/android/util/bv;->a(Landroid/media/MediaMetadataRetriever;I)I
+    invoke-static {v0, v1}, Lkik/android/util/bx;->a(Landroid/media/MediaMetadataRetriever;I)I
 
     move-result v8
 
     .line 103
     const/16 v1, 0x18
 
-    invoke-static {v0, v1}, Lkik/android/util/bv;->a(Landroid/media/MediaMetadataRetriever;I)I
+    invoke-static {v0, v1}, Lkik/android/util/bx;->a(Landroid/media/MediaMetadataRetriever;I)I
 
     move-result v4
 
     .line 104
     const/16 v1, 0x9
 
-    invoke-static {v0, v1}, Lkik/android/util/bv;->b(Landroid/media/MediaMetadataRetriever;I)J
+    invoke-static {v0, v1}, Lkik/android/util/bx;->b(Landroid/media/MediaMetadataRetriever;I)J
 
     move-result-wide v10
 
@@ -260,7 +260,7 @@
     invoke-virtual {v0}, Landroid/media/MediaMetadataRetriever;->release()V
 
     .line 107
-    iget-object v0, p0, Lkik/android/video/f;->a:Lcom/kik/storage/s;
+    iget-object v0, p0, Lkik/android/video/f;->a:Lcom/kik/e/p;
 
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
@@ -270,7 +270,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/kik/storage/s;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, v1}, Lcom/kik/e/p;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -324,7 +324,7 @@
 
     invoke-direct/range {v0 .. v11}, Lkik/android/video/f$1;-><init>(Lkik/android/video/f;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;IIIJ)V
 
-    invoke-virtual {v12, v0}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
+    invoke-virtual {v12, v0}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
 
     move-object v0, v12
 
@@ -335,7 +335,7 @@
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/kik/events/l;->a(Ljava/lang/Throwable;)Lcom/kik/events/Promise;
+    invoke-static {v0}, Lcom/kik/events/m;->a(Ljava/lang/Throwable;)Lcom/kik/events/Promise;
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 

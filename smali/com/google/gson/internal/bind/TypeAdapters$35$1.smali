@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/gson/internal/bind/TypeAdapters$35;->a(Lcom/google/gson/e;Lcom/google/gson/b/a;)Lcom/google/gson/o;
+    value = Lcom/google/gson/internal/bind/TypeAdapters$35;->a(Lcom/google/gson/d;Lcom/google/gson/b/a;)Lcom/google/gson/o;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 887
+    .line 908
     iput-object p1, p0, Lcom/google/gson/internal/bind/TypeAdapters$35$1;->b:Lcom/google/gson/internal/bind/TypeAdapters$35;
 
     iput-object p2, p0, Lcom/google/gson/internal/bind/TypeAdapters$35$1;->a:Ljava/lang/Class;
@@ -61,7 +61,7 @@
     .end annotation
 
     .prologue
-    .line 893
+    .line 914
     iget-object v0, p0, Lcom/google/gson/internal/bind/TypeAdapters$35$1;->b:Lcom/google/gson/internal/bind/TypeAdapters$35;
 
     iget-object v0, v0, Lcom/google/gson/internal/bind/TypeAdapters$35;->b:Lcom/google/gson/o;
@@ -70,7 +70,7 @@
 
     move-result-object v0
 
-    .line 894
+    .line 915
     if-eqz v0, :cond_0
 
     iget-object v1, p0, Lcom/google/gson/internal/bind/TypeAdapters$35$1;->a:Ljava/lang/Class;
@@ -81,7 +81,7 @@
 
     if-nez v1, :cond_0
 
-    .line 895
+    .line 916
     new-instance v1, Lcom/google/gson/JsonSyntaxException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -106,7 +106,7 @@
 
     move-result-object v2
 
-    .line 896
+    .line 917
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -127,7 +127,7 @@
 
     throw v1
 
-    .line 898
+    .line 919
     :cond_0
     return-object v0
 .end method
@@ -149,13 +149,13 @@
     .end annotation
 
     .prologue
-    .line 889
+    .line 910
     iget-object v0, p0, Lcom/google/gson/internal/bind/TypeAdapters$35$1;->b:Lcom/google/gson/internal/bind/TypeAdapters$35;
 
     iget-object v0, v0, Lcom/google/gson/internal/bind/TypeAdapters$35;->b:Lcom/google/gson/o;
 
     invoke-virtual {v0, p1, p2}, Lcom/google/gson/o;->a(Lcom/google/gson/stream/b;Ljava/lang/Object;)V
 
-    .line 890
+    .line 911
     return-void
 .end method

@@ -116,10 +116,13 @@
 
     goto :goto_0
 
-    .line 98
+    .line 97
     :catch_1
     move-exception v0
 
+    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
+
+    .line 98
     iget-object v0, p0, Lkik/android/c/n$1;->a:Lkik/android/c/n;
 
     iget-object v0, v0, Lkik/android/c/n;->c:Lkik/android/c/b$b;

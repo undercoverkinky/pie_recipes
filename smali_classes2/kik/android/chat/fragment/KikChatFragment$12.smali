@@ -21,8 +21,10 @@
         "Ljava/lang/Object;",
         "Lcom/kik/events/e",
         "<",
-        "Lkik/core/datatypes/f;",
-        ">;"
+        "Ljava/util/List",
+        "<",
+        "Ljava/lang/String;",
+        ">;>;"
     }
 .end annotation
 
@@ -36,7 +38,7 @@
     .locals 0
 
     .prologue
-    .line 510
+    .line 416
     iput-object p1, p0, Lkik/android/chat/fragment/KikChatFragment$12;->a:Lkik/android/chat/fragment/KikChatFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,57 +52,26 @@
     .locals 2
 
     .prologue
-    .line 510
-    check-cast p2, Lkik/core/datatypes/f;
-
-    .line 1514
-    if-eqz p2, :cond_0
-
+    .line 416
+    .line 1420
     iget-object v0, p0, Lkik/android/chat/fragment/KikChatFragment$12;->a:Lkik/android/chat/fragment/KikChatFragment;
 
-    invoke-static {v0}, Lkik/android/chat/fragment/KikChatFragment;->k(Lkik/android/chat/fragment/KikChatFragment;)Lkik/core/datatypes/l;
-
-    move-result-object v0
-
-    if-nez v0, :cond_1
-
-    .line 1515
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 1517
-    :cond_1
-    invoke-virtual {p2}, Lkik/core/datatypes/f;->g()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lkik/android/chat/fragment/KikChatFragment$12;->a:Lkik/android/chat/fragment/KikChatFragment;
-
-    invoke-static {v1}, Lkik/android/chat/fragment/KikChatFragment;->k(Lkik/android/chat/fragment/KikChatFragment;)Lkik/core/datatypes/l;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lkik/core/datatypes/l;->k()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
+    iget-object v0, v0, Lkik/android/chat/fragment/KikChatFragment;->_bugmeBar:Lkik/android/widget/BugmeBarView;
 
     if-eqz v0, :cond_0
 
-    .line 1520
+    .line 1421
     iget-object v0, p0, Lkik/android/chat/fragment/KikChatFragment$12;->a:Lkik/android/chat/fragment/KikChatFragment;
 
-    invoke-static {v0}, Lkik/android/chat/fragment/KikChatFragment;->n(Lkik/android/chat/fragment/KikChatFragment;)Landroid/os/Handler;
+    invoke-static {v0}, Lkik/android/chat/fragment/KikChatFragment;->h(Lkik/android/chat/fragment/KikChatFragment;)Landroid/os/Handler;
 
     move-result-object v0
 
-    const/4 v1, 0x1
+    const/4 v1, 0x6
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    goto :goto_0
+    .line 416
+    :cond_0
+    return-void
 .end method

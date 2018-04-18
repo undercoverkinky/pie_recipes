@@ -25,7 +25,7 @@
     .locals 3
 
     .prologue
-    .line 811
+    .line 807
     invoke-static {}, Lkik/core/interfaces/IAddressBookIntegration$AddressBookUploadState;->values()[Lkik/core/interfaces/IAddressBookIntegration$AddressBookUploadState;
 
     move-result-object v0
@@ -67,7 +67,7 @@
     :try_end_1
     .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 641
+    .line 639
     :goto_1
     invoke-static {}, Lkik/android/addressbook/AndroidAddressBookCursorWrapper$AndroidAddressBookEntry$AddressBookEntryType;->values()[Lkik/android/addressbook/AndroidAddressBookCursorWrapper$AndroidAddressBookEntry$AddressBookEntryType;
 

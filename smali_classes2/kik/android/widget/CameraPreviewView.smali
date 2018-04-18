@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/android/widget/a;
+.implements Lkik/android/widget/c;
 
 
 # instance fields
@@ -70,16 +70,6 @@
 
 
 # virtual methods
-.method public final a()I
-    .locals 1
-
-    .prologue
-    .line 61
-    iget v0, p0, Lkik/android/widget/CameraPreviewView;->a:I
-
-    return v0
-.end method
-
 .method public final a(II)V
     .locals 2
 
@@ -118,7 +108,41 @@
     return-void
 .end method
 
+.method public final a()Z
+    .locals 1
+
+    .prologue
+    .line 56
+    iget v0, p0, Lkik/android/widget/CameraPreviewView;->b:I
+
+    if-ltz v0, :cond_0
+
+    iget v0, p0, Lkik/android/widget/CameraPreviewView;->a:I
+
+    if-ltz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public final b()I
+    .locals 1
+
+    .prologue
+    .line 61
+    iget v0, p0, Lkik/android/widget/CameraPreviewView;->a:I
+
+    return v0
+.end method
+
+.method public final c()I
     .locals 1
 
     .prologue

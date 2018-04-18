@@ -60,7 +60,7 @@
 
     const/4 v4, 0x1
 
-    .line 59
+    .line 56
     new-instance v0, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
 
     const-string v1, "WIFI_MAC_ADDRESS"
@@ -69,7 +69,7 @@
 
     sput-object v0, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;->WIFI_MAC_ADDRESS:Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
 
-    .line 60
+    .line 57
     new-instance v0, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
 
     const-string v1, "BLUETOOTH_MAC_ADDRESS"
@@ -78,7 +78,7 @@
 
     sput-object v0, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;->BLUETOOTH_MAC_ADDRESS:Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
 
-    .line 63
+    .line 60
     new-instance v0, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
 
     const-string v1, "FONT_TOKEN"
@@ -89,7 +89,7 @@
 
     sput-object v0, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;->FONT_TOKEN:Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
 
-    .line 64
+    .line 61
     new-instance v0, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
 
     const-string v1, "ANDROID_ID"
@@ -100,7 +100,7 @@
 
     sput-object v0, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;->ANDROID_ID:Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
 
-    .line 65
+    .line 62
     new-instance v0, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
 
     const-string v1, "ANDROID_DEVICE_ID"
@@ -111,7 +111,7 @@
 
     sput-object v0, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;->ANDROID_DEVICE_ID:Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
 
-    .line 66
+    .line 63
     new-instance v0, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
 
     const-string v1, "ANDROID_SERIAL"
@@ -124,7 +124,7 @@
 
     sput-object v0, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;->ANDROID_SERIAL:Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
 
-    .line 67
+    .line 64
     new-instance v0, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
 
     const-string v1, "ANDROID_ADVERTISING_ID"
@@ -137,7 +137,7 @@
 
     sput-object v0, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;->ANDROID_ADVERTISING_ID:Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
 
-    .line 57
+    .line 54
     const/4 v0, 0x7
 
     new-array v0, v0, [Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
@@ -188,13 +188,13 @@
     .end annotation
 
     .prologue
-    .line 71
+    .line 68
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 72
+    .line 69
     iput p3, p0, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;->protobufIndex:I
 
-    .line 73
+    .line 70
     return-void
 .end method
 
@@ -202,7 +202,7 @@
     .locals 1
 
     .prologue
-    .line 57
+    .line 54
     const-class v0, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -218,7 +218,7 @@
     .locals 1
 
     .prologue
-    .line 57
+    .line 54
     sget-object v0, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;->$VALUES:[Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
 
     invoke-virtual {v0}, [Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;->clone()Ljava/lang/Object;

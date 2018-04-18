@@ -15,19 +15,17 @@
 
 
 # static fields
-.field public static final RecyclerView:[I
+.field public static final a:[I
 
-.field public static final RecyclerView_android_descendantFocusability:I = 0x1
+.field public static final b:I = 0x0
 
-.field public static final RecyclerView_android_orientation:I = 0x0
+.field public static final c:I = 0x1
 
-.field public static final RecyclerView_layoutManager:I = 0x2
+.field public static final d:I = 0x3
 
-.field public static final RecyclerView_reverseLayout:I = 0x4
+.field public static final e:I = 0x2
 
-.field public static final RecyclerView_spanCount:I = 0x3
-
-.field public static final RecyclerView_stackFromEnd:I = 0x5
+.field public static final f:I = 0x4
 
 
 # direct methods
@@ -36,13 +34,13 @@
 
     .prologue
     .line 25
-    const/4 v0, 0x6
+    const/4 v0, 0x5
 
     new-array v0, v0, [I
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Landroid/support/v7/recyclerview/R$styleable;->RecyclerView:[I
+    sput-object v0, Landroid/support/v7/recyclerview/R$styleable;->a:[I
 
     return-void
 
@@ -51,20 +49,9 @@
     :array_0
     .array-data 4
         0x10100c4
-        0x10100f1
-        0x7f01020b
-        0x7f01020c
-        0x7f01020d
-        0x7f01020e
+        0x7f01011e
+        0x7f01011f
+        0x7f010120
+        0x7f010121
     .end array-data
-.end method
-
-.method public constructor <init>()V
-    .locals 0
-
-    .prologue
-    .line 24
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
 .end method

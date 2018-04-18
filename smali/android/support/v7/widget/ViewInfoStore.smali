@@ -42,24 +42,24 @@
     .locals 1
 
     .prologue
-    .line 39
+    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
+    .line 48
     new-instance v0, Landroid/support/v4/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/support/v4/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Landroid/support/v7/widget/ViewInfoStore;->a:Landroid/support/v4/util/ArrayMap;
 
-    .line 49
+    .line 51
     new-instance v0, Landroid/support/v4/util/LongSparseArray;
 
     invoke-direct {v0}, Landroid/support/v4/util/LongSparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/support/v7/widget/ViewInfoStore;->b:Landroid/support/v4/util/LongSparseArray;
 
-    .line 292
+    .line 294
     return-void
 .end method
 
@@ -69,22 +69,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 103
+    .line 105
     iget-object v0, p0, Landroid/support/v7/widget/ViewInfoStore;->a:Landroid/support/v4/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/support/v4/util/ArrayMap;->indexOfKey(Ljava/lang/Object;)I
 
     move-result v2
 
-    .line 104
+    .line 106
     if-gez v2, :cond_1
 
-    .line 125
+    .line 127
     :cond_0
     :goto_0
     return-object v1
 
-    .line 107
+    .line 109
     :cond_1
     iget-object v0, p0, Landroid/support/v7/widget/ViewInfoStore;->a:Landroid/support/v4/util/ArrayMap;
 
@@ -94,7 +94,7 @@
 
     check-cast v0, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;
 
-    .line 108
+    .line 110
     if-eqz v0, :cond_0
 
     iget v3, v0, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->a:I
@@ -103,7 +103,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 109
+    .line 111
     iget v1, v0, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->a:I
 
     xor-int/lit8 v3, p2, -0x1
@@ -112,15 +112,15 @@
 
     iput v1, v0, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->a:I
 
-    .line 111
+    .line 113
     const/4 v1, 0x4
 
     if-ne p2, v1, :cond_2
 
-    .line 112
+    .line 114
     iget-object v1, v0, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->b:Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
 
-    .line 119
+    .line 121
     :goto_1
     iget v3, v0, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->a:I
 
@@ -128,28 +128,28 @@
 
     if-nez v3, :cond_0
 
-    .line 120
+    .line 122
     iget-object v3, p0, Landroid/support/v7/widget/ViewInfoStore;->a:Landroid/support/v4/util/ArrayMap;
 
     invoke-virtual {v3, v2}, Landroid/support/v4/util/ArrayMap;->removeAt(I)Ljava/lang/Object;
 
-    .line 121
+    .line 123
     invoke-static {v0}, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->a(Landroid/support/v7/widget/ViewInfoStore$InfoRecord;)V
 
     goto :goto_0
 
-    .line 113
+    .line 115
     :cond_2
     const/16 v1, 0x8
 
     if-ne p2, v1, :cond_3
 
-    .line 114
+    .line 116
     iget-object v1, v0, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->c:Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
 
     goto :goto_1
 
-    .line 116
+    .line 118
     :cond_3
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -164,10 +164,10 @@
     .locals 0
 
     .prologue
-    .line 275
+    .line 277
     invoke-static {}, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->b()V
 
-    .line 276
+    .line 278
     return-void
 .end method
 
@@ -177,17 +177,17 @@
     .locals 1
 
     .prologue
-    .line 56
+    .line 58
     iget-object v0, p0, Landroid/support/v7/widget/ViewInfoStore;->a:Landroid/support/v4/util/ArrayMap;
 
     invoke-virtual {v0}, Landroid/support/v4/util/ArrayMap;->clear()V
 
-    .line 57
+    .line 59
     iget-object v0, p0, Landroid/support/v7/widget/ViewInfoStore;->b:Landroid/support/v4/util/LongSparseArray;
 
     invoke-virtual {v0}, Landroid/support/v4/util/LongSparseArray;->clear()V
 
-    .line 58
+    .line 60
     return-void
 .end method
 
@@ -195,12 +195,12 @@
     .locals 1
 
     .prologue
-    .line 134
+    .line 136
     iget-object v0, p0, Landroid/support/v7/widget/ViewInfoStore;->b:Landroid/support/v4/util/LongSparseArray;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/support/v4/util/LongSparseArray;->put(JLjava/lang/Object;)V
 
-    .line 135
+    .line 137
     return-void
 .end method
 
@@ -208,7 +208,7 @@
     .locals 2
 
     .prologue
-    .line 66
+    .line 68
     iget-object v0, p0, Landroid/support/v7/widget/ViewInfoStore;->a:Landroid/support/v4/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/support/v4/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -217,31 +217,201 @@
 
     check-cast v0, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;
 
-    .line 67
+    .line 69
     if-nez v0, :cond_0
 
-    .line 68
+    .line 70
     invoke-static {}, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->a()Landroid/support/v7/widget/ViewInfoStore$InfoRecord;
 
     move-result-object v0
 
-    .line 69
+    .line 71
     iget-object v1, p0, Landroid/support/v7/widget/ViewInfoStore;->a:Landroid/support/v4/util/ArrayMap;
 
     invoke-virtual {v1, p1, v0}, Landroid/support/v4/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 71
+    .line 73
     :cond_0
     iput-object p2, v0, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->b:Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
 
-    .line 72
+    .line 74
     iget v1, v0, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->a:I
 
     or-int/lit8 v1, v1, 0x4
 
     iput v1, v0, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->a:I
 
-    .line 73
+    .line 75
+    return-void
+.end method
+
+.method final a(Landroid/support/v7/widget/ViewInfoStore$ProcessCallback;)V
+    .locals 5
+
+    .prologue
+    .line 223
+    iget-object v0, p0, Landroid/support/v7/widget/ViewInfoStore;->a:Landroid/support/v4/util/ArrayMap;
+
+    invoke-virtual {v0}, Landroid/support/v4/util/ArrayMap;->size()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    move v2, v0
+
+    :goto_0
+    if-ltz v2, :cond_7
+
+    .line 224
+    iget-object v0, p0, Landroid/support/v7/widget/ViewInfoStore;->a:Landroid/support/v4/util/ArrayMap;
+
+    invoke-virtual {v0, v2}, Landroid/support/v4/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v7/widget/RecyclerView$ViewHolder;
+
+    .line 225
+    iget-object v1, p0, Landroid/support/v7/widget/ViewInfoStore;->a:Landroid/support/v4/util/ArrayMap;
+
+    invoke-virtual {v1, v2}, Landroid/support/v4/util/ArrayMap;->removeAt(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;
+
+    .line 226
+    iget v3, v1, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->a:I
+
+    and-int/lit8 v3, v3, 0x3
+
+    const/4 v4, 0x3
+
+    if-ne v3, v4, :cond_0
+
+    .line 228
+    invoke-interface {p1, v0}, Landroid/support/v7/widget/ViewInfoStore$ProcessCallback;->a(Landroid/support/v7/widget/RecyclerView$ViewHolder;)V
+
+    .line 255
+    :goto_1
+    invoke-static {v1}, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->a(Landroid/support/v7/widget/ViewInfoStore$InfoRecord;)V
+
+    .line 223
+    add-int/lit8 v0, v2, -0x1
+
+    move v2, v0
+
+    goto :goto_0
+
+    .line 229
+    :cond_0
+    iget v3, v1, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->a:I
+
+    and-int/lit8 v3, v3, 0x1
+
+    if-eqz v3, :cond_2
+
+    .line 231
+    iget-object v3, v1, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->b:Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
+
+    if-nez v3, :cond_1
+
+    .line 234
+    invoke-interface {p1, v0}, Landroid/support/v7/widget/ViewInfoStore$ProcessCallback;->a(Landroid/support/v7/widget/RecyclerView$ViewHolder;)V
+
+    goto :goto_1
+
+    .line 236
+    :cond_1
+    iget-object v3, v1, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->b:Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
+
+    iget-object v4, v1, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->c:Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
+
+    invoke-interface {p1, v0, v3, v4}, Landroid/support/v7/widget/ViewInfoStore$ProcessCallback;->a(Landroid/support/v7/widget/RecyclerView$ViewHolder;Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;)V
+
+    goto :goto_1
+
+    .line 238
+    :cond_2
+    iget v3, v1, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->a:I
+
+    and-int/lit8 v3, v3, 0xe
+
+    const/16 v4, 0xe
+
+    if-ne v3, v4, :cond_3
+
+    .line 240
+    iget-object v3, v1, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->b:Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
+
+    iget-object v4, v1, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->c:Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
+
+    invoke-interface {p1, v0, v3, v4}, Landroid/support/v7/widget/ViewInfoStore$ProcessCallback;->b(Landroid/support/v7/widget/RecyclerView$ViewHolder;Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;)V
+
+    goto :goto_1
+
+    .line 241
+    :cond_3
+    iget v3, v1, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->a:I
+
+    and-int/lit8 v3, v3, 0xc
+
+    const/16 v4, 0xc
+
+    if-ne v3, v4, :cond_4
+
+    .line 243
+    iget-object v3, v1, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->b:Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
+
+    iget-object v4, v1, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->c:Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
+
+    invoke-interface {p1, v0, v3, v4}, Landroid/support/v7/widget/ViewInfoStore$ProcessCallback;->c(Landroid/support/v7/widget/RecyclerView$ViewHolder;Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;)V
+
+    goto :goto_1
+
+    .line 244
+    :cond_4
+    iget v3, v1, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->a:I
+
+    and-int/lit8 v3, v3, 0x4
+
+    if-eqz v3, :cond_5
+
+    .line 246
+    iget-object v3, v1, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->b:Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
+
+    const/4 v4, 0x0
+
+    invoke-interface {p1, v0, v3, v4}, Landroid/support/v7/widget/ViewInfoStore$ProcessCallback;->a(Landroid/support/v7/widget/RecyclerView$ViewHolder;Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;)V
+
+    goto :goto_1
+
+    .line 247
+    :cond_5
+    iget v3, v1, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->a:I
+
+    and-int/lit8 v3, v3, 0x8
+
+    if-eqz v3, :cond_6
+
+    .line 249
+    iget-object v3, v1, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->b:Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
+
+    iget-object v4, v1, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->c:Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
+
+    invoke-interface {p1, v0, v3, v4}, Landroid/support/v7/widget/ViewInfoStore$ProcessCallback;->b(Landroid/support/v7/widget/RecyclerView$ViewHolder;Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;)V
+
+    goto :goto_1
+
+    .line 250
+    :cond_6
+    iget v0, v1, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->a:I
+
+    goto :goto_1
+
+    .line 257
+    :cond_7
     return-void
 .end method
 
@@ -249,7 +419,7 @@
     .locals 1
 
     .prologue
-    .line 76
+    .line 78
     iget-object v0, p0, Landroid/support/v7/widget/ViewInfoStore;->a:Landroid/support/v4/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/support/v4/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -258,7 +428,7 @@
 
     check-cast v0, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;
 
-    .line 77
+    .line 79
     if-eqz v0, :cond_0
 
     iget v0, v0, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->a:I
@@ -282,7 +452,7 @@
     .locals 1
 
     .prologue
-    .line 88
+    .line 90
     const/4 v0, 0x4
 
     invoke-direct {p0, p1, v0}, Landroid/support/v7/widget/ViewInfoStore;->a(Landroid/support/v7/widget/RecyclerView$ViewHolder;I)Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
@@ -296,7 +466,7 @@
     .locals 2
 
     .prologue
-    .line 184
+    .line 186
     iget-object v0, p0, Landroid/support/v7/widget/ViewInfoStore;->a:Landroid/support/v4/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/support/v4/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -305,31 +475,31 @@
 
     check-cast v0, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;
 
-    .line 185
+    .line 187
     if-nez v0, :cond_0
 
-    .line 186
+    .line 188
     invoke-static {}, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->a()Landroid/support/v7/widget/ViewInfoStore$InfoRecord;
 
     move-result-object v0
 
-    .line 187
+    .line 189
     iget-object v1, p0, Landroid/support/v7/widget/ViewInfoStore;->a:Landroid/support/v4/util/ArrayMap;
 
     invoke-virtual {v1, p1, v0}, Landroid/support/v4/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 189
+    .line 191
     :cond_0
     iput-object p2, v0, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->c:Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
 
-    .line 190
+    .line 192
     iget v1, v0, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->a:I
 
     or-int/lit8 v1, v1, 0x8
 
     iput v1, v0, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->a:I
 
-    .line 191
+    .line 193
     return-void
 .end method
 
@@ -337,7 +507,7 @@
     .locals 1
 
     .prologue
-    .line 99
+    .line 101
     const/16 v0, 0x8
 
     invoke-direct {p0, p1, v0}, Landroid/support/v7/widget/ViewInfoStore;->a(Landroid/support/v7/widget/RecyclerView$ViewHolder;I)Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
@@ -351,7 +521,7 @@
     .locals 2
 
     .prologue
-    .line 200
+    .line 202
     iget-object v0, p0, Landroid/support/v7/widget/ViewInfoStore;->a:Landroid/support/v4/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/support/v4/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -360,20 +530,20 @@
 
     check-cast v0, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;
 
-    .line 201
+    .line 203
     if-nez v0, :cond_0
 
-    .line 202
+    .line 204
     invoke-static {}, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->a()Landroid/support/v7/widget/ViewInfoStore$InfoRecord;
 
     move-result-object v0
 
-    .line 203
+    .line 205
     iget-object v1, p0, Landroid/support/v7/widget/ViewInfoStore;->a:Landroid/support/v4/util/ArrayMap;
 
     invoke-virtual {v1, p1, v0}, Landroid/support/v4/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 205
+    .line 207
     :cond_0
     iget v1, v0, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->a:I
 
@@ -381,7 +551,7 @@
 
     iput v1, v0, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->a:I
 
-    .line 206
+    .line 208
     return-void
 .end method
 
@@ -389,7 +559,7 @@
     .locals 2
 
     .prologue
-    .line 213
+    .line 215
     iget-object v0, p0, Landroid/support/v7/widget/ViewInfoStore;->a:Landroid/support/v4/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/support/v4/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -398,14 +568,14 @@
 
     check-cast v0, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;
 
-    .line 214
+    .line 216
     if-nez v0, :cond_0
 
-    .line 218
+    .line 220
     :goto_0
     return-void
 
-    .line 217
+    .line 219
     :cond_0
     iget v1, v0, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->a:I
 
@@ -420,7 +590,7 @@
     .locals 2
 
     .prologue
-    .line 262
+    .line 264
     iget-object v0, p0, Landroid/support/v7/widget/ViewInfoStore;->b:Landroid/support/v4/util/LongSparseArray;
 
     invoke-virtual {v0}, Landroid/support/v4/util/LongSparseArray;->size()I
@@ -432,7 +602,7 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 263
+    .line 265
     iget-object v1, p0, Landroid/support/v7/widget/ViewInfoStore;->b:Landroid/support/v4/util/LongSparseArray;
 
     invoke-virtual {v1, v0}, Landroid/support/v4/util/LongSparseArray;->valueAt(I)Ljava/lang/Object;
@@ -441,12 +611,12 @@
 
     if-ne p1, v1, :cond_2
 
-    .line 264
+    .line 266
     iget-object v1, p0, Landroid/support/v7/widget/ViewInfoStore;->b:Landroid/support/v4/util/LongSparseArray;
 
     invoke-virtual {v1, v0}, Landroid/support/v4/util/LongSparseArray;->removeAt(I)V
 
-    .line 268
+    .line 270
     :cond_0
     iget-object v0, p0, Landroid/support/v7/widget/ViewInfoStore;->a:Landroid/support/v4/util/ArrayMap;
 
@@ -456,17 +626,17 @@
 
     check-cast v0, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;
 
-    .line 269
+    .line 271
     if-eqz v0, :cond_1
 
-    .line 270
+    .line 272
     invoke-static {v0}, Landroid/support/v7/widget/ViewInfoStore$InfoRecord;->a(Landroid/support/v7/widget/ViewInfoStore$InfoRecord;)V
 
-    .line 272
+    .line 274
     :cond_1
     return-void
 
-    .line 262
+    .line 264
     :cond_2
     add-int/lit8 v0, v0, -0x1
 

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/android/chat/fragment/KikDialogFragment$c;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 505
+    .line 372
     iput-object p1, p0, Lkik/android/videochat/VideoChatViewController$4;->a:Lkik/android/videochat/VideoChatViewController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,14 +36,14 @@
 
 
 # virtual methods
-.method public final a()V
+.method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 2
 
     .prologue
-    .line 509
+    .line 376
     iget-object v0, p0, Lkik/android/videochat/VideoChatViewController$4;->a:Lkik/android/videochat/VideoChatViewController;
 
-    invoke-static {v0}, Lkik/android/videochat/VideoChatViewController;->o(Lkik/android/videochat/VideoChatViewController;)Lkik/android/videochat/c;
+    invoke-static {v0}, Lkik/android/videochat/VideoChatViewController;->c(Lkik/android/videochat/VideoChatViewController;)Lkik/android/videochat/c;
 
     move-result-object v0
 
@@ -53,12 +53,12 @@
 
     iget-object v1, p0, Lkik/android/videochat/VideoChatViewController$4;->a:Lkik/android/videochat/VideoChatViewController;
 
-    invoke-static {v1}, Lkik/android/videochat/VideoChatViewController;->s(Lkik/android/videochat/VideoChatViewController;)Lkik/core/datatypes/l;
+    invoke-static {v1}, Lkik/android/videochat/VideoChatViewController;->g(Lkik/android/videochat/VideoChatViewController;)Lkik/core/datatypes/o;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/rounds/kik/analytics/IReporterProxy;->onNetworkErrorDialogDismiss(Ljava/lang/Object;)V
+    invoke-interface {v0, v1}, Lcom/rounds/kik/analytics/IReporterProxy;->onNetworkErrorDialogTap(Ljava/lang/Object;)V
 
-    .line 510
+    .line 377
     return-void
 .end method

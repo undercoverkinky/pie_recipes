@@ -117,7 +117,7 @@
 
     const/4 v5, 0x0
 
-    .line 13384
+    .line 13421
     const/4 v0, 0x6
 
     new-array v0, v0, [Ljava/lang/String;
@@ -144,39 +144,39 @@
 
     const/4 v1, 0x5
 
-    const-string v2, "\"\u0014\n\u0012TextSuggestedReply\"\u0017\n\u0015PaymentSuggestedReply\"Q\n\u001aFriendPickerSuggestedReply\u00123\n\u0006picked\u0018\u0001 \u0003(\u000b2\u0015.common.XiBareUserJidB\u000c\u00ca\u009d%\u0008\u0008\u0001x\u0001\u0080\u0001\u00e8\u0007\"?\n\u0015PictureSuggestedReply\u0012&\n\u0006pic_id\u0018\u0005 \u0001(\u000b2\u000e.common.XiUuidB\u0006\u00ca\u009d%\u0002\u0008\u0001Bw\n\u0019com.kik.messagepath.modelZSgithub.com/kikinteractive/xiphias-model-common/generated/go/messagepath;messagepath\u00a2\u0002\u0004MPTHb\u0006proto3"
+    const-string v2, "\"\u0014\n\u0012TextSuggestedReply\"\u0017\n\u0015PaymentSuggestedReply\"Q\n\u001aFriendPickerSuggestedReply\u00123\n\u0006picked\u0018\u0001 \u0003(\u000b2\u0015.common.XiBareUserJidB\u000c\u00ca\u009d%\u0008\u0008\u0001x\u0001\u0080\u0001\u00e8\u0007\"?\n\u0015PictureSuggestedReply\u0012&\n\u0006pic_id\u0018\u0005 \u0001(\u000b2\u000e.common.XiUuidB\u0006\u00ca\u009d%\u0002\u0008\u0001B\"\n\u0019com.kik.messagepath.model\u00a2\u0002\u0004MPTHb\u0006proto3"
 
     aput-object v2, v0, v1
 
-    .line 13445
+    .line 13479
     new-instance v1, Lcom/kik/messagepath/model/Keyboards$1;
 
     invoke-direct {v1}, Lcom/kik/messagepath/model/Keyboards$1;-><init>()V
 
-    .line 13453
+    .line 13487
     new-array v2, v7, [Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 13456
+    .line 13490
     invoke-static {}, Lcom/kik/ximodel/CommonModelProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v3
 
     aput-object v3, v2, v5
 
-    .line 13457
+    .line 13491
     invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation;->a()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v3
 
     aput-object v3, v2, v6
 
-    .line 13454
+    .line 13488
     invoke-static {v0, v2, v1}, Lcom/google/protobuf/Descriptors$FileDescriptor;->internalBuildGeneratedFileFrom([Ljava/lang/String;[Lcom/google/protobuf/Descriptors$FileDescriptor;Lcom/google/protobuf/Descriptors$FileDescriptor$InternalDescriptorAssigner;)V
 
-    .line 14379
+    .line 14416
     sget-object v0, Lcom/kik/messagepath/model/Keyboards;->E:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 13460
+    .line 13494
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getMessageTypes()Ljava/util/List;
 
     move-result-object v0
@@ -189,7 +189,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->a:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 13461
+    .line 13495
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/messagepath/model/Keyboards;->a:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -204,10 +204,10 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->b:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 15379
+    .line 15416
     sget-object v0, Lcom/kik/messagepath/model/Keyboards;->E:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 13466
+    .line 13500
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getMessageTypes()Ljava/util/List;
 
     move-result-object v0
@@ -220,7 +220,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->c:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 13467
+    .line 13501
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/messagepath/model/Keyboards;->c:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -247,10 +247,10 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->d:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 16379
+    .line 16416
     sget-object v0, Lcom/kik/messagepath/model/Keyboards;->E:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 13472
+    .line 13506
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getMessageTypes()Ljava/util/List;
 
     move-result-object v0
@@ -263,7 +263,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->e:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 13473
+    .line 13507
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/messagepath/model/Keyboards;->e:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -278,10 +278,10 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->f:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 17379
+    .line 17416
     sget-object v0, Lcom/kik/messagepath/model/Keyboards;->E:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 13478
+    .line 13512
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getMessageTypes()Ljava/util/List;
 
     move-result-object v0
@@ -294,7 +294,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->g:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 13479
+    .line 13513
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/messagepath/model/Keyboards;->g:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -333,10 +333,10 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->h:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 18379
+    .line 18416
     sget-object v0, Lcom/kik/messagepath/model/Keyboards;->E:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 13484
+    .line 13518
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getMessageTypes()Ljava/util/List;
 
     move-result-object v0
@@ -349,7 +349,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->i:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 13485
+    .line 13519
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/messagepath/model/Keyboards;->i:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -364,10 +364,10 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->j:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 19379
+    .line 19416
     sget-object v0, Lcom/kik/messagepath/model/Keyboards;->E:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 13490
+    .line 13524
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getMessageTypes()Ljava/util/List;
 
     move-result-object v0
@@ -382,7 +382,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->k:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 13491
+    .line 13525
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/messagepath/model/Keyboards;->k:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -415,10 +415,10 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->l:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 13495
+    .line 13529
     sget-object v0, Lcom/kik/messagepath/model/Keyboards;->k:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 13496
+    .line 13530
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$Descriptor;->getNestedTypes()Ljava/util/List;
 
     move-result-object v0
@@ -431,7 +431,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->m:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 13497
+    .line 13531
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/messagepath/model/Keyboards;->m:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -450,10 +450,10 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->n:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 20379
+    .line 20416
     sget-object v0, Lcom/kik/messagepath/model/Keyboards;->E:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 13502
+    .line 13536
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getMessageTypes()Ljava/util/List;
 
     move-result-object v0
@@ -468,7 +468,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->o:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 13503
+    .line 13537
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/messagepath/model/Keyboards;->o:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -495,10 +495,10 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->p:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 21379
+    .line 21416
     sget-object v0, Lcom/kik/messagepath/model/Keyboards;->E:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 13508
+    .line 13542
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getMessageTypes()Ljava/util/List;
 
     move-result-object v0
@@ -513,7 +513,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->q:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 13509
+    .line 13543
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/messagepath/model/Keyboards;->q:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -536,10 +536,10 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->r:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 22379
+    .line 22416
     sget-object v0, Lcom/kik/messagepath/model/Keyboards;->E:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 13514
+    .line 13548
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getMessageTypes()Ljava/util/List;
 
     move-result-object v0
@@ -554,7 +554,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->s:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 13515
+    .line 13549
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/messagepath/model/Keyboards;->s:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -573,10 +573,10 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->t:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 23379
+    .line 23416
     sget-object v0, Lcom/kik/messagepath/model/Keyboards;->E:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 13520
+    .line 13554
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getMessageTypes()Ljava/util/List;
 
     move-result-object v0
@@ -591,7 +591,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->u:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 13521
+    .line 13555
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/messagepath/model/Keyboards;->u:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -630,10 +630,10 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->v:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 24379
+    .line 24416
     sget-object v0, Lcom/kik/messagepath/model/Keyboards;->E:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 13526
+    .line 13560
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getMessageTypes()Ljava/util/List;
 
     move-result-object v0
@@ -648,7 +648,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->w:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 13527
+    .line 13561
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/messagepath/model/Keyboards;->w:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -659,10 +659,10 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->x:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 25379
+    .line 25416
     sget-object v0, Lcom/kik/messagepath/model/Keyboards;->E:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 13532
+    .line 13566
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getMessageTypes()Ljava/util/List;
 
     move-result-object v0
@@ -677,7 +677,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->y:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 13533
+    .line 13567
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/messagepath/model/Keyboards;->y:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -688,10 +688,10 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->z:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 26379
+    .line 26416
     sget-object v0, Lcom/kik/messagepath/model/Keyboards;->E:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 13538
+    .line 13572
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getMessageTypes()Ljava/util/List;
 
     move-result-object v0
@@ -706,7 +706,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->A:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 13539
+    .line 13573
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/messagepath/model/Keyboards;->A:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -721,10 +721,10 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->B:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 27379
+    .line 27416
     sget-object v0, Lcom/kik/messagepath/model/Keyboards;->E:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 13544
+    .line 13578
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getMessageTypes()Ljava/util/List;
 
     move-result-object v0
@@ -739,7 +739,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->C:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 13545
+    .line 13579
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/messagepath/model/Keyboards;->C:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -754,29 +754,29 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards;->D:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 13550
+    .line 13584
     invoke-static {}, Lcom/google/protobuf/ExtensionRegistry;->newInstance()Lcom/google/protobuf/ExtensionRegistry;
 
     move-result-object v0
 
-    .line 13551
+    .line 13585
     sget-object v1, Lcom/kik/protovalidation/ProtobufValidation;->a:Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;
 
     invoke-virtual {v0, v1}, Lcom/google/protobuf/ExtensionRegistry;->add(Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;)V
 
-    .line 13552
+    .line 13586
     sget-object v1, Lcom/kik/messagepath/model/Keyboards;->E:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 13553
+    .line 13587
     invoke-static {v1, v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->internalUpdateFileDescriptor(Lcom/google/protobuf/Descriptors$FileDescriptor;Lcom/google/protobuf/ExtensionRegistry;)V
 
-    .line 13554
+    .line 13588
     invoke-static {}, Lcom/kik/ximodel/CommonModelProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 13555
+    .line 13589
     invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation;->a()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 13556
+    .line 13590
     return-void
 .end method
 
@@ -834,7 +834,7 @@
     .locals 1
 
     .prologue
-    .line 13379
+    .line 13416
     sget-object v0, Lcom/kik/messagepath/model/Keyboards;->E:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     return-object v0

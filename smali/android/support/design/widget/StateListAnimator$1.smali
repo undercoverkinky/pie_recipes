@@ -1,6 +1,9 @@
 .class Landroid/support/design/widget/StateListAnimator$1;
-.super Landroid/support/design/widget/ValueAnimatorCompat$AnimatorListenerAdapter;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/animation/Animation$AnimationListener;
 
 
 # annotations
@@ -23,35 +26,51 @@
     .locals 0
 
     .prologue
-    .line 31
+    .line 34
     iput-object p1, p0, Landroid/support/design/widget/StateListAnimator$1;->a:Landroid/support/design/widget/StateListAnimator;
 
-    invoke-direct {p0}, Landroid/support/design/widget/ValueAnimatorCompat$AnimatorListenerAdapter;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Landroid/support/design/widget/ValueAnimatorCompat;)V
-    .locals 2
+.method public onAnimationEnd(Landroid/view/animation/Animation;)V
+    .locals 1
 
     .prologue
-    .line 34
+    .line 37
     iget-object v0, p0, Landroid/support/design/widget/StateListAnimator$1;->a:Landroid/support/design/widget/StateListAnimator;
 
-    iget-object v0, v0, Landroid/support/design/widget/StateListAnimator;->a:Landroid/support/design/widget/ValueAnimatorCompat;
+    invoke-static {v0}, Landroid/support/design/widget/StateListAnimator;->a(Landroid/support/design/widget/StateListAnimator;)Landroid/view/animation/Animation;
+
+    move-result-object v0
 
     if-ne v0, p1, :cond_0
 
-    .line 35
+    .line 38
     iget-object v0, p0, Landroid/support/design/widget/StateListAnimator$1;->a:Landroid/support/design/widget/StateListAnimator;
 
-    const/4 v1, 0x0
+    invoke-static {v0}, Landroid/support/design/widget/StateListAnimator;->b(Landroid/support/design/widget/StateListAnimator;)Landroid/view/animation/Animation;
 
-    iput-object v1, v0, Landroid/support/design/widget/StateListAnimator;->a:Landroid/support/design/widget/ValueAnimatorCompat;
-
-    .line 37
+    .line 40
     :cond_0
+    return-void
+.end method
+
+.method public onAnimationRepeat(Landroid/view/animation/Animation;)V
+    .locals 0
+
+    .prologue
+    .line 50
+    return-void
+.end method
+
+.method public onAnimationStart(Landroid/view/animation/Animation;)V
+    .locals 0
+
+    .prologue
+    .line 45
     return-void
 .end method

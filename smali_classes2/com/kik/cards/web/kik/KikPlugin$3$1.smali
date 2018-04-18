@@ -1,5 +1,5 @@
 .class final Lcom/kik/cards/web/kik/KikPlugin$3$1;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Lcom/kik/cards/util/UserDataParcelable;",
         ">;"
@@ -35,7 +35,7 @@
     .line 348
     iput-object p1, p0, Lcom/kik/cards/web/kik/KikPlugin$3$1;->a:Lcom/kik/cards/web/kik/KikPlugin$3;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -51,9 +51,7 @@
 
     iget-object v0, v0, Lcom/kik/cards/web/kik/KikPlugin$3;->d:Lcom/kik/cards/web/kik/KikPlugin;
 
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/kik/cards/web/kik/KikPlugin;->access$302(Lcom/kik/cards/web/kik/KikPlugin;Z)Z
+    invoke-static {v0}, Lcom/kik/cards/web/kik/KikPlugin;->c(Lcom/kik/cards/web/kik/KikPlugin;)Z
 
     .line 353
     iget-object v0, p0, Lcom/kik/cards/web/kik/KikPlugin$3$1;->a:Lcom/kik/cards/web/kik/KikPlugin$3;
@@ -67,11 +65,11 @@
 
     iget-object v0, v0, Lcom/kik/cards/web/kik/KikPlugin$3;->c:Lcom/kik/cards/web/plugin/a;
 
-    new-instance v1, Lcom/kik/cards/web/plugin/g;
+    new-instance v1, Lcom/kik/cards/web/plugin/h;
 
-    invoke-direct {v1}, Lcom/kik/cards/web/plugin/g;-><init>()V
+    invoke-direct {v1}, Lcom/kik/cards/web/plugin/h;-><init>()V
 
-    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/g;)V
+    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/h;)V
 
     .line 356
     :cond_0

@@ -29,11 +29,14 @@
 .method public abstract isConnecting()Z
 .end method
 
-.method public abstract zza(Lcom/google/android/gms/common/internal/zzam;Ljava/util/Set;)V
+.method public abstract zza(Lcom/google/android/gms/common/internal/zzd$zzf;)V
+.end method
+
+.method public abstract zza(Lcom/google/android/gms/common/internal/zzq;Ljava/util/Set;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/google/android/gms/common/internal/zzam;",
+            "Lcom/google/android/gms/common/internal/zzq;",
             "Ljava/util/Set",
             "<",
             "Lcom/google/android/gms/common/api/Scope;",
@@ -42,20 +45,17 @@
     .end annotation
 .end method
 
-.method public abstract zza(Lcom/google/android/gms/common/internal/zzj;)V
+.method public abstract zzpd()Z
 .end method
 
-.method public abstract zzaaa()Z
+.method public abstract zzps()Z
 .end method
 
-.method public abstract zzaak()Z
+.method public abstract zzpt()Landroid/content/Intent;
 .end method
 
-.method public abstract zzaal()Landroid/content/Intent;
+.method public abstract zzrg()Z
 .end method
 
-.method public abstract zzafe()Z
-.end method
-
-.method public abstract zzaff()Landroid/os/IBinder;
+.method public abstract zzrh()Landroid/os/IBinder;
 .end method

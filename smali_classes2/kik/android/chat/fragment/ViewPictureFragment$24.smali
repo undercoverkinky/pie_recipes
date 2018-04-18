@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/kik/cache/KikVolleyImageLoader$d;
+.implements Lcom/kik/cache/aa$e;
 
 
 # annotations
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 418
+    .line 378
     iput-object p1, p0, Lkik/android/chat/fragment/ViewPictureFragment$24;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 2
 
     .prologue
-    .line 439
+    .line 398
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$24;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/ViewPictureFragment;->d(Lkik/android/chat/fragment/ViewPictureFragment;)Landroid/os/Handler;
@@ -53,20 +53,20 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 450
+    .line 408
     return-void
 .end method
 
-.method public final a(Lcom/kik/cache/KikVolleyImageLoader$c;Z)V
+.method public final a(Lcom/kik/cache/aa$d;Z)V
     .locals 3
 
     .prologue
-    .line 422
-    invoke-virtual {p1}, Lcom/kik/cache/KikVolleyImageLoader$c;->b()Landroid/graphics/Bitmap;
+    .line 382
+    invoke-virtual {p1}, Lcom/kik/cache/aa$d;->b()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 423
+    .line 383
     iget-object v1, p0, Lkik/android/chat/fragment/ViewPictureFragment$24;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     invoke-static {v1}, Lkik/android/chat/fragment/ViewPictureFragment;->d(Lkik/android/chat/fragment/ViewPictureFragment;)Landroid/os/Handler;
@@ -79,6 +79,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 434
+    .line 393
     return-void
 .end method

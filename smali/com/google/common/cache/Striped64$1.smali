@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 324
+    .line 322
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,10 +49,10 @@
     .end annotation
 
     .prologue
-    .line 1326
+    .line 1324
     const-class v1, Lsun/misc/Unsafe;
 
-    .line 1327
+    .line 1325
     invoke-virtual {v1}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
     move-result-object v2
@@ -66,26 +66,26 @@
 
     aget-object v4, v2, v0
 
-    .line 1328
+    .line 1326
     const/4 v5, 0x1
 
     invoke-virtual {v4, v5}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 1329
+    .line 1327
     const/4 v5, 0x0
 
     invoke-virtual {v4, v5}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
-    .line 1330
+    .line 1328
     invoke-virtual {v1, v4}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 1331
+    .line 1329
     invoke-virtual {v1, v4}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -94,13 +94,13 @@
 
     return-object v0
 
-    .line 1327
+    .line 1325
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1333
+    .line 1331
     :cond_1
     new-instance v0, Ljava/lang/NoSuchFieldError;
 

@@ -1,4 +1,4 @@
-.class public Lcom/google/android/gms/ads/VideoController$VideoLifecycleCallbacks;
+.class public abstract Lcom/google/android/gms/ads/VideoController$VideoLifecycleCallbacks;
 .super Ljava/lang/Object;
 
 
@@ -25,30 +25,6 @@
 
 # virtual methods
 .method public onVideoEnd()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onVideoMute(Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onVideoPause()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onVideoPlay()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onVideoStart()V
     .locals 0
 
     return-void

@@ -29,7 +29,7 @@
     .end annotation
 .end field
 
-.field private B:Lcom/google/i18n/phonenumbers/RegexCache;
+.field private B:Lcom/google/i18n/phonenumbers/g;
 
 .field private a:Ljava/lang/String;
 
@@ -237,13 +237,13 @@
     iput-object v0, p0, Lcom/google/i18n/phonenumbers/a;->A:Ljava/util/List;
 
     .line 122
-    new-instance v0, Lcom/google/i18n/phonenumbers/RegexCache;
+    new-instance v0, Lcom/google/i18n/phonenumbers/g;
 
     const/16 v1, 0x40
 
-    invoke-direct {v0, v1}, Lcom/google/i18n/phonenumbers/RegexCache;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/google/i18n/phonenumbers/g;-><init>(I)V
 
-    iput-object v0, p0, Lcom/google/i18n/phonenumbers/a;->B:Lcom/google/i18n/phonenumbers/RegexCache;
+    iput-object v0, p0, Lcom/google/i18n/phonenumbers/a;->B:Lcom/google/i18n/phonenumbers/g;
 
     .line 131
     iput-object p1, p0, Lcom/google/i18n/phonenumbers/a;->k:Ljava/lang/String;
@@ -452,13 +452,13 @@
     move-result v3
 
     .line 212
-    iget-object v4, p0, Lcom/google/i18n/phonenumbers/a;->B:Lcom/google/i18n/phonenumbers/RegexCache;
+    iget-object v4, p0, Lcom/google/i18n/phonenumbers/a;->B:Lcom/google/i18n/phonenumbers/g;
 
     iget-object v0, v0, Lcom/google/i18n/phonenumbers/a/a$a;->c:[Ljava/lang/String;
 
     aget-object v0, v0, v3
 
-    invoke-virtual {v4, v0}, Lcom/google/i18n/phonenumbers/RegexCache;->getPatternForRegex(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    invoke-virtual {v4, v0}, Lcom/google/i18n/phonenumbers/g;->a(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
@@ -585,9 +585,9 @@
     const-string v7, "999999999999999"
 
     .line 1250
-    iget-object v8, p0, Lcom/google/i18n/phonenumbers/a;->B:Lcom/google/i18n/phonenumbers/RegexCache;
+    iget-object v8, p0, Lcom/google/i18n/phonenumbers/a;->B:Lcom/google/i18n/phonenumbers/g;
 
-    invoke-virtual {v8, v1}, Lcom/google/i18n/phonenumbers/RegexCache;->getPatternForRegex(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    invoke-virtual {v8, v1}, Lcom/google/i18n/phonenumbers/g;->a(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v8
 
@@ -907,11 +907,11 @@
     check-cast v0, Lcom/google/i18n/phonenumbers/a/a$a;
 
     .line 434
-    iget-object v2, p0, Lcom/google/i18n/phonenumbers/a;->B:Lcom/google/i18n/phonenumbers/RegexCache;
+    iget-object v2, p0, Lcom/google/i18n/phonenumbers/a;->B:Lcom/google/i18n/phonenumbers/g;
 
     iget-object v3, v0, Lcom/google/i18n/phonenumbers/a/a$a;->a:Ljava/lang/String;
 
-    invoke-virtual {v2, v3}, Lcom/google/i18n/phonenumbers/RegexCache;->getPatternForRegex(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    invoke-virtual {v2, v3}, Lcom/google/i18n/phonenumbers/g;->a(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v2
 
@@ -1326,13 +1326,13 @@
     if-nez v2, :cond_2
 
     .line 544
-    iget-object v2, p0, Lcom/google/i18n/phonenumbers/a;->B:Lcom/google/i18n/phonenumbers/RegexCache;
+    iget-object v2, p0, Lcom/google/i18n/phonenumbers/a;->B:Lcom/google/i18n/phonenumbers/g;
 
     iget-object v3, p0, Lcom/google/i18n/phonenumbers/a;->n:Lcom/google/i18n/phonenumbers/a/a$b;
 
     iget-object v3, v3, Lcom/google/i18n/phonenumbers/a/a$b;->w:Ljava/lang/String;
 
-    invoke-virtual {v2, v3}, Lcom/google/i18n/phonenumbers/RegexCache;->getPatternForRegex(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    invoke-virtual {v2, v3}, Lcom/google/i18n/phonenumbers/g;->a(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v2
 
@@ -1392,7 +1392,7 @@
     const/4 v2, 0x0
 
     .line 571
-    iget-object v3, p0, Lcom/google/i18n/phonenumbers/a;->B:Lcom/google/i18n/phonenumbers/RegexCache;
+    iget-object v3, p0, Lcom/google/i18n/phonenumbers/a;->B:Lcom/google/i18n/phonenumbers/g;
 
     const-string v0, "\\+|"
 
@@ -1419,7 +1419,7 @@
     move-result-object v0
 
     :goto_0
-    invoke-virtual {v3, v0}, Lcom/google/i18n/phonenumbers/RegexCache;->getPatternForRegex(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    invoke-virtual {v3, v0}, Lcom/google/i18n/phonenumbers/g;->a(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 

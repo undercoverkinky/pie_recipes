@@ -4,10 +4,6 @@
 
 
 # annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x12
-.end annotation
-
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/support/v4/media/session/MediaSessionCompatApi18$Callback;,
@@ -29,7 +25,7 @@
     .locals 1
 
     .prologue
-    .line 36
+    .line 32
     const/4 v0, 0x1
 
     sput-boolean v0, Landroid/support/v4/media/session/MediaSessionCompatApi18;->sIsMbrPendingIntentSupported:Z
@@ -41,10 +37,10 @@
     .locals 0
 
     .prologue
-    .line 30
+    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 125
+    .line 121
     return-void
 .end method
 
@@ -52,7 +48,7 @@
     .locals 1
 
     .prologue
-    .line 39
+    .line 35
     new-instance v0, Landroid/support/v4/media/session/MediaSessionCompatApi18$OnPlaybackPositionUpdateListener;
 
     invoke-direct {v0, p0}, Landroid/support/v4/media/session/MediaSessionCompatApi18$OnPlaybackPositionUpdateListener;-><init>(Landroid/support/v4/media/session/MediaSessionCompatApi18$Callback;)V
@@ -64,13 +60,12 @@
     .locals 6
 
     .prologue
-    .line 103
-    .line 104
+    .line 99
     invoke-static {p0, p1}, Landroid/support/v4/media/session/MediaSessionCompatApi14;->getRccTransportControlFlagsFromActions(J)I
 
     move-result v0
 
-    .line 105
+    .line 101
     const-wide/16 v2, 0x100
 
     and-long/2addr v2, p0
@@ -81,10 +76,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 106
+    .line 102
     or-int/lit16 v0, v0, 0x100
 
-    .line 108
+    .line 104
     :cond_0
     return v0
 .end method
@@ -93,7 +88,7 @@
     .locals 3
 
     .prologue
-    .line 44
+    .line 40
     const-string v0, "audio"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -102,32 +97,32 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 49
+    .line 45
     sget-boolean v1, Landroid/support/v4/media/session/MediaSessionCompatApi18;->sIsMbrPendingIntentSupported:Z
 
     if-eqz v1, :cond_0
 
-    .line 51
+    .line 47
     :try_start_0
     invoke-virtual {v0, p1}, Landroid/media/AudioManager;->registerMediaButtonEventReceiver(Landroid/app/PendingIntent;)V
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 59
+    .line 55
     :cond_0
     :goto_0
     sget-boolean v1, Landroid/support/v4/media/session/MediaSessionCompatApi18;->sIsMbrPendingIntentSupported:Z
 
     if-nez v1, :cond_1
 
-    .line 60
+    .line 56
     invoke-virtual {v0, p2}, Landroid/media/AudioManager;->registerMediaButtonEventReceiver(Landroid/content/ComponentName;)V
 
-    .line 62
+    .line 58
     :cond_1
     return-void
 
-    .line 53
+    .line 49
     :catch_0
     move-exception v1
 
@@ -137,7 +132,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
+    .line 51
     const/4 v1, 0x0
 
     sput-boolean v1, Landroid/support/v4/media/session/MediaSessionCompatApi18;->sIsMbrPendingIntentSupported:Z
@@ -149,14 +144,14 @@
     .locals 0
 
     .prologue
-    .line 98
+    .line 94
     check-cast p0, Landroid/media/RemoteControlClient;
 
     check-cast p1, Landroid/media/RemoteControlClient$OnPlaybackPositionUpdateListener;
 
     invoke-virtual {p0, p1}, Landroid/media/RemoteControlClient;->setPlaybackPositionUpdateListener(Landroid/media/RemoteControlClient$OnPlaybackPositionUpdateListener;)V
 
-    .line 100
+    .line 96
     return-void
 .end method
 
@@ -166,12 +161,12 @@
     .prologue
     const-wide/16 v0, 0x0
 
-    .line 76
+    .line 72
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 77
+    .line 73
     const/4 v4, 0x3
 
     if-ne p1, v4, :cond_1
@@ -180,15 +175,15 @@
 
     if-lez v4, :cond_1
 
-    .line 79
+    .line 75
     cmp-long v4, p5, v0
 
     if-lez v4, :cond_0
 
-    .line 80
+    .line 76
     sub-long v0, v2, p5
 
-    .line 81
+    .line 77
     const/4 v2, 0x0
 
     cmpl-float v2, p4, v2
@@ -201,29 +196,29 @@
 
     if-eqz v2, :cond_0
 
-    .line 82
+    .line 78
     long-to-float v0, v0
 
     mul-float/2addr v0, p4
 
     float-to-long v0, v0
 
-    .line 85
+    .line 81
     :cond_0
     add-long/2addr p2, v0
 
-    .line 87
+    .line 83
     :cond_1
     invoke-static {p1}, Landroid/support/v4/media/session/MediaSessionCompatApi14;->getRccStateFromState(I)I
 
     move-result v0
 
-    .line 88
+    .line 84
     check-cast p0, Landroid/media/RemoteControlClient;
 
     invoke-virtual {p0, v0, p2, p3, p4}, Landroid/media/RemoteControlClient;->setPlaybackState(IJF)V
 
-    .line 89
+    .line 85
     return-void
 .end method
 
@@ -231,18 +226,16 @@
     .locals 1
 
     .prologue
-    .line 92
+    .line 88
     check-cast p0, Landroid/media/RemoteControlClient;
 
-    .line 93
     invoke-static {p1, p2}, Landroid/support/v4/media/session/MediaSessionCompatApi18;->getRccTransportControlFlagsFromActions(J)I
 
     move-result v0
 
-    .line 92
     invoke-virtual {p0, v0}, Landroid/media/RemoteControlClient;->setTransportControlFlags(I)V
 
-    .line 94
+    .line 90
     return-void
 .end method
 
@@ -250,7 +243,7 @@
     .locals 2
 
     .prologue
-    .line 66
+    .line 62
     const-string v0, "audio"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -259,19 +252,19 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 67
+    .line 63
     sget-boolean v1, Landroid/support/v4/media/session/MediaSessionCompatApi18;->sIsMbrPendingIntentSupported:Z
 
     if-eqz v1, :cond_0
 
-    .line 68
+    .line 64
     invoke-virtual {v0, p1}, Landroid/media/AudioManager;->unregisterMediaButtonEventReceiver(Landroid/app/PendingIntent;)V
 
-    .line 72
+    .line 68
     :goto_0
     return-void
 
-    .line 70
+    .line 66
     :cond_0
     invoke-virtual {v0, p2}, Landroid/media/AudioManager;->unregisterMediaButtonEventReceiver(Landroid/content/ComponentName;)V
 

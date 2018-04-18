@@ -45,17 +45,17 @@
     .locals 1
 
     .prologue
-    .line 1328
+    .line 1232
     invoke-direct {p0}, Landroid/databinding/ObservableList$OnListChangedCallback;-><init>()V
 
-    .line 1329
+    .line 1233
     new-instance v0, Landroid/databinding/ViewDataBinding$WeakListener;
 
     invoke-direct {v0, p1, p2, p0}, Landroid/databinding/ViewDataBinding$WeakListener;-><init>(Landroid/databinding/ViewDataBinding;ILandroid/databinding/ViewDataBinding$ObservableReference;)V
 
     iput-object v0, p0, Landroid/databinding/ViewDataBinding$WeakListListener;->mListener:Landroid/databinding/ViewDataBinding$WeakListener;
 
-    .line 1330
+    .line 1234
     return-void
 .end method
 
@@ -65,10 +65,10 @@
     .locals 0
 
     .prologue
-    .line 1339
+    .line 1243
     invoke-interface {p1, p0}, Landroid/databinding/ObservableList;->addOnListChangedCallback(Landroid/databinding/ObservableList$OnListChangedCallback;)V
 
-    .line 1340
+    .line 1244
     return-void
 .end method
 
@@ -76,7 +76,7 @@
     .locals 0
 
     .prologue
-    .line 1324
+    .line 1228
     check-cast p1, Landroid/databinding/ObservableList;
 
     invoke-virtual {p0, p1}, Landroid/databinding/ViewDataBinding$WeakListListener;->addListener(Landroid/databinding/ObservableList;)V
@@ -97,7 +97,7 @@
     .end annotation
 
     .prologue
-    .line 1334
+    .line 1238
     iget-object v0, p0, Landroid/databinding/ViewDataBinding$WeakListListener;->mListener:Landroid/databinding/ViewDataBinding$WeakListener;
 
     return-object v0
@@ -107,22 +107,22 @@
     .locals 4
 
     .prologue
-    .line 1349
+    .line 1253
     iget-object v0, p0, Landroid/databinding/ViewDataBinding$WeakListListener;->mListener:Landroid/databinding/ViewDataBinding$WeakListener;
 
     invoke-virtual {v0}, Landroid/databinding/ViewDataBinding$WeakListener;->getBinder()Landroid/databinding/ViewDataBinding;
 
     move-result-object v1
 
-    .line 1350
+    .line 1254
     if-nez v1, :cond_1
 
-    .line 1358
+    .line 1262
     :cond_0
     :goto_0
     return-void
 
-    .line 1353
+    .line 1257
     :cond_1
     iget-object v0, p0, Landroid/databinding/ViewDataBinding$WeakListListener;->mListener:Landroid/databinding/ViewDataBinding$WeakListener;
 
@@ -132,17 +132,17 @@
 
     check-cast v0, Landroid/databinding/ObservableList;
 
-    .line 1354
+    .line 1258
     if-ne v0, p1, :cond_0
 
-    .line 1357
+    .line 1261
     iget-object v2, p0, Landroid/databinding/ViewDataBinding$WeakListListener;->mListener:Landroid/databinding/ViewDataBinding$WeakListener;
 
     iget v2, v2, Landroid/databinding/ViewDataBinding$WeakListener;->mLocalFieldId:I
 
     const/4 v3, 0x0
 
-    invoke-static {v1, v2, v0, v3}, Landroid/databinding/ViewDataBinding;->access$700(Landroid/databinding/ViewDataBinding;ILjava/lang/Object;I)V
+    invoke-static {v1, v2, v0, v3}, Landroid/databinding/ViewDataBinding;->access$500(Landroid/databinding/ViewDataBinding;ILjava/lang/Object;I)V
 
     goto :goto_0
 .end method
@@ -151,10 +151,10 @@
     .locals 0
 
     .prologue
-    .line 1362
+    .line 1266
     invoke-virtual {p0, p1}, Landroid/databinding/ViewDataBinding$WeakListListener;->onChanged(Landroid/databinding/ObservableList;)V
 
-    .line 1363
+    .line 1267
     return-void
 .end method
 
@@ -162,10 +162,10 @@
     .locals 0
 
     .prologue
-    .line 1367
+    .line 1271
     invoke-virtual {p0, p1}, Landroid/databinding/ViewDataBinding$WeakListListener;->onChanged(Landroid/databinding/ObservableList;)V
 
-    .line 1368
+    .line 1272
     return-void
 .end method
 
@@ -173,10 +173,10 @@
     .locals 0
 
     .prologue
-    .line 1373
+    .line 1277
     invoke-virtual {p0, p1}, Landroid/databinding/ViewDataBinding$WeakListListener;->onChanged(Landroid/databinding/ObservableList;)V
 
-    .line 1374
+    .line 1278
     return-void
 .end method
 
@@ -184,10 +184,10 @@
     .locals 0
 
     .prologue
-    .line 1378
+    .line 1282
     invoke-virtual {p0, p1}, Landroid/databinding/ViewDataBinding$WeakListListener;->onChanged(Landroid/databinding/ObservableList;)V
 
-    .line 1379
+    .line 1283
     return-void
 .end method
 
@@ -195,10 +195,10 @@
     .locals 0
 
     .prologue
-    .line 1344
+    .line 1248
     invoke-interface {p1, p0}, Landroid/databinding/ObservableList;->removeOnListChangedCallback(Landroid/databinding/ObservableList$OnListChangedCallback;)V
 
-    .line 1345
+    .line 1249
     return-void
 .end method
 
@@ -206,7 +206,7 @@
     .locals 0
 
     .prologue
-    .line 1324
+    .line 1228
     check-cast p1, Landroid/databinding/ObservableList;
 
     invoke-virtual {p0, p1}, Landroid/databinding/ViewDataBinding$WeakListListener;->removeListener(Landroid/databinding/ObservableList;)V

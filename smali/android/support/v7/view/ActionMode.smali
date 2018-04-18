@@ -22,10 +22,10 @@
     .locals 0
 
     .prologue
-    .line 40
+    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 244
+    .line 240
     return-void
 .end method
 
@@ -47,10 +47,10 @@
     .locals 0
 
     .prologue
-    .line 56
+    .line 53
     iput-object p1, p0, Landroid/support/v7/view/ActionMode;->a:Ljava/lang/Object;
 
-    .line 57
+    .line 54
     return-void
 .end method
 
@@ -58,10 +58,10 @@
     .locals 0
 
     .prologue
-    .line 133
+    .line 130
     iput-boolean p1, p0, Landroid/support/v7/view/ActionMode;->b:Z
 
-    .line 134
+    .line 131
     return-void
 .end method
 
@@ -90,7 +90,7 @@
     .locals 1
 
     .prologue
-    .line 152
+    .line 149
     const/4 v0, 0x0
 
     return v0
@@ -103,7 +103,7 @@
     .locals 1
 
     .prologue
-    .line 70
+    .line 67
     iget-object v0, p0, Landroid/support/v7/view/ActionMode;->a:Ljava/lang/Object;
 
     return-object v0
@@ -113,7 +113,7 @@
     .locals 1
 
     .prologue
-    .line 144
+    .line 141
     iget-boolean v0, p0, Landroid/support/v7/view/ActionMode;->b:Z
 
     return v0

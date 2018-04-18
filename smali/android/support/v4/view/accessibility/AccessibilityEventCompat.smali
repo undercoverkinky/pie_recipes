@@ -7,7 +7,6 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventKitKatImpl;,
-        Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventJellyBeanImpl;,
         Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventIcsImpl;,
         Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventStubImpl;,
         Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;
@@ -30,8 +29,6 @@
 
 .field public static final TYPE_ANNOUNCEMENT:I = 0x4000
 
-.field public static final TYPE_ASSIST_READING_CONTEXT:I = 0x1000000
-
 .field public static final TYPE_GESTURE_DETECTION_END:I = 0x80000
 
 .field public static final TYPE_GESTURE_DETECTION_START:I = 0x40000
@@ -48,8 +45,6 @@
 
 .field public static final TYPE_VIEW_ACCESSIBILITY_FOCUS_CLEARED:I = 0x10000
 
-.field public static final TYPE_VIEW_CONTEXT_CLICKED:I = 0x800000
-
 .field public static final TYPE_VIEW_HOVER_ENTER:I = 0x80
 
 .field public static final TYPE_VIEW_HOVER_EXIT:I = 0x100
@@ -60,8 +55,6 @@
 
 .field public static final TYPE_VIEW_TEXT_TRAVERSED_AT_MOVEMENT_GRANULARITY:I = 0x20000
 
-.field public static final TYPE_WINDOWS_CHANGED:I = 0x400000
-
 .field public static final TYPE_WINDOW_CONTENT_CHANGED:I = 0x800
 
 
@@ -70,50 +63,33 @@
     .locals 2
 
     .prologue
-    .line 142
+    .line 98
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
 
     if-lt v0, v1, :cond_0
 
-    .line 143
+    .line 99
     new-instance v0, Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventKitKatImpl;
 
     invoke-direct {v0}, Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventKitKatImpl;-><init>()V
 
     sput-object v0, Landroid/support/v4/view/accessibility/AccessibilityEventCompat;->IMPL:Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;
 
-    .line 151
+    .line 105
     :goto_0
     return-void
 
-    .line 144
+    .line 100
     :cond_0
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x10
-
-    if-lt v0, v1, :cond_1
-
-    .line 145
-    new-instance v0, Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventJellyBeanImpl;
-
-    invoke-direct {v0}, Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventJellyBeanImpl;-><init>()V
-
-    sput-object v0, Landroid/support/v4/view/accessibility/AccessibilityEventCompat;->IMPL:Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;
-
-    goto :goto_0
-
-    .line 146
-    :cond_1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0xe
 
-    if-lt v0, v1, :cond_2
+    if-lt v0, v1, :cond_1
 
-    .line 147
+    .line 101
     new-instance v0, Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventIcsImpl;
 
     invoke-direct {v0}, Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventIcsImpl;-><init>()V
@@ -122,8 +98,8 @@
 
     goto :goto_0
 
-    .line 149
-    :cond_2
+    .line 103
+    :cond_1
     new-instance v0, Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventStubImpl;
 
     invoke-direct {v0}, Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventStubImpl;-><init>()V
@@ -137,10 +113,10 @@
     .locals 0
 
     .prologue
-    .line 296
+    .line 235
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 298
+    .line 237
     return-void
 .end method
 
@@ -148,7 +124,7 @@
     .locals 2
 
     .prologue
-    .line 318
+    .line 257
     sget-object v0, Landroid/support/v4/view/accessibility/AccessibilityEventCompat;->IMPL:Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;
 
     invoke-virtual {p1}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompat;->getImpl()Ljava/lang/Object;
@@ -157,7 +133,7 @@
 
     invoke-interface {v0, p0, v1}, Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;->appendRecord(Landroid/view/accessibility/AccessibilityEvent;Ljava/lang/Object;)V
 
-    .line 319
+    .line 258
     return-void
 .end method
 
@@ -165,7 +141,7 @@
     .locals 1
 
     .prologue
-    .line 345
+    .line 284
     new-instance v0, Landroid/support/v4/view/accessibility/AccessibilityRecordCompat;
 
     invoke-direct {v0, p0}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompat;-><init>(Ljava/lang/Object;)V
@@ -177,7 +153,7 @@
     .locals 1
 
     .prologue
-    .line 374
+    .line 313
     sget-object v0, Landroid/support/v4/view/accessibility/AccessibilityEventCompat;->IMPL:Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;->getContentChangeTypes(Landroid/view/accessibility/AccessibilityEvent;)I
@@ -191,7 +167,7 @@
     .locals 2
 
     .prologue
-    .line 328
+    .line 267
     new-instance v0, Landroid/support/v4/view/accessibility/AccessibilityRecordCompat;
 
     sget-object v1, Landroid/support/v4/view/accessibility/AccessibilityEventCompat;->IMPL:Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;
@@ -209,7 +185,7 @@
     .locals 1
 
     .prologue
-    .line 306
+    .line 245
     sget-object v0, Landroid/support/v4/view/accessibility/AccessibilityEventCompat;->IMPL:Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;->getRecordCount(Landroid/view/accessibility/AccessibilityEvent;)I
@@ -223,67 +199,11 @@
     .locals 1
 
     .prologue
-    .line 357
+    .line 296
     sget-object v0, Landroid/support/v4/view/accessibility/AccessibilityEventCompat;->IMPL:Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;->setContentChangeTypes(Landroid/view/accessibility/AccessibilityEvent;I)V
 
-    .line 358
-    return-void
-.end method
-
-
-# virtual methods
-.method public final getAction(Landroid/view/accessibility/AccessibilityEvent;)I
-    .locals 1
-
-    .prologue
-    .line 424
-    sget-object v0, Landroid/support/v4/view/accessibility/AccessibilityEventCompat;->IMPL:Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;
-
-    invoke-interface {v0, p1}, Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;->getAction(Landroid/view/accessibility/AccessibilityEvent;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final getMovementGranularity(Landroid/view/accessibility/AccessibilityEvent;)I
-    .locals 1
-
-    .prologue
-    .line 394
-    sget-object v0, Landroid/support/v4/view/accessibility/AccessibilityEventCompat;->IMPL:Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;
-
-    invoke-interface {v0, p1}, Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;->getMovementGranularity(Landroid/view/accessibility/AccessibilityEvent;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final setAction(Landroid/view/accessibility/AccessibilityEvent;I)V
-    .locals 1
-
-    .prologue
-    .line 415
-    sget-object v0, Landroid/support/v4/view/accessibility/AccessibilityEventCompat;->IMPL:Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;
-
-    invoke-interface {v0, p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;->setAction(Landroid/view/accessibility/AccessibilityEvent;I)V
-
-    .line 416
-    return-void
-.end method
-
-.method public final setMovementGranularity(Landroid/view/accessibility/AccessibilityEvent;I)V
-    .locals 1
-
-    .prologue
-    .line 385
-    sget-object v0, Landroid/support/v4/view/accessibility/AccessibilityEventCompat;->IMPL:Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;
-
-    invoke-interface {v0, p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityEventCompat$AccessibilityEventVersionImpl;->setMovementGranularity(Landroid/view/accessibility/AccessibilityEvent;I)V
-
-    .line 386
+    .line 297
     return-void
 .end method

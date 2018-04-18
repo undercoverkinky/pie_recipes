@@ -108,7 +108,6 @@
     :cond_0
     new-instance v1, Landroid/content/ComponentName;
 
-    .line 261
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -123,7 +122,6 @@
     .line 263
     if-nez v0, :cond_1
 
-    .line 264
     invoke-static {v1}, Landroid/support/v4/content/IntentCompat;->makeMainActivity(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object v0
@@ -135,7 +133,6 @@
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 265
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object v0
@@ -194,7 +191,6 @@
     .line 238
     if-nez v0, :cond_1
 
-    .line 239
     invoke-static {v1}, Landroid/support/v4/content/IntentCompat;->makeMainActivity(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object v0
@@ -206,7 +202,6 @@
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 240
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object v0
@@ -297,7 +292,6 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 179
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2

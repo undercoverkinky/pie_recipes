@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/sdkutils/concurrent/f;->b()Lcom/kik/events/Promise;
+    value = Lkik/android/sdkutils/concurrent/f;->a(J)Lcom/kik/events/Promise;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -55,7 +55,7 @@
 
     invoke-direct {v1, p0}, Lkik/android/sdkutils/concurrent/f$1$1;-><init>(Lkik/android/sdkutils/concurrent/f$1;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
 
     .line 65
     return-void

@@ -1,9 +1,9 @@
 .class public Lkik/android/widget/AspectRatioImageView;
-.super Landroid/support/v7/widget/AppCompatImageView;
+.super Landroid/widget/ImageView;
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/android/widget/a;
+.implements Lkik/android/widget/c;
 
 
 # instance fields
@@ -17,12 +17,12 @@
     .locals 1
 
     .prologue
-    .line 15
+    .line 14
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lkik/android/widget/AspectRatioImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 16
+    .line 15
     return-void
 .end method
 
@@ -30,12 +30,12 @@
     .locals 1
 
     .prologue
-    .line 20
+    .line 19
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lkik/android/widget/AspectRatioImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 21
+    .line 20
     return-void
 .end method
 
@@ -45,16 +45,16 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 25
-    invoke-direct {p0, p1, p2, p3}, Landroid/support/v7/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .line 24
+    invoke-direct {p0, p1, p2, p3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 10
+    .line 9
     iput v0, p0, Lkik/android/widget/AspectRatioImageView;->a:I
 
-    .line 11
+    .line 10
     iput v0, p0, Lkik/android/widget/AspectRatioImageView;->b:I
 
-    .line 26
+    .line 25
     return-void
 .end method
 
@@ -64,31 +64,55 @@
     .locals 0
 
     .prologue
-    .line 30
+    .line 29
     iput p2, p0, Lkik/android/widget/AspectRatioImageView;->b:I
 
-    .line 31
+    .line 30
     iput p1, p0, Lkik/android/widget/AspectRatioImageView;->a:I
 
-    .line 32
+    .line 31
     return-void
+.end method
+
+.method public final a()Z
+    .locals 1
+
+    .prologue
+    .line 36
+    iget v0, p0, Lkik/android/widget/AspectRatioImageView;->b:I
+
+    if-ltz v0, :cond_0
+
+    iget v0, p0, Lkik/android/widget/AspectRatioImageView;->a:I
+
+    if-ltz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
 .method protected onMeasure(II)V
     .locals 5
 
     .prologue
-    .line 43
+    .line 42
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v1
 
-    .line 44
+    .line 43
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
-    .line 45
+    .line 44
     iget v2, p0, Lkik/android/widget/AspectRatioImageView;->a:I
 
     if-ltz v2, :cond_1
@@ -97,7 +121,7 @@
 
     if-ltz v2, :cond_1
 
-    .line 46
+    .line 45
     iget v2, p0, Lkik/android/widget/AspectRatioImageView;->a:I
 
     int-to-float v2, v2
@@ -108,19 +132,19 @@
 
     div-float/2addr v2, v3
 
-    .line 47
+    .line 46
     int-to-float v3, v1
 
     int-to-float v4, v0
 
     div-float/2addr v3, v4
 
-    .line 48
+    .line 47
     cmpl-float v3, v3, v2
 
     if-lez v3, :cond_0
 
-    .line 49
+    .line 48
     int-to-float v1, v0
 
     mul-float/2addr v1, v2
@@ -133,15 +157,15 @@
 
     double-to-int v1, v2
 
-    .line 54
+    .line 53
     :goto_0
     invoke-virtual {p0, v1, v0}, Lkik/android/widget/AspectRatioImageView;->setMeasuredDimension(II)V
 
-    .line 59
+    .line 58
     :goto_1
     return-void
 
-    .line 52
+    .line 51
     :cond_0
     int-to-float v0, v1
 
@@ -157,9 +181,9 @@
 
     goto :goto_0
 
-    .line 57
+    .line 56
     :cond_1
-    invoke-super {p0, p1, p2}, Landroid/support/v7/widget/AppCompatImageView;->onMeasure(II)V
+    invoke-super {p0, p1, p2}, Landroid/widget/ImageView;->onMeasure(II)V
 
     goto :goto_1
 .end method

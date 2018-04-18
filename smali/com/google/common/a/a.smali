@@ -3,6 +3,14 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/google/common/a/a$1;
+    }
+.end annotation
+
+
 # static fields
 .field static final a:[B
 
@@ -16,25 +24,15 @@
 
 .field static final f:[I
 
-.field private static final g:[[J
-
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 8
+    .locals 2
 
     .prologue
-    const/4 v7, 0x6
+    const/16 v1, 0x13
 
-    const/4 v6, 0x5
-
-    const/4 v5, 0x4
-
-    const/4 v4, 0x3
-
-    const/4 v3, 0x2
-
-    .line 205
+    .line 169
     const/16 v0, 0x40
 
     new-array v0, v0, [B
@@ -43,25 +41,21 @@
 
     sput-object v0, Lcom/google/common/a/a;->a:[B
 
-    .line 213
-    const/16 v0, 0x13
-
-    new-array v0, v0, [J
+    .line 176
+    new-array v0, v1, [J
 
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/google/common/a/a;->b:[J
 
-    .line 238
-    const/16 v0, 0x13
-
-    new-array v0, v0, [J
+    .line 201
+    new-array v0, v1, [J
 
     fill-array-data v0, :array_2
 
     sput-object v0, Lcom/google/common/a/a;->c:[J
 
-    .line 778
+    .line 618
     const/16 v0, 0x15
 
     new-array v0, v0, [J
@@ -70,7 +64,7 @@
 
     sput-object v0, Lcom/google/common/a/a;->d:[J
 
-    .line 886
+    .line 727
     const/16 v0, 0x22
 
     new-array v0, v0, [I
@@ -79,7 +73,7 @@
 
     sput-object v0, Lcom/google/common/a/a;->e:[I
 
-    .line 928
+    .line 736
     const/16 v0, 0x1f
 
     new-array v0, v0, [I
@@ -88,66 +82,9 @@
 
     sput-object v0, Lcom/google/common/a/a;->f:[I
 
-    .line 1043
-    const/4 v0, 0x7
-
-    new-array v0, v0, [[J
-
-    const/4 v1, 0x0
-
-    new-array v2, v3, [J
-
-    fill-array-data v2, :array_6
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x1
-
-    new-array v2, v4, [J
-
-    fill-array-data v2, :array_7
-
-    aput-object v2, v0, v1
-
-    new-array v1, v5, [J
-
-    fill-array-data v1, :array_8
-
-    aput-object v1, v0, v3
-
-    new-array v1, v6, [J
-
-    fill-array-data v1, :array_9
-
-    aput-object v1, v0, v4
-
-    new-array v1, v7, [J
-
-    fill-array-data v1, :array_a
-
-    aput-object v1, v0, v5
-
-    const/4 v1, 0x7
-
-    new-array v1, v1, [J
-
-    fill-array-data v1, :array_b
-
-    aput-object v1, v0, v6
-
-    const/16 v1, 0x8
-
-    new-array v1, v1, [J
-
-    fill-array-data v1, :array_c
-
-    aput-object v1, v0, v7
-
-    sput-object v0, Lcom/google/common/a/a;->g:[[J
-
     return-void
 
-    .line 205
+    .line 169
     nop
 
     :array_0
@@ -218,7 +155,7 @@
         0x0t
     .end array-data
 
-    .line 213
+    .line 176
     :array_1
     .array-data 8
         0x1
@@ -242,7 +179,7 @@
         0xde0b6b3a7640000L
     .end array-data
 
-    .line 238
+    .line 201
     :array_2
     .array-data 8
         0x3
@@ -266,7 +203,7 @@
         0x2be2aac7077d5bc3L    # 2.731041190138108E-97
     .end array-data
 
-    .line 778
+    .line 618
     :array_3
     .array-data 8
         0x1
@@ -292,7 +229,7 @@
         0x21c3677c82b40000L
     .end array-data
 
-    .line 886
+    .line 727
     :array_4
     .array-data 4
         0x7fffffff
@@ -331,7 +268,7 @@
         0x42
     .end array-data
 
-    .line 928
+    .line 736
     :array_5
     .array-data 4
         0x7fffffff
@@ -366,92 +303,28 @@
         0x3d
         0x3d
     .end array-data
-
-    .line 1043
-    :array_6
-    .array-data 8
-        0x473f6
-        0x1c1111acd0b9428L    # 3.1855675420061E-300
-    .end array-data
-
-    :array_7
-    .array-data 8
-        0x34c91838
-        0xa10ad7d5c6610c1L
-        0x318a8c12ce9c70e7L    # 4.808051585655767E-70
-    .end array-data
-
-    :array_8
-    .array-data 8
-        0x3fc6e038e0L
-        0xf
-        0x1b6ebec62L
-        0x386c87553e12cL
-    .end array-data
-
-    :array_9
-    .array-data 8
-        0x2b5343fd6a30L
-        0x2
-        0x273abc
-        0xca2b9d9
-        0xdf8286ccL
-    .end array-data
-
-    :array_a
-    .array-data 8
-        0x1c6b470864f682L
-        0x2
-        0x3c1c7396f6dL
-        0x2142e2e3f22de5cL
-        0x297105b6b7b29ddL
-        0x370eb221a5f176ddL    # 1.7205605495331308E-43
-    .end array-data
-
-    :array_b
-    .array-data 8
-        0x81f23f390affe88L
-        0x2
-        0x70722e8f5cd0L
-        0x20cd6bd5ace2d1L
-        0x9bbc940c751630L
-        0xa90404784bfcb4dL    # 8.45563543651314E-258
-        0x1189b3f265c2b0c7L
-    .end array-data
-
-    :array_c
-    .array-data 8
-        0x7fffffffffffffffL
-        0x2
-        0x145
-        0x249f
-        0x6e12
-        0x6e0d7
-        0x953d18
-        0x6b0191fe
-    .end array-data
 .end method
 
 .method public static a(JLjava/math/RoundingMode;)J
     .locals 10
 
     .prologue
-    .line 385
-    invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 348
+    invoke-static {p2}, Lcom/google/common/base/h;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 386
+    .line 349
     const-wide/16 v0, 0x40
 
     div-long v2, p0, v0
 
-    .line 387
+    .line 350
     const-wide/16 v0, 0x40
 
     mul-long/2addr v0, v2
 
     sub-long v0, p0, v0
 
-    .line 389
+    .line 352
     const-wide/16 v4, 0x0
 
     cmp-long v4, v0, v4
@@ -460,11 +333,11 @@
 
     move-wide v0, v2
 
-    .line 434
+    .line 397
     :goto_0
     return-wide v0
 
-    .line 400
+    .line 363
     :cond_0
     const-wide/16 v4, 0x40
 
@@ -478,7 +351,7 @@
 
     or-int/lit8 v5, v4, 0x1
 
-    .line 402
+    .line 365
     sget-object v4, Lcom/google/common/a/a$1;->a:[I
 
     invoke-virtual {p2}, Ljava/math/RoundingMode;->ordinal()I
@@ -489,14 +362,14 @@
 
     packed-switch v4, :pswitch_data_0
 
-    .line 432
+    .line 395
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
 
     throw v0
 
-    .line 404
+    .line 367
     :pswitch_0
     const-wide/16 v6, 0x0
 
@@ -519,18 +392,18 @@
 
     throw v0
 
-    .line 404
+    .line 367
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 407
+    .line 370
     :cond_2
     :pswitch_1
     const/4 v0, 0x0
 
-    .line 434
+    .line 397
     :goto_2
     if-eqz v0, :cond_a
 
@@ -540,14 +413,14 @@
 
     goto :goto_0
 
-    .line 410
+    .line 373
     :pswitch_2
     const/4 v0, 0x1
 
-    .line 411
+    .line 374
     goto :goto_2
 
-    .line 413
+    .line 376
     :pswitch_3
     if-lez v5, :cond_3
 
@@ -560,7 +433,7 @@
 
     goto :goto_2
 
-    .line 416
+    .line 379
     :pswitch_4
     if-gez v5, :cond_4
 
@@ -573,13 +446,13 @@
 
     goto :goto_2
 
-    .line 421
+    .line 384
     :pswitch_5
     invoke-static {v0, v1}, Ljava/lang/Math;->abs(J)J
 
     move-result-wide v0
 
-    .line 422
+    .line 385
     const-wide/16 v6, 0x40
 
     invoke-static {v6, v7}, Ljava/lang/Math;->abs(J)J
@@ -590,14 +463,14 @@
 
     sub-long/2addr v0, v6
 
-    .line 425
+    .line 388
     const-wide/16 v6, 0x0
 
     cmp-long v4, v0, v6
 
     if-nez v4, :cond_8
 
-    .line 426
+    .line 389
     sget-object v0, Ljava/math/RoundingMode;->HALF_UP:Ljava/math/RoundingMode;
 
     if-ne p2, v0, :cond_5
@@ -650,7 +523,7 @@
 
     goto :goto_5
 
-    .line 428
+    .line 391
     :cond_8
     const-wide/16 v6, 0x0
 
@@ -670,10 +543,10 @@
     :cond_a
     move-wide v0, v2
 
-    .line 434
+    .line 397
     goto :goto_0
 
-    .line 402
+    .line 365
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

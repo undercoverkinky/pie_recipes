@@ -16,7 +16,7 @@
 
 
 # instance fields
-.field private final a:Lcom/google/gson/e;
+.field private final a:Lcom/google/gson/d;
 
 .field private final b:Lcom/google/gson/o;
     .annotation system Ldalvik/annotation/Signature;
@@ -31,12 +31,12 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/google/gson/e;Lcom/google/gson/o;Ljava/lang/reflect/Type;)V
+.method constructor <init>(Lcom/google/gson/d;Lcom/google/gson/o;Ljava/lang/reflect/Type;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/google/gson/e;",
+            "Lcom/google/gson/d;",
             "Lcom/google/gson/o",
             "<TT;>;",
             "Ljava/lang/reflect/Type;",
@@ -45,19 +45,19 @@
     .end annotation
 
     .prologue
-    .line 33
+    .line 32
     invoke-direct {p0}, Lcom/google/gson/o;-><init>()V
 
-    .line 34
-    iput-object p1, p0, Lcom/google/gson/internal/bind/h;->a:Lcom/google/gson/e;
+    .line 33
+    iput-object p1, p0, Lcom/google/gson/internal/bind/h;->a:Lcom/google/gson/d;
 
-    .line 35
+    .line 34
     iput-object p2, p0, Lcom/google/gson/internal/bind/h;->b:Lcom/google/gson/o;
 
-    .line 36
+    .line 35
     iput-object p3, p0, Lcom/google/gson/internal/bind/h;->c:Ljava/lang/reflect/Type;
 
-    .line 37
+    .line 36
     return-void
 .end method
 
@@ -80,7 +80,7 @@
     .end annotation
 
     .prologue
-    .line 41
+    .line 40
     iget-object v0, p0, Lcom/google/gson/internal/bind/h;->b:Lcom/google/gson/o;
 
     invoke-virtual {v0, p1}, Lcom/google/gson/o;->a(Lcom/google/gson/stream/a;)Ljava/lang/Object;
@@ -107,13 +107,13 @@
     .end annotation
 
     .prologue
-    .line 53
+    .line 52
     iget-object v1, p0, Lcom/google/gson/internal/bind/h;->b:Lcom/google/gson/o;
 
-    .line 54
+    .line 53
     iget-object v0, p0, Lcom/google/gson/internal/bind/h;->c:Ljava/lang/reflect/Type;
 
-    .line 1076
+    .line 1075
     if-eqz p2, :cond_1
 
     const-class v2, Ljava/lang/Object;
@@ -128,50 +128,50 @@
 
     if-eqz v2, :cond_1
 
-    .line 1078
+    .line 1077
     :cond_0
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 55
+    .line 54
     :cond_1
     iget-object v2, p0, Lcom/google/gson/internal/bind/h;->c:Ljava/lang/reflect/Type;
 
     if-eq v0, v2, :cond_3
 
-    .line 56
-    iget-object v1, p0, Lcom/google/gson/internal/bind/h;->a:Lcom/google/gson/e;
+    .line 55
+    iget-object v1, p0, Lcom/google/gson/internal/bind/h;->a:Lcom/google/gson/d;
 
     invoke-static {v0}, Lcom/google/gson/b/a;->a(Ljava/lang/reflect/Type;)Lcom/google/gson/b/a;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/google/gson/e;->a(Lcom/google/gson/b/a;)Lcom/google/gson/o;
+    invoke-virtual {v1, v0}, Lcom/google/gson/d;->a(Lcom/google/gson/b/a;)Lcom/google/gson/o;
 
     move-result-object v0
 
-    .line 57
+    .line 56
     instance-of v1, v0, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$a;
 
     if-eqz v1, :cond_2
 
-    .line 60
+    .line 59
     iget-object v1, p0, Lcom/google/gson/internal/bind/h;->b:Lcom/google/gson/o;
 
     instance-of v1, v1, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$a;
 
     if-nez v1, :cond_2
 
-    .line 63
+    .line 62
     iget-object v0, p0, Lcom/google/gson/internal/bind/h;->b:Lcom/google/gson/o;
 
-    .line 69
+    .line 68
     :cond_2
     :goto_0
     invoke-virtual {v0, p1, p2}, Lcom/google/gson/o;->a(Lcom/google/gson/stream/b;Ljava/lang/Object;)V
 
-    .line 70
+    .line 69
     return-void
 
     :cond_3

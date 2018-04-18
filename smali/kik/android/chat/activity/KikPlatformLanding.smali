@@ -14,14 +14,14 @@
     .end annotation
 .end field
 
-.field protected c:Lcom/kik/storage/s;
+.field protected c:Lcom/kik/e/p;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
 .field private d:Ljava/lang/String;
 
-.field private e:Lkik/android/internal/platform/PlatformHelper;
+.field private e:Lkik/android/internal/platform/b;
 
 
 # direct methods
@@ -29,93 +29,75 @@
     .locals 0
 
     .prologue
-    .line 37
+    .line 38
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     return-void
 .end method
 
-.method static synthetic a(Lkik/android/chat/activity/KikPlatformLanding;)Lkik/android/internal/platform/PlatformHelper;
+.method static synthetic a(Lkik/android/chat/activity/KikPlatformLanding;)Lkik/android/internal/platform/b;
     .locals 1
 
     .prologue
-    .line 37
-    iget-object v0, p0, Lkik/android/chat/activity/KikPlatformLanding;->e:Lkik/android/internal/platform/PlatformHelper;
+    .line 38
+    iget-object v0, p0, Lkik/android/chat/activity/KikPlatformLanding;->e:Lkik/android/internal/platform/b;
 
     return-object v0
 .end method
 
-.method private a(Ljava/lang/String;Landroid/os/Bundle;)V
-    .locals 3
+.method private a(Ljava/lang/String;)V
+    .locals 2
 
     .prologue
-    const/4 v0, 0x0
+    .line 241
+    iget-object v0, p0, Lkik/android/chat/activity/KikPlatformLanding;->d:Ljava/lang/String;
 
-    .line 247
+    if-eqz v0, :cond_0
+
+    .line 242
+    iget-object v0, p0, Lkik/android/chat/activity/KikPlatformLanding;->e:Lkik/android/internal/platform/b;
+
     iget-object v1, p0, Lkik/android/chat/activity/KikPlatformLanding;->d:Ljava/lang/String;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0, v1}, Lkik/android/internal/platform/b;->d(Ljava/lang/String;)V
 
-    .line 248
-    iget-object v1, p0, Lkik/android/chat/activity/KikPlatformLanding;->e:Lkik/android/internal/platform/PlatformHelper;
-
-    iget-object v2, p0, Lkik/android/chat/activity/KikPlatformLanding;->d:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Lkik/android/internal/platform/PlatformHelper;->c(Ljava/lang/String;)V
-
-    .line 250
+    .line 244
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 251
+    .line 245
     new-instance v0, Lkik/android/chat/fragment/KikChatFragment$a;
 
     invoke-direct {v0}, Lkik/android/chat/fragment/KikChatFragment$a;-><init>()V
 
-    .line 252
+    .line 246
     invoke-virtual {v0, p1}, Lkik/android/chat/fragment/KikChatFragment$a;->c(Ljava/lang/String;)Lkik/android/chat/fragment/KikChatFragment$a;
 
-    .line 253
-    invoke-static {v0, p0}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ad;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    .line 247
+    invoke-static {v0, p0}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->e()Lcom/kik/events/Promise;
 
-    .line 263
+    .line 254
     :goto_0
     invoke-virtual {p0}, Lkik/android/chat/activity/KikPlatformLanding;->finish()V
 
-    .line 264
+    .line 255
     return-void
 
-    .line 256
+    .line 250
     :cond_1
-    if-eqz p2, :cond_2
+    new-instance v0, Lkik/android/chat/fragment/KikConversationsFragment$a;
 
-    const-string v1, "com.kik.util.KActivityLauncher.is.shared"
+    invoke-direct {v0}, Lkik/android/chat/fragment/KikConversationsFragment$a;-><init>()V
 
-    .line 257
-    invoke-virtual {p2, v1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
+    .line 251
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikConversationsFragment$a;->c()Lkik/android/chat/fragment/KikConversationsFragment$a;
 
-    move-result v0
-
-    .line 258
-    :cond_2
-    new-instance v1, Lkik/android/chat/fragment/KikConversationsFragment$a;
-
-    invoke-direct {v1}, Lkik/android/chat/fragment/KikConversationsFragment$a;-><init>()V
-
-    .line 259
-    invoke-virtual {v1}, Lkik/android/chat/fragment/KikConversationsFragment$a;->c()Lkik/android/chat/fragment/KikConversationsFragment$a;
-
-    .line 260
-    invoke-static {v1, p0}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ad;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
-
-    move-result-object v1
-
-    .line 261
-    invoke-virtual {v1, v0}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->a(Z)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    .line 252
+    invoke-static {v0, p0}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v0
 
@@ -130,16 +112,16 @@
     .locals 14
 
     .prologue
-    const/4 v11, 0x0
-
     const/4 v9, 0x0
+
+    const/4 v11, 0x0
 
     const/4 v10, 0x1
 
-    .line 57
+    .line 58
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 59
+    .line 60
     invoke-virtual {p0}, Lkik/android/chat/activity/KikPlatformLanding;->getIntent()Landroid/content/Intent;
 
     move-result-object v12
@@ -256,26 +238,26 @@
     :goto_0
     move-object v1, v0
 
-    .line 61
+    .line 62
     :goto_1
     invoke-virtual {p0}, Lkik/android/chat/activity/KikPlatformLanding;->getApplication()Landroid/app/Application;
 
     move-result-object v0
 
-    check-cast v0, Lkik/android/chat/e;
+    check-cast v0, Lkik/android/chat/c;
 
-    invoke-interface {v0}, Lkik/android/chat/e;->a()Lcom/kik/components/CoreComponent;
+    invoke-interface {v0}, Lkik/android/chat/c;->a()Lcom/kik/components/CoreComponent;
 
     move-result-object v0
 
     invoke-interface {v0, p0}, Lcom/kik/components/CoreComponent;->a(Lkik/android/chat/activity/KikPlatformLanding;)V
 
-    .line 63
+    .line 64
     iget-object v0, p0, Lkik/android/chat/activity/KikPlatformLanding;->b:Lkik/core/interfaces/ad;
 
     const-string v2, "temporary.ban.manager.exists"
 
-    invoke-interface {v0, v2}, Lkik/core/interfaces/ad;->v(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-interface {v0, v2}, Lkik/core/interfaces/ad;->u(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -285,13 +267,13 @@
 
     if-eqz v0, :cond_c
 
-    .line 2048
+    .line 2049
     new-instance v0, Lkik/android/chat/fragment/KikConversationsFragment$a;
 
     invoke-direct {v0}, Lkik/android/chat/fragment/KikConversationsFragment$a;-><init>()V
 
-    .line 2049
-    invoke-static {v0, p0}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ad;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    .line 2050
+    invoke-static {v0, p0}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v0
 
@@ -305,10 +287,10 @@
 
     invoke-virtual {v0}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->e()Lcom/kik/events/Promise;
 
-    .line 2051
+    .line 2052
     invoke-virtual {p0}, Lkik/android/chat/activity/KikPlatformLanding;->finish()V
 
-    .line 2219
+    .line 2218
     :goto_2
     return-void
 
@@ -572,13 +554,13 @@
 
     new-instance v2, Lkik/core/datatypes/b;
 
-    const v3, 0x7f0201f9
+    const v3, 0x7f0201a3
 
     invoke-static {v3}, Lkik/android/chat/KikApplication;->b(I)Landroid/graphics/Bitmap;
 
     move-result-object v3
 
-    invoke-static {v3}, Lkik/android/internal/platform/PlatformHelper;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    invoke-static {v3}, Lkik/android/internal/platform/b;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object v3
 
@@ -588,7 +570,7 @@
 
     invoke-direct {v2, v3}, Lkik/core/datatypes/b;-><init>([B)V
 
-    invoke-virtual {v0, v1, v2}, Lkik/core/datatypes/messageExtensions/ContentMessage;->a(Ljava/lang/String;Lkik/core/datatypes/q;)V
+    invoke-virtual {v0, v1, v2}, Lkik/core/datatypes/messageExtensions/ContentMessage;->a(Ljava/lang/String;Lkik/core/datatypes/t;)V
 
     .line 1454
     const-string v1, "app-pkg"
@@ -599,25 +581,25 @@
 
     goto/16 :goto_0
 
-    .line 68
+    .line 69
     :cond_c
-    invoke-static {}, Lkik/android/internal/platform/PlatformHelper;->a()Lkik/android/internal/platform/PlatformHelper;
+    invoke-static {}, Lkik/android/internal/platform/b;->a()Lkik/android/internal/platform/b;
 
     move-result-object v0
 
-    iput-object v0, p0, Lkik/android/chat/activity/KikPlatformLanding;->e:Lkik/android/internal/platform/PlatformHelper;
+    iput-object v0, p0, Lkik/android/chat/activity/KikPlatformLanding;->e:Lkik/android/internal/platform/b;
 
-    .line 69
+    .line 70
     iget-object v0, p0, Lkik/android/chat/activity/KikPlatformLanding;->b:Lkik/core/interfaces/ad;
 
-    invoke-static {v0}, Lkik/core/z;->a(Lkik/core/interfaces/ad;)Z
+    invoke-static {v0}, Lkik/core/x;->a(Lkik/core/interfaces/ad;)Z
 
     move-result v0
 
     if-nez v0, :cond_d
 
-    .line 71
-    const v0, 0x7f090214
+    .line 72
+    const v0, 0x7f0a0200
 
     invoke-static {p0, v0, v10}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -625,35 +607,35 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 72
+    .line 73
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lkik/android/chat/activity/IntroActivity;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 73
+    .line 74
     invoke-virtual {p0, v0}, Lkik/android/chat/activity/KikPlatformLanding;->startActivity(Landroid/content/Intent;)V
 
-    .line 74
+    .line 75
     invoke-virtual {p0}, Lkik/android/chat/activity/KikPlatformLanding;->finish()V
 
     goto/16 :goto_2
 
-    .line 2134
+    .line 2135
     :cond_d
     invoke-virtual {v12}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2135
+    .line 2136
     const-string v2, "kik.platform.send"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 78
+    .line 79
     if-eqz v0, :cond_15
 
     .line 2175
@@ -675,39 +657,39 @@
 
     .line 2181
     :cond_e
-    iget-object v0, p0, Lkik/android/chat/activity/KikPlatformLanding;->e:Lkik/android/internal/platform/PlatformHelper;
+    iget-object v0, p0, Lkik/android/chat/activity/KikPlatformLanding;->e:Lkik/android/internal/platform/b;
 
     iget-object v1, p0, Lkik/android/chat/activity/KikPlatformLanding;->d:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lkik/android/internal/platform/PlatformHelper;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lkik/android/internal/platform/b;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     .line 2183
-    iget-object v0, p0, Lkik/android/chat/activity/KikPlatformLanding;->e:Lkik/android/internal/platform/PlatformHelper;
+    iget-object v0, p0, Lkik/android/chat/activity/KikPlatformLanding;->e:Lkik/android/internal/platform/b;
 
     invoke-virtual {p0}, Lkik/android/chat/activity/KikPlatformLanding;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
-    invoke-virtual {v0, p0, v2}, Lkik/android/internal/platform/PlatformHelper;->a(Landroid/app/Activity;Landroid/content/Intent;)Lkik/core/datatypes/messageExtensions/ContentMessage;
+    invoke-virtual {v0, p0, v2}, Lkik/android/internal/platform/b;->a(Landroid/app/Activity;Landroid/content/Intent;)Lkik/core/datatypes/messageExtensions/ContentMessage;
 
     move-result-object v2
 
-    .line 2227
-    invoke-static {v2}, Lkik/android/util/o;->a(Lkik/core/datatypes/messageExtensions/ContentMessage;)Ljava/lang/String;
+    .line 2226
+    invoke-static {v2}, Lkik/android/util/p;->a(Lkik/core/datatypes/messageExtensions/ContentMessage;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2229
+    .line 2228
     if-eqz v0, :cond_f
 
-    .line 2230
+    .line 2229
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2233
+    .line 2232
     :cond_f
     invoke-virtual {p0}, Lkik/android/chat/activity/KikPlatformLanding;->getPackageName()Ljava/lang/String;
 
@@ -745,7 +727,7 @@
     :cond_10
     move v0, v10
 
-    .line 2237
+    .line 2236
     goto :goto_4
 
     .line 2192
@@ -755,9 +737,9 @@
     move-result-object v0
 
     .line 2193
-    iget-object v3, p0, Lkik/android/chat/activity/KikPlatformLanding;->e:Lkik/android/internal/platform/PlatformHelper;
+    iget-object v3, p0, Lkik/android/chat/activity/KikPlatformLanding;->e:Lkik/android/internal/platform/b;
 
-    invoke-virtual {v3, v2, v10}, Lkik/android/internal/platform/PlatformHelper;->a(Lkik/core/datatypes/messageExtensions/ContentMessage;Z)V
+    invoke-virtual {v3, v2, v10, v9}, Lkik/android/internal/platform/b;->a(Lkik/core/datatypes/messageExtensions/ContentMessage;Z[B)V
 
     .line 2195
     const-string v3, "file-size"
@@ -803,51 +785,53 @@
 
     .line 2202
     :cond_12
-    new-instance v0, Landroid/support/v7/app/AlertDialog$Builder;
+    new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    const v1, 0x7f0b0113
-
-    invoke-direct {v0, p0, v1}, Landroid/support/v7/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 2203
-    const v1, 0x7f090433
+    const v1, 0x7f0a041f
 
-    invoke-virtual {v0, v1}, Landroid/support/v7/app/AlertDialog$Builder;->a(I)Landroid/support/v7/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 2204
-    invoke-virtual {v0}, Landroid/support/v7/app/AlertDialog$Builder;->b()Landroid/support/v7/app/AlertDialog$Builder;
+    const v1, 0x7f0a03ea
+
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     .line 2205
-    new-instance v1, Lkik/android/chat/activity/KikPlatformLanding$1;
+    const v1, 0x7f0a0269
 
-    invoke-direct {v1, p0}, Lkik/android/chat/activity/KikPlatformLanding$1;-><init>(Lkik/android/chat/activity/KikPlatformLanding;)V
+    new-instance v2, Lkik/android/chat/activity/KikPlatformLanding$1;
 
-    invoke-virtual {v0, v1}, Landroid/support/v7/app/AlertDialog$Builder;->a(Landroid/content/DialogInterface$OnClickListener;)Landroid/support/v7/app/AlertDialog$Builder;
+    invoke-direct {v2, p0}, Lkik/android/chat/activity/KikPlatformLanding$1;-><init>(Lkik/android/chat/activity/KikPlatformLanding;)V
 
-    move-result-object v0
-
-    .line 2214
-    invoke-virtual {v0, v11}, Landroid/support/v7/app/AlertDialog$Builder;->a(Z)Landroid/support/v7/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNeutralButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/v7/app/AlertDialog$Builder;->e()Landroid/support/v7/app/AlertDialog;
+    .line 2213
+    invoke-virtual {v0, v11}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
     goto/16 :goto_2
 
-    .line 2242
+    .line 2216
     :cond_13
-    invoke-direct {p0, v1, v9}, Lkik/android/chat/activity/KikPlatformLanding;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-direct {p0, v1}, Lkik/android/chat/activity/KikPlatformLanding;->a(Ljava/lang/String;)V
 
     goto/16 :goto_2
 
-    .line 3242
+    .line 2220
     :cond_14
-    invoke-direct {p0, v1, v9}, Lkik/android/chat/activity/KikPlatformLanding;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-direct {p0, v1}, Lkik/android/chat/activity/KikPlatformLanding;->a(Ljava/lang/String;)V
 
     goto/16 :goto_2
 
-    .line 4140
+    .line 3141
     :cond_15
     if-eqz v12, :cond_17
 
@@ -883,28 +867,28 @@
 
     move v0, v10
 
-    .line 81
+    .line 82
     :goto_5
     if-eqz v0, :cond_19
 
-    .line 82
+    .line 83
     invoke-static {v12}, Lkik/android/util/f;->a(Landroid/content/Intent;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 83
+    .line 84
     if-eqz v0, :cond_16
 
-    .line 84
+    .line 85
     invoke-static {v0, p0}, Lkik/android/util/f;->a(Landroid/net/Uri;Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v2
 
-    .line 85
+    .line 86
     if-nez v2, :cond_18
 
-    .line 86
-    const v0, 0x7f0901b5
+    .line 87
+    const v0, 0x7f0a01b4
 
     invoke-static {p0, v0, v11}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -912,7 +896,7 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 92
+    .line 93
     :cond_16
     :goto_6
     invoke-virtual {p0}, Lkik/android/chat/activity/KikPlatformLanding;->finish()V
@@ -922,12 +906,12 @@
     :cond_17
     move v0, v11
 
-    .line 4140
+    .line 3141
     goto :goto_5
 
-    .line 89
+    .line 90
     :cond_18
-    iget-object v0, p0, Lkik/android/chat/activity/KikPlatformLanding;->e:Lkik/android/internal/platform/PlatformHelper;
+    iget-object v0, p0, Lkik/android/chat/activity/KikPlatformLanding;->e:Lkik/android/internal/platform/b;
 
     const-string v3, "com.kik.ext.gallery"
 
@@ -939,11 +923,11 @@
 
     move v5, v11
 
-    invoke-virtual/range {v0 .. v6}, Lkik/android/internal/platform/PlatformHelper;->a(Landroid/app/Activity;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;ZLkik/core/interfaces/ad;)V
+    invoke-virtual/range {v0 .. v6}, Lkik/android/internal/platform/b;->a(Landroid/app/Activity;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;ZLkik/core/interfaces/ad;)V
 
     goto :goto_6
 
-    .line 4145
+    .line 3146
     :cond_19
     if-eqz v12, :cond_1a
 
@@ -979,43 +963,43 @@
 
     move v0, v10
 
-    .line 94
+    .line 95
     :goto_7
     if-eqz v0, :cond_1c
 
-    .line 95
+    .line 96
     invoke-static {v12}, Lkik/android/util/f;->a(Landroid/content/Intent;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 96
+    .line 97
     if-eqz v0, :cond_1b
 
-    .line 97
-    iget-object v1, p0, Lkik/android/chat/activity/KikPlatformLanding;->e:Lkik/android/internal/platform/PlatformHelper;
-
-    invoke-virtual {v1, v10}, Lkik/android/internal/platform/PlatformHelper;->a(Z)V
-
     .line 98
+    iget-object v1, p0, Lkik/android/chat/activity/KikPlatformLanding;->e:Lkik/android/internal/platform/b;
+
+    invoke-virtual {v1, v10}, Lkik/android/internal/platform/b;->a(Z)V
+
+    .line 99
     new-instance v1, Lkik/android/chat/fragment/KikConversationsFragment$a;
 
     invoke-direct {v1}, Lkik/android/chat/fragment/KikConversationsFragment$a;-><init>()V
 
-    .line 99
+    .line 100
     invoke-virtual {v0}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikConversationsFragment$a;->a(Ljava/lang/String;)Lkik/android/chat/fragment/KikConversationsFragment$a;
 
-    .line 100
-    invoke-static {v1, p0}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ad;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    .line 101
+    invoke-static {v1, p0}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->e()Lcom/kik/events/Promise;
 
-    .line 105
+    .line 106
     :goto_8
     invoke-virtual {p0}, Lkik/android/chat/activity/KikPlatformLanding;->finish()V
 
@@ -1024,12 +1008,12 @@
     :cond_1a
     move v0, v11
 
-    .line 4145
+    .line 3146
     goto :goto_7
 
-    .line 103
+    .line 104
     :cond_1b
-    const v0, 0x7f0900ed
+    const v0, 0x7f0a00ec
 
     invoke-static {p0, v0, v11}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -1039,27 +1023,27 @@
 
     goto :goto_8
 
-    .line 107
+    .line 108
     :cond_1c
     if-eqz v1, :cond_1d
 
-    .line 108
-    iget-object v0, p0, Lkik/android/chat/activity/KikPlatformLanding;->e:Lkik/android/internal/platform/PlatformHelper;
+    .line 109
+    iget-object v0, p0, Lkik/android/chat/activity/KikPlatformLanding;->e:Lkik/android/internal/platform/b;
 
-    invoke-virtual {v0, v1, v10}, Lkik/android/internal/platform/PlatformHelper;->a(Lkik/core/datatypes/messageExtensions/ContentMessage;Z)V
+    invoke-virtual {v0, v1, v10, v9}, Lkik/android/internal/platform/b;->a(Lkik/core/datatypes/messageExtensions/ContentMessage;Z[B)V
 
-    .line 4242
-    invoke-direct {p0, v9, v9}, Lkik/android/chat/activity/KikPlatformLanding;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    .line 111
+    invoke-direct {p0, v9}, Lkik/android/chat/activity/KikPlatformLanding;->a(Ljava/lang/String;)V
 
     goto/16 :goto_2
 
-    .line 5157
+    .line 3157
     :cond_1d
     invoke-virtual {v12}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 5158
+    .line 3158
     const-string v1, "android.intent.action.SEND"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1074,7 +1058,7 @@
 
     if-eqz v0, :cond_1e
 
-    .line 5159
+    .line 3159
     invoke-virtual {v12}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
@@ -1089,92 +1073,92 @@
 
     move v0, v10
 
-    .line 112
+    .line 113
     :goto_9
     if-eqz v0, :cond_20
 
-    .line 113
+    .line 114
     invoke-virtual {v12}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 114
+    .line 115
     const-string v1, "android.intent.extra.SUBJECT"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 115
+    .line 116
     const-string v2, "android.intent.extra.TEXT"
 
     invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v2
-
-    .line 116
-    invoke-static {v1}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_1f
-
-    invoke-virtual {v2, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_1f
+    move-result-object v0
 
     .line 117
-    iget-object v3, p0, Lkik/android/chat/activity/KikPlatformLanding;->e:Lkik/android/internal/platform/PlatformHelper;
+    invoke-static {v1}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    move-result v2
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    if-nez v2, :cond_1f
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1f
+
+    .line 118
+    iget-object v2, p0, Lkik/android/chat/activity/KikPlatformLanding;->e:Lkik/android/internal/platform/b;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    const-string v4, " - "
+    const-string v3, " - "
 
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v3, v1}, Lkik/android/internal/platform/PlatformHelper;->d(Ljava/lang/String;)V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 122
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Lkik/android/internal/platform/b;->e(Ljava/lang/String;)V
+
+    .line 123
     :goto_a
-    invoke-direct {p0, v9, v0}, Lkik/android/chat/activity/KikPlatformLanding;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-direct {p0, v9}, Lkik/android/chat/activity/KikPlatformLanding;->a(Ljava/lang/String;)V
 
     goto/16 :goto_2
 
     :cond_1e
     move v0, v11
 
-    .line 5159
+    .line 3159
     goto :goto_9
 
-    .line 120
+    .line 121
     :cond_1f
-    iget-object v1, p0, Lkik/android/chat/activity/KikPlatformLanding;->e:Lkik/android/internal/platform/PlatformHelper;
+    iget-object v1, p0, Lkik/android/chat/activity/KikPlatformLanding;->e:Lkik/android/internal/platform/b;
 
-    invoke-virtual {v1, v2}, Lkik/android/internal/platform/PlatformHelper;->d(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Lkik/android/internal/platform/b;->e(Ljava/lang/String;)V
 
     goto :goto_a
 
-    .line 125
+    .line 126
     :cond_20
-    const v0, 0x7f0900fd
+    const v0, 0x7f0a00fc
 
     invoke-static {p0, v0, v10}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -1182,7 +1166,7 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 126
+    .line 127
     invoke-virtual {p0}, Lkik/android/chat/activity/KikPlatformLanding;->finish()V
 
     goto/16 :goto_2

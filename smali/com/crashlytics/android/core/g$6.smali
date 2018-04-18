@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/io/FilenameFilter;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/crashlytics/android/core/g;->b()V
+    value = Lcom/crashlytics/android/core/g;->a([Ljava/io/File;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,20 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/crashlytics/android/core/g;
+.field final synthetic a:Ljava/util/Set;
+
+.field final synthetic b:Lcom/crashlytics/android/core/g;
 
 
 # direct methods
-.method constructor <init>(Lcom/crashlytics/android/core/g;)V
+.method constructor <init>(Lcom/crashlytics/android/core/g;Ljava/util/Set;)V
     .locals 0
 
     .prologue
-    .line 782
-    iput-object p1, p0, Lcom/crashlytics/android/core/g$6;->a:Lcom/crashlytics/android/core/g;
+    .line 762
+    iput-object p1, p0, Lcom/crashlytics/android/core/g$6;->b:Lcom/crashlytics/android/core/g;
+
+    iput-object p2, p0, Lcom/crashlytics/android/core/g$6;->a:Ljava/util/Set;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,25 +40,35 @@
 
 
 # virtual methods
-.method public final run()V
+.method public final accept(Ljava/io/File;Ljava/lang/String;)Z
     .locals 3
 
     .prologue
-    .line 785
-    iget-object v0, p0, Lcom/crashlytics/android/core/g$6;->a:Lcom/crashlytics/android/core/g;
+    const/16 v2, 0x23
 
-    iget-object v1, p0, Lcom/crashlytics/android/core/g$6;->a:Lcom/crashlytics/android/core/g;
+    const/4 v0, 0x0
 
-    new-instance v2, Lcom/crashlytics/android/core/g$e;
+    .line 765
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
 
-    invoke-direct {v2}, Lcom/crashlytics/android/core/g$e;-><init>()V
+    move-result v1
 
-    invoke-static {v1, v2}, Lcom/crashlytics/android/core/g;->a(Lcom/crashlytics/android/core/g;Ljava/io/FilenameFilter;)[Ljava/io/File;
+    if-ge v1, v2, :cond_0
 
-    move-result-object v1
+    .line 768
+    :goto_0
+    return v0
 
-    invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/g;->a([Ljava/io/File;)V
+    :cond_0
+    iget-object v1, p0, Lcom/crashlytics/android/core/g$6;->a:Ljava/util/Set;
 
-    .line 786
-    return-void
+    invoke-virtual {p2, v0, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    goto :goto_0
 .end method

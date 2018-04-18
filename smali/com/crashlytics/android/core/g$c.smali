@@ -1,4 +1,4 @@
-.class Lcom/crashlytics/android/core/g$c;
+.class final Lcom/crashlytics/android/core/g$c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -17,57 +17,48 @@
 .end annotation
 
 
-# instance fields
-.field private final a:Ljava/lang/String;
-
-
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 95
+    .line 120
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 96
-    iput-object p1, p0, Lcom/crashlytics/android/core/g$c;->a:Ljava/lang/String;
-
-    .line 97
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(Ljava/io/File;Ljava/lang/String;)Z
+.method public final accept(Ljava/io/File;Ljava/lang/String;)Z
     .locals 1
 
     .prologue
-    .line 101
-    iget-object v0, p0, Lcom/crashlytics/android/core/g$c;->a:Ljava/lang/String;
+    .line 123
+    sget-object v0, Lcom/crashlytics/android/core/d;->a:Ljava/io/FilenameFilter;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const-string v0, ".cls_temp"
-
-    .line 102
-    invoke-virtual {p2, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    invoke-interface {v0, p1, p2}, Ljava/io/FilenameFilter;->accept(Ljava/io/File;Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    const-string v0, "SessionMissingBinaryImages"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
     const/4 v0, 0x1
 
     :goto_0
     return v0
 
-    :cond_0
+    :cond_1
     const/4 v0, 0x0
 
-    .line 101
     goto :goto_0
 .end method

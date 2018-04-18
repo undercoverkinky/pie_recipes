@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 201
+    .line 200
     iput-object p1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$2;->a:Lcom/kik/cards/usermedia/CustomGalleryActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +40,11 @@
     .locals 1
 
     .prologue
-    .line 206
+    .line 205
     iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$2;->a:Lcom/kik/cards/usermedia/CustomGalleryActivity;
 
     invoke-virtual {v0}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->finish()V
 
-    .line 207
+    .line 206
     return-void
 .end method

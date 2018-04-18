@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/android/volley/h$a;
+.implements Lcom/android/volley/i$a;
 
 
 # annotations
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 142
+    .line 145
     iput-object p1, p0, Lkik/android/chat/fragment/MediaItemFragment$1;->a:Lkik/android/chat/fragment/MediaItemFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,6 +40,6 @@
     .locals 0
 
     .prologue
-    .line 146
+    .line 149
     return-void
 .end method

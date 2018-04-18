@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/kik/abtesting/rpc/AbTestingShared$a;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 # interfaces
 .implements Lcom/google/protobuf/MessageOrBuilder;

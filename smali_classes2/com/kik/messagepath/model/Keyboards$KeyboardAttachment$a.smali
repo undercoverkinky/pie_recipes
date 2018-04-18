@@ -60,20 +60,20 @@
     .locals 1
 
     .prologue
-    .line 345
+    .line 349
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;-><init>()V
 
-    .line 495
+    .line 499
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b:Ljava/util/List;
 
-    .line 346
-    invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b()V
+    .line 350
+    invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->c()V
 
-    .line 347
+    .line 351
     return-void
 .end method
 
@@ -81,7 +81,7 @@
     .locals 0
 
     .prologue
-    .line 328
+    .line 332
     invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;-><init>()V
 
     return-void
@@ -91,20 +91,20 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 355
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
 
-    .line 495
+    .line 499
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b:Ljava/util/List;
 
-    .line 352
-    invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b()V
+    .line 356
+    invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->c()V
 
-    .line 353
+    .line 357
     return-void
 .end method
 
@@ -112,7 +112,7 @@
     .locals 0
 
     .prologue
-    .line 328
+    .line 332
     invoke-direct {p0, p1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
 
     return-void
@@ -127,12 +127,12 @@
     .end annotation
 
     .prologue
-    .line 479
+    .line 483
     const/4 v2, 0x0
 
-    .line 481
+    .line 485
     :try_start_0
-    invoke-static {}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->access$800()Lcom/google/protobuf/Parser;
+    invoke-static {}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->h()Lcom/google/protobuf/Parser;
 
     move-result-object v0
 
@@ -145,23 +145,23 @@
     .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 486
+    .line 490
     if-eqz v0, :cond_0
 
-    .line 487
+    .line 491
     invoke-virtual {p0, v0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a(Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;)Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
-    .line 490
+    .line 494
     :cond_0
     return-object p0
 
-    .line 482
+    .line 486
     :catch_0
     move-exception v0
 
     move-object v1, v0
 
-    .line 483
+    .line 487
     :try_start_1
     invoke-virtual {v1}, Lcom/google/protobuf/InvalidProtocolBufferException;->getUnfinishedMessage()Lcom/google/protobuf/MessageLite;
 
@@ -171,7 +171,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 484
+    .line 488
     :try_start_2
     invoke-virtual {v1}, Lcom/google/protobuf/InvalidProtocolBufferException;->unwrapIOException()Ljava/io/IOException;
 
@@ -181,7 +181,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 486
+    .line 490
     :catchall_0
     move-exception v1
 
@@ -194,14 +194,13 @@
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 487
+    .line 491
     invoke-virtual {p0, v1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a(Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;)Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
-    .line 489
     :cond_1
     throw v0
 
-    .line 486
+    .line 490
     :catchall_1
     move-exception v0
 
@@ -214,7 +213,7 @@
     .locals 1
 
     .prologue
-    .line 414
+    .line 418
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -228,7 +227,7 @@
     .locals 1
 
     .prologue
-    .line 423
+    .line 427
     invoke-super {p0, p1, p2, p3}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -242,7 +241,7 @@
     .locals 1
 
     .prologue
-    .line 410
+    .line 414
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -256,7 +255,7 @@
     .locals 1
 
     .prologue
-    .line 418
+    .line 422
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -270,23 +269,23 @@
     .locals 1
 
     .prologue
-    .line 431
+    .line 435
     instance-of v0, p1, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
     if-eqz v0, :cond_0
 
-    .line 432
+    .line 436
     check-cast p1, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
     invoke-virtual {p0, p1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a(Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;)Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
     move-result-object p0
 
-    .line 435
+    .line 439
     :goto_0
     return-object p0
 
-    .line 434
+    .line 438
     :cond_0
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/AbstractMessage$Builder;
 
@@ -297,7 +296,7 @@
     .locals 1
 
     .prologue
-    .line 428
+    .line 432
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -307,56 +306,56 @@
     return-object v0
 .end method
 
-.method private b()V
+.method private c()V
     .locals 1
 
     .prologue
-    .line 356
-    invoke-static {}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->access$400()Z
+    .line 360
+    invoke-static {}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->f()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 357
-    invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->e()Lcom/google/protobuf/RepeatedFieldBuilderV3;
+    .line 361
+    invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->f()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    .line 359
+    .line 363
     :cond_0
     return-void
 .end method
 
-.method private c()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
+.method private d()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
     .locals 1
 
     .prologue
-    .line 361
+    .line 365
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clear()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
-    .line 362
+    .line 366
     iget-object v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->c:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 363
+    .line 367
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b:Ljava/util/List;
 
-    .line 364
+    .line 368
     iget v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a:I
 
     and-int/lit8 v0, v0, -0x2
 
     iput v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a:I
 
-    .line 368
+    .line 372
     :goto_0
     return-object p0
 
-    .line 366
+    .line 370
     :cond_0
     iget-object v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->c:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -365,35 +364,41 @@
     goto :goto_0
 .end method
 
-.method private d()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
+.method private e()V
     .locals 2
 
     .prologue
-    .line 381
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
+    .line 501
+    iget v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a:I
 
-    move-result-object v0
+    and-int/lit8 v0, v0, 0x1
 
-    .line 382
-    invoke-virtual {v0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->isInitialized()Z
+    const/4 v1, 0x1
 
-    move-result v1
+    if-eq v0, v1, :cond_0
 
-    if-nez v1, :cond_0
+    .line 502
+    new-instance v0, Ljava/util/ArrayList;
 
-    .line 383
-    invoke-static {v0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->newUninitializedMessageException(Lcom/google/protobuf/Message;)Lcom/google/protobuf/UninitializedMessageException;
+    iget-object v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b:Ljava/util/List;
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    throw v0
+    iput-object v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b:Ljava/util/List;
 
-    .line 385
+    .line 503
+    iget v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a:I
+
+    or-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a:I
+
+    .line 505
     :cond_0
-    return-object v0
+    return-void
 .end method
 
-.method private e()Lcom/google/protobuf/RepeatedFieldBuilderV3;
+.method private f()Lcom/google/protobuf/RepeatedFieldBuilderV3;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -410,12 +415,12 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 722
+    .line 726
     iget-object v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->c:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v1, :cond_0
 
-    .line 723
+    .line 727
     new-instance v1, Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     iget-object v2, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b:Ljava/util/List;
@@ -426,13 +431,13 @@
 
     if-ne v3, v0, :cond_1
 
-    .line 727
+    .line 731
     :goto_0
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->getParentForChildren()Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;
 
     move-result-object v3
 
-    .line 728
+    .line 732
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->isClean()Z
 
     move-result v4
@@ -441,18 +446,18 @@
 
     iput-object v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->c:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    .line 729
+    .line 733
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b:Ljava/util/List;
 
-    .line 731
+    .line 735
     :cond_0
     iget-object v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->c:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     return-object v0
 
-    .line 723
+    .line 727
     :cond_1
     const/4 v0, 0x0
 
@@ -461,31 +466,74 @@
 
 
 # virtual methods
+.method public final a(Lcom/kik/messagepath/model/Keyboards$Keyboard$a;)Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
+    .locals 3
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 623
+    iget-object v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->c:Lcom/google/protobuf/RepeatedFieldBuilderV3;
+
+    if-nez v0, :cond_0
+
+    .line 624
+    invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->e()V
+
+    .line 625
+    iget-object v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b:Ljava/util/List;
+
+    invoke-virtual {p1}, Lcom/kik/messagepath/model/Keyboards$Keyboard$a;->a()Lcom/kik/messagepath/model/Keyboards$Keyboard;
+
+    move-result-object v1
+
+    invoke-interface {v0, v2, v1}, Ljava/util/List;->add(ILjava/lang/Object;)V
+
+    .line 626
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->onChanged()V
+
+    .line 630
+    :goto_0
+    return-object p0
+
+    .line 628
+    :cond_0
+    iget-object v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->c:Lcom/google/protobuf/RepeatedFieldBuilderV3;
+
+    invoke-virtual {p1}, Lcom/kik/messagepath/model/Keyboards$Keyboard$a;->a()Lcom/kik/messagepath/model/Keyboards$Keyboard;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v2, v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addMessage(ILcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
+
+    goto :goto_0
+.end method
+
 .method public final a(Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;)Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
     .locals 2
 
     .prologue
     const/4 v0, 0x0
 
-    .line 440
-    invoke-static {}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->getDefaultInstance()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
+    .line 444
+    invoke-static {}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->d()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
     move-result-object v1
 
     if-ne p1, v1, :cond_0
 
-    .line 468
+    .line 472
     :goto_0
     return-object p0
 
-    .line 441
+    .line 445
     :cond_0
     iget-object v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->c:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    if-nez v1, :cond_4
+    if-nez v1, :cond_3
 
-    .line 442
-    invoke-static {p1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->access$600(Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;)Ljava/util/List;
+    .line 446
+    invoke-static {p1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->b(Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;)Ljava/util/List;
 
     move-result-object v0
 
@@ -495,7 +543,7 @@
 
     if-nez v0, :cond_1
 
-    .line 443
+    .line 447
     iget-object v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -504,62 +552,39 @@
 
     if-eqz v0, :cond_2
 
-    .line 444
-    invoke-static {p1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->access$600(Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;)Ljava/util/List;
+    .line 448
+    invoke-static {p1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->b(Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b:Ljava/util/List;
 
-    .line 445
+    .line 449
     iget v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a:I
 
     and-int/lit8 v0, v0, -0x2
 
     iput v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a:I
 
-    .line 450
+    .line 454
     :goto_1
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->onChanged()V
 
-    .line 467
+    .line 471
     :cond_1
     :goto_2
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->onChanged()V
 
     goto :goto_0
 
-    .line 1497
+    .line 451
     :cond_2
-    iget v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a:I
+    invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->e()V
 
-    and-int/lit8 v0, v0, 0x1
-
-    const/4 v1, 0x1
-
-    if-eq v0, v1, :cond_3
-
-    .line 1498
-    new-instance v0, Ljava/util/ArrayList;
-
-    iget-object v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b:Ljava/util/List;
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    iput-object v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b:Ljava/util/List;
-
-    .line 1499
-    iget v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a:I
-
-    or-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a:I
-
-    .line 448
-    :cond_3
+    .line 452
     iget-object v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b:Ljava/util/List;
 
-    invoke-static {p1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->access$600(Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;)Ljava/util/List;
+    invoke-static {p1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->b(Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;)Ljava/util/List;
 
     move-result-object v1
 
@@ -567,9 +592,9 @@
 
     goto :goto_1
 
-    .line 453
-    :cond_4
-    invoke-static {p1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->access$600(Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;)Ljava/util/List;
+    .line 457
+    :cond_3
+    invoke-static {p1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->b(Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;)Ljava/util/List;
 
     move-result-object v1
 
@@ -579,59 +604,59 @@
 
     if-nez v1, :cond_1
 
-    .line 454
+    .line 458
     iget-object v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->c:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     invoke-virtual {v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->isEmpty()Z
 
     move-result v1
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_5
 
-    .line 455
+    .line 459
     iget-object v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->c:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     invoke-virtual {v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->dispose()V
 
-    .line 456
+    .line 460
     iput-object v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->c:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    .line 457
-    invoke-static {p1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->access$600(Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;)Ljava/util/List;
+    .line 461
+    invoke-static {p1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->b(Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;)Ljava/util/List;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b:Ljava/util/List;
 
-    .line 458
+    .line 462
     iget v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a:I
 
     and-int/lit8 v1, v1, -0x2
 
     iput v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a:I
 
-    .line 460
-    invoke-static {}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->access$700()Z
+    .line 464
+    invoke-static {}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->g()Z
 
     move-result v1
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_4
 
-    .line 461
-    invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->e()Lcom/google/protobuf/RepeatedFieldBuilderV3;
+    .line 465
+    invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->f()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
 
-    :cond_5
+    :cond_4
     iput-object v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->c:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     goto :goto_2
 
-    .line 463
-    :cond_6
+    .line 467
+    :cond_5
     iget-object v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->c:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    invoke-static {p1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->access$600(Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;)Ljava/util/List;
+    invoke-static {p1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->b(Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;)Ljava/util/List;
 
     move-result-object v1
 
@@ -641,77 +666,38 @@
 .end method
 
 .method public final a()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
-    .locals 3
+    .locals 2
 
     .prologue
+    .line 385
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
+
+    move-result-object v0
+
+    .line 386
+    invoke-virtual {v0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->isInitialized()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 387
+    invoke-static {v0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->newUninitializedMessageException(Lcom/google/protobuf/Message;)Lcom/google/protobuf/UninitializedMessageException;
+
+    move-result-object v0
+
+    throw v0
+
     .line 389
-    new-instance v0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;Lcom/kik/messagepath/model/Keyboards$1;)V
-
-    .line 391
-    iget-object v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->c:Lcom/google/protobuf/RepeatedFieldBuilderV3;
-
-    if-nez v1, :cond_1
-
-    .line 392
-    iget v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a:I
-
-    and-int/lit8 v1, v1, 0x1
-
-    const/4 v2, 0x1
-
-    if-ne v1, v2, :cond_0
-
-    .line 393
-    iget-object v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b:Ljava/util/List;
-
-    invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b:Ljava/util/List;
-
-    .line 394
-    iget v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a:I
-
-    and-int/lit8 v1, v1, -0x2
-
-    iput v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a:I
-
-    .line 396
     :cond_0
-    iget-object v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b:Ljava/util/List;
-
-    invoke-static {v0, v1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->access$602(Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;Ljava/util/List;)Ljava/util/List;
-
-    .line 400
-    :goto_0
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->onBuilt()V
-
-    .line 401
     return-object v0
-
-    .line 398
-    :cond_1
-    iget-object v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->c:Lcom/google/protobuf/RepeatedFieldBuilderV3;
-
-    invoke-virtual {v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->build()Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->access$602(Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;Ljava/util/List;)Ljava/util/List;
-
-    goto :goto_0
 .end method
 
 .method public final synthetic addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 1
 
     .prologue
-    .line 328
+    .line 332
     invoke-direct {p0, p1, p2}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
     move-result-object v0
@@ -723,7 +709,7 @@
     .locals 1
 
     .prologue
-    .line 328
+    .line 332
     invoke-direct {p0, p1, p2}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
     move-result-object v0
@@ -731,12 +717,79 @@
     return-object v0
 .end method
 
+.method public final b()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
+    .locals 3
+
+    .prologue
+    .line 393
+    new-instance v0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;B)V
+
+    .line 395
+    iget-object v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->c:Lcom/google/protobuf/RepeatedFieldBuilderV3;
+
+    if-nez v1, :cond_1
+
+    .line 396
+    iget v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a:I
+
+    and-int/lit8 v1, v1, 0x1
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_0
+
+    .line 397
+    iget-object v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b:Ljava/util/List;
+
+    invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b:Ljava/util/List;
+
+    .line 398
+    iget v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a:I
+
+    and-int/lit8 v1, v1, -0x2
+
+    iput v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a:I
+
+    .line 400
+    :cond_0
+    iget-object v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b:Ljava/util/List;
+
+    invoke-static {v0, v1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->a(Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;Ljava/util/List;)Ljava/util/List;
+
+    .line 404
+    :goto_0
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->onBuilt()V
+
+    .line 405
+    return-object v0
+
+    .line 402
+    :cond_1
+    iget-object v1, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->c:Lcom/google/protobuf/RepeatedFieldBuilderV3;
+
+    invoke-virtual {v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->build()Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->a(Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;Ljava/util/List;)Ljava/util/List;
+
+    goto :goto_0
+.end method
+
 .method public final synthetic build()Lcom/google/protobuf/Message;
     .locals 1
 
     .prologue
-    .line 328
-    invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->d()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
+    .line 332
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
     move-result-object v0
 
@@ -747,8 +800,8 @@
     .locals 1
 
     .prologue
-    .line 328
-    invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->d()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
+    .line 332
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
     move-result-object v0
 
@@ -759,8 +812,8 @@
     .locals 1
 
     .prologue
-    .line 328
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
+    .line 332
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
     move-result-object v0
 
@@ -771,8 +824,8 @@
     .locals 1
 
     .prologue
-    .line 328
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
+    .line 332
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
     move-result-object v0
 
@@ -783,8 +836,8 @@
     .locals 1
 
     .prologue
-    .line 328
-    invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->c()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
+    .line 332
+    invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->d()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
     move-result-object v0
 
@@ -795,8 +848,8 @@
     .locals 1
 
     .prologue
-    .line 328
-    invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->c()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
+    .line 332
+    invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->d()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
     move-result-object v0
 
@@ -807,8 +860,8 @@
     .locals 1
 
     .prologue
-    .line 328
-    invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->c()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
+    .line 332
+    invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->d()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
     move-result-object v0
 
@@ -819,8 +872,8 @@
     .locals 1
 
     .prologue
-    .line 328
-    invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->c()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
+    .line 332
+    invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->d()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
     move-result-object v0
 
@@ -831,7 +884,7 @@
     .locals 1
 
     .prologue
-    .line 328
+    .line 332
     invoke-direct {p0, p1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
     move-result-object v0
@@ -843,7 +896,7 @@
     .locals 1
 
     .prologue
-    .line 328
+    .line 332
     invoke-direct {p0, p1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
     move-result-object v0
@@ -855,7 +908,7 @@
     .locals 1
 
     .prologue
-    .line 328
+    .line 332
     invoke-direct {p0, p1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
     move-result-object v0
@@ -867,7 +920,7 @@
     .locals 1
 
     .prologue
-    .line 328
+    .line 332
     invoke-direct {p0, p1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
     move-result-object v0
@@ -879,7 +932,7 @@
     .locals 1
 
     .prologue
-    .line 328
+    .line 332
     invoke-direct {p0, p1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
     move-result-object v0
@@ -891,15 +944,15 @@
     .locals 1
 
     .prologue
-    .line 328
-    .line 4405
+    .line 332
+    .line 4409
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
-    .line 328
+    .line 332
     return-object v0
 .end method
 
@@ -907,15 +960,15 @@
     .locals 1
 
     .prologue
-    .line 328
-    .line 9405
+    .line 332
+    .line 9409
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
-    .line 328
+    .line 332
     return-object v0
 .end method
 
@@ -923,15 +976,15 @@
     .locals 1
 
     .prologue
-    .line 328
-    .line 3405
+    .line 332
+    .line 3409
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
-    .line 328
+    .line 332
     return-object v0
 .end method
 
@@ -939,15 +992,15 @@
     .locals 1
 
     .prologue
-    .line 328
-    .line 6405
+    .line 332
+    .line 6409
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
-    .line 328
+    .line 332
     return-object v0
 .end method
 
@@ -955,15 +1008,15 @@
     .locals 1
 
     .prologue
-    .line 328
-    .line 7405
+    .line 332
+    .line 7409
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
-    .line 328
+    .line 332
     return-object v0
 .end method
 
@@ -976,15 +1029,15 @@
     .end annotation
 
     .prologue
-    .line 328
-    .line 10405
+    .line 332
+    .line 10409
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
-    .line 328
+    .line 332
     return-object v0
 .end method
 
@@ -992,12 +1045,12 @@
     .locals 1
 
     .prologue
-    .line 9377
-    invoke-static {}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->getDefaultInstance()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
+    .line 9381
+    invoke-static {}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->d()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
     move-result-object v0
 
-    .line 328
+    .line 332
     return-object v0
 .end method
 
@@ -1005,12 +1058,12 @@
     .locals 1
 
     .prologue
-    .line 8377
-    invoke-static {}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->getDefaultInstance()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
+    .line 8381
+    invoke-static {}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->d()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
     move-result-object v0
 
-    .line 328
+    .line 332
     return-object v0
 .end method
 
@@ -1018,7 +1071,7 @@
     .locals 1
 
     .prologue
-    .line 373
+    .line 377
     invoke-static {}, Lcom/kik/messagepath/model/Keyboards;->b()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
@@ -1030,7 +1083,7 @@
     .locals 3
 
     .prologue
-    .line 339
+    .line 343
     invoke-static {}, Lcom/kik/messagepath/model/Keyboards;->c()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -1039,12 +1092,12 @@
 
     const-class v2, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
-    .line 340
+    .line 344
     invoke-virtual {v0, v1, v2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;->ensureFieldAccessorsInitialized(Ljava/lang/Class;Ljava/lang/Class;)Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
 
-    .line 339
+    .line 343
     return-object v0
 .end method
 
@@ -1052,7 +1105,7 @@
     .locals 1
 
     .prologue
-    .line 472
+    .line 476
     const/4 v0, 0x1
 
     return v0
@@ -1067,7 +1120,7 @@
     .end annotation
 
     .prologue
-    .line 328
+    .line 332
     invoke-direct {p0, p1, p2}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
     move-result-object v0
@@ -1079,7 +1132,7 @@
     .locals 1
 
     .prologue
-    .line 328
+    .line 332
     invoke-direct {p0, p1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a(Lcom/google/protobuf/Message;)Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
     move-result-object v0
@@ -1096,7 +1149,7 @@
     .end annotation
 
     .prologue
-    .line 328
+    .line 332
     invoke-direct {p0, p1, p2}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
     move-result-object v0
@@ -1113,7 +1166,7 @@
     .end annotation
 
     .prologue
-    .line 328
+    .line 332
     invoke-direct {p0, p1, p2}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
     move-result-object v0
@@ -1125,7 +1178,7 @@
     .locals 1
 
     .prologue
-    .line 328
+    .line 332
     invoke-direct {p0, p1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a(Lcom/google/protobuf/Message;)Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
     move-result-object v0
@@ -1142,7 +1195,7 @@
     .end annotation
 
     .prologue
-    .line 328
+    .line 332
     invoke-direct {p0, p1, p2}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
     move-result-object v0
@@ -1154,7 +1207,7 @@
     .locals 0
 
     .prologue
-    .line 328
+    .line 332
     return-object p0
 .end method
 
@@ -1162,7 +1215,7 @@
     .locals 0
 
     .prologue
-    .line 328
+    .line 332
     return-object p0
 .end method
 
@@ -1170,7 +1223,7 @@
     .locals 0
 
     .prologue
-    .line 328
+    .line 332
     return-object p0
 .end method
 
@@ -1178,7 +1231,7 @@
     .locals 1
 
     .prologue
-    .line 328
+    .line 332
     invoke-direct {p0, p1, p2}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
     move-result-object v0
@@ -1190,7 +1243,7 @@
     .locals 1
 
     .prologue
-    .line 328
+    .line 332
     invoke-direct {p0, p1, p2}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
     move-result-object v0
@@ -1202,7 +1255,7 @@
     .locals 1
 
     .prologue
-    .line 328
+    .line 332
     invoke-direct {p0, p1, p2, p3}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
     move-result-object v0
@@ -1214,7 +1267,7 @@
     .locals 1
 
     .prologue
-    .line 328
+    .line 332
     invoke-direct {p0, p1, p2, p3}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
     move-result-object v0
@@ -1226,7 +1279,7 @@
     .locals 0
 
     .prologue
-    .line 328
+    .line 332
     return-object p0
 .end method
 
@@ -1234,6 +1287,6 @@
     .locals 0
 
     .prologue
-    .line 328
+    .line 332
     return-object p0
 .end method

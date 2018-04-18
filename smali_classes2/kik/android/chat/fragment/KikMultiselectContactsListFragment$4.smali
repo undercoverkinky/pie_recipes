@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->d(Lkik/core/datatypes/l;)V
+    value = Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->h(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic a:Lkik/core/datatypes/l;
+.field final synthetic a:Ljava/lang/String;
 
 .field final synthetic b:Lkik/android/chat/fragment/KikMultiselectContactsListFragment;
 
 
 # direct methods
-.method constructor <init>(Lkik/android/chat/fragment/KikMultiselectContactsListFragment;Lkik/core/datatypes/l;)V
+.method constructor <init>(Lkik/android/chat/fragment/KikMultiselectContactsListFragment;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 548
+    .line 512
     iput-object p1, p0, Lkik/android/chat/fragment/KikMultiselectContactsListFragment$4;->b:Lkik/android/chat/fragment/KikMultiselectContactsListFragment;
 
-    iput-object p2, p0, Lkik/android/chat/fragment/KikMultiselectContactsListFragment$4;->a:Lkik/core/datatypes/l;
+    iput-object p2, p0, Lkik/android/chat/fragment/KikMultiselectContactsListFragment$4;->a:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,24 +44,17 @@
     .locals 2
 
     .prologue
-    .line 553
+    .line 517
     iget-object v0, p0, Lkik/android/chat/fragment/KikMultiselectContactsListFragment$4;->b:Lkik/android/chat/fragment/KikMultiselectContactsListFragment;
 
-    invoke-static {v0}, Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->b(Lkik/android/chat/fragment/KikMultiselectContactsListFragment;)Lkik/android/widget/KikContactImageThumbNailList;
+    invoke-static {v0}, Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->a(Lkik/android/chat/fragment/KikMultiselectContactsListFragment;)Lkik/android/widget/KikContactImageThumbNailList;
 
     move-result-object v0
 
-    iget-object v1, p0, Lkik/android/chat/fragment/KikMultiselectContactsListFragment$4;->a:Lkik/core/datatypes/l;
+    iget-object v1, p0, Lkik/android/chat/fragment/KikMultiselectContactsListFragment$4;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lkik/android/widget/KikContactImageThumbNailList;->a(Lkik/core/datatypes/l;)Lcom/kik/events/n;
+    invoke-virtual {v0, v1}, Lkik/android/widget/KikContactImageThumbNailList;->a(Ljava/lang/String;)V
 
-    .line 554
-    iget-object v0, p0, Lkik/android/chat/fragment/KikMultiselectContactsListFragment$4;->b:Lkik/android/chat/fragment/KikMultiselectContactsListFragment;
-
-    iget-object v1, p0, Lkik/android/chat/fragment/KikMultiselectContactsListFragment$4;->a:Lkik/core/datatypes/l;
-
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->c(Lkik/core/datatypes/l;)V
-
-    .line 555
+    .line 518
     return-void
 .end method

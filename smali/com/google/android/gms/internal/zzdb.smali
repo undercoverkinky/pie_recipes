@@ -1,123 +1,97 @@
-.class public final Lcom/google/android/gms/internal/zzdb;
-.super Lcom/google/android/gms/internal/zzbs;
+.class public Lcom/google/android/gms/internal/zzdb;
+.super Ljava/lang/Object;
 
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/google/android/gms/internal/zzbs",
-        "<",
-        "Ljava/lang/Integer;",
-        "Ljava/lang/Long;",
-        ">;"
-    }
+.annotation runtime Lcom/google/android/gms/internal/zzig;
 .end annotation
 
 
 # instance fields
-.field public zzaic:Ljava/lang/Long;
+.field private final zzAb:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/google/android/gms/internal/zzda;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public zzaid:Ljava/lang/Long;
+.field private final zzpQ:Lcom/google/android/gms/internal/zzdc;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Lcom/google/android/gms/internal/zzdc;)V
+    .locals 1
 
-    invoke-direct {p0}, Lcom/google/android/gms/internal/zzbs;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Lcom/google/android/gms/internal/zzdb;->zzpQ:Lcom/google/android/gms/internal/zzdc;
 
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+    new-instance v0, Ljava/util/HashMap;
 
-    invoke-direct {p0}, Lcom/google/android/gms/internal/zzbs;-><init>()V
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/zzbs;->zzi(Ljava/lang/String;)V
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzdb;->zzAb:Ljava/util/Map;
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final zzi(Ljava/lang/String;)V
-    .locals 2
+.method public zza(Ljava/lang/String;Lcom/google/android/gms/internal/zzda;)V
+    .locals 1
 
-    invoke-static {p1}, Lcom/google/android/gms/internal/zzdb;->zzj(Ljava/lang/String;)Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdb;->zzAb:Ljava/util/Map;
 
-    move-result-object v1
+    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v1, :cond_0
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/zzdb;->zzaic:Ljava/lang/Long;
-
-    const/4 v0, 0x1
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/zzdb;->zzaid:Ljava/lang/Long;
-
-    :cond_0
     return-void
 .end method
 
-.method protected final zzv()Ljava/util/HashMap;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/HashMap",
-            "<",
-            "Ljava/lang/Integer;",
-            "Ljava/lang/Long;",
-            ">;"
-        }
-    .end annotation
+.method public zza(Ljava/lang/String;Ljava/lang/String;J)V
+    .locals 5
 
-    new-instance v0, Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/google/android/gms/internal/zzdb;->zzpQ:Lcom/google/android/gms/internal/zzdc;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdb;->zzAb:Ljava/util/Map;
 
-    const/4 v1, 0x0
+    invoke-interface {v0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v0
 
-    move-result-object v1
+    check-cast v0, Lcom/google/android/gms/internal/zzda;
 
-    iget-object v2, p0, Lcom/google/android/gms/internal/zzdb;->zzaic:Ljava/lang/Long;
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    new-array v2, v2, [Ljava/lang/String;
 
-    const/4 v1, 0x1
+    const/4 v3, 0x0
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    aput-object p1, v2, v3
+
+    invoke-static {v1, v0, p3, p4, v2}, Lcom/google/android/gms/internal/zzcy;->zza(Lcom/google/android/gms/internal/zzdc;Lcom/google/android/gms/internal/zzda;J[Ljava/lang/String;)Z
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdb;->zzAb:Ljava/util/Map;
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/zzdb;->zzpQ:Lcom/google/android/gms/internal/zzdc;
+
+    invoke-static {v1, p3, p4}, Lcom/google/android/gms/internal/zzcy;->zza(Lcom/google/android/gms/internal/zzdc;J)Lcom/google/android/gms/internal/zzda;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/google/android/gms/internal/zzdb;->zzaid:Ljava/lang/Long;
+    invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    return-void
+.end method
+
+.method public zzez()Lcom/google/android/gms/internal/zzdc;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdb;->zzpQ:Lcom/google/android/gms/internal/zzdc;
 
     return-object v0
 .end method

@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private r:Z
+.field private s:Z
 
 
 # direct methods
@@ -18,12 +18,12 @@
     .line 18
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->r:Z
+    iput-boolean v0, p0, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->s:Z
 
     return-void
 .end method
 
-.method public static a(Lcom/kik/cards/web/kik/KikContentMessageParcelable;Ljava/lang/String;Ljava/lang/String;)Lkik/android/chat/fragment/MediaItemFragment;
+.method public static a(Lcom/kik/cards/web/kik/KikContentMessageParcelable;[BLjava/lang/String;Ljava/lang/String;)Lkik/android/chat/fragment/MediaItemFragment;
     .locals 1
 
     .prologue
@@ -33,7 +33,7 @@
     invoke-direct {v0}, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;-><init>()V
 
     .line 23
-    invoke-static {v0, p0, p1, p2}, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->a(Lkik/android/chat/fragment/MediaItemFragment;Lcom/kik/cards/web/kik/KikContentMessageParcelable;Ljava/lang/String;Ljava/lang/String;)Lkik/android/chat/fragment/MediaItemFragment;
+    invoke-static {v0, p0, p1, p2, p3}, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->a(Lkik/android/chat/fragment/MediaItemFragment;Lcom/kik/cards/web/kik/KikContentMessageParcelable;[BLjava/lang/String;Ljava/lang/String;)Lkik/android/chat/fragment/MediaItemFragment;
 
     move-result-object v0
 
@@ -42,7 +42,7 @@
 
 
 # virtual methods
-.method protected final a()V
+.method protected final b()V
     .locals 0
 
     .prologue
@@ -50,26 +50,26 @@
     return-void
 .end method
 
-.method public final b()V
+.method public final c()V
     .locals 0
 
     .prologue
     .line 58
-    invoke-super {p0}, Lkik/android/chat/fragment/VideoMediaItemFragment;->b()V
+    invoke-super {p0}, Lkik/android/chat/fragment/VideoMediaItemFragment;->c()V
 
     .line 59
-    invoke-virtual {p0}, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->c()Z
+    invoke-virtual {p0}, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->d()Z
 
     .line 60
     return-void
 .end method
 
-.method public final c()Z
+.method public final d()Z
     .locals 1
 
     .prologue
     .line 65
-    iget-boolean v0, p0, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->r:Z
+    iget-boolean v0, p0, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->s:Z
 
     if-eqz v0, :cond_0
 
@@ -81,47 +81,47 @@
     return v0
 
     :cond_0
-    invoke-super {p0}, Lkik/android/chat/fragment/VideoMediaItemFragment;->c()Z
+    invoke-super {p0}, Lkik/android/chat/fragment/VideoMediaItemFragment;->d()Z
 
     move-result v0
 
     goto :goto_0
 .end method
 
-.method protected final d()V
+.method protected final f()V
     .locals 1
 
     .prologue
     .line 74
-    iget-object v0, p0, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->h:Lkik/android/f/e;
+    iget-object v0, p0, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->h:Lkik/android/e/e;
 
-    invoke-interface {v0}, Lkik/android/f/e;->d()V
+    invoke-interface {v0}, Lkik/android/e/e;->f()V
 
     .line 75
-    invoke-virtual {p0}, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->l()Z
+    invoke-virtual {p0}, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->q()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 76
-    invoke-virtual {p0}, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->c()Z
+    invoke-virtual {p0}, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->d()Z
 
     .line 78
     :cond_0
     return-void
 .end method
 
-.method protected final e()V
+.method protected final g()V
     .locals 3
 
     .prologue
     const/4 v2, 0x0
 
     .line 83
-    iget-object v0, p0, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->j:Lkik/core/datatypes/messageExtensions/ContentMessage;
+    iget-object v0, p0, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->k:Lkik/core/datatypes/messageExtensions/ContentMessage;
 
-    invoke-virtual {v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->C()Z
+    invoke-virtual {v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->B()Z
 
     move-result v0
 
@@ -159,7 +159,7 @@
     goto :goto_0
 .end method
 
-.method protected final f()V
+.method protected final h()V
     .locals 0
 
     .prologue
@@ -167,7 +167,7 @@
     return-void
 .end method
 
-.method public final g()V
+.method public final i()V
     .locals 0
 
     .prologue
@@ -207,7 +207,7 @@
     .line 108
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->r:Z
+    iput-boolean v0, p0, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->s:Z
 
     .line 109
     return-void
@@ -223,21 +223,21 @@
     .line 115
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->r:Z
+    iput-boolean v0, p0, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->s:Z
 
     .line 116
-    iget-boolean v0, p0, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->m:Z
+    iget-boolean v0, p0, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->n:Z
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->l()Z
+    invoke-virtual {p0}, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->q()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 117
-    invoke-virtual {p0}, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->c()Z
+    invoke-virtual {p0}, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->d()Z
 
     .line 119
     :cond_0

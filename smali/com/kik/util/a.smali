@@ -72,7 +72,7 @@
 .end method
 
 .method public final b()Ljava/util/Properties;
-    .locals 3
+    .locals 4
 
     .prologue
     .line 47
@@ -115,17 +115,25 @@
     :goto_0
     return-object v0
 
+    .line 57
     :catch_0
     move-exception v0
 
+    move-object v3, v0
+
     move-object v0, v1
+
+    move-object v1, v3
+
+    :goto_1
+    invoke-static {v1}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
     :catch_1
     move-exception v1
 
-    goto :goto_0
+    goto :goto_1
 .end method
 
 .method public abstract c()Ljava/lang/String;

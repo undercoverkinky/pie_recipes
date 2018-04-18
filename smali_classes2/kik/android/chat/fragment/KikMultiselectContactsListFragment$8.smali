@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/kik/events/e;
 
 
 # annotations
@@ -16,6 +16,16 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/kik/events/e",
+        "<",
+        "Lkik/core/datatypes/o;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
 .field final synthetic a:Lkik/android/chat/fragment/KikMultiselectContactsListFragment;
@@ -26,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 223
+    .line 170
     iput-object p1, p0, Lkik/android/chat/fragment/KikMultiselectContactsListFragment$8;->a:Lkik/android/chat/fragment/KikMultiselectContactsListFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,15 +46,22 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
+.method public final bridge synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 3
 
     .prologue
-    .line 227
+    const/4 v2, 0x0
+
+    .line 170
+    check-cast p2, Lkik/core/datatypes/o;
+
+    .line 1174
     iget-object v0, p0, Lkik/android/chat/fragment/KikMultiselectContactsListFragment$8;->a:Lkik/android/chat/fragment/KikMultiselectContactsListFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->K()V
+    const/4 v1, 0x0
 
-    .line 228
+    invoke-virtual {v0, p2, v2, v2, v1}, Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->a(Lkik/core/datatypes/o;Lcom/kik/view/adapters/e;Landroid/database/Cursor;I)V
+
+    .line 170
     return-void
 .end method

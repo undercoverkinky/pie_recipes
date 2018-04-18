@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/fragment/settings/EditPasswordFragment$1$1;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Ljava/lang/Void;",
         ">;"
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 171
+    .line 162
     iput-object p1, p0, Lkik/android/chat/fragment/settings/EditPasswordFragment$1$1;->a:Lkik/android/chat/fragment/settings/EditPasswordFragment$1;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -46,22 +46,22 @@
     .locals 2
 
     .prologue
-    .line 175
+    .line 166
     iget-object v0, p0, Lkik/android/chat/fragment/settings/EditPasswordFragment$1$1;->a:Lkik/android/chat/fragment/settings/EditPasswordFragment$1;
 
     iget-object v0, v0, Lkik/android/chat/fragment/settings/EditPasswordFragment$1;->a:Lkik/android/chat/fragment/settings/EditPasswordFragment;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/settings/EditPasswordFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/settings/EditPasswordFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 176
+    .line 167
     iget-object v0, p0, Lkik/android/chat/fragment/settings/EditPasswordFragment$1$1;->a:Lkik/android/chat/fragment/settings/EditPasswordFragment$1;
 
     iget-object v0, v0, Lkik/android/chat/fragment/settings/EditPasswordFragment$1;->a:Lkik/android/chat/fragment/settings/EditPasswordFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/settings/EditPasswordFragment;->finish()V
+    invoke-virtual {v0}, Lkik/android/chat/fragment/settings/EditPasswordFragment;->D()V
 
-    .line 177
+    .line 168
     return-void
 .end method

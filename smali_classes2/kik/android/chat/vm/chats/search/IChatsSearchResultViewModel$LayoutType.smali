@@ -52,7 +52,7 @@
 
     const/4 v2, 0x0
 
-    .line 17
+    .line 16
     new-instance v0, Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;
 
     const-string v1, "OneToOneChat"
@@ -61,7 +61,7 @@
 
     sput-object v0, Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;->OneToOneChat:Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;
 
-    .line 18
+    .line 17
     new-instance v0, Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;
 
     const-string v1, "PrivateGroup"
@@ -70,7 +70,7 @@
 
     sput-object v0, Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;->PrivateGroup:Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;
 
-    .line 19
+    .line 18
     new-instance v0, Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;
 
     const-string v1, "PublicGroup"
@@ -79,7 +79,7 @@
 
     sput-object v0, Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;->PublicGroup:Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;
 
-    .line 20
+    .line 19
     new-instance v0, Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;
 
     const-string v1, "RosterMatch"
@@ -88,7 +88,7 @@
 
     sput-object v0, Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;->RosterMatch:Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;
 
-    .line 21
+    .line 20
     new-instance v0, Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;
 
     const-string v1, "UsernameSearch"
@@ -97,7 +97,7 @@
 
     sput-object v0, Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;->UsernameSearch:Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;
 
-    .line 16
+    .line 15
     const/4 v0, 0x5
 
     new-array v0, v0, [Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;
@@ -136,7 +136,7 @@
     .end annotation
 
     .prologue
-    .line 16
+    .line 15
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -146,7 +146,7 @@
     .locals 1
 
     .prologue
-    .line 16
+    .line 15
     const-class v0, Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -162,7 +162,7 @@
     .locals 1
 
     .prologue
-    .line 16
+    .line 15
     sget-object v0, Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;->$VALUES:[Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;
 
     invoke-virtual {v0}, [Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;->clone()Ljava/lang/Object;

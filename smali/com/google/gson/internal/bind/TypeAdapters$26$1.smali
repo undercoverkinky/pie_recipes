@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/gson/internal/bind/TypeAdapters$26;->a(Lcom/google/gson/e;Lcom/google/gson/b/a;)Lcom/google/gson/o;
+    value = Lcom/google/gson/internal/bind/TypeAdapters$26;->a(Lcom/google/gson/d;Lcom/google/gson/b/a;)Lcom/google/gson/o;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,7 +34,7 @@
     .locals 0
 
     .prologue
-    .line 579
+    .line 600
     iput-object p1, p0, Lcom/google/gson/internal/bind/TypeAdapters$26$1;->b:Lcom/google/gson/internal/bind/TypeAdapters$26;
 
     iput-object p2, p0, Lcom/google/gson/internal/bind/TypeAdapters$26$1;->a:Lcom/google/gson/o;
@@ -55,8 +55,8 @@
     .end annotation
 
     .prologue
-    .line 579
-    .line 1581
+    .line 600
+    .line 1602
     iget-object v0, p0, Lcom/google/gson/internal/bind/TypeAdapters$26$1;->a:Lcom/google/gson/o;
 
     invoke-virtual {v0, p1}, Lcom/google/gson/o;->a(Lcom/google/gson/stream/a;)Ljava/lang/Object;
@@ -65,7 +65,7 @@
 
     check-cast v0, Ljava/util/Date;
 
-    .line 1582
+    .line 1603
     if-eqz v0, :cond_0
 
     new-instance v1, Ljava/sql/Timestamp;
@@ -84,7 +84,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 579
+    .line 600
     goto :goto_0
 .end method
 
@@ -97,14 +97,14 @@
     .end annotation
 
     .prologue
-    .line 579
+    .line 600
     check-cast p2, Ljava/sql/Timestamp;
 
-    .line 1586
+    .line 1607
     iget-object v0, p0, Lcom/google/gson/internal/bind/TypeAdapters$26$1;->a:Lcom/google/gson/o;
 
     invoke-virtual {v0, p1, p2}, Lcom/google/gson/o;->a(Lcom/google/gson/stream/b;Ljava/lang/Object;)V
 
-    .line 579
+    .line 600
     return-void
 .end method

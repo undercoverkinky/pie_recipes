@@ -1,6 +1,5 @@
 .class public interface abstract Lcom/kik/messagepath/model/Keyboards$j;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 # interfaces
 .implements Lcom/google/protobuf/MessageOrBuilder;

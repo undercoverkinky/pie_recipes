@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/fragment/KikContactsListFragment$3;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,9 +15,9 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
-        "Lkik/core/datatypes/l;",
+        "Lkik/core/datatypes/o;",
         ">;"
     }
 .end annotation
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 1195
+    .line 1161
     iput-object p1, p0, Lkik/android/chat/fragment/KikContactsListFragment$3;->a:Lkik/android/chat/fragment/KikContactsListFragment;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -46,7 +46,7 @@
     .locals 3
 
     .prologue
-    .line 1200
+    .line 1166
     iget-object v0, p0, Lkik/android/chat/fragment/KikContactsListFragment$3;->a:Lkik/android/chat/fragment/KikContactsListFragment;
 
     iget-object v1, p0, Lkik/android/chat/fragment/KikContactsListFragment$3;->a:Lkik/android/chat/fragment/KikContactsListFragment;
@@ -57,7 +57,7 @@
 
     invoke-virtual {v0, v1, v2}, Lkik/android/chat/fragment/KikContactsListFragment;->a(Ljava/lang/String;Z)V
 
-    .line 1201
+    .line 1167
     return-void
 .end method
 
@@ -65,12 +65,12 @@
     .locals 3
 
     .prologue
-    .line 1212
+    .line 1178
     iget-object v0, p0, Lkik/android/chat/fragment/KikContactsListFragment$3;->a:Lkik/android/chat/fragment/KikContactsListFragment;
 
     iget-object v1, p0, Lkik/android/chat/fragment/KikContactsListFragment$3;->a:Lkik/android/chat/fragment/KikContactsListFragment;
 
-    const v2, 0x7f090426
+    const v2, 0x7f0a0412
 
     invoke-virtual {v1, v2}, Lkik/android/chat/fragment/KikContactsListFragment;->getString(I)Ljava/lang/String;
 
@@ -80,9 +80,9 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lkik/android/chat/fragment/KikContactsListFragment;->displayErrorDialog(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lkik/android/chat/fragment/KikContactsListFragment;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1213
+    .line 1179
     return-void
 .end method
 
@@ -90,13 +90,13 @@
     .locals 2
 
     .prologue
-    .line 1206
+    .line 1172
     iget-object v0, p0, Lkik/android/chat/fragment/KikContactsListFragment$3;->a:Lkik/android/chat/fragment/KikContactsListFragment;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikContactsListFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikContactsListFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 1207
+    .line 1173
     return-void
 .end method

@@ -3,12 +3,6 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x12
-.end annotation
-
-
 # static fields
 .field private static final TAG:Ljava/lang/String; = "ActionBarDrawerToggleImplJellybeanMR2"
 
@@ -20,7 +14,7 @@
     .locals 3
 
     .prologue
-    .line 34
+    .line 31
     const/4 v0, 0x1
 
     new-array v0, v0, [I
@@ -40,7 +34,7 @@
     .locals 0
 
     .prologue
-    .line 31
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -52,20 +46,20 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 58
+    .line 55
     invoke-virtual {p0}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 60
+    .line 57
     if-eqz v0, :cond_0
 
-    .line 61
+    .line 58
     invoke-virtual {v0}, Landroid/app/ActionBar;->getThemedContext()Landroid/content/Context;
 
     move-result-object p0
 
-    .line 66
+    .line 63
     :cond_0
     const/4 v0, 0x0
 
@@ -77,15 +71,15 @@
 
     move-result-object v0
 
-    .line 68
+    .line 65
     invoke-virtual {v0, v3}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 69
+    .line 66
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 70
+    .line 67
     return-object v1
 .end method
 
@@ -93,18 +87,18 @@
     .locals 1
 
     .prologue
-    .line 50
+    .line 47
     invoke-virtual {p1}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 51
+    .line 48
     if-eqz v0, :cond_0
 
-    .line 52
+    .line 49
     invoke-virtual {v0, p2}, Landroid/app/ActionBar;->setHomeActionContentDescription(I)V
 
-    .line 54
+    .line 51
     :cond_0
     return-object p0
 .end method
@@ -113,21 +107,21 @@
     .locals 1
 
     .prologue
-    .line 40
+    .line 37
     invoke-virtual {p1}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 41
+    .line 38
     if-eqz v0, :cond_0
 
-    .line 42
+    .line 39
     invoke-virtual {v0, p2}, Landroid/app/ActionBar;->setHomeAsUpIndicator(Landroid/graphics/drawable/Drawable;)V
 
-    .line 43
+    .line 40
     invoke-virtual {v0, p3}, Landroid/app/ActionBar;->setHomeActionContentDescription(I)V
 
-    .line 45
+    .line 42
     :cond_0
     return-object p0
 .end method

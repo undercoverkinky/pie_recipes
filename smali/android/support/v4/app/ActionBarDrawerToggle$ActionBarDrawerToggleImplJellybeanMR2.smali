@@ -7,10 +7,6 @@
 
 
 # annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x12
-.end annotation
-
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroid/support/v4/app/ActionBarDrawerToggle;
 .end annotation
@@ -22,14 +18,23 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     .prologue
-    .line 170
+    .line 152
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 171
+    return-void
+.end method
+
+.method synthetic constructor <init>(Landroid/support/v4/app/ActionBarDrawerToggle$1;)V
+    .locals 0
+
+    .prologue
+    .line 152
+    invoke-direct {p0}, Landroid/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImplJellybeanMR2;-><init>()V
+
     return-void
 .end method
 
@@ -39,7 +44,7 @@
     .locals 1
 
     .prologue
-    .line 175
+    .line 156
     invoke-static {p1}, Landroid/support/v4/app/ActionBarDrawerToggleJellybeanMR2;->getThemeUpIndicator(Landroid/app/Activity;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -51,7 +56,7 @@
     .locals 1
 
     .prologue
-    .line 187
+    .line 168
     invoke-static {p1, p2, p3}, Landroid/support/v4/app/ActionBarDrawerToggleJellybeanMR2;->setActionBarDescription(Ljava/lang/Object;Landroid/app/Activity;I)Ljava/lang/Object;
 
     move-result-object v0
@@ -63,7 +68,7 @@
     .locals 1
 
     .prologue
-    .line 181
+    .line 162
     invoke-static {p1, p2, p3, p4}, Landroid/support/v4/app/ActionBarDrawerToggleJellybeanMR2;->setActionBarUpIndicator(Ljava/lang/Object;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;I)Ljava/lang/Object;
 
     move-result-object v0

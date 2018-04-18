@@ -1,5 +1,5 @@
 .class final Lkik/android/addressbook/a$4;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Ljava/lang/Boolean;",
         ">;"
@@ -34,12 +34,12 @@
     .locals 0
 
     .prologue
-    .line 377
+    .line 357
     iput-object p1, p0, Lkik/android/addressbook/a$4;->b:Lkik/android/addressbook/a;
 
     iput-object p2, p0, Lkik/android/addressbook/a$4;->a:Ljava/lang/String;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -50,10 +50,10 @@
     .locals 2
 
     .prologue
-    .line 377
+    .line 357
     check-cast p1, Ljava/lang/Boolean;
 
-    .line 1382
+    .line 1362
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -62,10 +62,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 1383
+    .line 1363
     iget-object v0, p0, Lkik/android/addressbook/a$4;->b:Lkik/android/addressbook/a;
 
-    invoke-static {v0}, Lkik/android/addressbook/a;->h(Lkik/android/addressbook/a;)Landroid/os/Handler;
+    invoke-static {v0}, Lkik/android/addressbook/a;->j(Lkik/android/addressbook/a;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -75,10 +75,10 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1400
+    .line 1379
     :cond_0
-    invoke-super {p0}, Lcom/kik/events/k;->a()V
+    invoke-super {p0}, Lcom/kik/events/l;->a()V
 
-    .line 377
+    .line 357
     return-void
 .end method

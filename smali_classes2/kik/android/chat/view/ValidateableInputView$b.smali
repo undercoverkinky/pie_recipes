@@ -15,13 +15,13 @@
 
 
 # virtual methods
-.method public abstract a(Ljava/lang/CharSequence;)Lrx/d;
+.method public abstract a(Ljava/lang/CharSequence;)Lrx/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/CharSequence;",
             ")",
-            "Lrx/d",
+            "Lrx/c",
             "<",
             "Ljava/lang/Boolean;",
             ">;"

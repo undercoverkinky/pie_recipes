@@ -1,89 +1,257 @@
 .class final Lcom/google/android/gms/internal/k;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# annotations
+.annotation runtime Lcom/google/android/gms/internal/zzig;
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/google/android/gms/internal/k$a;
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/android/gms/internal/zzaca;
+.field private final a:Ljava/util/LinkedList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/LinkedList",
+            "<",
+            "Lcom/google/android/gms/internal/k$a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field final synthetic b:Lcom/google/android/gms/internal/zznh;
+.field private b:Lcom/google/android/gms/ads/internal/client/AdRequestParcel;
 
-.field final synthetic c:Ljava/lang/String;
+.field private final c:Ljava/lang/String;
 
-.field private synthetic d:Lcom/google/android/gms/ads/internal/js/zzl;
+.field private final d:I
 
-.field private synthetic e:Lcom/google/android/gms/internal/zznf;
+.field private e:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/gms/ads/internal/js/zzl;Lcom/google/android/gms/internal/zzaca;Lcom/google/android/gms/internal/zznh;Lcom/google/android/gms/internal/zznf;Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/google/android/gms/internal/k;->d:Lcom/google/android/gms/ads/internal/js/zzl;
-
-    iput-object p2, p0, Lcom/google/android/gms/internal/k;->a:Lcom/google/android/gms/internal/zzaca;
-
-    iput-object p3, p0, Lcom/google/android/gms/internal/k;->b:Lcom/google/android/gms/internal/zznh;
-
-    iput-object p4, p0, Lcom/google/android/gms/internal/k;->e:Lcom/google/android/gms/internal/zznf;
-
-    iput-object p5, p0, Lcom/google/android/gms/internal/k;->c:Ljava/lang/String;
+.method constructor <init>(Lcom/google/android/gms/ads/internal/client/AdRequestParcel;Ljava/lang/String;I)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {p1}, Lcom/google/android/gms/common/internal/zzaa;->zzz(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {p2}, Lcom/google/android/gms/common/internal/zzaa;->zzz(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v0, Ljava/util/LinkedList;
+
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/k;->a:Ljava/util/LinkedList;
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/k;->b:Lcom/google/android/gms/ads/internal/client/AdRequestParcel;
+
+    iput-object p2, p0, Lcom/google/android/gms/internal/k;->c:Ljava/lang/String;
+
+    iput p3, p0, Lcom/google/android/gms/internal/k;->d:I
 
     return-void
 .end method
 
+.method static synthetic a(Lcom/google/android/gms/internal/k;)Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/k;->c:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic b(Lcom/google/android/gms/internal/k;)Lcom/google/android/gms/ads/internal/client/AdRequestParcel;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/k;->b:Lcom/google/android/gms/ads/internal/client/AdRequestParcel;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method final a()Lcom/google/android/gms/ads/internal/client/AdRequestParcel;
+    .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/k;->d:Lcom/google/android/gms/ads/internal/js/zzl;
+    iget-object v0, p0, Lcom/google/android/gms/internal/k;->b:Lcom/google/android/gms/ads/internal/client/AdRequestParcel;
 
-    const/4 v1, 0x0
+    return-object v0
+.end method
 
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/ads/internal/js/zzl;->zzb(Lcom/google/android/gms/internal/zzcv;)Lcom/google/android/gms/ads/internal/js/zzy;
+.method final a(Lcom/google/android/gms/ads/internal/client/AdRequestParcel;)Lcom/google/android/gms/internal/k$a;
+    .locals 1
+
+    if-eqz p1, :cond_0
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/k;->b:Lcom/google/android/gms/ads/internal/client/AdRequestParcel;
+
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/k;->a:Ljava/util/LinkedList;
+
+    invoke-virtual {v0}, Ljava/util/LinkedList;->remove()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/k;->a:Lcom/google/android/gms/internal/zzaca;
+    check-cast v0, Lcom/google/android/gms/internal/k$a;
 
-    iput-object v0, v1, Lcom/google/android/gms/internal/zzaca;->zzcsn:Lcom/google/android/gms/ads/internal/js/zzy;
+    return-object v0
+.end method
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/k;->b:Lcom/google/android/gms/internal/zznh;
+.method final a(Lcom/google/android/gms/internal/zzey;)V
+    .locals 2
 
-    iget-object v2, p0, Lcom/google/android/gms/internal/k;->e:Lcom/google/android/gms/internal/zznf;
+    new-instance v0, Lcom/google/android/gms/internal/k$a;
 
-    const/4 v3, 0x1
+    invoke-direct {v0, p0, p1}, Lcom/google/android/gms/internal/k$a;-><init>(Lcom/google/android/gms/internal/k;Lcom/google/android/gms/internal/zzey;)V
 
-    new-array v3, v3, [Ljava/lang/String;
+    iget-object v1, p0, Lcom/google/android/gms/internal/k;->a:Ljava/util/LinkedList;
 
-    const/4 v4, 0x0
+    invoke-virtual {v1, v0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    const-string v5, "rwc"
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/k$a;->a()V
 
-    aput-object v5, v3, v4
+    return-void
+.end method
 
-    invoke-virtual {v1, v2, v3}, Lcom/google/android/gms/internal/zznh;->zza(Lcom/google/android/gms/internal/zznf;[Ljava/lang/String;)Z
+.method final a(Lcom/google/android/gms/internal/zzey;Lcom/google/android/gms/ads/internal/client/AdRequestParcel;)V
+    .locals 2
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/k;->b:Lcom/google/android/gms/internal/zznh;
+    new-instance v0, Lcom/google/android/gms/internal/k$a;
 
-    invoke-virtual {v1}, Lcom/google/android/gms/internal/zznh;->zziu()Lcom/google/android/gms/internal/zznf;
+    invoke-direct {v0, p0, p1, p2}, Lcom/google/android/gms/internal/k$a;-><init>(Lcom/google/android/gms/internal/k;Lcom/google/android/gms/internal/zzey;Lcom/google/android/gms/ads/internal/client/AdRequestParcel;)V
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/k;->a:Ljava/util/LinkedList;
+
+    invoke-virtual {v1, v0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method final b()I
+    .locals 1
+
+    iget v0, p0, Lcom/google/android/gms/internal/k;->d:I
+
+    return v0
+.end method
+
+.method final c()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/k;->c:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method final d()I
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/k;->a:Ljava/util/LinkedList;
+
+    invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method final e()I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/k;->a:Ljava/util/LinkedList;
+
+    invoke-virtual {v1}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    move v1, v0
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/gms/internal/k$a;
+
+    iget-boolean v0, v0, Lcom/google/android/gms/internal/k$a;->e:Z
+
+    if-eqz v0, :cond_1
+
+    add-int/lit8 v0, v1, 0x1
+
+    :goto_1
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    return v1
+
+    :cond_1
+    move v0, v1
+
+    goto :goto_1
+.end method
+
+.method final f()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/k;->a:Ljava/util/LinkedList;
+
+    invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    new-instance v2, Lcom/google/android/gms/internal/l;
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-direct {v2, p0, v1}, Lcom/google/android/gms/internal/l;-><init>(Lcom/google/android/gms/internal/k;Lcom/google/android/gms/internal/zznf;)V
+    move-result v0
 
-    new-instance v1, Lcom/google/android/gms/internal/m;
+    if-eqz v0, :cond_0
 
-    invoke-direct {v1, p0}, Lcom/google/android/gms/internal/m;-><init>(Lcom/google/android/gms/internal/k;)V
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {v0, v2, v1}, Lcom/google/android/gms/internal/zzakd;->zza(Lcom/google/android/gms/internal/zzakc;Lcom/google/android/gms/internal/zzaka;)V
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/gms/internal/k$a;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/k$a;->a()V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method final g()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/google/android/gms/internal/k;->e:Z
 
     return-void
+.end method
+
+.method final h()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/google/android/gms/internal/k;->e:Z
+
+    return v0
 .end method

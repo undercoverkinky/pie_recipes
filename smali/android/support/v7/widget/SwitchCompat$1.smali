@@ -1,5 +1,5 @@
-.class final Landroid/support/v7/widget/SwitchCompat$1;
-.super Landroid/util/Property;
+.class Landroid/support/v7/widget/SwitchCompat$1;
+.super Landroid/view/animation/Animation;
 .source "SourceFile"
 
 
@@ -9,70 +9,55 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Landroid/util/Property",
-        "<",
-        "Landroid/support/v7/widget/SwitchCompat;",
-        "Ljava/lang/Float;",
-        ">;"
-    }
-.end annotation
+
+# instance fields
+.field final synthetic a:F
+
+.field final synthetic b:F
+
+.field final synthetic c:Landroid/support/v7/widget/SwitchCompat;
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/Class;Ljava/lang/String;)V
+.method constructor <init>(Landroid/support/v7/widget/SwitchCompat;FF)V
     .locals 0
 
     .prologue
-    .line 103
-    invoke-direct {p0, p1, p2}, Landroid/util/Property;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    .line 755
+    iput-object p1, p0, Landroid/support/v7/widget/SwitchCompat$1;->c:Landroid/support/v7/widget/SwitchCompat;
+
+    iput p2, p0, Landroid/support/v7/widget/SwitchCompat$1;->a:F
+
+    iput p3, p0, Landroid/support/v7/widget/SwitchCompat$1;->b:F
+
+    invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method protected applyTransformation(FLandroid/view/animation/Transformation;)V
+    .locals 3
 
     .prologue
-    .line 103
-    check-cast p1, Landroid/support/v7/widget/SwitchCompat;
+    .line 758
+    iget-object v0, p0, Landroid/support/v7/widget/SwitchCompat$1;->c:Landroid/support/v7/widget/SwitchCompat;
 
-    .line 1106
-    invoke-static {p1}, Landroid/support/v7/widget/SwitchCompat;->a(Landroid/support/v7/widget/SwitchCompat;)F
+    iget v1, p0, Landroid/support/v7/widget/SwitchCompat$1;->a:F
 
-    move-result v0
+    iget v2, p0, Landroid/support/v7/widget/SwitchCompat$1;->b:F
 
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    mul-float/2addr v2, p1
 
-    move-result-object v0
+    add-float/2addr v1, v2
 
-    .line 103
-    return-object v0
-.end method
+    invoke-static {v0, v1}, Landroid/support/v7/widget/SwitchCompat;->a(Landroid/support/v7/widget/SwitchCompat;F)V
 
-.method public final synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
-
-    .prologue
-    .line 103
-    check-cast p1, Landroid/support/v7/widget/SwitchCompat;
-
-    check-cast p2, Ljava/lang/Float;
-
-    .line 1111
-    invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/support/v7/widget/SwitchCompat;->a(F)V
-
-    .line 103
+    .line 759
     return-void
 .end method

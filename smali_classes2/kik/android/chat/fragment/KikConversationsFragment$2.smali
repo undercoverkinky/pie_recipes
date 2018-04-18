@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/KikConversationsFragment;->c()V
+    value = Lkik/android/chat/fragment/KikConversationsFragment;->i()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 1220
+    .line 1236
     iput-object p1, p0, Lkik/android/chat/fragment/KikConversationsFragment$2;->a:Lkik/android/chat/fragment/KikConversationsFragment;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -34,63 +34,65 @@
 
 # virtual methods
 .method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 3
+    .locals 1
 
     .prologue
-    .line 1231
-    const/4 v0, 0x3
+    .line 1247
+    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$2;->a:Lkik/android/chat/fragment/KikConversationsFragment;
 
-    new-array v0, v0, [Landroid/view/View;
+    invoke-static {v0}, Lkik/android/chat/fragment/KikConversationsFragment;->h(Lkik/android/chat/fragment/KikConversationsFragment;)V
 
-    const/4 v1, 0x0
+    .line 1253
+    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$2;->a:Lkik/android/chat/fragment/KikConversationsFragment;
 
-    iget-object v2, p0, Lkik/android/chat/fragment/KikConversationsFragment$2;->a:Lkik/android/chat/fragment/KikConversationsFragment;
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikConversationsFragment;->isResumed()Z
 
-    iget-object v2, v2, Lkik/android/chat/fragment/KikConversationsFragment;->_floatingActionMenu:Lcom/github/clans/fab/FloatingActionMenu;
+    move-result v0
 
-    aput-object v2, v0, v1
+    if-eqz v0, :cond_0
 
-    const/4 v1, 0x1
+    .line 1254
+    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$2;->a:Lkik/android/chat/fragment/KikConversationsFragment;
 
-    iget-object v2, p0, Lkik/android/chat/fragment/KikConversationsFragment$2;->a:Lkik/android/chat/fragment/KikConversationsFragment;
+    invoke-static {v0}, Lkik/android/chat/fragment/KikConversationsFragment;->i(Lkik/android/chat/fragment/KikConversationsFragment;)Lkik/android/chat/vm/conversations/c;
 
-    iget-object v2, v2, Lkik/android/chat/fragment/KikConversationsFragment;->_fabButtonBadge:Lkik/android/widget/BadgeCover;
+    move-result-object v0
 
-    aput-object v2, v0, v1
+    invoke-interface {v0}, Lkik/android/chat/vm/conversations/c;->d()V
 
-    const/4 v1, 0x2
-
-    iget-object v2, p0, Lkik/android/chat/fragment/KikConversationsFragment$2;->a:Lkik/android/chat/fragment/KikConversationsFragment;
-
-    iget-object v2, v2, Lkik/android/chat/fragment/KikConversationsFragment;->_settingsBadge:Lkik/android/widget/BadgeCover;
-
-    aput-object v2, v0, v1
-
-    invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
-
-    .line 1232
+    .line 1256
+    :cond_0
     return-void
 .end method
 
 .method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 3
+    .locals 2
 
     .prologue
-    .line 1225
+    .line 1240
     iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$2;->a:Lkik/android/chat/fragment/KikConversationsFragment;
 
     iget-object v1, p0, Lkik/android/chat/fragment/KikConversationsFragment$2;->a:Lkik/android/chat/fragment/KikConversationsFragment;
 
     iget-object v1, v1, Lkik/android/chat/fragment/KikConversationsFragment;->_searchBarView:Lkik/android/chat/view/SearchBarViewImpl;
 
-    invoke-virtual {v1}, Lkik/android/chat/view/SearchBarViewImpl;->b()Lkik/android/widget/RobotoEditText;
+    invoke-virtual {v1}, Lkik/android/chat/view/SearchBarViewImpl;->d()Lkik/android/widget/RobotoEditText;
 
     move-result-object v1
 
-    const/4 v2, 0x1
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikConversationsFragment;->b(Landroid/view/View;)V
 
-    invoke-virtual {v0, v1, v2}, Lkik/android/chat/fragment/KikConversationsFragment;->showKeyBoard(Landroid/view/View;Z)V
+    .line 1241
+    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$2;->a:Lkik/android/chat/fragment/KikConversationsFragment;
 
-    .line 1226
+    iget-object v0, v0, Lkik/android/chat/fragment/KikConversationsFragment;->_searchBarView:Lkik/android/chat/view/SearchBarViewImpl;
+
+    invoke-virtual {v0}, Lkik/android/chat/view/SearchBarViewImpl;->d()Lkik/android/widget/RobotoEditText;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lkik/android/widget/RobotoEditText;->clearFocus()V
+
+    .line 1242
     return-void
 .end method

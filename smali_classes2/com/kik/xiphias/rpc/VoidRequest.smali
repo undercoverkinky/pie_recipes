@@ -152,7 +152,6 @@
 
     invoke-virtual {p0}, Lcom/kik/xiphias/rpc/VoidRequest;->makeExtensionsImmutable()V
 
-    .line 53
     throw v0
 
     .line 48

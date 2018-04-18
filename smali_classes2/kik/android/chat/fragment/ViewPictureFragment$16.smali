@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/kik/cache/KikVolleyImageLoader$d;
+.implements Lcom/kik/cache/aa$e;
 
 
 # annotations
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 1067
+    .line 1005
     iput-object p1, p0, Lkik/android/chat/fragment/ViewPictureFragment$16;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 2
 
     .prologue
-    .line 1094
+    .line 1031
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$16;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/ViewPictureFragment;->d(Lkik/android/chat/fragment/ViewPictureFragment;)Landroid/os/Handler;
@@ -53,30 +53,30 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1104
+    .line 1040
     return-void
 .end method
 
-.method public final a(Lcom/kik/cache/KikVolleyImageLoader$c;Z)V
+.method public final a(Lcom/kik/cache/aa$d;Z)V
     .locals 3
 
     .prologue
-    .line 1071
-    invoke-virtual {p1}, Lcom/kik/cache/KikVolleyImageLoader$c;->b()Landroid/graphics/Bitmap;
+    .line 1009
+    invoke-virtual {p1}, Lcom/kik/cache/aa$d;->b()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 1072
+    .line 1010
     if-eqz v0, :cond_1
 
-    .line 1073
+    .line 1011
     iget-object v1, p0, Lkik/android/chat/fragment/ViewPictureFragment$16;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Lkik/android/chat/fragment/ViewPictureFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v1, v2}, Lkik/android/chat/fragment/ViewPictureFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 1074
+    .line 1012
     iget-object v1, p0, Lkik/android/chat/fragment/ViewPictureFragment$16;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     invoke-static {v1}, Lkik/android/chat/fragment/ViewPictureFragment;->d(Lkik/android/chat/fragment/ViewPictureFragment;)Landroid/os/Handler;
@@ -89,16 +89,16 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1089
+    .line 1026
     :cond_0
     :goto_0
     return-void
 
-    .line 1085
+    .line 1022
     :cond_1
     if-nez p2, :cond_0
 
-    .line 1087
+    .line 1024
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$16;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     const/4 v1, 0x1

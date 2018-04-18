@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/kik/events/p;
+.implements Lcom/kik/events/q;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/kik/events/p",
+        "Lcom/kik/events/q",
         "<",
         "Lcom/kik/xdata/model/scanning/XScanningNonceSecret;",
         "Ljava/lang/Integer;",
@@ -37,7 +37,7 @@
     .locals 0
 
     .prologue
-    .line 170
+    .line 166
     iput-object p1, p0, Lkik/android/scan/c$4;->a:Lkik/android/scan/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,25 +51,25 @@
     .locals 2
 
     .prologue
-    .line 170
+    .line 166
     check-cast p1, Lcom/kik/xdata/model/scanning/XScanningNonceSecret;
 
-    .line 1174
+    .line 1170
     const/16 v0, 0x100
 
     new-array v0, v0, [B
 
-    .line 1175
+    .line 1171
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/kik/xdata/model/scanning/XScanningNonceSecret;->a()Lcom/dyuproject/protostuff/c;
+    invoke-virtual {p1}, Lcom/kik/xdata/model/scanning/XScanningNonceSecret;->b()Lcom/dyuproject/protostuff/c;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 1176
-    invoke-virtual {p1}, Lcom/kik/xdata/model/scanning/XScanningNonceSecret;->a()Lcom/dyuproject/protostuff/c;
+    .line 1172
+    invoke-virtual {p1}, Lcom/kik/xdata/model/scanning/XScanningNonceSecret;->b()Lcom/dyuproject/protostuff/c;
 
     move-result-object v0
 
@@ -77,7 +77,7 @@
 
     move-result-object v0
 
-    .line 1183
+    .line 1179
     :goto_0
     iget-object v1, p0, Lkik/android/scan/c$4;->a:Lkik/android/scan/c;
 
@@ -89,10 +89,10 @@
 
     move-result-object v0
 
-    .line 170
+    .line 166
     return-object v0
 
-    .line 1180
+    .line 1176
     :cond_0
     iget-object v1, p0, Lkik/android/scan/c$4;->a:Lkik/android/scan/c;
 

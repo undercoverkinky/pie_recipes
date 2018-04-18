@@ -4,8 +4,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/KikConversationsFragment;->l()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lkik/android/chat/fragment/KikConversationsFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 948
+    .line 968
     iput-object p1, p0, Lkik/android/chat/fragment/KikConversationsFragment$12;->a:Lkik/android/chat/fragment/KikConversationsFragment;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -37,28 +37,15 @@
     .locals 2
 
     .prologue
-    .line 953
+    .line 972
     iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$12;->a:Lkik/android/chat/fragment/KikConversationsFragment;
 
-    invoke-static {v0}, Lkik/android/chat/fragment/KikConversationsFragment;->w(Lkik/android/chat/fragment/KikConversationsFragment;)Landroid/view/View;
+    iget-object v0, v0, Lkik/android/chat/fragment/KikConversationsFragment;->_searchBarSearchIcon:Landroid/widget/ImageView;
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    invoke-static {v0}, Lkik/android/util/bz;->d(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 954
-    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$12;->a:Lkik/android/chat/fragment/KikConversationsFragment;
-
-    iget-object v0, v0, Lkik/android/chat/fragment/KikConversationsFragment;->_conversationList:Landroid/widget/ListView;
-
-    iget-object v1, p0, Lkik/android/chat/fragment/KikConversationsFragment$12;->a:Lkik/android/chat/fragment/KikConversationsFragment;
-
-    invoke-static {v1}, Lkik/android/chat/fragment/KikConversationsFragment;->w(Lkik/android/chat/fragment/KikConversationsFragment;)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->removeFooterView(Landroid/view/View;)Z
-
-    .line 955
+    .line 973
     return-void
 .end method

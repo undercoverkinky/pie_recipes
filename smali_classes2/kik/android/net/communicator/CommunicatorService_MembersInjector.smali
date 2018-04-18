@@ -23,12 +23,12 @@
 
 
 # instance fields
-.field private final b:Ljavax/inject/Provider;
+.field private final b:Ldagger/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljavax/inject/Provider",
+            "Ldagger/b",
             "<",
-            "Lkik/core/interfaces/ICommunication;",
+            "Landroid/app/Service;",
             ">;"
         }
     .end annotation
@@ -39,7 +39,7 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/IConversation;",
+            "Lkik/core/interfaces/ICommunication;",
             ">;"
         }
     .end annotation
@@ -50,7 +50,7 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/k;",
+            "Lkik/core/interfaces/j;",
             ">;"
         }
     .end annotation
@@ -61,7 +61,7 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/ad;",
+            "Lkik/core/interfaces/l;",
             ">;"
         }
     .end annotation
@@ -95,35 +95,35 @@
     goto :goto_0
 .end method
 
-.method private constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+.method private constructor <init>(Ldagger/b;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
+            "Ldagger/b",
+            "<",
+            "Landroid/app/Service;",
+            ">;",
             "Ljavax/inject/Provider",
             "<",
             "Lkik/core/interfaces/ICommunication;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/IConversation;",
+            "Lkik/core/interfaces/j;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/k;",
-            ">;",
-            "Ljavax/inject/Provider",
-            "<",
-            "Lkik/core/interfaces/ad;",
+            "Lkik/core/interfaces/l;",
             ">;)V"
         }
     .end annotation
 
     .prologue
-    .line 29
+    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
+    .line 19
     sget-boolean v0, Lkik/android/net/communicator/CommunicatorService_MembersInjector;->a:Z
 
     if-nez v0, :cond_0
@@ -136,11 +136,11 @@
 
     throw v0
 
-    .line 31
+    .line 20
     :cond_0
-    iput-object p1, p0, Lkik/android/net/communicator/CommunicatorService_MembersInjector;->b:Ljavax/inject/Provider;
+    iput-object p1, p0, Lkik/android/net/communicator/CommunicatorService_MembersInjector;->b:Ldagger/b;
 
-    .line 32
+    .line 21
     sget-boolean v0, Lkik/android/net/communicator/CommunicatorService_MembersInjector;->a:Z
 
     if-nez v0, :cond_1
@@ -153,11 +153,11 @@
 
     throw v0
 
-    .line 33
+    .line 22
     :cond_1
     iput-object p2, p0, Lkik/android/net/communicator/CommunicatorService_MembersInjector;->c:Ljavax/inject/Provider;
 
-    .line 34
+    .line 23
     sget-boolean v0, Lkik/android/net/communicator/CommunicatorService_MembersInjector;->a:Z
 
     if-nez v0, :cond_2
@@ -170,11 +170,11 @@
 
     throw v0
 
-    .line 35
+    .line 24
     :cond_2
     iput-object p3, p0, Lkik/android/net/communicator/CommunicatorService_MembersInjector;->d:Ljavax/inject/Provider;
 
-    .line 36
+    .line 25
     sget-boolean v0, Lkik/android/net/communicator/CommunicatorService_MembersInjector;->a:Z
 
     if-nez v0, :cond_3
@@ -187,34 +187,34 @@
 
     throw v0
 
-    .line 37
+    .line 26
     :cond_3
     iput-object p4, p0, Lkik/android/net/communicator/CommunicatorService_MembersInjector;->e:Ljavax/inject/Provider;
 
-    .line 38
+    .line 27
     return-void
 .end method
 
-.method public static a(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Ldagger/b;
+.method public static a(Ldagger/b;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Ldagger/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
+            "Ldagger/b",
+            "<",
+            "Landroid/app/Service;",
+            ">;",
             "Ljavax/inject/Provider",
             "<",
             "Lkik/core/interfaces/ICommunication;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/IConversation;",
+            "Lkik/core/interfaces/j;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/k;",
-            ">;",
-            "Ljavax/inject/Provider",
-            "<",
-            "Lkik/core/interfaces/ad;",
+            "Lkik/core/interfaces/l;",
             ">;)",
             "Ldagger/b",
             "<",
@@ -224,10 +224,10 @@
     .end annotation
 
     .prologue
-    .line 45
+    .line 41
     new-instance v0, Lkik/android/net/communicator/CommunicatorService_MembersInjector;
 
-    invoke-direct {v0, p0, p1, p2, p3}, Lkik/android/net/communicator/CommunicatorService_MembersInjector;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+    invoke-direct {v0, p0, p1, p2, p3}, Lkik/android/net/communicator/CommunicatorService_MembersInjector;-><init>(Ldagger/b;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
 
     return-object v0
 .end method
@@ -241,10 +241,10 @@
     .line 11
     check-cast p1, Lkik/android/net/communicator/CommunicatorService;
 
-    .line 1051
+    .line 1031
     if-nez p1, :cond_0
 
-    .line 1052
+    .line 1032
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "Cannot inject members into a null reference"
@@ -253,9 +253,14 @@
 
     throw v0
 
-    .line 1054
+    .line 1034
     :cond_0
-    iget-object v0, p0, Lkik/android/net/communicator/CommunicatorService_MembersInjector;->b:Ljavax/inject/Provider;
+    iget-object v0, p0, Lkik/android/net/communicator/CommunicatorService_MembersInjector;->b:Ldagger/b;
+
+    invoke-interface {v0, p1}, Ldagger/b;->injectMembers(Ljava/lang/Object;)V
+
+    .line 1035
+    iget-object v0, p0, Lkik/android/net/communicator/CommunicatorService_MembersInjector;->c:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
@@ -265,38 +270,27 @@
 
     iput-object v0, p1, Lkik/android/net/communicator/CommunicatorService;->a:Lkik/core/interfaces/ICommunication;
 
-    .line 1055
-    iget-object v0, p0, Lkik/android/net/communicator/CommunicatorService_MembersInjector;->c:Ljavax/inject/Provider;
-
-    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkik/core/interfaces/IConversation;
-
-    iput-object v0, p1, Lkik/android/net/communicator/CommunicatorService;->b:Lkik/core/interfaces/IConversation;
-
-    .line 1056
+    .line 1036
     iget-object v0, p0, Lkik/android/net/communicator/CommunicatorService_MembersInjector;->d:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/interfaces/k;
+    check-cast v0, Lkik/core/interfaces/j;
 
-    iput-object v0, p1, Lkik/android/net/communicator/CommunicatorService;->c:Lkik/core/interfaces/k;
+    iput-object v0, p1, Lkik/android/net/communicator/CommunicatorService;->b:Lkik/core/interfaces/j;
 
-    .line 1057
+    .line 1037
     iget-object v0, p0, Lkik/android/net/communicator/CommunicatorService_MembersInjector;->e:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/interfaces/ad;
+    check-cast v0, Lkik/core/interfaces/l;
 
-    iput-object v0, p1, Lkik/android/net/communicator/CommunicatorService;->d:Lkik/core/interfaces/ad;
+    iput-object v0, p1, Lkik/android/net/communicator/CommunicatorService;->c:Lkik/core/interfaces/l;
 
     .line 11
     return-void

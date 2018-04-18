@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 271
+    .line 258
     invoke-direct {p0}, Lkik/android/chat/fragment/AddressbookFragmentBase$a;-><init>()V
 
     return-void
@@ -31,7 +31,7 @@
     .locals 1
 
     .prologue
-    .line 271
+    .line 258
     invoke-virtual {p0, p1}, Lkik/android/chat/fragment/FullScreenAddressbookFragment$a;->b(Ljava/lang/String;)Lkik/android/chat/fragment/FullScreenAddressbookFragment$a;
 
     move-result-object v0
@@ -43,20 +43,20 @@
     .locals 1
 
     .prologue
-    .line 295
+    .line 282
     const-string v0, "address-book-sync-origin"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/FullScreenAddressbookFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 296
+    .line 283
     return-object p0
 .end method
 
-.method public final h_()Ljava/lang/String;
+.method public final m_()Ljava/lang/String;
     .locals 2
 
     .prologue
-    .line 301
+    .line 288
     const-string v0, "address-book-sync-origin"
 
     const-string v1, "unknown-origin"

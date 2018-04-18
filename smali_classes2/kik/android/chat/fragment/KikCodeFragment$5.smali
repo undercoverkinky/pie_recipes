@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 555
+    .line 529
     iput-object p1, p0, Lkik/android/chat/fragment/KikCodeFragment$5;->b:Lkik/android/chat/fragment/KikCodeFragment;
 
     iput p2, p0, Lkik/android/chat/fragment/KikCodeFragment$5;->a:I
@@ -46,7 +46,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 559
+    .line 533
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$5;->b:Lkik/android/chat/fragment/KikCodeFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/KikCodeFragment;->m(Lkik/android/chat/fragment/KikCodeFragment;)Landroid/view/View;
@@ -69,7 +69,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 560
+    .line 534
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$5;->b:Lkik/android/chat/fragment/KikCodeFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/KikCodeFragment;->m(Lkik/android/chat/fragment/KikCodeFragment;)Landroid/view/View;
@@ -82,7 +82,7 @@
 
     check-cast v0, Lkik/android/scan/widget/a;
 
-    .line 561
+    .line 535
     iget v1, p0, Lkik/android/chat/fragment/KikCodeFragment$5;->a:I
 
     new-instance v2, Landroid/graphics/Point;
@@ -91,7 +91,7 @@
 
     invoke-virtual {v0, v1, v2}, Lkik/android/scan/widget/a;->a(ILandroid/graphics/Point;)V
 
-    .line 563
+    .line 537
     :cond_0
     return-void
 .end method

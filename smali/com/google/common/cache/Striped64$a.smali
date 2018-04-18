@@ -29,23 +29,22 @@
     .locals 3
 
     .prologue
-    .line 110
+    .line 108
     :try_start_0
-    invoke-static {}, Lcom/google/common/cache/Striped64;->d()Lsun/misc/Unsafe;
+    invoke-static {}, Lcom/google/common/cache/Striped64;->c()Lsun/misc/Unsafe;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/common/cache/Striped64$a;->b:Lsun/misc/Unsafe;
 
-    .line 111
+    .line 109
     const-class v0, Lcom/google/common/cache/Striped64$a;
 
-    .line 112
+    .line 110
     sget-object v1, Lcom/google/common/cache/Striped64$a;->b:Lsun/misc/Unsafe;
 
     const-string v2, "value"
 
-    .line 113
     invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
@@ -58,14 +57,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 116
+    .line 114
     return-void
 
-    .line 114
+    .line 112
     :catch_0
     move-exception v0
 
-    .line 115
+    .line 113
     new-instance v1, Ljava/lang/Error;
 
     invoke-direct {v1, v0}, Ljava/lang/Error;-><init>(Ljava/lang/Throwable;)V
@@ -77,7 +76,7 @@
     .locals 1
 
     .prologue
-    .line 99
+    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-wide p1, p0, Lcom/google/common/cache/Striped64$a;->a:J
@@ -91,7 +90,7 @@
     .locals 9
 
     .prologue
-    .line 102
+    .line 100
     sget-object v0, Lcom/google/common/cache/Striped64$a;->b:Lsun/misc/Unsafe;
 
     sget-wide v2, Lcom/google/common/cache/Striped64$a;->c:J

@@ -26,10 +26,10 @@
     .locals 0
 
     .prologue
-    .line 85
+    .line 83
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 90
+    .line 88
     return-void
 .end method
 
@@ -41,10 +41,10 @@
 .method abstract a(FF)V
 .end method
 
-.method abstract a(II)V
+.method abstract a(I)V
 .end method
 
-.method abstract a(J)V
+.method abstract a(II)V
 .end method
 
 .method abstract a(Landroid/support/design/widget/ValueAnimatorCompat$Impl$AnimatorListenerProxy;)V
@@ -69,10 +69,4 @@
 .end method
 
 .method abstract f()F
-.end method
-
-.method abstract g()V
-.end method
-
-.method abstract h()J
 .end method

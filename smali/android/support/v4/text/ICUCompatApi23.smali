@@ -3,12 +3,6 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x17
-.end annotation
-
-
 # static fields
 .field private static final TAG:Ljava/lang/String; = "ICUCompatIcs"
 
@@ -20,7 +14,7 @@
     .locals 5
 
     .prologue
-    .line 38
+    .line 34
     :try_start_0
     const-string v0, "libcore.icu.ICU"
 
@@ -28,7 +22,7 @@
 
     move-result-object v0
 
-    .line 39
+    .line 35
     const-string v1, "addLikelySubtags"
 
     const/4 v2, 0x1
@@ -49,14 +43,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 43
+    .line 39
     return-void
 
-    .line 41
+    .line 37
     :catch_0
     move-exception v0
 
-    .line 42
+    .line 38
     new-instance v1, Ljava/lang/IllegalStateException;
 
     invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -68,7 +62,7 @@
     .locals 0
 
     .prologue
-    .line 29
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -78,7 +72,7 @@
     .locals 3
 
     .prologue
-    .line 49
+    .line 45
     const/4 v0, 0x1
 
     :try_start_0
@@ -88,7 +82,7 @@
 
     aput-object p0, v0, v1
 
-    .line 50
+    .line 46
     sget-object v1, Landroid/support/v4/text/ICUCompatApi23;->sAddLikelySubtagsMethod:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
@@ -106,20 +100,20 @@
 
     move-result-object v0
 
-    .line 57
+    .line 53
     :goto_0
     return-object v0
 
-    .line 51
+    .line 47
     :catch_0
     move-exception v0
 
-    .line 52
+    .line 48
     const-string v1, "ICUCompatIcs"
 
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 57
+    .line 53
     :goto_1
     invoke-virtual {p0}, Ljava/util/Locale;->getScript()Ljava/lang/String;
 
@@ -127,11 +121,11 @@
 
     goto :goto_0
 
-    .line 53
+    .line 49
     :catch_1
     move-exception v0
 
-    .line 54
+    .line 50
     const-string v1, "ICUCompatIcs"
 
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I

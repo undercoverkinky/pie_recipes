@@ -22,16 +22,25 @@
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v7/widget/ListPopupWindow;)V
+.method private constructor <init>(Landroid/support/v7/widget/ListPopupWindow;)V
     .locals 0
 
     .prologue
-    .line 1330
+    .line 1724
     iput-object p1, p0, Landroid/support/v7/widget/ListPopupWindow$ResizePopupRunnable;->a:Landroid/support/v7/widget/ListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1331
+    return-void
+.end method
+
+.method synthetic constructor <init>(Landroid/support/v7/widget/ListPopupWindow;B)V
+    .locals 0
+
+    .prologue
+    .line 1724
+    invoke-direct {p0, p1}, Landroid/support/v7/widget/ListPopupWindow$ResizePopupRunnable;-><init>(Landroid/support/v7/widget/ListPopupWindow;)V
+
     return-void
 .end method
 
@@ -41,37 +50,32 @@
     .locals 2
 
     .prologue
-    .line 1335
+    .line 1726
     iget-object v0, p0, Landroid/support/v7/widget/ListPopupWindow$ResizePopupRunnable;->a:Landroid/support/v7/widget/ListPopupWindow;
 
-    iget-object v0, v0, Landroid/support/v7/widget/ListPopupWindow;->c:Landroid/support/v7/widget/DropDownListView;
+    invoke-static {v0}, Landroid/support/v7/widget/ListPopupWindow;->a(Landroid/support/v7/widget/ListPopupWindow;)Landroid/support/v7/widget/ListPopupWindow$DropDownListView;
+
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Landroid/support/v7/widget/ListPopupWindow$ResizePopupRunnable;->a:Landroid/support/v7/widget/ListPopupWindow;
 
-    iget-object v0, v0, Landroid/support/v7/widget/ListPopupWindow;->c:Landroid/support/v7/widget/DropDownListView;
+    invoke-static {v0}, Landroid/support/v7/widget/ListPopupWindow;->a(Landroid/support/v7/widget/ListPopupWindow;)Landroid/support/v7/widget/ListPopupWindow$DropDownListView;
 
-    invoke-static {v0}, Landroid/support/v4/view/ViewCompat;->isAttachedToWindow(Landroid/view/View;)Z
+    move-result-object v0
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v7/widget/ListPopupWindow$ResizePopupRunnable;->a:Landroid/support/v7/widget/ListPopupWindow;
-
-    iget-object v0, v0, Landroid/support/v7/widget/ListPopupWindow;->c:Landroid/support/v7/widget/DropDownListView;
-
-    .line 1336
-    invoke-virtual {v0}, Landroid/support/v7/widget/DropDownListView;->getCount()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/ListPopupWindow$DropDownListView;->getCount()I
 
     move-result v0
 
     iget-object v1, p0, Landroid/support/v7/widget/ListPopupWindow$ResizePopupRunnable;->a:Landroid/support/v7/widget/ListPopupWindow;
 
-    iget-object v1, v1, Landroid/support/v7/widget/ListPopupWindow;->c:Landroid/support/v7/widget/DropDownListView;
+    invoke-static {v1}, Landroid/support/v7/widget/ListPopupWindow;->a(Landroid/support/v7/widget/ListPopupWindow;)Landroid/support/v7/widget/ListPopupWindow$DropDownListView;
 
-    invoke-virtual {v1}, Landroid/support/v7/widget/DropDownListView;->getChildCount()I
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/support/v7/widget/ListPopupWindow$DropDownListView;->getChildCount()I
 
     move-result v1
 
@@ -79,34 +83,37 @@
 
     iget-object v0, p0, Landroid/support/v7/widget/ListPopupWindow$ResizePopupRunnable;->a:Landroid/support/v7/widget/ListPopupWindow;
 
-    iget-object v0, v0, Landroid/support/v7/widget/ListPopupWindow;->c:Landroid/support/v7/widget/DropDownListView;
+    invoke-static {v0}, Landroid/support/v7/widget/ListPopupWindow;->a(Landroid/support/v7/widget/ListPopupWindow;)Landroid/support/v7/widget/ListPopupWindow$DropDownListView;
 
-    .line 1337
-    invoke-virtual {v0}, Landroid/support/v7/widget/DropDownListView;->getChildCount()I
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/ListPopupWindow$DropDownListView;->getChildCount()I
 
     move-result v0
 
     iget-object v1, p0, Landroid/support/v7/widget/ListPopupWindow$ResizePopupRunnable;->a:Landroid/support/v7/widget/ListPopupWindow;
 
-    iget v1, v1, Landroid/support/v7/widget/ListPopupWindow;->d:I
+    iget v1, v1, Landroid/support/v7/widget/ListPopupWindow;->b:I
 
     if-gt v0, v1, :cond_0
 
-    .line 1338
+    .line 1728
     iget-object v0, p0, Landroid/support/v7/widget/ListPopupWindow$ResizePopupRunnable;->a:Landroid/support/v7/widget/ListPopupWindow;
 
-    iget-object v0, v0, Landroid/support/v7/widget/ListPopupWindow;->g:Landroid/widget/PopupWindow;
+    invoke-static {v0}, Landroid/support/v7/widget/ListPopupWindow;->b(Landroid/support/v7/widget/ListPopupWindow;)Landroid/widget/PopupWindow;
+
+    move-result-object v0
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/widget/PopupWindow;->setInputMethodMode(I)V
 
-    .line 1339
+    .line 1729
     iget-object v0, p0, Landroid/support/v7/widget/ListPopupWindow$ResizePopupRunnable;->a:Landroid/support/v7/widget/ListPopupWindow;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/ListPopupWindow;->b()V
+    invoke-virtual {v0}, Landroid/support/v7/widget/ListPopupWindow;->c()V
 
-    .line 1341
+    .line 1731
     :cond_0
     return-void
 .end method

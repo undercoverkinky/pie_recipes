@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 221
+    .line 209
     iput-object p1, p0, Landroid/support/v7/widget/StaggeredGridLayoutManager$1;->a:Landroid/support/v7/widget/StaggeredGridLayoutManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +40,11 @@
     .locals 1
 
     .prologue
-    .line 224
+    .line 212
     iget-object v0, p0, Landroid/support/v7/widget/StaggeredGridLayoutManager$1;->a:Landroid/support/v7/widget/StaggeredGridLayoutManager;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/StaggeredGridLayoutManager;->b()Z
+    invoke-static {v0}, Landroid/support/v7/widget/StaggeredGridLayoutManager;->a(Landroid/support/v7/widget/StaggeredGridLayoutManager;)Z
 
-    .line 225
+    .line 213
     return-void
 .end method

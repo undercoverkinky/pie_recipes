@@ -23,10 +23,10 @@
     .locals 1
 
     .prologue
-    .line 824
+    .line 791
     invoke-direct {p0}, Lcom/kik/ui/fragment/FragmentBase$FragmentBundle;-><init>()V
 
-    .line 826
+    .line 793
     const-string v0, "kik.code.group.jid"
 
     iput-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$a;->a:Ljava/lang/String;
@@ -40,15 +40,15 @@
     .locals 1
 
     .prologue
-    .line 838
+    .line 805
     if-eqz p1, :cond_0
 
-    .line 839
+    .line 806
     const-string v0, "kik.code.group.jid"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikCodeFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 841
+    .line 808
     :cond_0
     return-object p0
 .end method
@@ -57,10 +57,10 @@
     .locals 1
 
     .prologue
-    .line 846
+    .line 813
     const-string v0, "kik.code.group.jid"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikCodeFragment$a;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikCodeFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

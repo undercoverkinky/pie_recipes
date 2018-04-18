@@ -1,5 +1,5 @@
 .class final Lcom/kik/cards/web/auth/AuthPlugin$3$1;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Ljava/lang/String;",
         ">;"
@@ -35,7 +35,7 @@
     .line 135
     iput-object p1, p0, Lcom/kik/cards/web/auth/AuthPlugin$3$1;->a:Lcom/kik/cards/web/auth/AuthPlugin$3;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -67,11 +67,11 @@
 
     iget-object v1, v1, Lcom/kik/cards/web/auth/AuthPlugin$3;->b:Lcom/kik/cards/web/plugin/a;
 
-    new-instance v2, Lcom/kik/cards/web/plugin/g;
+    new-instance v2, Lcom/kik/cards/web/plugin/h;
 
-    invoke-direct {v2, v0}, Lcom/kik/cards/web/plugin/g;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {v2, v0}, Lcom/kik/cards/web/plugin/h;-><init>(Lorg/json/JSONObject;)V
 
-    invoke-interface {v1, v2}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/g;)V
+    invoke-interface {v1, v2}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/h;)V
 
     .line 1147
     :goto_0
@@ -85,13 +85,13 @@
 
     iget-object v0, v0, Lcom/kik/cards/web/auth/AuthPlugin$3;->b:Lcom/kik/cards/web/plugin/a;
 
-    new-instance v1, Lcom/kik/cards/web/plugin/g;
+    new-instance v1, Lcom/kik/cards/web/plugin/h;
 
     const/16 v2, 0x1f4
 
-    invoke-direct {v1, v2}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v1, v2}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
-    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/g;)V
+    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/h;)V
 
     goto :goto_0
 .end method
@@ -105,13 +105,13 @@
 
     iget-object v0, v0, Lcom/kik/cards/web/auth/AuthPlugin$3;->b:Lcom/kik/cards/web/plugin/a;
 
-    new-instance v1, Lcom/kik/cards/web/plugin/g;
+    new-instance v1, Lcom/kik/cards/web/plugin/h;
 
     const/16 v2, 0x1f4
 
-    invoke-direct {v1, v2}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v1, v2}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
-    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/g;)V
+    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/h;)V
 
     .line 157
     return-void

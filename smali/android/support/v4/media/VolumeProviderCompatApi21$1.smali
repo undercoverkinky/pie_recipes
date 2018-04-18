@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 28
+    .line 24
     iput-object p4, p0, Landroid/support/v4/media/VolumeProviderCompatApi21$1;->val$delegate:Landroid/support/v4/media/VolumeProviderCompatApi21$Delegate;
 
     invoke-direct {p0, p1, p2, p3}, Landroid/media/VolumeProvider;-><init>(III)V
@@ -37,12 +37,12 @@
     .locals 1
 
     .prologue
-    .line 36
+    .line 32
     iget-object v0, p0, Landroid/support/v4/media/VolumeProviderCompatApi21$1;->val$delegate:Landroid/support/v4/media/VolumeProviderCompatApi21$Delegate;
 
     invoke-interface {v0, p1}, Landroid/support/v4/media/VolumeProviderCompatApi21$Delegate;->onAdjustVolume(I)V
 
-    .line 37
+    .line 33
     return-void
 .end method
 
@@ -50,11 +50,11 @@
     .locals 1
 
     .prologue
-    .line 31
+    .line 27
     iget-object v0, p0, Landroid/support/v4/media/VolumeProviderCompatApi21$1;->val$delegate:Landroid/support/v4/media/VolumeProviderCompatApi21$Delegate;
 
     invoke-interface {v0, p1}, Landroid/support/v4/media/VolumeProviderCompatApi21$Delegate;->onSetVolumeTo(I)V
 
-    .line 32
+    .line 28
     return-void
 .end method

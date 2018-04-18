@@ -13,8 +13,10 @@
 
 # instance fields
 .field _thankYouMessage:Landroid/widget/TextView;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f1001c2
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f110199
+        }
     .end annotation
 .end field
 
@@ -60,14 +62,14 @@
 
     .line 45
     :cond_1
-    const v0, 0x7f1001c4
+    const v0, 0x7f11019b
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     .line 46
-    const v1, 0x7f1001c5
+    const v1, 0x7f11019c
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -99,7 +101,7 @@
     if-eqz v0, :cond_0
 
     .line 62
-    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)Lbutterknife/Unbinder;
+    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)V
 
     .line 64
     iget-object v0, p0, Lkik/android/chat/fragment/KikReportThankYouDialogFragment;->_thankYouMessage:Landroid/widget/TextView;

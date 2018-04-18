@@ -22,16 +22,25 @@
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v7/widget/ListPopupWindow;)V
+.method private constructor <init>(Landroid/support/v7/widget/ListPopupWindow;)V
     .locals 0
 
     .prologue
-    .line 1320
+    .line 1718
     iput-object p1, p0, Landroid/support/v7/widget/ListPopupWindow$ListSelectorHider;->a:Landroid/support/v7/widget/ListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1321
+    return-void
+.end method
+
+.method synthetic constructor <init>(Landroid/support/v7/widget/ListPopupWindow;B)V
+    .locals 0
+
+    .prologue
+    .line 1718
+    invoke-direct {p0, p1}, Landroid/support/v7/widget/ListPopupWindow$ListSelectorHider;-><init>(Landroid/support/v7/widget/ListPopupWindow;)V
+
     return-void
 .end method
 
@@ -41,11 +50,11 @@
     .locals 1
 
     .prologue
-    .line 1325
+    .line 1720
     iget-object v0, p0, Landroid/support/v7/widget/ListPopupWindow$ListSelectorHider;->a:Landroid/support/v7/widget/ListPopupWindow;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/ListPopupWindow;->p()V
+    invoke-virtual {v0}, Landroid/support/v7/widget/ListPopupWindow;->h()V
 
-    .line 1326
+    .line 1721
     return-void
 .end method

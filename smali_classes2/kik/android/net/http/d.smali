@@ -1,28 +1,38 @@
-.class public final Lkik/android/net/http/d;
-.super Lkik/android/net/http/KikAuthedHttpRequest;
+.class public interface abstract Lkik/android/net/http/d;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;Lkik/core/z;)V
-    .locals 0
-
-    .prologue
-    .line 11
-    invoke-direct {p0, p1, p2}, Lkik/android/net/http/KikAuthedHttpRequest;-><init>(Ljava/lang/String;Lkik/core/z;)V
-
-    .line 12
-    return-void
+# virtual methods
+.method public abstract a([BI)I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;,
+            Lkik/core/net/EncryptionException;
+        }
+    .end annotation
 .end method
 
+.method public abstract a()J
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+.end method
 
-# virtual methods
-.method public final getMethod()Ljava/lang/String;
-    .locals 1
+.method public abstract a(J)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+.end method
 
-    .prologue
-    .line 17
-    const-string v0, "GET"
-
-    return-object v0
+.method public abstract close()V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
 .end method

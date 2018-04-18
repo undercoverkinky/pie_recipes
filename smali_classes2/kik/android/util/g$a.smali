@@ -17,7 +17,7 @@
     value = {
         "Lkik/android/util/ap",
         "<",
-        "Lkik/android/f/f;",
+        "Lkik/android/e/g;",
         "Ljava/lang/Object;",
         "Ljava/lang/Integer;",
         ">;"
@@ -26,7 +26,7 @@
 
 
 # instance fields
-.field a:Lkik/android/f/f;
+.field a:Lkik/android/e/g;
 
 .field b:Ljava/lang/String;
 
@@ -34,9 +34,9 @@
 
 .field final d:Lkik/core/net/e;
 
-.field final e:Lkik/core/interfaces/n;
+.field final e:Lkik/core/interfaces/o;
 
-.field final f:Lkik/core/interfaces/ag;
+.field final f:Lkik/core/interfaces/af;
 
 .field final g:Lkik/core/interfaces/ad;
 
@@ -44,90 +44,90 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lkik/core/net/e;Lkik/core/interfaces/n;Lkik/core/interfaces/ag;Lkik/core/interfaces/ad;)V
+.method public constructor <init>(Ljava/lang/String;Lkik/core/net/e;Lkik/core/interfaces/o;Lkik/core/interfaces/af;Lkik/core/interfaces/ad;)V
     .locals 2
 
     .prologue
     const/4 v1, 0x0
 
-    .line 339
+    .line 335
     invoke-direct {p0}, Lkik/android/util/ap;-><init>()V
 
-    .line 321
+    .line 317
     const/4 v0, 0x0
 
     iput-object v0, p0, Lkik/android/util/g$a;->b:Ljava/lang/String;
 
-    .line 322
+    .line 318
     iput-boolean v1, p0, Lkik/android/util/g$a;->c:Z
 
-    .line 327
+    .line 323
     iput v1, p0, Lkik/android/util/g$a;->h:I
 
-    .line 340
+    .line 336
     iput-object p1, p0, Lkik/android/util/g$a;->b:Ljava/lang/String;
 
-    .line 341
+    .line 337
     iput-object p2, p0, Lkik/android/util/g$a;->d:Lkik/core/net/e;
 
-    .line 342
-    iput-object p3, p0, Lkik/android/util/g$a;->e:Lkik/core/interfaces/n;
+    .line 338
+    iput-object p3, p0, Lkik/android/util/g$a;->e:Lkik/core/interfaces/o;
 
-    .line 343
-    iput-object p4, p0, Lkik/android/util/g$a;->f:Lkik/core/interfaces/ag;
+    .line 339
+    iput-object p4, p0, Lkik/android/util/g$a;->f:Lkik/core/interfaces/af;
 
-    .line 344
+    .line 340
     iput-object p5, p0, Lkik/android/util/g$a;->g:Lkik/core/interfaces/ad;
 
-    .line 345
+    .line 341
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Lkik/core/net/e;Lkik/core/interfaces/n;Lkik/core/interfaces/ag;Lkik/core/interfaces/ad;B)V
+.method public constructor <init>(Ljava/lang/String;Lkik/core/net/e;Lkik/core/interfaces/o;Lkik/core/interfaces/af;Lkik/core/interfaces/ad;B)V
     .locals 2
 
     .prologue
     const/4 v1, 0x0
 
-    .line 348
+    .line 344
     invoke-direct {p0}, Lkik/android/util/ap;-><init>()V
 
-    .line 321
+    .line 317
     const/4 v0, 0x0
 
     iput-object v0, p0, Lkik/android/util/g$a;->b:Ljava/lang/String;
 
-    .line 322
+    .line 318
     iput-boolean v1, p0, Lkik/android/util/g$a;->c:Z
 
-    .line 327
+    .line 323
     iput v1, p0, Lkik/android/util/g$a;->h:I
 
-    .line 349
+    .line 345
     iput-object p1, p0, Lkik/android/util/g$a;->b:Ljava/lang/String;
 
-    .line 350
+    .line 346
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lkik/android/util/g$a;->c:Z
 
-    .line 351
+    .line 347
     iput-object p2, p0, Lkik/android/util/g$a;->d:Lkik/core/net/e;
 
-    .line 352
-    iput-object p3, p0, Lkik/android/util/g$a;->e:Lkik/core/interfaces/n;
+    .line 348
+    iput-object p3, p0, Lkik/android/util/g$a;->e:Lkik/core/interfaces/o;
 
-    .line 353
-    iput-object p4, p0, Lkik/android/util/g$a;->f:Lkik/core/interfaces/ag;
+    .line 349
+    iput-object p4, p0, Lkik/android/util/g$a;->f:Lkik/core/interfaces/af;
 
-    .line 354
+    .line 350
     iput-object p5, p0, Lkik/android/util/g$a;->g:Lkik/core/interfaces/ad;
 
-    .line 355
+    .line 351
     return-void
 .end method
 
-.method public constructor <init>(Lkik/core/net/e;Lkik/core/interfaces/n;Lkik/core/interfaces/ag;Lkik/core/interfaces/ad;)V
+.method public constructor <init>(Lkik/core/net/e;Lkik/core/interfaces/o;Lkik/core/interfaces/af;Lkik/core/interfaces/ad;)V
     .locals 2
 
     .prologue
@@ -135,78 +135,68 @@
 
     const/4 v0, 0x0
 
-    .line 330
+    .line 326
     invoke-direct {p0}, Lkik/android/util/ap;-><init>()V
 
-    .line 321
+    .line 317
     iput-object v1, p0, Lkik/android/util/g$a;->b:Ljava/lang/String;
 
-    .line 322
+    .line 318
     iput-boolean v0, p0, Lkik/android/util/g$a;->c:Z
 
-    .line 327
+    .line 323
     iput v0, p0, Lkik/android/util/g$a;->h:I
 
-    .line 331
+    .line 327
     iput-object v1, p0, Lkik/android/util/g$a;->b:Ljava/lang/String;
 
-    .line 332
+    .line 328
     iput-object p1, p0, Lkik/android/util/g$a;->d:Lkik/core/net/e;
 
-    .line 333
-    iput-object p2, p0, Lkik/android/util/g$a;->e:Lkik/core/interfaces/n;
+    .line 329
+    iput-object p2, p0, Lkik/android/util/g$a;->e:Lkik/core/interfaces/o;
 
-    .line 334
-    iput-object p3, p0, Lkik/android/util/g$a;->f:Lkik/core/interfaces/ag;
+    .line 330
+    iput-object p3, p0, Lkik/android/util/g$a;->f:Lkik/core/interfaces/af;
 
-    .line 335
+    .line 331
     iput-object p4, p0, Lkik/android/util/g$a;->g:Lkik/core/interfaces/ad;
 
-    .line 336
+    .line 332
     return-void
 .end method
 
-.method private varargs a([Lkik/android/f/f;)Ljava/lang/Integer;
-    .locals 7
+.method private varargs a([Lkik/android/e/g;)Ljava/lang/Integer;
+    .locals 6
 
     .prologue
-    .line 368
+    .line 364
     invoke-static {}, Lkik/android/util/g;->a()Lkik/android/util/g;
 
     move-result-object v0
 
     invoke-static {v0}, Lkik/android/util/g;->a(Lkik/android/util/g;)V
 
-    .line 370
+    .line 366
     :try_start_0
     array-length v0, p1
 
     if-lez v0, :cond_0
 
-    .line 371
+    .line 367
     const/4 v0, 0x0
 
     aget-object v0, p1, v0
 
-    iput-object v0, p0, Lkik/android/util/g$a;->a:Lkik/android/f/f;
-
-    .line 373
-    :cond_0
-    iget v2, p0, Lkik/android/util/g$a;->h:I
+    iput-object v0, p0, Lkik/android/util/g$a;->a:Lkik/android/e/g;
 
     .line 374
-    if-gtz v2, :cond_1
-
-    .line 375
-    const/16 v2, 0x7530
-
-    .line 378
-    :cond_1
+    :cond_0
     iget-object v0, p0, Lkik/android/util/g$a;->b:Ljava/lang/String;
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
-    .line 379
+    .line 375
     invoke-static {}, Lkik/android/util/g;->i()Ljava/io/File;
 
     move-result-object v0
@@ -215,15 +205,15 @@
 
     move-result-object v1
 
-    iget-object v3, p0, Lkik/android/util/g$a;->b:Ljava/lang/String;
+    iget-object v2, p0, Lkik/android/util/g$a;->b:Ljava/lang/String;
 
-    iget-object v4, p0, Lkik/android/util/g$a;->d:Lkik/core/net/e;
+    iget-object v3, p0, Lkik/android/util/g$a;->d:Lkik/core/net/e;
 
-    iget-boolean v5, p0, Lkik/android/util/g$a;->c:Z
+    iget-boolean v4, p0, Lkik/android/util/g$a;->c:Z
 
-    iget-object v6, p0, Lkik/android/util/g$a;->g:Lkik/core/interfaces/ad;
+    iget-object v5, p0, Lkik/android/util/g$a;->g:Lkik/core/interfaces/ad;
 
-    invoke-static/range {v0 .. v6}, Lkik/android/e;->a(Ljava/io/File;Ljava/io/File;ILjava/lang/String;Lkik/core/net/e;ZLkik/core/interfaces/ad;)Lkik/android/e$a;
+    invoke-static/range {v0 .. v5}, Lkik/android/e;->a(Ljava/io/File;Ljava/io/File;Ljava/lang/String;Lkik/core/net/e;ZLkik/core/interfaces/ad;)Lkik/android/e$a;
 
     move-result-object v0
 
@@ -233,12 +223,12 @@
 
     move-result-object v0
 
-    .line 390
+    .line 386
     :goto_0
     return-object v0
 
-    .line 382
-    :cond_2
+    .line 378
+    :cond_1
     invoke-static {}, Lkik/android/util/g;->i()Ljava/io/File;
 
     move-result-object v0
@@ -247,11 +237,11 @@
 
     move-result-object v1
 
-    iget-object v3, p0, Lkik/android/util/g$a;->d:Lkik/core/net/e;
+    iget-object v2, p0, Lkik/android/util/g$a;->d:Lkik/core/net/e;
 
-    iget-object v4, p0, Lkik/android/util/g$a;->g:Lkik/core/interfaces/ad;
+    iget-object v3, p0, Lkik/android/util/g$a;->g:Lkik/core/interfaces/ad;
 
-    invoke-static {v0, v1, v2, v3, v4}, Lkik/android/e;->a(Ljava/io/File;Ljava/io/File;ILkik/core/net/e;Lkik/core/interfaces/ad;)Lkik/android/e$a;
+    invoke-static {v0, v1, v2, v3}, Lkik/android/e;->a(Ljava/io/File;Ljava/io/File;Lkik/core/net/e;Lkik/core/interfaces/ad;)Lkik/android/e$a;
 
     move-result-object v0
 
@@ -266,7 +256,7 @@
 
     goto :goto_0
 
-    .line 387
+    .line 383
     :catch_0
     move-exception v0
 
@@ -278,7 +268,7 @@
 
     goto :goto_0
 
-    .line 390
+    .line 386
     :catch_1
     move-exception v0
 
@@ -297,10 +287,10 @@
     .locals 1
 
     .prologue
-    .line 318
-    check-cast p1, [Lkik/android/f/f;
+    .line 314
+    check-cast p1, [Lkik/android/e/g;
 
-    invoke-direct {p0, p1}, Lkik/android/util/g$a;->a([Lkik/android/f/f;)Ljava/lang/Integer;
+    invoke-direct {p0, p1}, Lkik/android/util/g$a;->a([Lkik/android/e/g;)Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -308,22 +298,22 @@
 .end method
 
 .method protected final synthetic onPostExecute(Ljava/lang/Object;)V
-    .locals 4
+    .locals 6
 
     .prologue
-    .line 318
+    .line 314
     check-cast p1, Ljava/lang/Integer;
 
-    .line 1397
+    .line 1393
     invoke-static {}, Lkik/android/util/g;->j()Ljava/io/File;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkik/core/util/c;->a(Ljava/io/File;)[B
+    invoke-static {v0}, Lkik/android/util/f;->a(Ljava/io/File;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 1398
+    .line 1394
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
@@ -334,72 +324,105 @@
 
     if-eqz v0, :cond_1
 
+    .line 1396
+    new-instance v1, Ljava/io/ByteArrayOutputStream;
+
+    invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
+
+    .line 1397
+    sget-object v2, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
+
+    const/16 v3, 0x64
+
+    invoke-virtual {v0, v2, v3, v1}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+
     .line 1399
-    iget-object v1, p0, Lkik/android/util/g$a;->b:Ljava/lang/String;
-
-    if-eqz v1, :cond_0
-
-    .line 1400
-    iget-object v1, p0, Lkik/android/util/g$a;->e:Lkik/core/interfaces/n;
-
     iget-object v2, p0, Lkik/android/util/g$a;->b:Ljava/lang/String;
 
-    const-string v3, "0"
+    if-eqz v2, :cond_0
 
-    invoke-interface {v1, v2, v0, v3}, Lkik/core/interfaces/n;->a(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)Z
+    .line 1400
+    iget-object v2, p0, Lkik/android/util/g$a;->e:Lkik/core/interfaces/o;
 
-    .line 1407
+    iget-object v3, p0, Lkik/android/util/g$a;->b:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
+    move-result-object v4
+
+    const-string v5, "0"
+
+    invoke-interface {v2, v3, v4, v5}, Lkik/core/interfaces/o;->a(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)Z
+
+    .line 1406
     :goto_0
-    iget-object v1, p0, Lkik/android/util/g$a;->f:Lkik/core/interfaces/ag;
+    :try_start_0
+    invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->close()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-interface {v1}, Lkik/core/interfaces/ag;->f()V
+    .line 1413
+    :goto_1
+    iget-object v1, p0, Lkik/android/util/g$a;->f:Lkik/core/interfaces/af;
 
-    .line 1410
+    invoke-interface {v1}, Lkik/core/interfaces/af;->f()V
+
+    .line 1416
     invoke-static {}, Lkik/android/util/g;->j()Ljava/io/File;
 
     move-result-object v1
 
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    .line 1416
-    iget-object v1, p0, Lkik/android/util/g$a;->a:Lkik/android/f/f;
+    .line 1422
+    iget-object v1, p0, Lkik/android/util/g$a;->a:Lkik/android/e/g;
 
-    invoke-interface {v1, v0}, Lkik/android/f/f;->a([B)V
+    invoke-interface {v1, v0}, Lkik/android/e/g;->a(Landroid/graphics/Bitmap;)V
 
-    :goto_1
+    .line 1423
+    :goto_2
     return-void
 
     .line 1403
     :cond_0
-    iget-object v1, p0, Lkik/android/util/g$a;->e:Lkik/core/interfaces/n;
+    iget-object v2, p0, Lkik/android/util/g$a;->e:Lkik/core/interfaces/o;
 
-    iget-object v2, p0, Lkik/android/util/g$a;->g:Lkik/core/interfaces/ad;
+    iget-object v3, p0, Lkik/android/util/g$a;->g:Lkik/core/interfaces/ad;
 
-    invoke-static {v2}, Lkik/core/z;->b(Lkik/core/interfaces/ad;)Lkik/core/z;
+    invoke-static {v3}, Lkik/core/x;->b(Lkik/core/interfaces/ad;)Lkik/core/x;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2}, Lkik/core/z;->a()Lkik/core/datatypes/k;
+    invoke-virtual {v3}, Lkik/core/x;->a()Lkik/core/datatypes/n;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2}, Lkik/core/datatypes/k;->a()Ljava/lang/String;
+    invoke-virtual {v3}, Lkik/core/datatypes/n;->a()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    const-string v3, "0"
+    invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
-    invoke-interface {v1, v2, v0, v3}, Lkik/core/interfaces/n;->a(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)Z
+    move-result-object v4
+
+    const-string v5, "0"
+
+    invoke-interface {v2, v3, v4, v5}, Lkik/core/interfaces/o;->a(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)Z
 
     goto :goto_0
 
-    .line 1419
+    .line 1425
     :cond_1
-    iget-object v0, p0, Lkik/android/util/g$a;->a:Lkik/android/f/f;
+    iget-object v0, p0, Lkik/android/util/g$a;->a:Lkik/android/e/g;
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    invoke-interface {v0}, Lkik/android/f/f;->l_()V
+    invoke-interface {v0}, Lkik/android/e/g;->g()V
+
+    goto :goto_2
+
+    :catch_0
+    move-exception v1
 
     goto :goto_1
 .end method

@@ -43,7 +43,7 @@
     .locals 1
 
     .prologue
-    .line 3972
+    .line 3155
     new-instance v0, Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation$1;
 
     invoke-direct {v0}, Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation$1;-><init>()V
@@ -57,28 +57,28 @@
     .locals 0
 
     .prologue
-    .line 3904
+    .line 3086
     invoke-direct {p0}, Landroid/support/v4/app/NotificationCompatBase$UnreadConversation;-><init>()V
 
-    .line 3905
+    .line 3087
     iput-object p1, p0, Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation;->mMessages:[Ljava/lang/String;
 
-    .line 3906
+    .line 3088
     iput-object p2, p0, Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation;->mRemoteInput:Landroid/support/v4/app/RemoteInput;
 
-    .line 3907
+    .line 3089
     iput-object p4, p0, Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation;->mReadPendingIntent:Landroid/app/PendingIntent;
 
-    .line 3908
+    .line 3090
     iput-object p3, p0, Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation;->mReplyPendingIntent:Landroid/app/PendingIntent;
 
-    .line 3909
+    .line 3091
     iput-object p5, p0, Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation;->mParticipants:[Ljava/lang/String;
 
-    .line 3910
+    .line 3092
     iput-wide p6, p0, Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation;->mLatestTimestamp:J
 
-    .line 3911
+    .line 3093
     return-void
 .end method
 
@@ -88,7 +88,7 @@
     .locals 2
 
     .prologue
-    .line 3969
+    .line 3151
     iget-wide v0, p0, Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation;->mLatestTimestamp:J
 
     return-wide v0
@@ -98,7 +98,7 @@
     .locals 1
 
     .prologue
-    .line 3918
+    .line 3100
     iget-object v0, p0, Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation;->mMessages:[Ljava/lang/String;
 
     return-object v0
@@ -108,7 +108,7 @@
     .locals 2
 
     .prologue
-    .line 3961
+    .line 3143
     iget-object v0, p0, Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation;->mParticipants:[Ljava/lang/String;
 
     array-length v0, v0
@@ -134,7 +134,7 @@
     .locals 1
 
     .prologue
-    .line 3953
+    .line 3135
     iget-object v0, p0, Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation;->mParticipants:[Ljava/lang/String;
 
     return-object v0
@@ -144,7 +144,7 @@
     .locals 1
 
     .prologue
-    .line 3945
+    .line 3127
     iget-object v0, p0, Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation;->mReadPendingIntent:Landroid/app/PendingIntent;
 
     return-object v0
@@ -154,7 +154,7 @@
     .locals 1
 
     .prologue
-    .line 3927
+    .line 3109
     iget-object v0, p0, Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation;->mRemoteInput:Landroid/support/v4/app/RemoteInput;
 
     return-object v0
@@ -164,7 +164,7 @@
     .locals 1
 
     .prologue
-    .line 3894
+    .line 3076
     invoke-virtual {p0}, Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation;->getRemoteInput()Landroid/support/v4/app/RemoteInput;
 
     move-result-object v0
@@ -176,7 +176,7 @@
     .locals 1
 
     .prologue
-    .line 3936
+    .line 3118
     iget-object v0, p0, Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation;->mReplyPendingIntent:Landroid/app/PendingIntent;
 
     return-object v0

@@ -30,7 +30,7 @@
     .locals 0
 
     .prologue
-    .line 150
+    .line 132
     iput-object p1, p0, Landroid/support/v4/content/ModernAsyncTask$3;->this$0:Landroid/support/v4/content/ModernAsyncTask;
 
     invoke-direct {p0, p2}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/util/concurrent/Callable;)V
@@ -44,47 +44,46 @@
     .locals 3
 
     .prologue
-    .line 154
+    .line 136
     :try_start_0
     invoke-virtual {p0}, Landroid/support/v4/content/ModernAsyncTask$3;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 156
+    .line 138
     iget-object v1, p0, Landroid/support/v4/content/ModernAsyncTask$3;->this$0:Landroid/support/v4/content/ModernAsyncTask;
 
-    invoke-virtual {v1, v0}, Landroid/support/v4/content/ModernAsyncTask;->postResultIfNotInvoked(Ljava/lang/Object;)V
+    invoke-static {v1, v0}, Landroid/support/v4/content/ModernAsyncTask;->access$300(Landroid/support/v4/content/ModernAsyncTask;Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_2
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_3
 
-    .line 167
+    .line 149
     :goto_0
     return-void
 
-    .line 157
+    .line 139
     :catch_0
     move-exception v0
 
-    .line 158
+    .line 140
     const-string v1, "AsyncTask"
 
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 159
+    .line 141
     :catch_1
     move-exception v0
 
-    .line 160
+    .line 142
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "An error occurred while executing doInBackground()"
 
-    .line 161
     invoke-virtual {v0}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
@@ -93,7 +92,7 @@
 
     throw v1
 
-    .line 163
+    .line 145
     :catch_2
     move-exception v0
 
@@ -101,15 +100,15 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/content/ModernAsyncTask;->postResultIfNotInvoked(Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Landroid/support/v4/content/ModernAsyncTask;->access$300(Landroid/support/v4/content/ModernAsyncTask;Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 164
+    .line 146
     :catch_3
     move-exception v0
 
-    .line 165
+    .line 147
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "An error occurred while executing doInBackground()"

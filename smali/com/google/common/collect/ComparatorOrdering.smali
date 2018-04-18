@@ -1,5 +1,5 @@
 .class final Lcom/google/common/collect/ComparatorOrdering;
-.super Lcom/google/common/collect/n;
+.super Lcom/google/common/collect/p;
 .source "SourceFile"
 
 # interfaces
@@ -12,7 +12,7 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lcom/google/common/collect/n",
+        "Lcom/google/common/collect/p",
         "<TT;>;",
         "Ljava/io/Serializable;"
     }
@@ -46,11 +46,11 @@
     .end annotation
 
     .prologue
-    .line 31
-    invoke-direct {p0}, Lcom/google/common/collect/n;-><init>()V
+    .line 33
+    invoke-direct {p0}, Lcom/google/common/collect/p;-><init>()V
 
-    .line 32
-    invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 34
+    invoke-static {p1}, Lcom/google/common/base/h;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -58,7 +58,7 @@
 
     iput-object v0, p0, Lcom/google/common/collect/ComparatorOrdering;->comparator:Ljava/util/Comparator;
 
-    .line 33
+    .line 35
     return-void
 .end method
 
@@ -73,7 +73,7 @@
     .end annotation
 
     .prologue
-    .line 37
+    .line 38
     iget-object v0, p0, Lcom/google/common/collect/ComparatorOrdering;->comparator:Ljava/util/Comparator;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
@@ -132,7 +132,7 @@
     .locals 1
 
     .prologue
-    .line 54
+    .line 53
     iget-object v0, p0, Lcom/google/common/collect/ComparatorOrdering;->comparator:Ljava/util/Comparator;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -146,7 +146,7 @@
     .locals 1
 
     .prologue
-    .line 59
+    .line 57
     iget-object v0, p0, Lcom/google/common/collect/ComparatorOrdering;->comparator:Ljava/util/Comparator;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;

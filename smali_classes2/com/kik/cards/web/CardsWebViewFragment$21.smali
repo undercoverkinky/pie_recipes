@@ -30,7 +30,7 @@
     .locals 0
 
     .prologue
-    .line 1166
+    .line 1138
     iput-object p1, p0, Lcom/kik/cards/web/CardsWebViewFragment$21;->c:Lcom/kik/cards/web/CardsWebViewFragment;
 
     iput-boolean p2, p0, Lcom/kik/cards/web/CardsWebViewFragment$21;->a:Z
@@ -50,12 +50,12 @@
     .prologue
     const/16 v1, 0x400
 
-    .line 1169
+    .line 1141
     iget-boolean v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$21;->a:Z
 
     if-eqz v0, :cond_0
 
-    .line 1170
+    .line 1142
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$21;->b:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
@@ -64,7 +64,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->clearFlags(I)V
 
-    .line 1175
+    .line 1147
     :goto_0
     iget-object v1, p0, Lcom/kik/cards/web/CardsWebViewFragment$21;->c:Lcom/kik/cards/web/CardsWebViewFragment;
 
@@ -77,10 +77,10 @@
     :goto_1
     invoke-static {v1, v0}, Lcom/kik/cards/web/CardsWebViewFragment;->a(Lcom/kik/cards/web/CardsWebViewFragment;Z)Z
 
-    .line 1176
+    .line 1148
     return-void
 
-    .line 1173
+    .line 1145
     :cond_0
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$21;->b:Landroid/app/Activity;
 
@@ -92,7 +92,7 @@
 
     goto :goto_0
 
-    .line 1175
+    .line 1147
     :cond_1
     const/4 v0, 0x0
 

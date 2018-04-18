@@ -1,49 +1,63 @@
-.class final synthetic Lcom/kik/view/adapters/s;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.class public final Lcom/kik/view/adapters/s;
+.super Lcom/kik/view/adapters/x;
+.source "SourceFile"
 
 
 # instance fields
-.field private final a:Lcom/kik/view/adapters/r;
+.field private a:Ljava/lang/String;
 
-.field private final b:I
+.field private b:Z
 
 
 # direct methods
-.method private constructor <init>(Lcom/kik/view/adapters/r;I)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/kik/view/adapters/s;->a:Lcom/kik/view/adapters/r;
-
-    iput p2, p0, Lcom/kik/view/adapters/s;->b:I
-
-    return-void
-.end method
-
-.method public static a(Lcom/kik/view/adapters/r;I)Landroid/view/View$OnClickListener;
+.method public constructor <init>()V
     .locals 1
 
-    new-instance v0, Lcom/kik/view/adapters/s;
+    .prologue
+    .line 15
+    invoke-direct {p0}, Lcom/kik/view/adapters/x;-><init>()V
 
-    invoke-direct {v0, p0, p1}, Lcom/kik/view/adapters/s;-><init>(Lcom/kik/view/adapters/r;I)V
+    .line 10
+    const-string v0, "Conversations"
 
-    return-object v0
+    iput-object v0, p0, Lcom/kik/view/adapters/s;->a:Ljava/lang/String;
+
+    .line 16
+    return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final a(Landroid/widget/Adapter;)V
+    .locals 1
 
-    iget-object v0, p0, Lcom/kik/view/adapters/s;->a:Lcom/kik/view/adapters/r;
+    .prologue
+    .line 20
+    iget-object v0, p0, Lcom/kik/view/adapters/s;->a:Ljava/lang/String;
 
-    iget v1, p0, Lcom/kik/view/adapters/s;->b:I
+    invoke-super {p0, v0, p1}, Lcom/kik/view/adapters/x;->f(Ljava/lang/String;Landroid/widget/Adapter;)V
 
-    invoke-static {v0, v1}, Lcom/kik/view/adapters/r;->a(Lcom/kik/view/adapters/r;I)V
-
+    .line 21
     return-void
+.end method
+
+.method public final a(Z)V
+    .locals 0
+
+    .prologue
+    .line 25
+    iput-boolean p1, p0, Lcom/kik/view/adapters/s;->b:Z
+
+    .line 26
+    return-void
+.end method
+
+.method public final isEmpty()Z
+    .locals 1
+
+    .prologue
+    .line 31
+    iget-boolean v0, p0, Lcom/kik/view/adapters/s;->b:Z
+
+    return v0
 .end method

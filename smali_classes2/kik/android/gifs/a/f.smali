@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field private final c:Lcom/kik/storage/s;
+.field private final c:Lcom/kik/e/p;
 
 
 # direct methods
-.method protected constructor <init>(Ljava/lang/String;ILcom/kik/storage/s;Z)V
+.method protected constructor <init>(Ljava/lang/String;ILcom/kik/e/p;Z)V
     .locals 0
 
     .prologue
@@ -16,7 +16,7 @@
     invoke-direct {p0, p1, p2, p4}, Lkik/android/gifs/a/c;-><init>(Ljava/lang/String;IZ)V
 
     .line 22
-    iput-object p3, p0, Lkik/android/gifs/a/f;->c:Lcom/kik/storage/s;
+    iput-object p3, p0, Lkik/android/gifs/a/f;->c:Lcom/kik/e/p;
 
     .line 23
     return-void
@@ -171,18 +171,18 @@
     div-int v8, v2, v7
 
     .line 1063
-    iget-object v2, p0, Lkik/android/gifs/a/f;->c:Lcom/kik/storage/s;
+    iget-object v2, p0, Lkik/android/gifs/a/f;->c:Lcom/kik/e/p;
 
     if-eqz v2, :cond_0
 
     .line 1064
-    iget-object v2, p0, Lkik/android/gifs/a/f;->c:Lcom/kik/storage/s;
+    iget-object v2, p0, Lkik/android/gifs/a/f;->c:Lcom/kik/e/p;
 
     invoke-direct {p0}, Lkik/android/gifs/a/f;->d()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-interface {v2, v4}, Lcom/kik/storage/s;->h(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-interface {v2, v4}, Lcom/kik/e/p;->h(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
@@ -248,18 +248,18 @@
 
     .line 1074
     :cond_1
-    iget-object v4, p0, Lkik/android/gifs/a/f;->c:Lcom/kik/storage/s;
+    iget-object v4, p0, Lkik/android/gifs/a/f;->c:Lcom/kik/e/p;
 
     if-eqz v4, :cond_2
 
     .line 1075
-    iget-object v4, p0, Lkik/android/gifs/a/f;->c:Lcom/kik/storage/s;
+    iget-object v4, p0, Lkik/android/gifs/a/f;->c:Lcom/kik/e/p;
 
     invoke-direct {p0}, Lkik/android/gifs/a/f;->d()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-interface {v4, v2, v5}, Lcom/kik/storage/s;->b(Landroid/graphics/Bitmap;Ljava/lang/String;)V
+    invoke-interface {v4, v2, v5}, Lcom/kik/e/p;->b(Landroid/graphics/Bitmap;Ljava/lang/String;)V
 
     :cond_2
     move-object v4, v2
@@ -423,10 +423,8 @@
 
     invoke-virtual {v6}, Lcom/ndmob/relay/RelayNative;->release()V
 
-    .line 52
     throw v0
 
-    .line 51
     :catch_1
     move-exception v0
 

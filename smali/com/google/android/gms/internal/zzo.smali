@@ -1,20 +1,18 @@
-.class public final Lcom/google/android/gms/internal/zzo;
-.super Lcom/google/android/gms/internal/zzm;
+.class public interface abstract Lcom/google/android/gms/internal/zzo;
+.super Ljava/lang/Object;
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/google/android/gms/internal/zzm;-><init>()V
-
-    return-void
+# virtual methods
+.method public abstract zza(Lcom/google/android/gms/internal/zzr;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/android/gms/internal/zzr;
+        }
+    .end annotation
 .end method
 
-.method public constructor <init>(Ljava/lang/Throwable;)V
-    .locals 0
+.method public abstract zzc()I
+.end method
 
-    invoke-direct {p0, p1}, Lcom/google/android/gms/internal/zzm;-><init>(Ljava/lang/Throwable;)V
-
-    return-void
+.method public abstract zzd()I
 .end method

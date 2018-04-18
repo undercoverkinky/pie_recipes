@@ -28,12 +28,12 @@
     .locals 1
 
     .prologue
-    .line 428
+    .line 391
     iput-object p1, p0, Landroid/support/v4/view/ViewPager$4;->this$0:Landroid/support/v4/view/ViewPager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 429
+    .line 392
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -49,56 +49,55 @@
     .locals 7
 
     .prologue
-    .line 435
-    .line 436
+    .line 398
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompat;->onApplyWindowInsets(Landroid/view/View;Landroid/support/v4/view/WindowInsetsCompat;)Landroid/support/v4/view/WindowInsetsCompat;
 
     move-result-object v0
 
-    .line 437
+    .line 400
     invoke-virtual {v0}, Landroid/support/v4/view/WindowInsetsCompat;->isConsumed()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 471
+    .line 434
     :goto_0
     return-object v0
 
-    .line 449
+    .line 412
     :cond_0
     iget-object v2, p0, Landroid/support/v4/view/ViewPager$4;->mTempRect:Landroid/graphics/Rect;
 
-    .line 450
+    .line 413
     invoke-virtual {v0}, Landroid/support/v4/view/WindowInsetsCompat;->getSystemWindowInsetLeft()I
 
     move-result v1
 
     iput v1, v2, Landroid/graphics/Rect;->left:I
 
-    .line 451
+    .line 414
     invoke-virtual {v0}, Landroid/support/v4/view/WindowInsetsCompat;->getSystemWindowInsetTop()I
 
     move-result v1
 
     iput v1, v2, Landroid/graphics/Rect;->top:I
 
-    .line 452
+    .line 415
     invoke-virtual {v0}, Landroid/support/v4/view/WindowInsetsCompat;->getSystemWindowInsetRight()I
 
     move-result v1
 
     iput v1, v2, Landroid/graphics/Rect;->right:I
 
-    .line 453
+    .line 416
     invoke-virtual {v0}, Landroid/support/v4/view/WindowInsetsCompat;->getSystemWindowInsetBottom()I
 
     move-result v1
 
     iput v1, v2, Landroid/graphics/Rect;->bottom:I
 
-    .line 455
+    .line 418
     const/4 v1, 0x0
 
     iget-object v3, p0, Landroid/support/v4/view/ViewPager$4;->this$0:Landroid/support/v4/view/ViewPager;
@@ -110,10 +109,9 @@
     :goto_1
     if-ge v1, v3, :cond_1
 
-    .line 456
+    .line 419
     iget-object v4, p0, Landroid/support/v4/view/ViewPager$4;->this$0:Landroid/support/v4/view/ViewPager;
 
-    .line 457
     invoke-virtual {v4, v1}, Landroid/support/v4/view/ViewPager;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
@@ -122,7 +120,7 @@
 
     move-result-object v4
 
-    .line 460
+    .line 423
     invoke-virtual {v4}, Landroid/support/v4/view/WindowInsetsCompat;->getSystemWindowInsetLeft()I
 
     move-result v5
@@ -135,7 +133,7 @@
 
     iput v5, v2, Landroid/graphics/Rect;->left:I
 
-    .line 462
+    .line 425
     invoke-virtual {v4}, Landroid/support/v4/view/WindowInsetsCompat;->getSystemWindowInsetTop()I
 
     move-result v5
@@ -148,7 +146,7 @@
 
     iput v5, v2, Landroid/graphics/Rect;->top:I
 
-    .line 464
+    .line 427
     invoke-virtual {v4}, Landroid/support/v4/view/WindowInsetsCompat;->getSystemWindowInsetRight()I
 
     move-result v5
@@ -161,7 +159,7 @@
 
     iput v5, v2, Landroid/graphics/Rect;->right:I
 
-    .line 466
+    .line 429
     invoke-virtual {v4}, Landroid/support/v4/view/WindowInsetsCompat;->getSystemWindowInsetBottom()I
 
     move-result v4
@@ -174,12 +172,12 @@
 
     iput v4, v2, Landroid/graphics/Rect;->bottom:I
 
-    .line 455
+    .line 418
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 471
+    .line 434
     :cond_1
     iget v1, v2, Landroid/graphics/Rect;->left:I
 

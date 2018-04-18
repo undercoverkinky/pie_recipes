@@ -53,9 +53,9 @@
     return-object v1
 
     :cond_0
-    new-instance v0, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;
+    new-instance v0, Landroid/support/design/widget/ValueAnimatorCompatImplEclairMr1;
 
-    invoke-direct {v0}, Landroid/support/design/widget/ValueAnimatorCompatImplGingerbread;-><init>()V
+    invoke-direct {v0}, Landroid/support/design/widget/ValueAnimatorCompatImplEclairMr1;-><init>()V
 
     goto :goto_0
 .end method

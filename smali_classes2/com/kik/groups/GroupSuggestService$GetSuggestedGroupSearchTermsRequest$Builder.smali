@@ -722,7 +722,6 @@
     .line 328
     invoke-virtual {p0, v1}, Lcom/kik/groups/GroupSuggestService$GetSuggestedGroupSearchTermsRequest$Builder;->mergeFrom(Lcom/kik/groups/GroupSuggestService$GetSuggestedGroupSearchTermsRequest;)Lcom/kik/groups/GroupSuggestService$GetSuggestedGroupSearchTermsRequest$Builder;
 
-    .line 330
     :cond_1
     throw v0
 

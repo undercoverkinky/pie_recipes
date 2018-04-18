@@ -1,11 +1,11 @@
 .class final Lcom/kik/android/b/g$2;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/android/b/g;-><init>(Landroid/content/Context;Lkik/core/e/f;Lkik/core/interfaces/ad;Lcom/kik/events/Promise;Lkik/core/interfaces/ag;Lkik/core/interfaces/z;Lkik/android/util/ai;Lkik/core/interfaces/s;)V
+    value = Lcom/kik/android/b/g;-><init>(Landroid/content/Context;Lkik/core/g/e;Lkik/core/interfaces/ad;Lcom/kik/events/Promise;Lkik/core/interfaces/af;Lkik/core/interfaces/aa;Lkik/android/util/ah;Lkik/core/interfaces/u;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Ljava/lang/Object;",
         ">;"
@@ -34,12 +34,12 @@
     .locals 0
 
     .prologue
-    .line 417
+    .line 408
     iput-object p1, p0, Lcom/kik/android/b/g$2;->b:Lcom/kik/android/b/g;
 
     iput-object p2, p0, Lcom/kik/android/b/g$2;->a:Landroid/content/Context;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -50,10 +50,10 @@
     .locals 2
 
     .prologue
-    .line 421
-    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Object;)V
+    .line 412
+    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Object;)V
 
-    .line 422
+    .line 413
     iget-object v0, p0, Lcom/kik/android/b/g$2;->b:Lcom/kik/android/b/g;
 
     invoke-static {v0}, Lcom/kik/android/b/g;->a(Lcom/kik/android/b/g;)Lcom/kik/android/b/l;
@@ -67,13 +67,13 @@
 
     invoke-static {v0}, Lcom/kik/events/Promise;->a(Lcom/kik/events/Promise$a;)Lcom/kik/events/Promise;
 
-    .line 423
+    .line 414
     iget-object v0, p0, Lcom/kik/android/b/g$2;->b:Lcom/kik/android/b/g;
 
     iget-object v1, p0, Lcom/kik/android/b/g$2;->a:Landroid/content/Context;
 
     invoke-static {v0, v1}, Lcom/kik/android/b/g;->a(Lcom/kik/android/b/g;Landroid/content/Context;)V
 
-    .line 424
+    .line 415
     return-void
 .end method

@@ -29,14 +29,14 @@
 
 
 # virtual methods
-.method public final serialize(Ljava/lang/Long;)Lcom/google/gson/k;
+.method public final serialize(Ljava/lang/Long;)Lcom/google/gson/j;
     .locals 1
 
     .prologue
     .line 36
-    new-instance v0, Lcom/google/gson/m;
+    new-instance v0, Lcom/google/gson/l;
 
-    invoke-direct {v0, p1}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v0, p1}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
 
     return-object v0
 .end method

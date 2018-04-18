@@ -37,7 +37,7 @@
 
     const/4 v4, 0x0
 
-    .line 26
+    .line 28
     new-instance v0, Lcom/google/thirdparty/publicsuffix/PublicSuffixType;
 
     const-string v1, "PRIVATE"
@@ -50,7 +50,7 @@
 
     sput-object v0, Lcom/google/thirdparty/publicsuffix/PublicSuffixType;->PRIVATE:Lcom/google/thirdparty/publicsuffix/PublicSuffixType;
 
-    .line 28
+    .line 30
     new-instance v0, Lcom/google/thirdparty/publicsuffix/PublicSuffixType;
 
     const-string v1, "ICANN"
@@ -63,7 +63,7 @@
 
     sput-object v0, Lcom/google/thirdparty/publicsuffix/PublicSuffixType;->ICANN:Lcom/google/thirdparty/publicsuffix/PublicSuffixType;
 
-    .line 22
+    .line 24
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/google/thirdparty/publicsuffix/PublicSuffixType;
@@ -90,16 +90,16 @@
     .end annotation
 
     .prologue
-    .line 36
+    .line 38
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 37
+    .line 39
     iput-char p3, p0, Lcom/google/thirdparty/publicsuffix/PublicSuffixType;->innerNodeCode:C
 
-    .line 38
+    .line 40
     iput-char p4, p0, Lcom/google/thirdparty/publicsuffix/PublicSuffixType;->leafNodeCode:C
 
-    .line 39
+    .line 41
     return-void
 .end method
 
@@ -107,7 +107,7 @@
     .locals 5
 
     .prologue
-    .line 51
+    .line 53
     invoke-static {}, Lcom/google/thirdparty/publicsuffix/PublicSuffixType;->values()[Lcom/google/thirdparty/publicsuffix/PublicSuffixType;
 
     move-result-object v1
@@ -121,7 +121,7 @@
 
     aget-object v3, v1, v0
 
-    .line 52
+    .line 54
     invoke-virtual {v3}, Lcom/google/thirdparty/publicsuffix/PublicSuffixType;->getInnerNodeCode()C
 
     move-result v4
@@ -134,25 +134,31 @@
 
     if-ne v4, p0, :cond_1
 
-    .line 53
+    .line 55
     :cond_0
     return-object v3
 
-    .line 51
+    .line 53
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 56
+    .line 58
     :cond_2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    const/16 v2, 0x26
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
+
     const-string v2, "No enum corresponding to given code: "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -171,7 +177,7 @@
     .locals 1
 
     .prologue
-    .line 60
+    .line 62
     if-eqz p0, :cond_0
 
     sget-object v0, Lcom/google/thirdparty/publicsuffix/PublicSuffixType;->PRIVATE:Lcom/google/thirdparty/publicsuffix/PublicSuffixType;
@@ -189,7 +195,7 @@
     .locals 1
 
     .prologue
-    .line 22
+    .line 24
     const-class v0, Lcom/google/thirdparty/publicsuffix/PublicSuffixType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -205,7 +211,7 @@
     .locals 1
 
     .prologue
-    .line 22
+    .line 24
     sget-object v0, Lcom/google/thirdparty/publicsuffix/PublicSuffixType;->$VALUES:[Lcom/google/thirdparty/publicsuffix/PublicSuffixType;
 
     invoke-virtual {v0}, [Lcom/google/thirdparty/publicsuffix/PublicSuffixType;->clone()Ljava/lang/Object;
@@ -223,7 +229,7 @@
     .locals 1
 
     .prologue
-    .line 46
+    .line 48
     iget-char v0, p0, Lcom/google/thirdparty/publicsuffix/PublicSuffixType;->innerNodeCode:C
 
     return v0
@@ -233,7 +239,7 @@
     .locals 1
 
     .prologue
-    .line 42
+    .line 44
     iget-char v0, p0, Lcom/google/thirdparty/publicsuffix/PublicSuffixType;->leafNodeCode:C
 
     return v0

@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 111
+    .line 106
     iput-object p1, p0, Lkik/android/chat/view/CameraViewImpl$1;->a:Lkik/android/chat/view/CameraViewImpl;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
@@ -37,16 +37,16 @@
     .locals 1
 
     .prologue
-    .line 122
+    .line 117
     iget-object v0, p0, Lkik/android/chat/view/CameraViewImpl$1;->a:Lkik/android/chat/view/CameraViewImpl;
 
-    invoke-static {v0}, Lkik/android/chat/view/CameraViewImpl;->c(Lkik/android/chat/view/CameraViewImpl;)Lkik/android/chat/view/s$a;
+    invoke-static {v0}, Lkik/android/chat/view/CameraViewImpl;->a(Lkik/android/chat/view/CameraViewImpl;)Lkik/android/chat/view/k$a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lkik/android/chat/view/s$a;->u()V
+    invoke-interface {v0}, Lkik/android/chat/view/k$a;->u()V
 
-    .line 123
+    .line 118
     const/4 v0, 0x1
 
     return v0
@@ -56,7 +56,7 @@
     .locals 1
 
     .prologue
-    .line 116
+    .line 111
     const/4 v0, 0x1
 
     return v0

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/KikAddToBlockFragment;->c(Ljava/lang/String;Ljava/lang/String;)V
+    value = Lkik/android/chat/fragment/KikAddToBlockFragment;->e(Ljava/lang/String;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 78
+    .line 68
     iput-object p1, p0, Lkik/android/chat/fragment/KikAddToBlockFragment$2;->b:Lkik/android/chat/fragment/KikAddToBlockFragment;
 
     iput-object p2, p0, Lkik/android/chat/fragment/KikAddToBlockFragment$2;->a:Ljava/lang/String;
@@ -44,34 +44,34 @@
     .locals 4
 
     .prologue
-    .line 84
+    .line 74
     iget-object v0, p0, Lkik/android/chat/fragment/KikAddToBlockFragment$2;->b:Lkik/android/chat/fragment/KikAddToBlockFragment;
 
-    iget-object v0, v0, Lkik/android/chat/fragment/KikAddToBlockFragment;->u:Lkik/core/interfaces/v;
+    iget-object v0, v0, Lkik/android/chat/fragment/KikAddToBlockFragment;->u:Lkik/core/interfaces/x;
 
     iget-object v1, p0, Lkik/android/chat/fragment/KikAddToBlockFragment$2;->a:Ljava/lang/String;
 
-    invoke-static {v1}, Lkik/core/datatypes/k;->a(Ljava/lang/String;)Lkik/core/datatypes/k;
+    invoke-static {v1}, Lkik/core/datatypes/n;->a(Ljava/lang/String;)Lkik/core/datatypes/n;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/v;->c(Lkik/core/datatypes/k;)Lcom/kik/events/Promise;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/x;->c(Lkik/core/datatypes/n;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
-    .line 86
+    .line 76
     invoke-virtual {v0}, Lcom/kik/events/Promise;->h()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 87
+    .line 77
     iget-object v1, p0, Lkik/android/chat/fragment/KikAddToBlockFragment$2;->b:Lkik/android/chat/fragment/KikAddToBlockFragment;
 
     iget-object v2, p0, Lkik/android/chat/fragment/KikAddToBlockFragment$2;->b:Lkik/android/chat/fragment/KikAddToBlockFragment;
 
-    const v3, 0x7f0904e3
+    const v3, 0x7f0a04cf
 
     invoke-virtual {v2, v3}, Lkik/android/chat/fragment/KikAddToBlockFragment;->getString(I)Ljava/lang/String;
 
@@ -79,16 +79,16 @@
 
     const/4 v3, 0x1
 
-    invoke-virtual {v1, v2, v3}, Lkik/android/chat/fragment/KikAddToBlockFragment;->showWaitDialog(Ljava/lang/String;Z)Lkik/android/chat/fragment/KikDialogFragment;
+    invoke-virtual {v1, v2, v3}, Lkik/android/chat/fragment/KikAddToBlockFragment;->b(Ljava/lang/String;Z)Lkik/android/chat/fragment/KikDialogFragment;
 
-    .line 90
+    .line 80
     :cond_0
     new-instance v1, Lkik/android/chat/fragment/KikAddToBlockFragment$2$1;
 
     invoke-direct {v1, p0}, Lkik/android/chat/fragment/KikAddToBlockFragment$2$1;-><init>(Lkik/android/chat/fragment/KikAddToBlockFragment$2;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
 
-    .line 118
+    .line 108
     return-void
 .end method

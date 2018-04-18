@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/android/volley/d;
+.implements Lcom/android/volley/e;
 
 
 # static fields
@@ -17,7 +17,7 @@
 
 
 # instance fields
-.field protected final b:Lcom/android/volley/toolbox/e;
+.field protected final b:Lcom/android/volley/toolbox/f;
 
 .field protected final c:Lcom/android/volley/toolbox/b;
 
@@ -56,7 +56,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/android/volley/toolbox/e;)V
+.method public constructor <init>(Lcom/android/volley/toolbox/f;)V
     .locals 2
 
     .prologue
@@ -67,13 +67,13 @@
 
     invoke-direct {v0, v1}, Lcom/android/volley/toolbox/b;-><init>(I)V
 
-    invoke-direct {p0, p1, v0}, Lkik/android/net/c;-><init>(Lcom/android/volley/toolbox/e;Lcom/android/volley/toolbox/b;)V
+    invoke-direct {p0, p1, v0}, Lkik/android/net/c;-><init>(Lcom/android/volley/toolbox/f;Lcom/android/volley/toolbox/b;)V
 
     .line 83
     return-void
 .end method
 
-.method private constructor <init>(Lcom/android/volley/toolbox/e;Lcom/android/volley/toolbox/b;)V
+.method private constructor <init>(Lcom/android/volley/toolbox/f;Lcom/android/volley/toolbox/b;)V
     .locals 0
 
     .prologue
@@ -81,7 +81,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 91
-    iput-object p1, p0, Lkik/android/net/c;->b:Lcom/android/volley/toolbox/e;
+    iput-object p1, p0, Lkik/android/net/c;->b:Lcom/android/volley/toolbox/f;
 
     .line 92
     iput-object p2, p0, Lkik/android/net/c;->c:Lcom/android/volley/toolbox/b;
@@ -171,18 +171,18 @@
     const/4 v4, 0x0
 
     .line 223
-    invoke-virtual {p1}, Lcom/android/volley/Request;->getRetryPolicy()Lcom/android/volley/j;
+    invoke-virtual {p1}, Lcom/android/volley/Request;->q()Lcom/android/volley/k;
 
     move-result-object v0
 
     .line 224
-    invoke-virtual {p1}, Lcom/android/volley/Request;->getTimeoutMs()I
+    invoke-virtual {p1}, Lcom/android/volley/Request;->p()I
 
     move-result v1
 
     .line 227
     :try_start_0
-    invoke-interface {v0, p2}, Lcom/android/volley/j;->a(Lcom/android/volley/VolleyError;)V
+    invoke-interface {v0, p2}, Lcom/android/volley/k;->a(Lcom/android/volley/VolleyError;)V
     :try_end_0
     .catch Lcom/android/volley/VolleyError; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -203,7 +203,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/android/volley/Request;->addMarker(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lcom/android/volley/Request;->a(Ljava/lang/String;)V
 
     .line 235
     return-void
@@ -231,7 +231,7 @@
     move-result-object v1
 
     .line 230
-    invoke-virtual {p1, v1}, Lcom/android/volley/Request;->addMarker(Ljava/lang/String;)V
+    invoke-virtual {p1, v1}, Lcom/android/volley/Request;->a(Ljava/lang/String;)V
 
     .line 232
     throw v0
@@ -248,7 +248,7 @@
 
     .prologue
     .line 263
-    new-instance v2, Lcom/android/volley/toolbox/g;
+    new-instance v2, Lcom/android/volley/toolbox/m;
 
     iget-object v0, p0, Lkik/android/net/c;->c:Lcom/android/volley/toolbox/b;
 
@@ -258,7 +258,7 @@
 
     long-to-int v1, v4
 
-    invoke-direct {v2, v0, v1}, Lcom/android/volley/toolbox/g;-><init>(Lcom/android/volley/toolbox/b;I)V
+    invoke-direct {v2, v0, v1}, Lcom/android/volley/toolbox/m;-><init>(Lcom/android/volley/toolbox/b;I)V
 
     .line 264
     const/4 v1, 0x0
@@ -298,9 +298,8 @@
     invoke-virtual {v3, v1}, Lcom/android/volley/toolbox/b;->a([B)V
 
     .line 288
-    invoke-virtual {v2}, Lcom/android/volley/toolbox/g;->close()V
+    invoke-virtual {v2}, Lcom/android/volley/toolbox/m;->close()V
 
-    .line 289
     throw v0
 
     .line 270
@@ -327,13 +326,13 @@
     .line 273
     const/4 v4, 0x0
 
-    invoke-virtual {v2, v1, v4, v3}, Lcom/android/volley/toolbox/g;->write([BII)V
+    invoke-virtual {v2, v1, v4, v3}, Lcom/android/volley/toolbox/m;->write([BII)V
 
     goto :goto_1
 
     .line 275
     :cond_1
-    invoke-virtual {v2}, Lcom/android/volley/toolbox/g;->toByteArray()[B
+    invoke-virtual {v2}, Lcom/android/volley/toolbox/m;->toByteArray()[B
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -352,7 +351,7 @@
     invoke-virtual {v3, v1}, Lcom/android/volley/toolbox/b;->a([B)V
 
     .line 288
-    invoke-virtual {v2}, Lcom/android/volley/toolbox/g;->close()V
+    invoke-virtual {v2}, Lcom/android/volley/toolbox/m;->close()V
 
     .line 275
     return-object v0
@@ -370,14 +369,14 @@
 
 
 # virtual methods
-.method public final a(Lcom/android/volley/Request;)Lcom/android/volley/f;
+.method public final a(Lcom/android/volley/Request;)Lcom/android/volley/g;
     .locals 17
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/android/volley/Request",
             "<*>;)",
-            "Lcom/android/volley/f;"
+            "Lcom/android/volley/g;"
         }
     .end annotation
 
@@ -412,7 +411,7 @@
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     .line 106
-    invoke-virtual/range {p1 .. p1}, Lcom/android/volley/Request;->getCacheEntry()Lcom/android/volley/Cache$a;
+    invoke-virtual/range {p1 .. p1}, Lcom/android/volley/Request;->f()Lcom/android/volley/a$a;
 
     move-result-object v6
 
@@ -420,20 +419,20 @@
     if-eqz v6, :cond_1
 
     .line 1244
-    iget-object v7, v6, Lcom/android/volley/Cache$a;->b:Ljava/lang/String;
+    iget-object v7, v6, Lcom/android/volley/a$a;->b:Ljava/lang/String;
 
     if-eqz v7, :cond_0
 
     .line 1245
     const-string v7, "If-None-Match"
 
-    iget-object v10, v6, Lcom/android/volley/Cache$a;->b:Ljava/lang/String;
+    iget-object v10, v6, Lcom/android/volley/a$a;->b:Ljava/lang/String;
 
     invoke-interface {v2, v7, v10}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 1248
     :cond_0
-    iget-wide v10, v6, Lcom/android/volley/Cache$a;->c:J
+    iget-wide v10, v6, Lcom/android/volley/a$a;->c:J
 
     const-wide/16 v12, 0x0
 
@@ -444,7 +443,7 @@
     .line 1249
     new-instance v7, Ljava/util/Date;
 
-    iget-wide v10, v6, Lcom/android/volley/Cache$a;->c:J
+    iget-wide v10, v6, Lcom/android/volley/a$a;->c:J
 
     invoke-direct {v7, v10, v11}, Ljava/util/Date;-><init>(J)V
 
@@ -461,11 +460,11 @@
     :cond_1
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lkik/android/net/c;->b:Lcom/android/volley/toolbox/e;
+    iget-object v6, v0, Lkik/android/net/c;->b:Lcom/android/volley/toolbox/f;
 
     move-object/from16 v0, p1
 
-    invoke-interface {v6, v0, v2}, Lcom/android/volley/toolbox/e;->a(Lcom/android/volley/Request;Ljava/util/Map;)Lorg/apache/http/HttpResponse;
+    invoke-interface {v6, v0, v2}, Lcom/android/volley/toolbox/f;->a(Lcom/android/volley/Request;Ljava/util/Map;)Lorg/apache/http/HttpResponse;
     :try_end_0
     .catch Ljava/net/SocketTimeoutException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Lorg/apache/http/conn/ConnectTimeoutException; {:try_start_0 .. :try_end_0} :catch_2
@@ -506,12 +505,12 @@
 
     .line 114
     :try_start_2
-    new-instance v2, Lcom/android/volley/f;
+    new-instance v2, Lcom/android/volley/g;
 
     const/16 v7, 0x130
 
     .line 115
-    invoke-virtual/range {p1 .. p1}, Lcom/android/volley/Request;->getCacheEntry()Lcom/android/volley/Cache$a;
+    invoke-virtual/range {p1 .. p1}, Lcom/android/volley/Request;->f()Lcom/android/volley/a$a;
 
     move-result-object v3
 
@@ -522,7 +521,7 @@
     :goto_1
     const/4 v10, 0x1
 
-    invoke-direct {v2, v7, v3, v4, v10}, Lcom/android/volley/f;-><init>(I[BLjava/util/Map;Z)V
+    invoke-direct {v2, v7, v3, v4, v10}, Lcom/android/volley/g;-><init>(I[BLjava/util/Map;Z)V
 
     .line 149
     :goto_2
@@ -530,11 +529,11 @@
 
     .line 115
     :cond_2
-    invoke-virtual/range {p1 .. p1}, Lcom/android/volley/Request;->getCacheEntry()Lcom/android/volley/Cache$a;
+    invoke-virtual/range {p1 .. p1}, Lcom/android/volley/Request;->f()Lcom/android/volley/a$a;
 
     move-result-object v3
 
-    iget-object v3, v3, Lcom/android/volley/Cache$a;->a:[B
+    iget-object v3, v3, Lcom/android/volley/a$a;->a:[B
 
     goto :goto_1
 
@@ -552,7 +551,7 @@
     :cond_4
     move-object/from16 v0, p1
 
-    instance-of v2, v0, Lcom/kik/cache/RedirectableRequest;
+    instance-of v2, v0, Lcom/kik/cache/ai;
 
     if-eqz v2, :cond_5
 
@@ -568,11 +567,11 @@
     .line 123
     move-object/from16 v0, p1
 
-    check-cast v0, Lcom/kik/cache/RedirectableRequest;
+    check-cast v0, Lcom/kik/cache/ai;
 
     move-object v3, v0
 
-    invoke-interface {v3, v2}, Lcom/kik/cache/RedirectableRequest;->setRedirectUrl(Ljava/lang/String;)V
+    invoke-interface {v3, v2}, Lcom/kik/cache/ai;->a_(Ljava/lang/String;)V
 
     .line 128
     :cond_5
@@ -679,11 +678,11 @@
 
     const/4 v2, 0x4
 
-    invoke-virtual/range {p1 .. p1}, Lcom/android/volley/Request;->getRetryPolicy()Lcom/android/volley/j;
+    invoke-virtual/range {p1 .. p1}, Lcom/android/volley/Request;->q()Lcom/android/volley/k;
 
     move-result-object v7
 
-    invoke-interface {v7}, Lcom/android/volley/j;->b()I
+    invoke-interface {v7}, Lcom/android/volley/k;->b()I
 
     move-result v7
 
@@ -791,11 +790,11 @@
 
     .line 149
     :cond_b
-    new-instance v2, Lcom/android/volley/f;
+    new-instance v2, Lcom/android/volley/g;
 
     const/4 v5, 0x0
 
-    invoke-direct {v2, v10, v3, v4, v5}, Lcom/android/volley/f;-><init>(I[BLjava/util/Map;Z)V
+    invoke-direct {v2, v10, v3, v4, v5}, Lcom/android/volley/g;-><init>(I[BLjava/util/Map;Z)V
     :try_end_7
     .catch Ljava/net/SocketTimeoutException; {:try_start_7 .. :try_end_7} :catch_0
     .catch Lorg/apache/http/conn/ConnectTimeoutException; {:try_start_7 .. :try_end_7} :catch_2
@@ -817,7 +816,7 @@
 
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual/range {p1 .. p1}, Lcom/android/volley/Request;->getUrl()Ljava/lang/String;
+    invoke-virtual/range {p1 .. p1}, Lcom/android/volley/Request;->d()Ljava/lang/String;
 
     move-result-object v5
 
@@ -867,7 +866,7 @@
 
     move-object/from16 v0, p1
 
-    instance-of v2, v0, Lcom/kik/cache/RedirectableRequest;
+    instance-of v2, v0, Lcom/kik/cache/ai;
 
     if-eqz v2, :cond_f
 
@@ -879,13 +878,13 @@
 
     move-object/from16 v2, p1
 
-    check-cast v2, Lcom/kik/cache/RedirectableRequest;
+    check-cast v2, Lcom/kik/cache/ai;
 
-    invoke-interface {v2}, Lcom/kik/cache/RedirectableRequest;->getOriginUrl()Ljava/lang/String;
+    invoke-interface {v2}, Lcom/kik/cache/ai;->t()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual/range {p1 .. p1}, Lcom/android/volley/Request;->getUrl()Ljava/lang/String;
+    invoke-virtual/range {p1 .. p1}, Lcom/android/volley/Request;->d()Ljava/lang/String;
 
     move-result-object v10
 
@@ -896,11 +895,11 @@
     if-eqz v4, :cond_13
 
     .line 177
-    new-instance v2, Lcom/android/volley/f;
+    new-instance v2, Lcom/android/volley/g;
 
     const/4 v6, 0x0
 
-    invoke-direct {v2, v5, v4, v3, v6}, Lcom/android/volley/f;-><init>(I[BLjava/util/Map;Z)V
+    invoke-direct {v2, v5, v4, v3, v6}, Lcom/android/volley/g;-><init>(I[BLjava/util/Map;Z)V
 
     .line 179
     const/16 v3, 0x191
@@ -917,7 +916,7 @@
 
     new-instance v4, Lcom/android/volley/AuthFailureError;
 
-    invoke-direct {v4, v2}, Lcom/android/volley/AuthFailureError;-><init>(Lcom/android/volley/f;)V
+    invoke-direct {v4, v2}, Lcom/android/volley/AuthFailureError;-><init>(Lcom/android/volley/g;)V
 
     move-object/from16 v0, p1
 
@@ -943,7 +942,7 @@
 
     move-result-object v7
 
-    invoke-virtual/range {p1 .. p1}, Lcom/android/volley/Request;->getUrl()Ljava/lang/String;
+    invoke-virtual/range {p1 .. p1}, Lcom/android/volley/Request;->d()Ljava/lang/String;
 
     move-result-object v10
 
@@ -963,7 +962,7 @@
 
     move-object/from16 v0, p1
 
-    instance-of v3, v0, Lcom/kik/cache/RedirectableRequest;
+    instance-of v3, v0, Lcom/kik/cache/ai;
 
     if-eqz v3, :cond_12
 
@@ -973,7 +972,7 @@
 
     new-instance v4, Lcom/android/volley/AuthFailureError;
 
-    invoke-direct {v4, v2}, Lcom/android/volley/AuthFailureError;-><init>(Lcom/android/volley/f;)V
+    invoke-direct {v4, v2}, Lcom/android/volley/AuthFailureError;-><init>(Lcom/android/volley/g;)V
 
     move-object/from16 v0, p1
 
@@ -985,7 +984,7 @@
     :cond_12
     new-instance v3, Lcom/android/volley/ServerError;
 
-    invoke-direct {v3, v2}, Lcom/android/volley/ServerError;-><init>(Lcom/android/volley/f;)V
+    invoke-direct {v3, v2}, Lcom/android/volley/ServerError;-><init>(Lcom/android/volley/g;)V
 
     throw v3
 

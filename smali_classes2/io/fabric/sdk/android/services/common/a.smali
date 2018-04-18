@@ -29,14 +29,12 @@
 
     const/4 v1, 0x2
 
-    .line 56
     invoke-static {v0, v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
     sput-object v0, Lio/fabric/sdk/android/services/common/a;->b:Ljava/util/regex/Pattern;
 
-    .line 55
     return-void
 .end method
 
@@ -79,16 +77,16 @@
     .line 93
     iput-object p2, p0, Lio/fabric/sdk/android/services/common/a;->f:Ljava/lang/String;
 
-    .line 1157
+    .line 2157
     iget-object v0, p0, Lio/fabric/sdk/android/services/common/a;->f:Ljava/lang/String;
 
-    invoke-static {v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->d(Ljava/lang/String;)Z
+    invoke-static {v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->c(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 1158
+    .line 2158
     sget-object v0, Lio/fabric/sdk/android/services/common/a;->b:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p3}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
@@ -97,7 +95,6 @@
 
     iget-object v1, p0, Lio/fabric/sdk/android/services/common/a;->f:Ljava/lang/String;
 
-    .line 1159
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->replaceFirst(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p3
@@ -138,7 +135,7 @@
 
     iget-object v1, p0, Lio/fabric/sdk/android/services/common/a;->e:Lio/fabric/sdk/android/services/network/HttpMethod;
 
-    .line 2100
+    .line 3100
     iget-object v2, p0, Lio/fabric/sdk/android/services/common/a;->c:Ljava/lang/String;
 
     .line 137
@@ -146,20 +143,25 @@
 
     move-result-object v0
 
+    .line 3104
+    invoke-virtual {v0}, Lio/fabric/sdk/android/services/network/HttpRequest;->a()Ljava/net/HttpURLConnection;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Ljava/net/HttpURLConnection;->setUseCaches(Z)V
+
+    .line 3816
+    invoke-virtual {v0}, Lio/fabric/sdk/android/services/network/HttpRequest;->a()Ljava/net/HttpURLConnection;
+
+    move-result-object v1
+
+    const/16 v2, 0x2710
+
+    invoke-virtual {v1, v2}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
+
     .line 139
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lio/fabric/sdk/android/services/network/HttpRequest;->useCaches(Z)Lio/fabric/sdk/android/services/network/HttpRequest;
-
-    move-result-object v0
-
-    const/16 v1, 0x2710
-
-    .line 140
-    invoke-virtual {v0, v1}, Lio/fabric/sdk/android/services/network/HttpRequest;->connectTimeout(I)Lio/fabric/sdk/android/services/network/HttpRequest;
-
-    move-result-object v0
-
     const-string v1, "User-Agent"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -170,7 +172,6 @@
 
     iget-object v3, p0, Lio/fabric/sdk/android/services/common/a;->a:Lio/fabric/sdk/android/h;
 
-    .line 141
     invoke-virtual {v3}, Lio/fabric/sdk/android/h;->a()Ljava/lang/String;
 
     move-result-object v3
@@ -183,7 +184,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lio/fabric/sdk/android/services/network/HttpRequest;->header(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    invoke-virtual {v0, v1, v2}, Lio/fabric/sdk/android/services/network/HttpRequest;->a(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
     move-result-object v0
 
@@ -191,12 +192,10 @@
 
     const-string v2, "470fa2b4ae81cd56ecbcda9735803434cec591fa"
 
-    .line 142
-    invoke-virtual {v0, v1, v2}, Lio/fabric/sdk/android/services/network/HttpRequest;->header(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    invoke-virtual {v0, v1, v2}, Lio/fabric/sdk/android/services/network/HttpRequest;->a(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
     move-result-object v0
 
-    .line 139
     return-object v0
 .end method
 

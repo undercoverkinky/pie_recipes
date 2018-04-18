@@ -66,9 +66,6 @@
 .method public abstract getClipBounds(Landroid/view/View;)Landroid/graphics/Rect;
 .end method
 
-.method public abstract getDisplay(Landroid/view/View;)Landroid/view/Display;
-.end method
-
 .method public abstract getElevation(Landroid/view/View;)F
 .end method
 
@@ -87,9 +84,6 @@
 .method public abstract getLayoutDirection(Landroid/view/View;)I
 .end method
 
-.method public abstract getMatrix(Landroid/view/View;)Landroid/graphics/Matrix;
-.end method
-
 .method public abstract getMeasuredHeightAndState(Landroid/view/View;)I
 .end method
 
@@ -103,6 +97,9 @@
 .end method
 
 .method public abstract getMinimumWidth(Landroid/view/View;)I
+.end method
+
+.method public abstract getOverScrollMode(Landroid/view/View;)I
 .end method
 
 .method public abstract getPaddingEnd(Landroid/view/View;)I
@@ -183,16 +180,13 @@
 .method public abstract isImportantForAccessibility(Landroid/view/View;)Z
 .end method
 
-.method public abstract isInLayout(Landroid/view/View;)Z
-.end method
-
 .method public abstract isLaidOut(Landroid/view/View;)Z
 .end method
 
-.method public abstract isLayoutDirectionResolved(Landroid/view/View;)Z
+.method public abstract isNestedScrollingEnabled(Landroid/view/View;)Z
 .end method
 
-.method public abstract isNestedScrollingEnabled(Landroid/view/View;)Z
+.method public abstract isOpaque(Landroid/view/View;)Z
 .end method
 
 .method public abstract isPaddingRelative(Landroid/view/View;)Z
@@ -252,9 +246,6 @@
 .method public abstract setAlpha(Landroid/view/View;F)V
 .end method
 
-.method public abstract setBackground(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
-.end method
-
 .method public abstract setBackgroundTintList(Landroid/view/View;Landroid/content/res/ColorStateList;)V
 .end method
 
@@ -297,6 +288,9 @@
 .method public abstract setOnApplyWindowInsetsListener(Landroid/view/View;Landroid/support/v4/view/OnApplyWindowInsetsListener;)V
 .end method
 
+.method public abstract setOverScrollMode(Landroid/view/View;I)V
+.end method
+
 .method public abstract setPaddingRelative(Landroid/view/View;IIII)V
 .end method
 
@@ -304,9 +298,6 @@
 .end method
 
 .method public abstract setPivotY(Landroid/view/View;F)V
-.end method
-
-.method public abstract setPointerIcon(Landroid/view/View;Landroid/support/v4/view/PointerIconCompat;)V
 .end method
 
 .method public abstract setRotation(Landroid/view/View;F)V
@@ -349,9 +340,6 @@
 .end method
 
 .method public abstract setY(Landroid/view/View;F)V
-.end method
-
-.method public abstract setZ(Landroid/view/View;F)V
 .end method
 
 .method public abstract startNestedScroll(Landroid/view/View;I)Z

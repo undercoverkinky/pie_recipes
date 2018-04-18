@@ -82,7 +82,7 @@
     return-void
 .end method
 
-.method public static a()Lcom/dyuproject/protostuff/u;
+.method public static b()Lcom/dyuproject/protostuff/u;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -103,6 +103,25 @@
 
 
 # virtual methods
+.method public final a()Lcom/dyuproject/protostuff/u;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/dyuproject/protostuff/u",
+            "<",
+            "Lcom/kik/xdata/model/mediatray/XStickerItem;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 143
+    sget-object v0, Lcom/kik/xdata/model/mediatray/XStickerItem;->b:Lcom/dyuproject/protostuff/u;
+
+    return-object v0
+.end method
+
 .method public final a(Ljava/lang/String;)Lcom/kik/xdata/model/mediatray/XStickerItem;
     .locals 0
 
@@ -125,16 +144,6 @@
     return-object p0
 .end method
 
-.method public final b()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 53
-    iget-object v0, p0, Lcom/kik/xdata/model/mediatray/XStickerItem;->icon:Ljava/lang/String;
-
-    return-object v0
-.end method
-
 .method public final c(Ljava/lang/String;)Lcom/kik/xdata/model/mediatray/XStickerItem;
     .locals 0
 
@@ -150,27 +159,8 @@
     .locals 1
 
     .prologue
-    .line 66
-    iget-object v0, p0, Lcom/kik/xdata/model/mediatray/XStickerItem;->pngPreview:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final cachedSchema()Lcom/dyuproject/protostuff/u;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/dyuproject/protostuff/u",
-            "<",
-            "Lcom/kik/xdata/model/mediatray/XStickerItem;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 143
-    sget-object v0, Lcom/kik/xdata/model/mediatray/XStickerItem;->b:Lcom/dyuproject/protostuff/u;
+    .line 53
+    iget-object v0, p0, Lcom/kik/xdata/model/mediatray/XStickerItem;->icon:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -190,13 +180,23 @@
     .locals 1
 
     .prologue
+    .line 66
+    iget-object v0, p0, Lcom/kik/xdata/model/mediatray/XStickerItem;->pngPreview:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final e()Ljava/lang/String;
+    .locals 1
+
+    .prologue
     .line 92
     iget-object v0, p0, Lcom/kik/xdata/model/mediatray/XStickerItem;->identifier:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final e()Ljava/lang/String;
+.method public final f()Ljava/lang/String;
     .locals 1
 
     .prologue

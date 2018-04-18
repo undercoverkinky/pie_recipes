@@ -28,37 +28,37 @@
 # instance fields
 .field private final mCallbackObj:Ljava/lang/Object;
 
-.field mHandler:Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;
+.field private mHandler:Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;
 
-.field mHasExtraCallback:Z
-
-.field mRegistered:Z
+.field private mRegistered:Z
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 2
+    .locals 3
 
     .prologue
-    .line 554
+    const/4 v2, 0x0
+
+    .line 347
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 552
+    .line 345
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->mRegistered:Z
 
-    .line 555
+    .line 348
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
-    .line 556
+    .line 349
     new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$StubApi21;
 
-    invoke-direct {v0, p0}, Landroid/support/v4/media/session/MediaControllerCompat$Callback$StubApi21;-><init>(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)V
+    invoke-direct {v0, p0, v2}, Landroid/support/v4/media/session/MediaControllerCompat$Callback$StubApi21;-><init>(Landroid/support/v4/media/session/MediaControllerCompat$Callback;Landroid/support/v4/media/session/MediaControllerCompat$1;)V
 
     invoke-static {v0}, Landroid/support/v4/media/session/MediaControllerCompatApi21;->createCallback(Landroid/support/v4/media/session/MediaControllerCompatApi21$Callback;)Ljava/lang/Object;
 
@@ -66,36 +66,66 @@
 
     iput-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->mCallbackObj:Ljava/lang/Object;
 
-    .line 560
+    .line 353
     :goto_0
     return-void
 
-    .line 558
+    .line 351
     :cond_0
     new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$StubCompat;
 
-    invoke-direct {v0, p0}, Landroid/support/v4/media/session/MediaControllerCompat$Callback$StubCompat;-><init>(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)V
+    invoke-direct {v0, p0, v2}, Landroid/support/v4/media/session/MediaControllerCompat$Callback$StubCompat;-><init>(Landroid/support/v4/media/session/MediaControllerCompat$Callback;Landroid/support/v4/media/session/MediaControllerCompat$1;)V
 
     iput-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->mCallbackObj:Ljava/lang/Object;
 
     goto :goto_0
 .end method
 
-.method static synthetic access$000(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)Ljava/lang/Object;
+.method static synthetic access$200(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;
     .locals 1
 
     .prologue
-    .line 547
+    .line 341
+    iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->mHandler:Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;
+
+    return-object v0
+.end method
+
+.method static synthetic access$300(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)Z
+    .locals 1
+
+    .prologue
+    .line 341
+    iget-boolean v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->mRegistered:Z
+
+    return v0
+.end method
+
+.method static synthetic access$302(Landroid/support/v4/media/session/MediaControllerCompat$Callback;Z)Z
+    .locals 0
+
+    .prologue
+    .line 341
+    iput-boolean p1, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->mRegistered:Z
+
+    return p1
+.end method
+
+.method static synthetic access$400(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 341
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->mCallbackObj:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Landroid/support/v4/media/session/MediaControllerCompat$Callback;Landroid/os/Handler;)V
+.method static synthetic access$500(Landroid/support/v4/media/session/MediaControllerCompat$Callback;Landroid/os/Handler;)V
     .locals 0
 
     .prologue
-    .line 547
+    .line 341
     invoke-direct {p0, p1}, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->setHandler(Landroid/os/Handler;)V
 
     return-void
@@ -105,7 +135,7 @@
     .locals 2
 
     .prologue
-    .line 671
+    .line 437
     new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;
 
     invoke-virtual {p1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -116,7 +146,7 @@
 
     iput-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->mHandler:Landroid/support/v4/media/session/MediaControllerCompat$Callback$MessageHandler;
 
-    .line 672
+    .line 438
     return-void
 .end method
 
@@ -126,10 +156,10 @@
     .locals 0
 
     .prologue
-    .line 664
+    .line 430
     invoke-virtual {p0}, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->onSessionDestroyed()V
 
-    .line 665
+    .line 431
     return-void
 .end method
 
@@ -137,15 +167,7 @@
     .locals 0
 
     .prologue
-    .line 633
-    return-void
-.end method
-
-.method public onCaptioningEnabledChanged(Z)V
-    .locals 0
-
-    .prologue
-    .line 641
+    .line 426
     return-void
 .end method
 
@@ -153,7 +175,7 @@
     .locals 0
 
     .prologue
-    .line 625
+    .line 418
     return-void
 .end method
 
@@ -161,7 +183,7 @@
     .locals 0
 
     .prologue
-    .line 595
+    .line 388
     return-void
 .end method
 
@@ -169,7 +191,7 @@
     .locals 0
 
     .prologue
-    .line 586
+    .line 379
     return-void
 .end method
 
@@ -186,7 +208,7 @@
     .end annotation
 
     .prologue
-    .line 606
+    .line 399
     return-void
 .end method
 
@@ -194,15 +216,7 @@
     .locals 0
 
     .prologue
-    .line 616
-    return-void
-.end method
-
-.method public onRepeatModeChanged(I)V
-    .locals 0
-
-    .prologue
-    .line 652
+    .line 409
     return-void
 .end method
 
@@ -210,7 +224,7 @@
     .locals 0
 
     .prologue
-    .line 567
+    .line 360
     return-void
 .end method
 
@@ -218,14 +232,6 @@
     .locals 0
 
     .prologue
-    .line 578
-    return-void
-.end method
-
-.method public onShuffleModeChanged(Z)V
-    .locals 0
-
-    .prologue
-    .line 660
+    .line 371
     return-void
 .end method

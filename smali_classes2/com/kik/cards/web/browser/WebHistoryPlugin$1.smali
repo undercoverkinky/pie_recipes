@@ -1,11 +1,11 @@
 .class final Lcom/kik/cards/web/browser/WebHistoryPlugin$1;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/cards/web/browser/WebHistoryPlugin;->getBrowsingHistory(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/g;
+    value = Lcom/kik/cards/web/browser/WebHistoryPlugin;->getBrowsingHistory(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/h;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,11 +15,11 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Ljava/util/List",
         "<",
-        "Lkik/core/d/b$a;",
+        "Lkik/core/f/b$a;",
         ">;>;"
     }
 .end annotation
@@ -41,7 +41,7 @@
 
     iput-object p2, p0, Lcom/kik/cards/web/browser/WebHistoryPlugin$1;->a:Lcom/kik/cards/web/plugin/a;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -77,7 +77,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/d/b$a;
+    check-cast v0, Lkik/core/f/b$a;
 
     .line 1046
     new-instance v3, Lorg/json/JSONObject;
@@ -87,7 +87,7 @@
     const-string v4, "id"
 
     .line 1047
-    invoke-virtual {v0}, Lkik/core/d/b$a;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/f/b$a;->a()Ljava/lang/String;
 
     move-result-object v5
 
@@ -98,7 +98,7 @@
     const-string v4, "url"
 
     .line 1048
-    invoke-virtual {v0}, Lkik/core/d/b$a;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/f/b$a;->b()Ljava/lang/String;
 
     move-result-object v5
 
@@ -109,7 +109,7 @@
     const-string v4, "title"
 
     .line 1049
-    invoke-virtual {v0}, Lkik/core/d/b$a;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/f/b$a;->c()Ljava/lang/String;
 
     move-result-object v5
 
@@ -120,7 +120,7 @@
     const-string v4, "iconUrl"
 
     .line 1050
-    invoke-virtual {v0}, Lkik/core/d/b$a;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/f/b$a;->d()Ljava/lang/String;
 
     move-result-object v5
 
@@ -131,7 +131,7 @@
     const-string v4, "timestamp"
 
     .line 1051
-    invoke-virtual {v0}, Lkik/core/d/b$a;->e()J
+    invoke-virtual {v0}, Lkik/core/f/b$a;->e()J
 
     move-result-wide v6
 
@@ -152,13 +152,13 @@
 
     iget-object v0, p0, Lcom/kik/cards/web/browser/WebHistoryPlugin$1;->a:Lcom/kik/cards/web/plugin/a;
 
-    new-instance v1, Lcom/kik/cards/web/plugin/g;
+    new-instance v1, Lcom/kik/cards/web/plugin/h;
 
     const/16 v2, 0x1f4
 
-    invoke-direct {v1, v2}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v1, v2}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
-    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/g;)V
+    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/h;)V
 
     .line 1059
     :goto_1
@@ -169,7 +169,7 @@
     :try_start_1
     iget-object v0, p0, Lcom/kik/cards/web/browser/WebHistoryPlugin$1;->a:Lcom/kik/cards/web/plugin/a;
 
-    new-instance v2, Lcom/kik/cards/web/plugin/g;
+    new-instance v2, Lcom/kik/cards/web/plugin/h;
 
     new-instance v3, Lorg/json/JSONObject;
 
@@ -182,10 +182,10 @@
 
     move-result-object v1
 
-    invoke-direct {v2, v1}, Lcom/kik/cards/web/plugin/g;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {v2, v1}, Lcom/kik/cards/web/plugin/h;-><init>(Lorg/json/JSONObject;)V
 
     .line 1054
-    invoke-interface {v0, v2}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/g;)V
+    invoke-interface {v0, v2}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/h;)V
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -199,13 +199,13 @@
     .line 65
     iget-object v0, p0, Lcom/kik/cards/web/browser/WebHistoryPlugin$1;->a:Lcom/kik/cards/web/plugin/a;
 
-    new-instance v1, Lcom/kik/cards/web/plugin/g;
+    new-instance v1, Lcom/kik/cards/web/plugin/h;
 
     const/16 v2, 0x1f4
 
-    invoke-direct {v1, v2}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v1, v2}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
-    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/g;)V
+    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/h;)V
 
     .line 66
     return-void

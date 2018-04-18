@@ -43,9 +43,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/android/chat/e;
+    check-cast v0, Lkik/android/chat/c;
 
-    invoke-interface {v0}, Lkik/android/chat/e;->a()Lcom/kik/components/CoreComponent;
+    invoke-interface {v0}, Lkik/android/chat/c;->a()Lcom/kik/components/CoreComponent;
 
     move-result-object v0
 
@@ -81,7 +81,7 @@
 
     const-string v2, "GCM_PUSH_TOKEN"
 
-    invoke-interface {v1, v2}, Lkik/core/interfaces/ad;->r(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v1, v2}, Lkik/core/interfaces/ad;->q(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -100,16 +100,14 @@
 
     .line 55
     :cond_0
-    new-instance v1, Lkik/core/net/outgoing/GcmPushTokenRequest;
+    new-instance v1, Lkik/core/net/outgoing/j;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2, v0}, Lkik/core/net/outgoing/GcmPushTokenRequest;-><init>(Lkik/core/net/d;Ljava/lang/String;)V
+    invoke-direct {v1, v0}, Lkik/core/net/outgoing/j;-><init>(Ljava/lang/String;)V
 
     .line 56
     iget-object v2, p0, Lkik/android/net/communicator/RegistrationIntentService;->a:Lkik/core/interfaces/ICommunication;
 
-    invoke-interface {v2, v1}, Lkik/core/interfaces/ICommunication;->a(Lkik/core/net/outgoing/j;)Lcom/kik/events/Promise;
+    invoke-interface {v2, v1}, Lkik/core/interfaces/ICommunication;->a(Lkik/core/net/outgoing/ae;)Lcom/kik/events/Promise;
 
     move-result-object v1
 
@@ -117,27 +115,29 @@
 
     invoke-direct {v2, p0, v0}, Lkik/android/net/communicator/RegistrationIntentService$1;-><init>(Lkik/android/net/communicator/RegistrationIntentService;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
+    invoke-virtual {v1, v2}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 75
+    .line 77
     :cond_1
     :goto_0
     return-void
 
-    .line 73
+    .line 72
     :catch_0
     move-exception v0
 
-    :goto_1
-    invoke-static {v0}, Lkik/android/util/av;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
+    .line 75
     :catch_1
     move-exception v0
 
-    goto :goto_1
+    invoke-static {v0}, Lkik/android/util/ax;->c(Ljava/lang/Throwable;)V
+
+    goto :goto_0
 .end method

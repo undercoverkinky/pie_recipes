@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 119
+    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
     .locals 0
 
     .prologue
-    .line 135
+    .line 107
     return-void
 .end method
 
@@ -42,7 +42,7 @@
     .locals 0
 
     .prologue
-    .line 140
+    .line 112
     return-void
 .end method
 
@@ -50,7 +50,7 @@
     .locals 0
 
     .prologue
-    .line 124
+    .line 102
     return-void
 .end method
 
@@ -58,14 +58,6 @@
     .locals 0
 
     .prologue
-    .line 145
-    return-void
-.end method
-
-.method public final onVideoScroll()V
-    .locals 0
-
-    .prologue
-    .line 130
+    .line 117
     return-void
 .end method

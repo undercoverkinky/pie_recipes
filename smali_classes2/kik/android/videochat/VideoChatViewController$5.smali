@@ -18,20 +18,16 @@
 
 
 # instance fields
-.field final synthetic a:Z
-
-.field final synthetic b:Lkik/android/videochat/VideoChatViewController;
+.field final synthetic a:Lkik/android/videochat/VideoChatViewController;
 
 
 # direct methods
-.method constructor <init>(Lkik/android/videochat/VideoChatViewController;Z)V
+.method constructor <init>(Lkik/android/videochat/VideoChatViewController;)V
     .locals 0
 
     .prologue
-    .line 493
-    iput-object p1, p0, Lkik/android/videochat/VideoChatViewController$5;->b:Lkik/android/videochat/VideoChatViewController;
-
-    iput-boolean p2, p0, Lkik/android/videochat/VideoChatViewController$5;->a:Z
+    .line 411
+    iput-object p1, p0, Lkik/android/videochat/VideoChatViewController$5;->a:Lkik/android/videochat/VideoChatViewController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,35 +40,10 @@
     .locals 2
 
     .prologue
-    .line 497
-    iget-boolean v0, p0, Lkik/android/videochat/VideoChatViewController$5;->a:Z
+    .line 415
+    iget-object v0, p0, Lkik/android/videochat/VideoChatViewController$5;->a:Lkik/android/videochat/VideoChatViewController;
 
-    if-eqz v0, :cond_0
-
-    .line 498
-    iget-object v0, p0, Lkik/android/videochat/VideoChatViewController$5;->b:Lkik/android/videochat/VideoChatViewController;
-
-    invoke-static {v0}, Lkik/android/videochat/VideoChatViewController;->x(Lkik/android/videochat/VideoChatViewController;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/rounds/kik/analytics/group/conference/ConferenceEvents;->VIDEOCHAT_REMOVEDFROMGROUP_TAP:Lcom/rounds/kik/analytics/group/conference/ConferenceEvents;
-
-    invoke-virtual {v1}, Lcom/rounds/kik/analytics/group/conference/ConferenceEvents;->builder()Lcom/rounds/kik/analytics/group/conference/ConferenceEvents$Builder;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/rounds/kik/analytics/Reporter;->report(Landroid/content/Context;Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;)V
-
-    .line 501
-    :cond_0
-    iget-object v0, p0, Lkik/android/videochat/VideoChatViewController$5;->b:Lkik/android/videochat/VideoChatViewController;
-
-    invoke-static {v0}, Lkik/android/videochat/VideoChatViewController;->o(Lkik/android/videochat/VideoChatViewController;)Lkik/android/videochat/c;
+    invoke-static {v0}, Lkik/android/videochat/VideoChatViewController;->c(Lkik/android/videochat/VideoChatViewController;)Lkik/android/videochat/c;
 
     move-result-object v0
 
@@ -80,14 +51,10 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lkik/android/videochat/VideoChatViewController$5;->b:Lkik/android/videochat/VideoChatViewController;
+    sget-object v1, Lcom/rounds/kik/analytics/IReporterProxy$VideoPermissionType;->CAMERA:Lcom/rounds/kik/analytics/IReporterProxy$VideoPermissionType;
 
-    invoke-static {v1}, Lkik/android/videochat/VideoChatViewController;->s(Lkik/android/videochat/VideoChatViewController;)Lkik/core/datatypes/l;
+    invoke-interface {v0, v1}, Lcom/rounds/kik/analytics/IReporterProxy;->onPermissionsDialogCancel(Lcom/rounds/kik/analytics/IReporterProxy$VideoPermissionType;)V
 
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lcom/rounds/kik/analytics/IReporterProxy;->onNetworkErrorDialogTap(Ljava/lang/Object;)V
-
-    .line 502
+    .line 417
     return-void
 .end method

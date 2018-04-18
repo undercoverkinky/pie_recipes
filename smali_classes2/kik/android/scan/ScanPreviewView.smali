@@ -54,26 +54,26 @@
     move-result v0
 
     .line 34
-    invoke-virtual {p0}, Lkik/android/scan/ScanPreviewView;->a()I
+    invoke-virtual {p0}, Lkik/android/scan/ScanPreviewView;->b()I
 
     move-result v2
 
     if-ltz v2, :cond_1
 
-    invoke-virtual {p0}, Lkik/android/scan/ScanPreviewView;->b()I
+    invoke-virtual {p0}, Lkik/android/scan/ScanPreviewView;->c()I
 
     move-result v2
 
     if-ltz v2, :cond_1
 
     .line 35
-    invoke-virtual {p0}, Lkik/android/scan/ScanPreviewView;->a()I
+    invoke-virtual {p0}, Lkik/android/scan/ScanPreviewView;->b()I
 
     move-result v2
 
     int-to-float v2, v2
 
-    invoke-virtual {p0}, Lkik/android/scan/ScanPreviewView;->b()I
+    invoke-virtual {p0}, Lkik/android/scan/ScanPreviewView;->c()I
 
     move-result v3
 

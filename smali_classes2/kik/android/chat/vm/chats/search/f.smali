@@ -10,7 +10,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<ItemViewModel::",
-        "Lkik/android/chat/vm/at;",
+        "Lkik/android/chat/vm/p;",
         ">",
         "Ljava/lang/Object;",
         "Lkik/android/chat/vm/IListViewModel",
@@ -20,11 +20,11 @@
 
 
 # virtual methods
-.method public abstract j()Lrx/d;
+.method public abstract h()Lrx/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lrx/d",
+            "Lrx/c",
             "<",
             "Ljava/lang/Integer;",
             ">;"
@@ -32,11 +32,11 @@
     .end annotation
 .end method
 
-.method public abstract k()Lrx/d;
+.method public abstract i()Lrx/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lrx/d",
+            "Lrx/c",
             "<",
             "Ljava/lang/Boolean;",
             ">;"

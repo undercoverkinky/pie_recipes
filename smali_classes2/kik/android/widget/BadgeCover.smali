@@ -1,5 +1,5 @@
 .class public Lkik/android/widget/BadgeCover;
-.super Landroid/support/v7/widget/AppCompatImageView;
+.super Landroid/widget/ImageView;
 .source "SourceFile"
 
 
@@ -40,26 +40,26 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 63
-    invoke-direct {p0, p1}, Landroid/support/v7/widget/AppCompatImageView;-><init>(Landroid/content/Context;)V
+    .line 62
+    invoke-direct {p0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    .line 36
+    .line 35
     iput-object v1, p0, Lkik/android/widget/BadgeCover;->a:Landroid/view/View;
 
-    .line 47
+    .line 46
     const/4 v0, -0x1
 
     iput v0, p0, Lkik/android/widget/BadgeCover;->b:I
 
-    .line 59
+    .line 58
     const/4 v0, 0x4
 
     iput v0, p0, Lkik/android/widget/BadgeCover;->n:I
 
-    .line 64
+    .line 63
     invoke-direct {p0, p1, v1}, Lkik/android/widget/BadgeCover;->a(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 65
+    .line 64
     return-void
 .end method
 
@@ -67,28 +67,28 @@
     .locals 1
 
     .prologue
-    .line 69
-    invoke-direct {p0, p1, p2}, Landroid/support/v7/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .line 68
+    invoke-direct {p0, p1, p2}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 36
+    .line 35
     const/4 v0, 0x0
 
     iput-object v0, p0, Lkik/android/widget/BadgeCover;->a:Landroid/view/View;
 
-    .line 47
+    .line 46
     const/4 v0, -0x1
 
     iput v0, p0, Lkik/android/widget/BadgeCover;->b:I
 
-    .line 59
+    .line 58
     const/4 v0, 0x4
 
     iput v0, p0, Lkik/android/widget/BadgeCover;->n:I
 
-    .line 70
+    .line 69
     invoke-direct {p0, p1, p2}, Lkik/android/widget/BadgeCover;->a(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 71
+    .line 70
     return-void
 .end method
 
@@ -96,28 +96,28 @@
     .locals 1
 
     .prologue
-    .line 75
-    invoke-direct {p0, p1, p2, p3}, Landroid/support/v7/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .line 74
+    invoke-direct {p0, p1, p2, p3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 36
+    .line 35
     const/4 v0, 0x0
 
     iput-object v0, p0, Lkik/android/widget/BadgeCover;->a:Landroid/view/View;
 
-    .line 47
+    .line 46
     const/4 v0, -0x1
 
     iput v0, p0, Lkik/android/widget/BadgeCover;->b:I
 
-    .line 59
+    .line 58
     const/4 v0, 0x4
 
     iput v0, p0, Lkik/android/widget/BadgeCover;->n:I
 
-    .line 76
+    .line 75
     invoke-direct {p0, p1, p2}, Lkik/android/widget/BadgeCover;->a(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 77
+    .line 76
     return-void
 .end method
 
@@ -125,10 +125,10 @@
     .locals 1
 
     .prologue
-    .line 180
-    invoke-static {p0}, Lkik/android/util/an;->a(Landroid/view/View;)V
+    .line 179
+    invoke-static {p0}, Lkik/android/util/am;->a(Landroid/view/View;)V
 
-    .line 181
+    .line 180
     iget-boolean v0, p0, Lkik/android/widget/BadgeCover;->f:Z
 
     if-eqz v0, :cond_0
@@ -137,12 +137,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 182
+    .line 181
     iget-object v0, p0, Lkik/android/widget/BadgeCover;->h:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 184
+    .line 183
     :cond_0
     iget-boolean v0, p0, Lkik/android/widget/BadgeCover;->g:Z
 
@@ -152,12 +152,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 185
+    .line 184
     iget-object v0, p0, Lkik/android/widget/BadgeCover;->j:Landroid/view/animation/Animation;
 
     invoke-virtual {p0, v0}, Lkik/android/widget/BadgeCover;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 187
+    .line 186
     :cond_1
     return-void
 .end method
@@ -166,14 +166,14 @@
     .locals 3
 
     .prologue
-    .line 81
-    sget-object v0, Lkik/android/R$styleable;->BadgeCover:[I
+    .line 80
+    sget-object v0, Lkik/android/m$a;->o:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v1
 
-    .line 83
+    .line 82
     const/4 v0, 0x0
 
     const/4 v2, -0x1
@@ -185,7 +185,7 @@
 
     iput v0, p0, Lkik/android/widget/BadgeCover;->b:I
 
-    .line 85
+    .line 84
     const/4 v0, 0x1
 
     const/16 v2, 0x9
@@ -196,7 +196,7 @@
 
     iput v0, p0, Lkik/android/widget/BadgeCover;->c:I
 
-    .line 86
+    .line 85
     iget v0, p0, Lkik/android/widget/BadgeCover;->c:I
 
     const/4 v2, 0x2
@@ -207,7 +207,7 @@
 
     iput-boolean v0, p0, Lkik/android/widget/BadgeCover;->d:Z
 
-    .line 87
+    .line 86
     iget v0, p0, Lkik/android/widget/BadgeCover;->c:I
 
     const/4 v2, 0x4
@@ -218,7 +218,7 @@
 
     iput-boolean v0, p0, Lkik/android/widget/BadgeCover;->e:Z
 
-    .line 89
+    .line 88
     const/4 v0, 0x2
 
     const/4 v2, 0x0
@@ -229,7 +229,7 @@
 
     iput-boolean v0, p0, Lkik/android/widget/BadgeCover;->f:Z
 
-    .line 90
+    .line 89
     const/4 v0, 0x3
 
     const/4 v2, 0x0
@@ -242,19 +242,18 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 93
+    .line 92
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 94
+    .line 93
     return-void
 
-    .line 93
+    .line 92
     :catchall_0
     move-exception v0
 
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 94
     throw v0
 .end method
 
@@ -262,7 +261,7 @@
     .locals 1
 
     .prologue
-    .line 228
+    .line 227
     or-int v0, p0, p1
 
     if-ne v0, p0, :cond_0
@@ -284,34 +283,36 @@
     .locals 2
 
     .prologue
-    .line 100
-    invoke-super {p0}, Landroid/support/v7/widget/AppCompatImageView;->onAttachedToWindow()V
+    .line 99
+    invoke-super {p0}, Landroid/widget/ImageView;->onAttachedToWindow()V
 
-    .line 101
+    .line 100
     iget v0, p0, Lkik/android/widget/BadgeCover;->b:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 102
-    invoke-virtual {p0}, Lkik/android/widget/BadgeCover;->getRootView()Landroid/view/View;
+    .line 101
+    invoke-virtual {p0}, Lkik/android/widget/BadgeCover;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
+    check-cast v0, Landroid/app/Activity;
+
     iget v1, p0, Lkik/android/widget/BadgeCover;->b:I
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/widget/BadgeCover;->a:Landroid/view/View;
 
-    .line 108
+    .line 107
     :goto_0
     return-void
 
-    .line 106
+    .line 105
     :cond_0
     const/16 v0, 0x8
 
@@ -326,22 +327,22 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 171
-    invoke-super {p0, p1}, Landroid/support/v7/widget/AppCompatImageView;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    .line 170
+    invoke-super {p0, p1}, Landroid/widget/ImageView;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 172
+    .line 171
     iput-object v0, p0, Lkik/android/widget/BadgeCover;->h:Landroid/animation/AnimatorSet;
 
-    .line 173
+    .line 172
     iput-object v0, p0, Lkik/android/widget/BadgeCover;->i:Landroid/view/animation/AnimationSet;
 
-    .line 174
+    .line 173
     iput-object v0, p0, Lkik/android/widget/BadgeCover;->j:Landroid/view/animation/Animation;
 
-    .line 175
+    .line 174
     iput-object v0, p0, Lkik/android/widget/BadgeCover;->k:Landroid/view/animation/Animation;
 
-    .line 176
+    .line 175
     return-void
 .end method
 
@@ -357,19 +358,19 @@
 
     const/4 v2, 0x0
 
-    .line 113
+    .line 112
     iget-object v0, p0, Lkik/android/widget/BadgeCover;->a:Landroid/view/View;
 
     if-eqz v0, :cond_6
 
-    .line 114
+    .line 113
     invoke-virtual {p0}, Lkik/android/widget/BadgeCover;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 115
+    .line 114
     iget-object v3, p0, Lkik/android/widget/BadgeCover;->a:Landroid/view/View;
 
     invoke-virtual {v3}, Landroid/view/View;->getX()F
@@ -388,12 +389,12 @@
 
     sub-float/2addr v3, v4
 
-    .line 116
+    .line 115
     iget-boolean v4, p0, Lkik/android/widget/BadgeCover;->d:Z
 
     if-eqz v4, :cond_0
 
-    .line 118
+    .line 117
     iget-object v4, p0, Lkik/android/widget/BadgeCover;->a:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->getMeasuredWidth()I
@@ -410,11 +411,11 @@
 
     add-float/2addr v3, v4
 
-    .line 120
+    .line 119
     :cond_0
     invoke-virtual {p0, v3}, Lkik/android/widget/BadgeCover;->setX(F)V
 
-    .line 121
+    .line 120
     iget-object v3, p0, Lkik/android/widget/BadgeCover;->a:Landroid/view/View;
 
     invoke-virtual {v3}, Landroid/view/View;->getY()F
@@ -433,12 +434,12 @@
 
     sub-float/2addr v3, v4
 
-    .line 122
+    .line 121
     iget-boolean v4, p0, Lkik/android/widget/BadgeCover;->e:Z
 
     if-eqz v4, :cond_1
 
-    .line 124
+    .line 123
     iget-object v4, p0, Lkik/android/widget/BadgeCover;->a:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->getMeasuredHeight()I
@@ -455,11 +456,11 @@
 
     add-float/2addr v3, v4
 
-    .line 126
+    .line 125
     :cond_1
     invoke-virtual {p0, v3}, Lkik/android/widget/BadgeCover;->setY(F)V
 
-    .line 128
+    .line 127
     invoke-virtual {p0}, Lkik/android/widget/BadgeCover;->getX()F
 
     move-result v3
@@ -476,7 +477,7 @@
 
     iput v3, p0, Lkik/android/widget/BadgeCover;->l:F
 
-    .line 129
+    .line 128
     invoke-virtual {p0}, Lkik/android/widget/BadgeCover;->getY()F
 
     move-result v3
@@ -505,31 +506,31 @@
 
     iput v0, p0, Lkik/android/widget/BadgeCover;->m:F
 
-    .line 131
+    .line 130
     iget-object v0, p0, Lkik/android/widget/BadgeCover;->j:Landroid/view/animation/Animation;
 
     if-nez v0, :cond_6
 
-    .line 1141
+    .line 1140
     iget-object v0, p0, Lkik/android/widget/BadgeCover;->h:Landroid/animation/AnimatorSet;
 
     if-nez v0, :cond_2
 
-    .line 1142
+    .line 1141
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object v0, p0, Lkik/android/widget/BadgeCover;->h:Landroid/animation/AnimatorSet;
 
-    .line 1143
+    .line 1142
     new-instance v0, Landroid/view/animation/OvershootInterpolator;
 
     const/high16 v3, 0x40800000    # 4.0f
 
     invoke-direct {v0, v3}, Landroid/view/animation/OvershootInterpolator;-><init>(F)V
 
-    .line 1144
+    .line 1143
     sget-object v3, Landroid/view/View;->SCALE_X:Landroid/util/Property;
 
     new-array v4, v8, [F
@@ -540,7 +541,7 @@
 
     move-result-object v3
 
-    .line 1145
+    .line 1144
     sget-object v4, Landroid/view/View;->SCALE_Y:Landroid/util/Property;
 
     new-array v5, v8, [F
@@ -551,14 +552,14 @@
 
     move-result-object v4
 
-    .line 1146
+    .line 1145
     iget-object v5, p0, Lkik/android/widget/BadgeCover;->h:Landroid/animation/AnimatorSet;
 
     const-wide/16 v6, 0xc8
 
     invoke-virtual {v5, v6, v7}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 1147
+    .line 1146
     iget-object v5, p0, Lkik/android/widget/BadgeCover;->h:Landroid/animation/AnimatorSet;
 
     new-array v6, v8, [Landroid/animation/Animator;
@@ -571,25 +572,25 @@
 
     invoke-virtual {v5, v6}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 1148
+    .line 1147
     iget-object v3, p0, Lkik/android/widget/BadgeCover;->h:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v3, v0}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 1150
+    .line 1149
     :cond_2
     iget-object v0, p0, Lkik/android/widget/BadgeCover;->i:Landroid/view/animation/AnimationSet;
 
     if-nez v0, :cond_3
 
-    .line 1151
+    .line 1150
     new-instance v0, Landroid/view/animation/AnimationSet;
 
     invoke-direct {v0, v9}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
     iput-object v0, p0, Lkik/android/widget/BadgeCover;->i:Landroid/view/animation/AnimationSet;
 
-    .line 1152
+    .line 1151
     new-instance v0, Landroid/view/animation/ScaleAnimation;
 
     iget v5, p0, Lkik/android/widget/BadgeCover;->l:F
@@ -602,38 +603,57 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFFF)V
 
-    .line 1153
+    .line 1152
     const-wide/16 v4, 0x96
 
     invoke-virtual {v0, v4, v5}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
-    .line 1154
+    .line 1153
     new-instance v3, Landroid/view/animation/AlphaAnimation;
 
     invoke-direct {v3, v1, v2}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 1155
+    .line 1154
     const-wide/16 v4, 0x64
 
     invoke-virtual {v3, v4, v5}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
 
-    .line 1156
+    .line 1155
     iget-object v1, p0, Lkik/android/widget/BadgeCover;->i:Landroid/view/animation/AnimationSet;
 
     invoke-virtual {v1, v0}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1157
+    .line 1156
     iget-object v0, p0, Lkik/android/widget/BadgeCover;->i:Landroid/view/animation/AnimationSet;
 
     invoke-virtual {v0, v3}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1159
+    .line 1158
     :cond_3
     iget-object v0, p0, Lkik/android/widget/BadgeCover;->j:Landroid/view/animation/Animation;
 
     if-nez v0, :cond_4
 
-    .line 1160
+    .line 1159
+    invoke-virtual {p0}, Lkik/android/widget/BadgeCover;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const v1, 0x7f050027
+
+    invoke-static {v0, v1}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lkik/android/widget/BadgeCover;->j:Landroid/view/animation/Animation;
+
+    .line 1161
+    :cond_4
+    iget-object v0, p0, Lkik/android/widget/BadgeCover;->k:Landroid/view/animation/Animation;
+
+    if-nez v0, :cond_5
+
+    .line 1162
     invoke-virtual {p0}, Lkik/android/widget/BadgeCover;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -644,39 +664,20 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lkik/android/widget/BadgeCover;->j:Landroid/view/animation/Animation;
-
-    .line 1162
-    :cond_4
-    iget-object v0, p0, Lkik/android/widget/BadgeCover;->k:Landroid/view/animation/Animation;
-
-    if-nez v0, :cond_5
-
-    .line 1163
-    invoke-virtual {p0}, Lkik/android/widget/BadgeCover;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const v1, 0x7f050029
-
-    invoke-static {v0, v1}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
-
-    move-result-object v0
-
     iput-object v0, p0, Lkik/android/widget/BadgeCover;->k:Landroid/view/animation/Animation;
 
-    .line 133
+    .line 132
     :cond_5
     invoke-direct {p0}, Lkik/android/widget/BadgeCover;->a()V
 
-    .line 136
+    .line 135
     :cond_6
-    invoke-super/range {p0 .. p5}, Landroid/support/v7/widget/AppCompatImageView;->onLayout(ZIIII)V
+    invoke-super/range {p0 .. p5}, Landroid/widget/ImageView;->onLayout(ZIIII)V
 
-    .line 137
+    .line 136
     return-void
 
-    .line 1144
+    .line 1143
     nop
 
     :array_0
@@ -685,7 +686,7 @@
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 1145
+    .line 1144
     :array_1
     .array-data 4
         0x0
@@ -699,29 +700,29 @@
     .prologue
     const/16 v0, 0x8
 
-    .line 192
+    .line 191
     const/4 v1, 0x4
 
     if-ne p1, v1, :cond_0
 
     move p1, v0
 
-    .line 195
+    .line 194
     :cond_0
-    invoke-super {p0, p1}, Landroid/support/v7/widget/AppCompatImageView;->setVisibility(I)V
+    invoke-super {p0, p1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 196
+    .line 195
     iget v1, p0, Lkik/android/widget/BadgeCover;->n:I
 
     if-eq p1, v1, :cond_3
 
-    .line 197
+    .line 196
     if-ne p1, v0, :cond_2
 
-    .line 1209
-    invoke-static {p0}, Lkik/android/util/an;->a(Landroid/view/View;)V
+    .line 1208
+    invoke-static {p0}, Lkik/android/util/am;->a(Landroid/view/View;)V
 
-    .line 1210
+    .line 1209
     iget-boolean v0, p0, Lkik/android/widget/BadgeCover;->f:Z
 
     if-eqz v0, :cond_1
@@ -730,12 +731,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 1211
+    .line 1210
     iget-object v0, p0, Lkik/android/widget/BadgeCover;->i:Landroid/view/animation/AnimationSet;
 
     invoke-virtual {p0, v0}, Lkik/android/widget/BadgeCover;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1213
+    .line 1212
     :cond_1
     iget-boolean v0, p0, Lkik/android/widget/BadgeCover;->g:Z
 
@@ -745,22 +746,22 @@
 
     if-eqz v0, :cond_2
 
-    .line 1214
+    .line 1213
     iget-object v0, p0, Lkik/android/widget/BadgeCover;->k:Landroid/view/animation/Animation;
 
     invoke-virtual {p0, v0}, Lkik/android/widget/BadgeCover;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 200
+    .line 199
     :cond_2
     if-nez p1, :cond_3
 
-    .line 201
+    .line 200
     invoke-direct {p0}, Lkik/android/widget/BadgeCover;->a()V
 
-    .line 204
+    .line 203
     :cond_3
     iput p1, p0, Lkik/android/widget/BadgeCover;->n:I
 
-    .line 205
+    .line 204
     return-void
 .end method

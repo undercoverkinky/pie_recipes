@@ -2,10 +2,7 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lkik/android/chat/vm/as;
-
 
 # virtual methods
-.method public abstract b()Landroid/os/Bundle;
+.method public abstract intValue()I
 .end method

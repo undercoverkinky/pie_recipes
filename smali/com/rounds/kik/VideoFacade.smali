@@ -136,70 +136,17 @@
     .locals 1
 
     .prologue
-    .line 162
-    const-string v0, "b329c6c"
+    .line 151
+    const-string v0, "af16765"
 
     return-object v0
-.end method
-
-.method private internalSetup(Lcom/rounds/kik/VideoFacade$StateChangeListener;Lcom/rounds/kik/abtests/IAbTestsProxy;Ljava/lang/String;Ljava/lang/String;ZZ)V
-    .locals 6
-
-    .prologue
-    .line 77
-    iput-object p3, p0, Lcom/rounds/kik/VideoFacade;->mClientId:Ljava/lang/String;
-
-    .line 78
-    iput-object p4, p0, Lcom/rounds/kik/VideoFacade;->mDeviceId:Ljava/lang/String;
-
-    .line 79
-    iget-object v0, p0, Lcom/rounds/kik/VideoFacade;->mVideoAppModule:Lcom/rounds/kik/VideoAppModule;
-
-    move-object v1, p2
-
-    move-object v2, p3
-
-    move-object v3, p4
-
-    move v4, p5
-
-    move v5, p6
-
-    invoke-virtual/range {v0 .. v5}, Lcom/rounds/kik/VideoAppModule;->setup(Lcom/rounds/kik/abtests/IAbTestsProxy;Ljava/lang/String;Ljava/lang/String;ZZ)V
-
-    .line 80
-    iput-object p1, p0, Lcom/rounds/kik/VideoFacade;->mStateChangeListener:Lcom/rounds/kik/VideoFacade$StateChangeListener;
-
-    .line 82
-    if-nez p6, :cond_0
-
-    .line 83
-    sget-object v0, Lcom/rounds/kik/media/MediaBroker;->INSTANCE:Lcom/rounds/kik/media/MediaBroker;
-
-    iget-object v1, p0, Lcom/rounds/kik/VideoFacade;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0, v1}, Lcom/rounds/kik/media/MediaBroker;->initMediaBroker(Landroid/content/Context;)V
-
-    .line 86
-    :cond_0
-    invoke-direct {p0}, Lcom/rounds/kik/VideoFacade;->reportAppLaunch()V
-
-    .line 88
-    iget-object v0, p0, Lcom/rounds/kik/VideoFacade;->mStateChangeListener:Lcom/rounds/kik/VideoFacade$StateChangeListener;
-
-    iget-object v1, p0, Lcom/rounds/kik/VideoFacade;->mState:Lcom/rounds/kik/VideoFacade$State;
-
-    invoke-interface {v0, v1}, Lcom/rounds/kik/VideoFacade$StateChangeListener;->onStateChanged(Lcom/rounds/kik/VideoFacade$State;)V
-
-    .line 89
-    return-void
 .end method
 
 .method private loadNativeLibrary()V
     .locals 4
 
     .prologue
-    .line 168
+    .line 157
     :try_start_0
     const-string v0, "RoundsVidyoClient"
 
@@ -207,20 +154,20 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 174
+    .line 163
     :goto_0
     return-void
 
-    .line 170
+    .line 159
     :catch_0
     move-exception v0
 
-    .line 171
+    .line 160
     sget-object v1, Lcom/rounds/kik/VideoFacade$State;->ERROR:Lcom/rounds/kik/VideoFacade$State;
 
     iput-object v1, p0, Lcom/rounds/kik/VideoFacade;->mState:Lcom/rounds/kik/VideoFacade$State;
 
-    .line 172
+    .line 161
     sget-object v1, Lcom/rounds/kik/VideoFacade;->LOGGER:Lorg/slf4j/b;
 
     const-string v2, "libRoundsVidyoClient.so not loaded: {}"
@@ -238,12 +185,12 @@
     .locals 8
 
     .prologue
-    .line 93
+    .line 82
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 94
+    .line 83
     iget-object v2, p0, Lcom/rounds/kik/VideoFacade;->mContext:Landroid/content/Context;
 
     sget-object v3, Lcom/rounds/kik/VideoFacade;->APP_LAUNCH_LAST_DATE:Ljava/lang/String;
@@ -252,20 +199,20 @@
 
     move-result-wide v2
 
-    .line 96
+    .line 85
     sub-long v4, v0, v2
 
-    .line 98
+    .line 87
     const-wide/16 v6, 0x3e8
 
     div-long/2addr v4, v6
 
-    .line 99
+    .line 88
     const-wide/16 v6, 0xe10
 
     div-long/2addr v4, v6
 
-    .line 101
+    .line 90
     const-wide/16 v6, 0x18
 
     cmp-long v4, v4, v6
@@ -276,7 +223,7 @@
 
     if-nez v2, :cond_1
 
-    .line 102
+    .line 91
     :cond_0
     iget-object v2, p0, Lcom/rounds/kik/VideoFacade;->mContext:Landroid/content/Context;
 
@@ -288,57 +235,32 @@
 
     invoke-static {v2, v3}, Lcom/rounds/kik/analytics/Reporter;->report(Landroid/content/Context;Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;)V
 
-    .line 103
+    .line 92
     iget-object v2, p0, Lcom/rounds/kik/VideoFacade;->mContext:Landroid/content/Context;
 
     sget-object v3, Lcom/rounds/kik/VideoFacade;->APP_LAUNCH_LAST_DATE:Ljava/lang/String;
 
     invoke-static {v2, v3, v0, v1}, Lcom/rounds/kik/DataCache;->putLong(Landroid/content/Context;Ljava/lang/String;J)V
 
-    .line 105
+    .line 94
     :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public emulatorSetup(Lcom/rounds/kik/VideoFacade$StateChangeListener;Lcom/rounds/kik/abtests/IAbTestsProxy;Ljava/lang/String;Ljava/lang/String;Z)V
-    .locals 7
-
-    .prologue
-    .line 73
-    const/4 v6, 0x1
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move v5, p5
-
-    invoke-direct/range {v0 .. v6}, Lcom/rounds/kik/VideoFacade;->internalSetup(Lcom/rounds/kik/VideoFacade$StateChangeListener;Lcom/rounds/kik/abtests/IAbTestsProxy;Ljava/lang/String;Ljava/lang/String;ZZ)V
-
-    .line 74
-    return-void
-.end method
-
 .method public getController(Landroid/app/Activity;Lcom/rounds/kik/GroupConversation;)Lcom/rounds/kik/VideoController;
     .locals 3
 
     .prologue
-    .line 142
+    .line 131
     iget-object v0, p0, Lcom/rounds/kik/VideoFacade;->mState:Lcom/rounds/kik/VideoFacade$State;
 
     sget-object v1, Lcom/rounds/kik/VideoFacade$State;->PRE_SETUP:Lcom/rounds/kik/VideoFacade$State;
 
     if-ne v0, v1, :cond_0
 
-    .line 143
+    .line 132
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Facade setup was never called"
@@ -347,7 +269,7 @@
 
     throw v0
 
-    .line 145
+    .line 134
     :cond_0
     iget-object v0, p0, Lcom/rounds/kik/VideoFacade;->mContext:Landroid/content/Context;
 
@@ -361,7 +283,7 @@
 
     if-nez v0, :cond_2
 
-    .line 146
+    .line 135
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -409,7 +331,7 @@
 
     throw v0
 
-    .line 148
+    .line 137
     :cond_2
     new-instance v0, Lcom/rounds/kik/VideoController;
 
@@ -419,7 +341,7 @@
 
     iput-object v0, p0, Lcom/rounds/kik/VideoFacade;->mController:Lcom/rounds/kik/VideoController;
 
-    .line 149
+    .line 138
     iget-object v0, p0, Lcom/rounds/kik/VideoFacade;->mController:Lcom/rounds/kik/VideoController;
 
     return-object v0
@@ -429,14 +351,14 @@
     .locals 3
 
     .prologue
-    .line 124
+    .line 113
     iget-object v0, p0, Lcom/rounds/kik/VideoFacade;->mState:Lcom/rounds/kik/VideoFacade$State;
 
     sget-object v1, Lcom/rounds/kik/VideoFacade$State;->PRE_SETUP:Lcom/rounds/kik/VideoFacade$State;
 
     if-ne v0, v1, :cond_0
 
-    .line 125
+    .line 114
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Facade setup was never called"
@@ -445,7 +367,7 @@
 
     throw v0
 
-    .line 127
+    .line 116
     :cond_0
     iget-object v0, p0, Lcom/rounds/kik/VideoFacade;->mContext:Landroid/content/Context;
 
@@ -459,7 +381,7 @@
 
     if-nez v0, :cond_2
 
-    .line 128
+    .line 117
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -507,7 +429,7 @@
 
     throw v0
 
-    .line 131
+    .line 120
     :cond_2
     new-instance v0, Lcom/rounds/kik/VideoController;
 
@@ -517,7 +439,7 @@
 
     iput-object v0, p0, Lcom/rounds/kik/VideoFacade;->mController:Lcom/rounds/kik/VideoController;
 
-    .line 132
+    .line 121
     iget-object v0, p0, Lcom/rounds/kik/VideoFacade;->mController:Lcom/rounds/kik/VideoController;
 
     return-object v0
@@ -527,7 +449,7 @@
     .locals 1
 
     .prologue
-    .line 157
+    .line 146
     iget-object v0, p0, Lcom/rounds/kik/VideoFacade;->mReporterProxy:Lcom/rounds/kik/analytics/ReporterProxy;
 
     return-object v0
@@ -537,22 +459,22 @@
     .locals 2
 
     .prologue
-    .line 113
+    .line 102
     iput-object p1, p0, Lcom/rounds/kik/VideoFacade;->mConversationController:Lcom/rounds/kik/ConversationController;
 
-    .line 114
+    .line 103
     iget-object v0, p0, Lcom/rounds/kik/VideoFacade;->mVideoAppModule:Lcom/rounds/kik/VideoAppModule;
 
     iget-object v1, p0, Lcom/rounds/kik/VideoFacade;->mConversationController:Lcom/rounds/kik/ConversationController;
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/VideoAppModule;->setConversationController(Lcom/rounds/kik/ConversationController;)V
 
-    .line 115
+    .line 104
     return-void
 .end method
 
 .method public setup(Lcom/rounds/kik/VideoFacade$StateChangeListener;Lcom/rounds/kik/abtests/IAbTestsProxy;Ljava/lang/String;Ljava/lang/String;Z)V
-    .locals 7
+    .locals 2
 
     .prologue
     .line 62
@@ -577,22 +499,36 @@
 
     .line 69
     :cond_0
-    const/4 v6, 0x0
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move v5, p5
-
-    invoke-direct/range {v0 .. v6}, Lcom/rounds/kik/VideoFacade;->internalSetup(Lcom/rounds/kik/VideoFacade$StateChangeListener;Lcom/rounds/kik/abtests/IAbTestsProxy;Ljava/lang/String;Ljava/lang/String;ZZ)V
+    iput-object p3, p0, Lcom/rounds/kik/VideoFacade;->mClientId:Ljava/lang/String;
 
     .line 70
+    iput-object p4, p0, Lcom/rounds/kik/VideoFacade;->mDeviceId:Ljava/lang/String;
+
+    .line 71
+    iget-object v0, p0, Lcom/rounds/kik/VideoFacade;->mVideoAppModule:Lcom/rounds/kik/VideoAppModule;
+
+    invoke-virtual {v0, p2, p3, p4, p5}, Lcom/rounds/kik/VideoAppModule;->setup(Lcom/rounds/kik/abtests/IAbTestsProxy;Ljava/lang/String;Ljava/lang/String;Z)V
+
+    .line 72
+    iput-object p1, p0, Lcom/rounds/kik/VideoFacade;->mStateChangeListener:Lcom/rounds/kik/VideoFacade$StateChangeListener;
+
+    .line 73
+    sget-object v0, Lcom/rounds/kik/media/MediaBroker;->INSTANCE:Lcom/rounds/kik/media/MediaBroker;
+
+    iget-object v1, p0, Lcom/rounds/kik/VideoFacade;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0, v1}, Lcom/rounds/kik/media/MediaBroker;->initMediaBroker(Landroid/content/Context;)V
+
+    .line 75
+    invoke-direct {p0}, Lcom/rounds/kik/VideoFacade;->reportAppLaunch()V
+
+    .line 77
+    iget-object v0, p0, Lcom/rounds/kik/VideoFacade;->mStateChangeListener:Lcom/rounds/kik/VideoFacade$StateChangeListener;
+
+    iget-object v1, p0, Lcom/rounds/kik/VideoFacade;->mState:Lcom/rounds/kik/VideoFacade$State;
+
+    invoke-interface {v0, v1}, Lcom/rounds/kik/VideoFacade$StateChangeListener;->onStateChanged(Lcom/rounds/kik/VideoFacade$State;)V
+
+    .line 78
     return-void
 .end method

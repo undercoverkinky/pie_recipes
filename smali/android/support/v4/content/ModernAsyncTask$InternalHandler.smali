@@ -19,14 +19,14 @@
     .locals 1
 
     .prologue
-    .line 492
+    .line 473
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 493
+    .line 474
     return-void
 .end method
 
@@ -36,21 +36,21 @@
     .locals 3
 
     .prologue
-    .line 498
+    .line 479
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/support/v4/content/ModernAsyncTask$AsyncTaskResult;
 
-    .line 499
+    .line 480
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 508
+    .line 489
     :goto_0
     return-void
 
-    .line 502
+    .line 483
     :pswitch_0
     iget-object v1, v0, Landroid/support/v4/content/ModernAsyncTask$AsyncTaskResult;->mTask:Landroid/support/v4/content/ModernAsyncTask;
 
@@ -60,11 +60,11 @@
 
     aget-object v0, v0, v2
 
-    invoke-virtual {v1, v0}, Landroid/support/v4/content/ModernAsyncTask;->finish(Ljava/lang/Object;)V
+    invoke-static {v1, v0}, Landroid/support/v4/content/ModernAsyncTask;->access$400(Landroid/support/v4/content/ModernAsyncTask;Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 505
+    .line 486
     :pswitch_1
     iget-object v1, v0, Landroid/support/v4/content/ModernAsyncTask$AsyncTaskResult;->mTask:Landroid/support/v4/content/ModernAsyncTask;
 
@@ -74,7 +74,7 @@
 
     goto :goto_0
 
-    .line 499
+    .line 480
     nop
 
     :pswitch_data_0

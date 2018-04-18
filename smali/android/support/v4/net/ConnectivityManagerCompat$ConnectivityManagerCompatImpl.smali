@@ -15,8 +15,5 @@
 
 
 # virtual methods
-.method public abstract getRestrictBackgroundStatus(Landroid/net/ConnectivityManager;)I
-.end method
-
 .method public abstract isActiveNetworkMetered(Landroid/net/ConnectivityManager;)Z
 .end method

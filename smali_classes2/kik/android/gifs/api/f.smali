@@ -60,23 +60,13 @@
     .locals 1
 
     .prologue
-    .line 30
-    iget-object v0, p0, Lkik/android/gifs/api/f;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final b()Ljava/lang/String;
-    .locals 1
-
-    .prologue
     .line 35
     iget-object v0, p0, Lkik/android/gifs/api/f;->b:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final c()Lkik/android/gifs/api/GifResponseData;
+.method public final b()Lkik/android/gifs/api/GifResponseData;
     .locals 1
 
     .prologue
@@ -86,7 +76,7 @@
     return-object v0
 .end method
 
-.method public final d()Z
+.method public final c()Z
     .locals 1
 
     .prologue
@@ -96,7 +86,7 @@
     return v0
 .end method
 
-.method public final e()Ljava/lang/String;
+.method public final d()Ljava/lang/String;
     .locals 1
 
     .prologue

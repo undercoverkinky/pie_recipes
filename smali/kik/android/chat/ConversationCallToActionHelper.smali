@@ -18,11 +18,11 @@
 
 .field private final c:Lkik/core/interfaces/b;
 
-.field private final d:Lkik/core/manager/n;
+.field private final d:Lkik/core/manager/m;
 
 
 # direct methods
-.method public constructor <init>(Lkik/core/interfaces/IAddressBookIntegration;Lkik/core/interfaces/ad;Lkik/core/interfaces/b;Lkik/core/manager/n;)V
+.method public constructor <init>(Lkik/core/interfaces/IAddressBookIntegration;Lkik/core/interfaces/ad;Lkik/core/interfaces/b;Lkik/core/manager/m;)V
     .locals 0
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
@@ -41,7 +41,7 @@
     iput-object p3, p0, Lkik/android/chat/ConversationCallToActionHelper;->c:Lkik/core/interfaces/b;
 
     .line 39
-    iput-object p4, p0, Lkik/android/chat/ConversationCallToActionHelper;->d:Lkik/core/manager/n;
+    iput-object p4, p0, Lkik/android/chat/ConversationCallToActionHelper;->d:Lkik/core/manager/m;
 
     .line 40
     return-void
@@ -61,7 +61,7 @@
 
     const-string v1, "kik.logintime"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->u(Ljava/lang/String;)Ljava/lang/Long;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->t(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v0
 
@@ -69,7 +69,7 @@
 
     move-result-wide v0
 
-    invoke-static {v0, v1}, Lkik/core/util/v;->d(J)J
+    invoke-static {v0, v1}, Lkik/core/util/x;->d(J)J
 
     move-result-wide v0
 
@@ -125,73 +125,67 @@
     .locals 5
 
     .prologue
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
     .line 99
-    iget-object v2, p0, Lkik/android/chat/ConversationCallToActionHelper;->c:Lkik/core/interfaces/b;
-
-    const-string v3, "pg_show_in_plus"
-
-    const-string v4, "hide"
-
-    invoke-interface {v2, v3, v4}, Lkik/core/interfaces/b;->a(Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    .line 104
-    :cond_0
-    :goto_0
-    return v0
-
-    .line 1121
-    :cond_1
+    .line 1117
     iget-object v2, p0, Lkik/android/chat/ConversationCallToActionHelper;->b:Lkik/core/interfaces/ad;
 
     .line 2100
-    if-nez v2, :cond_2
-
-    move v2, v0
-
-    .line 104
-    :goto_1
     if-nez v2, :cond_0
 
-    .line 2126
-    iget-object v2, p0, Lkik/android/chat/ConversationCallToActionHelper;->d:Lkik/core/manager/n;
+    move v2, v1
 
-    .line 2218
-    invoke-virtual {v2}, Lkik/core/manager/n;->a()Lkik/core/manager/n$c;
+    .line 99
+    :goto_0
+    if-nez v2, :cond_2
+
+    .line 2122
+    iget-object v2, p0, Lkik/android/chat/ConversationCallToActionHelper;->d:Lkik/core/manager/m;
+
+    .line 2165
+    invoke-virtual {v2}, Lkik/core/manager/m;->a()Lkik/core/manager/m$c;
 
     move-result-object v2
 
-    iget-object v2, v2, Lkik/core/manager/n$c;->a:Ljava/lang/String;
+    iget-object v2, v2, Lkik/core/manager/m$c;->a:Ljava/lang/String;
 
-    .line 2126
+    .line 2122
     invoke-static {v2}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-nez v2, :cond_3
+    if-nez v2, :cond_1
 
-    move v2, v1
+    move v2, v0
 
-    .line 104
+    .line 99
+    :goto_1
+    if-nez v2, :cond_2
+
+    iget-object v2, p0, Lkik/android/chat/ConversationCallToActionHelper;->c:Lkik/core/interfaces/b;
+
+    const-string v3, "publicgroups_helper"
+
+    const-string v4, "show"
+
+    .line 100
+    invoke-interface {v2, v3, v4}, Lkik/core/interfaces/b;->a(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
     :goto_2
-    if-nez v2, :cond_0
-
-    move v0, v1
-
-    goto :goto_0
+    return v0
 
     .line 2103
-    :cond_2
+    :cond_0
     const-string v3, "kik.publicgroup.searchcompleted"
 
-    invoke-interface {v2, v3, v0}, Lkik/core/interfaces/ad;->a(Ljava/lang/String;Z)Ljava/lang/Boolean;
+    invoke-interface {v2, v3}, Lkik/core/interfaces/ad;->v(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v2
 
@@ -199,12 +193,18 @@
 
     move-result v2
 
+    goto :goto_0
+
+    :cond_1
+    move v2, v1
+
+    .line 2122
     goto :goto_1
 
-    :cond_3
-    move v2, v0
+    :cond_2
+    move v0, v1
 
-    .line 2126
+    .line 99
     goto :goto_2
 .end method
 
@@ -212,7 +212,7 @@
     .locals 1
 
     .prologue
-    .line 116
+    .line 112
     iget-object v0, p0, Lkik/android/chat/ConversationCallToActionHelper;->a:Lkik/core/interfaces/IAddressBookIntegration;
 
     invoke-interface {v0}, Lkik/core/interfaces/IAddressBookIntegration;->b()Z
@@ -248,7 +248,7 @@
 
     const-string v3, "kik.publicgroup.helper"
 
-    invoke-interface {v0, v3}, Lkik/core/interfaces/ad;->v(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-interface {v0, v3}, Lkik/core/interfaces/ad;->u(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -266,13 +266,13 @@
 
     move v0, v1
 
-    .line 1110
+    .line 1106
     :goto_0
     iget-object v3, p0, Lkik/android/chat/ConversationCallToActionHelper;->b:Lkik/core/interfaces/ad;
 
     const-string v4, "kik.friend.helper"
 
-    invoke-interface {v3, v4}, Lkik/core/interfaces/ad;->v(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-interface {v3, v4}, Lkik/core/interfaces/ad;->u(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v3
 
@@ -305,7 +305,7 @@
     :cond_1
     move v1, v2
 
-    .line 1110
+    .line 1106
     goto :goto_1
 .end method
 

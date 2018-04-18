@@ -2,8 +2,7 @@
 .super Lcom/google/android/gms/ads/AdListener;
 
 # interfaces
-.implements Lcom/google/android/gms/ads/doubleclick/AppEventListener;
-.implements Lcom/google/android/gms/internal/zzis;
+.implements Lcom/google/android/gms/ads/internal/client/zza;
 
 
 # annotations
@@ -18,9 +17,9 @@
 
 
 # instance fields
-.field private a:Lcom/google/ads/mediation/AbstractAdViewAdapter;
+.field final a:Lcom/google/ads/mediation/AbstractAdViewAdapter;
 
-.field private b:Lcom/google/android/gms/ads/mediation/MediationBannerListener;
+.field final b:Lcom/google/android/gms/ads/mediation/MediationBannerListener;
 
 
 # direct methods
@@ -106,18 +105,6 @@
     iget-object v1, p0, Lcom/google/ads/mediation/AbstractAdViewAdapter$c;->a:Lcom/google/ads/mediation/AbstractAdViewAdapter;
 
     invoke-interface {v0, v1}, Lcom/google/android/gms/ads/mediation/MediationBannerListener;->onAdOpened(Lcom/google/android/gms/ads/mediation/MediationBannerAdapter;)V
-
-    return-void
-.end method
-
-.method public final onAppEvent(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/google/ads/mediation/AbstractAdViewAdapter$c;->b:Lcom/google/android/gms/ads/mediation/MediationBannerListener;
-
-    iget-object v1, p0, Lcom/google/ads/mediation/AbstractAdViewAdapter$c;->a:Lcom/google/ads/mediation/AbstractAdViewAdapter;
-
-    invoke-interface {v0, v1, p1, p2}, Lcom/google/android/gms/ads/mediation/MediationBannerListener;->zza(Lcom/google/android/gms/ads/mediation/MediationBannerAdapter;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

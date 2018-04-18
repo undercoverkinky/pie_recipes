@@ -1,5 +1,5 @@
 .class final Lkik/android/b/a$4;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,12 +15,12 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Ljava/util/Map",
         "<",
         "Ljava/lang/String;",
-        "Lkik/core/d/b$a;",
+        "Lkik/core/f/b$a;",
         ">;>;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
     iput-object p3, p0, Lkik/android/b/a$4;->b:Lcom/kik/events/Promise;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -67,7 +67,7 @@
 
     invoke-direct {v1, p0, p1}, Lkik/android/b/a$4$1;-><init>(Lkik/android/b/a$4;Ljava/util/Map;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
 
     .line 154
     return-void

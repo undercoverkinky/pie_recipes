@@ -21,7 +21,7 @@
 
 .field private j:I
 
-.field private k:Lkik/core/interfaces/x;
+.field private k:Lkik/core/interfaces/y;
 
 .field private l:Lkik/android/chat/fragment/ProgressDialogFragment$a;
 
@@ -186,12 +186,12 @@
     return-void
 .end method
 
-.method public final d()Lkik/core/interfaces/x;
+.method public final d()Lkik/core/interfaces/y;
     .locals 1
 
     .prologue
     .line 82
-    iget-object v0, p0, Lkik/android/chat/fragment/ProgressDialogFragment;->k:Lkik/core/interfaces/x;
+    iget-object v0, p0, Lkik/android/chat/fragment/ProgressDialogFragment;->k:Lkik/core/interfaces/y;
 
     return-object v0
 .end method
@@ -288,7 +288,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0b0025
+    const v2, 0x7f0c0018
 
     invoke-direct {v0, v1, v2}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;I)V
 
@@ -419,7 +419,7 @@
 
     invoke-direct {v0, p0}, Lkik/android/chat/fragment/ProgressDialogFragment$1;-><init>(Lkik/android/chat/fragment/ProgressDialogFragment;)V
 
-    iput-object v0, p0, Lkik/android/chat/fragment/ProgressDialogFragment;->k:Lkik/core/interfaces/x;
+    iput-object v0, p0, Lkik/android/chat/fragment/ProgressDialogFragment;->k:Lkik/core/interfaces/y;
 
     .line 156
     iget-object v0, p0, Lkik/android/chat/fragment/ProgressDialogFragment;->l:Lkik/android/chat/fragment/ProgressDialogFragment$a;

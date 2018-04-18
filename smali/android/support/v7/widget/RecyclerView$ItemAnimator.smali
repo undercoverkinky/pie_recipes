@@ -16,7 +16,6 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;,
-        Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemAnimatorFinishedListener;,
         Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemAnimatorListener;
     }
 .end annotation
@@ -30,7 +29,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemAnimatorFinishedListener;",
+            "Ljava/lang/Object;",
             ">;"
         }
     .end annotation
@@ -54,34 +53,34 @@
 
     const-wide/16 v2, 0x78
 
-    .line 11804
+    .line 10323
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 11860
+    .line 10379
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->a:Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemAnimatorListener;
 
-    .line 11861
+    .line 10380
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->b:Ljava/util/ArrayList;
 
-    .line 11864
+    .line 10383
     iput-wide v2, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->c:J
 
-    .line 11865
+    .line 10384
     iput-wide v2, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->d:J
 
-    .line 11866
+    .line 10385
     iput-wide v4, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->e:J
 
-    .line 11867
+    .line 10386
     iput-wide v4, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->f:J
 
-    .line 12468
+    .line 10987
     return-void
 .end method
 
@@ -97,12 +96,12 @@
     .end annotation
 
     .prologue
-    .line 13433
+    .line 11952
     new-instance v0, Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
 
     invoke-direct {v0}, Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;-><init>()V
 
-    .line 11989
+    .line 10508
     invoke-virtual {v0, p0}, Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;->a(Landroid/support/v7/widget/RecyclerView$ViewHolder;)Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
 
     move-result-object v0
@@ -116,62 +115,60 @@
     .prologue
     const/4 v3, -0x1
 
-    .line 12189
-    invoke-static {p0}, Landroid/support/v7/widget/RecyclerView$ViewHolder;->access$1400(Landroid/support/v7/widget/RecyclerView$ViewHolder;)I
+    .line 10708
+    invoke-static {p0}, Landroid/support/v7/widget/RecyclerView$ViewHolder;->h(Landroid/support/v7/widget/RecyclerView$ViewHolder;)I
 
     move-result v0
 
     and-int/lit8 v0, v0, 0xe
 
-    .line 12190
-    invoke-virtual {p0}, Landroid/support/v7/widget/RecyclerView$ViewHolder;->isInvalid()Z
+    .line 10709
+    invoke-virtual {p0}, Landroid/support/v7/widget/RecyclerView$ViewHolder;->k()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 12191
+    .line 10710
     const/4 v0, 0x4
 
-    .line 12200
+    .line 10719
     :cond_0
     :goto_0
     return v0
 
-    .line 12193
+    .line 10712
     :cond_1
     and-int/lit8 v1, v0, 0x4
 
     if-nez v1, :cond_0
 
-    .line 12194
-    invoke-virtual {p0}, Landroid/support/v7/widget/RecyclerView$ViewHolder;->getOldPosition()I
+    .line 12083
+    iget v1, p0, Landroid/support/v7/widget/RecyclerView$ViewHolder;->c:I
 
-    move-result v1
-
-    .line 12195
-    invoke-virtual {p0}, Landroid/support/v7/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
+    .line 10714
+    invoke-virtual {p0}, Landroid/support/v7/widget/RecyclerView$ViewHolder;->d()I
 
     move-result v2
 
-    .line 12196
+    .line 10715
     if-eq v1, v3, :cond_0
 
     if-eq v2, v3, :cond_0
 
     if-eq v1, v2, :cond_0
 
-    .line 12197
+    .line 10716
     or-int/lit16 v0, v0, 0x800
 
     goto :goto_0
 .end method
 
-.method public static j()Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
+.method public static i()Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
     .locals 1
 
     .prologue
-    .line 12433
+    .line 10952
     new-instance v0, Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
 
     invoke-direct {v0}, Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;-><init>()V
@@ -188,43 +185,11 @@
     .locals 0
 
     .prologue
-    .line 11950
+    .line 10469
     iput-object p1, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->a:Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemAnimatorListener;
 
-    .line 11951
+    .line 10470
     return-void
-.end method
-
-.method public final a(Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemAnimatorFinishedListener;)Z
-    .locals 2
-
-    .prologue
-    .line 12345
-    invoke-virtual {p0}, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->b()Z
-
-    move-result v0
-
-    .line 12346
-    if-eqz p1, :cond_0
-
-    .line 12347
-    if-nez v0, :cond_1
-
-    .line 12348
-    invoke-interface {p1}, Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemAnimatorFinishedListener;->a()V
-
-    .line 12353
-    :cond_0
-    :goto_0
-    return v0
-
-    .line 12350
-    :cond_1
-    iget-object v1, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
 .end method
 
 .method public abstract a(Landroid/support/v7/widget/RecyclerView$ViewHolder;Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;)Z
@@ -247,7 +212,7 @@
     .end annotation
 
     .prologue
-    .line 12408
+    .line 10927
     invoke-virtual {p0, p1}, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->g(Landroid/support/v7/widget/RecyclerView$ViewHolder;)Z
 
     move-result v0
@@ -261,21 +226,31 @@
 .method public abstract b(Landroid/support/v7/widget/RecyclerView$ViewHolder;Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;)Z
 .end method
 
+.method public abstract c()V
+.end method
+
 .method public abstract c(Landroid/support/v7/widget/RecyclerView$ViewHolder;)V
 .end method
 
 .method public abstract c(Landroid/support/v7/widget/RecyclerView$ViewHolder;Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;)Z
 .end method
 
-.method public abstract d()V
+.method public final d()J
+    .locals 2
+
+    .prologue
+    .line 10394
+    iget-wide v0, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->e:J
+
+    return-wide v0
 .end method
 
 .method public final e()J
     .locals 2
 
     .prologue
-    .line 11875
-    iget-wide v0, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->e:J
+    .line 10412
+    iget-wide v0, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->c:J
 
     return-wide v0
 .end method
@@ -284,8 +259,8 @@
     .locals 2
 
     .prologue
-    .line 11893
-    iget-wide v0, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->c:J
+    .line 10430
+    iget-wide v0, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->d:J
 
     return-wide v0
 .end method
@@ -294,17 +269,17 @@
     .locals 1
 
     .prologue
-    .line 12274
+    .line 10793
     iget-object v0, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->a:Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemAnimatorListener;
 
     if-eqz v0, :cond_0
 
-    .line 12275
+    .line 10794
     iget-object v0, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->a:Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemAnimatorListener;
 
     invoke-interface {v0, p1}, Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemAnimatorListener;->a(Landroid/support/v7/widget/RecyclerView$ViewHolder;)V
 
-    .line 12277
+    .line 10796
     :cond_0
     return-void
 .end method
@@ -313,8 +288,8 @@
     .locals 2
 
     .prologue
-    .line 11911
-    iget-wide v0, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->d:J
+    .line 10448
+    iget-wide v0, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->f:J
 
     return-wide v0
 .end method
@@ -323,65 +298,45 @@
     .locals 1
 
     .prologue
-    .line 12378
+    .line 10897
     const/4 v0, 0x1
 
     return v0
 .end method
 
-.method public final h()J
-    .locals 2
-
-    .prologue
-    .line 11929
-    iget-wide v0, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->f:J
-
-    return-wide v0
-.end method
-
-.method public final i()V
+.method public final h()V
     .locals 3
 
     .prologue
-    .line 12416
+    .line 10935
     iget-object v0, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    move-result v2
+    move-result v1
 
-    .line 12417
+    .line 10936
     const/4 v0, 0x0
 
-    move v1, v0
-
     :goto_0
-    if-ge v1, v2, :cond_0
+    if-ge v0, v1, :cond_0
 
-    .line 12418
-    iget-object v0, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->b:Ljava/util/ArrayList;
+    .line 10937
+    iget-object v2, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->b:Ljava/util/ArrayList;
 
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v0
-
-    check-cast v0, Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemAnimatorFinishedListener;
-
-    invoke-interface {v0}, Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemAnimatorFinishedListener;->a()V
-
-    .line 12417
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
+    .line 10936
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 12420
+    .line 10939
     :cond_0
     iget-object v0, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 12421
+    .line 10940
     return-void
 .end method

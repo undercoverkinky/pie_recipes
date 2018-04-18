@@ -1,11 +1,11 @@
 .class final Lkik/android/chat/fragment/KikScopedDialogFragment$3;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/KikScopedDialogFragment;->show(Lkik/android/chat/fragment/KikDialogFragment;Lkik/android/chat/fragment/KikScopedDialogFragment$DialogScope;Ljava/lang/String;)V
+    value = Lkik/android/chat/fragment/KikScopedDialogFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;Lkik/android/chat/fragment/KikScopedDialogFragment$DialogScope;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Ljava/lang/Object;",
         ">;"
@@ -34,12 +34,12 @@
     .locals 0
 
     .prologue
-    .line 278
+    .line 249
     iput-object p1, p0, Lkik/android/chat/fragment/KikScopedDialogFragment$3;->b:Lkik/android/chat/fragment/KikScopedDialogFragment;
 
     iput-object p2, p0, Lkik/android/chat/fragment/KikScopedDialogFragment$3;->a:Lkik/android/chat/fragment/KikDialogFragment;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -50,13 +50,13 @@
     .locals 2
 
     .prologue
-    .line 282
-    invoke-super {p0}, Lcom/kik/events/k;->b()V
+    .line 253
+    invoke-super {p0}, Lcom/kik/events/l;->b()V
 
-    .line 283
+    .line 254
     iget-object v0, p0, Lkik/android/chat/fragment/KikScopedDialogFragment$3;->b:Lkik/android/chat/fragment/KikScopedDialogFragment;
 
-    invoke-static {v0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->access$000(Lkik/android/chat/fragment/KikScopedDialogFragment;)Landroid/util/SparseArray;
+    invoke-static {v0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->a(Lkik/android/chat/fragment/KikScopedDialogFragment;)Landroid/util/SparseArray;
 
     move-result-object v0
 
@@ -68,6 +68,6 @@
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 284
+    .line 255
     return-void
 .end method

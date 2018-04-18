@@ -25,12 +25,12 @@
     .locals 1
 
     .prologue
-    .line 344
+    .line 335
     const-string v0, "phone-number-model"
 
     sput-object v0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationEnterCodeFragment$a;->a:Ljava/lang/String;
 
-    .line 345
+    .line 336
     const-string v0, "phone-verification-reference"
 
     sput-object v0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationEnterCodeFragment$a;->b:Ljava/lang/String;
@@ -42,7 +42,7 @@
     .locals 0
 
     .prologue
-    .line 342
+    .line 333
     invoke-direct {p0}, Lcom/kik/ui/fragment/FragmentBase$FragmentBundle;-><init>()V
 
     return-void
@@ -52,17 +52,17 @@
     .locals 1
 
     .prologue
-    .line 342
-    .line 1356
+    .line 333
+    .line 1347
     sget-object v0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationEnterCodeFragment$a;->a:Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationEnterCodeFragment$a;->j(Ljava/lang/String;)Landroid/os/Parcelable;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationEnterCodeFragment$a;->o(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v0
 
     check-cast v0, Lkik/android/challenge/PhoneNumberModel;
 
-    .line 342
+    .line 333
     return-object v0
 .end method
 
@@ -70,15 +70,15 @@
     .locals 1
 
     .prologue
-    .line 342
-    .line 1367
+    .line 333
+    .line 1358
     sget-object v0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationEnterCodeFragment$a;->b:Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationEnterCodeFragment$a;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationEnterCodeFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 342
+    .line 333
     return-object v0
 .end method
 
@@ -88,12 +88,12 @@
     .locals 1
 
     .prologue
-    .line 361
+    .line 352
     sget-object v0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationEnterCodeFragment$a;->b:Ljava/lang/String;
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationEnterCodeFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 362
+    .line 353
     return-object p0
 .end method
 
@@ -101,11 +101,11 @@
     .locals 1
 
     .prologue
-    .line 349
+    .line 340
     sget-object v0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationEnterCodeFragment$a;->a:Ljava/lang/String;
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationEnterCodeFragment$a;->a(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 350
+    .line 341
     return-object p0
 .end method

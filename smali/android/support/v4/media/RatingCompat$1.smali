@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 127
+    .line 122
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,10 +41,10 @@
 
 # virtual methods
 .method public final createFromParcel(Landroid/os/Parcel;)Landroid/support/v4/media/RatingCompat;
-    .locals 3
+    .locals 4
 
     .prologue
-    .line 135
+    .line 130
     new-instance v0, Landroid/support/v4/media/RatingCompat;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -55,7 +55,9 @@
 
     move-result v2
 
-    invoke-direct {v0, v1, v2}, Landroid/support/v4/media/RatingCompat;-><init>(IF)V
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v1, v2, v3}, Landroid/support/v4/media/RatingCompat;-><init>(IFLandroid/support/v4/media/RatingCompat$1;)V
 
     return-object v0
 .end method
@@ -64,7 +66,7 @@
     .locals 1
 
     .prologue
-    .line 127
+    .line 122
     invoke-virtual {p0, p1}, Landroid/support/v4/media/RatingCompat$1;->createFromParcel(Landroid/os/Parcel;)Landroid/support/v4/media/RatingCompat;
 
     move-result-object v0
@@ -76,7 +78,7 @@
     .locals 1
 
     .prologue
-    .line 140
+    .line 135
     new-array v0, p1, [Landroid/support/v4/media/RatingCompat;
 
     return-object v0
@@ -86,7 +88,7 @@
     .locals 1
 
     .prologue
-    .line 127
+    .line 122
     invoke-virtual {p0, p1}, Landroid/support/v4/media/RatingCompat$1;->newArray(I)[Landroid/support/v4/media/RatingCompat;
 
     move-result-object v0

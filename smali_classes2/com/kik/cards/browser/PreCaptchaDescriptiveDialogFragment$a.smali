@@ -60,21 +60,21 @@
     .line 136
     const-string v0, "pre.captcha.dialog.extra.onDemandCaptcha.url"
 
-    invoke-virtual {p0, v0}, Lcom/kik/cards/browser/PreCaptchaDescriptiveDialogFragment$a;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/kik/cards/browser/PreCaptchaDescriptiveDialogFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final d_()Ljava/lang/String;
+.method public final h_()Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 131
     const-string v0, "pre.captcha.dialog.extra.srcFrag"
 
-    invoke-virtual {p0, v0}, Lcom/kik/cards/browser/PreCaptchaDescriptiveDialogFragment$a;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/kik/cards/browser/PreCaptchaDescriptiveDialogFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

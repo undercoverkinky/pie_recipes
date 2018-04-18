@@ -27,19 +27,19 @@
     .end annotation
 
     .prologue
-    .line 1573
+    .line 1478
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 1575
+    .line 1480
     const-string v0, "path"
 
     invoke-static {p0, v0}, Landroid/support/multidex/MultiDex;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v2
 
-    .line 1577
+    .line 1482
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-virtual {v2, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -50,24 +50,24 @@
 
     invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 1578
+    .line 1483
     new-array v4, v1, [Ljava/lang/String;
 
-    .line 1579
+    .line 1484
     new-array v5, v1, [Ljava/io/File;
 
-    .line 1580
+    .line 1485
     new-array v6, v1, [Ljava/util/zip/ZipFile;
 
-    .line 1581
+    .line 1486
     new-array v1, v1, [Ldalvik/system/DexFile;
 
-    .line 1582
+    .line 1487
     invoke-interface {p1}, Ljava/util/List;->listIterator()Ljava/util/ListIterator;
 
     move-result-object v7
 
-    .line 1583
+    .line 1488
     :goto_0
     invoke-interface {v7}, Ljava/util/ListIterator;->hasNext()Z
 
@@ -75,19 +75,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 1584
+    .line 1489
     invoke-interface {v7}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/io/File;
 
-    .line 1585
+    .line 1490
     invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 1586
+    .line 1491
     const/16 v9, 0x3a
 
     invoke-virtual {v3, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -96,25 +96,25 @@
 
     invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1587
+    .line 1492
     invoke-interface {v7}, Ljava/util/ListIterator;->previousIndex()I
 
     move-result v9
 
-    .line 1588
+    .line 1493
     aput-object v8, v4, v9
 
-    .line 1589
+    .line 1494
     aput-object v0, v5, v9
 
-    .line 1590
+    .line 1495
     new-instance v10, Ljava/util/zip/ZipFile;
 
     invoke-direct {v10, v0}, Ljava/util/zip/ZipFile;-><init>(Ljava/io/File;)V
 
     aput-object v10, v6, v9
 
-    .line 1591
+    .line 1496
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -143,7 +143,7 @@
 
     goto :goto_0
 
-    .line 1594
+    .line 1499
     :cond_0
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -151,26 +151,26 @@
 
     invoke-virtual {v2, p0, v0}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 1595
+    .line 1500
     const-string v0, "mPaths"
 
     invoke-static {p0, v0, v4}, Landroid/support/multidex/MultiDex;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1596
+    .line 1501
     const-string v0, "mFiles"
 
     invoke-static {p0, v0, v5}, Landroid/support/multidex/MultiDex;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1597
+    .line 1502
     const-string v0, "mZips"
 
     invoke-static {p0, v0, v6}, Landroid/support/multidex/MultiDex;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1598
+    .line 1503
     const-string v0, "mDexs"
 
     invoke-static {p0, v0, v1}, Landroid/support/multidex/MultiDex;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 563
+    .line 469
     return-void
 .end method

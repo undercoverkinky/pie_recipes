@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/KikCodeFragment;->displayErrorDialog(Ljava/lang/String;Ljava/lang/String;)V
+    value = Lkik/android/chat/fragment/KikCodeFragment;->a(Ljava/lang/String;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 638
+    .line 611
     iput-object p1, p0, Lkik/android/chat/fragment/KikCodeFragment$6;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +40,11 @@
     .locals 1
 
     .prologue
-    .line 642
+    .line 615
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$6;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/KikCodeFragment;->handleBackPress()Z
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikCodeFragment;->o()Z
 
-    .line 643
+    .line 616
     return-void
 .end method

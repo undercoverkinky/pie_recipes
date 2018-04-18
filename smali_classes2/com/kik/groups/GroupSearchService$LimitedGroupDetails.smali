@@ -32,10 +32,6 @@
 
 .field public static final JID_FIELD_NUMBER:I = 0x1
 
-.field public static final LAST_ACTIVITY_TIME_FIELD_NUMBER:I = 0x4
-
-.field public static final MAX_GROUP_SIZE_FIELD_NUMBER:I = 0x5
-
 .field public static final MEMBER_COUNT_FIELD_NUMBER:I = 0x3
 
 .field private static final PARSER:Lcom/google/protobuf/Parser;
@@ -59,10 +55,6 @@
 
 .field private jid_:Lcom/kik/ximodel/XiGroupJid;
 
-.field private lastActivityTime_:Lcom/google/protobuf/Timestamp;
-
-.field private maxGroupSize_:I
-
 .field private memberCount_:I
 
 .field private memoizedIsInitialized:B
@@ -73,14 +65,14 @@
     .locals 1
 
     .prologue
-    .line 3932
+    .line 3535
     new-instance v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;
 
     invoke-direct {v0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;-><init>()V
 
     sput-object v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->DEFAULT_INSTANCE:Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;
 
-    .line 3940
+    .line 3543
     new-instance v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails$1;
 
     invoke-direct {v0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails$1;-><init>()V
@@ -91,26 +83,23 @@
 .end method
 
 .method private constructor <init>()V
-    .locals 2
+    .locals 1
 
     .prologue
-    const/4 v1, 0x0
-
-    .line 2365
+    .line 2319
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageV3;-><init>()V
 
-    .line 2683
+    .line 2560
     const/4 v0, -0x1
 
     iput-byte v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->memoizedIsInitialized:B
 
-    .line 2366
-    iput v1, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->memberCount_:I
+    .line 2320
+    const/4 v0, 0x0
 
-    .line 2367
-    iput v1, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->maxGroupSize_:I
+    iput v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->memberCount_:I
 
-    .line 2368
+    .line 2321
     return-void
 .end method
 
@@ -127,29 +116,29 @@
 
     const/4 v2, 0x0
 
-    .line 2379
+    .line 2332
     invoke-direct {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;-><init>()V
 
-    .line 2382
+    .line 2335
     const/4 v0, 0x0
 
     move v3, v0
 
-    .line 2383
+    .line 2336
     :cond_0
     :goto_0
     if-nez v3, :cond_1
 
-    .line 2384
+    .line 2337
     :try_start_0
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readTag()I
 
     move-result v0
 
-    .line 2385
+    .line 2338
     sparse-switch v0, :sswitch_data_0
 
-    .line 2390
+    .line 2343
     invoke-virtual {p1, v0}, Lcom/google/protobuf/CodedInputStream;->skipField(I)Z
 
     move-result v0
@@ -158,22 +147,22 @@
 
     move v3, v4
 
-    .line 2391
+    .line 2344
     goto :goto_0
 
     :sswitch_0
     move v3, v4
 
-    .line 2388
+    .line 2341
     goto :goto_0
 
-    .line 2397
+    .line 2350
     :sswitch_1
     iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->jid_:Lcom/kik/ximodel/XiGroupJid;
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_4
 
-    .line 2398
+    .line 2351
     iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->jid_:Lcom/kik/ximodel/XiGroupJid;
 
     invoke-virtual {v0}, Lcom/kik/ximodel/XiGroupJid;->toBuilder()Lcom/kik/ximodel/XiGroupJid$Builder;
@@ -182,7 +171,7 @@
 
     move-object v1, v0
 
-    .line 2400
+    .line 2353
     :goto_1
     invoke-static {}, Lcom/kik/ximodel/XiGroupJid;->parser()Lcom/google/protobuf/Parser;
 
@@ -196,15 +185,15 @@
 
     iput-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->jid_:Lcom/kik/ximodel/XiGroupJid;
 
-    .line 2401
+    .line 2354
     if-eqz v1, :cond_0
 
-    .line 2402
+    .line 2355
     iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->jid_:Lcom/kik/ximodel/XiGroupJid;
 
     invoke-virtual {v1, v0}, Lcom/kik/ximodel/XiGroupJid$Builder;->mergeFrom(Lcom/kik/ximodel/XiGroupJid;)Lcom/kik/ximodel/XiGroupJid$Builder;
 
-    .line 2403
+    .line 2356
     invoke-virtual {v1}, Lcom/kik/ximodel/XiGroupJid$Builder;->buildPartial()Lcom/kik/ximodel/XiGroupJid;
 
     move-result-object v0
@@ -217,7 +206,7 @@
 
     goto :goto_0
 
-    .line 2460
+    .line 2395
     :catch_0
     move-exception v0
 
@@ -230,23 +219,22 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2465
+    .line 2400
     :catchall_0
     move-exception v0
 
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->makeExtensionsImmutable()V
 
-    .line 2466
     throw v0
 
-    .line 2410
+    .line 2363
     :sswitch_2
     :try_start_2
     iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_3
 
-    .line 2411
+    .line 2364
     iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
     invoke-virtual {v0}, Lcom/kik/groups/GroupsCommon$GroupDisplayData;->toBuilder()Lcom/kik/groups/GroupsCommon$GroupDisplayData$Builder;
@@ -255,7 +243,7 @@
 
     move-object v1, v0
 
-    .line 2413
+    .line 2366
     :goto_2
     invoke-static {}, Lcom/kik/groups/GroupsCommon$GroupDisplayData;->parser()Lcom/google/protobuf/Parser;
 
@@ -269,15 +257,15 @@
 
     iput-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
-    .line 2414
+    .line 2367
     if-eqz v1, :cond_0
 
-    .line 2415
+    .line 2368
     iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
     invoke-virtual {v1, v0}, Lcom/kik/groups/GroupsCommon$GroupDisplayData$Builder;->mergeFrom(Lcom/kik/groups/GroupsCommon$GroupDisplayData;)Lcom/kik/groups/GroupsCommon$GroupDisplayData$Builder;
 
-    .line 2416
+    .line 2369
     invoke-virtual {v1}, Lcom/kik/groups/GroupsCommon$GroupDisplayData$Builder;->buildPartial()Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
     move-result-object v0
@@ -290,17 +278,17 @@
 
     goto :goto_0
 
-    .line 2461
+    .line 2396
     :catch_1
     move-exception v0
 
-    .line 2462
+    .line 2397
     :try_start_3
     new-instance v1, Lcom/google/protobuf/InvalidProtocolBufferException;
 
     invoke-direct {v1, v0}, Lcom/google/protobuf/InvalidProtocolBufferException;-><init>(Ljava/io/IOException;)V
 
-    .line 2463
+    .line 2398
     invoke-virtual {v1, p0}, Lcom/google/protobuf/InvalidProtocolBufferException;->setUnfinishedMessage(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/InvalidProtocolBufferException;
 
     move-result-object v0
@@ -309,7 +297,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 2423
+    .line 2376
     :sswitch_3
     :try_start_4
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readUInt32()I
@@ -320,69 +308,13 @@
 
     goto :goto_0
 
-    .line 2428
+    .line 2381
     :sswitch_4
-    iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->lastActivityTime_:Lcom/google/protobuf/Timestamp;
-
-    if-eqz v0, :cond_3
-
-    .line 2429
-    iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->lastActivityTime_:Lcom/google/protobuf/Timestamp;
-
-    invoke-virtual {v0}, Lcom/google/protobuf/Timestamp;->toBuilder()Lcom/google/protobuf/Timestamp$Builder;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    .line 2431
-    :goto_3
-    invoke-static {}, Lcom/google/protobuf/Timestamp;->parser()Lcom/google/protobuf/Parser;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0, p2}, Lcom/google/protobuf/CodedInputStream;->readMessage(Lcom/google/protobuf/Parser;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/protobuf/Timestamp;
-
-    iput-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->lastActivityTime_:Lcom/google/protobuf/Timestamp;
-
-    .line 2432
-    if-eqz v1, :cond_0
-
-    .line 2433
-    iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->lastActivityTime_:Lcom/google/protobuf/Timestamp;
-
-    invoke-virtual {v1, v0}, Lcom/google/protobuf/Timestamp$Builder;->mergeFrom(Lcom/google/protobuf/Timestamp;)Lcom/google/protobuf/Timestamp$Builder;
-
-    .line 2434
-    invoke-virtual {v1}, Lcom/google/protobuf/Timestamp$Builder;->buildPartial()Lcom/google/protobuf/Timestamp;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->lastActivityTime_:Lcom/google/protobuf/Timestamp;
-
-    goto/16 :goto_0
-
-    .line 2441
-    :sswitch_5
-    invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readUInt32()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->maxGroupSize_:I
-
-    goto/16 :goto_0
-
-    .line 2446
-    :sswitch_6
     iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->groupJoinToken_:Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;
 
     if-eqz v0, :cond_2
 
-    .line 2447
+    .line 2382
     iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->groupJoinToken_:Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;
 
     invoke-virtual {v0}, Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;->toBuilder()Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken$Builder;
@@ -391,8 +323,8 @@
 
     move-object v1, v0
 
-    .line 2449
-    :goto_4
+    .line 2384
+    :goto_3
     invoke-static {}, Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;->parser()Lcom/google/protobuf/Parser;
 
     move-result-object v0
@@ -405,15 +337,15 @@
 
     iput-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->groupJoinToken_:Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;
 
-    .line 2450
+    .line 2385
     if-eqz v1, :cond_0
 
-    .line 2451
+    .line 2386
     iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->groupJoinToken_:Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;
 
     invoke-virtual {v1, v0}, Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken$Builder;->mergeFrom(Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;)Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken$Builder;
 
-    .line 2452
+    .line 2387
     invoke-virtual {v1}, Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken$Builder;->buildPartial()Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;
 
     move-result-object v0
@@ -426,45 +358,36 @@
 
     goto/16 :goto_0
 
-    .line 2465
+    .line 2400
     :cond_1
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->makeExtensionsImmutable()V
 
-    .line 2466
+    .line 2401
     return-void
 
     :cond_2
     move-object v1, v2
 
-    goto :goto_4
+    goto :goto_3
 
     :cond_3
     move-object v1, v2
 
-    goto :goto_3
+    goto :goto_2
 
     :cond_4
     move-object v1, v2
 
-    goto/16 :goto_2
-
-    :cond_5
-    move-object v1, v2
-
     goto/16 :goto_1
 
-    .line 2385
-    nop
-
+    .line 2338
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
         0xa -> :sswitch_1
         0x12 -> :sswitch_2
         0x18 -> :sswitch_3
-        0x22 -> :sswitch_4
-        0x28 -> :sswitch_5
-        0x322 -> :sswitch_6
+        0x322 -> :sswitch_4
     .end sparse-switch
 .end method
 
@@ -477,7 +400,7 @@
     .end annotation
 
     .prologue
-    .line 2357
+    .line 2311
     invoke-direct {p0, p1, p2}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;-><init>(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)V
 
     return-void
@@ -494,15 +417,15 @@
     .end annotation
 
     .prologue
-    .line 2363
+    .line 2317
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;)V
 
-    .line 2683
+    .line 2560
     const/4 v0, -0x1
 
     iput-byte v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->memoizedIsInitialized:B
 
-    .line 2364
+    .line 2318
     return-void
 .end method
 
@@ -510,7 +433,7 @@
     .locals 0
 
     .prologue
-    .line 2357
+    .line 2311
     invoke-direct {p0, p1}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;)V
 
     return-void
@@ -520,7 +443,7 @@
     .locals 1
 
     .prologue
-    .line 2357
+    .line 2311
     sget-boolean v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->alwaysUseFieldBuilders:Z
 
     return v0
@@ -530,7 +453,7 @@
     .locals 0
 
     .prologue
-    .line 2357
+    .line 2311
     iput-object p1, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->jid_:Lcom/kik/ximodel/XiGroupJid;
 
     return-object p1
@@ -540,7 +463,7 @@
     .locals 0
 
     .prologue
-    .line 2357
+    .line 2311
     iput-object p1, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
     return-object p1
@@ -550,47 +473,27 @@
     .locals 0
 
     .prologue
-    .line 2357
+    .line 2311
     iput p1, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->memberCount_:I
 
     return p1
 .end method
 
-.method static synthetic access$4102(Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;Lcom/google/protobuf/Timestamp;)Lcom/google/protobuf/Timestamp;
+.method static synthetic access$4102(Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;)Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;
     .locals 0
 
     .prologue
-    .line 2357
-    iput-object p1, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->lastActivityTime_:Lcom/google/protobuf/Timestamp;
-
-    return-object p1
-.end method
-
-.method static synthetic access$4202(Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;I)I
-    .locals 0
-
-    .prologue
-    .line 2357
-    iput p1, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->maxGroupSize_:I
-
-    return p1
-.end method
-
-.method static synthetic access$4302(Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;)Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;
-    .locals 0
-
-    .prologue
-    .line 2357
+    .line 2311
     iput-object p1, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->groupJoinToken_:Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;
 
     return-object p1
 .end method
 
-.method static synthetic access$4400()Lcom/google/protobuf/Parser;
+.method static synthetic access$4200()Lcom/google/protobuf/Parser;
     .locals 1
 
     .prologue
-    .line 2357
+    .line 2311
     sget-object v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->PARSER:Lcom/google/protobuf/Parser;
 
     return-object v0
@@ -600,7 +503,7 @@
     .locals 1
 
     .prologue
-    .line 3936
+    .line 3539
     sget-object v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->DEFAULT_INSTANCE:Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;
 
     return-object v0
@@ -610,7 +513,7 @@
     .locals 1
 
     .prologue
-    .line 2470
+    .line 2405
     invoke-static {}, Lcom/kik/groups/GroupSearchService;->access$3200()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
@@ -622,7 +525,7 @@
     .locals 1
 
     .prologue
-    .line 2880
+    .line 2730
     sget-object v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->DEFAULT_INSTANCE:Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;
 
     invoke-virtual {v0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->toBuilder()Lcom/kik/groups/GroupSearchService$LimitedGroupDetails$Builder;
@@ -636,7 +539,7 @@
     .locals 1
 
     .prologue
-    .line 2883
+    .line 2733
     sget-object v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->DEFAULT_INSTANCE:Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;
 
     invoke-virtual {v0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->toBuilder()Lcom/kik/groups/GroupSearchService$LimitedGroupDetails$Builder;
@@ -659,17 +562,17 @@
     .end annotation
 
     .prologue
-    .line 2854
+    .line 2704
     sget-object v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 2855
+    .line 2705
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageV3;->parseDelimitedWithIOException(Lcom/google/protobuf/Parser;Ljava/io/InputStream;)Lcom/google/protobuf/Message;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;
 
-    .line 2854
+    .line 2704
     return-object v0
 .end method
 
@@ -682,17 +585,17 @@
     .end annotation
 
     .prologue
-    .line 2861
+    .line 2711
     sget-object v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 2862
+    .line 2712
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->parseDelimitedWithIOException(Lcom/google/protobuf/Parser;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Message;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;
 
-    .line 2861
+    .line 2711
     return-object v0
 .end method
 
@@ -705,7 +608,7 @@
     .end annotation
 
     .prologue
-    .line 2822
+    .line 2672
     sget-object v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->PARSER:Lcom/google/protobuf/Parser;
 
     invoke-interface {v0, p0}, Lcom/google/protobuf/Parser;->parseFrom(Lcom/google/protobuf/ByteString;)Ljava/lang/Object;
@@ -726,7 +629,7 @@
     .end annotation
 
     .prologue
-    .line 2828
+    .line 2678
     sget-object v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->PARSER:Lcom/google/protobuf/Parser;
 
     invoke-interface {v0, p0, p1}, Lcom/google/protobuf/Parser;->parseFrom(Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
@@ -747,17 +650,17 @@
     .end annotation
 
     .prologue
-    .line 2867
+    .line 2717
     sget-object v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 2868
+    .line 2718
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageV3;->parseWithIOException(Lcom/google/protobuf/Parser;Lcom/google/protobuf/CodedInputStream;)Lcom/google/protobuf/Message;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;
 
-    .line 2867
+    .line 2717
     return-object v0
 .end method
 
@@ -770,17 +673,17 @@
     .end annotation
 
     .prologue
-    .line 2874
+    .line 2724
     sget-object v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 2875
+    .line 2725
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->parseWithIOException(Lcom/google/protobuf/Parser;Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Message;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;
 
-    .line 2874
+    .line 2724
     return-object v0
 .end method
 
@@ -793,17 +696,17 @@
     .end annotation
 
     .prologue
-    .line 2842
+    .line 2692
     sget-object v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 2843
+    .line 2693
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageV3;->parseWithIOException(Lcom/google/protobuf/Parser;Ljava/io/InputStream;)Lcom/google/protobuf/Message;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;
 
-    .line 2842
+    .line 2692
     return-object v0
 .end method
 
@@ -816,17 +719,17 @@
     .end annotation
 
     .prologue
-    .line 2849
+    .line 2699
     sget-object v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 2850
+    .line 2700
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->parseWithIOException(Lcom/google/protobuf/Parser;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Message;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;
 
-    .line 2849
+    .line 2699
     return-object v0
 .end method
 
@@ -839,7 +742,7 @@
     .end annotation
 
     .prologue
-    .line 2832
+    .line 2682
     sget-object v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->PARSER:Lcom/google/protobuf/Parser;
 
     invoke-interface {v0, p0}, Lcom/google/protobuf/Parser;->parseFrom([B)Ljava/lang/Object;
@@ -860,7 +763,7 @@
     .end annotation
 
     .prologue
-    .line 2838
+    .line 2688
     sget-object v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->PARSER:Lcom/google/protobuf/Parser;
 
     invoke-interface {v0, p0, p1}, Lcom/google/protobuf/Parser;->parseFrom([BLcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
@@ -885,7 +788,7 @@
     .end annotation
 
     .prologue
-    .line 3950
+    .line 3553
     sget-object v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->PARSER:Lcom/google/protobuf/Parser;
 
     return-object v0
@@ -901,32 +804,32 @@
 
     const/4 v1, 0x1
 
-    .line 2751
+    .line 2614
     if-ne p1, p0, :cond_1
 
-    .line 2784
+    .line 2640
     :cond_0
     :goto_0
     return v1
 
-    .line 2754
+    .line 2617
     :cond_1
     instance-of v0, p1, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;
 
     if-nez v0, :cond_2
 
-    .line 2755
+    .line 2618
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     goto :goto_0
 
-    .line 2757
+    .line 2620
     :cond_2
     check-cast p1, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;
 
-    .line 2760
+    .line 2623
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->hasJid()Z
 
     move-result v0
@@ -935,11 +838,11 @@
 
     move-result v3
 
-    if-ne v0, v3, :cond_7
+    if-ne v0, v3, :cond_6
 
     move v0, v1
 
-    .line 2761
+    .line 2624
     :goto_1
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->hasJid()Z
 
@@ -947,14 +850,14 @@
 
     if-eqz v3, :cond_3
 
-    .line 2762
-    if-eqz v0, :cond_8
+    .line 2625
+    if-eqz v0, :cond_7
 
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getJid()Lcom/kik/ximodel/XiGroupJid;
 
     move-result-object v0
 
-    .line 2763
+    .line 2626
     invoke-virtual {p1}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getJid()Lcom/kik/ximodel/XiGroupJid;
 
     move-result-object v3
@@ -963,14 +866,14 @@
 
     move-result v0
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_7
 
     move v0, v1
 
-    .line 2765
+    .line 2628
     :cond_3
     :goto_2
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_8
 
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->hasDisplayData()Z
 
@@ -980,11 +883,11 @@
 
     move-result v3
 
-    if-ne v0, v3, :cond_9
+    if-ne v0, v3, :cond_8
 
     move v0, v1
 
-    .line 2766
+    .line 2629
     :goto_3
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->hasDisplayData()Z
 
@@ -992,14 +895,14 @@
 
     if-eqz v3, :cond_4
 
-    .line 2767
-    if-eqz v0, :cond_a
+    .line 2630
+    if-eqz v0, :cond_9
 
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getDisplayData()Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
     move-result-object v0
 
-    .line 2768
+    .line 2631
     invoke-virtual {p1}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getDisplayData()Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
     move-result-object v3
@@ -1008,93 +911,31 @@
 
     move-result v0
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_9
 
     move v0, v1
 
-    .line 2770
+    .line 2633
     :cond_4
     :goto_4
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_a
 
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getMemberCount()I
 
     move-result v0
 
-    .line 2771
+    .line 2634
     invoke-virtual {p1}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getMemberCount()I
 
     move-result v3
 
-    if-ne v0, v3, :cond_b
+    if-ne v0, v3, :cond_a
 
     move v0, v1
 
-    .line 2772
+    .line 2635
     :goto_5
-    if-eqz v0, :cond_c
-
-    invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->hasLastActivityTime()Z
-
-    move-result v0
-
-    invoke-virtual {p1}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->hasLastActivityTime()Z
-
-    move-result v3
-
-    if-ne v0, v3, :cond_c
-
-    move v0, v1
-
-    .line 2773
-    :goto_6
-    invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->hasLastActivityTime()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_5
-
-    .line 2774
-    if-eqz v0, :cond_d
-
-    invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getLastActivityTime()Lcom/google/protobuf/Timestamp;
-
-    move-result-object v0
-
-    .line 2775
-    invoke-virtual {p1}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getLastActivityTime()Lcom/google/protobuf/Timestamp;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Lcom/google/protobuf/Timestamp;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_d
-
-    move v0, v1
-
-    .line 2777
-    :cond_5
-    :goto_7
-    if-eqz v0, :cond_e
-
-    invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getMaxGroupSize()I
-
-    move-result v0
-
-    .line 2778
-    invoke-virtual {p1}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getMaxGroupSize()I
-
-    move-result v3
-
-    if-ne v0, v3, :cond_e
-
-    move v0, v1
-
-    .line 2779
-    :goto_8
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_b
 
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->hasGroupJoinToken()Z
 
@@ -1104,26 +945,26 @@
 
     move-result v3
 
-    if-ne v0, v3, :cond_f
+    if-ne v0, v3, :cond_b
 
     move v0, v1
 
-    .line 2780
-    :goto_9
+    .line 2636
+    :goto_6
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->hasGroupJoinToken()Z
 
     move-result v3
 
-    if-eqz v3, :cond_10
+    if-eqz v3, :cond_c
 
-    .line 2781
-    if-eqz v0, :cond_6
+    .line 2637
+    if-eqz v0, :cond_5
 
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getGroupJoinToken()Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;
 
     move-result-object v0
 
-    .line 2782
+    .line 2638
     invoke-virtual {p1}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getGroupJoinToken()Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;
 
     move-result-object v3
@@ -1134,66 +975,48 @@
 
     if-nez v0, :cond_0
 
-    :cond_6
+    :cond_5
     move v1, v2
 
     goto/16 :goto_0
 
+    :cond_6
+    move v0, v2
+
+    .line 2623
+    goto :goto_1
+
     :cond_7
     move v0, v2
 
-    .line 2760
-    goto/16 :goto_1
+    .line 2626
+    goto :goto_2
 
     :cond_8
     move v0, v2
 
-    .line 2763
-    goto/16 :goto_2
+    .line 2628
+    goto :goto_3
 
     :cond_9
     move v0, v2
 
-    .line 2765
-    goto/16 :goto_3
+    .line 2631
+    goto :goto_4
 
     :cond_a
     move v0, v2
 
-    .line 2768
-    goto :goto_4
+    .line 2634
+    goto :goto_5
 
     :cond_b
     move v0, v2
 
-    .line 2771
-    goto :goto_5
-
-    :cond_c
-    move v0, v2
-
-    .line 2772
+    .line 2635
     goto :goto_6
 
-    :cond_d
-    move v0, v2
-
-    .line 2775
-    goto :goto_7
-
-    :cond_e
-    move v0, v2
-
-    .line 2778
-    goto :goto_8
-
-    :cond_f
-    move v0, v2
-
-    .line 2779
-    goto :goto_9
-
-    :cond_10
+    :cond_c
     move v1, v0
 
     goto/16 :goto_0
@@ -1203,7 +1026,7 @@
     .locals 1
 
     .prologue
-    .line 2357
+    .line 2311
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getDefaultInstanceForType()Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;
 
     move-result-object v0
@@ -1215,7 +1038,7 @@
     .locals 1
 
     .prologue
-    .line 2357
+    .line 2311
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getDefaultInstanceForType()Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;
 
     move-result-object v0
@@ -1227,7 +1050,7 @@
     .locals 1
 
     .prologue
-    .line 3959
+    .line 3562
     sget-object v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->DEFAULT_INSTANCE:Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;
 
     return-object v0
@@ -1237,7 +1060,7 @@
     .locals 1
 
     .prologue
-    .line 2541
+    .line 2476
     iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
     if-nez v0, :cond_0
@@ -1259,7 +1082,7 @@
     .locals 1
 
     .prologue
-    .line 2552
+    .line 2487
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getDisplayData()Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
     move-result-object v0
@@ -1271,7 +1094,7 @@
     .locals 1
 
     .prologue
-    .line 2662
+    .line 2539
     iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->groupJoinToken_:Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;
 
     if-nez v0, :cond_0
@@ -1293,7 +1116,7 @@
     .locals 1
 
     .prologue
-    .line 2680
+    .line 2557
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getGroupJoinToken()Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;
 
     move-result-object v0
@@ -1305,7 +1128,7 @@
     .locals 1
 
     .prologue
-    .line 2504
+    .line 2439
     iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->jid_:Lcom/kik/ximodel/XiGroupJid;
 
     if-nez v0, :cond_0
@@ -1327,7 +1150,7 @@
     .locals 1
 
     .prologue
-    .line 2516
+    .line 2451
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getJid()Lcom/kik/ximodel/XiGroupJid;
 
     move-result-object v0
@@ -1335,55 +1158,11 @@
     return-object v0
 .end method
 
-.method public final getLastActivityTime()Lcom/google/protobuf/Timestamp;
-    .locals 1
-
-    .prologue
-    .line 2592
-    iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->lastActivityTime_:Lcom/google/protobuf/Timestamp;
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Lcom/google/protobuf/Timestamp;->getDefaultInstance()Lcom/google/protobuf/Timestamp;
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->lastActivityTime_:Lcom/google/protobuf/Timestamp;
-
-    goto :goto_0
-.end method
-
-.method public final getLastActivityTimeOrBuilder()Lcom/google/protobuf/TimestampOrBuilder;
-    .locals 1
-
-    .prologue
-    .line 2604
-    invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getLastActivityTime()Lcom/google/protobuf/Timestamp;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getMaxGroupSize()I
-    .locals 1
-
-    .prologue
-    .line 2623
-    iget v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->maxGroupSize_:I
-
-    return v0
-.end method
-
 .method public final getMemberCount()I
     .locals 1
 
     .prologue
-    .line 2565
+    .line 2500
     iget v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->memberCount_:I
 
     return v0
@@ -1402,7 +1181,7 @@
     .end annotation
 
     .prologue
-    .line 3955
+    .line 3558
     sget-object v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->PARSER:Lcom/google/protobuf/Parser;
 
     return-object v0
@@ -1412,31 +1191,31 @@
     .locals 3
 
     .prologue
-    .line 2716
+    .line 2587
     iget v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->memoizedSize:I
 
-    .line 2717
+    .line 2588
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 2745
+    .line 2608
     :goto_0
     return v0
 
-    .line 2719
+    .line 2590
     :cond_0
     const/4 v0, 0x0
 
-    .line 2720
+    .line 2591
     iget-object v1, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->jid_:Lcom/kik/ximodel/XiGroupJid;
 
     if-eqz v1, :cond_1
 
-    .line 2721
+    .line 2592
     const/4 v0, 0x1
 
-    .line 2722
+    .line 2593
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getJid()Lcom/kik/ximodel/XiGroupJid;
 
     move-result-object v1
@@ -1447,16 +1226,16 @@
 
     add-int/lit8 v0, v0, 0x0
 
-    .line 2724
+    .line 2595
     :cond_1
     iget-object v1, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
     if-eqz v1, :cond_2
 
-    .line 2725
+    .line 2596
     const/4 v1, 0x2
 
-    .line 2726
+    .line 2597
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getDisplayData()Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
     move-result-object v2
@@ -1467,72 +1246,34 @@
 
     add-int/2addr v0, v1
 
-    .line 2728
+    .line 2599
     :cond_2
     iget v1, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->memberCount_:I
 
     if-eqz v1, :cond_3
 
-    .line 2729
+    .line 2600
     const/4 v1, 0x3
 
     iget v2, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->memberCount_:I
 
-    .line 2730
+    .line 2601
     invoke-static {v1, v2}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32Size(II)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 2732
+    .line 2603
     :cond_3
-    iget-object v1, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->lastActivityTime_:Lcom/google/protobuf/Timestamp;
+    iget-object v1, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->groupJoinToken_:Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;
 
     if-eqz v1, :cond_4
 
-    .line 2733
-    const/4 v1, 0x4
-
-    .line 2734
-    invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getLastActivityTime()Lcom/google/protobuf/Timestamp;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/google/protobuf/CodedOutputStream;->computeMessageSize(ILcom/google/protobuf/MessageLite;)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    .line 2736
-    :cond_4
-    iget v1, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->maxGroupSize_:I
-
-    if-eqz v1, :cond_5
-
-    .line 2737
-    const/4 v1, 0x5
-
-    iget v2, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->maxGroupSize_:I
-
-    .line 2738
-    invoke-static {v1, v2}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32Size(II)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    .line 2740
-    :cond_5
-    iget-object v1, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->groupJoinToken_:Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;
-
-    if-eqz v1, :cond_6
-
-    .line 2741
+    .line 2604
     const/16 v1, 0x64
 
-    .line 2742
+    .line 2605
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getGroupJoinToken()Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;
 
     move-result-object v2
@@ -1543,8 +1284,8 @@
 
     add-int/2addr v0, v1
 
-    .line 2744
-    :cond_6
+    .line 2607
+    :cond_4
     iput v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->memoizedSize:I
 
     goto :goto_0
@@ -1554,7 +1295,7 @@
     .locals 1
 
     .prologue
-    .line 2373
+    .line 2326
     invoke-static {}, Lcom/google/protobuf/UnknownFieldSet;->getDefaultInstance()Lcom/google/protobuf/UnknownFieldSet;
 
     move-result-object v0
@@ -1566,7 +1307,7 @@
     .locals 1
 
     .prologue
-    .line 2530
+    .line 2465
     iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
     if-eqz v0, :cond_0
@@ -1586,7 +1327,7 @@
     .locals 1
 
     .prologue
-    .line 2644
+    .line 2521
     iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->groupJoinToken_:Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;
 
     if-eqz v0, :cond_0
@@ -1606,28 +1347,8 @@
     .locals 1
 
     .prologue
-    .line 2492
+    .line 2427
     iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->jid_:Lcom/kik/ximodel/XiGroupJid;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final hasLastActivityTime()Z
-    .locals 1
-
-    .prologue
-    .line 2580
-    iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->lastActivityTime_:Lcom/google/protobuf/Timestamp;
 
     if-eqz v0, :cond_0
 
@@ -1646,19 +1367,19 @@
     .locals 2
 
     .prologue
-    .line 2789
+    .line 2645
     iget v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->memoizedHashCode:I
 
     if-eqz v0, :cond_0
 
-    .line 2790
+    .line 2646
     iget v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->memoizedHashCode:I
 
-    .line 2816
+    .line 2666
     :goto_0
     return v0
 
-    .line 2793
+    .line 2649
     :cond_0
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getDescriptorForType()Lcom/google/protobuf/Descriptors$Descriptor;
 
@@ -1670,19 +1391,19 @@
 
     add-int/lit16 v0, v0, 0x30b
 
-    .line 2794
+    .line 2650
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->hasJid()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 2795
+    .line 2651
     mul-int/lit8 v0, v0, 0x25
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 2796
+    .line 2652
     mul-int/lit8 v0, v0, 0x35
 
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getJid()Lcom/kik/ximodel/XiGroupJid;
@@ -1695,7 +1416,7 @@
 
     add-int/2addr v0, v1
 
-    .line 2798
+    .line 2654
     :cond_1
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->hasDisplayData()Z
 
@@ -1703,12 +1424,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 2799
+    .line 2655
     mul-int/lit8 v0, v0, 0x25
 
     add-int/lit8 v0, v0, 0x2
 
-    .line 2800
+    .line 2656
     mul-int/lit8 v0, v0, 0x35
 
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getDisplayData()Lcom/kik/groups/GroupsCommon$GroupDisplayData;
@@ -1721,13 +1442,13 @@
 
     add-int/2addr v0, v1
 
-    .line 2802
+    .line 2658
     :cond_2
     mul-int/lit8 v0, v0, 0x25
 
     add-int/lit8 v0, v0, 0x3
 
-    .line 2803
+    .line 2659
     mul-int/lit8 v0, v0, 0x35
 
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getMemberCount()I
@@ -1736,59 +1457,19 @@
 
     add-int/2addr v0, v1
 
-    .line 2804
-    invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->hasLastActivityTime()Z
+    .line 2660
+    invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->hasGroupJoinToken()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 2805
-    mul-int/lit8 v0, v0, 0x25
-
-    add-int/lit8 v0, v0, 0x4
-
-    .line 2806
-    mul-int/lit8 v0, v0, 0x35
-
-    invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getLastActivityTime()Lcom/google/protobuf/Timestamp;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/google/protobuf/Timestamp;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    .line 2808
-    :cond_3
-    mul-int/lit8 v0, v0, 0x25
-
-    add-int/lit8 v0, v0, 0x5
-
-    .line 2809
-    mul-int/lit8 v0, v0, 0x35
-
-    invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getMaxGroupSize()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    .line 2810
-    invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->hasGroupJoinToken()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    .line 2811
+    .line 2661
     mul-int/lit8 v0, v0, 0x25
 
     add-int/lit8 v0, v0, 0x64
 
-    .line 2812
+    .line 2662
     mul-int/lit8 v0, v0, 0x35
 
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getGroupJoinToken()Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;
@@ -1801,8 +1482,8 @@
 
     add-int/2addr v0, v1
 
-    .line 2814
-    :cond_4
+    .line 2664
+    :cond_3
     mul-int/lit8 v0, v0, 0x1d
 
     iget-object v1, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
@@ -1813,7 +1494,7 @@
 
     add-int/2addr v0, v1
 
-    .line 2815
+    .line 2665
     iput v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->memoizedHashCode:I
 
     goto :goto_0
@@ -1823,7 +1504,7 @@
     .locals 3
 
     .prologue
-    .line 2475
+    .line 2410
     invoke-static {}, Lcom/kik/groups/GroupSearchService;->access$3300()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -1832,12 +1513,12 @@
 
     const-class v2, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails$Builder;
 
-    .line 2476
+    .line 2411
     invoke-virtual {v0, v1, v2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;->ensureFieldAccessorsInitialized(Ljava/lang/Class;Ljava/lang/Class;)Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
 
-    .line 2475
+    .line 2410
     return-object v0
 .end method
 
@@ -1847,17 +1528,17 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 2685
+    .line 2562
     iget-byte v1, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->memoizedIsInitialized:B
 
-    .line 2686
+    .line 2563
     if-ne v1, v0, :cond_0
 
-    .line 2690
+    .line 2567
     :goto_0
     return v0
 
-    .line 2687
+    .line 2564
     :cond_0
     if-nez v1, :cond_1
 
@@ -1865,7 +1546,7 @@
 
     goto :goto_0
 
-    .line 2689
+    .line 2566
     :cond_1
     iput-byte v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->memoizedIsInitialized:B
 
@@ -1876,7 +1557,7 @@
     .locals 1
 
     .prologue
-    .line 2357
+    .line 2311
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->newBuilderForType()Lcom/kik/groups/GroupSearchService$LimitedGroupDetails$Builder;
 
     move-result-object v0
@@ -1888,7 +1569,7 @@
     .locals 1
 
     .prologue
-    .line 2357
+    .line 2311
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->newBuilderForType(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)Lcom/kik/groups/GroupSearchService$LimitedGroupDetails$Builder;
 
     move-result-object v0
@@ -1900,7 +1581,7 @@
     .locals 1
 
     .prologue
-    .line 2357
+    .line 2311
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->newBuilderForType()Lcom/kik/groups/GroupSearchService$LimitedGroupDetails$Builder;
 
     move-result-object v0
@@ -1912,7 +1593,7 @@
     .locals 1
 
     .prologue
-    .line 2878
+    .line 2728
     invoke-static {}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->newBuilder()Lcom/kik/groups/GroupSearchService$LimitedGroupDetails$Builder;
 
     move-result-object v0
@@ -1924,14 +1605,14 @@
     .locals 2
 
     .prologue
-    .line 2893
+    .line 2743
     new-instance v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails$Builder;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p1, v1}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails$Builder;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;Lcom/kik/groups/GroupSearchService$1;)V
 
-    .line 2894
+    .line 2744
     return-object v0
 .end method
 
@@ -1939,7 +1620,7 @@
     .locals 1
 
     .prologue
-    .line 2357
+    .line 2311
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->toBuilder()Lcom/kik/groups/GroupSearchService$LimitedGroupDetails$Builder;
 
     move-result-object v0
@@ -1951,7 +1632,7 @@
     .locals 1
 
     .prologue
-    .line 2357
+    .line 2311
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->toBuilder()Lcom/kik/groups/GroupSearchService$LimitedGroupDetails$Builder;
 
     move-result-object v0
@@ -1965,7 +1646,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2886
+    .line 2736
     sget-object v0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->DEFAULT_INSTANCE:Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;
 
     if-ne p0, v0, :cond_0
@@ -1982,7 +1663,7 @@
 
     invoke-direct {v0, v1}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails$Builder;-><init>(Lcom/kik/groups/GroupSearchService$1;)V
 
-    .line 2887
+    .line 2737
     invoke-virtual {v0, p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails$Builder;->mergeFrom(Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;)Lcom/kik/groups/GroupSearchService$LimitedGroupDetails$Builder;
 
     move-result-object v0
@@ -1999,12 +1680,12 @@
     .end annotation
 
     .prologue
-    .line 2695
+    .line 2572
     iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->jid_:Lcom/kik/ximodel/XiGroupJid;
 
     if-eqz v0, :cond_0
 
-    .line 2696
+    .line 2573
     const/4 v0, 0x1
 
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getJid()Lcom/kik/ximodel/XiGroupJid;
@@ -2013,13 +1694,13 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;)V
 
-    .line 2698
+    .line 2575
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
     if-eqz v0, :cond_1
 
-    .line 2699
+    .line 2576
     const/4 v0, 0x2
 
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getDisplayData()Lcom/kik/groups/GroupsCommon$GroupDisplayData;
@@ -2028,54 +1709,26 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;)V
 
-    .line 2701
+    .line 2578
     :cond_1
     iget v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->memberCount_:I
 
     if-eqz v0, :cond_2
 
-    .line 2702
+    .line 2579
     const/4 v0, 0x3
 
     iget v1, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->memberCount_:I
 
     invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32(II)V
 
-    .line 2704
+    .line 2581
     :cond_2
-    iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->lastActivityTime_:Lcom/google/protobuf/Timestamp;
+    iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->groupJoinToken_:Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;
 
     if-eqz v0, :cond_3
 
-    .line 2705
-    const/4 v0, 0x4
-
-    invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getLastActivityTime()Lcom/google/protobuf/Timestamp;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;)V
-
-    .line 2707
-    :cond_3
-    iget v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->maxGroupSize_:I
-
-    if-eqz v0, :cond_4
-
-    .line 2708
-    const/4 v0, 0x5
-
-    iget v1, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->maxGroupSize_:I
-
-    invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32(II)V
-
-    .line 2710
-    :cond_4
-    iget-object v0, p0, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->groupJoinToken_:Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;
-
-    if-eqz v0, :cond_5
-
-    .line 2711
+    .line 2582
     const/16 v0, 0x64
 
     invoke-virtual {p0}, Lcom/kik/groups/GroupSearchService$LimitedGroupDetails;->getGroupJoinToken()Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;
@@ -2084,7 +1737,7 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;)V
 
-    .line 2713
-    :cond_5
+    .line 2584
+    :cond_3
     return-void
 .end method

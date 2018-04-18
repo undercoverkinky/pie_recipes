@@ -165,10 +165,8 @@
 
     invoke-virtual {p0}, Lcom/kik/ximodel/XiLocale;->makeExtensionsImmutable()V
 
-    .line 61
     throw v0
 
-    .line 60
     :cond_1
     invoke-virtual {p0}, Lcom/kik/ximodel/XiLocale;->makeExtensionsImmutable()V
 

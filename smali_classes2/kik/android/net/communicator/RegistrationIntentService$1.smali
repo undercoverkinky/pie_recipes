@@ -1,5 +1,5 @@
 .class final Lkik/android/net/communicator/RegistrationIntentService$1;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,9 +15,9 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
-        "Lkik/core/net/outgoing/j;",
+        "Lkik/core/net/outgoing/ae;",
         ">;"
     }
 .end annotation
@@ -34,12 +34,12 @@
     .locals 0
 
     .prologue
-    .line 57
+    .line 56
     iput-object p1, p0, Lkik/android/net/communicator/RegistrationIntentService$1;->b:Lkik/android/net/communicator/RegistrationIntentService;
 
     iput-object p2, p0, Lkik/android/net/communicator/RegistrationIntentService$1;->a:Ljava/lang/String;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -50,8 +50,8 @@
     .locals 3
 
     .prologue
-    .line 57
-    .line 1061
+    .line 56
+    .line 1060
     iget-object v0, p0, Lkik/android/net/communicator/RegistrationIntentService$1;->b:Lkik/android/net/communicator/RegistrationIntentService;
 
     iget-object v0, v0, Lkik/android/net/communicator/RegistrationIntentService;->b:Lkik/core/interfaces/ad;
@@ -62,7 +62,7 @@
 
     invoke-interface {v0, v1, v2}, Lkik/core/interfaces/ad;->c(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 57
+    .line 56
     return-void
 .end method
 
@@ -70,9 +70,9 @@
     .locals 0
 
     .prologue
-    .line 67
-    invoke-static {p1}, Lkik/android/util/av;->a(Ljava/lang/Throwable;)V
+    .line 66
+    invoke-static {p1}, Lkik/android/util/ax;->e(Ljava/lang/Throwable;)V
 
-    .line 68
+    .line 67
     return-void
 .end method

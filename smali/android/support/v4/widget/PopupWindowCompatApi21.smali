@@ -3,12 +3,6 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x15
-.end annotation
-
-
 # static fields
 .field private static final TAG:Ljava/lang/String; = "PopupWindowCompatApi21"
 
@@ -20,7 +14,7 @@
     .locals 2
 
     .prologue
-    .line 36
+    .line 32
     :try_start_0
     const-class v0, Landroid/widget/PopupWindow;
 
@@ -30,7 +24,7 @@
 
     move-result-object v0
 
-    .line 37
+    .line 33
     sput-object v0, Landroid/support/v4/widget/PopupWindowCompatApi21;->sOverlapAnchorField:Ljava/lang/reflect/Field;
 
     const/4 v1, 0x1
@@ -39,7 +33,7 @@
     :try_end_0
     .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 41
+    .line 37
     :goto_0
     return-void
 
@@ -53,7 +47,7 @@
     .locals 0
 
     .prologue
-    .line 28
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -63,12 +57,12 @@
     .locals 1
 
     .prologue
-    .line 54
+    .line 50
     sget-object v0, Landroid/support/v4/widget/PopupWindowCompatApi21;->sOverlapAnchorField:Ljava/lang/reflect/Field;
 
     if-eqz v0, :cond_0
 
-    .line 56
+    .line 52
     :try_start_0
     sget-object v0, Landroid/support/v4/widget/PopupWindowCompatApi21;->sOverlapAnchorField:Ljava/lang/reflect/Field;
 
@@ -84,7 +78,7 @@
 
     move-result v0
 
-    .line 61
+    .line 57
     :goto_0
     return v0
 
@@ -101,12 +95,12 @@
     .locals 2
 
     .prologue
-    .line 44
+    .line 40
     sget-object v0, Landroid/support/v4/widget/PopupWindowCompatApi21;->sOverlapAnchorField:Ljava/lang/reflect/Field;
 
     if-eqz v0, :cond_0
 
-    .line 46
+    .line 42
     :try_start_0
     sget-object v0, Landroid/support/v4/widget/PopupWindowCompatApi21;->sOverlapAnchorField:Ljava/lang/reflect/Field;
 
@@ -118,7 +112,7 @@
     :try_end_0
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 51
+    .line 47
     :cond_0
     :goto_0
     return-void

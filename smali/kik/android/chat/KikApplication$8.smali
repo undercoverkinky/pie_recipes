@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Lcom/kik/events/e",
         "<",
-        "Ljava/lang/Object;",
+        "Ljava/lang/Boolean;",
         ">;"
     }
 .end annotation
@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 793
+    .line 726
     iput-object p1, p0, Lkik/android/chat/KikApplication$8;->a:Lkik/android/chat/KikApplication;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,56 +46,26 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 3
 
     .prologue
-    .line 797
+    .line 726
+    check-cast p2, Ljava/lang/Boolean;
+
+    .line 1730
     iget-object v0, p0, Lkik/android/chat/KikApplication$8;->a:Lkik/android/chat/KikApplication;
 
     iget-object v0, v0, Lkik/android/chat/KikApplication;->a:Lcom/kik/android/Mixpanel;
 
-    const-string v1, "Contact List Size"
+    const-string v1, "ABM Opt In"
 
-    iget-object v2, p0, Lkik/android/chat/KikApplication$8;->a:Lkik/android/chat/KikApplication;
-
-    invoke-static {v2}, Lkik/android/chat/KikApplication;->e(Lkik/android/chat/KikApplication;)Lkik/core/interfaces/v;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Lkik/core/interfaces/v;->n()Ljava/util/List;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/List;->size()I
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel;->a(Ljava/lang/String;I)Lcom/kik/android/Mixpanel;
+    invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;Z)Lcom/kik/android/Mixpanel;
 
-    .line 798
-    iget-object v0, p0, Lkik/android/chat/KikApplication$8;->a:Lkik/android/chat/KikApplication;
-
-    iget-object v0, v0, Lkik/android/chat/KikApplication;->a:Lcom/kik/android/Mixpanel;
-
-    const-string v1, "Block List Size"
-
-    iget-object v2, p0, Lkik/android/chat/KikApplication$8;->a:Lkik/android/chat/KikApplication;
-
-    invoke-static {v2}, Lkik/android/chat/KikApplication;->e(Lkik/android/chat/KikApplication;)Lkik/core/interfaces/v;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Lkik/core/interfaces/v;->o()Ljava/util/List;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel;->a(Ljava/lang/String;I)Lcom/kik/android/Mixpanel;
-
-    .line 799
+    .line 726
     return-void
 .end method

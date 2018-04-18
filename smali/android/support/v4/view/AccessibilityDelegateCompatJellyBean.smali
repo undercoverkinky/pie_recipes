@@ -4,10 +4,6 @@
 
 
 # annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x10
-.end annotation
-
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/support/v4/view/AccessibilityDelegateCompatJellyBean$AccessibilityDelegateBridgeJellyBean;
@@ -20,10 +16,10 @@
     .locals 0
 
     .prologue
-    .line 35
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
+    .line 32
     return-void
 .end method
 
@@ -31,7 +27,7 @@
     .locals 1
 
     .prologue
-    .line 104
+    .line 99
     check-cast p0, Landroid/view/View$AccessibilityDelegate;
 
     invoke-virtual {p0, p1}, Landroid/view/View$AccessibilityDelegate;->getAccessibilityNodeProvider(Landroid/view/View;)Landroid/view/accessibility/AccessibilityNodeProvider;
@@ -45,7 +41,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 47
     new-instance v0, Landroid/support/v4/view/AccessibilityDelegateCompatJellyBean$1;
 
     invoke-direct {v0, p0}, Landroid/support/v4/view/AccessibilityDelegateCompatJellyBean$1;-><init>(Landroid/support/v4/view/AccessibilityDelegateCompatJellyBean$AccessibilityDelegateBridgeJellyBean;)V
@@ -57,7 +53,7 @@
     .locals 1
 
     .prologue
-    .line 109
+    .line 104
     check-cast p0, Landroid/view/View$AccessibilityDelegate;
 
     invoke-virtual {p0, p1, p2, p3}, Landroid/view/View$AccessibilityDelegate;->performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z

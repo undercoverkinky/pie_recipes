@@ -23,7 +23,7 @@
     .locals 3
 
     .prologue
-    .line 350
+    .line 347
     invoke-static {}, Lcom/rounds/kik/conference/messaging/BaseVidyoMessage$MessageType;->values()[Lcom/rounds/kik/conference/messaging/BaseVidyoMessage$MessageType;
 
     move-result-object v0

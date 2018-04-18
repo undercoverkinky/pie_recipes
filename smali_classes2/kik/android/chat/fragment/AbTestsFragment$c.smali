@@ -25,19 +25,19 @@
     .locals 1
 
     .prologue
-    .line 337
+    .line 328
     iput-object p1, p0, Lkik/android/chat/fragment/AbTestsFragment$c;->a:Lkik/android/chat/fragment/AbTestsFragment;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 338
+    .line 329
     invoke-static {p2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/chat/fragment/AbTestsFragment$c;->b:Landroid/view/LayoutInflater;
 
-    .line 339
+    .line 330
     return-void
 .end method
 
@@ -45,14 +45,14 @@
     .locals 2
 
     .prologue
-    .line 351
+    .line 342
     iget-object v0, p0, Lkik/android/chat/fragment/AbTestsFragment$c;->a:Lkik/android/chat/fragment/AbTestsFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/AbTestsFragment;->f(Lkik/android/chat/fragment/AbTestsFragment;)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 353
+    .line 344
     if-ltz p1, :cond_0
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -82,7 +82,7 @@
     .locals 1
 
     .prologue
-    .line 345
+    .line 336
     iget-object v0, p0, Lkik/android/chat/fragment/AbTestsFragment$c;->a:Lkik/android/chat/fragment/AbTestsFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/AbTestsFragment;->f(Lkik/android/chat/fragment/AbTestsFragment;)Ljava/util/ArrayList;
@@ -100,7 +100,7 @@
     .locals 1
 
     .prologue
-    .line 332
+    .line 323
     invoke-direct {p0, p1}, Lkik/android/chat/fragment/AbTestsFragment$c;->a(I)Lkik/core/abtesting/b;
 
     move-result-object v0
@@ -112,7 +112,7 @@
     .locals 2
 
     .prologue
-    .line 359
+    .line 350
     const-wide/16 v0, 0x0
 
     return-wide v0
@@ -124,26 +124,26 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 367
+    .line 358
     if-nez p2, :cond_0
 
-    .line 368
+    .line 359
     iget-object v0, p0, Lkik/android/chat/fragment/AbTestsFragment$c;->b:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f040136
+    const v1, 0x7f040107
 
     invoke-virtual {v0, v1, p3, v5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p2
 
-    .line 369
+    .line 360
     new-instance v1, Lkik/android/chat/fragment/AbTestsFragment$d;
 
     iget-object v0, p0, Lkik/android/chat/fragment/AbTestsFragment$c;->a:Lkik/android/chat/fragment/AbTestsFragment;
 
     invoke-direct {v1, v0, v5}, Lkik/android/chat/fragment/AbTestsFragment$d;-><init>(Lkik/android/chat/fragment/AbTestsFragment;B)V
 
-    .line 370
+    .line 361
     const v0, 0x1020016
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -154,7 +154,7 @@
 
     iput-object v0, v1, Lkik/android/chat/fragment/AbTestsFragment$d;->a:Landroid/widget/TextView;
 
-    .line 371
+    .line 362
     const v0, 0x1020010
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -167,13 +167,13 @@
 
     move-object v0, v1
 
-    .line 377
+    .line 368
     :goto_0
     invoke-direct {p0, p1}, Lkik/android/chat/fragment/AbTestsFragment$c;->a(I)Lkik/core/abtesting/b;
 
     move-result-object v1
 
-    .line 378
+    .line 369
     iget-object v2, v0, Lkik/android/chat/fragment/AbTestsFragment$d;->a:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Lkik/core/abtesting/b;->a()Ljava/lang/String;
@@ -182,7 +182,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 379
+    .line 370
     iget-object v2, v0, Lkik/android/chat/fragment/AbTestsFragment$d;->b:Landroid/widget/TextView;
 
     const-string v3, "%s variants"
@@ -211,13 +211,13 @@
 
     invoke-virtual {v2, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 380
+    .line 371
     invoke-virtual {p2, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 382
+    .line 373
     return-object p2
 
-    .line 374
+    .line 365
     :cond_0
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 

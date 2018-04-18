@@ -63,7 +63,6 @@
     .line 60
     if-nez v3, :cond_1
 
-    .line 61
     invoke-static {v2}, Landroid/support/v4/content/IntentCompat;->makeMainActivity(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object v0
@@ -75,7 +74,6 @@
 
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    .line 62
     invoke-virtual {v3, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0

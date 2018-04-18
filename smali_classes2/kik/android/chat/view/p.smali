@@ -1,43 +1,35 @@
-.class final synthetic Lkik/android/chat/view/p;
+.class public interface abstract Lkik/android/chat/view/p;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
-
-
-# instance fields
-.field private final a:Lkik/android/chat/view/CameraIconBarViewImpl;
-
-
-# direct methods
-.method private constructor <init>(Lkik/android/chat/view/CameraIconBarViewImpl;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lkik/android/chat/view/p;->a:Lkik/android/chat/view/CameraIconBarViewImpl;
-
-    return-void
-.end method
-
-.method public static a(Lkik/android/chat/view/CameraIconBarViewImpl;)Landroid/view/View$OnClickListener;
-    .locals 1
-
-    new-instance v0, Lkik/android/chat/view/p;
-
-    invoke-direct {v0, p0}, Lkik/android/chat/view/p;-><init>(Lkik/android/chat/view/CameraIconBarViewImpl;)V
-
-    return-object v0
-.end method
+.source "SourceFile"
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
+.method public abstract A()V
+.end method
 
-    iget-object v0, p0, Lkik/android/chat/view/p;->a:Lkik/android/chat/view/CameraIconBarViewImpl;
+.method public abstract a(Lkik/core/datatypes/c$b;)V
+.end method
 
-    invoke-static {v0}, Lkik/android/chat/view/CameraIconBarViewImpl;->c(Lkik/android/chat/view/CameraIconBarViewImpl;)V
+.method public abstract b(I)V
+.end method
 
-    return-void
+.method public abstract b(Lkik/core/datatypes/c$b;)V
+.end method
+
+.method public abstract c(Ljava/lang/String;)V
+.end method
+
+.method public abstract c(Lkik/core/datatypes/Message;)V
+.end method
+
+.method public abstract v()Ljava/lang/String;
+.end method
+
+.method public abstract w()V
+.end method
+
+.method public abstract x()Ljava/lang/String;
+.end method
+
+.method public abstract y()V
 .end method

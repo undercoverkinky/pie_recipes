@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 252
+    .line 234
     invoke-direct {p0}, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatHoneycombImpl;-><init>()V
 
     return-void
@@ -31,7 +31,7 @@
     .locals 1
 
     .prologue
-    .line 256
+    .line 238
     invoke-static {p1}, Landroid/support/v4/widget/SearchViewCompatIcs;->newSearchView(Landroid/content/Context;)Landroid/view/View;
 
     move-result-object v0
@@ -43,13 +43,10 @@
     .locals 0
 
     .prologue
-    .line 261
-    invoke-virtual {p0, p1}, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatIcsImpl;->checkIfLegalArg(Landroid/view/View;)V
-
-    .line 262
+    .line 243
     invoke-static {p1, p2}, Landroid/support/v4/widget/SearchViewCompatIcs;->setImeOptions(Landroid/view/View;I)V
 
-    .line 263
+    .line 244
     return-void
 .end method
 
@@ -57,12 +54,9 @@
     .locals 0
 
     .prologue
-    .line 267
-    invoke-virtual {p0, p1}, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatIcsImpl;->checkIfLegalArg(Landroid/view/View;)V
-
-    .line 268
+    .line 248
     invoke-static {p1, p2}, Landroid/support/v4/widget/SearchViewCompatIcs;->setInputType(Landroid/view/View;I)V
 
-    .line 269
+    .line 249
     return-void
 .end method

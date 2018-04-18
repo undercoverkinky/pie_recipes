@@ -1,9 +1,6 @@
 .class final Lkik/android/chat/KikApplication$28;
-.super Ljava/lang/Object;
+.super Ljava/lang/Thread;
 .source "SourceFile"
-
-# interfaces
-.implements Lcom/kik/events/e;
 
 
 # annotations
@@ -16,79 +13,39 @@
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lcom/kik/events/e",
-        "<",
-        "Ljava/lang/Boolean;",
-        ">;"
-    }
-.end annotation
-
 
 # instance fields
-.field final synthetic a:Lcom/kik/events/d;
-
-.field final synthetic b:Lkik/core/interfaces/ICommunication;
-
-.field final synthetic c:Lkik/core/datatypes/aa;
-
-.field final synthetic d:Lkik/android/chat/KikApplication;
+.field final synthetic a:Lkik/android/chat/KikApplication;
 
 
 # direct methods
-.method constructor <init>(Lkik/android/chat/KikApplication;Lcom/kik/events/d;Lkik/core/interfaces/ICommunication;Lkik/core/datatypes/aa;)V
+.method constructor <init>(Lkik/android/chat/KikApplication;)V
     .locals 0
 
     .prologue
-    .line 2304
-    iput-object p1, p0, Lkik/android/chat/KikApplication$28;->d:Lkik/android/chat/KikApplication;
+    .line 2101
+    iput-object p1, p0, Lkik/android/chat/KikApplication$28;->a:Lkik/android/chat/KikApplication;
 
-    iput-object p2, p0, Lkik/android/chat/KikApplication$28;->a:Lcom/kik/events/d;
-
-    iput-object p3, p0, Lkik/android/chat/KikApplication$28;->b:Lkik/core/interfaces/ICommunication;
-
-    iput-object p4, p0, Lkik/android/chat/KikApplication$28;->c:Lkik/core/datatypes/aa;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 3
+.method public final run()V
+    .locals 1
 
     .prologue
-    .line 2304
-    .line 3309
-    iget-object v0, p0, Lkik/android/chat/KikApplication$28;->a:Lcom/kik/events/d;
+    .line 2104
+    iget-object v0, p0, Lkik/android/chat/KikApplication$28;->a:Lkik/android/chat/KikApplication;
 
-    invoke-virtual {v0}, Lcom/kik/events/d;->a()V
+    invoke-static {v0}, Lkik/android/chat/KikApplication;->J(Lkik/android/chat/KikApplication;)Lkik/android/util/bn;
 
-    .line 3310
-    iget-object v0, p0, Lkik/android/chat/KikApplication$28;->b:Lkik/core/interfaces/ICommunication;
+    move-result-object v0
 
-    new-instance v1, Lkik/core/net/outgoing/UserProfileRequest$a;
+    invoke-virtual {v0}, Lkik/android/util/bn;->f()V
 
-    invoke-direct {v1}, Lkik/core/net/outgoing/UserProfileRequest$a;-><init>()V
-
-    iget-object v2, p0, Lkik/android/chat/KikApplication$28;->c:Lkik/core/datatypes/aa;
-
-    iget-object v2, v2, Lkik/core/datatypes/aa;->h:Ljava/lang/Boolean;
-
-    invoke-virtual {v1, v2}, Lkik/core/net/outgoing/UserProfileRequest$a;->a(Ljava/lang/Boolean;)Lkik/core/net/outgoing/UserProfileRequest$a;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lkik/core/net/outgoing/UserProfileRequest$a;->a()Lkik/core/net/outgoing/UserProfileRequest;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ICommunication;->a(Lkik/core/net/outgoing/j;)Lcom/kik/events/Promise;
-
-    .line 2304
+    .line 2105
     return-void
 .end method

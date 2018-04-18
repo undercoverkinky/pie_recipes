@@ -155,17 +155,15 @@
 
     .line 188
     :cond_1
-    new-instance v1, Landroid/support/v7/app/AlertDialog$Builder;
+    new-instance v1, Landroid/app/AlertDialog$Builder;
 
     iget-object v2, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$1;->a:Lcom/kik/cards/usermedia/CustomGalleryActivity;
 
-    const v3, 0x7f0b0113
+    invoke-direct {v1, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {v1, v2, v3}, Landroid/support/v7/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
+    const v2, 0x7f0a0443
 
-    const v2, 0x7f090457
-
-    invoke-virtual {v1, v2}, Landroid/support/v7/app/AlertDialog$Builder;->a(I)Landroid/support/v7/app/AlertDialog$Builder;
+    invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v1
 
@@ -179,7 +177,7 @@
 
     iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$1;->a:Lcom/kik/cards/usermedia/CustomGalleryActivity;
 
-    const v2, 0x7f09011c
+    const v2, 0x7f0a011b
 
     .line 189
     invoke-virtual {v0, v2}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->getString(I)Ljava/lang/String;
@@ -188,22 +186,24 @@
 
     .line 188
     :goto_2
-    invoke-virtual {v1, v0}, Landroid/support/v7/app/AlertDialog$Builder;->b(Ljava/lang/CharSequence;)Landroid/support/v7/app/AlertDialog$Builder;
+    invoke-virtual {v1, v0}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f09027d
+    const v1, 0x7f0a0269
+
+    const/4 v2, 0x0
 
     .line 190
-    invoke-virtual {v0, v1}, Landroid/support/v7/app/AlertDialog$Builder;->b(I)Landroid/support/v7/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/v7/app/AlertDialog$Builder;->d()Landroid/support/v7/app/AlertDialog;
+    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/v7/app/AlertDialog;->show()V
+    invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
     goto :goto_1
 
@@ -211,7 +211,7 @@
     :cond_2
     iget-object v2, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$1;->a:Lcom/kik/cards/usermedia/CustomGalleryActivity;
 
-    const v3, 0x7f09011d
+    const v3, 0x7f0a011c
 
     .line 190
     invoke-virtual {v2, v3}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->getString(I)Ljava/lang/String;

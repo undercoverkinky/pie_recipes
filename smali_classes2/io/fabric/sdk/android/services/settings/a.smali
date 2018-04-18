@@ -28,47 +28,51 @@
 
     iget-object v1, p2, Lio/fabric/sdk/android/services/settings/d;->b:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v1}, Lio/fabric/sdk/android/services/network/HttpRequest;->part(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    .line 3512
+    invoke-virtual {p1, v0, v1}, Lio/fabric/sdk/android/services/network/HttpRequest;->b(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
     move-result-object v0
 
+    .line 108
     const-string v1, "app[name]"
 
     iget-object v2, p2, Lio/fabric/sdk/android/services/settings/d;->f:Ljava/lang/String;
 
-    .line 109
-    invoke-virtual {v0, v1, v2}, Lio/fabric/sdk/android/services/network/HttpRequest;->part(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    .line 4512
+    invoke-virtual {v0, v1, v2}, Lio/fabric/sdk/android/services/network/HttpRequest;->b(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
     move-result-object v0
 
+    .line 108
     const-string v1, "app[display_version]"
 
     iget-object v2, p2, Lio/fabric/sdk/android/services/settings/d;->c:Ljava/lang/String;
 
-    .line 110
-    invoke-virtual {v0, v1, v2}, Lio/fabric/sdk/android/services/network/HttpRequest;->part(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    .line 5512
+    invoke-virtual {v0, v1, v2}, Lio/fabric/sdk/android/services/network/HttpRequest;->b(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
     move-result-object v0
 
+    .line 108
     const-string v1, "app[build_version]"
 
     iget-object v2, p2, Lio/fabric/sdk/android/services/settings/d;->d:Ljava/lang/String;
 
-    .line 111
-    invoke-virtual {v0, v1, v2}, Lio/fabric/sdk/android/services/network/HttpRequest;->part(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    .line 6512
+    invoke-virtual {v0, v1, v2}, Lio/fabric/sdk/android/services/network/HttpRequest;->b(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
     move-result-object v0
 
+    .line 108
     const-string v1, "app[source]"
 
     iget v2, p2, Lio/fabric/sdk/android/services/settings/d;->g:I
 
-    .line 112
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lio/fabric/sdk/android/services/network/HttpRequest;->part(Ljava/lang/String;Ljava/lang/Number;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    invoke-virtual {v0, v1, v2}, Lio/fabric/sdk/android/services/network/HttpRequest;->a(Ljava/lang/String;Ljava/lang/Number;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
     move-result-object v0
 
@@ -76,24 +80,25 @@
 
     iget-object v2, p2, Lio/fabric/sdk/android/services/settings/d;->h:Ljava/lang/String;
 
-    .line 113
-    invoke-virtual {v0, v1, v2}, Lio/fabric/sdk/android/services/network/HttpRequest;->part(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    .line 7512
+    invoke-virtual {v0, v1, v2}, Lio/fabric/sdk/android/services/network/HttpRequest;->b(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
     move-result-object v0
 
+    .line 108
     const-string v1, "app[built_sdk_version]"
 
     iget-object v2, p2, Lio/fabric/sdk/android/services/settings/d;->i:Ljava/lang/String;
 
-    .line 114
-    invoke-virtual {v0, v1, v2}, Lio/fabric/sdk/android/services/network/HttpRequest;->part(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    .line 8512
+    invoke-virtual {v0, v1, v2}, Lio/fabric/sdk/android/services/network/HttpRequest;->b(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
     move-result-object v2
 
     .line 116
     iget-object v0, p2, Lio/fabric/sdk/android/services/settings/d;->e:Ljava/lang/String;
 
-    invoke-static {v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->d(Ljava/lang/String;)Z
+    invoke-static {v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->c(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -104,11 +109,12 @@
 
     iget-object v1, p2, Lio/fabric/sdk/android/services/settings/d;->e:Ljava/lang/String;
 
-    invoke-virtual {v2, v0, v1}, Lio/fabric/sdk/android/services/network/HttpRequest;->part(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    .line 9512
+    invoke-virtual {v2, v0, v1}, Lio/fabric/sdk/android/services/network/HttpRequest;->b(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
     .line 120
     :cond_0
-    iget-object v0, p2, Lio/fabric/sdk/android/services/settings/d;->j:Lio/fabric/sdk/android/services/settings/IconRequest;
+    iget-object v0, p2, Lio/fabric/sdk/android/services/settings/d;->j:Lio/fabric/sdk/android/services/settings/n;
 
     if-eqz v0, :cond_1
 
@@ -119,7 +125,7 @@
     :try_start_0
     iget-object v0, p0, Lio/fabric/sdk/android/services/settings/a;->a:Lio/fabric/sdk/android/h;
 
-    invoke-virtual {v0}, Lio/fabric/sdk/android/h;->m()Landroid/content/Context;
+    invoke-virtual {v0}, Lio/fabric/sdk/android/h;->o()Landroid/content/Context;
 
     move-result-object v0
 
@@ -127,9 +133,9 @@
 
     move-result-object v0
 
-    iget-object v3, p2, Lio/fabric/sdk/android/services/settings/d;->j:Lio/fabric/sdk/android/services/settings/IconRequest;
+    iget-object v3, p2, Lio/fabric/sdk/android/services/settings/d;->j:Lio/fabric/sdk/android/services/settings/n;
 
-    iget v3, v3, Lio/fabric/sdk/android/services/settings/IconRequest;->iconResourceId:I
+    iget v3, v3, Lio/fabric/sdk/android/services/settings/n;->b:I
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
 
@@ -138,52 +144,51 @@
     .line 127
     const-string v0, "app[icon][hash]"
 
-    iget-object v3, p2, Lio/fabric/sdk/android/services/settings/d;->j:Lio/fabric/sdk/android/services/settings/IconRequest;
+    iget-object v3, p2, Lio/fabric/sdk/android/services/settings/d;->j:Lio/fabric/sdk/android/services/settings/n;
 
-    iget-object v3, v3, Lio/fabric/sdk/android/services/settings/IconRequest;->hash:Ljava/lang/String;
+    iget-object v3, v3, Lio/fabric/sdk/android/services/settings/n;->a:Ljava/lang/String;
 
-    invoke-virtual {v2, v0, v3}, Lio/fabric/sdk/android/services/network/HttpRequest;->part(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    .line 10512
+    invoke-virtual {v2, v0, v3}, Lio/fabric/sdk/android/services/network/HttpRequest;->b(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
     move-result-object v0
 
+    .line 127
     const-string v3, "app[icon][data]"
 
     const-string v4, "icon.png"
 
     const-string v5, "application/octet-stream"
 
-    .line 128
-    invoke-virtual {v0, v3, v4, v5, v1}, Lio/fabric/sdk/android/services/network/HttpRequest;->part(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/io/InputStream;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    invoke-virtual {v0, v3, v4, v5, v1}, Lio/fabric/sdk/android/services/network/HttpRequest;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/io/InputStream;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
     move-result-object v0
 
     const-string v3, "app[icon][width]"
 
-    iget-object v4, p2, Lio/fabric/sdk/android/services/settings/d;->j:Lio/fabric/sdk/android/services/settings/IconRequest;
+    iget-object v4, p2, Lio/fabric/sdk/android/services/settings/d;->j:Lio/fabric/sdk/android/services/settings/n;
 
-    iget v4, v4, Lio/fabric/sdk/android/services/settings/IconRequest;->width:I
+    iget v4, v4, Lio/fabric/sdk/android/services/settings/n;->c:I
 
-    .line 129
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
 
-    invoke-virtual {v0, v3, v4}, Lio/fabric/sdk/android/services/network/HttpRequest;->part(Ljava/lang/String;Ljava/lang/Number;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    invoke-virtual {v0, v3, v4}, Lio/fabric/sdk/android/services/network/HttpRequest;->a(Ljava/lang/String;Ljava/lang/Number;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
     move-result-object v0
 
     const-string v3, "app[icon][height]"
 
-    iget-object v4, p2, Lio/fabric/sdk/android/services/settings/d;->j:Lio/fabric/sdk/android/services/settings/IconRequest;
+    iget-object v4, p2, Lio/fabric/sdk/android/services/settings/d;->j:Lio/fabric/sdk/android/services/settings/n;
 
-    iget v4, v4, Lio/fabric/sdk/android/services/settings/IconRequest;->height:I
+    iget v4, v4, Lio/fabric/sdk/android/services/settings/n;->d:I
 
-    .line 130
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
 
-    invoke-virtual {v0, v3, v4}, Lio/fabric/sdk/android/services/network/HttpRequest;->part(Ljava/lang/String;Ljava/lang/Number;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    invoke-virtual {v0, v3, v4}, Lio/fabric/sdk/android/services/network/HttpRequest;->a(Ljava/lang/String;Ljava/lang/Number;)Lio/fabric/sdk/android/services/network/HttpRequest;
     :try_end_0
     .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -220,7 +225,7 @@
 
     check-cast v0, Lio/fabric/sdk/android/j;
 
-    .line 1151
+    .line 11151
     sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v4, "app[build][libraries][%s][version]"
@@ -242,9 +247,10 @@
 
     move-result-object v4
 
-    invoke-virtual {v2, v3, v4}, Lio/fabric/sdk/android/services/network/HttpRequest;->part(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    .line 11512
+    invoke-virtual {v2, v3, v4}, Lio/fabric/sdk/android/services/network/HttpRequest;->b(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
-    .line 1155
+    .line 12155
     sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v4, "app[build][libraries][%s][type]"
@@ -266,7 +272,8 @@
 
     move-result-object v0
 
-    invoke-virtual {v2, v3, v0}, Lio/fabric/sdk/android/services/network/HttpRequest;->part(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    .line 12512
+    invoke-virtual {v2, v3, v0}, Lio/fabric/sdk/android/services/network/HttpRequest;->b(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
     goto :goto_1
 
@@ -288,9 +295,9 @@
 
     invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v6, p2, Lio/fabric/sdk/android/services/settings/d;->j:Lio/fabric/sdk/android/services/settings/IconRequest;
+    iget-object v6, p2, Lio/fabric/sdk/android/services/settings/d;->j:Lio/fabric/sdk/android/services/settings/n;
 
-    iget v6, v6, Lio/fabric/sdk/android/services/settings/IconRequest;->iconResourceId:I
+    iget v6, v6, Lio/fabric/sdk/android/services/settings/n;->b:I
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -336,12 +343,12 @@
 
     move-result-object v0
 
-    .line 1098
+    .line 3098
     const-string v1, "X-CRASHLYTICS-API-KEY"
 
     iget-object v2, p1, Lio/fabric/sdk/android/services/settings/d;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Lio/fabric/sdk/android/services/network/HttpRequest;->header(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    invoke-virtual {v0, v1, v2}, Lio/fabric/sdk/android/services/network/HttpRequest;->a(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
     move-result-object v0
 
@@ -349,8 +356,7 @@
 
     const-string v2, "android"
 
-    .line 1099
-    invoke-virtual {v0, v1, v2}, Lio/fabric/sdk/android/services/network/HttpRequest;->header(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    invoke-virtual {v0, v1, v2}, Lio/fabric/sdk/android/services/network/HttpRequest;->a(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
     move-result-object v0
 
@@ -358,13 +364,11 @@
 
     iget-object v2, p0, Lio/fabric/sdk/android/services/settings/a;->a:Lio/fabric/sdk/android/h;
 
-    .line 1102
     invoke-virtual {v2}, Lio/fabric/sdk/android/h;->a()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1101
-    invoke-virtual {v0, v1, v2}, Lio/fabric/sdk/android/services/network/HttpRequest;->header(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    invoke-virtual {v0, v1, v2}, Lio/fabric/sdk/android/services/network/HttpRequest;->a(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
     move-result-object v0
 
@@ -389,7 +393,7 @@
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 79
-    iget-object v0, p1, Lio/fabric/sdk/android/services/settings/d;->j:Lio/fabric/sdk/android/services/settings/IconRequest;
+    iget-object v0, p1, Lio/fabric/sdk/android/services/settings/d;->j:Lio/fabric/sdk/android/services/settings/n;
 
     if-eqz v0, :cond_0
 
@@ -402,9 +406,9 @@
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p1, Lio/fabric/sdk/android/services/settings/d;->j:Lio/fabric/sdk/android/services/settings/IconRequest;
+    iget-object v2, p1, Lio/fabric/sdk/android/services/settings/d;->j:Lio/fabric/sdk/android/services/settings/n;
 
-    iget-object v2, v2, Lio/fabric/sdk/android/services/settings/IconRequest;->hash:Ljava/lang/String;
+    iget-object v2, v2, Lio/fabric/sdk/android/services/settings/n;->a:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -417,9 +421,9 @@
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p1, Lio/fabric/sdk/android/services/settings/d;->j:Lio/fabric/sdk/android/services/settings/IconRequest;
+    iget-object v2, p1, Lio/fabric/sdk/android/services/settings/d;->j:Lio/fabric/sdk/android/services/settings/n;
 
-    iget v2, v2, Lio/fabric/sdk/android/services/settings/IconRequest;->width:I
+    iget v2, v2, Lio/fabric/sdk/android/services/settings/n;->c:I
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -431,22 +435,22 @@
 
     move-result-object v0
 
-    iget-object v2, p1, Lio/fabric/sdk/android/services/settings/d;->j:Lio/fabric/sdk/android/services/settings/IconRequest;
+    iget-object v2, p1, Lio/fabric/sdk/android/services/settings/d;->j:Lio/fabric/sdk/android/services/settings/n;
 
-    iget v2, v2, Lio/fabric/sdk/android/services/settings/IconRequest;->height:I
+    iget v2, v2, Lio/fabric/sdk/android/services/settings/n;->d:I
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     .line 86
     :cond_0
-    invoke-virtual {v1}, Lio/fabric/sdk/android/services/network/HttpRequest;->code()I
+    invoke-virtual {v1}, Lio/fabric/sdk/android/services/network/HttpRequest;->b()I
 
     move-result v2
 
     .line 87
     const-string v0, "POST"
 
-    invoke-virtual {v1}, Lio/fabric/sdk/android/services/network/HttpRequest;->method()Ljava/lang/String;
+    invoke-virtual {v1}, Lio/fabric/sdk/android/services/network/HttpRequest;->d()Ljava/lang/String;
 
     move-result-object v3
 
@@ -478,8 +482,7 @@
 
     const-string v3, "X-REQUEST-ID"
 
-    .line 91
-    invoke-virtual {v1, v3}, Lio/fabric/sdk/android/services/network/HttpRequest;->header(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v3}, Lio/fabric/sdk/android/services/network/HttpRequest;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -489,7 +492,7 @@
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     .line 94
-    invoke-static {v2}, Lio/fabric/sdk/android/services/common/p;->a(I)I
+    invoke-static {v2}, Lio/fabric/sdk/android/services/common/o;->a(I)I
 
     move-result v0
 

@@ -25,15 +25,15 @@
     .locals 0
 
     .prologue
-    .line 632
+    .line 551
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 633
+    .line 552
     iput-object p1, p0, Landroid/support/v4/app/NotificationManagerCompat$ServiceConnectedEvent;->componentName:Landroid/content/ComponentName;
 
-    .line 634
+    .line 553
     iput-object p2, p0, Landroid/support/v4/app/NotificationManagerCompat$ServiceConnectedEvent;->iBinder:Landroid/os/IBinder;
 
-    .line 635
+    .line 554
     return-void
 .end method

@@ -1,64 +1,90 @@
-.class public final Lkik/android/chat/view/text/a;
+.class public Lkik/android/chat/view/text/a;
 .super Landroid/text/style/ClickableSpan;
 .source "SourceFile"
 
+# interfaces
+.implements Lkik/android/chat/view/text/b;
+
 
 # instance fields
-.field private final a:Lrx/functions/a;
+.field private a:I
 
-.field private final b:I
+.field private b:Z
+
+.field private c:Z
 
 
 # direct methods
-.method public constructor <init>(Lrx/functions/a;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 20
+    .line 28
     invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
-    .line 21
-    iput-object p1, p0, Lkik/android/chat/view/text/a;->a:Lrx/functions/a;
+    .line 13
+    const/16 v0, 0x96
 
-    .line 22
-    iput p2, p0, Lkik/android/chat/view/text/a;->b:I
+    iput v0, p0, Lkik/android/chat/view/text/a;->a:I
 
-    .line 23
+    .line 29
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lkik/android/chat/view/text/a;->c:Z
+
+    .line 30
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
+.method public final a(Z)V
+    .locals 0
 
     .prologue
-    .line 28
-    iget-object v0, p0, Lkik/android/chat/view/text/a;->a:Lrx/functions/a;
+    .line 39
+    iput-boolean p1, p0, Lkik/android/chat/view/text/a;->b:Z
 
-    invoke-interface {v0}, Lrx/functions/a;->a()V
-
-    .line 29
+    .line 40
     return-void
 .end method
 
-.method public final updateDrawState(Landroid/text/TextPaint;)V
+.method public onClick(Landroid/view/View;)V
+    .locals 0
+
+    .prologue
+    .line 35
+    return-void
+.end method
+
+.method public updateDrawState(Landroid/text/TextPaint;)V
     .locals 1
 
     .prologue
-    .line 34
+    .line 45
     invoke-super {p0, p1}, Landroid/text/style/ClickableSpan;->updateDrawState(Landroid/text/TextPaint;)V
 
-    .line 35
-    iget v0, p0, Lkik/android/chat/view/text/a;->b:I
+    .line 46
+    iget-boolean v0, p0, Lkik/android/chat/view/text/a;->b:Z
 
-    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setColor(I)V
+    if-eqz v0, :cond_0
 
-    .line 36
-    const/4 v0, 0x0
+    iget v0, p0, Lkik/android/chat/view/text/a;->a:I
+
+    :goto_0
+    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setAlpha(I)V
+
+    .line 47
+    iget-boolean v0, p0, Lkik/android/chat/view/text/a;->c:Z
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setUnderlineText(Z)V
 
-    .line 37
+    .line 48
     return-void
+
+    .line 46
+    :cond_0
+    const/16 v0, 0xff
+
+    goto :goto_0
 .end method

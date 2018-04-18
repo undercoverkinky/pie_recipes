@@ -26,7 +26,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lkik/core/datatypes/l;",
+            "Lkik/core/datatypes/o;",
             ">;"
         }
     .end annotation
@@ -63,31 +63,31 @@
     .locals 1
 
     .prologue
-    .line 84
+    .line 82
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 91
+    .line 88
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lkik/android/util/SponsoredUsersManager$PromotionData;->a:Ljava/util/ArrayList;
 
-    .line 92
+    .line 89
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lkik/android/util/SponsoredUsersManager$PromotionData;->b:Ljava/util/HashSet;
 
-    .line 93
+    .line 90
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lkik/android/util/SponsoredUsersManager$PromotionData;->c:Ljava/util/Map;
 
-    .line 94
+    .line 91
     sget-object v0, Lkik/android/util/SponsoredUsersManager$PromotionData$FetchState;->NONE:Lkik/android/util/SponsoredUsersManager$PromotionData$FetchState;
 
     iput-object v0, p0, Lkik/android/util/SponsoredUsersManager$PromotionData;->d:Lkik/android/util/SponsoredUsersManager$PromotionData$FetchState;
@@ -99,7 +99,7 @@
     .locals 0
 
     .prologue
-    .line 84
+    .line 82
     invoke-direct {p0}, Lkik/android/util/SponsoredUsersManager$PromotionData;-><init>()V
 
     return-void

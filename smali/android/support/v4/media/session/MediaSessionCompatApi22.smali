@@ -3,18 +3,12 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x16
-.end annotation
-
-
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 24
+    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,11 +18,11 @@
     .locals 0
 
     .prologue
-    .line 27
+    .line 23
     check-cast p0, Landroid/media/session/MediaSession;
 
     invoke-virtual {p0, p1}, Landroid/media/session/MediaSession;->setRatingType(I)V
 
-    .line 28
+    .line 24
     return-void
 .end method

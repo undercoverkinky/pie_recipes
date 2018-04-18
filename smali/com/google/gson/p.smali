@@ -4,13 +4,13 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/google/gson/e;Lcom/google/gson/b/a;)Lcom/google/gson/o;
+.method public abstract a(Lcom/google/gson/d;Lcom/google/gson/b/a;)Lcom/google/gson/o;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lcom/google/gson/e;",
+            "Lcom/google/gson/d;",
             "Lcom/google/gson/b/a",
             "<TT;>;)",
             "Lcom/google/gson/o",

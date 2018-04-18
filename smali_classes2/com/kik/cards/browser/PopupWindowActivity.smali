@@ -182,7 +182,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0e006c
+    const v5, 0x7f10006d
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -200,7 +200,7 @@
     .line 1185
     iget-object v0, p0, Lcom/kik/cards/browser/PopupWindowActivity;->f:Landroid/widget/ImageView;
 
-    const v1, 0x7f020265
+    const v1, 0x7f02020b
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -235,7 +235,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0e006d
+    const v4, 0x7f10006e
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -255,7 +255,7 @@
     .line 1191
     iget-object v0, p0, Lcom/kik/cards/browser/PopupWindowActivity;->f:Landroid/widget/ImageView;
 
-    const v1, 0x7f02031f
+    const v1, 0x7f0202e4
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -414,7 +414,7 @@
     .line 2216
     iget-object v0, p0, Lcom/kik/cards/browser/PopupWindowActivity;->f:Landroid/widget/ImageView;
 
-    const v1, 0x7f020362
+    const v1, 0x7f02032c
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -569,12 +569,12 @@
     iput-object v0, p0, Lcom/kik/cards/browser/PopupWindowActivity;->b:Ljava/lang/String;
 
     .line 48
-    const v0, 0x7f040030
+    const v0, 0x7f04002f
 
     invoke-virtual {p0, v0}, Lcom/kik/cards/browser/PopupWindowActivity;->setContentView(I)V
 
     .line 50
-    const v0, 0x7f1000e1
+    const v0, 0x7f1100a6
 
     invoke-virtual {p0, v0}, Lcom/kik/cards/browser/PopupWindowActivity;->findViewById(I)Landroid/view/View;
 
@@ -585,7 +585,7 @@
     iput-object v0, p0, Lcom/kik/cards/browser/PopupWindowActivity;->c:Landroid/webkit/WebView;
 
     .line 51
-    const v0, 0x7f100139
+    const v0, 0x7f11010a
 
     invoke-virtual {p0, v0}, Lcom/kik/cards/browser/PopupWindowActivity;->findViewById(I)Landroid/view/View;
 
@@ -596,7 +596,7 @@
     iput-object v0, p0, Lcom/kik/cards/browser/PopupWindowActivity;->d:Landroid/widget/TextView;
 
     .line 52
-    const v0, 0x7f10013b
+    const v0, 0x7f11010c
 
     invoke-virtual {p0, v0}, Lcom/kik/cards/browser/PopupWindowActivity;->findViewById(I)Landroid/view/View;
 
@@ -607,7 +607,7 @@
     iput-object v0, p0, Lcom/kik/cards/browser/PopupWindowActivity;->e:Landroid/widget/TextView;
 
     .line 53
-    const v0, 0x7f10013a
+    const v0, 0x7f11010b
 
     invoke-virtual {p0, v0}, Lcom/kik/cards/browser/PopupWindowActivity;->findViewById(I)Landroid/view/View;
 

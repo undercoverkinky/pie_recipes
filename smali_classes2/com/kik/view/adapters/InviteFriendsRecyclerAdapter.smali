@@ -62,6 +62,18 @@
 
 
 # virtual methods
+.method public final bridge synthetic a(Landroid/view/ViewGroup;I)Landroid/support/v7/widget/RecyclerView$ViewHolder;
+    .locals 1
+
+    .prologue
+    .line 21
+    invoke-virtual {p0, p1}, Lcom/kik/view/adapters/InviteFriendsRecyclerAdapter;->a(Landroid/view/ViewGroup;)Lcom/kik/view/adapters/InviteFriendsRecyclerAdapter$ViewHolder;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public final a(Landroid/view/ViewGroup;)Lcom/kik/view/adapters/InviteFriendsRecyclerAdapter$ViewHolder;
     .locals 3
 
@@ -75,7 +87,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0400ee
+    const v1, 0x7f0400cc
 
     const/4 v2, 0x0
 
@@ -117,9 +129,21 @@
     iput-object p1, p0, Lcom/kik/view/adapters/InviteFriendsRecyclerAdapter;->a:Lkik/android/addressbook/AndroidAddressBookCursorWrapper;
 
     .line 113
-    invoke-virtual {p0}, Lcom/kik/view/adapters/InviteFriendsRecyclerAdapter;->notifyDataSetChanged()V
+    invoke-virtual {p0}, Lcom/kik/view/adapters/InviteFriendsRecyclerAdapter;->d()V
 
     goto :goto_0
+.end method
+
+.method public final bridge synthetic a(Landroid/support/v7/widget/RecyclerView$ViewHolder;I)V
+    .locals 0
+
+    .prologue
+    .line 21
+    check-cast p1, Lcom/kik/view/adapters/InviteFriendsRecyclerAdapter$ViewHolder;
+
+    invoke-virtual {p0, p1, p2}, Lcom/kik/view/adapters/InviteFriendsRecyclerAdapter;->a(Lcom/kik/view/adapters/InviteFriendsRecyclerAdapter$ViewHolder;I)V
+
+    return-void
 .end method
 
 .method public final a(Lcom/kik/view/adapters/InviteFriendsRecyclerAdapter$ViewHolder;I)V
@@ -146,7 +170,7 @@
     return-void
 .end method
 
-.method public final getItemCount()I
+.method public final b()I
     .locals 1
 
     .prologue
@@ -168,28 +192,4 @@
     move-result v0
 
     goto :goto_0
-.end method
-
-.method public final synthetic onBindViewHolder(Landroid/support/v7/widget/RecyclerView$ViewHolder;I)V
-    .locals 0
-
-    .prologue
-    .line 21
-    check-cast p1, Lcom/kik/view/adapters/InviteFriendsRecyclerAdapter$ViewHolder;
-
-    invoke-virtual {p0, p1, p2}, Lcom/kik/view/adapters/InviteFriendsRecyclerAdapter;->a(Lcom/kik/view/adapters/InviteFriendsRecyclerAdapter$ViewHolder;I)V
-
-    return-void
-.end method
-
-.method public final synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroid/support/v7/widget/RecyclerView$ViewHolder;
-    .locals 1
-
-    .prologue
-    .line 21
-    invoke-virtual {p0, p1}, Lcom/kik/view/adapters/InviteFriendsRecyclerAdapter;->a(Landroid/view/ViewGroup;)Lcom/kik/view/adapters/InviteFriendsRecyclerAdapter$ViewHolder;
-
-    move-result-object v0
-
-    return-object v0
 .end method

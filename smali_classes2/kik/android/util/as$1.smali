@@ -1,14 +1,11 @@
 .class final Lkik/android/util/as$1;
-.super Ljava/lang/Object;
+.super Lcom/kik/events/l;
 .source "SourceFile"
-
-# interfaces
-.implements Lcom/kik/events/e;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lkik/android/util/as;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lkik/android/util/as;->handleMessage(Landroid/os/Message;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,140 +15,119 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ljava/lang/Object;",
-        "Lcom/kik/events/e",
+        "Lcom/kik/events/l",
         "<",
-        "Lkik/core/datatypes/Message;",
+        "Lkik/core/net/outgoing/aa;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lkik/android/util/as;
+.field final synthetic a:Lkik/core/datatypes/Message;
+
+.field final synthetic b:Lkik/android/util/as;
 
 
 # direct methods
-.method constructor <init>(Lkik/android/util/as;)V
+.method constructor <init>(Lkik/android/util/as;Lkik/core/datatypes/Message;)V
     .locals 0
 
     .prologue
-    .line 87
-    iput-object p1, p0, Lkik/android/util/as$1;->a:Lkik/android/util/as;
+    .line 60
+    iput-object p1, p0, Lkik/android/util/as$1;->b:Lkik/android/util/as;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lkik/android/util/as$1;->a:Lkik/core/datatypes/Message;
+
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 10
+.method public final synthetic a(Ljava/lang/Object;)V
+    .locals 11
 
     .prologue
-    .line 87
-    check-cast p2, Lkik/core/datatypes/Message;
+    .line 60
+    .line 1064
+    iget-object v0, p0, Lkik/android/util/as$1;->a:Lkik/core/datatypes/Message;
 
-    .line 1091
-    const-class v0, Lkik/core/datatypes/messageExtensions/ContentMessage;
+    const-class v1, Lkik/core/datatypes/messageExtensions/ContentMessage;
 
-    invoke-static {p2, v0}, Lkik/core/datatypes/messageExtensions/MessageAttachment;->getAttachment(Lkik/core/datatypes/Message;Ljava/lang/Class;)Lkik/core/datatypes/messageExtensions/MessageAttachment;
+    invoke-static {v0, v1}, Lkik/core/datatypes/messageExtensions/f;->a(Lkik/core/datatypes/Message;Ljava/lang/Class;)Lkik/core/datatypes/messageExtensions/f;
 
     move-result-object v1
 
-    .line 1092
-    if-eqz v1, :cond_1
-
-    .line 1093
     check-cast v1, Lkik/core/datatypes/messageExtensions/ContentMessage;
 
-    .line 1094
-    invoke-virtual {v1}, Lkik/core/datatypes/messageExtensions/ContentMessage;->j()Ljava/io/File;
-
-    move-result-object v0
-
-    .line 1095
-    const-string v2, "int-file-state"
-
-    invoke-virtual {v1, v2}, Lkik/core/datatypes/messageExtensions/ContentMessage;->g(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 1096
-    if-eqz v0, :cond_0
-
-    const-string v0, "1"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 1097
+    .line 1065
     new-instance v0, Lkik/android/net/http/ContentUploadItem;
 
-    invoke-virtual {p2}, Lkik/core/datatypes/Message;->i()Ljava/lang/String;
+    iget-object v2, p0, Lkik/android/util/as$1;->a:Lkik/core/datatypes/Message;
+
+    invoke-virtual {v2}, Lkik/core/datatypes/Message;->i()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p2}, Lkik/core/datatypes/Message;->b()Ljava/lang/String;
+    iget-object v3, p0, Lkik/android/util/as$1;->a:Lkik/core/datatypes/Message;
+
+    invoke-virtual {v3}, Lkik/core/datatypes/Message;->b()Ljava/lang/String;
 
     move-result-object v3
 
-    iget-object v4, p0, Lkik/android/util/as$1;->a:Lkik/android/util/as;
+    iget-object v4, p0, Lkik/android/util/as$1;->a:Lkik/core/datatypes/Message;
 
-    invoke-static {v4}, Lkik/android/util/as;->a(Lkik/android/util/as;)Lcom/kik/android/Mixpanel;
+    invoke-virtual {v4}, Lkik/core/datatypes/Message;->o()[B
 
     move-result-object v4
 
-    iget-object v5, p0, Lkik/android/util/as$1;->a:Lkik/android/util/as;
+    iget-object v5, p0, Lkik/android/util/as$1;->b:Lkik/android/util/as;
 
-    invoke-static {v5}, Lkik/android/util/as;->b(Lkik/android/util/as;)Lkik/core/net/e;
+    invoke-static {v5}, Lkik/android/util/as;->a(Lkik/android/util/as;)Lcom/kik/android/Mixpanel;
 
     move-result-object v5
 
-    iget-object v6, p0, Lkik/android/util/as$1;->a:Lkik/android/util/as;
+    iget-object v6, p0, Lkik/android/util/as$1;->b:Lkik/android/util/as;
 
-    invoke-static {v6}, Lkik/android/util/as;->c(Lkik/android/util/as;)Lkik/core/interfaces/n;
+    invoke-static {v6}, Lkik/android/util/as;->b(Lkik/android/util/as;)Lkik/core/net/e;
 
     move-result-object v6
 
-    iget-object v7, p0, Lkik/android/util/as$1;->a:Lkik/android/util/as;
+    iget-object v7, p0, Lkik/android/util/as$1;->b:Lkik/android/util/as;
 
-    invoke-static {v7}, Lkik/android/util/as;->d(Lkik/android/util/as;)Lkik/core/interfaces/ad;
+    invoke-static {v7}, Lkik/android/util/as;->c(Lkik/android/util/as;)Lkik/core/interfaces/o;
 
     move-result-object v7
 
-    iget-object v8, p0, Lkik/android/util/as$1;->a:Lkik/android/util/as;
+    iget-object v8, p0, Lkik/android/util/as$1;->b:Lkik/android/util/as;
 
-    invoke-static {v8}, Lkik/android/util/as;->e(Lkik/android/util/as;)Lkik/core/interfaces/IConversation;
+    invoke-static {v8}, Lkik/android/util/as;->d(Lkik/android/util/as;)Lkik/core/interfaces/ad;
 
     move-result-object v8
 
-    iget-object v9, p0, Lkik/android/util/as$1;->a:Lkik/android/util/as;
+    iget-object v9, p0, Lkik/android/util/as$1;->b:Lkik/android/util/as;
 
-    invoke-static {v9}, Lkik/android/util/as;->f(Lkik/android/util/as;)Lkik/core/interfaces/z;
+    invoke-static {v9}, Lkik/android/util/as;->e(Lkik/android/util/as;)Lkik/core/interfaces/j;
 
     move-result-object v9
 
-    invoke-direct/range {v0 .. v9}, Lkik/android/net/http/ContentUploadItem;-><init>(Lkik/core/datatypes/messageExtensions/ContentMessage;Ljava/lang/String;Ljava/lang/String;Lcom/kik/android/Mixpanel;Lkik/core/net/e;Lkik/core/interfaces/n;Lkik/core/interfaces/ad;Lkik/core/interfaces/IConversation;Lkik/core/interfaces/z;)V
+    iget-object v10, p0, Lkik/android/util/as$1;->b:Lkik/android/util/as;
 
-    .line 1098
-    invoke-static {}, Lkik/android/net/http/b;->a()Lkik/android/net/http/b;
+    invoke-static {v10}, Lkik/android/util/as;->f(Lkik/android/util/as;)Lkik/core/interfaces/aa;
+
+    move-result-object v10
+
+    invoke-direct/range {v0 .. v10}, Lkik/android/net/http/ContentUploadItem;-><init>(Lkik/core/datatypes/messageExtensions/ContentMessage;Ljava/lang/String;Ljava/lang/String;[BLcom/kik/android/Mixpanel;Lkik/core/net/e;Lkik/core/interfaces/o;Lkik/core/interfaces/ad;Lkik/core/interfaces/j;Lkik/core/interfaces/aa;)V
+
+    .line 1067
+    invoke-static {}, Lkik/android/net/http/c;->a()Lkik/android/net/http/c;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lkik/android/net/http/b;->a(Lkik/android/net/http/a;)V
+    invoke-virtual {v1, v0}, Lkik/android/net/http/c;->a(Lkik/android/net/http/b;)V
 
-    .line 1100
-    :cond_0
-    iget-object v0, p0, Lkik/android/util/as$1;->a:Lkik/android/util/as;
-
-    invoke-virtual {v0, p2}, Lkik/android/util/as;->b(Lkik/core/datatypes/Message;)V
-
-    .line 87
-    :cond_1
+    .line 60
     return-void
 .end method

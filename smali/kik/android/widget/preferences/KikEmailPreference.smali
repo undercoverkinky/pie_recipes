@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field protected a:Lkik/core/interfaces/ag;
+.field protected a:Lkik/core/interfaces/af;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
@@ -54,22 +54,23 @@
     .locals 2
 
     .prologue
-    .line 52
+    .line 0
+    .line 1052
     invoke-virtual {p0}, Lkik/android/widget/preferences/KikEmailPreference;->b()Landroid/view/View;
 
     move-result-object v0
 
-    .line 53
+    .line 1053
     if-eqz v0, :cond_0
 
-    .line 54
-    invoke-static {p0}, Lkik/android/widget/preferences/c;->a(Lkik/android/widget/preferences/KikEmailPreference;)Ljava/lang/Runnable;
+    .line 1054
+    invoke-static {p0}, Lkik/android/widget/preferences/i;->a(Lkik/android/widget/preferences/KikEmailPreference;)Ljava/lang/Runnable;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    .line 56
+    .line 0
     :cond_0
     return-void
 .end method
@@ -78,9 +79,11 @@
     .locals 0
 
     .prologue
-    .line 54
+    .line 0
+    .line 2054
     invoke-virtual {p0}, Lkik/android/widget/preferences/KikEmailPreference;->notifyChanged()V
 
+    .line 0
     return-void
 .end method
 
@@ -89,7 +92,7 @@
 
     .prologue
     .line 43
-    const v0, 0x7f040136
+    const v0, 0x7f040107
 
     invoke-virtual {p0, v0}, Lkik/android/widget/preferences/KikEmailPreference;->setLayoutResource(I)V
 
@@ -116,13 +119,13 @@
     .line 51
     iget-object v0, p0, Lkik/android/widget/preferences/KikEmailPreference;->d:Lcom/kik/events/d;
 
-    iget-object v1, p0, Lkik/android/widget/preferences/KikEmailPreference;->a:Lkik/core/interfaces/ag;
+    iget-object v1, p0, Lkik/android/widget/preferences/KikEmailPreference;->a:Lkik/core/interfaces/af;
 
-    invoke-interface {v1}, Lkik/core/interfaces/ag;->a()Lcom/kik/events/c;
+    invoke-interface {v1}, Lkik/core/interfaces/af;->a()Lcom/kik/events/c;
 
     move-result-object v1
 
-    invoke-static {p0}, Lkik/android/widget/preferences/b;->a(Lkik/android/widget/preferences/KikEmailPreference;)Lcom/kik/events/e;
+    invoke-static {p0}, Lkik/android/widget/preferences/h;->a(Lkik/android/widget/preferences/KikEmailPreference;)Lcom/kik/events/e;
 
     move-result-object v2
 
@@ -140,14 +143,14 @@
     invoke-super {p0, p1}, Lkik/android/widget/preferences/KikPreference;->onBindView(Landroid/view/View;)V
 
     .line 70
-    iget-object v0, p0, Lkik/android/widget/preferences/KikEmailPreference;->a:Lkik/core/interfaces/ag;
+    iget-object v0, p0, Lkik/android/widget/preferences/KikEmailPreference;->a:Lkik/core/interfaces/af;
 
-    invoke-interface {v0}, Lkik/core/interfaces/ag;->d()Lkik/core/datatypes/aa;
+    invoke-interface {v0}, Lkik/core/interfaces/af;->d()Lkik/core/datatypes/ad;
 
     move-result-object v1
 
     .line 71
-    const v0, 0x7f100388
+    const v0, 0x7f110318
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -159,7 +162,7 @@
     if-eqz v0, :cond_0
 
     .line 73
-    iget-object v1, v1, Lkik/core/datatypes/aa;->a:Ljava/lang/String;
+    iget-object v1, v1, Lkik/core/datatypes/ad;->a:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -181,7 +184,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ad;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v0
 

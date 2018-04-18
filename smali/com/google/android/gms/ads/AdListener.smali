@@ -1,4 +1,4 @@
-.class public Lcom/google/android/gms/ads/AdListener;
+.class public abstract Lcom/google/android/gms/ads/AdListener;
 .super Ljava/lang/Object;
 
 
@@ -13,12 +13,6 @@
 
 
 # virtual methods
-.method public onAdClicked()V
-    .locals 0
-
-    return-void
-.end method
-
 .method public onAdClosed()V
     .locals 0
 
@@ -26,12 +20,6 @@
 .end method
 
 .method public onAdFailedToLoad(I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onAdImpression()V
     .locals 0
 
     return-void

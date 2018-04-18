@@ -117,7 +117,6 @@
 
     .prologue
     .line 80
-    .line 81
     invoke-virtual {p0}, Landroid/support/v4/widget/Space;->getSuggestedMinimumWidth()I
 
     move-result v0
@@ -126,7 +125,6 @@
 
     move-result v0
 
-    .line 82
     invoke-virtual {p0}, Landroid/support/v4/widget/Space;->getSuggestedMinimumHeight()I
 
     move-result v1
@@ -135,7 +133,6 @@
 
     move-result v1
 
-    .line 80
     invoke-virtual {p0, v0, v1}, Landroid/support/v4/widget/Space;->setMeasuredDimension(II)V
 
     .line 83

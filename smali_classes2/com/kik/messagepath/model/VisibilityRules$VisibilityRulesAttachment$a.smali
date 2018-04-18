@@ -67,7 +67,7 @@
     iput v0, p0, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment$a;->d:I
 
     .line 1604
-    invoke-static {}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->access$400()Z
+    invoke-static {}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->j()Z
 
     .line 595
     return-void
@@ -101,7 +101,7 @@
     iput v0, p0, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment$a;->d:I
 
     .line 2604
-    invoke-static {}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->access$400()Z
+    invoke-static {}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->j()Z
 
     .line 601
     return-void
@@ -131,7 +131,7 @@
 
     .line 712
     :try_start_0
-    invoke-static {}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->access$900()Lcom/google/protobuf/Parser;
+    invoke-static {}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->k()Lcom/google/protobuf/Parser;
 
     move-result-object v0
 
@@ -196,7 +196,6 @@
     .line 718
     invoke-virtual {p0, v1}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment$a;->a(Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;)Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment$a;
 
-    .line 720
     :cond_1
     throw v0
 
@@ -380,7 +379,7 @@
 
     .prologue
     .line 688
-    invoke-static {}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->getDefaultInstance()Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
+    invoke-static {}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->h()Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
 
     move-result-object v0
 
@@ -392,14 +391,14 @@
 
     .line 689
     :cond_0
-    invoke-virtual {p1}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->hasInitiator()Z
+    invoke-virtual {p1}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 690
-    invoke-virtual {p1}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->getInitiator()Lcom/kik/ximodel/XiBareUserJid;
+    invoke-virtual {p1}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->c()Lcom/kik/ximodel/XiBareUserJid;
 
     move-result-object v0
 
@@ -438,14 +437,14 @@
     .line 692
     :cond_1
     :goto_2
-    invoke-virtual {p1}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->getDropIfInitiatorNotFriend()Z
+    invoke-virtual {p1}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->d()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
     .line 693
-    invoke-virtual {p1}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->getDropIfInitiatorNotFriend()Z
+    invoke-virtual {p1}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->d()Z
 
     move-result v0
 
@@ -457,14 +456,14 @@
 
     .line 695
     :cond_2
-    invoke-static {p1}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->access$800(Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;)I
+    invoke-static {p1}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->b(Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;)I
 
     move-result v0
 
     if-eqz v0, :cond_3
 
     .line 696
-    invoke-virtual {p1}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->getRuleValue()I
+    invoke-virtual {p1}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->e()I
 
     move-result v0
 
@@ -504,7 +503,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {v1, p0, v0}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;Lcom/kik/messagepath/model/VisibilityRules$1;)V
+    invoke-direct {v1, p0, v0}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;B)V
 
     .line 641
     iget-object v0, p0, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment$a;->b:Lcom/google/protobuf/SingleFieldBuilderV3;
@@ -514,18 +513,18 @@
     .line 642
     iget-object v0, p0, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment$a;->a:Lcom/kik/ximodel/XiBareUserJid;
 
-    invoke-static {v1, v0}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->access$602(Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;Lcom/kik/ximodel/XiBareUserJid;)Lcom/kik/ximodel/XiBareUserJid;
+    invoke-static {v1, v0}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->a(Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;Lcom/kik/ximodel/XiBareUserJid;)Lcom/kik/ximodel/XiBareUserJid;
 
     .line 646
     :goto_0
     iget-boolean v0, p0, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment$a;->c:Z
 
-    invoke-static {v1, v0}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->access$702(Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;Z)Z
+    invoke-static {v1, v0}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->a(Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;Z)Z
 
     .line 647
     iget v0, p0, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment$a;->d:I
 
-    invoke-static {v1, v0}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->access$802(Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;I)I
+    invoke-static {v1, v0}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->a(Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;I)I
 
     .line 648
     invoke-virtual {p0}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment$a;->onBuilt()V
@@ -543,7 +542,7 @@
 
     check-cast v0, Lcom/kik/ximodel/XiBareUserJid;
 
-    invoke-static {v1, v0}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->access$602(Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;Lcom/kik/ximodel/XiBareUserJid;)Lcom/kik/ximodel/XiBareUserJid;
+    invoke-static {v1, v0}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->a(Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;Lcom/kik/ximodel/XiBareUserJid;)Lcom/kik/ximodel/XiBareUserJid;
 
     goto :goto_0
 .end method
@@ -834,7 +833,7 @@
 
     .prologue
     .line 10628
-    invoke-static {}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->getDefaultInstance()Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
+    invoke-static {}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->h()Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
 
     move-result-object v0
 
@@ -847,7 +846,7 @@
 
     .prologue
     .line 9628
-    invoke-static {}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->getDefaultInstance()Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
+    invoke-static {}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->h()Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
 
     move-result-object v0
 

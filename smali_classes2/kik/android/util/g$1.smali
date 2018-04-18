@@ -30,7 +30,7 @@
     .locals 0
 
     .prologue
-    .line 201
+    .line 199
     iput-object p1, p0, Lkik/android/util/g$1;->c:Lkik/android/util/g;
 
     iput-object p2, p0, Lkik/android/util/g$1;->a:[Ljava/lang/CharSequence;
@@ -48,7 +48,7 @@
     .locals 2
 
     .prologue
-    .line 205
+    .line 203
     if-nez p2, :cond_0
 
     iget-object v0, p0, Lkik/android/util/g$1;->a:[Ljava/lang/CharSequence;
@@ -59,16 +59,16 @@
 
     if-le v0, v1, :cond_0
 
-    .line 206
+    .line 204
     iget-object v0, p0, Lkik/android/util/g$1;->b:Lkik/android/chat/fragment/KikScopedDialogFragment;
 
     invoke-static {v0}, Lkik/android/util/g;->c(Lkik/android/chat/fragment/KikScopedDialogFragment;)V
 
-    .line 212
+    .line 210
     :goto_0
     return-void
 
-    .line 209
+    .line 207
     :cond_0
     iget-object v0, p0, Lkik/android/util/g$1;->b:Lkik/android/chat/fragment/KikScopedDialogFragment;
 

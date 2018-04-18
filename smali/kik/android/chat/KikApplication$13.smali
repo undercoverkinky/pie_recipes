@@ -1,11 +1,11 @@
 .class final Lkik/android/chat/KikApplication$13;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/KikApplication;->B()V
+    value = Lkik/android/chat/KikApplication;->A()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,69 +15,62 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
-        "Ljava/lang/Boolean;",
+        "Ljava/lang/Void;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lkik/android/chat/KikApplication;
+.field final synthetic a:Lkik/core/g/g;
+
+.field final synthetic b:Lkik/android/chat/KikApplication;
 
 
 # direct methods
-.method constructor <init>(Lkik/android/chat/KikApplication;)V
+.method constructor <init>(Lkik/android/chat/KikApplication;Lkik/core/g/g;)V
     .locals 0
 
     .prologue
-    .line 856
-    iput-object p1, p0, Lkik/android/chat/KikApplication$13;->a:Lkik/android/chat/KikApplication;
+    .line 787
+    iput-object p1, p0, Lkik/android/chat/KikApplication$13;->b:Lkik/android/chat/KikApplication;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    iput-object p2, p0, Lkik/android/chat/KikApplication$13;->a:Lkik/core/g/g;
+
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic b(Ljava/lang/Object;)V
-    .locals 1
+.method public final a()V
+    .locals 2
 
     .prologue
-    .line 856
-    check-cast p1, Ljava/lang/Boolean;
+    .line 791
+    iget-object v0, p0, Lkik/android/chat/KikApplication$13;->b:Lkik/android/chat/KikApplication;
 
-    .line 1860
-    iget-object v0, p0, Lkik/android/chat/KikApplication$13;->a:Lkik/android/chat/KikApplication;
+    iget-object v1, p0, Lkik/android/chat/KikApplication$13;->a:Lkik/core/g/g;
 
-    invoke-static {v0}, Lkik/android/chat/KikApplication;->p(Lkik/android/chat/KikApplication;)Lkik/core/interfaces/ad;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lkik/core/z;->a(Lkik/core/interfaces/ad;)Z
+    invoke-static {v0, v1}, Lkik/android/chat/KikApplication;->a(Lkik/android/chat/KikApplication;Lkik/core/g/c;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    .line 792
+    iget-object v0, p0, Lkik/android/chat/KikApplication$13;->b:Lkik/android/chat/KikApplication;
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 1861
-    iget-object v0, p0, Lkik/android/chat/KikApplication$13;->a:Lkik/android/chat/KikApplication;
-
-    invoke-static {v0}, Lkik/android/chat/KikApplication;->p(Lkik/android/chat/KikApplication;)Lkik/core/interfaces/ad;
+    invoke-static {v0}, Lkik/android/chat/KikApplication;->m(Lkik/android/chat/KikApplication;)Lkik/core/interfaces/ad;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkik/android/util/bf;->a(Lkik/core/interfaces/ad;)V
+    invoke-static {v0}, Lkik/android/util/bg;->a(Lkik/core/interfaces/ad;)V
 
-    .line 856
+    .line 794
     :cond_0
     return-void
 .end method

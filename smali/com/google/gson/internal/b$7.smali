@@ -26,7 +26,7 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/google/gson/g;
+.field final synthetic a:Lcom/google/gson/f;
 
 .field final synthetic b:Ljava/lang/reflect/Type;
 
@@ -34,14 +34,14 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/google/gson/internal/b;Lcom/google/gson/g;Ljava/lang/reflect/Type;)V
+.method constructor <init>(Lcom/google/gson/internal/b;Lcom/google/gson/f;Ljava/lang/reflect/Type;)V
     .locals 0
 
     .prologue
     .line 76
     iput-object p1, p0, Lcom/google/gson/internal/b$7;->c:Lcom/google/gson/internal/b;
 
-    iput-object p2, p0, Lcom/google/gson/internal/b$7;->a:Lcom/google/gson/g;
+    iput-object p2, p0, Lcom/google/gson/internal/b$7;->a:Lcom/google/gson/f;
 
     iput-object p3, p0, Lcom/google/gson/internal/b$7;->b:Ljava/lang/reflect/Type;
 
@@ -62,9 +62,9 @@
 
     .prologue
     .line 78
-    iget-object v0, p0, Lcom/google/gson/internal/b$7;->a:Lcom/google/gson/g;
+    iget-object v0, p0, Lcom/google/gson/internal/b$7;->a:Lcom/google/gson/f;
 
-    invoke-interface {v0}, Lcom/google/gson/g;->a()Ljava/lang/Object;
+    invoke-interface {v0}, Lcom/google/gson/f;->a()Ljava/lang/Object;
 
     move-result-object v0
 

@@ -44,7 +44,7 @@
 
     .prologue
     .line 33
-    const v0, 0x7f0400f3
+    const v0, 0x7f0400d1
 
     return v0
 .end method
@@ -56,7 +56,7 @@
     .line 38
     iget-object v0, p0, Lkik/android/widget/ContactSearchMultiSelectView;->a:Landroid/view/ViewGroup;
 
-    const v1, 0x7f100318
+    const v1, 0x7f1102ae
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 

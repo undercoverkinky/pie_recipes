@@ -1,15 +1,15 @@
 .class public final Lkik/android/net/http/e;
-.super Lkik/android/net/http/KikAuthedHttpRequest;
+.super Lkik/android/net/http/g;
 .source "SourceFile"
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lkik/core/z;)V
+.method public constructor <init>(Ljava/lang/String;Lkik/core/x;)V
     .locals 0
 
     .prologue
     .line 11
-    invoke-direct {p0, p1, p2}, Lkik/android/net/http/KikAuthedHttpRequest;-><init>(Ljava/lang/String;Lkik/core/z;)V
+    invoke-direct {p0, p1, p2}, Lkik/android/net/http/g;-><init>(Ljava/lang/String;Lkik/core/x;)V
 
     .line 12
     return-void
@@ -22,7 +22,7 @@
 
     .prologue
     .line 17
-    const-string v0, "POST"
+    const-string v0, "GET"
 
     return-object v0
 .end method

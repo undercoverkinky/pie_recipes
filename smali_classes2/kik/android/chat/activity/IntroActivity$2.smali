@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 124
+    .line 110
     iput-object p1, p0, Lkik/android/chat/activity/IntroActivity$2;->a:Lkik/android/chat/activity/IntroActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,8 +50,8 @@
     .locals 2
 
     .prologue
-    .line 124
-    .line 1128
+    .line 110
+    .line 1114
     iget-object v0, p0, Lkik/android/chat/activity/IntroActivity$2;->a:Lkik/android/chat/activity/IntroActivity;
 
     invoke-static {v0}, Lkik/android/chat/activity/IntroActivity;->a(Lkik/android/chat/activity/IntroActivity;)Lcom/kik/events/d;
@@ -60,7 +60,7 @@
 
     invoke-virtual {v0}, Lcom/kik/events/d;->a()V
 
-    .line 1129
+    .line 1115
     iget-object v0, p0, Lkik/android/chat/activity/IntroActivity$2;->a:Lkik/android/chat/activity/IntroActivity;
 
     invoke-static {v0}, Lkik/android/chat/activity/IntroActivity;->b(Lkik/android/chat/activity/IntroActivity;)Ljava/util/TimerTask;
@@ -69,7 +69,7 @@
 
     invoke-virtual {v0}, Ljava/util/TimerTask;->cancel()Z
 
-    .line 1130
+    .line 1116
     iget-object v0, p0, Lkik/android/chat/activity/IntroActivity$2;->a:Lkik/android/chat/activity/IntroActivity;
 
     invoke-static {v0}, Lkik/android/chat/activity/IntroActivity;->c(Lkik/android/chat/activity/IntroActivity;)Ljava/util/Timer;
@@ -78,7 +78,7 @@
 
     invoke-virtual {v0}, Ljava/util/Timer;->purge()I
 
-    .line 1131
+    .line 1117
     iget-object v0, p0, Lkik/android/chat/activity/IntroActivity$2;->a:Lkik/android/chat/activity/IntroActivity;
 
     invoke-static {v0}, Lkik/android/chat/activity/IntroActivity;->d(Lkik/android/chat/activity/IntroActivity;)Landroid/app/ProgressDialog;
@@ -91,7 +91,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1132
+    .line 1118
     iget-object v0, p0, Lkik/android/chat/activity/IntroActivity$2;->a:Lkik/android/chat/activity/IntroActivity;
 
     invoke-static {v0}, Lkik/android/chat/activity/IntroActivity;->d(Lkik/android/chat/activity/IntroActivity;)Landroid/app/ProgressDialog;
@@ -100,7 +100,7 @@
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
-    .line 1135
+    .line 1121
     :cond_0
     iget-object v0, p0, Lkik/android/chat/activity/IntroActivity$2;->a:Lkik/android/chat/activity/IntroActivity;
 
@@ -110,6 +110,6 @@
 
     invoke-virtual {v0, v1}, Lkik/android/chat/activity/IntroActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 124
+    .line 110
     return-void
 .end method

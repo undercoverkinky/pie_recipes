@@ -56,7 +56,7 @@
 
     sput-object v0, Lcom/google/gson/stream/a;->b:[C
 
-    .line 1594
+    .line 1593
     new-instance v0, Lcom/google/gson/stream/a$1;
 
     invoke-direct {v0}, Lcom/google/gson/stream/a$1;-><init>()V
@@ -163,7 +163,7 @@
     .end annotation
 
     .prologue
-    .line 1568
+    .line 1566
     new-instance v0, Lcom/google/gson/stream/MalformedJsonException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -174,7 +174,43 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()Ljava/lang/String;
+    const-string v2, " at line "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 20311
+    iget v2, p0, Lcom/google/gson/stream/a;->h:I
+
+    add-int/lit8 v2, v2, 0x1
+
+    .line 1567
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " column "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " path "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->t()Ljava/lang/String;
 
     move-result-object v2
 
@@ -197,7 +233,7 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1264
+    .line 1262
     iget v0, p0, Lcom/google/gson/stream/a;->n:I
 
     iget-object v1, p0, Lcom/google/gson/stream/a;->m:[I
@@ -206,58 +242,58 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1265
+    .line 1263
     iget v0, p0, Lcom/google/gson/stream/a;->n:I
 
     mul-int/lit8 v0, v0, 0x2
 
     new-array v0, v0, [I
 
-    .line 1266
+    .line 1264
     iget v1, p0, Lcom/google/gson/stream/a;->n:I
 
     mul-int/lit8 v1, v1, 0x2
 
     new-array v1, v1, [I
 
-    .line 1267
+    .line 1265
     iget v2, p0, Lcom/google/gson/stream/a;->n:I
 
     mul-int/lit8 v2, v2, 0x2
 
     new-array v2, v2, [Ljava/lang/String;
 
-    .line 1268
+    .line 1266
     iget-object v3, p0, Lcom/google/gson/stream/a;->m:[I
 
     iget v4, p0, Lcom/google/gson/stream/a;->n:I
 
     invoke-static {v3, v5, v0, v5, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 1269
+    .line 1267
     iget-object v3, p0, Lcom/google/gson/stream/a;->p:[I
 
     iget v4, p0, Lcom/google/gson/stream/a;->n:I
 
     invoke-static {v3, v5, v1, v5, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 1270
+    .line 1268
     iget-object v3, p0, Lcom/google/gson/stream/a;->o:[Ljava/lang/String;
 
     iget v4, p0, Lcom/google/gson/stream/a;->n:I
 
     invoke-static {v3, v5, v2, v5, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 1271
+    .line 1269
     iput-object v0, p0, Lcom/google/gson/stream/a;->m:[I
 
-    .line 1272
+    .line 1270
     iput-object v1, p0, Lcom/google/gson/stream/a;->p:[I
 
-    .line 1273
+    .line 1271
     iput-object v2, p0, Lcom/google/gson/stream/a;->o:[Ljava/lang/String;
 
-    .line 1275
+    .line 1273
     :cond_0
     iget-object v0, p0, Lcom/google/gson/stream/a;->m:[I
 
@@ -269,7 +305,7 @@
 
     aput p1, v0, v1
 
-    .line 1276
+    .line 1274
     return-void
 .end method
 
@@ -282,26 +318,26 @@
     .end annotation
 
     .prologue
-    .line 745
+    .line 749
     sparse-switch p1, :sswitch_data_0
 
-    .line 765
+    .line 769
     const/4 v0, 0x1
 
     :goto_0
     return v0
 
-    .line 751
+    .line 755
     :sswitch_0
-    invoke-direct {p0}, Lcom/google/gson/stream/a;->v()V
+    invoke-direct {p0}, Lcom/google/gson/stream/a;->w()V
 
-    .line 763
+    .line 767
     :sswitch_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 745
+    .line 749
     :sswitch_data_0
     .sparse-switch
         0x9 -> :sswitch_1
@@ -324,7 +360,7 @@
 .end method
 
 .method private b(Z)I
-    .locals 9
+    .locals 8
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -332,66 +368,66 @@
     .end annotation
 
     .prologue
-    const/16 v8, 0xa
+    const/16 v7, 0xa
 
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 1327
+    .line 1333
     iget-object v5, p0, Lcom/google/gson/stream/a;->e:[C
 
-    .line 1328
+    .line 1334
     iget v1, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 1329
+    .line 1335
     iget v0, p0, Lcom/google/gson/stream/a;->g:I
 
-    .line 1331
+    .line 1337
     :goto_0
     if-ne v1, v0, :cond_0
 
-    .line 1332
+    .line 1338
     iput v1, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 1333
+    .line 1339
     invoke-direct {p0, v3}, Lcom/google/gson/stream/a;->b(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_b
 
-    .line 1336
+    .line 1342
     iget v1, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 1337
+    .line 1343
     iget v0, p0, Lcom/google/gson/stream/a;->g:I
 
-    .line 1340
+    .line 1346
     :cond_0
     add-int/lit8 v4, v1, 0x1
 
     aget-char v1, v5, v1
 
-    .line 1341
-    if-ne v1, v8, :cond_1
+    .line 1347
+    if-ne v1, v7, :cond_1
 
-    .line 1342
+    .line 1348
     iget v1, p0, Lcom/google/gson/stream/a;->h:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lcom/google/gson/stream/a;->h:I
 
-    .line 1343
+    .line 1349
     iput v4, p0, Lcom/google/gson/stream/a;->i:I
 
     move v1, v4
 
-    .line 1344
+    .line 1350
     goto :goto_0
 
-    .line 1345
+    .line 1351
     :cond_1
     const/16 v6, 0x20
 
@@ -405,65 +441,65 @@
 
     if-eq v1, v6, :cond_d
 
-    .line 1349
+    .line 1355
     const/16 v6, 0x2f
 
     if-ne v1, v6, :cond_9
 
-    .line 1350
+    .line 1356
     iput v4, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 1351
+    .line 1357
     if-ne v4, v0, :cond_2
 
-    .line 1352
+    .line 1358
     iget v0, p0, Lcom/google/gson/stream/a;->f:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 1353
+    .line 1359
     const/4 v0, 0x2
 
     invoke-direct {p0, v0}, Lcom/google/gson/stream/a;->b(I)Z
 
     move-result v0
 
-    .line 1354
+    .line 1360
     iget v4, p0, Lcom/google/gson/stream/a;->f:I
 
     add-int/lit8 v4, v4, 0x1
 
     iput v4, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 1355
+    .line 1361
     if-nez v0, :cond_2
 
     move v0, v1
 
-    .line 1403
+    .line 1410
     :goto_1
     return v0
 
-    .line 1360
+    .line 1366
     :cond_2
-    invoke-direct {p0}, Lcom/google/gson/stream/a;->v()V
+    invoke-direct {p0}, Lcom/google/gson/stream/a;->w()V
 
-    .line 1361
+    .line 1367
     iget v0, p0, Lcom/google/gson/stream/a;->f:I
 
     aget-char v0, v5, v0
 
-    .line 1362
+    .line 1368
     sparse-switch v0, :sswitch_data_0
 
     move v0, v1
 
-    .line 1382
+    .line 1388
     goto :goto_1
 
-    .line 1365
+    .line 1371
     :sswitch_0
     iget v0, p0, Lcom/google/gson/stream/a;->f:I
 
@@ -471,55 +507,58 @@
 
     iput v0, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 1366
+    .line 1372
     const-string v1, "*/"
 
-    .line 3435
+    .line 17443
+    :goto_2
+    iget v0, p0, Lcom/google/gson/stream/a;->f:I
+
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v4
 
-    .line 3437
-    :goto_2
-    iget v0, p0, Lcom/google/gson/stream/a;->f:I
-
     add-int/2addr v0, v4
 
-    iget v6, p0, Lcom/google/gson/stream/a;->g:I
+    iget v4, p0, Lcom/google/gson/stream/a;->g:I
 
-    if-le v0, v6, :cond_3
+    if-le v0, v4, :cond_3
 
-    invoke-direct {p0, v4}, Lcom/google/gson/stream/a;->b(I)Z
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    invoke-direct {p0, v0}, Lcom/google/gson/stream/a;->b(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
-    .line 3438
+    .line 17444
     :cond_3
     iget-object v0, p0, Lcom/google/gson/stream/a;->e:[C
 
-    iget v6, p0, Lcom/google/gson/stream/a;->f:I
+    iget v4, p0, Lcom/google/gson/stream/a;->f:I
 
-    aget-char v0, v0, v6
+    aget-char v0, v0, v4
 
-    if-ne v0, v8, :cond_5
+    if-ne v0, v7, :cond_5
 
-    .line 3439
+    .line 17445
     iget v0, p0, Lcom/google/gson/stream/a;->h:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/google/gson/stream/a;->h:I
 
-    .line 3440
+    .line 17446
     iget v0, p0, Lcom/google/gson/stream/a;->f:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/google/gson/stream/a;->i:I
 
-    .line 3437
+    .line 17443
     :cond_4
     iget v0, p0, Lcom/google/gson/stream/a;->f:I
 
@@ -532,26 +571,30 @@
     :cond_5
     move v0, v2
 
-    .line 3443
+    .line 17449
     :goto_3
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v4
+
     if-ge v0, v4, :cond_6
 
-    .line 3444
-    iget-object v6, p0, Lcom/google/gson/stream/a;->e:[C
+    .line 17450
+    iget-object v4, p0, Lcom/google/gson/stream/a;->e:[C
 
-    iget v7, p0, Lcom/google/gson/stream/a;->f:I
+    iget v6, p0, Lcom/google/gson/stream/a;->f:I
 
-    add-int/2addr v7, v0
+    add-int/2addr v6, v0
 
-    aget-char v6, v6, v7
+    aget-char v4, v4, v6
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->charAt(I)C
 
-    move-result v7
+    move-result v6
 
-    if-ne v6, v7, :cond_4
+    if-ne v4, v6, :cond_4
 
-    .line 3443
+    .line 17449
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
@@ -559,11 +602,11 @@
     :cond_6
     move v0, v3
 
-    .line 1366
+    .line 1372
     :goto_4
     if-nez v0, :cond_8
 
-    .line 1367
+    .line 1373
     const-string v0, "Unterminated comment"
 
     invoke-direct {p0, v0}, Lcom/google/gson/stream/a;->a(Ljava/lang/String;)Ljava/io/IOException;
@@ -575,21 +618,21 @@
     :cond_7
     move v0, v2
 
-    .line 3450
+    .line 17456
     goto :goto_4
 
-    .line 1369
+    .line 1375
     :cond_8
     iget v0, p0, Lcom/google/gson/stream/a;->f:I
 
     add-int/lit8 v1, v0, 0x2
 
-    .line 1370
+    .line 1376
     iget v0, p0, Lcom/google/gson/stream/a;->g:I
 
     goto/16 :goto_0
 
-    .line 1375
+    .line 1381
     :sswitch_1
     iget v0, p0, Lcom/google/gson/stream/a;->f:I
 
@@ -597,67 +640,83 @@
 
     iput v0, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 1376
-    invoke-direct {p0}, Lcom/google/gson/stream/a;->w()V
+    .line 1382
+    invoke-direct {p0}, Lcom/google/gson/stream/a;->x()V
 
-    .line 1377
+    .line 1383
     iget v1, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 1378
+    .line 1384
     iget v0, p0, Lcom/google/gson/stream/a;->g:I
 
     goto/16 :goto_0
 
-    .line 1384
+    .line 1390
     :cond_9
     const/16 v0, 0x23
 
     if-ne v1, v0, :cond_a
 
-    .line 1385
+    .line 1391
     iput v4, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 1391
-    invoke-direct {p0}, Lcom/google/gson/stream/a;->v()V
-
-    .line 1392
+    .line 1397
     invoke-direct {p0}, Lcom/google/gson/stream/a;->w()V
 
-    .line 1393
+    .line 1398
+    invoke-direct {p0}, Lcom/google/gson/stream/a;->x()V
+
+    .line 1399
     iget v1, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 1394
+    .line 1400
     iget v0, p0, Lcom/google/gson/stream/a;->g:I
 
     goto/16 :goto_0
 
-    .line 1396
+    .line 1402
     :cond_a
     iput v4, p0, Lcom/google/gson/stream/a;->f:I
 
     move v0, v1
 
-    .line 1397
+    .line 1403
     goto/16 :goto_1
 
-    .line 1400
+    .line 1406
     :cond_b
     if-eqz p1, :cond_c
 
-    .line 1401
+    .line 1407
     new-instance v0, Ljava/io/EOFException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v2, "End of input"
+    const-string v2, "End of input at line "
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()Ljava/lang/String;
+    .line 18311
+    iget v2, p0, Lcom/google/gson/stream/a;->h:I
 
-    move-result-object v2
+    add-int/lit8 v2, v2, 0x1
+
+    .line 1408
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " column "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -669,7 +728,7 @@
 
     throw v0
 
-    .line 1403
+    .line 1410
     :cond_c
     const/4 v0, -0x1
 
@@ -680,7 +739,7 @@
 
     goto/16 :goto_0
 
-    .line 1362
+    .line 1368
     nop
 
     :sswitch_data_0
@@ -691,7 +750,7 @@
 .end method
 
 .method private b(C)Ljava/lang/String;
-    .locals 8
+    .locals 7
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -699,170 +758,119 @@
     .end annotation
 
     .prologue
-    const/16 v7, 0x10
-
-    .line 987
-    iget-object v4, p0, Lcom/google/gson/stream/a;->e:[C
-
-    .line 988
-    const/4 v0, 0x0
-
-    .line 990
-    :cond_0
-    :goto_0
-    iget v2, p0, Lcom/google/gson/stream/a;->f:I
-
-    .line 991
-    iget v5, p0, Lcom/google/gson/stream/a;->g:I
-
-    move v1, v2
-
     .line 994
-    :goto_1
-    if-ge v1, v5, :cond_6
+    iget-object v3, p0, Lcom/google/gson/stream/a;->e:[C
 
     .line 995
-    add-int/lit8 v3, v1, 0x1
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    aget-char v1, v4, v1
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 997
-    if-ne v1, p1, :cond_2
+    :cond_0
+    :goto_0
+    iget v1, p0, Lcom/google/gson/stream/a;->f:I
 
     .line 998
-    iput v3, p0, Lcom/google/gson/stream/a;->f:I
+    iget v5, p0, Lcom/google/gson/stream/a;->g:I
 
-    .line 999
-    sub-int v1, v3, v2
-
-    add-int/lit8 v1, v1, -0x1
-
-    .line 1000
-    if-nez v0, :cond_1
+    move v0, v1
 
     .line 1001
-    new-instance v0, Ljava/lang/String;
+    :goto_1
+    if-ge v0, v5, :cond_4
 
-    invoke-direct {v0, v4, v2, v1}, Ljava/lang/String;-><init>([CII)V
+    .line 1002
+    add-int/lit8 v2, v0, 0x1
 
-    .line 1004
-    :goto_2
-    return-object v0
-
-    .line 1003
-    :cond_1
-    invoke-virtual {v0, v4, v2, v1}, Ljava/lang/StringBuilder;->append([CII)Ljava/lang/StringBuilder;
+    aget-char v0, v3, v0
 
     .line 1004
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-ne v0, p1, :cond_1
+
+    .line 1005
+    iput v2, p0, Lcom/google/gson/stream/a;->f:I
+
+    .line 1006
+    sub-int v0, v2, v1
+
+    add-int/lit8 v0, v0, -0x1
+
+    invoke-virtual {v4, v3, v1, v0}, Ljava/lang/StringBuilder;->append([CII)Ljava/lang/StringBuilder;
+
+    .line 1007
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    goto :goto_2
-
-    .line 1006
-    :cond_2
-    const/16 v6, 0x5c
-
-    if-ne v1, v6, :cond_4
-
-    .line 1007
-    iput v3, p0, Lcom/google/gson/stream/a;->f:I
+    return-object v0
 
     .line 1008
-    sub-int v1, v3, v2
+    :cond_1
+    const/16 v6, 0x5c
 
-    add-int/lit8 v1, v1, -0x1
+    if-ne v0, v6, :cond_2
 
     .line 1009
-    if-nez v0, :cond_3
+    iput v2, p0, Lcom/google/gson/stream/a;->f:I
 
     .line 1010
-    add-int/lit8 v0, v1, 0x1
+    sub-int v0, v2, v1
 
-    mul-int/lit8 v3, v0, 0x2
+    add-int/lit8 v0, v0, -0x1
+
+    invoke-virtual {v4, v3, v1, v0}, Ljava/lang/StringBuilder;->append([CII)Ljava/lang/StringBuilder;
 
     .line 1011
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-direct {p0}, Lcom/google/gson/stream/a;->y()C
 
-    invoke-static {v3, v7}, Ljava/lang/Math;->max(II)I
+    move-result v0
 
-    move-result v3
-
-    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    .line 1013
-    :cond_3
-    invoke-virtual {v0, v4, v2, v1}, Ljava/lang/StringBuilder;->append([CII)Ljava/lang/StringBuilder;
-
-    .line 1014
-    invoke-direct {p0}, Lcom/google/gson/stream/a;->x()C
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 1018
-    :cond_4
+    .line 1015
+    :cond_2
     const/16 v6, 0xa
 
-    if-ne v1, v6, :cond_5
+    if-ne v0, v6, :cond_3
+
+    .line 1016
+    iget v0, p0, Lcom/google/gson/stream/a;->h:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lcom/google/gson/stream/a;->h:I
+
+    .line 1017
+    iput v2, p0, Lcom/google/gson/stream/a;->i:I
+
+    :cond_3
+    move v0, v2
 
     .line 1019
-    iget v1, p0, Lcom/google/gson/stream/a;->h:I
-
-    add-int/lit8 v1, v1, 0x1
-
-    iput v1, p0, Lcom/google/gson/stream/a;->h:I
-
-    .line 1020
-    iput v3, p0, Lcom/google/gson/stream/a;->i:I
-
-    :cond_5
-    move v1, v3
-
-    .line 1022
     goto :goto_1
 
+    .line 1021
+    :cond_4
+    sub-int v2, v0, v1
+
+    invoke-virtual {v4, v3, v1, v2}, Ljava/lang/StringBuilder;->append([CII)Ljava/lang/StringBuilder;
+
+    .line 1022
+    iput v0, p0, Lcom/google/gson/stream/a;->f:I
+
+    .line 1023
+    const/4 v0, 0x1
+
+    invoke-direct {p0, v0}, Lcom/google/gson/stream/a;->b(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
     .line 1024
-    :cond_6
-    if-nez v0, :cond_7
-
-    .line 1025
-    sub-int v0, v1, v2
-
-    mul-int/lit8 v3, v0, 0x2
-
-    .line 1026
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-static {v3, v7}, Ljava/lang/Math;->max(II)I
-
-    move-result v3
-
-    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    .line 1028
-    :cond_7
-    sub-int v3, v1, v2
-
-    invoke-virtual {v0, v4, v2, v3}, Ljava/lang/StringBuilder;->append([CII)Ljava/lang/StringBuilder;
-
-    .line 1029
-    iput v1, p0, Lcom/google/gson/stream/a;->f:I
-
-    .line 1030
-    const/4 v1, 0x1
-
-    invoke-direct {p0, v1}, Lcom/google/gson/stream/a;->b(I)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    .line 1031
     const-string v0, "Unterminated string"
 
     invoke-direct {p0, v0}, Lcom/google/gson/stream/a;->a(Ljava/lang/String;)Ljava/io/IOException;
@@ -883,10 +891,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1284
+    .line 1282
     iget-object v1, p0, Lcom/google/gson/stream/a;->e:[C
 
-    .line 1285
+    .line 1283
     iget v2, p0, Lcom/google/gson/stream/a;->i:I
 
     iget v3, p0, Lcom/google/gson/stream/a;->f:I
@@ -895,14 +903,14 @@
 
     iput v2, p0, Lcom/google/gson/stream/a;->i:I
 
-    .line 1286
+    .line 1284
     iget v2, p0, Lcom/google/gson/stream/a;->g:I
 
     iget v3, p0, Lcom/google/gson/stream/a;->f:I
 
     if-eq v2, v3, :cond_3
 
-    .line 1287
+    .line 1285
     iget v2, p0, Lcom/google/gson/stream/a;->g:I
 
     iget v3, p0, Lcom/google/gson/stream/a;->f:I
@@ -911,18 +919,18 @@
 
     iput v2, p0, Lcom/google/gson/stream/a;->g:I
 
-    .line 1288
+    .line 1286
     iget v2, p0, Lcom/google/gson/stream/a;->f:I
 
     iget v3, p0, Lcom/google/gson/stream/a;->g:I
 
     invoke-static {v1, v2, v1, v0, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 1293
+    .line 1291
     :goto_0
     iput v0, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 1295
+    .line 1293
     :cond_0
     iget-object v2, p0, Lcom/google/gson/stream/a;->c:Ljava/io/Reader;
 
@@ -942,14 +950,14 @@
 
     if-eq v2, v3, :cond_2
 
-    .line 1296
+    .line 1294
     iget v3, p0, Lcom/google/gson/stream/a;->g:I
 
     add-int/2addr v2, v3
 
     iput v2, p0, Lcom/google/gson/stream/a;->g:I
 
-    .line 1299
+    .line 1297
     iget v2, p0, Lcom/google/gson/stream/a;->h:I
 
     if-nez v2, :cond_1
@@ -968,37 +976,37 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 1300
+    .line 1298
     iget v2, p0, Lcom/google/gson/stream/a;->f:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 1301
+    .line 1299
     iget v2, p0, Lcom/google/gson/stream/a;->i:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lcom/google/gson/stream/a;->i:I
 
-    .line 1302
+    .line 1300
     add-int/lit8 p1, p1, 0x1
 
-    .line 1305
+    .line 1303
     :cond_1
     iget v2, p0, Lcom/google/gson/stream/a;->g:I
 
     if-lt v2, p1, :cond_0
 
-    .line 1306
+    .line 1304
     const/4 v0, 0x1
 
-    .line 1309
+    .line 1307
     :cond_2
     return v0
 
-    .line 1290
+    .line 1288
     :cond_3
     iput v0, p0, Lcom/google/gson/stream/a;->g:I
 
@@ -1014,76 +1022,76 @@
     .end annotation
 
     .prologue
-    .line 1097
+    .line 1096
     iget-object v2, p0, Lcom/google/gson/stream/a;->e:[C
 
-    .line 1099
+    .line 1098
     :cond_0
     :goto_0
     iget v0, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 1100
+    .line 1099
     iget v3, p0, Lcom/google/gson/stream/a;->g:I
 
-    .line 1102
+    .line 1101
     :goto_1
     if-ge v0, v3, :cond_4
 
-    .line 1103
+    .line 1102
     add-int/lit8 v1, v0, 0x1
 
     aget-char v0, v2, v0
 
-    .line 1104
+    .line 1103
     if-ne v0, p1, :cond_1
 
-    .line 1105
+    .line 1104
     iput v1, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 1106
+    .line 1105
     return-void
 
-    .line 1107
+    .line 1106
     :cond_1
     const/16 v4, 0x5c
 
     if-ne v0, v4, :cond_2
 
-    .line 1108
+    .line 1107
     iput v1, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 1109
-    invoke-direct {p0}, Lcom/google/gson/stream/a;->x()C
+    .line 1108
+    invoke-direct {p0}, Lcom/google/gson/stream/a;->y()C
 
     goto :goto_0
 
-    .line 1112
+    .line 1111
     :cond_2
     const/16 v4, 0xa
 
     if-ne v0, v4, :cond_3
 
-    .line 1113
+    .line 1112
     iget v0, p0, Lcom/google/gson/stream/a;->h:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/google/gson/stream/a;->h:I
 
-    .line 1114
+    .line 1113
     iput v1, p0, Lcom/google/gson/stream/a;->i:I
 
     :cond_3
     move v0, v1
 
-    .line 1116
+    .line 1115
     goto :goto_1
 
-    .line 1117
+    .line 1116
     :cond_4
     iput v0, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 1118
+    .line 1117
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lcom/google/gson/stream/a;->b(I)Z
@@ -1092,7 +1100,7 @@
 
     if-nez v0, :cond_0
 
-    .line 1119
+    .line 1118
     const-string v0, "Unterminated string"
 
     invoke-direct {p0, v0}, Lcom/google/gson/stream/a;->a(Ljava/lang/String;)Ljava/io/IOException;
@@ -1113,14 +1121,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 599
+    .line 603
     iget-object v0, p0, Lcom/google/gson/stream/a;->e:[C
 
     iget v1, p0, Lcom/google/gson/stream/a;->f:I
 
     aget-char v0, v0, v1
 
-    .line 603
+    .line 607
     const/16 v1, 0x74
 
     if-eq v0, v1, :cond_0
@@ -1129,29 +1137,29 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 604
+    .line 608
     :cond_0
     const-string v2, "true"
 
-    .line 605
+    .line 609
     const-string v1, "TRUE"
 
-    .line 606
+    .line 610
     const/4 v0, 0x5
 
-    .line 620
+    .line 624
     :goto_0
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v5
 
-    .line 621
+    .line 625
     const/4 v4, 0x1
 
     :goto_1
     if-ge v4, v5, :cond_8
 
-    .line 622
+    .line 626
     iget v6, p0, Lcom/google/gson/stream/a;->f:I
 
     add-int/2addr v6, v4
@@ -1170,11 +1178,11 @@
 
     move v0, v3
 
-    .line 638
+    .line 642
     :goto_2
     return v0
 
-    .line 607
+    .line 611
     :cond_1
     const/16 v1, 0x66
 
@@ -1184,19 +1192,19 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 608
+    .line 612
     :cond_2
     const-string v2, "false"
 
-    .line 609
+    .line 613
     const-string v1, "FALSE"
 
-    .line 610
+    .line 614
     const/4 v0, 0x6
 
     goto :goto_0
 
-    .line 611
+    .line 615
     :cond_3
     const/16 v1, 0x6e
 
@@ -1206,14 +1214,14 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 612
+    .line 616
     :cond_4
     const-string v2, "null"
 
-    .line 613
+    .line 617
     const-string v1, "NULL"
 
-    .line 614
+    .line 618
     const/4 v0, 0x7
 
     goto :goto_0
@@ -1221,10 +1229,10 @@
     :cond_5
     move v0, v3
 
-    .line 616
+    .line 620
     goto :goto_2
 
-    .line 625
+    .line 629
     :cond_6
     iget-object v6, p0, Lcom/google/gson/stream/a;->e:[C
 
@@ -1234,7 +1242,7 @@
 
     aget-char v6, v6, v7
 
-    .line 626
+    .line 630
     invoke-virtual {v2, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v7
@@ -1249,16 +1257,16 @@
 
     move v0, v3
 
-    .line 627
+    .line 631
     goto :goto_2
 
-    .line 621
+    .line 625
     :cond_7
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 631
+    .line 635
     :cond_8
     iget v1, p0, Lcom/google/gson/stream/a;->f:I
 
@@ -1285,7 +1293,7 @@
 
     aget-char v1, v1, v2
 
-    .line 632
+    .line 636
     invoke-direct {p0, v1}, Lcom/google/gson/stream/a;->a(C)Z
 
     move-result v1
@@ -1294,10 +1302,10 @@
 
     move v0, v3
 
-    .line 633
+    .line 637
     goto :goto_2
 
-    .line 637
+    .line 641
     :cond_a
     iget v1, p0, Lcom/google/gson/stream/a;->f:I
 
@@ -1305,13 +1313,13 @@
 
     iput v1, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 638
+    .line 642
     iput v0, p0, Lcom/google/gson/stream/a;->a:I
 
     goto :goto_2
 .end method
 
-.method private t()I
+.method private u()I
     .locals 15
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1320,28 +1328,28 @@
     .end annotation
 
     .prologue
-    .line 643
+    .line 647
     iget-object v11, p0, Lcom/google/gson/stream/a;->e:[C
 
-    .line 644
+    .line 648
     iget v2, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 645
+    .line 649
     iget v1, p0, Lcom/google/gson/stream/a;->g:I
 
-    .line 647
+    .line 651
     const-wide/16 v6, 0x0
 
-    .line 648
+    .line 652
     const/4 v5, 0x0
 
-    .line 649
+    .line 653
     const/4 v4, 0x1
 
-    .line 650
+    .line 654
     const/4 v3, 0x0
 
-    .line 652
+    .line 656
     const/4 v0, 0x0
 
     move v10, v0
@@ -1350,25 +1358,25 @@
 
     move v1, v2
 
-    .line 656
+    .line 660
     :goto_0
     add-int v2, v1, v10
 
     if-ne v2, v0, :cond_1
 
-    .line 657
+    .line 661
     array-length v0, v11
 
     if-ne v10, v0, :cond_0
 
-    .line 660
+    .line 664
     const/4 v0, 0x0
 
-    .line 740
+    .line 744
     :goto_1
     return v0
 
-    .line 662
+    .line 666
     :cond_0
     add-int/lit8 v0, v10, 0x1
 
@@ -1378,22 +1386,22 @@
 
     if-eqz v0, :cond_12
 
-    .line 665
+    .line 669
     iget v1, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 666
+    .line 670
     iget v0, p0, Lcom/google/gson/stream/a;->g:I
 
-    .line 669
+    .line 673
     :cond_1
     add-int v2, v1, v10
 
     aget-char v2, v11, v2
 
-    .line 670
+    .line 674
     sparse-switch v2, :sswitch_data_0
 
-    .line 705
+    .line 709
     const/16 v8, 0x30
 
     if-lt v2, v8, :cond_2
@@ -1402,7 +1410,7 @@
 
     if-le v2, v8, :cond_9
 
-    .line 706
+    .line 710
     :cond_2
     invoke-direct {p0, v2}, Lcom/google/gson/stream/a;->a(C)Z
 
@@ -1410,19 +1418,19 @@
 
     if-eqz v0, :cond_12
 
-    .line 709
+    .line 713
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 672
+    .line 676
     :sswitch_0
     if-nez v3, :cond_3
 
-    .line 673
+    .line 677
     const/4 v3, 0x1
 
-    .line 674
+    .line 678
     const/4 v2, 0x1
 
     move v14, v4
@@ -1431,7 +1439,7 @@
 
     move v3, v14
 
-    .line 655
+    .line 659
     :goto_2
     add-int/lit8 v5, v10, 0x1
 
@@ -1445,51 +1453,51 @@
 
     goto :goto_0
 
-    .line 676
+    .line 680
     :cond_3
     const/4 v2, 0x5
 
     if-ne v3, v2, :cond_4
 
-    .line 677
+    .line 681
     const/4 v2, 0x6
 
     move v3, v4
 
     move v4, v5
 
-    .line 678
+    .line 682
     goto :goto_2
 
-    .line 680
+    .line 684
     :cond_4
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 683
+    .line 687
     :sswitch_1
     const/4 v2, 0x5
 
     if-ne v3, v2, :cond_5
 
-    .line 684
+    .line 688
     const/4 v2, 0x6
 
     move v3, v4
 
     move v4, v5
 
-    .line 685
+    .line 689
     goto :goto_2
 
-    .line 687
+    .line 691
     :cond_5
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 691
+    .line 695
     :sswitch_2
     const/4 v2, 0x2
 
@@ -1499,7 +1507,7 @@
 
     if-ne v3, v2, :cond_7
 
-    .line 692
+    .line 696
     :cond_6
     const/4 v2, 0x5
 
@@ -1507,38 +1515,38 @@
 
     move v4, v5
 
-    .line 693
+    .line 697
     goto :goto_2
 
-    .line 695
+    .line 699
     :cond_7
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 698
+    .line 702
     :sswitch_3
     const/4 v2, 0x2
 
     if-ne v3, v2, :cond_8
 
-    .line 699
+    .line 703
     const/4 v2, 0x3
 
     move v3, v4
 
     move v4, v5
 
-    .line 700
+    .line 704
     goto :goto_2
 
-    .line 702
+    .line 706
     :cond_8
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 711
+    .line 715
     :cond_9
     const/4 v8, 0x1
 
@@ -1546,7 +1554,7 @@
 
     if-nez v3, :cond_b
 
-    .line 712
+    .line 716
     :cond_a
     add-int/lit8 v2, v2, -0x30
 
@@ -1554,7 +1562,7 @@
 
     int-to-long v6, v2
 
-    .line 713
+    .line 717
     const/4 v2, 0x2
 
     move v3, v4
@@ -1563,25 +1571,25 @@
 
     goto :goto_2
 
-    .line 714
+    .line 718
     :cond_b
     const/4 v8, 0x2
 
     if-ne v3, v8, :cond_f
 
-    .line 715
+    .line 719
     const-wide/16 v8, 0x0
 
     cmp-long v8, v6, v8
 
     if-nez v8, :cond_c
 
-    .line 716
+    .line 720
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 718
+    .line 722
     :cond_c
     const-wide/16 v8, 0xa
 
@@ -1593,7 +1601,7 @@
 
     sub-long/2addr v8, v12
 
-    .line 719
+    .line 723
     const-wide v12, -0xcccccccccccccccL
 
     cmp-long v2, v6, v12
@@ -1626,22 +1634,22 @@
 
     move v2, v14
 
-    .line 722
+    .line 726
     goto :goto_2
 
-    .line 719
+    .line 723
     :cond_e
     const/4 v2, 0x0
 
     goto :goto_3
 
-    .line 722
+    .line 726
     :cond_f
     const/4 v2, 0x3
 
     if-ne v3, v2, :cond_10
 
-    .line 723
+    .line 727
     const/4 v2, 0x4
 
     move v3, v4
@@ -1650,7 +1658,7 @@
 
     goto :goto_2
 
-    .line 724
+    .line 728
     :cond_10
     const/4 v2, 0x5
 
@@ -1658,9 +1666,9 @@
 
     const/4 v2, 0x6
 
-    if-ne v3, v2, :cond_19
+    if-ne v3, v2, :cond_18
 
-    .line 725
+    .line 729
     :cond_11
     const/4 v2, 0x7
 
@@ -1670,13 +1678,13 @@
 
     goto :goto_2
 
-    .line 731
+    .line 735
     :cond_12
     const/4 v0, 0x2
 
-    if-ne v3, v0, :cond_16
+    if-ne v3, v0, :cond_15
 
-    if-eqz v4, :cond_16
+    if-eqz v4, :cond_15
 
     const-wide/high16 v0, -0x8000000000000000L
 
@@ -1684,76 +1692,67 @@
 
     if-nez v0, :cond_13
 
-    if-eqz v5, :cond_16
-
-    :cond_13
-    const-wide/16 v0, 0x0
-
-    cmp-long v0, v6, v0
-
-    if-nez v0, :cond_14
-
-    if-nez v5, :cond_16
-
-    .line 732
-    :cond_14
     if-eqz v5, :cond_15
+
+    .line 736
+    :cond_13
+    if-eqz v5, :cond_14
 
     :goto_4
     iput-wide v6, p0, Lcom/google/gson/stream/a;->j:J
 
-    .line 733
+    .line 737
     iget v0, p0, Lcom/google/gson/stream/a;->f:I
 
     add-int/2addr v0, v10
 
     iput v0, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 734
+    .line 738
     const/16 v0, 0xf
 
     iput v0, p0, Lcom/google/gson/stream/a;->a:I
 
     goto/16 :goto_1
 
-    .line 732
-    :cond_15
+    .line 736
+    :cond_14
     neg-long v6, v6
 
     goto :goto_4
 
-    .line 735
-    :cond_16
+    .line 739
+    :cond_15
     const/4 v0, 0x2
 
-    if-eq v3, v0, :cond_17
+    if-eq v3, v0, :cond_16
 
     const/4 v0, 0x4
 
-    if-eq v3, v0, :cond_17
+    if-eq v3, v0, :cond_16
 
     const/4 v0, 0x7
 
-    if-ne v3, v0, :cond_18
+    if-ne v3, v0, :cond_17
 
-    .line 737
-    :cond_17
+    .line 741
+    :cond_16
     iput v10, p0, Lcom/google/gson/stream/a;->k:I
 
-    .line 738
+    .line 742
     const/16 v0, 0x10
 
     iput v0, p0, Lcom/google/gson/stream/a;->a:I
 
     goto/16 :goto_1
 
-    .line 740
-    :cond_18
+    .line 744
+    :cond_17
     const/4 v0, 0x0
 
     goto/16 :goto_1
 
-    :cond_19
+    :cond_18
     move v2, v3
 
     move v3, v4
@@ -1762,7 +1761,7 @@
 
     goto/16 :goto_2
 
-    .line 670
+    .line 674
     nop
 
     :sswitch_data_0
@@ -1775,7 +1774,7 @@
     .end sparse-switch
 .end method
 
-.method private u()Ljava/lang/String;
+.method private v()Ljava/lang/String;
     .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1786,12 +1785,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1041
+    .line 1034
     const/4 v0, 0x0
 
     move v1, v2
 
-    .line 1046
+    .line 1039
     :goto_0
     iget v3, p0, Lcom/google/gson/stream/a;->f:I
 
@@ -1801,7 +1800,7 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 1047
+    .line 1040
     iget-object v3, p0, Lcom/google/gson/stream/a;->e:[C
 
     iget v4, p0, Lcom/google/gson/stream/a;->f:I
@@ -1812,21 +1811,22 @@
 
     sparse-switch v3, :sswitch_data_0
 
-    .line 1046
+    .line 1039
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1053
+    .line 1046
     :sswitch_0
-    invoke-direct {p0}, Lcom/google/gson/stream/a;->v()V
+    invoke-direct {p0}, Lcom/google/gson/stream/a;->w()V
 
-    .line 1090
+    .line 1084
     :cond_0
     :goto_1
     :sswitch_1
     if-nez v0, :cond_4
 
+    .line 1085
     new-instance v0, Ljava/lang/String;
 
     iget-object v2, p0, Lcom/google/gson/stream/a;->e:[C
@@ -1835,7 +1835,7 @@
 
     invoke-direct {v0, v2, v3, v1}, Ljava/lang/String;-><init>([CII)V
 
-    .line 1091
+    .line 1090
     :goto_2
     iget v2, p0, Lcom/google/gson/stream/a;->f:I
 
@@ -1843,10 +1843,10 @@
 
     iput v1, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 1092
+    .line 1091
     return-object v0
 
-    .line 1070
+    .line 1063
     :cond_1
     iget-object v3, p0, Lcom/google/gson/stream/a;->e:[C
 
@@ -1854,7 +1854,7 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 1071
+    .line 1064
     add-int/lit8 v3, v1, 0x1
 
     invoke-direct {p0, v3}, Lcom/google/gson/stream/a;->b(I)Z
@@ -1865,22 +1865,16 @@
 
     goto :goto_0
 
-    .line 1079
+    .line 1072
     :cond_2
     if-nez v0, :cond_3
 
-    .line 1080
+    .line 1073
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const/16 v3, 0x10
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v1, v3}, Ljava/lang/Math;->max(II)I
-
-    move-result v3
-
-    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    .line 1082
+    .line 1075
     :cond_3
     iget-object v3, p0, Lcom/google/gson/stream/a;->e:[C
 
@@ -1888,14 +1882,14 @@
 
     invoke-virtual {v0, v3, v4, v1}, Ljava/lang/StringBuilder;->append([CII)Ljava/lang/StringBuilder;
 
-    .line 1083
+    .line 1076
     iget v3, p0, Lcom/google/gson/stream/a;->f:I
 
     add-int/2addr v1, v3
 
     iput v1, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 1085
+    .line 1078
     const/4 v1, 0x1
 
     invoke-direct {p0, v1}, Lcom/google/gson/stream/a;->b(I)Z
@@ -1908,7 +1902,7 @@
 
     goto :goto_1
 
-    .line 1090
+    .line 1087
     :cond_4
     iget-object v2, p0, Lcom/google/gson/stream/a;->e:[C
 
@@ -1916,8 +1910,7 @@
 
     invoke-virtual {v0, v2, v3, v1}, Ljava/lang/StringBuilder;->append([CII)Ljava/lang/StringBuilder;
 
-    move-result-object v0
-
+    .line 1088
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -1929,7 +1922,9 @@
 
     goto :goto_0
 
-    .line 1047
+    .line 1040
+    nop
+
     :sswitch_data_0
     .sparse-switch
         0x9 -> :sswitch_1
@@ -1951,7 +1946,7 @@
     .end sparse-switch
 .end method
 
-.method private v()V
+.method private w()V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1960,12 +1955,12 @@
     .end annotation
 
     .prologue
-    .line 1408
+    .line 1415
     iget-boolean v0, p0, Lcom/google/gson/stream/a;->d:Z
 
     if-nez v0, :cond_0
 
-    .line 1409
+    .line 1416
     const-string v0, "Use JsonReader.setLenient(true) to accept malformed JSON"
 
     invoke-direct {p0, v0}, Lcom/google/gson/stream/a;->a(Ljava/lang/String;)Ljava/io/IOException;
@@ -1974,12 +1969,12 @@
 
     throw v0
 
-    .line 1411
+    .line 1418
     :cond_0
     return-void
 .end method
 
-.method private w()V
+.method private x()V
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1988,7 +1983,7 @@
     .end annotation
 
     .prologue
-    .line 1419
+    .line 1426
     :cond_0
     iget v0, p0, Lcom/google/gson/stream/a;->f:I
 
@@ -2004,7 +1999,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 1420
+    .line 1427
     :cond_1
     iget-object v0, p0, Lcom/google/gson/stream/a;->e:[C
 
@@ -2016,29 +2011,29 @@
 
     aget-char v0, v0, v1
 
-    .line 1421
+    .line 1428
     const/16 v1, 0xa
 
     if-ne v0, v1, :cond_3
 
-    .line 1422
+    .line 1429
     iget v0, p0, Lcom/google/gson/stream/a;->h:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/google/gson/stream/a;->h:I
 
-    .line 1423
+    .line 1430
     iget v0, p0, Lcom/google/gson/stream/a;->f:I
 
     iput v0, p0, Lcom/google/gson/stream/a;->i:I
 
-    .line 1429
+    .line 1436
     :cond_2
     :goto_0
     return-void
 
-    .line 1425
+    .line 1432
     :cond_3
     const/16 v1, 0xd
 
@@ -2047,7 +2042,7 @@
     goto :goto_0
 .end method
 
-.method private x()C
+.method private y()C
     .locals 7
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -2058,7 +2053,7 @@
     .prologue
     const/4 v5, 0x4
 
-    .line 1504
+    .line 1505
     iget v0, p0, Lcom/google/gson/stream/a;->f:I
 
     iget v1, p0, Lcom/google/gson/stream/a;->g:I
@@ -2073,7 +2068,7 @@
 
     if-nez v0, :cond_0
 
-    .line 1505
+    .line 1506
     const-string v0, "Unterminated escape sequence"
 
     invoke-direct {p0, v0}, Lcom/google/gson/stream/a;->a(Ljava/lang/String;)Ljava/io/IOException;
@@ -2082,7 +2077,7 @@
 
     throw v0
 
-    .line 1508
+    .line 1509
     :cond_0
     iget-object v0, p0, Lcom/google/gson/stream/a;->e:[C
 
@@ -2094,19 +2089,14 @@
 
     aget-char v0, v0, v1
 
-    .line 1509
+    .line 1510
     sparse-switch v0, :sswitch_data_0
 
-    .line 1559
-    const-string v0, "Invalid escape sequence"
+    .line 1557
+    :goto_0
+    return v0
 
-    invoke-direct {p0, v0}, Lcom/google/gson/stream/a;->a(Ljava/lang/String;)Ljava/io/IOException;
-
-    move-result-object v0
-
-    throw v0
-
-    .line 1511
+    .line 1512
     :sswitch_0
     iget v0, p0, Lcom/google/gson/stream/a;->f:I
 
@@ -2122,7 +2112,7 @@
 
     if-nez v0, :cond_1
 
-    .line 1512
+    .line 1513
     const-string v0, "Unterminated escape sequence"
 
     invoke-direct {p0, v0}, Lcom/google/gson/stream/a;->a(Ljava/lang/String;)Ljava/io/IOException;
@@ -2131,11 +2121,11 @@
 
     throw v0
 
-    .line 1515
+    .line 1516
     :cond_1
     const/4 v1, 0x0
 
-    .line 1516
+    .line 1517
     iget v0, p0, Lcom/google/gson/stream/a;->f:I
 
     add-int/lit8 v2, v0, 0x4
@@ -2146,20 +2136,20 @@
 
     move v1, v6
 
-    :goto_0
+    :goto_1
     if-ge v1, v2, :cond_5
 
-    .line 1517
+    .line 1518
     iget-object v3, p0, Lcom/google/gson/stream/a;->e:[C
 
     aget-char v3, v3, v1
 
-    .line 1518
+    .line 1519
     shl-int/lit8 v0, v0, 0x4
 
     int-to-char v0, v0
 
-    .line 1519
+    .line 1520
     const/16 v4, 0x30
 
     if-lt v3, v4, :cond_2
@@ -2168,20 +2158,20 @@
 
     if-gt v3, v4, :cond_2
 
-    .line 1520
+    .line 1521
     add-int/lit8 v3, v3, -0x30
 
     add-int/2addr v0, v3
 
     int-to-char v0, v0
 
-    .line 1516
-    :goto_1
+    .line 1517
+    :goto_2
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_0
+    goto :goto_1
 
-    .line 1521
+    .line 1522
     :cond_2
     const/16 v4, 0x61
 
@@ -2191,7 +2181,7 @@
 
     if-gt v3, v4, :cond_3
 
-    .line 1522
+    .line 1523
     add-int/lit8 v3, v3, -0x61
 
     add-int/lit8 v3, v3, 0xa
@@ -2200,9 +2190,9 @@
 
     int-to-char v0, v0
 
-    goto :goto_1
+    goto :goto_2
 
-    .line 1523
+    .line 1524
     :cond_3
     const/16 v4, 0x41
 
@@ -2212,7 +2202,7 @@
 
     if-gt v3, v4, :cond_4
 
-    .line 1524
+    .line 1525
     add-int/lit8 v3, v3, -0x41
 
     add-int/lit8 v3, v3, 0xa
@@ -2221,9 +2211,9 @@
 
     int-to-char v0, v0
 
-    goto :goto_1
+    goto :goto_2
 
-    .line 1526
+    .line 1527
     :cond_4
     new-instance v0, Ljava/lang/NumberFormatException;
 
@@ -2253,7 +2243,7 @@
 
     throw v0
 
-    .line 1529
+    .line 1530
     :cond_5
     iget v1, p0, Lcom/google/gson/stream/a;->f:I
 
@@ -2261,71 +2251,64 @@
 
     iput v1, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 1556
-    :goto_2
-    :sswitch_1
-    return v0
+    goto :goto_0
 
-    .line 1533
-    :sswitch_2
+    .line 1534
+    :sswitch_1
     const/16 v0, 0x9
 
-    goto :goto_2
+    goto :goto_0
 
-    .line 1536
-    :sswitch_3
+    .line 1537
+    :sswitch_2
     const/16 v0, 0x8
 
-    goto :goto_2
+    goto :goto_0
 
-    .line 1539
-    :sswitch_4
+    .line 1540
+    :sswitch_3
     const/16 v0, 0xa
 
-    goto :goto_2
+    goto/16 :goto_0
 
-    .line 1542
-    :sswitch_5
+    .line 1543
+    :sswitch_4
     const/16 v0, 0xd
 
-    goto :goto_2
+    goto/16 :goto_0
 
-    .line 1545
-    :sswitch_6
+    .line 1546
+    :sswitch_5
     const/16 v0, 0xc
 
-    goto :goto_2
+    goto/16 :goto_0
 
-    .line 1548
-    :sswitch_7
+    .line 1549
+    :sswitch_6
     iget v1, p0, Lcom/google/gson/stream/a;->h:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lcom/google/gson/stream/a;->h:I
 
-    .line 1549
+    .line 1550
     iget v1, p0, Lcom/google/gson/stream/a;->f:I
 
     iput v1, p0, Lcom/google/gson/stream/a;->i:I
 
-    goto :goto_2
+    goto/16 :goto_0
 
-    .line 1509
+    .line 1510
     nop
 
     :sswitch_data_0
     .sparse-switch
-        0xa -> :sswitch_7
-        0x22 -> :sswitch_1
-        0x27 -> :sswitch_1
-        0x2f -> :sswitch_1
-        0x5c -> :sswitch_1
-        0x62 -> :sswitch_3
-        0x66 -> :sswitch_6
-        0x6e -> :sswitch_4
-        0x72 -> :sswitch_5
-        0x74 -> :sswitch_2
+        0xa -> :sswitch_6
+        0x62 -> :sswitch_2
+        0x66 -> :sswitch_5
+        0x6e -> :sswitch_3
+        0x72 -> :sswitch_4
+        0x74 -> :sswitch_1
         0x75 -> :sswitch_0
     .end sparse-switch
 .end method
@@ -2350,7 +2333,7 @@
     if-nez v0, :cond_0
 
     .line 343
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->r()I
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->q()I
 
     move-result v0
 
@@ -2397,7 +2380,43 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()Ljava/lang/String;
+    const-string v2, " at line "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 2311
+    iget v2, p0, Lcom/google/gson/stream/a;->h:I
+
+    add-int/lit8 v2, v2, 0x1
+
+    .line 351
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " column "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " path "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->t()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2434,31 +2453,31 @@
     .end annotation
 
     .prologue
-    .line 359
+    .line 360
     iget v0, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 360
+    .line 361
     if-nez v0, :cond_0
 
-    .line 361
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->r()I
+    .line 362
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->q()I
 
     move-result v0
 
-    .line 363
+    .line 364
     :cond_0
     const/4 v1, 0x4
 
     if-ne v0, v1, :cond_1
 
-    .line 364
+    .line 365
     iget v0, p0, Lcom/google/gson/stream/a;->n:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lcom/google/gson/stream/a;->n:I
 
-    .line 365
+    .line 366
     iget-object v0, p0, Lcom/google/gson/stream/a;->p:[I
 
     iget v1, p0, Lcom/google/gson/stream/a;->n:I
@@ -2471,14 +2490,14 @@
 
     aput v2, v0, v1
 
-    .line 366
+    .line 367
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/google/gson/stream/a;->a:I
 
     return-void
 
-    .line 368
+    .line 369
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -2496,7 +2515,43 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()Ljava/lang/String;
+    const-string v2, " at line "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 3311
+    iget v2, p0, Lcom/google/gson/stream/a;->h:I
+
+    add-int/lit8 v2, v2, 0x1
+
+    .line 370
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " column "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " path "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->t()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2522,36 +2577,36 @@
     .end annotation
 
     .prologue
-    .line 377
+    .line 379
     iget v0, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 378
+    .line 380
     if-nez v0, :cond_0
 
-    .line 379
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->r()I
+    .line 381
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->q()I
 
     move-result v0
 
-    .line 381
+    .line 383
     :cond_0
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_1
 
-    .line 382
+    .line 384
     const/4 v0, 0x3
 
     invoke-direct {p0, v0}, Lcom/google/gson/stream/a;->a(I)V
 
-    .line 383
+    .line 385
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/google/gson/stream/a;->a:I
 
     return-void
 
-    .line 385
+    .line 387
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -2569,7 +2624,43 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()Ljava/lang/String;
+    const-string v2, " at line "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 4311
+    iget v2, p0, Lcom/google/gson/stream/a;->h:I
+
+    add-int/lit8 v2, v2, 0x1
+
+    .line 388
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " column "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " path "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->t()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2597,27 +2688,27 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1216
+    .line 1214
     iput v2, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 1217
+    .line 1215
     iget-object v0, p0, Lcom/google/gson/stream/a;->m:[I
 
     const/16 v1, 0x8
 
     aput v1, v0, v2
 
-    .line 1218
+    .line 1216
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/google/gson/stream/a;->n:I
 
-    .line 1219
+    .line 1217
     iget-object v0, p0, Lcom/google/gson/stream/a;->c:Ljava/io/Reader;
 
     invoke-virtual {v0}, Ljava/io/Reader;->close()V
 
-    .line 1220
+    .line 1218
     return-void
 .end method
 
@@ -2630,31 +2721,31 @@
     .end annotation
 
     .prologue
-    .line 394
+    .line 397
     iget v0, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 395
+    .line 398
     if-nez v0, :cond_0
 
-    .line 396
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->r()I
+    .line 399
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->q()I
 
     move-result v0
 
-    .line 398
+    .line 401
     :cond_0
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_1
 
-    .line 399
+    .line 402
     iget v0, p0, Lcom/google/gson/stream/a;->n:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lcom/google/gson/stream/a;->n:I
 
-    .line 400
+    .line 403
     iget-object v0, p0, Lcom/google/gson/stream/a;->o:[Ljava/lang/String;
 
     iget v1, p0, Lcom/google/gson/stream/a;->n:I
@@ -2663,7 +2754,7 @@
 
     aput-object v2, v0, v1
 
-    .line 401
+    .line 404
     iget-object v0, p0, Lcom/google/gson/stream/a;->p:[I
 
     iget v1, p0, Lcom/google/gson/stream/a;->n:I
@@ -2676,14 +2767,14 @@
 
     aput v2, v0, v1
 
-    .line 402
+    .line 405
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/google/gson/stream/a;->a:I
 
     return-void
 
-    .line 404
+    .line 407
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -2701,7 +2792,43 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()Ljava/lang/String;
+    const-string v2, " at line "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 5311
+    iget v2, p0, Lcom/google/gson/stream/a;->h:I
+
+    add-int/lit8 v2, v2, 0x1
+
+    .line 408
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " column "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " path "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->t()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2727,18 +2854,18 @@
     .end annotation
 
     .prologue
-    .line 412
+    .line 416
     iget v0, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 413
+    .line 417
     if-nez v0, :cond_0
 
-    .line 414
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->r()I
+    .line 418
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->q()I
 
     move-result v0
 
-    .line 416
+    .line 420
     :cond_0
     const/4 v1, 0x2
 
@@ -2768,91 +2895,91 @@
     .end annotation
 
     .prologue
-    .line 423
+    .line 427
     iget v0, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 424
+    .line 428
     if-nez v0, :cond_0
 
-    .line 425
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->r()I
+    .line 429
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->q()I
 
     move-result v0
 
-    .line 428
+    .line 432
     :cond_0
     packed-switch v0, :pswitch_data_0
 
-    .line 457
+    .line 461
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
 
     throw v0
 
-    .line 430
+    .line 434
     :pswitch_0
     sget-object v0, Lcom/google/gson/stream/JsonToken;->BEGIN_OBJECT:Lcom/google/gson/stream/JsonToken;
 
-    .line 455
+    .line 459
     :goto_0
     return-object v0
 
-    .line 432
+    .line 436
     :pswitch_1
     sget-object v0, Lcom/google/gson/stream/JsonToken;->END_OBJECT:Lcom/google/gson/stream/JsonToken;
 
     goto :goto_0
 
-    .line 434
+    .line 438
     :pswitch_2
     sget-object v0, Lcom/google/gson/stream/JsonToken;->BEGIN_ARRAY:Lcom/google/gson/stream/JsonToken;
 
     goto :goto_0
 
-    .line 436
+    .line 440
     :pswitch_3
     sget-object v0, Lcom/google/gson/stream/JsonToken;->END_ARRAY:Lcom/google/gson/stream/JsonToken;
 
     goto :goto_0
 
-    .line 440
+    .line 444
     :pswitch_4
     sget-object v0, Lcom/google/gson/stream/JsonToken;->NAME:Lcom/google/gson/stream/JsonToken;
 
     goto :goto_0
 
-    .line 443
+    .line 447
     :pswitch_5
     sget-object v0, Lcom/google/gson/stream/JsonToken;->BOOLEAN:Lcom/google/gson/stream/JsonToken;
 
     goto :goto_0
 
-    .line 445
+    .line 449
     :pswitch_6
     sget-object v0, Lcom/google/gson/stream/JsonToken;->NULL:Lcom/google/gson/stream/JsonToken;
 
     goto :goto_0
 
-    .line 450
+    .line 454
     :pswitch_7
     sget-object v0, Lcom/google/gson/stream/JsonToken;->STRING:Lcom/google/gson/stream/JsonToken;
 
     goto :goto_0
 
-    .line 453
+    .line 457
     :pswitch_8
     sget-object v0, Lcom/google/gson/stream/JsonToken;->NUMBER:Lcom/google/gson/stream/JsonToken;
 
     goto :goto_0
 
-    .line 455
+    .line 459
     :pswitch_9
     sget-object v0, Lcom/google/gson/stream/JsonToken;->END_DOCUMENT:Lcom/google/gson/stream/JsonToken;
 
     goto :goto_0
 
-    .line 428
+    .line 432
     nop
 
     :pswitch_data_0
@@ -2886,35 +3013,35 @@
     .end annotation
 
     .prologue
-    .line 777
+    .line 781
     iget v0, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 778
+    .line 782
     if-nez v0, :cond_0
 
-    .line 779
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->r()I
+    .line 783
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->q()I
 
     move-result v0
 
-    .line 782
+    .line 786
     :cond_0
     const/16 v1, 0xe
 
     if-ne v0, v1, :cond_1
 
-    .line 783
-    invoke-direct {p0}, Lcom/google/gson/stream/a;->u()Ljava/lang/String;
+    .line 787
+    invoke-direct {p0}, Lcom/google/gson/stream/a;->v()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 791
+    .line 796
     :goto_0
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 792
+    .line 797
     iget-object v1, p0, Lcom/google/gson/stream/a;->o:[Ljava/lang/String;
 
     iget v2, p0, Lcom/google/gson/stream/a;->n:I
@@ -2923,16 +3050,16 @@
 
     aput-object v0, v1, v2
 
-    .line 793
+    .line 798
     return-object v0
 
-    .line 784
+    .line 788
     :cond_1
     const/16 v1, 0xc
 
     if-ne v0, v1, :cond_2
 
-    .line 785
+    .line 789
     const/16 v0, 0x27
 
     invoke-direct {p0, v0}, Lcom/google/gson/stream/a;->b(C)Ljava/lang/String;
@@ -2941,13 +3068,13 @@
 
     goto :goto_0
 
-    .line 786
+    .line 790
     :cond_2
     const/16 v1, 0xd
 
     if-ne v0, v1, :cond_3
 
-    .line 787
+    .line 791
     const/16 v0, 0x22
 
     invoke-direct {p0, v0}, Lcom/google/gson/stream/a;->b(C)Ljava/lang/String;
@@ -2956,7 +3083,7 @@
 
     goto :goto_0
 
-    .line 789
+    .line 793
     :cond_3
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -2974,7 +3101,43 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()Ljava/lang/String;
+    const-string v2, " at line "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 6311
+    iget v2, p0, Lcom/google/gson/stream/a;->h:I
+
+    add-int/lit8 v2, v2, 0x1
+
+    .line 794
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " column "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " path "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->t()Ljava/lang/String;
 
     move-result-object v2
 
@@ -3000,35 +3163,35 @@
     .end annotation
 
     .prologue
-    .line 805
+    .line 810
     iget v0, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 806
+    .line 811
     if-nez v0, :cond_0
 
-    .line 807
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->r()I
+    .line 812
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->q()I
 
     move-result v0
 
-    .line 810
+    .line 815
     :cond_0
     const/16 v1, 0xa
 
     if-ne v0, v1, :cond_1
 
-    .line 811
-    invoke-direct {p0}, Lcom/google/gson/stream/a;->u()Ljava/lang/String;
+    .line 816
+    invoke-direct {p0}, Lcom/google/gson/stream/a;->v()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 827
+    .line 833
     :goto_0
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 828
+    .line 834
     iget-object v1, p0, Lcom/google/gson/stream/a;->p:[I
 
     iget v2, p0, Lcom/google/gson/stream/a;->n:I
@@ -3041,16 +3204,16 @@
 
     aput v3, v1, v2
 
-    .line 829
+    .line 835
     return-object v0
 
-    .line 812
+    .line 817
     :cond_1
     const/16 v1, 0x8
 
     if-ne v0, v1, :cond_2
 
-    .line 813
+    .line 818
     const/16 v0, 0x27
 
     invoke-direct {p0, v0}, Lcom/google/gson/stream/a;->b(C)Ljava/lang/String;
@@ -3059,13 +3222,13 @@
 
     goto :goto_0
 
-    .line 814
+    .line 819
     :cond_2
     const/16 v1, 0x9
 
     if-ne v0, v1, :cond_3
 
-    .line 815
+    .line 820
     const/16 v0, 0x22
 
     invoke-direct {p0, v0}, Lcom/google/gson/stream/a;->b(C)Ljava/lang/String;
@@ -3074,29 +3237,29 @@
 
     goto :goto_0
 
-    .line 816
+    .line 821
     :cond_3
     const/16 v1, 0xb
 
     if-ne v0, v1, :cond_4
 
-    .line 817
+    .line 822
     iget-object v0, p0, Lcom/google/gson/stream/a;->l:Ljava/lang/String;
 
-    .line 818
+    .line 823
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/google/gson/stream/a;->l:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 819
+    .line 824
     :cond_4
     const/16 v1, 0xf
 
     if-ne v0, v1, :cond_5
 
-    .line 820
+    .line 825
     iget-wide v0, p0, Lcom/google/gson/stream/a;->j:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
@@ -3105,13 +3268,13 @@
 
     goto :goto_0
 
-    .line 821
+    .line 826
     :cond_5
     const/16 v1, 0x10
 
     if-ne v0, v1, :cond_6
 
-    .line 822
+    .line 827
     new-instance v0, Ljava/lang/String;
 
     iget-object v1, p0, Lcom/google/gson/stream/a;->e:[C
@@ -3122,7 +3285,7 @@
 
     invoke-direct {v0, v1, v2, v3}, Ljava/lang/String;-><init>([CII)V
 
-    .line 823
+    .line 828
     iget v1, p0, Lcom/google/gson/stream/a;->f:I
 
     iget v2, p0, Lcom/google/gson/stream/a;->k:I
@@ -3133,7 +3296,7 @@
 
     goto :goto_0
 
-    .line 825
+    .line 830
     :cond_6
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -3151,7 +3314,43 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()Ljava/lang/String;
+    const-string v2, " at line "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 7311
+    iget v2, p0, Lcom/google/gson/stream/a;->h:I
+
+    add-int/lit8 v2, v2, 0x1
+
+    .line 831
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " column "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " path "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->t()Ljava/lang/String;
 
     move-result-object v2
 
@@ -3179,27 +3378,27 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 840
+    .line 846
     iget v1, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 841
+    .line 847
     if-nez v1, :cond_0
 
-    .line 842
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->r()I
+    .line 848
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->q()I
 
     move-result v1
 
-    .line 844
+    .line 850
     :cond_0
     const/4 v2, 0x5
 
     if-ne v1, v2, :cond_1
 
-    .line 845
+    .line 851
     iput v0, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 846
+    .line 852
     iget-object v0, p0, Lcom/google/gson/stream/a;->p:[I
 
     iget v1, p0, Lcom/google/gson/stream/a;->n:I
@@ -3212,23 +3411,23 @@
 
     aput v2, v0, v1
 
-    .line 847
+    .line 853
     const/4 v0, 0x1
 
-    .line 851
+    .line 857
     :goto_0
     return v0
 
-    .line 848
+    .line 854
     :cond_1
     const/4 v2, 0x6
 
     if-ne v1, v2, :cond_2
 
-    .line 849
+    .line 855
     iput v0, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 850
+    .line 856
     iget-object v1, p0, Lcom/google/gson/stream/a;->p:[I
 
     iget v2, p0, Lcom/google/gson/stream/a;->n:I
@@ -3243,7 +3442,7 @@
 
     goto :goto_0
 
-    .line 853
+    .line 859
     :cond_2
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -3261,7 +3460,43 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()Ljava/lang/String;
+    const-string v2, " at line "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 8311
+    iget v2, p0, Lcom/google/gson/stream/a;->h:I
+
+    add-int/lit8 v2, v2, 0x1
+
+    .line 860
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " column "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " path "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->t()Ljava/lang/String;
 
     move-result-object v2
 
@@ -3287,29 +3522,29 @@
     .end annotation
 
     .prologue
-    .line 864
+    .line 871
     iget v0, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 865
+    .line 872
     if-nez v0, :cond_0
 
-    .line 866
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->r()I
+    .line 873
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->q()I
 
     move-result v0
 
-    .line 868
+    .line 875
     :cond_0
     const/4 v1, 0x7
 
     if-ne v0, v1, :cond_1
 
-    .line 869
+    .line 876
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 870
+    .line 877
     iget-object v0, p0, Lcom/google/gson/stream/a;->p:[I
 
     iget v1, p0, Lcom/google/gson/stream/a;->n:I
@@ -3324,7 +3559,7 @@
 
     return-void
 
-    .line 872
+    .line 879
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -3342,7 +3577,43 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()Ljava/lang/String;
+    const-string v2, " at line "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 9311
+    iget v2, p0, Lcom/google/gson/stream/a;->h:I
+
+    add-int/lit8 v2, v2, 0x1
+
+    .line 880
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " column "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " path "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->t()Ljava/lang/String;
 
     move-result-object v2
 
@@ -3374,27 +3645,27 @@
 
     const/4 v4, 0x0
 
-    .line 886
+    .line 894
     iget v0, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 887
+    .line 895
     if-nez v0, :cond_0
 
-    .line 888
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->r()I
+    .line 896
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->q()I
 
     move-result v0
 
-    .line 891
+    .line 899
     :cond_0
     const/16 v1, 0xf
 
     if-ne v0, v1, :cond_1
 
-    .line 892
+    .line 900
     iput v4, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 893
+    .line 901
     iget-object v0, p0, Lcom/google/gson/stream/a;->p:[I
 
     iget v1, p0, Lcom/google/gson/stream/a;->n:I
@@ -3407,22 +3678,22 @@
 
     aput v2, v0, v1
 
-    .line 894
+    .line 902
     iget-wide v0, p0, Lcom/google/gson/stream/a;->j:J
 
     long-to-double v0, v0
 
-    .line 917
+    .line 926
     :goto_0
     return-wide v0
 
-    .line 897
+    .line 905
     :cond_1
     const/16 v1, 0x10
 
     if-ne v0, v1, :cond_4
 
-    .line 898
+    .line 906
     new-instance v0, Ljava/lang/String;
 
     iget-object v1, p0, Lcom/google/gson/stream/a;->e:[C
@@ -3435,7 +3706,7 @@
 
     iput-object v0, p0, Lcom/google/gson/stream/a;->l:Ljava/lang/String;
 
-    .line 899
+    .line 907
     iget v0, p0, Lcom/google/gson/stream/a;->f:I
 
     iget v1, p0, Lcom/google/gson/stream/a;->k:I
@@ -3444,19 +3715,19 @@
 
     iput v0, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 908
+    .line 917
     :cond_2
     :goto_1
     iput v5, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 909
+    .line 918
     iget-object v0, p0, Lcom/google/gson/stream/a;->l:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
     move-result-wide v0
 
-    .line 910
+    .line 919
     iget-boolean v2, p0, Lcom/google/gson/stream/a;->d:Z
 
     if-nez v2, :cond_9
@@ -3473,7 +3744,7 @@
 
     if-eqz v2, :cond_9
 
-    .line 911
+    .line 920
     :cond_3
     new-instance v2, Lcom/google/gson/stream/MalformedJsonException;
 
@@ -3487,8 +3758,43 @@
 
     move-result-object v0
 
-    .line 912
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()Ljava/lang/String;
+    const-string v1, " at line "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    .line 11311
+    iget v1, p0, Lcom/google/gson/stream/a;->h:I
+
+    add-int/lit8 v1, v1, 0x1
+
+    .line 921
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " column "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " path "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->t()Ljava/lang/String;
 
     move-result-object v1
 
@@ -3504,7 +3810,7 @@
 
     throw v2
 
-    .line 900
+    .line 908
     :cond_4
     if-eq v0, v2, :cond_5
 
@@ -3512,7 +3818,7 @@
 
     if-ne v0, v1, :cond_7
 
-    .line 901
+    .line 909
     :cond_5
     if-ne v0, v2, :cond_6
 
@@ -3532,14 +3838,14 @@
 
     goto :goto_2
 
-    .line 902
+    .line 910
     :cond_7
     const/16 v1, 0xa
 
     if-ne v0, v1, :cond_8
 
-    .line 903
-    invoke-direct {p0}, Lcom/google/gson/stream/a;->u()Ljava/lang/String;
+    .line 911
+    invoke-direct {p0}, Lcom/google/gson/stream/a;->v()Ljava/lang/String;
 
     move-result-object v0
 
@@ -3547,11 +3853,11 @@
 
     goto :goto_1
 
-    .line 904
+    .line 912
     :cond_8
     if-eq v0, v5, :cond_2
 
-    .line 905
+    .line 913
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3568,7 +3874,43 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()Ljava/lang/String;
+    const-string v2, " at line "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 10311
+    iget v2, p0, Lcom/google/gson/stream/a;->h:I
+
+    add-int/lit8 v2, v2, 0x1
+
+    .line 914
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " column "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " path "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->t()Ljava/lang/String;
 
     move-result-object v2
 
@@ -3584,16 +3926,16 @@
 
     throw v0
 
-    .line 914
+    .line 923
     :cond_9
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/google/gson/stream/a;->l:Ljava/lang/String;
 
-    .line 915
+    .line 924
     iput v4, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 916
+    .line 925
     iget-object v2, p0, Lcom/google/gson/stream/a;->p:[I
 
     iget v3, p0, Lcom/google/gson/stream/a;->n:I
@@ -3618,33 +3960,31 @@
     .end annotation
 
     .prologue
-    const/16 v3, 0xa
-
     const/16 v2, 0x8
 
     const/4 v6, 0x0
 
-    .line 931
+    .line 940
     iget v0, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 932
+    .line 941
     if-nez v0, :cond_0
 
-    .line 933
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->r()I
+    .line 942
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->q()I
 
     move-result v0
 
-    .line 936
+    .line 945
     :cond_0
     const/16 v1, 0xf
 
     if-ne v0, v1, :cond_1
 
-    .line 937
+    .line 946
     iput v6, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 938
+    .line 947
     iget-object v0, p0, Lcom/google/gson/stream/a;->p:[I
 
     iget v1, p0, Lcom/google/gson/stream/a;->n:I
@@ -3657,20 +3997,20 @@
 
     aput v2, v0, v1
 
-    .line 939
+    .line 948
     iget-wide v0, p0, Lcom/google/gson/stream/a;->j:J
 
-    .line 972
+    .line 979
     :goto_0
     return-wide v0
 
-    .line 942
+    .line 951
     :cond_1
     const/16 v1, 0x10
 
     if-ne v0, v1, :cond_2
 
-    .line 943
+    .line 952
     new-instance v0, Ljava/lang/String;
 
     iget-object v1, p0, Lcom/google/gson/stream/a;->e:[C
@@ -3683,7 +4023,7 @@
 
     iput-object v0, p0, Lcom/google/gson/stream/a;->l:Ljava/lang/String;
 
-    .line 944
+    .line 953
     iget v0, p0, Lcom/google/gson/stream/a;->f:I
 
     iget v1, p0, Lcom/google/gson/stream/a;->k:I
@@ -3692,30 +4032,30 @@
 
     iput v0, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 963
+    .line 969
     :goto_1
     const/16 v0, 0xb
 
     iput v0, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 964
+    .line 970
     iget-object v0, p0, Lcom/google/gson/stream/a;->l:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
     move-result-wide v2
 
-    .line 965
+    .line 971
     double-to-long v0, v2
 
-    .line 966
+    .line 972
     long-to-double v4, v0
 
     cmpl-double v2, v4, v2
 
-    if-eqz v2, :cond_7
+    if-eqz v2, :cond_6
 
-    .line 967
+    .line 973
     new-instance v0, Ljava/lang/NumberFormatException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3730,7 +4070,43 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()Ljava/lang/String;
+    const-string v2, " at line "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 13311
+    iget v2, p0, Lcom/google/gson/stream/a;->h:I
+
+    add-int/lit8 v2, v2, 0x1
+
+    .line 974
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " column "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " path "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->t()Ljava/lang/String;
 
     move-result-object v2
 
@@ -3746,29 +4122,28 @@
 
     throw v0
 
-    .line 945
+    .line 954
     :cond_2
     if-eq v0, v2, :cond_3
 
     const/16 v1, 0x9
 
-    if-eq v0, v1, :cond_3
+    if-ne v0, v1, :cond_5
 
-    if-ne v0, v3, :cond_6
-
-    .line 946
+    .line 955
     :cond_3
-    if-ne v0, v3, :cond_4
+    if-ne v0, v2, :cond_4
 
-    .line 947
-    invoke-direct {p0}, Lcom/google/gson/stream/a;->u()Ljava/lang/String;
+    const/16 v0, 0x27
+
+    :goto_2
+    invoke-direct {p0, v0}, Lcom/google/gson/stream/a;->b(C)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/gson/stream/a;->l:Ljava/lang/String;
 
-    .line 952
-    :goto_2
+    .line 957
     :try_start_0
     iget-object v0, p0, Lcom/google/gson/stream/a;->l:Ljava/lang/String;
 
@@ -3776,12 +4151,12 @@
 
     move-result-wide v0
 
-    .line 953
+    .line 958
     const/4 v2, 0x0
 
     iput v2, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 954
+    .line 959
     iget-object v2, p0, Lcom/google/gson/stream/a;->p:[I
 
     iget v3, p0, Lcom/google/gson/stream/a;->n:I
@@ -3796,36 +4171,22 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 958
+    .line 963
     :catch_0
     move-exception v0
 
     goto :goto_1
 
-    .line 949
+    .line 955
     :cond_4
-    if-ne v0, v2, :cond_5
-
-    const/16 v0, 0x27
-
-    :goto_3
-    invoke-direct {p0, v0}, Lcom/google/gson/stream/a;->b(C)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/google/gson/stream/a;->l:Ljava/lang/String;
+    const/16 v0, 0x22
 
     goto :goto_2
 
+    .line 965
     :cond_5
-    const/16 v0, 0x22
-
-    goto :goto_3
-
-    .line 960
-    :cond_6
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3842,7 +4203,43 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()Ljava/lang/String;
+    const-string v2, " at line "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 12311
+    iget v2, p0, Lcom/google/gson/stream/a;->h:I
+
+    add-int/lit8 v2, v2, 0x1
+
+    .line 966
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " column "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " path "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->t()Ljava/lang/String;
 
     move-result-object v2
 
@@ -3858,16 +4255,16 @@
 
     throw v0
 
-    .line 969
-    :cond_7
+    .line 976
+    :cond_6
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/google/gson/stream/a;->l:Ljava/lang/String;
 
-    .line 970
+    .line 977
     iput v6, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 971
+    .line 978
     iget-object v2, p0, Lcom/google/gson/stream/a;->p:[I
 
     iget v3, p0, Lcom/google/gson/stream/a;->n:I
@@ -3892,35 +4289,33 @@
     .end annotation
 
     .prologue
-    const/16 v3, 0xa
-
     const/16 v2, 0x8
 
     const/4 v6, 0x0
 
-    .line 1163
+    .line 1162
     iget v0, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 1164
+    .line 1163
     if-nez v0, :cond_0
 
-    .line 1165
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->r()I
+    .line 1164
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->q()I
 
     move-result v0
 
-    .line 1169
+    .line 1168
     :cond_0
     const/16 v1, 0xf
 
     if-ne v0, v1, :cond_2
 
-    .line 1170
+    .line 1169
     iget-wide v0, p0, Lcom/google/gson/stream/a;->j:J
 
     long-to-int v0, v0
 
-    .line 1171
+    .line 1170
     iget-wide v2, p0, Lcom/google/gson/stream/a;->j:J
 
     int-to-long v4, v0
@@ -3929,7 +4324,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 1172
+    .line 1171
     new-instance v0, Ljava/lang/NumberFormatException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3944,7 +4339,43 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()Ljava/lang/String;
+    const-string v2, " at line "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 14311
+    iget v2, p0, Lcom/google/gson/stream/a;->h:I
+
+    add-int/lit8 v2, v2, 0x1
+
+    .line 1172
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " column "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " path "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->t()Ljava/lang/String;
 
     move-result-object v2
 
@@ -3977,7 +4408,7 @@
 
     aput v3, v1, v2
 
-    .line 1209
+    .line 1207
     :goto_0
     return v0
 
@@ -4009,30 +4440,30 @@
 
     iput v0, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 1200
+    .line 1197
     :goto_1
     const/16 v0, 0xb
 
     iput v0, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 1201
+    .line 1198
     iget-object v0, p0, Lcom/google/gson/stream/a;->l:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
     move-result-wide v2
 
-    .line 1202
+    .line 1199
     double-to-int v0, v2
 
-    .line 1203
+    .line 1200
     int-to-double v4, v0
 
     cmpl-double v1, v4, v2
 
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_7
 
-    .line 1204
+    .line 1201
     new-instance v0, Ljava/lang/NumberFormatException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4047,7 +4478,43 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()Ljava/lang/String;
+    const-string v2, " at line "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 16311
+    iget v2, p0, Lcom/google/gson/stream/a;->h:I
+
+    add-int/lit8 v2, v2, 0x1
+
+    .line 1202
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " column "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " path "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->t()Ljava/lang/String;
 
     move-result-object v2
 
@@ -4069,23 +4536,22 @@
 
     const/16 v1, 0x9
 
-    if-eq v0, v1, :cond_4
-
-    if-ne v0, v3, :cond_7
+    if-ne v0, v1, :cond_6
 
     .line 1183
     :cond_4
-    if-ne v0, v3, :cond_5
+    if-ne v0, v2, :cond_5
 
-    .line 1184
-    invoke-direct {p0}, Lcom/google/gson/stream/a;->u()Ljava/lang/String;
+    const/16 v0, 0x27
+
+    :goto_2
+    invoke-direct {p0, v0}, Lcom/google/gson/stream/a;->b(C)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/gson/stream/a;->l:Ljava/lang/String;
 
-    .line 1189
-    :goto_2
+    .line 1185
     :try_start_0
     iget-object v0, p0, Lcom/google/gson/stream/a;->l:Ljava/lang/String;
 
@@ -4093,12 +4559,12 @@
 
     move-result v0
 
-    .line 1190
+    .line 1186
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 1191
+    .line 1187
     iget-object v1, p0, Lcom/google/gson/stream/a;->p:[I
 
     iget v2, p0, Lcom/google/gson/stream/a;->n:I
@@ -4113,36 +4579,22 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 1195
+    .line 1191
     :catch_0
     move-exception v0
 
     goto :goto_1
 
-    .line 1186
+    .line 1183
     :cond_5
-    if-ne v0, v2, :cond_6
-
-    const/16 v0, 0x27
-
-    :goto_3
-    invoke-direct {p0, v0}, Lcom/google/gson/stream/a;->b(C)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/google/gson/stream/a;->l:Ljava/lang/String;
+    const/16 v0, 0x22
 
     goto :goto_2
 
+    .line 1193
     :cond_6
-    const/16 v0, 0x22
-
-    goto :goto_3
-
-    .line 1197
-    :cond_7
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4159,7 +4611,43 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()Ljava/lang/String;
+    const-string v2, " at line "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    .line 15311
+    iget v2, p0, Lcom/google/gson/stream/a;->h:I
+
+    add-int/lit8 v2, v2, 0x1
+
+    .line 1194
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " column "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " path "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->t()Ljava/lang/String;
 
     move-result-object v2
 
@@ -4175,16 +4663,16 @@
 
     throw v0
 
-    .line 1206
-    :cond_8
+    .line 1204
+    :cond_7
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/google/gson/stream/a;->l:Ljava/lang/String;
 
-    .line 1207
+    .line 1205
     iput v6, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 1208
+    .line 1206
     iget-object v1, p0, Lcom/google/gson/stream/a;->p:[I
 
     iget v2, p0, Lcom/google/gson/stream/a;->n:I
@@ -4215,40 +4703,40 @@
 
     const/4 v1, 0x0
 
-    .line 1228
+    .line 1226
     move v0, v1
 
-    .line 1230
+    .line 1228
     :cond_0
     iget v2, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 1231
+    .line 1229
     if-nez v2, :cond_1
 
-    .line 1232
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->r()I
+    .line 1230
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->q()I
 
     move-result v2
 
-    .line 1235
+    .line 1233
     :cond_1
     if-ne v2, v6, :cond_3
 
-    .line 1236
+    .line 1234
     invoke-direct {p0, v5}, Lcom/google/gson/stream/a;->a(I)V
 
-    .line 1237
+    .line 1235
     add-int/lit8 v0, v0, 0x1
 
-    .line 1256
+    .line 1254
     :cond_2
     :goto_0
     iput v1, p0, Lcom/google/gson/stream/a;->a:I
 
-    .line 1257
+    .line 1255
     if-nez v0, :cond_0
 
-    .line 1259
+    .line 1257
     iget-object v0, p0, Lcom/google/gson/stream/a;->p:[I
 
     iget v1, p0, Lcom/google/gson/stream/a;->n:I
@@ -4261,7 +4749,7 @@
 
     aput v2, v0, v1
 
-    .line 1260
+    .line 1258
     iget-object v0, p0, Lcom/google/gson/stream/a;->o:[Ljava/lang/String;
 
     iget v1, p0, Lcom/google/gson/stream/a;->n:I
@@ -4272,58 +4760,58 @@
 
     aput-object v2, v0, v1
 
-    .line 1261
+    .line 1259
     return-void
 
-    .line 1238
+    .line 1236
     :cond_3
     if-ne v2, v5, :cond_4
 
-    .line 1239
+    .line 1237
     invoke-direct {p0, v6}, Lcom/google/gson/stream/a;->a(I)V
 
-    .line 1240
+    .line 1238
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1241
+    .line 1239
     :cond_4
     const/4 v3, 0x4
 
     if-ne v2, v3, :cond_5
 
-    .line 1242
+    .line 1240
     iget v2, p0, Lcom/google/gson/stream/a;->n:I
 
     add-int/lit8 v2, v2, -0x1
 
     iput v2, p0, Lcom/google/gson/stream/a;->n:I
 
-    .line 1243
+    .line 1241
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 1244
+    .line 1242
     :cond_5
     const/4 v3, 0x2
 
     if-ne v2, v3, :cond_6
 
-    .line 1245
+    .line 1243
     iget v2, p0, Lcom/google/gson/stream/a;->n:I
 
     add-int/lit8 v2, v2, -0x1
 
     iput v2, p0, Lcom/google/gson/stream/a;->n:I
 
-    .line 1246
+    .line 1244
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 1247
+    .line 1245
     :cond_6
     const/16 v3, 0xe
 
@@ -4336,7 +4824,7 @@
     :cond_7
     move v2, v1
 
-    .line 3125
+    .line 17124
     :goto_1
     iget v3, p0, Lcom/google/gson/stream/a;->f:I
 
@@ -4346,7 +4834,7 @@
 
     if-ge v3, v4, :cond_8
 
-    .line 3126
+    .line 17125
     iget-object v3, p0, Lcom/google/gson/stream/a;->e:[C
 
     iget v4, p0, Lcom/google/gson/stream/a;->f:I
@@ -4357,16 +4845,16 @@
 
     sparse-switch v3, :sswitch_data_0
 
-    .line 3125
+    .line 17124
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 3132
+    .line 17131
     :sswitch_0
-    invoke-direct {p0}, Lcom/google/gson/stream/a;->v()V
+    invoke-direct {p0}, Lcom/google/gson/stream/a;->w()V
 
-    .line 3144
+    .line 17143
     :sswitch_1
     iget v3, p0, Lcom/google/gson/stream/a;->f:I
 
@@ -4376,7 +4864,7 @@
 
     goto :goto_0
 
-    .line 3148
+    .line 17147
     :cond_8
     iget v3, p0, Lcom/google/gson/stream/a;->f:I
 
@@ -4384,7 +4872,7 @@
 
     iput v2, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 3149
+    .line 17148
     invoke-direct {p0, v5}, Lcom/google/gson/stream/a;->b(I)Z
 
     move-result v2
@@ -4393,7 +4881,7 @@
 
     goto :goto_0
 
-    .line 1249
+    .line 1247
     :cond_9
     const/16 v3, 0x8
 
@@ -4403,7 +4891,7 @@
 
     if-ne v2, v3, :cond_b
 
-    .line 1250
+    .line 1248
     :cond_a
     const/16 v2, 0x27
 
@@ -4411,7 +4899,7 @@
 
     goto :goto_0
 
-    .line 1251
+    .line 1249
     :cond_b
     const/16 v3, 0x9
 
@@ -4421,7 +4909,7 @@
 
     if-ne v2, v3, :cond_d
 
-    .line 1252
+    .line 1250
     :cond_c
     const/16 v2, 0x22
 
@@ -4429,13 +4917,13 @@
 
     goto/16 :goto_0
 
-    .line 1253
+    .line 1251
     :cond_d
     const/16 v3, 0x10
 
     if-ne v2, v3, :cond_2
 
-    .line 1254
+    .line 1252
     iget v2, p0, Lcom/google/gson/stream/a;->f:I
 
     iget v3, p0, Lcom/google/gson/stream/a;->k:I
@@ -4446,7 +4934,7 @@
 
     goto/16 :goto_0
 
-    .line 3126
+    .line 17125
     :sswitch_data_0
     .sparse-switch
         0x9 -> :sswitch_1
@@ -4468,103 +4956,7 @@
     .end sparse-switch
 .end method
 
-.method public p()Ljava/lang/String;
-    .locals 5
-
-    .prologue
-    .line 1468
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v0, "$"
-
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 1469
-    const/4 v0, 0x0
-
-    iget v2, p0, Lcom/google/gson/stream/a;->n:I
-
-    :goto_0
-    if-ge v0, v2, :cond_1
-
-    .line 1470
-    iget-object v3, p0, Lcom/google/gson/stream/a;->m:[I
-
-    aget v3, v3, v0
-
-    packed-switch v3, :pswitch_data_0
-
-    .line 1469
-    :cond_0
-    :goto_1
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    .line 1473
-    :pswitch_0
-    const/16 v3, 0x5b
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/google/gson/stream/a;->p:[I
-
-    aget v4, v4, v0
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const/16 v4, 0x5d
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto :goto_1
-
-    .line 1479
-    :pswitch_1
-    const/16 v3, 0x2e
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 1480
-    iget-object v3, p0, Lcom/google/gson/stream/a;->o:[Ljava/lang/String;
-
-    aget-object v3, v3, v0
-
-    if-eqz v3, :cond_0
-
-    .line 1481
-    iget-object v3, p0, Lcom/google/gson/stream/a;->o:[Ljava/lang/String;
-
-    aget-object v3, v3, v0
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto :goto_1
-
-    .line 1491
-    :cond_1
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    .line 1470
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public final q()Z
+.method public final p()Z
     .locals 1
 
     .prologue
@@ -4574,7 +4966,7 @@
     return v0
 .end method
 
-.method final r()I
+.method final q()I
     .locals 8
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -4593,7 +4985,7 @@
 
     const/4 v3, 0x1
 
-    .line 462
+    .line 466
     iget-object v0, p0, Lcom/google/gson/stream/a;->m:[I
 
     iget v5, p0, Lcom/google/gson/stream/a;->n:I
@@ -4602,10 +4994,10 @@
 
     aget v5, v0, v5
 
-    .line 463
+    .line 467
     if-ne v5, v3, :cond_2
 
-    .line 464
+    .line 468
     iget-object v0, p0, Lcom/google/gson/stream/a;->m:[I
 
     iget v6, p0, Lcom/google/gson/stream/a;->n:I
@@ -4614,7 +5006,7 @@
 
     aput v2, v0, v6
 
-    .line 549
+    .line 553
     :cond_0
     :goto_0
     :pswitch_0
@@ -4623,42 +5015,42 @@
 
     move-result v0
 
-    .line 550
+    .line 554
     sparse-switch v0, :sswitch_data_0
 
-    .line 576
+    .line 580
     iget v0, p0, Lcom/google/gson/stream/a;->f:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 579
+    .line 583
     invoke-direct {p0}, Lcom/google/gson/stream/a;->o()I
 
     move-result v0
 
-    .line 580
+    .line 584
     if-eqz v0, :cond_14
 
-    .line 594
+    .line 598
     :cond_1
     :goto_1
     return v0
 
-    .line 465
+    .line 469
     :cond_2
     if-ne v5, v2, :cond_3
 
-    .line 467
+    .line 471
     invoke-direct {p0, v3}, Lcom/google/gson/stream/a;->b(Z)I
 
     move-result v0
 
-    .line 468
+    .line 472
     sparse-switch v0, :sswitch_data_1
 
-    .line 476
+    .line 480
     const-string v0, "Unterminated array"
 
     invoke-direct {p0, v0}, Lcom/google/gson/stream/a;->a(Ljava/lang/String;)Ljava/io/IOException;
@@ -4667,7 +5059,7 @@
 
     throw v0
 
-    .line 470
+    .line 474
     :sswitch_1
     iput v1, p0, Lcom/google/gson/stream/a;->a:I
 
@@ -4675,13 +5067,13 @@
 
     goto :goto_1
 
-    .line 472
+    .line 476
     :sswitch_2
-    invoke-direct {p0}, Lcom/google/gson/stream/a;->v()V
+    invoke-direct {p0}, Lcom/google/gson/stream/a;->w()V
 
     goto :goto_0
 
-    .line 478
+    .line 482
     :cond_3
     const/4 v0, 0x3
 
@@ -4689,7 +5081,7 @@
 
     if-ne v5, v7, :cond_8
 
-    .line 479
+    .line 483
     :cond_4
     iget-object v0, p0, Lcom/google/gson/stream/a;->m:[I
 
@@ -4699,18 +5091,18 @@
 
     aput v1, v0, v4
 
-    .line 481
+    .line 485
     if-ne v5, v7, :cond_5
 
-    .line 482
+    .line 486
     invoke-direct {p0, v3}, Lcom/google/gson/stream/a;->b(Z)I
 
     move-result v0
 
-    .line 483
+    .line 487
     sparse-switch v0, :sswitch_data_2
 
-    .line 491
+    .line 495
     const-string v0, "Unterminated object"
 
     invoke-direct {p0, v0}, Lcom/google/gson/stream/a;->a(Ljava/lang/String;)Ljava/io/IOException;
@@ -4719,7 +5111,7 @@
 
     throw v0
 
-    .line 485
+    .line 489
     :sswitch_3
     iput v2, p0, Lcom/google/gson/stream/a;->a:I
 
@@ -4727,31 +5119,31 @@
 
     goto :goto_1
 
-    .line 487
+    .line 491
     :sswitch_4
-    invoke-direct {p0}, Lcom/google/gson/stream/a;->v()V
+    invoke-direct {p0}, Lcom/google/gson/stream/a;->w()V
 
-    .line 494
+    .line 498
     :cond_5
     :sswitch_5
     invoke-direct {p0, v3}, Lcom/google/gson/stream/a;->b(Z)I
 
     move-result v0
 
-    .line 495
+    .line 499
     sparse-switch v0, :sswitch_data_3
 
-    .line 508
-    invoke-direct {p0}, Lcom/google/gson/stream/a;->v()V
+    .line 512
+    invoke-direct {p0}, Lcom/google/gson/stream/a;->w()V
 
-    .line 509
+    .line 513
     iget v1, p0, Lcom/google/gson/stream/a;->f:I
 
     add-int/lit8 v1, v1, -0x1
 
     iput v1, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 510
+    .line 514
     int-to-char v0, v0
 
     invoke-direct {p0, v0}, Lcom/google/gson/stream/a;->a(C)Z
@@ -4760,14 +5152,14 @@
 
     if-eqz v0, :cond_7
 
-    .line 511
+    .line 515
     const/16 v0, 0xe
 
     iput v0, p0, Lcom/google/gson/stream/a;->a:I
 
     goto :goto_1
 
-    .line 497
+    .line 501
     :sswitch_6
     const/16 v0, 0xd
 
@@ -4775,29 +5167,29 @@
 
     goto :goto_1
 
-    .line 499
+    .line 503
     :sswitch_7
-    invoke-direct {p0}, Lcom/google/gson/stream/a;->v()V
+    invoke-direct {p0}, Lcom/google/gson/stream/a;->w()V
 
-    .line 500
+    .line 504
     const/16 v0, 0xc
 
     iput v0, p0, Lcom/google/gson/stream/a;->a:I
 
     goto :goto_1
 
-    .line 502
+    .line 506
     :sswitch_8
     if-eq v5, v7, :cond_6
 
-    .line 503
+    .line 507
     iput v2, p0, Lcom/google/gson/stream/a;->a:I
 
     move v0, v2
 
     goto :goto_1
 
-    .line 505
+    .line 509
     :cond_6
     const-string v0, "Expected name"
 
@@ -4807,7 +5199,7 @@
 
     throw v0
 
-    .line 513
+    .line 517
     :cond_7
     const-string v0, "Expected name"
 
@@ -4817,11 +5209,11 @@
 
     throw v0
 
-    .line 516
+    .line 520
     :cond_8
     if-ne v5, v1, :cond_a
 
-    .line 517
+    .line 521
     iget-object v0, p0, Lcom/google/gson/stream/a;->m:[I
 
     iget v6, p0, Lcom/google/gson/stream/a;->n:I
@@ -4830,15 +5222,15 @@
 
     aput v7, v0, v6
 
-    .line 519
+    .line 523
     invoke-direct {p0, v3}, Lcom/google/gson/stream/a;->b(Z)I
 
     move-result v0
 
-    .line 520
+    .line 524
     packed-switch v0, :pswitch_data_0
 
-    .line 530
+    .line 534
     :pswitch_1
     const-string v0, "Expected \':\'"
 
@@ -4848,11 +5240,11 @@
 
     throw v0
 
-    .line 524
+    .line 528
     :pswitch_2
-    invoke-direct {p0}, Lcom/google/gson/stream/a;->v()V
+    invoke-direct {p0}, Lcom/google/gson/stream/a;->w()V
 
-    .line 525
+    .line 529
     iget v0, p0, Lcom/google/gson/stream/a;->f:I
 
     iget v6, p0, Lcom/google/gson/stream/a;->g:I
@@ -4876,7 +5268,7 @@
 
     if-ne v0, v6, :cond_0
 
-    .line 526
+    .line 530
     iget v0, p0, Lcom/google/gson/stream/a;->f:I
 
     add-int/lit8 v0, v0, 0x1
@@ -4885,28 +5277,28 @@
 
     goto/16 :goto_0
 
-    .line 532
+    .line 536
     :cond_a
     const/4 v0, 0x6
 
     if-ne v5, v0, :cond_e
 
-    .line 533
+    .line 537
     iget-boolean v0, p0, Lcom/google/gson/stream/a;->d:Z
 
     if-eqz v0, :cond_d
 
-    .line 2576
+    .line 5575
     invoke-direct {p0, v3}, Lcom/google/gson/stream/a;->b(Z)I
 
-    .line 2577
+    .line 5576
     iget v0, p0, Lcom/google/gson/stream/a;->f:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 2579
+    .line 5578
     iget v0, p0, Lcom/google/gson/stream/a;->f:I
 
     sget-object v6, Lcom/google/gson/stream/a;->b:[C
@@ -4929,7 +5321,7 @@
 
     if-eqz v0, :cond_d
 
-    .line 2583
+    .line 5582
     :cond_b
     const/4 v0, 0x0
 
@@ -4940,7 +5332,7 @@
 
     if-ge v0, v6, :cond_c
 
-    .line 2584
+    .line 5583
     iget-object v6, p0, Lcom/google/gson/stream/a;->e:[C
 
     iget v7, p0, Lcom/google/gson/stream/a;->f:I
@@ -4955,12 +5347,12 @@
 
     if-ne v6, v7, :cond_d
 
-    .line 2583
+    .line 5582
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 2590
+    .line 5589
     :cond_c
     iget v0, p0, Lcom/google/gson/stream/a;->f:I
 
@@ -4972,7 +5364,7 @@
 
     iput v0, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 536
+    .line 540
     :cond_d
     iget-object v0, p0, Lcom/google/gson/stream/a;->m:[I
 
@@ -4984,34 +5376,34 @@
 
     goto/16 :goto_0
 
-    .line 537
+    .line 541
     :cond_e
     if-ne v5, v4, :cond_10
 
-    .line 538
+    .line 542
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/google/gson/stream/a;->b(Z)I
 
     move-result v0
 
-    .line 539
+    .line 543
     const/4 v6, -0x1
 
     if-ne v0, v6, :cond_f
 
-    .line 540
+    .line 544
     const/16 v0, 0x11
 
     iput v0, p0, Lcom/google/gson/stream/a;->a:I
 
     goto/16 :goto_1
 
-    .line 542
+    .line 546
     :cond_f
-    invoke-direct {p0}, Lcom/google/gson/stream/a;->v()V
+    invoke-direct {p0}, Lcom/google/gson/stream/a;->w()V
 
-    .line 543
+    .line 547
     iget v0, p0, Lcom/google/gson/stream/a;->f:I
 
     add-int/lit8 v0, v0, -0x1
@@ -5020,13 +5412,13 @@
 
     goto/16 :goto_0
 
-    .line 545
+    .line 549
     :cond_10
     const/16 v0, 0x8
 
     if-ne v5, v0, :cond_0
 
-    .line 546
+    .line 550
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "JsonReader is closed"
@@ -5035,43 +5427,43 @@
 
     throw v0
 
-    .line 552
+    .line 556
     :sswitch_9
     if-ne v5, v3, :cond_11
 
-    .line 553
+    .line 557
     iput v1, p0, Lcom/google/gson/stream/a;->a:I
 
     move v0, v1
 
     goto/16 :goto_1
 
-    .line 559
+    .line 563
     :cond_11
     :sswitch_a
     if-eq v5, v3, :cond_12
 
     if-ne v5, v2, :cond_13
 
-    .line 560
+    .line 564
     :cond_12
-    invoke-direct {p0}, Lcom/google/gson/stream/a;->v()V
+    invoke-direct {p0}, Lcom/google/gson/stream/a;->w()V
 
-    .line 561
+    .line 565
     iget v0, p0, Lcom/google/gson/stream/a;->f:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lcom/google/gson/stream/a;->f:I
 
-    .line 562
+    .line 566
     iput v4, p0, Lcom/google/gson/stream/a;->a:I
 
     move v0, v4
 
     goto/16 :goto_1
 
-    .line 564
+    .line 568
     :cond_13
     const-string v0, "Unexpected value"
 
@@ -5081,18 +5473,18 @@
 
     throw v0
 
-    .line 567
+    .line 571
     :sswitch_b
-    invoke-direct {p0}, Lcom/google/gson/stream/a;->v()V
+    invoke-direct {p0}, Lcom/google/gson/stream/a;->w()V
 
-    .line 568
+    .line 572
     const/16 v0, 0x8
 
     iput v0, p0, Lcom/google/gson/stream/a;->a:I
 
     goto/16 :goto_1
 
-    .line 570
+    .line 574
     :sswitch_c
     const/16 v0, 0x9
 
@@ -5100,7 +5492,7 @@
 
     goto/16 :goto_1
 
-    .line 572
+    .line 576
     :sswitch_d
     const/4 v0, 0x3
 
@@ -5108,7 +5500,7 @@
 
     goto/16 :goto_1
 
-    .line 574
+    .line 578
     :sswitch_e
     iput v3, p0, Lcom/google/gson/stream/a;->a:I
 
@@ -5116,16 +5508,16 @@
 
     goto/16 :goto_1
 
-    .line 584
+    .line 588
     :cond_14
-    invoke-direct {p0}, Lcom/google/gson/stream/a;->t()I
+    invoke-direct {p0}, Lcom/google/gson/stream/a;->u()I
 
     move-result v0
 
-    .line 585
+    .line 589
     if-nez v0, :cond_1
 
-    .line 589
+    .line 593
     iget-object v0, p0, Lcom/google/gson/stream/a;->e:[C
 
     iget v1, p0, Lcom/google/gson/stream/a;->f:I
@@ -5138,7 +5530,7 @@
 
     if-nez v0, :cond_15
 
-    .line 590
+    .line 594
     const-string v0, "Expected value"
 
     invoke-direct {p0, v0}, Lcom/google/gson/stream/a;->a(Ljava/lang/String;)Ljava/io/IOException;
@@ -5147,18 +5539,18 @@
 
     throw v0
 
-    .line 593
+    .line 597
     :cond_15
-    invoke-direct {p0}, Lcom/google/gson/stream/a;->v()V
+    invoke-direct {p0}, Lcom/google/gson/stream/a;->w()V
 
-    .line 594
+    .line 598
     const/16 v0, 0xa
 
     iput v0, p0, Lcom/google/gson/stream/a;->a:I
 
     goto/16 :goto_1
 
-    .line 550
+    .line 554
     :sswitch_data_0
     .sparse-switch
         0x22 -> :sswitch_c
@@ -5170,7 +5562,7 @@
         0x7b -> :sswitch_e
     .end sparse-switch
 
-    .line 468
+    .line 472
     :sswitch_data_1
     .sparse-switch
         0x2c -> :sswitch_0
@@ -5178,7 +5570,7 @@
         0x5d -> :sswitch_1
     .end sparse-switch
 
-    .line 483
+    .line 487
     :sswitch_data_2
     .sparse-switch
         0x2c -> :sswitch_5
@@ -5186,7 +5578,7 @@
         0x7d -> :sswitch_3
     .end sparse-switch
 
-    .line 495
+    .line 499
     :sswitch_data_3
     .sparse-switch
         0x22 -> :sswitch_6
@@ -5194,7 +5586,7 @@
         0x7d -> :sswitch_8
     .end sparse-switch
 
-    .line 520
+    .line 524
     :pswitch_data_0
     .packed-switch 0x3a
         :pswitch_0
@@ -5204,71 +5596,135 @@
     .end packed-switch
 .end method
 
-.method final s()Ljava/lang/String;
-    .locals 4
+.method final r()I
+    .locals 1
 
     .prologue
-    .line 1458
+    .line 1311
     iget v0, p0, Lcom/google/gson/stream/a;->h:I
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 1459
-    iget v1, p0, Lcom/google/gson/stream/a;->f:I
+    return v0
+.end method
 
-    iget v2, p0, Lcom/google/gson/stream/a;->i:I
+.method final s()I
+    .locals 2
 
-    sub-int/2addr v1, v2
+    .prologue
+    .line 1315
+    iget v0, p0, Lcom/google/gson/stream/a;->f:I
 
-    add-int/lit8 v1, v1, 0x1
+    iget v1, p0, Lcom/google/gson/stream/a;->i:I
 
-    .line 1460
-    new-instance v2, Ljava/lang/StringBuilder;
+    sub-int/2addr v0, v1
 
-    const-string v3, " at line "
+    add-int/lit8 v0, v0, 0x1
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return v0
+.end method
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+.method public final t()Ljava/lang/String;
+    .locals 5
 
-    move-result-object v0
+    .prologue
+    .line 1469
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v2, " column "
+    const-string v0, "$"
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v0
+    .line 1470
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget v2, p0, Lcom/google/gson/stream/a;->n:I
 
-    move-result-object v0
+    :goto_0
+    if-ge v0, v2, :cond_1
 
-    const-string v1, " path "
+    .line 1471
+    iget-object v3, p0, Lcom/google/gson/stream/a;->m:[I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    aget v3, v3, v0
 
-    move-result-object v0
+    packed-switch v3, :pswitch_data_0
 
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->p()Ljava/lang/String;
+    .line 1470
+    :cond_0
+    :goto_1
+    add-int/lit8 v0, v0, 0x1
 
-    move-result-object v1
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 1474
+    :pswitch_0
+    const/16 v3, 0x5b
 
-    move-result-object v0
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/google/gson/stream/a;->p:[I
+
+    aget v4, v4, v0
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const/16 v4, 0x5d
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    goto :goto_1
+
+    .line 1480
+    :pswitch_1
+    const/16 v3, 0x2e
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    .line 1481
+    iget-object v3, p0, Lcom/google/gson/stream/a;->o:[Ljava/lang/String;
+
+    aget-object v3, v3, v0
+
+    if-eqz v3, :cond_0
+
+    .line 1482
+    iget-object v3, p0, Lcom/google/gson/stream/a;->o:[Ljava/lang/String;
+
+    aget-object v3, v3, v0
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto :goto_1
+
+    .line 1492
+    :cond_1
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
+
+    .line 1471
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+    .end packed-switch
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
     .prologue
-    .line 1454
+    .line 1460
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5285,11 +5741,33 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()Ljava/lang/String;
-
-    move-result-object v1
+    const-string v1, " at line "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    .line 19311
+    iget v1, p0, Lcom/google/gson/stream/a;->h:I
+
+    add-int/lit8 v1, v1, 0x1
+
+    .line 1461
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " column "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->s()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 9933
+    .line 8588
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,7 +31,7 @@
     .locals 0
 
     .prologue
-    .line 9945
+    .line 8600
     return-void
 .end method
 
@@ -41,22 +41,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 10007
+    .line 8662
     invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/support/v7/widget/RecyclerView$LayoutParams;
 
-    .line 11860
-    iget-object v0, v0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->c:Landroid/support/v7/widget/RecyclerView$ViewHolder;
+    .line 10472
+    iget-object v0, v0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->a:Landroid/support/v7/widget/RecyclerView$ViewHolder;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$ViewHolder;->getLayoutPosition()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$ViewHolder;->c()I
 
-    .line 11983
+    .line 10638
     invoke-virtual {p1, v1, v1, v1, v1}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 10009
+    .line 8664
     return-void
 .end method
 
@@ -64,6 +64,6 @@
     .locals 0
 
     .prologue
-    .line 9966
+    .line 8621
     return-void
 .end method

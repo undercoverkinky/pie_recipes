@@ -3,14 +3,6 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Landroid/support/design/widget/AnimationUtils$AnimationListenerAdapter;
-    }
-.end annotation
-
-
 # static fields
 .field static final a:Landroid/view/animation/Interpolator;
 
@@ -18,50 +10,32 @@
 
 .field static final c:Landroid/view/animation/Interpolator;
 
-.field static final d:Landroid/view/animation/Interpolator;
-
-.field static final e:Landroid/view/animation/Interpolator;
-
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
     .prologue
-    .line 29
+    .line 27
     new-instance v0, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
     sput-object v0, Landroid/support/design/widget/AnimationUtils;->a:Landroid/view/animation/Interpolator;
 
-    .line 30
+    .line 28
     new-instance v0, Landroid/support/v4/view/animation/FastOutSlowInInterpolator;
 
     invoke-direct {v0}, Landroid/support/v4/view/animation/FastOutSlowInInterpolator;-><init>()V
 
     sput-object v0, Landroid/support/design/widget/AnimationUtils;->b:Landroid/view/animation/Interpolator;
 
-    .line 31
-    new-instance v0, Landroid/support/v4/view/animation/FastOutLinearInInterpolator;
-
-    invoke-direct {v0}, Landroid/support/v4/view/animation/FastOutLinearInInterpolator;-><init>()V
-
-    sput-object v0, Landroid/support/design/widget/AnimationUtils;->c:Landroid/view/animation/Interpolator;
-
-    .line 32
-    new-instance v0, Landroid/support/v4/view/animation/LinearOutSlowInInterpolator;
-
-    invoke-direct {v0}, Landroid/support/v4/view/animation/LinearOutSlowInInterpolator;-><init>()V
-
-    sput-object v0, Landroid/support/design/widget/AnimationUtils;->d:Landroid/view/animation/Interpolator;
-
-    .line 33
+    .line 29
     new-instance v0, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
-    sput-object v0, Landroid/support/design/widget/AnimationUtils;->e:Landroid/view/animation/Interpolator;
+    sput-object v0, Landroid/support/design/widget/AnimationUtils;->c:Landroid/view/animation/Interpolator;
 
     return-void
 .end method
@@ -70,7 +44,7 @@
     .locals 1
 
     .prologue
-    .line 39
+    .line 35
     sub-float v0, p1, p0
 
     mul-float/2addr v0, p2
@@ -84,7 +58,7 @@
     .locals 1
 
     .prologue
-    .line 43
+    .line 39
     sub-int v0, p1, p0
 
     int-to-float v0, v0

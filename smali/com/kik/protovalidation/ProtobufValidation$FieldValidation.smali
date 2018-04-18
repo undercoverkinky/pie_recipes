@@ -18,8 +18,7 @@
 
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;,
-        Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$Order;
+        Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
     }
 .end annotation
 
@@ -67,8 +66,6 @@
 
 .field private minVal_:J
 
-.field private ordered_:I
-
 .field private volatile regex_:Ljava/lang/Object;
 
 
@@ -77,14 +74,14 @@
     .locals 1
 
     .prologue
-    .line 1622
+    .line 1387
     new-instance v0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
 
     invoke-direct {v0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;-><init>()V
 
     sput-object v0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->b:Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
 
-    .line 1630
+    .line 1395
     new-instance v0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$1;
 
     invoke-direct {v0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$1;-><init>()V
@@ -104,50 +101,47 @@
 
     const/4 v1, 0x0
 
-    .line 162
+    .line 145
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageV3;-><init>()V
 
-    .line 614
+    .line 455
     const/4 v0, -0x1
 
     iput-byte v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->memoizedIsInitialized:B
 
-    .line 163
+    .line 146
     iput-boolean v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->mandatory_:Z
 
-    .line 164
+    .line 147
     const-string v0, ""
 
     iput-object v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->regex_:Ljava/lang/Object;
 
-    .line 165
+    .line 148
     iput v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minByteLength_:I
 
-    .line 166
+    .line 149
     iput v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxByteLength_:I
 
-    .line 167
+    .line 150
     iput-wide v4, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minVal_:J
 
-    .line 168
+    .line 151
     iput-wide v4, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxVal_:J
 
-    .line 169
+    .line 152
     iput-wide v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minDoubleVal_:D
 
-    .line 170
+    .line 153
     iput-wide v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxDoubleVal_:D
 
-    .line 171
+    .line 154
     iput v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minRepetitions_:I
 
-    .line 172
+    .line 155
     iput v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxRepetitions_:I
 
-    .line 173
-    iput v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->ordered_:I
-
-    .line 174
+    .line 156
     return-void
 .end method
 
@@ -162,32 +156,32 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 185
+    .line 167
     invoke-direct {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;-><init>()V
 
-    .line 188
+    .line 170
     invoke-static {}, Lcom/google/protobuf/UnknownFieldSet;->newBuilder()Lcom/google/protobuf/UnknownFieldSet$Builder;
 
     move-result-object v2
 
-    .line 190
+    .line 172
     const/4 v0, 0x0
 
-    .line 191
+    .line 173
     :cond_0
     :goto_0
-    if-nez v0, :cond_2
+    if-nez v0, :cond_1
 
-    .line 192
+    .line 174
     :try_start_0
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readTag()I
 
     move-result v3
 
-    .line 193
+    .line 175
     sparse-switch v3, :sswitch_data_0
 
-    .line 198
+    .line 180
     invoke-virtual {p0, p1, v2, p2, v3}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->parseUnknownField(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/UnknownFieldSet$Builder;Lcom/google/protobuf/ExtensionRegistryLite;I)Z
 
     move-result v3
@@ -196,16 +190,16 @@
 
     move v0, v1
 
-    .line 200
+    .line 182
     goto :goto_0
 
     :sswitch_0
     move v0, v1
 
-    .line 196
+    .line 178
     goto :goto_0
 
-    .line 205
+    .line 187
     :sswitch_1
     iget v3, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -213,7 +207,7 @@
 
     iput v3, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
-    .line 206
+    .line 188
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readBool()Z
 
     move-result v3
@@ -226,7 +220,7 @@
 
     goto :goto_0
 
-    .line 269
+    .line 240
     :catch_0
     move-exception v0
 
@@ -239,7 +233,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 274
+    .line 245
     :catchall_0
     move-exception v0
 
@@ -249,27 +243,26 @@
 
     iput-object v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
 
-    .line 275
+    .line 246
     invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->makeExtensionsImmutable()V
 
-    .line 276
     throw v0
 
-    .line 210
+    .line 192
     :sswitch_2
     :try_start_2
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readBytes()Lcom/google/protobuf/ByteString;
 
     move-result-object v3
 
-    .line 211
+    .line 193
     iget v4, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
     or-int/lit8 v4, v4, 0x2
 
     iput v4, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
-    .line 212
+    .line 194
     iput-object v3, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->regex_:Ljava/lang/Object;
     :try_end_2
     .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_2 .. :try_end_2} :catch_0
@@ -278,17 +271,17 @@
 
     goto :goto_0
 
-    .line 270
+    .line 241
     :catch_1
     move-exception v0
 
-    .line 271
+    .line 242
     :try_start_3
     new-instance v1, Lcom/google/protobuf/InvalidProtocolBufferException;
 
     invoke-direct {v1, v0}, Lcom/google/protobuf/InvalidProtocolBufferException;-><init>(Ljava/io/IOException;)V
 
-    .line 272
+    .line 243
     invoke-virtual {v1, p0}, Lcom/google/protobuf/InvalidProtocolBufferException;->setUnfinishedMessage(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/InvalidProtocolBufferException;
 
     move-result-object v0
@@ -297,7 +290,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 216
+    .line 198
     :sswitch_3
     :try_start_4
     iget v3, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
@@ -306,7 +299,7 @@
 
     iput v3, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
-    .line 217
+    .line 199
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readInt32()I
 
     move-result v3
@@ -315,7 +308,7 @@
 
     goto :goto_0
 
-    .line 221
+    .line 203
     :sswitch_4
     iget v3, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -323,7 +316,7 @@
 
     iput v3, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
-    .line 222
+    .line 204
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readInt32()I
 
     move-result v3
@@ -332,7 +325,7 @@
 
     goto :goto_0
 
-    .line 226
+    .line 208
     :sswitch_5
     iget v3, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -340,7 +333,7 @@
 
     iput v3, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
-    .line 227
+    .line 209
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readSFixed64()J
 
     move-result-wide v4
@@ -349,7 +342,7 @@
 
     goto :goto_0
 
-    .line 231
+    .line 213
     :sswitch_6
     iget v3, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -357,7 +350,7 @@
 
     iput v3, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
-    .line 232
+    .line 214
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readSFixed64()J
 
     move-result-wide v4
@@ -366,7 +359,7 @@
 
     goto :goto_0
 
-    .line 236
+    .line 218
     :sswitch_7
     iget v3, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -374,7 +367,7 @@
 
     iput v3, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
-    .line 237
+    .line 219
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readDouble()D
 
     move-result-wide v4
@@ -383,7 +376,7 @@
 
     goto/16 :goto_0
 
-    .line 241
+    .line 223
     :sswitch_8
     iget v3, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -391,7 +384,7 @@
 
     iput v3, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
-    .line 242
+    .line 224
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readDouble()D
 
     move-result-wide v4
@@ -400,7 +393,7 @@
 
     goto/16 :goto_0
 
-    .line 246
+    .line 228
     :sswitch_9
     iget v3, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -408,7 +401,7 @@
 
     iput v3, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
-    .line 247
+    .line 229
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readUInt32()I
 
     move-result v3
@@ -417,7 +410,7 @@
 
     goto/16 :goto_0
 
-    .line 251
+    .line 233
     :sswitch_a
     iget v3, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -425,46 +418,12 @@
 
     iput v3, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
-    .line 252
+    .line 234
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readUInt32()I
 
     move-result v3
 
     iput v3, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxRepetitions_:I
-
-    goto/16 :goto_0
-
-    .line 256
-    :sswitch_b
-    invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readEnum()I
-
-    move-result v3
-
-    .line 257
-    invoke-static {v3}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$Order;->valueOf(I)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$Order;
-
-    move-result-object v4
-
-    .line 258
-    if-nez v4, :cond_1
-
-    .line 259
-    const/16 v4, 0x11
-
-    invoke-virtual {v2, v4, v3}, Lcom/google/protobuf/UnknownFieldSet$Builder;->mergeVarintField(II)Lcom/google/protobuf/UnknownFieldSet$Builder;
-
-    goto/16 :goto_0
-
-    .line 261
-    :cond_1
-    iget v4, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
-
-    or-int/lit16 v4, v4, 0x400
-
-    iput v4, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
-
-    .line 262
-    iput v3, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->ordered_:I
     :try_end_4
     .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_4 .. :try_end_4} :catch_0
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
@@ -472,23 +431,21 @@
 
     goto/16 :goto_0
 
-    .line 274
-    :cond_2
+    .line 245
+    :cond_1
     invoke-virtual {v2}, Lcom/google/protobuf/UnknownFieldSet$Builder;->build()Lcom/google/protobuf/UnknownFieldSet;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
 
-    .line 275
+    .line 246
     invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->makeExtensionsImmutable()V
 
-    .line 276
+    .line 247
     return-void
 
-    .line 193
-    nop
-
+    .line 175
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -502,7 +459,6 @@
         0x61 -> :sswitch_8
         0x78 -> :sswitch_9
         0x80 -> :sswitch_a
-        0x88 -> :sswitch_b
     .end sparse-switch
 .end method
 
@@ -515,7 +471,7 @@
     .end annotation
 
     .prologue
-    .line 154
+    .line 137
     invoke-direct {p0, p1, p2}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;-><init>(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)V
 
     return-void
@@ -532,15 +488,15 @@
     .end annotation
 
     .prologue
-    .line 160
+    .line 143
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;)V
 
-    .line 614
+    .line 455
     const/4 v0, -0x1
 
     iput-byte v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->memoizedIsInitialized:B
 
-    .line 161
+    .line 144
     return-void
 .end method
 
@@ -548,7 +504,7 @@
     .locals 0
 
     .prologue
-    .line 154
+    .line 137
     invoke-direct {p0, p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;)V
 
     return-void
@@ -558,7 +514,7 @@
     .locals 1
 
     .prologue
-    .line 154
+    .line 137
     iput-wide p1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minDoubleVal_:D
 
     return-wide p1
@@ -568,7 +524,7 @@
     .locals 0
 
     .prologue
-    .line 154
+    .line 137
     iput p1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minByteLength_:I
 
     return p1
@@ -578,29 +534,17 @@
     .locals 1
 
     .prologue
-    .line 154
+    .line 137
     iput-wide p1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minVal_:J
 
     return-wide p1
-.end method
-
-.method public static final a()Lcom/google/protobuf/Descriptors$Descriptor;
-    .locals 1
-
-    .prologue
-    .line 280
-    invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation;->b()Lcom/google/protobuf/Descriptors$Descriptor;
-
-    move-result-object v0
-
-    return-object v0
 .end method
 
 .method static synthetic a(Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;)Ljava/lang/Object;
     .locals 1
 
     .prologue
-    .line 154
+    .line 137
     iget-object v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->regex_:Ljava/lang/Object;
 
     return-object v0
@@ -610,7 +554,7 @@
     .locals 0
 
     .prologue
-    .line 154
+    .line 137
     iput-object p1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->regex_:Ljava/lang/Object;
 
     return-object p1
@@ -620,7 +564,7 @@
     .locals 0
 
     .prologue
-    .line 154
+    .line 137
     iput-boolean p1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->mandatory_:Z
 
     return p1
@@ -630,7 +574,7 @@
     .locals 1
 
     .prologue
-    .line 154
+    .line 137
     iput-wide p1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxDoubleVal_:D
 
     return-wide p1
@@ -640,7 +584,7 @@
     .locals 0
 
     .prologue
-    .line 154
+    .line 137
     iput p1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxByteLength_:I
 
     return p1
@@ -650,7 +594,7 @@
     .locals 1
 
     .prologue
-    .line 154
+    .line 137
     iput-wide p1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxVal_:J
 
     return-wide p1
@@ -660,7 +604,7 @@
     .locals 1
 
     .prologue
-    .line 154
+    .line 137
     iget-object v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
 
     return-object v0
@@ -670,7 +614,7 @@
     .locals 0
 
     .prologue
-    .line 154
+    .line 137
     iput p1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minRepetitions_:I
 
     return p1
@@ -680,7 +624,7 @@
     .locals 0
 
     .prologue
-    .line 154
+    .line 137
     iput p1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxRepetitions_:I
 
     return p1
@@ -690,94 +634,84 @@
     .locals 0
 
     .prologue
-    .line 154
-    iput p1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->ordered_:I
-
-    return p1
-.end method
-
-.method static synthetic f(Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;I)I
-    .locals 0
-
-    .prologue
-    .line 154
+    .line 137
     iput p1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
     return p1
 .end method
 
-.method public static w()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
+.method public static t()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
     .locals 1
 
     .prologue
-    .line 1626
+    .line 1391
     sget-object v0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->b:Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
 
     return-object v0
 .end method
 
-.method static synthetic x()Z
+.method static synthetic u()Z
     .locals 1
 
     .prologue
-    .line 154
+    .line 137
     sget-boolean v0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->alwaysUseFieldBuilders:Z
 
     return v0
 .end method
 
-.method private y()Ljava/lang/String;
+.method private v()Ljava/lang/String;
     .locals 2
 
     .prologue
-    .line 432
+    .line 297
     iget-object v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->regex_:Ljava/lang/Object;
 
-    .line 433
+    .line 298
     instance-of v1, v0, Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 434
+    .line 299
     check-cast v0, Ljava/lang/String;
 
-    .line 442
+    .line 307
     :goto_0
     return-object v0
 
-    .line 436
+    .line 301
     :cond_0
     check-cast v0, Lcom/google/protobuf/ByteString;
 
-    .line 438
+    .line 303
     invoke-virtual {v0}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 439
+    .line 304
     invoke-virtual {v0}, Lcom/google/protobuf/ByteString;->isValidUtf8()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 440
+    .line 305
     iput-object v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->regex_:Ljava/lang/Object;
 
     :cond_1
     move-object v0, v1
 
-    .line 442
+    .line 307
     goto :goto_0
 .end method
 
-.method private z()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
+.method private w()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
     .locals 2
 
     .prologue
     const/4 v1, 0x0
 
-    .line 917
+    .line 743
     sget-object v0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->b:Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
 
     if-ne p0, v0, :cond_0
@@ -794,7 +728,7 @@
 
     invoke-direct {v0, v1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;-><init>(B)V
 
-    .line 918
+    .line 744
     invoke-virtual {v0, p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a(Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -804,13 +738,13 @@
 
 
 # virtual methods
-.method public final b()Z
+.method public final a()Z
     .locals 2
 
     .prologue
     const/4 v0, 0x1
 
-    .line 407
+    .line 272
     iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
     and-int/lit8 v1, v1, 0x1
@@ -826,21 +760,21 @@
     goto :goto_0
 .end method
 
-.method public final c()Z
+.method public final b()Z
     .locals 1
 
     .prologue
-    .line 417
+    .line 282
     iget-boolean v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->mandatory_:Z
 
     return v0
 .end method
 
-.method public final d()Z
+.method public final c()Z
     .locals 2
 
     .prologue
-    .line 426
+    .line 291
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
     and-int/lit8 v0, v0, 0x2
@@ -860,11 +794,11 @@
     goto :goto_0
 .end method
 
-.method public final e()Z
+.method public final d()Z
     .locals 2
 
     .prologue
-    .line 472
+    .line 337
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
     and-int/lit8 v0, v0, 0x4
@@ -884,6 +818,16 @@
     goto :goto_0
 .end method
 
+.method public final e()I
+    .locals 1
+
+    .prologue
+    .line 347
+    iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minByteLength_:I
+
+    return v0
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
     .locals 8
 
@@ -892,70 +836,115 @@
 
     const/4 v1, 0x1
 
-    .line 718
+    .line 552
     if-ne p1, p0, :cond_1
 
-    .line 786
+    .line 616
     :cond_0
     :goto_0
     return v1
 
-    .line 721
+    .line 555
     :cond_1
     instance-of v0, p1, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
 
     if-nez v0, :cond_2
 
-    .line 722
+    .line 556
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     goto :goto_0
 
-    .line 724
+    .line 558
     :cond_2
     check-cast p1, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
 
-    .line 727
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->b()Z
+    .line 561
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->a()Z
 
     move-result v0
 
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->b()Z
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->a()Z
 
     move-result v3
 
-    if-ne v0, v3, :cond_f
+    if-ne v0, v3, :cond_e
 
     move v0, v1
 
-    .line 728
+    .line 562
     :goto_1
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->b()Z
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->a()Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
-    .line 729
-    if-eqz v0, :cond_10
+    .line 563
+    if-eqz v0, :cond_f
 
-    .line 2417
+    .line 2282
     iget-boolean v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->mandatory_:Z
 
-    .line 3417
+    .line 3282
     iget-boolean v3, p1, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->mandatory_:Z
 
-    .line 730
+    .line 564
+    if-ne v0, v3, :cond_f
+
+    move v0, v1
+
+    .line 566
+    :cond_3
+    :goto_2
+    if-eqz v0, :cond_10
+
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->c()Z
+
+    move-result v0
+
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->c()Z
+
+    move-result v3
+
     if-ne v0, v3, :cond_10
 
     move v0, v1
 
-    .line 732
-    :cond_3
-    :goto_2
+    .line 567
+    :goto_3
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->c()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_4
+
+    .line 568
     if-eqz v0, :cond_11
+
+    invoke-direct {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->v()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 569
+    invoke-direct {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->v()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_11
+
+    move v0, v1
+
+    .line 571
+    :cond_4
+    :goto_4
+    if-eqz v0, :cond_12
 
     invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->d()Z
 
@@ -965,416 +954,335 @@
 
     move-result v3
 
-    if-ne v0, v3, :cond_11
+    if-ne v0, v3, :cond_12
 
     move v0, v1
 
-    .line 733
-    :goto_3
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->d()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    .line 734
-    if-eqz v0, :cond_12
-
-    invoke-direct {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->y()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 735
-    invoke-direct {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->y()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_12
-
-    move v0, v1
-
-    .line 737
-    :cond_4
-    :goto_4
-    if-eqz v0, :cond_13
-
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->e()Z
-
-    move-result v0
-
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->e()Z
-
-    move-result v3
-
-    if-ne v0, v3, :cond_13
-
-    move v0, v1
-
-    .line 738
+    .line 572
     :goto_5
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->e()Z
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->d()Z
 
     move-result v3
 
     if-eqz v3, :cond_5
 
-    .line 739
-    if-eqz v0, :cond_14
+    .line 573
+    if-eqz v0, :cond_13
 
-    .line 3482
+    .line 3347
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minByteLength_:I
 
-    .line 4482
+    .line 4347
     iget v3, p1, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minByteLength_:I
 
-    .line 740
+    .line 574
+    if-ne v0, v3, :cond_13
+
+    move v0, v1
+
+    .line 576
+    :cond_5
+    :goto_6
+    if-eqz v0, :cond_14
+
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->f()Z
+
+    move-result v0
+
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->f()Z
+
+    move-result v3
+
     if-ne v0, v3, :cond_14
 
     move v0, v1
 
-    .line 742
-    :cond_5
-    :goto_6
-    if-eqz v0, :cond_15
-
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->g()Z
-
-    move-result v0
-
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->g()Z
-
-    move-result v3
-
-    if-ne v0, v3, :cond_15
-
-    move v0, v1
-
-    .line 743
+    .line 577
     :goto_7
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->g()Z
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->f()Z
 
     move-result v3
 
     if-eqz v3, :cond_6
 
-    .line 744
-    if-eqz v0, :cond_16
+    .line 578
+    if-eqz v0, :cond_15
 
-    .line 4497
+    .line 4362
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxByteLength_:I
 
-    .line 5497
+    .line 5362
     iget v3, p1, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxByteLength_:I
 
-    .line 745
+    .line 579
+    if-ne v0, v3, :cond_15
+
+    move v0, v1
+
+    .line 581
+    :cond_6
+    :goto_8
+    if-eqz v0, :cond_16
+
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->h()Z
+
+    move-result v0
+
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->h()Z
+
+    move-result v3
+
     if-ne v0, v3, :cond_16
 
     move v0, v1
 
-    .line 747
-    :cond_6
-    :goto_8
-    if-eqz v0, :cond_17
-
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->i()Z
-
-    move-result v0
-
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->i()Z
-
-    move-result v3
-
-    if-ne v0, v3, :cond_17
-
-    move v0, v1
-
-    .line 748
+    .line 582
     :goto_9
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->i()Z
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->h()Z
 
     move-result v3
 
     if-eqz v3, :cond_7
 
-    .line 749
-    if-eqz v0, :cond_18
+    .line 583
+    if-eqz v0, :cond_17
 
-    .line 5512
+    .line 5377
     iget-wide v4, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minVal_:J
 
-    .line 6512
+    .line 6377
     iget-wide v6, p1, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minVal_:J
 
-    .line 750
+    .line 584
     cmp-long v0, v4, v6
 
-    if-nez v0, :cond_18
+    if-nez v0, :cond_17
 
     move v0, v1
 
-    .line 752
+    .line 586
     :cond_7
     :goto_a
-    if-eqz v0, :cond_19
+    if-eqz v0, :cond_18
 
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->k()Z
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->j()Z
 
     move-result v0
 
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->k()Z
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->j()Z
 
     move-result v3
 
-    if-ne v0, v3, :cond_19
+    if-ne v0, v3, :cond_18
 
     move v0, v1
 
-    .line 753
+    .line 587
     :goto_b
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->k()Z
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->j()Z
 
     move-result v3
 
     if-eqz v3, :cond_8
 
-    .line 754
-    if-eqz v0, :cond_1a
+    .line 588
+    if-eqz v0, :cond_19
 
-    .line 6527
+    .line 6392
     iget-wide v4, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxVal_:J
 
-    .line 7527
+    .line 7392
     iget-wide v6, p1, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxVal_:J
 
-    .line 755
+    .line 589
     cmp-long v0, v4, v6
 
-    if-nez v0, :cond_1a
+    if-nez v0, :cond_19
 
     move v0, v1
 
-    .line 757
+    .line 591
     :cond_8
     :goto_c
-    if-eqz v0, :cond_1b
+    if-eqz v0, :cond_1a
 
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->m()Z
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->l()Z
 
     move-result v0
 
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->m()Z
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->l()Z
 
     move-result v3
 
-    if-ne v0, v3, :cond_1b
+    if-ne v0, v3, :cond_1a
 
     move v0, v1
 
-    .line 758
+    .line 592
     :goto_d
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->m()Z
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->l()Z
 
     move-result v3
 
     if-eqz v3, :cond_9
 
-    .line 759
-    if-eqz v0, :cond_1c
+    .line 593
+    if-eqz v0, :cond_1b
 
-    .line 7542
+    .line 7407
     iget-wide v4, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minDoubleVal_:D
 
-    .line 760
+    .line 594
     invoke-static {v4, v5}, Ljava/lang/Double;->doubleToLongBits(D)J
 
     move-result-wide v4
 
-    .line 8542
+    .line 8407
     iget-wide v6, p1, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minDoubleVal_:D
 
-    .line 761
+    .line 595
     invoke-static {v6, v7}, Ljava/lang/Double;->doubleToLongBits(D)J
 
     move-result-wide v6
 
     cmp-long v0, v4, v6
 
-    if-nez v0, :cond_1c
+    if-nez v0, :cond_1b
 
     move v0, v1
 
-    .line 764
+    .line 598
     :cond_9
     :goto_e
-    if-eqz v0, :cond_1d
+    if-eqz v0, :cond_1c
 
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->o()Z
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->n()Z
 
     move-result v0
 
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->o()Z
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->n()Z
 
     move-result v3
 
-    if-ne v0, v3, :cond_1d
+    if-ne v0, v3, :cond_1c
 
     move v0, v1
 
-    .line 765
+    .line 599
     :goto_f
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->o()Z
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->n()Z
 
     move-result v3
 
     if-eqz v3, :cond_a
 
-    .line 766
-    if-eqz v0, :cond_1e
+    .line 600
+    if-eqz v0, :cond_1d
 
-    .line 8557
+    .line 8422
     iget-wide v4, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxDoubleVal_:D
 
-    .line 767
+    .line 601
     invoke-static {v4, v5}, Ljava/lang/Double;->doubleToLongBits(D)J
 
     move-result-wide v4
 
-    .line 9557
+    .line 9422
     iget-wide v6, p1, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxDoubleVal_:D
 
-    .line 768
+    .line 602
     invoke-static {v6, v7}, Ljava/lang/Double;->doubleToLongBits(D)J
 
     move-result-wide v6
 
     cmp-long v0, v4, v6
 
-    if-nez v0, :cond_1e
+    if-nez v0, :cond_1d
 
     move v0, v1
 
-    .line 771
+    .line 605
     :cond_a
     :goto_10
-    if-eqz v0, :cond_1f
+    if-eqz v0, :cond_1e
 
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->q()Z
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->p()Z
 
     move-result v0
 
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->q()Z
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->p()Z
 
     move-result v3
 
-    if-ne v0, v3, :cond_1f
+    if-ne v0, v3, :cond_1e
 
     move v0, v1
 
-    .line 772
+    .line 606
     :goto_11
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->q()Z
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->p()Z
 
     move-result v3
 
     if-eqz v3, :cond_b
 
-    .line 773
-    if-eqz v0, :cond_20
+    .line 607
+    if-eqz v0, :cond_1f
 
-    .line 9572
+    .line 9437
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minRepetitions_:I
 
-    .line 10572
+    .line 10437
     iget v3, p1, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minRepetitions_:I
 
-    .line 774
+    .line 608
+    if-ne v0, v3, :cond_1f
+
+    move v0, v1
+
+    .line 610
+    :cond_b
+    :goto_12
+    if-eqz v0, :cond_20
+
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->r()Z
+
+    move-result v0
+
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->r()Z
+
+    move-result v3
+
     if-ne v0, v3, :cond_20
 
     move v0, v1
 
-    .line 776
-    :cond_b
-    :goto_12
-    if-eqz v0, :cond_21
-
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->s()Z
-
-    move-result v0
-
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->s()Z
-
-    move-result v3
-
-    if-ne v0, v3, :cond_21
-
-    move v0, v1
-
-    .line 777
+    .line 611
     :goto_13
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->s()Z
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->r()Z
 
     move-result v3
 
     if-eqz v3, :cond_c
 
-    .line 778
-    if-eqz v0, :cond_22
+    .line 612
+    if-eqz v0, :cond_21
 
-    .line 10587
+    .line 10452
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxRepetitions_:I
 
-    .line 11587
+    .line 11452
     iget v3, p1, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxRepetitions_:I
 
-    .line 779
-    if-ne v0, v3, :cond_22
+    .line 613
+    if-ne v0, v3, :cond_21
 
     move v0, v1
 
-    .line 781
+    .line 615
     :cond_c
     :goto_14
-    if-eqz v0, :cond_23
-
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->u()Z
-
-    move-result v0
-
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->u()Z
-
-    move-result v3
-
-    if-ne v0, v3, :cond_23
-
-    move v0, v1
-
-    .line 782
-    :goto_15
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->u()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_d
-
-    .line 783
-    if-eqz v0, :cond_24
-
-    iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->ordered_:I
-
-    iget v3, p1, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->ordered_:I
-
-    if-ne v0, v3, :cond_24
-
-    move v0, v1
-
-    .line 785
-    :cond_d
-    :goto_16
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_d
 
     iget-object v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
 
@@ -1386,160 +1294,138 @@
 
     if-nez v0, :cond_0
 
-    :cond_e
+    :cond_d
     move v1, v2
 
-    .line 786
+    .line 616
     goto/16 :goto_0
+
+    :cond_e
+    move v0, v2
+
+    .line 561
+    goto/16 :goto_1
 
     :cond_f
     move v0, v2
 
-    .line 727
-    goto/16 :goto_1
+    .line 564
+    goto/16 :goto_2
 
     :cond_10
     move v0, v2
 
-    .line 730
-    goto/16 :goto_2
+    .line 566
+    goto/16 :goto_3
 
     :cond_11
     move v0, v2
 
-    .line 732
-    goto/16 :goto_3
+    .line 569
+    goto/16 :goto_4
 
     :cond_12
     move v0, v2
 
-    .line 735
-    goto/16 :goto_4
+    .line 571
+    goto/16 :goto_5
 
     :cond_13
     move v0, v2
 
-    .line 737
-    goto/16 :goto_5
+    .line 574
+    goto/16 :goto_6
 
     :cond_14
     move v0, v2
 
-    .line 740
-    goto/16 :goto_6
+    .line 576
+    goto/16 :goto_7
 
     :cond_15
     move v0, v2
 
-    .line 742
-    goto/16 :goto_7
+    .line 579
+    goto/16 :goto_8
 
     :cond_16
     move v0, v2
 
-    .line 745
-    goto/16 :goto_8
+    .line 581
+    goto/16 :goto_9
 
     :cond_17
     move v0, v2
 
-    .line 747
-    goto/16 :goto_9
+    .line 584
+    goto/16 :goto_a
 
     :cond_18
     move v0, v2
 
-    .line 750
-    goto/16 :goto_a
+    .line 586
+    goto/16 :goto_b
 
     :cond_19
     move v0, v2
 
-    .line 752
-    goto/16 :goto_b
+    .line 589
+    goto/16 :goto_c
 
     :cond_1a
     move v0, v2
 
-    .line 755
-    goto/16 :goto_c
+    .line 591
+    goto/16 :goto_d
 
     :cond_1b
     move v0, v2
 
-    .line 757
-    goto/16 :goto_d
+    .line 595
+    goto/16 :goto_e
 
     :cond_1c
     move v0, v2
 
-    .line 761
-    goto/16 :goto_e
+    .line 598
+    goto/16 :goto_f
 
     :cond_1d
     move v0, v2
 
-    .line 764
-    goto/16 :goto_f
+    .line 602
+    goto :goto_10
 
     :cond_1e
     move v0, v2
 
-    .line 768
-    goto/16 :goto_10
+    .line 605
+    goto :goto_11
 
     :cond_1f
     move v0, v2
 
-    .line 771
-    goto/16 :goto_11
+    .line 608
+    goto :goto_12
 
     :cond_20
     move v0, v2
 
-    .line 774
-    goto :goto_12
+    .line 610
+    goto :goto_13
 
     :cond_21
     move v0, v2
 
-    .line 776
-    goto :goto_13
-
-    :cond_22
-    move v0, v2
-
-    .line 779
+    .line 613
     goto :goto_14
-
-    :cond_23
-    move v0, v2
-
-    .line 781
-    goto :goto_15
-
-    :cond_24
-    move v0, v2
-
-    .line 783
-    goto :goto_16
 .end method
 
-.method public final f()I
-    .locals 1
-
-    .prologue
-    .line 482
-    iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minByteLength_:I
-
-    return v0
-.end method
-
-.method public final g()Z
+.method public final f()Z
     .locals 2
 
     .prologue
-    .line 491
+    .line 356
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
     and-int/lit8 v0, v0, 0x8
@@ -1559,14 +1445,24 @@
     goto :goto_0
 .end method
 
+.method public final g()I
+    .locals 1
+
+    .prologue
+    .line 362
+    iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxByteLength_:I
+
+    return v0
+.end method
+
 .method public final bridge synthetic getDefaultInstanceForType()Lcom/google/protobuf/Message;
     .locals 1
 
     .prologue
-    .line 16649
+    .line 16414
     sget-object v0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->b:Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
 
-    .line 154
+    .line 137
     return-object v0
 .end method
 
@@ -1574,10 +1470,10 @@
     .locals 1
 
     .prologue
-    .line 15649
+    .line 15414
     sget-object v0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->b:Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
 
-    .line 154
+    .line 137
     return-object v0
 .end method
 
@@ -1594,7 +1490,7 @@
     .end annotation
 
     .prologue
-    .line 1645
+    .line 1410
     sget-object v0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->a:Lcom/google/protobuf/Parser;
 
     return-object v0
@@ -1612,40 +1508,40 @@
 
     const/4 v2, 0x1
 
-    .line 663
+    .line 501
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->memoizedSize:I
 
-    .line 664
+    .line 502
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 712
+    .line 546
     :goto_0
     return v0
 
-    .line 666
+    .line 504
     :cond_0
     const/4 v0, 0x0
 
-    .line 667
+    .line 505
     iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
     and-int/lit8 v1, v1, 0x1
 
     if-ne v1, v2, :cond_1
 
-    .line 668
+    .line 506
     iget-boolean v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->mandatory_:Z
 
-    .line 669
+    .line 507
     invoke-static {v2, v0}, Lcom/google/protobuf/CodedOutputStream;->computeBoolSize(IZ)I
 
     move-result v0
 
     add-int/lit8 v0, v0, 0x0
 
-    .line 671
+    .line 509
     :cond_1
     iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -1653,7 +1549,7 @@
 
     if-ne v1, v3, :cond_2
 
-    .line 672
+    .line 510
     iget-object v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->regex_:Ljava/lang/Object;
 
     invoke-static {v3, v1}, Lcom/google/protobuf/GeneratedMessageV3;->computeStringSize(ILjava/lang/Object;)I
@@ -1662,7 +1558,7 @@
 
     add-int/2addr v0, v1
 
-    .line 674
+    .line 512
     :cond_2
     iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -1672,19 +1568,19 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 675
+    .line 513
     const/4 v1, 0x5
 
     iget v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minByteLength_:I
 
-    .line 676
+    .line 514
     invoke-static {v1, v2}, Lcom/google/protobuf/CodedOutputStream;->computeInt32Size(II)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 678
+    .line 516
     :cond_3
     iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -1692,19 +1588,19 @@
 
     if-ne v1, v4, :cond_4
 
-    .line 679
+    .line 517
     const/4 v1, 0x6
 
     iget v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxByteLength_:I
 
-    .line 680
+    .line 518
     invoke-static {v1, v2}, Lcom/google/protobuf/CodedOutputStream;->computeInt32Size(II)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 682
+    .line 520
     :cond_4
     iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -1712,19 +1608,19 @@
 
     if-ne v1, v5, :cond_5
 
-    .line 683
+    .line 521
     const/4 v1, 0x7
 
     iget-wide v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minVal_:J
 
-    .line 684
+    .line 522
     invoke-static {v1, v2, v3}, Lcom/google/protobuf/CodedOutputStream;->computeSFixed64Size(IJ)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 686
+    .line 524
     :cond_5
     iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -1734,17 +1630,17 @@
 
     if-ne v1, v2, :cond_6
 
-    .line 687
+    .line 525
     iget-wide v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxVal_:J
 
-    .line 688
+    .line 526
     invoke-static {v4, v2, v3}, Lcom/google/protobuf/CodedOutputStream;->computeSFixed64Size(IJ)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 690
+    .line 528
     :cond_6
     iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -1754,19 +1650,19 @@
 
     if-ne v1, v2, :cond_7
 
-    .line 691
+    .line 529
     const/16 v1, 0xb
 
     iget-wide v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minDoubleVal_:D
 
-    .line 692
+    .line 530
     invoke-static {v1, v2, v3}, Lcom/google/protobuf/CodedOutputStream;->computeDoubleSize(ID)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 694
+    .line 532
     :cond_7
     iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -1776,19 +1672,19 @@
 
     if-ne v1, v2, :cond_8
 
-    .line 695
+    .line 533
     const/16 v1, 0xc
 
     iget-wide v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxDoubleVal_:D
 
-    .line 696
+    .line 534
     invoke-static {v1, v2, v3}, Lcom/google/protobuf/CodedOutputStream;->computeDoubleSize(ID)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 698
+    .line 536
     :cond_8
     iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -1798,19 +1694,19 @@
 
     if-ne v1, v2, :cond_9
 
-    .line 699
+    .line 537
     const/16 v1, 0xf
 
     iget v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minRepetitions_:I
 
-    .line 700
+    .line 538
     invoke-static {v1, v2}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32Size(II)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 702
+    .line 540
     :cond_9
     iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -1820,40 +1716,18 @@
 
     if-ne v1, v2, :cond_a
 
-    .line 703
+    .line 541
     iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxRepetitions_:I
 
-    .line 704
+    .line 542
     invoke-static {v5, v1}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32Size(II)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 706
+    .line 544
     :cond_a
-    iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
-
-    and-int/lit16 v1, v1, 0x400
-
-    const/16 v2, 0x400
-
-    if-ne v1, v2, :cond_b
-
-    .line 707
-    const/16 v1, 0x11
-
-    iget v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->ordered_:I
-
-    .line 708
-    invoke-static {v1, v2}, Lcom/google/protobuf/CodedOutputStream;->computeEnumSize(II)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    .line 710
-    :cond_b
     iget-object v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
 
     invoke-virtual {v1}, Lcom/google/protobuf/UnknownFieldSet;->getSerializedSize()I
@@ -1862,7 +1736,7 @@
 
     add-int/2addr v0, v1
 
-    .line 711
+    .line 545
     iput v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->memoizedSize:I
 
     goto/16 :goto_0
@@ -1872,346 +1746,17 @@
     .locals 1
 
     .prologue
-    .line 179
+    .line 161
     iget-object v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
 
     return-object v0
 .end method
 
-.method public final h()I
-    .locals 1
-
-    .prologue
-    .line 497
-    iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxByteLength_:I
-
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    .prologue
-    .line 791
-    iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->memoizedHashCode:I
-
-    if-eqz v0, :cond_0
-
-    .line 792
-    iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->memoizedHashCode:I
-
-    .line 847
-    :goto_0
-    return v0
-
-    .line 795
-    :cond_0
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->getDescriptorForType()Lcom/google/protobuf/Descriptors$Descriptor;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/lit16 v0, v0, 0x30b
-
-    .line 796
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->b()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 797
-    mul-int/lit8 v0, v0, 0x25
-
-    add-int/lit8 v0, v0, 0x1
-
-    .line 798
-    mul-int/lit8 v0, v0, 0x35
-
-    .line 12417
-    iget-boolean v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->mandatory_:Z
-
-    .line 798
-    invoke-static {v1}, Lcom/google/protobuf/Internal;->hashBoolean(Z)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    .line 801
-    :cond_1
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->d()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    .line 802
-    mul-int/lit8 v0, v0, 0x25
-
-    add-int/lit8 v0, v0, 0x2
-
-    .line 803
-    mul-int/lit8 v0, v0, 0x35
-
-    invoke-direct {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->y()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    .line 805
-    :cond_2
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->e()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    .line 806
-    mul-int/lit8 v0, v0, 0x25
-
-    add-int/lit8 v0, v0, 0x5
-
-    .line 807
-    mul-int/lit8 v0, v0, 0x35
-
-    .line 12482
-    iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minByteLength_:I
-
-    .line 807
-    add-int/2addr v0, v1
-
-    .line 809
-    :cond_3
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->g()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    .line 810
-    mul-int/lit8 v0, v0, 0x25
-
-    add-int/lit8 v0, v0, 0x6
-
-    .line 811
-    mul-int/lit8 v0, v0, 0x35
-
-    .line 12497
-    iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxByteLength_:I
-
-    .line 811
-    add-int/2addr v0, v1
-
-    .line 813
-    :cond_4
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->i()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    .line 814
-    mul-int/lit8 v0, v0, 0x25
-
-    add-int/lit8 v0, v0, 0x7
-
-    .line 815
-    mul-int/lit8 v0, v0, 0x35
-
-    .line 12512
-    iget-wide v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minVal_:J
-
-    .line 815
-    invoke-static {v2, v3}, Lcom/google/protobuf/Internal;->hashLong(J)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    .line 818
-    :cond_5
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->k()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    .line 819
-    mul-int/lit8 v0, v0, 0x25
-
-    add-int/lit8 v0, v0, 0x8
-
-    .line 820
-    mul-int/lit8 v0, v0, 0x35
-
-    .line 12527
-    iget-wide v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxVal_:J
-
-    .line 820
-    invoke-static {v2, v3}, Lcom/google/protobuf/Internal;->hashLong(J)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    .line 823
-    :cond_6
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->m()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_7
-
-    .line 824
-    mul-int/lit8 v0, v0, 0x25
-
-    add-int/lit8 v0, v0, 0xb
-
-    .line 825
-    mul-int/lit8 v0, v0, 0x35
-
-    .line 12542
-    iget-wide v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minDoubleVal_:D
-
-    .line 826
-    invoke-static {v2, v3}, Ljava/lang/Double;->doubleToLongBits(D)J
-
-    move-result-wide v2
-
-    .line 825
-    invoke-static {v2, v3}, Lcom/google/protobuf/Internal;->hashLong(J)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    .line 828
-    :cond_7
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->o()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_8
-
-    .line 829
-    mul-int/lit8 v0, v0, 0x25
-
-    add-int/lit8 v0, v0, 0xc
-
-    .line 830
-    mul-int/lit8 v0, v0, 0x35
-
-    .line 12557
-    iget-wide v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxDoubleVal_:D
-
-    .line 831
-    invoke-static {v2, v3}, Ljava/lang/Double;->doubleToLongBits(D)J
-
-    move-result-wide v2
-
-    .line 830
-    invoke-static {v2, v3}, Lcom/google/protobuf/Internal;->hashLong(J)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    .line 833
-    :cond_8
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->q()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_9
-
-    .line 834
-    mul-int/lit8 v0, v0, 0x25
-
-    add-int/lit8 v0, v0, 0xf
-
-    .line 835
-    mul-int/lit8 v0, v0, 0x35
-
-    .line 12572
-    iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minRepetitions_:I
-
-    .line 835
-    add-int/2addr v0, v1
-
-    .line 837
-    :cond_9
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->s()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_a
-
-    .line 838
-    mul-int/lit8 v0, v0, 0x25
-
-    add-int/lit8 v0, v0, 0x10
-
-    .line 839
-    mul-int/lit8 v0, v0, 0x35
-
-    .line 12587
-    iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxRepetitions_:I
-
-    .line 839
-    add-int/2addr v0, v1
-
-    .line 841
-    :cond_a
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->u()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_b
-
-    .line 842
-    mul-int/lit8 v0, v0, 0x25
-
-    add-int/lit8 v0, v0, 0x11
-
-    .line 843
-    mul-int/lit8 v0, v0, 0x35
-
-    iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->ordered_:I
-
-    add-int/2addr v0, v1
-
-    .line 845
-    :cond_b
-    mul-int/lit8 v0, v0, 0x1d
-
-    iget-object v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
-
-    invoke-virtual {v1}, Lcom/google/protobuf/UnknownFieldSet;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    .line 846
-    iput v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->memoizedHashCode:I
-
-    goto/16 :goto_0
-.end method
-
-.method public final i()Z
+.method public final h()Z
     .locals 2
 
     .prologue
-    .line 506
+    .line 371
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
     and-int/lit8 v0, v0, 0x10
@@ -2231,11 +1776,320 @@
     goto :goto_0
 .end method
 
+.method public final hashCode()I
+    .locals 4
+
+    .prologue
+    .line 621
+    iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->memoizedHashCode:I
+
+    if-eqz v0, :cond_0
+
+    .line 622
+    iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->memoizedHashCode:I
+
+    .line 673
+    :goto_0
+    return v0
+
+    .line 625
+    :cond_0
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->getDescriptorForType()Lcom/google/protobuf/Descriptors$Descriptor;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    add-int/lit16 v0, v0, 0x30b
+
+    .line 626
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->a()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 627
+    mul-int/lit8 v0, v0, 0x25
+
+    add-int/lit8 v0, v0, 0x1
+
+    .line 628
+    mul-int/lit8 v0, v0, 0x35
+
+    .line 12282
+    iget-boolean v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->mandatory_:Z
+
+    .line 628
+    invoke-static {v1}, Lcom/google/protobuf/Internal;->hashBoolean(Z)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    .line 631
+    :cond_1
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->c()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    .line 632
+    mul-int/lit8 v0, v0, 0x25
+
+    add-int/lit8 v0, v0, 0x2
+
+    .line 633
+    mul-int/lit8 v0, v0, 0x35
+
+    invoke-direct {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->v()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    .line 635
+    :cond_2
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->d()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    .line 636
+    mul-int/lit8 v0, v0, 0x25
+
+    add-int/lit8 v0, v0, 0x5
+
+    .line 637
+    mul-int/lit8 v0, v0, 0x35
+
+    .line 12347
+    iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minByteLength_:I
+
+    .line 637
+    add-int/2addr v0, v1
+
+    .line 639
+    :cond_3
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->f()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    .line 640
+    mul-int/lit8 v0, v0, 0x25
+
+    add-int/lit8 v0, v0, 0x6
+
+    .line 641
+    mul-int/lit8 v0, v0, 0x35
+
+    .line 12362
+    iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxByteLength_:I
+
+    .line 641
+    add-int/2addr v0, v1
+
+    .line 643
+    :cond_4
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->h()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    .line 644
+    mul-int/lit8 v0, v0, 0x25
+
+    add-int/lit8 v0, v0, 0x7
+
+    .line 645
+    mul-int/lit8 v0, v0, 0x35
+
+    .line 12377
+    iget-wide v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minVal_:J
+
+    .line 645
+    invoke-static {v2, v3}, Lcom/google/protobuf/Internal;->hashLong(J)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    .line 648
+    :cond_5
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->j()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    .line 649
+    mul-int/lit8 v0, v0, 0x25
+
+    add-int/lit8 v0, v0, 0x8
+
+    .line 650
+    mul-int/lit8 v0, v0, 0x35
+
+    .line 12392
+    iget-wide v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxVal_:J
+
+    .line 650
+    invoke-static {v2, v3}, Lcom/google/protobuf/Internal;->hashLong(J)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    .line 653
+    :cond_6
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->l()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    .line 654
+    mul-int/lit8 v0, v0, 0x25
+
+    add-int/lit8 v0, v0, 0xb
+
+    .line 655
+    mul-int/lit8 v0, v0, 0x35
+
+    .line 12407
+    iget-wide v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minDoubleVal_:D
+
+    .line 656
+    invoke-static {v2, v3}, Ljava/lang/Double;->doubleToLongBits(D)J
+
+    move-result-wide v2
+
+    .line 655
+    invoke-static {v2, v3}, Lcom/google/protobuf/Internal;->hashLong(J)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    .line 658
+    :cond_7
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->n()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_8
+
+    .line 659
+    mul-int/lit8 v0, v0, 0x25
+
+    add-int/lit8 v0, v0, 0xc
+
+    .line 660
+    mul-int/lit8 v0, v0, 0x35
+
+    .line 12422
+    iget-wide v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxDoubleVal_:D
+
+    .line 661
+    invoke-static {v2, v3}, Ljava/lang/Double;->doubleToLongBits(D)J
+
+    move-result-wide v2
+
+    .line 660
+    invoke-static {v2, v3}, Lcom/google/protobuf/Internal;->hashLong(J)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    .line 663
+    :cond_8
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->p()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_9
+
+    .line 664
+    mul-int/lit8 v0, v0, 0x25
+
+    add-int/lit8 v0, v0, 0xf
+
+    .line 665
+    mul-int/lit8 v0, v0, 0x35
+
+    .line 12437
+    iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minRepetitions_:I
+
+    .line 665
+    add-int/2addr v0, v1
+
+    .line 667
+    :cond_9
+    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->r()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_a
+
+    .line 668
+    mul-int/lit8 v0, v0, 0x25
+
+    add-int/lit8 v0, v0, 0x10
+
+    .line 669
+    mul-int/lit8 v0, v0, 0x35
+
+    .line 12452
+    iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxRepetitions_:I
+
+    .line 669
+    add-int/2addr v0, v1
+
+    .line 671
+    :cond_a
+    mul-int/lit8 v0, v0, 0x1d
+
+    iget-object v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
+
+    invoke-virtual {v1}, Lcom/google/protobuf/UnknownFieldSet;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    .line 672
+    iput v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->memoizedHashCode:I
+
+    goto/16 :goto_0
+.end method
+
+.method public final i()J
+    .locals 2
+
+    .prologue
+    .line 377
+    iget-wide v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minVal_:J
+
+    return-wide v0
+.end method
+
 .method protected final internalGetFieldAccessorTable()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
     .locals 3
 
     .prologue
-    .line 285
+    .line 256
     invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation;->c()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -2244,12 +2098,12 @@
 
     const-class v2, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
-    .line 286
+    .line 257
     invoke-virtual {v0, v1, v2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;->ensureFieldAccessorsInitialized(Ljava/lang/Class;Ljava/lang/Class;)Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
 
-    .line 285
+    .line 256
     return-object v0
 .end method
 
@@ -2259,17 +2113,17 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 616
+    .line 457
     iget-byte v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->memoizedIsInitialized:B
 
-    .line 617
+    .line 458
     if-ne v1, v0, :cond_0
 
-    .line 621
+    .line 462
     :goto_0
     return v0
 
-    .line 618
+    .line 459
     :cond_0
     if-nez v1, :cond_1
 
@@ -2277,28 +2131,18 @@
 
     goto :goto_0
 
-    .line 620
+    .line 461
     :cond_1
     iput-byte v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->memoizedIsInitialized:B
 
     goto :goto_0
 .end method
 
-.method public final j()J
+.method public final j()Z
     .locals 2
 
     .prologue
-    .line 512
-    iget-wide v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minVal_:J
-
-    return-wide v0
-.end method
-
-.method public final k()Z
-    .locals 2
-
-    .prologue
-    .line 521
+    .line 386
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
     and-int/lit8 v0, v0, 0x20
@@ -2318,21 +2162,21 @@
     goto :goto_0
 .end method
 
-.method public final l()J
+.method public final k()J
     .locals 2
 
     .prologue
-    .line 527
+    .line 392
     iget-wide v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxVal_:J
 
     return-wide v0
 .end method
 
-.method public final m()Z
+.method public final l()Z
     .locals 2
 
     .prologue
-    .line 536
+    .line 401
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
     and-int/lit8 v0, v0, 0x40
@@ -2352,66 +2196,21 @@
     goto :goto_0
 .end method
 
-.method public final n()D
+.method public final m()D
     .locals 2
 
     .prologue
-    .line 542
+    .line 407
     iget-wide v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minDoubleVal_:D
 
     return-wide v0
 .end method
 
-.method public final synthetic newBuilderForType()Lcom/google/protobuf/Message$Builder;
-    .locals 1
-
-    .prologue
-    .line 13911
-    sget-object v0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->b:Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
-
-    invoke-direct {v0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->z()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
-
-    move-result-object v0
-
-    .line 154
-    return-object v0
-.end method
-
-.method protected final synthetic newBuilderForType(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)Lcom/google/protobuf/Message$Builder;
+.method public final n()Z
     .locals 2
 
     .prologue
-    .line 12924
-    new-instance v0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;B)V
-
-    .line 154
-    return-object v0
-.end method
-
-.method public final synthetic newBuilderForType()Lcom/google/protobuf/MessageLite$Builder;
-    .locals 1
-
-    .prologue
-    .line 14911
-    sget-object v0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->b:Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
-
-    invoke-direct {v0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->z()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
-
-    move-result-object v0
-
-    .line 154
-    return-object v0
-.end method
-
-.method public final o()Z
-    .locals 2
-
-    .prologue
-    .line 551
+    .line 416
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
     and-int/lit16 v0, v0, 0x80
@@ -2431,21 +2230,66 @@
     goto :goto_0
 .end method
 
-.method public final p()D
+.method public final synthetic newBuilderForType()Lcom/google/protobuf/Message$Builder;
+    .locals 1
+
+    .prologue
+    .line 13737
+    sget-object v0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->b:Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
+
+    invoke-direct {v0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->w()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
+
+    move-result-object v0
+
+    .line 137
+    return-object v0
+.end method
+
+.method protected final synthetic newBuilderForType(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)Lcom/google/protobuf/Message$Builder;
     .locals 2
 
     .prologue
-    .line 557
+    .line 12750
+    new-instance v0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;B)V
+
+    .line 137
+    return-object v0
+.end method
+
+.method public final synthetic newBuilderForType()Lcom/google/protobuf/MessageLite$Builder;
+    .locals 1
+
+    .prologue
+    .line 14737
+    sget-object v0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->b:Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
+
+    invoke-direct {v0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->w()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
+
+    move-result-object v0
+
+    .line 137
+    return-object v0
+.end method
+
+.method public final o()D
+    .locals 2
+
+    .prologue
+    .line 422
     iget-wide v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxDoubleVal_:D
 
     return-wide v0
 .end method
 
-.method public final q()Z
+.method public final p()Z
     .locals 2
 
     .prologue
-    .line 566
+    .line 431
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
     and-int/lit16 v0, v0, 0x100
@@ -2465,21 +2309,21 @@
     goto :goto_0
 .end method
 
-.method public final r()I
+.method public final q()I
     .locals 1
 
     .prologue
-    .line 572
+    .line 437
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minRepetitions_:I
 
     return v0
 .end method
 
-.method public final s()Z
+.method public final r()Z
     .locals 2
 
     .prologue
-    .line 581
+    .line 446
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
     and-int/lit16 v0, v0, 0x200
@@ -2499,11 +2343,11 @@
     goto :goto_0
 .end method
 
-.method public final t()I
+.method public final s()I
     .locals 1
 
     .prologue
-    .line 587
+    .line 452
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxRepetitions_:I
 
     return v0
@@ -2513,8 +2357,8 @@
     .locals 1
 
     .prologue
-    .line 154
-    invoke-direct {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->z()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
+    .line 137
+    invoke-direct {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->w()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
 
@@ -2525,55 +2369,11 @@
     .locals 1
 
     .prologue
-    .line 154
-    invoke-direct {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->z()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
+    .line 137
+    invoke-direct {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->w()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
 
-    return-object v0
-.end method
-
-.method public final u()Z
-    .locals 2
-
-    .prologue
-    .line 600
-    iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
-
-    and-int/lit16 v0, v0, 0x400
-
-    const/16 v1, 0x400
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final v()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$Order;
-    .locals 1
-
-    .prologue
-    .line 610
-    iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->ordered_:I
-
-    invoke-static {v0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$Order;->valueOf(I)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$Order;
-
-    move-result-object v0
-
-    .line 611
-    if-nez v0, :cond_0
-
-    sget-object v0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$Order;->ASC:Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$Order;
-
-    :cond_0
     return-object v0
 .end method
 
@@ -2594,19 +2394,19 @@
 
     const/4 v1, 0x1
 
-    .line 626
+    .line 467
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
     and-int/lit8 v0, v0, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 627
+    .line 468
     iget-boolean v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->mandatory_:Z
 
     invoke-virtual {p1, v1, v0}, Lcom/google/protobuf/CodedOutputStream;->writeBool(IZ)V
 
-    .line 629
+    .line 470
     :cond_0
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -2614,12 +2414,12 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 630
+    .line 471
     iget-object v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->regex_:Ljava/lang/Object;
 
     invoke-static {p1, v2, v0}, Lcom/google/protobuf/GeneratedMessageV3;->writeString(Lcom/google/protobuf/CodedOutputStream;ILjava/lang/Object;)V
 
-    .line 632
+    .line 473
     :cond_1
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -2629,14 +2429,14 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 633
+    .line 474
     const/4 v0, 0x5
 
     iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minByteLength_:I
 
     invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeInt32(II)V
 
-    .line 635
+    .line 476
     :cond_2
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -2644,14 +2444,14 @@
 
     if-ne v0, v4, :cond_3
 
-    .line 636
+    .line 477
     const/4 v0, 0x6
 
     iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxByteLength_:I
 
     invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeInt32(II)V
 
-    .line 638
+    .line 479
     :cond_3
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -2659,14 +2459,14 @@
 
     if-ne v0, v5, :cond_4
 
-    .line 639
+    .line 480
     const/4 v0, 0x7
 
     iget-wide v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minVal_:J
 
     invoke-virtual {p1, v0, v2, v3}, Lcom/google/protobuf/CodedOutputStream;->writeSFixed64(IJ)V
 
-    .line 641
+    .line 482
     :cond_4
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -2676,12 +2476,12 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 642
+    .line 483
     iget-wide v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxVal_:J
 
     invoke-virtual {p1, v4, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeSFixed64(IJ)V
 
-    .line 644
+    .line 485
     :cond_5
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -2691,14 +2491,14 @@
 
     if-ne v0, v1, :cond_6
 
-    .line 645
+    .line 486
     const/16 v0, 0xb
 
     iget-wide v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minDoubleVal_:D
 
     invoke-virtual {p1, v0, v2, v3}, Lcom/google/protobuf/CodedOutputStream;->writeDouble(ID)V
 
-    .line 647
+    .line 488
     :cond_6
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -2708,14 +2508,14 @@
 
     if-ne v0, v1, :cond_7
 
-    .line 648
+    .line 489
     const/16 v0, 0xc
 
     iget-wide v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxDoubleVal_:D
 
     invoke-virtual {p1, v0, v2, v3}, Lcom/google/protobuf/CodedOutputStream;->writeDouble(ID)V
 
-    .line 650
+    .line 491
     :cond_7
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -2725,14 +2525,14 @@
 
     if-ne v0, v1, :cond_8
 
-    .line 651
+    .line 492
     const/16 v0, 0xf
 
     iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->minRepetitions_:I
 
     invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32(II)V
 
-    .line 653
+    .line 494
     :cond_8
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
 
@@ -2742,34 +2542,17 @@
 
     if-ne v0, v1, :cond_9
 
-    .line 654
+    .line 495
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->maxRepetitions_:I
 
     invoke-virtual {p1, v5, v0}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32(II)V
 
-    .line 656
+    .line 497
     :cond_9
-    iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->bitField0_:I
-
-    and-int/lit16 v0, v0, 0x400
-
-    const/16 v1, 0x400
-
-    if-ne v0, v1, :cond_a
-
-    .line 657
-    const/16 v0, 0x11
-
-    iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->ordered_:I
-
-    invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeEnum(II)V
-
-    .line 659
-    :cond_a
     iget-object v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
 
     invoke-virtual {v0, p1}, Lcom/google/protobuf/UnknownFieldSet;->writeTo(Lcom/google/protobuf/CodedOutputStream;)V
 
-    .line 660
+    .line 498
     return-void
 .end method

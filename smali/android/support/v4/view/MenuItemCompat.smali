@@ -36,9 +36,10 @@
     .locals 2
 
     .prologue
-    .line 248
+    .line 247
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
+    .line 248
     const/16 v1, 0xe
 
     if-lt v0, v1, :cond_0
@@ -56,8 +57,6 @@
 
     .line 250
     :cond_0
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
     const/16 v1, 0xb
 
     if-lt v0, v1, :cond_1

@@ -21,26 +21,26 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 116
+    .line 112
     invoke-direct {p0}, Landroid/graphics/Paint;-><init>()V
 
-    .line 118
+    .line 114
     invoke-virtual {p0, v1}, Lkik/android/util/f$4;->setAntiAlias(Z)V
 
-    .line 119
+    .line 115
     invoke-virtual {p0, v1}, Lkik/android/util/f$4;->setDither(Z)V
 
-    .line 120
+    .line 116
     sget-object v0, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {p0, v0}, Lkik/android/util/f$4;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 121
+    .line 117
     const v0, -0x777778
 
     invoke-virtual {p0, v0}, Lkik/android/util/f$4;->setColor(I)V
 
-    .line 122
+    .line 118
     const/high16 v0, 0x3f000000    # 0.5f
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->a(F)I
@@ -55,6 +55,6 @@
 
     invoke-virtual {p0, v0}, Lkik/android/util/f$4;->setStrokeWidth(F)V
 
-    .line 123
+    .line 119
     return-void
 .end method

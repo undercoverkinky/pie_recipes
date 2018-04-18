@@ -15,13 +15,7 @@
 
 
 # static fields
-.field public static final mask_item_view:I = 0x7f04010c
-
-.field public static final mask_menu_view:I = 0x7f04010d
-
-.field public static final video_mode_slide_panel_view:I = 0x7f04017a
-
-.field public static final video_view:I = 0x7f04017b
+.field public static final video_view:I = 0x7f04013c
 
 
 # direct methods
@@ -29,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 106
+    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

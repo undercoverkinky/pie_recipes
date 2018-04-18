@@ -23,14 +23,14 @@
     .locals 1
 
     .prologue
-    .line 457
+    .line 473
     new-instance v0, Lkik/android/chat/fragment/KikDialogFragment;
 
     invoke-direct {v0}, Lkik/android/chat/fragment/KikDialogFragment;-><init>()V
 
     invoke-direct {p0, v0}, Lkik/android/chat/fragment/KikDialogFragment$a;-><init>(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 458
+    .line 474
     return-void
 .end method
 
@@ -38,13 +38,13 @@
     .locals 0
 
     .prologue
-    .line 451
+    .line 467
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 452
+    .line 468
     iput-object p1, p0, Lkik/android/chat/fragment/KikDialogFragment$a;->a:Lkik/android/chat/fragment/KikDialogFragment;
 
-    .line 453
+    .line 469
     return-void
 .end method
 
@@ -54,12 +54,12 @@
     .locals 1
 
     .prologue
-    .line 474
+    .line 490
     iget-object v0, p0, Lkik/android/chat/fragment/KikDialogFragment$a;->a:Lkik/android/chat/fragment/KikDialogFragment;
 
     invoke-virtual {v0, p1}, Lkik/android/chat/fragment/KikDialogFragment;->a(I)V
 
-    .line 475
+    .line 491
     return-object p0
 .end method
 
@@ -67,12 +67,12 @@
     .locals 1
 
     .prologue
-    .line 498
+    .line 514
     iget-object v0, p0, Lkik/android/chat/fragment/KikDialogFragment$a;->a:Lkik/android/chat/fragment/KikDialogFragment;
 
     invoke-virtual {v0, p1, p2}, Lkik/android/chat/fragment/KikDialogFragment;->a(ILandroid/content/DialogInterface$OnClickListener;)V
 
-    .line 499
+    .line 515
     return-object p0
 .end method
 
@@ -80,12 +80,12 @@
     .locals 1
 
     .prologue
-    .line 462
+    .line 478
     iget-object v0, p0, Lkik/android/chat/fragment/KikDialogFragment$a;->a:Lkik/android/chat/fragment/KikDialogFragment;
 
     invoke-virtual {v0, p1}, Lkik/android/chat/fragment/KikDialogFragment;->a(Landroid/content/DialogInterface$OnCancelListener;)V
 
-    .line 463
+    .line 479
     return-object p0
 .end method
 
@@ -93,12 +93,12 @@
     .locals 1
 
     .prologue
-    .line 529
+    .line 545
     iget-object v0, p0, Lkik/android/chat/fragment/KikDialogFragment$a;->a:Lkik/android/chat/fragment/KikDialogFragment;
 
     invoke-virtual {v0, p1}, Lkik/android/chat/fragment/KikDialogFragment;->a(Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 530
+    .line 546
     return-object p0
 .end method
 
@@ -106,12 +106,12 @@
     .locals 1
 
     .prologue
-    .line 492
+    .line 508
     iget-object v0, p0, Lkik/android/chat/fragment/KikDialogFragment$a;->a:Lkik/android/chat/fragment/KikDialogFragment;
 
     invoke-virtual {v0, p1}, Lkik/android/chat/fragment/KikDialogFragment;->a(Landroid/view/View;)V
 
-    .line 493
+    .line 509
     return-object p0
 .end method
 
@@ -119,12 +119,12 @@
     .locals 1
 
     .prologue
-    .line 468
+    .line 484
     iget-object v0, p0, Lkik/android/chat/fragment/KikDialogFragment$a;->a:Lkik/android/chat/fragment/KikDialogFragment;
 
     invoke-virtual {v0, p1}, Lkik/android/chat/fragment/KikDialogFragment;->a(Ljava/lang/String;)V
 
-    .line 469
+    .line 485
     return-object p0
 .end method
 
@@ -132,12 +132,12 @@
     .locals 1
 
     .prologue
-    .line 510
+    .line 526
     iget-object v0, p0, Lkik/android/chat/fragment/KikDialogFragment$a;->a:Lkik/android/chat/fragment/KikDialogFragment;
 
     invoke-virtual {v0, p1, p2}, Lkik/android/chat/fragment/KikDialogFragment;->a(Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 511
+    .line 527
     return-object p0
 .end method
 
@@ -145,12 +145,12 @@
     .locals 1
 
     .prologue
-    .line 561
+    .line 577
     iget-object v0, p0, Lkik/android/chat/fragment/KikDialogFragment$a;->a:Lkik/android/chat/fragment/KikDialogFragment;
 
     invoke-virtual {v0, p1}, Lkik/android/chat/fragment/KikDialogFragment;->a(Lkik/android/chat/fragment/KikDialogFragment$LinkifyType;)V
 
-    .line 562
+    .line 578
     return-object p0
 .end method
 
@@ -158,12 +158,12 @@
     .locals 1
 
     .prologue
-    .line 578
+    .line 594
     iget-object v0, p0, Lkik/android/chat/fragment/KikDialogFragment$a;->a:Lkik/android/chat/fragment/KikDialogFragment;
 
     invoke-virtual {v0, p1}, Lkik/android/chat/fragment/KikDialogFragment;->a(Lkik/android/chat/fragment/KikDialogFragment$c;)V
 
-    .line 579
+    .line 595
     return-object p0
 .end method
 
@@ -171,12 +171,12 @@
     .locals 1
 
     .prologue
-    .line 504
+    .line 520
     iget-object v0, p0, Lkik/android/chat/fragment/KikDialogFragment$a;->a:Lkik/android/chat/fragment/KikDialogFragment;
 
     invoke-virtual {v0, p1}, Lkik/android/chat/fragment/KikDialogFragment;->a(Z)V
 
-    .line 505
+    .line 521
     return-object p0
 .end method
 
@@ -184,7 +184,7 @@
     .locals 3
 
     .prologue
-    .line 556
+    .line 572
     iget-object v0, p0, Lkik/android/chat/fragment/KikDialogFragment$a;->a:Lkik/android/chat/fragment/KikDialogFragment;
 
     const/4 v1, -0x1
@@ -193,7 +193,7 @@
 
     invoke-virtual {v0, p1, v1, v2}, Lkik/android/chat/fragment/KikDialogFragment;->a([Ljava/lang/CharSequence;ILandroid/content/DialogInterface$OnClickListener;)V
 
-    .line 557
+    .line 573
     return-object p0
 .end method
 
@@ -201,12 +201,12 @@
     .locals 1
 
     .prologue
-    .line 541
+    .line 557
     iget-object v0, p0, Lkik/android/chat/fragment/KikDialogFragment$a;->a:Lkik/android/chat/fragment/KikDialogFragment;
 
     invoke-virtual {v0, p1, p2}, Lkik/android/chat/fragment/KikDialogFragment;->a([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 542
+    .line 558
     return-object p0
 .end method
 
@@ -214,7 +214,7 @@
     .locals 1
 
     .prologue
-    .line 567
+    .line 583
     iget-object v0, p0, Lkik/android/chat/fragment/KikDialogFragment$a;->a:Lkik/android/chat/fragment/KikDialogFragment;
 
     return-object v0
@@ -224,12 +224,12 @@
     .locals 1
 
     .prologue
-    .line 602
+    .line 618
     iget-object v0, p0, Lkik/android/chat/fragment/KikDialogFragment$a;->a:Lkik/android/chat/fragment/KikDialogFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/KikDialogFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 603
+    .line 619
     return-object p0
 .end method
 
@@ -237,12 +237,12 @@
     .locals 1
 
     .prologue
-    .line 486
+    .line 502
     iget-object v0, p0, Lkik/android/chat/fragment/KikDialogFragment$a;->a:Lkik/android/chat/fragment/KikDialogFragment;
 
     invoke-virtual {v0, p1}, Lkik/android/chat/fragment/KikDialogFragment;->b(I)V
 
-    .line 487
+    .line 503
     return-object p0
 .end method
 
@@ -250,12 +250,12 @@
     .locals 1
 
     .prologue
-    .line 516
+    .line 532
     iget-object v0, p0, Lkik/android/chat/fragment/KikDialogFragment$a;->a:Lkik/android/chat/fragment/KikDialogFragment;
 
     invoke-virtual {v0, p1, p2}, Lkik/android/chat/fragment/KikDialogFragment;->b(ILandroid/content/DialogInterface$OnClickListener;)V
 
-    .line 518
+    .line 534
     return-object p0
 .end method
 
@@ -263,12 +263,12 @@
     .locals 1
 
     .prologue
-    .line 480
+    .line 496
     iget-object v0, p0, Lkik/android/chat/fragment/KikDialogFragment$a;->a:Lkik/android/chat/fragment/KikDialogFragment;
 
     invoke-virtual {v0, p1}, Lkik/android/chat/fragment/KikDialogFragment;->b(Ljava/lang/String;)V
 
-    .line 481
+    .line 497
     return-object p0
 .end method
 
@@ -276,12 +276,12 @@
     .locals 1
 
     .prologue
-    .line 523
+    .line 539
     iget-object v0, p0, Lkik/android/chat/fragment/KikDialogFragment$a;->a:Lkik/android/chat/fragment/KikDialogFragment;
 
     invoke-virtual {v0, p1, p2}, Lkik/android/chat/fragment/KikDialogFragment;->b(Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 524
+    .line 540
     return-object p0
 .end method
 
@@ -289,12 +289,12 @@
     .locals 1
 
     .prologue
-    .line 572
+    .line 588
     iget-object v0, p0, Lkik/android/chat/fragment/KikDialogFragment$a;->a:Lkik/android/chat/fragment/KikDialogFragment;
 
     invoke-virtual {v0, p1}, Lkik/android/chat/fragment/KikDialogFragment;->setCancelable(Z)V
 
-    .line 573
+    .line 589
     return-object p0
 .end method
 
@@ -302,12 +302,12 @@
     .locals 1
 
     .prologue
-    .line 596
+    .line 612
     iget-object v0, p0, Lkik/android/chat/fragment/KikDialogFragment$a;->a:Lkik/android/chat/fragment/KikDialogFragment;
 
     invoke-static {v0, p1}, Lkik/android/chat/fragment/KikDialogFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;I)V
 
-    .line 597
+    .line 613
     return-object p0
 .end method
 
@@ -315,11 +315,11 @@
     .locals 1
 
     .prologue
-    .line 535
+    .line 551
     iget-object v0, p0, Lkik/android/chat/fragment/KikDialogFragment$a;->a:Lkik/android/chat/fragment/KikDialogFragment;
 
     invoke-virtual {v0, p1, p2}, Lkik/android/chat/fragment/KikDialogFragment;->c(Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 536
+    .line 552
     return-object p0
 .end method

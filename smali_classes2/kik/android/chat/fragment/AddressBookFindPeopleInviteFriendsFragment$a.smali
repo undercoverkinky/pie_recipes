@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 862
+    .line 858
     invoke-direct {p0}, Lkik/android/chat/fragment/AddressbookFragmentBase$a;-><init>()V
 
     return-void

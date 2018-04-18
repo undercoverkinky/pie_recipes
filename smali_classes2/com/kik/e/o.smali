@@ -1,45 +1,16 @@
-.class final synthetic Lcom/kik/e/o;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lrx/functions/b;
-
-
-# instance fields
-.field private final a:Lcom/kik/e/h;
+.class Lcom/kik/e/o;
+.super Lcom/kik/e/m;
+.source "SourceFile"
 
 
 # direct methods
-.method private constructor <init>(Lcom/kik/e/h;)V
+.method public constructor <init>(Landroid/database/Cursor;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .prologue
+    .line 23
+    invoke-direct {p0, p1}, Lcom/kik/e/m;-><init>(Landroid/database/Cursor;)V
 
-    iput-object p1, p0, Lcom/kik/e/o;->a:Lcom/kik/e/h;
-
-    return-void
-.end method
-
-.method public static a(Lcom/kik/e/h;)Lrx/functions/b;
-    .locals 1
-
-    new-instance v0, Lcom/kik/e/o;
-
-    invoke-direct {v0, p0}, Lcom/kik/e/o;-><init>(Lcom/kik/e/h;)V
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final call(Ljava/lang/Object;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/kik/e/o;->a:Lcom/kik/e/h;
-
-    check-cast p1, Lkin/sdk/core/e;
-
-    invoke-static {v0, p1}, Lcom/kik/e/h;->b(Lcom/kik/e/h;Lkin/sdk/core/e;)V
-
+    .line 24
     return-void
 .end method

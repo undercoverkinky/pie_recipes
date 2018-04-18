@@ -561,7 +561,9 @@
     if-eqz v0, :cond_0
 
     .line 469
-    invoke-virtual {p0}, Landroid/support/v4/content/Loader;->onContentChanged()V
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Landroid/support/v4/content/Loader;->mContentChanged:Z
 
     .line 471
     :cond_0

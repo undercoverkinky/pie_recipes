@@ -32,7 +32,7 @@
 
 
 # virtual methods
-.method public final c()Ljava/lang/String;
+.method public final a()Ljava/lang/String;
     .locals 1
 
     .prologue
@@ -42,7 +42,7 @@
     return-object v0
 .end method
 
-.method public final d()Ljava/lang/String;
+.method public final b()Ljava/lang/String;
     .locals 1
 
     .prologue
@@ -52,7 +52,7 @@
     return-object v0
 .end method
 
-.method public final e()I
+.method public final c()I
     .locals 1
 
     .prologue
@@ -62,7 +62,7 @@
     return v0
 .end method
 
-.method public final f()Z
+.method public final d()Z
     .locals 1
 
     .prologue
@@ -72,7 +72,7 @@
     return v0
 .end method
 
-.method public final g()Z
+.method public final e()Z
     .locals 1
 
     .prologue

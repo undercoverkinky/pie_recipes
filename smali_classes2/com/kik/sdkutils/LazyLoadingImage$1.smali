@@ -1,5 +1,5 @@
 .class final Lcom/kik/sdkutils/LazyLoadingImage$1;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,11 +15,11 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
-        "Lcom/kik/cache/b",
+        "Lcom/kik/cache/e",
         "<",
-        "Lcom/kik/cache/a;",
+        "Lcom/kik/cache/d;",
         "Ljava/lang/Long;",
         ">;>;"
     }
@@ -41,7 +41,7 @@
     .locals 1
 
     .prologue
-    .line 225
+    .line 224
     iput-object p1, p0, Lcom/kik/sdkutils/LazyLoadingImage$1;->d:Lcom/kik/sdkutils/LazyLoadingImage;
 
     iput-object p2, p0, Lcom/kik/sdkutils/LazyLoadingImage$1;->a:Lcom/kik/events/Promise;
@@ -52,7 +52,7 @@
 
     iput-boolean v0, p0, Lcom/kik/sdkutils/LazyLoadingImage$1;->c:Z
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -63,10 +63,10 @@
     .locals 2
 
     .prologue
-    .line 225
-    check-cast p1, Lcom/kik/cache/b;
+    .line 224
+    check-cast p1, Lcom/kik/cache/e;
 
-    .line 1238
+    .line 1237
     iget-object v0, p0, Lcom/kik/sdkutils/LazyLoadingImage$1;->d:Lcom/kik/sdkutils/LazyLoadingImage;
 
     invoke-static {v0}, Lcom/kik/sdkutils/LazyLoadingImage;->a(Lcom/kik/sdkutils/LazyLoadingImage;)Ljava/lang/Object;
@@ -77,10 +77,10 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 1239
+    .line 1238
     if-nez p1, :cond_0
 
-    .line 1240
+    .line 1239
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "image result null!"
@@ -89,13 +89,13 @@
 
     throw v0
 
-    .line 1243
+    .line 1242
     :cond_0
     iget-object v0, p0, Lcom/kik/sdkutils/LazyLoadingImage$1;->b:Lcom/kik/sdkutils/b/b;
 
     if-nez v0, :cond_1
 
-    .line 1244
+    .line 1243
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "inflater null!"
@@ -104,27 +104,27 @@
 
     throw v0
 
-    .line 1247
+    .line 1246
     :cond_1
-    invoke-virtual {p1}, Lcom/kik/cache/b;->a()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/kik/cache/e;->a()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/kik/cache/a;
+    check-cast v0, Lcom/kik/cache/d;
 
-    .line 1248
+    .line 1247
     iget-object v1, p0, Lcom/kik/sdkutils/LazyLoadingImage$1;->b:Lcom/kik/sdkutils/b/b;
 
     invoke-interface {v1, v0}, Lcom/kik/sdkutils/b/b;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/kik/cache/a;
+    check-cast v0, Lcom/kik/cache/d;
 
-    .line 1250
+    .line 1249
     if-nez v0, :cond_2
 
-    .line 1251
+    .line 1250
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "inflated null!"
@@ -133,22 +133,22 @@
 
     throw v0
 
-    .line 1254
+    .line 1253
     :cond_2
     iget-object v1, p0, Lcom/kik/sdkutils/LazyLoadingImage$1;->d:Lcom/kik/sdkutils/LazyLoadingImage;
 
-    invoke-virtual {v0}, Lcom/kik/cache/a;->a()Landroid/graphics/Bitmap;
+    invoke-virtual {v0}, Lcom/kik/cache/d;->a()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     invoke-static {v1, v0}, Lcom/kik/sdkutils/LazyLoadingImage;->a(Lcom/kik/sdkutils/LazyLoadingImage;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    .line 1255
+    .line 1254
     iget-boolean v0, p0, Lcom/kik/sdkutils/LazyLoadingImage$1;->c:Z
 
     if-eqz v0, :cond_3
 
-    .line 1256
+    .line 1255
     iget-object v0, p0, Lcom/kik/sdkutils/LazyLoadingImage$1;->d:Lcom/kik/sdkutils/LazyLoadingImage;
 
     iget-object v1, p0, Lcom/kik/sdkutils/LazyLoadingImage$1;->d:Lcom/kik/sdkutils/LazyLoadingImage;
@@ -163,7 +163,7 @@
 
     invoke-static {v0, v1}, Lcom/kik/sdkutils/LazyLoadingImage;->a(Lcom/kik/sdkutils/LazyLoadingImage;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    .line 225
+    .line 224
     :cond_3
     return-void
 .end method
@@ -172,7 +172,7 @@
     .locals 2
 
     .prologue
-    .line 229
+    .line 228
     iget-object v0, p0, Lcom/kik/sdkutils/LazyLoadingImage$1;->d:Lcom/kik/sdkutils/LazyLoadingImage;
 
     invoke-static {v0}, Lcom/kik/sdkutils/LazyLoadingImage;->a(Lcom/kik/sdkutils/LazyLoadingImage;)Ljava/lang/Object;
@@ -183,14 +183,14 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 230
+    .line 229
     iget-object v0, p0, Lcom/kik/sdkutils/LazyLoadingImage$1;->d:Lcom/kik/sdkutils/LazyLoadingImage;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/kik/sdkutils/LazyLoadingImage;->a(Lcom/kik/sdkutils/LazyLoadingImage;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    .line 233
+    .line 232
     :cond_0
     return-void
 .end method
@@ -199,7 +199,7 @@
     .locals 3
 
     .prologue
-    .line 264
+    .line 263
     iget-object v0, p0, Lcom/kik/sdkutils/LazyLoadingImage$1;->d:Lcom/kik/sdkutils/LazyLoadingImage;
 
     invoke-static {v0}, Lcom/kik/sdkutils/LazyLoadingImage;->a(Lcom/kik/sdkutils/LazyLoadingImage;)Ljava/lang/Object;
@@ -210,7 +210,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 265
+    .line 264
     iget-object v0, p0, Lcom/kik/sdkutils/LazyLoadingImage$1;->d:Lcom/kik/sdkutils/LazyLoadingImage;
 
     iget-object v1, p0, Lcom/kik/sdkutils/LazyLoadingImage$1;->d:Lcom/kik/sdkutils/LazyLoadingImage;
@@ -221,7 +221,7 @@
 
     invoke-static {v0, v1}, Lcom/kik/sdkutils/LazyLoadingImage;->b(Lcom/kik/sdkutils/LazyLoadingImage;Landroid/graphics/Bitmap;)V
 
-    .line 266
+    .line 265
     iget-object v0, p0, Lcom/kik/sdkutils/LazyLoadingImage$1;->d:Lcom/kik/sdkutils/LazyLoadingImage;
 
     invoke-static {v0}, Lcom/kik/sdkutils/LazyLoadingImage;->d(Lcom/kik/sdkutils/LazyLoadingImage;)Lcom/kik/sdkutils/a/a;
@@ -242,7 +242,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/kik/sdkutils/a/a;->a(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
 
-    .line 267
+    .line 266
     iget-object v0, p0, Lcom/kik/sdkutils/LazyLoadingImage$1;->d:Lcom/kik/sdkutils/LazyLoadingImage;
 
     iget-object v1, p0, Lcom/kik/sdkutils/LazyLoadingImage$1;->d:Lcom/kik/sdkutils/LazyLoadingImage;
@@ -253,7 +253,7 @@
 
     invoke-static {v0, v1}, Lcom/kik/sdkutils/LazyLoadingImage;->a(Lcom/kik/sdkutils/LazyLoadingImage;Lcom/kik/sdkutils/a/a;)V
 
-    .line 269
+    .line 268
     :cond_0
     return-void
 .end method

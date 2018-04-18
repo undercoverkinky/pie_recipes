@@ -1,18 +1,20 @@
 .class public Lcom/kik/cards/web/userdata/UserDataPlugin;
-.super Lcom/kik/cards/web/plugin/BridgePlugin;
+.super Lcom/kik/cards/web/plugin/d;
 .source "SourceFile"
 
 
 # static fields
-.field private static currentlyShowingPrompt:Z
+.field private static final a:Lorg/slf4j/b;
 
-.field private static final log:Lorg/slf4j/b;
+.field private static b:Z
 
 
 # instance fields
-.field private _browser:Lcom/kik/cards/web/browser/BrowserPlugin$a;
+.field private d:Lcom/kik/cards/web/userdata/b;
 
-.field private _requestQueue:Ljava/util/ArrayList;
+.field private e:Lcom/kik/cards/web/browser/BrowserPlugin$a;
+
+.field private f:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList",
@@ -22,8 +24,6 @@
         }
     .end annotation
 .end field
-
-.field private _userDataPluginImpl:Lcom/kik/cards/web/userdata/b;
 
 
 # direct methods
@@ -38,108 +38,112 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/kik/cards/web/userdata/UserDataPlugin;->log:Lorg/slf4j/b;
+    sput-object v0, Lcom/kik/cards/web/userdata/UserDataPlugin;->a:Lorg/slf4j/b;
 
     return-void
 .end method
 
 .method public constructor <init>(Lcom/kik/cards/web/userdata/a;Lcom/kik/cards/web/browser/BrowserPlugin$a;)V
-    .locals 2
+    .locals 1
 
     .prologue
     .line 34
-    const/4 v0, 0x1
+    const-string v0, "UserData"
 
-    const-string v1, "UserData"
-
-    invoke-direct {p0, v0, v1}, Lcom/kik/cards/web/plugin/BridgePlugin;-><init>(ILjava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/kik/cards/web/plugin/d;-><init>(Ljava/lang/String;)V
 
     .line 28
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->_userDataPluginImpl:Lcom/kik/cards/web/userdata/b;
+    iput-object v0, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->d:Lcom/kik/cards/web/userdata/b;
 
     .line 30
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->_requestQueue:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->f:Ljava/util/ArrayList;
 
     .line 36
-    invoke-interface {p1}, Lcom/kik/cards/web/userdata/a;->b()Lcom/kik/cards/web/userdata/b;
+    invoke-interface {p1}, Lcom/kik/cards/web/userdata/a;->a()Lcom/kik/cards/web/userdata/b;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->_userDataPluginImpl:Lcom/kik/cards/web/userdata/b;
+    iput-object v0, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->d:Lcom/kik/cards/web/userdata/b;
 
     .line 37
-    iput-object p2, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->_browser:Lcom/kik/cards/web/browser/BrowserPlugin$a;
+    iput-object p2, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->e:Lcom/kik/cards/web/browser/BrowserPlugin$a;
 
     .line 38
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/kik/cards/web/userdata/UserDataPlugin;->currentlyShowingPrompt:Z
+    sput-boolean v0, Lcom/kik/cards/web/userdata/UserDataPlugin;->b:Z
 
     .line 39
     return-void
 .end method
 
-.method static synthetic access$000()Lorg/slf4j/b;
+.method static synthetic a(Lcom/kik/cards/web/userdata/UserDataPlugin;)Ljava/util/ArrayList;
     .locals 1
 
     .prologue
     .line 23
-    sget-object v0, Lcom/kik/cards/web/userdata/UserDataPlugin;->log:Lorg/slf4j/b;
+    iget-object v0, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->f:Ljava/util/ArrayList;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/kik/cards/web/userdata/UserDataPlugin;)Ljava/util/ArrayList;
+.method static synthetic a()Lorg/slf4j/b;
     .locals 1
 
     .prologue
     .line 23
-    iget-object v0, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->_requestQueue:Ljava/util/ArrayList;
+    sget-object v0, Lcom/kik/cards/web/userdata/UserDataPlugin;->a:Lorg/slf4j/b;
 
     return-object v0
 .end method
 
-.method static synthetic access$202(Z)Z
-    .locals 0
+.method static synthetic a(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)V
+    .locals 1
 
     .prologue
     .line 23
-    sput-boolean p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->currentlyShowingPrompt:Z
+    const/16 v0, 0xc8
 
-    return p0
-.end method
-
-.method static synthetic access$300(Lcom/kik/cards/web/userdata/UserDataPlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
-    .locals 0
-
-    .prologue
-    .line 23
-    invoke-virtual {p0, p1, p2, p3}, Lcom/kik/cards/web/userdata/UserDataPlugin;->finishAsyncResult(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    invoke-static {p0, v0, p1}, Lcom/kik/cards/web/userdata/UserDataPlugin;->a(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/kik/cards/web/userdata/UserDataPlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
-    .locals 0
+.method static synthetic b(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)V
+    .locals 1
 
     .prologue
     .line 23
-    invoke-virtual {p0, p1, p2, p3}, Lcom/kik/cards/web/userdata/UserDataPlugin;->finishAsyncResult(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    const/16 v0, 0x1f4
+
+    invoke-static {p0, v0, p1}, Lcom/kik/cards/web/userdata/UserDataPlugin;->a(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
 
     return-void
+.end method
+
+.method static synthetic c()Z
+    .locals 1
+
+    .prologue
+    .line 23
+    const/4 v0, 0x0
+
+    sput-boolean v0, Lcom/kik/cards/web/userdata/UserDataPlugin;->b:Z
+
+    return v0
 .end method
 
 
 # virtual methods
-.method public checkPermissions(Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/g;
+.method public checkPermissions(Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/h;
     .locals 7
-    .annotation runtime Lcom/kik/cards/web/plugin/e;
+    .annotation runtime Lcom/kik/cards/web/plugin/f;
     .end annotation
 
     .prologue
@@ -159,7 +163,7 @@
 
     .line 131
     :try_start_1
-    iget-object v0, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->_userDataPluginImpl:Lcom/kik/cards/web/userdata/b;
+    iget-object v0, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->d:Lcom/kik/cards/web/userdata/b;
 
     invoke-interface {v0}, Lcom/kik/cards/web/userdata/b;->a()Lcom/kik/events/Promise;
 
@@ -167,7 +171,7 @@
 
     const-wide/16 v4, 0x64
 
-    invoke-static {v0, v4, v5}, Lcom/kik/events/l;->b(Lcom/kik/events/Promise;J)Ljava/lang/Object;
+    invoke-static {v0, v4, v5}, Lcom/kik/events/m;->b(Lcom/kik/events/Promise;J)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -193,9 +197,9 @@
 
     .line 140
     :goto_1
-    new-instance v1, Lcom/kik/cards/web/plugin/g;
+    new-instance v1, Lcom/kik/cards/web/plugin/h;
 
-    invoke-direct {v1, v0}, Lcom/kik/cards/web/plugin/g;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {v1, v0}, Lcom/kik/cards/web/plugin/h;-><init>(Lorg/json/JSONObject;)V
 
     return-object v1
 
@@ -216,7 +220,7 @@
 
     .line 138
     :goto_2
-    sget-object v2, Lcom/kik/cards/web/userdata/UserDataPlugin;->log:Lorg/slf4j/b;
+    sget-object v2, Lcom/kik/cards/web/userdata/UserDataPlugin;->a:Lorg/slf4j/b;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -249,7 +253,7 @@
     goto :goto_2
 .end method
 
-.method public getUserData(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;Ljava/lang/String;)Lcom/kik/cards/web/plugin/g;
+.method public getUserData(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;Ljava/lang/String;)Lcom/kik/cards/web/plugin/h;
     .locals 5
     .annotation runtime Lcom/kik/cards/web/plugin/c;
     .end annotation
@@ -258,20 +262,20 @@
     const/4 v0, 0x0
 
     .line 44
-    iget-object v1, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->_browser:Lcom/kik/cards/web/browser/BrowserPlugin$a;
+    iget-object v1, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->e:Lcom/kik/cards/web/browser/BrowserPlugin$a;
 
-    invoke-interface {v1}, Lcom/kik/cards/web/browser/BrowserPlugin$a;->m()Z
+    invoke-interface {v1}, Lcom/kik/cards/web/browser/BrowserPlugin$a;->r()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 45
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
     const/16 v1, 0x195
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
     .line 120
     :goto_0
@@ -332,7 +336,7 @@
 
     .line 59
     :cond_2
-    iget-object v1, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->_userDataPluginImpl:Lcom/kik/cards/web/userdata/b;
+    iget-object v1, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->d:Lcom/kik/cards/web/userdata/b;
 
     invoke-interface {v1, v2, p3}, Lcom/kik/cards/web/userdata/b;->a(ZLjava/lang/String;)Z
 
@@ -341,32 +345,32 @@
     if-eqz v1, :cond_3
 
     .line 60
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
     const/16 v1, 0x1a4
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
     goto :goto_0
 
     .line 63
     :cond_3
-    iget-object v1, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->_requestQueue:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->f:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 64
-    sget-boolean v1, Lcom/kik/cards/web/userdata/UserDataPlugin;->currentlyShowingPrompt:Z
+    sget-boolean v1, Lcom/kik/cards/web/userdata/UserDataPlugin;->b:Z
 
     if-nez v1, :cond_4
 
     .line 65
     const/4 v1, 0x1
 
-    sput-boolean v1, Lcom/kik/cards/web/userdata/UserDataPlugin;->currentlyShowingPrompt:Z
+    sput-boolean v1, Lcom/kik/cards/web/userdata/UserDataPlugin;->b:Z
 
     .line 66
-    iget-object v1, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->_userDataPluginImpl:Lcom/kik/cards/web/userdata/b;
+    iget-object v1, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->d:Lcom/kik/cards/web/userdata/b;
 
     invoke-interface {v1, v0, v2, p3}, Lcom/kik/cards/web/userdata/b;->a(ZZLjava/lang/String;)Lcom/kik/events/Promise;
 
@@ -377,20 +381,20 @@
 
     invoke-direct {v1, p0}, Lcom/kik/cards/web/userdata/UserDataPlugin$1;-><init>(Lcom/kik/cards/web/userdata/UserDataPlugin;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
 
     .line 120
     :cond_4
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
     const/16 v1, 0xca
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
     goto :goto_0
 .end method
 
-.method public pickFilteredUsers(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/g;
+.method public pickFilteredUsers(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/h;
     .locals 9
     .annotation runtime Lcom/kik/cards/web/plugin/c;
     .end annotation
@@ -409,20 +413,20 @@
     const/4 v8, -0x1
 
     .line 219
-    iget-object v0, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->_browser:Lcom/kik/cards/web/browser/BrowserPlugin$a;
+    iget-object v0, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->e:Lcom/kik/cards/web/browser/BrowserPlugin$a;
 
-    invoke-interface {v0}, Lcom/kik/cards/web/browser/BrowserPlugin$a;->m()Z
+    invoke-interface {v0}, Lcom/kik/cards/web/browser/BrowserPlugin$a;->r()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 220
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
     const/16 v1, 0x195
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
     .line 298
     :goto_0
@@ -544,7 +548,7 @@
 
     .line 248
     :cond_5
-    iget-object v0, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->_userDataPluginImpl:Lcom/kik/cards/web/userdata/b;
+    iget-object v0, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->d:Lcom/kik/cards/web/userdata/b;
 
     invoke-interface/range {v0 .. v5}, Lcom/kik/cards/web/userdata/b;->a(IILjava/util/List;ZLjava/util/List;)Lcom/kik/events/Promise;
 
@@ -555,19 +559,19 @@
 
     invoke-direct {v1, p0, p1}, Lcom/kik/cards/web/userdata/UserDataPlugin$3;-><init>(Lcom/kik/cards/web/userdata/UserDataPlugin;Lcom/kik/cards/web/plugin/a;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
 
     .line 298
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
     const/16 v1, 0xca
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
     goto :goto_0
 .end method
 
-.method public pickUsers(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/g;
+.method public pickUsers(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/h;
     .locals 6
     .annotation runtime Lcom/kik/cards/web/plugin/c;
     .end annotation
@@ -582,20 +586,20 @@
     const/4 v3, -0x1
 
     .line 146
-    iget-object v0, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->_browser:Lcom/kik/cards/web/browser/BrowserPlugin$a;
+    iget-object v0, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->e:Lcom/kik/cards/web/browser/BrowserPlugin$a;
 
-    invoke-interface {v0}, Lcom/kik/cards/web/browser/BrowserPlugin$a;->m()Z
+    invoke-interface {v0}, Lcom/kik/cards/web/browser/BrowserPlugin$a;->r()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 147
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
     const/16 v1, 0x195
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
     .line 213
     :goto_0
@@ -676,7 +680,7 @@
 
     .line 166
     :cond_4
-    iget-object v0, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->_userDataPluginImpl:Lcom/kik/cards/web/userdata/b;
+    iget-object v0, p0, Lcom/kik/cards/web/userdata/UserDataPlugin;->d:Lcom/kik/cards/web/userdata/b;
 
     invoke-interface {v0, v1, v2, v4}, Lcom/kik/cards/web/userdata/b;->a(IILjava/util/List;)Lcom/kik/events/Promise;
 
@@ -687,14 +691,14 @@
 
     invoke-direct {v1, p0, p1}, Lcom/kik/cards/web/userdata/UserDataPlugin$2;-><init>(Lcom/kik/cards/web/userdata/UserDataPlugin;Lcom/kik/cards/web/plugin/a;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
 
     .line 213
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
     const/16 v1, 0xca
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
     goto :goto_0
 .end method

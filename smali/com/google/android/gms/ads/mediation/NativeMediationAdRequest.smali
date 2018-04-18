@@ -14,19 +14,3 @@
 
 .method public abstract isContentAdRequested()Z
 .end method
-
-.method public abstract zzmc()Z
-.end method
-
-.method public abstract zzmd()Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Map",
-            "<",
-            "Ljava/lang/String;",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-.end method

@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 82
+    .line 84
     invoke-direct {p0}, Landroid/support/v4/widget/CompoundButtonCompat$BaseCompoundButtonCompat;-><init>()V
 
     return-void
@@ -31,7 +31,7 @@
     .locals 1
 
     .prologue
-    .line 90
+    .line 92
     invoke-static {p1}, Landroid/support/v4/widget/CompoundButtonCompatLollipop;->getButtonTintList(Landroid/widget/CompoundButton;)Landroid/content/res/ColorStateList;
 
     move-result-object v0
@@ -43,7 +43,7 @@
     .locals 1
 
     .prologue
-    .line 100
+    .line 102
     invoke-static {p1}, Landroid/support/v4/widget/CompoundButtonCompatLollipop;->getButtonTintMode(Landroid/widget/CompoundButton;)Landroid/graphics/PorterDuff$Mode;
 
     move-result-object v0
@@ -55,10 +55,10 @@
     .locals 0
 
     .prologue
-    .line 85
+    .line 87
     invoke-static {p1, p2}, Landroid/support/v4/widget/CompoundButtonCompatLollipop;->setButtonTintList(Landroid/widget/CompoundButton;Landroid/content/res/ColorStateList;)V
 
-    .line 86
+    .line 88
     return-void
 .end method
 
@@ -66,9 +66,9 @@
     .locals 0
 
     .prologue
-    .line 95
+    .line 97
     invoke-static {p1, p2}, Landroid/support/v4/widget/CompoundButtonCompatLollipop;->setButtonTintMode(Landroid/widget/CompoundButton;Landroid/graphics/PorterDuff$Mode;)V
 
-    .line 96
+    .line 98
     return-void
 .end method

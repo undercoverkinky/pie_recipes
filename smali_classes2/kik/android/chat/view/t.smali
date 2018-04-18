@@ -1,43 +1,79 @@
-.class final synthetic Lkik/android/chat/view/t;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/hardware/Camera$ShutterCallback;
+.class public Lkik/android/chat/view/t;
+.super Landroid/text/style/ReplacementSpan;
+.source "SourceFile"
 
 
 # instance fields
-.field private final a:Lkik/android/chat/view/CameraViewImpl;
+.field private final a:I
 
 
 # direct methods
-.method private constructor <init>(Lkik/android/chat/view/CameraViewImpl;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .prologue
+    .line 16
+    invoke-direct {p0}, Landroid/text/style/ReplacementSpan;-><init>()V
 
-    iput-object p1, p0, Lkik/android/chat/view/t;->a:Lkik/android/chat/view/CameraViewImpl;
+    .line 17
+    iput p1, p0, Lkik/android/chat/view/t;->a:I
 
+    .line 18
     return-void
-.end method
-
-.method public static a(Lkik/android/chat/view/CameraViewImpl;)Landroid/hardware/Camera$ShutterCallback;
-    .locals 1
-
-    new-instance v0, Lkik/android/chat/view/t;
-
-    invoke-direct {v0, p0}, Lkik/android/chat/view/t;-><init>(Lkik/android/chat/view/CameraViewImpl;)V
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final onShutter()V
+.method public draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
+    .locals 8
+
+    .prologue
+    .line 29
+    iget v1, p0, Lkik/android/chat/view/t;->a:I
+
+    move-object/from16 v0, p9
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+
+    .line 30
+    int-to-float v6, p7
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move v3, p3
+
+    move v4, p4
+
+    move v5, p5
+
+    move-object/from16 v7, p9
+
+    invoke-virtual/range {v1 .. v7}, Landroid/graphics/Canvas;->drawText(Ljava/lang/CharSequence;IIFFLandroid/graphics/Paint;)V
+
+    .line 31
+    return-void
+.end method
+
+.method public getSize(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
     .locals 1
 
-    iget-object v0, p0, Lkik/android/chat/view/t;->a:Lkik/android/chat/view/CameraViewImpl;
+    .prologue
+    .line 23
+    invoke-interface {p2, p3, p4}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
-    invoke-static {v0}, Lkik/android/chat/view/CameraViewImpl;->b(Lkik/android/chat/view/CameraViewImpl;)V
+    move-result-object v0
 
-    return-void
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
+
+    move-result v0
+
+    float-to-int v0, v0
+
+    return v0
 .end method

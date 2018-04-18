@@ -38,7 +38,7 @@
     .locals 0
 
     .prologue
-    .line 1118
+    .line 1062
     iput-object p1, p0, Lkik/android/chat/KikApplication$17;->a:Lkik/android/chat/KikApplication;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -57,11 +57,11 @@
     .end annotation
 
     .prologue
-    .line 1118
-    .line 2122
+    .line 1062
+    .line 2066
     iget-object v0, p0, Lkik/android/chat/KikApplication$17;->a:Lkik/android/chat/KikApplication;
 
-    invoke-static {v0}, Lkik/android/chat/KikApplication;->I(Lkik/android/chat/KikApplication;)Lcom/kik/events/g;
+    invoke-static {v0}, Lkik/android/chat/KikApplication;->E(Lkik/android/chat/KikApplication;)Lcom/kik/events/g;
 
     move-result-object v0
 
@@ -69,10 +69,10 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/kik/events/l;->b(Lcom/kik/events/c;)Lcom/kik/events/Promise;
+    invoke-static {v0}, Lcom/kik/events/m;->b(Lcom/kik/events/c;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
-    .line 1118
+    .line 1062
     return-object v0
 .end method

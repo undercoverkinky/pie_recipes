@@ -1,5 +1,5 @@
 .class final Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Landroid/content/Intent;",
         ">;"
@@ -51,7 +51,7 @@
 
     iput-object p5, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->d:Ljava/lang/String;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -59,16 +59,10 @@
 
 # virtual methods
 .method public final synthetic a(Ljava/lang/Object;)V
-    .locals 11
+    .locals 9
 
     .prologue
     const/4 v0, 0x0
-
-    const/16 v8, 0xc8
-
-    const/16 v10, 0x1f4
-
-    const/4 v9, 0x0
 
     .line 377
     check-cast p1, Landroid/content/Intent;
@@ -79,13 +73,9 @@
     .line 1383
     iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
 
-    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->d:Lcom/kik/cards/web/iap/InAppPurchasePlugin;
+    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->c:Lcom/kik/cards/web/plugin/a;
 
-    iget-object v1, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
-
-    iget-object v1, v1, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->c:Lcom/kik/cards/web/plugin/a;
-
-    invoke-static {v0, v1, v10, v9}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->access$1200(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    invoke-static {v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->f(Lcom/kik/cards/web/plugin/a;)V
 
     .line 1469
     :goto_0
@@ -125,13 +115,9 @@
     :cond_1
     iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
 
-    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->d:Lcom/kik/cards/web/iap/InAppPurchasePlugin;
+    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->c:Lcom/kik/cards/web/plugin/a;
 
-    iget-object v1, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
-
-    iget-object v1, v1, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->c:Lcom/kik/cards/web/plugin/a;
-
-    invoke-static {v0, v1, v10, v9}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->access$1300(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    invoke-static {v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->g(Lcom/kik/cards/web/plugin/a;)V
 
     goto :goto_0
 
@@ -156,7 +142,7 @@
 
     iget-object v6, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->c:Lorg/json/JSONObject;
 
-    invoke-static/range {v0 .. v6}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->access$1400(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    invoke-static/range {v0 .. v6}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -166,13 +152,9 @@
     .line 1407
     iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
 
-    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->d:Lcom/kik/cards/web/iap/InAppPurchasePlugin;
+    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->c:Lcom/kik/cards/web/plugin/a;
 
-    iget-object v1, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
-
-    iget-object v1, v1, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->c:Lcom/kik/cards/web/plugin/a;
-
-    invoke-static {v0, v1, v10, v9}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->access$1500(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    invoke-static {v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->h(Lcom/kik/cards/web/plugin/a;)V
 
     goto :goto_0
 
@@ -186,24 +168,16 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 1418
-    iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->IAP_PURCHASE_SUCCESSFUL:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
 
-    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->d:Lcom/kik/cards/web/iap/InAppPurchasePlugin;
-
-    sget-object v1, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->IAP_PURCHASE_SUCCESSFUL:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
-
-    invoke-static {v0, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->access$100(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
+    invoke-static {v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
 
     .line 1420
     iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
 
-    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->d:Lcom/kik/cards/web/iap/InAppPurchasePlugin;
+    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->c:Lcom/kik/cards/web/plugin/a;
 
-    iget-object v1, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
-
-    iget-object v1, v1, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->c:Lcom/kik/cards/web/plugin/a;
-
-    invoke-static {v0, v1, v8, v7}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->access$1700(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    invoke-static {v0, v7}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)V
 
     goto :goto_0
 
@@ -213,13 +187,9 @@
 
     iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
 
-    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->d:Lcom/kik/cards/web/iap/InAppPurchasePlugin;
+    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->c:Lcom/kik/cards/web/plugin/a;
 
-    iget-object v1, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
-
-    iget-object v1, v1, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->c:Lcom/kik/cards/web/plugin/a;
-
-    invoke-static {v0, v1, v10, v9}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->access$1600(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    invoke-static {v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->i(Lcom/kik/cards/web/plugin/a;)V
 
     goto :goto_0
 
@@ -229,7 +199,7 @@
 
     iget-object v1, v1, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->b:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/kik/cards/web/s;->l(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/kik/cards/web/r;->k(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -239,7 +209,7 @@
 
     iget-object v2, v2, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->d:Lcom/kik/cards/web/iap/InAppPurchasePlugin;
 
-    invoke-static {v2}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->access$500(Lcom/kik/cards/web/iap/InAppPurchasePlugin;)Lcom/android/a/a/a;
+    invoke-static {v2}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->b(Lcom/kik/cards/web/iap/InAppPurchasePlugin;)Lcom/android/b/a/a;
 
     move-result-object v2
 
@@ -249,7 +219,7 @@
 
     iget-object v4, v4, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->d:Lcom/kik/cards/web/iap/InAppPurchasePlugin;
 
-    invoke-static {v4}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->access$400(Lcom/kik/cards/web/iap/InAppPurchasePlugin;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/cards/web/iap/InAppPurchasePlugin;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -257,7 +227,7 @@
 
     const/4 v6, 0x0
 
-    invoke-interface {v2, v3, v4, v5, v6}, Lcom/android/a/a/a;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+    invoke-interface {v2, v3, v4, v5, v6}, Lcom/android/b/a/a;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -269,13 +239,9 @@
     .line 1437
     iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
 
-    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->d:Lcom/kik/cards/web/iap/InAppPurchasePlugin;
+    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->c:Lcom/kik/cards/web/plugin/a;
 
-    iget-object v1, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
-
-    iget-object v1, v1, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->c:Lcom/kik/cards/web/plugin/a;
-
-    invoke-static {v0, v1, v10, v9}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->access$1900(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    invoke-static {v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->k(Lcom/kik/cards/web/plugin/a;)V
 
     goto/16 :goto_0
 
@@ -285,13 +251,9 @@
 
     iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
 
-    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->d:Lcom/kik/cards/web/iap/InAppPurchasePlugin;
+    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->c:Lcom/kik/cards/web/plugin/a;
 
-    iget-object v1, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
-
-    iget-object v1, v1, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->c:Lcom/kik/cards/web/plugin/a;
-
-    invoke-static {v0, v1, v10, v9}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->access$1800(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    invoke-static {v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->j(Lcom/kik/cards/web/plugin/a;)V
 
     goto/16 :goto_0
 
@@ -400,7 +362,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->access$000(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -425,7 +387,7 @@
 
     iget-object v4, v4, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->b:Ljava/lang/String;
 
-    invoke-static/range {v0 .. v6}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->access$1400(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    invoke-static/range {v0 .. v6}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -440,26 +402,16 @@
     invoke-virtual {v1, v2, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 1460
-    iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->IAP_PURCHASE_SUCCESSFUL:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
 
-    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->d:Lcom/kik/cards/web/iap/InAppPurchasePlugin;
-
-    sget-object v2, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->IAP_PURCHASE_SUCCESSFUL:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
-
-    invoke-static {v0, v2}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->access$100(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
+    invoke-static {v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
 
     .line 1461
     iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
 
-    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->d:Lcom/kik/cards/web/iap/InAppPurchasePlugin;
+    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->c:Lcom/kik/cards/web/plugin/a;
 
-    iget-object v2, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
-
-    iget-object v2, v2, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->c:Lcom/kik/cards/web/plugin/a;
-
-    const/16 v3, 0xc8
-
-    invoke-static {v0, v2, v3, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->access$2000(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    invoke-static {v0, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->b(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)V
     :try_end_2
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_2
 
@@ -471,13 +423,9 @@
 
     iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
 
-    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->d:Lcom/kik/cards/web/iap/InAppPurchasePlugin;
+    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->c:Lcom/kik/cards/web/plugin/a;
 
-    iget-object v1, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
-
-    iget-object v1, v1, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->c:Lcom/kik/cards/web/plugin/a;
-
-    invoke-static {v0, v1, v10, v9}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->access$2200(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    invoke-static {v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->l(Lcom/kik/cards/web/plugin/a;)V
 
     goto/16 :goto_0
 
@@ -492,13 +440,9 @@
     .line 1466
     :cond_7
     :try_start_3
-    iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->IAP_PURCHASE_CANCELLED:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
 
-    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->d:Lcom/kik/cards/web/iap/InAppPurchasePlugin;
-
-    sget-object v1, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->IAP_PURCHASE_CANCELLED:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
-
-    invoke-static {v0, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->access$100(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
+    invoke-static {v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
 
     .line 1467
     new-instance v0, Lorg/json/JSONObject;
@@ -508,15 +452,9 @@
     .line 1468
     iget-object v1, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
 
-    iget-object v1, v1, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->d:Lcom/kik/cards/web/iap/InAppPurchasePlugin;
+    iget-object v1, v1, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->c:Lcom/kik/cards/web/plugin/a;
 
-    iget-object v2, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
-
-    iget-object v2, v2, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->c:Lcom/kik/cards/web/plugin/a;
-
-    const/16 v3, 0xc8
-
-    invoke-static {v1, v2, v3, v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->access$2100(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    invoke-static {v1, v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->c(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)V
     :try_end_3
     .catch Lorg/json/JSONException; {:try_start_3 .. :try_end_3} :catch_2
 
@@ -524,70 +462,46 @@
 .end method
 
 .method public final b(Ljava/lang/Throwable;)V
-    .locals 4
+    .locals 1
 
     .prologue
     .line 481
-    iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->IAP_PURCHASE_ERROR:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
 
-    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->d:Lcom/kik/cards/web/iap/InAppPurchasePlugin;
-
-    sget-object v1, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->IAP_PURCHASE_ERROR:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
-
-    invoke-static {v0, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->access$100(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
+    invoke-static {v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
 
     .line 482
     iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
 
-    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->d:Lcom/kik/cards/web/iap/InAppPurchasePlugin;
+    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->c:Lcom/kik/cards/web/plugin/a;
 
-    iget-object v1, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
-
-    iget-object v1, v1, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->c:Lcom/kik/cards/web/plugin/a;
-
-    const/16 v2, 0x1f4
-
-    const/4 v3, 0x0
-
-    invoke-static {v0, v1, v2, v3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->access$2300(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    invoke-static {v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->m(Lcom/kik/cards/web/plugin/a;)V
 
     .line 483
-    invoke-super {p0, p1}, Lcom/kik/events/k;->b(Ljava/lang/Throwable;)V
+    invoke-super {p0, p1}, Lcom/kik/events/l;->b(Ljava/lang/Throwable;)V
 
     .line 484
     return-void
 .end method
 
 .method public final c()V
-    .locals 4
+    .locals 1
 
     .prologue
     .line 490
-    iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->IAP_PURCHASE_CANCELLED:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
 
-    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->d:Lcom/kik/cards/web/iap/InAppPurchasePlugin;
-
-    sget-object v1, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->IAP_PURCHASE_CANCELLED:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
-
-    invoke-static {v0, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->access$100(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
+    invoke-static {v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
 
     .line 491
     iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
 
-    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->d:Lcom/kik/cards/web/iap/InAppPurchasePlugin;
+    iget-object v0, v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->c:Lcom/kik/cards/web/plugin/a;
 
-    iget-object v1, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2$1;->e:Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;
-
-    iget-object v1, v1, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;->c:Lcom/kik/cards/web/plugin/a;
-
-    const/16 v2, 0xc8
-
-    const/4 v3, 0x0
-
-    invoke-static {v0, v1, v2, v3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->access$2400(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    invoke-static {v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->n(Lcom/kik/cards/web/plugin/a;)V
 
     .line 492
-    invoke-super {p0}, Lcom/kik/events/k;->c()V
+    invoke-super {p0}, Lcom/kik/events/l;->c()V
 
     .line 493
     return-void

@@ -49,12 +49,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/gson/e;Ljava/lang/reflect/Type;Lcom/google/gson/o;Lcom/google/gson/internal/d;)V
+.method public constructor <init>(Lcom/google/gson/d;Ljava/lang/reflect/Type;Lcom/google/gson/o;Lcom/google/gson/internal/d;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/google/gson/e;",
+            "Lcom/google/gson/d;",
             "Ljava/lang/reflect/Type;",
             "Lcom/google/gson/o",
             "<TE;>;",
@@ -72,7 +72,7 @@
     .line 68
     new-instance v0, Lcom/google/gson/internal/bind/h;
 
-    invoke-direct {v0, p1, p3, p2}, Lcom/google/gson/internal/bind/h;-><init>(Lcom/google/gson/e;Lcom/google/gson/o;Ljava/lang/reflect/Type;)V
+    invoke-direct {v0, p1, p3, p2}, Lcom/google/gson/internal/bind/h;-><init>(Lcom/google/gson/d;Lcom/google/gson/o;Ljava/lang/reflect/Type;)V
 
     iput-object v0, p0, Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory$a;->a:Lcom/google/gson/o;
 

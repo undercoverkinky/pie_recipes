@@ -7,10 +7,10 @@
 .implements Lcom/kik/view/adapters/InviteFriendsRecyclerAdapter$a;
 .implements Lkik/android/addressbook/AndroidAddressBookLoader$a;
 .implements Lkik/android/chat/presentation/a$a;
-.implements Lkik/android/chat/presentation/ac$a;
+.implements Lkik/android/chat/presentation/ao$a;
 .implements Lkik/android/chat/presentation/c$a;
 .implements Lkik/android/util/KeyboardManipulator;
-.implements Lkik/core/interfaces/ai;
+.implements Lkik/core/interfaces/ah;
 
 
 # annotations
@@ -25,29 +25,63 @@
 
 
 # instance fields
-.field private A:Lkik/android/util/bc;
+.field private A:Lkik/android/addressbook/AndroidAddressBookLoader;
+
+.field private B:Lcom/kik/events/e;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/kik/events/e",
+            "<",
+            "Lkik/core/interfaces/IAddressBookIntegration$AddressBookUploadState;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private C:Lcom/kik/events/e;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/kik/events/e",
+            "<",
+            "Lkik/core/datatypes/Message;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private D:Lkik/android/util/bd;
+
+.field private E:Lkik/android/util/bd;
 
 .field protected _anchor:Landroid/view/View;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f1001d8
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f1101b3
+        }
     .end annotation
 .end field
 
 .field protected _friendsList:Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f1001d9
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f1101b4
+        }
     .end annotation
 .end field
 
 .field protected _overflowButton:Landroid/widget/ImageView;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f100113
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f1100d5
+        }
     .end annotation
 .end field
 
 .field protected _searchBarView:Lkik/android/chat/view/SearchBarViewImpl;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f1001da
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f1101b5
+        }
     .end annotation
 .end field
 
@@ -71,7 +105,7 @@
     .end annotation
 .end field
 
-.field protected e:Lkik/android/chat/presentation/ac;
+.field protected e:Lkik/android/chat/presentation/ao;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
@@ -81,7 +115,7 @@
         value = {
             "Ldagger/a",
             "<",
-            "Lkik/core/interfaces/v;",
+            "Lkik/core/interfaces/x;",
             ">;"
         }
     .end annotation
@@ -95,7 +129,7 @@
         value = {
             "Ldagger/a",
             "<",
-            "Lkik/core/interfaces/ag;",
+            "Lkik/core/interfaces/af;",
             ">;"
         }
     .end annotation
@@ -109,7 +143,7 @@
         value = {
             "Ldagger/a",
             "<",
-            "Lkik/core/interfaces/IConversation;",
+            "Lkik/core/interfaces/j;",
             ">;"
         }
     .end annotation
@@ -139,39 +173,13 @@
         value = {
             "Lcom/google/common/collect/EvictingQueue",
             "<",
-            "Lkik/core/datatypes/l;",
+            "Lkik/core/datatypes/o;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private v:Landroid/support/v7/widget/LinearLayoutManager;
-
-.field private w:Lkik/android/addressbook/AndroidAddressBookLoader;
-
-.field private x:Lcom/kik/events/e;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/kik/events/e",
-            "<",
-            "Lkik/core/interfaces/IAddressBookIntegration$AddressBookUploadState;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private y:Lcom/kik/events/e;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/kik/events/e",
-            "<",
-            "Lkik/core/datatypes/Message;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private z:Lkik/android/util/bc;
+.field private z:Landroid/support/v7/widget/LinearLayoutManager;
 
 
 # direct methods
@@ -179,68 +187,209 @@
     .locals 1
 
     .prologue
-    .line 72
+    .line 70
     invoke-direct {p0}, Lkik/android/chat/fragment/AddressbookFragmentBase;-><init>()V
 
-    .line 355
+    .line 353
     new-instance v0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$1;
 
     invoke-direct {v0, p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$1;-><init>(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;)V
 
-    iput-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->x:Lcom/kik/events/e;
+    iput-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->B:Lcom/kik/events/e;
 
-    .line 363
+    .line 361
     new-instance v0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$2;
 
     invoke-direct {v0, p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$2;-><init>(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;)V
 
-    iput-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->y:Lcom/kik/events/e;
+    iput-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->C:Lcom/kik/events/e;
 
-    .line 384
+    .line 382
     new-instance v0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$3;
 
     invoke-direct {v0, p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$3;-><init>(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;)V
 
-    iput-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->z:Lkik/android/util/bc;
+    iput-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->D:Lkik/android/util/bd;
 
-    .line 406
+    .line 404
     new-instance v0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$4;
 
     invoke-direct {v0, p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$4;-><init>(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;)V
 
-    iput-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->A:Lkik/android/util/bc;
+    iput-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->E:Lkik/android/util/bd;
 
     return-void
 .end method
 
-.method static synthetic a(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;)V
+.method private K()V
     .locals 2
 
     .prologue
-    .line 823
-    invoke-direct {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->o()V
+    .line 854
+    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->n:Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$c;
 
-    .line 824
-    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->d:Lkik/android/chat/presentation/c;
+    const/4 v1, 0x0
 
-    invoke-interface {v0}, Lkik/android/chat/presentation/c;->a()V
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$c;->a(Z)V
 
-    .line 825
-    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->c:Lkik/android/chat/presentation/a;
+    .line 855
+    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->q:Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;
 
-    iget-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->u:Lcom/google/common/collect/EvictingQueue;
+    iget-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->q:Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;
 
-    invoke-interface {v0, v1}, Lkik/android/chat/presentation/a;->a(Ljava/util/Collection;)V
+    invoke-virtual {v1}, Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;->b()I
 
-    .line 826
+    move-result v1
+
+    add-int/lit8 v1, v1, -0x1
+
+    invoke-virtual {v0, v1}, Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;->c(I)V
+
+    .line 856
     return-void
 .end method
 
+.method static synthetic a(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;)Lcom/google/common/collect/EvictingQueue;
+    .locals 1
+
+    .prologue
+    .line 70
+    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->u:Lcom/google/common/collect/EvictingQueue;
+
+    return-object v0
+.end method
+
 .method static synthetic a(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;Lkik/core/interfaces/IAddressBookIntegration$AddressBookUploadState;)V
+    .locals 1
+
+    .prologue
+    .line 70
+    .line 4806
+    invoke-static {p0, p1}, Lkik/android/chat/fragment/b;->a(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;Lkik/core/interfaces/IAddressBookIntegration$AddressBookUploadState;)Ljava/lang/Runnable;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->b(Ljava/lang/Runnable;)V
+
+    .line 70
+    return-void
+.end method
+
+.method static synthetic a(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;ZLandroid/view/MenuItem;)Z
+    .locals 1
+
+    .prologue
+    .line 6519
+    invoke-interface {p2}, Landroid/view/MenuItem;->getItemId()I
+
+    move-result v0
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 6529
+    const/4 v0, 0x0
+
+    .line 6527
+    :goto_0
+    return v0
+
+    .line 6521
+    :pswitch_0
+    if-eqz p1, :cond_0
+
+    .line 6759
+    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->m()Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
+
+    .line 6760
+    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->a(Landroid/content/Context;)Lkik/android/addressbook/AddressBookOptOutPrivacyOptionsDialog;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lkik/android/addressbook/AddressBookOptOutPrivacyOptionsDialog;->f()Lkik/android/chat/fragment/KikDialogFragment;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
+
+    .line 6527
+    :goto_1
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    .line 7754
+    :cond_0
+    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->i:Lkik/android/addressbook/PrivacyOptionsDialog;
+
+    invoke-virtual {v0}, Lkik/android/addressbook/PrivacyOptionsDialog;->f()Lkik/android/chat/fragment/KikDialogFragment;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
+
+    goto :goto_1
+
+    .line 6519
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method static synthetic b(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;)V
+    .locals 3
+
+    .prologue
+    .line 70
+    .line 5787
+    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->b:Lcom/kik/android/Mixpanel;
+
+    const-string v1, "ABM Opt Out Cancelled"
+
+    invoke-virtual {v0, v1}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;)Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    const-string v1, "Source"
+
+    const-string v2, "Talk To"
+
+    .line 5788
+    invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    .line 5789
+    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    .line 5790
+    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
+
+    .line 70
+    return-void
+.end method
+
+.method static synthetic b(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;Lkik/core/interfaces/IAddressBookIntegration$AddressBookUploadState;)V
     .locals 4
 
     .prologue
-    .line 811
+    .line 7807
     sget-object v0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$6;->b:[I
 
     invoke-virtual {p1}, Lkik/core/interfaces/IAddressBookIntegration$AddressBookUploadState;->ordinal()I
@@ -251,27 +400,27 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 830
+    .line 7813
     :goto_0
     return-void
 
-    .line 814
+    .line 7810
     :pswitch_0
-    invoke-direct {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->o()V
+    invoke-direct {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->s()V
 
-    .line 815
+    .line 7811
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->d:Lkik/android/chat/presentation/c;
 
     invoke-interface {v0}, Lkik/android/chat/presentation/c;->a()V
 
-    .line 816
+    .line 7812
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->c:Lkik/android/chat/presentation/a;
 
     invoke-interface {v0}, Lkik/android/chat/presentation/a;->a()V
 
     goto :goto_0
 
-    .line 821
+    .line 7817
     :pswitch_1
     new-instance v0, Landroid/os/Handler;
 
@@ -287,7 +436,7 @@
 
     goto :goto_0
 
-    .line 811
+    .line 7807
     nop
 
     :pswitch_data_0
@@ -295,106 +444,6 @@
         :pswitch_0
         :pswitch_1
     .end packed-switch
-.end method
-
-.method static synthetic a(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;ZLandroid/view/MenuItem;)Z
-    .locals 1
-
-    .prologue
-    .line 521
-    invoke-interface {p2}, Landroid/view/MenuItem;->getItemId()I
-
-    move-result v0
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 531
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-
-    .line 523
-    :pswitch_0
-    if-eqz p1, :cond_0
-
-    .line 3763
-    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->l()Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
-
-    .line 3764
-    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->a(Landroid/content/Context;)Lkik/android/addressbook/AddressBookOptOutPrivacyOptionsDialog;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lkik/android/addressbook/AddressBookOptOutPrivacyOptionsDialog;->f()Lkik/android/chat/fragment/KikDialogFragment;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
-
-    .line 529
-    :goto_1
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    .line 4758
-    :cond_0
-    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->i:Lkik/android/addressbook/PrivacyOptionsDialog;
-
-    invoke-virtual {v0}, Lkik/android/addressbook/PrivacyOptionsDialog;->f()Lkik/android/chat/fragment/KikDialogFragment;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
-
-    goto :goto_1
-
-    .line 521
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method static synthetic b(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;)Lcom/google/common/collect/EvictingQueue;
-    .locals 1
-
-    .prologue
-    .line 72
-    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->u:Lcom/google/common/collect/EvictingQueue;
-
-    return-object v0
-.end method
-
-.method static synthetic b(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;Lkik/core/interfaces/IAddressBookIntegration$AddressBookUploadState;)V
-    .locals 1
-
-    .prologue
-    .line 72
-    .line 4810
-    invoke-static {p0, p1}, Lkik/android/chat/fragment/b;->a(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;Lkik/core/interfaces/IAddressBookIntegration$AddressBookUploadState;)Ljava/lang/Runnable;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->runOnUiIfAttached(Ljava/lang/Runnable;)V
-
-    .line 72
-    return-void
 .end method
 
 .method private b(Z)V
@@ -405,8 +454,8 @@
 
     const/4 v2, 0x1
 
-    .line 723
-    .line 3748
+    .line 721
+    .line 4744
     new-array v0, v2, [Landroid/view/View;
 
     iget-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->_searchBarView:Lkik/android/chat/view/SearchBarViewImpl;
@@ -415,27 +464,27 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
 
-    .line 724
+    .line 722
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->q:Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;
 
     invoke-virtual {v0, v2}, Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;->a(Z)V
 
-    .line 725
+    .line 723
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->d:Lkik/android/chat/presentation/c;
 
     invoke-interface {v0, p1}, Lkik/android/chat/presentation/c;->a(Z)V
 
-    .line 726
+    .line 724
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->c:Lkik/android/chat/presentation/a;
 
     invoke-interface {v0}, Lkik/android/chat/presentation/a;->b()V
 
-    .line 728
+    .line 726
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->r:Ljava/lang/String;
 
     invoke-direct {p0, v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->c(Ljava/lang/String;)V
 
-    .line 729
+    .line 727
     new-array v0, v2, [Landroid/view/View;
 
     iget-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->_overflowButton:Landroid/widget/ImageView;
@@ -444,20 +493,7 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
 
-    .line 730
-    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->_metricsService:Lcom/kik/metrics/c/d;
-
-    invoke-static {}, Lcom/kik/metrics/b/bp;->b()Lcom/kik/metrics/b/bp$a;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/kik/metrics/b/bp$a;->a()Lcom/kik/metrics/b/bp;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/kik/metrics/c/d;->a(Lcom/kik/metrics/b/t;)V
-
-    .line 731
+    .line 728
     return-void
 .end method
 
@@ -465,12 +501,12 @@
     .locals 1
 
     .prologue
-    .line 769
-    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->w:Lkik/android/addressbook/AndroidAddressBookLoader;
+    .line 765
+    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->A:Lkik/android/addressbook/AndroidAddressBookLoader;
 
     invoke-virtual {v0, p1}, Lkik/android/addressbook/AndroidAddressBookLoader;->a(Ljava/lang/String;)V
 
-    .line 770
+    .line 766
     return-void
 .end method
 
@@ -478,93 +514,8 @@
     .locals 3
 
     .prologue
-    .line 72
-    .line 5791
-    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->b:Lcom/kik/android/Mixpanel;
-
-    const-string v1, "ABM Opt Out Cancelled"
-
-    invoke-virtual {v0, v1}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;)Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    const-string v1, "Source"
-
-    const-string v2, "Talk To"
-
-    .line 5792
-    invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    .line 5793
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    .line 5794
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
-
-    .line 72
-    return-void
-.end method
-
-.method private d(Ljava/lang/String;)V
-    .locals 3
-
-    .prologue
-    .line 774
-    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->b:Lcom/kik/android/Mixpanel;
-
-    const-string v1, "Invite Friend Tapped"
-
-    invoke-virtual {v0, v1}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;)Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    .line 775
-    const-string v1, "Type"
-
-    invoke-virtual {v0, v1, p1}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
-
-    .line 776
-    iget-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->r:Ljava/lang/String;
-
-    invoke-static {v1}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    .line 777
-    const-string v1, "Filter"
-
-    iget-object v2, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->r:Ljava/lang/String;
-
-    invoke-static {v2}, Lkik/android/util/bq;->c(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
-
-    .line 779
-    :cond_0
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
-
-    .line 780
-    return-void
-.end method
-
-.method static synthetic d(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;)V
-    .locals 3
-
-    .prologue
-    .line 72
-    .line 5800
+    .line 70
+    .line 5796
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->b:Lcom/kik/android/Mixpanel;
 
     const-string v1, "ABM Opt In Shown"
@@ -577,15 +528,15 @@
 
     const-string v2, "Talk To"
 
-    .line 5801
+    .line 5797
     invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
     const-string v1, "Already Has Phone Number"
 
-    .line 5802
-    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->k()Ljava/lang/Boolean;
+    .line 5798
+    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->l()Ljava/lang/Boolean;
 
     move-result-object v2
 
@@ -595,8 +546,8 @@
 
     const-string v2, "OS Detected Phone Number"
 
-    .line 5803
-    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->k()Ljava/lang/Boolean;
+    .line 5799
+    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->l()Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -621,29 +572,101 @@
 
     move-result-object v0
 
-    .line 5804
+    .line 5800
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 5805
+    .line 5801
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 72
+    .line 70
     return-void
 
-    .line 5803
+    .line 5799
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method private e(Ljava/lang/String;)V
+.method private d(Ljava/lang/String;)V
+    .locals 3
+
+    .prologue
+    .line 770
+    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->b:Lcom/kik/android/Mixpanel;
+
+    const-string v1, "Invite Friend Tapped"
+
+    invoke-virtual {v0, v1}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;)Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    .line 771
+    const-string v1, "Type"
+
+    invoke-virtual {v0, v1, p1}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
+
+    .line 772
+    iget-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->r:Ljava/lang/String;
+
+    invoke-static {v1}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 773
+    const-string v1, "Filter"
+
+    iget-object v2, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->r:Ljava/lang/String;
+
+    invoke-static {v2}, Lkik/android/util/bq;->c(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
+
+    .line 775
+    :cond_0
+    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
+
+    .line 776
+    return-void
+.end method
+
+.method static synthetic d(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;)V
+    .locals 1
+
+    .prologue
+    .line 70
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->b(Z)V
+
+    return-void
+.end method
+
+.method static synthetic e(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;)V
+    .locals 0
+
+    .prologue
+    .line 70
+    invoke-direct {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->q()V
+
+    return-void
+.end method
+
+.method private f(Ljava/lang/String;)V
     .locals 2
 
     .prologue
-    .line 784
+    .line 780
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->b:Lcom/kik/android/Mixpanel;
 
     const-string v1, "Invite Friend Failed"
@@ -652,54 +675,56 @@
 
     move-result-object v0
 
-    .line 785
+    .line 781
     const-string v1, "Type"
 
     invoke-virtual {v0, v1, p1}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
 
-    .line 786
+    .line 782
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 787
-    return-void
-.end method
-
-.method static synthetic e(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;)V
-    .locals 1
-
-    .prologue
-    .line 72
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->b(Z)V
-
+    .line 783
     return-void
 .end method
 
 .method static synthetic f(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;)V
-    .locals 0
+    .locals 2
 
     .prologue
-    .line 72
-    invoke-direct {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->m()V
+    .line 0
+    .line 8819
+    invoke-direct {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->s()V
 
+    .line 8820
+    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->d:Lkik/android/chat/presentation/c;
+
+    invoke-interface {v0}, Lkik/android/chat/presentation/c;->a()V
+
+    .line 8821
+    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->c:Lkik/android/chat/presentation/a;
+
+    iget-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->u:Lcom/google/common/collect/EvictingQueue;
+
+    invoke-interface {v0, v1}, Lkik/android/chat/presentation/a;->a(Ljava/util/Collection;)V
+
+    .line 0
     return-void
 .end method
 
-.method private m()V
+.method private q()V
     .locals 4
 
     .prologue
     const/4 v3, 0x0
 
-    .line 736
-    invoke-direct {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->n()V
+    .line 733
+    invoke-direct {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->r()V
 
-    .line 737
+    .line 734
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->d:Lkik/android/chat/presentation/c;
 
     iget-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->a:Lkik/core/interfaces/IAddressBookIntegration;
@@ -716,22 +741,22 @@
 
     invoke-interface {v0, v1, v2}, Lkik/android/chat/presentation/c;->a(Ljava/lang/String;Z)V
 
-    .line 738
-    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->e:Lkik/android/chat/presentation/ac;
+    .line 735
+    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->e:Lkik/android/chat/presentation/ao;
 
-    invoke-interface {v0}, Lkik/android/chat/presentation/ac;->d()V
+    invoke-interface {v0}, Lkik/android/chat/presentation/ao;->d()V
 
-    .line 739
+    .line 736
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->c:Lkik/android/chat/presentation/a;
 
     invoke-interface {v0}, Lkik/android/chat/presentation/a;->b()V
 
-    .line 740
+    .line 737
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->q:Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;
 
     invoke-virtual {v0, v3}, Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;->a(Z)V
 
-    .line 742
+    .line 739
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/view/View;
@@ -742,28 +767,15 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
 
-    .line 743
-    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->_metricsService:Lcom/kik/metrics/c/d;
-
-    invoke-static {}, Lcom/kik/metrics/b/s;->b()Lcom/kik/metrics/b/s$a;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/kik/metrics/b/s$a;->a()Lcom/kik/metrics/b/s;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/kik/metrics/c/d;->a(Lcom/kik/metrics/b/t;)V
-
-    .line 744
+    .line 740
     return-void
 .end method
 
-.method private n()V
+.method private r()V
     .locals 3
 
     .prologue
-    .line 753
+    .line 749
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/view/View;
@@ -776,99 +788,56 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
 
-    .line 754
+    .line 750
     return-void
 .end method
 
-.method private o()V
+.method private s()V
     .locals 3
 
     .prologue
-    .line 841
-    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->getLifecycleEventHub()Lcom/kik/events/d;
+    .line 837
+    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->af()Lcom/kik/events/d;
 
     move-result-object v1
 
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->h:Ldagger/a;
 
-    invoke-interface {v0}, Ldagger/a;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Ldagger/a;->a()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/interfaces/IConversation;
+    check-cast v0, Lkik/core/interfaces/j;
 
-    invoke-interface {v0}, Lkik/core/interfaces/IConversation;->e()Lcom/kik/events/c;
+    invoke-interface {v0}, Lkik/core/interfaces/j;->e()Lcom/kik/events/c;
 
     move-result-object v0
 
-    iget-object v2, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->y:Lcom/kik/events/e;
+    iget-object v2, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->C:Lcom/kik/events/e;
 
     invoke-virtual {v1, v0, v2}, Lcom/kik/events/d;->c(Lcom/kik/events/c;Lcom/kik/events/e;)V
 
-    .line 842
-    return-void
-.end method
-
-.method private p()V
-    .locals 2
-
-    .prologue
-    .line 858
-    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->n:Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$c;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$c;->a(Z)V
-
-    .line 859
-    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->q:Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;
-
-    iget-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->q:Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;
-
-    invoke-virtual {v1}, Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;->getItemCount()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x1
-
-    invoke-virtual {v0, v1}, Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;->notifyItemChanged(I)V
-
-    .line 860
+    .line 838
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method protected final E()I
     .locals 1
 
     .prologue
-    .line 622
-    iget-boolean v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->s:Z
+    .line 664
+    const v0, 0x7f0a0166
 
-    if-eqz v0, :cond_0
-
-    .line 623
-    invoke-direct {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->p()V
-
-    .line 624
-    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->hideKeyboard()V
-
-    .line 625
-    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->e:Lkik/android/chat/presentation/ac;
-
-    invoke-interface {v0}, Lkik/android/chat/presentation/ac;->e()V
-
-    .line 627
-    :cond_0
-    return-void
+    return v0
 .end method
 
 .method public final a(IZZ)V
     .locals 0
 
     .prologue
-    .line 617
+    .line 615
     return-void
 .end method
 
@@ -876,10 +845,10 @@
     .locals 1
 
     .prologue
-    .line 540
+    .line 538
     iput-object p1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->t:Ljava/lang/String;
 
-    .line 541
+    .line 539
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->a:Lkik/core/interfaces/IAddressBookIntegration;
 
     invoke-interface {v0}, Lkik/core/interfaces/IAddressBookIntegration;->d()Ljava/lang/Boolean;
@@ -892,14 +861,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 542
-    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->j()V
+    .line 540
+    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->k()V
 
-    .line 547
+    .line 545
     :goto_0
     return-void
 
-    .line 545
+    .line 543
     :cond_0
     invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
@@ -914,31 +883,31 @@
     .locals 4
 
     .prologue
-    .line 637
+    .line 635
     if-nez p1, :cond_1
 
-    .line 655
+    .line 653
     :cond_0
     :goto_0
     return-void
 
-    .line 640
+    .line 638
     :cond_1
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->g:Ldagger/a;
 
-    invoke-interface {v0}, Ldagger/a;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Ldagger/a;->a()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/interfaces/ag;
+    check-cast v0, Lkik/core/interfaces/af;
 
-    invoke-interface {v0}, Lkik/core/interfaces/ag;->d()Lkik/core/datatypes/aa;
+    invoke-interface {v0}, Lkik/core/interfaces/af;->d()Lkik/core/datatypes/ad;
 
     move-result-object v0
 
-    iget-object v0, v0, Lkik/core/datatypes/aa;->c:Ljava/lang/String;
+    iget-object v0, v0, Lkik/core/datatypes/ad;->c:Ljava/lang/String;
 
-    .line 641
+    .line 639
     sget-object v1, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$6;->a:[I
 
     iget-object v2, p1, Lkik/android/addressbook/AndroidAddressBookCursorWrapper$AndroidAddressBookEntry;->a:Lkik/android/addressbook/AndroidAddressBookCursorWrapper$AndroidAddressBookEntry$AddressBookEntryType;
@@ -953,13 +922,13 @@
 
     goto :goto_0
 
-    .line 643
+    .line 641
     :pswitch_0
     const-string v1, "Email"
 
     invoke-direct {p0, v1}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->d(Ljava/lang/String;)V
 
-    .line 644
+    .line 642
     invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v1
@@ -968,26 +937,26 @@
 
     const-string v3, "i2=e"
 
-    invoke-static {v1, v0, v2, v3}, Lkik/android/util/am;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v1, v0, v2, v3}, Lkik/android/util/al;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 645
+    .line 643
     const-string v0, "Email"
 
-    invoke-direct {p0, v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->e(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->f(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 649
+    .line 647
     :pswitch_1
     const-string v1, "Phone"
 
     invoke-direct {p0, v1}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->d(Ljava/lang/String;)V
 
-    .line 650
+    .line 648
     invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v1
@@ -996,20 +965,20 @@
 
     const-string v3, "i2=p"
 
-    invoke-static {v1, v0, v2, v3}, Lkik/android/util/am;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v1, v0, v2, v3}, Lkik/android/util/al;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 651
+    .line 649
     const-string v0, "Email"
 
-    invoke-direct {p0, v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->e(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->f(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 641
+    .line 639
     nop
 
     :pswitch_data_0
@@ -1025,12 +994,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 591
+    .line 589
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->_friendsList:Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;
 
-    invoke-virtual {v0}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->stopScroll()V
+    invoke-virtual {v0}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->f()V
 
-    .line 592
+    .line 590
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->q:Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;
 
     iget-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->r:Ljava/lang/String;
@@ -1039,13 +1008,13 @@
 
     move-result-object v0
 
-    .line 593
+    .line 591
     if-eqz v0, :cond_0
 
-    .line 594
+    .line 592
     invoke-virtual {v0}, Lkik/android/addressbook/AndroidAddressBookCursorWrapper;->b()V
 
-    .line 597
+    .line 595
     :cond_0
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->a:Lkik/core/interfaces/IAddressBookIntegration;
 
@@ -1069,7 +1038,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 599
+    .line 597
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->o:Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$b;
 
     const/4 v1, 0x1
@@ -1080,10 +1049,10 @@
 
     invoke-virtual {v0, v1}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$b;->a([I)V
 
-    .line 600
-    invoke-direct {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->n()V
+    .line 598
+    invoke-direct {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->r()V
 
-    .line 602
+    .line 600
     :cond_1
     return-void
 .end method
@@ -1092,33 +1061,33 @@
     .locals 2
 
     .prologue
-    .line 558
+    .line 556
     iput-boolean p1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->s:Z
 
-    .line 559
+    .line 557
     if-eqz p1, :cond_0
 
-    .line 1849
+    .line 2845
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->n:Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$c;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$c;->a(Z)V
 
-    .line 1850
+    .line 2846
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->q:Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;
 
     iget-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->q:Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;
 
-    invoke-virtual {v1}, Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;->getItemCount()I
+    invoke-virtual {v1}, Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;->b()I
 
     move-result v1
 
     add-int/lit8 v1, v1, -0x1
 
-    invoke-virtual {v0, v1}, Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;->notifyItemChanged(I)V
+    invoke-virtual {v0, v1}, Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;->c(I)V
 
-    .line 562
+    .line 560
     :cond_0
     return-void
 .end method
@@ -1127,12 +1096,12 @@
     .locals 3
 
     .prologue
-    .line 607
+    .line 605
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->_friendsList:Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;
 
-    invoke-virtual {v0}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->stopScroll()V
+    invoke-virtual {v0}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->f()V
 
-    .line 608
+    .line 606
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->q:Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;
 
     const/4 v1, 0x0
@@ -1143,13 +1112,13 @@
 
     move-result-object v0
 
-    .line 609
+    .line 607
     if-eqz v0, :cond_0
 
-    .line 610
+    .line 608
     invoke-virtual {v0}, Lkik/android/addressbook/AndroidAddressBookCursorWrapper;->b()V
 
-    .line 612
+    .line 610
     :cond_0
     return-void
 .end method
@@ -1160,43 +1129,43 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 567
+    .line 565
     invoke-static {p1}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 568
+    .line 566
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 570
+    .line 568
     :cond_0
     iput-object p1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->r:Ljava/lang/String;
 
-    .line 572
-    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->v:Landroid/support/v7/widget/LinearLayoutManager;
+    .line 570
+    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->z:Landroid/support/v7/widget/LinearLayoutManager;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/LinearLayoutManager;->j()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/LinearLayoutManager;->k()I
 
     move-result v0
 
     if-eq v0, v2, :cond_1
 
-    .line 573
-    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->v:Landroid/support/v7/widget/LinearLayoutManager;
+    .line 571
+    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->z:Landroid/support/v7/widget/LinearLayoutManager;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v2, v1}, Landroid/support/v7/widget/LinearLayoutManager;->a(II)V
+    invoke-virtual {v0, v2, v1}, Landroid/support/v7/widget/LinearLayoutManager;->d(II)V
 
-    .line 575
+    .line 573
     :cond_1
     invoke-direct {p0, p1}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->c(Ljava/lang/String;)V
 
-    .line 576
+    .line 574
     return-void
 .end method
 
@@ -1204,10 +1173,10 @@
     .locals 0
 
     .prologue
-    .line 510
-    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->finish()V
+    .line 508
+    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->D()V
 
-    .line 511
+    .line 509
     return-void
 .end method
 
@@ -1215,12 +1184,12 @@
     .locals 3
 
     .prologue
-    .line 552
-    .line 1707
-    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->hideKeyboard()V
+    .line 550
+    .line 2705
+    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->ag()V
 
-    .line 1708
-    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->getLifecycleEventHub()Lcom/kik/events/d;
+    .line 2706
+    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->af()Lcom/kik/events/d;
 
     move-result-object v0
 
@@ -1230,21 +1199,21 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->x:Lcom/kik/events/e;
+    iget-object v2, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->B:Lcom/kik/events/e;
 
     invoke-virtual {v0, v1, v2}, Lcom/kik/events/d;->c(Lcom/kik/events/c;Lcom/kik/events/e;)V
 
-    .line 1709
-    invoke-direct {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->o()V
+    .line 2707
+    invoke-direct {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->s()V
 
-    .line 1710
+    .line 2708
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->a:Lkik/core/interfaces/IAddressBookIntegration;
 
     const-string v1, "talk-to"
 
     invoke-interface {v0, v1}, Lkik/core/interfaces/IAddressBookIntegration;->c(Ljava/lang/String;)V
 
-    .line 1711
+    .line 2709
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->b:Lcom/kik/android/Mixpanel;
 
     const-string v1, "ABM Opt Out Confirmed"
@@ -1257,7 +1226,7 @@
 
     const-string v2, "Talk To"
 
-    .line 1712
+    .line 2710
     invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
@@ -1266,7 +1235,7 @@
 
     iget-object v2, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->a:Lkik/core/interfaces/IAddressBookIntegration;
 
-    .line 1713
+    .line 2711
     invoke-interface {v2}, Lkik/core/interfaces/IAddressBookIntegration;->d()Ljava/lang/Boolean;
 
     move-result-object v2
@@ -1275,37 +1244,18 @@
 
     move-result-object v0
 
-    .line 1714
+    .line 2712
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 1715
+    .line 2713
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 1716
-    invoke-direct {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->m()V
+    .line 2714
+    invoke-direct {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->q()V
 
-    .line 553
-    return-void
-.end method
-
-.method public final e()V
-    .locals 1
-
-    .prologue
-    .line 581
-    invoke-direct {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->p()V
-
-    .line 582
-    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->hideKeyboard()V
-
-    .line 583
-    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->e:Lkik/android/chat/presentation/ac;
-
-    invoke-interface {v0}, Lkik/android/chat/presentation/ac;->e()V
-
-    .line 584
+    .line 551
     return-void
 .end method
 
@@ -1313,65 +1263,74 @@
     .locals 1
 
     .prologue
-    .line 660
+    .line 579
+    invoke-direct {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->K()V
+
+    .line 580
+    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->ag()V
+
+    .line 581
+    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->e:Lkik/android/chat/presentation/ao;
+
+    invoke-interface {v0}, Lkik/android/chat/presentation/ao;->e()V
+
+    .line 582
+    return-void
+.end method
+
+.method public final g()V
+    .locals 1
+
+    .prologue
+    .line 658
     new-instance v0, Lkik/android/chat/fragment/KikConversationsFragment$a;
 
     invoke-direct {v0}, Lkik/android/chat/fragment/KikConversationsFragment$a;-><init>()V
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->startFragmentForResult(Lkik/android/util/ad;)Lcom/kik/events/Promise;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->a(Lkik/android/util/aa;)Lcom/kik/events/Promise;
 
-    .line 661
+    .line 659
     return-void
 .end method
 
-.method protected final g()I
+.method protected final h()I
     .locals 1
 
     .prologue
-    .line 672
-    const v0, 0x7f04007d
+    .line 670
+    const v0, 0x7f040077
 
     return v0
 .end method
 
-.method protected getTitleResource()I
+.method protected final i()Lkik/android/util/bd;
     .locals 1
 
     .prologue
-    .line 666
-    const v0, 0x7f090167
-
-    return v0
-.end method
-
-.method protected final h()Lkik/android/util/bc;
-    .locals 1
-
-    .prologue
-    .line 678
-    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->z:Lkik/android/util/bc;
+    .line 676
+    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->D:Lkik/android/util/bd;
 
     return-object v0
 .end method
 
-.method protected final i()Ljava/lang/String;
+.method protected final j()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 684
+    .line 682
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->t:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method protected final j()V
+.method protected final k()V
     .locals 4
 
     .prologue
     const/4 v1, 0x1
 
-    .line 690
-    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->getLifecycleEventHub()Lcom/kik/events/d;
+    .line 688
+    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->af()Lcom/kik/events/d;
 
     move-result-object v0
 
@@ -1381,11 +1340,11 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->x:Lcom/kik/events/e;
+    iget-object v3, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->B:Lcom/kik/events/e;
 
     invoke-virtual {v0, v2, v3}, Lcom/kik/events/d;->b(Lcom/kik/events/c;Lcom/kik/events/e;)Lcom/kik/events/e;
 
-    .line 2835
+    .line 3831
     const/4 v0, 0x3
 
     invoke-static {v0}, Lcom/google/common/collect/EvictingQueue;->a(I)Lcom/google/common/collect/EvictingQueue;
@@ -1394,39 +1353,39 @@
 
     iput-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->u:Lcom/google/common/collect/EvictingQueue;
 
-    .line 2836
-    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->getLifecycleEventHub()Lcom/kik/events/d;
+    .line 3832
+    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->af()Lcom/kik/events/d;
 
     move-result-object v2
 
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->h:Ldagger/a;
 
-    invoke-interface {v0}, Ldagger/a;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Ldagger/a;->a()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/interfaces/IConversation;
+    check-cast v0, Lkik/core/interfaces/j;
 
-    invoke-interface {v0}, Lkik/core/interfaces/IConversation;->e()Lcom/kik/events/c;
+    invoke-interface {v0}, Lkik/core/interfaces/j;->e()Lcom/kik/events/c;
 
     move-result-object v0
 
-    iget-object v3, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->y:Lcom/kik/events/e;
+    iget-object v3, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->C:Lcom/kik/events/e;
 
     invoke-virtual {v2, v0, v3}, Lcom/kik/events/d;->a(Lcom/kik/events/c;Lcom/kik/events/e;)Lcom/kik/events/e;
 
-    .line 692
-    invoke-super {p0}, Lkik/android/chat/fragment/AddressbookFragmentBase;->j()V
+    .line 690
+    invoke-super {p0}, Lkik/android/chat/fragment/AddressbookFragmentBase;->k()V
 
-    .line 693
+    .line 691
     invoke-direct {p0, v1}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->b(Z)V
 
-    .line 694
+    .line 692
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 697
+    .line 695
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->b:Lcom/kik/android/Mixpanel;
 
     const-string v2, "ABM Opt In Confirmed"
@@ -1435,17 +1394,17 @@
 
     move-result-object v2
 
-    .line 698
+    .line 696
     const-string v0, "Source"
 
     const-string v3, "Talk To"
 
     invoke-virtual {v2, v0, v3}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
 
-    .line 3684
+    .line 4682
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->t:Ljava/lang/String;
 
-    .line 700
+    .line 698
     invoke-static {v0}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
 
     move-result v0
@@ -1454,44 +1413,74 @@
 
     move v0, v1
 
-    .line 701
+    .line 699
     :goto_0
     const-string v1, "Number Manually Set"
 
     invoke-virtual {v2, v1, v0}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Z)Lcom/kik/android/Mixpanel$d;
 
-    .line 702
+    .line 700
     invoke-virtual {v2}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 703
+    .line 701
     return-void
 
-    .line 700
+    .line 698
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
+.method public final l_()V
+    .locals 1
+
+    .prologue
+    .line 620
+    iget-boolean v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->s:Z
+
+    if-eqz v0, :cond_0
+
+    .line 621
+    invoke-direct {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->K()V
+
+    .line 622
+    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->ag()V
+
+    .line 623
+    iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->e:Lkik/android/chat/presentation/ao;
+
+    invoke-interface {v0}, Lkik/android/chat/presentation/ao;->e()V
+
+    .line 625
+    :cond_0
+    return-void
+.end method
+
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 3
 
     .prologue
-    .line 433
+    .line 431
     invoke-super {p0, p1}, Lkik/android/chat/fragment/AddressbookFragmentBase;->onCreate(Landroid/os/Bundle;)V
 
-    .line 434
-    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->getCoreComponent()Lcom/kik/components/CoreComponent;
+    .line 1088
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikFragmentBase;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
+    invoke-static {v0}, Lkik/android/util/s;->a(Landroid/app/Activity;)Lcom/kik/components/CoreComponent;
+
+    move-result-object v0
+
+    .line 432
     invoke-interface {v0, p0}, Lcom/kik/components/CoreComponent;->a(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;)V
 
-    .line 435
+    .line 433
     new-instance v0, Lkik/android/addressbook/AndroidAddressBookLoader;
 
     invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->getLoaderManager()Landroid/support/v4/app/LoaderManager;
@@ -1504,9 +1493,9 @@
 
     invoke-direct {v0, v1, v2, p0}, Lkik/android/addressbook/AndroidAddressBookLoader;-><init>(Landroid/support/v4/app/LoaderManager;Landroid/content/Context;Lkik/android/addressbook/AndroidAddressBookLoader$a;)V
 
-    iput-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->w:Lkik/android/addressbook/AndroidAddressBookLoader;
+    iput-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->A:Lkik/android/addressbook/AndroidAddressBookLoader;
 
-    .line 436
+    .line 434
     return-void
 .end method
 
@@ -1518,18 +1507,18 @@
 
     const/4 v7, 0x0
 
-    .line 441
-    invoke-virtual {p0, v3}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->setScreenOrientation(I)V
+    .line 439
+    invoke-virtual {p0, v3}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->d(I)V
 
-    .line 442
+    .line 440
     invoke-super {p0, p1, p2, p3}, Lkik/android/chat/fragment/AddressbookFragmentBase;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v6
 
-    .line 443
-    invoke-static {p0, v6}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)Lbutterknife/Unbinder;
+    .line 441
+    invoke-static {p0, v6}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)V
 
-    .line 444
+    .line 442
     new-instance v0, Landroid/support/v7/widget/LinearLayoutManager;
 
     invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
@@ -1538,23 +1527,23 @@
 
     invoke-direct {v0, v1}, Landroid/support/v7/widget/LinearLayoutManager;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->v:Landroid/support/v7/widget/LinearLayoutManager;
+    iput-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->z:Landroid/support/v7/widget/LinearLayoutManager;
 
-    .line 445
+    .line 443
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->_friendsList:Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;
 
-    iget-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->v:Landroid/support/v7/widget/LinearLayoutManager;
+    iget-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->z:Landroid/support/v7/widget/LinearLayoutManager;
 
-    invoke-virtual {v0, v1}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->setLayoutManager(Landroid/support/v7/widget/RecyclerView$LayoutManager;)V
+    invoke-virtual {v0, v1}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->a(Landroid/support/v7/widget/RecyclerView$LayoutManager;)V
 
-    .line 446
+    .line 444
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->_friendsList:Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->setItemAnimator(Landroid/support/v7/widget/RecyclerView$ItemAnimator;)V
+    invoke-virtual {v0, v1}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->a(Landroid/support/v7/widget/RecyclerView$ItemAnimator;)V
 
-    .line 447
+    .line 445
     new-instance v0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$b;
 
     invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
@@ -1571,7 +1560,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0a00db
+    const v5, 0x7f0b009c
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1581,15 +1570,15 @@
 
     iput-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->o:Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$b;
 
-    .line 448
+    .line 446
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->_friendsList:Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;
 
     iget-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->o:Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$b;
 
-    invoke-virtual {v0, v1}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->addItemDecoration(Landroid/support/v7/widget/RecyclerView$ItemDecoration;)V
+    invoke-virtual {v0, v1}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->a(Landroid/support/v7/widget/RecyclerView$ItemDecoration;)V
 
-    .line 450
-    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->getPortraitScreenHeightInDip()I
+    .line 448
+    invoke-virtual {p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->A()I
 
     move-result v0
 
@@ -1599,21 +1588,21 @@
 
     move-result v0
 
-    .line 451
+    .line 449
     new-instance v1, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$c;
 
     invoke-direct {v1, v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$c;-><init>(I)V
 
     iput-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->n:Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$c;
 
-    .line 452
+    .line 450
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->_friendsList:Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;
 
     iget-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->n:Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$c;
 
-    invoke-virtual {v0, v1}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->addItemDecoration(Landroid/support/v7/widget/RecyclerView$ItemDecoration;)V
+    invoke-virtual {v0, v1}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->a(Landroid/support/v7/widget/RecyclerView$ItemDecoration;)V
 
-    .line 453
+    .line 451
     new-instance v0, Lkik/android/addressbook/PrivacyOptionsDialog;
 
     invoke-virtual {v6}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -1626,33 +1615,33 @@
 
     iget-object v4, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->m:Lkik/android/chat/fragment/AddressbookFragmentBase$a;
 
-    invoke-virtual {v4}, Lkik/android/chat/fragment/AddressbookFragmentBase$a;->h_()Ljava/lang/String;
+    invoke-virtual {v4}, Lkik/android/chat/fragment/AddressbookFragmentBase$a;->m_()Ljava/lang/String;
 
     move-result-object v4
 
-    iget-object v5, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->A:Lkik/android/util/bc;
+    iget-object v5, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->E:Lkik/android/util/bd;
 
-    invoke-direct/range {v0 .. v5}, Lkik/android/addressbook/PrivacyOptionsDialog;-><init>(Landroid/content/Context;Lkik/core/interfaces/IAddressBookIntegration;Lcom/kik/android/Mixpanel;Ljava/lang/String;Lkik/android/util/bc;)V
+    invoke-direct/range {v0 .. v5}, Lkik/android/addressbook/PrivacyOptionsDialog;-><init>(Landroid/content/Context;Lkik/core/interfaces/IAddressBookIntegration;Lcom/kik/android/Mixpanel;Ljava/lang/String;Lkik/android/util/bd;)V
 
     iput-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->i:Lkik/android/addressbook/PrivacyOptionsDialog;
 
-    .line 455
+    .line 453
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->d:Lkik/android/chat/presentation/c;
 
     invoke-interface {v0, p0}, Lkik/android/chat/presentation/c;->a(Lkik/android/util/KeyboardManipulator;)V
 
-    .line 456
+    .line 454
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->d:Lkik/android/chat/presentation/c;
 
     invoke-interface {v0, p0}, Lkik/android/chat/presentation/c;->a(Lkik/android/chat/presentation/c$a;)V
 
-    .line 457
+    .line 455
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->d:Lkik/android/chat/presentation/c;
 
-    invoke-interface {v0, p0}, Lkik/android/chat/presentation/c;->a(Lkik/core/interfaces/ai;)V
+    invoke-interface {v0, p0}, Lkik/android/chat/presentation/c;->a(Lkik/core/interfaces/ah;)V
 
-    .line 458
-    const v0, 0x7f04001f
+    .line 456
+    const v0, 0x7f04001d
 
     iget-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->_friendsList:Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;
 
@@ -1662,17 +1651,17 @@
 
     check-cast v0, Lkik/android/chat/view/b;
 
-    .line 459
+    .line 457
     iget-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->d:Lkik/android/chat/presentation/c;
 
     invoke-interface {v1, v0}, Lkik/android/chat/presentation/c;->a(Ljava/lang/Object;)V
 
     move-object v1, v0
 
-    .line 461
+    .line 459
     check-cast v1, Landroid/view/View;
 
-    const v2, 0x7f1000be
+    const v2, 0x7f110083
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1680,29 +1669,29 @@
 
     check-cast v1, Lkik/android/chat/view/a;
 
-    .line 462
+    .line 460
     iget-object v2, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->c:Lkik/android/chat/presentation/a;
 
     invoke-interface {v2, v1}, Lkik/android/chat/presentation/a;->a(Ljava/lang/Object;)V
 
-    .line 463
+    .line 461
     iget-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->c:Lkik/android/chat/presentation/a;
 
     invoke-interface {v1, p0}, Lkik/android/chat/presentation/a;->a(Lkik/android/chat/presentation/a$a;)V
 
-    .line 465
-    iget-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->e:Lkik/android/chat/presentation/ac;
+    .line 463
+    iget-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->e:Lkik/android/chat/presentation/ao;
 
-    invoke-interface {v1, p0}, Lkik/android/chat/presentation/ac;->a(Lkik/android/chat/presentation/ac$a;)V
+    invoke-interface {v1, p0}, Lkik/android/chat/presentation/ao;->a(Lkik/android/chat/presentation/ao$a;)V
 
-    .line 466
-    iget-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->e:Lkik/android/chat/presentation/ac;
+    .line 464
+    iget-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->e:Lkik/android/chat/presentation/ao;
 
     iget-object v2, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->_searchBarView:Lkik/android/chat/view/SearchBarViewImpl;
 
-    invoke-interface {v1, v2}, Lkik/android/chat/presentation/ac;->a(Ljava/lang/Object;)V
+    invoke-interface {v1, v2}, Lkik/android/chat/presentation/ao;->a(Ljava/lang/Object;)V
 
-    .line 467
+    .line 465
     new-instance v2, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$d;
 
     iget-object v3, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->_searchBarView:Lkik/android/chat/view/SearchBarViewImpl;
@@ -1713,19 +1702,19 @@
 
     invoke-direct {v2, v3, v1}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$d;-><init>(Lkik/android/chat/view/SearchBarViewImpl;Landroid/view/View;)V
 
-    .line 468
+    .line 466
     iget-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->_friendsList:Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;
 
-    invoke-virtual {v1, v2}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->addItemDecoration(Landroid/support/v7/widget/RecyclerView$ItemDecoration;)V
+    invoke-virtual {v1, v2}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->a(Landroid/support/v7/widget/RecyclerView$ItemDecoration;)V
 
-    .line 470
+    .line 468
     new-instance v1, Lcom/kik/view/adapters/InviteFriendsRecyclerAdapter;
 
     invoke-direct {v1, p0}, Lcom/kik/view/adapters/InviteFriendsRecyclerAdapter;-><init>(Lcom/kik/view/adapters/InviteFriendsRecyclerAdapter$a;)V
 
     iput-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->p:Lcom/kik/view/adapters/InviteFriendsRecyclerAdapter;
 
-    .line 471
+    .line 469
     new-instance v1, Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;
 
     check-cast v0, Landroid/view/View;
@@ -1736,24 +1725,24 @@
 
     iput-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->q:Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;
 
-    .line 472
+    .line 470
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->q:Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;
 
-    invoke-virtual {v0, v7}, Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;->setHasStableIds(Z)V
+    invoke-virtual {v0}, Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;->a()V
 
-    .line 474
+    .line 472
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->_friendsList:Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;
 
     iget-object v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->q:Lcom/kik/view/adapters/AbmContactListRecyclerAdapter;
 
-    invoke-virtual {v0, v1}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->setAdapter(Landroid/support/v7/widget/RecyclerView$Adapter;)V
+    invoke-virtual {v0, v1}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->a(Landroid/support/v7/widget/RecyclerView$Adapter;)V
 
-    .line 475
+    .line 473
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->_friendsList:Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;
 
     invoke-virtual {v0, p0}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->a(Lcom/github/ksoichiro/android/observablescrollview/a;)V
 
-    .line 478
+    .line 476
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->a:Lkik/core/interfaces/IAddressBookIntegration;
 
     invoke-interface {v0}, Lkik/core/interfaces/IAddressBookIntegration;->c()Lcom/kik/events/Promise;
@@ -1764,9 +1753,9 @@
 
     invoke-direct {v1, p0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$5;-><init>(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
 
-    .line 504
+    .line 502
     return-object v6
 .end method
 
@@ -1774,21 +1763,21 @@
     .locals 5
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f100113
+            0x7f1100d5
         }
     .end annotation
 
     .prologue
     const/4 v4, 0x1
 
-    .line 516
+    .line 514
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->a:Lkik/core/interfaces/IAddressBookIntegration;
 
     invoke-interface {v0}, Lkik/core/interfaces/IAddressBookIntegration;->b()Z
 
     move-result v1
 
-    .line 517
+    .line 515
     new-instance v2, Landroid/widget/PopupMenu;
 
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->_anchor:Landroid/view/View;
@@ -1801,39 +1790,41 @@
 
     invoke-direct {v2, v0, v3}, Landroid/widget/PopupMenu;-><init>(Landroid/content/Context;Landroid/view/View;)V
 
-    .line 518
+    .line 516
     if-eqz v1, :cond_0
 
-    const v0, 0x7f0903f1
+    const v0, 0x7f0a03dd
 
-    .line 519
+    .line 517
     :goto_0
     invoke-virtual {v2}, Landroid/widget/PopupMenu;->getMenu()Landroid/view/Menu;
 
     move-result-object v3
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->getStringFromResource(I)Ljava/lang/String;
+    .line 2082
+    invoke-static {v0}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 517
     invoke-interface {v3, v4, v4, v4, v0}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
 
-    .line 520
+    .line 518
     invoke-static {p0, v1}, Lkik/android/chat/fragment/a;->a(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;Z)Landroid/widget/PopupMenu$OnMenuItemClickListener;
 
     move-result-object v0
 
     invoke-virtual {v2, v0}, Landroid/widget/PopupMenu;->setOnMenuItemClickListener(Landroid/widget/PopupMenu$OnMenuItemClickListener;)V
 
-    .line 534
+    .line 532
     invoke-virtual {v2}, Landroid/widget/PopupMenu;->show()V
 
-    .line 535
+    .line 533
     return-void
 
-    .line 518
+    .line 516
     :cond_0
-    const v0, 0x7f09004a
+    const v0, 0x7f0a0049
 
     goto :goto_0
 .end method

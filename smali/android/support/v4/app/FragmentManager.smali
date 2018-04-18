@@ -6,7 +6,6 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroid/support/v4/app/FragmentManager$FragmentLifecycleCallbacks;,
         Landroid/support/v4/app/FragmentManager$OnBackStackChangedListener;,
         Landroid/support/v4/app/FragmentManager$BackStackEntry;
     }
@@ -22,10 +21,10 @@
     .locals 0
 
     .prologue
-    .line 80
+    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 416
+    .line 128
     return-void
 .end method
 
@@ -33,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 409
+    .line 362
     sput-boolean p0, Landroid/support/v4/app/FragmentManagerImpl;->DEBUG:Z
 
-    .line 410
+    .line 363
     return-void
 .end method
 
@@ -90,7 +89,7 @@
     .end annotation
 
     .prologue
-    .line 166
+    .line 153
     invoke-virtual {p0}, Landroid/support/v4/app/FragmentManager;->beginTransaction()Landroid/support/v4/app/FragmentTransaction;
 
     move-result-object v0
@@ -119,14 +118,8 @@
 .method public abstract putFragment(Landroid/os/Bundle;Ljava/lang/String;Landroid/support/v4/app/Fragment;)V
 .end method
 
-.method public abstract registerFragmentLifecycleCallbacks(Landroid/support/v4/app/FragmentManager$FragmentLifecycleCallbacks;Z)V
-.end method
-
 .method public abstract removeOnBackStackChangedListener(Landroid/support/v4/app/FragmentManager$OnBackStackChangedListener;)V
 .end method
 
 .method public abstract saveFragmentInstanceState(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/Fragment$SavedState;
-.end method
-
-.method public abstract unregisterFragmentLifecycleCallbacks(Landroid/support/v4/app/FragmentManager$FragmentLifecycleCallbacks;)V
 .end method

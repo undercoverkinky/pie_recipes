@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="abc_action_bar_home_description">Navegar para a página inicial</string>
-    <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
-    <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
     <string name="abc_action_bar_up_description">Navegar para cima</string>
     <string name="abc_action_menu_overflow_description">Mais opções</string>
     <string name="abc_action_mode_done">Concluído</string>
     <string name="abc_activity_chooser_view_see_all">Ver tudo</string>
-    <string name="abc_activitychooserview_choose_application">Selecione um app</string>
-    <string name="abc_capital_off">DESATIVAR</string>
-    <string name="abc_capital_on">ATIVAR</string>
-    <string name="abc_search_hint">Pesquisar...</string>
+    <string name="abc_activitychooserview_choose_application">Selecione um aplicativo</string>
     <string name="abc_searchview_description_clear">Limpar consulta</string>
     <string name="abc_searchview_description_query">Consulta de pesquisa</string>
     <string name="abc_searchview_description_search">Pesquisar</string>
@@ -18,9 +13,6 @@
     <string name="abc_searchview_description_voice">Pesquisa por voz</string>
     <string name="abc_shareactionprovider_share_with">Compartilhar com</string>
     <string name="abc_shareactionprovider_share_with_application">Compartilhar com %s</string>
-    <string name="abc_toolbar_collapse_description">Recolher</string>
-    <string name="search_menu_title">Pesquisar</string>
-    <string name="status_bar_notification_info_overflow">999+</string>
     <string name="Blue">Azul</string>
     <string name="Gold">Dourado</string>
     <string name="Green">Verde</string>
@@ -51,8 +43,8 @@
     <string name="abm_options_dialog_hint">Pessoas que têm o seu telefone ou e-mail serão capazes de encontrá-lo</string>
     <string name="abm_options_dialog_prompt">Permitir que amigos me encontrem</string>
     <string name="abm_privacy_options_title">Opções de privacidade</string>
-    <string name="about_copyright_text">Copyright © 2018 Kik Interactive Inc Todos os direitos reservados</string>
-    <string name="about_copyright_text_extended">"Copyright © 2018 Kik Interactive Inc Todos os direitos reservados
+    <string name="about_copyright_text">Copyright © 2014 Kik Interactive Inc Todos os direitos reservados</string>
+    <string name="about_copyright_text_extended">"Copyright © 2014 Kik Interactive Inc Todos os direitos reservados
 
 Kik Interactive Inc
 420 Weber St North
@@ -60,7 +52,7 @@ Suite I
 Waterloo, ON
 Canada
 N2L 4E7"</string>
-    <string name="about_copyright_text_extended_link">"Copyright © 2018 Kik Interactive Inc Todos os direitos reservados
+    <string name="about_copyright_text_extended_link">"Copyright © 2014 Kik Interactive Inc Todos os direitos reservados
 
 Kik Interactive Inc
 420 Weber St North

@@ -36,13 +36,13 @@
     .locals 0
 
     .prologue
-    .line 857
+    .line 853
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 858
+    .line 854
     iput-object p1, p0, Lcom/crashlytics/android/core/h$a;->a:Lcom/crashlytics/android/core/i;
 
-    .line 859
+    .line 855
     return-void
 .end method
 
@@ -57,8 +57,8 @@
     .end annotation
 
     .prologue
-    .line 853
-    .line 1863
+    .line 849
+    .line 1859
     iget-object v0, p0, Lcom/crashlytics/android/core/h$a;->a:Lcom/crashlytics/android/core/i;
 
     invoke-virtual {v0}, Lcom/crashlytics/android/core/i;->b()Z
@@ -67,22 +67,22 @@
 
     if-nez v0, :cond_0
 
-    .line 1864
+    .line 1860
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     :goto_0
     return-object v0
 
-    .line 1867
+    .line 1863
     :cond_0
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
-    .line 1868
+    .line 1864
     iget-object v0, p0, Lcom/crashlytics/android/core/h$a;->a:Lcom/crashlytics/android/core/i;
 
     invoke-virtual {v0}, Lcom/crashlytics/android/core/i;->c()Z
 
-    .line 1870
+    .line 1866
     sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     goto :goto_0

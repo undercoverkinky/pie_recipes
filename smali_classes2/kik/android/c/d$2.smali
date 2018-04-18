@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/c/d;-><init>(Landroid/view/View;Landroid/app/Activity;Lkik/android/widget/a;Landroid/widget/FrameLayout;Landroid/hardware/Camera$ShutterCallback;Landroid/hardware/Camera$AutoFocusCallback;)V
+    value = Lkik/android/c/d;-><init>(Landroid/view/View;Landroid/app/Activity;Lkik/android/widget/c;Landroid/widget/FrameLayout;Landroid/hardware/Camera$ShutterCallback;Landroid/hardware/Camera$AutoFocusCallback;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 142
+    .line 139
     iput-object p1, p0, Lkik/android/c/d$2;->e:Lkik/android/c/d;
 
     invoke-direct {p0, p2, p3}, Lkik/android/c/o;-><init>(Landroid/view/TextureView;Lkik/android/c/b$c;)V
@@ -37,14 +37,14 @@
     .locals 1
 
     .prologue
-    .line 146
+    .line 143
     iget-object v0, p0, Lkik/android/c/d$2;->a:Landroid/view/View$OnTouchListener;
 
     invoke-virtual {p0, v0}, Lkik/android/c/d$2;->a(Landroid/view/View$OnTouchListener;)Lkik/android/c/b;
 
-    .line 147
+    .line 144
     invoke-super {p0, p1, p2, p3}, Lkik/android/c/o;->onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
 
-    .line 148
+    .line 145
     return-void
 .end method

@@ -33,8 +33,5 @@
 .method public abstract b()V
 .end method
 
-.method public abstract c()Lrx/k;
-.end method
-
-.method public abstract d()V
+.method public abstract c()Lrx/j;
 .end method

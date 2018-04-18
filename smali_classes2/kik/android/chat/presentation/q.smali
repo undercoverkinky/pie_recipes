@@ -2,4 +2,4 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lkik/android/chat/presentation/bu;
+.implements Lkik/android/chat/presentation/cb;

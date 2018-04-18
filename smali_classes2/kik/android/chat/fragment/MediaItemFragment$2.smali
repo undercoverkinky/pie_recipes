@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 232
+    .line 235
     iput-object p1, p0, Lkik/android/chat/fragment/MediaItemFragment$2;->a:Lkik/android/chat/fragment/MediaItemFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +40,12 @@
     .locals 4
 
     .prologue
-    .line 236
+    .line 239
     new-instance v0, Lkik/android/b/b;
 
     invoke-direct {v0}, Lkik/android/b/b;-><init>()V
 
-    .line 237
+    .line 240
     iget-object v1, p0, Lkik/android/chat/fragment/MediaItemFragment$2;->a:Lkik/android/chat/fragment/MediaItemFragment;
 
     invoke-static {v1}, Lkik/android/chat/fragment/MediaItemFragment;->a(Lkik/android/chat/fragment/MediaItemFragment;)Lkik/android/util/bz$c;
@@ -56,7 +56,7 @@
 
     move-result-object v1
 
-    .line 238
+    .line 241
     iget-object v2, p0, Lkik/android/chat/fragment/MediaItemFragment$2;->a:Lkik/android/chat/fragment/MediaItemFragment;
 
     iget-object v2, v2, Lkik/android/chat/fragment/MediaItemFragment;->_openButton:Landroid/view/ViewGroup;
@@ -75,8 +75,8 @@
 
     invoke-direct {v1, p0}, Lkik/android/chat/fragment/MediaItemFragment$2$1;-><init>(Lkik/android/chat/fragment/MediaItemFragment$2;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
 
-    .line 251
+    .line 254
     return-void
 .end method

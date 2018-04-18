@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/KikStartGroupFragment;->l_()V
+    value = Lkik/android/chat/fragment/KikStartGroupFragment;->g()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 699
+    .line 671
     iput-object p1, p0, Lkik/android/chat/fragment/KikStartGroupFragment$3;->a:Lkik/android/chat/fragment/KikStartGroupFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,43 +37,39 @@
 
 # virtual methods
 .method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 4
+    .locals 3
 
     .prologue
-    .line 703
+    .line 675
     iget-object v0, p0, Lkik/android/chat/fragment/KikStartGroupFragment$3;->a:Lkik/android/chat/fragment/KikStartGroupFragment;
 
-    iget-object v1, p0, Lkik/android/chat/fragment/KikStartGroupFragment$3;->a:Lkik/android/chat/fragment/KikStartGroupFragment;
+    const v1, 0x7f0a0487
 
-    const v2, 0x7f09049b
-
-    invoke-virtual {v1, v2}, Lkik/android/chat/fragment/KikStartGroupFragment;->getStringFromResource(I)Ljava/lang/String;
+    invoke-static {v1}, Lkik/android/chat/fragment/KikStartGroupFragment;->b(I)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v2, p0, Lkik/android/chat/fragment/KikStartGroupFragment$3;->a:Lkik/android/chat/fragment/KikStartGroupFragment;
+    const v2, 0x7f0a005b
 
-    const v3, 0x7f09005c
-
-    .line 704
-    invoke-virtual {v2, v3}, Lkik/android/chat/fragment/KikStartGroupFragment;->getStringFromResource(I)Ljava/lang/String;
+    .line 676
+    invoke-static {v2}, Lkik/android/chat/fragment/KikStartGroupFragment;->b(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 703
-    invoke-virtual {v0, v1, v2}, Lkik/android/chat/fragment/KikStartGroupFragment;->displayErrorDialog(Ljava/lang/String;Ljava/lang/String;)V
+    .line 675
+    invoke-virtual {v0, v1, v2}, Lkik/android/chat/fragment/KikStartGroupFragment;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 705
+    .line 677
     iget-object v0, p0, Lkik/android/chat/fragment/KikStartGroupFragment$3;->a:Lkik/android/chat/fragment/KikStartGroupFragment;
 
     iget-object v1, p0, Lkik/android/chat/fragment/KikStartGroupFragment$3;->a:Lkik/android/chat/fragment/KikStartGroupFragment;
 
-    invoke-static {v1}, Lkik/android/chat/fragment/KikStartGroupFragment;->j(Lkik/android/chat/fragment/KikStartGroupFragment;)Lkik/core/datatypes/p;
+    invoke-static {v1}, Lkik/android/chat/fragment/KikStartGroupFragment;->d(Lkik/android/chat/fragment/KikStartGroupFragment;)Lkik/core/datatypes/s;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkik/android/chat/fragment/KikStartGroupFragment;->b(Lkik/android/chat/fragment/KikStartGroupFragment;Lkik/core/datatypes/p;)V
+    invoke-static {v0, v1}, Lkik/android/chat/fragment/KikStartGroupFragment;->b(Lkik/android/chat/fragment/KikStartGroupFragment;Lkik/core/datatypes/s;)V
 
-    .line 706
+    .line 678
     return-void
 .end method

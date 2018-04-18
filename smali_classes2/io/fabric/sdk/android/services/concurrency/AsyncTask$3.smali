@@ -82,7 +82,6 @@
 
     const-string v2, "An error occured while executing doInBackground()"
 
-    .line 324
     invoke-virtual {v0}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0

@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 84
+    .line 92
     invoke-direct {p0}, Lcom/google/gson/o;-><init>()V
 
     return-void
@@ -47,28 +47,48 @@
 
     const/4 v2, 0x0
 
-    .line 86
+    .line 94
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->f()Lcom/google/gson/stream/JsonToken;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/google/gson/stream/JsonToken;->NULL:Lcom/google/gson/stream/JsonToken;
+
+    if-ne v0, v1, :cond_0
+
+    .line 95
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->j()V
+
+    .line 96
+    const/4 v0, 0x0
+
+    .line 131
+    :goto_0
+    return-object v0
+
+    .line 99
+    :cond_0
     new-instance v4, Ljava/util/BitSet;
 
     invoke-direct {v4}, Ljava/util/BitSet;-><init>()V
 
-    .line 87
+    .line 100
     invoke-virtual {p0}, Lcom/google/gson/stream/a;->a()V
 
-    .line 89
+    .line 102
     invoke-virtual {p0}, Lcom/google/gson/stream/a;->f()Lcom/google/gson/stream/JsonToken;
 
     move-result-object v0
 
     move v1, v2
 
-    .line 90
-    :goto_0
+    .line 103
+    :goto_1
     sget-object v5, Lcom/google/gson/stream/JsonToken;->END_ARRAY:Lcom/google/gson/stream/JsonToken;
 
-    if-eq v0, v5, :cond_3
+    if-eq v0, v5, :cond_4
 
-    .line 92
+    .line 105
     sget-object v5, Lcom/google/gson/internal/bind/i$23;->a:[I
 
     invoke-virtual {v0}, Lcom/google/gson/stream/JsonToken;->ordinal()I
@@ -79,7 +99,7 @@
 
     packed-switch v5, :pswitch_data_0
 
-    .line 109
+    .line 122
     new-instance v1, Lcom/google/gson/JsonSyntaxException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -100,59 +120,9 @@
 
     throw v1
 
-    .line 94
+    .line 107
     :pswitch_0
     invoke-virtual {p0}, Lcom/google/gson/stream/a;->m()I
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    move v0, v3
-
-    .line 111
-    :goto_1
-    if-eqz v0, :cond_0
-
-    .line 112
-    invoke-virtual {v4, v1}, Ljava/util/BitSet;->set(I)V
-
-    .line 114
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
-
-    .line 115
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->f()Lcom/google/gson/stream/JsonToken;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_1
-    move v0, v2
-
-    .line 94
-    goto :goto_1
-
-    .line 97
-    :pswitch_1
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->i()Z
-
-    move-result v0
-
-    goto :goto_1
-
-    .line 100
-    :pswitch_2
-    invoke-virtual {p0}, Lcom/google/gson/stream/a;->h()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 102
-    :try_start_0
-    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v0
 
@@ -160,14 +130,64 @@
 
     move v0, v3
 
+    .line 124
+    :goto_2
+    if-eqz v0, :cond_1
+
+    .line 125
+    invoke-virtual {v4, v1}, Ljava/util/BitSet;->set(I)V
+
+    .line 127
+    :cond_1
+    add-int/lit8 v1, v1, 0x1
+
+    .line 128
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->f()Lcom/google/gson/stream/JsonToken;
+
+    move-result-object v0
+
     goto :goto_1
 
     :cond_2
     move v0, v2
 
-    goto :goto_1
+    .line 107
+    goto :goto_2
 
-    .line 104
+    .line 110
+    :pswitch_1
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->i()Z
+
+    move-result v0
+
+    goto :goto_2
+
+    .line 113
+    :pswitch_2
+    invoke-virtual {p0}, Lcom/google/gson/stream/a;->h()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 115
+    :try_start_0
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    move v0, v3
+
+    goto :goto_2
+
+    :cond_3
+    move v0, v2
+
+    goto :goto_2
+
+    .line 117
     :catch_0
     move-exception v1
 
@@ -191,14 +211,16 @@
 
     throw v1
 
-    .line 117
-    :cond_3
+    .line 130
+    :cond_4
     invoke-virtual {p0}, Lcom/google/gson/stream/a;->b()V
 
-    .line 118
-    return-object v4
+    move-object v0, v4
 
-    .line 92
+    .line 131
+    goto :goto_0
+
+    .line 105
     nop
 
     :pswitch_data_0
@@ -220,7 +242,7 @@
     .end annotation
 
     .prologue
-    .line 84
+    .line 92
     invoke-static {p1}, Lcom/google/gson/internal/bind/i$12;->b(Lcom/google/gson/stream/a;)Ljava/util/BitSet;
 
     move-result-object v0
@@ -229,7 +251,7 @@
 .end method
 
 .method public final synthetic a(Lcom/google/gson/stream/b;Ljava/lang/Object;)V
-    .locals 6
+    .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -239,54 +261,62 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 84
+    .line 92
     check-cast p2, Ljava/util/BitSet;
 
-    .line 1122
+    .line 1135
+    if-nez p2, :cond_0
+
+    .line 1136
+    invoke-virtual {p1}, Lcom/google/gson/stream/b;->f()Lcom/google/gson/stream/b;
+
+    .line 1137
+    :goto_0
+    return-void
+
+    .line 1140
+    :cond_0
     invoke-virtual {p1}, Lcom/google/gson/stream/b;->b()Lcom/google/gson/stream/b;
 
-    .line 1123
-    invoke-virtual {p2}, Ljava/util/BitSet;->length()I
-
-    move-result v3
-
-    move v2, v1
-
-    :goto_0
-    if-ge v2, v3, :cond_1
-
-    .line 1124
-    invoke-virtual {p2, v2}, Ljava/util/BitSet;->get(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    .line 1125
-    :goto_1
-    int-to-long v4, v0
-
-    invoke-virtual {p1, v4, v5}, Lcom/google/gson/stream/b;->a(J)Lcom/google/gson/stream/b;
-
-    .line 1123
-    add-int/lit8 v0, v2, 0x1
-
-    move v2, v0
-
-    goto :goto_0
-
-    :cond_0
     move v0, v1
 
-    .line 1124
+    .line 1141
+    :goto_1
+    invoke-virtual {p2}, Ljava/util/BitSet;->length()I
+
+    move-result v2
+
+    if-ge v0, v2, :cond_2
+
+    .line 1142
+    invoke-virtual {p2, v0}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const/4 v2, 0x1
+
+    .line 1143
+    :goto_2
+    int-to-long v2, v2
+
+    invoke-virtual {p1, v2, v3}, Lcom/google/gson/stream/b;->a(J)Lcom/google/gson/stream/b;
+
+    .line 1141
+    add-int/lit8 v0, v0, 0x1
+
     goto :goto_1
 
-    .line 1127
     :cond_1
+    move v2, v1
+
+    .line 1142
+    goto :goto_2
+
+    .line 1145
+    :cond_2
     invoke-virtual {p1}, Lcom/google/gson/stream/b;->c()Lcom/google/gson/stream/b;
 
-    .line 84
-    return-void
+    goto :goto_0
 .end method

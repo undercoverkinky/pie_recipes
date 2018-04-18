@@ -1130,7 +1130,7 @@
     goto :goto_0
 .end method
 
-.method private static a([BII)Ljava/lang/String;
+.method public static a([BII)Ljava/lang/String;
     .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1535,7 +1535,7 @@
     :try_end_f
     .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_a
 
-    .line 1228
+    .line 1227
     :goto_c
     throw v0
 
@@ -2360,7 +2360,7 @@
     :try_end_a
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_6
 
-    .line 872
+    .line 871
     :goto_8
     throw v0
 

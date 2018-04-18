@@ -65,7 +65,7 @@
 
 
 # direct methods
-.method constructor <init>(Landroid/graphics/drawable/Drawable$Callback;)V
+.method public constructor <init>(Landroid/graphics/drawable/Drawable$Callback;)V
     .locals 3
 
     .prologue
@@ -73,91 +73,91 @@
 
     const/4 v1, 0x0
 
-    .line 498
+    .line 499
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 467
+    .line 468
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mTempBounds:Landroid/graphics/RectF;
 
-    .line 468
+    .line 469
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mPaint:Landroid/graphics/Paint;
 
-    .line 469
+    .line 470
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mArrowPaint:Landroid/graphics/Paint;
 
-    .line 473
+    .line 474
     iput v1, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mStartTrim:F
 
-    .line 474
+    .line 475
     iput v1, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mEndTrim:F
 
-    .line 475
+    .line 476
     iput v1, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mRotation:F
 
-    .line 476
+    .line 477
     const/high16 v0, 0x40a00000    # 5.0f
 
     iput v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mStrokeWidth:F
 
-    .line 477
+    .line 478
     const/high16 v0, 0x40200000    # 2.5f
 
     iput v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mStrokeInset:F
 
-    .line 494
+    .line 495
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0, v2}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mCirclePaint:Landroid/graphics/Paint;
 
-    .line 499
+    .line 500
     iput-object p1, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mCallback:Landroid/graphics/drawable/Drawable$Callback;
 
-    .line 501
+    .line 502
     iget-object v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Cap;->SQUARE:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 502
+    .line 503
     iget-object v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 503
+    .line 504
     iget-object v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 505
+    .line 506
     iget-object v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mArrowPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 506
+    .line 507
     iget-object v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mArrowPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 507
+    .line 508
     return-void
 .end method
 
@@ -169,31 +169,31 @@
 
     const/4 v6, 0x0
 
-    .line 550
+    .line 551
     iget-boolean v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mShowArrow:Z
 
     if-eqz v0, :cond_0
 
-    .line 551
+    .line 552
     iget-object v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mArrow:Landroid/graphics/Path;
 
     if-nez v0, :cond_1
 
-    .line 552
+    .line 553
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
     iput-object v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mArrow:Landroid/graphics/Path;
 
-    .line 553
+    .line 554
     iget-object v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mArrow:Landroid/graphics/Path;
 
     sget-object v1, Landroid/graphics/Path$FillType;->EVEN_ODD:Landroid/graphics/Path$FillType;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Path;->setFillType(Landroid/graphics/Path$FillType;)V
 
-    .line 560
+    .line 561
     :goto_0
     iget v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mStrokeInset:F
 
@@ -207,7 +207,7 @@
 
     mul-float/2addr v0, v1
 
-    .line 561
+    .line 562
     iget-wide v2, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mRingCenterRadius:D
 
     invoke-static {v8, v9}, Ljava/lang/Math;->cos(D)D
@@ -226,7 +226,7 @@
 
     double-to-float v1, v2
 
-    .line 562
+    .line 563
     iget-wide v2, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mRingCenterRadius:D
 
     invoke-static {v8, v9}, Ljava/lang/Math;->sin(D)D
@@ -245,12 +245,12 @@
 
     double-to-float v2, v2
 
-    .line 568
+    .line 569
     iget-object v3, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mArrow:Landroid/graphics/Path;
 
     invoke-virtual {v3, v6, v6}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 569
+    .line 570
     iget-object v3, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mArrow:Landroid/graphics/Path;
 
     iget v4, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mArrowWidth:I
@@ -263,7 +263,7 @@
 
     invoke-virtual {v3, v4, v6}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 570
+    .line 571
     iget-object v3, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mArrow:Landroid/graphics/Path;
 
     iget v4, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mArrowWidth:I
@@ -288,26 +288,26 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 572
+    .line 573
     iget-object v3, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mArrow:Landroid/graphics/Path;
 
     sub-float v0, v1, v0
 
     invoke-virtual {v3, v0, v2}, Landroid/graphics/Path;->offset(FF)V
 
-    .line 573
+    .line 574
     iget-object v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mArrow:Landroid/graphics/Path;
 
     invoke-virtual {v0}, Landroid/graphics/Path;->close()V
 
-    .line 575
+    .line 576
     iget-object v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mArrowPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mCurrentColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 576
+    .line 577
     add-float v0, p2, p3
 
     const/high16 v1, 0x40a00000    # 5.0f
@@ -318,26 +318,24 @@
 
     move-result v1
 
-    .line 577
     invoke-virtual {p4}, Landroid/graphics/Rect;->exactCenterY()F
 
     move-result v2
 
-    .line 576
     invoke-virtual {p1, v0, v1, v2}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    .line 578
+    .line 579
     iget-object v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mArrow:Landroid/graphics/Path;
 
     iget-object v1, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mArrowPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 580
+    .line 581
     :cond_0
     return-void
 
-    .line 555
+    .line 556
     :cond_1
     iget-object v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mArrow:Landroid/graphics/Path;
 
@@ -350,7 +348,7 @@
     .locals 2
 
     .prologue
-    .line 621
+    .line 622
     iget v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mColorIndex:I
 
     add-int/lit8 v0, v0, 0x1
@@ -368,14 +366,14 @@
     .locals 2
 
     .prologue
-    .line 788
+    .line 789
     iget-object v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mCallback:Landroid/graphics/drawable/Drawable$Callback;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, v1}, Landroid/graphics/drawable/Drawable$Callback;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 789
+    .line 790
     return-void
 .end method
 
@@ -387,20 +385,20 @@
     .prologue
     const/high16 v4, 0x43b40000    # 360.0f
 
-    .line 528
+    .line 529
     iget-object v1, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mTempBounds:Landroid/graphics/RectF;
 
-    .line 529
+    .line 530
     invoke-virtual {v1, p2}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
 
-    .line 530
+    .line 531
     iget v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mStrokeInset:F
 
     iget v2, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mStrokeInset:F
 
     invoke-virtual {v1, v0, v2}, Landroid/graphics/RectF;->inset(FF)V
 
-    .line 532
+    .line 533
     iget v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mStartTrim:F
 
     iget v2, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mRotation:F
@@ -409,7 +407,7 @@
 
     mul-float v2, v0, v4
 
-    .line 533
+    .line 534
     iget v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mEndTrim:F
 
     iget v3, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mRotation:F
@@ -418,17 +416,17 @@
 
     mul-float/2addr v0, v4
 
-    .line 534
+    .line 535
     sub-float v3, v0, v2
 
-    .line 536
+    .line 537
     iget-object v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mPaint:Landroid/graphics/Paint;
 
     iget v4, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mCurrentColor:I
 
     invoke-virtual {v0, v4}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 537
+    .line 538
     const/4 v4, 0x0
 
     iget-object v5, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mPaint:Landroid/graphics/Paint;
@@ -437,24 +435,24 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
-    .line 539
+    .line 540
     invoke-direct {p0, p1, v2, v3, p2}, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->drawTriangle(Landroid/graphics/Canvas;FFLandroid/graphics/Rect;)V
 
-    .line 541
+    .line 542
     iget v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mAlpha:I
 
     const/16 v1, 0xff
 
     if-ge v0, v1, :cond_0
 
-    .line 542
+    .line 543
     iget-object v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mCirclePaint:Landroid/graphics/Paint;
 
     iget v1, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mBackgroundColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 543
+    .line 544
     iget-object v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mCirclePaint:Landroid/graphics/Paint;
 
     iget v1, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mAlpha:I
@@ -463,7 +461,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 544
+    .line 545
     invoke-virtual {p2}, Landroid/graphics/Rect;->exactCenterX()F
 
     move-result v0
@@ -484,7 +482,7 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 547
+    .line 548
     :cond_0
     return-void
 .end method
@@ -493,7 +491,7 @@
     .locals 1
 
     .prologue
-    .line 648
+    .line 649
     iget v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mAlpha:I
 
     return v0
@@ -503,7 +501,7 @@
     .locals 2
 
     .prologue
-    .line 735
+    .line 736
     iget-wide v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mRingCenterRadius:D
 
     return-wide v0
@@ -513,7 +511,7 @@
     .locals 1
 
     .prologue
-    .line 696
+    .line 697
     iget v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mEndTrim:F
 
     return v0
@@ -523,7 +521,7 @@
     .locals 1
 
     .prologue
-    .line 723
+    .line 724
     iget v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mStrokeInset:F
 
     return v0
@@ -533,7 +531,7 @@
     .locals 2
 
     .prologue
-    .line 617
+    .line 618
     iget-object v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mColors:[I
 
     invoke-direct {p0}, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->getNextColorIndex()I
@@ -549,7 +547,7 @@
     .locals 1
 
     .prologue
-    .line 707
+    .line 708
     iget v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mRotation:F
 
     return v0
@@ -559,7 +557,7 @@
     .locals 1
 
     .prologue
-    .line 673
+    .line 674
     iget v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mStartTrim:F
 
     return v0
@@ -569,7 +567,7 @@
     .locals 2
 
     .prologue
-    .line 685
+    .line 686
     iget-object v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mColors:[I
 
     iget v1, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mColorIndex:I
@@ -583,7 +581,7 @@
     .locals 1
 
     .prologue
-    .line 681
+    .line 682
     iget v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mStartingEndTrim:F
 
     return v0
@@ -593,7 +591,7 @@
     .locals 1
 
     .prologue
-    .line 762
+    .line 763
     iget v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mStartingRotation:F
 
     return v0
@@ -603,7 +601,7 @@
     .locals 1
 
     .prologue
-    .line 677
+    .line 678
     iget v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mStartingStartTrim:F
 
     return v0
@@ -613,7 +611,7 @@
     .locals 1
 
     .prologue
-    .line 662
+    .line 663
     iget v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mStrokeWidth:F
 
     return v0
@@ -623,14 +621,14 @@
     .locals 1
 
     .prologue
-    .line 629
+    .line 630
     invoke-direct {p0}, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->getNextColorIndex()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->setColorIndex(I)V
 
-    .line 630
+    .line 631
     return-void
 .end method
 
@@ -640,25 +638,25 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 779
+    .line 780
     iput v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mStartingStartTrim:F
 
-    .line 780
+    .line 781
     iput v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mStartingEndTrim:F
 
-    .line 781
+    .line 782
     iput v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mStartingRotation:F
 
-    .line 782
+    .line 783
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->setStartTrim(F)V
 
-    .line 783
+    .line 784
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->setEndTrim(F)V
 
-    .line 784
+    .line 785
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->setRotation(F)V
 
-    .line 785
+    .line 786
     return-void
 .end method
 
@@ -666,10 +664,10 @@
     .locals 0
 
     .prologue
-    .line 641
+    .line 642
     iput p1, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mAlpha:I
 
-    .line 642
+    .line 643
     return-void
 .end method
 
@@ -677,17 +675,17 @@
     .locals 1
 
     .prologue
-    .line 520
+    .line 521
     float-to-int v0, p1
 
     iput v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mArrowWidth:I
 
-    .line 521
+    .line 522
     float-to-int v0, p2
 
     iput v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mArrowHeight:I
 
-    .line 522
+    .line 523
     return-void
 .end method
 
@@ -695,20 +693,20 @@
     .locals 1
 
     .prologue
-    .line 752
+    .line 753
     iget v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mArrowScale:F
 
     cmpl-float v0, p1, v0
 
     if-eqz v0, :cond_0
 
-    .line 753
+    .line 754
     iput p1, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mArrowScale:F
 
-    .line 754
+    .line 755
     invoke-direct {p0}, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->invalidateSelf()V
 
-    .line 756
+    .line 757
     :cond_0
     return-void
 .end method
@@ -717,10 +715,10 @@
     .locals 0
 
     .prologue
-    .line 510
+    .line 511
     iput p1, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mBackgroundColor:I
 
-    .line 511
+    .line 512
     return-void
 .end method
 
@@ -728,10 +726,10 @@
     .locals 1
 
     .prologue
-    .line 731
+    .line 732
     iput-wide p1, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mRingCenterRadius:D
 
-    .line 732
+    .line 733
     return-void
 .end method
 
@@ -739,10 +737,10 @@
     .locals 0
 
     .prologue
-    .line 601
+    .line 602
     iput p1, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mCurrentColor:I
 
-    .line 602
+    .line 603
     return-void
 .end method
 
@@ -750,15 +748,15 @@
     .locals 1
 
     .prologue
-    .line 633
+    .line 634
     iget-object v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
-    .line 634
+    .line 635
     invoke-direct {p0}, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->invalidateSelf()V
 
-    .line 635
+    .line 636
     return-void
 .end method
 
@@ -766,10 +764,10 @@
     .locals 2
 
     .prologue
-    .line 609
+    .line 610
     iput p1, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mColorIndex:I
 
-    .line 610
+    .line 611
     iget-object v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mColors:[I
 
     iget v1, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mColorIndex:I
@@ -778,7 +776,7 @@
 
     iput v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mCurrentColor:I
 
-    .line 611
+    .line 612
     return-void
 .end method
 
@@ -786,15 +784,15 @@
     .locals 1
 
     .prologue
-    .line 588
+    .line 589
     iput-object p1, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mColors:[I
 
-    .line 590
+    .line 591
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->setColorIndex(I)V
 
-    .line 591
+    .line 592
     return-void
 .end method
 
@@ -802,13 +800,13 @@
     .locals 0
 
     .prologue
-    .line 690
+    .line 691
     iput p1, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mEndTrim:F
 
-    .line 691
+    .line 692
     invoke-direct {p0}, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->invalidateSelf()V
 
-    .line 692
+    .line 693
     return-void
 .end method
 
@@ -818,14 +816,14 @@
     .prologue
     const/high16 v6, 0x40000000    # 2.0f
 
-    .line 711
+    .line 712
     invoke-static {p1, p2}, Ljava/lang/Math;->min(II)I
 
     move-result v0
 
     int-to-float v0, v0
 
-    .line 713
+    .line 714
     iget-wide v2, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mRingCenterRadius:D
 
     const-wide/16 v4, 0x0
@@ -840,7 +838,7 @@
 
     if-gez v1, :cond_1
 
-    .line 714
+    .line 715
     :cond_0
     iget v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mStrokeWidth:F
 
@@ -854,14 +852,14 @@
 
     double-to-float v0, v0
 
-    .line 718
+    .line 719
     :goto_0
     iput v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mStrokeInset:F
 
-    .line 719
+    .line 720
     return-void
 
-    .line 716
+    .line 717
     :cond_1
     div-float/2addr v0, v6
 
@@ -880,13 +878,13 @@
     .locals 0
 
     .prologue
-    .line 701
+    .line 702
     iput p1, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mRotation:F
 
-    .line 702
+    .line 703
     invoke-direct {p0}, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->invalidateSelf()V
 
-    .line 703
+    .line 704
     return-void
 .end method
 
@@ -894,18 +892,18 @@
     .locals 1
 
     .prologue
-    .line 742
+    .line 743
     iget-boolean v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mShowArrow:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 743
+    .line 744
     iput-boolean p1, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mShowArrow:Z
 
-    .line 744
+    .line 745
     invoke-direct {p0}, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->invalidateSelf()V
 
-    .line 746
+    .line 747
     :cond_0
     return-void
 .end method
@@ -914,13 +912,13 @@
     .locals 0
 
     .prologue
-    .line 667
+    .line 668
     iput p1, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mStartTrim:F
 
-    .line 668
+    .line 669
     invoke-direct {p0}, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->invalidateSelf()V
 
-    .line 669
+    .line 670
     return-void
 .end method
 
@@ -928,18 +926,18 @@
     .locals 1
 
     .prologue
-    .line 655
+    .line 656
     iput p1, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mStrokeWidth:F
 
-    .line 656
+    .line 657
     iget-object v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 657
+    .line 658
     invoke-direct {p0}, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->invalidateSelf()V
 
-    .line 658
+    .line 659
     return-void
 .end method
 
@@ -947,21 +945,21 @@
     .locals 1
 
     .prologue
-    .line 770
+    .line 771
     iget v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mStartTrim:F
 
     iput v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mStartingStartTrim:F
 
-    .line 771
+    .line 772
     iget v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mEndTrim:F
 
     iput v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mStartingEndTrim:F
 
-    .line 772
+    .line 773
     iget v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mRotation:F
 
     iput v0, p0, Landroid/support/v4/widget/MaterialProgressDrawable$Ring;->mStartingRotation:F
 
-    .line 773
+    .line 774
     return-void
 .end method

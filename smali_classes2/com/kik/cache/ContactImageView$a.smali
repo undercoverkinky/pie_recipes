@@ -33,40 +33,40 @@
 
     const/4 v2, 0x0
 
-    .line 33
+    .line 35
     const/16 v0, 0xa
 
     new-array v0, v0, [Landroid/graphics/Bitmap;
 
-    .line 34
+    .line 36
     invoke-static {v2}, Lkik/android/util/f;->a(I)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
     aput-object v1, v0, v2
 
-    .line 35
+    .line 37
     invoke-static {v3}, Lkik/android/util/f;->a(I)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
     aput-object v1, v0, v3
 
-    .line 36
+    .line 38
     invoke-static {v4}, Lkik/android/util/f;->a(I)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
     aput-object v1, v0, v4
 
-    .line 37
+    .line 39
     invoke-static {v5}, Lkik/android/util/f;->a(I)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
     aput-object v1, v0, v5
 
-    .line 38
+    .line 40
     invoke-static {v6}, Lkik/android/util/f;->a(I)Landroid/graphics/Bitmap;
 
     move-result-object v1
@@ -77,7 +77,7 @@
 
     const/4 v2, 0x5
 
-    .line 39
+    .line 41
     invoke-static {v2}, Lkik/android/util/f;->a(I)Landroid/graphics/Bitmap;
 
     move-result-object v2
@@ -88,7 +88,7 @@
 
     const/4 v2, 0x6
 
-    .line 40
+    .line 42
     invoke-static {v2}, Lkik/android/util/f;->a(I)Landroid/graphics/Bitmap;
 
     move-result-object v2
@@ -99,7 +99,7 @@
 
     const/4 v2, 0x7
 
-    .line 41
+    .line 43
     invoke-static {v2}, Lkik/android/util/f;->a(I)Landroid/graphics/Bitmap;
 
     move-result-object v2
@@ -110,7 +110,7 @@
 
     const/16 v2, 0x8
 
-    .line 42
+    .line 44
     invoke-static {v2}, Lkik/android/util/f;->a(I)Landroid/graphics/Bitmap;
 
     move-result-object v2
@@ -121,7 +121,7 @@
 
     const/16 v2, 0x9
 
-    .line 43
+    .line 45
     invoke-static {v2}, Lkik/android/util/f;->a(I)Landroid/graphics/Bitmap;
 
     move-result-object v2
@@ -130,7 +130,7 @@
 
     sput-object v0, Lcom/kik/cache/ContactImageView$a;->a:[Landroid/graphics/Bitmap;
 
-    .line 33
+    .line 35
     return-void
 .end method
 
@@ -140,25 +140,25 @@
     .prologue
     const/16 v0, 0xa
 
-    .line 48
+    .line 50
     if-ltz p0, :cond_0
 
     if-ge p0, v0, :cond_0
 
-    .line 49
+    .line 51
     sget-object v0, Lcom/kik/cache/ContactImageView$a;->a:[Landroid/graphics/Bitmap;
 
     aget-object v0, v0, p0
 
-    .line 55
+    .line 57
     :goto_0
     return-object v0
 
-    .line 51
+    .line 53
     :cond_0
     if-lt p0, v0, :cond_1
 
-    .line 52
+    .line 54
     sget-object v0, Lcom/kik/cache/ContactImageView$a;->a:[Landroid/graphics/Bitmap;
 
     const/16 v1, 0x9
@@ -167,7 +167,7 @@
 
     goto :goto_0
 
-    .line 55
+    .line 57
     :cond_1
     sget-object v0, Lcom/kik/cache/ContactImageView$a;->a:[Landroid/graphics/Bitmap;
 

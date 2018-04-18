@@ -29,18 +29,18 @@
 
 
 # virtual methods
-.method public final serialize(Ljava/lang/Long;)Lcom/google/gson/k;
+.method public final serialize(Ljava/lang/Long;)Lcom/google/gson/j;
     .locals 2
 
     .prologue
     .line 47
-    new-instance v0, Lcom/google/gson/m;
+    new-instance v0, Lcom/google/gson/l;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/google/gson/m;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/google/gson/l;-><init>(Ljava/lang/String;)V
 
     return-object v0
 .end method

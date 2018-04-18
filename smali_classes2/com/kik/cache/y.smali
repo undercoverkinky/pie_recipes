@@ -1,294 +1,179 @@
-.class public final Lcom/kik/cache/y;
-.super Ljava/lang/Object;
+.class public abstract Lcom/kik/cache/y;
+.super Lcom/android/volley/toolbox/i;
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/core/interfaces/o;
+.implements Lcom/kik/cache/ai;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
+        "<T:",
         "Ljava/lang/Object;",
-        "Lkik/core/interfaces/o",
-        "<",
-        "Landroid/graphics/Bitmap;",
-        ">;"
+        ">",
+        "Lcom/android/volley/toolbox/i;",
+        "Lcom/kik/cache/ai;"
     }
 .end annotation
 
 
-# instance fields
-.field private final a:Lrx/d;
+# static fields
+.field public static final b:Landroid/graphics/Bitmap$Config;
+
+.field public static final e:Lcom/android/volley/i$a;
+
+.field public static final f:Lcom/android/volley/i$b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lrx/d",
+            "Lcom/android/volley/i$b",
             "<",
-            "Lkik/core/datatypes/aa;",
+            "Landroid/graphics/Bitmap;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final b:Lcom/kik/cache/KikVolleyImageLoader;
 
-.field private final c:Landroid/content/res/Resources;
+# instance fields
+.field private a:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/kik/events/q",
+            "<",
+            "Landroid/graphics/Bitmap;",
+            "Landroid/graphics/Bitmap;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+.field c:Lcom/android/volley/i$b;
+
+.field d:Lcom/android/volley/i$a;
+
+.field private g:Z
+
+.field private h:Ljava/lang/String;
+
+.field private i:Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "TT;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Lrx/d;Lcom/kik/cache/KikVolleyImageLoader;Landroid/content/res/Resources;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
+
+    .prologue
+    .line 21
+    sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+
+    sput-object v0, Lcom/kik/cache/y;->b:Landroid/graphics/Bitmap$Config;
+
+    .line 30
+    new-instance v0, Lcom/kik/cache/y$1;
+
+    invoke-direct {v0}, Lcom/kik/cache/y$1;-><init>()V
+
+    sput-object v0, Lcom/kik/cache/y;->e:Lcom/android/volley/i$a;
+
+    .line 37
+    new-instance v0, Lcom/kik/cache/y$2;
+
+    invoke-direct {v0}, Lcom/kik/cache/y$2;-><init>()V
+
+    sput-object v0, Lcom/kik/cache/y;->f:Lcom/android/volley/i$b;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Object;Ljava/lang/String;Lcom/android/volley/i$b;IILandroid/graphics/Bitmap$Config;Lcom/android/volley/i$a;)V
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(",
-            "Lrx/d",
+            "(TT;",
+            "Ljava/lang/String;",
+            "Lcom/android/volley/i$b",
             "<",
-            "Lkik/core/datatypes/aa;",
-            ">;",
-            "Lcom/kik/cache/KikVolleyImageLoader;",
-            "Landroid/content/res/Resources;",
+            "Landroid/graphics/Bitmap;",
+            ">;II",
+            "Landroid/graphics/Bitmap$Config;",
+            "Lcom/android/volley/i$a;",
             ")V"
         }
     .end annotation
 
     .prologue
-    .line 28
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 47
+    if-eqz p3, :cond_0
 
-    .line 29
-    iput-object p1, p0, Lcom/kik/cache/y;->a:Lrx/d;
+    move-object v2, p3
 
-    .line 30
-    iput-object p2, p0, Lcom/kik/cache/y;->b:Lcom/kik/cache/KikVolleyImageLoader;
-
-    .line 31
-    iput-object p3, p0, Lcom/kik/cache/y;->c:Landroid/content/res/Resources;
-
-    .line 32
-    return-void
-.end method
-
-.method private static a(Landroid/content/res/Resources;II)Landroid/graphics/Bitmap;
-    .locals 2
-
-    .prologue
-    .line 103
-    const v0, 0x7f0a0074
-
-    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-
-    .line 104
-    const v1, 0x7f0a0073
-
-    invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v1
-
-    .line 105
-    if-gt p1, v0, :cond_0
-
-    if-gt p2, v0, :cond_0
-
-    .line 106
-    const v0, 0x7f020259
-
-    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/drawable/BitmapDrawable;
-
-    .line 114
     :goto_0
-    invoke-virtual {v0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
+    if-eqz p7, :cond_1
 
-    move-result-object v0
+    move-object v6, p7
 
-    return-object v0
+    :goto_1
+    move-object v0, p0
 
-    .line 108
-    :cond_0
-    if-gt p1, v1, :cond_1
+    move-object v1, p2
 
-    if-gt p2, v1, :cond_1
+    move v3, p4
 
-    .line 109
-    const v0, 0x7f020256
+    move v4, p5
 
-    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    move-object v5, p6
 
-    move-result-object v0
+    invoke-direct/range {v0 .. v6}, Lcom/android/volley/toolbox/i;-><init>(Ljava/lang/String;Lcom/android/volley/i$b;IILandroid/graphics/Bitmap$Config;Lcom/android/volley/i$a;)V
 
-    check-cast v0, Landroid/graphics/drawable/BitmapDrawable;
+    .line 22
+    new-instance v0, Ljava/util/ArrayList;
 
-    goto :goto_0
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 112
-    :cond_1
-    const v0, 0x7f020255
+    iput-object v0, p0, Lcom/kik/cache/y;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/drawable/BitmapDrawable;
-
-    goto :goto_0
-.end method
-
-.method private a(IILandroid/graphics/Bitmap;)Lrx/d;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(II",
-            "Landroid/graphics/Bitmap;",
-            ")",
-            "Lrx/d",
-            "<",
-            "Landroid/graphics/Bitmap;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 43
-    iget-object v0, p0, Lcom/kik/cache/y;->a:Lrx/d;
-
-    invoke-static {p0, p1, p2, p3}, Lcom/kik/cache/z;->a(Lcom/kik/cache/y;IILandroid/graphics/Bitmap;)Lrx/functions/g;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lrx/d;->d(Lrx/functions/g;)Lrx/d;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method static synthetic a(Lcom/kik/cache/y;IILandroid/graphics/Bitmap;Lkik/core/datatypes/aa;)Lrx/d;
-    .locals 7
-
-    .prologue
-    const/4 v5, 0x0
-
-    .line 44
-    if-nez p4, :cond_0
-
-    .line 45
-    iget-object v0, p0, Lcom/kik/cache/y;->c:Landroid/content/res/Resources;
-
-    invoke-static {v0, p1, p2}, Lcom/kik/cache/y;->a(Landroid/content/res/Resources;II)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrx/d;->b(Ljava/lang/Object;)Lrx/d;
-
-    move-result-object v0
-
-    .line 54
-    :goto_0
-    return-object v0
-
-    .line 49
-    :cond_0
-    sget-object v1, Lcom/kik/cache/KikImageRequest;->EMPTY_BITMAP_LISTENER:Lcom/android/volley/h$b;
-
-    sget-object v4, Lcom/kik/cache/KikImageRequest;->EMPTY_ERROR_LISTENER:Lcom/android/volley/h$a;
-
-    move-object v0, p4
-
-    move v2, p1
-
-    move v3, p2
-
-    move v6, v5
-
-    invoke-static/range {v0 .. v6}, Lcom/kik/cache/MyPicImageRequest;->getProfileRequest(Lkik/core/datatypes/aa;Lcom/android/volley/h$b;IILcom/android/volley/h$a;ZZ)Lcom/kik/cache/MyPicImageRequest;
-
-    move-result-object v0
-
-    .line 54
-    invoke-static {p0, v0, p1, p2}, Lcom/kik/cache/aa;->a(Lcom/kik/cache/y;Lcom/kik/cache/MyPicImageRequest;II)Lrx/functions/b;
-
-    move-result-object v0
-
-    sget-object v1, Lrx/Emitter$BackpressureMode;->LATEST:Lrx/Emitter$BackpressureMode;
-
-    invoke-static {v0, v1}, Lrx/d;->a(Lrx/functions/b;Lrx/Emitter$BackpressureMode;)Lrx/d;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/kik/cache/y$1;
-
-    invoke-direct {v1, p0, p3}, Lcom/kik/cache/y$1;-><init>(Lcom/kik/cache/y;Landroid/graphics/Bitmap;)V
-
-    .line 80
-    invoke-virtual {v0, v1}, Lrx/d;->e(Lrx/functions/g;)Lrx/d;
-
-    move-result-object v0
-
-    invoke-static {}, Lcom/kik/cache/ab;->a()Lrx/functions/g;
-
-    move-result-object v1
-
-    .line 96
-    invoke-virtual {v0, v1}, Lrx/d;->c(Lrx/functions/g;)Lrx/d;
-
-    move-result-object v0
-
-    goto :goto_0
-.end method
-
-.method static synthetic a(Lcom/kik/cache/y;Lcom/kik/cache/MyPicImageRequest;IILrx/Emitter;)V
-    .locals 6
-
-    .prologue
-    .line 57
-    iget-object v0, p0, Lcom/kik/cache/y;->b:Lcom/kik/cache/KikVolleyImageLoader;
-
-    new-instance v2, Lcom/kik/cache/y$2;
-
-    invoke-direct {v2, p0, p4}, Lcom/kik/cache/y$2;-><init>(Lcom/kik/cache/y;Lrx/Emitter;)V
-
-    const/4 v5, 0x0
-
-    move-object v1, p1
-
-    move v3, p2
-
-    move v4, p3
-
-    invoke-virtual/range {v0 .. v5}, Lcom/kik/cache/KikVolleyImageLoader;->b(Lcom/kik/cache/KikImageRequest;Lcom/kik/cache/KikVolleyImageLoader$d;IIZ)Lcom/kik/cache/KikVolleyImageLoader$c;
-
-    move-result-object v0
-
-    .line 76
-    invoke-virtual {v0}, Lcom/kik/cache/KikVolleyImageLoader$c;->b()Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    .line 77
+    .line 25
     const/4 v0, 0x0
 
-    invoke-interface {p4, v0}, Lrx/Emitter;->a(Ljava/lang/Object;)V
+    iput-boolean v0, p0, Lcom/kik/cache/y;->g:Z
 
-    .line 79
-    :cond_0
+    .line 48
+    iput-object p1, p0, Lcom/kik/cache/y;->i:Ljava/lang/Object;
+
+    .line 49
     return-void
+
+    .line 47
+    :cond_0
+    sget-object v2, Lcom/kik/cache/y;->f:Lcom/android/volley/i$b;
+
+    goto :goto_0
+
+    :cond_1
+    sget-object v6, Lcom/kik/cache/y;->e:Lcom/android/volley/i$a;
+
+    goto :goto_1
 .end method
 
 
 # virtual methods
-.method public final a(II)Lrx/d;
-    .locals 1
+.method protected a(Lcom/android/volley/g;)Lcom/android/volley/i;
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(II)",
-            "Lrx/d",
+            "(",
+            "Lcom/android/volley/g;",
+            ")",
+            "Lcom/android/volley/i",
             "<",
             "Landroid/graphics/Bitmap;",
             ">;"
@@ -296,30 +181,419 @@
     .end annotation
 
     .prologue
-    .line 37
-    iget-object v0, p0, Lcom/kik/cache/y;->c:Landroid/content/res/Resources;
+    .line 137
+    invoke-virtual {p0}, Lcom/kik/cache/y;->w()Z
 
-    invoke-static {v0, p1, p2}, Lcom/kik/cache/y;->a(Landroid/content/res/Resources;II)Landroid/graphics/Bitmap;
+    move-result v0
 
-    move-result-object v0
+    if-nez v0, :cond_0
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/kik/cache/y;->a(IILandroid/graphics/Bitmap;)Lrx/d;
+    .line 138
+    new-instance v0, Ljava/lang/IllegalAccessError;
+
+    const-string v1, "Non-nework sublclasses must not call through the super."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalAccessError;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 140
+    :cond_0
+    invoke-super {p0, p1}, Lcom/android/volley/toolbox/i;->a(Lcom/android/volley/g;)Lcom/android/volley/i;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final bridge synthetic a(IILjava/lang/Object;)Lrx/d;
+.method public a(II)Ljava/lang/String;
+    .locals 3
+
+    .prologue
+    .line 190
+    invoke-virtual {p0}, Lcom/kik/cache/y;->d()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 191
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, 0xc
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v2, "#W"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "#H"
+
+    .line 192
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 191
+    return-object v0
+.end method
+
+.method protected final a(Landroid/graphics/Bitmap;)V
+    .locals 2
+
+    .prologue
+    .line 85
+    const/4 v0, 0x0
+
+    .line 87
+    :try_start_0
+    invoke-virtual {p0, p1}, Lcom/kik/cache/y;->b(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    :try_end_0
+    .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    .line 92
+    :goto_0
+    invoke-super {p0, v0}, Lcom/android/volley/toolbox/i;->a(Landroid/graphics/Bitmap;)V
+
+    .line 93
+    iget-object v1, p0, Lcom/kik/cache/y;->c:Lcom/android/volley/i$b;
+
+    if-eqz v1, :cond_0
+
+    .line 94
+    iget-object v1, p0, Lcom/kik/cache/y;->c:Lcom/android/volley/i$b;
+
+    invoke-interface {v1, v0}, Lcom/android/volley/i$b;->a(Ljava/lang/Object;)V
+
+    .line 96
+    :cond_0
+    return-void
+
+    .line 90
+    :catch_0
+    move-exception v1
+
+    invoke-static {v1}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_0
+.end method
+
+.method public final a(Lcom/kik/events/q;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/kik/events/q",
+            "<",
+            "Landroid/graphics/Bitmap;",
+            "Landroid/graphics/Bitmap;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 100
+    iget-object v0, p0, Lcom/kik/cache/y;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 101
+    return-void
+.end method
+
+.method public final a(Ljava/lang/String;)V
     .locals 1
 
     .prologue
-    .line 21
-    check-cast p3, Landroid/graphics/Bitmap;
+    .line 60
+    if-eqz p1, :cond_0
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/kik/cache/y;->a(IILandroid/graphics/Bitmap;)Lrx/d;
+    const-string v0, "network-http-complete"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 61
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/kik/cache/y;->g:Z
+
+    .line 63
+    :cond_0
+    invoke-super {p0, p1}, Lcom/android/volley/toolbox/i;->a(Ljava/lang/String;)V
+
+    .line 64
+    return-void
+.end method
+
+.method public final a_(Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 210
+    iput-object p1, p0, Lcom/kik/cache/y;->h:Ljava/lang/String;
+
+    .line 211
+    return-void
+.end method
+
+.method protected final b(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    .locals 2
+
+    .prologue
+    .line 114
+    iget-object v0, p0, Lcom/kik/cache/y;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_0
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, Lcom/kik/events/q;
+
+    .line 115
+    if-eqz v0, :cond_0
+
+    .line 116
+    invoke-interface {v0, p1}, Lcom/kik/events/q;->a(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/Bitmap;
+
+    move-object p1, v0
+
+    goto :goto_0
+
+    .line 119
+    :cond_1
+    return-object p1
+.end method
+
+.method public b(Lcom/android/volley/a$a;)Lcom/android/volley/a$a;
+    .locals 4
+
+    .prologue
+    const-wide/32 v2, 0x1d4c0
+
+    .line 167
+    if-nez p1, :cond_0
+
+    .line 168
+    new-instance p1, Lcom/android/volley/a$a;
+
+    invoke-direct {p1}, Lcom/android/volley/a$a;-><init>()V
+
+    .line 169
+    const/4 v0, 0x0
+
+    new-array v0, v0, [B
+
+    iput-object v0, p1, Lcom/android/volley/a$a;->a:[B
+
+    .line 170
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p1, Lcom/android/volley/a$a;->e:J
+
+    .line 171
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p1, Lcom/android/volley/a$a;->d:J
+
+    .line 181
+    :goto_0
+    return-object p1
+
+    .line 175
+    :cond_0
+    invoke-virtual {p1}, Lcom/android/volley/a$a;->a()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 177
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    .line 179
+    :cond_1
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p1, Lcom/android/volley/a$a;->e:J
+
+    .line 180
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p1, Lcom/android/volley/a$a;->d:J
+
+    goto :goto_0
+.end method
+
+.method public final b(Lcom/android/volley/VolleyError;)V
+    .locals 1
+
+    .prologue
+    .line 106
+    invoke-super {p0, p1}, Lcom/android/volley/toolbox/i;->b(Lcom/android/volley/VolleyError;)V
+
+    .line 107
+    iget-object v0, p0, Lcom/kik/cache/y;->d:Lcom/android/volley/i$a;
+
+    if-eqz v0, :cond_0
+
+    .line 108
+    iget-object v0, p0, Lcom/kik/cache/y;->d:Lcom/android/volley/i$a;
+
+    invoke-interface {v0, p1}, Lcom/android/volley/i$a;->a(Lcom/android/volley/VolleyError;)V
+
+    .line 110
+    :cond_0
+    return-void
+.end method
+
+.method protected final synthetic b(Ljava/lang/Object;)V
+    .locals 0
+
+    .prologue
+    .line 19
+    check-cast p1, Landroid/graphics/Bitmap;
+
+    invoke-virtual {p0, p1}, Lcom/kik/cache/y;->a(Landroid/graphics/Bitmap;)V
+
+    return-void
+.end method
+
+.method public final d()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 198
+    iget-object v0, p0, Lcom/kik/cache/y;->h:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/kik/cache/y;->h:Ljava/lang/String;
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    invoke-super {p0}, Lcom/android/volley/toolbox/i;->d()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public d_()Z
+    .locals 1
+
+    .prologue
+    .line 156
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final t()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 204
+    invoke-super {p0}, Lcom/android/volley/toolbox/i;->d()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final v()Z
+    .locals 1
+
+    .prologue
+    .line 53
+    iget-boolean v0, p0, Lcom/kik/cache/y;->g:Z
+
+    return v0
+.end method
+
+.method public w()Z
+    .locals 1
+
+    .prologue
+    .line 131
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method protected final x()Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
+
+    .prologue
+    .line 145
+    iget-object v0, p0, Lcom/kik/cache/y;->i:Ljava/lang/Object;
 
     return-object v0
 .end method

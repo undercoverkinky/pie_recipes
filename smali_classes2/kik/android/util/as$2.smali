@@ -1,14 +1,11 @@
 .class final Lkik/android/util/as$2;
-.super Ljava/lang/Object;
+.super Lcom/kik/events/l;
 .source "SourceFile"
-
-# interfaces
-.implements Lcom/kik/events/e;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lkik/android/util/as;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lkik/android/util/as;->handleMessage(Landroid/os/Message;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,52 +13,45 @@
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lcom/kik/events/e",
-        "<",
-        "Ljava/lang/Void;",
-        ">;"
-    }
-.end annotation
-
 
 # instance fields
-.field final synthetic a:Lkik/android/util/as;
+.field final synthetic a:Lkik/core/datatypes/Message;
+
+.field final synthetic b:Lkik/android/util/as;
 
 
 # direct methods
-.method constructor <init>(Lkik/android/util/as;)V
+.method constructor <init>(Lkik/android/util/as;Lkik/core/datatypes/Message;)V
     .locals 0
 
     .prologue
-    .line 106
-    iput-object p1, p0, Lkik/android/util/as$2;->a:Lkik/android/util/as;
+    .line 85
+    iput-object p1, p0, Lkik/android/util/as$2;->b:Lkik/android/util/as;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lkik/android/util/as$2;->a:Lkik/core/datatypes/Message;
+
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final a(Ljava/lang/Object;)V
     .locals 2
 
     .prologue
-    .line 106
-    .line 1110
-    iget-object v0, p0, Lkik/android/util/as$2;->a:Lkik/android/util/as;
+    .line 90
+    iget-object v0, p0, Lkik/android/util/as$2;->b:Lkik/android/util/as;
 
-    invoke-static {v0}, Lkik/android/util/as;->g(Lkik/android/util/as;)Lkik/android/util/ar;
+    invoke-static {v0}, Lkik/android/util/as;->e(Lkik/android/util/as;)Lkik/core/interfaces/j;
 
     move-result-object v0
 
-    const/16 v1, 0x3ff
+    iget-object v1, p0, Lkik/android/util/as$2;->a:Lkik/core/datatypes/Message;
 
-    invoke-virtual {v0, v1}, Lkik/android/util/ar;->removeMessages(I)V
+    invoke-interface {v0, v1}, Lkik/core/interfaces/j;->d(Lkik/core/datatypes/Message;)Lcom/kik/events/Promise;
 
-    .line 106
+    .line 91
     return-void
 .end method

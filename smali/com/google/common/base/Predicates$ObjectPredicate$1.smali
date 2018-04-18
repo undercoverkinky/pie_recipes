@@ -19,7 +19,7 @@
     .locals 1
 
     .prologue
-    .line 281
+    .line 277
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/common/base/Predicates$ObjectPredicate;-><init>(Ljava/lang/String;ILcom/google/common/base/Predicates$1;)V
@@ -37,7 +37,7 @@
     .end param
 
     .prologue
-    .line 284
+    .line 279
     const/4 v0, 0x1
 
     return v0
@@ -47,7 +47,7 @@
     .locals 1
 
     .prologue
-    .line 289
+    .line 282
     const-string v0, "Predicates.alwaysTrue()"
 
     return-object v0

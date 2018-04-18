@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 561
+    .line 538
     invoke-direct {p0}, Lcom/kik/ui/fragment/FragmentBase$FragmentBundle;-><init>()V
 
     return-void
@@ -29,11 +29,11 @@
     .locals 1
 
     .prologue
-    .line 561
-    .line 1597
+    .line 538
+    .line 1574
     const-string v0, "SendToFragment.EXTRA_AUTOMATICALLY_OPEN_CHAT"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/SendToFragment$a;->g(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/SendToFragment$a;->k(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -41,7 +41,7 @@
 
     move-result v0
 
-    .line 561
+    .line 538
     return v0
 .end method
 
@@ -49,15 +49,15 @@
     .locals 2
 
     .prologue
-    .line 561
-    .line 2586
+    .line 538
+    .line 2563
     const-string v0, "SendToFragment.EXTRA_DEPENDENT_PROMISE"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/SendToFragment$a;->i(Ljava/lang/String;)J
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/SendToFragment$a;->n(Ljava/lang/String;)J
 
     move-result-wide v0
 
-    .line 561
+    .line 538
     return-wide v0
 .end method
 
@@ -65,11 +65,11 @@
     .locals 1
 
     .prologue
-    .line 561
-    .line 2608
+    .line 538
+    .line 2585
     const-string v0, "SendToFragment.IS_FORWARD"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/SendToFragment$a;->g(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/SendToFragment$a;->k(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -77,7 +77,7 @@
 
     move-result v0
 
-    .line 561
+    .line 538
     return v0
 .end method
 
@@ -87,12 +87,12 @@
     .locals 1
 
     .prologue
-    .line 580
+    .line 557
     const-string v0, "SendToFragment.EXTRA_DEPENDENT_PROMISE"
 
     invoke-virtual {p0, v0, p1, p2}, Lkik/android/chat/fragment/SendToFragment$a;->a(Ljava/lang/String;J)V
 
-    .line 581
+    .line 558
     return-object p0
 .end method
 
@@ -100,12 +100,12 @@
     .locals 1
 
     .prologue
-    .line 591
+    .line 568
     const-string v0, "SendToFragment.EXTRA_AUTOMATICALLY_OPEN_CHAT"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/SendToFragment$a;->b(Ljava/lang/String;Z)V
 
-    .line 592
+    .line 569
     return-object p0
 .end method
 
@@ -113,13 +113,13 @@
     .locals 2
 
     .prologue
-    .line 602
+    .line 579
     const-string v0, "SendToFragment.IS_FORWARD"
 
     const/4 v1, 0x1
 
     invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/SendToFragment$a;->b(Ljava/lang/String;Z)V
 
-    .line 603
+    .line 580
     return-object p0
 .end method

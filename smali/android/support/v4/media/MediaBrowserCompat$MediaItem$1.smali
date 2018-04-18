@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 489
+    .line 347
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,13 +41,15 @@
 
 # virtual methods
 .method public final createFromParcel(Landroid/os/Parcel;)Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 492
+    .line 350
     new-instance v0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
 
-    invoke-direct {v0, p1}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;-><init>(Landroid/os/Parcel;)V
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;-><init>(Landroid/os/Parcel;Landroid/support/v4/media/MediaBrowserCompat$1;)V
 
     return-object v0
 .end method
@@ -56,7 +58,7 @@
     .locals 1
 
     .prologue
-    .line 489
+    .line 347
     invoke-virtual {p0, p1}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem$1;->createFromParcel(Landroid/os/Parcel;)Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
 
     move-result-object v0
@@ -68,7 +70,7 @@
     .locals 1
 
     .prologue
-    .line 497
+    .line 355
     new-array v0, p1, [Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
 
     return-object v0
@@ -78,7 +80,7 @@
     .locals 1
 
     .prologue
-    .line 489
+    .line 347
     invoke-virtual {p0, p1}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem$1;->newArray(I)[Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
 
     move-result-object v0

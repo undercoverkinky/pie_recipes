@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/KikAddToBlockFragment;->c(Ljava/lang/String;Ljava/lang/String;)V
+    value = Lkik/android/chat/fragment/KikAddToBlockFragment;->e(Ljava/lang/String;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 71
+    .line 61
     iput-object p1, p0, Lkik/android/chat/fragment/KikAddToBlockFragment$3;->a:Lkik/android/chat/fragment/KikAddToBlockFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,9 +40,9 @@
     .locals 0
 
     .prologue
-    .line 76
+    .line 66
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 77
+    .line 67
     return-void
 .end method

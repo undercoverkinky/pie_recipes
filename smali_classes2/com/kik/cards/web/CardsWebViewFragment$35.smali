@@ -30,7 +30,7 @@
     .locals 0
 
     .prologue
-    .line 2121
+    .line 2075
     iput-object p1, p0, Lcom/kik/cards/web/CardsWebViewFragment$35;->c:Lcom/kik/cards/web/CardsWebViewFragment;
 
     iput-object p2, p0, Lcom/kik/cards/web/CardsWebViewFragment$35;->a:Landroid/webkit/GeolocationPermissions$Callback;
@@ -48,7 +48,7 @@
     .locals 4
 
     .prologue
-    .line 2125
+    .line 2079
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$35;->a:Landroid/webkit/GeolocationPermissions$Callback;
 
     iget-object v1, p0, Lcom/kik/cards/web/CardsWebViewFragment$35;->b:Ljava/lang/String;
@@ -59,7 +59,7 @@
 
     invoke-interface {v0, v1, v2, v3}, Landroid/webkit/GeolocationPermissions$Callback;->invoke(Ljava/lang/String;ZZ)V
 
-    .line 2126
+    .line 2080
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$35;->c:Lcom/kik/cards/web/CardsWebViewFragment;
 
     iget-object v0, v0, Lcom/kik/cards/web/CardsWebViewFragment;->u:Lkik/android/b/g;
@@ -68,6 +68,6 @@
 
     invoke-virtual {v0, v1}, Lkik/android/b/g;->d(Ljava/lang/String;)Lcom/kik/events/Promise;
 
-    .line 2127
+    .line 2081
     return-void
 .end method

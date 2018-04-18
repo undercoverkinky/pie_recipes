@@ -7,12 +7,12 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/kik/events/m;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/kik/events/m;->b(Lcom/kik/events/c;)Lcom/kik/events/Promise;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x8
     name = null
 .end annotation
 
@@ -20,24 +20,22 @@
     value = {
         "Ljava/lang/Object;",
         "Lcom/kik/events/e",
-        "<",
-        "Ljava/lang/Object;",
-        ">;"
+        "<TT;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/kik/events/m;
+.field final synthetic a:Lcom/kik/events/Promise;
 
 
 # direct methods
-.method constructor <init>(Lcom/kik/events/m;)V
+.method constructor <init>(Lcom/kik/events/Promise;)V
     .locals 0
 
     .prologue
-    .line 21
-    iput-object p1, p0, Lcom/kik/events/m$1;->a:Lcom/kik/events/m;
+    .line 45
+    iput-object p1, p0, Lcom/kik/events/m$1;->a:Lcom/kik/events/Promise;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,16 +45,23 @@
 
 # virtual methods
 .method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            "TT;)V"
+        }
+    .end annotation
 
     .prologue
-    .line 26
-    iget-object v0, p0, Lcom/kik/events/m$1;->a:Lcom/kik/events/m;
+    .line 49
+    iget-object v0, p0, Lcom/kik/events/m$1;->a:Lcom/kik/events/Promise;
 
-    check-cast p1, Lcom/kik/events/o;
+    const/4 v1, 0x0
 
-    invoke-static {v0, p1}, Lcom/kik/events/m;->a(Lcom/kik/events/m;Lcom/kik/events/o;)V
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Ljava/lang/Object;)V
 
-    .line 27
+    .line 50
     return-void
 .end method

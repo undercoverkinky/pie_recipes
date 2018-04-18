@@ -31,39 +31,40 @@
     return-void
 .end method
 
-.method public static a(III)I
-    .locals 0
+.method public static a(I)I
+    .locals 2
 
     .prologue
+    const/16 v0, 0x3e7
+
+    const/16 v1, -0x3e7
+
     .line 1079
-    if-le p0, p2, :cond_0
+    if-le p0, v0, :cond_1
+
+    move p0, v0
 
     .line 1085
+    :cond_0
     :goto_0
-    return p2
+    return p0
 
     .line 1082
-    :cond_0
-    if-ge p0, p1, :cond_1
+    :cond_1
+    if-ge p0, v1, :cond_0
 
-    move p2, p1
+    move p0, v1
 
     .line 1083
     goto :goto_0
-
-    :cond_1
-    move p2, p0
-
-    .line 1085
-    goto :goto_0
 .end method
 
-.method public static a(ILandroid/content/res/Resources;)I
+.method public static a(Landroid/content/res/Resources;)I
     .locals 2
 
     .prologue
     .line 520
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     move-result-object v0
 
@@ -81,7 +82,7 @@
 
     .line 526
     :cond_0
-    int-to-float v1, p0
+    const/high16 v1, 0x41000000    # 8.0f
 
     mul-float/2addr v0, v1
 
@@ -247,7 +248,7 @@
     goto :goto_0
 .end method
 
-.method private static a(Lkik/core/datatypes/q;)Landroid/graphics/Bitmap;
+.method private static a(Lkik/core/datatypes/t;)Landroid/graphics/Bitmap;
     .locals 4
 
     .prologue
@@ -263,11 +264,11 @@
 
     .line 438
     :cond_1
-    invoke-static {}, Lkik/core/util/g;->a()Lkik/core/util/g;
+    invoke-static {}, Lkik/core/util/i;->a()Lkik/core/util/i;
 
     move-result-object v1
 
-    invoke-virtual {v1, p0}, Lkik/core/util/g;->a(Lkik/core/datatypes/q;)[B
+    invoke-virtual {v1, p0}, Lkik/core/util/i;->a(Lkik/core/datatypes/t;)[B
 
     move-result-object v1
 
@@ -335,17 +336,17 @@
     :cond_1
     const-string v1, "android"
 
-    .line 1786
+    .line 1652
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1787
-    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->g()Ljava/util/ArrayList;
+    .line 1653
+    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->f()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 1789
+    .line 1655
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -364,20 +365,20 @@
 
     check-cast v0, Lcom/kik/contentlink/model/attachments/ContentUri;
 
-    .line 1791
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->b()Ljava/lang/String;
+    .line 1657
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->c()Ljava/lang/String;
 
     move-result-object v5
 
     if-nez v5, :cond_2
 
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->b()Ljava/lang/String;
 
     move-result-object v5
 
     if-eqz v5, :cond_3
 
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->b()Ljava/lang/String;
 
     move-result-object v5
 
@@ -387,7 +388,7 @@
 
     if-nez v5, :cond_3
 
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->b()Ljava/lang/String;
 
     move-result-object v5
 
@@ -399,9 +400,9 @@
 
     if-eqz v5, :cond_2
 
-    .line 1792
+    .line 1658
     :cond_3
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->e()Ljava/lang/String;
 
     move-result-object v0
 
@@ -429,11 +430,11 @@
     check-cast v0, Ljava/lang/String;
 
     .line 380
-    invoke-static {p2}, Lcom/kik/cards/web/s;->m(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/kik/cards/web/r;->l(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v0}, Lcom/kik/cards/web/s;->m(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/kik/cards/web/r;->l(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -461,7 +462,7 @@
 
     .line 386
     :goto_2
-    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->g()Ljava/util/ArrayList;
+    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->f()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -485,19 +486,19 @@
     .line 387
     if-eqz v0, :cond_6
 
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->c()Ljava/lang/String;
 
     move-result-object v4
 
     if-nez v4, :cond_6
 
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->b()Ljava/lang/String;
 
     move-result-object v4
 
     if-eqz v4, :cond_7
 
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->b()Ljava/lang/String;
 
     move-result-object v4
 
@@ -509,7 +510,7 @@
 
     if-nez v4, :cond_7
 
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->b()Ljava/lang/String;
 
     move-result-object v4
 
@@ -523,7 +524,7 @@
 
     .line 388
     :cond_7
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->d()Ljava/lang/String;
 
     move-result-object v3
 
@@ -557,11 +558,11 @@
     if-nez v0, :cond_c
 
     .line 397
-    const v0, 0x7f090434
+    const v0, 0x7f0a0420
 
     new-array v3, v8, [Ljava/lang/Object;
 
-    invoke-static {p0}, Lkik/android/util/o;->a(Lkik/core/datatypes/messageExtensions/ContentMessage;)Ljava/lang/String;
+    invoke-static {p0}, Lkik/android/util/p;->a(Lkik/core/datatypes/messageExtensions/ContentMessage;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -582,11 +583,11 @@
     .line 412
     const-string v0, "icon"
 
-    invoke-virtual {p0, v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->a(Ljava/lang/String;)Lkik/core/datatypes/q;
+    invoke-virtual {p0, v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->a(Ljava/lang/String;)Lkik/core/datatypes/t;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkik/android/util/bz;->a(Lkik/core/datatypes/q;)Landroid/graphics/Bitmap;
+    invoke-static {v0}, Lkik/android/util/bz;->a(Lkik/core/datatypes/t;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -598,7 +599,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0200cb
+    const v2, 0x7f0200e0
 
     invoke-static {v0, v2}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -623,11 +624,11 @@
     if-eqz v0, :cond_b
 
     .line 402
-    const v0, 0x7f0903f5
+    const v0, 0x7f0a03e1
 
     new-array v2, v8, [Ljava/lang/Object;
 
-    invoke-static {p0}, Lkik/android/util/o;->a(Lkik/core/datatypes/messageExtensions/ContentMessage;)Ljava/lang/String;
+    invoke-static {p0}, Lkik/android/util/p;->a(Lkik/core/datatypes/messageExtensions/ContentMessage;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -642,7 +643,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0202ee
+    const v3, 0x7f0202b2
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -656,11 +657,11 @@
 
     .line 407
     :cond_b
-    const v0, 0x7f090435
+    const v0, 0x7f0a0421
 
     new-array v3, v8, [Ljava/lang/Object;
 
-    invoke-static {p0}, Lkik/android/util/o;->a(Lkik/core/datatypes/messageExtensions/ContentMessage;)Ljava/lang/String;
+    invoke-static {p0}, Lkik/android/util/p;->a(Lkik/core/datatypes/messageExtensions/ContentMessage;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -742,6 +743,65 @@
     move-result-object v0
 
     invoke-virtual {v0, v1, v1}, Landroid/view/Window;->setFlags(II)V
+
+    goto :goto_0
+.end method
+
+.method public static a(Landroid/view/View;F)V
+    .locals 4
+
+    .prologue
+    .line 504
+    if-eqz p0, :cond_0
+
+    const/4 v0, 0x0
+
+    cmpg-float v0, p1, v0
+
+    if-ltz v0, :cond_0
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    cmpl-float v0, p1, v0
+
+    if-lez v0, :cond_1
+
+    .line 516
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 507
+    :cond_1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0xb
+
+    if-ge v0, v1, :cond_2
+
+    .line 508
+    new-instance v0, Landroid/view/animation/AlphaAnimation;
+
+    invoke-direct {v0, p1, p1}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
+
+    .line 509
+    const-wide/16 v2, 0x0
+
+    invoke-virtual {v0, v2, v3}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
+
+    .line 510
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/view/animation/AlphaAnimation;->setFillAfter(Z)V
+
+    .line 511
+    invoke-virtual {p0, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
+
+    goto :goto_0
+
+    .line 514
+    :cond_2
+    invoke-virtual {p0, p1}, Landroid/view/View;->setAlpha(F)V
 
     goto :goto_0
 .end method
@@ -853,33 +913,33 @@
     .locals 1
 
     .prologue
-    .line 885
+    .line 3885
     invoke-virtual {p3}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 886
+    .line 3886
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    .line 888
+    .line 3888
     invoke-virtual {p1, p0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 889
+    .line 3889
     invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
 
-    .line 890
+    .line 3890
     if-eqz p2, :cond_0
 
-    .line 891
+    .line 3891
     invoke-interface {p2, p3}, Landroid/animation/ValueAnimator$AnimatorUpdateListener;->onAnimationUpdate(Landroid/animation/ValueAnimator;)V
 
-    .line 893
+    .line 0
     :cond_0
     return-void
 .end method
@@ -902,9 +962,9 @@
 
     const/4 v1, 0x0
 
-    new-instance v2, Lkik/android/util/br$a;
+    new-instance v2, Lkik/android/util/bt$a;
 
-    invoke-direct {v2}, Lkik/android/util/br$a;-><init>()V
+    invoke-direct {v2}, Lkik/android/util/bt$a;-><init>()V
 
     aput-object v2, v0, v1
 
@@ -1060,6 +1120,35 @@
     goto :goto_0
 .end method
 
+.method public static a(Landroid/widget/TextView;Lkik/android/util/bz$d;)V
+    .locals 4
+
+    .prologue
+    .line 624
+    if-eqz p0, :cond_0
+
+    if-nez p1, :cond_1
+
+    .line 628
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 627
+    :cond_1
+    iget v0, p1, Lkik/android/util/bz$d;->a:F
+
+    iget v1, p1, Lkik/android/util/bz$d;->b:F
+
+    iget v2, p1, Lkik/android/util/bz$d;->c:F
+
+    iget v3, p1, Lkik/android/util/bz$d;->d:I
+
+    invoke-virtual {p0, v0, v1, v2, v3}, Landroid/widget/TextView;->setShadowLayer(FFFI)V
+
+    goto :goto_0
+.end method
+
 .method public static a(Ljava/lang/CharSequence;Landroid/widget/TextView;)V
     .locals 0
 
@@ -1172,13 +1261,15 @@
     .locals 2
 
     .prologue
-    .line 808
+    .line 0
+    .line 3808
     invoke-static/range {p0 .. p7}, Lkik/android/util/bz;->a(Landroid/view/View;ILandroid/animation/ValueAnimator$AnimatorUpdateListener;Landroid/animation/Animator$AnimatorListener;JJ)Landroid/animation/Animator;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/animation/Animator;->start()V
 
+    .line 0
     return-void
 .end method
 
@@ -1495,6 +1586,8 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
 
+    invoke-static {v0}, Lkik/android/util/ax;->c(Ljava/lang/Throwable;)V
+
     goto :goto_0
 
     .line 3068
@@ -1514,6 +1607,8 @@
     const-string v1, "Child of footer view root is not a ViewGroup!"
 
     invoke-direct {v0, v1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v0}, Lkik/android/util/ax;->c(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
@@ -1536,7 +1631,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lkik/android/util/bz$b;->a()Lkik/android/util/bz$b;
+    invoke-virtual {v0, v3}, Lkik/android/util/bz$b;->b(I)Lkik/android/util/bz$b;
 
     move-result-object v0
 
@@ -1544,11 +1639,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Lkik/android/util/bz$b;->b(I)Lkik/android/util/bz$b;
+    invoke-virtual {v0, v3}, Lkik/android/util/bz$b;->c(I)Lkik/android/util/bz$b;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Lkik/android/util/bz$b;->c(I)Lkik/android/util/bz$b;
+    invoke-virtual {v0, v3}, Lkik/android/util/bz$b;->d(I)Lkik/android/util/bz$b;
 
     goto :goto_1
 .end method

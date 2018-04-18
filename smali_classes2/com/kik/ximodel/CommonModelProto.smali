@@ -69,44 +69,37 @@
     .line 80
     new-array v0, v7, [Ljava/lang/String;
 
-    const-string v1, "\n\u0012common_model.proto\u0012\u0006common\u001a\u0019protobuf_validation.proto\u001a\u0011kik_options.proto\"\"\n\u0006XiUuid\u0012\u000b\n\u0003msb\u0018\u0001 \u0001(\u0010\u0012\u000b\n\u0003lsb\u0018\u0002 \u0001(\u0010\"O\n\rXiBareUserJid\u0012>\n\nlocal_part\u0018\u0001 \u0001(\tB*\u00ca\u009d%&\u0008\u0001\u0012\"^[a-z_0-9\\.]{2,30}(_[a-z0-9]{3})?$\"\u001e\n\nXiUsername\u0012\u0010\n\u0008username\u0018\u0001 \u0001(\t\",\n\u0005XiUid\u0012#\n\u0003uid\u0018\u0001 \u0001(\u0004B\u0016\u00ca\u009d%\u00129\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000A\u00ff\u00ff\u00ff\u00ff\u00ff\u0000\u0000\u0000\"\u00d4\u0001\n\nXiDeviceId\u0012/\n\u0006prefix\u0018\u0001 \u0001(\u000e2\u001f.common.XiDeviceId.DevicePrefix\u0012#\n\u0002id\u0018\u0002 \u0001(\tB\u0017\u00ca\u009d%\u0013\u0008\u0001\u0012\u000b^[a-f0-9]+$(\u00080@\"p\n\u000cDevicePrefix\u0012\u0008\n\u0004NONE\u0010\u0000\u0012\u0007\n\u0003"
+    const-string v1, "\n\u0012common_model.proto\u0012\u0006common\u001a\u0019protobuf_validation.proto\"\"\n\u0006XiUuid\u0012\u000b\n\u0003msb\u0018\u0001 \u0001(\u0010\u0012\u000b\n\u0003lsb\u0018\u0002 \u0001(\u0010\"O\n\rXiBareUserJid\u0012>\n\nlocal_part\u0018\u0001 \u0001(\tB*\u00ca\u009d%&\u0008\u0001\u0012\"^[a-z_0-9\\.]{2,30}(_[a-z0-9]{3})?$\"\u001e\n\nXiUsername\u0012\u0010\n\u0008username\u0018\u0001 \u0001(\t\",\n\u0005XiUid\u0012#\n\u0003uid\u0018\u0001 \u0001(\u0004B\u0016\u00ca\u009d%\u00129\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000A\u00ff\u00ff\u00ff\u00ff\u00ff\u0000\u0000\u0000\"\u00d4\u0001\n\nXiDeviceId\u0012/\n\u0006prefix\u0018\u0001 \u0001(\u000e2\u001f.common.XiDeviceId.DevicePrefix\u0012#\n\u0002id\u0018\u0002 \u0001(\tB\u0017\u00ca\u009d%\u0013\u0008\u0001\u0012\u000b^[a-f0-9]+$(\u00080@\"p\n\u000cDevicePrefix\u0012\u0008\n\u0004NONE\u0010\u0000\u0012\u0007\n\u0003CIP\u0010\u0001\u0012\u0007\n\u0003CAN\u0010\u0002\u0012\u0007\n\u0003C"
 
     aput-object v1, v0, v4
 
-    const-string v1, "CIP\u0010\u0001\u0012\u0007\n\u0003CAN\u0010\u0002\u0012\u0007\n\u0003CTS\u0010\u0011\u0012\u0007\n\u0003CBT\u0010\u0012\u0012\u0017\n\u0013UNRECOGNIZED_DEVICE\u0010\n\u0012\u0007\n\u0003CWP\u0010\u000b\u0012\u0007\n\u0003CSY\u0010\r\u0012\u0007\n\u0003CME\u0010\u000f\",\n\u0005XiGid\u0012#\n\u0003gid\u0018\u0001 \u0001(\u0004B\u0016\u00ca\u009d%\u00129\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000A\u00ff\u00ff\u00ff\u00ff\u00ff\u0001\u0000\u0000\"4\n\nXiGroupJid\u0012&\n\nlocal_part\u0018\u0001 \u0001(\tB\u0012\u00ca\u009d%\u000e\u0008\u0001\u0012\n^\\d{13}_g$\"V\n\nXiUidOrGid\u0012\u001c\n\u0003uid\u0018\u0001 \u0001(\u000b2\r.common.XiUidH\u0000\u0012\u001c\n\u0003gid\u0018\u0002 \u0001(\u000b2\r.common.XiGidH\u0000B\u000c\n\nuid_or_gid\"\u007f\n\u0014XiBareUserOrGroupJid\u0012)\n\u0008user_jid\u0018\u0001 \u0001(\u000b2\u0015.common.XiBareUserJidH\u0000\u0012\'\n\tgroup_jid\u0018\u0002 \u0001(\u000b2\u0012.common.XiGroupJidH\u0000B\u0013\n\u0011user_or_group_ji"
+    const-string v1, "TS\u0010\u0011\u0012\u0007\n\u0003CBT\u0010\u0012\u0012\u0017\n\u0013UNRECOGNIZED_DEVICE\u0010\n\u0012\u0007\n\u0003CWP\u0010\u000b\u0012\u0007\n\u0003CSY\u0010\r\u0012\u0007\n\u0003CME\u0010\u000f\",\n\u0005XiGid\u0012#\n\u0003gid\u0018\u0001 \u0001(\u0004B\u0016\u00ca\u009d%\u00129\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000A\u00ff\u00ff\u00ff\u00ff\u00ff\u0001\u0000\u0000\"4\n\nXiGroupJid\u0012&\n\nlocal_part\u0018\u0001 \u0001(\tB\u0012\u00ca\u009d%\u000e\u0008\u0001\u0012\n^\\d{13}_g$\"V\n\nXiUidOrGid\u0012\u001c\n\u0003uid\u0018\u0001 \u0001(\u000b2\r.common.XiUidH\u0000\u0012\u001c\n\u0003gid\u0018\u0002 \u0001(\u000b2\r.common.XiGidH\u0000B\u000c\n\nuid_or_gid\"\u007f\n\u0014XiBareUserOrGroupJid\u0012)\n\u0008user_jid\u0018\u0001 \u0001(\u000b2\u0015.common.XiBareUserJidH\u0000\u0012\'\n\tgroup_jid\u0018\u0002 \u0001(\u000b2\u0012.common.XiGroupJidH\u0000B\u0013\n\u0011user_or_group_jid\"e\n\u000fXiClientVersio"
 
     aput-object v1, v0, v5
 
-    const-string v1, "d\"\u0080\u0001\n\u000fXiClientVersion\u0012\u001c\n\u0005major\u0018\u0001 \u0001(\rB\r\u00ca\u009d%\t9\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0012\r\n\u0005minor\u0018\u0002 \u0001(\r\u0012\u000e\n\u0006bugfix\u0018\u0003 \u0001(\r\u0012\u0015\n\u0005build\u0018\u0004 \u0001(\tB\u0006\u00ca\u009d%\u00020\n\u0012\u0019\n\tdev_build\u0018\u0005 \u0001(\tB\u0006\u00ca\u009d%\u00020\n\"M\n\u0008XiLocale\u0012A\n\u0006locale\u0018\u0001 \u0001(\tB1\u00ca\u009d%-\u0012+^(?i)[a-z]{2,8}(?:_([a-z]{2}|[0-9]{2,3}))?$Br\n\u000fcom.kik.ximodelB\u0010CommonModelProtoP\u0001ZBgithub.com/kikinteractive/xiphias-model-common/generated/go;common\u00a0\u0001\u0001\u00aa\u00a3*\u0002\u0010\u0001b\u0006proto3"
+    const-string v1, "n\u0012\u001c\n\u0005major\u0018\u0001 \u0001(\rB\r\u00ca\u009d%\t9\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0012\r\n\u0005minor\u0018\u0002 \u0001(\r\u0012\u000e\n\u0006bugfix\u0018\u0003 \u0001(\r\u0012\u0015\n\u0005build\u0018\u0004 \u0001(\tB\u0006\u00ca\u009d%\u00020\u0008\"=\n\u0008XiLocale\u00121\n\u0006locale\u0018\u0001 \u0001(\tB!\u00ca\u009d%\u001d\u0012\u001b^(?i)[a-z]{2}(?:_[a-z]{2})$B(\n\u000fcom.kik.ximodelB\u0010CommonModelProtoP\u0001\u00a0\u0001\u0001b\u0006proto3"
 
     aput-object v1, v0, v6
 
-    .line 111
+    .line 107
     new-instance v1, Lcom/kik/ximodel/CommonModelProto$1;
 
     invoke-direct {v1}, Lcom/kik/ximodel/CommonModelProto$1;-><init>()V
 
-    .line 119
-    new-array v2, v6, [Lcom/google/protobuf/Descriptors$FileDescriptor;
+    .line 115
+    new-array v2, v5, [Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 122
+    .line 118
     invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation;->a()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v3
 
     aput-object v3, v2, v4
 
-    .line 123
-    invoke-static {}, Lcom/kik/options/KikOptions;->a()Lcom/google/protobuf/Descriptors$FileDescriptor;
-
-    move-result-object v3
-
-    aput-object v3, v2, v5
-
-    .line 120
+    .line 116
     invoke-static {v0, v2, v1}, Lcom/google/protobuf/Descriptors$FileDescriptor;->internalBuildGeneratedFileFrom([Ljava/lang/String;[Lcom/google/protobuf/Descriptors$FileDescriptor;Lcom/google/protobuf/Descriptors$FileDescriptor$InternalDescriptorAssigner;)V
 
-    .line 126
+    .line 121
     invoke-static {}, Lcom/kik/ximodel/CommonModelProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v0
@@ -123,7 +116,7 @@
 
     sput-object v0, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiUuid_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 127
+    .line 122
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiUuid_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -142,7 +135,7 @@
 
     sput-object v0, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiUuid_fieldAccessorTable:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 132
+    .line 127
     invoke-static {}, Lcom/kik/ximodel/CommonModelProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v0
@@ -159,7 +152,7 @@
 
     sput-object v0, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiBareUserJid_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 133
+    .line 128
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiBareUserJid_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -174,7 +167,7 @@
 
     sput-object v0, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiBareUserJid_fieldAccessorTable:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 138
+    .line 133
     invoke-static {}, Lcom/kik/ximodel/CommonModelProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v0
@@ -191,7 +184,7 @@
 
     sput-object v0, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiUsername_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 139
+    .line 134
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiUsername_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -206,7 +199,7 @@
 
     sput-object v0, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiUsername_fieldAccessorTable:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 144
+    .line 139
     invoke-static {}, Lcom/kik/ximodel/CommonModelProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v0
@@ -223,7 +216,7 @@
 
     sput-object v0, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiUid_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 145
+    .line 140
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiUid_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -238,7 +231,7 @@
 
     sput-object v0, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiUid_fieldAccessorTable:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 150
+    .line 145
     invoke-static {}, Lcom/kik/ximodel/CommonModelProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v0
@@ -255,7 +248,7 @@
 
     sput-object v0, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiDeviceId_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 151
+    .line 146
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiDeviceId_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -274,7 +267,7 @@
 
     sput-object v0, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiDeviceId_fieldAccessorTable:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 156
+    .line 151
     invoke-static {}, Lcom/kik/ximodel/CommonModelProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v0
@@ -293,7 +286,7 @@
 
     sput-object v0, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiGid_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 157
+    .line 152
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiGid_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -308,7 +301,7 @@
 
     sput-object v0, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiGid_fieldAccessorTable:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 162
+    .line 157
     invoke-static {}, Lcom/kik/ximodel/CommonModelProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v0
@@ -327,7 +320,7 @@
 
     sput-object v0, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiGroupJid_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 163
+    .line 158
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiGroupJid_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -342,7 +335,7 @@
 
     sput-object v0, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiGroupJid_fieldAccessorTable:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 168
+    .line 163
     invoke-static {}, Lcom/kik/ximodel/CommonModelProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v0
@@ -361,7 +354,7 @@
 
     sput-object v0, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiUidOrGid_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 169
+    .line 164
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiUidOrGid_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -384,7 +377,7 @@
 
     sput-object v0, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiUidOrGid_fieldAccessorTable:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 174
+    .line 169
     invoke-static {}, Lcom/kik/ximodel/CommonModelProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v0
@@ -403,7 +396,7 @@
 
     sput-object v0, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiBareUserOrGroupJid_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 175
+    .line 170
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiBareUserOrGroupJid_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -426,7 +419,7 @@
 
     sput-object v0, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiBareUserOrGroupJid_fieldAccessorTable:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 180
+    .line 175
     invoke-static {}, Lcom/kik/ximodel/CommonModelProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v0
@@ -445,14 +438,12 @@
 
     sput-object v0, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiClientVersion_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 181
+    .line 176
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiClientVersion_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    const/4 v2, 0x5
-
-    new-array v2, v2, [Ljava/lang/String;
+    new-array v2, v8, [Ljava/lang/String;
 
     const-string v3, "Major"
 
@@ -470,15 +461,11 @@
 
     aput-object v3, v2, v7
 
-    const-string v3, "DevBuild"
-
-    aput-object v3, v2, v8
-
     invoke-direct {v0, v1, v2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;-><init>(Lcom/google/protobuf/Descriptors$Descriptor;[Ljava/lang/String;)V
 
     sput-object v0, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiClientVersion_fieldAccessorTable:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 186
+    .line 181
     invoke-static {}, Lcom/kik/ximodel/CommonModelProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v0
@@ -497,7 +484,7 @@
 
     sput-object v0, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiLocale_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 187
+    .line 182
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiLocale_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -512,34 +499,26 @@
 
     sput-object v0, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiLocale_fieldAccessorTable:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 192
+    .line 187
     invoke-static {}, Lcom/google/protobuf/ExtensionRegistry;->newInstance()Lcom/google/protobuf/ExtensionRegistry;
 
     move-result-object v0
 
-    .line 193
-    sget-object v1, Lcom/kik/options/KikOptions;->a:Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;
-
-    invoke-virtual {v0, v1}, Lcom/google/protobuf/ExtensionRegistry;->add(Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;)V
-
-    .line 194
+    .line 188
     sget-object v1, Lcom/kik/protovalidation/ProtobufValidation;->a:Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;
 
     invoke-virtual {v0, v1}, Lcom/google/protobuf/ExtensionRegistry;->add(Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;)V
 
-    .line 195
+    .line 189
     sget-object v1, Lcom/kik/ximodel/CommonModelProto;->descriptor:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 196
+    .line 190
     invoke-static {v1, v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->internalUpdateFileDescriptor(Lcom/google/protobuf/Descriptors$FileDescriptor;Lcom/google/protobuf/ExtensionRegistry;)V
 
-    .line 197
+    .line 191
     invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation;->a()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 198
-    invoke-static {}, Lcom/kik/options/KikOptions;->a()Lcom/google/protobuf/Descriptors$FileDescriptor;
-
-    .line 199
+    .line 192
     return-void
 .end method
 

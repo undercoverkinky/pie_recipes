@@ -34,7 +34,7 @@
     .locals 1
 
     .prologue
-    .line 71
+    .line 69
     const/4 v0, 0x0
 
     return v0
@@ -44,19 +44,19 @@
     .locals 1
 
     .prologue
-    .line 90
+    .line 88
     instance-of v0, p1, Landroid/support/v4/view/NestedScrollingParent;
 
     if-eqz v0, :cond_0
 
-    .line 91
+    .line 89
     check-cast p1, Landroid/support/v4/view/NestedScrollingParent;
 
     invoke-interface {p1}, Landroid/support/v4/view/NestedScrollingParent;->getNestedScrollAxes()I
 
     move-result v0
 
-    .line 93
+    .line 91
     :goto_0
     return v0
 
@@ -70,7 +70,7 @@
     .locals 1
 
     .prologue
-    .line 85
+    .line 83
     const/4 v0, 0x0
 
     return v0
@@ -80,7 +80,7 @@
     .locals 1
 
     .prologue
-    .line 61
+    .line 60
     const/4 v0, 0x1
 
     return v0
@@ -90,7 +90,7 @@
     .locals 0
 
     .prologue
-    .line 77
+    .line 75
     return-void
 .end method
 
@@ -98,7 +98,7 @@
     .locals 0
 
     .prologue
-    .line 67
+    .line 65
     return-void
 .end method
 
@@ -106,6 +106,6 @@
     .locals 0
 
     .prologue
-    .line 81
+    .line 79
     return-void
 .end method

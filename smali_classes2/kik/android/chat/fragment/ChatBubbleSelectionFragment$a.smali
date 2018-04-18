@@ -52,20 +52,20 @@
     .end annotation
 
     .prologue
-    .line 129
+    .line 123
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 130
+    .line 124
     iput-object p2, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;->a:Ljava/util/List;
 
-    .line 131
+    .line 125
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;->b:Landroid/view/LayoutInflater;
 
-    .line 132
+    .line 126
     return-void
 .end method
 
@@ -73,7 +73,7 @@
     .locals 1
 
     .prologue
-    .line 143
+    .line 137
     if-ltz p1, :cond_0
 
     iget-object v0, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;->a:Ljava/util/List;
@@ -105,14 +105,14 @@
     .locals 0
 
     .prologue
-    .line 122
-    .line 1154
+    .line 116
+    .line 1148
     iput-object p1, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;->c:Lkik/android/chat/theming/BubbleDescriptor;
 
-    .line 1155
+    .line 1149
     invoke-virtual {p0}, Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;->notifyDataSetChanged()V
 
-    .line 122
+    .line 116
     return-void
 .end method
 
@@ -122,7 +122,7 @@
     .locals 1
 
     .prologue
-    .line 137
+    .line 131
     iget-object v0, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -136,7 +136,7 @@
     .locals 1
 
     .prologue
-    .line 122
+    .line 116
     invoke-direct {p0, p1}, Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;->a(I)Lkik/android/chat/theming/BubbleDescriptor;
 
     move-result-object v0
@@ -148,7 +148,7 @@
     .locals 2
 
     .prologue
-    .line 149
+    .line 143
     const-wide/16 v0, 0x0
 
     return-wide v0
@@ -162,36 +162,36 @@
 
     const/4 v2, 0x0
 
-    .line 162
+    .line 156
     if-nez p2, :cond_1
 
-    .line 163
+    .line 157
     iget-object v0, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;->b:Landroid/view/LayoutInflater;
 
-    const v3, 0x7f0400f0
+    const v3, 0x7f0400ce
 
     invoke-virtual {v0, v3, p3, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p2
 
-    .line 164
+    .line 158
     new-instance v0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a$a;
 
     invoke-direct {v0, p2}, Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a$a;-><init>(Landroid/view/View;)V
 
-    .line 165
+    .line 159
     invoke-virtual {p2, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 170
+    .line 164
     :goto_0
     invoke-direct {p0, p1}, Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;->a(I)Lkik/android/chat/theming/BubbleDescriptor;
 
     move-result-object v3
 
-    .line 171
+    .line 165
     if-eqz v3, :cond_0
 
-    .line 172
+    .line 166
     iget-object v4, v0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a$a;->a:Landroid/widget/TextView;
 
     invoke-virtual {v3}, Lkik/android/chat/theming/BubbleDescriptor;->a()Ljava/lang/String;
@@ -200,7 +200,7 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 173
+    .line 167
     iget-object v4, v0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a$a;->b:Landroid/view/View;
 
     invoke-virtual {v3}, Lkik/android/chat/theming/BubbleDescriptor;->c()I
@@ -218,10 +218,10 @@
     .line 1071
     invoke-virtual {v6, v5}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
 
-    .line 173
+    .line 167
     invoke-virtual {v4, v6}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 174
+    .line 168
     iget-object v4, v0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a$a;->c:Landroid/widget/CompoundButton;
 
     iget-object v5, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;->c:Lkik/android/chat/theming/BubbleDescriptor;
@@ -231,18 +231,18 @@
     :goto_1
     invoke-virtual {v4, v1}, Landroid/widget/CompoundButton;->setChecked(Z)V
 
-    .line 175
+    .line 169
     invoke-virtual {p0}, Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;->getCount()I
 
     move-result v1
 
     invoke-virtual {v0, p1, v1}, Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a$a;->a(II)V
 
-    .line 177
+    .line 171
     :cond_0
     return-object p2
 
-    .line 168
+    .line 162
     :cond_1
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -255,6 +255,6 @@
     :cond_2
     move v1, v2
 
-    .line 174
+    .line 168
     goto :goto_1
 .end method

@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 3094
+    .line 2890
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,12 +44,12 @@
     .locals 1
 
     .prologue
-    .line 5097
+    .line 4893
     new-instance v0, Landroid/support/v7/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;
 
     invoke-direct {v0, p1}, Landroid/support/v7/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;-><init>(Landroid/os/Parcel;)V
 
-    .line 3094
+    .line 2890
     return-object v0
 .end method
 
@@ -57,10 +57,10 @@
     .locals 1
 
     .prologue
-    .line 3094
-    .line 4102
+    .line 2890
+    .line 3898
     new-array v0, p1, [Landroid/support/v7/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;
 
-    .line 3094
+    .line 2890
     return-object v0
 .end method

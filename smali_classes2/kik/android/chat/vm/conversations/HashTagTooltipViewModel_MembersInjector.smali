@@ -39,7 +39,7 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/e/c;",
+            "Lkik/core/g/c;",
             ">;"
         }
     .end annotation
@@ -95,7 +95,7 @@
             ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/e/c;",
+            "Lkik/core/g/c;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
@@ -105,10 +105,10 @@
     .end annotation
 
     .prologue
-    .line 25
+    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
+    .line 17
     sget-boolean v0, Lkik/android/chat/vm/conversations/HashTagTooltipViewModel_MembersInjector;->a:Z
 
     if-nez v0, :cond_0
@@ -121,11 +121,11 @@
 
     throw v0
 
-    .line 27
+    .line 18
     :cond_0
     iput-object p1, p0, Lkik/android/chat/vm/conversations/HashTagTooltipViewModel_MembersInjector;->b:Ljavax/inject/Provider;
 
-    .line 28
+    .line 19
     sget-boolean v0, Lkik/android/chat/vm/conversations/HashTagTooltipViewModel_MembersInjector;->a:Z
 
     if-nez v0, :cond_1
@@ -138,11 +138,11 @@
 
     throw v0
 
-    .line 29
+    .line 20
     :cond_1
     iput-object p2, p0, Lkik/android/chat/vm/conversations/HashTagTooltipViewModel_MembersInjector;->c:Ljavax/inject/Provider;
 
-    .line 30
+    .line 21
     sget-boolean v0, Lkik/android/chat/vm/conversations/HashTagTooltipViewModel_MembersInjector;->a:Z
 
     if-nez v0, :cond_2
@@ -155,11 +155,11 @@
 
     throw v0
 
-    .line 31
+    .line 22
     :cond_2
     iput-object p3, p0, Lkik/android/chat/vm/conversations/HashTagTooltipViewModel_MembersInjector;->d:Ljavax/inject/Provider;
 
-    .line 32
+    .line 23
     return-void
 .end method
 
@@ -174,7 +174,7 @@
             ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/e/c;",
+            "Lkik/core/g/c;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
@@ -188,7 +188,7 @@
     .end annotation
 
     .prologue
-    .line 38
+    .line 36
     new-instance v0, Lkik/android/chat/vm/conversations/HashTagTooltipViewModel_MembersInjector;
 
     invoke-direct {v0, p0, p1, p2}, Lkik/android/chat/vm/conversations/HashTagTooltipViewModel_MembersInjector;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
@@ -205,10 +205,10 @@
     .line 10
     check-cast p1, Lkik/android/chat/vm/conversations/b;
 
-    .line 1044
+    .line 1027
     if-nez p1, :cond_0
 
-    .line 1045
+    .line 1028
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "Cannot inject members into a null reference"
@@ -217,7 +217,7 @@
 
     throw v0
 
-    .line 1047
+    .line 1030
     :cond_0
     iget-object v0, p0, Lkik/android/chat/vm/conversations/HashTagTooltipViewModel_MembersInjector;->b:Ljavax/inject/Provider;
 
@@ -229,18 +229,18 @@
 
     iput-object v0, p1, Lkik/android/chat/vm/conversations/b;->a:Lkik/core/interfaces/b;
 
-    .line 1048
+    .line 1031
     iget-object v0, p0, Lkik/android/chat/vm/conversations/HashTagTooltipViewModel_MembersInjector;->c:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/e/c;
+    check-cast v0, Lkik/core/g/c;
 
-    iput-object v0, p1, Lkik/android/chat/vm/conversations/b;->b:Lkik/core/e/c;
+    iput-object v0, p1, Lkik/android/chat/vm/conversations/b;->b:Lkik/core/g/c;
 
-    .line 1049
+    .line 1032
     iget-object v0, p0, Lkik/android/chat/vm/conversations/HashTagTooltipViewModel_MembersInjector;->d:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;

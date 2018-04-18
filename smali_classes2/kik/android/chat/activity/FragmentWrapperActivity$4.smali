@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/activity/FragmentWrapperActivity$4;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Landroid/os/Bundle;",
         ">;"
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 308
+    .line 309
     iput-object p1, p0, Lkik/android/chat/activity/FragmentWrapperActivity$4;->a:Lkik/android/chat/activity/FragmentWrapperActivity;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -46,20 +46,11 @@
     .locals 1
 
     .prologue
-    .line 308
+    .line 309
     check-cast p1, Landroid/os/Bundle;
 
-    .line 1313
-    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Object;)V
-
     .line 1314
-    iget-object v0, p0, Lkik/android/chat/activity/FragmentWrapperActivity$4;->a:Lkik/android/chat/activity/FragmentWrapperActivity;
-
-    invoke-static {v0}, Lkik/android/chat/activity/FragmentWrapperActivity;->d(Lkik/android/chat/activity/FragmentWrapperActivity;)Lcom/kik/events/Promise;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
+    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Object;)V
 
     .line 1315
     iget-object v0, p0, Lkik/android/chat/activity/FragmentWrapperActivity$4;->a:Lkik/android/chat/activity/FragmentWrapperActivity;
@@ -68,9 +59,18 @@
 
     move-result-object v0
 
+    if-eqz v0, :cond_0
+
+    .line 1316
+    iget-object v0, p0, Lkik/android/chat/activity/FragmentWrapperActivity$4;->a:Lkik/android/chat/activity/FragmentWrapperActivity;
+
+    invoke-static {v0}, Lkik/android/chat/activity/FragmentWrapperActivity;->d(Lkik/android/chat/activity/FragmentWrapperActivity;)Lcom/kik/events/Promise;
+
+    move-result-object v0
+
     invoke-virtual {v0, p1}, Lcom/kik/events/Promise;->a(Ljava/lang/Object;)V
 
-    .line 308
+    .line 309
     :cond_0
     return-void
 .end method
@@ -79,17 +79,8 @@
     .locals 1
 
     .prologue
-    .line 322
-    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Throwable;)V
-
     .line 323
-    iget-object v0, p0, Lkik/android/chat/activity/FragmentWrapperActivity$4;->a:Lkik/android/chat/activity/FragmentWrapperActivity;
-
-    invoke-static {v0}, Lkik/android/chat/activity/FragmentWrapperActivity;->d(Lkik/android/chat/activity/FragmentWrapperActivity;)Lcom/kik/events/Promise;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
+    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Throwable;)V
 
     .line 324
     iget-object v0, p0, Lkik/android/chat/activity/FragmentWrapperActivity$4;->a:Lkik/android/chat/activity/FragmentWrapperActivity;
@@ -98,9 +89,18 @@
 
     move-result-object v0
 
+    if-eqz v0, :cond_0
+
+    .line 325
+    iget-object v0, p0, Lkik/android/chat/activity/FragmentWrapperActivity$4;->a:Lkik/android/chat/activity/FragmentWrapperActivity;
+
+    invoke-static {v0}, Lkik/android/chat/activity/FragmentWrapperActivity;->d(Lkik/android/chat/activity/FragmentWrapperActivity;)Lcom/kik/events/Promise;
+
+    move-result-object v0
+
     invoke-virtual {v0}, Lcom/kik/events/Promise;->f()V
 
-    .line 326
+    .line 327
     :cond_0
     return-void
 .end method
@@ -109,9 +109,9 @@
     .locals 0
 
     .prologue
-    .line 331
-    invoke-super {p0}, Lcom/kik/events/k;->b()V
-
     .line 332
+    invoke-super {p0}, Lcom/kik/events/l;->b()V
+
+    .line 333
     return-void
 .end method

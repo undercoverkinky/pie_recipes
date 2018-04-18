@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/google/gson/d;
+.implements Lcom/google/gson/c;
 
 
 # annotations
@@ -13,7 +13,7 @@
         "<",
         "Lcom/google/gson/FieldNamingPolicy;",
         ">;",
-        "Lcom/google/gson/d;"
+        "Lcom/google/gson/c;"
     }
 .end annotation
 
@@ -151,7 +151,7 @@
     .locals 2
 
     .prologue
-    .line 162
+    .line 165
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -166,7 +166,7 @@
 
     move-result-object v0
 
-    .line 163
+    .line 166
     invoke-virtual {p1, p2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v1
@@ -179,10 +179,10 @@
 
     move-result-object v0
 
+    .line 167
     :goto_0
     return-object v0
 
-    .line 164
     :cond_0
     invoke-static {p0}, Ljava/lang/String;->valueOf(C)Ljava/lang/String;
 
@@ -192,7 +192,7 @@
 .end method
 
 .method static separateCamelCase(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 5
+    .locals 4
 
     .prologue
     .line 124
@@ -203,37 +203,37 @@
     .line 125
     const/4 v0, 0x0
 
+    :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v2
 
-    :goto_0
     if-ge v0, v2, :cond_1
 
     .line 126
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
-    move-result v3
+    move-result v2
 
     .line 127
-    invoke-static {v3}, Ljava/lang/Character;->isUpperCase(C)Z
+    invoke-static {v2}, Ljava/lang/Character;->isUpperCase(C)Z
 
-    move-result v4
+    move-result v3
 
-    if-eqz v4, :cond_0
+    if-eqz v3, :cond_0
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
-    move-result v4
+    move-result v3
 
-    if-eqz v4, :cond_0
+    if-eqz v3, :cond_0
 
     .line 128
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 130
     :cond_0
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 125
     add-int/lit8 v0, v0, 0x1
@@ -250,7 +250,7 @@
 .end method
 
 .method static upperCaseFirstLetter(Ljava/lang/String;)Ljava/lang/String;
-    .locals 5
+    .locals 4
 
     .prologue
     const/4 v1, 0x0
@@ -265,28 +265,27 @@
 
     move-result v0
 
-    .line 142
+    .line 143
+    :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v3
 
+    add-int/lit8 v3, v3, -0x1
+
+    if-ge v1, v3, :cond_0
+
     .line 144
-    :goto_0
-    add-int/lit8 v4, v3, -0x1
-
-    if-ge v1, v4, :cond_0
-
-    .line 145
     invoke-static {v0}, Ljava/lang/Character;->isLetter(C)Z
 
-    move-result v4
+    move-result v3
 
-    if-nez v4, :cond_0
+    if-nez v3, :cond_0
 
-    .line 149
+    .line 148
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 150
+    .line 149
     add-int/lit8 v1, v1, 0x1
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
@@ -295,15 +294,33 @@
 
     goto :goto_0
 
-    .line 153
+    .line 152
     :cond_0
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    if-ne v1, v3, :cond_2
+
+    .line 153
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    .line 160
+    :cond_1
+    :goto_1
+    return-object p0
+
+    .line 156
+    :cond_2
     invoke-static {v0}, Ljava/lang/Character;->isUpperCase(C)Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 154
+    .line 157
     invoke-static {v0}, Ljava/lang/Character;->toUpperCase(C)C
 
     move-result v0
@@ -314,7 +331,7 @@
 
     move-result-object v0
 
-    .line 155
+    .line 158
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -323,9 +340,7 @@
 
     move-result-object p0
 
-    .line 157
-    :cond_1
-    return-object p0
+    goto :goto_1
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/google/gson/FieldNamingPolicy;

@@ -48,29 +48,29 @@
 
     aput-object v1, v0, v4
 
-    const-string v1, "\")\n\u0006Result\u0012\u0006\n\u0002OK\u0010\u0000\u0012\u0017\n\u0013RATE_LIMIT_EXCEEDED\u0010\u00012\u00a0\u0001\n\u000cGroupSuggest\u0012\u008f\u0001\n\u001cGetSuggestedGroupSearchTerms\u00125.mobile.groups.v1.GetSuggestedGroupSearchTermsRequest\u001a6.mobile.groups.v1.GetSuggestedGroupSearchTermsResponse\"\u0000B\\\n\u000ecom.kik.groupsZJgithub.com/kikinteractive/xiphias-api-mobile/generated/go/groups/v1;groupsb\u0006proto3"
+    const-string v1, "\")\n\u0006Result\u0012\u0006\n\u0002OK\u0010\u0000\u0012\u0017\n\u0013RATE_LIMIT_EXCEEDED\u0010\u00012\u00a0\u0001\n\u000cGroupSuggest\u0012\u008f\u0001\n\u001cGetSuggestedGroupSearchTerms\u00125.mobile.groups.v1.GetSuggestedGroupSearchTermsRequest\u001a6.mobile.groups.v1.GetSuggestedGroupSearchTermsResponse\"\u0000B\u0010\n\u000ecom.kik.groupsb\u0006proto3"
 
     aput-object v1, v0, v5
 
-    .line 1937
+    .line 1935
     new-instance v1, Lcom/kik/groups/GroupSuggestService$1;
 
     invoke-direct {v1}, Lcom/kik/groups/GroupSuggestService$1;-><init>()V
 
-    .line 1945
+    .line 1943
     new-array v2, v5, [Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 1948
+    .line 1946
     invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation;->a()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v3
 
     aput-object v3, v2, v4
 
-    .line 1946
+    .line 1944
     invoke-static {v0, v2, v1}, Lcom/google/protobuf/Descriptors$FileDescriptor;->internalBuildGeneratedFileFrom([Ljava/lang/String;[Lcom/google/protobuf/Descriptors$FileDescriptor;Lcom/google/protobuf/Descriptors$FileDescriptor$InternalDescriptorAssigner;)V
 
-    .line 1951
+    .line 1949
     invoke-static {}, Lcom/kik/groups/GroupSuggestService;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v0
@@ -87,7 +87,7 @@
 
     sput-object v0, Lcom/kik/groups/GroupSuggestService;->internal_static_mobile_groups_v1_GetSuggestedGroupSearchTermsRequest_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 1952
+    .line 1950
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/groups/GroupSuggestService;->internal_static_mobile_groups_v1_GetSuggestedGroupSearchTermsRequest_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -98,7 +98,7 @@
 
     sput-object v0, Lcom/kik/groups/GroupSuggestService;->internal_static_mobile_groups_v1_GetSuggestedGroupSearchTermsRequest_fieldAccessorTable:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 1957
+    .line 1955
     invoke-static {}, Lcom/kik/groups/GroupSuggestService;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v0
@@ -115,7 +115,7 @@
 
     sput-object v0, Lcom/kik/groups/GroupSuggestService;->internal_static_mobile_groups_v1_GetSuggestedGroupSearchTermsResponse_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 1958
+    .line 1956
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/groups/GroupSuggestService;->internal_static_mobile_groups_v1_GetSuggestedGroupSearchTermsResponse_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -134,10 +134,10 @@
 
     sput-object v0, Lcom/kik/groups/GroupSuggestService;->internal_static_mobile_groups_v1_GetSuggestedGroupSearchTermsResponse_fieldAccessorTable:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 1962
+    .line 1960
     sget-object v0, Lcom/kik/groups/GroupSuggestService;->internal_static_mobile_groups_v1_GetSuggestedGroupSearchTermsResponse_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 1963
+    .line 1961
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$Descriptor;->getNestedTypes()Ljava/util/List;
 
     move-result-object v0
@@ -150,7 +150,7 @@
 
     sput-object v0, Lcom/kik/groups/GroupSuggestService;->internal_static_mobile_groups_v1_GetSuggestedGroupSearchTermsResponse_SuggestedTerm_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 1964
+    .line 1962
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/groups/GroupSuggestService;->internal_static_mobile_groups_v1_GetSuggestedGroupSearchTermsResponse_SuggestedTerm_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -165,26 +165,26 @@
 
     sput-object v0, Lcom/kik/groups/GroupSuggestService;->internal_static_mobile_groups_v1_GetSuggestedGroupSearchTermsResponse_SuggestedTerm_fieldAccessorTable:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 1969
+    .line 1967
     invoke-static {}, Lcom/google/protobuf/ExtensionRegistry;->newInstance()Lcom/google/protobuf/ExtensionRegistry;
 
     move-result-object v0
 
-    .line 1970
+    .line 1968
     sget-object v1, Lcom/kik/protovalidation/ProtobufValidation;->a:Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;
 
     invoke-virtual {v0, v1}, Lcom/google/protobuf/ExtensionRegistry;->add(Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;)V
 
-    .line 1971
+    .line 1969
     sget-object v1, Lcom/kik/groups/GroupSuggestService;->descriptor:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 1972
+    .line 1970
     invoke-static {v1, v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->internalUpdateFileDescriptor(Lcom/google/protobuf/Descriptors$FileDescriptor;Lcom/google/protobuf/ExtensionRegistry;)V
 
-    .line 1973
+    .line 1971
     invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation;->a()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 1974
+    .line 1972
     return-void
 .end method
 

@@ -81,7 +81,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 31
-    invoke-static {p1}, Lcom/google/common/base/Strings;->isNullOrEmpty(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/google/common/base/l;->b(Ljava/lang/String;)Z
 
     move-result v0
 

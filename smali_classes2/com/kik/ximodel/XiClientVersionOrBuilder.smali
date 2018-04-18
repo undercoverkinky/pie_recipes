@@ -16,12 +16,6 @@
 .method public abstract getBuildBytes()Lcom/google/protobuf/ByteString;
 .end method
 
-.method public abstract getDevBuild()Ljava/lang/String;
-.end method
-
-.method public abstract getDevBuildBytes()Lcom/google/protobuf/ByteString;
-.end method
-
 .method public abstract getMajor()I
 .end method
 

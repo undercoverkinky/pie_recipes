@@ -532,9 +532,11 @@
 
     goto :goto_0
 
-    .line 428
+    .line 427
     :catch_0
     move-exception v1
+
+    invoke-static {v1}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method
@@ -1556,9 +1558,11 @@
 
     goto :goto_0
 
-    .line 384
+    .line 383
     :catch_0
     move-exception v1
+
+    invoke-static {v1}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method

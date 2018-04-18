@@ -48,7 +48,7 @@
 
     const/4 v3, 0x0
 
-    .line 944
+    .line 949
     new-instance v0, Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;
 
     const-string v1, "SUGGESTED_RESPONSE_KEYBOARD"
@@ -59,7 +59,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;->SUGGESTED_RESPONSE_KEYBOARD:Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;
 
-    .line 945
+    .line 950
     new-instance v0, Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;
 
     const-string v1, "TYPE_NOT_SET"
@@ -68,7 +68,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;->TYPE_NOT_SET:Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;
 
-    .line 942
+    .line 947
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;
@@ -95,13 +95,13 @@
     .end annotation
 
     .prologue
-    .line 947
+    .line 952
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 948
+    .line 953
     iput p3, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;->value:I
 
-    .line 949
+    .line 954
     return-void
 .end method
 
@@ -109,28 +109,28 @@
     .locals 1
 
     .prologue
-    .line 959
+    .line 964
     sparse-switch p0, :sswitch_data_0
 
-    .line 962
+    .line 967
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 960
+    .line 965
     :sswitch_0
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;->SUGGESTED_RESPONSE_KEYBOARD:Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;
 
     goto :goto_0
 
-    .line 961
+    .line 966
     :sswitch_1
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;->TYPE_NOT_SET:Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;
 
     goto :goto_0
 
-    .line 959
+    .line 964
     nop
 
     :sswitch_data_0
@@ -146,7 +146,7 @@
     .end annotation
 
     .prologue
-    .line 955
+    .line 960
     invoke-static {p0}, Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;->forNumber(I)Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;
 
     move-result-object v0
@@ -158,7 +158,7 @@
     .locals 1
 
     .prologue
-    .line 942
+    .line 947
     const-class v0, Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -174,7 +174,7 @@
     .locals 1
 
     .prologue
-    .line 942
+    .line 947
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;->$VALUES:[Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;
 
     invoke-virtual {v0}, [Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;->clone()Ljava/lang/Object;
@@ -192,7 +192,7 @@
     .locals 1
 
     .prologue
-    .line 966
+    .line 971
     iget v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;->value:I
 
     return v0

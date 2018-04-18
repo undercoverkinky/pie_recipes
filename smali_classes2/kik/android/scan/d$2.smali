@@ -74,7 +74,7 @@
 
     const/16 v1, 0x12c
 
-    invoke-static {v0, v1}, Lkik/android/util/an;->b(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Lkik/android/util/am;->b(Landroid/view/View;I)V
 
     .line 76
     :cond_0

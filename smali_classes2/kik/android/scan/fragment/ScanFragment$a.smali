@@ -25,15 +25,15 @@
     .locals 1
 
     .prologue
-    .line 1056
+    .line 1048
     invoke-direct {p0}, Lcom/kik/ui/fragment/FragmentBase$FragmentBundle;-><init>()V
 
-    .line 1058
+    .line 1050
     const-string v0, "scan.fragment.scan.launch.first"
 
     iput-object v0, p0, Lkik/android/scan/fragment/ScanFragment$a;->a:Ljava/lang/String;
 
-    .line 1059
+    .line 1051
     const-string v0, "kik.scan.fragment.opened.from"
 
     iput-object v0, p0, Lkik/android/scan/fragment/ScanFragment$a;->b:Ljava/lang/String;
@@ -47,12 +47,12 @@
     .locals 1
 
     .prologue
-    .line 1069
+    .line 1061
     const-string v0, "kik.scan.fragment.opened.from"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/scan/fragment/ScanFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1070
+    .line 1062
     return-object p0
 .end method
 
@@ -60,12 +60,12 @@
     .locals 1
 
     .prologue
-    .line 1063
+    .line 1055
     const-string v0, "scan.fragment.scan.launch.first"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/scan/fragment/ScanFragment$a;->b(Ljava/lang/String;Z)V
 
-    .line 1064
+    .line 1056
     return-object p0
 .end method
 
@@ -73,10 +73,10 @@
     .locals 1
 
     .prologue
-    .line 1075
+    .line 1067
     const-string v0, "kik.scan.fragment.opened.from"
 
-    invoke-virtual {p0, v0}, Lkik/android/scan/fragment/ScanFragment$a;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lkik/android/scan/fragment/ScanFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

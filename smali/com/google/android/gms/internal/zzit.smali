@@ -1,35 +1,27 @@
-.class public final Lcom/google/android/gms/internal/zzit;
-.super Lcom/google/android/gms/internal/zzjs;
+.class public Lcom/google/android/gms/internal/zzit;
+.super Lcom/google/android/gms/internal/zziq;
 
 
 # annotations
-.annotation runtime Lcom/google/android/gms/internal/zzzt;
+.annotation runtime Lcom/google/android/gms/internal/zzig;
 .end annotation
 
 
-# instance fields
-.field private final zzbbj:Lcom/google/android/gms/internal/zzis;
-
-
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/internal/zzis;)V
+.method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/google/android/gms/internal/zzjs;-><init>()V
-
-    iput-object p1, p0, Lcom/google/android/gms/internal/zzit;->zzbbj:Lcom/google/android/gms/internal/zzis;
+    invoke-direct {p0}, Lcom/google/android/gms/internal/zziq;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAdClicked()V
-    .locals 1
+.method public zza(Landroid/content/Context;Lcom/google/android/gms/internal/zzik;Lcom/google/android/gms/ads/internal/util/client/VersionInfoParcel;)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzit;->zzbbj:Lcom/google/android/gms/internal/zzis;
-
-    invoke-interface {v0}, Lcom/google/android/gms/internal/zzis;->onAdClicked()V
+    invoke-virtual {p0, p2}, Lcom/google/android/gms/internal/zzit;->zze(Lcom/google/android/gms/internal/zzik;)V
 
     return-void
 .end method

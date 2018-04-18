@@ -10,7 +10,7 @@
             "Ljava/util/Map",
             "<",
             "Ljava/lang/reflect/Type;",
-            "Lcom/google/gson/g",
+            "Lcom/google/gson/f",
             "<*>;>;"
         }
     .end annotation
@@ -26,7 +26,7 @@
             "Ljava/util/Map",
             "<",
             "Ljava/lang/reflect/Type;",
-            "Lcom/google/gson/g",
+            "Lcom/google/gson/f",
             "<*>;>;)V"
         }
     .end annotation
@@ -133,7 +133,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/gson/g;
+    check-cast v0, Lcom/google/gson/f;
 
     .line 63
     if-eqz v0, :cond_1
@@ -141,7 +141,7 @@
     .line 64
     new-instance v2, Lcom/google/gson/internal/b$1;
 
-    invoke-direct {v2, p0, v0, v1}, Lcom/google/gson/internal/b$1;-><init>(Lcom/google/gson/internal/b;Lcom/google/gson/g;Ljava/lang/reflect/Type;)V
+    invoke-direct {v2, p0, v0, v1}, Lcom/google/gson/internal/b$1;-><init>(Lcom/google/gson/internal/b;Lcom/google/gson/f;Ljava/lang/reflect/Type;)V
 
     move-object v0, v2
 
@@ -159,7 +159,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/gson/g;
+    check-cast v0, Lcom/google/gson/f;
 
     .line 75
     if-eqz v0, :cond_2
@@ -167,7 +167,7 @@
     .line 76
     new-instance v2, Lcom/google/gson/internal/b$7;
 
-    invoke-direct {v2, p0, v0, v1}, Lcom/google/gson/internal/b$7;-><init>(Lcom/google/gson/internal/b;Lcom/google/gson/g;Ljava/lang/reflect/Type;)V
+    invoke-direct {v2, p0, v0, v1}, Lcom/google/gson/internal/b$7;-><init>(Lcom/google/gson/internal/b;Lcom/google/gson/f;Ljava/lang/reflect/Type;)V
 
     move-object v0, v2
 

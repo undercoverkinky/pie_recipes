@@ -1,565 +1,354 @@
-.class public Lcom/google/android/gms/internal/zzajx;
-.super Ljava/lang/Object;
+.class public abstract enum Lcom/google/android/gms/internal/zzajx;
+.super Ljava/lang/Enum;
 
 # interfaces
-.implements Lcom/google/android/gms/internal/zzajr;
+.implements Lcom/google/android/gms/internal/zzajy;
 
 
 # annotations
-.annotation runtime Lcom/google/android/gms/internal/zzzt;
-.end annotation
-
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;",
-        "Lcom/google/android/gms/internal/zzajr",
-        "<TT;>;"
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/google/android/gms/internal/zzajx;",
+        ">;",
+        "Lcom/google/android/gms/internal/zzajy;"
     }
 .end annotation
 
 
-# instance fields
-.field private final mLock:Ljava/lang/Object;
+# static fields
+.field public static final enum zzbVR:Lcom/google/android/gms/internal/zzajx;
 
-.field private mValue:Ljava/lang/Object;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "TT;"
-        }
-    .end annotation
-.end field
+.field public static final enum zzbVS:Lcom/google/android/gms/internal/zzajx;
 
-.field private zzccj:Z
+.field public static final enum zzbVT:Lcom/google/android/gms/internal/zzajx;
 
-.field private zzdfd:Ljava/lang/Throwable;
+.field public static final enum zzbVU:Lcom/google/android/gms/internal/zzajx;
 
-.field private zzdfe:Z
+.field public static final enum zzbVV:Lcom/google/android/gms/internal/zzajx;
 
-.field private final zzdff:Lcom/google/android/gms/internal/cy;
+.field private static final synthetic zzbVW:[Lcom/google/android/gms/internal/zzajx;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v6, 0x4
 
-    new-instance v0, Ljava/lang/Object;
+    const/4 v5, 0x3
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v4, 0x2
 
-    iput-object v0, p0, Lcom/google/android/gms/internal/zzajx;->mLock:Ljava/lang/Object;
+    const/4 v3, 0x1
 
-    new-instance v0, Lcom/google/android/gms/internal/cy;
+    const/4 v2, 0x0
 
-    invoke-direct {v0}, Lcom/google/android/gms/internal/cy;-><init>()V
+    new-instance v0, Lcom/google/android/gms/internal/zzajx$1;
 
-    iput-object v0, p0, Lcom/google/android/gms/internal/zzajx;->zzdff:Lcom/google/android/gms/internal/cy;
+    const-string v1, "IDENTITY"
+
+    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/internal/zzajx$1;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/gms/internal/zzajx;->zzbVR:Lcom/google/android/gms/internal/zzajx;
+
+    new-instance v0, Lcom/google/android/gms/internal/zzajx$2;
+
+    const-string v1, "UPPER_CAMEL_CASE"
+
+    invoke-direct {v0, v1, v3}, Lcom/google/android/gms/internal/zzajx$2;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/gms/internal/zzajx;->zzbVS:Lcom/google/android/gms/internal/zzajx;
+
+    new-instance v0, Lcom/google/android/gms/internal/zzajx$3;
+
+    const-string v1, "UPPER_CAMEL_CASE_WITH_SPACES"
+
+    invoke-direct {v0, v1, v4}, Lcom/google/android/gms/internal/zzajx$3;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/gms/internal/zzajx;->zzbVT:Lcom/google/android/gms/internal/zzajx;
+
+    new-instance v0, Lcom/google/android/gms/internal/zzajx$4;
+
+    const-string v1, "LOWER_CASE_WITH_UNDERSCORES"
+
+    invoke-direct {v0, v1, v5}, Lcom/google/android/gms/internal/zzajx$4;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/gms/internal/zzajx;->zzbVU:Lcom/google/android/gms/internal/zzajx;
+
+    new-instance v0, Lcom/google/android/gms/internal/zzajx$5;
+
+    const-string v1, "LOWER_CASE_WITH_DASHES"
+
+    invoke-direct {v0, v1, v6}, Lcom/google/android/gms/internal/zzajx$5;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/android/gms/internal/zzajx;->zzbVV:Lcom/google/android/gms/internal/zzajx;
+
+    const/4 v0, 0x5
+
+    new-array v0, v0, [Lcom/google/android/gms/internal/zzajx;
+
+    sget-object v1, Lcom/google/android/gms/internal/zzajx;->zzbVR:Lcom/google/android/gms/internal/zzajx;
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/android/gms/internal/zzajx;->zzbVS:Lcom/google/android/gms/internal/zzajx;
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcom/google/android/gms/internal/zzajx;->zzbVT:Lcom/google/android/gms/internal/zzajx;
+
+    aput-object v1, v0, v4
+
+    sget-object v1, Lcom/google/android/gms/internal/zzajx;->zzbVU:Lcom/google/android/gms/internal/zzajx;
+
+    aput-object v1, v0, v5
+
+    sget-object v1, Lcom/google/android/gms/internal/zzajx;->zzbVV:Lcom/google/android/gms/internal/zzajx;
+
+    aput-object v1, v0, v6
+
+    sput-object v0, Lcom/google/android/gms/internal/zzajx;->zzbVW:[Lcom/google/android/gms/internal/zzajx;
 
     return-void
 .end method
 
-.method private final zzrs()Z
+.method private constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Ljava/lang/String;ILcom/google/android/gms/internal/zzajx$1;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/google/android/gms/internal/zzajx;-><init>(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method public static values()[Lcom/google/android/gms/internal/zzajx;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzajx;->zzdfd:Ljava/lang/Throwable;
+    sget-object v0, Lcom/google/android/gms/internal/zzajx;->zzbVW:[Lcom/google/android/gms/internal/zzajx;
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0}, [Lcom/google/android/gms/internal/zzajx;->clone()Ljava/lang/Object;
 
-    iget-boolean v0, p0, Lcom/google/android/gms/internal/zzajx;->zzdfe:Z
+    move-result-object v0
 
-    if-eqz v0, :cond_1
+    check-cast v0, [Lcom/google/android/gms/internal/zzajx;
 
-    :cond_0
-    const/4 v0, 0x1
+    return-object v0
+.end method
+
+.method private static zza(CLjava/lang/String;I)Ljava/lang/String;
+    .locals 3
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-ge p2, v0, :cond_0
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     :goto_0
-    return v0
+    return-object v0
 
-    :cond_1
-    const/4 v0, 0x0
+    :cond_0
+    invoke-static {p0}, Ljava/lang/String;->valueOf(C)Ljava/lang/String;
+
+    move-result-object v0
 
     goto :goto_0
 .end method
 
-
-# virtual methods
-.method public cancel(Z)Z
+.method private static zzat(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 4
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     const/4 v0, 0x0
 
-    const/4 v1, 0x1
-
-    if-nez p1, :cond_0
-
     :goto_0
-    return v0
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    :cond_0
-    iget-object v2, p0, Lcom/google/android/gms/internal/zzajx;->mLock:Ljava/lang/Object;
+    move-result v2
 
-    monitor-enter v2
+    if-ge v0, v2, :cond_1
 
-    :try_start_0
-    invoke-direct {p0}, Lcom/google/android/gms/internal/zzajx;->zzrs()Z
+    invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Character;->isUpperCase(C)Z
 
     move-result v3
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_0
 
-    monitor-exit v2
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
-    goto :goto_0
+    move-result v3
 
-    :catchall_0
-    move-exception v0
+    if-eqz v3, :cond_0
 
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-
-    :cond_1
-    const/4 v0, 0x1
-
-    :try_start_1
-    iput-boolean v0, p0, Lcom/google/android/gms/internal/zzajx;->zzccj:Z
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/google/android/gms/internal/zzajx;->zzdfe:Z
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzajx;->mLock:Ljava/lang/Object;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzajx;->zzdff:Lcom/google/android/gms/internal/cy;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/cy;->a()V
-
-    monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    move v0, v1
-
-    goto :goto_0
-.end method
-
-.method public get()Ljava/lang/Object;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()TT;"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/util/concurrent/CancellationException;,
-            Ljava/util/concurrent/ExecutionException;,
-            Ljava/lang/InterruptedException;
-        }
-    .end annotation
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzajx;->mLock:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_0
-    invoke-direct {p0}, Lcom/google/android/gms/internal/zzajx;->zzrs()Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    :try_start_1
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzajx;->mLock:Ljava/lang/Object;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->wait()V
-    :try_end_1
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_0
-    :try_start_2
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzajx;->zzdfd:Ljava/lang/Throwable;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_1
+    add-int/lit8 v0, v0, 0x1
 
-    new-instance v0, Ljava/util/concurrent/ExecutionException;
-
-    iget-object v2, p0, Lcom/google/android/gms/internal/zzajx;->zzdfd:Ljava/lang/Throwable;
-
-    invoke-direct {v0, v2}, Ljava/util/concurrent/ExecutionException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw v0
-
-    :catch_0
-    move-exception v0
-
-    :try_start_3
-    throw v0
+    goto :goto_0
 
     :cond_1
-    iget-boolean v0, p0, Lcom/google/android/gms/internal/zzajx;->zzccj:Z
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    if-eqz v0, :cond_2
-
-    new-instance v0, Ljava/util/concurrent/CancellationException;
-
-    const-string v2, "SettableFuture was cancelled."
-
-    invoke-direct {v0, v2}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_2
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzajx;->mValue:Ljava/lang/Object;
-
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 7
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(J",
-            "Ljava/util/concurrent/TimeUnit;",
-            ")TT;"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/util/concurrent/CancellationException;,
-            Ljava/util/concurrent/ExecutionException;,
-            Ljava/lang/InterruptedException;,
-            Ljava/util/concurrent/TimeoutException;
-        }
-    .end annotation
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzajx;->mLock:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_0
-    invoke-direct {p0}, Lcom/google/android/gms/internal/zzajx;->zzrs()Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    :try_start_1
-    invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide v2
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v0, v2, v4
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzajx;->mLock:Ljava/lang/Object;
-
-    invoke-virtual {v0, v2, v3}, Ljava/lang/Object;->wait(J)V
-    :try_end_1
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :cond_0
-    :try_start_2
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzajx;->zzdfd:Ljava/lang/Throwable;
-
-    if-eqz v0, :cond_1
-
-    new-instance v0, Ljava/util/concurrent/ExecutionException;
-
-    iget-object v2, p0, Lcom/google/android/gms/internal/zzajx;->zzdfd:Ljava/lang/Throwable;
-
-    invoke-direct {v0, v2}, Ljava/util/concurrent/ExecutionException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw v0
-
-    :catch_0
-    move-exception v0
-
-    :try_start_3
-    throw v0
-
-    :cond_1
-    iget-boolean v0, p0, Lcom/google/android/gms/internal/zzajx;->zzdfe:Z
-
-    if-nez v0, :cond_2
-
-    new-instance v0, Ljava/util/concurrent/TimeoutException;
-
-    const-string v2, "SettableFuture timed out."
-
-    invoke-direct {v0, v2}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_2
-    iget-boolean v0, p0, Lcom/google/android/gms/internal/zzajx;->zzccj:Z
-
-    if-eqz v0, :cond_3
-
-    new-instance v0, Ljava/util/concurrent/CancellationException;
-
-    const-string v2, "SettableFuture was cancelled."
-
-    invoke-direct {v0, v2}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_3
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzajx;->mValue:Ljava/lang/Object;
-
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    return-object v0
-.end method
-
-.method public isCancelled()Z
-    .locals 2
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzajx;->mLock:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_0
-    iget-boolean v0, p0, Lcom/google/android/gms/internal/zzajx;->zzccj:Z
-
-    monitor-exit v1
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-.end method
-
-.method public isDone()Z
-    .locals 2
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzajx;->mLock:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_0
-    invoke-direct {p0}, Lcom/google/android/gms/internal/zzajx;->zzrs()Z
-
-    move-result v0
-
-    monitor-exit v1
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-.end method
-
-.method public final set(Ljava/lang/Object;)V
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;)V"
-        }
-    .end annotation
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzajx;->mLock:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_0
-    iget-boolean v0, p0, Lcom/google/android/gms/internal/zzajx;->zzccj:Z
-
-    if-eqz v0, :cond_0
-
-    monitor-exit v1
-
-    :goto_0
-    return-void
-
-    :cond_0
-    invoke-direct {p0}, Lcom/google/android/gms/internal/zzajx;->zzrs()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-static {}, Lcom/google/android/gms/ads/internal/zzbv;->zzee()Lcom/google/android/gms/internal/zzafn;
-
-    move-result-object v0
-
-    new-instance v2, Ljava/lang/IllegalStateException;
-
-    const-string v3, "Provided SettableFuture with multiple values."
-
-    invoke-direct {v2, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    const-string v3, "SettableFuture.set"
-
-    invoke-virtual {v0, v2, v3}, Lcom/google/android/gms/internal/zzafn;->zza(Ljava/lang/Throwable;Ljava/lang/String;)V
-
-    monitor-exit v1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-
-    :cond_1
-    const/4 v0, 0x1
-
-    :try_start_1
-    iput-boolean v0, p0, Lcom/google/android/gms/internal/zzajx;->zzdfe:Z
-
-    iput-object p1, p0, Lcom/google/android/gms/internal/zzajx;->mValue:Ljava/lang/Object;
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzajx;->mLock:Ljava/lang/Object;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzajx;->zzdff:Lcom/google/android/gms/internal/cy;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/cy;->a()V
-
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_0
-.end method
-
-.method public final setException(Ljava/lang/Throwable;)V
-    .locals 4
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzajx;->mLock:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_0
-    iget-boolean v0, p0, Lcom/google/android/gms/internal/zzajx;->zzccj:Z
-
-    if-eqz v0, :cond_0
-
-    monitor-exit v1
-
-    :goto_0
-    return-void
-
-    :cond_0
-    invoke-direct {p0}, Lcom/google/android/gms/internal/zzajx;->zzrs()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-static {}, Lcom/google/android/gms/ads/internal/zzbv;->zzee()Lcom/google/android/gms/internal/zzafn;
-
-    move-result-object v0
-
-    new-instance v2, Ljava/lang/IllegalStateException;
-
-    const-string v3, "Provided SettableFuture with multiple values."
-
-    invoke-direct {v2, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    const-string v3, "SettableFuture.setException"
-
-    invoke-virtual {v0, v2, v3}, Lcom/google/android/gms/internal/zzafn;->zza(Ljava/lang/Throwable;Ljava/lang/String;)V
-
-    monitor-exit v1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-
-    :cond_1
-    :try_start_1
-    iput-object p1, p0, Lcom/google/android/gms/internal/zzajx;->zzdfd:Ljava/lang/Throwable;
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzajx;->mLock:Ljava/lang/Object;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzajx;->zzdff:Lcom/google/android/gms/internal/cy;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/cy;->a()V
-
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_0
-.end method
-
-.method public final zza(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+.method static synthetic zzau(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzajx;->zzdff:Lcom/google/android/gms/internal/cy;
+    invoke-static {p0, p1}, Lcom/google/android/gms/internal/zzajx;->zzat(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0, p1, p2}, Lcom/google/android/gms/internal/cy;->a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    move-result-object v0
 
-    return-void
+    return-object v0
+.end method
+
+.method private static zziO(Ljava/lang/String;)Ljava/lang/String;
+    .locals 4
+
+    const/4 v1, 0x0
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
+
+    move-result v0
+
+    :goto_0
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    add-int/lit8 v3, v3, -0x1
+
+    if-ge v1, v3, :cond_0
+
+    invoke-static {v0}, Ljava/lang/Character;->isLetter(C)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v1, v1, 0x1
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    if-ne v1, v3, :cond_2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    :cond_1
+    :goto_1
+    return-object p0
+
+    :cond_2
+    invoke-static {v0}, Ljava/lang/Character;->isUpperCase(C)Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    invoke-static {v0}, Ljava/lang/Character;->toUpperCase(C)C
+
+    move-result v0
+
+    add-int/lit8 v1, v1, 0x1
+
+    invoke-static {v0, p0, v1}, Lcom/google/android/gms/internal/zzajx;->zza(CLjava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    goto :goto_1
+.end method
+
+.method static synthetic zziP(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    invoke-static {p0}, Lcom/google/android/gms/internal/zzajx;->zziO(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

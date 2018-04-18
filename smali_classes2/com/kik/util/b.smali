@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/core/util/e;
+.implements Lkik/core/util/g;
 
 
 # instance fields
@@ -34,7 +34,7 @@
     .line 33
     iget-object v0, p0, Lcom/kik/util/b;->a:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/facebook/a/a/b;->a(Landroid/content/Context;)I
+    invoke-static {v0}, Lcom/a/a/a/b;->a(Landroid/content/Context;)I
 
     move-result v0
 

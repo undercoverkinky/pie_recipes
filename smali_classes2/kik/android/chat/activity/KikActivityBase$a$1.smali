@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 191
+    .line 188
     iput-object p1, p0, Lkik/android/chat/activity/KikActivityBase$a$1;->a:Lkik/android/chat/activity/KikActivityBase$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,8 +50,8 @@
     .locals 2
 
     .prologue
-    .line 191
-    .line 1195
+    .line 188
+    .line 1192
     iget-object v0, p0, Lkik/android/chat/activity/KikActivityBase$a$1;->a:Lkik/android/chat/activity/KikActivityBase$a;
 
     iget-object v0, v0, Lkik/android/chat/activity/KikActivityBase$a;->a:Lkik/android/chat/activity/KikActivityBase;
@@ -62,6 +62,6 @@
 
     invoke-virtual {v0, v1}, Lkik/android/chat/activity/KikActivityBase;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 191
+    .line 188
     return-void
 .end method

@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 496
+    .line 493
     iput-object p1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$4;->b:Lcom/kik/cards/usermedia/CustomGalleryActivity;
 
     iput p2, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$4;->a:I
@@ -46,7 +46,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 499
+    .line 496
     iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$4;->b:Lcom/kik/cards/usermedia/CustomGalleryActivity;
 
     invoke-static {v0}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->c(Lcom/kik/cards/usermedia/CustomGalleryActivity;)Landroid/widget/GridView;
@@ -55,7 +55,7 @@
 
     invoke-virtual {v0, v1, v1}, Landroid/widget/GridView;->smoothScrollBy(II)V
 
-    .line 500
+    .line 497
     iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$4;->b:Lcom/kik/cards/usermedia/CustomGalleryActivity;
 
     invoke-static {v0}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->c(Lcom/kik/cards/usermedia/CustomGalleryActivity;)Landroid/widget/GridView;
@@ -66,6 +66,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setSelection(I)V
 
-    .line 501
+    .line 498
     return-void
 .end method

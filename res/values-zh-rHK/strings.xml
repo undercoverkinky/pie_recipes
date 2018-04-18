@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="abc_action_bar_home_description">瀏覽主頁</string>
-    <string name="abc_action_bar_home_description_format">%1$s：%2$s</string>
-    <string name="abc_action_bar_home_subtitle_description_format">%1$s (%2$s)：%3$s</string>
     <string name="abc_action_bar_up_description">向上瀏覽</string>
     <string name="abc_action_menu_overflow_description">更多選項</string>
     <string name="abc_action_mode_done">完成</string>
     <string name="abc_activity_chooser_view_see_all">顯示全部</string>
     <string name="abc_activitychooserview_choose_application">選擇應用程式</string>
-    <string name="abc_capital_off">關閉</string>
-    <string name="abc_capital_on">開啟</string>
-    <string name="abc_search_hint">搜尋…</string>
     <string name="abc_searchview_description_clear">清除查詢</string>
     <string name="abc_searchview_description_query">搜尋查詢</string>
     <string name="abc_searchview_description_search">搜尋</string>
@@ -18,33 +13,37 @@
     <string name="abc_searchview_description_voice">語音搜尋</string>
     <string name="abc_shareactionprovider_share_with">分享對象</string>
     <string name="abc_shareactionprovider_share_with_application">與「%s」分享</string>
-    <string name="abc_toolbar_collapse_description">收合</string>
-    <string name="common_google_play_services_enable_button">啟用</string>
+    <string name="common_google_play_services_api_unavailable_text">「%1$s」需要一個或多個目前尚未可用的 Google Play 服務。請聯絡開發人員尋求協助。</string>
+    <string name="common_google_play_services_enable_button">啟用 Google Play 服務</string>
     <string name="common_google_play_services_enable_text">您必須啟用 Google Play 服務，方可執行「%1$s」。</string>
     <string name="common_google_play_services_enable_title">啟用 Google Play 服務</string>
-    <string name="common_google_play_services_install_button">安裝</string>
-    <string name="common_google_play_services_install_text">您的裝置尚未安裝 Google Play 服務，因此無法執行「%1$s」。</string>
+    <string name="common_google_play_services_install_button">安裝 Google Play 服務</string>
+    <string name="common_google_play_services_install_text_phone">您的手機尚未安裝 Google Play 服務，因此無法執行「%1$s」。</string>
+    <string name="common_google_play_services_install_text_tablet">您的平板電腦尚未安裝 Google Play 服務，因此無法執行「%1$s」。</string>
     <string name="common_google_play_services_install_title">安裝 Google Play 服務</string>
+    <string name="common_google_play_services_invalid_account_text">這個裝置上沒有您指定的帳戶，請選擇其他帳戶。</string>
+    <string name="common_google_play_services_invalid_account_title">無效的帳戶</string>
+    <string name="common_google_play_services_network_error_text">您必須建立數據連線，方可連接 Google Play 服務。</string>
+    <string name="common_google_play_services_network_error_title">網絡錯誤</string>
     <string name="common_google_play_services_notification_ticker">Google Play 服務錯誤</string>
-    <string name="common_google_play_services_unknown_issue">「%1$s」存取 Google Play 服務時發生問題。請稍後再試一次。</string>
-    <string name="common_google_play_services_unsupported_text">您的裝置不支援 Google Play 服務，因此無法執行「%1$s」。</string>
+    <string name="common_google_play_services_resolution_required_text">請完成「%1$s」要求的操作。</string>
+    <string name="common_google_play_services_resolution_required_title">「Google Play 服務」要求執行操作</string>
+    <string name="common_google_play_services_restricted_profile_text">不支援從受限制的個人檔案存取帳戶。</string>
+    <string name="common_google_play_services_restricted_profile_title">受限制的個人檔案</string>
+    <string name="common_google_play_services_sign_in_failed_text">登入特定帳戶時發生錯誤。請選擇其他帳戶。</string>
+    <string name="common_google_play_services_sign_in_failed_title">登入失敗</string>
+    <string name="common_google_play_services_unknown_issue">「%1$s」存取 Google Play 服務時發生問題。如果問題持續，請聯絡開發人員尋求協助。</string>
+    <string name="common_google_play_services_unsupported_text">「%1$s」需要使用 Google Play 服務，但您的裝置並不支援此服務。請聯絡裝置製造商尋求協助。</string>
+    <string name="common_google_play_services_unsupported_title">Google Play 服務</string>
     <string name="common_google_play_services_update_button">更新</string>
     <string name="common_google_play_services_update_text">您必須更新「Google Play 服務」，才能執行 %1$s。</string>
     <string name="common_google_play_services_update_title">更新 Google Play 服務</string>
     <string name="common_google_play_services_updating_text">正在更新 Google Play 服務，更新完成後方可執行「%1$s」。</string>
+    <string name="common_google_play_services_updating_title">正在更新 Google Play 服務</string>
     <string name="common_google_play_services_wear_update_text">需要使用新版本的 Google Play 服務。更新會即將自動開始。</string>
     <string name="common_open_on_phone">在手機開啟</string>
     <string name="common_signin_button_text">登入</string>
     <string name="common_signin_button_text_long">透過 Google 登入</string>
-    <string name="gcm_fallback_notification_channel_label">其他</string>
-    <string name="s1">儲存圖片</string>
-    <string name="s2">允許廣告將圖片儲存至相片集嗎？</string>
-    <string name="s3">接受</string>
-    <string name="s4">拒絕</string>
-    <string name="s5">建立日曆活動</string>
-    <string name="s6">允許廣告建立日曆活動嗎？</string>
-    <string name="search_menu_title">搜尋</string>
-    <string name="status_bar_notification_info_overflow">999 +</string>
     <string name="Blue">藍色</string>
     <string name="Gold">金幣</string>
     <string name="Green">綠色</string>
@@ -75,8 +74,8 @@
     <string name="abm_options_dialog_hint">知道你的電話或郵件的人可以找到你</string>
     <string name="abm_options_dialog_prompt">允許好友找我</string>
     <string name="abm_privacy_options_title">隱私權選項</string>
-    <string name="about_copyright_text">版權所有 © 2018 Kik Interactive Inc 保留所有權利</string>
-    <string name="about_copyright_text_extended">"Copyright © 2018 Kik Interactive Inc 保留一切權利
+    <string name="about_copyright_text">版權所有 © 2016 Kik Interactive Inc 保留所有權利</string>
+    <string name="about_copyright_text_extended">"Copyright © 2016 Kik Interactive Inc 保留一切權利
 
 Kik Interactive Inc
 420 Weber St North
@@ -84,7 +83,7 @@ Suite I
 Waterloo, ON
 Canada
 N2L 4E7"</string>
-    <string name="about_copyright_text_extended_link">"Copyright © 2018 Kik Interactive Inc 保留一切權利
+    <string name="about_copyright_text_extended_link">"Copyright © 2016 Kik Interactive Inc 保留一切權利
 
 Kik Interactive Inc
 420 Weber St North

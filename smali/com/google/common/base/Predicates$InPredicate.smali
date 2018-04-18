@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/google/common/base/Predicate;
+.implements Lcom/google/common/base/i;
 .implements Ljava/io/Serializable;
 
 
@@ -23,7 +23,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/google/common/base/Predicate",
+        "Lcom/google/common/base/i",
         "<TT;>;",
         "Ljava/io/Serializable;"
     }
@@ -57,11 +57,11 @@
     .end annotation
 
     .prologue
-    .line 567
+    .line 506
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 568
-    invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 507
+    invoke-static {p1}, Lcom/google/common/base/h;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -69,15 +69,15 @@
 
     iput-object v0, p0, Lcom/google/common/base/Predicates$InPredicate;->target:Ljava/util/Collection;
 
-    .line 569
+    .line 508
     return-void
 .end method
 
-.method synthetic constructor <init>(Ljava/util/Collection;Lcom/google/common/base/Predicates$1;)V
+.method synthetic constructor <init>(Ljava/util/Collection;B)V
     .locals 0
 
     .prologue
-    .line 564
+    .line 503
     invoke-direct {p0, p1}, Lcom/google/common/base/Predicates$InPredicate;-><init>(Ljava/util/Collection;)V
 
     return-void
@@ -100,7 +100,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 574
+    .line 513
     :try_start_0
     iget-object v1, p0, Lcom/google/common/base/Predicates$InPredicate;->target:Ljava/util/Collection;
 
@@ -111,7 +111,7 @@
 
     move-result v0
 
-    .line 578
+    .line 517
     :goto_0
     return v0
 
@@ -120,7 +120,7 @@
 
     goto :goto_0
 
-    .line 576
+    .line 515
     :catch_1
     move-exception v1
 
@@ -135,15 +135,15 @@
     .end param
 
     .prologue
-    .line 584
+    .line 522
     instance-of v0, p1, Lcom/google/common/base/Predicates$InPredicate;
 
     if-eqz v0, :cond_0
 
-    .line 585
+    .line 523
     check-cast p1, Lcom/google/common/base/Predicates$InPredicate;
 
-    .line 586
+    .line 524
     iget-object v0, p0, Lcom/google/common/base/Predicates$InPredicate;->target:Ljava/util/Collection;
 
     iget-object v1, p1, Lcom/google/common/base/Predicates$InPredicate;->target:Ljava/util/Collection;
@@ -152,7 +152,7 @@
 
     move-result v0
 
-    .line 588
+    .line 526
     :goto_0
     return v0
 
@@ -166,7 +166,7 @@
     .locals 1
 
     .prologue
-    .line 593
+    .line 530
     iget-object v0, p0, Lcom/google/common/base/Predicates$InPredicate;->target:Ljava/util/Collection;
 
     invoke-interface {v0}, Ljava/util/Collection;->hashCode()I
@@ -177,19 +177,37 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     .prologue
-    .line 598
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 534
+    iget-object v0, p0, Lcom/google/common/base/Predicates$InPredicate;->target:Ljava/util/Collection;
 
-    const-string v1, "Predicates.in("
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    iget-object v1, p0, Lcom/google/common/base/Predicates$InPredicate;->target:Ljava/util/Collection;
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, 0xf
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v2, "Predicates.in("
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 109
+    .line 107
     invoke-direct {p0}, Lcom/kik/ui/fragment/FragmentBase$FragmentBundle;-><init>()V
 
     return-void
@@ -29,15 +29,15 @@
     .locals 1
 
     .prologue
-    .line 109
-    .line 1121
+    .line 107
+    .line 1119
     const-string v0, "introSource"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/PublicGroupIntroFragment$a;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/PublicGroupIntroFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 109
+    .line 107
     return-object v0
 .end method
 
@@ -47,11 +47,11 @@
     .locals 1
 
     .prologue
-    .line 115
+    .line 113
     const-string v0, "introSource"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/PublicGroupIntroFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 116
+    .line 114
     return-object p0
 .end method

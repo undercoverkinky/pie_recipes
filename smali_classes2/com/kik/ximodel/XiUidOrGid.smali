@@ -219,7 +219,6 @@
 
     invoke-virtual {p0}, Lcom/kik/ximodel/XiUidOrGid;->makeExtensionsImmutable()V
 
-    .line 82
     throw v0
 
     .line 61

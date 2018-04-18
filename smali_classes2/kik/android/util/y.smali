@@ -1,43 +1,33 @@
-.class final synthetic Lkik/android/util/y;
+.class public final Lkik/android/util/y;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Lrx/functions/e;
-
-
-# instance fields
-.field private final a:Lcom/kik/cache/KikVolleyImageLoader$c;
+.source "SourceFile"
 
 
 # direct methods
-.method private constructor <init>(Lcom/kik/cache/KikVolleyImageLoader$c;)V
-    .locals 0
+.method public static a(Z)Ljava/util/concurrent/ExecutorService;
+    .locals 8
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .prologue
+    const/4 v2, 0x1
 
-    iput-object p1, p0, Lkik/android/util/y;->a:Lcom/kik/cache/KikVolleyImageLoader$c;
+    .line 20
+    new-instance v1, Ljava/util/concurrent/ThreadPoolExecutor;
 
-    return-void
-.end method
+    const-wide/16 v4, 0x1
 
-.method public static a(Lcom/kik/cache/KikVolleyImageLoader$c;)Lrx/functions/e;
-    .locals 1
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    new-instance v0, Lkik/android/util/y;
+    new-instance v7, Ljava/util/concurrent/LinkedBlockingQueue;
 
-    invoke-direct {v0, p0}, Lkik/android/util/y;-><init>(Lcom/kik/cache/KikVolleyImageLoader$c;)V
+    invoke-direct {v7}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
-    return-object v0
-.end method
+    move v3, v2
 
+    invoke-direct/range {v1 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;)V
 
-# virtual methods
-.method public final a()V
-    .locals 1
+    .line 21
+    invoke-virtual {v1, p0}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
 
-    iget-object v0, p0, Lkik/android/util/y;->a:Lcom/kik/cache/KikVolleyImageLoader$c;
-
-    invoke-virtual {v0}, Lcom/kik/cache/KikVolleyImageLoader$c;->a()V
-
-    return-void
+    .line 22
+    return-object v1
 .end method

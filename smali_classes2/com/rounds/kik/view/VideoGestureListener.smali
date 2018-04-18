@@ -24,34 +24,34 @@
 
 .field private mLastTouchTime:J
 
-.field private mVideoView:Lcom/rounds/kik/view/VideoView;
-
 .field private mVideoViewListener:Lcom/rounds/kik/VideoController$VideoViewListener;
+
+.field private mView:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/rounds/kik/VideoController$VideoViewListener;Lcom/rounds/kik/view/VideoView;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/rounds/kik/VideoController$VideoViewListener;Landroid/view/View;)V
     .locals 2
 
     .prologue
-    .line 36
+    .line 37
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
 
-    .line 27
+    .line 28
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/rounds/kik/view/VideoGestureListener;->mLastTouchTime:J
 
-    .line 37
+    .line 38
     iput-object p1, p0, Lcom/rounds/kik/view/VideoGestureListener;->mContext:Landroid/content/Context;
 
-    .line 38
+    .line 39
     iput-object p2, p0, Lcom/rounds/kik/view/VideoGestureListener;->mVideoViewListener:Lcom/rounds/kik/VideoController$VideoViewListener;
 
-    .line 39
-    iput-object p3, p0, Lcom/rounds/kik/view/VideoGestureListener;->mVideoView:Lcom/rounds/kik/view/VideoView;
-
     .line 40
+    iput-object p3, p0, Lcom/rounds/kik/view/VideoGestureListener;->mView:Landroid/view/View;
+
+    .line 41
     return-void
 .end method
 
@@ -59,7 +59,7 @@
     .locals 4
 
     .prologue
-    .line 134
+    .line 123
     invoke-static {}, Lcom/rounds/kik/VideoAppModule;->localParticipant()Lcom/rounds/kik/participants/LocalParticipant;
 
     move-result-object v0
@@ -68,18 +68,18 @@
 
     move-result-object v1
 
-    .line 135
+    .line 124
     invoke-static {}, Lcom/rounds/kik/conference/ConferenceManager;->activeConferenceId()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 136
+    .line 125
     if-nez v0, :cond_0
 
-    .line 137
+    .line 126
     const-string v0, "not defined"
 
-    .line 140
+    .line 129
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -140,17 +140,17 @@
     .locals 1
 
     .prologue
-    .line 109
+    .line 98
     iget v0, p0, Lcom/rounds/kik/view/VideoGestureListener;->mCurrentStep:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/rounds/kik/view/VideoGestureListener;->mCurrentStep:I
 
-    .line 110
+    .line 99
     iput-wide p1, p0, Lcom/rounds/kik/view/VideoGestureListener;->mLastTouchTime:J
 
-    .line 111
+    .line 100
     return-void
 .end method
 
@@ -158,17 +158,17 @@
     .locals 2
 
     .prologue
-    .line 103
+    .line 92
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/rounds/kik/view/VideoGestureListener;->mCurrentStep:I
 
-    .line 104
+    .line 93
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/rounds/kik/view/VideoGestureListener;->mLastTouchTime:J
 
-    .line 105
+    .line 94
     return-void
 .end method
 
@@ -176,45 +176,45 @@
     .locals 3
 
     .prologue
-    .line 116
-    iget-object v0, p0, Lcom/rounds/kik/view/VideoGestureListener;->mVideoView:Lcom/rounds/kik/view/VideoView;
+    .line 105
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoGestureListener;->mView:Landroid/view/View;
 
     if-nez v0, :cond_1
 
-    .line 130
+    .line 119
     :cond_0
     :goto_0
     return-void
 
-    .line 120
+    .line 109
     :cond_1
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 121
+    .line 110
     const-string v1, "rounds.intent.action.DEBUG"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 122
+    .line 111
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 123
+    .line 112
     const-string v1, "rounds.intent.extra.DEBUG_DATA"
 
     const-string v2, ""
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 124
+    .line 113
     const-string v1, "text/plain"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 125
+    .line 114
     iget-object v1, p0, Lcom/rounds/kik/view/VideoGestureListener;->mContext:Landroid/content/Context;
 
     if-eqz v1, :cond_0
@@ -239,17 +239,17 @@
 
     if-eqz v1, :cond_0
 
-    .line 126
+    .line 115
     invoke-static {}, Lcom/rounds/kik/view/VideoGestureListener;->initDebugData()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 127
+    .line 116
     const-string v2, "rounds.intent.extra.DEBUG_DATA"
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 128
+    .line 117
     iget-object v1, p0, Lcom/rounds/kik/view/VideoGestureListener;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
@@ -263,7 +263,7 @@
     .locals 6
 
     .prologue
-    .line 54
+    .line 46
     iget-object v0, p0, Lcom/rounds/kik/view/VideoGestureListener;->mVideoViewListener:Lcom/rounds/kik/VideoController$VideoViewListener;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -276,12 +276,12 @@
 
     invoke-interface {v0, v1, v2}, Lcom/rounds/kik/VideoController$VideoViewListener;->onDoubleTap(FF)V
 
-    .line 55
+    .line 47
     invoke-super {p0, p1}, Landroid/view/GestureDetector$SimpleOnGestureListener;->onDoubleTap(Landroid/view/MotionEvent;)Z
 
     move-result v2
 
-    .line 56
+    .line 48
     iget-wide v0, p0, Lcom/rounds/kik/view/VideoGestureListener;->mLastTouchTime:J
 
     const-wide/16 v4, 0x0
@@ -298,7 +298,7 @@
 
     sub-long/2addr v0, v4
 
-    .line 57
+    .line 49
     :goto_0
     iget v3, p0, Lcom/rounds/kik/view/VideoGestureListener;->mCurrentStep:I
 
@@ -310,31 +310,31 @@
 
     if-gez v0, :cond_0
 
-    .line 58
+    .line 50
     iget v0, p0, Lcom/rounds/kik/view/VideoGestureListener;->mCurrentStep:I
 
     const/4 v1, 0x2
 
     if-lt v0, v1, :cond_2
 
-    .line 59
+    .line 51
     invoke-direct {p0}, Lcom/rounds/kik/view/VideoGestureListener;->showDebugWindow()V
 
-    .line 67
+    .line 59
     :cond_0
     invoke-direct {p0}, Lcom/rounds/kik/view/VideoGestureListener;->resetSteps()V
 
-    .line 69
+    .line 61
     :goto_1
     return v2
 
-    .line 56
+    .line 48
     :cond_1
     iget-wide v0, p0, Lcom/rounds/kik/view/VideoGestureListener;->mLastTouchTime:J
 
     goto :goto_0
 
-    .line 63
+    .line 55
     :cond_2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getDownTime()J
 
@@ -349,7 +349,7 @@
     .locals 3
 
     .prologue
-    .line 75
+    .line 67
     iget-object v0, p0, Lcom/rounds/kik/view/VideoGestureListener;->mVideoViewListener:Lcom/rounds/kik/VideoController$VideoViewListener;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -371,7 +371,7 @@
     .locals 3
 
     .prologue
-    .line 91
+    .line 80
     iget-object v0, p0, Lcom/rounds/kik/view/VideoGestureListener;->mVideoViewListener:Lcom/rounds/kik/VideoController$VideoViewListener;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -384,66 +384,28 @@
 
     invoke-interface {v0, v1, v2}, Lcom/rounds/kik/VideoController$VideoViewListener;->onLongPress(FF)V
 
-    .line 92
+    .line 81
     iget v0, p0, Lcom/rounds/kik/view/VideoGestureListener;->mCurrentStep:I
 
     if-nez v0, :cond_0
 
-    .line 93
+    .line 82
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getDownTime()J
 
     move-result-wide v0
 
     invoke-direct {p0, v0, v1}, Lcom/rounds/kik/view/VideoGestureListener;->nextStep(J)V
 
-    .line 98
+    .line 87
     :goto_0
     invoke-super {p0, p1}, Landroid/view/GestureDetector$SimpleOnGestureListener;->onLongPress(Landroid/view/MotionEvent;)V
 
-    .line 99
+    .line 88
     return-void
 
-    .line 96
+    .line 85
     :cond_0
     invoke-direct {p0}, Lcom/rounds/kik/view/VideoGestureListener;->resetSteps()V
-
-    goto :goto_0
-.end method
-
-.method public onSingleTapConfirmed(Landroid/view/MotionEvent;)Z
-    .locals 3
-
-    .prologue
-    .line 81
-    iget-object v0, p0, Lcom/rounds/kik/view/VideoGestureListener;->mVideoView:Lcom/rounds/kik/view/VideoView;
-
-    invoke-virtual {v0}, Lcom/rounds/kik/view/VideoView;->isInFullVideoMode()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 82
-    iget-object v0, p0, Lcom/rounds/kik/view/VideoGestureListener;->mVideoViewListener:Lcom/rounds/kik/VideoController$VideoViewListener;
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
-
-    move-result v1
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
-
-    move-result v2
-
-    invoke-interface {v0, v1, v2}, Lcom/rounds/kik/VideoController$VideoViewListener;->onTap(FF)Z
-
-    move-result v0
-
-    .line 84
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
 
     goto :goto_0
 .end method
@@ -452,23 +414,7 @@
     .locals 3
 
     .prologue
-    .line 45
-    iget-object v0, p0, Lcom/rounds/kik/view/VideoGestureListener;->mVideoView:Lcom/rounds/kik/view/VideoView;
-
-    invoke-virtual {v0}, Lcom/rounds/kik/view/VideoView;->isInFullVideoMode()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 46
-    const/4 v0, 0x0
-
-    .line 49
-    :goto_0
-    return v0
-
-    :cond_0
+    .line 73
     iget-object v0, p0, Lcom/rounds/kik/view/VideoGestureListener;->mVideoViewListener:Lcom/rounds/kik/VideoController$VideoViewListener;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -483,5 +429,5 @@
 
     move-result v0
 
-    goto :goto_0
+    return v0
 .end method

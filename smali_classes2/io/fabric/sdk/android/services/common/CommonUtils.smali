@@ -35,12 +35,12 @@
     .locals 2
 
     .prologue
-    .line 90
+    .line 89
     const/4 v0, 0x0
 
     sput-object v0, Lio/fabric/sdk/android/services/common/CommonUtils;->b:Ljava/lang/Boolean;
 
-    .line 92
+    .line 91
     const/16 v0, 0x10
 
     new-array v0, v0, [C
@@ -49,12 +49,12 @@
 
     sput-object v0, Lio/fabric/sdk/android/services/common/CommonUtils;->c:[C
 
-    .line 105
+    .line 104
     const-wide/16 v0, -0x1
 
     sput-wide v0, Lio/fabric/sdk/android/services/common/CommonUtils;->d:J
 
-    .line 664
+    .line 676
     new-instance v0, Lio/fabric/sdk/android/services/common/CommonUtils$1;
 
     invoke-direct {v0}, Lio/fabric/sdk/android/services/common/CommonUtils$1;-><init>()V
@@ -63,7 +63,7 @@
 
     return-void
 
-    .line 92
+    .line 91
     :array_0
     .array-data 2
         0x30s
@@ -89,7 +89,7 @@
     .locals 1
 
     .prologue
-    .line 147
+    .line 146
     invoke-static {}, Lio/fabric/sdk/android/services/common/CommonUtils$Architecture;->getValue()Lio/fabric/sdk/android/services/common/CommonUtils$Architecture;
 
     move-result-object v0
@@ -105,12 +105,12 @@
     .locals 3
 
     .prologue
-    .line 516
+    .line 528
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 1765
+    .line 1777
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -121,10 +121,10 @@
 
     iget v0, v0, Landroid/content/pm/ApplicationInfo;->icon:I
 
-    .line 1766
+    .line 1778
     if-lez v0, :cond_0
 
-    .line 1767
+    .line 1779
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -133,7 +133,7 @@
 
     move-result-object v0
 
-    .line 517
+    .line 529
     :goto_0
     invoke-virtual {v1, p1, p2, v0}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
@@ -141,7 +141,7 @@
 
     return v0
 
-    .line 1769
+    .line 1781
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -156,25 +156,25 @@
     .prologue
     const-wide v4, 0x4058c00000000000L    # 99.0
 
-    .line 597
+    .line 609
     invoke-static {p0}, Lio/fabric/sdk/android/services/common/CommonUtils;->c(Landroid/content/Context;)Ljava/lang/Float;
 
     move-result-object v0
 
-    .line 599
+    .line 611
     if-eqz p1, :cond_0
 
     if-nez v0, :cond_1
 
-    .line 600
+    .line 612
     :cond_0
     const/4 v0, 0x1
 
-    .line 611
+    .line 623
     :goto_0
     return v0
 
-    .line 603
+    .line 615
     :cond_1
     invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
 
@@ -186,12 +186,12 @@
 
     if-ltz v1, :cond_2
 
-    .line 604
+    .line 616
     const/4 v0, 0x3
 
     goto :goto_0
 
-    .line 607
+    .line 619
     :cond_2
     invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
 
@@ -203,12 +203,12 @@
 
     if-gez v0, :cond_3
 
-    .line 608
+    .line 620
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 611
+    .line 623
     :cond_3
     const/4 v0, 0x0
 
@@ -219,7 +219,7 @@
     .locals 4
 
     .prologue
-    .line 239
+    .line 238
     invoke-virtual {p0, p1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
@@ -247,28 +247,27 @@
     .locals 4
 
     .prologue
-    .line 248
+    .line 247
     const-string v0, "activity"
 
-    .line 249
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 251
+    .line 249
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object v0
 
-    .line 252
+    .line 251
     const/4 v1, 0x0
 
-    .line 255
+    .line 254
     if-eqz v0, :cond_1
 
-    .line 256
+    .line 255
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -286,7 +285,7 @@
 
     check-cast v0, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 257
+    .line 256
     iget-object v3, v0, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
 
     invoke-virtual {v3, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -295,7 +294,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 263
+    .line 262
     :goto_0
     return-object v0
 
@@ -309,7 +308,7 @@
     .locals 2
 
     .prologue
-    .line 108
+    .line 107
     const-string v0, "com.crashlytics.prefs"
 
     const/4 v1, 0x0
@@ -325,10 +324,10 @@
     .locals 5
 
     .prologue
-    .line 730
+    .line 742
     if-gez p0, :cond_0
 
-    .line 731
+    .line 743
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "value must be zero or greater"
@@ -337,7 +336,7 @@
 
     throw v0
 
-    .line 735
+    .line 747
     :cond_0
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -378,15 +377,15 @@
 
     const/4 v5, 0x1
 
+    .line 116
     .line 117
-    .line 118
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 122
+    .line 121
     :try_start_0
     new-instance v2, Ljava/io/BufferedReader;
 
@@ -401,7 +400,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 124
+    .line 123
     :cond_0
     :try_start_1
     invoke-virtual {v2}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -410,21 +409,21 @@
 
     if-eqz v1, :cond_1
 
-    .line 125
+    .line 124
     const-string v3, "\\s*:\\s*"
 
     invoke-static {v3}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v3
 
-    .line 126
+    .line 125
     const/4 v4, 0x2
 
     invoke-virtual {v3, v1, v4}, Ljava/util/regex/Pattern;->split(Ljava/lang/CharSequence;I)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 127
+    .line 126
     array-length v3, v1
 
     if-le v3, v5, :cond_0
@@ -439,7 +438,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 128
+    .line 127
     const/4 v3, 0x1
 
     aget-object v0, v1, v3
@@ -447,24 +446,24 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 136
+    .line 135
     :cond_1
     const-string v1, "Failed to close system file reader."
 
     invoke-static {v2, v1}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
 
-    .line 139
+    .line 138
     :cond_2
     :goto_0
     return-object v0
 
-    .line 133
+    .line 132
     :catch_0
     move-exception v1
 
     move-object v2, v0
 
-    .line 134
+    .line 133
     :goto_1
     :try_start_2
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
@@ -491,7 +490,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 136
+    .line 135
     const-string v1, "Failed to close system file reader."
 
     invoke-static {v2, v1}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
@@ -517,7 +516,7 @@
 
     goto :goto_2
 
-    .line 133
+    .line 132
     :catch_1
     move-exception v1
 
@@ -533,7 +532,7 @@
     .end annotation
 
     .prologue
-    .line 270
+    .line 269
     new-instance v0, Ljava/util/Scanner;
 
     invoke-direct {v0, p0}, Ljava/util/Scanner;-><init>(Ljava/io/InputStream;)V
@@ -544,7 +543,7 @@
 
     move-result-object v0
 
-    .line 271
+    .line 270
     invoke-virtual {v0}, Ljava/util/Scanner;->hasNext()Z
 
     move-result v1
@@ -564,104 +563,23 @@
     goto :goto_0
 .end method
 
-.method private static a(Ljava/io/InputStream;Ljava/lang/String;)Ljava/lang/String;
-    .locals 4
+.method public static a(Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
 
     .prologue
-    .line 292
-    :try_start_0
-    invoke-static {p1}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+    .line 288
+    const-string v0, "SHA-1"
 
-    move-result-object v0
-
-    .line 294
-    const/16 v1, 0x400
-
-    new-array v1, v1, [B
-
-    .line 298
-    :goto_0
-    invoke-virtual {p0, v1}, Ljava/io/InputStream;->read([B)I
-
-    move-result v2
-
-    const/4 v3, -0x1
-
-    if-eq v2, v3, :cond_0
-
-    .line 299
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, v3, v2}, Ljava/security/MessageDigest;->update([BII)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    .line 303
-    :catch_0
-    move-exception v0
-
-    .line 304
-    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
+    .line 1339
+    invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v1
 
-    const-string v2, "Fabric"
-
-    const-string v3, "Could not calculate hash for app icon."
-
-    invoke-interface {v1, v2, v3, v0}, Lio/fabric/sdk/android/k;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    .line 307
-    const-string v0, ""
-
-    :goto_1
-    return-object v0
-
-    .line 302
-    :cond_0
-    :try_start_1
-    invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
+    invoke-static {v1, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a([BLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a([B)Ljava/lang/String;
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-
-    move-result-object v0
-
-    goto :goto_1
-.end method
-
-.method public static a(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 275
-    const-string v0, "SHA-1"
-
-    invoke-static {p0, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method private static a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 287
-    invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v0
-
-    invoke-static {v0, p1}, Lio/fabric/sdk/android/services/common/CommonUtils;->a([BLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
+    .line 288
     return-object v0
 .end method
 
@@ -669,14 +587,14 @@
     .locals 6
 
     .prologue
-    .line 625
+    .line 637
     array-length v0, p0
 
     mul-int/lit8 v0, v0, 0x2
 
     new-array v1, v0, [C
 
-    .line 627
+    .line 639
     const/4 v0, 0x0
 
     :goto_0
@@ -684,12 +602,12 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 628
+    .line 640
     aget-byte v2, p0, v0
 
     and-int/lit16 v2, v2, 0xff
 
-    .line 629
+    .line 641
     mul-int/lit8 v3, v0, 0x2
 
     sget-object v4, Lio/fabric/sdk/android/services/common/CommonUtils;->c:[C
@@ -700,7 +618,7 @@
 
     aput-char v4, v1, v3
 
-    .line 630
+    .line 642
     mul-int/lit8 v3, v0, 0x2
 
     add-int/lit8 v3, v3, 0x1
@@ -713,12 +631,12 @@
 
     aput-char v2, v1, v3
 
-    .line 627
+    .line 639
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 632
+    .line 644
     :cond_0
     new-instance v0, Ljava/lang/String;
 
@@ -731,7 +649,7 @@
     .locals 5
 
     .prologue
-    .line 314
+    .line 323
     :try_start_0
     invoke-static {p1}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
     :try_end_0
@@ -739,10 +657,10 @@
 
     move-result-object v0
 
-    .line 324
+    .line 333
     invoke-virtual {v0, p0}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 326
+    .line 335
     invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object v0
@@ -754,11 +672,11 @@
     :goto_0
     return-object v0
 
-    .line 315
+    .line 324
     :catch_0
     move-exception v0
 
-    .line 316
+    .line 325
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     move-result-object v1
@@ -787,7 +705,7 @@
 
     invoke-interface {v1, v2, v3, v0}, Lio/fabric/sdk/android/k;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 318
+    .line 327
     const-string v0, ""
 
     goto :goto_0
@@ -799,23 +717,23 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 341
+    .line 353
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     move v0, v1
 
-    .line 343
+    .line 355
     :goto_0
     if-gtz v0, :cond_1
 
     aget-object v3, p0, v1
 
-    .line 345
+    .line 357
     if-eqz v3, :cond_0
 
-    .line 347
+    .line 359
     const-string v4, "-"
 
     const-string v5, ""
@@ -832,22 +750,22 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 343
+    .line 355
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 352
+    .line 364
     :cond_1
     invoke-static {v2}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 355
+    .line 367
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 356
+    .line 368
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -865,32 +783,28 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 357
+    .line 369
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 360
+    .line 372
     :cond_2
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 364
+    .line 376
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v1
 
     if-lez v1, :cond_3
 
-    .line 1275
-    const-string v1, "SHA-1"
-
-    invoke-static {v0, v1}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 364
     :goto_2
     return-object v0
 
@@ -904,14 +818,14 @@
     .locals 2
 
     .prologue
-    .line 437
+    .line 449
     invoke-static {p0}, Lio/fabric/sdk/android/services/common/CommonUtils;->n(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 438
+    .line 450
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     move-result-object v0
@@ -920,7 +834,7 @@
 
     invoke-interface {v0, v1, p1}, Lio/fabric/sdk/android/k;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 440
+    .line 452
     :cond_0
     return-void
 .end method
@@ -929,22 +843,22 @@
     .locals 1
 
     .prologue
-    .line 849
+    .line 861
     if-eqz p0, :cond_0
 
-    .line 851
+    .line 863
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 857
+    .line 869
     :cond_0
     :goto_0
     return-void
 
-    .line 853
+    .line 865
     :catch_0
     move-exception v0
 
@@ -960,25 +874,25 @@
     .locals 3
 
     .prologue
-    .line 698
+    .line 710
     if-eqz p0, :cond_0
 
-    .line 700
+    .line 712
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 705
+    .line 717
     :cond_0
     :goto_0
     return-void
 
-    .line 701
+    .line 713
     :catch_0
     move-exception v0
 
-    .line 702
+    .line 714
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     move-result-object v1
@@ -994,25 +908,25 @@
     .locals 3
 
     .prologue
-    .line 708
+    .line 720
     if-eqz p0, :cond_0
 
-    .line 710
+    .line 722
     :try_start_0
     invoke-interface {p0}, Ljava/io/Flushable;->flush()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 715
+    .line 727
     :cond_0
     :goto_0
     return-void
 
-    .line 711
+    .line 723
     :catch_0
     move-exception v0
 
-    .line 712
+    .line 724
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     move-result-object v1
@@ -1033,7 +947,7 @@
     .end annotation
 
     .prologue
-    .line 780
+    .line 792
     :goto_0
     invoke-virtual {p0, p2}, Ljava/io/InputStream;->read([B)I
 
@@ -1043,14 +957,14 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 781
+    .line 793
     const/4 v1, 0x0
 
     invoke-virtual {p1, p2, v1, v0}, Ljava/io/OutputStream;->write([BII)V
 
     goto :goto_0
 
-    .line 783
+    .line 795
     :cond_0
     return-void
 .end method
@@ -1059,38 +973,38 @@
     .locals 2
 
     .prologue
-    .line 494
+    .line 506
     if-eqz p0, :cond_0
 
-    .line 495
+    .line 507
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 497
+    .line 509
     if-eqz v0, :cond_0
 
-    .line 498
+    .line 510
     const-string v1, "bool"
 
     invoke-static {p0, p1, v1}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
 
-    .line 500
+    .line 512
     if-lez v1, :cond_1
 
-    .line 501
+    .line 513
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result p2
 
-    .line 512
+    .line 524
     :cond_0
     :goto_0
     return p2
 
-    .line 504
+    .line 516
     :cond_1
     const-string v0, "string"
 
@@ -1098,10 +1012,10 @@
 
     move-result v0
 
-    .line 506
+    .line 518
     if-lez v0, :cond_0
 
-    .line 507
+    .line 519
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -1117,7 +1031,7 @@
     .locals 9
 
     .prologue
-    .line 202
+    .line 201
     const-class v4, Lio/fabric/sdk/android/services/common/CommonUtils;
 
     monitor-enter v4
@@ -1131,10 +1045,10 @@
 
     if-nez v0, :cond_0
 
-    .line 203
+    .line 202
     const-wide/16 v2, 0x0
 
-    .line 204
+    .line 203
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/proc/meminfo"
@@ -1147,14 +1061,14 @@
 
     move-result-object v0
 
-    .line 206
+    .line 205
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_4
 
-    .line 207
+    .line 206
     sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
@@ -1163,7 +1077,7 @@
 
     move-result-object v1
 
-    .line 210
+    .line 209
     :try_start_1
     const-string v0, "KB"
 
@@ -1173,7 +1087,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 211
+    .line 210
     const-string v0, "KB"
 
     const/16 v5, 0x400
@@ -1185,12 +1099,12 @@
 
     move-result-wide v0
 
-    .line 229
+    .line 228
     :goto_0
     :try_start_2
     sput-wide v0, Lio/fabric/sdk/android/services/common/CommonUtils;->d:J
 
-    .line 231
+    .line 230
     :cond_0
     sget-wide v0, Lio/fabric/sdk/android/services/common/CommonUtils;->d:J
     :try_end_2
@@ -1200,7 +1114,7 @@
 
     return-wide v0
 
-    .line 212
+    .line 211
     :cond_1
     :try_start_3
     const-string v0, "MB"
@@ -1211,7 +1125,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 215
+    .line 214
     const-string v0, "MB"
 
     const/high16 v5, 0x100000
@@ -1222,7 +1136,7 @@
 
     goto :goto_0
 
-    .line 216
+    .line 215
     :cond_2
     const-string v0, "GB"
 
@@ -1232,7 +1146,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 219
+    .line 218
     const-string v0, "GB"
 
     const/high16 v5, 0x40000000    # 2.0f
@@ -1243,7 +1157,7 @@
 
     goto :goto_0
 
-    .line 221
+    .line 220
     :cond_3
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
     :try_end_3
@@ -1252,14 +1166,14 @@
 
     move-wide v0, v2
 
-    .line 227
+    .line 226
     goto :goto_0
 
-    .line 224
+    .line 223
     :catch_0
     move-exception v0
 
-    .line 225
+    .line 224
     :try_start_4
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
@@ -1290,7 +1204,7 @@
 
     goto :goto_0
 
-    .line 202
+    .line 201
     :catchall_0
     move-exception v0
 
@@ -1303,12 +1217,12 @@
     .locals 2
 
     .prologue
-    .line 374
+    .line 386
     new-instance v1, Landroid/app/ActivityManager$MemoryInfo;
 
     invoke-direct {v1}, Landroid/app/ActivityManager$MemoryInfo;-><init>()V
 
-    .line 375
+    .line 387
     const-string v0, "activity"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1319,8 +1233,48 @@
 
     invoke-virtual {v0, v1}, Landroid/app/ActivityManager;->getMemoryInfo(Landroid/app/ActivityManager$MemoryInfo;)V
 
-    .line 376
+    .line 388
     iget-wide v0, v1, Landroid/app/ActivityManager$MemoryInfo;->availMem:J
+
+    return-wide v0
+.end method
+
+.method public static b(Ljava/lang/String;)J
+    .locals 6
+
+    .prologue
+    .line 399
+    new-instance v0, Landroid/os/StatFs;
+
+    invoke-direct {v0, p0}, Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
+
+    .line 400
+    invoke-virtual {v0}, Landroid/os/StatFs;->getBlockSize()I
+
+    move-result v1
+
+    int-to-long v2, v1
+
+    .line 401
+    invoke-virtual {v0}, Landroid/os/StatFs;->getBlockCount()I
+
+    move-result v1
+
+    int-to-long v4, v1
+
+    mul-long/2addr v4, v2
+
+    .line 402
+    invoke-virtual {v0}, Landroid/os/StatFs;->getAvailableBlocks()I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    mul-long/2addr v0, v2
+
+    .line 403
+    sub-long v0, v4, v0
 
     return-wide v0
 .end method
@@ -1329,52 +1283,52 @@
     .locals 1
 
     .prologue
-    .line 786
+    .line 798
     packed-switch p0, :pswitch_data_0
 
-    .line 800
+    .line 812
     const-string v0, "?"
 
     :goto_0
     return-object v0
 
-    .line 788
+    .line 800
     :pswitch_0
     const-string v0, "A"
 
     goto :goto_0
 
-    .line 790
+    .line 802
     :pswitch_1
     const-string v0, "D"
 
     goto :goto_0
 
-    .line 792
+    .line 804
     :pswitch_2
     const-string v0, "E"
 
     goto :goto_0
 
-    .line 794
+    .line 806
     :pswitch_3
     const-string v0, "I"
 
     goto :goto_0
 
-    .line 796
+    .line 808
     :pswitch_4
     const-string v0, "V"
 
     goto :goto_0
 
-    .line 798
+    .line 810
     :pswitch_5
     const-string v0, "W"
 
     goto :goto_0
 
-    .line 786
+    .line 798
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_4
@@ -1390,24 +1344,8 @@
     .locals 1
 
     .prologue
-    .line 283
-    const-string v0, "SHA-1"
-
-    invoke-static {p0, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/InputStream;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static b(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 279
-    const-string v0, "SHA-256"
-
-    invoke-static {p0, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 296
+    invoke-static {p0}, Lio/fabric/sdk/android/services/common/CommonUtils;->c(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1418,14 +1356,14 @@
     .locals 3
 
     .prologue
-    .line 447
+    .line 459
     invoke-static {p0}, Lio/fabric/sdk/android/services/common/CommonUtils;->n(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 448
+    .line 460
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     move-result-object v0
@@ -1436,49 +1374,9 @@
 
     invoke-interface {v0, v1, v2, p1}, Lio/fabric/sdk/android/k;->a(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 450
+    .line 462
     :cond_0
     return-void
-.end method
-
-.method public static c(Ljava/lang/String;)J
-    .locals 6
-
-    .prologue
-    .line 387
-    new-instance v0, Landroid/os/StatFs;
-
-    invoke-direct {v0, p0}, Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
-
-    .line 388
-    invoke-virtual {v0}, Landroid/os/StatFs;->getBlockSize()I
-
-    move-result v1
-
-    int-to-long v2, v1
-
-    .line 389
-    invoke-virtual {v0}, Landroid/os/StatFs;->getBlockCount()I
-
-    move-result v1
-
-    int-to-long v4, v1
-
-    mul-long/2addr v4, v2
-
-    .line 390
-    invoke-virtual {v0}, Landroid/os/StatFs;->getAvailableBlocks()I
-
-    move-result v0
-
-    int-to-long v0, v0
-
-    mul-long/2addr v0, v2
-
-    .line 391
-    sub-long v0, v4, v0
-
-    return-wide v0
 .end method
 
 .method public static c(Landroid/content/Context;)Ljava/lang/Float;
@@ -1489,26 +1387,26 @@
 
     const/4 v3, -0x1
 
-    .line 396
+    .line 408
     new-instance v1, Landroid/content/IntentFilter;
 
     const-string v2, "android.intent.action.BATTERY_CHANGED"
 
     invoke-direct {v1, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 397
+    .line 409
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     move-result-object v1
 
-    .line 399
+    .line 411
     if-nez v1, :cond_0
 
-    .line 406
+    .line 418
     :goto_0
     return-object v0
 
-    .line 403
+    .line 415
     :cond_0
     const-string v0, "level"
 
@@ -1516,14 +1414,14 @@
 
     move-result v0
 
-    .line 404
+    .line 416
     const-string v2, "scale"
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 406
+    .line 418
     int-to-float v0, v0
 
     int-to-float v1, v1
@@ -1541,22 +1439,22 @@
     .locals 1
 
     .prologue
-    .line 682
+    .line 694
     const-string v0, "string"
 
     invoke-static {p0, p1, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
-    .line 684
+    .line 696
     if-lez v0, :cond_0
 
-    .line 685
+    .line 697
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 688
+    .line 700
     :goto_0
     return-object v0
 
@@ -1566,61 +1464,84 @@
     goto :goto_0
 .end method
 
-.method public static d(Landroid/content/Context;)Z
-    .locals 3
+.method private static c(Ljava/io/InputStream;)Ljava/lang/String;
+    .locals 4
 
     .prologue
-    const/4 v1, 0x0
+    .line 301
+    :try_start_0
+    const-string v0, "SHA-1"
 
-    .line 410
-    invoke-static {p0}, Lio/fabric/sdk/android/services/common/CommonUtils;->f(Landroid/content/Context;)Z
+    invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
-    move-result v0
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    .line 303
+    const/16 v1, 0x400
 
-    move v0, v1
+    new-array v1, v1, [B
 
-    .line 418
+    .line 307
     :goto_0
-    return v0
+    invoke-virtual {p0, v1}, Ljava/io/InputStream;->read([B)I
 
-    .line 415
+    move-result v2
+
+    const/4 v3, -0x1
+
+    if-eq v2, v3, :cond_0
+
+    .line 308
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, v3, v2}, Ljava/security/MessageDigest;->update([BII)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    .line 312
+    :catch_0
+    move-exception v0
+
+    .line 313
+    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
+
+    move-result-object v1
+
+    const-string v2, "Fabric"
+
+    const-string v3, "Could not calculate hash for app icon."
+
+    invoke-interface {v1, v2, v3, v0}, Lio/fabric/sdk/android/k;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 316
+    const-string v0, ""
+
+    :goto_1
+    return-object v0
+
+    .line 311
     :cond_0
-    const-string v0, "sensor"
-
-    .line 416
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    :try_start_1
+    invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object v0
 
-    check-cast v0, Landroid/hardware/SensorManager;
-
-    .line 417
-    const/16 v2, 0x8
-
-    invoke-virtual {v0, v2}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
+    invoke-static {v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a([B)Ljava/lang/String;
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
     move-result-object v0
 
-    .line 418
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    move v0, v1
-
-    goto :goto_0
+    goto :goto_1
 .end method
 
-.method public static d(Ljava/lang/String;)Z
+.method public static c(Ljava/lang/String;)Z
     .locals 1
 
     .prologue
-    .line 719
+    .line 731
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -1641,21 +1562,70 @@
     goto :goto_0
 .end method
 
+.method public static d(Landroid/content/Context;)Z
+    .locals 3
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 422
+    invoke-static {p0}, Lio/fabric/sdk/android/services/common/CommonUtils;->f(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    move v0, v1
+
+    .line 430
+    :goto_0
+    return v0
+
+    .line 427
+    :cond_0
+    const-string v0, "sensor"
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/SensorManager;
+
+    .line 429
+    const/16 v2, 0x8
+
+    invoke-virtual {v0, v2}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
+
+    move-result-object v0
+
+    .line 430
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    move v0, v1
+
+    goto :goto_0
+.end method
+
 .method public static e(Landroid/content/Context;)V
     .locals 1
 
     .prologue
-    .line 427
+    .line 439
     invoke-static {p0}, Lio/fabric/sdk/android/services/common/CommonUtils;->n(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 428
+    .line 440
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
-    .line 430
+    .line 442
     :cond_0
     return-void
 .end method
@@ -1664,20 +1634,18 @@
     .locals 3
 
     .prologue
-    .line 526
-    .line 527
+    .line 538
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     const-string v1, "android_id"
 
-    .line 526
     invoke-static {v0, v1}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 528
+    .line 540
     const-string v1, "sdk"
 
     sget-object v2, Landroid/os/Build;->PRODUCT:Ljava/lang/String;
@@ -1718,15 +1686,15 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 537
+    .line 549
     invoke-static {p0}, Lio/fabric/sdk/android/services/common/CommonUtils;->f(Landroid/content/Context;)Z
 
     move-result v1
 
-    .line 538
+    .line 550
     sget-object v2, Landroid/os/Build;->TAGS:Ljava/lang/String;
 
-    .line 539
+    .line 551
     if-nez v1, :cond_1
 
     if-eqz v2, :cond_1
@@ -1739,12 +1707,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 557
+    .line 569
     :cond_0
     :goto_0
     return v0
 
-    .line 544
+    .line 556
     :cond_1
     new-instance v2, Ljava/io/File;
 
@@ -1752,21 +1720,21 @@
 
     invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 545
+    .line 557
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 553
+    .line 565
     new-instance v2, Ljava/io/File;
 
     const-string v3, "/system/xbin/su"
 
     invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 554
+    .line 566
     if-nez v1, :cond_2
 
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
@@ -1775,7 +1743,7 @@
 
     if-nez v1, :cond_0
 
-    .line 557
+    .line 569
     :cond_2
     const/4 v0, 0x0
 
@@ -1790,8 +1758,8 @@
 
     const/4 v2, 0x0
 
-    .line 573
-    .line 574
+    .line 585
+    .line 586
     invoke-static {p0}, Lio/fabric/sdk/android/services/common/CommonUtils;->f(Landroid/content/Context;)Z
 
     move-result v0
@@ -1800,7 +1768,7 @@
 
     move v0, v1
 
-    .line 578
+    .line 590
     :goto_0
     invoke-static {p0}, Lio/fabric/sdk/android/services/common/CommonUtils;->g(Landroid/content/Context;)Z
 
@@ -1808,10 +1776,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 579
+    .line 591
     or-int/lit8 v0, v0, 0x2
 
-    .line 2561
+    .line 2573
     :cond_0
     invoke-static {}, Landroid/os/Debug;->isDebuggerConnected()Z
 
@@ -1828,14 +1796,14 @@
     :cond_1
     move v2, v1
 
-    .line 582
+    .line 594
     :cond_2
     if-eqz v2, :cond_3
 
-    .line 583
+    .line 595
     or-int/lit8 v0, v0, 0x4
 
-    .line 586
+    .line 598
     :cond_3
     return v0
 
@@ -1849,7 +1817,7 @@
     .locals 1
 
     .prologue
-    .line 657
+    .line 669
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
@@ -1877,8 +1845,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 809
-    .line 812
+    .line 821
+    .line 824
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1895,16 +1863,14 @@
 
     move-result-object v2
 
-    .line 3283
+    .line 3296
     :try_start_1
-    const-string v1, "SHA-1"
-
-    invoke-static {v2, v1}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/InputStream;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lio/fabric/sdk/android/services/common/CommonUtils;->c(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 814
-    invoke-static {v1}, Lio/fabric/sdk/android/services/common/CommonUtils;->d(Ljava/lang/String;)Z
+    .line 826
+    invoke-static {v1}, Lio/fabric/sdk/android/services/common/CommonUtils;->c(Ljava/lang/String;)Z
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -1913,29 +1879,29 @@
 
     if-eqz v3, :cond_0
 
-    .line 818
+    .line 830
     :goto_0
     const-string v1, "Failed to close icon input stream."
 
     invoke-static {v2, v1}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
 
-    .line 821
+    .line 833
     :goto_1
     return-object v0
 
     :cond_0
     move-object v0, v1
 
-    .line 814
+    .line 826
     goto :goto_0
 
-    .line 815
+    .line 827
     :catch_0
     move-exception v1
 
     move-object v2, v0
 
-    .line 816
+    .line 828
     :goto_2
     :try_start_2
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
@@ -1950,7 +1916,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 818
+    .line 830
     const-string v1, "Failed to close icon input stream."
 
     invoke-static {v2, v1}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
@@ -1976,7 +1942,7 @@
 
     goto :goto_3
 
-    .line 815
+    .line 827
     :catch_1
     move-exception v1
 
@@ -1987,7 +1953,7 @@
     .locals 1
 
     .prologue
-    .line 825
+    .line 837
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -2005,10 +1971,10 @@
     .locals 3
 
     .prologue
-    .line 832
+    .line 844
     const/4 v0, 0x0
 
-    .line 834
+    .line 846
     const-string v1, "io.fabric.android.build_id"
 
     const-string v2, "string"
@@ -2017,10 +1983,10 @@
 
     move-result v1
 
-    .line 836
+    .line 848
     if-nez v1, :cond_0
 
-    .line 837
+    .line 849
     const-string v1, "com.crashlytics.android.build_id"
 
     const-string v2, "string"
@@ -2029,11 +1995,11 @@
 
     move-result v1
 
-    .line 840
+    .line 852
     :cond_0
     if-eqz v1, :cond_1
 
-    .line 841
+    .line 853
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -2042,63 +2008,56 @@
 
     move-result-object v0
 
-    .line 842
+    .line 854
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
-    .line 845
+    .line 857
     :cond_1
     return-object v0
 .end method
 
 .method public static m(Landroid/content/Context;)Z
     .locals 3
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "MissingPermission"
-        }
-    .end annotation
 
     .prologue
     const/4 v2, 0x0
 
     const/4 v1, 0x1
 
-    .line 918
+    .line 929
     const-string v0, "android.permission.ACCESS_NETWORK_STATE"
 
-    .line 3863
+    .line 3875
     invoke-virtual {p0, v0}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 3864
+    .line 3876
     if-nez v0, :cond_0
 
     move v0, v1
 
-    .line 918
+    .line 929
     :goto_0
     if-eqz v0, :cond_2
 
-    .line 919
+    .line 930
     const-string v0, "connectivity"
 
-    .line 920
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 922
+    .line 932
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v0
 
-    .line 923
+    .line 933
     if-eqz v0, :cond_1
 
-    .line 924
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnectedOrConnecting()Z
 
     move-result v0
@@ -2107,26 +2066,26 @@
 
     move v0, v1
 
-    .line 927
+    .line 937
     :goto_1
     return v0
 
     :cond_0
     move v0, v2
 
-    .line 3864
+    .line 3876
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 925
+    .line 935
     goto :goto_1
 
     :cond_2
     move v0, v1
 
-    .line 927
+    .line 937
     goto :goto_1
 .end method
 
@@ -2134,12 +2093,12 @@
     .locals 2
 
     .prologue
-    .line 465
+    .line 477
     sget-object v0, Lio/fabric/sdk/android/services/common/CommonUtils;->b:Ljava/lang/Boolean;
 
     if-nez v0, :cond_0
 
-    .line 466
+    .line 478
     const-string v0, "com.crashlytics.Trace"
 
     const/4 v1, 0x0
@@ -2154,7 +2113,7 @@
 
     sput-object v0, Lio/fabric/sdk/android/services/common/CommonUtils;->b:Ljava/lang/Boolean;
 
-    .line 470
+    .line 482
     :cond_0
     sget-object v0, Lio/fabric/sdk/android/services/common/CommonUtils;->b:Ljava/lang/Boolean;
 

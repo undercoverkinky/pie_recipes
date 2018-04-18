@@ -1,11 +1,11 @@
 .class final Lkik/android/chat/fragment/KikChatFragment$1;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lkik/android/chat/fragment/KikChatFragment;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lkik/android/chat/fragment/KikChatFragment;->a(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Landroid/os/Bundle;",
         ">;"
@@ -38,7 +38,7 @@
     .locals 0
 
     .prologue
-    .line 262
+    .line 235
     iput-object p1, p0, Lkik/android/chat/fragment/KikChatFragment$1;->d:Lkik/android/chat/fragment/KikChatFragment;
 
     iput p2, p0, Lkik/android/chat/fragment/KikChatFragment$1;->a:I
@@ -47,7 +47,7 @@
 
     iput-object p4, p0, Lkik/android/chat/fragment/KikChatFragment$1;->c:Ljava/lang/String;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -60,20 +60,20 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 262
-    .line 1266
+    .line 235
+    .line 1239
     iget-object v1, p0, Lkik/android/chat/fragment/KikChatFragment$1;->d:Lkik/android/chat/fragment/KikChatFragment;
 
-    invoke-static {v1}, Lkik/android/chat/fragment/KikChatFragment;->h(Lkik/android/chat/fragment/KikChatFragment;)V
+    invoke-static {v1}, Lkik/android/chat/fragment/KikChatFragment;->a(Lkik/android/chat/fragment/KikChatFragment;)V
 
-    .line 1267
+    .line 1240
     iget-object v1, p0, Lkik/android/chat/fragment/KikChatFragment$1;->d:Lkik/android/chat/fragment/KikChatFragment;
 
-    iget-object v1, v1, Lkik/android/chat/fragment/KikChatFragment;->w:Lkik/android/chat/presentation/MediaTrayPresenter;
+    iget-object v1, v1, Lkik/android/chat/fragment/KikChatFragment;->u:Lkik/android/chat/presentation/MediaTrayPresenter;
 
-    invoke-interface {v1, v0}, Lkik/android/chat/presentation/MediaTrayPresenter;->d(Z)V
+    invoke-interface {v1, v0}, Lkik/android/chat/presentation/MediaTrayPresenter;->c(Z)V
 
-    .line 1268
+    .line 1241
     iget-object v1, p0, Lkik/android/chat/fragment/KikChatFragment$1;->d:Lkik/android/chat/fragment/KikChatFragment;
 
     iget-object v1, v1, Lkik/android/chat/fragment/KikChatFragment;->f:Lcom/kik/android/Mixpanel;
@@ -90,7 +90,7 @@
 
     int-to-long v4, v3
 
-    .line 1269
+    .line 1242
     invoke-virtual {v1, v2, v4, v5}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;J)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v1
@@ -99,12 +99,12 @@
 
     iget-object v3, p0, Lkik/android/chat/fragment/KikChatFragment$1;->b:Landroid/support/v4/app/FragmentActivity;
 
-    .line 1270
+    .line 1243
     invoke-virtual {v3}, Landroid/support/v4/app/FragmentActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    .line 1271
+    .line 1244
     invoke-virtual {v3}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v3
@@ -115,7 +115,7 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 1270
+    .line 1243
     :goto_0
     invoke-virtual {v1, v2, v0}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Z)Lcom/kik/android/Mixpanel$d;
 
@@ -125,7 +125,7 @@
 
     iget-object v2, p0, Lkik/android/chat/fragment/KikChatFragment$1;->c:Ljava/lang/String;
 
-    .line 1272
+    .line 1245
     invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
@@ -134,18 +134,18 @@
 
     const-string v2, "Attached"
 
-    .line 1273
+    .line 1246
     invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 1274
+    .line 1247
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 262
+    .line 235
     return-void
 
-    .line 1271
+    .line 1244
     :cond_0
     const/4 v0, 0x0
 
@@ -160,10 +160,10 @@
 
     const/4 v2, 0x0
 
-    .line 280
+    .line 253
     iget-object v0, p0, Lkik/android/chat/fragment/KikChatFragment$1;->d:Lkik/android/chat/fragment/KikChatFragment;
 
-    invoke-static {v0}, Lkik/android/chat/fragment/KikChatFragment;->i(Lkik/android/chat/fragment/KikChatFragment;)Lkik/android/videochat/VideoChatViewController;
+    invoke-static {v0}, Lkik/android/chat/fragment/KikChatFragment;->b(Lkik/android/chat/fragment/KikChatFragment;)Lkik/android/videochat/VideoChatViewController;
 
     move-result-object v0
 
@@ -171,12 +171,12 @@
 
     iget-object v0, p0, Lkik/android/chat/fragment/KikChatFragment$1;->d:Lkik/android/chat/fragment/KikChatFragment;
 
-    .line 281
-    invoke-static {v0}, Lkik/android/chat/fragment/KikChatFragment;->i(Lkik/android/chat/fragment/KikChatFragment;)Lkik/android/videochat/VideoChatViewController;
+    .line 254
+    invoke-static {v0}, Lkik/android/chat/fragment/KikChatFragment;->b(Lkik/android/chat/fragment/KikChatFragment;)Lkik/android/videochat/VideoChatViewController;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lkik/android/videochat/VideoChatViewController;->j()Z
+    invoke-virtual {v0}, Lkik/android/videochat/VideoChatViewController;->h()Z
 
     move-result v0
 
@@ -184,20 +184,20 @@
 
     move v0, v1
 
-    .line 283
+    .line 256
     :goto_0
     iget-object v3, p0, Lkik/android/chat/fragment/KikChatFragment$1;->d:Lkik/android/chat/fragment/KikChatFragment;
 
     invoke-static {v3, v0}, Lkik/android/chat/fragment/KikChatFragment;->a(Lkik/android/chat/fragment/KikChatFragment;I)V
 
-    .line 284
+    .line 257
     iget-object v0, p0, Lkik/android/chat/fragment/KikChatFragment$1;->d:Lkik/android/chat/fragment/KikChatFragment;
 
-    iget-object v0, v0, Lkik/android/chat/fragment/KikChatFragment;->w:Lkik/android/chat/presentation/MediaTrayPresenter;
+    iget-object v0, v0, Lkik/android/chat/fragment/KikChatFragment;->u:Lkik/android/chat/presentation/MediaTrayPresenter;
 
-    invoke-interface {v0, v2}, Lkik/android/chat/presentation/MediaTrayPresenter;->d(Z)V
+    invoke-interface {v0, v2}, Lkik/android/chat/presentation/MediaTrayPresenter;->c(Z)V
 
-    .line 285
+    .line 258
     iget-object v0, p0, Lkik/android/chat/fragment/KikChatFragment$1;->d:Lkik/android/chat/fragment/KikChatFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikChatFragment;->f:Lcom/kik/android/Mixpanel;
@@ -214,7 +214,7 @@
 
     int-to-long v4, v4
 
-    .line 286
+    .line 259
     invoke-virtual {v0, v3, v4, v5}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;J)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
@@ -223,12 +223,12 @@
 
     iget-object v4, p0, Lkik/android/chat/fragment/KikChatFragment$1;->b:Landroid/support/v4/app/FragmentActivity;
 
-    .line 287
+    .line 260
     invoke-virtual {v4}, Landroid/support/v4/app/FragmentActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    .line 288
+    .line 261
     invoke-virtual {v4}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v4
@@ -239,7 +239,7 @@
 
     if-ne v4, v5, :cond_1
 
-    .line 287
+    .line 260
     :goto_1
     invoke-virtual {v0, v3, v1}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Z)Lcom/kik/android/Mixpanel$d;
 
@@ -249,7 +249,7 @@
 
     iget-object v2, p0, Lkik/android/chat/fragment/KikChatFragment$1;->c:Ljava/lang/String;
 
-    .line 289
+    .line 262
     invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
@@ -258,18 +258,18 @@
 
     const-string v2, "Closed"
 
-    .line 290
+    .line 263
     invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 291
+    .line 264
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 292
+    .line 265
     return-void
 
-    .line 281
+    .line 254
     :cond_0
     const/4 v0, -0x1
 
@@ -278,6 +278,6 @@
     :cond_1
     move v1, v2
 
-    .line 288
+    .line 261
     goto :goto_1
 .end method

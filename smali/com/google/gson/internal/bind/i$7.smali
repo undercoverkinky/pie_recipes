@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 367
+    .line 388
     invoke-direct {p0}, Lcom/google/gson/o;-><init>()V
 
     return-void
@@ -45,8 +45,8 @@
     .end annotation
 
     .prologue
-    .line 367
-    .line 1370
+    .line 388
+    .line 1391
     invoke-virtual {p1}, Lcom/google/gson/stream/a;->f()Lcom/google/gson/stream/JsonToken;
 
     move-result-object v0
@@ -55,22 +55,22 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1371
+    .line 1392
     invoke-virtual {p1}, Lcom/google/gson/stream/a;->j()V
 
-    .line 1372
+    .line 1393
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 1374
+    .line 1395
     :cond_0
     invoke-virtual {p1}, Lcom/google/gson/stream/a;->h()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1375
+    .line 1396
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -79,7 +79,7 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 1376
+    .line 1397
     new-instance v1, Lcom/google/gson/JsonSyntaxException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -100,7 +100,7 @@
 
     throw v1
 
-    .line 1378
+    .line 1399
     :cond_1
     const/4 v1, 0x0
 
@@ -124,10 +124,10 @@
     .end annotation
 
     .prologue
-    .line 367
+    .line 388
     check-cast p2, Ljava/lang/Character;
 
-    .line 1382
+    .line 1403
     if-nez p2, :cond_0
 
     const/4 v0, 0x0
@@ -135,10 +135,10 @@
     :goto_0
     invoke-virtual {p1, v0}, Lcom/google/gson/stream/b;->b(Ljava/lang/String;)Lcom/google/gson/stream/b;
 
-    .line 367
+    .line 388
     return-void
 
-    .line 1382
+    .line 1403
     :cond_0
     invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 

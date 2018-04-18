@@ -4,17 +4,17 @@
 
 
 # static fields
-.field private static b:Lcom/kik/cache/KikVolleyImageLoader;
+.field private static b:Lcom/kik/cache/aa;
 
 
 # instance fields
 .field private a:Landroid/content/Context;
 
-.field private c:Lkik/core/interfaces/s;
+.field private c:Lkik/core/interfaces/u;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lkik/core/interfaces/s;)V
+.method public constructor <init>(Landroid/content/Context;Lkik/core/interfaces/u;)V
     .locals 5
 
     .prologue
@@ -27,7 +27,7 @@
     iput-object p1, p0, Lkik/android/b/c;->a:Landroid/content/Context;
 
     .line 38
-    iput-object p2, p0, Lkik/android/b/c;->c:Lkik/core/interfaces/s;
+    iput-object p2, p0, Lkik/android/b/c;->c:Lkik/core/interfaces/u;
 
     .line 1078
     :try_start_0
@@ -132,7 +132,7 @@
     invoke-static {v0, v1}, Lkik/android/util/e;->a(Ljava/io/File;Ljava/io/File;)V
 
     .line 50
-    sget-object v0, Lkik/android/b/c;->b:Lcom/kik/cache/KikVolleyImageLoader;
+    sget-object v0, Lkik/android/b/c;->b:Lcom/kik/cache/aa;
 
     if-nez v0, :cond_4
 
@@ -147,18 +147,18 @@
     if-lt v0, v2, :cond_5
 
     .line 55
-    new-instance v0, Lcom/android/volley/toolbox/f;
+    new-instance v0, Lcom/android/volley/toolbox/g;
 
-    invoke-direct {v0}, Lcom/android/volley/toolbox/f;-><init>()V
+    invoke-direct {v0}, Lcom/android/volley/toolbox/g;-><init>()V
 
     .line 63
     :goto_1
     new-instance v1, Lcom/android/volley/toolbox/a;
 
-    invoke-direct {v1, v0}, Lcom/android/volley/toolbox/a;-><init>(Lcom/android/volley/toolbox/e;)V
+    invoke-direct {v1, v0}, Lcom/android/volley/toolbox/a;-><init>(Lcom/android/volley/toolbox/f;)V
 
     .line 64
-    new-instance v0, Lcom/android/volley/toolbox/DiskBasedCache;
+    new-instance v0, Lcom/android/volley/toolbox/c;
 
     invoke-direct {p0}, Lkik/android/b/c;->b()Ljava/io/File;
 
@@ -166,59 +166,62 @@
 
     const/high16 v3, 0x500000
 
-    invoke-direct {v0, v2, v3}, Lcom/android/volley/toolbox/DiskBasedCache;-><init>(Ljava/io/File;I)V
+    invoke-direct {v0, v2, v3}, Lcom/android/volley/toolbox/c;-><init>(Ljava/io/File;I)V
 
     .line 65
-    new-instance v2, Lcom/android/volley/g;
+    new-instance v2, Lcom/android/volley/h;
 
     const/4 v3, 0x2
 
-    invoke-direct {v2, v0, v1, v3}, Lcom/android/volley/g;-><init>(Lcom/android/volley/Cache;Lcom/android/volley/d;I)V
+    invoke-direct {v2, v0, v1, v3}, Lcom/android/volley/h;-><init>(Lcom/android/volley/a;Lcom/android/volley/e;I)V
 
     .line 66
-    invoke-virtual {v2}, Lcom/android/volley/g;->a()V
+    invoke-virtual {v2}, Lcom/android/volley/h;->a()V
 
     .line 67
-    new-instance v0, Lcom/kik/cache/KikVolleyImageLoader;
+    new-instance v0, Lcom/kik/cache/aa;
 
-    invoke-static {}, Lcom/kik/util/cp;->a()Lcom/kik/cache/SimpleLruBitmapCache;
+    invoke-static {}, Lcom/kik/util/bl;->a()Lcom/kik/cache/SimpleLruBitmapCache;
 
     move-result-object v1
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v2, v1, v3}, Lcom/kik/cache/KikVolleyImageLoader;-><init>(Lcom/android/volley/g;Lcom/kik/cache/KikVolleyImageLoader$ImageCache;Lcom/kik/cache/ad;)V
+    invoke-direct {v0, v2, v1, v3}, Lcom/kik/cache/aa;-><init>(Lcom/android/volley/h;Lcom/kik/cache/aa$c;Lcom/kik/cache/ag;)V
 
-    sput-object v0, Lkik/android/b/c;->b:Lcom/kik/cache/KikVolleyImageLoader;
+    sput-object v0, Lkik/android/b/c;->b:Lcom/kik/cache/aa;
 
     .line 69
     :cond_4
     return-void
 
+    .line 45
+    :catch_0
+    move-exception v0
+
+    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
     .line 60
     :cond_5
-    new-instance v0, Lcom/android/volley/toolbox/c;
+    new-instance v0, Lcom/android/volley/toolbox/d;
 
     invoke-static {v1}, Landroid/net/http/AndroidHttpClient;->newInstance(Ljava/lang/String;)Landroid/net/http/AndroidHttpClient;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/android/volley/toolbox/c;-><init>(Lorg/apache/http/client/HttpClient;)V
+    invoke-direct {v0, v1}, Lcom/android/volley/toolbox/d;-><init>(Lorg/apache/http/client/HttpClient;)V
 
     goto :goto_1
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_0
 .end method
 
-.method public static a()Lcom/kik/cache/KikVolleyImageLoader;
+.method public static a()Lcom/kik/cache/aa;
     .locals 1
 
     .prologue
     .line 73
-    sget-object v0, Lkik/android/b/c;->b:Lcom/kik/cache/KikVolleyImageLoader;
+    sget-object v0, Lkik/android/b/c;->b:Lcom/kik/cache/aa;
 
     return-object v0
 .end method
@@ -228,11 +231,11 @@
 
     .prologue
     .line 116
-    iget-object v0, p0, Lkik/android/b/c;->c:Lkik/core/interfaces/s;
+    iget-object v0, p0, Lkik/android/b/c;->c:Lkik/core/interfaces/u;
 
     const-string v1, "volleyCardsIcons"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/s;->a(Ljava/lang/String;)Ljava/io/File;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/u;->a(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 

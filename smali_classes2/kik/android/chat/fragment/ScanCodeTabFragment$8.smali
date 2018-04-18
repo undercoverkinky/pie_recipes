@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 348
+    .line 340
     iput-object p1, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$8;->a:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
     invoke-direct {p0}, Lkik/android/util/bz$a;-><init>()V
@@ -37,11 +37,11 @@
     .locals 1
 
     .prologue
-    .line 352
+    .line 344
     iget-object v0, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$8;->a:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/ScanCodeTabFragment;->handleBackPress()Z
+    invoke-virtual {v0}, Lkik/android/chat/fragment/ScanCodeTabFragment;->o()Z
 
-    .line 353
+    .line 345
     return-void
 .end method

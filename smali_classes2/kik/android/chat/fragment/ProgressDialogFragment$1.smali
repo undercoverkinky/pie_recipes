@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/core/interfaces/x;
+.implements Lkik/core/interfaces/y;
 
 
 # annotations

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/google/common/base/Predicate;
+.implements Lcom/google/common/base/i;
 .implements Ljava/io/Serializable;
 
 
@@ -23,7 +23,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/google/common/base/Predicate",
+        "Lcom/google/common/base/i",
         "<TT;>;",
         "Ljava/io/Serializable;"
     }
@@ -54,21 +54,21 @@
     .end annotation
 
     .prologue
-    .line 460
+    .line 421
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 461
+    .line 422
     iput-object p1, p0, Lcom/google/common/base/Predicates$IsEqualToPredicate;->target:Ljava/lang/Object;
 
-    .line 462
+    .line 423
     return-void
 .end method
 
-.method synthetic constructor <init>(Ljava/lang/Object;Lcom/google/common/base/Predicates$1;)V
+.method synthetic constructor <init>(Ljava/lang/Object;B)V
     .locals 0
 
     .prologue
-    .line 457
+    .line 417
     invoke-direct {p0, p1}, Lcom/google/common/base/Predicates$IsEqualToPredicate;-><init>(Ljava/lang/Object;)V
 
     return-void
@@ -85,7 +85,7 @@
     .end annotation
 
     .prologue
-    .line 466
+    .line 426
     iget-object v0, p0, Lcom/google/common/base/Predicates$IsEqualToPredicate;->target:Ljava/lang/Object;
 
     invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -103,15 +103,15 @@
     .end param
 
     .prologue
-    .line 476
+    .line 432
     instance-of v0, p1, Lcom/google/common/base/Predicates$IsEqualToPredicate;
 
     if-eqz v0, :cond_0
 
-    .line 477
+    .line 433
     check-cast p1, Lcom/google/common/base/Predicates$IsEqualToPredicate;
 
-    .line 478
+    .line 434
     iget-object v0, p0, Lcom/google/common/base/Predicates$IsEqualToPredicate;->target:Ljava/lang/Object;
 
     iget-object v1, p1, Lcom/google/common/base/Predicates$IsEqualToPredicate;->target:Ljava/lang/Object;
@@ -120,7 +120,7 @@
 
     move-result v0
 
-    .line 480
+    .line 436
     :goto_0
     return v0
 
@@ -134,7 +134,7 @@
     .locals 1
 
     .prologue
-    .line 471
+    .line 429
     iget-object v0, p0, Lcom/google/common/base/Predicates$IsEqualToPredicate;->target:Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -145,19 +145,37 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     .prologue
-    .line 485
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 439
+    iget-object v0, p0, Lcom/google/common/base/Predicates$IsEqualToPredicate;->target:Ljava/lang/Object;
 
-    const-string v1, "Predicates.equalTo("
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    iget-object v1, p0, Lcom/google/common/base/Predicates$IsEqualToPredicate;->target:Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, 0x14
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v2, "Predicates.equalTo("
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

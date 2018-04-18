@@ -1,5 +1,5 @@
 .class final Lcom/kik/cards/web/CardsWebViewFragment$44;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,11 +15,11 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Ljava/util/List",
         "<",
-        "Lkik/core/d/b$a;",
+        "Lkik/core/f/b$a;",
         ">;>;"
     }
 .end annotation
@@ -36,12 +36,12 @@
     .locals 0
 
     .prologue
-    .line 379
+    .line 364
     iput-object p1, p0, Lcom/kik/cards/web/CardsWebViewFragment$44;->b:Lcom/kik/cards/web/CardsWebViewFragment;
 
     iput-object p2, p0, Lcom/kik/cards/web/CardsWebViewFragment$44;->a:Ljava/lang/String;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -54,16 +54,16 @@
     .prologue
     const-wide/16 v6, 0x0
 
-    .line 379
+    .line 364
     check-cast p1, Ljava/util/List;
 
-    .line 1383
+    .line 1368
     const/4 v1, 0x1
 
-    .line 1384
+    .line 1369
     if-eqz p1, :cond_4
 
-    .line 1385
+    .line 1370
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -79,19 +79,19 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/d/b$a;
+    check-cast v0, Lkik/core/f/b$a;
 
-    .line 1386
+    .line 1371
     if-eqz v0, :cond_0
 
-    .line 1389
-    invoke-virtual {v0}, Lkik/core/d/b$a;->b()Ljava/lang/String;
+    .line 1374
+    invoke-virtual {v0}, Lkik/core/f/b$a;->b()Ljava/lang/String;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    invoke-virtual {v0}, Lkik/core/d/b$a;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/f/b$a;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -103,21 +103,21 @@
 
     if-eqz v0, :cond_0
 
-    .line 1390
+    .line 1375
     const/4 v0, 0x0
 
-    .line 1395
+    .line 1380
     :goto_0
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
-    .line 1396
+    .line 1381
     new-instance v5, Ljava/util/HashMap;
 
     invoke-direct {v5}, Ljava/util/HashMap;-><init>()V
 
-    .line 1397
+    .line 1382
     const-string v1, "t"
 
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -126,14 +126,14 @@
 
     invoke-interface {v5, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1398
+    .line 1383
     const-string v1, "url"
 
     iget-object v2, p0, Lcom/kik/cards/web/CardsWebViewFragment$44;->a:Ljava/lang/String;
 
     invoke-interface {v3, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1399
+    .line 1384
     const-string v2, "fl"
 
     if-eqz v0, :cond_3
@@ -147,8 +147,8 @@
 
     invoke-interface {v5, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1400
-    invoke-static {}, Lkik/core/util/v;->b()J
+    .line 1385
+    invoke-static {}, Lkik/core/util/x;->b()J
 
     move-result-wide v0
 
@@ -156,15 +156,15 @@
 
     move-result-object v0
 
-    .line 1401
+    .line 1386
     invoke-static {}, Lkik/android/chat/KikApplication;->k()Lkik/android/a/b;
 
     move-result-object v1
 
-    .line 1402
+    .line 1387
     if-eqz v1, :cond_1
 
-    .line 1403
+    .line 1388
     invoke-virtual {v1}, Lkik/android/a/b;->c()Lcom/kik/clientmetrics/f;
 
     move-result-object v1
@@ -179,7 +179,7 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/kik/clientmetrics/f;->a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;J)V
 
-    .line 1405
+    .line 1390
     :cond_1
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$44;->b:Lcom/kik/cards/web/CardsWebViewFragment;
 
@@ -187,7 +187,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 1406
+    .line 1391
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$44;->b:Lcom/kik/cards/web/CardsWebViewFragment;
 
     iget-object v0, v0, Lcom/kik/cards/web/CardsWebViewFragment;->d:Lcom/kik/android/Mixpanel;
@@ -202,7 +202,7 @@
 
     iget-object v2, p0, Lcom/kik/cards/web/CardsWebViewFragment$44;->a:Ljava/lang/String;
 
-    .line 1407
+    .line 1392
     invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
@@ -211,8 +211,8 @@
 
     iget-object v2, p0, Lcom/kik/cards/web/CardsWebViewFragment$44;->a:Ljava/lang/String;
 
-    .line 1408
-    invoke-static {v2}, Lcom/kik/cards/web/s;->j(Ljava/lang/String;)Ljava/lang/String;
+    .line 1393
+    invoke-static {v2}, Lcom/kik/cards/web/r;->i(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -220,17 +220,17 @@
 
     move-result-object v0
 
-    .line 1409
+    .line 1394
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 379
+    .line 364
     :cond_2
     return-void
 
     :cond_3
     move-wide v0, v6
 
-    .line 1399
+    .line 1384
     goto :goto_1
 
     :cond_4

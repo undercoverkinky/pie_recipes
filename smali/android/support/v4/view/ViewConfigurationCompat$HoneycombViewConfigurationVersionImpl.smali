@@ -1,5 +1,5 @@
 .class Landroid/support/v4/view/ViewConfigurationCompat$HoneycombViewConfigurationVersionImpl;
-.super Landroid/support/v4/view/ViewConfigurationCompat$BaseViewConfigurationVersionImpl;
+.super Landroid/support/v4/view/ViewConfigurationCompat$FroyoViewConfigurationVersionImpl;
 .source "SourceFile"
 
 
@@ -19,8 +19,8 @@
     .locals 0
 
     .prologue
-    .line 47
-    invoke-direct {p0}, Landroid/support/v4/view/ViewConfigurationCompat$BaseViewConfigurationVersionImpl;-><init>()V
+    .line 63
+    invoke-direct {p0}, Landroid/support/v4/view/ViewConfigurationCompat$FroyoViewConfigurationVersionImpl;-><init>()V
 
     return-void
 .end method
@@ -31,7 +31,7 @@
     .locals 1
 
     .prologue
-    .line 51
+    .line 67
     const/4 v0, 0x0
 
     return v0

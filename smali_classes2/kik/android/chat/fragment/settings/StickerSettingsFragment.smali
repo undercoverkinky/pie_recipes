@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field private a:Lkik/android/chat/vm/widget/bm;
+.field private a:Lkik/android/chat/vm/widget/ao;
 
 
 # direct methods
@@ -20,31 +20,31 @@
     .locals 0
 
     .prologue
-    .line 21
+    .line 20
     invoke-direct {p0}, Lkik/android/chat/fragment/KikScopedDialogFragment;-><init>()V
 
     return-void
 .end method
 
-.method private a()Lkik/android/chat/vm/widget/bm;
+.method private b()Lkik/android/chat/vm/widget/ao;
     .locals 1
 
     .prologue
-    .line 64
-    iget-object v0, p0, Lkik/android/chat/fragment/settings/StickerSettingsFragment;->a:Lkik/android/chat/vm/widget/bm;
+    .line 55
+    iget-object v0, p0, Lkik/android/chat/fragment/settings/StickerSettingsFragment;->a:Lkik/android/chat/vm/widget/ao;
 
     if-nez v0, :cond_0
 
-    .line 65
-    new-instance v0, Lkik/android/chat/vm/widget/bm;
+    .line 56
+    new-instance v0, Lkik/android/chat/vm/widget/ao;
 
-    invoke-direct {v0}, Lkik/android/chat/vm/widget/bm;-><init>()V
+    invoke-direct {v0}, Lkik/android/chat/vm/widget/ao;-><init>()V
 
-    iput-object v0, p0, Lkik/android/chat/fragment/settings/StickerSettingsFragment;->a:Lkik/android/chat/vm/widget/bm;
+    iput-object v0, p0, Lkik/android/chat/fragment/settings/StickerSettingsFragment;->a:Lkik/android/chat/vm/widget/ao;
 
-    .line 68
+    .line 59
     :cond_0
-    iget-object v0, p0, Lkik/android/chat/fragment/settings/StickerSettingsFragment;->a:Lkik/android/chat/vm/widget/bm;
+    iget-object v0, p0, Lkik/android/chat/fragment/settings/StickerSettingsFragment;->a:Lkik/android/chat/vm/widget/ao;
 
     return-object v0
 .end method
@@ -55,17 +55,23 @@
     .locals 1
 
     .prologue
-    .line 28
-    invoke-virtual {p0}, Lkik/android/chat/fragment/settings/StickerSettingsFragment;->getCoreComponent()Lcom/kik/components/CoreComponent;
+    .line 27
+    .line 1088
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikFragmentBase;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
+    invoke-static {v0}, Lkik/android/util/s;->a(Landroid/app/Activity;)Lcom/kik/components/CoreComponent;
+
+    move-result-object v0
+
+    .line 27
     invoke-interface {v0, p0}, Lcom/kik/components/CoreComponent;->a(Lkik/android/chat/fragment/KikScopedDialogFragment;)V
 
-    .line 29
+    .line 28
     invoke-super {p0, p1}, Lkik/android/chat/fragment/KikScopedDialogFragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 30
+    .line 29
     return-void
 .end method
 
@@ -73,8 +79,8 @@
     .locals 4
 
     .prologue
-    .line 37
-    const v0, 0x7f040164
+    .line 36
+    const v0, 0x7f040127
 
     const/4 v1, 0x0
 
@@ -82,31 +88,37 @@
 
     move-result-object v0
 
-    .line 39
-    invoke-direct {p0}, Lkik/android/chat/fragment/settings/StickerSettingsFragment;->a()Lkik/android/chat/vm/widget/bm;
+    .line 38
+    invoke-direct {p0}, Lkik/android/chat/fragment/settings/StickerSettingsFragment;->b()Lkik/android/chat/vm/widget/ao;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lkik/android/chat/fragment/settings/StickerSettingsFragment;->getCoreComponent()Lcom/kik/components/CoreComponent;
+    .line 2088
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikFragmentBase;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lkik/android/chat/fragment/settings/StickerSettingsFragment;->getNavigator()Lkik/android/chat/vm/ay;
+    invoke-static {v2}, Lkik/android/util/s;->a(Landroid/app/Activity;)Lcom/kik/components/CoreComponent;
+
+    move-result-object v2
+
+    .line 38
+    invoke-virtual {p0}, Lkik/android/chat/fragment/settings/StickerSettingsFragment;->ar()Lkik/android/chat/vm/s;
 
     move-result-object v3
 
-    invoke-virtual {v1, v2, v3}, Lkik/android/chat/vm/widget/bm;->a(Lcom/kik/components/CoreComponent;Lkik/android/chat/vm/ay;)V
+    invoke-virtual {v1, v2, v3}, Lkik/android/chat/vm/widget/ao;->a(Lcom/kik/components/CoreComponent;Lkik/android/chat/vm/s;)V
 
-    .line 41
-    const/16 v1, 0xd
+    .line 40
+    const/4 v1, 0x4
 
-    invoke-direct {p0}, Lkik/android/chat/fragment/settings/StickerSettingsFragment;->a()Lkik/android/chat/vm/widget/bm;
+    invoke-direct {p0}, Lkik/android/chat/fragment/settings/StickerSettingsFragment;->b()Lkik/android/chat/vm/widget/ao;
 
     move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/databinding/ViewDataBinding;->setVariable(ILjava/lang/Object;)Z
 
-    .line 43
+    .line 42
     invoke-virtual {v0}, Landroid/databinding/ViewDataBinding;->getRoot()Landroid/view/View;
 
     move-result-object v0
@@ -118,26 +130,16 @@
     .locals 1
 
     .prologue
-    .line 57
-    invoke-direct {p0}, Lkik/android/chat/fragment/settings/StickerSettingsFragment;->a()Lkik/android/chat/vm/widget/bm;
+    .line 48
+    invoke-direct {p0}, Lkik/android/chat/fragment/settings/StickerSettingsFragment;->b()Lkik/android/chat/vm/widget/ao;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lkik/android/chat/vm/widget/bm;->ak_()V
+    invoke-virtual {v0}, Lkik/android/chat/vm/widget/ao;->b()V
 
-    .line 59
+    .line 50
     invoke-super {p0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->onDestroyView()V
 
-    .line 60
-    return-void
-.end method
-
-.method protected screenOpenedEvent()Lcom/kik/metrics/b/t;
-    .locals 1
-
-    .prologue
     .line 51
-    const/4 v0, 0x0
-
-    return-object v0
+    return-void
 .end method

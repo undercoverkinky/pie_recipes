@@ -1,78 +1,70 @@
-.class final synthetic Lkik/android/chat/view/e;
+.class public interface abstract Lkik/android/chat/view/e;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.source "SourceFile"
 
 
-# instance fields
-.field private final a:Lkik/android/chat/view/AnimatingSearchBarLayout$2;
-
-
-# direct methods
-.method private constructor <init>(Lkik/android/chat/view/AnimatingSearchBarLayout$2;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lkik/android/chat/view/e;->a:Lkik/android/chat/view/AnimatingSearchBarLayout$2;
-
-    return-void
-.end method
-
-.method public static a(Lkik/android/chat/view/AnimatingSearchBarLayout$2;)Ljava/lang/Runnable;
-    .locals 1
-
-    new-instance v0, Lkik/android/chat/view/e;
-
-    invoke-direct {v0, p0}, Lkik/android/chat/view/e;-><init>(Lkik/android/chat/view/AnimatingSearchBarLayout$2;)V
-
-    return-object v0
-.end method
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lkik/android/chat/view/e$a;
+    }
+.end annotation
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public abstract a()V
+.end method
 
-    .prologue
-    .line 0
-    iget-object v0, p0, Lkik/android/chat/view/e;->a:Lkik/android/chat/view/AnimatingSearchBarLayout$2;
+.method public abstract a(FF)V
+.end method
 
-    .line 1180
-    iget-object v1, v0, Lkik/android/chat/view/AnimatingSearchBarLayout$2;->a:Lkik/android/chat/view/AnimatingSearchBarLayout;
+.method public abstract a(I)V
+.end method
 
-    invoke-virtual {v1}, Lkik/android/chat/view/AnimatingSearchBarLayout;->c()V
+.method public abstract a(Ljava/lang/String;)V
+.end method
 
-    .line 1181
-    iget-object v1, v0, Lkik/android/chat/view/AnimatingSearchBarLayout$2;->a:Lkik/android/chat/view/AnimatingSearchBarLayout;
+.method public abstract a(Lkik/android/chat/view/e$a;)V
+.end method
 
-    invoke-static {v1}, Lkik/android/chat/view/AnimatingSearchBarLayout;->e(Lkik/android/chat/view/AnimatingSearchBarLayout;)V
+.method public abstract a(Z)V
+.end method
 
-    .line 1182
-    iget-object v1, v0, Lkik/android/chat/view/AnimatingSearchBarLayout$2;->a:Lkik/android/chat/view/AnimatingSearchBarLayout;
+.method public abstract b()V
+.end method
 
-    invoke-static {v1}, Lkik/android/chat/view/AnimatingSearchBarLayout;->c(Lkik/android/chat/view/AnimatingSearchBarLayout;)Lkik/android/chat/view/TransitionableSearchBarViewImpl;
+.method public abstract c()V
+.end method
 
-    move-result-object v1
+.method public abstract d()V
+.end method
 
-    const-string v2, ""
+.method public abstract e()V
+.end method
 
-    invoke-virtual {v1, v2}, Lkik/android/chat/view/TransitionableSearchBarViewImpl;->a(Ljava/lang/String;)V
+.method public abstract f()V
+.end method
 
-    .line 1183
-    iget-object v0, v0, Lkik/android/chat/view/AnimatingSearchBarLayout$2;->a:Lkik/android/chat/view/AnimatingSearchBarLayout;
+.method public abstract g()V
+.end method
 
-    invoke-static {v0}, Lkik/android/chat/view/AnimatingSearchBarLayout;->c(Lkik/android/chat/view/AnimatingSearchBarLayout;)Lkik/android/chat/view/TransitionableSearchBarViewImpl;
+.method public abstract getHeight()I
+.end method
 
-    move-result-object v0
+.method public abstract h()V
+.end method
 
-    .line 1203
-    iget-object v0, v0, Lkik/android/chat/view/SearchBarViewImpl;->_searchField:Lkik/android/widget/RobotoEditText;
+.method public abstract i()V
+.end method
 
-    .line 1183
-    invoke-virtual {v0}, Lkik/android/widget/RobotoEditText;->requestFocus()Z
+.method public abstract j()V
+.end method
 
-    .line 0
-    return-void
+.method public abstract k()V
+.end method
+
+.method public abstract l()V
+.end method
+
+.method public abstract m()I
 .end method

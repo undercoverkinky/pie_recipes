@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 145
+    .line 142
     iput-object p1, p0, Landroid/support/design/widget/ValueAnimatorCompat$2;->b:Landroid/support/design/widget/ValueAnimatorCompat;
 
     iput-object p2, p0, Landroid/support/design/widget/ValueAnimatorCompat$2;->a:Landroid/support/design/widget/ValueAnimatorCompat$AnimatorListener;
@@ -41,16 +41,27 @@
 
 # virtual methods
 .method public final a()V
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 153
+    .line 150
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompat$2;->a:Landroid/support/design/widget/ValueAnimatorCompat$AnimatorListener;
 
-    iget-object v1, p0, Landroid/support/design/widget/ValueAnimatorCompat$2;->b:Landroid/support/design/widget/ValueAnimatorCompat;
+    invoke-interface {v0}, Landroid/support/design/widget/ValueAnimatorCompat$AnimatorListener;->a()V
 
-    invoke-interface {v0, v1}, Landroid/support/design/widget/ValueAnimatorCompat$AnimatorListener;->b(Landroid/support/design/widget/ValueAnimatorCompat;)V
+    .line 151
+    return-void
+.end method
 
-    .line 154
+.method public final b()V
+    .locals 1
+
+    .prologue
+    .line 155
+    iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompat$2;->a:Landroid/support/design/widget/ValueAnimatorCompat$AnimatorListener;
+
+    invoke-interface {v0}, Landroid/support/design/widget/ValueAnimatorCompat$AnimatorListener;->b()V
+
+    .line 156
     return-void
 .end method

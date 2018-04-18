@@ -519,7 +519,7 @@
 
     array-length v1, v1
 
-    if-gt v1, v0, :cond_1
+    if-ge v1, v0, :cond_1
 
     .line 298
     iget-object v1, p0, Landroid/databinding/CallbackRegistry;->mCallbacks:Ljava/util/List;

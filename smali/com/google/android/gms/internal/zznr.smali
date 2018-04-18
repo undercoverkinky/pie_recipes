@@ -1,286 +1,518 @@
-.class public final Lcom/google/android/gms/internal/zznr;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/google/android/gms/internal/zzehp;
+.class public Lcom/google/android/gms/internal/zznr;
+.super Lcom/google/android/gms/internal/zznu;
 
 
 # annotations
-.annotation runtime Lcom/google/android/gms/internal/zzzt;
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/google/android/gms/internal/zznr$a;
+    }
 .end annotation
 
 
 # instance fields
-.field private zzbqw:Landroid/support/customtabs/CustomTabsSession;
-
-.field private zzbqx:Landroid/support/customtabs/CustomTabsClient;
-
-.field private zzbqy:Landroid/support/customtabs/CustomTabsServiceConnection;
-
-.field private zzbqz:Lcom/google/android/gms/internal/zzns;
+.field private final zzalH:Landroid/util/SparseArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/SparseArray",
+            "<",
+            "Lcom/google/android/gms/internal/zznr$a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method private constructor <init>(Lcom/google/android/gms/internal/zzor;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lcom/google/android/gms/internal/zznu;-><init>(Lcom/google/android/gms/internal/zzor;)V
+
+    new-instance v0, Landroid/util/SparseArray;
+
+    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/zznr;->zzalH:Landroid/util/SparseArray;
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zznr;->zzaop:Lcom/google/android/gms/internal/zzor;
+
+    const-string v1, "AutoManageHelper"
+
+    invoke-interface {v0, v1, p0}, Lcom/google/android/gms/internal/zzor;->zza(Ljava/lang/String;Lcom/google/android/gms/internal/zzoq;)V
 
     return-void
 .end method
 
-.method public static zzk(Landroid/content/Context;)Z
-    .locals 6
+.method public static zza(Lcom/google/android/gms/internal/zzop;)Lcom/google/android/gms/internal/zznr;
+    .locals 3
 
-    const/4 v2, 0x0
+    invoke-static {p0}, Lcom/google/android/gms/internal/zznr;->zzc(Lcom/google/android/gms/internal/zzop;)Lcom/google/android/gms/internal/zzor;
 
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    move-result-object v1
+
+    const-string v0, "AutoManageHelper"
+
+    const-class v2, Lcom/google/android/gms/internal/zznr;
+
+    invoke-interface {v1, v0, v2}, Lcom/google/android/gms/internal/zzor;->zza(Ljava/lang/String;Ljava/lang/Class;)Lcom/google/android/gms/internal/zzoq;
 
     move-result-object v0
 
-    if-nez v0, :cond_1
+    check-cast v0, Lcom/google/android/gms/internal/zznr;
+
+    if-eqz v0, :cond_0
+
+    :goto_0
+    return-object v0
 
     :cond_0
+    new-instance v0, Lcom/google/android/gms/internal/zznr;
+
+    invoke-direct {v0, v1}, Lcom/google/android/gms/internal/zznr;-><init>(Lcom/google/android/gms/internal/zzor;)V
+
+    goto :goto_0
+.end method
+
+
+# virtual methods
+.method public dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
+    .locals 4
+
+    .prologue
+    .line 0
+    const/4 v0, 0x0
+
+    move v1, v0
+
     :goto_0
-    return v2
+    iget-object v0, p0, Lcom/google/android/gms/internal/zznr;->zzalH:Landroid/util/SparseArray;
 
-    :cond_1
-    new-instance v1, Landroid/content/Intent;
-
-    const-string v3, "android.intent.action.VIEW"
-
-    const-string v4, "http://www.example.com"
-
-    invoke-static {v4}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v4
-
-    invoke-direct {v1, v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/pm/PackageManager;->resolveActivity(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
-
-    move-result-object v3
-
-    const/high16 v4, 0x10000
-
-    invoke-virtual {v0, v1, v4}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_0
-
-    if-eqz v3, :cond_0
-
-    move v1, v2
-
-    :goto_1
-    invoke-interface {v4}, Ljava/util/List;->size()I
+    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
     move-result v0
 
     if-ge v1, v0, :cond_0
 
-    invoke-interface {v4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iget-object v0, p0, Lcom/google/android/gms/internal/zznr;->zzalH:Landroid/util/SparseArray;
+
+    invoke-virtual {v0, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/content/pm/ResolveInfo;
+    check-cast v0, Lcom/google/android/gms/internal/zznr$a;
 
-    iget-object v5, v3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+    .line 2000
+    invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    iget-object v5, v5, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
+    move-result-object v2
 
-    iget-object v0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+    const-string v3, "GoogleApiClient #"
 
-    iget-object v0, v0, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
+    invoke-virtual {v2, v3}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
-    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v2
 
-    move-result v0
+    iget v3, v0, Lcom/google/android/gms/internal/zznr$a;->a:I
 
-    if-eqz v0, :cond_2
+    invoke-virtual {v2, v3}, Ljava/io/PrintWriter;->print(I)V
 
-    iget-object v0, v3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+    const-string v2, ":"
 
-    iget-object v0, v0, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+    invoke-virtual {p3, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcom/google/android/gms/internal/zzehn;->zzex(Landroid/content/Context;)Ljava/lang/String;
+    iget-object v0, v0, Lcom/google/android/gms/internal/zznr$a;->b:Lcom/google/android/gms/common/api/GoogleApiClient;
 
-    move-result-object v1
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v2
 
-    move-result v2
+    const-string v3, "  "
 
-    goto :goto_0
+    invoke-virtual {v2, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    :cond_2
+    move-result-object v2
+
+    invoke-virtual {v0, v2, p2, p3, p4}, Lcom/google/android/gms/common/api/GoogleApiClient;->dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
+
+    .line 0
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
-    goto :goto_1
-.end method
-
-
-# virtual methods
-.method public final mayLaunchUrl(Landroid/net/Uri;Landroid/os/Bundle;Ljava/util/List;)Z
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/net/Uri;",
-            "Landroid/os/Bundle;",
-            "Ljava/util/List",
-            "<",
-            "Landroid/os/Bundle;",
-            ">;)Z"
-        }
-    .end annotation
-
-    const/4 v0, 0x0
-
-    const/4 v2, 0x0
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/zznr;->zzbqx:Landroid/support/customtabs/CustomTabsClient;
-
-    if-nez v1, :cond_1
-
-    :cond_0
-    :goto_0
-    return v0
-
-    :cond_1
-    iget-object v1, p0, Lcom/google/android/gms/internal/zznr;->zzbqx:Landroid/support/customtabs/CustomTabsClient;
-
-    if-nez v1, :cond_3
-
-    iput-object v2, p0, Lcom/google/android/gms/internal/zznr;->zzbqw:Landroid/support/customtabs/CustomTabsSession;
-
-    :cond_2
-    :goto_1
-    iget-object v1, p0, Lcom/google/android/gms/internal/zznr;->zzbqw:Landroid/support/customtabs/CustomTabsSession;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1, p1, v2, v2}, Landroid/support/customtabs/CustomTabsSession;->mayLaunchUrl(Landroid/net/Uri;Landroid/os/Bundle;Ljava/util/List;)Z
-
-    move-result v0
-
     goto :goto_0
 
-    :cond_3
-    iget-object v1, p0, Lcom/google/android/gms/internal/zznr;->zzbqw:Landroid/support/customtabs/CustomTabsSession;
+    :cond_0
+    return-void
+.end method
 
-    if-nez v1, :cond_2
+.method public onStart()V
+    .locals 4
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/zznr;->zzbqx:Landroid/support/customtabs/CustomTabsClient;
+    invoke-super {p0}, Lcom/google/android/gms/internal/zznu;->onStart()V
 
-    invoke-virtual {v1, v2}, Landroid/support/customtabs/CustomTabsClient;->newSession(Landroid/support/customtabs/CustomTabsCallback;)Landroid/support/customtabs/CustomTabsSession;
+    iget-boolean v0, p0, Lcom/google/android/gms/internal/zznr;->mStarted:Z
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/zznr;->zzalH:Landroid/util/SparseArray;
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/google/android/gms/internal/zznr;->zzbqw:Landroid/support/customtabs/CustomTabsSession;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    goto :goto_1
-.end method
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-.method public final zza(Landroid/support/customtabs/CustomTabsClient;)V
-    .locals 4
+    move-result-object v3
 
-    iput-object p1, p0, Lcom/google/android/gms/internal/zznr;->zzbqx:Landroid/support/customtabs/CustomTabsClient;
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zznr;->zzbqx:Landroid/support/customtabs/CustomTabsClient;
+    move-result v3
 
-    const-wide/16 v2, 0x0
+    add-int/lit8 v3, v3, 0xe
 
-    invoke-virtual {v0, v2, v3}, Landroid/support/customtabs/CustomTabsClient;->warmup(J)Z
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zznr;->zzbqz:Lcom/google/android/gms/internal/zzns;
+    const-string v3, "onStart "
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zznr;->zzbqz:Lcom/google/android/gms/internal/zzns;
+    move-result-object v2
 
-    invoke-interface {v0}, Lcom/google/android/gms/internal/zzns;->zzjb()V
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    :cond_0
-    return-void
-.end method
+    move-result-object v0
 
-.method public final zza(Lcom/google/android/gms/internal/zzns;)V
-    .locals 0
+    const-string v2, " "
 
-    iput-object p1, p0, Lcom/google/android/gms/internal/zznr;->zzbqz:Lcom/google/android/gms/internal/zzns;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public final zzc(Landroid/app/Activity;)V
-    .locals 2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zznr;->zzbqy:Landroid/support/customtabs/CustomTabsServiceConnection;
+    iget-boolean v0, p0, Lcom/google/android/gms/internal/zznr;->zzalQ:Z
 
     if-nez v0, :cond_0
 
+    const/4 v0, 0x0
+
+    move v1, v0
+
     :goto_0
-    return-void
+    iget-object v0, p0, Lcom/google/android/gms/internal/zznr;->zzalH:Landroid/util/SparseArray;
+
+    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
+
+    move-result v0
+
+    if-ge v1, v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zznr;->zzalH:Landroid/util/SparseArray;
+
+    invoke-virtual {v0, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/gms/internal/zznr$a;
+
+    iget-object v0, v0, Lcom/google/android/gms/internal/zznr$a;->b:Lcom/google/android/gms/common/api/GoogleApiClient;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->connect()V
+
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lcom/google/android/gms/internal/zznr;->zzbqy:Landroid/support/customtabs/CustomTabsServiceConnection;
+    return-void
+.end method
 
-    invoke-virtual {p1, v0}, Landroid/app/Activity;->unbindService(Landroid/content/ServiceConnection;)V
+.method public onStop()V
+    .locals 2
 
-    iput-object v1, p0, Lcom/google/android/gms/internal/zznr;->zzbqx:Landroid/support/customtabs/CustomTabsClient;
+    invoke-super {p0}, Lcom/google/android/gms/internal/zznu;->onStop()V
 
-    iput-object v1, p0, Lcom/google/android/gms/internal/zznr;->zzbqw:Landroid/support/customtabs/CustomTabsSession;
+    const/4 v0, 0x0
 
-    iput-object v1, p0, Lcom/google/android/gms/internal/zznr;->zzbqy:Landroid/support/customtabs/CustomTabsServiceConnection;
+    move v1, v0
+
+    :goto_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/zznr;->zzalH:Landroid/util/SparseArray;
+
+    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
+
+    move-result v0
+
+    if-ge v1, v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zznr;->zzalH:Landroid/util/SparseArray;
+
+    invoke-virtual {v0, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/gms/internal/zznr$a;
+
+    iget-object v0, v0, Lcom/google/android/gms/internal/zznr$a;->b:Lcom/google/android/gms/common/api/GoogleApiClient;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->disconnect()V
+
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public zza(ILcom/google/android/gms/common/api/GoogleApiClient;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)V
+    .locals 4
+
+    const/16 v3, 0x36
+
+    const-string v0, "GoogleApiClient instance cannot be null"
+
+    invoke-static {p2, v0}, Lcom/google/android/gms/common/internal/zzaa;->zzb(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zznr;->zzalH:Landroid/util/SparseArray;
+
+    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->indexOfKey(I)I
+
+    move-result v0
+
+    if-gez v0, :cond_1
+
+    const/4 v0, 0x1
+
+    :goto_0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v2, "Already managing a GoogleApiClient with id "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/zzaa;->zza(ZLjava/lang/Object;)V
+
+    iget-boolean v0, p0, Lcom/google/android/gms/internal/zznr;->mStarted:Z
+
+    iget-boolean v1, p0, Lcom/google/android/gms/internal/zznr;->zzalQ:Z
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v3, "starting AutoManage for client "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, " "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v2, " "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    new-instance v0, Lcom/google/android/gms/internal/zznr$a;
+
+    invoke-direct {v0, p0, p1, p2, p3}, Lcom/google/android/gms/internal/zznr$a;-><init>(Lcom/google/android/gms/internal/zznr;ILcom/google/android/gms/common/api/GoogleApiClient;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)V
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/zznr;->zzalH:Landroid/util/SparseArray;
+
+    invoke-virtual {v1, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    iget-boolean v0, p0, Lcom/google/android/gms/internal/zznr;->mStarted:Z
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v0, p0, Lcom/google/android/gms/internal/zznr;->zzalQ:Z
+
+    if-nez v0, :cond_0
+
+    invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, 0xb
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v2, "connecting "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Lcom/google/android/gms/common/api/GoogleApiClient;->connect()V
+
+    :cond_0
+    return-void
+
+    :cond_1
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method public final zzd(Landroid/app/Activity;)V
-    .locals 2
+.method protected zza(Lcom/google/android/gms/common/ConnectionResult;I)V
+    .locals 3
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zznr;->zzbqx:Landroid/support/customtabs/CustomTabsClient;
+    const-string v0, "AutoManageHelper"
 
-    if-eqz v0, :cond_1
+    const-string v1, "Unresolved error while connecting client. Stopping auto-manage."
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-gez p2, :cond_1
+
+    const-string v0, "AutoManageHelper"
+
+    const-string v1, "AutoManageLifecycleHelper received onErrorResolutionFailed callback but no failing client ID is set"
+
+    new-instance v2, Ljava/lang/Exception;
+
+    invoke-direct {v2}, Ljava/lang/Exception;-><init>()V
+
+    invoke-static {v0, v1, v2}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
     :goto_0
     return-void
 
     :cond_1
-    invoke-static {p1}, Lcom/google/android/gms/internal/zzehn;->zzex(Landroid/content/Context;)Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/internal/zznr;->zzalH:Landroid/util/SparseArray;
+
+    invoke-virtual {v0, p2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
+    check-cast v0, Lcom/google/android/gms/internal/zznr$a;
+
     if-eqz v0, :cond_0
 
-    new-instance v1, Lcom/google/android/gms/internal/zzeho;
+    invoke-virtual {p0, p2}, Lcom/google/android/gms/internal/zznr;->zzbG(I)V
 
-    invoke-direct {v1, p0}, Lcom/google/android/gms/internal/zzeho;-><init>(Lcom/google/android/gms/internal/zzehp;)V
+    iget-object v0, v0, Lcom/google/android/gms/internal/zznr$a;->c:Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;
 
-    iput-object v1, p0, Lcom/google/android/gms/internal/zznr;->zzbqy:Landroid/support/customtabs/CustomTabsServiceConnection;
+    if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/zznr;->zzbqy:Landroid/support/customtabs/CustomTabsServiceConnection;
-
-    invoke-static {p1, v0, v1}, Landroid/support/customtabs/CustomTabsClient;->bindCustomTabsService(Landroid/content/Context;Ljava/lang/String;Landroid/support/customtabs/CustomTabsServiceConnection;)Z
+    invoke-interface {v0, p1}, Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;->onConnectionFailed(Lcom/google/android/gms/common/ConnectionResult;)V
 
     goto :goto_0
 .end method
 
-.method public final zzja()V
-    .locals 1
+.method public zzbG(I)V
+    .locals 2
+
+    .prologue
+    .line 0
+    iget-object v0, p0, Lcom/google/android/gms/internal/zznr;->zzalH:Landroid/util/SparseArray;
+
+    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/gms/internal/zznr$a;
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/zznr;->zzalH:Landroid/util/SparseArray;
+
+    invoke-virtual {v1, p1}, Landroid/util/SparseArray;->remove(I)V
+
+    if-eqz v0, :cond_0
+
+    .line 1000
+    iget-object v1, v0, Lcom/google/android/gms/internal/zznr$a;->b:Lcom/google/android/gms/common/api/GoogleApiClient;
+
+    invoke-virtual {v1, v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->unregisterConnectionFailedListener(Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)V
+
+    iget-object v0, v0, Lcom/google/android/gms/internal/zznr$a;->b:Lcom/google/android/gms/common/api/GoogleApiClient;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->disconnect()V
+
+    .line 0
+    :cond_0
+    return-void
+.end method
+
+.method protected zzrA()V
+    .locals 2
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/google/android/gms/internal/zznr;->zzbqx:Landroid/support/customtabs/CustomTabsClient;
+    move v1, v0
 
-    iput-object v0, p0, Lcom/google/android/gms/internal/zznr;->zzbqw:Landroid/support/customtabs/CustomTabsSession;
+    :goto_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/zznr;->zzalH:Landroid/util/SparseArray;
 
+    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
+
+    move-result v0
+
+    if-ge v1, v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zznr;->zzalH:Landroid/util/SparseArray;
+
+    invoke-virtual {v0, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/gms/internal/zznr$a;
+
+    iget-object v0, v0, Lcom/google/android/gms/internal/zznr$a;->b:Lcom/google/android/gms/common/api/GoogleApiClient;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->connect()V
+
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
     return-void
 .end method

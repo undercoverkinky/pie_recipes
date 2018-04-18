@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 207
+    .line 210
     invoke-direct {p0}, Landroid/support/v4/graphics/drawable/DrawableCompat$KitKatDrawableImpl;-><init>()V
 
     return-void
@@ -31,10 +31,10 @@
     .locals 0
 
     .prologue
-    .line 240
+    .line 243
     invoke-static {p1, p2}, Landroid/support/v4/graphics/drawable/DrawableCompatLollipop;->applyTheme(Landroid/graphics/drawable/Drawable;Landroid/content/res/Resources$Theme;)V
 
-    .line 241
+    .line 244
     return-void
 .end method
 
@@ -42,7 +42,7 @@
     .locals 1
 
     .prologue
-    .line 245
+    .line 248
     invoke-static {p1}, Landroid/support/v4/graphics/drawable/DrawableCompatLollipop;->canApplyTheme(Landroid/graphics/drawable/Drawable;)Z
 
     move-result v0
@@ -50,22 +50,11 @@
     return v0
 .end method
 
-.method public clearColorFilter(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
-
-    .prologue
-    .line 255
-    invoke-static {p1}, Landroid/support/v4/graphics/drawable/DrawableCompatLollipop;->clearColorFilter(Landroid/graphics/drawable/Drawable;)V
-
-    .line 256
-    return-void
-.end method
-
 .method public getColorFilter(Landroid/graphics/drawable/Drawable;)Landroid/graphics/ColorFilter;
     .locals 1
 
     .prologue
-    .line 250
+    .line 253
     invoke-static {p1}, Landroid/support/v4/graphics/drawable/DrawableCompatLollipop;->getColorFilter(Landroid/graphics/drawable/Drawable;)Landroid/graphics/ColorFilter;
 
     move-result-object v0
@@ -83,10 +72,10 @@
     .end annotation
 
     .prologue
-    .line 262
+    .line 260
     invoke-static {p1, p2, p3, p4, p5}, Landroid/support/v4/graphics/drawable/DrawableCompatLollipop;->inflate(Landroid/graphics/drawable/Drawable;Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
 
-    .line 263
+    .line 261
     return-void
 .end method
 
@@ -94,10 +83,10 @@
     .locals 0
 
     .prologue
-    .line 210
+    .line 213
     invoke-static {p1, p2, p3}, Landroid/support/v4/graphics/drawable/DrawableCompatLollipop;->setHotspot(Landroid/graphics/drawable/Drawable;FF)V
 
-    .line 211
+    .line 214
     return-void
 .end method
 
@@ -105,10 +94,10 @@
     .locals 0
 
     .prologue
-    .line 215
+    .line 218
     invoke-static {p1, p2, p3, p4, p5}, Landroid/support/v4/graphics/drawable/DrawableCompatLollipop;->setHotspotBounds(Landroid/graphics/drawable/Drawable;IIII)V
 
-    .line 216
+    .line 219
     return-void
 .end method
 
@@ -116,10 +105,10 @@
     .locals 0
 
     .prologue
-    .line 220
+    .line 223
     invoke-static {p1, p2}, Landroid/support/v4/graphics/drawable/DrawableCompatLollipop;->setTint(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 221
+    .line 224
     return-void
 .end method
 
@@ -127,10 +116,10 @@
     .locals 0
 
     .prologue
-    .line 225
+    .line 228
     invoke-static {p1, p2}, Landroid/support/v4/graphics/drawable/DrawableCompatLollipop;->setTintList(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
-    .line 226
+    .line 229
     return-void
 .end method
 
@@ -138,10 +127,10 @@
     .locals 0
 
     .prologue
-    .line 230
+    .line 233
     invoke-static {p1, p2}, Landroid/support/v4/graphics/drawable/DrawableCompatLollipop;->setTintMode(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
 
-    .line 231
+    .line 234
     return-void
 .end method
 
@@ -149,7 +138,7 @@
     .locals 1
 
     .prologue
-    .line 235
+    .line 238
     invoke-static {p1}, Landroid/support/v4/graphics/drawable/DrawableCompatLollipop;->wrapForTinting(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0

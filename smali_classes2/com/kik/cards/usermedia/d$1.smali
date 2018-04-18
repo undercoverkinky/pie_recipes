@@ -1,5 +1,5 @@
 .class final Lcom/kik/cards/usermedia/d$1;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Landroid/content/Intent;",
         ">;"
@@ -43,7 +43,7 @@
 
     iput-object p3, p0, Lcom/kik/cards/usermedia/d$1;->b:Lcom/kik/events/Promise;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -54,7 +54,7 @@
     .locals 5
 
     .prologue
-    const v3, 0x7f0900b2
+    const v3, 0x7f0a00b1
 
     const/4 v4, 0x1
 

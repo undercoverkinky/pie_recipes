@@ -4,12 +4,12 @@
 
 
 # instance fields
-.field protected a:Lkik/core/ICoreEvents;
+.field protected a:Lkik/core/z;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
-.field protected b:Lkik/core/interfaces/IConversation;
+.field protected b:Lkik/core/interfaces/j;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
@@ -29,12 +29,7 @@
     .end annotation
 .end field
 
-.field protected g:Lkik/core/manager/n;
-    .annotation runtime Ljavax/inject/Inject;
-    .end annotation
-.end field
-
-.field protected h:Lcom/kik/metrics/c/d;
+.field protected g:Lkik/core/manager/m;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
@@ -45,12 +40,12 @@
     .locals 1
 
     .prologue
-    .line 43
+    .line 40
     const v0, 0x101008e
 
     invoke-direct {p0, p1, p2, v0}, Lkik/android/widget/preferences/ResetKikPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 44
+    .line 41
     return-void
 .end method
 
@@ -58,12 +53,12 @@
     .locals 1
 
     .prologue
-    .line 48
+    .line 45
     sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientMetricsSettingsUsedType;->RESET_KIK:Lcom/kik/clientmetrics/model/Clientmetrics$ClientMetricsSettingsUsedType;
 
     invoke-direct {p0, p1, p2, p3, v0}, Lkik/android/widget/preferences/KikPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;ILcom/kik/clientmetrics/model/Clientmetrics$ClientMetricsSettingsUsedType;)V
 
-    .line 49
+    .line 46
     return-void
 .end method
 
@@ -71,41 +66,8 @@
     .locals 2
 
     .prologue
-    .line 79
-    iget-object v0, p0, Lkik/android/widget/preferences/ResetKikPreference;->e:Lcom/kik/android/Mixpanel;
-
-    const-string v1, "Log Out Cancelled"
-
-    invoke-virtual {v0, v1}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;)Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    .line 80
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    .line 81
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
-
-    .line 82
-    invoke-virtual {p0}, Lkik/android/widget/preferences/ResetKikPreference;->a()Lkik/android/chat/fragment/KikScopedDialogFragment;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikScopedDialogFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
-
-    .line 83
-    return-void
-.end method
-
-.method static synthetic b(Lkik/android/widget/preferences/ResetKikPreference;)V
-    .locals 2
-
-    .prologue
-    .line 74
+    .line 0
+    .line 1071
     iget-object v0, p0, Lkik/android/widget/preferences/ResetKikPreference;->e:Lcom/kik/android/Mixpanel;
 
     const-string v1, "Log Out Confirmed"
@@ -114,15 +76,15 @@
 
     move-result-object v0
 
-    .line 75
+    .line 1072
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 76
+    .line 1073
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 1096
+    .line 1092
     new-instance v0, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;
 
     invoke-virtual {p0}, Lkik/android/widget/preferences/ResetKikPreference;->getContext()Landroid/content/Context;
@@ -133,38 +95,73 @@
 
     const/4 v1, 0x0
 
-    .line 1097
+    .line 1093
     invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;->a(Z)Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f09068a
+    const v1, 0x7f0a05c4
 
-    .line 1098
+    .line 1094
     invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;->a(I)Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;
 
     move-result-object v0
 
-    .line 1099
+    .line 1095
     invoke-virtual {v0}, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;->a()Lkik/android/chat/fragment/KikDialogFragment;
 
     move-result-object v0
 
-    .line 1101
+    .line 1097
     invoke-virtual {p0}, Lkik/android/widget/preferences/ResetKikPreference;->a()Lkik/android/chat/fragment/KikScopedDialogFragment;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 1102
-    invoke-static {p0}, Lkik/android/widget/preferences/n;->a(Lkik/android/widget/preferences/ResetKikPreference;)Lkik/core/manager/n$b;
+    .line 1098
+    invoke-static {p0}, Lkik/android/widget/preferences/t;->a(Lkik/android/widget/preferences/ResetKikPreference;)Lkik/core/manager/m$b;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkik/core/manager/n;->a(Lkik/core/manager/n$b;)V
+    invoke-static {v0}, Lkik/core/manager/m;->a(Lkik/core/manager/m$b;)V
 
-    .line 78
+    .line 0
+    return-void
+.end method
+
+.method static synthetic b(Lkik/android/widget/preferences/ResetKikPreference;)V
+    .locals 2
+
+    .prologue
+    .line 0
+    .line 2076
+    iget-object v0, p0, Lkik/android/widget/preferences/ResetKikPreference;->e:Lcom/kik/android/Mixpanel;
+
+    const-string v1, "Log Out Cancelled"
+
+    invoke-virtual {v0, v1}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;)Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    .line 2077
+    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    .line 2078
+    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
+
+    .line 2079
+    invoke-virtual {p0}, Lkik/android/widget/preferences/ResetKikPreference;->a()Lkik/android/chat/fragment/KikScopedDialogFragment;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikScopedDialogFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
+
+    .line 0
     return-void
 .end method
 
@@ -173,7 +170,7 @@
 
     .prologue
     .line 0
-    .line 1107
+    .line 2103
     iget-object v0, p0, Lkik/android/widget/preferences/ResetKikPreference;->f:Lkik/core/interfaces/ICommunication;
 
     invoke-interface {v0}, Lkik/core/interfaces/ICommunication;->l()Z
@@ -182,10 +179,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 1108
-    iget-object v0, p0, Lkik/android/widget/preferences/ResetKikPreference;->b:Lkik/core/interfaces/IConversation;
+    .line 2104
+    iget-object v0, p0, Lkik/android/widget/preferences/ResetKikPreference;->b:Lkik/core/interfaces/j;
 
-    invoke-interface {v0}, Lkik/core/interfaces/IConversation;->U()Lcom/kik/events/Promise;
+    invoke-interface {v0}, Lkik/core/interfaces/j;->R()Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -193,16 +190,16 @@
 
     invoke-direct {v1, p0}, Lkik/android/widget/preferences/ResetKikPreference$1;-><init>(Lkik/android/widget/preferences/ResetKikPreference;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
 
     :goto_0
     return-void
 
-    .line 1126
+    .line 2122
     :cond_0
-    iget-object v0, p0, Lkik/android/widget/preferences/ResetKikPreference;->a:Lkik/core/ICoreEvents;
+    iget-object v0, p0, Lkik/android/widget/preferences/ResetKikPreference;->a:Lkik/core/z;
 
-    invoke-interface {v0}, Lkik/core/ICoreEvents;->h()V
+    invoke-interface {v0}, Lkik/core/z;->g()V
 
     goto :goto_0
 .end method
@@ -213,10 +210,10 @@
     .locals 0
 
     .prologue
-    .line 54
+    .line 51
     invoke-interface {p1, p0}, Lcom/kik/components/CoreComponent;->a(Lkik/android/widget/preferences/ResetKikPreference;)V
 
-    .line 55
+    .line 52
     return-void
 .end method
 
@@ -224,10 +221,10 @@
     .locals 3
 
     .prologue
-    .line 60
+    .line 57
     invoke-super {p0, p1}, Lkik/android/widget/preferences/KikPreference;->onBindView(Landroid/view/View;)V
 
-    .line 61
+    .line 58
     const v0, 0x1020016
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -236,10 +233,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 63
+    .line 60
     if-eqz v0, :cond_0
 
-    .line 64
+    .line 61
     invoke-virtual {p0}, Lkik/android/widget/preferences/ResetKikPreference;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -248,7 +245,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e00e3
+    const v2, 0x7f1000d6
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -256,7 +253,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 66
+    .line 63
     :cond_0
     return-void
 .end method
@@ -265,7 +262,7 @@
     .locals 4
 
     .prologue
-    .line 71
+    .line 68
     new-instance v0, Lkik/android/chat/fragment/KikBasicDialog$a;
 
     invoke-virtual {p0}, Lkik/android/widget/preferences/ResetKikPreference;->getContext()Landroid/content/Context;
@@ -274,44 +271,44 @@
 
     invoke-direct {v0, v1}, Lkik/android/chat/fragment/KikBasicDialog$a;-><init>(Landroid/content/Context;)V
 
-    .line 72
+    .line 69
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikBasicDialog$a;->a(Z)Lkik/android/chat/fragment/KikBasicDialog$a;
 
     move-result-object v1
 
-    const v2, 0x7f090489
+    const v2, 0x7f0a0475
 
-    invoke-static {p0}, Lkik/android/widget/preferences/l;->a(Lkik/android/widget/preferences/ResetKikPreference;)Landroid/view/View$OnClickListener;
+    invoke-static {p0}, Lkik/android/widget/preferences/r;->a(Lkik/android/widget/preferences/ResetKikPreference;)Landroid/view/View$OnClickListener;
 
     move-result-object v3
 
-    .line 73
+    .line 70
     invoke-virtual {v1, v2, v3}, Lkik/android/chat/fragment/KikBasicDialog$a;->a(ILandroid/view/View$OnClickListener;)Lkik/android/chat/fragment/KikBasicDialog$a;
 
     move-result-object v1
 
-    const v2, 0x7f09042c
+    const v2, 0x7f0a0418
 
-    invoke-static {p0}, Lkik/android/widget/preferences/m;->a(Lkik/android/widget/preferences/ResetKikPreference;)Landroid/view/View$OnClickListener;
+    invoke-static {p0}, Lkik/android/widget/preferences/s;->a(Lkik/android/widget/preferences/ResetKikPreference;)Landroid/view/View$OnClickListener;
 
     move-result-object v3
 
-    .line 78
+    .line 75
     invoke-virtual {v1, v2, v3}, Lkik/android/chat/fragment/KikBasicDialog$a;->b(ILandroid/view/View$OnClickListener;)Lkik/android/chat/fragment/KikBasicDialog$a;
 
-    .line 84
-    const v1, 0x7f09041f
+    .line 81
+    const v1, 0x7f0a040b
 
     invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikBasicDialog$a;->a(I)Lkik/android/chat/fragment/KikBasicDialog$a;
 
-    .line 85
-    const v1, 0x7f09052c
+    .line 82
+    const v1, 0x7f0a0515
 
     invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikBasicDialog$a;->b(I)Lkik/android/chat/fragment/KikBasicDialog$a;
 
-    .line 86
+    .line 83
     iget-object v1, p0, Lkik/android/widget/preferences/ResetKikPreference;->e:Lcom/kik/android/Mixpanel;
 
     const-string v2, "Log Out Prompt Shown"
@@ -320,15 +317,15 @@
 
     move-result-object v1
 
-    .line 87
+    .line 84
     invoke-virtual {v1}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
 
     move-result-object v1
 
-    .line 88
+    .line 85
     invoke-virtual {v1}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 89
+    .line 86
     invoke-virtual {p0}, Lkik/android/widget/preferences/ResetKikPreference;->a()Lkik/android/chat/fragment/KikScopedDialogFragment;
 
     move-result-object v1
@@ -337,22 +334,9 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 90
-    iget-object v0, p0, Lkik/android/widget/preferences/ResetKikPreference;->h:Lcom/kik/metrics/c/d;
-
-    invoke-static {}, Lcom/kik/metrics/b/aj;->b()Lcom/kik/metrics/b/aj$a;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/kik/metrics/b/aj$a;->a()Lcom/kik/metrics/b/aj;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/kik/metrics/c/d;->a(Lcom/kik/metrics/b/t;)V
-
-    .line 91
+    .line 87
     const/4 v0, 0x0
 
     return v0

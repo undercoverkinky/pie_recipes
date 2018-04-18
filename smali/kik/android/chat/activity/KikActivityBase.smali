@@ -14,12 +14,12 @@
 # instance fields
 .field private volatile a:Z
 
-.field b:Lkik/core/interfaces/k;
+.field b:Lkik/core/interfaces/l;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
-.field c:Lkik/core/ICoreEvents;
+.field c:Lkik/core/z;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
@@ -114,9 +114,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/android/chat/e;
+    check-cast v0, Lkik/android/chat/c;
 
-    invoke-interface {v0}, Lkik/android/chat/e;->a()Lcom/kik/components/CoreComponent;
+    invoke-interface {v0}, Lkik/android/chat/c;->a()Lcom/kik/components/CoreComponent;
 
     move-result-object v0
 
@@ -239,17 +239,17 @@
     .locals 2
 
     .prologue
-    .line 170
+    .line 167
     const-string v0, "WORKAROUND_FOR_BUG_19917_KEY"
 
     const-string v1, "WORKAROUND_FOR_BUG_19917_VALUE"
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 171
+    .line 168
     invoke-super {p0, p1}, Landroid/support/v7/app/AppCompatActivity;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 172
+    .line 169
     return-void
 .end method
 
@@ -257,12 +257,12 @@
     .locals 0
 
     .prologue
-    .line 114
+    .line 113
     invoke-super {p0, p1}, Landroid/support/v7/app/AppCompatActivity;->onWindowFocusChanged(Z)V
 
-    .line 115
+    .line 114
     iput-boolean p1, p0, Lkik/android/chat/activity/KikActivityBase;->e:Z
 
-    .line 116
+    .line 115
     return-void
 .end method

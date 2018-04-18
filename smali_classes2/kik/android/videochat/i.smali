@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract a(Lkik/android/videochat/ar;)V
+.method public abstract a(Lkik/android/videochat/ao;)V
 .end method

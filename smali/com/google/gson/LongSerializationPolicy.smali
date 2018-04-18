@@ -126,5 +126,5 @@
 
 
 # virtual methods
-.method public abstract serialize(Ljava/lang/Long;)Lcom/google/gson/k;
+.method public abstract serialize(Ljava/lang/Long;)Lcom/google/gson/j;
 .end method

@@ -9,8 +9,7 @@
 # annotations
 .annotation runtime Lbutterknife/internal/ListenerClass;
     callbacks = Lbutterknife/OnPageChange$Callback;
-    remover = "removeOnPageChangeListener"
-    setter = "addOnPageChangeListener"
+    setter = "setOnPageChangeListener"
     targetType = "android.support.v4.view.ViewPager"
     type = "android.support.v4.view.ViewPager.OnPageChangeListener"
 .end annotation

@@ -569,7 +569,7 @@
     .line 125
     iget-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableListView;->g:Lcom/github/ksoichiro/android/observablescrollview/a;
 
-    invoke-interface {v0}, Lcom/github/ksoichiro/android/observablescrollview/a;->a()V
+    invoke-interface {v0}, Lcom/github/ksoichiro/android/observablescrollview/a;->l_()V
 
     goto :goto_0
 

@@ -31,7 +31,7 @@
             "Z",
             "Ljava/util/List",
             "<",
-            "Lkik/core/datatypes/l;",
+            "Lkik/core/datatypes/o;",
             ">;",
             "Lkik/android/videochat/d;",
             ")V"
@@ -235,7 +235,7 @@
             "(",
             "Ljava/util/List",
             "<",
-            "Lkik/core/datatypes/l;",
+            "Lkik/core/datatypes/o;",
             ">;)V"
         }
     .end annotation

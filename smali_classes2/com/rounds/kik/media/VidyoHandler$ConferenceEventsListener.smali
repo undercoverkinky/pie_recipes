@@ -21,7 +21,7 @@
 .method public abstract onConferenceJoin()V
 .end method
 
-.method public abstract onConferenceLeft(ILcom/rounds/kik/conference/DisconnectReason;)V
+.method public abstract onConferenceLeft(ZLcom/rounds/kik/conference/DisconnectReason;)V
 .end method
 
 .method public abstract onParticipantAdded(Lcom/rounds/kik/participants/ParticipantUri;)V

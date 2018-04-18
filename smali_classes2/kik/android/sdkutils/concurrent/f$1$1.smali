@@ -1,5 +1,5 @@
 .class final Lkik/android/sdkutils/concurrent/f$1$1;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<TS;>;"
     }
 .end annotation
@@ -33,7 +33,7 @@
     .line 43
     iput-object p1, p0, Lkik/android/sdkutils/concurrent/f$1$1;->a:Lkik/android/sdkutils/concurrent/f$1;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -50,7 +50,7 @@
 
     .prologue
     .line 47
-    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Object;)V
+    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Object;)V
 
     .line 48
     iget-object v0, p0, Lkik/android/sdkutils/concurrent/f$1$1;->a:Lkik/android/sdkutils/concurrent/f$1;
@@ -68,7 +68,7 @@
 
     .prologue
     .line 54
-    invoke-super {p0, p1}, Lcom/kik/events/k;->b(Ljava/lang/Throwable;)V
+    invoke-super {p0, p1}, Lcom/kik/events/l;->b(Ljava/lang/Throwable;)V
 
     .line 55
     iget-object v0, p0, Lkik/android/sdkutils/concurrent/f$1$1;->a:Lkik/android/sdkutils/concurrent/f$1;
@@ -86,7 +86,7 @@
 
     .prologue
     .line 61
-    invoke-super {p0}, Lcom/kik/events/k;->c()V
+    invoke-super {p0}, Lcom/kik/events/l;->c()V
 
     .line 62
     iget-object v0, p0, Lkik/android/sdkutils/concurrent/f$1$1;->a:Lkik/android/sdkutils/concurrent/f$1;

@@ -4,31 +4,31 @@
 
 
 # direct methods
-.method public static a(Lkik/core/datatypes/d;Lkik/core/interfaces/v;)Ljava/util/List;
+.method public static a(Lkik/core/datatypes/d;Lkik/core/interfaces/x;)Ljava/util/List;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lkik/core/datatypes/d;",
-            "Lkik/core/interfaces/v;",
+            "Lkik/core/interfaces/x;",
             ")",
             "Ljava/util/List",
             "<",
-            "Lkik/core/datatypes/l;",
+            "Lkik/core/datatypes/o;",
             ">;"
         }
     .end annotation
 
     .prologue
-    .line 22
+    .line 21
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 23
+    .line 22
     if-eqz p0, :cond_1
 
-    .line 24
+    .line 23
     invoke-virtual {p0}, Lkik/core/datatypes/d;->a()[Lkik/core/datatypes/c;
 
     move-result-object v2
@@ -42,125 +42,102 @@
 
     aget-object v4, v2, v0
 
-    .line 25
+    .line 24
     if-eqz v4, :cond_0
 
-    .line 26
-    invoke-static {v4, p1}, Lkik/android/util/i;->a(Lkik/core/datatypes/c;Lkik/core/interfaces/v;)Lkik/core/datatypes/l;
+    .line 25
+    invoke-static {v4, p1}, Lkik/android/util/i;->a(Lkik/core/datatypes/c;Lkik/core/interfaces/x;)Lkik/core/datatypes/o;
 
     move-result-object v4
 
-    .line 27
+    .line 26
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 24
+    .line 23
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 32
+    .line 31
     :cond_1
     return-object v1
 .end method
 
-.method public static a(Lkik/core/datatypes/c;Lkik/core/interfaces/v;)Lkik/core/datatypes/l;
-    .locals 19
+.method public static a(Lkik/core/datatypes/c;Lkik/core/interfaces/x;)Lkik/core/datatypes/o;
+    .locals 8
 
     .prologue
-    .line 37
-    invoke-virtual/range {p0 .. p0}, Lkik/core/datatypes/c;->b()Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 38
-    move-object/from16 v0, p1
-
-    invoke-interface {v0, v3}, Lkik/core/interfaces/v;->b(Ljava/lang/String;)Z
-
-    move-result v6
-
-    .line 39
-    new-instance v2, Lkik/core/datatypes/s;
-
-    invoke-static {v3}, Lkik/core/datatypes/k;->a(Ljava/lang/String;)Lkik/core/datatypes/k;
-
-    move-result-object v3
-
-    invoke-virtual/range {p0 .. p0}, Lkik/core/datatypes/c;->c()Ljava/lang/String;
+    .line 36
+    invoke-virtual {p0}, Lkik/core/datatypes/c;->b()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual/range {p0 .. p0}, Lkik/core/datatypes/c;->a()Ljava/lang/String;
+    .line 37
+    new-instance v0, Lkik/core/datatypes/o;
+
+    invoke-static {v4}, Lkik/core/datatypes/n;->a(Ljava/lang/String;)Lkik/core/datatypes/n;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lkik/core/datatypes/c;->c()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Lkik/core/datatypes/c;->a()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-interface {p1, v4}, Lkik/core/interfaces/x;->c(Ljava/lang/String;)Z
+
+    move-result v4
+
+    .line 38
+    invoke-virtual {p0}, Lkik/core/datatypes/c;->f()Lkik/core/datatypes/c$a;
 
     move-result-object v5
 
-    const/4 v7, 0x0
+    invoke-virtual {v5}, Lkik/core/datatypes/c$a;->b()J
+
+    move-result-wide v6
+
+    invoke-static {v6, v7}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {p0}, Lkik/core/datatypes/c;->f()Lkik/core/datatypes/c$a;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Lkik/core/datatypes/c$a;->a()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-direct/range {v0 .. v6}, Lkik/core/datatypes/o;-><init>(Lkik/core/datatypes/n;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)V
+
+    .line 39
+    invoke-virtual {p0}, Lkik/core/datatypes/c;->d()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lkik/core/datatypes/o;->c(Ljava/lang/String;)V
 
     .line 40
-    invoke-virtual/range {p0 .. p0}, Lkik/core/datatypes/c;->f()Lkik/core/datatypes/c$a;
+    invoke-virtual {p0}, Lkik/core/datatypes/c;->e()[Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v1
 
-    invoke-virtual {v8}, Lkik/core/datatypes/c$a;->b()J
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    move-result-wide v8
+    move-result-object v1
 
-    invoke-static {v8, v9}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lkik/core/datatypes/o;->a(Ljava/util/List;)V
 
-    move-result-object v8
+    .line 41
+    const/4 v1, 0x1
 
-    invoke-virtual/range {p0 .. p0}, Lkik/core/datatypes/c;->f()Lkik/core/datatypes/c$a;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Lkik/core/datatypes/c$a;->a()Ljava/lang/String;
-
-    move-result-object v9
-
-    const/4 v10, 0x0
-
-    const/4 v11, 0x0
-
-    const/4 v13, 0x0
-
-    const/4 v14, 0x0
-
-    const/4 v15, 0x0
-
-    const/16 v16, 0x1
-
-    const/16 v17, 0x0
-
-    const/16 v18, 0x0
-
-    move v12, v6
-
-    invoke-direct/range {v2 .. v18}, Lkik/core/datatypes/s;-><init>(Lkik/core/datatypes/k;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Ljava/lang/String;ZZZZZIZ[BZ)V
+    invoke-virtual {v0, v1}, Lkik/core/datatypes/o;->b(Z)V
 
     .line 42
-    invoke-virtual/range {p0 .. p0}, Lkik/core/datatypes/c;->d()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Lkik/core/datatypes/l;->b(Ljava/lang/String;)V
-
-    .line 43
-    invoke-virtual/range {p0 .. p0}, Lkik/core/datatypes/c;->e()[Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Lkik/core/datatypes/l;->a(Ljava/util/List;)V
-
-    .line 44
-    const/4 v3, 0x1
-
-    invoke-virtual {v2, v3}, Lkik/core/datatypes/l;->b(Z)V
-
-    .line 45
-    return-object v2
+    return-object v0
 .end method

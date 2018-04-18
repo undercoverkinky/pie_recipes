@@ -29,7 +29,7 @@
     .locals 1
 
     .prologue
-    .line 3441
+    .line 3401
     iget-object v0, p0, Lio/branch/referral/Branch$i;->a:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -39,7 +39,7 @@
     .locals 1
 
     .prologue
-    .line 3445
+    .line 3405
     iget-object v0, p0, Lio/branch/referral/Branch$i;->b:Ljava/lang/String;
 
     return-object v0
@@ -49,7 +49,7 @@
     .locals 1
 
     .prologue
-    .line 3449
+    .line 3409
     iget-object v0, p0, Lio/branch/referral/Branch$i;->c:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -59,7 +59,7 @@
     .locals 1
 
     .prologue
-    .line 3453
+    .line 3413
     iget-object v0, p0, Lio/branch/referral/Branch$i;->d:Ljava/lang/String;
 
     return-object v0

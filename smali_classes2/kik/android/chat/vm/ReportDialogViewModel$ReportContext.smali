@@ -44,7 +44,7 @@
 
     const/4 v2, 0x0
 
-    .line 83
+    .line 82
     new-instance v0, Lkik/android/chat/vm/ReportDialogViewModel$ReportContext$1;
 
     const-string v1, "GROUP"
@@ -53,7 +53,7 @@
 
     sput-object v0, Lkik/android/chat/vm/ReportDialogViewModel$ReportContext;->GROUP:Lkik/android/chat/vm/ReportDialogViewModel$ReportContext;
 
-    .line 94
+    .line 93
     new-instance v0, Lkik/android/chat/vm/ReportDialogViewModel$ReportContext$2;
 
     const-string v1, "USER"
@@ -62,7 +62,7 @@
 
     sput-object v0, Lkik/android/chat/vm/ReportDialogViewModel$ReportContext;->USER:Lkik/android/chat/vm/ReportDialogViewModel$ReportContext;
 
-    .line 105
+    .line 104
     new-instance v0, Lkik/android/chat/vm/ReportDialogViewModel$ReportContext$3;
 
     const-string v1, "USERINGROUP"
@@ -71,7 +71,7 @@
 
     sput-object v0, Lkik/android/chat/vm/ReportDialogViewModel$ReportContext;->USERINGROUP:Lkik/android/chat/vm/ReportDialogViewModel$ReportContext;
 
-    .line 81
+    .line 80
     const/4 v0, 0x3
 
     new-array v0, v0, [Lkik/android/chat/vm/ReportDialogViewModel$ReportContext;
@@ -102,7 +102,7 @@
     .end annotation
 
     .prologue
-    .line 81
+    .line 80
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -112,7 +112,7 @@
     .locals 0
 
     .prologue
-    .line 81
+    .line 80
     invoke-direct {p0, p1, p2}, Lkik/android/chat/vm/ReportDialogViewModel$ReportContext;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -122,7 +122,7 @@
     .locals 1
 
     .prologue
-    .line 81
+    .line 80
     const-class v0, Lkik/android/chat/vm/ReportDialogViewModel$ReportContext;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -138,7 +138,7 @@
     .locals 1
 
     .prologue
-    .line 81
+    .line 80
     sget-object v0, Lkik/android/chat/vm/ReportDialogViewModel$ReportContext;->$VALUES:[Lkik/android/chat/vm/ReportDialogViewModel$ReportContext;
 
     invoke-virtual {v0}, [Lkik/android/chat/vm/ReportDialogViewModel$ReportContext;->clone()Ljava/lang/Object;

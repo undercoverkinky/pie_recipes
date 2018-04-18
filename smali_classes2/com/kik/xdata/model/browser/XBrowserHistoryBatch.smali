@@ -83,6 +83,25 @@
 
 
 # virtual methods
+.method public final a()Lcom/dyuproject/protostuff/u;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/dyuproject/protostuff/u",
+            "<",
+            "Lcom/kik/xdata/model/browser/XBrowserHistoryBatch;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 93
+    sget-object v0, Lcom/kik/xdata/model/browser/XBrowserHistoryBatch;->b:Lcom/dyuproject/protostuff/u;
+
+    return-object v0
+.end method
+
 .method public final a(Lcom/kik/xdata/model/browser/XBrowserHistoryItem;)Lcom/kik/xdata/model/browser/XBrowserHistoryBatch;
     .locals 1
 
@@ -109,7 +128,7 @@
     return-object p0
 .end method
 
-.method public final a()Ljava/util/List;
+.method public final b()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -128,7 +147,7 @@
     return-object v0
 .end method
 
-.method public final b()I
+.method public final c()I
     .locals 1
 
     .prologue
@@ -150,25 +169,6 @@
     move-result v0
 
     goto :goto_0
-.end method
-
-.method public final cachedSchema()Lcom/dyuproject/protostuff/u;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/dyuproject/protostuff/u",
-            "<",
-            "Lcom/kik/xdata/model/browser/XBrowserHistoryBatch;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 93
-    sget-object v0, Lcom/kik/xdata/model/browser/XBrowserHistoryBatch;->b:Lcom/dyuproject/protostuff/u;
-
-    return-object v0
 .end method
 
 .method public final readExternal(Ljava/io/ObjectInput;)V

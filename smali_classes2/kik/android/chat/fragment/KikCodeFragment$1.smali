@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 122
+    .line 119
     iput-object p1, p0, Lkik/android/chat/fragment/KikCodeFragment$1;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,19 +44,19 @@
 
     const/4 v4, 0x1
 
-    .line 126
+    .line 123
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$1;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikCodeFragment;->_drawArea:Lkik/android/widget/KikFinderCodeImageView;
 
     if-nez v0, :cond_1
 
-    .line 148
+    .line 145
     :cond_0
     :goto_0
     return v4
 
-    .line 129
+    .line 126
     :cond_1
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
@@ -112,7 +112,7 @@
 
     move-result-wide v0
 
-    .line 130
+    .line 127
     iget-object v2, p0, Lkik/android/chat/fragment/KikCodeFragment$1;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     iget-object v2, v2, Lkik/android/chat/fragment/KikCodeFragment;->_drawArea:Lkik/android/widget/KikFinderCodeImageView;
@@ -135,41 +135,41 @@
 
     if-eqz v0, :cond_0
 
-    .line 131
+    .line 128
     :cond_2
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$1;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
-    invoke-static {v0}, Lkik/android/chat/fragment/KikCodeFragment;->b(Lkik/android/chat/fragment/KikCodeFragment;)Lkik/android/util/bu;
+    invoke-static {v0}, Lkik/android/chat/fragment/KikCodeFragment;->b(Lkik/android/chat/fragment/KikCodeFragment;)Lkik/android/util/bw;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2}, Lkik/android/util/bu;->onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    invoke-virtual {v0, p1, p2}, Lkik/android/util/bw;->onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
 
-    .line 132
+    .line 129
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 133
+    .line 130
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$1;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     invoke-static {v0, p2}, Lkik/android/chat/fragment/KikCodeFragment;->a(Lkik/android/chat/fragment/KikCodeFragment;Landroid/view/MotionEvent;)V
 
-    .line 134
+    .line 131
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$1;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/KikCodeFragment;->c(Lkik/android/chat/fragment/KikCodeFragment;)V
 
-    .line 135
+    .line 132
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$1;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/KikCodeFragment;->d(Lkik/android/chat/fragment/KikCodeFragment;)Z
 
     goto :goto_0
 
-    .line 137
+    .line 134
     :cond_3
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -185,24 +185,24 @@
 
     if-nez v0, :cond_4
 
-    .line 138
+    .line 135
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$1;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/KikCodeFragment;->c()V
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikCodeFragment;->d()V
 
-    .line 139
+    .line 136
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$1;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/KikCodeFragment;->f(Lkik/android/chat/fragment/KikCodeFragment;)I
 
-    .line 140
+    .line 137
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$1;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikCodeFragment;->_drawArea:Lkik/android/widget/KikFinderCodeImageView;
 
     invoke-virtual {v0}, Lkik/android/widget/KikFinderCodeImageView;->b()V
 
-    .line 141
+    .line 138
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$1;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment$1;->a:Lkik/android/chat/fragment/KikCodeFragment;
@@ -215,14 +215,14 @@
 
     invoke-static {v0, v1}, Lkik/android/chat/fragment/KikCodeFragment;->a(Lkik/android/chat/fragment/KikCodeFragment;Lcom/kik/scan/KikCode;)Lcom/kik/scan/KikCode;
 
-    .line 142
+    .line 139
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$1;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/KikCodeFragment;->g(Lkik/android/chat/fragment/KikCodeFragment;)V
 
     goto/16 :goto_0
 
-    .line 144
+    .line 141
     :cond_4
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -232,7 +232,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 145
+    .line 142
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$1;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     invoke-static {v0, p2}, Lkik/android/chat/fragment/KikCodeFragment;->a(Lkik/android/chat/fragment/KikCodeFragment;Landroid/view/MotionEvent;)V

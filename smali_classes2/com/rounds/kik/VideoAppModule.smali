@@ -22,8 +22,6 @@
     .end annotation
 .end field
 
-.field private static sIsInTestMode:Z
-
 
 # instance fields
 .field private mAbTestsProxy:Lcom/rounds/kik/abtests/IAbTestsProxy;
@@ -58,7 +56,7 @@
     .locals 1
 
     .prologue
-    .line 31
+    .line 27
     new-instance v0, Lcom/rounds/kik/VideoAppModule$EmptyAbManagerProxy;
 
     invoke-direct {v0}, Lcom/rounds/kik/VideoAppModule$EmptyAbManagerProxy;-><init>()V
@@ -72,13 +70,13 @@
     .locals 2
 
     .prologue
-    .line 49
+    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
+    .line 45
     sput-object p0, Lcom/rounds/kik/VideoAppModule;->sInstance:Lcom/rounds/kik/VideoAppModule;
 
-    .line 51
+    .line 46
     if-nez p1, :cond_0
 
     const/4 v0, 0x0
@@ -86,7 +84,7 @@
     :goto_0
     iput-object v0, p0, Lcom/rounds/kik/VideoAppModule;->mContext:Landroid/content/Context;
 
-    .line 52
+    .line 47
     new-instance v0, Lcom/rounds/kik/FileSystem;
 
     iget-object v1, p0, Lcom/rounds/kik/VideoAppModule;->mContext:Landroid/content/Context;
@@ -95,7 +93,7 @@
 
     iput-object v0, p0, Lcom/rounds/kik/VideoAppModule;->mFileSystem:Lcom/rounds/kik/FileSystem;
 
-    .line 53
+    .line 48
     new-instance v0, Lcom/rounds/kik/Concurrency;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -106,40 +104,24 @@
 
     iput-object v0, p0, Lcom/rounds/kik/VideoAppModule;->mConcurrency:Lcom/rounds/kik/Concurrency;
 
-    .line 54
+    .line 49
     invoke-direct {p0}, Lcom/rounds/kik/VideoAppModule;->setAppName()V
 
-    .line 55
+    .line 50
     invoke-direct {p0}, Lcom/rounds/kik/VideoAppModule;->setPackageName()V
 
-    .line 56
+    .line 51
     invoke-direct {p0}, Lcom/rounds/kik/VideoAppModule;->setAppVersion()V
 
-    .line 57
+    .line 52
     sget-object v0, Lcom/rounds/kik/VideoAppModule;->EMPTY_AB_MANAGER_PROXY:Lcom/rounds/kik/VideoAppModule$EmptyAbManagerProxy;
 
     iput-object v0, p0, Lcom/rounds/kik/VideoAppModule;->mAbTestsProxy:Lcom/rounds/kik/abtests/IAbTestsProxy;
 
-    .line 58
-    new-instance v0, Lcom/nostra13/universalimageloader/core/e$a;
-
-    invoke-direct {v0, p1}, Lcom/nostra13/universalimageloader/core/e$a;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v0}, Lcom/nostra13/universalimageloader/core/e$a;->a()Lcom/nostra13/universalimageloader/core/e;
-
-    move-result-object v0
-
-    .line 59
-    invoke-static {}, Lcom/nostra13/universalimageloader/core/d;->a()Lcom/nostra13/universalimageloader/core/d;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/nostra13/universalimageloader/core/d;->a(Lcom/nostra13/universalimageloader/core/e;)V
-
-    .line 60
+    .line 53
     return-void
 
-    .line 51
+    .line 46
     :cond_0
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -152,17 +134,17 @@
     .locals 1
 
     .prologue
-    .line 262
+    .line 231
     sget-object v0, Lcom/rounds/kik/VideoAppModule;->sInstance:Lcom/rounds/kik/VideoAppModule;
 
     if-eqz v0, :cond_0
 
-    .line 263
+    .line 232
     sget-object v0, Lcom/rounds/kik/VideoAppModule;->sInstance:Lcom/rounds/kik/VideoAppModule;
 
     iget-object v0, v0, Lcom/rounds/kik/VideoAppModule;->mAbTestsProxy:Lcom/rounds/kik/abtests/IAbTestsProxy;
 
-    .line 266
+    .line 235
     :goto_0
     return-object v0
 
@@ -176,7 +158,7 @@
     .locals 1
 
     .prologue
-    .line 169
+    .line 148
     sget-object v0, Lcom/rounds/kik/VideoAppModule;->sInstance:Lcom/rounds/kik/VideoAppModule;
 
     iget-object v0, v0, Lcom/rounds/kik/VideoAppModule;->mAppName:Ljava/lang/String;
@@ -188,7 +170,7 @@
     .locals 1
 
     .prologue
-    .line 116
+    .line 95
     sget-object v0, Lcom/rounds/kik/VideoAppModule;->sInstance:Lcom/rounds/kik/VideoAppModule;
 
     iget-object v0, v0, Lcom/rounds/kik/VideoAppModule;->mAppVersion:Ljava/lang/String;
@@ -196,141 +178,11 @@
     return-object v0
 .end method
 
-.method public static clearAllImagesCache()V
-    .locals 1
-
-    .prologue
-    .line 64
-    invoke-static {}, Lcom/nostra13/universalimageloader/core/d;->a()Lcom/nostra13/universalimageloader/core/d;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/nostra13/universalimageloader/core/d;->c()V
-
-    .line 65
-    invoke-static {}, Lcom/nostra13/universalimageloader/core/d;->a()Lcom/nostra13/universalimageloader/core/d;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/nostra13/universalimageloader/core/d;->e()V
-
-    .line 66
-    return-void
-.end method
-
-.method public static clearImageCache(Ljava/lang/String;)V
-    .locals 5
-
-    .prologue
-    .line 72
-    invoke-static {}, Lcom/nostra13/universalimageloader/core/d;->a()Lcom/nostra13/universalimageloader/core/d;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/nostra13/universalimageloader/core/d;->d()Lcom/nostra13/universalimageloader/cache/disc/DiskCache;
-
-    move-result-object v0
-
-    .line 1046
-    invoke-interface {v0, p0}, Lcom/nostra13/universalimageloader/cache/disc/DiskCache;->get(Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v0
-
-    .line 1047
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Ljava/io/File;->delete()Z
-
-    .line 73
-    :cond_0
-    invoke-static {}, Lcom/nostra13/universalimageloader/core/d;->a()Lcom/nostra13/universalimageloader/core/d;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/nostra13/universalimageloader/core/d;->b()Lcom/nostra13/universalimageloader/cache/memory/MemoryCache;
-
-    move-result-object v1
-
-    .line 1100
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    .line 1101
-    invoke-interface {v1}, Lcom/nostra13/universalimageloader/cache/memory/MemoryCache;->keys()Ljava/util/Collection;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    :cond_1
-    :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    .line 1102
-    invoke-virtual {v0, p0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    .line 1103
-    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    .line 1106
-    :cond_2
-    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    .line 1107
-    invoke-interface {v1, v0}, Lcom/nostra13/universalimageloader/cache/memory/MemoryCache;->remove(Ljava/lang/String;)Landroid/graphics/Bitmap;
-
-    goto :goto_1
-
-    .line 74
-    :cond_3
-    return-void
-.end method
-
 .method public static concurrency()Lcom/rounds/kik/Concurrency;
     .locals 1
 
     .prologue
-    .line 194
+    .line 173
     sget-object v0, Lcom/rounds/kik/VideoAppModule;->sInstance:Lcom/rounds/kik/VideoAppModule;
 
     invoke-virtual {v0}, Lcom/rounds/kik/VideoAppModule;->getConcurrency()Lcom/rounds/kik/Concurrency;
@@ -344,7 +196,7 @@
     .locals 1
 
     .prologue
-    .line 126
+    .line 105
     sget-object v0, Lcom/rounds/kik/VideoAppModule;->sInstance:Lcom/rounds/kik/VideoAppModule;
 
     invoke-virtual {v0}, Lcom/rounds/kik/VideoAppModule;->getContext()Landroid/content/Context;
@@ -358,7 +210,7 @@
     .locals 1
 
     .prologue
-    .line 209
+    .line 188
     sget-object v0, Lcom/rounds/kik/VideoAppModule;->sInstance:Lcom/rounds/kik/VideoAppModule;
 
     invoke-virtual {v0}, Lcom/rounds/kik/VideoAppModule;->getConversation()Lcom/rounds/kik/Conversation;
@@ -372,12 +224,12 @@
     .locals 1
 
     .prologue
-    .line 228
+    .line 207
     sget-object v0, Lcom/rounds/kik/VideoAppModule;->sInstance:Lcom/rounds/kik/VideoAppModule;
 
     invoke-virtual {v0, p0}, Lcom/rounds/kik/VideoAppModule;->setConversation(Lcom/rounds/kik/Conversation;)V
 
-    .line 229
+    .line 208
     return-void
 .end method
 
@@ -385,7 +237,7 @@
     .locals 1
 
     .prologue
-    .line 146
+    .line 125
     sget-object v0, Lcom/rounds/kik/VideoAppModule;->sInstance:Lcom/rounds/kik/VideoAppModule;
 
     invoke-virtual {v0}, Lcom/rounds/kik/VideoAppModule;->getDefaultProfilePicture()Lcom/rounds/kik/participants/ProfilePicture;
@@ -399,7 +251,7 @@
     .locals 1
 
     .prologue
-    .line 233
+    .line 212
     sget-object v0, Lcom/rounds/kik/VideoAppModule;->sInstance:Lcom/rounds/kik/VideoAppModule;
 
     iget-object v0, v0, Lcom/rounds/kik/VideoAppModule;->mDeviceId:Ljava/lang/String;
@@ -411,7 +263,7 @@
     .locals 1
 
     .prologue
-    .line 184
+    .line 163
     sget-object v0, Lcom/rounds/kik/VideoAppModule;->sInstance:Lcom/rounds/kik/VideoAppModule;
 
     invoke-virtual {v0}, Lcom/rounds/kik/VideoAppModule;->getFiles()Lcom/rounds/kik/FileSystem;
@@ -425,7 +277,7 @@
     .locals 1
 
     .prologue
-    .line 92
+    .line 71
     sget-object v0, Lcom/rounds/kik/VideoAppModule;->sInstance:Lcom/rounds/kik/VideoAppModule;
 
     return-object v0
@@ -435,7 +287,7 @@
     .locals 1
 
     .prologue
-    .line 272
+    .line 241
     sget-object v0, Lcom/rounds/kik/VideoAppModule;->sInstance:Lcom/rounds/kik/VideoAppModule;
 
     if-eqz v0, :cond_0
@@ -453,65 +305,12 @@
     goto :goto_0
 .end method
 
-.method public static isInTestMode()Z
+.method public static isInitialized()Z
     .locals 1
 
     .prologue
-    .line 243
-    sget-boolean v0, Lcom/rounds/kik/VideoAppModule;->sIsInTestMode:Z
-
-    return v0
-.end method
-
-.method public static isMyClientId(Ljava/lang/String;)Z
-    .locals 1
-
-    .prologue
-    .line 253
-    invoke-static {}, Lcom/rounds/kik/VideoAppModule;->localParticipant()Lcom/rounds/kik/participants/LocalParticipant;
-
-    move-result-object v0
-
-    .line 254
-    if-eqz p0, :cond_0
-
-    if-eqz v0, :cond_0
-
-    .line 255
-    invoke-interface {v0}, Lcom/rounds/kik/participants/Participant;->clientId()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    .line 257
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public static isReporterReady()Z
-    .locals 1
-
-    .prologue
-    .line 238
-    sget-boolean v0, Lcom/rounds/kik/VideoAppModule;->sIsInTestMode:Z
-
-    if-nez v0, :cond_0
-
+    .line 217
     sget-object v0, Lcom/rounds/kik/VideoAppModule;->sInstance:Lcom/rounds/kik/VideoAppModule;
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lcom/rounds/kik/VideoAppModule;->sInstance:Lcom/rounds/kik/VideoAppModule;
-
-    iget-object v0, v0, Lcom/rounds/kik/VideoAppModule;->mLocalParticipant:Lcom/rounds/kik/participants/LocalParticipant;
 
     if-eqz v0, :cond_0
 
@@ -526,11 +325,44 @@
     goto :goto_0
 .end method
 
+.method public static isMyClientId(Ljava/lang/String;)Z
+    .locals 1
+
+    .prologue
+    .line 222
+    invoke-static {}, Lcom/rounds/kik/VideoAppModule;->localParticipant()Lcom/rounds/kik/participants/LocalParticipant;
+
+    move-result-object v0
+
+    .line 223
+    if-eqz p0, :cond_0
+
+    if-eqz v0, :cond_0
+
+    .line 224
+    invoke-interface {v0}, Lcom/rounds/kik/participants/Participant;->clientId()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    .line 226
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public static localParticipant()Lcom/rounds/kik/participants/LocalParticipant;
     .locals 1
 
     .prologue
-    .line 136
+    .line 115
     sget-object v0, Lcom/rounds/kik/VideoAppModule;->sInstance:Lcom/rounds/kik/VideoAppModule;
 
     invoke-virtual {v0}, Lcom/rounds/kik/VideoAppModule;->getLocalParticipant()Lcom/rounds/kik/participants/LocalParticipant;
@@ -544,7 +376,7 @@
     .locals 1
 
     .prologue
-    .line 221
+    .line 200
     sget-object v0, Lcom/rounds/kik/VideoAppModule;->sInstance:Lcom/rounds/kik/VideoAppModule;
 
     if-eqz v0, :cond_0
@@ -555,14 +387,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 222
+    .line 201
     sget-object v0, Lcom/rounds/kik/VideoAppModule;->sInstance:Lcom/rounds/kik/VideoAppModule;
 
     iget-object v0, v0, Lcom/rounds/kik/VideoAppModule;->mConversationController:Lcom/rounds/kik/ConversationController;
 
     invoke-interface {v0, p0}, Lcom/rounds/kik/ConversationController;->logExceptionToCrashlytics(Ljava/lang/Exception;)V
 
-    .line 224
+    .line 203
     :cond_0
     return-void
 .end method
@@ -571,7 +403,7 @@
     .locals 1
 
     .prologue
-    .line 214
+    .line 193
     sget-object v0, Lcom/rounds/kik/VideoAppModule;->sInstance:Lcom/rounds/kik/VideoAppModule;
 
     if-eqz v0, :cond_0
@@ -582,14 +414,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 215
+    .line 194
     sget-object v0, Lcom/rounds/kik/VideoAppModule;->sInstance:Lcom/rounds/kik/VideoAppModule;
 
     iget-object v0, v0, Lcom/rounds/kik/VideoAppModule;->mConversationController:Lcom/rounds/kik/ConversationController;
 
     invoke-interface {v0, p0}, Lcom/rounds/kik/ConversationController;->logToCrashlytics(Ljava/lang/String;)V
 
-    .line 217
+    .line 196
     :cond_0
     return-void
 .end method
@@ -598,7 +430,7 @@
     .locals 1
 
     .prologue
-    .line 174
+    .line 153
     sget-object v0, Lcom/rounds/kik/VideoAppModule;->sInstance:Lcom/rounds/kik/VideoAppModule;
 
     iget-object v0, v0, Lcom/rounds/kik/VideoAppModule;->mPackageName:Ljava/lang/String;
@@ -610,7 +442,7 @@
     .locals 3
 
     .prologue
-    .line 151
+    .line 130
     iget-object v0, p0, Lcom/rounds/kik/VideoAppModule;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
@@ -627,14 +459,14 @@
 
     move-result-object v0
 
-    .line 153
+    .line 132
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 154
+    .line 133
     invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -647,14 +479,14 @@
 
     move-result-object v0
 
-    .line 159
+    .line 138
     :goto_0
     iput-object v0, p0, Lcom/rounds/kik/VideoAppModule;->mAppName:Ljava/lang/String;
 
-    .line 160
+    .line 139
     return-void
 
-    .line 157
+    .line 136
     :cond_0
     const-string v0, "unknown"
 
@@ -665,22 +497,22 @@
     .locals 4
 
     .prologue
-    .line 97
+    .line 76
     const-string v0, "n/a"
 
-    .line 99
+    .line 78
     iget-object v1, p0, Lcom/rounds/kik/VideoAppModule;->mContext:Landroid/content/Context;
 
     if-eqz v1, :cond_0
 
-    .line 100
+    .line 79
     iget-object v1, p0, Lcom/rounds/kik/VideoAppModule;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    .line 103
+    .line 82
     :try_start_0
     iget-object v2, p0, Lcom/rounds/kik/VideoAppModule;->mContext:Landroid/content/Context;
 
@@ -694,20 +526,20 @@
 
     move-result-object v1
 
-    .line 104
+    .line 83
     iget-object v0, v1, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 111
+    .line 90
     :cond_0
     :goto_0
     iput-object v0, p0, Lcom/rounds/kik/VideoAppModule;->mAppVersion:Ljava/lang/String;
 
-    .line 112
+    .line 91
     return-void
 
-    .line 107
+    .line 86
     :catch_0
     move-exception v1
 
@@ -716,24 +548,11 @@
     goto :goto_0
 .end method
 
-.method public static setInTestMode()V
-    .locals 1
-
-    .prologue
-    .line 248
-    const/4 v0, 0x1
-
-    sput-boolean v0, Lcom/rounds/kik/VideoAppModule;->sIsInTestMode:Z
-
-    .line 249
-    return-void
-.end method
-
 .method private setPackageName()V
     .locals 1
 
     .prologue
-    .line 164
+    .line 143
     iget-object v0, p0, Lcom/rounds/kik/VideoAppModule;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -746,7 +565,7 @@
 
     iput-object v0, p0, Lcom/rounds/kik/VideoAppModule;->mPackageName:Ljava/lang/String;
 
-    .line 165
+    .line 144
     return-void
 .end method
 
@@ -756,7 +575,7 @@
     .locals 1
 
     .prologue
-    .line 189
+    .line 168
     iget-object v0, p0, Lcom/rounds/kik/VideoAppModule;->mConcurrency:Lcom/rounds/kik/Concurrency;
 
     return-object v0
@@ -766,7 +585,7 @@
     .locals 1
 
     .prologue
-    .line 121
+    .line 100
     iget-object v0, p0, Lcom/rounds/kik/VideoAppModule;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -776,7 +595,7 @@
     .locals 1
 
     .prologue
-    .line 199
+    .line 178
     iget-object v0, p0, Lcom/rounds/kik/VideoAppModule;->mConversation:Lcom/rounds/kik/Conversation;
 
     return-object v0
@@ -786,7 +605,7 @@
     .locals 1
 
     .prologue
-    .line 141
+    .line 120
     iget-object v0, p0, Lcom/rounds/kik/VideoAppModule;->mDefaultProfilePicture:Lcom/rounds/kik/participants/ProfilePicture;
 
     return-object v0
@@ -796,7 +615,7 @@
     .locals 1
 
     .prologue
-    .line 179
+    .line 158
     iget-object v0, p0, Lcom/rounds/kik/VideoAppModule;->mFileSystem:Lcom/rounds/kik/FileSystem;
 
     return-object v0
@@ -806,7 +625,7 @@
     .locals 1
 
     .prologue
-    .line 131
+    .line 110
     iget-object v0, p0, Lcom/rounds/kik/VideoAppModule;->mLocalParticipant:Lcom/rounds/kik/participants/LocalParticipant;
 
     return-object v0
@@ -816,10 +635,10 @@
     .locals 0
 
     .prologue
-    .line 204
+    .line 183
     iput-object p1, p0, Lcom/rounds/kik/VideoAppModule;->mConversation:Lcom/rounds/kik/Conversation;
 
-    .line 205
+    .line 184
     return-void
 .end method
 
@@ -827,40 +646,40 @@
     .locals 1
 
     .prologue
-    .line 86
+    .line 65
     iput-object p1, p0, Lcom/rounds/kik/VideoAppModule;->mConversationController:Lcom/rounds/kik/ConversationController;
 
-    .line 87
+    .line 66
     invoke-interface {p1}, Lcom/rounds/kik/ConversationController;->getDefaultProfilePicture()Lcom/rounds/kik/participants/ProfilePicture;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/rounds/kik/VideoAppModule;->mDefaultProfilePicture:Lcom/rounds/kik/participants/ProfilePicture;
 
-    .line 88
+    .line 67
     return-void
 .end method
 
-.method public setup(Lcom/rounds/kik/abtests/IAbTestsProxy;Ljava/lang/String;Ljava/lang/String;ZZ)V
+.method public setup(Lcom/rounds/kik/abtests/IAbTestsProxy;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 1
 
     .prologue
-    .line 78
+    .line 57
     iput-object p1, p0, Lcom/rounds/kik/VideoAppModule;->mAbTestsProxy:Lcom/rounds/kik/abtests/IAbTestsProxy;
 
-    .line 79
+    .line 58
     iput-object p3, p0, Lcom/rounds/kik/VideoAppModule;->mDeviceId:Ljava/lang/String;
 
-    .line 80
+    .line 59
     iput-boolean p4, p0, Lcom/rounds/kik/VideoAppModule;->mDebugEnabled:Z
 
-    .line 81
+    .line 60
     new-instance v0, Lcom/rounds/kik/participants/LocalParticipant;
 
-    invoke-direct {v0, p2, p3, p5}, Lcom/rounds/kik/participants/LocalParticipant;-><init>(Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-direct {v0, p2, p3}, Lcom/rounds/kik/participants/LocalParticipant;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/rounds/kik/VideoAppModule;->mLocalParticipant:Lcom/rounds/kik/participants/LocalParticipant;
 
-    .line 82
+    .line 61
     return-void
 .end method

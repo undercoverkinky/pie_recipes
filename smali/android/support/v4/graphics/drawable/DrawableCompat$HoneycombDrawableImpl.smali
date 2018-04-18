@@ -1,5 +1,5 @@
 .class Landroid/support/v4/graphics/drawable/DrawableCompat$HoneycombDrawableImpl;
-.super Landroid/support/v4/graphics/drawable/DrawableCompat$BaseDrawableImpl;
+.super Landroid/support/v4/graphics/drawable/DrawableCompat$EclairDrawableImpl;
 .source "SourceFile"
 
 
@@ -19,8 +19,8 @@
     .locals 0
 
     .prologue
-    .line 154
-    invoke-direct {p0}, Landroid/support/v4/graphics/drawable/DrawableCompat$BaseDrawableImpl;-><init>()V
+    .line 157
+    invoke-direct {p0}, Landroid/support/v4/graphics/drawable/DrawableCompat$EclairDrawableImpl;-><init>()V
 
     return-void
 .end method
@@ -31,10 +31,10 @@
     .locals 0
 
     .prologue
-    .line 157
+    .line 160
     invoke-static {p1}, Landroid/support/v4/graphics/drawable/DrawableCompatHoneycomb;->jumpToCurrentState(Landroid/graphics/drawable/Drawable;)V
 
-    .line 158
+    .line 161
     return-void
 .end method
 
@@ -42,7 +42,7 @@
     .locals 1
 
     .prologue
-    .line 162
+    .line 165
     invoke-static {p1}, Landroid/support/v4/graphics/drawable/DrawableCompatHoneycomb;->wrapForTinting(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0

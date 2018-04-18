@@ -25,10 +25,10 @@
     .locals 1
 
     .prologue
-    .line 464
+    .line 459
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 467
+    .line 462
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lkik/android/util/f$b;->b:Z
@@ -42,7 +42,7 @@
     .locals 1
 
     .prologue
-    .line 471
+    .line 466
     iget-object v0, p0, Lkik/android/util/f$b;->a:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -52,10 +52,10 @@
     .locals 0
 
     .prologue
-    .line 476
+    .line 471
     iput-object p1, p0, Lkik/android/util/f$b;->a:Landroid/graphics/Bitmap;
 
-    .line 477
+    .line 472
     return-void
 .end method
 
@@ -63,7 +63,7 @@
     .locals 1
 
     .prologue
-    .line 481
+    .line 476
     iget-boolean v0, p0, Lkik/android/util/f$b;->b:Z
 
     return v0
@@ -73,11 +73,11 @@
     .locals 1
 
     .prologue
-    .line 486
+    .line 481
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lkik/android/util/f$b;->b:Z
 
-    .line 487
+    .line 482
     return-void
 .end method

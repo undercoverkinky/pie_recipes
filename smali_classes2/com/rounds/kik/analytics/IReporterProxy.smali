@@ -131,38 +131,49 @@
     .end annotation
 .end method
 
-.method public abstract onPushDismiss(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Z)V
+.method public abstract onPushDismiss(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TConversation;",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
-            "Z)V"
+            ")V"
         }
     .end annotation
 .end method
 
-.method public abstract onPushRemoved(Ljava/lang/String;Z)V
-.end method
-
-.method public abstract onPushShow(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Z)V
+.method public abstract onPushRemoved(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TConversation;",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
-            "Z)V"
+            ")V"
         }
     .end annotation
 .end method
 
-.method public abstract onPushTap(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Z)V
+.method public abstract onPushRemoved(Ljava/lang/String;)V
+.end method
+
+.method public abstract onPushShow(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TConversation;",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
-            "Z)V"
+            ")V"
+        }
+    .end annotation
+.end method
+
+.method public abstract onPushTap(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TConversation;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ")V"
         }
     .end annotation
 .end method

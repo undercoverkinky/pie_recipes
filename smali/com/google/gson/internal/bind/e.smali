@@ -19,7 +19,7 @@
 
 
 # instance fields
-.field private final b:Lcom/google/gson/e;
+.field private final b:Lcom/google/gson/d;
 
 
 # direct methods
@@ -37,7 +37,7 @@
     return-void
 .end method
 
-.method constructor <init>(Lcom/google/gson/e;)V
+.method constructor <init>(Lcom/google/gson/d;)V
     .locals 0
 
     .prologue
@@ -45,7 +45,7 @@
     invoke-direct {p0}, Lcom/google/gson/o;-><init>()V
 
     .line 51
-    iput-object p1, p0, Lcom/google/gson/internal/bind/e;->b:Lcom/google/gson/e;
+    iput-object p1, p0, Lcom/google/gson/internal/bind/e;->b:Lcom/google/gson/d;
 
     .line 52
     return-void
@@ -231,13 +231,13 @@
 
     .line 100
     :cond_0
-    iget-object v0, p0, Lcom/google/gson/internal/bind/e;->b:Lcom/google/gson/e;
+    iget-object v0, p0, Lcom/google/gson/internal/bind/e;->b:Lcom/google/gson/d;
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/google/gson/e;->a(Ljava/lang/Class;)Lcom/google/gson/o;
+    invoke-virtual {v0, v1}, Lcom/google/gson/d;->a(Ljava/lang/Class;)Lcom/google/gson/o;
 
     move-result-object v0
 

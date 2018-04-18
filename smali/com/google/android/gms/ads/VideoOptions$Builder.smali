@@ -14,9 +14,7 @@
 
 
 # instance fields
-.field private zzale:Z
-
-.field private zzalf:Z
+.field private zzps:Z
 
 
 # direct methods
@@ -25,13 +23,9 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zzale:Z
-
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zzalf:Z
+    iput-boolean v0, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zzps:Z
 
     return-void
 .end method
@@ -39,15 +33,7 @@
 .method static synthetic zza(Lcom/google/android/gms/ads/VideoOptions$Builder;)Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zzale:Z
-
-    return v0
-.end method
-
-.method static synthetic zzb(Lcom/google/android/gms/ads/VideoOptions$Builder;)Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zzalf:Z
+    iget-boolean v0, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zzps:Z
 
     return v0
 .end method
@@ -61,25 +47,15 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcom/google/android/gms/ads/VideoOptions;-><init>(Lcom/google/android/gms/ads/VideoOptions$Builder;Lcom/google/android/gms/ads/b;)V
+    invoke-direct {v0, p0, v1}, Lcom/google/android/gms/ads/VideoOptions;-><init>(Lcom/google/android/gms/ads/VideoOptions$Builder;Lcom/google/android/gms/ads/VideoOptions$1;)V
 
     return-object v0
-.end method
-
-.method public final setCustomControlsRequested(Z)Lcom/google/android/gms/ads/VideoOptions$Builder;
-    .locals 0
-    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
-    .end annotation
-
-    iput-boolean p1, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zzalf:Z
-
-    return-object p0
 .end method
 
 .method public final setStartMuted(Z)Lcom/google/android/gms/ads/VideoOptions$Builder;
     .locals 0
 
-    iput-boolean p1, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zzale:Z
+    iput-boolean p1, p0, Lcom/google/android/gms/ads/VideoOptions$Builder;->zzps:Z
 
     return-object p0
 .end method

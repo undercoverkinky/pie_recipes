@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/i18n/phonenumbers/RegexCache$a;-><init>(I)V
+    value = Lcom/google/i18n/phonenumbers/g$a;-><init>(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,16 +22,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/i18n/phonenumbers/RegexCache$a;
+.field final synthetic this$0:Lcom/google/i18n/phonenumbers/g$a;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/i18n/phonenumbers/RegexCache$a;I)V
+.method constructor <init>(Lcom/google/i18n/phonenumbers/g$a;I)V
     .locals 2
 
     .prologue
     .line 57
-    iput-object p1, p0, Lcom/google/i18n/phonenumbers/RegexCache$LRUCache$1;->this$0:Lcom/google/i18n/phonenumbers/RegexCache$a;
+    iput-object p1, p0, Lcom/google/i18n/phonenumbers/RegexCache$LRUCache$1;->this$0:Lcom/google/i18n/phonenumbers/g$a;
 
     const/high16 v0, 0x3f400000    # 0.75f
 
@@ -60,9 +60,9 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/google/i18n/phonenumbers/RegexCache$LRUCache$1;->this$0:Lcom/google/i18n/phonenumbers/RegexCache$a;
+    iget-object v1, p0, Lcom/google/i18n/phonenumbers/RegexCache$LRUCache$1;->this$0:Lcom/google/i18n/phonenumbers/g$a;
 
-    invoke-static {v1}, Lcom/google/i18n/phonenumbers/RegexCache$a;->a(Lcom/google/i18n/phonenumbers/RegexCache$a;)I
+    invoke-static {v1}, Lcom/google/i18n/phonenumbers/g$a;->a(Lcom/google/i18n/phonenumbers/g$a;)I
 
     move-result v1
 

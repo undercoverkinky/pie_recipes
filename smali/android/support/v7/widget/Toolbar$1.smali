@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 202
+    .line 160
     iput-object p1, p0, Landroid/support/v7/widget/Toolbar$1;->a:Landroid/support/v7/widget/Toolbar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,23 +40,27 @@
     .locals 1
 
     .prologue
-    .line 205
+    .line 163
     iget-object v0, p0, Landroid/support/v7/widget/Toolbar$1;->a:Landroid/support/v7/widget/Toolbar;
 
-    iget-object v0, v0, Landroid/support/v7/widget/Toolbar;->d:Landroid/support/v7/widget/Toolbar$OnMenuItemClickListener;
+    invoke-static {v0}, Landroid/support/v7/widget/Toolbar;->a(Landroid/support/v7/widget/Toolbar;)Landroid/support/v7/widget/Toolbar$OnMenuItemClickListener;
+
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 206
+    .line 164
     iget-object v0, p0, Landroid/support/v7/widget/Toolbar$1;->a:Landroid/support/v7/widget/Toolbar;
 
-    iget-object v0, v0, Landroid/support/v7/widget/Toolbar;->d:Landroid/support/v7/widget/Toolbar$OnMenuItemClickListener;
+    invoke-static {v0}, Landroid/support/v7/widget/Toolbar;->a(Landroid/support/v7/widget/Toolbar;)Landroid/support/v7/widget/Toolbar$OnMenuItemClickListener;
+
+    move-result-object v0
 
     invoke-interface {v0}, Landroid/support/v7/widget/Toolbar$OnMenuItemClickListener;->a()Z
 
     move-result v0
 
-    .line 208
+    .line 166
     :goto_0
     return v0
 

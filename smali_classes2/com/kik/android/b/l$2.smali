@@ -1,11 +1,11 @@
 .class final Lcom/kik/android/b/l$2;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/android/b/l;->a(Lcom/kik/android/b/l;Lcom/kik/events/Promise;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/kik/android/b/l;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Ljava/lang/Object;",
         ">;"
@@ -39,7 +39,7 @@
 
     iput-object p2, p0, Lcom/kik/android/b/l$2;->a:Lcom/kik/events/Promise;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -53,7 +53,7 @@
     const/4 v3, 0x1
 
     .line 245
-    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Object;)V
+    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Object;)V
 
     .line 246
     iget-object v0, p0, Lcom/kik/android/b/l$2;->b:Lcom/kik/android/b/l;
@@ -88,7 +88,7 @@
 
     .prologue
     .line 253
-    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Throwable;)V
+    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Throwable;)V
 
     .line 254
     iget-object v0, p0, Lcom/kik/android/b/l$2;->a:Lcom/kik/events/Promise;

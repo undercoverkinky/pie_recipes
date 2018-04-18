@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/android/chat/vm/bo;
+.implements Lkik/android/chat/vm/aa;
 
 
 # annotations
@@ -17,20 +17,20 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<ItemViewModel::",
-        "Lkik/android/chat/vm/at;",
+        "Lkik/android/chat/vm/p;",
         ">",
         "Ljava/lang/Object;",
-        "Lkik/android/chat/vm/bo;"
+        "Lkik/android/chat/vm/aa;"
     }
 .end annotation
 
 
 # virtual methods
-.method public abstract b()Lrx/d;
+.method public abstract a()Lrx/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lrx/d",
+            "Lrx/c",
             "<",
             "Lkik/android/chat/vm/IListViewModel$a;",
             ">;"
@@ -38,7 +38,7 @@
     .end annotation
 .end method
 
-.method public abstract d(I)Lkik/android/chat/vm/at;
+.method public abstract d(I)Lkik/android/chat/vm/p;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)TItemViewModel;"
@@ -46,5 +46,5 @@
     .end annotation
 .end method
 
-.method public abstract g()I
+.method public abstract r_()I
 .end method

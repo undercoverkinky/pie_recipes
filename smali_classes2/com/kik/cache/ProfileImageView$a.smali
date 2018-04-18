@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 282
+    .line 305
     iput-object p1, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
     invoke-direct {p0}, Landroid/view/ScaleGestureDetector$SimpleOnScaleGestureListener;-><init>()V
@@ -35,7 +35,7 @@
     .locals 0
 
     .prologue
-    .line 282
+    .line 305
     invoke-direct {p0, p1}, Lcom/kik/cache/ProfileImageView$a;-><init>(Lcom/kik/cache/ProfileImageView;)V
 
     return-void
@@ -57,24 +57,24 @@
 
     const/4 v5, 0x0
 
-    .line 294
+    .line 317
     invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getScaleFactor()F
 
     move-result v0
 
-    .line 295
+    .line 318
     iget-object v1, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v1}, Lcom/kik/cache/ProfileImageView;->j(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v1}, Lcom/kik/cache/ProfileImageView;->k(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v1
 
-    .line 296
+    .line 319
     iget-object v2, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
     iget-object v3, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v3}, Lcom/kik/cache/ProfileImageView;->j(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v3}, Lcom/kik/cache/ProfileImageView;->k(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v3
 
@@ -82,16 +82,16 @@
 
     invoke-static {v2, v3}, Lcom/kik/cache/ProfileImageView;->a(Lcom/kik/cache/ProfileImageView;F)F
 
-    .line 297
+    .line 320
     iget-object v2, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->j(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->k(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v2
 
     iget-object v3, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v3}, Lcom/kik/cache/ProfileImageView;->p(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v3}, Lcom/kik/cache/ProfileImageView;->q(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v3
 
@@ -99,40 +99,40 @@
 
     if-lez v2, :cond_3
 
-    .line 298
+    .line 321
     iget-object v0, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
     iget-object v2, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->p(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->q(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v2
 
     invoke-static {v0, v2}, Lcom/kik/cache/ProfileImageView;->a(Lcom/kik/cache/ProfileImageView;F)F
 
-    .line 299
+    .line 322
     iget-object v0, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->p(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->q(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v0
 
     div-float/2addr v0, v1
 
-    .line 305
+    .line 328
     :cond_0
     :goto_0
     iget-object v1, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
     iget-object v2, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->l(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->m(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v2
 
     iget-object v3, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v3}, Lcom/kik/cache/ProfileImageView;->j(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v3}, Lcom/kik/cache/ProfileImageView;->k(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v3
 
@@ -140,52 +140,7 @@
 
     iget-object v3, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v3}, Lcom/kik/cache/ProfileImageView;->l(Lcom/kik/cache/ProfileImageView;)F
-
-    move-result v3
-
-    sub-float/2addr v2, v3
-
-    iget-object v3, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
-
-    invoke-static {v3}, Lcom/kik/cache/ProfileImageView;->r(Lcom/kik/cache/ProfileImageView;)F
-
-    move-result v3
-
-    mul-float/2addr v3, v6
-
-    iget-object v4, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
-
-    invoke-static {v4}, Lcom/kik/cache/ProfileImageView;->j(Lcom/kik/cache/ProfileImageView;)F
-
-    move-result v4
-
-    mul-float/2addr v3, v4
-
-    sub-float/2addr v2, v3
-
-    invoke-static {v1, v2}, Lcom/kik/cache/ProfileImageView;->b(Lcom/kik/cache/ProfileImageView;F)F
-
-    .line 306
-    iget-object v1, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
-
-    iget-object v2, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
-
-    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->n(Lcom/kik/cache/ProfileImageView;)F
-
-    move-result v2
-
-    iget-object v3, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
-
-    invoke-static {v3}, Lcom/kik/cache/ProfileImageView;->j(Lcom/kik/cache/ProfileImageView;)F
-
-    move-result v3
-
-    mul-float/2addr v2, v3
-
-    iget-object v3, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
-
-    invoke-static {v3}, Lcom/kik/cache/ProfileImageView;->n(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v3}, Lcom/kik/cache/ProfileImageView;->m(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v3
 
@@ -201,7 +156,52 @@
 
     iget-object v4, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v4}, Lcom/kik/cache/ProfileImageView;->j(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v4}, Lcom/kik/cache/ProfileImageView;->k(Lcom/kik/cache/ProfileImageView;)F
+
+    move-result v4
+
+    mul-float/2addr v3, v4
+
+    sub-float/2addr v2, v3
+
+    invoke-static {v1, v2}, Lcom/kik/cache/ProfileImageView;->b(Lcom/kik/cache/ProfileImageView;F)F
+
+    .line 329
+    iget-object v1, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
+
+    iget-object v2, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
+
+    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->o(Lcom/kik/cache/ProfileImageView;)F
+
+    move-result v2
+
+    iget-object v3, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
+
+    invoke-static {v3}, Lcom/kik/cache/ProfileImageView;->k(Lcom/kik/cache/ProfileImageView;)F
+
+    move-result v3
+
+    mul-float/2addr v2, v3
+
+    iget-object v3, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
+
+    invoke-static {v3}, Lcom/kik/cache/ProfileImageView;->o(Lcom/kik/cache/ProfileImageView;)F
+
+    move-result v3
+
+    sub-float/2addr v2, v3
+
+    iget-object v3, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
+
+    invoke-static {v3}, Lcom/kik/cache/ProfileImageView;->t(Lcom/kik/cache/ProfileImageView;)F
+
+    move-result v3
+
+    mul-float/2addr v3, v6
+
+    iget-object v4, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
+
+    invoke-static {v4}, Lcom/kik/cache/ProfileImageView;->k(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v4
 
@@ -211,16 +211,16 @@
 
     invoke-static {v1, v2}, Lcom/kik/cache/ProfileImageView;->c(Lcom/kik/cache/ProfileImageView;F)F
 
-    .line 307
+    .line 330
     iget-object v1, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v1}, Lcom/kik/cache/ProfileImageView;->i(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v1}, Lcom/kik/cache/ProfileImageView;->j(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v1
 
     iget-object v2, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->j(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->k(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v2
 
@@ -228,7 +228,7 @@
 
     iget-object v2, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->l(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->m(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v2
 
@@ -238,13 +238,13 @@
 
     iget-object v1, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v1}, Lcom/kik/cache/ProfileImageView;->k(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v1}, Lcom/kik/cache/ProfileImageView;->l(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v1
 
     iget-object v2, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->j(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->k(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v2
 
@@ -252,7 +252,7 @@
 
     iget-object v2, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->n(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->o(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v2
 
@@ -260,17 +260,17 @@
 
     if-gtz v1, :cond_7
 
-    .line 308
+    .line 331
     :cond_1
     iget-object v1, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v1}, Lcom/kik/cache/ProfileImageView;->e(Lcom/kik/cache/ProfileImageView;)Landroid/graphics/Matrix;
+    invoke-static {v1}, Lcom/kik/cache/ProfileImageView;->f(Lcom/kik/cache/ProfileImageView;)Landroid/graphics/Matrix;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->l(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->m(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v2
 
@@ -278,7 +278,7 @@
 
     iget-object v3, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v3}, Lcom/kik/cache/ProfileImageView;->n(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v3}, Lcom/kik/cache/ProfileImageView;->o(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v3
 
@@ -286,59 +286,59 @@
 
     invoke-virtual {v1, v0, v0, v2, v3}, Landroid/graphics/Matrix;->postScale(FFFF)Z
 
-    .line 309
+    .line 332
     cmpg-float v1, v0, v7
 
     if-gez v1, :cond_2
 
-    .line 310
+    .line 333
     iget-object v1, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v1}, Lcom/kik/cache/ProfileImageView;->e(Lcom/kik/cache/ProfileImageView;)Landroid/graphics/Matrix;
+    invoke-static {v1}, Lcom/kik/cache/ProfileImageView;->f(Lcom/kik/cache/ProfileImageView;)Landroid/graphics/Matrix;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->d(Lcom/kik/cache/ProfileImageView;)[F
+    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->e(Lcom/kik/cache/ProfileImageView;)[F
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Landroid/graphics/Matrix;->getValues([F)V
 
-    .line 311
+    .line 334
     iget-object v1, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v1}, Lcom/kik/cache/ProfileImageView;->d(Lcom/kik/cache/ProfileImageView;)[F
+    invoke-static {v1}, Lcom/kik/cache/ProfileImageView;->e(Lcom/kik/cache/ProfileImageView;)[F
 
     move-result-object v1
 
     aget v1, v1, v8
 
-    .line 312
+    .line 335
     iget-object v2, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->d(Lcom/kik/cache/ProfileImageView;)[F
+    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->e(Lcom/kik/cache/ProfileImageView;)[F
 
     move-result-object v2
 
     aget v2, v2, v9
 
-    .line 313
+    .line 336
     cmpg-float v0, v0, v7
 
     if-gez v0, :cond_2
 
-    .line 314
+    .line 337
     iget-object v0, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->i(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->j(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v0
 
     iget-object v3, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v3}, Lcom/kik/cache/ProfileImageView;->j(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v3}, Lcom/kik/cache/ProfileImageView;->k(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v3
 
@@ -352,7 +352,7 @@
 
     iget-object v3, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v3}, Lcom/kik/cache/ProfileImageView;->l(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v3}, Lcom/kik/cache/ProfileImageView;->m(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v3
 
@@ -360,10 +360,10 @@
 
     if-gez v0, :cond_5
 
-    .line 315
+    .line 338
     iget-object v0, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->m(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->n(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v0
 
@@ -373,16 +373,16 @@
 
     if-gez v0, :cond_4
 
-    .line 316
+    .line 339
     iget-object v0, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->e(Lcom/kik/cache/ProfileImageView;)Landroid/graphics/Matrix;
+    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->f(Lcom/kik/cache/ProfileImageView;)Landroid/graphics/Matrix;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v1}, Lcom/kik/cache/ProfileImageView;->m(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v1}, Lcom/kik/cache/ProfileImageView;->n(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v1
 
@@ -392,24 +392,24 @@
 
     invoke-virtual {v0, v5, v1}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 354
+    .line 377
     :cond_2
     :goto_1
     const/4 v0, 0x1
 
     return v0
 
-    .line 301
+    .line 324
     :cond_3
     iget-object v2, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->j(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->k(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v2
 
     iget-object v3, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v3}, Lcom/kik/cache/ProfileImageView;->q(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v3}, Lcom/kik/cache/ProfileImageView;->r(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v3
 
@@ -417,21 +417,21 @@
 
     if-gez v2, :cond_0
 
-    .line 302
+    .line 325
     iget-object v0, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
     iget-object v2, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->q(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->r(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v2
 
     invoke-static {v0, v2}, Lcom/kik/cache/ProfileImageView;->a(Lcom/kik/cache/ProfileImageView;F)F
 
-    .line 303
+    .line 326
     iget-object v0, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->q(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->r(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v0
 
@@ -439,16 +439,16 @@
 
     goto/16 :goto_0
 
-    .line 318
+    .line 341
     :cond_4
     cmpl-float v0, v2, v5
 
     if-lez v0, :cond_2
 
-    .line 319
+    .line 342
     iget-object v0, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->e(Lcom/kik/cache/ProfileImageView;)Landroid/graphics/Matrix;
+    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->f(Lcom/kik/cache/ProfileImageView;)Landroid/graphics/Matrix;
 
     move-result-object v0
 
@@ -458,11 +458,11 @@
 
     goto :goto_1
 
-    .line 323
+    .line 346
     :cond_5
     iget-object v0, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->o(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->p(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v0
 
@@ -472,16 +472,16 @@
 
     if-gez v0, :cond_6
 
-    .line 324
+    .line 347
     iget-object v0, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->e(Lcom/kik/cache/ProfileImageView;)Landroid/graphics/Matrix;
+    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->f(Lcom/kik/cache/ProfileImageView;)Landroid/graphics/Matrix;
 
     move-result-object v0
 
     iget-object v2, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->o(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->p(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v2
 
@@ -493,16 +493,16 @@
 
     goto :goto_1
 
-    .line 326
+    .line 349
     :cond_6
     cmpl-float v0, v1, v5
 
     if-lez v0, :cond_2
 
-    .line 327
+    .line 350
     iget-object v0, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->e(Lcom/kik/cache/ProfileImageView;)Landroid/graphics/Matrix;
+    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->f(Lcom/kik/cache/ProfileImageView;)Landroid/graphics/Matrix;
 
     move-result-object v0
 
@@ -512,11 +512,11 @@
 
     goto :goto_1
 
-    .line 334
+    .line 357
     :cond_7
     iget-object v1, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v1}, Lcom/kik/cache/ProfileImageView;->e(Lcom/kik/cache/ProfileImageView;)Landroid/graphics/Matrix;
+    invoke-static {v1}, Lcom/kik/cache/ProfileImageView;->f(Lcom/kik/cache/ProfileImageView;)Landroid/graphics/Matrix;
 
     move-result-object v1
 
@@ -530,48 +530,48 @@
 
     invoke-virtual {v1, v0, v0, v2, v3}, Landroid/graphics/Matrix;->postScale(FFFF)Z
 
-    .line 335
+    .line 358
     iget-object v1, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v1}, Lcom/kik/cache/ProfileImageView;->e(Lcom/kik/cache/ProfileImageView;)Landroid/graphics/Matrix;
+    invoke-static {v1}, Lcom/kik/cache/ProfileImageView;->f(Lcom/kik/cache/ProfileImageView;)Landroid/graphics/Matrix;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->d(Lcom/kik/cache/ProfileImageView;)[F
+    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->e(Lcom/kik/cache/ProfileImageView;)[F
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Landroid/graphics/Matrix;->getValues([F)V
 
-    .line 336
+    .line 359
     iget-object v1, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v1}, Lcom/kik/cache/ProfileImageView;->d(Lcom/kik/cache/ProfileImageView;)[F
+    invoke-static {v1}, Lcom/kik/cache/ProfileImageView;->e(Lcom/kik/cache/ProfileImageView;)[F
 
     move-result-object v1
 
     aget v1, v1, v8
 
-    .line 337
+    .line 360
     iget-object v2, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->d(Lcom/kik/cache/ProfileImageView;)[F
+    invoke-static {v2}, Lcom/kik/cache/ProfileImageView;->e(Lcom/kik/cache/ProfileImageView;)[F
 
     move-result-object v2
 
     aget v2, v2, v9
 
-    .line 338
+    .line 361
     cmpg-float v0, v0, v7
 
     if-gez v0, :cond_2
 
-    .line 339
+    .line 362
     iget-object v0, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->o(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->p(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v0
 
@@ -581,16 +581,16 @@
 
     if-gez v0, :cond_9
 
-    .line 340
+    .line 363
     iget-object v0, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->e(Lcom/kik/cache/ProfileImageView;)Landroid/graphics/Matrix;
+    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->f(Lcom/kik/cache/ProfileImageView;)Landroid/graphics/Matrix;
 
     move-result-object v0
 
     iget-object v3, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v3}, Lcom/kik/cache/ProfileImageView;->o(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v3}, Lcom/kik/cache/ProfileImageView;->p(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v3
 
@@ -600,12 +600,12 @@
 
     invoke-virtual {v0, v1, v5}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 346
+    .line 369
     :cond_8
     :goto_2
     iget-object v0, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->m(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->n(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v0
 
@@ -615,16 +615,16 @@
 
     if-gez v0, :cond_a
 
-    .line 347
+    .line 370
     iget-object v0, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->e(Lcom/kik/cache/ProfileImageView;)Landroid/graphics/Matrix;
+    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->f(Lcom/kik/cache/ProfileImageView;)Landroid/graphics/Matrix;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v1}, Lcom/kik/cache/ProfileImageView;->m(Lcom/kik/cache/ProfileImageView;)F
+    invoke-static {v1}, Lcom/kik/cache/ProfileImageView;->n(Lcom/kik/cache/ProfileImageView;)F
 
     move-result v1
 
@@ -636,16 +636,16 @@
 
     goto/16 :goto_1
 
-    .line 342
+    .line 365
     :cond_9
     cmpl-float v0, v1, v5
 
     if-lez v0, :cond_8
 
-    .line 343
+    .line 366
     iget-object v0, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->e(Lcom/kik/cache/ProfileImageView;)Landroid/graphics/Matrix;
+    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->f(Lcom/kik/cache/ProfileImageView;)Landroid/graphics/Matrix;
 
     move-result-object v0
 
@@ -655,16 +655,16 @@
 
     goto :goto_2
 
-    .line 349
+    .line 372
     :cond_a
     cmpl-float v0, v2, v5
 
     if-lez v0, :cond_2
 
-    .line 350
+    .line 373
     iget-object v0, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
-    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->e(Lcom/kik/cache/ProfileImageView;)Landroid/graphics/Matrix;
+    invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->f(Lcom/kik/cache/ProfileImageView;)Landroid/graphics/Matrix;
 
     move-result-object v0
 
@@ -679,14 +679,14 @@
     .locals 2
 
     .prologue
-    .line 287
+    .line 310
     iget-object v0, p0, Lcom/kik/cache/ProfileImageView$a;->a:Lcom/kik/cache/ProfileImageView;
 
     const/4 v1, 0x2
 
     invoke-static {v0, v1}, Lcom/kik/cache/ProfileImageView;->a(Lcom/kik/cache/ProfileImageView;I)I
 
-    .line 288
+    .line 311
     const/4 v0, 0x1
 
     return v0

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/support/v4/os/ParcelableCompatCreatorCallbacks;
+.implements Landroid/os/Parcelable$Creator;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Landroid/support/v4/os/ParcelableCompatCreatorCallbacks",
+        "Landroid/os/Parcelable$Creator",
         "<",
         "Landroid/support/v4/widget/DrawerLayout$SavedState;",
         ">;"
@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 2040
+    .line 1983
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,24 +40,24 @@
 
 
 # virtual methods
-.method public final createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Landroid/support/v4/widget/DrawerLayout$SavedState;
+.method public final createFromParcel(Landroid/os/Parcel;)Landroid/support/v4/widget/DrawerLayout$SavedState;
     .locals 1
 
     .prologue
-    .line 2043
+    .line 1986
     new-instance v0, Landroid/support/v4/widget/DrawerLayout$SavedState;
 
-    invoke-direct {v0, p1, p2}, Landroid/support/v4/widget/DrawerLayout$SavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    invoke-direct {v0, p1}, Landroid/support/v4/widget/DrawerLayout$SavedState;-><init>(Landroid/os/Parcel;)V
 
     return-object v0
 .end method
 
-.method public final bridge synthetic createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
+.method public final bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
 
     .prologue
-    .line 2040
-    invoke-virtual {p0, p1, p2}, Landroid/support/v4/widget/DrawerLayout$SavedState$1;->createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Landroid/support/v4/widget/DrawerLayout$SavedState;
+    .line 1983
+    invoke-virtual {p0, p1}, Landroid/support/v4/widget/DrawerLayout$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Landroid/support/v4/widget/DrawerLayout$SavedState;
 
     move-result-object v0
 
@@ -68,7 +68,7 @@
     .locals 1
 
     .prologue
-    .line 2048
+    .line 1991
     new-array v0, p1, [Landroid/support/v4/widget/DrawerLayout$SavedState;
 
     return-object v0
@@ -78,7 +78,7 @@
     .locals 1
 
     .prologue
-    .line 2040
+    .line 1983
     invoke-virtual {p0, p1}, Landroid/support/v4/widget/DrawerLayout$SavedState$1;->newArray(I)[Landroid/support/v4/widget/DrawerLayout$SavedState;
 
     move-result-object v0

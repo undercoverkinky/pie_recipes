@@ -41,7 +41,7 @@
     .locals 1
 
     .prologue
-    .line 141
+    .line 134
     new-instance v0, Landroid/support/v4/os/ResultReceiver$1;
 
     invoke-direct {v0}, Landroid/support/v4/os/ResultReceiver$1;-><init>()V
@@ -55,18 +55,18 @@
     .locals 1
 
     .prologue
-    .line 80
+    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 81
+    .line 76
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/v4/os/ResultReceiver;->mLocal:Z
 
-    .line 82
+    .line 77
     iput-object p1, p0, Landroid/support/v4/os/ResultReceiver;->mHandler:Landroid/os/Handler;
 
-    .line 83
+    .line 78
     return-void
 .end method
 
@@ -74,20 +74,20 @@
     .locals 1
 
     .prologue
-    .line 135
+    .line 128
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 136
+    .line 129
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/support/v4/os/ResultReceiver;->mLocal:Z
 
-    .line 137
+    .line 130
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/support/v4/os/ResultReceiver;->mHandler:Landroid/os/Handler;
 
-    .line 138
+    .line 131
     invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
@@ -98,7 +98,7 @@
 
     iput-object v0, p0, Landroid/support/v4/os/ResultReceiver;->mReceiver:Landroid/support/v4/os/IResultReceiver;
 
-    .line 139
+    .line 132
     return-void
 .end method
 
@@ -108,7 +108,7 @@
     .locals 1
 
     .prologue
-    .line 122
+    .line 116
     const/4 v0, 0x0
 
     return v0
@@ -118,7 +118,7 @@
     .locals 0
 
     .prologue
-    .line 118
+    .line 113
     return-void
 .end method
 
@@ -126,17 +126,17 @@
     .locals 2
 
     .prologue
-    .line 93
+    .line 88
     iget-boolean v0, p0, Landroid/support/v4/os/ResultReceiver;->mLocal:Z
 
     if-eqz v0, :cond_2
 
-    .line 94
+    .line 89
     iget-object v0, p0, Landroid/support/v4/os/ResultReceiver;->mHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_1
 
-    .line 95
+    .line 90
     iget-object v0, p0, Landroid/support/v4/os/ResultReceiver;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Landroid/support/v4/os/ResultReceiver$MyRunnable;
@@ -145,24 +145,24 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 108
+    .line 103
     :cond_0
     :goto_0
     return-void
 
-    .line 97
+    .line 92
     :cond_1
     invoke-virtual {p0, p1, p2}, Landroid/support/v4/os/ResultReceiver;->onReceiveResult(ILandroid/os/Bundle;)V
 
     goto :goto_0
 
-    .line 102
+    .line 97
     :cond_2
     iget-object v0, p0, Landroid/support/v4/os/ResultReceiver;->mReceiver:Landroid/support/v4/os/IResultReceiver;
 
     if-eqz v0, :cond_0
 
-    .line 104
+    .line 99
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/os/ResultReceiver;->mReceiver:Landroid/support/v4/os/IResultReceiver;
 
@@ -182,23 +182,23 @@
     .locals 1
 
     .prologue
-    .line 127
+    .line 120
     monitor-enter p0
 
-    .line 128
+    .line 121
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/os/ResultReceiver;->mReceiver:Landroid/support/v4/os/IResultReceiver;
 
     if-nez v0, :cond_0
 
-    .line 129
+    .line 122
     new-instance v0, Landroid/support/v4/os/ResultReceiver$MyResultReceiver;
 
     invoke-direct {v0, p0}, Landroid/support/v4/os/ResultReceiver$MyResultReceiver;-><init>(Landroid/support/v4/os/ResultReceiver;)V
 
     iput-object v0, p0, Landroid/support/v4/os/ResultReceiver;->mReceiver:Landroid/support/v4/os/IResultReceiver;
 
-    .line 131
+    .line 124
     :cond_0
     iget-object v0, p0, Landroid/support/v4/os/ResultReceiver;->mReceiver:Landroid/support/v4/os/IResultReceiver;
 
@@ -208,7 +208,7 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 132
+    .line 125
     monitor-exit p0
 
     return-void

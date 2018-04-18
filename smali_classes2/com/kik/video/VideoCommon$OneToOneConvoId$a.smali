@@ -197,7 +197,6 @@
     .line 1351
     invoke-virtual {p0, v1}, Lcom/kik/video/VideoCommon$OneToOneConvoId$a;->a(Lcom/kik/video/VideoCommon$OneToOneConvoId;)Lcom/kik/video/VideoCommon$OneToOneConvoId$a;
 
-    .line 1353
     :cond_1
     throw v0
 

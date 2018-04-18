@@ -54,9 +54,7 @@
     .line 34
     check-cast v0, Landroid/support/v7/app/AlertDialog;
 
-    const/4 v2, -0x1
-
-    invoke-virtual {v0, v2}, Landroid/support/v7/app/AlertDialog;->a(I)Landroid/widget/Button;
+    invoke-virtual {v0}, Landroid/support/v7/app/AlertDialog;->a()Landroid/widget/Button;
 
     move-result-object v2
 

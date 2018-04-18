@@ -45,49 +45,6 @@
 
 
 # virtual methods
-.method public final a()Lkik/android/util/bz$b;
-    .locals 2
-
-    .prologue
-    .line 141
-    iget-object v0, p0, Lkik/android/util/bz$b;->a:Landroid/view/View;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lkik/android/util/bz$b;->a:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    instance-of v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    if-eqz v0, :cond_0
-
-    .line 142
-    iget-object v0, p0, Lkik/android/util/bz$b;->a:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    .line 143
-    const/4 v1, 0x0
-
-    iput v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
-
-    .line 144
-    iget-object v1, p0, Lkik/android/util/bz$b;->a:Landroid/view/View;
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 146
-    :cond_0
-    return-object p0
-.end method
-
 .method public final a(I)Lkik/android/util/bz$b;
     .locals 2
 
@@ -133,6 +90,47 @@
     .locals 2
 
     .prologue
+    .line 141
+    iget-object v0, p0, Lkik/android/util/bz$b;->a:Landroid/view/View;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lkik/android/util/bz$b;->a:Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    instance-of v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    if-eqz v0, :cond_0
+
+    .line 142
+    iget-object v0, p0, Lkik/android/util/bz$b;->a:Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    .line 143
+    iput p1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    .line 144
+    iget-object v1, p0, Lkik/android/util/bz$b;->a:Landroid/view/View;
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 146
+    :cond_0
+    return-object p0
+.end method
+
+.method public final c(I)Lkik/android/util/bz$b;
+    .locals 2
+
+    .prologue
     .line 151
     iget-object v0, p0, Lkik/android/util/bz$b;->a:Landroid/view/View;
 
@@ -170,7 +168,7 @@
     return-object p0
 .end method
 
-.method public final c(I)Lkik/android/util/bz$b;
+.method public final d(I)Lkik/android/util/bz$b;
     .locals 2
 
     .prologue

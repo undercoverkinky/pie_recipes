@@ -1,5 +1,5 @@
 .class final Lcom/kik/cards/web/usermedia/PhotoPlugin$2$1;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Lorg/json/JSONArray;",
         ">;"
@@ -39,7 +39,7 @@
 
     iput-object p2, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$2$1;->a:Lcom/kik/cards/web/usermedia/b;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -77,20 +77,18 @@
 
     iget-object v0, v0, Lcom/kik/cards/web/usermedia/PhotoPlugin$2;->a:Lcom/kik/cards/web/plugin/a;
 
-    new-instance v1, Lcom/kik/cards/web/plugin/g;
+    new-instance v1, Lcom/kik/cards/web/plugin/h;
 
-    invoke-direct {v1}, Lcom/kik/cards/web/plugin/g;-><init>()V
+    invoke-direct {v1}, Lcom/kik/cards/web/plugin/h;-><init>()V
 
-    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/g;)V
+    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/h;)V
 
     .line 506
     iget-object v0, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$2$1;->b:Lcom/kik/cards/web/usermedia/PhotoPlugin$2;
 
     iget-object v0, v0, Lcom/kik/cards/web/usermedia/PhotoPlugin$2;->c:Lcom/kik/cards/web/usermedia/PhotoPlugin;
 
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->access$602(Lcom/kik/cards/web/usermedia/PhotoPlugin;Z)Z
+    invoke-static {v0}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->e(Lcom/kik/cards/web/usermedia/PhotoPlugin;)Z
 
     .line 507
     return-void

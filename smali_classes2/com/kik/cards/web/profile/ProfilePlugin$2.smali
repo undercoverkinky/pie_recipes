@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/cards/web/profile/ProfilePlugin;->launchProfile(Lkik/core/datatypes/l;)V
+    value = Lcom/kik/cards/web/profile/ProfilePlugin;->a(Lkik/core/datatypes/o;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,22 +18,31 @@
 
 
 # instance fields
-.field final synthetic a:Lkik/core/datatypes/l;
+.field a:Lkik/android/chat/fragment/KikChatInfoFragment$a;
 
-.field final synthetic b:Lcom/kik/cards/web/profile/ProfilePlugin;
+.field final synthetic b:Lkik/core/datatypes/o;
+
+.field final synthetic c:Lcom/kik/cards/web/profile/ProfilePlugin;
 
 
 # direct methods
-.method constructor <init>(Lcom/kik/cards/web/profile/ProfilePlugin;Lkik/core/datatypes/l;)V
-    .locals 0
+.method constructor <init>(Lcom/kik/cards/web/profile/ProfilePlugin;Lkik/core/datatypes/o;)V
+    .locals 1
 
     .prologue
-    .line 111
-    iput-object p1, p0, Lcom/kik/cards/web/profile/ProfilePlugin$2;->b:Lcom/kik/cards/web/profile/ProfilePlugin;
+    .line 105
+    iput-object p1, p0, Lcom/kik/cards/web/profile/ProfilePlugin$2;->c:Lcom/kik/cards/web/profile/ProfilePlugin;
 
-    iput-object p2, p0, Lcom/kik/cards/web/profile/ProfilePlugin$2;->a:Lkik/core/datatypes/l;
+    iput-object p2, p0, Lcom/kik/cards/web/profile/ProfilePlugin$2;->b:Lkik/core/datatypes/o;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 106
+    new-instance v0, Lkik/android/chat/fragment/KikChatInfoFragment$a;
+
+    invoke-direct {v0}, Lkik/android/chat/fragment/KikChatInfoFragment$a;-><init>()V
+
+    iput-object v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin$2;->a:Lkik/android/chat/fragment/KikChatInfoFragment$a;
 
     return-void
 .end method
@@ -41,50 +50,26 @@
 
 # virtual methods
 .method public final run()V
-    .locals 3
+    .locals 2
 
     .prologue
-    .line 115
-    iget-object v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin$2;->a:Lkik/core/datatypes/l;
+    .line 111
+    iget-object v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin$2;->c:Lcom/kik/cards/web/profile/ProfilePlugin;
 
-    invoke-virtual {v0}, Lkik/core/datatypes/l;->B()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin$2;->a:Lkik/core/datatypes/l;
-
-    check-cast v0, Lkik/core/datatypes/p;
-
-    invoke-virtual {v0}, Lkik/core/datatypes/p;->H()Lkik/core/datatypes/MemberPermissions;
+    invoke-static {v0}, Lcom/kik/cards/web/profile/ProfilePlugin;->f(Lcom/kik/cards/web/profile/ProfilePlugin;)Lcom/kik/cards/web/i;
 
     move-result-object v0
 
-    .line 117
-    :goto_0
-    iget-object v1, p0, Lcom/kik/cards/web/profile/ProfilePlugin$2;->b:Lcom/kik/cards/web/profile/ProfilePlugin;
+    invoke-interface {v0}, Lcom/kik/cards/web/i;->a()Lcom/kik/events/Promise;
 
-    invoke-static {v1}, Lcom/kik/cards/web/profile/ProfilePlugin;->access$500(Lcom/kik/cards/web/profile/ProfilePlugin;)Lcom/kik/cards/web/h;
+    move-result-object v0
 
-    move-result-object v1
+    new-instance v1, Lcom/kik/cards/web/profile/ProfilePlugin$2$1;
 
-    invoke-interface {v1}, Lcom/kik/cards/web/h;->getMetadata()Lcom/kik/events/Promise;
+    invoke-direct {v1, p0}, Lcom/kik/cards/web/profile/ProfilePlugin$2$1;-><init>(Lcom/kik/cards/web/profile/ProfilePlugin$2;)V
 
-    move-result-object v1
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
 
-    new-instance v2, Lcom/kik/cards/web/profile/ProfilePlugin$2$1;
-
-    invoke-direct {v2, p0, v0}, Lcom/kik/cards/web/profile/ProfilePlugin$2$1;-><init>(Lcom/kik/cards/web/profile/ProfilePlugin$2;Lkik/core/datatypes/MemberPermissions;)V
-
-    invoke-virtual {v1, v2}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
-
-    .line 142
+    .line 128
     return-void
-
-    .line 115
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method

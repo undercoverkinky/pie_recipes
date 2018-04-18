@@ -46,8 +46,8 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 111
-    .line 113
+    .line 84
+    .line 86
     :try_start_0
     invoke-virtual {p1, p0}, Ljava/util/zip/ZipFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
     :try_end_0
@@ -56,37 +56,37 @@
 
     move-result-object v2
 
-    .line 114
+    .line 87
     :try_start_1
     new-instance v0, Ljava/util/Properties;
 
     invoke-direct {v0}, Ljava/util/Properties;-><init>()V
 
-    .line 115
+    .line 88
     invoke-virtual {v0, v2}, Ljava/util/Properties;->load(Ljava/io/InputStream;)V
 
-    .line 116
+    .line 89
     const-string v3, "fabric-identifier"
 
     invoke-virtual {v0, v3}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 117
+    .line 90
     const-string v4, "fabric-version"
 
     invoke-virtual {v0, v4}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 118
+    .line 91
     const-string v5, "fabric-build-type"
 
     invoke-virtual {v0, v5}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 119
+    .line 92
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -99,7 +99,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 120
+    .line 93
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -109,7 +109,6 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 121
     invoke-virtual {p0}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object v4
@@ -129,11 +128,11 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 124
+    .line 97
     :catch_0
     move-exception v0
 
-    .line 125
+    .line 98
     :goto_0
     :try_start_2
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
@@ -148,7 +147,6 @@
 
     invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 126
     invoke-virtual {p0}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object v6
@@ -161,21 +159,20 @@
 
     move-result-object v5
 
-    .line 125
     invoke-interface {v3, v4, v5, v0}, Lio/fabric/sdk/android/k;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 128
+    .line 101
     invoke-static {v2}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;)V
 
     move-object v0, v1
 
-    .line 130
+    .line 103
     :goto_1
     return-object v0
 
-    .line 123
+    .line 96
     :cond_1
     :try_start_3
     new-instance v0, Lio/fabric/sdk/android/j;
@@ -185,7 +182,7 @@
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 128
+    .line 101
     invoke-static {v2}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;)V
 
     goto :goto_1
@@ -205,7 +202,7 @@
 
     goto :goto_2
 
-    .line 124
+    .line 97
     :catch_1
     move-exception v0
 
@@ -214,66 +211,8 @@
     goto :goto_0
 .end method
 
-.method private static a()Ljava/util/Map;
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Map",
-            "<",
-            "Ljava/lang/String;",
-            "Lio/fabric/sdk/android/j;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 65
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    .line 67
-    :try_start_0
-    const-string v1, "com.google.android.gms.ads.AdView"
-
-    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    .line 68
-    new-instance v1, Lio/fabric/sdk/android/j;
-
-    const-string v2, "com.google.firebase.firebase-ads"
-
-    const-string v3, "0.0.0"
-
-    const-string v4, "binary"
-
-    invoke-direct {v1, v2, v3, v4}, Lio/fabric/sdk/android/j;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 70
-    invoke-virtual {v1}, Lio/fabric/sdk/android/j;->a()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 71
-    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 75
-    :goto_0
-    return-object v0
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_0
-.end method
-
-.method private b()Ljava/util/Map;
-    .locals 8
+.method private a()Ljava/util/Map;
+    .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -292,125 +231,161 @@
     .end annotation
 
     .prologue
-    .line 82
-    new-instance v1, Ljava/util/HashMap;
+    const/4 v1, 0x0
 
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+    .line 49
+    new-instance v3, Ljava/util/HashMap;
 
-    .line 1134
-    new-instance v2, Ljava/util/zip/ZipFile;
+    invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
+
+    .line 50
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v4
+
+    .line 1107
+    new-instance v6, Ljava/util/zip/ZipFile;
 
     iget-object v0, p0, Lio/fabric/sdk/android/e;->a:Ljava/lang/String;
 
-    invoke-direct {v2, v0}, Ljava/util/zip/ZipFile;-><init>(Ljava/lang/String;)V
+    invoke-direct {v6, v0}, Ljava/util/zip/ZipFile;-><init>(Ljava/lang/String;)V
 
-    .line 84
-    invoke-virtual {v2}, Ljava/util/zip/ZipFile;->entries()Ljava/util/Enumeration;
+    .line 53
+    invoke-virtual {v6}, Ljava/util/zip/ZipFile;->entries()Ljava/util/Enumeration;
 
-    move-result-object v3
+    move-result-object v7
 
-    .line 85
-    :cond_0
+    move v0, v1
+
+    .line 54
     :goto_0
-    invoke-interface {v3}, Ljava/util/Enumeration;->hasMoreElements()Z
+    invoke-interface {v7}, Ljava/util/Enumeration;->hasMoreElements()Z
 
-    move-result v0
+    move-result v2
 
-    if-eqz v0, :cond_1
+    if-eqz v2, :cond_1
 
-    .line 86
-    invoke-interface {v3}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
+    .line 55
+    add-int/lit8 v2, v0, 0x1
+
+    .line 56
+    invoke-interface {v7}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/zip/ZipEntry;
 
-    .line 88
+    .line 58
     invoke-virtual {v0}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v8
 
-    const-string v5, "fabric/"
+    const-string v9, "fabric/"
 
-    invoke-virtual {v4, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {v8, v9}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v4
+    move-result v8
 
-    if-eqz v4, :cond_0
+    if-eqz v8, :cond_0
 
-    .line 89
     invoke-virtual {v0}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v8
 
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
+    invoke-virtual {v8}, Ljava/lang/String;->length()I
 
-    move-result v4
+    move-result v8
 
-    const/4 v5, 0x7
+    const/4 v9, 0x7
 
-    if-le v4, v5, :cond_0
+    if-le v8, v9, :cond_0
 
-    .line 90
-    invoke-static {v0, v2}, Lio/fabric/sdk/android/e;->a(Ljava/util/zip/ZipEntry;Ljava/util/zip/ZipFile;)Lio/fabric/sdk/android/j;
+    .line 60
+    invoke-static {v0, v6}, Lio/fabric/sdk/android/e;->a(Ljava/util/zip/ZipEntry;Ljava/util/zip/ZipFile;)Lio/fabric/sdk/android/j;
 
     move-result-object v0
 
-    .line 91
+    .line 61
     if-eqz v0, :cond_0
 
-    .line 92
+    .line 62
     invoke-virtual {v0}, Lio/fabric/sdk/android/j;->a()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v8
 
-    invoke-interface {v1, v4, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v3, v8, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 93
+    .line 63
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
-    const-string v4, "Found kit:[%s] version:[%s]"
+    const-string v8, "Found kit:[%s] version:[%s]"
 
-    const/4 v5, 0x2
+    const/4 v9, 0x2
 
-    new-array v5, v5, [Ljava/lang/Object;
+    new-array v9, v9, [Ljava/lang/Object;
 
-    const/4 v6, 0x0
-
-    .line 94
     invoke-virtual {v0}, Lio/fabric/sdk/android/j;->a()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v10
 
-    aput-object v7, v5, v6
+    aput-object v10, v9, v1
 
-    const/4 v6, 0x1
+    const/4 v10, 0x1
 
-    .line 95
     invoke-virtual {v0}, Lio/fabric/sdk/android/j;->b()Ljava/lang/String;
 
     move-result-object v0
 
-    aput-object v0, v5, v6
+    aput-object v0, v9, v10
 
-    .line 94
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v8, v9}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
+    :cond_0
+    move v0, v2
+
+    .line 68
     goto :goto_0
 
-    .line 103
+    .line 73
     :cond_1
     :try_start_0
-    invoke-virtual {v2}, Ljava/util/zip/ZipFile;->close()V
+    invoke-virtual {v6}, Ljava/util/zip/ZipFile;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 107
+    .line 78
     :goto_1
-    return-object v1
+    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "finish scanning in "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v6
+
+    sub-long v4, v6, v4
+
+    invoke-virtual {v1, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " reading:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 80
+    return-object v3
 
     :catch_0
-    move-exception v0
+    move-exception v1
 
     goto :goto_1
 .end method
@@ -418,7 +393,7 @@
 
 # virtual methods
 .method public final synthetic call()Ljava/lang/Object;
-    .locals 6
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -427,48 +402,9 @@
 
     .prologue
     .line 35
-    .line 2049
-    new-instance v0, Ljava/util/HashMap;
+    invoke-direct {p0}, Lio/fabric/sdk/android/e;->a()Ljava/util/Map;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    move-result-object v0
 
-    .line 2050
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v2
-
-    .line 2052
-    invoke-static {}, Lio/fabric/sdk/android/e;->a()Ljava/util/Map;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
-
-    .line 2054
-    invoke-direct {p0}, Lio/fabric/sdk/android/e;->b()Ljava/util/Map;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
-
-    .line 2056
-    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v4, "finish scanning in "
-
-    invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 2057
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v4
-
-    sub-long v2, v4, v2
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    .line 35
     return-object v0
 .end method

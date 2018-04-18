@@ -45,21 +45,21 @@
     .locals 4
 
     .prologue
-    .line 127
+    .line 125
     new-instance v0, Ljava/lang/ThreadLocal;
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
     sput-object v0, Lcom/google/common/cache/Striped64;->a:Ljava/lang/ThreadLocal;
 
-    .line 132
+    .line 130
     new-instance v0, Ljava/util/Random;
 
     invoke-direct {v0}, Ljava/util/Random;-><init>()V
 
     sput-object v0, Lcom/google/common/cache/Striped64;->b:Ljava/util/Random;
 
-    .line 135
+    .line 133
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v0
@@ -70,7 +70,7 @@
 
     sput v0, Lcom/google/common/cache/Striped64;->c:I
 
-    .line 300
+    .line 298
     :try_start_0
     invoke-static {}, Lcom/google/common/cache/Striped64;->a()Lsun/misc/Unsafe;
 
@@ -78,15 +78,14 @@
 
     sput-object v0, Lcom/google/common/cache/Striped64;->g:Lsun/misc/Unsafe;
 
-    .line 301
+    .line 299
     const-class v0, Lcom/google/common/cache/Striped64;
 
-    .line 302
+    .line 300
     sget-object v1, Lcom/google/common/cache/Striped64;->g:Lsun/misc/Unsafe;
 
     const-string v2, "base"
 
-    .line 303
     invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v2
@@ -97,12 +96,11 @@
 
     sput-wide v2, Lcom/google/common/cache/Striped64;->h:J
 
-    .line 304
+    .line 302
     sget-object v1, Lcom/google/common/cache/Striped64;->g:Lsun/misc/Unsafe;
 
     const-string v2, "busy"
 
-    .line 305
     invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
@@ -115,14 +113,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 308
+    .line 306
     return-void
 
-    .line 306
+    .line 304
     :catch_0
     move-exception v0
 
-    .line 307
+    .line 305
     new-instance v1, Ljava/lang/Error;
 
     invoke-direct {v1, v0}, Ljava/lang/Error;-><init>(Ljava/lang/Throwable;)V
@@ -134,10 +132,10 @@
     .locals 0
 
     .prologue
-    .line 156
+    .line 154
     invoke-direct {p0}, Ljava/lang/Number;-><init>()V
 
-    .line 157
+    .line 155
     return-void
 .end method
 
@@ -145,7 +143,7 @@
     .locals 3
 
     .prologue
-    .line 320
+    .line 318
     :try_start_0
     invoke-static {}, Lsun/misc/Unsafe;->getUnsafe()Lsun/misc/Unsafe;
     :try_end_0
@@ -153,7 +151,7 @@
 
     move-result-object v0
 
-    .line 323
+    .line 321
     :goto_0
     return-object v0
 
@@ -165,7 +163,6 @@
 
     invoke-direct {v0}, Lcom/google/common/cache/Striped64$1;-><init>()V
 
-    .line 324
     invoke-static {v0}, Ljava/security/AccessController;->doPrivileged(Ljava/security/PrivilegedExceptionAction;)Ljava/lang/Object;
 
     move-result-object v0
@@ -176,16 +173,15 @@
 
     goto :goto_0
 
-    .line 335
+    .line 333
     :catch_1
     move-exception v0
 
-    .line 336
+    .line 334
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "Could not initialize intrinsics"
 
-    .line 337
     invoke-virtual {v0}, Ljava/security/PrivilegedActionException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
@@ -195,11 +191,11 @@
     throw v1
 .end method
 
-.method static synthetic d()Lsun/misc/Unsafe;
+.method static synthetic c()Lsun/misc/Unsafe;
     .locals 1
 
     .prologue
-    .line 23
+    .line 21
     invoke-static {}, Lcom/google/common/cache/Striped64;->a()Lsun/misc/Unsafe;
 
     move-result-object v0
@@ -212,33 +208,11 @@
 .method abstract a(JJ)J
 .end method
 
-.method final b(JJ)Z
-    .locals 9
-
-    .prologue
-    .line 163
-    sget-object v0, Lcom/google/common/cache/Striped64;->g:Lsun/misc/Unsafe;
-
-    sget-wide v2, Lcom/google/common/cache/Striped64;->h:J
-
-    move-object v1, p0
-
-    move-wide v4, p1
-
-    move-wide v6, p3
-
-    invoke-virtual/range {v0 .. v7}, Lsun/misc/Unsafe;->compareAndSwapLong(Ljava/lang/Object;JJJ)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method final c()Z
+.method final b()Z
     .locals 6
 
     .prologue
-    .line 170
+    .line 168
     sget-object v0, Lcom/google/common/cache/Striped64;->g:Lsun/misc/Unsafe;
 
     sget-wide v2, Lcom/google/common/cache/Striped64;->i:J
@@ -250,6 +224,28 @@
     move-object v1, p0
 
     invoke-virtual/range {v0 .. v5}, Lsun/misc/Unsafe;->compareAndSwapInt(Ljava/lang/Object;JII)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method final b(JJ)Z
+    .locals 9
+
+    .prologue
+    .line 161
+    sget-object v0, Lcom/google/common/cache/Striped64;->g:Lsun/misc/Unsafe;
+
+    sget-wide v2, Lcom/google/common/cache/Striped64;->h:J
+
+    move-object v1, p0
+
+    move-wide v4, p1
+
+    move-wide v6, p3
+
+    invoke-virtual/range {v0 .. v7}, Lsun/misc/Unsafe;->compareAndSwapLong(Ljava/lang/Object;JJJ)Z
 
     move-result v0
 

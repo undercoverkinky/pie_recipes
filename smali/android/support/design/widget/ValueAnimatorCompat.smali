@@ -24,13 +24,13 @@
     .locals 0
 
     .prologue
-    .line 114
+    .line 111
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 115
+    .line 112
     iput-object p1, p0, Landroid/support/design/widget/ValueAnimatorCompat;->a:Landroid/support/design/widget/ValueAnimatorCompat$Impl;
 
-    .line 116
+    .line 113
     return-void
 .end method
 
@@ -40,12 +40,12 @@
     .locals 1
 
     .prologue
-    .line 119
+    .line 116
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompat;->a:Landroid/support/design/widget/ValueAnimatorCompat$Impl;
 
     invoke-virtual {v0}, Landroid/support/design/widget/ValueAnimatorCompat$Impl;->a()V
 
-    .line 120
+    .line 117
     return-void
 .end method
 
@@ -53,12 +53,25 @@
     .locals 1
 
     .prologue
-    .line 175
+    .line 172
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompat;->a:Landroid/support/design/widget/ValueAnimatorCompat$Impl;
 
     invoke-virtual {v0, p1, p2}, Landroid/support/design/widget/ValueAnimatorCompat$Impl;->a(FF)V
 
-    .line 176
+    .line 173
+    return-void
+.end method
+
+.method public final a(I)V
+    .locals 1
+
+    .prologue
+    .line 180
+    iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompat;->a:Landroid/support/design/widget/ValueAnimatorCompat$Impl;
+
+    invoke-virtual {v0, p1}, Landroid/support/design/widget/ValueAnimatorCompat$Impl;->a(I)V
+
+    .line 181
     return-void
 .end method
 
@@ -66,25 +79,12 @@
     .locals 1
 
     .prologue
-    .line 167
+    .line 164
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompat;->a:Landroid/support/design/widget/ValueAnimatorCompat$Impl;
 
     invoke-virtual {v0, p1, p2}, Landroid/support/design/widget/ValueAnimatorCompat$Impl;->a(II)V
 
-    .line 168
-    return-void
-.end method
-
-.method public final a(J)V
-    .locals 1
-
-    .prologue
-    .line 183
-    iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompat;->a:Landroid/support/design/widget/ValueAnimatorCompat$Impl;
-
-    invoke-virtual {v0, p1, p2}, Landroid/support/design/widget/ValueAnimatorCompat$Impl;->a(J)V
-
-    .line 184
+    .line 165
     return-void
 .end method
 
@@ -92,10 +92,7 @@
     .locals 2
 
     .prologue
-    .line 144
-    if-eqz p1, :cond_0
-
-    .line 145
+    .line 142
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompat;->a:Landroid/support/design/widget/ValueAnimatorCompat$Impl;
 
     new-instance v1, Landroid/support/design/widget/ValueAnimatorCompat$2;
@@ -104,29 +101,15 @@
 
     invoke-virtual {v0, v1}, Landroid/support/design/widget/ValueAnimatorCompat$Impl;->a(Landroid/support/design/widget/ValueAnimatorCompat$Impl$AnimatorListenerProxy;)V
 
-    .line 164
-    :goto_0
+    .line 161
     return-void
-
-    .line 162
-    :cond_0
-    iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompat;->a:Landroid/support/design/widget/ValueAnimatorCompat$Impl;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/ValueAnimatorCompat$Impl;->a(Landroid/support/design/widget/ValueAnimatorCompat$Impl$AnimatorListenerProxy;)V
-
-    goto :goto_0
 .end method
 
 .method public final a(Landroid/support/design/widget/ValueAnimatorCompat$AnimatorUpdateListener;)V
     .locals 2
 
     .prologue
-    .line 131
-    if-eqz p1, :cond_0
-
-    .line 132
+    .line 129
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompat;->a:Landroid/support/design/widget/ValueAnimatorCompat$Impl;
 
     new-instance v1, Landroid/support/design/widget/ValueAnimatorCompat$1;
@@ -135,31 +118,20 @@
 
     invoke-virtual {v0, v1}, Landroid/support/design/widget/ValueAnimatorCompat$Impl;->a(Landroid/support/design/widget/ValueAnimatorCompat$Impl$AnimatorUpdateListenerProxy;)V
 
-    .line 141
-    :goto_0
+    .line 138
     return-void
-
-    .line 139
-    :cond_0
-    iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompat;->a:Landroid/support/design/widget/ValueAnimatorCompat$Impl;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/ValueAnimatorCompat$Impl;->a(Landroid/support/design/widget/ValueAnimatorCompat$Impl$AnimatorUpdateListenerProxy;)V
-
-    goto :goto_0
 .end method
 
 .method public final a(Landroid/view/animation/Interpolator;)V
     .locals 1
 
     .prologue
-    .line 127
+    .line 124
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompat;->a:Landroid/support/design/widget/ValueAnimatorCompat$Impl;
 
     invoke-virtual {v0, p1}, Landroid/support/design/widget/ValueAnimatorCompat$Impl;->a(Landroid/view/animation/Interpolator;)V
 
-    .line 128
+    .line 125
     return-void
 .end method
 
@@ -167,7 +139,7 @@
     .locals 1
 
     .prologue
-    .line 123
+    .line 120
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompat;->a:Landroid/support/design/widget/ValueAnimatorCompat$Impl;
 
     invoke-virtual {v0}, Landroid/support/design/widget/ValueAnimatorCompat$Impl;->b()Z
@@ -181,7 +153,7 @@
     .locals 1
 
     .prologue
-    .line 171
+    .line 168
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompat;->a:Landroid/support/design/widget/ValueAnimatorCompat$Impl;
 
     invoke-virtual {v0}, Landroid/support/design/widget/ValueAnimatorCompat$Impl;->c()I
@@ -195,7 +167,7 @@
     .locals 1
 
     .prologue
-    .line 179
+    .line 176
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompat;->a:Landroid/support/design/widget/ValueAnimatorCompat$Impl;
 
     invoke-virtual {v0}, Landroid/support/design/widget/ValueAnimatorCompat$Impl;->d()F
@@ -209,12 +181,12 @@
     .locals 1
 
     .prologue
-    .line 187
+    .line 184
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompat;->a:Landroid/support/design/widget/ValueAnimatorCompat$Impl;
 
     invoke-virtual {v0}, Landroid/support/design/widget/ValueAnimatorCompat$Impl;->e()V
 
-    .line 188
+    .line 185
     return-void
 .end method
 
@@ -222,7 +194,7 @@
     .locals 1
 
     .prologue
-    .line 191
+    .line 188
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompat;->a:Landroid/support/design/widget/ValueAnimatorCompat$Impl;
 
     invoke-virtual {v0}, Landroid/support/design/widget/ValueAnimatorCompat$Impl;->f()F
@@ -230,31 +202,4 @@
     move-result v0
 
     return v0
-.end method
-
-.method public final g()V
-    .locals 1
-
-    .prologue
-    .line 195
-    iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompat;->a:Landroid/support/design/widget/ValueAnimatorCompat$Impl;
-
-    invoke-virtual {v0}, Landroid/support/design/widget/ValueAnimatorCompat$Impl;->g()V
-
-    .line 196
-    return-void
-.end method
-
-.method public final h()J
-    .locals 2
-
-    .prologue
-    .line 199
-    iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompat;->a:Landroid/support/design/widget/ValueAnimatorCompat$Impl;
-
-    invoke-virtual {v0}, Landroid/support/design/widget/ValueAnimatorCompat$Impl;->h()J
-
-    move-result-wide v0
-
-    return-wide v0
 .end method

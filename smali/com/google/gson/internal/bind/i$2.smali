@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 264
+    .line 286
     invoke-direct {p0}, Lcom/google/gson/o;-><init>()V
 
     return-void
@@ -43,15 +43,15 @@
     .end annotation
 
     .prologue
-    .line 266
+    .line 288
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 267
+    .line 289
     invoke-virtual {p0}, Lcom/google/gson/stream/a;->a()V
 
-    .line 268
+    .line 290
     :goto_0
     invoke-virtual {p0}, Lcom/google/gson/stream/a;->e()Z
 
@@ -59,13 +59,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 270
+    .line 292
     :try_start_0
     invoke-virtual {p0}, Lcom/google/gson/stream/a;->m()I
 
     move-result v0
 
-    .line 271
+    .line 293
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -76,32 +76,32 @@
 
     goto :goto_0
 
-    .line 272
+    .line 294
     :catch_0
     move-exception v0
 
-    .line 273
+    .line 295
     new-instance v1, Lcom/google/gson/JsonSyntaxException;
 
     invoke-direct {v1, v0}, Lcom/google/gson/JsonSyntaxException;-><init>(Ljava/lang/Throwable;)V
 
     throw v1
 
-    .line 276
+    .line 298
     :cond_0
     invoke-virtual {p0}, Lcom/google/gson/stream/a;->b()V
 
-    .line 277
+    .line 299
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v3
 
-    .line 278
+    .line 300
     new-instance v4, Ljava/util/concurrent/atomic/AtomicIntegerArray;
 
     invoke-direct {v4, v3}, Ljava/util/concurrent/atomic/AtomicIntegerArray;-><init>(I)V
 
-    .line 279
+    .line 301
     const/4 v0, 0x0
 
     move v1, v0
@@ -109,7 +109,7 @@
     :goto_1
     if-ge v1, v3, :cond_1
 
-    .line 280
+    .line 302
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -122,14 +122,14 @@
 
     invoke-virtual {v4, v1, v0}, Ljava/util/concurrent/atomic/AtomicIntegerArray;->set(II)V
 
-    .line 279
+    .line 301
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_1
 
-    .line 282
+    .line 304
     :cond_1
     return-object v4
 .end method
@@ -145,7 +145,7 @@
     .end annotation
 
     .prologue
-    .line 264
+    .line 286
     invoke-static {p1}, Lcom/google/gson/internal/bind/i$2;->b(Lcom/google/gson/stream/a;)Ljava/util/concurrent/atomic/AtomicIntegerArray;
 
     move-result-object v0
@@ -162,13 +162,13 @@
     .end annotation
 
     .prologue
-    .line 264
+    .line 286
     check-cast p2, Ljava/util/concurrent/atomic/AtomicIntegerArray;
 
-    .line 1285
+    .line 1307
     invoke-virtual {p1}, Lcom/google/gson/stream/b;->b()Lcom/google/gson/stream/b;
 
-    .line 1286
+    .line 1308
     const/4 v0, 0x0
 
     invoke-virtual {p2}, Ljava/util/concurrent/atomic/AtomicIntegerArray;->length()I
@@ -178,7 +178,7 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 1287
+    .line 1309
     invoke-virtual {p2, v0}, Ljava/util/concurrent/atomic/AtomicIntegerArray;->get(I)I
 
     move-result v2
@@ -187,15 +187,15 @@
 
     invoke-virtual {p1, v2, v3}, Lcom/google/gson/stream/b;->a(J)Lcom/google/gson/stream/b;
 
-    .line 1286
+    .line 1308
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1289
+    .line 1311
     :cond_0
     invoke-virtual {p1}, Lcom/google/gson/stream/b;->c()Lcom/google/gson/stream/b;
 
-    .line 264
+    .line 286
     return-void
 .end method

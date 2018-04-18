@@ -1,182 +1,229 @@
 .class public final Lkik/android/util/be;
-.super Ljava/lang/Object;
+.super Landroid/support/v7/widget/RecyclerView$RecycledViewPool;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/util/regex/Pattern;
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lkik/android/util/be$a;
+    }
+.end annotation
 
-.field public static final b:Ljava/util/regex/Pattern;
 
-.field public static final c:Ljava/util/regex/Pattern;
+# instance fields
+.field private a:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Integer;",
+            "Lkik/android/util/be$a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final d:Ljava/util/regex/Pattern;
+.field private b:Landroid/support/v7/widget/RecyclerView$Adapter;
 
-.field public static final e:Ljava/util/regex/Pattern;
-
-.field public static final f:Ljava/util/regex/Pattern;
-
-.field public static final g:Ljava/util/regex/Pattern;
+.field private c:Landroid/support/v7/widget/RecyclerView;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 2
 
     .prologue
-    .line 38
-    const-string v0, "((aero|arpa|asia|a[cdefgilmnoqrstuwxz])|(biz|b[abdefghijmnorstvwyz])|(cat|com|coop|c[acdfghiklmnoruvxyz])|d[ejkmoz]|(edu|e[cegrstu])|f[ijkmor]|(gov|g[abdefghilmnpqrstuwy])|h[kmnrtu]|(info|int|i[delmnoqrst])|(jobs|j[emop])|k[eghimnprwyz]|l[abcikrstuvy]|(mil|mobi|museum|m[acdeghklmnopqrstuvwxyz])|(name|net|n[acefgilopruz])|(org|om)|(pro|p[aefghklmnrstwy])|qa|r[eosuw]|s[abcdeghijklmnortuvyz]|(tel|travel|t[cdfghjklmnoprtvwz])|u[agksyz]|v[aceginu]|w[fs]|(xn\\-\\-0zwm56d|xn\\-\\-11b5bs3a9aj6g|xn\\-\\-80akhbyknj4f|xn\\-\\-9t4b11yi5a|xn\\-\\-deba0ad|xn\\-\\-g6w251d|xn\\-\\-hgbk6aj7f53bba|xn\\-\\-hlcj6aya9esc7a|xn\\-\\-jxalpdlp|xn\\-\\-kgbechtv|xn\\-\\-zckzah)|y[etu]|z[amw])"
+    .line 81
+    invoke-direct {p0}, Landroid/support/v7/widget/RecyclerView$RecycledViewPool;-><init>()V
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    .line 82
+    new-instance v0, Ljava/util/HashMap;
 
-    move-result-object v0
+    const/16 v1, 0x14
 
-    sput-object v0, Lkik/android/util/be;->a:Ljava/util/regex/Pattern;
+    invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
 
-    .line 61
-    const-string v0, "((?:(kik|card|cards|http|https|Http|Https|rtsp|Rtsp):\\/\\/(?:(?:[a-zA-Z0-9\\$\\-\\_\\.\\+\\!\\*\\\'\\(\\)\\,\\;\\?\\&\\=]|(?:\\%[a-fA-F0-9]{2})){1,64}(?:\\:(?:[a-zA-Z0-9\\$\\-\\_\\.\\+\\!\\*\\\'\\(\\)\\,\\;\\?\\&\\=]|(?:\\%[a-fA-F0-9]{2})){1,25})?\\@)?)?((?:(?:[a-zA-Z0-9\u00a0-\ud7ff\uf900-\ufdcf\ufdf0-\uffef][a-zA-Z0-9\u00a0-\ud7ff\uf900-\ufdcf\ufdf0-\uffef\\-]{0,64}\\.)+(?:(?:aero|arpa|asia|a[cdefgilmnoqrstuwxz])|(?:biz|b[abdefghijmnorstvwyz])|(?:cat|com|coop|c[acdfghiklmnoruvxyz])|d[ejkmoz]|(?:edu|e[cegrstu])|f[ijkmor]|(?:gov|g[abdefghilmnpqrstuwy])|h[kmnrtu]|(?:info|int|i[delmnoqrst])|(?:jobs|j[emop])|k[eghimnprwyz]|l[abcikrstuvy]|(?:mil|mobi|museum|m[acdeghklmnopqrstuvwxyz])|(?:name|net|n[acefgilopruz])|(?:org|om)|(?:pro|p[aefghklmnrstwy])|qa|r[eosuw]|s[abcdeghijklmnortuvyz]|(?:tel|travel|t[cdfghjklmnoprtvwz])|u[agksyz]|v[aceginu]|w[fs]|(?:xn\\-\\-0zwm56d|xn\\-\\-11b5bs3a9aj6g|xn\\-\\-80akhbyknj4f|xn\\-\\-9t4b11yi5a|xn\\-\\-deba0ad|xn\\-\\-g6w251d|xn\\-\\-hgbk6aj7f53bba|xn\\-\\-hlcj6aya9esc7a|xn\\-\\-jxalpdlp|xn\\-\\-kgbechtv|xn\\-\\-zckzah)|y[etu]|z[amw]))|(?:(?:25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[1-9][0-9]|[1-9])\\.(?:25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[1-9][0-9]|[1-9]|0)\\.(?:25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[1-9][0-9]|[1-9]|0)\\.(?:25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[1-9][0-9]|[0-9])))(?:\\:\\d{1,5})?)(\\/(?:(?:[a-zA-Z0-9\u00a0-\ud7ff\uf900-\ufdcf\ufdf0-\uffef\\;\\/\\?\\:\\@\\&\\=\\#\\~\\-\\.\\+\\!\\*\\\'\\(\\)\\,\\_])|(?:\\%[a-fA-F0-9]{2}))*)?(?:\\b|$)"
+    iput-object v0, p0, Lkik/android/util/be;->a:Ljava/util/Map;
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lkik/android/util/be;->b:Ljava/util/regex/Pattern;
-
-    .line 71
-    const-string v0, "((25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[1-9][0-9]|[1-9])\\.(25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[1-9][0-9]|[1-9]|0)\\.(25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[1-9][0-9]|[1-9]|0)\\.(25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[1-9][0-9]|[0-9]))"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lkik/android/util/be;->c:Ljava/util/regex/Pattern;
-
-    .line 73
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "(((([a-zA-Z0-9\u00a0-\ud7ff\uf900-\ufdcf\ufdf0-\uffef][a-zA-Z0-9\u00a0-\ud7ff\uf900-\ufdcf\ufdf0-\uffef\\-]*)*[a-zA-Z0-9\u00a0-\ud7ff\uf900-\ufdcf\ufdf0-\uffef]\\.)+"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    sget-object v1, Lkik/android/util/be;->a:Ljava/util/regex/Pattern;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")|"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    sget-object v1, Lkik/android/util/be;->c:Ljava/util/regex/Pattern;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lkik/android/util/be;->d:Ljava/util/regex/Pattern;
-
-    .line 75
-    const-string v0, "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}\\@[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}(\\.[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25})+"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lkik/android/util/be;->e:Ljava/util/regex/Pattern;
-
-    .line 77
-    const-string v0, "#[A-Za-z0-9_.]{2,32}\\b"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lkik/android/util/be;->f:Ljava/util/regex/Pattern;
-
-    .line 93
-    const-string v0, "(\\+[0-9]+[\\- \\.]*)?(\\([0-9]+\\)[\\- \\.]*)?([0-9][0-9\\- \\.][0-9\\- \\.]+[0-9])"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lkik/android/util/be;->g:Ljava/util/regex/Pattern;
-
+    .line 83
     return-void
 .end method
 
-.method public static final a(Ljava/util/regex/Matcher;)Ljava/lang/String;
-    .locals 6
+
+# virtual methods
+.method public final a(I)Landroid/support/v7/widget/RecyclerView$ViewHolder;
+    .locals 2
 
     .prologue
-    .line 139
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 126
+    iget-object v0, p0, Lkik/android/util/be;->a:Ljava/util/Map;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 140
-    invoke-virtual {p0}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v2
-
-    .line 142
-    const/4 v0, 0x0
-
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    :goto_0
-    if-ge v0, v3, :cond_2
-
-    .line 143
-    invoke-virtual {v2, v0}, Ljava/lang/String;->charAt(I)C
-
-    move-result v4
-
-    .line 145
-    const/16 v5, 0x2b
-
-    if-eq v4, v5, :cond_0
-
-    invoke-static {v4}, Ljava/lang/Character;->isDigit(C)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_1
-
-    .line 146
-    :cond_0
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    .line 142
-    :cond_1
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    .line 149
-    :cond_2
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
+    check-cast v0, Lkik/android/util/be$a;
+
+    .line 128
+    if-nez v0, :cond_0
+
+    .line 129
+    const/4 v0, 0x0
+
+    .line 132
+    :goto_0
     return-object v0
+
+    :cond_0
+    invoke-virtual {v0}, Lkik/android/util/be$a;->a()Landroid/support/v7/widget/RecyclerView$ViewHolder;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public final a()V
+    .locals 3
+
+    .prologue
+    .line 144
+    iget-object v0, p0, Lkik/android/util/be;->a:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    .line 145
+    iget-object v2, p0, Lkik/android/util/be;->a:Ljava/util/Map;
+
+    invoke-interface {v2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lkik/android/util/be$a;
+
+    .line 146
+    invoke-virtual {v0}, Lkik/android/util/be$a;->b()V
+
+    goto :goto_0
+
+    .line 148
+    :cond_0
+    iget-object v0, p0, Lkik/android/util/be;->a:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->clear()V
+
+    .line 151
+    return-void
+.end method
+
+.method public final a(III)V
+    .locals 3
+
+    .prologue
+    .line 104
+    new-instance v0, Lkik/android/util/be$a;
+
+    invoke-direct {v0, p2, p3}, Lkik/android/util/be$a;-><init>(II)V
+
+    .line 106
+    iget-object v1, p0, Lkik/android/util/be;->a:Ljava/util/Map;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 107
+    return-void
+.end method
+
+.method public final a(Landroid/support/v7/widget/RecyclerView$Adapter;Landroid/support/v7/widget/RecyclerView;)V
+    .locals 0
+
+    .prologue
+    .line 87
+    iput-object p1, p0, Lkik/android/util/be;->b:Landroid/support/v7/widget/RecyclerView$Adapter;
+
+    .line 88
+    iput-object p2, p0, Lkik/android/util/be;->c:Landroid/support/v7/widget/RecyclerView;
+
+    .line 89
+    return-void
+.end method
+
+.method public final a(Landroid/support/v7/widget/RecyclerView$ViewHolder;)V
+    .locals 3
+
+    .prologue
+    .line 112
+    invoke-virtual {p1}, Landroid/support/v7/widget/RecyclerView$ViewHolder;->e()I
+
+    move-result v1
+
+    .line 113
+    iget-object v0, p0, Lkik/android/util/be;->a:Ljava/util/Map;
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lkik/android/util/be$a;
+
+    .line 115
+    if-nez v0, :cond_0
+
+    .line 116
+    const/4 v0, 0x0
+
+    const/4 v2, 0x2
+
+    invoke-virtual {p0, v1, v0, v2}, Lkik/android/util/be;->a(III)V
+
+    .line 117
+    iget-object v0, p0, Lkik/android/util/be;->a:Ljava/util/Map;
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lkik/android/util/be$a;
+
+    .line 120
+    :cond_0
+    invoke-virtual {v0, p1}, Lkik/android/util/be$a;->a(Landroid/support/v7/widget/RecyclerView$ViewHolder;)Z
+
+    .line 121
+    return-void
 .end method

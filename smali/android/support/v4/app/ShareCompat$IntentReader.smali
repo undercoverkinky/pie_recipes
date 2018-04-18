@@ -44,34 +44,34 @@
     .locals 1
 
     .prologue
-    .line 682
+    .line 678
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 683
+    .line 679
     iput-object p1, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mActivity:Landroid/app/Activity;
 
-    .line 684
+    .line 680
     invoke-virtual {p1}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mIntent:Landroid/content/Intent;
 
-    .line 685
+    .line 681
     invoke-static {p1}, Landroid/support/v4/app/ShareCompat;->getCallingPackage(Landroid/app/Activity;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mCallingPackage:Ljava/lang/String;
 
-    .line 686
+    .line 682
     invoke-static {p1}, Landroid/support/v4/app/ShareCompat;->getCallingActivity(Landroid/app/Activity;)Landroid/content/ComponentName;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mCallingActivity:Landroid/content/ComponentName;
 
-    .line 687
+    .line 683
     return-void
 .end method
 
@@ -79,7 +79,7 @@
     .locals 1
 
     .prologue
-    .line 679
+    .line 675
     new-instance v0, Landroid/support/v4/app/ShareCompat$IntentReader;
 
     invoke-direct {v0, p0}, Landroid/support/v4/app/ShareCompat$IntentReader;-><init>(Landroid/app/Activity;)V
@@ -93,7 +93,7 @@
     .locals 1
 
     .prologue
-    .line 894
+    .line 890
     iget-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mCallingActivity:Landroid/content/ComponentName;
 
     return-object v0
@@ -105,16 +105,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 908
+    .line 904
     iget-object v1, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mCallingActivity:Landroid/content/ComponentName;
 
     if-nez v1, :cond_0
 
-    .line 916
+    .line 912
     :goto_0
     return-object v0
 
-    .line 910
+    .line 906
     :cond_0
     iget-object v1, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mActivity:Landroid/app/Activity;
 
@@ -122,7 +122,7 @@
 
     move-result-object v1
 
-    .line 912
+    .line 908
     :try_start_0
     iget-object v2, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mCallingActivity:Landroid/content/ComponentName;
 
@@ -134,11 +134,11 @@
 
     goto :goto_0
 
-    .line 913
+    .line 909
     :catch_0
     move-exception v1
 
-    .line 914
+    .line 910
     const-string v2, "IntentReader"
 
     const-string v3, "Could not retrieve icon for calling activity"
@@ -154,16 +154,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 930
+    .line 926
     iget-object v1, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mCallingPackage:Ljava/lang/String;
 
     if-nez v1, :cond_0
 
-    .line 938
+    .line 934
     :goto_0
     return-object v0
 
-    .line 932
+    .line 928
     :cond_0
     iget-object v1, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mActivity:Landroid/app/Activity;
 
@@ -171,7 +171,7 @@
 
     move-result-object v1
 
-    .line 934
+    .line 930
     :try_start_0
     iget-object v2, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mCallingPackage:Ljava/lang/String;
 
@@ -183,11 +183,11 @@
 
     goto :goto_0
 
-    .line 935
+    .line 931
     :catch_0
     move-exception v1
 
-    .line 936
+    .line 932
     const-string v2, "IntentReader"
 
     const-string v3, "Could not retrieve icon for calling application"
@@ -203,16 +203,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 952
+    .line 948
     iget-object v1, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mCallingPackage:Ljava/lang/String;
 
     if-nez v1, :cond_0
 
-    .line 960
+    .line 956
     :goto_0
     return-object v0
 
-    .line 954
+    .line 950
     :cond_0
     iget-object v1, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mActivity:Landroid/app/Activity;
 
@@ -220,7 +220,7 @@
 
     move-result-object v1
 
-    .line 956
+    .line 952
     :try_start_0
     iget-object v2, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mCallingPackage:Ljava/lang/String;
 
@@ -238,11 +238,11 @@
 
     goto :goto_0
 
-    .line 957
+    .line 953
     :catch_0
     move-exception v1
 
-    .line 958
+    .line 954
     const-string v2, "IntentReader"
 
     const-string v3, "Could not retrieve label for calling application"
@@ -256,7 +256,7 @@
     .locals 1
 
     .prologue
-    .line 877
+    .line 873
     iget-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mCallingPackage:Ljava/lang/String;
 
     return-object v0
@@ -266,7 +266,7 @@
     .locals 2
 
     .prologue
-    .line 850
+    .line 846
     iget-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mIntent:Landroid/content/Intent;
 
     const-string v1, "android.intent.extra.BCC"
@@ -282,7 +282,7 @@
     .locals 2
 
     .prologue
-    .line 840
+    .line 836
     iget-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mIntent:Landroid/content/Intent;
 
     const-string v1, "android.intent.extra.CC"
@@ -298,7 +298,7 @@
     .locals 2
 
     .prologue
-    .line 830
+    .line 826
     iget-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mIntent:Landroid/content/Intent;
 
     const-string v1, "android.intent.extra.EMAIL"
@@ -314,7 +314,7 @@
     .locals 3
 
     .prologue
-    .line 756
+    .line 752
     iget-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mIntent:Landroid/content/Intent;
 
     const-string v1, "android.intent.extra.HTML_TEXT"
@@ -323,36 +323,38 @@
 
     move-result-object v1
 
-    .line 757
+    .line 753
     if-nez v1, :cond_1
 
-    .line 758
+    .line 754
     invoke-virtual {p0}, Landroid/support/v4/app/ShareCompat$IntentReader;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 759
+    .line 755
     instance-of v2, v0, Landroid/text/Spanned;
 
     if-eqz v2, :cond_0
 
-    .line 760
+    .line 756
     check-cast v0, Landroid/text/Spanned;
 
     invoke-static {v0}, Landroid/text/Html;->toHtml(Landroid/text/Spanned;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 765
+    .line 761
     :goto_0
     return-object v0
 
-    .line 761
+    .line 757
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 762
-    sget-object v1, Landroid/support/v4/app/ShareCompat;->IMPL:Landroid/support/v4/app/ShareCompat$ShareCompatImpl;
+    .line 758
+    invoke-static {}, Landroid/support/v4/app/ShareCompat;->access$000()Landroid/support/v4/app/ShareCompat$ShareCompatImpl;
+
+    move-result-object v1
 
     invoke-interface {v1, v0}, Landroid/support/v4/app/ShareCompat$ShareCompatImpl;->escapeHtml(Ljava/lang/CharSequence;)Ljava/lang/String;
 
@@ -370,7 +372,7 @@
     .locals 2
 
     .prologue
-    .line 780
+    .line 776
     iget-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mIntent:Landroid/content/Intent;
 
     const-string v1, "android.intent.extra.STREAM"
@@ -388,7 +390,7 @@
     .locals 3
 
     .prologue
-    .line 793
+    .line 789
     iget-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mStreams:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
@@ -399,7 +401,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 794
+    .line 790
     iget-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mIntent:Landroid/content/Intent;
 
     const-string v1, "android.intent.extra.STREAM"
@@ -410,13 +412,13 @@
 
     iput-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mStreams:Ljava/util/ArrayList;
 
-    .line 796
+    .line 792
     :cond_0
     iget-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mStreams:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_1
 
-    .line 797
+    .line 793
     iget-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mStreams:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -425,15 +427,15 @@
 
     check-cast v0, Landroid/net/Uri;
 
-    .line 800
+    .line 796
     :goto_0
     return-object v0
 
-    .line 799
+    .line 795
     :cond_1
     if-nez p1, :cond_2
 
-    .line 800
+    .line 796
     iget-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mIntent:Landroid/content/Intent;
 
     const-string v1, "android.intent.extra.STREAM"
@@ -446,7 +448,7 @@
 
     goto :goto_0
 
-    .line 802
+    .line 798
     :cond_2
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -487,7 +489,7 @@
     .locals 2
 
     .prologue
-    .line 814
+    .line 810
     iget-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mStreams:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
@@ -498,7 +500,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 815
+    .line 811
     iget-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mIntent:Landroid/content/Intent;
 
     const-string v1, "android.intent.extra.STREAM"
@@ -509,20 +511,20 @@
 
     iput-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mStreams:Ljava/util/ArrayList;
 
-    .line 817
+    .line 813
     :cond_0
     iget-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mStreams:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_1
 
-    .line 818
+    .line 814
     iget-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mStreams:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 820
+    .line 816
     :goto_0
     return v0
 
@@ -551,7 +553,7 @@
     .locals 2
 
     .prologue
-    .line 860
+    .line 856
     iget-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mIntent:Landroid/content/Intent;
 
     const-string v1, "android.intent.extra.SUBJECT"
@@ -567,7 +569,7 @@
     .locals 2
 
     .prologue
-    .line 742
+    .line 738
     iget-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mIntent:Landroid/content/Intent;
 
     const-string v1, "android.intent.extra.TEXT"
@@ -583,7 +585,7 @@
     .locals 1
 
     .prologue
-    .line 732
+    .line 728
     iget-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mIntent:Landroid/content/Intent;
 
     invoke-virtual {v0}, Landroid/content/Intent;->getType()Ljava/lang/String;
@@ -597,7 +599,7 @@
     .locals 2
 
     .prologue
-    .line 722
+    .line 718
     const-string v0, "android.intent.action.SEND_MULTIPLE"
 
     iget-object v1, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mIntent:Landroid/content/Intent;
@@ -617,14 +619,14 @@
     .locals 2
 
     .prologue
-    .line 698
+    .line 694
     iget-object v0, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mIntent:Landroid/content/Intent;
 
     invoke-virtual {v0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 699
+    .line 695
     const-string v1, "android.intent.action.SEND"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -657,7 +659,7 @@
     .locals 2
 
     .prologue
-    .line 711
+    .line 707
     const-string v0, "android.intent.action.SEND"
 
     iget-object v1, p0, Landroid/support/v4/app/ShareCompat$IntentReader;->mIntent:Landroid/content/Intent;

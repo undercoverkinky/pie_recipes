@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 2268
+    .line 2217
     iput-object p1, p0, Lcom/kik/cards/web/CardsWebViewFragment$37$1;->a:Lcom/kik/cards/web/CardsWebViewFragment$37;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2274
+    .line 2223
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$37$1;->a:Lcom/kik/cards/web/CardsWebViewFragment$37;
 
     iget-object v0, v0, Lcom/kik/cards/web/CardsWebViewFragment$37;->b:Lcom/kik/cards/web/usermedia/b;
@@ -53,12 +53,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2275
+    .line 2224
     new-instance v1, Lkik/android/chat/fragment/KikDialogFragment;
 
     invoke-direct {v1}, Lkik/android/chat/fragment/KikDialogFragment;-><init>()V
 
-    .line 2276
+    .line 2225
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$37$1;->a:Lcom/kik/cards/web/CardsWebViewFragment$37;
 
     iget-object v0, v0, Lcom/kik/cards/web/CardsWebViewFragment$37;->b:Lcom/kik/cards/web/usermedia/b;
@@ -74,10 +74,10 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 2276
+    .line 2225
     invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikDialogFragment;->a(Ljava/lang/String;)V
 
-    .line 2277
+    .line 2226
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$37$1;->a:Lcom/kik/cards/web/CardsWebViewFragment$37;
 
     iget-object v0, v0, Lcom/kik/cards/web/CardsWebViewFragment$37;->b:Lcom/kik/cards/web/usermedia/b;
@@ -93,15 +93,15 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 2277
+    .line 2226
     invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikDialogFragment;->b(Ljava/lang/String;)V
 
-    .line 2278
+    .line 2227
     const/4 v0, 0x1
 
     invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikDialogFragment;->setCancelable(Z)V
 
-    .line 2279
+    .line 2228
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$37$1;->a:Lcom/kik/cards/web/CardsWebViewFragment$37;
 
     iget-object v0, v0, Lcom/kik/cards/web/CardsWebViewFragment$37;->c:Ljava/lang/String;
@@ -110,20 +110,20 @@
 
     move-object v0, v1
 
-    .line 2284
+    .line 2233
     :goto_0
     iget-object v1, p0, Lcom/kik/cards/web/CardsWebViewFragment$37$1;->a:Lcom/kik/cards/web/CardsWebViewFragment$37;
 
     iget-object v1, v1, Lcom/kik/cards/web/CardsWebViewFragment$37;->e:Lcom/kik/cards/web/CardsWebViewFragment;
 
-    invoke-virtual {v1, v0}, Lcom/kik/cards/web/CardsWebViewFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v1, v0}, Lcom/kik/cards/web/CardsWebViewFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 2285
+    .line 2234
     return-void
 
     :cond_0
     move-object v0, v2
 
-    .line 2282
+    .line 2231
     goto :goto_0
 .end method

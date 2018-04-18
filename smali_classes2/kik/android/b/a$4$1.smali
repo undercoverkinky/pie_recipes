@@ -1,5 +1,5 @@
 .class final Lkik/android/b/a$4$1;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Lcom/kik/xdata/model/cards/XCardPinnedList;",
         ">;"
@@ -39,7 +39,7 @@
 
     iput-object p2, p0, Lkik/android/b/a$4$1;->a:Ljava/util/Map;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -97,10 +97,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/d/b$a;
+    check-cast v0, Lkik/core/f/b$a;
 
     .line 1171
-    invoke-static {v0}, Lkik/android/b/a;->a(Lkik/core/d/b$a;)[B
+    invoke-static {v0}, Lkik/android/b/a;->a(Lkik/core/f/b$a;)[B
 
     move-result-object v4
 
@@ -146,7 +146,7 @@
     if-eqz p1, :cond_4
 
     .line 1190
-    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardPinnedList;->a()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardPinnedList;->b()Ljava/util/List;
 
     move-result-object v0
 
@@ -161,7 +161,6 @@
 
     move-result-object v6
 
-    :cond_2
     :goto_1
     invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
 
@@ -190,10 +189,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/d/b$a;
+    check-cast v0, Lkik/core/f/b$a;
 
     .line 1198
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     .line 1200
     add-int/lit8 v1, v1, 0x1
@@ -202,11 +201,11 @@
 
     sub-long v8, v4, v8
 
-    invoke-virtual {v0, v8, v9}, Lkik/core/d/b$a;->a(J)V
+    invoke-virtual {v0, v8, v9}, Lkik/core/f/b$a;->a(J)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
-    :cond_3
+    :cond_2
     move v0, v1
 
     move v1, v0
@@ -223,10 +222,16 @@
 
     move-result v7
 
-    if-eqz v7, :cond_2
+    if-eqz v7, :cond_3
 
     .line 1205
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_1
+
+    .line 1208
+    :cond_3
+    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
@@ -247,18 +252,18 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/d/b$a;
+    check-cast v0, Lkik/core/f/b$a;
 
     .line 1215
     iget-object v2, p0, Lkik/android/b/a$4$1;->b:Lkik/android/b/a$4;
 
     iget-object v2, v2, Lkik/android/b/a$4;->c:Lkik/android/b/a;
 
-    invoke-static {v2}, Lkik/android/b/a;->c(Lkik/android/b/a;)Lkik/core/d/b;
+    invoke-static {v2}, Lkik/android/b/a;->c(Lkik/android/b/a;)Lkik/core/f/b;
 
     move-result-object v2
 
-    invoke-interface {v2, v0}, Lkik/core/d/b;->a(Lkik/core/d/b$a;)Lcom/kik/events/Promise;
+    invoke-interface {v2, v0}, Lkik/core/f/b;->a(Lkik/core/f/b$a;)Lcom/kik/events/Promise;
 
     goto :goto_2
 

@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/fragment/KikWelcomeFragment$1;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Ljava/lang/Object;",
         ">;"
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 85
+    .line 83
     iput-object p1, p0, Lkik/android/chat/fragment/KikWelcomeFragment$1;->a:Lkik/android/chat/fragment/KikWelcomeFragment;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -46,14 +46,14 @@
     .locals 1
 
     .prologue
-    .line 89
-    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Object;)V
+    .line 87
+    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Object;)V
 
-    .line 90
+    .line 88
     iget-object v0, p0, Lkik/android/chat/fragment/KikWelcomeFragment$1;->a:Lkik/android/chat/fragment/KikWelcomeFragment;
 
-    invoke-static {v0}, Lkik/android/chat/fragment/KikWelcomeFragment;->h(Lkik/android/chat/fragment/KikWelcomeFragment;)V
+    invoke-static {v0}, Lkik/android/chat/fragment/KikWelcomeFragment;->a(Lkik/android/chat/fragment/KikWelcomeFragment;)V
 
-    .line 91
+    .line 89
     return-void
 .end method

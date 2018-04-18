@@ -199,7 +199,6 @@
     .line 1701
     invoke-virtual {p0, v1}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsResponse$a;->a(Lcom/kik/abtesting/rpc/AbService$GetExperimentsResponse;)Lcom/kik/abtesting/rpc/AbService$GetExperimentsResponse$a;
 
-    .line 1703
     :cond_1
     throw v0
 

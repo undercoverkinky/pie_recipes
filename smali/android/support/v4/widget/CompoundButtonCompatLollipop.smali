@@ -3,18 +3,12 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x15
-.end annotation
-
-
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 27
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +18,7 @@
     .locals 1
 
     .prologue
-    .line 34
+    .line 30
     invoke-virtual {p0}, Landroid/widget/CompoundButton;->getButtonTintList()Landroid/content/res/ColorStateList;
 
     move-result-object v0
@@ -36,7 +30,7 @@
     .locals 1
 
     .prologue
-    .line 42
+    .line 38
     invoke-virtual {p0}, Landroid/widget/CompoundButton;->getButtonTintMode()Landroid/graphics/PorterDuff$Mode;
 
     move-result-object v0
@@ -48,10 +42,10 @@
     .locals 0
 
     .prologue
-    .line 30
+    .line 26
     invoke-virtual {p0, p1}, Landroid/widget/CompoundButton;->setButtonTintList(Landroid/content/res/ColorStateList;)V
 
-    .line 31
+    .line 27
     return-void
 .end method
 
@@ -59,9 +53,9 @@
     .locals 0
 
     .prologue
-    .line 38
+    .line 34
     invoke-virtual {p0, p1}, Landroid/widget/CompoundButton;->setButtonTintMode(Landroid/graphics/PorterDuff$Mode;)V
 
-    .line 39
+    .line 35
     return-void
 .end method

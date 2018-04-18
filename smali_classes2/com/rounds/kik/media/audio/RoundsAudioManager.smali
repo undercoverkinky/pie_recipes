@@ -371,34 +371,34 @@
 
     const/4 v2, 0x0
 
-    .line 101
+    .line 100
     if-ne p1, v0, :cond_0
 
-    .line 102
+    .line 101
     invoke-static {v0}, Lcom/rounds/kik/media/NativeRoundsVidyoClient;->RSEEnableAudioPlaying(I)V
 
-    .line 103
+    .line 102
     invoke-static {v0}, Lcom/rounds/kik/media/NativeRoundsVidyoClient;->RSEEnableAudioRecorder(Z)V
 
-    .line 104
+    .line 103
     iget-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mAudioManager:Landroid/media/AudioManager;
 
     iget v1, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mBackupVolumeRounds:I
 
     invoke-virtual {v0, v2, v1, v2}, Landroid/media/AudioManager;->setStreamVolume(III)V
 
-    .line 111
+    .line 110
     :goto_0
     return-void
 
-    .line 107
+    .line 106
     :cond_0
     invoke-static {v2}, Lcom/rounds/kik/media/NativeRoundsVidyoClient;->RSEEnableAudioPlaying(I)V
 
-    .line 108
+    .line 107
     invoke-static {v2}, Lcom/rounds/kik/media/NativeRoundsVidyoClient;->RSEEnableAudioRecorder(Z)V
 
-    .line 109
+    .line 108
     iget-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v0, v2}, Landroid/media/AudioManager;->getStreamVolume(I)I
@@ -523,14 +523,14 @@
 
     const/4 v1, 0x1
 
-    .line 116
+    .line 115
     sget-object v0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v3, "registerRoundsAudio"
 
     invoke-virtual {v0, v3}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 118
+    .line 117
     iget-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mIsRegisterRoundsAudio:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
@@ -539,14 +539,14 @@
 
     if-nez v0, :cond_3
 
-    .line 119
+    .line 118
     sget-object v0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v3, "registerRoundsAudio - registering"
 
     invoke-virtual {v0, v3}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 122
+    .line 121
     iget-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v0}, Landroid/media/AudioManager;->getMode()I
@@ -555,7 +555,7 @@
 
     iput v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mBackupAudioMode:I
 
-    .line 123
+    .line 122
     iget-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v0, v2}, Landroid/media/AudioManager;->getStreamVolume(I)I
@@ -564,7 +564,7 @@
 
     iput v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mBackupVolumeSystem:I
 
-    .line 126
+    .line 125
     :try_start_0
     iget-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mAudioManager:Landroid/media/AudioManager;
 
@@ -574,13 +574,13 @@
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 137
+    .line 136
     :goto_0
     iget-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v0, v2}, Landroid/media/AudioManager;->setMicrophoneMute(Z)V
 
-    .line 139
+    .line 138
     iget-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mAudioManager:Landroid/media/AudioManager;
 
     iget-object v3, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mAudioFocusListener:Landroid/media/AudioManager$OnAudioFocusChangeListener;
@@ -589,17 +589,17 @@
 
     move-result v0
 
-    .line 141
+    .line 140
     if-ne v0, v1, :cond_5
 
-    .line 142
+    .line 141
     sget-object v3, Lcom/rounds/kik/media/audio/RoundsAudioManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v4, "Audio focus GRANTED"
 
     invoke-virtual {v3, v4}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 148
+    .line 147
     :cond_0
     :goto_1
     iget-object v3, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mAudioRouter:Lcom/rounds/kik/media/audio/AudioRouter;
@@ -611,14 +611,14 @@
     :goto_2
     invoke-virtual {v3, v0}, Lcom/rounds/kik/media/audio/AudioRouter;->setAudioFocusGained(Z)V
 
-    .line 150
+    .line 149
     new-instance v0, Lcom/rounds/kik/media/audio/HeadsetConnectionReceiver;
 
     invoke-direct {v0, p0}, Lcom/rounds/kik/media/audio/HeadsetConnectionReceiver;-><init>(Lcom/rounds/kik/media/audio/HeadsetConnectionReceiver$HeadsetConnectionInterface;)V
 
     iput-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mHeadsetConnectionReceiver:Lcom/rounds/kik/media/audio/HeadsetConnectionReceiver;
 
-    .line 151
+    .line 150
     iget-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mContext:Landroid/content/Context;
 
     iget-object v3, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mHeadsetConnectionReceiver:Lcom/rounds/kik/media/audio/HeadsetConnectionReceiver;
@@ -629,14 +629,14 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 153
+    .line 152
     new-instance v0, Lcom/rounds/kik/media/audio/SCOHeadsetReceiver;
 
     invoke-direct {v0, p0}, Lcom/rounds/kik/media/audio/SCOHeadsetReceiver;-><init>(Lcom/rounds/kik/media/audio/SCOHeadsetReceiver$SCOHeadsetInterface;)V
 
     iput-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mSCOHeadsetConnectionReceiver:Lcom/rounds/kik/media/audio/SCOHeadsetReceiver;
 
-    .line 154
+    .line 153
     iget-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mContext:Landroid/content/Context;
 
     iget-object v3, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mSCOHeadsetConnectionReceiver:Lcom/rounds/kik/media/audio/SCOHeadsetReceiver;
@@ -647,14 +647,14 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 156
+    .line 155
     new-instance v0, Lcom/rounds/kik/media/audio/BluetoothReceiver;
 
     invoke-direct {v0, p0}, Lcom/rounds/kik/media/audio/BluetoothReceiver;-><init>(Lcom/rounds/kik/media/audio/BluetoothReceiver$BluetoothInterface;)V
 
     iput-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mBluetoothReceiver:Lcom/rounds/kik/media/audio/BluetoothReceiver;
 
-    .line 157
+    .line 156
     iget-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mContext:Landroid/content/Context;
 
     iget-object v3, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mBluetoothReceiver:Lcom/rounds/kik/media/audio/BluetoothReceiver;
@@ -665,15 +665,15 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 159
+    .line 158
     invoke-virtual {p0, v1}, Lcom/rounds/kik/media/audio/RoundsAudioManager;->enableAudio(Z)V
 
-    .line 161
+    .line 160
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v0
 
-    .line 162
+    .line 161
     if-eqz v0, :cond_1
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->getState()I
@@ -684,10 +684,10 @@
 
     if-ne v0, v3, :cond_1
 
-    .line 163
+    .line 162
     invoke-direct {p0, v1}, Lcom/rounds/kik/media/audio/RoundsAudioManager;->requestBluetoothSco(Z)V
 
-    .line 166
+    .line 165
     :cond_1
     iget-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mAudioRouter:Lcom/rounds/kik/media/audio/AudioRouter;
 
@@ -699,7 +699,7 @@
 
     invoke-virtual {v0, v3}, Lcom/rounds/kik/media/audio/AudioRouter;->setOnHeadphones(Z)V
 
-    .line 169
+    .line 168
     iget-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mContext:Landroid/content/Context;
 
     const-string v3, "power"
@@ -710,7 +710,7 @@
 
     check-cast v0, Landroid/os/PowerManager;
 
-    .line 170
+    .line 169
     iget-object v3, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mSoundWakelock:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v3, :cond_2
@@ -723,12 +723,12 @@
 
     if-ne v3, v1, :cond_2
 
-    .line 171
+    .line 170
     iget-object v3, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mSoundWakelock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v3}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 174
+    .line 173
     :cond_2
     const-string v3, "SoundWakelockTag"
 
@@ -738,37 +738,46 @@
 
     iput-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mSoundWakelock:Landroid/os/PowerManager$WakeLock;
 
-    .line 175
+    .line 174
     iget-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mSoundWakelock:Landroid/os/PowerManager$WakeLock;
 
     const-wide/32 v4, 0x1b7740
 
     invoke-virtual {v0, v4, v5}, Landroid/os/PowerManager$WakeLock;->acquire(J)V
 
-    .line 176
+    .line 175
     sget-object v0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v3, "Audio PARTIAL_WAKE_LOCK acquired"
 
     invoke-virtual {v0, v3}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 178
+    .line 177
     invoke-static {}, Lcom/rounds/kik/VideoAppModule;->localParticipant()Lcom/rounds/kik/participants/LocalParticipant;
 
     move-result-object v0
 
-    .line 179
+    .line 178
     invoke-virtual {v0, v2}, Lcom/rounds/kik/participants/LocalParticipant;->setMuted(Z)V
+
+    .line 179
+    invoke-virtual {v0}, Lcom/rounds/kik/participants/LocalParticipant;->clientId()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v2}, Lcom/rounds/kik/media/NativeRoundsVidyoClient;->R3DSetMuteIconVisibility(Ljava/lang/String;F)V
 
     .line 181
     :cond_3
     return v1
 
-    .line 128
+    .line 127
     :catch_0
     move-exception v0
 
-    .line 129
+    .line 128
     invoke-virtual {v0}, Ljava/lang/SecurityException;->getMessage()Ljava/lang/String;
 
     move-result-object v3
@@ -781,7 +790,7 @@
 
     if-eqz v3, :cond_4
 
-    .line 130
+    .line 129
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->INSTANCE:Lcom/rounds/kik/media/MediaBroker;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/MediaBroker;->getSharedContext()Landroid/content/Context;
@@ -798,7 +807,7 @@
 
     goto/16 :goto_0
 
-    .line 133
+    .line 132
     :cond_4
     sget-object v1, Lcom/rounds/kik/media/audio/RoundsAudioManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
@@ -840,14 +849,14 @@
 
     invoke-virtual {v1, v2}, Lcom/rounds/kik/logs/VideoLogger;->error(Ljava/lang/String;)V
 
-    .line 134
+    .line 133
     throw v0
 
-    .line 144
+    .line 143
     :cond_5
     if-nez v0, :cond_0
 
-    .line 145
+    .line 144
     sget-object v3, Lcom/rounds/kik/media/audio/RoundsAudioManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v4, "Audio focus REQUEST FAILED"
@@ -859,7 +868,7 @@
     :cond_6
     move v0, v2
 
-    .line 148
+    .line 147
     goto/16 :goto_2
 .end method
 

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/kik/events/p;
+.implements Lcom/kik/events/q;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/kik/events/p",
+        "Lcom/kik/events/q",
         "<",
         "Landroid/content/Intent;",
         "Ljava/util/List",

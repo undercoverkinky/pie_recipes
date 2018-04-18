@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 89
+    .line 86
     iput-object p1, p0, Lcom/google/gson/internal/g$3;->a:Ljava/lang/reflect/Method;
 
     invoke-direct {p0}, Lcom/google/gson/internal/g;-><init>()V
@@ -52,10 +52,7 @@
     .end annotation
 
     .prologue
-    .line 93
-    invoke-static {p1}, Lcom/google/gson/internal/g$3;->b(Ljava/lang/Class;)V
-
-    .line 94
+    .line 90
     iget-object v0, p0, Lcom/google/gson/internal/g$3;->a:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0

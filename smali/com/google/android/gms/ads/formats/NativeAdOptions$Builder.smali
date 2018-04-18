@@ -14,36 +14,26 @@
 
 
 # instance fields
-.field private zzalm:Z
+.field private zzpA:I
 
-.field private zzaln:I
+.field private zzpB:Z
 
-.field private zzalo:Z
-
-.field private zzalp:I
-
-.field private zzalq:Lcom/google/android/gms/ads/VideoOptions;
+.field private zzpz:Z
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 2
+    .locals 1
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean v1, p0, Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;->zzalm:Z
+    iput-boolean v0, p0, Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;->zzpz:Z
 
-    const/4 v0, -0x1
+    iput v0, p0, Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;->zzpA:I
 
-    iput v0, p0, Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;->zzaln:I
-
-    iput-boolean v1, p0, Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;->zzalo:Z
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;->zzalp:I
+    iput-boolean v0, p0, Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;->zzpB:Z
 
     return-void
 .end method
@@ -51,7 +41,7 @@
 .method static synthetic zza(Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;)Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;->zzalm:Z
+    iget-boolean v0, p0, Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;->zzpz:Z
 
     return v0
 .end method
@@ -59,7 +49,7 @@
 .method static synthetic zzb(Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;)I
     .locals 1
 
-    iget v0, p0, Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;->zzaln:I
+    iget v0, p0, Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;->zzpA:I
 
     return v0
 .end method
@@ -67,25 +57,9 @@
 .method static synthetic zzc(Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;)Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;->zzalo:Z
+    iget-boolean v0, p0, Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;->zzpB:Z
 
     return v0
-.end method
-
-.method static synthetic zzd(Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;)I
-    .locals 1
-
-    iget v0, p0, Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;->zzalp:I
-
-    return v0
-.end method
-
-.method static synthetic zze(Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;)Lcom/google/android/gms/ads/VideoOptions;
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;->zzalq:Lcom/google/android/gms/ads/VideoOptions;
-
-    return-object v0
 .end method
 
 
@@ -97,27 +71,15 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcom/google/android/gms/ads/formats/NativeAdOptions;-><init>(Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;Lcom/google/android/gms/ads/formats/a;)V
+    invoke-direct {v0, p0, v1}, Lcom/google/android/gms/ads/formats/NativeAdOptions;-><init>(Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;Lcom/google/android/gms/ads/formats/NativeAdOptions$1;)V
 
     return-object v0
-.end method
-
-.method public final setAdChoicesPlacement(I)Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;
-    .locals 0
-    .param p1    # I
-        .annotation build Lcom/google/android/gms/ads/formats/NativeAdOptions$AdChoicesPlacement;
-        .end annotation
-    .end param
-
-    iput p1, p0, Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;->zzalp:I
-
-    return-object p0
 .end method
 
 .method public final setImageOrientation(I)Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;
     .locals 0
 
-    iput p1, p0, Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;->zzaln:I
+    iput p1, p0, Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;->zzpA:I
 
     return-object p0
 .end method
@@ -125,7 +87,7 @@
 .method public final setRequestMultipleImages(Z)Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;
     .locals 0
 
-    iput-boolean p1, p0, Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;->zzalo:Z
+    iput-boolean p1, p0, Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;->zzpB:Z
 
     return-object p0
 .end method
@@ -133,15 +95,7 @@
 .method public final setReturnUrlsForImageAssets(Z)Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;
     .locals 0
 
-    iput-boolean p1, p0, Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;->zzalm:Z
-
-    return-object p0
-.end method
-
-.method public final setVideoOptions(Lcom/google/android/gms/ads/VideoOptions;)Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;
-    .locals 0
-
-    iput-object p1, p0, Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;->zzalq:Lcom/google/android/gms/ads/VideoOptions;
+    iput-boolean p1, p0, Lcom/google/android/gms/ads/formats/NativeAdOptions$Builder;->zzpz:Z
 
     return-object p0
 .end method

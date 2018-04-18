@@ -25,7 +25,7 @@
         value = {
             "Ljava/util/List",
             "<",
-            "Lcom/google/gson/b;",
+            "Lcom/google/gson/a;",
             ">;"
         }
     .end annotation
@@ -36,7 +36,7 @@
         value = {
             "Ljava/util/List",
             "<",
-            "Lcom/google/gson/b;",
+            "Lcom/google/gson/a;",
             ">;"
         }
     .end annotation
@@ -240,7 +240,6 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 216
     goto :goto_0
 .end method
 
@@ -299,14 +298,14 @@
 
 
 # virtual methods
-.method public final a(Lcom/google/gson/e;Lcom/google/gson/b/a;)Lcom/google/gson/o;
+.method public final a(Lcom/google/gson/d;Lcom/google/gson/b/a;)Lcom/google/gson/o;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lcom/google/gson/e;",
+            "Lcom/google/gson/d;",
             "Lcom/google/gson/b/a",
             "<TT;>;)",
             "Lcom/google/gson/o",
@@ -355,7 +354,7 @@
 
     move-object v5, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/google/gson/internal/Excluder$1;-><init>(Lcom/google/gson/internal/Excluder;ZZLcom/google/gson/e;Lcom/google/gson/b/a;)V
+    invoke-direct/range {v0 .. v5}, Lcom/google/gson/internal/Excluder$1;-><init>(Lcom/google/gson/internal/Excluder;ZZLcom/google/gson/d;Lcom/google/gson/b/a;)V
 
     goto :goto_0
 .end method
@@ -464,10 +463,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/gson/b;
+    check-cast v0, Lcom/google/gson/a;
 
     .line 207
-    invoke-interface {v0}, Lcom/google/gson/b;->b()Z
+    invoke-interface {v0}, Lcom/google/gson/a;->b()Z
 
     move-result v0
 
@@ -658,9 +657,9 @@
     if-nez v1, :cond_a
 
     .line 180
-    new-instance v1, Lcom/google/gson/c;
+    new-instance v1, Lcom/google/gson/b;
 
-    invoke-direct {v1, p1}, Lcom/google/gson/c;-><init>(Ljava/lang/reflect/Field;)V
+    invoke-direct {v1, p1}, Lcom/google/gson/b;-><init>(Ljava/lang/reflect/Field;)V
 
     .line 181
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -678,10 +677,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/gson/b;
+    check-cast v0, Lcom/google/gson/a;
 
     .line 182
-    invoke-interface {v0}, Lcom/google/gson/b;->a()Z
+    invoke-interface {v0}, Lcom/google/gson/a;->a()Z
 
     move-result v0
 

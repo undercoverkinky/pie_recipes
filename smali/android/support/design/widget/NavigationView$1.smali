@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/support/v7/view/menu/MenuBuilder$Callback;
+.implements Landroid/support/v7/internal/view/menu/MenuBuilder$Callback;
 
 
 # annotations
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 153
+    .line 133
     iput-object p1, p0, Landroid/support/design/widget/NavigationView$1;->a:Landroid/support/design/widget/NavigationView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,28 +36,32 @@
 
 
 # virtual methods
-.method public final a(Landroid/support/v7/view/menu/MenuBuilder;)V
+.method public final a(Landroid/support/v7/internal/view/menu/MenuBuilder;)V
     .locals 0
 
     .prologue
-    .line 160
+    .line 140
     return-void
 .end method
 
-.method public final a(Landroid/support/v7/view/menu/MenuBuilder;Landroid/view/MenuItem;)Z
+.method public final a(Landroid/support/v7/internal/view/menu/MenuBuilder;Landroid/view/MenuItem;)Z
     .locals 1
 
     .prologue
-    .line 156
+    .line 136
     iget-object v0, p0, Landroid/support/design/widget/NavigationView$1;->a:Landroid/support/design/widget/NavigationView;
 
-    iget-object v0, v0, Landroid/support/design/widget/NavigationView;->c:Landroid/support/design/widget/NavigationView$OnNavigationItemSelectedListener;
+    invoke-static {v0}, Landroid/support/design/widget/NavigationView;->a(Landroid/support/design/widget/NavigationView;)Landroid/support/design/widget/NavigationView$OnNavigationItemSelectedListener;
+
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Landroid/support/design/widget/NavigationView$1;->a:Landroid/support/design/widget/NavigationView;
 
-    iget-object v0, v0, Landroid/support/design/widget/NavigationView;->c:Landroid/support/design/widget/NavigationView$OnNavigationItemSelectedListener;
+    invoke-static {v0}, Landroid/support/design/widget/NavigationView;->a(Landroid/support/design/widget/NavigationView;)Landroid/support/design/widget/NavigationView$OnNavigationItemSelectedListener;
+
+    move-result-object v0
 
     invoke-interface {v0}, Landroid/support/design/widget/NavigationView$OnNavigationItemSelectedListener;->a()Z
 

@@ -18,14 +18,23 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     .prologue
-    .line 119
+    .line 112
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 120
+    return-void
+.end method
+
+.method synthetic constructor <init>(Landroid/support/v4/app/ActionBarDrawerToggle$1;)V
+    .locals 0
+
+    .prologue
+    .line 112
+    invoke-direct {p0}, Landroid/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImplBase;-><init>()V
+
     return-void
 .end method
 
@@ -35,7 +44,7 @@
     .locals 1
 
     .prologue
-    .line 124
+    .line 115
     const/4 v0, 0x0
 
     return-object v0
@@ -45,7 +54,7 @@
     .locals 0
 
     .prologue
-    .line 137
+    .line 128
     return-object p1
 .end method
 
@@ -53,6 +62,6 @@
     .locals 0
 
     .prologue
-    .line 131
+    .line 122
     return-object p1
 .end method

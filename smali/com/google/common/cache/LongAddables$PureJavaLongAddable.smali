@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/google/common/cache/b;
+.implements Lcom/google/common/cache/e;
 
 
 # annotations
@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 57
+    .line 59
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 57
+    .line 59
     invoke-direct {p0}, Lcom/google/common/cache/LongAddables$PureJavaLongAddable;-><init>()V
 
     return-void
@@ -44,10 +44,10 @@
     .locals 0
 
     .prologue
-    .line 60
+    .line 62
     invoke-virtual {p0}, Lcom/google/common/cache/LongAddables$PureJavaLongAddable;->getAndIncrement()J
 
-    .line 61
+    .line 63
     return-void
 .end method
 
@@ -55,21 +55,9 @@
     .locals 1
 
     .prologue
-    .line 65
+    .line 67
     invoke-virtual {p0, p1, p2}, Lcom/google/common/cache/LongAddables$PureJavaLongAddable;->getAndAdd(J)J
 
-    .line 66
+    .line 68
     return-void
-.end method
-
-.method public final b()J
-    .locals 2
-
-    .prologue
-    .line 70
-    invoke-virtual {p0}, Lcom/google/common/cache/LongAddables$PureJavaLongAddable;->get()J
-
-    move-result-wide v0
-
-    return-wide v0
 .end method

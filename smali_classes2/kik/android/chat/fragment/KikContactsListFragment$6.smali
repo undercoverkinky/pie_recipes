@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/android/chat/view/aj$a;
+.implements Lkik/android/chat/view/aa$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/KikContactsListFragment;->a(Landroid/view/View;)V
+    value = Lkik/android/chat/fragment/KikContactsListFragment;->c(Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 398
+    .line 385
     iput-object p1, p0, Lkik/android/chat/fragment/KikContactsListFragment$6;->a:Lkik/android/chat/fragment/KikContactsListFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,31 +40,31 @@
     .locals 2
 
     .prologue
-    .line 427
+    .line 414
     iget-object v0, p0, Lkik/android/chat/fragment/KikContactsListFragment$6;->a:Lkik/android/chat/fragment/KikContactsListFragment;
 
     iget-object v1, p0, Lkik/android/chat/fragment/KikContactsListFragment$6;->a:Lkik/android/chat/fragment/KikContactsListFragment;
 
     iget-object v1, v1, Lkik/android/chat/fragment/KikContactsListFragment;->j:Lkik/android/chat/view/SearchBarViewImpl;
 
-    invoke-virtual {v1}, Lkik/android/chat/view/SearchBarViewImpl;->b()Lkik/android/widget/RobotoEditText;
+    invoke-virtual {v1}, Lkik/android/chat/view/SearchBarViewImpl;->d()Lkik/android/widget/RobotoEditText;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikContactsListFragment;->hideKeyBoard(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikContactsListFragment;->b(Landroid/view/View;)V
 
-    .line 428
+    .line 415
     iget-object v0, p0, Lkik/android/chat/fragment/KikContactsListFragment$6;->a:Lkik/android/chat/fragment/KikContactsListFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikContactsListFragment;->j:Lkik/android/chat/view/SearchBarViewImpl;
 
-    invoke-virtual {v0}, Lkik/android/chat/view/SearchBarViewImpl;->b()Lkik/android/widget/RobotoEditText;
+    invoke-virtual {v0}, Lkik/android/chat/view/SearchBarViewImpl;->d()Lkik/android/widget/RobotoEditText;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lkik/android/widget/RobotoEditText;->clearFocus()V
 
-    .line 429
+    .line 416
     return-void
 .end method
 
@@ -74,14 +74,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 415
+    .line 402
     iget-object v0, p0, Lkik/android/chat/fragment/KikContactsListFragment$6;->a:Lkik/android/chat/fragment/KikContactsListFragment;
 
     iget-boolean v0, v0, Lkik/android/chat/fragment/KikContactsListFragment;->n:Z
 
     if-nez v0, :cond_0
 
-    .line 416
+    .line 403
     iget-object v0, p0, Lkik/android/chat/fragment/KikContactsListFragment$6;->a:Lkik/android/chat/fragment/KikContactsListFragment;
 
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -90,7 +90,7 @@
 
     invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikContactsListFragment;->d(Ljava/lang/String;)V
 
-    .line 417
+    .line 404
     iget-object v0, p0, Lkik/android/chat/fragment/KikContactsListFragment$6;->a:Lkik/android/chat/fragment/KikContactsListFragment;
 
     iget-object v1, p0, Lkik/android/chat/fragment/KikContactsListFragment$6;->a:Lkik/android/chat/fragment/KikContactsListFragment;
@@ -101,7 +101,7 @@
 
     invoke-virtual {v0, v1, v2}, Lkik/android/chat/fragment/KikContactsListFragment;->a(Ljava/lang/String;Z)V
 
-    .line 418
+    .line 405
     iget-object v0, p0, Lkik/android/chat/fragment/KikContactsListFragment$6;->a:Lkik/android/chat/fragment/KikContactsListFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikContactsListFragment;->c:Landroid/widget/ListView;
@@ -122,20 +122,20 @@
 
     neg-int v0, v0
 
-    .line 419
+    .line 406
     iget-object v1, p0, Lkik/android/chat/fragment/KikContactsListFragment$6;->a:Lkik/android/chat/fragment/KikContactsListFragment;
 
     iget-object v1, v1, Lkik/android/chat/fragment/KikContactsListFragment;->c:Landroid/widget/ListView;
 
     invoke-virtual {v1, v3, v0}, Landroid/widget/ListView;->setSelectionFromTop(II)V
 
-    .line 421
+    .line 408
     :cond_0
     iget-object v0, p0, Lkik/android/chat/fragment/KikContactsListFragment$6;->a:Lkik/android/chat/fragment/KikContactsListFragment;
 
     iput-boolean v3, v0, Lkik/android/chat/fragment/KikContactsListFragment;->n:Z
 
-    .line 422
+    .line 409
     return-void
 .end method
 
@@ -145,16 +145,22 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 403
+    .line 390
     iget-object v0, p0, Lkik/android/chat/fragment/KikContactsListFragment$6;->a:Lkik/android/chat/fragment/KikContactsListFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/KikContactsListFragment;->getPortraitScreenWidthInDip()I
+    .line 1451
+    invoke-virtual {v0}, Lcom/kik/ui/fragment/FragmentBase;->B()I
 
     move-result v0
 
+    invoke-static {v0}, Lkik/android/chat/KikApplication;->a(I)I
+
+    move-result v0
+
+    .line 390
     iget-object v1, p0, Lkik/android/chat/fragment/KikContactsListFragment$6;->a:Lkik/android/chat/fragment/KikContactsListFragment;
 
-    invoke-virtual {v1}, Lkik/android/chat/fragment/KikContactsListFragment;->getPortraitScreenHeightInDip()I
+    invoke-virtual {v1}, Lkik/android/chat/fragment/KikContactsListFragment;->A()I
 
     move-result v1
 
@@ -168,21 +174,21 @@
 
     move-result v0
 
-    .line 404
+    .line 391
     if-eqz p1, :cond_0
 
-    .line 405
+    .line 392
     iget-object v1, p0, Lkik/android/chat/fragment/KikContactsListFragment$6;->a:Lkik/android/chat/fragment/KikContactsListFragment;
 
     iget-object v1, v1, Lkik/android/chat/fragment/KikContactsListFragment;->c:Landroid/widget/ListView;
 
     invoke-static {v1, v2, v2, v2, v0}, Lkik/android/util/bz;->a(Landroid/view/View;IIII)V
 
-    .line 410
+    .line 397
     :goto_0
     return-void
 
-    .line 408
+    .line 395
     :cond_0
     iget-object v1, p0, Lkik/android/chat/fragment/KikContactsListFragment$6;->a:Lkik/android/chat/fragment/KikContactsListFragment;
 
@@ -199,26 +205,26 @@
     .locals 3
 
     .prologue
-    .line 434
+    .line 421
     iget-object v0, p0, Lkik/android/chat/fragment/KikContactsListFragment$6;->a:Lkik/android/chat/fragment/KikContactsListFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/KikContactsListFragment;->u()V
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikContactsListFragment;->P()V
 
-    .line 435
+    .line 422
     iget-object v0, p0, Lkik/android/chat/fragment/KikContactsListFragment$6;->a:Lkik/android/chat/fragment/KikContactsListFragment;
 
     iget-object v1, p0, Lkik/android/chat/fragment/KikContactsListFragment$6;->a:Lkik/android/chat/fragment/KikContactsListFragment;
 
     iget-object v1, v1, Lkik/android/chat/fragment/KikContactsListFragment;->j:Lkik/android/chat/view/SearchBarViewImpl;
 
-    invoke-virtual {v1}, Lkik/android/chat/view/SearchBarViewImpl;->b()Lkik/android/widget/RobotoEditText;
+    invoke-virtual {v1}, Lkik/android/chat/view/SearchBarViewImpl;->d()Lkik/android/widget/RobotoEditText;
 
     move-result-object v1
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, v2}, Lkik/android/chat/fragment/KikContactsListFragment;->showKeyBoard(Landroid/view/View;Z)V
+    invoke-virtual {v0, v1, v2}, Lkik/android/chat/fragment/KikContactsListFragment;->a(Landroid/view/View;Z)V
 
-    .line 436
+    .line 423
     return-void
 .end method

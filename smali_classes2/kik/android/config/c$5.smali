@@ -28,11 +28,11 @@
 
 
 # direct methods
-.method constructor <init>(Lkik/android/config/c;Ljava/lang/String;Ljava/lang/Boolean;[Ljava/lang/Boolean;Lkik/android/util/ai;)V
+.method constructor <init>(Lkik/android/config/c;Ljava/lang/String;Ljava/lang/Boolean;[Ljava/lang/Boolean;Lkik/android/util/ah;)V
     .locals 6
 
     .prologue
-    .line 228
+    .line 227
     iput-object p1, p0, Lkik/android/config/c$5;->a:Lkik/android/config/c;
 
     const/4 v4, 0x0
@@ -47,7 +47,7 @@
 
     move-object v5, p5
 
-    invoke-direct/range {v0 .. v5}, Lkik/android/config/Configuration;-><init>(Ljava/lang/String;Ljava/lang/Object;[Ljava/lang/Object;Ljava/lang/Runnable;Lkik/android/util/ai;)V
+    invoke-direct/range {v0 .. v5}, Lkik/android/config/Configuration;-><init>(Ljava/lang/String;Ljava/lang/Object;[Ljava/lang/Object;Ljava/lang/Runnable;Lkik/android/util/ah;)V
 
     return-void
 .end method
@@ -58,17 +58,17 @@
     .locals 1
 
     .prologue
-    .line 232
+    .line 231
     sget-object v0, Lkik/android/config/Configuration$Type;->Boolean:Lkik/android/config/Configuration$Type;
 
     return-object v0
 .end method
 
-.method protected final a(Lkik/android/util/ai;)V
+.method protected final a(Lkik/android/util/ah;)V
     .locals 0
 
     .prologue
-    .line 262
+    .line 261
     return-void
 .end method
 
@@ -76,33 +76,33 @@
     .locals 2
 
     .prologue
-    .line 1244
+    .line 1243
     const/4 v0, 0x0
 
-    invoke-static {v0}, Lrx/d;->b(Ljava/lang/Object;)Lrx/d;
+    invoke-static {v0}, Lrx/c;->b(Ljava/lang/Object;)Lrx/c;
 
     move-result-object v0
+
+    .line 1244
+    invoke-static {}, Lrx/a/b/a;->a()Lrx/f;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lrx/c;->a(Lrx/f;)Lrx/c;
+
+    move-result-object v0
+
+    invoke-static {}, Lkik/android/config/d;->a()Lrx/b/b;
+
+    move-result-object v1
 
     .line 1245
-    invoke-static {}, Lrx/a/b/a;->a()Lrx/g;
+    invoke-virtual {v0, v1}, Lrx/c;->b(Lrx/b/b;)Lrx/j;
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lrx/d;->a(Lrx/g;)Lrx/d;
-
-    move-result-object v0
-
-    invoke-static {}, Lkik/android/config/d;->a()Lrx/functions/b;
-
-    move-result-object v1
-
-    .line 1246
-    invoke-virtual {v0, v1}, Lrx/d;->b(Lrx/functions/b;)Lrx/k;
-
-    .line 1250
+    .line 1249
     const/4 v0, 0x1
 
-    .line 228
+    .line 227
     return v0
 .end method
 
@@ -110,28 +110,28 @@
     .locals 1
 
     .prologue
-    .line 2238
+    .line 2237
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    .line 228
+    .line 227
     return-object v0
 .end method
 
-.method protected final synthetic b(Lkik/android/util/ai;)Ljava/lang/Object;
+.method protected final synthetic b(Lkik/android/util/ah;)Ljava/lang/Object;
     .locals 1
 
     .prologue
-    .line 1256
+    .line 1255
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    .line 228
+    .line 227
     return-object v0
 .end method

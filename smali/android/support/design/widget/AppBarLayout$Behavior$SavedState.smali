@@ -1,5 +1,5 @@
 .class public Landroid/support/design/widget/AppBarLayout$Behavior$SavedState;
-.super Landroid/support/v4/view/AbsSavedState;
+.super Landroid/view/View$BaseSavedState;
 .source "SourceFile"
 
 
@@ -28,11 +28,11 @@
 
 
 # instance fields
-.field firstVisibleChildAtMinimumHeight:Z
+.field a:I
 
-.field firstVisibleChildIndex:I
+.field b:F
 
-.field firstVisibleChildPercentageShown:F
+.field c:Z
 
 
 # direct methods
@@ -40,44 +40,38 @@
     .locals 1
 
     .prologue
-    .line 1378
+    .line 965
     new-instance v0, Landroid/support/design/widget/AppBarLayout$Behavior$SavedState$1;
 
     invoke-direct {v0}, Landroid/support/design/widget/AppBarLayout$Behavior$SavedState$1;-><init>()V
 
-    .line 1379
-    invoke-static {v0}, Landroid/support/v4/os/ParcelableCompat;->newCreator(Landroid/support/v4/os/ParcelableCompatCreatorCallbacks;)Landroid/os/Parcelable$Creator;
-
-    move-result-object v0
-
     sput-object v0, Landroid/support/design/widget/AppBarLayout$Behavior$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 1378
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
     .prologue
-    .line 1360
-    invoke-direct {p0, p1, p2}, Landroid/support/v4/view/AbsSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    .line 947
+    invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 1361
+    .line 948
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    iput v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior$SavedState;->firstVisibleChildIndex:I
+    iput v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior$SavedState;->a:I
 
-    .line 1362
+    .line 949
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
-    iput v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior$SavedState;->firstVisibleChildPercentageShown:F
+    iput v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior$SavedState;->b:F
 
-    .line 1363
+    .line 950
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v0
@@ -87,12 +81,12 @@
     const/4 v0, 0x1
 
     :goto_0
-    iput-boolean v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior$SavedState;->firstVisibleChildAtMinimumHeight:Z
+    iput-boolean v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior$SavedState;->c:Z
 
-    .line 1364
+    .line 951
     return-void
 
-    .line 1363
+    .line 950
     :cond_0
     const/4 v0, 0x0
 
@@ -103,10 +97,10 @@
     .locals 0
 
     .prologue
-    .line 1367
-    invoke-direct {p0, p1}, Landroid/support/v4/view/AbsSavedState;-><init>(Landroid/os/Parcelable;)V
+    .line 954
+    invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 1368
+    .line 955
     return-void
 .end method
 
@@ -116,21 +110,21 @@
     .locals 1
 
     .prologue
-    .line 1372
-    invoke-super {p0, p1, p2}, Landroid/support/v4/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
+    .line 959
+    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 1373
-    iget v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior$SavedState;->firstVisibleChildIndex:I
+    .line 960
+    iget v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior$SavedState;->a:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1374
-    iget v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior$SavedState;->firstVisibleChildPercentageShown:F
+    .line 961
+    iget v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior$SavedState;->b:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 1375
-    iget-boolean v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior$SavedState;->firstVisibleChildAtMinimumHeight:Z
+    .line 962
+    iget-boolean v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior$SavedState;->c:Z
 
     if-eqz v0, :cond_0
 
@@ -141,10 +135,10 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 1376
+    .line 963
     return-void
 
-    .line 1375
+    .line 962
     :cond_0
     const/4 v0, 0x0
 

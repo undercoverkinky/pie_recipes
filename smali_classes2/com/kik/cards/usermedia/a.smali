@@ -200,7 +200,7 @@
 
     invoke-direct {v2, p0, v0, p3}, Lcom/kik/cards/usermedia/a$1;-><init>(Lcom/kik/cards/usermedia/a;Ljava/io/File;Z)V
 
-    invoke-static {v1, v2}, Lcom/kik/events/l;->b(Lcom/kik/events/Promise;Lcom/kik/events/p;)Lcom/kik/events/Promise;
+    invoke-static {v1, v2}, Lcom/kik/events/m;->b(Lcom/kik/events/Promise;Lcom/kik/events/q;)Lcom/kik/events/Promise;
 
     move-result-object v0
 

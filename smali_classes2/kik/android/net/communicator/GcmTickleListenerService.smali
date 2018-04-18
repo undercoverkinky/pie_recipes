@@ -8,7 +8,7 @@
     .locals 0
 
     .prologue
-    .line 13
+    .line 11
     invoke-direct {p0}, Lcom/google/android/gms/gcm/GcmListenerService;-><init>()V
 
     return-void
@@ -20,43 +20,34 @@
     .locals 0
 
     .prologue
-    .line 24
+    .line 18
     invoke-super {p0}, Lcom/google/android/gms/gcm/GcmListenerService;->onCreate()V
 
-    .line 25
+    .line 19
     return-void
 .end method
 
 .method public onMessageReceived(Ljava/lang/String;Landroid/os/Bundle;)V
-    .locals 4
+    .locals 3
 
     .prologue
-    .line 30
+    .line 24
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lkik/android/net/communicator/CommunicatorService;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 31
+    .line 25
     const-string v1, "GCM_EXTRA"
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 32
-    const-string v1, "GCM_EXTRA_TIME_RECEIVED_MS"
-
-    invoke-static {}, Lkik/core/util/v;->b()J
-
-    move-result-wide v2
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
-
-    .line 33
+    .line 26
     invoke-virtual {p0, v0}, Lkik/android/net/communicator/GcmTickleListenerService;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 34
+    .line 27
     return-void
 .end method

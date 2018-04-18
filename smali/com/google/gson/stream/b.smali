@@ -469,14 +469,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 565
+    .line 550
     iget-boolean v0, p0, Lcom/google/gson/stream/b;->i:Z
 
     if-eqz v0, :cond_1
 
     sget-object v0, Lcom/google/gson/stream/b;->b:[Ljava/lang/String;
 
-    .line 566
+    .line 551
     :goto_0
     iget-object v2, p0, Lcom/google/gson/stream/b;->c:Ljava/io/Writer;
 
@@ -484,34 +484,34 @@
 
     invoke-virtual {v2, v3}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 568
+    .line 553
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v4
 
     move v3, v1
 
-    .line 569
+    .line 554
     :goto_1
     if-ge v3, v4, :cond_6
 
-    .line 570
+    .line 555
     invoke-virtual {p1, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
 
-    .line 572
+    .line 557
     const/16 v5, 0x80
 
     if-ge v2, v5, :cond_2
 
-    .line 573
+    .line 558
     aget-object v2, v0, v2
 
-    .line 574
+    .line 559
     if-nez v2, :cond_3
 
-    .line 569
+    .line 554
     :cond_0
     :goto_2
     add-int/lit8 v2, v3, 0x1
@@ -520,67 +520,67 @@
 
     goto :goto_1
 
-    .line 565
+    .line 550
     :cond_1
     sget-object v0, Lcom/google/gson/stream/b;->a:[Ljava/lang/String;
 
     goto :goto_0
 
-    .line 577
+    .line 562
     :cond_2
     const/16 v5, 0x2028
 
     if-ne v2, v5, :cond_5
 
-    .line 578
+    .line 563
     const-string v2, "\\u2028"
 
-    .line 584
+    .line 569
     :cond_3
     :goto_3
     if-ge v1, v3, :cond_4
 
-    .line 585
+    .line 570
     iget-object v5, p0, Lcom/google/gson/stream/b;->c:Ljava/io/Writer;
 
     sub-int v6, v3, v1
 
     invoke-virtual {v5, p1, v1, v6}, Ljava/io/Writer;->write(Ljava/lang/String;II)V
 
-    .line 587
+    .line 572
     :cond_4
     iget-object v1, p0, Lcom/google/gson/stream/b;->c:Ljava/io/Writer;
 
     invoke-virtual {v1, v2}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 588
+    .line 573
     add-int/lit8 v1, v3, 0x1
 
     goto :goto_2
 
-    .line 579
+    .line 564
     :cond_5
     const/16 v5, 0x2029
 
     if-ne v2, v5, :cond_0
 
-    .line 580
+    .line 565
     const-string v2, "\\u2029"
 
     goto :goto_3
 
-    .line 590
+    .line 575
     :cond_6
     if-ge v1, v4, :cond_7
 
-    .line 591
+    .line 576
     iget-object v0, p0, Lcom/google/gson/stream/b;->c:Ljava/io/Writer;
 
     sub-int v2, v4, v1
 
     invoke-virtual {v0, p1, v1, v2}, Ljava/io/Writer;->write(Ljava/lang/String;II)V
 
-    .line 593
+    .line 578
     :cond_7
     iget-object v0, p0, Lcom/google/gson/stream/b;->c:Ljava/io/Writer;
 
@@ -588,7 +588,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 594
+    .line 579
     return-void
 .end method
 
@@ -606,28 +606,28 @@
 
     if-eqz v0, :cond_1
 
-    .line 1612
+    .line 1597
     invoke-direct {p0}, Lcom/google/gson/stream/b;->a()I
 
     move-result v0
 
-    .line 1613
+    .line 1598
     const/4 v1, 0x5
 
     if-ne v0, v1, :cond_2
 
-    .line 1614
+    .line 1599
     iget-object v0, p0, Lcom/google/gson/stream/b;->c:Ljava/io/Writer;
 
     const/16 v1, 0x2c
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->write(I)V
 
-    .line 1618
+    .line 1603
     :cond_0
     invoke-direct {p0}, Lcom/google/gson/stream/b;->k()V
 
-    .line 1619
+    .line 1604
     const/4 v0, 0x4
 
     invoke-direct {p0, v0}, Lcom/google/gson/stream/b;->b(I)V
@@ -646,13 +646,13 @@
     :cond_1
     return-void
 
-    .line 1615
+    .line 1600
     :cond_2
     const/4 v1, 0x3
 
     if-eq v0, v1, :cond_0
 
-    .line 1616
+    .line 1601
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Nesting problem."
@@ -671,16 +671,16 @@
     .end annotation
 
     .prologue
-    .line 597
+    .line 582
     iget-object v0, p0, Lcom/google/gson/stream/b;->f:Ljava/lang/String;
 
     if-nez v0, :cond_1
 
-    .line 605
+    .line 590
     :cond_0
     return-void
 
-    .line 601
+    .line 586
     :cond_1
     iget-object v0, p0, Lcom/google/gson/stream/b;->c:Ljava/io/Writer;
 
@@ -688,7 +688,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 602
+    .line 587
     const/4 v0, 0x1
 
     iget v1, p0, Lcom/google/gson/stream/b;->e:I
@@ -696,14 +696,14 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 603
+    .line 588
     iget-object v2, p0, Lcom/google/gson/stream/b;->c:Ljava/io/Writer;
 
     iget-object v3, p0, Lcom/google/gson/stream/b;->f:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 602
+    .line 587
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -718,14 +718,14 @@
     .end annotation
 
     .prologue
-    .line 629
+    .line 614
     invoke-direct {p0}, Lcom/google/gson/stream/b;->a()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 656
+    .line 641
     :pswitch_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -735,13 +735,13 @@
 
     throw v0
 
-    .line 631
+    .line 616
     :pswitch_1
     iget-boolean v0, p0, Lcom/google/gson/stream/b;->h:Z
 
     if-nez v0, :cond_0
 
-    .line 632
+    .line 617
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "JSON must have only one top-level value."
@@ -750,29 +750,29 @@
 
     throw v0
 
-    .line 637
+    .line 622
     :cond_0
     :pswitch_2
     const/4 v0, 0x7
 
     invoke-direct {p0, v0}, Lcom/google/gson/stream/b;->b(I)V
 
-    .line 653
+    .line 638
     :goto_0
     return-void
 
-    .line 641
+    .line 626
     :pswitch_3
     const/4 v0, 0x2
 
     invoke-direct {p0, v0}, Lcom/google/gson/stream/b;->b(I)V
 
-    .line 642
+    .line 627
     invoke-direct {p0}, Lcom/google/gson/stream/b;->k()V
 
     goto :goto_0
 
-    .line 646
+    .line 631
     :pswitch_4
     iget-object v0, p0, Lcom/google/gson/stream/b;->c:Ljava/io/Writer;
 
@@ -780,12 +780,12 @@
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->append(C)Ljava/io/Writer;
 
-    .line 647
+    .line 632
     invoke-direct {p0}, Lcom/google/gson/stream/b;->k()V
 
     goto :goto_0
 
-    .line 651
+    .line 636
     :pswitch_5
     iget-object v0, p0, Lcom/google/gson/stream/b;->c:Ljava/io/Writer;
 
@@ -793,14 +793,14 @@
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->append(Ljava/lang/CharSequence;)Ljava/io/Writer;
 
-    .line 652
+    .line 637
     const/4 v0, 0x5
 
     invoke-direct {p0, v0}, Lcom/google/gson/stream/b;->b(I)V
 
     goto :goto_0
 
-    .line 629
+    .line 614
     nop
 
     :pswitch_data_0
@@ -826,13 +826,13 @@
     .end annotation
 
     .prologue
-    .line 509
+    .line 494
     invoke-direct {p0}, Lcom/google/gson/stream/b;->j()V
 
-    .line 510
+    .line 495
     invoke-direct {p0}, Lcom/google/gson/stream/b;->l()V
 
-    .line 511
+    .line 496
     iget-object v0, p0, Lcom/google/gson/stream/b;->c:Ljava/io/Writer;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
@@ -841,58 +841,8 @@
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 512
+    .line 497
     return-object p0
-.end method
-
-.method public a(Ljava/lang/Boolean;)Lcom/google/gson/stream/b;
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .prologue
-    .line 477
-    if-nez p1, :cond_0
-
-    .line 478
-    invoke-virtual {p0}, Lcom/google/gson/stream/b;->f()Lcom/google/gson/stream/b;
-
-    move-result-object p0
-
-    .line 483
-    :goto_0
-    return-object p0
-
-    .line 480
-    :cond_0
-    invoke-direct {p0}, Lcom/google/gson/stream/b;->j()V
-
-    .line 481
-    invoke-direct {p0}, Lcom/google/gson/stream/b;->l()V
-
-    .line 482
-    iget-object v1, p0, Lcom/google/gson/stream/b;->c:Ljava/io/Writer;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const-string v0, "true"
-
-    :goto_1
-    invoke-virtual {v1, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_1
-    const-string v0, "false"
-
-    goto :goto_1
 .end method
 
 .method public a(Ljava/lang/Number;)Lcom/google/gson/stream/b;
@@ -904,35 +854,35 @@
     .end annotation
 
     .prologue
-    .line 523
+    .line 508
     if-nez p1, :cond_0
 
-    .line 524
+    .line 509
     invoke-virtual {p0}, Lcom/google/gson/stream/b;->f()Lcom/google/gson/stream/b;
 
     move-result-object p0
 
-    .line 535
+    .line 520
     :goto_0
     return-object p0
 
-    .line 527
+    .line 512
     :cond_0
     invoke-direct {p0}, Lcom/google/gson/stream/b;->j()V
 
-    .line 528
+    .line 513
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 529
+    .line 514
     iget-boolean v1, p0, Lcom/google/gson/stream/b;->h:Z
 
     if-nez v1, :cond_2
 
     const-string v1, "-Infinity"
 
-    .line 530
+    .line 515
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -955,7 +905,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 531
+    .line 516
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -977,11 +927,11 @@
 
     throw v0
 
-    .line 533
+    .line 518
     :cond_2
     invoke-direct {p0}, Lcom/google/gson/stream/b;->l()V
 
-    .line 534
+    .line 519
     iget-object v1, p0, Lcom/google/gson/stream/b;->c:Ljava/io/Writer;
 
     invoke-virtual {v1, v0}, Ljava/io/Writer;->append(Ljava/lang/CharSequence;)Ljava/io/Writer;
@@ -1232,15 +1182,15 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 555
+    .line 540
     iget-object v0, p0, Lcom/google/gson/stream/b;->c:Ljava/io/Writer;
 
     invoke-virtual {v0}, Ljava/io/Writer;->close()V
 
-    .line 557
+    .line 542
     iget v0, p0, Lcom/google/gson/stream/b;->e:I
 
-    .line 558
+    .line 543
     if-gt v0, v1, :cond_0
 
     if-ne v0, v1, :cond_1
@@ -1255,7 +1205,7 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 559
+    .line 544
     :cond_0
     new-instance v0, Ljava/io/IOException;
 
@@ -1265,13 +1215,13 @@
 
     throw v0
 
-    .line 561
+    .line 546
     :cond_1
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/google/gson/stream/b;->e:I
 
-    .line 562
+    .line 547
     return-void
 .end method
 
@@ -1388,12 +1338,12 @@
     .end annotation
 
     .prologue
-    .line 543
+    .line 528
     iget v0, p0, Lcom/google/gson/stream/b;->e:I
 
     if-nez v0, :cond_0
 
-    .line 544
+    .line 529
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "JsonWriter is closed."
@@ -1402,13 +1352,13 @@
 
     throw v0
 
-    .line 546
+    .line 531
     :cond_0
     iget-object v0, p0, Lcom/google/gson/stream/b;->c:Ljava/io/Writer;
 
     invoke-virtual {v0}, Ljava/io/Writer;->flush()V
 
-    .line 547
+    .line 532
     return-void
 .end method
 

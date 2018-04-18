@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 559
+    .line 580
     invoke-direct {p0}, Lcom/google/gson/o;-><init>()V
 
     return-void
@@ -45,8 +45,8 @@
     .end annotation
 
     .prologue
-    .line 559
-    .line 1562
+    .line 580
+    .line 1583
     invoke-virtual {p1}, Lcom/google/gson/stream/a;->h()Ljava/lang/String;
 
     move-result-object v0
@@ -55,7 +55,7 @@
 
     move-result-object v0
 
-    .line 559
+    .line 580
     return-object v0
 .end method
 
@@ -68,16 +68,16 @@
     .end annotation
 
     .prologue
-    .line 559
+    .line 580
     check-cast p2, Ljava/util/Currency;
 
-    .line 1566
+    .line 1587
     invoke-virtual {p2}, Ljava/util/Currency;->getCurrencyCode()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Lcom/google/gson/stream/b;->b(Ljava/lang/String;)Lcom/google/gson/stream/b;
 
-    .line 559
+    .line 580
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class public Lkik/android/widget/ClampImageView;
-.super Landroid/support/v7/widget/AppCompatImageView;
+.super Landroid/widget/ImageView;
 .source "SourceFile"
 
 
@@ -8,12 +8,12 @@
     .locals 1
 
     .prologue
-    .line 15
+    .line 14
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lkik/android/widget/ClampImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 16
+    .line 15
     return-void
 .end method
 
@@ -21,15 +21,15 @@
     .locals 1
 
     .prologue
-    .line 20
-    invoke-direct {p0, p1, p2, p3}, Landroid/support/v7/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .line 19
+    invoke-direct {p0, p1, p2, p3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 21
+    .line 20
     sget-object v0, Landroid/widget/ImageView$ScaleType;->CENTER_CROP:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {p0, v0}, Lkik/android/widget/ClampImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 22
+    .line 21
     return-void
 .end method
 
@@ -43,49 +43,49 @@
 
     const/4 v7, 0x0
 
-    .line 27
+    .line 26
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v1
 
-    .line 28
+    .line 27
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
-    .line 30
+    .line 29
     invoke-virtual {p0}, Lkik/android/widget/ClampImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
-    .line 31
+    .line 30
     if-eqz v2, :cond_3
 
-    .line 32
+    .line 31
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v3
 
-    .line 33
+    .line 32
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v2
 
-    .line 34
+    .line 33
     int-to-float v4, v1
 
     int-to-float v5, v2
 
     div-float/2addr v4, v5
 
-    .line 35
+    .line 34
     int-to-float v5, v0
 
     int-to-float v6, v3
 
     div-float/2addr v5, v6
 
-    .line 39
+    .line 38
     cmpl-float v6, v4, v7
 
     if-eqz v6, :cond_0
@@ -99,7 +99,7 @@
 
     if-nez v6, :cond_2
 
-    .line 40
+    .line 39
     :cond_1
     int-to-float v0, v3
 
@@ -107,11 +107,11 @@
 
     float-to-int v0, v0
 
-    .line 48
+    .line 47
     :goto_0
     invoke-virtual {p0, v1, v0}, Lkik/android/widget/ClampImageView;->setMeasuredDimension(II)V
 
-    .line 56
+    .line 55
     :goto_1
     invoke-virtual {p0}, Lkik/android/widget/ClampImageView;->getParent()Landroid/view/ViewParent;
 
@@ -119,13 +119,13 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    .line 57
+    .line 56
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getHeight()I
 
-    .line 58
+    .line 57
     return-void
 
-    .line 46
+    .line 45
     :cond_2
     int-to-float v1, v2
 
@@ -135,7 +135,7 @@
 
     goto :goto_0
 
-    .line 51
+    .line 50
     :cond_3
     invoke-virtual {p0, v3, v3}, Lkik/android/widget/ClampImageView;->setMeasuredDimension(II)V
 

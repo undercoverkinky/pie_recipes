@@ -1,5 +1,5 @@
 .class final Lcom/kik/cards/web/CardsWebViewFragment$37;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Landroid/util/Pair",
         "<",
@@ -43,7 +43,7 @@
     .locals 0
 
     .prologue
-    .line 2262
+    .line 2212
     iput-object p1, p0, Lcom/kik/cards/web/CardsWebViewFragment$37;->e:Lcom/kik/cards/web/CardsWebViewFragment;
 
     iput-object p2, p0, Lcom/kik/cards/web/CardsWebViewFragment$37;->a:Landroid/app/Activity;
@@ -54,7 +54,7 @@
 
     iput-object p5, p0, Lcom/kik/cards/web/CardsWebViewFragment$37;->d:Lkik/android/chat/fragment/ProgressDialogFragment;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -65,8 +65,8 @@
     .locals 2
 
     .prologue
-    .line 2262
-    .line 3267
+    .line 2212
+    .line 3217
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$37;->a:Landroid/app/Activity;
 
     new-instance v1, Lcom/kik/cards/web/CardsWebViewFragment$37$1;
@@ -75,7 +75,7 @@
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 2262
+    .line 2212
     return-void
 .end method
 
@@ -83,7 +83,7 @@
     .locals 2
 
     .prologue
-    .line 2293
+    .line 2242
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$37;->a:Landroid/app/Activity;
 
     new-instance v1, Lcom/kik/cards/web/CardsWebViewFragment$37$2;
@@ -92,6 +92,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 2311
+    .line 2259
     return-void
 .end method

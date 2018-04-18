@@ -86,7 +86,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0906d6
+    const v1, 0x7f0a05f9
 
     .line 35
     invoke-virtual {p0, v1}, Lkik/android/videochat/VideoChatNotificationService;->getString(I)Ljava/lang/String;
@@ -97,7 +97,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f090674
+    const v1, 0x7f0a05b2
 
     .line 36
     invoke-virtual {p0, v1}, Lkik/android/videochat/VideoChatNotificationService;->getString(I)Ljava/lang/String;
@@ -108,7 +108,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f020200
+    const v1, 0x7f0201aa
 
     .line 37
     invoke-virtual {v0, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setSmallIcon(I)Landroid/support/v4/app/NotificationCompat$Builder;
@@ -121,7 +121,7 @@
     move-result-object v0
 
     .line 39
-    invoke-static {v4, v5}, Lkik/android/h/c;->a(ZZ)[J
+    invoke-static {v4, v5}, Lkik/android/f/c;->a(ZZ)[J
 
     move-result-object v1
 
@@ -134,7 +134,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e007f
+    const v2, 0x7f10007b
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 

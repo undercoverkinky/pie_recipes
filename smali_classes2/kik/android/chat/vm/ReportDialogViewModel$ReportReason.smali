@@ -48,7 +48,7 @@
 
     const/4 v2, 0x0
 
-    .line 34
+    .line 33
     new-instance v0, Lkik/android/chat/vm/ReportDialogViewModel$ReportReason$1;
 
     const-string v1, "SPAM"
@@ -57,7 +57,7 @@
 
     sput-object v0, Lkik/android/chat/vm/ReportDialogViewModel$ReportReason;->SPAM:Lkik/android/chat/vm/ReportDialogViewModel$ReportReason;
 
-    .line 40
+    .line 39
     new-instance v0, Lkik/android/chat/vm/ReportDialogViewModel$ReportReason$2;
 
     const-string v1, "UNWANTED"
@@ -66,7 +66,7 @@
 
     sput-object v0, Lkik/android/chat/vm/ReportDialogViewModel$ReportReason;->UNWANTED:Lkik/android/chat/vm/ReportDialogViewModel$ReportReason;
 
-    .line 46
+    .line 45
     new-instance v0, Lkik/android/chat/vm/ReportDialogViewModel$ReportReason$3;
 
     const-string v1, "ABUSE"
@@ -75,7 +75,7 @@
 
     sput-object v0, Lkik/android/chat/vm/ReportDialogViewModel$ReportReason;->ABUSE:Lkik/android/chat/vm/ReportDialogViewModel$ReportReason;
 
-    .line 53
+    .line 52
     new-instance v0, Lkik/android/chat/vm/ReportDialogViewModel$ReportReason$4;
 
     const-string v1, "OFFENSIVE"
@@ -84,7 +84,7 @@
 
     sput-object v0, Lkik/android/chat/vm/ReportDialogViewModel$ReportReason;->OFFENSIVE:Lkik/android/chat/vm/ReportDialogViewModel$ReportReason;
 
-    .line 32
+    .line 31
     const/4 v0, 0x4
 
     new-array v0, v0, [Lkik/android/chat/vm/ReportDialogViewModel$ReportReason;
@@ -119,7 +119,7 @@
     .end annotation
 
     .prologue
-    .line 32
+    .line 31
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -129,7 +129,7 @@
     .locals 0
 
     .prologue
-    .line 32
+    .line 31
     invoke-direct {p0, p1, p2}, Lkik/android/chat/vm/ReportDialogViewModel$ReportReason;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -139,7 +139,7 @@
     .locals 1
 
     .prologue
-    .line 32
+    .line 31
     const-class v0, Lkik/android/chat/vm/ReportDialogViewModel$ReportReason;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -155,7 +155,7 @@
     .locals 1
 
     .prologue
-    .line 32
+    .line 31
     sget-object v0, Lkik/android/chat/vm/ReportDialogViewModel$ReportReason;->$VALUES:[Lkik/android/chat/vm/ReportDialogViewModel$ReportReason;
 
     invoke-virtual {v0}, [Lkik/android/chat/vm/ReportDialogViewModel$ReportReason;->clone()Ljava/lang/Object;
@@ -173,14 +173,14 @@
     .locals 5
 
     .prologue
-    const v4, 0x7f09030a
+    const v4, 0x7f0a02f6
 
-    const v3, 0x7f090309
+    const v3, 0x7f0a02f5
 
-    .line 62
+    .line 61
     const-string v0, ""
 
-    .line 63
+    .line 62
     sget-object v1, Lkik/android/chat/vm/ReportDialogViewModel$1;->a:[I
 
     invoke-virtual {p0}, Lkik/android/chat/vm/ReportDialogViewModel$ReportReason;->ordinal()I
@@ -191,11 +191,11 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 77
+    .line 76
     :goto_0
     return-object v0
 
-    .line 65
+    .line 64
     :pswitch_0
     invoke-static {v4}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
@@ -203,7 +203,7 @@
 
     goto :goto_0
 
-    .line 68
+    .line 67
     :pswitch_1
     invoke-static {v4}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
@@ -211,7 +211,7 @@
 
     goto :goto_0
 
-    .line 71
+    .line 70
     :pswitch_2
     invoke-static {v3}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
@@ -219,7 +219,7 @@
 
     goto :goto_0
 
-    .line 74
+    .line 73
     :pswitch_3
     invoke-static {v3}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
@@ -227,7 +227,7 @@
 
     goto :goto_0
 
-    .line 63
+    .line 62
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

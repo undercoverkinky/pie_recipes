@@ -31,19 +31,48 @@
 .end annotation
 
 
+# static fields
+.field private static final a:Lcom/google/common/collect/ImmutableList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/common/collect/ImmutableList",
+            "<",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
 # direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    .prologue
+    .line 66
+    new-instance v0, Lcom/google/common/collect/RegularImmutableList;
+
+    sget-object v1, Lcom/google/common/collect/o;->a:[Ljava/lang/Object;
+
+    invoke-direct {v0, v1}, Lcom/google/common/collect/RegularImmutableList;-><init>([Ljava/lang/Object;)V
+
+    sput-object v0, Lcom/google/common/collect/ImmutableList;->a:Lcom/google/common/collect/ImmutableList;
+
+    return-void
+.end method
+
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 345
+    .line 335
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableCollection;-><init>()V
 
     return-void
 .end method
 
 .method public static a(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableList;
-    .locals 1
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<E:",
@@ -57,31 +86,82 @@
     .end annotation
 
     .prologue
-    .line 209
-    invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 225
+    invoke-static {p0}, Lcom/google/common/base/h;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 210
+    .line 226
     instance-of v0, p0, Ljava/util/Collection;
 
     if-eqz v0, :cond_0
 
     check-cast p0, Ljava/util/Collection;
 
-    .line 211
     invoke-static {p0}, Lcom/google/common/collect/ImmutableList;->a(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v0
 
+    .line 1273
     :goto_0
     return-object v0
 
-    .line 212
+    .line 226
     :cond_0
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->a(Ljava/util/Iterator;)Lcom/google/common/collect/ImmutableList;
+    .line 1268
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    .line 2077
+    sget-object v0, Lcom/google/common/collect/ImmutableList;->a:Lcom/google/common/collect/ImmutableList;
+
+    goto :goto_0
+
+    .line 1271
+    :cond_1
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    .line 1272
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    .line 1273
+    invoke-static {v1}, Lcom/google/common/collect/ImmutableList;->a(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 1275
+    :cond_2
+    new-instance v2, Lcom/google/common/collect/ImmutableList$a;
+
+    invoke-direct {v2}, Lcom/google/common/collect/ImmutableList$a;-><init>()V
+
+    invoke-virtual {v2, v1}, Lcom/google/common/collect/ImmutableList$a;->c(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$a;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/google/common/collect/ImmutableList$a;->b(Ljava/util/Iterator;)Lcom/google/common/collect/ImmutableList$a;
+
+    move-result-object v0
+
+    .line 2700
+    iget-object v1, v0, Lcom/google/common/collect/ImmutableList$a;->a:[Ljava/lang/Object;
+
+    iget v0, v0, Lcom/google/common/collect/ImmutableList$a;->b:I
+
+    invoke-static {v1, v0}, Lcom/google/common/collect/ImmutableList;->b([Ljava/lang/Object;I)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v0
 
@@ -89,7 +169,7 @@
 .end method
 
 .method public static a(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<E:",
@@ -101,18 +181,10 @@
     .end annotation
 
     .prologue
-    .line 76
-    const/4 v0, 0x1
+    .line 89
+    new-instance v0, Lcom/google/common/collect/SingletonImmutableList;
 
-    new-array v0, v0, [Ljava/lang/Object;
-
-    const/4 v1, 0x0
-
-    aput-object p0, v0, v1
-
-    invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->c([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
-
-    move-result-object v0
+    invoke-direct {v0, p0}, Lcom/google/common/collect/SingletonImmutableList;-><init>(Ljava/lang/Object;)V
 
     return-object v0
 .end method
@@ -132,20 +204,20 @@
     .end annotation
 
     .prologue
-    .line 235
+    .line 251
     instance-of v0, p0, Lcom/google/common/collect/ImmutableCollection;
 
     if-eqz v0, :cond_1
 
-    .line 237
+    .line 253
     check-cast p0, Lcom/google/common/collect/ImmutableCollection;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->b()Lcom/google/common/collect/ImmutableList;
 
     move-result-object v0
 
-    .line 238
-    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableList;->c()Z
+    .line 254
+    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableList;->e()Z
 
     move-result v1
 
@@ -155,14 +227,14 @@
 
     move-result-object v0
 
-    .line 1334
+    .line 3312
     array-length v1, v0
 
     invoke-static {v0, v1}, Lcom/google/common/collect/ImmutableList;->b([Ljava/lang/Object;I)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v0
 
-    .line 240
+    .line 258
     :cond_0
     :goto_0
     return-object v0
@@ -172,87 +244,15 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->c([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
+    .line 4303
+    invoke-static {v0}, Lcom/google/common/collect/o;->a([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
 
-    goto :goto_0
-.end method
+    .line 4312
+    array-length v1, v0
 
-.method public static a(Ljava/util/Iterator;)Lcom/google/common/collect/ImmutableList;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<E:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Ljava/util/Iterator",
-            "<+TE;>;)",
-            "Lcom/google/common/collect/ImmutableList",
-            "<TE;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 250
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 2064
-    sget-object v0, Lcom/google/common/collect/RegularImmutableList;->a:Lcom/google/common/collect/ImmutableList;
-
-    .line 257
-    :goto_0
-    return-object v0
-
-    .line 253
-    :cond_0
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    .line 254
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    .line 255
-    invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->a(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    .line 257
-    :cond_1
-    new-instance v1, Lcom/google/common/collect/ImmutableList$a;
-
-    invoke-direct {v1}, Lcom/google/common/collect/ImmutableList$a;-><init>()V
-
-    invoke-virtual {v1, v0}, Lcom/google/common/collect/ImmutableList$a;->c(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$a;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lcom/google/common/collect/ImmutableList$a;->b(Ljava/util/Iterator;)Lcom/google/common/collect/ImmutableList$a;
-
-    move-result-object v0
-
-    .line 2737
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Lcom/google/common/collect/ImmutableList$a;->c:Z
-
-    .line 2738
-    iget-object v1, v0, Lcom/google/common/collect/ImmutableList$a;->a:[Ljava/lang/Object;
-
-    iget v0, v0, Lcom/google/common/collect/ImmutableList$a;->b:I
-
-    invoke-static {v1, v0}, Lcom/google/common/collect/ImmutableList;->b([Ljava/lang/Object;I)Lcom/google/common/collect/ImmutableList;
+    invoke-static {v0, v1}, Lcom/google/common/collect/ImmutableList;->b([Ljava/lang/Object;I)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v0
 
@@ -260,7 +260,7 @@
 .end method
 
 .method public static a([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<E:",
@@ -272,31 +272,57 @@
     .end annotation
 
     .prologue
-    .line 268
+    .line 289
     array-length v0, p0
 
-    if-nez v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    .line 3064
-    sget-object v0, Lcom/google/common/collect/RegularImmutableList;->a:Lcom/google/common/collect/ImmutableList;
+    .line 295
+    new-instance v1, Lcom/google/common/collect/RegularImmutableList;
 
-    .line 269
-    :goto_0
-    return-object v0
-
-    .line 270
-    :cond_0
     invoke-virtual {p0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->c([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
+    invoke-static {v0}, Lcom/google/common/collect/o;->a([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
 
+    invoke-direct {v1, v0}, Lcom/google/common/collect/RegularImmutableList;-><init>([Ljava/lang/Object;)V
+
+    move-object v0, v1
+
+    :goto_0
+    return-object v0
+
+    .line 5077
+    :pswitch_0
+    sget-object v0, Lcom/google/common/collect/ImmutableList;->a:Lcom/google/common/collect/ImmutableList;
+
     goto :goto_0
+
+    .line 293
+    :pswitch_1
+    new-instance v0, Lcom/google/common/collect/SingletonImmutableList;
+
+    const/4 v1, 0x0
+
+    aget-object v1, p0, v1
+
+    invoke-direct {v0, v1}, Lcom/google/common/collect/SingletonImmutableList;-><init>(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 289
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method
 
 .method static b([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
@@ -314,7 +340,7 @@
     .end annotation
 
     .prologue
-    .line 334
+    .line 312
     array-length v0, p0
 
     invoke-static {p0, v0}, Lcom/google/common/collect/ImmutableList;->b([Ljava/lang/Object;I)Lcom/google/common/collect/ImmutableList;
@@ -325,7 +351,7 @@
 .end method
 
 .method static b([Ljava/lang/Object;I)Lcom/google/common/collect/ImmutableList;
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<E:",
@@ -339,69 +365,52 @@
     .end annotation
 
     .prologue
-    .line 339
-    if-nez p1, :cond_0
+    .line 320
+    packed-switch p1, :pswitch_data_0
 
-    .line 4064
-    sget-object v0, Lcom/google/common/collect/RegularImmutableList;->a:Lcom/google/common/collect/ImmutableList;
+    .line 328
+    array-length v0, p0
 
-    .line 342
-    :goto_0
-    return-object v0
+    if-ge p1, v0, :cond_0
 
+    .line 329
+    invoke-static {p0, p1}, Lcom/google/common/collect/o;->b([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p0
+
+    .line 331
     :cond_0
     new-instance v0, Lcom/google/common/collect/RegularImmutableList;
 
-    invoke-direct {v0, p0, p1}, Lcom/google/common/collect/RegularImmutableList;-><init>([Ljava/lang/Object;I)V
-
-    goto :goto_0
-.end method
-
-.method private static varargs c([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<E:",
-            "Ljava/lang/Object;",
-            ">([",
-            "Ljava/lang/Object;",
-            ")",
-            "Lcom/google/common/collect/ImmutableList",
-            "<TE;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 325
-    .line 3219
-    array-length v1, p0
-
-    .line 3224
-    const/4 v0, 0x0
+    invoke-direct {v0, p0}, Lcom/google/common/collect/RegularImmutableList;-><init>([Ljava/lang/Object;)V
 
     :goto_0
-    if-ge v0, v1, :cond_0
+    return-object v0
 
-    .line 3225
-    aget-object v2, p0, v0
-
-    invoke-static {v2, v0}, Lcom/google/common/collect/m;->a(Ljava/lang/Object;I)Ljava/lang/Object;
-
-    .line 3224
-    add-int/lit8 v0, v0, 0x1
+    .line 6077
+    :pswitch_0
+    sget-object v0, Lcom/google/common/collect/ImmutableList;->a:Lcom/google/common/collect/ImmutableList;
 
     goto :goto_0
 
-    .line 3334
-    :cond_0
-    array-length v0, p0
-
-    invoke-static {p0, v0}, Lcom/google/common/collect/ImmutableList;->b([Ljava/lang/Object;I)Lcom/google/common/collect/ImmutableList;
-
-    move-result-object v0
-
     .line 325
-    return-object v0
+    :pswitch_1
+    new-instance v0, Lcom/google/common/collect/SingletonImmutableList;
+
+    const/4 v1, 0x0
+
+    aget-object v1, p0, v1
+
+    invoke-direct {v0, v1}, Lcom/google/common/collect/SingletonImmutableList;-><init>(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 320
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method
 
 .method public static d()Lcom/google/common/collect/ImmutableList;
@@ -417,8 +426,8 @@
     .end annotation
 
     .prologue
-    .line 64
-    sget-object v0, Lcom/google/common/collect/RegularImmutableList;->a:Lcom/google/common/collect/ImmutableList;
+    .line 77
+    sget-object v0, Lcom/google/common/collect/ImmutableList;->a:Lcom/google/common/collect/ImmutableList;
 
     return-object v0
 .end method
@@ -432,7 +441,7 @@
     .end annotation
 
     .prologue
-    .line 626
+    .line 599
     new-instance v0, Ljava/io/InvalidObjectException;
 
     const-string v1, "Use SerializedForm"
@@ -448,19 +457,19 @@
     .locals 4
 
     .prologue
-    .line 510
+    .line 494
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableList;->size()I
 
     move-result v1
 
-    .line 511
+    .line 495
     const/4 v0, 0x0
 
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 512
-    add-int/lit8 v2, v0, 0x0
+    .line 496
+    add-int v2, p2, v0
 
     invoke-virtual {p0, v0}, Lcom/google/common/collect/ImmutableList;->get(I)Ljava/lang/Object;
 
@@ -468,20 +477,20 @@
 
     aput-object v3, p1, v2
 
-    .line 511
+    .line 495
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 514
+    .line 498
     :cond_0
-    add-int/lit8 v0, v1, 0x0
+    add-int v0, p2, v1
 
     return v0
 .end method
 
 .method public a(II)Lcom/google/common/collect/ImmutableList;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(II)",
@@ -491,85 +500,90 @@
     .end annotation
 
     .prologue
-    .line 394
+    .line 381
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableList;->size()I
 
     move-result v0
 
-    invoke-static {p1, p2, v0}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V
+    invoke-static {p1, p2, v0}, Lcom/google/common/base/h;->a(III)V
 
-    .line 395
+    .line 382
     sub-int v0, p2, p1
 
-    .line 396
-    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableList;->size()I
+    .line 383
+    packed-switch v0, :pswitch_data_0
 
-    move-result v1
+    .line 389
+    invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/ImmutableList;->b(II)Lcom/google/common/collect/ImmutableList;
 
-    if-ne v0, v1, :cond_0
+    move-result-object v0
 
-    .line 401
     :goto_0
-    return-object p0
+    return-object v0
 
-    .line 398
-    :cond_0
-    if-nez v0, :cond_1
-
-    .line 6064
-    sget-object p0, Lcom/google/common/collect/RegularImmutableList;->a:Lcom/google/common/collect/ImmutableList;
+    .line 7077
+    :pswitch_0
+    sget-object v0, Lcom/google/common/collect/ImmutableList;->a:Lcom/google/common/collect/ImmutableList;
 
     goto :goto_0
 
-    .line 6411
-    :cond_1
-    new-instance v0, Lcom/google/common/collect/ImmutableList$SubList;
+    .line 387
+    :pswitch_1
+    invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableList;->get(I)Ljava/lang/Object;
 
-    sub-int v1, p2, p1
+    move-result-object v0
 
-    invoke-direct {v0, p0, p1, v1}, Lcom/google/common/collect/ImmutableList$SubList;-><init>(Lcom/google/common/collect/ImmutableList;II)V
+    invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->a(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
-    move-object p0, v0
+    move-result-object v0
 
-    .line 401
     goto :goto_0
+
+    .line 383
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method
 
-.method public final a()Lcom/google/common/collect/s;
+.method public a()Lcom/google/common/collect/x;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/google/common/collect/s",
+            "Lcom/google/common/collect/x",
             "<TE;>;"
         }
     .end annotation
 
     .prologue
-    .line 351
-    .line 4356
+    .line 340
+    .line 6344
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/google/common/collect/ImmutableList;->a(I)Lcom/google/common/collect/t;
+    invoke-virtual {p0, v0}, Lcom/google/common/collect/ImmutableList;->a(I)Lcom/google/common/collect/y;
 
     move-result-object v0
 
-    .line 351
+    .line 340
     return-object v0
 .end method
 
-.method public a(I)Lcom/google/common/collect/t;
+.method public a(I)Lcom/google/common/collect/y;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
-            "Lcom/google/common/collect/t",
+            "Lcom/google/common/collect/y",
             "<TE;>;"
         }
     .end annotation
 
     .prologue
-    .line 361
+    .line 348
     new-instance v0, Lcom/google/common/collect/ImmutableList$1;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableList;->size()I
@@ -593,7 +607,7 @@
     .end annotation
 
     .prologue
-    .line 481
+    .line 467
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -603,9 +617,6 @@
 
 .method public final addAll(ILjava/util/Collection;)Z
     .locals 1
-    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -618,7 +629,7 @@
     .end annotation
 
     .prologue
-    .line 456
+    .line 443
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -637,8 +648,29 @@
     .end annotation
 
     .prologue
-    .line 504
+    .line 488
     return-object p0
+.end method
+
+.method b(II)Lcom/google/common/collect/ImmutableList;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(II)",
+            "Lcom/google/common/collect/ImmutableList",
+            "<TE;>;"
+        }
+    .end annotation
+
+    .prologue
+    .line 399
+    new-instance v0, Lcom/google/common/collect/ImmutableList$SubList;
+
+    sub-int v1, p2, p1
+
+    invoke-direct {v0, p0, p1, v1}, Lcom/google/common/collect/ImmutableList$SubList;-><init>(Lcom/google/common/collect/ImmutableList;II)V
+
+    return-object v0
 .end method
 
 .method public contains(Ljava/lang/Object;)Z
@@ -649,7 +681,7 @@
     .end param
 
     .prologue
-    .line 381
+    .line 368
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableList;->indexOf(Ljava/lang/Object;)I
 
     move-result v0
@@ -667,8 +699,72 @@
     goto :goto_0
 .end method
 
-.method public e()Lcom/google/common/collect/ImmutableList;
-    .locals 2
+.method public equals(Ljava/lang/Object;)Z
+    .locals 3
+    .param p1    # Ljava/lang/Object;
+        .annotation runtime Ljavax/annotation/Nullable;
+        .end annotation
+    .end param
+
+    .prologue
+    const/4 v0, 0x1
+
+    .line 567
+    .line 7944
+    invoke-static {p0}, Lcom/google/common/base/h;->a(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-ne p1, v1, :cond_1
+
+    .line 7953
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 7947
+    :cond_1
+    instance-of v1, p1, Ljava/util/List;
+
+    if-eqz v1, :cond_2
+
+    .line 7951
+    check-cast p1, Ljava/util/List;
+
+    .line 7953
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    if-ne v1, v2, :cond_2
+
+    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/google/common/collect/l;->a(Ljava/util/Iterator;Ljava/util/Iterator;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    :cond_2
+    const/4 v0, 0x0
+
+    .line 567
+    goto :goto_0
+.end method
+
+.method public g()Lcom/google/common/collect/ImmutableList;
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -678,187 +774,33 @@
     .end annotation
 
     .prologue
-    .line 526
-    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableList;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-gt v0, v1, :cond_0
-
-    :goto_0
-    return-object p0
-
-    :cond_0
+    .line 510
     new-instance v0, Lcom/google/common/collect/ImmutableList$ReverseImmutableList;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/ImmutableList$ReverseImmutableList;-><init>(Lcom/google/common/collect/ImmutableList;)V
 
-    move-object p0, v0
-
-    goto :goto_0
-.end method
-
-.method public equals(Ljava/lang/Object;)Z
-    .locals 6
-    .param p1    # Ljava/lang/Object;
-        .annotation runtime Ljavax/annotation/Nullable;
-        .end annotation
-    .end param
-
-    .prologue
-    const/4 v1, 0x0
-
-    const/4 v0, 0x1
-
-    .line 591
-    .line 7001
-    invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-ne p1, v2, :cond_1
-
-    .line 7285
-    :cond_0
-    :goto_0
-    return v0
-
-    .line 7004
-    :cond_1
-    instance-of v2, p1, Ljava/util/List;
-
-    if-eqz v2, :cond_4
-
-    .line 7007
-    check-cast p1, Ljava/util/List;
-
-    .line 7008
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v3
-
-    .line 7009
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    if-ne v3, v2, :cond_4
-
-    .line 7012
-    instance-of v2, p0, Ljava/util/RandomAccess;
-
-    if-eqz v2, :cond_2
-
-    instance-of v2, p1, Ljava/util/RandomAccess;
-
-    if-eqz v2, :cond_2
-
-    move v2, v1
-
-    .line 7014
-    :goto_1
-    if-ge v2, v3, :cond_0
-
-    .line 7015
-    invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    invoke-static {v4, v5}, Lcom/google/common/base/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_4
-
-    .line 7014
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_1
-
-    .line 7021
-    :cond_2
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    .line 7275
-    :cond_3
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_5
-
-    .line 7276
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_4
-
-    .line 7279
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    .line 7280
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    .line 7281
-    invoke-static {v4, v5}, Lcom/google/common/base/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_3
-
-    :cond_4
-    move v0, v1
-
-    .line 591
-    goto :goto_0
-
-    .line 7285
-    :cond_5
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    goto :goto_0
+    return-object v0
 .end method
 
 .method public hashCode()I
     .locals 4
 
     .prologue
-    .line 596
+    .line 571
     const/4 v1, 0x1
 
-    .line 597
+    .line 572
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableList;->size()I
 
     move-result v2
 
-    .line 598
+    .line 573
     const/4 v0, 0x0
 
     :goto_0
     if-ge v0, v2, :cond_0
 
-    .line 599
+    .line 574
     mul-int/lit8 v1, v1, 0x1f
 
     invoke-virtual {p0, v0}, Lcom/google/common/collect/ImmutableList;->get(I)Ljava/lang/Object;
@@ -871,130 +813,69 @@
 
     add-int/2addr v1, v3
 
-    .line 601
+    .line 576
     xor-int/lit8 v1, v1, -0x1
 
     xor-int/lit8 v1, v1, -0x1
 
-    .line 598
+    .line 573
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 604
+    .line 579
     :cond_0
     return v1
 .end method
 
 .method public indexOf(Ljava/lang/Object;)I
-    .locals 4
+    .locals 2
     .param p1    # Ljava/lang/Object;
         .annotation runtime Ljavax/annotation/Nullable;
         .end annotation
     .end param
 
     .prologue
-    const/4 v1, 0x0
+    .line 358
+    if-eqz p1, :cond_1
 
-    const/4 v0, -0x1
-
-    .line 371
-    if-nez p1, :cond_1
-
-    .line 5066
-    :cond_0
-    :goto_0
-    return v0
-
-    .line 5042
-    :cond_1
-    instance-of v2, p0, Ljava/util/RandomAccess;
-
-    if-eqz v2, :cond_5
-
-    .line 5056
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    .line 5057
-    if-nez p1, :cond_4
-
-    .line 5058
-    :goto_1
-    if-ge v1, v2, :cond_0
-
-    .line 5059
-    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-nez v3, :cond_2
-
-    move v0, v1
-
-    .line 5060
-    goto :goto_0
-
-    .line 5058
-    :cond_2
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    .line 5064
-    :cond_3
-    add-int/lit8 v1, v1, 0x1
-
-    :cond_4
-    if-ge v1, v2, :cond_0
-
-    .line 5065
-    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-virtual {p1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    move v0, v1
-
-    .line 5066
-    goto :goto_0
-
-    .line 5045
-    :cond_5
+    .line 6975
     invoke-interface {p0}, Ljava/util/List;->listIterator()Ljava/util/ListIterator;
+
+    move-result-object v0
+
+    .line 6976
+    :cond_0
+    invoke-interface {v0}, Ljava/util/ListIterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 6977
+    invoke-interface {v0}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 5046
-    :cond_6
-    invoke-interface {v1}, Ljava/util/ListIterator;->hasNext()Z
+    invoke-static {p1, v1}, Lcom/google/common/base/g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_0
+    if-eqz v1, :cond_0
 
-    .line 5047
-    invoke-interface {v1}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-static {p1, v2}, Lcom/google/common/base/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_6
-
-    .line 5048
-    invoke-interface {v1}, Ljava/util/ListIterator;->previousIndex()I
+    .line 6978
+    invoke-interface {v0}, Ljava/util/ListIterator;->previousIndex()I
 
     move-result v0
 
+    :goto_0
+    return v0
+
+    .line 6981
+    :cond_1
+    const/4 v0, -0x1
+
+    .line 358
     goto :goto_0
 .end method
 
@@ -1002,140 +883,66 @@
     .locals 1
 
     .prologue
-    .line 52
-    .line 7356
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lcom/google/common/collect/ImmutableList;->a(I)Lcom/google/common/collect/t;
+    .line 61
+    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableList;->a()Lcom/google/common/collect/x;
 
     move-result-object v0
 
-    .line 52
     return-object v0
 .end method
 
 .method public lastIndexOf(Ljava/lang/Object;)I
-    .locals 3
+    .locals 2
     .param p1    # Ljava/lang/Object;
         .annotation runtime Ljavax/annotation/Nullable;
         .end annotation
     .end param
 
     .prologue
-    const/4 v0, -0x1
+    .line 363
+    if-eqz p1, :cond_1
 
-    .line 376
-    if-nez p1, :cond_1
-
-    .line 5100
-    :cond_0
-    :goto_0
-    return v0
-
-    .line 5077
-    :cond_1
-    instance-of v1, p0, Ljava/util/RandomAccess;
-
-    if-eqz v1, :cond_5
-
-    .line 5091
-    if-nez p1, :cond_3
-
-    .line 5092
+    .line 6988
     invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x1
-
-    :goto_1
-    if-ltz v1, :cond_0
-
-    .line 5093
-    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-nez v2, :cond_2
-
-    move v0, v1
-
-    .line 5094
-    goto :goto_0
-
-    .line 5092
-    :cond_2
-    add-int/lit8 v1, v1, -0x1
-
-    goto :goto_1
-
-    .line 5098
-    :cond_3
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x1
-
-    :goto_2
-    if-ltz v1, :cond_0
-
-    .line 5099
-    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {p1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    move v0, v1
-
-    .line 5100
-    goto :goto_0
-
-    .line 5098
-    :cond_4
-    add-int/lit8 v1, v1, -0x1
-
-    goto :goto_2
-
-    .line 5080
-    :cond_5
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    invoke-interface {p0, v1}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
-
-    move-result-object v1
-
-    .line 5081
-    :cond_6
-    invoke-interface {v1}, Ljava/util/ListIterator;->hasPrevious()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 5082
-    invoke-interface {v1}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-static {p1, v2}, Lcom/google/common/base/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_6
-
-    .line 5083
-    invoke-interface {v1}, Ljava/util/ListIterator;->nextIndex()I
 
     move-result v0
 
+    invoke-interface {p0, v0}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
+
+    move-result-object v0
+
+    .line 6989
+    :cond_0
+    invoke-interface {v0}, Ljava/util/ListIterator;->hasPrevious()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 6990
+    invoke-interface {v0}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {p1, v1}, Lcom/google/common/base/g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 6991
+    invoke-interface {v0}, Ljava/util/ListIterator;->nextIndex()I
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    .line 6994
+    :cond_1
+    const/4 v0, -0x1
+
+    .line 363
     goto :goto_0
 .end method
 
@@ -1143,15 +950,15 @@
     .locals 1
 
     .prologue
-    .line 52
-    .line 8356
+    .line 61
+    .line 8344
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/google/common/collect/ImmutableList;->a(I)Lcom/google/common/collect/t;
+    invoke-virtual {p0, v0}, Lcom/google/common/collect/ImmutableList;->a(I)Lcom/google/common/collect/y;
 
     move-result-object v0
 
-    .line 52
+    .line 61
     return-object v0
 .end method
 
@@ -1159,8 +966,8 @@
     .locals 1
 
     .prologue
-    .line 52
-    invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableList;->a(I)Lcom/google/common/collect/t;
+    .line 61
+    invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableList;->a(I)Lcom/google/common/collect/y;
 
     move-result-object v0
 
@@ -1169,9 +976,6 @@
 
 .method public final remove(I)Ljava/lang/Object;
     .locals 1
-    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)TE;"
@@ -1182,7 +986,7 @@
     .end annotation
 
     .prologue
-    .line 494
+    .line 479
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -1192,9 +996,6 @@
 
 .method public final set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ITE;)TE;"
@@ -1205,7 +1006,7 @@
     .end annotation
 
     .prologue
-    .line 469
+    .line 455
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -1217,7 +1018,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 61
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/ImmutableList;->a(II)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v0
@@ -1229,7 +1030,7 @@
     .locals 2
 
     .prologue
-    .line 631
+    .line 603
     new-instance v0, Lcom/google/common/collect/ImmutableList$SerializedForm;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableList;->toArray()[Ljava/lang/Object;

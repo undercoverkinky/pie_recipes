@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 406
+    .line 346
     iput-object p1, p0, Lkik/android/chat/KikApplication$12;->a:Lkik/android/chat/KikApplication;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,12 +50,12 @@
     .locals 0
 
     .prologue
-    .line 406
+    .line 346
     check-cast p2, Lcom/kik/cards/util/a$a;
 
-    .line 1411
+    .line 1351
     invoke-virtual {p2}, Lcom/kik/cards/util/a$a;->a()V
 
-    .line 406
+    .line 346
     return-void
 .end method

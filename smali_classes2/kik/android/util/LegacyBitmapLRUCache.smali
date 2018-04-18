@@ -24,16 +24,18 @@
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 5
+.method public constructor <init>()V
+    .locals 6
 
     .prologue
+    const/16 v5, 0xf
+
     const/4 v4, 0x1
 
     .line 15
     const/16 v0, 0xa
 
-    invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
+    invoke-static {v5, v0}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
@@ -52,17 +54,8 @@
     .line 11
     iput-boolean v4, p0, Lkik/android/util/LegacyBitmapLRUCache;->_limitedCache:Z
 
-    .line 16
-    if-gtz p1, :cond_0
-
-    .line 17
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lkik/android/util/LegacyBitmapLRUCache;->_limitedCache:Z
-
     .line 19
-    :cond_0
-    iput p1, p0, Lkik/android/util/LegacyBitmapLRUCache;->_maxSize:I
+    iput v5, p0, Lkik/android/util/LegacyBitmapLRUCache;->_maxSize:I
 
     .line 20
     return-void

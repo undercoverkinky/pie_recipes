@@ -1,47 +1,31 @@
-.class public abstract Lcom/google/common/collect/s;
+.class interface abstract Lcom/google/common/collect/s;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Iterator;
+.implements Ljava/lang/Iterable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "<E:",
+        "<T:",
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Ljava/util/Iterator",
-        "<TE;>;"
+        "Ljava/lang/Iterable",
+        "<TT;>;"
     }
 .end annotation
 
 
-# direct methods
-.method protected constructor <init>()V
-    .locals 0
-
-    .prologue
-    .line 35
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final remove()V
-    .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
+.method public abstract comparator()Ljava/util/Comparator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Comparator",
+            "<-TT;>;"
+        }
     .end annotation
-
-    .prologue
-    .line 46
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
 .end method

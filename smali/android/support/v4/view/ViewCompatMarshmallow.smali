@@ -3,18 +3,12 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x17
-.end annotation
-
-
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 25
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +18,7 @@
     .locals 1
 
     .prologue
-    .line 35
+    .line 31
     invoke-virtual {p0}, Landroid/view/View;->getScrollIndicators()I
 
     move-result v0
@@ -36,10 +30,10 @@
     .locals 0
 
     .prologue
-    .line 43
+    .line 39
     invoke-virtual {p0, p1}, Landroid/view/View;->offsetLeftAndRight(I)V
 
-    .line 44
+    .line 40
     return-void
 .end method
 
@@ -47,10 +41,10 @@
     .locals 0
 
     .prologue
-    .line 39
+    .line 35
     invoke-virtual {p0, p1}, Landroid/view/View;->offsetTopAndBottom(I)V
 
-    .line 40
+    .line 36
     return-void
 .end method
 
@@ -58,10 +52,10 @@
     .locals 0
 
     .prologue
-    .line 27
+    .line 23
     invoke-virtual {p0, p1}, Landroid/view/View;->setScrollIndicators(I)V
 
-    .line 28
+    .line 24
     return-void
 .end method
 
@@ -69,9 +63,9 @@
     .locals 0
 
     .prologue
-    .line 31
+    .line 27
     invoke-virtual {p0, p1, p2}, Landroid/view/View;->setScrollIndicators(II)V
 
-    .line 32
+    .line 28
     return-void
 .end method

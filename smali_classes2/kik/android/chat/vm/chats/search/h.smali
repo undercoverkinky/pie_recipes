@@ -7,5 +7,5 @@
 
 
 # virtual methods
-.method public abstract ab_()Z
+.method public abstract L_()Z
 .end method

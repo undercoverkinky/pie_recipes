@@ -71,7 +71,7 @@
 
     const/4 v2, 0x0
 
-    .line 53
+    .line 51
     new-instance v0, Lbutterknife/OnTextChanged$Callback;
 
     const-string v1, "TEXT_CHANGED"
@@ -80,7 +80,7 @@
 
     sput-object v0, Lbutterknife/OnTextChanged$Callback;->TEXT_CHANGED:Lbutterknife/OnTextChanged$Callback;
 
-    .line 65
+    .line 63
     new-instance v0, Lbutterknife/OnTextChanged$Callback;
 
     const-string v1, "BEFORE_TEXT_CHANGED"
@@ -89,7 +89,7 @@
 
     sput-object v0, Lbutterknife/OnTextChanged$Callback;->BEFORE_TEXT_CHANGED:Lbutterknife/OnTextChanged$Callback;
 
-    .line 77
+    .line 75
     new-instance v0, Lbutterknife/OnTextChanged$Callback;
 
     const-string v1, "AFTER_TEXT_CHANGED"
@@ -98,7 +98,7 @@
 
     sput-object v0, Lbutterknife/OnTextChanged$Callback;->AFTER_TEXT_CHANGED:Lbutterknife/OnTextChanged$Callback;
 
-    .line 51
+    .line 49
     const/4 v0, 0x3
 
     new-array v0, v0, [Lbutterknife/OnTextChanged$Callback;
@@ -129,7 +129,7 @@
     .end annotation
 
     .prologue
-    .line 51
+    .line 49
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -139,7 +139,7 @@
     .locals 1
 
     .prologue
-    .line 51
+    .line 49
     const-class v0, Lbutterknife/OnTextChanged$Callback;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -155,7 +155,7 @@
     .locals 1
 
     .prologue
-    .line 51
+    .line 49
     sget-object v0, Lbutterknife/OnTextChanged$Callback;->$VALUES:[Lbutterknife/OnTextChanged$Callback;
 
     invoke-virtual {v0}, [Lbutterknife/OnTextChanged$Callback;->clone()Ljava/lang/Object;

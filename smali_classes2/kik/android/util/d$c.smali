@@ -23,13 +23,13 @@
     .locals 0
 
     .prologue
-    .line 467
+    .line 469
     iput-object p1, p0, Lkik/android/util/d$c;->a:Lkik/android/util/d;
 
-    .line 468
+    .line 470
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 469
+    .line 471
     return-void
 .end method
 
@@ -43,66 +43,66 @@
 
     const/4 v2, 0x2
 
-    .line 474
+    .line 476
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 475
+    .line 477
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 498
+    .line 500
     :goto_0
     return-void
 
-    .line 479
+    .line 481
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     invoke-virtual {p0, v3, v0}, Lkik/android/util/d$c;->removeMessages(ILjava/lang/Object;)V
 
-    .line 480
+    .line 482
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     invoke-virtual {p0, v2, v0}, Lkik/android/util/d$c;->removeMessages(ILjava/lang/Object;)V
 
-    .line 481
+    .line 483
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lkik/android/util/d$a;
 
-    .line 482
+    .line 484
     iget-object v1, p0, Lkik/android/util/d$c;->a:Lkik/android/util/d;
 
     invoke-static {v1, v0, v3}, Lkik/android/util/d;->a(Lkik/android/util/d;Lkik/android/util/d$a;I)V
 
     goto :goto_0
 
-    .line 487
+    .line 489
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     invoke-virtual {p0, v2, v0}, Lkik/android/util/d$c;->removeMessages(ILjava/lang/Object;)V
 
-    .line 488
+    .line 490
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lkik/android/util/d$a;
 
-    .line 489
+    .line 491
     iget-object v1, p0, Lkik/android/util/d$c;->a:Lkik/android/util/d;
 
     invoke-static {v1, v0, v2}, Lkik/android/util/d;->a(Lkik/android/util/d;Lkik/android/util/d$a;I)V
 
     goto :goto_0
 
-    .line 492
+    .line 494
     :pswitch_2
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lkik/android/util/d$d;
 
-    .line 493
+    .line 495
     iget-object v1, p0, Lkik/android/util/d$c;->a:Lkik/android/util/d;
 
     invoke-static {v0}, Lkik/android/util/d$d;->a(Lkik/android/util/d$d;)Ljava/lang/String;
@@ -111,13 +111,17 @@
 
     invoke-static {v0}, Lkik/android/util/d$d;->b(Lkik/android/util/d$d;)Ljava/lang/String;
 
+    move-result-object v3
+
+    invoke-static {v0}, Lkik/android/util/d$d;->c(Lkik/android/util/d$d;)[B
+
     move-result-object v0
 
-    invoke-static {v1, v2, v0}, Lkik/android/util/d;->a(Lkik/android/util/d;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3, v0}, Lkik/android/util/d;->a(Lkik/android/util/d;Ljava/lang/String;Ljava/lang/String;[B)V
 
     goto :goto_0
 
-    .line 475
+    .line 477
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 1694
+    .line 1626
     invoke-direct {p0}, Lcom/kik/ui/fragment/FragmentBase$FragmentBundle;-><init>()V
 
     return-void
@@ -29,8 +29,8 @@
     .locals 2
 
     .prologue
-    .line 1694
-    .line 2812
+    .line 1626
+    .line 2744
     const-string v0, "convos.show.abm.reminder"
 
     const/4 v1, 0x0
@@ -43,7 +43,7 @@
 
     move-result v0
 
-    .line 1694
+    .line 1626
     return v0
 .end method
 
@@ -51,8 +51,8 @@
     .locals 2
 
     .prologue
-    .line 1694
-    .line 3785
+    .line 1626
+    .line 3717
     const-string v0, "ORIGIN"
 
     const-string v1, "differential"
@@ -61,7 +61,7 @@
 
     move-result-object v0
 
-    .line 1694
+    .line 1626
     return-object v0
 .end method
 
@@ -69,8 +69,8 @@
     .locals 2
 
     .prologue
-    .line 1694
-    .line 3801
+    .line 1626
+    .line 3733
     const-string v0, "HASHTAG_GROUP_ERROR"
 
     const/4 v1, 0x0
@@ -83,7 +83,7 @@
 
     move-result v0
 
-    .line 1694
+    .line 1626
     return v0
 .end method
 
@@ -91,15 +91,15 @@
     .locals 1
 
     .prologue
-    .line 1694
-    .line 4774
+    .line 1626
+    .line 4706
     const-string v0, "convos.push.card.url"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikConversationsFragment$a;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikConversationsFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1694
+    .line 1626
     return-object v0
 .end method
 
@@ -107,15 +107,15 @@
     .locals 1
 
     .prologue
-    .line 1694
-    .line 5741
+    .line 1626
+    .line 5673
     const-string v0, "convos.video.download"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikConversationsFragment$a;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikConversationsFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1694
+    .line 1626
     return-object v0
 .end method
 
@@ -123,11 +123,11 @@
     .locals 1
 
     .prologue
-    .line 1694
-    .line 6730
+    .line 1626
+    .line 6662
     const-string v0, "convos.pick.contact"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikConversationsFragment$a;->g(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikConversationsFragment$a;->k(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -135,7 +135,7 @@
 
     move-result v0
 
-    .line 1694
+    .line 1626
     return v0
 .end method
 
@@ -145,12 +145,12 @@
     .locals 1
 
     .prologue
-    .line 1746
+    .line 1678
     const-string v0, "convos.video.download"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikConversationsFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1747
+    .line 1679
     return-object p0
 .end method
 
@@ -158,12 +158,12 @@
     .locals 1
 
     .prologue
-    .line 1714
+    .line 1646
     const-string v0, "convos.has.xdata"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikConversationsFragment$a;->b(Ljava/lang/String;Z)V
 
-    .line 1715
+    .line 1647
     return-object p0
 .end method
 
@@ -171,7 +171,7 @@
     .locals 1
 
     .prologue
-    .line 1725
+    .line 1657
     const-string v0, "login"
 
     invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikConversationsFragment$a;->c(Ljava/lang/String;)Lkik/android/chat/fragment/KikConversationsFragment$a;
@@ -185,12 +185,12 @@
     .locals 1
 
     .prologue
-    .line 1779
+    .line 1711
     const-string v0, "convos.push.card.url"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikConversationsFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1780
+    .line 1712
     return-object p0
 .end method
 
@@ -198,12 +198,12 @@
     .locals 1
 
     .prologue
-    .line 1806
+    .line 1738
     const-string v0, "HASHTAG_GROUP_ERROR"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikConversationsFragment$a;->b(Ljava/lang/String;Z)V
 
-    .line 1807
+    .line 1739
     return-object p0
 .end method
 
@@ -211,14 +211,14 @@
     .locals 2
 
     .prologue
-    .line 1735
+    .line 1667
     const-string v0, "convos.pick.contact"
 
     const/4 v1, 0x1
 
     invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/KikConversationsFragment$a;->b(Ljava/lang/String;Z)V
 
-    .line 1736
+    .line 1668
     return-object p0
 .end method
 
@@ -226,12 +226,12 @@
     .locals 1
 
     .prologue
-    .line 1790
+    .line 1722
     const-string v0, "ORIGIN"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikConversationsFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1791
+    .line 1723
     return-object p0
 .end method
 
@@ -239,13 +239,13 @@
     .locals 2
 
     .prologue
-    .line 1817
+    .line 1749
     const-string v0, "convos.show.abm.reminder"
 
     const/4 v1, 0x1
 
     invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/KikConversationsFragment$a;->b(Ljava/lang/String;Z)V
 
-    .line 1818
+    .line 1750
     return-object p0
 .end method

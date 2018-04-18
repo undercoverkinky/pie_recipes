@@ -45,7 +45,7 @@
     .locals 3
 
     .prologue
-    .line 217
+    .line 211
     invoke-static {}, Lcom/rounds/kik/VideoAppModule;->context()Landroid/content/Context;
 
     move-result-object v0
@@ -64,7 +64,7 @@
 
     invoke-static {v0, v1}, Lcom/rounds/kik/analytics/Reporter;->report(Landroid/content/Context;Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;)V
 
-    .line 218
+    .line 212
     return-void
 .end method
 
@@ -72,7 +72,7 @@
     .locals 3
 
     .prologue
-    .line 222
+    .line 216
     invoke-static {}, Lcom/rounds/kik/VideoAppModule;->context()Landroid/content/Context;
 
     move-result-object v0
@@ -91,7 +91,7 @@
 
     invoke-static {v0, v1}, Lcom/rounds/kik/analytics/Reporter;->report(Landroid/content/Context;Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;)V
 
-    .line 223
+    .line 217
     return-void
 .end method
 
@@ -112,12 +112,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 227
+    .line 221
     invoke-static {}, Lcom/rounds/kik/conference/ConferenceManager;->currentInfo()Lcom/rounds/kik/conference/Conference$Info;
 
     move-result-object v1
 
-    .line 228
+    .line 222
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Lcom/rounds/kik/conference/Conference$Info;->id()Ljava/lang/String;
@@ -126,7 +126,7 @@
 
     move-object v3, v1
 
-    .line 229
+    .line 223
     :goto_0
     if-eqz p1, :cond_1
 
@@ -134,7 +134,7 @@
 
     move-object v2, v0
 
-    .line 230
+    .line 224
     :goto_1
     if-eqz p1, :cond_2
 
@@ -144,7 +144,7 @@
 
     move v1, v0
 
-    .line 231
+    .line 225
     :goto_2
     invoke-static {}, Lcom/rounds/kik/VideoAppModule;->context()Landroid/content/Context;
 
@@ -166,22 +166,22 @@
 
     invoke-static {v4, v0}, Lcom/rounds/kik/analytics/Reporter;->report(Landroid/content/Context;Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;)V
 
-    .line 232
+    .line 226
     return-void
 
     :cond_0
     move-object v3, v0
 
-    .line 228
+    .line 222
     goto :goto_0
 
     :cond_1
     move-object v2, v0
 
-    .line 229
+    .line 223
     goto :goto_1
 
-    .line 230
+    .line 224
     :cond_2
     const/4 v0, 0x0
 
@@ -196,7 +196,7 @@
     .locals 3
 
     .prologue
-    .line 128
+    .line 122
     invoke-static {}, Lcom/rounds/kik/VideoAppModule;->context()Landroid/content/Context;
 
     move-result-object v0
@@ -229,7 +229,7 @@
 
     invoke-static {v0, v1}, Lcom/rounds/kik/analytics/Reporter;->report(Landroid/content/Context;Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;)V
 
-    .line 129
+    .line 123
     return-void
 .end method
 
@@ -249,7 +249,7 @@
     .locals 3
 
     .prologue
-    .line 134
+    .line 128
     invoke-static {}, Lcom/rounds/kik/VideoAppModule;->context()Landroid/content/Context;
 
     move-result-object v0
@@ -282,7 +282,7 @@
 
     invoke-static {v0, v1}, Lcom/rounds/kik/analytics/Reporter;->report(Landroid/content/Context;Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;)V
 
-    .line 135
+    .line 129
     return-void
 .end method
 
@@ -393,7 +393,7 @@
     .locals 1
 
     .prologue
-    .line 170
+    .line 164
     sget-object v0, Lcom/rounds/kik/analytics/group/conference/MediaServerEvents;->VIDEOCHAT_NETWORKERROR_DISMISS:Lcom/rounds/kik/analytics/group/conference/MediaServerEvents;
 
     invoke-virtual {v0}, Lcom/rounds/kik/analytics/group/conference/MediaServerEvents;->builder()Lcom/rounds/kik/analytics/group/conference/MediaServerEvents$Builder;
@@ -402,7 +402,7 @@
 
     invoke-static {v0, p1}, Lcom/rounds/kik/analytics/ReporterProxy;->reportEvent(Lcom/rounds/kik/analytics/group/conference/ConferenceEvents$Builder;Lcom/rounds/kik/Conversation;)V
 
-    .line 171
+    .line 165
     return-void
 .end method
 
@@ -422,7 +422,7 @@
     .locals 1
 
     .prologue
-    .line 176
+    .line 170
     sget-object v0, Lcom/rounds/kik/analytics/group/conference/MediaServerEvents;->VIDEOCHAT_NETWORKERROR_SHOW:Lcom/rounds/kik/analytics/group/conference/MediaServerEvents;
 
     invoke-virtual {v0}, Lcom/rounds/kik/analytics/group/conference/MediaServerEvents;->builder()Lcom/rounds/kik/analytics/group/conference/MediaServerEvents$Builder;
@@ -431,7 +431,7 @@
 
     invoke-static {v0, p1}, Lcom/rounds/kik/analytics/ReporterProxy;->reportEvent(Lcom/rounds/kik/analytics/group/conference/ConferenceEvents$Builder;Lcom/rounds/kik/Conversation;)V
 
-    .line 177
+    .line 171
     return-void
 .end method
 
@@ -451,7 +451,7 @@
     .locals 1
 
     .prologue
-    .line 164
+    .line 158
     sget-object v0, Lcom/rounds/kik/analytics/group/conference/MediaServerEvents;->VIDEOCHAT_NETWORKERROR_TAP:Lcom/rounds/kik/analytics/group/conference/MediaServerEvents;
 
     invoke-virtual {v0}, Lcom/rounds/kik/analytics/group/conference/MediaServerEvents;->builder()Lcom/rounds/kik/analytics/group/conference/MediaServerEvents$Builder;
@@ -460,7 +460,7 @@
 
     invoke-static {v0, p1}, Lcom/rounds/kik/analytics/ReporterProxy;->reportEvent(Lcom/rounds/kik/analytics/group/conference/ConferenceEvents$Builder;Lcom/rounds/kik/Conversation;)V
 
-    .line 165
+    .line 159
     return-void
 .end method
 
@@ -480,21 +480,8 @@
     .locals 1
 
     .prologue
-    .line 212
-    sget-object v0, Lcom/rounds/kik/analytics/group/conference/GroupWithPermissionTypeEvents;->VIDEOCHAT_PERMISSIONS_CANCEL:Lcom/rounds/kik/analytics/group/conference/GroupWithPermissionTypeEvents;
-
-    invoke-direct {p0, v0, p1}, Lcom/rounds/kik/analytics/ReporterProxy;->onPermissionsDialogEvent(Lcom/rounds/kik/analytics/group/conference/GroupWithPermissionTypeEvents;Lcom/rounds/kik/analytics/IReporterProxy$VideoPermissionType;)V
-
-    .line 213
-    return-void
-.end method
-
-.method public onPermissionsDialogSettingsTap(Lcom/rounds/kik/analytics/IReporterProxy$VideoPermissionType;)V
-    .locals 1
-
-    .prologue
     .line 206
-    sget-object v0, Lcom/rounds/kik/analytics/group/conference/GroupWithPermissionTypeEvents;->VIDEOCHAT_PERMISSIONS_SETTINGS:Lcom/rounds/kik/analytics/group/conference/GroupWithPermissionTypeEvents;
+    sget-object v0, Lcom/rounds/kik/analytics/group/conference/GroupWithPermissionTypeEvents;->VIDEOCHAT_PERMISSIONS_CANCEL:Lcom/rounds/kik/analytics/group/conference/GroupWithPermissionTypeEvents;
 
     invoke-direct {p0, v0, p1}, Lcom/rounds/kik/analytics/ReporterProxy;->onPermissionsDialogEvent(Lcom/rounds/kik/analytics/group/conference/GroupWithPermissionTypeEvents;Lcom/rounds/kik/analytics/IReporterProxy$VideoPermissionType;)V
 
@@ -502,12 +489,12 @@
     return-void
 .end method
 
-.method public onPermissionsDialogShow(Lcom/rounds/kik/analytics/IReporterProxy$VideoPermissionType;)V
+.method public onPermissionsDialogSettingsTap(Lcom/rounds/kik/analytics/IReporterProxy$VideoPermissionType;)V
     .locals 1
 
     .prologue
     .line 200
-    sget-object v0, Lcom/rounds/kik/analytics/group/conference/GroupWithPermissionTypeEvents;->VIDEOCHAT_PERMISSIONS_SHOW:Lcom/rounds/kik/analytics/group/conference/GroupWithPermissionTypeEvents;
+    sget-object v0, Lcom/rounds/kik/analytics/group/conference/GroupWithPermissionTypeEvents;->VIDEOCHAT_PERMISSIONS_SETTINGS:Lcom/rounds/kik/analytics/group/conference/GroupWithPermissionTypeEvents;
 
     invoke-direct {p0, v0, p1}, Lcom/rounds/kik/analytics/ReporterProxy;->onPermissionsDialogEvent(Lcom/rounds/kik/analytics/group/conference/GroupWithPermissionTypeEvents;Lcom/rounds/kik/analytics/IReporterProxy$VideoPermissionType;)V
 
@@ -515,11 +502,24 @@
     return-void
 .end method
 
+.method public onPermissionsDialogShow(Lcom/rounds/kik/analytics/IReporterProxy$VideoPermissionType;)V
+    .locals 1
+
+    .prologue
+    .line 194
+    sget-object v0, Lcom/rounds/kik/analytics/group/conference/GroupWithPermissionTypeEvents;->VIDEOCHAT_PERMISSIONS_SHOW:Lcom/rounds/kik/analytics/group/conference/GroupWithPermissionTypeEvents;
+
+    invoke-direct {p0, v0, p1}, Lcom/rounds/kik/analytics/ReporterProxy;->onPermissionsDialogEvent(Lcom/rounds/kik/analytics/group/conference/GroupWithPermissionTypeEvents;Lcom/rounds/kik/analytics/IReporterProxy$VideoPermissionType;)V
+
+    .line 195
+    return-void
+.end method
+
 .method public onProfileTapDialogCancel(Lcom/rounds/kik/Conversation;)V
     .locals 3
 
     .prologue
-    .line 152
+    .line 146
     invoke-static {}, Lcom/rounds/kik/VideoAppModule;->context()Landroid/content/Context;
 
     move-result-object v0
@@ -552,7 +552,7 @@
 
     invoke-static {v0, v1}, Lcom/rounds/kik/analytics/Reporter;->report(Landroid/content/Context;Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;)V
 
-    .line 153
+    .line 147
     return-void
 .end method
 
@@ -572,7 +572,7 @@
     .locals 3
 
     .prologue
-    .line 140
+    .line 134
     invoke-static {}, Lcom/rounds/kik/VideoAppModule;->context()Landroid/content/Context;
 
     move-result-object v0
@@ -605,7 +605,7 @@
 
     invoke-static {v0, v1}, Lcom/rounds/kik/analytics/Reporter;->report(Landroid/content/Context;Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;)V
 
-    .line 141
+    .line 135
     return-void
 .end method
 
@@ -625,7 +625,7 @@
     .locals 3
 
     .prologue
-    .line 146
+    .line 140
     invoke-static {}, Lcom/rounds/kik/VideoAppModule;->context()Landroid/content/Context;
 
     move-result-object v0
@@ -662,7 +662,7 @@
 
     invoke-static {v0, v1}, Lcom/rounds/kik/analytics/Reporter;->report(Landroid/content/Context;Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;)V
 
-    .line 147
+    .line 141
     return-void
 .end method
 
@@ -682,12 +682,12 @@
     .locals 4
 
     .prologue
-    .line 109
+    .line 103
     if-eqz p1, :cond_0
 
     iget-object v0, p1, Lcom/rounds/kik/Conversation;->id:Ljava/lang/String;
 
-    .line 110
+    .line 104
     :goto_0
     invoke-static {}, Lcom/rounds/kik/VideoAppModule;->context()Landroid/content/Context;
 
@@ -721,10 +721,10 @@
 
     invoke-static {v1, v0}, Lcom/rounds/kik/analytics/Reporter;->report(Landroid/content/Context;Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;)V
 
-    .line 111
+    .line 105
     return-void
 
-    .line 109
+    .line 103
     :cond_0
     const/4 v0, 0x0
 
@@ -743,16 +743,16 @@
     return-void
 .end method
 
-.method public onPushDismiss(Lcom/rounds/kik/Conversation;Ljava/lang/String;Ljava/lang/String;Z)V
-    .locals 2
+.method public onPushDismiss(Lcom/rounds/kik/Conversation;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
     .prologue
-    .line 81
+    .line 74
     iget-object v0, p0, Lcom/rounds/kik/analytics/ReporterProxy;->mNotificationHandler:Lcom/rounds/kik/NotificationHandler;
 
     invoke-virtual {v0, p2}, Lcom/rounds/kik/NotificationHandler;->onNotificationDismissed(Ljava/lang/String;)V
 
-    .line 82
+    .line 75
     sget-object v0, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;->PUSHNOTIF_DISSMISS:Lcom/rounds/kik/analytics/group/conference/NotificationEvents;
 
     invoke-virtual {v0}, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;->builder()Lcom/rounds/kik/analytics/group/conference/NotificationEvents$Builder;
@@ -767,65 +767,100 @@
 
     move-result-object v0
 
-    .line 83
-    if-eqz p4, :cond_0
-
-    .line 84
-    sget-object v1, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;->VIDEO_NOTIFICATION_CUSTOM_SOUND_FILE_NAME:Ljava/lang/String;
-
-    invoke-interface {v0, v1}, Lcom/rounds/kik/analytics/group/conference/NotificationEvents$Builder;->notificationSoundFileName(Ljava/lang/String;)Lcom/rounds/kik/analytics/group/conference/NotificationEvents$Builder;
-
-    .line 86
-    :cond_0
     invoke-static {v0, p1}, Lcom/rounds/kik/analytics/ReporterProxy;->reportEvent(Lcom/rounds/kik/analytics/group/conference/ConferenceEvents$Builder;Lcom/rounds/kik/Conversation;)V
 
-    .line 87
+    .line 76
     return-void
 .end method
 
-.method public bridge synthetic onPushDismiss(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Z)V
+.method public bridge synthetic onPushDismiss(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     .prologue
     .line 27
     check-cast p1, Lcom/rounds/kik/Conversation;
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/rounds/kik/analytics/ReporterProxy;->onPushDismiss(Lcom/rounds/kik/Conversation;Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/rounds/kik/analytics/ReporterProxy;->onPushDismiss(Lcom/rounds/kik/Conversation;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public onPushRemoved(Ljava/lang/String;Z)V
+.method public onPushRemoved(Lcom/rounds/kik/Conversation;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
+
+    .prologue
+    .line 95
+    invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 96
+    sget-object v0, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;->PUSHNOTIF_TIMEOUT:Lcom/rounds/kik/analytics/group/conference/NotificationEvents;
+
+    invoke-virtual {v0}, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;->builder()Lcom/rounds/kik/analytics/group/conference/NotificationEvents$Builder;
+
+    move-result-object v0
+
+    invoke-interface {v0, p2}, Lcom/rounds/kik/analytics/group/conference/NotificationEvents$Builder;->notificationType(Ljava/lang/String;)Lcom/rounds/kik/analytics/group/conference/NotificationEvents$Builder;
+
+    move-result-object v0
+
+    invoke-interface {v0, p3}, Lcom/rounds/kik/analytics/group/conference/NotificationEvents$Builder;->notificationId(Ljava/lang/String;)Lcom/rounds/kik/analytics/group/conference/NotificationEvents$Builder;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Lcom/rounds/kik/analytics/ReporterProxy;->reportEvent(Lcom/rounds/kik/analytics/group/conference/ConferenceEvents$Builder;Lcom/rounds/kik/Conversation;)V
+
+    .line 98
+    :cond_0
+    return-void
+.end method
+
+.method public bridge synthetic onPushRemoved(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 27
+    check-cast p1, Lcom/rounds/kik/Conversation;
+
+    invoke-virtual {p0, p1, p2, p3}, Lcom/rounds/kik/analytics/ReporterProxy;->onPushRemoved(Lcom/rounds/kik/Conversation;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public onPushRemoved(Ljava/lang/String;)V
     .locals 3
 
     .prologue
-    .line 93
+    .line 82
     iget-object v0, p0, Lcom/rounds/kik/analytics/ReporterProxy;->mNotificationHandler:Lcom/rounds/kik/NotificationHandler;
 
     invoke-virtual {v0, p1}, Lcom/rounds/kik/NotificationHandler;->getLastNotificationIdShown(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 94
+    .line 83
     iget-object v1, p0, Lcom/rounds/kik/analytics/ReporterProxy;->mNotificationHandler:Lcom/rounds/kik/NotificationHandler;
 
     invoke-virtual {v1, p1}, Lcom/rounds/kik/NotificationHandler;->getLastConversationShown(Ljava/lang/String;)Lcom/rounds/kik/Conversation;
 
     move-result-object v1
 
-    .line 96
+    .line 85
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
-    if-nez v2, :cond_1
+    if-nez v2, :cond_0
 
-    .line 97
+    .line 86
     iget-object v2, p0, Lcom/rounds/kik/analytics/ReporterProxy;->mNotificationHandler:Lcom/rounds/kik/NotificationHandler;
 
     invoke-virtual {v2, p1}, Lcom/rounds/kik/NotificationHandler;->onNotificationDismissed(Ljava/lang/String;)V
 
-    .line 98
+    .line 87
     sget-object v2, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;->PUSHNOTIF_TIMEOUT:Lcom/rounds/kik/analytics/group/conference/NotificationEvents;
 
     invoke-virtual {v2}, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;->builder()Lcom/rounds/kik/analytics/group/conference/NotificationEvents$Builder;
@@ -840,33 +875,23 @@
 
     move-result-object v0
 
-    .line 99
-    if-eqz p2, :cond_0
-
-    .line 100
-    sget-object v2, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;->VIDEO_NOTIFICATION_CUSTOM_SOUND_FILE_NAME:Ljava/lang/String;
-
-    invoke-interface {v0, v2}, Lcom/rounds/kik/analytics/group/conference/NotificationEvents$Builder;->notificationSoundFileName(Ljava/lang/String;)Lcom/rounds/kik/analytics/group/conference/NotificationEvents$Builder;
-
-    .line 102
-    :cond_0
     invoke-static {v0, v1}, Lcom/rounds/kik/analytics/ReporterProxy;->reportEvent(Lcom/rounds/kik/analytics/group/conference/ConferenceEvents$Builder;Lcom/rounds/kik/Conversation;)V
 
-    .line 104
-    :cond_1
+    .line 89
+    :cond_0
     return-void
 .end method
 
-.method public onPushShow(Lcom/rounds/kik/Conversation;Ljava/lang/String;Ljava/lang/String;Z)V
-    .locals 2
+.method public onPushShow(Lcom/rounds/kik/Conversation;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
     .prologue
-    .line 59
+    .line 60
     iget-object v0, p0, Lcom/rounds/kik/analytics/ReporterProxy;->mNotificationHandler:Lcom/rounds/kik/NotificationHandler;
 
     invoke-virtual {v0, p2, p3, p1}, Lcom/rounds/kik/NotificationHandler;->onNotificationShown(Ljava/lang/String;Ljava/lang/String;Lcom/rounds/kik/Conversation;)V
 
-    .line 60
+    .line 61
     sget-object v0, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;->PUSHNOTIF_SHOW:Lcom/rounds/kik/analytics/group/conference/NotificationEvents;
 
     invoke-virtual {v0}, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;->builder()Lcom/rounds/kik/analytics/group/conference/NotificationEvents$Builder;
@@ -881,44 +906,34 @@
 
     move-result-object v0
 
-    .line 61
-    if-eqz p4, :cond_0
-
-    .line 62
-    sget-object v1, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;->VIDEO_NOTIFICATION_CUSTOM_SOUND_FILE_NAME:Ljava/lang/String;
-
-    invoke-interface {v0, v1}, Lcom/rounds/kik/analytics/group/conference/NotificationEvents$Builder;->notificationSoundFileName(Ljava/lang/String;)Lcom/rounds/kik/analytics/group/conference/NotificationEvents$Builder;
-
-    .line 64
-    :cond_0
     invoke-static {v0, p1}, Lcom/rounds/kik/analytics/ReporterProxy;->reportEvent(Lcom/rounds/kik/analytics/group/conference/ConferenceEvents$Builder;Lcom/rounds/kik/Conversation;)V
 
-    .line 65
+    .line 62
     return-void
 .end method
 
-.method public bridge synthetic onPushShow(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Z)V
+.method public bridge synthetic onPushShow(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     .prologue
     .line 27
     check-cast p1, Lcom/rounds/kik/Conversation;
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/rounds/kik/analytics/ReporterProxy;->onPushShow(Lcom/rounds/kik/Conversation;Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/rounds/kik/analytics/ReporterProxy;->onPushShow(Lcom/rounds/kik/Conversation;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public onPushTap(Lcom/rounds/kik/Conversation;Ljava/lang/String;Ljava/lang/String;Z)V
-    .locals 2
+.method public onPushTap(Lcom/rounds/kik/Conversation;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
     .prologue
-    .line 70
+    .line 67
     iget-object v0, p0, Lcom/rounds/kik/analytics/ReporterProxy;->mNotificationHandler:Lcom/rounds/kik/NotificationHandler;
 
     invoke-virtual {v0, p2}, Lcom/rounds/kik/NotificationHandler;->onNotificationDismissed(Ljava/lang/String;)V
 
-    .line 71
+    .line 68
     sget-object v0, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;->PUSHNOTIF_TAP:Lcom/rounds/kik/analytics/group/conference/NotificationEvents;
 
     invoke-virtual {v0}, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;->builder()Lcom/rounds/kik/analytics/group/conference/NotificationEvents$Builder;
@@ -933,30 +948,20 @@
 
     move-result-object v0
 
-    .line 72
-    if-eqz p4, :cond_0
-
-    .line 73
-    sget-object v1, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;->VIDEO_NOTIFICATION_CUSTOM_SOUND_FILE_NAME:Ljava/lang/String;
-
-    invoke-interface {v0, v1}, Lcom/rounds/kik/analytics/group/conference/NotificationEvents$Builder;->notificationSoundFileName(Ljava/lang/String;)Lcom/rounds/kik/analytics/group/conference/NotificationEvents$Builder;
-
-    .line 75
-    :cond_0
     invoke-static {v0, p1}, Lcom/rounds/kik/analytics/ReporterProxy;->reportEvent(Lcom/rounds/kik/analytics/group/conference/ConferenceEvents$Builder;Lcom/rounds/kik/Conversation;)V
 
-    .line 76
+    .line 69
     return-void
 .end method
 
-.method public bridge synthetic onPushTap(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Z)V
+.method public bridge synthetic onPushTap(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     .prologue
     .line 27
     check-cast p1, Lcom/rounds/kik/Conversation;
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/rounds/kik/analytics/ReporterProxy;->onPushTap(Lcom/rounds/kik/Conversation;Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/rounds/kik/analytics/ReporterProxy;->onPushTap(Lcom/rounds/kik/Conversation;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -965,7 +970,7 @@
     .locals 3
 
     .prologue
-    .line 158
+    .line 152
     invoke-static {}, Lcom/rounds/kik/VideoAppModule;->context()Landroid/content/Context;
 
     move-result-object v0
@@ -1002,7 +1007,7 @@
 
     invoke-static {v0, v1}, Lcom/rounds/kik/analytics/Reporter;->report(Landroid/content/Context;Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;)V
 
-    .line 159
+    .line 153
     return-void
 .end method
 
@@ -1022,12 +1027,12 @@
     .locals 1
 
     .prologue
-    .line 182
+    .line 176
     sget-object v0, Lcom/rounds/kik/analytics/group/conference/LeaveChatWithReasonEvents;->VIDEOCHAT_LEAVECHAT_SHOW:Lcom/rounds/kik/analytics/group/conference/LeaveChatWithReasonEvents;
 
     invoke-direct {p0, v0, p1}, Lcom/rounds/kik/analytics/ReporterProxy;->onVideoChatLeaveDialog(Lcom/rounds/kik/analytics/group/conference/LeaveChatWithReasonEvents;Lcom/rounds/kik/conference/LeaveReason;)V
 
-    .line 183
+    .line 177
     return-void
 .end method
 
@@ -1035,21 +1040,8 @@
     .locals 1
 
     .prologue
-    .line 194
-    sget-object v0, Lcom/rounds/kik/analytics/group/conference/LeaveChatWithReasonEvents;->VIDEOCHAT_LEAVECHAT_LEAVE:Lcom/rounds/kik/analytics/group/conference/LeaveChatWithReasonEvents;
-
-    invoke-direct {p0, v0, p1}, Lcom/rounds/kik/analytics/ReporterProxy;->onVideoChatLeaveDialog(Lcom/rounds/kik/analytics/group/conference/LeaveChatWithReasonEvents;Lcom/rounds/kik/conference/LeaveReason;)V
-
-    .line 195
-    return-void
-.end method
-
-.method public onVideoChatLeaveDialogTapStay(Lcom/rounds/kik/conference/LeaveReason;)V
-    .locals 1
-
-    .prologue
     .line 188
-    sget-object v0, Lcom/rounds/kik/analytics/group/conference/LeaveChatWithReasonEvents;->VIDEOCHAT_LEAVECHAT_STAY:Lcom/rounds/kik/analytics/group/conference/LeaveChatWithReasonEvents;
+    sget-object v0, Lcom/rounds/kik/analytics/group/conference/LeaveChatWithReasonEvents;->VIDEOCHAT_LEAVECHAT_LEAVE:Lcom/rounds/kik/analytics/group/conference/LeaveChatWithReasonEvents;
 
     invoke-direct {p0, v0, p1}, Lcom/rounds/kik/analytics/ReporterProxy;->onVideoChatLeaveDialog(Lcom/rounds/kik/analytics/group/conference/LeaveChatWithReasonEvents;Lcom/rounds/kik/conference/LeaveReason;)V
 
@@ -1057,11 +1049,24 @@
     return-void
 .end method
 
+.method public onVideoChatLeaveDialogTapStay(Lcom/rounds/kik/conference/LeaveReason;)V
+    .locals 1
+
+    .prologue
+    .line 182
+    sget-object v0, Lcom/rounds/kik/analytics/group/conference/LeaveChatWithReasonEvents;->VIDEOCHAT_LEAVECHAT_STAY:Lcom/rounds/kik/analytics/group/conference/LeaveChatWithReasonEvents;
+
+    invoke-direct {p0, v0, p1}, Lcom/rounds/kik/analytics/ReporterProxy;->onVideoChatLeaveDialog(Lcom/rounds/kik/analytics/group/conference/LeaveChatWithReasonEvents;Lcom/rounds/kik/conference/LeaveReason;)V
+
+    .line 183
+    return-void
+.end method
+
 .method public tooltipTextInputShown(Lcom/rounds/kik/Conversation;)V
     .locals 3
 
     .prologue
-    .line 122
+    .line 116
     invoke-static {}, Lcom/rounds/kik/VideoAppModule;->context()Landroid/content/Context;
 
     move-result-object v0
@@ -1094,7 +1099,7 @@
 
     invoke-static {v0, v1}, Lcom/rounds/kik/analytics/Reporter;->report(Landroid/content/Context;Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;)V
 
-    .line 123
+    .line 117
     return-void
 .end method
 
@@ -1114,7 +1119,7 @@
     .locals 3
 
     .prologue
-    .line 116
+    .line 110
     invoke-static {}, Lcom/rounds/kik/VideoAppModule;->context()Landroid/content/Context;
 
     move-result-object v0
@@ -1147,7 +1152,7 @@
 
     invoke-static {v0, v1}, Lcom/rounds/kik/analytics/Reporter;->report(Landroid/content/Context;Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;)V
 
-    .line 117
+    .line 111
     return-void
 .end method
 

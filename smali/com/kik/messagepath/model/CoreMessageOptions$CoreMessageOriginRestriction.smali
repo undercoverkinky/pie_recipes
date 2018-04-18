@@ -252,7 +252,6 @@
     .line 138
     invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessageOptions$CoreMessageOriginRestriction;->makeExtensionsImmutable()V
 
-    .line 139
     throw v0
 
     .line 99

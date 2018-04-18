@@ -60,7 +60,7 @@
 
     const/4 v3, 0x0
 
-    .line 25
+    .line 24
     new-instance v0, Lkik/android/gifs/api/GifResponseData$MediaType;
 
     const-string v1, "MP4"
@@ -69,7 +69,7 @@
 
     sput-object v0, Lkik/android/gifs/api/GifResponseData$MediaType;->MP4:Lkik/android/gifs/api/GifResponseData$MediaType;
 
-    .line 26
+    .line 25
     new-instance v0, Lkik/android/gifs/api/GifResponseData$MediaType;
 
     const-string v1, "WebM"
@@ -78,7 +78,7 @@
 
     sput-object v0, Lkik/android/gifs/api/GifResponseData$MediaType;->WebM:Lkik/android/gifs/api/GifResponseData$MediaType;
 
-    .line 27
+    .line 26
     new-instance v0, Lkik/android/gifs/api/GifResponseData$MediaType;
 
     const-string v1, "TinyWebM"
@@ -87,7 +87,7 @@
 
     sput-object v0, Lkik/android/gifs/api/GifResponseData$MediaType;->TinyWebM:Lkik/android/gifs/api/GifResponseData$MediaType;
 
-    .line 28
+    .line 27
     new-instance v0, Lkik/android/gifs/api/GifResponseData$MediaType;
 
     const-string v1, "NanoWebM"
@@ -96,7 +96,7 @@
 
     sput-object v0, Lkik/android/gifs/api/GifResponseData$MediaType;->NanoWebM:Lkik/android/gifs/api/GifResponseData$MediaType;
 
-    .line 29
+    .line 28
     new-instance v0, Lkik/android/gifs/api/GifResponseData$MediaType;
 
     const-string v1, "TinyGif"
@@ -105,7 +105,7 @@
 
     sput-object v0, Lkik/android/gifs/api/GifResponseData$MediaType;->TinyGif:Lkik/android/gifs/api/GifResponseData$MediaType;
 
-    .line 30
+    .line 29
     new-instance v0, Lkik/android/gifs/api/GifResponseData$MediaType;
 
     const-string v1, "NanoGif"
@@ -116,7 +116,7 @@
 
     sput-object v0, Lkik/android/gifs/api/GifResponseData$MediaType;->NanoGif:Lkik/android/gifs/api/GifResponseData$MediaType;
 
-    .line 31
+    .line 30
     new-instance v0, Lkik/android/gifs/api/GifResponseData$MediaType;
 
     const-string v1, "TinyMP4"
@@ -127,7 +127,7 @@
 
     sput-object v0, Lkik/android/gifs/api/GifResponseData$MediaType;->TinyMP4:Lkik/android/gifs/api/GifResponseData$MediaType;
 
-    .line 32
+    .line 31
     new-instance v0, Lkik/android/gifs/api/GifResponseData$MediaType;
 
     const-string v1, "NanoMP4"
@@ -138,7 +138,7 @@
 
     sput-object v0, Lkik/android/gifs/api/GifResponseData$MediaType;->NanoMP4:Lkik/android/gifs/api/GifResponseData$MediaType;
 
-    .line 33
+    .line 32
     new-instance v0, Lkik/android/gifs/api/GifResponseData$MediaType;
 
     const-string v1, "GIF"

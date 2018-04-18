@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/KikIqFragmentBase;->stanzaStateChanged(Lkik/core/net/outgoing/j;I)V
+    value = Lkik/android/chat/fragment/KikIqFragmentBase;->a(Lkik/core/net/outgoing/ae;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -43,7 +43,7 @@
     .line 215
     iget-object v0, p0, Lkik/android/chat/fragment/KikIqFragmentBase$3;->a:Lkik/android/chat/fragment/KikIqFragmentBase;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/KikIqFragmentBase;->showErrorHelper()V
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikIqFragmentBase;->ah()V
 
     .line 216
     return-void

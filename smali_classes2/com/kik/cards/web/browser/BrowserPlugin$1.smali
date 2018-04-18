@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/cards/web/browser/BrowserPlugin;->backKeyPressed()V
+    value = Lcom/kik/cards/web/browser/BrowserPlugin;->a()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -47,7 +47,7 @@
     .line 275
     iget-object v0, p0, Lcom/kik/cards/web/browser/BrowserPlugin$1;->b:Lcom/kik/cards/web/browser/BrowserPlugin;
 
-    invoke-static {v0}, Lcom/kik/cards/web/browser/BrowserPlugin;->access$000(Lcom/kik/cards/web/browser/BrowserPlugin;)Ljava/util/Map;
+    invoke-static {v0}, Lcom/kik/cards/web/browser/BrowserPlugin;->a(Lcom/kik/cards/web/browser/BrowserPlugin;)Ljava/util/Map;
 
     move-result-object v1
 
@@ -57,7 +57,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/kik/cards/web/browser/BrowserPlugin$1;->b:Lcom/kik/cards/web/browser/BrowserPlugin;
 
-    invoke-static {v0}, Lcom/kik/cards/web/browser/BrowserPlugin;->access$000(Lcom/kik/cards/web/browser/BrowserPlugin;)Ljava/util/Map;
+    invoke-static {v0}, Lcom/kik/cards/web/browser/BrowserPlugin;->a(Lcom/kik/cards/web/browser/BrowserPlugin;)Ljava/util/Map;
 
     move-result-object v0
 
@@ -77,17 +77,14 @@
     .line 279
     if-eqz v0, :cond_0
 
-    .line 280
-    invoke-static {}, Lcom/kik/cards/web/browser/BrowserPlugin;->access$100()Lorg/slf4j/b;
-
     .line 281
     iget-object v0, p0, Lcom/kik/cards/web/browser/BrowserPlugin$1;->b:Lcom/kik/cards/web/browser/BrowserPlugin;
 
-    invoke-static {v0}, Lcom/kik/cards/web/browser/BrowserPlugin;->access$200(Lcom/kik/cards/web/browser/BrowserPlugin;)Lcom/kik/cards/web/browser/BrowserPlugin$a;
+    invoke-static {v0}, Lcom/kik/cards/web/browser/BrowserPlugin;->b(Lcom/kik/cards/web/browser/BrowserPlugin;)Lcom/kik/cards/web/browser/BrowserPlugin$a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/kik/cards/web/browser/BrowserPlugin$a;->g()V
+    invoke-interface {v0}, Lcom/kik/cards/web/browser/BrowserPlugin$a;->i()V
 
     .line 283
     :cond_0

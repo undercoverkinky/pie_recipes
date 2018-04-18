@@ -35,14 +35,14 @@
 
 
 # virtual methods
-.method public final a(Lcom/google/gson/e;Lcom/google/gson/b/a;)Lcom/google/gson/o;
+.method public final a(Lcom/google/gson/d;Lcom/google/gson/b/a;)Lcom/google/gson/o;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lcom/google/gson/e;",
+            "Lcom/google/gson/d;",
             "Lcom/google/gson/b/a",
             "<TT;>;)",
             "Lcom/google/gson/o",
@@ -88,7 +88,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/google/gson/e;->a(Lcom/google/gson/b/a;)Lcom/google/gson/o;
+    invoke-virtual {p1, v0}, Lcom/google/gson/d;->a(Lcom/google/gson/b/a;)Lcom/google/gson/o;
 
     move-result-object v2
 
@@ -102,7 +102,7 @@
     .line 57
     new-instance v0, Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory$a;
 
-    invoke-direct {v0, p1, v1, v2, v3}, Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory$a;-><init>(Lcom/google/gson/e;Ljava/lang/reflect/Type;Lcom/google/gson/o;Lcom/google/gson/internal/d;)V
+    invoke-direct {v0, p1, v1, v2, v3}, Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory$a;-><init>(Lcom/google/gson/d;Ljava/lang/reflect/Type;Lcom/google/gson/o;Lcom/google/gson/internal/d;)V
 
     goto :goto_0
 .end method

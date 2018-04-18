@@ -3,16 +3,16 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/android/chat/presentation/bt;
+.implements Lkik/android/chat/presentation/ca;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkik/android/chat/presentation/bt",
+        "Lkik/android/chat/presentation/ca",
         "<",
-        "Lkik/android/chat/view/l;",
+        "Lkik/android/chat/view/d;",
         ">;"
     }
 .end annotation
@@ -25,7 +25,7 @@
 .method public abstract a(Ljava/lang/String;)V
 .end method
 
-.method public abstract a(Lkik/core/datatypes/l;I)V
+.method public abstract a(Lkik/core/datatypes/o;I)V
 .end method
 
 .method public abstract b()V

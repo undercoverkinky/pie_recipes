@@ -30,14 +30,14 @@
 
 
 # virtual methods
-.method public final a(Lcom/google/gson/e;Lcom/google/gson/b/a;)Lcom/google/gson/o;
+.method public final a(Lcom/google/gson/d;Lcom/google/gson/b/a;)Lcom/google/gson/o;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lcom/google/gson/e;",
+            "Lcom/google/gson/d;",
             "Lcom/google/gson/b/a",
             "<TT;>;)",
             "Lcom/google/gson/o",
@@ -58,7 +58,7 @@
     .line 42
     new-instance v0, Lcom/google/gson/internal/bind/e;
 
-    invoke-direct {v0, p1}, Lcom/google/gson/internal/bind/e;-><init>(Lcom/google/gson/e;)V
+    invoke-direct {v0, p1}, Lcom/google/gson/internal/bind/e;-><init>(Lcom/google/gson/d;)V
 
     .line 44
     :goto_0

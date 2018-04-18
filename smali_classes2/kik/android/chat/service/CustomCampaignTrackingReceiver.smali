@@ -105,7 +105,7 @@
     .line 38
     const-string v2, "kik.install_date"
 
-    invoke-static {}, Lkik/core/util/v;->b()J
+    invoke-static {}, Lkik/core/util/x;->b()J
 
     move-result-wide v4
 

@@ -778,7 +778,6 @@
     .line 366
     invoke-virtual {p0, v1}, Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken$Builder;->mergeFrom(Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken;)Lcom/kik/groups/GroupSearchService$PublicGroupJoinToken$Builder;
 
-    .line 368
     :cond_1
     throw v0
 

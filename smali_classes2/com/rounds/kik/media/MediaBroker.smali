@@ -10,8 +10,7 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lcom/rounds/kik/media/MediaBroker$DrawMode;,
-        Lcom/rounds/kik/media/MediaBroker$TextureMode;,
-        Lcom/rounds/kik/media/MediaBroker$AmplifyMode;
+        Lcom/rounds/kik/media/MediaBroker$TextureMode;
     }
 .end annotation
 
@@ -45,31 +44,9 @@
 
 .field public static final DEFAULT_REMOTE_CAMERA_REQUESTED_WIDTH:I = 0x1c0
 
-.field public static final GRID_BLACK_OVERLAY_BG:Ljava/lang/String; = "black_overlay_bg.png"
-
-.field public static final GRID_IN_CALL_ICON_KEY_NAME:Ljava/lang/String; = "in_a_call_fullscreen_icon.png"
-
-.field public static final GRID_MIC_OFF_KEY_NAME:Ljava/lang/String; = "mute_mic.png"
-
-.field public static final GRID_MIC_ON_KEY_NAME:Ljava/lang/String; = "unmute_mic.png"
-
-.field public static final GRID_MUTE_ICON_KEY_NAME:Ljava/lang/String; = "mute_speaker.png"
-
-.field public static final GRID_NO_CAMERA_ICON_KEY_NAME:Ljava/lang/String; = "video_on_bg_fullscreen_icon.png"
-
-.field public static final GRID_NO_INTERNET_FRAME1_KEY_NAME:Ljava/lang/String; = "grid_no_internet1.png"
-
-.field public static final GRID_NO_INTERNET_FRAME2_KEY_NAME:Ljava/lang/String; = "grid_no_internet2.png"
-
-.field public static final GRID_NO_INTERNET_FRAME3_KEY_NAME:Ljava/lang/String; = "grid_no_internet3.png"
-
-.field public static final GRID_NO_INTERNET_FRAME4_KEY_NAME:Ljava/lang/String; = "grid_no_internet4.png"
-
-.field public static final GRID_UNMUTE_ICON_KEY_NAME:Ljava/lang/String; = "unmute_speaker.png"
-
-.field public static final ICON_BACKGROUND_KEY_NAME:Ljava/lang/String; = "mute_icon_shadow_background.png"
-
 .field public static final enum INSTANCE:Lcom/rounds/kik/media/MediaBroker;
+
+.field public static final IN_CALL_ICON_KEY_NAME:Ljava/lang/String; = "inCall_icon.png"
 
 .field private static final LOGGER:Lcom/rounds/kik/logs/VideoLogger;
     .annotation build Landroid/annotation/SuppressLint;
@@ -79,21 +56,19 @@
     .end annotation
 .end field
 
-.field public static final RING_IN_CALL_ICON_KEY_NAME:Ljava/lang/String; = "inCall_icon.png"
+.field public static final MIC_OFF_KEY_NAME:Ljava/lang/String; = "mic_off.png"
 
-.field public static final RING_MIC_OFF_KEY_NAME:Ljava/lang/String; = "mic_off.png"
+.field public static final MUTE_ICON_KEY_NAME:Ljava/lang/String; = "mute_icon.png"
 
-.field public static final RING_MUTE_ICON_KEY_NAME:Ljava/lang/String; = "mute_icon.png"
+.field public static final NO_CAMERA_ICON_KEY_NAME:Ljava/lang/String; = "noCamera_icon.png"
 
-.field public static final RING_NO_CAMERA_ICON_KEY_NAME:Ljava/lang/String; = "noCamera_icon.png"
+.field public static final NO_INTERNET_FRAME1_KEY_NAME:Ljava/lang/String; = "no_internet1.png"
 
-.field public static final RING_NO_INTERNET_FRAME1_KEY_NAME:Ljava/lang/String; = "no_internet1.png"
+.field public static final NO_INTERNET_FRAME2_KEY_NAME:Ljava/lang/String; = "no_internet2.png"
 
-.field public static final RING_NO_INTERNET_FRAME2_KEY_NAME:Ljava/lang/String; = "no_internet2.png"
+.field public static final NO_INTERNET_FRAME3_KEY_NAME:Ljava/lang/String; = "no_internet3.png"
 
-.field public static final RING_NO_INTERNET_FRAME3_KEY_NAME:Ljava/lang/String; = "no_internet3.png"
-
-.field public static final RING_NO_INTERNET_FRAME4_KEY_NAME:Ljava/lang/String; = "no_internet4.png"
+.field public static final NO_INTERNET_FRAME4_KEY_NAME:Ljava/lang/String; = "no_internet4.png"
 
 .field public static final SHADOW_NAME:Ljava/lang/String; = "circle_shadow.png"
 
@@ -109,17 +84,11 @@
 
 .field private mCurrentDrawMode:Lcom/rounds/kik/media/MediaBroker$DrawMode;
 
-.field private mGridMuteIconSize:F
-
-.field private mGridNoCameraInCallIconSize:F
-
-.field private mGridNoInternetIconSize:F
-
 .field private mLmiVideoCapturer:Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerInternal;
 
 .field private mLocalCameraManager:Lcom/rounds/kik/media/video/LocalCameraManager;
 
-.field private mRingMuteIconSize:F
+.field private mMuteIconSize:F
 
 .field private mUserId:Ljava/lang/String;
 
@@ -133,7 +102,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 35
+    .line 33
     new-instance v0, Lcom/rounds/kik/media/MediaBroker;
 
     const-string v1, "INSTANCE"
@@ -142,7 +111,7 @@
 
     sput-object v0, Lcom/rounds/kik/media/MediaBroker;->INSTANCE:Lcom/rounds/kik/media/MediaBroker;
 
-    .line 33
+    .line 31
     const/4 v0, 0x1
 
     new-array v0, v0, [Lcom/rounds/kik/media/MediaBroker;
@@ -153,7 +122,7 @@
 
     sput-object v0, Lcom/rounds/kik/media/MediaBroker;->$VALUES:[Lcom/rounds/kik/media/MediaBroker;
 
-    .line 44
+    .line 42
     const-class v0, Lcom/rounds/kik/media/MediaBroker;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -178,29 +147,20 @@
     .end annotation
 
     .prologue
-    const/4 v0, 0x0
-
-    .line 33
+    .line 31
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 95
-    iput v0, p0, Lcom/rounds/kik/media/MediaBroker;->mRingMuteIconSize:F
+    .line 72
+    const/4 v0, 0x0
 
-    .line 96
-    iput v0, p0, Lcom/rounds/kik/media/MediaBroker;->mGridMuteIconSize:F
+    iput v0, p0, Lcom/rounds/kik/media/MediaBroker;->mMuteIconSize:F
 
-    .line 97
-    iput v0, p0, Lcom/rounds/kik/media/MediaBroker;->mGridNoInternetIconSize:F
-
-    .line 98
-    iput v0, p0, Lcom/rounds/kik/media/MediaBroker;->mGridNoCameraInCallIconSize:F
-
-    .line 105
+    .line 79
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mUserId:Ljava/lang/String;
 
-    .line 143
+    .line 95
     sget-object v0, Lcom/rounds/kik/media/MediaBroker$DrawMode;->JAVA:Lcom/rounds/kik/media/MediaBroker$DrawMode;
 
     iput-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mCurrentDrawMode:Lcom/rounds/kik/media/MediaBroker$DrawMode;
@@ -212,7 +172,7 @@
     .locals 1
 
     .prologue
-    .line 33
+    .line 31
     const-class v0, Lcom/rounds/kik/media/MediaBroker;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -228,7 +188,7 @@
     .locals 1
 
     .prologue
-    .line 33
+    .line 31
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->$VALUES:[Lcom/rounds/kik/media/MediaBroker;
 
     invoke-virtual {v0}, [Lcom/rounds/kik/media/MediaBroker;->clone()Ljava/lang/Object;
@@ -246,7 +206,7 @@
     .locals 3
 
     .prologue
-    .line 460
+    .line 405
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -275,7 +235,7 @@
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 462
+    .line 407
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->INSTANCE:Lcom/rounds/kik/media/MediaBroker;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/MediaBroker;->getSharedContext()Landroid/content/Context;
@@ -284,7 +244,6 @@
 
     sget-object v1, Lcom/rounds/kik/analytics/group/conference/MediaWithParticipant;->CONNECTIVITY_RECEIVED_AUDIO:Lcom/rounds/kik/analytics/group/conference/MediaWithParticipant;
 
-    .line 463
     invoke-virtual {v1}, Lcom/rounds/kik/analytics/group/conference/MediaWithParticipant;->builder()Lcom/rounds/kik/analytics/group/conference/MediaWithParticipant$Builder;
 
     move-result-object v1
@@ -293,17 +252,16 @@
 
     move-result-object v1
 
-    .line 462
     invoke-static {v0, v1}, Lcom/rounds/kik/analytics/Reporter;->report(Landroid/content/Context;Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;)V
 
-    .line 465
+    .line 409
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mVidyoHandler:Lcom/rounds/kik/media/VidyoHandler;
 
     sget-object v1, Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;->REMOTE_MEDIA_RECIEVED:Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/media/VidyoHandler;->changeMediaStatus(Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;)V
 
-    .line 466
+    .line 410
     return-void
 .end method
 
@@ -311,10 +269,10 @@
     .locals 1
 
     .prologue
-    .line 199
+    .line 157
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mLocalCameraManager:Lcom/rounds/kik/media/video/LocalCameraManager;
 
-    invoke-virtual {v0}, Lcom/rounds/kik/media/video/LocalCameraManager;->getCameraPosition()Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
+    invoke-virtual {v0}, Lcom/rounds/kik/media/video/LocalCameraManager;->cameraPosition()Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
 
     move-result-object v0
 
@@ -325,12 +283,12 @@
     .locals 1
 
     .prologue
-    .line 329
+    .line 285
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mLocalCameraManager:Lcom/rounds/kik/media/video/LocalCameraManager;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/video/LocalCameraManager;->cameraClose()V
 
-    .line 330
+    .line 286
     return-void
 .end method
 
@@ -338,29 +296,29 @@
     .locals 4
 
     .prologue
-    .line 210
+    .line 168
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "RoundsService - connectConference()"
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 212
+    .line 170
     iput-object p1, p0, Lcom/rounds/kik/media/MediaBroker;->mConference:Lcom/rounds/kik/conference/Conference;
 
-    .line 213
+    .line 171
     invoke-static {}, Lcom/rounds/kik/VideoAppModule;->conversation()Lcom/rounds/kik/Conversation;
 
     move-result-object v0
 
-    .line 214
+    .line 172
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Lcom/rounds/kik/Conversation;->isMulti()Z
 
     move-result v0
 
-    .line 215
+    .line 173
     :goto_0
     iget-object v1, p0, Lcom/rounds/kik/media/MediaBroker;->mVidyoHandler:Lcom/rounds/kik/media/VidyoHandler;
 
@@ -378,10 +336,10 @@
 
     invoke-virtual {v1, v2, v3, v0}, Lcom/rounds/kik/media/VidyoHandler;->connectConference(Lcom/rounds/kik/conference/ConferenceUri;Ljava/lang/String;Z)V
 
-    .line 216
+    .line 174
     return-void
 
-    .line 214
+    .line 172
     :cond_0
     const/4 v0, 0x0
 
@@ -392,19 +350,19 @@
     .locals 2
 
     .prologue
-    .line 220
+    .line 178
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "MediaBroker - disconnectConference()"
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 221
+    .line 179
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mVidyoHandler:Lcom/rounds/kik/media/VidyoHandler;
 
     invoke-virtual {v0, p1}, Lcom/rounds/kik/media/VidyoHandler;->disconnectConference(Lcom/rounds/kik/conference/Conference;)V
 
-    .line 222
+    .line 180
     return-void
 .end method
 
@@ -412,7 +370,7 @@
     .locals 3
 
     .prologue
-    .line 470
+    .line 414
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -431,36 +389,36 @@
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 472
+    .line 416
     if-eqz p2, :cond_0
 
-    .line 473
+    .line 417
     invoke-static {}, Lcom/rounds/kik/media/NativeRoundsVidyoClient;->NativeClientOnResume()V
 
-    .line 474
+    .line 418
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/opengl/GLSurfaceView;->setRenderMode(I)V
 
-    .line 475
+    .line 419
     sget-object v0, Lcom/rounds/kik/media/MediaBroker$DrawMode;->NATIVE_GL:Lcom/rounds/kik/media/MediaBroker$DrawMode;
 
     iput-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mCurrentDrawMode:Lcom/rounds/kik/media/MediaBroker$DrawMode;
 
-    .line 482
+    .line 426
     :goto_0
     return-void
 
-    .line 478
+    .line 422
     :cond_0
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/opengl/GLSurfaceView;->setRenderMode(I)V
 
-    .line 479
+    .line 423
     invoke-static {}, Lcom/rounds/kik/media/NativeRoundsVidyoClient;->NativeClientOnPause()V
 
-    .line 480
+    .line 424
     sget-object v0, Lcom/rounds/kik/media/MediaBroker$DrawMode;->JAVA:Lcom/rounds/kik/media/MediaBroker$DrawMode;
 
     iput-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mCurrentDrawMode:Lcom/rounds/kik/media/MediaBroker$DrawMode;
@@ -472,19 +430,19 @@
     .locals 1
 
     .prologue
-    .line 308
+    .line 264
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mAudioLogsManager:Lcom/rounds/kik/media/audio/AudioLogsManager;
 
     if-eqz v0, :cond_0
 
-    .line 309
+    .line 265
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mAudioLogsManager:Lcom/rounds/kik/media/audio/AudioLogsManager;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/audio/AudioLogsManager;->getAudioLogs()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 312
+    .line 268
     :goto_0
     return-object v0
 
@@ -498,7 +456,7 @@
     .locals 1
 
     .prologue
-    .line 374
+    .line 330
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mLocalCameraManager:Lcom/rounds/kik/media/video/LocalCameraManager;
 
     invoke-virtual {v0, p1}, Lcom/rounds/kik/media/video/LocalCameraManager;->getBestRangeFPS(I)[I
@@ -512,7 +470,7 @@
     .locals 1
 
     .prologue
-    .line 379
+    .line 335
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mLocalCameraManager:Lcom/rounds/kik/media/video/LocalCameraManager;
 
     invoke-virtual {v0, p1}, Lcom/rounds/kik/media/video/LocalCameraManager;->getBestSize(I)[I
@@ -522,14 +480,14 @@
     return-object v0
 .end method
 
-.method public final getCameraId(Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;)I
+.method public final getCameraId(Z)I
     .locals 1
 
     .prologue
-    .line 334
+    .line 290
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mLocalCameraManager:Lcom/rounds/kik/media/video/LocalCameraManager;
 
-    invoke-virtual {v0, p1}, Lcom/rounds/kik/media/video/LocalCameraManager;->getCameraId(Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;)I
+    invoke-virtual {v0, p1}, Lcom/rounds/kik/media/video/LocalCameraManager;->getCameraId(Z)I
 
     move-result v0
 
@@ -540,7 +498,7 @@
     .locals 1
 
     .prologue
-    .line 354
+    .line 310
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mLocalCameraManager:Lcom/rounds/kik/media/video/LocalCameraManager;
 
     invoke-virtual {v0, p1}, Lcom/rounds/kik/media/video/LocalCameraManager;->getCapabilities(I)[Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerCapability;
@@ -554,7 +512,7 @@
     .locals 1
 
     .prologue
-    .line 153
+    .line 105
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mCurrentDrawMode:Lcom/rounds/kik/media/MediaBroker$DrawMode;
 
     return-object v0
@@ -564,7 +522,7 @@
     .locals 1
 
     .prologue
-    .line 339
+    .line 295
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mLocalCameraManager:Lcom/rounds/kik/media/video/LocalCameraManager;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/video/LocalCameraManager;->getDevices()[Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerDeviceInfo;
@@ -574,41 +532,11 @@
     return-object v0
 .end method
 
-.method public final getGridMuteIconSize()F
-    .locals 1
-
-    .prologue
-    .line 569
-    iget v0, p0, Lcom/rounds/kik/media/MediaBroker;->mGridMuteIconSize:F
-
-    return v0
-.end method
-
-.method public final getGridNoCameraInCallIconSize()F
-    .locals 1
-
-    .prologue
-    .line 580
-    iget v0, p0, Lcom/rounds/kik/media/MediaBroker;->mGridNoCameraInCallIconSize:F
-
-    return v0
-.end method
-
-.method public final getGridNoInternetIconSize()F
-    .locals 1
-
-    .prologue
-    .line 575
-    iget v0, p0, Lcom/rounds/kik/media/MediaBroker;->mGridNoInternetIconSize:F
-
-    return v0
-.end method
-
 .method public final getLmiVideoCapturerInternal()Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerInternal;
     .locals 1
 
     .prologue
-    .line 349
+    .line 305
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mLocalCameraManager:Lcom/rounds/kik/media/video/LocalCameraManager;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/video/LocalCameraManager;->getLmiVideoCapturerInternal()Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerInternal;
@@ -622,19 +550,19 @@
     .locals 1
 
     .prologue
-    .line 298
+    .line 254
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mAudioLogsManager:Lcom/rounds/kik/media/audio/AudioLogsManager;
 
     if-eqz v0, :cond_0
 
-    .line 299
+    .line 255
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mAudioLogsManager:Lcom/rounds/kik/media/audio/AudioLogsManager;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/audio/AudioLogsManager;->getNewAudioLogsBase()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 302
+    .line 258
     :goto_0
     return-object v0
 
@@ -648,7 +576,7 @@
     .locals 1
 
     .prologue
-    .line 344
+    .line 300
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mLocalCameraManager:Lcom/rounds/kik/media/video/LocalCameraManager;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/video/LocalCameraManager;->getNumberOfDevices()I
@@ -662,7 +590,7 @@
     .locals 1
 
     .prologue
-    .line 369
+    .line 325
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mLocalCameraManager:Lcom/rounds/kik/media/video/LocalCameraManager;
 
     invoke-virtual {v0, p1}, Lcom/rounds/kik/media/video/LocalCameraManager;->getOrientation(I)I
@@ -672,21 +600,11 @@
     return v0
 .end method
 
-.method public final getRingMuteIconSize()F
-    .locals 1
-
-    .prologue
-    .line 565
-    iget v0, p0, Lcom/rounds/kik/media/MediaBroker;->mRingMuteIconSize:F
-
-    return v0
-.end method
-
 .method public final getSharedContext()Landroid/content/Context;
     .locals 1
 
     .prologue
-    .line 41
+    .line 39
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -696,17 +614,27 @@
     .locals 1
 
     .prologue
-    .line 168
+    .line 120
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mUserId:Ljava/lang/String;
 
     return-object v0
+.end method
+
+.method public final getmMuteIconSize()F
+    .locals 1
+
+    .prologue
+    .line 487
+    iget v0, p0, Lcom/rounds/kik/media/MediaBroker;->mMuteIconSize:F
+
+    return v0
 .end method
 
 .method public final hasCameraCapabilities()Z
     .locals 1
 
     .prologue
-    .line 359
+    .line 315
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mLocalCameraManager:Lcom/rounds/kik/media/video/LocalCameraManager;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/video/LocalCameraManager;->hasCameraCapabilities()Z
@@ -720,12 +648,12 @@
     .locals 1
 
     .prologue
-    .line 319
+    .line 275
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mLocalCameraManager:Lcom/rounds/kik/media/video/LocalCameraManager;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/video/LocalCameraManager;->cameraInit()V
 
-    .line 320
+    .line 276
     return-void
 .end method
 
@@ -733,7 +661,7 @@
     .locals 3
 
     .prologue
-    .line 274
+    .line 232
     new-instance v0, Landroid/os/HandlerThread;
 
     const-class v1, Lcom/rounds/kik/media/VidyoHandler;
@@ -746,10 +674,10 @@
 
     invoke-direct {v0, v1, v2}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
 
-    .line 276
+    .line 233
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 277
+    .line 234
     new-instance v1, Lcom/rounds/kik/media/VidyoHandler;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -760,7 +688,7 @@
 
     iput-object v1, p0, Lcom/rounds/kik/media/MediaBroker;->mVidyoHandler:Lcom/rounds/kik/media/VidyoHandler;
 
-    .line 280
+    .line 237
     new-instance v0, Lcom/rounds/kik/media/audio/AudioLogsManager;
 
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
@@ -775,7 +703,7 @@
 
     iput-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mAudioLogsManager:Lcom/rounds/kik/media/audio/AudioLogsManager;
 
-    .line 282
+    .line 239
     new-instance v0, Landroid/os/HandlerThread;
 
     const-class v1, Lcom/rounds/kik/media/video/LocalCameraManager;
@@ -786,17 +714,17 @@
 
     invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    .line 283
+    .line 240
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 285
+    .line 242
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mCameraLooper:Landroid/os/Looper;
 
-    .line 287
+    .line 244
     new-instance v0, Lcom/rounds/kik/media/video/LocalCameraManager;
 
     iget-object v1, p0, Lcom/rounds/kik/media/MediaBroker;->mCameraLooper:Landroid/os/Looper;
@@ -805,57 +733,24 @@
 
     iput-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mLocalCameraManager:Lcom/rounds/kik/media/video/LocalCameraManager;
 
-    .line 289
+    .line 246
     iput-object p1, p0, Lcom/rounds/kik/media/MediaBroker;->mContext:Landroid/content/Context;
 
-    .line 291
+    .line 248
     invoke-static {p0}, Lcom/rounds/kik/media/NativeRoundsVidyoClient;->NativeClientRegisterMediaClient(Lcom/rounds/kik/media/NativeRoundsVidyoClient$MediaClient;)V
 
-    .line 292
+    .line 249
     invoke-virtual {p0}, Lcom/rounds/kik/media/MediaBroker;->loadR3DResources()V
 
-    .line 293
-    invoke-static {}, Lcom/rounds/kik/media/MediaBroker$AmplifyMode;->getAmplifyValue()F
-
-    move-result v0
-
-    invoke-static {v0}, Lcom/rounds/kik/media/NativeRoundsVidyoClient;->RSESetEnhancedVolumeDecibels(F)V
-
-    .line 294
+    .line 250
     return-void
-.end method
-
-.method public final isBackCamera()Z
-    .locals 2
-
-    .prologue
-    .line 405
-    iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mLocalCameraManager:Lcom/rounds/kik/media/video/LocalCameraManager;
-
-    invoke-virtual {v0}, Lcom/rounds/kik/media/video/LocalCameraManager;->getCameraPosition()Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;->BACK:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method
 
 .method public final isCameraStarted()Z
     .locals 1
 
     .prologue
-    .line 410
+    .line 356
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mLocalCameraManager:Lcom/rounds/kik/media/video/LocalCameraManager;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/video/LocalCameraManager;->isCameraStarted()Z
@@ -869,7 +764,7 @@
     .locals 1
 
     .prologue
-    .line 364
+    .line 320
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mLocalCameraManager:Lcom/rounds/kik/media/video/LocalCameraManager;
 
     invoke-virtual {v0, p1}, Lcom/rounds/kik/media/video/LocalCameraManager;->isMirrored(I)Z
@@ -885,17 +780,17 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 495
+    .line 439
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 496
+    .line 440
     const/4 v2, 0x0
 
     iput-boolean v2, v0, Landroid/graphics/BitmapFactory$Options;->inScaled:Z
 
-    .line 498
+    .line 442
     iget-object v2, p0, Lcom/rounds/kik/media/MediaBroker;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -906,22 +801,22 @@
 
     move-result-object v2
 
-    .line 499
+    .line 443
     if-nez v2, :cond_0
 
     move v0, v1
 
-    .line 524
+    .line 468
     :goto_0
     return v0
 
-    .line 503
+    .line 447
     :cond_0
     sget-object v0, Lcom/rounds/kik/media/MediaBroker$TextureMode;->BUFFER:Lcom/rounds/kik/media/MediaBroker$TextureMode;
 
     if-ne p3, v0, :cond_2
 
-    .line 504
+    .line 448
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getByteCount()I
 
     move-result v0
@@ -930,26 +825,26 @@
 
     move-result-object v0
 
-    .line 505
+    .line 449
     invoke-virtual {v2, v0}, Landroid/graphics/Bitmap;->copyPixelsToBuffer(Ljava/nio/Buffer;)V
 
-    .line 506
+    .line 450
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v0
 
-    .line 515
+    .line 459
     :goto_1
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
 
-    .line 516
+    .line 460
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v2
 
-    .line 519
+    .line 463
     if-eqz v0, :cond_1
 
     if-eqz v3, :cond_1
@@ -959,30 +854,30 @@
     :cond_1
     move v0, v1
 
-    .line 520
+    .line 464
     goto :goto_0
 
-    .line 509
+    .line 453
     :cond_2
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 510
+    .line 454
     sget-object v3, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
 
     const/16 v4, 0x64
 
     invoke-virtual {v2, v3, v4, v0}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 511
+    .line 455
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v0
 
     goto :goto_1
 
-    .line 523
+    .line 467
     :cond_3
     invoke-static {p2, v0, v3, v2}, Lcom/rounds/kik/media/NativeRoundsVidyoClient;->R3DCreateTexture(Ljava/lang/String;[BII)I
 
@@ -995,7 +890,7 @@
     .locals 3
 
     .prologue
-    .line 529
+    .line 473
     sget v0, Lcom/rounds/kik/R$drawable;->no_camera_icon:I
 
     const-string v1, "noCamera_icon.png"
@@ -1004,34 +899,7 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/rounds/kik/media/MediaBroker;->loadR3DImage(ILjava/lang/String;Lcom/rounds/kik/media/MediaBroker$TextureMode;)I
 
-    .line 530
-    sget v0, Lcom/rounds/kik/R$drawable;->video_on_bg_fullscreen_icon:I
-
-    const-string v1, "video_on_bg_fullscreen_icon.png"
-
-    sget-object v2, Lcom/rounds/kik/media/MediaBroker$TextureMode;->FILE:Lcom/rounds/kik/media/MediaBroker$TextureMode;
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/rounds/kik/media/MediaBroker;->loadR3DImage(ILjava/lang/String;Lcom/rounds/kik/media/MediaBroker$TextureMode;)I
-
-    .line 531
-    sget v0, Lcom/rounds/kik/R$drawable;->in_call:I
-
-    const-string v1, "inCall_icon.png"
-
-    sget-object v2, Lcom/rounds/kik/media/MediaBroker$TextureMode;->FILE:Lcom/rounds/kik/media/MediaBroker$TextureMode;
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/rounds/kik/media/MediaBroker;->loadR3DImage(ILjava/lang/String;Lcom/rounds/kik/media/MediaBroker$TextureMode;)I
-
-    .line 532
-    sget v0, Lcom/rounds/kik/R$drawable;->in_a_call_fullscreen_icon:I
-
-    const-string v1, "in_a_call_fullscreen_icon.png"
-
-    sget-object v2, Lcom/rounds/kik/media/MediaBroker$TextureMode;->FILE:Lcom/rounds/kik/media/MediaBroker$TextureMode;
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/rounds/kik/media/MediaBroker;->loadR3DImage(ILjava/lang/String;Lcom/rounds/kik/media/MediaBroker$TextureMode;)I
-
-    .line 534
+    .line 474
     sget v0, Lcom/rounds/kik/R$drawable;->mute_icon:I
 
     const-string v1, "mute_icon.png"
@@ -1040,7 +908,7 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/rounds/kik/media/MediaBroker;->loadR3DImage(ILjava/lang/String;Lcom/rounds/kik/media/MediaBroker$TextureMode;)I
 
-    .line 535
+    .line 475
     sget v0, Lcom/rounds/kik/R$drawable;->mic_off:I
 
     const-string v1, "mic_off.png"
@@ -1049,7 +917,7 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/rounds/kik/media/MediaBroker;->loadR3DImage(ILjava/lang/String;Lcom/rounds/kik/media/MediaBroker$TextureMode;)I
 
-    .line 536
+    .line 476
     sget v0, Lcom/rounds/kik/R$drawable;->circle_shadow:I
 
     const-string v1, "circle_shadow.png"
@@ -1058,7 +926,16 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/rounds/kik/media/MediaBroker;->loadR3DImage(ILjava/lang/String;Lcom/rounds/kik/media/MediaBroker$TextureMode;)I
 
-    .line 538
+    .line 477
+    sget v0, Lcom/rounds/kik/R$drawable;->in_call:I
+
+    const-string v1, "inCall_icon.png"
+
+    sget-object v2, Lcom/rounds/kik/media/MediaBroker$TextureMode;->FILE:Lcom/rounds/kik/media/MediaBroker$TextureMode;
+
+    invoke-virtual {p0, v0, v1, v2}, Lcom/rounds/kik/media/MediaBroker;->loadR3DImage(ILjava/lang/String;Lcom/rounds/kik/media/MediaBroker$TextureMode;)I
+
+    .line 478
     sget v0, Lcom/rounds/kik/R$drawable;->no_internet1:I
 
     const-string v1, "no_internet1.png"
@@ -1067,7 +944,7 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/rounds/kik/media/MediaBroker;->loadR3DImage(ILjava/lang/String;Lcom/rounds/kik/media/MediaBroker$TextureMode;)I
 
-    .line 539
+    .line 479
     sget v0, Lcom/rounds/kik/R$drawable;->no_internet2:I
 
     const-string v1, "no_internet2.png"
@@ -1076,7 +953,7 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/rounds/kik/media/MediaBroker;->loadR3DImage(ILjava/lang/String;Lcom/rounds/kik/media/MediaBroker$TextureMode;)I
 
-    .line 540
+    .line 480
     sget v0, Lcom/rounds/kik/R$drawable;->no_internet3:I
 
     const-string v1, "no_internet3.png"
@@ -1085,7 +962,7 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/rounds/kik/media/MediaBroker;->loadR3DImage(ILjava/lang/String;Lcom/rounds/kik/media/MediaBroker$TextureMode;)I
 
-    .line 541
+    .line 481
     sget v0, Lcom/rounds/kik/R$drawable;->no_internet4:I
 
     const-string v1, "no_internet4.png"
@@ -1094,157 +971,22 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/rounds/kik/media/MediaBroker;->loadR3DImage(ILjava/lang/String;Lcom/rounds/kik/media/MediaBroker$TextureMode;)I
 
-    .line 542
-    sget v0, Lcom/rounds/kik/R$drawable;->grid_no_internet_1:I
-
-    const-string v1, "grid_no_internet1.png"
-
-    sget-object v2, Lcom/rounds/kik/media/MediaBroker$TextureMode;->FILE:Lcom/rounds/kik/media/MediaBroker$TextureMode;
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/rounds/kik/media/MediaBroker;->loadR3DImage(ILjava/lang/String;Lcom/rounds/kik/media/MediaBroker$TextureMode;)I
-
-    .line 543
-    sget v0, Lcom/rounds/kik/R$drawable;->grid_no_internet_2:I
-
-    const-string v1, "grid_no_internet2.png"
-
-    sget-object v2, Lcom/rounds/kik/media/MediaBroker$TextureMode;->FILE:Lcom/rounds/kik/media/MediaBroker$TextureMode;
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/rounds/kik/media/MediaBroker;->loadR3DImage(ILjava/lang/String;Lcom/rounds/kik/media/MediaBroker$TextureMode;)I
-
-    .line 544
-    sget v0, Lcom/rounds/kik/R$drawable;->grid_no_internet_3:I
-
-    const-string v1, "grid_no_internet3.png"
-
-    sget-object v2, Lcom/rounds/kik/media/MediaBroker$TextureMode;->FILE:Lcom/rounds/kik/media/MediaBroker$TextureMode;
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/rounds/kik/media/MediaBroker;->loadR3DImage(ILjava/lang/String;Lcom/rounds/kik/media/MediaBroker$TextureMode;)I
-
-    .line 545
-    sget v0, Lcom/rounds/kik/R$drawable;->grid_no_internet_4:I
-
-    const-string v1, "grid_no_internet4.png"
-
-    sget-object v2, Lcom/rounds/kik/media/MediaBroker$TextureMode;->FILE:Lcom/rounds/kik/media/MediaBroker$TextureMode;
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/rounds/kik/media/MediaBroker;->loadR3DImage(ILjava/lang/String;Lcom/rounds/kik/media/MediaBroker$TextureMode;)I
-
-    .line 548
-    sget v0, Lcom/rounds/kik/R$drawable;->mute_icon_shadow_background:I
-
-    const-string v1, "mute_icon_shadow_background.png"
-
-    sget-object v2, Lcom/rounds/kik/media/MediaBroker$TextureMode;->FILE:Lcom/rounds/kik/media/MediaBroker$TextureMode;
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/rounds/kik/media/MediaBroker;->loadR3DImage(ILjava/lang/String;Lcom/rounds/kik/media/MediaBroker$TextureMode;)I
-
-    .line 549
-    sget v0, Lcom/rounds/kik/R$drawable;->black_overlay_bg:I
-
-    const-string v1, "black_overlay_bg.png"
-
-    sget-object v2, Lcom/rounds/kik/media/MediaBroker$TextureMode;->FILE:Lcom/rounds/kik/media/MediaBroker$TextureMode;
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/rounds/kik/media/MediaBroker;->loadR3DImage(ILjava/lang/String;Lcom/rounds/kik/media/MediaBroker$TextureMode;)I
-
-    .line 551
-    sget v0, Lcom/rounds/kik/R$drawable;->unmute_speaker:I
-
-    const-string v1, "unmute_speaker.png"
-
-    sget-object v2, Lcom/rounds/kik/media/MediaBroker$TextureMode;->FILE:Lcom/rounds/kik/media/MediaBroker$TextureMode;
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/rounds/kik/media/MediaBroker;->loadR3DImage(ILjava/lang/String;Lcom/rounds/kik/media/MediaBroker$TextureMode;)I
-
-    .line 552
-    sget v0, Lcom/rounds/kik/R$drawable;->muted_speaker:I
-
-    const-string v1, "mute_speaker.png"
-
-    sget-object v2, Lcom/rounds/kik/media/MediaBroker$TextureMode;->FILE:Lcom/rounds/kik/media/MediaBroker$TextureMode;
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/rounds/kik/media/MediaBroker;->loadR3DImage(ILjava/lang/String;Lcom/rounds/kik/media/MediaBroker$TextureMode;)I
-
-    .line 553
-    sget v0, Lcom/rounds/kik/R$drawable;->unmute_mic:I
-
-    const-string v1, "unmute_mic.png"
-
-    sget-object v2, Lcom/rounds/kik/media/MediaBroker$TextureMode;->FILE:Lcom/rounds/kik/media/MediaBroker$TextureMode;
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/rounds/kik/media/MediaBroker;->loadR3DImage(ILjava/lang/String;Lcom/rounds/kik/media/MediaBroker$TextureMode;)I
-
-    .line 554
-    sget v0, Lcom/rounds/kik/R$drawable;->muted_mic:I
-
-    const-string v1, "mute_mic.png"
-
-    sget-object v2, Lcom/rounds/kik/media/MediaBroker$TextureMode;->FILE:Lcom/rounds/kik/media/MediaBroker$TextureMode;
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/rounds/kik/media/MediaBroker;->loadR3DImage(ILjava/lang/String;Lcom/rounds/kik/media/MediaBroker$TextureMode;)I
-
-    .line 557
+    .line 482
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/rounds/kik/R$dimen;->ring_mute_icon_size:I
+    sget v1, Lcom/rounds/kik/R$dimen;->mute_icon_size:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v0
 
-    iput v0, p0, Lcom/rounds/kik/media/MediaBroker;->mRingMuteIconSize:F
+    iput v0, p0, Lcom/rounds/kik/media/MediaBroker;->mMuteIconSize:F
 
-    .line 558
-    iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    sget v1, Lcom/rounds/kik/R$dimen;->grid_mute_icon_size:I
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
-
-    move-result v0
-
-    iput v0, p0, Lcom/rounds/kik/media/MediaBroker;->mGridMuteIconSize:F
-
-    .line 559
-    iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    sget v1, Lcom/rounds/kik/R$dimen;->grid_no_internet_icon_size:I
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
-
-    move-result v0
-
-    iput v0, p0, Lcom/rounds/kik/media/MediaBroker;->mGridNoInternetIconSize:F
-
-    .line 560
-    iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    sget v1, Lcom/rounds/kik/R$dimen;->grid_noCamera_inCall_icon_size:I
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
-
-    move-result v0
-
-    iput v0, p0, Lcom/rounds/kik/media/MediaBroker;->mGridNoCameraInCallIconSize:F
-
-    .line 561
+    .line 483
     return-void
 .end method
 
@@ -1252,12 +994,12 @@
     .locals 1
 
     .prologue
-    .line 395
+    .line 351
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mLocalCameraManager:Lcom/rounds/kik/media/video/LocalCameraManager;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/video/LocalCameraManager;->cameraStopPreview()V
 
-    .line 396
+    .line 352
     return-void
 .end method
 
@@ -1265,12 +1007,12 @@
     .locals 1
 
     .prologue
-    .line 324
+    .line 280
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mLocalCameraManager:Lcom/rounds/kik/media/video/LocalCameraManager;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/video/LocalCameraManager;->cameraOpen()V
 
-    .line 325
+    .line 281
     return-void
 .end method
 
@@ -1278,12 +1020,12 @@
     .locals 1
 
     .prologue
-    .line 415
+    .line 361
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mLocalCameraManager:Lcom/rounds/kik/media/video/LocalCameraManager;
 
     invoke-virtual {v0, p1}, Lcom/rounds/kik/media/video/LocalCameraManager;->releaseLocalFrame([B)V
 
-    .line 416
+    .line 362
     return-void
 .end method
 
@@ -1291,7 +1033,7 @@
     .locals 3
 
     .prologue
-    .line 245
+    .line 203
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1310,14 +1052,14 @@
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 246
+    .line 204
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mVidyoHandler:Lcom/rounds/kik/media/VidyoHandler;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, p1, v1}, Lcom/rounds/kik/media/VidyoHandler;->muteParticipant(Ljava/lang/String;Z)V
 
-    .line 247
+    .line 205
     return-void
 .end method
 
@@ -1325,7 +1067,7 @@
     .locals 3
 
     .prologue
-    .line 233
+    .line 191
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1344,14 +1086,14 @@
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 234
+    .line 192
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mVidyoHandler:Lcom/rounds/kik/media/VidyoHandler;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, p1, v1}, Lcom/rounds/kik/media/VidyoHandler;->muteParticipant(Ljava/lang/String;Z)V
 
-    .line 235
+    .line 193
     return-void
 .end method
 
@@ -1359,7 +1101,7 @@
     .locals 3
 
     .prologue
-    .line 239
+    .line 197
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1378,12 +1120,12 @@
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 240
+    .line 198
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mVidyoHandler:Lcom/rounds/kik/media/VidyoHandler;
 
     invoke-virtual {v0, p1}, Lcom/rounds/kik/media/VidyoHandler;->remoteVideoHide(Ljava/lang/String;)V
 
-    .line 241
+    .line 199
     return-void
 .end method
 
@@ -1391,7 +1133,7 @@
     .locals 3
 
     .prologue
-    .line 251
+    .line 209
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1410,12 +1152,12 @@
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 252
+    .line 210
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mVidyoHandler:Lcom/rounds/kik/media/VidyoHandler;
 
     invoke-virtual {v0, p1}, Lcom/rounds/kik/media/VidyoHandler;->remoteVideoRestore(Ljava/lang/String;)V
 
-    .line 253
+    .line 211
     return-void
 .end method
 
@@ -1423,7 +1165,7 @@
     .locals 3
 
     .prologue
-    .line 227
+    .line 185
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1442,12 +1184,12 @@
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 228
+    .line 186
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mVidyoHandler:Lcom/rounds/kik/media/VidyoHandler;
 
     invoke-virtual {v0, p1}, Lcom/rounds/kik/media/VidyoHandler;->remoteVideoShow(Ljava/lang/String;)V
 
-    .line 229
+    .line 187
     return-void
 .end method
 
@@ -1457,12 +1199,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 420
+    .line 366
     iget-object v1, p0, Lcom/rounds/kik/media/MediaBroker;->mLmiVideoCapturer:Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerInternal;
 
     if-eqz v1, :cond_0
 
-    .line 422
+    .line 368
     :try_start_0
     iget-object v1, p0, Lcom/rounds/kik/media/MediaBroker;->mLmiVideoCapturer:Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerInternal;
 
@@ -1470,31 +1212,31 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 428
+    .line 374
     const/4 v0, 0x1
 
-    .line 431
+    .line 377
     :cond_0
     :goto_0
     return v0
 
-    .line 425
+    .line 371
     :catch_0
     move-exception v1
 
     goto :goto_0
 .end method
 
-.method public final setCameraLocal(Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;)V
+.method public final setCameraLocal(Z)V
     .locals 1
 
     .prologue
-    .line 384
+    .line 340
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mLocalCameraManager:Lcom/rounds/kik/media/video/LocalCameraManager;
 
-    invoke-virtual {v0, p1}, Lcom/rounds/kik/media/video/LocalCameraManager;->cameraSet(Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;)V
+    invoke-virtual {v0, p1}, Lcom/rounds/kik/media/video/LocalCameraManager;->cameraSet(Z)V
 
-    .line 385
+    .line 341
     return-void
 .end method
 
@@ -1502,12 +1244,12 @@
     .locals 1
 
     .prologue
-    .line 257
+    .line 215
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mVidyoHandler:Lcom/rounds/kik/media/VidyoHandler;
 
     invoke-virtual {v0, p1}, Lcom/rounds/kik/media/VidyoHandler;->setExtraVolume(I)V
 
-    .line 258
+    .line 216
     return-void
 .end method
 
@@ -1515,7 +1257,7 @@
     .locals 3
 
     .prologue
-    .line 436
+    .line 382
     sget-object v1, Lcom/rounds/kik/media/MediaBroker;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1539,26 +1281,26 @@
 
     invoke-virtual {v1, v0}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 438
+    .line 384
     if-nez p1, :cond_0
 
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mLmiVideoCapturer:Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerInternal;
 
     if-eqz v0, :cond_0
 
-    .line 439
+    .line 385
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mLmiVideoCapturer:Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerInternal;
 
     invoke-virtual {v0}, Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerInternal;->clearCameraPool()V
 
-    .line 442
+    .line 388
     :cond_0
     iput-object p1, p0, Lcom/rounds/kik/media/MediaBroker;->mLmiVideoCapturer:Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerInternal;
 
-    .line 443
+    .line 389
     return-void
 
-    .line 436
+    .line 382
     :cond_1
     const-string v0, "NOT NULL"
 
@@ -1569,17 +1311,17 @@
     .locals 1
 
     .prologue
-    .line 486
+    .line 430
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mVidyoHandler:Lcom/rounds/kik/media/VidyoHandler;
 
     if-eqz v0, :cond_0
 
-    .line 487
+    .line 431
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mVidyoHandler:Lcom/rounds/kik/media/VidyoHandler;
 
     invoke-virtual {v0, p1}, Lcom/rounds/kik/media/VidyoHandler;->setParticipantDimension(I)V
 
-    .line 489
+    .line 433
     :cond_0
     return-void
 .end method
@@ -1588,10 +1330,10 @@
     .locals 0
 
     .prologue
-    .line 173
+    .line 125
     iput-object p1, p0, Lcom/rounds/kik/media/MediaBroker;->mUserId:Ljava/lang/String;
 
-    .line 174
+    .line 126
     return-void
 .end method
 
@@ -1599,19 +1341,19 @@
     .locals 2
 
     .prologue
-    .line 389
+    .line 345
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "MediaBroker startCameraLocal"
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 390
+    .line 346
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mLocalCameraManager:Lcom/rounds/kik/media/video/LocalCameraManager;
 
     invoke-virtual {v0, p1}, Lcom/rounds/kik/media/video/LocalCameraManager;->cameraStart(Landroid/graphics/SurfaceTexture;)V
 
-    .line 391
+    .line 347
     return-void
 .end method
 
@@ -1619,19 +1361,19 @@
     .locals 2
 
     .prologue
-    .line 187
+    .line 145
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "RoundsServiceBinder startCamera "
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 188
+    .line 146
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mVidyoHandler:Lcom/rounds/kik/media/VidyoHandler;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/VidyoHandler;->vidyoThreadStartMic()V
 
-    .line 189
+    .line 147
     return-void
 .end method
 
@@ -1639,19 +1381,19 @@
     .locals 2
 
     .prologue
-    .line 181
+    .line 139
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "RoundsServiceBinder stopCamera "
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 182
+    .line 140
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mVidyoHandler:Lcom/rounds/kik/media/VidyoHandler;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/VidyoHandler;->vidyoThreadStopCamera()V
 
-    .line 183
+    .line 141
     return-void
 .end method
 
@@ -1659,19 +1401,19 @@
     .locals 2
 
     .prologue
-    .line 193
+    .line 151
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "RoundsServiceBinder stopCamera "
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 194
+    .line 152
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mVidyoHandler:Lcom/rounds/kik/media/VidyoHandler;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/VidyoHandler;->vidyoThreadStopMic()V
 
-    .line 195
+    .line 153
     return-void
 .end method
 
@@ -1679,12 +1421,12 @@
     .locals 1
 
     .prologue
-    .line 158
+    .line 110
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mVidyoHandler:Lcom/rounds/kik/media/VidyoHandler;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/VidyoHandler;->stopVidyoNativeClientHandlerThread()V
 
-    .line 159
+    .line 111
     return-void
 .end method
 
@@ -1692,12 +1434,12 @@
     .locals 1
 
     .prologue
-    .line 163
+    .line 115
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mVidyoHandler:Lcom/rounds/kik/media/VidyoHandler;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/VidyoHandler;->stopVidyoConnections()V
 
-    .line 164
+    .line 116
     return-void
 .end method
 
@@ -1705,35 +1447,21 @@
     .locals 0
 
     .prologue
-    .line 204
+    .line 162
     invoke-virtual {p0}, Lcom/rounds/kik/media/MediaBroker;->stopCameraRemote()V
 
-    .line 205
+    .line 163
     invoke-virtual {p0, p2}, Lcom/rounds/kik/media/MediaBroker;->remoteVideoHide(Ljava/lang/String;)V
 
-    .line 206
+    .line 164
     return-void
-.end method
-
-.method public final toggleCamera()Z
-    .locals 1
-
-    .prologue
-    .line 400
-    iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mLocalCameraManager:Lcom/rounds/kik/media/video/LocalCameraManager;
-
-    invoke-virtual {v0}, Lcom/rounds/kik/media/video/LocalCameraManager;->cameraToggle()Z
-
-    move-result v0
-
-    return v0
 .end method
 
 .method public final videoStreamReceived(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
     .prologue
-    .line 449
+    .line 395
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1762,7 +1490,7 @@
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 451
+    .line 397
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->INSTANCE:Lcom/rounds/kik/media/MediaBroker;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/MediaBroker;->getSharedContext()Landroid/content/Context;
@@ -1771,7 +1499,6 @@
 
     sget-object v1, Lcom/rounds/kik/analytics/group/conference/MediaWithParticipant;->CONNECTIVITY_RECEIVED_VIDEO:Lcom/rounds/kik/analytics/group/conference/MediaWithParticipant;
 
-    .line 452
     invoke-virtual {v1}, Lcom/rounds/kik/analytics/group/conference/MediaWithParticipant;->builder()Lcom/rounds/kik/analytics/group/conference/MediaWithParticipant$Builder;
 
     move-result-object v1
@@ -1780,17 +1507,16 @@
 
     move-result-object v1
 
-    .line 451
     invoke-static {v0, v1}, Lcom/rounds/kik/analytics/Reporter;->report(Landroid/content/Context;Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;)V
 
-    .line 454
+    .line 399
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mVidyoHandler:Lcom/rounds/kik/media/VidyoHandler;
 
     sget-object v1, Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;->REMOTE_MEDIA_RECIEVED:Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/media/VidyoHandler;->changeMediaStatus(Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;)V
 
-    .line 455
+    .line 400
     return-void
 .end method
 
@@ -1798,8 +1524,28 @@
     .locals 1
 
     .prologue
-    .line 262
+    .line 220
     iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mVidyoHandler:Lcom/rounds/kik/media/VidyoHandler;
 
     return-object v0
+.end method
+
+.method public final vidyoThreadStartCamera()V
+    .locals 2
+
+    .prologue
+    .line 133
+    sget-object v0, Lcom/rounds/kik/media/MediaBroker;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
+
+    const-string v1, "RoundsServiceBinder startCamera "
+
+    invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
+
+    .line 134
+    iget-object v0, p0, Lcom/rounds/kik/media/MediaBroker;->mVidyoHandler:Lcom/rounds/kik/media/VidyoHandler;
+
+    invoke-virtual {v0}, Lcom/rounds/kik/media/VidyoHandler;->vidyoThreadStartCamera()V
+
+    .line 135
+    return-void
 .end method

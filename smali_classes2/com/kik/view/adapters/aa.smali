@@ -1,222 +1,167 @@
 .class public final Lcom/kik/view/adapters/aa;
-.super Ljava/lang/Object;
+.super Landroid/widget/ArrayAdapter;
 .source "SourceFile"
 
-# interfaces
-.implements Lcom/kik/cards/web/browser/BrowserPlugin$a;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroid/widget/ArrayAdapter",
+        "<",
+        "Ljava/lang/String;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field private final a:Landroid/content/Context;
+.field protected final a:Landroid/view/LayoutInflater;
 
-.field private final b:Landroid/webkit/WebView;
+.field protected b:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/webkit/WebView;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Ljava/util/List;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
-    .line 29
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 24
+    const/4 v0, 0x0
 
-    .line 30
-    iput-object p1, p0, Lcom/kik/view/adapters/aa;->a:Landroid/content/Context;
+    invoke-direct {p0, p1, v0, p2}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;ILjava/util/List;)V
 
-    .line 31
-    iput-object p2, p0, Lcom/kik/view/adapters/aa;->b:Landroid/webkit/WebView;
+    .line 25
+    iput-object p2, p0, Lcom/kik/view/adapters/aa;->b:Ljava/util/List;
 
-    .line 32
+    .line 26
+    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/kik/view/adapters/aa;->a:Landroid/view/LayoutInflater;
+
+    .line 27
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Lcom/kik/cards/web/picker/PickerRequest;)Lcom/kik/events/Promise;
+.method public final getCount()I
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Lcom/kik/cards/web/picker/PickerRequest;",
-            ")",
-            "Lcom/kik/events/Promise",
-            "<",
-            "Lorg/json/JSONObject;",
-            ">;"
-        }
-    .end annotation
 
     .prologue
-    .line 56
-    const/4 v0, 0x0
+    .line 32
+    iget-object v0, p0, Lcom/kik/view/adapters/aa;->b:Ljava/util/List;
 
-    return-object v0
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    return v0
 .end method
 
-.method public final a(Ljava/lang/String;Ljava/lang/String;)Lcom/kik/events/Promise;
+.method public final synthetic getItem(I)Ljava/lang/Object;
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ")",
-            "Lcom/kik/events/Promise",
-            "<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
 
     .prologue
-    .line 68
-    const/4 v0, 0x0
+    .line 17
+    .line 1043
+    iget-object v0, p0, Lcom/kik/view/adapters/aa;->b:Ljava/util/List;
 
-    return-object v0
-.end method
-
-.method public final a(I)V
-    .locals 0
-
-    .prologue
-    .line 81
-    return-void
-.end method
-
-.method public final a(Ljava/lang/String;Z)V
-    .locals 2
-
-    .prologue
-    .line 37
-    if-eqz p2, :cond_0
-
-    .line 38
-    new-instance v0, Lcom/kik/cards/web/CardsWebViewFragment$a;
-
-    invoke-direct {v0}, Lcom/kik/cards/web/CardsWebViewFragment$a;-><init>()V
-
-    .line 39
-    invoke-virtual {v0, p1}, Lcom/kik/cards/web/CardsWebViewFragment$a;->a(Ljava/lang/String;)Lcom/kik/cards/web/CardsWebViewFragment$a;
-
-    .line 40
-    iget-object v1, p0, Lcom/kik/view/adapters/aa;->a:Landroid/content/Context;
-
-    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ad;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->e()Lcom/kik/events/Promise;
+    check-cast v0, Ljava/lang/String;
 
-    .line 45
-    :goto_0
-    return-void
-
-    .line 43
-    :cond_0
-    iget-object v0, p0, Lcom/kik/view/adapters/aa;->b:Landroid/webkit/WebView;
-
-    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
-
-    goto :goto_0
-.end method
-
-.method public final a(Lorg/json/JSONObject;)V
-    .locals 0
-
-    .prologue
-    .line 63
-    return-void
-.end method
-
-.method public final a(Z)V
-    .locals 0
-
-    .prologue
-    .line 123
-    return-void
-.end method
-
-.method public final b()Z
-    .locals 1
-
-    .prologue
-    .line 116
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final d()I
-    .locals 1
-
-    .prologue
-    .line 86
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final e()V
-    .locals 0
-
-    .prologue
-    .line 99
-    return-void
-.end method
-
-.method public final e(Ljava/lang/String;)V
-    .locals 0
-
-    .prologue
-    .line 75
-    return-void
-.end method
-
-.method public final f()Z
-    .locals 1
-
-    .prologue
-    .line 134
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final g()V
-    .locals 0
-
-    .prologue
-    .line 93
-    return-void
-.end method
-
-.method public final getUrl()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 104
-    const/4 v0, 0x0
-
+    .line 17
     return-object v0
 .end method
 
-.method public final l()Z
-    .locals 1
+.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 4
 
     .prologue
-    .line 128
-    const/4 v0, 0x0
+    .line 50
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    return v0
-.end method
+    const-string v0, "#"
 
-.method public final m()Z
-    .locals 1
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .prologue
-    .line 152
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/kik/view/adapters/aa;->b:Ljava/util/List;
 
-    return v0
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 51
+    if-nez p2, :cond_0
+
+    .line 52
+    iget-object v0, p0, Lcom/kik/view/adapters/aa;->a:Landroid/view/LayoutInflater;
+
+    const v2, 0x7f0400df
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v2, p3, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p2
+
+    .line 53
+    new-instance v0, Lcom/kik/view/adapters/ab;
+
+    invoke-direct {v0, p2}, Lcom/kik/view/adapters/ab;-><init>(Landroid/view/View;)V
+
+    .line 54
+    invoke-virtual {p2, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+
+    .line 60
+    :goto_0
+    iget-object v0, v0, Lcom/kik/view/adapters/ab;->a:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 61
+    return-object p2
+
+    .line 57
+    :cond_0
+    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/kik/view/adapters/ab;
+
+    goto :goto_0
 .end method

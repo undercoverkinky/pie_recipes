@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/google/android/gms/tasks/k;
+.implements Lcom/google/android/gms/tasks/f;
 
 
 # annotations
@@ -12,7 +12,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/google/android/gms/tasks/k",
+        "Lcom/google/android/gms/tasks/f",
         "<TTResult;>;"
     }
 .end annotation
@@ -23,25 +23,25 @@
 
 .field private final b:Ljava/lang/Object;
 
-.field private c:Lcom/google/android/gms/tasks/OnCompleteListener;
+.field private c:Lcom/google/android/gms/tasks/OnSuccessListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/google/android/gms/tasks/OnCompleteListener",
-            "<TTResult;>;"
+            "Lcom/google/android/gms/tasks/OnSuccessListener",
+            "<-TTResult;>;"
         }
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/OnCompleteListener;)V
+.method public constructor <init>(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/OnSuccessListener;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/concurrent/Executor;",
-            "Lcom/google/android/gms/tasks/OnCompleteListener",
-            "<TTResult;>;)V"
+            "Lcom/google/android/gms/tasks/OnSuccessListener",
+            "<-TTResult;>;)V"
         }
     .end annotation
 
@@ -55,7 +55,7 @@
 
     iput-object p1, p0, Lcom/google/android/gms/tasks/e;->a:Ljava/util/concurrent/Executor;
 
-    iput-object p2, p0, Lcom/google/android/gms/tasks/e;->c:Lcom/google/android/gms/tasks/OnCompleteListener;
+    iput-object p2, p0, Lcom/google/android/gms/tasks/e;->c:Lcom/google/android/gms/tasks/OnSuccessListener;
 
     return-void
 .end method
@@ -68,10 +68,10 @@
     return-object v0
 .end method
 
-.method static synthetic b(Lcom/google/android/gms/tasks/e;)Lcom/google/android/gms/tasks/OnCompleteListener;
+.method static synthetic b(Lcom/google/android/gms/tasks/e;)Lcom/google/android/gms/tasks/OnSuccessListener;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/tasks/e;->c:Lcom/google/android/gms/tasks/OnCompleteListener;
+    iget-object v0, p0, Lcom/google/android/gms/tasks/e;->c:Lcom/google/android/gms/tasks/OnSuccessListener;
 
     return-object v0
 .end method
@@ -88,7 +88,7 @@
     const/4 v0, 0x0
 
     :try_start_0
-    iput-object v0, p0, Lcom/google/android/gms/tasks/e;->c:Lcom/google/android/gms/tasks/OnCompleteListener;
+    iput-object v0, p0, Lcom/google/android/gms/tasks/e;->c:Lcom/google/android/gms/tasks/OnSuccessListener;
 
     monitor-exit v1
 
@@ -114,30 +114,37 @@
         }
     .end annotation
 
+    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->isSuccessful()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
     iget-object v1, p0, Lcom/google/android/gms/tasks/e;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
     :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/tasks/e;->c:Lcom/google/android/gms/tasks/OnCompleteListener;
+    iget-object v0, p0, Lcom/google/android/gms/tasks/e;->c:Lcom/google/android/gms/tasks/OnSuccessListener;
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     monitor-exit v1
 
+    :cond_0
     :goto_0
     return-void
 
-    :cond_0
+    :cond_1
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     iget-object v0, p0, Lcom/google/android/gms/tasks/e;->a:Ljava/util/concurrent/Executor;
 
-    new-instance v1, Lcom/google/android/gms/tasks/f;
+    new-instance v1, Lcom/google/android/gms/tasks/e$1;
 
-    invoke-direct {v1, p0, p1}, Lcom/google/android/gms/tasks/f;-><init>(Lcom/google/android/gms/tasks/e;Lcom/google/android/gms/tasks/Task;)V
+    invoke-direct {v1, p0, p1}, Lcom/google/android/gms/tasks/e$1;-><init>(Lcom/google/android/gms/tasks/e;Lcom/google/android/gms/tasks/Task;)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 

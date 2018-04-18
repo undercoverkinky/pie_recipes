@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/google/common/base/Predicate;
+.implements Lcom/google/common/base/i;
 .implements Ljava/io/Serializable;
 
 
@@ -23,7 +23,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/google/common/base/Predicate",
+        "Lcom/google/common/base/i",
         "<TT;>;",
         "Ljava/io/Serializable;"
     }
@@ -40,7 +40,7 @@
         value = {
             "Ljava/util/List",
             "<+",
-            "Lcom/google/common/base/Predicate",
+            "Lcom/google/common/base/i",
             "<-TT;>;>;"
         }
     .end annotation
@@ -55,27 +55,27 @@
             "(",
             "Ljava/util/List",
             "<+",
-            "Lcom/google/common/base/Predicate",
+            "Lcom/google/common/base/i",
             "<-TT;>;>;)V"
         }
     .end annotation
 
     .prologue
-    .line 376
+    .line 352
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 377
+    .line 353
     iput-object p1, p0, Lcom/google/common/base/Predicates$AndPredicate;->components:Ljava/util/List;
 
-    .line 378
+    .line 354
     return-void
 .end method
 
-.method synthetic constructor <init>(Ljava/util/List;Lcom/google/common/base/Predicates$1;)V
+.method synthetic constructor <init>(Ljava/util/List;B)V
     .locals 0
 
     .prologue
-    .line 373
+    .line 349
     invoke-direct {p0, p1}, Lcom/google/common/base/Predicates$AndPredicate;-><init>(Ljava/util/List;)V
 
     return-void
@@ -98,7 +98,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 383
+    .line 358
     move v1, v2
 
     :goto_0
@@ -110,26 +110,26 @@
 
     if-ge v1, v0, :cond_1
 
-    .line 384
+    .line 359
     iget-object v0, p0, Lcom/google/common/base/Predicates$AndPredicate;->components:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/common/base/Predicate;
+    check-cast v0, Lcom/google/common/base/i;
 
-    invoke-interface {v0, p1}, Lcom/google/common/base/Predicate;->apply(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Lcom/google/common/base/i;->apply(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 388
+    .line 363
     :goto_1
     return v2
 
-    .line 383
+    .line 358
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -137,7 +137,7 @@
 
     goto :goto_0
 
-    .line 388
+    .line 363
     :cond_1
     const/4 v2, 0x1
 
@@ -152,15 +152,15 @@
     .end param
 
     .prologue
-    .line 399
+    .line 370
     instance-of v0, p1, Lcom/google/common/base/Predicates$AndPredicate;
 
     if-eqz v0, :cond_0
 
-    .line 400
+    .line 371
     check-cast p1, Lcom/google/common/base/Predicates$AndPredicate;
 
-    .line 401
+    .line 372
     iget-object v0, p0, Lcom/google/common/base/Predicates$AndPredicate;->components:Ljava/util/List;
 
     iget-object v1, p1, Lcom/google/common/base/Predicates$AndPredicate;->components:Ljava/util/List;
@@ -169,7 +169,7 @@
 
     move-result v0
 
-    .line 403
+    .line 374
     :goto_0
     return v0
 
@@ -183,7 +183,7 @@
     .locals 2
 
     .prologue
-    .line 394
+    .line 367
     iget-object v0, p0, Lcom/google/common/base/Predicates$AndPredicate;->components:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->hashCode()I
@@ -201,24 +201,42 @@
     .locals 3
 
     .prologue
-    .line 408
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 377
+    invoke-static {}, Lcom/google/common/base/Predicates;->a()Lcom/google/common/base/e;
 
-    const-string v1, "Predicates.and("
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v1, p0, Lcom/google/common/base/Predicates$AndPredicate;->components:Ljava/util/List;
 
-    invoke-static {}, Lcom/google/common/base/Predicates;->access$800()Lcom/google/common/base/Joiner;
+    invoke-virtual {v0, v1}, Lcom/google/common/base/e;->a(Ljava/lang/Iterable;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, 0x10
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v2, "Predicates.and("
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/google/common/base/Predicates$AndPredicate;->components:Ljava/util/List;
-
-    invoke-virtual {v1, v2}, Lcom/google/common/base/Joiner;->join(Ljava/lang/Iterable;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

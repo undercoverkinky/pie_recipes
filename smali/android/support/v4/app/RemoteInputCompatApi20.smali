@@ -3,18 +3,12 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x14
-.end annotation
-
-
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 27
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,14 +18,14 @@
     .locals 1
 
     .prologue
-    .line 65
+    .line 61
     invoke-static {p0}, Landroid/support/v4/app/RemoteInputCompatApi20;->fromCompat([Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;)[Landroid/app/RemoteInput;
 
     move-result-object v0
 
     invoke-static {v0, p1, p2}, Landroid/app/RemoteInput;->addResultsToIntent([Landroid/app/RemoteInput;Landroid/content/Intent;Landroid/os/Bundle;)V
 
-    .line 66
+    .line 62
     return-void
 .end method
 
@@ -39,23 +33,23 @@
     .locals 5
 
     .prologue
-    .line 43
+    .line 39
     if-nez p0, :cond_0
 
-    .line 44
+    .line 40
     const/4 v0, 0x0
 
-    .line 56
+    .line 52
     :goto_0
     return-object v0
 
-    .line 46
+    .line 42
     :cond_0
     array-length v0, p0
 
     new-array v1, v0, [Landroid/app/RemoteInput;
 
-    .line 47
+    .line 43
     const/4 v0, 0x0
 
     :goto_1
@@ -63,10 +57,10 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 48
+    .line 44
     aget-object v2, p0, v0
 
-    .line 49
+    .line 45
     new-instance v3, Landroid/app/RemoteInput$Builder;
 
     invoke-virtual {v2}, Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;->getResultKey()Ljava/lang/String;
@@ -75,7 +69,6 @@
 
     invoke-direct {v3, v4}, Landroid/app/RemoteInput$Builder;-><init>(Ljava/lang/String;)V
 
-    .line 50
     invoke-virtual {v2}, Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;->getLabel()Ljava/lang/CharSequence;
 
     move-result-object v4
@@ -84,7 +77,6 @@
 
     move-result-object v3
 
-    .line 51
     invoke-virtual {v2}, Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;->getChoices()[Ljava/lang/CharSequence;
 
     move-result-object v4
@@ -93,7 +85,6 @@
 
     move-result-object v3
 
-    .line 52
     invoke-virtual {v2}, Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;->getAllowFreeFormInput()Z
 
     move-result v4
@@ -102,7 +93,6 @@
 
     move-result-object v3
 
-    .line 53
     invoke-virtual {v2}, Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;->getExtras()Landroid/os/Bundle;
 
     move-result-object v2
@@ -111,14 +101,13 @@
 
     move-result-object v2
 
-    .line 54
     invoke-virtual {v2}, Landroid/app/RemoteInput$Builder;->build()Landroid/app/RemoteInput;
 
     move-result-object v2
 
     aput-object v2, v1, v0
 
-    .line 47
+    .line 43
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
@@ -126,7 +115,7 @@
     :cond_1
     move-object v0, v1
 
-    .line 56
+    .line 52
     goto :goto_0
 .end method
 
@@ -134,7 +123,7 @@
     .locals 1
 
     .prologue
-    .line 60
+    .line 56
     invoke-static {p0}, Landroid/app/RemoteInput;->getResultsFromIntent(Landroid/content/Intent;)Landroid/os/Bundle;
 
     move-result-object v0
@@ -146,17 +135,17 @@
     .locals 8
 
     .prologue
-    .line 30
+    .line 26
     if-nez p0, :cond_0
 
-    .line 31
+    .line 27
     const/4 v0, 0x0
 
-    .line 39
+    .line 35
     :goto_0
     return-object v0
 
-    .line 33
+    .line 29
     :cond_0
     array-length v0, p0
 
@@ -164,7 +153,7 @@
 
     move-result-object v7
 
-    .line 34
+    .line 30
     const/4 v0, 0x0
 
     move v6, v0
@@ -174,10 +163,10 @@
 
     if-ge v6, v0, :cond_1
 
-    .line 35
+    .line 31
     aget-object v0, p0, v6
 
-    .line 36
+    .line 32
     invoke-virtual {v0}, Landroid/app/RemoteInput;->getResultKey()Ljava/lang/String;
 
     move-result-object v1
@@ -190,7 +179,6 @@
 
     move-result-object v3
 
-    .line 37
     invoke-virtual {v0}, Landroid/app/RemoteInput;->getAllowFreeFormInput()Z
 
     move-result v4
@@ -201,14 +189,13 @@
 
     move-object v0, p1
 
-    .line 36
     invoke-interface/range {v0 .. v5}, Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput$Factory;->build(Ljava/lang/String;Ljava/lang/CharSequence;[Ljava/lang/CharSequence;ZLandroid/os/Bundle;)Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;
 
     move-result-object v0
 
     aput-object v0, v7, v6
 
-    .line 34
+    .line 30
     add-int/lit8 v0, v6, 0x1
 
     move v6, v0
@@ -218,6 +205,6 @@
     :cond_1
     move-object v0, v7
 
-    .line 39
+    .line 35
     goto :goto_0
 .end method

@@ -3,18 +3,12 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x15
-.end annotation
-
-
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 26
+    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +18,7 @@
     .locals 1
 
     .prologue
-    .line 28
+    .line 24
     if-eqz p1, :cond_0
 
     new-instance v0, Landroid/support/v4/view/LayoutInflaterCompatHC$FactoryWrapperHC;
@@ -34,10 +28,10 @@
     :goto_0
     invoke-virtual {p0, v0}, Landroid/view/LayoutInflater;->setFactory2(Landroid/view/LayoutInflater$Factory2;)V
 
-    .line 30
+    .line 26
     return-void
 
-    .line 28
+    .line 24
     :cond_0
     const/4 v0, 0x0
 

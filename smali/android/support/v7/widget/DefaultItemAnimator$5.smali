@@ -24,17 +24,19 @@
 
 # direct methods
 .method constructor <init>(Landroid/support/v7/widget/DefaultItemAnimator;Landroid/support/v7/widget/RecyclerView$ViewHolder;Landroid/support/v4/view/ViewPropertyAnimatorCompat;)V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 229
+    .line 228
     iput-object p1, p0, Landroid/support/v7/widget/DefaultItemAnimator$5;->c:Landroid/support/v7/widget/DefaultItemAnimator;
 
     iput-object p2, p0, Landroid/support/v7/widget/DefaultItemAnimator$5;->a:Landroid/support/v7/widget/RecyclerView$ViewHolder;
 
     iput-object p3, p0, Landroid/support/v7/widget/DefaultItemAnimator$5;->b:Landroid/support/v4/view/ViewPropertyAnimatorCompat;
 
-    invoke-direct {p0}, Landroid/support/v7/widget/DefaultItemAnimator$VpaListenerAdapter;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Landroid/support/v7/widget/DefaultItemAnimator$VpaListenerAdapter;-><init>(B)V
 
     return-void
 .end method
@@ -45,12 +47,12 @@
     .locals 1
 
     .prologue
-    .line 236
+    .line 235
     const/high16 v0, 0x3f800000    # 1.0f
 
     invoke-static {p1, v0}, Landroid/support/v4/view/ViewCompat;->setAlpha(Landroid/view/View;F)V
 
-    .line 237
+    .line 236
     return-void
 .end method
 
@@ -58,14 +60,14 @@
     .locals 2
 
     .prologue
-    .line 241
+    .line 240
     iget-object v0, p0, Landroid/support/v7/widget/DefaultItemAnimator$5;->b:Landroid/support/v4/view/ViewPropertyAnimatorCompat;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->setListener(Landroid/support/v4/view/ViewPropertyAnimatorListener;)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
 
-    .line 242
+    .line 241
     iget-object v0, p0, Landroid/support/v7/widget/DefaultItemAnimator$5;->c:Landroid/support/v7/widget/DefaultItemAnimator;
 
     iget-object v1, p0, Landroid/support/v7/widget/DefaultItemAnimator$5;->a:Landroid/support/v7/widget/RecyclerView$ViewHolder;
@@ -73,21 +75,23 @@
     .line 1289
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/SimpleItemAnimator;->f(Landroid/support/v7/widget/RecyclerView$ViewHolder;)V
 
-    .line 243
+    .line 242
     iget-object v0, p0, Landroid/support/v7/widget/DefaultItemAnimator$5;->c:Landroid/support/v7/widget/DefaultItemAnimator;
 
-    iget-object v0, v0, Landroid/support/v7/widget/DefaultItemAnimator;->d:Ljava/util/ArrayList;
+    invoke-static {v0}, Landroid/support/v7/widget/DefaultItemAnimator;->f(Landroid/support/v7/widget/DefaultItemAnimator;)Ljava/util/ArrayList;
+
+    move-result-object v0
 
     iget-object v1, p0, Landroid/support/v7/widget/DefaultItemAnimator$5;->a:Landroid/support/v7/widget/RecyclerView$ViewHolder;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 244
+    .line 243
     iget-object v0, p0, Landroid/support/v7/widget/DefaultItemAnimator$5;->c:Landroid/support/v7/widget/DefaultItemAnimator;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/DefaultItemAnimator;->c()V
+    invoke-static {v0}, Landroid/support/v7/widget/DefaultItemAnimator;->e(Landroid/support/v7/widget/DefaultItemAnimator;)V
 
-    .line 245
+    .line 244
     return-void
 .end method
 
@@ -95,6 +99,6 @@
     .locals 0
 
     .prologue
-    .line 233
+    .line 232
     return-void
 .end method

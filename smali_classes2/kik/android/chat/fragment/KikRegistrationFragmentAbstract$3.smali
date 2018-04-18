@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 198
+    .line 196
     iput-object p1, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract$3;->a:Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
@@ -37,10 +37,10 @@
     .locals 3
 
     .prologue
-    .line 203
+    .line 201
     invoke-super {p0}, Landroid/database/DataSetObserver;->onChanged()V
 
-    .line 204
+    .line 202
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract$3;->a:Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->_emailField:Lkik/android/chat/view/AutoCompleteValidateableInputView;
@@ -53,12 +53,12 @@
 
     if-nez v0, :cond_1
 
-    .line 211
+    .line 209
     :cond_0
     :goto_0
     return-void
 
-    .line 207
+    .line 205
     :cond_1
     iget-object v0, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract$3;->a:Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;
 
@@ -68,13 +68,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/kik/view/adapters/n;
+    check-cast v0, Lcom/kik/view/adapters/k;
 
-    invoke-virtual {v0}, Lcom/kik/view/adapters/n;->a()I
+    invoke-virtual {v0}, Lcom/kik/view/adapters/k;->a()I
 
     move-result v0
 
-    .line 208
+    .line 206
     iget-object v1, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract$3;->a:Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;
 
     iget-object v1, v1, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->_registerButton:Landroid/widget/Button;
@@ -95,13 +95,13 @@
 
     iget-object v2, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract$3;->a:Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;
 
-    invoke-static {v2}, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->l(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)I
+    invoke-static {v2}, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->d(Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;)I
 
     move-result v2
 
     add-int/2addr v1, v2
 
-    .line 209
+    .line 207
     iget-object v2, p0, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract$3;->a:Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;
 
     iget-object v2, v2, Lkik/android/chat/fragment/KikRegistrationFragmentAbstract;->_emailField:Lkik/android/chat/view/AutoCompleteValidateableInputView;

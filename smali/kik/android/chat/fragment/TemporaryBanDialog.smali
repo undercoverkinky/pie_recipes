@@ -5,66 +5,86 @@
 
 # instance fields
 .field _body:Lkik/android/widget/RobotoTextView;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f1003e5
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f11037a
+        }
     .end annotation
 .end field
 
 .field _button:Landroid/widget/Button;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f1003f0
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f110385
+        }
     .end annotation
 .end field
 
 .field _countdownButtonLayout:Landroid/widget/LinearLayout;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f1003e6
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f11037b
+        }
     .end annotation
 .end field
 
 .field _dayCount:Lkik/android/widget/RobotoTextView;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f1003e8
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f11037d
+        }
     .end annotation
 .end field
 
 .field _dayLetter:Lkik/android/widget/RobotoTextView;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f1003e9
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f11037e
+        }
     .end annotation
 .end field
 
 .field _hourCount:Lkik/android/widget/RobotoTextView;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f1003ea
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f11037f
+        }
     .end annotation
 .end field
 
 .field _minCount:Lkik/android/widget/RobotoTextView;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f1003ec
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f110381
+        }
     .end annotation
 .end field
 
 .field _secCount:Lkik/android/widget/RobotoTextView;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f1003ee
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f110383
+        }
     .end annotation
 .end field
 
 .field _timerText:Lkik/android/widget/RobotoTextView;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f1003e7
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f11037c
+        }
     .end annotation
 .end field
 
 .field _title:Lkik/android/widget/RobotoTextView;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f1003e4
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f110379
+        }
     .end annotation
 .end field
 
-.field protected a:Lkik/core/ICoreEvents;
+.field protected a:Lkik/core/z;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
@@ -115,7 +135,7 @@
 
 .field private i:J
 
-.field private j:Lkik/core/net/outgoing/p;
+.field private j:Lkik/core/net/outgoing/ar;
 
 .field private k:Z
 
@@ -152,11 +172,11 @@
     iput-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->f:Lcom/kik/events/Promise;
 
     .line 63
-    new-instance v0, Lkik/core/net/outgoing/p;
+    new-instance v0, Lkik/core/net/outgoing/ar;
 
-    invoke-direct {v0}, Lkik/core/net/outgoing/p;-><init>()V
+    invoke-direct {v0}, Lkik/core/net/outgoing/ar;-><init>()V
 
-    iput-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->j:Lkik/core/net/outgoing/p;
+    iput-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->j:Lkik/core/net/outgoing/ar;
 
     .line 64
     const/4 v0, 0x0
@@ -171,6 +191,16 @@
     iput-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->l:Landroid/view/View$OnClickListener;
 
     return-void
+.end method
+
+.method static synthetic a(Lkik/android/chat/fragment/TemporaryBanDialog;)J
+    .locals 2
+
+    .prologue
+    .line 39
+    iget-wide v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->h:J
+
+    return-wide v0
 .end method
 
 .method static synthetic a(Lkik/android/chat/fragment/TemporaryBanDialog;J)J
@@ -391,7 +421,7 @@
     const/4 v1, 0x0
 
     .line 249
-    invoke-static {p1}, Lkik/core/util/u;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {p1}, Lkik/core/util/w;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -431,7 +461,7 @@
     const/4 v2, 0x0
 
     .line 238
-    invoke-static {p1}, Lkik/core/util/u;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {p1}, Lkik/core/util/w;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -464,7 +494,7 @@
     .line 243
     iget-object v1, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->_body:Lkik/android/widget/RobotoTextView;
 
-    invoke-static {v1, v0}, Lkik/android/chat/view/text/d;->a(Landroid/widget/TextView;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkik/android/chat/view/text/c;->a(Landroid/widget/TextView;Ljava/lang/String;)V
 
     .line 244
     new-array v0, v3, [Landroid/view/View;
@@ -479,80 +509,12 @@
     return-void
 .end method
 
-.method static synthetic a(Lkik/android/chat/fragment/TemporaryBanDialog;)V
-    .locals 6
-
-    .prologue
-    .line 263
-    iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->b:Lcom/kik/android/Mixpanel;
-
-    const-string v1, "Temp Ban Ack"
-
-    invoke-virtual {v0, v1}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;)Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    const-string v1, "Ban End Elapsed"
-
-    .line 265
-    invoke-static {}, Lkik/core/util/v;->b()J
-
-    move-result-wide v2
-
-    iget-wide v4, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->i:J
-
-    sub-long/2addr v2, v4
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 264
-    invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    .line 266
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
-
-    .line 267
-    invoke-virtual {p0}, Lkik/android/chat/fragment/TemporaryBanDialog;->dismiss()V
-
-    .line 268
-    invoke-virtual {p0}, Lkik/android/chat/fragment/TemporaryBanDialog;->getActivity()Landroid/support/v4/app/FragmentActivity;
-
-    move-result-object v0
-
-    .line 269
-    if-eqz v0, :cond_0
-
-    .line 270
-    const/4 v1, -0x1
-
-    invoke-virtual {v0, v1}, Landroid/app/Activity;->setRequestedOrientation(I)V
-
-    .line 272
-    :cond_0
-    iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->d:Lcom/kik/events/Promise;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Ljava/lang/Object;)V
-
-    .line 273
-    return-void
-.end method
-
-.method static synthetic a(Lkik/android/chat/fragment/TemporaryBanDialog;Lkik/core/net/outgoing/p;)V
+.method static synthetic a(Lkik/android/chat/fragment/TemporaryBanDialog;Lkik/core/net/outgoing/ar;)V
     .locals 2
 
     .prologue
     .line 2180
-    invoke-virtual {p1}, Lkik/core/net/outgoing/p;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/net/outgoing/ar;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -571,7 +533,7 @@
     .line 2181
     iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->_title:Lkik/android/widget/RobotoTextView;
 
-    invoke-virtual {p1}, Lkik/core/net/outgoing/p;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/net/outgoing/ar;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -579,7 +541,7 @@
 
     .line 2183
     :cond_0
-    invoke-virtual {p1}, Lkik/core/net/outgoing/p;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/net/outgoing/ar;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -596,7 +558,7 @@
     if-nez v0, :cond_1
 
     .line 2184
-    invoke-virtual {p1}, Lkik/core/net/outgoing/p;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/net/outgoing/ar;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -604,7 +566,7 @@
 
     .line 2186
     :cond_1
-    invoke-virtual {p1}, Lkik/core/net/outgoing/p;->f()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/net/outgoing/ar;->f()Ljava/lang/String;
 
     move-result-object v0
 
@@ -623,7 +585,7 @@
     .line 2187
     iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->_timerText:Lkik/android/widget/RobotoTextView;
 
-    invoke-virtual {p1}, Lkik/core/net/outgoing/p;->f()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/net/outgoing/ar;->f()Ljava/lang/String;
 
     move-result-object v1
 
@@ -632,7 +594,7 @@
     .line 2188
     iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->_timerText:Lkik/android/widget/RobotoTextView;
 
-    invoke-virtual {p1}, Lkik/core/net/outgoing/p;->f()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/net/outgoing/ar;->f()Ljava/lang/String;
 
     move-result-object v1
 
@@ -691,13 +653,13 @@
     .line 2199
     :cond_4
     :goto_0
-    invoke-virtual {p1}, Lkik/core/net/outgoing/p;->g()J
+    invoke-virtual {p1}, Lkik/core/net/outgoing/ar;->g()J
 
     move-result-wide v0
 
     invoke-direct {p0, v0, v1}, Lkik/android/chat/fragment/TemporaryBanDialog;->b(J)V
 
-    .line 152
+    .line 0
     return-void
 
     .line 2196
@@ -721,7 +683,7 @@
     iput-wide p1, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->i:J
 
     .line 290
-    invoke-static {}, Lkik/core/util/v;->b()J
+    invoke-static {}, Lkik/core/util/x;->b()J
 
     move-result-wide v0
 
@@ -753,9 +715,9 @@
     .line 297
     iget-object v2, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->_button:Landroid/widget/Button;
 
-    iget-object v3, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->j:Lkik/core/net/outgoing/p;
+    iget-object v3, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->j:Lkik/core/net/outgoing/ar;
 
-    invoke-virtual {v3}, Lkik/core/net/outgoing/p;->c()Ljava/lang/String;
+    invoke-virtual {v3}, Lkik/core/net/outgoing/ar;->c()Ljava/lang/String;
 
     move-result-object v3
 
@@ -790,13 +752,16 @@
 .end method
 
 .method static synthetic b(Lkik/android/chat/fragment/TemporaryBanDialog;)V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 140
-    invoke-direct {p0}, Lkik/android/chat/fragment/TemporaryBanDialog;->g()V
+    .line 39
+    .line 1356
+    iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->a:Lkik/core/z;
 
-    .line 141
+    invoke-interface {v0}, Lkik/core/z;->h()V
+
+    .line 39
     return-void
 .end method
 
@@ -811,28 +776,13 @@
 .end method
 
 .method static synthetic c(Lkik/android/chat/fragment/TemporaryBanDialog;)V
-    .locals 2
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 95
-    iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->_body:Lkik/android/widget/RobotoTextView;
-
-    invoke-virtual {v0, v1, v1}, Lkik/android/widget/RobotoTextView;->scrollTo(II)V
-
-    .line 97
-    return-void
-.end method
-
-.method static synthetic d(Lkik/android/chat/fragment/TemporaryBanDialog;)J
-    .locals 2
+    .locals 0
 
     .prologue
     .line 39
-    iget-wide v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->h:J
+    invoke-direct {p0}, Lkik/android/chat/fragment/TemporaryBanDialog;->g()V
 
-    return-wide v0
+    return-void
 .end method
 
 .method private d()Ljava/lang/String;
@@ -840,21 +790,21 @@
 
     .prologue
     .line 158
-    iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->j:Lkik/core/net/outgoing/p;
+    iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->j:Lkik/core/net/outgoing/ar;
 
-    invoke-virtual {v0}, Lkik/core/net/outgoing/p;->e()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/net/outgoing/ar;->e()Ljava/lang/String;
 
     move-result-object v0
 
     .line 159
-    invoke-static {v0}, Lkik/core/util/u;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lkik/core/util/w;->a(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 160
-    const v0, 0x7f09027d
+    const v0, 0x7f0a0269
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
@@ -865,26 +815,42 @@
     return-object v0
 .end method
 
+.method static synthetic d(Lkik/android/chat/fragment/TemporaryBanDialog;)V
+    .locals 2
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 0
+    .line 2095
+    iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->_body:Lkik/android/widget/RobotoTextView;
+
+    invoke-virtual {v0, v1, v1}, Lkik/android/widget/RobotoTextView;->scrollTo(II)V
+
+    .line 0
+    return-void
+.end method
+
 .method private e()Ljava/lang/String;
     .locals 2
 
     .prologue
     .line 169
-    iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->j:Lkik/core/net/outgoing/p;
+    iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->j:Lkik/core/net/outgoing/ar;
 
-    invoke-virtual {v0}, Lkik/core/net/outgoing/p;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/net/outgoing/ar;->c()Ljava/lang/String;
 
     move-result-object v0
 
     .line 170
-    invoke-static {v0}, Lkik/core/util/u;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lkik/core/util/w;->a(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 171
-    const v0, 0x7f09055a
+    const v0, 0x7f0a0532
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
@@ -896,26 +862,83 @@
 .end method
 
 .method static synthetic e(Lkik/android/chat/fragment/TemporaryBanDialog;)V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 39
-    .line 2356
-    iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->a:Lkik/core/ICoreEvents;
+    .line 0
+    .line 2140
+    invoke-direct {p0}, Lkik/android/chat/fragment/TemporaryBanDialog;->g()V
 
-    invoke-interface {v0}, Lkik/core/ICoreEvents;->i()V
-
-    .line 39
+    .line 0
     return-void
 .end method
 
 .method static synthetic f(Lkik/android/chat/fragment/TemporaryBanDialog;)V
-    .locals 0
+    .locals 6
 
     .prologue
-    .line 39
-    invoke-direct {p0}, Lkik/android/chat/fragment/TemporaryBanDialog;->g()V
+    .line 0
+    .line 2263
+    iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->b:Lcom/kik/android/Mixpanel;
 
+    const-string v1, "Temp Ban Ack"
+
+    invoke-virtual {v0, v1}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;)Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    const-string v1, "Ban End Elapsed"
+
+    .line 2265
+    invoke-static {}, Lkik/core/util/x;->b()J
+
+    move-result-wide v2
+
+    iget-wide v4, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->i:J
+
+    sub-long/2addr v2, v4
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 2264
+    invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    .line 2266
+    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
+
+    .line 2267
+    invoke-virtual {p0}, Lkik/android/chat/fragment/TemporaryBanDialog;->dismiss()V
+
+    .line 2268
+    invoke-virtual {p0}, Lkik/android/chat/fragment/TemporaryBanDialog;->getActivity()Landroid/support/v4/app/FragmentActivity;
+
+    move-result-object v0
+
+    .line 2269
+    if-eqz v0, :cond_0
+
+    .line 2270
+    const/4 v1, -0x1
+
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->setRequestedOrientation(I)V
+
+    .line 2272
+    :cond_0
+    iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->d:Lcom/kik/events/Promise;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Ljava/lang/Object;)V
+
+    .line 0
     return-void
 .end method
 
@@ -948,7 +971,7 @@
     .line 1262
     iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->_button:Landroid/widget/Button;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/gf;->a(Lkik/android/chat/fragment/TemporaryBanDialog;)Landroid/view/View$OnClickListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/ht;->a(Lkik/android/chat/fragment/TemporaryBanDialog;)Landroid/view/View$OnClickListener;
 
     move-result-object v1
 
@@ -1009,7 +1032,7 @@
 
     .line 139
     :cond_0
-    invoke-static {p0}, Lkik/android/chat/fragment/gd;->a(Lkik/android/chat/fragment/TemporaryBanDialog;)Ljava/lang/Runnable;
+    invoke-static {p0}, Lkik/android/chat/fragment/hr;->a(Lkik/android/chat/fragment/TemporaryBanDialog;)Ljava/lang/Runnable;
 
     move-result-object v1
 
@@ -1018,7 +1041,7 @@
     goto :goto_0
 .end method
 
-.method public final a(Lkik/core/net/outgoing/p;)V
+.method public final a(Lkik/core/net/outgoing/ar;)V
     .locals 2
 
     .prologue
@@ -1038,7 +1061,7 @@
     if-eqz v0, :cond_0
 
     .line 1150
-    invoke-static {p0, p1}, Lkik/android/chat/fragment/ge;->a(Lkik/android/chat/fragment/TemporaryBanDialog;Lkik/core/net/outgoing/p;)Ljava/lang/Runnable;
+    invoke-static {p0, p1}, Lkik/android/chat/fragment/hs;->a(Lkik/android/chat/fragment/TemporaryBanDialog;Lkik/core/net/outgoing/ar;)Ljava/lang/Runnable;
 
     move-result-object v1
 
@@ -1046,7 +1069,7 @@
 
     .line 129
     :cond_0
-    iput-object p1, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->j:Lkik/core/net/outgoing/p;
+    iput-object p1, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->j:Lkik/core/net/outgoing/ar;
 
     .line 131
     return-void
@@ -1100,7 +1123,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lkik/android/util/r;->a(Landroid/content/Context;)Lcom/kik/components/CoreComponent;
+    invoke-static {v0}, Lkik/android/util/s;->a(Landroid/app/Activity;)Lcom/kik/components/CoreComponent;
 
     move-result-object v0
 
@@ -1124,7 +1147,7 @@
     invoke-super {p0, p1, p2, p3}, Lkik/android/chat/fragment/CustomDialogFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     .line 90
-    const v0, 0x7f040171
+    const v0, 0x7f040134
 
     invoke-virtual {p1, v0, p2, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -1135,12 +1158,12 @@
     .line 91
     iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->g:Landroid/view/View;
 
-    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)Lbutterknife/Unbinder;
+    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)V
 
     .line 93
     iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->g:Landroid/view/View;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/gc;->a(Lkik/android/chat/fragment/TemporaryBanDialog;)Landroid/view/View$OnLayoutChangeListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/hq;->a(Lkik/android/chat/fragment/TemporaryBanDialog;)Landroid/view/View$OnLayoutChangeListener;
 
     move-result-object v1
 
@@ -1165,18 +1188,18 @@
     .line 102
     iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->_title:Lkik/android/widget/RobotoTextView;
 
-    iget-object v1, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->j:Lkik/core/net/outgoing/p;
+    iget-object v1, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->j:Lkik/core/net/outgoing/ar;
 
-    invoke-virtual {v1}, Lkik/core/net/outgoing/p;->a()Ljava/lang/String;
+    invoke-virtual {v1}, Lkik/core/net/outgoing/ar;->a()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v0, v1}, Lkik/android/chat/fragment/TemporaryBanDialog;->a(Landroid/widget/TextView;Ljava/lang/String;)V
 
     .line 103
-    iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->j:Lkik/core/net/outgoing/p;
+    iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->j:Lkik/core/net/outgoing/ar;
 
-    invoke-virtual {v0}, Lkik/core/net/outgoing/p;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/net/outgoing/ar;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1185,9 +1208,9 @@
     .line 104
     iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->_timerText:Lkik/android/widget/RobotoTextView;
 
-    iget-object v1, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->j:Lkik/core/net/outgoing/p;
+    iget-object v1, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->j:Lkik/core/net/outgoing/ar;
 
-    invoke-virtual {v1}, Lkik/core/net/outgoing/p;->f()Ljava/lang/String;
+    invoke-virtual {v1}, Lkik/core/net/outgoing/ar;->f()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1203,9 +1226,9 @@
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
     .line 106
-    iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->j:Lkik/core/net/outgoing/p;
+    iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog;->j:Lkik/core/net/outgoing/ar;
 
-    invoke-virtual {v0}, Lkik/core/net/outgoing/p;->g()J
+    invoke-virtual {v0}, Lkik/core/net/outgoing/ar;->g()J
 
     move-result-wide v0
 

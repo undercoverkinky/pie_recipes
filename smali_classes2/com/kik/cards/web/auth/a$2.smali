@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Lcom/kik/events/e",
         "<",
-        "Ljava/lang/String;",
+        "Ljava/lang/Void;",
         ">;"
     }
 .end annotation
@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 99
+    .line 98
     iput-object p1, p0, Lcom/kik/cards/web/auth/a$2;->a:Lcom/kik/cards/web/auth/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,21 +50,21 @@
     .locals 2
 
     .prologue
-    .line 99
+    .line 98
     .line 1103
     iget-object v0, p0, Lcom/kik/cards/web/auth/a$2;->a:Lcom/kik/cards/web/auth/a;
 
     iget-object v1, p0, Lcom/kik/cards/web/auth/a$2;->a:Lcom/kik/cards/web/auth/a;
 
-    invoke-static {v1}, Lcom/kik/cards/web/auth/a;->b(Lcom/kik/cards/web/auth/a;)Lkik/core/interfaces/ag;
+    invoke-static {v1}, Lcom/kik/cards/web/auth/a;->b(Lcom/kik/cards/web/auth/a;)Lkik/core/interfaces/af;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lkik/core/interfaces/ag;->d()Lkik/core/datatypes/aa;
+    invoke-interface {v1}, Lkik/core/interfaces/af;->d()Lkik/core/datatypes/ad;
 
     move-result-object v1
 
-    iget-object v1, v1, Lkik/core/datatypes/aa;->c:Ljava/lang/String;
+    iget-object v1, v1, Lkik/core/datatypes/ad;->c:Ljava/lang/String;
 
     invoke-static {v0, v1}, Lcom/kik/cards/web/auth/a;->a(Lcom/kik/cards/web/auth/a;Ljava/lang/String;)V
 
@@ -73,6 +73,6 @@
 
     invoke-static {v0}, Lcom/kik/cards/web/auth/a;->a(Lcom/kik/cards/web/auth/a;)V
 
-    .line 99
+    .line 98
     return-void
 .end method

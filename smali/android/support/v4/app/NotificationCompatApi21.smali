@@ -4,10 +4,6 @@
 
 
 # annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x15
-.end annotation
-
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/support/v4/app/NotificationCompatApi21$Builder;
@@ -66,10 +62,10 @@
     .locals 0
 
     .prologue
-    .line 33
+    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
+    .line 55
     return-void
 .end method
 
@@ -77,7 +73,7 @@
     .locals 2
 
     .prologue
-    .line 232
+    .line 206
     new-instance v0, Landroid/app/RemoteInput$Builder;
 
     invoke-virtual {p0}, Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;->getResultKey()Ljava/lang/String;
@@ -86,7 +82,6 @@
 
     invoke-direct {v0, v1}, Landroid/app/RemoteInput$Builder;-><init>(Ljava/lang/String;)V
 
-    .line 233
     invoke-virtual {p0}, Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;->getLabel()Ljava/lang/CharSequence;
 
     move-result-object v1
@@ -95,7 +90,6 @@
 
     move-result-object v0
 
-    .line 234
     invoke-virtual {p0}, Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;->getChoices()[Ljava/lang/CharSequence;
 
     move-result-object v1
@@ -104,7 +98,6 @@
 
     move-result-object v0
 
-    .line 235
     invoke-virtual {p0}, Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;->getAllowFreeFormInput()Z
 
     move-result v1
@@ -113,7 +106,6 @@
 
     move-result-object v0
 
-    .line 236
     invoke-virtual {p0}, Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
@@ -122,7 +114,6 @@
 
     move-result-object v0
 
-    .line 237
     invoke-virtual {v0}, Landroid/app/RemoteInput$Builder;->build()Landroid/app/RemoteInput;
 
     move-result-object v0
@@ -138,20 +129,20 @@
 
     const/4 v1, 0x0
 
-    .line 155
+    .line 129
     if-nez p0, :cond_0
 
-    .line 179
+    .line 153
     :goto_0
     return-object v0
 
-    .line 158
+    .line 132
     :cond_0
     new-instance v2, Landroid/os/Bundle;
 
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
-    .line 160
+    .line 134
     invoke-virtual {p0}, Landroid/support/v4/app/NotificationCompatBase$UnreadConversation;->getParticipants()[Ljava/lang/String;
 
     move-result-object v3
@@ -168,14 +159,14 @@
 
     if-le v3, v4, :cond_1
 
-    .line 161
+    .line 135
     invoke-virtual {p0}, Landroid/support/v4/app/NotificationCompatBase$UnreadConversation;->getParticipants()[Ljava/lang/String;
 
     move-result-object v0
 
     aget-object v0, v0, v1
 
-    .line 163
+    .line 137
     :cond_1
     invoke-virtual {p0}, Landroid/support/v4/app/NotificationCompatBase$UnreadConversation;->getMessages()[Ljava/lang/String;
 
@@ -185,18 +176,18 @@
 
     new-array v3, v3, [Landroid/os/Parcelable;
 
-    .line 164
+    .line 138
     :goto_1
     array-length v4, v3
 
     if-ge v1, v4, :cond_2
 
-    .line 165
+    .line 139
     new-instance v4, Landroid/os/Bundle;
 
     invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
 
-    .line 166
+    .line 140
     const-string v5, "text"
 
     invoke-virtual {p0}, Landroid/support/v4/app/NotificationCompatBase$UnreadConversation;->getMessages()[Ljava/lang/String;
@@ -207,34 +198,34 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 167
+    .line 141
     const-string v5, "author"
 
     invoke-virtual {v4, v5, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 168
+    .line 142
     aput-object v4, v3, v1
 
-    .line 164
+    .line 138
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 170
+    .line 144
     :cond_2
     const-string v0, "messages"
 
     invoke-virtual {v2, v0, v3}, Landroid/os/Bundle;->putParcelableArray(Ljava/lang/String;[Landroid/os/Parcelable;)V
 
-    .line 171
+    .line 145
     invoke-virtual {p0}, Landroid/support/v4/app/NotificationCompatBase$UnreadConversation;->getRemoteInput()Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;
 
     move-result-object v0
 
-    .line 172
+    .line 146
     if-eqz v0, :cond_3
 
-    .line 173
+    .line 147
     const-string v1, "remote_input"
 
     invoke-static {v0}, Landroid/support/v4/app/NotificationCompatApi21;->fromCompatRemoteInput(Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;)Landroid/app/RemoteInput;
@@ -243,7 +234,7 @@
 
     invoke-virtual {v2, v1, v0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 175
+    .line 149
     :cond_3
     const-string v0, "on_reply"
 
@@ -253,7 +244,7 @@
 
     invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 176
+    .line 150
     const-string v0, "on_read"
 
     invoke-virtual {p0}, Landroid/support/v4/app/NotificationCompatBase$UnreadConversation;->getReadPendingIntent()Landroid/app/PendingIntent;
@@ -262,7 +253,7 @@
 
     invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 177
+    .line 151
     const-string v0, "participants"
 
     invoke-virtual {p0}, Landroid/support/v4/app/NotificationCompatBase$UnreadConversation;->getParticipants()[Ljava/lang/String;
@@ -271,7 +262,7 @@
 
     invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 178
+    .line 152
     const-string v0, "timestamp"
 
     invoke-virtual {p0}, Landroid/support/v4/app/NotificationCompatBase$UnreadConversation;->getLatestTimestamp()J
@@ -282,7 +273,7 @@
 
     move-object v0, v2
 
-    .line 179
+    .line 153
     goto :goto_0
 .end method
 
@@ -290,7 +281,7 @@
     .locals 1
 
     .prologue
-    .line 151
+    .line 125
     iget-object v0, p0, Landroid/app/Notification;->category:Ljava/lang/String;
 
     return-object v0
@@ -306,15 +297,15 @@
 
     const/4 v6, 0x0
 
-    .line 185
+    .line 159
     if-nez p0, :cond_1
 
-    .line 222
+    .line 196
     :cond_0
     :goto_0
     return-object v6
 
-    .line 188
+    .line 162
     :cond_1
     const-string v0, "messages"
 
@@ -322,37 +313,37 @@
 
     move-result-object v4
 
-    .line 190
+    .line 164
     if-eqz v4, :cond_6
 
-    .line 191
+    .line 165
     array-length v0, v4
 
     new-array v3, v0, [Ljava/lang/String;
 
     move v1, v2
 
-    .line 193
+    .line 167
     :goto_1
     array-length v0, v3
 
     if-ge v1, v0, :cond_5
 
-    .line 194
+    .line 168
     aget-object v0, v4, v1
 
     instance-of v0, v0, Landroid/os/Bundle;
 
     if-nez v0, :cond_3
 
-    .line 204
+    .line 178
     :cond_2
     :goto_2
     if-eqz v2, :cond_0
 
     move-object v1, v3
 
-    .line 211
+    .line 185
     :goto_3
     const-string v0, "on_read"
 
@@ -362,7 +353,7 @@
 
     check-cast v4, Landroid/app/PendingIntent;
 
-    .line 212
+    .line 186
     const-string v0, "on_reply"
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -371,7 +362,7 @@
 
     check-cast v3, Landroid/app/PendingIntent;
 
-    .line 214
+    .line 188
     const-string v0, "remote_input"
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -380,24 +371,23 @@
 
     check-cast v0, Landroid/app/RemoteInput;
 
-    .line 216
+    .line 190
     const-string v2, "participants"
 
     invoke-virtual {p0, v2}, Landroid/os/Bundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v5
 
-    .line 217
+    .line 191
     if-eqz v5, :cond_0
 
     array-length v2, v5
 
     if-ne v2, v7, :cond_0
 
-    .line 222
+    .line 196
     if-eqz v0, :cond_4
 
-    .line 224
     invoke-static {v0, p2}, Landroid/support/v4/app/NotificationCompatApi21;->toCompatRemoteInput(Landroid/app/RemoteInput;Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput$Factory;)Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;
 
     move-result-object v2
@@ -405,21 +395,19 @@
     :goto_4
     const-string v0, "timestamp"
 
-    .line 227
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v6
 
     move-object v0, p1
 
-    .line 222
     invoke-interface/range {v0 .. v7}, Landroid/support/v4/app/NotificationCompatBase$UnreadConversation$Factory;->build([Ljava/lang/String;Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;Landroid/app/PendingIntent;Landroid/app/PendingIntent;[Ljava/lang/String;J)Landroid/support/v4/app/NotificationCompatBase$UnreadConversation;
 
     move-result-object v6
 
     goto :goto_0
 
-    .line 198
+    .line 172
     :cond_3
     aget-object v0, v4, v1
 
@@ -433,12 +421,12 @@
 
     aput-object v0, v3, v1
 
-    .line 199
+    .line 173
     aget-object v0, v3, v1
 
     if-eqz v0, :cond_2
 
-    .line 193
+    .line 167
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
@@ -448,7 +436,7 @@
     :cond_4
     move-object v2, v6
 
-    .line 224
+    .line 196
     goto :goto_4
 
     :cond_5
@@ -466,34 +454,29 @@
     .locals 6
 
     .prologue
-    .line 243
+    .line 217
     invoke-virtual {p0}, Landroid/app/RemoteInput;->getResultKey()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 244
     invoke-virtual {p0}, Landroid/app/RemoteInput;->getLabel()Ljava/lang/CharSequence;
 
     move-result-object v2
 
-    .line 245
     invoke-virtual {p0}, Landroid/app/RemoteInput;->getChoices()[Ljava/lang/CharSequence;
 
     move-result-object v3
 
-    .line 246
     invoke-virtual {p0}, Landroid/app/RemoteInput;->getAllowFreeFormInput()Z
 
     move-result v4
 
-    .line 247
     invoke-virtual {p0}, Landroid/app/RemoteInput;->getExtras()Landroid/os/Bundle;
 
     move-result-object v5
 
     move-object v0, p1
 
-    .line 243
     invoke-interface/range {v0 .. v5}, Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput$Factory;->build(Ljava/lang/String;Ljava/lang/CharSequence;[Ljava/lang/CharSequence;ZLandroid/os/Bundle;)Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;
 
     move-result-object v0

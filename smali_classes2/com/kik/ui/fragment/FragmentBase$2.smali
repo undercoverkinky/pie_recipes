@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/ui/fragment/FragmentBase;->showKeyBoard(Landroid/view/View;Z)V
+    value = Lcom/kik/ui/fragment/FragmentBase;->a(Landroid/view/View;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,7 +30,7 @@
     .locals 0
 
     .prologue
-    .line 318
+    .line 326
     iput-object p1, p0, Lcom/kik/ui/fragment/FragmentBase$2;->c:Lcom/kik/ui/fragment/FragmentBase;
 
     iput-object p2, p0, Lcom/kik/ui/fragment/FragmentBase$2;->a:Landroid/view/View;
@@ -48,15 +48,15 @@
     .locals 3
 
     .prologue
-    .line 322
+    .line 330
     iget-object v0, p0, Lcom/kik/ui/fragment/FragmentBase$2;->a:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->requestFocus()Z
 
-    .line 323
+    .line 331
     iget-object v0, p0, Lcom/kik/ui/fragment/FragmentBase$2;->c:Lcom/kik/ui/fragment/FragmentBase;
 
-    invoke-static {v0}, Lcom/kik/ui/fragment/FragmentBase;->access$000(Lcom/kik/ui/fragment/FragmentBase;)Landroid/view/inputmethod/InputMethodManager;
+    invoke-static {v0}, Lcom/kik/ui/fragment/FragmentBase;->a(Lcom/kik/ui/fragment/FragmentBase;)Landroid/view/inputmethod/InputMethodManager;
 
     move-result-object v1
 
@@ -71,10 +71,10 @@
     :goto_0
     invoke-virtual {v1, v2, v0}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
 
-    .line 324
+    .line 332
     return-void
 
-    .line 323
+    .line 331
     :cond_0
     const/4 v0, 0x1
 

@@ -88,7 +88,7 @@
 
     iget-object v0, v0, Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;->_textureView:Lkik/android/widget/KikTextureVideoView;
 
-    invoke-virtual {v0}, Lkik/android/widget/KikTextureVideoView;->e()Z
+    invoke-virtual {v0}, Lkik/android/widget/KikTextureVideoView;->d()Z
 
     move-result v0
 
@@ -97,7 +97,7 @@
     .line 75
     iget-object v0, p0, Lkik/android/chat/fragment/FullControlVideoMediaItemFragment$2;->a:Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;->i()V
+    invoke-virtual {v0}, Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;->k()V
 
     .line 76
     iput-boolean v1, p0, Lkik/android/chat/fragment/FullControlVideoMediaItemFragment$2;->b:Z
@@ -134,7 +134,7 @@
     .line 88
     iget-object v0, p0, Lkik/android/chat/fragment/FullControlVideoMediaItemFragment$2;->a:Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;->c()Z
+    invoke-virtual {v0}, Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;->d()Z
 
     .line 90
     :cond_0

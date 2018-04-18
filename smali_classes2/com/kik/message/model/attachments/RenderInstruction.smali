@@ -78,7 +78,7 @@
     return-void
 .end method
 
-.method public static a()Lcom/dyuproject/protostuff/u;
+.method public static b()Lcom/dyuproject/protostuff/u;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -99,6 +99,25 @@
 
 
 # virtual methods
+.method public final a()Lcom/dyuproject/protostuff/u;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/dyuproject/protostuff/u",
+            "<",
+            "Lcom/kik/message/model/attachments/RenderInstruction;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 114
+    sget-object v0, Lcom/kik/message/model/attachments/RenderInstruction;->b:Lcom/dyuproject/protostuff/u;
+
+    return-object v0
+.end method
+
 .method public final a(Ljava/lang/Integer;)Lcom/kik/message/model/attachments/RenderInstruction;
     .locals 0
 
@@ -143,7 +162,7 @@
     return-object p0
 .end method
 
-.method public final b()Ljava/lang/Integer;
+.method public final c()Ljava/lang/Integer;
     .locals 1
 
     .prologue
@@ -153,7 +172,7 @@
     return-object v0
 .end method
 
-.method public final c()Ljava/lang/Integer;
+.method public final d()Ljava/lang/Integer;
     .locals 1
 
     .prologue
@@ -163,26 +182,7 @@
     return-object v0
 .end method
 
-.method public final cachedSchema()Lcom/dyuproject/protostuff/u;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/dyuproject/protostuff/u",
-            "<",
-            "Lcom/kik/message/model/attachments/RenderInstruction;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 114
-    sget-object v0, Lcom/kik/message/model/attachments/RenderInstruction;->b:Lcom/dyuproject/protostuff/u;
-
-    return-object v0
-.end method
-
-.method public final d()Ljava/lang/String;
+.method public final e()Ljava/lang/String;
     .locals 1
 
     .prologue
@@ -192,7 +192,7 @@
     return-object v0
 .end method
 
-.method public final e()Ljava/lang/String;
+.method public final f()Ljava/lang/String;
     .locals 1
 
     .prologue

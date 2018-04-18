@@ -30,7 +30,7 @@
     .locals 0
 
     .prologue
-    .line 861
+    .line 882
     iput-object p1, p0, Lcom/google/gson/internal/bind/TypeAdapters$34;->a:Ljava/lang/Class;
 
     iput-object p2, p0, Lcom/google/gson/internal/bind/TypeAdapters$34;->b:Ljava/lang/Class;
@@ -44,14 +44,14 @@
 
 
 # virtual methods
-.method public final a(Lcom/google/gson/e;Lcom/google/gson/b/a;)Lcom/google/gson/o;
+.method public final a(Lcom/google/gson/d;Lcom/google/gson/b/a;)Lcom/google/gson/o;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lcom/google/gson/e;",
+            "Lcom/google/gson/d;",
             "Lcom/google/gson/b/a",
             "<TT;>;)",
             "Lcom/google/gson/o",
@@ -60,12 +60,12 @@
     .end annotation
 
     .prologue
-    .line 864
+    .line 885
     invoke-virtual {p2}, Lcom/google/gson/b/a;->a()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 865
+    .line 886
     iget-object v1, p0, Lcom/google/gson/internal/bind/TypeAdapters$34;->a:Ljava/lang/Class;
 
     if-eq v0, v1, :cond_0
@@ -90,7 +90,7 @@
     .locals 2
 
     .prologue
-    .line 868
+    .line 889
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "Factory[type="
@@ -115,7 +115,7 @@
 
     iget-object v1, p0, Lcom/google/gson/internal/bind/TypeAdapters$34;->b:Ljava/lang/Class;
 
-    .line 869
+    .line 890
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -146,6 +146,5 @@
 
     move-result-object v0
 
-    .line 868
     return-object v0
 .end method

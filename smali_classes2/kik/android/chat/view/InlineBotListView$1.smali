@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 72
+    .line 71
     iput-object p1, p0, Lkik/android/chat/view/InlineBotListView$1;->a:Lkik/android/chat/view/InlineBotListView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -37,11 +37,11 @@
     .locals 1
 
     .prologue
-    .line 76
+    .line 75
     iget-object v0, p0, Lkik/android/chat/view/InlineBotListView$1;->a:Lkik/android/chat/view/InlineBotListView;
 
     invoke-static {v0}, Lkik/android/chat/view/InlineBotListView;->a(Lkik/android/chat/view/InlineBotListView;)Z
 
-    .line 77
+    .line 76
     return-void
 .end method

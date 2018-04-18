@@ -1,5 +1,5 @@
 .class final Lkik/android/util/d$b;
-.super Lkik/android/i/c;
+.super Lkik/android/g/c;
 .source "SourceFile"
 
 
@@ -23,17 +23,17 @@
     .locals 2
 
     .prologue
-    .line 567
+    .line 569
     iput-object p1, p0, Lkik/android/util/d$b;->a:Lkik/android/util/d;
 
-    .line 568
+    .line 570
     const-string v0, "kikAndroidFileDatabase.db"
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, p2, v0, v1, p3}, Lkik/android/i/c;-><init>(Landroid/content/Context;Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {p0, p2, v0, v1, p3}, Lkik/android/g/c;-><init>(Landroid/content/Context;Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 569
+    .line 571
     return-void
 .end method
 
@@ -43,7 +43,7 @@
     .locals 0
 
     .prologue
-    .line 589
+    .line 591
     return-void
 .end method
 
@@ -51,7 +51,7 @@
     .locals 4
 
     .prologue
-    .line 574
+    .line 576
     const-string v0, "CREATE TABLE IF NOT EXISTS %s (_id INTEGER PRIMARY KEY AUTOINCREMENT, uuid VARCHAR, appid VARCHAR, url VARCHAR, path VARCHAR, size INT, progress INT, contentType VARCHAR);"
 
     const/4 v1, 0x1
@@ -68,10 +68,10 @@
 
     move-result-object v0
 
-    .line 576
+    .line 578
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 577
+    .line 579
     return-void
 .end method
 
@@ -79,6 +79,6 @@
     .locals 0
 
     .prologue
-    .line 583
+    .line 585
     return-void
 .end method

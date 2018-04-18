@@ -56,7 +56,7 @@
     .line 1143
     iget-object v0, p0, Lkik/android/scan/fragment/ScanFragment$1;->a:Lkik/android/scan/fragment/ScanFragment;
 
-    invoke-static {v0}, Lkik/android/scan/fragment/ScanFragment;->c(Lkik/android/scan/fragment/ScanFragment;)Lkik/android/scan/d;
+    invoke-static {v0}, Lkik/android/scan/fragment/ScanFragment;->a(Lkik/android/scan/fragment/ScanFragment;)Lkik/android/scan/d;
 
     move-result-object v0
 
@@ -67,7 +67,7 @@
     .line 1144
     iget-object v1, p0, Lkik/android/scan/fragment/ScanFragment$1;->a:Lkik/android/scan/fragment/ScanFragment;
 
-    invoke-static {v1}, Lkik/android/scan/fragment/ScanFragment;->d(Lkik/android/scan/fragment/ScanFragment;)Z
+    invoke-static {v1}, Lkik/android/scan/fragment/ScanFragment;->b(Lkik/android/scan/fragment/ScanFragment;)Z
 
     move-result v1
 
@@ -75,7 +75,7 @@
 
     iget-object v1, p0, Lkik/android/scan/fragment/ScanFragment$1;->a:Lkik/android/scan/fragment/ScanFragment;
 
-    invoke-static {v1}, Lkik/android/scan/fragment/ScanFragment;->e(Lkik/android/scan/fragment/ScanFragment;)Z
+    invoke-static {v1}, Lkik/android/scan/fragment/ScanFragment;->c(Lkik/android/scan/fragment/ScanFragment;)Z
 
     move-result v1
 
@@ -86,7 +86,7 @@
     .line 1145
     iget-object v1, p0, Lkik/android/scan/fragment/ScanFragment$1;->a:Lkik/android/scan/fragment/ScanFragment;
 
-    invoke-static {v1}, Lkik/android/scan/fragment/ScanFragment;->f(Lkik/android/scan/fragment/ScanFragment;)Z
+    invoke-static {v1}, Lkik/android/scan/fragment/ScanFragment;->d(Lkik/android/scan/fragment/ScanFragment;)Z
 
     .line 1146
     iget-object v1, p0, Lkik/android/scan/fragment/ScanFragment$1;->a:Lkik/android/scan/fragment/ScanFragment;
@@ -98,7 +98,7 @@
     .line 1148
     iget-object v2, p0, Lkik/android/scan/fragment/ScanFragment$1;->a:Lkik/android/scan/fragment/ScanFragment;
 
-    invoke-static {v2}, Lkik/android/scan/fragment/ScanFragment;->g(Lkik/android/scan/fragment/ScanFragment;)Landroid/graphics/Point;
+    invoke-static {v2}, Lkik/android/scan/fragment/ScanFragment;->e(Lkik/android/scan/fragment/ScanFragment;)Landroid/graphics/Point;
 
     move-result-object v2
 
@@ -132,7 +132,7 @@
 
     iget-object v4, v4, Lkik/android/scan/fragment/ScanFragment;->a:Lcom/kik/android/Mixpanel;
 
-    invoke-static {v3, v4}, Lkik/android/util/ay;->a(Ljava/lang/String;Lcom/kik/android/Mixpanel;)Lcom/kik/android/Mixpanel$d;
+    invoke-static {v3, v4}, Lkik/android/util/az;->a(Ljava/lang/String;Lcom/kik/android/Mixpanel;)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v3
 

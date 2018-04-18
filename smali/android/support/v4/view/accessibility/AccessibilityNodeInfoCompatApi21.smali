@@ -4,14 +4,9 @@
 
 
 # annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x15
-.end annotation
-
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi21$CollectionItemInfo;,
-        Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi21$CollectionInfo;
+        Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi21$CollectionItemInfo;
     }
 .end annotation
 
@@ -21,10 +16,10 @@
     .locals 0
 
     .prologue
-    .line 33
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 93
+    .line 82
     return-void
 .end method
 
@@ -32,14 +27,14 @@
     .locals 0
 
     .prologue
-    .line 40
+    .line 35
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     check-cast p1, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->addAction(Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;)V
 
-    .line 41
+    .line 36
     return-void
 .end method
 
@@ -47,7 +42,7 @@
     .locals 1
 
     .prologue
-    .line 104
+    .line 93
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->getId()I
@@ -61,7 +56,7 @@
     .locals 1
 
     .prologue
-    .line 108
+    .line 97
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->getLabel()Ljava/lang/CharSequence;
@@ -86,14 +81,14 @@
     .end annotation
 
     .prologue
-    .line 35
+    .line 30
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getActionList()Ljava/util/List;
 
     move-result-object v0
 
-    .line 36
+    .line 31
     check-cast v0, Ljava/util/List;
 
     return-object v0
@@ -103,7 +98,7 @@
     .locals 1
 
     .prologue
-    .line 60
+    .line 55
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getError()Ljava/lang/CharSequence;
@@ -117,7 +112,7 @@
     .locals 1
 
     .prologue
-    .line 72
+    .line 67
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getMaxTextLength()I
@@ -131,7 +126,7 @@
     .locals 1
 
     .prologue
-    .line 76
+    .line 71
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getWindow()Landroid/view/accessibility/AccessibilityWindowInfo;
@@ -145,7 +140,7 @@
     .locals 1
 
     .prologue
-    .line 100
+    .line 89
     new-instance v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
     invoke-direct {v0, p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;-><init>(ILjava/lang/CharSequence;)V
@@ -157,7 +152,7 @@
     .locals 1
 
     .prologue
-    .line 49
+    .line 44
     invoke-static {p0, p1, p2, p3}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;->obtain(IIZI)Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;
 
     move-result-object v0
@@ -169,7 +164,7 @@
     .locals 1
 
     .prologue
-    .line 55
+    .line 50
     invoke-static/range {p0 .. p5}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo;->obtain(IIIIZZ)Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo;
 
     move-result-object v0
@@ -181,7 +176,7 @@
     .locals 1
 
     .prologue
-    .line 44
+    .line 39
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     check-cast p1, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
@@ -197,7 +192,7 @@
     .locals 1
 
     .prologue
-    .line 80
+    .line 75
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->removeChild(Landroid/view/View;)Z
@@ -211,7 +206,7 @@
     .locals 1
 
     .prologue
-    .line 84
+    .line 79
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0, p1, p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->removeChild(Landroid/view/View;I)Z
@@ -225,12 +220,12 @@
     .locals 0
 
     .prologue
-    .line 64
+    .line 59
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setError(Ljava/lang/CharSequence;)V
 
-    .line 65
+    .line 60
     return-void
 .end method
 
@@ -238,11 +233,11 @@
     .locals 0
 
     .prologue
-    .line 68
+    .line 63
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setMaxTextLength(I)V
 
-    .line 69
+    .line 64
     return-void
 .end method

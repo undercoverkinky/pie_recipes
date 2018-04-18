@@ -16,14 +16,18 @@
 
 # instance fields
 .field protected _noContactsContainer:Landroid/view/View;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f1000b8
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f11007d
+        }
     .end annotation
 .end field
 
 .field protected _noSearchResultsText:Landroid/widget/TextView;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f1000b9
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f11007e
+        }
     .end annotation
 .end field
 
@@ -37,7 +41,7 @@
     invoke-direct {p0, p1}, Landroid/support/v7/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
     .line 34
-    invoke-static {p0, p1}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)Lbutterknife/Unbinder;
+    invoke-static {p0, p1}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)V
 
     .line 35
     return-void
@@ -86,7 +90,7 @@
     :cond_0
     iget-object v0, p0, Lcom/kik/view/adapters/AbmContactListRecyclerAdapter$EmptyViewHolder;->_noSearchResultsText:Landroid/widget/TextView;
 
-    const v1, 0x7f0901fe
+    const v1, 0x7f0a01ea
 
     new-array v2, v4, [Ljava/lang/Object;
 

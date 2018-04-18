@@ -1,26 +1,27 @@
-.class public interface abstract Lkik/android/chat/vm/conversations/e;
-.super Ljava/lang/Object;
+.class public final Lkik/android/chat/vm/conversations/e;
+.super Lkik/android/chat/vm/conversations/b;
 .source "SourceFile"
 
-# interfaces
-.implements Lkik/android/chat/vm/bo;
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 7
+    invoke-direct {p0}, Lkik/android/chat/vm/conversations/b;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract b()Lrx/d;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lrx/d",
-            "<",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-.end method
+.method protected final a()Z
+    .locals 1
 
-.method public abstract d()V
-.end method
+    .prologue
+    .line 12
+    iget-boolean v0, p0, Lkik/android/chat/vm/conversations/e;->e:Z
 
-.method public abstract e()V
+    return v0
 .end method

@@ -53,7 +53,6 @@
 
     move-result-object v1
 
-    .line 64
     invoke-virtual {v1}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
     move-result-object v1

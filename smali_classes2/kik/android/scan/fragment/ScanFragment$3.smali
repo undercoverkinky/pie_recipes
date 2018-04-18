@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/scan/fragment/ScanFragment;->d()V
+    value = Lkik/android/scan/fragment/ScanFragment;->f()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 487
+    .line 475
     iput-object p1, p0, Lkik/android/scan/fragment/ScanFragment$3;->a:Lkik/android/scan/fragment/ScanFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 3
 
     .prologue
-    .line 491
+    .line 479
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/view/View;
@@ -55,6 +55,6 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
 
-    .line 492
+    .line 480
     return-void
 .end method

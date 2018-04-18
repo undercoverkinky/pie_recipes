@@ -32,28 +32,28 @@
     .locals 1
 
     .prologue
-    .line 676
+    .line 595
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 677
+    .line 596
     iput-object p1, p0, Landroid/support/v4/app/NotificationManagerCompat$CancelTask;->packageName:Ljava/lang/String;
 
-    .line 678
+    .line 597
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/support/v4/app/NotificationManagerCompat$CancelTask;->id:I
 
-    .line 679
+    .line 598
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/support/v4/app/NotificationManagerCompat$CancelTask;->tag:Ljava/lang/String;
 
-    .line 680
+    .line 599
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/v4/app/NotificationManagerCompat$CancelTask;->all:Z
 
-    .line 681
+    .line 600
     return-void
 .end method
 
@@ -61,24 +61,24 @@
     .locals 1
 
     .prologue
-    .line 683
+    .line 602
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 684
+    .line 603
     iput-object p1, p0, Landroid/support/v4/app/NotificationManagerCompat$CancelTask;->packageName:Ljava/lang/String;
 
-    .line 685
+    .line 604
     iput p2, p0, Landroid/support/v4/app/NotificationManagerCompat$CancelTask;->id:I
 
-    .line 686
+    .line 605
     iput-object p3, p0, Landroid/support/v4/app/NotificationManagerCompat$CancelTask;->tag:Ljava/lang/String;
 
-    .line 687
+    .line 606
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/support/v4/app/NotificationManagerCompat$CancelTask;->all:Z
 
-    .line 688
+    .line 607
     return-void
 .end method
 
@@ -93,21 +93,21 @@
     .end annotation
 
     .prologue
-    .line 692
+    .line 611
     iget-boolean v0, p0, Landroid/support/v4/app/NotificationManagerCompat$CancelTask;->all:Z
 
     if-eqz v0, :cond_0
 
-    .line 693
+    .line 612
     iget-object v0, p0, Landroid/support/v4/app/NotificationManagerCompat$CancelTask;->packageName:Ljava/lang/String;
 
     invoke-interface {p1, v0}, Landroid/support/v4/app/INotificationSideChannel;->cancelAll(Ljava/lang/String;)V
 
-    .line 697
+    .line 616
     :goto_0
     return-void
 
-    .line 695
+    .line 614
     :cond_0
     iget-object v0, p0, Landroid/support/v4/app/NotificationManagerCompat$CancelTask;->packageName:Ljava/lang/String;
 
@@ -124,14 +124,14 @@
     .locals 3
 
     .prologue
-    .line 700
+    .line 619
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "CancelTask["
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 701
+    .line 620
     const-string v1, "packageName:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -142,7 +142,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 702
+    .line 621
     const-string v1, ", id:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -153,7 +153,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 703
+    .line 622
     const-string v1, ", tag:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -164,7 +164,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 704
+    .line 623
     const-string v1, ", all:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -175,12 +175,12 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 705
+    .line 624
     const-string v1, "]"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 706
+    .line 625
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0

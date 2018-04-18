@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Lcom/kik/events/e",
         "<",
-        "Lcom/kik/events/GlobalPromiseCache$PromiseCache;",
+        "Lcom/kik/events/h$a;",
         ">;"
     }
 .end annotation
@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 219
+    .line 204
     iput-object p1, p0, Lkik/android/chat/fragment/SendToFragment$4;->a:Lkik/android/chat/fragment/SendToFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,12 +50,12 @@
     .locals 1
 
     .prologue
-    .line 219
-    .line 1223
+    .line 204
+    .line 1208
     iget-object v0, p0, Lkik/android/chat/fragment/SendToFragment$4;->a:Lkik/android/chat/fragment/SendToFragment;
 
-    invoke-static {v0}, Lkik/android/chat/fragment/SendToFragment;->e(Lkik/android/chat/fragment/SendToFragment;)V
+    invoke-static {v0}, Lkik/android/chat/fragment/SendToFragment;->c(Lkik/android/chat/fragment/SendToFragment;)V
 
-    .line 219
+    .line 204
     return-void
 .end method

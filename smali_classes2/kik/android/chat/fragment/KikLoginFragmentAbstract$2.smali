@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/fragment/KikLoginFragmentAbstract$2;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Landroid/os/Bundle;",
         ">;"
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 505
+    .line 471
     iput-object p1, p0, Lkik/android/chat/fragment/KikLoginFragmentAbstract$2;->a:Lkik/android/chat/fragment/KikLoginFragmentAbstract;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -46,18 +46,18 @@
     .locals 1
 
     .prologue
-    .line 505
+    .line 471
     check-cast p1, Landroid/os/Bundle;
 
-    .line 1509
-    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Object;)V
+    .line 1475
+    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Object;)V
 
-    .line 1510
+    .line 1476
     iget-object v0, p0, Lkik/android/chat/fragment/KikLoginFragmentAbstract$2;->a:Lkik/android/chat/fragment/KikLoginFragmentAbstract;
 
     invoke-static {v0, p1}, Lkik/android/chat/fragment/KikLoginFragmentAbstract;->a(Lkik/android/chat/fragment/KikLoginFragmentAbstract;Landroid/os/Bundle;)V
 
-    .line 505
+    .line 471
     return-void
 .end method
 
@@ -65,32 +65,33 @@
     .locals 2
 
     .prologue
-    .line 516
+    .line 482
     iget-object v0, p0, Lkik/android/chat/fragment/KikLoginFragmentAbstract$2;->a:Lkik/android/chat/fragment/KikLoginFragmentAbstract;
 
-    invoke-static {v0}, Lkik/android/chat/fragment/KikLoginFragmentAbstract;->g(Lkik/android/chat/fragment/KikLoginFragmentAbstract;)V
+    invoke-static {v0}, Lkik/android/chat/fragment/KikLoginFragmentAbstract;->b(Lkik/android/chat/fragment/KikLoginFragmentAbstract;)V
 
-    .line 517
-    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Throwable;)V
+    .line 483
+    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Throwable;)V
 
-    .line 518
-    iget-object v0, p0, Lkik/android/chat/fragment/KikLoginFragmentAbstract$2;->a:Lkik/android/chat/fragment/KikLoginFragmentAbstract;
+    .line 484
+    const v0, 0x7f0a00b2
 
-    const v1, 0x7f0900b3
-
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikLoginFragmentAbstract;->getStringFromResource(I)Ljava/lang/String;
+    invoke-static {v0}, Lkik/android/chat/fragment/KikLoginFragmentAbstract;->b(I)Ljava/lang/String;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lkik/android/util/bt;->a(Ljava/lang/String;I)V
+    invoke-static {v0, v1}, Lkik/android/util/bv;->a(Ljava/lang/String;I)V
 
-    .line 519
+    .line 485
     iget-object v0, p0, Lkik/android/chat/fragment/KikLoginFragmentAbstract$2;->a:Lkik/android/chat/fragment/KikLoginFragmentAbstract;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/KikLoginFragmentAbstract;->resignWaitDialog()V
+    .line 1162
+    const/4 v1, 0x0
 
-    .line 520
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikIqFragmentBase;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
+
+    .line 486
     return-void
 .end method

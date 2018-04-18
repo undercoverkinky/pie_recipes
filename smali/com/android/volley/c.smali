@@ -3,134 +3,137 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/android/volley/i;
-
-
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/android/volley/c$a;
-    }
-.end annotation
+.implements Lcom/android/volley/k;
 
 
 # instance fields
-.field private final a:Ljava/util/concurrent/Executor;
+.field private a:I
+
+.field private b:I
+
+.field private final c:I
+
+.field private final d:F
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Handler;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 3
 
     .prologue
-    .line 36
+    .line 50
+    const/16 v0, 0x9c4
+
+    const/4 v1, 0x1
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    invoke-direct {p0, v0, v1, v2}, Lcom/android/volley/c;-><init>(IIF)V
+
+    .line 51
+    return-void
+.end method
+
+.method public constructor <init>(IIF)V
+    .locals 0
+
+    .prologue
+    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
-    new-instance v0, Lcom/android/volley/c$1;
+    .line 61
+    iput p1, p0, Lcom/android/volley/c;->a:I
 
-    invoke-direct {v0, p0, p1}, Lcom/android/volley/c$1;-><init>(Lcom/android/volley/c;Landroid/os/Handler;)V
+    .line 62
+    iput p2, p0, Lcom/android/volley/c;->c:I
 
-    iput-object v0, p0, Lcom/android/volley/c;->a:Ljava/util/concurrent/Executor;
+    .line 63
+    iput p3, p0, Lcom/android/volley/c;->d:F
 
-    .line 45
+    .line 64
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/android/volley/Request;Lcom/android/volley/VolleyError;)V
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/android/volley/Request",
-            "<*>;",
-            "Lcom/android/volley/VolleyError;",
-            ")V"
-        }
-    .end annotation
+.method public final a()I
+    .locals 1
 
     .prologue
-    .line 74
-    const-string v0, "post-error"
+    .line 72
+    iget v0, p0, Lcom/android/volley/c;->a:I
 
-    invoke-virtual {p1, v0}, Lcom/android/volley/Request;->addMarker(Ljava/lang/String;)V
-
-    .line 75
-    invoke-static {p2}, Lcom/android/volley/h;->a(Lcom/android/volley/VolleyError;)Lcom/android/volley/h;
-
-    move-result-object v0
-
-    .line 76
-    iget-object v1, p0, Lcom/android/volley/c;->a:Ljava/util/concurrent/Executor;
-
-    new-instance v2, Lcom/android/volley/c$a;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p0, p1, v0, v3}, Lcom/android/volley/c$a;-><init>(Lcom/android/volley/c;Lcom/android/volley/Request;Lcom/android/volley/h;Ljava/lang/Runnable;)V
-
-    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    .line 77
-    return-void
+    return v0
 .end method
 
-.method public final a(Lcom/android/volley/Request;Lcom/android/volley/h;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
+.method public final a(Lcom/android/volley/VolleyError;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
         value = {
-            "(",
-            "Lcom/android/volley/Request",
-            "<*>;",
-            "Lcom/android/volley/h",
-            "<*>;)V"
+            Lcom/android/volley/VolleyError;
         }
     .end annotation
 
     .prologue
-    .line 60
+    .line 91
+    iget v0, p0, Lcom/android/volley/c;->b:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lcom/android/volley/c;->b:I
+
+    .line 92
+    iget v0, p0, Lcom/android/volley/c;->a:I
+
+    int-to-float v0, v0
+
+    iget v1, p0, Lcom/android/volley/c;->a:I
+
+    int-to-float v1, v1
+
+    iget v2, p0, Lcom/android/volley/c;->d:F
+
+    mul-float/2addr v1, v2
+
+    add-float/2addr v0, v1
+
+    float-to-int v0, v0
+
+    iput v0, p0, Lcom/android/volley/c;->a:I
+
+    .line 1103
+    iget v0, p0, Lcom/android/volley/c;->b:I
+
+    iget v1, p0, Lcom/android/volley/c;->c:I
+
+    if-gt v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 93
+    :goto_0
+    if-nez v0, :cond_1
+
+    .line 94
+    throw p1
+
+    .line 1103
+    :cond_0
     const/4 v0, 0x0
 
-    invoke-virtual {p0, p1, p2, v0}, Lcom/android/volley/c;->a(Lcom/android/volley/Request;Lcom/android/volley/h;Ljava/lang/Runnable;)V
+    goto :goto_0
 
-    .line 61
+    .line 96
+    :cond_1
     return-void
 .end method
 
-.method public final a(Lcom/android/volley/Request;Lcom/android/volley/h;Ljava/lang/Runnable;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/android/volley/Request",
-            "<*>;",
-            "Lcom/android/volley/h",
-            "<*>;",
-            "Ljava/lang/Runnable;",
-            ")V"
-        }
-    .end annotation
+.method public final b()I
+    .locals 1
 
     .prologue
-    .line 66
-    invoke-virtual {p1}, Lcom/android/volley/Request;->markDelivered()V
+    .line 81
+    iget v0, p0, Lcom/android/volley/c;->b:I
 
-    .line 67
-    const-string v0, "post-response"
-
-    invoke-virtual {p1, v0}, Lcom/android/volley/Request;->addMarker(Ljava/lang/String;)V
-
-    .line 68
-    iget-object v0, p0, Lcom/android/volley/c;->a:Ljava/util/concurrent/Executor;
-
-    new-instance v1, Lcom/android/volley/c$a;
-
-    invoke-direct {v1, p0, p1, p2, p3}, Lcom/android/volley/c$a;-><init>(Lcom/android/volley/c;Lcom/android/volley/Request;Lcom/android/volley/h;Ljava/lang/Runnable;)V
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    .line 69
-    return-void
+    return v0
 .end method

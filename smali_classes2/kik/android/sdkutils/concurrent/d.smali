@@ -9,18 +9,18 @@
         "Lkik/android/sdkutils/concurrent/f",
         "<",
         "Ljava/lang/String;",
-        "Lkik/core/datatypes/n;",
+        "Lkik/core/datatypes/q;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field private a:Lkik/core/interfaces/l;
+.field private a:Lkik/core/interfaces/m;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lkik/core/interfaces/l;)V
+.method public constructor <init>(Ljava/lang/String;Lkik/core/interfaces/m;)V
     .locals 0
 
     .prologue
@@ -28,7 +28,7 @@
     invoke-direct {p0, p1}, Lkik/android/sdkutils/concurrent/f;-><init>(Ljava/lang/Object;)V
 
     .line 20
-    iput-object p2, p0, Lkik/android/sdkutils/concurrent/d;->a:Lkik/core/interfaces/l;
+    iput-object p2, p0, Lkik/android/sdkutils/concurrent/d;->a:Lkik/core/interfaces/m;
 
     .line 21
     return-void
@@ -43,20 +43,20 @@
             "()",
             "Lcom/kik/events/Promise",
             "<",
-            "Lkik/core/datatypes/n;",
+            "Lkik/core/datatypes/q;",
             ">;"
         }
     .end annotation
 
     .prologue
     .line 26
-    iget-object v1, p0, Lkik/android/sdkutils/concurrent/d;->a:Lkik/core/interfaces/l;
+    iget-object v1, p0, Lkik/android/sdkutils/concurrent/d;->a:Lkik/core/interfaces/m;
 
     iget-object v0, p0, Lkik/android/sdkutils/concurrent/d;->c:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-interface {v1, v0}, Lkik/core/interfaces/l;->e(Ljava/lang/String;)Lcom/kik/events/Promise;
+    invoke-interface {v1, v0}, Lkik/core/interfaces/m;->e(Ljava/lang/String;)Lcom/kik/events/Promise;
 
     move-result-object v0
 

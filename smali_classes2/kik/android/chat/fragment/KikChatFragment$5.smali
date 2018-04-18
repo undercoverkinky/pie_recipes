@@ -1,25 +1,19 @@
 .class final Lkik/android/chat/fragment/KikChatFragment$5;
-.super Lcom/kik/events/k;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnTouchListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/KikChatFragment;->handleBackPress()Z
+    value = Lkik/android/chat/fragment/KikChatFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x0
     name = null
-.end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/kik/events/k",
-        "<",
-        "Ljava/lang/Boolean;",
-        ">;"
-    }
 .end annotation
 
 
@@ -32,36 +26,56 @@
     .locals 0
 
     .prologue
-    .line 1953
+    .line 830
     iput-object p1, p0, Lkik/android/chat/fragment/KikChatFragment$5;->a:Lkik/android/chat/fragment/KikChatFragment;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;)V
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 1
 
     .prologue
-    .line 1953
-    check-cast p1, Ljava/lang/Boolean;
-
-    .line 2957
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    .line 834
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    .line 2958
-    iget-object v0, p0, Lkik/android/chat/fragment/KikChatFragment$5;->a:Lkik/android/chat/fragment/KikChatFragment;
+    .line 843
+    :goto_0
+    :pswitch_0
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Lkik/android/chat/fragment/KikChatFragment;->p(Lkik/android/chat/fragment/KikChatFragment;)V
+    return v0
 
-    .line 1953
-    :cond_0
-    return-void
+    .line 836
+    :pswitch_1
+    const v0, 0x3ecccccd    # 0.4f
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+
+    goto :goto_0
+
+    .line 840
+    :pswitch_2
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+
+    goto :goto_0
+
+    .line 834
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_0
+        :pswitch_2
+    .end packed-switch
 .end method

@@ -21,30 +21,21 @@
 
 .field private c:Z
 
-.field private d:I
-
-.field private e:I
-
 
 # direct methods
 .method constructor <init>(Lio/branch/indexing/b;Lorg/json/JSONObject;)V
     .locals 1
 
     .prologue
-    .line 187
+    .line 170
     iput-object p1, p0, Lio/branch/indexing/b$a;->b:Lio/branch/indexing/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 188
+    .line 171
     iput-object p2, p0, Lio/branch/indexing/b$a;->a:Lorg/json/JSONObject;
 
-    .line 189
-    const/16 v0, 0xf
-
-    iput v0, p0, Lio/branch/indexing/b$a;->e:I
-
-    .line 190
+    .line 172
     const-string v0, "h"
 
     invoke-virtual {p2, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
@@ -53,7 +44,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 192
+    .line 174
     :try_start_0
     const-string v0, "h"
 
@@ -61,7 +52,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_1
 
     const/4 v0, 0x1
 
@@ -70,106 +61,36 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 198
+    .line 179
     :cond_0
     :goto_1
-    :try_start_1
-    const-string v0, "dri"
-
-    invoke-virtual {p2, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 199
-    const-string v0, "dri"
-
-    invoke-virtual {p2, v0}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    iput v0, p0, Lio/branch/indexing/b$a;->d:I
-
-    .line 201
-    :cond_1
-    const-string v0, "mdr"
-
-    invoke-virtual {p2, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 202
-    const-string v0, "mdr"
-
-    invoke-virtual {p2, v0}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    iput v0, p0, Lio/branch/indexing/b$a;->e:I
-    :try_end_1
-    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
-
-    .line 207
-    :cond_2
-    :goto_2
     return-void
 
-    .line 192
-    :cond_3
+    .line 174
+    :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 194
+    .line 176
     :catch_0
     move-exception v0
 
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
     goto :goto_1
-
-    .line 205
-    :catch_1
-    move-exception v0
-
-    invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
-
-    goto :goto_2
 .end method
 
 
 # virtual methods
-.method final a()I
-    .locals 1
-
-    .prologue
-    .line 180
-    iget v0, p0, Lio/branch/indexing/b$a;->d:I
-
-    return v0
-.end method
-
-.method final b()I
-    .locals 1
-
-    .prologue
-    .line 184
-    iget v0, p0, Lio/branch/indexing/b$a;->e:I
-
-    return v0
-.end method
-
-.method final c()Lorg/json/JSONArray;
+.method public final a()Lorg/json/JSONArray;
     .locals 3
 
     .prologue
-    .line 210
+    .line 182
     const/4 v0, 0x0
 
-    .line 211
+    .line 183
     iget-object v1, p0, Lio/branch/indexing/b$a;->a:Lorg/json/JSONObject;
 
     const-string v2, "ck"
@@ -180,7 +101,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 213
+    .line 185
     :try_start_0
     iget-object v1, p0, Lio/branch/indexing/b$a;->a:Lorg/json/JSONObject;
 
@@ -192,12 +113,12 @@
 
     move-result-object v0
 
-    .line 219
+    .line 190
     :cond_0
     :goto_0
     return-object v0
 
-    .line 215
+    .line 187
     :catch_0
     move-exception v1
 
@@ -206,11 +127,11 @@
     goto :goto_0
 .end method
 
-.method final d()Z
+.method public final b()Z
     .locals 1
 
     .prologue
-    .line 223
+    .line 194
     iget-boolean v0, p0, Lio/branch/indexing/b$a;->c:Z
 
     return v0

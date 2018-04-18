@@ -3,21 +3,15 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0xb
-.end annotation
-
-
 # direct methods
 .method private constructor <init>()V
     .locals 0
 
     .prologue
-    .line 27
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
+    .line 24
     return-void
 .end method
 
@@ -25,9 +19,9 @@
     .locals 0
 
     .prologue
-    .line 31
+    .line 27
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setMotionEventSplittingEnabled(Z)V
 
-    .line 32
+    .line 28
     return-void
 .end method

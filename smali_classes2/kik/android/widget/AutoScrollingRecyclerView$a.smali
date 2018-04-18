@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lrx/functions/b;
+.implements Lrx/b/b;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lrx/functions/b",
+        "Lrx/b/b",
         "<",
         "Ljava/lang/Boolean;",
         ">;"

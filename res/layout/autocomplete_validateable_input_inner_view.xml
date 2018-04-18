@@ -8,5 +8,5 @@
         <ImageView android:layout_gravity="center_vertical" android:id="@id/validateable_text_view_right_image" android:layout_width="wrap_content" android:layout_height="wrap_content" />
     </LinearLayout>
     <View android:id="@id/validateable_text_view_underline" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" />
-    <TextView android:id="@id/validateable_subtext_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="16.0dip" style="@style/KikTextView.Subtext" />
+    <TextView android:id="@id/validateable_error_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="16.0dip" style="@style/KikTextView.ErrorText" />
 </merge>

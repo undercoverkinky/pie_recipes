@@ -58,14 +58,14 @@
     .locals 1
 
     .prologue
-    .line 3781
+    .line 3918
     new-instance v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;
 
     invoke-direct {v0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;-><init>()V
 
     sput-object v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->a:Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;
 
-    .line 3789
+    .line 3926
     new-instance v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$1;
 
     invoke-direct {v0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$1;-><init>()V
@@ -79,20 +79,20 @@
     .locals 1
 
     .prologue
-    .line 2523
+    .line 2660
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageV3;-><init>()V
 
-    .line 2877
+    .line 3014
     const/4 v0, -0x1
 
     iput-byte v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->memoizedIsInitialized:B
 
-    .line 2524
+    .line 2661
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->result_:I
 
-    .line 2525
+    .line 2662
     return-void
 .end method
 
@@ -109,29 +109,29 @@
 
     const/4 v2, 0x0
 
-    .line 2536
+    .line 2673
     invoke-direct {p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;-><init>()V
 
-    .line 2539
+    .line 2676
     const/4 v0, 0x0
 
     move v3, v0
 
-    .line 2540
+    .line 2677
     :cond_0
     :goto_0
     if-nez v3, :cond_1
 
-    .line 2541
+    .line 2678
     :try_start_0
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readTag()I
 
     move-result v0
 
-    .line 2542
+    .line 2679
     sparse-switch v0, :sswitch_data_0
 
-    .line 2547
+    .line 2684
     invoke-virtual {p1, v0}, Lcom/google/protobuf/CodedInputStream;->skipField(I)Z
 
     move-result v0
@@ -140,22 +140,22 @@
 
     move v3, v4
 
-    .line 2548
+    .line 2685
     goto :goto_0
 
     :sswitch_0
     move v3, v4
 
-    .line 2545
+    .line 2682
     goto :goto_0
 
-    .line 2553
+    .line 2690
     :sswitch_1
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readEnum()I
 
     move-result v0
 
-    .line 2555
+    .line 2692
     iput v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->result_:I
     :try_end_0
     .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_0 .. :try_end_0} :catch_0
@@ -164,7 +164,7 @@
 
     goto :goto_0
 
-    .line 2600
+    .line 2737
     :catch_0
     move-exception v0
 
@@ -177,34 +177,33 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2605
+    .line 2742
     :catchall_0
     move-exception v0
 
     invoke-virtual {p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->makeExtensionsImmutable()V
 
-    .line 2606
     throw v0
 
-    .line 2560
+    .line 2697
     :sswitch_2
     :try_start_2
     iget-object v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->latestState_:Lcom/kik/video/VideoCommon$ConvoVideoState;
 
     if-eqz v0, :cond_4
 
-    .line 2561
+    .line 2698
     iget-object v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->latestState_:Lcom/kik/video/VideoCommon$ConvoVideoState;
 
-    invoke-virtual {v0}, Lcom/kik/video/VideoCommon$ConvoVideoState;->toBuilder()Lcom/kik/video/VideoCommon$ConvoVideoState$Builder;
+    invoke-virtual {v0}, Lcom/kik/video/VideoCommon$ConvoVideoState;->f()Lcom/kik/video/VideoCommon$ConvoVideoState$a;
 
     move-result-object v0
 
     move-object v1, v0
 
-    .line 2563
+    .line 2700
     :goto_1
-    invoke-static {}, Lcom/kik/video/VideoCommon$ConvoVideoState;->parser()Lcom/google/protobuf/Parser;
+    invoke-static {}, Lcom/kik/video/VideoCommon$ConvoVideoState;->h()Lcom/google/protobuf/Parser;
 
     move-result-object v0
 
@@ -216,16 +215,16 @@
 
     iput-object v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->latestState_:Lcom/kik/video/VideoCommon$ConvoVideoState;
 
-    .line 2564
+    .line 2701
     if-eqz v1, :cond_0
 
-    .line 2565
+    .line 2702
     iget-object v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->latestState_:Lcom/kik/video/VideoCommon$ConvoVideoState;
 
-    invoke-virtual {v1, v0}, Lcom/kik/video/VideoCommon$ConvoVideoState$Builder;->mergeFrom(Lcom/kik/video/VideoCommon$ConvoVideoState;)Lcom/kik/video/VideoCommon$ConvoVideoState$Builder;
+    invoke-virtual {v1, v0}, Lcom/kik/video/VideoCommon$ConvoVideoState$a;->a(Lcom/kik/video/VideoCommon$ConvoVideoState;)Lcom/kik/video/VideoCommon$ConvoVideoState$a;
 
-    .line 2566
-    invoke-virtual {v1}, Lcom/kik/video/VideoCommon$ConvoVideoState$Builder;->buildPartial()Lcom/kik/video/VideoCommon$ConvoVideoState;
+    .line 2703
+    invoke-virtual {v1}, Lcom/kik/video/VideoCommon$ConvoVideoState$a;->a()Lcom/kik/video/VideoCommon$ConvoVideoState;
 
     move-result-object v0
 
@@ -237,17 +236,17 @@
 
     goto :goto_0
 
-    .line 2601
+    .line 2738
     :catch_1
     move-exception v0
 
-    .line 2602
+    .line 2739
     :try_start_3
     new-instance v1, Lcom/google/protobuf/InvalidProtocolBufferException;
 
     invoke-direct {v1, v0}, Lcom/google/protobuf/InvalidProtocolBufferException;-><init>(Ljava/io/IOException;)V
 
-    .line 2603
+    .line 2740
     invoke-virtual {v1, p0}, Lcom/google/protobuf/InvalidProtocolBufferException;->setUnfinishedMessage(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/InvalidProtocolBufferException;
 
     move-result-object v0
@@ -256,14 +255,14 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 2573
+    .line 2710
     :sswitch_3
     :try_start_4
     iget-object v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->connectionInfo_:Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
 
     if-eqz v0, :cond_3
 
-    .line 2574
+    .line 2711
     iget-object v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->connectionInfo_:Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
 
     invoke-virtual {v0}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;->d()Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
@@ -272,7 +271,7 @@
 
     move-object v1, v0
 
-    .line 2576
+    .line 2713
     :goto_2
     invoke-static {}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;->f()Lcom/google/protobuf/Parser;
 
@@ -286,15 +285,15 @@
 
     iput-object v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->connectionInfo_:Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
 
-    .line 2577
+    .line 2714
     if-eqz v1, :cond_0
 
-    .line 2578
+    .line 2715
     iget-object v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->connectionInfo_:Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
 
     invoke-virtual {v1, v0}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a(Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;)Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
-    .line 2579
+    .line 2716
     invoke-virtual {v1}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a()Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
 
     move-result-object v0
@@ -303,13 +302,13 @@
 
     goto :goto_0
 
-    .line 2586
+    .line 2723
     :sswitch_4
     iget-object v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->connectionToken_:Lcom/kik/video/VideoCommon$MediaServerConnectionToken;
 
     if-eqz v0, :cond_2
 
-    .line 2587
+    .line 2724
     iget-object v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->connectionToken_:Lcom/kik/video/VideoCommon$MediaServerConnectionToken;
 
     invoke-virtual {v0}, Lcom/kik/video/VideoCommon$MediaServerConnectionToken;->b()Lcom/kik/video/VideoCommon$MediaServerConnectionToken$a;
@@ -318,7 +317,7 @@
 
     move-object v1, v0
 
-    .line 2589
+    .line 2726
     :goto_3
     invoke-static {}, Lcom/kik/video/VideoCommon$MediaServerConnectionToken;->d()Lcom/google/protobuf/Parser;
 
@@ -332,15 +331,15 @@
 
     iput-object v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->connectionToken_:Lcom/kik/video/VideoCommon$MediaServerConnectionToken;
 
-    .line 2590
+    .line 2727
     if-eqz v1, :cond_0
 
-    .line 2591
+    .line 2728
     iget-object v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->connectionToken_:Lcom/kik/video/VideoCommon$MediaServerConnectionToken;
 
     invoke-virtual {v1, v0}, Lcom/kik/video/VideoCommon$MediaServerConnectionToken$a;->a(Lcom/kik/video/VideoCommon$MediaServerConnectionToken;)Lcom/kik/video/VideoCommon$MediaServerConnectionToken$a;
 
-    .line 2592
+    .line 2729
     invoke-virtual {v1}, Lcom/kik/video/VideoCommon$MediaServerConnectionToken$a;->a()Lcom/kik/video/VideoCommon$MediaServerConnectionToken;
 
     move-result-object v0
@@ -353,11 +352,11 @@
 
     goto/16 :goto_0
 
-    .line 2605
+    .line 2742
     :cond_1
     invoke-virtual {p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->makeExtensionsImmutable()V
 
-    .line 2606
+    .line 2743
     return-void
 
     :cond_2
@@ -375,7 +374,7 @@
 
     goto :goto_1
 
-    .line 2542
+    .line 2679
     nop
 
     :sswitch_data_0
@@ -397,7 +396,7 @@
     .end annotation
 
     .prologue
-    .line 2515
+    .line 2652
     invoke-direct {p0, p1, p2}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;-><init>(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)V
 
     return-void
@@ -414,15 +413,15 @@
     .end annotation
 
     .prologue
-    .line 2521
+    .line 2658
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;)V
 
-    .line 2877
+    .line 3014
     const/4 v0, -0x1
 
     iput-byte v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->memoizedIsInitialized:B
 
-    .line 2522
+    .line 2659
     return-void
 .end method
 
@@ -430,7 +429,7 @@
     .locals 0
 
     .prologue
-    .line 2515
+    .line 2652
     invoke-direct {p0, p1}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;)V
 
     return-void
@@ -440,7 +439,7 @@
     .locals 1
 
     .prologue
-    .line 2515
+    .line 2652
     iget v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->result_:I
 
     return v0
@@ -450,7 +449,7 @@
     .locals 0
 
     .prologue
-    .line 2515
+    .line 2652
     iput p1, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->result_:I
 
     return p1
@@ -460,7 +459,7 @@
     .locals 1
 
     .prologue
-    .line 2610
+    .line 2747
     invoke-static {}, Lcom/kik/video/mobile/KikVideoService;->g()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
@@ -472,7 +471,7 @@
     .locals 0
 
     .prologue
-    .line 2515
+    .line 2652
     iput-object p1, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->connectionInfo_:Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
 
     return-object p1
@@ -482,7 +481,7 @@
     .locals 0
 
     .prologue
-    .line 2515
+    .line 2652
     iput-object p1, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->latestState_:Lcom/kik/video/VideoCommon$ConvoVideoState;
 
     return-object p1
@@ -492,7 +491,7 @@
     .locals 0
 
     .prologue
-    .line 2515
+    .line 2652
     iput-object p1, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->connectionToken_:Lcom/kik/video/VideoCommon$MediaServerConnectionToken;
 
     return-object p1
@@ -502,7 +501,7 @@
     .locals 1
 
     .prologue
-    .line 3785
+    .line 3922
     sget-object v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->a:Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;
 
     return-object v0
@@ -521,7 +520,7 @@
     .end annotation
 
     .prologue
-    .line 3799
+    .line 3936
     sget-object v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->b:Lcom/google/protobuf/Parser;
 
     return-object v0
@@ -531,7 +530,7 @@
     .locals 1
 
     .prologue
-    .line 2515
+    .line 2652
     sget-boolean v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->alwaysUseFieldBuilders:Z
 
     return v0
@@ -541,7 +540,7 @@
     .locals 1
 
     .prologue
-    .line 2515
+    .line 2652
     sget-object v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->b:Lcom/google/protobuf/Parser;
 
     return-object v0
@@ -553,7 +552,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 3052
+    .line 3189
     sget-object v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->a:Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;
 
     if-ne p0, v0, :cond_0
@@ -570,7 +569,7 @@
 
     invoke-direct {v0, v1}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$a;-><init>(B)V
 
-    .line 3053
+    .line 3190
     invoke-virtual {v0, p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$a;->a(Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;)Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$a;
 
     move-result-object v0
@@ -584,7 +583,7 @@
     .locals 1
 
     .prologue
-    .line 2759
+    .line 2896
     iget v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->result_:I
 
     return v0
@@ -594,14 +593,14 @@
     .locals 1
 
     .prologue
-    .line 2765
+    .line 2902
     iget v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->result_:I
 
     invoke-static {v0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;->valueOf(I)Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;
 
     move-result-object v0
 
-    .line 2766
+    .line 2903
     if-nez v0, :cond_0
 
     sget-object v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;->UNRECOGNIZED:Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;
@@ -614,7 +613,7 @@
     .locals 1
 
     .prologue
-    .line 2781
+    .line 2918
     iget-object v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->latestState_:Lcom/kik/video/VideoCommon$ConvoVideoState;
 
     if-eqz v0, :cond_0
@@ -634,12 +633,12 @@
     .locals 1
 
     .prologue
-    .line 2793
+    .line 2930
     iget-object v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->latestState_:Lcom/kik/video/VideoCommon$ConvoVideoState;
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lcom/kik/video/VideoCommon$ConvoVideoState;->getDefaultInstance()Lcom/kik/video/VideoCommon$ConvoVideoState;
+    invoke-static {}, Lcom/kik/video/VideoCommon$ConvoVideoState;->g()Lcom/kik/video/VideoCommon$ConvoVideoState;
 
     move-result-object v0
 
@@ -660,32 +659,32 @@
 
     const/4 v1, 0x1
 
-    .line 2931
+    .line 3068
     if-ne p1, p0, :cond_1
 
-    .line 2956
+    .line 3093
     :cond_0
     :goto_0
     return v1
 
-    .line 2934
+    .line 3071
     :cond_1
     instance-of v0, p1, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;
 
     if-nez v0, :cond_2
 
-    .line 2935
+    .line 3072
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     goto :goto_0
 
-    .line 2937
+    .line 3074
     :cond_2
     check-cast p1, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;
 
-    .line 2940
+    .line 3077
     iget v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->result_:I
 
     iget v3, p1, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->result_:I
@@ -694,7 +693,7 @@
 
     move v0, v1
 
-    .line 2941
+    .line 3078
     :goto_1
     if-eqz v0, :cond_7
 
@@ -710,7 +709,7 @@
 
     move v0, v1
 
-    .line 2942
+    .line 3079
     :goto_2
     invoke-virtual {p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->d()Z
 
@@ -718,14 +717,14 @@
 
     if-eqz v3, :cond_3
 
-    .line 2943
+    .line 3080
     if-eqz v0, :cond_8
 
     invoke-virtual {p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->e()Lcom/kik/video/VideoCommon$ConvoVideoState;
 
     move-result-object v0
 
-    .line 2944
+    .line 3081
     invoke-virtual {p1}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->e()Lcom/kik/video/VideoCommon$ConvoVideoState;
 
     move-result-object v3
@@ -738,7 +737,7 @@
 
     move v0, v1
 
-    .line 2946
+    .line 3083
     :cond_3
     :goto_3
     if-eqz v0, :cond_9
@@ -755,7 +754,7 @@
 
     move v0, v1
 
-    .line 2947
+    .line 3084
     :goto_4
     invoke-virtual {p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->f()Z
 
@@ -763,14 +762,14 @@
 
     if-eqz v3, :cond_4
 
-    .line 2948
+    .line 3085
     if-eqz v0, :cond_a
 
     invoke-virtual {p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->g()Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
 
     move-result-object v0
 
-    .line 2949
+    .line 3086
     invoke-virtual {p1}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->g()Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
 
     move-result-object v3
@@ -783,7 +782,7 @@
 
     move v0, v1
 
-    .line 2951
+    .line 3088
     :cond_4
     :goto_5
     if-eqz v0, :cond_b
@@ -800,7 +799,7 @@
 
     move v0, v1
 
-    .line 2952
+    .line 3089
     :goto_6
     invoke-virtual {p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->h()Z
 
@@ -808,14 +807,14 @@
 
     if-eqz v3, :cond_c
 
-    .line 2953
+    .line 3090
     if-eqz v0, :cond_5
 
     invoke-virtual {p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->i()Lcom/kik/video/VideoCommon$MediaServerConnectionToken;
 
     move-result-object v0
 
-    .line 2954
+    .line 3091
     invoke-virtual {p1}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->i()Lcom/kik/video/VideoCommon$MediaServerConnectionToken;
 
     move-result-object v3
@@ -834,37 +833,37 @@
     :cond_6
     move v0, v2
 
-    .line 2940
+    .line 3077
     goto :goto_1
 
     :cond_7
     move v0, v2
 
-    .line 2941
+    .line 3078
     goto :goto_2
 
     :cond_8
     move v0, v2
 
-    .line 2944
+    .line 3081
     goto :goto_3
 
     :cond_9
     move v0, v2
 
-    .line 2946
+    .line 3083
     goto :goto_4
 
     :cond_a
     move v0, v2
 
-    .line 2949
+    .line 3086
     goto :goto_5
 
     :cond_b
     move v0, v2
 
-    .line 2951
+    .line 3088
     goto :goto_6
 
     :cond_c
@@ -877,7 +876,7 @@
     .locals 1
 
     .prologue
-    .line 2818
+    .line 2955
     iget-object v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->connectionInfo_:Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
 
     if-eqz v0, :cond_0
@@ -897,7 +896,7 @@
     .locals 1
 
     .prologue
-    .line 2828
+    .line 2965
     iget-object v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->connectionInfo_:Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
 
     if-nez v0, :cond_0
@@ -919,10 +918,10 @@
     .locals 1
 
     .prologue
-    .line 7808
+    .line 7945
     sget-object v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->a:Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;
 
-    .line 2515
+    .line 2652
     return-object v0
 .end method
 
@@ -930,10 +929,10 @@
     .locals 1
 
     .prologue
-    .line 6808
+    .line 6945
     sget-object v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->a:Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;
 
-    .line 2515
+    .line 2652
     return-object v0
 .end method
 
@@ -950,7 +949,7 @@
     .end annotation
 
     .prologue
-    .line 3804
+    .line 3941
     sget-object v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->b:Lcom/google/protobuf/Parser;
 
     return-object v0
@@ -960,23 +959,23 @@
     .locals 3
 
     .prologue
-    .line 2904
+    .line 3041
     iget v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->memoizedSize:I
 
-    .line 2905
+    .line 3042
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 2925
+    .line 3062
     :goto_0
     return v0
 
-    .line 2907
+    .line 3044
     :cond_0
     const/4 v0, 0x0
 
-    .line 2908
+    .line 3045
     iget v1, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->result_:I
 
     sget-object v2, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;->OK:Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;
@@ -987,28 +986,28 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 2909
+    .line 3046
     const/4 v0, 0x1
 
     iget v1, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->result_:I
 
-    .line 2910
+    .line 3047
     invoke-static {v0, v1}, Lcom/google/protobuf/CodedOutputStream;->computeEnumSize(II)I
 
     move-result v0
 
     add-int/lit8 v0, v0, 0x0
 
-    .line 2912
+    .line 3049
     :cond_1
     iget-object v1, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->latestState_:Lcom/kik/video/VideoCommon$ConvoVideoState;
 
     if-eqz v1, :cond_2
 
-    .line 2913
+    .line 3050
     const/4 v1, 0x2
 
-    .line 2914
+    .line 3051
     invoke-virtual {p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->e()Lcom/kik/video/VideoCommon$ConvoVideoState;
 
     move-result-object v2
@@ -1019,16 +1018,16 @@
 
     add-int/2addr v0, v1
 
-    .line 2916
+    .line 3053
     :cond_2
     iget-object v1, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->connectionInfo_:Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
 
     if-eqz v1, :cond_3
 
-    .line 2917
+    .line 3054
     const/4 v1, 0x3
 
-    .line 2918
+    .line 3055
     invoke-virtual {p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->g()Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
 
     move-result-object v2
@@ -1039,16 +1038,16 @@
 
     add-int/2addr v0, v1
 
-    .line 2920
+    .line 3057
     :cond_3
     iget-object v1, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->connectionToken_:Lcom/kik/video/VideoCommon$MediaServerConnectionToken;
 
     if-eqz v1, :cond_4
 
-    .line 2921
+    .line 3058
     const/4 v1, 0x4
 
-    .line 2922
+    .line 3059
     invoke-virtual {p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->i()Lcom/kik/video/VideoCommon$MediaServerConnectionToken;
 
     move-result-object v2
@@ -1059,7 +1058,7 @@
 
     add-int/2addr v0, v1
 
-    .line 2924
+    .line 3061
     :cond_4
     iput v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->memoizedSize:I
 
@@ -1070,7 +1069,7 @@
     .locals 1
 
     .prologue
-    .line 2530
+    .line 2667
     invoke-static {}, Lcom/google/protobuf/UnknownFieldSet;->getDefaultInstance()Lcom/google/protobuf/UnknownFieldSet;
 
     move-result-object v0
@@ -1082,7 +1081,7 @@
     .locals 1
 
     .prologue
-    .line 2852
+    .line 2989
     iget-object v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->connectionToken_:Lcom/kik/video/VideoCommon$MediaServerConnectionToken;
 
     if-eqz v0, :cond_0
@@ -1102,19 +1101,19 @@
     .locals 2
 
     .prologue
-    .line 2961
+    .line 3098
     iget v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->memoizedHashCode:I
 
     if-eqz v0, :cond_0
 
-    .line 2962
+    .line 3099
     iget v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->memoizedHashCode:I
 
-    .line 2982
+    .line 3119
     :goto_0
     return v0
 
-    .line 2965
+    .line 3102
     :cond_0
     invoke-virtual {p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->getDescriptorForType()Lcom/google/protobuf/Descriptors$Descriptor;
 
@@ -1126,31 +1125,31 @@
 
     add-int/lit16 v0, v0, 0x30b
 
-    .line 2966
+    .line 3103
     mul-int/lit8 v0, v0, 0x25
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 2967
+    .line 3104
     mul-int/lit8 v0, v0, 0x35
 
     iget v1, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->result_:I
 
     add-int/2addr v0, v1
 
-    .line 2968
+    .line 3105
     invoke-virtual {p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->d()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 2969
+    .line 3106
     mul-int/lit8 v0, v0, 0x25
 
     add-int/lit8 v0, v0, 0x2
 
-    .line 2970
+    .line 3107
     mul-int/lit8 v0, v0, 0x35
 
     invoke-virtual {p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->e()Lcom/kik/video/VideoCommon$ConvoVideoState;
@@ -1163,7 +1162,7 @@
 
     add-int/2addr v0, v1
 
-    .line 2972
+    .line 3109
     :cond_1
     invoke-virtual {p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->f()Z
 
@@ -1171,12 +1170,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 2973
+    .line 3110
     mul-int/lit8 v0, v0, 0x25
 
     add-int/lit8 v0, v0, 0x3
 
-    .line 2974
+    .line 3111
     mul-int/lit8 v0, v0, 0x35
 
     invoke-virtual {p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->g()Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
@@ -1189,7 +1188,7 @@
 
     add-int/2addr v0, v1
 
-    .line 2976
+    .line 3113
     :cond_2
     invoke-virtual {p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->h()Z
 
@@ -1197,12 +1196,12 @@
 
     if-eqz v1, :cond_3
 
-    .line 2977
+    .line 3114
     mul-int/lit8 v0, v0, 0x25
 
     add-int/lit8 v0, v0, 0x4
 
-    .line 2978
+    .line 3115
     mul-int/lit8 v0, v0, 0x35
 
     invoke-virtual {p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->i()Lcom/kik/video/VideoCommon$MediaServerConnectionToken;
@@ -1215,7 +1214,7 @@
 
     add-int/2addr v0, v1
 
-    .line 2980
+    .line 3117
     :cond_3
     mul-int/lit8 v0, v0, 0x1d
 
@@ -1227,7 +1226,7 @@
 
     add-int/2addr v0, v1
 
-    .line 2981
+    .line 3118
     iput v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->memoizedHashCode:I
 
     goto :goto_0
@@ -1237,7 +1236,7 @@
     .locals 1
 
     .prologue
-    .line 2863
+    .line 3000
     iget-object v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->connectionToken_:Lcom/kik/video/VideoCommon$MediaServerConnectionToken;
 
     if-nez v0, :cond_0
@@ -1259,7 +1258,7 @@
     .locals 3
 
     .prologue
-    .line 2615
+    .line 2752
     invoke-static {}, Lcom/kik/video/mobile/KikVideoService;->h()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -1268,12 +1267,12 @@
 
     const-class v2, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$a;
 
-    .line 2616
+    .line 2753
     invoke-virtual {v0, v1, v2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;->ensureFieldAccessorsInitialized(Ljava/lang/Class;Ljava/lang/Class;)Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
 
-    .line 2615
+    .line 2752
     return-object v0
 .end method
 
@@ -1283,17 +1282,17 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 2879
+    .line 3016
     iget-byte v1, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->memoizedIsInitialized:B
 
-    .line 2880
+    .line 3017
     if-ne v1, v0, :cond_0
 
-    .line 2884
+    .line 3021
     :goto_0
     return v0
 
-    .line 2881
+    .line 3018
     :cond_0
     if-nez v1, :cond_1
 
@@ -1301,7 +1300,7 @@
 
     goto :goto_0
 
-    .line 2883
+    .line 3020
     :cond_1
     iput-byte v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->memoizedIsInitialized:B
 
@@ -1312,14 +1311,14 @@
     .locals 1
 
     .prologue
-    .line 5046
+    .line 5183
     sget-object v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->a:Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;
 
     invoke-direct {v0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->n()Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$a;
 
     move-result-object v0
 
-    .line 2515
+    .line 2652
     return-object v0
 .end method
 
@@ -1327,14 +1326,14 @@
     .locals 2
 
     .prologue
-    .line 4059
+    .line 4196
     new-instance v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$a;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p1, v1}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$a;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;B)V
 
-    .line 2515
+    .line 2652
     return-object v0
 .end method
 
@@ -1342,14 +1341,14 @@
     .locals 1
 
     .prologue
-    .line 6046
+    .line 6183
     sget-object v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->a:Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;
 
     invoke-direct {v0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->n()Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$a;
 
     move-result-object v0
 
-    .line 2515
+    .line 2652
     return-object v0
 .end method
 
@@ -1357,7 +1356,7 @@
     .locals 1
 
     .prologue
-    .line 2515
+    .line 2652
     invoke-direct {p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->n()Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$a;
 
     move-result-object v0
@@ -1369,7 +1368,7 @@
     .locals 1
 
     .prologue
-    .line 2515
+    .line 2652
     invoke-direct {p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->n()Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$a;
 
     move-result-object v0
@@ -1386,7 +1385,7 @@
     .end annotation
 
     .prologue
-    .line 2889
+    .line 3026
     iget v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->result_:I
 
     sget-object v1, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;->OK:Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;
@@ -1397,20 +1396,20 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 2890
+    .line 3027
     const/4 v0, 0x1
 
     iget v1, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->result_:I
 
     invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeEnum(II)V
 
-    .line 2892
+    .line 3029
     :cond_0
     iget-object v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->latestState_:Lcom/kik/video/VideoCommon$ConvoVideoState;
 
     if-eqz v0, :cond_1
 
-    .line 2893
+    .line 3030
     const/4 v0, 0x2
 
     invoke-virtual {p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->e()Lcom/kik/video/VideoCommon$ConvoVideoState;
@@ -1419,13 +1418,13 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;)V
 
-    .line 2895
+    .line 3032
     :cond_1
     iget-object v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->connectionInfo_:Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
 
     if-eqz v0, :cond_2
 
-    .line 2896
+    .line 3033
     const/4 v0, 0x3
 
     invoke-virtual {p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->g()Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
@@ -1434,13 +1433,13 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;)V
 
-    .line 2898
+    .line 3035
     :cond_2
     iget-object v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->connectionToken_:Lcom/kik/video/VideoCommon$MediaServerConnectionToken;
 
     if-eqz v0, :cond_3
 
-    .line 2899
+    .line 3036
     const/4 v0, 0x4
 
     invoke-virtual {p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->i()Lcom/kik/video/VideoCommon$MediaServerConnectionToken;
@@ -1449,7 +1448,7 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;)V
 
-    .line 2901
+    .line 3038
     :cond_3
     return-void
 .end method

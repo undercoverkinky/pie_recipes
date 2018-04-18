@@ -4,12 +4,12 @@
 
 
 # virtual methods
-.method public abstract a(Lkik/core/interfaces/a;Lkik/core/interfaces/r;)Ljava/util/List;
+.method public abstract a(Lkik/core/interfaces/a;Lkik/core/interfaces/t;)Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lkik/core/interfaces/a;",
-            "Lkik/core/interfaces/r;",
+            "Lkik/core/interfaces/t;",
             ")",
             "Ljava/util/List",
             "<",

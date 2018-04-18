@@ -3,18 +3,12 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x13
-.end annotation
-
-
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 29
+    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +18,7 @@
     .locals 1
 
     .prologue
-    .line 46
+    .line 43
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getAlpha()I
 
     move-result v0
@@ -36,7 +30,7 @@
     .locals 1
 
     .prologue
-    .line 35
+    .line 32
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->isAutoMirrored()Z
 
     move-result v0
@@ -48,10 +42,10 @@
     .locals 0
 
     .prologue
-    .line 31
+    .line 28
     invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setAutoMirrored(Z)V
 
-    .line 32
+    .line 29
     return-void
 .end method
 
@@ -59,19 +53,19 @@
     .locals 1
 
     .prologue
-    .line 39
+    .line 36
     instance-of v0, p0, Landroid/support/v4/graphics/drawable/TintAwareDrawable;
 
     if-nez v0, :cond_0
 
-    .line 40
+    .line 37
     new-instance v0, Landroid/support/v4/graphics/drawable/DrawableWrapperKitKat;
 
     invoke-direct {v0, p0}, Landroid/support/v4/graphics/drawable/DrawableWrapperKitKat;-><init>(Landroid/graphics/drawable/Drawable;)V
 
     move-object p0, v0
 
-    .line 42
+    .line 39
     :cond_0
     return-object p0
 .end method

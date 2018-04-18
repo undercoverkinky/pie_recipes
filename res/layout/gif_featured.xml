@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.RecyclerView android:id="@id/gif_featured_sets" android:paddingLeft="@dimen/gif_bubble_vertical_divider" android:paddingRight="@dimen/gif_bubble_vertical_divider" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <android.support.v7.widget.RecyclerView android:id="@id/gif_featured_results" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" app:column_count_portrait="2" app:column_count_landscape="3" app:item_margin_horizontal="@dimen/gif_grid_spacing" app:item_margin_vertical="@dimen/gif_grid_spacing" />
+        <kik.android.widget.GifAttributionBarViewImpl android:layout_gravity="bottom|center" android:id="@id/gif_attribution_bar" android:background="@color/gif_white" android:paddingTop="5.0dip" android:paddingBottom="3.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/gif_attribution_bar_height" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/informative_views_wrapper" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <kik.android.widget.GifNoResultsViewImpl android:gravity="center_horizontal" android:id="@id/gif_no_search_results" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.github.rahatarmanahmed.cpv.CircularProgressView android:layout_gravity="center" android:id="@id/gif_results_loading" style="@style/CircularProgressView" />
+        <kik.android.widget.GifLoadErrorViewImpl android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:id="@id/gifs_cant_load" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</FrameLayout>

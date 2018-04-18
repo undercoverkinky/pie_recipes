@@ -1,53 +1,137 @@
-.class final synthetic Lkik/android/util/bb;
+.class public final Lkik/android/util/bb;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.source "SourceFile"
 
 
-# static fields
-.field private static final a:Lkik/android/util/bb;
+# instance fields
+.field a:Lkik/core/interfaces/x;
+
+.field b:Lcom/kik/android/Mixpanel;
+
+.field c:Lkik/core/interfaces/j;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lkik/android/util/bb;
-
-    invoke-direct {v0}, Lkik/android/util/bb;-><init>()V
-
-    sput-object v0, Lkik/android/util/bb;->a:Lkik/android/util/bb;
-
-    return-void
-.end method
-
-.method private constructor <init>()V
+.method public constructor <init>(Lkik/core/interfaces/x;Lcom/kik/android/Mixpanel;Lkik/core/interfaces/j;)V
     .locals 0
 
+    .prologue
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 32
+    iput-object p1, p0, Lkik/android/util/bb;->a:Lkik/core/interfaces/x;
+
+    .line 33
+    iput-object p2, p0, Lkik/android/util/bb;->b:Lcom/kik/android/Mixpanel;
+
+    .line 34
+    iput-object p3, p0, Lkik/android/util/bb;->c:Lkik/core/interfaces/j;
+
+    .line 35
     return-void
-.end method
-
-.method public static a()Landroid/content/DialogInterface$OnClickListener;
-    .locals 1
-
-    sget-object v0, Lkik/android/util/bb;->a:Lkik/android/util/bb;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 0
+.method public final a(Lkik/core/datatypes/o;Lkik/core/datatypes/f;Ljava/lang/String;)Lkik/android/chat/fragment/KikDialogFragment;
+    .locals 3
 
     .prologue
-    .line 0
-    .line 1093
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    .line 39
+    if-eqz p1, :cond_0
 
-    .line 0
-    return-void
+    if-nez p2, :cond_1
+
+    .line 40
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 93
+    :goto_0
+    return-object v0
+
+    .line 43
+    :cond_1
+    new-instance v1, Lkik/android/chat/fragment/KikDialogFragment$a;
+
+    invoke-direct {v1}, Lkik/android/chat/fragment/KikDialogFragment$a;-><init>()V
+
+    .line 44
+    const v0, 0x7f0a05db
+
+    invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikDialogFragment$a;->a(I)Lkik/android/chat/fragment/KikDialogFragment$a;
+
+    .line 46
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    .line 47
+    const v2, 0x7f0a0221
+
+    invoke-static {v2}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 48
+    const v2, 0x7f0a0222
+
+    invoke-static {v2}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 49
+    const v2, 0x7f0a0220
+
+    invoke-static {v2}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 53
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    new-array v2, v2, [Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ljava/lang/CharSequence;
+
+    .line 55
+    invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikDialogFragment$a;->a([Ljava/lang/CharSequence;)Lkik/android/chat/fragment/KikDialogFragment$a;
+
+    .line 56
+    const v0, 0x7f0a0269
+
+    new-instance v2, Lkik/android/util/bb$1;
+
+    invoke-direct {v2, p0, p1, p3, p2}, Lkik/android/util/bb$1;-><init>(Lkik/android/util/bb;Lkik/core/datatypes/o;Ljava/lang/String;Lkik/core/datatypes/f;)V
+
+    invoke-virtual {v1, v0, v2}, Lkik/android/chat/fragment/KikDialogFragment$a;->a(ILandroid/content/DialogInterface$OnClickListener;)Lkik/android/chat/fragment/KikDialogFragment$a;
+
+    .line 91
+    const v0, 0x7f0a03c3
+
+    invoke-static {}, Lkik/android/util/bc;->a()Landroid/content/DialogInterface$OnClickListener;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v0, v2}, Lkik/android/chat/fragment/KikDialogFragment$a;->b(ILandroid/content/DialogInterface$OnClickListener;)Lkik/android/chat/fragment/KikDialogFragment$a;
+
+    .line 93
+    invoke-virtual {v1}, Lkik/android/chat/fragment/KikDialogFragment$a;->a()Lkik/android/chat/fragment/KikDialogFragment;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method

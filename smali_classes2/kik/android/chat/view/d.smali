@@ -1,49 +1,41 @@
-.class final synthetic Lkik/android/chat/view/d;
+.class public interface abstract Lkik/android/chat/view/d;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field private final a:Lkik/android/chat/view/AnimatingSearchBarLayout;
-
-.field private final b:I
-
-
-# direct methods
-.method private constructor <init>(Lkik/android/chat/view/AnimatingSearchBarLayout;I)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lkik/android/chat/view/d;->a:Lkik/android/chat/view/AnimatingSearchBarLayout;
-
-    iput p2, p0, Lkik/android/chat/view/d;->b:I
-
-    return-void
-.end method
-
-.method public static a(Lkik/android/chat/view/AnimatingSearchBarLayout;I)Ljava/lang/Runnable;
-    .locals 1
-
-    new-instance v0, Lkik/android/chat/view/d;
-
-    invoke-direct {v0, p0, p1}, Lkik/android/chat/view/d;-><init>(Lkik/android/chat/view/AnimatingSearchBarLayout;I)V
-
-    return-object v0
-.end method
+.source "SourceFile"
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public abstract Q()V
+.end method
 
-    iget-object v0, p0, Lkik/android/chat/view/d;->a:Lkik/android/chat/view/AnimatingSearchBarLayout;
+.method public abstract R()V
+.end method
 
-    iget v1, p0, Lkik/android/chat/view/d;->b:I
+.method public abstract S()V
+.end method
 
-    invoke-static {v0, v1}, Lkik/android/chat/view/AnimatingSearchBarLayout;->a(Lkik/android/chat/view/AnimatingSearchBarLayout;I)V
+.method public abstract T()V
+.end method
 
-    return-void
+.method public abstract U()Ljava/lang/String;
+.end method
+
+.method public abstract V()V
+.end method
+
+.method public abstract a(Ljava/lang/String;)V
+.end method
+
+.method public abstract a(Ljava/util/List;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lkik/core/datatypes/o;",
+            ">;)V"
+        }
+    .end annotation
+.end method
+
+.method public abstract b(Ljava/lang/String;Ljava/lang/String;)V
 .end method

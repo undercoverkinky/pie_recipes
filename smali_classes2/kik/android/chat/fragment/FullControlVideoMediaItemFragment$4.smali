@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;->d()V
+    value = Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;->f()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 167
+    .line 164
     iput-object p1, p0, Lkik/android/chat/fragment/FullControlVideoMediaItemFragment$4;->a:Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 1
 
     .prologue
-    .line 171
+    .line 168
     iget-object v0, p0, Lkik/android/chat/fragment/FullControlVideoMediaItemFragment$4;->a:Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;->b(Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;)Z
@@ -49,15 +49,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 175
+    .line 172
     :goto_0
     return-void
 
-    .line 174
+    .line 171
     :cond_0
     iget-object v0, p0, Lkik/android/chat/fragment/FullControlVideoMediaItemFragment$4;->a:Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;->h()Z
+    invoke-virtual {v0}, Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;->j()Z
 
     goto :goto_0
 .end method

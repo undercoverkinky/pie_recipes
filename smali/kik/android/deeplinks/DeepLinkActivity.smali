@@ -4,27 +4,22 @@
 
 
 # instance fields
-.field protected a:Lcom/kik/core/domain/users/a;
+.field protected a:Lcom/kik/android/Mixpanel;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
-.field protected b:Lcom/kik/android/Mixpanel;
+.field protected b:Lkik/core/interfaces/ad;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
-.field protected c:Lkik/core/interfaces/ad;
+.field protected c:Lkik/core/manager/m;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
-.field protected d:Lkik/core/manager/n;
-    .annotation runtime Ljavax/inject/Inject;
-    .end annotation
-.end field
-
-.field protected e:Lkik/core/e/c;
+.field protected d:Lkik/core/g/d;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
@@ -35,204 +30,82 @@
     .locals 0
 
     .prologue
-    .line 32
+    .line 31
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     return-void
 .end method
 
-.method protected static a(Ljava/lang/String;Landroid/content/Intent;)Ljava/lang/String;
-    .locals 3
+.method static synthetic a(Lkik/android/deeplinks/DeepLinkActivity;Landroid/content/Intent;Lkik/core/manager/m$c;)V
+    .locals 4
 
     .prologue
-    .line 123
-    invoke-virtual {p1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
+    const v3, 0x10008000
 
-    move-result-object v0
+    const/4 v2, 0x0
 
-    .line 124
+    .line 0
+    .line 1065
+    iget-object v0, p0, Lkik/android/deeplinks/DeepLinkActivity;->b:Lkik/core/interfaces/ad;
+
+    invoke-static {v0}, Lkik/core/x;->a(Lkik/core/interfaces/ad;)Z
+
+    move-result v0
+
     if-nez v0, :cond_0
 
-    .line 125
-    const-string v0, ""
-
-    .line 135
-    :goto_0
-    return-object v0
-
-    .line 128
-    :cond_0
-    invoke-virtual {v0}, Landroid/net/Uri;->getHost()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 129
-    invoke-static {v1}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    .line 130
-    :cond_1
-    const-string v0, ""
-
-    goto :goto_0
-
-    .line 133
-    :cond_2
-    invoke-virtual {v0}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
-
-    move-result-object v0
-
-    .line 134
-    if-eqz v0, :cond_3
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    :cond_3
-    const-string v0, ""
-
-    goto :goto_0
-
-    .line 135
-    :cond_4
-    const/4 v1, 0x0
-
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    goto :goto_0
-.end method
-
-.method static synthetic a(Lkik/android/deeplinks/DeepLinkActivity;Lkik/core/manager/n$c;)V
-    .locals 5
-
-    .prologue
-    const v4, 0x10008000
-
-    const/4 v3, 0x0
-
-    .line 68
-    invoke-virtual {p0}, Lkik/android/deeplinks/DeepLinkActivity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    const-string v1, "is_deferred_relaunch"
-
-    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 69
-    iget-object v0, p0, Lkik/android/deeplinks/DeepLinkActivity;->b:Lcom/kik/android/Mixpanel;
-
-    const-string v1, "Opened from Deep Link"
-
-    invoke-virtual {v0, v1}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;)Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    .line 70
-    iget-object v1, p1, Lkik/core/manager/n$c;->b:Ljava/lang/String;
-
-    invoke-static {v1}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    .line 71
-    const-string v1, "Source"
-
-    iget-object v2, p1, Lkik/core/manager/n$c;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
-
-    .line 73
-    :cond_0
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
-
-    .line 76
-    :cond_1
-    iget-object v0, p0, Lkik/android/deeplinks/DeepLinkActivity;->c:Lkik/core/interfaces/ad;
-
-    invoke-static {v0}, Lkik/core/z;->a(Lkik/core/interfaces/ad;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    .line 1116
+    .line 1103
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lkik/android/chat/activity/IntroActivity;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 1117
-    invoke-virtual {v0, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+    .line 1104
+    invoke-virtual {v0, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 1118
+    .line 1105
     invoke-virtual {p0, v0}, Lkik/android/deeplinks/DeepLinkActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 97
+    .line 1072
     :goto_0
     return-void
 
-    .line 82
-    :cond_2
-    if-nez p1, :cond_3
+    .line 1070
+    :cond_0
+    if-eqz p2, :cond_1
 
-    .line 83
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
+
+    move-result-object v0
+
+    if-nez v0, :cond_2
+
+    .line 1071
+    :cond_1
     invoke-virtual {p0}, Lkik/android/deeplinks/DeepLinkActivity;->finish()V
 
     goto :goto_0
 
-    .line 90
-    :cond_3
-    invoke-static {}, Lkik/android/chat/activity/KActivityLauncher;->d()V
-
-    .line 91
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Lkik/android/chat/activity/KActivityLauncher;->a(Ljava/lang/String;)V
-
-    .line 92
+    .line 1076
+    :cond_2
     invoke-static {p0}, Landroid/support/v4/app/TaskStackBuilder;->create(Landroid/content/Context;)Landroid/support/v4/app/TaskStackBuilder;
 
     move-result-object v0
 
-    .line 2108
+    .line 2095
     new-instance v1, Lkik/android/chat/fragment/KikConversationsFragment$a;
 
     invoke-direct {v1}, Lkik/android/chat/fragment/KikConversationsFragment$a;-><init>()V
 
-    .line 2109
-    invoke-static {v1, p0}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ad;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    .line 2096
+    invoke-static {v1, p0}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v1
 
-    invoke-virtual {v1, v3, v3}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->a(II)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    invoke-virtual {v1, v2, v2}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->a(II)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v1
 
@@ -240,23 +113,70 @@
 
     move-result-object v1
 
-    .line 2110
-    invoke-virtual {v1, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+    .line 2097
+    invoke-virtual {v1, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 92
+    .line 1076
     invoke-virtual {v0, v1}, Landroid/support/v4/app/TaskStackBuilder;->addNextIntent(Landroid/content/Intent;)Landroid/support/v4/app/TaskStackBuilder;
 
     move-result-object v0
 
-    .line 93
+    .line 1077
     invoke-virtual {p0, v0}, Lkik/android/deeplinks/DeepLinkActivity;->a(Landroid/support/v4/app/TaskStackBuilder;)V
 
-    .line 96
-    iget-object v0, p0, Lkik/android/deeplinks/DeepLinkActivity;->d:Lkik/core/manager/n;
+    .line 1080
+    invoke-virtual {p0}, Lkik/android/deeplinks/DeepLinkActivity;->getIntent()Landroid/content/Intent;
 
-    iget-object v1, p1, Lkik/core/manager/n$c;->a:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Lkik/core/manager/n;->a(Ljava/lang/String;)V
+    const-string v1, "is_deferred_relaunch"
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    .line 1081
+    iget-object v0, p0, Lkik/android/deeplinks/DeepLinkActivity;->a:Lcom/kik/android/Mixpanel;
+
+    const-string v1, "Opened from Deep Link"
+
+    invoke-virtual {v0, v1}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;)Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    .line 1082
+    iget-object v1, p2, Lkik/core/manager/m$c;->b:Ljava/lang/String;
+
+    invoke-static {v1}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    .line 1083
+    const-string v1, "Source"
+
+    iget-object v2, p2, Lkik/core/manager/m$c;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
+
+    .line 1085
+    :cond_3
+    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
+
+    .line 1089
+    :cond_4
+    iget-object v0, p0, Lkik/android/deeplinks/DeepLinkActivity;->c:Lkik/core/manager/m;
+
+    iget-object v1, p2, Lkik/core/manager/m$c;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lkik/core/manager/m;->a(Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -270,58 +190,49 @@
     .locals 1
 
     .prologue
-    .line 54
+    .line 52
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 56
+    .line 54
     invoke-virtual {p0}, Lkik/android/deeplinks/DeepLinkActivity;->getApplication()Landroid/app/Application;
 
     move-result-object v0
 
-    check-cast v0, Lkik/android/chat/e;
+    check-cast v0, Lkik/android/chat/c;
 
-    invoke-interface {v0}, Lkik/android/chat/e;->a()Lcom/kik/components/CoreComponent;
+    invoke-interface {v0}, Lkik/android/chat/c;->a()Lcom/kik/components/CoreComponent;
 
     move-result-object v0
 
     invoke-interface {v0, p0}, Lcom/kik/components/CoreComponent;->a(Lkik/android/deeplinks/DeepLinkActivity;)V
+
+    .line 56
+    invoke-virtual {p0}, Lkik/android/deeplinks/DeepLinkActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lkik/android/deeplinks/DeepLinkActivity;->onNewIntent(Landroid/content/Intent;)V
 
     .line 57
     return-void
 .end method
 
 .method public onNewIntent(Landroid/content/Intent;)V
-    .locals 0
-
-    .prologue
-    .line 103
-    invoke-virtual {p0, p1}, Lkik/android/deeplinks/DeepLinkActivity;->setIntent(Landroid/content/Intent;)V
-
-    .line 104
-    return-void
-.end method
-
-.method public onStart()V
-    .locals 3
+    .locals 2
 
     .prologue
     .line 62
-    invoke-super {p0}, Landroid/app/Activity;->onStart()V
+    invoke-virtual {p0, p1}, Lkik/android/deeplinks/DeepLinkActivity;->setIntent(Landroid/content/Intent;)V
 
     .line 64
-    invoke-virtual {p0}, Lkik/android/deeplinks/DeepLinkActivity;->getIntent()Landroid/content/Intent;
+    iget-object v0, p0, Lkik/android/deeplinks/DeepLinkActivity;->c:Lkik/core/manager/m;
 
-    move-result-object v0
+    invoke-static {p0, p1}, Lkik/android/deeplinks/a;->a(Lkik/android/deeplinks/DeepLinkActivity;Landroid/content/Intent;)Lkik/core/manager/m$a;
 
-    .line 65
-    iget-object v1, p0, Lkik/android/deeplinks/DeepLinkActivity;->d:Lkik/core/manager/n;
+    move-result-object v1
 
-    invoke-static {p0}, Lkik/android/deeplinks/d;->a(Lkik/android/deeplinks/DeepLinkActivity;)Lkik/core/manager/n$a;
+    invoke-virtual {v0, v1, p1, p0}, Lkik/core/manager/m;->a(Lkik/core/manager/m$a;Landroid/content/Intent;Landroid/app/Activity;)V
 
-    move-result-object v2
-
-    invoke-virtual {v1, v2, v0, p0}, Lkik/core/manager/n;->a(Lkik/core/manager/n$a;Landroid/content/Intent;Landroid/app/Activity;)V
-
-    .line 98
+    .line 91
     return-void
 .end method

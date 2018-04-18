@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 106
+    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
     .locals 1
 
     .prologue
-    .line 144
+    .line 127
     invoke-static {p1, p2}, Landroid/support/v4/widget/EdgeEffectCompatIcs;->draw(Ljava/lang/Object;Landroid/graphics/Canvas;)Z
 
     move-result v0
@@ -46,10 +46,10 @@
     .locals 0
 
     .prologue
-    .line 124
+    .line 111
     invoke-static {p1}, Landroid/support/v4/widget/EdgeEffectCompatIcs;->finish(Ljava/lang/Object;)V
 
-    .line 125
+    .line 112
     return-void
 .end method
 
@@ -57,7 +57,7 @@
     .locals 1
 
     .prologue
-    .line 119
+    .line 107
     invoke-static {p1}, Landroid/support/v4/widget/EdgeEffectCompatIcs;->isFinished(Ljava/lang/Object;)Z
 
     move-result v0
@@ -69,7 +69,7 @@
     .locals 1
 
     .prologue
-    .line 109
+    .line 99
     invoke-static {p1}, Landroid/support/v4/widget/EdgeEffectCompatIcs;->newEdgeEffect(Landroid/content/Context;)Ljava/lang/Object;
 
     move-result-object v0
@@ -81,7 +81,7 @@
     .locals 1
 
     .prologue
-    .line 139
+    .line 123
     invoke-static {p1, p2}, Landroid/support/v4/widget/EdgeEffectCompatIcs;->onAbsorb(Ljava/lang/Object;I)Z
 
     move-result v0
@@ -93,7 +93,7 @@
     .locals 1
 
     .prologue
-    .line 129
+    .line 115
     invoke-static {p1, p2}, Landroid/support/v4/widget/EdgeEffectCompatIcs;->onPull(Ljava/lang/Object;F)Z
 
     move-result v0
@@ -105,7 +105,7 @@
     .locals 1
 
     .prologue
-    .line 149
+    .line 131
     invoke-static {p1, p2}, Landroid/support/v4/widget/EdgeEffectCompatIcs;->onPull(Ljava/lang/Object;F)Z
 
     move-result v0
@@ -117,7 +117,7 @@
     .locals 1
 
     .prologue
-    .line 134
+    .line 119
     invoke-static {p1}, Landroid/support/v4/widget/EdgeEffectCompatIcs;->onRelease(Ljava/lang/Object;)Z
 
     move-result v0
@@ -129,9 +129,9 @@
     .locals 0
 
     .prologue
-    .line 114
+    .line 103
     invoke-static {p1, p2, p3}, Landroid/support/v4/widget/EdgeEffectCompatIcs;->setSize(Ljava/lang/Object;II)V
 
-    .line 115
+    .line 104
     return-void
 .end method

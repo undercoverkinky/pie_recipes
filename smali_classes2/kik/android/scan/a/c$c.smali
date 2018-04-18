@@ -15,56 +15,58 @@
 
 
 # instance fields
-.field a:Lcom/kik/scan/UsernameKikCode;
+.field final a:Ljava/lang/String;
+
+.field final b:I
+
+.field final c:[B
+
+.field final d:[B
 
 
 # direct methods
-.method constructor <init>(Lcom/kik/scan/UsernameKikCode;)V
+.method constructor <init>([B[BLjava/lang/String;I)V
     .locals 0
 
     .prologue
-    .line 92
+    .line 159
     invoke-direct {p0}, Lkik/android/scan/a/c;-><init>()V
 
-    .line 93
-    iput-object p1, p0, Lkik/android/scan/a/c$c;->a:Lcom/kik/scan/UsernameKikCode;
+    .line 160
+    iput p4, p0, Lkik/android/scan/a/c$c;->b:I
 
-    .line 94
+    .line 161
+    iput-object p3, p0, Lkik/android/scan/a/c$c;->a:Ljava/lang/String;
+
+    .line 162
+    iput-object p2, p0, Lkik/android/scan/a/c$c;->d:[B
+
+    .line 163
+    iput-object p1, p0, Lkik/android/scan/a/c$c;->c:[B
+
+    .line 164
     return-void
 .end method
 
 
 # virtual methods
 .method public final a()[B
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 99
-    const/4 v0, 0x0
+    .line 169
+    iget-object v0, p0, Lkik/android/scan/a/c$c;->c:[B
 
-    .line 101
-    iget-object v1, p0, Lkik/android/scan/a/c$c;->a:Lcom/kik/scan/UsernameKikCode;
+    return-object v0
+.end method
 
-    if-eqz v1, :cond_0
+.method public final b()Ljava/lang/String;
+    .locals 1
 
-    .line 102
-    iget-object v0, p0, Lkik/android/scan/a/c$c;->a:Lcom/kik/scan/UsernameKikCode;
+    .prologue
+    .line 187
+    iget-object v0, p0, Lkik/android/scan/a/c$c;->a:Ljava/lang/String;
 
-    invoke-virtual {v0}, Lcom/kik/scan/UsernameKikCode;->encode()[B
-
-    move-result-object v0
-
-    .line 105
-    :cond_0
-    if-nez v0, :cond_1
-
-    .line 106
-    const/4 v0, 0x0
-
-    new-array v0, v0, [B
-
-    .line 109
-    :cond_1
     return-object v0
 .end method
 
@@ -72,22 +74,18 @@
     .locals 1
 
     .prologue
-    .line 115
-    iget-object v0, p0, Lkik/android/scan/a/c$c;->a:Lcom/kik/scan/UsernameKikCode;
+    .line 181
+    iget v0, p0, Lkik/android/scan/a/c$c;->b:I
 
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
     return v0
+.end method
 
-    :cond_0
-    iget-object v0, p0, Lkik/android/scan/a/c$c;->a:Lcom/kik/scan/UsernameKikCode;
+.method public final d()[B
+    .locals 1
 
-    invoke-virtual {v0}, Lcom/kik/scan/UsernameKikCode;->getNonce()I
+    .prologue
+    .line 175
+    iget-object v0, p0, Lkik/android/scan/a/c$c;->d:[B
 
-    move-result v0
-
-    goto :goto_0
+    return-object v0
 .end method

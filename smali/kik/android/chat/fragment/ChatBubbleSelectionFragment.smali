@@ -14,14 +14,18 @@
 
 # instance fields
 .field _bubbleList:Landroid/widget/ListView;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f1000df
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f1100a4
+        }
     .end annotation
 .end field
 
 .field _title:Landroid/widget/TextView;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f100122
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f1100f3
+        }
     .end annotation
 .end field
 
@@ -51,61 +55,19 @@
     .locals 0
 
     .prologue
-    .line 42
+    .line 39
     invoke-direct {p0}, Lkik/android/chat/fragment/KikScopedDialogFragment;-><init>()V
 
     return-void
 .end method
 
-.method static synthetic a(Lkik/android/chat/fragment/ChatBubbleSelectionFragment;I)V
-    .locals 3
+.method static synthetic a(Lkik/android/chat/fragment/ChatBubbleSelectionFragment;Lkik/android/chat/theming/BubbleDescriptor;)V
+    .locals 0
 
     .prologue
-    .line 74
-    iget-object v0, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->_bubbleList:Landroid/widget/ListView;
+    .line 39
+    invoke-direct {p0, p1}, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->a(Lkik/android/chat/theming/BubbleDescriptor;)V
 
-    invoke-virtual {v0, p1}, Landroid/widget/ListView;->getItemAtPosition(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkik/android/chat/theming/BubbleDescriptor;
-
-    .line 75
-    iget-object v1, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->a:Lkik/android/chat/theming/ChatBubbleManager;
-
-    invoke-virtual {v1, v0}, Lkik/android/chat/theming/ChatBubbleManager;->a(Lkik/android/chat/theming/BubbleDescriptor;)V
-
-    .line 76
-    invoke-direct {p0, v0}, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->a(Lkik/android/chat/theming/BubbleDescriptor;)V
-
-    .line 77
-    if-eqz v0, :cond_0
-
-    .line 78
-    iget-object v1, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->b:Lcom/kik/android/Mixpanel;
-
-    const-string v2, "Chat Bubble Colour Tapped"
-
-    invoke-virtual {v1, v2}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;)Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v1
-
-    const-string v2, "Name"
-
-    .line 79
-    invoke-virtual {v0}, Lkik/android/chat/theming/BubbleDescriptor;->e()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v2, v0}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    .line 80
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
-
-    .line 82
-    :cond_0
     return-void
 .end method
 
@@ -115,55 +77,55 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 104
+    .line 98
     const/4 v0, 0x0
 
-    .line 105
+    .line 99
     iget-object v2, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->c:Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;
 
     if-eqz v2, :cond_0
 
-    .line 106
+    .line 100
     iget-object v0, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->c:Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;
 
     invoke-static {v0, p1}, Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;->a(Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;Lkik/android/chat/theming/BubbleDescriptor;)V
 
     move v0, v1
 
-    .line 109
+    .line 103
     :cond_0
     iget-object v2, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->d:Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;
 
     if-eqz v2, :cond_1
 
-    .line 110
+    .line 104
     iget-object v0, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->d:Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;
 
     invoke-static {v0, p1}, Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;->a(Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;Lkik/android/chat/theming/BubbleDescriptor;)V
 
     move v0, v1
 
-    .line 113
+    .line 107
     :cond_1
     iget-object v2, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->e:Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;
 
     if-eqz v2, :cond_3
 
-    .line 114
+    .line 108
     iget-object v0, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->e:Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;
 
     invoke-static {v0, p1}, Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;->a(Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;Lkik/android/chat/theming/BubbleDescriptor;)V
 
-    .line 117
+    .line 111
     :goto_0
     if-eqz v1, :cond_2
 
-    .line 118
+    .line 112
     iget-object v0, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->f:Lcom/kik/view/adapters/x;
 
     invoke-virtual {v0}, Lcom/kik/view/adapters/x;->notifyDataSetChanged()V
 
-    .line 120
+    .line 114
     :cond_2
     return-void
 
@@ -179,22 +141,22 @@
     .locals 5
 
     .prologue
-    .line 57
+    .line 54
     invoke-super {p0, p1, p2, p3}, Lkik/android/chat/fragment/KikScopedDialogFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
-    .line 58
+    .line 55
     invoke-static {}, Lkik/android/chat/KikApplication;->k()Lkik/android/a/b;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->g:Lkik/android/a/b;
 
-    .line 1097
+    .line 1091
     iget-object v0, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->g:Lkik/android/a/b;
 
     if-eqz v0, :cond_0
 
-    .line 1098
+    .line 1092
     iget-object v0, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->g:Lkik/android/a/b;
 
     invoke-virtual {v0}, Lkik/android/a/b;->c()Lcom/kik/clientmetrics/f;
@@ -203,15 +165,15 @@
 
     sget-object v1, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->CHAT_BUBBLE_COLOR_OPENED:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
 
-    invoke-static {}, Lkik/core/util/v;->b()J
+    invoke-static {}, Lkik/core/util/x;->b()J
 
     move-result-wide v2
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/kik/clientmetrics/f;->a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;J)V
 
-    .line 60
+    .line 57
     :cond_0
-    const v0, 0x7f040023
+    const v0, 0x7f040021
 
     const/4 v1, 0x0
 
@@ -219,28 +181,31 @@
 
     move-result-object v0
 
-    .line 61
-    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)Lbutterknife/Unbinder;
+    .line 58
+    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)V
 
-    .line 62
-    invoke-virtual {p0}, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->getCoreComponent()Lcom/kik/components/CoreComponent;
+    .line 2088
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikFragmentBase;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v1
 
+    invoke-static {v1}, Lkik/android/util/s;->a(Landroid/app/Activity;)Lcom/kik/components/CoreComponent;
+
+    move-result-object v1
+
+    .line 59
     invoke-interface {v1, p0}, Lcom/kik/components/CoreComponent;->a(Lkik/android/chat/fragment/ChatBubbleSelectionFragment;)V
 
-    .line 64
+    .line 61
     new-instance v1, Lcom/kik/view/adapters/x;
 
     invoke-virtual {p0}, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Lcom/kik/view/adapters/x;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1}, Lcom/kik/view/adapters/x;-><init>()V
 
     iput-object v1, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->f:Lcom/kik/view/adapters/x;
 
-    .line 65
+    .line 62
     new-instance v1, Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;
 
     invoke-virtual {p0}, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
@@ -259,7 +224,7 @@
 
     iput-object v1, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->c:Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;
 
-    .line 66
+    .line 63
     new-instance v1, Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;
 
     invoke-virtual {p0}, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
@@ -278,7 +243,7 @@
 
     iput-object v1, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->d:Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;
 
-    .line 67
+    .line 64
     new-instance v1, Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;
 
     invoke-virtual {p0}, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
@@ -297,10 +262,10 @@
 
     iput-object v1, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->e:Lkik/android/chat/fragment/ChatBubbleSelectionFragment$a;
 
-    .line 69
+    .line 66
     iget-object v1, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->f:Lcom/kik/view/adapters/x;
 
-    const v2, 0x7f0900d2
+    const v2, 0x7f0a00d1
 
     invoke-static {v2}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
@@ -310,10 +275,10 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/kik/view/adapters/x;->d(Ljava/lang/String;Landroid/widget/Adapter;)V
 
-    .line 70
+    .line 67
     iget-object v1, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->f:Lcom/kik/view/adapters/x;
 
-    const v2, 0x7f09054b
+    const v2, 0x7f0a052a
 
     invoke-static {v2}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
@@ -323,10 +288,10 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/kik/view/adapters/x;->d(Ljava/lang/String;Landroid/widget/Adapter;)V
 
-    .line 71
+    .line 68
     iget-object v1, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->f:Lcom/kik/view/adapters/x;
 
-    const v2, 0x7f0900d3
+    const v2, 0x7f0a00d2
 
     invoke-static {v2}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
@@ -336,23 +301,23 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/kik/view/adapters/x;->d(Ljava/lang/String;Landroid/widget/Adapter;)V
 
-    .line 72
+    .line 69
     iget-object v1, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->_bubbleList:Landroid/widget/ListView;
 
     iget-object v2, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->f:Lcom/kik/view/adapters/x;
 
     invoke-virtual {v1, v2}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 73
+    .line 70
     iget-object v1, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->_bubbleList:Landroid/widget/ListView;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/g;->a(Lkik/android/chat/fragment/ChatBubbleSelectionFragment;)Landroid/widget/AdapterView$OnItemClickListener;
+    new-instance v2, Lkik/android/chat/fragment/ChatBubbleSelectionFragment$1;
 
-    move-result-object v2
+    invoke-direct {v2, p0}, Lkik/android/chat/fragment/ChatBubbleSelectionFragment$1;-><init>(Lkik/android/chat/fragment/ChatBubbleSelectionFragment;)V
 
     invoke-virtual {v1, v2}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 83
+    .line 84
     iget-object v1, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->a:Lkik/android/chat/theming/ChatBubbleManager;
 
     invoke-virtual {v1}, Lkik/android/chat/theming/ChatBubbleManager;->c()Lkik/android/chat/theming/BubbleDescriptor;
@@ -361,18 +326,20 @@
 
     invoke-direct {p0, v1}, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->a(Lkik/android/chat/theming/BubbleDescriptor;)V
 
-    .line 84
+    .line 85
     iget-object v1, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->_title:Landroid/widget/TextView;
 
-    const v2, 0x7f09034f
+    const v2, 0x7f0a033b
 
-    invoke-virtual {p0, v2}, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->getStringFromResource(I)Ljava/lang/String;
+    .line 3082
+    invoke-static {v2}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 85
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 85
+    .line 86
     return-object v0
 .end method
 
@@ -380,10 +347,10 @@
     .locals 8
 
     .prologue
-    .line 211
+    .line 205
     invoke-super {p0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->onDestroy()V
 
-    .line 212
+    .line 206
     iget-object v0, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->a:Lkik/android/chat/theming/ChatBubbleManager;
 
     invoke-virtual {v0}, Lkik/android/chat/theming/ChatBubbleManager;->a()Z
@@ -392,7 +359,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 213
+    .line 207
     iget-object v0, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->a:Lkik/android/chat/theming/ChatBubbleManager;
 
     invoke-virtual {v0}, Lkik/android/chat/theming/ChatBubbleManager;->c()Lkik/android/chat/theming/BubbleDescriptor;
@@ -403,7 +370,7 @@
 
     move-result-object v0
 
-    .line 214
+    .line 208
     iget-object v1, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->b:Lcom/kik/android/Mixpanel;
 
     const-string v2, "Chat Bubble Colour Changed"
@@ -420,19 +387,19 @@
 
     invoke-virtual {v1}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 215
+    .line 209
     iget-object v1, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->b:Lcom/kik/android/Mixpanel;
 
     const-string v2, "Bubble Colour"
 
     invoke-virtual {v1, v2, v0}, Lcom/kik/android/Mixpanel;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel;
 
-    .line 216
+    .line 210
     iget-object v0, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->g:Lkik/android/a/b;
 
     if-eqz v0, :cond_0
 
-    .line 217
+    .line 211
     iget-object v0, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->a:Lkik/android/chat/theming/ChatBubbleManager;
 
     invoke-virtual {v0}, Lkik/android/chat/theming/ChatBubbleManager;->c()Lkik/android/chat/theming/BubbleDescriptor;
@@ -443,22 +410,22 @@
 
     move-result-object v0
 
-    .line 218
+    .line 212
     if-nez v0, :cond_1
 
-    .line 226
+    .line 220
     :cond_0
     :goto_0
     return-void
 
-    .line 221
+    .line 215
     :cond_1
     invoke-virtual {v0}, Lcom/kik/xdata/model/userpreferences/XUserPreferences$XBubbleColor;->getNumber()I
 
     move-result v0
 
-    .line 222
-    invoke-static {}, Lkik/core/util/v;->b()J
+    .line 216
+    invoke-static {}, Lkik/core/util/x;->b()J
 
     move-result-wide v2
 
@@ -466,7 +433,7 @@
 
     move-result-object v6
 
-    .line 223
+    .line 217
     iget-object v1, p0, Lkik/android/chat/fragment/ChatBubbleSelectionFragment;->g:Lkik/android/a/b;
 
     invoke-virtual {v1}, Lkik/android/a/b;->c()Lcom/kik/clientmetrics/f;
@@ -486,20 +453,4 @@
     invoke-virtual/range {v1 .. v7}, Lcom/kik/clientmetrics/f;->a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;Ljava/lang/String;JJ)V
 
     goto :goto_0
-.end method
-
-.method protected screenOpenedEvent()Lcom/kik/metrics/b/t;
-    .locals 1
-
-    .prologue
-    .line 92
-    invoke-static {}, Lcom/kik/metrics/b/g;->b()Lcom/kik/metrics/b/g$a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/kik/metrics/b/g$a;->a()Lcom/kik/metrics/b/g;
-
-    move-result-object v0
-
-    return-object v0
 .end method

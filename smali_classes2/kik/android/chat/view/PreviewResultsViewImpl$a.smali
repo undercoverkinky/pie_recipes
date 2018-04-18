@@ -27,17 +27,17 @@
     .locals 0
 
     .prologue
-    .line 88
+    .line 63
     iput-object p1, p0, Lkik/android/chat/view/PreviewResultsViewImpl$a;->c:Lkik/android/chat/view/PreviewResultsViewImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 89
+    .line 64
     iput p2, p0, Lkik/android/chat/view/PreviewResultsViewImpl$a;->a:I
 
-    .line 90
+    .line 65
     iput-object p3, p0, Lkik/android/chat/view/PreviewResultsViewImpl$a;->b:Ljava/lang/String;
 
-    .line 91
+    .line 66
     return-void
 .end method

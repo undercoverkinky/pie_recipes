@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 222
+    .line 213
     iput-object p1, p0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment$5;->b:Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;
 
     iput-object p2, p0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment$5;->a:Lkik/android/challenge/PhoneNumberModel;
@@ -44,7 +44,7 @@
     .locals 4
 
     .prologue
-    .line 226
+    .line 217
     iget-object v0, p0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment$5;->a:Lkik/android/challenge/PhoneNumberModel;
 
     invoke-virtual {v0}, Lkik/android/challenge/PhoneNumberModel;->a()Lkik/android/challenge/CountryCode;
@@ -53,7 +53,7 @@
 
     iget-object v0, v0, Lkik/android/challenge/CountryCode;->e:Ljava/lang/String;
 
-    .line 227
+    .line 218
     iget-object v1, p0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment$5;->b:Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;
 
     iget-object v1, v1, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;->b:Lcom/kik/android/Mixpanel;
@@ -68,38 +68,38 @@
 
     const-string v3, "Unsupported Country"
 
-    .line 228
+    .line 219
     invoke-virtual {v1, v2, v3}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v1
 
     const-string v2, "Selected Country"
 
-    .line 229
+    .line 220
     invoke-virtual {v1, v2, v0}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 230
+    .line 221
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 231
+    .line 222
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 232
+    .line 223
     iget-object v0, p0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment$5;->b:Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 233
+    .line 224
     iget-object v0, p0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment$5;->b:Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;->a(Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;)V
 
-    .line 234
+    .line 225
     return-void
 .end method

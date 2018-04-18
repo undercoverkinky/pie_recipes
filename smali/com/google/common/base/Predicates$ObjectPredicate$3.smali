@@ -19,7 +19,7 @@
     .locals 1
 
     .prologue
-    .line 305
+    .line 295
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/common/base/Predicates$ObjectPredicate;-><init>(Ljava/lang/String;ILcom/google/common/base/Predicates$1;)V
@@ -37,7 +37,7 @@
     .end param
 
     .prologue
-    .line 308
+    .line 297
     if-nez p1, :cond_0
 
     const/4 v0, 0x1
@@ -55,7 +55,7 @@
     .locals 1
 
     .prologue
-    .line 313
+    .line 300
     const-string v0, "Predicates.isNull()"
 
     return-object v0

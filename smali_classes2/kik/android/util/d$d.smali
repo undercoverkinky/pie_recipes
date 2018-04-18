@@ -21,24 +21,29 @@
 
 .field private final c:Ljava/lang/String;
 
+.field private final d:[B
+
 
 # direct methods
-.method constructor <init>(Lkik/android/util/d;Ljava/lang/String;Ljava/lang/String;)V
+.method constructor <init>(Lkik/android/util/d;Ljava/lang/String;Ljava/lang/String;[B)V
     .locals 0
 
     .prologue
-    .line 414
+    .line 415
     iput-object p1, p0, Lkik/android/util/d$d;->a:Lkik/android/util/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 415
+    .line 416
     iput-object p2, p0, Lkik/android/util/d$d;->b:Ljava/lang/String;
 
-    .line 416
+    .line 417
     iput-object p3, p0, Lkik/android/util/d$d;->c:Ljava/lang/String;
 
-    .line 417
+    .line 418
+    iput-object p4, p0, Lkik/android/util/d$d;->d:[B
+
+    .line 419
     return-void
 .end method
 
@@ -58,6 +63,16 @@
     .prologue
     .line 408
     iget-object v0, p0, Lkik/android/util/d$d;->c:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic c(Lkik/android/util/d$d;)[B
+    .locals 1
+
+    .prologue
+    .line 408
+    iget-object v0, p0, Lkik/android/util/d$d;->d:[B
 
     return-object v0
 .end method

@@ -18,14 +18,23 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     .prologue
-    .line 660
+    .line 658
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 661
+    return-void
+.end method
+
+.method synthetic constructor <init>(B)V
+    .locals 0
+
+    .prologue
+    .line 658
+    invoke-direct {p0}, Landroid/support/v7/widget/DefaultItemAnimator$VpaListenerAdapter;-><init>()V
+
     return-void
 .end method
 
@@ -35,7 +44,7 @@
     .locals 0
 
     .prologue
-    .line 670
+    .line 666
     return-void
 .end method
 
@@ -43,7 +52,7 @@
     .locals 0
 
     .prologue
-    .line 667
+    .line 663
     return-void
 .end method
 
@@ -51,6 +60,6 @@
     .locals 0
 
     .prologue
-    .line 664
+    .line 660
     return-void
 .end method

@@ -1,11 +1,11 @@
 .class final Lcom/google/common/collect/l$2;
-.super Lcom/google/common/collect/p;
+.super Lcom/google/common/collect/a;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/common/collect/l;->a(Ljava/util/Iterator;Lcom/google/common/base/Function;)Ljava/util/Iterator;
+    value = Lcom/google/common/collect/l;->a([Ljava/lang/Object;III)Lcom/google/common/collect/y;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,46 +15,52 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/google/common/collect/p",
-        "<TF;TT;>;"
+        "Lcom/google/common/collect/a",
+        "<TT;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/common/base/Function;
+.field final synthetic a:[Ljava/lang/Object;
+
+.field final synthetic b:I
 
 
 # direct methods
-.method constructor <init>(Ljava/util/Iterator;Lcom/google/common/base/Function;)V
+.method constructor <init>(II[Ljava/lang/Object;I)V
     .locals 0
 
     .prologue
-    .line 754
-    iput-object p2, p0, Lcom/google/common/collect/l$2;->a:Lcom/google/common/base/Function;
+    .line 1058
+    iput-object p3, p0, Lcom/google/common/collect/l$2;->a:[Ljava/lang/Object;
 
-    invoke-direct {p0, p1}, Lcom/google/common/collect/p;-><init>(Ljava/util/Iterator;)V
+    iput p4, p0, Lcom/google/common/collect/l$2;->b:I
+
+    invoke-direct {p0, p1, p2}, Lcom/google/common/collect/a;-><init>(II)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method final a(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method protected final a(I)Ljava/lang/Object;
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(TF;)TT;"
+            "(I)TT;"
         }
     .end annotation
 
     .prologue
-    .line 757
-    iget-object v0, p0, Lcom/google/common/collect/l$2;->a:Lcom/google/common/base/Function;
+    .line 1060
+    iget-object v0, p0, Lcom/google/common/collect/l$2;->a:[Ljava/lang/Object;
 
-    invoke-interface {v0, p1}, Lcom/google/common/base/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    iget v1, p0, Lcom/google/common/collect/l$2;->b:I
 
-    move-result-object v0
+    add-int/2addr v1, p1
+
+    aget-object v0, v0, v1
 
     return-object v0
 .end method

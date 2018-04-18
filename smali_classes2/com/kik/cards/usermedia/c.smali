@@ -45,7 +45,7 @@
     .end annotation
 
     .prologue
-    const v6, 0x7f0903dd
+    const v6, 0x7f0a03c9
 
     const/4 v5, 0x0
 
@@ -65,7 +65,7 @@
     invoke-virtual {v1, v4}, Lkik/android/chat/fragment/KikDialogFragment$a;->b(Z)Lkik/android/chat/fragment/KikDialogFragment$a;
 
     .line 33
-    const v0, 0x7f090457
+    const v0, 0x7f0a0443
 
     invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikDialogFragment$a;->a(I)Lkik/android/chat/fragment/KikDialogFragment$a;
 
@@ -90,7 +90,7 @@
 
     new-array v0, v0, [Ljava/lang/CharSequence;
 
-    const v3, 0x7f090466
+    const v3, 0x7f0a0452
 
     invoke-static {v3}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
@@ -119,7 +119,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/kik/cards/web/f;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-interface {v0, v1}, Lcom/kik/cards/web/f;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
 
     .line 68
     return-object v2

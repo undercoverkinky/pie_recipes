@@ -21,9 +21,6 @@
 .method public abstract canApplyTheme(Landroid/graphics/drawable/Drawable;)Z
 .end method
 
-.method public abstract clearColorFilter(Landroid/graphics/drawable/Drawable;)V
-.end method
-
 .method public abstract getAlpha(Landroid/graphics/drawable/Drawable;)I
 .end method
 
@@ -57,7 +54,7 @@
 .method public abstract setHotspotBounds(Landroid/graphics/drawable/Drawable;IIII)V
 .end method
 
-.method public abstract setLayoutDirection(Landroid/graphics/drawable/Drawable;I)Z
+.method public abstract setLayoutDirection(Landroid/graphics/drawable/Drawable;I)V
 .end method
 
 .method public abstract setTint(Landroid/graphics/drawable/Drawable;I)V

@@ -395,7 +395,7 @@
     .line 114
     iget-object v0, p0, Lcom/kik/cards/web/kik/KikContentMessageParcelable;->e:Ljava/util/ArrayList;
 
-    invoke-virtual {p1}, Lkik/core/datatypes/messageExtensions/ContentMessage;->g()Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lkik/core/datatypes/messageExtensions/ContentMessage;->f()Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -444,7 +444,7 @@
     .line 87
     const-string v0, "icon"
 
-    invoke-virtual {p0, v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->a(Ljava/lang/String;)Lkik/core/datatypes/q;
+    invoke-virtual {p0, v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->a(Ljava/lang/String;)Lkik/core/datatypes/t;
 
     move-result-object v0
 
@@ -454,11 +454,11 @@
     if-eqz v0, :cond_1
 
     .line 90
-    invoke-static {}, Lkik/core/util/g;->a()Lkik/core/util/g;
+    invoke-static {}, Lkik/core/util/i;->a()Lkik/core/util/i;
 
     move-result-object v2
 
-    invoke-virtual {v2, v0}, Lkik/core/util/g;->a(Lkik/core/datatypes/q;)[B
+    invoke-virtual {v2, v0}, Lkik/core/util/i;->a(Lkik/core/datatypes/t;)[B
 
     move-result-object v0
 
@@ -674,42 +674,42 @@
     check-cast v0, Lcom/kik/contentlink/model/attachments/ContentUri;
 
     .line 57
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->e()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 58
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->f()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->g()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 59
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->a()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    .line 60
     invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->b()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 61
+    .line 60
     invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->c()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 61
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->d()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
     .line 62
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->e()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->f()Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,47 +1,43 @@
-.class public interface abstract Lcom/google/android/gms/internal/zzjx;
-.super Ljava/lang/Object;
+.class public Lcom/google/android/gms/internal/zzjx;
+.super Landroid/os/Handler;
 
-# interfaces
-.implements Landroid/os/IInterface;
+
+# annotations
+.annotation runtime Lcom/google/android/gms/internal/zzig;
+.end annotation
+
+
+# direct methods
+.method public constructor <init>(Landroid/os/Looper;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract getMediationAdapterClassName()Ljava/lang/String;
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-.end method
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 3
 
-.method public abstract isLoading()Z
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-.end method
+    :try_start_0
+    invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-.method public abstract zza(Lcom/google/android/gms/internal/zzix;I)V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-.end method
+    return-void
 
-.method public abstract zzch()Ljava/lang/String;
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-.end method
+    :catch_0
+    move-exception v0
 
-.method public abstract zzd(Lcom/google/android/gms/internal/zzix;)V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
+    invoke-static {}, Lcom/google/android/gms/ads/internal/zzu;->zzcn()Lcom/google/android/gms/internal/zzjq;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Lcom/google/android/gms/internal/zzjq;->zzb(Ljava/lang/Throwable;Z)V
+
+    throw v0
 .end method

@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnTouchListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/rounds/kik/view/VideoView;-><init>(Landroid/app/Activity;Lcom/rounds/kik/view/VideoView$IAnalyticsReporter;Lcom/rounds/kik/VideoController$VideoViewListener;)V
+    value = Lcom/rounds/kik/view/VideoView;->animateScroll(IJJLandroid/animation/TimeInterpolator;Landroid/animation/Animator$AnimatorListener;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,36 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/rounds/kik/view/VideoView;
+.field final synthetic a:I
+
+.field final synthetic b:J
+
+.field final synthetic c:J
+
+.field final synthetic d:Landroid/animation/TimeInterpolator;
+
+.field final synthetic e:Landroid/animation/Animator$AnimatorListener;
+
+.field final synthetic f:Lcom/rounds/kik/view/VideoView;
 
 
 # direct methods
-.method constructor <init>(Lcom/rounds/kik/view/VideoView;)V
-    .locals 0
+.method constructor <init>(Lcom/rounds/kik/view/VideoView;IJJLandroid/animation/TimeInterpolator;Landroid/animation/Animator$AnimatorListener;)V
+    .locals 1
 
     .prologue
-    .line 185
-    iput-object p1, p0, Lcom/rounds/kik/view/VideoView$5;->a:Lcom/rounds/kik/view/VideoView;
+    .line 404
+    iput-object p1, p0, Lcom/rounds/kik/view/VideoView$5;->f:Lcom/rounds/kik/view/VideoView;
+
+    iput p2, p0, Lcom/rounds/kik/view/VideoView$5;->a:I
+
+    iput-wide p3, p0, Lcom/rounds/kik/view/VideoView$5;->b:J
+
+    iput-wide p5, p0, Lcom/rounds/kik/view/VideoView$5;->c:J
+
+    iput-object p7, p0, Lcom/rounds/kik/view/VideoView$5;->d:Landroid/animation/TimeInterpolator;
+
+    iput-object p8, p0, Lcom/rounds/kik/view/VideoView$5;->e:Landroid/animation/Animator$AnimatorListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,25 +56,92 @@
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 1
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "ClickableViewAccessibility"
-        }
-    .end annotation
+.method public final run()V
+    .locals 6
 
     .prologue
-    .line 190
-    iget-object v0, p0, Lcom/rounds/kik/view/VideoView$5;->a:Lcom/rounds/kik/view/VideoView;
+    .line 408
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView$5;->f:Lcom/rounds/kik/view/VideoView;
 
-    invoke-static {v0}, Lcom/rounds/kik/view/VideoView;->access$1300(Lcom/rounds/kik/view/VideoView;)Landroid/view/GestureDetector;
+    invoke-static {v0}, Lcom/rounds/kik/view/VideoView;->access$500(Lcom/rounds/kik/view/VideoView;)V
+
+    .line 409
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView$5;->f:Lcom/rounds/kik/view/VideoView;
+
+    iget-object v1, p0, Lcom/rounds/kik/view/VideoView$5;->f:Lcom/rounds/kik/view/VideoView;
+
+    const-string v2, "scrollX"
+
+    const/4 v3, 0x1
+
+    new-array v3, v3, [I
+
+    const/4 v4, 0x0
+
+    iget v5, p0, Lcom/rounds/kik/view/VideoView$5;->a:I
+
+    aput v5, v3, v4
+
+    invoke-static {v1, v2, v3}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
+
+    move-result-object v1
+
+    iget-wide v2, p0, Lcom/rounds/kik/view/VideoView$5;->b:J
+
+    invoke-virtual {v1, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/rounds/kik/view/VideoView;->access$602(Lcom/rounds/kik/view/VideoView;Landroid/animation/ObjectAnimator;)Landroid/animation/ObjectAnimator;
+
+    .line 410
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView$5;->f:Lcom/rounds/kik/view/VideoView;
+
+    invoke-static {v0}, Lcom/rounds/kik/view/VideoView;->access$600(Lcom/rounds/kik/view/VideoView;)Landroid/animation/ObjectAnimator;
 
     move-result-object v0
 
-    invoke-virtual {v0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    iget-wide v2, p0, Lcom/rounds/kik/view/VideoView$5;->c:J
 
-    move-result v0
+    invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    return v0
+    .line 411
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView$5;->f:Lcom/rounds/kik/view/VideoView;
+
+    invoke-static {v0}, Lcom/rounds/kik/view/VideoView;->access$600(Lcom/rounds/kik/view/VideoView;)Landroid/animation/ObjectAnimator;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/rounds/kik/view/VideoView$5;->d:Landroid/animation/TimeInterpolator;
+
+    invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    .line 412
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView$5;->e:Landroid/animation/Animator$AnimatorListener;
+
+    if-eqz v0, :cond_0
+
+    .line 413
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView$5;->f:Lcom/rounds/kik/view/VideoView;
+
+    invoke-static {v0}, Lcom/rounds/kik/view/VideoView;->access$600(Lcom/rounds/kik/view/VideoView;)Landroid/animation/ObjectAnimator;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/rounds/kik/view/VideoView$5;->e:Landroid/animation/Animator$AnimatorListener;
+
+    invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    .line 415
+    :cond_0
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView$5;->f:Lcom/rounds/kik/view/VideoView;
+
+    invoke-static {v0}, Lcom/rounds/kik/view/VideoView;->access$600(Lcom/rounds/kik/view/VideoView;)Landroid/animation/ObjectAnimator;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
+
+    .line 416
+    return-void
 .end method

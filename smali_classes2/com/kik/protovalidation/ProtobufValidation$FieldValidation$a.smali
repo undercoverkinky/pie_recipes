@@ -50,31 +50,24 @@
 
 .field private k:I
 
-.field private l:I
-
 
 # direct methods
 .method private constructor <init>()V
     .locals 1
 
     .prologue
-    .line 947
+    .line 773
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;-><init>()V
 
-    .line 1206
+    .line 1023
     const-string v0, ""
 
     iput-object v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->c:Ljava/lang/Object;
 
-    .line 1554
-    const/4 v0, 0x0
+    .line 1784
+    invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->u()Z
 
-    iput v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->l:I
-
-    .line 1958
-    invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->x()Z
-
-    .line 949
+    .line 775
     return-void
 .end method
 
@@ -82,7 +75,7 @@
     .locals 0
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;-><init>()V
 
     return-void
@@ -92,23 +85,18 @@
     .locals 1
 
     .prologue
-    .line 953
+    .line 779
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
 
-    .line 1206
+    .line 1023
     const-string v0, ""
 
     iput-object v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->c:Ljava/lang/Object;
 
-    .line 1554
-    const/4 v0, 0x0
+    .line 2784
+    invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->u()Z
 
-    iput v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->l:I
-
-    .line 2958
-    invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->x()Z
-
-    .line 955
+    .line 781
     return-void
 .end method
 
@@ -116,7 +104,7 @@
     .locals 0
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0, p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
 
     return-void
@@ -132,122 +120,112 @@
 
     const/4 v1, 0x0
 
-    .line 962
+    .line 788
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clear()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
-    .line 963
+    .line 789
     iput-boolean v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->b:Z
 
-    .line 964
+    .line 790
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
     and-int/lit8 v0, v0, -0x2
 
     iput v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
-    .line 965
+    .line 791
     const-string v0, ""
 
     iput-object v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->c:Ljava/lang/Object;
 
-    .line 966
+    .line 792
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
     and-int/lit8 v0, v0, -0x3
 
     iput v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
-    .line 967
+    .line 793
     iput v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->d:I
 
-    .line 968
+    .line 794
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
     and-int/lit8 v0, v0, -0x5
 
     iput v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
-    .line 969
+    .line 795
     iput v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->e:I
 
-    .line 970
+    .line 796
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
     and-int/lit8 v0, v0, -0x9
 
     iput v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
-    .line 971
+    .line 797
     iput-wide v4, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->f:J
 
-    .line 972
+    .line 798
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
     and-int/lit8 v0, v0, -0x11
 
     iput v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
-    .line 973
+    .line 799
     iput-wide v4, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->g:J
 
-    .line 974
+    .line 800
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
     and-int/lit8 v0, v0, -0x21
 
     iput v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
-    .line 975
+    .line 801
     iput-wide v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->h:D
 
-    .line 976
+    .line 802
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
     and-int/lit8 v0, v0, -0x41
 
     iput v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
-    .line 977
+    .line 803
     iput-wide v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->i:D
 
-    .line 978
+    .line 804
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
     and-int/lit16 v0, v0, -0x81
 
     iput v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
-    .line 979
+    .line 805
     iput v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->j:I
 
-    .line 980
+    .line 806
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
     and-int/lit16 v0, v0, -0x101
 
     iput v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
-    .line 981
+    .line 807
     iput v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->k:I
 
-    .line 982
+    .line 808
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
     and-int/lit16 v0, v0, -0x201
 
     iput v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
-    .line 983
-    iput v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->l:I
-
-    .line 984
-    iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
-
-    and-int/lit16 v0, v0, -0x401
-
-    iput v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
-
-    .line 985
+    .line 809
     return-object p0
 .end method
 
@@ -260,10 +238,10 @@
     .end annotation
 
     .prologue
-    .line 1143
+    .line 960
     const/4 v2, 0x0
 
-    .line 1145
+    .line 962
     :try_start_0
     sget-object v0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->a:Lcom/google/protobuf/Parser;
 
@@ -276,23 +254,23 @@
     .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 1150
+    .line 967
     if-eqz v0, :cond_0
 
-    .line 1151
+    .line 968
     invoke-virtual {p0, v0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a(Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
-    .line 1154
+    .line 971
     :cond_0
     return-object p0
 
-    .line 1146
+    .line 963
     :catch_0
     move-exception v0
 
     move-object v1, v0
 
-    .line 1147
+    .line 964
     :try_start_1
     invoke-virtual {v1}, Lcom/google/protobuf/InvalidProtocolBufferException;->getUnfinishedMessage()Lcom/google/protobuf/MessageLite;
 
@@ -302,7 +280,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1148
+    .line 965
     :try_start_2
     invoke-virtual {v1}, Lcom/google/protobuf/InvalidProtocolBufferException;->unwrapIOException()Ljava/io/IOException;
 
@@ -312,7 +290,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1150
+    .line 967
     :catchall_0
     move-exception v1
 
@@ -325,14 +303,13 @@
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 1151
+    .line 968
     invoke-virtual {p0, v1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a(Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
-    .line 1153
     :cond_1
     throw v0
 
-    .line 1150
+    .line 967
     :catchall_1
     move-exception v0
 
@@ -345,7 +322,7 @@
     .locals 1
 
     .prologue
-    .line 1068
+    .line 888
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -359,7 +336,7 @@
     .locals 1
 
     .prologue
-    .line 1077
+    .line 897
     invoke-super {p0, p1, p2, p3}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -373,7 +350,7 @@
     .locals 1
 
     .prologue
-    .line 1064
+    .line 884
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -387,7 +364,7 @@
     .locals 1
 
     .prologue
-    .line 1072
+    .line 892
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -401,23 +378,23 @@
     .locals 1
 
     .prologue
-    .line 1085
+    .line 905
     instance-of v0, p1, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
 
     if-eqz v0, :cond_0
 
-    .line 1086
+    .line 906
     check-cast p1, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
 
     invoke-virtual {p0, p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a(Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object p0
 
-    .line 1089
+    .line 909
     :goto_0
     return-object p0
 
-    .line 1088
+    .line 908
     :cond_0
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/AbstractMessage$Builder;
 
@@ -428,7 +405,7 @@
     .locals 1
 
     .prologue
-    .line 1607
+    .line 1372
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -442,7 +419,7 @@
     .locals 1
 
     .prologue
-    .line 1082
+    .line 902
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -456,7 +433,7 @@
     .locals 1
 
     .prologue
-    .line 1612
+    .line 1377
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -470,26 +447,26 @@
     .locals 2
 
     .prologue
-    .line 998
+    .line 822
     invoke-direct {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->c()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
 
     move-result-object v0
 
-    .line 999
+    .line 823
     invoke-virtual {v0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->isInitialized()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 1000
+    .line 824
     invoke-static {v0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->newUninitializedMessageException(Lcom/google/protobuf/Message;)Lcom/google/protobuf/UninitializedMessageException;
 
     move-result-object v0
 
     throw v0
 
-    .line 1002
+    .line 826
     :cond_0
     return-object v0
 .end method
@@ -502,198 +479,182 @@
 
     const/4 v1, 0x0
 
-    .line 1006
+    .line 830
     new-instance v2, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
 
     invoke-direct {v2, p0, v1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;B)V
 
-    .line 1007
+    .line 831
     iget v3, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
-    .line 1009
+    .line 833
     and-int/lit8 v4, v3, 0x1
 
-    if-ne v4, v0, :cond_a
+    if-ne v4, v0, :cond_9
 
-    .line 1012
+    .line 836
     :goto_0
     iget-boolean v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->b:Z
 
     invoke-static {v2, v1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->a(Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;Z)Z
 
-    .line 1013
+    .line 837
     and-int/lit8 v1, v3, 0x2
 
     const/4 v4, 0x2
 
     if-ne v1, v4, :cond_0
 
-    .line 1014
+    .line 838
     or-int/lit8 v0, v0, 0x2
 
-    .line 1016
+    .line 840
     :cond_0
     iget-object v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->c:Ljava/lang/Object;
 
     invoke-static {v2, v1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->a(Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1017
+    .line 841
     and-int/lit8 v1, v3, 0x4
 
     const/4 v4, 0x4
 
     if-ne v1, v4, :cond_1
 
-    .line 1018
+    .line 842
     or-int/lit8 v0, v0, 0x4
 
-    .line 1020
+    .line 844
     :cond_1
     iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->d:I
 
     invoke-static {v2, v1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->a(Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;I)I
 
-    .line 1021
+    .line 845
     and-int/lit8 v1, v3, 0x8
 
     const/16 v4, 0x8
 
     if-ne v1, v4, :cond_2
 
-    .line 1022
+    .line 846
     or-int/lit8 v0, v0, 0x8
 
-    .line 1024
+    .line 848
     :cond_2
     iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->e:I
 
     invoke-static {v2, v1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->b(Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;I)I
 
-    .line 1025
+    .line 849
     and-int/lit8 v1, v3, 0x10
 
     const/16 v4, 0x10
 
     if-ne v1, v4, :cond_3
 
-    .line 1026
+    .line 850
     or-int/lit8 v0, v0, 0x10
 
-    .line 1028
+    .line 852
     :cond_3
     iget-wide v4, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->f:J
 
     invoke-static {v2, v4, v5}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->a(Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;J)J
 
-    .line 1029
+    .line 853
     and-int/lit8 v1, v3, 0x20
 
     const/16 v4, 0x20
 
     if-ne v1, v4, :cond_4
 
-    .line 1030
+    .line 854
     or-int/lit8 v0, v0, 0x20
 
-    .line 1032
+    .line 856
     :cond_4
     iget-wide v4, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->g:J
 
     invoke-static {v2, v4, v5}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->b(Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;J)J
 
-    .line 1033
+    .line 857
     and-int/lit8 v1, v3, 0x40
 
     const/16 v4, 0x40
 
     if-ne v1, v4, :cond_5
 
-    .line 1034
+    .line 858
     or-int/lit8 v0, v0, 0x40
 
-    .line 1036
+    .line 860
     :cond_5
     iget-wide v4, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->h:D
 
     invoke-static {v2, v4, v5}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->a(Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;D)D
 
-    .line 1037
+    .line 861
     and-int/lit16 v1, v3, 0x80
 
     const/16 v4, 0x80
 
     if-ne v1, v4, :cond_6
 
-    .line 1038
+    .line 862
     or-int/lit16 v0, v0, 0x80
 
-    .line 1040
+    .line 864
     :cond_6
     iget-wide v4, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->i:D
 
     invoke-static {v2, v4, v5}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->b(Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;D)D
 
-    .line 1041
+    .line 865
     and-int/lit16 v1, v3, 0x100
 
     const/16 v4, 0x100
 
     if-ne v1, v4, :cond_7
 
-    .line 1042
+    .line 866
     or-int/lit16 v0, v0, 0x100
 
-    .line 1044
+    .line 868
     :cond_7
     iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->j:I
 
     invoke-static {v2, v1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->c(Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;I)I
 
-    .line 1045
+    .line 869
     and-int/lit16 v1, v3, 0x200
 
-    const/16 v4, 0x200
+    const/16 v3, 0x200
 
-    if-ne v1, v4, :cond_8
+    if-ne v1, v3, :cond_8
 
-    .line 1046
+    .line 870
     or-int/lit16 v0, v0, 0x200
 
-    .line 1048
+    .line 872
     :cond_8
     iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->k:I
 
     invoke-static {v2, v1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->d(Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;I)I
 
-    .line 1049
-    and-int/lit16 v1, v3, 0x400
+    .line 873
+    invoke-static {v2, v0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->e(Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;I)I
 
-    const/16 v3, 0x400
-
-    if-ne v1, v3, :cond_9
-
-    .line 1050
-    or-int/lit16 v0, v0, 0x400
-
-    .line 1052
-    :cond_9
-    iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->l:I
-
-    invoke-static {v2, v1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->e(Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;I)I
-
-    .line 1053
-    invoke-static {v2, v0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->f(Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;I)I
-
-    .line 1054
+    .line 874
     invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->onBuilt()V
 
-    .line 1055
+    .line 875
     return-object v2
 
-    :cond_a
+    :cond_9
     move v0, v1
 
-    goto/16 :goto_0
+    goto :goto_0
 .end method
 
 
@@ -702,326 +663,285 @@
     .locals 3
 
     .prologue
-    .line 1094
-    invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->w()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
+    .line 914
+    invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->t()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
 
     move-result-object v0
 
     if-ne p1, v0, :cond_0
 
-    .line 1132
+    .line 949
     :goto_0
     return-object p0
 
-    .line 1095
+    .line 915
     :cond_0
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->b()Z
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 1096
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->c()Z
+    .line 916
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->b()Z
 
     move-result v0
 
-    .line 3187
+    .line 3004
     iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
     or-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
-    .line 3188
+    .line 3005
     iput-boolean v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->b:Z
 
-    .line 3189
+    .line 3006
     invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->onChanged()V
 
-    .line 1098
+    .line 918
     :cond_1
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->d()Z
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->c()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 1099
+    .line 919
     iget v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
     or-int/lit8 v0, v0, 0x2
 
     iput v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
-    .line 1100
+    .line 920
     invoke-static {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->a(Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;)Ljava/lang/Object;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->c:Ljava/lang/Object;
 
-    .line 1101
+    .line 921
     invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->onChanged()V
 
-    .line 1103
+    .line 923
     :cond_2
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->e()Z
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->d()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 1104
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->f()I
+    .line 924
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->e()I
 
     move-result v0
 
-    .line 3311
+    .line 3128
     iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
     or-int/lit8 v1, v1, 0x4
 
     iput v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
-    .line 3312
+    .line 3129
     iput v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->d:I
 
-    .line 3313
+    .line 3130
     invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->onChanged()V
 
-    .line 1106
+    .line 926
     :cond_3
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->g()Z
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->f()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 1107
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->h()I
+    .line 927
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->g()I
 
     move-result v0
 
-    .line 3347
+    .line 3164
     iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
     or-int/lit8 v1, v1, 0x8
 
     iput v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
-    .line 3348
+    .line 3165
     iput v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->e:I
 
-    .line 3349
+    .line 3166
     invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->onChanged()V
 
-    .line 1109
+    .line 929
     :cond_4
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->i()Z
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->h()Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    .line 1110
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->j()J
+    .line 930
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->i()J
 
     move-result-wide v0
 
-    .line 3379
+    .line 3196
     iget v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
     or-int/lit8 v2, v2, 0x10
 
     iput v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
-    .line 3380
+    .line 3197
     iput-wide v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->f:J
 
-    .line 3381
+    .line 3198
     invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->onChanged()V
 
-    .line 1112
+    .line 932
     :cond_5
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->k()Z
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->j()Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    .line 1113
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->l()J
+    .line 933
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->k()J
 
     move-result-wide v0
 
-    .line 3411
+    .line 3228
     iget v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
     or-int/lit8 v2, v2, 0x20
 
     iput v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
-    .line 3412
+    .line 3229
     iput-wide v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->g:J
 
-    .line 3413
+    .line 3230
     invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->onChanged()V
 
-    .line 1115
+    .line 935
     :cond_6
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->m()Z
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->l()Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
-    .line 1116
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->n()D
+    .line 936
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->m()D
 
     move-result-wide v0
 
-    .line 3443
+    .line 3260
     iget v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
     or-int/lit8 v2, v2, 0x40
 
     iput v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
-    .line 3444
+    .line 3261
     iput-wide v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->h:D
 
-    .line 3445
+    .line 3262
     invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->onChanged()V
 
-    .line 1118
+    .line 938
     :cond_7
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->o()Z
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->n()Z
 
     move-result v0
 
     if-eqz v0, :cond_8
 
-    .line 1119
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->p()D
+    .line 939
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->o()D
 
     move-result-wide v0
 
-    .line 3475
+    .line 3292
     iget v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
     or-int/lit16 v2, v2, 0x80
 
     iput v2, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
-    .line 3476
+    .line 3293
     iput-wide v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->i:D
 
-    .line 3477
+    .line 3294
     invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->onChanged()V
 
-    .line 1121
+    .line 941
     :cond_8
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->q()Z
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->p()Z
 
     move-result v0
 
     if-eqz v0, :cond_9
 
-    .line 1122
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->r()I
+    .line 942
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->q()I
 
     move-result v0
 
-    .line 3507
+    .line 3324
     iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
     or-int/lit16 v1, v1, 0x100
 
     iput v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
-    .line 3508
+    .line 3325
     iput v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->j:I
 
-    .line 3509
+    .line 3326
     invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->onChanged()V
 
-    .line 1124
+    .line 944
     :cond_9
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->s()Z
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->r()Z
 
     move-result v0
 
     if-eqz v0, :cond_a
 
-    .line 1125
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->t()I
+    .line 945
+    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->s()I
 
     move-result v0
 
-    .line 3539
+    .line 3356
     iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
     or-int/lit16 v1, v1, 0x200
 
     iput v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
 
-    .line 3540
+    .line 3357
     iput v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->k:I
 
-    .line 3541
+    .line 3358
     invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->onChanged()V
 
-    .line 1127
+    .line 947
     :cond_a
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->u()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_c
-
-    .line 1128
-    invoke-virtual {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->v()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$Order;
-
-    move-result-object v0
-
-    .line 3584
-    if-nez v0, :cond_b
-
-    .line 3585
-    new-instance v0, Ljava/lang/NullPointerException;
-
-    invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
-
-    throw v0
-
-    .line 3587
-    :cond_b
-    iget v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
-
-    or-int/lit16 v1, v1, 0x400
-
-    iput v1, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a:I
-
-    .line 3588
-    invoke-virtual {v0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$Order;->getNumber()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->l:I
-
-    .line 3589
-    invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->onChanged()V
-
-    .line 1130
-    :cond_c
     invoke-static {p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->b(Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;)Lcom/google/protobuf/UnknownFieldSet;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->b(Lcom/google/protobuf/UnknownFieldSet;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
-    .line 1131
+    .line 948
     invoke-virtual {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->onChanged()V
 
     goto/16 :goto_0
@@ -1031,7 +951,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0, p1, p2}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->b(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -1043,7 +963,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0, p1, p2}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->b(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -1055,7 +975,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->b()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
 
     move-result-object v0
@@ -1067,7 +987,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->b()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
 
     move-result-object v0
@@ -1079,7 +999,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->c()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
 
     move-result-object v0
@@ -1091,7 +1011,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->c()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
 
     move-result-object v0
@@ -1103,7 +1023,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -1115,7 +1035,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -1127,7 +1047,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -1139,7 +1059,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -1151,7 +1071,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0, p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -1163,7 +1083,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0, p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -1175,7 +1095,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0, p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -1187,7 +1107,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0, p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -1199,7 +1119,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0, p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -1211,15 +1131,15 @@
     .locals 1
 
     .prologue
-    .line 930
-    .line 5059
+    .line 756
+    .line 4879
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
-    .line 930
+    .line 756
     return-object v0
 .end method
 
@@ -1227,15 +1147,15 @@
     .locals 1
 
     .prologue
-    .line 930
-    .line 9059
+    .line 756
+    .line 8879
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
-    .line 930
+    .line 756
     return-object v0
 .end method
 
@@ -1243,15 +1163,15 @@
     .locals 1
 
     .prologue
-    .line 930
-    .line 4059
+    .line 756
+    .line 3879
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
-    .line 930
+    .line 756
     return-object v0
 .end method
 
@@ -1259,15 +1179,15 @@
     .locals 1
 
     .prologue
-    .line 930
-    .line 6059
+    .line 756
+    .line 5879
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
-    .line 930
+    .line 756
     return-object v0
 .end method
 
@@ -1275,15 +1195,15 @@
     .locals 1
 
     .prologue
-    .line 930
-    .line 7059
+    .line 756
+    .line 6879
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
-    .line 930
+    .line 756
     return-object v0
 .end method
 
@@ -1296,15 +1216,15 @@
     .end annotation
 
     .prologue
-    .line 930
-    .line 10059
+    .line 756
+    .line 9879
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
-    .line 930
+    .line 756
     return-object v0
 .end method
 
@@ -1312,12 +1232,12 @@
     .locals 1
 
     .prologue
-    .line 8994
-    invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->w()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
+    .line 8818
+    invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->t()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
 
     move-result-object v0
 
-    .line 930
+    .line 756
     return-object v0
 .end method
 
@@ -1325,12 +1245,12 @@
     .locals 1
 
     .prologue
-    .line 7994
-    invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->w()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
+    .line 7818
+    invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->t()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
 
     move-result-object v0
 
-    .line 930
+    .line 756
     return-object v0
 .end method
 
@@ -1338,7 +1258,7 @@
     .locals 1
 
     .prologue
-    .line 990
+    .line 814
     invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation;->b()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
@@ -1350,7 +1270,7 @@
     .locals 3
 
     .prologue
-    .line 941
+    .line 767
     invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation;->c()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -1359,12 +1279,12 @@
 
     const-class v2, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
-    .line 942
+    .line 768
     invoke-virtual {v0, v1, v2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;->ensureFieldAccessorsInitialized(Ljava/lang/Class;Ljava/lang/Class;)Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
 
-    .line 941
+    .line 767
     return-object v0
 .end method
 
@@ -1372,7 +1292,7 @@
     .locals 1
 
     .prologue
-    .line 1136
+    .line 953
     const/4 v0, 0x1
 
     return v0
@@ -1387,7 +1307,7 @@
     .end annotation
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0, p1, p2}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -1399,7 +1319,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0, p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a(Lcom/google/protobuf/Message;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -1416,7 +1336,7 @@
     .end annotation
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0, p1, p2}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -1433,7 +1353,7 @@
     .end annotation
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0, p1, p2}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -1445,7 +1365,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0, p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a(Lcom/google/protobuf/Message;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -1462,7 +1382,7 @@
     .end annotation
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0, p1, p2}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -1474,7 +1394,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0, p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->b(Lcom/google/protobuf/UnknownFieldSet;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -1486,7 +1406,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0, p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->b(Lcom/google/protobuf/UnknownFieldSet;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -1498,7 +1418,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0, p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->b(Lcom/google/protobuf/UnknownFieldSet;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -1510,7 +1430,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0, p1, p2}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -1522,7 +1442,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0, p1, p2}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -1534,7 +1454,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0, p1, p2, p3}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -1546,7 +1466,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0, p1, p2, p3}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -1558,7 +1478,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0, p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a(Lcom/google/protobuf/UnknownFieldSet;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0
@@ -1570,7 +1490,7 @@
     .locals 1
 
     .prologue
-    .line 930
+    .line 756
     invoke-direct {p0, p1}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;->a(Lcom/google/protobuf/UnknownFieldSet;)Lcom/kik/protovalidation/ProtobufValidation$FieldValidation$a;
 
     move-result-object v0

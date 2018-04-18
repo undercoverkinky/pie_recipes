@@ -44,7 +44,7 @@
 
     const/4 v2, 0x0
 
-    .line 89
+    .line 94
     new-instance v0, Lkik/android/net/http/ContentUploadItem$TranscodeStatus;
 
     const-string v1, "PENDING"
@@ -69,7 +69,7 @@
 
     sput-object v0, Lkik/android/net/http/ContentUploadItem$TranscodeStatus;->COMPLETED:Lkik/android/net/http/ContentUploadItem$TranscodeStatus;
 
-    .line 88
+    .line 93
     const/4 v0, 0x3
 
     new-array v0, v0, [Lkik/android/net/http/ContentUploadItem$TranscodeStatus;
@@ -100,7 +100,7 @@
     .end annotation
 
     .prologue
-    .line 88
+    .line 93
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -110,7 +110,7 @@
     .locals 1
 
     .prologue
-    .line 88
+    .line 93
     const-class v0, Lkik/android/net/http/ContentUploadItem$TranscodeStatus;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -126,7 +126,7 @@
     .locals 1
 
     .prologue
-    .line 88
+    .line 93
     sget-object v0, Lkik/android/net/http/ContentUploadItem$TranscodeStatus;->$VALUES:[Lkik/android/net/http/ContentUploadItem$TranscodeStatus;
 
     invoke-virtual {v0}, [Lkik/android/net/http/ContentUploadItem$TranscodeStatus;->clone()Ljava/lang/Object;

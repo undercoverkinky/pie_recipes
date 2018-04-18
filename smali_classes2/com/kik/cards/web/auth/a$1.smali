@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 88
+    .line 87
     iput-object p1, p0, Lcom/kik/cards/web/auth/a$1;->a:Lcom/kik/cards/web/auth/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,7 +50,7 @@
     .locals 1
 
     .prologue
-    .line 88
+    .line 87
     check-cast p2, Ljava/lang/Boolean;
 
     .line 1092
@@ -65,7 +65,7 @@
 
     invoke-static {v0}, Lcom/kik/cards/web/auth/a;->a(Lcom/kik/cards/web/auth/a;)V
 
-    .line 88
+    .line 87
     :cond_0
     return-void
 .end method

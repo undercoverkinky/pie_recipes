@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field protected a:Lkik/core/interfaces/ag;
+.field protected a:Lkik/core/interfaces/af;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
@@ -49,22 +49,23 @@
     .locals 2
 
     .prologue
-    .line 49
+    .line 0
+    .line 1049
     invoke-virtual {p0}, Lkik/android/widget/preferences/NamePreference;->b()Landroid/view/View;
 
     move-result-object v0
 
-    .line 50
+    .line 1050
     if-eqz v0, :cond_0
 
-    .line 51
-    invoke-static {p0}, Lkik/android/widget/preferences/i;->a(Lkik/android/widget/preferences/NamePreference;)Ljava/lang/Runnable;
+    .line 1051
+    invoke-static {p0}, Lkik/android/widget/preferences/o;->a(Lkik/android/widget/preferences/NamePreference;)Ljava/lang/Runnable;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    .line 53
+    .line 0
     :cond_0
     return-void
 .end method
@@ -73,9 +74,11 @@
     .locals 0
 
     .prologue
-    .line 51
+    .line 0
+    .line 2051
     invoke-virtual {p0}, Lkik/android/widget/preferences/NamePreference;->notifyChanged()V
 
+    .line 0
     return-void
 .end method
 
@@ -84,7 +87,7 @@
 
     .prologue
     .line 41
-    const v0, 0x7f040136
+    const v0, 0x7f040107
 
     invoke-virtual {p0, v0}, Lkik/android/widget/preferences/NamePreference;->setLayoutResource(I)V
 
@@ -111,13 +114,13 @@
     .line 48
     iget-object v0, p0, Lkik/android/widget/preferences/NamePreference;->b:Lcom/kik/events/d;
 
-    iget-object v1, p0, Lkik/android/widget/preferences/NamePreference;->a:Lkik/core/interfaces/ag;
+    iget-object v1, p0, Lkik/android/widget/preferences/NamePreference;->a:Lkik/core/interfaces/af;
 
-    invoke-interface {v1}, Lkik/core/interfaces/ag;->a()Lcom/kik/events/c;
+    invoke-interface {v1}, Lkik/core/interfaces/af;->a()Lcom/kik/events/c;
 
     move-result-object v1
 
-    invoke-static {p0}, Lkik/android/widget/preferences/h;->a(Lkik/android/widget/preferences/NamePreference;)Lcom/kik/events/e;
+    invoke-static {p0}, Lkik/android/widget/preferences/n;->a(Lkik/android/widget/preferences/NamePreference;)Lcom/kik/events/e;
 
     move-result-object v2
 
@@ -135,20 +138,20 @@
     invoke-super {p0, p1}, Lkik/android/widget/preferences/KikPreference;->onBindView(Landroid/view/View;)V
 
     .line 67
-    iget-object v0, p0, Lkik/android/widget/preferences/NamePreference;->a:Lkik/core/interfaces/ag;
+    iget-object v0, p0, Lkik/android/widget/preferences/NamePreference;->a:Lkik/core/interfaces/af;
 
-    invoke-interface {v0}, Lkik/core/interfaces/ag;->d()Lkik/core/datatypes/aa;
+    invoke-interface {v0}, Lkik/core/interfaces/af;->d()Lkik/core/datatypes/ad;
 
     move-result-object v0
 
     .line 69
-    iget-object v1, v0, Lkik/core/datatypes/aa;->d:Ljava/lang/String;
+    iget-object v1, v0, Lkik/core/datatypes/ad;->d:Ljava/lang/String;
 
     .line 70
-    iget-object v2, v0, Lkik/core/datatypes/aa;->e:Ljava/lang/String;
+    iget-object v2, v0, Lkik/core/datatypes/ad;->e:Ljava/lang/String;
 
     .line 71
-    const v0, 0x7f100388
+    const v0, 0x7f110318
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -202,7 +205,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ad;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v0
 

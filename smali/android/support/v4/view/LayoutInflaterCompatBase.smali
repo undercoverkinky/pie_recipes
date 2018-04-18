@@ -4,10 +4,6 @@
 
 
 # annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x9
-.end annotation
-
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/support/v4/view/LayoutInflaterCompatBase$FactoryWrapper;
@@ -20,10 +16,10 @@
     .locals 0
 
     .prologue
-    .line 28
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
+    .line 26
     return-void
 .end method
 
@@ -31,22 +27,22 @@
     .locals 2
 
     .prologue
-    .line 53
+    .line 49
     invoke-virtual {p0}, Landroid/view/LayoutInflater;->getFactory()Landroid/view/LayoutInflater$Factory;
 
     move-result-object v0
 
-    .line 54
+    .line 50
     instance-of v1, v0, Landroid/support/v4/view/LayoutInflaterCompatBase$FactoryWrapper;
 
     if-eqz v1, :cond_0
 
-    .line 55
+    .line 51
     check-cast v0, Landroid/support/v4/view/LayoutInflaterCompatBase$FactoryWrapper;
 
     iget-object v0, v0, Landroid/support/v4/view/LayoutInflaterCompatBase$FactoryWrapper;->mDelegateFactory:Landroid/support/v4/view/LayoutInflaterFactory;
 
-    .line 57
+    .line 53
     :goto_0
     return-object v0
 
@@ -60,7 +56,7 @@
     .locals 1
 
     .prologue
-    .line 49
+    .line 45
     if-eqz p1, :cond_0
 
     new-instance v0, Landroid/support/v4/view/LayoutInflaterCompatBase$FactoryWrapper;
@@ -70,10 +66,10 @@
     :goto_0
     invoke-virtual {p0, v0}, Landroid/view/LayoutInflater;->setFactory(Landroid/view/LayoutInflater$Factory;)V
 
-    .line 50
+    .line 46
     return-void
 
-    .line 49
+    .line 45
     :cond_0
     const/4 v0, 0x0
 

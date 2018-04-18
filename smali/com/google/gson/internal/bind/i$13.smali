@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 465
+    .line 486
     invoke-direct {p0}, Lcom/google/gson/o;-><init>()V
 
     return-void
@@ -45,8 +45,8 @@
     .end annotation
 
     .prologue
-    .line 465
-    .line 1468
+    .line 486
+    .line 1489
     invoke-virtual {p1}, Lcom/google/gson/stream/a;->f()Lcom/google/gson/stream/JsonToken;
 
     move-result-object v0
@@ -55,16 +55,16 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1469
+    .line 1490
     invoke-virtual {p1}, Lcom/google/gson/stream/a;->j()V
 
-    .line 1470
+    .line 1491
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 1472
+    .line 1493
     :cond_0
     new-instance v0, Ljava/lang/StringBuffer;
 
@@ -86,10 +86,10 @@
     .end annotation
 
     .prologue
-    .line 465
+    .line 486
     check-cast p2, Ljava/lang/StringBuffer;
 
-    .line 1476
+    .line 1497
     if-nez p2, :cond_0
 
     const/4 v0, 0x0
@@ -97,10 +97,10 @@
     :goto_0
     invoke-virtual {p1, v0}, Lcom/google/gson/stream/b;->b(Ljava/lang/String;)Lcom/google/gson/stream/b;
 
-    .line 465
+    .line 486
     return-void
 
-    .line 1476
+    .line 1497
     :cond_0
     invoke-virtual {p2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 

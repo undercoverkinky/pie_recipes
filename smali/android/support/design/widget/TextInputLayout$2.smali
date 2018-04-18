@@ -1,6 +1,9 @@
 .class Landroid/support/design/widget/TextInputLayout$2;
-.super Landroid/support/v4/view/ViewPropertyAnimatorListenerAdapter;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/text/TextWatcher;
 
 
 # annotations
@@ -23,25 +26,47 @@
     .locals 0
 
     .prologue
-    .line 716
+    .line 174
     iput-object p1, p0, Landroid/support/design/widget/TextInputLayout$2;->a:Landroid/support/design/widget/TextInputLayout;
 
-    invoke-direct {p0}, Landroid/support/v4/view/ViewPropertyAnimatorListenerAdapter;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationStart(Landroid/view/View;)V
-    .locals 1
+.method public afterTextChanged(Landroid/text/Editable;)V
+    .locals 2
 
     .prologue
-    .line 719
-    const/4 v0, 0x0
+    .line 177
+    iget-object v0, p0, Landroid/support/design/widget/TextInputLayout$2;->a:Landroid/support/design/widget/TextInputLayout;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-static {v0}, Landroid/support/design/widget/TextInputLayout;->b(Landroid/support/design/widget/TextInputLayout;)Landroid/os/Handler;
 
-    .line 720
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    .line 178
+    return-void
+.end method
+
+.method public beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
+
+    .prologue
+    .line 182
+    return-void
+.end method
+
+.method public onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
+
+    .prologue
+    .line 186
     return-void
 .end method

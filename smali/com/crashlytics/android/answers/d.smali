@@ -1,173 +1,238 @@
-.class public abstract Lcom/crashlytics/android/answers/d;
+.class final Lcom/crashlytics/android/answers/d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Lcom/crashlytics/android/answers/d;",
-        ">",
-        "Ljava/lang/Object;"
-    }
-.end annotation
-
-
 # instance fields
-.field final b:Lcom/crashlytics/android/answers/e;
+.field final a:I
 
-.field final c:Lcom/crashlytics/android/answers/c;
+.field final b:I
+
+.field c:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Z)V
+    .locals 1
 
     .prologue
-    .line 35
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
-    new-instance v0, Lcom/crashlytics/android/answers/e;
+    .line 26
+    const/16 v0, 0x14
 
-    .line 37
-    invoke-static {}, Lio/fabric/sdk/android/c;->e()Z
+    iput v0, p0, Lcom/crashlytics/android/answers/d;->a:I
 
-    move-result v1
+    .line 27
+    const/16 v0, 0x64
 
-    invoke-direct {v0, v1}, Lcom/crashlytics/android/answers/e;-><init>(Z)V
+    iput v0, p0, Lcom/crashlytics/android/answers/d;->b:I
 
-    iput-object v0, p0, Lcom/crashlytics/android/answers/d;->b:Lcom/crashlytics/android/answers/e;
+    .line 28
+    iput-boolean p1, p0, Lcom/crashlytics/android/answers/d;->c:Z
 
-    .line 38
-    new-instance v0, Lcom/crashlytics/android/answers/c;
+    .line 29
+    return-void
+.end method
 
-    iget-object v1, p0, Lcom/crashlytics/android/answers/d;->b:Lcom/crashlytics/android/answers/e;
+.method private a(Ljava/lang/RuntimeException;)V
+    .locals 3
 
-    invoke-direct {v0, v1}, Lcom/crashlytics/android/answers/c;-><init>(Lcom/crashlytics/android/answers/e;)V
+    .prologue
+    .line 72
+    iget-boolean v0, p0, Lcom/crashlytics/android/answers/d;->c:Z
 
-    iput-object v0, p0, Lcom/crashlytics/android/answers/d;->c:Lcom/crashlytics/android/answers/c;
+    if-eqz v0, :cond_0
 
-    .line 39
+    .line 73
+    throw p1
+
+    .line 75
+    :cond_0
+    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
+
+    move-result-object v0
+
+    const-string v1, "Answers"
+
+    const-string v2, "Invalid user input detected"
+
+    invoke-interface {v0, v1, v2, p1}, Lio/fabric/sdk/android/k;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 77
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Ljava/lang/Number;)Lcom/crashlytics/android/answers/d;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Ljava/lang/Number;",
-            ")TT;"
-        }
-    .end annotation
+.method public final a(Ljava/lang/String;)Ljava/lang/String;
+    .locals 5
 
     .prologue
-    .line 71
-    iget-object v0, p0, Lcom/crashlytics/android/answers/d;->c:Lcom/crashlytics/android/answers/c;
+    const/4 v4, 0x0
 
-    .line 1043
-    iget-object v1, v0, Lcom/crashlytics/android/answers/c;->a:Lcom/crashlytics/android/answers/e;
+    .line 35
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    const-string v2, "key"
+    move-result v0
 
-    invoke-virtual {v1, p1, v2}, Lcom/crashlytics/android/answers/e;->a(Ljava/lang/Object;Ljava/lang/String;)Z
+    iget v1, p0, Lcom/crashlytics/android/answers/d;->b:I
 
-    move-result v1
+    if-le v0, v1, :cond_0
 
-    if-nez v1, :cond_0
+    .line 36
+    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    iget-object v1, v0, Lcom/crashlytics/android/answers/c;->a:Lcom/crashlytics/android/answers/e;
+    const-string v1, "String is too long, truncating to %d characters"
 
-    const-string v2, "value"
+    const/4 v2, 0x1
 
-    invoke-virtual {v1, p2, v2}, Lcom/crashlytics/android/answers/e;->a(Ljava/lang/Object;Ljava/lang/String;)Z
+    new-array v2, v2, [Ljava/lang/Object;
 
-    move-result v1
+    iget v3, p0, Lcom/crashlytics/android/answers/d;->b:I
 
-    if-eqz v1, :cond_1
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 72
+    move-result-object v3
+
+    aput-object v3, v2, v4
+
+    invoke-static {v0, v1, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 38
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    invoke-direct {p0, v1}, Lcom/crashlytics/android/answers/d;->a(Ljava/lang/RuntimeException;)V
+
+    .line 39
+    iget v0, p0, Lcom/crashlytics/android/answers/d;->b:I
+
+    invoke-virtual {p1, v4, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 41
     :cond_0
-    :goto_0
-    return-object p0
+    return-object p1
+.end method
 
-    .line 1046
-    :cond_1
-    iget-object v1, v0, Lcom/crashlytics/android/answers/c;->a:Lcom/crashlytics/android/answers/e;
+.method public final a(Ljava/lang/Object;Ljava/lang/String;)Z
+    .locals 3
 
-    invoke-virtual {v1, p1}, Lcom/crashlytics/android/answers/e;->a(Ljava/lang/String;)Ljava/lang/String;
+    .prologue
+    .line 48
+    if-nez p1, :cond_0
+
+    .line 49
+    new-instance v0, Ljava/lang/NullPointerException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 1047
-    invoke-virtual {v0, v1, p2}, Lcom/crashlytics/android/answers/c;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    const-string v2, " must not be null"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    invoke-direct {p0, v0}, Lcom/crashlytics/android/answers/d;->a(Ljava/lang/RuntimeException;)V
+
+    .line 50
+    const/4 v0, 0x1
+
+    .line 52
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method public final a(Ljava/lang/String;Ljava/lang/String;)Lcom/crashlytics/android/answers/d;
-    .locals 3
+.method public final a(Ljava/util/Map;Ljava/lang/String;)Z
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
+            "Ljava/util/Map",
+            "<",
             "Ljava/lang/String;",
+            "Ljava/lang/Object;",
+            ">;",
             "Ljava/lang/String;",
-            ")TT;"
+            ")Z"
         }
     .end annotation
 
     .prologue
-    .line 56
-    iget-object v0, p0, Lcom/crashlytics/android/answers/d;->c:Lcom/crashlytics/android/answers/c;
+    const/4 v0, 0x1
 
-    .line 1034
-    iget-object v1, v0, Lcom/crashlytics/android/answers/c;->a:Lcom/crashlytics/android/answers/e;
+    const/4 v1, 0x0
 
-    const-string v2, "key"
+    .line 59
+    invoke-interface {p1}, Ljava/util/Map;->size()I
 
-    invoke-virtual {v1, p1, v2}, Lcom/crashlytics/android/answers/e;->a(Ljava/lang/Object;Ljava/lang/String;)Z
+    move-result v2
 
-    move-result v1
+    iget v3, p0, Lcom/crashlytics/android/answers/d;->a:I
 
-    if-nez v1, :cond_0
+    if-lt v2, v3, :cond_0
 
-    iget-object v1, v0, Lcom/crashlytics/android/answers/c;->a:Lcom/crashlytics/android/answers/e;
+    invoke-interface {p1, p2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
-    const-string v2, "value"
+    move-result v2
 
-    invoke-virtual {v1, p2, v2}, Lcom/crashlytics/android/answers/e;->a(Ljava/lang/Object;Ljava/lang/String;)Z
+    if-nez v2, :cond_0
 
-    move-result v1
+    .line 60
+    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    if-eqz v1, :cond_1
+    const-string v3, "Limit of %d attributes reached, skipping attribute"
 
-    .line 57
-    :cond_0
-    :goto_0
-    return-object p0
+    new-array v4, v0, [Ljava/lang/Object;
 
-    .line 1037
-    :cond_1
-    iget-object v1, v0, Lcom/crashlytics/android/answers/c;->a:Lcom/crashlytics/android/answers/e;
+    iget v5, p0, Lcom/crashlytics/android/answers/d;->a:I
 
-    invoke-virtual {v1, p1}, Lcom/crashlytics/android/answers/e;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v4, v1
+
+    invoke-static {v2, v3, v4}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1038
-    iget-object v2, v0, Lcom/crashlytics/android/answers/c;->a:Lcom/crashlytics/android/answers/e;
+    .line 62
+    new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    invoke-virtual {v2, p2}, Lcom/crashlytics/android/answers/e;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {v2, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    move-result-object v2
+    invoke-direct {p0, v2}, Lcom/crashlytics/android/answers/d;->a(Ljava/lang/RuntimeException;)V
 
-    .line 1039
-    invoke-virtual {v0, v1, v2}, Lcom/crashlytics/android/answers/c;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    .line 65
+    :goto_0
+    return v0
+
+    :cond_0
+    move v0, v1
 
     goto :goto_0
 .end method

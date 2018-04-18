@@ -229,7 +229,6 @@
     :cond_2
     invoke-virtual {p0}, Lcom/kik/video/VideoCommon$OneToOneConvoId;->makeExtensionsImmutable()V
 
-    .line 976
     throw v0
 
     .line 972

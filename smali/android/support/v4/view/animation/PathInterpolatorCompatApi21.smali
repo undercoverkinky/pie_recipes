@@ -3,21 +3,15 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x15
-.end annotation
-
-
 # direct methods
 .method private constructor <init>()V
     .locals 0
 
     .prologue
-    .line 33
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
+    .line 30
     return-void
 .end method
 
@@ -25,7 +19,7 @@
     .locals 1
 
     .prologue
-    .line 42
+    .line 37
     new-instance v0, Landroid/view/animation/PathInterpolator;
 
     invoke-direct {v0, p0, p1}, Landroid/view/animation/PathInterpolator;-><init>(FF)V
@@ -37,7 +31,7 @@
     .locals 1
 
     .prologue
-    .line 47
+    .line 42
     new-instance v0, Landroid/view/animation/PathInterpolator;
 
     invoke-direct {v0, p0, p1, p2, p3}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
@@ -49,7 +43,7 @@
     .locals 1
 
     .prologue
-    .line 38
+    .line 33
     new-instance v0, Landroid/view/animation/PathInterpolator;
 
     invoke-direct {v0, p0}, Landroid/view/animation/PathInterpolator;-><init>(Landroid/graphics/Path;)V

@@ -1,349 +1,144 @@
-.class public final Lcom/google/android/gms/internal/zzpv;
-.super Lcom/google/android/gms/internal/zzee;
+.class public Lcom/google/android/gms/internal/zzpv;
+.super Ljava/lang/Object;
 
-# interfaces
-.implements Lcom/google/android/gms/internal/zzpt;
+
+# instance fields
+.field protected final mContext:Landroid/content/Context;
 
 
 # direct methods
-.method constructor <init>(Landroid/os/IBinder;)V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 0
 
-    const-string v0, "com.google.android.gms.ads.internal.formats.client.INativeCustomTemplateAd"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, v0}, Lcom/google/android/gms/internal/zzee;-><init>(Landroid/os/IBinder;Ljava/lang/String;)V
+    iput-object p1, p0, Lcom/google/android/gms/internal/zzpv;->mContext:Landroid/content/Context;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final destroy()V
-    .locals 2
+.method public getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Landroid/os/RemoteException;
+            Landroid/content/pm/PackageManager$NameNotFoundException;
         }
     .end annotation
 
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzpv;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
-    const/16 v1, 0x8
-
-    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zzb(ILandroid/os/Parcel;)V
-
-    return-void
-.end method
-
-.method public final getAvailableAssetNames()Ljava/util/List;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
+    invoke-virtual {v0, p1, p2}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
-
-    const/4 v1, 0x3
-
-    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zza(ILandroid/os/Parcel;)Landroid/os/Parcel;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->createStringArrayList()Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    return-object v1
-.end method
-
-.method public final getCustomTemplateId()Ljava/lang/String;
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    const/4 v1, 0x4
-
-    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zza(ILandroid/os/Parcel;)Landroid/os/Parcel;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    return-object v1
-.end method
-
-.method public final getVideoController()Lcom/google/android/gms/internal/zzky;
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    const/4 v1, 0x7
-
-    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zza(ILandroid/os/Parcel;)Landroid/os/Parcel;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/google/android/gms/internal/zzkz;->zzh(Landroid/os/IBinder;)Lcom/google/android/gms/internal/zzky;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    return-object v1
-.end method
-
-.method public final performClick(Ljava/lang/String;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    const/4 v1, 0x5
-
-    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zzb(ILandroid/os/Parcel;)V
-
-    return-void
-.end method
-
-.method public final recordImpression()V
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    const/4 v1, 0x6
-
-    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zzb(ILandroid/os/Parcel;)V
-
-    return-void
-.end method
-
-.method public final zzao(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zza(ILandroid/os/Parcel;)Landroid/os/Parcel;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    return-object v1
-.end method
-
-.method public final zzap(Ljava/lang/String;)Lcom/google/android/gms/internal/zzpc;
-    .locals 4
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    const/4 v1, 0x2
-
-    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zza(ILandroid/os/Parcel;)Landroid/os/Parcel;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
-
-    move-result-object v2
-
-    if-nez v2, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
     return-object v0
+.end method
+
+.method public getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/content/pm/PackageManager$NameNotFoundException;
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzpv;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public zzg(ILjava/lang/String;)Z
+    .locals 5
+    .annotation build Landroid/annotation/TargetApi;
+        value = 0x13
+    .end annotation
+
+    const/4 v2, 0x1
+
+    const/4 v1, 0x0
+
+    invoke-static {}, Lcom/google/android/gms/common/util/zzs;->zzve()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzpv;->mContext:Landroid/content/Context;
+
+    const-string v3, "appops"
+
+    invoke-virtual {v0, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/AppOpsManager;
+
+    invoke-virtual {v0, p1, p2}, Landroid/app/AppOpsManager;->checkPackage(ILjava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move v1, v2
 
     :cond_0
-    const-string v0, "com.google.android.gms.ads.internal.formats.client.INativeAdImage"
-
-    invoke-interface {v2, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
-
-    move-result-object v0
-
-    instance-of v3, v0, Lcom/google/android/gms/internal/zzpc;
-
-    if-eqz v3, :cond_1
-
-    check-cast v0, Lcom/google/android/gms/internal/zzpc;
-
-    goto :goto_0
+    :goto_0
+    return v1
 
     :cond_1
-    new-instance v0, Lcom/google/android/gms/internal/zzpe;
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzpv;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, v2}, Lcom/google/android/gms/internal/zzpe;-><init>(Landroid/os/IBinder;)V
+    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/content/pm/PackageManager;->getPackagesForUid(I)[Ljava/lang/String;
+
+    move-result-object v3
+
+    if-eqz p2, :cond_0
+
+    if-eqz v3, :cond_0
+
+    move v0, v1
+
+    :goto_1
+    array-length v4, v3
+
+    if-ge v0, v4, :cond_0
+
+    aget-object v4, v3, v0
+
+    invoke-virtual {p2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    move v1, v2
 
     goto :goto_0
-.end method
 
-.method public final zzj(Lcom/google/android/gms/dynamic/IObjectWrapper;)Z
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
+    :cond_2
+    add-int/lit8 v0, v0, 0x1
 
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
+    goto :goto_1
 
-    move-result-object v0
+    :catch_0
+    move-exception v0
 
-    invoke-static {v0, p1}, Lcom/google/android/gms/internal/zzeg;->zza(Landroid/os/Parcel;Landroid/os/IInterface;)V
-
-    const/16 v1, 0xa
-
-    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zza(ILandroid/os/Parcel;)Landroid/os/Parcel;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/zzeg;->zza(Landroid/os/Parcel;)Z
-
-    move-result v1
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    return v1
-.end method
-
-.method public final zzjj()Lcom/google/android/gms/dynamic/IObjectWrapper;
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    const/16 v1, 0xb
-
-    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zza(ILandroid/os/Parcel;)Landroid/os/Parcel;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/google/android/gms/dynamic/IObjectWrapper$zza;->zzao(Landroid/os/IBinder;)Lcom/google/android/gms/dynamic/IObjectWrapper;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    return-object v1
-.end method
-
-.method public final zzjp()Lcom/google/android/gms/dynamic/IObjectWrapper;
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    const/16 v1, 0x9
-
-    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zza(ILandroid/os/Parcel;)Landroid/os/Parcel;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/google/android/gms/dynamic/IObjectWrapper$zza;->zzao(Landroid/os/IBinder;)Lcom/google/android/gms/dynamic/IObjectWrapper;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    return-object v1
+    goto :goto_0
 .end method

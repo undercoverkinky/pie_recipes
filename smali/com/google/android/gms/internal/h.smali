@@ -1,74 +1,88 @@
 .class final Lcom/google/android/gms/internal/h;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Lcom/google/android/gms/internal/zzakc;
-
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
+.annotation runtime Lcom/google/android/gms/internal/zzig;
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        "Ljava/lang/Object;",
-        "Lcom/google/android/gms/internal/zzakc",
-        "<",
-        "Lcom/google/android/gms/ads/internal/js/zzai;",
-        ">;"
+        Lcom/google/android/gms/internal/h$a;
     }
 .end annotation
 
 
 # instance fields
-.field private synthetic a:Lcom/google/android/gms/internal/g;
+.field private final a:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/google/android/gms/internal/h$a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/gms/internal/g;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/google/android/gms/internal/h;->a:Lcom/google/android/gms/internal/g;
+.method constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/LinkedList;
+
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/h;->a:Ljava/util/List;
 
     return-void
 .end method
 
+.method static synthetic a(Lcom/google/android/gms/internal/h;)Ljava/util/List;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/h;->a:Ljava/util/List;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final synthetic zzc(Ljava/lang/Object;)V
-    .locals 2
+.method final a(Lcom/google/android/gms/internal/i;)V
+    .locals 4
 
-    check-cast p1, Lcom/google/android/gms/ads/internal/js/zzai;
+    sget-object v1, Lcom/google/android/gms/internal/zzka;->zzQu:Landroid/os/Handler;
 
-    :try_start_0
-    const-string v0, "AFMA_getAdapterLessMediationAd"
+    iget-object v0, p0, Lcom/google/android/gms/internal/h;->a:Ljava/util/List;
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/h;->a:Lcom/google/android/gms/internal/g;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    iget-object v1, v1, Lcom/google/android/gms/internal/g;->a:Lorg/json/JSONObject;
-
-    invoke-interface {p1, v0, v1}, Lcom/google/android/gms/ads/internal/js/zzai;->zza(Ljava/lang/String;Lorg/json/JSONObject;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object v2
 
     :goto_0
-    return-void
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    :catch_0
-    move-exception v0
+    move-result v0
 
-    const-string v1, "Error requesting an ad url"
+    if-eqz v0, :cond_0
 
-    invoke-static {v1, v0}, Lcom/google/android/gms/internal/zzafx;->zzb(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzabf;->zzog()Lcom/google/android/gms/internal/zzrx;
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/h;->a:Lcom/google/android/gms/internal/g;
+    check-cast v0, Lcom/google/android/gms/internal/h$a;
 
-    iget-object v1, v1, Lcom/google/android/gms/internal/g;->b:Ljava/lang/String;
+    new-instance v3, Lcom/google/android/gms/internal/h$7;
 
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/internal/zzrx;->zzat(Ljava/lang/String;)V
+    invoke-direct {v3, p0, v0, p1}, Lcom/google/android/gms/internal/h$7;-><init>(Lcom/google/android/gms/internal/h;Lcom/google/android/gms/internal/h$a;Lcom/google/android/gms/internal/i;)V
+
+    invoke-virtual {v1, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
+
+    :cond_0
+    return-void
 .end method

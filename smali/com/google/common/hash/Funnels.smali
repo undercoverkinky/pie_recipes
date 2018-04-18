@@ -25,7 +25,7 @@
     .end annotation
 
     .prologue
-    .line 62
+    .line 63
     sget-object v0, Lcom/google/common/hash/Funnels$UnencodedCharsFunnel;->INSTANCE:Lcom/google/common/hash/Funnels$UnencodedCharsFunnel;
 
     return-object v0

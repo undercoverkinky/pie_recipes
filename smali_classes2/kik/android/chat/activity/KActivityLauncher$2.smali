@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/activity/KActivityLauncher$2;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Ljava/lang/Boolean;",
         ">;"
@@ -36,14 +36,14 @@
     .locals 0
 
     .prologue
-    .line 328
+    .line 308
     iput-object p1, p0, Lkik/android/chat/activity/KActivityLauncher$2;->a:Landroid/content/Context;
 
     iput-object p2, p0, Lkik/android/chat/activity/KActivityLauncher$2;->b:Landroid/content/Intent;
 
     iput-object p3, p0, Lkik/android/chat/activity/KActivityLauncher$2;->c:Lcom/kik/events/Promise;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -54,17 +54,17 @@
     .locals 2
 
     .prologue
-    .line 328
+    .line 308
     check-cast p1, Ljava/lang/Boolean;
 
-    .line 1332
+    .line 1312
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1333
+    .line 1313
     iget-object v0, p0, Lkik/android/chat/activity/KActivityLauncher$2;->a:Landroid/content/Context;
 
     iget-object v1, p0, Lkik/android/chat/activity/KActivityLauncher$2;->b:Landroid/content/Intent;
@@ -74,7 +74,7 @@
     :goto_0
     return-void
 
-    .line 1336
+    .line 1316
     :cond_0
     iget-object v0, p0, Lkik/android/chat/activity/KActivityLauncher$2;->c:Lcom/kik/events/Promise;
 

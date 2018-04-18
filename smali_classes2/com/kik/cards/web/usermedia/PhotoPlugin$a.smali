@@ -134,7 +134,7 @@
     :cond_3
     iget-object v0, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$a;->b:Ljava/lang/String;
 
-    invoke-static {v0}, Lkik/core/net/messageExtensions/a;->a(Ljava/lang/String;)Z
+    invoke-static {v0}, Lkik/core/net/d/a;->a(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -159,7 +159,7 @@
 
     .line 201
     :goto_1
-    invoke-static {v0}, Lcom/kik/util/cp;->c(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/kik/util/bl;->c(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -207,7 +207,7 @@
     .line 211
     iget-object v2, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$a;->b:Ljava/lang/String;
 
-    invoke-static {v2}, Lkik/core/util/h;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lkik/core/util/j;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -247,7 +247,7 @@
 
     iget-object v2, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$a;->a:Ljava/io/File;
 
-    invoke-static {v0, v2}, Lkik/android/widget/ce;->a(Landroid/content/Context;Ljava/io/File;)V
+    invoke-static {v0, v2}, Lkik/android/widget/ck;->a(Landroid/content/Context;Ljava/io/File;)V
 
     .line 242
     :cond_5
@@ -357,7 +357,7 @@
 
     iget-object v5, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$a;->c:Ljava/lang/String;
 
-    invoke-static {v4, v5}, Lcom/kik/cards/web/s;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v5}, Lcom/kik/cards/web/r;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -365,7 +365,7 @@
     if-eqz v4, :cond_9
 
     .line 229
-    invoke-static {v4, v3, v2, v0}, Lcom/kik/util/cp;->a(Ljava/lang/String;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v4, v3, v2, v0}, Lcom/kik/util/bl;->a(Ljava/lang/String;Ljava/io/File;Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 

@@ -16,7 +16,6 @@
         Landroid/support/v7/appcompat/R$dimen;,
         Landroid/support/v7/appcompat/R$color;,
         Landroid/support/v7/appcompat/R$bool;,
-        Landroid/support/v7/appcompat/R$attr;,
-        Landroid/support/v7/appcompat/R$anim;
+        Landroid/support/v7/appcompat/R$attr;
     }
 .end annotation

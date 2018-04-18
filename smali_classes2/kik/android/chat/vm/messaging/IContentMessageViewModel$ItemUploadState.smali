@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/android/chat/vm/bs;
+.implements Lkik/android/chat/vm/ad;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "<",
         "Lkik/android/chat/vm/messaging/IContentMessageViewModel$ItemUploadState;",
         ">;",
-        "Lkik/android/chat/vm/bs;"
+        "Lkik/android/chat/vm/ad;"
     }
 .end annotation
 
@@ -62,7 +62,7 @@
 
     const/4 v4, 0x0
 
-    .line 13
+    .line 12
     new-instance v0, Lkik/android/chat/vm/messaging/IContentMessageViewModel$ItemUploadState;
 
     const-string v1, "Error"
@@ -115,7 +115,7 @@
 
     sput-object v0, Lkik/android/chat/vm/messaging/IContentMessageViewModel$ItemUploadState;->Complete:Lkik/android/chat/vm/messaging/IContentMessageViewModel$ItemUploadState;
 
-    .line 12
+    .line 11
     const/4 v0, 0x6
 
     new-array v0, v0, [Lkik/android/chat/vm/messaging/IContentMessageViewModel$ItemUploadState;
@@ -160,13 +160,13 @@
     .end annotation
 
     .prologue
-    .line 18
+    .line 17
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 19
+    .line 18
     iput p3, p0, Lkik/android/chat/vm/messaging/IContentMessageViewModel$ItemUploadState;->_value:I
 
-    .line 20
+    .line 19
     return-void
 .end method
 
@@ -174,7 +174,7 @@
     .locals 1
 
     .prologue
-    .line 12
+    .line 11
     const-class v0, Lkik/android/chat/vm/messaging/IContentMessageViewModel$ItemUploadState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -190,7 +190,7 @@
     .locals 1
 
     .prologue
-    .line 12
+    .line 11
     sget-object v0, Lkik/android/chat/vm/messaging/IContentMessageViewModel$ItemUploadState;->$VALUES:[Lkik/android/chat/vm/messaging/IContentMessageViewModel$ItemUploadState;
 
     invoke-virtual {v0}, [Lkik/android/chat/vm/messaging/IContentMessageViewModel$ItemUploadState;->clone()Ljava/lang/Object;
@@ -208,7 +208,7 @@
     .locals 1
 
     .prologue
-    .line 25
+    .line 24
     iget v0, p0, Lkik/android/chat/vm/messaging/IContentMessageViewModel$ItemUploadState;->_value:I
 
     return v0

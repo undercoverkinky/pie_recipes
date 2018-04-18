@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 620
+    .line 552
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,13 +41,15 @@
 
 # virtual methods
 .method public final createFromParcel(Landroid/os/Parcel;)Landroid/support/v4/media/MediaMetadataCompat;
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 623
+    .line 555
     new-instance v0, Landroid/support/v4/media/MediaMetadataCompat;
 
-    invoke-direct {v0, p1}, Landroid/support/v4/media/MediaMetadataCompat;-><init>(Landroid/os/Parcel;)V
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Landroid/support/v4/media/MediaMetadataCompat;-><init>(Landroid/os/Parcel;Landroid/support/v4/media/MediaMetadataCompat$1;)V
 
     return-object v0
 .end method
@@ -56,7 +58,7 @@
     .locals 1
 
     .prologue
-    .line 620
+    .line 552
     invoke-virtual {p0, p1}, Landroid/support/v4/media/MediaMetadataCompat$1;->createFromParcel(Landroid/os/Parcel;)Landroid/support/v4/media/MediaMetadataCompat;
 
     move-result-object v0
@@ -68,7 +70,7 @@
     .locals 1
 
     .prologue
-    .line 628
+    .line 560
     new-array v0, p1, [Landroid/support/v4/media/MediaMetadataCompat;
 
     return-object v0
@@ -78,7 +80,7 @@
     .locals 1
 
     .prologue
-    .line 620
+    .line 552
     invoke-virtual {p0, p1}, Landroid/support/v4/media/MediaMetadataCompat$1;->newArray(I)[Landroid/support/v4/media/MediaMetadataCompat;
 
     move-result-object v0

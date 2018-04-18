@@ -37,7 +37,7 @@
         value = {
             "Ljava/util/List",
             "<",
-            "Lkik/core/datatypes/l;",
+            "Lkik/core/datatypes/o;",
             ">;"
         }
     .end annotation
@@ -48,7 +48,7 @@
         value = {
             "Lcom/kik/events/Promise",
             "<",
-            "Lkik/core/datatypes/l;",
+            "Lkik/core/datatypes/o;",
             ">;"
         }
     .end annotation
@@ -71,11 +71,11 @@
             ">;",
             "Ljava/util/List",
             "<",
-            "Lkik/core/datatypes/l;",
+            "Lkik/core/datatypes/o;",
             ">;",
             "Lcom/kik/events/Promise",
             "<",
-            "Lkik/core/datatypes/l;",
+            "Lkik/core/datatypes/o;",
             ">;",
             "Ljava/lang/String;",
             ")V"
@@ -96,12 +96,12 @@
     iput-object p3, p0, Lkik/android/chat/vm/chats/search/ChatsSearchResultsViewModel$ChatSearchResults;->c:Lcom/kik/events/Promise;
 
     .line 64
-    invoke-static {p1}, Lkik/core/util/l;->b(Ljava/util/List;)I
+    invoke-static {p1}, Lkik/core/util/n;->b(Ljava/util/List;)I
 
     move-result v0
 
     .line 65
-    invoke-static {p2}, Lkik/core/util/l;->b(Ljava/util/List;)I
+    invoke-static {p2}, Lkik/core/util/n;->b(Ljava/util/List;)I
 
     move-result v1
 
@@ -145,24 +145,24 @@
     .locals 3
 
     .prologue
-    .line 79
+    .line 78
     iget-object v0, p0, Lkik/android/chat/vm/chats/search/ChatsSearchResultsViewModel$ChatSearchResults;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 80
+    .line 79
     if-ge p1, v0, :cond_0
 
-    .line 81
+    .line 80
     sget-object v0, Lkik/android/chat/vm/chats/search/ChatsSearchResultsViewModel$ChatSearchResults$ResultType;->OpenChat:Lkik/android/chat/vm/chats/search/ChatsSearchResultsViewModel$ChatSearchResults$ResultType;
 
-    .line 88
+    .line 87
     :goto_0
     return-object v0
 
-    .line 83
+    .line 82
     :cond_0
     iget-object v1, p0, Lkik/android/chat/vm/chats/search/ChatsSearchResultsViewModel$ChatSearchResults;->b:Ljava/util/List;
 
@@ -170,17 +170,17 @@
 
     move-result v1
 
-    .line 84
+    .line 83
     add-int v2, v0, v1
 
     if-ge p1, v2, :cond_1
 
-    .line 85
+    .line 84
     sget-object v0, Lkik/android/chat/vm/chats/search/ChatsSearchResultsViewModel$ChatSearchResults$ResultType;->RosterMatch:Lkik/android/chat/vm/chats/search/ChatsSearchResultsViewModel$ChatSearchResults$ResultType;
 
     goto :goto_0
 
-    .line 87
+    .line 86
     :cond_1
     add-int/2addr v0, v1
 
@@ -190,12 +190,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 88
+    .line 87
     sget-object v0, Lkik/android/chat/vm/chats/search/ChatsSearchResultsViewModel$ChatSearchResults$ResultType;->UsernameMatch:Lkik/android/chat/vm/chats/search/ChatsSearchResultsViewModel$ChatSearchResults$ResultType;
 
     goto :goto_0
 
-    .line 91
+    .line 90
     :cond_2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 

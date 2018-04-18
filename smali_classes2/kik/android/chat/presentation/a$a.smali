@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract f()V
+.method public abstract g()V
 .end method

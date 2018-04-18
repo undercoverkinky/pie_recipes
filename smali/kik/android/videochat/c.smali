@@ -4,12 +4,12 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/app/Activity;Lkik/core/datatypes/l;)Lcom/kik/events/Promise;
+.method public abstract a(Landroid/app/Activity;Lkik/core/datatypes/o;)Lcom/kik/events/Promise;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/app/Activity;",
-            "Lkik/core/datatypes/l;",
+            "Lkik/core/datatypes/o;",
             ")",
             "Lcom/kik/events/Promise",
             "<",
@@ -19,15 +19,15 @@
     .end annotation
 .end method
 
-.method public abstract a(Lkik/core/datatypes/l;)Ljava/util/List;
+.method public abstract a(Lkik/core/datatypes/o;)Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkik/core/datatypes/l;",
+            "Lkik/core/datatypes/o;",
             ")",
             "Ljava/util/List",
             "<",
-            "Lkik/core/datatypes/l;",
+            "Lkik/core/datatypes/o;",
             ">;"
         }
     .end annotation
@@ -42,7 +42,7 @@
             "(",
             "Lcom/kik/events/c",
             "<",
-            "Lkik/core/z;",
+            "Lkik/core/x;",
             ">;)V"
         }
     .end annotation
@@ -51,10 +51,10 @@
 .method public abstract a(Lcom/rounds/kik/conference/LeaveReason;)V
 .end method
 
-.method public abstract a(Lkik/core/datatypes/l;JILkik/android/videochat/i;)V
+.method public abstract a(Lkik/core/datatypes/o;JILkik/android/videochat/i;)V
 .end method
 
-.method public abstract a(Lkik/core/datatypes/l;Z)V
+.method public abstract a(Lkik/core/datatypes/o;Z)V
 .end method
 
 .method public abstract a([Ljava/lang/String;)V
@@ -83,19 +83,19 @@
             "()",
             "Lcom/kik/events/c",
             "<",
-            "Lkik/core/datatypes/l;",
+            "Lkik/core/datatypes/o;",
             ">;"
         }
     .end annotation
 .end method
 
-.method public abstract b(Lkik/core/datatypes/l;)Z
+.method public abstract b(Lkik/core/datatypes/o;)Z
 .end method
 
 .method public abstract c()Z
 .end method
 
-.method public abstract c(Lkik/core/datatypes/l;)Z
+.method public abstract c(Lkik/core/datatypes/o;)Z
 .end method
 
 .method public abstract d()Ljava/util/List;
@@ -104,13 +104,13 @@
             "()",
             "Ljava/util/List",
             "<",
-            "Lkik/core/datatypes/l;",
+            "Lkik/core/datatypes/o;",
             ">;"
         }
     .end annotation
 .end method
 
-.method public abstract d(Lkik/core/datatypes/l;)V
+.method public abstract d(Lkik/core/datatypes/o;)V
 .end method
 
 .method public abstract e()Lcom/kik/events/c;
@@ -134,11 +134,8 @@
             "()",
             "Lcom/rounds/kik/analytics/IReporterProxy",
             "<",
-            "Lkik/core/datatypes/l;",
+            "Lkik/core/datatypes/o;",
             ">;"
         }
     .end annotation
-.end method
-
-.method public abstract h()Z
 .end method

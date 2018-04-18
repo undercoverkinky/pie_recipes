@@ -32,7 +32,7 @@
     iput-object v0, p0, Lcom/kik/cache/SoftwareContactImageView;->c:Landroid/graphics/Paint;
 
     .line 35
-    invoke-direct {p0}, Lcom/kik/cache/SoftwareContactImageView;->h()V
+    invoke-direct {p0}, Lcom/kik/cache/SoftwareContactImageView;->i()V
 
     .line 36
     return-void
@@ -60,7 +60,7 @@
     iput-object v0, p0, Lcom/kik/cache/SoftwareContactImageView;->c:Landroid/graphics/Paint;
 
     .line 41
-    invoke-direct {p0}, Lcom/kik/cache/SoftwareContactImageView;->h()V
+    invoke-direct {p0}, Lcom/kik/cache/SoftwareContactImageView;->i()V
 
     .line 42
     return-void
@@ -88,13 +88,13 @@
     iput-object v0, p0, Lcom/kik/cache/SoftwareContactImageView;->c:Landroid/graphics/Paint;
 
     .line 47
-    invoke-direct {p0}, Lcom/kik/cache/SoftwareContactImageView;->h()V
+    invoke-direct {p0}, Lcom/kik/cache/SoftwareContactImageView;->i()V
 
     .line 48
     return-void
 .end method
 
-.method private h()V
+.method private i()V
     .locals 2
 
     .prologue
@@ -119,7 +119,7 @@
 
 
 # virtual methods
-.method protected final a(Landroid/graphics/Bitmap;Ljava/lang/String;)Lkik/android/widget/bb;
+.method protected a(Landroid/graphics/Bitmap;Ljava/lang/String;)Lkik/android/widget/ak;
     .locals 6
 
     .prologue
@@ -140,7 +140,7 @@
 
     .line 63
     :cond_0
-    invoke-super {p0, p1, p2}, Lcom/kik/cache/ContactImageView;->a(Landroid/graphics/Bitmap;Ljava/lang/String;)Lkik/android/widget/bb;
+    invoke-super {p0, p1, p2}, Lcom/kik/cache/ContactImageView;->a(Landroid/graphics/Bitmap;Ljava/lang/String;)Lkik/android/widget/ak;
 
     move-result-object v0
 
@@ -221,7 +221,7 @@
     invoke-virtual {v1, v2, v3, v4, v5}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
     .line 71
-    invoke-super {p0, v0, p2}, Lcom/kik/cache/ContactImageView;->a(Landroid/graphics/Bitmap;Ljava/lang/String;)Lkik/android/widget/bb;
+    invoke-super {p0, v0, p2}, Lcom/kik/cache/ContactImageView;->a(Landroid/graphics/Bitmap;Ljava/lang/String;)Lkik/android/widget/ak;
     :try_end_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -229,11 +229,14 @@
 
     goto :goto_0
 
-    .line 75
+    .line 74
     :catch_0
     move-exception v0
 
-    invoke-super {p0, p1, p2}, Lcom/kik/cache/ContactImageView;->a(Landroid/graphics/Bitmap;Ljava/lang/String;)Lkik/android/widget/bb;
+    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
+
+    .line 75
+    invoke-super {p0, p1, p2}, Lcom/kik/cache/ContactImageView;->a(Landroid/graphics/Bitmap;Ljava/lang/String;)Lkik/android/widget/ak;
 
     move-result-object v0
 

@@ -8,13 +8,13 @@
 
 
 # instance fields
-.field private a:Lcom/android/a/a/a;
+.field private a:Lcom/android/b/a/a;
 
 .field private b:Landroid/content/Context;
 
 .field private c:Lkik/core/interfaces/ICommunication;
 
-.field private d:Lcom/kik/events/m;
+.field private d:Lcom/kik/events/n;
 
 .field private e:Lcom/kik/events/d;
 
@@ -22,7 +22,7 @@
 
 .field private g:Z
 
-.field private h:Lcom/kik/events/o;
+.field private h:Lcom/kik/events/p;
 
 .field private i:Lkik/core/interfaces/ad;
 
@@ -51,11 +51,11 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 46
-    new-instance v0, Lcom/kik/events/m;
+    new-instance v0, Lcom/kik/events/n;
 
-    invoke-direct {v0}, Lcom/kik/events/m;-><init>()V
+    invoke-direct {v0}, Lcom/kik/events/n;-><init>()V
 
-    iput-object v0, p0, Lcom/kik/cards/web/iap/b;->d:Lcom/kik/events/m;
+    iput-object v0, p0, Lcom/kik/cards/web/iap/b;->d:Lcom/kik/events/n;
 
     .line 47
     new-instance v0, Lcom/kik/events/d;
@@ -88,12 +88,12 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/kik/cards/web/iap/b;Lcom/android/a/a/a;)Lcom/android/a/a/a;
+.method static synthetic a(Lcom/kik/cards/web/iap/b;Lcom/android/b/a/a;)Lcom/android/b/a/a;
     .locals 0
 
     .prologue
     .line 40
-    iput-object p1, p0, Lcom/kik/cards/web/iap/b;->a:Lcom/android/a/a/a;
+    iput-object p1, p0, Lcom/kik/cards/web/iap/b;->a:Lcom/android/b/a/a;
 
     return-object p1
 .end method
@@ -167,19 +167,19 @@
     .prologue
     .line 40
     .line 2105
-    iget-object v0, p0, Lcom/kik/cards/web/iap/b;->h:Lcom/kik/events/o;
+    iget-object v0, p0, Lcom/kik/cards/web/iap/b;->h:Lcom/kik/events/p;
 
     if-eqz v0, :cond_0
 
     .line 2106
-    iget-object v0, p0, Lcom/kik/cards/web/iap/b;->h:Lcom/kik/events/o;
+    iget-object v0, p0, Lcom/kik/cards/web/iap/b;->h:Lcom/kik/events/p;
 
-    invoke-virtual {v0}, Lcom/kik/events/o;->c()V
+    invoke-virtual {v0}, Lcom/kik/events/p;->c()V
 
     .line 2107
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/kik/cards/web/iap/b;->h:Lcom/kik/events/o;
+    iput-object v0, p0, Lcom/kik/cards/web/iap/b;->h:Lcom/kik/events/p;
 
     .line 40
     :cond_0
@@ -198,12 +198,12 @@
     return v0
 .end method
 
-.method static synthetic f(Lcom/kik/cards/web/iap/b;)Lcom/android/a/a/a;
+.method static synthetic f(Lcom/kik/cards/web/iap/b;)Lcom/android/b/a/a;
     .locals 1
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/kik/cards/web/iap/b;->a:Lcom/android/a/a/a;
+    iget-object v0, p0, Lcom/kik/cards/web/iap/b;->a:Lcom/android/b/a/a;
 
     return-object v0
 .end method
@@ -224,17 +224,17 @@
     iput-object p3, p0, Lcom/kik/cards/web/iap/b;->i:Lkik/core/interfaces/ad;
 
     .line 117
-    invoke-virtual {p0}, Lcom/kik/cards/web/iap/b;->b()Lcom/kik/events/o;
+    invoke-virtual {p0}, Lcom/kik/cards/web/iap/b;->b()Lcom/kik/events/p;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/kik/cards/web/iap/b;->h:Lcom/kik/events/o;
+    iput-object v0, p0, Lcom/kik/cards/web/iap/b;->h:Lcom/kik/events/p;
 
     .line 118
     return-void
 .end method
 
-.method public final b()Lcom/kik/events/o;
+.method public final b()Lcom/kik/events/p;
     .locals 8
 
     .prologue
@@ -283,9 +283,9 @@
     .line 1142
     iget-object v0, p0, Lcom/kik/cards/web/iap/b;->e:Lcom/kik/events/d;
 
-    iget-object v1, p0, Lcom/kik/cards/web/iap/b;->d:Lcom/kik/events/m;
+    iget-object v1, p0, Lcom/kik/cards/web/iap/b;->d:Lcom/kik/events/n;
 
-    invoke-virtual {v1}, Lcom/kik/events/m;->d()Lcom/kik/events/c;
+    invoke-virtual {v1}, Lcom/kik/events/n;->d()Lcom/kik/events/c;
 
     move-result-object v1
 
@@ -297,9 +297,9 @@
 
     .line 134
     :cond_1
-    iget-object v0, p0, Lcom/kik/cards/web/iap/b;->d:Lcom/kik/events/m;
+    iget-object v0, p0, Lcom/kik/cards/web/iap/b;->d:Lcom/kik/events/n;
 
-    invoke-virtual {v0}, Lcom/kik/events/m;->f()Lcom/kik/events/o;
+    invoke-virtual {v0}, Lcom/kik/events/n;->f()Lcom/kik/events/p;
 
     move-result-object v0
 
@@ -375,12 +375,12 @@
     goto :goto_0
 .end method
 
-.method public final c()Lcom/android/a/a/a;
+.method public final c()Lcom/android/b/a/a;
     .locals 1
 
     .prologue
     .line 155
-    iget-object v0, p0, Lcom/kik/cards/web/iap/b;->a:Lcom/android/a/a/a;
+    iget-object v0, p0, Lcom/kik/cards/web/iap/b;->a:Lcom/android/b/a/a;
 
     return-object v0
 .end method
@@ -401,7 +401,7 @@
 
     .line 186
     :cond_1
-    iget-object v0, p0, Lcom/kik/cards/web/iap/b;->a:Lcom/android/a/a/a;
+    iget-object v0, p0, Lcom/kik/cards/web/iap/b;->a:Lcom/android/b/a/a;
 
     if-eqz v0, :cond_0
 

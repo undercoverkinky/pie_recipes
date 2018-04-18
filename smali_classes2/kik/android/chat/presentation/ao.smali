@@ -1,45 +1,35 @@
-.class final synthetic Lkik/android/chat/presentation/ao;
+.class public interface abstract Lkik/android/chat/presentation/ao;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
-.implements Landroid/widget/TextView$OnEditorActionListener;
+.implements Lkik/android/chat/presentation/ca;
 
 
-# instance fields
-.field private final a:Lkik/android/chat/presentation/MediaTrayPresenterImpl;
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lkik/android/chat/presentation/ao$a;
+    }
+.end annotation
 
-
-# direct methods
-.method private constructor <init>(Lkik/android/chat/presentation/MediaTrayPresenterImpl;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lkik/android/chat/presentation/ao;->a:Lkik/android/chat/presentation/MediaTrayPresenterImpl;
-
-    return-void
-.end method
-
-.method public static a(Lkik/android/chat/presentation/MediaTrayPresenterImpl;)Landroid/widget/TextView$OnEditorActionListener;
-    .locals 1
-
-    new-instance v0, Lkik/android/chat/presentation/ao;
-
-    invoke-direct {v0, p0}, Lkik/android/chat/presentation/ao;-><init>(Lkik/android/chat/presentation/MediaTrayPresenterImpl;)V
-
-    return-object v0
-.end method
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lkik/android/chat/presentation/ca",
+        "<",
+        "Lkik/android/chat/view/aa;",
+        ">;"
+    }
+.end annotation
 
 
 # virtual methods
-.method public final onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
-    .locals 1
+.method public abstract a(Lkik/android/chat/presentation/ao$a;)V
+.end method
 
-    iget-object v0, p0, Lkik/android/chat/presentation/ao;->a:Lkik/android/chat/presentation/MediaTrayPresenterImpl;
+.method public abstract d()V
+.end method
 
-    invoke-static {v0, p2, p3}, Lkik/android/chat/presentation/MediaTrayPresenterImpl;->a(Lkik/android/chat/presentation/MediaTrayPresenterImpl;ILandroid/view/KeyEvent;)Z
-
-    move-result v0
-
-    return v0
+.method public abstract e()V
 .end method

@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 24
+    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +44,7 @@
     .locals 1
 
     .prologue
-    .line 24
+    .line 17
     check-cast p1, Ljavax/annotation/Nonnull;
 
     invoke-virtual {p0, p1, p2}, Ljavax/annotation/Nonnull$Checker;->forConstantValue(Ljavax/annotation/Nonnull;Ljava/lang/Object;)Ljavax/annotation/meta/When;
@@ -58,13 +58,13 @@
     .locals 1
 
     .prologue
-    .line 27
+    .line 21
     if-nez p2, :cond_0
 
-    .line 28
+    .line 22
     sget-object v0, Ljavax/annotation/meta/When;->NEVER:Ljavax/annotation/meta/When;
 
-    .line 29
+    .line 23
     :goto_0
     return-object v0
 

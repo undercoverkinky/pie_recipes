@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/rounds/kik/view/VideoView;->hide(Z)V
+    value = Lcom/rounds/kik/view/VideoView;-><init>(Landroid/app/Activity;Lcom/rounds/kik/view/VideoView$IAnalyticsReporter;Lcom/rounds/kik/VideoController$VideoViewListener;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 642
+    .line 109
     iput-object p1, p0, Lcom/rounds/kik/view/VideoView$2;->a:Lcom/rounds/kik/view/VideoView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,41 +36,37 @@
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
+.method public final onGlobalLayout()V
+    .locals 1
+    .annotation build Landroid/annotation/TargetApi;
+        value = 0x10
+    .end annotation
 
     .prologue
-    .line 660
-    return-void
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 2
-
-    .prologue
-    .line 653
+    .line 114
     iget-object v0, p0, Lcom/rounds/kik/view/VideoView$2;->a:Lcom/rounds/kik/view/VideoView;
 
-    const/4 v1, 0x4
+    invoke-virtual {v0}, Lcom/rounds/kik/view/VideoView;->getHeight()I
 
-    invoke-virtual {v0, v1}, Lcom/rounds/kik/view/VideoView;->setVisibility(I)V
+    move-result v0
 
-    .line 654
-    return-void
-.end method
+    if-lez v0, :cond_0
 
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+    .line 115
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView$2;->a:Lcom/rounds/kik/view/VideoView;
 
-    .prologue
-    .line 666
-    return-void
-.end method
+    invoke-virtual {v0}, Lcom/rounds/kik/view/VideoView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
+    move-result-object v0
 
-    .prologue
-    .line 648
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+
+    .line 116
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView$2;->a:Lcom/rounds/kik/view/VideoView;
+
+    invoke-static {v0}, Lcom/rounds/kik/view/VideoView;->access$100(Lcom/rounds/kik/view/VideoView;)V
+
+    .line 118
+    :cond_0
     return-void
 .end method

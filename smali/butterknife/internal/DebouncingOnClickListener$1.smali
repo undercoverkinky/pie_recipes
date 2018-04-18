@@ -37,7 +37,7 @@
     .line 14
     const/4 v0, 0x1
 
-    sput-boolean v0, Lbutterknife/internal/DebouncingOnClickListener;->enabled:Z
+    invoke-static {v0}, Lbutterknife/internal/DebouncingOnClickListener;->access$002(Z)Z
 
     .line 15
     return-void

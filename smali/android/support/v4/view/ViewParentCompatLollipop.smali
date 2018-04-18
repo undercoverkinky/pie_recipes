@@ -3,12 +3,6 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x15
-.end annotation
-
-
 # static fields
 .field private static final TAG:Ljava/lang/String; = "ViewParentCompat"
 
@@ -18,7 +12,7 @@
     .locals 0
 
     .prologue
-    .line 28
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,7 +22,7 @@
     .locals 4
 
     .prologue
-    .line 84
+    .line 80
     :try_start_0
     invoke-interface {p0, p1, p2, p3, p4}, Landroid/view/ViewParent;->onNestedFling(Landroid/view/View;FFZ)Z
     :try_end_0
@@ -36,15 +30,15 @@
 
     move-result v0
 
-    .line 88
+    .line 84
     :goto_0
     return v0
 
-    .line 85
+    .line 81
     :catch_0
     move-exception v0
 
-    .line 86
+    .line 82
     const-string v1, "ViewParentCompat"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -69,7 +63,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 88
+    .line 84
     const/4 v0, 0x0
 
     goto :goto_0
@@ -79,7 +73,7 @@
     .locals 4
 
     .prologue
-    .line 95
+    .line 91
     :try_start_0
     invoke-interface {p0, p1, p2, p3}, Landroid/view/ViewParent;->onNestedPreFling(Landroid/view/View;FF)Z
     :try_end_0
@@ -87,15 +81,15 @@
 
     move-result v0
 
-    .line 99
+    .line 95
     :goto_0
     return v0
 
-    .line 96
+    .line 92
     :catch_0
     move-exception v0
 
-    .line 97
+    .line 93
     const-string v1, "ViewParentCompat"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -120,7 +114,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 99
+    .line 95
     const/4 v0, 0x0
 
     goto :goto_0
@@ -130,21 +124,21 @@
     .locals 4
 
     .prologue
-    .line 74
+    .line 70
     :try_start_0
     invoke-interface {p0, p1, p2, p3, p4}, Landroid/view/ViewParent;->onNestedPreScroll(Landroid/view/View;II[I)V
     :try_end_0
     .catch Ljava/lang/AbstractMethodError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 79
+    .line 75
     :goto_0
     return-void
 
-    .line 75
+    .line 71
     :catch_0
     move-exception v0
 
-    .line 76
+    .line 72
     const-string v1, "ViewParentCompat"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -176,21 +170,21 @@
     .locals 4
 
     .prologue
-    .line 64
+    .line 60
     :try_start_0
     invoke-interface/range {p0 .. p5}, Landroid/view/ViewParent;->onNestedScroll(Landroid/view/View;IIII)V
     :try_end_0
     .catch Ljava/lang/AbstractMethodError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 69
+    .line 65
     :goto_0
     return-void
 
-    .line 65
+    .line 61
     :catch_0
     move-exception v0
 
-    .line 66
+    .line 62
     const-string v1, "ViewParentCompat"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -222,21 +216,21 @@
     .locals 4
 
     .prologue
-    .line 45
+    .line 41
     :try_start_0
     invoke-interface {p0, p1, p2, p3}, Landroid/view/ViewParent;->onNestedScrollAccepted(Landroid/view/View;Landroid/view/View;I)V
     :try_end_0
     .catch Ljava/lang/AbstractMethodError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 50
+    .line 46
     :goto_0
     return-void
 
-    .line 46
+    .line 42
     :catch_0
     move-exception v0
 
-    .line 47
+    .line 43
     const-string v1, "ViewParentCompat"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -268,7 +262,7 @@
     .locals 4
 
     .prologue
-    .line 34
+    .line 30
     :try_start_0
     invoke-interface {p0, p1, p2, p3}, Landroid/view/ViewParent;->onStartNestedScroll(Landroid/view/View;Landroid/view/View;I)Z
     :try_end_0
@@ -276,15 +270,15 @@
 
     move-result v0
 
-    .line 38
+    .line 34
     :goto_0
     return v0
 
-    .line 35
+    .line 31
     :catch_0
     move-exception v0
 
-    .line 36
+    .line 32
     const-string v1, "ViewParentCompat"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -309,7 +303,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 38
+    .line 34
     const/4 v0, 0x0
 
     goto :goto_0
@@ -319,21 +313,21 @@
     .locals 4
 
     .prologue
-    .line 54
+    .line 50
     :try_start_0
     invoke-interface {p0, p1}, Landroid/view/ViewParent;->onStopNestedScroll(Landroid/view/View;)V
     :try_end_0
     .catch Ljava/lang/AbstractMethodError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 59
+    .line 55
     :goto_0
     return-void
 
-    .line 55
+    .line 51
     :catch_0
     move-exception v0
 
-    .line 56
+    .line 52
     const-string v1, "ViewParentCompat"
 
     new-instance v2, Ljava/lang/StringBuilder;

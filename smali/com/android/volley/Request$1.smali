@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/volley/Request;->finish(Ljava/lang/String;)V
+    value = Lcom/android/volley/Request;->b(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -51,7 +51,7 @@
     .line 213
     iget-object v0, p0, Lcom/android/volley/Request$1;->c:Lcom/android/volley/Request;
 
-    invoke-static {v0}, Lcom/android/volley/Request;->access$000(Lcom/android/volley/Request;)Lcom/android/volley/k$a;
+    invoke-static {v0}, Lcom/android/volley/Request;->a(Lcom/android/volley/Request;)Lcom/android/volley/l$a;
 
     move-result-object v0
 
@@ -59,12 +59,12 @@
 
     iget-wide v2, p0, Lcom/android/volley/Request$1;->b:J
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/android/volley/k$a;->a(Ljava/lang/String;J)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/volley/l$a;->a(Ljava/lang/String;J)V
 
     .line 214
     iget-object v0, p0, Lcom/android/volley/Request$1;->c:Lcom/android/volley/Request;
 
-    invoke-static {v0}, Lcom/android/volley/Request;->access$000(Lcom/android/volley/Request;)Lcom/android/volley/k$a;
+    invoke-static {v0}, Lcom/android/volley/Request;->a(Lcom/android/volley/Request;)Lcom/android/volley/l$a;
 
     move-result-object v0
 
@@ -72,7 +72,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/android/volley/k$a;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/android/volley/l$a;->a(Ljava/lang/String;)V
 
     .line 215
     return-void

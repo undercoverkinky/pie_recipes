@@ -1,5 +1,5 @@
 .class public final Lkik/android/util/cc;
-.super Lkik/android/util/bs;
+.super Lkik/android/util/ar;
 .source "SourceFile"
 
 
@@ -12,7 +12,7 @@
     .locals 1
 
     .prologue
-    .line 16
+    .line 14
     new-instance v0, Lkik/android/util/cc;
 
     invoke-direct {v0}, Lkik/android/util/cc;-><init>()V
@@ -26,10 +26,10 @@
     .locals 0
 
     .prologue
-    .line 25
-    invoke-direct {p0}, Lkik/android/util/bs;-><init>()V
+    .line 23
+    invoke-direct {p0}, Lkik/android/util/ar;-><init>()V
 
-    .line 26
+    .line 24
     return-void
 .end method
 
@@ -37,7 +37,7 @@
     .locals 1
 
     .prologue
-    .line 20
+    .line 18
     sget-object v0, Lkik/android/util/cc;->a:Lkik/android/util/cc;
 
     return-object v0
@@ -49,10 +49,8 @@
     .locals 1
 
     .prologue
-    .line 31
-    const-class v0, Landroid/text/style/ClickableSpan;
-
-    invoke-static {p1, p2, p3, v0}, Lkik/android/util/cc;->a(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;Ljava/lang/Class;)Z
+    .line 29
+    invoke-static {p1, p2, p3}, Lkik/android/util/ar;->a(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
 
     move-result v0
 

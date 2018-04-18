@@ -1,5 +1,5 @@
-.class public abstract Lio/fabric/sdk/android/services/network/HttpRequest$d;
-.super Lio/fabric/sdk/android/services/network/HttpRequest$e;
+.class public final Lio/fabric/sdk/android/services/network/HttpRequest$d;
+.super Ljava/io/BufferedOutputStream;
 .source "SourceFile"
 
 
@@ -9,44 +9,46 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x40c
+    accessFlags = 0x9
     name = "d"
-.end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<V:",
-        "Ljava/lang/Object;",
-        ">",
-        "Lio/fabric/sdk/android/services/network/HttpRequest$e",
-        "<TV;>;"
-    }
 .end annotation
 
 
 # instance fields
-.field private final a:Ljava/io/Flushable;
+.field private final a:Ljava/nio/charset/CharsetEncoder;
 
 
 # direct methods
-.method protected constructor <init>(Ljava/io/Flushable;)V
-    .locals 0
+.method public constructor <init>(Ljava/io/OutputStream;Ljava/lang/String;I)V
+    .locals 1
 
     .prologue
-    .line 659
-    invoke-direct {p0}, Lio/fabric/sdk/android/services/network/HttpRequest$e;-><init>()V
+    .line 684
+    invoke-direct {p0, p1, p3}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;I)V
 
-    .line 660
-    iput-object p1, p0, Lio/fabric/sdk/android/services/network/HttpRequest$d;->a:Ljava/io/Flushable;
+    .line 686
+    invoke-static {p2}, Lio/fabric/sdk/android/services/network/HttpRequest;->b(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 661
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/nio/charset/Charset;->newEncoder()Ljava/nio/charset/CharsetEncoder;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lio/fabric/sdk/android/services/network/HttpRequest$d;->a:Ljava/nio/charset/CharsetEncoder;
+
+    .line 687
     return-void
 .end method
 
 
 # virtual methods
-.method protected final b()V
-    .locals 1
+.method public final a(Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest$d;
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -54,11 +56,30 @@
     .end annotation
 
     .prologue
-    .line 665
-    iget-object v0, p0, Lio/fabric/sdk/android/services/network/HttpRequest$d;->a:Ljava/io/Flushable;
+    .line 697
+    iget-object v0, p0, Lio/fabric/sdk/android/services/network/HttpRequest$d;->a:Ljava/nio/charset/CharsetEncoder;
 
-    invoke-interface {v0}, Ljava/io/Flushable;->flush()V
+    invoke-static {p1}, Ljava/nio/CharBuffer;->wrap(Ljava/lang/CharSequence;)Ljava/nio/CharBuffer;
 
-    .line 666
-    return-void
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/nio/charset/CharsetEncoder;->encode(Ljava/nio/CharBuffer;)Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    .line 699
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->limit()I
+
+    move-result v0
+
+    invoke-super {p0, v1, v2, v0}, Ljava/io/BufferedOutputStream;->write([BII)V
+
+    .line 701
+    return-object p0
 .end method

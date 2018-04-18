@@ -1,5 +1,5 @@
 .class final Lkik/android/gifs/a/e$1;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Lkik/android/gifs/a/b;",
         ">;"
@@ -39,7 +39,7 @@
 
     iput-object p2, p0, Lkik/android/gifs/a/e$1;->a:Ljava/lang/String;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method

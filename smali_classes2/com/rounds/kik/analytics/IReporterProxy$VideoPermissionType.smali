@@ -44,7 +44,7 @@
 
     const/4 v3, 0x0
 
-    .line 14
+    .line 13
     new-instance v0, Lcom/rounds/kik/analytics/IReporterProxy$VideoPermissionType;
 
     const-string v1, "MICROPHONE"
@@ -94,13 +94,13 @@
     .end annotation
 
     .prologue
-    .line 19
+    .line 18
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 20
+    .line 19
     iput-object p3, p0, Lcom/rounds/kik/analytics/IReporterProxy$VideoPermissionType;->mStringForAnalytics:Ljava/lang/String;
 
-    .line 21
+    .line 20
     return-void
 .end method
 
@@ -142,7 +142,7 @@
     .locals 1
 
     .prologue
-    .line 25
+    .line 24
     iget-object v0, p0, Lcom/rounds/kik/analytics/IReporterProxy$VideoPermissionType;->mStringForAnalytics:Ljava/lang/String;
 
     return-object v0

@@ -1,101 +1,280 @@
-.class final synthetic Lkik/android/chat/fragment/KikConversationsFragment$7;
-.super Ljava/lang/Object;
+.class final Lkik/android/chat/fragment/KikConversationsFragment$7;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lkik/android/chat/fragment/KikConversationsFragment;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lkik/android/chat/fragment/KikConversationsFragment;->q()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x0
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/kik/events/l",
+        "<",
+        "Ljava/lang/Boolean;",
+        ">;"
+    }
+.end annotation
 
-# static fields
-.field static final synthetic a:[I
+
+# instance fields
+.field final synthetic a:Z
+
+.field final synthetic b:Lkik/android/chat/fragment/KikConversationsFragment;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lkik/android/chat/fragment/KikConversationsFragment;Z)V
+    .locals 0
 
     .prologue
-    .line 305
-    invoke-static {}, Lkik/android/chat/ConversationCallToActionHelper$ActionType;->values()[Lkik/android/chat/ConversationCallToActionHelper$ActionType;
+    .line 320
+    iput-object p1, p0, Lkik/android/chat/fragment/KikConversationsFragment$7;->b:Lkik/android/chat/fragment/KikConversationsFragment;
+
+    iput-boolean p2, p0, Lkik/android/chat/fragment/KikConversationsFragment$7;->a:Z
+
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;)V
+    .locals 6
+
+    .prologue
+    const/4 v2, 0x0
+
+    const/4 v1, 0x1
+
+    .line 320
+    check-cast p1, Ljava/lang/Boolean;
+
+    .line 1324
+    iget-boolean v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$7;->a:Z
+
+    if-nez v0, :cond_3
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    move v0, v1
+
+    .line 1326
+    :goto_0
+    iget-object v3, p0, Lkik/android/chat/fragment/KikConversationsFragment$7;->b:Lkik/android/chat/fragment/KikConversationsFragment;
+
+    invoke-virtual {v3}, Lkik/android/chat/fragment/KikConversationsFragment;->g()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_4
+
+    iget-object v3, p0, Lkik/android/chat/fragment/KikConversationsFragment$7;->b:Lkik/android/chat/fragment/KikConversationsFragment;
+
+    iget-object v3, v3, Lkik/android/chat/fragment/KikConversationsFragment;->p:Lkik/core/interfaces/IAddressBookIntegration;
+
+    invoke-interface {v3}, Lkik/core/interfaces/IAddressBookIntegration;->f()Lkik/core/interfaces/IAddressBookIntegration$UploadInfoPermissionState;
+
+    move-result-object v3
+
+    sget-object v4, Lkik/core/interfaces/IAddressBookIntegration$UploadInfoPermissionState;->UNSET:Lkik/core/interfaces/IAddressBookIntegration$UploadInfoPermissionState;
+
+    if-ne v3, v4, :cond_4
+
+    move v3, v1
+
+    .line 1329
+    :goto_1
+    iget-object v4, p0, Lkik/android/chat/fragment/KikConversationsFragment$7;->b:Lkik/android/chat/fragment/KikConversationsFragment;
+
+    invoke-virtual {v4}, Lkik/android/chat/fragment/KikConversationsFragment;->g()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    iget-object v4, p0, Lkik/android/chat/fragment/KikConversationsFragment$7;->b:Lkik/android/chat/fragment/KikConversationsFragment;
+
+    iget-object v4, v4, Lkik/android/chat/fragment/KikConversationsFragment;->p:Lkik/core/interfaces/IAddressBookIntegration;
+
+    invoke-interface {v4}, Lkik/core/interfaces/IAddressBookIntegration;->f()Lkik/core/interfaces/IAddressBookIntegration$UploadInfoPermissionState;
+
+    move-result-object v4
+
+    sget-object v5, Lkik/core/interfaces/IAddressBookIntegration$UploadInfoPermissionState;->FALSE:Lkik/core/interfaces/IAddressBookIntegration$UploadInfoPermissionState;
+
+    if-ne v4, v5, :cond_0
+
+    move v2, v1
+
+    .line 1331
+    :cond_0
+    if-eqz v3, :cond_5
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_5
+
+    .line 1333
+    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$7;->b:Lkik/android/chat/fragment/KikConversationsFragment;
+
+    iget-object v0, v0, Lkik/android/chat/fragment/KikConversationsFragment;->p:Lkik/core/interfaces/IAddressBookIntegration;
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-interface {v0, v2}, Lkik/core/interfaces/IAddressBookIntegration;->a(Ljava/lang/Boolean;)V
+
+    .line 1334
+    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$7;->b:Lkik/android/chat/fragment/KikConversationsFragment;
+
+    iget-object v0, v0, Lkik/android/chat/fragment/KikConversationsFragment;->p:Lkik/core/interfaces/IAddressBookIntegration;
+
+    const-string v2, "upgrade"
+
+    invoke-interface {v0, v2}, Lkik/core/interfaces/IAddressBookIntegration;->b(Ljava/lang/String;)V
+
+    .line 1345
+    :cond_1
+    :goto_2
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 1347
+    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$7;->b:Lkik/android/chat/fragment/KikConversationsFragment;
+
+    invoke-static {v0}, Lkik/android/chat/fragment/KikConversationsFragment;->b(Lkik/android/chat/fragment/KikConversationsFragment;)Lkik/android/chat/fragment/KikConversationsFragment$a;
 
     move-result-object v0
 
-    array-length v0, v0
+    invoke-static {v0}, Lkik/android/chat/fragment/KikConversationsFragment$a;->b(Lkik/android/chat/fragment/KikConversationsFragment$a;)Ljava/lang/String;
 
-    new-array v0, v0, [I
+    move-result-object v0
 
-    sput-object v0, Lkik/android/chat/fragment/KikConversationsFragment$7;->a:[I
+    const-string v2, "registration"
 
-    :try_start_0
-    sget-object v0, Lkik/android/chat/fragment/KikConversationsFragment$7;->a:[I
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    sget-object v1, Lkik/android/chat/ConversationCallToActionHelper$ActionType;->PUBLIC_GROUP:Lkik/android/chat/ConversationCallToActionHelper$ActionType;
+    move-result v0
 
-    invoke-virtual {v1}, Lkik/android/chat/ConversationCallToActionHelper$ActionType;->ordinal()I
+    if-nez v0, :cond_2
 
-    move-result v1
+    .line 1348
+    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$7;->b:Lkik/android/chat/fragment/KikConversationsFragment;
 
-    const/4 v2, 0x1
+    iget-object v0, v0, Lkik/android/chat/fragment/KikConversationsFragment;->d:Lkik/core/interfaces/ad;
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_2
+    const-string v2, "kik.addressbook.permission"
 
-    :goto_0
-    :try_start_1
-    sget-object v0, Lkik/android/chat/fragment/KikConversationsFragment$7;->a:[I
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    sget-object v1, Lkik/android/chat/ConversationCallToActionHelper$ActionType;->ADDRESS_BOOK:Lkik/android/chat/ConversationCallToActionHelper$ActionType;
+    move-result-object v3
 
-    invoke-virtual {v1}, Lkik/android/chat/ConversationCallToActionHelper$ActionType;->ordinal()I
+    invoke-interface {v0, v2, v3}, Lkik/core/interfaces/ad;->a(Ljava/lang/String;Ljava/lang/Boolean;)Z
 
-    move-result v1
+    .line 1349
+    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$7;->b:Lkik/android/chat/fragment/KikConversationsFragment;
 
-    const/4 v2, 0x2
+    iget-object v0, v0, Lkik/android/chat/fragment/KikConversationsFragment;->d:Lkik/core/interfaces/ad;
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    const-string v2, "kik.addressbook.flow.finished"
 
-    :goto_1
-    :try_start_2
-    sget-object v0, Lkik/android/chat/fragment/KikConversationsFragment$7;->a:[I
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    sget-object v1, Lkik/android/chat/ConversationCallToActionHelper$ActionType;->NONE:Lkik/android/chat/ConversationCallToActionHelper$ActionType;
+    move-result-object v1
 
-    invoke-virtual {v1}, Lkik/android/chat/ConversationCallToActionHelper$ActionType;->ordinal()I
+    invoke-interface {v0, v2, v1}, Lkik/core/interfaces/ad;->a(Ljava/lang/String;Ljava/lang/Boolean;)Z
 
-    move-result v1
+    .line 1351
+    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$7;->b:Lkik/android/chat/fragment/KikConversationsFragment;
 
-    const/4 v2, 0x3
+    iget-object v0, v0, Lkik/android/chat/fragment/KikConversationsFragment;->p:Lkik/core/interfaces/IAddressBookIntegration;
 
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_0
+    iget-object v1, p0, Lkik/android/chat/fragment/KikConversationsFragment$7;->b:Lkik/android/chat/fragment/KikConversationsFragment;
 
-    :goto_2
+    invoke-static {v1}, Lkik/android/chat/fragment/KikConversationsFragment;->b(Lkik/android/chat/fragment/KikConversationsFragment;)Lkik/android/chat/fragment/KikConversationsFragment$a;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lkik/android/chat/fragment/KikConversationsFragment$a;->b(Lkik/android/chat/fragment/KikConversationsFragment$a;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lkik/core/interfaces/IAddressBookIntegration;->d(Ljava/lang/String;)V
+
+    .line 320
+    :cond_2
     return-void
 
-    :catch_0
-    move-exception v0
+    :cond_3
+    move v0, v2
+
+    .line 1324
+    goto/16 :goto_0
+
+    :cond_4
+    move v3, v2
+
+    .line 1326
+    goto :goto_1
+
+    .line 1336
+    :cond_5
+    if-nez v3, :cond_6
+
+    if-eqz v2, :cond_7
+
+    .line 1338
+    :cond_6
+    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$7;->b:Lkik/android/chat/fragment/KikConversationsFragment;
+
+    const-string v2, "upgrade"
+
+    invoke-static {v0, v2}, Lkik/android/chat/fragment/KikConversationsFragment;->a(Lkik/android/chat/fragment/KikConversationsFragment;Ljava/lang/String;)V
 
     goto :goto_2
 
-    :catch_1
-    move-exception v0
+    .line 1340
+    :cond_7
+    if-eqz v0, :cond_1
 
-    goto :goto_1
+    .line 1342
+    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$7;->b:Lkik/android/chat/fragment/KikConversationsFragment;
 
-    :catch_2
-    move-exception v0
+    iget-object v2, p0, Lkik/android/chat/fragment/KikConversationsFragment$7;->b:Lkik/android/chat/fragment/KikConversationsFragment;
 
-    goto :goto_0
+    invoke-static {v2}, Lkik/android/chat/fragment/KikConversationsFragment;->b(Lkik/android/chat/fragment/KikConversationsFragment;)Lkik/android/chat/fragment/KikConversationsFragment$a;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lkik/android/chat/fragment/KikConversationsFragment$a;->b(Lkik/android/chat/fragment/KikConversationsFragment$a;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lkik/android/chat/fragment/KikConversationsFragment;->a(Lkik/android/chat/fragment/KikConversationsFragment;Ljava/lang/String;)V
+
+    goto :goto_2
 .end method

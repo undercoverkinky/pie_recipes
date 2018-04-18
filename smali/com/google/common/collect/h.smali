@@ -8,7 +8,7 @@
     .locals 0
 
     .prologue
-    .line 55
+    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,7 +16,7 @@
 
 
 # virtual methods
-.method protected abstract delegate()Ljava/lang/Object;
+.method protected abstract b()Ljava/lang/Object;
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -24,7 +24,7 @@
 
     .prologue
     .line 72
-    invoke-virtual {p0}, Lcom/google/common/collect/h;->delegate()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/google/common/collect/h;->b()Ljava/lang/Object;
 
     move-result-object v0
 

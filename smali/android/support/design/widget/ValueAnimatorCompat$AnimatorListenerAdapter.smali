@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 66
+    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,10 +30,18 @@
 
 
 # virtual methods
-.method public b(Landroid/support/design/widget/ValueAnimatorCompat;)V
+.method public a()V
     .locals 0
 
     .prologue
-    .line 73
+    .line 72
+    return-void
+.end method
+
+.method public b()V
+    .locals 0
+
+    .prologue
+    .line 76
     return-void
 .end method

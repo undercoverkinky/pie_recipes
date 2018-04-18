@@ -42,7 +42,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 59
+    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 29
@@ -59,12 +59,12 @@
     .line 35
     iput-boolean v1, p0, Lio/branch/indexing/b;->g:Z
 
-    .line 57
+    .line 52
     const-string v0, "BNC_CD_MANIFEST"
 
     iput-object v0, p0, Lio/branch/indexing/b;->j:Ljava/lang/String;
 
-    .line 60
+    .line 55
     const-string v0, "bnc_content_discovery_manifest_storage"
 
     invoke-virtual {p1, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
@@ -73,7 +73,7 @@
 
     iput-object v0, p0, Lio/branch/indexing/b;->i:Landroid/content/SharedPreferences;
 
-    .line 1077
+    .line 1072
     iget-object v0, p0, Lio/branch/indexing/b;->i:Landroid/content/SharedPreferences;
 
     const-string v1, "BNC_CD_MANIFEST"
@@ -84,10 +84,10 @@
 
     move-result-object v0
 
-    .line 1078
+    .line 1073
     if-eqz v0, :cond_2
 
-    .line 1080
+    .line 1075
     :try_start_0
     new-instance v1, Lorg/json/JSONObject;
 
@@ -95,7 +95,7 @@
 
     iput-object v1, p0, Lio/branch/indexing/b;->b:Lorg/json/JSONObject;
 
-    .line 1081
+    .line 1076
     iget-object v0, p0, Lio/branch/indexing/b;->b:Lorg/json/JSONObject;
 
     const-string v1, "mv"
@@ -106,7 +106,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1082
+    .line 1077
     iget-object v0, p0, Lio/branch/indexing/b;->b:Lorg/json/JSONObject;
 
     const-string v1, "mv"
@@ -117,7 +117,7 @@
 
     iput-object v0, p0, Lio/branch/indexing/b;->c:Ljava/lang/String;
 
-    .line 1084
+    .line 1079
     :cond_0
     iget-object v0, p0, Lio/branch/indexing/b;->b:Lorg/json/JSONObject;
 
@@ -129,7 +129,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1085
+    .line 1080
     iget-object v0, p0, Lio/branch/indexing/b;->b:Lorg/json/JSONObject;
 
     const-string v1, "m"
@@ -142,12 +142,12 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1089
+    .line 1084
     :cond_1
     :goto_0
     return-void
 
-    .line 1088
+    .line 1083
     :catch_0
     move-exception v0
 
@@ -159,7 +159,7 @@
 
     goto :goto_0
 
-    .line 1091
+    .line 1086
     :cond_2
     new-instance v0, Lorg/json/JSONObject;
 
@@ -174,19 +174,19 @@
     .locals 1
 
     .prologue
-    .line 65
+    .line 60
     sget-object v0, Lio/branch/indexing/b;->a:Lio/branch/indexing/b;
 
     if-nez v0, :cond_0
 
-    .line 66
+    .line 61
     new-instance v0, Lio/branch/indexing/b;
 
     invoke-direct {v0, p0}, Lio/branch/indexing/b;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lio/branch/indexing/b;->a:Lio/branch/indexing/b;
 
-    .line 68
+    .line 63
     :cond_0
     sget-object v0, Lio/branch/indexing/b;->a:Lio/branch/indexing/b;
 
@@ -195,19 +195,19 @@
 
 
 # virtual methods
-.method final a(Landroid/app/Activity;)Lio/branch/indexing/b$a;
+.method public final a(Landroid/app/Activity;)Lio/branch/indexing/b$a;
     .locals 5
 
     .prologue
-    .line 132
+    .line 124
     const/4 v1, 0x0
 
-    .line 133
+    .line 125
     iget-object v0, p0, Lio/branch/indexing/b;->h:Lorg/json/JSONArray;
 
     if-eqz v0, :cond_2
 
-    .line 134
+    .line 126
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v2, "/"
@@ -230,7 +230,7 @@
 
     move-result-object v2
 
-    .line 136
+    .line 128
     const/4 v0, 0x0
 
     :goto_0
@@ -243,14 +243,14 @@
 
     if-ge v0, v3, :cond_1
 
-    .line 137
+    .line 129
     iget-object v3, p0, Lio/branch/indexing/b;->h:Lorg/json/JSONArray;
 
     invoke-virtual {v3, v0}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v3
 
-    .line 138
+    .line 130
     const-string v4, "p"
 
     invoke-virtual {v3, v4}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
@@ -271,18 +271,18 @@
 
     if-eqz v4, :cond_0
 
-    .line 139
+    .line 131
     new-instance v0, Lio/branch/indexing/b$a;
 
     invoke-direct {v0, p0, v3}, Lio/branch/indexing/b$a;-><init>(Lio/branch/indexing/b;Lorg/json/JSONObject;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 147
+    .line 139
     :goto_1
     return-object v0
 
-    .line 136
+    .line 128
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
@@ -291,7 +291,7 @@
     :cond_1
     move-object v0, v1
 
-    .line 145
+    .line 137
     goto :goto_1
 
     :catch_0
@@ -307,7 +307,7 @@
     .locals 3
 
     .prologue
-    .line 97
+    .line 91
     const-string v0, "cd"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
@@ -316,12 +316,12 @@
 
     if-eqz v0, :cond_5
 
-    .line 98
+    .line 92
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lio/branch/indexing/b;->g:Z
 
-    .line 100
+    .line 94
     :try_start_0
     const-string v0, "cd"
 
@@ -329,7 +329,7 @@
 
     move-result-object v0
 
-    .line 102
+    .line 96
     const-string v1, "mv"
 
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
@@ -338,7 +338,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 103
+    .line 97
     const-string v1, "mv"
 
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -347,7 +347,7 @@
 
     iput-object v1, p0, Lio/branch/indexing/b;->c:Ljava/lang/String;
 
-    .line 105
+    .line 99
     :cond_0
     const-string v1, "mhl"
 
@@ -357,7 +357,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 106
+    .line 100
     const-string v1, "mhl"
 
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
@@ -366,7 +366,7 @@
 
     iput v1, p0, Lio/branch/indexing/b;->e:I
 
-    .line 108
+    .line 103
     :cond_1
     const-string v1, "m"
 
@@ -376,7 +376,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 109
+    .line 104
     const-string v1, "m"
 
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
@@ -385,7 +385,7 @@
 
     iput-object v1, p0, Lio/branch/indexing/b;->h:Lorg/json/JSONArray;
 
-    .line 111
+    .line 106
     :cond_2
     const-string v1, "mtl"
 
@@ -395,20 +395,16 @@
 
     if-eqz v1, :cond_3
 
-    .line 112
+    .line 107
     const-string v1, "mtl"
 
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 113
-    if-lez v1, :cond_3
-
-    .line 114
     iput v1, p0, Lio/branch/indexing/b;->d:I
 
-    .line 117
+    .line 109
     :cond_3
     const-string v1, "mps"
 
@@ -418,7 +414,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 118
+    .line 110
     const-string v1, "mps"
 
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
@@ -427,7 +423,7 @@
 
     iput v0, p0, Lio/branch/indexing/b;->f:I
 
-    .line 120
+    .line 112
     :cond_4
     iget-object v0, p0, Lio/branch/indexing/b;->b:Lorg/json/JSONObject;
 
@@ -437,7 +433,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 121
+    .line 113
     iget-object v0, p0, Lio/branch/indexing/b;->b:Lorg/json/JSONObject;
 
     const-string v1, "m"
@@ -446,14 +442,14 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 2072
+    .line 2067
     iget-object v0, p0, Lio/branch/indexing/b;->i:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 2073
+    .line 2068
     const-string v1, "BNC_CD_MANIFEST"
 
     iget-object v2, p0, Lio/branch/indexing/b;->b:Lorg/json/JSONObject;
@@ -470,11 +466,11 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 129
+    .line 121
     :goto_0
     return-void
 
-    .line 127
+    .line 119
     :cond_5
     const/4 v0, 0x0
 
@@ -482,48 +478,48 @@
 
     goto :goto_0
 
-    .line 125
+    .line 117
     :catch_0
     move-exception v0
 
     goto :goto_0
 .end method
 
-.method final a()Z
+.method public final a()Z
     .locals 1
 
     .prologue
-    .line 151
+    .line 143
     iget-boolean v0, p0, Lio/branch/indexing/b;->g:Z
 
     return v0
 .end method
 
-.method final b()I
+.method public final b()I
     .locals 1
 
     .prologue
-    .line 155
+    .line 148
     iget v0, p0, Lio/branch/indexing/b;->d:I
 
     return v0
 .end method
 
-.method final c()I
+.method public final c()I
     .locals 1
 
     .prologue
-    .line 159
+    .line 152
     iget v0, p0, Lio/branch/indexing/b;->f:I
 
     return v0
 .end method
 
-.method final d()I
+.method public final d()I
     .locals 1
 
     .prologue
-    .line 163
+    .line 156
     iget v0, p0, Lio/branch/indexing/b;->e:I
 
     return v0
@@ -533,7 +529,7 @@
     .locals 1
 
     .prologue
-    .line 167
+    .line 160
     iget-object v0, p0, Lio/branch/indexing/b;->c:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -542,10 +538,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 168
+    .line 161
     const-string v0, "-1"
 
-    .line 170
+    .line 163
     :goto_0
     return-object v0
 

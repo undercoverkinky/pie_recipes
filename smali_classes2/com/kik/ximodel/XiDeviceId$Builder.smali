@@ -896,7 +896,6 @@
     .line 657
     invoke-virtual {p0, v1}, Lcom/kik/ximodel/XiDeviceId$Builder;->mergeFrom(Lcom/kik/ximodel/XiDeviceId;)Lcom/kik/ximodel/XiDeviceId$Builder;
 
-    .line 659
     :cond_1
     throw v0
 

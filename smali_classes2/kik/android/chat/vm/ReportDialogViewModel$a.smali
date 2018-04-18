@@ -28,22 +28,20 @@
     .locals 1
 
     .prologue
-    .line 136
+    .line 135
     invoke-direct {p0}, Lkik/android/chat/vm/DialogViewModel$b;-><init>()V
 
-    .line 137
+    .line 136
     new-instance v0, Lkik/android/chat/vm/ReportDialogViewModel;
 
     invoke-direct {v0}, Lkik/android/chat/vm/ReportDialogViewModel;-><init>()V
 
     iput-object v0, p0, Lkik/android/chat/vm/ReportDialogViewModel$a;->a:Lkik/android/chat/vm/DialogViewModel;
 
+    .line 137
+    invoke-super {p0}, Lkik/android/chat/vm/DialogViewModel$b;->b()Lkik/android/chat/vm/DialogViewModel$b;
+
     .line 138
-    const/4 v0, 0x1
-
-    invoke-super {p0, v0}, Lkik/android/chat/vm/DialogViewModel$b;->a(Z)Lkik/android/chat/vm/DialogViewModel$b;
-
-    .line 139
     return-void
 .end method
 
@@ -53,13 +51,13 @@
     .locals 1
 
     .prologue
-    .line 133
-    .line 1205
+    .line 132
+    .line 1178
     iget-object v0, p0, Lkik/android/chat/vm/ReportDialogViewModel$a;->a:Lkik/android/chat/vm/DialogViewModel;
 
     check-cast v0, Lkik/android/chat/vm/ReportDialogViewModel;
 
-    .line 133
+    .line 132
     return-object v0
 .end method
 
@@ -67,14 +65,14 @@
     .locals 1
 
     .prologue
-    .line 187
+    .line 172
     iget-object v0, p0, Lkik/android/chat/vm/ReportDialogViewModel$a;->a:Lkik/android/chat/vm/DialogViewModel;
 
     check-cast v0, Lkik/android/chat/vm/ReportDialogViewModel;
 
     invoke-static {v0, p1}, Lkik/android/chat/vm/ReportDialogViewModel;->a(Lkik/android/chat/vm/ReportDialogViewModel;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 188
+    .line 173
     return-object p0
 .end method
 
@@ -82,152 +80,85 @@
     .locals 1
 
     .prologue
-    .line 149
+    .line 148
     iget-object v0, p0, Lkik/android/chat/vm/ReportDialogViewModel$a;->a:Lkik/android/chat/vm/DialogViewModel;
 
     check-cast v0, Lkik/android/chat/vm/ReportDialogViewModel;
 
     invoke-static {v0, p1}, Lkik/android/chat/vm/ReportDialogViewModel;->a(Lkik/android/chat/vm/ReportDialogViewModel;Lkik/android/chat/vm/ReportDialogViewModel$ReportContext;)Lkik/android/chat/vm/ReportDialogViewModel$ReportContext;
 
-    .line 150
+    .line 149
     return-object p0
 .end method
 
-.method public final a(Lkik/core/datatypes/k;)Lkik/android/chat/vm/ReportDialogViewModel$a;
+.method public final a(Lkik/core/datatypes/o;)Lkik/android/chat/vm/ReportDialogViewModel$a;
     .locals 1
 
     .prologue
+    .line 160
+    iget-object v0, p0, Lkik/android/chat/vm/ReportDialogViewModel$a;->a:Lkik/android/chat/vm/DialogViewModel;
+
+    check-cast v0, Lkik/android/chat/vm/ReportDialogViewModel;
+
+    invoke-static {v0, p1}, Lkik/android/chat/vm/ReportDialogViewModel;->a(Lkik/android/chat/vm/ReportDialogViewModel;Lkik/core/datatypes/o;)V
+
     .line 161
-    iget-object v0, p0, Lkik/android/chat/vm/ReportDialogViewModel$a;->a:Lkik/android/chat/vm/DialogViewModel;
-
-    check-cast v0, Lkik/android/chat/vm/ReportDialogViewModel;
-
-    invoke-static {v0, p1}, Lkik/android/chat/vm/ReportDialogViewModel;->a(Lkik/android/chat/vm/ReportDialogViewModel;Lkik/core/datatypes/k;)Lkik/core/datatypes/k;
-
-    .line 162
     return-object p0
 .end method
 
-.method public final a(Lkik/core/datatypes/l;)Lkik/android/chat/vm/ReportDialogViewModel$a;
-    .locals 2
-
-    .prologue
-    .line 173
-    iget-object v0, p0, Lkik/android/chat/vm/ReportDialogViewModel$a;->a:Lkik/android/chat/vm/DialogViewModel;
-
-    check-cast v0, Lkik/android/chat/vm/ReportDialogViewModel;
-
-    invoke-static {v0, p1}, Lkik/android/chat/vm/ReportDialogViewModel;->a(Lkik/android/chat/vm/ReportDialogViewModel;Lkik/core/datatypes/l;)V
-
-    .line 174
-    iget-object v0, p0, Lkik/android/chat/vm/ReportDialogViewModel$a;->a:Lkik/android/chat/vm/DialogViewModel;
-
-    check-cast v0, Lkik/android/chat/vm/ReportDialogViewModel;
-
-    invoke-virtual {p1}, Lkik/core/datatypes/l;->j()Lkik/core/datatypes/k;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lkik/android/chat/vm/ReportDialogViewModel;->a(Lkik/android/chat/vm/ReportDialogViewModel;Lkik/core/datatypes/k;)Lkik/core/datatypes/k;
-
-    .line 175
-    return-object p0
-.end method
-
-.method public final b(Lkik/core/datatypes/k;)Lkik/android/chat/vm/ReportDialogViewModel$a;
+.method public final a(Z)Lkik/android/chat/vm/ReportDialogViewModel$a;
     .locals 1
 
     .prologue
-    .line 167
-    iget-object v0, p0, Lkik/android/chat/vm/ReportDialogViewModel$a;->a:Lkik/android/chat/vm/DialogViewModel;
-
-    check-cast v0, Lkik/android/chat/vm/ReportDialogViewModel;
-
-    invoke-static {v0, p1}, Lkik/android/chat/vm/ReportDialogViewModel;->b(Lkik/android/chat/vm/ReportDialogViewModel;Lkik/core/datatypes/k;)Lkik/core/datatypes/k;
-
-    .line 168
-    return-object p0
-.end method
-
-.method public final b(Lkik/core/datatypes/l;)Lkik/android/chat/vm/ReportDialogViewModel$a;
-    .locals 2
-
-    .prologue
-    .line 180
-    iget-object v0, p0, Lkik/android/chat/vm/ReportDialogViewModel$a;->a:Lkik/android/chat/vm/DialogViewModel;
-
-    check-cast v0, Lkik/android/chat/vm/ReportDialogViewModel;
-
-    invoke-static {v0, p1}, Lkik/android/chat/vm/ReportDialogViewModel;->b(Lkik/android/chat/vm/ReportDialogViewModel;Lkik/core/datatypes/l;)Lkik/core/datatypes/l;
-
-    .line 181
-    iget-object v0, p0, Lkik/android/chat/vm/ReportDialogViewModel$a;->a:Lkik/android/chat/vm/DialogViewModel;
-
-    check-cast v0, Lkik/android/chat/vm/ReportDialogViewModel;
-
-    invoke-virtual {p1}, Lkik/core/datatypes/l;->j()Lkik/core/datatypes/k;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lkik/android/chat/vm/ReportDialogViewModel;->b(Lkik/android/chat/vm/ReportDialogViewModel;Lkik/core/datatypes/k;)Lkik/core/datatypes/k;
-
-    .line 182
-    return-object p0
-.end method
-
-.method public final b(Z)Lkik/android/chat/vm/ReportDialogViewModel$a;
-    .locals 1
-
-    .prologue
-    .line 155
+    .line 154
     iget-object v0, p0, Lkik/android/chat/vm/ReportDialogViewModel$a;->a:Lkik/android/chat/vm/DialogViewModel;
 
     check-cast v0, Lkik/android/chat/vm/ReportDialogViewModel;
 
     invoke-static {v0, p1}, Lkik/android/chat/vm/ReportDialogViewModel;->a(Lkik/android/chat/vm/ReportDialogViewModel;Z)Z
 
-    .line 156
+    .line 155
     return-object p0
 .end method
 
-.method public final b()Lkik/android/chat/vm/ReportDialogViewModel;
+.method public final b(Lkik/core/datatypes/o;)Lkik/android/chat/vm/ReportDialogViewModel$a;
     .locals 1
 
     .prologue
-    .line 205
+    .line 166
     iget-object v0, p0, Lkik/android/chat/vm/ReportDialogViewModel$a;->a:Lkik/android/chat/vm/DialogViewModel;
 
     check-cast v0, Lkik/android/chat/vm/ReportDialogViewModel;
 
-    return-object v0
+    invoke-static {v0, p1}, Lkik/android/chat/vm/ReportDialogViewModel;->b(Lkik/android/chat/vm/ReportDialogViewModel;Lkik/core/datatypes/o;)Lkik/core/datatypes/o;
+
+    .line 167
+    return-object p0
 .end method
 
 .method public final c(Ljava/lang/String;)Lkik/android/chat/vm/ReportDialogViewModel$a;
     .locals 1
 
     .prologue
-    .line 143
+    .line 142
     iget-object v0, p0, Lkik/android/chat/vm/ReportDialogViewModel$a;->a:Lkik/android/chat/vm/DialogViewModel;
 
     check-cast v0, Lkik/android/chat/vm/ReportDialogViewModel;
 
-    invoke-static {v0, p1}, Lkik/android/chat/vm/ReportDialogViewModel;->b(Lkik/android/chat/vm/ReportDialogViewModel;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1}, Lkik/android/chat/vm/ReportDialogViewModel;->a(Lkik/android/chat/vm/ReportDialogViewModel;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 144
+    .line 143
     return-object p0
 .end method
 
-.method public final d(Ljava/lang/String;)Lkik/android/chat/vm/ReportDialogViewModel$a;
+.method public final c()Lkik/android/chat/vm/ReportDialogViewModel;
     .locals 1
 
     .prologue
-    .line 193
+    .line 178
     iget-object v0, p0, Lkik/android/chat/vm/ReportDialogViewModel$a;->a:Lkik/android/chat/vm/DialogViewModel;
 
     check-cast v0, Lkik/android/chat/vm/ReportDialogViewModel;
 
-    invoke-static {v0, p1}, Lkik/android/chat/vm/ReportDialogViewModel;->c(Lkik/android/chat/vm/ReportDialogViewModel;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 194
-    return-object p0
+    return-object v0
 .end method

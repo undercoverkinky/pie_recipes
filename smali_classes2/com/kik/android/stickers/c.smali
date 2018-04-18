@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/core/interfaces/ab;
+.implements Lkik/core/interfaces/ac;
 
 
 # annotations
@@ -31,7 +31,7 @@
             "Ljava/util/Map",
             "<",
             "Ljava/lang/String;",
-            "Lkik/core/datatypes/y;",
+            "Lkik/core/datatypes/ab;",
             ">;"
         }
     .end annotation
@@ -42,7 +42,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lkik/core/datatypes/y;",
+            "Lkik/core/datatypes/ab;",
             ">;"
         }
     .end annotation
@@ -53,7 +53,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lkik/core/datatypes/y;",
+            "Lkik/core/datatypes/ab;",
             ">;"
         }
     .end annotation
@@ -64,7 +64,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lkik/core/datatypes/y;",
+            "Lkik/core/datatypes/ab;",
             ">;"
         }
     .end annotation
@@ -75,7 +75,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lkik/core/datatypes/x;",
+            "Lkik/core/datatypes/aa;",
             ">;"
         }
     .end annotation
@@ -85,13 +85,13 @@
 
 .field private k:I
 
-.field private l:Lkik/core/e/f;
+.field private l:Lkik/core/g/e;
 
 .field private m:Lkik/core/interfaces/e;
 
-.field private n:Lkik/core/interfaces/ag;
+.field private n:Lkik/core/interfaces/af;
 
-.field private o:Lcom/android/volley/g;
+.field private o:Lcom/android/volley/h;
 
 .field private p:Lrx/subjects/PublishSubject;
     .annotation system Ldalvik/annotation/Signature;
@@ -179,7 +179,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lkik/core/interfaces/e;Lkik/core/interfaces/ag;Lcom/android/volley/g;Lkik/core/e/d;)V
+.method public constructor <init>(Landroid/content/Context;Lkik/core/interfaces/e;Lkik/core/interfaces/af;Lcom/android/volley/h;Lkik/core/g/d;)V
     .locals 7
 
     .prologue
@@ -198,13 +198,13 @@
 
     move-object v5, p5
 
-    invoke-direct/range {v0 .. v6}, Lcom/kik/android/stickers/c;-><init>(Landroid/content/Context;Lkik/core/interfaces/e;Lkik/core/interfaces/ag;Lcom/android/volley/g;Lkik/core/e/d;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v6}, Lcom/kik/android/stickers/c;-><init>(Landroid/content/Context;Lkik/core/interfaces/e;Lkik/core/interfaces/af;Lcom/android/volley/h;Lkik/core/g/d;Ljava/lang/String;)V
 
     .line 107
     return-void
 .end method
 
-.method private constructor <init>(Landroid/content/Context;Lkik/core/interfaces/e;Lkik/core/interfaces/ag;Lcom/android/volley/g;Lkik/core/e/d;Ljava/lang/String;)V
+.method private constructor <init>(Landroid/content/Context;Lkik/core/interfaces/e;Lkik/core/interfaces/af;Lcom/android/volley/h;Lkik/core/g/d;Ljava/lang/String;)V
     .locals 4
 
     .prologue
@@ -267,42 +267,42 @@
     iput v3, p0, Lcom/kik/android/stickers/c;->k:I
 
     .line 96
-    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->i()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/android/stickers/c;->p:Lrx/subjects/PublishSubject;
 
     .line 97
-    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->i()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/android/stickers/c;->q:Lrx/subjects/PublishSubject;
 
     .line 98
-    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->i()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/android/stickers/c;->r:Lrx/subjects/PublishSubject;
 
     .line 99
-    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->i()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/android/stickers/c;->s:Lrx/subjects/PublishSubject;
 
     .line 100
-    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->i()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/android/stickers/c;->t:Lrx/subjects/PublishSubject;
 
     .line 101
-    invoke-static {}, Lrx/subjects/PublishSubject;->m()Lrx/subjects/PublishSubject;
+    invoke-static {}, Lrx/subjects/PublishSubject;->i()Lrx/subjects/PublishSubject;
 
     move-result-object v0
 
@@ -311,7 +311,7 @@
     .line 102
     iget-object v0, p0, Lcom/kik/android/stickers/c;->u:Lrx/subjects/PublishSubject;
 
-    invoke-static {v0}, Lrx/b;->a(Lrx/d;)Lrx/b;
+    invoke-static {v0}, Lrx/b;->a(Lrx/c;)Lrx/b;
 
     move-result-object v0
 
@@ -321,13 +321,13 @@
     iput-object p2, p0, Lcom/kik/android/stickers/c;->m:Lkik/core/interfaces/e;
 
     .line 112
-    iput-object p3, p0, Lcom/kik/android/stickers/c;->n:Lkik/core/interfaces/ag;
+    iput-object p3, p0, Lcom/kik/android/stickers/c;->n:Lkik/core/interfaces/af;
 
     .line 113
-    iput-object p4, p0, Lcom/kik/android/stickers/c;->o:Lcom/android/volley/g;
+    iput-object p4, p0, Lcom/kik/android/stickers/c;->o:Lcom/android/volley/h;
 
     .line 114
-    iput-object p5, p0, Lcom/kik/android/stickers/c;->l:Lkik/core/e/f;
+    iput-object p5, p0, Lcom/kik/android/stickers/c;->l:Lkik/core/g/e;
 
     .line 115
     iput-object p6, p0, Lcom/kik/android/stickers/c;->c:Ljava/lang/String;
@@ -388,13 +388,13 @@
     invoke-direct {v0}, Lcom/kik/events/Promise;-><init>()V
 
     .line 1511
-    iget-object v1, p0, Lcom/kik/android/stickers/c;->l:Lkik/core/e/f;
+    iget-object v1, p0, Lcom/kik/android/stickers/c;->l:Lkik/core/g/e;
 
     const-string v2, "sticker_pack"
 
     const-class v3, Lcom/kik/xdata/model/mediatray/XStickerPack;
 
-    invoke-interface {v1, v2, v3}, Lkik/core/e/f;->c(Ljava/lang/String;Ljava/lang/Class;)Lcom/kik/events/Promise;
+    invoke-interface {v1, v2, v3}, Lkik/core/g/e;->c(Ljava/lang/String;Ljava/lang/Class;)Lcom/kik/events/Promise;
 
     move-result-object v1
 
@@ -402,7 +402,7 @@
 
     invoke-direct {v2, p0, v0}, Lcom/kik/android/stickers/c$1;-><init>(Lcom/kik/android/stickers/c;Lcom/kik/events/Promise;)V
 
-    invoke-virtual {v1, v2}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
+    invoke-virtual {v1, v2}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
 
     .line 120
     return-void
@@ -428,12 +428,12 @@
     return-object v0
 .end method
 
-.method static synthetic a(Lcom/kik/android/stickers/c;Lkik/core/datatypes/y;)Lkik/core/datatypes/y;
+.method static synthetic a(Lcom/kik/android/stickers/c;Lkik/core/datatypes/ab;)Lkik/core/datatypes/ab;
     .locals 1
 
     .prologue
     .line 55
-    invoke-direct {p0, p1}, Lcom/kik/android/stickers/c;->e(Lkik/core/datatypes/y;)Lkik/core/datatypes/y;
+    invoke-direct {p0, p1}, Lcom/kik/android/stickers/c;->e(Lkik/core/datatypes/ab;)Lkik/core/datatypes/ab;
 
     move-result-object v0
 
@@ -445,7 +445,7 @@
 
     .prologue
     .line 0
-    .line 16188
+    .line 15188
     iget-object v0, p0, Lcom/kik/android/stickers/c;->p:Lrx/subjects/PublishSubject;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -458,17 +458,41 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/kik/android/stickers/c;Lkik/core/datatypes/y;Lorg/json/JSONObject;)V
+.method static synthetic a(Lcom/kik/android/stickers/c;Lcom/android/volley/VolleyError;)V
     .locals 2
 
     .prologue
-    .line 258
-    invoke-static {p2}, Lcom/kik/android/stickers/b;->a(Lorg/json/JSONObject;)Lkik/core/datatypes/y;
+    .line 0
+    .line 15193
+    iget-object v0, p0, Lcom/kik/android/stickers/c;->p:Lrx/subjects/PublishSubject;
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lrx/subjects/PublishSubject;->a(Ljava/lang/Object;)V
+
+    .line 15194
+    invoke-static {p1}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
+
+    .line 0
+    return-void
+.end method
+
+.method static synthetic a(Lcom/kik/android/stickers/c;Lkik/core/datatypes/ab;Lorg/json/JSONObject;)V
+    .locals 2
+
+    .prologue
+    .line 0
+    .line 15258
+    invoke-static {p2}, Lcom/kik/android/stickers/b;->a(Lorg/json/JSONObject;)Lkik/core/datatypes/ab;
 
     move-result-object v0
 
-    .line 12272
-    invoke-virtual {v0}, Lkik/core/datatypes/y;->d()Ljava/lang/String;
+    .line 15272
+    invoke-virtual {v0}, Lkik/core/datatypes/ab;->d()Ljava/lang/String;
 
     move-result-object v1
 
@@ -478,34 +502,34 @@
 
     if-eqz v1, :cond_0
 
-    .line 12273
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->d()Ljava/lang/String;
+    .line 15273
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->d()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lkik/core/datatypes/y;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lkik/core/datatypes/ab;->a(Ljava/lang/String;)V
 
-    .line 12277
+    .line 15277
     :cond_0
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->c()I
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->c()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lkik/core/datatypes/y;->a(I)V
+    invoke-virtual {v0, v1}, Lkik/core/datatypes/ab;->a(I)V
 
-    .line 12278
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->i()Z
+    .line 15278
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->i()Z
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lkik/core/datatypes/y;->a(Z)V
+    invoke-virtual {v0, v1}, Lkik/core/datatypes/ab;->a(Z)V
 
-    .line 12280
+    .line 15280
     iget-object v1, p0, Lcom/kik/android/stickers/c;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 12282
+    .line 15282
     iget-object v0, p0, Lcom/kik/android/stickers/c;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -520,10 +544,10 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 12283
+    .line 15283
     invoke-direct {p0}, Lcom/kik/android/stickers/c;->k()V
 
-    .line 258
+    .line 0
     :cond_1
     return-void
 .end method
@@ -534,7 +558,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 16214
+    .line 15214
     :try_start_0
     new-instance v3, Ljava/util/ArrayList;
 
@@ -548,7 +572,7 @@
 
     move v2, v1
 
-    .line 16216
+    .line 15216
     :goto_0
     invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
 
@@ -556,17 +580,17 @@
 
     if-ge v2, v0, :cond_2
 
-    .line 16217
+    .line 15217
     invoke-virtual {p1, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v0
 
-    .line 16218
-    invoke-static {v0}, Lcom/kik/android/stickers/b;->a(Lorg/json/JSONObject;)Lkik/core/datatypes/y;
+    .line 15218
+    invoke-static {v0}, Lcom/kik/android/stickers/b;->a(Lorg/json/JSONObject;)Lkik/core/datatypes/ab;
 
     move-result-object v4
 
-    .line 16221
+    .line 15221
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -582,14 +606,14 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/datatypes/y;
+    check-cast v0, Lkik/core/datatypes/ab;
 
-    .line 16222
-    invoke-virtual {v0}, Lkik/core/datatypes/y;->d()Ljava/lang/String;
+    .line 15222
+    invoke-virtual {v0}, Lkik/core/datatypes/ab;->d()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v4}, Lkik/core/datatypes/y;->d()Ljava/lang/String;
+    invoke-virtual {v4}, Lkik/core/datatypes/ab;->d()Ljava/lang/String;
 
     move-result-object v6
 
@@ -599,17 +623,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 16223
+    .line 15223
     const/4 v0, 0x1
 
-    .line 16228
+    .line 15228
     :goto_1
     if-nez v0, :cond_1
 
-    .line 16229
-    invoke-virtual {p0, v4}, Lcom/kik/android/stickers/c;->a(Lkik/core/datatypes/y;)V
+    .line 15229
+    invoke-virtual {p0, v4}, Lcom/kik/android/stickers/c;->a(Lkik/core/datatypes/ab;)V
 
-    .line 16216
+    .line 15216
     :cond_1
     add-int/lit8 v0, v2, 0x1
 
@@ -617,24 +641,26 @@
 
     goto :goto_0
 
-    .line 16234
+    .line 15234
     :cond_2
     invoke-direct {p0}, Lcom/kik/android/stickers/c;->l()V
 
-    .line 16235
+    .line 15235
     iget-object v0, p0, Lcom/kik/android/stickers/c;->u:Lrx/subjects/PublishSubject;
 
-    invoke-virtual {v0}, Lrx/subjects/PublishSubject;->b()V
+    invoke-virtual {v0}, Lrx/subjects/PublishSubject;->aM_()V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 16239
+    .line 15239
     :goto_2
     return-void
 
-    .line 0
+    .line 15238
     :catch_0
     move-exception v0
+
+    invoke-static {v0}, Lkik/android/util/ax;->b(Ljava/lang/Throwable;)V
 
     goto :goto_2
 
@@ -654,12 +680,32 @@
     return-object v0
 .end method
 
-.method static synthetic b(Lcom/kik/android/stickers/c;Lkik/core/datatypes/y;)V
+.method static synthetic b(Lcom/kik/android/stickers/c;Lcom/android/volley/VolleyError;)V
+    .locals 1
+
+    .prologue
+    .line 0
+    .line 15244
+    invoke-direct {p0}, Lcom/kik/android/stickers/c;->l()V
+
+    .line 15245
+    iget-object v0, p0, Lcom/kik/android/stickers/c;->u:Lrx/subjects/PublishSubject;
+
+    invoke-virtual {v0}, Lrx/subjects/PublishSubject;->aM_()V
+
+    .line 15247
+    invoke-static {p1}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
+
+    .line 0
+    return-void
+.end method
+
+.method static synthetic b(Lcom/kik/android/stickers/c;Lkik/core/datatypes/ab;)V
     .locals 0
 
     .prologue
     .line 55
-    invoke-direct {p0, p1}, Lcom/kik/android/stickers/c;->g(Lkik/core/datatypes/y;)V
+    invoke-direct {p0, p1}, Lcom/kik/android/stickers/c;->g(Lkik/core/datatypes/ab;)V
 
     return-void
 .end method
@@ -674,24 +720,55 @@
     return-object v0
 .end method
 
-.method static synthetic c(Lcom/kik/android/stickers/c;Lkik/core/datatypes/y;)V
-    .locals 1
+.method static synthetic c(Lcom/kik/android/stickers/c;Lcom/android/volley/VolleyError;)V
+    .locals 2
 
     .prologue
-    .line 55
-    .line 13394
-    iget-object v0, p0, Lcom/kik/android/stickers/c;->f:Ljava/util/ArrayList;
+    .line 0
+    .line 15290
+    iget-object v0, p0, Lcom/kik/android/stickers/c;->h:Ljava/util/ArrayList;
 
-    .line 12690
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 12691
-    invoke-virtual {p1, v0}, Lkik/core/datatypes/y;->a(I)V
+    iget-object v1, p0, Lcom/kik/android/stickers/c;->j:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 12693
-    invoke-direct {p0, p1}, Lcom/kik/android/stickers/c;->i(Lkik/core/datatypes/y;)V
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    move-result v1
+
+    if-ne v0, v1, :cond_0
+
+    .line 15291
+    invoke-direct {p0}, Lcom/kik/android/stickers/c;->k()V
+
+    .line 15294
+    :cond_0
+    invoke-static {p1}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
+
+    .line 0
+    return-void
+.end method
+
+.method static synthetic c(Lcom/kik/android/stickers/c;Lkik/core/datatypes/ab;)V
+    .locals 1
+
+    .prologue
+    .line 55
+    .line 12394
+    iget-object v0, p0, Lcom/kik/android/stickers/c;->f:Ljava/util/ArrayList;
+
+    .line 11690
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    .line 11691
+    invoke-virtual {p1, v0}, Lkik/core/datatypes/ab;->a(I)V
+
+    .line 11693
+    invoke-direct {p0, p1}, Lcom/kik/android/stickers/c;->i(Lkik/core/datatypes/ab;)V
 
     .line 55
     return-void
@@ -731,12 +808,12 @@
     goto :goto_0
 .end method
 
-.method static synthetic d(Lcom/kik/android/stickers/c;Lkik/core/datatypes/y;)V
-    .locals 8
+.method static synthetic d(Lcom/kik/android/stickers/c;Lkik/core/datatypes/ab;)V
+    .locals 7
 
     .prologue
-    .line 14254
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->d()Ljava/lang/String;
+    .line 13254
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->d()Ljava/lang/String;
 
     move-result-object v0
 
@@ -748,22 +825,22 @@
 
     if-nez v0, :cond_0
 
-    .line 14258
-    invoke-static {p0, p1}, Lcom/kik/android/stickers/h;->a(Lcom/kik/android/stickers/c;Lkik/core/datatypes/y;)Lcom/android/volley/h$b;
+    .line 13258
+    invoke-static {p0, p1}, Lcom/kik/android/stickers/h;->a(Lcom/kik/android/stickers/c;Lkik/core/datatypes/ab;)Lcom/android/volley/i$b;
+
+    move-result-object v3
+
+    .line 13259
+    invoke-static {p0}, Lcom/kik/android/stickers/i;->a(Lcom/kik/android/stickers/c;)Lcom/android/volley/i$a;
 
     move-result-object v4
 
-    .line 14259
-    invoke-static {p0}, Lcom/kik/android/stickers/i;->a(Lcom/kik/android/stickers/c;)Lcom/android/volley/h$a;
-
-    move-result-object v5
-
-    .line 14261
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->d()Ljava/lang/String;
+    .line 13261
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->d()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 14262
+    .line 13262
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "/v1/pack/"
@@ -778,7 +855,7 @@
 
     move-result-object v2
 
-    .line 14263
+    .line 13263
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -797,21 +874,19 @@
 
     move-result-object v1
 
-    .line 14265
-    new-instance v0, Lcom/kik/cache/StickerPackRequest;
+    .line 13265
+    new-instance v0, Lcom/kik/cache/al;
 
-    const/4 v3, 0x0
+    iget-object v5, p0, Lcom/kik/android/stickers/c;->n:Lkik/core/interfaces/af;
 
-    iget-object v6, p0, Lcom/kik/android/stickers/c;->n:Lkik/core/interfaces/ag;
+    iget-object v6, p0, Lcom/kik/android/stickers/c;->m:Lkik/core/interfaces/e;
 
-    iget-object v7, p0, Lcom/kik/android/stickers/c;->m:Lkik/core/interfaces/e;
+    invoke-direct/range {v0 .. v6}, Lcom/kik/cache/al;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/android/volley/i$b;Lcom/android/volley/i$a;Lkik/core/interfaces/af;Lkik/core/interfaces/e;)V
 
-    invoke-direct/range {v0 .. v7}, Lcom/kik/cache/StickerPackRequest;-><init>(Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;Lcom/android/volley/h$b;Lcom/android/volley/h$a;Lkik/core/interfaces/ag;Lkik/core/interfaces/e;)V
+    .line 13267
+    iget-object v1, p0, Lcom/kik/android/stickers/c;->o:Lcom/android/volley/h;
 
-    .line 14267
-    iget-object v1, p0, Lcom/kik/android/stickers/c;->o:Lcom/android/volley/g;
-
-    invoke-virtual {v1, v0}, Lcom/android/volley/g;->a(Lcom/android/volley/Request;)Lcom/android/volley/Request;
+    invoke-virtual {v1, v0}, Lcom/android/volley/h;->a(Lcom/android/volley/Request;)Lcom/android/volley/Request;
 
     .line 55
     :cond_0
@@ -823,10 +898,10 @@
 
     .prologue
     .line 55
-    .line 15124
+    .line 14124
     const-string v0, "recents"
 
-    invoke-virtual {p0, v0}, Lcom/kik/android/stickers/c;->a(Ljava/lang/String;)Lkik/core/datatypes/y;
+    invoke-virtual {p0, v0}, Lcom/kik/android/stickers/c;->a(Ljava/lang/String;)Lkik/core/datatypes/ab;
 
     move-result-object v0
 
@@ -834,11 +909,11 @@
 
     const-string v0, "recents"
 
-    invoke-virtual {p0, v0}, Lcom/kik/android/stickers/c;->a(Ljava/lang/String;)Lkik/core/datatypes/y;
+    invoke-virtual {p0, v0}, Lcom/kik/android/stickers/c;->a(Ljava/lang/String;)Lkik/core/datatypes/ab;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lkik/core/datatypes/y;->b()Ljava/util/List;
+    invoke-virtual {v0}, Lkik/core/datatypes/ab;->b()Ljava/util/List;
 
     move-result-object v0
 
@@ -872,14 +947,15 @@
     goto :goto_0
 .end method
 
-.method static synthetic d(Lkik/core/datatypes/y;)Z
+.method static synthetic d(Lkik/core/datatypes/ab;)Z
     .locals 1
 
     .prologue
-    .line 405
+    .line 0
+    .line 15405
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lkik/core/datatypes/y;->i()Z
+    invoke-virtual {p0}, Lkik/core/datatypes/ab;->i()Z
 
     move-result v0
 
@@ -893,17 +969,18 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 0
     goto :goto_0
 .end method
 
-.method private e(Lkik/core/datatypes/y;)Lkik/core/datatypes/y;
+.method private e(Lkik/core/datatypes/ab;)Lkik/core/datatypes/ab;
     .locals 9
 
     .prologue
     .line 377
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->g()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->g()Ljava/lang/String;
 
     move-result-object v0
 
@@ -923,16 +1000,16 @@
 
     .line 1670
     :cond_1
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->d()Ljava/lang/String;
 
     move-result-object v0
 
     .line 1671
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->a()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->a()Ljava/lang/String;
 
     move-result-object v2
 
@@ -944,7 +1021,7 @@
 
     add-int/lit8 v2, v2, 0x1
 
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->a()Ljava/lang/String;
 
     move-result-object v3
 
@@ -971,33 +1048,33 @@
 
     .line 1675
     :cond_2
-    invoke-virtual {p0, p1}, Lcom/kik/android/stickers/c;->c(Lkik/core/datatypes/y;)V
+    invoke-virtual {p0, p1}, Lcom/kik/android/stickers/c;->c(Lkik/core/datatypes/ab;)V
 
     .line 1677
-    invoke-virtual {p1, v1}, Lkik/core/datatypes/y;->a(Ljava/lang/String;)V
+    invoke-virtual {p1, v1}, Lkik/core/datatypes/ab;->a(Ljava/lang/String;)V
 
     .line 1680
-    new-instance v0, Lkik/core/datatypes/y;
+    new-instance v0, Lkik/core/datatypes/ab;
 
-    invoke-direct {v0, p1}, Lkik/core/datatypes/y;-><init>(Lkik/core/datatypes/y;)V
+    invoke-direct {v0, p1}, Lkik/core/datatypes/ab;-><init>(Lkik/core/datatypes/ab;)V
 
     .line 1681
     iget-object v1, p0, Lcom/kik/android/stickers/c;->e:Ljava/util/Map;
 
-    invoke-virtual {v0}, Lkik/core/datatypes/y;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/ab;->d()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 1682
-    invoke-direct {p0, v0}, Lcom/kik/android/stickers/c;->g(Lkik/core/datatypes/y;)V
+    invoke-direct {p0, v0}, Lcom/kik/android/stickers/c;->g(Lkik/core/datatypes/ab;)V
 
     .line 382
     :cond_3
     new-instance v0, Ljava/util/ArrayList;
 
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->b()Ljava/util/List;
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->b()Ljava/util/List;
 
     move-result-object v1
 
@@ -1020,12 +1097,12 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/datatypes/x;
+    check-cast v0, Lkik/core/datatypes/aa;
 
     .line 384
     if-eqz v0, :cond_5
 
-    invoke-virtual {v0}, Lkik/core/datatypes/x;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/aa;->c()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1037,15 +1114,15 @@
 
     .line 385
     :cond_5
-    invoke-virtual {p1, v0}, Lkik/core/datatypes/y;->a(Lkik/core/datatypes/x;)V
+    invoke-virtual {p1, v0}, Lkik/core/datatypes/ab;->a(Lkik/core/datatypes/aa;)V
 
     goto :goto_1
 
     .line 388
     :cond_6
-    new-instance v0, Lkik/core/datatypes/y;
+    new-instance v0, Lkik/core/datatypes/ab;
 
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->c()I
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->c()I
 
     move-result v1
 
@@ -1053,27 +1130,27 @@
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->d()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->e()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->e()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->f()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->f()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->g()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->g()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->h()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->h()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->i()Z
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->i()Z
 
     move-result v7
 
@@ -1081,11 +1158,11 @@
 
     move-result-object v7
 
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->b()Ljava/util/List;
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->b()Ljava/util/List;
 
     move-result-object v8
 
-    invoke-direct/range {v0 .. v8}, Lkik/core/datatypes/y;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/util/List;)V
+    invoke-direct/range {v0 .. v8}, Lkik/core/datatypes/ab;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/util/List;)V
 
     goto/16 :goto_0
 .end method
@@ -1095,17 +1172,17 @@
 
     .prologue
     .line 55
-    .line 15201
-    invoke-static {p0}, Lcom/kik/android/stickers/f;->a(Lcom/kik/android/stickers/c;)Lcom/android/volley/h$b;
+    .line 14201
+    invoke-static {p0}, Lcom/kik/android/stickers/f;->a(Lcom/kik/android/stickers/c;)Lcom/android/volley/i$b;
 
     move-result-object v3
 
-    .line 15202
-    invoke-static {p0}, Lcom/kik/android/stickers/g;->a(Lcom/kik/android/stickers/c;)Lcom/android/volley/h$a;
+    .line 14202
+    invoke-static {p0}, Lcom/kik/android/stickers/g;->a(Lcom/kik/android/stickers/c;)Lcom/android/volley/i$a;
 
     move-result-object v4
 
-    .line 15204
+    .line 14204
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1126,27 +1203,27 @@
 
     move-result-object v1
 
-    .line 15206
-    new-instance v0, Lcom/kik/cache/DefaultStickersRequest;
+    .line 14206
+    new-instance v0, Lcom/kik/cache/l;
 
     const-string v2, "/v1/packs/default"
 
-    iget-object v5, p0, Lcom/kik/android/stickers/c;->n:Lkik/core/interfaces/ag;
+    iget-object v5, p0, Lcom/kik/android/stickers/c;->n:Lkik/core/interfaces/af;
 
     iget-object v6, p0, Lcom/kik/android/stickers/c;->m:Lkik/core/interfaces/e;
 
-    invoke-direct/range {v0 .. v6}, Lcom/kik/cache/DefaultStickersRequest;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/android/volley/h$b;Lcom/android/volley/h$a;Lkik/core/interfaces/ag;Lkik/core/interfaces/e;)V
+    invoke-direct/range {v0 .. v6}, Lcom/kik/cache/l;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/android/volley/i$b;Lcom/android/volley/i$a;Lkik/core/interfaces/af;Lkik/core/interfaces/e;)V
 
-    .line 15208
-    iget-object v1, p0, Lcom/kik/android/stickers/c;->o:Lcom/android/volley/g;
+    .line 14208
+    iget-object v1, p0, Lcom/kik/android/stickers/c;->o:Lcom/android/volley/h;
 
-    invoke-virtual {v1, v0}, Lcom/android/volley/g;->a(Lcom/android/volley/Request;)Lcom/android/volley/Request;
+    invoke-virtual {v1, v0}, Lcom/android/volley/h;->a(Lcom/android/volley/Request;)Lcom/android/volley/Request;
 
     .line 55
     return-void
 .end method
 
-.method private static f(Lkik/core/datatypes/y;)Ljava/lang/String;
+.method private static f(Lkik/core/datatypes/ab;)Ljava/lang/String;
     .locals 3
 
     .prologue
@@ -1159,7 +1236,7 @@
     move-result-object v0
 
     .line 495
-    invoke-virtual {p0}, Lkik/core/datatypes/y;->h()Ljava/lang/String;
+    invoke-virtual {p0}, Lkik/core/datatypes/ab;->h()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1233,7 +1310,7 @@
     return-object v0
 .end method
 
-.method private g(Lkik/core/datatypes/y;)V
+.method private g(Lkik/core/datatypes/ab;)V
     .locals 4
 
     .prologue
@@ -1246,44 +1323,24 @@
 
     .line 608
     :cond_0
-    iget-object v0, p0, Lcom/kik/android/stickers/c;->l:Lkik/core/e/f;
+    iget-object v0, p0, Lcom/kik/android/stickers/c;->l:Lkik/core/g/e;
 
     const-string v1, "sticker_pack"
 
-    invoke-static {p1}, Lcom/kik/android/stickers/c;->f(Lkik/core/datatypes/y;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/kik/android/stickers/c;->f(Lkik/core/datatypes/ab;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->j()Lcom/kik/xdata/model/mediatray/XStickerPack;
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->j()Lcom/kik/xdata/model/mediatray/XStickerPack;
 
     move-result-object v3
 
-    invoke-interface {v0, v1, v2, v3}, Lkik/core/e/f;->b(Ljava/lang/String;Ljava/lang/String;Lcom/dyuproject/protostuff/p;)Lcom/kik/events/Promise;
+    invoke-interface {v0, v1, v2, v3}, Lkik/core/g/e;->b(Ljava/lang/String;Ljava/lang/String;Lcom/dyuproject/protostuff/p;)Lcom/kik/events/Promise;
 
     goto :goto_0
 .end method
 
-.method static synthetic h(Lcom/kik/android/stickers/c;)V
-    .locals 2
-
-    .prologue
-    .line 0
-    .line 16193
-    iget-object v0, p0, Lcom/kik/android/stickers/c;->p:Lrx/subjects/PublishSubject;
-
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lrx/subjects/PublishSubject;->a(Ljava/lang/Object;)V
-
-    .line 0
-    return-void
-.end method
-
-.method private h(Lkik/core/datatypes/y;)V
+.method private h(Lkik/core/datatypes/ab;)V
     .locals 5
 
     .prologue
@@ -1314,7 +1371,7 @@
     .line 644
     iget-object v1, p0, Lcom/kik/android/stickers/c;->e:Ljava/util/Map;
 
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->d()Ljava/lang/String;
 
     move-result-object v3
 
@@ -1336,18 +1393,18 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/datatypes/y;
+    check-cast v0, Lkik/core/datatypes/ab;
 
     .line 648
     add-int/lit8 v3, v1, -0x1
 
     .line 650
-    invoke-virtual {v0, v3}, Lkik/core/datatypes/y;->a(I)V
+    invoke-virtual {v0, v3}, Lkik/core/datatypes/ab;->a(I)V
 
     .line 651
     iget-object v3, p0, Lcom/kik/android/stickers/c;->e:Ljava/util/Map;
 
-    invoke-virtual {v0}, Lkik/core/datatypes/y;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/ab;->d()Ljava/lang/String;
 
     move-result-object v4
 
@@ -1367,29 +1424,12 @@
     goto :goto_0
 .end method
 
-.method static synthetic i(Lcom/kik/android/stickers/c;)V
-    .locals 1
-
-    .prologue
-    .line 0
-    .line 16244
-    invoke-direct {p0}, Lcom/kik/android/stickers/c;->l()V
-
-    .line 16245
-    iget-object v0, p0, Lcom/kik/android/stickers/c;->u:Lrx/subjects/PublishSubject;
-
-    invoke-virtual {v0}, Lrx/subjects/PublishSubject;->b()V
-
-    .line 0
-    return-void
-.end method
-
-.method private i(Lkik/core/datatypes/y;)V
+.method private i(Lkik/core/datatypes/ab;)V
     .locals 5
 
     .prologue
     .line 698
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->c()I
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->c()I
 
     move-result v0
 
@@ -1430,18 +1470,18 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/datatypes/y;
+    check-cast v0, Lkik/core/datatypes/ab;
 
     .line 706
     add-int/lit8 v3, v2, 0x1
 
     .line 708
-    invoke-virtual {v0, v3}, Lkik/core/datatypes/y;->a(I)V
+    invoke-virtual {v0, v3}, Lkik/core/datatypes/ab;->a(I)V
 
     .line 709
     iget-object v3, p0, Lcom/kik/android/stickers/c;->e:Ljava/util/Map;
 
-    invoke-virtual {v0}, Lkik/core/datatypes/y;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/ab;->d()Ljava/lang/String;
 
     move-result-object v4
 
@@ -1456,7 +1496,7 @@
 
     .line 698
     :cond_0
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->c()I
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->c()I
 
     move-result v0
 
@@ -1470,12 +1510,12 @@
 
     .line 712
     :cond_2
-    invoke-virtual {p1, v1}, Lkik/core/datatypes/y;->a(I)V
+    invoke-virtual {p1, v1}, Lkik/core/datatypes/ab;->a(I)V
 
     .line 713
     iget-object v0, p0, Lcom/kik/android/stickers/c;->e:Ljava/util/Map;
 
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->d()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1485,34 +1525,6 @@
     invoke-direct {p0}, Lcom/kik/android/stickers/c;->l()V
 
     .line 716
-    return-void
-.end method
-
-.method static synthetic j(Lcom/kik/android/stickers/c;)V
-    .locals 2
-
-    .prologue
-    .line 0
-    .line 16290
-    iget-object v0, p0, Lcom/kik/android/stickers/c;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/kik/android/stickers/c;->j:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
-
-    move-result v1
-
-    if-ne v0, v1, :cond_0
-
-    .line 16291
-    invoke-direct {p0}, Lcom/kik/android/stickers/c;->k()V
-
-    .line 0
-    :cond_0
     return-void
 .end method
 
@@ -1541,12 +1553,12 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/datatypes/y;
+    check-cast v0, Lkik/core/datatypes/ab;
 
     .line 301
     iget-object v1, p0, Lcom/kik/android/stickers/c;->e:Ljava/util/Map;
 
-    invoke-virtual {v0}, Lkik/core/datatypes/y;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/ab;->d()Ljava/lang/String;
 
     move-result-object v3
 
@@ -1554,17 +1566,17 @@
 
     move-result-object v1
 
-    check-cast v1, Lkik/core/datatypes/y;
+    check-cast v1, Lkik/core/datatypes/ab;
 
     .line 303
-    invoke-virtual {v0, v1}, Lkik/core/datatypes/y;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Lkik/core/datatypes/ab;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
     .line 304
-    invoke-direct {p0, v0}, Lcom/kik/android/stickers/c;->e(Lkik/core/datatypes/y;)Lkik/core/datatypes/y;
+    invoke-direct {p0, v0}, Lcom/kik/android/stickers/c;->e(Lkik/core/datatypes/ab;)Lkik/core/datatypes/ab;
 
     move-result-object v0
 
@@ -1574,7 +1586,7 @@
     .line 306
     iget-object v1, p0, Lcom/kik/android/stickers/c;->e:Ljava/util/Map;
 
-    invoke-virtual {v0}, Lkik/core/datatypes/y;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/ab;->d()Ljava/lang/String;
 
     move-result-object v3
 
@@ -1609,7 +1621,7 @@
 
     .prologue
     .line 405
-    invoke-static {}, Lcom/kik/android/stickers/j;->a()Lcom/google/common/base/Predicate;
+    invoke-static {}, Lcom/kik/android/stickers/j;->a()Lcom/google/common/base/i;
 
     move-result-object v0
 
@@ -1642,7 +1654,7 @@
 
     iget-object v2, p0, Lcom/kik/android/stickers/c;->f:Ljava/util/ArrayList;
 
-    invoke-static {v2, v0}, Lcom/google/common/collect/e;->a(Ljava/util/Collection;Lcom/google/common/base/Predicate;)Ljava/util/Collection;
+    invoke-static {v2, v0}, Lcom/google/common/collect/f;->a(Ljava/util/Collection;Lcom/google/common/base/i;)Ljava/util/Collection;
 
     move-result-object v0
 
@@ -1688,20 +1700,20 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/datatypes/y;
+    check-cast v0, Lkik/core/datatypes/ab;
 
     .line 724
     const-string v3, "sticker_pack"
 
-    invoke-static {v0}, Lcom/kik/android/stickers/c;->f(Lkik/core/datatypes/y;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/kik/android/stickers/c;->f(Lkik/core/datatypes/ab;)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {v0}, Lkik/core/datatypes/y;->j()Lcom/kik/xdata/model/mediatray/XStickerPack;
+    invoke-virtual {v0}, Lkik/core/datatypes/ab;->j()Lcom/kik/xdata/model/mediatray/XStickerPack;
 
     move-result-object v0
 
-    invoke-static {v3, v4, v0}, Lkik/core/datatypes/ab;->a(Ljava/lang/String;Ljava/lang/String;Lcom/dyuproject/protostuff/p;)Lkik/core/datatypes/ab;
+    invoke-static {v3, v4, v0}, Lkik/core/datatypes/ae;->a(Ljava/lang/String;Ljava/lang/String;Lcom/dyuproject/protostuff/p;)Lkik/core/datatypes/ae;
 
     move-result-object v0
 
@@ -1711,9 +1723,9 @@
 
     .line 727
     :cond_0
-    iget-object v0, p0, Lcom/kik/android/stickers/c;->l:Lkik/core/e/f;
+    iget-object v0, p0, Lcom/kik/android/stickers/c;->l:Lkik/core/g/e;
 
-    invoke-interface {v0, v1}, Lkik/core/e/f;->b(Ljava/util/List;)Ljava/util/List;
+    invoke-interface {v0, v1}, Lkik/core/g/e;->b(Ljava/util/List;)Ljava/util/List;
 
     .line 728
     return-void
@@ -1721,7 +1733,7 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Lkik/core/datatypes/y;
+.method public final a(Ljava/lang/String;)Lkik/core/datatypes/ab;
     .locals 1
 
     .prologue
@@ -1732,17 +1744,17 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/datatypes/y;
+    check-cast v0, Lkik/core/datatypes/ab;
 
     return-object v0
 .end method
 
-.method public final a()Lrx/d;
+.method public final a()Lrx/c;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lrx/d",
+            "Lrx/c",
             "<",
             "Ljava/lang/Integer;",
             ">;"
@@ -1769,7 +1781,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/datatypes/y;
+    check-cast v0, Lkik/core/datatypes/ab;
 
     .line 4394
     iget-object v1, p0, Lcom/kik/android/stickers/c;->f:Ljava/util/ArrayList;
@@ -1779,18 +1791,18 @@
 
     move-result-object v1
 
-    check-cast v1, Lkik/core/datatypes/y;
+    check-cast v1, Lkik/core/datatypes/ab;
 
     .line 627
-    invoke-virtual {v0, p2}, Lkik/core/datatypes/y;->a(I)V
+    invoke-virtual {v0, p2}, Lkik/core/datatypes/ab;->a(I)V
 
     .line 628
-    invoke-virtual {v1, p1}, Lkik/core/datatypes/y;->a(I)V
+    invoke-virtual {v1, p1}, Lkik/core/datatypes/ab;->a(I)V
 
     .line 629
     iget-object v2, p0, Lcom/kik/android/stickers/c;->e:Ljava/util/Map;
 
-    invoke-virtual {v0}, Lkik/core/datatypes/y;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/ab;->d()Ljava/lang/String;
 
     move-result-object v3
 
@@ -1799,7 +1811,7 @@
     .line 630
     iget-object v0, p0, Lcom/kik/android/stickers/c;->e:Ljava/util/Map;
 
-    invoke-virtual {v1}, Lkik/core/datatypes/y;->d()Ljava/lang/String;
+    invoke-virtual {v1}, Lkik/core/datatypes/ab;->d()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1824,12 +1836,12 @@
 
     .prologue
     .line 166
-    invoke-static {p0}, Lcom/kik/android/stickers/d;->a(Lcom/kik/android/stickers/c;)Lcom/android/volley/h$b;
+    invoke-static {p0}, Lcom/kik/android/stickers/d;->a(Lcom/kik/android/stickers/c;)Lcom/android/volley/i$b;
 
     move-result-object v6
 
     .line 167
-    invoke-static {p0}, Lcom/kik/android/stickers/e;->a(Lcom/kik/android/stickers/c;)Lcom/android/volley/h$a;
+    invoke-static {p0}, Lcom/kik/android/stickers/e;->a(Lcom/kik/android/stickers/c;)Lcom/android/volley/i$a;
 
     move-result-object v7
 
@@ -1870,13 +1882,13 @@
 
     .line 174
     :try_start_0
-    iget-object v1, p0, Lcom/kik/android/stickers/c;->n:Lkik/core/interfaces/ag;
+    iget-object v1, p0, Lcom/kik/android/stickers/c;->n:Lkik/core/interfaces/af;
 
-    invoke-interface {v1}, Lkik/core/interfaces/ag;->d()Lkik/core/datatypes/aa;
+    invoke-interface {v1}, Lkik/core/interfaces/af;->d()Lkik/core/datatypes/ad;
 
     move-result-object v1
 
-    iget-object v1, v1, Lkik/core/datatypes/aa;->c:Ljava/lang/String;
+    iget-object v1, v1, Lkik/core/datatypes/ad;->c:Ljava/lang/String;
 
     .line 175
     new-instance v5, Lorg/json/JSONObject;
@@ -1899,14 +1911,14 @@
     move-result-object v0
 
     .line 178
-    new-instance v1, Lcom/kik/cache/NewStickerPacksRequest;
+    new-instance v1, Lcom/kik/cache/ae;
 
-    invoke-direct {v1, v0, v2, v6, v7}, Lcom/kik/cache/NewStickerPacksRequest;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/android/volley/h$b;Lcom/android/volley/h$a;)V
+    invoke-direct {v1, v0, v2, v6, v7}, Lcom/kik/cache/ae;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/android/volley/i$b;Lcom/android/volley/i$a;)V
 
     .line 179
-    iget-object v0, p0, Lcom/kik/android/stickers/c;->o:Lcom/android/volley/g;
+    iget-object v0, p0, Lcom/kik/android/stickers/c;->o:Lcom/android/volley/h;
 
-    invoke-virtual {v0, v1}, Lcom/android/volley/g;->a(Lcom/android/volley/Request;)Lcom/android/volley/Request;
+    invoke-virtual {v0, v1}, Lcom/android/volley/h;->a(Lcom/android/volley/Request;)Lcom/android/volley/Request;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1914,13 +1926,16 @@
     :goto_0
     return-void
 
+    .line 182
     :catch_0
     move-exception v0
+
+    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method
 
-.method public final a(Lkik/core/datatypes/x;)V
+.method public final a(Lkik/core/datatypes/aa;)V
     .locals 4
 
     .prologue
@@ -1946,13 +1961,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/datatypes/x;
+    check-cast v0, Lkik/core/datatypes/aa;
 
-    invoke-virtual {v0}, Lkik/core/datatypes/x;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/aa;->c()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lkik/core/datatypes/x;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/aa;->c()Ljava/lang/String;
 
     move-result-object v3
 
@@ -1985,12 +2000,12 @@
     goto :goto_0
 .end method
 
-.method public final a(Lkik/core/datatypes/y;)V
+.method public final a(Lkik/core/datatypes/ab;)V
     .locals 2
 
     .prologue
     .line 361
-    invoke-direct {p0, p1}, Lcom/kik/android/stickers/c;->e(Lkik/core/datatypes/y;)Lkik/core/datatypes/y;
+    invoke-direct {p0, p1}, Lcom/kik/android/stickers/c;->e(Lkik/core/datatypes/ab;)Lkik/core/datatypes/ab;
 
     move-result-object v0
 
@@ -1998,7 +2013,7 @@
     if-eqz v0, :cond_0
 
     .line 364
-    invoke-direct {p0, v0}, Lcom/kik/android/stickers/c;->i(Lkik/core/datatypes/y;)V
+    invoke-direct {p0, v0}, Lcom/kik/android/stickers/c;->i(Lkik/core/datatypes/ab;)V
 
     .line 365
     iget-object v0, p0, Lcom/kik/android/stickers/c;->s:Lrx/subjects/PublishSubject;
@@ -2019,12 +2034,12 @@
     return-void
 .end method
 
-.method public final b()Lrx/d;
+.method public final b()Lrx/c;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lrx/d",
+            "Lrx/c",
             "<",
             "Ljava/lang/Integer;",
             ">;"
@@ -2043,20 +2058,20 @@
 
     .prologue
     .line 599
-    invoke-static {p1}, Lcom/kik/util/cp;->a(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/kik/util/bl;->a(Ljava/lang/String;)Z
 
     .line 600
     return-void
 .end method
 
-.method public final b(Lkik/core/datatypes/y;)V
+.method public final b(Lkik/core/datatypes/ab;)V
     .locals 2
 
     .prologue
     const/4 v1, 0x1
 
     .line 417
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->i()Z
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->i()Z
 
     move-result v0
 
@@ -2065,13 +2080,13 @@
     move v0, v1
 
     :goto_0
-    invoke-virtual {p1, v0}, Lkik/core/datatypes/y;->a(Z)V
+    invoke-virtual {p1, v0}, Lkik/core/datatypes/ab;->a(Z)V
 
     .line 420
-    invoke-direct {p0, p1}, Lcom/kik/android/stickers/c;->h(Lkik/core/datatypes/y;)V
+    invoke-direct {p0, p1}, Lcom/kik/android/stickers/c;->h(Lkik/core/datatypes/ab;)V
 
     .line 423
-    invoke-virtual {p1}, Lkik/core/datatypes/y;->i()Z
+    invoke-virtual {p1}, Lkik/core/datatypes/ab;->i()Z
 
     move-result v0
 
@@ -2087,10 +2102,10 @@
 
     .line 426
     :cond_0
-    invoke-virtual {p1, v1}, Lkik/core/datatypes/y;->a(I)V
+    invoke-virtual {p1, v1}, Lkik/core/datatypes/ab;->a(I)V
 
     .line 428
-    invoke-direct {p0, p1}, Lcom/kik/android/stickers/c;->i(Lkik/core/datatypes/y;)V
+    invoke-direct {p0, p1}, Lcom/kik/android/stickers/c;->i(Lkik/core/datatypes/ab;)V
 
     .line 429
     iget v0, p0, Lcom/kik/android/stickers/c;->k:I
@@ -2109,12 +2124,12 @@
     goto :goto_0
 .end method
 
-.method public final c()Lrx/d;
+.method public final c()Lrx/c;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lrx/d",
+            "Lrx/c",
             "<",
             "Ljava/lang/Boolean;",
             ">;"
@@ -2128,7 +2143,7 @@
     return-object v0
 .end method
 
-.method public final c(Lkik/core/datatypes/y;)V
+.method public final c(Lkik/core/datatypes/ab;)V
     .locals 4
 
     .prologue
@@ -2141,30 +2156,30 @@
 
     .line 664
     :cond_0
-    invoke-direct {p0, p1}, Lcom/kik/android/stickers/c;->h(Lkik/core/datatypes/y;)V
+    invoke-direct {p0, p1}, Lcom/kik/android/stickers/c;->h(Lkik/core/datatypes/ab;)V
 
     .line 665
-    iget-object v0, p0, Lcom/kik/android/stickers/c;->l:Lkik/core/e/f;
+    iget-object v0, p0, Lcom/kik/android/stickers/c;->l:Lkik/core/g/e;
 
     const-string v1, "sticker_pack"
 
-    invoke-static {p1}, Lcom/kik/android/stickers/c;->f(Lkik/core/datatypes/y;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/kik/android/stickers/c;->f(Lkik/core/datatypes/ab;)Ljava/lang/String;
 
     move-result-object v2
 
     const/4 v3, 0x0
 
-    invoke-interface {v0, v1, v2, v3}, Lkik/core/e/f;->b(Ljava/lang/String;Ljava/lang/String;Lcom/dyuproject/protostuff/p;)Lcom/kik/events/Promise;
+    invoke-interface {v0, v1, v2, v3}, Lkik/core/g/e;->b(Ljava/lang/String;Ljava/lang/String;Lcom/dyuproject/protostuff/p;)Lcom/kik/events/Promise;
 
     goto :goto_0
 .end method
 
-.method public final d()Lrx/d;
+.method public final d()Lrx/c;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lrx/d",
+            "Lrx/c",
             "<",
             "Ljava/lang/Boolean;",
             ">;"
@@ -2188,12 +2203,12 @@
     return-object v0
 .end method
 
-.method public final f()Lrx/d;
+.method public final f()Lrx/c;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lrx/d",
+            "Lrx/c",
             "<",
             "Ljava/lang/Integer;",
             ">;"
@@ -2241,20 +2256,20 @@
     .line 459
     const-string v0, "recents"
 
-    invoke-virtual {p0, v0}, Lcom/kik/android/stickers/c;->a(Ljava/lang/String;)Lkik/core/datatypes/y;
+    invoke-virtual {p0, v0}, Lcom/kik/android/stickers/c;->a(Ljava/lang/String;)Lkik/core/datatypes/ab;
 
     move-result-object v0
 
     .line 460
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Lkik/core/datatypes/y;->b()Ljava/util/List;
+    invoke-virtual {v0}, Lkik/core/datatypes/ab;->b()Ljava/util/List;
 
     move-result-object v1
 
     if-eqz v1, :cond_3
 
-    invoke-virtual {v0}, Lkik/core/datatypes/y;->b()Ljava/util/List;
+    invoke-virtual {v0}, Lkik/core/datatypes/ab;->b()Ljava/util/List;
 
     move-result-object v8
 
@@ -2281,9 +2296,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/datatypes/x;
+    check-cast v0, Lkik/core/datatypes/aa;
 
-    invoke-virtual {v0}, Lkik/core/datatypes/x;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/aa;->c()Ljava/lang/String;
 
     move-result-object v7
 
@@ -2293,9 +2308,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/datatypes/x;
+    check-cast v0, Lkik/core/datatypes/aa;
 
-    invoke-virtual {v0}, Lkik/core/datatypes/x;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/aa;->c()Ljava/lang/String;
 
     move-result-object v0
 
@@ -2386,7 +2401,7 @@
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     .line 485
-    new-instance v0, Lkik/core/datatypes/y;
+    new-instance v0, Lkik/core/datatypes/ab;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2406,7 +2421,7 @@
 
     move-object v6, v4
 
-    invoke-direct/range {v0 .. v8}, Lkik/core/datatypes/y;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/util/List;)V
+    invoke-direct/range {v0 .. v8}, Lkik/core/datatypes/ab;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/util/List;)V
 
     .line 486
     iget-object v1, p0, Lcom/kik/android/stickers/c;->e:Ljava/util/Map;
@@ -2416,7 +2431,7 @@
     invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 487
-    invoke-direct {p0, v0}, Lcom/kik/android/stickers/c;->g(Lkik/core/datatypes/y;)V
+    invoke-direct {p0, v0}, Lcom/kik/android/stickers/c;->g(Lkik/core/datatypes/ab;)V
 
     goto/16 :goto_0
 .end method

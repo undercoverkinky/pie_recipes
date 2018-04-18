@@ -31,26 +31,26 @@
     .locals 2
 
     .prologue
-    .line 132
+    .line 130
     invoke-direct {p0}, Landroid/support/v7/widget/RecyclerView$ItemDecoration;-><init>()V
 
-    .line 133
+    .line 131
     iput-object p2, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$b;->b:[I
 
-    .line 134
+    .line 132
     iput-object p3, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$b;->c:[I
 
-    .line 135
+    .line 133
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$b;->d:Z
 
-    .line 136
+    .line 134
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f02037d
+    const v1, 0x7f020345
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -58,10 +58,10 @@
 
     iput-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$b;->a:Landroid/graphics/drawable/Drawable;
 
-    .line 137
+    .line 135
     iput p4, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$b;->e:I
 
-    .line 138
+    .line 136
     return-void
 .end method
 
@@ -71,12 +71,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 197
+    .line 195
     iget-boolean v1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$b;->d:Z
 
     if-nez v1, :cond_1
 
-    invoke-virtual {p2}, Landroid/support/v7/widget/RecyclerView$State;->getItemCount()I
+    invoke-virtual {p2}, Landroid/support/v7/widget/RecyclerView$State;->e()I
 
     move-result v1
 
@@ -84,12 +84,12 @@
 
     if-ne p1, v1, :cond_1
 
-    .line 206
+    .line 204
     :cond_0
     :goto_0
     return v0
 
-    .line 201
+    .line 199
     :cond_1
     iget-object v2, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$b;->b:[I
 
@@ -102,15 +102,15 @@
 
     aget v4, v2, v1
 
-    .line 202
+    .line 200
     if-eq v4, p1, :cond_0
 
-    .line 201
+    .line 199
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 206
+    .line 204
     :cond_2
     const/4 v0, 0x1
 
@@ -125,15 +125,15 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 158
+    .line 156
     invoke-super {p0, p1, p2, p3}, Landroid/support/v7/widget/RecyclerView$ItemDecoration;->a(Landroid/graphics/Canvas;Landroid/support/v7/widget/RecyclerView;Landroid/support/v7/widget/RecyclerView$State;)V
 
-    .line 1221
+    .line 1219
     invoke-virtual {p2}, Landroid/support/v7/widget/RecyclerView;->getPaddingLeft()I
 
     move-result v2
 
-    .line 1226
+    .line 1224
     invoke-virtual {p2}, Landroid/support/v7/widget/RecyclerView;->getWidth()I
 
     move-result v0
@@ -144,35 +144,35 @@
 
     sub-int v5, v0, v1
 
-    .line 161
+    .line 159
     invoke-virtual {p2}, Landroid/support/v7/widget/RecyclerView;->getChildCount()I
 
     move-result v6
 
     move v3, v4
 
-    .line 162
+    .line 160
     :goto_0
     if-ge v3, v6, :cond_3
 
-    .line 163
+    .line 161
     invoke-virtual {p2, v3}, Landroid/support/v7/widget/RecyclerView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v7
 
-    .line 164
-    invoke-virtual {p2, v7}, Landroid/support/v7/widget/RecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
+    .line 162
+    invoke-virtual {p2, v7}, Landroid/support/v7/widget/RecyclerView;->c(Landroid/view/View;)I
 
     move-result v1
 
-    .line 165
+    .line 163
     invoke-direct {p0, v1, p3}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$b;->a(ILandroid/support/v7/widget/RecyclerView$State;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2211
+    .line 2209
     iget-object v8, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$b;->c:[I
 
     array-length v9, v8
@@ -184,23 +184,23 @@
 
     aget v10, v8, v0
 
-    .line 2212
+    .line 2210
     if-ne v1, v10, :cond_1
 
     move v0, v4
 
-    .line 167
+    .line 165
     :goto_2
     if-eqz v0, :cond_4
 
-    .line 168
+    .line 166
     iget v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$b;->e:I
 
     add-int/2addr v0, v2
 
     move v1, v0
 
-    .line 171
+    .line 169
     :goto_3
     invoke-virtual {v7}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -208,7 +208,7 @@
 
     check-cast v0, Landroid/support/v7/widget/RecyclerView$LayoutParams;
 
-    .line 172
+    .line 170
     invoke-virtual {v7}, Landroid/view/View;->getBottom()I
 
     move-result v8
@@ -217,7 +217,7 @@
 
     add-int/2addr v0, v8
 
-    .line 173
+    .line 171
     invoke-static {v7}, Landroid/support/v4/view/ViewCompat;->getTranslationY(Landroid/view/View;)F
 
     move-result v8
@@ -228,7 +228,7 @@
 
     add-int/2addr v0, v8
 
-    .line 174
+    .line 172
     iget-object v8, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$b;->a:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v8}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
@@ -237,12 +237,12 @@
 
     add-int/2addr v8, v0
 
-    .line 175
+    .line 173
     iget-object v9, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$b;->a:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v9, v1, v0, v5, v8}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 176
+    .line 174
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$b;->a:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v7}, Landroid/view/View;->getAlpha()F
@@ -257,12 +257,12 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 177
+    .line 175
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$b;->a:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 162
+    .line 160
     :cond_0
     add-int/lit8 v0, v3, 0x1
 
@@ -270,19 +270,19 @@
 
     goto :goto_0
 
-    .line 2211
+    .line 2209
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 2216
+    .line 2214
     :cond_2
     const/4 v0, 0x1
 
     goto :goto_2
 
-    .line 180
+    .line 178
     :cond_3
     return-void
 
@@ -298,22 +298,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 185
+    .line 183
     invoke-super {p0, p1, p2, p3, p4}, Landroid/support/v7/widget/RecyclerView$ItemDecoration;->a(Landroid/graphics/Rect;Landroid/view/View;Landroid/support/v7/widget/RecyclerView;Landroid/support/v7/widget/RecyclerView$State;)V
 
-    .line 186
-    invoke-virtual {p3, p2}, Landroid/support/v7/widget/RecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
+    .line 184
+    invoke-virtual {p3, p2}, Landroid/support/v7/widget/RecyclerView;->c(Landroid/view/View;)I
 
     move-result v0
 
-    .line 187
+    .line 185
     invoke-direct {p0, v0, p4}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$b;->a(ILandroid/support/v7/widget/RecyclerView$State;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 188
+    .line 186
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$b;->a:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
@@ -322,11 +322,11 @@
 
     invoke-virtual {p1, v1, v1, v1, v0}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 193
+    .line 191
     :goto_0
     return-void
 
-    .line 191
+    .line 189
     :cond_0
     invoke-virtual {p1, v1, v1, v1, v1}, Landroid/graphics/Rect;->set(IIII)V
 
@@ -337,9 +337,9 @@
     .locals 0
 
     .prologue
-    .line 147
+    .line 145
     iput-object p1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$b;->b:[I
 
-    .line 148
+    .line 146
     return-void
 .end method

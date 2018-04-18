@@ -188,7 +188,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lio/fabric/sdk/android/h;->o()Ljava/lang/String;
+    invoke-virtual {p0}, Lio/fabric/sdk/android/h;->q()Ljava/lang/String;
 
     move-result-object v2
 
@@ -206,10 +206,7 @@
     return-void
 .end method
 
-.method public abstract b()Ljava/lang/String;
-.end method
-
-.method protected b_()Z
+.method protected a_()Z
     .locals 1
 
     .prologue
@@ -217,6 +214,9 @@
     const/4 v0, 0x1
 
     return v0
+.end method
+
+.method public abstract b()Ljava/lang/String;
 .end method
 
 .method public synthetic compareTo(Ljava/lang/Object;)I
@@ -304,7 +304,7 @@
     .end annotation
 .end method
 
-.method final k()V
+.method final m()V
     .locals 5
 
     .prologue
@@ -333,7 +333,7 @@
     return-void
 .end method
 
-.method protected final l()Lio/fabric/sdk/android/services/common/IdManager;
+.method protected final n()Lio/fabric/sdk/android/services/common/IdManager;
     .locals 1
 
     .prologue
@@ -343,7 +343,7 @@
     return-object v0
 .end method
 
-.method public final m()Landroid/content/Context;
+.method public final o()Landroid/content/Context;
     .locals 1
 
     .prologue
@@ -353,7 +353,7 @@
     return-object v0
 .end method
 
-.method public final n()Lio/fabric/sdk/android/c;
+.method public final p()Lio/fabric/sdk/android/c;
     .locals 1
 
     .prologue
@@ -363,7 +363,7 @@
     return-object v0
 .end method
 
-.method public final o()Ljava/lang/String;
+.method public final q()Ljava/lang/String;
     .locals 2
 
     .prologue
@@ -395,7 +395,7 @@
     return-object v0
 .end method
 
-.method protected final p()Ljava/util/Collection;
+.method protected final r()Ljava/util/Collection;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {

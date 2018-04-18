@@ -15,5 +15,8 @@
 
 
 # virtual methods
+.method public abstract getScaledPagingTouchSlop(Landroid/view/ViewConfiguration;)I
+.end method
+
 .method public abstract hasPermanentMenuKey(Landroid/view/ViewConfiguration;)Z
 .end method

@@ -32,10 +32,6 @@
 
 
 # instance fields
-.field private adaptiveCardAttachment_:Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;
-
-.field private carouselMessageAttachment_:Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;
-
 .field private keyboardAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
 .field private keyboardReplyAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
@@ -44,11 +40,7 @@
 
 .field private mentionReplyAttachment_:Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
 
-.field private textMarkdownAttachment_:Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;
-
 .field private visibilityRulesAttachment_:Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
-
-.field private widgetAttachment_:Lcom/kik/messagepath/model/Widgets$WidgetAttachment;
 
 
 # direct methods
@@ -56,14 +48,14 @@
     .locals 1
 
     .prologue
-    .line 2626
+    .line 1518
     new-instance v0, Lcom/kik/messagepath/model/CoreMessage;
 
     invoke-direct {v0}, Lcom/kik/messagepath/model/CoreMessage;-><init>()V
 
     sput-object v0, Lcom/kik/messagepath/model/CoreMessage;->a:Lcom/kik/messagepath/model/CoreMessage;
 
-    .line 2634
+    .line 1526
     new-instance v0, Lcom/kik/messagepath/model/CoreMessage$1;
 
     invoke-direct {v0}, Lcom/kik/messagepath/model/CoreMessage$1;-><init>()V
@@ -80,7 +72,7 @@
     .line 24
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageV3;-><init>()V
 
-    .line 554
+    .line 322
     const/4 v0, -0x1
 
     iput-byte v0, p0, Lcom/kik/messagepath/model/CoreMessage;->memoizedIsInitialized:B
@@ -144,14 +136,14 @@
 
     .line 54
     :sswitch_1
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->carouselMessageAttachment_:Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;
+    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->visibilityRulesAttachment_:Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_5
 
     .line 55
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->carouselMessageAttachment_:Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;
+    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->visibilityRulesAttachment_:Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
 
-    invoke-virtual {v0}, Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;->toBuilder()Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment$a;
+    invoke-virtual {v0}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->g()Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment$a;
 
     move-result-object v0
 
@@ -159,7 +151,7 @@
 
     .line 57
     :goto_1
-    invoke-static {}, Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;->parser()Lcom/google/protobuf/Parser;
+    invoke-static {}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->i()Lcom/google/protobuf/Parser;
 
     move-result-object v0
 
@@ -167,24 +159,24 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;
+    check-cast v0, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
 
-    iput-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->carouselMessageAttachment_:Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;
+    iput-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->visibilityRulesAttachment_:Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
 
     .line 58
     if-eqz v1, :cond_0
 
     .line 59
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->carouselMessageAttachment_:Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;
+    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->visibilityRulesAttachment_:Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
 
-    invoke-virtual {v1, v0}, Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment$a;->a(Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;)Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment$a;
+    invoke-virtual {v1, v0}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment$a;->a(Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;)Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment$a;
 
     .line 60
-    invoke-virtual {v1}, Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment$a;->a()Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;
+    invoke-virtual {v1}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment$a;->a()Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->carouselMessageAttachment_:Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;
+    iput-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->visibilityRulesAttachment_:Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
     :try_end_0
     .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
@@ -192,7 +184,7 @@
 
     goto :goto_0
 
-    .line 159
+    .line 107
     :catch_0
     move-exception v0
 
@@ -205,26 +197,25 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 164
+    .line 112
     :catchall_0
     move-exception v0
 
     invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->makeExtensionsImmutable()V
 
-    .line 165
     throw v0
 
     .line 67
     :sswitch_2
     :try_start_2
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->visibilityRulesAttachment_:Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
+    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->mentionReplyAttachment_:Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_4
 
     .line 68
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->visibilityRulesAttachment_:Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
+    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->mentionReplyAttachment_:Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
 
-    invoke-virtual {v0}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->toBuilder()Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment$a;
+    invoke-virtual {v0}, Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;->c()Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment$a;
 
     move-result-object v0
 
@@ -232,77 +223,7 @@
 
     .line 70
     :goto_2
-    invoke-static {}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->parser()Lcom/google/protobuf/Parser;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0, p2}, Lcom/google/protobuf/CodedInputStream;->readMessage(Lcom/google/protobuf/Parser;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
-
-    iput-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->visibilityRulesAttachment_:Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
-
-    .line 71
-    if-eqz v1, :cond_0
-
-    .line 72
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->visibilityRulesAttachment_:Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
-
-    invoke-virtual {v1, v0}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment$a;->a(Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;)Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment$a;
-
-    .line 73
-    invoke-virtual {v1}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment$a;->a()Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->visibilityRulesAttachment_:Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
-    :try_end_2
-    .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_2 .. :try_end_2} :catch_0
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    goto :goto_0
-
-    .line 160
-    :catch_1
-    move-exception v0
-
-    .line 161
-    :try_start_3
-    new-instance v1, Lcom/google/protobuf/InvalidProtocolBufferException;
-
-    invoke-direct {v1, v0}, Lcom/google/protobuf/InvalidProtocolBufferException;-><init>(Ljava/io/IOException;)V
-
-    .line 162
-    invoke-virtual {v1, p0}, Lcom/google/protobuf/InvalidProtocolBufferException;->setUnfinishedMessage(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/InvalidProtocolBufferException;
-
-    move-result-object v0
-
-    throw v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    .line 80
-    :sswitch_3
-    :try_start_4
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->mentionReplyAttachment_:Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
-
-    if-eqz v0, :cond_7
-
-    .line 81
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->mentionReplyAttachment_:Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
-
-    invoke-virtual {v0}, Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;->toBuilder()Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment$a;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    .line 83
-    :goto_3
-    invoke-static {}, Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;->parser()Lcom/google/protobuf/Parser;
+    invoke-static {}, Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;->e()Lcom/google/protobuf/Parser;
 
     move-result-object v0
 
@@ -314,41 +235,65 @@
 
     iput-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->mentionReplyAttachment_:Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
 
-    .line 84
+    .line 71
     if-eqz v1, :cond_0
 
-    .line 85
+    .line 72
     iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->mentionReplyAttachment_:Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
 
     invoke-virtual {v1, v0}, Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment$a;->a(Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;)Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment$a;
 
-    .line 86
+    .line 73
     invoke-virtual {v1}, Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment$a;->a()Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->mentionReplyAttachment_:Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
+    :try_end_2
+    .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_2 .. :try_end_2} :catch_0
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    goto/16 :goto_0
+    goto :goto_0
 
-    .line 93
-    :sswitch_4
+    .line 108
+    :catch_1
+    move-exception v0
+
+    .line 109
+    :try_start_3
+    new-instance v1, Lcom/google/protobuf/InvalidProtocolBufferException;
+
+    invoke-direct {v1, v0}, Lcom/google/protobuf/InvalidProtocolBufferException;-><init>(Ljava/io/IOException;)V
+
+    .line 110
+    invoke-virtual {v1, p0}, Lcom/google/protobuf/InvalidProtocolBufferException;->setUnfinishedMessage(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/InvalidProtocolBufferException;
+
+    move-result-object v0
+
+    throw v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    .line 80
+    :sswitch_3
+    :try_start_4
     iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_3
 
-    .line 94
+    .line 81
     iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
-    invoke-virtual {v0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->toBuilder()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
+    invoke-virtual {v0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->c()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
     move-result-object v0
 
     move-object v1, v0
 
-    .line 96
-    :goto_4
-    invoke-static {}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->parser()Lcom/google/protobuf/Parser;
+    .line 83
+    :goto_3
+    invoke-static {}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->e()Lcom/google/protobuf/Parser;
 
     move-result-object v0
 
@@ -360,16 +305,16 @@
 
     iput-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
-    .line 97
+    .line 84
     if-eqz v1, :cond_0
 
-    .line 98
+    .line 85
     iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
     invoke-virtual {v1, v0}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a(Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;)Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;
 
-    .line 99
-    invoke-virtual {v1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->a()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
+    .line 86
+    invoke-virtual {v1}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment$a;->b()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
     move-result-object v0
 
@@ -377,24 +322,24 @@
 
     goto/16 :goto_0
 
-    .line 106
-    :sswitch_5
+    .line 93
+    :sswitch_4
     iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardReplyAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_2
 
-    .line 107
+    .line 94
     iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardReplyAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
 
-    invoke-virtual {v0}, Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;->toBuilder()Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$a;
+    invoke-virtual {v0}, Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;->d()Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$a;
 
     move-result-object v0
 
     move-object v1, v0
 
-    .line 109
-    :goto_5
-    invoke-static {}, Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;->parser()Lcom/google/protobuf/Parser;
+    .line 96
+    :goto_4
+    invoke-static {}, Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;->f()Lcom/google/protobuf/Parser;
 
     move-result-object v0
 
@@ -406,158 +351,20 @@
 
     iput-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardReplyAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
 
-    .line 110
+    .line 97
     if-eqz v1, :cond_0
 
-    .line 111
+    .line 98
     iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardReplyAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
 
     invoke-virtual {v1, v0}, Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$a;->a(Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;)Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$a;
 
-    .line 112
+    .line 99
     invoke-virtual {v1}, Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$a;->b()Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardReplyAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
-
-    goto/16 :goto_0
-
-    .line 119
-    :sswitch_6
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->widgetAttachment_:Lcom/kik/messagepath/model/Widgets$WidgetAttachment;
-
-    if-eqz v0, :cond_4
-
-    .line 120
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->widgetAttachment_:Lcom/kik/messagepath/model/Widgets$WidgetAttachment;
-
-    invoke-virtual {v0}, Lcom/kik/messagepath/model/Widgets$WidgetAttachment;->toBuilder()Lcom/kik/messagepath/model/Widgets$WidgetAttachment$a;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    .line 122
-    :goto_6
-    invoke-static {}, Lcom/kik/messagepath/model/Widgets$WidgetAttachment;->parser()Lcom/google/protobuf/Parser;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0, p2}, Lcom/google/protobuf/CodedInputStream;->readMessage(Lcom/google/protobuf/Parser;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/kik/messagepath/model/Widgets$WidgetAttachment;
-
-    iput-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->widgetAttachment_:Lcom/kik/messagepath/model/Widgets$WidgetAttachment;
-
-    .line 123
-    if-eqz v1, :cond_0
-
-    .line 124
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->widgetAttachment_:Lcom/kik/messagepath/model/Widgets$WidgetAttachment;
-
-    invoke-virtual {v1, v0}, Lcom/kik/messagepath/model/Widgets$WidgetAttachment$a;->a(Lcom/kik/messagepath/model/Widgets$WidgetAttachment;)Lcom/kik/messagepath/model/Widgets$WidgetAttachment$a;
-
-    .line 125
-    invoke-virtual {v1}, Lcom/kik/messagepath/model/Widgets$WidgetAttachment$a;->a()Lcom/kik/messagepath/model/Widgets$WidgetAttachment;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->widgetAttachment_:Lcom/kik/messagepath/model/Widgets$WidgetAttachment;
-
-    goto/16 :goto_0
-
-    .line 132
-    :sswitch_7
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->adaptiveCardAttachment_:Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;
-
-    if-eqz v0, :cond_3
-
-    .line 133
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->adaptiveCardAttachment_:Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;
-
-    invoke-virtual {v0}, Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;->toBuilder()Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment$a;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    .line 135
-    :goto_7
-    invoke-static {}, Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;->parser()Lcom/google/protobuf/Parser;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0, p2}, Lcom/google/protobuf/CodedInputStream;->readMessage(Lcom/google/protobuf/Parser;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;
-
-    iput-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->adaptiveCardAttachment_:Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;
-
-    .line 136
-    if-eqz v1, :cond_0
-
-    .line 137
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->adaptiveCardAttachment_:Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;
-
-    invoke-virtual {v1, v0}, Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment$a;->a(Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;)Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment$a;
-
-    .line 138
-    invoke-virtual {v1}, Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment$a;->a()Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->adaptiveCardAttachment_:Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;
-
-    goto/16 :goto_0
-
-    .line 145
-    :sswitch_8
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->textMarkdownAttachment_:Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;
-
-    if-eqz v0, :cond_2
-
-    .line 146
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->textMarkdownAttachment_:Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;
-
-    invoke-virtual {v0}, Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;->toBuilder()Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment$a;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    .line 148
-    :goto_8
-    invoke-static {}, Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;->parser()Lcom/google/protobuf/Parser;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0, p2}, Lcom/google/protobuf/CodedInputStream;->readMessage(Lcom/google/protobuf/Parser;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;
-
-    iput-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->textMarkdownAttachment_:Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;
-
-    .line 149
-    if-eqz v1, :cond_0
-
-    .line 150
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->textMarkdownAttachment_:Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;
-
-    invoke-virtual {v1, v0}, Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment$a;->a(Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;)Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment$a;
-
-    .line 151
-    invoke-virtual {v1}, Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment$a;->a()Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->textMarkdownAttachment_:Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;
     :try_end_4
     .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_4 .. :try_end_4} :catch_0
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
@@ -565,49 +372,29 @@
 
     goto/16 :goto_0
 
-    .line 164
+    .line 112
     :cond_1
     invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->makeExtensionsImmutable()V
 
-    .line 165
+    .line 113
     return-void
 
     :cond_2
     move-object v1, v2
 
-    goto :goto_8
+    goto :goto_4
 
     :cond_3
     move-object v1, v2
 
-    goto :goto_7
+    goto :goto_3
 
     :cond_4
     move-object v1, v2
 
-    goto :goto_6
+    goto :goto_2
 
     :cond_5
-    move-object v1, v2
-
-    goto/16 :goto_5
-
-    :cond_6
-    move-object v1, v2
-
-    goto/16 :goto_4
-
-    :cond_7
-    move-object v1, v2
-
-    goto/16 :goto_3
-
-    :cond_8
-    move-object v1, v2
-
-    goto/16 :goto_2
-
-    :cond_9
     move-object v1, v2
 
     goto/16 :goto_1
@@ -618,14 +405,10 @@
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
-        0x101a -> :sswitch_1
-        0x1f42 -> :sswitch_2
-        0x1f52 -> :sswitch_3
-        0x1f5a -> :sswitch_4
-        0x1f62 -> :sswitch_5
-        0x1f6a -> :sswitch_6
-        0x1f72 -> :sswitch_7
-        0x1f7a -> :sswitch_8
+        0x1f42 -> :sswitch_1
+        0x1f52 -> :sswitch_2
+        0x1f5a -> :sswitch_3
+        0x1f62 -> :sswitch_4
     .end sparse-switch
 .end method
 
@@ -658,7 +441,7 @@
     .line 22
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;)V
 
-    .line 554
+    .line 322
     const/4 v0, -0x1
 
     iput-byte v0, p0, Lcom/kik/messagepath/model/CoreMessage;->memoizedIsInitialized:B
@@ -677,26 +460,6 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/kik/messagepath/model/CoreMessage;Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;)Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;
-    .locals 0
-
-    .prologue
-    .line 16
-    iput-object p1, p0, Lcom/kik/messagepath/model/CoreMessage;->adaptiveCardAttachment_:Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;
-
-    return-object p1
-.end method
-
-.method static synthetic a(Lcom/kik/messagepath/model/CoreMessage;Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;)Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;
-    .locals 0
-
-    .prologue
-    .line 16
-    iput-object p1, p0, Lcom/kik/messagepath/model/CoreMessage;->carouselMessageAttachment_:Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;
-
-    return-object p1
-.end method
-
 .method public static a([B)Lcom/kik/messagepath/model/CoreMessage;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
@@ -706,7 +469,7 @@
     .end annotation
 
     .prologue
-    .line 745
+    .line 449
     sget-object v0, Lcom/kik/messagepath/model/CoreMessage;->b:Lcom/google/protobuf/Parser;
 
     invoke-interface {v0, p0}, Lcom/google/protobuf/Parser;->parseFrom([B)Ljava/lang/Object;
@@ -748,16 +511,6 @@
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/kik/messagepath/model/CoreMessage;Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;)Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;
-    .locals 0
-
-    .prologue
-    .line 16
-    iput-object p1, p0, Lcom/kik/messagepath/model/CoreMessage;->textMarkdownAttachment_:Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;
-
-    return-object p1
-.end method
-
 .method static synthetic a(Lcom/kik/messagepath/model/CoreMessage;Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;)Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
     .locals 0
 
@@ -768,41 +521,31 @@
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/kik/messagepath/model/CoreMessage;Lcom/kik/messagepath/model/Widgets$WidgetAttachment;)Lcom/kik/messagepath/model/Widgets$WidgetAttachment;
-    .locals 0
-
-    .prologue
-    .line 16
-    iput-object p1, p0, Lcom/kik/messagepath/model/CoreMessage;->widgetAttachment_:Lcom/kik/messagepath/model/Widgets$WidgetAttachment;
-
-    return-object p1
-.end method
-
-.method public static q()Lcom/kik/messagepath/model/CoreMessage$a;
+.method public static i()Lcom/kik/messagepath/model/CoreMessage$a;
     .locals 1
 
     .prologue
-    .line 793
+    .line 497
     sget-object v0, Lcom/kik/messagepath/model/CoreMessage;->a:Lcom/kik/messagepath/model/CoreMessage;
 
-    invoke-direct {v0}, Lcom/kik/messagepath/model/CoreMessage;->u()Lcom/kik/messagepath/model/CoreMessage$a;
+    invoke-direct {v0}, Lcom/kik/messagepath/model/CoreMessage;->m()Lcom/kik/messagepath/model/CoreMessage$a;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public static r()Lcom/kik/messagepath/model/CoreMessage;
+.method public static j()Lcom/kik/messagepath/model/CoreMessage;
     .locals 1
 
     .prologue
-    .line 2630
+    .line 1522
     sget-object v0, Lcom/kik/messagepath/model/CoreMessage;->a:Lcom/kik/messagepath/model/CoreMessage;
 
     return-object v0
 .end method
 
-.method static synthetic s()Z
+.method static synthetic k()Z
     .locals 1
 
     .prologue
@@ -812,7 +555,7 @@
     return v0
 .end method
 
-.method static synthetic t()Lcom/google/protobuf/Parser;
+.method static synthetic l()Lcom/google/protobuf/Parser;
     .locals 1
 
     .prologue
@@ -822,13 +565,13 @@
     return-object v0
 .end method
 
-.method private u()Lcom/kik/messagepath/model/CoreMessage$a;
+.method private m()Lcom/kik/messagepath/model/CoreMessage$a;
     .locals 2
 
     .prologue
     const/4 v1, 0x0
 
-    .line 799
+    .line 503
     sget-object v0, Lcom/kik/messagepath/model/CoreMessage;->a:Lcom/kik/messagepath/model/CoreMessage;
 
     if-ne p0, v0, :cond_0
@@ -845,7 +588,7 @@
 
     invoke-direct {v0, v1}, Lcom/kik/messagepath/model/CoreMessage$a;-><init>(B)V
 
-    .line 800
+    .line 504
     invoke-virtual {v0, p0}, Lcom/kik/messagepath/model/CoreMessage$a;->a(Lcom/kik/messagepath/model/CoreMessage;)Lcom/kik/messagepath/model/CoreMessage$a;
 
     move-result-object v0
@@ -859,8 +602,8 @@
     .locals 1
 
     .prologue
-    .line 192
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->carouselMessageAttachment_:Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;
+    .line 141
+    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->visibilityRulesAttachment_:Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
 
     if-eqz v0, :cond_0
 
@@ -875,16 +618,16 @@
     goto :goto_0
 .end method
 
-.method public final b()Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;
+.method public final b()Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
     .locals 1
 
     .prologue
-    .line 205
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->carouselMessageAttachment_:Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;
+    .line 155
+    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->visibilityRulesAttachment_:Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;->getDefaultInstance()Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;
+    invoke-static {}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->h()Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
 
     move-result-object v0
 
@@ -892,7 +635,7 @@
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->carouselMessageAttachment_:Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;
+    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->visibilityRulesAttachment_:Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
 
     goto :goto_0
 .end method
@@ -901,8 +644,8 @@
     .locals 1
 
     .prologue
-    .line 235
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->visibilityRulesAttachment_:Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
+    .line 188
+    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->mentionReplyAttachment_:Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
 
     if-eqz v0, :cond_0
 
@@ -917,16 +660,16 @@
     goto :goto_0
 .end method
 
-.method public final d()Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
+.method public final d()Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
     .locals 1
 
     .prologue
-    .line 249
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->visibilityRulesAttachment_:Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
+    .line 204
+    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->mentionReplyAttachment_:Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->getDefaultInstance()Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
+    invoke-static {}, Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;->d()Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
 
     move-result-object v0
 
@@ -934,7 +677,7 @@
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->visibilityRulesAttachment_:Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
+    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->mentionReplyAttachment_:Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
 
     goto :goto_0
 .end method
@@ -943,8 +686,8 @@
     .locals 1
 
     .prologue
-    .line 282
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->mentionReplyAttachment_:Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
+    .line 241
+    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
     if-eqz v0, :cond_0
 
@@ -967,32 +710,32 @@
 
     const/4 v1, 0x1
 
-    .line 636
+    .line 376
     if-ne p1, p0, :cond_1
 
-    .line 685
+    .line 405
     :cond_0
     :goto_0
     return v1
 
-    .line 639
+    .line 379
     :cond_1
     instance-of v0, p1, Lcom/kik/messagepath/model/CoreMessage;
 
     if-nez v0, :cond_2
 
-    .line 640
+    .line 380
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     goto :goto_0
 
-    .line 642
+    .line 382
     :cond_2
     check-cast p1, Lcom/kik/messagepath/model/CoreMessage;
 
-    .line 645
+    .line 385
     invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->a()Z
 
     move-result v0
@@ -1001,11 +744,11 @@
 
     move-result v3
 
-    if-ne v0, v3, :cond_b
+    if-ne v0, v3, :cond_7
 
     move v0, v1
 
-    .line 646
+    .line 386
     :goto_1
     invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->a()Z
 
@@ -1013,30 +756,30 @@
 
     if-eqz v3, :cond_3
 
-    .line 647
-    if-eqz v0, :cond_c
+    .line 387
+    if-eqz v0, :cond_8
 
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->b()Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->b()Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
 
     move-result-object v0
 
-    .line 648
-    invoke-virtual {p1}, Lcom/kik/messagepath/model/CoreMessage;->b()Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;
+    .line 388
+    invoke-virtual {p1}, Lcom/kik/messagepath/model/CoreMessage;->b()Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
 
     move-result-object v3
 
-    invoke-virtual {v0, v3}, Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v3}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_8
 
     move v0, v1
 
-    .line 650
+    .line 390
     :cond_3
     :goto_2
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_9
 
     invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->c()Z
 
@@ -1046,11 +789,11 @@
 
     move-result v3
 
-    if-ne v0, v3, :cond_d
+    if-ne v0, v3, :cond_9
 
     move v0, v1
 
-    .line 651
+    .line 391
     :goto_3
     invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->c()Z
 
@@ -1058,30 +801,30 @@
 
     if-eqz v3, :cond_4
 
-    .line 652
-    if-eqz v0, :cond_e
+    .line 392
+    if-eqz v0, :cond_a
 
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->d()Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->d()Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
 
     move-result-object v0
 
-    .line 653
-    invoke-virtual {p1}, Lcom/kik/messagepath/model/CoreMessage;->d()Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
+    .line 393
+    invoke-virtual {p1}, Lcom/kik/messagepath/model/CoreMessage;->d()Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
 
     move-result-object v3
 
-    invoke-virtual {v0, v3}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v3}, Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_a
 
     move v0, v1
 
-    .line 655
+    .line 395
     :cond_4
     :goto_4
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_b
 
     invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->e()Z
 
@@ -1091,11 +834,11 @@
 
     move-result v3
 
-    if-ne v0, v3, :cond_f
+    if-ne v0, v3, :cond_b
 
     move v0, v1
 
-    .line 656
+    .line 396
     :goto_5
     invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->e()Z
 
@@ -1103,30 +846,30 @@
 
     if-eqz v3, :cond_5
 
-    .line 657
-    if-eqz v0, :cond_10
+    .line 397
+    if-eqz v0, :cond_c
 
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->f()Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->f()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
     move-result-object v0
 
-    .line 658
-    invoke-virtual {p1}, Lcom/kik/messagepath/model/CoreMessage;->f()Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
+    .line 398
+    invoke-virtual {p1}, Lcom/kik/messagepath/model/CoreMessage;->f()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
     move-result-object v3
 
-    invoke-virtual {v0, v3}, Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v3}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_10
+    if-eqz v0, :cond_c
 
     move v0, v1
 
-    .line 660
+    .line 400
     :cond_5
     :goto_6
-    if-eqz v0, :cond_11
+    if-eqz v0, :cond_d
 
     invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->g()Z
 
@@ -1136,72 +879,27 @@
 
     move-result v3
 
-    if-ne v0, v3, :cond_11
+    if-ne v0, v3, :cond_d
 
     move v0, v1
 
-    .line 661
+    .line 401
     :goto_7
     invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->g()Z
 
     move-result v3
 
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_e
 
-    .line 662
-    if-eqz v0, :cond_12
+    .line 402
+    if-eqz v0, :cond_6
 
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->h()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
-
-    move-result-object v0
-
-    .line 663
-    invoke-virtual {p1}, Lcom/kik/messagepath/model/CoreMessage;->h()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_12
-
-    move v0, v1
-
-    .line 665
-    :cond_6
-    :goto_8
-    if-eqz v0, :cond_13
-
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->i()Z
-
-    move-result v0
-
-    invoke-virtual {p1}, Lcom/kik/messagepath/model/CoreMessage;->i()Z
-
-    move-result v3
-
-    if-ne v0, v3, :cond_13
-
-    move v0, v1
-
-    .line 666
-    :goto_9
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->i()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_7
-
-    .line 667
-    if-eqz v0, :cond_14
-
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->j()Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->h()Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
 
     move-result-object v0
 
-    .line 668
-    invoke-virtual {p1}, Lcom/kik/messagepath/model/CoreMessage;->j()Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
+    .line 403
+    invoke-virtual {p1}, Lcom/kik/messagepath/model/CoreMessage;->h()Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
 
     move-result-object v3
 
@@ -1209,254 +907,71 @@
 
     move-result v0
 
-    if-eqz v0, :cond_14
-
-    move v0, v1
-
-    .line 670
-    :cond_7
-    :goto_a
-    if-eqz v0, :cond_15
-
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->k()Z
-
-    move-result v0
-
-    invoke-virtual {p1}, Lcom/kik/messagepath/model/CoreMessage;->k()Z
-
-    move-result v3
-
-    if-ne v0, v3, :cond_15
-
-    move v0, v1
-
-    .line 671
-    :goto_b
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->k()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_8
-
-    .line 672
-    if-eqz v0, :cond_16
-
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->l()Lcom/kik/messagepath/model/Widgets$WidgetAttachment;
-
-    move-result-object v0
-
-    .line 673
-    invoke-virtual {p1}, Lcom/kik/messagepath/model/CoreMessage;->l()Lcom/kik/messagepath/model/Widgets$WidgetAttachment;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Lcom/kik/messagepath/model/Widgets$WidgetAttachment;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_16
-
-    move v0, v1
-
-    .line 675
-    :cond_8
-    :goto_c
-    if-eqz v0, :cond_17
-
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->m()Z
-
-    move-result v0
-
-    invoke-virtual {p1}, Lcom/kik/messagepath/model/CoreMessage;->m()Z
-
-    move-result v3
-
-    if-ne v0, v3, :cond_17
-
-    move v0, v1
-
-    .line 676
-    :goto_d
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->m()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_9
-
-    .line 677
-    if-eqz v0, :cond_18
-
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->n()Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;
-
-    move-result-object v0
-
-    .line 678
-    invoke-virtual {p1}, Lcom/kik/messagepath/model/CoreMessage;->n()Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_18
-
-    move v0, v1
-
-    .line 680
-    :cond_9
-    :goto_e
-    if-eqz v0, :cond_19
-
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->o()Z
-
-    move-result v0
-
-    invoke-virtual {p1}, Lcom/kik/messagepath/model/CoreMessage;->o()Z
-
-    move-result v3
-
-    if-ne v0, v3, :cond_19
-
-    move v0, v1
-
-    .line 681
-    :goto_f
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->o()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1a
-
-    .line 682
-    if-eqz v0, :cond_a
-
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->p()Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;
-
-    move-result-object v0
-
-    .line 683
-    invoke-virtual {p1}, Lcom/kik/messagepath/model/CoreMessage;->p()Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
     if-nez v0, :cond_0
 
-    :cond_a
+    :cond_6
     move v1, v2
 
     goto/16 :goto_0
 
+    :cond_7
+    move v0, v2
+
+    .line 385
+    goto/16 :goto_1
+
+    :cond_8
+    move v0, v2
+
+    .line 388
+    goto :goto_2
+
+    :cond_9
+    move v0, v2
+
+    .line 390
+    goto :goto_3
+
+    :cond_a
+    move v0, v2
+
+    .line 393
+    goto :goto_4
+
     :cond_b
     move v0, v2
 
-    .line 645
-    goto/16 :goto_1
+    .line 395
+    goto :goto_5
 
     :cond_c
     move v0, v2
 
-    .line 648
-    goto/16 :goto_2
+    .line 398
+    goto :goto_6
 
     :cond_d
     move v0, v2
 
-    .line 650
-    goto/16 :goto_3
+    .line 400
+    goto :goto_7
 
     :cond_e
-    move v0, v2
-
-    .line 653
-    goto/16 :goto_4
-
-    :cond_f
-    move v0, v2
-
-    .line 655
-    goto/16 :goto_5
-
-    :cond_10
-    move v0, v2
-
-    .line 658
-    goto/16 :goto_6
-
-    :cond_11
-    move v0, v2
-
-    .line 660
-    goto/16 :goto_7
-
-    :cond_12
-    move v0, v2
-
-    .line 663
-    goto/16 :goto_8
-
-    :cond_13
-    move v0, v2
-
-    .line 665
-    goto/16 :goto_9
-
-    :cond_14
-    move v0, v2
-
-    .line 668
-    goto/16 :goto_a
-
-    :cond_15
-    move v0, v2
-
-    .line 670
-    goto :goto_b
-
-    :cond_16
-    move v0, v2
-
-    .line 673
-    goto :goto_c
-
-    :cond_17
-    move v0, v2
-
-    .line 675
-    goto :goto_d
-
-    :cond_18
-    move v0, v2
-
-    .line 678
-    goto :goto_e
-
-    :cond_19
-    move v0, v2
-
-    .line 680
-    goto :goto_f
-
-    :cond_1a
     move v1, v0
 
     goto/16 :goto_0
 .end method
 
-.method public final f()Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
+.method public final f()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
     .locals 1
 
     .prologue
-    .line 298
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->mentionReplyAttachment_:Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
+    .line 259
+    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;->getDefaultInstance()Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
+    invoke-static {}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->d()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
     move-result-object v0
 
@@ -1464,7 +979,7 @@
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->mentionReplyAttachment_:Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
+    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
     goto :goto_0
 .end method
@@ -1473,8 +988,8 @@
     .locals 1
 
     .prologue
-    .line 335
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
+    .line 293
+    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardReplyAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
 
     if-eqz v0, :cond_0
 
@@ -1493,7 +1008,7 @@
     .locals 1
 
     .prologue
-    .line 6653
+    .line 5545
     sget-object v0, Lcom/kik/messagepath/model/CoreMessage;->a:Lcom/kik/messagepath/model/CoreMessage;
 
     .line 16
@@ -1504,7 +1019,7 @@
     .locals 1
 
     .prologue
-    .line 5653
+    .line 4545
     sget-object v0, Lcom/kik/messagepath/model/CoreMessage;->a:Lcom/kik/messagepath/model/CoreMessage;
 
     .line 16
@@ -1524,7 +1039,7 @@
     .end annotation
 
     .prologue
-    .line 2649
+    .line 1541
     sget-object v0, Lcom/kik/messagepath/model/CoreMessage;->b:Lcom/google/protobuf/Parser;
 
     return-object v0
@@ -1534,32 +1049,32 @@
     .locals 3
 
     .prologue
-    .line 593
+    .line 349
     iget v0, p0, Lcom/kik/messagepath/model/CoreMessage;->memoizedSize:I
 
-    .line 594
+    .line 350
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 630
+    .line 370
     :goto_0
     return v0
 
-    .line 596
+    .line 352
     :cond_0
     const/4 v0, 0x0
 
-    .line 597
-    iget-object v1, p0, Lcom/kik/messagepath/model/CoreMessage;->carouselMessageAttachment_:Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;
+    .line 353
+    iget-object v1, p0, Lcom/kik/messagepath/model/CoreMessage;->visibilityRulesAttachment_:Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
 
     if-eqz v1, :cond_1
 
-    .line 598
-    const/16 v0, 0x203
+    .line 354
+    const/16 v0, 0x3e8
 
-    .line 599
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->b()Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;
+    .line 355
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->b()Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
 
     move-result-object v1
 
@@ -1569,17 +1084,17 @@
 
     add-int/lit8 v0, v0, 0x0
 
-    .line 601
+    .line 357
     :cond_1
-    iget-object v1, p0, Lcom/kik/messagepath/model/CoreMessage;->visibilityRulesAttachment_:Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
+    iget-object v1, p0, Lcom/kik/messagepath/model/CoreMessage;->mentionReplyAttachment_:Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
 
     if-eqz v1, :cond_2
 
-    .line 602
-    const/16 v1, 0x3e8
+    .line 358
+    const/16 v1, 0x3ea
 
-    .line 603
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->d()Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
+    .line 359
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->d()Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
 
     move-result-object v2
 
@@ -1589,17 +1104,17 @@
 
     add-int/2addr v0, v1
 
-    .line 605
+    .line 361
     :cond_2
-    iget-object v1, p0, Lcom/kik/messagepath/model/CoreMessage;->mentionReplyAttachment_:Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
+    iget-object v1, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
     if-eqz v1, :cond_3
 
-    .line 606
-    const/16 v1, 0x3ea
+    .line 362
+    const/16 v1, 0x3eb
 
-    .line 607
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->f()Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
+    .line 363
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->f()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
     move-result-object v2
 
@@ -1609,37 +1124,17 @@
 
     add-int/2addr v0, v1
 
-    .line 609
+    .line 365
     :cond_3
-    iget-object v1, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
+    iget-object v1, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardReplyAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
 
     if-eqz v1, :cond_4
 
-    .line 610
-    const/16 v1, 0x3eb
-
-    .line 611
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->h()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/google/protobuf/CodedOutputStream;->computeMessageSize(ILcom/google/protobuf/MessageLite;)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    .line 613
-    :cond_4
-    iget-object v1, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardReplyAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
-
-    if-eqz v1, :cond_5
-
-    .line 614
+    .line 366
     const/16 v1, 0x3ec
 
-    .line 615
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->j()Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
+    .line 367
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->h()Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
 
     move-result-object v2
 
@@ -1649,68 +1144,8 @@
 
     add-int/2addr v0, v1
 
-    .line 617
-    :cond_5
-    iget-object v1, p0, Lcom/kik/messagepath/model/CoreMessage;->widgetAttachment_:Lcom/kik/messagepath/model/Widgets$WidgetAttachment;
-
-    if-eqz v1, :cond_6
-
-    .line 618
-    const/16 v1, 0x3ed
-
-    .line 619
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->l()Lcom/kik/messagepath/model/Widgets$WidgetAttachment;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/google/protobuf/CodedOutputStream;->computeMessageSize(ILcom/google/protobuf/MessageLite;)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    .line 621
-    :cond_6
-    iget-object v1, p0, Lcom/kik/messagepath/model/CoreMessage;->adaptiveCardAttachment_:Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;
-
-    if-eqz v1, :cond_7
-
-    .line 622
-    const/16 v1, 0x3ee
-
-    .line 623
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->n()Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/google/protobuf/CodedOutputStream;->computeMessageSize(ILcom/google/protobuf/MessageLite;)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    .line 625
-    :cond_7
-    iget-object v1, p0, Lcom/kik/messagepath/model/CoreMessage;->textMarkdownAttachment_:Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;
-
-    if-eqz v1, :cond_8
-
-    .line 626
-    const/16 v1, 0x3ef
-
-    .line 627
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->p()Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/google/protobuf/CodedOutputStream;->computeMessageSize(ILcom/google/protobuf/MessageLite;)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    .line 629
-    :cond_8
+    .line 369
+    :cond_4
     iput v0, p0, Lcom/kik/messagepath/model/CoreMessage;->memoizedSize:I
 
     goto :goto_0
@@ -1728,16 +1163,16 @@
     return-object v0
 .end method
 
-.method public final h()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
+.method public final h()Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
     .locals 1
 
     .prologue
-    .line 353
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
+    .line 306
+    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardReplyAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;->getDefaultInstance()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
+    invoke-static {}, Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;->e()Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
 
     move-result-object v0
 
@@ -1745,7 +1180,7 @@
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
+    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardReplyAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
 
     goto :goto_0
 .end method
@@ -1754,19 +1189,19 @@
     .locals 2
 
     .prologue
-    .line 690
+    .line 410
     iget v0, p0, Lcom/kik/messagepath/model/CoreMessage;->memoizedHashCode:I
 
     if-eqz v0, :cond_0
 
-    .line 691
+    .line 411
     iget v0, p0, Lcom/kik/messagepath/model/CoreMessage;->memoizedHashCode:I
 
-    .line 729
+    .line 433
     :goto_0
     return v0
 
-    .line 694
+    .line 414
     :cond_0
     invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->getDescriptorForType()Lcom/google/protobuf/Descriptors$Descriptor;
 
@@ -1778,48 +1213,22 @@
 
     add-int/lit16 v0, v0, 0x30b
 
-    .line 695
+    .line 415
     invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->a()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 696
-    mul-int/lit8 v0, v0, 0x25
-
-    add-int/lit16 v0, v0, 0x203
-
-    .line 697
-    mul-int/lit8 v0, v0, 0x35
-
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->b()Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    .line 699
-    :cond_1
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->c()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    .line 700
+    .line 416
     mul-int/lit8 v0, v0, 0x25
 
     add-int/lit16 v0, v0, 0x3e8
 
-    .line 701
+    .line 417
     mul-int/lit8 v0, v0, 0x35
 
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->d()Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->b()Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
 
     move-result-object v1
 
@@ -1829,23 +1238,23 @@
 
     add-int/2addr v0, v1
 
-    .line 703
-    :cond_2
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->e()Z
+    .line 419
+    :cond_1
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->c()Z
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_2
 
-    .line 704
+    .line 420
     mul-int/lit8 v0, v0, 0x25
 
     add-int/lit16 v0, v0, 0x3ea
 
-    .line 705
+    .line 421
     mul-int/lit8 v0, v0, 0x35
 
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->f()Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->d()Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
 
     move-result-object v1
 
@@ -1855,23 +1264,23 @@
 
     add-int/2addr v0, v1
 
-    .line 707
-    :cond_3
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->g()Z
+    .line 423
+    :cond_2
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->e()Z
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_3
 
-    .line 708
+    .line 424
     mul-int/lit8 v0, v0, 0x25
 
     add-int/lit16 v0, v0, 0x3eb
 
-    .line 709
+    .line 425
     mul-int/lit8 v0, v0, 0x35
 
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->h()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->f()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
     move-result-object v1
 
@@ -1881,23 +1290,23 @@
 
     add-int/2addr v0, v1
 
-    .line 711
-    :cond_4
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->i()Z
+    .line 427
+    :cond_3
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->g()Z
 
     move-result v1
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_4
 
-    .line 712
+    .line 428
     mul-int/lit8 v0, v0, 0x25
 
     add-int/lit16 v0, v0, 0x3ec
 
-    .line 713
+    .line 429
     mul-int/lit8 v0, v0, 0x35
 
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->j()Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->h()Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
 
     move-result-object v1
 
@@ -1907,86 +1316,8 @@
 
     add-int/2addr v0, v1
 
-    .line 715
-    :cond_5
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->k()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    .line 716
-    mul-int/lit8 v0, v0, 0x25
-
-    add-int/lit16 v0, v0, 0x3ed
-
-    .line 717
-    mul-int/lit8 v0, v0, 0x35
-
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->l()Lcom/kik/messagepath/model/Widgets$WidgetAttachment;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/kik/messagepath/model/Widgets$WidgetAttachment;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    .line 719
-    :cond_6
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->m()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_7
-
-    .line 720
-    mul-int/lit8 v0, v0, 0x25
-
-    add-int/lit16 v0, v0, 0x3ee
-
-    .line 721
-    mul-int/lit8 v0, v0, 0x35
-
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->n()Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    .line 723
-    :cond_7
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->o()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_8
-
-    .line 724
-    mul-int/lit8 v0, v0, 0x25
-
-    add-int/lit16 v0, v0, 0x3ef
-
-    .line 725
-    mul-int/lit8 v0, v0, 0x35
-
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->p()Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    .line 727
-    :cond_8
+    .line 431
+    :cond_4
     mul-int/lit8 v0, v0, 0x1d
 
     iget-object v1, p0, Lcom/kik/messagepath/model/CoreMessage;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
@@ -1997,28 +1328,8 @@
 
     add-int/2addr v0, v1
 
-    .line 728
+    .line 432
     iput v0, p0, Lcom/kik/messagepath/model/CoreMessage;->memoizedHashCode:I
-
-    goto/16 :goto_0
-.end method
-
-.method public final i()Z
-    .locals 1
-
-    .prologue
-    .line 387
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardReplyAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
 
     goto :goto_0
 .end method
@@ -2027,19 +1338,19 @@
     .locals 3
 
     .prologue
-    .line 174
+    .line 122
     sget-object v0, Lcom/kik/messagepath/model/b;->b:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     const-class v1, Lcom/kik/messagepath/model/CoreMessage;
 
     const-class v2, Lcom/kik/messagepath/model/CoreMessage$a;
 
-    .line 175
+    .line 123
     invoke-virtual {v0, v1, v2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;->ensureFieldAccessorsInitialized(Ljava/lang/Class;Ljava/lang/Class;)Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
 
-    .line 174
+    .line 122
     return-object v0
 .end method
 
@@ -2049,17 +1360,17 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 556
+    .line 324
     iget-byte v1, p0, Lcom/kik/messagepath/model/CoreMessage;->memoizedIsInitialized:B
 
-    .line 557
+    .line 325
     if-ne v1, v0, :cond_0
 
-    .line 561
+    .line 329
     :goto_0
     return v0
 
-    .line 558
+    .line 326
     :cond_0
     if-nez v1, :cond_1
 
@@ -2067,115 +1378,9 @@
 
     goto :goto_0
 
-    .line 560
+    .line 328
     :cond_1
     iput-byte v0, p0, Lcom/kik/messagepath/model/CoreMessage;->memoizedIsInitialized:B
-
-    goto :goto_0
-.end method
-
-.method public final j()Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
-    .locals 1
-
-    .prologue
-    .line 400
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardReplyAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;->getDefaultInstance()Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardReplyAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
-
-    goto :goto_0
-.end method
-
-.method public final k()Z
-    .locals 1
-
-    .prologue
-    .line 431
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->widgetAttachment_:Lcom/kik/messagepath/model/Widgets$WidgetAttachment;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final l()Lcom/kik/messagepath/model/Widgets$WidgetAttachment;
-    .locals 1
-
-    .prologue
-    .line 446
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->widgetAttachment_:Lcom/kik/messagepath/model/Widgets$WidgetAttachment;
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Lcom/kik/messagepath/model/Widgets$WidgetAttachment;->getDefaultInstance()Lcom/kik/messagepath/model/Widgets$WidgetAttachment;
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->widgetAttachment_:Lcom/kik/messagepath/model/Widgets$WidgetAttachment;
-
-    goto :goto_0
-.end method
-
-.method public final m()Z
-    .locals 1
-
-    .prologue
-    .line 479
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->adaptiveCardAttachment_:Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final n()Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;
-    .locals 1
-
-    .prologue
-    .line 494
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->adaptiveCardAttachment_:Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;->getDefaultInstance()Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->adaptiveCardAttachment_:Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;
 
     goto :goto_0
 .end method
@@ -2184,10 +1389,10 @@
     .locals 1
 
     .prologue
-    .line 3793
+    .line 3497
     sget-object v0, Lcom/kik/messagepath/model/CoreMessage;->a:Lcom/kik/messagepath/model/CoreMessage;
 
-    invoke-direct {v0}, Lcom/kik/messagepath/model/CoreMessage;->u()Lcom/kik/messagepath/model/CoreMessage$a;
+    invoke-direct {v0}, Lcom/kik/messagepath/model/CoreMessage;->m()Lcom/kik/messagepath/model/CoreMessage$a;
 
     move-result-object v0
 
@@ -2199,7 +1404,7 @@
     .locals 2
 
     .prologue
-    .line 2806
+    .line 2510
     new-instance v0, Lcom/kik/messagepath/model/CoreMessage$a;
 
     const/4 v1, 0x0
@@ -2214,57 +1419,15 @@
     .locals 1
 
     .prologue
-    .line 4793
+    .line 4497
     sget-object v0, Lcom/kik/messagepath/model/CoreMessage;->a:Lcom/kik/messagepath/model/CoreMessage;
 
-    invoke-direct {v0}, Lcom/kik/messagepath/model/CoreMessage;->u()Lcom/kik/messagepath/model/CoreMessage$a;
+    invoke-direct {v0}, Lcom/kik/messagepath/model/CoreMessage;->m()Lcom/kik/messagepath/model/CoreMessage$a;
 
     move-result-object v0
 
     .line 16
     return-object v0
-.end method
-
-.method public final o()Z
-    .locals 1
-
-    .prologue
-    .line 525
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->textMarkdownAttachment_:Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final p()Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;
-    .locals 1
-
-    .prologue
-    .line 538
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->textMarkdownAttachment_:Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;->getDefaultInstance()Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->textMarkdownAttachment_:Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;
-
-    goto :goto_0
 .end method
 
 .method public final synthetic toBuilder()Lcom/google/protobuf/Message$Builder;
@@ -2272,7 +1435,7 @@
 
     .prologue
     .line 16
-    invoke-direct {p0}, Lcom/kik/messagepath/model/CoreMessage;->u()Lcom/kik/messagepath/model/CoreMessage$a;
+    invoke-direct {p0}, Lcom/kik/messagepath/model/CoreMessage;->m()Lcom/kik/messagepath/model/CoreMessage$a;
 
     move-result-object v0
 
@@ -2284,7 +1447,7 @@
 
     .prologue
     .line 16
-    invoke-direct {p0}, Lcom/kik/messagepath/model/CoreMessage;->u()Lcom/kik/messagepath/model/CoreMessage$a;
+    invoke-direct {p0}, Lcom/kik/messagepath/model/CoreMessage;->m()Lcom/kik/messagepath/model/CoreMessage$a;
 
     move-result-object v0
 
@@ -2300,126 +1463,66 @@
     .end annotation
 
     .prologue
-    .line 566
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->carouselMessageAttachment_:Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;
+    .line 334
+    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->visibilityRulesAttachment_:Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
 
     if-eqz v0, :cond_0
 
-    .line 567
-    const/16 v0, 0x203
+    .line 335
+    const/16 v0, 0x3e8
 
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->b()Lcom/kik/messagepath/model/Carousels$CarouselMessageAttachment;
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->b()Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
 
     move-result-object v1
 
     invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;)V
 
-    .line 569
+    .line 337
     :cond_0
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->visibilityRulesAttachment_:Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
+    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->mentionReplyAttachment_:Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
 
     if-eqz v0, :cond_1
 
-    .line 570
-    const/16 v0, 0x3e8
+    .line 338
+    const/16 v0, 0x3ea
 
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->d()Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->d()Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
 
     move-result-object v1
 
     invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;)V
 
-    .line 572
+    .line 340
     :cond_1
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->mentionReplyAttachment_:Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
+    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
     if-eqz v0, :cond_2
 
-    .line 573
-    const/16 v0, 0x3ea
+    .line 341
+    const/16 v0, 0x3eb
 
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->f()Lcom/kik/messagepath/model/Mentions$MentionReplyAttachment;
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->f()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
 
     move-result-object v1
 
     invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;)V
 
-    .line 575
+    .line 343
     :cond_2
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
+    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardReplyAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
 
     if-eqz v0, :cond_3
 
-    .line 576
-    const/16 v0, 0x3eb
-
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->h()Lcom/kik/messagepath/model/Keyboards$KeyboardAttachment;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;)V
-
-    .line 578
-    :cond_3
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->keyboardReplyAttachment_:Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
-
-    if-eqz v0, :cond_4
-
-    .line 579
+    .line 344
     const/16 v0, 0x3ec
 
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->j()Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->h()Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment;
 
     move-result-object v1
 
     invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;)V
 
-    .line 581
-    :cond_4
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->widgetAttachment_:Lcom/kik/messagepath/model/Widgets$WidgetAttachment;
-
-    if-eqz v0, :cond_5
-
-    .line 582
-    const/16 v0, 0x3ed
-
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->l()Lcom/kik/messagepath/model/Widgets$WidgetAttachment;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;)V
-
-    .line 584
-    :cond_5
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->adaptiveCardAttachment_:Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;
-
-    if-eqz v0, :cond_6
-
-    .line 585
-    const/16 v0, 0x3ee
-
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->n()Lcom/kik/messagepath/model/AdaptiveCards$AdaptiveCardAttachment;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;)V
-
-    .line 587
-    :cond_6
-    iget-object v0, p0, Lcom/kik/messagepath/model/CoreMessage;->textMarkdownAttachment_:Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;
-
-    if-eqz v0, :cond_7
-
-    .line 588
-    const/16 v0, 0x3ef
-
-    invoke-virtual {p0}, Lcom/kik/messagepath/model/CoreMessage;->p()Lcom/kik/messagepath/model/TextMarkdown$TextMarkdownAttachment;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;)V
-
-    .line 590
-    :cond_7
+    .line 346
+    :cond_3
     return-void
 .end method

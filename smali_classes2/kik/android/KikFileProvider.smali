@@ -20,7 +20,7 @@
     .locals 1
 
     .prologue
-    .line 36
+    .line 35
     const-string v0, "KikFileProvider"
 
     invoke-static {v0}, Lorg/slf4j/c;->a(Ljava/lang/String;)Lorg/slf4j/b;
@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 30
+    .line 29
     invoke-direct {p0}, Landroid/content/ContentProvider;-><init>()V
 
     return-void
@@ -46,7 +46,7 @@
     .locals 6
 
     .prologue
-    .line 45
+    .line 44
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
     move-result-object v0
@@ -55,24 +55,12 @@
 
     move-result-object v2
 
-    .line 46
+    .line 45
     const/4 v1, 0x0
 
-    .line 47
-    invoke-static {}, Lcom/rounds/kik/utils/DeviceUtils;->isDebugEnabled()Z
+    .line 46
+    sget-object v0, Lcom/kik/platform/c;->a:Landroid/net/Uri;
 
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const-string v0, "content://kik.android.debug.KikFileProvider"
-
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    .line 48
-    :goto_0
     invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v0
@@ -89,7 +77,7 @@
 
     move-result-object v0
 
-    .line 51
+    .line 49
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -105,12 +93,12 @@
 
     check-cast v0, Ljava/io/FileOutputStream;
 
-    .line 53
+    .line 51
     const/16 v3, 0x6000
 
     new-array v3, v3, [B
 
-    .line 57
+    .line 55
     :cond_0
     const/4 v4, 0x0
 
@@ -120,22 +108,22 @@
 
     move-result v4
 
-    .line 58
+    .line 56
     if-lez v4, :cond_1
 
-    .line 59
+    .line 57
     const/4 v5, 0x0
 
     invoke-virtual {v0, v3, v5, v4}, Ljava/io/FileOutputStream;->write([BII)V
 
-    .line 61
+    .line 59
     :cond_1
     if-gtz v4, :cond_0
 
-    .line 62
+    .line 60
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
 
-    .line 63
+    .line 61
     new-instance v0, Ljava/io/File;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -160,21 +148,15 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 68
-    :goto_1
+    .line 66
+    :goto_0
     return-object v0
 
-    .line 47
-    :cond_2
-    sget-object v0, Lkik/android/internal/platform/b;->a:Landroid/net/Uri;
-
-    goto :goto_0
-
-    .line 65
+    .line 63
     :catch_0
     move-exception v0
 
-    .line 66
+    .line 64
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "Failed to copy file to internal provider!:"
@@ -189,7 +171,7 @@
 
     move-object v0, v1
 
-    goto :goto_1
+    goto :goto_0
 .end method
 
 .method private a()V
@@ -200,7 +182,7 @@
 
     const/4 v2, 0x0
 
-    .line 140
+    .line 138
     new-instance v0, Ljava/io/File;
 
     const-string v1, "file:///data/data/kik.android/thirdpartyfiles/"
@@ -211,31 +193,31 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/net/URI;)V
 
-    .line 141
+    .line 139
     invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v0
 
-    .line 142
+    .line 140
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 143
+    .line 141
     if-eqz v0, :cond_3
 
     array-length v0, v0
 
     if-le v0, v8, :cond_3
 
-    .line 144
+    .line 142
     new-instance v0, Lkik/android/KikFileProvider$a;
 
     invoke-direct {v0, p0, v2}, Lkik/android/KikFileProvider$a;-><init>(Lkik/android/KikFileProvider;B)V
 
     invoke-static {v1, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 146
+    .line 144
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -256,17 +238,17 @@
 
     check-cast v0, Ljava/io/File;
 
-    .line 147
+    .line 145
     add-int/lit8 v1, v1, 0x1
 
     if-gt v1, v8, :cond_1
 
-    .line 1156
+    .line 1154
     invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v3}, Lkik/android/util/bv;->a(Ljava/lang/String;)Z
+    invoke-static {v3}, Lkik/android/util/bx;->a(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -274,17 +256,17 @@
 
     move v3, v2
 
-    .line 147
+    .line 145
     :goto_1
     if-eqz v3, :cond_0
 
-    .line 148
+    .line 146
     :cond_1
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     goto :goto_0
 
-    .line 1160
+    .line 1158
     :cond_2
     invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
 
@@ -294,19 +276,19 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lkik/android/util/bv;->c(Ljava/lang/String;)I
+    invoke-static {v5}, Lkik/android/util/bx;->c(Ljava/lang/String;)I
 
     move-result v5
 
     int-to-long v6, v5
 
-    invoke-static {v3, v6, v7}, Lkik/android/util/bv;->a(Ljava/lang/String;J)Z
+    invoke-static {v3, v6, v7}, Lkik/android/util/bx;->a(Ljava/lang/String;J)Z
 
     move-result v3
 
     goto :goto_1
 
-    .line 152
+    .line 150
     :cond_3
     return-void
 .end method
@@ -315,7 +297,7 @@
     .locals 1
 
     .prologue
-    .line 40
+    .line 39
     if-eqz p0, :cond_0
 
     const-string v0, "file:///data/data/kik.android/thirdpartyfiles/"
@@ -351,7 +333,7 @@
     .locals 1
 
     .prologue
-    .line 74
+    .line 72
     const/4 v0, 0x0
 
     return v0
@@ -361,7 +343,7 @@
     .locals 1
 
     .prologue
-    .line 80
+    .line 78
     const/4 v0, 0x0
 
     return-object v0
@@ -371,7 +353,7 @@
     .locals 1
 
     .prologue
-    .line 86
+    .line 84
     const/4 v0, 0x0
 
     return-object v0
@@ -381,7 +363,7 @@
     .locals 1
 
     .prologue
-    .line 92
+    .line 90
     const/4 v0, 0x1
 
     return v0
@@ -396,7 +378,7 @@
     .end annotation
 
     .prologue
-    .line 1129
+    .line 1127
     new-instance v0, Ljava/io/File;
 
     const-string v1, "file:///data/data/kik.android/thirdpartyfiles/"
@@ -407,26 +389,26 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/net/URI;)V
 
-    .line 1130
+    .line 1128
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 1131
+    .line 1129
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
-    .line 111
+    .line 109
     :cond_0
     invoke-direct {p0}, Lkik/android/KikFileProvider;->a()V
 
-    .line 113
+    .line 111
     invoke-virtual {p1}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 114
+    .line 112
     new-instance v1, Ljava/io/File;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -449,18 +431,18 @@
 
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/net/URI;)V
 
-    .line 115
+    .line 113
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 117
+    .line 115
     :try_start_0
     invoke-virtual {v1}, Ljava/io/File;->createNewFile()Z
 
-    .line 118
+    .line 116
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -469,7 +451,7 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 124
+    .line 122
     :cond_1
     :goto_0
     const/high16 v0, 0x30000000
@@ -480,7 +462,7 @@
 
     return-object v0
 
-    .line 121
+    .line 119
     :catch_0
     move-exception v0
 
@@ -493,7 +475,7 @@
     .locals 1
 
     .prologue
-    .line 98
+    .line 96
     const/4 v0, 0x0
 
     return-object v0
@@ -503,7 +485,7 @@
     .locals 1
 
     .prologue
-    .line 104
+    .line 102
     const/4 v0, 0x0
 
     return v0

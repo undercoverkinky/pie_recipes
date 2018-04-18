@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/android/widget/dk$a;
+.implements Lkik/android/widget/ea$a;
 
 
 # annotations
@@ -16,7 +16,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkik/android/widget/AutoScrollingRecyclerView;",
-        "Lkik/android/widget/dk$a",
+        "Lkik/android/widget/ea$a",
         "<",
         "Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel;",
         "Lkik/android/widget/ChatSearchRecyclerView$a;",
@@ -68,12 +68,12 @@
 
     invoke-direct {v0, p1, v1, v2}, Landroid/support/v7/widget/LinearLayoutManager;-><init>(Landroid/content/Context;IZ)V
 
-    invoke-virtual {p0, v0}, Lkik/android/widget/ChatSearchRecyclerView;->setLayoutManager(Landroid/support/v7/widget/RecyclerView$LayoutManager;)V
+    invoke-virtual {p0, v0}, Lkik/android/widget/ChatSearchRecyclerView;->a(Landroid/support/v7/widget/RecyclerView$LayoutManager;)V
 
     .line 35
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lkik/android/widget/ChatSearchRecyclerView;->setItemAnimator(Landroid/support/v7/widget/RecyclerView$ItemAnimator;)V
+    invoke-virtual {p0, v0}, Lkik/android/widget/ChatSearchRecyclerView;->a(Landroid/support/v7/widget/RecyclerView$ItemAnimator;)V
 
     .line 36
     return-void
@@ -91,7 +91,7 @@
     .line 2041
     sget-object v0, Lkik/android/widget/ChatSearchRecyclerView$1;->a:[I
 
-    invoke-interface {p1}, Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel;->Y_()Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;
+    invoke-interface {p1}, Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel;->J_()Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;
 
     move-result-object v1
 
@@ -112,7 +112,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p1}, Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel;->Y_()Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;
+    invoke-interface {p1}, Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel;->J_()Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;
 
     move-result-object v2
 
@@ -130,7 +130,7 @@
 
     .line 2043
     :pswitch_0
-    const v0, 0x7f04004f
+    const v0, 0x7f04004e
 
     .line 2050
     :goto_0
@@ -138,19 +138,19 @@
 
     .line 2045
     :pswitch_1
-    const v0, 0x7f040050
+    const v0, 0x7f04004f
 
     goto :goto_0
 
     .line 2047
     :pswitch_2
-    const v0, 0x7f040051
+    const v0, 0x7f040050
 
     goto :goto_0
 
     .line 2050
     :pswitch_3
-    const v0, 0x7f04004e
+    const v0, 0x7f04004d
 
     goto :goto_0
 

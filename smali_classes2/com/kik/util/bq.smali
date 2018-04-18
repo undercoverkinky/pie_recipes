@@ -1,49 +1,58 @@
-.class final synthetic Lcom/kik/util/bq;
+.class public final Lcom/kik/util/bq;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
-.implements Lrx/functions/b;
-
-
-# instance fields
-.field private final a:Landroid/widget/RatingBar;
+.implements Landroid/view/ActionMode$Callback;
 
 
 # direct methods
-.method private constructor <init>(Landroid/widget/RatingBar;)V
+.method public constructor <init>()V
     .locals 0
 
+    .prologue
+    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/kik/util/bq;->a:Landroid/widget/RatingBar;
-
     return-void
-.end method
-
-.method public static a(Landroid/widget/RatingBar;)Lrx/functions/b;
-    .locals 1
-
-    new-instance v0, Lcom/kik/util/bq;
-
-    invoke-direct {v0, p0}, Lcom/kik/util/bq;-><init>(Landroid/widget/RatingBar;)V
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final call(Ljava/lang/Object;)V
-    .locals 2
+.method public final onActionItemClicked(Landroid/view/ActionMode;Landroid/view/MenuItem;)Z
+    .locals 1
 
-    iget-object v0, p0, Lcom/kik/util/bq;->a:Landroid/widget/RatingBar;
+    .prologue
+    .line 31
+    const/4 v0, 0x0
 
-    check-cast p1, Ljava/lang/Float;
+    return v0
+.end method
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+.method public final onCreateActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
+    .locals 1
 
-    move-result v1
+    .prologue
+    .line 25
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/widget/RatingBar;->setRating(F)V
+    return v0
+.end method
 
+.method public final onDestroyActionMode(Landroid/view/ActionMode;)V
+    .locals 0
+
+    .prologue
+    .line 21
     return-void
+.end method
+
+.method public final onPrepareActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
+    .locals 1
+
+    .prologue
+    .line 15
+    const/4 v0, 0x0
+
+    return v0
 .end method

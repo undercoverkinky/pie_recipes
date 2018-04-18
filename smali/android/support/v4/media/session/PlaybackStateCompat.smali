@@ -11,10 +11,7 @@
     value = {
         Landroid/support/v4/media/session/PlaybackStateCompat$Builder;,
         Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;,
-        Landroid/support/v4/media/session/PlaybackStateCompat$RepeatMode;,
-        Landroid/support/v4/media/session/PlaybackStateCompat$ErrorCode;,
         Landroid/support/v4/media/session/PlaybackStateCompat$State;,
-        Landroid/support/v4/media/session/PlaybackStateCompat$MediaKeyAction;,
         Landroid/support/v4/media/session/PlaybackStateCompat$Actions;
     }
 .end annotation
@@ -35,25 +32,11 @@
 
 .field public static final ACTION_PLAY_PAUSE:J = 0x200L
 
-.field public static final ACTION_PREPARE:J = 0x4000L
-
-.field public static final ACTION_PREPARE_FROM_MEDIA_ID:J = 0x8000L
-
-.field public static final ACTION_PREPARE_FROM_SEARCH:J = 0x10000L
-
-.field public static final ACTION_PREPARE_FROM_URI:J = 0x20000L
-
 .field public static final ACTION_REWIND:J = 0x8L
 
 .field public static final ACTION_SEEK_TO:J = 0x100L
 
-.field public static final ACTION_SET_CAPTIONING_ENABLED:J = 0x100000L
-
 .field public static final ACTION_SET_RATING:J = 0x80L
-
-.field public static final ACTION_SET_REPEAT_MODE:J = 0x40000L
-
-.field public static final ACTION_SET_SHUFFLE_MODE_ENABLED:J = 0x80000L
 
 .field public static final ACTION_SKIP_TO_NEXT:J = 0x20L
 
@@ -74,41 +57,7 @@
     .end annotation
 .end field
 
-.field public static final ERROR_CODE_ACTION_ABORTED:I = 0xa
-
-.field public static final ERROR_CODE_APP_ERROR:I = 0x1
-
-.field public static final ERROR_CODE_AUTHENTICATION_EXPIRED:I = 0x3
-
-.field public static final ERROR_CODE_CONCURRENT_STREAM_LIMIT:I = 0x5
-
-.field public static final ERROR_CODE_CONTENT_ALREADY_PLAYING:I = 0x8
-
-.field public static final ERROR_CODE_END_OF_QUEUE:I = 0xb
-
-.field public static final ERROR_CODE_NOT_AVAILABLE_IN_REGION:I = 0x7
-
-.field public static final ERROR_CODE_NOT_SUPPORTED:I = 0x2
-
-.field public static final ERROR_CODE_PARENTAL_CONTROL_RESTRICTED:I = 0x6
-
-.field public static final ERROR_CODE_PREMIUM_ACCOUNT_REQUIRED:I = 0x4
-
-.field public static final ERROR_CODE_SKIP_LIMIT_REACHED:I = 0x9
-
-.field public static final ERROR_CODE_UNKNOWN_ERROR:I = 0x0
-
-.field private static final KEYCODE_MEDIA_PAUSE:I = 0x7f
-
-.field private static final KEYCODE_MEDIA_PLAY:I = 0x7e
-
 .field public static final PLAYBACK_POSITION_UNKNOWN:J = -0x1L
-
-.field public static final REPEAT_MODE_ALL:I = 0x2
-
-.field public static final REPEAT_MODE_NONE:I = 0x0
-
-.field public static final REPEAT_MODE_ONE:I = 0x1
 
 .field public static final STATE_BUFFERING:I = 0x6
 
@@ -136,13 +85,13 @@
 
 
 # instance fields
-.field final mActions:J
+.field private final mActions:J
 
-.field final mActiveItemId:J
+.field private final mActiveItemId:J
 
-.field final mBufferedPosition:J
+.field private final mBufferedPosition:J
 
-.field mCustomActions:Ljava/util/List;
+.field private mCustomActions:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
@@ -153,21 +102,19 @@
     .end annotation
 .end field
 
-.field final mErrorCode:I
+.field private final mErrorMessage:Ljava/lang/CharSequence;
 
-.field final mErrorMessage:Ljava/lang/CharSequence;
+.field private final mExtras:Landroid/os/Bundle;
 
-.field final mExtras:Landroid/os/Bundle;
+.field private final mPosition:J
 
-.field final mPosition:J
+.field private final mSpeed:F
 
-.field final mSpeed:F
-
-.field final mState:I
+.field private final mState:I
 
 .field private mStateObj:Ljava/lang/Object;
 
-.field final mUpdateTime:J
+.field private final mUpdateTime:J
 
 
 # direct methods
@@ -175,7 +122,7 @@
     .locals 1
 
     .prologue
-    .line 787
+    .line 526
     new-instance v0, Landroid/support/v4/media/session/PlaybackStateCompat$1;
 
     invoke-direct {v0}, Landroid/support/v4/media/session/PlaybackStateCompat$1;-><init>()V
@@ -185,11 +132,11 @@
     return-void
 .end method
 
-.method constructor <init>(IJJFJILjava/lang/CharSequence;JLjava/util/List;JLandroid/os/Bundle;)V
-    .locals 4
+.method private constructor <init>(IJJFJLjava/lang/CharSequence;JLjava/util/List;JLandroid/os/Bundle;)V
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(IJJFJI",
+            "(IJJFJ",
             "Ljava/lang/CharSequence;",
             "J",
             "Ljava/util/List",
@@ -202,106 +149,109 @@
     .end annotation
 
     .prologue
-    .line 496
+    .line 274
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 497
+    .line 275
     iput p1, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mState:I
 
-    .line 498
+    .line 276
     iput-wide p2, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mPosition:J
 
-    .line 499
+    .line 277
     iput-wide p4, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mBufferedPosition:J
 
-    .line 500
+    .line 278
     iput p6, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mSpeed:F
 
-    .line 501
+    .line 279
     iput-wide p7, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mActions:J
 
-    .line 502
-    iput p9, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mErrorCode:I
+    .line 280
+    iput-object p9, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mErrorMessage:Ljava/lang/CharSequence;
 
-    .line 503
-    iput-object p10, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mErrorMessage:Ljava/lang/CharSequence;
+    .line 281
+    iput-wide p10, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mUpdateTime:J
 
-    .line 504
-    iput-wide p11, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mUpdateTime:J
+    .line 282
+    new-instance v1, Ljava/util/ArrayList;
 
-    .line 505
-    new-instance v2, Ljava/util/ArrayList;
+    invoke-direct {v1, p12}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    move-object/from16 v0, p13
+    iput-object v1, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mCustomActions:Ljava/util/List;
 
-    invoke-direct {v2, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    .line 283
+    iput-wide p13, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mActiveItemId:J
 
-    iput-object v2, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mCustomActions:Ljava/util/List;
-
-    .line 506
-    move-wide/from16 v0, p14
-
-    iput-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mActiveItemId:J
-
-    .line 507
-    move-object/from16 v0, p16
+    .line 284
+    move-object/from16 v0, p15
 
     iput-object v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mExtras:Landroid/os/Bundle;
 
-    .line 508
+    .line 285
     return-void
 .end method
 
-.method constructor <init>(Landroid/os/Parcel;)V
+.method synthetic constructor <init>(IJJFJLjava/lang/CharSequence;JLjava/util/List;JLandroid/os/Bundle;Landroid/support/v4/media/session/PlaybackStateCompat$1;)V
+    .locals 0
+
+    .prologue
+    .line 38
+    invoke-direct/range {p0 .. p15}, Landroid/support/v4/media/session/PlaybackStateCompat;-><init>(IJJFJLjava/lang/CharSequence;JLjava/util/List;JLandroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method private constructor <init>(Landroid/os/Parcel;)V
     .locals 2
 
     .prologue
-    .line 510
+    .line 287
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 511
+    .line 288
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mState:I
 
-    .line 512
+    .line 289
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mPosition:J
 
-    .line 513
+    .line 290
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
     iput v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mSpeed:F
 
-    .line 514
+    .line 291
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mUpdateTime:J
 
-    .line 515
+    .line 292
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mBufferedPosition:J
 
-    .line 516
+    .line 293
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mActions:J
 
-    .line 517
+    .line 294
     sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -312,7 +262,7 @@
 
     iput-object v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mErrorMessage:Ljava/lang/CharSequence;
 
-    .line 518
+    .line 295
     sget-object v0, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->createTypedArrayList(Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
@@ -321,36 +271,139 @@
 
     iput-object v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mCustomActions:Ljava/util/List;
 
-    .line 519
+    .line 296
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mActiveItemId:J
 
-    .line 520
+    .line 297
     invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mExtras:Landroid/os/Bundle;
 
-    .line 522
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mErrorCode:I
-
-    .line 523
+    .line 298
     return-void
 .end method
 
-.method public static fromPlaybackState(Ljava/lang/Object;)Landroid/support/v4/media/session/PlaybackStateCompat;
-    .locals 19
+.method synthetic constructor <init>(Landroid/os/Parcel;Landroid/support/v4/media/session/PlaybackStateCompat$1;)V
+    .locals 0
 
     .prologue
-    .line 724
+    .line 38
+    invoke-direct {p0, p1}, Landroid/support/v4/media/session/PlaybackStateCompat;-><init>(Landroid/os/Parcel;)V
+
+    return-void
+.end method
+
+.method static synthetic access$1000(Landroid/support/v4/media/session/PlaybackStateCompat;)Ljava/util/List;
+    .locals 1
+
+    .prologue
+    .line 38
+    iget-object v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mCustomActions:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method static synthetic access$1100(Landroid/support/v4/media/session/PlaybackStateCompat;)J
+    .locals 2
+
+    .prologue
+    .line 38
+    iget-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mActiveItemId:J
+
+    return-wide v0
+.end method
+
+.method static synthetic access$1200(Landroid/support/v4/media/session/PlaybackStateCompat;)Landroid/os/Bundle;
+    .locals 1
+
+    .prologue
+    .line 38
+    iget-object v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mExtras:Landroid/os/Bundle;
+
+    return-object v0
+.end method
+
+.method static synthetic access$300(Landroid/support/v4/media/session/PlaybackStateCompat;)I
+    .locals 1
+
+    .prologue
+    .line 38
+    iget v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mState:I
+
+    return v0
+.end method
+
+.method static synthetic access$400(Landroid/support/v4/media/session/PlaybackStateCompat;)J
+    .locals 2
+
+    .prologue
+    .line 38
+    iget-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mPosition:J
+
+    return-wide v0
+.end method
+
+.method static synthetic access$500(Landroid/support/v4/media/session/PlaybackStateCompat;)F
+    .locals 1
+
+    .prologue
+    .line 38
+    iget v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mSpeed:F
+
+    return v0
+.end method
+
+.method static synthetic access$600(Landroid/support/v4/media/session/PlaybackStateCompat;)J
+    .locals 2
+
+    .prologue
+    .line 38
+    iget-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mUpdateTime:J
+
+    return-wide v0
+.end method
+
+.method static synthetic access$700(Landroid/support/v4/media/session/PlaybackStateCompat;)J
+    .locals 2
+
+    .prologue
+    .line 38
+    iget-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mBufferedPosition:J
+
+    return-wide v0
+.end method
+
+.method static synthetic access$800(Landroid/support/v4/media/session/PlaybackStateCompat;)J
+    .locals 2
+
+    .prologue
+    .line 38
+    iget-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mActions:J
+
+    return-wide v0
+.end method
+
+.method static synthetic access$900(Landroid/support/v4/media/session/PlaybackStateCompat;)Ljava/lang/CharSequence;
+    .locals 1
+
+    .prologue
+    .line 38
+    iget-object v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mErrorMessage:Ljava/lang/CharSequence;
+
+    return-object v0
+.end method
+
+.method public static fromPlaybackState(Ljava/lang/Object;)Landroid/support/v4/media/session/PlaybackStateCompat;
+    .locals 18
+
+    .prologue
+    .line 464
     if-eqz p0, :cond_0
 
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -359,36 +412,36 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 725
+    .line 465
     :cond_0
     const/4 v2, 0x0
 
-    .line 752
+    .line 491
     :goto_0
     return-object v2
 
-    .line 728
+    .line 468
     :cond_1
     invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/PlaybackStateCompatApi21;->getCustomActions(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 729
-    const/4 v15, 0x0
+    .line 469
+    const/4 v14, 0x0
 
-    .line 730
+    .line 470
     if-eqz v2, :cond_2
 
-    .line 731
-    new-instance v15, Ljava/util/ArrayList;
+    .line 471
+    new-instance v14, Ljava/util/ArrayList;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v3
 
-    invoke-direct {v15, v3}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-direct {v14, v3}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 732
+    .line 472
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -404,16 +457,16 @@
 
     move-result-object v3
 
-    .line 733
+    .line 473
     invoke-static {v3}, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;->fromCustomAction(Ljava/lang/Object;)Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;
 
     move-result-object v3
 
-    invoke-interface {v15, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v14, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 736
+    .line 476
     :cond_2
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -421,187 +474,60 @@
 
     if-lt v2, v3, :cond_3
 
-    .line 737
     invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/PlaybackStateCompatApi22;->getExtras(Ljava/lang/Object;)Landroid/os/Bundle;
 
-    move-result-object v18
+    move-result-object v17
 
-    .line 739
+    .line 479
     :goto_2
     new-instance v2, Landroid/support/v4/media/session/PlaybackStateCompat;
 
-    .line 740
     invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/PlaybackStateCompatApi21;->getState(Ljava/lang/Object;)I
 
     move-result v3
 
-    .line 741
     invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/PlaybackStateCompatApi21;->getPosition(Ljava/lang/Object;)J
 
     move-result-wide v4
 
-    .line 742
     invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/PlaybackStateCompatApi21;->getBufferedPosition(Ljava/lang/Object;)J
 
     move-result-wide v6
 
-    .line 743
     invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/PlaybackStateCompatApi21;->getPlaybackSpeed(Ljava/lang/Object;)F
 
     move-result v8
 
-    .line 744
     invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/PlaybackStateCompatApi21;->getActions(Ljava/lang/Object;)J
 
     move-result-wide v9
 
-    const/4 v11, 0x0
-
-    .line 746
     invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/PlaybackStateCompatApi21;->getErrorMessage(Ljava/lang/Object;)Ljava/lang/CharSequence;
 
-    move-result-object v12
+    move-result-object v11
 
-    .line 747
     invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/PlaybackStateCompatApi21;->getLastPositionUpdateTime(Ljava/lang/Object;)J
 
-    move-result-wide v13
+    move-result-wide v12
 
-    .line 749
     invoke-static/range {p0 .. p0}, Landroid/support/v4/media/session/PlaybackStateCompatApi21;->getActiveQueueItemId(Ljava/lang/Object;)J
 
-    move-result-wide v16
+    move-result-wide v15
 
-    invoke-direct/range {v2 .. v18}, Landroid/support/v4/media/session/PlaybackStateCompat;-><init>(IJJFJILjava/lang/CharSequence;JLjava/util/List;JLandroid/os/Bundle;)V
+    invoke-direct/range {v2 .. v17}, Landroid/support/v4/media/session/PlaybackStateCompat;-><init>(IJJFJLjava/lang/CharSequence;JLjava/util/List;JLandroid/os/Bundle;)V
 
-    .line 751
+    .line 490
     move-object/from16 v0, p0
 
     iput-object v0, v2, Landroid/support/v4/media/session/PlaybackStateCompat;->mStateObj:Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 737
+    .line 476
     :cond_3
-    const/16 v18, 0x0
+    const/16 v17, 0x0
 
     goto :goto_2
-.end method
-
-.method public static toKeyCode(J)I
-    .locals 2
-
-    .prologue
-    .line 459
-    const-wide/16 v0, 0x4
-
-    cmp-long v0, p0, v0
-
-    if-nez v0, :cond_0
-
-    .line 460
-    const/16 v0, 0x7e
-
-    .line 476
-    :goto_0
-    return v0
-
-    .line 461
-    :cond_0
-    const-wide/16 v0, 0x2
-
-    cmp-long v0, p0, v0
-
-    if-nez v0, :cond_1
-
-    .line 462
-    const/16 v0, 0x7f
-
-    goto :goto_0
-
-    .line 463
-    :cond_1
-    const-wide/16 v0, 0x20
-
-    cmp-long v0, p0, v0
-
-    if-nez v0, :cond_2
-
-    .line 464
-    const/16 v0, 0x57
-
-    goto :goto_0
-
-    .line 465
-    :cond_2
-    const-wide/16 v0, 0x10
-
-    cmp-long v0, p0, v0
-
-    if-nez v0, :cond_3
-
-    .line 466
-    const/16 v0, 0x58
-
-    goto :goto_0
-
-    .line 467
-    :cond_3
-    const-wide/16 v0, 0x1
-
-    cmp-long v0, p0, v0
-
-    if-nez v0, :cond_4
-
-    .line 468
-    const/16 v0, 0x56
-
-    goto :goto_0
-
-    .line 469
-    :cond_4
-    const-wide/16 v0, 0x40
-
-    cmp-long v0, p0, v0
-
-    if-nez v0, :cond_5
-
-    .line 470
-    const/16 v0, 0x5a
-
-    goto :goto_0
-
-    .line 471
-    :cond_5
-    const-wide/16 v0, 0x8
-
-    cmp-long v0, p0, v0
-
-    if-nez v0, :cond_6
-
-    .line 472
-    const/16 v0, 0x59
-
-    goto :goto_0
-
-    .line 473
-    :cond_6
-    const-wide/16 v0, 0x200
-
-    cmp-long v0, p0, v0
-
-    if-nez v0, :cond_7
-
-    .line 474
-    const/16 v0, 0x55
-
-    goto :goto_0
-
-    .line 476
-    :cond_7
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method
 
 
@@ -610,7 +536,7 @@
     .locals 1
 
     .prologue
-    .line 544
+    .line 318
     const/4 v0, 0x0
 
     return v0
@@ -620,7 +546,7 @@
     .locals 2
 
     .prologue
-    .line 640
+    .line 405
     iget-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mActions:J
 
     return-wide v0
@@ -630,7 +556,7 @@
     .locals 2
 
     .prologue
-    .line 702
+    .line 442
     iget-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mActiveItemId:J
 
     return-wide v0
@@ -640,7 +566,7 @@
     .locals 2
 
     .prologue
-    .line 597
+    .line 369
     iget-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mBufferedPosition:J
 
     return-wide v0
@@ -659,27 +585,17 @@
     .end annotation
 
     .prologue
-    .line 647
+    .line 412
     iget-object v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mCustomActions:Ljava/util/List;
 
     return-object v0
-.end method
-
-.method public final getErrorCode()I
-    .locals 1
-
-    .prologue
-    .line 670
-    iget v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mErrorCode:I
-
-    return v0
 .end method
 
 .method public final getErrorMessage()Ljava/lang/CharSequence;
     .locals 1
 
     .prologue
-    .line 680
+    .line 420
     iget-object v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mErrorMessage:Ljava/lang/CharSequence;
 
     return-object v0
@@ -689,7 +605,7 @@
     .locals 1
 
     .prologue
-    .line 711
+    .line 451
     iget-object v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mExtras:Landroid/os/Bundle;
 
     return-object v0
@@ -699,7 +615,7 @@
     .locals 2
 
     .prologue
-    .line 690
+    .line 430
     iget-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mUpdateTime:J
 
     return-wide v0
@@ -709,7 +625,7 @@
     .locals 1
 
     .prologue
-    .line 608
+    .line 380
     iget v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mSpeed:F
 
     return v0
@@ -719,7 +635,7 @@
     .locals 18
 
     .prologue
-    .line 764
+    .line 503
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/support/v4/media/session/PlaybackStateCompat;->mStateObj:Ljava/lang/Object;
@@ -732,28 +648,28 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 765
+    .line 504
     :cond_0
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/support/v4/media/session/PlaybackStateCompat;->mStateObj:Ljava/lang/Object;
 
-    .line 784
+    .line 523
     :goto_0
     return-object v2
 
-    .line 768
+    .line 507
     :cond_1
     const/4 v14, 0x0
 
-    .line 769
+    .line 508
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/support/v4/media/session/PlaybackStateCompat;->mCustomActions:Ljava/util/List;
 
     if-eqz v2, :cond_2
 
-    .line 770
+    .line 509
     new-instance v14, Ljava/util/ArrayList;
 
     move-object/from16 v0, p0
@@ -766,7 +682,7 @@
 
     invoke-direct {v14, v2}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 771
+    .line 510
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/support/v4/media/session/PlaybackStateCompat;->mCustomActions:Ljava/util/List;
@@ -788,7 +704,7 @@
 
     check-cast v2, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;
 
-    .line 772
+    .line 511
     invoke-virtual {v2}, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;->getCustomAction()Ljava/lang/Object;
 
     move-result-object v2
@@ -797,7 +713,7 @@
 
     goto :goto_1
 
-    .line 775
+    .line 514
     :cond_2
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -805,7 +721,7 @@
 
     if-lt v2, v3, :cond_3
 
-    .line 776
+    .line 515
     move-object/from16 v0, p0
 
     iget v3, v0, Landroid/support/v4/media/session/PlaybackStateCompat;->mState:I
@@ -852,7 +768,7 @@
 
     iput-object v2, v0, Landroid/support/v4/media/session/PlaybackStateCompat;->mStateObj:Ljava/lang/Object;
 
-    .line 784
+    .line 523
     :goto_2
     move-object/from16 v0, p0
 
@@ -860,7 +776,7 @@
 
     goto :goto_0
 
-    .line 780
+    .line 519
     :cond_3
     move-object/from16 v0, p0
 
@@ -909,7 +825,7 @@
     .locals 2
 
     .prologue
-    .line 588
+    .line 360
     iget-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mPosition:J
 
     return-wide v0
@@ -919,7 +835,7 @@
     .locals 1
 
     .prologue
-    .line 581
+    .line 353
     iget v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mState:I
 
     return v0
@@ -929,14 +845,14 @@
     .locals 4
 
     .prologue
-    .line 527
+    .line 302
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "PlaybackState {"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 528
+    .line 303
     const-string v1, "state="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -947,7 +863,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 529
+    .line 304
     const-string v1, ", position="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -958,7 +874,7 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 530
+    .line 305
     const-string v1, ", buffered position="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -969,7 +885,7 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 531
+    .line 306
     const-string v1, ", speed="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -980,7 +896,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 532
+    .line 307
     const-string v1, ", updated="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -991,7 +907,7 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 533
+    .line 308
     const-string v1, ", actions="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1002,19 +918,8 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 534
-    const-string v1, ", error code="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget v2, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mErrorCode:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 535
-    const-string v1, ", error message="
+    .line 309
+    const-string v1, ", error="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1024,7 +929,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 536
+    .line 310
     const-string v1, ", custom actions="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1035,7 +940,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 537
+    .line 311
     const-string v1, ", active item id="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1046,12 +951,12 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 538
+    .line 312
     const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 539
+    .line 313
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -1063,61 +968,56 @@
     .locals 2
 
     .prologue
-    .line 549
+    .line 323
     iget v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mState:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 550
+    .line 324
     iget-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mPosition:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 551
+    .line 325
     iget v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mSpeed:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 552
+    .line 326
     iget-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mUpdateTime:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 553
+    .line 327
     iget-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mBufferedPosition:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 554
+    .line 328
     iget-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mActions:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 555
+    .line 329
     iget-object v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mErrorMessage:Ljava/lang/CharSequence;
 
     invoke-static {v0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
-    .line 556
+    .line 330
     iget-object v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mCustomActions:Ljava/util/List;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
 
-    .line 557
+    .line 331
     iget-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mActiveItemId:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 558
+    .line 332
     iget-object v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 560
-    iget v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mErrorCode:I
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 561
+    .line 333
     return-void
 .end method

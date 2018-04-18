@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 4917
+    .line 4872
     invoke-direct {p0}, Lcom/google/protobuf/AbstractParser;-><init>()V
 
     return-void
@@ -45,13 +45,13 @@
     .end annotation
 
     .prologue
-    .line 5922
+    .line 5877
     new-instance v0, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p1, v1}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;-><init>(Lcom/google/protobuf/CodedInputStream;B)V
 
-    .line 4917
+    .line 4872
     return-object v0
 .end method

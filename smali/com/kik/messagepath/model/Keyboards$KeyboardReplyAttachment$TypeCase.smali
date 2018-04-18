@@ -48,7 +48,7 @@
 
     const/4 v2, 0x0
 
-    .line 9171
+    .line 9208
     new-instance v0, Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$TypeCase;
 
     const-string v1, "SUGGESTED_REPLY"
@@ -57,7 +57,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$TypeCase;->SUGGESTED_REPLY:Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$TypeCase;
 
-    .line 9172
+    .line 9209
     new-instance v0, Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$TypeCase;
 
     const-string v1, "TYPE_NOT_SET"
@@ -66,7 +66,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$TypeCase;->TYPE_NOT_SET:Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$TypeCase;
 
-    .line 9169
+    .line 9206
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$TypeCase;
@@ -93,13 +93,13 @@
     .end annotation
 
     .prologue
-    .line 9174
+    .line 9211
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 9175
+    .line 9212
     iput p3, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$TypeCase;->value:I
 
-    .line 9176
+    .line 9213
     return-void
 .end method
 
@@ -107,28 +107,28 @@
     .locals 1
 
     .prologue
-    .line 9186
+    .line 9223
     packed-switch p0, :pswitch_data_0
 
-    .line 9189
+    .line 9226
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 9187
+    .line 9224
     :pswitch_0
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$TypeCase;->SUGGESTED_REPLY:Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$TypeCase;
 
     goto :goto_0
 
-    .line 9188
+    .line 9225
     :pswitch_1
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$TypeCase;->TYPE_NOT_SET:Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$TypeCase;
 
     goto :goto_0
 
-    .line 9186
+    .line 9223
     nop
 
     :pswitch_data_0
@@ -144,7 +144,7 @@
     .end annotation
 
     .prologue
-    .line 9182
+    .line 9219
     invoke-static {p0}, Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$TypeCase;->forNumber(I)Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$TypeCase;
 
     move-result-object v0
@@ -156,7 +156,7 @@
     .locals 1
 
     .prologue
-    .line 9169
+    .line 9206
     const-class v0, Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$TypeCase;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -172,7 +172,7 @@
     .locals 1
 
     .prologue
-    .line 9169
+    .line 9206
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$TypeCase;->$VALUES:[Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$TypeCase;
 
     invoke-virtual {v0}, [Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$TypeCase;->clone()Ljava/lang/Object;
@@ -190,7 +190,7 @@
     .locals 1
 
     .prologue
-    .line 9193
+    .line 9230
     iget v0, p0, Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$TypeCase;->value:I
 
     return v0

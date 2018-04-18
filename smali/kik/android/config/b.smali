@@ -19,13 +19,13 @@
 .method public abstract a(Ljava/lang/String;)Lkik/android/config/Configuration;
 .end method
 
-.method public abstract a(Lkik/android/util/ai;)V
+.method public abstract a(Lkik/android/util/ah;)V
 .end method
 
 .method public abstract a(Lkik/android/config/Configuration;)Z
 .end method
 
-.method public abstract b(Lkik/android/util/ai;)Ljava/lang/String;
+.method public abstract b(Lkik/android/util/ah;)Ljava/lang/String;
 .end method
 
 .method public abstract b()Ljava/util/Hashtable;

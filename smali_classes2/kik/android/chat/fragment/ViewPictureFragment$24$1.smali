@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/ViewPictureFragment$24;->a(Lcom/kik/cache/KikVolleyImageLoader$c;Z)V
+    value = Lkik/android/chat/fragment/ViewPictureFragment$24;->a(Lcom/kik/cache/aa$d;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 424
+    .line 383
     iput-object p1, p0, Lkik/android/chat/fragment/ViewPictureFragment$24$1;->b:Lkik/android/chat/fragment/ViewPictureFragment$24;
 
     iput-object p2, p0, Lkik/android/chat/fragment/ViewPictureFragment$24$1;->a:Landroid/graphics/Bitmap;
@@ -44,7 +44,7 @@
     .locals 2
 
     .prologue
-    .line 429
+    .line 388
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$24$1;->b:Lkik/android/chat/fragment/ViewPictureFragment$24;
 
     iget-object v0, v0, Lkik/android/chat/fragment/ViewPictureFragment$24;->a:Lkik/android/chat/fragment/ViewPictureFragment;
@@ -53,7 +53,7 @@
 
     invoke-static {v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment;->a(Lkik/android/chat/fragment/ViewPictureFragment;Z)Z
 
-    .line 430
+    .line 389
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$24$1;->b:Lkik/android/chat/fragment/ViewPictureFragment$24;
 
     iget-object v0, v0, Lkik/android/chat/fragment/ViewPictureFragment$24;->a:Lkik/android/chat/fragment/ViewPictureFragment;
@@ -64,15 +64,15 @@
 
     invoke-virtual {v0, v1}, Lcom/kik/cache/ProfileImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 431
+    .line 390
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$24$1;->b:Lkik/android/chat/fragment/ViewPictureFragment$24;
 
     iget-object v0, v0, Lkik/android/chat/fragment/ViewPictureFragment$24;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 432
+    .line 391
     return-void
 .end method

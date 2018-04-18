@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/fragment/KikConversationsFragment$1;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Ljava/lang/Void;",
         ">;"
@@ -32,26 +32,26 @@
     .locals 0
 
     .prologue
-    .line 272
+    .line 256
     iput-object p1, p0, Lkik/android/chat/fragment/KikConversationsFragment$1;->a:Lkik/android/chat/fragment/KikConversationsFragment;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;)V
+.method public final bridge synthetic a(Ljava/lang/Object;)V
     .locals 1
 
     .prologue
-    .line 272
-    .line 1276
+    .line 256
+    .line 1260
     iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$1;->a:Lkik/android/chat/fragment/KikConversationsFragment;
 
-    invoke-static {v0}, Lkik/android/chat/fragment/KikConversationsFragment;->m(Lkik/android/chat/fragment/KikConversationsFragment;)V
+    invoke-static {v0}, Lkik/android/chat/fragment/KikConversationsFragment;->a(Lkik/android/chat/fragment/KikConversationsFragment;)V
 
-    .line 272
+    .line 256
     return-void
 .end method

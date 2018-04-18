@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lio/fabric/sdk/android/services/common/o$c;
+.implements Lio/fabric/sdk/android/services/common/n$c;
 
 
 # annotations

@@ -17,7 +17,7 @@
 
 
 # virtual methods
-.method public final Y_()Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;
+.method public final J_()Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;
     .locals 1
 
     .prologue
@@ -27,12 +27,12 @@
     return-object v0
 .end method
 
-.method public final h()Lrx/d;
+.method public final f()Lrx/c;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lrx/d",
+            "Lrx/c",
             "<",
             "Ljava/lang/String;",
             ">;"
@@ -44,11 +44,11 @@
     iget-object v0, p0, Lkik/android/chat/vm/chats/search/l;->g:Ljava/lang/String;
 
     .line 1036
-    iget-object v1, p0, Lkik/android/chat/vm/chats/search/l;->c:Lkik/core/interfaces/l;
+    iget-object v1, p0, Lkik/android/chat/vm/chats/search/l;->c:Lkik/core/interfaces/m;
 
     const/4 v2, 0x0
 
-    invoke-interface {v1, v0, v2}, Lkik/core/interfaces/l;->a(Ljava/lang/String;Z)Lkik/core/datatypes/p;
+    invoke-interface {v1, v0, v2}, Lkik/core/interfaces/m;->a(Ljava/lang/String;Z)Lkik/core/datatypes/s;
 
     move-result-object v0
 
@@ -60,7 +60,7 @@
 
     .line 30
     :goto_0
-    invoke-static {v0}, Lrx/d;->b(Ljava/lang/Object;)Lrx/d;
+    invoke-static {v0}, Lrx/c;->b(Ljava/lang/Object;)Lrx/c;
 
     move-result-object v0
 
@@ -68,7 +68,7 @@
 
     .line 1040
     :cond_0
-    invoke-virtual {v0}, Lkik/core/datatypes/p;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/s;->c()Ljava/lang/String;
 
     move-result-object v1
 
@@ -79,11 +79,11 @@
     if-eqz v1, :cond_1
 
     .line 1041
-    invoke-virtual {v0}, Lkik/core/datatypes/p;->Q()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/s;->O()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkik/core/util/j;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lkik/core/util/l;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -91,7 +91,7 @@
 
     .line 1044
     :cond_1
-    invoke-virtual {v0}, Lkik/core/datatypes/p;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/s;->c()Ljava/lang/String;
 
     move-result-object v0
 

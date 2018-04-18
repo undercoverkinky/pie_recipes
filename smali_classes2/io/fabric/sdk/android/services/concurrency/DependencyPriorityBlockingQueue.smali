@@ -199,10 +199,8 @@
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 228
     return v0
 
-    .line 230
     :catchall_0
     move-exception v0
 
@@ -476,9 +474,9 @@
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 156
     return v0
 
+    .line 156
     :cond_1
     const/4 v0, 0x0
 
@@ -563,7 +561,6 @@
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 131
     return v0
 .end method
 
@@ -623,10 +620,8 @@
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 146
     return v0
 
-    .line 148
     :catchall_0
     move-exception v0
 
@@ -722,9 +717,9 @@
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 177
     return v0
 
+    .line 177
     :cond_1
     const/4 v0, 0x0
 
@@ -778,10 +773,8 @@
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 187
     return v0
 
-    .line 189
     :catchall_0
     move-exception v0
 
@@ -822,10 +815,8 @@
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 97
     return v0
 
-    .line 99
     :catchall_0
     move-exception v0
 
@@ -891,10 +882,8 @@
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 117
     return-object v0
 
-    .line 119
     :catchall_0
     move-exception v0
 
@@ -944,10 +933,8 @@
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 107
     return-object v0
 
-    .line 109
     :catchall_0
     move-exception v0
 

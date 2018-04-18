@@ -1,49 +1,92 @@
-.class final synthetic Lcom/kik/util/br;
+.class public final Lcom/kik/util/br;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
-# interfaces
-.implements Lrx/functions/b;
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/kik/util/br$a;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
 
 
 # instance fields
-.field private final a:Landroid/view/View;
+.field private a:Ljava/util/concurrent/ExecutorService;
 
 
 # direct methods
-.method private constructor <init>(Landroid/view/View;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/kik/util/br;->a:Landroid/view/View;
-
-    return-void
-.end method
-
-.method public static a(Landroid/view/View;)Lrx/functions/b;
+.method public constructor <init>()V
     .locals 1
 
-    new-instance v0, Lcom/kik/util/br;
+    .prologue
+    .line 51
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, p0}, Lcom/kik/util/br;-><init>(Landroid/view/View;)V
+    .line 52
+    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
 
-    return-object v0
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/kik/util/br;->a:Ljava/util/concurrent/ExecutorService;
+
+    .line 53
+    return-void
 .end method
 
 
 # virtual methods
-.method public final call(Ljava/lang/Object;)V
-    .locals 2
+.method public final declared-synchronized a(Ljava/util/concurrent/Callable;)Lcom/kik/events/Promise;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/concurrent/Callable",
+            "<TT;>;)",
+            "Lcom/kik/events/Promise",
+            "<TT;>;"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/kik/util/br;->a:Landroid/view/View;
+    .prologue
+    .line 61
+    monitor-enter p0
 
-    check-cast p1, Ljava/lang/Float;
+    :try_start_0
+    new-instance v0, Lcom/kik/events/Promise;
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    invoke-direct {v0}, Lcom/kik/events/Promise;-><init>()V
 
-    move-result v1
+    .line 63
+    iget-object v1, p0, Lcom/kik/util/br;->a:Ljava/util/concurrent/ExecutorService;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
+    new-instance v2, Lcom/kik/util/br$a;
 
-    return-void
+    invoke-direct {v2, v0, p1}, Lcom/kik/util/br$a;-><init>(Lcom/kik/events/Promise;Ljava/util/concurrent/Callable;)V
+
+    invoke-interface {v1, v2}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 65
+    monitor-exit p0
+
+    return-object v0
+
+    .line 61
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
 .end method

@@ -43,34 +43,34 @@
     const/4 v7, 0x0
 
     .line 44
-    .line 1087
+    .line 2087
     :try_start_0
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 1089
+    .line 2089
     const-string v1, "build_version"
 
     iget-object v2, p3, Lcom/crashlytics/android/a/d;->a:Ljava/lang/String;
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1090
+    .line 2090
     const-string v1, "display_version"
 
     iget-object v2, p3, Lcom/crashlytics/android/a/d;->b:Ljava/lang/String;
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1091
+    .line 2091
     const-string v1, "instance"
 
     iget-object v2, p3, Lcom/crashlytics/android/a/d;->c:Ljava/lang/String;
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1092
+    .line 2092
     const-string v1, "source"
 
     const-string v2, "3"
@@ -85,13 +85,13 @@
 
     move-result-object v1
 
-    .line 2075
+    .line 3075
     :try_start_1
     const-string v2, "Accept"
 
     const-string v3, "application/json"
 
-    invoke-virtual {v1, v2, v3}, Lio/fabric/sdk/android/services/network/HttpRequest;->header(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    invoke-virtual {v1, v2, v3}, Lio/fabric/sdk/android/services/network/HttpRequest;->a(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
     move-result-object v2
 
@@ -105,7 +105,6 @@
 
     iget-object v5, p0, Lcom/crashlytics/android/a/e;->a:Lio/fabric/sdk/android/h;
 
-    .line 2077
     invoke-virtual {v5}, Lio/fabric/sdk/android/h;->a()Ljava/lang/String;
 
     move-result-object v5
@@ -118,8 +117,7 @@
 
     move-result-object v4
 
-    .line 2076
-    invoke-virtual {v2, v3, v4}, Lio/fabric/sdk/android/services/network/HttpRequest;->header(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    invoke-virtual {v2, v3, v4}, Lio/fabric/sdk/android/services/network/HttpRequest;->a(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
     move-result-object v2
 
@@ -127,8 +125,7 @@
 
     const-string v4, "470fa2b4ae81cd56ecbcda9735803434cec591fa"
 
-    .line 2078
-    invoke-virtual {v2, v3, v4}, Lio/fabric/sdk/android/services/network/HttpRequest;->header(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    invoke-virtual {v2, v3, v4}, Lio/fabric/sdk/android/services/network/HttpRequest;->a(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
     move-result-object v2
 
@@ -136,8 +133,7 @@
 
     const-string v4, "android"
 
-    .line 2080
-    invoke-virtual {v2, v3, v4}, Lio/fabric/sdk/android/services/network/HttpRequest;->header(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    invoke-virtual {v2, v3, v4}, Lio/fabric/sdk/android/services/network/HttpRequest;->a(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
     move-result-object v2
 
@@ -145,25 +141,23 @@
 
     iget-object v4, p0, Lcom/crashlytics/android/a/e;->a:Lio/fabric/sdk/android/h;
 
-    .line 2081
     invoke-virtual {v4}, Lio/fabric/sdk/android/h;->a()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {v2, v3, v4}, Lio/fabric/sdk/android/services/network/HttpRequest;->header(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    invoke-virtual {v2, v3, v4}, Lio/fabric/sdk/android/services/network/HttpRequest;->a(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
     move-result-object v2
 
     const-string v3, "X-CRASHLYTICS-API-KEY"
 
-    .line 2082
-    invoke-virtual {v2, v3, p1}, Lio/fabric/sdk/android/services/network/HttpRequest;->header(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    invoke-virtual {v2, v3, p1}, Lio/fabric/sdk/android/services/network/HttpRequest;->a(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
     move-result-object v2
 
     const-string v3, "X-CRASHLYTICS-BETA-TOKEN"
 
-    .line 3032
+    .line 4032
     new-instance v4, Ljava/lang/StringBuilder;
 
     const-string v5, "3:"
@@ -178,8 +172,8 @@
 
     move-result-object v4
 
-    .line 2083
-    invoke-virtual {v2, v3, v4}, Lio/fabric/sdk/android/services/network/HttpRequest;->header(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    .line 3075
+    invoke-virtual {v2, v3, v4}, Lio/fabric/sdk/android/services/network/HttpRequest;->a(Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/network/HttpRequest;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -213,12 +207,20 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
+    .line 4378
+    const/16 v0, 0xc8
+
+    invoke-virtual {v8}, Lio/fabric/sdk/android/services/network/HttpRequest;->b()I
+
+    move-result v1
+
+    if-ne v0, v1, :cond_1
+
+    const/4 v0, 0x1
+
     .line 54
-    invoke-virtual {v8}, Lio/fabric/sdk/android/services/network/HttpRequest;->ok()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
+    :goto_0
+    if-eqz v0, :cond_2
 
     .line 55
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
@@ -226,13 +228,13 @@
     .line 56
     new-instance v0, Lorg/json/JSONObject;
 
-    invoke-virtual {v8}, Lio/fabric/sdk/android/services/network/HttpRequest;->body()Ljava/lang/String;
+    invoke-virtual {v8}, Lio/fabric/sdk/android/services/network/HttpRequest;->c()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 4024
+    .line 5024
     const-string v1, "url"
 
     const/4 v2, 0x0
@@ -241,7 +243,7 @@
 
     move-result-object v1
 
-    .line 4025
+    .line 5025
     const-string v2, "version_string"
 
     const/4 v3, 0x0
@@ -250,7 +252,7 @@
 
     move-result-object v2
 
-    .line 4026
+    .line 5026
     const-string v3, "build_version"
 
     const/4 v4, 0x0
@@ -259,7 +261,7 @@
 
     move-result-object v4
 
-    .line 4027
+    .line 5027
     const-string v3, "display_version"
 
     const/4 v5, 0x0
@@ -268,7 +270,7 @@
 
     move-result-object v3
 
-    .line 4028
+    .line 5028
     const-string v5, "identifier"
 
     const/4 v6, 0x0
@@ -277,7 +279,7 @@
 
     move-result-object v5
 
-    .line 4029
+    .line 5029
     const-string v6, "instance_identifier"
 
     const/4 v9, 0x0
@@ -286,7 +288,7 @@
 
     move-result-object v6
 
-    .line 4031
+    .line 5031
     new-instance v0, Lcom/crashlytics/android/a/f;
 
     invoke-direct/range {v0 .. v6}, Lcom/crashlytics/android/a/f;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -300,18 +302,24 @@
     .line 66
     const-string v1, "X-REQUEST-ID"
 
-    invoke-virtual {v8, v1}, Lio/fabric/sdk/android/services/network/HttpRequest;->header(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v8, v1}, Lio/fabric/sdk/android/services/network/HttpRequest;->a(Ljava/lang/String;)Ljava/lang/String;
 
     .line 67
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     .line 71
     :cond_0
-    :goto_0
+    :goto_1
     return-object v0
 
-    .line 59
+    .line 4378
     :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    .line 59
+    :cond_2
     :try_start_3
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
@@ -325,8 +333,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 60
-    invoke-virtual {v8}, Lio/fabric/sdk/android/services/network/HttpRequest;->code()I
+    invoke-virtual {v8}, Lio/fabric/sdk/android/services/network/HttpRequest;->b()I
 
     move-result v3
 
@@ -338,29 +345,28 @@
 
     move-result-object v2
 
-    .line 59
     invoke-interface {v0, v1, v2}, Lio/fabric/sdk/android/k;->b(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
     .line 65
-    if-eqz v8, :cond_2
+    if-eqz v8, :cond_3
 
     .line 66
     const-string v0, "X-REQUEST-ID"
 
-    invoke-virtual {v8, v0}, Lio/fabric/sdk/android/services/network/HttpRequest;->header(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v8, v0}, Lio/fabric/sdk/android/services/network/HttpRequest;->a(Ljava/lang/String;)Ljava/lang/String;
 
     .line 67
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
-    :cond_2
-    :goto_1
+    :cond_3
+    :goto_2
     move-object v0, v7
 
     .line 71
-    goto :goto_0
+    goto :goto_1
 
     .line 62
     :catch_0
@@ -369,7 +375,7 @@
     move-object v1, v7
 
     .line 63
-    :goto_2
+    :goto_3
     :try_start_4
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
@@ -400,17 +406,17 @@
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     .line 65
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     .line 66
     const-string v0, "X-REQUEST-ID"
 
-    invoke-virtual {v1, v0}, Lio/fabric/sdk/android/services/network/HttpRequest;->header(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Lio/fabric/sdk/android/services/network/HttpRequest;->a(Ljava/lang/String;)Ljava/lang/String;
 
     .line 67
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
-    goto :goto_1
+    goto :goto_2
 
     .line 65
     :catchall_0
@@ -418,44 +424,44 @@
 
     move-object v1, v7
 
-    :goto_3
-    if-eqz v1, :cond_3
+    :goto_4
+    if-eqz v1, :cond_4
 
     .line 66
     const-string v2, "X-REQUEST-ID"
 
-    invoke-virtual {v1, v2}, Lio/fabric/sdk/android/services/network/HttpRequest;->header(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Lio/fabric/sdk/android/services/network/HttpRequest;->a(Ljava/lang/String;)Ljava/lang/String;
 
     .line 67
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     .line 68
-    :cond_3
+    :cond_4
     throw v0
 
     .line 65
     :catchall_1
     move-exception v0
 
-    goto :goto_3
+    goto :goto_4
 
     :catchall_2
     move-exception v0
 
     move-object v1, v8
 
-    goto :goto_3
+    goto :goto_4
 
     .line 62
     :catch_1
     move-exception v0
 
-    goto :goto_2
+    goto :goto_3
 
     :catch_2
     move-exception v0
 
     move-object v1, v8
 
-    goto :goto_2
+    goto :goto_3
 .end method

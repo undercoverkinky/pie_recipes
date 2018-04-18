@@ -60,7 +60,7 @@
     return-void
 .end method
 
-.method constructor <init>(Landroid/view/View;)V
+.method public constructor <init>(Landroid/view/View;)V
     .locals 1
 
     .prologue

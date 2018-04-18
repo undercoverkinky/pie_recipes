@@ -34,7 +34,7 @@
     .locals 1
 
     .prologue
-    .line 97
+    .line 89
     const/4 v0, 0x0
 
     return v0
@@ -44,7 +44,7 @@
     .locals 0
 
     .prologue
-    .line 78
+    .line 74
     return-void
 .end method
 
@@ -52,7 +52,7 @@
     .locals 1
 
     .prologue
-    .line 73
+    .line 70
     const/4 v0, 0x1
 
     return v0
@@ -62,7 +62,7 @@
     .locals 1
 
     .prologue
-    .line 64
+    .line 63
     const/4 v0, 0x0
 
     return-object v0
@@ -72,7 +72,7 @@
     .locals 1
 
     .prologue
-    .line 92
+    .line 85
     const/4 v0, 0x0
 
     return v0
@@ -82,7 +82,7 @@
     .locals 1
 
     .prologue
-    .line 82
+    .line 77
     const/4 v0, 0x0
 
     return v0
@@ -92,7 +92,7 @@
     .locals 1
 
     .prologue
-    .line 102
+    .line 93
     const/4 v0, 0x0
 
     return v0
@@ -102,7 +102,7 @@
     .locals 1
 
     .prologue
-    .line 87
+    .line 81
     const/4 v0, 0x0
 
     return v0
@@ -112,6 +112,6 @@
     .locals 0
 
     .prologue
-    .line 69
+    .line 67
     return-void
 .end method

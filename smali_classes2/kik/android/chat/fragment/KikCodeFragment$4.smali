@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 511
+    .line 487
     iput-object p1, p0, Lkik/android/chat/fragment/KikCodeFragment$4;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .prologue
     const/16 v2, 0x12c
 
-    .line 515
+    .line 491
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$4;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikCodeFragment;->_drawArea:Lkik/android/widget/KikFinderCodeImageView;
@@ -51,15 +51,15 @@
 
     invoke-direct {v1, p0}, Lkik/android/chat/fragment/KikCodeFragment$4$1;-><init>(Lkik/android/chat/fragment/KikCodeFragment$4;)V
 
-    invoke-static {v0, v2, v1}, Lkik/android/util/an;->a(Landroid/view/View;ILandroid/animation/Animator$AnimatorListener;)V
+    invoke-static {v0, v2, v1}, Lkik/android/util/am;->a(Landroid/view/View;ILandroid/animation/Animator$AnimatorListener;)V
 
-    .line 524
+    .line 499
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$4;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikCodeFragment;->_tellAFriendImage:Landroid/widget/ImageView;
 
-    invoke-static {v0, v2}, Lkik/android/util/an;->a(Landroid/view/View;I)V
+    invoke-static {v0, v2}, Lkik/android/util/am;->a(Landroid/view/View;I)V
 
-    .line 525
+    .line 500
     return-void
 .end method

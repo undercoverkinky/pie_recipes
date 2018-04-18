@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 183
+    .line 173
     iput-object p1, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b$2;->b:Lcom/kik/cards/browser/CaptchaWindowFragment$b;
 
     iput-object p2, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b$2;->a:Landroid/webkit/WebView;
@@ -44,7 +44,7 @@
     .locals 1
 
     .prologue
-    .line 187
+    .line 177
     iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b$2;->a:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getUrl()Ljava/lang/String;
@@ -57,16 +57,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 188
+    .line 178
     iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b$2;->b:Lcom/kik/cards/browser/CaptchaWindowFragment$b;
 
     invoke-static {v0}, Lcom/kik/cards/browser/CaptchaWindowFragment$b;->a(Lcom/kik/cards/browser/CaptchaWindowFragment$b;)V
 
-    .line 193
+    .line 183
     :goto_0
     return-void
 
-    .line 191
+    .line 181
     :cond_0
     iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b$2;->b:Lcom/kik/cards/browser/CaptchaWindowFragment$b;
 

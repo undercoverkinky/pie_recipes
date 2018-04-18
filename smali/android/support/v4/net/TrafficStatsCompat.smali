@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroid/support/v4/net/TrafficStatsCompat$Api24TrafficStatsCompatImpl;,
+        Landroid/support/v4/net/TrafficStatsCompat$1;,
         Landroid/support/v4/net/TrafficStatsCompat$IcsTrafficStatsCompatImpl;,
         Landroid/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl;,
         Landroid/support/v4/net/TrafficStatsCompat$TrafficStatsCompatImpl;
@@ -23,47 +23,26 @@
     .locals 2
 
     .prologue
-    .line 160
-    const-string v0, "N"
-
-    sget-object v1, Landroid/os/Build$VERSION;->CODENAME:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 161
-    new-instance v0, Landroid/support/v4/net/TrafficStatsCompat$Api24TrafficStatsCompatImpl;
-
-    invoke-direct {v0}, Landroid/support/v4/net/TrafficStatsCompat$Api24TrafficStatsCompatImpl;-><init>()V
-
-    sput-object v0, Landroid/support/v4/net/TrafficStatsCompat;->IMPL:Landroid/support/v4/net/TrafficStatsCompat$TrafficStatsCompatImpl;
-
-    .line 167
-    :goto_0
-    return-void
-
-    .line 162
-    :cond_0
+    .line 124
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0xe
 
-    if-lt v0, v1, :cond_1
+    if-lt v0, v1, :cond_0
 
-    .line 163
+    .line 125
     new-instance v0, Landroid/support/v4/net/TrafficStatsCompat$IcsTrafficStatsCompatImpl;
 
     invoke-direct {v0}, Landroid/support/v4/net/TrafficStatsCompat$IcsTrafficStatsCompatImpl;-><init>()V
 
     sput-object v0, Landroid/support/v4/net/TrafficStatsCompat;->IMPL:Landroid/support/v4/net/TrafficStatsCompat$TrafficStatsCompatImpl;
 
-    goto :goto_0
+    .line 129
+    :goto_0
+    return-void
 
-    .line 165
-    :cond_1
+    .line 127
+    :cond_0
     new-instance v0, Landroid/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl;
 
     invoke-direct {v0}, Landroid/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl;-><init>()V
@@ -77,7 +56,7 @@
     .locals 0
 
     .prologue
-    .line 262
+    .line 204
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -87,12 +66,12 @@
     .locals 1
 
     .prologue
-    .line 174
+    .line 136
     sget-object v0, Landroid/support/v4/net/TrafficStatsCompat;->IMPL:Landroid/support/v4/net/TrafficStatsCompat$TrafficStatsCompatImpl;
 
     invoke-interface {v0}, Landroid/support/v4/net/TrafficStatsCompat$TrafficStatsCompatImpl;->clearThreadStatsTag()V
 
-    .line 175
+    .line 137
     return-void
 .end method
 
@@ -100,7 +79,7 @@
     .locals 1
 
     .prologue
-    .line 183
+    .line 145
     sget-object v0, Landroid/support/v4/net/TrafficStatsCompat;->IMPL:Landroid/support/v4/net/TrafficStatsCompat$TrafficStatsCompatImpl;
 
     invoke-interface {v0}, Landroid/support/v4/net/TrafficStatsCompat$TrafficStatsCompatImpl;->getThreadStatsTag()I
@@ -114,12 +93,12 @@
     .locals 1
 
     .prologue
-    .line 194
+    .line 156
     sget-object v0, Landroid/support/v4/net/TrafficStatsCompat;->IMPL:Landroid/support/v4/net/TrafficStatsCompat$TrafficStatsCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/net/TrafficStatsCompat$TrafficStatsCompatImpl;->incrementOperationCount(I)V
 
-    .line 195
+    .line 157
     return-void
 .end method
 
@@ -127,12 +106,12 @@
     .locals 1
 
     .prologue
-    .line 205
+    .line 167
     sget-object v0, Landroid/support/v4/net/TrafficStatsCompat;->IMPL:Landroid/support/v4/net/TrafficStatsCompat$TrafficStatsCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/net/TrafficStatsCompat$TrafficStatsCompatImpl;->incrementOperationCount(II)V
 
-    .line 206
+    .line 168
     return-void
 .end method
 
@@ -140,30 +119,12 @@
     .locals 1
 
     .prologue
-    .line 220
+    .line 182
     sget-object v0, Landroid/support/v4/net/TrafficStatsCompat;->IMPL:Landroid/support/v4/net/TrafficStatsCompat$TrafficStatsCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/net/TrafficStatsCompat$TrafficStatsCompatImpl;->setThreadStatsTag(I)V
 
-    .line 221
-    return-void
-.end method
-
-.method public static tagDatagramSocket(Ljava/net/DatagramSocket;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/net/SocketException;
-        }
-    .end annotation
-
-    .prologue
-    .line 252
-    sget-object v0, Landroid/support/v4/net/TrafficStatsCompat;->IMPL:Landroid/support/v4/net/TrafficStatsCompat$TrafficStatsCompatImpl;
-
-    invoke-interface {v0, p0}, Landroid/support/v4/net/TrafficStatsCompat$TrafficStatsCompatImpl;->tagDatagramSocket(Ljava/net/DatagramSocket;)V
-
-    .line 253
+    .line 183
     return-void
 .end method
 
@@ -176,30 +137,12 @@
     .end annotation
 
     .prologue
-    .line 232
+    .line 194
     sget-object v0, Landroid/support/v4/net/TrafficStatsCompat;->IMPL:Landroid/support/v4/net/TrafficStatsCompat$TrafficStatsCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/net/TrafficStatsCompat$TrafficStatsCompatImpl;->tagSocket(Ljava/net/Socket;)V
 
-    .line 233
-    return-void
-.end method
-
-.method public static untagDatagramSocket(Ljava/net/DatagramSocket;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/net/SocketException;
-        }
-    .end annotation
-
-    .prologue
-    .line 259
-    sget-object v0, Landroid/support/v4/net/TrafficStatsCompat;->IMPL:Landroid/support/v4/net/TrafficStatsCompat$TrafficStatsCompatImpl;
-
-    invoke-interface {v0, p0}, Landroid/support/v4/net/TrafficStatsCompat$TrafficStatsCompatImpl;->untagDatagramSocket(Ljava/net/DatagramSocket;)V
-
-    .line 260
+    .line 195
     return-void
 .end method
 
@@ -212,11 +155,11 @@
     .end annotation
 
     .prologue
-    .line 239
+    .line 201
     sget-object v0, Landroid/support/v4/net/TrafficStatsCompat;->IMPL:Landroid/support/v4/net/TrafficStatsCompat$TrafficStatsCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/net/TrafficStatsCompat$TrafficStatsCompatImpl;->untagSocket(Ljava/net/Socket;)V
 
-    .line 240
+    .line 202
     return-void
 .end method

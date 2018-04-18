@@ -1,5 +1,5 @@
 .class final Lkik/android/b/d$2;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,9 +15,9 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
-        "Lkik/core/datatypes/l;",
+        "Lkik/core/datatypes/o;",
         ">;"
     }
 .end annotation
@@ -36,14 +36,14 @@
     .locals 0
 
     .prologue
-    .line 176
+    .line 162
     iput-object p1, p0, Lkik/android/b/d$2;->c:Lkik/android/b/d;
 
     iput-object p2, p0, Lkik/android/b/d$2;->a:Lcom/kik/events/Promise;
 
     iput-object p3, p0, Lkik/android/b/d$2;->b:Ljava/util/List;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -54,13 +54,13 @@
     .locals 3
 
     .prologue
-    .line 176
-    check-cast p1, Lkik/core/datatypes/l;
+    .line 162
+    check-cast p1, Lkik/core/datatypes/o;
 
-    .line 1180
-    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Object;)V
+    .line 1166
+    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Object;)V
 
-    .line 1181
+    .line 1167
     iget-object v0, p0, Lkik/android/b/d$2;->a:Lcom/kik/events/Promise;
 
     new-instance v1, Landroid/os/Bundle;
@@ -69,24 +69,24 @@
 
     invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Ljava/lang/Object;)V
 
-    .line 1182
+    .line 1168
     iget-object v0, p0, Lkik/android/b/d$2;->c:Lkik/android/b/d;
 
     iget-object v1, p0, Lkik/android/b/d$2;->b:Ljava/util/List;
 
     iget-object v2, p0, Lkik/android/b/d$2;->c:Lkik/android/b/d;
 
-    invoke-static {v2}, Lkik/android/b/d;->c(Lkik/android/b/d;)Lcom/kik/cards/web/r;
+    invoke-static {v2}, Lkik/android/b/d;->c(Lkik/android/b/d;)Lcom/kik/cards/web/q;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/kik/cards/web/r;->k()Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;
+    invoke-interface {v2}, Lcom/kik/cards/web/q;->m()Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;
 
     move-result-object v2
 
-    invoke-static {v0, p1, v1, v2}, Lkik/android/b/d;->a(Lkik/android/b/d;Lkik/core/datatypes/l;Ljava/util/List;Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;)V
+    invoke-static {v0, p1, v1, v2}, Lkik/android/b/d;->a(Lkik/android/b/d;Lkik/core/datatypes/o;Ljava/util/List;Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;)Lcom/kik/events/Promise;
 
-    .line 176
+    .line 162
     return-void
 .end method
 
@@ -94,15 +94,15 @@
     .locals 1
 
     .prologue
-    .line 188
-    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Throwable;)V
+    .line 174
+    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Throwable;)V
 
-    .line 189
+    .line 175
     iget-object v0, p0, Lkik/android/b/d$2;->a:Lcom/kik/events/Promise;
 
     invoke-virtual {v0, p1}, Lcom/kik/events/Promise;->a(Ljava/lang/Throwable;)V
 
-    .line 190
+    .line 176
     return-void
 .end method
 
@@ -110,10 +110,10 @@
     .locals 1
 
     .prologue
-    .line 195
-    invoke-super {p0}, Lcom/kik/events/k;->b()V
+    .line 181
+    invoke-super {p0}, Lcom/kik/events/l;->b()V
 
-    .line 196
+    .line 182
     iget-object v0, p0, Lkik/android/b/d$2;->c:Lkik/android/b/d;
 
     invoke-static {v0}, Lkik/android/b/d;->f(Lkik/android/b/d;)Lcom/kik/cards/web/f;
@@ -122,16 +122,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 197
+    .line 183
     iget-object v0, p0, Lkik/android/b/d$2;->c:Lkik/android/b/d;
 
     invoke-static {v0}, Lkik/android/b/d;->f(Lkik/android/b/d;)Lcom/kik/cards/web/f;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/kik/cards/web/f;->a()V
+    invoke-interface {v0}, Lcom/kik/cards/web/f;->b()V
 
-    .line 199
+    .line 185
     :cond_0
     return-void
 .end method

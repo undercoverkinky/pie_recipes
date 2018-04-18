@@ -27,7 +27,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 28
+    .line 27
     new-instance v0, Lcom/google/common/io/FileWriteMode;
 
     const-string v1, "APPEND"
@@ -59,7 +59,7 @@
     .end annotation
 
     .prologue
-    .line 26
+    .line 25
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void

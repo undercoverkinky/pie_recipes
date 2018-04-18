@@ -248,7 +248,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 284
     goto :goto_0
 .end method
 

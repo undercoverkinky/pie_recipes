@@ -1,6 +1,9 @@
 .class final Lkik/android/videochat/VideoChatViewController$3;
-.super Lcom/kik/events/k;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lkik/android/chat/fragment/KikDialogFragment$c;
 
 
 # annotations
@@ -13,17 +16,6 @@
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/kik/events/k",
-        "<",
-        "Ljava/util/List",
-        "<",
-        "Lcom/rounds/kik/masks/IMaskModel;",
-        ">;>;"
-    }
-.end annotation
-
 
 # instance fields
 .field final synthetic a:Lkik/android/videochat/VideoChatViewController;
@@ -34,49 +26,39 @@
     .locals 0
 
     .prologue
-    .line 386
+    .line 380
     iput-object p1, p0, Lkik/android/videochat/VideoChatViewController$3;->a:Lkik/android/videochat/VideoChatViewController;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;)V
-    .locals 1
+.method public final a()V
+    .locals 2
 
     .prologue
-    .line 386
-    check-cast p1, Ljava/util/List;
-
-    .line 1390
-    if-eqz p1, :cond_0
-
-    .line 1391
+    .line 384
     iget-object v0, p0, Lkik/android/videochat/VideoChatViewController$3;->a:Lkik/android/videochat/VideoChatViewController;
 
-    invoke-static {v0, p1}, Lkik/android/videochat/VideoChatViewController;->b(Lkik/android/videochat/VideoChatViewController;Ljava/util/List;)Ljava/util/List;
-
-    .line 1392
-    iget-object v0, p0, Lkik/android/videochat/VideoChatViewController$3;->a:Lkik/android/videochat/VideoChatViewController;
-
-    invoke-static {v0}, Lkik/android/videochat/VideoChatViewController;->n(Lkik/android/videochat/VideoChatViewController;)Lcom/rounds/kik/VideoController;
+    invoke-static {v0}, Lkik/android/videochat/VideoChatViewController;->c(Lkik/android/videochat/VideoChatViewController;)Lkik/android/videochat/c;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/rounds/kik/VideoController;->setMasks(Ljava/util/List;)V
+    invoke-interface {v0}, Lkik/android/videochat/c;->g()Lcom/rounds/kik/analytics/IReporterProxy;
 
-    .line 386
-    :cond_0
-    return-void
-.end method
+    move-result-object v0
 
-.method public final a(Ljava/lang/Throwable;)V
-    .locals 0
+    iget-object v1, p0, Lkik/android/videochat/VideoChatViewController$3;->a:Lkik/android/videochat/VideoChatViewController;
 
-    .prologue
-    .line 400
+    invoke-static {v1}, Lkik/android/videochat/VideoChatViewController;->g(Lkik/android/videochat/VideoChatViewController;)Lkik/core/datatypes/o;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lcom/rounds/kik/analytics/IReporterProxy;->onNetworkErrorDialogDismiss(Ljava/lang/Object;)V
+
+    .line 385
     return-void
 .end method

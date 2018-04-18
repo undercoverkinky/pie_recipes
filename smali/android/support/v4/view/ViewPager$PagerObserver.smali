@@ -19,16 +19,25 @@
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/view/ViewPager;)V
+.method private constructor <init>(Landroid/support/v4/view/ViewPager;)V
     .locals 0
 
     .prologue
-    .line 3108
+    .line 2993
     iput-object p1, p0, Landroid/support/v4/view/ViewPager$PagerObserver;->this$0:Landroid/support/v4/view/ViewPager;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
 
-    .line 3109
+    return-void
+.end method
+
+.method synthetic constructor <init>(Landroid/support/v4/view/ViewPager;Landroid/support/v4/view/ViewPager$1;)V
+    .locals 0
+
+    .prologue
+    .line 2993
+    invoke-direct {p0, p1}, Landroid/support/v4/view/ViewPager$PagerObserver;-><init>(Landroid/support/v4/view/ViewPager;)V
+
     return-void
 .end method
 
@@ -38,12 +47,12 @@
     .locals 1
 
     .prologue
-    .line 3113
+    .line 2996
     iget-object v0, p0, Landroid/support/v4/view/ViewPager$PagerObserver;->this$0:Landroid/support/v4/view/ViewPager;
 
     invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->dataSetChanged()V
 
-    .line 3114
+    .line 2997
     return-void
 .end method
 
@@ -51,11 +60,11 @@
     .locals 1
 
     .prologue
-    .line 3117
+    .line 3000
     iget-object v0, p0, Landroid/support/v4/view/ViewPager$PagerObserver;->this$0:Landroid/support/v4/view/ViewPager;
 
     invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->dataSetChanged()V
 
-    .line 3118
+    .line 3001
     return-void
 .end method

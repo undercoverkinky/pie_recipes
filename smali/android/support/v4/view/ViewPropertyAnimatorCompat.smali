@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/support/v4/view/ViewPropertyAnimatorCompat$1;,
         Landroid/support/v4/view/ViewPropertyAnimatorCompat$LollipopViewPropertyAnimatorCompatImpl;,
         Landroid/support/v4/view/ViewPropertyAnimatorCompat$KitKatViewPropertyAnimatorCompatImpl;,
         Landroid/support/v4/view/ViewPropertyAnimatorCompat$JBMr2ViewPropertyAnimatorCompatImpl;,
@@ -26,11 +27,11 @@
 
 
 # instance fields
-.field mEndAction:Ljava/lang/Runnable;
+.field private mEndAction:Ljava/lang/Runnable;
 
-.field mOldLayerType:I
+.field private mOldLayerType:I
 
-.field mStartAction:Ljava/lang/Runnable;
+.field private mStartAction:Ljava/lang/Runnable;
 
 .field private mView:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
@@ -168,6 +169,66 @@
 
     .line 37
     return-void
+.end method
+
+.method static synthetic access$000(Landroid/support/v4/view/ViewPropertyAnimatorCompat;)Ljava/lang/Runnable;
+    .locals 1
+
+    .prologue
+    .line 25
+    iget-object v0, p0, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->mEndAction:Ljava/lang/Runnable;
+
+    return-object v0
+.end method
+
+.method static synthetic access$002(Landroid/support/v4/view/ViewPropertyAnimatorCompat;Ljava/lang/Runnable;)Ljava/lang/Runnable;
+    .locals 0
+
+    .prologue
+    .line 25
+    iput-object p1, p0, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->mEndAction:Ljava/lang/Runnable;
+
+    return-object p1
+.end method
+
+.method static synthetic access$100(Landroid/support/v4/view/ViewPropertyAnimatorCompat;)Ljava/lang/Runnable;
+    .locals 1
+
+    .prologue
+    .line 25
+    iget-object v0, p0, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->mStartAction:Ljava/lang/Runnable;
+
+    return-object v0
+.end method
+
+.method static synthetic access$102(Landroid/support/v4/view/ViewPropertyAnimatorCompat;Ljava/lang/Runnable;)Ljava/lang/Runnable;
+    .locals 0
+
+    .prologue
+    .line 25
+    iput-object p1, p0, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->mStartAction:Ljava/lang/Runnable;
+
+    return-object p1
+.end method
+
+.method static synthetic access$400(Landroid/support/v4/view/ViewPropertyAnimatorCompat;)I
+    .locals 1
+
+    .prologue
+    .line 25
+    iget v0, p0, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->mOldLayerType:I
+
+    return v0
+.end method
+
+.method static synthetic access$402(Landroid/support/v4/view/ViewPropertyAnimatorCompat;I)I
+    .locals 0
+
+    .prologue
+    .line 25
+    iput p1, p0, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->mOldLayerType:I
+
+    return p1
 .end method
 
 

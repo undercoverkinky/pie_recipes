@@ -12,38 +12,26 @@
 
 
 # virtual methods
-.method public abstract applySoftInputMode()V
+.method public abstract a(Landroid/view/View;)V
 .end method
 
-.method public abstract disableKeyboardHandling()V
+.method public abstract a(Landroid/view/View;I)V
 .end method
 
-.method public abstract hideKeyBoard(Landroid/view/View;)V
-    .param p1    # Landroid/view/View;
-        .annotation runtime Ljavax/annotation/Nullable;
-        .end annotation
-    .end param
+.method public abstract a(Landroid/view/View;Z)V
 .end method
 
-.method public abstract setInputMode(Lkik/android/util/KeyboardManipulator$InputMode;)V
+.method public abstract a(Lkik/android/util/KeyboardManipulator$InputMode;)V
 .end method
 
-.method public abstract setKeyboardHandlingPaused(Z)V
+.method public abstract b(Landroid/view/View;)V
 .end method
 
-.method public abstract setKeyboardMode(Landroid/view/View;I)V
+.method public abstract d(Z)V
 .end method
 
-.method public abstract showKeyBoard(Landroid/view/View;)V
-    .param p1    # Landroid/view/View;
-        .annotation runtime Ljavax/annotation/Nullable;
-        .end annotation
-    .end param
+.method public abstract w()V
 .end method
 
-.method public abstract showKeyBoard(Landroid/view/View;Z)V
-    .param p1    # Landroid/view/View;
-        .annotation runtime Ljavax/annotation/Nullable;
-        .end annotation
-    .end param
+.method public abstract y()V
 .end method

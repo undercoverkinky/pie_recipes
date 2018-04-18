@@ -9,21 +9,16 @@
 # instance fields
 .field private a:Lcom/kik/clientmetrics/model/Clientmetrics$ClientMetricsSettingsUsedType;
 
-.field protected b:Lkik/core/interfaces/f;
+.field private b:Lkik/android/chat/fragment/KikScopedDialogFragment;
+
+.field private c:I
+
+.field private d:Landroid/view/View;
+
+.field protected e:Lkik/core/interfaces/f;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
-
-.field protected c:Lcom/kik/metrics/c/d;
-    .annotation runtime Ljavax/inject/Inject;
-    .end annotation
-.end field
-
-.field private d:Lkik/android/chat/fragment/KikScopedDialogFragment;
-
-.field private e:I
-
-.field private f:Landroid/view/View;
 
 
 # direct methods
@@ -33,42 +28,42 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 55
+    .line 53
     invoke-direct {p0, p1, p2, p3}, Landroid/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 56
-    const v0, 0x7f040136
+    .line 54
+    const v0, 0x7f040107
 
     invoke-virtual {p0, v0}, Lkik/android/widget/preferences/KikModalPreference;->setLayoutResource(I)V
 
-    .line 58
+    .line 56
     iput-object p4, p0, Lkik/android/widget/preferences/KikModalPreference;->a:Lcom/kik/clientmetrics/model/Clientmetrics$ClientMetricsSettingsUsedType;
 
-    .line 60
-    sget-object v0, Lkik/android/R$styleable;->KikPreference:[I
+    .line 58
+    sget-object v0, Lkik/android/m$a;->K:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 62
+    .line 60
     invoke-virtual {v0, v1, v1}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v1
 
-    iput v1, p0, Lkik/android/widget/preferences/KikModalPreference;->e:I
+    iput v1, p0, Lkik/android/widget/preferences/KikModalPreference;->c:I
 
-    .line 64
-    invoke-static {}, Lkik/android/widget/preferences/e;->a()Landroid/preference/Preference$OnPreferenceClickListener;
+    .line 62
+    invoke-static {}, Lkik/android/widget/preferences/j;->a()Landroid/preference/Preference$OnPreferenceClickListener;
 
     move-result-object v1
 
     invoke-virtual {p0, v1}, Lkik/android/widget/preferences/KikModalPreference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 65
+    .line 63
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 66
+    .line 64
     return-void
 .end method
 
@@ -76,12 +71,12 @@
     .locals 1
 
     .prologue
-    .line 50
+    .line 48
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0, p3}, Lkik/android/widget/preferences/KikModalPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;ILcom/kik/clientmetrics/model/Clientmetrics$ClientMetricsSettingsUsedType;)V
 
-    .line 51
+    .line 49
     return-void
 .end method
 
@@ -91,41 +86,37 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 83
+    .line 0
+    .line 1081
     invoke-virtual {p0, p2}, Lkik/android/widget/preferences/KikModalPreference;->onPreferenceClick(Landroid/preference/Preference;)Z
 
     move-result v0
 
-    .line 85
+    .line 1083
     if-nez v0, :cond_1
 
-    .line 86
+    .line 1084
     const/4 v0, 0x0
 
-    .line 97
     :cond_0
     :goto_0
     return v0
 
-    .line 89
+    .line 1087
     :cond_1
     invoke-interface {p1, p2}, Landroid/preference/Preference$OnPreferenceClickListener;->onPreferenceClick(Landroid/preference/Preference;)Z
 
     move-result v0
 
-    .line 91
+    .line 1089
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lkik/android/widget/preferences/KikModalPreference;->a:Lcom/kik/clientmetrics/model/Clientmetrics$ClientMetricsSettingsUsedType;
-
-    if-eqz v1, :cond_0
-
-    .line 92
+    .line 1090
     new-instance v5, Ljava/util/HashMap;
 
     invoke-direct {v5}, Ljava/util/HashMap;-><init>()V
 
-    .line 93
+    .line 1092
     const-string v1, "s"
 
     iget-object v2, p0, Lkik/android/widget/preferences/KikModalPreference;->a:Lcom/kik/clientmetrics/model/Clientmetrics$ClientMetricsSettingsUsedType;
@@ -142,8 +133,8 @@
 
     invoke-interface {v5, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 94
-    iget-object v1, p0, Lkik/android/widget/preferences/KikModalPreference;->b:Lkik/core/interfaces/f;
+    .line 1094
+    iget-object v1, p0, Lkik/android/widget/preferences/KikModalPreference;->e:Lkik/core/interfaces/f;
 
     invoke-interface {v1}, Lkik/core/interfaces/f;->c()Lcom/kik/clientmetrics/f;
 
@@ -151,7 +142,7 @@
 
     sget-object v2, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->SETTING_USED:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
 
-    invoke-static {}, Lkik/core/util/v;->b()J
+    invoke-static {}, Lkik/core/util/x;->b()J
 
     move-result-wide v6
 
@@ -168,8 +159,8 @@
     .locals 1
 
     .prologue
-    .line 35
-    iget-object v0, p0, Lkik/android/widget/preferences/KikModalPreference;->d:Lkik/android/chat/fragment/KikScopedDialogFragment;
+    .line 33
+    iget-object v0, p0, Lkik/android/widget/preferences/KikModalPreference;->b:Lkik/android/chat/fragment/KikScopedDialogFragment;
 
     return-object v0
 .end method
@@ -178,10 +169,10 @@
     .locals 0
 
     .prologue
-    .line 45
+    .line 43
     invoke-interface {p1, p0}, Lcom/kik/components/CoreComponent;->a(Lkik/android/widget/preferences/KikModalPreference;)V
 
-    .line 46
+    .line 44
     return-void
 .end method
 
@@ -189,10 +180,10 @@
     .locals 0
 
     .prologue
-    .line 40
-    iput-object p1, p0, Lkik/android/widget/preferences/KikModalPreference;->d:Lkik/android/chat/fragment/KikScopedDialogFragment;
+    .line 38
+    iput-object p1, p0, Lkik/android/widget/preferences/KikModalPreference;->b:Lkik/android/chat/fragment/KikScopedDialogFragment;
 
-    .line 41
+    .line 39
     return-void
 .end method
 
@@ -200,18 +191,18 @@
     .locals 1
 
     .prologue
-    .line 71
+    .line 69
     invoke-super {p0, p1}, Landroid/preference/Preference;->onBindView(Landroid/view/View;)V
 
-    .line 73
-    iput-object p1, p0, Lkik/android/widget/preferences/KikModalPreference;->f:Landroid/view/View;
+    .line 71
+    iput-object p1, p0, Lkik/android/widget/preferences/KikModalPreference;->d:Landroid/view/View;
 
-    .line 75
-    iget v0, p0, Lkik/android/widget/preferences/KikModalPreference;->e:I
+    .line 73
+    iget v0, p0, Lkik/android/widget/preferences/KikModalPreference;->c:I
 
     invoke-static {p1, v0}, Lkik/android/widget/preferences/KikPreference;->a(Landroid/view/View;I)V
 
-    .line 76
+    .line 74
     return-void
 .end method
 
@@ -219,8 +210,8 @@
     .locals 1
 
     .prologue
-    .line 82
-    invoke-static {p0, p1}, Lkik/android/widget/preferences/f;->a(Lkik/android/widget/preferences/KikModalPreference;Landroid/preference/Preference$OnPreferenceClickListener;)Landroid/preference/Preference$OnPreferenceClickListener;
+    .line 80
+    invoke-static {p0, p1}, Lkik/android/widget/preferences/k;->a(Lkik/android/widget/preferences/KikModalPreference;Landroid/preference/Preference$OnPreferenceClickListener;)Landroid/preference/Preference$OnPreferenceClickListener;
 
     move-result-object v0
 

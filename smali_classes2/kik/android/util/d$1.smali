@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/kik/cache/KikVolleyImageLoader$d;
+.implements Lcom/kik/cache/aa$e;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/util/d;->a(Lkik/core/datatypes/messageExtensions/ContentMessage;Ljava/lang/String;Lcom/kik/cache/KikVolleyImageLoader;Lcom/kik/cache/ContentImageView;Lcom/android/volley/h$a;Lcom/kik/android/Mixpanel;)Lcom/kik/events/Promise;
+    value = Lkik/android/util/d;->a(Lkik/core/datatypes/messageExtensions/ContentMessage;[BLjava/lang/String;Lcom/kik/cache/aa;Lcom/kik/cache/ContentImageView;Lcom/android/volley/i$a;Lcom/kik/android/Mixpanel;)Lcom/kik/events/Promise;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 730
+    .line 732
     iput-object p1, p0, Lkik/android/util/d$1;->d:Lkik/android/util/d;
 
     iput-object p2, p0, Lkik/android/util/d$1;->a:Ljava/lang/String;
@@ -52,19 +52,19 @@
     .locals 2
 
     .prologue
-    .line 759
+    .line 761
     iget-object v0, p0, Lkik/android/util/d$1;->b:Lcom/kik/events/Promise;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Ljava/lang/Throwable;)V
 
-    .line 760
+    .line 762
     iget-object v0, p0, Lkik/android/util/d$1;->c:Lkik/core/datatypes/messageExtensions/ContentMessage;
 
     if-eqz v0, :cond_0
 
-    .line 761
+    .line 763
     iget-object v0, p0, Lkik/android/util/d$1;->d:Lkik/android/util/d;
 
     invoke-static {v0}, Lkik/android/util/d;->b(Lkik/android/util/d;)Ljava/util/HashSet;
@@ -79,31 +79,31 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 763
+    .line 765
     :cond_0
     return-void
 .end method
 
-.method public final a(Lcom/kik/cache/KikVolleyImageLoader$c;Z)V
+.method public final a(Lcom/kik/cache/aa$d;Z)V
     .locals 2
 
     .prologue
-    .line 735
+    .line 737
     if-eqz p1, :cond_0
 
     :try_start_0
-    invoke-virtual {p1}, Lcom/kik/cache/KikVolleyImageLoader$c;->b()Landroid/graphics/Bitmap;
+    invoke-virtual {p1}, Lcom/kik/cache/aa$d;->b()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 736
+    .line 738
     new-instance v0, Lkik/android/util/d$1$1;
 
-    invoke-direct {v0, p0, p1}, Lkik/android/util/d$1$1;-><init>(Lkik/android/util/d$1;Lcom/kik/cache/KikVolleyImageLoader$c;)V
+    invoke-direct {v0, p0, p1}, Lkik/android/util/d$1$1;-><init>(Lkik/android/util/d$1;Lcom/kik/cache/aa$d;)V
 
-    .line 748
+    .line 750
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Void;
@@ -112,16 +112,16 @@
     :try_end_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 754
+    .line 756
     :cond_0
     :goto_0
     return-void
 
-    .line 751
+    .line 753
     :catch_0
     move-exception v0
 
-    .line 752
+    .line 754
     iget-object v1, p0, Lkik/android/util/d$1;->b:Lcom/kik/events/Promise;
 
     invoke-virtual {v1, v0}, Lcom/kik/events/Promise;->a(Ljava/lang/Throwable;)V

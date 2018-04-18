@@ -3,18 +3,12 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x10
-.end annotation
-
-
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 28
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +18,7 @@
     .locals 1
 
     .prologue
-    .line 38
+    .line 34
     instance-of v0, p0, Landroid/os/OperationCanceledException;
 
     return v0
@@ -34,7 +28,7 @@
     .locals 7
 
     .prologue
-    .line 33
+    .line 29
     move-object v6, p6
 
     check-cast v6, Landroid/os/CancellationSignal;

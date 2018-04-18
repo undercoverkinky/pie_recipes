@@ -61,14 +61,14 @@
     :cond_0
     iget-object v0, p0, Lkik/android/chat/fragment/FullControlVideoMediaItemFragment$3;->a:Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;
 
-    iget-boolean v0, v0, Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;->m:Z
+    iget-boolean v0, v0, Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;->n:Z
 
     if-eqz v0, :cond_1
 
     .line 101
     iget-object v0, p0, Lkik/android/chat/fragment/FullControlVideoMediaItemFragment$3;->a:Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;->c()Z
+    invoke-virtual {v0}, Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;->d()Z
 
     .line 102
     iget-object v0, p0, Lkik/android/chat/fragment/FullControlVideoMediaItemFragment$3;->a:Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;
@@ -103,7 +103,7 @@
     .line 107
     iget-object v0, p0, Lkik/android/chat/fragment/FullControlVideoMediaItemFragment$3;->a:Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;->s()V
+    invoke-virtual {v0}, Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;->O()V
 
     goto :goto_0
 .end method

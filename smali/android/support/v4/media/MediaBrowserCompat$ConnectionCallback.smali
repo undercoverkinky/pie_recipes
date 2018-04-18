@@ -22,49 +22,58 @@
 
 
 # instance fields
-.field mConnectionCallbackInternal:Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback$ConnectionCallbackInternal;
+.field private mConnectionCallbackInternal:Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback$ConnectionCallbackInternal;
 
 .field final mConnectionCallbackObj:Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 2
+    .locals 3
 
     .prologue
-    .line 547
+    const/4 v2, 0x0
+
+    .line 404
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 548
+    .line 405
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
-    .line 549
+    .line 406
     new-instance v0, Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback$StubApi21;
 
-    invoke-direct {v0, p0}, Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback$StubApi21;-><init>(Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;)V
+    invoke-direct {v0, p0, v2}, Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback$StubApi21;-><init>(Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;Landroid/support/v4/media/MediaBrowserCompat$1;)V
 
-    .line 550
     invoke-static {v0}, Landroid/support/v4/media/MediaBrowserCompatApi21;->createConnectionCallback(Landroid/support/v4/media/MediaBrowserCompatApi21$ConnectionCallback;)Ljava/lang/Object;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;->mConnectionCallbackObj:Ljava/lang/Object;
 
-    .line 554
+    .line 411
     :goto_0
     return-void
 
-    .line 552
+    .line 409
     :cond_0
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;->mConnectionCallbackObj:Ljava/lang/Object;
+    iput-object v2, p0, Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;->mConnectionCallbackObj:Ljava/lang/Object;
 
     goto :goto_0
+.end method
+
+.method static synthetic access$200(Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;)Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback$ConnectionCallbackInternal;
+    .locals 1
+
+    .prologue
+    .line 400
+    iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;->mConnectionCallbackInternal:Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback$ConnectionCallbackInternal;
+
+    return-object v0
 .end method
 
 
@@ -73,7 +82,7 @@
     .locals 0
 
     .prologue
-    .line 561
+    .line 418
     return-void
 .end method
 
@@ -81,7 +90,7 @@
     .locals 0
 
     .prologue
-    .line 573
+    .line 430
     return-void
 .end method
 
@@ -89,7 +98,7 @@
     .locals 0
 
     .prologue
-    .line 567
+    .line 424
     return-void
 .end method
 
@@ -97,9 +106,9 @@
     .locals 0
 
     .prologue
-    .line 576
+    .line 433
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;->mConnectionCallbackInternal:Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback$ConnectionCallbackInternal;
 
-    .line 577
+    .line 434
     return-void
 .end method

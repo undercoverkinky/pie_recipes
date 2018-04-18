@@ -231,7 +231,6 @@
     :cond_2
     invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsResponse;->makeExtensionsImmutable()V
 
-    .line 1292
     throw v0
 
     .line 1277

@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 833
+    .line 854
     iput-object p1, p0, Lcom/google/gson/internal/bind/TypeAdapters$32;->a:Ljava/lang/Class;
 
     iput-object p2, p0, Lcom/google/gson/internal/bind/TypeAdapters$32;->b:Lcom/google/gson/o;
@@ -40,14 +40,14 @@
 
 
 # virtual methods
-.method public final a(Lcom/google/gson/e;Lcom/google/gson/b/a;)Lcom/google/gson/o;
+.method public final a(Lcom/google/gson/d;Lcom/google/gson/b/a;)Lcom/google/gson/o;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lcom/google/gson/e;",
+            "Lcom/google/gson/d;",
             "Lcom/google/gson/b/a",
             "<TT;>;)",
             "Lcom/google/gson/o",
@@ -56,7 +56,7 @@
     .end annotation
 
     .prologue
-    .line 836
+    .line 857
     invoke-virtual {p2}, Lcom/google/gson/b/a;->a()Ljava/lang/Class;
 
     move-result-object v0
@@ -80,7 +80,7 @@
     .locals 2
 
     .prologue
-    .line 839
+    .line 860
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "Factory[type="

@@ -4,10 +4,6 @@
 
 
 # annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x15
-.end annotation
-
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/support/v4/graphics/drawable/DrawableWrapperLollipop$DrawableWrapperStateLollipop;
@@ -20,21 +16,21 @@
     .locals 0
 
     .prologue
-    .line 39
+    .line 35
     invoke-direct {p0, p1}, Landroid/support/v4/graphics/drawable/DrawableWrapperKitKat;-><init>(Landroid/graphics/drawable/Drawable;)V
 
-    .line 40
+    .line 36
     return-void
 .end method
 
-.method constructor <init>(Landroid/support/v4/graphics/drawable/DrawableWrapperGingerbread$DrawableWrapperState;Landroid/content/res/Resources;)V
+.method constructor <init>(Landroid/support/v4/graphics/drawable/DrawableWrapperDonut$DrawableWrapperState;Landroid/content/res/Resources;)V
     .locals 0
 
     .prologue
-    .line 43
-    invoke-direct {p0, p1, p2}, Landroid/support/v4/graphics/drawable/DrawableWrapperKitKat;-><init>(Landroid/support/v4/graphics/drawable/DrawableWrapperGingerbread$DrawableWrapperState;Landroid/content/res/Resources;)V
+    .line 39
+    invoke-direct {p0, p1, p2}, Landroid/support/v4/graphics/drawable/DrawableWrapperKitKat;-><init>(Landroid/support/v4/graphics/drawable/DrawableWrapperDonut$DrawableWrapperState;Landroid/content/res/Resources;)V
 
-    .line 44
+    .line 40
     return-void
 .end method
 
@@ -44,7 +40,7 @@
     .locals 1
 
     .prologue
-    .line 63
+    .line 59
     iget-object v0, p0, Landroid/support/v4/graphics/drawable/DrawableWrapperLollipop;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getDirtyBounds()Landroid/graphics/Rect;
@@ -58,12 +54,12 @@
     .locals 1
 
     .prologue
-    .line 58
+    .line 54
     iget-object v0, p0, Landroid/support/v4/graphics/drawable/DrawableWrapperLollipop;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->getOutline(Landroid/graphics/Outline;)V
 
-    .line 59
+    .line 55
     return-void
 .end method
 
@@ -73,17 +69,17 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 106
+    .line 102
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x15
 
     if-ne v1, v2, :cond_1
 
-    .line 107
+    .line 103
     iget-object v1, p0, Landroid/support/v4/graphics/drawable/DrawableWrapperLollipop;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 108
+    .line 104
     instance-of v2, v1, Landroid/graphics/drawable/GradientDrawable;
 
     if-nez v2, :cond_0
@@ -99,23 +95,23 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 111
+    .line 107
     :cond_1
     return v0
 .end method
 
-.method mutateConstantState()Landroid/support/v4/graphics/drawable/DrawableWrapperGingerbread$DrawableWrapperState;
+.method mutateConstantState()Landroid/support/v4/graphics/drawable/DrawableWrapperDonut$DrawableWrapperState;
     .locals 3
 
     .prologue
-    .line 117
+    .line 113
     new-instance v0, Landroid/support/v4/graphics/drawable/DrawableWrapperLollipop$DrawableWrapperStateLollipop;
 
-    iget-object v1, p0, Landroid/support/v4/graphics/drawable/DrawableWrapperLollipop;->mState:Landroid/support/v4/graphics/drawable/DrawableWrapperGingerbread$DrawableWrapperState;
+    iget-object v1, p0, Landroid/support/v4/graphics/drawable/DrawableWrapperLollipop;->mState:Landroid/support/v4/graphics/drawable/DrawableWrapperDonut$DrawableWrapperState;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Landroid/support/v4/graphics/drawable/DrawableWrapperLollipop$DrawableWrapperStateLollipop;-><init>(Landroid/support/v4/graphics/drawable/DrawableWrapperGingerbread$DrawableWrapperState;Landroid/content/res/Resources;)V
+    invoke-direct {v0, v1, v2}, Landroid/support/v4/graphics/drawable/DrawableWrapperLollipop$DrawableWrapperStateLollipop;-><init>(Landroid/support/v4/graphics/drawable/DrawableWrapperDonut$DrawableWrapperState;Landroid/content/res/Resources;)V
 
     return-object v0
 .end method
@@ -124,12 +120,12 @@
     .locals 1
 
     .prologue
-    .line 48
+    .line 44
     iget-object v0, p0, Landroid/support/v4/graphics/drawable/DrawableWrapperLollipop;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1, p2}, Landroid/graphics/drawable/Drawable;->setHotspot(FF)V
 
-    .line 49
+    .line 45
     return-void
 .end method
 
@@ -137,12 +133,12 @@
     .locals 1
 
     .prologue
-    .line 53
+    .line 49
     iget-object v0, p0, Landroid/support/v4/graphics/drawable/DrawableWrapperLollipop;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->setHotspotBounds(IIII)V
 
-    .line 54
+    .line 50
     return-void
 .end method
 
@@ -150,20 +146,20 @@
     .locals 1
 
     .prologue
-    .line 95
+    .line 91
     invoke-super {p0, p1}, Landroid/support/v4/graphics/drawable/DrawableWrapperKitKat;->setState([I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 98
+    .line 94
     invoke-virtual {p0}, Landroid/support/v4/graphics/drawable/DrawableWrapperLollipop;->invalidateSelf()V
 
-    .line 99
+    .line 95
     const/4 v0, 0x1
 
-    .line 101
+    .line 97
     :goto_0
     return v0
 
@@ -177,21 +173,21 @@
     .locals 1
 
     .prologue
-    .line 77
+    .line 73
     invoke-virtual {p0}, Landroid/support/v4/graphics/drawable/DrawableWrapperLollipop;->isCompatTintEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 78
+    .line 74
     invoke-super {p0, p1}, Landroid/support/v4/graphics/drawable/DrawableWrapperKitKat;->setTint(I)V
 
-    .line 82
+    .line 78
     :goto_0
     return-void
 
-    .line 80
+    .line 76
     :cond_0
     iget-object v0, p0, Landroid/support/v4/graphics/drawable/DrawableWrapperLollipop;->mDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -204,21 +200,21 @@
     .locals 1
 
     .prologue
-    .line 68
+    .line 64
     invoke-virtual {p0}, Landroid/support/v4/graphics/drawable/DrawableWrapperLollipop;->isCompatTintEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 69
+    .line 65
     invoke-super {p0, p1}, Landroid/support/v4/graphics/drawable/DrawableWrapperKitKat;->setTintList(Landroid/content/res/ColorStateList;)V
 
-    .line 73
+    .line 69
     :goto_0
     return-void
 
-    .line 71
+    .line 67
     :cond_0
     iget-object v0, p0, Landroid/support/v4/graphics/drawable/DrawableWrapperLollipop;->mDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -231,21 +227,21 @@
     .locals 1
 
     .prologue
-    .line 86
+    .line 82
     invoke-virtual {p0}, Landroid/support/v4/graphics/drawable/DrawableWrapperLollipop;->isCompatTintEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 87
+    .line 83
     invoke-super {p0, p1}, Landroid/support/v4/graphics/drawable/DrawableWrapperKitKat;->setTintMode(Landroid/graphics/PorterDuff$Mode;)V
 
-    .line 91
+    .line 87
     :goto_0
     return-void
 
-    .line 89
+    .line 85
     :cond_0
     iget-object v0, p0, Landroid/support/v4/graphics/drawable/DrawableWrapperLollipop;->mDrawable:Landroid/graphics/drawable/Drawable;
 

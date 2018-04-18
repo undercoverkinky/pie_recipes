@@ -4,17 +4,17 @@
 
 
 # instance fields
-.field protected c:Lkik/core/interfaces/ag;
+.field protected b:Lkik/core/interfaces/af;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
-.field protected d:Lcom/kik/android/Mixpanel;
+.field protected c:Lcom/kik/android/Mixpanel;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
-.field protected e:Lkik/core/interfaces/b;
+.field protected d:Lkik/core/interfaces/b;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
@@ -48,60 +48,12 @@
 .end method
 
 .method static synthetic a(Lkik/android/widget/preferences/NotifyNewPeoplePreference;)V
-    .locals 3
+    .locals 0
 
     .prologue
-    const/4 v2, 0x0
+    .line 34
+    invoke-virtual {p0}, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->notifyChanged()V
 
-    .line 147
-    invoke-virtual {p0}, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->a()Lkik/android/chat/fragment/KikScopedDialogFragment;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->dismissAllDialogs()V
-
-    .line 148
-    const/4 v0, 0x1
-
-    invoke-direct {p0, v0}, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->a(Z)V
-
-    .line 149
-    iget-object v0, p0, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->d:Lcom/kik/android/Mixpanel;
-
-    const-string v1, "Notify For New People"
-
-    invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;Z)Lcom/kik/android/Mixpanel;
-
-    .line 150
-    invoke-direct {p0, v2}, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->b(Z)V
-
-    .line 152
-    iget-object v0, p0, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->d:Lcom/kik/android/Mixpanel;
-
-    const-string v1, "Mute New Chats Confirmed"
-
-    invoke-virtual {v0, v1}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;)Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    const-string v1, "Source"
-
-    const-string v2, "Notification Settings"
-
-    .line 153
-    invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    .line 154
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    .line 155
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
-
-    .line 156
     return-void
 .end method
 
@@ -115,14 +67,14 @@
     invoke-virtual {p0, v1}, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->setEnabled(Z)V
 
     .line 74
-    iget-object v2, p0, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->c:Lkik/core/interfaces/ag;
+    iget-object v2, p0, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->b:Lkik/core/interfaces/af;
 
     if-nez p1, :cond_0
 
     const/4 v0, 0x1
 
     :goto_0
-    invoke-interface {v2, v0}, Lkik/core/interfaces/ag;->a(Z)Lcom/kik/events/Promise;
+    invoke-interface {v2, v0}, Lkik/core/interfaces/af;->a(Z)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -140,7 +92,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0904b0
+    const v2, 0x7f0a049c
 
     .line 78
     invoke-static {v2}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
@@ -161,7 +113,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lkik/android/chat/fragment/KikScopedDialogFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v2, v1}, Lkik/android/chat/fragment/KikScopedDialogFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
 
     .line 82
     invoke-virtual {p0}, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->a()Lkik/android/chat/fragment/KikScopedDialogFragment;
@@ -172,11 +124,11 @@
 
     invoke-direct {v2, p0}, Lkik/android/widget/preferences/NotifyNewPeoplePreference$1;-><init>(Lkik/android/widget/preferences/NotifyNewPeoplePreference;)V
 
-    invoke-static {v1, v2}, Lcom/kik/sdkutils/b;->a(Landroid/support/v4/app/Fragment;Lcom/kik/events/k;)Lcom/kik/events/k;
+    invoke-static {v1, v2}, Lcom/kik/sdkutils/b;->a(Landroid/support/v4/app/Fragment;Lcom/kik/events/l;)Lcom/kik/events/l;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
 
     .line 115
     return-void
@@ -192,15 +144,16 @@
     .locals 3
 
     .prologue
-    .line 139
+    .line 0
+    .line 1139
     invoke-virtual {p0}, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->a()Lkik/android/chat/fragment/KikScopedDialogFragment;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->dismissAllDialogs()V
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->ap()V
 
-    .line 141
-    iget-object v0, p0, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->d:Lcom/kik/android/Mixpanel;
+    .line 1141
+    iget-object v0, p0, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->c:Lcom/kik/android/Mixpanel;
 
     const-string v1, "Mute New Chats Cancelled"
 
@@ -212,20 +165,20 @@
 
     const-string v2, "Notification Settings"
 
-    .line 142
+    .line 1142
     invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 143
+    .line 1143
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 144
+    .line 1144
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 145
+    .line 0
     return-void
 .end method
 
@@ -234,7 +187,7 @@
 
     .prologue
     .line 168
-    iget-object v0, p0, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->d:Lcom/kik/android/Mixpanel;
+    iget-object v0, p0, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->c:Lcom/kik/android/Mixpanel;
 
     const-string v1, "Notify For New People Changed"
 
@@ -259,12 +212,61 @@
 .end method
 
 .method static synthetic c(Lkik/android/widget/preferences/NotifyNewPeoplePreference;)V
-    .locals 0
+    .locals 3
 
     .prologue
-    .line 34
-    invoke-virtual {p0}, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->notifyChanged()V
+    const/4 v2, 0x0
 
+    .line 0
+    .line 1147
+    invoke-virtual {p0}, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->a()Lkik/android/chat/fragment/KikScopedDialogFragment;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->ap()V
+
+    .line 1148
+    const/4 v0, 0x1
+
+    invoke-direct {p0, v0}, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->a(Z)V
+
+    .line 1149
+    iget-object v0, p0, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->c:Lcom/kik/android/Mixpanel;
+
+    const-string v1, "Notify For New People"
+
+    invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;Z)Lcom/kik/android/Mixpanel;
+
+    .line 1150
+    invoke-direct {p0, v2}, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->b(Z)V
+
+    .line 1152
+    iget-object v0, p0, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->c:Lcom/kik/android/Mixpanel;
+
+    const-string v1, "Mute New Chats Confirmed"
+
+    invoke-virtual {v0, v1}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;)Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    const-string v1, "Source"
+
+    const-string v2, "Notification Settings"
+
+    .line 1153
+    invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    .line 1154
+    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    .line 1155
+    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
+
+    .line 0
     return-void
 .end method
 
@@ -291,13 +293,13 @@
     move-result-object v1
 
     .line 62
-    iget-object v0, p0, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->c:Lkik/core/interfaces/ag;
+    iget-object v0, p0, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->b:Lkik/core/interfaces/af;
 
-    invoke-interface {v0}, Lkik/core/interfaces/ag;->d()Lkik/core/datatypes/aa;
+    invoke-interface {v0}, Lkik/core/interfaces/af;->d()Lkik/core/datatypes/ad;
 
     move-result-object v0
 
-    iget-object v0, v0, Lkik/core/datatypes/aa;->h:Ljava/lang/Boolean;
+    iget-object v0, v0, Lkik/core/datatypes/ad;->h:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -339,7 +341,7 @@
     move-result v3
 
     .line 123
-    iget-object v0, p0, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->d:Lcom/kik/android/Mixpanel;
+    iget-object v0, p0, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->c:Lcom/kik/android/Mixpanel;
 
     const-string v4, "Mute New Chats Tapped"
 
@@ -383,7 +385,7 @@
     invoke-direct {p0, v2}, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->a(Z)V
 
     .line 132
-    iget-object v0, p0, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->d:Lcom/kik/android/Mixpanel;
+    iget-object v0, p0, Lkik/android/widget/preferences/NotifyNewPeoplePreference;->c:Lcom/kik/android/Mixpanel;
 
     const-string v2, "Notify For New People"
 
@@ -415,22 +417,22 @@
     invoke-direct {v0, v1}, Lkik/android/chat/fragment/KikBasicDialog$a;-><init>(Landroid/content/Context;)V
 
     .line 136
-    const v1, 0x7f09068e
+    const v1, 0x7f0a05c8
 
     invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikBasicDialog$a;->a(I)Lkik/android/chat/fragment/KikBasicDialog$a;
 
     move-result-object v1
 
-    const v3, 0x7f090528
+    const v3, 0x7f0a0512
 
     .line 137
     invoke-virtual {v1, v3}, Lkik/android/chat/fragment/KikBasicDialog$a;->b(I)Lkik/android/chat/fragment/KikBasicDialog$a;
 
     move-result-object v1
 
-    const v3, 0x7f0903d7
+    const v3, 0x7f0a03c3
 
-    invoke-static {p0}, Lkik/android/widget/preferences/j;->a(Lkik/android/widget/preferences/NotifyNewPeoplePreference;)Landroid/view/View$OnClickListener;
+    invoke-static {p0}, Lkik/android/widget/preferences/p;->a(Lkik/android/widget/preferences/NotifyNewPeoplePreference;)Landroid/view/View$OnClickListener;
 
     move-result-object v4
 
@@ -439,9 +441,9 @@
 
     move-result-object v1
 
-    const v3, 0x7f090489
+    const v3, 0x7f0a0475
 
-    invoke-static {p0}, Lkik/android/widget/preferences/k;->a(Lkik/android/widget/preferences/NotifyNewPeoplePreference;)Landroid/view/View$OnClickListener;
+    invoke-static {p0}, Lkik/android/widget/preferences/q;->a(Lkik/android/widget/preferences/NotifyNewPeoplePreference;)Landroid/view/View$OnClickListener;
 
     move-result-object v4
 
@@ -461,7 +463,7 @@
 
     const-string v4, "notifyNew"
 
-    invoke-virtual {v1, v0, v3, v4}, Lkik/android/chat/fragment/KikScopedDialogFragment;->show(Lkik/android/chat/fragment/KikDialogFragment;Lkik/android/chat/fragment/KikScopedDialogFragment$DialogScope;Ljava/lang/String;)V
+    invoke-virtual {v1, v0, v3, v4}, Lkik/android/chat/fragment/KikScopedDialogFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;Lkik/android/chat/fragment/KikScopedDialogFragment$DialogScope;Ljava/lang/String;)V
 
     move v0, v2
 

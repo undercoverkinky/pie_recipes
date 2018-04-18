@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 1136
+    .line 1060
     iput-object p1, p0, Landroid/support/v7/widget/ListPopupWindow$2;->a:Landroid/support/v7/widget/ListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,14 +40,14 @@
     .locals 1
 
     .prologue
-    .line 1140
+    .line 1063
     iget-object v0, p0, Landroid/support/v7/widget/ListPopupWindow$2;->a:Landroid/support/v7/widget/ListPopupWindow;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/ListPopupWindow;->k()Landroid/view/View;
+    invoke-virtual {v0}, Landroid/support/v7/widget/ListPopupWindow;->f()Landroid/view/View;
 
     move-result-object v0
 
-    .line 1141
+    .line 1064
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
@@ -56,12 +56,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1142
+    .line 1065
     iget-object v0, p0, Landroid/support/v7/widget/ListPopupWindow$2;->a:Landroid/support/v7/widget/ListPopupWindow;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/ListPopupWindow;->b()V
+    invoke-virtual {v0}, Landroid/support/v7/widget/ListPopupWindow;->c()V
 
-    .line 1144
+    .line 1067
     :cond_0
     return-void
 .end method

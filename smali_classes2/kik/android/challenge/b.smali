@@ -32,12 +32,12 @@
     return-void
 .end method
 
-.method static synthetic a(Lkik/android/challenge/b;Lkik/core/net/outgoing/PhoneVerificationInitiationRequest;Lcom/kik/events/Promise;)V
+.method static synthetic a(Lkik/android/challenge/b;Lkik/core/net/outgoing/ag;Lcom/kik/events/Promise;)V
     .locals 4
 
     .prologue
     .line 1099
-    invoke-virtual {p1}, Lkik/core/net/outgoing/PhoneVerificationInitiationRequest;->getReference()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/net/outgoing/ag;->e()Ljava/lang/String;
 
     move-result-object v0
 
@@ -63,7 +63,7 @@
 
     .line 1103
     :cond_0
-    invoke-virtual {p1}, Lkik/core/net/outgoing/PhoneVerificationInitiationRequest;->getState()I
+    invoke-virtual {p1}, Lkik/core/net/outgoing/ag;->l()I
 
     move-result v1
 
@@ -72,7 +72,7 @@
     if-ne v1, v2, :cond_1
 
     .line 1104
-    invoke-static {p1, p2}, Lkik/android/challenge/b;->b(Lkik/core/net/outgoing/PhoneVerificationInitiationRequest;Lcom/kik/events/Promise;)V
+    invoke-static {p1, p2}, Lkik/android/challenge/b;->b(Lkik/core/net/outgoing/ag;Lcom/kik/events/Promise;)V
 
     goto :goto_0
 
@@ -90,23 +90,23 @@
     goto :goto_0
 .end method
 
-.method static synthetic a(Lkik/core/net/outgoing/PhoneVerificationInitiationRequest;Lcom/kik/events/Promise;)V
+.method static synthetic a(Lkik/core/net/outgoing/ag;Lcom/kik/events/Promise;)V
     .locals 0
 
     .prologue
     .line 16
-    invoke-static {p0, p1}, Lkik/android/challenge/b;->b(Lkik/core/net/outgoing/PhoneVerificationInitiationRequest;Lcom/kik/events/Promise;)V
+    invoke-static {p0, p1}, Lkik/android/challenge/b;->b(Lkik/core/net/outgoing/ag;Lcom/kik/events/Promise;)V
 
     return-void
 .end method
 
-.method static synthetic a(Lkik/core/net/outgoing/PhoneVerificationVerifyCodeRequest;Lcom/kik/events/Promise;)V
+.method static synthetic a(Lkik/core/net/outgoing/ah;Lcom/kik/events/Promise;)V
     .locals 3
 
     .prologue
     .line 16
     .line 1130
-    invoke-virtual {p0}, Lkik/core/net/outgoing/PhoneVerificationVerifyCodeRequest;->getReference()Ljava/lang/String;
+    invoke-virtual {p0}, Lkik/core/net/outgoing/ah;->e()Ljava/lang/String;
 
     move-result-object v0
 
@@ -132,7 +132,7 @@
 
     .line 1134
     :cond_0
-    invoke-virtual {p0}, Lkik/core/net/outgoing/PhoneVerificationVerifyCodeRequest;->getState()I
+    invoke-virtual {p0}, Lkik/core/net/outgoing/ah;->l()I
 
     move-result v1
 
@@ -141,7 +141,7 @@
     if-ne v1, v2, :cond_1
 
     .line 1135
-    invoke-static {p0, p1}, Lkik/android/challenge/b;->c(Lkik/core/net/outgoing/PhoneVerificationVerifyCodeRequest;Lcom/kik/events/Promise;)V
+    invoke-static {p0, p1}, Lkik/android/challenge/b;->c(Lkik/core/net/outgoing/ah;Lcom/kik/events/Promise;)V
 
     goto :goto_0
 
@@ -152,12 +152,12 @@
     goto :goto_0
 .end method
 
-.method private static b(Lkik/core/net/outgoing/PhoneVerificationInitiationRequest;Lcom/kik/events/Promise;)V
+.method private static b(Lkik/core/net/outgoing/ag;Lcom/kik/events/Promise;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkik/core/net/outgoing/PhoneVerificationInitiationRequest;",
+            "Lkik/core/net/outgoing/ag;",
             "Lcom/kik/events/Promise",
             "<",
             "Ljava/lang/String;",
@@ -167,7 +167,7 @@
 
     .prologue
     .line 114
-    invoke-virtual {p0}, Lkik/core/net/outgoing/PhoneVerificationInitiationRequest;->getErrorCode()I
+    invoke-virtual {p0}, Lkik/core/net/outgoing/ag;->m()I
 
     move-result v0
 
@@ -220,22 +220,22 @@
     .end sparse-switch
 .end method
 
-.method static synthetic b(Lkik/core/net/outgoing/PhoneVerificationVerifyCodeRequest;Lcom/kik/events/Promise;)V
+.method static synthetic b(Lkik/core/net/outgoing/ah;Lcom/kik/events/Promise;)V
     .locals 0
 
     .prologue
     .line 16
-    invoke-static {p0, p1}, Lkik/android/challenge/b;->c(Lkik/core/net/outgoing/PhoneVerificationVerifyCodeRequest;Lcom/kik/events/Promise;)V
+    invoke-static {p0, p1}, Lkik/android/challenge/b;->c(Lkik/core/net/outgoing/ah;Lcom/kik/events/Promise;)V
 
     return-void
 .end method
 
-.method private static c(Lkik/core/net/outgoing/PhoneVerificationVerifyCodeRequest;Lcom/kik/events/Promise;)V
+.method private static c(Lkik/core/net/outgoing/ah;Lcom/kik/events/Promise;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkik/core/net/outgoing/PhoneVerificationVerifyCodeRequest;",
+            "Lkik/core/net/outgoing/ah;",
             "Lcom/kik/events/Promise",
             "<",
             "Ljava/lang/String;",
@@ -245,7 +245,7 @@
 
     .prologue
     .line 144
-    invoke-virtual {p0}, Lkik/core/net/outgoing/PhoneVerificationVerifyCodeRequest;->getErrorCode()I
+    invoke-virtual {p0}, Lkik/core/net/outgoing/ah;->m()I
 
     move-result v0
 
@@ -362,11 +362,11 @@
 
     .prologue
     .line 58
-    new-instance v0, Lkik/core/net/outgoing/PhoneVerificationVerifyCodeRequest;
+    new-instance v0, Lkik/core/net/outgoing/ah;
 
     iget-object v1, p0, Lkik/android/challenge/b;->b:Ljava/lang/String;
 
-    invoke-direct {v0, p1, p2, v1}, Lkik/core/net/outgoing/PhoneVerificationVerifyCodeRequest;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, p1, p2, v1}, Lkik/core/net/outgoing/ah;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 59
     new-instance v1, Lcom/kik/events/Promise;
@@ -376,15 +376,15 @@
     .line 60
     iget-object v2, p0, Lkik/android/challenge/b;->a:Lkik/core/interfaces/ICommunication;
 
-    invoke-interface {v2, v0}, Lkik/core/interfaces/ICommunication;->a(Lkik/core/net/outgoing/j;)Lcom/kik/events/Promise;
+    invoke-interface {v2, v0}, Lkik/core/interfaces/ICommunication;->a(Lkik/core/net/outgoing/ae;)Lcom/kik/events/Promise;
 
     move-result-object v2
 
     new-instance v3, Lkik/android/challenge/b$2;
 
-    invoke-direct {v3, p0, v1, v0}, Lkik/android/challenge/b$2;-><init>(Lkik/android/challenge/b;Lcom/kik/events/Promise;Lkik/core/net/outgoing/PhoneVerificationVerifyCodeRequest;)V
+    invoke-direct {v3, p0, v1, v0}, Lkik/android/challenge/b$2;-><init>(Lkik/android/challenge/b;Lcom/kik/events/Promise;Lkik/core/net/outgoing/ah;)V
 
-    invoke-virtual {v2, v3}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
+    invoke-virtual {v2, v3}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
 
     .line 75
     return-object v1
@@ -423,7 +423,7 @@
 
     invoke-direct {v0, v1}, Lkik/android/challenge/PhoneVerificationNetworkProvider$VerificationInitiationFailure;-><init>(I)V
 
-    invoke-static {v0}, Lcom/kik/events/l;->a(Ljava/lang/Throwable;)Lcom/kik/events/Promise;
+    invoke-static {v0}, Lcom/kik/events/m;->a(Ljava/lang/Throwable;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -433,7 +433,7 @@
 
     .line 34
     :cond_0
-    new-instance v1, Lkik/core/net/outgoing/PhoneVerificationInitiationRequest;
+    new-instance v1, Lkik/core/net/outgoing/ag;
 
     invoke-virtual {p1}, Lkik/android/challenge/PhoneNumberModel;->b()Ljava/lang/String;
 
@@ -455,7 +455,7 @@
 
     iget-object v3, p0, Lkik/android/challenge/b;->b:Ljava/lang/String;
 
-    invoke-direct {v1, v0, v2, v3}, Lkik/core/net/outgoing/PhoneVerificationInitiationRequest;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v0, v2, v3}, Lkik/core/net/outgoing/ag;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 35
     new-instance v0, Lcom/kik/events/Promise;
@@ -465,15 +465,15 @@
     .line 36
     iget-object v2, p0, Lkik/android/challenge/b;->a:Lkik/core/interfaces/ICommunication;
 
-    invoke-interface {v2, v1}, Lkik/core/interfaces/ICommunication;->a(Lkik/core/net/outgoing/j;)Lcom/kik/events/Promise;
+    invoke-interface {v2, v1}, Lkik/core/interfaces/ICommunication;->a(Lkik/core/net/outgoing/ae;)Lcom/kik/events/Promise;
 
     move-result-object v2
 
     new-instance v3, Lkik/android/challenge/b$1;
 
-    invoke-direct {v3, p0, v0, v1}, Lkik/android/challenge/b$1;-><init>(Lkik/android/challenge/b;Lcom/kik/events/Promise;Lkik/core/net/outgoing/PhoneVerificationInitiationRequest;)V
+    invoke-direct {v3, p0, v0, v1}, Lkik/android/challenge/b$1;-><init>(Lkik/android/challenge/b;Lcom/kik/events/Promise;Lkik/core/net/outgoing/ag;)V
 
-    invoke-virtual {v2, v3}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
+    invoke-virtual {v2, v3}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
 
     goto :goto_0
 .end method

@@ -34,11 +34,11 @@
     .locals 1
 
     .prologue
-    .line 202
+    .line 193
     invoke-direct {p0}, Lcom/google/common/io/a;-><init>()V
 
-    .line 203
-    invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 194
+    invoke-static {p1}, Lcom/google/common/base/h;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -46,14 +46,14 @@
 
     iput-object v0, p0, Lcom/google/common/io/f$a;->a:Ljava/io/File;
 
-    .line 204
+    .line 195
     invoke-static {p2}, Lcom/google/common/collect/ImmutableSet;->a([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableSet;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/common/io/f$a;->b:Lcom/google/common/collect/ImmutableSet;
 
-    .line 205
+    .line 196
     return-void
 .end method
 
@@ -61,7 +61,7 @@
     .locals 0
 
     .prologue
-    .line 197
+    .line 188
     invoke-direct {p0, p1, p2}, Lcom/google/common/io/f$a;-><init>(Ljava/io/File;[Lcom/google/common/io/FileWriteMode;)V
 
     return-void
@@ -78,8 +78,8 @@
     .end annotation
 
     .prologue
-    .line 197
-    .line 1209
+    .line 188
+    .line 1200
     new-instance v0, Ljava/io/FileOutputStream;
 
     iget-object v1, p0, Lcom/google/common/io/f$a;->a:Ljava/io/File;
@@ -94,36 +94,68 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;Z)V
 
-    .line 197
+    .line 188
     return-object v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 5
 
     .prologue
-    .line 214
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 205
+    iget-object v0, p0, Lcom/google/common/io/f$a;->a:Ljava/io/File;
 
-    const-string v1, "Files.asByteSink("
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcom/google/common/io/f$a;->a:Ljava/io/File;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, ", "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/google/common/io/f$a;->b:Lcom/google/common/collect/ImmutableSet;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    add-int/lit8 v3, v3, 0x14
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v4
+
+    add-int/2addr v3, v4
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v3, "Files.asByteSink("
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v2, ", "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

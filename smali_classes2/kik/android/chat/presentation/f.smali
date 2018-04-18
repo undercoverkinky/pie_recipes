@@ -11,11 +11,11 @@
 
 .field private b:Lkik/core/interfaces/IAddressBookIntegration;
 
-.field private c:Lkik/android/util/bc;
+.field private c:Lkik/android/util/bd;
 
 
 # direct methods
-.method public constructor <init>(Lkik/android/chat/view/c;Lkik/core/interfaces/IAddressBookIntegration;Lkik/android/util/bc;)V
+.method public constructor <init>(Lkik/android/chat/view/c;Lkik/core/interfaces/IAddressBookIntegration;Lkik/android/util/bd;)V
     .locals 0
 
     .prologue
@@ -29,7 +29,7 @@
     iput-object p2, p0, Lkik/android/chat/presentation/f;->b:Lkik/core/interfaces/IAddressBookIntegration;
 
     .line 22
-    iput-object p3, p0, Lkik/android/chat/presentation/f;->c:Lkik/android/util/bc;
+    iput-object p3, p0, Lkik/android/chat/presentation/f;->c:Lkik/android/util/bd;
 
     .line 23
     return-void
@@ -112,12 +112,12 @@
     invoke-interface {v4}, Lkik/android/chat/view/c;->d()V
 
     .line 45
-    iget-object v4, p0, Lkik/android/chat/presentation/f;->c:Lkik/android/util/bc;
+    iget-object v4, p0, Lkik/android/chat/presentation/f;->c:Lkik/android/util/bd;
 
     if-eq v3, v0, :cond_1
 
     :goto_1
-    invoke-interface {v4, v1}, Lkik/android/util/bc;->a(Z)V
+    invoke-interface {v4, v1}, Lkik/android/util/bd;->a(Z)V
 
     .line 46
     return-void
@@ -145,9 +145,9 @@
     invoke-interface {v0}, Lkik/android/chat/view/c;->d()V
 
     .line 52
-    iget-object v0, p0, Lkik/android/chat/presentation/f;->c:Lkik/android/util/bc;
+    iget-object v0, p0, Lkik/android/chat/presentation/f;->c:Lkik/android/util/bd;
 
-    invoke-interface {v0}, Lkik/android/util/bc;->a()V
+    invoke-interface {v0}, Lkik/android/util/bd;->a()V
 
     .line 53
     return-void

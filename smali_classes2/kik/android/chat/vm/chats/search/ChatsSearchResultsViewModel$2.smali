@@ -23,7 +23,7 @@
     .locals 3
 
     .prologue
-    .line 176
+    .line 172
     invoke-static {}, Lkik/android/chat/vm/chats/search/ChatsSearchResultsViewModel$ChatSearchResults$ResultType;->values()[Lkik/android/chat/vm/chats/search/ChatsSearchResultsViewModel$ChatSearchResults$ResultType;
 
     move-result-object v0

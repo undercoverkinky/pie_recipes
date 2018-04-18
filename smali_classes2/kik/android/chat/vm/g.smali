@@ -1,49 +1,100 @@
-.class final synthetic Lkik/android/chat/vm/g;
+.class public final Lkik/android/chat/vm/g;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
-.implements Lrx/functions/a;
+.implements Lkik/android/chat/vm/j;
 
 
 # instance fields
-.field private final a:Lkik/android/chat/vm/f;
+.field private a:Ljava/lang/String;
 
-.field private final b:Ljava/lang/String;
+.field private b:Ljava/lang/String;
+
+.field private c:Z
+
+.field private d:Z
+
+.field private e:Ljava/lang/String;
 
 
 # direct methods
-.method private constructor <init>(Lkik/android/chat/vm/f;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lkik/android/chat/vm/g;->a:Lkik/android/chat/vm/f;
-
-    iput-object p2, p0, Lkik/android/chat/vm/g;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public static a(Lkik/android/chat/vm/f;Ljava/lang/String;)Lrx/functions/a;
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;)V
     .locals 1
 
-    new-instance v0, Lkik/android/chat/vm/g;
+    .prologue
+    .line 19
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, p0, p1}, Lkik/android/chat/vm/g;-><init>(Lkik/android/chat/vm/f;Ljava/lang/String;)V
+    .line 20
+    iput-object p1, p0, Lkik/android/chat/vm/g;->a:Ljava/lang/String;
 
-    return-object v0
+    .line 21
+    iput-object p2, p0, Lkik/android/chat/vm/g;->b:Ljava/lang/String;
+
+    .line 22
+    iput-boolean p3, p0, Lkik/android/chat/vm/g;->c:Z
+
+    .line 23
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lkik/android/chat/vm/g;->d:Z
+
+    .line 24
+    iput-object p4, p0, Lkik/android/chat/vm/g;->e:Ljava/lang/String;
+
+    .line 25
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final a()Ljava/lang/String;
+    .locals 1
 
-    iget-object v0, p0, Lkik/android/chat/vm/g;->a:Lkik/android/chat/vm/f;
+    .prologue
+    .line 30
+    iget-object v0, p0, Lkik/android/chat/vm/g;->a:Ljava/lang/String;
 
-    iget-object v1, p0, Lkik/android/chat/vm/g;->b:Ljava/lang/String;
+    return-object v0
+.end method
 
-    invoke-static {v0, v1}, Lkik/android/chat/vm/f;->a(Lkik/android/chat/vm/f;Ljava/lang/String;)V
+.method public final b()Ljava/lang/String;
+    .locals 1
 
-    return-void
+    .prologue
+    .line 36
+    iget-object v0, p0, Lkik/android/chat/vm/g;->e:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final c()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 42
+    iget-object v0, p0, Lkik/android/chat/vm/g;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final d()Z
+    .locals 1
+
+    .prologue
+    .line 48
+    iget-boolean v0, p0, Lkik/android/chat/vm/g;->c:Z
+
+    return v0
+.end method
+
+.method public final e()Z
+    .locals 1
+
+    .prologue
+    .line 54
+    iget-boolean v0, p0, Lkik/android/chat/vm/g;->d:Z
+
+    return v0
 .end method

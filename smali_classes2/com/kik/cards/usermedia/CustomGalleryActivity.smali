@@ -20,7 +20,7 @@
         value = {
             "Lcom/kik/events/e",
             "<",
-            "Lcom/kik/cards/usermedia/g;",
+            "Lcom/kik/cards/usermedia/h;",
             ">;"
         }
     .end annotation
@@ -42,26 +42,26 @@
 
 .field private l:Landroid/widget/TextView;
 
-.field private m:Lcom/kik/cards/usermedia/UserMediaCache;
+.field private m:Lcom/kik/cards/usermedia/g;
 
-.field private n:Lcom/kik/cache/Cache;
+.field private n:Lcom/kik/cache/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/kik/cache/Cache",
+            "Lcom/kik/cache/c",
             "<",
-            "Lcom/kik/cards/usermedia/g;",
-            "Lcom/kik/cache/a;",
+            "Lcom/kik/cards/usermedia/h;",
+            "Lcom/kik/cache/d;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private o:Lcom/kik/cache/BitmapLRUCache;
+.field private o:Lcom/kik/cache/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/kik/cache/BitmapLRUCache",
+            "Lcom/kik/cache/b",
             "<",
-            "Lcom/kik/cards/usermedia/g;",
+            "Lcom/kik/cards/usermedia/h;",
             ">;"
         }
     .end annotation
@@ -72,7 +72,7 @@
         value = {
             "Lcom/kik/sdkutils/b/b",
             "<",
-            "Lcom/kik/cache/a;",
+            "Lcom/kik/cache/d;",
             ">;"
         }
     .end annotation
@@ -134,13 +134,13 @@
     iput-object v1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->l:Landroid/widget/TextView;
 
     .line 105
-    iput-object v1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->m:Lcom/kik/cards/usermedia/UserMediaCache;
+    iput-object v1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->m:Lcom/kik/cards/usermedia/g;
 
     .line 106
-    iput-object v1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->n:Lcom/kik/cache/Cache;
+    iput-object v1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->n:Lcom/kik/cache/c;
 
     .line 107
-    iput-object v1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->o:Lcom/kik/cache/BitmapLRUCache;
+    iput-object v1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->o:Lcom/kik/cache/b;
 
     .line 108
     iput-object v1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->p:Lcom/kik/sdkutils/b/b;
@@ -165,7 +165,7 @@
     .line 112
     iput-object v1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->t:Landroid/widget/Toast;
 
-    .line 213
+    .line 212
     new-instance v0, Lcom/kik/cards/usermedia/CustomGalleryActivity$3;
 
     invoke-direct {v0, p0}, Lcom/kik/cards/usermedia/CustomGalleryActivity$3;-><init>(Lcom/kik/cards/usermedia/CustomGalleryActivity;)V
@@ -205,12 +205,12 @@
     return-object v0
 .end method
 
-.method static synthetic d(Lcom/kik/cards/usermedia/CustomGalleryActivity;)Lcom/kik/cache/Cache;
+.method static synthetic d(Lcom/kik/cards/usermedia/CustomGalleryActivity;)Lcom/kik/cache/c;
     .locals 1
 
     .prologue
     .line 46
-    iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->n:Lcom/kik/cache/Cache;
+    iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->n:Lcom/kik/cache/c;
 
     return-object v0
 .end method
@@ -265,12 +265,12 @@
     return-object v0
 .end method
 
-.method static synthetic j(Lcom/kik/cards/usermedia/CustomGalleryActivity;)Lcom/kik/cache/BitmapLRUCache;
+.method static synthetic j(Lcom/kik/cards/usermedia/CustomGalleryActivity;)Lcom/kik/cache/b;
     .locals 1
 
     .prologue
     .line 46
-    iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->o:Lcom/kik/cache/BitmapLRUCache;
+    iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->o:Lcom/kik/cache/b;
 
     return-object v0
 .end method
@@ -285,7 +285,7 @@
 
     const/4 v4, 0x1
 
-    .line 508
+    .line 505
     new-array v0, v4, [Landroid/view/View;
 
     iget-object v1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->l:Landroid/widget/TextView;
@@ -294,7 +294,7 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
 
-    .line 513
+    .line 510
     iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->q:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->size()I
@@ -303,10 +303,10 @@
 
     if-nez v0, :cond_1
 
-    .line 514
+    .line 511
     iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->l:Landroid/widget/TextView;
 
-    const v1, 0x7f090457
+    const v1, 0x7f0a0443
 
     invoke-virtual {p0, v1}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->getString(I)Ljava/lang/String;
 
@@ -314,7 +314,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 525
+    .line 522
     :goto_0
     iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->q:Ljava/util/HashMap;
 
@@ -324,7 +324,7 @@
 
     if-gtz v0, :cond_0
 
-    .line 526
+    .line 523
     const/4 v0, 0x2
 
     new-array v0, v0, [Landroid/view/View;
@@ -339,11 +339,11 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
 
-    .line 528
+    .line 525
     :cond_0
     return-void
 
-    .line 517
+    .line 514
     :cond_1
     iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->q:Ljava/util/HashMap;
 
@@ -353,10 +353,10 @@
 
     if-ne v0, v4, :cond_2
 
-    .line 518
+    .line 515
     iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->l:Landroid/widget/TextView;
 
-    const v1, 0x7f09043b
+    const v1, 0x7f0a0427
 
     invoke-virtual {p0, v1}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->getString(I)Ljava/lang/String;
 
@@ -384,11 +384,11 @@
 
     goto :goto_0
 
-    .line 521
+    .line 518
     :cond_2
     iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->l:Landroid/widget/TextView;
 
-    const v1, 0x7f09043c
+    const v1, 0x7f0a0428
 
     invoke-virtual {p0, v1}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->getString(I)Ljava/lang/String;
 
@@ -421,7 +421,7 @@
     .locals 4
 
     .prologue
-    .line 478
+    .line 476
     iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->g:Landroid/widget/GridView;
 
     invoke-virtual {v0}, Landroid/widget/GridView;->getAdapter()Landroid/widget/ListAdapter;
@@ -430,10 +430,10 @@
 
     check-cast v0, Lcom/kik/cards/usermedia/CustomGalleryActivity$b;
 
-    .line 2360
+    .line 2358
     iget v0, v0, Lcom/kik/cards/usermedia/CustomGalleryActivity$b;->d:I
 
-    .line 480
+    .line 478
     const/4 v1, 0x2
 
     new-array v1, v1, [Landroid/view/View;
@@ -452,7 +452,7 @@
 
     invoke-static {v1}, Lkik/android/util/bz;->d([Landroid/view/View;)V
 
-    .line 482
+    .line 480
     iget-object v1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->g:Landroid/widget/GridView;
 
     invoke-virtual {v1}, Landroid/widget/GridView;->getAdapter()Landroid/widget/ListAdapter;
@@ -463,25 +463,25 @@
 
     move-result v2
 
-    .line 484
+    .line 482
     rem-int v1, v2, v0
 
-    .line 486
+    .line 484
     if-nez v1, :cond_1
 
-    .line 490
+    .line 488
     :goto_0
     sub-int v0, v2, v0
 
-    .line 492
+    .line 490
     if-lt p1, v0, :cond_0
 
-    .line 494
+    .line 492
     iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->g:Landroid/widget/GridView;
 
     invoke-virtual {v0, p1}, Landroid/widget/GridView;->smoothScrollToPosition(I)V
 
-    .line 495
+    .line 493
     iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->g:Landroid/widget/GridView;
 
     new-instance v1, Lcom/kik/cards/usermedia/CustomGalleryActivity$4;
@@ -492,7 +492,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/widget/GridView;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 504
+    .line 501
     :cond_0
     return-void
 
@@ -510,10 +510,10 @@
 
     const/4 v1, 0x3
 
-    .line 240
+    .line 238
     invoke-super {p0, p1}, Lkik/android/chat/activity/KikActivityBase;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 241
+    .line 239
     iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->g:Landroid/widget/GridView;
 
     invoke-virtual {v0}, Landroid/widget/GridView;->getAdapter()Landroid/widget/ListAdapter;
@@ -522,35 +522,35 @@
 
     check-cast v0, Lcom/kik/cards/usermedia/CustomGalleryActivity$a;
 
-    .line 244
+    .line 242
     iget v3, p1, Landroid/content/res/Configuration;->orientation:I
 
     const/4 v4, 0x1
 
     if-ne v3, v4, :cond_1
 
-    .line 246
+    .line 244
     iget-object v2, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->g:Landroid/widget/GridView;
 
     invoke-virtual {v2, v1}, Landroid/widget/GridView;->setNumColumns(I)V
 
-    .line 253
+    .line 251
     :cond_0
     :goto_0
     invoke-virtual {v0, v1}, Lcom/kik/cards/usermedia/CustomGalleryActivity$a;->a(I)V
 
-    .line 254
+    .line 252
     invoke-virtual {v0}, Lcom/kik/cards/usermedia/CustomGalleryActivity$a;->notifyDataSetChanged()V
 
-    .line 255
+    .line 253
     iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->g:Landroid/widget/GridView;
 
     invoke-virtual {v0}, Landroid/widget/GridView;->requestLayout()V
 
-    .line 256
+    .line 254
     return-void
 
-    .line 248
+    .line 246
     :cond_1
     iget v3, p1, Landroid/content/res/Configuration;->orientation:I
 
@@ -558,7 +558,7 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 250
+    .line 248
     iget-object v1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->g:Landroid/widget/GridView;
 
     invoke-virtual {v1, v2}, Landroid/widget/GridView;->setNumColumns(I)V
@@ -569,23 +569,23 @@
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .locals 14
+    .locals 11
 
     .prologue
-    const/4 v11, 0x5
+    const v10, 0x7f1100fd
 
-    const/4 v10, 0x3
+    const/4 v7, 0x5
 
-    const/4 v3, 0x0
+    const/4 v6, 0x3
 
-    const/4 v13, 0x1
+    const/4 v9, 0x1
 
-    const/4 v12, 0x0
-
-    .line 133
-    invoke-super {p0, p1}, Lkik/android/chat/activity/KikActivityBase;->onCreate(Landroid/os/Bundle;)V
+    const/4 v8, 0x0
 
     .line 134
+    invoke-super {p0, p1}, Lkik/android/chat/activity/KikActivityBase;->onCreate(Landroid/os/Bundle;)V
+
+    .line 135
     invoke-virtual {p0}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -594,7 +594,7 @@
 
     move-result-object v0
 
-    .line 1260
+    .line 1258
     const-string v1, "extra.maxselections"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -603,34 +603,34 @@
 
     iput v1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->e:I
 
-    .line 1261
+    .line 1259
     const-string v1, "extra.minselections"
 
-    invoke-virtual {v0, v1, v12}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
+    invoke-virtual {v0, v1, v8}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
     iput v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->s:I
 
-    .line 135
-    const v0, 0x7f04002c
+    .line 136
+    const v0, 0x7f04002b
 
     invoke-virtual {p0, v0}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->setContentView(I)V
 
-    .line 136
-    new-instance v4, Lcom/kik/cards/usermedia/h;
-
-    invoke-direct {v4}, Lcom/kik/cards/usermedia/h;-><init>()V
-
     .line 137
+    new-instance v2, Lcom/kik/cards/usermedia/i;
+
+    invoke-direct {v2}, Lcom/kik/cards/usermedia/i;-><init>()V
+
+    .line 138
     new-instance v0, Lcom/kik/cards/usermedia/b;
 
     invoke-direct {v0}, Lcom/kik/cards/usermedia/b;-><init>()V
 
     iput-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->p:Lcom/kik/sdkutils/b/b;
 
-    .line 139
-    new-instance v0, Lcom/kik/cards/usermedia/UserMediaCache;
+    .line 140
+    new-instance v0, Lcom/kik/cards/usermedia/g;
 
     invoke-virtual {p0}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -638,76 +638,76 @@
 
     invoke-virtual {p0}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-direct {v0, v4, v1, v2}, Lcom/kik/cards/usermedia/UserMediaCache;-><init>(Lcom/kik/sdkutils/b/a;Landroid/content/ContentResolver;Landroid/content/res/Resources;)V
+    invoke-direct {v0, v2, v1, v3}, Lcom/kik/cards/usermedia/g;-><init>(Lcom/kik/sdkutils/b/a;Landroid/content/ContentResolver;Landroid/content/res/Resources;)V
 
-    iput-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->m:Lcom/kik/cards/usermedia/UserMediaCache;
-
-    .line 140
-    new-instance v1, Lcom/kik/cache/BitmapLRUCache;
-
-    iget-object v2, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->m:Lcom/kik/cards/usermedia/UserMediaCache;
-
-    iget-object v5, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->p:Lcom/kik/sdkutils/b/b;
-
-    .line 2119
-    const-string v0, "activity"
-
-    invoke-virtual {p0, v0}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/app/ActivityManager;
-
-    .line 2120
-    invoke-virtual {v0}, Landroid/app/ActivityManager;->getMemoryClass()I
-
-    move-result v0
-
-    .line 2123
-    const/16 v6, 0x10
-
-    invoke-static {v6, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    const/16 v6, 0x40
-
-    invoke-static {v0, v6}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    .line 2125
-    div-int/lit8 v0, v0, 0x10
-
-    .line 2127
-    mul-int/lit8 v0, v0, 0x19
-
-    .line 140
-    int-to-long v6, v0
-
-    invoke-direct/range {v1 .. v7}, Lcom/kik/cache/BitmapLRUCache;-><init>(Lcom/kik/cache/Cache;Lcom/kik/cache/Cache;Lcom/kik/sdkutils/b/a;Lcom/kik/sdkutils/b/b;J)V
-
-    iput-object v1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->n:Lcom/kik/cache/Cache;
+    iput-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->m:Lcom/kik/cards/usermedia/g;
 
     .line 141
-    new-instance v1, Lcom/kik/cache/BitmapLRUCache;
+    new-instance v0, Lcom/kik/cache/b;
 
-    iget-object v2, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->m:Lcom/kik/cards/usermedia/UserMediaCache;
+    iget-object v1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->m:Lcom/kik/cards/usermedia/g;
 
-    iget-object v5, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->p:Lcom/kik/sdkutils/b/b;
+    iget-object v3, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->p:Lcom/kik/sdkutils/b/b;
 
-    iget v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->e:I
+    .line 2120
+    const-string v4, "activity"
 
-    int-to-long v6, v0
+    invoke-virtual {p0, v4}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-direct/range {v1 .. v7}, Lcom/kik/cache/BitmapLRUCache;-><init>(Lcom/kik/cache/Cache;Lcom/kik/cache/Cache;Lcom/kik/sdkutils/b/a;Lcom/kik/sdkutils/b/b;J)V
+    move-result-object v4
 
-    iput-object v1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->o:Lcom/kik/cache/BitmapLRUCache;
+    check-cast v4, Landroid/app/ActivityManager;
+
+    .line 2121
+    invoke-virtual {v4}, Landroid/app/ActivityManager;->getMemoryClass()I
+
+    move-result v4
+
+    .line 2124
+    const/16 v5, 0x10
+
+    invoke-static {v5, v4}, Ljava/lang/Math;->max(II)I
+
+    move-result v4
+
+    const/16 v5, 0x40
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->min(II)I
+
+    move-result v4
+
+    .line 2126
+    div-int/lit8 v4, v4, 0x10
+
+    .line 2128
+    mul-int/lit8 v4, v4, 0x19
+
+    .line 141
+    int-to-long v4, v4
+
+    invoke-direct/range {v0 .. v5}, Lcom/kik/cache/b;-><init>(Lcom/kik/cache/c;Lcom/kik/sdkutils/b/a;Lcom/kik/sdkutils/b/b;J)V
+
+    iput-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->n:Lcom/kik/cache/c;
 
     .line 142
-    const v0, 0x7f10012d
+    new-instance v0, Lcom/kik/cache/b;
+
+    iget-object v1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->m:Lcom/kik/cards/usermedia/g;
+
+    iget-object v3, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->p:Lcom/kik/sdkutils/b/b;
+
+    iget v4, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->e:I
+
+    int-to-long v4, v4
+
+    invoke-direct/range {v0 .. v5}, Lcom/kik/cache/b;-><init>(Lcom/kik/cache/c;Lcom/kik/sdkutils/b/a;Lcom/kik/sdkutils/b/b;J)V
+
+    iput-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->o:Lcom/kik/cache/b;
+
+    .line 143
+    const v0, 0x7f1100fe
 
     invoke-virtual {p0, v0}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->findViewById(I)Landroid/view/View;
 
@@ -717,8 +717,8 @@
 
     iput-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->g:Landroid/widget/GridView;
 
-    .line 143
-    const v0, 0x7f1002f4
+    .line 144
+    const v0, 0x7f11028f
 
     invoke-virtual {p0, v0}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->findViewById(I)Landroid/view/View;
 
@@ -726,8 +726,8 @@
 
     iput-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->h:Landroid/view/View;
 
-    .line 144
-    const v0, 0x7f10012b
+    .line 145
+    const v0, 0x7f1100fc
 
     invoke-virtual {p0, v0}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->findViewById(I)Landroid/view/View;
 
@@ -737,8 +737,8 @@
 
     iput-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->i:Landroid/widget/LinearLayout;
 
-    .line 145
-    const v0, 0x7f10012e
+    .line 146
+    const v0, 0x7f1100ff
 
     invoke-virtual {p0, v0}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->findViewById(I)Landroid/view/View;
 
@@ -746,8 +746,8 @@
 
     iput-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->j:Landroid/view/View;
 
-    .line 147
-    const v0, 0x7f1002f3
+    .line 148
+    const v0, 0x7f11028e
 
     invoke-virtual {p0, v0}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->findViewById(I)Landroid/view/View;
 
@@ -757,8 +757,8 @@
 
     iput-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->k:Lkik/android/widget/UserMediaImageThumbNailList;
 
-    .line 149
-    const v0, 0x7f100122
+    .line 150
+    const v0, 0x7f1100f3
 
     invoke-virtual {p0, v0}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->findViewById(I)Landroid/view/View;
 
@@ -768,51 +768,51 @@
 
     iput-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->l:Landroid/widget/TextView;
 
-    .line 2267
-    new-array v6, v11, [Ljava/lang/String;
+    .line 2265
+    new-array v2, v7, [Ljava/lang/String;
 
     const-string v0, "_id"
 
-    aput-object v0, v6, v12
+    aput-object v0, v2, v8
 
     const-string v0, "_size"
 
-    aput-object v0, v6, v13
+    aput-object v0, v2, v9
 
     const/4 v0, 0x2
 
     const-string v1, "_data"
 
-    aput-object v1, v6, v0
+    aput-object v1, v2, v0
 
     const-string v0, "date_added"
 
-    aput-object v0, v6, v10
+    aput-object v0, v2, v6
 
     const/4 v0, 0x4
 
     const-string v1, "orientation"
 
-    aput-object v1, v6, v0
+    aput-object v1, v2, v0
 
-    .line 2269
-    sget-object v5, Landroid/provider/MediaStore$Images$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
+    .line 2267
+    sget-object v1, Landroid/provider/MediaStore$Images$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    const-string v7, ""
+    const-string v3, ""
 
-    const-string v9, "date_added DESC"
+    const/4 v4, 0x0
 
-    move-object v4, p0
+    const-string v5, "date_added DESC"
 
-    move-object v8, v3
+    move-object v0, p0
 
-    invoke-virtual/range {v4 .. v9}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->managedQuery(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual/range {v0 .. v5}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->managedQuery(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->f:Landroid/database/Cursor;
 
-    .line 2272
+    .line 2270
     invoke-virtual {p0}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -823,50 +823,50 @@
 
     iget v0, v0, Landroid/content/res/Configuration;->orientation:I
 
-    .line 2273
-    if-ne v0, v13, :cond_2
+    .line 2271
+    if-ne v0, v9, :cond_2
 
-    move v0, v10
+    move v0, v6
 
-    .line 2279
+    .line 2277
     :goto_0
     iget-object v1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->g:Landroid/widget/GridView;
 
     invoke-virtual {v1, v0}, Landroid/widget/GridView;->setNumColumns(I)V
 
-    .line 2280
+    .line 2278
     new-instance v1, Lcom/kik/cards/usermedia/CustomGalleryActivity$b;
 
     iget-object v2, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->f:Landroid/database/Cursor;
 
     invoke-direct {v1, p0, p0, v2, v0}, Lcom/kik/cards/usermedia/CustomGalleryActivity$b;-><init>(Lcom/kik/cards/usermedia/CustomGalleryActivity;Landroid/content/Context;Landroid/database/Cursor;I)V
 
-    .line 2281
+    .line 2279
     iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->g:Landroid/widget/GridView;
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 154
+    .line 155
     iget v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->e:I
 
-    if-ne v0, v13, :cond_3
+    if-ne v0, v9, :cond_3
 
-    .line 155
-    const v0, 0x7f09048d
+    .line 156
+    const v0, 0x7f0a0479
 
     invoke-virtual {p0, v0}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 161
+    .line 162
     :goto_1
-    invoke-static {p0, v0, v12}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+    invoke-static {p0, v0, v8}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->t:Landroid/widget/Toast;
 
-    .line 2287
+    .line 2285
     iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->g:Landroid/widget/GridView;
 
     if-eqz v0, :cond_0
@@ -879,25 +879,23 @@
 
     if-nez v0, :cond_4
 
-    .line 2288
+    .line 2286
     :cond_0
-    new-array v0, v13, [Landroid/view/View;
+    new-array v0, v9, [Landroid/view/View;
 
-    const v1, 0x7f10012c
-
-    invoke-virtual {p0, v1}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v10}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
-    aput-object v1, v0, v12
+    aput-object v1, v0, v8
 
     invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
 
-    .line 165
+    .line 166
     :goto_2
-    invoke-virtual {p0, v12}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->setResult(I)V
+    invoke-virtual {p0, v8}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->setResult(I)V
 
-    .line 167
+    .line 168
     iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->h:Landroid/view/View;
 
     new-instance v1, Lcom/kik/cards/usermedia/CustomGalleryActivity$1;
@@ -923,7 +921,7 @@
     invoke-virtual {p0}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->a()V
 
     .line 198
-    const v0, 0x7f100120
+    const v0, 0x7f1100f1
 
     invoke-virtual {p0, v0}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->findViewById(I)Landroid/view/View;
 
@@ -939,21 +937,21 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 211
+    .line 210
     :cond_1
     return-void
 
     :cond_2
-    move v0, v11
+    move v0, v7
 
-    .line 2273
+    .line 2271
     goto :goto_0
 
-    .line 158
+    .line 159
     :cond_3
-    const v0, 0x7f09048f
+    const v0, 0x7f0a047b
 
-    new-array v1, v13, [Ljava/lang/Object;
+    new-array v1, v9, [Ljava/lang/Object;
 
     iget v2, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->e:I
 
@@ -961,7 +959,7 @@
 
     move-result-object v2
 
-    aput-object v2, v1, v12
+    aput-object v2, v1, v8
 
     invoke-virtual {p0, v0, v1}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -969,17 +967,15 @@
 
     goto :goto_1
 
-    .line 2291
+    .line 2289
     :cond_4
-    new-array v0, v13, [Landroid/view/View;
+    new-array v0, v9, [Landroid/view/View;
 
-    const v1, 0x7f10012c
-
-    invoke-virtual {p0, v1}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v10}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
-    aput-object v1, v0, v12
+    aput-object v1, v0, v8
 
     invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
 
@@ -992,35 +988,35 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 228
+    .line 226
     invoke-super {p0}, Lkik/android/chat/activity/KikActivityBase;->onDestroy()V
 
-    .line 229
-    iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->m:Lcom/kik/cards/usermedia/UserMediaCache;
+    .line 227
+    iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->m:Lcom/kik/cards/usermedia/g;
 
-    invoke-virtual {v0}, Lcom/kik/cards/usermedia/UserMediaCache;->stop()V
+    invoke-virtual {v0}, Lcom/kik/cards/usermedia/g;->d()V
 
-    .line 230
+    .line 228
     iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->r:Lcom/kik/events/d;
 
     invoke-virtual {v0}, Lcom/kik/events/d;->a()V
 
-    .line 231
-    iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->n:Lcom/kik/cache/Cache;
+    .line 229
+    iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->n:Lcom/kik/cache/c;
 
-    invoke-virtual {v0}, Lcom/kik/cache/Cache;->clearCache()V
+    invoke-virtual {v0}, Lcom/kik/cache/c;->b()V
+
+    .line 230
+    iput-object v1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->n:Lcom/kik/cache/c;
+
+    .line 231
+    iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->o:Lcom/kik/cache/b;
+
+    invoke-virtual {v0}, Lcom/kik/cache/b;->b()V
 
     .line 232
-    iput-object v1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->n:Lcom/kik/cache/Cache;
+    iput-object v1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->o:Lcom/kik/cache/b;
 
     .line 233
-    iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->o:Lcom/kik/cache/BitmapLRUCache;
-
-    invoke-virtual {v0}, Lcom/kik/cache/BitmapLRUCache;->clearCache()V
-
-    .line 234
-    iput-object v1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity;->o:Lcom/kik/cache/BitmapLRUCache;
-
-    .line 235
     return-void
 .end method

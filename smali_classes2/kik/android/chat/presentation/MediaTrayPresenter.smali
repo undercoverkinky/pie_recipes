@@ -18,16 +18,13 @@
 .method public abstract a(ILjava/lang/String;)V
 .end method
 
-.method public abstract a(Lcom/nhaarman/supertooltips/a;)V
+.method public abstract a(Lcom/kik/messagepath/model/Keyboards$PaymentSuggestedResponse$SavedCard;)V
 .end method
 
 .method public abstract a(Ljava/lang/String;)V
 .end method
 
 .method public abstract a(Lkik/core/datatypes/Message;)V
-.end method
-
-.method public abstract a(Lkik/core/datatypes/messageExtensions/ContentMessage;)V
 .end method
 
 .method public abstract b(Ljava/lang/String;)V
@@ -39,22 +36,22 @@
 .method public abstract c(Z)V
 .end method
 
+.method public abstract d()V
+.end method
+
 .method public abstract d(Z)V
 .end method
 
-.method public abstract e()V
+.method public abstract e()Z
 .end method
 
-.method public abstract e(Z)V
+.method public abstract f()V
 .end method
 
-.method public abstract f()Z
+.method public abstract g()Z
 .end method
 
-.method public abstract g()V
-.end method
-
-.method public abstract h()Z
+.method public abstract h()V
 .end method
 
 .method public abstract i()V
@@ -91,19 +88,4 @@
 .end method
 
 .method public abstract t()V
-.end method
-
-.method public abstract u()Lrx/d;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lrx/d",
-            "<",
-            "Ljava/lang/Void;",
-            ">;"
-        }
-    .end annotation
-.end method
-
-.method public abstract v()V
 .end method

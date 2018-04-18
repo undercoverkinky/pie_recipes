@@ -1,259 +1,75 @@
-.class public abstract Lcom/google/gson/k;
-.super Ljava/lang/Object;
+.class public final Lcom/google/gson/k;
+.super Lcom/google/gson/j;
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Lcom/google/gson/k;
+
+
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
     .prologue
-    .line 33
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 32
+    new-instance v0, Lcom/google/gson/k;
 
+    invoke-direct {v0}, Lcom/google/gson/k;-><init>()V
+
+    sput-object v0, Lcom/google/gson/k;->a:Lcom/google/gson/k;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 39
+    invoke-direct {p0}, Lcom/google/gson/j;-><init>()V
+
+    .line 41
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Ljava/lang/Number;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
     .prologue
-    .line 179
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    .line 61
+    if-eq p0, p1, :cond_0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    instance-of v0, p1, Lcom/google/gson/k;
 
-    move-result-object v1
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public b()Ljava/lang/String;
-    .locals 2
-
-    .prologue
-    .line 192
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public c()D
-    .locals 2
-
-    .prologue
-    .line 205
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public d()J
-    .locals 2
-
-    .prologue
-    .line 231
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public e()I
-    .locals 2
-
-    .prologue
-    .line 244
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public f()Z
-    .locals 2
-
-    .prologue
-    .line 153
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final g()Lcom/google/gson/JsonObject;
-    .locals 3
-
-    .prologue
-    .line 88
-    .line 1056
-    instance-of v0, p0, Lcom/google/gson/JsonObject;
-
-    .line 88
-    if-eqz v0, :cond_0
-
-    .line 89
-    check-cast p0, Lcom/google/gson/JsonObject;
-
-    return-object p0
-
-    .line 91
     :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    const/4 v0, 0x1
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    :goto_0
+    return v0
 
-    const-string v2, "Not a JSON Object: "
+    :cond_1
+    const/4 v0, 0x0
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    goto :goto_0
 .end method
 
-.method public final h()Lcom/google/gson/m;
-    .locals 3
+.method public final hashCode()I
+    .locals 1
 
     .prologue
-    .line 120
-    .line 1065
-    instance-of v0, p0, Lcom/google/gson/m;
+    .line 53
+    const-class v0, Lcom/google/gson/k;
 
-    .line 120
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    .line 121
-    check-cast p0, Lcom/google/gson/m;
+    move-result v0
 
-    return-object p0
-
-    .line 123
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Not a JSON Primitive: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 3
-
-    .prologue
-    .line 322
-    :try_start_0
-    new-instance v0, Ljava/io/StringWriter;
-
-    invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
-
-    .line 323
-    new-instance v1, Lcom/google/gson/stream/b;
-
-    invoke-direct {v1, v0}, Lcom/google/gson/stream/b;-><init>(Ljava/io/Writer;)V
-
-    .line 324
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v2}, Lcom/google/gson/stream/b;->b(Z)V
-
-    .line 325
-    invoke-static {p0, v1}, Lcom/google/gson/internal/f;->a(Lcom/google/gson/k;Lcom/google/gson/stream/b;)V
-
-    .line 326
-    invoke-virtual {v0}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    return-object v0
-
-    .line 327
-    :catch_0
-    move-exception v0
-
-    .line 328
-    new-instance v1, Ljava/lang/AssertionError;
-
-    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw v1
+    return v0
 .end method

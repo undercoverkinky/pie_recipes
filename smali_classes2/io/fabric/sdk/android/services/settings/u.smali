@@ -4,5 +4,10 @@
 
 
 # virtual methods
-.method public abstract a(Lio/fabric/sdk/android/services/settings/SettingsRequest;)Lorg/json/JSONObject;
+.method public abstract a(Lio/fabric/sdk/android/services/common/j;Lorg/json/JSONObject;)Lio/fabric/sdk/android/services/settings/s;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lorg/json/JSONException;
+        }
+    .end annotation
 .end method

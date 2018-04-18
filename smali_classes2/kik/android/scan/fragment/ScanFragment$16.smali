@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lkik/android/scan/fragment/ScanFragment;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lkik/android/scan/fragment/ScanFragment;->a(Lcom/kik/scan/KikCode;Ljava/lang/String;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,20 @@
 
 
 # instance fields
-.field final synthetic a:Lkik/android/scan/fragment/ScanFragment;
+.field final synthetic a:Lcom/kik/scan/KikCode;
+
+.field final synthetic b:Lkik/android/scan/fragment/ScanFragment;
 
 
 # direct methods
-.method constructor <init>(Lkik/android/scan/fragment/ScanFragment;)V
+.method constructor <init>(Lkik/android/scan/fragment/ScanFragment;Lcom/kik/scan/KikCode;)V
     .locals 0
 
     .prologue
-    .line 451
-    iput-object p1, p0, Lkik/android/scan/fragment/ScanFragment$16;->a:Lkik/android/scan/fragment/ScanFragment;
+    .line 429
+    iput-object p1, p0, Lkik/android/scan/fragment/ScanFragment$16;->b:Lkik/android/scan/fragment/ScanFragment;
+
+    iput-object p2, p0, Lkik/android/scan/fragment/ScanFragment$16;->a:Lcom/kik/scan/KikCode;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,47 +40,22 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 455
-    const v0, 0x7f090327
+    .line 433
+    iget-object v0, p0, Lkik/android/scan/fragment/ScanFragment$16;->b:Lkik/android/scan/fragment/ScanFragment;
 
-    invoke-static {v0}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
+    invoke-static {v0}, Lkik/android/scan/fragment/ScanFragment;->h(Lkik/android/scan/fragment/ScanFragment;)V
 
-    move-result-object v0
+    .line 434
+    iget-object v0, p0, Lkik/android/scan/fragment/ScanFragment$16;->b:Lkik/android/scan/fragment/ScanFragment;
 
-    iget-object v1, p0, Lkik/android/scan/fragment/ScanFragment$16;->a:Lkik/android/scan/fragment/ScanFragment;
+    iget-object v1, p0, Lkik/android/scan/fragment/ScanFragment$16;->a:Lcom/kik/scan/KikCode;
 
-    iget-object v1, v1, Lkik/android/scan/fragment/ScanFragment;->_errorRetryButton:Landroid/widget/TextView;
+    invoke-static {v0, v1}, Lkik/android/scan/fragment/ScanFragment;->c(Lkik/android/scan/fragment/ScanFragment;Lcom/kik/scan/KikCode;)V
 
-    invoke-static {v0, v1}, Lkik/android/util/bz;->a(Ljava/lang/CharSequence;Landroid/widget/TextView;)V
-
-    .line 456
-    iget-object v0, p0, Lkik/android/scan/fragment/ScanFragment$16;->a:Lkik/android/scan/fragment/ScanFragment;
-
-    iget-object v0, v0, Lkik/android/scan/fragment/ScanFragment;->_errorRetryButton:Landroid/widget/TextView;
-
-    new-instance v1, Lkik/android/scan/fragment/ScanFragment$16$1;
-
-    invoke-direct {v1, p0}, Lkik/android/scan/fragment/ScanFragment$16$1;-><init>(Lkik/android/scan/fragment/ScanFragment$16;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 464
-    iget-object v0, p0, Lkik/android/scan/fragment/ScanFragment$16;->a:Lkik/android/scan/fragment/ScanFragment;
-
-    const-string v1, ""
-
-    const v2, 0x7f090328
-
-    invoke-static {v2}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v1, v2}, Lkik/android/scan/fragment/ScanFragment;->a(Lkik/android/scan/fragment/ScanFragment;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 465
+    .line 435
     return-void
 .end method

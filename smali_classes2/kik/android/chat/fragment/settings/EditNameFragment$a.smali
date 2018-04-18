@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 206
+    .line 197
     invoke-direct {p0}, Lcom/kik/ui/fragment/FragmentBase$FragmentBundle;-><init>()V
 
     return-void

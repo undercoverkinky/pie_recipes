@@ -69,9 +69,7 @@
 
 .field private displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
-.field private groupOrMemberDeletedCase_:I
-
-.field private groupOrMemberDeleted_:Ljava/lang/Object;
+.field private isDeleted_:Z
 
 .field private isPublic_:Z
 
@@ -132,90 +130,80 @@
 
 # direct methods
 .method private constructor <init>()V
-    .locals 2
+    .locals 1
 
     .prologue
-    const/4 v1, 0x0
-
-    .line 901
-    invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;-><init>()V
-
-    .line 1162
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeletedCase_:I
+    .line 812
+    invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;-><init>()V
 
-    .line 1179
-    iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jid_:Lcom/kik/ximodel/XiGroupJid;
+    .line 1059
+    iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jid_:Lcom/kik/ximodel/XiGroupJid;
 
-    .line 1296
-    iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
+    .line 1176
+    iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
-    .line 1547
-    iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdated_:Lcom/google/protobuf/Timestamp;
+    .line 1405
+    iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdated_:Lcom/google/protobuf/Timestamp;
 
-    .line 1701
+    .line 1559
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
 
-    .line 2013
+    .line 1871
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
 
-    .line 902
+    .line 813
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->maybeForceBuilderInitialization()V
 
-    .line 903
+    .line 814
     return-void
 .end method
 
 .method private constructor <init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
-    .locals 2
+    .locals 1
 
     .prologue
-    const/4 v1, 0x0
-
-    .line 907
-    invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
-
-    .line 1162
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeletedCase_:I
+    .line 818
+    invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
 
-    .line 1179
-    iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jid_:Lcom/kik/ximodel/XiGroupJid;
+    .line 1059
+    iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jid_:Lcom/kik/ximodel/XiGroupJid;
 
-    .line 1296
-    iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
+    .line 1176
+    iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
-    .line 1547
-    iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdated_:Lcom/google/protobuf/Timestamp;
+    .line 1405
+    iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdated_:Lcom/google/protobuf/Timestamp;
 
-    .line 1701
+    .line 1559
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
 
-    .line 2013
+    .line 1871
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
 
-    .line 908
+    .line 819
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->maybeForceBuilderInitialization()V
 
-    .line 909
+    .line 820
     return-void
 .end method
 
@@ -223,7 +211,7 @@
     .locals 0
 
     .prologue
-    .line 884
+    .line 795
     invoke-direct {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
 
     return-void
@@ -233,7 +221,7 @@
     .locals 0
 
     .prologue
-    .line 884
+    .line 795
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;-><init>()V
 
     return-void
@@ -243,41 +231,7 @@
     .locals 2
 
     .prologue
-    .line 2015
-    iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
-
-    and-int/lit16 v0, v0, 0x80
-
-    const/16 v1, 0x80
-
-    if-eq v0, v1, :cond_0
-
-    .line 2016
-    new-instance v0, Ljava/util/ArrayList;
-
-    iget-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
-
-    .line 2017
-    iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
-
-    or-int/lit16 v0, v0, 0x80
-
-    iput v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
-
-    .line 2019
-    :cond_0
-    return-void
-.end method
-
-.method private ensureMembersIsMutable()V
-    .locals 2
-
-    .prologue
-    .line 1703
+    .line 1873
     iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
 
     and-int/lit8 v0, v0, 0x40
@@ -286,7 +240,41 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 1704
+    .line 1874
+    new-instance v0, Ljava/util/ArrayList;
+
+    iget-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
+
+    .line 1875
+    iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
+
+    or-int/lit8 v0, v0, 0x40
+
+    iput v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
+
+    .line 1877
+    :cond_0
+    return-void
+.end method
+
+.method private ensureMembersIsMutable()V
+    .locals 2
+
+    .prologue
+    .line 1561
+    iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
+
+    and-int/lit8 v0, v0, 0x20
+
+    const/16 v1, 0x20
+
+    if-eq v0, v1, :cond_0
+
+    .line 1562
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
@@ -295,14 +283,14 @@
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
 
-    .line 1705
+    .line 1563
     iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
 
-    or-int/lit8 v0, v0, 0x40
+    or-int/lit8 v0, v0, 0x20
 
     iput v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
 
-    .line 1707
+    .line 1565
     :cond_0
     return-void
 .end method
@@ -322,33 +310,33 @@
     .end annotation
 
     .prologue
-    .line 2312
+    .line 2170
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 2313
+    .line 2171
     new-instance v1, Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     iget-object v2, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
 
     iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
 
-    and-int/lit16 v0, v0, 0x80
+    and-int/lit8 v0, v0, 0x40
 
-    const/16 v3, 0x80
+    const/16 v3, 0x40
 
     if-ne v0, v3, :cond_1
 
     const/4 v0, 0x1
 
-    .line 2317
+    .line 2175
     :goto_0
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->getParentForChildren()Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;
 
     move-result-object v3
 
-    .line 2318
+    .line 2176
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->isClean()Z
 
     move-result v4
@@ -357,18 +345,18 @@
 
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    .line 2319
+    .line 2177
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
 
-    .line 2321
+    .line 2179
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     return-object v0
 
-    .line 2313
+    .line 2171
     :cond_1
     const/4 v0, 0x0
 
@@ -379,7 +367,7 @@
     .locals 1
 
     .prologue
-    .line 890
+    .line 801
     invoke-static {}, Lcom/kik/groups/GroupsCommon;->access$000()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
@@ -402,25 +390,25 @@
     .end annotation
 
     .prologue
-    .line 1438
+    .line 1318
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayDataBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 1439
+    .line 1319
     new-instance v0, Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    .line 1441
+    .line 1321
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->getDisplayData()Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
     move-result-object v1
 
-    .line 1442
+    .line 1322
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->getParentForChildren()Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;
 
     move-result-object v2
 
-    .line 1443
+    .line 1323
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->isClean()Z
 
     move-result v3
@@ -429,12 +417,12 @@
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayDataBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    .line 1444
+    .line 1324
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
-    .line 1446
+    .line 1326
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayDataBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
@@ -456,25 +444,25 @@
     .end annotation
 
     .prologue
-    .line 1285
+    .line 1165
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 1286
+    .line 1166
     new-instance v0, Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    .line 1288
+    .line 1168
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->getJid()Lcom/kik/ximodel/XiGroupJid;
 
     move-result-object v1
 
-    .line 1289
+    .line 1169
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->getParentForChildren()Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;
 
     move-result-object v2
 
-    .line 1290
+    .line 1170
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->isClean()Z
 
     move-result v3
@@ -483,12 +471,12 @@
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    .line 1291
+    .line 1171
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jid_:Lcom/kik/ximodel/XiGroupJid;
 
-    .line 1293
+    .line 1173
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
@@ -510,25 +498,25 @@
     .end annotation
 
     .prologue
-    .line 1689
+    .line 1547
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdatedBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 1690
+    .line 1548
     new-instance v0, Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    .line 1692
+    .line 1550
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->getLastUpdated()Lcom/google/protobuf/Timestamp;
 
     move-result-object v1
 
-    .line 1693
+    .line 1551
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->getParentForChildren()Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;
 
     move-result-object v2
 
-    .line 1694
+    .line 1552
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->isClean()Z
 
     move-result v3
@@ -537,12 +525,12 @@
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdatedBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    .line 1695
+    .line 1553
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdated_:Lcom/google/protobuf/Timestamp;
 
-    .line 1697
+    .line 1555
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdatedBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
@@ -564,33 +552,33 @@
     .end annotation
 
     .prologue
-    .line 2000
+    .line 1858
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 2001
+    .line 1859
     new-instance v1, Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     iget-object v2, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
 
     iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
 
-    and-int/lit8 v0, v0, 0x40
+    and-int/lit8 v0, v0, 0x20
 
-    const/16 v3, 0x40
+    const/16 v3, 0x20
 
     if-ne v0, v3, :cond_1
 
     const/4 v0, 0x1
 
-    .line 2005
+    .line 1863
     :goto_0
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->getParentForChildren()Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;
 
     move-result-object v3
 
-    .line 2006
+    .line 1864
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->isClean()Z
 
     move-result v4
@@ -599,18 +587,18 @@
 
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    .line 2007
+    .line 1865
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
 
-    .line 2009
+    .line 1867
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     return-object v0
 
-    .line 2001
+    .line 1859
     :cond_1
     const/4 v0, 0x0
 
@@ -621,20 +609,20 @@
     .locals 1
 
     .prologue
-    .line 912
+    .line 823
     invoke-static {}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$400()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 913
+    .line 824
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->getMembersFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    .line 914
+    .line 825
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->getBannedMembersFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    .line 916
+    .line 827
     :cond_0
     return-void
 .end method
@@ -655,27 +643,27 @@
     .end annotation
 
     .prologue
-    .line 2191
+    .line 2049
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 2192
+    .line 2050
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->ensureBannedMembersIsMutable()V
 
-    .line 2193
+    .line 2051
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
 
     invoke-static {p1, v0}, Lcom/google/protobuf/AbstractMessageLite$Builder;->addAll(Ljava/lang/Iterable;Ljava/util/Collection;)V
 
-    .line 2195
+    .line 2053
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 2199
+    .line 2057
     :goto_0
     return-object p0
 
-    .line 2197
+    .line 2055
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -698,27 +686,27 @@
     .end annotation
 
     .prologue
-    .line 1879
+    .line 1737
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 1880
+    .line 1738
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->ensureMembersIsMutable()V
 
-    .line 1881
+    .line 1739
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
 
     invoke-static {p1, v0}, Lcom/google/protobuf/AbstractMessageLite$Builder;->addAll(Ljava/lang/Iterable;Ljava/util/Collection;)V
 
-    .line 1883
+    .line 1741
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1887
+    .line 1745
     :goto_0
     return-object p0
 
-    .line 1885
+    .line 1743
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -731,15 +719,15 @@
     .locals 2
 
     .prologue
-    .line 2173
+    .line 2031
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 2174
+    .line 2032
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->ensureBannedMembersIsMutable()V
 
-    .line 2175
+    .line 2033
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
 
     invoke-virtual {p2}, Lcom/kik/groups/GroupsCommon$BannedGroupMember$Builder;->build()Lcom/kik/groups/GroupsCommon$BannedGroupMember;
@@ -748,14 +736,14 @@
 
     invoke-interface {v0, p1, v1}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 2176
+    .line 2034
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 2180
+    .line 2038
     :goto_0
     return-object p0
 
-    .line 2178
+    .line 2036
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -772,38 +760,38 @@
     .locals 1
 
     .prologue
-    .line 2134
+    .line 1992
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 2135
+    .line 1993
     if-nez p2, :cond_0
 
-    .line 2136
+    .line 1994
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 2138
+    .line 1996
     :cond_0
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->ensureBannedMembersIsMutable()V
 
-    .line 2139
+    .line 1997
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 2140
+    .line 1998
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 2144
+    .line 2002
     :goto_0
     return-object p0
 
-    .line 2142
+    .line 2000
     :cond_1
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -816,15 +804,15 @@
     .locals 2
 
     .prologue
-    .line 2155
+    .line 2013
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 2156
+    .line 2014
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->ensureBannedMembersIsMutable()V
 
-    .line 2157
+    .line 2015
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
 
     invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$BannedGroupMember$Builder;->build()Lcom/kik/groups/GroupsCommon$BannedGroupMember;
@@ -833,14 +821,14 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2158
+    .line 2016
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 2162
+    .line 2020
     :goto_0
     return-object p0
 
-    .line 2160
+    .line 2018
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -857,38 +845,38 @@
     .locals 1
 
     .prologue
-    .line 2113
+    .line 1971
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 2114
+    .line 1972
     if-nez p1, :cond_0
 
-    .line 2115
+    .line 1973
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 2117
+    .line 1975
     :cond_0
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->ensureBannedMembersIsMutable()V
 
-    .line 2118
+    .line 1976
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2119
+    .line 1977
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 2123
+    .line 1981
     :goto_0
     return-object p0
 
-    .line 2121
+    .line 1979
     :cond_1
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -901,17 +889,17 @@
     .locals 2
 
     .prologue
-    .line 2283
+    .line 2141
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->getBannedMembersFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
 
-    .line 2284
+    .line 2142
     invoke-static {}, Lcom/kik/groups/GroupsCommon$BannedGroupMember;->getDefaultInstance()Lcom/kik/groups/GroupsCommon$BannedGroupMember;
 
     move-result-object v1
 
-    .line 2283
+    .line 2141
     invoke-virtual {v0, v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addBuilder(Lcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/AbstractMessage$Builder;
 
     move-result-object v0
@@ -925,17 +913,17 @@
     .locals 2
 
     .prologue
-    .line 2295
+    .line 2153
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->getBannedMembersFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
 
-    .line 2296
+    .line 2154
     invoke-static {}, Lcom/kik/groups/GroupsCommon$BannedGroupMember;->getDefaultInstance()Lcom/kik/groups/GroupsCommon$BannedGroupMember;
 
     move-result-object v1
 
-    .line 2295
+    .line 2153
     invoke-virtual {v0, p1, v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addBuilder(ILcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/AbstractMessage$Builder;
 
     move-result-object v0
@@ -949,15 +937,15 @@
     .locals 2
 
     .prologue
-    .line 1861
+    .line 1719
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 1862
+    .line 1720
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->ensureMembersIsMutable()V
 
-    .line 1863
+    .line 1721
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
 
     invoke-virtual {p2}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->build()Lcom/kik/groups/GroupsCommon$GroupMember;
@@ -966,14 +954,14 @@
 
     invoke-interface {v0, p1, v1}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 1864
+    .line 1722
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1868
+    .line 1726
     :goto_0
     return-object p0
 
-    .line 1866
+    .line 1724
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -990,38 +978,38 @@
     .locals 1
 
     .prologue
-    .line 1822
+    .line 1680
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 1823
+    .line 1681
     if-nez p2, :cond_0
 
-    .line 1824
+    .line 1682
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 1826
+    .line 1684
     :cond_0
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->ensureMembersIsMutable()V
 
-    .line 1827
+    .line 1685
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 1828
+    .line 1686
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1832
+    .line 1690
     :goto_0
     return-object p0
 
-    .line 1830
+    .line 1688
     :cond_1
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -1034,15 +1022,15 @@
     .locals 2
 
     .prologue
-    .line 1843
+    .line 1701
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 1844
+    .line 1702
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->ensureMembersIsMutable()V
 
-    .line 1845
+    .line 1703
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
 
     invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->build()Lcom/kik/groups/GroupsCommon$GroupMember;
@@ -1051,14 +1039,14 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1846
+    .line 1704
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1850
+    .line 1708
     :goto_0
     return-object p0
 
-    .line 1848
+    .line 1706
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -1075,38 +1063,38 @@
     .locals 1
 
     .prologue
-    .line 1801
+    .line 1659
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 1802
+    .line 1660
     if-nez p1, :cond_0
 
-    .line 1803
+    .line 1661
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 1805
+    .line 1663
     :cond_0
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->ensureMembersIsMutable()V
 
-    .line 1806
+    .line 1664
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1807
+    .line 1665
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1811
+    .line 1669
     :goto_0
     return-object p0
 
-    .line 1809
+    .line 1667
     :cond_1
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -1119,17 +1107,17 @@
     .locals 2
 
     .prologue
-    .line 1971
+    .line 1829
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->getMembersFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
 
-    .line 1972
+    .line 1830
     invoke-static {}, Lcom/kik/groups/GroupsCommon$GroupMember;->getDefaultInstance()Lcom/kik/groups/GroupsCommon$GroupMember;
 
     move-result-object v1
 
-    .line 1971
+    .line 1829
     invoke-virtual {v0, v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addBuilder(Lcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/AbstractMessage$Builder;
 
     move-result-object v0
@@ -1143,17 +1131,17 @@
     .locals 2
 
     .prologue
-    .line 1983
+    .line 1841
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->getMembersFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
 
-    .line 1984
+    .line 1842
     invoke-static {}, Lcom/kik/groups/GroupsCommon$GroupMember;->getDefaultInstance()Lcom/kik/groups/GroupsCommon$GroupMember;
 
     move-result-object v1
 
-    .line 1983
+    .line 1841
     invoke-virtual {v0, p1, v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addBuilder(ILcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/AbstractMessage$Builder;
 
     move-result-object v0
@@ -1167,7 +1155,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0, p1, p2}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -1179,7 +1167,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0, p1, p2}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -1191,7 +1179,7 @@
     .locals 1
 
     .prologue
-    .line 1047
+    .line 952
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -1205,7 +1193,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->build()Lcom/kik/groups/GroupsCommon$GroupRosterEntry;
 
     move-result-object v0
@@ -1217,7 +1205,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->build()Lcom/kik/groups/GroupsCommon$GroupRosterEntry;
 
     move-result-object v0
@@ -1229,26 +1217,26 @@
     .locals 2
 
     .prologue
-    .line 966
+    .line 877
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->buildPartial()Lcom/kik/groups/GroupsCommon$GroupRosterEntry;
 
     move-result-object v0
 
-    .line 967
+    .line 878
     invoke-virtual {v0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->isInitialized()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 968
+    .line 879
     invoke-static {v0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->newUninitializedMessageException(Lcom/google/protobuf/Message;)Lcom/google/protobuf/UninitializedMessageException;
 
     move-result-object v0
 
     throw v0
 
-    .line 970
+    .line 881
     :cond_0
     return-object v0
 .end method
@@ -1257,7 +1245,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->buildPartial()Lcom/kik/groups/GroupsCommon$GroupRosterEntry;
 
     move-result-object v0
@@ -1269,7 +1257,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->buildPartial()Lcom/kik/groups/GroupsCommon$GroupRosterEntry;
 
     move-result-object v0
@@ -1281,92 +1269,71 @@
     .locals 3
 
     .prologue
-    .line 974
+    .line 885
     new-instance v1, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;
 
     const/4 v0, 0x0
 
     invoke-direct {v1, p0, v0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;Lcom/kik/groups/GroupsCommon$1;)V
 
-    .line 977
+    .line 888
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_2
 
-    .line 978
+    .line 889
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jid_:Lcom/kik/ximodel/XiGroupJid;
 
     invoke-static {v1, v0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$602(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;Lcom/kik/ximodel/XiGroupJid;)Lcom/kik/ximodel/XiGroupJid;
 
-    .line 982
+    .line 893
     :goto_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayDataBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_3
 
-    .line 983
+    .line 894
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
     invoke-static {v1, v0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$702(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;Lcom/kik/groups/GroupsCommon$GroupDisplayData;)Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
-    .line 987
+    .line 898
     :goto_1
     iget-boolean v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->isPublic_:Z
 
     invoke-static {v1, v0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$802(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;Z)Z
 
-    .line 988
-    iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeletedCase_:I
+    .line 899
+    iget-boolean v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->isDeleted_:Z
 
-    const/16 v2, 0xc
+    invoke-static {v1, v0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$902(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;Z)Z
 
-    if-ne v0, v2, :cond_0
-
-    .line 989
-    iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeleted_:Ljava/lang/Object;
-
-    invoke-static {v1, v0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$902(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 991
-    :cond_0
-    iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeletedCase_:I
-
-    const/16 v2, 0x10
-
-    if-ne v0, v2, :cond_1
-
-    .line 992
-    iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeleted_:Ljava/lang/Object;
-
-    invoke-static {v1, v0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$902(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 994
-    :cond_1
+    .line 900
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdatedBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    if-nez v0, :cond_6
+    if-nez v0, :cond_4
 
-    .line 995
+    .line 901
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdated_:Lcom/google/protobuf/Timestamp;
 
     invoke-static {v1, v0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$1002(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;Lcom/google/protobuf/Timestamp;)Lcom/google/protobuf/Timestamp;
 
-    .line 999
+    .line 905
     :goto_2
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    if-nez v0, :cond_7
+    if-nez v0, :cond_5
 
-    .line 1000
+    .line 906
     iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
 
-    and-int/lit8 v0, v0, 0x40
+    and-int/lit8 v0, v0, 0x20
 
-    const/16 v2, 0x40
+    const/16 v2, 0x20
 
-    if-ne v0, v2, :cond_2
+    if-ne v0, v2, :cond_0
 
-    .line 1001
+    .line 907
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -1375,35 +1342,35 @@
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
 
-    .line 1002
+    .line 908
     iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
 
-    and-int/lit8 v0, v0, -0x41
+    and-int/lit8 v0, v0, -0x21
 
     iput v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
 
-    .line 1004
-    :cond_2
+    .line 910
+    :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
 
     invoke-static {v1, v0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$1102(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;Ljava/util/List;)Ljava/util/List;
 
-    .line 1008
+    .line 914
     :goto_3
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    if-nez v0, :cond_8
+    if-nez v0, :cond_6
 
-    .line 1009
+    .line 915
     iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
 
-    and-int/lit16 v0, v0, 0x80
+    and-int/lit8 v0, v0, 0x40
 
-    const/16 v2, 0x80
+    const/16 v2, 0x40
 
-    if-ne v0, v2, :cond_3
+    if-ne v0, v2, :cond_1
 
-    .line 1010
+    .line 916
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -1412,38 +1379,33 @@
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
 
-    .line 1011
+    .line 917
     iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
 
-    and-int/lit16 v0, v0, -0x81
+    and-int/lit8 v0, v0, -0x41
 
     iput v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
 
-    .line 1013
-    :cond_3
+    .line 919
+    :cond_1
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
 
     invoke-static {v1, v0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$1202(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;Ljava/util/List;)Ljava/util/List;
 
-    .line 1017
+    .line 923
     :goto_4
     const/4 v0, 0x0
 
     invoke-static {v1, v0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$1302(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;I)I
 
-    .line 1018
-    iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeletedCase_:I
-
-    invoke-static {v1, v0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$1402(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;I)I
-
-    .line 1019
+    .line 924
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onBuilt()V
 
-    .line 1020
+    .line 925
     return-object v1
 
-    .line 980
-    :cond_4
+    .line 891
+    :cond_2
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/SingleFieldBuilderV3;->build()Lcom/google/protobuf/AbstractMessage;
@@ -1454,10 +1416,10 @@
 
     invoke-static {v1, v0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$602(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;Lcom/kik/ximodel/XiGroupJid;)Lcom/kik/ximodel/XiGroupJid;
 
-    goto/16 :goto_0
+    goto :goto_0
 
-    .line 985
-    :cond_5
+    .line 896
+    :cond_3
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayDataBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/SingleFieldBuilderV3;->build()Lcom/google/protobuf/AbstractMessage;
@@ -1468,10 +1430,10 @@
 
     invoke-static {v1, v0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$702(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;Lcom/kik/groups/GroupsCommon$GroupDisplayData;)Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
-    goto/16 :goto_1
+    goto :goto_1
 
-    .line 997
-    :cond_6
+    .line 903
+    :cond_4
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdatedBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/SingleFieldBuilderV3;->build()Lcom/google/protobuf/AbstractMessage;
@@ -1484,8 +1446,8 @@
 
     goto :goto_2
 
-    .line 1006
-    :cond_7
+    .line 912
+    :cond_5
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->build()Ljava/util/List;
@@ -1496,8 +1458,8 @@
 
     goto :goto_3
 
-    .line 1015
-    :cond_8
+    .line 921
+    :cond_6
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->build()Ljava/util/List;
@@ -1513,7 +1475,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->clear()Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -1525,7 +1487,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->clear()Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -1537,7 +1499,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->clear()Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -1549,7 +1511,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->clear()Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -1565,116 +1527,113 @@
 
     const/4 v1, 0x0
 
-    .line 918
+    .line 829
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clear()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
-    .line 919
+    .line 830
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 920
+    .line 831
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jid_:Lcom/kik/ximodel/XiGroupJid;
 
-    .line 925
+    .line 836
     :goto_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayDataBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 926
+    .line 837
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
-    .line 931
+    .line 842
     :goto_1
     iput-boolean v2, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->isPublic_:Z
 
-    .line 933
+    .line 844
+    iput-boolean v2, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->isDeleted_:Z
+
+    .line 846
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdatedBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_2
 
-    .line 934
+    .line 847
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdated_:Lcom/google/protobuf/Timestamp;
 
-    .line 939
+    .line 852
     :goto_2
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_3
 
-    .line 940
+    .line 853
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
 
-    .line 941
+    .line 854
     iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
 
-    and-int/lit8 v0, v0, -0x41
+    and-int/lit8 v0, v0, -0x21
 
     iput v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
 
-    .line 945
+    .line 858
     :goto_3
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_4
 
-    .line 946
+    .line 859
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
 
-    .line 947
+    .line 860
     iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
 
-    and-int/lit16 v0, v0, -0x81
+    and-int/lit8 v0, v0, -0x41
 
     iput v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
 
-    .line 951
+    .line 864
     :goto_4
-    iput v2, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeletedCase_:I
-
-    .line 952
-    iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeleted_:Ljava/lang/Object;
-
-    .line 953
     return-object p0
 
-    .line 922
+    .line 833
     :cond_0
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jid_:Lcom/kik/ximodel/XiGroupJid;
 
-    .line 923
+    .line 834
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     goto :goto_0
 
-    .line 928
+    .line 839
     :cond_1
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
-    .line 929
+    .line 840
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayDataBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     goto :goto_1
 
-    .line 936
+    .line 849
     :cond_2
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdated_:Lcom/google/protobuf/Timestamp;
 
-    .line 937
+    .line 850
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdatedBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     goto :goto_2
 
-    .line 943
+    .line 856
     :cond_3
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -1682,7 +1641,7 @@
 
     goto :goto_3
 
-    .line 949
+    .line 862
     :cond_4
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -1695,33 +1654,33 @@
     .locals 1
 
     .prologue
-    .line 2209
+    .line 2067
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 2210
+    .line 2068
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
 
-    .line 2211
+    .line 2069
     iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
 
-    and-int/lit16 v0, v0, -0x81
+    and-int/lit8 v0, v0, -0x41
 
     iput v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
 
-    .line 2212
+    .line 2070
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 2216
+    .line 2074
     :goto_0
     return-object p0
 
-    .line 2214
+    .line 2072
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -1736,26 +1695,26 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1391
+    .line 1271
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayDataBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 1392
+    .line 1272
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
-    .line 1393
+    .line 1273
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1399
+    .line 1279
     :goto_0
     return-object p0
 
-    .line 1395
+    .line 1275
     :cond_0
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
-    .line 1396
+    .line 1276
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayDataBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     goto :goto_0
@@ -1765,7 +1724,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -1777,7 +1736,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -1789,7 +1748,7 @@
     .locals 1
 
     .prologue
-    .line 1033
+    .line 938
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -1799,82 +1758,19 @@
     return-object v0
 .end method
 
-.method public final clearGroupOrMemberDeleted()Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
+.method public final clearIsDeleted()Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
     .locals 1
 
     .prologue
-    .line 1171
+    .line 1400
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeletedCase_:I
+    iput-boolean v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->isDeleted_:Z
 
-    .line 1172
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeleted_:Ljava/lang/Object;
-
-    .line 1173
+    .line 1401
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1174
-    return-object p0
-.end method
-
-.method public final clearIsGroupDeleted()Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
-    .locals 2
-
-    .prologue
-    .line 1509
-    iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeletedCase_:I
-
-    const/16 v1, 0xc
-
-    if-ne v0, v1, :cond_0
-
-    .line 1510
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeletedCase_:I
-
-    .line 1511
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeleted_:Ljava/lang/Object;
-
-    .line 1512
-    invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
-
-    .line 1514
-    :cond_0
-    return-object p0
-.end method
-
-.method public final clearIsMemberDeleted()Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
-    .locals 2
-
-    .prologue
-    .line 1539
-    iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeletedCase_:I
-
-    const/16 v1, 0x10
-
-    if-ne v0, v1, :cond_0
-
-    .line 1540
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeletedCase_:I
-
-    .line 1541
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeleted_:Ljava/lang/Object;
-
-    .line 1542
-    invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
-
-    .line 1544
-    :cond_0
+    .line 1402
     return-object p0
 .end method
 
@@ -1882,15 +1778,15 @@
     .locals 1
 
     .prologue
-    .line 1482
+    .line 1362
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->isPublic_:Z
 
-    .line 1483
+    .line 1363
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1484
+    .line 1364
     return-object p0
 .end method
 
@@ -1900,26 +1796,26 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1250
+    .line 1130
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 1251
+    .line 1131
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jid_:Lcom/kik/ximodel/XiGroupJid;
 
-    .line 1252
+    .line 1132
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1258
+    .line 1138
     :goto_0
     return-object p0
 
-    .line 1254
+    .line 1134
     :cond_0
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jid_:Lcom/kik/ximodel/XiGroupJid;
 
-    .line 1255
+    .line 1135
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     goto :goto_0
@@ -1931,26 +1827,26 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1642
+    .line 1500
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdatedBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 1643
+    .line 1501
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdated_:Lcom/google/protobuf/Timestamp;
 
-    .line 1644
+    .line 1502
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1650
+    .line 1508
     :goto_0
     return-object p0
 
-    .line 1646
+    .line 1504
     :cond_0
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdated_:Lcom/google/protobuf/Timestamp;
 
-    .line 1647
+    .line 1505
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdatedBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     goto :goto_0
@@ -1960,33 +1856,33 @@
     .locals 1
 
     .prologue
-    .line 1897
+    .line 1755
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 1898
+    .line 1756
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
 
-    .line 1899
+    .line 1757
     iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
 
-    and-int/lit8 v0, v0, -0x41
+    and-int/lit8 v0, v0, -0x21
 
     iput v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
 
-    .line 1900
+    .line 1758
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1904
+    .line 1762
     :goto_0
     return-object p0
 
-    .line 1902
+    .line 1760
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -1999,7 +1895,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -2011,7 +1907,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -2023,7 +1919,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -2035,7 +1931,7 @@
     .locals 1
 
     .prologue
-    .line 1037
+    .line 942
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -2049,7 +1945,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->clone()Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -2061,7 +1957,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->clone()Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -2073,7 +1969,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->clone()Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -2085,7 +1981,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->clone()Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -2097,7 +1993,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->clone()Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -2109,7 +2005,7 @@
     .locals 1
 
     .prologue
-    .line 1024
+    .line 929
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -2128,7 +2024,7 @@
     .end annotation
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->clone()Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -2140,12 +2036,12 @@
     .locals 1
 
     .prologue
-    .line 2060
+    .line 1918
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 2061
+    .line 1919
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2154,7 +2050,7 @@
 
     check-cast v0, Lcom/kik/groups/GroupsCommon$BannedGroupMember;
 
-    .line 2063
+    .line 1921
     :goto_0
     return-object v0
 
@@ -2174,7 +2070,7 @@
     .locals 1
 
     .prologue
-    .line 2244
+    .line 2102
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->getBannedMembersFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
@@ -2201,7 +2097,7 @@
     .end annotation
 
     .prologue
-    .line 2307
+    .line 2165
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->getBannedMembersFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
@@ -2217,19 +2113,19 @@
     .locals 1
 
     .prologue
-    .line 2046
+    .line 1904
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 2047
+    .line 1905
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 2049
+    .line 1907
     :goto_0
     return v0
 
@@ -2256,19 +2152,19 @@
     .end annotation
 
     .prologue
-    .line 2032
+    .line 1890
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 2033
+    .line 1891
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 2035
+    .line 1893
     :goto_0
     return-object v0
 
@@ -2286,12 +2182,12 @@
     .locals 1
 
     .prologue
-    .line 2255
+    .line 2113
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 2256
+    .line 2114
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2300,7 +2196,7 @@
 
     check-cast v0, Lcom/kik/groups/GroupsCommon$BannedGroupMemberOrBuilder;
 
-    .line 2257
+    .line 2115
     :goto_0
     return-object v0
 
@@ -2329,19 +2225,19 @@
     .end annotation
 
     .prologue
-    .line 2269
+    .line 2127
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-eqz v0, :cond_0
 
-    .line 2270
+    .line 2128
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getMessageOrBuilderList()Ljava/util/List;
 
     move-result-object v0
 
-    .line 2272
+    .line 2130
     :goto_0
     return-object v0
 
@@ -2359,7 +2255,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->getDefaultInstanceForType()Lcom/kik/groups/GroupsCommon$GroupRosterEntry;
 
     move-result-object v0
@@ -2371,7 +2267,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->getDefaultInstanceForType()Lcom/kik/groups/GroupsCommon$GroupRosterEntry;
 
     move-result-object v0
@@ -2383,7 +2279,7 @@
     .locals 1
 
     .prologue
-    .line 962
+    .line 873
     invoke-static {}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->getDefaultInstance()Lcom/kik/groups/GroupsCommon$GroupRosterEntry;
 
     move-result-object v0
@@ -2395,7 +2291,7 @@
     .locals 1
 
     .prologue
-    .line 958
+    .line 869
     invoke-static {}, Lcom/kik/groups/GroupsCommon;->access$000()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
@@ -2407,12 +2303,12 @@
     .locals 1
 
     .prologue
-    .line 1317
+    .line 1197
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayDataBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 1318
+    .line 1198
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
     if-nez v0, :cond_0
@@ -2421,17 +2317,17 @@
 
     move-result-object v0
 
-    .line 1320
+    .line 1200
     :goto_0
     return-object v0
 
-    .line 1318
+    .line 1198
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
     goto :goto_0
 
-    .line 1320
+    .line 1200
     :cond_1
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayDataBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
@@ -2448,10 +2344,10 @@
     .locals 1
 
     .prologue
-    .line 1410
+    .line 1290
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1411
+    .line 1291
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->getDisplayDataFieldBuilder()Lcom/google/protobuf/SingleFieldBuilderV3;
 
     move-result-object v0
@@ -2469,12 +2365,12 @@
     .locals 1
 
     .prologue
-    .line 1421
+    .line 1301
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayDataBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-eqz v0, :cond_0
 
-    .line 1422
+    .line 1302
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayDataBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/SingleFieldBuilderV3;->getMessageOrBuilder()Lcom/google/protobuf/MessageOrBuilder;
@@ -2483,17 +2379,17 @@
 
     check-cast v0, Lcom/kik/groups/GroupsCommon$GroupDisplayDataOrBuilder;
 
-    .line 1425
+    .line 1305
     :goto_0
     return-object v0
 
-    .line 1424
+    .line 1304
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
     if-nez v0, :cond_1
 
-    .line 1425
+    .line 1305
     invoke-static {}, Lcom/kik/groups/GroupsCommon$GroupDisplayData;->getDefaultInstance()Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
     move-result-object v0
@@ -2506,85 +2402,21 @@
     goto :goto_0
 .end method
 
-.method public final getGroupOrMemberDeletedCase()Lcom/kik/groups/GroupsCommon$GroupRosterEntry$GroupOrMemberDeletedCase;
+.method public final getIsDeleted()Z
     .locals 1
 
     .prologue
-    .line 1166
-    iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeletedCase_:I
+    .line 1376
+    iget-boolean v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->isDeleted_:Z
 
-    invoke-static {v0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$GroupOrMemberDeletedCase;->forNumber(I)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$GroupOrMemberDeletedCase;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getIsGroupDeleted()Z
-    .locals 2
-
-    .prologue
-    .line 1491
-    iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeletedCase_:I
-
-    const/16 v1, 0xc
-
-    if-ne v0, v1, :cond_0
-
-    .line 1492
-    iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeleted_:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    .line 1494
-    :goto_0
     return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final getIsMemberDeleted()Z
-    .locals 2
-
-    .prologue
-    .line 1521
-    iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeletedCase_:I
-
-    const/16 v1, 0x10
-
-    if-ne v0, v1, :cond_0
-
-    .line 1522
-    iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeleted_:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    .line 1524
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method
 
 .method public final getIsPublic()Z
     .locals 1
 
     .prologue
-    .line 1458
+    .line 1338
     iget-boolean v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->isPublic_:Z
 
     return v0
@@ -2594,12 +2426,12 @@
     .locals 1
 
     .prologue
-    .line 1192
+    .line 1072
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 1193
+    .line 1073
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jid_:Lcom/kik/ximodel/XiGroupJid;
 
     if-nez v0, :cond_0
@@ -2608,17 +2440,17 @@
 
     move-result-object v0
 
-    .line 1195
+    .line 1075
     :goto_0
     return-object v0
 
-    .line 1193
+    .line 1073
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jid_:Lcom/kik/ximodel/XiGroupJid;
 
     goto :goto_0
 
-    .line 1195
+    .line 1075
     :cond_1
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
@@ -2635,10 +2467,10 @@
     .locals 1
 
     .prologue
-    .line 1265
+    .line 1145
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1266
+    .line 1146
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->getJidFieldBuilder()Lcom/google/protobuf/SingleFieldBuilderV3;
 
     move-result-object v0
@@ -2656,12 +2488,12 @@
     .locals 1
 
     .prologue
-    .line 1272
+    .line 1152
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-eqz v0, :cond_0
 
-    .line 1273
+    .line 1153
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/SingleFieldBuilderV3;->getMessageOrBuilder()Lcom/google/protobuf/MessageOrBuilder;
@@ -2670,17 +2502,17 @@
 
     check-cast v0, Lcom/kik/ximodel/XiGroupJidOrBuilder;
 
-    .line 1276
+    .line 1156
     :goto_0
     return-object v0
 
-    .line 1275
+    .line 1155
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jid_:Lcom/kik/ximodel/XiGroupJid;
 
     if-nez v0, :cond_1
 
-    .line 1276
+    .line 1156
     invoke-static {}, Lcom/kik/ximodel/XiGroupJid;->getDefaultInstance()Lcom/kik/ximodel/XiGroupJid;
 
     move-result-object v0
@@ -2697,12 +2529,12 @@
     .locals 1
 
     .prologue
-    .line 1568
+    .line 1426
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdatedBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 1569
+    .line 1427
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdated_:Lcom/google/protobuf/Timestamp;
 
     if-nez v0, :cond_0
@@ -2711,17 +2543,17 @@
 
     move-result-object v0
 
-    .line 1571
+    .line 1429
     :goto_0
     return-object v0
 
-    .line 1569
+    .line 1427
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdated_:Lcom/google/protobuf/Timestamp;
 
     goto :goto_0
 
-    .line 1571
+    .line 1429
     :cond_1
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdatedBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
@@ -2738,10 +2570,10 @@
     .locals 1
 
     .prologue
-    .line 1661
+    .line 1519
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1662
+    .line 1520
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->getLastUpdatedFieldBuilder()Lcom/google/protobuf/SingleFieldBuilderV3;
 
     move-result-object v0
@@ -2759,12 +2591,12 @@
     .locals 1
 
     .prologue
-    .line 1672
+    .line 1530
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdatedBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-eqz v0, :cond_0
 
-    .line 1673
+    .line 1531
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdatedBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/SingleFieldBuilderV3;->getMessageOrBuilder()Lcom/google/protobuf/MessageOrBuilder;
@@ -2773,17 +2605,17 @@
 
     check-cast v0, Lcom/google/protobuf/TimestampOrBuilder;
 
-    .line 1676
+    .line 1534
     :goto_0
     return-object v0
 
-    .line 1675
+    .line 1533
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdated_:Lcom/google/protobuf/Timestamp;
 
     if-nez v0, :cond_1
 
-    .line 1676
+    .line 1534
     invoke-static {}, Lcom/google/protobuf/Timestamp;->getDefaultInstance()Lcom/google/protobuf/Timestamp;
 
     move-result-object v0
@@ -2800,12 +2632,12 @@
     .locals 1
 
     .prologue
-    .line 1748
+    .line 1606
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 1749
+    .line 1607
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2814,7 +2646,7 @@
 
     check-cast v0, Lcom/kik/groups/GroupsCommon$GroupMember;
 
-    .line 1751
+    .line 1609
     :goto_0
     return-object v0
 
@@ -2834,7 +2666,7 @@
     .locals 1
 
     .prologue
-    .line 1932
+    .line 1790
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->getMembersFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
@@ -2861,7 +2693,7 @@
     .end annotation
 
     .prologue
-    .line 1995
+    .line 1853
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->getMembersFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
@@ -2877,19 +2709,19 @@
     .locals 1
 
     .prologue
-    .line 1734
+    .line 1592
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 1735
+    .line 1593
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 1737
+    .line 1595
     :goto_0
     return v0
 
@@ -2916,19 +2748,19 @@
     .end annotation
 
     .prologue
-    .line 1720
+    .line 1578
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 1721
+    .line 1579
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 1723
+    .line 1581
     :goto_0
     return-object v0
 
@@ -2946,12 +2778,12 @@
     .locals 1
 
     .prologue
-    .line 1943
+    .line 1801
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 1944
+    .line 1802
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2960,7 +2792,7 @@
 
     check-cast v0, Lcom/kik/groups/GroupsCommon$GroupMemberOrBuilder;
 
-    .line 1945
+    .line 1803
     :goto_0
     return-object v0
 
@@ -2989,19 +2821,19 @@
     .end annotation
 
     .prologue
-    .line 1957
+    .line 1815
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-eqz v0, :cond_0
 
-    .line 1958
+    .line 1816
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getMessageOrBuilderList()Ljava/util/List;
 
     move-result-object v0
 
-    .line 1960
+    .line 1818
     :goto_0
     return-object v0
 
@@ -3019,7 +2851,7 @@
     .locals 1
 
     .prologue
-    .line 1307
+    .line 1187
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayDataBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_0
@@ -3044,7 +2876,7 @@
     .locals 1
 
     .prologue
-    .line 1186
+    .line 1066
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_0
@@ -3069,7 +2901,7 @@
     .locals 1
 
     .prologue
-    .line 1558
+    .line 1416
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdatedBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_0
@@ -3094,7 +2926,7 @@
     .locals 3
 
     .prologue
-    .line 895
+    .line 806
     invoke-static {}, Lcom/kik/groups/GroupsCommon;->access$100()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -3103,12 +2935,12 @@
 
     const-class v2, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
-    .line 896
+    .line 807
     invoke-virtual {v0, v1, v2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;->ensureFieldAccessorsInitialized(Ljava/lang/Class;Ljava/lang/Class;)Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
 
-    .line 895
+    .line 806
     return-object v0
 .end method
 
@@ -3116,7 +2948,7 @@
     .locals 1
 
     .prologue
-    .line 1142
+    .line 1037
     const/4 v0, 0x1
 
     return v0
@@ -3126,20 +2958,20 @@
     .locals 1
 
     .prologue
-    .line 1369
+    .line 1249
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayDataBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 1370
+    .line 1250
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
     if-eqz v0, :cond_0
 
-    .line 1371
+    .line 1251
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
-    .line 1372
+    .line 1252
     invoke-static {v0}, Lcom/kik/groups/GroupsCommon$GroupDisplayData;->newBuilder(Lcom/kik/groups/GroupsCommon$GroupDisplayData;)Lcom/kik/groups/GroupsCommon$GroupDisplayData$Builder;
 
     move-result-object v0
@@ -3154,21 +2986,21 @@
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
-    .line 1376
+    .line 1256
     :goto_0
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1381
+    .line 1261
     :goto_1
     return-object p0
 
-    .line 1374
+    .line 1254
     :cond_0
     iput-object p1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
     goto :goto_0
 
-    .line 1378
+    .line 1258
     :cond_1
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayDataBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
@@ -3186,7 +3018,7 @@
     .end annotation
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0, p1, p2}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -3198,7 +3030,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -3215,7 +3047,7 @@
     .end annotation
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0, p1, p2}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -3232,7 +3064,7 @@
     .end annotation
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0, p1, p2}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -3244,7 +3076,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -3261,7 +3093,7 @@
     .end annotation
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0, p1, p2}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -3278,12 +3110,12 @@
     .end annotation
 
     .prologue
-    .line 1149
+    .line 1044
     const/4 v2, 0x0
 
-    .line 1151
+    .line 1046
     :try_start_0
-    invoke-static {}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$1700()Lcom/google/protobuf/Parser;
+    invoke-static {}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$1600()Lcom/google/protobuf/Parser;
 
     move-result-object v0
 
@@ -3296,23 +3128,23 @@
     .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 1156
+    .line 1051
     if-eqz v0, :cond_0
 
-    .line 1157
+    .line 1052
     invoke-virtual {p0, v0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->mergeFrom(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
-    .line 1160
+    .line 1055
     :cond_0
     return-object p0
 
-    .line 1152
+    .line 1047
     :catch_0
     move-exception v0
 
     move-object v1, v0
 
-    .line 1153
+    .line 1048
     :try_start_1
     invoke-virtual {v1}, Lcom/google/protobuf/InvalidProtocolBufferException;->getUnfinishedMessage()Lcom/google/protobuf/MessageLite;
 
@@ -3322,7 +3154,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1154
+    .line 1049
     :try_start_2
     invoke-virtual {v1}, Lcom/google/protobuf/InvalidProtocolBufferException;->unwrapIOException()Ljava/io/IOException;
 
@@ -3332,7 +3164,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1156
+    .line 1051
     :catchall_0
     move-exception v1
 
@@ -3345,14 +3177,13 @@
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 1157
+    .line 1052
     invoke-virtual {p0, v1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->mergeFrom(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
-    .line 1159
     :cond_1
     throw v0
 
-    .line 1156
+    .line 1051
     :catchall_1
     move-exception v0
 
@@ -3365,23 +3196,23 @@
     .locals 1
 
     .prologue
-    .line 1050
+    .line 955
     instance-of v0, p1, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;
 
     if-eqz v0, :cond_0
 
-    .line 1051
+    .line 956
     check-cast p1, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;
 
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->mergeFrom(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object p0
 
-    .line 1054
+    .line 959
     :goto_0
     return-object p0
 
-    .line 1053
+    .line 958
     :cond_0
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/AbstractMessage$Builder;
 
@@ -3394,18 +3225,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1059
+    .line 964
     invoke-static {}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->getDefaultInstance()Lcom/kik/groups/GroupsCommon$GroupRosterEntry;
 
     move-result-object v0
 
     if-ne p1, v0, :cond_0
 
-    .line 1138
+    .line 1033
     :goto_0
     return-object p0
 
-    .line 1060
+    .line 965
     :cond_0
     invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->hasJid()Z
 
@@ -3413,14 +3244,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 1061
+    .line 966
     invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->getJid()Lcom/kik/ximodel/XiGroupJid;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->mergeJid(Lcom/kik/ximodel/XiGroupJid;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
-    .line 1063
+    .line 968
     :cond_1
     invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->hasDisplayData()Z
 
@@ -3428,14 +3259,14 @@
 
     if-eqz v0, :cond_2
 
-    .line 1064
+    .line 969
     invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->getDisplayData()Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->mergeDisplayData(Lcom/kik/groups/GroupsCommon$GroupDisplayData;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
-    .line 1066
+    .line 971
     :cond_2
     invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->getIsPublic()Z
 
@@ -3443,81 +3274,51 @@
 
     if-eqz v0, :cond_3
 
-    .line 1067
+    .line 972
     invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->getIsPublic()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->setIsPublic(Z)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
-    .line 1069
+    .line 974
     :cond_3
-    invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->hasLastUpdated()Z
+    invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->getIsDeleted()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 1070
+    .line 975
+    invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->getIsDeleted()Z
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->setIsDeleted(Z)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
+
+    .line 977
+    :cond_4
+    invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->hasLastUpdated()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    .line 978
     invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->getLastUpdated()Lcom/google/protobuf/Timestamp;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->mergeLastUpdated(Lcom/google/protobuf/Timestamp;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
-    .line 1072
-    :cond_4
+    .line 980
+    :cond_5
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    if-nez v0, :cond_8
+    if-nez v0, :cond_9
 
-    .line 1073
+    .line 981
     invoke-static {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$1100(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    .line 1074
-    iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_7
-
-    .line 1075
-    invoke-static {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$1100(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;)Ljava/util/List;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
-
-    .line 1076
-    iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
-
-    and-int/lit8 v0, v0, -0x41
-
-    iput v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
-
-    .line 1081
-    :goto_1
-    invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
-
-    .line 1098
-    :cond_5
-    :goto_2
-    iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
-
-    if-nez v0, :cond_c
-
-    .line 1099
-    invoke-static {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$1200(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;)Ljava/util/List;
 
     move-result-object v0
 
@@ -3527,61 +3328,90 @@
 
     if-nez v0, :cond_6
 
-    .line 1100
+    .line 982
+    iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
+    .line 983
+    invoke-static {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$1100(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;)Ljava/util/List;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
+
+    .line 984
+    iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
+
+    and-int/lit8 v0, v0, -0x21
+
+    iput v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
+
+    .line 989
+    :goto_1
+    invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
+
+    .line 1006
+    :cond_6
+    :goto_2
+    iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
+
+    if-nez v0, :cond_d
+
+    .line 1007
+    invoke-static {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$1200(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    .line 1008
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_c
 
-    .line 1101
+    .line 1009
     invoke-static {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$1200(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
 
-    .line 1102
+    .line 1010
     iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
 
-    and-int/lit16 v0, v0, -0x81
+    and-int/lit8 v0, v0, -0x41
 
     iput v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
 
-    .line 1107
+    .line 1015
     :goto_3
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1124
-    :cond_6
+    .line 1032
+    :cond_7
     :goto_4
-    sget-object v0, Lcom/kik/groups/GroupsCommon$2;->$SwitchMap$com$kik$groups$GroupsCommon$GroupRosterEntry$GroupOrMemberDeletedCase:[I
-
-    invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->getGroupOrMemberDeletedCase()Lcom/kik/groups/GroupsCommon$GroupRosterEntry$GroupOrMemberDeletedCase;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$GroupOrMemberDeletedCase;->ordinal()I
-
-    move-result v1
-
-    aget v0, v0, v1
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 1137
-    :goto_5
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
     goto/16 :goto_0
 
-    .line 1078
-    :cond_7
+    .line 986
+    :cond_8
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->ensureMembersIsMutable()V
 
-    .line 1079
+    .line 987
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
 
     invoke-static {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$1100(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;)Ljava/util/List;
@@ -3592,8 +3422,8 @@
 
     goto :goto_1
 
-    .line 1084
-    :cond_8
+    .line 992
+    :cond_9
     invoke-static {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$1100(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;)Ljava/util/List;
 
     move-result-object v0
@@ -3602,63 +3432,63 @@
 
     move-result v0
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_6
 
-    .line 1085
+    .line 993
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->isEmpty()Z
 
     move-result v0
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_b
 
-    .line 1086
+    .line 994
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->dispose()V
 
-    .line 1087
+    .line 995
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    .line 1088
+    .line 996
     invoke-static {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$1100(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
 
-    .line 1089
+    .line 997
     iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
 
-    and-int/lit8 v0, v0, -0x41
+    and-int/lit8 v0, v0, -0x21
 
     iput v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
 
-    .line 1091
-    invoke-static {}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$1500()Z
+    .line 999
+    invoke-static {}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$1400()Z
 
     move-result v0
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_a
 
-    .line 1092
+    .line 1000
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->getMembersFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
 
-    :goto_6
+    :goto_5
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     goto :goto_2
 
-    :cond_9
+    :cond_a
     move-object v0, v1
 
-    goto :goto_6
+    goto :goto_5
 
-    .line 1094
-    :cond_a
+    .line 1002
+    :cond_b
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     invoke-static {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$1100(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;)Ljava/util/List;
@@ -3667,13 +3497,13 @@
 
     invoke-virtual {v0, v2}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addAllMessages(Ljava/lang/Iterable;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    goto/16 :goto_2
+    goto :goto_2
 
-    .line 1104
-    :cond_b
+    .line 1012
+    :cond_c
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->ensureBannedMembersIsMutable()V
 
-    .line 1105
+    .line 1013
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
 
     invoke-static {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$1200(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;)Ljava/util/List;
@@ -3684,8 +3514,8 @@
 
     goto :goto_3
 
-    .line 1110
-    :cond_c
+    .line 1018
+    :cond_d
     invoke-static {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$1200(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;)Ljava/util/List;
 
     move-result-object v0
@@ -3694,58 +3524,58 @@
 
     move-result v0
 
-    if-nez v0, :cond_6
+    if-nez v0, :cond_7
 
-    .line 1111
+    .line 1019
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->isEmpty()Z
 
     move-result v0
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_f
 
-    .line 1112
+    .line 1020
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->dispose()V
 
-    .line 1113
+    .line 1021
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    .line 1114
+    .line 1022
     invoke-static {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$1200(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
 
-    .line 1115
+    .line 1023
     iget v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
 
-    and-int/lit16 v0, v0, -0x81
+    and-int/lit8 v0, v0, -0x41
 
     iput v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bitField0_:I
 
-    .line 1117
-    invoke-static {}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$1600()Z
+    .line 1025
+    invoke-static {}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$1500()Z
 
     move-result v0
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
-    .line 1118
+    .line 1026
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->getBannedMembersFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v1
 
-    :cond_d
+    :cond_e
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     goto/16 :goto_4
 
-    .line 1120
-    :cond_e
+    .line 1028
+    :cond_f
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     invoke-static {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->access$1200(Lcom/kik/groups/GroupsCommon$GroupRosterEntry;)Ljava/util/List;
@@ -3755,55 +3585,26 @@
     invoke-virtual {v0, v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addAllMessages(Ljava/lang/Iterable;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     goto/16 :goto_4
-
-    .line 1126
-    :pswitch_0
-    invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->getIsGroupDeleted()Z
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->setIsGroupDeleted(Z)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
-
-    goto/16 :goto_5
-
-    .line 1130
-    :pswitch_1
-    invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry;->getIsMemberDeleted()Z
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->setIsMemberDeleted(Z)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
-
-    goto/16 :goto_5
-
-    .line 1124
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
 .end method
 
 .method public final mergeJid(Lcom/kik/ximodel/XiGroupJid;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
     .locals 1
 
     .prologue
-    .line 1232
+    .line 1112
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 1233
+    .line 1113
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jid_:Lcom/kik/ximodel/XiGroupJid;
 
     if-eqz v0, :cond_0
 
-    .line 1234
+    .line 1114
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jid_:Lcom/kik/ximodel/XiGroupJid;
 
-    .line 1235
+    .line 1115
     invoke-static {v0}, Lcom/kik/ximodel/XiGroupJid;->newBuilder(Lcom/kik/ximodel/XiGroupJid;)Lcom/kik/ximodel/XiGroupJid$Builder;
 
     move-result-object v0
@@ -3818,21 +3619,21 @@
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jid_:Lcom/kik/ximodel/XiGroupJid;
 
-    .line 1239
+    .line 1119
     :goto_0
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1244
+    .line 1124
     :goto_1
     return-object p0
 
-    .line 1237
+    .line 1117
     :cond_0
     iput-object p1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jid_:Lcom/kik/ximodel/XiGroupJid;
 
     goto :goto_0
 
-    .line 1241
+    .line 1121
     :cond_1
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
@@ -3845,20 +3646,20 @@
     .locals 1
 
     .prologue
-    .line 1620
+    .line 1478
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdatedBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 1621
+    .line 1479
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdated_:Lcom/google/protobuf/Timestamp;
 
     if-eqz v0, :cond_0
 
-    .line 1622
+    .line 1480
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdated_:Lcom/google/protobuf/Timestamp;
 
-    .line 1623
+    .line 1481
     invoke-static {v0}, Lcom/google/protobuf/Timestamp;->newBuilder(Lcom/google/protobuf/Timestamp;)Lcom/google/protobuf/Timestamp$Builder;
 
     move-result-object v0
@@ -3873,21 +3674,21 @@
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdated_:Lcom/google/protobuf/Timestamp;
 
-    .line 1627
+    .line 1485
     :goto_0
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1632
+    .line 1490
     :goto_1
     return-object p0
 
-    .line 1625
+    .line 1483
     :cond_0
     iput-object p1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdated_:Lcom/google/protobuf/Timestamp;
 
     goto :goto_0
 
-    .line 1629
+    .line 1487
     :cond_1
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdatedBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
@@ -3900,7 +3701,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -3912,7 +3713,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -3924,7 +3725,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -3936,7 +3737,7 @@
     .locals 0
 
     .prologue
-    .line 2330
+    .line 2188
     return-object p0
 .end method
 
@@ -3944,27 +3745,27 @@
     .locals 1
 
     .prologue
-    .line 2226
+    .line 2084
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 2227
+    .line 2085
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->ensureBannedMembersIsMutable()V
 
-    .line 2228
+    .line 2086
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 2229
+    .line 2087
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 2233
+    .line 2091
     :goto_0
     return-object p0
 
-    .line 2231
+    .line 2089
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -3977,27 +3778,27 @@
     .locals 1
 
     .prologue
-    .line 1914
+    .line 1772
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 1915
+    .line 1773
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->ensureMembersIsMutable()V
 
-    .line 1916
+    .line 1774
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 1917
+    .line 1775
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1921
+    .line 1779
     :goto_0
     return-object p0
 
-    .line 1919
+    .line 1777
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -4010,15 +3811,15 @@
     .locals 2
 
     .prologue
-    .line 2096
+    .line 1954
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 2097
+    .line 1955
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->ensureBannedMembersIsMutable()V
 
-    .line 2098
+    .line 1956
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
 
     invoke-virtual {p2}, Lcom/kik/groups/GroupsCommon$BannedGroupMember$Builder;->build()Lcom/kik/groups/GroupsCommon$BannedGroupMember;
@@ -4027,14 +3828,14 @@
 
     invoke-interface {v0, p1, v1}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 2099
+    .line 1957
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 2103
+    .line 1961
     :goto_0
     return-object p0
 
-    .line 2101
+    .line 1959
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -4051,38 +3852,38 @@
     .locals 1
 
     .prologue
-    .line 2075
+    .line 1933
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 2076
+    .line 1934
     if-nez p2, :cond_0
 
-    .line 2077
+    .line 1935
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 2079
+    .line 1937
     :cond_0
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->ensureBannedMembersIsMutable()V
 
-    .line 2080
+    .line 1938
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembers_:Ljava/util/List;
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 2081
+    .line 1939
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 2085
+    .line 1943
     :goto_0
     return-object p0
 
-    .line 2083
+    .line 1941
     :cond_1
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->bannedMembersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -4095,26 +3896,26 @@
     .locals 2
 
     .prologue
-    .line 1352
+    .line 1232
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayDataBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 1353
+    .line 1233
     invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupDisplayData$Builder;->build()Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
-    .line 1354
+    .line 1234
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1359
+    .line 1239
     :goto_0
     return-object p0
 
-    .line 1356
+    .line 1236
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayDataBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
@@ -4131,33 +3932,33 @@
     .locals 1
 
     .prologue
-    .line 1331
+    .line 1211
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayDataBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 1332
+    .line 1212
     if-nez p1, :cond_0
 
-    .line 1333
+    .line 1213
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 1335
+    .line 1215
     :cond_0
     iput-object p1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayData_:Lcom/kik/groups/GroupsCommon$GroupDisplayData;
 
-    .line 1336
+    .line 1216
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1341
+    .line 1221
     :goto_0
     return-object p0
 
-    .line 1338
+    .line 1218
     :cond_1
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->displayDataBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
@@ -4170,7 +3971,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0, p1, p2}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -4182,7 +3983,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0, p1, p2}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -4194,7 +3995,7 @@
     .locals 1
 
     .prologue
-    .line 1029
+    .line 934
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -4204,49 +4005,17 @@
     return-object v0
 .end method
 
-.method public final setIsGroupDeleted(Z)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
-    .locals 1
+.method public final setIsDeleted(Z)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
+    .locals 0
 
     .prologue
-    .line 1500
-    const/16 v0, 0xc
+    .line 1387
+    iput-boolean p1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->isDeleted_:Z
 
-    iput v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeletedCase_:I
-
-    .line 1501
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeleted_:Ljava/lang/Object;
-
-    .line 1502
+    .line 1388
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1503
-    return-object p0
-.end method
-
-.method public final setIsMemberDeleted(Z)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
-    .locals 1
-
-    .prologue
-    .line 1530
-    const/16 v0, 0x10
-
-    iput v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeletedCase_:I
-
-    .line 1531
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->groupOrMemberDeleted_:Ljava/lang/Object;
-
-    .line 1532
-    invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
-
-    .line 1533
+    .line 1389
     return-object p0
 .end method
 
@@ -4254,13 +4023,13 @@
     .locals 0
 
     .prologue
-    .line 1469
+    .line 1349
     iput-boolean p1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->isPublic_:Z
 
-    .line 1470
+    .line 1350
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1471
+    .line 1351
     return-object p0
 .end method
 
@@ -4268,26 +4037,26 @@
     .locals 2
 
     .prologue
-    .line 1219
+    .line 1099
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 1220
+    .line 1100
     invoke-virtual {p1}, Lcom/kik/ximodel/XiGroupJid$Builder;->build()Lcom/kik/ximodel/XiGroupJid;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jid_:Lcom/kik/ximodel/XiGroupJid;
 
-    .line 1221
+    .line 1101
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1226
+    .line 1106
     :goto_0
     return-object p0
 
-    .line 1223
+    .line 1103
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
@@ -4304,33 +4073,33 @@
     .locals 1
 
     .prologue
-    .line 1202
+    .line 1082
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 1203
+    .line 1083
     if-nez p1, :cond_0
 
-    .line 1204
+    .line 1084
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 1206
+    .line 1086
     :cond_0
     iput-object p1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jid_:Lcom/kik/ximodel/XiGroupJid;
 
-    .line 1207
+    .line 1087
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1212
+    .line 1092
     :goto_0
     return-object p0
 
-    .line 1209
+    .line 1089
     :cond_1
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
@@ -4343,26 +4112,26 @@
     .locals 2
 
     .prologue
-    .line 1603
+    .line 1461
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdatedBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 1604
+    .line 1462
     invoke-virtual {p1}, Lcom/google/protobuf/Timestamp$Builder;->build()Lcom/google/protobuf/Timestamp;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdated_:Lcom/google/protobuf/Timestamp;
 
-    .line 1605
+    .line 1463
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1610
+    .line 1468
     :goto_0
     return-object p0
 
-    .line 1607
+    .line 1465
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdatedBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
@@ -4379,33 +4148,33 @@
     .locals 1
 
     .prologue
-    .line 1582
+    .line 1440
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdatedBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 1583
+    .line 1441
     if-nez p1, :cond_0
 
-    .line 1584
+    .line 1442
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 1586
+    .line 1444
     :cond_0
     iput-object p1, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdated_:Lcom/google/protobuf/Timestamp;
 
-    .line 1587
+    .line 1445
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1592
+    .line 1450
     :goto_0
     return-object p0
 
-    .line 1589
+    .line 1447
     :cond_1
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->lastUpdatedBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
@@ -4418,15 +4187,15 @@
     .locals 2
 
     .prologue
-    .line 1784
+    .line 1642
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 1785
+    .line 1643
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->ensureMembersIsMutable()V
 
-    .line 1786
+    .line 1644
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
 
     invoke-virtual {p2}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->build()Lcom/kik/groups/GroupsCommon$GroupMember;
@@ -4435,14 +4204,14 @@
 
     invoke-interface {v0, p1, v1}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 1787
+    .line 1645
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1791
+    .line 1649
     :goto_0
     return-object p0
 
-    .line 1789
+    .line 1647
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -4459,38 +4228,38 @@
     .locals 1
 
     .prologue
-    .line 1763
+    .line 1621
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 1764
+    .line 1622
     if-nez p2, :cond_0
 
-    .line 1765
+    .line 1623
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 1767
+    .line 1625
     :cond_0
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->ensureMembersIsMutable()V
 
-    .line 1768
+    .line 1626
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->members_:Ljava/util/List;
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 1769
+    .line 1627
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->onChanged()V
 
-    .line 1773
+    .line 1631
     :goto_0
     return-object p0
 
-    .line 1771
+    .line 1629
     :cond_1
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->membersBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -4503,7 +4272,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0, p1, p2, p3}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -4515,7 +4284,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0, p1, p2, p3}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -4527,7 +4296,7 @@
     .locals 1
 
     .prologue
-    .line 1042
+    .line 947
     invoke-super {p0, p1, p2, p3}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -4541,7 +4310,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -4553,7 +4322,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 795
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;->setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/kik/groups/GroupsCommon$GroupRosterEntry$Builder;
 
     move-result-object v0
@@ -4565,6 +4334,6 @@
     .locals 0
 
     .prologue
-    .line 2325
+    .line 2183
     return-object p0
 .end method

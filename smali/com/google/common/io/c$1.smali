@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 595
+    .line 502
     invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
     return-void
@@ -31,7 +31,7 @@
     .locals 1
 
     .prologue
-    .line 614
+    .line 517
     const-string v0, "ByteStreams.nullOutputStream()"
 
     return-object v0
@@ -41,7 +41,7 @@
     .locals 0
 
     .prologue
-    .line 598
+    .line 505
     return-void
 .end method
 
@@ -49,10 +49,10 @@
     .locals 0
 
     .prologue
-    .line 603
-    invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 508
+    invoke-static {p1}, Lcom/google/common/base/h;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 604
+    .line 509
     return-void
 .end method
 
@@ -60,9 +60,9 @@
     .locals 0
 
     .prologue
-    .line 609
-    invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 512
+    invoke-static {p1}, Lcom/google/common/base/h;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 610
+    .line 513
     return-void
 .end method

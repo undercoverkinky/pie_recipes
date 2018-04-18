@@ -21,7 +21,7 @@
 
 .field public static final EXTRA_CALLING_PACKAGE:Ljava/lang/String; = "android.support.v4.app.EXTRA_CALLING_PACKAGE"
 
-.field static IMPL:Landroid/support/v4/app/ShareCompat$ShareCompatImpl;
+.field private static IMPL:Landroid/support/v4/app/ShareCompat$ShareCompatImpl;
 
 
 # direct methods
@@ -29,25 +29,25 @@
     .locals 2
 
     .prologue
-    .line 156
+    .line 152
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x10
 
     if-lt v0, v1, :cond_0
 
-    .line 157
+    .line 153
     new-instance v0, Landroid/support/v4/app/ShareCompat$ShareCompatImplJB;
 
     invoke-direct {v0}, Landroid/support/v4/app/ShareCompat$ShareCompatImplJB;-><init>()V
 
     sput-object v0, Landroid/support/v4/app/ShareCompat;->IMPL:Landroid/support/v4/app/ShareCompat$ShareCompatImpl;
 
-    .line 163
+    .line 159
     :goto_0
     return-void
 
-    .line 158
+    .line 154
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -55,7 +55,7 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 159
+    .line 155
     new-instance v0, Landroid/support/v4/app/ShareCompat$ShareCompatImplICS;
 
     invoke-direct {v0}, Landroid/support/v4/app/ShareCompat$ShareCompatImplICS;-><init>()V
@@ -64,7 +64,7 @@
 
     goto :goto_0
 
-    .line 161
+    .line 157
     :cond_1
     new-instance v0, Landroid/support/v4/app/ShareCompat$ShareCompatImplBase;
 
@@ -79,25 +79,35 @@
     .locals 0
 
     .prologue
-    .line 165
+    .line 161
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+.method static synthetic access$000()Landroid/support/v4/app/ShareCompat$ShareCompatImpl;
+    .locals 1
+
+    .prologue
+    .line 59
+    sget-object v0, Landroid/support/v4/app/ShareCompat;->IMPL:Landroid/support/v4/app/ShareCompat$ShareCompatImpl;
+
+    return-object v0
 .end method
 
 .method public static configureMenuItem(Landroid/view/Menu;ILandroid/support/v4/app/ShareCompat$IntentBuilder;)V
     .locals 3
 
     .prologue
-    .line 251
+    .line 247
     invoke-interface {p0, p1}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
     move-result-object v0
 
-    .line 252
+    .line 248
     if-nez v0, :cond_0
 
-    .line 253
+    .line 249
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -124,11 +134,11 @@
 
     throw v0
 
-    .line 256
+    .line 252
     :cond_0
     invoke-static {v0, p2}, Landroid/support/v4/app/ShareCompat;->configureMenuItem(Landroid/view/MenuItem;Landroid/support/v4/app/ShareCompat$IntentBuilder;)V
 
-    .line 257
+    .line 253
     return-void
 .end method
 
@@ -136,12 +146,12 @@
     .locals 1
 
     .prologue
-    .line 239
+    .line 235
     sget-object v0, Landroid/support/v4/app/ShareCompat;->IMPL:Landroid/support/v4/app/ShareCompat$ShareCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/app/ShareCompat$ShareCompatImpl;->configureMenuItem(Landroid/view/MenuItem;Landroid/support/v4/app/ShareCompat$IntentBuilder;)V
 
-    .line 240
+    .line 236
     return-void
 .end method
 
@@ -149,15 +159,15 @@
     .locals 2
 
     .prologue
-    .line 200
+    .line 196
     invoke-virtual {p0}, Landroid/app/Activity;->getCallingActivity()Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 201
+    .line 197
     if-nez v0, :cond_0
 
-    .line 202
+    .line 198
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -170,7 +180,7 @@
 
     check-cast v0, Landroid/content/ComponentName;
 
-    .line 204
+    .line 200
     :cond_0
     return-object v0
 .end method
@@ -179,15 +189,15 @@
     .locals 2
 
     .prologue
-    .line 180
+    .line 176
     invoke-virtual {p0}, Landroid/app/Activity;->getCallingPackage()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 181
+    .line 177
     if-nez v0, :cond_0
 
-    .line 182
+    .line 178
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -198,7 +208,7 @@
 
     move-result-object v0
 
-    .line 184
+    .line 180
     :cond_0
     return-object v0
 .end method

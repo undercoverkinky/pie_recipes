@@ -25,16 +25,16 @@
     .locals 0
 
     .prologue
-    .line 180
+    .line 209
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 181
+    .line 210
     iput-object p1, p0, Lkik/android/gifs/b$a;->a:Ljava/lang/String;
 
-    .line 182
+    .line 211
     iput-object p2, p0, Lkik/android/gifs/b$a;->b:Ljava/lang/String;
 
-    .line 183
+    .line 212
     return-void
 .end method
 
@@ -42,7 +42,7 @@
     .locals 0
 
     .prologue
-    .line 174
+    .line 203
     invoke-direct {p0, p1, p2}, Lkik/android/gifs/b$a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -56,17 +56,17 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 188
+    .line 217
     if-eqz p1, :cond_0
 
     instance-of v1, p1, Lkik/android/gifs/b$a;
 
     if-eqz v1, :cond_0
 
-    .line 189
+    .line 218
     check-cast p1, Lkik/android/gifs/b$a;
 
-    .line 190
+    .line 219
     iget-object v1, p0, Lkik/android/gifs/b$a;->a:Ljava/lang/String;
 
     if-eqz v1, :cond_0
@@ -83,7 +83,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 191
+    .line 220
     iget-object v1, p0, Lkik/android/gifs/b$a;->a:Ljava/lang/String;
 
     iget-object v2, p1, Lkik/android/gifs/b$a;->a:Ljava/lang/String;
@@ -106,7 +106,7 @@
 
     const/4 v0, 0x1
 
-    .line 194
+    .line 223
     :cond_0
     return v0
 .end method
@@ -115,7 +115,7 @@
     .locals 2
 
     .prologue
-    .line 200
+    .line 229
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

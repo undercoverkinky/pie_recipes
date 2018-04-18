@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 851
+    .line 795
     iput-object p1, p0, Lkik/android/chat/fragment/ViewPictureFragment$8;->b:Lkik/android/chat/fragment/ViewPictureFragment;
 
     iput-object p2, p0, Lkik/android/chat/fragment/ViewPictureFragment$8;->a:Lkik/core/datatypes/messageExtensions/ContentMessage;
@@ -44,10 +44,10 @@
     .locals 2
 
     .prologue
-    .line 856
+    .line 800
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$8;->b:Lkik/android/chat/fragment/ViewPictureFragment;
 
-    iget-object v0, v0, Lkik/android/chat/fragment/ViewPictureFragment;->j:Lcom/kik/storage/s;
+    iget-object v0, v0, Lkik/android/chat/fragment/ViewPictureFragment;->j:Lcom/kik/e/p;
 
     iget-object v1, p0, Lkik/android/chat/fragment/ViewPictureFragment$8;->a:Lkik/core/datatypes/messageExtensions/ContentMessage;
 
@@ -55,14 +55,14 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/kik/storage/s;->e(Ljava/lang/String;)Z
+    invoke-interface {v0, v1}, Lcom/kik/e/p;->e(Ljava/lang/String;)Z
 
-    .line 857
+    .line 801
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$8;->b:Lkik/android/chat/fragment/ViewPictureFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/ViewPictureFragment;->h(Lkik/android/chat/fragment/ViewPictureFragment;)V
 
-    .line 858
+    .line 802
     const/4 v0, 0x0
 
     return v0

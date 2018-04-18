@@ -42,8 +42,6 @@
 
 
 # instance fields
-.field automaticFullscreenEnable:Ljava/lang/Boolean;
-
 .field bubbleColor:Lcom/kik/xdata/model/userpreferences/XUserPreferences$XBubbleColor;
 
 .field enterKeySend:Ljava/lang/Boolean;
@@ -61,7 +59,7 @@
 
     sput-object v0, Lcom/kik/xdata/model/userpreferences/XUserPreferences;->a:Lcom/kik/xdata/model/userpreferences/XUserPreferences;
 
-    .line 194
+    .line 180
     new-instance v0, Lcom/kik/xdata/model/userpreferences/XUserPreferences$1;
 
     invoke-direct {v0}, Lcom/kik/xdata/model/userpreferences/XUserPreferences$1;-><init>()V
@@ -75,23 +73,42 @@
     .locals 0
 
     .prologue
-    .line 130
+    .line 129
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 132
+    .line 131
     return-void
 .end method
 
 
 # virtual methods
+.method public final a()Lcom/dyuproject/protostuff/u;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/dyuproject/protostuff/u",
+            "<",
+            "Lcom/kik/xdata/model/userpreferences/XUserPreferences;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 177
+    sget-object v0, Lcom/kik/xdata/model/userpreferences/XUserPreferences;->b:Lcom/dyuproject/protostuff/u;
+
+    return-object v0
+.end method
+
 .method public final a(Lcom/kik/xdata/model/userpreferences/XUserPreferences$XBubbleColor;)Lcom/kik/xdata/model/userpreferences/XUserPreferences;
     .locals 0
 
     .prologue
-    .line 158
+    .line 157
     iput-object p1, p0, Lcom/kik/xdata/model/userpreferences/XUserPreferences;->bubbleColor:Lcom/kik/xdata/model/userpreferences/XUserPreferences$XBubbleColor;
 
-    .line 159
+    .line 158
     return-object p0
 .end method
 
@@ -99,28 +116,28 @@
     .locals 0
 
     .prologue
-    .line 145
+    .line 144
     iput-object p1, p0, Lcom/kik/xdata/model/userpreferences/XUserPreferences;->enterKeySend:Ljava/lang/Boolean;
 
-    .line 146
+    .line 145
     return-object p0
 .end method
 
-.method public final a()Ljava/lang/Boolean;
+.method public final b()Ljava/lang/Boolean;
     .locals 1
 
     .prologue
-    .line 140
+    .line 139
     iget-object v0, p0, Lcom/kik/xdata/model/userpreferences/XUserPreferences;->enterKeySend:Ljava/lang/Boolean;
 
     return-object v0
 .end method
 
-.method public final b()Lcom/kik/xdata/model/userpreferences/XUserPreferences$XBubbleColor;
+.method public final c()Lcom/kik/xdata/model/userpreferences/XUserPreferences$XBubbleColor;
     .locals 1
 
     .prologue
-    .line 153
+    .line 152
     iget-object v0, p0, Lcom/kik/xdata/model/userpreferences/XUserPreferences;->bubbleColor:Lcom/kik/xdata/model/userpreferences/XUserPreferences$XBubbleColor;
 
     if-nez v0, :cond_0
@@ -136,46 +153,6 @@
     goto :goto_0
 .end method
 
-.method public final b(Ljava/lang/Boolean;)Lcom/kik/xdata/model/userpreferences/XUserPreferences;
-    .locals 0
-
-    .prologue
-    .line 171
-    iput-object p1, p0, Lcom/kik/xdata/model/userpreferences/XUserPreferences;->automaticFullscreenEnable:Ljava/lang/Boolean;
-
-    .line 172
-    return-object p0
-.end method
-
-.method public final c()Ljava/lang/Boolean;
-    .locals 1
-
-    .prologue
-    .line 166
-    iget-object v0, p0, Lcom/kik/xdata/model/userpreferences/XUserPreferences;->automaticFullscreenEnable:Ljava/lang/Boolean;
-
-    return-object v0
-.end method
-
-.method public final cachedSchema()Lcom/dyuproject/protostuff/u;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/dyuproject/protostuff/u",
-            "<",
-            "Lcom/kik/xdata/model/userpreferences/XUserPreferences;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 191
-    sget-object v0, Lcom/kik/xdata/model/userpreferences/XUserPreferences;->b:Lcom/dyuproject/protostuff/u;
-
-    return-object v0
-.end method
-
 .method public final readExternal(Ljava/io/ObjectInput;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
@@ -185,12 +162,12 @@
     .end annotation
 
     .prologue
-    .line 179
+    .line 165
     sget-object v0, Lcom/kik/xdata/model/userpreferences/XUserPreferences;->b:Lcom/dyuproject/protostuff/u;
 
     invoke-static {p1, p0, v0}, Lcom/dyuproject/protostuff/i;->a(Ljava/io/DataInput;Ljava/lang/Object;Lcom/dyuproject/protostuff/u;)V
 
-    .line 180
+    .line 166
     return-void
 .end method
 
@@ -203,11 +180,11 @@
     .end annotation
 
     .prologue
-    .line 184
+    .line 170
     sget-object v0, Lcom/kik/xdata/model/userpreferences/XUserPreferences;->b:Lcom/dyuproject/protostuff/u;
 
     invoke-static {p1, p0, v0}, Lcom/dyuproject/protostuff/i;->a(Ljava/io/DataOutput;Ljava/lang/Object;Lcom/dyuproject/protostuff/u;)I
 
-    .line 185
+    .line 171
     return-void
 .end method

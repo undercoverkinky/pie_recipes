@@ -8,7 +8,7 @@
 
 
 # annotations
-.annotation build Landroid/support/annotation/Keep;
+.annotation build Lcom/google/android/gms/common/annotation/KeepName;
 .end annotation
 
 
@@ -49,7 +49,7 @@
     goto :goto_0
 .end method
 
-.method public final getAdUnitId(Landroid/os/Bundle;)Ljava/lang/String;
+.method public final a(Landroid/os/Bundle;)Ljava/lang/String;
     .locals 1
 
     const-string v0, "adurl"

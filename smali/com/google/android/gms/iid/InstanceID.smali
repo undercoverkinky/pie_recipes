@@ -13,7 +13,7 @@
 
 .field public static final ERROR_TIMEOUT:Ljava/lang/String; = "TIMEOUT"
 
-.field private static zzhtf:Ljava/util/Map;
+.field static zzaTZ:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map",
@@ -25,44 +25,44 @@
     .end annotation
 .end field
 
-.field private static zzhtg:Lcom/google/android/gms/iid/zzh;
+.field private static zzaUa:Lcom/google/android/gms/iid/zzd;
 
-.field private static zzhth:Lcom/google/android/gms/iid/zze;
+.field private static zzaUb:Lcom/google/android/gms/iid/zzc;
 
-.field private static zzhtl:Ljava/lang/String;
+.field static zzaUf:Ljava/lang/String;
 
 
 # instance fields
-.field private mContext:Landroid/content/Context;
+.field mContext:Landroid/content/Context;
 
-.field private zzhti:Ljava/security/KeyPair;
+.field zzaUc:Ljava/security/KeyPair;
 
-.field private zzhtj:Ljava/lang/String;
+.field zzaUd:Ljava/lang/String;
 
-.field private zzhtk:J
+.field zzaUe:J
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Landroid/support/v4/util/ArrayMap;
+    new-instance v0, Ljava/util/HashMap;
 
-    invoke-direct {v0}, Landroid/support/v4/util/ArrayMap;-><init>()V
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/google/android/gms/iid/InstanceID;->zzhtf:Ljava/util/Map;
+    sput-object v0, Lcom/google/android/gms/iid/InstanceID;->zzaTZ:Ljava/util/Map;
 
     return-void
 .end method
 
-.method private constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)V
+.method protected constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzhtj:Ljava/lang/String;
+    iput-object v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUd:Ljava/lang/String;
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -70,7 +70,7 @@
 
     iput-object v0, p0, Lcom/google/android/gms/iid/InstanceID;->mContext:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/google/android/gms/iid/InstanceID;->zzhtj:Ljava/lang/String;
+    iput-object p2, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUd:Ljava/lang/String;
 
     return-void
 .end method
@@ -80,17 +80,15 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p0, v0}, Lcom/google/android/gms/iid/InstanceID;->getInstance(Landroid/content/Context;Landroid/os/Bundle;)Lcom/google/android/gms/iid/InstanceID;
+    invoke-static {p0, v0}, Lcom/google/android/gms/iid/InstanceID;->zza(Landroid/content/Context;Landroid/os/Bundle;)Lcom/google/android/gms/iid/InstanceID;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public static declared-synchronized getInstance(Landroid/content/Context;Landroid/os/Bundle;)Lcom/google/android/gms/iid/InstanceID;
+.method public static declared-synchronized zza(Landroid/content/Context;Landroid/os/Bundle;)Lcom/google/android/gms/iid/InstanceID;
     .locals 4
-    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
-    .end annotation
 
     const-class v2, Lcom/google/android/gms/iid/InstanceID;
 
@@ -113,24 +111,24 @@
 
     move-result-object v3
 
-    sget-object v0, Lcom/google/android/gms/iid/InstanceID;->zzhtg:Lcom/google/android/gms/iid/zzh;
+    sget-object v0, Lcom/google/android/gms/iid/InstanceID;->zzaUa:Lcom/google/android/gms/iid/zzd;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcom/google/android/gms/iid/zzh;
+    new-instance v0, Lcom/google/android/gms/iid/zzd;
 
-    invoke-direct {v0, v3}, Lcom/google/android/gms/iid/zzh;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v3}, Lcom/google/android/gms/iid/zzd;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lcom/google/android/gms/iid/InstanceID;->zzhtg:Lcom/google/android/gms/iid/zzh;
+    sput-object v0, Lcom/google/android/gms/iid/InstanceID;->zzaUa:Lcom/google/android/gms/iid/zzd;
 
-    new-instance v0, Lcom/google/android/gms/iid/zze;
+    new-instance v0, Lcom/google/android/gms/iid/zzc;
 
-    invoke-direct {v0, v3}, Lcom/google/android/gms/iid/zze;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v3}, Lcom/google/android/gms/iid/zzc;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lcom/google/android/gms/iid/InstanceID;->zzhth:Lcom/google/android/gms/iid/zze;
+    sput-object v0, Lcom/google/android/gms/iid/InstanceID;->zzaUb:Lcom/google/android/gms/iid/zzc;
 
     :cond_0
-    invoke-static {v3}, Lcom/google/android/gms/iid/InstanceID;->zzdd(Landroid/content/Context;)I
+    invoke-static {v3}, Lcom/google/android/gms/iid/InstanceID;->zzaU(Landroid/content/Context;)I
 
     move-result v0
 
@@ -138,9 +136,9 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/google/android/gms/iid/InstanceID;->zzhtl:Ljava/lang/String;
+    sput-object v0, Lcom/google/android/gms/iid/InstanceID;->zzaUf:Ljava/lang/String;
 
-    sget-object v0, Lcom/google/android/gms/iid/InstanceID;->zzhtf:Ljava/util/Map;
+    sget-object v0, Lcom/google/android/gms/iid/InstanceID;->zzaTZ:Ljava/util/Map;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -154,7 +152,7 @@
 
     invoke-direct {v0, v3, v1, p1}, Lcom/google/android/gms/iid/InstanceID;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    sget-object v3, Lcom/google/android/gms/iid/InstanceID;->zzhtf:Ljava/util/Map;
+    sget-object v3, Lcom/google/android/gms/iid/InstanceID;->zzaTZ:Ljava/util/Map;
 
     invoke-interface {v3, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
@@ -222,6 +220,8 @@
 
     const/4 v2, 0x0
 
+    and-int/lit16 v1, v1, 0xff
+
     int-to-byte v1, v1
 
     aput-byte v1, v0, v2
@@ -255,61 +255,7 @@
     goto :goto_0
 .end method
 
-.method private final zzasp()Ljava/security/KeyPair;
-    .locals 4
-
-    iget-object v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzhti:Ljava/security/KeyPair;
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Lcom/google/android/gms/iid/InstanceID;->zzhtg:Lcom/google/android/gms/iid/zzh;
-
-    iget-object v1, p0, Lcom/google/android/gms/iid/InstanceID;->zzhtj:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/iid/zzh;->zzhv(Ljava/lang/String;)Ljava/security/KeyPair;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzhti:Ljava/security/KeyPair;
-
-    :cond_0
-    iget-object v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzhti:Ljava/security/KeyPair;
-
-    if-nez v0, :cond_1
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzhtk:J
-
-    sget-object v0, Lcom/google/android/gms/iid/InstanceID;->zzhtg:Lcom/google/android/gms/iid/zzh;
-
-    iget-object v1, p0, Lcom/google/android/gms/iid/InstanceID;->zzhtj:Ljava/lang/String;
-
-    iget-wide v2, p0, Lcom/google/android/gms/iid/InstanceID;->zzhtk:J
-
-    invoke-virtual {v0, v1, v2, v3}, Lcom/google/android/gms/iid/zzh;->zzc(Ljava/lang/String;J)Ljava/security/KeyPair;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzhti:Ljava/security/KeyPair;
-
-    :cond_1
-    iget-object v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzhti:Ljava/security/KeyPair;
-
-    return-object v0
-.end method
-
-.method public static zzasr()Lcom/google/android/gms/iid/zzh;
-    .locals 1
-
-    sget-object v0, Lcom/google/android/gms/iid/InstanceID;->zzhtg:Lcom/google/android/gms/iid/zzh;
-
-    return-object v0
-.end method
-
-.method static zzdd(Landroid/content/Context;)I
+.method static zzaU(Landroid/content/Context;)I
     .locals 5
 
     const/4 v0, 0x0
@@ -345,23 +291,23 @@
 
     move-result-object v1
 
+    new-instance v3, Ljava/lang/StringBuilder;
+
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
 
-    move-result v3
+    move-result v4
 
-    add-int/lit8 v3, v3, 0x26
+    add-int/lit8 v4, v4, 0x26
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    invoke-direct {v4, v3}, Ljava/lang/StringBuilder;-><init>(I)V
+    const-string v4, "Never happens: can\'t find own package "
 
-    const-string v3, "Never happens: can\'t find own package "
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
@@ -378,7 +324,7 @@
     goto :goto_0
 .end method
 
-.method static zzde(Landroid/content/Context;)Ljava/lang/String;
+.method static zzaV(Landroid/content/Context;)Ljava/lang/String;
     .locals 4
 
     :try_start_0
@@ -412,23 +358,23 @@
 
     move-result-object v0
 
+    new-instance v2, Ljava/lang/StringBuilder;
+
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
 
-    move-result v2
+    move-result v3
 
-    add-int/lit8 v2, v2, 0x26
+    add-int/lit8 v3, v3, 0x26
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
+    const-string v3, "Never happens: can\'t find own package "
 
-    const-string v2, "Never happens: can\'t find own package "
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -447,7 +393,7 @@
     goto :goto_0
 .end method
 
-.method static zzm([B)Ljava/lang/String;
+.method static zzp([B)Ljava/lang/String;
     .locals 1
 
     const/16 v0, 0xb
@@ -475,9 +421,9 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/google/android/gms/iid/InstanceID;->zza(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-virtual {p0, v0, v1, v2}, Lcom/google/android/gms/iid/InstanceID;->zzb(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    invoke-virtual {p0}, Lcom/google/android/gms/iid/InstanceID;->zzasq()V
+    invoke-virtual {p0}, Lcom/google/android/gms/iid/InstanceID;->zzCe()V
 
     return-void
 .end method
@@ -492,7 +438,7 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, p1, p2, v0}, Lcom/google/android/gms/iid/InstanceID;->zza(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-virtual {p0, p1, p2, v0}, Lcom/google/android/gms/iid/InstanceID;->zzb(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -500,7 +446,7 @@
 .method public getCreationTime()J
     .locals 4
 
-    iget-wide v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzhtk:J
+    iget-wide v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUe:J
 
     const-wide/16 v2, 0x0
 
@@ -508,13 +454,13 @@
 
     if-nez v0, :cond_0
 
-    sget-object v0, Lcom/google/android/gms/iid/InstanceID;->zzhtg:Lcom/google/android/gms/iid/zzh;
+    sget-object v0, Lcom/google/android/gms/iid/InstanceID;->zzaUa:Lcom/google/android/gms/iid/zzd;
 
-    iget-object v1, p0, Lcom/google/android/gms/iid/InstanceID;->zzhtj:Ljava/lang/String;
+    iget-object v1, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUd:Ljava/lang/String;
 
     const-string v2, "cre"
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/iid/zzh;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/iid/zzd;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -524,10 +470,10 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzhtk:J
+    iput-wide v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUe:J
 
     :cond_0
-    iget-wide v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzhtk:J
+    iget-wide v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUe:J
 
     return-wide v0
 .end method
@@ -535,23 +481,13 @@
 .method public getId()Ljava/lang/String;
     .locals 1
 
-    invoke-direct {p0}, Lcom/google/android/gms/iid/InstanceID;->zzasp()Ljava/security/KeyPair;
+    invoke-virtual {p0}, Lcom/google/android/gms/iid/InstanceID;->zzCd()Ljava/security/KeyPair;
 
     move-result-object v0
 
     invoke-static {v0}, Lcom/google/android/gms/iid/InstanceID;->zza(Ljava/security/KeyPair;)Ljava/lang/String;
 
     move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getSubtype()Ljava/lang/String;
-    .locals 1
-    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
-    .end annotation
-
-    iget-object v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzhtj:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -574,7 +510,7 @@
 .end method
 
 .method public getToken(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
-    .locals 8
+    .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -583,17 +519,15 @@
 
     const/4 v1, 0x0
 
-    const/4 v0, 0x1
-
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    move-result-object v2
+    move-result-object v0
 
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
-    move-result-object v3
+    move-result-object v2
 
-    if-ne v2, v3, :cond_0
+    if-ne v0, v2, :cond_0
 
     new-instance v0, Ljava/io/IOException;
 
@@ -604,122 +538,53 @@
     throw v0
 
     :cond_0
-    sget-object v2, Lcom/google/android/gms/iid/InstanceID;->zzhtg:Lcom/google/android/gms/iid/zzh;
+    const/4 v0, 0x1
 
-    const-string v3, "appVersion"
-
-    invoke-virtual {v2, v3}, Lcom/google/android/gms/iid/zzh;->get(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_1
-
-    sget-object v3, Lcom/google/android/gms/iid/InstanceID;->zzhtl:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0}, Lcom/google/android/gms/iid/InstanceID;->zzCh()Z
 
     move-result v2
 
-    if-nez v2, :cond_3
-
-    :cond_1
-    move v2, v0
-
-    :goto_0
-    if-eqz v2, :cond_6
+    if-eqz v2, :cond_2
 
     const/4 v4, 0x0
 
-    :goto_1
-    if-eqz v4, :cond_7
+    :goto_0
+    if-eqz v4, :cond_3
 
-    :cond_2
-    :goto_2
+    :cond_1
+    :goto_1
     return-object v4
 
-    :cond_3
-    sget-object v2, Lcom/google/android/gms/iid/InstanceID;->zzhtg:Lcom/google/android/gms/iid/zzh;
+    :cond_2
+    sget-object v2, Lcom/google/android/gms/iid/InstanceID;->zzaUa:Lcom/google/android/gms/iid/zzd;
 
-    const-string v3, "lastToken"
+    iget-object v3, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUd:Ljava/lang/String;
 
-    invoke-virtual {v2, v3}, Lcom/google/android/gms/iid/zzh;->get(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    if-nez v2, :cond_4
-
-    move v2, v0
-
-    goto :goto_0
-
-    :cond_4
-    invoke-static {v2}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v4
-
-    const-wide/16 v6, 0x3e8
-
-    div-long/2addr v4, v6
-
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    sub-long v2, v4, v2
-
-    const-wide/32 v4, 0x93a80
-
-    cmp-long v2, v2, v4
-
-    if-lez v2, :cond_5
-
-    move v2, v0
-
-    goto :goto_0
-
-    :cond_5
-    move v2, v1
-
-    goto :goto_0
-
-    :cond_6
-    sget-object v2, Lcom/google/android/gms/iid/InstanceID;->zzhtg:Lcom/google/android/gms/iid/zzh;
-
-    iget-object v3, p0, Lcom/google/android/gms/iid/InstanceID;->zzhtj:Ljava/lang/String;
-
-    invoke-virtual {v2, v3, p1, p2}, Lcom/google/android/gms/iid/zzh;->zze(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v3, p1, p2}, Lcom/google/android/gms/iid/zzd;->zzi(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    goto :goto_1
+    goto :goto_0
 
-    :cond_7
-    if-nez p3, :cond_8
+    :cond_3
+    if-nez p3, :cond_4
 
     new-instance p3, Landroid/os/Bundle;
 
     invoke-direct {p3}, Landroid/os/Bundle;-><init>()V
 
-    :cond_8
+    :cond_4
     const-string v2, "ttl"
 
     invoke-virtual {p3, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    if-eqz v2, :cond_9
+    if-eqz v2, :cond_5
 
     move v0, v1
 
-    :cond_9
+    :cond_5
     const-string v2, "jwt"
 
     const-string v3, "type"
@@ -732,38 +597,191 @@
 
     move-result v2
 
-    if-eqz v2, :cond_a
+    if-eqz v2, :cond_6
 
-    :goto_3
-    invoke-virtual {p0, p1, p2, p3}, Lcom/google/android/gms/iid/InstanceID;->zzb(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+    :goto_2
+    invoke-virtual {p0, p1, p2, p3}, Lcom/google/android/gms/iid/InstanceID;->zzc(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
 
     move-result-object v4
 
-    if-eqz v4, :cond_2
+    if-eqz v4, :cond_1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_1
 
-    sget-object v0, Lcom/google/android/gms/iid/InstanceID;->zzhtg:Lcom/google/android/gms/iid/zzh;
+    sget-object v0, Lcom/google/android/gms/iid/InstanceID;->zzaUa:Lcom/google/android/gms/iid/zzd;
 
-    iget-object v1, p0, Lcom/google/android/gms/iid/InstanceID;->zzhtj:Ljava/lang/String;
+    iget-object v1, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUd:Ljava/lang/String;
 
-    sget-object v5, Lcom/google/android/gms/iid/InstanceID;->zzhtl:Ljava/lang/String;
+    sget-object v5, Lcom/google/android/gms/iid/InstanceID;->zzaUf:Ljava/lang/String;
 
     move-object v2, p1
 
     move-object v3, p2
 
-    invoke-virtual/range {v0 .. v5}, Lcom/google/android/gms/iid/zzh;->zza(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/google/android/gms/iid/zzd;->zza(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_2
+    goto :goto_1
 
-    :cond_a
+    :cond_6
     move v1, v0
 
-    goto :goto_3
+    goto :goto_2
 .end method
 
-.method public final zza(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
+.method zzCd()Ljava/security/KeyPair;
+    .locals 4
+
+    iget-object v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUc:Ljava/security/KeyPair;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lcom/google/android/gms/iid/InstanceID;->zzaUa:Lcom/google/android/gms/iid/zzd;
+
+    iget-object v1, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUd:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/iid/zzd;->zzeE(Ljava/lang/String;)Ljava/security/KeyPair;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUc:Ljava/security/KeyPair;
+
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUc:Ljava/security/KeyPair;
+
+    if-nez v0, :cond_1
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUe:J
+
+    sget-object v0, Lcom/google/android/gms/iid/InstanceID;->zzaUa:Lcom/google/android/gms/iid/zzd;
+
+    iget-object v1, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUd:Ljava/lang/String;
+
+    iget-wide v2, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUe:J
+
+    invoke-virtual {v0, v1, v2, v3}, Lcom/google/android/gms/iid/zzd;->zzd(Ljava/lang/String;J)Ljava/security/KeyPair;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUc:Ljava/security/KeyPair;
+
+    :cond_1
+    iget-object v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUc:Ljava/security/KeyPair;
+
+    return-object v0
+.end method
+
+.method public zzCe()V
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUe:J
+
+    sget-object v0, Lcom/google/android/gms/iid/InstanceID;->zzaUa:Lcom/google/android/gms/iid/zzd;
+
+    iget-object v1, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUd:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/iid/zzd;->zzeF(Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUc:Ljava/security/KeyPair;
+
+    return-void
+.end method
+
+.method public zzCf()Lcom/google/android/gms/iid/zzd;
+    .locals 1
+
+    sget-object v0, Lcom/google/android/gms/iid/InstanceID;->zzaUa:Lcom/google/android/gms/iid/zzd;
+
+    return-object v0
+.end method
+
+.method public zzCg()Lcom/google/android/gms/iid/zzc;
+    .locals 1
+
+    sget-object v0, Lcom/google/android/gms/iid/InstanceID;->zzaUb:Lcom/google/android/gms/iid/zzc;
+
+    return-object v0
+.end method
+
+.method zzCh()Z
+    .locals 6
+
+    const/4 v0, 0x1
+
+    sget-object v1, Lcom/google/android/gms/iid/InstanceID;->zzaUa:Lcom/google/android/gms/iid/zzd;
+
+    const-string v2, "appVersion"
+
+    invoke-virtual {v1, v2}, Lcom/google/android/gms/iid/zzd;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    sget-object v2, Lcom/google/android/gms/iid/InstanceID;->zzaUf:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    sget-object v1, Lcom/google/android/gms/iid/InstanceID;->zzaUa:Lcom/google/android/gms/iid/zzd;
+
+    const-string v2, "lastToken"
+
+    invoke-virtual {v1, v2}, Lcom/google/android/gms/iid/zzd;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-static {v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v2
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    const-wide/16 v4, 0x3e8
+
+    div-long/2addr v2, v4
+
+    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v4
+
+    sub-long/2addr v2, v4
+
+    const-wide/32 v4, 0x93a80
+
+    cmp-long v1, v2, v4
+
+    if-gtz v1, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public zzb(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -790,11 +808,11 @@
     throw v0
 
     :cond_0
-    sget-object v0, Lcom/google/android/gms/iid/InstanceID;->zzhtg:Lcom/google/android/gms/iid/zzh;
+    sget-object v0, Lcom/google/android/gms/iid/InstanceID;->zzaUa:Lcom/google/android/gms/iid/zzd;
 
-    iget-object v1, p0, Lcom/google/android/gms/iid/InstanceID;->zzhtj:Ljava/lang/String;
+    iget-object v1, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUd:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, p1, p2}, Lcom/google/android/gms/iid/zzh;->zzf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, p1, p2}, Lcom/google/android/gms/iid/zzd;->zzj(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     if-nez p3, :cond_1
 
@@ -834,7 +852,7 @@
 
     const-string v0, ""
 
-    iget-object v2, p0, Lcom/google/android/gms/iid/InstanceID;->zzhtj:Ljava/lang/String;
+    iget-object v2, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUd:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -851,7 +869,7 @@
 
     const-string v1, ""
 
-    iget-object v2, p0, Lcom/google/android/gms/iid/InstanceID;->zzhtj:Ljava/lang/String;
+    iget-object v2, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUd:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -862,62 +880,34 @@
     :goto_1
     invoke-virtual {p3, v0, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v0, Lcom/google/android/gms/iid/InstanceID;->zzhth:Lcom/google/android/gms/iid/zze;
+    sget-object v0, Lcom/google/android/gms/iid/InstanceID;->zzaUb:Lcom/google/android/gms/iid/zzc;
 
-    invoke-direct {p0}, Lcom/google/android/gms/iid/InstanceID;->zzasp()Ljava/security/KeyPair;
+    invoke-virtual {p0}, Lcom/google/android/gms/iid/InstanceID;->zzCd()Ljava/security/KeyPair;
 
     move-result-object v1
 
-    invoke-virtual {v0, p3, v1}, Lcom/google/android/gms/iid/zze;->zza(Landroid/os/Bundle;Ljava/security/KeyPair;)Landroid/content/Intent;
+    invoke-virtual {v0, p3, v1}, Lcom/google/android/gms/iid/zzc;->zza(Landroid/os/Bundle;Ljava/security/KeyPair;)Landroid/content/Intent;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/google/android/gms/iid/zze;->zzh(Landroid/content/Intent;)Ljava/lang/String;
+    sget-object v1, Lcom/google/android/gms/iid/InstanceID;->zzaUb:Lcom/google/android/gms/iid/zzc;
+
+    invoke-virtual {v1, v0}, Lcom/google/android/gms/iid/zzc;->zzs(Landroid/content/Intent;)Ljava/lang/String;
 
     return-void
 
     :cond_3
-    iget-object v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzhtj:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUd:Ljava/lang/String;
 
     goto :goto_0
 
     :cond_4
-    iget-object p1, p0, Lcom/google/android/gms/iid/InstanceID;->zzhtj:Ljava/lang/String;
+    iget-object p1, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUd:Ljava/lang/String;
 
     goto :goto_1
 .end method
 
-.method public final zzasq()V
-    .locals 3
-
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzhtk:J
-
-    sget-object v0, Lcom/google/android/gms/iid/InstanceID;->zzhtg:Lcom/google/android/gms/iid/zzh;
-
-    iget-object v1, p0, Lcom/google/android/gms/iid/InstanceID;->zzhtj:Ljava/lang/String;
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "|"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/iid/zzh;->zzht(Ljava/lang/String;)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzhti:Ljava/security/KeyPair;
-
-    return-void
-.end method
-
-.method public final zzb(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+.method public zzc(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -938,7 +928,7 @@
 
     const-string v0, ""
 
-    iget-object v1, p0, Lcom/google/android/gms/iid/InstanceID;->zzhtj:Ljava/lang/String;
+    iget-object v1, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUd:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -974,24 +964,26 @@
     invoke-virtual {p3, v1, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
-    sget-object v0, Lcom/google/android/gms/iid/InstanceID;->zzhth:Lcom/google/android/gms/iid/zze;
+    sget-object v0, Lcom/google/android/gms/iid/InstanceID;->zzaUb:Lcom/google/android/gms/iid/zzc;
 
-    invoke-direct {p0}, Lcom/google/android/gms/iid/InstanceID;->zzasp()Ljava/security/KeyPair;
+    invoke-virtual {p0}, Lcom/google/android/gms/iid/InstanceID;->zzCd()Ljava/security/KeyPair;
 
     move-result-object v1
 
-    invoke-virtual {v0, p3, v1}, Lcom/google/android/gms/iid/zze;->zza(Landroid/os/Bundle;Ljava/security/KeyPair;)Landroid/content/Intent;
+    invoke-virtual {v0, p3, v1}, Lcom/google/android/gms/iid/zzc;->zza(Landroid/os/Bundle;Ljava/security/KeyPair;)Landroid/content/Intent;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/google/android/gms/iid/zze;->zzh(Landroid/content/Intent;)Ljava/lang/String;
+    sget-object v1, Lcom/google/android/gms/iid/InstanceID;->zzaUb:Lcom/google/android/gms/iid/zzc;
+
+    invoke-virtual {v1, v0}, Lcom/google/android/gms/iid/zzc;->zzs(Landroid/content/Intent;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
     :cond_2
-    iget-object v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzhtj:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/iid/InstanceID;->zzaUd:Ljava/lang/String;
 
     goto :goto_0
 .end method

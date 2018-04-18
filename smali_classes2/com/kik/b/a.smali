@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/core/interfaces/r;
+.implements Lkik/core/interfaces/t;
 
 
 # instance fields
@@ -118,14 +118,14 @@
     return-object v0
 .end method
 
-.method public final d()Lkik/core/datatypes/k;
+.method public final d()Lkik/core/datatypes/n;
     .locals 1
 
     .prologue
     .line 63
     iget-object v0, p0, Lcom/kik/b/a;->b:Lkik/core/interfaces/ad;
 
-    invoke-static {v0}, Lkik/core/z;->b(Lkik/core/interfaces/ad;)Lkik/core/z;
+    invoke-static {v0}, Lkik/core/x;->b(Lkik/core/interfaces/ad;)Lkik/core/x;
 
     move-result-object v0
 
@@ -133,7 +133,7 @@
     if-eqz v0, :cond_0
 
     .line 65
-    invoke-virtual {v0}, Lkik/core/z;->a()Lkik/core/datatypes/k;
+    invoke-virtual {v0}, Lkik/core/x;->a()Lkik/core/datatypes/n;
 
     move-result-object v0
 

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/gson/internal/Excluder;->a(Lcom/google/gson/e;Lcom/google/gson/b/a;)Lcom/google/gson/o;
+    value = Lcom/google/gson/internal/Excluder;->a(Lcom/google/gson/d;Lcom/google/gson/b/a;)Lcom/google/gson/o;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
 
 .field final synthetic b:Z
 
-.field final synthetic c:Lcom/google/gson/e;
+.field final synthetic c:Lcom/google/gson/d;
 
 .field final synthetic d:Lcom/google/gson/b/a;
 
@@ -43,7 +43,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/google/gson/internal/Excluder;ZZLcom/google/gson/e;Lcom/google/gson/b/a;)V
+.method constructor <init>(Lcom/google/gson/internal/Excluder;ZZLcom/google/gson/d;Lcom/google/gson/b/a;)V
     .locals 0
 
     .prologue
@@ -54,7 +54,7 @@
 
     iput-boolean p3, p0, Lcom/google/gson/internal/Excluder$1;->b:Z
 
-    iput-object p4, p0, Lcom/google/gson/internal/Excluder$1;->c:Lcom/google/gson/e;
+    iput-object p4, p0, Lcom/google/gson/internal/Excluder$1;->c:Lcom/google/gson/d;
 
     iput-object p5, p0, Lcom/google/gson/internal/Excluder$1;->d:Lcom/google/gson/b/a;
 
@@ -80,18 +80,20 @@
     .line 142
     if-eqz v0, :cond_0
 
+    .line 144
     :goto_0
     return-object v0
 
+    .line 142
     :cond_0
-    iget-object v0, p0, Lcom/google/gson/internal/Excluder$1;->c:Lcom/google/gson/e;
+    iget-object v0, p0, Lcom/google/gson/internal/Excluder$1;->c:Lcom/google/gson/d;
 
     iget-object v1, p0, Lcom/google/gson/internal/Excluder$1;->e:Lcom/google/gson/internal/Excluder;
 
     iget-object v2, p0, Lcom/google/gson/internal/Excluder$1;->d:Lcom/google/gson/b/a;
 
     .line 144
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/e;->a(Lcom/google/gson/p;Lcom/google/gson/b/a;)Lcom/google/gson/o;
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/d;->a(Lcom/google/gson/p;Lcom/google/gson/b/a;)Lcom/google/gson/o;
 
     move-result-object v0
 

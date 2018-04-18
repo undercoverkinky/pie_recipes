@@ -15,34 +15,34 @@
     .locals 4
 
     .prologue
-    .line 46
-    .line 1162
+    .line 42
+    .line 1148
     if-nez p2, :cond_0
 
-    .line 1164
+    .line 1150
     new-instance v0, Landroid/util/TypedValue;
 
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
-    .line 1165
+    .line 1151
     invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v1
 
-    sget v2, Landroid/support/v7/appcompat/R$attr;->dialogTheme:I
+    sget v2, Landroid/support/v7/appcompat/R$attr;->y:I
 
     const/4 v3, 0x1
 
     invoke-virtual {v1, v2, v0, v3}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
-    .line 1166
+    .line 1152
     iget p2, v0, Landroid/util/TypedValue;->resourceId:I
 
-    .line 46
+    .line 42
     :cond_0
     invoke-direct {p0, p1, p2}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
 
-    .line 52
+    .line 48
     invoke-direct {p0}, Landroid/support/v7/app/AppCompatDialog;->a()Landroid/support/v7/app/AppCompatDelegate;
 
     move-result-object v0
@@ -51,14 +51,7 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v7/app/AppCompatDelegate;->a(Landroid/os/Bundle;)V
 
-    .line 55
-    invoke-direct {p0}, Landroid/support/v7/app/AppCompatDialog;->a()Landroid/support/v7/app/AppCompatDelegate;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/support/v7/app/AppCompatDelegate;->j()Z
-
-    .line 56
+    .line 49
     return-void
 .end method
 
@@ -66,19 +59,19 @@
     .locals 1
 
     .prologue
-    .line 155
+    .line 141
     iget-object v0, p0, Landroid/support/v7/app/AppCompatDialog;->a:Landroid/support/v7/app/AppCompatDelegate;
 
     if-nez v0, :cond_0
 
-    .line 156
+    .line 142
     invoke-static {p0, p0}, Landroid/support/v7/app/AppCompatDelegate;->a(Landroid/app/Dialog;Landroid/support/v7/app/AppCompatCallback;)Landroid/support/v7/app/AppCompatDelegate;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/support/v7/app/AppCompatDialog;->a:Landroid/support/v7/app/AppCompatDelegate;
 
-    .line 158
+    .line 144
     :cond_0
     iget-object v0, p0, Landroid/support/v7/app/AppCompatDialog;->a:Landroid/support/v7/app/AppCompatDelegate;
 
@@ -91,63 +84,45 @@
     .locals 1
 
     .prologue
-    .line 116
+    .line 103
     invoke-direct {p0}, Landroid/support/v7/app/AppCompatDialog;->a()Landroid/support/v7/app/AppCompatDelegate;
 
     move-result-object v0
 
     invoke-virtual {v0, p1, p2}, Landroid/support/v7/app/AppCompatDelegate;->b(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 117
+    .line 104
     return-void
 .end method
 
-.method public final b()Z
-    .locals 2
+.method public final c()Z
+    .locals 1
 
     .prologue
-    .line 140
+    .line 127
     invoke-direct {p0}, Landroid/support/v7/app/AppCompatDialog;->a()Landroid/support/v7/app/AppCompatDelegate;
 
     move-result-object v0
 
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/support/v7/app/AppCompatDelegate;->c(I)Z
+    invoke-virtual {v0}, Landroid/support/v7/app/AppCompatDelegate;->h()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public findViewById(I)Landroid/view/View;
-    .locals 1
-
-    .prologue
-    .line 99
-    invoke-direct {p0}, Landroid/support/v7/app/AppCompatDialog;->a()Landroid/support/v7/app/AppCompatDelegate;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/support/v7/app/AppCompatDelegate;->a(I)Landroid/view/View;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public invalidateOptionsMenu()V
     .locals 1
 
     .prologue
-    .line 148
+    .line 134
     invoke-direct {p0}, Landroid/support/v7/app/AppCompatDialog;->a()Landroid/support/v7/app/AppCompatDelegate;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/v7/app/AppCompatDelegate;->g()V
+    invoke-virtual {v0}, Landroid/support/v7/app/AppCompatDelegate;->f()V
 
-    .line 149
+    .line 135
     return-void
 .end method
 
@@ -155,24 +130,24 @@
     .locals 1
 
     .prologue
-    .line 65
+    .line 58
     invoke-direct {p0}, Landroid/support/v7/app/AppCompatDialog;->a()Landroid/support/v7/app/AppCompatDelegate;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/support/v7/app/AppCompatDelegate;->i()V
 
-    .line 66
+    .line 59
     invoke-super {p0, p1}, Landroid/app/Dialog;->onCreate(Landroid/os/Bundle;)V
 
-    .line 67
+    .line 60
     invoke-direct {p0}, Landroid/support/v7/app/AppCompatDialog;->a()Landroid/support/v7/app/AppCompatDelegate;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Landroid/support/v7/app/AppCompatDelegate;->a(Landroid/os/Bundle;)V
 
-    .line 68
+    .line 61
     return-void
 .end method
 
@@ -180,17 +155,17 @@
     .locals 1
 
     .prologue
-    .line 121
+    .line 108
     invoke-super {p0}, Landroid/app/Dialog;->onStop()V
 
-    .line 122
+    .line 109
     invoke-direct {p0}, Landroid/support/v7/app/AppCompatDialog;->a()Landroid/support/v7/app/AppCompatDelegate;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/v7/app/AppCompatDelegate;->e()V
+    invoke-virtual {v0}, Landroid/support/v7/app/AppCompatDelegate;->d()V
 
-    .line 123
+    .line 110
     return-void
 .end method
 
@@ -198,14 +173,14 @@
     .locals 1
 
     .prologue
-    .line 83
+    .line 76
     invoke-direct {p0}, Landroid/support/v7/app/AppCompatDialog;->a()Landroid/support/v7/app/AppCompatDelegate;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Landroid/support/v7/app/AppCompatDelegate;->b(I)V
+    invoke-virtual {v0, p1}, Landroid/support/v7/app/AppCompatDelegate;->a(I)V
 
-    .line 84
+    .line 77
     return-void
 .end method
 
@@ -213,14 +188,14 @@
     .locals 1
 
     .prologue
-    .line 88
+    .line 81
     invoke-direct {p0}, Landroid/support/v7/app/AppCompatDialog;->a()Landroid/support/v7/app/AppCompatDelegate;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Landroid/support/v7/app/AppCompatDelegate;->a(Landroid/view/View;)V
 
-    .line 89
+    .line 82
     return-void
 .end method
 
@@ -228,14 +203,14 @@
     .locals 1
 
     .prologue
-    .line 93
+    .line 86
     invoke-direct {p0}, Landroid/support/v7/app/AppCompatDialog;->a()Landroid/support/v7/app/AppCompatDelegate;
 
     move-result-object v0
 
     invoke-virtual {v0, p1, p2}, Landroid/support/v7/app/AppCompatDelegate;->a(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 94
+    .line 87
     return-void
 .end method
 
@@ -243,10 +218,10 @@
     .locals 2
 
     .prologue
-    .line 110
+    .line 97
     invoke-super {p0, p1}, Landroid/app/Dialog;->setTitle(I)V
 
-    .line 111
+    .line 98
     invoke-direct {p0}, Landroid/support/v7/app/AppCompatDialog;->a()Landroid/support/v7/app/AppCompatDelegate;
 
     move-result-object v0
@@ -261,7 +236,7 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v7/app/AppCompatDelegate;->a(Ljava/lang/CharSequence;)V
 
-    .line 112
+    .line 99
     return-void
 .end method
 
@@ -269,16 +244,16 @@
     .locals 1
 
     .prologue
-    .line 104
+    .line 91
     invoke-super {p0, p1}, Landroid/app/Dialog;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 105
+    .line 92
     invoke-direct {p0}, Landroid/support/v7/app/AppCompatDialog;->a()Landroid/support/v7/app/AppCompatDelegate;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Landroid/support/v7/app/AppCompatDelegate;->a(Ljava/lang/CharSequence;)V
 
-    .line 106
+    .line 93
     return-void
 .end method

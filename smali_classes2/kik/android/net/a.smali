@@ -175,7 +175,7 @@
 
     const-wide/16 v4, 0x3e8
 
-    invoke-virtual {v2, v4, v5}, Lcom/kik/android/a/a;->a(J)Lcom/kik/events/o;
+    invoke-virtual {v2, v4, v5}, Lcom/kik/android/a/a;->a(J)Lcom/kik/events/p;
 
     .line 48
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -290,7 +290,7 @@
 
     const-wide/16 v4, 0x3e8
 
-    invoke-virtual {v2, v4, v5}, Lcom/kik/android/a/a;->a(J)Lcom/kik/events/o;
+    invoke-virtual {v2, v4, v5}, Lcom/kik/android/a/a;->a(J)Lcom/kik/events/p;
 
     .line 76
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J

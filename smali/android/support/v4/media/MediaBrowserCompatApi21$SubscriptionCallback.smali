@@ -21,7 +21,9 @@
             "(",
             "Ljava/lang/String;",
             "Ljava/util/List",
-            "<*>;)V"
+            "<",
+            "Landroid/os/Parcel;",
+            ">;)V"
         }
     .end annotation
 .end method

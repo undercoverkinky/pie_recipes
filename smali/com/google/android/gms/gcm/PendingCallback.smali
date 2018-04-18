@@ -3,7 +3,6 @@
 
 # interfaces
 .implements Landroid/os/Parcelable;
-.implements Lcom/google/android/gms/common/internal/ReflectedParcelable;
 
 
 # static fields
@@ -20,16 +19,16 @@
 
 
 # instance fields
-.field final zzftk:Landroid/os/IBinder;
+.field final zzaqQ:Landroid/os/IBinder;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/gms/gcm/e;
+    new-instance v0, Lcom/google/android/gms/gcm/PendingCallback$1;
 
-    invoke-direct {v0}, Lcom/google/android/gms/gcm/e;-><init>()V
+    invoke-direct {v0}, Lcom/google/android/gms/gcm/PendingCallback$1;-><init>()V
 
     sput-object v0, Lcom/google/android/gms/gcm/PendingCallback;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -45,7 +44,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/android/gms/gcm/PendingCallback;->zzftk:Landroid/os/IBinder;
+    iput-object v0, p0, Lcom/google/android/gms/gcm/PendingCallback;->zzaqQ:Landroid/os/IBinder;
 
     return-void
 .end method
@@ -60,10 +59,18 @@
     return v0
 .end method
 
+.method public getIBinder()Landroid/os/IBinder;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/gcm/PendingCallback;->zzaqQ:Landroid/os/IBinder;
+
+    return-object v0
+.end method
+
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/gcm/PendingCallback;->zzftk:Landroid/os/IBinder;
+    iget-object v0, p0, Lcom/google/android/gms/gcm/PendingCallback;->zzaqQ:Landroid/os/IBinder;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 

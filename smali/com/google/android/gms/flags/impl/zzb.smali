@@ -1,74 +1,59 @@
-.class public final Lcom/google/android/gms/flags/impl/zzb;
-.super Lcom/google/android/gms/flags/impl/zza;
+.class public Lcom/google/android/gms/flags/impl/zzb;
+.super Ljava/lang/Object;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/google/android/gms/flags/impl/zza",
-        "<",
-        "Ljava/lang/Boolean;",
-        ">;"
-    }
-.end annotation
+# static fields
+.field private static zzaIQ:Landroid/content/SharedPreferences;
 
 
 # direct methods
-.method public static zza(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Boolean;)Ljava/lang/Boolean;
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    sput-object v0, Lcom/google/android/gms/flags/impl/zzb;->zzaIQ:Landroid/content/SharedPreferences;
+
+    return-void
+.end method
+
+.method public static zzn(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    .locals 2
+
+    const-class v1, Landroid/content/SharedPreferences;
+
+    monitor-enter v1
 
     :try_start_0
-    new-instance v0, Lcom/google/android/gms/flags/impl/a;
+    sget-object v0, Lcom/google/android/gms/flags/impl/zzb;->zzaIQ:Landroid/content/SharedPreferences;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/google/android/gms/flags/impl/a;-><init>(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Boolean;)V
+    if-nez v0, :cond_0
 
-    invoke-static {v0}, Lcom/google/android/gms/internal/zzbvf;->zza(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
+    new-instance v0, Lcom/google/android/gms/flags/impl/zzb$1;
 
-    move-result-object v0
+    invoke-direct {v0, p0}, Lcom/google/android/gms/flags/impl/zzb$1;-><init>(Landroid/content/Context;)V
 
-    check-cast v0, Ljava/lang/Boolean;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "FlagDataUtils"
-
-    const-string v2, "Flag value not available, returning default: "
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzsi;->zzb(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    check-cast v0, Landroid/content/SharedPreferences;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_1
-    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    move-object v0, p2
-
-    goto :goto_0
+    sput-object v0, Lcom/google/android/gms/flags/impl/zzb;->zzaIQ:Landroid/content/SharedPreferences;
 
     :cond_0
-    new-instance v0, Ljava/lang/String;
+    sget-object v0, Lcom/google/android/gms/flags/impl/zzb;->zzaIQ:Landroid/content/SharedPreferences;
 
-    invoke-direct {v0, v2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+    monitor-exit v1
 
-    goto :goto_1
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
 .end method

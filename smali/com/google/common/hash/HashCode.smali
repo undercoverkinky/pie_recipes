@@ -20,7 +20,7 @@
     .locals 1
 
     .prologue
-    .line 429
+    .line 404
     const-string v0, "0123456789abcdef"
 
     invoke-virtual {v0}, Ljava/lang/String;->toCharArray()[C
@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 38
+    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,7 +46,7 @@
     .locals 1
 
     .prologue
-    .line 256
+    .line 254
     new-instance v0, Lcom/google/common/hash/HashCode$BytesHashCode;
 
     invoke-direct {v0, p0}, Lcom/google/common/hash/HashCode$BytesHashCode;-><init>([B)V
@@ -75,7 +75,7 @@
     .locals 1
 
     .prologue
-    .line 103
+    .line 104
     invoke-virtual {p0}, Lcom/google/common/hash/HashCode;->d()[B
 
     move-result-object v0
@@ -93,15 +93,15 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 380
+    .line 355
     instance-of v1, p1, Lcom/google/common/hash/HashCode;
 
     if-eqz v1, :cond_0
 
-    .line 381
+    .line 356
     check-cast p1, Lcom/google/common/hash/HashCode;
 
-    .line 382
+    .line 357
     invoke-virtual {p0}, Lcom/google/common/hash/HashCode;->a()I
 
     move-result v1
@@ -120,7 +120,7 @@
 
     const/4 v0, 0x1
 
-    .line 384
+    .line 359
     :cond_0
     return v0
 .end method
@@ -129,7 +129,7 @@
     .locals 5
 
     .prologue
-    .line 396
+    .line 371
     invoke-virtual {p0}, Lcom/google/common/hash/HashCode;->a()I
 
     move-result v0
@@ -138,29 +138,29 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 397
+    .line 372
     invoke-virtual {p0}, Lcom/google/common/hash/HashCode;->b()I
 
     move-result v1
 
-    .line 405
+    .line 380
     :cond_0
     return v1
 
-    .line 400
+    .line 375
     :cond_1
-    invoke-virtual {p0}, Lcom/google/common/hash/HashCode;->e()[B
+    invoke-virtual {p0}, Lcom/google/common/hash/HashCode;->d()[B
 
     move-result-object v2
 
-    .line 401
+    .line 376
     const/4 v0, 0x0
 
     aget-byte v0, v2, v0
 
     and-int/lit16 v1, v0, 0xff
 
-    .line 402
+    .line 377
     const/4 v0, 0x1
 
     :goto_0
@@ -168,7 +168,7 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 403
+    .line 378
     aget-byte v3, v2, v0
 
     and-int/lit16 v3, v3, 0xff
@@ -179,7 +179,7 @@
 
     or-int/2addr v1, v3
 
-    .line 402
+    .line 377
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -189,12 +189,12 @@
     .locals 7
 
     .prologue
-    .line 421
-    invoke-virtual {p0}, Lcom/google/common/hash/HashCode;->e()[B
+    .line 396
+    invoke-virtual {p0}, Lcom/google/common/hash/HashCode;->d()[B
 
     move-result-object v1
 
-    .line 422
+    .line 397
     new-instance v2, Ljava/lang/StringBuilder;
 
     array-length v0, v1
@@ -203,7 +203,7 @@
 
     invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 423
+    .line 398
     array-length v3, v1
 
     const/4 v0, 0x0
@@ -213,7 +213,7 @@
 
     aget-byte v4, v1, v0
 
-    .line 424
+    .line 399
     sget-object v5, Lcom/google/common/hash/HashCode;->a:[C
 
     shr-int/lit8 v6, v4, 0x4
@@ -234,12 +234,12 @@
 
     invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 423
+    .line 398
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 426
+    .line 401
     :cond_0
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

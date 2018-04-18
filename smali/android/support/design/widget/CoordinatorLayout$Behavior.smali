@@ -28,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 1956
+    .line 1594
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1957
+    .line 1595
     return-void
 .end method
 
@@ -39,10 +39,10 @@
     .locals 0
 
     .prologue
-    .line 1967
+    .line 1605
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1968
+    .line 1606
     return-void
 .end method
 
@@ -58,17 +58,42 @@
     .end annotation
 
     .prologue
-    .line 2475
+    .line 2087
     return-object p0
 .end method
 
 
 # virtual methods
-.method public a(Landroid/support/design/widget/CoordinatorLayout$LayoutParams;)V
-    .locals 0
+.method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;)Landroid/os/Parcelable;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/support/design/widget/CoordinatorLayout;",
+            "TV;)",
+            "Landroid/os/Parcelable;"
+        }
+    .end annotation
 
     .prologue
-    .line 1979
+    .line 2125
+    sget-object v0, Landroid/view/View$BaseSavedState;->EMPTY_STATE:Landroid/view/AbsSavedState;
+
+    return-object v0
+.end method
+
+.method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;I[I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/support/design/widget/CoordinatorLayout;",
+            "TV;I[I)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 2009
     return-void
 .end method
 
@@ -85,41 +110,22 @@
     .end annotation
 
     .prologue
-    .line 2514
+    .line 2104
     return-void
 .end method
 
-.method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)V
+.method public a(Landroid/view/View;Landroid/view/View;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(",
-            "Landroid/support/design/widget/CoordinatorLayout;",
-            "TV;",
+            "(TV;",
             "Landroid/view/View;",
             ")V"
         }
     .end annotation
 
     .prologue
-    .line 2330
-    return-void
-.end method
-
-.method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;I[I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/support/design/widget/CoordinatorLayout;",
-            "TV;",
-            "Landroid/view/View;",
-            "I[I)V"
-        }
-    .end annotation
-
-    .prologue
-    .line 2396
+    .line 1772
     return-void
 .end method
 
@@ -134,7 +140,7 @@
     .end annotation
 
     .prologue
-    .line 2427
+    .line 2040
     const/4 v0, 0x0
 
     return v0
@@ -151,43 +157,24 @@
     .end annotation
 
     .prologue
-    .line 2227
+    .line 1840
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;IIII)Z
+.method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;III)Z
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/support/design/widget/CoordinatorLayout;",
-            "TV;IIII)Z"
+            "TV;III)Z"
         }
     .end annotation
 
     .prologue
-    .line 2199
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/graphics/Rect;Z)Z
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/support/design/widget/CoordinatorLayout;",
-            "TV;",
-            "Landroid/graphics/Rect;",
-            "Z)Z"
-        }
-    .end annotation
-
-    .prologue
-    .line 2497
+    .line 1812
     const/4 v0, 0x0
 
     return v0
@@ -206,13 +193,13 @@
     .end annotation
 
     .prologue
-    .line 2015
+    .line 1628
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;FF)Z
+.method public a(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)Z
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -220,12 +207,12 @@
             "Landroid/support/design/widget/CoordinatorLayout;",
             "TV;",
             "Landroid/view/View;",
-            "FF)Z"
+            ")Z"
         }
     .end annotation
 
     .prologue
-    .line 2455
+    .line 1754
     const/4 v0, 0x0
 
     return v0
@@ -244,30 +231,30 @@
     .end annotation
 
     .prologue
-    .line 2280
+    .line 1893
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public a(Landroid/view/View;Landroid/graphics/Rect;)Z
+.method public a(Landroid/view/MotionEvent;)Z
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(TV;",
-            "Landroid/graphics/Rect;",
+            "(",
+            "Landroid/view/MotionEvent;",
             ")Z"
         }
     .end annotation
 
     .prologue
-    .line 2553
+    .line 1647
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public a_(Landroid/view/View;)Z
+.method public a(Landroid/view/View;)Z
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -278,28 +265,10 @@
     .end annotation
 
     .prologue
-    .line 2118
+    .line 1725
     const/4 v0, 0x0
 
     return v0
-.end method
-
-.method public b(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;)Landroid/os/Parcelable;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/support/design/widget/CoordinatorLayout;",
-            "TV;)",
-            "Landroid/os/Parcelable;"
-        }
-    .end annotation
-
-    .prologue
-    .line 2535
-    sget-object v0, Landroid/view/View$BaseSavedState;->EMPTY_STATE:Landroid/view/AbsSavedState;
-
-    return-object v0
 .end method
 
 .method public b(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;I)V
@@ -313,44 +282,19 @@
     .end annotation
 
     .prologue
-    .line 2363
+    .line 1976
     return-void
 .end method
 
-.method public b(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 1
+.method public c()V
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(",
-            "Landroid/support/design/widget/CoordinatorLayout;",
-            "TV;",
-            "Landroid/view/MotionEvent;",
-            ")Z"
+            "()V"
         }
     .end annotation
 
     .prologue
-    .line 2038
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public b(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)Z
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/support/design/widget/CoordinatorLayout;",
-            "TV;",
-            "Landroid/view/View;",
-            ")Z"
-        }
-    .end annotation
-
-    .prologue
-    .line 2147
-    const/4 v0, 0x0
-
-    return v0
+    .line 1943
+    return-void
 .end method

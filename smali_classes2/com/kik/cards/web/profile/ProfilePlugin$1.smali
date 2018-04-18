@@ -1,11 +1,11 @@
 .class final Lcom/kik/cards/web/profile/ProfilePlugin$1;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/cards/web/profile/ProfilePlugin;->openProfile(Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/g;
+    value = Lcom/kik/cards/web/profile/ProfilePlugin;->openProfile(Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/h;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,9 +15,9 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
-        "Lkik/core/datatypes/l;",
+        "Lkik/core/datatypes/o;",
         ">;"
     }
 .end annotation
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 73
+    .line 68
     iput-object p1, p0, Lcom/kik/cards/web/profile/ProfilePlugin$1;->a:Lcom/kik/cards/web/profile/ProfilePlugin;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -46,27 +46,27 @@
     .locals 1
 
     .prologue
-    .line 73
-    check-cast p1, Lkik/core/datatypes/l;
+    .line 68
+    check-cast p1, Lkik/core/datatypes/o;
 
-    .line 1077
+    .line 1072
     iget-object v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin$1;->a:Lcom/kik/cards/web/profile/ProfilePlugin;
 
-    invoke-static {v0}, Lcom/kik/cards/web/profile/ProfilePlugin;->access$000(Lcom/kik/cards/web/profile/ProfilePlugin;)Lcom/kik/cards/web/f;
+    invoke-static {v0}, Lcom/kik/cards/web/profile/ProfilePlugin;->a(Lcom/kik/cards/web/profile/ProfilePlugin;)Lcom/kik/cards/web/f;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/kik/cards/web/f;->a()V
+    invoke-interface {v0}, Lcom/kik/cards/web/f;->b()V
 
-    .line 1078
+    .line 1073
     iget-object v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin$1;->a:Lcom/kik/cards/web/profile/ProfilePlugin;
 
-    invoke-static {v0, p1}, Lcom/kik/cards/web/profile/ProfilePlugin;->access$100(Lcom/kik/cards/web/profile/ProfilePlugin;Lkik/core/datatypes/l;)V
+    invoke-static {v0, p1}, Lcom/kik/cards/web/profile/ProfilePlugin;->a(Lcom/kik/cards/web/profile/ProfilePlugin;Lkik/core/datatypes/o;)V
 
-    .line 1079
-    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Object;)V
+    .line 1074
+    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Object;)V
 
-    .line 73
+    .line 68
     return-void
 .end method
 
@@ -74,7 +74,7 @@
     .locals 4
 
     .prologue
-    .line 88
+    .line 83
     instance-of v0, p1, Lkik/core/net/StanzaException;
 
     if-eqz v0, :cond_0
@@ -91,32 +91,32 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 89
-    const v0, 0x7f090260
+    .line 84
+    const v0, 0x7f0a024c
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 95
+    .line 90
     :goto_0
     iget-object v1, p0, Lcom/kik/cards/web/profile/ProfilePlugin$1;->a:Lcom/kik/cards/web/profile/ProfilePlugin;
 
-    invoke-static {v1}, Lcom/kik/cards/web/profile/ProfilePlugin;->access$000(Lcom/kik/cards/web/profile/ProfilePlugin;)Lcom/kik/cards/web/f;
+    invoke-static {v1}, Lcom/kik/cards/web/profile/ProfilePlugin;->a(Lcom/kik/cards/web/profile/ProfilePlugin;)Lcom/kik/cards/web/f;
 
     move-result-object v1
 
     invoke-interface {v1, v0}, Lcom/kik/cards/web/f;->c(Ljava/lang/String;)V
 
-    .line 96
-    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Throwable;)V
-
-    .line 97
-    return-void
+    .line 91
+    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Throwable;)V
 
     .line 92
+    return-void
+
+    .line 87
     :cond_0
-    const v0, 0x7f0900ef
+    const v0, 0x7f0a00ee
 
     const/4 v1, 0x1
 
@@ -126,7 +126,7 @@
 
     iget-object v3, p0, Lcom/kik/cards/web/profile/ProfilePlugin$1;->a:Lcom/kik/cards/web/profile/ProfilePlugin;
 
-    invoke-static {v3}, Lcom/kik/cards/web/profile/ProfilePlugin;->access$200(Lcom/kik/cards/web/profile/ProfilePlugin;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/kik/cards/web/profile/ProfilePlugin;->b(Lcom/kik/cards/web/profile/ProfilePlugin;)Ljava/lang/String;
 
     move-result-object v3
 

@@ -1,11 +1,11 @@
 .class final Lkik/android/chat/presentation/MediaTrayPresenterImpl$13;
-.super Lcom/kik/events/k;
+.super Landroid/support/v7/widget/GridLayoutManager$SpanSizeLookup;
 .source "SourceFile"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lkik/android/chat/presentation/MediaTrayPresenterImpl;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lkik/android/chat/presentation/MediaTrayPresenterImpl;->a(Ljava/util/List;ZLkik/core/datatypes/Message;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -13,125 +13,75 @@
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/kik/events/k",
-        "<",
-        "Ljava/lang/Boolean;",
-        ">;"
-    }
-.end annotation
-
 
 # instance fields
-.field final synthetic a:Lkik/android/chat/presentation/MediaTrayPresenterImpl;
+.field final synthetic b:I
+
+.field final synthetic c:Lkik/android/chat/presentation/MediaTrayPresenterImpl;
 
 
 # direct methods
-.method constructor <init>(Lkik/android/chat/presentation/MediaTrayPresenterImpl;)V
+.method constructor <init>(Lkik/android/chat/presentation/MediaTrayPresenterImpl;I)V
     .locals 0
 
     .prologue
-    .line 3686
-    iput-object p1, p0, Lkik/android/chat/presentation/MediaTrayPresenterImpl$13;->a:Lkik/android/chat/presentation/MediaTrayPresenterImpl;
+    .line 2637
+    iput-object p1, p0, Lkik/android/chat/presentation/MediaTrayPresenterImpl$13;->c:Lkik/android/chat/presentation/MediaTrayPresenterImpl;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    iput p2, p0, Lkik/android/chat/presentation/MediaTrayPresenterImpl$13;->b:I
+
+    invoke-direct {p0}, Landroid/support/v7/widget/GridLayoutManager$SpanSizeLookup;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic b(Ljava/lang/Object;)V
-    .locals 5
+.method public final a(I)I
+    .locals 1
 
     .prologue
-    .line 3686
-    check-cast p1, Ljava/lang/Boolean;
+    .line 2641
+    iget-object v0, p0, Lkik/android/chat/presentation/MediaTrayPresenterImpl$13;->c:Lkik/android/chat/presentation/MediaTrayPresenterImpl;
 
-    .line 4690
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-static {v0}, Lkik/android/chat/presentation/MediaTrayPresenterImpl;->G(Lkik/android/chat/presentation/MediaTrayPresenterImpl;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-le v0, p1, :cond_0
 
-    .line 4694
-    iget-object v0, p0, Lkik/android/chat/presentation/MediaTrayPresenterImpl$13;->a:Lkik/android/chat/presentation/MediaTrayPresenterImpl;
+    iget-object v0, p0, Lkik/android/chat/presentation/MediaTrayPresenterImpl$13;->c:Lkik/android/chat/presentation/MediaTrayPresenterImpl;
 
-    invoke-static {v0}, Lkik/android/chat/presentation/MediaTrayPresenterImpl;->ae(Lkik/android/chat/presentation/MediaTrayPresenterImpl;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    monitor-enter v1
-
-    .line 4695
-    :try_start_0
-    iget-object v0, p0, Lkik/android/chat/presentation/MediaTrayPresenterImpl$13;->a:Lkik/android/chat/presentation/MediaTrayPresenterImpl;
-
-    invoke-static {v0}, Lkik/android/chat/presentation/MediaTrayPresenterImpl;->af(Lkik/android/chat/presentation/MediaTrayPresenterImpl;)Lcom/nhaarman/supertooltips/a;
+    .line 2642
+    invoke-static {v0}, Lkik/android/chat/presentation/MediaTrayPresenterImpl;->G(Lkik/android/chat/presentation/MediaTrayPresenterImpl;)Ljava/util/List;
 
     move-result-object v0
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/kik/messagepath/model/Keyboards$SuggestedResponseItem;
+
+    invoke-static {v0}, Lcom/kik/util/bu;->a(Lcom/kik/messagepath/model/Keyboards$SuggestedResponseItem;)Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 4696
-    iget-object v0, p0, Lkik/android/chat/presentation/MediaTrayPresenterImpl$13;->a:Lkik/android/chat/presentation/MediaTrayPresenterImpl;
+    .line 2643
+    const/4 v0, 0x1
 
-    invoke-static {v0}, Lkik/android/chat/presentation/MediaTrayPresenterImpl;->af(Lkik/android/chat/presentation/MediaTrayPresenterImpl;)Lcom/nhaarman/supertooltips/a;
+    .line 2646
+    :goto_0
+    return v0
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/nhaarman/supertooltips/a;->a()V
-
-    .line 4699
     :cond_0
-    iget-object v0, p0, Lkik/android/chat/presentation/MediaTrayPresenterImpl$13;->a:Lkik/android/chat/presentation/MediaTrayPresenterImpl;
+    iget v0, p0, Lkik/android/chat/presentation/MediaTrayPresenterImpl$13;->b:I
 
-    iget-object v2, p0, Lkik/android/chat/presentation/MediaTrayPresenterImpl$13;->a:Lkik/android/chat/presentation/MediaTrayPresenterImpl;
-
-    iget-object v2, v2, Lkik/android/chat/presentation/MediaTrayPresenterImpl;->_tooltipViewLayout:Lcom/nhaarman/supertooltips/ToolTipRelativeLayout;
-
-    iget-object v3, p0, Lkik/android/chat/presentation/MediaTrayPresenterImpl$13;->a:Lkik/android/chat/presentation/MediaTrayPresenterImpl;
-
-    invoke-static {v3}, Lkik/android/chat/presentation/MediaTrayPresenterImpl;->ag(Lkik/android/chat/presentation/MediaTrayPresenterImpl;)Lcom/nhaarman/supertooltips/ToolTip;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lkik/android/chat/presentation/MediaTrayPresenterImpl$13;->a:Lkik/android/chat/presentation/MediaTrayPresenterImpl;
-
-    iget-object v4, v4, Lkik/android/chat/presentation/MediaTrayPresenterImpl;->_showSRButton:Landroid/view/View;
-
-    invoke-virtual {v2, v3, v4}, Lcom/nhaarman/supertooltips/ToolTipRelativeLayout;->a(Lcom/nhaarman/supertooltips/ToolTip;Landroid/view/View;)Lcom/nhaarman/supertooltips/a;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Lkik/android/chat/presentation/MediaTrayPresenterImpl;->a(Lkik/android/chat/presentation/MediaTrayPresenterImpl;Lcom/nhaarman/supertooltips/a;)Lcom/nhaarman/supertooltips/a;
-
-    .line 4700
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 4702
-    iget-object v0, p0, Lkik/android/chat/presentation/MediaTrayPresenterImpl$13;->a:Lkik/android/chat/presentation/MediaTrayPresenterImpl;
-
-    iget-object v0, v0, Lkik/android/chat/presentation/MediaTrayPresenterImpl;->_tooltipViewLayout:Lcom/nhaarman/supertooltips/ToolTipRelativeLayout;
-
-    invoke-virtual {v0}, Lcom/nhaarman/supertooltips/ToolTipRelativeLayout;->bringToFront()V
-
-    .line 3686
-    :cond_1
-    return-void
-
-    .line 4700
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
+    goto :goto_0
 .end method

@@ -1,9 +1,9 @@
 .class Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi23;
-.super Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi21;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/support/v4/media/MediaBrowserServiceCompatApi23$ServiceCompatProxy;
+.implements Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImpl;
 
 
 # annotations
@@ -18,6 +18,8 @@
 
 
 # instance fields
+.field private mServiceObj:Ljava/lang/Object;
+
 .field final synthetic this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
 
@@ -26,62 +28,54 @@
     .locals 0
 
     .prologue
-    .line 350
+    .line 139
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi23;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
-    invoke-direct {p0, p1}, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi21;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompat;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onCreate()V
+.method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
     .locals 1
 
     .prologue
-    .line 354
-    iget-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi23;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
+    .line 150
+    iget-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi23;->mServiceObj:Ljava/lang/Object;
 
-    invoke-static {v0, p0}, Landroid/support/v4/media/MediaBrowserServiceCompatApi23;->createService(Landroid/content/Context;Landroid/support/v4/media/MediaBrowserServiceCompatApi23$ServiceCompatProxy;)Ljava/lang/Object;
+    invoke-static {v0, p1}, Landroid/support/v4/media/MediaBrowserServiceCompatApi23;->onBind(Ljava/lang/Object;Landroid/content/Intent;)Landroid/os/IBinder;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public onCreate()V
+    .locals 4
+
+    .prologue
+    .line 144
+    invoke-static {}, Landroid/support/v4/media/MediaBrowserServiceCompatApi23;->createService()Ljava/lang/Object;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi23;->mServiceObj:Ljava/lang/Object;
 
-    .line 356
+    .line 145
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi23;->mServiceObj:Ljava/lang/Object;
 
-    invoke-static {v0}, Landroid/support/v4/media/MediaBrowserServiceCompatApi21;->onCreate(Ljava/lang/Object;)V
+    new-instance v1, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImplApi23;
 
-    .line 357
-    return-void
-.end method
+    iget-object v2, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi23;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
-.method public onLoadItem(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ResultWrapper;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ResultWrapper",
-            "<",
-            "Landroid/os/Parcel;",
-            ">;)V"
-        }
-    .end annotation
+    const/4 v3, 0x0
 
-    .prologue
-    .line 362
-    new-instance v0, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi23$1;
+    invoke-direct {v1, v2, v3}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImplApi23;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompat;Landroid/support/v4/media/MediaBrowserServiceCompat$1;)V
 
-    invoke-direct {v0, p0, p1, p2}, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi23$1;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi23;Ljava/lang/Object;Landroid/support/v4/media/MediaBrowserServiceCompatApi21$ResultWrapper;)V
+    invoke-static {v0, v1}, Landroid/support/v4/media/MediaBrowserServiceCompatApi23;->onCreate(Ljava/lang/Object;Landroid/support/v4/media/MediaBrowserServiceCompatApi23$ServiceImplApi23;)V
 
-    .line 380
-    iget-object v1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi23;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
-
-    invoke-virtual {v1, p1, v0}, Landroid/support/v4/media/MediaBrowserServiceCompat;->onLoadItem(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserServiceCompat$Result;)V
-
-    .line 381
+    .line 146
     return-void
 .end method

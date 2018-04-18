@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 438
+    .line 425
     iput-object p1, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$4;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 4
 
     .prologue
-    .line 442
+    .line 429
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$4;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/VideoTrimmingFragment;->_videoKeyFrameView:Lkik/android/widget/VideoKeyFrameView;
@@ -53,7 +53,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 443
+    .line 430
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$4;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/VideoTrimmingFragment;->_videoView:Landroid/widget/VideoView;
@@ -80,7 +80,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/VideoView;->seekTo(I)V
 
-    .line 445
+    .line 432
     :cond_0
     return-void
 .end method

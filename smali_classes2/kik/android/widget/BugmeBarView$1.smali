@@ -72,7 +72,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f09020a
+    const v1, 0x7f0a01f6
 
     .line 58
     invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikDialogFragment$a;->b(I)Lkik/android/chat/fragment/KikDialogFragment$a;
@@ -93,7 +93,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f09044f
+    const v1, 0x7f0a043b
 
     new-instance v2, Lkik/android/widget/BugmeBarView$1$2;
 
@@ -104,7 +104,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0903d7
+    const v1, 0x7f0a03c3
 
     new-instance v2, Lkik/android/widget/BugmeBarView$1$1;
 
@@ -126,7 +126,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
 
     .line 92
     :goto_0

@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 407
+    .line 399
     iput-object p1, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$9;->a:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +42,14 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 411
+    .line 403
     iget-object v0, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$9;->a:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/ScanCodeTabFragment;->_viewPager:Lkik/android/widget/VelocityControlledViewPager;
 
     invoke-virtual {v0, v3}, Lkik/android/widget/VelocityControlledViewPager;->a(Z)V
 
-    .line 412
+    .line 404
     const/4 v0, 0x3
 
     new-array v0, v0, [Landroid/view/View;
@@ -78,6 +78,6 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
 
-    .line 413
+    .line 405
     return-void
 .end method

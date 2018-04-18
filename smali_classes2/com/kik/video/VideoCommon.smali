@@ -61,57 +61,57 @@
 
     const/4 v4, 0x0
 
-    .line 5441
+    .line 5396
     new-array v0, v7, [Ljava/lang/String;
 
-    const-string v1, "\n\u001bvideo/v1/video_common.proto\u0012\u000fcommon.video.v1\u001a\u0012common_model.proto\u001a\u0019protobuf_validation.proto\u001a\u001fgoogle/protobuf/timestamp.proto\"n\n\u0007ConvoId\u00126\n\none_to_one\u0018\u0001 \u0001(\u000b2 .common.video.v1.OneToOneConvoIdH\u0000\u0012#\n\u0005group\u0018\u0002 \u0001(\u000b2\u0012.common.XiGroupJidH\u0000B\u0006\n\u0004kind\"G\n\u000fOneToOneConvoId\u00124\n\u0005users\u0018\u0001 \u0003(\u000b2\u0015.common.XiBareUserJidB\u000e\u00ca\u009d%\n\u0008\u0001x\u0002\u0080\u0001\u0002\u0088\u0001\u0000\"\u00fb\u0002\n\u000fConvoVideoState\u00122\n\u0008convo_id\u0018\u0001 \u0001(\u000b2\u0018.common.video.v1.ConvoIdB\u0006\u00ca\u009d%\u0002\u0008\u0001\u0012L\n\u000buser_states\u0018\u0002"
+    const-string v1, "\n\u001bvideo/v1/video_common.proto\u0012\u000fcommon.video.v1\u001a\u0012common_model.proto\u001a\u0019protobuf_validation.proto\u001a\u001fgoogle/protobuf/timestamp.proto\"n\n\u0007ConvoId\u00126\n\none_to_one\u0018\u0001 \u0001(\u000b2 .common.video.v1.OneToOneConvoIdH\u0000\u0012#\n\u0005group\u0018\u0002 \u0001(\u000b2\u0012.common.XiGroupJidH\u0000B\u0006\n\u0004kind\"D\n\u000fOneToOneConvoId\u00121\n\u0005users\u0018\u0001 \u0003(\u000b2\u0015.common.XiBareUserJidB\u000b\u00ca\u009d%\u0007\u0008\u0001x\u0002\u0080\u0001\u0002\"\u00f3\u0002\n\u000fConvoVideoState\u00122\n\u0008convo_id\u0018\u0001 \u0001(\u000b2\u0018.common.video.v1.ConvoIdB\u0006\u00ca\u009d%\u0002\u0008\u0001\u0012L\n\u000buser_states\u0018\u0002 \u0003("
 
     aput-object v1, v0, v4
 
-    const-string v1, " \u0003(\u000b2*.common.video.v1.ConvoVideoState.UserStateB\u000b\u00ca\u009d%\u0007\u0008\u0000x\u0000\u0080\u0001d\u00125\n\ttimestamp\u0018\u0003 \u0001(\u000b2\u001a.google.protobuf.TimestampB\u0006\u00ca\u009d%\u0002\u0008\u0001\u001a\u00ae\u0001\n\tUserState\u0012+\n\u0004user\u0018\u0001 \u0001(\u000b2\u0015.common.XiBareUserJidB\u0006\u00ca\u009d%\u0002\u0008\u0001\u0012?\n\u0005state\u0018\u0002 \u0001(\u000e20.common.video.v1.ConvoVideoState.UserState.State\"3\n\u0005State\u0012\u000b\n\u0007NOT_SET\u0010\u0000\u0012\u000e\n\nCONNECTING\u0010\u0005\u0012\r\n\tCONNECTED\u0010\n\"b\n\u0018ConferenceConnectionInfo\u0012\u0017\n\u0004host\u0018\u0001 \u0001(\tB\t\u00ca\u009d%\u0005\u0008\u00010\u0080\u0008\u0012\u000c\n\u0004port\u0018\u0002 \u0001(\u0005\u0012\u001f\n\rconference_id\u0018\u0003 \u0001(\tB\u0008\u00ca\u009d%\u0004\u0008\u00010 \":\n\u001aMed"
+    const-string v1, "\u000b2*.common.video.v1.ConvoVideoState.UserStateB\u000b\u00ca\u009d%\u0007\u0008\u0000x\u0000\u0080\u0001d\u0012-\n\ttimestamp\u0018\u0003 \u0001(\u000b2\u001a.google.protobuf.Timestamp\u001a\u00ae\u0001\n\tUserState\u0012+\n\u0004user\u0018\u0001 \u0001(\u000b2\u0015.common.XiBareUserJidB\u0006\u00ca\u009d%\u0002\u0008\u0001\u0012?\n\u0005state\u0018\u0002 \u0001(\u000e20.common.video.v1.ConvoVideoState.UserState.State\"3\n\u0005State\u0012\u000b\n\u0007NOT_SET\u0010\u0000\u0012\u000e\n\nCONNECTING\u0010\u0005\u0012\r\n\tCONNECTED\u0010\n\"b\n\u0018ConferenceConnectionInfo\u0012\u0017\n\u0004host\u0018\u0001 \u0001(\tB\t\u00ca\u009d%\u0005\u0008\u00010\u0080\u0008\u0012\u000c\n\u0004port\u0018\u0002 \u0001(\u0005\u0012\u001f\n\rconference_id\u0018\u0003 \u0001(\tB\u0008\u00ca\u009d%\u0004\u0008\u00010 \":\n\u001aMediaServerCon"
 
     aput-object v1, v0, v5
 
-    const-string v1, "iaServerConnectionToken\u0012\u001c\n\u0007payload\u0018\u0001 \u0001(\u000cB\u000b\u00ca\u009d%\u0007\u0008\u0001(\u00010\u0080(B[\n\rcom.kik.videoZJgithub.com/kikinteractive/xiphias-model-common/generated/go/video/v1;videob\u0006proto3"
+    const-string v1, "nectionToken\u0012\u001c\n\u0007payload\u0018\u0001 \u0001(\u000cB\u000b\u00ca\u009d%\u0007\u0008\u0001(\u00010\u0080(B\u000f\n\rcom.kik.videob\u0006proto3"
 
     aput-object v1, v0, v6
 
-    .line 5467
+    .line 5420
     new-instance v1, Lcom/kik/video/VideoCommon$1;
 
     invoke-direct {v1}, Lcom/kik/video/VideoCommon$1;-><init>()V
 
-    .line 5475
+    .line 5428
     new-array v2, v7, [Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 5478
+    .line 5431
     invoke-static {}, Lcom/kik/ximodel/CommonModelProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v3
 
     aput-object v3, v2, v4
 
-    .line 5479
+    .line 5432
     invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation;->a()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v3
 
     aput-object v3, v2, v5
 
-    .line 5480
+    .line 5433
     invoke-static {}, Lcom/google/protobuf/TimestampProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v3
 
     aput-object v3, v2, v6
 
-    .line 5476
+    .line 5429
     invoke-static {v0, v2, v1}, Lcom/google/protobuf/Descriptors$FileDescriptor;->internalBuildGeneratedFileFrom([Ljava/lang/String;[Lcom/google/protobuf/Descriptors$FileDescriptor;Lcom/google/protobuf/Descriptors$FileDescriptor$InternalDescriptorAssigner;)V
 
-    .line 6436
+    .line 6391
     sget-object v0, Lcom/kik/video/VideoCommon;->m:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 5483
+    .line 5436
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getMessageTypes()Ljava/util/List;
 
     move-result-object v0
@@ -124,7 +124,7 @@
 
     sput-object v0, Lcom/kik/video/VideoCommon;->a:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 5484
+    .line 5437
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/video/VideoCommon;->a:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -147,10 +147,10 @@
 
     sput-object v0, Lcom/kik/video/VideoCommon;->b:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 7436
+    .line 7391
     sget-object v0, Lcom/kik/video/VideoCommon;->m:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 5489
+    .line 5442
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getMessageTypes()Ljava/util/List;
 
     move-result-object v0
@@ -163,7 +163,7 @@
 
     sput-object v0, Lcom/kik/video/VideoCommon;->c:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 5490
+    .line 5443
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/video/VideoCommon;->c:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -178,10 +178,10 @@
 
     sput-object v0, Lcom/kik/video/VideoCommon;->d:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 8436
+    .line 8391
     sget-object v0, Lcom/kik/video/VideoCommon;->m:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 5495
+    .line 5448
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getMessageTypes()Ljava/util/List;
 
     move-result-object v0
@@ -194,7 +194,7 @@
 
     sput-object v0, Lcom/kik/video/VideoCommon;->e:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 5496
+    .line 5449
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/video/VideoCommon;->e:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -217,10 +217,10 @@
 
     sput-object v0, Lcom/kik/video/VideoCommon;->f:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 5500
+    .line 5453
     sget-object v0, Lcom/kik/video/VideoCommon;->e:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 5501
+    .line 5454
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$Descriptor;->getNestedTypes()Ljava/util/List;
 
     move-result-object v0
@@ -233,7 +233,7 @@
 
     sput-object v0, Lcom/kik/video/VideoCommon;->g:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 5502
+    .line 5455
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/video/VideoCommon;->g:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -252,10 +252,10 @@
 
     sput-object v0, Lcom/kik/video/VideoCommon;->h:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 9436
+    .line 9391
     sget-object v0, Lcom/kik/video/VideoCommon;->m:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 5507
+    .line 5460
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getMessageTypes()Ljava/util/List;
 
     move-result-object v0
@@ -268,7 +268,7 @@
 
     sput-object v0, Lcom/kik/video/VideoCommon;->i:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 5508
+    .line 5461
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/video/VideoCommon;->i:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -291,10 +291,10 @@
 
     sput-object v0, Lcom/kik/video/VideoCommon;->j:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 10436
+    .line 10391
     sget-object v0, Lcom/kik/video/VideoCommon;->m:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 5513
+    .line 5466
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getMessageTypes()Ljava/util/List;
 
     move-result-object v0
@@ -309,7 +309,7 @@
 
     sput-object v0, Lcom/kik/video/VideoCommon;->k:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 5514
+    .line 5467
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/video/VideoCommon;->k:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -324,32 +324,32 @@
 
     sput-object v0, Lcom/kik/video/VideoCommon;->l:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 5519
+    .line 5472
     invoke-static {}, Lcom/google/protobuf/ExtensionRegistry;->newInstance()Lcom/google/protobuf/ExtensionRegistry;
 
     move-result-object v0
 
-    .line 5520
+    .line 5473
     sget-object v1, Lcom/kik/protovalidation/ProtobufValidation;->a:Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;
 
     invoke-virtual {v0, v1}, Lcom/google/protobuf/ExtensionRegistry;->add(Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;)V
 
-    .line 5521
+    .line 5474
     sget-object v1, Lcom/kik/video/VideoCommon;->m:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 5522
+    .line 5475
     invoke-static {v1, v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->internalUpdateFileDescriptor(Lcom/google/protobuf/Descriptors$FileDescriptor;Lcom/google/protobuf/ExtensionRegistry;)V
 
-    .line 5523
+    .line 5476
     invoke-static {}, Lcom/kik/ximodel/CommonModelProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 5524
+    .line 5477
     invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation;->a()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 5525
+    .line 5478
     invoke-static {}, Lcom/google/protobuf/TimestampProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 5526
+    .line 5479
     return-void
 .end method
 
@@ -357,7 +357,7 @@
     .locals 1
 
     .prologue
-    .line 5436
+    .line 5391
     sget-object v0, Lcom/kik/video/VideoCommon;->m:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     return-object v0

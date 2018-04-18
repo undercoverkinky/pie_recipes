@@ -1,132 +1,436 @@
-.class public final Lcom/google/android/gms/internal/zzdo;
-.super Lcom/google/android/gms/internal/zzed;
+.class public Lcom/google/android/gms/internal/zzdo;
+.super Lcom/google/android/gms/ads/formats/NativeAppInstallAd;
 
 
-# static fields
-.field private static final zzajk:Ljava/lang/Object;
+# annotations
+.annotation runtime Lcom/google/android/gms/internal/zzig;
+.end annotation
 
-.field private static volatile zzef:Ljava/lang/Long;
+
+# instance fields
+.field private final zzBx:Lcom/google/android/gms/internal/zzdn;
+
+.field private final zzBy:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/google/android/gms/ads/formats/NativeAd$Image;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final zzBz:Lcom/google/android/gms/internal/zzdk;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lcom/google/android/gms/internal/zzdn;)V
+    .locals 4
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Lcom/google/android/gms/ads/formats/NativeAppInstallAd;-><init>()V
 
-    sput-object v0, Lcom/google/android/gms/internal/zzdo;->zzef:Ljava/lang/Long;
+    new-instance v0, Ljava/util/ArrayList;
 
-    new-instance v0, Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzdo;->zzBy:Ljava/util/List;
 
-    sput-object v0, Lcom/google/android/gms/internal/zzdo;->zzajk:Ljava/lang/Object;
+    iput-object p1, p0, Lcom/google/android/gms/internal/zzdo;->zzBx:Lcom/google/android/gms/internal/zzdn;
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdo;->zzBx:Lcom/google/android/gms/internal/zzdn;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/zzdn;->getImages()Ljava/util/List;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Lcom/google/android/gms/internal/zzdo;->zzd(Ljava/lang/Object;)Lcom/google/android/gms/internal/zzdj;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/zzdo;->zzBy:Ljava/util/List;
+
+    new-instance v3, Lcom/google/android/gms/internal/zzdk;
+
+    invoke-direct {v3, v1}, Lcom/google/android/gms/internal/zzdk;-><init>(Lcom/google/android/gms/internal/zzdj;)V
+
+    invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "Failed to get image."
+
+    invoke-static {v1, v0}, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzb(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    const/4 v1, 0x0
+
+    :try_start_1
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdo;->zzBx:Lcom/google/android/gms/internal/zzdn;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/zzdn;->zzeN()Lcom/google/android/gms/internal/zzdj;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_2
+
+    new-instance v0, Lcom/google/android/gms/internal/zzdk;
+
+    invoke-direct {v0, v2}, Lcom/google/android/gms/internal/zzdk;-><init>(Lcom/google/android/gms/internal/zzdj;)V
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
+
+    :goto_1
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzdo;->zzBz:Lcom/google/android/gms/internal/zzdk;
 
     return-void
-.end method
 
-.method public constructor <init>(Lcom/google/android/gms/internal/zzdc;Ljava/lang/String;Ljava/lang/String;Lcom/google/android/gms/internal/zzax;II)V
-    .locals 7
+    :catch_1
+    move-exception v0
 
-    const/16 v6, 0x2c
+    const-string v2, "Failed to get icon."
 
-    move-object v0, p0
+    invoke-static {v2, v0}, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzb(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-object v1, p1
+    :cond_2
+    move-object v0, v1
 
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move v5, p5
-
-    invoke-direct/range {v0 .. v6}, Lcom/google/android/gms/internal/zzed;-><init>(Lcom/google/android/gms/internal/zzdc;Ljava/lang/String;Ljava/lang/String;Lcom/google/android/gms/internal/zzax;II)V
-
-    return-void
+    goto :goto_1
 .end method
 
 
 # virtual methods
-.method protected final zzar()V
-    .locals 4
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/IllegalAccessException;,
-            Ljava/lang/reflect/InvocationTargetException;
-        }
-    .end annotation
-
-    sget-object v0, Lcom/google/android/gms/internal/zzdo;->zzef:Ljava/lang/Long;
-
-    if-nez v0, :cond_1
-
-    sget-object v1, Lcom/google/android/gms/internal/zzdo;->zzajk:Ljava/lang/Object;
-
-    monitor-enter v1
+.method public destroy()V
+    .locals 2
 
     :try_start_0
-    sget-object v0, Lcom/google/android/gms/internal/zzdo;->zzef:Ljava/lang/Long;
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdo;->zzBx:Lcom/google/android/gms/internal/zzdn;
 
-    if-nez v0, :cond_0
+    invoke-interface {v0}, Lcom/google/android/gms/internal/zzdn;->destroy()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzdo;->zzajw:Ljava/lang/reflect/Method;
+    :goto_0
+    return-void
 
-    const/4 v2, 0x0
+    :catch_0
+    move-exception v0
 
-    const/4 v3, 0x0
+    const-string v1, "Failed to destroy"
 
-    new-array v3, v3, [Ljava/lang/Object;
+    invoke-static {v1, v0}, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzb(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {v0, v2, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    goto :goto_0
+.end method
+
+.method public getBody()Ljava/lang/CharSequence;
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdo;->zzBx:Lcom/google/android/gms/internal/zzdn;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/zzdn;->getBody()Ljava/lang/String;
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Long;
+    :goto_0
+    return-object v0
 
-    sput-object v0, Lcom/google/android/gms/internal/zzdo;->zzef:Ljava/lang/Long;
+    :catch_0
+    move-exception v0
+
+    const-string v1, "Failed to get body."
+
+    invoke-static {v1, v0}, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzb(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public getCallToAction()Ljava/lang/CharSequence;
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdo;->zzBx:Lcom/google/android/gms/internal/zzdn;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/zzdn;->getCallToAction()Ljava/lang/String;
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "Failed to get call to action."
+
+    invoke-static {v1, v0}, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzb(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public getExtras()Landroid/os/Bundle;
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdo;->zzBx:Lcom/google/android/gms/internal/zzdn;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/zzdn;->getExtras()Landroid/os/Bundle;
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "Failed to get extras"
+
+    invoke-static {v1, v0}, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzb(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public getHeadline()Ljava/lang/CharSequence;
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdo;->zzBx:Lcom/google/android/gms/internal/zzdn;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/zzdn;->getHeadline()Ljava/lang/String;
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "Failed to get headline."
+
+    invoke-static {v1, v0}, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzb(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public getIcon()Lcom/google/android/gms/ads/formats/NativeAd$Image;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdo;->zzBz:Lcom/google/android/gms/internal/zzdk;
+
+    return-object v0
+.end method
+
+.method public getImages()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/google/android/gms/ads/formats/NativeAd$Image;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdo;->zzBy:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public getPrice()Ljava/lang/CharSequence;
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdo;->zzBx:Lcom/google/android/gms/internal/zzdn;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/zzdn;->getPrice()Ljava/lang/String;
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "Failed to get price."
+
+    invoke-static {v1, v0}, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzb(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public getStarRating()Ljava/lang/Double;
+    .locals 6
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    iget-object v1, p0, Lcom/google/android/gms/internal/zzdo;->zzBx:Lcom/google/android/gms/internal/zzdn;
+
+    invoke-interface {v1}, Lcom/google/android/gms/internal/zzdn;->getStarRating()D
+
+    move-result-wide v2
+
+    const-wide/high16 v4, -0x4010000000000000L    # -1.0
+
+    cmpl-double v1, v2, v4
+
+    if-nez v1, :cond_0
+
+    :goto_0
+    return-object v0
 
     :cond_0
-    monitor-exit v1
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_1
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzdo;->zzajn:Lcom/google/android/gms/internal/zzax;
+    move-result-object v0
 
-    monitor-enter v1
+    goto :goto_0
 
-    :try_start_1
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzdo;->zzajn:Lcom/google/android/gms/internal/zzax;
+    :catch_0
+    move-exception v1
 
-    sget-object v2, Lcom/google/android/gms/internal/zzdo;->zzef:Ljava/lang/Long;
+    const-string v2, "Failed to get star rating."
 
-    iput-object v2, v0, Lcom/google/android/gms/internal/zzax;->zzef:Ljava/lang/Long;
+    invoke-static {v2, v1}, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzb(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    goto :goto_0
+.end method
 
-    return-void
+.method public getStore()Ljava/lang/CharSequence;
+    .locals 2
 
-    :catchall_0
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdo;->zzBx:Lcom/google/android/gms/internal/zzdn;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/zzdn;->getStore()Ljava/lang/String;
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :catch_0
     move-exception v0
 
-    :try_start_2
-    monitor-exit v1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    const-string v1, "Failed to get store"
 
-    throw v0
+    invoke-static {v1, v0}, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzb(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :catchall_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method protected synthetic zzbb()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzdo;->zzeO()Lcom/google/android/gms/dynamic/zzd;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method zzd(Ljava/lang/Object;)Lcom/google/android/gms/internal/zzdj;
+    .locals 1
+
+    instance-of v0, p1, Landroid/os/IBinder;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Landroid/os/IBinder;
+
+    invoke-static {p1}, Lcom/google/android/gms/internal/zzdj$zza;->zzy(Landroid/os/IBinder;)Lcom/google/android/gms/internal/zzdj;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method protected zzeO()Lcom/google/android/gms/dynamic/zzd;
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdo;->zzBx:Lcom/google/android/gms/internal/zzdn;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/zzdn;->zzeO()Lcom/google/android/gms/dynamic/zzd;
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :catch_0
     move-exception v0
 
-    :try_start_3
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    const-string v1, "Failed to retrieve native ad engine."
 
-    throw v0
+    invoke-static {v1, v0}, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzb(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

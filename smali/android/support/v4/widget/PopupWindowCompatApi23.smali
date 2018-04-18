@@ -3,18 +3,12 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x17
-.end annotation
-
-
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 25
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +18,7 @@
     .locals 1
 
     .prologue
-    .line 32
+    .line 28
     invoke-virtual {p0}, Landroid/widget/PopupWindow;->getOverlapAnchor()Z
 
     move-result v0
@@ -36,7 +30,7 @@
     .locals 1
 
     .prologue
-    .line 40
+    .line 36
     invoke-virtual {p0}, Landroid/widget/PopupWindow;->getWindowLayoutType()I
 
     move-result v0
@@ -48,10 +42,10 @@
     .locals 0
 
     .prologue
-    .line 28
+    .line 24
     invoke-virtual {p0, p1}, Landroid/widget/PopupWindow;->setOverlapAnchor(Z)V
 
-    .line 29
+    .line 25
     return-void
 .end method
 
@@ -59,9 +53,9 @@
     .locals 0
 
     .prologue
-    .line 36
+    .line 32
     invoke-virtual {p0, p1}, Landroid/widget/PopupWindow;->setWindowLayoutType(I)V
 
-    .line 37
+    .line 33
     return-void
 .end method

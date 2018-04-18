@@ -15,5 +15,8 @@
 
 
 # virtual methods
-.method public abstract b(Landroid/support/design/widget/ValueAnimatorCompat;)V
+.method public abstract a()V
+.end method
+
+.method public abstract b()V
 .end method

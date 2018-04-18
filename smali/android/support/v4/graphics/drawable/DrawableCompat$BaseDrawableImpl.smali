@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 66
+    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
     .locals 0
 
     .prologue
-    .line 126
+    .line 124
     return-void
 .end method
 
@@ -42,28 +42,17 @@
     .locals 1
 
     .prologue
-    .line 130
+    .line 128
     const/4 v0, 0x0
 
     return v0
-.end method
-
-.method public clearColorFilter(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
-
-    .prologue
-    .line 140
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->clearColorFilter()V
-
-    .line 141
-    return-void
 .end method
 
 .method public getAlpha(Landroid/graphics/drawable/Drawable;)I
     .locals 1
 
     .prologue
-    .line 121
+    .line 119
     const/4 v0, 0x0
 
     return v0
@@ -73,7 +62,7 @@
     .locals 1
 
     .prologue
-    .line 135
+    .line 133
     const/4 v0, 0x0
 
     return-object v0
@@ -83,7 +72,7 @@
     .locals 1
 
     .prologue
-    .line 116
+    .line 114
     const/4 v0, 0x0
 
     return v0
@@ -99,10 +88,10 @@
     .end annotation
 
     .prologue
-    .line 147
+    .line 140
     invoke-static {p1, p2, p3, p4, p5}, Landroid/support/v4/graphics/drawable/DrawableCompatBase;->inflate(Landroid/graphics/drawable/Drawable;Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
 
-    .line 148
+    .line 141
     return-void
 .end method
 
@@ -110,7 +99,7 @@
     .locals 1
 
     .prologue
-    .line 77
+    .line 76
     const/4 v0, 0x0
 
     return v0
@@ -120,7 +109,7 @@
     .locals 0
 
     .prologue
-    .line 69
+    .line 68
     return-void
 .end method
 
@@ -128,7 +117,7 @@
     .locals 0
 
     .prologue
-    .line 73
+    .line 72
     return-void
 .end method
 
@@ -136,7 +125,7 @@
     .locals 0
 
     .prologue
-    .line 82
+    .line 81
     return-void
 .end method
 
@@ -144,28 +133,26 @@
     .locals 0
 
     .prologue
-    .line 86
+    .line 85
     return-void
 .end method
 
-.method public setLayoutDirection(Landroid/graphics/drawable/Drawable;I)Z
-    .locals 1
+.method public setLayoutDirection(Landroid/graphics/drawable/Drawable;I)V
+    .locals 0
 
     .prologue
-    .line 111
-    const/4 v0, 0x0
-
-    return v0
+    .line 110
+    return-void
 .end method
 
 .method public setTint(Landroid/graphics/drawable/Drawable;I)V
     .locals 0
 
     .prologue
-    .line 90
+    .line 89
     invoke-static {p1, p2}, Landroid/support/v4/graphics/drawable/DrawableCompatBase;->setTint(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 91
+    .line 90
     return-void
 .end method
 
@@ -173,10 +160,10 @@
     .locals 0
 
     .prologue
-    .line 95
+    .line 94
     invoke-static {p1, p2}, Landroid/support/v4/graphics/drawable/DrawableCompatBase;->setTintList(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
-    .line 96
+    .line 95
     return-void
 .end method
 
@@ -184,10 +171,10 @@
     .locals 0
 
     .prologue
-    .line 100
+    .line 99
     invoke-static {p1, p2}, Landroid/support/v4/graphics/drawable/DrawableCompatBase;->setTintMode(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
 
-    .line 101
+    .line 100
     return-void
 .end method
 
@@ -195,7 +182,7 @@
     .locals 1
 
     .prologue
-    .line 105
+    .line 104
     invoke-static {p1}, Landroid/support/v4/graphics/drawable/DrawableCompatBase;->wrapForTinting(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0

@@ -25,10 +25,10 @@
     .locals 3
 
     .prologue
-    .line 1522
+    .line 1507
     invoke-direct {p0}, Landroid/support/v4/widget/SlidingPaneLayout$SlidingPanelLayoutImplBase;-><init>()V
 
-    .line 1524
+    .line 1509
     :try_start_0
     const-class v0, Landroid/view/View;
 
@@ -44,7 +44,7 @@
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1529
+    .line 1514
     :goto_0
     :try_start_1
     const-class v0, Landroid/view/View;
@@ -57,7 +57,7 @@
 
     iput-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$SlidingPanelLayoutImplJB;->mRecreateDisplayList:Ljava/lang/reflect/Field;
 
-    .line 1530
+    .line 1515
     iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$SlidingPanelLayoutImplJB;->mRecreateDisplayList:Ljava/lang/reflect/Field;
 
     const/4 v1, 0x1
@@ -66,15 +66,15 @@
     :try_end_1
     .catch Ljava/lang/NoSuchFieldException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 1534
+    .line 1519
     :goto_1
     return-void
 
-    .line 1525
+    .line 1510
     :catch_0
     move-exception v0
 
-    .line 1526
+    .line 1511
     const-string v1, "SlidingPaneLayout"
 
     const-string v2, "Couldn\'t fetch getDisplayList method; dimming won\'t work right."
@@ -83,11 +83,11 @@
 
     goto :goto_0
 
-    .line 1531
+    .line 1516
     :catch_1
     move-exception v0
 
-    .line 1532
+    .line 1517
     const-string v1, "SlidingPaneLayout"
 
     const-string v2, "Couldn\'t fetch mRecreateDisplayList field; dimming will be slow."
@@ -103,7 +103,7 @@
     .locals 3
 
     .prologue
-    .line 1538
+    .line 1523
     iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$SlidingPanelLayoutImplJB;->mGetDisplayList:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
@@ -112,7 +112,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1540
+    .line 1525
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$SlidingPanelLayoutImplJB;->mRecreateDisplayList:Ljava/lang/reflect/Field;
 
@@ -120,7 +120,7 @@
 
     invoke-virtual {v0, p2, v1}, Ljava/lang/reflect/Field;->setBoolean(Ljava/lang/Object;Z)V
 
-    .line 1541
+    .line 1526
     iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$SlidingPanelLayoutImplJB;->mGetDisplayList:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
@@ -129,19 +129,19 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1550
+    .line 1535
     :goto_0
     invoke-super {p0, p1, p2}, Landroid/support/v4/widget/SlidingPaneLayout$SlidingPanelLayoutImplBase;->invalidateChildRegion(Landroid/support/v4/widget/SlidingPaneLayout;Landroid/view/View;)V
 
-    .line 1551
+    .line 1536
     :goto_1
     return-void
 
-    .line 1542
+    .line 1527
     :catch_0
     move-exception v0
 
-    .line 1543
+    .line 1528
     const-string v1, "SlidingPaneLayout"
 
     const-string v2, "Error refreshing display list state"
@@ -150,7 +150,7 @@
 
     goto :goto_0
 
-    .line 1547
+    .line 1532
     :cond_0
     invoke-virtual {p2}, Landroid/view/View;->invalidate()V
 

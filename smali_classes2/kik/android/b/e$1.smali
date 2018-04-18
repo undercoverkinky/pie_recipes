@@ -1,5 +1,5 @@
 .class final Lkik/android/b/e$1;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Ljava/lang/Boolean;",
         ">;"
@@ -43,7 +43,7 @@
 
     iput-object p3, p0, Lkik/android/b/e$1;->b:Ljava/lang/String;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -71,11 +71,11 @@
 
     iget-object v1, p0, Lkik/android/b/e$1;->c:Lkik/android/b/e;
 
-    invoke-static {v1}, Lkik/android/b/e;->a(Lkik/android/b/e;)Lkik/core/datatypes/aa;
+    invoke-static {v1}, Lkik/android/b/e;->a(Lkik/android/b/e;)Lkik/core/datatypes/ad;
 
     move-result-object v1
 
-    iget-object v1, v1, Lkik/core/datatypes/aa;->c:Ljava/lang/String;
+    iget-object v1, v1, Lkik/core/datatypes/ad;->c:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -83,11 +83,11 @@
 
     iget-object v3, p0, Lkik/android/b/e$1;->c:Lkik/android/b/e;
 
-    invoke-static {v3}, Lkik/android/b/e;->a(Lkik/android/b/e;)Lkik/core/datatypes/aa;
+    invoke-static {v3}, Lkik/android/b/e;->a(Lkik/android/b/e;)Lkik/core/datatypes/ad;
 
     move-result-object v3
 
-    iget-object v3, v3, Lkik/core/datatypes/aa;->d:Ljava/lang/String;
+    iget-object v3, v3, Lkik/core/datatypes/ad;->d:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -101,11 +101,11 @@
 
     iget-object v3, p0, Lkik/android/b/e$1;->c:Lkik/android/b/e;
 
-    invoke-static {v3}, Lkik/android/b/e;->a(Lkik/android/b/e;)Lkik/core/datatypes/aa;
+    invoke-static {v3}, Lkik/android/b/e;->a(Lkik/android/b/e;)Lkik/core/datatypes/ad;
 
     move-result-object v3
 
-    iget-object v3, v3, Lkik/core/datatypes/aa;->e:Ljava/lang/String;
+    iget-object v3, v3, Lkik/core/datatypes/ad;->e:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -117,11 +117,11 @@
 
     iget-object v3, p0, Lkik/android/b/e$1;->c:Lkik/android/b/e;
 
-    invoke-static {v3}, Lkik/android/b/e;->a(Lkik/android/b/e;)Lkik/core/datatypes/aa;
+    invoke-static {v3}, Lkik/android/b/e;->a(Lkik/android/b/e;)Lkik/core/datatypes/ad;
 
     move-result-object v3
 
-    iget-object v3, v3, Lkik/core/datatypes/aa;->f:Ljava/lang/String;
+    iget-object v3, v3, Lkik/core/datatypes/ad;->f:Ljava/lang/String;
 
     invoke-direct {v0, v1, v2, v3}, Lcom/kik/cards/util/UserDataParcelable;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -145,11 +145,11 @@
     .line 1124
     iget-object v0, p0, Lkik/android/b/e$1;->c:Lkik/android/b/e;
 
-    invoke-static {v0}, Lkik/android/b/e;->d(Lkik/android/b/e;)Lcom/kik/cards/web/h;
+    invoke-static {v0}, Lkik/android/b/e;->d(Lkik/android/b/e;)Lcom/kik/cards/web/i;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/kik/cards/web/h;->getMetadata()Lcom/kik/events/Promise;
+    invoke-interface {v0}, Lcom/kik/cards/web/i;->a()Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -157,7 +157,7 @@
 
     invoke-direct {v1, p0}, Lkik/android/b/e$1$1;-><init>(Lkik/android/b/e$1;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
 
     goto :goto_0
 .end method

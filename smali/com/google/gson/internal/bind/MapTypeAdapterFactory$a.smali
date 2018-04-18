@@ -62,12 +62,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/gson/internal/bind/MapTypeAdapterFactory;Lcom/google/gson/e;Ljava/lang/reflect/Type;Lcom/google/gson/o;Ljava/lang/reflect/Type;Lcom/google/gson/o;Lcom/google/gson/internal/d;)V
+.method public constructor <init>(Lcom/google/gson/internal/bind/MapTypeAdapterFactory;Lcom/google/gson/d;Ljava/lang/reflect/Type;Lcom/google/gson/o;Ljava/lang/reflect/Type;Lcom/google/gson/o;Lcom/google/gson/internal/d;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/google/gson/e;",
+            "Lcom/google/gson/d;",
             "Ljava/lang/reflect/Type;",
             "Lcom/google/gson/o",
             "<TK;>;",
@@ -90,14 +90,14 @@
     .line 153
     new-instance v0, Lcom/google/gson/internal/bind/h;
 
-    invoke-direct {v0, p2, p4, p3}, Lcom/google/gson/internal/bind/h;-><init>(Lcom/google/gson/e;Lcom/google/gson/o;Ljava/lang/reflect/Type;)V
+    invoke-direct {v0, p2, p4, p3}, Lcom/google/gson/internal/bind/h;-><init>(Lcom/google/gson/d;Lcom/google/gson/o;Ljava/lang/reflect/Type;)V
 
     iput-object v0, p0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$a;->b:Lcom/google/gson/o;
 
     .line 155
     new-instance v0, Lcom/google/gson/internal/bind/h;
 
-    invoke-direct {v0, p2, p6, p5}, Lcom/google/gson/internal/bind/h;-><init>(Lcom/google/gson/e;Lcom/google/gson/o;Ljava/lang/reflect/Type;)V
+    invoke-direct {v0, p2, p6, p5}, Lcom/google/gson/internal/bind/h;-><init>(Lcom/google/gson/d;Lcom/google/gson/o;Ljava/lang/reflect/Type;)V
 
     iput-object v0, p0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$a;->c:Lcom/google/gson/o;
 
@@ -425,7 +425,7 @@
 
     move-result-object v7
 
-    invoke-virtual {v6, v7}, Lcom/google/gson/o;->a(Ljava/lang/Object;)Lcom/google/gson/k;
+    invoke-virtual {v6, v7}, Lcom/google/gson/o;->a(Ljava/lang/Object;)Lcom/google/gson/j;
 
     move-result-object v6
 
@@ -439,13 +439,13 @@
 
     invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2047
-    instance-of v0, v6, Lcom/google/gson/h;
+    .line 2046
+    instance-of v0, v6, Lcom/google/gson/g;
 
     .line 1222
     if-nez v0, :cond_3
 
-    .line 2056
+    .line 2055
     instance-of v0, v6, Lcom/google/gson/JsonObject;
 
     .line 1222
@@ -476,12 +476,12 @@
     invoke-virtual {p1}, Lcom/google/gson/stream/b;->b()Lcom/google/gson/stream/b;
 
     .line 1227
+    :goto_4
     invoke-interface {v3}, Ljava/util/List;->size()I
 
-    move-result v1
+    move-result v0
 
-    :goto_4
-    if-ge v2, v1, :cond_6
+    if-ge v2, v0, :cond_6
 
     .line 1228
     invoke-virtual {p1}, Lcom/google/gson/stream/b;->b()Lcom/google/gson/stream/b;
@@ -491,18 +491,18 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/gson/k;
+    check-cast v0, Lcom/google/gson/j;
 
-    invoke-static {v0, p1}, Lcom/google/gson/internal/f;->a(Lcom/google/gson/k;Lcom/google/gson/stream/b;)V
+    invoke-static {v0, p1}, Lcom/google/gson/internal/f;->a(Lcom/google/gson/j;Lcom/google/gson/stream/b;)V
 
     .line 1230
     iget-object v0, p0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$a;->c:Lcom/google/gson/o;
 
     invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v5
+    move-result-object v1
 
-    invoke-virtual {v0, p1, v5}, Lcom/google/gson/o;->a(Lcom/google/gson/stream/b;Ljava/lang/Object;)V
+    invoke-virtual {v0, p1, v1}, Lcom/google/gson/o;->a(Lcom/google/gson/stream/b;Ljava/lang/Object;)V
 
     .line 1231
     invoke-virtual {p1}, Lcom/google/gson/stream/b;->c()Lcom/google/gson/stream/b;
@@ -523,40 +523,40 @@
     invoke-virtual {p1}, Lcom/google/gson/stream/b;->d()Lcom/google/gson/stream/b;
 
     .line 1236
+    :goto_5
     invoke-interface {v3}, Ljava/util/List;->size()I
 
-    move-result v1
+    move-result v0
 
-    :goto_5
-    if-ge v2, v1, :cond_d
+    if-ge v2, v0, :cond_d
 
     .line 1237
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/gson/k;
+    check-cast v0, Lcom/google/gson/j;
 
-    .line 3065
-    instance-of v5, v0, Lcom/google/gson/m;
+    .line 3064
+    instance-of v1, v0, Lcom/google/gson/l;
 
     .line 2246
-    if-eqz v5, :cond_b
+    if-eqz v1, :cond_b
 
     .line 2247
-    invoke-virtual {v0}, Lcom/google/gson/k;->h()Lcom/google/gson/m;
+    invoke-virtual {v0}, Lcom/google/gson/j;->h()Lcom/google/gson/l;
 
     move-result-object v0
 
     .line 2248
-    invoke-virtual {v0}, Lcom/google/gson/m;->j()Z
+    invoke-virtual {v0}, Lcom/google/gson/l;->j()Z
 
-    move-result v5
+    move-result v1
 
-    if-eqz v5, :cond_8
+    if-eqz v1, :cond_8
 
     .line 2249
-    invoke-virtual {v0}, Lcom/google/gson/m;->a()Ljava/lang/Number;
+    invoke-virtual {v0}, Lcom/google/gson/l;->a()Ljava/lang/Number;
 
     move-result-object v0
 
@@ -573,9 +573,9 @@
 
     invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v5
+    move-result-object v1
 
-    invoke-virtual {v0, p1, v5}, Lcom/google/gson/o;->a(Lcom/google/gson/stream/b;Ljava/lang/Object;)V
+    invoke-virtual {v0, p1, v1}, Lcom/google/gson/o;->a(Lcom/google/gson/stream/b;Ljava/lang/Object;)V
 
     .line 1236
     add-int/lit8 v2, v2, 0x1
@@ -584,14 +584,14 @@
 
     .line 2250
     :cond_8
-    invoke-virtual {v0}, Lcom/google/gson/m;->i()Z
+    invoke-virtual {v0}, Lcom/google/gson/l;->i()Z
 
-    move-result v5
+    move-result v1
 
-    if-eqz v5, :cond_9
+    if-eqz v1, :cond_9
 
     .line 2251
-    invoke-virtual {v0}, Lcom/google/gson/m;->f()Z
+    invoke-virtual {v0}, Lcom/google/gson/l;->f()Z
 
     move-result v0
 
@@ -603,14 +603,14 @@
 
     .line 2252
     :cond_9
-    invoke-virtual {v0}, Lcom/google/gson/m;->k()Z
+    invoke-virtual {v0}, Lcom/google/gson/l;->k()Z
 
-    move-result v5
+    move-result v1
 
-    if-eqz v5, :cond_a
+    if-eqz v1, :cond_a
 
     .line 2253
-    invoke-virtual {v0}, Lcom/google/gson/m;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/google/gson/l;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -624,9 +624,9 @@
 
     throw v0
 
-    .line 3075
+    .line 3074
     :cond_b
-    instance-of v0, v0, Lcom/google/gson/l;
+    instance-of v0, v0, Lcom/google/gson/k;
 
     .line 2257
     if-eqz v0, :cond_c

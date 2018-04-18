@@ -15,14 +15,23 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     .prologue
-    .line 28
+    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
+    return-void
+.end method
+
+.method synthetic constructor <init>(Landroid/support/v4/text/TextUtilsCompat$1;)V
+    .locals 0
+
+    .prologue
+    .line 27
+    invoke-direct {p0}, Landroid/support/v4/text/TextUtilsCompat$TextUtilsCompatImpl;-><init>()V
+
     return-void
 .end method
 
@@ -32,7 +41,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 93
+    .line 88
     invoke-virtual {p0, p0}, Ljava/util/Locale;->getDisplayName(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object v1
@@ -47,17 +56,17 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 100
+    .line 95
     :goto_0
     return v0
 
-    .line 96
+    .line 91
     :pswitch_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 93
+    .line 88
     nop
 
     :pswitch_data_0
@@ -73,7 +82,7 @@
     .locals 2
 
     .prologue
-    .line 66
+    .line 63
     if-eqz p1, :cond_2
 
     sget-object v0, Landroid/support/v4/text/TextUtilsCompat;->ROOT:Ljava/util/Locale;
@@ -84,25 +93,27 @@
 
     if-nez v0, :cond_2
 
-    .line 67
+    .line 64
     invoke-static {p1}, Landroid/support/v4/text/ICUCompat;->maximizeAndGetScript(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 68
+    .line 65
     if-nez v0, :cond_0
 
     invoke-static {p1}, Landroid/support/v4/text/TextUtilsCompat$TextUtilsCompatImpl;->getLayoutDirectionFromFirstChar(Ljava/util/Locale;)I
 
     move-result v0
 
-    .line 77
+    .line 72
     :goto_0
     return v0
 
-    .line 72
+    .line 67
     :cond_0
-    sget-object v1, Landroid/support/v4/text/TextUtilsCompat;->ARAB_SCRIPT_SUBTAG:Ljava/lang/String;
+    invoke-static {}, Landroid/support/v4/text/TextUtilsCompat;->access$000()Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -110,22 +121,23 @@
 
     if-nez v1, :cond_1
 
-    sget-object v1, Landroid/support/v4/text/TextUtilsCompat;->HEBR_SCRIPT_SUBTAG:Ljava/lang/String;
+    invoke-static {}, Landroid/support/v4/text/TextUtilsCompat;->access$100()Ljava/lang/String;
 
-    .line 73
+    move-result-object v1
+
     invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 74
+    .line 69
     :cond_1
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 77
+    .line 72
     :cond_2
     const/4 v0, 0x0
 
@@ -136,12 +148,12 @@
     .locals 3
 
     .prologue
-    .line 33
+    .line 30
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 35
+    .line 32
     const/4 v0, 0x0
 
     :goto_0
@@ -151,24 +163,24 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 36
+    .line 33
     invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
 
-    .line 37
+    .line 34
     sparse-switch v2, :sswitch_data_0
 
-    .line 59
+    .line 56
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 35
+    .line 32
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 39
+    .line 36
     :sswitch_0
     const-string v2, "&lt;"
 
@@ -176,7 +188,7 @@
 
     goto :goto_1
 
-    .line 42
+    .line 39
     :sswitch_1
     const-string v2, "&gt;"
 
@@ -184,7 +196,7 @@
 
     goto :goto_1
 
-    .line 45
+    .line 42
     :sswitch_2
     const-string v2, "&amp;"
 
@@ -192,7 +204,7 @@
 
     goto :goto_1
 
-    .line 53
+    .line 50
     :sswitch_3
     const-string v2, "&#39;"
 
@@ -200,7 +212,7 @@
 
     goto :goto_1
 
-    .line 56
+    .line 53
     :sswitch_4
     const-string v2, "&quot;"
 
@@ -208,7 +220,7 @@
 
     goto :goto_1
 
-    .line 62
+    .line 59
     :cond_0
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -216,7 +228,7 @@
 
     return-object v0
 
-    .line 37
+    .line 34
     :sswitch_data_0
     .sparse-switch
         0x22 -> :sswitch_4

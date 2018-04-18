@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 972
+    .line 908
     iput-object p1, p0, Lkik/android/chat/KikApplication$16;->a:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,8 +40,8 @@
     .locals 3
 
     .prologue
-    .line 976
-    invoke-static {}, Lkik/android/chat/KikApplication;->A()Lkik/android/chat/KikApplication;
+    .line 912
+    invoke-static {}, Lkik/android/chat/KikApplication;->z()Lkik/android/chat/KikApplication;
 
     move-result-object v0
 
@@ -55,6 +55,6 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 977
+    .line 913
     return-void
 .end method

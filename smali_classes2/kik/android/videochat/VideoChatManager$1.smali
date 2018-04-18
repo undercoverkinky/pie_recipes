@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/videochat/VideoChatManager;-><init>(Lkik/core/interfaces/ad;Lcom/kik/storage/s;Lkik/core/interfaces/v;Lkik/core/c/a;Lkik/core/interfaces/IConversation;Lkik/core/interfaces/b;Lkik/android/chat/b/a;Lkik/core/interfaces/l;Lkik/android/f/d;Landroid/content/Context;Lcom/crashlytics/android/core/h;)V
+    value = Lkik/android/videochat/VideoChatManager;-><init>(Lkik/core/interfaces/ad;Lcom/kik/e/p;Lkik/core/interfaces/x;Lkik/core/e/a;Lkik/core/interfaces/j;Lkik/core/interfaces/b;Lkik/android/e/d;Landroid/content/Context;Lcom/crashlytics/android/core/h;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 191
+    .line 181
     iput-object p1, p0, Lkik/android/videochat/VideoChatManager$1;->a:Lkik/android/videochat/VideoChatManager;
 
     invoke-direct {p0, p2}, Lkik/android/videochat/h;-><init>(Lcom/rounds/kik/analytics/ReporterProxy;)V
@@ -33,14 +33,14 @@
 
 
 # virtual methods
-.method protected final a(Lkik/core/datatypes/l;)Lcom/rounds/kik/Conversation;
+.method protected final a(Lkik/core/datatypes/o;)Lcom/rounds/kik/Conversation;
     .locals 1
 
     .prologue
-    .line 195
+    .line 185
     iget-object v0, p0, Lkik/android/videochat/VideoChatManager$1;->a:Lkik/android/videochat/VideoChatManager;
 
-    invoke-static {v0, p1}, Lkik/android/videochat/VideoChatManager;->c(Lkik/android/videochat/VideoChatManager;Lkik/core/datatypes/l;)Lcom/rounds/kik/Conversation;
+    invoke-static {v0, p1}, Lkik/android/videochat/VideoChatManager;->a(Lkik/android/videochat/VideoChatManager;Lkik/core/datatypes/o;)Lcom/rounds/kik/Conversation;
 
     move-result-object v0
 

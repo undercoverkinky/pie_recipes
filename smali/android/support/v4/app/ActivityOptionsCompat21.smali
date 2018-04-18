@@ -3,12 +3,6 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x15
-.end annotation
-
-
 # instance fields
 .field private final mActivityOptions:Landroid/app/ActivityOptions;
 
@@ -18,58 +12,23 @@
     .locals 0
 
     .prologue
-    .line 78
+    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 79
+    .line 50
     iput-object p1, p0, Landroid/support/v4/app/ActivityOptionsCompat21;->mActivityOptions:Landroid/app/ActivityOptions;
 
-    .line 80
+    .line 51
     return-void
-.end method
-
-.method public static makeCustomAnimation(Landroid/content/Context;II)Landroid/support/v4/app/ActivityOptionsCompat21;
-    .locals 2
-
-    .prologue
-    .line 37
-    new-instance v0, Landroid/support/v4/app/ActivityOptionsCompat21;
-
-    .line 38
-    invoke-static {p0, p1, p2}, Landroid/app/ActivityOptions;->makeCustomAnimation(Landroid/content/Context;II)Landroid/app/ActivityOptions;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/support/v4/app/ActivityOptionsCompat21;-><init>(Landroid/app/ActivityOptions;)V
-
-    return-object v0
-.end method
-
-.method public static makeScaleUpAnimation(Landroid/view/View;IIII)Landroid/support/v4/app/ActivityOptionsCompat21;
-    .locals 2
-
-    .prologue
-    .line 43
-    new-instance v0, Landroid/support/v4/app/ActivityOptionsCompat21;
-
-    .line 44
-    invoke-static {p0, p1, p2, p3, p4}, Landroid/app/ActivityOptions;->makeScaleUpAnimation(Landroid/view/View;IIII)Landroid/app/ActivityOptions;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/support/v4/app/ActivityOptionsCompat21;-><init>(Landroid/app/ActivityOptions;)V
-
-    return-object v0
 .end method
 
 .method public static makeSceneTransitionAnimation(Landroid/app/Activity;Landroid/view/View;Ljava/lang/String;)Landroid/support/v4/app/ActivityOptionsCompat21;
     .locals 2
 
     .prologue
-    .line 55
+    .line 31
     new-instance v0, Landroid/support/v4/app/ActivityOptionsCompat21;
 
-    .line 56
     invoke-static {p0, p1, p2}, Landroid/app/ActivityOptions;->makeSceneTransitionAnimation(Landroid/app/Activity;Landroid/view/View;Ljava/lang/String;)Landroid/app/ActivityOptions;
 
     move-result-object v1
@@ -83,18 +42,18 @@
     .locals 4
 
     .prologue
-    .line 62
+    .line 38
     const/4 v0, 0x0
 
-    .line 63
+    .line 39
     if-eqz p1, :cond_1
 
-    .line 64
+    .line 40
     array-length v0, p1
 
     new-array v1, v0, [Landroid/util/Pair;
 
-    .line 65
+    .line 41
     const/4 v0, 0x0
 
     :goto_0
@@ -102,7 +61,7 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 66
+    .line 42
     aget-object v2, p1, v0
 
     aget-object v3, p2, v0
@@ -113,7 +72,7 @@
 
     aput-object v2, v1, v0
 
-    .line 65
+    .line 41
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -121,11 +80,10 @@
     :cond_0
     move-object v0, v1
 
-    .line 69
+    .line 45
     :cond_1
     new-instance v1, Landroid/support/v4/app/ActivityOptionsCompat21;
 
-    .line 70
     invoke-static {p0, v0}, Landroid/app/ActivityOptions;->makeSceneTransitionAnimation(Landroid/app/Activity;[Landroid/util/Pair;)Landroid/app/ActivityOptions;
 
     move-result-object v0
@@ -135,47 +93,13 @@
     return-object v1
 .end method
 
-.method public static makeTaskLaunchBehind()Landroid/support/v4/app/ActivityOptionsCompat21;
-    .locals 2
-
-    .prologue
-    .line 74
-    new-instance v0, Landroid/support/v4/app/ActivityOptionsCompat21;
-
-    .line 75
-    invoke-static {}, Landroid/app/ActivityOptions;->makeTaskLaunchBehind()Landroid/app/ActivityOptions;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/support/v4/app/ActivityOptionsCompat21;-><init>(Landroid/app/ActivityOptions;)V
-
-    return-object v0
-.end method
-
-.method public static makeThumbnailScaleUpAnimation(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroid/support/v4/app/ActivityOptionsCompat21;
-    .locals 2
-
-    .prologue
-    .line 49
-    new-instance v0, Landroid/support/v4/app/ActivityOptionsCompat21;
-
-    .line 50
-    invoke-static {p0, p1, p2, p3}, Landroid/app/ActivityOptions;->makeThumbnailScaleUpAnimation(Landroid/view/View;Landroid/graphics/Bitmap;II)Landroid/app/ActivityOptions;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/support/v4/app/ActivityOptionsCompat21;-><init>(Landroid/app/ActivityOptions;)V
-
-    return-object v0
-.end method
-
 
 # virtual methods
 .method public toBundle()Landroid/os/Bundle;
     .locals 1
 
     .prologue
-    .line 83
+    .line 54
     iget-object v0, p0, Landroid/support/v4/app/ActivityOptionsCompat21;->mActivityOptions:Landroid/app/ActivityOptions;
 
     invoke-virtual {v0}, Landroid/app/ActivityOptions;->toBundle()Landroid/os/Bundle;
@@ -189,13 +113,13 @@
     .locals 2
 
     .prologue
-    .line 87
+    .line 58
     iget-object v0, p0, Landroid/support/v4/app/ActivityOptionsCompat21;->mActivityOptions:Landroid/app/ActivityOptions;
 
     iget-object v1, p1, Landroid/support/v4/app/ActivityOptionsCompat21;->mActivityOptions:Landroid/app/ActivityOptions;
 
     invoke-virtual {v0, v1}, Landroid/app/ActivityOptions;->update(Landroid/app/ActivityOptions;)V
 
-    .line 88
+    .line 59
     return-void
 .end method

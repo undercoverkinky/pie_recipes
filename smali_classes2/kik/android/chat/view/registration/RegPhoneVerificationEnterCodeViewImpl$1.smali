@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/view/registration/RegPhoneVerificationEnterCodeViewImpl$1;
-.super Lcom/kik/util/cy;
+.super Lcom/kik/util/bv;
 .source "SourceFile"
 
 
@@ -23,10 +23,10 @@
     .locals 0
 
     .prologue
-    .line 40
+    .line 38
     iput-object p1, p0, Lkik/android/chat/view/registration/RegPhoneVerificationEnterCodeViewImpl$1;->a:Lkik/android/chat/view/registration/RegPhoneVerificationEnterCodeViewImpl;
 
-    invoke-direct {p0}, Lcom/kik/util/cy;-><init>()V
+    invoke-direct {p0}, Lcom/kik/util/bv;-><init>()V
 
     return-void
 .end method
@@ -37,19 +37,19 @@
     .locals 2
 
     .prologue
-    .line 44
+    .line 42
     iget-object v0, p0, Lkik/android/chat/view/registration/RegPhoneVerificationEnterCodeViewImpl$1;->a:Lkik/android/chat/view/registration/RegPhoneVerificationEnterCodeViewImpl;
 
-    invoke-static {v0}, Lkik/android/chat/view/registration/RegPhoneVerificationEnterCodeViewImpl;->a(Lkik/android/chat/view/registration/RegPhoneVerificationEnterCodeViewImpl;)Lkik/android/chat/view/ad$a;
+    invoke-static {v0}, Lkik/android/chat/view/registration/RegPhoneVerificationEnterCodeViewImpl;->a(Lkik/android/chat/view/registration/RegPhoneVerificationEnterCodeViewImpl;)Lkik/android/chat/view/w$a;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 45
+    .line 43
     iget-object v0, p0, Lkik/android/chat/view/registration/RegPhoneVerificationEnterCodeViewImpl$1;->a:Lkik/android/chat/view/registration/RegPhoneVerificationEnterCodeViewImpl;
 
-    invoke-static {v0}, Lkik/android/chat/view/registration/RegPhoneVerificationEnterCodeViewImpl;->a(Lkik/android/chat/view/registration/RegPhoneVerificationEnterCodeViewImpl;)Lkik/android/chat/view/ad$a;
+    invoke-static {v0}, Lkik/android/chat/view/registration/RegPhoneVerificationEnterCodeViewImpl;->a(Lkik/android/chat/view/registration/RegPhoneVerificationEnterCodeViewImpl;)Lkik/android/chat/view/w$a;
 
     move-result-object v0
 
@@ -57,9 +57,9 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lkik/android/chat/view/ad$a;->a(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lkik/android/chat/view/w$a;->a(Ljava/lang/String;)V
 
-    .line 47
+    .line 45
     :cond_0
     return-void
 .end method

@@ -14,16 +14,14 @@
 .end annotation
 
 
-# static fields
-.field static final STEP_ANIMATIONS:I = 0x4
-
-.field static final STEP_LAYOUT:I = 0x2
-
-.field static final STEP_START:I = 0x1
-
-
 # instance fields
-.field private mData:Landroid/util/SparseArray;
+.field a:I
+
+.field private b:I
+
+.field private c:I
+
+.field private d:Landroid/util/SparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray",
@@ -34,33 +32,21 @@
     .end annotation
 .end field
 
-.field mDeletedInvisibleItemCountSincePreviousLayout:I
+.field private e:I
 
-.field mFocusedItemId:J
+.field private f:I
 
-.field mFocusedItemPosition:I
+.field private g:Z
 
-.field mFocusedSubChildId:I
+.field private h:Z
 
-.field mInPreLayout:Z
+.field private i:Z
 
-.field mIsMeasuring:Z
+.field private j:Z
 
-.field mItemCount:I
+.field private k:Z
 
-.field mLayoutStep:I
-
-.field mPreviousLayoutItemCount:I
-
-.field mRunPredictiveAnimations:Z
-
-.field mRunSimpleAnimations:Z
-
-.field mStructureChanged:Z
-
-.field private mTargetPosition:I
-
-.field mTrackOldChangeHolders:Z
+.field private l:Z
 
 
 # direct methods
@@ -70,73 +56,239 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 11460
+    .line 10046
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 11475
+    .line 10065
     const/4 v0, -0x1
 
-    iput v0, p0, Landroid/support/v7/widget/RecyclerView$State;->mTargetPosition:I
+    iput v0, p0, Landroid/support/v7/widget/RecyclerView$State;->b:I
 
-    .line 11486
-    iput v1, p0, Landroid/support/v7/widget/RecyclerView$State;->mPreviousLayoutItemCount:I
-
-    .line 11492
-    iput v1, p0, Landroid/support/v7/widget/RecyclerView$State;->mDeletedInvisibleItemCountSincePreviousLayout:I
-
-    .line 11504
+    .line 10067
     const/4 v0, 0x1
 
-    iput v0, p0, Landroid/support/v7/widget/RecyclerView$State;->mLayoutStep:I
+    iput v0, p0, Landroid/support/v7/widget/RecyclerView$State;->c:I
 
-    .line 11510
-    iput v1, p0, Landroid/support/v7/widget/RecyclerView$State;->mItemCount:I
+    .line 10075
+    iput v1, p0, Landroid/support/v7/widget/RecyclerView$State;->a:I
 
-    .line 11512
-    iput-boolean v1, p0, Landroid/support/v7/widget/RecyclerView$State;->mStructureChanged:Z
+    .line 10080
+    iput v1, p0, Landroid/support/v7/widget/RecyclerView$State;->e:I
 
-    .line 11514
-    iput-boolean v1, p0, Landroid/support/v7/widget/RecyclerView$State;->mInPreLayout:Z
+    .line 10086
+    iput v1, p0, Landroid/support/v7/widget/RecyclerView$State;->f:I
 
-    .line 11516
-    iput-boolean v1, p0, Landroid/support/v7/widget/RecyclerView$State;->mTrackOldChangeHolders:Z
+    .line 10088
+    iput-boolean v1, p0, Landroid/support/v7/widget/RecyclerView$State;->g:Z
 
-    .line 11518
-    iput-boolean v1, p0, Landroid/support/v7/widget/RecyclerView$State;->mIsMeasuring:Z
+    .line 10090
+    iput-boolean v1, p0, Landroid/support/v7/widget/RecyclerView$State;->h:Z
 
-    .line 11524
-    iput-boolean v1, p0, Landroid/support/v7/widget/RecyclerView$State;->mRunSimpleAnimations:Z
+    .line 10092
+    iput-boolean v1, p0, Landroid/support/v7/widget/RecyclerView$State;->i:Z
 
-    .line 11526
-    iput-boolean v1, p0, Landroid/support/v7/widget/RecyclerView$State;->mRunPredictiveAnimations:Z
+    .line 10094
+    iput-boolean v1, p0, Landroid/support/v7/widget/RecyclerView$State;->j:Z
+
+    .line 10096
+    iput-boolean v1, p0, Landroid/support/v7/widget/RecyclerView$State;->k:Z
+
+    .line 10098
+    iput-boolean v1, p0, Landroid/support/v7/widget/RecyclerView$State;->l:Z
 
     return-void
 .end method
 
-.method static synthetic access$1102(Landroid/support/v7/widget/RecyclerView$State;I)I
+.method static synthetic a(Landroid/support/v7/widget/RecyclerView$State;)I
+    .locals 1
+
+    .prologue
+    .line 10046
+    iget v0, p0, Landroid/support/v7/widget/RecyclerView$State;->c:I
+
+    return v0
+.end method
+
+.method static synthetic a(Landroid/support/v7/widget/RecyclerView$State;I)I
+    .locals 1
+
+    .prologue
+    .line 10046
+    iget v0, p0, Landroid/support/v7/widget/RecyclerView$State;->f:I
+
+    add-int/2addr v0, p1
+
+    iput v0, p0, Landroid/support/v7/widget/RecyclerView$State;->f:I
+
+    return v0
+.end method
+
+.method static synthetic a(Landroid/support/v7/widget/RecyclerView$State;Z)Z
     .locals 0
 
     .prologue
-    .line 11460
-    iput p1, p0, Landroid/support/v7/widget/RecyclerView$State;->mTargetPosition:I
+    .line 10046
+    iput-boolean p1, p0, Landroid/support/v7/widget/RecyclerView$State;->g:Z
 
     return p1
 .end method
 
+.method static synthetic b(Landroid/support/v7/widget/RecyclerView$State;I)I
+    .locals 0
+
+    .prologue
+    .line 10046
+    iput p1, p0, Landroid/support/v7/widget/RecyclerView$State;->c:I
+
+    return p1
+.end method
+
+.method static synthetic b(Landroid/support/v7/widget/RecyclerView$State;)Z
+    .locals 1
+
+    .prologue
+    .line 10046
+    iget-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$State;->j:Z
+
+    return v0
+.end method
+
+.method static synthetic b(Landroid/support/v7/widget/RecyclerView$State;Z)Z
+    .locals 0
+
+    .prologue
+    .line 10046
+    iput-boolean p1, p0, Landroid/support/v7/widget/RecyclerView$State;->l:Z
+
+    return p1
+.end method
+
+.method static synthetic c(Landroid/support/v7/widget/RecyclerView$State;I)I
+    .locals 0
+
+    .prologue
+    .line 10046
+    iput p1, p0, Landroid/support/v7/widget/RecyclerView$State;->e:I
+
+    return p1
+.end method
+
+.method static synthetic c(Landroid/support/v7/widget/RecyclerView$State;)Z
+    .locals 1
+
+    .prologue
+    .line 10046
+    iget-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$State;->i:Z
+
+    return v0
+.end method
+
+.method static synthetic c(Landroid/support/v7/widget/RecyclerView$State;Z)Z
+    .locals 0
+
+    .prologue
+    .line 10046
+    iput-boolean p1, p0, Landroid/support/v7/widget/RecyclerView$State;->h:Z
+
+    return p1
+.end method
+
+.method static synthetic d(Landroid/support/v7/widget/RecyclerView$State;I)I
+    .locals 0
+
+    .prologue
+    .line 10046
+    iput p1, p0, Landroid/support/v7/widget/RecyclerView$State;->b:I
+
+    return p1
+.end method
+
+.method static synthetic d(Landroid/support/v7/widget/RecyclerView$State;)Z
+    .locals 1
+
+    .prologue
+    .line 10046
+    iget-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$State;->k:Z
+
+    return v0
+.end method
+
+.method static synthetic d(Landroid/support/v7/widget/RecyclerView$State;Z)Z
+    .locals 0
+
+    .prologue
+    .line 10046
+    iput-boolean p1, p0, Landroid/support/v7/widget/RecyclerView$State;->i:Z
+
+    return p1
+.end method
+
+.method static synthetic e(Landroid/support/v7/widget/RecyclerView$State;)Z
+    .locals 1
+
+    .prologue
+    .line 10046
+    iget-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$State;->g:Z
+
+    return v0
+.end method
+
+.method static synthetic e(Landroid/support/v7/widget/RecyclerView$State;Z)Z
+    .locals 0
+
+    .prologue
+    .line 10046
+    iput-boolean p1, p0, Landroid/support/v7/widget/RecyclerView$State;->j:Z
+
+    return p1
+.end method
+
+.method static synthetic f(Landroid/support/v7/widget/RecyclerView$State;)I
+    .locals 1
+
+    .prologue
+    .line 10046
+    const/4 v0, 0x0
+
+    iput v0, p0, Landroid/support/v7/widget/RecyclerView$State;->f:I
+
+    return v0
+.end method
+
+.method static synthetic f(Landroid/support/v7/widget/RecyclerView$State;Z)Z
+    .locals 0
+
+    .prologue
+    .line 10046
+    iput-boolean p1, p0, Landroid/support/v7/widget/RecyclerView$State;->k:Z
+
+    return p1
+.end method
+
+.method static synthetic g(Landroid/support/v7/widget/RecyclerView$State;)Z
+    .locals 1
+
+    .prologue
+    .line 10046
+    iget-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$State;->h:Z
+
+    return v0
+.end method
+
 
 # virtual methods
-.method assertLayoutStep(I)V
+.method final a(I)V
     .locals 3
 
     .prologue
-    .line 11466
-    iget v0, p0, Landroid/support/v7/widget/RecyclerView$State;->mLayoutStep:I
+    .line 10052
+    iget v0, p0, Landroid/support/v7/widget/RecyclerView$State;->c:I
 
     and-int/2addr v0, p1
 
     if-nez v0, :cond_0
 
-    .line 11467
+    .line 10053
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -145,7 +297,6 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 11468
     invoke-static {p1}, Ljava/lang/Integer;->toBinaryString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -160,9 +311,8 @@
 
     move-result-object v1
 
-    iget v2, p0, Landroid/support/v7/widget/RecyclerView$State;->mLayoutStep:I
+    iget v2, p0, Landroid/support/v7/widget/RecyclerView$State;->c:I
 
-    .line 11469
     invoke-static {v2}, Ljava/lang/Integer;->toBinaryString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -179,94 +329,47 @@
 
     throw v0
 
-    .line 11471
+    .line 10057
     :cond_0
     return-void
 .end method
 
-.method public didStructureChange()Z
+.method public final a()Z
     .locals 1
 
     .prologue
-    .line 11682
-    iget-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$State;->mStructureChanged:Z
+    .line 10134
+    iget-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$State;->h:Z
 
     return v0
 .end method
 
-.method public get(I)Ljava/lang/Object;
+.method public final b()Z
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(I)TT;"
-        }
-    .end annotation
 
     .prologue
-    .line 11636
-    iget-object v0, p0, Landroid/support/v7/widget/RecyclerView$State;->mData:Landroid/util/SparseArray;
+    .line 10145
+    iget-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$State;->j:Z
 
-    if-nez v0, :cond_0
-
-    .line 11637
-    const/4 v0, 0x0
-
-    .line 11639
-    :goto_0
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Landroid/support/v7/widget/RecyclerView$State;->mData:Landroid/util/SparseArray;
-
-    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    goto :goto_0
+    return v0
 .end method
 
-.method public getItemCount()I
+.method public final c()I
+    .locals 1
+
+    .prologue
+    .line 10209
+    iget v0, p0, Landroid/support/v7/widget/RecyclerView$State;->b:I
+
+    return v0
+.end method
+
+.method public final d()Z
     .locals 2
 
     .prologue
-    .line 11710
-    iget-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$State;->mInPreLayout:Z
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Landroid/support/v7/widget/RecyclerView$State;->mPreviousLayoutItemCount:I
-
-    iget v1, p0, Landroid/support/v7/widget/RecyclerView$State;->mDeletedInvisibleItemCountSincePreviousLayout:I
-
-    sub-int/2addr v0, v1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    iget v0, p0, Landroid/support/v7/widget/RecyclerView$State;->mItemCount:I
-
-    goto :goto_0
-.end method
-
-.method public getTargetScrollPosition()I
-    .locals 1
-
-    .prologue
-    .line 11665
-    iget v0, p0, Landroid/support/v7/widget/RecyclerView$State;->mTargetPosition:I
-
-    return v0
-.end method
-
-.method public hasTargetScrollPosition()Z
-    .locals 2
-
-    .prologue
-    .line 11674
-    iget v0, p0, Landroid/support/v7/widget/RecyclerView$State;->mTargetPosition:I
+    .line 10218
+    iget v0, p0, Landroid/support/v7/widget/RecyclerView$State;->b:I
 
     const/4 v1, -0x1
 
@@ -283,152 +386,42 @@
     goto :goto_0
 .end method
 
-.method public isMeasuring()Z
-    .locals 1
-
-    .prologue
-    .line 11582
-    iget-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$State;->mIsMeasuring:Z
-
-    return v0
-.end method
-
-.method public isPreLayout()Z
-    .locals 1
-
-    .prologue
-    .line 11590
-    iget-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$State;->mInPreLayout:Z
-
-    return v0
-.end method
-
-.method prepareForNestedPrefetch(Landroid/support/v7/widget/RecyclerView$Adapter;)V
+.method public final e()I
     .locals 2
 
     .prologue
-    const/4 v1, 0x0
-
-    .line 11560
-    const/4 v0, 0x1
-
-    iput v0, p0, Landroid/support/v7/widget/RecyclerView$State;->mLayoutStep:I
-
-    .line 11561
-    invoke-virtual {p1}, Landroid/support/v7/widget/RecyclerView$Adapter;->getItemCount()I
-
-    move-result v0
-
-    iput v0, p0, Landroid/support/v7/widget/RecyclerView$State;->mItemCount:I
-
-    .line 11562
-    iput-boolean v1, p0, Landroid/support/v7/widget/RecyclerView$State;->mInPreLayout:Z
-
-    .line 11563
-    iput-boolean v1, p0, Landroid/support/v7/widget/RecyclerView$State;->mTrackOldChangeHolders:Z
-
-    .line 11564
-    iput-boolean v1, p0, Landroid/support/v7/widget/RecyclerView$State;->mIsMeasuring:Z
-
-    .line 11565
-    return-void
-.end method
-
-.method public put(ILjava/lang/Object;)V
-    .locals 1
-
-    .prologue
-    .line 11651
-    iget-object v0, p0, Landroid/support/v7/widget/RecyclerView$State;->mData:Landroid/util/SparseArray;
-
-    if-nez v0, :cond_0
-
-    .line 11652
-    new-instance v0, Landroid/util/SparseArray;
-
-    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
-
-    iput-object v0, p0, Landroid/support/v7/widget/RecyclerView$State;->mData:Landroid/util/SparseArray;
-
-    .line 11654
-    :cond_0
-    iget-object v0, p0, Landroid/support/v7/widget/RecyclerView$State;->mData:Landroid/util/SparseArray;
-
-    invoke-virtual {v0, p1, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    .line 11655
-    return-void
-.end method
-
-.method public remove(I)V
-    .locals 1
-
-    .prologue
-    .line 11621
-    iget-object v0, p0, Landroid/support/v7/widget/RecyclerView$State;->mData:Landroid/util/SparseArray;
-
-    if-nez v0, :cond_0
-
-    .line 11625
-    :goto_0
-    return-void
-
-    .line 11624
-    :cond_0
-    iget-object v0, p0, Landroid/support/v7/widget/RecyclerView$State;->mData:Landroid/util/SparseArray;
-
-    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->remove(I)V
-
-    goto :goto_0
-.end method
-
-.method reset()Landroid/support/v7/widget/RecyclerView$State;
-    .locals 2
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 11542
-    const/4 v0, -0x1
-
-    iput v0, p0, Landroid/support/v7/widget/RecyclerView$State;->mTargetPosition:I
-
-    .line 11543
-    iget-object v0, p0, Landroid/support/v7/widget/RecyclerView$State;->mData:Landroid/util/SparseArray;
+    .line 10254
+    iget-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$State;->h:Z
 
     if-eqz v0, :cond_0
 
-    .line 11544
-    iget-object v0, p0, Landroid/support/v7/widget/RecyclerView$State;->mData:Landroid/util/SparseArray;
+    iget v0, p0, Landroid/support/v7/widget/RecyclerView$State;->e:I
 
-    invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
+    iget v1, p0, Landroid/support/v7/widget/RecyclerView$State;->f:I
 
-    .line 11546
+    sub-int/2addr v0, v1
+
+    :goto_0
+    return v0
+
     :cond_0
-    iput v1, p0, Landroid/support/v7/widget/RecyclerView$State;->mItemCount:I
+    iget v0, p0, Landroid/support/v7/widget/RecyclerView$State;->a:I
 
-    .line 11547
-    iput-boolean v1, p0, Landroid/support/v7/widget/RecyclerView$State;->mStructureChanged:Z
-
-    .line 11548
-    iput-boolean v1, p0, Landroid/support/v7/widget/RecyclerView$State;->mIsMeasuring:Z
-
-    .line 11549
-    return-object p0
+    goto :goto_0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
     .prologue
-    .line 11717
+    .line 10261
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "State{mTargetPosition="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Landroid/support/v7/widget/RecyclerView$State;->mTargetPosition:I
+    iget v1, p0, Landroid/support/v7/widget/RecyclerView$State;->b:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -440,7 +433,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Landroid/support/v7/widget/RecyclerView$State;->mData:Landroid/util/SparseArray;
+    iget-object v1, p0, Landroid/support/v7/widget/RecyclerView$State;->d:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -452,7 +445,7 @@
 
     move-result-object v0
 
-    iget v1, p0, Landroid/support/v7/widget/RecyclerView$State;->mItemCount:I
+    iget v1, p0, Landroid/support/v7/widget/RecyclerView$State;->a:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -464,7 +457,7 @@
 
     move-result-object v0
 
-    iget v1, p0, Landroid/support/v7/widget/RecyclerView$State;->mPreviousLayoutItemCount:I
+    iget v1, p0, Landroid/support/v7/widget/RecyclerView$State;->e:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -476,7 +469,7 @@
 
     move-result-object v0
 
-    iget v1, p0, Landroid/support/v7/widget/RecyclerView$State;->mDeletedInvisibleItemCountSincePreviousLayout:I
+    iget v1, p0, Landroid/support/v7/widget/RecyclerView$State;->f:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -488,7 +481,7 @@
 
     move-result-object v0
 
-    iget-boolean v1, p0, Landroid/support/v7/widget/RecyclerView$State;->mStructureChanged:Z
+    iget-boolean v1, p0, Landroid/support/v7/widget/RecyclerView$State;->g:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -500,7 +493,7 @@
 
     move-result-object v0
 
-    iget-boolean v1, p0, Landroid/support/v7/widget/RecyclerView$State;->mInPreLayout:Z
+    iget-boolean v1, p0, Landroid/support/v7/widget/RecyclerView$State;->h:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -512,7 +505,7 @@
 
     move-result-object v0
 
-    iget-boolean v1, p0, Landroid/support/v7/widget/RecyclerView$State;->mRunSimpleAnimations:Z
+    iget-boolean v1, p0, Landroid/support/v7/widget/RecyclerView$State;->i:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -524,7 +517,7 @@
 
     move-result-object v0
 
-    iget-boolean v1, p0, Landroid/support/v7/widget/RecyclerView$State;->mRunPredictiveAnimations:Z
+    iget-boolean v1, p0, Landroid/support/v7/widget/RecyclerView$State;->j:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -541,24 +534,4 @@
     move-result-object v0
 
     return-object v0
-.end method
-
-.method public willRunPredictiveAnimations()Z
-    .locals 1
-
-    .prologue
-    .line 11601
-    iget-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$State;->mRunPredictiveAnimations:Z
-
-    return v0
-.end method
-
-.method public willRunSimpleAnimations()Z
-    .locals 1
-
-    .prologue
-    .line 11612
-    iget-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$State;->mRunSimpleAnimations:Z
-
-    return v0
 .end method

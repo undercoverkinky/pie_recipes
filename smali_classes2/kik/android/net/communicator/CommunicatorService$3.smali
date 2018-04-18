@@ -1,6 +1,9 @@
 .class final Lkik/android/net/communicator/CommunicatorService$3;
-.super Landroid/content/BroadcastReceiver;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lcom/kik/events/e;
 
 
 # annotations
@@ -13,6 +16,16 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/kik/events/e",
+        "<",
+        "Ljava/lang/Void;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
 .field final synthetic a:Lkik/android/net/communicator/CommunicatorService;
@@ -23,99 +36,35 @@
     .locals 0
 
     .prologue
-    .line 559
+    .line 181
     iput-object p1, p0, Lkik/android/net/communicator/CommunicatorService$3;->a:Lkik/android/net/communicator/CommunicatorService;
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 4
+.method public final bridge synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 2
 
     .prologue
-    .line 564
+    .line 181
+    .line 1185
     iget-object v0, p0, Lkik/android/net/communicator/CommunicatorService$3;->a:Lkik/android/net/communicator/CommunicatorService;
 
-    invoke-static {v0}, Lkik/android/net/communicator/CommunicatorService;->i(Lkik/android/net/communicator/CommunicatorService;)Landroid/net/ConnectivityManager;
+    const/4 v1, 0x1
 
-    move-result-object v0
+    invoke-static {v0, v1}, Lkik/android/net/communicator/CommunicatorService;->a(Lkik/android/net/communicator/CommunicatorService;Z)Z
 
-    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
-
-    move-result-object v1
-
-    .line 566
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Landroid/net/NetworkInfo;->isConnected()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    .line 567
-    :goto_0
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Connectivity changed: info= "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    if-nez v1, :cond_1
-
-    const-string v1, "null"
-
-    :goto_1
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 569
-    if-eqz v0, :cond_2
-
-    .line 570
+    .line 1186
     iget-object v0, p0, Lkik/android/net/communicator/CommunicatorService$3;->a:Lkik/android/net/communicator/CommunicatorService;
 
-    const-string v1, "Connectivity change"
+    const-string v1, "requested retry reset"
 
     invoke-static {v0, v1}, Lkik/android/net/communicator/CommunicatorService;->a(Lkik/android/net/communicator/CommunicatorService;Ljava/lang/String;)V
 
-    .line 581
-    :goto_2
+    .line 181
     return-void
-
-    .line 566
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    .line 567
-    :cond_1
-    invoke-virtual {v1}, Landroid/net/NetworkInfo;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    goto :goto_1
-
-    .line 575
-    :cond_2
-    :try_start_0
-    iget-object v0, p0, Lkik/android/net/communicator/CommunicatorService$3;->a:Lkik/android/net/communicator/CommunicatorService;
-
-    invoke-static {v0}, Lkik/android/net/communicator/CommunicatorService;->j(Lkik/android/net/communicator/CommunicatorService;)V
-    :try_end_0
-    .catch Lkik/core/interfaces/ICommunication$BadStateException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_2
-
-    .line 581
-    :catch_0
-    move-exception v0
-
-    goto :goto_2
 .end method

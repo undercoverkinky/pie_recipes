@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/c;->a(Lkik/core/interfaces/ad;Lkik/core/interfaces/ICommunication;Lkik/core/interfaces/ag;)Lkik/core/interfaces/IAddressBookIntegration;
+    value = Lkik/android/c;->a(Lkik/core/interfaces/ad;Lkik/core/interfaces/ICommunication;Lkik/core/interfaces/af;)Lkik/core/interfaces/IAddressBookIntegration;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,7 +30,7 @@
     .locals 0
 
     .prologue
-    .line 148
+    .line 155
     iput-object p1, p0, Lkik/android/c$3;->c:Lkik/android/c;
 
     iput-object p2, p0, Lkik/android/c$3;->a:Lkik/android/config/b;
@@ -48,7 +48,7 @@
     .locals 2
 
     .prologue
-    .line 153
+    .line 160
     iget-object v0, p0, Lkik/android/c$3;->a:Lkik/android/config/b;
 
     const-string v1, "matching-opt-in"
@@ -67,21 +67,21 @@
 
     move-result v0
 
-    .line 154
+    .line 161
     if-eqz v0, :cond_0
 
-    .line 155
+    .line 162
     iget-object v0, p0, Lkik/android/c$3;->b:Lkik/android/addressbook/a;
 
     const-string v1, "differential"
 
     invoke-virtual {v0, v1}, Lkik/android/addressbook/a;->a(Ljava/lang/String;)V
 
-    .line 160
+    .line 167
     :goto_0
     return-void
 
-    .line 158
+    .line 165
     :cond_0
     iget-object v0, p0, Lkik/android/c$3;->b:Lkik/android/addressbook/a;
 

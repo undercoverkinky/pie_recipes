@@ -120,7 +120,6 @@
     :try_start_2
     new-instance v3, Lio/fabric/sdk/android/services/common/e$b;
 
-    .line 79
     invoke-virtual {v2}, Lio/fabric/sdk/android/services/common/e$a;->a()Landroid/os/IBinder;
 
     move-result-object v1
@@ -134,7 +133,6 @@
 
     move-result-object v4
 
-    .line 81
     invoke-virtual {v3}, Lio/fabric/sdk/android/services/common/e$b;->b()Z
 
     move-result v3
@@ -154,7 +152,6 @@
 
     move-object v0, v1
 
-    .line 80
     goto :goto_0
 
     .line 61

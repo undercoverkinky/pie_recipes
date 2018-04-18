@@ -30,14 +30,14 @@
 
 
 # virtual methods
-.method public final a(Lcom/google/gson/e;Lcom/google/gson/b/a;)Lcom/google/gson/o;
+.method public final a(Lcom/google/gson/d;Lcom/google/gson/b/a;)Lcom/google/gson/o;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lcom/google/gson/e;",
+            "Lcom/google/gson/d;",
             "Lcom/google/gson/b/a",
             "<TT;>;)",
             "Lcom/google/gson/o",
@@ -74,7 +74,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 49
+    .line 50
     :goto_0
     return-object v0
 
@@ -89,7 +89,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/google/gson/e;->a(Lcom/google/gson/b/a;)Lcom/google/gson/o;
+    invoke-virtual {p1, v0}, Lcom/google/gson/d;->a(Lcom/google/gson/b/a;)Lcom/google/gson/o;
 
     move-result-object v2
 
@@ -101,7 +101,7 @@
 
     move-result-object v1
 
-    invoke-direct {v0, p1, v2, v1}, Lcom/google/gson/internal/bind/a;-><init>(Lcom/google/gson/e;Lcom/google/gson/o;Ljava/lang/Class;)V
+    invoke-direct {v0, p1, v2, v1}, Lcom/google/gson/internal/bind/a;-><init>(Lcom/google/gson/d;Lcom/google/gson/o;Ljava/lang/Class;)V
 
     goto :goto_0
 .end method

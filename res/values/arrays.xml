@@ -25,6 +25,30 @@
         <item>out_message_selector_orange</item>
         <item>out_message_selector_red</item>
     </string-array>
+    <string-array name="default_smiley_texts">
+        <item>:)</item>
+        <item>;)</item>
+        <item>:(</item>
+        <item>:D</item>
+        <item>:P</item>
+        <item>:|</item>
+        <item>:/</item>
+        <item>>:(</item>
+        <item>:X</item>
+        <item>&lt;3</item>
+        <item>&lt;/3</item>
+        <item>B)</item>
+        <item>:3</item>
+        <item>":'("</item>
+        <item>:O</item>
+        <item>:S</item>
+        <item>:$</item>
+        <item>:*</item>
+        <item>>:)</item>
+        <item>:E</item>
+        <item>D:</item>
+        <item>(KIK)</item>
+    </string-array>
     <string-array name="led_colors">
         <item>@string/None</item>
         <item>@string/Red</item>

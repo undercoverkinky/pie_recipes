@@ -31,8 +31,6 @@
 
 .field public static final enum PUSHNOTIF_TIMEOUT:Lcom/rounds/kik/analytics/group/conference/NotificationEvents;
 
-.field public static VIDEO_NOTIFICATION_CUSTOM_SOUND_FILE_NAME:Ljava/lang/String;
-
 
 # instance fields
 .field private final mEventName:Ljava/lang/String;
@@ -51,7 +49,7 @@
 
     const/4 v3, 0x0
 
-    .line 15
+    .line 13
     new-instance v0, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;
 
     const-string v1, "PUSHNOTIF_SHOW"
@@ -62,7 +60,7 @@
 
     sput-object v0, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;->PUSHNOTIF_SHOW:Lcom/rounds/kik/analytics/group/conference/NotificationEvents;
 
-    .line 16
+    .line 14
     new-instance v0, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;
 
     const-string v1, "PUSHNOTIF_TAP"
@@ -73,7 +71,7 @@
 
     sput-object v0, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;->PUSHNOTIF_TAP:Lcom/rounds/kik/analytics/group/conference/NotificationEvents;
 
-    .line 17
+    .line 15
     new-instance v0, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;
 
     const-string v1, "PUSHNOTIF_DISSMISS"
@@ -84,7 +82,7 @@
 
     sput-object v0, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;->PUSHNOTIF_DISSMISS:Lcom/rounds/kik/analytics/group/conference/NotificationEvents;
 
-    .line 18
+    .line 16
     new-instance v0, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;
 
     const-string v1, "PUSHNOTIF_TIMEOUT"
@@ -95,7 +93,7 @@
 
     sput-object v0, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;->PUSHNOTIF_TIMEOUT:Lcom/rounds/kik/analytics/group/conference/NotificationEvents;
 
-    .line 13
+    .line 11
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/rounds/kik/analytics/group/conference/NotificationEvents;
@@ -118,11 +116,6 @@
 
     sput-object v0, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;->$VALUES:[Lcom/rounds/kik/analytics/group/conference/NotificationEvents;
 
-    .line 21
-    const-string v0, "1.wav"
-
-    sput-object v0, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;->VIDEO_NOTIFICATION_CUSTOM_SOUND_FILE_NAME:Ljava/lang/String;
-
     return-void
 .end method
 
@@ -137,13 +130,13 @@
     .end annotation
 
     .prologue
-    .line 24
+    .line 21
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 25
+    .line 22
     iput-object p3, p0, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;->mEventName:Ljava/lang/String;
 
-    .line 26
+    .line 23
     return-void
 .end method
 
@@ -151,7 +144,7 @@
     .locals 1
 
     .prologue
-    .line 13
+    .line 11
     const-class v0, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -167,7 +160,7 @@
     .locals 1
 
     .prologue
-    .line 13
+    .line 11
     sget-object v0, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;->$VALUES:[Lcom/rounds/kik/analytics/group/conference/NotificationEvents;
 
     invoke-virtual {v0}, [Lcom/rounds/kik/analytics/group/conference/NotificationEvents;->clone()Ljava/lang/Object;
@@ -194,7 +187,7 @@
     .end annotation
 
     .prologue
-    .line 30
+    .line 27
     iget-object v0, p0, Lcom/rounds/kik/analytics/group/conference/NotificationEvents;->mEventName:Ljava/lang/String;
 
     const-class v1, Lcom/rounds/kik/analytics/group/conference/NotificationEvents$Builder;

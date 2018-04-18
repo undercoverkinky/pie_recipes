@@ -3,48 +3,30 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/android/chat/presentation/bt;
+.implements Lkik/android/chat/presentation/ca;
 
 
 # annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lkik/android/chat/presentation/bu$a;
+    }
+.end annotation
+
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkik/android/chat/presentation/bt",
+        "Lkik/android/chat/presentation/ca",
         "<",
-        "Lkik/android/chat/view/text/e;",
+        "Lkik/android/chat/view/v;",
         ">;"
     }
 .end annotation
 
 
 # virtual methods
-.method public abstract a(Ljava/lang/String;)V
+.method public abstract a()V
 .end method
 
-.method public abstract a(Ljava/lang/String;Ljava/util/List;Landroid/view/View;I)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/String;",
-            ">;",
-            "Landroid/view/View;",
-            "I)V"
-        }
-    .end annotation
-.end method
-
-.method public abstract a(Lkik/android/chat/view/ak;)V
-.end method
-
-.method public abstract a(Lkik/android/widget/KikNetworkedImageView;Lcom/kik/messagepath/model/Keyboards$SuggestedResponseItem;)V
-.end method
-
-.method public abstract a(II)Z
-.end method
-
-.method public abstract a(Lcom/kik/messagepath/model/Keyboards$SuggestedResponseItem;Landroid/view/View;I)Z
+.method public abstract a(Lkik/android/chat/presentation/bu$a;)V
 .end method

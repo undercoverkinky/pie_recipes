@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/ViewPictureFragment$16;->a(Lcom/kik/cache/KikVolleyImageLoader$c;Z)V
+    value = Lkik/android/chat/fragment/ViewPictureFragment$16;->a(Lcom/kik/cache/aa$d;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 1075
+    .line 1012
     iput-object p1, p0, Lkik/android/chat/fragment/ViewPictureFragment$16$1;->b:Lkik/android/chat/fragment/ViewPictureFragment$16;
 
     iput-object p2, p0, Lkik/android/chat/fragment/ViewPictureFragment$16$1;->a:Landroid/graphics/Bitmap;
@@ -44,7 +44,7 @@
     .locals 2
 
     .prologue
-    .line 1080
+    .line 1017
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$16$1;->b:Lkik/android/chat/fragment/ViewPictureFragment$16;
 
     iget-object v0, v0, Lkik/android/chat/fragment/ViewPictureFragment$16;->a:Lkik/android/chat/fragment/ViewPictureFragment;
@@ -53,7 +53,7 @@
 
     invoke-static {v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment;->a(Lkik/android/chat/fragment/ViewPictureFragment;Z)Z
 
-    .line 1081
+    .line 1018
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$16$1;->b:Lkik/android/chat/fragment/ViewPictureFragment$16;
 
     iget-object v0, v0, Lkik/android/chat/fragment/ViewPictureFragment$16;->a:Lkik/android/chat/fragment/ViewPictureFragment;
@@ -64,6 +64,6 @@
 
     invoke-virtual {v0, v1}, Lcom/kik/cache/ContentImageView;->d(Landroid/graphics/Bitmap;)V
 
-    .line 1082
+    .line 1019
     return-void
 .end method

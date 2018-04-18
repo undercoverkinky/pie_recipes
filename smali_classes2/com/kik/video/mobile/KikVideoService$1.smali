@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 4775
+    .line 5048
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,10 +34,10 @@
     .locals 1
 
     .prologue
-    .line 4778
+    .line 5051
     invoke-static {p1}, Lcom/kik/video/mobile/KikVideoService;->a(Lcom/google/protobuf/Descriptors$FileDescriptor;)Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 4779
+    .line 5052
     const/4 v0, 0x0
 
     return-object v0

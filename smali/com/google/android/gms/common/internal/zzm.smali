@@ -1,68 +1,86 @@
-.class public final Lcom/google/android/gms/common/internal/zzm;
+.class public abstract Lcom/google/android/gms/common/internal/zzm;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Lcom/google/android/gms/common/internal/zzj;
 
+# static fields
+.field private static final zzarP:Ljava/lang/Object;
 
-# instance fields
-.field private synthetic zzftf:Lcom/google/android/gms/common/internal/zzd;
+.field private static zzarQ:Lcom/google/android/gms/common/internal/zzm;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/common/internal/zzd;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lcom/google/android/gms/common/internal/zzm;->zzftf:Lcom/google/android/gms/common/internal/zzd;
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcom/google/android/gms/common/internal/zzm;->zzarP:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final zzf(Lcom/google/android/gms/common/ConnectionResult;)V
+.method public static zzav(Landroid/content/Context;)Lcom/google/android/gms/common/internal/zzm;
     .locals 3
 
-    invoke-virtual {p1}, Lcom/google/android/gms/common/ConnectionResult;->isSuccess()Z
+    sget-object v1, Lcom/google/android/gms/common/internal/zzm;->zzarP:Ljava/lang/Object;
 
-    move-result v0
+    monitor-enter v1
 
-    if-eqz v0, :cond_1
+    :try_start_0
+    sget-object v0, Lcom/google/android/gms/common/internal/zzm;->zzarQ:Lcom/google/android/gms/common/internal/zzm;
 
-    iget-object v0, p0, Lcom/google/android/gms/common/internal/zzm;->zzftf:Lcom/google/android/gms/common/internal/zzd;
+    if-nez v0, :cond_0
 
-    const/4 v1, 0x0
+    new-instance v0, Lcom/google/android/gms/common/internal/zzn;
 
-    iget-object v2, p0, Lcom/google/android/gms/common/internal/zzm;->zzftf:Lcom/google/android/gms/common/internal/zzd;
-
-    invoke-virtual {v2}, Lcom/google/android/gms/common/internal/zzd;->zzajl()Ljava/util/Set;
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/common/internal/zzd;->zza(Lcom/google/android/gms/common/internal/zzam;Ljava/util/Set;)V
+    invoke-direct {v0, v2}, Lcom/google/android/gms/common/internal/zzn;-><init>(Landroid/content/Context;)V
+
+    sput-object v0, Lcom/google/android/gms/common/internal/zzm;->zzarQ:Lcom/google/android/gms/common/internal/zzm;
 
     :cond_0
-    :goto_0
-    return-void
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :cond_1
-    iget-object v0, p0, Lcom/google/android/gms/common/internal/zzm;->zzftf:Lcom/google/android/gms/common/internal/zzd;
+    sget-object v0, Lcom/google/android/gms/common/internal/zzm;->zzarQ:Lcom/google/android/gms/common/internal/zzm;
 
-    invoke-static {v0}, Lcom/google/android/gms/common/internal/zzd;->zzg(Lcom/google/android/gms/common/internal/zzd;)Lcom/google/android/gms/common/internal/zzg;
+    return-object v0
 
-    move-result-object v0
+    :catchall_0
+    move-exception v0
 
-    if-eqz v0, :cond_0
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    iget-object v0, p0, Lcom/google/android/gms/common/internal/zzm;->zzftf:Lcom/google/android/gms/common/internal/zzd;
+    throw v0
+.end method
 
-    invoke-static {v0}, Lcom/google/android/gms/common/internal/zzd;->zzg(Lcom/google/android/gms/common/internal/zzd;)Lcom/google/android/gms/common/internal/zzg;
 
-    move-result-object v0
+# virtual methods
+.method public abstract zza(Landroid/content/ComponentName;Landroid/content/ServiceConnection;Ljava/lang/String;)Z
+.end method
 
-    invoke-interface {v0, p1}, Lcom/google/android/gms/common/internal/zzg;->onConnectionFailed(Lcom/google/android/gms/common/ConnectionResult;)V
+.method public abstract zza(Ljava/lang/String;Ljava/lang/String;Landroid/content/ServiceConnection;Ljava/lang/String;)Z
+.end method
 
-    goto :goto_0
+.method public abstract zzb(Landroid/content/ComponentName;Landroid/content/ServiceConnection;Ljava/lang/String;)V
+.end method
+
+.method public abstract zzb(Ljava/lang/String;Ljava/lang/String;Landroid/content/ServiceConnection;Ljava/lang/String;)V
 .end method

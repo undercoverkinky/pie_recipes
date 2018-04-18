@@ -53,14 +53,14 @@
     .locals 1
 
     .prologue
-    .line 745
+    .line 727
     new-instance v0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;
 
     invoke-direct {v0}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;-><init>()V
 
     sput-object v0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->a:Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;
 
-    .line 753
+    .line 735
     new-instance v0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification$1;
 
     invoke-direct {v0}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification$1;-><init>()V
@@ -74,20 +74,20 @@
     .locals 1
 
     .prologue
-    .line 69
+    .line 65
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageV3;-><init>()V
 
-    .line 209
+    .line 201
     const/4 v0, -0x1
 
     iput-byte v0, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->memoizedIsInitialized:B
 
-    .line 70
+    .line 66
     const-string v0, ""
 
     iput-object v0, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->notificationId_:Ljava/lang/Object;
 
-    .line 71
+    .line 67
     return-void
 .end method
 
@@ -102,29 +102,29 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 82
+    .line 78
     invoke-direct {p0}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;-><init>()V
 
-    .line 85
+    .line 81
     const/4 v0, 0x0
 
     move v2, v0
 
-    .line 86
+    .line 82
     :cond_0
     :goto_0
     if-nez v2, :cond_1
 
-    .line 87
+    .line 83
     :try_start_0
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readTag()I
 
     move-result v0
 
-    .line 88
+    .line 84
     sparse-switch v0, :sswitch_data_0
 
-    .line 93
+    .line 89
     invoke-virtual {p1, v0}, Lcom/google/protobuf/CodedInputStream;->skipField(I)Z
 
     move-result v0
@@ -133,36 +133,36 @@
 
     move v2, v3
 
-    .line 94
+    .line 90
     goto :goto_0
 
     :sswitch_0
     move v2, v3
 
-    .line 91
+    .line 87
     goto :goto_0
 
-    .line 99
+    .line 95
     :sswitch_1
     const/4 v0, 0x0
 
-    .line 100
+    .line 96
     iget-object v1, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->convoVideoState_:Lcom/kik/video/VideoCommon$ConvoVideoState;
 
     if-eqz v1, :cond_2
 
-    .line 101
+    .line 97
     iget-object v0, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->convoVideoState_:Lcom/kik/video/VideoCommon$ConvoVideoState;
 
-    invoke-virtual {v0}, Lcom/kik/video/VideoCommon$ConvoVideoState;->toBuilder()Lcom/kik/video/VideoCommon$ConvoVideoState$Builder;
+    invoke-virtual {v0}, Lcom/kik/video/VideoCommon$ConvoVideoState;->f()Lcom/kik/video/VideoCommon$ConvoVideoState$a;
 
     move-result-object v0
 
     move-object v1, v0
 
-    .line 103
+    .line 99
     :goto_1
-    invoke-static {}, Lcom/kik/video/VideoCommon$ConvoVideoState;->parser()Lcom/google/protobuf/Parser;
+    invoke-static {}, Lcom/kik/video/VideoCommon$ConvoVideoState;->h()Lcom/google/protobuf/Parser;
 
     move-result-object v0
 
@@ -174,16 +174,16 @@
 
     iput-object v0, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->convoVideoState_:Lcom/kik/video/VideoCommon$ConvoVideoState;
 
-    .line 104
+    .line 100
     if-eqz v1, :cond_0
 
-    .line 105
+    .line 101
     iget-object v0, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->convoVideoState_:Lcom/kik/video/VideoCommon$ConvoVideoState;
 
-    invoke-virtual {v1, v0}, Lcom/kik/video/VideoCommon$ConvoVideoState$Builder;->mergeFrom(Lcom/kik/video/VideoCommon$ConvoVideoState;)Lcom/kik/video/VideoCommon$ConvoVideoState$Builder;
+    invoke-virtual {v1, v0}, Lcom/kik/video/VideoCommon$ConvoVideoState$a;->a(Lcom/kik/video/VideoCommon$ConvoVideoState;)Lcom/kik/video/VideoCommon$ConvoVideoState$a;
 
-    .line 106
-    invoke-virtual {v1}, Lcom/kik/video/VideoCommon$ConvoVideoState$Builder;->buildPartial()Lcom/kik/video/VideoCommon$ConvoVideoState;
+    .line 102
+    invoke-virtual {v1}, Lcom/kik/video/VideoCommon$ConvoVideoState$a;->a()Lcom/kik/video/VideoCommon$ConvoVideoState;
 
     move-result-object v0
 
@@ -195,7 +195,7 @@
 
     goto :goto_0
 
-    .line 120
+    .line 116
     :catch_0
     move-exception v0
 
@@ -208,23 +208,22 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 125
+    .line 121
     :catchall_0
     move-exception v0
 
     invoke-virtual {p0}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->makeExtensionsImmutable()V
 
-    .line 126
     throw v0
 
-    .line 112
+    .line 108
     :sswitch_2
     :try_start_2
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readStringRequireUtf8()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 114
+    .line 110
     iput-object v0, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->notificationId_:Ljava/lang/Object;
     :try_end_2
     .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_2 .. :try_end_2} :catch_0
@@ -233,17 +232,17 @@
 
     goto :goto_0
 
-    .line 121
+    .line 117
     :catch_1
     move-exception v0
 
-    .line 122
+    .line 118
     :try_start_3
     new-instance v1, Lcom/google/protobuf/InvalidProtocolBufferException;
 
     invoke-direct {v1, v0}, Lcom/google/protobuf/InvalidProtocolBufferException;-><init>(Ljava/io/IOException;)V
 
-    .line 123
+    .line 119
     invoke-virtual {v1, p0}, Lcom/google/protobuf/InvalidProtocolBufferException;->setUnfinishedMessage(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/InvalidProtocolBufferException;
 
     move-result-object v0
@@ -252,11 +251,11 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 125
+    .line 121
     :cond_1
     invoke-virtual {p0}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->makeExtensionsImmutable()V
 
-    .line 126
+    .line 122
     return-void
 
     :cond_2
@@ -264,7 +263,7 @@
 
     goto :goto_1
 
-    .line 88
+    .line 84
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -282,7 +281,7 @@
     .end annotation
 
     .prologue
-    .line 61
+    .line 57
     invoke-direct {p0, p1, p2}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;-><init>(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)V
 
     return-void
@@ -299,15 +298,15 @@
     .end annotation
 
     .prologue
-    .line 67
+    .line 63
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;)V
 
-    .line 209
+    .line 201
     const/4 v0, -0x1
 
     iput-byte v0, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->memoizedIsInitialized:B
 
-    .line 68
+    .line 64
     return-void
 .end method
 
@@ -315,7 +314,7 @@
     .locals 0
 
     .prologue
-    .line 61
+    .line 57
     invoke-direct {p0, p1}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;)V
 
     return-void
@@ -325,7 +324,7 @@
     .locals 0
 
     .prologue
-    .line 61
+    .line 57
     iput-object p1, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->convoVideoState_:Lcom/kik/video/VideoCommon$ConvoVideoState;
 
     return-object p1
@@ -340,7 +339,7 @@
     .end annotation
 
     .prologue
-    .line 298
+    .line 290
     sget-object v0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->b:Lcom/google/protobuf/Parser;
 
     invoke-interface {v0, p0}, Lcom/google/protobuf/Parser;->parseFrom([B)Ljava/lang/Object;
@@ -356,7 +355,7 @@
     .locals 1
 
     .prologue
-    .line 61
+    .line 57
     iget-object v0, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->notificationId_:Ljava/lang/Object;
 
     return-object v0
@@ -366,7 +365,7 @@
     .locals 0
 
     .prologue
-    .line 61
+    .line 57
     iput-object p1, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->notificationId_:Ljava/lang/Object;
 
     return-object p1
@@ -376,7 +375,7 @@
     .locals 1
 
     .prologue
-    .line 749
+    .line 731
     sget-object v0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->a:Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;
 
     return-object v0
@@ -386,7 +385,7 @@
     .locals 1
 
     .prologue
-    .line 61
+    .line 57
     sget-boolean v0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->alwaysUseFieldBuilders:Z
 
     return v0
@@ -396,7 +395,7 @@
     .locals 1
 
     .prologue
-    .line 61
+    .line 57
     sget-object v0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->b:Lcom/google/protobuf/Parser;
 
     return-object v0
@@ -406,26 +405,26 @@
     .locals 2
 
     .prologue
-    .line 197
+    .line 189
     iget-object v0, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->notificationId_:Ljava/lang/Object;
 
-    .line 198
+    .line 190
     instance-of v1, v0, Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 199
+    .line 191
     check-cast v0, Ljava/lang/String;
 
-    .line 200
+    .line 192
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
 
     move-result-object v0
 
-    .line 202
+    .line 194
     iput-object v0, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->notificationId_:Ljava/lang/Object;
 
-    .line 205
+    .line 197
     :goto_0
     return-object v0
 
@@ -441,7 +440,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 352
+    .line 344
     sget-object v0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->a:Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;
 
     if-ne p0, v0, :cond_0
@@ -458,7 +457,7 @@
 
     invoke-direct {v0, v1}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification$a;-><init>(B)V
 
-    .line 353
+    .line 345
     invoke-virtual {v0, p0}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification$a;->a(Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;)Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification$a;
 
     move-result-object v0
@@ -472,7 +471,7 @@
     .locals 1
 
     .prologue
-    .line 146
+    .line 142
     iget-object v0, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->convoVideoState_:Lcom/kik/video/VideoCommon$ConvoVideoState;
 
     if-eqz v0, :cond_0
@@ -492,12 +491,12 @@
     .locals 1
 
     .prologue
-    .line 152
+    .line 148
     iget-object v0, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->convoVideoState_:Lcom/kik/video/VideoCommon$ConvoVideoState;
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lcom/kik/video/VideoCommon$ConvoVideoState;->getDefaultInstance()Lcom/kik/video/VideoCommon$ConvoVideoState;
+    invoke-static {}, Lcom/kik/video/VideoCommon$ConvoVideoState;->g()Lcom/kik/video/VideoCommon$ConvoVideoState;
 
     move-result-object v0
 
@@ -514,31 +513,31 @@
     .locals 2
 
     .prologue
-    .line 174
+    .line 168
     iget-object v0, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->notificationId_:Ljava/lang/Object;
 
-    .line 175
+    .line 169
     instance-of v1, v0, Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 176
+    .line 170
     check-cast v0, Ljava/lang/String;
 
-    .line 182
+    .line 176
     :goto_0
     return-object v0
 
-    .line 178
+    .line 172
     :cond_0
     check-cast v0, Lcom/google/protobuf/ByteString;
 
-    .line 180
+    .line 174
     invoke-virtual {v0}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 181
+    .line 175
     iput-object v0, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->notificationId_:Ljava/lang/Object;
 
     goto :goto_0
@@ -552,32 +551,32 @@
 
     const/4 v1, 0x1
 
-    .line 248
+    .line 240
     if-ne p1, p0, :cond_1
 
-    .line 264
+    .line 256
     :cond_0
     :goto_0
     return v1
 
-    .line 251
+    .line 243
     :cond_1
     instance-of v0, p1, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;
 
     if-nez v0, :cond_2
 
-    .line 252
+    .line 244
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     goto :goto_0
 
-    .line 254
+    .line 246
     :cond_2
     check-cast p1, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;
 
-    .line 257
+    .line 249
     invoke-virtual {p0}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->a()Z
 
     move-result v0
@@ -590,7 +589,7 @@
 
     move v0, v1
 
-    .line 258
+    .line 250
     :goto_1
     invoke-virtual {p0}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->a()Z
 
@@ -598,14 +597,14 @@
 
     if-eqz v3, :cond_3
 
-    .line 259
+    .line 251
     if-eqz v0, :cond_6
 
     invoke-virtual {p0}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->b()Lcom/kik/video/VideoCommon$ConvoVideoState;
 
     move-result-object v0
 
-    .line 260
+    .line 252
     invoke-virtual {p1}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->b()Lcom/kik/video/VideoCommon$ConvoVideoState;
 
     move-result-object v3
@@ -618,7 +617,7 @@
 
     move v0, v1
 
-    .line 262
+    .line 254
     :cond_3
     :goto_2
     if-eqz v0, :cond_4
@@ -627,7 +626,7 @@
 
     move-result-object v0
 
-    .line 263
+    .line 255
     invoke-virtual {p1}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->c()Ljava/lang/String;
 
     move-result-object v3
@@ -641,19 +640,19 @@
     :cond_4
     move v1, v2
 
-    .line 264
+    .line 256
     goto :goto_0
 
     :cond_5
     move v0, v2
 
-    .line 257
+    .line 249
     goto :goto_1
 
     :cond_6
     move v0, v2
 
-    .line 260
+    .line 252
     goto :goto_2
 .end method
 
@@ -661,10 +660,10 @@
     .locals 1
 
     .prologue
-    .line 4772
+    .line 4754
     sget-object v0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->a:Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;
 
-    .line 61
+    .line 57
     return-object v0
 .end method
 
@@ -672,10 +671,10 @@
     .locals 1
 
     .prologue
-    .line 3772
+    .line 3754
     sget-object v0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->a:Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;
 
-    .line 61
+    .line 57
     return-object v0
 .end method
 
@@ -692,7 +691,7 @@
     .end annotation
 
     .prologue
-    .line 768
+    .line 750
     sget-object v0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->b:Lcom/google/protobuf/Parser;
 
     return-object v0
@@ -702,31 +701,31 @@
     .locals 3
 
     .prologue
-    .line 230
+    .line 222
     iget v0, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->memoizedSize:I
 
-    .line 231
+    .line 223
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 242
+    .line 234
     :goto_0
     return v0
 
-    .line 233
+    .line 225
     :cond_0
     const/4 v0, 0x0
 
-    .line 234
+    .line 226
     iget-object v1, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->convoVideoState_:Lcom/kik/video/VideoCommon$ConvoVideoState;
 
     if-eqz v1, :cond_1
 
-    .line 235
+    .line 227
     const/4 v0, 0x1
 
-    .line 236
+    .line 228
     invoke-virtual {p0}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->b()Lcom/kik/video/VideoCommon$ConvoVideoState;
 
     move-result-object v1
@@ -737,7 +736,7 @@
 
     add-int/lit8 v0, v0, 0x0
 
-    .line 238
+    .line 230
     :cond_1
     invoke-direct {p0}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->g()Lcom/google/protobuf/ByteString;
 
@@ -749,7 +748,7 @@
 
     if-nez v1, :cond_2
 
-    .line 239
+    .line 231
     const/4 v1, 0x2
 
     iget-object v2, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->notificationId_:Ljava/lang/Object;
@@ -760,7 +759,7 @@
 
     add-int/2addr v0, v1
 
-    .line 241
+    .line 233
     :cond_2
     iput v0, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->memoizedSize:I
 
@@ -771,7 +770,7 @@
     .locals 1
 
     .prologue
-    .line 76
+    .line 72
     invoke-static {}, Lcom/google/protobuf/UnknownFieldSet;->getDefaultInstance()Lcom/google/protobuf/UnknownFieldSet;
 
     move-result-object v0
@@ -783,19 +782,19 @@
     .locals 2
 
     .prologue
-    .line 269
+    .line 261
     iget v0, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->memoizedHashCode:I
 
     if-eqz v0, :cond_0
 
-    .line 270
+    .line 262
     iget v0, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->memoizedHashCode:I
 
-    .line 282
+    .line 274
     :goto_0
     return v0
 
-    .line 273
+    .line 265
     :cond_0
     invoke-virtual {p0}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->getDescriptorForType()Lcom/google/protobuf/Descriptors$Descriptor;
 
@@ -807,19 +806,19 @@
 
     add-int/lit16 v0, v0, 0x30b
 
-    .line 274
+    .line 266
     invoke-virtual {p0}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->a()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 275
+    .line 267
     mul-int/lit8 v0, v0, 0x25
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 276
+    .line 268
     mul-int/lit8 v0, v0, 0x35
 
     invoke-virtual {p0}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->b()Lcom/kik/video/VideoCommon$ConvoVideoState;
@@ -832,13 +831,13 @@
 
     add-int/2addr v0, v1
 
-    .line 278
+    .line 270
     :cond_1
     mul-int/lit8 v0, v0, 0x25
 
     add-int/lit8 v0, v0, 0x2
 
-    .line 279
+    .line 271
     mul-int/lit8 v0, v0, 0x35
 
     invoke-virtual {p0}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->c()Ljava/lang/String;
@@ -851,7 +850,7 @@
 
     add-int/2addr v0, v1
 
-    .line 280
+    .line 272
     mul-int/lit8 v0, v0, 0x1d
 
     iget-object v1, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
@@ -862,7 +861,7 @@
 
     add-int/2addr v0, v1
 
-    .line 281
+    .line 273
     iput v0, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->memoizedHashCode:I
 
     goto :goto_0
@@ -872,7 +871,7 @@
     .locals 3
 
     .prologue
-    .line 135
+    .line 131
     invoke-static {}, Lcom/kik/video/mobileremote/MobileVideoService;->b()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -881,12 +880,12 @@
 
     const-class v2, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification$a;
 
-    .line 136
+    .line 132
     invoke-virtual {v0, v1, v2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;->ensureFieldAccessorsInitialized(Ljava/lang/Class;Ljava/lang/Class;)Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
 
-    .line 135
+    .line 131
     return-object v0
 .end method
 
@@ -896,17 +895,17 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 211
+    .line 203
     iget-byte v1, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->memoizedIsInitialized:B
 
-    .line 212
+    .line 204
     if-ne v1, v0, :cond_0
 
-    .line 216
+    .line 208
     :goto_0
     return v0
 
-    .line 213
+    .line 205
     :cond_0
     if-nez v1, :cond_1
 
@@ -914,7 +913,7 @@
 
     goto :goto_0
 
-    .line 215
+    .line 207
     :cond_1
     iput-byte v0, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->memoizedIsInitialized:B
 
@@ -925,14 +924,14 @@
     .locals 1
 
     .prologue
-    .line 2346
+    .line 2338
     sget-object v0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->a:Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;
 
     invoke-direct {v0}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->h()Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification$a;
 
     move-result-object v0
 
-    .line 61
+    .line 57
     return-object v0
 .end method
 
@@ -940,14 +939,14 @@
     .locals 2
 
     .prologue
-    .line 1359
+    .line 1351
     new-instance v0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification$a;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p1, v1}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification$a;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;B)V
 
-    .line 61
+    .line 57
     return-object v0
 .end method
 
@@ -955,14 +954,14 @@
     .locals 1
 
     .prologue
-    .line 3346
+    .line 3338
     sget-object v0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->a:Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;
 
     invoke-direct {v0}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->h()Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification$a;
 
     move-result-object v0
 
-    .line 61
+    .line 57
     return-object v0
 .end method
 
@@ -970,7 +969,7 @@
     .locals 1
 
     .prologue
-    .line 61
+    .line 57
     invoke-direct {p0}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->h()Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification$a;
 
     move-result-object v0
@@ -982,7 +981,7 @@
     .locals 1
 
     .prologue
-    .line 61
+    .line 57
     invoke-direct {p0}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->h()Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification$a;
 
     move-result-object v0
@@ -999,12 +998,12 @@
     .end annotation
 
     .prologue
-    .line 221
+    .line 213
     iget-object v0, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->convoVideoState_:Lcom/kik/video/VideoCommon$ConvoVideoState;
 
     if-eqz v0, :cond_0
 
-    .line 222
+    .line 214
     const/4 v0, 0x1
 
     invoke-virtual {p0}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->b()Lcom/kik/video/VideoCommon$ConvoVideoState;
@@ -1013,7 +1012,7 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;)V
 
-    .line 224
+    .line 216
     :cond_0
     invoke-direct {p0}, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->g()Lcom/google/protobuf/ByteString;
 
@@ -1025,14 +1024,14 @@
 
     if-nez v0, :cond_1
 
-    .line 225
+    .line 217
     const/4 v0, 0x2
 
     iget-object v1, p0, Lcom/kik/video/mobileremote/MobileVideoService$OnConvoVideoStateChangedNotification;->notificationId_:Ljava/lang/Object;
 
     invoke-static {p1, v0, v1}, Lcom/google/protobuf/GeneratedMessageV3;->writeString(Lcom/google/protobuf/CodedOutputStream;ILjava/lang/Object;)V
 
-    .line 227
+    .line 219
     :cond_1
     return-void
 .end method

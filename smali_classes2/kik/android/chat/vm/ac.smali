@@ -1,49 +1,30 @@
-.class final synthetic Lkik/android/chat/vm/ac;
+.class public interface abstract Lkik/android/chat/vm/ac;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field private final a:Lorg/apmem/tools/layouts/FlowLayout;
-
-.field private final b:Lkik/android/e/z;
-
-
-# direct methods
-.method private constructor <init>(Lorg/apmem/tools/layouts/FlowLayout;Lkik/android/e/z;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lkik/android/chat/vm/ac;->a:Lorg/apmem/tools/layouts/FlowLayout;
-
-    iput-object p2, p0, Lkik/android/chat/vm/ac;->b:Lkik/android/e/z;
-
-    return-void
-.end method
-
-.method public static a(Lorg/apmem/tools/layouts/FlowLayout;Lkik/android/e/z;)Ljava/lang/Runnable;
-    .locals 1
-
-    new-instance v0, Lkik/android/chat/vm/ac;
-
-    invoke-direct {v0, p0, p1}, Lkik/android/chat/vm/ac;-><init>(Lorg/apmem/tools/layouts/FlowLayout;Lkik/android/e/z;)V
-
-    return-object v0
-.end method
+.source "SourceFile"
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public abstract a()Ljava/lang/String;
+.end method
 
-    iget-object v0, p0, Lkik/android/chat/vm/ac;->a:Lorg/apmem/tools/layouts/FlowLayout;
+.method public abstract b()Lkik/core/datatypes/messageExtensions/ContentMessage;
+.end method
 
-    iget-object v1, p0, Lkik/android/chat/vm/ac;->b:Lkik/android/e/z;
+.method public abstract c()Lkik/core/datatypes/Message;
+.end method
 
-    invoke-static {v0, v1}, Lkik/android/chat/vm/t$1;->a(Lorg/apmem/tools/layouts/FlowLayout;Lkik/android/e/z;)V
+.method public abstract d()Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    return-void
+.method public abstract e()Z
 .end method

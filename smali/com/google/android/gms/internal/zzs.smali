@@ -1,527 +1,242 @@
-.class public final Lcom/google/android/gms/internal/zzs;
+.class public Lcom/google/android/gms/internal/zzs;
 .super Ljava/lang/Object;
 
 
-# instance fields
-.field private zzaw:Ljava/util/concurrent/atomic/AtomicInteger;
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/google/android/gms/internal/zzs$a;
+    }
+.end annotation
 
-.field private final zzax:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map",
-            "<",
-            "Ljava/lang/String;",
-            "Ljava/util/Queue",
-            "<",
-            "Lcom/google/android/gms/internal/zzp",
-            "<*>;>;>;"
-        }
-    .end annotation
-.end field
 
-.field private final zzay:Ljava/util/Set;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Set",
-            "<",
-            "Lcom/google/android/gms/internal/zzp",
-            "<*>;>;"
-        }
-    .end annotation
-.end field
+# static fields
+.field public static DEBUG:Z
 
-.field private final zzaz:Ljava/util/concurrent/PriorityBlockingQueue;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/concurrent/PriorityBlockingQueue",
-            "<",
-            "Lcom/google/android/gms/internal/zzp",
-            "<*>;>;"
-        }
-    .end annotation
-.end field
-
-.field private final zzba:Ljava/util/concurrent/PriorityBlockingQueue;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/concurrent/PriorityBlockingQueue",
-            "<",
-            "Lcom/google/android/gms/internal/zzp",
-            "<*>;>;"
-        }
-    .end annotation
-.end field
-
-.field private zzbb:[Lcom/google/android/gms/internal/zzl;
-
-.field private zzbc:Lcom/google/android/gms/internal/zzd;
-
-.field private zzbd:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final zzi:Lcom/google/android/gms/internal/zzb;
-
-.field private final zzj:Lcom/google/android/gms/internal/zzw;
-
-.field private final zzx:Lcom/google/android/gms/internal/zzk;
+.field public static TAG:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/internal/zzb;Lcom/google/android/gms/internal/zzk;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    const/4 v0, 0x4
+    const-string v0, "Volley"
 
-    invoke-direct {p0, p1, p2, v0}, Lcom/google/android/gms/internal/zzs;-><init>(Lcom/google/android/gms/internal/zzb;Lcom/google/android/gms/internal/zzk;I)V
+    sput-object v0, Lcom/google/android/gms/internal/zzs;->TAG:Ljava/lang/String;
 
-    return-void
-.end method
+    const/4 v1, 0x2
 
-.method private constructor <init>(Lcom/google/android/gms/internal/zzb;Lcom/google/android/gms/internal/zzk;I)V
-    .locals 4
+    invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
-    const/4 v0, 0x4
+    move-result v0
 
-    new-instance v1, Lcom/google/android/gms/internal/zzh;
-
-    new-instance v2, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    invoke-direct {v1, v2}, Lcom/google/android/gms/internal/zzh;-><init>(Landroid/os/Handler;)V
-
-    invoke-direct {p0, p1, p2, v0, v1}, Lcom/google/android/gms/internal/zzs;-><init>(Lcom/google/android/gms/internal/zzb;Lcom/google/android/gms/internal/zzk;ILcom/google/android/gms/internal/zzw;)V
+    sput-boolean v0, Lcom/google/android/gms/internal/zzs;->DEBUG:Z
 
     return-void
 .end method
 
-.method private constructor <init>(Lcom/google/android/gms/internal/zzb;Lcom/google/android/gms/internal/zzk;ILcom/google/android/gms/internal/zzw;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/zzs;->zzaw:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/zzs;->zzax:Ljava/util/Map;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/zzs;->zzay:Ljava/util/Set;
-
-    new-instance v0, Ljava/util/concurrent/PriorityBlockingQueue;
-
-    invoke-direct {v0}, Ljava/util/concurrent/PriorityBlockingQueue;-><init>()V
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/zzs;->zzaz:Ljava/util/concurrent/PriorityBlockingQueue;
-
-    new-instance v0, Ljava/util/concurrent/PriorityBlockingQueue;
-
-    invoke-direct {v0}, Ljava/util/concurrent/PriorityBlockingQueue;-><init>()V
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/zzs;->zzba:Ljava/util/concurrent/PriorityBlockingQueue;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/zzs;->zzbd:Ljava/util/List;
-
-    iput-object p1, p0, Lcom/google/android/gms/internal/zzs;->zzi:Lcom/google/android/gms/internal/zzb;
-
-    iput-object p2, p0, Lcom/google/android/gms/internal/zzs;->zzx:Lcom/google/android/gms/internal/zzk;
-
-    const/4 v0, 0x4
-
-    new-array v0, v0, [Lcom/google/android/gms/internal/zzl;
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/zzs;->zzbb:[Lcom/google/android/gms/internal/zzl;
-
-    iput-object p4, p0, Lcom/google/android/gms/internal/zzs;->zzj:Lcom/google/android/gms/internal/zzw;
-
     return-void
 .end method
 
+.method public static varargs zza(Ljava/lang/String;[Ljava/lang/Object;)V
+    .locals 1
 
-# virtual methods
-.method public final start()V
-    .locals 6
-
-    const/4 v1, 0x0
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzs;->zzbc:Lcom/google/android/gms/internal/zzd;
+    sget-boolean v0, Lcom/google/android/gms/internal/zzs;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzs;->zzbc:Lcom/google/android/gms/internal/zzd;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/zzd;->quit()V
+    invoke-static {p0, p1}, Lcom/google/android/gms/internal/zzs;->zzd(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     :cond_0
-    move v0, v1
-
-    :goto_0
-    iget-object v2, p0, Lcom/google/android/gms/internal/zzs;->zzbb:[Lcom/google/android/gms/internal/zzl;
-
-    array-length v2, v2
-
-    if-ge v0, v2, :cond_2
-
-    iget-object v2, p0, Lcom/google/android/gms/internal/zzs;->zzbb:[Lcom/google/android/gms/internal/zzl;
-
-    aget-object v2, v2, v0
-
-    if-eqz v2, :cond_1
-
-    iget-object v2, p0, Lcom/google/android/gms/internal/zzs;->zzbb:[Lcom/google/android/gms/internal/zzl;
-
-    aget-object v2, v2, v0
-
-    invoke-virtual {v2}, Lcom/google/android/gms/internal/zzl;->quit()V
-
-    :cond_1
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    new-instance v0, Lcom/google/android/gms/internal/zzd;
-
-    iget-object v2, p0, Lcom/google/android/gms/internal/zzs;->zzaz:Ljava/util/concurrent/PriorityBlockingQueue;
-
-    iget-object v3, p0, Lcom/google/android/gms/internal/zzs;->zzba:Ljava/util/concurrent/PriorityBlockingQueue;
-
-    iget-object v4, p0, Lcom/google/android/gms/internal/zzs;->zzi:Lcom/google/android/gms/internal/zzb;
-
-    iget-object v5, p0, Lcom/google/android/gms/internal/zzs;->zzj:Lcom/google/android/gms/internal/zzw;
-
-    invoke-direct {v0, v2, v3, v4, v5}, Lcom/google/android/gms/internal/zzd;-><init>(Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/BlockingQueue;Lcom/google/android/gms/internal/zzb;Lcom/google/android/gms/internal/zzw;)V
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/zzs;->zzbc:Lcom/google/android/gms/internal/zzd;
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzs;->zzbc:Lcom/google/android/gms/internal/zzd;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/zzd;->start()V
-
-    :goto_1
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzs;->zzbb:[Lcom/google/android/gms/internal/zzl;
-
-    array-length v0, v0
-
-    if-ge v1, v0, :cond_3
-
-    new-instance v0, Lcom/google/android/gms/internal/zzl;
-
-    iget-object v2, p0, Lcom/google/android/gms/internal/zzs;->zzba:Ljava/util/concurrent/PriorityBlockingQueue;
-
-    iget-object v3, p0, Lcom/google/android/gms/internal/zzs;->zzx:Lcom/google/android/gms/internal/zzk;
-
-    iget-object v4, p0, Lcom/google/android/gms/internal/zzs;->zzi:Lcom/google/android/gms/internal/zzb;
-
-    iget-object v5, p0, Lcom/google/android/gms/internal/zzs;->zzj:Lcom/google/android/gms/internal/zzw;
-
-    invoke-direct {v0, v2, v3, v4, v5}, Lcom/google/android/gms/internal/zzl;-><init>(Ljava/util/concurrent/BlockingQueue;Lcom/google/android/gms/internal/zzk;Lcom/google/android/gms/internal/zzb;Lcom/google/android/gms/internal/zzw;)V
-
-    iget-object v2, p0, Lcom/google/android/gms/internal/zzs;->zzbb:[Lcom/google/android/gms/internal/zzl;
-
-    aput-object v0, v2, v1
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/zzl;->start()V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    :cond_3
     return-void
 .end method
 
-.method public final zzc(Lcom/google/android/gms/internal/zzp;)Lcom/google/android/gms/internal/zzp;
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/internal/zzp",
-            "<TT;>;)",
-            "Lcom/google/android/gms/internal/zzp",
-            "<TT;>;"
-        }
-    .end annotation
+.method public static varargs zza(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    .locals 2
 
-    invoke-virtual {p1, p0}, Lcom/google/android/gms/internal/zzp;->zza(Lcom/google/android/gms/internal/zzs;)Lcom/google/android/gms/internal/zzp;
+    sget-object v0, Lcom/google/android/gms/internal/zzs;->TAG:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzs;->zzay:Ljava/util/Set;
+    invoke-static {p1, p2}, Lcom/google/android/gms/internal/zzs;->zzd(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    monitor-enter v1
+    move-result-object v1
 
-    :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzs;->zzay:Ljava/util/Set;
+    invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzs;->zzaw:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Lcom/google/android/gms/internal/zzp;->zza(I)Lcom/google/android/gms/internal/zzp;
-
-    const-string v0, "add-to-queue"
-
-    invoke-virtual {p1, v0}, Lcom/google/android/gms/internal/zzp;->zzb(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lcom/google/android/gms/internal/zzp;->zzh()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzs;->zzba:Ljava/util/concurrent/PriorityBlockingQueue;
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/PriorityBlockingQueue;->add(Ljava/lang/Object;)Z
-
-    :goto_0
-    return-object p1
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-
-    :cond_0
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzs;->zzax:Ljava/util/Map;
-
-    monitor-enter v1
-
-    :try_start_2
-    invoke-virtual {p1}, Lcom/google/android/gms/internal/zzp;->zzd()Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzs;->zzax:Ljava/util/Map;
-
-    invoke-interface {v0, v2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzs;->zzax:Ljava/util/Map;
-
-    invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Queue;
-
-    if-nez v0, :cond_1
-
-    new-instance v0, Ljava/util/LinkedList;
-
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
-
-    :cond_1
-    invoke-interface {v0, p1}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
-
-    iget-object v3, p0, Lcom/google/android/gms/internal/zzs;->zzax:Ljava/util/Map;
-
-    invoke-interface {v3, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-boolean v0, Lcom/google/android/gms/internal/zzab;->DEBUG:Z
-
-    if-eqz v0, :cond_2
-
-    const-string v0, "Request for cacheKey=%s is in flight, putting on hold."
-
-    const/4 v3, 0x1
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    const/4 v4, 0x0
-
-    aput-object v2, v3, v4
-
-    invoke-static {v0, v3}, Lcom/google/android/gms/internal/zzab;->zza(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :cond_2
-    :goto_1
-    monitor-exit v1
-
-    goto :goto_0
-
-    :catchall_1
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    throw v0
-
-    :cond_3
-    :try_start_3
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzs;->zzax:Ljava/util/Map;
-
-    const/4 v3, 0x0
-
-    invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzs;->zzaz:Ljava/util/concurrent/PriorityBlockingQueue;
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/PriorityBlockingQueue;->add(Ljava/lang/Object;)Z
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    goto :goto_1
+    return-void
 .end method
 
-.method final zzd(Lcom/google/android/gms/internal/zzp;)V
-    .locals 7
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/android/gms/internal/zzp",
-            "<TT;>;)V"
-        }
-    .end annotation
+.method public static varargs zzb(Ljava/lang/String;[Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzs;->zzay:Ljava/util/Set;
+    invoke-static {p0, p1}, Lcom/google/android/gms/internal/zzs;->zzd(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    monitor-enter v1
+    return-void
+.end method
 
-    :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzs;->zzay:Ljava/util/Set;
+.method public static varargs zzc(Ljava/lang/String;[Ljava/lang/Object;)V
+    .locals 2
 
-    invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+    sget-object v0, Lcom/google/android/gms/internal/zzs;->TAG:Ljava/lang/String;
 
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    invoke-static {p0, p1}, Lcom/google/android/gms/internal/zzs;->zzd(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzs;->zzbd:Ljava/util/List;
+    move-result-object v1
 
-    monitor-enter v1
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :try_start_1
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzs;->zzbd:Ljava/util/List;
+    return-void
+.end method
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+.method private static varargs zzd(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    .locals 8
+
+    const/4 v1, 0x2
+
+    if-nez p1, :cond_0
+
+    :goto_0
+    new-instance v0, Ljava/lang/Throwable;
+
+    invoke-direct {v0}, Ljava/lang/Throwable;-><init>()V
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->fillInStackTrace()Ljava/lang/Throwable;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
-    move-result v2
+    move-result-object v3
 
-    if-eqz v2, :cond_0
+    const-string v2, "<unknown>"
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move v0, v1
 
-    goto :goto_0
+    :goto_1
+    array-length v4, v3
 
-    :catchall_0
-    move-exception v0
+    if-ge v0, v4, :cond_2
 
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    aget-object v4, v3, v0
 
-    throw v0
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :catchall_1
-    move-exception v0
+    move-result-object v4
 
-    :try_start_2
-    monitor-exit v1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    const-class v5, Lcom/google/android/gms/internal/zzs;
 
-    throw v0
+    invoke-virtual {v4, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    :cond_0
-    :try_start_3
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    move-result v4
 
-    invoke-virtual {p1}, Lcom/google/android/gms/internal/zzp;->zzh()Z
+    if-nez v4, :cond_1
 
-    move-result v0
+    aget-object v2, v3, v0
 
-    if-eqz v0, :cond_3
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzs;->zzax:Ljava/util/Map;
-
-    monitor-enter v1
-
-    :try_start_4
-    invoke-virtual {p1}, Lcom/google/android/gms/internal/zzp;->zzd()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
 
     move-result-object v2
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzs;->zzax:Ljava/util/Map;
+    const/16 v4, 0x2e
 
-    invoke-interface {v0, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v4}, Ljava/lang/String;->lastIndexOf(I)I
+
+    move-result v4
+
+    add-int/lit8 v4, v4, 0x1
+
+    invoke-virtual {v2, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/16 v4, 0x24
+
+    invoke-virtual {v2, v4}, Ljava/lang/String;->lastIndexOf(I)I
+
+    move-result v4
+
+    add-int/lit8 v4, v4, 0x1
+
+    invoke-virtual {v2, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    aget-object v0, v3, v0
+
+    invoke-virtual {v0}, Ljava/lang/StackTraceElement;->getMethodName()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/Queue;
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    if-eqz v0, :cond_2
+    move-result-object v0
 
-    sget-boolean v3, Lcom/google/android/gms/internal/zzab;->DEBUG:Z
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    if-eqz v3, :cond_1
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    const-string v3, "Releasing %d waiting requests for cacheKey=%s."
+    move-result-object v4
 
-    const/4 v4, 0x2
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
+
+    move-result v4
+
+    add-int/lit8 v4, v4, 0x1
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/String;->length()I
+
+    move-result v5
+
+    add-int/2addr v4, v5
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, "."
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_2
+    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    const-string v3, "[%d] %s: %s"
+
+    const/4 v4, 0x3
 
     new-array v4, v4, [Ljava/lang/Object;
 
     const/4 v5, 0x0
 
-    invoke-interface {v0}, Ljava/util/Queue;->size()I
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    move-result v6
+    move-result-object v6
 
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v6}, Ljava/lang/Thread;->getId()J
+
+    move-result-wide v6
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v6
 
@@ -529,27 +244,32 @@
 
     const/4 v5, 0x1
 
-    aput-object v2, v4, v5
+    aput-object v0, v4, v5
 
-    invoke-static {v3, v4}, Lcom/google/android/gms/internal/zzab;->zza(Ljava/lang/String;[Ljava/lang/Object;)V
+    aput-object p0, v4, v1
+
+    invoke-static {v2, v3, v4}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-static {v0, p0, p1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    goto/16 :goto_0
 
     :cond_1
-    iget-object v2, p0, Lcom/google/android/gms/internal/zzs;->zzaz:Ljava/util/concurrent/PriorityBlockingQueue;
+    add-int/lit8 v0, v0, 0x1
 
-    invoke-virtual {v2, v0}, Ljava/util/concurrent/PriorityBlockingQueue;->addAll(Ljava/util/Collection;)Z
+    goto/16 :goto_1
 
     :cond_2
-    monitor-exit v1
+    move-object v0, v2
 
-    :cond_3
-    return-void
-
-    :catchall_2
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
-
-    throw v0
+    goto :goto_2
 .end method

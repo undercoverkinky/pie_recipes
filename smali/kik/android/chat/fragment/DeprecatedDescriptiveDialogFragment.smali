@@ -51,7 +51,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f090474
+    const v1, 0x7f0a0460
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -67,7 +67,7 @@
     .line 56
     iget-object v0, p0, Lkik/android/chat/fragment/DeprecatedDescriptiveDialogFragment;->b:Lkik/android/chat/fragment/DeprecatedDescriptiveDialogFragment$a;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/DeprecatedDescriptiveDialogFragment$a;->i_()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/android/chat/fragment/DeprecatedDescriptiveDialogFragment$a;->n_()Ljava/lang/String;
 
     move-result-object v0
 
@@ -79,7 +79,7 @@
 
     .prologue
     .line 62
-    const v0, 0x7f020249
+    const v0, 0x7f0201f2
 
     return v0
 .end method
@@ -93,7 +93,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f090473
+    const v1, 0x7f0a045f
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -157,9 +157,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/android/chat/e;
+    check-cast v0, Lkik/android/chat/c;
 
-    invoke-interface {v0}, Lkik/android/chat/e;->a()Lcom/kik/components/CoreComponent;
+    invoke-interface {v0}, Lkik/android/chat/c;->a()Lcom/kik/components/CoreComponent;
 
     move-result-object v0
 

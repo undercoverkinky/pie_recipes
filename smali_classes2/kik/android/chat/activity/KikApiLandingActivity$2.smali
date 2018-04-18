@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 181
+    .line 154
     iput-object p1, p0, Lkik/android/chat/activity/KikApiLandingActivity$2;->b:Lkik/android/chat/activity/KikApiLandingActivity;
 
     invoke-direct {p0, p2}, Lcom/kik/a/b;-><init>(Ljava/lang/String;)V
@@ -54,27 +54,27 @@
     .end annotation
 
     .prologue
-    .line 186
+    .line 159
     iget-object v0, p0, Lkik/android/chat/activity/KikApiLandingActivity$2;->b:Lkik/android/chat/activity/KikApiLandingActivity;
 
     iget-object v0, v0, Lkik/android/chat/activity/KikApiLandingActivity;->g:Lkik/core/interfaces/ad;
 
-    invoke-static {v0}, Lkik/core/z;->a(Lkik/core/interfaces/ad;)Z
+    invoke-static {v0}, Lkik/core/x;->a(Lkik/core/interfaces/ad;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 187
+    .line 160
     iget-object v0, p0, Lkik/android/chat/activity/KikApiLandingActivity$2;->b:Lkik/android/chat/activity/KikApiLandingActivity;
 
-    invoke-static {v0}, Lkik/android/chat/activity/KikApiLandingActivity;->b(Lkik/android/chat/activity/KikApiLandingActivity;)V
+    invoke-static {v0}, Lkik/android/chat/activity/KikApiLandingActivity;->a(Lkik/android/chat/activity/KikApiLandingActivity;)V
 
-    .line 205
+    .line 178
     :goto_0
     return-void
 
-    .line 190
+    .line 163
     :cond_0
     const-string v0, "parameters"
 
@@ -84,17 +84,17 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 191
+    .line 164
     const-string v1, "?"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 192
+    .line 165
     if-gez v1, :cond_1
 
-    .line 193
+    .line 166
     iget-object v0, p0, Lkik/android/chat/activity/KikApiLandingActivity$2;->b:Lkik/android/chat/activity/KikApiLandingActivity;
 
     const-string v1, "Invalid Request"
@@ -103,7 +103,7 @@
 
     goto :goto_0
 
-    .line 197
+    .line 170
     :cond_1
     const/4 v2, 0x0
 
@@ -111,15 +111,15 @@
 
     move-result-object v1
 
-    .line 198
-    invoke-static {v1, p2, v0}, Lkik/core/net/messageExtensions/a;->a(Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;)Lkik/core/datatypes/messageExtensions/ContentMessage;
+    .line 171
+    invoke-static {v1, p2, v0}, Lkik/core/net/d/a;->a(Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;)Lkik/core/datatypes/messageExtensions/ContentMessage;
 
     move-result-object v0
 
-    .line 199
+    .line 172
     if-nez v0, :cond_2
 
-    .line 200
+    .line 173
     iget-object v0, p0, Lkik/android/chat/activity/KikApiLandingActivity$2;->b:Lkik/android/chat/activity/KikApiLandingActivity;
 
     const-string v1, "Invalid Request"
@@ -128,7 +128,7 @@
 
     goto :goto_0
 
-    .line 204
+    .line 177
     :cond_2
     iget-object v1, p0, Lkik/android/chat/activity/KikApiLandingActivity$2;->b:Lkik/android/chat/activity/KikApiLandingActivity;
 

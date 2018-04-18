@@ -73,7 +73,7 @@
 
     const-string v3, "kik.iap.next_sku_check"
 
-    invoke-interface {v2, v3}, Lkik/core/interfaces/ad;->u(Ljava/lang/String;)Ljava/lang/Long;
+    invoke-interface {v2, v3}, Lkik/core/interfaces/ad;->t(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v2
 

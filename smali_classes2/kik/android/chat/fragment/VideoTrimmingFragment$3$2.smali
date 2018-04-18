@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 304
+    .line 291
     iput-object p1, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$3$2;->a:Lkik/android/chat/fragment/VideoTrimmingFragment$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 2
 
     .prologue
-    .line 308
+    .line 295
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$3$2;->a:Lkik/android/chat/fragment/VideoTrimmingFragment$3;
 
     iget-object v0, v0, Lkik/android/chat/fragment/VideoTrimmingFragment$3;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
@@ -51,7 +51,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 309
+    .line 296
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$3$2;->a:Lkik/android/chat/fragment/VideoTrimmingFragment$3;
 
     iget-object v0, v0, Lkik/android/chat/fragment/VideoTrimmingFragment$3;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
@@ -70,6 +70,6 @@
 
     invoke-virtual {v0, v1}, Lkik/android/widget/VideoKeyFrameView;->c(F)V
 
-    .line 310
+    .line 297
     return-void
 .end method

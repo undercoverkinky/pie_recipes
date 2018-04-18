@@ -21,28 +21,27 @@
     .line 1071
     const/16 v0, 0xb
 
-    .line 157
+    .line 156
     sput v0, Lcom/crashlytics/android/core/an;->a:I
 
     .line 2071
     const/16 v0, 0xc
 
-    .line 159
+    .line 158
     sput v0, Lcom/crashlytics/android/core/an;->b:I
 
     .line 3071
     const/16 v0, 0x10
 
-    .line 161
+    .line 160
     sput v0, Lcom/crashlytics/android/core/an;->c:I
 
     .line 4071
     const/16 v0, 0x1a
 
-    .line 163
+    .line 162
     sput v0, Lcom/crashlytics/android/core/an;->d:I
 
-    .line 162
     return-void
 .end method
 

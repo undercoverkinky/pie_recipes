@@ -75,7 +75,7 @@
     if-eqz p2, :cond_0
 
     .line 56
-    sget-object v0, Lkik/android/R$styleable;->DisappearOnScrollLayout:[I
+    sget-object v0, Lkik/android/m$a;->y:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -128,7 +128,7 @@
 
     iget-object v0, p0, Lkik/android/widget/DisappearOnScrollLayout;->g:Landroid/support/v7/widget/RecyclerView$OnScrollListener;
 
-    invoke-virtual {p1, v0}, Landroid/support/v7/widget/RecyclerView;->removeOnScrollListener(Landroid/support/v7/widget/RecyclerView$OnScrollListener;)V
+    invoke-virtual {p1, v0}, Landroid/support/v7/widget/RecyclerView;->b(Landroid/support/v7/widget/RecyclerView$OnScrollListener;)V
 
     goto :goto_0
 .end method
@@ -186,7 +186,7 @@
     if-eqz v0, :cond_5
 
     .line 3100
-    invoke-static {p0, v4}, Lkik/android/util/an;->a(Landroid/view/View;I)V
+    invoke-static {p0, v4}, Lkik/android/util/am;->a(Landroid/view/View;I)V
 
     .line 3117
     :cond_1
@@ -246,7 +246,7 @@
     if-eqz v0, :cond_7
 
     .line 3117
-    invoke-static {p0, v4}, Lkik/android/util/an;->b(Landroid/view/View;I)V
+    invoke-static {p0, v4}, Lkik/android/util/am;->b(Landroid/view/View;I)V
 
     goto :goto_2
 
@@ -308,7 +308,7 @@
     .line 1167
     iget-object v1, p0, Lkik/android/widget/DisappearOnScrollLayout;->g:Landroid/support/v7/widget/RecyclerView$OnScrollListener;
 
-    invoke-virtual {v0, v1}, Landroid/support/v7/widget/RecyclerView;->addOnScrollListener(Landroid/support/v7/widget/RecyclerView$OnScrollListener;)V
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/RecyclerView;->a(Landroid/support/v7/widget/RecyclerView$OnScrollListener;)V
 
     .line 1169
     iget-object v1, p0, Lkik/android/widget/DisappearOnScrollLayout;->g:Landroid/support/v7/widget/RecyclerView$OnScrollListener;

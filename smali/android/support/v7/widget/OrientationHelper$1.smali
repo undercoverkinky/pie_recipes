@@ -19,7 +19,7 @@
     .locals 1
 
     .prologue
-    .line 251
+    .line 216
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/support/v7/widget/OrientationHelper;-><init>(Landroid/support/v7/widget/RecyclerView$LayoutManager;B)V
@@ -33,16 +33,15 @@
     .locals 2
 
     .prologue
-    .line 297
-    .line 298
+    .line 262
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/support/v7/widget/RecyclerView$LayoutParams;
 
-    .line 299
-    invoke-static {p1}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->l(Landroid/view/View;)I
+    .line 264
+    invoke-static {p1}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->i(Landroid/view/View;)I
 
     move-result v1
 
@@ -57,12 +56,12 @@
     .locals 1
 
     .prologue
-    .line 264
+    .line 229
     iget-object v0, p0, Landroid/support/v7/widget/OrientationHelper$1;->a:Landroid/support/v7/widget/RecyclerView$LayoutManager;
 
-    invoke-virtual {v0, p1}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->g(I)V
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->h(I)V
 
-    .line 265
+    .line 230
     return-void
 .end method
 
@@ -70,16 +69,15 @@
     .locals 2
 
     .prologue
-    .line 290
-    .line 291
+    .line 255
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/support/v7/widget/RecyclerView$LayoutParams;
 
-    .line 292
-    invoke-static {p1}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->n(Landroid/view/View;)I
+    .line 257
+    invoke-static {p1}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->k(Landroid/view/View;)I
 
     move-result v1
 
@@ -94,10 +92,10 @@
     .locals 1
 
     .prologue
-    .line 269
+    .line 234
     iget-object v0, p0, Landroid/support/v7/widget/OrientationHelper$1;->a:Landroid/support/v7/widget/RecyclerView$LayoutManager;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->y()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->v()I
 
     move-result v0
 
@@ -105,93 +103,18 @@
 .end method
 
 .method public final c(Landroid/view/View;)I
-    .locals 2
-
-    .prologue
-    .line 304
-    iget-object v0, p0, Landroid/support/v7/widget/OrientationHelper$1;->a:Landroid/support/v7/widget/RecyclerView$LayoutManager;
-
-    iget-object v1, p0, Landroid/support/v7/widget/OrientationHelper$1;->b:Landroid/graphics/Rect;
-
-    invoke-virtual {v0, p1, v1}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->a(Landroid/view/View;Landroid/graphics/Rect;)V
-
-    .line 305
-    iget-object v0, p0, Landroid/support/v7/widget/OrientationHelper$1;->b:Landroid/graphics/Rect;
-
-    iget v0, v0, Landroid/graphics/Rect;->right:I
-
-    return v0
-.end method
-
-.method public final d()I
-    .locals 2
-
-    .prologue
-    .line 254
-    iget-object v0, p0, Landroid/support/v7/widget/OrientationHelper$1;->a:Landroid/support/v7/widget/RecyclerView$LayoutManager;
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->w()I
-
-    move-result v0
-
-    iget-object v1, p0, Landroid/support/v7/widget/OrientationHelper$1;->a:Landroid/support/v7/widget/RecyclerView$LayoutManager;
-
-    invoke-virtual {v1}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->A()I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final d(Landroid/view/View;)I
-    .locals 2
-
-    .prologue
-    .line 310
-    iget-object v0, p0, Landroid/support/v7/widget/OrientationHelper$1;->a:Landroid/support/v7/widget/RecyclerView$LayoutManager;
-
-    iget-object v1, p0, Landroid/support/v7/widget/OrientationHelper$1;->b:Landroid/graphics/Rect;
-
-    invoke-virtual {v0, p1, v1}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->a(Landroid/view/View;Landroid/graphics/Rect;)V
-
-    .line 311
-    iget-object v0, p0, Landroid/support/v7/widget/OrientationHelper$1;->b:Landroid/graphics/Rect;
-
-    iget v0, v0, Landroid/graphics/Rect;->left:I
-
-    return v0
-.end method
-
-.method public final e()I
-    .locals 1
-
-    .prologue
-    .line 259
-    iget-object v0, p0, Landroid/support/v7/widget/OrientationHelper$1;->a:Landroid/support/v7/widget/RecyclerView$LayoutManager;
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->w()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final e(Landroid/view/View;)I
     .locals 3
 
     .prologue
-    .line 274
-    .line 275
+    .line 239
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/support/v7/widget/RecyclerView$LayoutParams;
 
-    .line 276
-    invoke-static {p1}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->j(Landroid/view/View;)I
+    .line 241
+    invoke-static {p1}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->g(Landroid/view/View;)I
 
     move-result v1
 
@@ -206,29 +129,20 @@
     return v0
 .end method
 
-.method public final f()I
+.method public final d()I
     .locals 2
 
     .prologue
-    .line 316
+    .line 219
     iget-object v0, p0, Landroid/support/v7/widget/OrientationHelper$1;->a:Landroid/support/v7/widget/RecyclerView$LayoutManager;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->w()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->t()I
 
     move-result v0
 
     iget-object v1, p0, Landroid/support/v7/widget/OrientationHelper$1;->a:Landroid/support/v7/widget/RecyclerView$LayoutManager;
 
-    invoke-virtual {v1}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->y()I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    iget-object v1, p0, Landroid/support/v7/widget/OrientationHelper$1;->a:Landroid/support/v7/widget/RecyclerView$LayoutManager;
-
-    .line 317
-    invoke-virtual {v1}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->A()I
+    invoke-virtual {v1}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->x()I
 
     move-result v1
 
@@ -237,20 +151,19 @@
     return v0
 .end method
 
-.method public final f(Landroid/view/View;)I
+.method public final d(Landroid/view/View;)I
     .locals 3
 
     .prologue
-    .line 282
-    .line 283
+    .line 247
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/support/v7/widget/RecyclerView$LayoutParams;
 
-    .line 284
-    invoke-static {p1}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->k(Landroid/view/View;)I
+    .line 249
+    invoke-static {p1}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->h(Landroid/view/View;)I
 
     move-result v1
 
@@ -265,14 +178,58 @@
     return v0
 .end method
 
+.method public final e()I
+    .locals 1
+
+    .prologue
+    .line 224
+    iget-object v0, p0, Landroid/support/v7/widget/OrientationHelper$1;->a:Landroid/support/v7/widget/RecyclerView$LayoutManager;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->t()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final f()I
+    .locals 2
+
+    .prologue
+    .line 269
+    iget-object v0, p0, Landroid/support/v7/widget/OrientationHelper$1;->a:Landroid/support/v7/widget/RecyclerView$LayoutManager;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->t()I
+
+    move-result v0
+
+    iget-object v1, p0, Landroid/support/v7/widget/OrientationHelper$1;->a:Landroid/support/v7/widget/RecyclerView$LayoutManager;
+
+    invoke-virtual {v1}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->v()I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    iget-object v1, p0, Landroid/support/v7/widget/OrientationHelper$1;->a:Landroid/support/v7/widget/RecyclerView$LayoutManager;
+
+    invoke-virtual {v1}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->x()I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    return v0
+.end method
+
 .method public final g()I
     .locals 1
 
     .prologue
-    .line 327
+    .line 280
     iget-object v0, p0, Landroid/support/v7/widget/OrientationHelper$1;->a:Landroid/support/v7/widget/RecyclerView$LayoutManager;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->A()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->x()I
 
     move-result v0
 
@@ -283,10 +240,10 @@
     .locals 1
 
     .prologue
-    .line 332
+    .line 285
     iget-object v0, p0, Landroid/support/v7/widget/OrientationHelper$1;->a:Landroid/support/v7/widget/RecyclerView$LayoutManager;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->u()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->r()I
 
     move-result v0
 
@@ -297,10 +254,10 @@
     .locals 1
 
     .prologue
-    .line 337
+    .line 290
     iget-object v0, p0, Landroid/support/v7/widget/OrientationHelper$1;->a:Landroid/support/v7/widget/RecyclerView$LayoutManager;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->v()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->s()I
 
     move-result v0
 

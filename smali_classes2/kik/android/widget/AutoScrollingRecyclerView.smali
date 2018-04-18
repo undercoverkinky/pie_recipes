@@ -46,14 +46,6 @@
     return-void
 .end method
 
-.method public static a()V
-    .locals 0
-
-    .prologue
-    .line 109
-    return-void
-.end method
-
 .method private a(IZ)V
     .locals 4
 
@@ -61,17 +53,17 @@
     .line 113
     if-ltz p1, :cond_0
 
-    invoke-virtual {p0}, Lkik/android/widget/AutoScrollingRecyclerView;->getAdapter()Landroid/support/v7/widget/RecyclerView$Adapter;
+    invoke-virtual {p0}, Lkik/android/widget/AutoScrollingRecyclerView;->a()Landroid/support/v7/widget/RecyclerView$Adapter;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lkik/android/widget/AutoScrollingRecyclerView;->getAdapter()Landroid/support/v7/widget/RecyclerView$Adapter;
+    invoke-virtual {p0}, Lkik/android/widget/AutoScrollingRecyclerView;->a()Landroid/support/v7/widget/RecyclerView$Adapter;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$Adapter;->getItemCount()I
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$Adapter;->b()I
 
     move-result v0
 
@@ -84,7 +76,7 @@
 
     .line 117
     :cond_1
-    invoke-static {p0, p2, p1}, Lkik/android/widget/e;->a(Lkik/android/widget/AutoScrollingRecyclerView;ZI)Ljava/lang/Runnable;
+    invoke-static {p0, p2, p1}, Lkik/android/widget/g;->a(Lkik/android/widget/AutoScrollingRecyclerView;ZI)Ljava/lang/Runnable;
 
     move-result-object v0
 
@@ -109,7 +101,7 @@
 
     invoke-direct {v0, p1}, Lkik/android/widget/AutoScrollingRecyclerView$1;-><init>(Lkik/android/widget/AutoScrollingRecyclerView$a;)V
 
-    invoke-virtual {p0, v0}, Landroid/support/v7/widget/RecyclerView;->addOnScrollListener(Landroid/support/v7/widget/RecyclerView$OnScrollListener;)V
+    invoke-virtual {p0, v0}, Landroid/support/v7/widget/RecyclerView;->a(Landroid/support/v7/widget/RecyclerView$OnScrollListener;)V
 
     .line 68
     return-void
@@ -119,19 +111,21 @@
     .locals 2
 
     .prologue
-    .line 85
+    .line 0
+    .line 1079
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
     invoke-direct {p0, v0, v1}, Lkik/android/widget/AutoScrollingRecyclerView;->a(IZ)V
 
+    .line 0
     return-void
 .end method
 
-.method public static a(Lkik/android/widget/AutoScrollingRecyclerView;Lrx/d;)V
+.method public static a(Lkik/android/widget/AutoScrollingRecyclerView;Lrx/c;)V
     .locals 3
     .annotation build Landroid/databinding/BindingAdapter;
         value = {
@@ -143,7 +137,7 @@
         value = {
             "(",
             "Lkik/android/widget/AutoScrollingRecyclerView;",
-            "Lrx/d",
+            "Lrx/c",
             "<",
             "Ljava/lang/Boolean;",
             ">;)V"
@@ -152,11 +146,11 @@
 
     .prologue
     .line 73
-    const v0, 0x7f010101
+    const v0, 0x7f01004a
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p0}, Lkik/android/widget/b;->a(Lkik/android/widget/AutoScrollingRecyclerView;)Lrx/functions/b;
+    invoke-static {p0}, Lkik/android/widget/d;->a(Lkik/android/widget/AutoScrollingRecyclerView;)Lrx/b/b;
 
     move-result-object v1
 
@@ -166,7 +160,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v1, p0, p1, v2}, Lcom/kik/util/bt;->a(ILrx/functions/b;Landroid/view/View;Lrx/d;Ljava/lang/Object;)V
+    invoke-static {v0, v1, p0, p1, v2}, Lcom/kik/util/az;->a(ILrx/b/b;Landroid/view/View;Lrx/c;Ljava/lang/Object;)V
 
     .line 74
     return-void
@@ -176,19 +170,18 @@
     .locals 0
 
     .prologue
-    .line 119
+    .line 1119
     if-eqz p1, :cond_0
 
-    .line 120
-    invoke-virtual {p0, p2}, Lkik/android/widget/AutoScrollingRecyclerView;->smoothScrollToPosition(I)V
+    .line 1120
+    invoke-virtual {p0, p2}, Lkik/android/widget/AutoScrollingRecyclerView;->b(I)V
 
-    .line 125
     :goto_0
     return-void
 
-    .line 123
+    .line 1123
     :cond_0
-    invoke-virtual {p0, p2}, Lkik/android/widget/AutoScrollingRecyclerView;->scrollToPosition(I)V
+    invoke-virtual {p0, p2}, Lkik/android/widget/AutoScrollingRecyclerView;->c_(I)V
 
     goto :goto_0
 .end method
@@ -197,19 +190,21 @@
     .locals 2
 
     .prologue
-    .line 79
+    .line 0
+    .line 1085
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
     invoke-direct {p0, v0, v1}, Lkik/android/widget/AutoScrollingRecyclerView;->a(IZ)V
 
+    .line 0
     return-void
 .end method
 
-.method public static b(Lkik/android/widget/AutoScrollingRecyclerView;Lrx/d;)V
+.method public static b(Lkik/android/widget/AutoScrollingRecyclerView;Lrx/c;)V
     .locals 3
     .annotation build Landroid/databinding/BindingAdapter;
         value = {
@@ -221,7 +216,7 @@
         value = {
             "(",
             "Lkik/android/widget/AutoScrollingRecyclerView;",
-            "Lrx/d",
+            "Lrx/c",
             "<",
             "Ljava/lang/Integer;",
             ">;)V"
@@ -230,9 +225,9 @@
 
     .prologue
     .line 79
-    const v0, 0x7f010104
+    const v0, 0x7f01004d
 
-    invoke-static {p0}, Lkik/android/widget/c;->a(Lkik/android/widget/AutoScrollingRecyclerView;)Lrx/functions/b;
+    invoke-static {p0}, Lkik/android/widget/e;->a(Lkik/android/widget/AutoScrollingRecyclerView;)Lrx/b/b;
 
     move-result-object v1
 
@@ -242,13 +237,13 @@
 
     move-result-object v2
 
-    invoke-static {v0, v1, p0, p1, v2}, Lcom/kik/util/bt;->a(ILrx/functions/b;Landroid/view/View;Lrx/d;Ljava/lang/Object;)V
+    invoke-static {v0, v1, p0, p1, v2}, Lcom/kik/util/az;->a(ILrx/b/b;Landroid/view/View;Lrx/c;Ljava/lang/Object;)V
 
     .line 80
     return-void
 .end method
 
-.method public static c(Lkik/android/widget/AutoScrollingRecyclerView;Lrx/d;)V
+.method public static c(Lkik/android/widget/AutoScrollingRecyclerView;Lrx/c;)V
     .locals 3
     .annotation build Landroid/databinding/BindingAdapter;
         value = {
@@ -260,7 +255,7 @@
         value = {
             "(",
             "Lkik/android/widget/AutoScrollingRecyclerView;",
-            "Lrx/d",
+            "Lrx/c",
             "<",
             "Ljava/lang/Integer;",
             ">;)V"
@@ -269,9 +264,9 @@
 
     .prologue
     .line 85
-    const v0, 0x7f010103
+    const v0, 0x7f01004c
 
-    invoke-static {p0}, Lkik/android/widget/d;->a(Lkik/android/widget/AutoScrollingRecyclerView;)Lrx/functions/b;
+    invoke-static {p0}, Lkik/android/widget/f;->a(Lkik/android/widget/AutoScrollingRecyclerView;)Lrx/b/b;
 
     move-result-object v1
 
@@ -281,8 +276,14 @@
 
     move-result-object v2
 
-    invoke-static {v0, v1, p0, p1, v2}, Lcom/kik/util/bt;->a(ILrx/functions/b;Landroid/view/View;Lrx/d;Ljava/lang/Object;)V
+    invoke-static {v0, v1, p0, p1, v2}, Lcom/kik/util/az;->a(ILrx/b/b;Landroid/view/View;Lrx/c;Ljava/lang/Object;)V
 
     .line 86
+    return-void
+.end method
+
+.method static synthetic l()V
+    .locals 0
+
     return-void
 .end method

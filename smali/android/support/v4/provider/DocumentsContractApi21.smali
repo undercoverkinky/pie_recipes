@@ -3,12 +3,6 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x15
-.end annotation
-
-
 # static fields
 .field private static final TAG:Ljava/lang/String; = "DocumentFile"
 
@@ -18,7 +12,7 @@
     .locals 0
 
     .prologue
-    .line 32
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,22 +22,22 @@
     .locals 1
 
     .prologue
-    .line 80
+    .line 76
     if-eqz p0, :cond_0
 
-    .line 82
+    .line 78
     :try_start_0
     invoke-interface {p0}, Ljava/lang/AutoCloseable;->close()V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 88
+    .line 84
     :cond_0
     :goto_0
     return-void
 
-    .line 84
+    .line 80
     :catch_0
     move-exception v0
 
@@ -59,7 +53,7 @@
     .locals 1
 
     .prologue
-    .line 42
+    .line 38
     const-string v0, "vnd.android.document/directory"
 
     invoke-static {p0, p1, v0, p2}, Landroid/support/v4/provider/DocumentsContractApi21;->createFile(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
@@ -73,7 +67,7 @@
     .locals 1
 
     .prologue
-    .line 37
+    .line 33
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -91,27 +85,26 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 51
+    .line 47
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 53
+    .line 48
     invoke-static {p1}, Landroid/provider/DocumentsContract;->getDocumentId(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 52
     invoke-static {p1, v1}, Landroid/provider/DocumentsContract;->buildChildDocumentsUriUsingTree(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 54
+    .line 50
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 58
+    .line 54
     const/4 v2, 0x1
 
     :try_start_0
@@ -136,7 +129,7 @@
 
     move-result-object v1
 
-    .line 60
+    .line 56
     :goto_0
     :try_start_1
     invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
@@ -145,19 +138,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 61
+    .line 57
     const/4 v0, 0x0
 
     invoke-interface {v1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 62
+    .line 58
     invoke-static {p1, v0}, Landroid/provider/DocumentsContract;->buildDocumentUriUsingTree(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 64
+    .line 60
     invoke-virtual {v7, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -165,11 +158,11 @@
 
     goto :goto_0
 
-    .line 66
+    .line 62
     :catch_0
     move-exception v0
 
-    .line 67
+    .line 63
     :goto_1
     :try_start_2
     const-string v2, "DocumentFile"
@@ -192,10 +185,10 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 69
+    .line 65
     invoke-static {v1}, Landroid/support/v4/provider/DocumentsContractApi21;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 72
+    .line 68
     :goto_2
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
@@ -211,7 +204,7 @@
 
     return-object v0
 
-    .line 69
+    .line 65
     :cond_0
     invoke-static {v1}, Landroid/support/v4/provider/DocumentsContractApi21;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
@@ -232,7 +225,7 @@
 
     goto :goto_3
 
-    .line 66
+    .line 62
     :catch_1
     move-exception v0
 
@@ -245,13 +238,11 @@
     .locals 1
 
     .prologue
-    .line 46
-    .line 47
+    .line 42
     invoke-static {p0}, Landroid/provider/DocumentsContract;->getTreeDocumentId(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 46
     invoke-static {p0, v0}, Landroid/provider/DocumentsContract;->buildDocumentUriUsingTree(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -263,7 +254,7 @@
     .locals 1
 
     .prologue
-    .line 76
+    .line 72
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0

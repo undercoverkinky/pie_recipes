@@ -52,7 +52,7 @@
 
     .prologue
     .line 57
-    iget-object v0, p0, Lkik/android/chat/activity/KActivityLauncher$a;->a:Ljava/lang/String;
+    iget-object v0, p0, Lkik/android/chat/activity/KActivityLauncher$a;->c:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -72,7 +72,7 @@
 
     .prologue
     .line 57
-    iget-object v0, p0, Lkik/android/chat/activity/KActivityLauncher$a;->c:Ljava/lang/String;
+    iget-object v0, p0, Lkik/android/chat/activity/KActivityLauncher$a;->a:Ljava/lang/String;
 
     return-object v0
 .end method

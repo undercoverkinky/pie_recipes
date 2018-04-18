@@ -46,12 +46,12 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 68
+    .line 66
     invoke-virtual {p4}, Lcom/google/common/hash/BloomFilterStrategies$a;->a()J
 
     move-result-wide v4
 
-    .line 69
+    .line 67
     invoke-static {}, Lcom/google/common/hash/f;->a()Lcom/google/common/hash/d;
 
     move-result-object v0
@@ -64,10 +64,10 @@
 
     move-result-wide v2
 
-    .line 70
+    .line 68
     long-to-int v6, v2
 
-    .line 71
+    .line 69
     const/16 v0, 0x20
 
     ushr-long/2addr v2, v0
@@ -76,22 +76,22 @@
 
     move v2, v1
 
-    .line 73
+    .line 71
     :goto_0
     if-gt v2, p3, :cond_2
 
-    .line 74
+    .line 72
     mul-int v0, v2, v3
 
     add-int/2addr v0, v6
 
-    .line 76
+    .line 74
     if-gez v0, :cond_0
 
-    .line 77
+    .line 75
     xor-int/lit8 v0, v0, -0x1
 
-    .line 79
+    .line 77
     :cond_0
     int-to-long v8, v0
 
@@ -103,14 +103,14 @@
 
     if-nez v0, :cond_1
 
-    .line 80
+    .line 78
     const/4 v0, 0x0
 
-    .line 83
+    .line 81
     :goto_1
     return v0
 
-    .line 73
+    .line 71
     :cond_1
     add-int/lit8 v0, v2, 0x1
 
@@ -121,7 +121,7 @@
     :cond_2
     move v0, v1
 
-    .line 83
+    .line 81
     goto :goto_1
 .end method
 
@@ -140,12 +140,12 @@
     .end annotation
 
     .prologue
-    .line 48
+    .line 47
     invoke-virtual {p4}, Lcom/google/common/hash/BloomFilterStrategies$a;->a()J
 
     move-result-wide v4
 
-    .line 49
+    .line 48
     invoke-static {}, Lcom/google/common/hash/f;->a()Lcom/google/common/hash/d;
 
     move-result-object v0
@@ -158,20 +158,20 @@
 
     move-result-wide v0
 
-    .line 50
+    .line 49
     long-to-int v3, v0
 
-    .line 51
+    .line 50
     const/16 v2, 0x20
 
     ushr-long/2addr v0, v2
 
     long-to-int v6, v0
 
-    .line 53
+    .line 52
     const/4 v1, 0x0
 
-    .line 54
+    .line 53
     const/4 v0, 0x1
 
     move v2, v1
@@ -181,18 +181,18 @@
     :goto_0
     if-gt v1, p3, :cond_1
 
-    .line 55
+    .line 54
     mul-int v0, v1, v6
 
     add-int/2addr v0, v3
 
-    .line 57
+    .line 56
     if-gez v0, :cond_0
 
-    .line 58
+    .line 57
     xor-int/lit8 v0, v0, -0x1
 
-    .line 60
+    .line 59
     :cond_0
     int-to-long v8, v0
 
@@ -204,14 +204,14 @@
 
     or-int/2addr v2, v0
 
-    .line 54
+    .line 53
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
 
-    .line 62
+    .line 61
     :cond_1
     return v2
 .end method

@@ -3,18 +3,12 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x17
-.end annotation
-
-
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 29
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +18,7 @@
     .locals 1
 
     .prologue
-    .line 35
+    .line 30
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getLayoutDirection()I
 
     move-result v0
@@ -32,14 +26,13 @@
     return v0
 .end method
 
-.method public static setLayoutDirection(Landroid/graphics/drawable/Drawable;I)Z
-    .locals 1
+.method public static setLayoutDirection(Landroid/graphics/drawable/Drawable;I)V
+    .locals 0
 
     .prologue
-    .line 31
+    .line 26
     invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setLayoutDirection(I)Z
 
-    move-result v0
-
-    return v0
+    .line 27
+    return-void
 .end method

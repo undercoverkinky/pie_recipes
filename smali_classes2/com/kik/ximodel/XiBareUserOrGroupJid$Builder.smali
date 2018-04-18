@@ -1382,7 +1382,6 @@
     .line 491
     invoke-virtual {p0, v1}, Lcom/kik/ximodel/XiBareUserOrGroupJid$Builder;->mergeFrom(Lcom/kik/ximodel/XiBareUserOrGroupJid;)Lcom/kik/ximodel/XiBareUserOrGroupJid$Builder;
 
-    .line 493
     :cond_1
     throw v0
 

@@ -1,223 +1,147 @@
-.class public final Lcom/google/android/gms/common/internal/zzy;
-.super Lcom/google/android/gms/common/internal/safeparcel/zza;
+.class public Lcom/google/android/gms/common/internal/zzy;
+.super Ljava/lang/Object;
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator",
-            "<",
-            "Lcom/google/android/gms/common/internal/zzy;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private static zzKm:Z
 
+.field private static zzasi:Ljava/lang/String;
 
-# instance fields
-.field private version:I
+.field private static zzasj:I
 
-.field private zzftw:I
-
-.field private zzftx:I
-
-.field zzfty:Ljava/lang/String;
-
-.field zzftz:Landroid/os/IBinder;
-
-.field zzfua:[Lcom/google/android/gms/common/api/Scope;
-
-.field zzfub:Landroid/os/Bundle;
-
-.field zzfuc:Landroid/accounts/Account;
-
-.field zzfud:[Lcom/google/android/gms/common/zzc;
+.field private static zzrs:Ljava/lang/Object;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/gms/common/internal/zzz;
+    new-instance v0, Ljava/lang/Object;
 
-    invoke-direct {v0}, Lcom/google/android/gms/common/internal/zzz;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lcom/google/android/gms/common/internal/zzy;->CREATOR:Landroid/os/Parcelable$Creator;
+    sput-object v0, Lcom/google/android/gms/common/internal/zzy;->zzrs:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public constructor <init>(I)V
+.method public static zzaw(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
-    invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/zza;-><init>()V
+    invoke-static {p0}, Lcom/google/android/gms/common/internal/zzy;->zzay(Landroid/content/Context;)V
 
-    const/4 v0, 0x3
+    sget-object v0, Lcom/google/android/gms/common/internal/zzy;->zzasi:Ljava/lang/String;
 
-    iput v0, p0, Lcom/google/android/gms/common/internal/zzy;->version:I
-
-    sget v0, Lcom/google/android/gms/common/zze;->GOOGLE_PLAY_SERVICES_VERSION_CODE:I
-
-    iput v0, p0, Lcom/google/android/gms/common/internal/zzy;->zzftx:I
-
-    iput p1, p0, Lcom/google/android/gms/common/internal/zzy;->zzftw:I
-
-    return-void
+    return-object v0
 .end method
 
-.method constructor <init>(IIILjava/lang/String;Landroid/os/IBinder;[Lcom/google/android/gms/common/api/Scope;Landroid/os/Bundle;Landroid/accounts/Account;[Lcom/google/android/gms/common/zzc;)V
-    .locals 2
+.method public static zzax(Landroid/content/Context;)I
+    .locals 1
 
-    const/4 v0, 0x0
+    invoke-static {p0}, Lcom/google/android/gms/common/internal/zzy;->zzay(Landroid/content/Context;)V
 
-    invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/zza;-><init>()V
+    sget v0, Lcom/google/android/gms/common/internal/zzy;->zzasj:I
 
-    iput p1, p0, Lcom/google/android/gms/common/internal/zzy;->version:I
+    return v0
+.end method
 
-    iput p2, p0, Lcom/google/android/gms/common/internal/zzy;->zzftw:I
+.method private static zzay(Landroid/content/Context;)V
+    .locals 4
 
-    iput p3, p0, Lcom/google/android/gms/common/internal/zzy;->zzftx:I
+    sget-object v1, Lcom/google/android/gms/common/internal/zzy;->zzrs:Ljava/lang/Object;
 
-    const-string v1, "com.google.android.gms"
+    monitor-enter v1
 
-    invoke-virtual {v1, p4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :try_start_0
+    sget-boolean v0, Lcom/google/android/gms/common/internal/zzy;->zzKm:Z
 
-    move-result v1
+    if-eqz v0, :cond_0
 
-    if-eqz v1, :cond_1
-
-    const-string v1, "com.google.android.gms"
-
-    iput-object v1, p0, Lcom/google/android/gms/common/internal/zzy;->zzfty:Ljava/lang/String;
+    monitor-exit v1
 
     :goto_0
-    const/4 v1, 0x2
+    return-void
 
-    if-ge p1, v1, :cond_4
+    :cond_0
+    const/4 v0, 0x1
 
-    if-eqz p5, :cond_0
+    sput-boolean v0, Lcom/google/android/gms/common/internal/zzy;->zzKm:Z
 
-    if-nez p5, :cond_2
-
-    :goto_1
-    invoke-static {v0}, Lcom/google/android/gms/common/internal/zza;->zza(Lcom/google/android/gms/common/internal/zzam;)Landroid/accounts/Account;
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    :cond_0
-    iput-object v0, p0, Lcom/google/android/gms/common/internal/zzy;->zzfuc:Landroid/accounts/Account;
+    invoke-static {p0}, Lcom/google/android/gms/internal/zzpw;->zzaH(Landroid/content/Context;)Lcom/google/android/gms/internal/zzpv;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :goto_2
-    iput-object p6, p0, Lcom/google/android/gms/common/internal/zzy;->zzfua:[Lcom/google/android/gms/common/api/Scope;
+    move-result-object v2
 
-    iput-object p7, p0, Lcom/google/android/gms/common/internal/zzy;->zzfub:Landroid/os/Bundle;
+    const/16 v3, 0x80
 
-    iput-object p9, p0, Lcom/google/android/gms/common/internal/zzy;->zzfud:[Lcom/google/android/gms/common/zzc;
+    :try_start_1
+    invoke-virtual {v2, v0, v3}, Lcom/google/android/gms/internal/zzpv;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
-    return-void
+    move-result-object v0
 
-    :cond_1
-    iput-object p4, p0, Lcom/google/android/gms/common/internal/zzy;->zzfty:Ljava/lang/String;
+    iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
+    :try_end_1
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-nez v0, :cond_1
+
+    :try_start_2
+    monitor-exit v1
 
     goto :goto_0
 
-    :cond_2
-    const-string v0, "com.google.android.gms.common.internal.IAccountAccessor"
+    :catchall_0
+    move-exception v0
 
-    invoke-interface {p5, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+    monitor-exit v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    move-result-object v0
+    throw v0
 
-    instance-of v1, v0, Lcom/google/android/gms/common/internal/zzam;
+    :cond_1
+    :try_start_3
+    const-string v2, "com.google.app.id"
 
-    if-eqz v1, :cond_3
+    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    check-cast v0, Lcom/google/android/gms/common/internal/zzam;
+    move-result-object v2
 
-    goto :goto_1
+    sput-object v2, Lcom/google/android/gms/common/internal/zzy;->zzasi:Ljava/lang/String;
 
-    :cond_3
-    new-instance v0, Lcom/google/android/gms/common/internal/zzao;
+    const-string v2, "com.google.android.gms.version"
 
-    invoke-direct {v0, p5}, Lcom/google/android/gms/common/internal/zzao;-><init>(Landroid/os/IBinder;)V
-
-    goto :goto_1
-
-    :cond_4
-    iput-object p5, p0, Lcom/google/android/gms/common/internal/zzy;->zzftz:Landroid/os/IBinder;
-
-    iput-object p8, p0, Lcom/google/android/gms/common/internal/zzy;->zzfuc:Landroid/accounts/Account;
-
-    goto :goto_2
-.end method
-
-
-# virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 4
-
-    const/4 v3, 0x0
-
-    invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/zzd;->zze(Landroid/os/Parcel;)I
+    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v0
 
-    const/4 v1, 0x1
+    sput v0, Lcom/google/android/gms/common/internal/zzy;->zzasj:I
+    :try_end_3
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    iget v2, p0, Lcom/google/android/gms/common/internal/zzy;->version:I
+    :goto_1
+    :try_start_4
+    monitor-exit v1
 
-    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/zzd;->zzc(Landroid/os/Parcel;II)V
+    goto :goto_0
 
-    const/4 v1, 0x2
+    :catch_0
+    move-exception v0
 
-    iget v2, p0, Lcom/google/android/gms/common/internal/zzy;->zzftw:I
+    const-string v2, "MetadataValueReader"
 
-    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/zzd;->zzc(Landroid/os/Parcel;II)V
+    const-string v3, "This should never happen."
 
-    const/4 v1, 0x3
+    invoke-static {v2, v3, v0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    iget v2, p0, Lcom/google/android/gms/common/internal/zzy;->zzftx:I
-
-    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/zzd;->zzc(Landroid/os/Parcel;II)V
-
-    const/4 v1, 0x4
-
-    iget-object v2, p0, Lcom/google/android/gms/common/internal/zzy;->zzfty:Ljava/lang/String;
-
-    invoke-static {p1, v1, v2, v3}, Lcom/google/android/gms/common/internal/safeparcel/zzd;->zza(Landroid/os/Parcel;ILjava/lang/String;Z)V
-
-    const/4 v1, 0x5
-
-    iget-object v2, p0, Lcom/google/android/gms/common/internal/zzy;->zzftz:Landroid/os/IBinder;
-
-    invoke-static {p1, v1, v2, v3}, Lcom/google/android/gms/common/internal/safeparcel/zzd;->zza(Landroid/os/Parcel;ILandroid/os/IBinder;Z)V
-
-    const/4 v1, 0x6
-
-    iget-object v2, p0, Lcom/google/android/gms/common/internal/zzy;->zzfua:[Lcom/google/android/gms/common/api/Scope;
-
-    invoke-static {p1, v1, v2, p2, v3}, Lcom/google/android/gms/common/internal/safeparcel/zzd;->zza(Landroid/os/Parcel;I[Landroid/os/Parcelable;IZ)V
-
-    const/4 v1, 0x7
-
-    iget-object v2, p0, Lcom/google/android/gms/common/internal/zzy;->zzfub:Landroid/os/Bundle;
-
-    invoke-static {p1, v1, v2, v3}, Lcom/google/android/gms/common/internal/safeparcel/zzd;->zza(Landroid/os/Parcel;ILandroid/os/Bundle;Z)V
-
-    const/16 v1, 0x8
-
-    iget-object v2, p0, Lcom/google/android/gms/common/internal/zzy;->zzfuc:Landroid/accounts/Account;
-
-    invoke-static {p1, v1, v2, p2, v3}, Lcom/google/android/gms/common/internal/safeparcel/zzd;->zza(Landroid/os/Parcel;ILandroid/os/Parcelable;IZ)V
-
-    const/16 v1, 0xa
-
-    iget-object v2, p0, Lcom/google/android/gms/common/internal/zzy;->zzfud:[Lcom/google/android/gms/common/zzc;
-
-    invoke-static {p1, v1, v2, p2, v3}, Lcom/google/android/gms/common/internal/safeparcel/zzd;->zza(Landroid/os/Parcel;I[Landroid/os/Parcelable;IZ)V
-
-    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zzd;->zzai(Landroid/os/Parcel;I)V
-
-    return-void
+    goto :goto_1
 .end method

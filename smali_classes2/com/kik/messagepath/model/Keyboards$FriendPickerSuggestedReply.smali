@@ -60,14 +60,14 @@
     .locals 1
 
     .prologue
-    .line 12626
+    .line 12663
     new-instance v0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;
 
     invoke-direct {v0}, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;-><init>()V
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->a:Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;
 
-    .line 12634
+    .line 12671
     new-instance v0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply$1;
 
     invoke-direct {v0}, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply$1;-><init>()V
@@ -81,22 +81,22 @@
     .locals 1
 
     .prologue
-    .line 11958
+    .line 11995
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageV3;-><init>()V
 
-    .line 12057
+    .line 12094
     const/4 v0, -0x1
 
     iput-byte v0, p0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->memoizedIsInitialized:B
 
-    .line 11959
+    .line 11996
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->picked_:Ljava/util/List;
 
-    .line 11960
+    .line 11997
     return-void
 .end method
 
@@ -113,26 +113,26 @@
 
     const/4 v2, 0x1
 
-    .line 11971
+    .line 12008
     invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;-><init>()V
 
     move v1, v0
 
-    .line 11975
+    .line 12012
     :cond_0
     :goto_0
     if-nez v1, :cond_3
 
-    .line 11976
+    .line 12013
     :try_start_0
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readTag()I
 
     move-result v3
 
-    .line 11977
+    .line 12014
     sparse-switch v3, :sswitch_data_0
 
-    .line 11982
+    .line 12019
     invoke-virtual {p1, v3}, Lcom/google/protobuf/CodedInputStream;->skipField(I)Z
 
     move-result v3
@@ -141,36 +141,36 @@
 
     move v1, v2
 
-    .line 11983
+    .line 12020
     goto :goto_0
 
     :sswitch_0
     move v1, v2
 
-    .line 11980
+    .line 12017
     goto :goto_0
 
-    .line 11988
+    .line 12025
     :sswitch_1
     and-int/lit8 v3, v0, 0x1
 
     if-eq v3, v2, :cond_1
 
-    .line 11989
+    .line 12026
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v3, p0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->picked_:Ljava/util/List;
 
-    .line 11990
+    .line 12027
     or-int/lit8 v0, v0, 0x1
 
-    .line 11992
+    .line 12029
     :cond_1
     iget-object v3, p0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->picked_:Ljava/util/List;
 
-    .line 11993
+    .line 12030
     invoke-static {}, Lcom/kik/ximodel/XiBareUserJid;->parser()Lcom/google/protobuf/Parser;
 
     move-result-object v4
@@ -179,7 +179,7 @@
 
     move-result-object v4
 
-    .line 11992
+    .line 12029
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_0 .. :try_end_0} :catch_0
@@ -188,7 +188,7 @@
 
     goto :goto_0
 
-    .line 11999
+    .line 12036
     :catch_0
     move-exception v1
 
@@ -207,7 +207,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 12004
+    .line 12041
     :catchall_0
     move-exception v0
 
@@ -216,7 +216,7 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 12005
+    .line 12042
     iget-object v1, p0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->picked_:Ljava/util/List;
 
     invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -225,20 +225,19 @@
 
     iput-object v1, p0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->picked_:Ljava/util/List;
 
-    .line 12007
+    .line 12044
     :cond_2
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->makeExtensionsImmutable()V
 
-    .line 12008
     throw v0
 
-    .line 12004
+    .line 12041
     :cond_3
     and-int/lit8 v0, v0, 0x1
 
     if-ne v0, v2, :cond_4
 
-    .line 12005
+    .line 12042
     iget-object v0, p0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->picked_:Ljava/util/List;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -247,14 +246,14 @@
 
     iput-object v0, p0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->picked_:Ljava/util/List;
 
-    .line 12007
+    .line 12044
     :cond_4
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->makeExtensionsImmutable()V
 
-    .line 12008
+    .line 12045
     return-void
 
-    .line 12000
+    .line 12037
     :catch_1
     move-exception v1
 
@@ -264,13 +263,13 @@
 
     move-object v0, v5
 
-    .line 12001
+    .line 12038
     :try_start_2
     new-instance v3, Lcom/google/protobuf/InvalidProtocolBufferException;
 
     invoke-direct {v3, v0}, Lcom/google/protobuf/InvalidProtocolBufferException;-><init>(Ljava/io/IOException;)V
 
-    .line 12002
+    .line 12039
     invoke-virtual {v3, p0}, Lcom/google/protobuf/InvalidProtocolBufferException;->setUnfinishedMessage(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/InvalidProtocolBufferException;
 
     move-result-object v0
@@ -279,7 +278,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 12004
+    .line 12041
     :catchall_1
     move-exception v1
 
@@ -291,7 +290,7 @@
 
     goto :goto_1
 
-    .line 11977
+    .line 12014
     nop
 
     :sswitch_data_0
@@ -310,7 +309,7 @@
     .end annotation
 
     .prologue
-    .line 11950
+    .line 11987
     invoke-direct {p0, p1, p2}, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;-><init>(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)V
 
     return-void
@@ -327,15 +326,15 @@
     .end annotation
 
     .prologue
-    .line 11956
+    .line 11993
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;)V
 
-    .line 12057
+    .line 12094
     const/4 v0, -0x1
 
     iput-byte v0, p0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->memoizedIsInitialized:B
 
-    .line 11957
+    .line 11994
     return-void
 .end method
 
@@ -343,7 +342,7 @@
     .locals 0
 
     .prologue
-    .line 11950
+    .line 11987
     invoke-direct {p0, p1}, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;)V
 
     return-void
@@ -353,7 +352,7 @@
     .locals 1
 
     .prologue
-    .line 12181
+    .line 12218
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->a:Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;
 
     invoke-virtual {v0}, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->b()Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply$a;
@@ -367,7 +366,7 @@
     .locals 1
 
     .prologue
-    .line 12184
+    .line 12221
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->a:Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;
 
     invoke-virtual {v0}, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->b()Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply$a;
@@ -385,7 +384,7 @@
     .locals 0
 
     .prologue
-    .line 11950
+    .line 11987
     iput-object p1, p0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->picked_:Ljava/util/List;
 
     return-object p1
@@ -395,7 +394,7 @@
     .locals 1
 
     .prologue
-    .line 11950
+    .line 11987
     iget-object v0, p0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->picked_:Ljava/util/List;
 
     return-object v0
@@ -405,7 +404,7 @@
     .locals 1
 
     .prologue
-    .line 12630
+    .line 12667
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->a:Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;
 
     return-object v0
@@ -424,7 +423,7 @@
     .end annotation
 
     .prologue
-    .line 12644
+    .line 12681
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->b:Lcom/google/protobuf/Parser;
 
     return-object v0
@@ -434,7 +433,7 @@
     .locals 1
 
     .prologue
-    .line 11950
+    .line 11987
     sget-boolean v0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->alwaysUseFieldBuilders:Z
 
     return v0
@@ -444,7 +443,7 @@
     .locals 1
 
     .prologue
-    .line 11950
+    .line 11987
     sget-boolean v0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->alwaysUseFieldBuilders:Z
 
     return v0
@@ -454,7 +453,7 @@
     .locals 1
 
     .prologue
-    .line 11950
+    .line 11987
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->b:Lcom/google/protobuf/Parser;
 
     return-object v0
@@ -468,7 +467,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 12187
+    .line 12224
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->a:Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;
 
     if-ne p0, v0, :cond_0
@@ -485,7 +484,7 @@
 
     invoke-direct {v0, v1}, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply$a;-><init>(B)V
 
-    .line 12188
+    .line 12225
     invoke-virtual {v0, p0}, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply$a;->a(Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;)Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply$a;
 
     move-result-object v0
@@ -499,38 +498,38 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 12090
+    .line 12127
     if-ne p1, p0, :cond_1
 
-    .line 12101
+    .line 12138
     :cond_0
     :goto_0
     return v0
 
-    .line 12093
+    .line 12130
     :cond_1
     instance-of v1, p1, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;
 
     if-nez v1, :cond_2
 
-    .line 12094
+    .line 12131
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     goto :goto_0
 
-    .line 12096
+    .line 12133
     :cond_2
     check-cast p1, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;
 
-    .line 13028
+    .line 13065
     iget-object v1, p0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->picked_:Ljava/util/List;
 
-    .line 14028
+    .line 14065
     iget-object v2, p1, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->picked_:Ljava/util/List;
 
-    .line 12100
+    .line 12137
     invoke-interface {v1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -539,7 +538,7 @@
 
     const/4 v0, 0x0
 
-    .line 12101
+    .line 12138
     goto :goto_0
 .end method
 
@@ -547,10 +546,10 @@
     .locals 1
 
     .prologue
-    .line 18653
+    .line 18690
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->a:Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;
 
-    .line 11950
+    .line 11987
     return-object v0
 .end method
 
@@ -558,10 +557,10 @@
     .locals 1
 
     .prologue
-    .line 17653
+    .line 17690
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->a:Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;
 
-    .line 11950
+    .line 11987
     return-object v0
 .end method
 
@@ -578,7 +577,7 @@
     .end annotation
 
     .prologue
-    .line 12649
+    .line 12686
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->b:Lcom/google/protobuf/Parser;
 
     return-object v0
@@ -590,15 +589,15 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 12075
+    .line 12112
     iget v2, p0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->memoizedSize:I
 
-    .line 12076
+    .line 12113
     const/4 v1, -0x1
 
     if-eq v2, v1, :cond_0
 
-    .line 12084
+    .line 12121
     :goto_0
     return v2
 
@@ -607,7 +606,7 @@
 
     move v2, v0
 
-    .line 12079
+    .line 12116
     :goto_1
     iget-object v0, p0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->picked_:Ljava/util/List;
 
@@ -617,12 +616,12 @@
 
     if-ge v1, v0, :cond_1
 
-    .line 12080
+    .line 12117
     const/4 v3, 0x1
 
     iget-object v0, p0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->picked_:Ljava/util/List;
 
-    .line 12081
+    .line 12118
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -635,14 +634,14 @@
 
     add-int/2addr v2, v0
 
-    .line 12079
+    .line 12116
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_1
 
-    .line 12083
+    .line 12120
     :cond_1
     iput v2, p0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->memoizedSize:I
 
@@ -653,7 +652,7 @@
     .locals 1
 
     .prologue
-    .line 11965
+    .line 12002
     invoke-static {}, Lcom/google/protobuf/UnknownFieldSet;->getDefaultInstance()Lcom/google/protobuf/UnknownFieldSet;
 
     move-result-object v0
@@ -665,19 +664,19 @@
     .locals 2
 
     .prologue
-    .line 12106
+    .line 12143
     iget v0, p0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->memoizedHashCode:I
 
     if-eqz v0, :cond_0
 
-    .line 12107
+    .line 12144
     iget v0, p0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->memoizedHashCode:I
 
-    .line 12117
+    .line 12154
     :goto_0
     return v0
 
-    .line 12110
+    .line 12147
     :cond_0
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->getDescriptorForType()Lcom/google/protobuf/Descriptors$Descriptor;
 
@@ -689,35 +688,35 @@
 
     add-int/lit16 v0, v0, 0x30b
 
-    .line 14041
+    .line 14078
     iget-object v1, p0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->picked_:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 12111
+    .line 12148
     if-lez v1, :cond_1
 
-    .line 12112
+    .line 12149
     mul-int/lit8 v0, v0, 0x25
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 12113
+    .line 12150
     mul-int/lit8 v0, v0, 0x35
 
-    .line 15028
+    .line 15065
     iget-object v1, p0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->picked_:Ljava/util/List;
 
-    .line 12113
+    .line 12150
     invoke-interface {v1}, Ljava/util/List;->hashCode()I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 12115
+    .line 12152
     :cond_1
     mul-int/lit8 v0, v0, 0x1d
 
@@ -729,7 +728,7 @@
 
     add-int/2addr v0, v1
 
-    .line 12116
+    .line 12153
     iput v0, p0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->memoizedHashCode:I
 
     goto :goto_0
@@ -739,7 +738,7 @@
     .locals 3
 
     .prologue
-    .line 12017
+    .line 12054
     invoke-static {}, Lcom/kik/messagepath/model/Keyboards;->C()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -748,12 +747,12 @@
 
     const-class v2, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply$a;
 
-    .line 12018
+    .line 12055
     invoke-virtual {v0, v1, v2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;->ensureFieldAccessorsInitialized(Ljava/lang/Class;Ljava/lang/Class;)Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
 
-    .line 12017
+    .line 12054
     return-object v0
 .end method
 
@@ -763,17 +762,17 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 12059
+    .line 12096
     iget-byte v1, p0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->memoizedIsInitialized:B
 
-    .line 12060
+    .line 12097
     if-ne v1, v0, :cond_0
 
-    .line 12064
+    .line 12101
     :goto_0
     return v0
 
-    .line 12061
+    .line 12098
     :cond_0
     if-nez v1, :cond_1
 
@@ -781,7 +780,7 @@
 
     goto :goto_0
 
-    .line 12063
+    .line 12100
     :cond_1
     iput-byte v0, p0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->memoizedIsInitialized:B
 
@@ -792,14 +791,14 @@
     .locals 1
 
     .prologue
-    .line 16181
+    .line 16218
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->a:Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;
 
     invoke-virtual {v0}, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->b()Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply$a;
 
     move-result-object v0
 
-    .line 11950
+    .line 11987
     return-object v0
 .end method
 
@@ -807,14 +806,14 @@
     .locals 2
 
     .prologue
-    .line 15194
+    .line 15231
     new-instance v0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply$a;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p1, v1}, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply$a;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;B)V
 
-    .line 11950
+    .line 11987
     return-object v0
 .end method
 
@@ -822,14 +821,14 @@
     .locals 1
 
     .prologue
-    .line 17181
+    .line 17218
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->a:Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;
 
     invoke-virtual {v0}, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->b()Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply$a;
 
     move-result-object v0
 
-    .line 11950
+    .line 11987
     return-object v0
 .end method
 
@@ -837,7 +836,7 @@
     .locals 1
 
     .prologue
-    .line 11950
+    .line 11987
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->b()Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply$a;
 
     move-result-object v0
@@ -849,7 +848,7 @@
     .locals 1
 
     .prologue
-    .line 11950
+    .line 11987
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->b()Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply$a;
 
     move-result-object v0
@@ -866,7 +865,7 @@
     .end annotation
 
     .prologue
-    .line 12069
+    .line 12106
     const/4 v0, 0x0
 
     move v1, v0
@@ -880,7 +879,7 @@
 
     if-ge v1, v0, :cond_0
 
-    .line 12070
+    .line 12107
     const/4 v2, 0x1
 
     iget-object v0, p0, Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedReply;->picked_:Ljava/util/List;
@@ -893,14 +892,14 @@
 
     invoke-virtual {p1, v2, v0}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;)V
 
-    .line 12069
+    .line 12106
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
 
-    .line 12072
+    .line 12109
     :cond_0
     return-void
 .end method

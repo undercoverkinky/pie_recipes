@@ -21,29 +21,6 @@
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    .prologue
-    const/4 v0, -0x1
-
-    .line 1172
-    invoke-direct {p0, v0, v0}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    .line 1154
-    const/4 v0, 0x0
-
-    iput v0, p0, Landroid/support/design/widget/CollapsingToolbarLayout$LayoutParams;->a:I
-
-    .line 1155
-    const/high16 v0, 0x3f000000    # 0.5f
-
-    iput v0, p0, Landroid/support/design/widget/CollapsingToolbarLayout$LayoutParams;->b:F
-
-    .line 1173
-    return-void
-.end method
-
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 4
 
@@ -52,24 +29,24 @@
 
     const/high16 v2, 0x3f000000    # 0.5f
 
-    .line 1158
+    .line 648
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 1154
+    .line 644
     iput v3, p0, Landroid/support/design/widget/CollapsingToolbarLayout$LayoutParams;->a:I
 
-    .line 1155
+    .line 645
     iput v2, p0, Landroid/support/design/widget/CollapsingToolbarLayout$LayoutParams;->b:F
 
-    .line 1160
-    sget-object v0, Landroid/support/design/R$styleable;->CollapsingToolbarLayout_Layout:[I
+    .line 650
+    sget-object v0, Landroid/support/design/R$styleable;->o:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 1162
-    sget v1, Landroid/support/design/R$styleable;->CollapsingToolbarLayout_Layout_layout_collapseMode:I
+    .line 652
+    sget v1, Landroid/support/design/R$styleable;->p:I
 
     invoke-virtual {v0, v1, v3}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -77,20 +54,20 @@
 
     iput v1, p0, Landroid/support/design/widget/CollapsingToolbarLayout$LayoutParams;->a:I
 
-    .line 1165
-    sget v1, Landroid/support/design/R$styleable;->CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier:I
+    .line 655
+    sget v1, Landroid/support/design/R$styleable;->q:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v1
 
-    .line 2225
+    .line 1712
     iput v1, p0, Landroid/support/design/widget/CollapsingToolbarLayout$LayoutParams;->b:F
 
-    .line 1168
+    .line 658
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 1169
+    .line 659
     return-void
 .end method
 
@@ -98,19 +75,40 @@
     .locals 1
 
     .prologue
-    .line 1180
+    .line 670
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1154
+    .line 644
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/support/design/widget/CollapsingToolbarLayout$LayoutParams;->a:I
 
-    .line 1155
+    .line 645
     const/high16 v0, 0x3f000000    # 0.5f
 
     iput v0, p0, Landroid/support/design/widget/CollapsingToolbarLayout$LayoutParams;->b:F
 
-    .line 1181
+    .line 671
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/widget/FrameLayout$LayoutParams;)V
+    .locals 1
+
+    .prologue
+    .line 678
+    invoke-direct {p0, p1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(Landroid/widget/FrameLayout$LayoutParams;)V
+
+    .line 644
+    const/4 v0, 0x0
+
+    iput v0, p0, Landroid/support/design/widget/CollapsingToolbarLayout$LayoutParams;->a:I
+
+    .line 645
+    const/high16 v0, 0x3f000000    # 0.5f
+
+    iput v0, p0, Landroid/support/design/widget/CollapsingToolbarLayout$LayoutParams;->b:F
+
+    .line 679
     return-void
 .end method

@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field final h:Ljava/lang/String;
+.field final g:Ljava/lang/String;
+
+.field final h:Z
 
 .field final i:Z
-
-.field final j:Z
 
 
 # direct methods
@@ -27,19 +27,19 @@
     .locals 0
 
     .prologue
-    .line 185
+    .line 181
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 186
-    iput-object p1, p0, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$b;->h:Ljava/lang/String;
+    .line 182
+    iput-object p1, p0, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$b;->g:Ljava/lang/String;
 
-    .line 187
-    iput-boolean p2, p0, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$b;->i:Z
+    .line 183
+    iput-boolean p2, p0, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$b;->h:Z
 
-    .line 188
-    iput-boolean p3, p0, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$b;->j:Z
+    .line 184
+    iput-boolean p3, p0, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$b;->i:Z
 
-    .line 189
+    .line 185
     return-void
 .end method
 

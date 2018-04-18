@@ -4,10 +4,6 @@
 
 
 # annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x15
-.end annotation
-
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/support/v4/media/session/MediaSessionCompatApi21$QueueItem;,
@@ -22,10 +18,10 @@
     .locals 0
 
     .prologue
-    .line 41
+    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 239
+    .line 235
     return-void
 .end method
 
@@ -33,7 +29,7 @@
     .locals 1
 
     .prologue
-    .line 61
+    .line 57
     new-instance v0, Landroid/support/v4/media/session/MediaSessionCompatApi21$CallbackProxy;
 
     invoke-direct {v0, p0}, Landroid/support/v4/media/session/MediaSessionCompatApi21$CallbackProxy;-><init>(Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;)V
@@ -45,7 +41,7 @@
     .locals 1
 
     .prologue
-    .line 43
+    .line 39
     new-instance v0, Landroid/media/session/MediaSession;
 
     invoke-direct {v0, p0, p1}, Landroid/media/session/MediaSession;-><init>(Landroid/content/Context;Ljava/lang/String;)V
@@ -57,7 +53,7 @@
     .locals 1
 
     .prologue
-    .line 100
+    .line 96
     check-cast p0, Landroid/media/session/MediaSession;
 
     invoke-virtual {p0}, Landroid/media/session/MediaSession;->getSessionToken()Landroid/media/session/MediaSession$Token;
@@ -71,7 +67,7 @@
     .locals 1
 
     .prologue
-    .line 88
+    .line 84
     check-cast p0, Landroid/media/session/MediaSession;
 
     invoke-virtual {p0}, Landroid/media/session/MediaSession;->isActive()Z
@@ -85,12 +81,12 @@
     .locals 0
 
     .prologue
-    .line 96
+    .line 92
     check-cast p0, Landroid/media/session/MediaSession;
 
     invoke-virtual {p0}, Landroid/media/session/MediaSession;->release()V
 
-    .line 97
+    .line 93
     return-void
 .end method
 
@@ -98,12 +94,12 @@
     .locals 0
 
     .prologue
-    .line 92
+    .line 88
     check-cast p0, Landroid/media/session/MediaSession;
 
     invoke-virtual {p0, p1, p2}, Landroid/media/session/MediaSession;->sendSessionEvent(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 93
+    .line 89
     return-void
 .end method
 
@@ -111,12 +107,12 @@
     .locals 0
 
     .prologue
-    .line 84
+    .line 80
     check-cast p0, Landroid/media/session/MediaSession;
 
     invoke-virtual {p0, p1}, Landroid/media/session/MediaSession;->setActive(Z)V
 
-    .line 85
+    .line 81
     return-void
 .end method
 
@@ -124,14 +120,14 @@
     .locals 0
 
     .prologue
-    .line 65
+    .line 61
     check-cast p0, Landroid/media/session/MediaSession;
 
     check-cast p1, Landroid/media/session/MediaSession$Callback;
 
     invoke-virtual {p0, p1, p2}, Landroid/media/session/MediaSession;->setCallback(Landroid/media/session/MediaSession$Callback;Landroid/os/Handler;)V
 
-    .line 66
+    .line 62
     return-void
 .end method
 
@@ -139,12 +135,12 @@
     .locals 0
 
     .prologue
-    .line 136
+    .line 132
     check-cast p0, Landroid/media/session/MediaSession;
 
     invoke-virtual {p0, p1}, Landroid/media/session/MediaSession;->setExtras(Landroid/os/Bundle;)V
 
-    .line 137
+    .line 133
     return-void
 .end method
 
@@ -152,12 +148,12 @@
     .locals 0
 
     .prologue
-    .line 69
+    .line 65
     check-cast p0, Landroid/media/session/MediaSession;
 
     invoke-virtual {p0, p1}, Landroid/media/session/MediaSession;->setFlags(I)V
 
-    .line 70
+    .line 66
     return-void
 .end method
 
@@ -165,12 +161,12 @@
     .locals 0
 
     .prologue
-    .line 116
+    .line 112
     check-cast p0, Landroid/media/session/MediaSession;
 
     invoke-virtual {p0, p1}, Landroid/media/session/MediaSession;->setMediaButtonReceiver(Landroid/app/PendingIntent;)V
 
-    .line 117
+    .line 113
     return-void
 .end method
 
@@ -178,14 +174,14 @@
     .locals 0
 
     .prologue
-    .line 108
+    .line 104
     check-cast p0, Landroid/media/session/MediaSession;
 
     check-cast p1, Landroid/media/MediaMetadata;
 
     invoke-virtual {p0, p1}, Landroid/media/session/MediaSession;->setMetadata(Landroid/media/MediaMetadata;)V
 
-    .line 109
+    .line 105
     return-void
 .end method
 
@@ -193,14 +189,14 @@
     .locals 0
 
     .prologue
-    .line 104
+    .line 100
     check-cast p0, Landroid/media/session/MediaSession;
 
     check-cast p1, Landroid/media/session/PlaybackState;
 
     invoke-virtual {p0, p1}, Landroid/media/session/MediaSession;->setPlaybackState(Landroid/media/session/PlaybackState;)V
 
-    .line 105
+    .line 101
     return-void
 .end method
 
@@ -208,15 +204,15 @@
     .locals 1
 
     .prologue
-    .line 74
+    .line 70
     new-instance v0, Landroid/media/AudioAttributes$Builder;
 
     invoke-direct {v0}, Landroid/media/AudioAttributes$Builder;-><init>()V
 
-    .line 75
+    .line 71
     invoke-virtual {v0, p1}, Landroid/media/AudioAttributes$Builder;->setLegacyStreamType(I)Landroid/media/AudioAttributes$Builder;
 
-    .line 76
+    .line 72
     check-cast p0, Landroid/media/session/MediaSession;
 
     invoke-virtual {v0}, Landroid/media/AudioAttributes$Builder;->build()Landroid/media/AudioAttributes;
@@ -225,7 +221,7 @@
 
     invoke-virtual {p0, v0}, Landroid/media/session/MediaSession;->setPlaybackToLocal(Landroid/media/AudioAttributes;)V
 
-    .line 77
+    .line 73
     return-void
 .end method
 
@@ -233,14 +229,14 @@
     .locals 0
 
     .prologue
-    .line 80
+    .line 76
     check-cast p0, Landroid/media/session/MediaSession;
 
     check-cast p1, Landroid/media/VolumeProvider;
 
     invoke-virtual {p0, p1}, Landroid/media/session/MediaSession;->setPlaybackToRemote(Landroid/media/VolumeProvider;)V
 
-    .line 81
+    .line 77
     return-void
 .end method
 
@@ -258,27 +254,27 @@
     .end annotation
 
     .prologue
-    .line 120
+    .line 116
     if-nez p1, :cond_0
 
-    .line 121
+    .line 117
     check-cast p0, Landroid/media/session/MediaSession;
 
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/media/session/MediaSession;->setQueue(Ljava/util/List;)V
 
-    .line 129
+    .line 125
     :goto_0
     return-void
 
-    .line 124
+    .line 120
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 125
+    .line 121
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -294,14 +290,14 @@
 
     move-result-object v0
 
-    .line 126
+    .line 122
     check-cast v0, Landroid/media/session/MediaSession$QueueItem;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 128
+    .line 124
     :cond_1
     check-cast p0, Landroid/media/session/MediaSession;
 
@@ -314,12 +310,12 @@
     .locals 0
 
     .prologue
-    .line 132
+    .line 128
     check-cast p0, Landroid/media/session/MediaSession;
 
     invoke-virtual {p0, p1}, Landroid/media/session/MediaSession;->setQueueTitle(Ljava/lang/CharSequence;)V
 
-    .line 133
+    .line 129
     return-void
 .end method
 
@@ -327,12 +323,12 @@
     .locals 0
 
     .prologue
-    .line 112
+    .line 108
     check-cast p0, Landroid/media/session/MediaSession;
 
     invoke-virtual {p0, p1}, Landroid/media/session/MediaSession;->setSessionActivity(Landroid/app/PendingIntent;)V
 
-    .line 113
+    .line 109
     return-void
 .end method
 
@@ -340,15 +336,15 @@
     .locals 2
 
     .prologue
-    .line 47
+    .line 43
     instance-of v0, p0, Landroid/media/session/MediaSession;
 
     if-eqz v0, :cond_0
 
-    .line 48
+    .line 44
     return-object p0
 
-    .line 50
+    .line 46
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -363,15 +359,15 @@
     .locals 2
 
     .prologue
-    .line 54
+    .line 50
     instance-of v0, p0, Landroid/media/session/MediaSession$Token;
 
     if-eqz v0, :cond_0
 
-    .line 55
+    .line 51
     return-object p0
 
-    .line 57
+    .line 53
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 

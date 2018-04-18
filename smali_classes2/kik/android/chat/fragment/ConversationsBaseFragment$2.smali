@@ -1,11 +1,11 @@
 .class final Lkik/android/chat/fragment/ConversationsBaseFragment$2;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/ConversationsBaseFragment;->openChat(Lkik/core/datatypes/f;Z)V
+    value = Lkik/android/chat/fragment/ConversationsBaseFragment;->a(Lkik/core/datatypes/f;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Landroid/os/Bundle;",
         ">;"
@@ -34,12 +34,12 @@
     .locals 0
 
     .prologue
-    .line 316
+    .line 305
     iput-object p1, p0, Lkik/android/chat/fragment/ConversationsBaseFragment$2;->b:Lkik/android/chat/fragment/ConversationsBaseFragment;
 
     iput-object p2, p0, Lkik/android/chat/fragment/ConversationsBaseFragment$2;->a:Lkik/core/datatypes/f;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -50,23 +50,21 @@
     .locals 2
 
     .prologue
-    .line 316
+    .line 305
     check-cast p1, Landroid/os/Bundle;
 
-    .line 1320
+    .line 1309
     iget-object v0, p0, Lkik/android/chat/fragment/ConversationsBaseFragment$2;->b:Lkik/android/chat/fragment/ConversationsBaseFragment;
 
-    iget-object v1, p0, Lkik/android/chat/fragment/ConversationsBaseFragment$2;->a:Lkik/core/datatypes/f;
+    new-instance v1, Lkik/android/chat/fragment/ConversationsBaseFragment$2$1;
 
-    invoke-static {p0, v1}, Lkik/android/chat/fragment/n;->a(Lkik/android/chat/fragment/ConversationsBaseFragment$2;Lkik/core/datatypes/f;)Ljava/lang/Runnable;
+    invoke-direct {v1, p0}, Lkik/android/chat/fragment/ConversationsBaseFragment$2$1;-><init>(Lkik/android/chat/fragment/ConversationsBaseFragment$2;)V
 
-    move-result-object v1
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/ConversationsBaseFragment;->b(Ljava/lang/Runnable;)V
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/ConversationsBaseFragment;->runOnUiIfAttached(Ljava/lang/Runnable;)V
+    .line 1317
+    invoke-super {p0, p1}, Lcom/kik/events/l;->b(Ljava/lang/Object;)V
 
-    .line 1324
-    invoke-super {p0, p1}, Lcom/kik/events/k;->b(Ljava/lang/Object;)V
-
-    .line 316
+    .line 305
     return-void
 .end method

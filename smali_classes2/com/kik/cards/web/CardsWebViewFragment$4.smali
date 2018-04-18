@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Lcom/kik/events/e",
         "<",
-        "Lcom/kik/cards/web/ExtendedWebView$NavigationRequest;",
+        "Lcom/kik/cards/web/g$b;",
         ">;"
     }
 .end annotation
@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 463
+    .line 443
     iput-object p1, p0, Lcom/kik/cards/web/CardsWebViewFragment$4;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,18 +50,18 @@
     .locals 1
 
     .prologue
-    .line 463
-    check-cast p2, Lcom/kik/cards/web/ExtendedWebView$NavigationRequest;
+    .line 443
+    check-cast p2, Lcom/kik/cards/web/g$b;
 
-    .line 1467
+    .line 1447
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$4;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
-    invoke-static {v0}, Lcom/kik/cards/web/CardsWebViewFragment;->j(Lcom/kik/cards/web/CardsWebViewFragment;)Lcom/kik/events/g;
+    invoke-static {v0}, Lcom/kik/cards/web/CardsWebViewFragment;->i(Lcom/kik/cards/web/CardsWebViewFragment;)Lcom/kik/events/g;
 
     move-result-object v0
 
     invoke-virtual {v0, p2}, Lcom/kik/events/g;->a(Ljava/lang/Object;)V
 
-    .line 463
+    .line 443
     return-void
 .end method

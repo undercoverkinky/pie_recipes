@@ -22,7 +22,7 @@
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 22
-    const v0, 0x7f0e0023
+    const v0, 0x7f100020
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->d(I)I
 

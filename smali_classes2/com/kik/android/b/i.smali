@@ -4,17 +4,17 @@
 
 
 # virtual methods
-.method public abstract c()Ljava/lang/String;
+.method public abstract a()Ljava/lang/String;
 .end method
 
-.method public abstract d()Ljava/lang/String;
+.method public abstract b()Ljava/lang/String;
 .end method
 
-.method public abstract e()I
+.method public abstract c()I
 .end method
 
-.method public abstract f()Z
+.method public abstract d()Z
 .end method
 
-.method public abstract g()Z
+.method public abstract e()Z
 .end method

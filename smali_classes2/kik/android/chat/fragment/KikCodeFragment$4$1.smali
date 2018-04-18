@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/fragment/KikCodeFragment$4$1;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Lcom/kik/util/g;
 .source "SourceFile"
 
 
@@ -23,10 +23,10 @@
     .locals 0
 
     .prologue
-    .line 516
+    .line 491
     iput-object p1, p0, Lkik/android/chat/fragment/KikCodeFragment$4$1;->a:Lkik/android/chat/fragment/KikCodeFragment$4;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    invoke-direct {p0}, Lcom/kik/util/g;-><init>()V
 
     return-void
 .end method
@@ -37,7 +37,7 @@
     .locals 3
 
     .prologue
-    .line 520
+    .line 495
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/view/View;
@@ -54,6 +54,6 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
 
-    .line 521
+    .line 496
     return-void
 .end method

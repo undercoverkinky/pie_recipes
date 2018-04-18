@@ -23,12 +23,12 @@
     .locals 0
 
     .prologue
-    .line 127
+    .line 123
     iput-object p1, p0, Lcom/rounds/kik/media/video/LocalCameraManager$BooyahCameraException;->this$0:Lcom/rounds/kik/media/video/LocalCameraManager;
 
-    .line 128
+    .line 124
     invoke-direct {p0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 129
+    .line 125
     return-void
 .end method

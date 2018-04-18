@@ -15,9 +15,6 @@
 
 
 # virtual methods
-.method public abstract getAnchor(Ljava/lang/Object;)Ljava/lang/Object;
-.end method
-
 .method public abstract getBoundsInScreen(Ljava/lang/Object;Landroid/graphics/Rect;)V
 .end method
 
@@ -37,9 +34,6 @@
 .end method
 
 .method public abstract getRoot(Ljava/lang/Object;)Ljava/lang/Object;
-.end method
-
-.method public abstract getTitle(Ljava/lang/Object;)Ljava/lang/CharSequence;
 .end method
 
 .method public abstract getType(Ljava/lang/Object;)I

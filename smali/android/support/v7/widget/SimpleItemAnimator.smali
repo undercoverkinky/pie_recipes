@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field h:Z
+.field a:Z
 
 
 # direct methods
@@ -18,7 +18,7 @@
     .line 29
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroid/support/v7/widget/SimpleItemAnimator;->h:Z
+    iput-boolean v0, p0, Landroid/support/v7/widget/SimpleItemAnimator;->a:Z
 
     return-void
 .end method
@@ -42,7 +42,7 @@
     iget v3, p2, Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;->b:I
 
     .line 80
-    iget-object v0, p1, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
+    iget-object v0, p1, Landroid/support/v7/widget/RecyclerView$ViewHolder;->a:Landroid/view/View;
 
     .line 81
     if-nez p3, :cond_1
@@ -61,7 +61,7 @@
 
     .line 83
     :goto_1
-    invoke-virtual {p1}, Landroid/support/v7/widget/RecyclerView$ViewHolder;->isRemoved()Z
+    invoke-virtual {p1}, Landroid/support/v7/widget/RecyclerView$ViewHolder;->n()Z
 
     move-result v1
 
@@ -71,7 +71,7 @@
 
     if-eq v3, v5, :cond_3
 
-    .line 85
+    .line 84
     :cond_0
     invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
@@ -79,14 +79,12 @@
 
     add-int/2addr v1, v4
 
-    .line 86
     invoke-virtual {v0}, Landroid/view/View;->getHeight()I
 
     move-result v6
 
     add-int/2addr v6, v5
 
-    .line 84
     invoke-virtual {v0, v4, v5, v1, v6}, Landroid/view/View;->layout(IIII)V
 
     move-object v0, p0
@@ -137,7 +135,7 @@
     iget v4, p3, Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;->b:I
 
     .line 142
-    invoke-virtual {p2}, Landroid/support/v7/widget/RecyclerView$ViewHolder;->shouldIgnore()Z
+    invoke-virtual {p2}, Landroid/support/v7/widget/RecyclerView$ViewHolder;->b()Z
 
     move-result v0
 
@@ -279,11 +277,11 @@
 
     .prologue
     .line 72
-    iget-boolean v0, p0, Landroid/support/v7/widget/SimpleItemAnimator;->h:Z
+    iget-boolean v0, p0, Landroid/support/v7/widget/SimpleItemAnimator;->a:Z
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Landroid/support/v7/widget/RecyclerView$ViewHolder;->isInvalid()Z
+    invoke-virtual {p1}, Landroid/support/v7/widget/RecyclerView$ViewHolder;->k()Z
 
     move-result v0
 

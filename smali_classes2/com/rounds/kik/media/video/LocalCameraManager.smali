@@ -57,11 +57,13 @@
 
 
 # instance fields
+.field private cameraToggleStarted:Z
+
 .field private mCamera:Landroid/hardware/Camera;
 
 .field private mCameraDuringSwap:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field private mCameraPosition:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
+.field private mCameraFront:Z
 
 .field private mCameraResolution:[[I
 
@@ -89,9 +91,7 @@
 
 .field private mMissedPreviewFrameCounter:I
 
-.field mParameters:[Landroid/hardware/Camera$Parameters;
-
-.field mPreviousMsgID:Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;
+.field mParameters:Landroid/hardware/Camera$Parameters;
 
 .field private mStreamAngle:F
 
@@ -101,13 +101,15 @@
 
 .field private mVideoCapturerInternal:Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerInternal;
 
+.field previoudMSGID:Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
     .prologue
-    .line 39
+    .line 38
     const-class v0, Lcom/rounds/kik/media/video/LocalCameraManager;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -120,7 +122,7 @@
 
     sput-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
-    .line 96
+    .line 93
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager$CameraOrientation;->PORTRAIT_MODE:Lcom/rounds/kik/media/video/LocalCameraManager$CameraOrientation;
 
     sput-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraOrientationMode:Lcom/rounds/kik/media/video/LocalCameraManager$CameraOrientation;
@@ -129,28 +131,28 @@
 .end method
 
 .method public constructor <init>(Landroid/os/Looper;)V
-    .locals 5
+    .locals 4
 
     .prologue
-    const/4 v4, 0x0
+    const/4 v1, 0x2
 
-    const/4 v3, 0x2
+    const/4 v3, 0x0
 
     const/4 v2, 0x0
 
-    .line 134
+    .line 130
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 42
-    iput-object v4, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mVideoCapturerInternal:Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerInternal;
+    .line 41
+    iput-object v3, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mVideoCapturerInternal:Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerInternal;
 
-    .line 43
+    .line 42
     new-array v0, v2, [Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerDeviceInfo;
 
     iput-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mDeviceInfoArray:[Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerDeviceInfo;
 
-    .line 48
-    filled-new-array {v3, v3}, [I
+    .line 47
+    filled-new-array {v1, v1}, [I
 
     move-result-object v0
 
@@ -164,42 +166,42 @@
 
     iput-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraResolution:[[I
 
-    .line 49
+    .line 48
     iput-boolean v2, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mInitDone:Z
 
+    .line 49
+    iput-object v3, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
+
     .line 50
-    iput-object v4, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraFront:Z
 
     .line 51
-    sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;->FRONT:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
+    iput-object v3, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
-    iput-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraPosition:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
-
-    .line 52
-    iput-object v4, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
-
-    .line 54
+    .line 53
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mStreamAngle:F
 
-    .line 55
+    .line 54
     iput-boolean v2, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mStreamHorizontalFlip:Z
 
-    .line 56
+    .line 55
     iput v2, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mDeviceID:I
 
-    .line 65
+    .line 64
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraDuringSwap:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 68
+    .line 67
     iput-boolean v2, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraStarted:Z
 
-    .line 119
+    .line 115
     invoke-static {}, Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;->values()[Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
 
     move-result-object v0
@@ -210,29 +212,27 @@
 
     iput-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mLocalCameras:[Lcom/rounds/kik/media/video/LocalCameraManager$a;
 
-    .line 121
+    .line 117
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mDeviceIdToIndex:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 138
-    new-array v0, v3, [Landroid/hardware/Camera$Parameters;
+    .line 134
+    iput-object v3, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mParameters:Landroid/hardware/Camera$Parameters;
 
-    iput-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mParameters:[Landroid/hardware/Camera$Parameters;
-
-    .line 819
+    .line 812
     iput v2, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mMissedPreviewFrameCounter:I
 
-    .line 135
+    .line 131
     new-instance v0, Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerInternal;
 
     invoke-direct {v0}, Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerInternal;-><init>()V
 
     iput-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mVideoCapturerInternal:Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerInternal;
 
-    .line 136
+    .line 132
     return-void
 .end method
 
@@ -250,48 +250,48 @@
     .locals 1
 
     .prologue
-    .line 732
+    .line 725
     new-instance v0, Landroid/hardware/Camera$CameraInfo;
 
     invoke-direct {v0}, Landroid/hardware/Camera$CameraInfo;-><init>()V
 
-    .line 733
+    .line 726
     invoke-static {p1, v0}, Landroid/hardware/Camera;->getCameraInfo(ILandroid/hardware/Camera$CameraInfo;)V
 
-    .line 736
+    .line 729
     iget v0, v0, Landroid/hardware/Camera$CameraInfo;->orientation:I
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 751
+    .line 744
     const/4 v0, 0x2
 
-    .line 755
+    .line 748
     :goto_0
     return v0
 
-    .line 738
+    .line 731
     :sswitch_0
     const/4 v0, 0x0
 
-    .line 739
+    .line 732
     goto :goto_0
 
-    .line 742
+    .line 735
     :sswitch_1
     const/4 v0, 0x3
 
-    .line 743
+    .line 736
     goto :goto_0
 
-    .line 746
+    .line 739
     :sswitch_2
     const/4 v0, 0x1
 
-    .line 747
+    .line 740
     goto :goto_0
 
-    .line 736
+    .line 729
     nop
 
     :sswitch_data_0
@@ -308,17 +308,17 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 552
+    .line 545
     invoke-static {}, Landroid/hardware/Camera;->getNumberOfCameras()I
 
     move-result v2
 
-    .line 553
+    .line 546
     new-instance v3, Ljava/util/LinkedList;
 
     invoke-direct {v3}, Ljava/util/LinkedList;-><init>()V
 
-    .line 555
+    .line 548
     const/4 v0, 0x0
 
     move v1, v0
@@ -326,15 +326,15 @@
     :goto_0
     if-ge v1, v2, :cond_4
 
-    .line 556
+    .line 549
     new-instance v4, Landroid/hardware/Camera$CameraInfo;
 
     invoke-direct {v4}, Landroid/hardware/Camera$CameraInfo;-><init>()V
 
-    .line 557
+    .line 550
     invoke-static {v1, v4}, Landroid/hardware/Camera;->getCameraInfo(ILandroid/hardware/Camera$CameraInfo;)V
 
-    .line 559
+    .line 552
     iget v0, v4, Landroid/hardware/Camera$CameraInfo;->facing:I
 
     if-eq v0, v8, :cond_0
@@ -343,7 +343,7 @@
 
     if-nez v0, :cond_1
 
-    .line 560
+    .line 553
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -359,7 +359,7 @@
 
     move-result-object v5
 
-    .line 562
+    .line 555
     new-instance v6, Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerDeviceInfo;
 
     invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -375,20 +375,20 @@
     :goto_1
     invoke-direct {v6, v5, v7, v5, v0}, Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerDeviceInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 564
+    .line 557
     invoke-interface {v3, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 566
+    .line 559
     invoke-direct {p0, v1}, Lcom/rounds/kik/media/video/LocalCameraManager;->calculateOrientation(I)I
 
     move-result v5
 
-    .line 570
+    .line 563
     iget v0, v4, Landroid/hardware/Camera$CameraInfo;->facing:I
 
     if-ne v0, v8, :cond_3
 
-    .line 571
+    .line 564
     iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mLocalCameras:[Lcom/rounds/kik/media/video/LocalCameraManager$a;
 
     sget-object v6, Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;->FRONT:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
@@ -399,14 +399,14 @@
 
     aget-object v0, v0, v6
 
-    .line 577
+    .line 570
     :goto_2
     iput v1, v0, Lcom/rounds/kik/media/video/LocalCameraManager$a;->a:I
 
-    .line 578
+    .line 571
     iput v5, v0, Lcom/rounds/kik/media/video/LocalCameraManager$a;->b:I
 
-    .line 580
+    .line 573
     sget-object v5, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -473,7 +473,7 @@
 
     invoke-virtual {v5, v0}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 584
+    .line 575
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v0
@@ -482,7 +482,7 @@
 
     if-eq v0, v4, :cond_4
 
-    .line 555
+    .line 548
     :cond_1
     add-int/lit8 v0, v1, 0x1
 
@@ -490,13 +490,13 @@
 
     goto/16 :goto_0
 
-    .line 562
+    .line 555
     :cond_2
     const-string v0, "Back"
 
     goto :goto_1
 
-    .line 574
+    .line 567
     :cond_3
     iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mLocalCameras:[Lcom/rounds/kik/media/video/LocalCameraManager$a;
 
@@ -510,7 +510,7 @@
 
     goto :goto_2
 
-    .line 590
+    .line 581
     :cond_4
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -518,7 +518,7 @@
 
     if-lez v0, :cond_5
 
-    .line 591
+    .line 582
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v0
@@ -527,12 +527,12 @@
 
     iput-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mDeviceInfoArray:[Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerDeviceInfo;
 
-    .line 592
+    .line 583
     iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mDeviceInfoArray:[Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerDeviceInfo;
 
     invoke-interface {v3, v0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 595
+    .line 586
     :cond_5
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -545,7 +545,7 @@
     .locals 22
 
     .prologue
-    .line 602
+    .line 593
     invoke-static {}, Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;->values()[Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
 
     move-result-object v11
@@ -557,11 +557,11 @@
     move v10, v2
 
     :goto_0
-    if-ge v10, v12, :cond_7
+    if-ge v10, v12, :cond_9
 
     aget-object v13, v11, v10
 
-    .line 605
+    .line 596
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/rounds/kik/media/video/LocalCameraManager;->mLocalCameras:[Lcom/rounds/kik/media/video/LocalCameraManager$a;
@@ -574,9 +574,9 @@
 
     iget-object v2, v2, Lcom/rounds/kik/media/video/LocalCameraManager$a;->d:[Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerCapability;
 
-    if-nez v2, :cond_5
+    if-nez v2, :cond_6
 
-    .line 609
+    .line 600
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/rounds/kik/media/video/LocalCameraManager;->mLocalCameras:[Lcom/rounds/kik/media/video/LocalCameraManager$a;
@@ -589,10 +589,10 @@
 
     iget v7, v2, Lcom/rounds/kik/media/video/LocalCameraManager$a;->a:I
 
-    .line 611
-    if-ltz v7, :cond_5
+    .line 602
+    if-ltz v7, :cond_6
 
-    .line 615
+    .line 606
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "rounds.camera"
@@ -613,7 +613,7 @@
 
     move-result-object v8
 
-    .line 616
+    .line 607
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "rounds.camera"
@@ -634,7 +634,7 @@
 
     move-result-object v9
 
-    .line 617
+    .line 608
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "rounds.camera"
@@ -655,7 +655,7 @@
 
     move-result-object v14
 
-    .line 618
+    .line 609
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "rounds.camera"
@@ -676,14 +676,14 @@
 
     move-result-object v15
 
-    .line 620
+    .line 611
     sget-object v2, Lcom/rounds/kik/media/MediaBroker;->INSTANCE:Lcom/rounds/kik/media/MediaBroker;
 
     invoke-virtual {v2}, Lcom/rounds/kik/media/MediaBroker;->getSharedContext()Landroid/content/Context;
 
     move-result-object v16
 
-    .line 621
+    .line 612
     const/4 v2, -0x1
 
     move-object/from16 v0, v16
@@ -692,7 +692,7 @@
 
     move-result v4
 
-    .line 622
+    .line 613
     const/4 v2, -0x1
 
     move-object/from16 v0, v16
@@ -701,7 +701,7 @@
 
     move-result v5
 
-    .line 623
+    .line 614
     const/4 v2, -0x1
 
     move-object/from16 v0, v16
@@ -710,7 +710,7 @@
 
     move-result v3
 
-    .line 624
+    .line 615
     const/4 v2, -0x1
 
     move-object/from16 v0, v16
@@ -719,7 +719,7 @@
 
     move-result v2
 
-    .line 627
+    .line 618
     const/4 v6, -0x1
 
     if-eq v4, v6, :cond_0
@@ -734,9 +734,9 @@
 
     const/4 v6, -0x1
 
-    if-ne v2, v6, :cond_6
+    if-ne v2, v6, :cond_7
 
-    .line 628
+    .line 619
     :cond_0
     invoke-static {v7}, Landroid/hardware/Camera;->open(I)Landroid/hardware/Camera;
 
@@ -746,14 +746,14 @@
 
     iput-object v2, v0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
 
-    .line 630
+    .line 621
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
 
     if-nez v2, :cond_1
 
-    .line 631
+    .line 622
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "findBestCameraProperties(): failed to open camera: "
@@ -768,19 +768,19 @@
 
     move-result-object v2
 
-    .line 632
+    .line 623
     sget-object v3, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     invoke-virtual {v3, v2}, Lcom/rounds/kik/logs/VideoLogger;->error(Ljava/lang/String;)V
 
-    .line 634
+    .line 625
     const/4 v2, 0x0
 
-    .line 727
+    .line 720
     :goto_1
     return v2
 
-    .line 637
+    .line 628
     :cond_1
     move-object/from16 v0, p0
 
@@ -790,19 +790,19 @@
 
     move-result-object v17
 
-    .line 639
+    .line 630
     invoke-virtual/range {v17 .. v17}, Landroid/hardware/Camera$Parameters;->getSupportedPreviewFpsRange()Ljava/util/List;
 
     move-result-object v2
 
-    .line 642
+    .line 633
     const/4 v3, 0x2
 
     new-array v3, v3, [I
 
     fill-array-data v3, :array_0
 
-    .line 645
+    .line 636
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -820,14 +820,14 @@
 
     check-cast v2, [I
 
-    .line 646
+    .line 637
     const/16 v5, 0x3a98
 
     const/4 v6, 0x0
 
     aget v6, v2, v6
 
-    if-lt v5, v6, :cond_9
+    if-lt v5, v6, :cond_b
 
     const/16 v5, 0x3a98
 
@@ -835,9 +835,9 @@
 
     aget v6, v2, v6
 
-    if-gt v5, v6, :cond_9
+    if-gt v5, v6, :cond_b
 
-    .line 647
+    .line 638
     const/4 v5, 0x1
 
     aget v5, v3, v5
@@ -846,27 +846,27 @@
 
     aget v6, v2, v6
 
-    if-ge v5, v6, :cond_9
+    if-ge v5, v6, :cond_b
 
     :goto_3
     move-object v3, v2
 
-    .line 651
+    .line 642
     goto :goto_2
 
-    .line 653
+    .line 644
     :cond_2
     invoke-virtual/range {v17 .. v17}, Landroid/hardware/Camera$Parameters;->getSupportedPreviewSizes()Ljava/util/List;
 
     move-result-object v2
 
-    .line 654
+    .line 645
     const v6, 0x7fffffff
 
-    .line 655
+    .line 646
     const/4 v4, 0x0
 
-    .line 657
+    .line 648
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v18
@@ -884,7 +884,7 @@
 
     check-cast v2, Landroid/hardware/Camera$Size;
 
-    .line 659
+    .line 650
     iget v5, v2, Landroid/hardware/Camera$Size;->width:I
 
     iget v0, v2, Landroid/hardware/Camera$Size;->height:I
@@ -901,7 +901,7 @@
 
     move-result v5
 
-    .line 660
+    .line 651
     sget-object v19, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     new-instance v20, Ljava/lang/StringBuilder;
@@ -962,10 +962,10 @@
 
     invoke-virtual/range {v19 .. v20}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 661
-    if-ge v5, v6, :cond_8
+    .line 652
+    if-ge v5, v6, :cond_a
 
-    .line 664
+    .line 655
     if-eqz v5, :cond_4
 
     move v4, v5
@@ -975,14 +975,19 @@
 
     move-object v4, v2
 
-    .line 668
+    .line 658
     goto :goto_4
 
     :cond_3
     move-object v2, v4
 
-    .line 672
+    .line 660
     :cond_4
+    sget-object v4, Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;->FRONT:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
+
+    if-ne v13, v4, :cond_5
+
+    .line 663
     const/4 v4, 0x0
 
     aget v4, v3, v4
@@ -995,7 +1000,7 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/hardware/Camera$Parameters;->setPreviewFpsRange(II)V
 
-    .line 673
+    .line 664
     iget v4, v2, Landroid/hardware/Camera$Size;->width:I
 
     iget v5, v2, Landroid/hardware/Camera$Size;->height:I
@@ -1004,95 +1009,94 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/hardware/Camera$Parameters;->setPreviewSize(II)V
 
-    .line 674
+    .line 665
     const/16 v4, 0x11
 
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v4}, Landroid/hardware/Camera$Parameters;->setPreviewFormat(I)V
 
-    .line 676
+    .line 667
     sget-object v4, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v5, "start() camera setParameters()"
 
     invoke-virtual {v4, v5}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 678
+    .line 669
     move-object/from16 v0, p0
 
     move-object/from16 v1, v17
 
     invoke-direct {v0, v1}, Lcom/rounds/kik/media/video/LocalCameraManager;->setAdvancedCameraParameters(Landroid/hardware/Camera$Parameters;)V
 
-    .line 680
+    .line 671
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/rounds/kik/media/video/LocalCameraManager;->mParameters:[Landroid/hardware/Camera$Parameters;
+    iget-object v4, v0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
+
+    invoke-virtual {v4}, Landroid/hardware/Camera;->getParameters()Landroid/hardware/Camera$Parameters;
+
+    move-result-object v4
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
+    iput-object v4, v0, Lcom/rounds/kik/media/video/LocalCameraManager;->mParameters:Landroid/hardware/Camera$Parameters;
 
-    invoke-virtual {v5}, Landroid/hardware/Camera;->getParameters()Landroid/hardware/Camera$Parameters;
-
-    move-result-object v5
-
-    aput-object v5, v4, v7
-
-    .line 681
+    .line 672
     sget-object v4, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v5, "start() camera - adding callback buffers"
 
     invoke-virtual {v4, v5}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 684
+    .line 676
+    :cond_5
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
 
     invoke-virtual {v4}, Landroid/hardware/Camera;->release()V
 
-    .line 685
+    .line 677
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v4, v0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
 
-    .line 687
+    .line 679
     iget v6, v2, Landroid/hardware/Camera$Size;->width:I
 
-    .line 688
+    .line 680
     iget v5, v2, Landroid/hardware/Camera$Size;->height:I
 
-    .line 689
+    .line 681
     const/4 v2, 0x0
 
     aget v4, v3, v2
 
-    .line 690
+    .line 682
     const/4 v2, 0x1
 
     aget v2, v3, v2
 
-    .line 692
+    .line 684
     move-object/from16 v0, v16
 
     invoke-static {v0, v8, v6}, Lcom/rounds/kik/DataCache;->putInt(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 693
+    .line 685
     move-object/from16 v0, v16
 
     invoke-static {v0, v9, v5}, Lcom/rounds/kik/DataCache;->putInt(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 694
+    .line 686
     move-object/from16 v0, v16
 
     invoke-static {v0, v14, v4}, Lcom/rounds/kik/DataCache;->putInt(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 695
+    .line 687
     move-object/from16 v0, v16
 
     invoke-static {v0, v15, v2}, Lcom/rounds/kik/DataCache;->putInt(Landroid/content/Context;Ljava/lang/String;I)V
@@ -1103,7 +1107,7 @@
 
     move v4, v6
 
-    .line 719
+    .line 712
     :goto_6
     move-object/from16 v0, p0
 
@@ -1121,7 +1125,7 @@
 
     iput-object v3, v2, Lcom/rounds/kik/media/video/LocalCameraManager$a;->d:[Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerCapability;
 
-    .line 720
+    .line 713
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/rounds/kik/media/video/LocalCameraManager;->mLocalCameras:[Lcom/rounds/kik/media/video/LocalCameraManager$a;
@@ -1148,7 +1152,7 @@
 
     aput-object v2, v14, v15
 
-    .line 722
+    .line 715
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/rounds/kik/media/video/LocalCameraManager;->mLocalCameras:[Lcom/rounds/kik/media/video/LocalCameraManager$a;
@@ -1173,7 +1177,7 @@
 
     iput-object v3, v2, Lcom/rounds/kik/media/video/LocalCameraManager$a;->c:[I
 
-    .line 723
+    .line 716
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraResolution:[[I
@@ -1188,7 +1192,7 @@
 
     aput v4, v2, v3
 
-    .line 724
+    .line 717
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraResolution:[[I
@@ -1203,16 +1207,21 @@
 
     aput v5, v2, v3
 
-    .line 602
-    :cond_5
+    .line 593
+    :cond_6
     add-int/lit8 v2, v10, 0x1
 
     move v10, v2
 
     goto/16 :goto_0
 
-    .line 701
-    :cond_6
+    .line 692
+    :cond_7
+    sget-object v6, Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;->FRONT:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
+
+    if-ne v13, v6, :cond_8
+
+    .line 694
     invoke-static {v7}, Landroid/hardware/Camera;->open(I)Landroid/hardware/Camera;
 
     move-result-object v6
@@ -1221,7 +1230,7 @@
 
     iput-object v6, v0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
 
-    .line 702
+    .line 695
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
@@ -1230,83 +1239,82 @@
 
     move-result-object v6
 
-    .line 705
+    .line 698
     invoke-virtual {v6, v3, v2}, Landroid/hardware/Camera$Parameters;->setPreviewFpsRange(II)V
 
-    .line 706
+    .line 699
     invoke-virtual {v6, v4, v5}, Landroid/hardware/Camera$Parameters;->setPreviewSize(II)V
 
-    .line 707
-    const/16 v8, 0x11
+    .line 700
+    const/16 v7, 0x11
 
-    invoke-virtual {v6, v8}, Landroid/hardware/Camera$Parameters;->setPreviewFormat(I)V
+    invoke-virtual {v6, v7}, Landroid/hardware/Camera$Parameters;->setPreviewFormat(I)V
 
-    .line 709
+    .line 702
     move-object/from16 v0, p0
 
     invoke-direct {v0, v6}, Lcom/rounds/kik/media/video/LocalCameraManager;->setAdvancedCameraParameters(Landroid/hardware/Camera$Parameters;)V
 
-    .line 711
+    .line 704
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lcom/rounds/kik/media/video/LocalCameraManager;->mParameters:[Landroid/hardware/Camera$Parameters;
+    iget-object v6, v0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
+
+    invoke-virtual {v6}, Landroid/hardware/Camera;->getParameters()Landroid/hardware/Camera$Parameters;
+
+    move-result-object v6
 
     move-object/from16 v0, p0
 
-    iget-object v8, v0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
+    iput-object v6, v0, Lcom/rounds/kik/media/video/LocalCameraManager;->mParameters:Landroid/hardware/Camera$Parameters;
 
-    invoke-virtual {v8}, Landroid/hardware/Camera;->getParameters()Landroid/hardware/Camera$Parameters;
-
-    move-result-object v8
-
-    aput-object v8, v6, v7
-
-    .line 712
+    .line 705
     sget-object v6, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v7, "start() camera - adding callback buffers"
 
     invoke-virtual {v6, v7}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 714
+    .line 707
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
 
     invoke-virtual {v6}, Landroid/hardware/Camera;->release()V
 
-    .line 715
+    .line 708
     const/4 v6, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v6, v0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
 
+    :cond_8
     move v8, v2
 
     move v9, v3
 
     goto/16 :goto_6
 
-    .line 727
-    :cond_7
+    .line 720
+    :cond_9
     const/4 v2, 0x1
 
     goto/16 :goto_1
 
-    :cond_8
+    :cond_a
     move-object v2, v4
 
     move v4, v6
 
     goto/16 :goto_5
 
-    :cond_9
+    :cond_b
     move-object v2, v3
 
     goto/16 :goto_3
 
-    .line 642
+    .line 633
     :array_0
     .array-data 4
         0x0
@@ -1318,7 +1326,7 @@
     .locals 2
 
     .prologue
-    .line 898
+    .line 894
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     const-string v1, "Nexus 6"
@@ -1339,11 +1347,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 899
+    .line 895
     :cond_0
     const/4 v0, 0x1
 
-    .line 902
+    .line 898
     :goto_0
     return v0
 
@@ -1357,7 +1365,7 @@
     .locals 2
 
     .prologue
-    .line 908
+    .line 904
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     const-string v1, "SM-T670"
@@ -1393,7 +1401,7 @@
     .end annotation
 
     .prologue
-    .line 760
+    .line 753
     if-eqz p1, :cond_0
 
     invoke-interface {p1, p0}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
@@ -1414,84 +1422,49 @@
 .end method
 
 .method private localCameraClose()V
-    .locals 5
+    .locals 3
 
     .prologue
-    const/4 v4, 0x0
+    const/4 v2, 0x0
 
-    .line 279
+    .line 281
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "localCameraClose()"
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 281
+    .line 283
     iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
 
     if-eqz v0, :cond_0
 
-    .line 282
+    .line 284
     invoke-direct {p0}, Lcom/rounds/kik/media/video/LocalCameraManager;->localCameraStopPreview()V
 
-    .line 283
+    .line 285
     iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mVideoCapturerInternal:Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerInternal;
 
     invoke-virtual {v0}, Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerInternal;->clearCameraPool()V
 
-    .line 285
-    :try_start_0
-    iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/hardware/Camera;->setPreviewCallbackWithBuffer(Landroid/hardware/Camera$PreviewCallback;)V
-
     .line 286
     iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
 
-    invoke-virtual {v0}, Landroid/hardware/Camera;->release()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 290
-    :goto_0
-    iput-object v4, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
-
-    .line 295
-    :goto_1
-    return-void
+    invoke-virtual {v0, v2}, Landroid/hardware/Camera;->setPreviewCallbackWithBuffer(Landroid/hardware/Camera$PreviewCallback;)V
 
     .line 287
-    :catch_0
-    move-exception v0
+    iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
+
+    invoke-virtual {v0}, Landroid/hardware/Camera;->release()V
 
     .line 288
-    sget-object v1, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Failed to close camera, different process released the camera handle "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lcom/rounds/kik/logs/VideoLogger;->error(Ljava/lang/String;)V
-
-    goto :goto_0
+    iput-object v2, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
 
     .line 293
+    :goto_0
+    return-void
+
+    .line 291
     :cond_0
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
@@ -1499,7 +1472,7 @@
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    goto :goto_1
+    goto :goto_0
 .end method
 
 .method private localCameraInit()Z
@@ -1510,14 +1483,14 @@
 
     const/4 v1, 0x0
 
-    .line 145
+    .line 141
     sget-object v2, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v3, "localCameraInit()"
 
     invoke-virtual {v2, v3}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 148
+    .line 144
     :try_start_0
     iget-boolean v2, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mInitDone:Z
 
@@ -1525,7 +1498,7 @@
 
     move v2, v1
 
-    .line 149
+    .line 145
     :goto_0
     invoke-static {}, Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;->values()[Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
 
@@ -1535,7 +1508,7 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 150
+    .line 146
     iget-object v3, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mLocalCameras:[Lcom/rounds/kik/media/video/LocalCameraManager$a;
 
     new-instance v4, Lcom/rounds/kik/media/video/LocalCameraManager$a;
@@ -1544,23 +1517,23 @@
 
     aput-object v4, v3, v2
 
-    .line 149
+    .line 145
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 153
+    .line 149
     :cond_0
     invoke-direct {p0}, Lcom/rounds/kik/media/video/LocalCameraManager;->enumerateDevices()I
 
     move-result v3
 
-    .line 154
+    .line 150
     if-lez v3, :cond_4
 
     move v2, v1
 
-    .line 155
+    .line 151
     :goto_1
     iget-object v4, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mLocalCameras:[Lcom/rounds/kik/media/video/LocalCameraManager$a;
 
@@ -1568,7 +1541,7 @@
 
     if-ge v2, v4, :cond_1
 
-    .line 156
+    .line 152
     iget-object v4, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mDeviceIdToIndex:Ljava/util/concurrent/ConcurrentHashMap;
 
     iget-object v5, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mLocalCameras:[Lcom/rounds/kik/media/video/LocalCameraManager$a;
@@ -1587,12 +1560,12 @@
 
     invoke-virtual {v4, v5, v6}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 155
+    .line 151
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 159
+    .line 155
     :cond_1
     invoke-direct {p0}, Lcom/rounds/kik/media/video/LocalCameraManager;->findBestCameraProperties()Z
 
@@ -1600,7 +1573,7 @@
 
     if-ne v2, v0, :cond_3
 
-    .line 160
+    .line 156
     sget-object v2, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1619,22 +1592,22 @@
 
     invoke-virtual {v2, v3}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 161
+    .line 157
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mInitDone:Z
 
-    .line 172
+    .line 168
     :cond_2
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
 
-    .line 179
+    .line 175
     :goto_2
     return v0
 
-    .line 164
+    .line 160
     :cond_3
     new-instance v0, Lcom/rounds/kik/media/video/LocalCameraManager$BooyahCameraException;
 
@@ -1646,11 +1619,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 176
+    .line 172
     :catch_0
     move-exception v0
 
-    .line 177
+    .line 173
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "initCamera(): "
@@ -1687,17 +1660,17 @@
 
     move-result-object v0
 
-    .line 178
+    .line 174
     sget-object v2, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     invoke-virtual {v2, v0}, Lcom/rounds/kik/logs/VideoLogger;->error(Ljava/lang/String;)V
 
     move v0, v1
 
-    .line 179
+    .line 175
     goto :goto_2
 
-    .line 168
+    .line 164
     :cond_4
     :try_start_1
     new-instance v0, Lcom/rounds/kik/media/video/LocalCameraManager$BooyahCameraException;
@@ -1719,45 +1692,44 @@
 
     const/4 v1, 0x0
 
-    .line 215
+    .line 217
     iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_6
 
-    .line 216
-    sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
+    .line 218
+    sget-object v3, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v4, "Opening camera, device Id: "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget v4, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mDeviceID:I
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v4
 
-    const-string v4, " CameraPosition: "
+    iget-boolean v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraFront:Z
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_0
 
-    move-result-object v3
+    const-string v0, " FRONT"
 
-    iget-object v4, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraPosition:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
+    :goto_0
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    move-result-object v3
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v3
+    invoke-virtual {v3, v0}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v3}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
-
-    .line 219
+    .line 221
     :try_start_0
     iget v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mDeviceID:I
 
@@ -1769,12 +1741,12 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 226
+    .line 228
     iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
-    .line 227
+    .line 229
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1797,15 +1769,21 @@
 
     move v0, v1
 
-    .line 253
-    :goto_0
+    .line 255
+    :goto_1
     return v0
 
-    .line 221
+    .line 218
+    :cond_0
+    const-string v0, " BACK"
+
+    goto :goto_0
+
+    .line 223
     :catch_0
     move-exception v0
 
-    .line 222
+    .line 224
     sget-object v2, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v3, "failed to open camera"
@@ -1814,11 +1792,11 @@
 
     move v0, v1
 
-    .line 223
-    goto :goto_0
+    .line 225
+    goto :goto_1
 
-    .line 232
-    :cond_0
+    .line 234
+    :cond_1
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->INSTANCE:Lcom/rounds/kik/media/MediaBroker;
 
     iget v3, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mDeviceID:I
@@ -1827,36 +1805,28 @@
 
     move-result-object v4
 
-    .line 236
-    iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mParameters:[Landroid/hardware/Camera$Parameters;
+    .line 238
+    iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mParameters:Landroid/hardware/Camera$Parameters;
 
-    iget v3, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mDeviceID:I
+    if-eqz v0, :cond_2
 
-    aget-object v0, v0, v3
-
-    if-eqz v0, :cond_1
-
-    .line 237
+    .line 239
     iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
 
-    iget-object v3, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mParameters:[Landroid/hardware/Camera$Parameters;
-
-    iget v5, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mDeviceID:I
-
-    aget-object v3, v3, v5
+    iget-object v3, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mParameters:Landroid/hardware/Camera$Parameters;
 
     invoke-virtual {v0, v3}, Landroid/hardware/Camera;->setParameters(Landroid/hardware/Camera$Parameters;)V
 
-    :cond_1
+    :cond_2
     move v3, v1
 
-    .line 240
-    :goto_1
+    .line 242
+    :goto_2
     const/4 v0, 0x2
 
-    if-ge v3, v0, :cond_5
+    if-ge v3, v0, :cond_6
 
-    .line 241
+    .line 243
     aget v0, v4, v1
 
     aget v5, v4, v2
@@ -1883,22 +1853,22 @@
 
     move-result v5
 
-    .line 242
+    .line 244
     const/4 v0, 0x0
 
-    .line 243
-    if-lez v5, :cond_2
+    .line 245
+    if-lez v5, :cond_3
 
-    .line 244
+    .line 246
     invoke-static {v5}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 246
-    :cond_2
-    if-eqz v0, :cond_3
+    .line 248
+    :cond_3
+    if-eqz v0, :cond_4
 
-    .line 247
+    .line 249
     iget-object v6, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
@@ -1907,8 +1877,8 @@
 
     invoke-virtual {v6, v7}, Landroid/hardware/Camera;->addCallbackBuffer([B)V
 
-    .line 249
-    :cond_3
+    .line 251
+    :cond_4
     sget-object v6, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1917,11 +1887,11 @@
 
     invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_5
 
     const-string v0, " Memory issues - Failed to "
 
-    :goto_2
+    :goto_3
     invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -1966,112 +1936,122 @@
 
     invoke-virtual {v6, v0}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 240
+    .line 242
     add-int/lit8 v0, v3, 0x1
 
     move v3, v0
 
-    goto :goto_1
-
-    .line 249
-    :cond_4
-    const-string v0, " "
-
     goto :goto_2
 
+    .line 251
     :cond_5
+    const-string v0, " "
+
+    goto :goto_3
+
+    :cond_6
     move v0, v2
 
-    .line 253
-    goto/16 :goto_0
+    .line 255
+    goto/16 :goto_1
 .end method
 
-.method private localCameraSetPosition(Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;)V
-    .locals 4
+.method private localCameraSetFront(Z)V
+    .locals 5
 
     .prologue
-    const/high16 v3, -0x3d4c0000    # -90.0f
-
-    .line 186
-    const/high16 v0, 0x42b40000    # 90.0f
-
-    iput v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mStreamAngle:F
-
-    .line 187
     const/4 v0, 0x0
 
+    const/high16 v4, -0x3d4c0000    # -90.0f
+
+    const/4 v1, 0x1
+
+    .line 182
+    const/high16 v2, 0x42b40000    # 90.0f
+
+    iput v2, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mStreamAngle:F
+
+    .line 183
     iput-boolean v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mStreamHorizontalFlip:Z
 
-    .line 189
-    sget-object v0, Lcom/rounds/kik/media/MediaBroker;->INSTANCE:Lcom/rounds/kik/media/MediaBroker;
+    .line 185
+    sget-object v2, Lcom/rounds/kik/media/MediaBroker;->INSTANCE:Lcom/rounds/kik/media/MediaBroker;
 
-    invoke-virtual {v0, p1}, Lcom/rounds/kik/media/MediaBroker;->getCameraId(Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;)I
+    invoke-virtual {v2, p1}, Lcom/rounds/kik/media/MediaBroker;->getCameraId(Z)I
 
-    move-result v0
+    move-result v2
 
-    iput v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mDeviceID:I
+    iput v2, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mDeviceID:I
 
-    .line 190
-    iput-object p1, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraPosition:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
-
-    .line 192
-    sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "localCameraSetFront mCameraFront="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraPosition:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " mDeviceID="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
+    .line 187
     iget v2, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mDeviceID:I
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    if-ltz v2, :cond_3
 
-    move-result-object v1
+    move v0, p1
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-object v2, p0
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
+    .line 191
+    :goto_0
+    iput-boolean v0, v2, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraFront:Z
 
     .line 194
+    sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "localCameraSetFront mCameraFront="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-boolean v3, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraFront:Z
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, " mDeviceID="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget v3, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mDeviceID:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
+
+    .line 196
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    const-string v1, "SM-T670"
+    const-string v2, "SM-T670"
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 195
+    .line 197
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mStreamAngle:F
 
-    .line 198
+    .line 200
     :cond_0
-    iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraPosition:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
+    iget-boolean v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraFront:Z
 
-    sget-object v1, Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;->FRONT:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
+    if-ne v0, v1, :cond_5
 
-    if-ne v0, v1, :cond_3
-
-    .line 199
+    .line 201
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     const-string v1, "Nexus 6"
@@ -2092,24 +2072,34 @@
 
     if-eqz v0, :cond_2
 
-    .line 200
+    .line 202
     :cond_1
-    iput v3, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mStreamAngle:F
+    iput v4, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mStreamAngle:F
 
-    .line 210
+    .line 212
     :cond_2
-    :goto_0
+    :goto_1
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v2, "[R3D related] localCameraSetFront Camera Position = "
+    const-string v2, "[R3D related] localCameraSetFront bFront = "
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraPosition:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v1
+
+    const-string v2, " Camera-Front = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-boolean v2, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraFront:Z
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -2159,31 +2149,44 @@
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 211
+    .line 213
     return-void
 
-    .line 204
+    .line 191
     :cond_3
+    if-nez p1, :cond_4
+
+    move v0, v1
+
+    move-object v2, p0
+
+    goto/16 :goto_0
+
+    :cond_4
+    move-object v2, p0
+
+    goto/16 :goto_0
+
+    .line 206
+    :cond_5
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    const-string v1, "Nexus 5X"
+    const-string v2, "Nexus 5X"
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_4
-
-    .line 205
-    iput v3, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mStreamAngle:F
+    if-eqz v0, :cond_6
 
     .line 207
-    :cond_4
-    const/4 v0, 0x1
+    iput v4, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mStreamAngle:F
 
-    iput-boolean v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mStreamHorizontalFlip:Z
+    .line 209
+    :cond_6
+    iput-boolean v1, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mStreamHorizontalFlip:Z
 
-    goto :goto_0
+    goto :goto_1
 .end method
 
 .method private localCameraStart(Landroid/graphics/SurfaceTexture;)Z
@@ -2192,47 +2195,47 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 302
+    .line 300
     :try_start_0
     iget-object v1, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
 
     if-nez v1, :cond_0
 
-    .line 303
+    .line 301
     invoke-direct {p0}, Lcom/rounds/kik/media/video/LocalCameraManager;->localCameraOpen()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 334
+    .line 331
     :goto_0
     return v0
 
-    .line 308
+    .line 306
     :cond_0
     iput-object p1, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
-    .line 310
+    .line 308
     sget-object v1, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v2, "start() camera - setPreviewTexture"
 
     invoke-virtual {v1, v2}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 312
+    .line 310
     iget-object v1, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
 
     iget-object v2, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v1, v2}, Landroid/hardware/Camera;->setPreviewTexture(Landroid/graphics/SurfaceTexture;)V
 
-    .line 313
+    .line 311
     iget-object v1, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
 
     invoke-virtual {v1, p0}, Landroid/hardware/Camera;->setPreviewCallbackWithBuffer(Landroid/hardware/Camera$PreviewCallback;)V
 
-    .line 315
+    .line 313
     iget-object v1, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
 
     new-instance v2, Lcom/rounds/kik/media/video/LocalCameraManager$1;
@@ -2241,23 +2244,23 @@
 
     invoke-virtual {v1, v2}, Landroid/hardware/Camera;->setErrorCallback(Landroid/hardware/Camera$ErrorCallback;)V
 
-    .line 325
+    .line 322
     iget-object v1, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
 
     invoke-virtual {v1}, Landroid/hardware/Camera;->startPreview()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 334
+    .line 331
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 328
+    .line 325
     :catch_0
     move-exception v1
 
-    .line 329
+    .line 326
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "start() camera\tfailed: "
@@ -2294,7 +2297,7 @@
 
     move-result-object v1
 
-    .line 330
+    .line 327
     sget-object v2, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     invoke-virtual {v2, v1}, Lcom/rounds/kik/logs/VideoLogger;->error(Ljava/lang/String;)V
@@ -2306,19 +2309,19 @@
     .locals 3
 
     .prologue
-    .line 259
+    .line 261
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "localCameraStop()"
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 261
+    .line 263
     iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
 
     if-eqz v0, :cond_0
 
-    .line 263
+    .line 265
     :try_start_0
     iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
 
@@ -2326,15 +2329,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 274
+    .line 276
     :goto_0
     return-void
 
-    .line 265
+    .line 267
     :catch_0
     move-exception v0
 
-    .line 266
+    .line 268
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "localCameraStop() camera\tfailed: "
@@ -2371,12 +2374,12 @@
 
     move-result-object v0
 
-    .line 267
+    .line 269
     sget-object v1, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     invoke-virtual {v1, v0}, Lcom/rounds/kik/logs/VideoLogger;->error(Ljava/lang/String;)V
 
-    .line 268
+    .line 270
     new-instance v1, Lcom/rounds/kik/media/video/LocalCameraStopException;
 
     invoke-direct {v1, v0}, Lcom/rounds/kik/media/video/LocalCameraStopException;-><init>(Ljava/lang/String;)V
@@ -2385,7 +2388,7 @@
 
     goto :goto_0
 
-    .line 272
+    .line 274
     :cond_0
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
@@ -2400,36 +2403,36 @@
     .locals 2
 
     .prologue
-    .line 765
+    .line 758
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "Setting advanced camera parameters"
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 768
+    .line 761
     const-string v0, "off"
 
-    .line 770
+    .line 763
     invoke-virtual {p1}, Landroid/hardware/Camera$Parameters;->getSupportedFlashModes()Ljava/util/List;
 
     move-result-object v1
 
-    .line 771
+    .line 764
     invoke-static {v0, v1}, Lcom/rounds/kik/media/video/LocalCameraManager;->isSupported(Ljava/lang/String;Ljava/util/List;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 772
+    .line 765
     invoke-virtual {p1, v0}, Landroid/hardware/Camera$Parameters;->setFlashMode(Ljava/lang/String;)V
 
-    .line 782
+    .line 775
     :goto_0
     const-string v0, "auto"
 
-    .line 783
+    .line 776
     invoke-virtual {p1}, Landroid/hardware/Camera$Parameters;->getSupportedWhiteBalance()Ljava/util/List;
 
     move-result-object v1
@@ -2440,10 +2443,10 @@
 
     if-eqz v1, :cond_4
 
-    .line 784
+    .line 777
     invoke-virtual {p1, v0}, Landroid/hardware/Camera$Parameters;->setWhiteBalance(Ljava/lang/String;)V
 
-    .line 794
+    .line 787
     :goto_1
     invoke-virtual {p1}, Landroid/hardware/Camera$Parameters;->isZoomSupported()Z
 
@@ -2451,18 +2454,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 795
+    .line 788
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/hardware/Camera$Parameters;->setZoom(I)V
 
-    .line 799
+    .line 792
     :cond_0
     invoke-virtual {p1}, Landroid/hardware/Camera$Parameters;->getSupportedFocusModes()Ljava/util/List;
 
     move-result-object v0
 
-    .line 800
+    .line 793
     const-string v1, "continuous-video"
 
     invoke-static {v1, v0}, Lcom/rounds/kik/media/video/LocalCameraManager;->isSupported(Ljava/lang/String;Ljava/util/List;)Z
@@ -2471,12 +2474,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 801
+    .line 794
     const-string v0, "continuous-video"
 
     invoke-virtual {p1, v0}, Landroid/hardware/Camera$Parameters;->setFocusMode(Ljava/lang/String;)V
 
-    .line 804
+    .line 797
     :cond_1
     const-string v0, "video-stabilization-supported"
 
@@ -2484,7 +2487,7 @@
 
     move-result-object v0
 
-    .line 805
+    .line 798
     const-string v1, "true"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2493,14 +2496,14 @@
 
     if-eqz v0, :cond_2
 
-    .line 806
+    .line 799
     const-string v0, "video-stabilization"
 
     const-string v1, "true"
 
     invoke-virtual {p1, v0, v1}, Landroid/hardware/Camera$Parameters;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 810
+    .line 803
     :cond_2
     const/4 v0, 0x2
 
@@ -2508,24 +2511,24 @@
 
     move-result v0
 
-    .line 811
+    .line 804
     invoke-virtual {p1, v0}, Landroid/hardware/Camera$Parameters;->setJpegQuality(I)V
 
-    .line 813
+    .line 806
     iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
 
     invoke-virtual {v0, p1}, Landroid/hardware/Camera;->setParameters(Landroid/hardware/Camera$Parameters;)V
 
-    .line 814
+    .line 807
     return-void
 
-    .line 775
+    .line 768
     :cond_3
     invoke-virtual {p1}, Landroid/hardware/Camera$Parameters;->getFlashMode()Ljava/lang/String;
 
     goto :goto_0
 
-    .line 787
+    .line 780
     :cond_4
     invoke-virtual {p1}, Landroid/hardware/Camera$Parameters;->getWhiteBalance()Ljava/lang/String;
 
@@ -2533,52 +2536,19 @@
 .end method
 
 .method public static setOrientationMode(Lcom/rounds/kik/media/video/LocalCameraManager$CameraOrientation;)V
-    .locals 3
+    .locals 1
 
     .prologue
-    .line 913
+    .line 909
     sput-object p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraOrientationMode:Lcom/rounds/kik/media/video/LocalCameraManager$CameraOrientation;
 
-    .line 914
-    const/4 v0, 0x0
-
-    .line 915
-    sget-object v1, Lcom/rounds/kik/media/video/LocalCameraManager$2;->b:[I
+    .line 911
+    sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager$2;->b:[I
 
     invoke-virtual {p0}, Lcom/rounds/kik/media/video/LocalCameraManager$CameraOrientation;->ordinal()I
 
-    move-result v2
-
-    aget v1, v1, v2
-
-    packed-switch v1, :pswitch_data_0
-
-    .line 924
-    :goto_0
-    invoke-static {v0}, Lcom/rounds/kik/media/NativeRoundsVidyoClient;->NativeClientSetOrientation(I)V
-
-    .line 925
+    .line 921
     return-void
-
-    .line 917
-    :pswitch_0
-    const/4 v0, 0x3
-
-    .line 918
-    goto :goto_0
-
-    .line 920
-    :pswitch_1
-    const/4 v0, 0x2
-
-    goto :goto_0
-
-    .line 915
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
 .end method
 
 
@@ -2587,14 +2557,14 @@
     .locals 2
 
     .prologue
-    .line 428
+    .line 423
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "cameraClose"
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 430
+    .line 425
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;->CLOSE:Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;->ordinal()I
@@ -2605,10 +2575,10 @@
 
     move-result-object v0
 
-    .line 431
+    .line 426
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 432
+    .line 427
     return-void
 .end method
 
@@ -2616,14 +2586,14 @@
     .locals 2
 
     .prologue
-    .line 399
+    .line 394
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "cameraInit"
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 401
+    .line 396
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;->INIT:Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;->ordinal()I
@@ -2634,10 +2604,10 @@
 
     move-result-object v0
 
-    .line 402
+    .line 397
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 403
+    .line 398
     return-void
 .end method
 
@@ -2645,14 +2615,14 @@
     .locals 2
 
     .prologue
-    .line 420
+    .line 415
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "cameraOpen"
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 422
+    .line 417
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;->OPEN:Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;->ordinal()I
@@ -2663,25 +2633,45 @@
 
     move-result-object v0
 
-    .line 423
+    .line 418
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 424
+    .line 419
     return-void
 .end method
 
-.method public cameraSet(Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;)V
-    .locals 4
+.method public cameraPosition()Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
+    .locals 1
 
     .prologue
-    .line 407
+    .line 77
+    iget-boolean v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraFront:Z
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;->FRONT:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;->BACK:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
+
+    goto :goto_0
+.end method
+
+.method public cameraSet(Z)V
+    .locals 3
+
+    .prologue
+    .line 402
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "cameraSet"
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 409
+    .line 404
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;->SET_FRONT:Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;->ordinal()I
@@ -2690,53 +2680,40 @@
 
     invoke-static {p0, v0}, Landroid/os/Message;->obtain(Landroid/os/Handler;I)Landroid/os/Message;
 
-    move-result-object v1
+    move-result-object v0
+
+    .line 406
+    new-instance v1, Landroid/os/Bundle;
+
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+
+    .line 407
+    const-string v2, "EXTRA_OPEN_FRONT_CAMERA"
+
+    invoke-virtual {v1, v2, p1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+
+    .line 408
+    invoke-virtual {v0, v1}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
+
+    .line 410
+    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
     .line 411
-    new-instance v2, Landroid/os/Bundle;
-
-    invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
-
-    .line 412
-    const-string v3, "EXTRA_OPEN_FRONT_CAMERA"
-
-    sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;->FRONT:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
-
-    if-ne p1, v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    invoke-virtual {v2, v3, v0}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
-
-    .line 413
-    invoke-virtual {v1, v2}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
-
-    .line 415
-    invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
-
-    .line 416
     return-void
-
-    .line 412
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method
 
 .method public cameraStart(Landroid/graphics/SurfaceTexture;)V
     .locals 2
 
     .prologue
-    .line 436
+    .line 431
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "cameraStart"
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 438
+    .line 433
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;->START:Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;->ordinal()I
@@ -2747,13 +2724,13 @@
 
     move-result-object v0
 
-    .line 439
+    .line 434
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 440
+    .line 435
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 441
+    .line 436
     return-void
 .end method
 
@@ -2761,19 +2738,19 @@
     .locals 2
 
     .prologue
-    .line 445
+    .line 440
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "cameraStop"
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 447
+    .line 442
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraStarted:Z
 
-    .line 448
+    .line 443
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;->STOP_PREVIEW:Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;
 
     invoke-virtual {v0}, Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;->ordinal()I
@@ -2784,10 +2761,10 @@
 
     move-result-object v0
 
-    .line 449
+    .line 444
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 450
+    .line 445
     return-void
 .end method
 
@@ -2797,14 +2774,14 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 454
+    .line 449
     sget-object v1, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v2, "cameraToggle"
 
     invoke-virtual {v1, v2}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 456
+    .line 451
     iget-object v1, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraDuringSwap:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
@@ -2813,14 +2790,14 @@
 
     if-ne v1, v0, :cond_0
 
-    .line 457
+    .line 452
     const/4 v0, 0x0
 
-    .line 463
+    .line 458
     :goto_0
     return v0
 
-    .line 460
+    .line 455
     :cond_0
     sget-object v1, Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;->TOGGLE:Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;
 
@@ -2832,13 +2809,44 @@
 
     move-result-object v1
 
-    .line 461
+    .line 456
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
     goto :goto_0
 .end method
 
 .method public getBestRangeFPS(I)[I
+    .locals 2
+
+    .prologue
+    .line 523
+    iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mDeviceIdToIndex:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    .line 524
+    iget-object v1, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mLocalCameras:[Lcom/rounds/kik/media/video/LocalCameraManager$a;
+
+    aget-object v0, v1, v0
+
+    iget-object v0, v0, Lcom/rounds/kik/media/video/LocalCameraManager$a;->c:[I
+
+    return-object v0
+.end method
+
+.method public getBestSize(I)[I
     .locals 2
 
     .prologue
@@ -2860,47 +2868,16 @@
     move-result v0
 
     .line 531
-    iget-object v1, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mLocalCameras:[Lcom/rounds/kik/media/video/LocalCameraManager$a;
-
-    aget-object v0, v1, v0
-
-    iget-object v0, v0, Lcom/rounds/kik/media/video/LocalCameraManager$a;->c:[I
-
-    return-object v0
-.end method
-
-.method public getBestSize(I)[I
-    .locals 2
-
-    .prologue
-    .line 537
-    iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mDeviceIdToIndex:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    .line 538
     if-eqz v0, :cond_0
 
     const/4 v1, 0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 539
+    .line 532
     const/4 v0, 0x0
 
-    .line 541
+    .line 534
     :cond_0
     iget-object v1, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraResolution:[[I
 
@@ -2909,14 +2886,20 @@
     return-object v0
 .end method
 
-.method public getCameraId(Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;)I
+.method public getCameraId(Z)I
     .locals 2
 
     .prologue
-    .line 469
+    .line 464
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_0
+
     iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mLocalCameras:[Lcom/rounds/kik/media/video/LocalCameraManager$a;
 
-    invoke-virtual {p1}, Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;->ordinal()I
+    sget-object v1, Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;->FRONT:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
+
+    invoke-virtual {v1}, Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;->ordinal()I
 
     move-result v1
 
@@ -2924,17 +2907,23 @@
 
     iget v0, v0, Lcom/rounds/kik/media/video/LocalCameraManager$a;->a:I
 
+    :goto_0
     return v0
-.end method
 
-.method public getCameraPosition()Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
-    .locals 1
+    :cond_0
+    iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mLocalCameras:[Lcom/rounds/kik/media/video/LocalCameraManager$a;
 
-    .prologue
-    .line 78
-    iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraPosition:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
+    sget-object v1, Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;->BACK:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
 
-    return-object v0
+    invoke-virtual {v1}, Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;->ordinal()I
+
+    move-result v1
+
+    aget-object v0, v0, v1
+
+    iget v0, v0, Lcom/rounds/kik/media/video/LocalCameraManager$a;->a:I
+
+    goto :goto_0
 .end method
 
 .method public getCapabilities(I)[Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerCapability;
@@ -2943,18 +2932,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 494
+    .line 487
     iget-boolean v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mInitDone:Z
 
     if-nez v0, :cond_0
 
     move-object v0, v1
 
-    .line 505
+    .line 498
     :goto_0
     return-object v0
 
-    .line 497
+    .line 490
     :cond_0
     iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mDeviceIdToIndex:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -2968,15 +2957,15 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 498
+    .line 491
     if-nez v0, :cond_1
 
     move-object v0, v1
 
-    .line 499
+    .line 492
     goto :goto_0
 
-    .line 501
+    .line 494
     :cond_1
     iget-object v2, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mLocalCameras:[Lcom/rounds/kik/media/video/LocalCameraManager$a;
 
@@ -2995,10 +2984,10 @@
     :cond_2
     move-object v0, v1
 
-    .line 502
+    .line 495
     goto :goto_0
 
-    .line 505
+    .line 498
     :cond_3
     iget-object v1, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mLocalCameras:[Lcom/rounds/kik/media/video/LocalCameraManager$a;
 
@@ -3017,14 +3006,14 @@
     .locals 2
 
     .prologue
-    .line 476
+    .line 469
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "getDevices()"
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 477
+    .line 470
     iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mDeviceInfoArray:[Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerDeviceInfo;
 
     return-object v0
@@ -3034,7 +3023,7 @@
     .locals 1
 
     .prologue
-    .line 488
+    .line 481
     iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mVideoCapturerInternal:Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerInternal;
 
     return-object v0
@@ -3044,14 +3033,14 @@
     .locals 2
 
     .prologue
-    .line 482
+    .line 475
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "getNumberOfDevices()"
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 483
+    .line 476
     iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mDeviceInfoArray:[Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerDeviceInfo;
 
     array-length v0, v0
@@ -3063,7 +3052,7 @@
     .locals 2
 
     .prologue
-    .line 524
+    .line 517
     iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mDeviceIdToIndex:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3080,7 +3069,7 @@
 
     move-result v0
 
-    .line 525
+    .line 518
     iget-object v1, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mLocalCameras:[Lcom/rounds/kik/media/video/LocalCameraManager$a;
 
     aget-object v0, v1, v0
@@ -3094,7 +3083,7 @@
     .locals 1
 
     .prologue
-    .line 929
+    .line 925
     iget v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mStreamAngle:F
 
     return v0
@@ -3104,20 +3093,20 @@
     .locals 6
 
     .prologue
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    .line 342
+    .line 339
     invoke-static {}, Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;->values()[Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;
 
-    move-result-object v0
+    move-result-object v2
 
     iget v3, p1, Landroid/os/Message;->what:I
 
-    aget-object v0, v0, v3
+    aget-object v2, v2, v3
 
-    .line 343
+    .line 340
     sget-object v3, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3126,7 +3115,7 @@
 
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;->name()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;->name()Ljava/lang/String;
 
     move-result-object v5
 
@@ -3140,34 +3129,34 @@
 
     invoke-virtual {v3, v4}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 344
-    iget-object v3, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mPreviousMsgID:Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;
+    .line 341
+    iget-object v3, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->previoudMSGID:Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;
 
-    if-ne v3, v0, :cond_1
+    if-ne v3, v2, :cond_1
 
-    .line 394
+    .line 389
     :cond_0
     :goto_0
     return-void
 
-    .line 347
+    .line 343
     :cond_1
-    iput-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mPreviousMsgID:Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;
+    iput-object v2, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->previoudMSGID:Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;
 
-    .line 349
+    .line 345
     sget-object v3, Lcom/rounds/kik/media/video/LocalCameraManager$2;->a:[I
 
-    invoke-virtual {v0}, Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;->ordinal()I
+    invoke-virtual {v2}, Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;->ordinal()I
 
-    move-result v0
+    move-result v2
 
-    aget v0, v3, v0
+    aget v2, v3, v2
 
-    packed-switch v0, :pswitch_data_0
+    packed-switch v2, :pswitch_data_0
 
     goto :goto_0
 
-    .line 352
+    .line 348
     :pswitch_0
     invoke-direct {p0}, Lcom/rounds/kik/media/video/LocalCameraManager;->localCameraInit()Z
 
@@ -3175,7 +3164,7 @@
 
     if-nez v0, :cond_0
 
-    .line 353
+    .line 349
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "INIT initCamera failed"
@@ -3184,13 +3173,13 @@
 
     goto :goto_0
 
-    .line 358
+    .line 354
     :pswitch_1
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 359
+    .line 355
     const-string v1, "EXTRA_OPEN_FRONT_CAMERA"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
@@ -3199,39 +3188,43 @@
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    .line 361
-    sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;->FRONT:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
+    move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/rounds/kik/media/video/LocalCameraManager;->localCameraSetPosition(Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;)V
+    .line 357
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    invoke-direct {p0, v0}, Lcom/rounds/kik/media/video/LocalCameraManager;->localCameraSetFront(Z)V
 
     goto :goto_0
 
-    .line 365
+    .line 361
     :pswitch_2
     invoke-direct {p0}, Lcom/rounds/kik/media/video/LocalCameraManager;->localCameraOpen()Z
 
     goto :goto_0
 
-    .line 369
+    .line 365
     :pswitch_3
     invoke-direct {p0}, Lcom/rounds/kik/media/video/LocalCameraManager;->localCameraClose()V
 
     goto :goto_0
 
-    .line 373
+    .line 369
     :pswitch_4
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/graphics/SurfaceTexture;
 
-    .line 374
+    .line 370
     invoke-direct {p0, v0}, Lcom/rounds/kik/media/video/LocalCameraManager;->localCameraStart(Landroid/graphics/SurfaceTexture;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 375
+    .line 371
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "localCameraStart failed"
@@ -3240,73 +3233,46 @@
 
     goto :goto_0
 
-    .line 380
+    .line 376
     :pswitch_5
     invoke-direct {p0}, Lcom/rounds/kik/media/video/LocalCameraManager;->localCameraStopPreview()V
 
     goto :goto_0
 
-    .line 384
+    .line 380
     :pswitch_6
-    invoke-direct {p0}, Lcom/rounds/kik/media/video/LocalCameraManager;->localCameraClose()V
+    iput-boolean v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->cameraToggleStarted:Z
 
-    .line 385
-    iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraPosition:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
+    .line 381
+    invoke-direct {p0}, Lcom/rounds/kik/media/video/LocalCameraManager;->localCameraStopPreview()V
 
-    sget-object v3, Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;->FRONT:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
+    .line 382
+    iget-boolean v2, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraFront:Z
 
-    if-ne v0, v3, :cond_2
+    if-nez v2, :cond_2
 
-    sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;->BACK:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
-
-    .line 386
     :goto_1
-    invoke-direct {p0, v0}, Lcom/rounds/kik/media/video/LocalCameraManager;->localCameraSetPosition(Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;)V
+    invoke-direct {p0, v0}, Lcom/rounds/kik/media/video/LocalCameraManager;->localCameraSetFront(Z)V
 
-    .line 387
+    .line 383
     iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-direct {p0, v0}, Lcom/rounds/kik/media/video/LocalCameraManager;->localCameraStart(Landroid/graphics/SurfaceTexture;)Z
 
-    .line 388
-    iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraPosition:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
-
-    sget-object v3, Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;->BACK:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
-
-    if-ne v0, v3, :cond_3
-
-    move v0, v1
-
-    :goto_2
-    invoke-static {v0, v1}, Lcom/rounds/kik/media/NativeRoundsVidyoClient;->NativeClientUseBackCamera(ZZ)V
-
-    .line 389
+    .line 385
     iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraDuringSwap:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    .line 390
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mPreviousMsgID:Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
     goto :goto_0
 
-    .line 385
     :cond_2
-    sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;->FRONT:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
+    move v0, v1
 
+    .line 382
     goto :goto_1
 
-    :cond_3
-    move v0, v2
-
-    .line 388
-    goto :goto_2
-
-    .line 349
-    nop
-
+    .line 345
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -3325,7 +3291,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 511
+    .line 504
     iget-object v1, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mLocalCameras:[Lcom/rounds/kik/media/video/LocalCameraManager$a;
 
     if-eqz v1, :cond_0
@@ -3336,7 +3302,7 @@
 
     if-lez v1, :cond_0
 
-    .line 512
+    .line 505
     iget-object v2, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mLocalCameras:[Lcom/rounds/kik/media/video/LocalCameraManager$a;
 
     array-length v3, v2
@@ -3348,7 +3314,7 @@
 
     aget-object v4, v2, v1
 
-    .line 513
+    .line 506
     iget v4, v4, Lcom/rounds/kik/media/video/LocalCameraManager$a;->a:I
 
     invoke-virtual {p0, v4}, Lcom/rounds/kik/media/video/LocalCameraManager;->getCapabilities(I)[Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerCapability;
@@ -3357,18 +3323,18 @@
 
     if-nez v4, :cond_1
 
-    .line 519
+    .line 512
     :cond_0
     :goto_1
     return v0
 
-    .line 512
+    .line 505
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 517
+    .line 510
     :cond_2
     const/4 v0, 0x1
 
@@ -3379,7 +3345,7 @@
     .locals 1
 
     .prologue
-    .line 73
+    .line 72
     iget-boolean v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraStarted:Z
 
     return v0
@@ -3389,7 +3355,7 @@
     .locals 2
 
     .prologue
-    .line 546
+    .line 539
     iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mLocalCameras:[Lcom/rounds/kik/media/video/LocalCameraManager$a;
 
     sget-object v1, Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;->BACK:Lcom/rounds/kik/media/video/LocalCameraManager$CameraPosition;
@@ -3421,21 +3387,23 @@
     .prologue
     const/4 v5, 0x1
 
+    const/4 v1, 0x0
+
     const/high16 v4, 0x42b40000    # 90.0f
 
-    .line 824
+    .line 817
     iget-boolean v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mInitDone:Z
 
     if-nez v0, :cond_1
 
-    .line 825
+    .line 818
     iget v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mMissedPreviewFrameCounter:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mMissedPreviewFrameCounter:I
 
-    .line 826
+    .line 819
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3456,23 +3424,23 @@
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->error(Ljava/lang/String;)V
 
-    .line 879
+    .line 875
     :cond_0
     :goto_0
     return-void
 
-    .line 830
+    .line 823
     :cond_1
     if-nez p1, :cond_2
 
-    .line 831
+    .line 824
     iget v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mMissedPreviewFrameCounter:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mMissedPreviewFrameCounter:I
 
-    .line 832
+    .line 825
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3495,8 +3463,17 @@
 
     goto :goto_0
 
-    .line 838
+    .line 830
     :cond_2
+    iget-boolean v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->cameraToggleStarted:Z
+
+    if-eqz v0, :cond_3
+
+    .line 831
+    iput-boolean v1, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->cameraToggleStarted:Z
+
+    .line 836
+    :cond_3
     :try_start_0
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->INSTANCE:Lcom/rounds/kik/media/MediaBroker;
 
@@ -3506,9 +3483,9 @@
 
     sget-object v1, Lcom/rounds/kik/media/MediaBroker$DrawMode;->JAVA:Lcom/rounds/kik/media/MediaBroker$DrawMode;
 
-    if-eq v0, v1, :cond_7
+    if-eq v0, v1, :cond_8
 
-    .line 839
+    .line 837
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->INSTANCE:Lcom/rounds/kik/media/MediaBroker;
 
     iget v1, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mDeviceID:I
@@ -3517,12 +3494,12 @@
 
     move-result-object v1
 
-    .line 841
+    .line 839
     iget v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mMissedPreviewFrameCounter:I
 
-    if-lez v0, :cond_3
+    if-lez v0, :cond_4
 
-    .line 842
+    .line 840
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3549,32 +3526,32 @@
 
     invoke-virtual {v0, v2}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 845
-    :cond_3
+    .line 843
+    :cond_4
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mMissedPreviewFrameCounter:I
 
-    .line 846
+    .line 844
     iget v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mStreamAngle:F
 
-    .line 847
+    .line 845
     sget-object v2, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraOrientationMode:Lcom/rounds/kik/media/video/LocalCameraManager$CameraOrientation;
 
     sget-object v3, Lcom/rounds/kik/media/video/LocalCameraManager$CameraOrientation;->LANDSCAPE_MODE:Lcom/rounds/kik/media/video/LocalCameraManager$CameraOrientation;
 
-    if-ne v2, v3, :cond_6
+    if-ne v2, v3, :cond_7
 
-    .line 848
+    .line 846
     iget v2, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mDeviceID:I
 
-    if-ne v2, v5, :cond_5
+    if-ne v2, v5, :cond_6
 
-    .line 849
+    .line 847
     sub-float/2addr v0, v4
 
-    .line 859
-    :cond_4
+    .line 855
+    :cond_5
     :goto_1
     const/4 v2, 0x0
 
@@ -3588,12 +3565,12 @@
 
     invoke-static {p1, v2, v1, v0, v3}, Lcom/rounds/kik/media/NativeRoundsVidyoClient;->processLocalCameraFrame([BIIFZ)V
 
-    .line 865
+    .line 861
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraStarted:Z
 
-    .line 871
+    .line 867
     :goto_2
     sget-object v0, Lcom/rounds/kik/media/MediaBroker;->INSTANCE:Lcom/rounds/kik/media/MediaBroker;
 
@@ -3603,53 +3580,53 @@
 
     if-nez v0, :cond_0
 
-    .line 872
+    .line 868
     iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
 
     invoke-virtual {v0, p1}, Landroid/hardware/Camera;->addCallbackBuffer([B)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 875
+    .line 871
     :catch_0
     move-exception v0
 
-    .line 876
+    .line 872
     sget-object v1, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v2, "[R3D Related] onPreviewFrame Has Exception "
 
     invoke-virtual {v1, v2}, Lcom/rounds/kik/logs/VideoLogger;->error(Ljava/lang/String;)V
 
-    .line 877
+    .line 873
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_0
 
-    .line 852
-    :cond_5
+    .line 849
+    :cond_6
     add-float/2addr v0, v4
 
     goto :goto_1
 
-    .line 855
-    :cond_6
+    .line 851
+    :cond_7
     :try_start_1
     sget-object v2, Lcom/rounds/kik/media/video/LocalCameraManager;->mCameraOrientationMode:Lcom/rounds/kik/media/video/LocalCameraManager$CameraOrientation;
 
     sget-object v3, Lcom/rounds/kik/media/video/LocalCameraManager$CameraOrientation;->REVERSE_LANDSCAPE_MODE:Lcom/rounds/kik/media/video/LocalCameraManager$CameraOrientation;
 
-    if-ne v2, v3, :cond_4
+    if-ne v2, v3, :cond_5
 
-    .line 856
+    .line 852
     add-float/2addr v0, v4
 
     goto :goto_1
 
-    .line 868
-    :cond_7
+    .line 864
+    :cond_8
     sget-object v0, Lcom/rounds/kik/media/video/LocalCameraManager;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, " onPreviewFrame Didn\'t send video  - No GL Context"
@@ -3665,7 +3642,7 @@
     .locals 1
 
     .prologue
-    .line 889
+    .line 885
     :try_start_0
     iget-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager;->mCamera:Landroid/hardware/Camera;
 
@@ -3673,7 +3650,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 893
+    .line 889
     :goto_0
     return-void
 

@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 133
+    .line 151
     invoke-direct {p0}, Lcom/google/gson/o;-><init>()V
 
     return-void
@@ -45,8 +45,8 @@
     .end annotation
 
     .prologue
-    .line 133
-    .line 1136
+    .line 151
+    .line 1154
     invoke-virtual {p1}, Lcom/google/gson/stream/a;->f()Lcom/google/gson/stream/JsonToken;
 
     move-result-object v0
@@ -55,17 +55,17 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1137
+    .line 1155
     invoke-virtual {p1}, Lcom/google/gson/stream/a;->j()V
 
-    .line 1138
+    .line 1156
     const/4 v0, 0x0
 
-    .line 1141
+    .line 1159
     :goto_0
     return-object v0
 
-    .line 1139
+    .line 1157
     :cond_0
     invoke-virtual {p1}, Lcom/google/gson/stream/a;->f()Lcom/google/gson/stream/JsonToken;
 
@@ -75,7 +75,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1141
+    .line 1159
     invoke-virtual {p1}, Lcom/google/gson/stream/a;->h()Ljava/lang/String;
 
     move-result-object v0
@@ -90,7 +90,7 @@
 
     goto :goto_0
 
-    .line 1143
+    .line 1161
     :cond_1
     invoke-virtual {p1}, Lcom/google/gson/stream/a;->i()Z
 
@@ -103,8 +103,8 @@
     goto :goto_0
 .end method
 
-.method public final bridge synthetic a(Lcom/google/gson/stream/b;Ljava/lang/Object;)V
-    .locals 0
+.method public final synthetic a(Lcom/google/gson/stream/b;Ljava/lang/Object;)V
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -112,12 +112,26 @@
     .end annotation
 
     .prologue
-    .line 133
+    .line 151
     check-cast p2, Ljava/lang/Boolean;
 
-    .line 1147
-    invoke-virtual {p1, p2}, Lcom/google/gson/stream/b;->a(Ljava/lang/Boolean;)Lcom/google/gson/stream/b;
+    .line 1165
+    if-nez p2, :cond_0
 
-    .line 133
+    .line 1166
+    invoke-virtual {p1}, Lcom/google/gson/stream/b;->f()Lcom/google/gson/stream/b;
+
+    .line 1167
+    :goto_0
     return-void
+
+    .line 1169
+    :cond_0
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Lcom/google/gson/stream/b;->a(Z)Lcom/google/gson/stream/b;
+
+    goto :goto_0
 .end method

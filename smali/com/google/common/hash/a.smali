@@ -3,11 +3,6 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
-.end annotation
-
-
 # instance fields
 .field private final a:Ljava/nio/ByteBuffer;
 
@@ -17,10 +12,10 @@
     .locals 2
 
     .prologue
-    .line 35
+    .line 36
     invoke-direct {p0}, Lcom/google/common/hash/b;-><init>()V
 
-    .line 36
+    .line 38
     const/16 v0, 0x8
 
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
@@ -42,7 +37,7 @@
     .locals 2
 
     .prologue
-    .line 84
+    .line 86
     :try_start_0
     iget-object v0, p0, Lcom/google/common/hash/a;->a:Ljava/nio/ByteBuffer;
 
@@ -56,15 +51,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 86
+    .line 88
     iget-object v0, p0, Lcom/google/common/hash/a;->a:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    .line 88
+    .line 90
     return-object p0
 
-    .line 86
+    .line 88
     :catchall_0
     move-exception v0
 
@@ -81,12 +76,12 @@
     .locals 1
 
     .prologue
-    .line 111
+    .line 113
     iget-object v0, p0, Lcom/google/common/hash/a;->a:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->putChar(C)Ljava/nio/ByteBuffer;
 
-    .line 112
+    .line 114
     invoke-direct {p0}, Lcom/google/common/hash/a;->b()Lcom/google/common/hash/e;
 
     move-result-object v0
@@ -108,10 +103,10 @@
     .end annotation
 
     .prologue
-    .line 117
+    .line 119
     invoke-interface {p2, p1, p0}, Lcom/google/common/hash/Funnel;->funnel(Ljava/lang/Object;Lcom/google/common/hash/g;)V
 
-    .line 118
+    .line 120
     return-object p0
 .end method
 
@@ -122,12 +117,12 @@
     .locals 1
 
     .prologue
-    .line 47
+    .line 49
     array-length v0, p1
 
     invoke-virtual {p0, p1, v0}, Lcom/google/common/hash/a;->a([BI)V
 
-    .line 48
+    .line 50
     return-void
 .end method
 
@@ -135,7 +130,7 @@
     .locals 2
 
     .prologue
-    .line 54
+    .line 56
     const/4 v0, 0x0
 
     :goto_0
@@ -143,17 +138,17 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 55
+    .line 57
     aget-byte v1, p1, v0
 
     invoke-virtual {p0, v1}, Lcom/google/common/hash/a;->a(B)V
 
-    .line 54
+    .line 56
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 57
+    .line 59
     :cond_0
     return-void
 .end method
@@ -162,12 +157,12 @@
     .locals 0
 
     .prologue
-    .line 67
-    invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 69
+    invoke-static {p1}, Lcom/google/common/base/h;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 68
+    .line 70
     invoke-virtual {p0, p1}, Lcom/google/common/hash/a;->a([B)V
 
-    .line 69
+    .line 71
     return-object p0
 .end method

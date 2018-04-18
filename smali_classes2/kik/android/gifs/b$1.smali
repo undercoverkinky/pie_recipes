@@ -1,5 +1,5 @@
 .class final Lkik/android/gifs/b$1;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Ljava/io/File;",
         ">;"
@@ -42,7 +42,7 @@
     .locals 1
 
     .prologue
-    .line 70
+    .line 103
     iput-object p1, p0, Lkik/android/gifs/b$1;->f:Lkik/android/gifs/b;
 
     iput-object p2, p0, Lkik/android/gifs/b$1;->a:Ljava/lang/String;
@@ -57,7 +57,7 @@
 
     iput-object p5, p0, Lkik/android/gifs/b$1;->e:Ljava/lang/String;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -68,12 +68,12 @@
     .locals 7
 
     .prologue
-    .line 70
+    .line 103
     move-object v2, p1
 
     check-cast v2, Ljava/io/File;
 
-    .line 1074
+    .line 1107
     iget-object v0, p0, Lkik/android/gifs/b$1;->f:Lkik/android/gifs/b;
 
     iget-object v1, p0, Lkik/android/gifs/b$1;->a:Ljava/lang/String;
@@ -88,7 +88,7 @@
 
     invoke-static/range {v0 .. v6}, Lkik/android/gifs/b;->a(Lkik/android/gifs/b;Ljava/lang/String;Ljava/io/File;ILkik/android/gifs/api/GifResponseData$MediaType;Lcom/kik/events/Promise;Ljava/lang/String;)V
 
-    .line 70
+    .line 103
     return-void
 .end method
 
@@ -96,11 +96,11 @@
     .locals 1
 
     .prologue
-    .line 80
+    .line 113
     iget-object v0, p0, Lkik/android/gifs/b$1;->d:Lcom/kik/events/Promise;
 
     invoke-virtual {v0, p1}, Lcom/kik/events/Promise;->a(Ljava/lang/Throwable;)V
 
-    .line 81
+    .line 114
     return-void
 .end method

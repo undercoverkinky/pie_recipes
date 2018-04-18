@@ -49,7 +49,7 @@
             "Lcom/google/protobuf/RepeatedFieldBuilderV3",
             "<",
             "Lcom/kik/video/VideoCommon$ConvoVideoState;",
-            "Lcom/kik/video/VideoCommon$ConvoVideoState$Builder;",
+            "Lcom/kik/video/VideoCommon$ConvoVideoState$a;",
             "Lcom/kik/video/VideoCommon$c;",
             ">;"
         }
@@ -209,7 +209,6 @@
     .line 1408
     invoke-virtual {p0, v1}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateResponse$a;->a(Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateResponse;)Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateResponse$a;
 
-    .line 1410
     :cond_1
     throw v0
 
@@ -493,7 +492,7 @@
             "Lcom/google/protobuf/RepeatedFieldBuilderV3",
             "<",
             "Lcom/kik/video/VideoCommon$ConvoVideoState;",
-            "Lcom/kik/video/VideoCommon$ConvoVideoState$Builder;",
+            "Lcom/kik/video/VideoCommon$ConvoVideoState$a;",
             "Lcom/kik/video/VideoCommon$c;",
             ">;"
         }

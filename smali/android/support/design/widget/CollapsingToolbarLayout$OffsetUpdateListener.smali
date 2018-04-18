@@ -22,42 +22,55 @@
 
 
 # direct methods
-.method constructor <init>(Landroid/support/design/widget/CollapsingToolbarLayout;)V
+.method private constructor <init>(Landroid/support/design/widget/CollapsingToolbarLayout;)V
     .locals 0
 
     .prologue
-    .line 1258
+    .line 726
     iput-object p1, p0, Landroid/support/design/widget/CollapsingToolbarLayout$OffsetUpdateListener;->a:Landroid/support/design/widget/CollapsingToolbarLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1259
+    return-void
+.end method
+
+.method synthetic constructor <init>(Landroid/support/design/widget/CollapsingToolbarLayout;B)V
+    .locals 0
+
+    .prologue
+    .line 726
+    invoke-direct {p0, p1}, Landroid/support/design/widget/CollapsingToolbarLayout$OffsetUpdateListener;-><init>(Landroid/support/design/widget/CollapsingToolbarLayout;)V
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)V
+.method public final a(Landroid/support/design/widget/AppBarLayout;I)V
     .locals 8
 
     .prologue
     const/4 v2, 0x0
 
-    .line 1263
+    .line 729
     iget-object v0, p0, Landroid/support/design/widget/CollapsingToolbarLayout$OffsetUpdateListener;->a:Landroid/support/design/widget/CollapsingToolbarLayout;
 
-    iput p1, v0, Landroid/support/design/widget/CollapsingToolbarLayout;->c:I
+    invoke-static {v0, p2}, Landroid/support/design/widget/CollapsingToolbarLayout;->b(Landroid/support/design/widget/CollapsingToolbarLayout;I)I
 
-    .line 1265
+    .line 731
     iget-object v0, p0, Landroid/support/design/widget/CollapsingToolbarLayout$OffsetUpdateListener;->a:Landroid/support/design/widget/CollapsingToolbarLayout;
 
-    iget-object v0, v0, Landroid/support/design/widget/CollapsingToolbarLayout;->d:Landroid/support/v4/view/WindowInsetsCompat;
+    invoke-static {v0}, Landroid/support/design/widget/CollapsingToolbarLayout;->a(Landroid/support/design/widget/CollapsingToolbarLayout;)Landroid/support/v4/view/WindowInsetsCompat;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
+
+    if-eqz v0, :cond_1
 
     iget-object v0, p0, Landroid/support/design/widget/CollapsingToolbarLayout$OffsetUpdateListener;->a:Landroid/support/design/widget/CollapsingToolbarLayout;
 
-    iget-object v0, v0, Landroid/support/design/widget/CollapsingToolbarLayout;->d:Landroid/support/v4/view/WindowInsetsCompat;
+    invoke-static {v0}, Landroid/support/design/widget/CollapsingToolbarLayout;->a(Landroid/support/design/widget/CollapsingToolbarLayout;)Landroid/support/v4/view/WindowInsetsCompat;
+
+    move-result-object v0
 
     invoke-virtual {v0}, Landroid/support/v4/view/WindowInsetsCompat;->getSystemWindowInsetTop()I
 
@@ -65,80 +78,87 @@
 
     move v1, v0
 
-    .line 1267
+    .line 732
     :goto_0
+    invoke-virtual {p1}, Landroid/support/design/widget/AppBarLayout;->a()I
+
+    move-result v3
+
+    .line 734
     iget-object v0, p0, Landroid/support/design/widget/CollapsingToolbarLayout$OffsetUpdateListener;->a:Landroid/support/design/widget/CollapsingToolbarLayout;
 
     invoke-virtual {v0}, Landroid/support/design/widget/CollapsingToolbarLayout;->getChildCount()I
 
     move-result v4
 
-    move v3, v2
-
     :goto_1
-    if-ge v3, v4, :cond_1
+    if-ge v2, v4, :cond_2
 
-    .line 1268
+    .line 735
     iget-object v0, p0, Landroid/support/design/widget/CollapsingToolbarLayout$OffsetUpdateListener;->a:Landroid/support/design/widget/CollapsingToolbarLayout;
 
-    invoke-virtual {v0, v3}, Landroid/support/design/widget/CollapsingToolbarLayout;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v0, v2}, Landroid/support/design/widget/CollapsingToolbarLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v5
 
-    .line 1269
+    .line 736
     invoke-virtual {v5}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/support/design/widget/CollapsingToolbarLayout$LayoutParams;
 
-    .line 1270
+    .line 737
     invoke-static {v5}, Landroid/support/design/widget/CollapsingToolbarLayout;->a(Landroid/view/View;)Landroid/support/design/widget/ViewOffsetHelper;
 
     move-result-object v6
 
-    .line 1272
+    .line 739
     iget v7, v0, Landroid/support/design/widget/CollapsingToolbarLayout$LayoutParams;->a:I
 
     packed-switch v7, :pswitch_data_0
 
-    .line 1267
+    .line 734
+    :cond_0
     :goto_2
-    add-int/lit8 v0, v3, 0x1
-
-    move v3, v0
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    :cond_0
+    :cond_1
     move v1, v2
 
-    .line 1265
+    .line 731
     goto :goto_0
 
-    .line 1274
+    .line 741
     :pswitch_0
-    neg-int v0, p1
+    iget-object v0, p0, Landroid/support/design/widget/CollapsingToolbarLayout$OffsetUpdateListener;->a:Landroid/support/design/widget/CollapsingToolbarLayout;
 
-    iget-object v7, p0, Landroid/support/design/widget/CollapsingToolbarLayout$OffsetUpdateListener;->a:Landroid/support/design/widget/CollapsingToolbarLayout;
-
-    .line 1275
-    invoke-virtual {v7, v5}, Landroid/support/design/widget/CollapsingToolbarLayout;->b(Landroid/view/View;)I
-
-    move-result v5
-
-    invoke-static {v0, v2, v5}, Landroid/support/design/widget/MathUtils;->a(III)I
+    invoke-virtual {v0}, Landroid/support/design/widget/CollapsingToolbarLayout;->getHeight()I
 
     move-result v0
 
-    .line 1274
+    sub-int/2addr v0, v1
+
+    add-int/2addr v0, p2
+
+    invoke-virtual {v5}, Landroid/view/View;->getHeight()I
+
+    move-result v5
+
+    if-lt v0, v5, :cond_0
+
+    .line 742
+    neg-int v0, p2
+
     invoke-virtual {v6, v0}, Landroid/support/design/widget/ViewOffsetHelper;->a(I)Z
 
     goto :goto_2
 
-    .line 1278
+    .line 746
     :pswitch_1
-    neg-int v5, p1
+    neg-int v5, p2
 
     int-to-float v5, v5
 
@@ -146,38 +166,81 @@
 
     mul-float/2addr v0, v5
 
-    .line 1279
     invoke-static {v0}, Ljava/lang/Math;->round(F)I
 
     move-result v0
 
-    .line 1278
     invoke-virtual {v6, v0}, Landroid/support/design/widget/ViewOffsetHelper;->a(I)Z
 
     goto :goto_2
 
-    .line 1285
-    :cond_1
+    .line 753
+    :cond_2
     iget-object v0, p0, Landroid/support/design/widget/CollapsingToolbarLayout$OffsetUpdateListener;->a:Landroid/support/design/widget/CollapsingToolbarLayout;
 
-    invoke-virtual {v0}, Landroid/support/design/widget/CollapsingToolbarLayout;->a()V
+    invoke-static {v0}, Landroid/support/design/widget/CollapsingToolbarLayout;->b(Landroid/support/design/widget/CollapsingToolbarLayout;)Landroid/graphics/drawable/Drawable;
 
-    .line 1287
+    move-result-object v0
+
+    if-nez v0, :cond_3
+
     iget-object v0, p0, Landroid/support/design/widget/CollapsingToolbarLayout$OffsetUpdateListener;->a:Landroid/support/design/widget/CollapsingToolbarLayout;
 
-    iget-object v0, v0, Landroid/support/design/widget/CollapsingToolbarLayout;->b:Landroid/graphics/drawable/Drawable;
+    invoke-static {v0}, Landroid/support/design/widget/CollapsingToolbarLayout;->c(Landroid/support/design/widget/CollapsingToolbarLayout;)Landroid/graphics/drawable/Drawable;
 
-    if-eqz v0, :cond_2
+    move-result-object v0
 
-    if-lez v1, :cond_2
+    if-eqz v0, :cond_4
 
-    .line 1288
+    .line 754
+    :cond_3
+    iget-object v0, p0, Landroid/support/design/widget/CollapsingToolbarLayout$OffsetUpdateListener;->a:Landroid/support/design/widget/CollapsingToolbarLayout;
+
+    invoke-virtual {v0}, Landroid/support/design/widget/CollapsingToolbarLayout;->getHeight()I
+
+    move-result v0
+
+    add-int/2addr v0, p2
+
+    iget-object v2, p0, Landroid/support/design/widget/CollapsingToolbarLayout$OffsetUpdateListener;->a:Landroid/support/design/widget/CollapsingToolbarLayout;
+
+    .line 1591
+    invoke-static {v2}, Landroid/support/v4/view/ViewCompat;->getMinimumHeight(Landroid/view/View;)I
+
+    move-result v2
+
+    mul-int/lit8 v2, v2, 0x2
+
+    .line 754
+    add-int/2addr v2, v1
+
+    if-ge v0, v2, :cond_6
+
+    .line 755
+    iget-object v0, p0, Landroid/support/design/widget/CollapsingToolbarLayout$OffsetUpdateListener;->a:Landroid/support/design/widget/CollapsingToolbarLayout;
+
+    invoke-static {v0}, Landroid/support/design/widget/CollapsingToolbarLayout;->d(Landroid/support/design/widget/CollapsingToolbarLayout;)V
+
+    .line 761
+    :cond_4
+    :goto_3
+    iget-object v0, p0, Landroid/support/design/widget/CollapsingToolbarLayout$OffsetUpdateListener;->a:Landroid/support/design/widget/CollapsingToolbarLayout;
+
+    invoke-static {v0}, Landroid/support/design/widget/CollapsingToolbarLayout;->c(Landroid/support/design/widget/CollapsingToolbarLayout;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_5
+
+    if-lez v1, :cond_5
+
+    .line 762
     iget-object v0, p0, Landroid/support/design/widget/CollapsingToolbarLayout$OffsetUpdateListener;->a:Landroid/support/design/widget/CollapsingToolbarLayout;
 
     invoke-static {v0}, Landroid/support/v4/view/ViewCompat;->postInvalidateOnAnimation(Landroid/view/View;)V
 
-    .line 1292
-    :cond_2
+    .line 766
+    :cond_5
     iget-object v0, p0, Landroid/support/design/widget/CollapsingToolbarLayout$OffsetUpdateListener;->a:Landroid/support/design/widget/CollapsingToolbarLayout;
 
     invoke-virtual {v0}, Landroid/support/design/widget/CollapsingToolbarLayout;->getHeight()I
@@ -194,13 +257,14 @@
 
     sub-int/2addr v0, v1
 
-    .line 1294
+    .line 768
     iget-object v1, p0, Landroid/support/design/widget/CollapsingToolbarLayout$OffsetUpdateListener;->a:Landroid/support/design/widget/CollapsingToolbarLayout;
 
-    iget-object v1, v1, Landroid/support/design/widget/CollapsingToolbarLayout;->a:Landroid/support/design/widget/CollapsingTextHelper;
+    invoke-static {v1}, Landroid/support/design/widget/CollapsingToolbarLayout;->f(Landroid/support/design/widget/CollapsingToolbarLayout;)Landroid/support/design/widget/CollapsingTextHelper;
 
-    .line 1295
-    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
+    move-result-object v1
+
+    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
 
     move-result v2
 
@@ -210,13 +274,45 @@
 
     div-float v0, v2, v0
 
-    .line 1294
     invoke-virtual {v1, v0}, Landroid/support/design/widget/CollapsingTextHelper;->b(F)V
 
-    .line 1296
+    .line 771
+    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
+
+    move-result v0
+
+    if-ne v0, v3, :cond_7
+
+    .line 774
+    invoke-virtual {p1}, Landroid/support/design/widget/AppBarLayout;->g()F
+
+    move-result v0
+
+    invoke-static {p1, v0}, Landroid/support/v4/view/ViewCompat;->setElevation(Landroid/view/View;F)V
+
+    .line 779
+    :goto_4
     return-void
 
-    .line 1272
+    .line 757
+    :cond_6
+    iget-object v0, p0, Landroid/support/design/widget/CollapsingToolbarLayout$OffsetUpdateListener;->a:Landroid/support/design/widget/CollapsingToolbarLayout;
+
+    invoke-static {v0}, Landroid/support/design/widget/CollapsingToolbarLayout;->e(Landroid/support/design/widget/CollapsingToolbarLayout;)V
+
+    goto :goto_3
+
+    .line 777
+    :cond_7
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Landroid/support/v4/view/ViewCompat;->setElevation(Landroid/view/View;F)V
+
+    goto :goto_4
+
+    .line 739
+    nop
+
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

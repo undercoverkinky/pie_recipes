@@ -23,13 +23,13 @@
     .locals 0
 
     .prologue
-    .line 55
+    .line 53
     iput-object p1, p0, Lkik/android/chat/fragment/CameraFragment$a;->a:Lkik/android/chat/fragment/CameraFragment;
 
-    .line 56
+    .line 54
     invoke-direct {p0, p2}, Landroid/view/OrientationEventListener;-><init>(Landroid/content/Context;)V
 
-    .line 57
+    .line 55
     return-void
 .end method
 
@@ -39,20 +39,20 @@
     .locals 1
 
     .prologue
-    .line 62
+    .line 60
     const/4 v0, -0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 67
+    .line 65
     :goto_0
     return-void
 
-    .line 66
+    .line 64
     :cond_0
     iget-object v0, p0, Lkik/android/chat/fragment/CameraFragment$a;->a:Lkik/android/chat/fragment/CameraFragment;
 
-    iget-object v0, v0, Lkik/android/chat/fragment/CameraFragment;->e:Lkik/android/chat/presentation/n;
+    iget-object v0, v0, Lkik/android/chat/fragment/CameraFragment;->d:Lkik/android/chat/presentation/n;
 
     invoke-interface {v0, p1}, Lkik/android/chat/presentation/n;->a(I)V
 

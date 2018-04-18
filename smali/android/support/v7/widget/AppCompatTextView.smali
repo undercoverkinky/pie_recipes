@@ -2,27 +2,18 @@
 .super Landroid/widget/TextView;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/support/v4/view/TintableBackgroundView;
-
-
-# instance fields
-.field private final a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
-
-.field private final b:Landroid/support/v7/widget/AppCompatTextHelper;
-
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
     .prologue
-    .line 54
+    .line 36
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/support/v7/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 55
+    .line 37
     return-void
 .end method
 
@@ -30,244 +21,177 @@
     .locals 1
 
     .prologue
-    .line 58
+    .line 40
     const v0, 0x1010084
 
     invoke-direct {p0, p1, p2, v0}, Landroid/support/v7/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 59
+    .line 41
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 1
+    .locals 4
 
     .prologue
-    .line 62
-    invoke-static {p1}, Landroid/support/v7/widget/TintContextWrapper;->a(Landroid/content/Context;)Landroid/content/Context;
+    const/4 v3, -0x1
+
+    const/4 v2, 0x0
+
+    .line 44
+    invoke-direct {p0, p1, p2, p3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    .line 47
+    sget-object v0, Landroid/support/v7/appcompat/R$styleable;->P:[I
+
+    invoke-virtual {p1, p2, v0, p3, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    invoke-direct {p0, v0, p2, p3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .line 49
+    sget v1, Landroid/support/v7/appcompat/R$styleable;->Q:I
+
+    invoke-virtual {v0, v1, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v1
+
+    .line 50
+    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
+
+    .line 53
+    if-eq v1, v3, :cond_1
+
+    .line 54
+    sget-object v0, Landroid/support/v7/appcompat/R$styleable;->bB:[I
+
+    invoke-virtual {p1, v1, v0}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
+
+    move-result-object v0
+
+    .line 55
+    sget v1, Landroid/support/v7/appcompat/R$styleable;->bG:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 56
+    sget v1, Landroid/support/v7/appcompat/R$styleable;->bG:I
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    move-result v1
+
+    invoke-virtual {p0, v1}, Landroid/support/v7/widget/AppCompatTextView;->setAllCaps(Z)V
+
+    .line 58
+    :cond_0
+    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
+
+    .line 62
+    :cond_1
+    sget-object v0, Landroid/support/v7/appcompat/R$styleable;->P:[I
+
+    invoke-virtual {p1, p2, v0, p3, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
+    move-result-object v0
+
+    .line 63
+    sget v1, Landroid/support/v7/appcompat/R$styleable;->R:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
 
     .line 64
-    new-instance v0, Landroid/support/v7/widget/AppCompatBackgroundHelper;
+    sget v1, Landroid/support/v7/appcompat/R$styleable;->R:I
 
-    invoke-direct {v0, p0}, Landroid/support/v7/widget/AppCompatBackgroundHelper;-><init>(Landroid/view/View;)V
+    invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
-    iput-object v0, p0, Landroid/support/v7/widget/AppCompatTextView;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
+    move-result v1
 
-    .line 65
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatTextView;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
+    invoke-virtual {p0, v1}, Landroid/support/v7/widget/AppCompatTextView;->setAllCaps(Z)V
 
-    invoke-virtual {v0, p2, p3}, Landroid/support/v7/widget/AppCompatBackgroundHelper;->a(Landroid/util/AttributeSet;I)V
+    .line 66
+    :cond_2
+    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 67
-    invoke-static {p0}, Landroid/support/v7/widget/AppCompatTextHelper;->a(Landroid/widget/TextView;)Landroid/support/v7/widget/AppCompatTextHelper;
-
-    move-result-object v0
-
-    iput-object v0, p0, Landroid/support/v7/widget/AppCompatTextView;->b:Landroid/support/v7/widget/AppCompatTextHelper;
-
-    .line 68
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatTextView;->b:Landroid/support/v7/widget/AppCompatTextHelper;
-
-    invoke-virtual {v0, p2, p3}, Landroid/support/v7/widget/AppCompatTextHelper;->a(Landroid/util/AttributeSet;I)V
-
-    .line 69
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatTextView;->b:Landroid/support/v7/widget/AppCompatTextHelper;
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/AppCompatTextHelper;->a()V
-
-    .line 70
     return-void
 .end method
 
 
 # virtual methods
-.method protected drawableStateChanged()V
-    .locals 1
+.method public setAllCaps(Z)V
+    .locals 2
 
     .prologue
-    .line 154
-    invoke-super {p0}, Landroid/widget/TextView;->drawableStateChanged()V
+    .line 70
+    if-eqz p1, :cond_0
 
-    .line 155
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatTextView;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
+    new-instance v0, Landroid/support/v7/internal/text/AllCapsTransformationMethod;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p0}, Landroid/support/v7/widget/AppCompatTextView;->getContext()Landroid/content/Context;
 
-    .line 156
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatTextView;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
+    move-result-object v1
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/AppCompatBackgroundHelper;->d()V
-
-    .line 158
-    :cond_0
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatTextView;->b:Landroid/support/v7/widget/AppCompatTextHelper;
-
-    if-eqz v0, :cond_1
-
-    .line 159
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatTextView;->b:Landroid/support/v7/widget/AppCompatTextHelper;
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/AppCompatTextHelper;->a()V
-
-    .line 161
-    :cond_1
-    return-void
-.end method
-
-.method public getSupportBackgroundTintList()Landroid/content/res/ColorStateList;
-    .locals 1
-
-    .prologue
-    .line 112
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatTextView;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatTextView;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
-
-    .line 113
-    invoke-virtual {v0}, Landroid/support/v7/widget/AppCompatBackgroundHelper;->b()Landroid/content/res/ColorStateList;
-
-    move-result-object v0
+    invoke-direct {v0, v1}, Landroid/support/v7/internal/text/AllCapsTransformationMethod;-><init>(Landroid/content/Context;)V
 
     :goto_0
-    return-object v0
+    invoke-virtual {p0, v0}, Landroid/support/v7/widget/AppCompatTextView;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
 
+    .line 71
+    return-void
+
+    .line 70
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
-.end method
-
-.method public getSupportBackgroundTintMode()Landroid/graphics/PorterDuff$Mode;
-    .locals 1
-
-    .prologue
-    .line 140
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatTextView;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatTextView;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
-
-    .line 141
-    invoke-virtual {v0}, Landroid/support/v7/widget/AppCompatBackgroundHelper;->c()Landroid/graphics/PorterDuff$Mode;
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-    .locals 1
-
-    .prologue
-    .line 82
-    invoke-super {p0, p1}, Landroid/widget/TextView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 83
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatTextView;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
-
-    if-eqz v0, :cond_0
-
-    .line 84
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatTextView;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/AppCompatBackgroundHelper;->a()V
-
-    .line 86
-    :cond_0
-    return-void
-.end method
-
-.method public setBackgroundResource(I)V
-    .locals 1
-
-    .prologue
-    .line 74
-    invoke-super {p0, p1}, Landroid/widget/TextView;->setBackgroundResource(I)V
-
-    .line 75
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatTextView;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
-
-    if-eqz v0, :cond_0
-
-    .line 76
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatTextView;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
-
-    invoke-virtual {v0, p1}, Landroid/support/v7/widget/AppCompatBackgroundHelper;->a(I)V
-
-    .line 78
-    :cond_0
-    return-void
-.end method
-
-.method public setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
-    .locals 1
-
-    .prologue
-    .line 97
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatTextView;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
-
-    if-eqz v0, :cond_0
-
-    .line 98
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatTextView;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
-
-    invoke-virtual {v0, p1}, Landroid/support/v7/widget/AppCompatBackgroundHelper;->a(Landroid/content/res/ColorStateList;)V
-
-    .line 100
-    :cond_0
-    return-void
-.end method
-
-.method public setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
-    .locals 1
-
-    .prologue
-    .line 125
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatTextView;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
-
-    if-eqz v0, :cond_0
-
-    .line 126
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatTextView;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
-
-    invoke-virtual {v0, p1}, Landroid/support/v7/widget/AppCompatBackgroundHelper;->a(Landroid/graphics/PorterDuff$Mode;)V
-
-    .line 128
-    :cond_0
-    return-void
 .end method
 
 .method public setTextAppearance(Landroid/content/Context;I)V
-    .locals 1
+    .locals 3
 
     .prologue
-    .line 146
+    .line 75
     invoke-super {p0, p1, p2}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 147
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatTextView;->b:Landroid/support/v7/widget/AppCompatTextHelper;
+    .line 77
+    sget-object v0, Landroid/support/v7/appcompat/R$styleable;->bB:[I
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
 
-    .line 148
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatTextView;->b:Landroid/support/v7/widget/AppCompatTextHelper;
+    move-result-object v0
 
-    invoke-virtual {v0, p1, p2}, Landroid/support/v7/widget/AppCompatTextHelper;->a(Landroid/content/Context;I)V
+    .line 78
+    sget v1, Landroid/support/v7/appcompat/R$styleable;->bG:I
 
-    .line 150
+    invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 79
+    sget v1, Landroid/support/v7/appcompat/R$styleable;->bG:I
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    move-result v1
+
+    invoke-virtual {p0, v1}, Landroid/support/v7/widget/AppCompatTextView;->setAllCaps(Z)V
+
+    .line 81
     :cond_0
+    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
+
+    .line 82
     return-void
 .end method

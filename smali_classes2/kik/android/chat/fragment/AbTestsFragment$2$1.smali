@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 140
+    .line 136
     iput-object p1, p0, Lkik/android/chat/fragment/AbTestsFragment$2$1;->b:Lkik/android/chat/fragment/AbTestsFragment$2;
 
     iput-object p2, p0, Lkik/android/chat/fragment/AbTestsFragment$2$1;->a:Lkik/core/abtesting/b;
@@ -44,7 +44,7 @@
     .locals 2
 
     .prologue
-    .line 144
+    .line 140
     iget-object v1, p0, Lkik/android/chat/fragment/AbTestsFragment$2$1;->a:Lkik/core/abtesting/b;
 
     iget-object v0, p0, Lkik/android/chat/fragment/AbTestsFragment$2$1;->a:Lkik/core/abtesting/b;
@@ -67,7 +67,7 @@
 
     move-result-object v0
 
-    .line 145
+    .line 141
     iget-object v1, p0, Lkik/android/chat/fragment/AbTestsFragment$2$1;->b:Lkik/android/chat/fragment/AbTestsFragment$2;
 
     iget-object v1, v1, Lkik/android/chat/fragment/AbTestsFragment$2;->a:Lkik/android/chat/fragment/AbTestsFragment;
@@ -76,15 +76,15 @@
 
     invoke-virtual {v1, v0}, Lkik/core/abtesting/e;->a(Lkik/core/abtesting/a;)V
 
-    .line 146
+    .line 142
     iget-object v0, p0, Lkik/android/chat/fragment/AbTestsFragment$2$1;->b:Lkik/android/chat/fragment/AbTestsFragment$2;
 
     iget-object v0, v0, Lkik/android/chat/fragment/AbTestsFragment$2;->a:Lkik/android/chat/fragment/AbTestsFragment;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/AbTestsFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/AbTestsFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 147
+    .line 143
     return-void
 .end method

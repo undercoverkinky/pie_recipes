@@ -1,11 +1,11 @@
 .class final Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment$1;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;->a()V
+    value = Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;->b()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Landroid/os/Bundle;",
         ">;"
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 103
+    .line 94
     iput-object p1, p0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment$1;->a:Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -46,13 +46,13 @@
     .locals 2
 
     .prologue
-    .line 103
+    .line 94
     check-cast p1, Landroid/os/Bundle;
 
-    .line 1107
-    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Object;)V
+    .line 1098
+    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Object;)V
 
-    .line 1108
+    .line 1099
     const-string v0, "extra-selected-country-code"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -61,13 +61,13 @@
 
     check-cast v0, Lkik/android/challenge/CountryCode;
 
-    .line 1109
+    .line 1100
     iget-object v1, p0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment$1;->a:Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;
 
-    iget-object v1, v1, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;->a:Lkik/android/chat/presentation/br;
+    iget-object v1, v1, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;->a:Lkik/android/chat/presentation/by;
 
-    invoke-interface {v1, v0}, Lkik/android/chat/presentation/br;->a(Lkik/android/challenge/CountryCode;)V
+    invoke-interface {v1, v0}, Lkik/android/chat/presentation/by;->a(Lkik/android/challenge/CountryCode;)V
 
-    .line 103
+    .line 94
     return-void
 .end method

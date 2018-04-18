@@ -12,12 +12,12 @@
 
 
 # instance fields
-.field a:Lkik/core/interfaces/ag;
+.field a:Lkik/core/interfaces/af;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
-.field protected b:Lcom/kik/cache/KikVolleyImageLoader;
+.field protected b:Lcom/kik/cache/aa;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 
@@ -26,7 +26,7 @@
     .end annotation
 .end field
 
-.field protected c:Lcom/kik/cache/KikVolleyImageLoader;
+.field protected c:Lcom/kik/cache/aa;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 
@@ -68,10 +68,16 @@
 
     .prologue
     .line 39
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPermissionsFragment;->getCoreComponent()Lcom/kik/components/CoreComponent;
+    .line 1088
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikFragmentBase;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
+    invoke-static {v0}, Lkik/android/util/s;->a(Landroid/app/Activity;)Lcom/kik/components/CoreComponent;
+
+    move-result-object v0
+
+    .line 39
     invoke-interface {v0, p0}, Lcom/kik/components/CoreComponent;->a(Lkik/android/chat/fragment/KikPermissionsFragment;)V
 
     .line 40
@@ -85,18 +91,18 @@
     .locals 12
 
     .prologue
-    const v11, 0x7f1001fe
+    const v11, 0x7f1101db
 
-    const v10, 0x7f090499
+    const v10, 0x7f0a0485
 
-    const v9, 0x7f090497
+    const v9, 0x7f0a0483
 
     const/4 v6, 0x0
 
     const/4 v8, 0x0
 
     .line 46
-    const v0, 0x7f040085
+    const v0, 0x7f04007e
 
     invoke-virtual {p1, v0, p2, v6}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -112,7 +118,7 @@
     invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikPermissionsFragment$a;->a(Landroid/os/Bundle;)V
 
     .line 50
-    const v0, 0x7f1001e9
+    const v0, 0x7f1100c8
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -121,21 +127,19 @@
     check-cast v0, Lcom/kik/cache/ContactImageView;
 
     .line 52
-    iget-object v1, p0, Lkik/android/chat/fragment/KikPermissionsFragment;->a:Lkik/core/interfaces/ag;
+    iget-object v1, p0, Lkik/android/chat/fragment/KikPermissionsFragment;->a:Lkik/core/interfaces/af;
 
-    invoke-interface {v1}, Lkik/core/interfaces/ag;->d()Lkik/core/datatypes/aa;
+    invoke-interface {v1}, Lkik/core/interfaces/af;->d()Lkik/core/datatypes/ad;
 
     move-result-object v3
 
     .line 53
-    iget-object v1, p0, Lkik/android/chat/fragment/KikPermissionsFragment;->b:Lcom/kik/cache/KikVolleyImageLoader;
+    iget-object v1, p0, Lkik/android/chat/fragment/KikPermissionsFragment;->b:Lcom/kik/cache/aa;
 
-    iget-object v4, p0, Lkik/android/chat/fragment/KikPermissionsFragment;->d:Lcom/kik/android/Mixpanel;
-
-    invoke-virtual {v0, v3, v1, v4}, Lcom/kik/cache/ContactImageView;->a(Lkik/core/datatypes/aa;Lcom/kik/cache/KikVolleyImageLoader;Lcom/kik/android/Mixpanel;)V
+    invoke-virtual {v0, v3, v1}, Lcom/kik/cache/ContactImageView;->a(Lkik/core/datatypes/ad;Lcom/kik/cache/aa;)V
 
     .line 55
-    const v0, 0x7f1001ff
+    const v0, 0x7f1101dc
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -147,7 +151,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v4, v3, Lkik/core/datatypes/aa;->d:Ljava/lang/String;
+    iget-object v4, v3, Lkik/core/datatypes/ad;->d:Ljava/lang/String;
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -159,7 +163,7 @@
 
     move-result-object v1
 
-    iget-object v4, v3, Lkik/core/datatypes/aa;->e:Ljava/lang/String;
+    iget-object v4, v3, Lkik/core/datatypes/ad;->e:Ljava/lang/String;
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -172,7 +176,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 56
-    const v0, 0x7f100200
+    const v0, 0x7f1101dd
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -180,12 +184,12 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iget-object v1, v3, Lkik/core/datatypes/aa;->c:Ljava/lang/String;
+    iget-object v1, v3, Lkik/core/datatypes/ad;->c:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 58
-    const v0, 0x7f1001fc
+    const v0, 0x7f1101d9
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -208,14 +212,14 @@
 
     move-result v5
 
-    invoke-static {v1, v4, v5}, Lcom/kik/cache/SimpleUrlRequest;->getSimpleUrlRequest(Ljava/lang/String;II)Lcom/kik/cache/SimpleUrlRequest;
+    invoke-static {v1, v4, v5}, Lcom/kik/cache/aj;->a(Ljava/lang/String;II)Lcom/kik/cache/aj;
 
     move-result-object v1
 
     .line 60
-    iget-object v4, p0, Lkik/android/chat/fragment/KikPermissionsFragment;->c:Lcom/kik/cache/KikVolleyImageLoader;
+    iget-object v4, p0, Lkik/android/chat/fragment/KikPermissionsFragment;->c:Lcom/kik/cache/aa;
 
-    invoke-virtual {v0, v1, v4}, Lkik/android/widget/RectNetworkedImageView;->a(Lcom/kik/cache/KikImageRequest;Lcom/kik/cache/KikVolleyImageLoader;)V
+    invoke-virtual {v0, v1, v4}, Lkik/android/widget/RectNetworkedImageView;->a(Lcom/kik/cache/y;Lcom/kik/cache/aa;)V
 
     .line 62
     iget-object v0, p0, Lkik/android/chat/fragment/KikPermissionsFragment;->e:Lkik/android/chat/fragment/KikPermissionsFragment$a;
@@ -225,7 +229,7 @@
     move-result-object v1
 
     .line 63
-    const v0, 0x7f1001fd
+    const v0, 0x7f1101da
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -257,7 +261,7 @@
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 65
-    const v0, 0x7f1001fb
+    const v0, 0x7f1101d8
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -265,7 +269,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v4, 0x7f0904ea
+    const v4, 0x7f0a04d6
 
     const/4 v5, 0x1
 
@@ -280,7 +284,7 @@
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 67
-    const v0, 0x7f100201
+    const v0, 0x7f1101de
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -381,7 +385,7 @@
 
     move-result-object v4
 
-    const v6, 0x7f090494
+    const v6, 0x7f0a0480
 
     invoke-virtual {v4, v6}, Landroid/support/v4/app/FragmentActivity;->getString(I)Ljava/lang/String;
 
@@ -411,7 +415,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f090496
+    const v5, 0x7f0a0482
 
     invoke-virtual {v4, v5}, Landroid/support/v4/app/FragmentActivity;->getString(I)Ljava/lang/String;
 
@@ -433,7 +437,7 @@
 
     .line 83
     :goto_0
-    invoke-static {v0, v1}, Lkik/android/chat/view/text/d;->a(Landroid/widget/TextView;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkik/android/chat/view/text/c;->a(Landroid/widget/TextView;Ljava/lang/String;)V
 
     .line 86
     :cond_1
@@ -443,7 +447,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/kik/cards/web/s;->a(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/kik/cards/web/r;->a(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -460,7 +464,7 @@
 
     .line 90
     :cond_2
-    const v0, 0x7f100127
+    const v0, 0x7f1100f8
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -468,12 +472,12 @@
 
     new-instance v1, Lkik/android/chat/fragment/KikPermissionsFragment$1;
 
-    invoke-direct {v1, p0, v3}, Lkik/android/chat/fragment/KikPermissionsFragment$1;-><init>(Lkik/android/chat/fragment/KikPermissionsFragment;Lkik/core/datatypes/aa;)V
+    invoke-direct {v1, p0, v3}, Lkik/android/chat/fragment/KikPermissionsFragment$1;-><init>(Lkik/android/chat/fragment/KikPermissionsFragment;Lkik/core/datatypes/ad;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 103
-    const v0, 0x7f100120
+    const v0, 0x7f1100f1
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -491,7 +495,7 @@
 
     .line 115
     :cond_3
-    const v0, 0x7f100122
+    const v0, 0x7f1100f3
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -503,7 +507,7 @@
     if-eqz v0, :cond_4
 
     .line 117
-    const v1, 0x7f090419
+    const v1, 0x7f0a0405
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -632,7 +636,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f09043e
+    const v5, 0x7f0a042a
 
     invoke-virtual {v4, v5}, Landroid/support/v4/app/FragmentActivity;->getString(I)Ljava/lang/String;
 

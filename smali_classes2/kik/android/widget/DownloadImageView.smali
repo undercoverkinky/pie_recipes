@@ -5,20 +5,26 @@
 
 # instance fields
 .field protected _checkmarkView:Landroid/view/View;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f1001c6
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f1101a0
+        }
     .end annotation
 .end field
 
 .field protected _iconView:Landroid/view/View;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f1001c8
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f1101a2
+        }
     .end annotation
 .end field
 
 .field protected _spinnerView:Landroid/view/View;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f1001c7
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f1101a1
+        }
     .end annotation
 .end field
 
@@ -55,14 +61,14 @@
 
     move-result-object v0
 
-    const v1, 0x7f040075
+    const v1, 0x7f040071
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
     .line 53
-    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)Lbutterknife/Unbinder;
+    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)V
 
     .line 54
     return-void
@@ -160,8 +166,8 @@
     return-void
 .end method
 
-.method public static a(Lkik/android/widget/DownloadImageView;Lrx/d;)V
-    .locals 2
+.method public static a(Lkik/android/widget/DownloadImageView;Lrx/c;)V
+    .locals 1
     .annotation build Landroid/databinding/BindingAdapter;
         value = {
             "isInstalling"
@@ -172,7 +178,7 @@
         value = {
             "(",
             "Lkik/android/widget/DownloadImageView;",
-            "Lrx/d",
+            "Lrx/c",
             "<",
             "Ljava/lang/Boolean;",
             ">;)V"
@@ -181,18 +187,101 @@
 
     .prologue
     .line 34
-    const v0, 0x7f01014c
-
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p0}, Lkik/android/widget/ad;->a(Lkik/android/widget/DownloadImageView;)Lrx/functions/b;
+    invoke-static {p0}, Lkik/android/widget/y;->a(Lkik/android/widget/DownloadImageView;)Lrx/b/b;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-static {v0, v1, p0, p1}, Lcom/kik/util/bt;->d(ILrx/functions/b;Landroid/view/View;Lrx/d;)V
+    invoke-static {v0, p0, p1}, Lcom/kik/util/az;->a(Lrx/b/b;Landroid/view/View;Lrx/c;)V
 
     .line 35
     return-void
+.end method
+
+.method static synthetic a(Lkik/android/widget/DownloadImageView;Z)V
+    .locals 4
+
+    .prologue
+    const/16 v2, 0x8
+
+    const/4 v1, 0x0
+
+    .line 3058
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Lkik/android/widget/DownloadImageView;->isClickable()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 3059
+    invoke-virtual {p0, v1}, Lkik/android/widget/DownloadImageView;->setClickable(Z)V
+
+    .line 3066
+    iget-object v0, p0, Lkik/android/widget/DownloadImageView;->_iconView:Landroid/view/View;
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+
+    .line 3067
+    iget-object v0, p0, Lkik/android/widget/DownloadImageView;->_checkmarkView:Landroid/view/View;
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+
+    .line 3068
+    iget-object v0, p0, Lkik/android/widget/DownloadImageView;->_spinnerView:Landroid/view/View;
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 3070
+    iget-object v0, p0, Lkik/android/widget/DownloadImageView;->_spinnerView:Landroid/view/View;
+
+    sget-object v1, Landroid/view/View;->ALPHA:Landroid/util/Property;
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [F
+
+    fill-array-data v2, :array_0
+
+    invoke-static {v0, v1, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lkik/android/widget/DownloadImageView;->b:Landroid/animation/ObjectAnimator;
+
+    .line 3071
+    iget-object v0, p0, Lkik/android/widget/DownloadImageView;->b:Landroid/animation/ObjectAnimator;
+
+    const-wide/16 v2, 0x2ee
+
+    invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    .line 3072
+    iget-object v0, p0, Lkik/android/widget/DownloadImageView;->b:Landroid/animation/ObjectAnimator;
+
+    new-instance v1, Lkik/android/widget/DownloadImageView$1;
+
+    invoke-direct {v1, p0}, Lkik/android/widget/DownloadImageView$1;-><init>(Lkik/android/widget/DownloadImageView;)V
+
+    invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    .line 3080
+    iget-object v0, p0, Lkik/android/widget/DownloadImageView;->b:Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
+
+    .line 0
+    :cond_0
+    return-void
+
+    .line 3070
+    :array_0
+    .array-data 4
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+    .end array-data
 .end method
 
 .method static synthetic b(Lkik/android/widget/DownloadImageView;)Ljava/lang/Runnable;
@@ -302,89 +391,4 @@
     .line 120
     :cond_3
     return-void
-.end method
-
-.method public final a(Z)V
-    .locals 4
-
-    .prologue
-    const/16 v2, 0x8
-
-    const/4 v1, 0x0
-
-    .line 58
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p0}, Lkik/android/widget/DownloadImageView;->isClickable()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 59
-    invoke-virtual {p0, v1}, Lkik/android/widget/DownloadImageView;->setClickable(Z)V
-
-    .line 2066
-    iget-object v0, p0, Lkik/android/widget/DownloadImageView;->_iconView:Landroid/view/View;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    .line 2067
-    iget-object v0, p0, Lkik/android/widget/DownloadImageView;->_checkmarkView:Landroid/view/View;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    .line 2068
-    iget-object v0, p0, Lkik/android/widget/DownloadImageView;->_spinnerView:Landroid/view/View;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    .line 2070
-    iget-object v0, p0, Lkik/android/widget/DownloadImageView;->_spinnerView:Landroid/view/View;
-
-    sget-object v1, Landroid/view/View;->ALPHA:Landroid/util/Property;
-
-    const/4 v2, 0x2
-
-    new-array v2, v2, [F
-
-    fill-array-data v2, :array_0
-
-    invoke-static {v0, v1, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lkik/android/widget/DownloadImageView;->b:Landroid/animation/ObjectAnimator;
-
-    .line 2071
-    iget-object v0, p0, Lkik/android/widget/DownloadImageView;->b:Landroid/animation/ObjectAnimator;
-
-    const-wide/16 v2, 0x2ee
-
-    invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    .line 2072
-    iget-object v0, p0, Lkik/android/widget/DownloadImageView;->b:Landroid/animation/ObjectAnimator;
-
-    new-instance v1, Lkik/android/widget/DownloadImageView$1;
-
-    invoke-direct {v1, p0}, Lkik/android/widget/DownloadImageView$1;-><init>(Lkik/android/widget/DownloadImageView;)V
-
-    invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    .line 2080
-    iget-object v0, p0, Lkik/android/widget/DownloadImageView;->b:Landroid/animation/ObjectAnimator;
-
-    invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
-
-    .line 62
-    :cond_0
-    return-void
-
-    .line 2070
-    :array_0
-    .array-data 4
-        0x3f800000    # 1.0f
-        0x3f800000    # 1.0f
-    .end array-data
 .end method

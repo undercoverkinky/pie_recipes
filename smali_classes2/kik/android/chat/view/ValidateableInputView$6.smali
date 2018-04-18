@@ -23,7 +23,7 @@
     .locals 3
 
     .prologue
-    .line 806
+    .line 665
     invoke-static {}, Lkik/android/chat/view/ValidateableInputView$TextValidityState;->values()[Lkik/android/chat/view/ValidateableInputView$TextValidityState;
 
     move-result-object v0

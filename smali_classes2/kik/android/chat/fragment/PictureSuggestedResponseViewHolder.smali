@@ -1,34 +1,36 @@
 .class public Lkik/android/chat/fragment/PictureSuggestedResponseViewHolder;
-.super Lkik/android/chat/fragment/gb;
+.super Lkik/android/chat/fragment/hp;
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/android/chat/fragment/o;
+.implements Lkik/android/chat/fragment/n;
 
 
 # instance fields
 .field _imageView:Lkik/android/widget/KikNetworkedImageView;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f100300
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f110296
+        }
     .end annotation
 .end field
 
-.field private final b:Lkik/android/chat/presentation/bu;
+.field private final m:Lkik/android/chat/presentation/cb;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lkik/android/chat/presentation/bu;)V
+.method public constructor <init>(Landroid/view/View;Lkik/android/chat/presentation/cb;)V
     .locals 0
 
     .prologue
     .line 35
-    invoke-direct {p0, p1}, Lkik/android/chat/fragment/gb;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lkik/android/chat/fragment/hp;-><init>(Landroid/view/View;)V
 
     .line 36
-    invoke-static {p0, p1}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)Lbutterknife/Unbinder;
+    invoke-static {p0, p1}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)V
 
     .line 37
-    iput-object p2, p0, Lkik/android/chat/fragment/PictureSuggestedResponseViewHolder;->b:Lkik/android/chat/presentation/bu;
+    iput-object p2, p0, Lkik/android/chat/fragment/PictureSuggestedResponseViewHolder;->m:Lkik/android/chat/presentation/cb;
 
     .line 38
     return-void
@@ -47,7 +49,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0400e6
+    const v1, 0x7f0400c3
 
     const/4 v2, 0x0
 
@@ -65,11 +67,11 @@
 
     .prologue
     .line 58
-    iget-object v0, p0, Lkik/android/chat/fragment/PictureSuggestedResponseViewHolder;->b:Lkik/android/chat/presentation/bu;
+    iget-object v0, p0, Lkik/android/chat/fragment/PictureSuggestedResponseViewHolder;->m:Lkik/android/chat/presentation/cb;
 
     iget-object v1, p0, Lkik/android/chat/fragment/PictureSuggestedResponseViewHolder;->_imageView:Lkik/android/widget/KikNetworkedImageView;
 
-    invoke-interface {v0, v1, p1}, Lkik/android/chat/presentation/bu;->a(Lkik/android/widget/KikNetworkedImageView;Lcom/kik/messagepath/model/Keyboards$SuggestedResponseItem;)V
+    invoke-interface {v0, v1, p1}, Lkik/android/chat/presentation/cb;->a(Lkik/android/widget/KikNetworkedImageView;Lcom/kik/messagepath/model/Keyboards$SuggestedResponseItem;)V
 
     .line 59
     return-void

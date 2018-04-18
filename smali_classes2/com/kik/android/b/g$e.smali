@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 124
+    .line 118
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -50,56 +50,56 @@
 
     const/4 v1, -0x1
 
-    .line 124
+    .line 118
     check-cast p1, Lcom/kik/message/model/attachments/RenderInstruction;
 
     check-cast p2, Lcom/kik/message/model/attachments/RenderInstruction;
 
-    .line 1130
+    .line 1124
     if-nez p1, :cond_1
 
     if-nez p2, :cond_1
 
-    .line 1147
+    .line 1141
     :cond_0
     :goto_0
     return v0
 
-    .line 1133
+    .line 1127
     :cond_1
     if-nez p1, :cond_2
 
     move v0, v1
 
-    .line 1134
+    .line 1128
     goto :goto_0
 
-    .line 1136
+    .line 1130
     :cond_2
     if-nez p2, :cond_3
 
     move v0, v2
 
-    .line 1137
+    .line 1131
     goto :goto_0
 
-    .line 1139
+    .line 1133
     :cond_3
-    invoke-virtual {p1}, Lcom/kik/message/model/attachments/RenderInstruction;->b()Ljava/lang/Integer;
+    invoke-virtual {p1}, Lcom/kik/message/model/attachments/RenderInstruction;->c()Ljava/lang/Integer;
 
     move-result-object v3
 
     if-nez v3, :cond_4
 
-    invoke-virtual {p2}, Lcom/kik/message/model/attachments/RenderInstruction;->b()Ljava/lang/Integer;
+    invoke-virtual {p2}, Lcom/kik/message/model/attachments/RenderInstruction;->c()Ljava/lang/Integer;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    .line 1143
+    .line 1137
     :cond_4
-    invoke-virtual {p1}, Lcom/kik/message/model/attachments/RenderInstruction;->b()Ljava/lang/Integer;
+    invoke-virtual {p1}, Lcom/kik/message/model/attachments/RenderInstruction;->c()Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -107,12 +107,12 @@
 
     move v0, v1
 
-    .line 1144
+    .line 1138
     goto :goto_0
 
-    .line 1146
+    .line 1140
     :cond_5
-    invoke-virtual {p2}, Lcom/kik/message/model/attachments/RenderInstruction;->b()Ljava/lang/Integer;
+    invoke-virtual {p2}, Lcom/kik/message/model/attachments/RenderInstruction;->c()Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -120,12 +120,12 @@
 
     move v0, v2
 
-    .line 1147
+    .line 1141
     goto :goto_0
 
-    .line 1149
+    .line 1143
     :cond_6
-    invoke-virtual {p1}, Lcom/kik/message/model/attachments/RenderInstruction;->b()Ljava/lang/Integer;
+    invoke-virtual {p1}, Lcom/kik/message/model/attachments/RenderInstruction;->c()Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -133,7 +133,7 @@
 
     move-result v0
 
-    invoke-virtual {p2}, Lcom/kik/message/model/attachments/RenderInstruction;->b()Ljava/lang/Integer;
+    invoke-virtual {p2}, Lcom/kik/message/model/attachments/RenderInstruction;->c()Ljava/lang/Integer;
 
     move-result-object v1
 
@@ -143,6 +143,6 @@
 
     sub-int/2addr v0, v1
 
-    .line 124
+    .line 118
     goto :goto_0
 .end method

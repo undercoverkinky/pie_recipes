@@ -40,7 +40,7 @@
 
     const/4 v2, 0x0
 
-    .line 140
+    .line 92
     new-instance v0, Lcom/rounds/kik/media/MediaBroker$DrawMode;
 
     const-string v1, "JAVA"
@@ -57,7 +57,7 @@
 
     sput-object v0, Lcom/rounds/kik/media/MediaBroker$DrawMode;->NATIVE_GL:Lcom/rounds/kik/media/MediaBroker$DrawMode;
 
-    .line 138
+    .line 90
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/rounds/kik/media/MediaBroker$DrawMode;
@@ -84,7 +84,7 @@
     .end annotation
 
     .prologue
-    .line 138
+    .line 90
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -94,7 +94,7 @@
     .locals 1
 
     .prologue
-    .line 138
+    .line 90
     const-class v0, Lcom/rounds/kik/media/MediaBroker$DrawMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -110,7 +110,7 @@
     .locals 1
 
     .prologue
-    .line 138
+    .line 90
     sget-object v0, Lcom/rounds/kik/media/MediaBroker$DrawMode;->$VALUES:[Lcom/rounds/kik/media/MediaBroker$DrawMode;
 
     invoke-virtual {v0}, [Lcom/rounds/kik/media/MediaBroker$DrawMode;->clone()Ljava/lang/Object;

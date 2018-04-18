@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/kik/cache/KikVolleyImageLoader$d;
+.implements Lcom/kik/cache/aa$e;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/util/f;->a(Lcom/kik/cache/KikVolleyImageLoader;Lcom/kik/cache/KikImageRequest;Z)Lcom/kik/events/Promise;
+    value = Lkik/android/util/f;->a(Lcom/kik/cache/aa;Lcom/kik/cache/y;Z)Lcom/kik/events/Promise;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 815
+    .line 754
     iput-object p1, p0, Lkik/android/util/f$10;->a:Lcom/kik/events/Promise;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,23 +40,23 @@
     .locals 1
 
     .prologue
-    .line 835
+    .line 774
     iget-object v0, p0, Lkik/android/util/f$10;->a:Lcom/kik/events/Promise;
 
     invoke-virtual {v0, p1}, Lcom/kik/events/Promise;->a(Ljava/lang/Throwable;)V
 
-    .line 836
+    .line 775
     return-void
 .end method
 
-.method public final a(Lcom/kik/cache/KikVolleyImageLoader$c;Z)V
+.method public final a(Lcom/kik/cache/aa$d;Z)V
     .locals 3
 
     .prologue
-    .line 819
+    .line 758
     if-nez p1, :cond_1
 
-    .line 820
+    .line 759
     iget-object v0, p0, Lkik/android/util/f$10;->a:Lcom/kik/events/Promise;
 
     new-instance v1, Ljava/lang/IllegalArgumentException;
@@ -67,14 +67,14 @@
 
     invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Ljava/lang/Throwable;)V
 
-    .line 830
+    .line 769
     :cond_0
     :goto_0
     return-void
 
-    .line 823
+    .line 762
     :cond_1
-    invoke-virtual {p1}, Lcom/kik/cache/KikVolleyImageLoader$c;->b()Landroid/graphics/Bitmap;
+    invoke-virtual {p1}, Lcom/kik/cache/aa$d;->b()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -82,11 +82,11 @@
 
     if-nez p2, :cond_0
 
-    .line 827
+    .line 766
     :cond_2
     iget-object v0, p0, Lkik/android/util/f$10;->a:Lcom/kik/events/Promise;
 
-    invoke-virtual {p1}, Lcom/kik/cache/KikVolleyImageLoader$c;->b()Landroid/graphics/Bitmap;
+    invoke-virtual {p1}, Lcom/kik/cache/aa$d;->b()Landroid/graphics/Bitmap;
 
     move-result-object v1
 

@@ -17,7 +17,7 @@
 # instance fields
 .field private final a:Landroid/support/v7/app/AlertController$AlertParams;
 
-.field private final b:I
+.field private b:I
 
 
 # direct methods
@@ -25,7 +25,7 @@
     .locals 1
 
     .prologue
-    .line 293
+    .line 269
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Landroid/support/v7/app/AlertDialog;->a(Landroid/content/Context;I)I
@@ -34,7 +34,7 @@
 
     invoke-direct {p0, p1, v0}, Landroid/support/v7/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
-    .line 294
+    .line 270
     return-void
 .end method
 
@@ -42,15 +42,14 @@
     .locals 3
 
     .prologue
-    .line 322
+    .line 279
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 323
+    .line 280
     new-instance v0, Landroid/support/v7/app/AlertController$AlertParams;
 
     new-instance v1, Landroid/view/ContextThemeWrapper;
 
-    .line 324
     invoke-static {p1, p2}, Landroid/support/v7/app/AlertDialog;->a(Landroid/content/Context;I)I
 
     move-result v2
@@ -61,10 +60,10 @@
 
     iput-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
-    .line 325
+    .line 282
     iput p2, p0, Landroid/support/v7/app/AlertDialog$Builder;->b:I
 
-    .line 326
+    .line 283
     return-void
 .end method
 
@@ -74,7 +73,7 @@
     .locals 1
 
     .prologue
-    .line 338
+    .line 295
     iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
     iget-object v0, v0, Landroid/support/v7/app/AlertController$AlertParams;->a:Landroid/content/Context;
@@ -82,78 +81,16 @@
     return-object v0
 .end method
 
-.method public final a(I)Landroid/support/v7/app/AlertDialog$Builder;
-    .locals 2
-
-    .prologue
-    .line 347
-    iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
-
-    iget-object v1, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
-
-    iget-object v1, v1, Landroid/support/v7/app/AlertController$AlertParams;->a:Landroid/content/Context;
-
-    invoke-virtual {v1, p1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    iput-object v1, v0, Landroid/support/v7/app/AlertController$AlertParams;->f:Ljava/lang/CharSequence;
-
-    .line 348
-    return-object p0
-.end method
-
-.method public final a(Landroid/content/DialogInterface$OnCancelListener;)Landroid/support/v7/app/AlertDialog$Builder;
-    .locals 1
-
-    .prologue
-    .line 550
-    iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
-
-    iput-object p1, v0, Landroid/support/v7/app/AlertController$AlertParams;->p:Landroid/content/DialogInterface$OnCancelListener;
-
-    .line 551
-    return-object p0
-.end method
-
-.method public final a(Landroid/content/DialogInterface$OnClickListener;)Landroid/support/v7/app/AlertDialog$Builder;
-    .locals 3
-
-    .prologue
-    .line 505
-    iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
-
-    iget-object v1, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
-
-    iget-object v1, v1, Landroid/support/v7/app/AlertController$AlertParams;->a:Landroid/content/Context;
-
-    const v2, 0x7f09027d
-
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    iput-object v1, v0, Landroid/support/v7/app/AlertController$AlertParams;->m:Ljava/lang/CharSequence;
-
-    .line 506
-    iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
-
-    iput-object p1, v0, Landroid/support/v7/app/AlertController$AlertParams;->n:Landroid/content/DialogInterface$OnClickListener;
-
-    .line 507
-    return-object p0
-.end method
-
 .method public final a(Landroid/content/DialogInterface$OnKeyListener;)Landroid/support/v7/app/AlertDialog$Builder;
     .locals 1
 
     .prologue
-    .line 570
+    .line 514
     iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
     iput-object p1, v0, Landroid/support/v7/app/AlertController$AlertParams;->r:Landroid/content/DialogInterface$OnKeyListener;
 
-    .line 571
+    .line 515
     return-object p0
 .end method
 
@@ -161,12 +98,12 @@
     .locals 1
 
     .prologue
-    .line 425
+    .line 371
     iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
     iput-object p1, v0, Landroid/support/v7/app/AlertController$AlertParams;->d:Landroid/graphics/drawable/Drawable;
 
-    .line 426
+    .line 372
     return-object p0
 .end method
 
@@ -174,12 +111,12 @@
     .locals 1
 
     .prologue
-    .line 378
+    .line 329
     iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
     iput-object p1, v0, Landroid/support/v7/app/AlertController$AlertParams;->g:Landroid/view/View;
 
-    .line 379
+    .line 330
     return-object p0
 .end method
 
@@ -187,17 +124,17 @@
     .locals 1
 
     .prologue
-    .line 609
+    .line 554
     iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
     iput-object p1, v0, Landroid/support/v7/app/AlertController$AlertParams;->t:Landroid/widget/ListAdapter;
 
-    .line 610
+    .line 555
     iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
     iput-object p2, v0, Landroid/support/v7/app/AlertController$AlertParams;->u:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 611
+    .line 556
     return-object p0
 .end method
 
@@ -205,12 +142,12 @@
     .locals 1
 
     .prologue
-    .line 357
+    .line 314
     iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
     iput-object p1, v0, Landroid/support/v7/app/AlertController$AlertParams;->f:Ljava/lang/CharSequence;
 
-    .line 358
+    .line 315
     return-object p0
 .end method
 
@@ -218,17 +155,17 @@
     .locals 1
 
     .prologue
-    .line 466
+    .line 412
     iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
     iput-object p1, v0, Landroid/support/v7/app/AlertController$AlertParams;->i:Ljava/lang/CharSequence;
 
-    .line 467
+    .line 413
     iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
     iput-object p2, v0, Landroid/support/v7/app/AlertController$AlertParams;->j:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 468
+    .line 414
     return-object p0
 .end method
 
@@ -236,12 +173,12 @@
     .locals 1
 
     .prologue
-    .line 529
+    .line 475
     iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
     iput-boolean p1, v0, Landroid/support/v7/app/AlertController$AlertParams;->o:Z
 
-    .line 530
+    .line 476
     return-object p0
 .end method
 
@@ -249,29 +186,29 @@
     .locals 2
 
     .prologue
-    .line 781
+    .line 745
     iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
     iput-object p1, v0, Landroid/support/v7/app/AlertController$AlertParams;->s:[Ljava/lang/CharSequence;
 
-    .line 782
+    .line 746
     iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
     iput-object p3, v0, Landroid/support/v7/app/AlertController$AlertParams;->u:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 783
+    .line 747
     iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
     iput p2, v0, Landroid/support/v7/app/AlertController$AlertParams;->F:I
 
-    .line 784
+    .line 748
     iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Landroid/support/v7/app/AlertController$AlertParams;->E:Z
 
-    .line 785
+    .line 749
     return-object p0
 .end method
 
@@ -279,68 +216,17 @@
     .locals 1
 
     .prologue
-    .line 593
+    .line 539
     iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
     iput-object p1, v0, Landroid/support/v7/app/AlertController$AlertParams;->s:[Ljava/lang/CharSequence;
 
-    .line 594
+    .line 540
     iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
     iput-object p2, v0, Landroid/support/v7/app/AlertController$AlertParams;->u:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 595
-    return-object p0
-.end method
-
-.method public final b()Landroid/support/v7/app/AlertDialog$Builder;
-    .locals 3
-
-    .prologue
-    .line 388
-    iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
-
-    iget-object v1, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
-
-    iget-object v1, v1, Landroid/support/v7/app/AlertController$AlertParams;->a:Landroid/content/Context;
-
-    const v2, 0x7f0903fe
-
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    iput-object v1, v0, Landroid/support/v7/app/AlertController$AlertParams;->h:Ljava/lang/CharSequence;
-
-    .line 389
-    return-object p0
-.end method
-
-.method public final b(I)Landroid/support/v7/app/AlertDialog$Builder;
-    .locals 2
-
-    .prologue
-    .line 453
-    iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
-
-    iget-object v1, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
-
-    iget-object v1, v1, Landroid/support/v7/app/AlertController$AlertParams;->a:Landroid/content/Context;
-
-    invoke-virtual {v1, p1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    iput-object v1, v0, Landroid/support/v7/app/AlertController$AlertParams;->i:Ljava/lang/CharSequence;
-
-    .line 454
-    iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
-
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Landroid/support/v7/app/AlertController$AlertParams;->j:Landroid/content/DialogInterface$OnClickListener;
-
-    .line 455
+    .line 541
     return-object p0
 .end method
 
@@ -350,22 +236,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 852
+    .line 814
     iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
     iput-object p1, v0, Landroid/support/v7/app/AlertController$AlertParams;->w:Landroid/view/View;
 
-    .line 853
+    .line 815
     iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
     iput v1, v0, Landroid/support/v7/app/AlertController$AlertParams;->v:I
 
-    .line 854
+    .line 816
     iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
     iput-boolean v1, v0, Landroid/support/v7/app/AlertController$AlertParams;->B:Z
 
-    .line 855
+    .line 817
     return-object p0
 .end method
 
@@ -373,12 +259,12 @@
     .locals 1
 
     .prologue
-    .line 398
+    .line 349
     iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
     iput-object p1, v0, Landroid/support/v7/app/AlertController$AlertParams;->h:Ljava/lang/CharSequence;
 
-    .line 399
+    .line 350
     return-object p0
 .end method
 
@@ -386,73 +272,25 @@
     .locals 1
 
     .prologue
-    .line 492
+    .line 438
     iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
     iput-object p1, v0, Landroid/support/v7/app/AlertController$AlertParams;->k:Ljava/lang/CharSequence;
 
-    .line 493
+    .line 439
     iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
     iput-object p2, v0, Landroid/support/v7/app/AlertController$AlertParams;->l:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 494
+    .line 440
     return-object p0
 .end method
 
-.method public final c()Landroid/support/v7/app/AlertDialog$Builder;
-    .locals 3
-
-    .prologue
-    .line 479
-    iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
-
-    iget-object v1, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
-
-    iget-object v1, v1, Landroid/support/v7/app/AlertController$AlertParams;->a:Landroid/content/Context;
-
-    const v2, 0x7f0903d7
-
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    iput-object v1, v0, Landroid/support/v7/app/AlertController$AlertParams;->k:Ljava/lang/CharSequence;
-
-    .line 480
-    iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
-
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Landroid/support/v7/app/AlertController$AlertParams;->l:Landroid/content/DialogInterface$OnClickListener;
-
-    .line 481
-    return-object p0
-.end method
-
-.method public final c(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/support/v7/app/AlertDialog$Builder;
-    .locals 1
-
-    .prologue
-    .line 518
-    iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
-
-    iput-object p1, v0, Landroid/support/v7/app/AlertController$AlertParams;->m:Ljava/lang/CharSequence;
-
-    .line 519
-    iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
-
-    iput-object p2, v0, Landroid/support/v7/app/AlertController$AlertParams;->n:Landroid/content/DialogInterface$OnClickListener;
-
-    .line 520
-    return-object p0
-.end method
-
-.method public final d()Landroid/support/v7/app/AlertDialog;
+.method public final b()Landroid/support/v7/app/AlertDialog;
     .locals 20
 
     .prologue
-    .line 931
+    .line 882
     new-instance v19, Landroid/support/v7/app/AlertDialog;
 
     move-object/from16 v0, p0
@@ -469,44 +307,44 @@
 
     invoke-direct {v0, v1, v2}, Landroid/support/v7/app/AlertDialog;-><init>(Landroid/content/Context;I)V
 
-    .line 932
+    .line 883
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
-    move-object/from16 v0, v19
+    invoke-static/range {v19 .. v19}, Landroid/support/v7/app/AlertDialog;->a(Landroid/support/v7/app/AlertDialog;)Landroid/support/v7/app/AlertController;
 
-    iget-object v12, v0, Landroid/support/v7/app/AlertDialog;->a:Landroid/support/v7/app/AlertController;
+    move-result-object v12
 
-    .line 1909
+    .line 1677
     iget-object v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->g:Landroid/view/View;
 
     if-eqz v1, :cond_d
 
-    .line 1910
+    .line 1678
     iget-object v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->g:Landroid/view/View;
 
     invoke-virtual {v12, v1}, Landroid/support/v7/app/AlertController;->a(Landroid/view/View;)V
 
-    .line 1925
+    .line 1693
     :cond_0
     :goto_0
     iget-object v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->h:Ljava/lang/CharSequence;
 
     if-eqz v1, :cond_1
 
-    .line 1926
+    .line 1694
     iget-object v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->h:Ljava/lang/CharSequence;
 
     invoke-virtual {v12, v1}, Landroid/support/v7/app/AlertController;->b(Ljava/lang/CharSequence;)V
 
-    .line 1928
+    .line 1696
     :cond_1
     iget-object v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->i:Ljava/lang/CharSequence;
 
     if-eqz v1, :cond_2
 
-    .line 1929
+    .line 1697
     const/4 v1, -0x1
 
     iget-object v3, v2, Landroid/support/v7/app/AlertController$AlertParams;->i:Ljava/lang/CharSequence;
@@ -517,13 +355,13 @@
 
     invoke-virtual {v12, v1, v3, v4, v5}, Landroid/support/v7/app/AlertController;->a(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;Landroid/os/Message;)V
 
-    .line 1932
+    .line 1700
     :cond_2
     iget-object v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->k:Ljava/lang/CharSequence;
 
     if-eqz v1, :cond_3
 
-    .line 1933
+    .line 1701
     const/4 v1, -0x2
 
     iget-object v3, v2, Landroid/support/v7/app/AlertController$AlertParams;->k:Ljava/lang/CharSequence;
@@ -534,13 +372,13 @@
 
     invoke-virtual {v12, v1, v3, v4, v5}, Landroid/support/v7/app/AlertController;->a(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;Landroid/os/Message;)V
 
-    .line 1936
+    .line 1704
     :cond_3
     iget-object v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->m:Ljava/lang/CharSequence;
 
     if-eqz v1, :cond_4
 
-    .line 1937
+    .line 1705
     const/4 v1, -0x3
 
     iget-object v3, v2, Landroid/support/v7/app/AlertController$AlertParams;->m:Ljava/lang/CharSequence;
@@ -551,7 +389,7 @@
 
     invoke-virtual {v12, v1, v3, v4, v5}, Landroid/support/v7/app/AlertController;->a(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;Landroid/os/Message;)V
 
-    .line 1942
+    .line 1710
     :cond_4
     iget-object v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->s:[Ljava/lang/CharSequence;
 
@@ -565,103 +403,106 @@
 
     if-eqz v1, :cond_9
 
-    .line 1966
+    .line 1734
     :cond_5
     iget-object v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->b:Landroid/view/LayoutInflater;
 
-    iget v3, v12, Landroid/support/v7/app/AlertController;->l:I
+    invoke-static {v12}, Landroid/support/v7/app/AlertController;->i(Landroid/support/v7/app/AlertController;)I
+
+    move-result v3
 
     const/4 v4, 0x0
 
-    .line 1967
     invoke-virtual {v1, v3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v6
 
-    check-cast v6, Landroid/support/v7/app/AlertController$RecycleListView;
+    check-cast v6, Landroid/widget/ListView;
 
-    .line 1970
+    .line 1737
     iget-boolean v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->D:Z
 
     if-eqz v1, :cond_12
 
-    .line 1971
+    .line 1738
     iget-object v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->H:Landroid/database/Cursor;
 
     if-nez v1, :cond_11
 
-    .line 1972
+    .line 1739
     new-instance v1, Landroid/support/v7/app/AlertController$AlertParams$1;
 
     iget-object v3, v2, Landroid/support/v7/app/AlertController$AlertParams;->a:Landroid/content/Context;
 
-    iget v4, v12, Landroid/support/v7/app/AlertController;->m:I
+    invoke-static {v12}, Landroid/support/v7/app/AlertController;->j(Landroid/support/v7/app/AlertController;)I
+
+    move-result v4
 
     iget-object v5, v2, Landroid/support/v7/app/AlertController$AlertParams;->s:[Ljava/lang/CharSequence;
 
-    invoke-direct/range {v1 .. v6}, Landroid/support/v7/app/AlertController$AlertParams$1;-><init>(Landroid/support/v7/app/AlertController$AlertParams;Landroid/content/Context;I[Ljava/lang/CharSequence;Landroid/support/v7/app/AlertController$RecycleListView;)V
+    invoke-direct/range {v1 .. v6}, Landroid/support/v7/app/AlertController$AlertParams$1;-><init>(Landroid/support/v7/app/AlertController$AlertParams;Landroid/content/Context;I[Ljava/lang/CharSequence;Landroid/widget/ListView;)V
 
-    .line 2039
+    .line 1800
     :goto_1
-    iput-object v1, v12, Landroid/support/v7/app/AlertController;->j:Landroid/widget/ListAdapter;
+    invoke-static {v12, v1}, Landroid/support/v7/app/AlertController;->a(Landroid/support/v7/app/AlertController;Landroid/widget/ListAdapter;)Landroid/widget/ListAdapter;
 
-    .line 2040
+    .line 1801
     iget v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->F:I
 
-    iput v1, v12, Landroid/support/v7/app/AlertController;->k:I
+    invoke-static {v12, v1}, Landroid/support/v7/app/AlertController;->a(Landroid/support/v7/app/AlertController;I)I
 
-    .line 2042
+    .line 1803
     iget-object v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->u:Landroid/content/DialogInterface$OnClickListener;
 
     if-eqz v1, :cond_16
 
-    .line 2043
+    .line 1804
     new-instance v1, Landroid/support/v7/app/AlertController$AlertParams$3;
 
     invoke-direct {v1, v2, v12}, Landroid/support/v7/app/AlertController$AlertParams$3;-><init>(Landroid/support/v7/app/AlertController$AlertParams;Landroid/support/v7/app/AlertController;)V
 
-    invoke-virtual {v6, v1}, Landroid/support/v7/app/AlertController$RecycleListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+    invoke-virtual {v6, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 2066
+    .line 1827
     :cond_6
     :goto_2
     iget-object v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->K:Landroid/widget/AdapterView$OnItemSelectedListener;
 
     if-eqz v1, :cond_7
 
-    .line 2067
+    .line 1828
     iget-object v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->K:Landroid/widget/AdapterView$OnItemSelectedListener;
 
-    invoke-virtual {v6, v1}, Landroid/support/v7/app/AlertController$RecycleListView;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
+    invoke-virtual {v6, v1}, Landroid/widget/ListView;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 
-    .line 2070
+    .line 1831
     :cond_7
     iget-boolean v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->E:Z
 
     if-eqz v1, :cond_17
 
-    .line 2071
+    .line 1832
     const/4 v1, 0x1
 
-    invoke-virtual {v6, v1}, Landroid/support/v7/app/AlertController$RecycleListView;->setChoiceMode(I)V
+    invoke-virtual {v6, v1}, Landroid/widget/ListView;->setChoiceMode(I)V
 
-    .line 2075
+    .line 1836
     :cond_8
     :goto_3
-    iput-object v6, v12, Landroid/support/v7/app/AlertController;->b:Landroid/widget/ListView;
+    invoke-static {v12, v6}, Landroid/support/v7/app/AlertController;->a(Landroid/support/v7/app/AlertController;Landroid/widget/ListView;)Landroid/widget/ListView;
 
-    .line 1945
+    .line 1713
     :cond_9
     iget-object v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->w:Landroid/view/View;
 
     if-eqz v1, :cond_19
 
-    .line 1946
+    .line 1714
     iget-boolean v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->B:Z
 
     if-eqz v1, :cond_18
 
-    .line 1947
+    .line 1715
     iget-object v13, v2, Landroid/support/v7/app/AlertController$AlertParams;->w:Landroid/view/View;
 
     iget v14, v2, Landroid/support/v7/app/AlertController$AlertParams;->x:I
@@ -678,7 +519,7 @@
 
     invoke-virtual/range {v12 .. v17}, Landroid/support/v7/app/AlertController;->a(Landroid/view/View;IIII)V
 
-    .line 933
+    .line 884
     :cond_a
     :goto_4
     move-object/from16 v0, p0
@@ -691,7 +532,7 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v7/app/AlertDialog;->setCancelable(Z)V
 
-    .line 934
+    .line 885
     move-object/from16 v0, p0
 
     iget-object v1, v0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
@@ -700,14 +541,14 @@
 
     if-eqz v1, :cond_b
 
-    .line 935
+    .line 886
     const/4 v1, 0x1
 
     move-object/from16 v0, v19
 
     invoke-virtual {v0, v1}, Landroid/support/v7/app/AlertDialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 937
+    .line 888
     :cond_b
     move-object/from16 v0, p0
 
@@ -719,7 +560,7 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v7/app/AlertDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
-    .line 938
+    .line 889
     move-object/from16 v0, p0
 
     iget-object v1, v0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
@@ -730,7 +571,7 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v7/app/AlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    .line 939
+    .line 890
     move-object/from16 v0, p0
 
     iget-object v1, v0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
@@ -739,7 +580,7 @@
 
     if-eqz v1, :cond_c
 
-    .line 940
+    .line 891
     move-object/from16 v0, p0
 
     iget-object v1, v0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
@@ -750,50 +591,50 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v7/app/AlertDialog;->setOnKeyListener(Landroid/content/DialogInterface$OnKeyListener;)V
 
-    .line 942
+    .line 893
     :cond_c
     return-object v19
 
-    .line 1912
+    .line 1680
     :cond_d
     iget-object v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->f:Ljava/lang/CharSequence;
 
     if-eqz v1, :cond_e
 
-    .line 1913
+    .line 1681
     iget-object v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->f:Ljava/lang/CharSequence;
 
     invoke-virtual {v12, v1}, Landroid/support/v7/app/AlertController;->a(Ljava/lang/CharSequence;)V
 
-    .line 1915
+    .line 1683
     :cond_e
     iget-object v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->d:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_f
 
-    .line 1916
+    .line 1684
     iget-object v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->d:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v12, v1}, Landroid/support/v7/app/AlertController;->a(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1918
+    .line 1686
     :cond_f
     iget v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->c:I
 
     if-eqz v1, :cond_10
 
-    .line 1919
+    .line 1687
     iget v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->c:I
 
     invoke-virtual {v12, v1}, Landroid/support/v7/app/AlertController;->b(I)V
 
-    .line 1921
+    .line 1689
     :cond_10
     iget v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->e:I
 
     if-eqz v1, :cond_0
 
-    .line 1922
+    .line 1690
     iget v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->e:I
 
     invoke-virtual {v12, v1}, Landroid/support/v7/app/AlertController;->c(I)I
@@ -804,7 +645,7 @@
 
     goto/16 :goto_0
 
-    .line 1987
+    .line 1754
     :cond_11
     new-instance v7, Landroid/support/v7/app/AlertController$AlertParams$2;
 
@@ -816,28 +657,59 @@
 
     move-object v11, v6
 
-    invoke-direct/range {v7 .. v12}, Landroid/support/v7/app/AlertController$AlertParams$2;-><init>(Landroid/support/v7/app/AlertController$AlertParams;Landroid/content/Context;Landroid/database/Cursor;Landroid/support/v7/app/AlertController$RecycleListView;Landroid/support/v7/app/AlertController;)V
+    invoke-direct/range {v7 .. v12}, Landroid/support/v7/app/AlertController$AlertParams$2;-><init>(Landroid/support/v7/app/AlertController$AlertParams;Landroid/content/Context;Landroid/database/Cursor;Landroid/widget/ListView;Landroid/support/v7/app/AlertController;)V
 
     move-object v1, v7
 
     goto/16 :goto_1
 
-    .line 2016
+    .line 1782
     :cond_12
     iget-boolean v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->E:Z
 
     if-eqz v1, :cond_13
 
-    .line 2017
-    iget v15, v12, Landroid/support/v7/app/AlertController;->n:I
+    invoke-static {v12}, Landroid/support/v7/app/AlertController;->k(Landroid/support/v7/app/AlertController;)I
 
-    .line 2022
+    move-result v15
+
+    .line 1784
     :goto_5
     iget-object v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->H:Landroid/database/Cursor;
 
+    if-nez v1, :cond_15
+
+    .line 1785
+    iget-object v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->t:Landroid/widget/ListAdapter;
+
     if-eqz v1, :cond_14
 
-    .line 2023
+    iget-object v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->t:Landroid/widget/ListAdapter;
+
+    goto/16 :goto_1
+
+    .line 1782
+    :cond_13
+    invoke-static {v12}, Landroid/support/v7/app/AlertController;->l(Landroid/support/v7/app/AlertController;)I
+
+    move-result v15
+
+    goto :goto_5
+
+    .line 1785
+    :cond_14
+    new-instance v1, Landroid/support/v7/app/AlertController$CheckedItemAdapter;
+
+    iget-object v3, v2, Landroid/support/v7/app/AlertController$AlertParams;->a:Landroid/content/Context;
+
+    iget-object v4, v2, Landroid/support/v7/app/AlertController$AlertParams;->s:[Ljava/lang/CharSequence;
+
+    invoke-direct {v1, v3, v15, v4}, Landroid/support/v7/app/AlertController$CheckedItemAdapter;-><init>(Landroid/content/Context;I[Ljava/lang/CharSequence;)V
+
+    goto/16 :goto_1
+
+    .line 1788
+    :cond_15
     new-instance v13, Landroid/widget/SimpleCursorAdapter;
 
     iget-object v14, v2, Landroid/support/v7/app/AlertController$AlertParams;->a:Landroid/content/Context;
@@ -876,64 +748,35 @@
 
     goto/16 :goto_1
 
-    .line 2019
-    :cond_13
-    iget v15, v12, Landroid/support/v7/app/AlertController;->o:I
-
-    goto :goto_5
-
-    .line 2025
-    :cond_14
-    iget-object v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->t:Landroid/widget/ListAdapter;
-
-    if-eqz v1, :cond_15
-
-    .line 2026
-    iget-object v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->t:Landroid/widget/ListAdapter;
-
-    goto/16 :goto_1
-
-    .line 2028
-    :cond_15
-    new-instance v1, Landroid/support/v7/app/AlertController$CheckedItemAdapter;
-
-    iget-object v3, v2, Landroid/support/v7/app/AlertController$AlertParams;->a:Landroid/content/Context;
-
-    iget-object v4, v2, Landroid/support/v7/app/AlertController$AlertParams;->s:[Ljava/lang/CharSequence;
-
-    invoke-direct {v1, v3, v15, v4}, Landroid/support/v7/app/AlertController$CheckedItemAdapter;-><init>(Landroid/content/Context;I[Ljava/lang/CharSequence;)V
-
-    goto/16 :goto_1
-
-    .line 2052
+    .line 1813
     :cond_16
     iget-object v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->G:Landroid/content/DialogInterface$OnMultiChoiceClickListener;
 
     if-eqz v1, :cond_6
 
-    .line 2053
+    .line 1814
     new-instance v1, Landroid/support/v7/app/AlertController$AlertParams$4;
 
-    invoke-direct {v1, v2, v6, v12}, Landroid/support/v7/app/AlertController$AlertParams$4;-><init>(Landroid/support/v7/app/AlertController$AlertParams;Landroid/support/v7/app/AlertController$RecycleListView;Landroid/support/v7/app/AlertController;)V
+    invoke-direct {v1, v2, v6, v12}, Landroid/support/v7/app/AlertController$AlertParams$4;-><init>(Landroid/support/v7/app/AlertController$AlertParams;Landroid/widget/ListView;Landroid/support/v7/app/AlertController;)V
 
-    invoke-virtual {v6, v1}, Landroid/support/v7/app/AlertController$RecycleListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+    invoke-virtual {v6, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     goto/16 :goto_2
 
-    .line 2072
+    .line 1833
     :cond_17
     iget-boolean v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->D:Z
 
     if-eqz v1, :cond_8
 
-    .line 2073
+    .line 1834
     const/4 v1, 0x2
 
-    invoke-virtual {v6, v1}, Landroid/support/v7/app/AlertController$RecycleListView;->setChoiceMode(I)V
+    invoke-virtual {v6, v1}, Landroid/widget/ListView;->setChoiceMode(I)V
 
     goto/16 :goto_3
 
-    .line 1950
+    .line 1718
     :cond_18
     iget-object v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->w:Landroid/view/View;
 
@@ -941,13 +784,13 @@
 
     goto/16 :goto_4
 
-    .line 1952
+    .line 1720
     :cond_19
     iget v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->v:I
 
     if-eqz v1, :cond_a
 
-    .line 1953
+    .line 1721
     iget v1, v2, Landroid/support/v7/app/AlertController$AlertParams;->v:I
 
     invoke-virtual {v12, v1}, Landroid/support/v7/app/AlertController;->a(I)V
@@ -955,18 +798,20 @@
     goto/16 :goto_4
 .end method
 
-.method public final e()Landroid/support/v7/app/AlertDialog;
+.method public final c(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/support/v7/app/AlertDialog$Builder;
     .locals 1
 
     .prologue
-    .line 956
-    invoke-virtual {p0}, Landroid/support/v7/app/AlertDialog$Builder;->d()Landroid/support/v7/app/AlertDialog;
+    .line 464
+    iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
-    move-result-object v0
+    iput-object p1, v0, Landroid/support/v7/app/AlertController$AlertParams;->m:Ljava/lang/CharSequence;
 
-    .line 957
-    invoke-virtual {v0}, Landroid/support/v7/app/AlertDialog;->show()V
+    .line 465
+    iget-object v0, p0, Landroid/support/v7/app/AlertDialog$Builder;->a:Landroid/support/v7/app/AlertController$AlertParams;
 
-    .line 958
-    return-object v0
+    iput-object p2, v0, Landroid/support/v7/app/AlertController$AlertParams;->n:Landroid/content/DialogInterface$OnClickListener;
+
+    .line 466
+    return-object p0
 .end method

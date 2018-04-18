@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 276
+    .line 268
     iput-object p1, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$5;->a:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 0
 
     .prologue
-    .line 280
+    .line 272
     return-void
 .end method
 
@@ -48,7 +48,7 @@
     .locals 0
 
     .prologue
-    .line 285
+    .line 277
     return-void
 .end method
 
@@ -56,14 +56,14 @@
     .locals 2
 
     .prologue
-    .line 290
+    .line 282
     if-nez p1, :cond_0
 
-    .line 301
+    .line 293
     :goto_0
     return-void
 
-    .line 293
+    .line 285
     :cond_0
     invoke-virtual {p1}, Landroid/widget/SeekBar;->getProgress()I
 
@@ -77,19 +77,19 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 294
+    .line 286
     iget-object v0, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$5;->a:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/ScanCodeTabFragment;->i(Lkik/android/chat/fragment/ScanCodeTabFragment;)V
 
-    .line 295
+    .line 287
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/widget/SeekBar;->setProgress(I)V
 
     goto :goto_0
 
-    .line 298
+    .line 290
     :cond_1
     invoke-virtual {p1}, Landroid/widget/SeekBar;->getMax()I
 
@@ -97,10 +97,10 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/SeekBar;->setProgress(I)V
 
-    .line 299
+    .line 291
     iget-object v0, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$5;->a:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/ScanCodeTabFragment;->a()V
+    invoke-virtual {v0}, Lkik/android/chat/fragment/ScanCodeTabFragment;->b()V
 
     goto :goto_0
 .end method

@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 491
+    .line 478
     iput-object p1, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$8;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +42,12 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 495
+    .line 482
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$8;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
     invoke-static {v0, v4}, Lkik/android/chat/fragment/VideoTrimmingFragment;->a(Lkik/android/chat/fragment/VideoTrimmingFragment;Z)Z
 
-    .line 496
+    .line 483
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$8;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/VideoTrimmingFragment;->_videoKeyFrameView:Lkik/android/widget/VideoKeyFrameView;
@@ -60,7 +60,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 497
+    .line 484
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$8;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/VideoTrimmingFragment;->_videoView:Landroid/widget/VideoView;
@@ -87,7 +87,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/VideoView;->seekTo(I)V
 
-    .line 498
+    .line 485
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$8;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/VideoTrimmingFragment;->_videoKeyFrameView:Lkik/android/widget/VideoKeyFrameView;
@@ -102,7 +102,7 @@
 
     invoke-virtual {v0, v1}, Lkik/android/widget/VideoKeyFrameView;->c(F)V
 
-    .line 500
+    .line 487
     :cond_0
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$8;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
@@ -110,6 +110,6 @@
 
     invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 501
+    .line 488
     return-void
 .end method

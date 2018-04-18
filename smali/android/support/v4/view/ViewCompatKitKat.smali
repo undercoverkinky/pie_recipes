@@ -3,18 +3,12 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x13
-.end annotation
-
-
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 29
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +18,7 @@
     .locals 1
 
     .prologue
-    .line 31
+    .line 26
     invoke-virtual {p0}, Landroid/view/View;->getAccessibilityLiveRegion()I
 
     move-result v0
@@ -36,7 +30,7 @@
     .locals 1
 
     .prologue
-    .line 43
+    .line 38
     invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z
 
     move-result v0
@@ -48,20 +42,8 @@
     .locals 1
 
     .prologue
-    .line 39
+    .line 34
     invoke-virtual {p0}, Landroid/view/View;->isLaidOut()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static isLayoutDirectionResolved(Landroid/view/View;)Z
-    .locals 1
-
-    .prologue
-    .line 47
-    invoke-virtual {p0}, Landroid/view/View;->isLayoutDirectionResolved()Z
 
     move-result v0
 
@@ -72,9 +54,9 @@
     .locals 0
 
     .prologue
-    .line 35
+    .line 30
     invoke-virtual {p0, p1}, Landroid/view/View;->setAccessibilityLiveRegion(I)V
 
-    .line 36
+    .line 31
     return-void
 .end method

@@ -3,14 +3,6 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lkik/android/widget/ContactSearchView$a;
-    }
-.end annotation
-
-
 # instance fields
 .field protected a:Landroid/view/ViewGroup;
 
@@ -37,22 +29,18 @@
 
 .field private h:Ljava/lang/String;
 
-.field private i:Lkik/core/datatypes/l;
-
-.field private j:Lkik/android/chat/vm/a/a;
-
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
     .prologue
-    .line 59
+    .line 47
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lkik/android/widget/ContactSearchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 60
+    .line 48
     return-void
 .end method
 
@@ -60,12 +48,12 @@
     .locals 1
 
     .prologue
-    .line 64
+    .line 52
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lkik/android/widget/ContactSearchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 65
+    .line 53
     return-void
 .end method
 
@@ -75,16 +63,16 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 69
+    .line 57
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 70
+    .line 58
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v1
 
-    .line 71
-    const v0, 0x7f040106
+    .line 59
+    const v0, 0x7f0400de
 
     invoke-virtual {v1, v0, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -94,8 +82,8 @@
 
     iput-object v0, p0, Lkik/android/widget/ContactSearchView;->b:Landroid/view/ViewGroup;
 
-    .line 72
-    const v0, 0x7f0400f9
+    .line 60
+    const v0, 0x7f0400d9
 
     invoke-virtual {v1, v0, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -105,8 +93,8 @@
 
     iput-object v0, p0, Lkik/android/widget/ContactSearchView;->c:Landroid/view/ViewGroup;
 
-    .line 73
-    const v0, 0x7f0400fa
+    .line 61
+    const v0, 0x7f0400da
 
     invoke-virtual {v1, v0, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -116,8 +104,8 @@
 
     iput-object v0, p0, Lkik/android/widget/ContactSearchView;->d:Landroid/view/ViewGroup;
 
-    .line 74
-    const v0, 0x7f040107
+    .line 62
+    const v0, 0x7f0400e0
 
     invoke-virtual {v1, v0, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -127,16 +115,12 @@
 
     iput-object v0, p0, Lkik/android/widget/ContactSearchView;->e:Landroid/view/ViewGroup;
 
-    .line 75
+    .line 63
     invoke-virtual {p0}, Lkik/android/widget/ContactSearchView;->a()I
 
     move-result v0
 
-    invoke-static {v1, v0, p0, v2}, Landroid/databinding/DataBindingUtil;->inflate(Landroid/view/LayoutInflater;ILandroid/view/ViewGroup;Z)Landroid/databinding/ViewDataBinding;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/databinding/ViewDataBinding;->getRoot()Landroid/view/View;
+    invoke-virtual {v1, v0, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v0
 
@@ -144,37 +128,37 @@
 
     iput-object v0, p0, Lkik/android/widget/ContactSearchView;->a:Landroid/view/ViewGroup;
 
-    .line 76
+    .line 64
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lkik/android/widget/ContactSearchView;->a(Landroid/view/View;)V
 
-    .line 77
+    .line 65
     iget-object v0, p0, Lkik/android/widget/ContactSearchView;->b:Landroid/view/ViewGroup;
 
     invoke-virtual {p0, v0}, Lkik/android/widget/ContactSearchView;->addView(Landroid/view/View;)V
 
-    .line 78
+    .line 66
     iget-object v0, p0, Lkik/android/widget/ContactSearchView;->c:Landroid/view/ViewGroup;
 
     invoke-virtual {p0, v0}, Lkik/android/widget/ContactSearchView;->addView(Landroid/view/View;)V
 
-    .line 79
+    .line 67
     iget-object v0, p0, Lkik/android/widget/ContactSearchView;->d:Landroid/view/ViewGroup;
 
     invoke-virtual {p0, v0}, Lkik/android/widget/ContactSearchView;->addView(Landroid/view/View;)V
 
-    .line 80
+    .line 68
     iget-object v0, p0, Lkik/android/widget/ContactSearchView;->e:Landroid/view/ViewGroup;
 
     invoke-virtual {p0, v0}, Lkik/android/widget/ContactSearchView;->addView(Landroid/view/View;)V
 
-    .line 81
+    .line 69
     iget-object v0, p0, Lkik/android/widget/ContactSearchView;->a:Landroid/view/ViewGroup;
 
     invoke-virtual {p0, v0}, Lkik/android/widget/ContactSearchView;->addView(Landroid/view/View;)V
 
-    .line 82
+    .line 70
     return-void
 .end method
 
@@ -186,8 +170,8 @@
 
     const/4 v3, 0x0
 
-    .line 210
-    .line 1205
+    .line 183
+    .line 1178
     const/4 v0, 0x5
 
     new-array v0, v0, [Landroid/view/View;
@@ -220,50 +204,14 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
 
-    .line 211
+    .line 184
     new-array v0, v4, [Landroid/view/View;
 
     aput-object p1, v0, v3
 
     invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
 
-    .line 212
-    return-void
-.end method
-
-.method static synthetic a(Lkik/android/widget/ContactSearchView;Lkik/android/widget/ContactSearchView$a;)V
-    .locals 1
-
-    .prologue
-    .line 174
-    iget-object v0, p0, Lkik/android/widget/ContactSearchView;->i:Lkik/core/datatypes/l;
-
-    invoke-interface {p1, v0}, Lkik/android/widget/ContactSearchView$a;->a(Lkik/core/datatypes/l;)V
-
-    return-void
-.end method
-
-.method private g()V
-    .locals 1
-
-    .prologue
-    .line 216
-    iget-object v0, p0, Lkik/android/widget/ContactSearchView;->j:Lkik/android/chat/vm/a/a;
-
-    if-eqz v0, :cond_0
-
-    .line 217
-    iget-object v0, p0, Lkik/android/widget/ContactSearchView;->j:Lkik/android/chat/vm/a/a;
-
-    invoke-virtual {v0}, Lkik/android/chat/vm/a/a;->ak_()V
-
-    .line 218
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lkik/android/widget/ContactSearchView;->j:Lkik/android/chat/vm/a/a;
-
-    .line 220
-    :cond_0
+    .line 185
     return-void
 .end method
 
@@ -273,8 +221,8 @@
     .locals 1
 
     .prologue
-    .line 200
-    const v0, 0x7f040108
+    .line 173
+    const v0, 0x7f0400e1
 
     return v0
 .end method
@@ -283,12 +231,12 @@
     .locals 1
 
     .prologue
-    .line 169
+    .line 142
     iget-object v0, p0, Lkik/android/widget/ContactSearchView;->e:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 170
+    .line 143
     return-void
 .end method
 
@@ -296,15 +244,15 @@
     .locals 1
 
     .prologue
-    .line 189
+    .line 162
     iput-object p1, p0, Lkik/android/widget/ContactSearchView;->h:Ljava/lang/String;
 
-    .line 190
+    .line 163
     iget-object v0, p0, Lkik/android/widget/ContactSearchView;->e:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->setTag(Ljava/lang/Object;)V
 
-    .line 191
+    .line 164
     return-void
 .end method
 
@@ -321,31 +269,14 @@
     .end annotation
 
     .prologue
-    .line 184
+    .line 157
     iput-object p1, p0, Lkik/android/widget/ContactSearchView;->f:Ljava/util/LinkedHashSet;
 
-    .line 185
+    .line 158
     return-void
 .end method
 
-.method public final a(Lkik/android/widget/ContactSearchView$a;)V
-    .locals 2
-
-    .prologue
-    .line 174
-    iget-object v0, p0, Lkik/android/widget/ContactSearchView;->a:Landroid/view/ViewGroup;
-
-    invoke-static {p0, p1}, Lkik/android/widget/w;->a(Lkik/android/widget/ContactSearchView;Lkik/android/widget/ContactSearchView$a;)Landroid/view/View$OnClickListener;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 175
-    return-void
-.end method
-
-.method public final a(Lkik/core/datatypes/l;Lcom/kik/cache/KikVolleyImageLoader;Lkik/core/interfaces/v;Lcom/kik/android/Mixpanel;Lcom/kik/components/CoreComponent;Lkik/android/chat/vm/ay;)V
+.method public final a(Lkik/core/datatypes/o;Lcom/kik/cache/aa;Lkik/core/interfaces/x;Lcom/kik/android/Mixpanel;)V
     .locals 5
 
     .prologue
@@ -353,10 +284,10 @@
 
     const/4 v2, 0x0
 
-    .line 86
+    .line 74
     iget-object v0, p0, Lkik/android/widget/ContactSearchView;->a:Landroid/view/ViewGroup;
 
-    const v1, 0x7f10024f
+    const v1, 0x7f110223
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -364,65 +295,36 @@
 
     check-cast v0, Lcom/kik/cache/ContactImageView;
 
-    .line 88
-    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/kik/cache/ContactImageView;->a(Lkik/core/datatypes/l;Lcom/kik/cache/KikVolleyImageLoader;Lkik/core/interfaces/v;Lcom/kik/android/Mixpanel;)V
+    .line 75
+    iget-object v1, p0, Lkik/android/widget/ContactSearchView;->a:Landroid/view/ViewGroup;
 
-    .line 90
-    iget-object v0, p0, Lkik/android/widget/ContactSearchView;->a:Landroid/view/ViewGroup;
+    const v4, 0x7f1102aa
 
-    const v1, 0x7f100314
+    invoke-virtual {v1, v4}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+    move-result-object v1
 
-    move-result-object v0
+    check-cast v1, Landroid/widget/ImageView;
 
-    check-cast v0, Lkik/android/widget/BotProfileImageBadgeView;
+    .line 78
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/kik/cache/ContactImageView;->a(Lkik/core/datatypes/o;Lcom/kik/cache/aa;Lkik/core/interfaces/x;Lcom/kik/android/Mixpanel;)V
 
-    .line 92
-    invoke-virtual {p1}, Lkik/core/datatypes/l;->f()Z
+    .line 81
+    invoke-virtual {p1}, Lkik/core/datatypes/o;->i()Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_2
+    if-eqz v0, :cond_2
 
-    move v1, v2
+    move v0, v2
 
     :goto_0
-    invoke-virtual {v0, v1}, Lkik/android/widget/BotProfileImageBadgeView;->setVisibility(I)V
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 94
-    invoke-direct {p0}, Lkik/android/widget/ContactSearchView;->g()V
-
-    .line 95
+    .line 83
     iget-object v0, p0, Lkik/android/widget/ContactSearchView;->a:Landroid/view/ViewGroup;
 
-    invoke-static {v0}, Landroid/databinding/DataBindingUtil;->getBinding(Landroid/view/View;)Landroid/databinding/ViewDataBinding;
-
-    move-result-object v0
-
-    .line 96
-    new-instance v1, Lkik/android/chat/vm/a/a;
-
-    invoke-direct {v1, p1}, Lkik/android/chat/vm/a/a;-><init>(Lkik/core/datatypes/l;)V
-
-    iput-object v1, p0, Lkik/android/widget/ContactSearchView;->j:Lkik/android/chat/vm/a/a;
-
-    .line 97
-    iget-object v1, p0, Lkik/android/widget/ContactSearchView;->j:Lkik/android/chat/vm/a/a;
-
-    invoke-virtual {v1, p5, p6}, Lkik/android/chat/vm/a/a;->a(Lcom/kik/components/CoreComponent;Lkik/android/chat/vm/ay;)V
-
-    .line 98
-    const/16 v1, 0xd
-
-    iget-object v4, p0, Lkik/android/widget/ContactSearchView;->j:Lkik/android/chat/vm/a/a;
-
-    invoke-virtual {v0, v1, v4}, Landroid/databinding/ViewDataBinding;->setVariable(ILjava/lang/Object;)Z
-
-    .line 100
-    iget-object v0, p0, Lkik/android/widget/ContactSearchView;->a:Landroid/view/ViewGroup;
-
-    const v1, 0x7f100308
+    const v1, 0x7f11029e
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -430,17 +332,17 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 101
-    invoke-virtual {p1}, Lkik/core/datatypes/l;->b()Ljava/lang/String;
+    .line 84
+    invoke-virtual {p1}, Lkik/core/datatypes/o;->c()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 103
+    .line 86
     iget-object v0, p0, Lkik/android/widget/ContactSearchView;->a:Landroid/view/ViewGroup;
 
-    const v1, 0x7f100315
+    const v1, 0x7f1102ab
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -448,40 +350,40 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 104
-    invoke-virtual {p1}, Lkik/core/datatypes/l;->l()Ljava/lang/String;
+    .line 87
+    invoke-virtual {p1}, Lkik/core/datatypes/o;->d()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 106
+    .line 89
     iget-object v0, p0, Lkik/android/widget/ContactSearchView;->a:Landroid/view/ViewGroup;
 
-    const v1, 0x7f100318
+    const v1, 0x7f1102ae
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 107
+    .line 90
     if-eqz v0, :cond_0
 
-    .line 108
+    .line 91
     check-cast v0, Landroid/widget/CheckBox;
 
-    .line 109
+    .line 92
     iget-boolean v1, p0, Lkik/android/widget/ContactSearchView;->g:Z
 
     if-eqz v1, :cond_3
 
-    .line 110
+    .line 93
     invoke-virtual {v0, v2}, Landroid/widget/CheckBox;->setVisibility(I)V
 
-    .line 112
+    .line 95
     iget-object v1, p0, Lkik/android/widget/ContactSearchView;->f:Ljava/util/LinkedHashSet;
 
-    invoke-virtual {p1}, Lkik/core/datatypes/l;->k()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/o;->b()Ljava/lang/String;
 
     move-result-object v3
 
@@ -491,42 +393,44 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setChecked(Z)V
 
-    .line 120
+    .line 103
     :cond_0
     :goto_1
     iget-object v0, p0, Lkik/android/widget/ContactSearchView;->a:Landroid/view/ViewGroup;
 
-    const v1, 0x7f100317
+    const v1, 0x7f1102ad
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 121
+    .line 104
     if-eqz v0, :cond_1
 
-    .line 122
+    .line 105
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 126
+    .line 109
     :cond_1
-    iput-object p1, p0, Lkik/android/widget/ContactSearchView;->i:Lkik/core/datatypes/l;
+    iget-object v0, p0, Lkik/android/widget/ContactSearchView;->a:Landroid/view/ViewGroup;
 
-    .line 128
+    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->setTag(Ljava/lang/Object;)V
+
+    .line 111
     iget-object v0, p0, Lkik/android/widget/ContactSearchView;->a:Landroid/view/ViewGroup;
 
     invoke-direct {p0, v0}, Lkik/android/widget/ContactSearchView;->a(Landroid/view/View;)V
 
-    .line 129
+    .line 112
     return-void
 
     :cond_2
-    move v1, v3
+    move v0, v3
 
-    .line 92
+    .line 81
     goto :goto_0
 
-    .line 115
+    .line 98
     :cond_3
     invoke-virtual {v0, v3}, Landroid/widget/CheckBox;->setVisibility(I)V
 
@@ -537,12 +441,25 @@
     .locals 1
 
     .prologue
-    .line 140
+    .line 116
     iget-object v0, p0, Lkik/android/widget/ContactSearchView;->e:Landroid/view/ViewGroup;
 
     invoke-direct {p0, v0}, Lkik/android/widget/ContactSearchView;->a(Landroid/view/View;)V
 
-    .line 141
+    .line 117
+    return-void
+.end method
+
+.method public final b(Landroid/view/View$OnClickListener;)V
+    .locals 1
+
+    .prologue
+    .line 147
+    iget-object v0, p0, Lkik/android/widget/ContactSearchView;->a:Landroid/view/ViewGroup;
+
+    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 148
     return-void
 .end method
 
@@ -550,10 +467,10 @@
     .locals 0
 
     .prologue
-    .line 179
+    .line 152
     iput-boolean p1, p0, Lkik/android/widget/ContactSearchView;->g:Z
 
-    .line 180
+    .line 153
     return-void
 .end method
 
@@ -561,10 +478,10 @@
     .locals 5
 
     .prologue
-    .line 145
+    .line 121
     iget-object v0, p0, Lkik/android/widget/ContactSearchView;->d:Landroid/view/ViewGroup;
 
-    const v1, 0x7f10032c
+    const v1, 0x7f1102c8
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -572,12 +489,12 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 146
+    .line 122
     invoke-virtual {p0}, Lkik/android/widget/ContactSearchView;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const v2, 0x7f09017b
+    const v2, 0x7f0a017a
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -603,18 +520,15 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 147
+    .line 123
     invoke-static {v0}, Lkik/android/util/bz;->c(Landroid/widget/TextView;)V
 
-    .line 148
-    invoke-direct {p0}, Lkik/android/widget/ContactSearchView;->g()V
-
-    .line 149
+    .line 124
     iget-object v0, p0, Lkik/android/widget/ContactSearchView;->d:Landroid/view/ViewGroup;
 
     invoke-direct {p0, v0}, Lkik/android/widget/ContactSearchView;->a(Landroid/view/View;)V
 
-    .line 150
+    .line 125
     return-void
 .end method
 
@@ -622,10 +536,10 @@
     .locals 5
 
     .prologue
-    .line 154
+    .line 129
     iget-object v0, p0, Lkik/android/widget/ContactSearchView;->c:Landroid/view/ViewGroup;
 
-    const v1, 0x7f10018a
+    const v1, 0x7f110163
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -633,12 +547,12 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 155
+    .line 130
     invoke-virtual {p0}, Lkik/android/widget/ContactSearchView;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const v2, 0x7f09017a
+    const v2, 0x7f0a0179
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -668,18 +582,15 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 156
+    .line 131
     invoke-static {v0}, Lkik/android/util/bz;->c(Landroid/widget/TextView;)V
 
-    .line 157
-    invoke-direct {p0}, Lkik/android/widget/ContactSearchView;->g()V
-
-    .line 158
+    .line 132
     iget-object v0, p0, Lkik/android/widget/ContactSearchView;->c:Landroid/view/ViewGroup;
 
     invoke-direct {p0, v0}, Lkik/android/widget/ContactSearchView;->a(Landroid/view/View;)V
 
-    .line 159
+    .line 133
     return-void
 .end method
 
@@ -687,38 +598,27 @@
     .locals 1
 
     .prologue
-    .line 163
-    invoke-direct {p0}, Lkik/android/widget/ContactSearchView;->g()V
-
-    .line 164
+    .line 137
     iget-object v0, p0, Lkik/android/widget/ContactSearchView;->b:Landroid/view/ViewGroup;
 
     invoke-direct {p0, v0}, Lkik/android/widget/ContactSearchView;->a(Landroid/view/View;)V
 
-    .line 165
+    .line 138
     return-void
 .end method
 
-.method public final f()Lkik/core/datatypes/l;
+.method public final f()Lkik/core/datatypes/o;
     .locals 1
 
     .prologue
-    .line 195
-    iget-object v0, p0, Lkik/android/widget/ContactSearchView;->i:Lkik/core/datatypes/l;
+    .line 168
+    iget-object v0, p0, Lkik/android/widget/ContactSearchView;->a:Landroid/view/ViewGroup;
+
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getTag()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lkik/core/datatypes/o;
 
     return-object v0
-.end method
-
-.method protected onDetachedFromWindow()V
-    .locals 0
-
-    .prologue
-    .line 134
-    invoke-direct {p0}, Lkik/android/widget/ContactSearchView;->g()V
-
-    .line 135
-    invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
-
-    .line 136
-    return-void
 .end method

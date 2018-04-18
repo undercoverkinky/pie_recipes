@@ -161,7 +161,7 @@
     .end annotation
 .end field
 
-.field private final G:Lcom/google/i18n/phonenumbers/RegexCache;
+.field private final G:Lcom/google/i18n/phonenumbers/g;
 
 .field private final H:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
@@ -1640,13 +1640,13 @@
     iput-object v0, p0, Lcom/google/i18n/phonenumbers/PhoneNumberUtil;->F:Ljava/util/Set;
 
     .line 559
-    new-instance v0, Lcom/google/i18n/phonenumbers/RegexCache;
+    new-instance v0, Lcom/google/i18n/phonenumbers/g;
 
     const/16 v1, 0x64
 
-    invoke-direct {v0, v1}, Lcom/google/i18n/phonenumbers/RegexCache;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/google/i18n/phonenumbers/g;-><init>(I)V
 
-    iput-object v0, p0, Lcom/google/i18n/phonenumbers/PhoneNumberUtil;->G:Lcom/google/i18n/phonenumbers/RegexCache;
+    iput-object v0, p0, Lcom/google/i18n/phonenumbers/PhoneNumberUtil;->G:Lcom/google/i18n/phonenumbers/g;
 
     .line 564
     new-instance v0, Ljava/util/HashSet;
@@ -1884,9 +1884,9 @@
 
     .line 7660
     :cond_2
-    iget-object v4, p0, Lcom/google/i18n/phonenumbers/PhoneNumberUtil;->G:Lcom/google/i18n/phonenumbers/RegexCache;
+    iget-object v4, p0, Lcom/google/i18n/phonenumbers/PhoneNumberUtil;->G:Lcom/google/i18n/phonenumbers/g;
 
-    invoke-virtual {v4, v0}, Lcom/google/i18n/phonenumbers/RegexCache;->getPatternForRegex(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    invoke-virtual {v4, v0}, Lcom/google/i18n/phonenumbers/g;->a(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
@@ -2039,11 +2039,11 @@
     iget-object v2, p2, Lcom/google/i18n/phonenumbers/a/a$b;->a:Lcom/google/i18n/phonenumbers/a/a$d;
 
     .line 2582
-    iget-object v4, p0, Lcom/google/i18n/phonenumbers/PhoneNumberUtil;->G:Lcom/google/i18n/phonenumbers/RegexCache;
+    iget-object v4, p0, Lcom/google/i18n/phonenumbers/PhoneNumberUtil;->G:Lcom/google/i18n/phonenumbers/g;
 
     iget-object v6, v2, Lcom/google/i18n/phonenumbers/a/a$d;->a:Ljava/lang/String;
 
-    invoke-virtual {v4, v6}, Lcom/google/i18n/phonenumbers/RegexCache;->getPatternForRegex(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    invoke-virtual {v4, v6}, Lcom/google/i18n/phonenumbers/g;->a(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v4
 
@@ -2053,11 +2053,11 @@
     invoke-direct {p0, v5, p2, v6}, Lcom/google/i18n/phonenumbers/PhoneNumberUtil;->a(Ljava/lang/StringBuilder;Lcom/google/i18n/phonenumbers/a/a$b;Ljava/lang/StringBuilder;)Z
 
     .line 2586
-    iget-object v6, p0, Lcom/google/i18n/phonenumbers/PhoneNumberUtil;->G:Lcom/google/i18n/phonenumbers/RegexCache;
+    iget-object v6, p0, Lcom/google/i18n/phonenumbers/PhoneNumberUtil;->G:Lcom/google/i18n/phonenumbers/g;
 
     iget-object v2, v2, Lcom/google/i18n/phonenumbers/a/a$d;->b:Ljava/lang/String;
 
-    invoke-virtual {v6, v2}, Lcom/google/i18n/phonenumbers/RegexCache;->getPatternForRegex(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    invoke-virtual {v6, v2}, Lcom/google/i18n/phonenumbers/g;->a(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v2
 
@@ -2250,7 +2250,7 @@
     .line 1755
     if-eqz v3, :cond_0
 
-    iget-object v4, p0, Lcom/google/i18n/phonenumbers/PhoneNumberUtil;->G:Lcom/google/i18n/phonenumbers/RegexCache;
+    iget-object v4, p0, Lcom/google/i18n/phonenumbers/PhoneNumberUtil;->G:Lcom/google/i18n/phonenumbers/g;
 
     iget-object v5, v0, Lcom/google/i18n/phonenumbers/a/a$a;->c:[Ljava/lang/String;
 
@@ -2258,7 +2258,7 @@
 
     aget-object v3, v5, v3
 
-    invoke-virtual {v4, v3}, Lcom/google/i18n/phonenumbers/RegexCache;->getPatternForRegex(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    invoke-virtual {v4, v3}, Lcom/google/i18n/phonenumbers/g;->a(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v3
 
@@ -2274,11 +2274,11 @@
 
     .line 1758
     :cond_0
-    iget-object v3, p0, Lcom/google/i18n/phonenumbers/PhoneNumberUtil;->G:Lcom/google/i18n/phonenumbers/RegexCache;
+    iget-object v3, p0, Lcom/google/i18n/phonenumbers/PhoneNumberUtil;->G:Lcom/google/i18n/phonenumbers/g;
 
     iget-object v4, v0, Lcom/google/i18n/phonenumbers/a/a$a;->a:Ljava/lang/String;
 
-    invoke-virtual {v3, v4}, Lcom/google/i18n/phonenumbers/RegexCache;->getPatternForRegex(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    invoke-virtual {v3, v4}, Lcom/google/i18n/phonenumbers/g;->a(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v3
 
@@ -2707,9 +2707,9 @@
 
     .line 2686
     :cond_1
-    iget-object v4, p0, Lcom/google/i18n/phonenumbers/PhoneNumberUtil;->G:Lcom/google/i18n/phonenumbers/RegexCache;
+    iget-object v4, p0, Lcom/google/i18n/phonenumbers/PhoneNumberUtil;->G:Lcom/google/i18n/phonenumbers/g;
 
-    invoke-virtual {v4, v3}, Lcom/google/i18n/phonenumbers/RegexCache;->getPatternForRegex(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    invoke-virtual {v4, v3}, Lcom/google/i18n/phonenumbers/g;->a(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v3
 
@@ -2725,13 +2725,13 @@
     if-eqz v4, :cond_0
 
     .line 2688
-    iget-object v4, p0, Lcom/google/i18n/phonenumbers/PhoneNumberUtil;->G:Lcom/google/i18n/phonenumbers/RegexCache;
+    iget-object v4, p0, Lcom/google/i18n/phonenumbers/PhoneNumberUtil;->G:Lcom/google/i18n/phonenumbers/g;
 
     iget-object v5, p2, Lcom/google/i18n/phonenumbers/a/a$b;->a:Lcom/google/i18n/phonenumbers/a/a$d;
 
     iget-object v5, v5, Lcom/google/i18n/phonenumbers/a/a$d;->a:Ljava/lang/String;
 
-    invoke-virtual {v4, v5}, Lcom/google/i18n/phonenumbers/RegexCache;->getPatternForRegex(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    invoke-virtual {v4, v5}, Lcom/google/i18n/phonenumbers/g;->a(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v4
 
@@ -3899,13 +3899,13 @@
     move-result-object v6
 
     .line 10374
-    iget-object v7, p0, Lcom/google/i18n/phonenumbers/PhoneNumberUtil;->G:Lcom/google/i18n/phonenumbers/RegexCache;
+    iget-object v7, p0, Lcom/google/i18n/phonenumbers/PhoneNumberUtil;->G:Lcom/google/i18n/phonenumbers/g;
 
     iget-object v0, v0, Lcom/google/i18n/phonenumbers/a/a$b;->a:Lcom/google/i18n/phonenumbers/a/a$d;
 
     iget-object v0, v0, Lcom/google/i18n/phonenumbers/a/a$d;->b:Ljava/lang/String;
 
-    invoke-virtual {v7, v0}, Lcom/google/i18n/phonenumbers/RegexCache;->getPatternForRegex(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    invoke-virtual {v7, v0}, Lcom/google/i18n/phonenumbers/g;->a(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
@@ -4214,11 +4214,11 @@
     iget-object v5, v0, Lcom/google/i18n/phonenumbers/a/a$a;->b:Ljava/lang/String;
 
     .line 6781
-    iget-object v6, p0, Lcom/google/i18n/phonenumbers/PhoneNumberUtil;->G:Lcom/google/i18n/phonenumbers/RegexCache;
+    iget-object v6, p0, Lcom/google/i18n/phonenumbers/PhoneNumberUtil;->G:Lcom/google/i18n/phonenumbers/g;
 
     iget-object v7, v0, Lcom/google/i18n/phonenumbers/a/a$a;->a:Ljava/lang/String;
 
-    invoke-virtual {v6, v7}, Lcom/google/i18n/phonenumbers/RegexCache;->getPatternForRegex(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    invoke-virtual {v6, v7}, Lcom/google/i18n/phonenumbers/g;->a(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v6
 
@@ -4402,13 +4402,13 @@
     move-result-object v1
 
     .line 7414
-    iget-object v2, p0, Lcom/google/i18n/phonenumbers/PhoneNumberUtil;->G:Lcom/google/i18n/phonenumbers/RegexCache;
+    iget-object v2, p0, Lcom/google/i18n/phonenumbers/PhoneNumberUtil;->G:Lcom/google/i18n/phonenumbers/g;
 
     iget-object v1, v1, Lcom/google/i18n/phonenumbers/a/a$b;->a:Lcom/google/i18n/phonenumbers/a/a$d;
 
     iget-object v1, v1, Lcom/google/i18n/phonenumbers/a/a$d;->b:Ljava/lang/String;
 
-    invoke-virtual {v2, v1}, Lcom/google/i18n/phonenumbers/RegexCache;->getPatternForRegex(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    invoke-virtual {v2, v1}, Lcom/google/i18n/phonenumbers/g;->a(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v1
 

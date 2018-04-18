@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 131
+    .line 127
     iput-object p1, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$3;->a:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +40,11 @@
     .locals 1
 
     .prologue
-    .line 135
+    .line 131
     iget-object v0, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$3;->a:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/ScanCodeTabFragment;->a(Lkik/android/chat/fragment/ScanCodeTabFragment;)V
 
-    .line 136
+    .line 132
     return-void
 .end method

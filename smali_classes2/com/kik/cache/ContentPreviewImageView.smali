@@ -20,20 +20,20 @@
     .locals 1
 
     .prologue
-    .line 27
+    .line 33
     invoke-direct {p0, p1}, Lkik/android/widget/KikNetworkedImageView;-><init>(Landroid/content/Context;)V
 
-    .line 19
+    .line 25
     sget-object v0, Lkik/android/widget/BubbleShapedDrawable$ArrowLocation;->ARROW_NONE:Lkik/android/widget/BubbleShapedDrawable$ArrowLocation;
 
     iput-object v0, p0, Lcom/kik/cache/ContentPreviewImageView;->h:Lkik/android/widget/BubbleShapedDrawable$ArrowLocation;
 
-    .line 23
+    .line 29
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/kik/cache/ContentPreviewImageView;->d:I
 
-    .line 28
+    .line 34
     return-void
 .end method
 
@@ -41,20 +41,20 @@
     .locals 1
 
     .prologue
-    .line 32
+    .line 38
     invoke-direct {p0, p1, p2}, Lkik/android/widget/KikNetworkedImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 19
+    .line 25
     sget-object v0, Lkik/android/widget/BubbleShapedDrawable$ArrowLocation;->ARROW_NONE:Lkik/android/widget/BubbleShapedDrawable$ArrowLocation;
 
     iput-object v0, p0, Lcom/kik/cache/ContentPreviewImageView;->h:Lkik/android/widget/BubbleShapedDrawable$ArrowLocation;
 
-    .line 23
+    .line 29
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/kik/cache/ContentPreviewImageView;->d:I
 
-    .line 33
+    .line 39
     return-void
 .end method
 
@@ -62,20 +62,20 @@
     .locals 1
 
     .prologue
-    .line 37
+    .line 43
     invoke-direct {p0, p1, p2, p3}, Lkik/android/widget/KikNetworkedImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 19
+    .line 25
     sget-object v0, Lkik/android/widget/BubbleShapedDrawable$ArrowLocation;->ARROW_NONE:Lkik/android/widget/BubbleShapedDrawable$ArrowLocation;
 
     iput-object v0, p0, Lcom/kik/cache/ContentPreviewImageView;->h:Lkik/android/widget/BubbleShapedDrawable$ArrowLocation;
 
-    .line 23
+    .line 29
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/kik/cache/ContentPreviewImageView;->d:I
 
-    .line 38
+    .line 44
     return-void
 .end method
 
@@ -84,29 +84,29 @@
 .method protected abstract a(II)Landroid/graphics/Point;
 .end method
 
-.method protected a(Landroid/graphics/Bitmap;Ljava/lang/String;)Lkik/android/widget/bb;
+.method protected a(Landroid/graphics/Bitmap;Ljava/lang/String;)Lkik/android/widget/ak;
     .locals 3
 
     .prologue
-    .line 57
+    .line 140
     invoke-virtual {p0}, Lcom/kik/cache/ContentPreviewImageView;->isInEditMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 58
-    new-instance v0, Lkik/android/widget/co;
+    .line 141
+    new-instance v0, Lkik/android/widget/cs;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Lkik/android/widget/co;-><init>(Landroid/graphics/Bitmap;Ljava/lang/String;)V
+    invoke-direct {v0, p1, v1}, Lkik/android/widget/cs;-><init>(Landroid/graphics/Bitmap;Ljava/lang/String;)V
 
-    .line 65
+    .line 148
     :goto_0
     return-object v0
 
-    .line 60
+    .line 143
     :cond_0
     new-instance v0, Lkik/android/widget/BubbleShapedDrawable;
 
@@ -114,19 +114,19 @@
 
     invoke-direct {v0, p1, v1}, Lkik/android/widget/BubbleShapedDrawable;-><init>(Landroid/graphics/Bitmap;Lkik/android/widget/BubbleShapedDrawable$ArrowLocation;)V
 
-    .line 61
+    .line 144
     iget v1, p0, Lcom/kik/cache/ContentPreviewImageView;->b:I
 
     iget v2, p0, Lcom/kik/cache/ContentPreviewImageView;->c:I
 
     invoke-virtual {v0, v1, v2}, Lkik/android/widget/BubbleShapedDrawable;->a(II)V
 
-    .line 62
+    .line 145
     iget-object v1, p0, Lcom/kik/cache/ContentPreviewImageView;->a:Landroid/graphics/Point;
 
     invoke-virtual {v0, v1}, Lkik/android/widget/BubbleShapedDrawable;->a(Landroid/graphics/Point;)V
 
-    .line 63
+    .line 146
     iget v1, p0, Lcom/kik/cache/ContentPreviewImageView;->d:I
 
     invoke-virtual {v0, v1}, Lkik/android/widget/BubbleShapedDrawable;->a(I)V
@@ -138,10 +138,10 @@
     .locals 0
 
     .prologue
-    .line 43
+    .line 116
     invoke-super {p0, p1}, Lkik/android/widget/KikNetworkedImageView;->b(Landroid/graphics/Bitmap;)V
 
-    .line 44
+    .line 117
     return-void
 .end method
 
@@ -149,9 +149,9 @@
     .locals 0
 
     .prologue
-    .line 49
+    .line 122
     invoke-super {p0, p1}, Lkik/android/widget/KikNetworkedImageView;->c(Landroid/graphics/Bitmap;)V
 
-    .line 50
+    .line 123
     return-void
 .end method

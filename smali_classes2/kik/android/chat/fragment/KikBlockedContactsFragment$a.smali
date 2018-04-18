@@ -1,5 +1,5 @@
 .class public final Lkik/android/chat/fragment/KikBlockedContactsFragment$a;
-.super Lkik/android/util/ad;
+.super Lkik/android/util/aa;
 .source "SourceFile"
 
 
@@ -19,8 +19,8 @@
     .locals 0
 
     .prologue
-    .line 144
-    invoke-direct {p0}, Lkik/android/util/ad;-><init>()V
+    .line 128
+    invoke-direct {p0}, Lkik/android/util/aa;-><init>()V
 
     return-void
 .end method

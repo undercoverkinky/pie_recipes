@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 874
+    .line 870
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 874
+    .line 870
     invoke-direct {p0}, Lcom/crashlytics/android/core/h$b;-><init>()V
 
     return-void

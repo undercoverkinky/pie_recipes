@@ -90,11 +90,14 @@
 
     goto :goto_0
 
-    .line 101
+    .line 100
     :catch_0
     move-exception v0
 
     :goto_1
+    invoke-static {v0}, Lkik/android/util/ax;->b(Ljava/lang/Throwable;)V
+
+    .line 101
     iget-object v0, p0, Lkik/android/c/o;->c:Lkik/android/c/b$b;
 
     if-eqz v0, :cond_0
@@ -106,7 +109,7 @@
 
     goto :goto_0
 
-    .line 101
+    .line 100
     :catch_1
     move-exception v0
 

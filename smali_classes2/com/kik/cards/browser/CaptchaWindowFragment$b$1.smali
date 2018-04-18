@@ -1,5 +1,5 @@
 .class final Lcom/kik/cards/browser/CaptchaWindowFragment$b$1;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Ljava/lang/Object;",
         ">;"
@@ -34,12 +34,12 @@
     .locals 0
 
     .prologue
-    .line 157
+    .line 147
     iput-object p1, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b$1;->b:Lcom/kik/cards/browser/CaptchaWindowFragment$b;
 
     iput-object p2, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b$1;->a:Landroid/webkit/WebView;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -50,7 +50,7 @@
     .locals 1
 
     .prologue
-    .line 162
+    .line 152
     iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b$1;->a:Landroid/webkit/WebView;
 
     if-eqz v0, :cond_0
@@ -67,19 +67,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 163
+    .line 153
     iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b$1;->b:Lcom/kik/cards/browser/CaptchaWindowFragment$b;
 
     invoke-static {v0}, Lcom/kik/cards/browser/CaptchaWindowFragment$b;->a(Lcom/kik/cards/browser/CaptchaWindowFragment$b;)V
 
-    .line 168
+    .line 158
     :goto_0
-    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Throwable;)V
+    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Throwable;)V
 
-    .line 169
+    .line 159
     return-void
 
-    .line 166
+    .line 156
     :cond_0
     iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b$1;->b:Lcom/kik/cards/browser/CaptchaWindowFragment$b;
 

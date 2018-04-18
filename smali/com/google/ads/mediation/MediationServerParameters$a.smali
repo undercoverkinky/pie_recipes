@@ -17,7 +17,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2609
+    accessFlags = 0x260c
     name = "a"
 .end annotation
 

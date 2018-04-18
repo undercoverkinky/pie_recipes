@@ -179,7 +179,7 @@
     .locals 0
 
     .prologue
-    .line 132
+    .line 131
     return-void
 .end method
 
@@ -264,9 +264,11 @@
 .end method
 
 .method public onSurfaceChanged(Ljavax/microedition/khronos/opengles/GL10;II)V
-    .locals 4
+    .locals 5
 
     .prologue
+    const/4 v4, 0x0
+
     const/4 v3, 0x0
 
     .line 104
@@ -305,12 +307,12 @@
     iput p3, p0, Lcom/rounds/kik/view/VideoRenderer;->mHeight:I
 
     .line 108
-    invoke-static {v3, v3, p2, p3}, Landroid/opengl/GLES20;->glViewport(IIII)V
+    invoke-static {v4, v4, p2, p3}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
     .line 109
-    invoke-static {p2, p3}, Lcom/rounds/kik/media/NativeRoundsVidyoClient;->initializeR3D(II)V
+    invoke-static {p2, p3, v3, v3}, Lcom/rounds/kik/media/NativeRoundsVidyoClient;->R3DInit(IIFF)V
 
-    .line 112
+    .line 111
     invoke-static {}, Lcom/rounds/kik/VideoAppModule;->localParticipant()Lcom/rounds/kik/participants/LocalParticipant;
 
     move-result-object v0
@@ -321,10 +323,10 @@
 
     invoke-static {v0}, Lcom/rounds/kik/media/NativeRoundsVidyoClient;->R3DSetLocalClientId(Ljava/lang/String;)V
 
-    .line 114
+    .line 113
     sget v0, Lcom/rounds/kik/R$dimen;->ring_max_size:I
 
-    .line 115
+    .line 114
     iget-object v1, p0, Lcom/rounds/kik/view/VideoRenderer;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -337,10 +339,10 @@
 
     float-to-int v0, v0
 
-    .line 116
+    .line 115
     invoke-static {v0, v0}, Lcom/rounds/kik/media/NativeRoundsVidyoClient;->R3DSetVideoPlaneMaxSize(II)Z
 
-    .line 117
+    .line 116
     invoke-static {}, Lcom/rounds/kik/VideoAppModule;->localParticipant()Lcom/rounds/kik/participants/LocalParticipant;
 
     move-result-object v1
@@ -351,7 +353,7 @@
 
     invoke-static {v1}, Lcom/rounds/kik/media/NativeRoundsVidyoClient;->R3DSetBackground(Ljava/lang/String;)V
 
-    .line 118
+    .line 117
     sget-object v1, Lcom/rounds/kik/view/VideoRenderer;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -388,15 +390,15 @@
 
     invoke-virtual {v1, v0}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 119
+    .line 118
     iget-object v0, p0, Lcom/rounds/kik/view/VideoRenderer;->mOnRRenderer:Lcom/rounds/kik/view/VideoRenderer$OnRRenderer;
 
     invoke-interface {v0}, Lcom/rounds/kik/view/VideoRenderer$OnRRenderer;->rendererActivated()V
 
-    .line 120
+    .line 119
     invoke-direct {p0, p2, p3}, Lcom/rounds/kik/view/VideoRenderer;->updateChatSurface(II)V
 
-    .line 121
+    .line 120
     return-void
 .end method
 
@@ -404,14 +406,14 @@
     .locals 2
 
     .prologue
-    .line 137
+    .line 136
     sget-object v0, Lcom/rounds/kik/view/VideoRenderer;->LOGGER:Lcom/rounds/kik/logs/VideoLogger;
 
     const-string v1, "[R3D Related] onSurfaceCreated called"
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 138
+    .line 137
     return-void
 .end method
 
@@ -419,7 +421,7 @@
     .locals 1
 
     .prologue
-    .line 163
+    .line 162
     invoke-virtual {p2}, Landroid/graphics/Bitmap;->getByteCount()I
 
     move-result v0
@@ -428,13 +430,13 @@
 
     move-result-object v0
 
-    .line 164
+    .line 163
     invoke-virtual {p2, v0}, Landroid/graphics/Bitmap;->copyPixelsToBuffer(Ljava/nio/Buffer;)V
 
-    .line 165
+    .line 164
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 167
+    .line 166
     return-void
 .end method
 

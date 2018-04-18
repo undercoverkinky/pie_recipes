@@ -3,18 +3,12 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0xb
-.end annotation
-
-
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 29
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +18,7 @@
     .locals 1
 
     .prologue
-    .line 31
+    .line 26
     invoke-virtual {p0, p1}, Landroid/view/VelocityTracker;->getXVelocity(I)F
 
     move-result v0
@@ -36,7 +30,7 @@
     .locals 1
 
     .prologue
-    .line 34
+    .line 29
     invoke-virtual {p0, p1}, Landroid/view/VelocityTracker;->getYVelocity(I)F
 
     move-result v0

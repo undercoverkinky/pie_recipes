@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 2350
+    .line 2119
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,12 +44,12 @@
     .locals 1
 
     .prologue
-    .line 4353
+    .line 4122
     new-instance v0, Landroid/support/v7/widget/LinearLayoutManager$SavedState;
 
     invoke-direct {v0, p1}, Landroid/support/v7/widget/LinearLayoutManager$SavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 2350
+    .line 2119
     return-object v0
 .end method
 
@@ -57,10 +57,10 @@
     .locals 1
 
     .prologue
-    .line 2350
-    .line 3358
+    .line 2119
+    .line 3127
     new-array v0, p1, [Landroid/support/v7/widget/LinearLayoutManager$SavedState;
 
-    .line 2350
+    .line 2119
     return-object v0
 .end method

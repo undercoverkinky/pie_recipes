@@ -60,7 +60,7 @@
 
     const/4 v3, 0x0
 
-    .line 9915
+    .line 9952
     new-instance v0, Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;
 
     const-string v1, "TEXT_REPLY"
@@ -71,7 +71,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;->TEXT_REPLY:Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;
 
-    .line 9916
+    .line 9953
     new-instance v0, Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;
 
     const-string v1, "PAYMENT_REPLY"
@@ -82,7 +82,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;->PAYMENT_REPLY:Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;
 
-    .line 9917
+    .line 9954
     new-instance v0, Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;
 
     const-string v1, "FRIEND_PICKER_REPLY"
@@ -93,7 +93,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;->FRIEND_PICKER_REPLY:Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;
 
-    .line 9918
+    .line 9955
     new-instance v0, Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;
 
     const-string v1, "PICTURE_REPLY"
@@ -104,7 +104,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;->PICTURE_REPLY:Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;
 
-    .line 9919
+    .line 9956
     new-instance v0, Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;
 
     const-string v1, "TYPE_NOT_SET"
@@ -113,7 +113,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;->TYPE_NOT_SET:Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;
 
-    .line 9913
+    .line 9950
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;
@@ -152,13 +152,13 @@
     .end annotation
 
     .prologue
-    .line 9921
+    .line 9958
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 9922
+    .line 9959
     iput p3, p0, Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;->value:I
 
-    .line 9923
+    .line 9960
     return-void
 .end method
 
@@ -166,46 +166,46 @@
     .locals 1
 
     .prologue
-    .line 9933
+    .line 9970
     sparse-switch p0, :sswitch_data_0
 
-    .line 9939
+    .line 9976
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 9934
+    .line 9971
     :sswitch_0
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;->TEXT_REPLY:Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;
 
     goto :goto_0
 
-    .line 9935
+    .line 9972
     :sswitch_1
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;->PAYMENT_REPLY:Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;
 
     goto :goto_0
 
-    .line 9936
+    .line 9973
     :sswitch_2
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;->FRIEND_PICKER_REPLY:Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;
 
     goto :goto_0
 
-    .line 9937
+    .line 9974
     :sswitch_3
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;->PICTURE_REPLY:Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;
 
     goto :goto_0
 
-    .line 9938
+    .line 9975
     :sswitch_4
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;->TYPE_NOT_SET:Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;
 
     goto :goto_0
 
-    .line 9933
+    .line 9970
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_4
@@ -222,7 +222,7 @@
     .end annotation
 
     .prologue
-    .line 9929
+    .line 9966
     invoke-static {p0}, Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;->forNumber(I)Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;
 
     move-result-object v0
@@ -234,7 +234,7 @@
     .locals 1
 
     .prologue
-    .line 9913
+    .line 9950
     const-class v0, Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -250,7 +250,7 @@
     .locals 1
 
     .prologue
-    .line 9913
+    .line 9950
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;->$VALUES:[Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;
 
     invoke-virtual {v0}, [Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;->clone()Ljava/lang/Object;
@@ -268,7 +268,7 @@
     .locals 1
 
     .prologue
-    .line 9943
+    .line 9980
     iget v0, p0, Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;->value:I
 
     return v0

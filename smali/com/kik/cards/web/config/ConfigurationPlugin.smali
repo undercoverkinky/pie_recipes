@@ -1,16 +1,16 @@
 .class public Lcom/kik/cards/web/config/ConfigurationPlugin;
-.super Lcom/kik/cards/web/plugin/BridgePlugin;
+.super Lcom/kik/cards/web/plugin/d;
 .source "SourceFile"
 
 
 # static fields
-.field private static final log:Lorg/slf4j/b;
+.field private static final a:Lorg/slf4j/b;
 
 
 # instance fields
-.field private _configProvider:Lcom/kik/cards/web/config/a;
+.field private b:Lcom/kik/cards/web/config/a;
 
-.field private _sharedPrefProvider:Lkik/android/util/ai;
+.field private d:Lkik/android/util/ah;
 
 
 # direct methods
@@ -25,83 +25,31 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/kik/cards/web/config/ConfigurationPlugin;->log:Lorg/slf4j/b;
+    sput-object v0, Lcom/kik/cards/web/config/ConfigurationPlugin;->a:Lorg/slf4j/b;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/kik/cards/web/config/a;Lkik/android/util/ai;)V
-    .locals 2
+.method public constructor <init>(Lcom/kik/cards/web/config/a;Lkik/android/util/ah;)V
+    .locals 1
 
     .prologue
     .line 31
-    const/4 v0, 0x1
+    const-string v0, "Configuration"
 
-    const-string v1, "Configuration"
-
-    invoke-direct {p0, v0, v1}, Lcom/kik/cards/web/plugin/BridgePlugin;-><init>(ILjava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/kik/cards/web/plugin/d;-><init>(Ljava/lang/String;)V
 
     .line 32
-    iput-object p1, p0, Lcom/kik/cards/web/config/ConfigurationPlugin;->_configProvider:Lcom/kik/cards/web/config/a;
+    iput-object p1, p0, Lcom/kik/cards/web/config/ConfigurationPlugin;->b:Lcom/kik/cards/web/config/a;
 
     .line 33
-    iput-object p2, p0, Lcom/kik/cards/web/config/ConfigurationPlugin;->_sharedPrefProvider:Lkik/android/util/ai;
+    iput-object p2, p0, Lcom/kik/cards/web/config/ConfigurationPlugin;->d:Lkik/android/util/ah;
 
     .line 34
     return-void
 .end method
 
-.method private static configTypeToJsonType(Lkik/android/config/Configuration$Type;)Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 186
-    sget-object v0, Lkik/android/config/Configuration$Type;->String:Lkik/android/config/Configuration$Type;
-
-    if-ne p0, v0, :cond_0
-
-    .line 187
-    const-string v0, "string"
-
-    .line 196
-    :goto_0
-    return-object v0
-
-    .line 189
-    :cond_0
-    sget-object v0, Lkik/android/config/Configuration$Type;->Integer:Lkik/android/config/Configuration$Type;
-
-    if-eq p0, v0, :cond_1
-
-    sget-object v0, Lkik/android/config/Configuration$Type;->Long:Lkik/android/config/Configuration$Type;
-
-    if-ne p0, v0, :cond_2
-
-    .line 190
-    :cond_1
-    const-string v0, "number"
-
-    goto :goto_0
-
-    .line 192
-    :cond_2
-    sget-object v0, Lkik/android/config/Configuration$Type;->Boolean:Lkik/android/config/Configuration$Type;
-
-    if-ne p0, v0, :cond_3
-
-    .line 193
-    const-string v0, "boolean"
-
-    goto :goto_0
-
-    .line 196
-    :cond_3
-    const-string v0, "unknown"
-
-    goto :goto_0
-.end method
-
-.method private static configValueToJsonValue(Lkik/android/config/Configuration$Type;Ljava/lang/Object;)Ljava/lang/Object;
+.method private static a(Lkik/android/config/Configuration$Type;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
     .prologue
@@ -173,7 +121,7 @@
     goto :goto_0
 .end method
 
-.method private static configurationToTypeDescription(Lkik/android/config/Configuration;)Lorg/json/JSONObject;
+.method private static a(Lkik/android/config/Configuration;)Lorg/json/JSONObject;
     .locals 5
 
     .prologue
@@ -193,24 +141,30 @@
     invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 167
-    const-string v0, "type"
+    const-string v2, "type"
 
     invoke-virtual {p0}, Lkik/android/config/Configuration;->a()Lkik/android/config/Configuration$Type;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-static {v2}, Lcom/kik/cards/web/config/ConfigurationPlugin;->configTypeToJsonType(Lkik/android/config/Configuration$Type;)Ljava/lang/String;
+    .line 2186
+    sget-object v3, Lkik/android/config/Configuration$Type;->String:Lkik/android/config/Configuration$Type;
 
-    move-result-object v2
+    if-ne v0, v3, :cond_0
 
-    invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    .line 2187
+    const-string v0, "string"
+
+    .line 167
+    :goto_0
+    invoke-virtual {v1, v2, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 168
     invoke-virtual {p0}, Lkik/android/config/Configuration;->e()Ljava/util/List;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_5
 
     .line 169
     new-instance v0, Lorg/json/JSONArray;
@@ -226,12 +180,12 @@
 
     move-result-object v2
 
-    :goto_0
+    :goto_1
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v3
 
-    if-eqz v3, :cond_0
+    if-eqz v3, :cond_4
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -242,7 +196,7 @@
 
     move-result-object v4
 
-    invoke-static {v4, v3}, Lcom/kik/cards/web/config/ConfigurationPlugin;->configValueToJsonValue(Lkik/android/config/Configuration$Type;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v4, v3}, Lcom/kik/cards/web/config/ConfigurationPlugin;->a(Lkik/android/config/Configuration$Type;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -250,14 +204,14 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    goto :goto_1
 
     .line 178
     :catch_0
     move-exception v0
 
     .line 179
-    sget-object v2, Lcom/kik/cards/web/config/ConfigurationPlugin;->log:Lorg/slf4j/b;
+    sget-object v2, Lcom/kik/cards/web/config/ConfigurationPlugin;->a:Lorg/slf4j/b;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -280,18 +234,51 @@
     invoke-interface {v2, v0}, Lorg/slf4j/b;->error(Ljava/lang/String;)V
 
     .line 181
-    :goto_1
+    :goto_2
     return-object v1
 
-    .line 173
+    .line 2189
     :cond_0
     :try_start_1
+    sget-object v3, Lkik/android/config/Configuration$Type;->Integer:Lkik/android/config/Configuration$Type;
+
+    if-eq v0, v3, :cond_1
+
+    sget-object v3, Lkik/android/config/Configuration$Type;->Long:Lkik/android/config/Configuration$Type;
+
+    if-ne v0, v3, :cond_2
+
+    .line 2190
+    :cond_1
+    const-string v0, "number"
+
+    goto :goto_0
+
+    .line 2192
+    :cond_2
+    sget-object v3, Lkik/android/config/Configuration$Type;->Boolean:Lkik/android/config/Configuration$Type;
+
+    if-ne v0, v3, :cond_3
+
+    .line 2193
+    const-string v0, "boolean"
+
+    goto :goto_0
+
+    .line 2196
+    :cond_3
+    const-string v0, "unknown"
+
+    goto :goto_0
+
+    .line 173
+    :cond_4
     const-string v2, "possibleValues"
 
     invoke-virtual {v1, v2, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 175
-    :cond_1
+    :cond_5
     const-string v0, "defaultValue"
 
     invoke-virtual {p0}, Lkik/android/config/Configuration;->a()Lkik/android/config/Configuration$Type;
@@ -302,7 +289,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/kik/cards/web/config/ConfigurationPlugin;->configValueToJsonValue(Lkik/android/config/Configuration$Type;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v2, v3}, Lcom/kik/cards/web/config/ConfigurationPlugin;->a(Lkik/android/config/Configuration$Type;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -319,7 +306,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/kik/cards/web/config/ConfigurationPlugin;->configValueToJsonValue(Lkik/android/config/Configuration$Type;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v2, v3}, Lcom/kik/cards/web/config/ConfigurationPlugin;->a(Lkik/android/config/Configuration$Type;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -327,85 +314,14 @@
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
 
-    goto :goto_1
-.end method
-
-.method private static jsonValueToConfigValue(Lkik/android/config/Configuration$Type;Ljava/lang/String;)Ljava/lang/Object;
-    .locals 2
-
-    .prologue
-    .line 219
-    sget-object v0, Lkik/android/config/Configuration$Type;->String:Lkik/android/config/Configuration$Type;
-
-    if-ne p0, v0, :cond_0
-
-    .line 232
-    :goto_0
-    return-object p1
-
-    .line 222
-    :cond_0
-    sget-object v0, Lkik/android/config/Configuration$Type;->Long:Lkik/android/config/Configuration$Type;
-
-    if-ne p0, v0, :cond_1
-
-    .line 223
-    invoke-static {p1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    .line 225
-    :cond_1
-    sget-object v0, Lkik/android/config/Configuration$Type;->Boolean:Lkik/android/config/Configuration$Type;
-
-    if-ne p0, v0, :cond_2
-
-    .line 226
-    invoke-static {p1}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    .line 228
-    :cond_2
-    sget-object v0, Lkik/android/config/Configuration$Type;->Integer:Lkik/android/config/Configuration$Type;
-
-    if-ne p0, v0, :cond_3
-
-    .line 229
-    invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    .line 232
-    :cond_3
-    const/4 p1, 0x0
-
-    goto :goto_0
+    goto :goto_2
 .end method
 
 
 # virtual methods
-.method public getAvailableServerProfiles(Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/g;
+.method public getAvailableServerProfiles(Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/h;
     .locals 13
-    .annotation runtime Lcom/kik/cards/web/plugin/e;
+    .annotation runtime Lcom/kik/cards/web/plugin/f;
     .end annotation
 
     .prologue
@@ -414,9 +330,9 @@
     const/4 v2, 0x0
 
     .line 105
-    iget-object v0, p0, Lcom/kik/cards/web/config/ConfigurationPlugin;->_configProvider:Lcom/kik/cards/web/config/a;
+    iget-object v0, p0, Lcom/kik/cards/web/config/ConfigurationPlugin;->b:Lcom/kik/cards/web/config/a;
 
-    invoke-interface {v0}, Lcom/kik/cards/web/config/a;->c()Lkik/android/config/b;
+    invoke-interface {v0}, Lcom/kik/cards/web/config/a;->b()Lkik/android/config/b;
 
     move-result-object v0
 
@@ -541,7 +457,7 @@
     move-exception v0
 
     .line 119
-    sget-object v1, Lcom/kik/cards/web/config/ConfigurationPlugin;->log:Lorg/slf4j/b;
+    sget-object v1, Lcom/kik/cards/web/config/ConfigurationPlugin;->a:Lorg/slf4j/b;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -564,9 +480,9 @@
     invoke-interface {v1, v0}, Lorg/slf4j/b;->error(Ljava/lang/String;)V
 
     .line 120
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
-    invoke-direct {v0, v12}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v0, v12}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
     .line 127
     :goto_2
@@ -577,7 +493,7 @@
     move-exception v0
 
     .line 123
-    sget-object v1, Lcom/kik/cards/web/config/ConfigurationPlugin;->log:Lorg/slf4j/b;
+    sget-object v1, Lcom/kik/cards/web/config/ConfigurationPlugin;->a:Lorg/slf4j/b;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -600,37 +516,37 @@
     invoke-interface {v1, v0}, Lorg/slf4j/b;->error(Ljava/lang/String;)V
 
     .line 124
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
-    invoke-direct {v0, v12}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v0, v12}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
     goto :goto_2
 
     .line 127
     :cond_2
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
-    invoke-direct {v0, v3}, Lcom/kik/cards/web/plugin/g;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {v0, v3}, Lcom/kik/cards/web/plugin/h;-><init>(Lorg/json/JSONObject;)V
 
     goto :goto_2
 .end method
 
-.method public getCurrentServerProfile(Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/g;
+.method public getCurrentServerProfile(Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/h;
     .locals 4
-    .annotation runtime Lcom/kik/cards/web/plugin/e;
+    .annotation runtime Lcom/kik/cards/web/plugin/f;
     .end annotation
 
     .prologue
     .line 133
-    iget-object v0, p0, Lcom/kik/cards/web/config/ConfigurationPlugin;->_configProvider:Lcom/kik/cards/web/config/a;
+    iget-object v0, p0, Lcom/kik/cards/web/config/ConfigurationPlugin;->b:Lcom/kik/cards/web/config/a;
 
-    invoke-interface {v0}, Lcom/kik/cards/web/config/a;->c()Lkik/android/config/b;
+    invoke-interface {v0}, Lcom/kik/cards/web/config/a;->b()Lkik/android/config/b;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/kik/cards/web/config/ConfigurationPlugin;->_sharedPrefProvider:Lkik/android/util/ai;
+    iget-object v1, p0, Lcom/kik/cards/web/config/ConfigurationPlugin;->d:Lkik/android/util/ah;
 
-    invoke-interface {v0, v1}, Lkik/android/config/b;->b(Lkik/android/util/ai;)Ljava/lang/String;
+    invoke-interface {v0, v1}, Lkik/android/config/b;->b(Lkik/android/util/ah;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -648,9 +564,9 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 143
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(Lorg/json/JSONObject;)V
 
     :goto_0
     return-object v0
@@ -660,7 +576,7 @@
     move-exception v0
 
     .line 139
-    sget-object v1, Lcom/kik/cards/web/config/ConfigurationPlugin;->log:Lorg/slf4j/b;
+    sget-object v1, Lcom/kik/cards/web/config/ConfigurationPlugin;->a:Lorg/slf4j/b;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -683,18 +599,18 @@
     invoke-interface {v1, v0}, Lorg/slf4j/b;->error(Ljava/lang/String;)V
 
     .line 140
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
     const/16 v1, 0x1f4
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
     goto :goto_0
 .end method
 
-.method public getPreference(Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/g;
+.method public getPreference(Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/h;
     .locals 4
-    .annotation runtime Lcom/kik/cards/web/plugin/e;
+    .annotation runtime Lcom/kik/cards/web/plugin/f;
     .end annotation
 
     .prologue
@@ -713,11 +629,11 @@
     if-nez v1, :cond_0
 
     .line 61
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
     const/16 v1, 0x190
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
     .line 76
     :goto_0
@@ -725,9 +641,9 @@
 
     .line 63
     :cond_0
-    iget-object v1, p0, Lcom/kik/cards/web/config/ConfigurationPlugin;->_configProvider:Lcom/kik/cards/web/config/a;
+    iget-object v1, p0, Lcom/kik/cards/web/config/ConfigurationPlugin;->b:Lcom/kik/cards/web/config/a;
 
-    invoke-interface {v1}, Lcom/kik/cards/web/config/a;->c()Lkik/android/config/b;
+    invoke-interface {v1}, Lcom/kik/cards/web/config/a;->b()Lkik/android/config/b;
 
     move-result-object v1
 
@@ -739,11 +655,11 @@
     if-nez v0, :cond_1
 
     .line 65
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
     const/16 v1, 0x194
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
     goto :goto_0
 
@@ -765,7 +681,7 @@
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lcom/kik/cards/web/config/ConfigurationPlugin;->configValueToJsonValue(Lkik/android/config/Configuration$Type;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v3, v0}, Lcom/kik/cards/web/config/ConfigurationPlugin;->a(Lkik/android/config/Configuration$Type;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -774,9 +690,9 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 76
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(Lorg/json/JSONObject;)V
 
     goto :goto_0
 
@@ -785,7 +701,7 @@
     move-exception v0
 
     .line 72
-    sget-object v1, Lcom/kik/cards/web/config/ConfigurationPlugin;->log:Lorg/slf4j/b;
+    sget-object v1, Lcom/kik/cards/web/config/ConfigurationPlugin;->a:Lorg/slf4j/b;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -808,25 +724,25 @@
     invoke-interface {v1, v0}, Lorg/slf4j/b;->error(Ljava/lang/String;)V
 
     .line 73
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
     const/16 v1, 0x1f4
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
     goto :goto_0
 .end method
 
-.method public getPreferenceList(Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/g;
+.method public getPreferenceList(Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/h;
     .locals 4
-    .annotation runtime Lcom/kik/cards/web/plugin/e;
+    .annotation runtime Lcom/kik/cards/web/plugin/f;
     .end annotation
 
     .prologue
     .line 39
-    iget-object v0, p0, Lcom/kik/cards/web/config/ConfigurationPlugin;->_configProvider:Lcom/kik/cards/web/config/a;
+    iget-object v0, p0, Lcom/kik/cards/web/config/ConfigurationPlugin;->b:Lcom/kik/cards/web/config/a;
 
-    invoke-interface {v0}, Lcom/kik/cards/web/config/a;->c()Lkik/android/config/b;
+    invoke-interface {v0}, Lcom/kik/cards/web/config/a;->b()Lkik/android/config/b;
 
     move-result-object v0
 
@@ -863,7 +779,7 @@
     check-cast v0, Lkik/android/config/Configuration;
 
     .line 43
-    invoke-static {v0}, Lcom/kik/cards/web/config/ConfigurationPlugin;->configurationToTypeDescription(Lkik/android/config/Configuration;)Lorg/json/JSONObject;
+    invoke-static {v0}, Lcom/kik/cards/web/config/ConfigurationPlugin;->a(Lkik/android/config/Configuration;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -881,9 +797,9 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 53
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(Lorg/json/JSONObject;)V
 
     :goto_1
     return-object v0
@@ -893,7 +809,7 @@
     move-exception v0
 
     .line 49
-    sget-object v1, Lcom/kik/cards/web/config/ConfigurationPlugin;->log:Lorg/slf4j/b;
+    sget-object v1, Lcom/kik/cards/web/config/ConfigurationPlugin;->a:Lorg/slf4j/b;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -916,18 +832,18 @@
     invoke-interface {v1, v0}, Lorg/slf4j/b;->error(Ljava/lang/String;)V
 
     .line 50
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
     const/16 v1, 0x1f4
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
     goto :goto_1
 .end method
 
-.method public setCurrentServerProfile(Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/g;
+.method public setCurrentServerProfile(Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/h;
     .locals 2
-    .annotation runtime Lcom/kik/cards/web/plugin/e;
+    .annotation runtime Lcom/kik/cards/web/plugin/f;
     .end annotation
 
     .prologue
@@ -946,11 +862,11 @@
     if-nez v1, :cond_0
 
     .line 151
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
     const/16 v1, 0x190
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
     .line 158
     :goto_0
@@ -958,9 +874,9 @@
 
     .line 154
     :cond_0
-    iget-object v1, p0, Lcom/kik/cards/web/config/ConfigurationPlugin;->_configProvider:Lcom/kik/cards/web/config/a;
+    iget-object v1, p0, Lcom/kik/cards/web/config/ConfigurationPlugin;->b:Lcom/kik/cards/web/config/a;
 
-    invoke-interface {v1}, Lcom/kik/cards/web/config/a;->c()Lkik/android/config/b;
+    invoke-interface {v1}, Lcom/kik/cards/web/config/a;->b()Lkik/android/config/b;
 
     move-result-object v1
 
@@ -971,49 +887,49 @@
     if-eqz v0, :cond_1
 
     .line 155
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
-    invoke-direct {v0}, Lcom/kik/cards/web/plugin/g;-><init>()V
+    invoke-direct {v0}, Lcom/kik/cards/web/plugin/h;-><init>()V
 
     goto :goto_0
 
     .line 158
     :cond_1
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
     const/16 v1, 0x1f4
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
     goto :goto_0
 .end method
 
-.method public setPreference(Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/g;
-    .locals 4
-    .annotation runtime Lcom/kik/cards/web/plugin/e;
+.method public setPreference(Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/h;
+    .locals 5
+    .annotation runtime Lcom/kik/cards/web/plugin/f;
     .end annotation
 
     .prologue
-    const/16 v3, 0x190
+    const/16 v4, 0x190
 
     .line 82
     const-string v0, "name"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
     .line 83
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    move-result v1
+    move-result v0
 
-    if-nez v1, :cond_0
+    if-nez v0, :cond_0
 
     .line 84
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
-    invoke-direct {v0, v3}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v0, v4}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
     .line 98
     :goto_0
@@ -1021,78 +937,138 @@
 
     .line 86
     :cond_0
-    const-string v1, "value"
+    const-string v0, "value"
 
-    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
     .line 87
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v2
 
     if-nez v2, :cond_1
 
     .line 88
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
-    invoke-direct {v0, v3}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v0, v4}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
     goto :goto_0
 
     .line 90
     :cond_1
-    iget-object v2, p0, Lcom/kik/cards/web/config/ConfigurationPlugin;->_configProvider:Lcom/kik/cards/web/config/a;
+    iget-object v2, p0, Lcom/kik/cards/web/config/ConfigurationPlugin;->b:Lcom/kik/cards/web/config/a;
 
-    invoke-interface {v2}, Lcom/kik/cards/web/config/a;->c()Lkik/android/config/b;
+    invoke-interface {v2}, Lcom/kik/cards/web/config/a;->b()Lkik/android/config/b;
 
     move-result-object v2
 
-    invoke-interface {v2, v0}, Lkik/android/config/b;->a(Ljava/lang/String;)Lkik/android/config/Configuration;
+    invoke-interface {v2, v1}, Lkik/android/config/b;->a(Ljava/lang/String;)Lkik/android/config/Configuration;
 
-    move-result-object v0
+    move-result-object v1
 
     .line 91
-    if-nez v0, :cond_2
+    if-nez v1, :cond_2
 
     .line 92
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
     const/16 v1, 0x194
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
     goto :goto_0
 
     .line 94
     :cond_2
-    invoke-virtual {v0}, Lkik/android/config/Configuration;->a()Lkik/android/config/Configuration$Type;
+    invoke-virtual {v1}, Lkik/android/config/Configuration;->a()Lkik/android/config/Configuration$Type;
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lcom/kik/cards/web/config/ConfigurationPlugin;->jsonValueToConfigValue(Lkik/android/config/Configuration$Type;Ljava/lang/String;)Ljava/lang/Object;
+    .line 1219
+    sget-object v3, Lkik/android/config/Configuration$Type;->String:Lkik/android/config/Configuration$Type;
 
-    move-result-object v1
+    if-ne v2, v3, :cond_3
 
-    invoke-virtual {v0, v1}, Lkik/android/config/Configuration;->a(Ljava/lang/Object;)Z
+    .line 94
+    :goto_1
+    invoke-virtual {v1, v0}, Lkik/android/config/Configuration;->a(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_7
 
     .line 95
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
 
-    invoke-direct {v0}, Lcom/kik/cards/web/plugin/g;-><init>()V
+    invoke-direct {v0}, Lcom/kik/cards/web/plugin/h;-><init>()V
 
     goto :goto_0
 
-    .line 98
+    .line 1222
     :cond_3
-    new-instance v0, Lcom/kik/cards/web/plugin/g;
+    sget-object v3, Lkik/android/config/Configuration$Type;->Long:Lkik/android/config/Configuration$Type;
 
-    invoke-direct {v0, v3}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
+    if-ne v2, v3, :cond_4
+
+    .line 1223
+    invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v2
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    goto :goto_1
+
+    .line 1225
+    :cond_4
+    sget-object v3, Lkik/android/config/Configuration$Type;->Boolean:Lkik/android/config/Configuration$Type;
+
+    if-ne v2, v3, :cond_5
+
+    .line 1226
+    invoke-static {v0}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    goto :goto_1
+
+    .line 1228
+    :cond_5
+    sget-object v3, Lkik/android/config/Configuration$Type;->Integer:Lkik/android/config/Configuration$Type;
+
+    if-ne v2, v3, :cond_6
+
+    .line 1229
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    goto :goto_1
+
+    .line 1232
+    :cond_6
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    .line 98
+    :cond_7
+    new-instance v0, Lcom/kik/cards/web/plugin/h;
+
+    invoke-direct {v0, v4}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
 
     goto :goto_0
 .end method

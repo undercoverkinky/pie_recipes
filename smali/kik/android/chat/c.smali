@@ -4,18 +4,5 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedResponse;)Lcom/kik/events/Promise;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/kik/messagepath/model/Keyboards$FriendPickerSuggestedResponse;",
-            ")",
-            "Lcom/kik/events/Promise",
-            "<",
-            "Ljava/util/List",
-            "<",
-            "Lkik/core/datatypes/k;",
-            ">;>;"
-        }
-    .end annotation
+.method public abstract a()Lcom/kik/components/CoreComponent;
 .end method

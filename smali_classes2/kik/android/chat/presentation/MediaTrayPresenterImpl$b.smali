@@ -15,11 +15,14 @@
 
 
 # virtual methods
+.method public abstract a()V
+.end method
+
 .method public abstract a(Lcom/kik/android/b/f;)V
 .end method
 
-.method public abstract a(Landroid/view/View;Lcom/kik/android/b/f;)Z
+.method public abstract a(Lkik/android/widget/dl$b;)V
 .end method
 
-.method public abstract d()V
+.method public abstract a(Landroid/view/View;Lcom/kik/android/b/f;)Z
 .end method

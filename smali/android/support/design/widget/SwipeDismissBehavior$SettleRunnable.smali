@@ -30,18 +30,18 @@
     .locals 0
 
     .prologue
-    .line 371
+    .line 335
     iput-object p1, p0, Landroid/support/design/widget/SwipeDismissBehavior$SettleRunnable;->a:Landroid/support/design/widget/SwipeDismissBehavior;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 372
+    .line 336
     iput-object p2, p0, Landroid/support/design/widget/SwipeDismissBehavior$SettleRunnable;->b:Landroid/view/View;
 
-    .line 373
+    .line 337
     iput-boolean p3, p0, Landroid/support/design/widget/SwipeDismissBehavior$SettleRunnable;->c:Z
 
-    .line 374
+    .line 338
     return-void
 .end method
 
@@ -51,16 +51,20 @@
     .locals 2
 
     .prologue
-    .line 378
+    .line 342
     iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior$SettleRunnable;->a:Landroid/support/design/widget/SwipeDismissBehavior;
 
-    iget-object v0, v0, Landroid/support/design/widget/SwipeDismissBehavior;->b:Landroid/support/v4/widget/ViewDragHelper;
+    invoke-static {v0}, Landroid/support/design/widget/SwipeDismissBehavior;->b(Landroid/support/design/widget/SwipeDismissBehavior;)Landroid/support/v4/widget/ViewDragHelper;
+
+    move-result-object v0
 
     if-eqz v0, :cond_1
 
     iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior$SettleRunnable;->a:Landroid/support/design/widget/SwipeDismissBehavior;
 
-    iget-object v0, v0, Landroid/support/design/widget/SwipeDismissBehavior;->b:Landroid/support/v4/widget/ViewDragHelper;
+    invoke-static {v0}, Landroid/support/design/widget/SwipeDismissBehavior;->b(Landroid/support/design/widget/SwipeDismissBehavior;)Landroid/support/v4/widget/ViewDragHelper;
+
+    move-result-object v0
 
     const/4 v1, 0x1
 
@@ -70,17 +74,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 379
+    .line 343
     iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior$SettleRunnable;->b:Landroid/view/View;
 
     invoke-static {v0, p0}, Landroid/support/v4/view/ViewCompat;->postOnAnimation(Landroid/view/View;Ljava/lang/Runnable;)V
 
-    .line 385
+    .line 349
     :cond_0
     :goto_0
     return-void
 
-    .line 381
+    .line 345
     :cond_1
     iget-boolean v0, p0, Landroid/support/design/widget/SwipeDismissBehavior$SettleRunnable;->c:Z
 
@@ -88,18 +92,20 @@
 
     iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior$SettleRunnable;->a:Landroid/support/design/widget/SwipeDismissBehavior;
 
-    iget-object v0, v0, Landroid/support/design/widget/SwipeDismissBehavior;->c:Landroid/support/design/widget/SwipeDismissBehavior$OnDismissListener;
+    invoke-static {v0}, Landroid/support/design/widget/SwipeDismissBehavior;->a(Landroid/support/design/widget/SwipeDismissBehavior;)Landroid/support/design/widget/SwipeDismissBehavior$OnDismissListener;
+
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 382
+    .line 346
     iget-object v0, p0, Landroid/support/design/widget/SwipeDismissBehavior$SettleRunnable;->a:Landroid/support/design/widget/SwipeDismissBehavior;
 
-    iget-object v0, v0, Landroid/support/design/widget/SwipeDismissBehavior;->c:Landroid/support/design/widget/SwipeDismissBehavior$OnDismissListener;
+    invoke-static {v0}, Landroid/support/design/widget/SwipeDismissBehavior;->a(Landroid/support/design/widget/SwipeDismissBehavior;)Landroid/support/design/widget/SwipeDismissBehavior$OnDismissListener;
 
-    iget-object v1, p0, Landroid/support/design/widget/SwipeDismissBehavior$SettleRunnable;->b:Landroid/view/View;
+    move-result-object v0
 
-    invoke-interface {v0, v1}, Landroid/support/design/widget/SwipeDismissBehavior$OnDismissListener;->a(Landroid/view/View;)V
+    invoke-interface {v0}, Landroid/support/design/widget/SwipeDismissBehavior$OnDismissListener;->a()V
 
     goto :goto_0
 .end method

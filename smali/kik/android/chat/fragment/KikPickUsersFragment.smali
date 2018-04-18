@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field protected I:Ljava/util/List;
+.field protected P:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
@@ -23,16 +23,16 @@
     .end annotation
 .end field
 
-.field protected J:Lkik/core/interfaces/ag;
+.field protected Q:Lkik/core/interfaces/af;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
-.field private K:I
+.field private T:I
 
-.field private L:I
+.field private U:I
 
-.field private M:Ljava/util/List;
+.field private V:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
@@ -43,13 +43,13 @@
     .end annotation
 .end field
 
-.field private N:Z
+.field private W:Z
 
-.field private O:Lkik/android/chat/fragment/KikPickUsersFragment$a;
+.field private X:Lkik/android/chat/fragment/KikPickUsersFragment$a;
 
-.field private P:Landroid/widget/Toast;
+.field private Y:Landroid/widget/Toast;
 
-.field private Q:Z
+.field private Z:Z
 
 
 # direct methods
@@ -57,90 +57,63 @@
     .locals 1
 
     .prologue
-    .line 43
+    .line 38
     invoke-direct {p0}, Lkik/android/chat/fragment/KikMultiselectContactsListFragment;-><init>()V
 
-    .line 53
+    .line 48
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->I:Ljava/util/List;
+    iput-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->P:Ljava/util/List;
 
-    .line 54
+    .line 49
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->M:Ljava/util/List;
+    iput-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->V:Ljava/util/List;
 
-    .line 55
+    .line 50
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->N:Z
+    iput-boolean v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->W:Z
 
-    .line 57
+    .line 52
     new-instance v0, Lkik/android/chat/fragment/KikPickUsersFragment$a;
 
     invoke-direct {v0}, Lkik/android/chat/fragment/KikPickUsersFragment$a;-><init>()V
 
-    iput-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->O:Lkik/android/chat/fragment/KikPickUsersFragment$a;
+    iput-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->X:Lkik/android/chat/fragment/KikPickUsersFragment$a;
 
-    .line 61
+    .line 56
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->Q:Z
+    iput-boolean v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->Z:Z
 
     return-void
 .end method
 
-.method static synthetic O()V
-    .locals 0
-
-    .prologue
-    .line 149
-    return-void
-.end method
-
-.method private P()V
-    .locals 1
-
-    .prologue
-    .line 127
-    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->P:Landroid/widget/Toast;
-
-    if-eqz v0, :cond_0
-
-    .line 128
-    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->P:Landroid/widget/Toast;
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->cancel()V
-
-    .line 130
-    :cond_0
-    return-void
-.end method
-
-.method public static a(Landroid/os/Bundle;Lkik/core/interfaces/v;)Ljava/util/List;
+.method public static a(Landroid/os/Bundle;Lkik/core/interfaces/x;)Ljava/util/List;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/os/Bundle;",
-            "Lkik/core/interfaces/v;",
+            "Lkik/core/interfaces/x;",
             ")",
             "Ljava/util/List",
             "<",
-            "Lkik/core/datatypes/k;",
+            "Lkik/core/datatypes/o;",
             ">;"
         }
     .end annotation
 
     .prologue
-    .line 426
+    .line 412
     if-nez p0, :cond_0
 
-    .line 427
+    .line 413
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Null bundle"
@@ -149,7 +122,7 @@
 
     throw v0
 
-    .line 430
+    .line 416
     :cond_0
     const-string v0, "KikPickUsersFragment.RESULT_SELECTED_USERS"
 
@@ -157,10 +130,10 @@
 
     move-result-object v2
 
-    .line 431
+    .line 417
     if-nez v2, :cond_1
 
-    .line 432
+    .line 418
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Empty result bundle"
@@ -169,7 +142,7 @@
 
     throw v0
 
-    .line 435
+    .line 421
     :cond_1
     new-instance v3, Ljava/util/ArrayList;
 
@@ -177,7 +150,7 @@
 
     invoke-direct {v3, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 436
+    .line 422
     array-length v4, v2
 
     const/4 v0, 0x0
@@ -189,175 +162,407 @@
 
     aget-object v0, v2, v1
 
-    .line 437
+    .line 423
     check-cast v0, Lcom/kik/cards/util/UserDataParcelable;
 
     iget-object v0, v0, Lcom/kik/cards/util/UserDataParcelable;->a:Ljava/lang/String;
 
-    .line 438
-    invoke-interface {p1, v0}, Lkik/core/interfaces/v;->a(Ljava/lang/String;)Lkik/core/datatypes/l;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lkik/core/datatypes/l;->j()Lkik/core/datatypes/k;
+    .line 424
+    invoke-interface {p1, v0}, Lkik/core/interfaces/x;->b(Ljava/lang/String;)Lkik/core/datatypes/o;
 
     move-result-object v0
 
     invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 436
+    .line 422
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
 
-    .line 440
+    .line 426
     :cond_2
     return-object v3
 .end method
 
-.method static synthetic a(Lkik/android/chat/fragment/KikPickUsersFragment;Lkik/core/datatypes/l;)V
-    .locals 3
+.method private g()V
+    .locals 1
 
     .prologue
-    .line 144
-    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->o:Ljava/util/LinkedHashSet;
+    .line 115
+    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->Y:Landroid/widget/Toast;
 
-    invoke-virtual {p1}, Lkik/core/datatypes/l;->k()Ljava/lang/String;
+    if-eqz v0, :cond_0
+
+    .line 116
+    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->Y:Landroid/widget/Toast;
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->cancel()V
+
+    .line 118
+    :cond_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final D()V
+    .locals 1
+
+    .prologue
+    .line 244
+    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->j:Lkik/android/chat/view/SearchBarViewImpl;
+
+    invoke-virtual {v0}, Lkik/android/chat/view/SearchBarViewImpl;->d()Lkik/android/widget/RobotoEditText;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikPickUsersFragment;->b(Landroid/view/View;)V
+
+    .line 245
+    invoke-super {p0}, Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->D()V
+
+    .line 246
+    return-void
+.end method
+
+.method public final a(Landroid/view/View;Z)V
+    .locals 0
+
+    .prologue
+    .line 305
+    invoke-super {p0, p1, p2}, Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->a(Landroid/view/View;Z)V
+
+    .line 306
+    invoke-direct {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->g()V
+
+    .line 307
+    return-void
+.end method
+
+.method protected final a(Ljava/lang/String;Lkik/core/datatypes/o;)V
+    .locals 2
+
+    .prologue
+    .line 334
+    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->P:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    .line 335
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->c()Ljava/util/LinkedHashSet;
+
+    move-result-object v0
+
+    invoke-virtual {p2}, Lkik/core/datatypes/o;->b()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
 
-    .line 145
-    invoke-virtual {p0, p1}, Lkik/android/chat/fragment/KikPickUsersFragment;->a(Lkik/core/datatypes/l;)V
+    .line 336
+    invoke-super {p0, p1, p2}, Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->a(Ljava/lang/String;Lkik/core/datatypes/o;)V
 
-    .line 147
-    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->i:Lkik/android/widget/ContactSearchView;
-
-    check-cast v0, Lkik/android/widget/ContactSearchMultiSelectView;
-
-    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->o:Ljava/util/LinkedHashSet;
-
-    invoke-virtual {p1}, Lkik/core/datatypes/l;->k()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/util/LinkedHashSet;->contains(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lkik/android/widget/ContactSearchMultiSelectView;->a(Z)V
-
-    .line 148
+    .line 337
     return-void
 .end method
 
-.method public static b(Landroid/os/Bundle;)Ljava/util/List;
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/os/Bundle;",
-            ")",
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
+.method protected final a(Lkik/core/datatypes/o;)V
+    .locals 3
 
     .prologue
-    .line 445
-    if-nez p0, :cond_0
+    const/4 v2, 0x1
 
-    .line 446
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    .line 268
+    invoke-super {p0, p1}, Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->a(Lkik/core/datatypes/o;)V
 
-    const-string v1, "Null bundle"
+    .line 270
+    iget-boolean v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->Z:Z
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    if-eqz v0, :cond_0
 
-    throw v0
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->c()Ljava/util/LinkedHashSet;
 
-    .line 449
-    :cond_0
-    const-string v0, "KikPickUsersFragment.RESULT_SELECTED_USERS"
+    move-result-object v0
 
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getParcelableArray(Ljava/lang/String;)[Landroid/os/Parcelable;
+    invoke-virtual {v0}, Ljava/util/LinkedHashSet;->size()I
 
-    move-result-object v2
+    move-result v0
 
-    .line 450
-    if-nez v2, :cond_1
+    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->P:Ljava/util/List;
 
-    .line 451
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    invoke-interface {v1}, Ljava/util/List;->size()I
 
-    const-string v1, "Empty result bundle"
+    move-result v1
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    add-int/2addr v0, v1
 
-    throw v0
+    if-lez v0, :cond_0
 
-    .line 454
-    :cond_1
-    new-instance v3, Ljava/util/ArrayList;
+    .line 271
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->ak()V
 
-    array-length v0, v2
-
-    invoke-direct {v3, v0}, Ljava/util/ArrayList;-><init>(I)V
-
-    .line 455
-    array-length v4, v2
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
+    .line 277
     :goto_0
-    if-ge v1, v4, :cond_2
+    return-void
 
-    aget-object v0, v2, v1
+    .line 274
+    :cond_0
+    invoke-virtual {p0, v2}, Lkik/android/chat/fragment/KikPickUsersFragment;->b(Z)V
 
-    .line 456
-    check-cast v0, Lcom/kik/cards/util/UserDataParcelable;
+    .line 275
+    invoke-virtual {p0, v2}, Lkik/android/chat/fragment/KikPickUsersFragment;->a(Z)V
 
-    iget-object v0, v0, Lcom/kik/cards/util/UserDataParcelable;->a:Ljava/lang/String;
+    goto :goto_0
+.end method
 
-    .line 457
-    invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+.method protected final a(Lkik/core/datatypes/o;Lcom/kik/view/adapters/e;Landroid/database/Cursor;I)V
+    .locals 5
 
-    .line 455
-    add-int/lit8 v0, v1, 0x1
+    .prologue
+    const/4 v3, 0x1
 
-    move v1, v0
+    const/4 v4, 0x0
+
+    .line 123
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->c()Ljava/util/LinkedHashSet;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/LinkedHashSet;->size()I
+
+    move-result v0
+
+    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->P:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    iget v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->U:I
+
+    if-lt v0, v1, :cond_0
+
+    .line 124
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->c()Ljava/util/LinkedHashSet;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Lkik/core/datatypes/o;->b()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/LinkedHashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->U:I
+
+    const/4 v1, -0x1
+
+    if-ne v0, v1, :cond_4
+
+    .line 125
+    :cond_0
+    invoke-direct {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->g()V
+
+    .line 127
+    invoke-virtual {p1}, Lkik/core/datatypes/o;->o()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 128
+    new-instance v0, Lkik/android/chat/fragment/KikChatInfoFragment$a;
+
+    invoke-direct {v0}, Lkik/android/chat/fragment/KikChatInfoFragment$a;-><init>()V
+
+    .line 129
+    invoke-virtual {v0, p1}, Lkik/android/chat/fragment/KikChatInfoFragment$a;->a(Lkik/core/datatypes/o;)Lkik/android/chat/fragment/KikChatInfoFragment$a;
+
+    move-result-object v1
+
+    const/4 v2, 0x5
+
+    invoke-virtual {v1, v2}, Lkik/android/chat/fragment/KikChatInfoFragment$a;->a(I)Lkik/android/chat/fragment/KikChatInfoFragment$a;
+
+    .line 130
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikPickUsersFragment;->a(Lkik/android/util/aa;)Lcom/kik/events/Promise;
+
+    move-result-object v0
+
+    new-instance v1, Lkik/android/chat/fragment/KikPickUsersFragment$1;
+
+    invoke-direct {v1, p0}, Lkik/android/chat/fragment/KikPickUsersFragment$1;-><init>(Lkik/android/chat/fragment/KikPickUsersFragment;)V
+
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+
+    .line 149
+    :goto_0
+    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->b:Ljava/lang/String;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->b:Ljava/lang/String;
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 150
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->P()V
+
+    .line 158
+    :cond_1
+    :goto_1
+    return-void
+
+    .line 138
+    :cond_2
+    iget-boolean v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->Z:Z
+
+    if-eqz v0, :cond_3
+
+    .line 139
+    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->o:Ljava/util/LinkedHashSet;
+
+    invoke-virtual {p1}, Lkik/core/datatypes/o;->b()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
+
+    .line 140
+    invoke-virtual {p0, p1}, Lkik/android/chat/fragment/KikPickUsersFragment;->a(Lkik/core/datatypes/o;)V
 
     goto :goto_0
 
-    .line 459
-    :cond_2
-    return-object v3
+    .line 143
+    :cond_3
+    invoke-super {p0, p1, p2, p3, p4}, Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->a(Lkik/core/datatypes/o;Lcom/kik/view/adapters/e;Landroid/database/Cursor;I)V
+
+    goto :goto_0
+
+    .line 153
+    :cond_4
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->c()Ljava/util/LinkedHashSet;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/LinkedHashSet;->size()I
+
+    move-result v0
+
+    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->P:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    iget v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->U:I
+
+    if-lt v0, v1, :cond_1
+
+    .line 154
+    invoke-direct {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->g()V
+
+    .line 155
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
+
+    move-result-object v1
+
+    iget v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->U:I
+
+    if-ne v0, v3, :cond_5
+
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/support/v4/app/FragmentActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v2, 0x7f0a0478
+
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_2
+    invoke-static {v1, v0, v4}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->Y:Landroid/widget/Toast;
+
+    .line 156
+    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->Y:Landroid/widget/Toast;
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    goto :goto_1
+
+    .line 155
+    :cond_5
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/support/v4/app/FragmentActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v2, 0x7f0a047a
+
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-array v2, v3, [Ljava/lang/Object;
+
+    iget v3, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->U:I
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v2, v4
+
+    invoke-static {v0, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_2
 .end method
 
-
-# virtual methods
-.method protected final I()Z
+.method protected final ad()Z
     .locals 1
 
     .prologue
-    .line 415
+    .line 401
     const/4 v0, 0x1
 
     return v0
 .end method
 
-.method protected K()V
+.method protected ak()V
     .locals 9
 
     .prologue
-    const v6, 0x7f09027d
+    const v6, 0x7f0a0269
 
     const/4 v0, 0x0
 
@@ -365,8 +570,8 @@
 
     const/4 v8, 0x1
 
-    .line 80
-    .line 1089
+    .line 68
+    .line 2077
     invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->c()Ljava/util/LinkedHashSet;
 
     move-result-object v2
@@ -375,7 +580,7 @@
 
     move-result v2
 
-    iget-object v3, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->I:Ljava/util/List;
+    iget-object v3, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->P:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -383,16 +588,16 @@
 
     add-int/2addr v2, v3
 
-    iget v3, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->K:I
+    iget v3, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->T:I
 
     if-lt v2, v3, :cond_3
 
-    .line 1090
+    .line 2078
     new-instance v2, Landroid/os/Bundle;
 
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
-    .line 1091
+    .line 2079
     invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->c()Ljava/util/LinkedHashSet;
 
     move-result-object v1
@@ -401,7 +606,7 @@
 
     move-result v1
 
-    iget-object v3, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->I:Ljava/util/List;
+    iget-object v3, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->P:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -411,8 +616,8 @@
 
     new-array v3, v1, [Lcom/kik/cards/util/UserDataParcelable;
 
-    .line 1096
-    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->I:Ljava/util/List;
+    .line 2084
+    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->P:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -433,34 +638,34 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 1097
-    iget-object v5, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->u:Lkik/core/interfaces/v;
+    .line 2085
+    iget-object v5, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->u:Lkik/core/interfaces/x;
 
-    invoke-interface {v5, v0, v8}, Lkik/core/interfaces/v;->a(Ljava/lang/String;Z)Lkik/core/datatypes/l;
+    invoke-interface {v5, v0, v8}, Lkik/core/interfaces/x;->a(Ljava/lang/String;Z)Lkik/core/datatypes/o;
 
     move-result-object v0
 
-    .line 1098
-    iget-object v5, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->u:Lkik/core/interfaces/v;
+    .line 2086
+    iget-object v5, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->u:Lkik/core/interfaces/x;
 
-    invoke-virtual {v0}, Lkik/core/datatypes/l;->j()Lkik/core/datatypes/k;
+    invoke-virtual {v0}, Lkik/core/datatypes/o;->a()Lkik/core/datatypes/n;
 
     move-result-object v6
 
-    invoke-interface {v5, v6}, Lkik/core/interfaces/v;->a(Lkik/core/datatypes/k;)Lcom/kik/events/Promise;
+    invoke-interface {v5, v6}, Lkik/core/interfaces/x;->a(Lkik/core/datatypes/n;)Lcom/kik/events/Promise;
 
-    .line 1099
+    .line 2087
     new-instance v5, Lcom/kik/cards/util/UserDataParcelable;
 
-    invoke-virtual {v0}, Lkik/core/datatypes/l;->l()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/o;->d()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-virtual {v0}, Lkik/core/datatypes/l;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/o;->c()Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-virtual {v0}, Lkik/core/datatypes/l;->z()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/o;->t()Ljava/lang/String;
 
     move-result-object v0
 
@@ -468,15 +673,15 @@
 
     aput-object v5, v3, v1
 
-    .line 1100
+    .line 2088
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
-    .line 1101
+    .line 2089
     goto :goto_0
 
-    .line 1102
+    .line 2090
     :cond_0
     invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->c()Ljava/util/LinkedHashSet;
 
@@ -499,34 +704,34 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 1103
-    iget-object v5, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->u:Lkik/core/interfaces/v;
+    .line 2091
+    iget-object v5, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->u:Lkik/core/interfaces/x;
 
-    invoke-interface {v5, v0, v8}, Lkik/core/interfaces/v;->a(Ljava/lang/String;Z)Lkik/core/datatypes/l;
+    invoke-interface {v5, v0, v8}, Lkik/core/interfaces/x;->a(Ljava/lang/String;Z)Lkik/core/datatypes/o;
 
     move-result-object v0
 
-    .line 1104
-    iget-object v5, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->u:Lkik/core/interfaces/v;
+    .line 2092
+    iget-object v5, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->u:Lkik/core/interfaces/x;
 
-    invoke-virtual {v0}, Lkik/core/datatypes/l;->j()Lkik/core/datatypes/k;
+    invoke-virtual {v0}, Lkik/core/datatypes/o;->a()Lkik/core/datatypes/n;
 
     move-result-object v6
 
-    invoke-interface {v5, v6}, Lkik/core/interfaces/v;->a(Lkik/core/datatypes/k;)Lcom/kik/events/Promise;
+    invoke-interface {v5, v6}, Lkik/core/interfaces/x;->a(Lkik/core/datatypes/n;)Lcom/kik/events/Promise;
 
-    .line 1105
+    .line 2093
     new-instance v5, Lcom/kik/cards/util/UserDataParcelable;
 
-    invoke-virtual {v0}, Lkik/core/datatypes/l;->l()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/o;->d()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-virtual {v0}, Lkik/core/datatypes/l;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/o;->c()Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-virtual {v0}, Lkik/core/datatypes/l;->z()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/o;->t()Ljava/lang/String;
 
     move-result-object v0
 
@@ -534,13 +739,13 @@
 
     aput-object v5, v3, v1
 
-    .line 1106
+    .line 2094
     add-int/lit8 v1, v1, 0x1
 
-    .line 1107
+    .line 2095
     goto :goto_1
 
-    .line 1108
+    .line 2096
     :cond_1
     const-string v0, "KikPickUsersFragment.RESULT_SELECTED_USERS"
 
@@ -548,39 +753,39 @@
 
     move-object v0, v2
 
-    .line 81
+    .line 69
     :goto_2
     if-eqz v0, :cond_2
 
-    .line 82
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikPickUsersFragment;->setResultData(Landroid/os/Bundle;)V
+    .line 70
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikPickUsersFragment;->a(Landroid/os/Bundle;)V
 
-    .line 83
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->finish()V
+    .line 71
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->D()V
 
-    .line 85
+    .line 73
     :cond_2
     return-void
 
-    .line 1112
+    .line 2100
     :cond_3
     new-instance v2, Lkik/android/chat/fragment/KikDialogFragment$a;
 
     invoke-direct {v2}, Lkik/android/chat/fragment/KikDialogFragment$a;-><init>()V
 
-    .line 1113
-    iget v3, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->K:I
+    .line 2101
+    iget v3, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->T:I
 
     if-ne v3, v8, :cond_4
 
-    .line 1114
-    const v0, 0x7f09033d
+    .line 2102
+    const v0, 0x7f0a0329
 
     invoke-virtual {v2, v0}, Lkik/android/chat/fragment/KikDialogFragment$a;->b(I)Lkik/android/chat/fragment/KikDialogFragment$a;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->L()Ljava/lang/String;
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->al()Ljava/lang/String;
 
     move-result-object v3
 
@@ -590,7 +795,7 @@
 
     invoke-virtual {v0, v6, v1}, Lkik/android/chat/fragment/KikDialogFragment$a;->a(ILandroid/content/DialogInterface$OnClickListener;)Lkik/android/chat/fragment/KikDialogFragment$a;
 
-    .line 1120
+    .line 2108
     :goto_3
     invoke-virtual {v2}, Lkik/android/chat/fragment/KikDialogFragment$a;->a()Lkik/android/chat/fragment/KikDialogFragment;
 
@@ -600,20 +805,20 @@
 
     const-string v3, "confirmationDialog"
 
-    invoke-virtual {p0, v0, v2, v3}, Lkik/android/chat/fragment/KikPickUsersFragment;->show(Lkik/android/chat/fragment/KikDialogFragment;Lkik/android/chat/fragment/KikScopedDialogFragment$DialogScope;Ljava/lang/String;)V
+    invoke-virtual {p0, v0, v2, v3}, Lkik/android/chat/fragment/KikPickUsersFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;Lkik/android/chat/fragment/KikScopedDialogFragment$DialogScope;Ljava/lang/String;)V
 
     move-object v0, v1
 
-    .line 1121
+    .line 2109
     goto :goto_2
 
-    .line 1117
+    .line 2105
     :cond_4
-    const v3, 0x7f090342
+    const v3, 0x7f0a032e
 
     new-array v4, v8, [Ljava/lang/Object;
 
-    iget v5, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->K:I
+    iget v5, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->T:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -629,7 +834,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->L()Ljava/lang/String;
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->al()Ljava/lang/String;
 
     move-result-object v3
 
@@ -642,40 +847,43 @@
     goto :goto_3
 .end method
 
-.method protected L()Ljava/lang/String;
+.method protected al()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 178
-    iget-boolean v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->Q:Z
+    .line 163
+    iget-boolean v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->Z:Z
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f09033e
+    const v0, 0x7f0a032a
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikPickUsersFragment;->getStringFromResource(I)Ljava/lang/String;
+    .line 3082
+    invoke-static {v0}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 163
     :goto_0
     return-object v0
 
     :cond_0
-    const v0, 0x7f09033f
+    const v0, 0x7f0a032b
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikPickUsersFragment;->getStringFromResource(I)Ljava/lang/String;
+    .line 4082
+    invoke-static {v0}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 .end method
 
-.method protected M()Z
+.method protected am()Z
     .locals 1
 
     .prologue
-    .line 184
-    iget-boolean v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->Q:Z
+    .line 169
+    iget-boolean v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->Z:Z
 
     if-nez v0, :cond_0
 
@@ -698,535 +906,6 @@
     goto :goto_0
 .end method
 
-.method protected final a(Landroid/os/Bundle;)V
-    .locals 5
-
-    .prologue
-    const/4 v4, 0x1
-
-    .line 190
-    sget-object v0, Lkik/android/KikDataProvider;->f:Landroid/net/Uri;
-
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikPickUsersFragment;->a(Landroid/net/Uri;)V
-
-    .line 191
-    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->O:Lkik/android/chat/fragment/KikPickUsersFragment$a;
-
-    invoke-virtual {v0, p1}, Lkik/android/chat/fragment/KikPickUsersFragment$a;->a(Landroid/os/Bundle;)V
-
-    .line 192
-    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->O:Lkik/android/chat/fragment/KikPickUsersFragment$a;
-
-    invoke-virtual {v0}, Lkik/android/chat/fragment/KikPickUsersFragment$a;->b()I
-
-    move-result v0
-
-    iput v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->K:I
-
-    .line 193
-    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->O:Lkik/android/chat/fragment/KikPickUsersFragment$a;
-
-    invoke-virtual {v0}, Lkik/android/chat/fragment/KikPickUsersFragment$a;->c()I
-
-    move-result v0
-
-    iput v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->L:I
-
-    .line 194
-    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->O:Lkik/android/chat/fragment/KikPickUsersFragment$a;
-
-    invoke-virtual {v0}, Lkik/android/chat/fragment/KikPickUsersFragment$a;->d()Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->N:Z
-
-    .line 195
-    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->O:Lkik/android/chat/fragment/KikPickUsersFragment$a;
-
-    invoke-virtual {v0}, Lkik/android/chat/fragment/KikPickUsersFragment$a;->e()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    .line 196
-    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->O:Lkik/android/chat/fragment/KikPickUsersFragment$a;
-
-    .line 1523
-    const-string v2, "KikPickUsersFragment.EXTRA_FILTERED_USERS"
-
-    invoke-virtual {v1, v2}, Lkik/android/chat/fragment/KikPickUsersFragment$a;->k(Ljava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    .line 197
-    iget-object v2, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->O:Lkik/android/chat/fragment/KikPickUsersFragment$a;
-
-    invoke-virtual {v2}, Lkik/android/chat/fragment/KikPickUsersFragment$a;->f()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 199
-    if-eqz v2, :cond_0
-
-    .line 200
-    invoke-virtual {p0, v2}, Lkik/android/chat/fragment/KikPickUsersFragment;->e(Ljava/lang/String;)V
-
-    .line 204
-    :cond_0
-    iget v2, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->L:I
-
-    if-ne v2, v4, :cond_1
-
-    .line 205
-    iput-boolean v4, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->Q:Z
-
-    .line 206
-    iget-object v2, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->i:Lkik/android/widget/ContactSearchView;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v2, v3}, Lkik/android/widget/ContactSearchView;->b(Z)V
-
-    .line 207
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->m()V
-
-    .line 209
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->f()V
-
-    .line 212
-    :cond_1
-    iget-boolean v2, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->N:Z
-
-    if-eqz v2, :cond_2
-
-    .line 213
-    iget-object v2, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->M:Ljava/util/List;
-
-    iget-object v3, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->J:Lkik/core/interfaces/ag;
-
-    invoke-interface {v3}, Lkik/core/interfaces/ag;->d()Lkik/core/datatypes/aa;
-
-    move-result-object v3
-
-    iget-object v3, v3, Lkik/core/datatypes/aa;->c:Ljava/lang/String;
-
-    invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 216
-    :cond_2
-    if-eqz v1, :cond_3
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    if-lez v2, :cond_3
-
-    .line 217
-    iget-object v2, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->M:Ljava/util/List;
-
-    invoke-interface {v2, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
-
-    .line 221
-    :cond_3
-    if-eqz v0, :cond_5
-
-    iget v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->L:I
-
-    if-eq v1, v4, :cond_5
-
-    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->M:Ljava/util/List;
-
-    if-eqz v1, :cond_4
-
-    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->M:Ljava/util/List;
-
-    .line 222
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    iget-boolean v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->N:Z
-
-    if-eqz v1, :cond_5
-
-    .line 223
-    :cond_4
-    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->I:Ljava/util/List;
-
-    invoke-interface {v1, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
-
-    .line 226
-    :cond_5
-    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->M:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-lez v0, :cond_6
-
-    .line 228
-    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->I:Ljava/util/List;
-
-    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->M:Ljava/util/List;
-
-    invoke-interface {v0, v1}, Ljava/util/List;->removeAll(Ljava/util/Collection;)Z
-
-    .line 230
-    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->M:Ljava/util/List;
-
-    check-cast v0, Ljava/util/ArrayList;
-
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikPickUsersFragment;->a(Ljava/util/ArrayList;)V
-
-    .line 234
-    :cond_6
-    new-instance v0, Ljava/util/Vector;
-
-    invoke-direct {v0}, Ljava/util/Vector;-><init>()V
-
-    .line 235
-    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->I:Ljava/util/List;
-
-    invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
-
-    .line 238
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikPickUsersFragment;->b(Ljava/util/List;)V
-
-    .line 239
-    return-void
-.end method
-
-.method protected final a(Ljava/lang/String;Lkik/core/datatypes/l;)V
-    .locals 2
-
-    .prologue
-    .line 348
-    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->I:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
-
-    .line 349
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->c()Ljava/util/LinkedHashSet;
-
-    move-result-object v0
-
-    invoke-virtual {p2}, Lkik/core/datatypes/l;->k()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
-
-    .line 350
-    invoke-super {p0, p1, p2}, Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->a(Ljava/lang/String;Lkik/core/datatypes/l;)V
-
-    .line 351
-    return-void
-.end method
-
-.method protected final a(Lkik/core/datatypes/l;)V
-    .locals 3
-
-    .prologue
-    const/4 v2, 0x1
-
-    .line 282
-    invoke-super {p0, p1}, Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->a(Lkik/core/datatypes/l;)V
-
-    .line 284
-    iget-boolean v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->Q:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->c()Ljava/util/LinkedHashSet;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/LinkedHashSet;->size()I
-
-    move-result v0
-
-    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->I:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    if-lez v0, :cond_0
-
-    .line 285
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->K()V
-
-    .line 291
-    :goto_0
-    return-void
-
-    .line 288
-    :cond_0
-    invoke-virtual {p0, v2}, Lkik/android/chat/fragment/KikPickUsersFragment;->b(Z)V
-
-    .line 289
-    invoke-virtual {p0, v2}, Lkik/android/chat/fragment/KikPickUsersFragment;->a(Z)V
-
-    goto :goto_0
-.end method
-
-.method protected final a(Lkik/core/datatypes/l;Lcom/kik/view/adapters/f;Landroid/database/Cursor;I)V
-    .locals 5
-
-    .prologue
-    const/4 v3, 0x1
-
-    const/4 v4, 0x0
-
-    .line 135
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->c()Ljava/util/LinkedHashSet;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/LinkedHashSet;->size()I
-
-    move-result v0
-
-    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->I:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    iget v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->L:I
-
-    if-lt v0, v1, :cond_0
-
-    .line 136
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->c()Ljava/util/LinkedHashSet;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Lkik/core/datatypes/l;->k()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/LinkedHashSet;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->L:I
-
-    const/4 v1, -0x1
-
-    if-ne v0, v1, :cond_4
-
-    .line 137
-    :cond_0
-    invoke-direct {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->P()V
-
-    .line 139
-    invoke-virtual {p1}, Lkik/core/datatypes/l;->h()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 140
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->getNavigator()Lkik/android/chat/vm/ay;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Lkik/core/datatypes/l;->a()Lcom/kik/core/network/xmpp/jid/a;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lkik/android/chat/vm/profile/dw;->a(Lcom/kik/core/network/xmpp/jid/a;)Lkik/android/chat/vm/profile/dw;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Lkik/core/datatypes/l;->f()Z
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Lkik/android/chat/vm/profile/dw;->a(Z)Lkik/android/chat/vm/profile/dw;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lkik/android/chat/vm/profile/dw;->b()Lkik/android/chat/vm/profile/dp;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lkik/android/chat/vm/ay;->a(Lkik/android/chat/vm/profile/dp;)Lrx/d;
-
-    move-result-object v0
-
-    invoke-static {p0, p1}, Lkik/android/chat/fragment/cx;->a(Lkik/android/chat/fragment/KikPickUsersFragment;Lkik/core/datatypes/l;)Lrx/functions/b;
-
-    move-result-object v1
-
-    invoke-static {}, Lkik/android/chat/fragment/cy;->a()Lrx/functions/b;
-
-    move-result-object v2
-
-    .line 141
-    invoke-virtual {v0, v1, v2}, Lrx/d;->a(Lrx/functions/b;Lrx/functions/b;)Lrx/k;
-
-    move-result-object v0
-
-    .line 140
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikPickUsersFragment;->safeSubscribe(Lrx/k;)Lrx/k;
-
-    .line 164
-    :goto_0
-    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->b:Ljava/lang/String;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->b:Ljava/lang/String;
-
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 165
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->u()V
-
-    .line 173
-    :cond_1
-    :goto_1
-    return-void
-
-    .line 153
-    :cond_2
-    iget-boolean v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->Q:Z
-
-    if-eqz v0, :cond_3
-
-    .line 154
-    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->o:Ljava/util/LinkedHashSet;
-
-    invoke-virtual {p1}, Lkik/core/datatypes/l;->k()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
-
-    .line 155
-    invoke-virtual {p0, p1}, Lkik/android/chat/fragment/KikPickUsersFragment;->a(Lkik/core/datatypes/l;)V
-
-    goto :goto_0
-
-    .line 158
-    :cond_3
-    invoke-super {p0, p1, p2, p3, p4}, Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->a(Lkik/core/datatypes/l;Lcom/kik/view/adapters/f;Landroid/database/Cursor;I)V
-
-    goto :goto_0
-
-    .line 168
-    :cond_4
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->c()Ljava/util/LinkedHashSet;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/LinkedHashSet;->size()I
-
-    move-result v0
-
-    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->I:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    iget v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->L:I
-
-    if-lt v0, v1, :cond_1
-
-    .line 169
-    invoke-direct {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->P()V
-
-    .line 170
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
-
-    move-result-object v1
-
-    iget v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->L:I
-
-    if-ne v0, v3, :cond_5
-
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/support/v4/app/FragmentActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v2, 0x7f09048c
-
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_2
-    invoke-static {v1, v0, v4}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->P:Landroid/widget/Toast;
-
-    .line 171
-    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->P:Landroid/widget/Toast;
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    goto :goto_1
-
-    .line 170
-    :cond_5
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/support/v4/app/FragmentActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v2, 0x7f09048e
-
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-array v2, v3, [Ljava/lang/Object;
-
-    iget v3, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->L:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v2, v4
-
-    invoke-static {v0, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_2
-.end method
-
 .method protected b(Ljava/util/List;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
@@ -1240,7 +919,7 @@
     .end annotation
 
     .prologue
-    .line 243
+    .line 229
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -1259,36 +938,36 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 244
-    iget-object v2, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->u:Lkik/core/interfaces/v;
+    .line 230
+    iget-object v2, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->u:Lkik/core/interfaces/x;
 
     const/4 v3, 0x1
 
-    invoke-interface {v2, v0, v3}, Lkik/core/interfaces/v;->a(Ljava/lang/String;Z)Lkik/core/datatypes/l;
+    invoke-interface {v2, v0, v3}, Lkik/core/interfaces/x;->a(Ljava/lang/String;Z)Lkik/core/datatypes/o;
 
     move-result-object v2
 
-    .line 245
+    .line 231
     if-eqz v2, :cond_0
 
-    .line 247
-    iget-object v3, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->I:Ljava/util/List;
+    .line 233
+    iget-object v3, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->P:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 248
-    invoke-virtual {v2}, Lkik/core/datatypes/l;->u()Z
+    .line 234
+    invoke-virtual {v2}, Lkik/core/datatypes/o;->n()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 249
-    invoke-virtual {p0, v2}, Lkik/android/chat/fragment/KikPickUsersFragment;->e(Lkik/core/datatypes/l;)V
+    .line 235
+    invoke-virtual {p0, v2}, Lkik/android/chat/fragment/KikPickUsersFragment;->e(Lkik/core/datatypes/o;)V
 
     goto :goto_0
 
-    .line 253
+    .line 239
     :cond_1
     return-void
 .end method
@@ -1297,8 +976,8 @@
     .locals 1
 
     .prologue
-    .line 364
-    iget-boolean v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->Q:Z
+    .line 350
+    iget-boolean v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->Z:Z
 
     if-nez v0, :cond_0
 
@@ -1313,31 +992,235 @@
     goto :goto_0
 .end method
 
+.method protected final c(Landroid/os/Bundle;)V
+    .locals 5
+
+    .prologue
+    const/4 v4, 0x1
+
+    .line 175
+    sget-object v0, Lkik/android/KikDataProvider;->f:Landroid/net/Uri;
+
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikPickUsersFragment;->a(Landroid/net/Uri;)V
+
+    .line 176
+    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->X:Lkik/android/chat/fragment/KikPickUsersFragment$a;
+
+    invoke-virtual {v0, p1}, Lkik/android/chat/fragment/KikPickUsersFragment$a;->a(Landroid/os/Bundle;)V
+
+    .line 177
+    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->X:Lkik/android/chat/fragment/KikPickUsersFragment$a;
+
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikPickUsersFragment$a;->b()I
+
+    move-result v0
+
+    iput v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->T:I
+
+    .line 178
+    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->X:Lkik/android/chat/fragment/KikPickUsersFragment$a;
+
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikPickUsersFragment$a;->c()I
+
+    move-result v0
+
+    iput v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->U:I
+
+    .line 179
+    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->X:Lkik/android/chat/fragment/KikPickUsersFragment$a;
+
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikPickUsersFragment$a;->d()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->W:Z
+
+    .line 180
+    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->X:Lkik/android/chat/fragment/KikPickUsersFragment$a;
+
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikPickUsersFragment$a;->e()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    .line 181
+    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->X:Lkik/android/chat/fragment/KikPickUsersFragment$a;
+
+    .line 4490
+    const-string v2, "KikPickUsersFragment.EXTRA_FILTERED_USERS"
+
+    invoke-virtual {v1, v2}, Lkik/android/chat/fragment/KikPickUsersFragment$a;->p(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    .line 182
+    iget-object v2, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->X:Lkik/android/chat/fragment/KikPickUsersFragment$a;
+
+    invoke-virtual {v2}, Lkik/android/chat/fragment/KikPickUsersFragment$a;->f()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 184
+    if-eqz v2, :cond_0
+
+    .line 185
+    invoke-virtual {p0, v2}, Lkik/android/chat/fragment/KikPickUsersFragment;->f(Ljava/lang/String;)V
+
+    .line 189
+    :cond_0
+    iget v2, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->U:I
+
+    if-ne v2, v4, :cond_1
+
+    .line 190
+    iput-boolean v4, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->Z:Z
+
+    .line 191
+    iget-object v2, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->i:Lkik/android/widget/ContactSearchView;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3}, Lkik/android/widget/ContactSearchView;->b(Z)V
+
+    .line 192
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->ai()V
+
+    .line 194
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->q()V
+
+    .line 197
+    :cond_1
+    iget-boolean v2, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->W:Z
+
+    if-eqz v2, :cond_2
+
+    .line 198
+    iget-object v2, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->V:Ljava/util/List;
+
+    iget-object v3, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->Q:Lkik/core/interfaces/af;
+
+    invoke-interface {v3}, Lkik/core/interfaces/af;->d()Lkik/core/datatypes/ad;
+
+    move-result-object v3
+
+    iget-object v3, v3, Lkik/core/datatypes/ad;->c:Ljava/lang/String;
+
+    invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 201
+    :cond_2
+    if-eqz v1, :cond_3
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    if-lez v2, :cond_3
+
+    .line 202
+    iget-object v2, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->V:Ljava/util/List;
+
+    invoke-interface {v2, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    .line 206
+    :cond_3
+    if-eqz v0, :cond_5
+
+    iget v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->U:I
+
+    if-eq v1, v4, :cond_5
+
+    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->V:Ljava/util/List;
+
+    if-eqz v1, :cond_4
+
+    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->V:Ljava/util/List;
+
+    .line 207
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    iget-boolean v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->W:Z
+
+    if-eqz v1, :cond_5
+
+    .line 209
+    :cond_4
+    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->P:Ljava/util/List;
+
+    invoke-interface {v1, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    .line 212
+    :cond_5
+    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->V:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_6
+
+    .line 214
+    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->P:Ljava/util/List;
+
+    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->V:Ljava/util/List;
+
+    invoke-interface {v0, v1}, Ljava/util/List;->removeAll(Ljava/util/Collection;)Z
+
+    .line 216
+    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->V:Ljava/util/List;
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikPickUsersFragment;->a(Ljava/util/ArrayList;)V
+
+    .line 220
+    :cond_6
+    new-instance v0, Ljava/util/Vector;
+
+    invoke-direct {v0}, Ljava/util/Vector;-><init>()V
+
+    .line 221
+    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->P:Ljava/util/List;
+
+    invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    .line 224
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikPickUsersFragment;->b(Ljava/util/List;)V
+
+    .line 225
+    return-void
+.end method
+
 .method protected final d()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 370
-    const v0, 0x7f090398
+    .line 356
+    const v0, 0x7f0a0384
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikPickUsersFragment;->getStringFromResource(I)Ljava/lang/String;
+    .line 5082
+    invoke-static {v0}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 356
     return-object v0
 .end method
 
-.method protected final d(Lkik/core/datatypes/l;)V
+.method protected final d(Lkik/core/datatypes/o;)V
     .locals 3
 
     .prologue
     const/4 v2, 0x0
 
-    .line 302
-    invoke-super {p0, p1}, Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->d(Lkik/core/datatypes/l;)V
+    .line 288
+    invoke-super {p0, p1}, Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->d(Lkik/core/datatypes/o;)V
 
-    .line 303
-    iget v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->K:I
+    .line 289
+    iget v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->T:I
 
     if-lez v0, :cond_0
 
@@ -1349,7 +1232,7 @@
 
     move-result v0
 
-    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->I:Ljava/util/List;
+    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->P:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -1359,49 +1242,35 @@
 
     if-gtz v0, :cond_0
 
-    .line 304
+    .line 290
     invoke-virtual {p0, v2}, Lkik/android/chat/fragment/KikPickUsersFragment;->b(Z)V
 
-    .line 305
+    .line 291
     invoke-virtual {p0, v2}, Lkik/android/chat/fragment/KikPickUsersFragment;->a(Z)V
 
-    .line 307
+    .line 293
     :cond_0
     return-void
 .end method
 
-.method protected final e()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 376
-    const v0, 0x7f090176
-
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikPickUsersFragment;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method protected final e(Lkik/core/datatypes/l;)V
+.method protected final e(Lkik/core/datatypes/o;)V
     .locals 2
 
     .prologue
     const/4 v1, 0x0
 
-    .line 325
-    invoke-virtual {p1}, Lkik/core/datatypes/l;->f()Z
+    .line 311
+    invoke-virtual {p1}, Lkik/core/datatypes/o;->i()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 336
+    .line 322
     :goto_0
     return-void
 
-    .line 329
+    .line 315
     :cond_0
     iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->c:Landroid/widget/ListView;
 
@@ -1411,119 +1280,93 @@
 
     if-eqz v0, :cond_1
 
-    .line 330
+    .line 316
     const/4 v0, 0x0
 
-    invoke-virtual {p0, p1, v1, v1, v0}, Lkik/android/chat/fragment/KikPickUsersFragment;->a(Lkik/core/datatypes/l;Lcom/kik/view/adapters/f;Landroid/database/Cursor;I)V
+    invoke-virtual {p0, p1, v1, v1, v0}, Lkik/android/chat/fragment/KikPickUsersFragment;->a(Lkik/core/datatypes/o;Lcom/kik/view/adapters/e;Landroid/database/Cursor;I)V
 
     goto :goto_0
 
-    .line 333
+    .line 319
     :cond_1
     invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->c()Ljava/util/LinkedHashSet;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lkik/core/datatypes/l;->k()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/o;->b()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
 
-    .line 334
-    invoke-virtual {p0, p1}, Lkik/android/chat/fragment/KikPickUsersFragment;->a(Lkik/core/datatypes/l;)V
+    .line 320
+    invoke-virtual {p0, p1}, Lkik/android/chat/fragment/KikPickUsersFragment;->a(Lkik/core/datatypes/o;)V
 
     goto :goto_0
 .end method
 
-.method protected final f(Ljava/lang/String;)V
+.method protected final f()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 312
-    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->I:Ljava/util/List;
+    .line 362
+    const v0, 0x7f0a0175
 
-    invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
-
-    .line 313
-    invoke-super {p0, p1}, Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->f(Ljava/lang/String;)V
-
-    .line 314
-    return-void
-.end method
-
-.method public finish()V
-    .locals 1
-
-    .prologue
-    .line 258
-    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->j:Lkik/android/chat/view/SearchBarViewImpl;
-
-    invoke-virtual {v0}, Lkik/android/chat/view/SearchBarViewImpl;->b()Lkik/android/widget/RobotoEditText;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikPickUsersFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikPickUsersFragment;->hideKeyBoard(Landroid/view/View;)V
-
-    .line 259
-    invoke-super {p0}, Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->finish()V
-
-    .line 260
-    return-void
+    return-object v0
 .end method
 
 .method protected final g(Ljava/lang/String;)V
     .locals 1
 
     .prologue
-    .line 357
-    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->I:Ljava/util/List;
+    .line 298
+    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->P:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 358
+    .line 299
     invoke-super {p0, p1}, Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->g(Ljava/lang/String;)V
 
-    .line 359
+    .line 300
     return-void
-.end method
-
-.method protected getInputAdjustType()I
-    .locals 1
-
-    .prologue
-    .line 341
-    const/16 v0, 0x10
-
-    return v0
 .end method
 
 .method protected final h(Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 296
+    .line 343
+    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->P:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    .line 344
     invoke-super {p0, p1}, Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->h(Ljava/lang/String;)V
 
-    .line 297
+    .line 345
     return-void
 .end method
 
-.method protected final h()Z
-    .locals 1
+.method protected final i(Ljava/lang/String;)V
+    .locals 0
 
     .prologue
-    .line 397
-    const/4 v0, 0x1
+    .line 282
+    invoke-super {p0, p1}, Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->i(Ljava/lang/String;)V
 
-    return v0
+    .line 283
+    return-void
 .end method
 
-.method protected final j()Z
+.method protected final i()Z
     .locals 1
 
     .prologue
-    .line 403
+    .line 383
     const/4 v0, 0x1
 
     return v0
@@ -1533,8 +1376,18 @@
     .locals 1
 
     .prologue
-    .line 409
-    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->M:Ljava/util/List;
+    .line 389
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method protected final l()Z
+    .locals 1
+
+    .prologue
+    .line 395
+    iget-object v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->V:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -1563,7 +1416,7 @@
 
     const/4 v2, -0x1
 
-    .line 382
+    .line 368
     const/16 v0, 0x617
 
     if-ne p1, v0, :cond_2
@@ -1572,14 +1425,14 @@
 
     const-string v0, "SimpleFragmentWrapperActivity.EXTRA_FRAGMENT_RESULT"
 
-    .line 383
+    .line 369
     invoke-virtual {p3, v0}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 384
+    .line 370
     invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->c()Ljava/util/LinkedHashSet;
 
     move-result-object v0
@@ -1588,7 +1441,7 @@
 
     move-result v0
 
-    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->I:Ljava/util/List;
+    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->P:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -1596,15 +1449,15 @@
 
     add-int/2addr v0, v1
 
-    iget v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->L:I
+    iget v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->U:I
 
     if-lt v0, v1, :cond_2
 
-    iget v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->L:I
+    iget v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->U:I
 
     if-eq v0, v2, :cond_2
 
-    .line 386
+    .line 372
     invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->c()Ljava/util/LinkedHashSet;
 
     move-result-object v0
@@ -1613,7 +1466,7 @@
 
     move-result v0
 
-    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->I:Ljava/util/List;
+    iget-object v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->P:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -1621,16 +1474,16 @@
 
     add-int/2addr v0, v1
 
-    iget v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->L:I
+    iget v1, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->U:I
 
     if-lt v0, v1, :cond_0
 
-    .line 387
+    .line 373
     invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v1
 
-    iget v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->L:I
+    iget v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->U:I
 
     if-ne v0, v3, :cond_1
 
@@ -1642,7 +1495,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f09048c
+    const v2, 0x7f0a0478
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1655,12 +1508,12 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 392
+    .line 378
     :cond_0
     :goto_1
     return-void
 
-    .line 387
+    .line 373
     :cond_1
     invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
@@ -1670,7 +1523,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f09048e
+    const v2, 0x7f0a047a
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1678,7 +1531,7 @@
 
     new-array v2, v3, [Ljava/lang/Object;
 
-    iget v3, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->L:I
+    iget v3, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->U:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1692,7 +1545,7 @@
 
     goto :goto_0
 
-    .line 391
+    .line 377
     :cond_2
     invoke-super {p0, p1, p2, p3}, Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->onActivityResult(IILandroid/content/Intent;)V
 
@@ -1703,17 +1556,23 @@
     .locals 1
 
     .prologue
-    .line 66
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->getCoreComponent()Lcom/kik/components/CoreComponent;
+    .line 61
+    .line 1088
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikFragmentBase;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
+    invoke-static {v0}, Lkik/android/util/s;->a(Landroid/app/Activity;)Lcom/kik/components/CoreComponent;
+
+    move-result-object v0
+
+    .line 61
     invoke-interface {v0, p0}, Lcom/kik/components/CoreComponent;->a(Lkik/android/chat/fragment/KikPickUsersFragment;)V
 
-    .line 67
+    .line 62
     invoke-super {p0, p1}, Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 68
+    .line 63
     return-void
 .end method
 
@@ -1725,11 +1584,11 @@
 
     const/4 v2, 0x0
 
-    .line 265
+    .line 251
     invoke-super {p0, p1, p2}, Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
-    .line 268
-    iget v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->K:I
+    .line 254
+    iget v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->T:I
 
     if-lez v0, :cond_1
 
@@ -1741,7 +1600,7 @@
 
     move-result v0
 
-    iget-object v3, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->I:Ljava/util/List;
+    iget-object v3, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->P:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -1753,76 +1612,52 @@
 
     move v0, v1
 
-    .line 269
+    .line 255
     :goto_0
-    iget-boolean v3, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->Q:Z
+    iget-boolean v3, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->Z:Z
 
     if-nez v3, :cond_2
 
     if-nez v0, :cond_2
 
-    .line 271
+    .line 257
     :goto_1
     invoke-virtual {p0, v1}, Lkik/android/chat/fragment/KikPickUsersFragment;->b(Z)V
 
-    .line 272
+    .line 258
     invoke-virtual {p0, v1}, Lkik/android/chat/fragment/KikPickUsersFragment;->a(Z)V
 
-    .line 274
-    iget-boolean v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->Q:Z
+    .line 260
+    iget-boolean v0, p0, Lkik/android/chat/fragment/KikPickUsersFragment;->Z:Z
 
     if-eqz v0, :cond_0
 
-    .line 275
-    invoke-virtual {p0, v2}, Lkik/android/chat/fragment/KikPickUsersFragment;->c(Z)V
+    .line 261
+    invoke-virtual {p0, v2}, Lkik/android/chat/fragment/KikPickUsersFragment;->e(Z)V
 
-    .line 277
+    .line 263
     :cond_0
     return-void
 
     :cond_1
     move v0, v2
 
-    .line 268
+    .line 254
     goto :goto_0
 
     :cond_2
     move v1, v2
 
-    .line 269
+    .line 255
     goto :goto_1
 .end method
 
-.method protected screenOpenedEvent()Lcom/kik/metrics/b/t;
+.method protected final v()I
     .locals 1
 
     .prologue
-    .line 74
-    invoke-static {}, Lcom/kik/metrics/b/bc;->b()Lcom/kik/metrics/b/bc$a;
+    .line 327
+    const/16 v0, 0x10
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/kik/metrics/b/bc$a;->a()Lcom/kik/metrics/b/bc;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public showKeyBoard(Landroid/view/View;Z)V
-    .locals 0
-    .param p1    # Landroid/view/View;
-        .annotation runtime Ljavax/annotation/Nullable;
-        .end annotation
-    .end param
-
-    .prologue
-    .line 319
-    invoke-super {p0, p1, p2}, Lkik/android/chat/fragment/KikMultiselectContactsListFragment;->showKeyBoard(Landroid/view/View;Z)V
-
-    .line 320
-    invoke-direct {p0}, Lkik/android/chat/fragment/KikPickUsersFragment;->P()V
-
-    .line 321
-    return-void
+    return v0
 .end method

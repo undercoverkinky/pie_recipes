@@ -3,18 +3,12 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x12
-.end annotation
-
-
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 27
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,14 +30,14 @@
     .end annotation
 
     .prologue
-    .line 39
+    .line 35
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->findAccessibilityNodeInfosByViewId(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 40
+    .line 36
     check-cast v0, Ljava/util/List;
 
     return-object v0
@@ -53,7 +47,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 48
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getTextSelectionEnd()I
@@ -67,7 +61,7 @@
     .locals 1
 
     .prologue
-    .line 48
+    .line 44
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getTextSelectionStart()I
@@ -81,7 +75,7 @@
     .locals 1
 
     .prologue
-    .line 34
+    .line 30
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getViewIdResourceName()Ljava/lang/String;
@@ -95,7 +89,7 @@
     .locals 1
 
     .prologue
-    .line 56
+    .line 52
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isEditable()Z
@@ -109,7 +103,7 @@
     .locals 1
 
     .prologue
-    .line 64
+    .line 60
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->refresh()Z
@@ -123,12 +117,12 @@
     .locals 0
 
     .prologue
-    .line 60
+    .line 56
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setEditable(Z)V
 
-    .line 61
+    .line 57
     return-void
 .end method
 
@@ -136,12 +130,12 @@
     .locals 0
 
     .prologue
-    .line 44
+    .line 40
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0, p1, p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->setTextSelection(II)V
 
-    .line 45
+    .line 41
     return-void
 .end method
 
@@ -149,11 +143,11 @@
     .locals 0
 
     .prologue
-    .line 30
+    .line 26
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setViewIdResourceName(Ljava/lang/String;)V
 
-    .line 31
+    .line 27
     return-void
 .end method

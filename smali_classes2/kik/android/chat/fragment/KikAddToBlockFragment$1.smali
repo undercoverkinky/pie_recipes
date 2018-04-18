@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 41
+    .line 38
     iput-object p1, p0, Lkik/android/chat/fragment/KikAddToBlockFragment$1;->a:Lkik/android/chat/fragment/KikAddToBlockFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,14 +49,14 @@
     .end annotation
 
     .prologue
-    .line 46
+    .line 43
     invoke-virtual {p1, p3}, Landroid/widget/AdapterView;->getItemAtPosition(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/database/Cursor;
 
-    .line 47
+    .line 44
     const-string v1, "suggest_intent_data_id"
 
     invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -67,7 +67,7 @@
 
     move-result-object v1
 
-    .line 48
+    .line 45
     const-string v2, "suggest_text_1"
 
     invoke-interface {v0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -78,11 +78,11 @@
 
     move-result-object v0
 
-    .line 49
+    .line 46
     iget-object v2, p0, Lkik/android/chat/fragment/KikAddToBlockFragment$1;->a:Lkik/android/chat/fragment/KikAddToBlockFragment;
 
     invoke-static {v2, v1, v0}, Lkik/android/chat/fragment/KikAddToBlockFragment;->a(Lkik/android/chat/fragment/KikAddToBlockFragment;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 50
+    .line 47
     return-void
 .end method

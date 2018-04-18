@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;->b()V
+    value = Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;->c()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 119
+    .line 110
     iput-object p1, p0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment$2;->a:Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,13 +40,13 @@
     .locals 2
 
     .prologue
-    .line 123
+    .line 114
     iget-object v0, p0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment$2;->a:Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 124
+    .line 115
     return-void
 .end method

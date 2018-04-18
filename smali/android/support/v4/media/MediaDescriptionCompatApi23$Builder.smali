@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 30
+    .line 26
     invoke-direct {p0}, Landroid/support/v4/media/MediaDescriptionCompatApi21$Builder;-><init>()V
 
     return-void
@@ -29,11 +29,11 @@
     .locals 0
 
     .prologue
-    .line 32
+    .line 28
     check-cast p0, Landroid/media/MediaDescription$Builder;
 
     invoke-virtual {p0, p1}, Landroid/media/MediaDescription$Builder;->setMediaUri(Landroid/net/Uri;)Landroid/media/MediaDescription$Builder;
 
-    .line 33
+    .line 29
     return-void
 .end method

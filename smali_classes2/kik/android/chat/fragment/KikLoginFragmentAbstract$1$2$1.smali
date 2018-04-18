@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/fragment/KikLoginFragmentAbstract$1$2$1;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Ljava/lang/Boolean;",
         ">;"
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 354
+    .line 341
     iput-object p1, p0, Lkik/android/chat/fragment/KikLoginFragmentAbstract$1$2$1;->a:Lkik/android/chat/fragment/KikLoginFragmentAbstract$1$2;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -46,10 +46,10 @@
     .locals 3
 
     .prologue
-    .line 354
+    .line 341
     check-cast p1, Ljava/lang/Boolean;
 
-    .line 1358
+    .line 1345
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
@@ -72,7 +72,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1360
+    .line 1347
     :cond_0
     iget-object v0, p0, Lkik/android/chat/fragment/KikLoginFragmentAbstract$1$2$1;->a:Lkik/android/chat/fragment/KikLoginFragmentAbstract$1$2;
 
@@ -90,9 +90,9 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikLoginFragmentAbstract;->startFragmentForResult(Lkik/android/util/ad;)Lcom/kik/events/Promise;
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikLoginFragmentAbstract;->a(Lkik/android/util/aa;)Lcom/kik/events/Promise;
 
-    .line 1365
+    .line 1352
     :goto_0
     iget-object v0, p0, Lkik/android/chat/fragment/KikLoginFragmentAbstract$1$2$1;->a:Lkik/android/chat/fragment/KikLoginFragmentAbstract$1$2;
 
@@ -100,12 +100,12 @@
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikLoginFragmentAbstract$1;->a:Lkik/android/chat/fragment/KikLoginFragmentAbstract;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/KikLoginFragmentAbstract;->finish()V
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikLoginFragmentAbstract;->D()V
 
-    .line 354
+    .line 341
     return-void
 
-    .line 1363
+    .line 1350
     :cond_1
     iget-object v0, p0, Lkik/android/chat/fragment/KikLoginFragmentAbstract$1$2$1;->a:Lkik/android/chat/fragment/KikLoginFragmentAbstract$1$2;
 
@@ -129,7 +129,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikLoginFragmentAbstract;->startFragmentForResult(Lkik/android/util/ad;)Lcom/kik/events/Promise;
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikLoginFragmentAbstract;->a(Lkik/android/util/aa;)Lcom/kik/events/Promise;
 
     goto :goto_0
 .end method
@@ -138,7 +138,7 @@
     .locals 3
 
     .prologue
-    .line 371
+    .line 358
     iget-object v0, p0, Lkik/android/chat/fragment/KikLoginFragmentAbstract$1$2$1;->a:Lkik/android/chat/fragment/KikLoginFragmentAbstract$1$2;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikLoginFragmentAbstract$1$2;->b:Lkik/android/chat/fragment/KikLoginFragmentAbstract$1;
@@ -161,17 +161,17 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikLoginFragmentAbstract;->startFragmentForResult(Lkik/android/util/ad;)Lcom/kik/events/Promise;
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikLoginFragmentAbstract;->a(Lkik/android/util/aa;)Lcom/kik/events/Promise;
 
-    .line 372
+    .line 359
     iget-object v0, p0, Lkik/android/chat/fragment/KikLoginFragmentAbstract$1$2$1;->a:Lkik/android/chat/fragment/KikLoginFragmentAbstract$1$2;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikLoginFragmentAbstract$1$2;->b:Lkik/android/chat/fragment/KikLoginFragmentAbstract$1;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikLoginFragmentAbstract$1;->a:Lkik/android/chat/fragment/KikLoginFragmentAbstract;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/KikLoginFragmentAbstract;->finish()V
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikLoginFragmentAbstract;->D()V
 
-    .line 373
+    .line 360
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/android/widget/bk;
+.implements Lkik/android/widget/bv;
 
 
 # annotations
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 57
+    .line 53
     iput-object p1, p0, Lkik/android/chat/vm/widget/StickerWidgetViewModel$1;->a:Lkik/android/chat/vm/widget/StickerWidgetViewModel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,10 +40,10 @@
     .locals 2
 
     .prologue
-    .line 61
+    .line 57
     iget-object v0, p0, Lkik/android/chat/vm/widget/StickerWidgetViewModel$1;->a:Lkik/android/chat/vm/widget/StickerWidgetViewModel;
 
-    invoke-static {v0}, Lkik/android/chat/vm/widget/StickerWidgetViewModel;->e(Lkik/android/chat/vm/widget/StickerWidgetViewModel;)J
+    invoke-static {v0}, Lkik/android/chat/vm/widget/StickerWidgetViewModel;->a(Lkik/android/chat/vm/widget/StickerWidgetViewModel;)J
 
     move-result-wide v0
 
@@ -54,11 +54,11 @@
     .locals 1
 
     .prologue
-    .line 67
+    .line 63
     iget-object v0, p0, Lkik/android/chat/vm/widget/StickerWidgetViewModel$1;->a:Lkik/android/chat/vm/widget/StickerWidgetViewModel;
 
     invoke-static {v0, p1, p2}, Lkik/android/chat/vm/widget/StickerWidgetViewModel;->a(Lkik/android/chat/vm/widget/StickerWidgetViewModel;J)J
 
-    .line 68
+    .line 64
     return-void
 .end method

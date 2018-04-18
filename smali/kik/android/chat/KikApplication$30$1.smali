@@ -18,20 +18,24 @@
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/Integer;
+.field final synthetic a:J
 
-.field final synthetic b:Lkik/android/chat/KikApplication$30;
+.field final synthetic b:Lkik/core/a/a/a$c;
+
+.field final synthetic c:Lkik/android/chat/KikApplication$30;
 
 
 # direct methods
-.method constructor <init>(Lkik/android/chat/KikApplication$30;Ljava/lang/Integer;)V
+.method constructor <init>(Lkik/android/chat/KikApplication$30;JLkik/core/a/a/a$c;)V
     .locals 0
 
     .prologue
-    .line 479
-    iput-object p1, p0, Lkik/android/chat/KikApplication$30$1;->b:Lkik/android/chat/KikApplication$30;
+    .line 385
+    iput-object p1, p0, Lkik/android/chat/KikApplication$30$1;->c:Lkik/android/chat/KikApplication$30;
 
-    iput-object p2, p0, Lkik/android/chat/KikApplication$30$1;->a:Ljava/lang/Integer;
+    iput-wide p2, p0, Lkik/android/chat/KikApplication$30$1;->a:J
+
+    iput-object p4, p0, Lkik/android/chat/KikApplication$30$1;->b:Lkik/core/a/a/a$c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,8 +48,19 @@
     .locals 10
 
     .prologue
-    .line 483
-    invoke-static {}, Lkik/core/util/v;->b()J
+    const/high16 v9, 0x447a0000    # 1000.0f
+
+    .line 389
+    invoke-static {}, Lkik/core/util/x;->b()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v8
+
+    .line 390
+    invoke-static {}, Lkik/core/util/x;->d()J
 
     move-result-wide v0
 
@@ -53,152 +68,125 @@
 
     move-result-object v0
 
-    .line 484
-    invoke-static {}, Lkik/core/util/v;->d()J
+    .line 391
+    iget-wide v2, p0, Lkik/android/chat/KikApplication$30$1;->a:J
 
-    move-result-wide v2
+    iget-object v1, p0, Lkik/android/chat/KikApplication$30$1;->b:Lkik/core/a/a/a$c;
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-wide v4, v1, Lkik/core/a/a/a$c;->b:J
 
-    move-result-object v1
+    sub-long v4, v2, v4
 
-    .line 486
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
+    .line 393
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v2
+    move-result-wide v0
 
-    const-wide/16 v4, -0x1
+    const-wide/16 v2, -0x1
 
-    cmp-long v1, v2, v4
+    cmp-long v0, v0, v2
 
-    if-nez v1, :cond_0
+    if-nez v0, :cond_0
 
-    .line 487
-    iget-object v1, p0, Lkik/android/chat/KikApplication$30$1;->b:Lkik/android/chat/KikApplication$30;
+    .line 394
+    iget-object v0, p0, Lkik/android/chat/KikApplication$30$1;->c:Lkik/android/chat/KikApplication$30;
 
-    iget-object v1, v1, Lkik/android/chat/KikApplication$30;->a:Lkik/android/chat/KikApplication;
+    iget-object v0, v0, Lkik/android/chat/KikApplication$30;->a:Lkik/android/chat/KikApplication;
 
-    invoke-static {v1}, Lkik/android/chat/KikApplication;->f(Lkik/android/chat/KikApplication;)Lkik/android/a/b;
+    invoke-static {v0}, Lkik/android/chat/KikApplication;->c(Lkik/android/chat/KikApplication;)Lkik/android/a/b;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1}, Lkik/android/a/b;->c()Lcom/kik/clientmetrics/f;
+    invoke-virtual {v0}, Lkik/android/a/b;->c()Lcom/kik/clientmetrics/f;
 
-    move-result-object v1
+    move-result-object v0
 
-    sget-object v2, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->OPEN_CONVERSATIONS_CHANGED:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
+    sget-object v1, Lcom/kik/clientmetrics/model/Clientmetrics$ClientPacketEventType;->MESSAGE_SENT_CONFIRMED:Lcom/kik/clientmetrics/model/Clientmetrics$ClientPacketEventType;
 
-    const-string v3, "c"
+    iget-object v2, p0, Lkik/android/chat/KikApplication$30$1;->b:Lkik/core/a/a/a$c;
 
-    iget-object v4, p0, Lkik/android/chat/KikApplication$30$1;->a:Ljava/lang/Integer;
+    iget-object v2, v2, Lkik/core/a/a/a$c;->a:Ljava/lang/String;
 
-    .line 488
-    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
-
-    move-result v4
-
-    int-to-long v4, v4
+    const-string v3, "t"
 
     const-string v6, "ctime"
 
     const-string v7, "true"
 
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+    .line 395
+    invoke-virtual {v8}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v8
 
-    invoke-virtual/range {v1 .. v9}, Lcom/kik/clientmetrics/f;->a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;J)V
+    invoke-virtual/range {v0 .. v9}, Lcom/kik/clientmetrics/f;->a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientPacketEventType;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;J)V
 
-    .line 496
+    .line 405
     :goto_0
-    iget-object v0, p0, Lkik/android/chat/KikApplication$30$1;->b:Lkik/android/chat/KikApplication$30;
-
-    iget-object v0, v0, Lkik/android/chat/KikApplication$30;->a:Lkik/android/chat/KikApplication;
-
-    iget-object v0, v0, Lkik/android/chat/KikApplication;->a:Lcom/kik/android/Mixpanel;
-
-    const-string v1, "Chat List Size"
-
-    iget-object v2, p0, Lkik/android/chat/KikApplication$30$1;->b:Lkik/android/chat/KikApplication$30;
-
-    iget-object v2, v2, Lkik/android/chat/KikApplication$30;->a:Lkik/android/chat/KikApplication;
-
-    invoke-static {v2}, Lkik/android/chat/KikApplication;->d(Lkik/android/chat/KikApplication;)Lkik/core/interfaces/IConversation;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Lkik/core/interfaces/IConversation;->G()Ljava/util/List;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel;->a(Ljava/lang/String;I)Lcom/kik/android/Mixpanel;
-
-    .line 497
-    iget-object v0, p0, Lkik/android/chat/KikApplication$30$1;->b:Lkik/android/chat/KikApplication$30;
-
-    iget-object v0, v0, Lkik/android/chat/KikApplication$30;->a:Lkik/android/chat/KikApplication;
-
-    iget-object v0, v0, Lkik/android/chat/KikApplication;->a:Lcom/kik/android/Mixpanel;
-
-    const-string v1, "New Chat List Size"
-
-    iget-object v2, p0, Lkik/android/chat/KikApplication$30$1;->b:Lkik/android/chat/KikApplication$30;
-
-    iget-object v2, v2, Lkik/android/chat/KikApplication$30;->a:Lkik/android/chat/KikApplication;
-
-    invoke-static {v2}, Lkik/android/chat/KikApplication;->d(Lkik/android/chat/KikApplication;)Lkik/core/interfaces/IConversation;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Lkik/core/interfaces/IConversation;->I()Ljava/util/List;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel;->a(Ljava/lang/String;I)Lcom/kik/android/Mixpanel;
-
-    .line 498
     return-void
 
-    .line 492
+    .line 398
     :cond_0
-    iget-object v1, p0, Lkik/android/chat/KikApplication$30$1;->b:Lkik/android/chat/KikApplication$30;
+    iget-object v0, p0, Lkik/android/chat/KikApplication$30$1;->c:Lkik/android/chat/KikApplication$30;
 
-    iget-object v1, v1, Lkik/android/chat/KikApplication$30;->a:Lkik/android/chat/KikApplication;
+    iget-object v0, v0, Lkik/android/chat/KikApplication$30;->a:Lkik/android/chat/KikApplication;
 
-    invoke-static {v1}, Lkik/android/chat/KikApplication;->f(Lkik/android/chat/KikApplication;)Lkik/android/a/b;
+    invoke-static {v0}, Lkik/android/chat/KikApplication;->c(Lkik/android/chat/KikApplication;)Lkik/android/a/b;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1}, Lkik/android/a/b;->c()Lcom/kik/clientmetrics/f;
+    invoke-virtual {v0}, Lkik/android/a/b;->c()Lcom/kik/clientmetrics/f;
 
-    move-result-object v1
+    move-result-object v0
 
-    sget-object v2, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->OPEN_CONVERSATIONS_CHANGED:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
+    sget-object v1, Lcom/kik/clientmetrics/model/Clientmetrics$ClientPacketEventType;->MESSAGE_SENT_CONFIRMED:Lcom/kik/clientmetrics/model/Clientmetrics$ClientPacketEventType;
 
-    const-string v3, "c"
+    iget-object v2, p0, Lkik/android/chat/KikApplication$30$1;->b:Lkik/core/a/a/a$c;
 
-    iget-object v4, p0, Lkik/android/chat/KikApplication$30$1;->a:Ljava/lang/Integer;
+    iget-object v2, v2, Lkik/core/a/a/a$c;->a:Ljava/lang/String;
 
-    .line 493
-    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
+    const-string v3, "t"
 
-    move-result v4
-
-    int-to-long v4, v4
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+    .line 400
+    invoke-static {}, Lkik/core/util/x;->b()J
 
     move-result-wide v6
 
-    invoke-virtual/range {v1 .. v7}, Lcom/kik/clientmetrics/f;->a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;Ljava/lang/String;JJ)V
+    .line 399
+    invoke-virtual/range {v0 .. v7}, Lcom/kik/clientmetrics/f;->a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientPacketEventType;Ljava/lang/String;Ljava/lang/String;JJ)V
+
+    .line 402
+    iget-object v0, p0, Lkik/android/chat/KikApplication$30$1;->c:Lkik/android/chat/KikApplication$30;
+
+    iget-object v0, v0, Lkik/android/chat/KikApplication$30;->a:Lkik/android/chat/KikApplication;
+
+    iget-object v0, v0, Lkik/android/chat/KikApplication;->a:Lcom/kik/android/Mixpanel;
+
+    const-string v1, "95% Message Send Time"
+
+    long-to-float v2, v4
+
+    div-float/2addr v2, v9
+
+    const v3, 0x3f733333    # 0.95f
+
+    invoke-virtual {v0, v1, v2, v3}, Lcom/kik/android/Mixpanel;->a(Ljava/lang/String;FF)Lcom/kik/android/Mixpanel;
+
+    .line 403
+    iget-object v0, p0, Lkik/android/chat/KikApplication$30$1;->c:Lkik/android/chat/KikApplication$30;
+
+    iget-object v0, v0, Lkik/android/chat/KikApplication$30;->a:Lkik/android/chat/KikApplication;
+
+    iget-object v0, v0, Lkik/android/chat/KikApplication;->a:Lcom/kik/android/Mixpanel;
+
+    const-string v1, "50% Message Send Time"
+
+    long-to-float v2, v4
+
+    div-float/2addr v2, v9
+
+    const/high16 v3, 0x3f000000    # 0.5f
+
+    invoke-virtual {v0, v1, v2, v3}, Lcom/kik/android/Mixpanel;->a(Ljava/lang/String;FF)Lcom/kik/android/Mixpanel;
 
     goto :goto_0
 .end method

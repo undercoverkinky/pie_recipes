@@ -1,5 +1,5 @@
 .class final Lcom/kik/cards/web/usermedia/PhotoPlugin$1$1;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Ljava/util/List",
         "<",
@@ -41,7 +41,7 @@
 
     iput-object p2, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$1$1;->a:Ljava/lang/String;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -108,15 +108,11 @@
     :cond_0
     iget-object v0, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$1$1;->b:Lcom/kik/cards/web/usermedia/PhotoPlugin$1;
 
-    iget-object v0, v0, Lcom/kik/cards/web/usermedia/PhotoPlugin$1;->i:Lcom/kik/cards/web/usermedia/PhotoPlugin;
+    iget-object v0, v0, Lcom/kik/cards/web/usermedia/PhotoPlugin$1;->a:Lcom/kik/cards/web/plugin/a;
 
-    iget-object v3, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$1$1;->b:Lcom/kik/cards/web/usermedia/PhotoPlugin$1;
+    const/16 v3, 0xc8
 
-    iget-object v3, v3, Lcom/kik/cards/web/usermedia/PhotoPlugin$1;->a:Lcom/kik/cards/web/plugin/a;
-
-    const/16 v4, 0xc8
-
-    invoke-virtual {v0, v3, v4, v1}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->fireFinish(Lcom/kik/cards/web/plugin/a;ILjava/util/List;)V
+    invoke-static {v0, v3, v1}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->a(Lcom/kik/cards/web/plugin/a;ILjava/util/List;)V
 
     .line 1341
     new-instance v0, Lcom/kik/cards/web/usermedia/PhotoPlugin$c;
@@ -152,11 +148,11 @@
 
     iget-object v1, v1, Lcom/kik/cards/web/usermedia/PhotoPlugin$1;->i:Lcom/kik/cards/web/usermedia/PhotoPlugin;
 
-    invoke-static {v1}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->access$300(Lcom/kik/cards/web/usermedia/PhotoPlugin;)Lcom/kik/util/cv;
+    invoke-static {v1}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->b(Lcom/kik/cards/web/usermedia/PhotoPlugin;)Lcom/kik/util/br;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/kik/util/cv;->a(Ljava/util/concurrent/Callable;)Lcom/kik/events/Promise;
+    invoke-virtual {v1, v0}, Lcom/kik/util/br;->a(Ljava/util/concurrent/Callable;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -165,53 +161,45 @@
 
     invoke-direct {v1, p0}, Lcom/kik/cards/web/usermedia/PhotoPlugin$1$1$1;-><init>(Lcom/kik/cards/web/usermedia/PhotoPlugin$1$1;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
 
     .line 328
     return-void
 .end method
 
 .method public final b(Ljava/lang/Throwable;)V
-    .locals 4
+    .locals 3
 
     .prologue
     .line 380
     iget-object v0, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$1$1;->b:Lcom/kik/cards/web/usermedia/PhotoPlugin$1;
 
-    iget-object v0, v0, Lcom/kik/cards/web/usermedia/PhotoPlugin$1;->i:Lcom/kik/cards/web/usermedia/PhotoPlugin;
+    iget-object v0, v0, Lcom/kik/cards/web/usermedia/PhotoPlugin$1;->a:Lcom/kik/cards/web/plugin/a;
 
-    iget-object v1, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$1$1;->b:Lcom/kik/cards/web/usermedia/PhotoPlugin$1;
+    const/16 v1, 0x1f4
 
-    iget-object v1, v1, Lcom/kik/cards/web/usermedia/PhotoPlugin$1;->a:Lcom/kik/cards/web/plugin/a;
+    const/4 v2, 0x0
 
-    const/16 v2, 0x1f4
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, v2, v3}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->fireFinish(Lcom/kik/cards/web/plugin/a;ILjava/util/List;)V
+    invoke-static {v0, v1, v2}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->a(Lcom/kik/cards/web/plugin/a;ILjava/util/List;)V
 
     .line 381
     return-void
 .end method
 
 .method public final c()V
-    .locals 4
+    .locals 3
 
     .prologue
     .line 372
     iget-object v0, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$1$1;->b:Lcom/kik/cards/web/usermedia/PhotoPlugin$1;
 
-    iget-object v0, v0, Lcom/kik/cards/web/usermedia/PhotoPlugin$1;->i:Lcom/kik/cards/web/usermedia/PhotoPlugin;
+    iget-object v0, v0, Lcom/kik/cards/web/usermedia/PhotoPlugin$1;->a:Lcom/kik/cards/web/plugin/a;
 
-    iget-object v1, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$1$1;->b:Lcom/kik/cards/web/usermedia/PhotoPlugin$1;
+    const/16 v1, 0xc8
 
-    iget-object v1, v1, Lcom/kik/cards/web/usermedia/PhotoPlugin$1;->a:Lcom/kik/cards/web/plugin/a;
+    const/4 v2, 0x0
 
-    const/16 v2, 0xc8
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, v2, v3}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->fireFinish(Lcom/kik/cards/web/plugin/a;ILjava/util/List;)V
+    invoke-static {v0, v1, v2}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->a(Lcom/kik/cards/web/plugin/a;ILjava/util/List;)V
 
     .line 373
     return-void

@@ -1,20 +1,27 @@
-.class public Lcom/google/android/gms/internal/zzy;
-.super Lcom/google/android/gms/internal/zzaa;
+.class public interface abstract Lcom/google/android/gms/internal/zzy;
+.super Ljava/lang/Object;
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+# virtual methods
+.method public abstract zza(Lcom/google/android/gms/internal/zzk;Ljava/util/Map;)Lorg/apache/http/HttpResponse;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/android/gms/internal/zzk",
+            "<*>;",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;)",
+            "Lorg/apache/http/HttpResponse;"
+        }
+    .end annotation
 
-    invoke-direct {p0}, Lcom/google/android/gms/internal/zzaa;-><init>()V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lcom/google/android/gms/internal/zzn;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/google/android/gms/internal/zzaa;-><init>(Lcom/google/android/gms/internal/zzn;)V
-
-    return-void
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;,
+            Lcom/google/android/gms/internal/zza;
+        }
+    .end annotation
 .end method

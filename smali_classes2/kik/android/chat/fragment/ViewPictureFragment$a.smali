@@ -1,5 +1,5 @@
 .class public final Lkik/android/chat/fragment/ViewPictureFragment$a;
-.super Lkik/android/util/ad;
+.super Lkik/android/util/aa;
 .source "SourceFile"
 
 
@@ -19,8 +19,8 @@
     .locals 0
 
     .prologue
-    .line 1240
-    invoke-direct {p0}, Lkik/android/util/ad;-><init>()V
+    .line 1174
+    invoke-direct {p0}, Lkik/android/util/aa;-><init>()V
 
     return-void
 .end method
@@ -31,12 +31,12 @@
     .locals 1
 
     .prologue
-    .line 1319
+    .line 1264
     const-string v0, "CONTENT_MESSAGE"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/ViewPictureFragment$a;->a(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 1320
+    .line 1265
     return-object p0
 .end method
 
@@ -44,12 +44,25 @@
     .locals 1
 
     .prologue
-    .line 1244
+    .line 1178
     const-string v0, "JID"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/ViewPictureFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1245
+    .line 1179
+    return-object p0
+.end method
+
+.method public final a([B)Lkik/android/chat/fragment/ViewPictureFragment$a;
+    .locals 1
+
+    .prologue
+    .line 1253
+    const-string v0, "MESSAGING_KEY"
+
+    invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/ViewPictureFragment$a;->a(Ljava/lang/String;[B)V
+
+    .line 1254
     return-object p0
 .end method
 
@@ -57,14 +70,14 @@
     .locals 2
 
     .prologue
-    .line 1277
+    .line 1211
     const-string v0, "VIEW_PICTURE_TYPE"
 
     const/4 v1, 0x3
 
     invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment$a;->a(Ljava/lang/String;I)V
 
-    .line 1278
+    .line 1212
     return-object p0
 .end method
 
@@ -72,12 +85,12 @@
     .locals 1
 
     .prologue
-    .line 1255
+    .line 1189
     const-string v0, "PREVIEW"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/ViewPictureFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1256
+    .line 1190
     return-object p0
 .end method
 
@@ -85,14 +98,14 @@
     .locals 2
 
     .prologue
-    .line 1283
+    .line 1217
     const-string v0, "VIEW_PICTURE_TYPE"
 
     const/4 v1, 0x7
 
     invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment$a;->a(Ljava/lang/String;I)V
 
-    .line 1284
+    .line 1218
     return-object p0
 .end method
 
@@ -100,12 +113,12 @@
     .locals 1
 
     .prologue
-    .line 1266
+    .line 1200
     const-string v0, "PHOTOURL"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/ViewPictureFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1267
+    .line 1201
     return-object p0
 .end method
 
@@ -113,14 +126,14 @@
     .locals 2
 
     .prologue
-    .line 1295
+    .line 1229
     const-string v0, "VIEW_PICTURE_TYPE"
 
     const/4 v1, 0x4
 
     invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment$a;->a(Ljava/lang/String;I)V
 
-    .line 1296
+    .line 1230
     return-object p0
 .end method
 
@@ -128,14 +141,14 @@
     .locals 2
 
     .prologue
-    .line 1301
+    .line 1235
     const-string v0, "VIEW_PICTURE_TYPE"
 
     const/4 v1, 0x2
 
     invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment$a;->a(Ljava/lang/String;I)V
 
-    .line 1302
+    .line 1236
     return-object p0
 .end method
 
@@ -143,20 +156,20 @@
     .locals 2
 
     .prologue
-    .line 1307
+    .line 1241
     const-string v0, "VIEW_PICTURE_TYPE"
 
     const/4 v1, 0x5
 
     invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment$a;->a(Ljava/lang/String;I)V
 
-    .line 1308
+    .line 1242
     const-string v0, "ALLOW_TO_ATTACH_MESSAGE"
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment$a;->b(Ljava/lang/String;Z)V
 
-    .line 1309
+    .line 1243
     return-object p0
 .end method

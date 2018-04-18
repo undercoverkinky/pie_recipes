@@ -13,7 +13,7 @@
         ">",
         "Ljava/util/LinkedHashMap",
         "<TT;",
-        "Lcom/kik/cache/b",
+        "Lcom/kik/cache/e",
         "<TU;",
         "Ljava/lang/Long;",
         ">;>;"
@@ -106,7 +106,7 @@
             "(",
             "Ljava/util/Map$Entry",
             "<TT;",
-            "Lcom/kik/cache/b",
+            "Lcom/kik/cache/e",
             "<TU;",
             "Ljava/lang/Long;",
             ">;>;)Z"
@@ -145,9 +145,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/kik/cache/b;
+    check-cast v0, Lcom/kik/cache/e;
 
-    invoke-virtual {v0}, Lcom/kik/cache/b;->a()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/kik/cache/e;->a()Ljava/lang/Object;
 
     move-result-object v0
 

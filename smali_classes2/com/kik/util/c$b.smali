@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/lang/Runnable;
-.implements Lrx/k;
+.implements Lrx/j;
 
 
 # annotations
@@ -19,7 +19,7 @@
 
 
 # instance fields
-.field private final a:Lrx/functions/a;
+.field private final a:Lrx/b/a;
 
 .field private final b:Landroid/os/Handler;
 
@@ -27,7 +27,7 @@
 
 
 # direct methods
-.method constructor <init>(Lrx/functions/a;Landroid/os/Handler;)V
+.method constructor <init>(Lrx/b/a;Landroid/os/Handler;)V
     .locals 0
 
     .prologue
@@ -35,7 +35,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 113
-    iput-object p1, p0, Lcom/kik/util/c$b;->a:Lrx/functions/a;
+    iput-object p1, p0, Lcom/kik/util/c$b;->a:Lrx/b/a;
 
     .line 114
     iput-object p2, p0, Lcom/kik/util/c$b;->b:Landroid/os/Handler;
@@ -62,9 +62,9 @@
     .prologue
     .line 121
     :try_start_0
-    iget-object v0, p0, Lcom/kik/util/c$b;->a:Lrx/functions/a;
+    iget-object v0, p0, Lcom/kik/util/c$b;->a:Lrx/b/a;
 
-    invoke-interface {v0}, Lrx/functions/a;->a()V
+    invoke-interface {v0}, Lrx/b/a;->a()V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -92,11 +92,11 @@
 
     .line 133
     :goto_1
-    invoke-static {}, Lrx/d/f;->a()Lrx/d/f;
+    invoke-static {}, Lrx/e/f;->a()Lrx/e/f;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lrx/d/f;->b()Lrx/d/b;
+    invoke-virtual {v1}, Lrx/e/f;->b()Lrx/e/b;
 
     .line 134
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;

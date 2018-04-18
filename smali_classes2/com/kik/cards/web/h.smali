@@ -3,23 +3,9 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/kik/cards/web/h$a;
-    }
-.end annotation
-
-
 # virtual methods
-.method public abstract getMetadata()Lcom/kik/events/Promise;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/kik/events/Promise",
-            "<",
-            "Lcom/kik/cards/web/h$a;",
-            ">;"
-        }
-    .end annotation
+.method public abstract a(Landroid/view/View;Landroid/webkit/WebChromeClient$CustomViewCallback;)V
+.end method
+
+.method public abstract l()V
 .end method

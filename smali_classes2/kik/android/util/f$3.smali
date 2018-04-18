@@ -21,29 +21,29 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 105
+    .line 102
     invoke-direct {p0}, Landroid/graphics/Paint;-><init>()V
 
-    .line 107
+    .line 104
     invoke-virtual {p0, v0}, Lkik/android/util/f$3;->setAntiAlias(Z)V
 
-    .line 108
+    .line 105
     invoke-virtual {p0, v0}, Lkik/android/util/f$3;->setDither(Z)V
 
-    .line 109
+    .line 106
     invoke-virtual {p0, v0}, Lkik/android/util/f$3;->setFilterBitmap(Z)V
 
-    .line 110
+    .line 107
     sget-object v0, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {p0, v0}, Lkik/android/util/f$3;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 111
+    .line 108
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lkik/android/util/f$3;->setColor(I)V
 
-    .line 112
+    .line 109
     new-instance v0, Landroid/graphics/PorterDuffXfermode;
 
     sget-object v1, Landroid/graphics/PorterDuff$Mode;->CLEAR:Landroid/graphics/PorterDuff$Mode;
@@ -52,6 +52,6 @@
 
     invoke-virtual {p0, v0}, Lkik/android/util/f$3;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 113
+    .line 110
     return-void
 .end method

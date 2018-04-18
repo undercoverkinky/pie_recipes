@@ -1,5 +1,5 @@
 .class Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;
-.super Landroid/support/v7/widget/RecyclerView$Adapter;
+.super Landroid/widget/BaseAdapter;
 .source "SourceFile"
 
 
@@ -11,15 +11,6 @@
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x2
     name = "NavigationMenuAdapter"
-.end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Landroid/support/v7/widget/RecyclerView$Adapter",
-        "<",
-        "Landroid/support/design/internal/NavigationMenuPresenter$ViewHolder;",
-        ">;"
-    }
 .end annotation
 
 
@@ -37,7 +28,7 @@
     .end annotation
 .end field
 
-.field private c:Landroid/support/v7/view/menu/MenuItemImpl;
+.field private c:Landroid/graphics/drawable/ColorDrawable;
 
 .field private d:Z
 
@@ -47,800 +38,621 @@
     .locals 1
 
     .prologue
-    .line 366
+    .line 254
     iput-object p1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
 
-    invoke-direct {p0}, Landroid/support/v7/widget/RecyclerView$Adapter;-><init>()V
+    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 362
+    .line 250
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
 
-    .line 367
-    invoke-direct {p0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->c()V
+    .line 255
+    invoke-direct {p0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b()V
 
-    .line 368
+    .line 256
     return-void
 .end method
 
 .method private a(II)V
-    .locals 2
+    .locals 3
 
     .prologue
-    .line 539
+    .line 403
     :goto_0
-    if-ge p1, p2, :cond_0
+    if-ge p1, p2, :cond_2
 
-    .line 540
+    .line 404
     iget-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;
+    check-cast v0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;
 
-    .line 541
-    const/4 v1, 0x1
+    invoke-virtual {v0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;->d()Landroid/support/v7/internal/view/menu/MenuItemImpl;
 
-    iput-boolean v1, v0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;->a:Z
+    move-result-object v0
 
-    .line 539
+    .line 405
+    invoke-interface {v0}, Landroid/view/MenuItem;->getIcon()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    if-nez v1, :cond_1
+
+    .line 406
+    iget-object v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->c:Landroid/graphics/drawable/ColorDrawable;
+
+    if-nez v1, :cond_0
+
+    .line 407
+    new-instance v1, Landroid/graphics/drawable/ColorDrawable;
+
+    const v2, 0x106000d
+
+    invoke-direct {v1, v2}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+
+    iput-object v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->c:Landroid/graphics/drawable/ColorDrawable;
+
+    .line 409
+    :cond_0
+    iget-object v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->c:Landroid/graphics/drawable/ColorDrawable;
+
+    invoke-interface {v0, v1}, Landroid/view/MenuItem;->setIcon(Landroid/graphics/drawable/Drawable;)Landroid/view/MenuItem;
+
+    .line 403
+    :cond_1
     add-int/lit8 p1, p1, 0x1
 
     goto :goto_0
 
-    .line 543
-    :cond_0
+    .line 412
+    :cond_2
     return-void
 .end method
 
-.method private c()V
+.method private b()V
     .locals 14
 
     .prologue
-    .line 469
+    const/4 v2, 0x1
+
+    const/4 v7, 0x0
+
+    .line 348
     iget-boolean v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->d:Z
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    .line 536
-    :goto_0
+    .line 400
+    :cond_0
     return-void
 
-    .line 472
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->d:Z
-
-    .line 473
+    .line 351
+    :cond_1
     iget-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 474
-    iget-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
-
-    new-instance v1, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuHeaderItem;
-
-    invoke-direct {v1}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuHeaderItem;-><init>()V
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 476
+    .line 352
     const/4 v5, -0x1
 
-    .line 477
-    const/4 v4, 0x0
-
-    .line 478
-    const/4 v3, 0x0
-
-    .line 479
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
-
-    iget-object v1, v1, Landroid/support/design/internal/NavigationMenuPresenter;->b:Landroid/support/v7/view/menu/MenuBuilder;
-
-    invoke-virtual {v1}, Landroid/support/v7/view/menu/MenuBuilder;->k()Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v8
-
-    move v7, v0
-
-    :goto_1
-    if-ge v7, v8, :cond_e
-
-    .line 480
+    .line 355
     iget-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
 
-    iget-object v0, v0, Landroid/support/design/internal/NavigationMenuPresenter;->b:Landroid/support/v7/view/menu/MenuBuilder;
-
-    invoke-virtual {v0}, Landroid/support/v7/view/menu/MenuBuilder;->k()Ljava/util/ArrayList;
+    invoke-static {v0}, Landroid/support/design/internal/NavigationMenuPresenter;->e(Landroid/support/design/internal/NavigationMenuPresenter;)Landroid/support/v7/internal/view/menu/MenuBuilder;
 
     move-result-object v0
 
-    invoke-virtual {v0, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/support/v7/internal/view/menu/MenuBuilder;->k()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/v7/view/menu/MenuItemImpl;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    .line 481
-    invoke-virtual {v0}, Landroid/support/v7/view/menu/MenuItemImpl;->isChecked()Z
+    move-result v9
 
-    move-result v1
+    move v8, v7
 
-    if-eqz v1, :cond_1
+    move v3, v7
 
-    .line 482
-    invoke-virtual {p0, v0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a(Landroid/support/v7/view/menu/MenuItemImpl;)V
+    move v4, v7
 
-    .line 484
-    :cond_1
-    invoke-virtual {v0}, Landroid/support/v7/view/menu/MenuItemImpl;->isCheckable()Z
+    :goto_0
+    if-ge v8, v9, :cond_0
 
-    move-result v1
+    .line 356
+    iget-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
 
-    if-eqz v1, :cond_2
+    invoke-static {v0}, Landroid/support/design/internal/NavigationMenuPresenter;->e(Landroid/support/design/internal/NavigationMenuPresenter;)Landroid/support/v7/internal/view/menu/MenuBuilder;
 
-    .line 485
-    const/4 v1, 0x0
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroid/support/v7/view/menu/MenuItemImpl;->a(Z)V
+    invoke-virtual {v0}, Landroid/support/v7/internal/view/menu/MenuBuilder;->k()Ljava/util/ArrayList;
 
-    .line 487
-    :cond_2
-    invoke-virtual {v0}, Landroid/support/v7/view/menu/MenuItemImpl;->hasSubMenu()Z
+    move-result-object v0
 
-    move-result v1
+    invoke-virtual {v0, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    if-eqz v1, :cond_a
+    move-result-object v0
 
-    .line 488
-    invoke-virtual {v0}, Landroid/support/v7/view/menu/MenuItemImpl;->getSubMenu()Landroid/view/SubMenu;
+    check-cast v0, Landroid/support/v7/internal/view/menu/MenuItemImpl;
 
-    move-result-object v9
-
-    .line 489
-    invoke-interface {v9}, Landroid/view/SubMenu;->hasVisibleItems()Z
+    .line 357
+    invoke-virtual {v0}, Landroid/support/v7/internal/view/menu/MenuItemImpl;->hasSubMenu()Z
 
     move-result v1
 
-    if-eqz v1, :cond_9
+    if-eqz v1, :cond_7
 
-    .line 490
-    if-eqz v7, :cond_3
+    .line 358
+    invoke-virtual {v0}, Landroid/support/v7/internal/view/menu/MenuItemImpl;->getSubMenu()Landroid/view/SubMenu;
 
-    .line 491
+    move-result-object v10
+
+    .line 359
+    invoke-interface {v10}, Landroid/view/SubMenu;->hasVisibleItems()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    .line 360
+    if-eqz v8, :cond_2
+
+    .line 361
     iget-object v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
-
-    new-instance v2, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuSeparatorItem;
 
     iget-object v6, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
 
-    iget v6, v6, Landroid/support/design/internal/NavigationMenuPresenter;->j:I
+    invoke-static {v6}, Landroid/support/design/internal/NavigationMenuPresenter;->f(Landroid/support/design/internal/NavigationMenuPresenter;)I
 
-    const/4 v10, 0x0
+    move-result v6
 
-    invoke-direct {v2, v6, v10}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuSeparatorItem;-><init>(II)V
+    invoke-static {v6, v7}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;->a(II)Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result-object v6
 
-    .line 493
-    :cond_3
+    invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 363
+    :cond_2
     iget-object v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
 
-    new-instance v2, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;
+    invoke-static {v0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;->a(Landroid/support/v7/internal/view/menu/MenuItemImpl;)Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;
 
-    invoke-direct {v2, v0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;-><init>(Landroid/support/v7/view/menu/MenuItemImpl;)V
+    move-result-object v0
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 494
-    const/4 v2, 0x0
+    .line 365
+    iget-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
 
-    .line 495
-    iget-object v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v10
-
-    .line 496
-    const/4 v1, 0x0
-
-    invoke-interface {v9}, Landroid/view/SubMenu;->size()I
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v11
 
-    move v6, v1
-
-    :goto_2
-    if-ge v6, v11, :cond_8
-
-    .line 497
-    invoke-interface {v9, v6}, Landroid/view/SubMenu;->getItem(I)Landroid/view/MenuItem;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/support/v7/view/menu/MenuItemImpl;
-
-    .line 498
-    invoke-virtual {v1}, Landroid/support/v7/view/menu/MenuItemImpl;->isVisible()Z
+    .line 366
+    invoke-interface {v10}, Landroid/view/SubMenu;->size()I
 
     move-result v12
 
-    if-eqz v12, :cond_7
+    move v6, v7
 
-    .line 499
-    if-nez v2, :cond_4
+    move v1, v7
 
-    invoke-virtual {v1}, Landroid/support/v7/view/menu/MenuItemImpl;->getIcon()Landroid/graphics/drawable/Drawable;
+    :goto_1
+    if-ge v6, v12, :cond_5
 
-    move-result-object v12
+    .line 367
+    invoke-interface {v10, v6}, Landroid/view/SubMenu;->getItem(I)Landroid/view/MenuItem;
 
-    if-eqz v12, :cond_4
+    move-result-object v0
 
-    .line 500
-    const/4 v2, 0x1
+    .line 368
+    invoke-interface {v0}, Landroid/view/MenuItem;->isVisible()Z
 
-    .line 502
+    move-result v13
+
+    if-eqz v13, :cond_4
+
+    .line 369
+    if-nez v1, :cond_3
+
+    invoke-interface {v0}, Landroid/view/MenuItem;->getIcon()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v13
+
+    if-eqz v13, :cond_3
+
+    move v1, v2
+
+    .line 372
+    :cond_3
+    iget-object v13, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
+
+    check-cast v0, Landroid/support/v7/internal/view/menu/MenuItemImpl;
+
+    invoke-static {v0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;->a(Landroid/support/v7/internal/view/menu/MenuItemImpl;)Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;
+
+    move-result-object v0
+
+    invoke-virtual {v13, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 366
     :cond_4
-    invoke-virtual {v1}, Landroid/support/v7/view/menu/MenuItemImpl;->isCheckable()Z
+    add-int/lit8 v0, v6, 0x1
 
-    move-result v12
+    move v6, v0
 
-    if-eqz v12, :cond_5
+    goto :goto_1
 
-    .line 503
-    const/4 v12, 0x0
-
-    invoke-virtual {v1, v12}, Landroid/support/v7/view/menu/MenuItemImpl;->a(Z)V
-
-    .line 505
+    .line 375
     :cond_5
-    invoke-virtual {v0}, Landroid/support/v7/view/menu/MenuItemImpl;->isChecked()Z
+    if-eqz v1, :cond_6
 
-    move-result v12
-
-    if-eqz v12, :cond_6
-
-    .line 506
-    invoke-virtual {p0, v0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a(Landroid/support/v7/view/menu/MenuItemImpl;)V
-
-    .line 508
-    :cond_6
-    iget-object v12, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
-
-    new-instance v13, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;
-
-    invoke-direct {v13, v1}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;-><init>(Landroid/support/v7/view/menu/MenuItemImpl;)V
-
-    invoke-virtual {v12, v13}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 496
-    :cond_7
-    add-int/lit8 v1, v6, 0x1
-
-    move v6, v1
-
-    goto :goto_2
-
-    .line 511
-    :cond_8
-    if-eqz v2, :cond_9
-
-    .line 512
+    .line 376
     iget-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    invoke-direct {p0, v10, v0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a(II)V
+    invoke-direct {p0, v11, v0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a(II)V
 
-    :cond_9
-    move v0, v5
+    :cond_6
+    move v0, v3
 
-    .line 479
-    :goto_3
-    add-int/lit8 v1, v7, 0x1
+    move v1, v4
 
-    move v7, v1
+    move v3, v5
 
-    move v5, v0
+    .line 355
+    :goto_2
+    add-int/lit8 v4, v8, 0x1
 
-    goto/16 :goto_1
+    move v8, v4
 
-    .line 516
-    :cond_a
-    invoke-virtual {v0}, Landroid/support/v7/view/menu/MenuItemImpl;->getGroupId()I
+    move v5, v3
+
+    move v4, v1
+
+    move v3, v0
+
+    goto :goto_0
+
+    .line 380
+    :cond_7
+    invoke-virtual {v0}, Landroid/support/v7/internal/view/menu/MenuItemImpl;->getGroupId()I
 
     move-result v6
 
-    .line 517
-    if-eq v6, v5, :cond_d
+    .line 381
+    if-eq v6, v5, :cond_a
 
-    .line 518
+    .line 382
     iget-object v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
-    move-result v2
+    move-result v4
 
-    .line 519
-    invoke-virtual {v0}, Landroid/support/v7/view/menu/MenuItemImpl;->getIcon()Landroid/graphics/drawable/Drawable;
+    .line 383
+    invoke-virtual {v0}, Landroid/support/v7/internal/view/menu/MenuItemImpl;->getIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    if-eqz v1, :cond_c
+    if-eqz v1, :cond_9
 
-    const/4 v1, 0x1
+    move v3, v2
 
-    .line 520
-    :goto_4
-    if-eqz v7, :cond_b
+    .line 384
+    :goto_3
+    if-eqz v8, :cond_b
 
-    .line 521
-    add-int/lit8 v2, v2, 0x1
+    .line 385
+    add-int/lit8 v4, v4, 0x1
 
-    .line 522
-    iget-object v3, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
-
-    new-instance v4, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuSeparatorItem;
+    .line 386
+    iget-object v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
 
     iget-object v5, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
 
-    iget v5, v5, Landroid/support/design/internal/NavigationMenuPresenter;->j:I
+    invoke-static {v5}, Landroid/support/design/internal/NavigationMenuPresenter;->f(Landroid/support/design/internal/NavigationMenuPresenter;)I
 
-    iget-object v9, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
+    move-result v5
 
-    iget v9, v9, Landroid/support/design/internal/NavigationMenuPresenter;->j:I
+    iget-object v10, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
 
-    invoke-direct {v4, v5, v9}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuSeparatorItem;-><init>(II)V
+    invoke-static {v10}, Landroid/support/design/internal/NavigationMenuPresenter;->f(Landroid/support/design/internal/NavigationMenuPresenter;)I
 
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result v10
 
-    .line 529
-    :cond_b
-    :goto_5
-    new-instance v3, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;
+    invoke-static {v5, v10}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;->a(II)Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;
 
-    invoke-direct {v3, v0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;-><init>(Landroid/support/v7/view/menu/MenuItemImpl;)V
+    move-result-object v5
 
-    .line 530
-    iput-boolean v1, v3, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;->a:Z
+    invoke-virtual {v1, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 531
-    iget-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
+    move v1, v3
 
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move v3, v4
 
-    move v3, v1
+    .line 393
+    :goto_4
+    if-eqz v1, :cond_8
 
-    move v4, v2
+    invoke-virtual {v0}, Landroid/support/v7/internal/view/menu/MenuItemImpl;->getIcon()Landroid/graphics/drawable/Drawable;
 
-    move v0, v6
+    move-result-object v4
 
-    .line 532
+    if-nez v4, :cond_8
+
+    .line 394
+    const v4, 0x106000d
+
+    invoke-virtual {v0, v4}, Landroid/support/v7/internal/view/menu/MenuItemImpl;->setIcon(I)Landroid/view/MenuItem;
+
+    .line 396
+    :cond_8
+    iget-object v4, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
+
+    invoke-static {v0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;->a(Landroid/support/v7/internal/view/menu/MenuItemImpl;)Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;
+
+    move-result-object v0
+
+    invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    move v0, v1
+
+    move v1, v3
+
+    move v3, v6
+
+    .line 397
+    goto :goto_2
+
+    :cond_9
+    move v3, v7
+
+    .line 383
     goto :goto_3
 
-    .line 519
-    :cond_c
-    const/4 v1, 0x0
+    .line 389
+    :cond_a
+    if-nez v3, :cond_b
 
-    goto :goto_4
-
-    .line 525
-    :cond_d
-    if-nez v3, :cond_f
-
-    invoke-virtual {v0}, Landroid/support/v7/view/menu/MenuItemImpl;->getIcon()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0}, Landroid/support/v7/internal/view/menu/MenuItemImpl;->getIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    if-eqz v1, :cond_f
+    if-eqz v1, :cond_b
 
-    .line 526
-    const/4 v1, 0x1
+    .line 391
+    iget-object v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
 
-    .line 527
-    iget-object v2, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+    move-result v1
 
-    move-result v2
+    invoke-direct {p0, v4, v1}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a(II)V
 
-    invoke-direct {p0, v4, v2}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a(II)V
+    move v1, v2
 
-    move v2, v4
+    move v3, v4
 
-    goto :goto_5
+    goto :goto_4
 
-    .line 535
-    :cond_e
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->d:Z
-
-    goto/16 :goto_0
-
-    :cond_f
+    :cond_b
     move v1, v3
 
-    move v2, v4
+    move v3, v4
 
-    goto :goto_5
+    goto :goto_4
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 0
+.method public final a()Landroid/os/Bundle;
+    .locals 5
 
     .prologue
-    .line 460
-    invoke-direct {p0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->c()V
+    .line 415
+    new-instance v1, Landroid/os/Bundle;
 
-    .line 461
-    invoke-virtual {p0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->notifyDataSetChanged()V
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 462
-    return-void
-.end method
+    .line 416
+    new-instance v2, Ljava/util/ArrayList;
 
-.method public final a(Landroid/os/Bundle;)V
-    .locals 6
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .prologue
-    const/4 v1, 0x0
-
-    .line 580
-    const-string v0, "android:menu:checked"
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
-
-    move-result v3
-
-    .line 581
-    if-eqz v3, :cond_1
-
-    .line 582
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->d:Z
-
-    .line 583
+    .line 417
     iget-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :cond_0
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;
+
+    .line 418
+    invoke-virtual {v0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;->d()Landroid/support/v7/internal/view/menu/MenuItemImpl;
+
+    move-result-object v0
+
+    .line 419
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/support/v7/internal/view/menu/MenuItemImpl;->isChecked()Z
 
     move-result v4
 
-    move v2, v1
+    if-eqz v4, :cond_0
 
-    :goto_0
-    if-ge v2, v4, :cond_0
+    .line 420
+    invoke-virtual {v0}, Landroid/support/v7/internal/view/menu/MenuItemImpl;->getItemId()I
 
-    .line 584
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    .line 423
+    :cond_1
+    const-string v0, "android:menu:checked"
+
+    invoke-virtual {v1, v0, v2}, Landroid/os/Bundle;->putIntegerArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+
+    .line 424
+    return-object v1
+.end method
+
+.method public final a(I)Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;
+    .locals 1
+
+    .prologue
+    .line 265
     iget-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
 
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;
 
-    .line 585
-    instance-of v5, v0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;
+    return-object v0
+.end method
 
-    if-eqz v5, :cond_3
+.method public final a(Landroid/os/Bundle;)V
+    .locals 5
 
-    .line 586
-    check-cast v0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;
+    .prologue
+    const/4 v4, 0x1
 
-    invoke-virtual {v0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;->a()Landroid/support/v7/view/menu/MenuItemImpl;
+    .line 428
+    const-string v0, "android:menu:checked"
 
-    move-result-object v0
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getIntegerArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
-    .line 587
-    if-eqz v0, :cond_3
+    move-result-object v1
 
-    invoke-virtual {v0}, Landroid/support/v7/view/menu/MenuItemImpl;->getItemId()I
+    .line 429
+    if-eqz v1, :cond_2
 
-    move-result v5
+    .line 430
+    iput-boolean v4, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->d:Z
 
-    if-ne v5, v3, :cond_3
+    .line 431
+    iget-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
 
-    .line 588
-    invoke-virtual {p0, v0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a(Landroid/support/v7/view/menu/MenuItemImpl;)V
-
-    .line 593
-    :cond_0
-    iput-boolean v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->d:Z
-
-    .line 594
-    invoke-direct {p0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->c()V
-
-    .line 597
-    :cond_1
-    const-string v0, "android:menu:action_views"
-
-    .line 598
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getSparseParcelableArray(Ljava/lang/String;)Landroid/util/SparseArray;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    .line 599
-    if-eqz v2, :cond_4
+    :cond_0
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 600
-    iget-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
+    move-result v0
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    if-eqz v0, :cond_1
 
-    move-result v3
-
-    :goto_1
-    if-ge v1, v3, :cond_4
-
-    .line 601
-    iget-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;
 
-    .line 602
-    instance-of v4, v0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;
-
-    if-eqz v4, :cond_2
-
-    .line 605
-    check-cast v0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;
-
-    invoke-virtual {v0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;->a()Landroid/support/v7/view/menu/MenuItemImpl;
+    .line 432
+    invoke-virtual {v0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;->d()Landroid/support/v7/internal/view/menu/MenuItemImpl;
 
     move-result-object v0
 
-    .line 606
-    if-eqz v0, :cond_2
+    .line 433
+    if-eqz v0, :cond_0
 
-    .line 609
-    invoke-virtual {v0}, Landroid/support/v7/view/menu/MenuItemImpl;->getActionView()Landroid/view/View;
+    invoke-virtual {v0}, Landroid/support/v7/internal/view/menu/MenuItemImpl;->getItemId()I
 
-    move-result-object v4
+    move-result v3
 
-    .line 610
-    if-eqz v4, :cond_2
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 613
-    invoke-virtual {v0}, Landroid/support/v7/view/menu/MenuItemImpl;->getItemId()I
+    move-result-object v3
 
-    move-result v0
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
-    invoke-virtual {v2, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    move-result v3
 
-    move-result-object v0
+    if-eqz v3, :cond_0
 
-    check-cast v0, Landroid/support/design/internal/ParcelableSparseArray;
-
-    .line 614
-    if-eqz v0, :cond_2
-
-    .line 617
-    invoke-virtual {v4, v0}, Landroid/view/View;->restoreHierarchyState(Landroid/util/SparseArray;)V
-
-    .line 600
-    :cond_2
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
-
-    goto :goto_1
-
-    .line 583
-    :cond_3
-    add-int/lit8 v0, v2, 0x1
-
-    move v2, v0
+    .line 434
+    invoke-virtual {v0, v4}, Landroid/support/v7/internal/view/menu/MenuItemImpl;->setChecked(Z)Landroid/view/MenuItem;
 
     goto :goto_0
 
-    .line 620
-    :cond_4
-    return-void
-.end method
-
-.method public final a(Landroid/support/v7/view/menu/MenuItemImpl;)V
-    .locals 2
-
-    .prologue
-    .line 546
-    iget-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->c:Landroid/support/v7/view/menu/MenuItemImpl;
-
-    if-eq v0, p1, :cond_0
-
-    invoke-virtual {p1}, Landroid/support/v7/view/menu/MenuItemImpl;->isCheckable()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 554
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 549
+    .line 437
     :cond_1
-    iget-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->c:Landroid/support/v7/view/menu/MenuItemImpl;
+    const/4 v0, 0x0
 
-    if-eqz v0, :cond_2
+    iput-boolean v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->d:Z
 
-    .line 550
-    iget-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->c:Landroid/support/v7/view/menu/MenuItemImpl;
+    .line 438
+    invoke-direct {p0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b()V
 
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/support/v7/view/menu/MenuItemImpl;->setChecked(Z)Landroid/view/MenuItem;
-
-    .line 552
+    .line 440
     :cond_2
-    iput-object p1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->c:Landroid/support/v7/view/menu/MenuItemImpl;
-
-    .line 553
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Landroid/support/v7/view/menu/MenuItemImpl;->setChecked(Z)Landroid/view/MenuItem;
-
-    goto :goto_0
+    return-void
 .end method
 
 .method public final a(Z)V
     .locals 0
 
     .prologue
-    .line 623
+    .line 443
     iput-boolean p1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->d:Z
 
-    .line 624
+    .line 444
     return-void
 .end method
 
-.method public final b()Landroid/os/Bundle;
-    .locals 7
-
-    .prologue
-    .line 557
-    new-instance v2, Landroid/os/Bundle;
-
-    invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
-
-    .line 558
-    iget-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->c:Landroid/support/v7/view/menu/MenuItemImpl;
-
-    if-eqz v0, :cond_0
-
-    .line 559
-    const-string v0, "android:menu:checked"
-
-    iget-object v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->c:Landroid/support/v7/view/menu/MenuItemImpl;
-
-    invoke-virtual {v1}, Landroid/support/v7/view/menu/MenuItemImpl;->getItemId()I
-
-    move-result v1
-
-    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-
-    .line 562
-    :cond_0
-    new-instance v3, Landroid/util/SparseArray;
-
-    invoke-direct {v3}, Landroid/util/SparseArray;-><init>()V
-
-    .line 563
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v4
-
-    move v1, v0
-
-    :goto_0
-    if-ge v1, v4, :cond_3
-
-    .line 564
-    iget-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;
-
-    .line 565
-    instance-of v5, v0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;
-
-    if-eqz v5, :cond_1
-
-    .line 566
-    check-cast v0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;
-
-    invoke-virtual {v0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;->a()Landroid/support/v7/view/menu/MenuItemImpl;
-
-    move-result-object v5
-
-    .line 567
-    if-eqz v5, :cond_2
-
-    invoke-virtual {v5}, Landroid/support/v7/view/menu/MenuItemImpl;->getActionView()Landroid/view/View;
-
-    move-result-object v0
-
-    .line 568
-    :goto_1
-    if-eqz v0, :cond_1
-
-    .line 569
-    new-instance v6, Landroid/support/design/internal/ParcelableSparseArray;
-
-    invoke-direct {v6}, Landroid/support/design/internal/ParcelableSparseArray;-><init>()V
-
-    .line 570
-    invoke-virtual {v0, v6}, Landroid/view/View;->saveHierarchyState(Landroid/util/SparseArray;)V
-
-    .line 571
-    invoke-virtual {v5}, Landroid/support/v7/view/menu/MenuItemImpl;->getItemId()I
-
-    move-result v0
-
-    invoke-virtual {v3, v0, v6}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    .line 563
-    :cond_1
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
-
-    goto :goto_0
-
-    .line 567
-    :cond_2
-    const/4 v0, 0x0
-
-    goto :goto_1
-
-    .line 575
-    :cond_3
-    const-string v0, "android:menu:action_views"
-
-    invoke-virtual {v2, v0, v3}, Landroid/os/Bundle;->putSparseParcelableArray(Ljava/lang/String;Landroid/util/SparseArray;)V
-
-    .line 576
-    return-object v2
-.end method
-
-.method public getItemCount()I
+.method public areAllItemsEnabled()Z
     .locals 1
 
     .prologue
-    .line 377
+    .line 329
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getCount()I
+    .locals 1
+
+    .prologue
+    .line 260
     iget-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -850,11 +662,23 @@
     return v0
 .end method
 
+.method public synthetic getItem(I)Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 242
+    invoke-virtual {p0, p1}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a(I)Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public getItemId(I)J
     .locals 2
 
     .prologue
-    .line 372
+    .line 270
     int-to-long v0, p1
 
     return-wide v0
@@ -864,329 +688,235 @@
     .locals 2
 
     .prologue
-    .line 382
-    iget-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    .line 280
+    invoke-virtual {p0, p1}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a(I)Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;
+    .line 281
+    invoke-virtual {v0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;->a()Z
 
-    .line 383
-    instance-of v1, v0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuSeparatorItem;
+    move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 384
+    .line 282
     const/4 v0, 0x2
 
-    .line 392
+    .line 286
     :goto_0
     return v0
 
-    .line 385
+    .line 283
     :cond_0
-    instance-of v1, v0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuHeaderItem;
-
-    if-eqz v1, :cond_1
-
-    .line 386
-    const/4 v0, 0x3
-
-    goto :goto_0
-
-    .line 387
-    :cond_1
-    instance-of v1, v0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;
-
-    if-eqz v1, :cond_3
-
-    .line 388
-    check-cast v0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;
-
-    .line 389
-    invoke-virtual {v0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;->a()Landroid/support/v7/view/menu/MenuItemImpl;
+    invoke-virtual {v0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;->d()Landroid/support/v7/internal/view/menu/MenuItemImpl;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/v7/view/menu/MenuItemImpl;->hasSubMenu()Z
+    invoke-virtual {v0}, Landroid/support/v7/internal/view/menu/MenuItemImpl;->hasSubMenu()Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
-    .line 390
+    .line 284
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 392
-    :cond_2
+    .line 286
+    :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
-
-    .line 395
-    :cond_3
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    const-string v1, "Unknown item type."
-
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method
 
-.method public synthetic onBindViewHolder(Landroid/support/v7/widget/RecyclerView$ViewHolder;I)V
+.method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 4
 
     .prologue
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    .line 352
-    check-cast p1, Landroid/support/design/internal/NavigationMenuPresenter$ViewHolder;
+    .line 292
+    invoke-virtual {p0, p1}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a(I)Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;
 
-    .line 2415
-    invoke-virtual {p0, p2}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->getItemViewType(I)I
+    move-result-object v3
+
+    .line 293
+    invoke-virtual {p0, p1}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->getItemViewType(I)I
 
     move-result v0
 
+    .line 294
     packed-switch v0, :pswitch_data_0
 
-    .line 2436
     :goto_0
-    return-void
+    move-object v1, p2
 
-    .line 2417
-    :pswitch_0
-    iget-object v0, p1, Landroid/support/design/internal/NavigationMenuPresenter$ViewHolder;->itemView:Landroid/view/View;
-
-    check-cast v0, Landroid/support/design/internal/NavigationMenuItemView;
-
-    .line 2418
-    iget-object v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
-
-    iget-object v1, v1, Landroid/support/design/internal/NavigationMenuPresenter;->h:Landroid/content/res/ColorStateList;
-
-    invoke-virtual {v0, v1}, Landroid/support/design/internal/NavigationMenuItemView;->a(Landroid/content/res/ColorStateList;)V
-
-    .line 2419
-    iget-object v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
-
-    iget-boolean v1, v1, Landroid/support/design/internal/NavigationMenuPresenter;->f:Z
-
-    if-eqz v1, :cond_0
-
-    .line 2420
-    iget-object v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
-
-    iget v1, v1, Landroid/support/design/internal/NavigationMenuPresenter;->e:I
-
-    invoke-virtual {v0, v1}, Landroid/support/design/internal/NavigationMenuItemView;->a(I)V
-
-    .line 2422
-    :cond_0
-    iget-object v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
-
-    iget-object v1, v1, Landroid/support/design/internal/NavigationMenuPresenter;->g:Landroid/content/res/ColorStateList;
-
-    if-eqz v1, :cond_1
-
-    .line 2423
-    iget-object v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
-
-    iget-object v1, v1, Landroid/support/design/internal/NavigationMenuPresenter;->g:Landroid/content/res/ColorStateList;
-
-    invoke-virtual {v0, v1}, Landroid/support/design/internal/NavigationMenuItemView;->b(Landroid/content/res/ColorStateList;)V
-
-    .line 2425
-    :cond_1
-    iget-object v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
-
-    iget-object v1, v1, Landroid/support/design/internal/NavigationMenuPresenter;->i:Landroid/graphics/drawable/Drawable;
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
-
-    iget-object v1, v1, Landroid/support/design/internal/NavigationMenuPresenter;->i:Landroid/graphics/drawable/Drawable;
-
-    .line 2426
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    .line 2425
+    .line 324
     :goto_1
-    invoke-static {v0, v1}, Landroid/support/v4/view/ViewCompat;->setBackground(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    return-object v1
 
-    .line 2427
-    iget-object v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
+    .line 296
+    :pswitch_0
+    if-nez p2, :cond_3
 
-    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    .line 297
+    iget-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
 
-    move-result-object v1
-
-    check-cast v1, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;
-
-    .line 2428
-    iget-boolean v2, v1, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;->a:Z
-
-    invoke-virtual {v0, v2}, Landroid/support/design/internal/NavigationMenuItemView;->a(Z)V
-
-    .line 2429
-    invoke-virtual {v1}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;->a()Landroid/support/v7/view/menu/MenuItemImpl;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/support/design/internal/NavigationMenuItemView;->a(Landroid/support/v7/view/menu/MenuItemImpl;)V
-
-    goto :goto_0
-
-    .line 2426
-    :cond_2
-    const/4 v1, 0x0
-
-    goto :goto_1
-
-    .line 2433
-    :pswitch_1
-    iget-object v0, p1, Landroid/support/design/internal/NavigationMenuPresenter$ViewHolder;->itemView:Landroid/view/View;
-
-    check-cast v0, Landroid/widget/TextView;
-
-    .line 2434
-    iget-object v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;
-
-    .line 2435
-    invoke-virtual {v1}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem;->a()Landroid/support/v7/view/menu/MenuItemImpl;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/support/v7/view/menu/MenuItemImpl;->getTitle()Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    goto :goto_0
-
-    .line 2439
-    :pswitch_2
-    iget-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b:Ljava/util/ArrayList;
-
-    .line 2440
-    invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-static {v0}, Landroid/support/design/internal/NavigationMenuPresenter;->a(Landroid/support/design/internal/NavigationMenuPresenter;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuSeparatorItem;
+    sget v1, Landroid/support/design/R$layout;->a:I
 
-    .line 2441
-    iget-object v1, p1, Landroid/support/design/internal/NavigationMenuPresenter$ViewHolder;->itemView:Landroid/view/View;
+    invoke-virtual {v0, v1, p3, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    invoke-virtual {v0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuSeparatorItem;->a()I
+    move-result-object v1
 
-    move-result v2
+    :goto_2
+    move-object v0, v1
 
-    .line 2442
-    invoke-virtual {v0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuSeparatorItem;->b()I
+    .line 300
+    check-cast v0, Landroid/support/design/internal/NavigationMenuItemView;
 
-    move-result v0
+    .line 301
+    iget-object v2, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
 
-    .line 2441
-    invoke-virtual {v1, v3, v2, v3, v0}, Landroid/view/View;->setPadding(IIII)V
+    invoke-static {v2}, Landroid/support/design/internal/NavigationMenuPresenter;->b(Landroid/support/design/internal/NavigationMenuPresenter;)Landroid/content/res/ColorStateList;
 
-    goto :goto_0
+    move-result-object v2
 
-    .line 2415
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-    .end packed-switch
-.end method
+    invoke-virtual {v0, v2}, Landroid/support/design/internal/NavigationMenuItemView;->a(Landroid/content/res/ColorStateList;)V
 
-.method public synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroid/support/v7/widget/RecyclerView$ViewHolder;
-    .locals 3
+    .line 302
+    iget-object v2, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
 
-    .prologue
-    .line 352
-    .line 3400
-    packed-switch p2, :pswitch_data_0
+    invoke-static {v2}, Landroid/support/design/internal/NavigationMenuPresenter;->c(Landroid/support/design/internal/NavigationMenuPresenter;)Landroid/content/res/ColorStateList;
 
-    .line 3410
-    const/4 v0, 0x0
+    move-result-object v2
 
-    .line 3408
-    :goto_0
-    return-object v0
+    invoke-virtual {v0, v2}, Landroid/support/design/internal/NavigationMenuItemView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
-    .line 3402
-    :pswitch_0
-    new-instance v0, Landroid/support/design/internal/NavigationMenuPresenter$NormalViewHolder;
+    .line 303
+    iget-object v2, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
 
-    iget-object v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
+    invoke-static {v2}, Landroid/support/design/internal/NavigationMenuPresenter;->d(Landroid/support/design/internal/NavigationMenuPresenter;)Landroid/graphics/drawable/Drawable;
 
-    iget-object v1, v1, Landroid/support/design/internal/NavigationMenuPresenter;->d:Landroid/view/LayoutInflater;
+    move-result-object v2
+
+    if-eqz v2, :cond_0
 
     iget-object v2, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
 
-    iget-object v2, v2, Landroid/support/design/internal/NavigationMenuPresenter;->k:Landroid/view/View$OnClickListener;
+    invoke-static {v2}, Landroid/support/design/internal/NavigationMenuPresenter;->d(Landroid/support/design/internal/NavigationMenuPresenter;)Landroid/graphics/drawable/Drawable;
 
-    invoke-direct {v0, v1, p1, v2}, Landroid/support/design/internal/NavigationMenuPresenter$NormalViewHolder;-><init>(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/view/View$OnClickListener;)V
+    move-result-object v2
 
-    goto :goto_0
+    invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
 
-    .line 3404
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    :goto_3
+    invoke-virtual {v0, v2}, Landroid/support/design/internal/NavigationMenuItemView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 305
+    invoke-virtual {v3}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;->d()Landroid/support/v7/internal/view/menu/MenuItemImpl;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroid/support/design/internal/NavigationMenuItemView;->a(Landroid/support/v7/internal/view/menu/MenuItemImpl;)V
+
+    goto :goto_1
+
+    .line 303
+    :cond_0
+    const/4 v2, 0x0
+
+    goto :goto_3
+
+    .line 308
     :pswitch_1
-    new-instance v0, Landroid/support/design/internal/NavigationMenuPresenter$SubheaderViewHolder;
+    if-nez p2, :cond_2
 
-    iget-object v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
+    .line 309
+    iget-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
 
-    iget-object v1, v1, Landroid/support/design/internal/NavigationMenuPresenter;->d:Landroid/view/LayoutInflater;
+    invoke-static {v0}, Landroid/support/design/internal/NavigationMenuPresenter;->a(Landroid/support/design/internal/NavigationMenuPresenter;)Landroid/view/LayoutInflater;
 
-    invoke-direct {v0, v1, p1}, Landroid/support/design/internal/NavigationMenuPresenter$SubheaderViewHolder;-><init>(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)V
+    move-result-object v0
 
-    goto :goto_0
+    sget v1, Landroid/support/design/R$layout;->d:I
 
-    .line 3406
+    invoke-virtual {v0, v1, p3, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object v1
+
+    :goto_4
+    move-object v0, v1
+
+    .line 312
+    check-cast v0, Landroid/widget/TextView;
+
+    .line 313
+    invoke-virtual {v3}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;->d()Landroid/support/v7/internal/view/menu/MenuItemImpl;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/support/v7/internal/view/menu/MenuItemImpl;->getTitle()Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_1
+
+    .line 316
     :pswitch_2
-    new-instance v0, Landroid/support/design/internal/NavigationMenuPresenter$SeparatorViewHolder;
+    if-nez p2, :cond_1
 
-    iget-object v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
+    .line 317
+    iget-object v0, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
 
-    iget-object v1, v1, Landroid/support/design/internal/NavigationMenuPresenter;->d:Landroid/view/LayoutInflater;
+    invoke-static {v0}, Landroid/support/design/internal/NavigationMenuPresenter;->a(Landroid/support/design/internal/NavigationMenuPresenter;)Landroid/view/LayoutInflater;
 
-    invoke-direct {v0, v1, p1}, Landroid/support/design/internal/NavigationMenuPresenter$SeparatorViewHolder;-><init>(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)V
+    move-result-object v0
+
+    sget v1, Landroid/support/design/R$layout;->c:I
+
+    invoke-virtual {v0, v1, p3, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p2
+
+    .line 320
+    :cond_1
+    invoke-virtual {v3}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;->b()I
+
+    move-result v0
+
+    invoke-virtual {v3}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;->c()I
+
+    move-result v1
+
+    invoke-virtual {p2, v2, v0, v2, v1}, Landroid/view/View;->setPadding(IIII)V
 
     goto :goto_0
 
-    .line 3408
-    :pswitch_3
-    new-instance v0, Landroid/support/design/internal/NavigationMenuPresenter$HeaderViewHolder;
+    :cond_2
+    move-object v1, p2
 
-    iget-object v1, p0, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a:Landroid/support/design/internal/NavigationMenuPresenter;
+    goto :goto_4
 
-    iget-object v1, v1, Landroid/support/design/internal/NavigationMenuPresenter;->a:Landroid/widget/LinearLayout;
+    :cond_3
+    move-object v1, p2
 
-    invoke-direct {v0, v1}, Landroid/support/design/internal/NavigationMenuPresenter$HeaderViewHolder;-><init>(Landroid/view/View;)V
+    goto :goto_2
 
-    goto :goto_0
-
-    .line 3400
+    .line 294
     nop
 
     :pswitch_data_0
@@ -1194,30 +924,45 @@
         :pswitch_0
         :pswitch_1
         :pswitch_2
-        :pswitch_3
     .end packed-switch
 .end method
 
-.method public synthetic onViewRecycled(Landroid/support/v7/widget/RecyclerView$ViewHolder;)V
+.method public getViewTypeCount()I
     .locals 1
 
     .prologue
-    .line 352
-    check-cast p1, Landroid/support/design/internal/NavigationMenuPresenter$ViewHolder;
+    .line 275
+    const/4 v0, 0x3
 
-    .line 1454
-    instance-of v0, p1, Landroid/support/design/internal/NavigationMenuPresenter$NormalViewHolder;
+    return v0
+.end method
 
-    if-eqz v0, :cond_0
+.method public isEnabled(I)Z
+    .locals 1
 
-    .line 1455
-    iget-object v0, p1, Landroid/support/design/internal/NavigationMenuPresenter$ViewHolder;->itemView:Landroid/view/View;
+    .prologue
+    .line 334
+    invoke-virtual {p0, p1}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->a(I)Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;
 
-    check-cast v0, Landroid/support/design/internal/NavigationMenuItemView;
+    move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/design/internal/NavigationMenuItemView;->c()V
+    invoke-virtual {v0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuItem;->e()Z
 
-    .line 352
-    :cond_0
+    move-result v0
+
+    return v0
+.end method
+
+.method public notifyDataSetChanged()V
+    .locals 0
+
+    .prologue
+    .line 339
+    invoke-direct {p0}, Landroid/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter;->b()V
+
+    .line 340
+    invoke-super {p0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
+
+    .line 341
     return-void
 .end method

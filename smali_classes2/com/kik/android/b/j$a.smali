@@ -1,5 +1,5 @@
 .class final Lcom/kik/android/b/j$a;
-.super Lkik/android/i/c;
+.super Lkik/android/g/c;
 .source "SourceFile"
 
 
@@ -23,17 +23,17 @@
     .locals 2
 
     .prologue
-    .line 368
+    .line 363
     iput-object p1, p0, Lcom/kik/android/b/j$a;->a:Lcom/kik/android/b/j;
 
-    .line 369
+    .line 364
     const-string v0, "alternatesTable"
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, p2, v0, v1, p3}, Lkik/android/i/c;-><init>(Landroid/content/Context;Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {p0, p2, v0, v1, p3}, Lkik/android/g/c;-><init>(Landroid/content/Context;Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 370
+    .line 365
     return-void
 .end method
 
@@ -45,7 +45,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 388
+    .line 383
     const-string v1, "alternatesTable"
 
     move-object v0, p1
@@ -64,24 +64,24 @@
 
     move-result-object v0
 
-    .line 389
+    .line 384
     const-string v1, "alternatesTable"
 
     const-string v2, "smiley_category"
 
     invoke-static {v0, p1, v1, v2}, Lcom/kik/android/b/j$a;->a(Landroid/database/Cursor;Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 390
+    .line 385
     const-string v1, "alternatesTable"
 
     const-string v2, "smiley_id"
 
     invoke-static {v0, p1, v1, v2}, Lcom/kik/android/b/j$a;->a(Landroid/database/Cursor;Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 391
+    .line 386
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 392
+    .line 387
     return-void
 .end method
 
@@ -89,7 +89,7 @@
     .locals 4
 
     .prologue
-    .line 375
+    .line 370
     const-string v0, "CREATE TABLE %s (%s VARCHAR, %s VARCHAR);"
 
     const/4 v1, 0x3
@@ -118,10 +118,10 @@
 
     move-result-object v0
 
-    .line 376
+    .line 371
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 377
+    .line 372
     return-void
 .end method
 
@@ -129,6 +129,6 @@
     .locals 0
 
     .prologue
-    .line 383
+    .line 378
     return-void
 .end method

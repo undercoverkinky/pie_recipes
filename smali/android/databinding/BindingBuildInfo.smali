@@ -9,7 +9,8 @@
 # annotations
 .annotation system Ldalvik/annotation/AnnotationDefault;
     value = .subannotation Landroid/databinding/BindingBuildInfo;
-        buildId = ""
+        enableDebugLogs = false
+        printEncodedError = false
     .end subannotation
 .end annotation
 
@@ -26,4 +27,28 @@
 
 # virtual methods
 .method public abstract buildId()Ljava/lang/String;
+.end method
+
+.method public abstract enableDebugLogs()Z
+.end method
+
+.method public abstract exportClassListTo()Ljava/lang/String;
+.end method
+
+.method public abstract isLibrary()Z
+.end method
+
+.method public abstract layoutInfoDir()Ljava/lang/String;
+.end method
+
+.method public abstract minSdk()I
+.end method
+
+.method public abstract modulePackage()Ljava/lang/String;
+.end method
+
+.method public abstract printEncodedError()Z
+.end method
+
+.method public abstract sdkRoot()Ljava/lang/String;
 .end method

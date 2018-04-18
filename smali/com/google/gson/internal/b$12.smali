@@ -54,9 +54,9 @@
 
     .prologue
     .line 166
-    new-instance v0, Ljava/util/ArrayDeque;
+    new-instance v0, Ljava/util/LinkedList;
 
-    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     return-object v0
 .end method

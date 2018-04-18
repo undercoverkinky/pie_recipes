@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 526
+    .line 469
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,25 +28,13 @@
 
 # virtual methods
 .method public build(Landroid/support/v4/app/NotificationCompat$Builder;Landroid/support/v4/app/NotificationBuilderWithBuilderAccessor;)Landroid/app/Notification;
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 528
+    .line 471
     invoke-interface {p2}, Landroid/support/v4/app/NotificationBuilderWithBuilderAccessor;->build()Landroid/app/Notification;
 
     move-result-object v0
 
-    .line 529
-    iget-object v1, p1, Landroid/support/v4/app/NotificationCompat$Builder;->mContentView:Landroid/widget/RemoteViews;
-
-    if-eqz v1, :cond_0
-
-    .line 530
-    iget-object v1, p1, Landroid/support/v4/app/NotificationCompat$Builder;->mContentView:Landroid/widget/RemoteViews;
-
-    iput-object v1, v0, Landroid/app/Notification;->contentView:Landroid/widget/RemoteViews;
-
-    .line 532
-    :cond_0
     return-object v0
 .end method

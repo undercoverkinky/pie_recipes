@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 1585
+    .line 1493
     invoke-direct {p0}, Landroid/support/v4/view/ViewCompat$JbMr2ViewCompatImpl;-><init>()V
 
     return-void
@@ -31,7 +31,7 @@
     .locals 1
 
     .prologue
-    .line 1588
+    .line 1496
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatKitKat;->getAccessibilityLiveRegion(Landroid/view/View;)I
 
     move-result v0
@@ -43,7 +43,7 @@
     .locals 1
 
     .prologue
-    .line 1613
+    .line 1516
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatKitKat;->isAttachedToWindow(Landroid/view/View;)Z
 
     move-result v0
@@ -55,20 +55,8 @@
     .locals 1
 
     .prologue
-    .line 1603
+    .line 1511
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatKitKat;->isLaidOut(Landroid/view/View;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public isLayoutDirectionResolved(Landroid/view/View;)Z
-    .locals 1
-
-    .prologue
-    .line 1608
-    invoke-static {p1}, Landroid/support/v4/view/ViewCompatKitKat;->isLayoutDirectionResolved(Landroid/view/View;)Z
 
     move-result v0
 
@@ -79,10 +67,10 @@
     .locals 0
 
     .prologue
-    .line 1593
+    .line 1501
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatKitKat;->setAccessibilityLiveRegion(Landroid/view/View;I)V
 
-    .line 1594
+    .line 1502
     return-void
 .end method
 
@@ -90,9 +78,9 @@
     .locals 0
 
     .prologue
-    .line 1598
+    .line 1506
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatJB;->setImportantForAccessibility(Landroid/view/View;I)V
 
-    .line 1599
+    .line 1507
     return-void
 .end method

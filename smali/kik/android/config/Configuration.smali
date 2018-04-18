@@ -50,11 +50,11 @@
 
 .field private final e:Ljava/lang/Runnable;
 
-.field private f:Lkik/android/util/ai;
+.field private f:Lkik/android/util/ah;
 
 
 # direct methods
-.method protected constructor <init>(Ljava/lang/String;Ljava/lang/Object;[Ljava/lang/Object;Ljava/lang/Runnable;Lkik/android/util/ai;)V
+.method protected constructor <init>(Ljava/lang/String;Ljava/lang/Object;[Ljava/lang/Object;Ljava/lang/Runnable;Lkik/android/util/ah;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -62,7 +62,7 @@
             "Ljava/lang/String;",
             "TT;[TT;",
             "Ljava/lang/Runnable;",
-            "Lkik/android/util/ai;",
+            "Lkik/android/util/ah;",
             ")V"
         }
     .end annotation
@@ -116,12 +116,12 @@
     iput-object p4, p0, Lkik/android/config/Configuration;->e:Ljava/lang/Runnable;
 
     .line 52
-    iput-object p5, p0, Lkik/android/config/Configuration;->f:Lkik/android/util/ai;
+    iput-object p5, p0, Lkik/android/config/Configuration;->f:Lkik/android/util/ah;
 
     .line 54
-    iget-object v0, p0, Lkik/android/config/Configuration;->f:Lkik/android/util/ai;
+    iget-object v0, p0, Lkik/android/config/Configuration;->f:Lkik/android/util/ah;
 
-    invoke-virtual {p0, v0}, Lkik/android/config/Configuration;->b(Lkik/android/util/ai;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lkik/android/config/Configuration;->b(Lkik/android/util/ah;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -164,7 +164,7 @@
 .method public abstract a()Lkik/android/config/Configuration$Type;
 .end method
 
-.method protected abstract a(Lkik/android/util/ai;)V
+.method protected abstract a(Lkik/android/util/ah;)V
 .end method
 
 .method public a(Ljava/lang/Object;)Z
@@ -194,9 +194,9 @@
     iput-object p1, p0, Lkik/android/config/Configuration;->b:Ljava/lang/Object;
 
     .line 103
-    iget-object v0, p0, Lkik/android/config/Configuration;->f:Lkik/android/util/ai;
+    iget-object v0, p0, Lkik/android/config/Configuration;->f:Lkik/android/util/ah;
 
-    invoke-virtual {p0, v0}, Lkik/android/config/Configuration;->a(Lkik/android/util/ai;)V
+    invoke-virtual {p0, v0}, Lkik/android/config/Configuration;->a(Lkik/android/util/ah;)V
 
     .line 104
     iget-object v0, p0, Lkik/android/config/Configuration;->e:Ljava/lang/Runnable;
@@ -237,11 +237,11 @@
     return-object v0
 .end method
 
-.method protected abstract b(Lkik/android/util/ai;)Ljava/lang/Object;
+.method protected abstract b(Lkik/android/util/ah;)Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkik/android/util/ai;",
+            "Lkik/android/util/ah;",
             ")TT;"
         }
     .end annotation

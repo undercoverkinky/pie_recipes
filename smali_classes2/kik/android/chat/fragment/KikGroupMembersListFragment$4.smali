@@ -1,11 +1,14 @@
 .class final Lkik/android/chat/fragment/KikGroupMembersListFragment$4;
-.super Lcom/kik/events/k;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lcom/kik/events/e;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/KikGroupMembersListFragment;->onAddButtonPressed()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lkik/android/chat/fragment/KikGroupMembersListFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,9 +18,10 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Ljava/lang/Object;",
+        "Lcom/kik/events/e",
         "<",
-        "Landroid/os/Bundle;",
+        "Ljava/lang/String;",
         ">;"
     }
 .end annotation
@@ -32,28 +36,55 @@
     .locals 0
 
     .prologue
-    .line 175
+    .line 122
     iput-object p1, p0, Lkik/android/chat/fragment/KikGroupMembersListFragment$4;->a:Lkik/android/chat/fragment/KikGroupMembersListFragment;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic a(Ljava/lang/Object;)V
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 1
 
     .prologue
-    .line 175
-    check-cast p1, Landroid/os/Bundle;
+    .line 122
+    check-cast p2, Ljava/lang/String;
 
-    .line 1179
+    .line 1127
     iget-object v0, p0, Lkik/android/chat/fragment/KikGroupMembersListFragment$4;->a:Lkik/android/chat/fragment/KikGroupMembersListFragment;
 
-    invoke-static {v0, p1}, Lkik/android/chat/fragment/KikGroupMembersListFragment;->a(Lkik/android/chat/fragment/KikGroupMembersListFragment;Landroid/os/Bundle;)V
+    iget-object v0, v0, Lkik/android/chat/fragment/KikGroupMembersListFragment;->b:Lkik/core/interfaces/ad;
 
-    .line 175
+    invoke-static {v0}, Lkik/core/x;->b(Lkik/core/interfaces/ad;)Lkik/core/x;
+
+    move-result-object v0
+
+    .line 1128
+    if-eqz p2, :cond_0
+
+    invoke-virtual {v0}, Lkik/core/x;->a()Lkik/core/datatypes/n;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lkik/core/datatypes/n;->a()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 1129
+    iget-object v0, p0, Lkik/android/chat/fragment/KikGroupMembersListFragment$4;->a:Lkik/android/chat/fragment/KikGroupMembersListFragment;
+
+    invoke-static {v0}, Lkik/android/chat/fragment/KikGroupMembersListFragment;->b(Lkik/android/chat/fragment/KikGroupMembersListFragment;)V
+
+    .line 122
+    :cond_0
     return-void
 .end method

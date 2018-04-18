@@ -33,25 +33,25 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 116
+    .line 91
     iput-object p1, p0, Lkik/android/chat/view/PreviewResultsViewImpl$b;->a:Lkik/android/chat/view/PreviewResultsViewImpl;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
 
-    .line 122
+    .line 97
     const/4 v0, -0x1
 
     iput v0, p0, Lkik/android/chat/view/PreviewResultsViewImpl$b;->b:I
 
-    .line 123
+    .line 98
     iput v1, p0, Lkik/android/chat/view/PreviewResultsViewImpl$b;->c:I
 
-    .line 124
+    .line 99
     const/4 v0, 0x1
 
     iput v0, p0, Lkik/android/chat/view/PreviewResultsViewImpl$b;->d:I
 
-    .line 126
+    .line 101
     iput-boolean v1, p0, Lkik/android/chat/view/PreviewResultsViewImpl$b;->e:Z
 
     return-void
@@ -63,7 +63,7 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 130
+    .line 105
     sub-float v0, p2, p4
 
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
@@ -88,7 +88,7 @@
 
     sub-float v0, p1, p3
 
-    .line 131
+    .line 106
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
     move-result v0
@@ -99,7 +99,7 @@
 
     if-lez v0, :cond_5
 
-    .line 132
+    .line 107
     sub-float v0, p1, p3
 
     const/4 v2, 0x0
@@ -110,7 +110,7 @@
 
     move v0, v1
 
-    .line 133
+    .line 108
     :goto_0
     iget-object v2, p0, Lkik/android/chat/view/PreviewResultsViewImpl$b;->a:Lkik/android/chat/view/PreviewResultsViewImpl;
 
@@ -120,15 +120,15 @@
 
     if-nez v2, :cond_0
 
-    .line 135
+    .line 110
     if-eqz p6, :cond_3
 
-    .line 136
+    .line 111
     if-ne v0, v1, :cond_2
 
     sget-object v1, Lcom/rounds/kik/analytics/group/SwipeEvents$Values;->LEFT:Lcom/rounds/kik/analytics/group/SwipeEvents$Values;
 
-    .line 143
+    .line 118
     :goto_1
     iget-object v2, p0, Lkik/android/chat/view/PreviewResultsViewImpl$b;->a:Lkik/android/chat/view/PreviewResultsViewImpl;
 
@@ -144,29 +144,29 @@
 
     invoke-static {v2, v1}, Lcom/rounds/kik/analytics/Reporter;->report(Landroid/content/Context;Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;)V
 
-    .line 144
+    .line 119
     iget-object v1, p0, Lkik/android/chat/view/PreviewResultsViewImpl$b;->a:Lkik/android/chat/view/PreviewResultsViewImpl;
 
     invoke-static {v1}, Lkik/android/chat/view/PreviewResultsViewImpl;->b(Lkik/android/chat/view/PreviewResultsViewImpl;)Z
 
-    .line 149
+    .line 124
     :cond_0
     :goto_2
     return v0
 
-    .line 132
+    .line 107
     :cond_1
     const/4 v0, -0x1
 
     goto :goto_0
 
-    .line 136
+    .line 111
     :cond_2
     sget-object v1, Lcom/rounds/kik/analytics/group/SwipeEvents$Values;->RIGHT:Lcom/rounds/kik/analytics/group/SwipeEvents$Values;
 
     goto :goto_1
 
-    .line 140
+    .line 115
     :cond_3
     if-ne v0, v1, :cond_4
 
@@ -179,7 +179,7 @@
 
     goto :goto_1
 
-    .line 149
+    .line 124
     :cond_5
     const/4 v0, 0x0
 
@@ -190,25 +190,25 @@
     .locals 7
 
     .prologue
-    .line 155
+    .line 130
     iget-boolean v0, p0, Lkik/android/chat/view/PreviewResultsViewImpl$b;->e:Z
 
     if-nez v0, :cond_0
 
-    .line 156
+    .line 131
     const/4 v0, 0x0
 
-    .line 171
+    .line 146
     :goto_0
     return v0
 
-    .line 159
+    .line 134
     :cond_0
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 160
+    .line 135
     iget-object v1, p0, Lkik/android/chat/view/PreviewResultsViewImpl$b;->a:Lkik/android/chat/view/PreviewResultsViewImpl;
 
     invoke-static {v1}, Lkik/android/chat/view/PreviewResultsViewImpl;->c(Lkik/android/chat/view/PreviewResultsViewImpl;)I
@@ -227,10 +227,10 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/graphics/Matrix;->setRotate(FFF)V
 
-    .line 161
+    .line 136
     invoke-virtual {p2, v0}, Landroid/view/MotionEvent;->transform(Landroid/graphics/Matrix;)V
 
-    .line 163
+    .line 138
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v1
@@ -257,10 +257,10 @@
 
     move-result v0
 
-    .line 164
+    .line 139
     if-nez v0, :cond_1
 
-    .line 165
+    .line 140
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
     move-result v1
@@ -287,16 +287,16 @@
 
     move-result v0
 
-    .line 167
+    .line 142
     :cond_1
     if-eqz v0, :cond_2
 
-    .line 168
+    .line 143
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lkik/android/chat/view/PreviewResultsViewImpl$b;->e:Z
 
-    .line 169
+    .line 144
     iget-object v1, p0, Lkik/android/chat/view/PreviewResultsViewImpl$b;->a:Lkik/android/chat/view/PreviewResultsViewImpl;
 
     const/4 v2, -0x1
@@ -308,13 +308,13 @@
     :goto_1
     invoke-virtual {v1, v0}, Lkik/android/chat/view/PreviewResultsViewImpl;->a(Z)V
 
-    .line 171
+    .line 146
     :cond_2
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 169
+    .line 144
     :cond_3
     const/4 v0, 0x0
 
@@ -329,10 +329,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 189
+    .line 164
     iput-boolean v0, p0, Lkik/android/chat/view/PreviewResultsViewImpl$b;->e:Z
 
-    .line 190
+    .line 165
     return v0
 .end method
 
@@ -340,7 +340,7 @@
     .locals 1
 
     .prologue
-    .line 177
+    .line 152
     invoke-direct {p0, p1, p2, p3, p4}, Lkik/android/chat/view/PreviewResultsViewImpl$b;->a(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
 
     move-result v0
@@ -352,7 +352,7 @@
     .locals 1
 
     .prologue
-    .line 183
+    .line 158
     invoke-direct {p0, p1, p2, p3, p4}, Lkik/android/chat/view/PreviewResultsViewImpl$b;->a(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
 
     move-result v0

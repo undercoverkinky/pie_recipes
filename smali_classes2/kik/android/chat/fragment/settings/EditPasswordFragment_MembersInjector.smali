@@ -23,12 +23,12 @@
 
 
 # instance fields
-.field private final b:Ljavax/inject/Provider;
+.field private final b:Ldagger/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljavax/inject/Provider",
+            "Ldagger/b",
             "<",
-            "Lkik/core/interfaces/ad;",
+            "Lkik/android/chat/fragment/KikScopedDialogFragment;",
             ">;"
         }
     .end annotation
@@ -39,7 +39,7 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lcom/kik/metrics/c/d;",
+            "Lkik/core/interfaces/af;",
             ">;"
         }
     .end annotation
@@ -50,7 +50,7 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/ag;",
+            "Lkik/core/interfaces/ad;",
             ">;"
         }
     .end annotation
@@ -84,31 +84,31 @@
     goto :goto_0
 .end method
 
-.method private constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+.method private constructor <init>(Ldagger/b;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
+            "Ldagger/b",
+            "<",
+            "Lkik/android/chat/fragment/KikScopedDialogFragment;",
+            ">;",
+            "Ljavax/inject/Provider",
+            "<",
+            "Lkik/core/interfaces/af;",
+            ">;",
             "Ljavax/inject/Provider",
             "<",
             "Lkik/core/interfaces/ad;",
-            ">;",
-            "Ljavax/inject/Provider",
-            "<",
-            "Lcom/kik/metrics/c/d;",
-            ">;",
-            "Ljavax/inject/Provider",
-            "<",
-            "Lkik/core/interfaces/ag;",
             ">;)V"
         }
     .end annotation
 
     .prologue
-    .line 25
+    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
+    .line 17
     sget-boolean v0, Lkik/android/chat/fragment/settings/EditPasswordFragment_MembersInjector;->a:Z
 
     if-nez v0, :cond_0
@@ -121,11 +121,11 @@
 
     throw v0
 
-    .line 27
+    .line 18
     :cond_0
-    iput-object p1, p0, Lkik/android/chat/fragment/settings/EditPasswordFragment_MembersInjector;->b:Ljavax/inject/Provider;
+    iput-object p1, p0, Lkik/android/chat/fragment/settings/EditPasswordFragment_MembersInjector;->b:Ldagger/b;
 
-    .line 28
+    .line 19
     sget-boolean v0, Lkik/android/chat/fragment/settings/EditPasswordFragment_MembersInjector;->a:Z
 
     if-nez v0, :cond_1
@@ -138,11 +138,11 @@
 
     throw v0
 
-    .line 29
+    .line 20
     :cond_1
     iput-object p2, p0, Lkik/android/chat/fragment/settings/EditPasswordFragment_MembersInjector;->c:Ljavax/inject/Provider;
 
-    .line 30
+    .line 21
     sget-boolean v0, Lkik/android/chat/fragment/settings/EditPasswordFragment_MembersInjector;->a:Z
 
     if-nez v0, :cond_2
@@ -155,30 +155,30 @@
 
     throw v0
 
-    .line 31
+    .line 22
     :cond_2
     iput-object p3, p0, Lkik/android/chat/fragment/settings/EditPasswordFragment_MembersInjector;->d:Ljavax/inject/Provider;
 
-    .line 32
+    .line 23
     return-void
 .end method
 
-.method public static a(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Ldagger/b;
+.method public static a(Ldagger/b;Ljavax/inject/Provider;Ljavax/inject/Provider;)Ldagger/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
+            "Ldagger/b",
+            "<",
+            "Lkik/android/chat/fragment/KikScopedDialogFragment;",
+            ">;",
+            "Ljavax/inject/Provider",
+            "<",
+            "Lkik/core/interfaces/af;",
+            ">;",
             "Ljavax/inject/Provider",
             "<",
             "Lkik/core/interfaces/ad;",
-            ">;",
-            "Ljavax/inject/Provider",
-            "<",
-            "Lcom/kik/metrics/c/d;",
-            ">;",
-            "Ljavax/inject/Provider",
-            "<",
-            "Lkik/core/interfaces/ag;",
             ">;)",
             "Ldagger/b",
             "<",
@@ -188,10 +188,10 @@
     .end annotation
 
     .prologue
-    .line 38
+    .line 36
     new-instance v0, Lkik/android/chat/fragment/settings/EditPasswordFragment_MembersInjector;
 
-    invoke-direct {v0, p0, p1, p2}, Lkik/android/chat/fragment/settings/EditPasswordFragment_MembersInjector;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+    invoke-direct {v0, p0, p1, p2}, Lkik/android/chat/fragment/settings/EditPasswordFragment_MembersInjector;-><init>(Ldagger/b;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
 
     return-object v0
 .end method
@@ -205,10 +205,10 @@
     .line 10
     check-cast p1, Lkik/android/chat/fragment/settings/EditPasswordFragment;
 
-    .line 1044
+    .line 1027
     if-nez p1, :cond_0
 
-    .line 1045
+    .line 1028
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "Cannot inject members into a null reference"
@@ -217,30 +217,25 @@
 
     throw v0
 
-    .line 1047
+    .line 1030
     :cond_0
-    iget-object v0, p0, Lkik/android/chat/fragment/settings/EditPasswordFragment_MembersInjector;->b:Ljavax/inject/Provider;
+    iget-object v0, p0, Lkik/android/chat/fragment/settings/EditPasswordFragment_MembersInjector;->b:Ldagger/b;
 
-    invoke-static {p1, v0}, Lkik/android/chat/fragment/KikScopedDialogFragment_MembersInjector;->a(Lkik/android/chat/fragment/KikScopedDialogFragment;Ljavax/inject/Provider;)V
+    invoke-interface {v0, p1}, Ldagger/b;->injectMembers(Ljava/lang/Object;)V
 
-    .line 1049
+    .line 1031
     iget-object v0, p0, Lkik/android/chat/fragment/settings/EditPasswordFragment_MembersInjector;->c:Ljavax/inject/Provider;
-
-    invoke-static {p1, v0}, Lkik/android/chat/fragment/KikScopedDialogFragment_MembersInjector;->b(Lkik/android/chat/fragment/KikScopedDialogFragment;Ljavax/inject/Provider;)V
-
-    .line 1051
-    iget-object v0, p0, Lkik/android/chat/fragment/settings/EditPasswordFragment_MembersInjector;->d:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/interfaces/ag;
+    check-cast v0, Lkik/core/interfaces/af;
 
-    iput-object v0, p1, Lkik/android/chat/fragment/settings/EditPasswordFragment;->a:Lkik/core/interfaces/ag;
+    iput-object v0, p1, Lkik/android/chat/fragment/settings/EditPasswordFragment;->a:Lkik/core/interfaces/af;
 
-    .line 1052
-    iget-object v0, p0, Lkik/android/chat/fragment/settings/EditPasswordFragment_MembersInjector;->b:Ljavax/inject/Provider;
+    .line 1032
+    iget-object v0, p0, Lkik/android/chat/fragment/settings/EditPasswordFragment_MembersInjector;->d:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 

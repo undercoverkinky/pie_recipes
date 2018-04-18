@@ -7,11 +7,11 @@
 
 
 # virtual methods
-.method public abstract aP_()Lrx/d;
+.method public abstract at_()Lrx/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lrx/d",
+            "Lrx/c",
             "<",
             "Ljava/lang/Integer;",
             ">;"
@@ -19,11 +19,11 @@
     .end annotation
 .end method
 
-.method public abstract aQ_()Lrx/d;
+.method public abstract au_()Lrx/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lrx/d",
+            "Lrx/c",
             "<",
             "Ljava/lang/Boolean;",
             ">;"
@@ -37,14 +37,14 @@
 .method public abstract d()V
 .end method
 
-.method public abstract e()V
+.method public abstract f()V
 .end method
 
-.method public abstract f()Lrx/d;
+.method public abstract g()Lrx/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lrx/d",
+            "Lrx/c",
             "<",
             "Ljava/lang/String;",
             ">;"

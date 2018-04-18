@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/fragment/PhotoMediaItemFragment$2;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Ljava/io/File;",
         ">;"
@@ -35,7 +35,7 @@
     .line 112
     iput-object p1, p0, Lkik/android/chat/fragment/PhotoMediaItemFragment$2;->a:Lkik/android/chat/fragment/PhotoMediaItemFragment;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -53,7 +53,7 @@
     .line 116
     iget-object v0, p0, Lkik/android/chat/fragment/PhotoMediaItemFragment$2;->a:Lkik/android/chat/fragment/PhotoMediaItemFragment;
 
-    iget-object v0, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment;->j:Lkik/core/datatypes/messageExtensions/ContentMessage;
+    iget-object v0, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment;->k:Lkik/core/datatypes/messageExtensions/ContentMessage;
 
     if-nez v0, :cond_1
 
@@ -65,39 +65,39 @@
 
     iget-object v1, v1, Lkik/android/chat/fragment/PhotoMediaItemFragment;->c:Lcom/kik/android/Mixpanel;
 
-    invoke-static {v1, v3, v0, v3, v2}, Lkik/android/util/ay;->a(Lcom/kik/android/Mixpanel;ZLjava/lang/String;ZZ)V
+    invoke-static {v1, v3, v0, v3, v2}, Lkik/android/util/az;->a(Lcom/kik/android/Mixpanel;ZLjava/lang/String;ZZ)V
 
     .line 118
-    const v0, 0x7f0901b6
+    const v0, 0x7f0a01b5
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkik/android/util/bt;->a(Ljava/lang/String;I)V
+    invoke-static {v0, v2}, Lkik/android/util/bv;->a(Ljava/lang/String;I)V
 
     .line 119
     iget-object v0, p0, Lkik/android/chat/fragment/PhotoMediaItemFragment$2;->a:Lkik/android/chat/fragment/PhotoMediaItemFragment;
 
-    iget-object v0, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment;->h:Lkik/android/f/e;
+    iget-object v0, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment;->h:Lkik/android/e/e;
 
     if-eqz v0, :cond_0
 
     .line 120
     iget-object v0, p0, Lkik/android/chat/fragment/PhotoMediaItemFragment$2;->a:Lkik/android/chat/fragment/PhotoMediaItemFragment;
 
-    iget-object v0, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment;->h:Lkik/android/f/e;
+    iget-object v0, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment;->h:Lkik/android/e/e;
 
-    const v1, 0x7f02031b
+    const v1, 0x7f0202e0
 
-    invoke-interface {v0, v1}, Lkik/android/f/e;->b(I)V
+    invoke-interface {v0, v1}, Lkik/android/e/e;->f(I)V
 
     .line 121
     iget-object v0, p0, Lkik/android/chat/fragment/PhotoMediaItemFragment$2;->a:Lkik/android/chat/fragment/PhotoMediaItemFragment;
 
-    iget-object v0, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment;->h:Lkik/android/f/e;
+    iget-object v0, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment;->h:Lkik/android/e/e;
 
-    invoke-interface {v0, v2}, Lkik/android/f/e;->b(Z)V
+    invoke-interface {v0, v2}, Lkik/android/e/e;->b(Z)V
 
     .line 123
     :cond_0
@@ -107,7 +107,7 @@
     :cond_1
     iget-object v0, p0, Lkik/android/chat/fragment/PhotoMediaItemFragment$2;->a:Lkik/android/chat/fragment/PhotoMediaItemFragment;
 
-    iget-object v0, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment;->j:Lkik/core/datatypes/messageExtensions/ContentMessage;
+    iget-object v0, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment;->k:Lkik/core/datatypes/messageExtensions/ContentMessage;
 
     invoke-virtual {v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->v()Ljava/lang/String;
 
@@ -127,7 +127,7 @@
     .line 128
     iget-object v0, p0, Lkik/android/chat/fragment/PhotoMediaItemFragment$2;->a:Lkik/android/chat/fragment/PhotoMediaItemFragment;
 
-    iget-object v0, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment;->j:Lkik/core/datatypes/messageExtensions/ContentMessage;
+    iget-object v0, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment;->k:Lkik/core/datatypes/messageExtensions/ContentMessage;
 
     if-nez v0, :cond_1
 
@@ -139,39 +139,39 @@
 
     iget-object v1, v1, Lkik/android/chat/fragment/PhotoMediaItemFragment;->c:Lcom/kik/android/Mixpanel;
 
-    invoke-static {v1, v2, v0, v3, v2}, Lkik/android/util/ay;->a(Lcom/kik/android/Mixpanel;ZLjava/lang/String;ZZ)V
+    invoke-static {v1, v2, v0, v3, v2}, Lkik/android/util/az;->a(Lcom/kik/android/Mixpanel;ZLjava/lang/String;ZZ)V
 
     .line 130
-    const v0, 0x7f09031d
+    const v0, 0x7f0a0309
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkik/android/util/bt;->a(Ljava/lang/String;I)V
+    invoke-static {v0, v2}, Lkik/android/util/bv;->a(Ljava/lang/String;I)V
 
     .line 131
     iget-object v0, p0, Lkik/android/chat/fragment/PhotoMediaItemFragment$2;->a:Lkik/android/chat/fragment/PhotoMediaItemFragment;
 
-    iget-object v0, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment;->h:Lkik/android/f/e;
+    iget-object v0, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment;->h:Lkik/android/e/e;
 
     if-eqz v0, :cond_0
 
     .line 132
     iget-object v0, p0, Lkik/android/chat/fragment/PhotoMediaItemFragment$2;->a:Lkik/android/chat/fragment/PhotoMediaItemFragment;
 
-    iget-object v0, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment;->h:Lkik/android/f/e;
+    iget-object v0, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment;->h:Lkik/android/e/e;
 
-    const v1, 0x7f02031a
+    const v1, 0x7f0202df
 
-    invoke-interface {v0, v1}, Lkik/android/f/e;->b(I)V
+    invoke-interface {v0, v1}, Lkik/android/e/e;->f(I)V
 
     .line 133
     iget-object v0, p0, Lkik/android/chat/fragment/PhotoMediaItemFragment$2;->a:Lkik/android/chat/fragment/PhotoMediaItemFragment;
 
-    iget-object v0, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment;->h:Lkik/android/f/e;
+    iget-object v0, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment;->h:Lkik/android/e/e;
 
-    invoke-interface {v0, v3}, Lkik/android/f/e;->b(Z)V
+    invoke-interface {v0, v3}, Lkik/android/e/e;->b(Z)V
 
     .line 135
     :cond_0
@@ -181,7 +181,7 @@
     :cond_1
     iget-object v0, p0, Lkik/android/chat/fragment/PhotoMediaItemFragment$2;->a:Lkik/android/chat/fragment/PhotoMediaItemFragment;
 
-    iget-object v0, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment;->j:Lkik/core/datatypes/messageExtensions/ContentMessage;
+    iget-object v0, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment;->k:Lkik/core/datatypes/messageExtensions/ContentMessage;
 
     invoke-virtual {v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->v()Ljava/lang/String;
 

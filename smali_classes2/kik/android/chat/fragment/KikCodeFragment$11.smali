@@ -23,7 +23,7 @@
     .locals 1
 
     .prologue
-    .line 153
+    .line 149
     iput-object p1, p0, Lkik/android/chat/fragment/KikCodeFragment$11;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     const/4 v0, 0x0
@@ -39,20 +39,20 @@
     .locals 2
 
     .prologue
-    .line 157
+    .line 153
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$11;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/KikCodeFragment;->h(Lkik/android/chat/fragment/KikCodeFragment;)V
 
-    .line 158
+    .line 154
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$11;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
-    invoke-static {}, Lkik/android/chat/fragment/KikCodeFragment;->e()I
+    invoke-static {}, Lkik/android/chat/fragment/KikCodeFragment;->g()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikCodeFragment;->a(I)V
 
-    .line 159
+    .line 155
     return-void
 .end method

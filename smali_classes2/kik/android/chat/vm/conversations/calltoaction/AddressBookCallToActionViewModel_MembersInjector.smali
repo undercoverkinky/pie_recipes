@@ -23,12 +23,12 @@
 
 
 # instance fields
-.field private final b:Ljavax/inject/Provider;
+.field private final b:Ldagger/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljavax/inject/Provider",
+            "Ldagger/b",
             "<",
-            "Lcom/kik/android/Mixpanel;",
+            "Lkik/android/chat/vm/conversations/calltoaction/a;",
             ">;"
         }
     .end annotation
@@ -39,13 +39,24 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/ad;",
+            "Lcom/kik/android/Mixpanel;",
             ">;"
         }
     .end annotation
 .end field
 
 .field private final d:Ljavax/inject/Provider;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljavax/inject/Provider",
+            "<",
+            "Lkik/core/interfaces/ad;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final e:Ljavax/inject/Provider;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljavax/inject/Provider",
@@ -84,11 +95,15 @@
     goto :goto_0
 .end method
 
-.method private constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+.method private constructor <init>(Ldagger/b;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
+            "Ldagger/b",
+            "<",
+            "Lkik/android/chat/vm/conversations/calltoaction/a;",
+            ">;",
             "Ljavax/inject/Provider",
             "<",
             "Lcom/kik/android/Mixpanel;",
@@ -105,10 +120,10 @@
     .end annotation
 
     .prologue
-    .line 25
+    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
+    .line 18
     sget-boolean v0, Lkik/android/chat/vm/conversations/calltoaction/AddressBookCallToActionViewModel_MembersInjector;->a:Z
 
     if-nez v0, :cond_0
@@ -121,11 +136,11 @@
 
     throw v0
 
-    .line 27
+    .line 19
     :cond_0
-    iput-object p1, p0, Lkik/android/chat/vm/conversations/calltoaction/AddressBookCallToActionViewModel_MembersInjector;->b:Ljavax/inject/Provider;
+    iput-object p1, p0, Lkik/android/chat/vm/conversations/calltoaction/AddressBookCallToActionViewModel_MembersInjector;->b:Ldagger/b;
 
-    .line 28
+    .line 20
     sget-boolean v0, Lkik/android/chat/vm/conversations/calltoaction/AddressBookCallToActionViewModel_MembersInjector;->a:Z
 
     if-nez v0, :cond_1
@@ -138,11 +153,11 @@
 
     throw v0
 
-    .line 29
+    .line 21
     :cond_1
     iput-object p2, p0, Lkik/android/chat/vm/conversations/calltoaction/AddressBookCallToActionViewModel_MembersInjector;->c:Ljavax/inject/Provider;
 
-    .line 30
+    .line 22
     sget-boolean v0, Lkik/android/chat/vm/conversations/calltoaction/AddressBookCallToActionViewModel_MembersInjector;->a:Z
 
     if-nez v0, :cond_2
@@ -155,19 +170,40 @@
 
     throw v0
 
-    .line 31
+    .line 23
     :cond_2
     iput-object p3, p0, Lkik/android/chat/vm/conversations/calltoaction/AddressBookCallToActionViewModel_MembersInjector;->d:Ljavax/inject/Provider;
 
-    .line 32
+    .line 24
+    sget-boolean v0, Lkik/android/chat/vm/conversations/calltoaction/AddressBookCallToActionViewModel_MembersInjector;->a:Z
+
+    if-nez v0, :cond_3
+
+    if-nez p4, :cond_3
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
+
+    throw v0
+
+    .line 25
+    :cond_3
+    iput-object p4, p0, Lkik/android/chat/vm/conversations/calltoaction/AddressBookCallToActionViewModel_MembersInjector;->e:Ljavax/inject/Provider;
+
+    .line 26
     return-void
 .end method
 
-.method public static a(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Ldagger/b;
+.method public static a(Ldagger/b;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Ldagger/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
+            "Ldagger/b",
+            "<",
+            "Lkik/android/chat/vm/conversations/calltoaction/a;",
+            ">;",
             "Ljavax/inject/Provider",
             "<",
             "Lcom/kik/android/Mixpanel;",
@@ -188,10 +224,10 @@
     .end annotation
 
     .prologue
-    .line 38
+    .line 40
     new-instance v0, Lkik/android/chat/vm/conversations/calltoaction/AddressBookCallToActionViewModel_MembersInjector;
 
-    invoke-direct {v0, p0, p1, p2}, Lkik/android/chat/vm/conversations/calltoaction/AddressBookCallToActionViewModel_MembersInjector;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+    invoke-direct {v0, p0, p1, p2, p3}, Lkik/android/chat/vm/conversations/calltoaction/AddressBookCallToActionViewModel_MembersInjector;-><init>(Ldagger/b;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
 
     return-object v0
 .end method
@@ -205,10 +241,10 @@
     .line 10
     check-cast p1, Lkik/android/chat/vm/conversations/calltoaction/b;
 
-    .line 1044
+    .line 1030
     if-nez p1, :cond_0
 
-    .line 1045
+    .line 1031
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "Cannot inject members into a null reference"
@@ -217,9 +253,14 @@
 
     throw v0
 
-    .line 1047
+    .line 1033
     :cond_0
-    iget-object v0, p0, Lkik/android/chat/vm/conversations/calltoaction/AddressBookCallToActionViewModel_MembersInjector;->b:Ljavax/inject/Provider;
+    iget-object v0, p0, Lkik/android/chat/vm/conversations/calltoaction/AddressBookCallToActionViewModel_MembersInjector;->b:Ldagger/b;
+
+    invoke-interface {v0, p1}, Ldagger/b;->injectMembers(Ljava/lang/Object;)V
+
+    .line 1034
+    iget-object v0, p0, Lkik/android/chat/vm/conversations/calltoaction/AddressBookCallToActionViewModel_MembersInjector;->c:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
@@ -229,8 +270,8 @@
 
     iput-object v0, p1, Lkik/android/chat/vm/conversations/calltoaction/b;->b:Lcom/kik/android/Mixpanel;
 
-    .line 1048
-    iget-object v0, p0, Lkik/android/chat/vm/conversations/calltoaction/AddressBookCallToActionViewModel_MembersInjector;->c:Ljavax/inject/Provider;
+    .line 1035
+    iget-object v0, p0, Lkik/android/chat/vm/conversations/calltoaction/AddressBookCallToActionViewModel_MembersInjector;->d:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
@@ -240,8 +281,8 @@
 
     iput-object v0, p1, Lkik/android/chat/vm/conversations/calltoaction/b;->c:Lkik/core/interfaces/ad;
 
-    .line 1049
-    iget-object v0, p0, Lkik/android/chat/vm/conversations/calltoaction/AddressBookCallToActionViewModel_MembersInjector;->d:Ljavax/inject/Provider;
+    .line 1036
+    iget-object v0, p0, Lkik/android/chat/vm/conversations/calltoaction/AddressBookCallToActionViewModel_MembersInjector;->e:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 

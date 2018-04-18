@@ -39,7 +39,7 @@
     return-object v0
 .end method
 
-.method public abstract getValue()Lcom/google/gson/k;
+.method public abstract getValue()Lcom/google/gson/j;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/rounds/kik/analytics/properties/PropertyValueMissingException;

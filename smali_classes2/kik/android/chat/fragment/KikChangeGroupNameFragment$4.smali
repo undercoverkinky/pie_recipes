@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/fragment/KikChangeGroupNameFragment$4;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,9 +15,9 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
-        "Lkik/core/datatypes/p;",
+        "Lkik/core/datatypes/s;",
         ">;"
     }
 .end annotation
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 140
+    .line 126
     iput-object p1, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$4;->a:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -48,8 +48,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 140
-    .line 1144
+    .line 126
+    .line 1130
     iget-object v1, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$4;->a:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
 
     iget-object v1, v1, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->_groupNameField:Lkik/android/chat/view/ValidateableInputView;
@@ -66,18 +66,18 @@
 
     move-result-object v2
 
-    .line 1145
+    .line 1131
     iget-object v1, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$4;->a:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
 
-    invoke-static {v1}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->c(Lkik/android/chat/fragment/KikChangeGroupNameFragment;)Lkik/core/datatypes/p;
+    invoke-static {v1}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->b(Lkik/android/chat/fragment/KikChangeGroupNameFragment;)Lkik/core/datatypes/s;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lkik/core/datatypes/p;->b()Ljava/lang/String;
+    invoke-virtual {v1}, Lkik/core/datatypes/s;->c()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1146
+    .line 1132
     invoke-virtual {v2}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v1
@@ -88,7 +88,7 @@
 
     move-result-object v4
 
-    .line 1148
+    .line 1134
     array-length v5, v4
 
     move v1, v0
@@ -98,23 +98,23 @@
 
     aget-object v6, v4, v1
 
-    .line 1149
+    .line 1135
     invoke-static {v6}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
 
     move-result v6
 
     if-nez v6, :cond_0
 
-    .line 1150
+    .line 1136
     add-int/lit8 v0, v0, 0x1
 
-    .line 1148
+    .line 1134
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1153
+    .line 1139
     :cond_1
     iget-object v1, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$4;->a:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
 
@@ -128,7 +128,7 @@
 
     const-string v4, "Is Empty"
 
-    .line 1154
+    .line 1140
     invoke-static {v2}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
 
     move-result v5
@@ -139,7 +139,7 @@
 
     const-string v4, "Was Empty"
 
-    .line 1155
+    .line 1141
     invoke-static {v3}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
 
     move-result v3
@@ -150,7 +150,7 @@
 
     const-string v3, "Length"
 
-    .line 1156
+    .line 1142
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -165,25 +165,20 @@
 
     int-to-long v4, v0
 
-    .line 1157
+    .line 1143
     invoke-virtual {v1, v2, v4, v5}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;J)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 1158
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    .line 1159
+    .line 1144
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 1160
+    .line 1145
     iget-object v0, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$4;->a:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->finish()V
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->D()V
 
-    .line 140
+    .line 126
     return-void
 .end method
 
@@ -191,38 +186,38 @@
     .locals 3
 
     .prologue
-    .line 166
+    .line 151
     instance-of v0, p1, Lkik/core/net/ServerDialogStanzaException;
 
     if-eqz v0, :cond_1
 
-    .line 167
+    .line 152
     check-cast p1, Lkik/core/net/ServerDialogStanzaException;
 
-    .line 168
+    .line 153
     iget-object v0, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$4;->a:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
 
     invoke-virtual {p1}, Lkik/core/net/ServerDialogStanzaException;->a()Lkik/core/net/outgoing/CustomDialogDescriptor;
 
     move-result-object v1
 
-    iput-object v1, v0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->_errorDialogDescriptor:Lkik/core/net/outgoing/CustomDialogDescriptor;
+    iput-object v1, v0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->M:Lkik/core/net/outgoing/CustomDialogDescriptor;
 
-    .line 197
+    .line 180
     :cond_0
     :goto_0
     return-void
 
-    .line 170
+    .line 155
     :cond_1
     instance-of v0, p1, Lkik/core/net/StanzaException;
 
     if-eqz v0, :cond_0
 
-    .line 171
+    .line 156
     check-cast p1, Lkik/core/net/StanzaException;
 
-    .line 172
+    .line 157
     invoke-virtual {p1}, Lkik/core/net/StanzaException;->b()I
 
     move-result v0
@@ -237,20 +232,18 @@
 
     if-eqz v0, :cond_2
 
-    .line 173
+    .line 158
     iget-object v0, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$4;->a:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
 
-    iget-object v1, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$4;->a:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
+    const v1, 0x7f0a019e
 
-    const v2, 0x7f09019f
-
-    invoke-virtual {v1, v2}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->getStringFromResource(I)Ljava/lang/String;
+    invoke-static {v1}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->b(I)Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->_errorText:Ljava/lang/String;
+    iput-object v1, v0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->L:Ljava/lang/String;
 
-    .line 174
+    .line 159
     iget-object v0, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$4;->a:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->a:Lcom/kik/android/Mixpanel;
@@ -265,22 +258,17 @@
 
     const-string v2, "Invalid Name"
 
-    .line 175
+    .line 160
     invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 176
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    .line 177
+    .line 161
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
     goto :goto_0
 
-    .line 179
+    .line 163
     :cond_2
     invoke-virtual {p1}, Lkik/core/net/StanzaException;->b()I
 
@@ -296,22 +284,20 @@
 
     if-eqz v0, :cond_3
 
-    .line 180
+    .line 164
     iget-object v0, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$4;->a:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
 
-    iget-object v1, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$4;->a:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
+    const v1, 0x7f0a024e
 
-    const v2, 0x7f090262
-
-    invoke-virtual {v1, v2}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->getStringFromResource(I)Ljava/lang/String;
+    invoke-static {v1}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->b(I)Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->_errorText:Ljava/lang/String;
+    iput-object v1, v0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->L:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 182
+    .line 166
     :cond_3
     invoke-virtual {p1}, Lkik/core/net/StanzaException;->b()I
 
@@ -327,35 +313,31 @@
 
     if-eqz v0, :cond_4
 
-    .line 183
+    .line 167
     iget-object v0, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$4;->a:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
 
-    iget-object v1, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$4;->a:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
+    const v1, 0x7f0a03f9
 
-    const v2, 0x7f09040d
-
-    invoke-virtual {v1, v2}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->getStringFromResource(I)Ljava/lang/String;
+    invoke-static {v1}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->b(I)Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->_errorTitle:Ljava/lang/String;
+    iput-object v1, v0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->K:Ljava/lang/String;
 
-    .line 184
+    .line 168
     iget-object v0, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$4;->a:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
 
-    iget-object v1, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$4;->a:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
+    const v1, 0x7f0a019d
 
-    const v2, 0x7f09019e
-
-    invoke-virtual {v1, v2}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->getStringFromResource(I)Ljava/lang/String;
+    invoke-static {v1}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->b(I)Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->_errorText:Ljava/lang/String;
+    iput-object v1, v0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->L:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 186
+    .line 170
     :cond_4
     invoke-virtual {p1}, Lkik/core/net/StanzaException;->b()I
 
@@ -371,7 +353,7 @@
 
     if-eqz v0, :cond_5
 
-    .line 187
+    .line 171
     iget-object v0, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$4;->a:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
 
     iget-object v1, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$4;->a:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
@@ -380,17 +362,17 @@
 
     move-result-object v1
 
-    const v2, 0x7f090267
+    const v2, 0x7f0a0253
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->_errorText:Ljava/lang/String;
+    iput-object v1, v0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->L:Ljava/lang/String;
 
     goto/16 :goto_0
 
-    .line 189
+    .line 173
     :cond_5
     iget-object v0, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$4;->a:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
 
@@ -398,20 +380,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 190
+    .line 174
     iget-object v0, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$4;->a:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
 
-    iget-object v1, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$4;->a:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
+    const v1, 0x7f0a04eb
 
-    const v2, 0x7f0904ff
-
-    invoke-virtual {v1, v2}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->getStringFromResource(I)Ljava/lang/String;
+    invoke-static {v1}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->b(I)Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->_errorText:Ljava/lang/String;
+    iput-object v1, v0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->L:Ljava/lang/String;
 
-    .line 191
+    .line 175
     iget-object v0, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$4;->a:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->a:Lcom/kik/android/Mixpanel;
@@ -426,17 +406,12 @@
 
     const-string v2, "Network"
 
-    .line 192
+    .line 176
     invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 193
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    .line 194
+    .line 177
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
     goto/16 :goto_0

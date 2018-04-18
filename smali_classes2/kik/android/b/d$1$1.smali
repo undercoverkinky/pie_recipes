@@ -1,5 +1,5 @@
 .class final Lkik/android/b/d$1$1;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,9 +15,9 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
-        "Lcom/kik/cards/web/h$a;",
+        "Lcom/kik/cards/web/i$a;",
         ">;"
     }
 .end annotation
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 92
+    .line 84
     iput-object p1, p0, Lkik/android/b/d$1$1;->a:Lkik/android/b/d$1;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -46,10 +46,10 @@
     .locals 2
 
     .prologue
-    .line 92
-    check-cast p1, Lcom/kik/cards/web/h$a;
+    .line 84
+    check-cast p1, Lcom/kik/cards/web/i$a;
 
-    .line 1096
+    .line 1088
     iget-object v0, p0, Lkik/android/b/d$1$1;->a:Lkik/android/b/d$1;
 
     iget-object v0, v0, Lkik/android/b/d$1;->a:Lkik/android/chat/fragment/KikChatFragment$a;
@@ -60,8 +60,8 @@
 
     move-result-object v0
 
-    .line 1097
-    invoke-virtual {p1}, Lcom/kik/cards/web/h$a;->f()Ljava/lang/String;
+    .line 1089
+    invoke-virtual {p1}, Lcom/kik/cards/web/i$a;->f()Ljava/lang/String;
 
     move-result-object v1
 
@@ -73,7 +73,7 @@
 
     iget-object v1, v1, Lkik/android/b/d$1;->f:Lkik/android/b/d;
 
-    .line 1098
+    .line 1090
     invoke-static {v1}, Lkik/android/b/d;->a(Lkik/android/b/d;)Lcom/kik/cards/web/b;
 
     move-result-object v1
@@ -84,7 +84,7 @@
 
     invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikChatFragment$a;->e(Ljava/lang/String;)Lkik/android/chat/fragment/KikChatFragment$a;
 
-    .line 92
+    .line 84
     return-void
 .end method
 
@@ -94,22 +94,22 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 104
+    .line 96
     const/4 v0, 0x0
 
-    .line 105
+    .line 97
     iget-object v1, p0, Lkik/android/b/d$1$1;->a:Lkik/android/b/d$1;
 
     iget-object v1, v1, Lkik/android/b/d$1;->b:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 106
+    .line 98
     iget-object v0, p0, Lkik/android/b/d$1$1;->a:Lkik/android/b/d$1;
 
     iget-object v0, v0, Lkik/android/b/d$1;->f:Lkik/android/b/d;
 
-    invoke-static {v0}, Lkik/android/b/d;->b(Lkik/android/b/d;)Lkik/core/interfaces/v;
+    invoke-static {v0}, Lkik/android/b/d;->b(Lkik/android/b/d;)Lkik/core/interfaces/x;
 
     move-result-object v0
 
@@ -119,24 +119,24 @@
 
     const/4 v2, 0x0
 
-    invoke-interface {v0, v1, v2}, Lkik/core/interfaces/v;->a(Ljava/lang/String;Z)Lkik/core/datatypes/l;
+    invoke-interface {v0, v1, v2}, Lkik/core/interfaces/x;->a(Ljava/lang/String;Z)Lkik/core/datatypes/o;
 
     move-result-object v0
 
-    .line 108
+    .line 100
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 109
+    .line 101
     iget-object v1, p0, Lkik/android/b/d$1$1;->a:Lkik/android/b/d$1;
 
     iget-object v1, v1, Lkik/android/b/d$1;->a:Lkik/android/chat/fragment/KikChatFragment$a;
 
-    invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Lkik/core/datatypes/l;)Lkik/android/chat/fragment/KikChatFragment$a;
+    invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Lkik/core/datatypes/o;)Lkik/android/chat/fragment/KikChatFragment$a;
 
     move-result-object v1
 
-    .line 110
+    .line 102
     invoke-virtual {v1, v3}, Lkik/android/chat/fragment/KikChatFragment$a;->e(Z)Lkik/android/chat/fragment/KikChatFragment$a;
 
     move-result-object v1
@@ -145,17 +145,17 @@
 
     iget-boolean v2, v2, Lkik/android/b/d$1;->c:Z
 
-    .line 112
+    .line 104
     invoke-virtual {v1, v2}, Lkik/android/chat/fragment/KikChatFragment$a;->b(Z)Lkik/android/chat/fragment/KikChatFragment$a;
 
     move-result-object v1
 
-    .line 114
+    .line 106
     invoke-virtual {v1, v3}, Lkik/android/chat/fragment/KikChatFragment$a;->c(Z)Lkik/android/chat/fragment/KikChatFragment$a;
 
     move-result-object v1
 
-    .line 116
+    .line 108
     invoke-virtual {v1, v3}, Lkik/android/chat/fragment/KikChatFragment$a;->d(Z)Lkik/android/chat/fragment/KikChatFragment$a;
 
     move-result-object v1
@@ -168,7 +168,7 @@
 
     iget-object v3, v3, Lkik/android/b/d$1;->e:Ljava/lang/String;
 
-    .line 117
+    .line 109
     invoke-virtual {v1, v2, v3}, Lkik/android/chat/fragment/KikChatFragment$a;->a(ZLjava/lang/String;)Lkik/android/chat/fragment/KikChatFragment$a;
 
     move-result-object v1
@@ -177,18 +177,18 @@
 
     iget-object v2, v2, Lkik/android/b/d$1;->f:Lkik/android/b/d;
 
-    .line 118
-    invoke-static {v2}, Lkik/android/b/d;->c(Lkik/android/b/d;)Lcom/kik/cards/web/r;
+    .line 110
+    invoke-static {v2}, Lkik/android/b/d;->c(Lkik/android/b/d;)Lcom/kik/cards/web/q;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/kik/cards/web/r;->k()Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;
+    invoke-interface {v2}, Lcom/kik/cards/web/q;->m()Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;)Lcom/kik/ui/fragment/FragmentBase$FragmentBundle;
 
-    .line 120
+    .line 112
     :cond_1
     iget-object v1, p0, Lkik/android/b/d$1$1;->a:Lkik/android/b/d$1;
 
@@ -202,29 +202,29 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ad;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    invoke-static {v1, v2}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v1
 
     invoke-virtual {v1}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->e()Lcom/kik/events/Promise;
 
-    .line 121
+    .line 113
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lkik/core/datatypes/l;->h()Z
+    invoke-virtual {v0}, Lkik/core/datatypes/o;->o()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 122
+    .line 114
     iget-object v1, p0, Lkik/android/b/d$1$1;->a:Lkik/android/b/d$1;
 
     iget-object v1, v1, Lkik/android/b/d$1;->f:Lkik/android/b/d;
 
-    invoke-static {v1, v0}, Lkik/android/b/d;->a(Lkik/android/b/d;Lkik/core/datatypes/l;)V
+    invoke-static {v1, v0}, Lkik/android/b/d;->a(Lkik/android/b/d;Lkik/core/datatypes/o;)V
 
-    .line 124
+    .line 116
     :cond_2
     return-void
 .end method

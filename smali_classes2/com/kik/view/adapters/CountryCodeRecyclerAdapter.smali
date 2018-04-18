@@ -56,7 +56,7 @@
     return-void
 .end method
 
-.method private a()Z
+.method private e()Z
     .locals 1
 
     .prologue
@@ -82,86 +82,14 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)V
-    .locals 3
-
-    .prologue
-    .line 128
-    invoke-static {p1}, Lcom/google/common/base/Strings;->isNullOrEmpty(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 129
-    sget-object v0, Lkik/android/challenge/CountryCode;->b:Ljava/util/List;
-
-    iput-object v0, p0, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter;->a:Ljava/util/List;
-
-    .line 140
-    :goto_0
-    invoke-virtual {p0}, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter;->notifyDataSetChanged()V
-
-    .line 141
-    return-void
-
-    .line 132
-    :cond_0
-    new-instance v0, Ljava/util/ArrayList;
-
-    sget-object v1, Lkik/android/challenge/CountryCode;->b:Ljava/util/List;
-
-    new-instance v2, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$1;
-
-    invoke-direct {v2, p0, p1}, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$1;-><init>(Lcom/kik/view/adapters/CountryCodeRecyclerAdapter;Ljava/lang/String;)V
-
-    invoke-static {v1, v2}, Lcom/google/common/collect/e;->a(Ljava/util/Collection;Lcom/google/common/base/Predicate;)Ljava/util/Collection;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    iput-object v0, p0, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter;->a:Ljava/util/List;
-
-    goto :goto_0
-.end method
-
-.method public final getItemCount()I
-    .locals 1
-
-    .prologue
-    .line 107
-    invoke-direct {p0}, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 108
-    const/4 v0, 0x1
-
-    .line 111
-    :goto_0
-    return v0
-
-    :cond_0
-    iget-object v0, p0, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter;->a:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    goto :goto_0
-.end method
-
-.method public final getItemViewType(I)I
+.method public final a(I)I
     .locals 1
 
     .prologue
     .line 118
     if-nez p1, :cond_0
 
-    invoke-direct {p0}, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter;->a()Z
+    invoke-direct {p0}, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter;->e()Z
 
     move-result v0
 
@@ -180,12 +108,83 @@
     goto :goto_0
 .end method
 
-.method public final onBindViewHolder(Landroid/support/v7/widget/RecyclerView$ViewHolder;I)V
+.method public final a(Landroid/view/ViewGroup;I)Landroid/support/v7/widget/RecyclerView$ViewHolder;
+    .locals 3
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 79
+    packed-switch p2, :pswitch_data_0
+
+    .line 87
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    .line 81
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v0
+
+    const v1, 0x7f0400dc
+
+    invoke-virtual {v0, v1, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object v1
+
+    .line 82
+    new-instance v0, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$CountryCodeViewHolder;
+
+    iget-object v2, p0, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter;->b:Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$a;
+
+    invoke-direct {v0, v1, v2}, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$CountryCodeViewHolder;-><init>(Landroid/view/View;Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$a;)V
+
+    goto :goto_0
+
+    .line 84
+    :pswitch_1
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v0
+
+    const v1, 0x7f0400dd
+
+    invoke-virtual {v0, v1, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object v1
+
+    .line 85
+    new-instance v0, Lkik/android/widget/ds;
+
+    invoke-direct {v0, v1}, Lkik/android/widget/ds;-><init>(Landroid/view/View;)V
+
+    goto :goto_0
+
+    .line 79
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public final a(Landroid/support/v7/widget/RecyclerView$ViewHolder;I)V
     .locals 1
 
     .prologue
     .line 94
-    invoke-virtual {p0, p2}, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter;->getItemViewType(I)I
+    invoke-virtual {p0, p2}, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter;->a(I)I
 
     move-result v0
 
@@ -219,73 +218,74 @@
     .end packed-switch
 .end method
 
-.method public final onCreateViewHolder(Landroid/view/ViewGroup;I)Landroid/support/v7/widget/RecyclerView$ViewHolder;
+.method public final a(Ljava/lang/String;)V
     .locals 3
 
     .prologue
-    const/4 v2, 0x0
+    .line 128
+    invoke-static {p1}, Lcom/google/common/base/l;->b(Ljava/lang/String;)Z
 
-    .line 79
-    packed-switch p2, :pswitch_data_0
+    move-result v0
 
-    .line 87
-    const/4 v0, 0x0
+    if-eqz v0, :cond_0
 
+    .line 129
+    sget-object v0, Lkik/android/challenge/CountryCode;->b:Ljava/util/List;
+
+    iput-object v0, p0, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter;->a:Ljava/util/List;
+
+    .line 140
     :goto_0
-    return-object v0
+    invoke-virtual {p0}, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter;->d()V
 
-    .line 81
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+    .line 141
+    return-void
 
-    move-result-object v0
+    .line 132
+    :cond_0
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    sget-object v1, Lkik/android/challenge/CountryCode;->b:Ljava/util/List;
 
-    move-result-object v0
+    new-instance v2, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$1;
 
-    const v1, 0x7f040104
+    invoke-direct {v2, p0, p1}, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$1;-><init>(Lcom/kik/view/adapters/CountryCodeRecyclerAdapter;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object v1
-
-    .line 82
-    new-instance v0, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$CountryCodeViewHolder;
-
-    iget-object v2, p0, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter;->b:Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$a;
-
-    invoke-direct {v0, v1, v2}, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$CountryCodeViewHolder;-><init>(Landroid/view/View;Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$a;)V
-
-    goto :goto_0
-
-    .line 84
-    :pswitch_1
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v0
-
-    const v1, 0x7f040105
-
-    invoke-virtual {v0, v1, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-static {v1, v2}, Lcom/google/common/collect/f;->a(Ljava/util/Collection;Lcom/google/common/base/i;)Ljava/util/Collection;
 
     move-result-object v1
 
-    .line 85
-    new-instance v0, Lkik/android/widget/db;
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    invoke-direct {v0, v1}, Lkik/android/widget/db;-><init>(Landroid/view/View;)V
+    iput-object v0, p0, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter;->a:Ljava/util/List;
 
     goto :goto_0
+.end method
 
-    .line 79
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
+.method public final b()I
+    .locals 1
+
+    .prologue
+    .line 107
+    invoke-direct {p0}, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter;->e()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 108
+    const/4 v0, 0x1
+
+    .line 111
+    :goto_0
+    return v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    goto :goto_0
 .end method

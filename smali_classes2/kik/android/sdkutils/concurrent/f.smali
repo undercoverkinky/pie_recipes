@@ -4,7 +4,6 @@
 
 # interfaces
 .implements Ljava/util/concurrent/Callable;
-.implements Lkik/android/sdkutils/concurrent/g;
 
 
 # annotations
@@ -19,9 +18,7 @@
         "Ljava/util/concurrent/Callable",
         "<",
         "Lcom/kik/events/Promise",
-        "<TS;>;>;",
-        "Lkik/android/sdkutils/concurrent/g",
-        "<TT;TS;>;"
+        "<TS;>;>;"
     }
 .end annotation
 
@@ -95,6 +92,44 @@
     .end annotation
 .end method
 
+.method public final a(J)Lcom/kik/events/Promise;
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(J)",
+            "Lcom/kik/events/Promise",
+            "<TS;>;"
+        }
+    .end annotation
+
+    .prologue
+    .line 34
+    new-instance v0, Lcom/kik/events/Promise;
+
+    invoke-direct {v0}, Lcom/kik/events/Promise;-><init>()V
+
+    .line 35
+    invoke-virtual {p0}, Lkik/android/sdkutils/concurrent/f;->b()V
+
+    .line 37
+    iget-object v1, p0, Lkik/android/sdkutils/concurrent/f;->a:Ljava/util/concurrent/ScheduledExecutorService;
+
+    new-instance v2, Lkik/android/sdkutils/concurrent/f$1;
+
+    invoke-direct {v2, p0, v0}, Lkik/android/sdkutils/concurrent/f$1;-><init>(Lkik/android/sdkutils/concurrent/f;Lcom/kik/events/Promise;)V
+
+    sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-interface {v1, v2, p1, p2, v3}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lkik/android/sdkutils/concurrent/f;->d:Ljava/util/concurrent/ScheduledFuture;
+
+    .line 67
+    return-object v0
+.end method
+
 .method public final a(Ljava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
@@ -111,47 +146,7 @@
     return-void
 .end method
 
-.method public final b()Lcom/kik/events/Promise;
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/kik/events/Promise",
-            "<TS;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 34
-    new-instance v0, Lcom/kik/events/Promise;
-
-    invoke-direct {v0}, Lcom/kik/events/Promise;-><init>()V
-
-    .line 35
-    invoke-virtual {p0}, Lkik/android/sdkutils/concurrent/f;->c()V
-
-    .line 37
-    iget-object v1, p0, Lkik/android/sdkutils/concurrent/f;->a:Ljava/util/concurrent/ScheduledExecutorService;
-
-    new-instance v2, Lkik/android/sdkutils/concurrent/f$1;
-
-    invoke-direct {v2, p0, v0}, Lkik/android/sdkutils/concurrent/f$1;-><init>(Lkik/android/sdkutils/concurrent/f;Lcom/kik/events/Promise;)V
-
-    const-wide/16 v4, 0x1f4
-
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-interface {v1, v2, v4, v5, v3}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lkik/android/sdkutils/concurrent/f;->d:Ljava/util/concurrent/ScheduledFuture;
-
-    .line 67
-    return-object v0
-.end method
-
-.method public final c()V
+.method public final b()V
     .locals 2
 
     .prologue

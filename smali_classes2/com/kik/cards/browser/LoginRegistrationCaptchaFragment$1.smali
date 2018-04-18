@@ -55,7 +55,7 @@
     .line 51
     iget-object v1, p0, Lcom/kik/cards/browser/LoginRegistrationCaptchaFragment$1;->a:Lcom/kik/cards/browser/LoginRegistrationCaptchaFragment;
 
-    invoke-virtual {v1, v0}, Lcom/kik/cards/browser/LoginRegistrationCaptchaFragment;->setResultData(Landroid/os/Bundle;)V
+    invoke-virtual {v1, v0}, Lcom/kik/cards/browser/LoginRegistrationCaptchaFragment;->a(Landroid/os/Bundle;)V
 
     .line 52
     iget-object v0, p0, Lcom/kik/cards/browser/LoginRegistrationCaptchaFragment$1;->a:Lcom/kik/cards/browser/LoginRegistrationCaptchaFragment;
@@ -67,7 +67,7 @@
     .line 53
     iget-object v0, p0, Lcom/kik/cards/browser/LoginRegistrationCaptchaFragment$1;->a:Lcom/kik/cards/browser/LoginRegistrationCaptchaFragment;
 
-    invoke-virtual {v0}, Lcom/kik/cards/browser/LoginRegistrationCaptchaFragment;->finish()V
+    invoke-virtual {v0}, Lcom/kik/cards/browser/LoginRegistrationCaptchaFragment;->D()V
 
     .line 54
     return-void

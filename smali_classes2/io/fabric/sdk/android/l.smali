@@ -100,12 +100,12 @@
     return-void
 .end method
 
-.method private a(Lio/fabric/sdk/android/services/settings/IconRequest;Ljava/util/Collection;)Lio/fabric/sdk/android/services/settings/d;
+.method private a(Lio/fabric/sdk/android/services/settings/n;Ljava/util/Collection;)Lio/fabric/sdk/android/services/settings/d;
     .locals 12
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lio/fabric/sdk/android/services/settings/IconRequest;",
+            "Lio/fabric/sdk/android/services/settings/n;",
             "Ljava/util/Collection",
             "<",
             "Lio/fabric/sdk/android/j;",
@@ -182,7 +182,7 @@
 
     move-object v11, p2
 
-    invoke-direct/range {v0 .. v11}, Lio/fabric/sdk/android/services/settings/d;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Lio/fabric/sdk/android/services/settings/IconRequest;Ljava/util/Collection;)V
+    invoke-direct/range {v0 .. v11}, Lio/fabric/sdk/android/services/settings/d;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Lio/fabric/sdk/android/services/settings/n;Ljava/util/Collection;)V
 
     return-object v0
 .end method
@@ -251,7 +251,6 @@
 
     move-result-object v4
 
-    .line 140
     invoke-virtual {v0}, Lio/fabric/sdk/android/h;->a()Ljava/lang/String;
 
     move-result-object v0
@@ -260,7 +259,6 @@
 
     invoke-direct {v3, v4, v0, v5}, Lio/fabric/sdk/android/j;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 139
     invoke-interface {p0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
@@ -286,7 +284,7 @@
     move-result-object v2
 
     .line 99
-    invoke-direct {p0}, Lio/fabric/sdk/android/l;->f()Lio/fabric/sdk/android/services/settings/r;
+    invoke-direct {p0}, Lio/fabric/sdk/android/l;->f()Lio/fabric/sdk/android/services/settings/s;
 
     move-result-object v3
 
@@ -317,9 +315,8 @@
     move-result-object v0
 
     .line 112
-    iget-object v3, v3, Lio/fabric/sdk/android/services/settings/r;->a:Lio/fabric/sdk/android/services/settings/e;
+    iget-object v3, v3, Lio/fabric/sdk/android/services/settings/s;->a:Lio/fabric/sdk/android/services/settings/e;
 
-    .line 113
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     move-result-object v4
@@ -341,12 +338,12 @@
     .line 6116
     iget-object v0, p0, Lio/fabric/sdk/android/h;->g:Landroid/content/Context;
 
-    .line 5184
-    invoke-static {v0, v2}, Lio/fabric/sdk/android/services/settings/IconRequest;->build(Landroid/content/Context;Ljava/lang/String;)Lio/fabric/sdk/android/services/settings/IconRequest;
+    .line 5183
+    invoke-static {v0, v2}, Lio/fabric/sdk/android/services/settings/n;->a(Landroid/content/Context;Ljava/lang/String;)Lio/fabric/sdk/android/services/settings/n;
 
     move-result-object v0
 
-    invoke-direct {p0, v0, v4}, Lio/fabric/sdk/android/l;->a(Lio/fabric/sdk/android/services/settings/IconRequest;Ljava/util/Collection;)Lio/fabric/sdk/android/services/settings/d;
+    invoke-direct {p0, v0, v4}, Lio/fabric/sdk/android/l;->a(Lio/fabric/sdk/android/services/settings/n;Ljava/util/Collection;)Lio/fabric/sdk/android/services/settings/d;
 
     move-result-object v0
 
@@ -363,7 +360,6 @@
 
     invoke-direct {v2, p0, v4, v3, v5}, Lio/fabric/sdk/android/services/settings/h;-><init>(Lio/fabric/sdk/android/h;Ljava/lang/String;Ljava/lang/String;Lio/fabric/sdk/android/services/network/c;)V
 
-    .line 5186
     invoke-virtual {v2, v0}, Lio/fabric/sdk/android/services/settings/h;->a(Lio/fabric/sdk/android/services/settings/d;)Z
 
     move-result v0
@@ -372,11 +368,11 @@
     if-eqz v0, :cond_3
 
     .line 5160
-    invoke-static {}, Lio/fabric/sdk/android/services/settings/p;->a()Lio/fabric/sdk/android/services/settings/p;
+    invoke-static {}, Lio/fabric/sdk/android/services/settings/q;->a()Lio/fabric/sdk/android/services/settings/q;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lio/fabric/sdk/android/services/settings/p;->d()Z
+    invoke-virtual {v0}, Lio/fabric/sdk/android/services/settings/q;->d()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -456,11 +452,11 @@
     if-eqz v5, :cond_5
 
     .line 5169
-    invoke-static {}, Lio/fabric/sdk/android/services/settings/p;->a()Lio/fabric/sdk/android/services/settings/p;
+    invoke-static {}, Lio/fabric/sdk/android/services/settings/q;->a()Lio/fabric/sdk/android/services/settings/q;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lio/fabric/sdk/android/services/settings/p;->d()Z
+    invoke-virtual {v0}, Lio/fabric/sdk/android/services/settings/q;->d()Z
 
     move-result v0
 
@@ -468,7 +464,7 @@
 
     .line 5170
     :cond_5
-    iget-boolean v5, v3, Lio/fabric/sdk/android/services/settings/e;->f:Z
+    iget-boolean v5, v3, Lio/fabric/sdk/android/services/settings/e;->e:Z
 
     if-eqz v5, :cond_0
 
@@ -479,17 +475,17 @@
     iget-object v5, p0, Lio/fabric/sdk/android/h;->g:Landroid/content/Context;
 
     .line 6194
-    invoke-static {v5, v2}, Lio/fabric/sdk/android/services/settings/IconRequest;->build(Landroid/content/Context;Ljava/lang/String;)Lio/fabric/sdk/android/services/settings/IconRequest;
+    invoke-static {v5, v2}, Lio/fabric/sdk/android/services/settings/n;->a(Landroid/content/Context;Ljava/lang/String;)Lio/fabric/sdk/android/services/settings/n;
 
     move-result-object v2
 
     .line 7202
-    invoke-direct {p0, v2, v4}, Lio/fabric/sdk/android/l;->a(Lio/fabric/sdk/android/services/settings/IconRequest;Ljava/util/Collection;)Lio/fabric/sdk/android/services/settings/d;
+    invoke-direct {p0, v2, v4}, Lio/fabric/sdk/android/l;->a(Lio/fabric/sdk/android/services/settings/n;Ljava/util/Collection;)Lio/fabric/sdk/android/services/settings/d;
 
     move-result-object v2
 
     .line 7203
-    new-instance v4, Lio/fabric/sdk/android/services/settings/v;
+    new-instance v4, Lio/fabric/sdk/android/services/settings/x;
 
     invoke-direct {p0}, Lio/fabric/sdk/android/l;->g()Ljava/lang/String;
 
@@ -499,23 +495,22 @@
 
     iget-object v6, p0, Lio/fabric/sdk/android/l;->a:Lio/fabric/sdk/android/services/network/c;
 
-    invoke-direct {v4, p0, v5, v3, v6}, Lio/fabric/sdk/android/services/settings/v;-><init>(Lio/fabric/sdk/android/h;Ljava/lang/String;Ljava/lang/String;Lio/fabric/sdk/android/services/network/c;)V
+    invoke-direct {v4, p0, v5, v3, v6}, Lio/fabric/sdk/android/services/settings/x;-><init>(Lio/fabric/sdk/android/h;Ljava/lang/String;Ljava/lang/String;Lio/fabric/sdk/android/services/network/c;)V
 
-    .line 7204
-    invoke-virtual {v4, v2}, Lio/fabric/sdk/android/services/settings/v;->a(Lio/fabric/sdk/android/services/settings/d;)Z
+    invoke-virtual {v4, v2}, Lio/fabric/sdk/android/services/settings/x;->a(Lio/fabric/sdk/android/services/settings/d;)Z
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
     goto :goto_1
 .end method
 
-.method private f()Lio/fabric/sdk/android/services/settings/r;
+.method private f()Lio/fabric/sdk/android/services/settings/s;
     .locals 7
 
     .prologue
     .line 123
     :try_start_0
-    invoke-static {}, Lio/fabric/sdk/android/services/settings/p;->a()Lio/fabric/sdk/android/services/settings/p;
+    invoke-static {}, Lio/fabric/sdk/android/services/settings/q;->a()Lio/fabric/sdk/android/services/settings/q;
 
     move-result-object v0
 
@@ -527,27 +522,24 @@
 
     iget-object v5, p0, Lio/fabric/sdk/android/l;->l:Ljava/lang/String;
 
-    .line 125
     invoke-direct {p0}, Lio/fabric/sdk/android/l;->g()Ljava/lang/String;
 
     move-result-object v6
 
     move-object v1, p0
 
-    .line 124
-    invoke-virtual/range {v0 .. v6}, Lio/fabric/sdk/android/services/settings/p;->a(Lio/fabric/sdk/android/h;Lio/fabric/sdk/android/services/common/IdManager;Lio/fabric/sdk/android/services/network/c;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/settings/p;
+    invoke-virtual/range {v0 .. v6}, Lio/fabric/sdk/android/services/settings/q;->a(Lio/fabric/sdk/android/h;Lio/fabric/sdk/android/services/common/IdManager;Lio/fabric/sdk/android/services/network/c;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lio/fabric/sdk/android/services/settings/q;
 
     move-result-object v0
 
-    .line 126
-    invoke-virtual {v0}, Lio/fabric/sdk/android/services/settings/p;->c()Z
+    invoke-virtual {v0}, Lio/fabric/sdk/android/services/settings/q;->c()Z
 
     .line 128
-    invoke-static {}, Lio/fabric/sdk/android/services/settings/p;->a()Lio/fabric/sdk/android/services/settings/p;
+    invoke-static {}, Lio/fabric/sdk/android/services/settings/q;->a()Lio/fabric/sdk/android/services/settings/q;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lio/fabric/sdk/android/services/settings/p;->b()Lio/fabric/sdk/android/services/settings/r;
+    invoke-virtual {v0}, Lio/fabric/sdk/android/services/settings/q;->b()Lio/fabric/sdk/android/services/settings/s;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -603,22 +595,12 @@
 
     .prologue
     .line 69
-    const-string v0, "1.4.1.19"
+    const-string v0, "1.3.15.167"
 
     return-object v0
 .end method
 
-.method public final b()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 148
-    const-string v0, "io.fabric.sdk.android:fabric"
-
-    return-object v0
-.end method
-
-.method protected final b_()Z
+.method protected final a_()Z
     .locals 5
 
     .prologue
@@ -630,7 +612,7 @@
     iget-object v1, p0, Lio/fabric/sdk/android/h;->i:Lio/fabric/sdk/android/services/common/IdManager;
 
     .line 75
-    invoke-virtual {v1}, Lio/fabric/sdk/android/services/common/IdManager;->h()Ljava/lang/String;
+    invoke-virtual {v1}, Lio/fabric/sdk/android/services/common/IdManager;->i()Ljava/lang/String;
 
     move-result-object v1
 
@@ -698,7 +680,7 @@
     .line 3116
     iget-object v2, p0, Lio/fabric/sdk/android/h;->g:Landroid/content/Context;
 
-    .line 83
+    .line 82
     invoke-virtual {v2}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v2
@@ -707,7 +689,6 @@
 
     move-result-object v1
 
-    .line 84
     invoke-interface {v1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -717,14 +698,13 @@
     .line 4116
     iget-object v1, p0, Lio/fabric/sdk/android/h;->g:Landroid/content/Context;
 
-    .line 86
+    .line 85
     invoke-virtual {v1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v1
 
     iget v1, v1, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
 
-    .line 85
     invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -764,6 +744,16 @@
     invoke-interface {v2, v3, v4, v1}, Lio/fabric/sdk/android/k;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_1
+.end method
+
+.method public final b()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 148
+    const-string v0, "io.fabric.sdk.android:fabric"
+
+    return-object v0
 .end method
 
 .method protected final synthetic e()Ljava/lang/Object;

@@ -1,5 +1,5 @@
 .class final Lkik/android/a/b$4;
-.super Lcom/kik/events/k;
+.super Lcom/kik/events/l;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/k",
+        "Lcom/kik/events/l",
         "<",
         "Lcom/kik/xdata/model/clientmetrics/XMetricsAnonymousId;",
         ">;"
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 196
+    .line 207
     iput-object p1, p0, Lkik/android/a/b$4;->a:Lkik/android/a/b;
 
-    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
 
     return-void
 .end method
@@ -46,19 +46,19 @@
     .locals 4
 
     .prologue
-    .line 196
+    .line 207
     check-cast p1, Lcom/kik/xdata/model/clientmetrics/XMetricsAnonymousId;
 
-    .line 1200
+    .line 1211
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lcom/kik/xdata/model/clientmetrics/XMetricsAnonymousId;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/kik/xdata/model/clientmetrics/XMetricsAnonymousId;->b()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p1}, Lcom/kik/xdata/model/clientmetrics/XMetricsAnonymousId;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/kik/xdata/model/clientmetrics/XMetricsAnonymousId;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -70,16 +70,16 @@
 
     if-nez v0, :cond_1
 
-    .line 1201
+    .line 1212
     iget-object v0, p0, Lkik/android/a/b$4;->a:Lkik/android/a/b;
 
-    invoke-virtual {p1}, Lcom/kik/xdata/model/clientmetrics/XMetricsAnonymousId;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/kik/xdata/model/clientmetrics/XMetricsAnonymousId;->b()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v0, Lkik/android/a/b;->c:Ljava/lang/String;
 
-    .line 1202
+    .line 1213
     iget-object v0, p0, Lkik/android/a/b$4;->a:Lkik/android/a/b;
 
     invoke-static {v0}, Lkik/android/a/b;->b(Lkik/android/a/b;)Lkik/core/interfaces/ad;
@@ -88,13 +88,13 @@
 
     const-string v1, "enc_metrics_anon_id"
 
-    invoke-virtual {p1}, Lcom/kik/xdata/model/clientmetrics/XMetricsAnonymousId;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/kik/xdata/model/clientmetrics/XMetricsAnonymousId;->b()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-interface {v0, v1, v2}, Lkik/core/interfaces/ad;->c(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 1204
+    .line 1215
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "AnonymousId was in xData. It is "
@@ -107,7 +107,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1217
+    .line 1228
     :cond_0
     :goto_0
     iget-object v0, p0, Lkik/android/a/b$4;->a:Lkik/android/a/b;
@@ -122,10 +122,10 @@
 
     invoke-virtual {v0, v1}, Lkik/android/a/a;->c(Ljava/lang/String;)V
 
-    .line 196
+    .line 207
     return-void
 
-    .line 1209
+    .line 1220
     :cond_1
     iget-object v0, p0, Lkik/android/a/b$4;->a:Lkik/android/a/b;
 
@@ -133,7 +133,7 @@
 
     if-nez v0, :cond_0
 
-    .line 1210
+    .line 1221
     iget-object v0, p0, Lkik/android/a/b$4;->a:Lkik/android/a/b;
 
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
@@ -154,7 +154,7 @@
 
     iput-object v1, v0, Lkik/android/a/b;->c:Ljava/lang/String;
 
-    .line 1212
+    .line 1223
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "AnonymousId never existed in xData. Making it "
@@ -167,7 +167,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1214
+    .line 1225
     iget-object v0, p0, Lkik/android/a/b$4;->a:Lkik/android/a/b;
 
     invoke-virtual {v0}, Lkik/android/a/b;->b()V
@@ -179,10 +179,10 @@
     .locals 0
 
     .prologue
-    .line 225
-    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Throwable;)V
+    .line 236
+    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Throwable;)V
 
-    .line 226
+    .line 237
     return-void
 .end method
 
@@ -190,16 +190,16 @@
     .locals 2
 
     .prologue
-    .line 231
+    .line 242
     iget-object v0, p0, Lkik/android/a/b$4;->a:Lkik/android/a/b;
 
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lkik/android/a/b;->b:Z
 
-    .line 232
-    invoke-super {p0}, Lcom/kik/events/k;->b()V
+    .line 243
+    invoke-super {p0}, Lcom/kik/events/l;->b()V
 
-    .line 233
+    .line 244
     return-void
 .end method

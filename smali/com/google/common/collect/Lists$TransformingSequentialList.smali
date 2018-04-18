@@ -44,10 +44,10 @@
     .end annotation
 .end field
 
-.field final function:Lcom/google/common/base/Function;
+.field final function:Lcom/google/common/base/d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/google/common/base/Function",
+            "Lcom/google/common/base/d",
             "<-TF;+TT;>;"
         }
     .end annotation
@@ -55,24 +55,24 @@
 
 
 # direct methods
-.method constructor <init>(Ljava/util/List;Lcom/google/common/base/Function;)V
+.method constructor <init>(Ljava/util/List;Lcom/google/common/base/d;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List",
             "<TF;>;",
-            "Lcom/google/common/base/Function",
+            "Lcom/google/common/base/d",
             "<-TF;+TT;>;)V"
         }
     .end annotation
 
     .prologue
-    .line 574
+    .line 559
     invoke-direct {p0}, Ljava/util/AbstractSequentialList;-><init>()V
 
-    .line 575
-    invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 560
+    invoke-static {p1}, Lcom/google/common/base/h;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -80,16 +80,16 @@
 
     iput-object v0, p0, Lcom/google/common/collect/Lists$TransformingSequentialList;->fromList:Ljava/util/List;
 
-    .line 576
-    invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 561
+    invoke-static {p2}, Lcom/google/common/base/h;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/common/base/Function;
+    check-cast v0, Lcom/google/common/base/d;
 
-    iput-object v0, p0, Lcom/google/common/collect/Lists$TransformingSequentialList;->function:Lcom/google/common/base/Function;
+    iput-object v0, p0, Lcom/google/common/collect/Lists$TransformingSequentialList;->function:Lcom/google/common/base/d;
 
-    .line 577
+    .line 562
     return-void
 .end method
 
@@ -99,12 +99,12 @@
     .locals 1
 
     .prologue
-    .line 585
+    .line 569
     iget-object v0, p0, Lcom/google/common/collect/Lists$TransformingSequentialList;->fromList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 586
+    .line 570
     return-void
 .end method
 
@@ -119,7 +119,7 @@
     .end annotation
 
     .prologue
-    .line 595
+    .line 575
     new-instance v0, Lcom/google/common/collect/Lists$TransformingSequentialList$1;
 
     iget-object v1, p0, Lcom/google/common/collect/Lists$TransformingSequentialList;->fromList:Ljava/util/List;
@@ -137,7 +137,7 @@
     .locals 1
 
     .prologue
-    .line 590
+    .line 572
     iget-object v0, p0, Lcom/google/common/collect/Lists$TransformingSequentialList;->fromList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I

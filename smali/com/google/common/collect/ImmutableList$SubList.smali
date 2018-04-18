@@ -34,18 +34,18 @@
     .locals 0
 
     .prologue
-    .line 418
+    .line 406
     iput-object p1, p0, Lcom/google/common/collect/ImmutableList$SubList;->this$0:Lcom/google/common/collect/ImmutableList;
 
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableList;-><init>()V
 
-    .line 419
+    .line 407
     iput p2, p0, Lcom/google/common/collect/ImmutableList$SubList;->a:I
 
-    .line 420
+    .line 408
     iput p3, p0, Lcom/google/common/collect/ImmutableList$SubList;->b:I
 
-    .line 421
+    .line 409
     return-void
 .end method
 
@@ -62,12 +62,12 @@
     .end annotation
 
     .prologue
-    .line 436
+    .line 424
     iget v0, p0, Lcom/google/common/collect/ImmutableList$SubList;->b:I
 
-    invoke-static {p1, p2, v0}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V
+    invoke-static {p1, p2, v0}, Lcom/google/common/base/h;->a(III)V
 
-    .line 437
+    .line 425
     iget-object v0, p0, Lcom/google/common/collect/ImmutableList$SubList;->this$0:Lcom/google/common/collect/ImmutableList;
 
     iget v1, p0, Lcom/google/common/collect/ImmutableList$SubList;->a:I
@@ -85,11 +85,11 @@
     return-object v0
 .end method
 
-.method final c()Z
+.method final e()Z
     .locals 1
 
     .prologue
-    .line 442
+    .line 430
     const/4 v0, 0x1
 
     return v0
@@ -104,12 +104,12 @@
     .end annotation
 
     .prologue
-    .line 430
+    .line 418
     iget v0, p0, Lcom/google/common/collect/ImmutableList$SubList;->b:I
 
-    invoke-static {p1, v0}, Lcom/google/common/base/Preconditions;->checkElementIndex(II)I
+    invoke-static {p1, v0}, Lcom/google/common/base/h;->a(II)I
 
-    .line 431
+    .line 419
     iget-object v0, p0, Lcom/google/common/collect/ImmutableList$SubList;->this$0:Lcom/google/common/collect/ImmutableList;
 
     iget v1, p0, Lcom/google/common/collect/ImmutableList$SubList;->a:I
@@ -127,8 +127,8 @@
     .locals 1
 
     .prologue
-    .line 414
-    invoke-super {p0}, Lcom/google/common/collect/ImmutableList;->a()Lcom/google/common/collect/s;
+    .line 402
+    invoke-super {p0}, Lcom/google/common/collect/ImmutableList;->a()Lcom/google/common/collect/x;
 
     move-result-object v0
 
@@ -139,15 +139,15 @@
     .locals 1
 
     .prologue
-    .line 414
-    .line 1356
+    .line 402
+    .line 1344
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/google/common/collect/ImmutableList;->a(I)Lcom/google/common/collect/t;
+    invoke-virtual {p0, v0}, Lcom/google/common/collect/ImmutableList;->a(I)Lcom/google/common/collect/y;
 
     move-result-object v0
 
-    .line 414
+    .line 402
     return-object v0
 .end method
 
@@ -155,8 +155,8 @@
     .locals 1
 
     .prologue
-    .line 414
-    invoke-super {p0, p1}, Lcom/google/common/collect/ImmutableList;->a(I)Lcom/google/common/collect/t;
+    .line 402
+    invoke-super {p0, p1}, Lcom/google/common/collect/ImmutableList;->a(I)Lcom/google/common/collect/y;
 
     move-result-object v0
 
@@ -167,7 +167,7 @@
     .locals 1
 
     .prologue
-    .line 425
+    .line 413
     iget v0, p0, Lcom/google/common/collect/ImmutableList$SubList;->b:I
 
     return v0
@@ -177,7 +177,7 @@
     .locals 1
 
     .prologue
-    .line 414
+    .line 402
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/ImmutableList$SubList;->a(II)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v0

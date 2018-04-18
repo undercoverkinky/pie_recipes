@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final a:Ljava/lang/ref/WeakReference;
+.field private final a:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference",
@@ -26,9 +26,29 @@
     .end annotation
 .end field
 
-.field b:I
+.field private b:I
 
-.field c:Z
+
+# direct methods
+.method static synthetic a(Landroid/support/design/widget/SnackbarManager$SnackbarRecord;)Ljava/lang/ref/WeakReference;
+    .locals 1
+
+    .prologue
+    .line 156
+    iget-object v0, p0, Landroid/support/design/widget/SnackbarManager$SnackbarRecord;->a:Ljava/lang/ref/WeakReference;
+
+    return-object v0
+.end method
+
+.method static synthetic b(Landroid/support/design/widget/SnackbarManager$SnackbarRecord;)I
+    .locals 1
+
+    .prologue
+    .line 156
+    iget v0, p0, Landroid/support/design/widget/SnackbarManager$SnackbarRecord;->b:I
+
+    return v0
+.end method
 
 
 # virtual methods
@@ -36,7 +56,7 @@
     .locals 1
 
     .prologue
-    .line 181
+    .line 166
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Landroid/support/design/widget/SnackbarManager$SnackbarRecord;->a:Ljava/lang/ref/WeakReference;

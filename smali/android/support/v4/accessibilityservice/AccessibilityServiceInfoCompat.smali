@@ -6,8 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoJellyBeanMr2Impl;,
-        Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoJellyBeanImpl;,
+        Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoJellyBeanMr2;,
         Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoIcsImpl;,
         Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoStubImpl;,
         Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoVersionImpl;
@@ -48,50 +47,33 @@
     .locals 2
 
     .prologue
-    .line 132
+    .line 111
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x12
 
     if-lt v0, v1, :cond_0
 
-    .line 133
-    new-instance v0, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoJellyBeanMr2Impl;
+    .line 112
+    new-instance v0, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoJellyBeanMr2;
 
-    invoke-direct {v0}, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoJellyBeanMr2Impl;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoJellyBeanMr2;-><init>()V
 
     sput-object v0, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat;->IMPL:Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoVersionImpl;
 
-    .line 141
+    .line 118
     :goto_0
     return-void
 
-    .line 134
+    .line 113
     :cond_0
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x10
-
-    if-lt v0, v1, :cond_1
-
-    .line 135
-    new-instance v0, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoJellyBeanImpl;
-
-    invoke-direct {v0}, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoJellyBeanImpl;-><init>()V
-
-    sput-object v0, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat;->IMPL:Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoVersionImpl;
-
-    goto :goto_0
-
-    .line 136
-    :cond_1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0xe
 
-    if-lt v0, v1, :cond_2
+    if-lt v0, v1, :cond_1
 
-    .line 137
+    .line 114
     new-instance v0, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoIcsImpl;
 
     invoke-direct {v0}, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoIcsImpl;-><init>()V
@@ -100,8 +82,8 @@
 
     goto :goto_0
 
-    .line 139
-    :cond_2
+    .line 116
+    :cond_1
     new-instance v0, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoStubImpl;
 
     invoke-direct {v0}, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoStubImpl;-><init>()V
@@ -115,7 +97,7 @@
     .locals 0
 
     .prologue
-    .line 303
+    .line 280
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -125,41 +107,41 @@
     .locals 1
 
     .prologue
-    .line 482
+    .line 436
     packed-switch p0, :pswitch_data_0
 
-    .line 492
+    .line 446
     :pswitch_0
     const-string v0, "UNKNOWN"
 
     :goto_0
     return-object v0
 
-    .line 484
+    .line 438
     :pswitch_1
     const-string v0, "CAPABILITY_CAN_RETRIEVE_WINDOW_CONTENT"
 
     goto :goto_0
 
-    .line 486
+    .line 440
     :pswitch_2
     const-string v0, "CAPABILITY_CAN_REQUEST_TOUCH_EXPLORATION"
 
     goto :goto_0
 
-    .line 488
+    .line 442
     :pswitch_3
     const-string v0, "CAPABILITY_CAN_REQUEST_ENHANCED_WEB_ACCESSIBILITY"
 
     goto :goto_0
 
-    .line 490
+    .line 444
     :pswitch_4
     const-string v0, "CAPABILITY_CAN_FILTER_KEY_EVENTS"
 
     goto :goto_0
 
-    .line 482
+    .line 436
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -179,51 +161,51 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 400
+    .line 354
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 401
+    .line 355
     const-string v1, "["
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 402
+    .line 356
     :goto_0
     if-lez p0, :cond_1
 
-    .line 403
+    .line 357
     invoke-static {p0}, Ljava/lang/Integer;->numberOfTrailingZeros(I)I
 
     move-result v1
 
     shl-int v1, v3, v1
 
-    .line 404
+    .line 358
     xor-int/lit8 v2, v1, -0x1
 
     and-int/2addr p0, v2
 
-    .line 405
+    .line 359
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
     move-result v2
 
     if-le v2, v3, :cond_0
 
-    .line 406
+    .line 360
     const-string v2, ", "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 408
+    .line 362
     :cond_0
     sparse-switch v1, :sswitch_data_0
 
     goto :goto_0
 
-    .line 419
+    .line 373
     :sswitch_0
     const-string v1, "FEEDBACK_SPOKEN"
 
@@ -231,7 +213,7 @@
 
     goto :goto_0
 
-    .line 410
+    .line 364
     :sswitch_1
     const-string v1, "FEEDBACK_AUDIBLE"
 
@@ -239,7 +221,7 @@
 
     goto :goto_0
 
-    .line 413
+    .line 367
     :sswitch_2
     const-string v1, "FEEDBACK_HAPTIC"
 
@@ -247,7 +229,7 @@
 
     goto :goto_0
 
-    .line 416
+    .line 370
     :sswitch_3
     const-string v1, "FEEDBACK_GENERIC"
 
@@ -255,7 +237,7 @@
 
     goto :goto_0
 
-    .line 422
+    .line 376
     :sswitch_4
     const-string v1, "FEEDBACK_VISUAL"
 
@@ -263,20 +245,20 @@
 
     goto :goto_0
 
-    .line 426
+    .line 380
     :cond_1
     const-string v1, "]"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 427
+    .line 381
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    .line 408
+    .line 362
     nop
 
     :sswitch_data_0
@@ -293,52 +275,52 @@
     .locals 1
 
     .prologue
-    .line 439
+    .line 393
     sparse-switch p0, :sswitch_data_0
 
-    .line 453
+    .line 407
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 441
+    .line 395
     :sswitch_0
     const-string v0, "DEFAULT"
 
     goto :goto_0
 
-    .line 443
+    .line 397
     :sswitch_1
     const-string v0, "FLAG_INCLUDE_NOT_IMPORTANT_VIEWS"
 
     goto :goto_0
 
-    .line 445
+    .line 399
     :sswitch_2
     const-string v0, "FLAG_REQUEST_TOUCH_EXPLORATION_MODE"
 
     goto :goto_0
 
-    .line 447
+    .line 401
     :sswitch_3
     const-string v0, "FLAG_REQUEST_ENHANCED_WEB_ACCESSIBILITY"
 
     goto :goto_0
 
-    .line 449
+    .line 403
     :sswitch_4
     const-string v0, "FLAG_REPORT_VIEW_IDS"
 
     goto :goto_0
 
-    .line 451
+    .line 405
     :sswitch_5
     const-string v0, "FLAG_REQUEST_FILTER_KEY_EVENTS"
 
     goto :goto_0
 
-    .line 439
+    .line 393
     nop
 
     :sswitch_data_0
@@ -356,7 +338,7 @@
     .locals 1
 
     .prologue
-    .line 356
+    .line 329
     sget-object v0, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat;->IMPL:Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoVersionImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoVersionImpl;->getCanRetrieveWindowContent(Landroid/accessibilityservice/AccessibilityServiceInfo;)Z
@@ -370,7 +352,7 @@
     .locals 1
 
     .prologue
-    .line 470
+    .line 424
     sget-object v0, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat;->IMPL:Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoVersionImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoVersionImpl;->getCapabilities(Landroid/accessibilityservice/AccessibilityServiceInfo;)I
@@ -384,7 +366,7 @@
     .locals 1
 
     .prologue
-    .line 372
+    .line 342
     sget-object v0, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat;->IMPL:Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoVersionImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoVersionImpl;->getDescription(Landroid/accessibilityservice/AccessibilityServiceInfo;)Ljava/lang/String;
@@ -398,7 +380,7 @@
     .locals 1
 
     .prologue
-    .line 315
+    .line 291
     sget-object v0, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat;->IMPL:Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoVersionImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoVersionImpl;->getId(Landroid/accessibilityservice/AccessibilityServiceInfo;)Ljava/lang/String;
@@ -412,7 +394,7 @@
     .locals 1
 
     .prologue
-    .line 328
+    .line 303
     sget-object v0, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat;->IMPL:Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoVersionImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoVersionImpl;->getResolveInfo(Landroid/accessibilityservice/AccessibilityServiceInfo;)Landroid/content/pm/ResolveInfo;
@@ -426,24 +408,10 @@
     .locals 1
 
     .prologue
-    .line 342
+    .line 316
     sget-object v0, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat;->IMPL:Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoVersionImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoVersionImpl;->getSettingsActivityName(Landroid/accessibilityservice/AccessibilityServiceInfo;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static loadDescription(Landroid/accessibilityservice/AccessibilityServiceInfo;Landroid/content/pm/PackageManager;)Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 388
-    sget-object v0, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat;->IMPL:Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoVersionImpl;
-
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/accessibilityservice/AccessibilityServiceInfoCompat$AccessibilityServiceInfoVersionImpl;->loadDescription(Landroid/accessibilityservice/AccessibilityServiceInfo;Landroid/content/pm/PackageManager;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -21,16 +21,16 @@
 
 
 # direct methods
-.method constructor <init>(Lio/branch/indexing/a;)V
+.method public constructor <init>(Lio/branch/indexing/a;)V
     .locals 1
 
     .prologue
-    .line 378
+    .line 254
     iput-object p1, p0, Lio/branch/indexing/a$a;->b:Lio/branch/indexing/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 380
+    .line 256
     :try_start_0
     const-string v0, "MD5"
 
@@ -42,7 +42,7 @@
     :try_end_0
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 383
+    .line 259
     :goto_0
     return-void
 

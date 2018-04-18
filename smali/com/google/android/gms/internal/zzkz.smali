@@ -1,231 +1,230 @@
-.class public abstract Lcom/google/android/gms/internal/zzkz;
-.super Lcom/google/android/gms/internal/zzef;
+.class public Lcom/google/android/gms/internal/zzkz;
+.super Ljava/lang/Object;
 
-# interfaces
-.implements Lcom/google/android/gms/internal/zzky;
+
+# annotations
+.annotation runtime Lcom/google/android/gms/internal/zzig;
+.end annotation
+
+
+# instance fields
+.field private final mContext:Landroid/content/Context;
+
+.field private final zzBb:Lcom/google/android/gms/internal/zzla;
+
+.field private zzIX:Lcom/google/android/gms/ads/internal/overlay/zzk;
+
+.field private final zzSa:Landroid/view/ViewGroup;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Landroid/content/Context;Landroid/view/ViewGroup;Lcom/google/android/gms/internal/zzla;)V
     .locals 1
 
-    invoke-direct {p0}, Lcom/google/android/gms/internal/zzef;-><init>()V
+    const/4 v0, 0x0
 
-    const-string v0, "com.google.android.gms.ads.internal.client.IVideoController"
-
-    invoke-virtual {p0, p0, v0}, Lcom/google/android/gms/internal/zzkz;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/google/android/gms/internal/zzkz;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;Lcom/google/android/gms/internal/zzla;Lcom/google/android/gms/ads/internal/overlay/zzk;)V
 
     return-void
 .end method
 
-.method public static zzh(Landroid/os/IBinder;)Lcom/google/android/gms/internal/zzky;
-    .locals 2
+.method constructor <init>(Landroid/content/Context;Landroid/view/ViewGroup;Lcom/google/android/gms/internal/zzla;Lcom/google/android/gms/ads/internal/overlay/zzk;)V
+    .locals 0
 
-    if-nez p0, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lcom/google/android/gms/internal/zzkz;->mContext:Landroid/content/Context;
 
-    :goto_0
-    return-object v0
+    iput-object p2, p0, Lcom/google/android/gms/internal/zzkz;->zzSa:Landroid/view/ViewGroup;
 
-    :cond_0
-    const-string v0, "com.google.android.gms.ads.internal.client.IVideoController"
+    iput-object p3, p0, Lcom/google/android/gms/internal/zzkz;->zzBb:Lcom/google/android/gms/internal/zzla;
 
-    invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+    iput-object p4, p0, Lcom/google/android/gms/internal/zzkz;->zzIX:Lcom/google/android/gms/ads/internal/overlay/zzk;
 
-    move-result-object v0
-
-    instance-of v1, v0, Lcom/google/android/gms/internal/zzky;
-
-    if-eqz v1, :cond_1
-
-    check-cast v0, Lcom/google/android/gms/internal/zzky;
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v0, Lcom/google/android/gms/internal/zzla;
-
-    invoke-direct {v0, p0}, Lcom/google/android/gms/internal/zzla;-><init>(Landroid/os/IBinder;)V
-
-    goto :goto_0
+    return-void
 .end method
 
 
 # virtual methods
-.method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-    .locals 4
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
+.method public onDestroy()V
+    .locals 2
 
-    const/4 v1, 0x1
+    const-string v0, "onDestroy must be called from the UI thread."
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/android/gms/internal/zzef;->zza(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    invoke-static {v0}, Lcom/google/android/gms/common/internal/zzaa;->zzdc(Ljava/lang/String;)V
 
-    move-result v0
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzkz;->zzIX:Lcom/google/android/gms/ads/internal/overlay/zzk;
 
     if-eqz v0, :cond_0
 
-    move v0, v1
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzkz;->zzIX:Lcom/google/android/gms/ads/internal/overlay/zzk;
 
-    :goto_0
-    return v0
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/overlay/zzk;->destroy()V
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzkz;->zzSa:Landroid/view/ViewGroup;
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/zzkz;->zzIX:Lcom/google/android/gms/ads/internal/overlay/zzk;
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzkz;->zzIX:Lcom/google/android/gms/ads/internal/overlay/zzk;
 
     :cond_0
-    packed-switch p1, :pswitch_data_0
+    return-void
+.end method
 
-    const/4 v0, 0x0
+.method public onPause()V
+    .locals 1
 
-    goto :goto_0
+    const-string v0, "onPause must be called from the UI thread."
 
-    :pswitch_0
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzkz;->play()V
+    invoke-static {v0}, Lcom/google/android/gms/common/internal/zzaa;->zzdc(Ljava/lang/String;)V
 
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzkz;->zzIX:Lcom/google/android/gms/ads/internal/overlay/zzk;
 
-    :goto_1
-    move v0, v1
+    if-eqz v0, :cond_0
 
-    goto :goto_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzkz;->zzIX:Lcom/google/android/gms/ads/internal/overlay/zzk;
 
-    :pswitch_1
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzkz;->pause()V
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/overlay/zzk;->pause()V
 
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+    :cond_0
+    return-void
+.end method
 
-    goto :goto_1
+.method public zza(IIIIIZ)V
+    .locals 9
 
-    :pswitch_2
-    invoke-static {p2}, Lcom/google/android/gms/internal/zzeg;->zza(Landroid/os/Parcel;)Z
+    const/4 v8, -0x1
 
-    move-result v0
+    const/4 v7, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/zzkz;->mute(Z)V
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzkz;->zzIX:Lcom/google/android/gms/ads/internal/overlay/zzk;
 
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+    if-eqz v0, :cond_0
 
-    goto :goto_1
+    :goto_0
+    return-void
 
-    :pswitch_3
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzkz;->isMuted()Z
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzkz;->zzBb:Lcom/google/android/gms/internal/zzla;
 
-    move-result v0
-
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    invoke-static {p3, v0}, Lcom/google/android/gms/internal/zzeg;->zza(Landroid/os/Parcel;Z)V
-
-    goto :goto_1
-
-    :pswitch_4
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzkz;->getPlaybackState()I
-
-    move-result v0
-
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    goto :goto_1
-
-    :pswitch_5
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzkz;->zzhx()F
-
-    move-result v0
-
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeFloat(F)V
-
-    goto :goto_1
-
-    :pswitch_6
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzkz;->zzhy()F
-
-    move-result v0
-
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeFloat(F)V
-
-    goto :goto_1
-
-    :pswitch_7
-    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
-
-    move-result-object v2
-
-    if-nez v2, :cond_1
-
-    const/4 v0, 0x0
-
-    :goto_2
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/zzkz;->zza(Lcom/google/android/gms/internal/zzlb;)V
-
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    goto :goto_1
-
-    :cond_1
-    const-string v0, "com.google.android.gms.ads.internal.client.IVideoLifecycleCallbacks"
-
-    invoke-interface {v2, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+    invoke-interface {v0}, Lcom/google/android/gms/internal/zzla;->zzjM()Lcom/google/android/gms/internal/zzdb;
 
     move-result-object v0
 
-    instance-of v3, v0, Lcom/google/android/gms/internal/zzlb;
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/zzdb;->zzez()Lcom/google/android/gms/internal/zzdc;
 
-    if-eqz v3, :cond_2
+    move-result-object v0
 
-    check-cast v0, Lcom/google/android/gms/internal/zzlb;
+    iget-object v1, p0, Lcom/google/android/gms/internal/zzkz;->zzBb:Lcom/google/android/gms/internal/zzla;
 
-    goto :goto_2
+    invoke-interface {v1}, Lcom/google/android/gms/internal/zzla;->zzjL()Lcom/google/android/gms/internal/zzda;
 
-    :cond_2
-    new-instance v0, Lcom/google/android/gms/internal/zzld;
+    move-result-object v1
 
-    invoke-direct {v0, v2}, Lcom/google/android/gms/internal/zzld;-><init>(Landroid/os/IBinder;)V
+    const/4 v2, 0x1
 
-    goto :goto_2
+    new-array v2, v2, [Ljava/lang/String;
 
-    :pswitch_8
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzkz;->getAspectRatio()F
+    const-string v3, "vpr"
 
-    move-result v0
+    aput-object v3, v2, v7
 
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+    invoke-static {v0, v1, v2}, Lcom/google/android/gms/internal/zzcy;->zza(Lcom/google/android/gms/internal/zzdc;Lcom/google/android/gms/internal/zzda;[Ljava/lang/String;)Z
 
-    invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeFloat(F)V
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzkz;->zzBb:Lcom/google/android/gms/internal/zzla;
 
-    goto :goto_1
+    invoke-interface {v0}, Lcom/google/android/gms/internal/zzla;->zzjM()Lcom/google/android/gms/internal/zzdb;
 
-    :pswitch_9
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzkz;->isCustomControlsEnabled()Z
+    move-result-object v0
 
-    move-result v0
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/zzdb;->zzez()Lcom/google/android/gms/internal/zzdc;
 
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+    move-result-object v0
 
-    invoke-static {p3, v0}, Lcom/google/android/gms/internal/zzeg;->zza(Landroid/os/Parcel;Z)V
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzcy;->zzb(Lcom/google/android/gms/internal/zzdc;)Lcom/google/android/gms/internal/zzda;
 
-    goto :goto_1
+    move-result-object v6
 
-    nop
+    new-instance v0, Lcom/google/android/gms/ads/internal/overlay/zzk;
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-        :pswitch_5
-        :pswitch_6
-        :pswitch_7
-        :pswitch_8
-        :pswitch_9
-    .end packed-switch
+    iget-object v1, p0, Lcom/google/android/gms/internal/zzkz;->mContext:Landroid/content/Context;
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/zzkz;->zzBb:Lcom/google/android/gms/internal/zzla;
+
+    iget-object v3, p0, Lcom/google/android/gms/internal/zzkz;->zzBb:Lcom/google/android/gms/internal/zzla;
+
+    invoke-interface {v3}, Lcom/google/android/gms/internal/zzla;->zzjM()Lcom/google/android/gms/internal/zzdb;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/google/android/gms/internal/zzdb;->zzez()Lcom/google/android/gms/internal/zzdc;
+
+    move-result-object v5
+
+    move v3, p5
+
+    move v4, p6
+
+    invoke-direct/range {v0 .. v6}, Lcom/google/android/gms/ads/internal/overlay/zzk;-><init>(Landroid/content/Context;Lcom/google/android/gms/internal/zzla;IZLcom/google/android/gms/internal/zzdc;Lcom/google/android/gms/internal/zzda;)V
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzkz;->zzIX:Lcom/google/android/gms/ads/internal/overlay/zzk;
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzkz;->zzSa:Landroid/view/ViewGroup;
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/zzkz;->zzIX:Lcom/google/android/gms/ads/internal/overlay/zzk;
+
+    new-instance v2, Landroid/view/ViewGroup$LayoutParams;
+
+    invoke-direct {v2, v8, v8}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, v1, v7, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzkz;->zzIX:Lcom/google/android/gms/ads/internal/overlay/zzk;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/google/android/gms/ads/internal/overlay/zzk;->zzd(IIII)V
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzkz;->zzBb:Lcom/google/android/gms/internal/zzla;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/zzla;->zzjD()Lcom/google/android/gms/internal/zzlb;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v7}, Lcom/google/android/gms/internal/zzlb;->zzJ(Z)V
+
+    goto :goto_0
+.end method
+
+.method public zze(IIII)V
+    .locals 1
+
+    const-string v0, "The underlay may only be modified from the UI thread."
+
+    invoke-static {v0}, Lcom/google/android/gms/common/internal/zzaa;->zzdc(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzkz;->zzIX:Lcom/google/android/gms/ads/internal/overlay/zzk;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzkz;->zzIX:Lcom/google/android/gms/ads/internal/overlay/zzk;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/google/android/gms/ads/internal/overlay/zzk;->zzd(IIII)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public zzjv()Lcom/google/android/gms/ads/internal/overlay/zzk;
+    .locals 1
+
+    const-string v0, "getAdVideoUnderlay must be called from the UI thread."
+
+    invoke-static {v0}, Lcom/google/android/gms/common/internal/zzaa;->zzdc(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzkz;->zzIX:Lcom/google/android/gms/ads/internal/overlay/zzk;
+
+    return-object v0
 .end method

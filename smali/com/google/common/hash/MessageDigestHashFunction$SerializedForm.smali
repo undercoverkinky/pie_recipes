@@ -34,19 +34,19 @@
     .locals 0
 
     .prologue
-    .line 100
+    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 101
+    .line 98
     iput-object p1, p0, Lcom/google/common/hash/MessageDigestHashFunction$SerializedForm;->algorithmName:Ljava/lang/String;
 
-    .line 102
+    .line 99
     iput p2, p0, Lcom/google/common/hash/MessageDigestHashFunction$SerializedForm;->bytes:I
 
-    .line 103
+    .line 100
     iput-object p3, p0, Lcom/google/common/hash/MessageDigestHashFunction$SerializedForm;->toString:Ljava/lang/String;
 
-    .line 104
+    .line 101
     return-void
 .end method
 
@@ -54,7 +54,7 @@
     .locals 0
 
     .prologue
-    .line 95
+    .line 92
     invoke-direct {p0, p1, p2, p3}, Lcom/google/common/hash/MessageDigestHashFunction$SerializedForm;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     return-void
@@ -64,7 +64,7 @@
     .locals 4
 
     .prologue
-    .line 107
+    .line 104
     new-instance v0, Lcom/google/common/hash/MessageDigestHashFunction;
 
     iget-object v1, p0, Lcom/google/common/hash/MessageDigestHashFunction$SerializedForm;->algorithmName:Ljava/lang/String;

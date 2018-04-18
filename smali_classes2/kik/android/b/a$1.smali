@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/kik/events/p;
+.implements Lcom/kik/events/q;
 
 
 # annotations
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/kik/events/p",
+        "Lcom/kik/events/q",
         "<",
         "Lcom/kik/xdata/model/cards/XCardDescriptor;",
-        "Lkik/core/d/b$a;",
+        "Lkik/core/f/b$a;",
         ">;"
     }
 .end annotation
@@ -65,29 +65,29 @@
 
     .line 1295
     :cond_0
-    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->g()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->h()Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
-    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->b()Ljava/lang/String;
 
     move-result-object v1
 
     .line 1296
     :goto_1
-    new-instance v0, Lkik/core/d/b$a;
-
-    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->b()Ljava/lang/String;
-
-    move-result-object v2
+    new-instance v0, Lkik/core/f/b$a;
 
     invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->c()Ljava/lang/String;
 
+    move-result-object v2
+
+    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->d()Ljava/lang/String;
+
     move-result-object v3
 
-    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->d()Ljava/lang/Long;
+    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->e()Ljava/lang/Long;
 
     move-result-object v4
 
@@ -95,13 +95,13 @@
 
     move-result-wide v4
 
-    invoke-direct/range {v0 .. v5}, Lkik/core/d/b$a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
+    invoke-direct/range {v0 .. v5}, Lkik/core/f/b$a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
 
     goto :goto_0
 
     .line 1295
     :cond_1
-    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->g()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->h()Ljava/lang/String;
 
     move-result-object v1
 

@@ -1,122 +1,314 @@
 .class final Lcom/google/android/gms/internal/l;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Lcom/google/android/gms/internal/zzakc;
-
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lcom/google/android/gms/internal/zzakc",
-        "<",
-        "Lcom/google/android/gms/ads/internal/js/zzai;",
-        ">;"
-    }
+.annotation runtime Lcom/google/android/gms/internal/zzig;
 .end annotation
 
 
 # instance fields
-.field private synthetic a:Lcom/google/android/gms/internal/zznf;
+.field final a:Lcom/google/android/gms/ads/internal/client/AdRequestParcel;
 
-.field private synthetic b:Lcom/google/android/gms/internal/k;
+.field final b:Ljava/lang/String;
+
+.field final c:I
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/gms/internal/k;Lcom/google/android/gms/internal/zznf;)V
+.method private constructor <init>(Lcom/google/android/gms/ads/internal/client/AdRequestParcel;Ljava/lang/String;I)V
     .locals 0
 
-    iput-object p1, p0, Lcom/google/android/gms/internal/l;->b:Lcom/google/android/gms/internal/k;
-
-    iput-object p2, p0, Lcom/google/android/gms/internal/l;->a:Lcom/google/android/gms/internal/zznf;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/l;->a:Lcom/google/android/gms/ads/internal/client/AdRequestParcel;
+
+    iput-object p2, p0, Lcom/google/android/gms/internal/l;->b:Ljava/lang/String;
+
+    iput p3, p0, Lcom/google/android/gms/internal/l;->c:I
 
     return-void
 .end method
 
+.method constructor <init>(Lcom/google/android/gms/internal/k;)V
+    .locals 3
 
-# virtual methods
-.method public final synthetic zzc(Ljava/lang/Object;)V
+    invoke-virtual {p1}, Lcom/google/android/gms/internal/k;->a()Lcom/google/android/gms/ads/internal/client/AdRequestParcel;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Lcom/google/android/gms/internal/k;->c()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Lcom/google/android/gms/internal/k;->b()I
+
+    move-result v2
+
+    invoke-direct {p0, v0, v1, v2}, Lcom/google/android/gms/internal/l;-><init>(Lcom/google/android/gms/ads/internal/client/AdRequestParcel;Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method constructor <init>(Ljava/lang/String;)V
     .locals 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
 
-    check-cast p1, Lcom/google/android/gms/ads/internal/js/zzai;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/l;->b:Lcom/google/android/gms/internal/k;
+    const-string v0, "\u0000"
 
-    iget-object v0, v0, Lcom/google/android/gms/internal/k;->b:Lcom/google/android/gms/internal/zznh;
+    invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/l;->a:Lcom/google/android/gms/internal/zznf;
+    move-result-object v0
 
-    const/4 v2, 0x1
+    array-length v1, v0
 
-    new-array v2, v2, [Ljava/lang/String;
+    const/4 v2, 0x3
+
+    if-eq v1, v2, :cond_0
+
+    new-instance v0, Ljava/io/IOException;
+
+    const-string v1, "Incorrect field count for QueueSeed."
+
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    :try_start_0
+    aget-object v2, v0, v2
 
     const/4 v3, 0x0
 
-    const-string v4, "jsf"
+    invoke-static {v2, v3}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
-    aput-object v4, v2, v3
+    move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/internal/zznh;->zza(Lcom/google/android/gms/internal/zznf;[Ljava/lang/String;)Z
+    new-instance v3, Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/l;->b:Lcom/google/android/gms/internal/k;
+    const-string v4, "UTF-8"
 
-    iget-object v0, v0, Lcom/google/android/gms/internal/k;->b:Lcom/google/android/gms/internal/zznh;
+    invoke-direct {v3, v2, v4}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/zznh;->zziv()V
+    iput-object v3, p0, Lcom/google/android/gms/internal/l;->b:Ljava/lang/String;
 
-    const-string v0, "/invalidRequest"
+    const/4 v2, 0x1
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/l;->b:Lcom/google/android/gms/internal/k;
+    aget-object v2, v0, v2
 
-    iget-object v1, v1, Lcom/google/android/gms/internal/k;->a:Lcom/google/android/gms/internal/zzaca;
+    invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    iget-object v1, v1, Lcom/google/android/gms/internal/zzaca;->zzcso:Lcom/google/android/gms/internal/zzrn;
+    move-result v2
 
-    invoke-interface {p1, v0, v1}, Lcom/google/android/gms/ads/internal/js/zzai;->zza(Ljava/lang/String;Lcom/google/android/gms/internal/zzrn;)V
+    iput v2, p0, Lcom/google/android/gms/internal/l;->c:I
 
-    const-string v0, "/loadAdURL"
+    const/4 v2, 0x2
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/l;->b:Lcom/google/android/gms/internal/k;
+    aget-object v0, v0, v2
 
-    iget-object v1, v1, Lcom/google/android/gms/internal/k;->a:Lcom/google/android/gms/internal/zzaca;
+    const/4 v2, 0x0
 
-    iget-object v1, v1, Lcom/google/android/gms/internal/zzaca;->zzcsp:Lcom/google/android/gms/internal/zzrn;
+    invoke-static {v0, v2}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
-    invoke-interface {p1, v0, v1}, Lcom/google/android/gms/ads/internal/js/zzai;->zza(Ljava/lang/String;Lcom/google/android/gms/internal/zzrn;)V
+    move-result-object v0
 
-    const-string v0, "/loadAd"
+    const/4 v2, 0x0
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/l;->b:Lcom/google/android/gms/internal/k;
+    array-length v3, v0
 
-    iget-object v1, v1, Lcom/google/android/gms/internal/k;->a:Lcom/google/android/gms/internal/zzaca;
+    invoke-virtual {v1, v0, v2, v3}, Landroid/os/Parcel;->unmarshall([BII)V
 
-    iget-object v1, v1, Lcom/google/android/gms/internal/zzaca;->zzcsq:Lcom/google/android/gms/internal/zzrn;
+    const/4 v0, 0x0
 
-    invoke-interface {p1, v0, v1}, Lcom/google/android/gms/ads/internal/js/zzai;->zza(Ljava/lang/String;Lcom/google/android/gms/internal/zzrn;)V
+    invoke-virtual {v1, v0}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    :try_start_0
-    const-string v0, "AFMA_getAd"
+    sget-object v0, Lcom/google/android/gms/ads/internal/client/AdRequestParcel;->CREATOR:Lcom/google/android/gms/ads/internal/client/zzg;
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/l;->b:Lcom/google/android/gms/internal/k;
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/ads/internal/client/zzg;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
-    iget-object v1, v1, Lcom/google/android/gms/internal/k;->c:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-interface {p1, v0, v1}, Lcom/google/android/gms/ads/internal/js/zzai;->zzi(Ljava/lang/String;Ljava/lang/String;)V
+    check-cast v0, Lcom/google/android/gms/ads/internal/client/AdRequestParcel;
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/l;->a:Lcom/google/android/gms/ads/internal/client/AdRequestParcel;
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :goto_0
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
     return-void
 
     :catch_0
     move-exception v0
 
-    const-string v1, "Error requesting an ad url"
+    :try_start_1
+    new-instance v0, Ljava/io/IOException;
 
-    invoke-static {v1, v0}, Lcom/google/android/gms/internal/zzafx;->zzb(Ljava/lang/String;Ljava/lang/Throwable;)V
+    const-string v2, "Malformed QueueSeed encoding."
+
+    invoke-direct {v0, v2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    throw v0
+.end method
+
+
+# virtual methods
+.method final a()Ljava/lang/String;
+    .locals 7
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/l;->b:Ljava/lang/String;
+
+    const-string v2, "UTF-8"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
+
+    move-result-object v0
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v2}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget v2, p0, Lcom/google/android/gms/internal/l;->c:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/google/android/gms/internal/l;->a:Lcom/google/android/gms/ads/internal/client/AdRequestParcel;
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v3, v1, v4}, Lcom/google/android/gms/ads/internal/client/AdRequestParcel;->writeToParcel(Landroid/os/Parcel;I)V
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->marshall()[B
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    invoke-static {v3, v4}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+
+    move-result-object v3
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/String;->length()I
+
+    move-result v5
+
+    add-int/lit8 v5, v5, 0x2
+
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/String;->length()I
+
+    move-result v6
+
+    add-int/2addr v5, v6
+
+    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/String;->length()I
+
+    move-result v6
+
+    add-int/2addr v5, v6
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v4, "\u0000"
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v2, "\u0000"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result-object v0
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    :try_start_1
+    const-string v0, "QueueSeed encode failed because UTF-8 is not available."
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzjw;->e(Ljava/lang/String;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    const-string v0, ""
 
     goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    throw v0
 .end method

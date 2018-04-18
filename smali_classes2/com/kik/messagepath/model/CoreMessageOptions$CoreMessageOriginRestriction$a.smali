@@ -207,7 +207,6 @@
     .line 590
     invoke-virtual {p0, v1}, Lcom/kik/messagepath/model/CoreMessageOptions$CoreMessageOriginRestriction$a;->a(Lcom/kik/messagepath/model/CoreMessageOptions$CoreMessageOriginRestriction;)Lcom/kik/messagepath/model/CoreMessageOptions$CoreMessageOriginRestriction$a;
 
-    .line 592
     :cond_1
     throw v0
 

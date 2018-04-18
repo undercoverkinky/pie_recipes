@@ -27,18 +27,18 @@
     .locals 0
 
     .prologue
-    .line 2448
+    .line 1800
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2449
+    .line 1801
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$Command;->command:Ljava/lang/String;
 
-    .line 2450
+    .line 1802
     iput-object p2, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$Command;->extras:Landroid/os/Bundle;
 
-    .line 2451
+    .line 1803
     iput-object p3, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$Command;->stub:Landroid/os/ResultReceiver;
 
-    .line 2452
+    .line 1804
     return-void
 .end method

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/KikScopedDialogFragment;->showTimedProgressDialog(Landroid/content/Context;IJ)Lcom/kik/events/Promise;
+    value = Lkik/android/chat/fragment/KikScopedDialogFragment;->a(Landroid/content/Context;I)Lcom/kik/events/Promise;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
     .locals 0
 
     .prologue
-    .line 245
+    .line 218
     iput-object p1, p0, Lkik/android/chat/fragment/KikScopedDialogFragment$1;->b:Lkik/android/chat/fragment/KikScopedDialogFragment;
 
     iput-object p2, p0, Lkik/android/chat/fragment/KikScopedDialogFragment$1;->a:Lcom/kik/events/Promise;
@@ -43,16 +43,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 249
+    .line 222
     iget-object v0, p0, Lkik/android/chat/fragment/KikScopedDialogFragment$1;->a:Lcom/kik/events/Promise;
 
     invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Ljava/lang/Object;)V
 
-    .line 250
+    .line 223
     iget-object v0, p0, Lkik/android/chat/fragment/KikScopedDialogFragment$1;->b:Lkik/android/chat/fragment/KikScopedDialogFragment;
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikScopedDialogFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikScopedDialogFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 251
+    .line 224
     return-void
 .end method

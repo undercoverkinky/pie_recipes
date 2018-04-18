@@ -3,43 +3,55 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/android/chat/view/m;
+.implements Lkik/android/chat/view/e;
 
 
 # instance fields
 .field protected _lightningButton:Landroid/widget/ImageView;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f100167
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f110141
+        }
     .end annotation
 .end field
 
 .field protected _retakeButton:Landroid/view/View;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f100164
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f11013e
+        }
     .end annotation
 .end field
 
 .field protected _shutterButton:Lkik/android/widget/ArcImageView;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f100165
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f11013f
+        }
     .end annotation
 .end field
 
 .field protected _swapCameraButton:Landroid/widget/ImageView;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f100168
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f110142
+        }
     .end annotation
 .end field
 
 .field protected _usePhotoButton:Lkik/android/widget/RobotoTextView;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f100166
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f110140
+        }
     .end annotation
 .end field
 
 .field protected _videoTime:Landroid/widget/TextView;
-    .annotation build Lbutterknife/BindView;
-        value = 0x7f100169
+    .annotation build Lbutterknife/Bind;
+        value = {
+            0x7f110143
+        }
     .end annotation
 .end field
 
@@ -49,7 +61,7 @@
 
 .field private c:Landroid/media/AudioManager;
 
-.field private d:Lkik/android/chat/view/m$a;
+.field private d:Lkik/android/chat/view/e$a;
 
 .field private final e:Landroid/view/View$OnTouchListener;
 
@@ -59,20 +71,20 @@
     .locals 1
 
     .prologue
-    .line 103
+    .line 102
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 48
+    .line 47
     new-instance v0, Lkik/android/chat/view/CameraIconBarViewImpl$1;
 
     invoke-direct {v0, p0}, Lkik/android/chat/view/CameraIconBarViewImpl$1;-><init>(Lkik/android/chat/view/CameraIconBarViewImpl;)V
 
     iput-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->e:Landroid/view/View$OnTouchListener;
 
-    .line 104
+    .line 103
     invoke-direct {p0, p1}, Lkik/android/chat/view/CameraIconBarViewImpl;->a(Landroid/content/Context;)V
 
-    .line 105
+    .line 104
     return-void
 .end method
 
@@ -80,20 +92,20 @@
     .locals 1
 
     .prologue
-    .line 109
+    .line 108
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 48
+    .line 47
     new-instance v0, Lkik/android/chat/view/CameraIconBarViewImpl$1;
 
     invoke-direct {v0, p0}, Lkik/android/chat/view/CameraIconBarViewImpl$1;-><init>(Lkik/android/chat/view/CameraIconBarViewImpl;)V
 
     iput-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->e:Landroid/view/View$OnTouchListener;
 
-    .line 110
+    .line 109
     invoke-direct {p0, p1}, Lkik/android/chat/view/CameraIconBarViewImpl;->a(Landroid/content/Context;)V
 
-    .line 111
+    .line 110
     return-void
 .end method
 
@@ -101,20 +113,20 @@
     .locals 1
 
     .prologue
-    .line 115
+    .line 114
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 48
+    .line 47
     new-instance v0, Lkik/android/chat/view/CameraIconBarViewImpl$1;
 
     invoke-direct {v0, p0}, Lkik/android/chat/view/CameraIconBarViewImpl$1;-><init>(Lkik/android/chat/view/CameraIconBarViewImpl;)V
 
     iput-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->e:Landroid/view/View$OnTouchListener;
 
-    .line 116
+    .line 115
     invoke-direct {p0, p1}, Lkik/android/chat/view/CameraIconBarViewImpl;->a(Landroid/content/Context;)V
 
-    .line 117
+    .line 116
     return-void
 .end method
 
@@ -122,21 +134,31 @@
     .locals 1
 
     .prologue
-    .line 122
+    .line 120
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 48
+    .line 47
     new-instance v0, Lkik/android/chat/view/CameraIconBarViewImpl$1;
 
     invoke-direct {v0, p0}, Lkik/android/chat/view/CameraIconBarViewImpl$1;-><init>(Lkik/android/chat/view/CameraIconBarViewImpl;)V
 
     iput-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->e:Landroid/view/View$OnTouchListener;
 
-    .line 123
+    .line 121
     invoke-direct {p0, p1}, Lkik/android/chat/view/CameraIconBarViewImpl;->a(Landroid/content/Context;)V
 
-    .line 124
+    .line 122
     return-void
+.end method
+
+.method static synthetic a(Lkik/android/chat/view/CameraIconBarViewImpl;)Lkik/android/chat/view/e$a;
+    .locals 1
+
+    .prologue
+    .line 31
+    iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->d:Lkik/android/chat/view/e$a;
+
+    return-object v0
 .end method
 
 .method private a(Landroid/content/Context;)V
@@ -145,81 +167,81 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 128
-    const v0, 0x7f04003a
+    .line 126
+    const v0, 0x7f04003b
 
     invoke-static {p1, v0, p0}, Lkik/android/chat/view/CameraIconBarViewImpl;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    .line 129
-    invoke-static {p0}, Lbutterknife/ButterKnife;->bind(Landroid/view/View;)Lbutterknife/Unbinder;
+    .line 127
+    invoke-static {p0}, Lbutterknife/ButterKnife;->bind(Landroid/view/View;)V
 
-    .line 131
+    .line 129
     iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_shutterButton:Lkik/android/widget/ArcImageView;
 
     iget-object v1, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->e:Landroid/view/View$OnTouchListener;
 
     invoke-virtual {v0, v1}, Lkik/android/widget/ArcImageView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 133
+    .line 131
     iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_shutterButton:Lkik/android/widget/ArcImageView;
 
-    invoke-static {p0}, Lkik/android/chat/view/n;->a(Lkik/android/chat/view/CameraIconBarViewImpl;)Landroid/view/View$OnLongClickListener;
+    invoke-static {p0}, Lkik/android/chat/view/f;->a(Lkik/android/chat/view/CameraIconBarViewImpl;)Landroid/view/View$OnLongClickListener;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lkik/android/widget/ArcImageView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    .line 140
+    .line 138
     iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_lightningButton:Landroid/widget/ImageView;
 
-    invoke-static {p0}, Lkik/android/chat/view/o;->a(Lkik/android/chat/view/CameraIconBarViewImpl;)Landroid/view/View$OnClickListener;
+    invoke-static {p0}, Lkik/android/chat/view/g;->a(Lkik/android/chat/view/CameraIconBarViewImpl;)Landroid/view/View$OnClickListener;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 140
+    iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_swapCameraButton:Landroid/widget/ImageView;
+
+    invoke-static {p0}, Lkik/android/chat/view/h;->a(Lkik/android/chat/view/CameraIconBarViewImpl;)Landroid/view/View$OnClickListener;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 142
-    iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_swapCameraButton:Landroid/widget/ImageView;
-
-    invoke-static {p0}, Lkik/android/chat/view/p;->a(Lkik/android/chat/view/CameraIconBarViewImpl;)Landroid/view/View$OnClickListener;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 144
     iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_retakeButton:Landroid/view/View;
 
-    invoke-static {p0}, Lkik/android/chat/view/q;->a(Lkik/android/chat/view/CameraIconBarViewImpl;)Landroid/view/View$OnClickListener;
+    invoke-static {p0}, Lkik/android/chat/view/i;->a(Lkik/android/chat/view/CameraIconBarViewImpl;)Landroid/view/View$OnClickListener;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 146
+    .line 144
     iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_usePhotoButton:Lkik/android/widget/RobotoTextView;
 
-    invoke-static {p0}, Lkik/android/chat/view/r;->a(Lkik/android/chat/view/CameraIconBarViewImpl;)Landroid/view/View$OnClickListener;
+    invoke-static {p0}, Lkik/android/chat/view/j;->a(Lkik/android/chat/view/CameraIconBarViewImpl;)Landroid/view/View$OnClickListener;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lkik/android/widget/RobotoTextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 148
+    .line 146
     invoke-virtual {p0, v2}, Lkik/android/chat/view/CameraIconBarViewImpl;->setFocusable(Z)V
 
-    .line 149
+    .line 147
     invoke-virtual {p0, v2}, Lkik/android/chat/view/CameraIconBarViewImpl;->setFocusableInTouchMode(Z)V
 
-    .line 150
+    .line 148
     invoke-virtual {p0}, Lkik/android/chat/view/CameraIconBarViewImpl;->requestFocus()Z
 
-    .line 152
+    .line 150
     iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_shutterButton:Lkik/android/widget/ArcImageView;
 
     invoke-virtual {v0}, Lkik/android/widget/ArcImageView;->a()V
 
-    .line 154
+    .line 152
     const-string v0, "audio"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -230,19 +252,7 @@
 
     iput-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->c:Landroid/media/AudioManager;
 
-    .line 155
-    return-void
-.end method
-
-.method static synthetic a(Lkik/android/chat/view/CameraIconBarViewImpl;)V
-    .locals 1
-
-    .prologue
-    .line 146
-    iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->d:Lkik/android/chat/view/m$a;
-
-    invoke-interface {v0}, Lkik/android/chat/view/m$a;->t()V
-
+    .line 153
     return-void
 .end method
 
@@ -252,13 +262,13 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 134
-    const v0, 0x7f02032a
+    .line 2132
+    const v0, 0x7f0202ee
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 135
-    iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->d:Lkik/android/chat/view/m$a;
+    .line 2133
+    iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->d:Lkik/android/chat/view/e$a;
 
     const/4 v1, 0x0
 
@@ -266,32 +276,20 @@
 
     move-result v2
 
-    invoke-interface {v0, v1, v2}, Lkik/android/chat/view/m$a;->a(ZZ)V
+    invoke-interface {v0, v1, v2}, Lkik/android/chat/view/e$a;->a(ZZ)V
 
-    .line 136
+    .line 2134
     iput-boolean v3, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->a:Z
 
-    .line 137
+    .line 0
     return v3
-.end method
-
-.method static synthetic b(Lkik/android/chat/view/CameraIconBarViewImpl;)V
-    .locals 1
-
-    .prologue
-    .line 144
-    iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->d:Lkik/android/chat/view/m$a;
-
-    invoke-interface {v0}, Lkik/android/chat/view/m$a;->s()V
-
-    return-void
 .end method
 
 .method private b(I)Z
     .locals 1
 
     .prologue
-    .line 365
+    .line 363
     const/16 v0, 0x19
 
     if-eq p1, v0, :cond_0
@@ -320,55 +318,21 @@
     goto :goto_0
 .end method
 
-.method static synthetic c(Lkik/android/chat/view/CameraIconBarViewImpl;)V
+.method static synthetic b(Lkik/android/chat/view/CameraIconBarViewImpl;)Z
     .locals 1
 
     .prologue
-    .line 142
-    iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->d:Lkik/android/chat/view/m$a;
-
-    invoke-interface {v0}, Lkik/android/chat/view/m$a;->r()V
-
-    return-void
-.end method
-
-.method static synthetic d(Lkik/android/chat/view/CameraIconBarViewImpl;)V
-    .locals 1
-
-    .prologue
-    .line 140
-    iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->d:Lkik/android/chat/view/m$a;
-
-    invoke-interface {v0}, Lkik/android/chat/view/m$a;->q()V
-
-    return-void
-.end method
-
-.method static synthetic e(Lkik/android/chat/view/CameraIconBarViewImpl;)Lkik/android/chat/view/m$a;
-    .locals 1
-
-    .prologue
-    .line 32
-    iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->d:Lkik/android/chat/view/m$a;
-
-    return-object v0
-.end method
-
-.method static synthetic f(Lkik/android/chat/view/CameraIconBarViewImpl;)Z
-    .locals 1
-
-    .prologue
-    .line 32
+    .line 31
     iget-boolean v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->a:Z
 
     return v0
 .end method
 
-.method static synthetic g(Lkik/android/chat/view/CameraIconBarViewImpl;)Z
+.method static synthetic c(Lkik/android/chat/view/CameraIconBarViewImpl;)Z
     .locals 1
 
     .prologue
-    .line 32
+    .line 31
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->a:Z
@@ -376,11 +340,67 @@
     return v0
 .end method
 
+.method static synthetic d(Lkik/android/chat/view/CameraIconBarViewImpl;)V
+    .locals 1
+
+    .prologue
+    .line 0
+    .line 2138
+    iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->d:Lkik/android/chat/view/e$a;
+
+    invoke-interface {v0}, Lkik/android/chat/view/e$a;->q()V
+
+    .line 0
+    return-void
+.end method
+
+.method static synthetic e(Lkik/android/chat/view/CameraIconBarViewImpl;)V
+    .locals 1
+
+    .prologue
+    .line 0
+    .line 2140
+    iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->d:Lkik/android/chat/view/e$a;
+
+    invoke-interface {v0}, Lkik/android/chat/view/e$a;->r()V
+
+    .line 0
+    return-void
+.end method
+
+.method static synthetic f(Lkik/android/chat/view/CameraIconBarViewImpl;)V
+    .locals 1
+
+    .prologue
+    .line 0
+    .line 2142
+    iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->d:Lkik/android/chat/view/e$a;
+
+    invoke-interface {v0}, Lkik/android/chat/view/e$a;->s()V
+
+    .line 0
+    return-void
+.end method
+
+.method static synthetic g(Lkik/android/chat/view/CameraIconBarViewImpl;)V
+    .locals 1
+
+    .prologue
+    .line 0
+    .line 2144
+    iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->d:Lkik/android/chat/view/e$a;
+
+    invoke-interface {v0}, Lkik/android/chat/view/e$a;->t()V
+
+    .line 0
+    return-void
+.end method
+
 .method private n()Z
     .locals 1
 
     .prologue
-    .line 360
+    .line 358
     iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->c:Landroid/media/AudioManager;
 
     if-eqz v0, :cond_0
@@ -410,7 +430,7 @@
     .locals 3
 
     .prologue
-    .line 166
+    .line 164
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/view/View;
@@ -423,7 +443,7 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
 
-    .line 167
+    .line 165
     return-void
 .end method
 
@@ -437,13 +457,13 @@
 
     const/4 v9, 0x0
 
-    .line 257
-    .line 1262
+    .line 255
+    .line 1260
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 1264
+    .line 1262
     iget-object v1, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_lightningButton:Landroid/widget/ImageView;
 
     sget-object v2, Landroid/view/View;->ROTATION:Landroid/util/Property;
@@ -458,7 +478,7 @@
 
     move-result-object v1
 
-    .line 1265
+    .line 1263
     iget-object v2, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_swapCameraButton:Landroid/widget/ImageView;
 
     sget-object v3, Landroid/view/View;->ROTATION:Landroid/util/Property;
@@ -473,7 +493,7 @@
 
     move-result-object v2
 
-    .line 1266
+    .line 1264
     iget-object v3, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_usePhotoButton:Lkik/android/widget/RobotoTextView;
 
     sget-object v4, Landroid/view/View;->ROTATION:Landroid/util/Property;
@@ -488,7 +508,7 @@
 
     move-result-object v3
 
-    .line 1267
+    .line 1265
     iget-object v4, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_retakeButton:Landroid/view/View;
 
     sget-object v5, Landroid/view/View;->ROTATION:Landroid/util/Property;
@@ -503,7 +523,7 @@
 
     move-result-object v4
 
-    .line 1268
+    .line 1266
     iget-object v5, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_shutterButton:Lkik/android/widget/ArcImageView;
 
     sget-object v6, Landroid/view/View;->ROTATION:Landroid/util/Property;
@@ -518,7 +538,7 @@
 
     move-result-object v5
 
-    .line 1269
+    .line 1267
     iget-object v6, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_videoTime:Landroid/widget/TextView;
 
     sget-object v7, Landroid/view/View;->ROTATION:Landroid/util/Property;
@@ -533,7 +553,7 @@
 
     move-result-object v6
 
-    .line 1271
+    .line 1269
     const/4 v7, 0x6
 
     new-array v7, v7, [Landroid/animation/Animator;
@@ -558,15 +578,15 @@
 
     invoke-virtual {v0, v7}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 1272
+    .line 1270
     const-wide/16 v2, 0x12c
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 1273
+    .line 1271
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 258
+    .line 256
     return-void
 .end method
 
@@ -574,16 +594,14 @@
     .locals 4
 
     .prologue
-    .line 285
+    .line 283
     iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_shutterButton:Lkik/android/widget/ArcImageView;
 
     const/high16 v1, 0x43b40000    # 360.0f
 
     int-to-float v2, p1
 
-    sget v3, Lkik/android/chat/fragment/CameraFragment;->a:I
-
-    int-to-float v3, v3
+    const v3, 0x466a6000    # 15000.0f
 
     div-float/2addr v2, v3
 
@@ -591,16 +609,16 @@
 
     invoke-virtual {v0, v1}, Lkik/android/widget/ArcImageView;->a(F)V
 
-    .line 286
+    .line 284
     iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_videoTime:Landroid/widget/TextView;
 
-    invoke-static {p1}, Lkik/android/util/bv;->a(I)Ljava/lang/String;
+    invoke-static {p1}, Lkik/android/util/bx;->a(I)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 287
+    .line 285
     return-void
 .end method
 
@@ -608,10 +626,10 @@
     .locals 3
 
     .prologue
-    .line 172
+    .line 170
     invoke-virtual {p0}, Lkik/android/chat/view/CameraIconBarViewImpl;->a()V
 
-    .line 174
+    .line 172
     const-string v0, "auto"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -620,18 +638,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 175
+    .line 173
     iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_lightningButton:Landroid/widget/ImageView;
 
-    const v1, 0x7f0201e3
+    const v1, 0x7f02018f
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 186
+    .line 184
     :goto_0
     return-void
 
-    .line 177
+    .line 175
     :cond_0
     const-string v0, "off"
 
@@ -641,16 +659,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 178
+    .line 176
     iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_lightningButton:Landroid/widget/ImageView;
 
-    const v1, 0x7f0201e4
+    const v1, 0x7f020190
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto :goto_0
 
-    .line 180
+    .line 178
     :cond_1
     const-string v0, "on"
 
@@ -660,16 +678,16 @@
 
     if-eqz v0, :cond_2
 
-    .line 181
+    .line 179
     iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_lightningButton:Landroid/widget/ImageView;
 
-    const v1, 0x7f0201e5
+    const v1, 0x7f020191
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     goto :goto_0
 
-    .line 184
+    .line 182
     :cond_2
     const/4 v0, 0x1
 
@@ -686,14 +704,14 @@
     goto :goto_0
 .end method
 
-.method public final a(Lkik/android/chat/view/m$a;)V
+.method public final a(Lkik/android/chat/view/e$a;)V
     .locals 0
 
     .prologue
-    .line 160
-    iput-object p1, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->d:Lkik/android/chat/view/m$a;
+    .line 158
+    iput-object p1, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->d:Lkik/android/chat/view/e$a;
 
-    .line 161
+    .line 159
     return-void
 .end method
 
@@ -701,17 +719,17 @@
     .locals 3
 
     .prologue
-    .line 238
+    .line 236
     if-eqz p1, :cond_0
 
-    .line 239
+    .line 237
     iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_swapCameraButton:Landroid/widget/ImageView;
 
-    const v1, 0x7f0201c2
+    const v1, 0x7f020179
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 245
+    .line 243
     :goto_0
     const/4 v0, 0x1
 
@@ -725,14 +743,14 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->b([Landroid/view/View;)V
 
-    .line 246
+    .line 244
     return-void
 
-    .line 242
+    .line 240
     :cond_0
     iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_swapCameraButton:Landroid/widget/ImageView;
 
-    const v1, 0x7f0201c0
+    const v1, 0x7f020177
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -743,7 +761,7 @@
     .locals 3
 
     .prologue
-    .line 191
+    .line 189
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/view/View;
@@ -756,7 +774,7 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
 
-    .line 192
+    .line 190
     return-void
 .end method
 
@@ -764,7 +782,7 @@
     .locals 3
 
     .prologue
-    .line 197
+    .line 195
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/view/View;
@@ -777,7 +795,7 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
 
-    .line 198
+    .line 196
     return-void
 .end method
 
@@ -785,7 +803,7 @@
     .locals 3
 
     .prologue
-    .line 203
+    .line 201
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/view/View;
@@ -798,7 +816,7 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
 
-    .line 204
+    .line 202
     return-void
 .end method
 
@@ -812,7 +830,7 @@
 
     const/4 v2, 0x0
 
-    .line 209
+    .line 207
     new-array v0, v4, [Landroid/view/View;
 
     iget-object v1, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_usePhotoButton:Lkik/android/widget/RobotoTextView;
@@ -825,7 +843,7 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
 
-    .line 210
+    .line 208
     const/4 v0, 0x4
 
     new-array v0, v0, [Landroid/view/View;
@@ -850,14 +868,14 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
 
-    .line 211
+    .line 209
     iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_shutterButton:Lkik/android/widget/ArcImageView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lkik/android/widget/ArcImageView;->a(F)V
 
-    .line 212
+    .line 210
     return-void
 .end method
 
@@ -869,14 +887,14 @@
 
     const/4 v2, 0x0
 
-    .line 217
+    .line 215
     iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_shutterButton:Lkik/android/widget/ArcImageView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lkik/android/widget/ArcImageView;->a(F)V
 
-    .line 218
+    .line 216
     new-array v0, v3, [Landroid/view/View;
 
     iget-object v1, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_shutterButton:Lkik/android/widget/ArcImageView;
@@ -885,7 +903,7 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
 
-    .line 219
+    .line 217
     const/4 v0, 0x3
 
     new-array v0, v0, [Landroid/view/View;
@@ -906,7 +924,7 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
 
-    .line 221
+    .line 219
     return-void
 .end method
 
@@ -914,7 +932,7 @@
     .locals 3
 
     .prologue
-    .line 226
+    .line 224
     const/4 v0, 0x2
 
     new-array v0, v0, [Landroid/view/View;
@@ -933,7 +951,7 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->a([Landroid/view/View;)V
 
-    .line 227
+    .line 225
     return-void
 .end method
 
@@ -941,7 +959,7 @@
     .locals 3
 
     .prologue
-    .line 232
+    .line 230
     const/4 v0, 0x2
 
     new-array v0, v0, [Landroid/view/View;
@@ -960,7 +978,7 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->b([Landroid/view/View;)V
 
-    .line 233
+    .line 231
     return-void
 .end method
 
@@ -968,7 +986,7 @@
     .locals 3
 
     .prologue
-    .line 251
+    .line 249
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/view/View;
@@ -981,7 +999,7 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->a([Landroid/view/View;)V
 
-    .line 252
+    .line 250
     return-void
 .end method
 
@@ -989,7 +1007,7 @@
     .locals 3
 
     .prologue
-    .line 279
+    .line 277
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/view/View;
@@ -1002,7 +1020,7 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
 
-    .line 280
+    .line 278
     return-void
 .end method
 
@@ -1010,14 +1028,14 @@
     .locals 2
 
     .prologue
-    .line 292
+    .line 290
     iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_videoTime:Landroid/widget/TextView;
 
     const-string v1, "00:00"
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 293
+    .line 291
     return-void
 .end method
 
@@ -1025,7 +1043,7 @@
     .locals 2
 
     .prologue
-    .line 298
+    .line 296
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/view/View;
@@ -1036,7 +1054,7 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
 
-    .line 299
+    .line 297
     return-void
 .end method
 
@@ -1044,7 +1062,7 @@
     .locals 1
 
     .prologue
-    .line 355
+    .line 353
     iget-object v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->_shutterButton:Lkik/android/widget/ArcImageView;
 
     invoke-virtual {v0}, Lkik/android/widget/ArcImageView;->getRight()I
@@ -1058,33 +1076,33 @@
     .locals 1
 
     .prologue
-    .line 304
+    .line 302
     invoke-direct {p0, p1}, Lkik/android/chat/view/CameraIconBarViewImpl;->b(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 305
+    .line 303
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getRepeatCount()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 306
+    .line 304
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->b:Z
 
-    .line 308
+    .line 306
     :cond_0
     invoke-virtual {p2}, Landroid/view/KeyEvent;->startTracking()V
 
-    .line 309
+    .line 307
     const/4 v0, 0x1
 
-    .line 312
+    .line 310
     :goto_0
     return v0
 
@@ -1102,26 +1120,26 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 336
+    .line 334
     iput-boolean v0, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->b:Z
 
-    .line 337
+    .line 335
     invoke-direct {p0, p1}, Lkik/android/chat/view/CameraIconBarViewImpl;->b(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 338
-    iget-object v1, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->d:Lkik/android/chat/view/m$a;
+    .line 336
+    iget-object v1, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->d:Lkik/android/chat/view/e$a;
 
     invoke-direct {p0}, Lkik/android/chat/view/CameraIconBarViewImpl;->n()Z
 
     move-result v2
 
-    invoke-interface {v1, v0, v2}, Lkik/android/chat/view/m$a;->a(ZZ)V
+    invoke-interface {v1, v0, v2}, Lkik/android/chat/view/e$a;->a(ZZ)V
 
-    .line 342
+    .line 340
     :goto_0
     return v0
 
@@ -1139,36 +1157,36 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 319
+    .line 317
     invoke-direct {p0, p1}, Lkik/android/chat/view/CameraIconBarViewImpl;->b(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 320
+    .line 318
     iget-boolean v1, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->b:Z
 
     if-eqz v1, :cond_0
 
-    .line 321
-    iget-object v1, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->d:Lkik/android/chat/view/m$a;
+    .line 319
+    iget-object v1, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->d:Lkik/android/chat/view/e$a;
 
-    invoke-interface {v1}, Lkik/android/chat/view/m$a;->p()V
+    invoke-interface {v1}, Lkik/android/chat/view/e$a;->p()V
 
-    .line 329
+    .line 327
     :goto_0
     return v0
 
-    .line 324
+    .line 322
     :cond_0
-    iget-object v1, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->d:Lkik/android/chat/view/m$a;
+    iget-object v1, p0, Lkik/android/chat/view/CameraIconBarViewImpl;->d:Lkik/android/chat/view/e$a;
 
-    invoke-interface {v1, v0}, Lkik/android/chat/view/m$a;->b(Z)V
+    invoke-interface {v1, v0}, Lkik/android/chat/view/e$a;->b(Z)V
 
     goto :goto_0
 
-    .line 329
+    .line 327
     :cond_1
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onKeyUp(ILandroid/view/KeyEvent;)Z
 

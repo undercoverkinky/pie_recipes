@@ -3,18 +3,12 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x12
-.end annotation
-
-
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 26
+    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +18,7 @@
     .locals 1
 
     .prologue
-    .line 28
+    .line 24
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getLayoutMode()I
 
     move-result v0
@@ -36,9 +30,9 @@
     .locals 0
 
     .prologue
-    .line 32
+    .line 28
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setLayoutMode(I)V
 
-    .line 33
+    .line 29
     return-void
 .end method

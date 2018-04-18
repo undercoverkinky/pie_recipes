@@ -1,14 +1,11 @@
 .class final Landroid/support/v4/app/FragmentTransitionCompat21$3;
-.super Ljava/lang/Object;
+.super Landroid/transition/Transition$EpicenterCallback;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroid/support/v4/app/FragmentTransitionCompat21;->setNameOverridesOptimized(Landroid/view/View;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/Map;)V
+    value = Landroid/support/v4/app/FragmentTransitionCompat21;->setSharedElementEpicenter(Landroid/transition/Transition;Landroid/support/v4/app/FragmentTransitionCompat21$EpicenterView;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,100 +15,55 @@
 
 
 # instance fields
-.field final synthetic val$inNames:Ljava/util/ArrayList;
+.field private mEpicenter:Landroid/graphics/Rect;
 
-.field final synthetic val$numSharedElements:I
-
-.field final synthetic val$outNames:Ljava/util/ArrayList;
-
-.field final synthetic val$sharedElementsIn:Ljava/util/ArrayList;
-
-.field final synthetic val$sharedElementsOut:Ljava/util/ArrayList;
+.field final synthetic val$epicenterView:Landroid/support/v4/app/FragmentTransitionCompat21$EpicenterView;
 
 
 # direct methods
-.method constructor <init>(ILjava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+.method constructor <init>(Landroid/support/v4/app/FragmentTransitionCompat21$EpicenterView;)V
     .locals 0
 
     .prologue
-    .line 345
-    iput p1, p0, Landroid/support/v4/app/FragmentTransitionCompat21$3;->val$numSharedElements:I
+    .line 282
+    iput-object p1, p0, Landroid/support/v4/app/FragmentTransitionCompat21$3;->val$epicenterView:Landroid/support/v4/app/FragmentTransitionCompat21$EpicenterView;
 
-    iput-object p2, p0, Landroid/support/v4/app/FragmentTransitionCompat21$3;->val$sharedElementsIn:Ljava/util/ArrayList;
-
-    iput-object p3, p0, Landroid/support/v4/app/FragmentTransitionCompat21$3;->val$inNames:Ljava/util/ArrayList;
-
-    iput-object p4, p0, Landroid/support/v4/app/FragmentTransitionCompat21$3;->val$sharedElementsOut:Ljava/util/ArrayList;
-
-    iput-object p5, p0, Landroid/support/v4/app/FragmentTransitionCompat21$3;->val$outNames:Ljava/util/ArrayList;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/transition/Transition$EpicenterCallback;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final onGetEpicenter(Landroid/transition/Transition;)Landroid/graphics/Rect;
+    .locals 1
 
     .prologue
-    .line 348
-    const/4 v0, 0x0
+    .line 287
+    iget-object v0, p0, Landroid/support/v4/app/FragmentTransitionCompat21$3;->mEpicenter:Landroid/graphics/Rect;
 
-    move v2, v0
+    if-nez v0, :cond_0
 
-    :goto_0
-    iget v0, p0, Landroid/support/v4/app/FragmentTransitionCompat21$3;->val$numSharedElements:I
+    iget-object v0, p0, Landroid/support/v4/app/FragmentTransitionCompat21$3;->val$epicenterView:Landroid/support/v4/app/FragmentTransitionCompat21$EpicenterView;
 
-    if-ge v2, v0, :cond_0
+    iget-object v0, v0, Landroid/support/v4/app/FragmentTransitionCompat21$EpicenterView;->epicenter:Landroid/view/View;
 
-    .line 349
-    iget-object v0, p0, Landroid/support/v4/app/FragmentTransitionCompat21$3;->val$sharedElementsIn:Ljava/util/ArrayList;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    .line 288
+    iget-object v0, p0, Landroid/support/v4/app/FragmentTransitionCompat21$3;->val$epicenterView:Landroid/support/v4/app/FragmentTransitionCompat21$EpicenterView;
 
-    move-result-object v0
+    iget-object v0, v0, Landroid/support/v4/app/FragmentTransitionCompat21$EpicenterView;->epicenter:Landroid/view/View;
 
-    check-cast v0, Landroid/view/View;
-
-    iget-object v1, p0, Landroid/support/v4/app/FragmentTransitionCompat21$3;->val$inNames:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setTransitionName(Ljava/lang/String;)V
-
-    .line 350
-    iget-object v0, p0, Landroid/support/v4/app/FragmentTransitionCompat21$3;->val$sharedElementsOut:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-static {v0}, Landroid/support/v4/app/FragmentTransitionCompat21;->access$100(Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v0
 
-    check-cast v0, Landroid/view/View;
+    iput-object v0, p0, Landroid/support/v4/app/FragmentTransitionCompat21$3;->mEpicenter:Landroid/graphics/Rect;
 
-    iget-object v1, p0, Landroid/support/v4/app/FragmentTransitionCompat21$3;->val$outNames:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setTransitionName(Ljava/lang/String;)V
-
-    .line 348
-    add-int/lit8 v0, v2, 0x1
-
-    move v2, v0
-
-    goto :goto_0
-
-    .line 352
+    .line 290
     :cond_0
-    return-void
+    iget-object v0, p0, Landroid/support/v4/app/FragmentTransitionCompat21$3;->mEpicenter:Landroid/graphics/Rect;
+
+    return-object v0
 .end method

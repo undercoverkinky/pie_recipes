@@ -58,14 +58,14 @@
     .line 36
     iget-object v0, p0, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment$1;->a:Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;
 
-    iget-boolean v0, v0, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->m:Z
+    iget-boolean v0, v0, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->n:Z
 
     if-eqz v0, :cond_0
 
     .line 37
     iget-object v0, p0, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment$1;->a:Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->c()Z
+    invoke-virtual {v0}, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->d()Z
 
     .line 43
     :goto_0
@@ -86,7 +86,7 @@
     .line 41
     iget-object v0, p0, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment$1;->a:Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->s()V
+    invoke-virtual {v0}, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->O()V
 
     goto :goto_0
 .end method

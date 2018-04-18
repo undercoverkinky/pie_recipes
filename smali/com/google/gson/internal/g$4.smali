@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 101
+    .line 97
     invoke-direct {p0}, Lcom/google/gson/internal/g;-><init>()V
 
     return-void
@@ -40,7 +40,7 @@
     .end annotation
 
     .prologue
-    .line 104
+    .line 100
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     new-instance v1, Ljava/lang/StringBuilder;

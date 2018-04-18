@@ -31,25 +31,25 @@
     .locals 2
 
     .prologue
-    .line 113
+    .line 105
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 106
+    .line 98
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/v4/app/RemoteInput$Builder;->mAllowFreeFormInput:Z
 
-    .line 107
+    .line 99
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/support/v4/app/RemoteInput$Builder;->mExtras:Landroid/os/Bundle;
 
-    .line 114
+    .line 106
     if-nez p1, :cond_0
 
-    .line 115
+    .line 107
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Result key can\'t be null"
@@ -58,11 +58,11 @@
 
     throw v0
 
-    .line 117
+    .line 109
     :cond_0
     iput-object p1, p0, Landroid/support/v4/app/RemoteInput$Builder;->mResultKey:Ljava/lang/String;
 
-    .line 118
+    .line 110
     return-void
 .end method
 
@@ -72,24 +72,24 @@
     .locals 1
 
     .prologue
-    .line 164
+    .line 156
     if-eqz p1, :cond_0
 
-    .line 165
+    .line 157
     iget-object v0, p0, Landroid/support/v4/app/RemoteInput$Builder;->mExtras:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
 
-    .line 167
+    .line 159
     :cond_0
     return-object p0
 .end method
 
 .method public final build()Landroid/support/v4/app/RemoteInput;
-    .locals 6
+    .locals 7
 
     .prologue
-    .line 184
+    .line 176
     new-instance v0, Landroid/support/v4/app/RemoteInput;
 
     iget-object v1, p0, Landroid/support/v4/app/RemoteInput$Builder;->mResultKey:Ljava/lang/String;
@@ -102,7 +102,9 @@
 
     iget-object v5, p0, Landroid/support/v4/app/RemoteInput$Builder;->mExtras:Landroid/os/Bundle;
 
-    invoke-direct/range {v0 .. v5}, Landroid/support/v4/app/RemoteInput;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;[Ljava/lang/CharSequence;ZLandroid/os/Bundle;)V
+    const/4 v6, 0x0
+
+    invoke-direct/range {v0 .. v6}, Landroid/support/v4/app/RemoteInput;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;[Ljava/lang/CharSequence;ZLandroid/os/Bundle;Landroid/support/v4/app/RemoteInput$1;)V
 
     return-object v0
 .end method
@@ -111,7 +113,7 @@
     .locals 1
 
     .prologue
-    .line 176
+    .line 168
     iget-object v0, p0, Landroid/support/v4/app/RemoteInput$Builder;->mExtras:Landroid/os/Bundle;
 
     return-object v0
@@ -121,10 +123,10 @@
     .locals 0
 
     .prologue
-    .line 152
+    .line 144
     iput-boolean p1, p0, Landroid/support/v4/app/RemoteInput$Builder;->mAllowFreeFormInput:Z
 
-    .line 153
+    .line 145
     return-object p0
 .end method
 
@@ -132,10 +134,10 @@
     .locals 0
 
     .prologue
-    .line 138
+    .line 130
     iput-object p1, p0, Landroid/support/v4/app/RemoteInput$Builder;->mChoices:[Ljava/lang/CharSequence;
 
-    .line 139
+    .line 131
     return-object p0
 .end method
 
@@ -143,9 +145,9 @@
     .locals 0
 
     .prologue
-    .line 126
+    .line 118
     iput-object p1, p0, Landroid/support/v4/app/RemoteInput$Builder;->mLabel:Ljava/lang/CharSequence;
 
-    .line 127
+    .line 119
     return-object p0
 .end method

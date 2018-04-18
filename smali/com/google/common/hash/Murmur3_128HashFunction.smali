@@ -27,13 +27,13 @@
     .locals 0
 
     .prologue
-    .line 46
+    .line 47
     invoke-direct {p0}, Lcom/google/common/hash/c;-><init>()V
 
-    .line 47
+    .line 48
     iput p1, p0, Lcom/google/common/hash/Murmur3_128HashFunction;->seed:I
 
-    .line 48
+    .line 49
     return-void
 .end method
 
@@ -43,7 +43,7 @@
     .locals 2
 
     .prologue
-    .line 57
+    .line 56
     new-instance v0, Lcom/google/common/hash/Murmur3_128HashFunction$a;
 
     iget v1, p0, Lcom/google/common/hash/Murmur3_128HashFunction;->seed:I
@@ -63,15 +63,15 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 67
+    .line 66
     instance-of v1, p1, Lcom/google/common/hash/Murmur3_128HashFunction;
 
     if-eqz v1, :cond_0
 
-    .line 68
+    .line 67
     check-cast p1, Lcom/google/common/hash/Murmur3_128HashFunction;
 
-    .line 69
+    .line 68
     iget v1, p0, Lcom/google/common/hash/Murmur3_128HashFunction;->seed:I
 
     iget v2, p1, Lcom/google/common/hash/Murmur3_128HashFunction;->seed:I
@@ -80,7 +80,7 @@
 
     const/4 v0, 0x1
 
-    .line 71
+    .line 70
     :cond_0
     return v0
 .end method
@@ -89,7 +89,7 @@
     .locals 2
 
     .prologue
-    .line 76
+    .line 75
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -106,19 +106,25 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     .prologue
-    .line 62
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 61
+    iget v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction;->seed:I
 
-    const-string v1, "Hashing.murmur3_128("
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/16 v2, 0x20
 
-    iget v1, p0, Lcom/google/common/hash/Murmur3_128HashFunction;->seed:I
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v2, "Hashing.murmur3_128("
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

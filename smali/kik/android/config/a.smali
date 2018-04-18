@@ -19,7 +19,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ZLjava/lang/Runnable;Lkik/android/util/ai;)V
+.method public constructor <init>(Ljava/lang/String;ZLjava/lang/Runnable;Lkik/android/util/ah;)V
     .locals 7
 
     .prologue
@@ -56,7 +56,7 @@
 
     move-object v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lkik/android/config/Configuration;-><init>(Ljava/lang/String;Ljava/lang/Object;[Ljava/lang/Object;Ljava/lang/Runnable;Lkik/android/util/ai;)V
+    invoke-direct/range {v0 .. v5}, Lkik/android/config/Configuration;-><init>(Ljava/lang/String;Ljava/lang/Object;[Ljava/lang/Object;Ljava/lang/Runnable;Lkik/android/util/ah;)V
 
     .line 15
     iput-boolean v6, p0, Lkik/android/config/a;->a:Z
@@ -77,7 +77,7 @@
     return-object v0
 .end method
 
-.method public final a(Lkik/android/util/ai;)V
+.method public final a(Lkik/android/util/ah;)V
     .locals 3
 
     .prologue
@@ -100,7 +100,7 @@
     :cond_0
     const-string v0, "KikConfigurations"
 
-    invoke-interface {p1, v0}, Lkik/android/util/ai;->a(Ljava/lang/String;)Landroid/content/SharedPreferences;
+    invoke-interface {p1, v0}, Lkik/android/util/ah;->a(Ljava/lang/String;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -131,7 +131,7 @@
     goto :goto_0
 .end method
 
-.method protected final synthetic b(Lkik/android/util/ai;)Ljava/lang/Object;
+.method protected final synthetic b(Lkik/android/util/ah;)Ljava/lang/Object;
     .locals 3
 
     .prologue
@@ -161,7 +161,7 @@
     :cond_0
     const-string v0, "KikConfigurations"
 
-    invoke-interface {p1, v0}, Lkik/android/util/ai;->a(Ljava/lang/String;)Landroid/content/SharedPreferences;
+    invoke-interface {p1, v0}, Lkik/android/util/ah;->a(Ljava/lang/String;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 

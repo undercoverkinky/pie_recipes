@@ -57,13 +57,7 @@
 .method public abstract getDisplayDataOrBuilder()Lcom/kik/groups/GroupsCommon$GroupDisplayDataOrBuilder;
 .end method
 
-.method public abstract getGroupOrMemberDeletedCase()Lcom/kik/groups/GroupsCommon$GroupRosterEntry$GroupOrMemberDeletedCase;
-.end method
-
-.method public abstract getIsGroupDeleted()Z
-.end method
-
-.method public abstract getIsMemberDeleted()Z
+.method public abstract getIsDeleted()Z
 .end method
 
 .method public abstract getIsPublic()Z

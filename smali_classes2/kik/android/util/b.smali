@@ -137,11 +137,9 @@
 
     .prologue
     .line 40
-    invoke-interface {p0}, Lkik/core/interfaces/ad;->n()J
+    const-string v0, "kik.registrationtime"
 
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Lkik/android/util/b;->a(J)J
+    invoke-static {p0, v0}, Lkik/android/util/b;->a(Lkik/core/interfaces/ad;Ljava/lang/String;)J
 
     move-result-wide v0
 
@@ -175,42 +173,51 @@
     goto :goto_0
 .end method
 
-.method public static a(J)J
+.method public static a(Lkik/core/interfaces/ad;Ljava/lang/String;)J
     .locals 6
 
     .prologue
     const-wide/16 v0, 0x0
 
     .line 55
-    cmp-long v2, p0, v0
+    invoke-interface {p0, p1}, Lkik/core/interfaces/ad;->t(Ljava/lang/String;)Ljava/lang/Long;
 
-    if-nez v2, :cond_1
+    move-result-object v2
 
-    .line 57
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    .line 56
+    cmp-long v4, v2, v0
+
+    if-nez v4, :cond_1
+
+    .line 58
     const-wide/16 v0, -0x1
 
-    .line 65
+    .line 66
     :cond_0
     :goto_0
     return-wide v0
 
-    .line 59
+    .line 60
     :cond_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v2
-
-    .line 61
-    sub-long/2addr v2, p0
+    move-result-wide v4
 
     .line 62
+    sub-long v2, v4, v2
+
+    .line 63
     cmp-long v4, v2, v0
 
     if-ltz v4, :cond_0
 
     move-wide v0, v2
 
-    .line 65
+    .line 66
     goto :goto_0
 .end method
 
@@ -220,7 +227,7 @@
     .prologue
     const-wide/32 v0, 0x5265c00
 
-    .line 70
+    .line 71
     const-string v2, "kik.abm_reminder_time_unit"
 
     sget-object v3, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
@@ -233,7 +240,7 @@
 
     move-result-object v2
 
-    .line 71
+    .line 72
     sget-object v3, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
 
     invoke-virtual {v3}, Ljava/util/concurrent/TimeUnit;->toString()Ljava/lang/String;
@@ -246,12 +253,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 81
+    .line 82
     :cond_0
     :goto_0
     return-wide v0
 
-    .line 74
+    .line 75
     :cond_1
     sget-object v3, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
 
@@ -265,12 +272,12 @@
 
     if-eqz v3, :cond_2
 
-    .line 75
+    .line 76
     const-wide/32 v0, 0xea60
 
     goto :goto_0
 
-    .line 77
+    .line 78
     :cond_2
     sget-object v3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -284,7 +291,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 78
+    .line 79
     const-wide/16 v0, 0x3e8
 
     goto :goto_0

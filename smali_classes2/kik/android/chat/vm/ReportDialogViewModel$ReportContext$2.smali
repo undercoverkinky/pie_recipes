@@ -19,7 +19,7 @@
     .locals 1
 
     .prologue
-    .line 94
+    .line 93
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lkik/android/chat/vm/ReportDialogViewModel$ReportContext;-><init>(Ljava/lang/String;ILkik/android/chat/vm/ReportDialogViewModel$1;)V
@@ -33,7 +33,7 @@
     .locals 1
 
     .prologue
-    .line 102
+    .line 101
     const-string v0, "user"
 
     return-object v0
@@ -43,7 +43,7 @@
     .locals 1
 
     .prologue
-    .line 97
+    .line 96
     const-string v0, "User"
 
     return-object v0

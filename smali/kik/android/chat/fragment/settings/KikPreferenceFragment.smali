@@ -12,45 +12,45 @@
 
 
 # instance fields
-.field protected a:Lkik/core/interfaces/ag;
-    .annotation runtime Ljavax/inject/Inject;
-    .end annotation
-.end field
+.field private final a:Ljava/lang/String;
 
-.field protected b:Lkik/core/interfaces/b;
-    .annotation runtime Ljavax/inject/Inject;
-    .end annotation
-.end field
+.field private final b:Ljava/lang/String;
 
-.field protected c:Lcom/kik/android/Mixpanel;
-    .annotation runtime Ljavax/inject/Inject;
-    .end annotation
-.end field
+.field private c:Lcom/kik/events/d;
 
-.field protected d:Lkik/android/chat/b/a;
-    .annotation runtime Ljavax/inject/Inject;
-    .end annotation
-.end field
-
-.field protected e:Lkik/core/interfaces/IAddressBookIntegration;
-    .annotation runtime Ljavax/inject/Inject;
-    .end annotation
-.end field
-
-.field private final l:Ljava/lang/String;
-
-.field private final m:Ljava/lang/String;
-
-.field private n:Lcom/kik/events/d;
-
-.field private o:Lcom/kik/events/e;
+.field private d:Lcom/kik/events/e;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/kik/events/e",
             "<",
-            "Ljava/lang/String;",
+            "Ljava/lang/Void;",
             ">;"
         }
+    .end annotation
+.end field
+
+.field protected f:Lkik/core/interfaces/af;
+    .annotation runtime Ljavax/inject/Inject;
+    .end annotation
+.end field
+
+.field protected g:Lkik/core/interfaces/b;
+    .annotation runtime Ljavax/inject/Inject;
+    .end annotation
+.end field
+
+.field protected h:Lcom/kik/android/Mixpanel;
+    .annotation runtime Ljavax/inject/Inject;
+    .end annotation
+.end field
+
+.field protected i:Lkik/android/chat/a/a;
+    .annotation runtime Ljavax/inject/Inject;
+    .end annotation
+.end field
+
+.field protected j:Lkik/core/interfaces/IAddressBookIntegration;
+    .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
@@ -60,48 +60,38 @@
     .locals 1
 
     .prologue
-    .line 31
+    .line 30
     invoke-direct {p0}, Lkik/android/chat/fragment/settings/PreferenceFragment;-><init>()V
 
-    .line 34
+    .line 33
     const-string v0, "kik.new.people.notify"
 
-    iput-object v0, p0, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->l:Ljava/lang/String;
+    iput-object v0, p0, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->a:Ljava/lang/String;
 
-    .line 35
+    .line 34
     const-string v0, "kik.open.block.list"
 
-    iput-object v0, p0, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->m:Ljava/lang/String;
+    iput-object v0, p0, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->b:Ljava/lang/String;
 
-    .line 43
-    invoke-static {p0}, Lkik/android/chat/fragment/settings/r;->a(Lkik/android/chat/fragment/settings/KikPreferenceFragment;)Lcom/kik/events/e;
+    .line 42
+    new-instance v0, Lkik/android/chat/fragment/settings/KikPreferenceFragment$1;
 
-    move-result-object v0
+    invoke-direct {v0, p0}, Lkik/android/chat/fragment/settings/KikPreferenceFragment$1;-><init>(Lkik/android/chat/fragment/settings/KikPreferenceFragment;)V
 
-    iput-object v0, p0, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->o:Lcom/kik/events/e;
+    iput-object v0, p0, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->d:Lcom/kik/events/e;
 
-    return-void
-.end method
-
-.method static synthetic a()V
-    .locals 0
-
-    .prologue
-    .line 43
     return-void
 .end method
 
 .method static synthetic a(Lkik/android/chat/fragment/settings/KikPreferenceFragment;)V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 43
-    invoke-static {p0}, Lkik/android/chat/fragment/settings/s;->a(Lkik/android/chat/fragment/settings/KikPreferenceFragment;)Ljava/lang/Runnable;
+    .line 30
+    .line 2103
+    invoke-virtual {p0}, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->b()V
 
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->runOnUiIfAttached(Ljava/lang/Runnable;)V
-
+    .line 30
     return-void
 .end method
 
@@ -113,10 +103,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 117
+    .line 122
     invoke-super {p0, p1}, Lkik/android/chat/fragment/settings/PreferenceFragment;->a(Landroid/preference/PreferenceScreen;)V
 
-    .line 118
+    .line 123
     if-nez p1, :cond_1
 
     .line 151
@@ -124,7 +114,7 @@
     :goto_0
     return-void
 
-    .line 122
+    .line 127
     :cond_1
     const-string v0, "kik.tell.sms"
 
@@ -132,7 +122,7 @@
 
     move-result-object v2
 
-    .line 123
+    .line 128
     const-string v0, "kik.tell.email"
 
     invoke-virtual {p1, v0}, Landroid/preference/PreferenceScreen;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
@@ -141,22 +131,22 @@
 
     check-cast v0, Lkik/android/widget/preferences/ShareEmailPreference;
 
-    .line 124
+    .line 129
     if-eqz v0, :cond_3
 
-    .line 1039
+    .line 2039
     new-instance v3, Landroid/content/Intent;
 
     const-string v4, "android.intent.action.SEND"
 
     invoke-direct {v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1041
+    .line 2041
     const-string v4, "plain/text"
 
     invoke-virtual {v3, v4}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1043
+    .line 2043
     invoke-virtual {v0}, Lkik/android/widget/preferences/ShareEmailPreference;->getContext()Landroid/content/Context;
 
     move-result-object v4
@@ -169,7 +159,7 @@
 
     move-result-object v3
 
-    .line 1045
+    .line 2045
     invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
 
     move-result v3
@@ -178,14 +168,14 @@
 
     const/4 v1, 0x1
 
-    .line 124
+    .line 129
     :cond_2
     if-nez v1, :cond_3
 
-    .line 125
+    .line 130
     invoke-virtual {p1, v0}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
-    .line 128
+    .line 133
     :cond_3
     const-string v0, "kik.enterbutton.sends"
 
@@ -195,47 +185,29 @@
 
     check-cast v0, Lkik/android/widget/preferences/EnterKeySendPreference;
 
-    .line 129
+    .line 134
     if-eqz v0, :cond_4
 
-    .line 130
-    iget-object v1, p0, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->d:Lkik/android/chat/b/a;
-
-    invoke-virtual {v0, v1}, Lkik/android/widget/preferences/EnterKeySendPreference;->a(Lkik/android/chat/b/a;)V
-
-    .line 133
-    :cond_4
-    const-string v0, "kik.android.chat.video.automatic_fullscreen"
-
-    invoke-virtual {p1, v0}, Landroid/preference/PreferenceScreen;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
-
-    move-result-object v0
-
-    check-cast v0, Lkik/android/widget/preferences/AutomaticFullscreenPreference;
-
-    .line 134
-    if-eqz v0, :cond_5
-
     .line 135
-    iget-object v1, p0, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->d:Lkik/android/chat/b/a;
+    iget-object v1, p0, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->i:Lkik/android/chat/a/a;
 
-    invoke-virtual {v0, v1}, Lkik/android/widget/preferences/AutomaticFullscreenPreference;->a(Lkik/android/chat/b/a;)V
+    invoke-virtual {v0, v1}, Lkik/android/widget/preferences/EnterKeySendPreference;->a(Lkik/android/chat/a/a;)V
 
     .line 138
-    :cond_5
+    :cond_4
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
 
-    if-lt v0, v1, :cond_6
+    if-lt v0, v1, :cond_5
 
-    if-eqz v2, :cond_6
+    if-eqz v2, :cond_5
 
     .line 140
     invoke-virtual {p1, v2}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     .line 144
-    :cond_6
+    :cond_5
     invoke-static {}, Lkik/android/util/DeviceUtils;->f()Z
 
     move-result v0
@@ -258,28 +230,42 @@
     goto :goto_0
 .end method
 
+.method protected b()V
+    .locals 0
+
+    .prologue
+    .line 161
+    return-void
+.end method
+
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 1
 
     .prologue
-    .line 48
-    invoke-virtual {p0}, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->getCoreComponent()Lcom/kik/components/CoreComponent;
+    .line 53
+    .line 1088
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikFragmentBase;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
 
+    invoke-static {v0}, Lkik/android/util/s;->a(Landroid/app/Activity;)Lcom/kik/components/CoreComponent;
+
+    move-result-object v0
+
+    .line 53
     invoke-interface {v0, p0}, Lcom/kik/components/CoreComponent;->a(Lkik/android/chat/fragment/settings/KikPreferenceFragment;)V
 
-    .line 49
+    .line 54
     invoke-super {p0, p1}, Lkik/android/chat/fragment/settings/PreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 51
+    .line 56
     new-instance v0, Lcom/kik/events/d;
 
     invoke-direct {v0}, Lcom/kik/events/d;-><init>()V
 
-    iput-object v0, p0, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->n:Lcom/kik/events/d;
+    iput-object v0, p0, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->c:Lcom/kik/events/d;
 
-    .line 52
+    .line 57
     return-void
 .end method
 
@@ -289,25 +275,25 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 57
-    iget-object v0, p0, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->n:Lcom/kik/events/d;
+    .line 62
+    iget-object v0, p0, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->c:Lcom/kik/events/d;
 
-    iget-object v1, p0, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->a:Lkik/core/interfaces/ag;
+    iget-object v1, p0, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->f:Lkik/core/interfaces/af;
 
-    invoke-interface {v1}, Lkik/core/interfaces/ag;->a()Lcom/kik/events/c;
+    invoke-interface {v1}, Lkik/core/interfaces/af;->a()Lcom/kik/events/c;
 
     move-result-object v1
 
-    iget-object v2, p0, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->o:Lcom/kik/events/e;
+    iget-object v2, p0, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->d:Lcom/kik/events/e;
 
     invoke-virtual {v0, v1, v2}, Lcom/kik/events/d;->a(Lcom/kik/events/c;Lcom/kik/events/e;)Lcom/kik/events/e;
 
-    .line 59
+    .line 64
     invoke-super {p0, p1, p2, p3}, Lkik/android/chat/fragment/settings/PreferenceFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v2
 
-    .line 60
+    .line 65
     const v0, 0x102000a
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -316,23 +302,23 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    .line 63
+    .line 68
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setDivider(Landroid/graphics/drawable/Drawable;)V
 
-    .line 64
+    .line 69
     invoke-virtual {v0, v3}, Landroid/widget/ListView;->setFooterDividersEnabled(Z)V
 
-    .line 65
+    .line 70
     invoke-virtual {v0, v3}, Landroid/widget/ListView;->setHeaderDividersEnabled(Z)V
 
-    .line 67
-    invoke-virtual {p0}, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->b()Landroid/preference/PreferenceScreen;
+    .line 72
+    invoke-virtual {p0}, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->d()Landroid/preference/PreferenceScreen;
 
     move-result-object v3
 
-    .line 69
+    .line 74
     if-eqz v3, :cond_0
 
     invoke-virtual {v3}, Landroid/preference/PreferenceScreen;->getKey()Ljava/lang/String;
@@ -341,13 +327,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 70
+    .line 75
     invoke-virtual {v3}, Landroid/preference/PreferenceScreen;->getKey()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 71
-    const v1, 0x7f0903db
+    .line 76
+    const v1, 0x7f0a03c7
 
     invoke-virtual {p0, v1}, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->getString(I)Ljava/lang/String;
 
@@ -359,27 +345,27 @@
 
     if-eqz v1, :cond_1
 
-    .line 72
+    .line 77
     const-string v0, "kik.open.block.list"
 
     invoke-virtual {p0, v0}, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->a(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    .line 73
+    .line 78
     if-eqz v0, :cond_0
 
-    .line 74
+    .line 79
     invoke-virtual {v3, v0}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
-    .line 93
+    .line 98
     :cond_0
     :goto_0
     return-object v2
 
-    .line 77
+    .line 82
     :cond_1
-    const v1, 0x7f09043d
+    const v1, 0x7f0a0429
 
     invoke-virtual {p0, v1}, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->getString(I)Ljava/lang/String;
 
@@ -391,8 +377,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 78
-    const v0, 0x7f090167
+    .line 83
+    const v0, 0x7f0a0166
 
     invoke-virtual {p0, v0}, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->getString(I)Ljava/lang/String;
 
@@ -404,8 +390,8 @@
 
     check-cast v0, Lkik/android/widget/preferences/UsePhoneContactsPreference;
 
-    .line 79
-    const v1, 0x7f09020d
+    .line 84
+    const v1, 0x7f0a01f9
 
     invoke-virtual {p0, v1}, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->getString(I)Ljava/lang/String;
 
@@ -417,14 +403,14 @@
 
     check-cast v1, Lkik/android/widget/preferences/LetFriendsFindMePreference;
 
-    .line 81
+    .line 86
     invoke-virtual {v0, v3}, Lkik/android/widget/preferences/UsePhoneContactsPreference;->a(Landroid/preference/PreferenceScreen;)V
 
-    .line 82
+    .line 87
     invoke-virtual {v0, v1}, Lkik/android/widget/preferences/UsePhoneContactsPreference;->a(Landroid/preference/Preference;)V
 
-    .line 84
-    iget-object v0, p0, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->e:Lkik/core/interfaces/IAddressBookIntegration;
+    .line 89
+    iget-object v0, p0, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->j:Lkik/core/interfaces/IAddressBookIntegration;
 
     invoke-interface {v0}, Lkik/core/interfaces/IAddressBookIntegration;->b()Z
 
@@ -432,12 +418,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 85
+    .line 90
     invoke-virtual {v3, v1}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
-    .line 88
+    .line 93
     :cond_2
-    iget-object v0, p0, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->c:Lcom/kik/android/Mixpanel;
+    iget-object v0, p0, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->h:Lcom/kik/android/Mixpanel;
 
     const-string v1, "Privacy Settings Opened"
 
@@ -445,7 +431,7 @@
 
     move-result-object v0
 
-    .line 89
+    .line 94
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
@@ -459,15 +445,15 @@
     .locals 1
 
     .prologue
-    .line 104
+    .line 109
     invoke-super {p0}, Lkik/android/chat/fragment/settings/PreferenceFragment;->onDestroyView()V
 
-    .line 105
-    iget-object v0, p0, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->n:Lcom/kik/events/d;
+    .line 110
+    iget-object v0, p0, Lkik/android/chat/fragment/settings/KikPreferenceFragment;->c:Lcom/kik/events/d;
 
     invoke-virtual {v0}, Lcom/kik/events/d;->a()V
 
-    .line 106
+    .line 111
     return-void
 .end method
 
@@ -497,9 +483,9 @@
     .locals 0
 
     .prologue
-    .line 111
+    .line 116
     invoke-super {p0, p1}, Lkik/android/chat/fragment/settings/PreferenceFragment;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 112
+    .line 117
     return-void
 .end method

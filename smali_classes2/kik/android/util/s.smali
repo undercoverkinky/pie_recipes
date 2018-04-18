@@ -3,89 +3,41 @@
 .source "SourceFile"
 
 
-# instance fields
-.field private final a:Lcom/kik/events/d;
-
-.field private b:Lkik/android/chat/KikApplication;
-
-.field private c:Z
-
-
 # direct methods
-.method public constructor <init>(Lkik/android/chat/KikApplication;Lkik/core/interfaces/ICommunication;)V
-    .locals 3
+.method public static a(Landroid/app/Activity;)Lcom/kik/components/CoreComponent;
+    .locals 2
 
     .prologue
-    .line 23
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 17
+    if-eqz p0, :cond_0
 
     .line 18
-    new-instance v0, Lcom/kik/events/d;
+    invoke-virtual {p0}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
 
-    invoke-direct {v0}, Lcom/kik/events/d;-><init>()V
+    move-result-object v0
 
-    iput-object v0, p0, Lkik/android/util/s;->a:Lcom/kik/events/d;
+    check-cast v0, Lkik/android/chat/c;
 
-    .line 24
-    iput-object p1, p0, Lkik/android/util/s;->b:Lkik/android/chat/KikApplication;
+    invoke-interface {v0}, Lkik/android/chat/c;->a()Lcom/kik/components/CoreComponent;
 
-    .line 26
-    iget-object v0, p0, Lkik/android/util/s;->a:Lcom/kik/events/d;
+    move-result-object v0
 
-    invoke-interface {p2}, Lkik/core/interfaces/ICommunication;->f()Lcom/kik/events/c;
-
-    move-result-object v1
-
-    new-instance v2, Lkik/android/util/s$1;
-
-    invoke-direct {v2, p0}, Lkik/android/util/s$1;-><init>(Lkik/android/util/s;)V
-
-    invoke-virtual {v0, v1, v2}, Lcom/kik/events/d;->a(Lcom/kik/events/c;Lcom/kik/events/e;)Lcom/kik/events/e;
-
-    .line 65
-    return-void
-.end method
-
-.method static synthetic a(Lkik/android/util/s;)Z
-    .locals 1
-
-    .prologue
-    .line 16
-    iget-boolean v0, p0, Lkik/android/util/s;->c:Z
-
-    return v0
-.end method
-
-.method static synthetic b(Lkik/android/util/s;)Lkik/android/chat/KikApplication;
-    .locals 1
-
-    .prologue
-    .line 16
-    iget-object v0, p0, Lkik/android/util/s;->b:Lkik/android/chat/KikApplication;
-
+    .line 23
+    :goto_0
     return-object v0
-.end method
 
-.method static synthetic c(Lkik/android/util/s;)Z
-    .locals 1
+    .line 21
+    :cond_0
+    new-instance v0, Ljava/lang/NullPointerException;
 
-    .prologue
-    .line 16
-    const/4 v0, 0x1
+    const-string v1, "Activity was null when fetching core component"
 
-    iput-boolean v0, p0, Lkik/android/util/s;->c:Z
+    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    return v0
-.end method
+    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
 
+    .line 23
+    const/4 v0, 0x0
 
-# virtual methods
-.method public final a()Z
-    .locals 1
-
-    .prologue
-    .line 69
-    iget-boolean v0, p0, Lkik/android/util/s;->c:Z
-
-    return v0
+    goto :goto_0
 .end method

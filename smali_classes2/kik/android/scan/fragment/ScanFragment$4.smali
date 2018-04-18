@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/scan/fragment/ScanFragment;->a(Lkik/core/datatypes/l;Lkik/android/scan/a/c;)V
+    value = Lkik/android/scan/fragment/ScanFragment;->a(Lkik/core/datatypes/o;Lkik/android/scan/a/c;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 502
+    .line 489
     iput-object p1, p0, Lkik/android/scan/fragment/ScanFragment$4;->a:Lkik/android/scan/fragment/ScanFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 507
+    .line 494
     const/4 v0, 0x2
 
     new-array v0, v0, [Landroid/view/View;
@@ -63,15 +63,15 @@
 
     invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
 
-    .line 509
+    .line 496
     new-instance v0, Lkik/android/scan/widget/a;
 
     invoke-direct {v0, v3}, Lkik/android/scan/widget/a;-><init>(I)V
 
-    .line 510
+    .line 497
     iget-object v1, p0, Lkik/android/scan/fragment/ScanFragment$4;->a:Lkik/android/scan/fragment/ScanFragment;
 
-    invoke-static {v1}, Lkik/android/scan/fragment/ScanFragment;->k(Lkik/android/scan/fragment/ScanFragment;)I
+    invoke-static {v1}, Lkik/android/scan/fragment/ScanFragment;->i(Lkik/android/scan/fragment/ScanFragment;)I
 
     move-result v1
 
@@ -85,13 +85,13 @@
 
     invoke-virtual {v0, v1, v2}, Lkik/android/scan/widget/a;->a(ILandroid/graphics/Point;)V
 
-    .line 511
+    .line 498
     iget-object v1, p0, Lkik/android/scan/fragment/ScanFragment$4;->a:Lkik/android/scan/fragment/ScanFragment;
 
     iget-object v1, v1, Lkik/android/scan/fragment/ScanFragment;->_animationContainer:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 512
+    .line 499
     return-void
 .end method

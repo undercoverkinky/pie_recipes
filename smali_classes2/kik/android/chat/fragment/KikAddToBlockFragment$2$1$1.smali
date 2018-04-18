@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 95
+    .line 85
     iput-object p1, p0, Lkik/android/chat/fragment/KikAddToBlockFragment$2$1$1;->a:Lkik/android/chat/fragment/KikAddToBlockFragment$2$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,15 +40,15 @@
     .locals 1
 
     .prologue
-    .line 100
+    .line 90
     iget-object v0, p0, Lkik/android/chat/fragment/KikAddToBlockFragment$2$1$1;->a:Lkik/android/chat/fragment/KikAddToBlockFragment$2$1;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikAddToBlockFragment$2$1;->a:Lkik/android/chat/fragment/KikAddToBlockFragment$2;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikAddToBlockFragment$2;->b:Lkik/android/chat/fragment/KikAddToBlockFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/KikAddToBlockFragment;->u()V
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikAddToBlockFragment;->P()V
 
-    .line 101
+    .line 91
     return-void
 .end method

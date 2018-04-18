@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/scan/c;-><init>(Lkik/core/e/f;Lkik/core/net/e;Lcom/kik/events/Promise;Lkik/core/interfaces/ICommunication;Lcom/kik/events/c;Lkik/core/interfaces/v;)V
+    value = Lkik/android/scan/c;-><init>(Lkik/core/g/e;Lkik/core/net/e;Lcom/kik/events/Promise;Lkik/core/interfaces/ICommunication;Lcom/kik/events/c;Lkik/core/interfaces/x;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 89
+    .line 87
     iput-object p1, p0, Lkik/android/scan/c$2;->a:Lkik/android/scan/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,19 +50,19 @@
     .locals 1
 
     .prologue
-    .line 89
+    .line 87
     check-cast p2, Lkik/core/datatypes/Message;
 
-    .line 1093
+    .line 1091
     iget-object v0, p0, Lkik/android/scan/c$2;->a:Lkik/android/scan/c;
 
     invoke-static {v0, p2}, Lkik/android/scan/c;->a(Lkik/android/scan/c;Lkik/core/datatypes/Message;)V
 
-    .line 1094
+    .line 1092
     iget-object v0, p0, Lkik/android/scan/c$2;->a:Lkik/android/scan/c;
 
     invoke-virtual {v0}, Lkik/android/scan/c;->a()V
 
-    .line 89
+    .line 87
     return-void
 .end method

@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 2294
+    .line 2242
     iput-object p1, p0, Lcom/kik/cards/web/CardsWebViewFragment$37$2;->a:Lcom/kik/cards/web/CardsWebViewFragment$37;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,27 +40,27 @@
     .locals 3
 
     .prologue
-    .line 2299
+    .line 2247
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$37$2;->a:Lcom/kik/cards/web/CardsWebViewFragment$37;
 
     iget-object v0, v0, Lcom/kik/cards/web/CardsWebViewFragment$37;->d:Lkik/android/chat/fragment/ProgressDialogFragment;
 
     if-eqz v0, :cond_0
 
-    .line 2300
+    .line 2248
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$37$2;->a:Lcom/kik/cards/web/CardsWebViewFragment$37;
 
     iget-object v0, v0, Lcom/kik/cards/web/CardsWebViewFragment$37;->d:Lkik/android/chat/fragment/ProgressDialogFragment;
 
     invoke-virtual {v0}, Lkik/android/chat/fragment/ProgressDialogFragment;->dismissAllowingStateLoss()V
 
-    .line 2302
+    .line 2250
     :cond_0
     new-instance v0, Lkik/android/chat/fragment/KikDialogFragment;
 
     invoke-direct {v0}, Lkik/android/chat/fragment/KikDialogFragment;-><init>()V
 
-    .line 2303
+    .line 2251
     iget-object v1, p0, Lcom/kik/cards/web/CardsWebViewFragment$37$2;->a:Lcom/kik/cards/web/CardsWebViewFragment$37;
 
     iget-object v1, v1, Lcom/kik/cards/web/CardsWebViewFragment$37;->b:Lcom/kik/cards/web/usermedia/b;
@@ -71,7 +71,7 @@
 
     invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikDialogFragment;->a(Ljava/lang/String;)V
 
-    .line 2304
+    .line 2252
     iget-object v1, p0, Lcom/kik/cards/web/CardsWebViewFragment$37$2;->a:Lcom/kik/cards/web/CardsWebViewFragment$37;
 
     iget-object v1, v1, Lcom/kik/cards/web/CardsWebViewFragment$37;->b:Lcom/kik/cards/web/usermedia/b;
@@ -82,12 +82,12 @@
 
     invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikDialogFragment;->b(Ljava/lang/String;)V
 
-    .line 2305
+    .line 2253
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikDialogFragment;->setCancelable(Z)V
 
-    .line 2306
+    .line 2254
     iget-object v1, p0, Lcom/kik/cards/web/CardsWebViewFragment$37$2;->a:Lcom/kik/cards/web/CardsWebViewFragment$37;
 
     iget-object v1, v1, Lcom/kik/cards/web/CardsWebViewFragment$37;->c:Ljava/lang/String;
@@ -96,13 +96,13 @@
 
     invoke-virtual {v0, v1, v2}, Lkik/android/chat/fragment/KikDialogFragment;->a(Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 2307
+    .line 2255
     iget-object v1, p0, Lcom/kik/cards/web/CardsWebViewFragment$37$2;->a:Lcom/kik/cards/web/CardsWebViewFragment$37;
 
     iget-object v1, v1, Lcom/kik/cards/web/CardsWebViewFragment$37;->e:Lcom/kik/cards/web/CardsWebViewFragment;
 
-    invoke-virtual {v1, v0}, Lcom/kik/cards/web/CardsWebViewFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v1, v0}, Lcom/kik/cards/web/CardsWebViewFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 2308
+    .line 2256
     return-void
 .end method

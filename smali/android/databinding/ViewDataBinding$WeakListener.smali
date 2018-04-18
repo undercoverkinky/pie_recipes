@@ -49,7 +49,7 @@
 
 # direct methods
 .method public constructor <init>(Landroid/databinding/ViewDataBinding;ILandroid/databinding/ViewDataBinding$ObservableReference;)V
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -61,20 +61,16 @@
     .end annotation
 
     .prologue
-    .line 1251
-    invoke-static {}, Landroid/databinding/ViewDataBinding;->access$600()Ljava/lang/ref/ReferenceQueue;
+    .line 1155
+    invoke-direct {p0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    move-result-object v0
-
-    invoke-direct {p0, p1, v0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V
-
-    .line 1252
+    .line 1156
     iput p2, p0, Landroid/databinding/ViewDataBinding$WeakListener;->mLocalFieldId:I
 
-    .line 1253
+    .line 1157
     iput-object p3, p0, Landroid/databinding/ViewDataBinding$WeakListener;->mObservable:Landroid/databinding/ViewDataBinding$ObservableReference;
 
-    .line 1254
+    .line 1158
     return-void
 .end method
 
@@ -84,20 +80,20 @@
     .locals 1
 
     .prologue
-    .line 1279
+    .line 1183
     invoke-virtual {p0}, Landroid/databinding/ViewDataBinding$WeakListener;->get()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/databinding/ViewDataBinding;
 
-    .line 1280
+    .line 1184
     if-nez v0, :cond_0
 
-    .line 1281
+    .line 1185
     invoke-virtual {p0}, Landroid/databinding/ViewDataBinding$WeakListener;->unregister()Z
 
-    .line 1283
+    .line 1187
     :cond_0
     return-object v0
 .end method
@@ -111,7 +107,7 @@
     .end annotation
 
     .prologue
-    .line 1275
+    .line 1179
     iget-object v0, p0, Landroid/databinding/ViewDataBinding$WeakListener;->mTarget:Ljava/lang/Object;
 
     return-object v0
@@ -126,25 +122,25 @@
     .end annotation
 
     .prologue
-    .line 1257
+    .line 1161
     invoke-virtual {p0}, Landroid/databinding/ViewDataBinding$WeakListener;->unregister()Z
 
-    .line 1258
+    .line 1162
     iput-object p1, p0, Landroid/databinding/ViewDataBinding$WeakListener;->mTarget:Ljava/lang/Object;
 
-    .line 1259
+    .line 1163
     iget-object v0, p0, Landroid/databinding/ViewDataBinding$WeakListener;->mTarget:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
-    .line 1260
+    .line 1164
     iget-object v0, p0, Landroid/databinding/ViewDataBinding$WeakListener;->mObservable:Landroid/databinding/ViewDataBinding$ObservableReference;
 
     iget-object v1, p0, Landroid/databinding/ViewDataBinding$WeakListener;->mTarget:Ljava/lang/Object;
 
     invoke-interface {v0, v1}, Landroid/databinding/ViewDataBinding$ObservableReference;->addListener(Ljava/lang/Object;)V
 
-    .line 1262
+    .line 1166
     :cond_0
     return-void
 .end method
@@ -153,30 +149,30 @@
     .locals 2
 
     .prologue
-    .line 1265
+    .line 1169
     const/4 v0, 0x0
 
-    .line 1266
+    .line 1170
     iget-object v1, p0, Landroid/databinding/ViewDataBinding$WeakListener;->mTarget:Ljava/lang/Object;
 
     if-eqz v1, :cond_0
 
-    .line 1267
+    .line 1171
     iget-object v0, p0, Landroid/databinding/ViewDataBinding$WeakListener;->mObservable:Landroid/databinding/ViewDataBinding$ObservableReference;
 
     iget-object v1, p0, Landroid/databinding/ViewDataBinding$WeakListener;->mTarget:Ljava/lang/Object;
 
     invoke-interface {v0, v1}, Landroid/databinding/ViewDataBinding$ObservableReference;->removeListener(Ljava/lang/Object;)V
 
-    .line 1268
+    .line 1172
     const/4 v0, 0x1
 
-    .line 1270
+    .line 1174
     :cond_0
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/databinding/ViewDataBinding$WeakListener;->mTarget:Ljava/lang/Object;
 
-    .line 1271
+    .line 1175
     return v0
 .end method

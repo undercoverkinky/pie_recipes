@@ -31,30 +31,30 @@
     .locals 1
 
     .prologue
-    .line 579
+    .line 571
     invoke-direct {p0}, Lcom/kik/ui/fragment/FragmentBase$FragmentBundle;-><init>()V
 
-    .line 581
+    .line 573
     const-string v0, "kik.tab.code.first"
 
     iput-object v0, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$a;->a:Ljava/lang/String;
 
-    .line 582
+    .line 574
     const-string v0, "kik.tab.group.jid"
 
     iput-object v0, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$a;->b:Ljava/lang/String;
 
-    .line 583
+    .line 575
     const-string v0, "kik.tab.group.set"
 
     iput-object v0, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$a;->c:Ljava/lang/String;
 
-    .line 584
+    .line 576
     const-string v0, "kik.tab.opened.from"
 
     iput-object v0, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$a;->d:Ljava/lang/String;
 
-    .line 585
+    .line 577
     const-string v0, "kik.tab.hidden.on.fragment.install"
 
     iput-object v0, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$a;->e:Ljava/lang/String;
@@ -68,22 +68,22 @@
     .locals 2
 
     .prologue
-    .line 608
+    .line 600
     if-eqz p1, :cond_0
 
-    .line 609
+    .line 601
     const-string v0, "kik.tab.group.jid"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/ScanCodeTabFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 610
+    .line 602
     const-string v0, "kik.tab.group.set"
 
     const/4 v1, 0x1
 
     invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/ScanCodeTabFragment$a;->b(Ljava/lang/String;Z)V
 
-    .line 612
+    .line 604
     :cond_0
     return-object p0
 .end method
@@ -92,10 +92,10 @@
     .locals 2
 
     .prologue
-    .line 617
+    .line 609
     if-eqz p1, :cond_0
 
-    .line 618
+    .line 610
     const-string v0, "kik.tab.opened.from"
 
     invoke-virtual {p1}, Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;->getName()Ljava/lang/String;
@@ -104,7 +104,7 @@
 
     invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/ScanCodeTabFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 620
+    .line 612
     :cond_0
     return-object p0
 .end method
@@ -113,14 +113,14 @@
     .locals 2
 
     .prologue
-    .line 589
+    .line 581
     const-string v0, "kik.tab.code.first"
 
     const/4 v1, 0x1
 
     invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/ScanCodeTabFragment$a;->b(Ljava/lang/String;Z)V
 
-    .line 590
+    .line 582
     return-object p0
 .end method
 
@@ -128,7 +128,7 @@
     .locals 2
 
     .prologue
-    .line 595
+    .line 587
     const-string v0, "kik.tab.code.first"
 
     const/4 v1, 0x0
@@ -148,10 +148,10 @@
     .locals 1
 
     .prologue
-    .line 625
+    .line 617
     const-string v0, "kik.tab.opened.from"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/ScanCodeTabFragment$a;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/ScanCodeTabFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -162,10 +162,10 @@
     .locals 1
 
     .prologue
-    .line 630
+    .line 622
     const-string v0, "kik.tab.group.jid"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/ScanCodeTabFragment$a;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/ScanCodeTabFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -176,10 +176,10 @@
     .locals 1
 
     .prologue
-    .line 635
+    .line 627
     const-string v0, "kik.tab.group.set"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/ScanCodeTabFragment$a;->g(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/ScanCodeTabFragment$a;->k(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -194,7 +194,7 @@
     .locals 2
 
     .prologue
-    .line 640
+    .line 632
     const-string v0, "kik.tab.hidden.on.fragment.install"
 
     const/4 v1, 0x0
