@@ -3,12 +3,18 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0xb
+.end annotation
+
+
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 27
+    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,7 +24,7 @@
     .locals 1
 
     .prologue
-    .line 34
+    .line 39
     invoke-virtual {p0}, Landroid/content/Context;->getObbDir()Ljava/io/File;
 
     move-result-object v0
@@ -30,9 +36,9 @@
     .locals 0
 
     .prologue
-    .line 30
+    .line 35
     invoke-virtual {p0, p1}, Landroid/content/Context;->startActivities([Landroid/content/Intent;)V
 
-    .line 31
+    .line 36
     return-void
 .end method

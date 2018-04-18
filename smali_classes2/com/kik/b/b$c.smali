@@ -28,15 +28,15 @@
     .locals 0
 
     .prologue
-    .line 497
+    .line 543
     iput-object p1, p0, Lcom/kik/b/b$c;->a:Lcom/kik/b/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 498
+    .line 544
     iput-object p2, p0, Lcom/kik/b/b$c;->b:Ljava/io/File;
 
-    .line 499
+    .line 545
     return-void
 .end method
 
@@ -44,7 +44,7 @@
     .locals 0
 
     .prologue
-    .line 492
+    .line 538
     invoke-direct {p0, p1, p2}, Lcom/kik/b/b$c;-><init>(Lcom/kik/b/b;Ljava/io/File;)V
 
     return-void
@@ -54,7 +54,7 @@
     .locals 3
 
     .prologue
-    .line 565
+    .line 611
     iget-object v0, p0, Lcom/kik/b/b$c;->b:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
@@ -63,7 +63,7 @@
 
     if-nez v0, :cond_0
 
-    .line 566
+    .line 612
     invoke-static {}, Lcom/kik/b/b;->b()Lorg/slf4j/b;
 
     move-result-object v0
@@ -74,7 +74,7 @@
 
     invoke-interface {v0, v1, v2}, Lorg/slf4j/b;->warn(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 568
+    .line 614
     :cond_0
     return-void
 .end method
@@ -85,7 +85,7 @@
     .locals 6
 
     .prologue
-    .line 505
+    .line 551
     iget-object v0, p0, Lcom/kik/b/b$c;->b:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
@@ -94,7 +94,7 @@
 
     if-nez v0, :cond_1
 
-    .line 506
+    .line 552
     invoke-static {}, Lcom/kik/b/b;->b()Lorg/slf4j/b;
 
     move-result-object v0
@@ -105,12 +105,12 @@
 
     invoke-interface {v0, v1, v2}, Lorg/slf4j/b;->warn(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 561
+    .line 607
     :cond_0
     :goto_0
     return-void
 
-    .line 510
+    .line 556
     :cond_1
     iget-object v0, p0, Lcom/kik/b/b$c;->a:Lcom/kik/b/b;
 
@@ -128,7 +128,7 @@
 
     if-gtz v0, :cond_0
 
-    .line 515
+    .line 561
     iget-object v0, p0, Lcom/kik/b/b$c;->b:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->getName()Ljava/lang/String;
@@ -145,7 +145,7 @@
 
     aget-object v0, v0, v1
 
-    .line 519
+    .line 565
     :try_start_0
     invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
     :try_end_0
@@ -153,7 +153,7 @@
 
     move-result-wide v0
 
-    .line 526
+    .line 572
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -166,7 +166,7 @@
 
     if-lez v0, :cond_2
 
-    .line 527
+    .line 573
     invoke-static {}, Lcom/kik/b/b;->b()Lorg/slf4j/b;
 
     move-result-object v0
@@ -177,12 +177,12 @@
 
     invoke-interface {v0, v1, v2}, Lorg/slf4j/b;->warn(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 528
+    .line 574
     invoke-direct {p0}, Lcom/kik/b/b$c;->a()V
 
     goto :goto_0
 
-    .line 522
+    .line 568
     :catch_0
     move-exception v0
 
@@ -198,15 +198,15 @@
 
     goto :goto_0
 
-    .line 532
+    .line 578
     :cond_2
     iget-object v0, p0, Lcom/kik/b/b$c;->a:Lcom/kik/b/b;
 
-    iget-object v0, v0, Lcom/kik/b/b;->a:Lcom/google/common/util/concurrent/b;
+    iget-object v0, v0, Lcom/kik/b/b;->a:Lcom/google/common/util/concurrent/AtomicLongMap;
 
     iget-object v1, p0, Lcom/kik/b/b$c;->b:Ljava/io/File;
 
-    invoke-virtual {v0, v1}, Lcom/google/common/util/concurrent/b;->a(Ljava/lang/Object;)J
+    invoke-virtual {v0, v1}, Lcom/google/common/util/concurrent/AtomicLongMap;->a(Ljava/lang/Object;)J
 
     move-result-wide v0
 
@@ -216,7 +216,7 @@
 
     if-ltz v0, :cond_3
 
-    .line 533
+    .line 579
     invoke-static {}, Lcom/kik/b/b;->b()Lorg/slf4j/b;
 
     move-result-object v0
@@ -227,22 +227,22 @@
 
     invoke-interface {v0, v1, v2}, Lorg/slf4j/b;->warn(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 534
+    .line 580
     invoke-direct {p0}, Lcom/kik/b/b$c;->a()V
 
     goto :goto_0
 
-    .line 538
+    .line 584
     :cond_3
     iget-object v0, p0, Lcom/kik/b/b$c;->a:Lcom/kik/b/b;
 
-    iget-object v0, v0, Lcom/kik/b/b;->a:Lcom/google/common/util/concurrent/b;
+    iget-object v0, v0, Lcom/kik/b/b;->a:Lcom/google/common/util/concurrent/AtomicLongMap;
 
     iget-object v1, p0, Lcom/kik/b/b$c;->b:Ljava/io/File;
 
-    invoke-virtual {v0, v1}, Lcom/google/common/util/concurrent/b;->b(Ljava/lang/Object;)J
+    invoke-virtual {v0, v1}, Lcom/google/common/util/concurrent/AtomicLongMap;->b(Ljava/lang/Object;)J
 
-    .line 539
+    .line 585
     iget-object v0, p0, Lcom/kik/b/b$c;->a:Lcom/kik/b/b;
 
     iget-object v1, p0, Lcom/kik/b/b$c;->b:Ljava/io/File;
@@ -251,17 +251,17 @@
 
     move-result v0
 
-    .line 541
+    .line 587
     const/16 v1, 0xc8
 
     if-ne v0, v1, :cond_4
 
-    .line 543
+    .line 589
     invoke-direct {p0}, Lcom/kik/b/b$c;->a()V
 
     goto/16 :goto_0
 
-    .line 545
+    .line 591
     :cond_4
     const/16 v1, 0x193
 
@@ -275,7 +275,7 @@
 
     if-ne v0, v1, :cond_6
 
-    .line 547
+    .line 593
     :cond_5
     invoke-static {}, Lcom/kik/b/b;->b()Lorg/slf4j/b;
 
@@ -291,7 +291,7 @@
 
     goto/16 :goto_0
 
-    .line 549
+    .line 595
     :cond_6
     const/16 v1, 0x190
 
@@ -301,7 +301,7 @@
 
     if-ge v0, v1, :cond_7
 
-    .line 550
+    .line 596
     invoke-static {}, Lcom/kik/b/b;->b()Lorg/slf4j/b;
 
     move-result-object v1
@@ -316,18 +316,18 @@
 
     invoke-interface {v1, v2, v0, v3}, Lorg/slf4j/b;->warn(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 551
+    .line 597
     invoke-direct {p0}, Lcom/kik/b/b$c;->a()V
 
     goto/16 :goto_0
 
-    .line 553
+    .line 599
     :cond_7
     const/16 v1, 0x1f7
 
     if-ne v0, v1, :cond_8
 
-    .line 554
+    .line 600
     invoke-static {}, Lcom/kik/b/b;->b()Lorg/slf4j/b;
 
     move-result-object v0
@@ -336,7 +336,7 @@
 
     invoke-interface {v0, v1}, Lorg/slf4j/b;->warn(Ljava/lang/String;)V
 
-    .line 555
+    .line 601
     iget-object v0, p0, Lcom/kik/b/b$c;->a:Lcom/kik/b/b;
 
     iget-object v0, v0, Lcom/kik/b/b;->b:Ljava/util/concurrent/atomic/AtomicLong;
@@ -357,7 +357,7 @@
 
     goto/16 :goto_0
 
-    .line 558
+    .line 604
     :cond_8
     invoke-static {}, Lcom/kik/b/b;->b()Lorg/slf4j/b;
 

@@ -12,30 +12,30 @@
 
 
 # instance fields
-.field private final a:Lkik/core/g/d;
+.field private final a:Lkik/core/e/d;
 
 .field private final b:Lkik/core/interfaces/ad;
 
-.field private final c:Lkik/core/f/b;
+.field private final c:Lkik/core/d/b;
 
 .field private final d:Lkik/android/b/g;
 
-.field private final e:Lcom/kik/events/q;
+.field private final e:Lcom/kik/events/p;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/kik/events/q",
+            "Lcom/kik/events/p",
             "<",
             "Lcom/kik/xdata/model/cards/XCardDescriptor;",
-            "Lkik/core/f/b$a;",
+            "Lkik/core/d/b$a;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final f:Lcom/kik/events/q;
+.field private final f:Lcom/kik/events/p;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/kik/events/q",
+            "Lcom/kik/events/p",
             "<",
             "Lcom/kik/xdata/model/cards/XCardDescriptor;",
             "Lkik/android/b/a$a;",
@@ -46,7 +46,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lkik/core/g/d;Lkik/core/interfaces/ad;Lkik/core/f/b;)V
+.method public constructor <init>(Lkik/core/e/d;Lkik/core/interfaces/ad;Lkik/core/d/b;)V
     .locals 2
 
     .prologue
@@ -58,30 +58,30 @@
 
     invoke-direct {v0, p0}, Lkik/android/b/a$1;-><init>(Lkik/android/b/a;)V
 
-    iput-object v0, p0, Lkik/android/b/a;->e:Lcom/kik/events/q;
+    iput-object v0, p0, Lkik/android/b/a;->e:Lcom/kik/events/p;
 
     .line 51
     new-instance v0, Lkik/android/b/a$2;
 
     invoke-direct {v0, p0}, Lkik/android/b/a$2;-><init>(Lkik/android/b/a;)V
 
-    iput-object v0, p0, Lkik/android/b/a;->f:Lcom/kik/events/q;
+    iput-object v0, p0, Lkik/android/b/a;->f:Lcom/kik/events/p;
 
     .line 70
-    iput-object p1, p0, Lkik/android/b/a;->a:Lkik/core/g/d;
+    iput-object p1, p0, Lkik/android/b/a;->a:Lkik/core/e/d;
 
     .line 71
     iput-object p2, p0, Lkik/android/b/a;->b:Lkik/core/interfaces/ad;
 
     .line 72
-    iput-object p3, p0, Lkik/android/b/a;->c:Lkik/core/f/b;
+    iput-object p3, p0, Lkik/android/b/a;->c:Lkik/core/d/b;
 
     .line 73
     new-instance v0, Lkik/android/b/g;
 
-    iget-object v1, p0, Lkik/android/b/a;->a:Lkik/core/g/d;
+    iget-object v1, p0, Lkik/android/b/a;->a:Lkik/core/e/d;
 
-    invoke-direct {v0, v1}, Lkik/android/b/g;-><init>(Lkik/core/g/e;)V
+    invoke-direct {v0, v1}, Lkik/android/b/g;-><init>(Lkik/core/e/f;)V
 
     iput-object v0, p0, Lkik/android/b/a;->d:Lkik/android/b/g;
 
@@ -99,7 +99,7 @@
     return-object v0
 .end method
 
-.method protected static a(Lkik/core/f/b$a;)[B
+.method protected static a(Lkik/core/d/b$a;)[B
     .locals 2
 
     .prologue
@@ -108,7 +108,7 @@
     .line 242
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lkik/core/f/b$a;->b()Ljava/lang/String;
+    invoke-virtual {p0}, Lkik/core/d/b$a;->b()Ljava/lang/String;
 
     move-result-object v1
 
@@ -131,7 +131,7 @@
     move-result-object v0
 
     .line 253
-    invoke-virtual {p0}, Lkik/core/f/b$a;->b()Ljava/lang/String;
+    invoke-virtual {p0}, Lkik/core/d/b$a;->b()Ljava/lang/String;
 
     move-result-object v1
 
@@ -171,7 +171,7 @@
 
     const-string v1, "XDATA_CARD_HISTORY_MIGRATED"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->u(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->w(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -182,12 +182,12 @@
     return v0
 .end method
 
-.method static synthetic c(Lkik/android/b/a;)Lkik/core/f/b;
+.method static synthetic c(Lkik/android/b/a;)Lkik/core/d/b;
     .locals 1
 
     .prologue
     .line 32
-    iget-object v0, p0, Lkik/android/b/a;->c:Lkik/core/f/b;
+    iget-object v0, p0, Lkik/android/b/a;->c:Lkik/core/d/b;
 
     return-object v0
 .end method
@@ -201,7 +201,7 @@
 
     const-string v1, "XDATA_CARD_PERMISSIONS_MIGRATED"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->u(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->w(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -235,13 +235,13 @@
 
     .line 80
     :cond_0
-    iget-object v0, p0, Lkik/android/b/a;->a:Lkik/core/g/d;
+    iget-object v0, p0, Lkik/android/b/a;->a:Lkik/core/e/d;
 
     const-string v1, "enc_card_list"
 
     const-class v2, Lcom/kik/xdata/model/cards/XCardDescriptor;
 
-    invoke-interface {v0, v1, v2}, Lkik/core/g/d;->a(Ljava/lang/String;Ljava/lang/Class;)Lcom/kik/events/Promise;
+    invoke-interface {v0, v1, v2}, Lkik/core/e/d;->a(Ljava/lang/String;Ljava/lang/Class;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -291,24 +291,24 @@
 
     .line 1151
     :cond_2
-    iget-object v2, p0, Lkik/android/b/a;->e:Lcom/kik/events/q;
+    iget-object v2, p0, Lkik/android/b/a;->e:Lcom/kik/events/p;
 
-    invoke-static {v2}, Lcom/kik/events/m;->a(Lcom/kik/events/q;)Lcom/kik/events/q;
+    invoke-static {v2}, Lcom/kik/events/l;->a(Lcom/kik/events/p;)Lcom/kik/events/p;
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/kik/events/m;->b(Lcom/kik/events/Promise;Lcom/kik/events/q;)Lcom/kik/events/Promise;
+    invoke-static {v0, v2}, Lcom/kik/events/l;->b(Lcom/kik/events/Promise;Lcom/kik/events/p;)Lcom/kik/events/Promise;
 
     move-result-object v2
 
     .line 1152
-    iget-object v3, p0, Lkik/android/b/a;->a:Lkik/core/g/d;
+    iget-object v3, p0, Lkik/android/b/a;->a:Lkik/core/e/d;
 
     const-string v4, "enc_card_pinned"
 
     const-class v5, Lcom/kik/xdata/model/cards/XCardPinnedList;
 
-    invoke-interface {v3, v4, v5}, Lkik/core/g/d;->b(Ljava/lang/String;Ljava/lang/Class;)Lcom/kik/events/Promise;
+    invoke-interface {v3, v4, v5}, Lkik/core/e/d;->b(Ljava/lang/String;Ljava/lang/Class;)Lcom/kik/events/Promise;
 
     move-result-object v3
 
@@ -317,19 +317,19 @@
 
     invoke-direct {v4, p0, v3, v1}, Lkik/android/b/a$4;-><init>(Lkik/android/b/a;Lcom/kik/events/Promise;Lcom/kik/events/Promise;)V
 
-    invoke-virtual {v2, v4}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v2, v4}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
     goto :goto_0
 
     .line 2104
     :cond_3
-    iget-object v2, p0, Lkik/android/b/a;->f:Lcom/kik/events/q;
+    iget-object v2, p0, Lkik/android/b/a;->f:Lcom/kik/events/p;
 
-    invoke-static {v2}, Lcom/kik/events/m;->a(Lcom/kik/events/q;)Lcom/kik/events/q;
+    invoke-static {v2}, Lcom/kik/events/l;->a(Lcom/kik/events/p;)Lcom/kik/events/p;
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/kik/events/m;->b(Lcom/kik/events/Promise;Lcom/kik/events/q;)Lcom/kik/events/Promise;
+    invoke-static {v0, v2}, Lcom/kik/events/l;->b(Lcom/kik/events/Promise;Lcom/kik/events/p;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -338,7 +338,7 @@
 
     invoke-direct {v2, p0, v1}, Lkik/android/b/a$3;-><init>(Lkik/android/b/a;Lcom/kik/events/Promise;)V
 
-    invoke-virtual {v0, v2}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v0, v2}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
     goto :goto_1
 .end method

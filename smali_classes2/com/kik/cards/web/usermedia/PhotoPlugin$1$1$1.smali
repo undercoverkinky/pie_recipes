@@ -1,5 +1,5 @@
 .class final Lcom/kik/cards/web/usermedia/PhotoPlugin$1$1$1;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
         "Lorg/json/JSONArray;",
         ">;"
@@ -35,7 +35,7 @@
     .line 344
     iput-object p1, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$1$1$1;->a:Lcom/kik/cards/web/usermedia/PhotoPlugin$1$1;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method

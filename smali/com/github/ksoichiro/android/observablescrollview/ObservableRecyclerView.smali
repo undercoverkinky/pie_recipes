@@ -15,35 +15,35 @@
 
 
 # static fields
-.field private static k:I
+.field private static a:I
 
 
 # instance fields
-.field private l:I
+.field private b:I
 
-.field private m:I
+.field private c:I
 
-.field private n:I
+.field private d:I
 
-.field private o:I
+.field private e:I
 
-.field private p:I
+.field private f:I
 
-.field private q:Landroid/util/SparseIntArray;
+.field private g:Landroid/util/SparseIntArray;
 
-.field private r:Lcom/github/ksoichiro/android/observablescrollview/a;
+.field private h:Lcom/github/ksoichiro/android/observablescrollview/a;
 
-.field private s:Lcom/github/ksoichiro/android/observablescrollview/ScrollState;
+.field private i:Lcom/github/ksoichiro/android/observablescrollview/ScrollState;
 
-.field private t:Z
+.field private j:Z
 
-.field private u:Z
+.field private k:Z
 
-.field private v:Z
+.field private l:Z
 
-.field private w:Landroid/view/MotionEvent;
+.field private m:Landroid/view/MotionEvent;
 
-.field private x:Landroid/view/ViewGroup;
+.field private n:Landroid/view/ViewGroup;
 
 
 # direct methods
@@ -54,7 +54,7 @@
     .line 37
     const/16 v0, 0x16
 
-    sput v0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->k:I
+    sput v0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->a:I
 
     return-void
 .end method
@@ -69,10 +69,10 @@
     .line 41
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->m:I
+    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->c:I
 
     .line 58
-    invoke-direct {p0}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->l()V
+    invoke-direct {p0}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->a()V
 
     .line 59
     return-void
@@ -88,10 +88,10 @@
     .line 41
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->m:I
+    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->c:I
 
     .line 63
-    invoke-direct {p0}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->l()V
+    invoke-direct {p0}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->a()V
 
     .line 64
     return-void
@@ -107,16 +107,16 @@
     .line 41
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->m:I
+    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->c:I
 
     .line 68
-    invoke-direct {p0}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->l()V
+    invoke-direct {p0}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->a()V
 
     .line 69
     return-void
 .end method
 
-.method private l()V
+.method private a()V
     .locals 1
 
     .prologue
@@ -125,27 +125,27 @@
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
-    iput-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->q:Landroid/util/SparseIntArray;
+    iput-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->g:Landroid/util/SparseIntArray;
 
-    .line 6334
+    .line 2334
     const/4 v0, 0x0
 
     :try_start_0
-    invoke-super {p0, v0}, Landroid/support/v7/widget/RecyclerView;->c(Landroid/view/View;)I
+    invoke-super {p0, v0}, Landroid/support/v7/widget/RecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
     :try_end_0
     .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6337
+    .line 2337
     :goto_0
     return-void
 
-    .line 6336
+    .line 2336
     :catch_0
     move-exception v0
 
     const/16 v0, 0x15
 
-    sput v0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->k:I
+    sput v0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->a:I
 
     goto :goto_0
 .end method
@@ -157,25 +157,25 @@
 
     .prologue
     .line 273
-    iput-object p1, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->r:Lcom/github/ksoichiro/android/observablescrollview/a;
+    iput-object p1, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->h:Lcom/github/ksoichiro/android/observablescrollview/a;
 
     .line 274
     return-void
 .end method
 
-.method public final c(Landroid/view/View;)I
+.method public getChildAdapterPosition(Landroid/view/View;)I
     .locals 2
 
     .prologue
     .line 321
     const/16 v0, 0x16
 
-    sget v1, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->k:I
+    sget v1, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->a:I
 
     if-gt v0, v1, :cond_0
 
     .line 322
-    invoke-super {p0, p1}, Landroid/support/v7/widget/RecyclerView;->c(Landroid/view/View;)I
+    invoke-super {p0, p1}, Landroid/support/v7/widget/RecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
 
     move-result v0
 
@@ -183,9 +183,8 @@
     :goto_0
     return v0
 
-    .line 5670
     :cond_0
-    invoke-virtual {p0, p1}, Landroid/support/v7/widget/RecyclerView;->c(Landroid/view/View;)I
+    invoke-virtual {p0, p1}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->getChildPosition(Landroid/view/View;)I
 
     move-result v0
 
@@ -197,7 +196,7 @@
 
     .prologue
     .line 182
-    iget-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->r:Lcom/github/ksoichiro/android/observablescrollview/a;
+    iget-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->h:Lcom/github/ksoichiro/android/observablescrollview/a;
 
     if-eqz v0, :cond_0
 
@@ -221,14 +220,14 @@
     :pswitch_0
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->u:Z
+    iput-boolean v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->k:Z
 
-    iput-boolean v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->t:Z
+    iput-boolean v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->j:Z
 
     .line 192
-    iget-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->r:Lcom/github/ksoichiro/android/observablescrollview/a;
+    iget-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->h:Lcom/github/ksoichiro/android/observablescrollview/a;
 
-    invoke-interface {v0}, Lcom/github/ksoichiro/android/observablescrollview/a;->l_()V
+    invoke-interface {v0}, Lcom/github/ksoichiro/android/observablescrollview/a;->a()V
 
     goto :goto_0
 
@@ -251,34 +250,34 @@
     .line 74
     iget v0, p1, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView$SavedState;->b:I
 
-    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->l:I
+    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->b:I
 
     .line 75
     iget v0, p1, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView$SavedState;->c:I
 
-    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->m:I
+    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->c:I
 
     .line 76
     iget v0, p1, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView$SavedState;->d:I
 
-    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->n:I
+    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->d:I
 
     .line 77
     iget v0, p1, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView$SavedState;->e:I
 
-    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->o:I
+    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->e:I
 
     .line 78
     iget v0, p1, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView$SavedState;->f:I
 
-    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->p:I
+    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->f:I
 
     .line 79
     iget-object v0, p1, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView$SavedState;->g:Landroid/util/SparseIntArray;
 
-    iput-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->q:Landroid/util/SparseIntArray;
+    iput-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->g:Landroid/util/SparseIntArray;
 
-    .line 4431
+    .line 1431
     iget-object v0, p1, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView$SavedState;->h:Landroid/os/Parcelable;
 
     .line 80
@@ -303,32 +302,32 @@
     invoke-direct {v1, v0}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView$SavedState;-><init>(Landroid/os/Parcelable;)V
 
     .line 87
-    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->l:I
+    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->b:I
 
     iput v0, v1, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView$SavedState;->b:I
 
     .line 88
-    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->m:I
+    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->c:I
 
     iput v0, v1, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView$SavedState;->c:I
 
     .line 89
-    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->n:I
+    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->d:I
 
     iput v0, v1, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView$SavedState;->d:I
 
     .line 90
-    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->o:I
+    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->e:I
 
     iput v0, v1, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView$SavedState;->e:I
 
     .line 91
-    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->p:I
+    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->f:I
 
     iput v0, v1, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView$SavedState;->f:I
 
     .line 92
-    iget-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->q:Landroid/util/SparseIntArray;
+    iget-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->g:Landroid/util/SparseIntArray;
 
     iput-object v0, v1, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView$SavedState;->g:Landroid/util/SparseIntArray;
 
@@ -348,7 +347,7 @@
     invoke-super {p0, p1, p2, p3, p4}, Landroid/support/v7/widget/RecyclerView;->onScrollChanged(IIII)V
 
     .line 99
-    iget-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->r:Lcom/github/ksoichiro/android/observablescrollview/a;
+    iget-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->h:Lcom/github/ksoichiro/android/observablescrollview/a;
 
     if-eqz v0, :cond_8
 
@@ -364,7 +363,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->c(Landroid/view/View;)I
+    invoke-virtual {p0, v0}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
 
     move-result v4
 
@@ -379,7 +378,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->c(Landroid/view/View;)I
+    invoke-virtual {p0, v0}, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
 
     move-result v5
 
@@ -400,7 +399,7 @@
     if-eqz v0, :cond_10
 
     .line 107
-    iget-object v6, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->q:Landroid/util/SparseIntArray;
+    iget-object v6, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->g:Landroid/util/SparseIntArray;
 
     invoke-virtual {v6, v3}, Landroid/util/SparseIntArray;->indexOfKey(I)I
 
@@ -412,7 +411,7 @@
 
     move-result v6
 
-    iget-object v7, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->q:Landroid/util/SparseIntArray;
+    iget-object v7, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->g:Landroid/util/SparseIntArray;
 
     invoke-virtual {v7, v3}, Landroid/util/SparseIntArray;->get(I)I
 
@@ -428,7 +427,7 @@
 
     .line 111
     :goto_1
-    iget-object v6, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->q:Landroid/util/SparseIntArray;
+    iget-object v6, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->g:Landroid/util/SparseIntArray;
 
     invoke-virtual {v6, v3, v0}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -451,12 +450,12 @@
     if-eqz v3, :cond_8
 
     .line 116
-    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->l:I
+    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->b:I
 
     if-ge v0, v4, :cond_9
 
     .line 119
-    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->l:I
+    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->b:I
 
     sub-int v0, v4, v0
 
@@ -468,12 +467,12 @@
     move v2, v1
 
     :goto_2
-    iget v5, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->l:I
+    iget v5, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->b:I
 
     if-le v0, v5, :cond_4
 
     .line 121
-    iget-object v5, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->q:Landroid/util/SparseIntArray;
+    iget-object v5, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->g:Landroid/util/SparseIntArray;
 
     invoke-virtual {v5, v0}, Landroid/util/SparseIntArray;->indexOfKey(I)I
 
@@ -482,7 +481,7 @@
     if-lez v5, :cond_2
 
     .line 122
-    iget-object v5, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->q:Landroid/util/SparseIntArray;
+    iget-object v5, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->g:Landroid/util/SparseIntArray;
 
     invoke-virtual {v5, v0}, Landroid/util/SparseIntArray;->get(I)I
 
@@ -511,36 +510,36 @@
 
     .line 131
     :cond_4
-    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->n:I
+    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->d:I
 
-    iget v5, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->m:I
+    iget v5, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->c:I
 
     add-int/2addr v2, v5
 
     add-int/2addr v0, v2
 
-    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->n:I
+    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->d:I
 
     .line 132
     invoke-virtual {v3}, Landroid/view/View;->getHeight()I
 
     move-result v0
 
-    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->m:I
+    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->c:I
 
     .line 154
     :cond_5
     :goto_4
-    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->m:I
+    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->c:I
 
     if-gez v0, :cond_6
 
     .line 155
-    iput v1, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->m:I
+    iput v1, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->c:I
 
     .line 157
     :cond_6
-    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->n:I
+    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->d:I
 
     invoke-virtual {v3}, Landroid/view/View;->getTop()I
 
@@ -548,48 +547,48 @@
 
     sub-int/2addr v0, v2
 
-    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->p:I
+    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->f:I
 
     .line 158
-    iput v4, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->l:I
+    iput v4, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->b:I
 
     .line 160
-    iget-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->r:Lcom/github/ksoichiro/android/observablescrollview/a;
+    iget-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->h:Lcom/github/ksoichiro/android/observablescrollview/a;
 
-    iget v2, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->p:I
+    iget v2, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->f:I
 
-    iget-boolean v3, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->t:Z
+    iget-boolean v3, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->j:Z
 
-    iget-boolean v4, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->u:Z
+    iget-boolean v4, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->k:Z
 
     invoke-interface {v0, v2, v3, v4}, Lcom/github/ksoichiro/android/observablescrollview/a;->a(IZZ)V
 
     .line 161
-    iget-boolean v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->t:Z
+    iget-boolean v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->j:Z
 
     if-eqz v0, :cond_7
 
     .line 162
-    iput-boolean v1, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->t:Z
+    iput-boolean v1, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->j:Z
 
     .line 165
     :cond_7
-    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->o:I
+    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->e:I
 
-    iget v1, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->p:I
+    iget v1, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->f:I
 
     if-ge v0, v1, :cond_e
 
     .line 167
     sget-object v0, Lcom/github/ksoichiro/android/observablescrollview/ScrollState;->UP:Lcom/github/ksoichiro/android/observablescrollview/ScrollState;
 
-    iput-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->s:Lcom/github/ksoichiro/android/observablescrollview/ScrollState;
+    iput-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->i:Lcom/github/ksoichiro/android/observablescrollview/ScrollState;
 
     .line 174
     :goto_5
-    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->p:I
+    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->f:I
 
-    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->o:I
+    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->e:I
 
     .line 178
     :cond_8
@@ -597,19 +596,19 @@
 
     .line 133
     :cond_9
-    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->l:I
+    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->b:I
 
     if-ge v4, v0, :cond_d
 
     .line 136
-    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->l:I
+    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->b:I
 
     sub-int/2addr v0, v4
 
     if-eq v0, v8, :cond_b
 
     .line 137
-    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->l:I
+    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->b:I
 
     add-int/lit8 v0, v0, -0x1
 
@@ -621,7 +620,7 @@
     if-le v2, v4, :cond_c
 
     .line 138
-    iget-object v5, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->q:Landroid/util/SparseIntArray;
+    iget-object v5, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->g:Landroid/util/SparseIntArray;
 
     invoke-virtual {v5, v2}, Landroid/util/SparseIntArray;->indexOfKey(I)I
 
@@ -630,7 +629,7 @@
     if-lez v5, :cond_a
 
     .line 139
-    iget-object v5, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->q:Landroid/util/SparseIntArray;
+    iget-object v5, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->g:Landroid/util/SparseIntArray;
 
     invoke-virtual {v5, v2}, Landroid/util/SparseIntArray;->get(I)I
 
@@ -659,7 +658,7 @@
 
     .line 148
     :cond_c
-    iget v2, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->n:I
+    iget v2, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->d:I
 
     invoke-virtual {v3}, Landroid/view/View;->getHeight()I
 
@@ -669,14 +668,14 @@
 
     sub-int v0, v2, v0
 
-    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->n:I
+    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->d:I
 
     .line 149
     invoke-virtual {v3}, Landroid/view/View;->getHeight()I
 
     move-result v0
 
-    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->m:I
+    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->c:I
 
     goto :goto_4
 
@@ -689,25 +688,25 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->m:I
+    iput v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->c:I
 
     .line 152
-    iput v1, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->n:I
+    iput v1, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->d:I
 
     goto :goto_4
 
     .line 168
     :cond_e
-    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->p:I
+    iget v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->f:I
 
-    iget v1, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->o:I
+    iget v1, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->e:I
 
     if-ge v0, v1, :cond_f
 
     .line 170
     sget-object v0, Lcom/github/ksoichiro/android/observablescrollview/ScrollState;->DOWN:Lcom/github/ksoichiro/android/observablescrollview/ScrollState;
 
-    iput-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->s:Lcom/github/ksoichiro/android/observablescrollview/ScrollState;
+    iput-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->i:Lcom/github/ksoichiro/android/observablescrollview/ScrollState;
 
     goto :goto_5
 
@@ -715,7 +714,7 @@
     :cond_f
     sget-object v0, Lcom/github/ksoichiro/android/observablescrollview/ScrollState;->STOP:Lcom/github/ksoichiro/android/observablescrollview/ScrollState;
 
-    iput-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->s:Lcom/github/ksoichiro/android/observablescrollview/ScrollState;
+    iput-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->i:Lcom/github/ksoichiro/android/observablescrollview/ScrollState;
 
     goto :goto_5
 
@@ -734,7 +733,7 @@
     const/4 v2, 0x0
 
     .line 201
-    iget-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->r:Lcom/github/ksoichiro/android/observablescrollview/a;
+    iget-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->h:Lcom/github/ksoichiro/android/observablescrollview/a;
 
     if-eqz v0, :cond_0
 
@@ -757,21 +756,21 @@
 
     .line 205
     :pswitch_0
-    iput-boolean v2, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->v:Z
+    iput-boolean v2, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->l:Z
 
     .line 206
-    iput-boolean v2, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->u:Z
+    iput-boolean v2, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->k:Z
 
     goto :goto_0
 
     .line 210
     :pswitch_1
-    iget-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->w:Landroid/view/MotionEvent;
+    iget-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->m:Landroid/view/MotionEvent;
 
     if-nez v0, :cond_1
 
     .line 211
-    iput-object p1, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->w:Landroid/view/MotionEvent;
+    iput-object p1, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->m:Landroid/view/MotionEvent;
 
     .line 213
     :cond_1
@@ -779,7 +778,7 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->w:Landroid/view/MotionEvent;
+    iget-object v1, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->m:Landroid/view/MotionEvent;
 
     invoke-virtual {v1}, Landroid/view/MotionEvent;->getY()F
 
@@ -792,10 +791,10 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->w:Landroid/view/MotionEvent;
+    iput-object v1, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->m:Landroid/view/MotionEvent;
 
-    .line 5316
-    iget v1, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->p:I
+    .line 2316
+    iget v1, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->f:I
 
     .line 215
     int-to-float v1, v1
@@ -807,7 +806,7 @@
     if-gtz v0, :cond_0
 
     .line 218
-    iget-boolean v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->v:Z
+    iget-boolean v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->l:Z
 
     if-eqz v0, :cond_2
 
@@ -818,7 +817,7 @@
 
     .line 225
     :cond_2
-    iget-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->x:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->n:Landroid/view/ViewGroup;
 
     if-nez v0, :cond_3
 
@@ -883,7 +882,7 @@
 
     .line 228
     :cond_3
-    iget-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->x:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->n:Landroid/view/ViewGroup;
 
     move-object v1, v0
 
@@ -908,7 +907,7 @@
     .line 243
     const/4 v3, 0x1
 
-    iput-boolean v3, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->v:Z
+    iput-boolean v3, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableRecyclerView;->l:Z
 
     .line 248
     invoke-virtual {v0, v2}, Landroid/view/MotionEvent;->setAction(I)V

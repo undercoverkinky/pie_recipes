@@ -40,7 +40,7 @@
 
     const/4 v2, 0x0
 
-    .line 68
+    .line 70
     new-instance v0, Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;
 
     const-string v1, "PUBLIC"
@@ -49,7 +49,7 @@
 
     sput-object v0, Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;->PUBLIC:Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;
 
-    .line 70
+    .line 72
     new-instance v0, Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;
 
     const-string v1, "PRIVATE"
@@ -58,7 +58,7 @@
 
     sput-object v0, Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;->PRIVATE:Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;
 
-    .line 67
+    .line 69
     const/4 v0, 0x2
 
     new-array v0, v0, [Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;
@@ -85,7 +85,7 @@
     .end annotation
 
     .prologue
-    .line 67
+    .line 69
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -95,7 +95,7 @@
     .locals 1
 
     .prologue
-    .line 67
+    .line 69
     const-class v0, Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -111,7 +111,7 @@
     .locals 1
 
     .prologue
-    .line 67
+    .line 69
     sget-object v0, Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;->$VALUES:[Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;
 
     invoke-virtual {v0}, [Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;->clone()Ljava/lang/Object;

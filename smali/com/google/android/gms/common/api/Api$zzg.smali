@@ -24,29 +24,3 @@
         "Lcom/google/android/gms/common/api/Api$zzb;"
     }
 .end annotation
-
-
-# virtual methods
-.method public abstract zza(ILandroid/os/IInterface;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(ITT;)V"
-        }
-    .end annotation
-.end method
-
-.method public abstract zzab(Landroid/os/IBinder;)Landroid/os/IInterface;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/os/IBinder;",
-            ")TT;"
-        }
-    .end annotation
-.end method
-
-.method public abstract zzhT()Ljava/lang/String;
-.end method
-
-.method public abstract zzhU()Ljava/lang/String;
-.end method

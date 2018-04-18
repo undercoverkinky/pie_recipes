@@ -25,16 +25,16 @@
     .locals 0
 
     .prologue
-    .line 1655
+    .line 2033
     invoke-direct {p0, p3}, Landroid/support/v4/os/ResultReceiver;-><init>(Landroid/os/Handler;)V
 
-    .line 1656
+    .line 2034
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;->mMediaId:Ljava/lang/String;
 
-    .line 1657
+    .line 2035
     iput-object p2, p0, Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;->mCallback:Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;
 
-    .line 1658
+    .line 2036
     return-void
 .end method
 
@@ -44,7 +44,10 @@
     .locals 2
 
     .prologue
-    .line 1662
+    .line 2040
+    if-eqz p2, :cond_0
+
+    .line 2041
     const-class v0, Landroid/support/v4/media/MediaBrowserCompat;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -53,45 +56,50 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Bundle;->setClassLoader(Ljava/lang/ClassLoader;)V
 
-    .line 1663
-    if-nez p1, :cond_0
+    .line 2043
+    :cond_0
+    if-nez p1, :cond_1
 
-    if-eqz p2, :cond_0
+    if-eqz p2, :cond_1
 
     const-string v0, "media_item"
 
+    .line 2044
     invoke-virtual {p2, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
-    .line 1665
-    :cond_0
+    .line 2045
+    :cond_1
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;->mCallback:Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;
 
     iget-object v1, p0, Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;->mMediaId:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;->onError(Ljava/lang/String;)V
 
-    .line 1674
+    .line 2054
     :goto_0
     return-void
 
-    .line 1668
-    :cond_1
+    .line 2048
+    :cond_2
     const-string v0, "media_item"
 
     invoke-virtual {p2, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v0
 
-    .line 1669
+    .line 2049
+    if-eqz v0, :cond_3
+
     instance-of v1, v0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_4
 
-    .line 1670
+    .line 2050
+    :cond_3
     iget-object v1, p0, Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;->mCallback:Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;
 
     check-cast v0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
@@ -100,8 +108,8 @@
 
     goto :goto_0
 
-    .line 1672
-    :cond_2
+    .line 2052
+    :cond_4
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;->mCallback:Landroid/support/v4/media/MediaBrowserCompat$ItemCallback;
 
     iget-object v1, p0, Landroid/support/v4/media/MediaBrowserCompat$ItemReceiver;->mMediaId:Ljava/lang/String;

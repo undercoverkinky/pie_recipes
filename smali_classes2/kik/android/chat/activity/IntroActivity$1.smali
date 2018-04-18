@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 38
+    .line 46
     iput-object p1, p0, Lkik/android/chat/activity/IntroActivity$1;->a:Lkik/android/chat/activity/IntroActivity;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
@@ -37,7 +37,7 @@
     .locals 2
 
     .prologue
-    .line 43
+    .line 51
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Core teardown took more than five seconds."

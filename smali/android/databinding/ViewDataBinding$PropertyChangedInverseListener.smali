@@ -26,13 +26,13 @@
     .locals 0
 
     .prologue
-    .line 1357
+    .line 1453
     invoke-direct {p0}, Landroid/databinding/Observable$OnPropertyChangedCallback;-><init>()V
 
-    .line 1358
+    .line 1454
     iput p1, p0, Landroid/databinding/ViewDataBinding$PropertyChangedInverseListener;->mPropertyId:I
 
-    .line 1359
+    .line 1455
     return-void
 .end method
 
@@ -42,18 +42,18 @@
     .locals 1
 
     .prologue
-    .line 1363
+    .line 1459
     iget v0, p0, Landroid/databinding/ViewDataBinding$PropertyChangedInverseListener;->mPropertyId:I
 
     if-eq p2, v0, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 1364
+    .line 1460
     :cond_0
     invoke-virtual {p0}, Landroid/databinding/ViewDataBinding$PropertyChangedInverseListener;->onChange()V
 
-    .line 1366
+    .line 1462
     :cond_1
     return-void
 .end method

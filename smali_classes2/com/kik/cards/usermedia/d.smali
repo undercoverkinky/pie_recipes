@@ -93,7 +93,7 @@
 
     invoke-direct {v3, p0, v0, v2}, Lcom/kik/cards/usermedia/d$1;-><init>(Lcom/kik/cards/usermedia/d;ZLcom/kik/events/Promise;)V
 
-    invoke-virtual {v1, v3}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v1, v3}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
     .line 96
     return-object v2

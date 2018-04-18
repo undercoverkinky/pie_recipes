@@ -60,6 +60,7 @@
 
     iget-object v2, p0, Lcom/crashlytics/android/core/z$e;->b:Ljava/lang/String;
 
+    .line 190
     invoke-static {v2}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
 
     move-result-object v2

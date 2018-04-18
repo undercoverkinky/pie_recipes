@@ -43,7 +43,7 @@
 
     const/4 v2, 0x0
 
-    .line 40
+    .line 35
     new-instance v0, Lcom/google/common/cache/RemovalCause$1;
 
     const-string v1, "EXPLICIT"
@@ -52,7 +52,7 @@
 
     sput-object v0, Lcom/google/common/cache/RemovalCause;->EXPLICIT:Lcom/google/common/cache/RemovalCause;
 
-    .line 53
+    .line 48
     new-instance v0, Lcom/google/common/cache/RemovalCause$2;
 
     const-string v1, "REPLACED"
@@ -61,7 +61,7 @@
 
     sput-object v0, Lcom/google/common/cache/RemovalCause;->REPLACED:Lcom/google/common/cache/RemovalCause;
 
-    .line 65
+    .line 60
     new-instance v0, Lcom/google/common/cache/RemovalCause$3;
 
     const-string v1, "COLLECTED"
@@ -70,7 +70,7 @@
 
     sput-object v0, Lcom/google/common/cache/RemovalCause;->COLLECTED:Lcom/google/common/cache/RemovalCause;
 
-    .line 76
+    .line 71
     new-instance v0, Lcom/google/common/cache/RemovalCause$4;
 
     const-string v1, "EXPIRED"
@@ -79,7 +79,7 @@
 
     sput-object v0, Lcom/google/common/cache/RemovalCause;->EXPIRED:Lcom/google/common/cache/RemovalCause;
 
-    .line 87
+    .line 82
     new-instance v0, Lcom/google/common/cache/RemovalCause$5;
 
     const-string v1, "SIZE"
@@ -88,7 +88,7 @@
 
     sput-object v0, Lcom/google/common/cache/RemovalCause;->SIZE:Lcom/google/common/cache/RemovalCause;
 
-    .line 32
+    .line 28
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/google/common/cache/RemovalCause;
@@ -127,7 +127,7 @@
     .end annotation
 
     .prologue
-    .line 34
+    .line 29
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -137,7 +137,7 @@
     .locals 0
 
     .prologue
-    .line 34
+    .line 29
     invoke-direct {p0, p1, p2}, Lcom/google/common/cache/RemovalCause;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -147,7 +147,7 @@
     .locals 1
 
     .prologue
-    .line 32
+    .line 28
     const-class v0, Lcom/google/common/cache/RemovalCause;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -163,7 +163,7 @@
     .locals 1
 
     .prologue
-    .line 32
+    .line 28
     sget-object v0, Lcom/google/common/cache/RemovalCause;->$VALUES:[Lcom/google/common/cache/RemovalCause;
 
     invoke-virtual {v0}, [Lcom/google/common/cache/RemovalCause;->clone()Ljava/lang/Object;

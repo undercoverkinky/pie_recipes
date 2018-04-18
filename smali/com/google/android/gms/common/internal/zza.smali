@@ -1,13 +1,9 @@
-.class public Lcom/google/android/gms/common/internal/zza;
-.super Lcom/google/android/gms/common/internal/zzq$zza;
-
-
-# instance fields
-.field zzaqn:I
+.class public final Lcom/google/android/gms/common/internal/zza;
+.super Lcom/google/android/gms/common/internal/zzan;
 
 
 # direct methods
-.method public static zza(Lcom/google/android/gms/common/internal/zzq;)Landroid/accounts/Account;
+.method public static zza(Lcom/google/android/gms/common/internal/zzam;)Landroid/accounts/Account;
     .locals 5
 
     const/4 v0, 0x0
@@ -19,7 +15,7 @@
     move-result-wide v2
 
     :try_start_0
-    invoke-interface {p0}, Lcom/google/android/gms/common/internal/zzq;->getAccount()Landroid/accounts/Account;
+    invoke-interface {p0}, Lcom/google/android/gms/common/internal/zzam;->getAccount()Landroid/accounts/Account;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -58,68 +54,22 @@
 
 
 # virtual methods
-.method public equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    const/4 v1, 0x0
+    new-instance v0, Ljava/lang/NoSuchMethodError;
 
-    if-ne p0, p1, :cond_0
+    invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
 
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    instance-of v0, p1, Lcom/google/android/gms/common/internal/zza;
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v1, v1}, Landroid/accounts/Account;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    goto :goto_0
+    throw v0
 .end method
 
-.method public getAccount()Landroid/accounts/Account;
-    .locals 3
+.method public final getAccount()Landroid/accounts/Account;
+    .locals 1
 
-    const/4 v2, 0x0
+    new-instance v0, Ljava/lang/NoSuchMethodError;
 
-    invoke-static {}, Landroid/os/Binder;->getCallingUid()I
-
-    move-result v0
-
-    iget v1, p0, Lcom/google/android/gms/common/internal/zza;->zzaqn:I
-
-    if-ne v0, v1, :cond_0
-
-    :goto_0
-    return-object v2
-
-    :cond_0
-    invoke-static {v2, v0}, Lcom/google/android/gms/common/zze;->zze(Landroid/content/Context;I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iput v0, p0, Lcom/google/android/gms/common/internal/zza;->zzaqn:I
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v0, Ljava/lang/SecurityException;
-
-    const-string v1, "Caller is not GooglePlayServices"
-
-    invoke-direct {v0, v1}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
 
     throw v0
 .end method

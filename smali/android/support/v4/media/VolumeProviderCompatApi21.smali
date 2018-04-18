@@ -4,6 +4,10 @@
 
 
 # annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/support/v4/media/VolumeProviderCompatApi21$Delegate;
@@ -16,10 +20,10 @@
     .locals 0
 
     .prologue
-    .line 21
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
+    .line 45
     return-void
 .end method
 
@@ -27,7 +31,7 @@
     .locals 1
 
     .prologue
-    .line 24
+    .line 28
     new-instance v0, Landroid/support/v4/media/VolumeProviderCompatApi21$1;
 
     invoke-direct {v0, p0, p1, p2, p3}, Landroid/support/v4/media/VolumeProviderCompatApi21$1;-><init>(IIILandroid/support/v4/media/VolumeProviderCompatApi21$Delegate;)V
@@ -39,11 +43,11 @@
     .locals 0
 
     .prologue
-    .line 38
+    .line 42
     check-cast p0, Landroid/media/VolumeProvider;
 
     invoke-virtual {p0, p1}, Landroid/media/VolumeProvider;->setCurrentVolume(I)V
 
-    .line 39
+    .line 43
     return-void
 .end method

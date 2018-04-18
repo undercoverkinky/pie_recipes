@@ -92,7 +92,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/crashlytics/android/ndk/b;->o()Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/crashlytics/android/ndk/b;->m()Landroid/content/Context;
 
     move-result-object v0
 

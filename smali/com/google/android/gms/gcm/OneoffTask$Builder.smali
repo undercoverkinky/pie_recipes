@@ -14,9 +14,9 @@
 
 
 # instance fields
-.field private zzaTi:J
+.field private zzhrm:J
 
-.field private zzaTj:J
+.field private zzhrn:J
 
 
 # direct methods
@@ -27,9 +27,9 @@
 
     invoke-direct {p0}, Lcom/google/android/gms/gcm/Task$Builder;-><init>()V
 
-    iput-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask$Builder;->zzaTi:J
+    iput-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask$Builder;->zzhrm:J
 
-    iput-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask$Builder;->zzaTj:J
+    iput-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask$Builder;->zzhrn:J
 
     const/4 v0, 0x0
 
@@ -41,7 +41,7 @@
 .method static synthetic zza(Lcom/google/android/gms/gcm/OneoffTask$Builder;)J
     .locals 2
 
-    iget-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask$Builder;->zzaTi:J
+    iget-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask$Builder;->zzhrm:J
 
     return-wide v0
 .end method
@@ -49,7 +49,7 @@
 .method static synthetic zzb(Lcom/google/android/gms/gcm/OneoffTask$Builder;)J
     .locals 2
 
-    iget-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask$Builder;->zzaTj:J
+    iget-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask$Builder;->zzhrn:J
 
     return-wide v0
 .end method
@@ -59,13 +59,13 @@
 .method public build()Lcom/google/android/gms/gcm/OneoffTask;
     .locals 2
 
-    invoke-virtual {p0}, Lcom/google/android/gms/gcm/OneoffTask$Builder;->checkConditions()V
+    invoke-virtual {p0}, Lcom/google/android/gms/gcm/Task$Builder;->checkConditions()V
 
     new-instance v0, Lcom/google/android/gms/gcm/OneoffTask;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcom/google/android/gms/gcm/OneoffTask;-><init>(Lcom/google/android/gms/gcm/OneoffTask$Builder;Lcom/google/android/gms/gcm/OneoffTask$1;)V
+    invoke-direct {v0, p0, v1}, Lcom/google/android/gms/gcm/OneoffTask;-><init>(Lcom/google/android/gms/gcm/OneoffTask$Builder;Lcom/google/android/gms/gcm/d;)V
 
     return-object v0
 .end method
@@ -87,13 +87,13 @@
 
     invoke-super {p0}, Lcom/google/android/gms/gcm/Task$Builder;->checkConditions()V
 
-    iget-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask$Builder;->zzaTi:J
+    iget-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask$Builder;->zzhrm:J
 
     cmp-long v0, v0, v2
 
     if-eqz v0, :cond_0
 
-    iget-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask$Builder;->zzaTj:J
+    iget-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask$Builder;->zzhrn:J
 
     cmp-long v0, v0, v2
 
@@ -109,9 +109,9 @@
     throw v0
 
     :cond_1
-    iget-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask$Builder;->zzaTi:J
+    iget-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask$Builder;->zzhrm:J
 
-    iget-wide v2, p0, Lcom/google/android/gms/gcm/OneoffTask$Builder;->zzaTj:J
+    iget-wide v2, p0, Lcom/google/android/gms/gcm/OneoffTask$Builder;->zzhrn:J
 
     cmp-long v0, v0, v2
 
@@ -132,9 +132,9 @@
 .method public setExecutionWindow(JJ)Lcom/google/android/gms/gcm/OneoffTask$Builder;
     .locals 1
 
-    iput-wide p1, p0, Lcom/google/android/gms/gcm/OneoffTask$Builder;->zzaTi:J
+    iput-wide p1, p0, Lcom/google/android/gms/gcm/OneoffTask$Builder;->zzhrm:J
 
-    iput-wide p3, p0, Lcom/google/android/gms/gcm/OneoffTask$Builder;->zzaTj:J
+    iput-wide p3, p0, Lcom/google/android/gms/gcm/OneoffTask$Builder;->zzhrn:J
 
     return-object p0
 .end method

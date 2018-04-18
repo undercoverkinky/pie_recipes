@@ -5,28 +5,24 @@
 # interfaces
 .implements Landroid/text/TextWatcher;
 .implements Landroid/view/View$OnFocusChangeListener;
-.implements Lkik/android/chat/view/v;
-.implements Lkik/core/interfaces/ah;
+.implements Lkik/android/chat/view/ac;
+.implements Lkik/core/interfaces/ai;
 
 
 # instance fields
 .field _clearSearchButton:Landroid/view/View;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f11031d
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f100393
     .end annotation
 .end field
 
 .field _searchField:Lkik/android/widget/RobotoEditTextBackHandleable;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f11031e
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f100394
     .end annotation
 .end field
 
-.field private a:Lkik/android/chat/view/v$a;
+.field private a:Lkik/android/chat/view/ac$a;
 
 
 # direct methods
@@ -34,13 +30,13 @@
     .locals 0
 
     .prologue
-    .line 30
+    .line 32
     invoke-direct {p0, p1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
-    .line 31
+    .line 33
     invoke-direct {p0, p1}, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->a(Landroid/content/Context;)V
 
-    .line 32
+    .line 34
     return-void
 .end method
 
@@ -48,13 +44,13 @@
     .locals 0
 
     .prologue
-    .line 36
+    .line 38
     invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 37
+    .line 39
     invoke-direct {p0, p1}, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->a(Landroid/content/Context;)V
 
-    .line 38
+    .line 40
     return-void
 .end method
 
@@ -62,13 +58,13 @@
     .locals 0
 
     .prologue
-    .line 42
+    .line 44
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 43
+    .line 45
     invoke-direct {p0, p1}, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->a(Landroid/content/Context;)V
 
-    .line 44
+    .line 46
     return-void
 .end method
 
@@ -76,13 +72,13 @@
     .locals 0
 
     .prologue
-    .line 48
+    .line 51
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 49
+    .line 52
     invoke-direct {p0, p1}, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->a(Landroid/content/Context;)V
 
-    .line 50
+    .line 53
     return-void
 .end method
 
@@ -90,30 +86,30 @@
     .locals 1
 
     .prologue
-    .line 54
-    const v0, 0x7f04010e
+    .line 57
+    const v0, 0x7f04014e
 
     invoke-static {p1, v0, p0}, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    .line 55
-    invoke-static {p0}, Lbutterknife/ButterKnife;->bind(Landroid/view/View;)V
+    .line 58
+    invoke-static {p0}, Lbutterknife/ButterKnife;->bind(Landroid/view/View;)Lbutterknife/Unbinder;
 
-    .line 56
+    .line 59
     iget-object v0, p0, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->_searchField:Lkik/android/widget/RobotoEditTextBackHandleable;
 
-    invoke-virtual {v0, p0}, Lkik/android/widget/RobotoEditTextBackHandleable;->a(Lkik/core/interfaces/ah;)V
+    invoke-virtual {v0, p0}, Lkik/android/widget/RobotoEditTextBackHandleable;->a(Lkik/core/interfaces/ai;)V
 
-    .line 57
+    .line 60
     iget-object v0, p0, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->_searchField:Lkik/android/widget/RobotoEditTextBackHandleable;
 
     invoke-virtual {v0, p0}, Lkik/android/widget/RobotoEditTextBackHandleable;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
-    .line 58
+    .line 61
     iget-object v0, p0, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->_searchField:Lkik/android/widget/RobotoEditTextBackHandleable;
 
     invoke-virtual {v0, p0}, Lkik/android/widget/RobotoEditTextBackHandleable;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    .line 59
+    .line 62
     return-void
 .end method
 
@@ -123,25 +119,25 @@
     .locals 2
 
     .prologue
-    .line 64
+    .line 67
     iget-object v0, p0, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->_clearSearchButton:Landroid/view/View;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 65
+    .line 68
     return-void
 .end method
 
-.method public final a(Lkik/android/chat/view/v$a;)V
+.method public final a(Lkik/android/chat/view/ac$a;)V
     .locals 0
 
     .prologue
-    .line 82
-    iput-object p1, p0, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->a:Lkik/android/chat/view/v$a;
+    .line 85
+    iput-object p1, p0, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->a:Lkik/android/chat/view/ac$a;
 
-    .line 83
+    .line 86
     return-void
 .end method
 
@@ -149,21 +145,21 @@
     .locals 2
 
     .prologue
-    .line 122
-    iget-object v0, p0, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->a:Lkik/android/chat/view/v$a;
+    .line 125
+    iget-object v0, p0, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->a:Lkik/android/chat/view/ac$a;
 
     if-eqz v0, :cond_0
 
-    .line 123
-    iget-object v0, p0, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->a:Lkik/android/chat/view/v$a;
+    .line 126
+    iget-object v0, p0, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->a:Lkik/android/chat/view/ac$a;
 
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lkik/android/chat/view/v$a;->a(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lkik/android/chat/view/ac$a;->a(Ljava/lang/String;)V
 
-    .line 125
+    .line 128
     :cond_0
     return-void
 .end method
@@ -172,14 +168,14 @@
     .locals 2
 
     .prologue
-    .line 70
+    .line 73
     iget-object v0, p0, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->_clearSearchButton:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 71
+    .line 74
     return-void
 .end method
 
@@ -187,7 +183,7 @@
     .locals 0
 
     .prologue
-    .line 111
+    .line 114
     return-void
 .end method
 
@@ -195,17 +191,17 @@
     .locals 1
 
     .prologue
-    .line 94
-    iget-object v0, p0, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->a:Lkik/android/chat/view/v$a;
+    .line 97
+    iget-object v0, p0, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->a:Lkik/android/chat/view/ac$a;
 
     if-eqz v0, :cond_0
 
-    .line 95
-    iget-object v0, p0, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->a:Lkik/android/chat/view/v$a;
+    .line 98
+    iget-object v0, p0, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->a:Lkik/android/chat/view/ac$a;
 
-    invoke-interface {v0}, Lkik/android/chat/view/v$a;->b()V
+    invoke-interface {v0}, Lkik/android/chat/view/ac$a;->b()V
 
-    .line 97
+    .line 100
     :cond_0
     return-void
 .end method
@@ -214,12 +210,12 @@
     .locals 1
 
     .prologue
-    .line 76
+    .line 79
     iget-object v0, p0, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->_searchField:Lkik/android/widget/RobotoEditTextBackHandleable;
 
     invoke-virtual {v0}, Lkik/android/widget/RobotoEditTextBackHandleable;->clearFocus()V
 
-    .line 77
+    .line 80
     return-void
 .end method
 
@@ -227,19 +223,19 @@
     .locals 2
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f11031d
+            0x7f100393
         }
     .end annotation
 
     .prologue
-    .line 88
+    .line 91
     iget-object v0, p0, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->_searchField:Lkik/android/widget/RobotoEditTextBackHandleable;
 
     const-string v1, ""
 
     invoke-virtual {v0, v1}, Lkik/android/widget/RobotoEditTextBackHandleable;->setText(Ljava/lang/CharSequence;)V
 
-    .line 89
+    .line 92
     return-void
 .end method
 
@@ -247,17 +243,17 @@
     .locals 1
 
     .prologue
-    .line 102
-    iget-object v0, p0, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->a:Lkik/android/chat/view/v$a;
+    .line 105
+    iget-object v0, p0, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->a:Lkik/android/chat/view/ac$a;
 
     if-eqz v0, :cond_0
 
-    .line 103
-    iget-object v0, p0, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->a:Lkik/android/chat/view/v$a;
+    .line 106
+    iget-object v0, p0, Lkik/android/chat/view/PhoneVerificationCountryCodeSearchViewImpl;->a:Lkik/android/chat/view/ac$a;
 
-    invoke-interface {v0, p2}, Lkik/android/chat/view/v$a;->a(Z)V
+    invoke-interface {v0, p2}, Lkik/android/chat/view/ac$a;->a(Z)V
 
-    .line 105
+    .line 108
     :cond_0
     return-void
 .end method
@@ -266,6 +262,6 @@
     .locals 0
 
     .prologue
-    .line 117
+    .line 120
     return-void
 .end method

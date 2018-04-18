@@ -3,72 +3,77 @@
 
 
 # direct methods
-.method public static zzb([Lcom/google/android/gms/common/api/Scope;)[Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "scopes can\'t be null."
-
-    invoke-static {p0, v0}, Lcom/google/android/gms/common/internal/zzaa;->zzb(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    array-length v0, p0
-
-    new-array v1, v0, [Ljava/lang/String;
-
-    const/4 v0, 0x0
-
-    :goto_0
-    array-length v2, p0
-
-    if-ge v0, v2, :cond_0
-
-    aget-object v2, p0, v0
-
-    invoke-virtual {v2}, Lcom/google/android/gms/common/api/Scope;->zzrw()Ljava/lang/String;
-
-    move-result-object v2
-
-    aput-object v2, v1, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-object v1
-.end method
-
-.method public static zzc(Ljava/util/Set;)[Ljava/lang/String;
+.method public static zzb(Landroid/content/Context;ILjava/lang/String;)Z
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Set",
-            "<",
-            "Lcom/google/android/gms/common/api/Scope;",
-            ">;)[",
-            "Ljava/lang/String;"
-        }
+    .annotation build Landroid/annotation/TargetApi;
+        value = 0x13
     .end annotation
 
-    const-string v0, "scopes can\'t be null."
+    invoke-static {p0}, Lcom/google/android/gms/internal/zzbdp;->zzcs(Landroid/content/Context;)Lcom/google/android/gms/internal/zzbdo;
 
-    invoke-static {p0, v0}, Lcom/google/android/gms/common/internal/zzaa;->zzb(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v0
 
-    invoke-interface {p0}, Ljava/util/Set;->size()I
+    invoke-virtual {v0, p1, p2}, Lcom/google/android/gms/internal/zzbdo;->zzf(ILjava/lang/String;)Z
 
     move-result v0
 
-    new-array v0, v0, [Lcom/google/android/gms/common/api/Scope;
+    return v0
+.end method
 
-    invoke-interface {p0, v0}, Ljava/util/Set;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+.method public static zzf(Landroid/content/Context;I)Z
+    .locals 4
+
+    const/4 v0, 0x0
+
+    const-string v1, "com.google.android.gms"
+
+    invoke-static {p0, p1, v1}, Lcom/google/android/gms/common/util/zzv;->zzb(Landroid/content/Context;ILjava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v1
+
+    :try_start_0
+    const-string v2, "com.google.android.gms"
+
+    const/16 v3, 0x40
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
-    check-cast v0, [Lcom/google/android/gms/common/api/Scope;
+    invoke-static {p0}, Lcom/google/android/gms/common/zzp;->zzca(Landroid/content/Context;)Lcom/google/android/gms/common/zzp;
 
-    invoke-static {v0}, Lcom/google/android/gms/common/util/zzv;->zzb([Lcom/google/android/gms/common/api/Scope;)[Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    return-object v0
+    move-result-object v2
+
+    invoke-virtual {v1, v2, v0}, Lcom/google/android/gms/common/zzp;->zza(Landroid/content/pm/PackageManager;Landroid/content/pm/PackageInfo;)Z
+
+    move-result v0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    const-string v1, "UidVerifier"
+
+    const/4 v2, 0x3
+
+    invoke-static {v1, v2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    goto :goto_0
 .end method

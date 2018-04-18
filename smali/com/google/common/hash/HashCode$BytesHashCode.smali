@@ -30,11 +30,11 @@
     .locals 1
 
     .prologue
-    .line 260
+    .line 262
     invoke-direct {p0}, Lcom/google/common/hash/HashCode;-><init>()V
 
-    .line 261
-    invoke-static {p1}, Lcom/google/common/base/h;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 263
+    invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -42,7 +42,7 @@
 
     iput-object v0, p0, Lcom/google/common/hash/HashCode$BytesHashCode;->bytes:[B
 
-    .line 262
+    .line 264
     return-void
 .end method
 
@@ -52,7 +52,7 @@
     .locals 1
 
     .prologue
-    .line 266
+    .line 268
     iget-object v0, p0, Lcom/google/common/hash/HashCode$BytesHashCode;->bytes:[B
 
     array-length v0, v0
@@ -63,32 +63,88 @@
 .end method
 
 .method final a(Lcom/google/common/hash/HashCode;)Z
-    .locals 2
+    .locals 6
 
     .prologue
-    .line 312
+    const/4 v3, 0x1
+
+    const/4 v1, 0x0
+
+    .line 320
     iget-object v0, p0, Lcom/google/common/hash/HashCode$BytesHashCode;->bytes:[B
+
+    array-length v0, v0
 
     invoke-virtual {p1}, Lcom/google/common/hash/HashCode;->e()[B
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-static {v0, v1}, Ljava/security/MessageDigest;->isEqual([B[B)Z
+    array-length v2, v2
 
-    move-result v0
+    if-eq v0, v2, :cond_0
 
-    return v0
+    .line 328
+    :goto_0
+    return v1
+
+    :cond_0
+    move v0, v1
+
+    move v2, v3
+
+    .line 325
+    :goto_1
+    iget-object v4, p0, Lcom/google/common/hash/HashCode$BytesHashCode;->bytes:[B
+
+    array-length v4, v4
+
+    if-ge v0, v4, :cond_2
+
+    .line 326
+    iget-object v4, p0, Lcom/google/common/hash/HashCode$BytesHashCode;->bytes:[B
+
+    aget-byte v4, v4, v0
+
+    invoke-virtual {p1}, Lcom/google/common/hash/HashCode;->e()[B
+
+    move-result-object v5
+
+    aget-byte v5, v5, v0
+
+    if-ne v4, v5, :cond_1
+
+    move v4, v3
+
+    :goto_2
+    and-int/2addr v2, v4
+
+    .line 325
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    move v4, v1
+
+    .line 326
+    goto :goto_2
+
+    :cond_2
+    move v1, v2
+
+    .line 328
+    goto :goto_0
 .end method
 
 .method public final b()I
-    .locals 6
+    .locals 5
 
     .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 276
+    .line 278
     iget-object v0, p0, Lcom/google/common/hash/HashCode$BytesHashCode;->bytes:[B
 
     array-length v0, v0
@@ -102,21 +158,13 @@
     :goto_0
     const-string v3, "HashCode#asInt() requires >= 4 bytes (it only has %s bytes)."
 
-    new-array v4, v1, [Ljava/lang/Object;
+    iget-object v4, p0, Lcom/google/common/hash/HashCode$BytesHashCode;->bytes:[B
 
-    iget-object v5, p0, Lcom/google/common/hash/HashCode$BytesHashCode;->bytes:[B
+    array-length v4, v4
 
-    array-length v5, v5
+    invoke-static {v0, v3, v4}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/String;I)V
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v4, v2
-
-    invoke-static {v0, v3, v4}, Lcom/google/common/base/h;->b(ZLjava/lang/String;[Ljava/lang/Object;)V
-
-    .line 278
+    .line 282
     iget-object v0, p0, Lcom/google/common/hash/HashCode$BytesHashCode;->bytes:[B
 
     aget-byte v0, v0, v2
@@ -162,7 +210,7 @@
     :cond_0
     move v0, v2
 
-    .line 276
+    .line 278
     goto :goto_0
 .end method
 
@@ -176,7 +224,7 @@
 
     const/4 v2, 0x0
 
-    .line 286
+    .line 290
     iget-object v0, p0, Lcom/google/common/hash/HashCode$BytesHashCode;->bytes:[B
 
     array-length v0, v0
@@ -188,21 +236,13 @@
     :goto_0
     const-string v3, "HashCode#asLong() requires >= 8 bytes (it only has %s bytes)."
 
-    new-array v4, v1, [Ljava/lang/Object;
+    iget-object v4, p0, Lcom/google/common/hash/HashCode$BytesHashCode;->bytes:[B
 
-    iget-object v5, p0, Lcom/google/common/hash/HashCode$BytesHashCode;->bytes:[B
+    array-length v4, v4
 
-    array-length v5, v5
+    invoke-static {v0, v3, v4}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/String;I)V
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v4, v2
-
-    invoke-static {v0, v3, v4}, Lcom/google/common/base/h;->b(ZLjava/lang/String;[Ljava/lang/Object;)V
-
-    .line 1293
+    .line 1299
     iget-object v0, p0, Lcom/google/common/hash/HashCode$BytesHashCode;->bytes:[B
 
     aget-byte v0, v0, v2
@@ -211,7 +251,7 @@
 
     int-to-long v2, v0
 
-    .line 1294
+    .line 1300
     :goto_1
     iget-object v0, p0, Lcom/google/common/hash/HashCode$BytesHashCode;->bytes:[B
 
@@ -223,7 +263,7 @@
 
     if-ge v1, v0, :cond_1
 
-    .line 1295
+    .line 1301
     iget-object v0, p0, Lcom/google/common/hash/HashCode$BytesHashCode;->bytes:[B
 
     aget-byte v0, v0, v1
@@ -240,7 +280,7 @@
 
     or-long/2addr v2, v4
 
-    .line 1294
+    .line 1300
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
@@ -248,10 +288,10 @@
     :cond_0
     move v0, v2
 
-    .line 286
+    .line 290
     goto :goto_0
 
-    .line 288
+    .line 294
     :cond_1
     return-wide v2
 .end method
@@ -260,7 +300,7 @@
     .locals 1
 
     .prologue
-    .line 271
+    .line 273
     iget-object v0, p0, Lcom/google/common/hash/HashCode$BytesHashCode;->bytes:[B
 
     invoke-virtual {v0}, [B->clone()Ljava/lang/Object;
@@ -276,7 +316,7 @@
     .locals 1
 
     .prologue
-    .line 307
+    .line 313
     iget-object v0, p0, Lcom/google/common/hash/HashCode$BytesHashCode;->bytes:[B
 
     return-object v0

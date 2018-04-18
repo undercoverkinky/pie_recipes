@@ -3,12 +3,18 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0xf
+.end annotation
+
+
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 21
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,7 +24,7 @@
     .locals 1
 
     .prologue
-    .line 24
+    .line 28
     invoke-static {p0, p1}, Landroid/content/Intent;->makeMainSelectorActivity(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v0

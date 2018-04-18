@@ -58,9 +58,11 @@
 
 .field private j:J
 
-.field private k:Ljava/lang/Double;
+.field private k:Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;
 
-.field private l:Lio/branch/referral/util/CurrencyType;
+.field private l:Ljava/lang/Double;
+
+.field private m:Lio/branch/referral/util/CurrencyType;
 
 
 # direct methods
@@ -68,7 +70,7 @@
     .locals 1
 
     .prologue
-    .line 828
+    .line 894
     new-instance v0, Lio/branch/indexing/BranchUniversalObject$1;
 
     invoke-direct {v0}, Lio/branch/indexing/BranchUniversalObject$1;-><init>()V
@@ -82,64 +84,69 @@
     .locals 2
 
     .prologue
-    .line 79
+    .line 81
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 80
+    .line 82
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->f:Ljava/util/HashMap;
 
-    .line 81
+    .line 83
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->i:Ljava/util/ArrayList;
 
-    .line 82
+    .line 84
     const-string v0, ""
 
     iput-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->a:Ljava/lang/String;
 
-    .line 83
+    .line 85
     const-string v0, ""
 
     iput-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->b:Ljava/lang/String;
 
-    .line 84
+    .line 86
     const-string v0, ""
 
     iput-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->c:Ljava/lang/String;
 
-    .line 85
+    .line 87
     const-string v0, ""
 
     iput-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->d:Ljava/lang/String;
 
-    .line 86
+    .line 88
     const-string v0, ""
 
     iput-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->g:Ljava/lang/String;
 
-    .line 87
+    .line 89
     sget-object v0, Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;->PUBLIC:Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;
 
     iput-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->h:Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;
 
-    .line 88
+    .line 90
+    sget-object v0, Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;->PUBLIC:Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;
+
+    iput-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->k:Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;
+
+    .line 91
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lio/branch/indexing/BranchUniversalObject;->j:J
 
-    .line 89
+    .line 92
     sget-object v0, Lio/branch/referral/util/CurrencyType;->USD:Lio/branch/referral/util/CurrencyType;
 
-    iput-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->l:Lio/branch/referral/util/CurrencyType;
+    iput-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->m:Lio/branch/referral/util/CurrencyType;
 
-    .line 90
+    .line 93
     return-void
 .end method
 
@@ -147,59 +154,59 @@
     .locals 5
 
     .prologue
-    .line 862
+    .line 929
     invoke-direct {p0}, Lio/branch/indexing/BranchUniversalObject;-><init>()V
 
-    .line 863
+    .line 930
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->a:Ljava/lang/String;
 
-    .line 864
+    .line 931
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->b:Ljava/lang/String;
 
-    .line 865
+    .line 932
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->c:Ljava/lang/String;
 
-    .line 866
+    .line 933
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->d:Ljava/lang/String;
 
-    .line 867
+    .line 934
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->e:Ljava/lang/String;
 
-    .line 868
+    .line 935
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->g:Ljava/lang/String;
 
-    .line 869
+    .line 936
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lio/branch/indexing/BranchUniversalObject;->j:J
 
-    .line 870
+    .line 937
     invoke-static {}, Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;->values()[Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;
 
     move-result-object v0
@@ -212,7 +219,20 @@
 
     iput-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->h:Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;
 
-    .line 871
+    .line 938
+    invoke-static {}, Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;->values()[Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    aget-object v0, v0, v1
+
+    iput-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->k:Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;
+
+    .line 939
     invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
 
     move-result-wide v0
@@ -221,10 +241,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->k:Ljava/lang/Double;
+    iput-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->l:Ljava/lang/Double;
 
-    .line 872
-    iget-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->k:Ljava/lang/Double;
+    .line 940
+    iget-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->l:Ljava/lang/Double;
 
     invoke-virtual {v0}, Ljava/lang/Double;->doubleValue()D
 
@@ -236,12 +256,12 @@
 
     if-gez v0, :cond_0
 
-    .line 873
+    .line 941
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->k:Ljava/lang/Double;
+    iput-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->l:Ljava/lang/Double;
 
-    .line 875
+    .line 943
     :cond_0
     invoke-static {}, Lio/branch/referral/util/CurrencyType;->values()[Lio/branch/referral/util/CurrencyType;
 
@@ -253,32 +273,32 @@
 
     aget-object v0, v0, v1
 
-    iput-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->l:Lio/branch/referral/util/CurrencyType;
+    iput-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->m:Lio/branch/referral/util/CurrencyType;
 
-    .line 877
+    .line 945
     invoke-virtual {p1}, Landroid/os/Parcel;->readSerializable()Ljava/io/Serializable;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/ArrayList;
 
-    .line 878
+    .line 946
     iget-object v1, p0, Lio/branch/indexing/BranchUniversalObject;->i:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 879
+    .line 947
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 880
+    .line 948
     const/4 v0, 0x0
 
     :goto_0
     if-ge v0, v1, :cond_1
 
-    .line 881
+    .line 949
     iget-object v2, p0, Lio/branch/indexing/BranchUniversalObject;->f:Ljava/util/HashMap;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -291,12 +311,12 @@
 
     invoke-virtual {v2, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 880
+    .line 948
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 883
+    .line 951
     :cond_1
     return-void
 .end method
@@ -317,7 +337,7 @@
     .locals 1
 
     .prologue
-    .line 825
+    .line 891
     const/4 v0, 0x0
 
     return v0
@@ -327,42 +347,42 @@
     .locals 3
 
     .prologue
-    .line 840
+    .line 906
     iget-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->a:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 841
+    .line 907
     iget-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->b:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 842
+    .line 908
     iget-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->c:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 843
+    .line 909
     iget-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->d:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 844
+    .line 910
     iget-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->e:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 845
+    .line 911
     iget-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->g:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 846
+    .line 912
     iget-wide v0, p0, Lio/branch/indexing/BranchUniversalObject;->j:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 847
+    .line 913
     iget-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->h:Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;
 
     invoke-virtual {v0}, Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;->ordinal()I
@@ -371,23 +391,32 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 848
-    iget-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->k:Ljava/lang/Double;
+    .line 914
+    iget-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->k:Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;
+
+    invoke-virtual {v0}, Lio/branch/indexing/BranchUniversalObject$CONTENT_INDEX_MODE;->ordinal()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 915
+    iget-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->l:Ljava/lang/Double;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->k:Ljava/lang/Double;
+    iget-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->l:Ljava/lang/Double;
 
     invoke-virtual {v0}, Ljava/lang/Double;->doubleValue()D
 
     move-result-wide v0
 
-    .line 849
+    .line 916
     :goto_0
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    .line 850
-    iget-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->l:Lio/branch/referral/util/CurrencyType;
+    .line 917
+    iget-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->m:Lio/branch/referral/util/CurrencyType;
 
     invoke-virtual {v0}, Lio/branch/referral/util/CurrencyType;->ordinal()I
 
@@ -395,22 +424,22 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 851
+    .line 918
     iget-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->i:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
 
-    .line 853
+    .line 920
     iget-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->f:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->size()I
 
     move-result v0
 
-    .line 854
+    .line 921
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 855
+    .line 922
     iget-object v0, p0, Lio/branch/indexing/BranchUniversalObject;->f:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -436,7 +465,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 856
+    .line 923
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -445,7 +474,7 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 857
+    .line 924
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -456,13 +485,13 @@
 
     goto :goto_1
 
-    .line 848
+    .line 915
     :cond_0
     const-wide/high16 v0, -0x4010000000000000L    # -1.0
 
     goto :goto_0
 
-    .line 859
+    .line 926
     :cond_1
     return-void
 .end method

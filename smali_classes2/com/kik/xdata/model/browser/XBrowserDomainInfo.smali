@@ -87,25 +87,6 @@
 
 
 # virtual methods
-.method public final a()Lcom/dyuproject/protostuff/u;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/dyuproject/protostuff/u",
-            "<",
-            "Lcom/kik/xdata/model/browser/XBrowserDomainInfo;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 121
-    sget-object v0, Lcom/kik/xdata/model/browser/XBrowserDomainInfo;->b:Lcom/dyuproject/protostuff/u;
-
-    return-object v0
-.end method
-
 .method public final a(Lcom/kik/xdata/model/browser/XBrowserAnonymousKey;)Lcom/kik/xdata/model/browser/XBrowserDomainInfo;
     .locals 0
 
@@ -149,7 +130,7 @@
     return-object p0
 .end method
 
-.method public final b()Ljava/util/List;
+.method public final a()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -168,12 +149,31 @@
     return-object v0
 .end method
 
-.method public final c()Lcom/kik/xdata/model/browser/XBrowserAnonymousKey;
+.method public final b()Lcom/kik/xdata/model/browser/XBrowserAnonymousKey;
     .locals 1
 
     .prologue
     .line 96
     iget-object v0, p0, Lcom/kik/xdata/model/browser/XBrowserDomainInfo;->anonymousKey:Lcom/kik/xdata/model/browser/XBrowserAnonymousKey;
+
+    return-object v0
+.end method
+
+.method public final cachedSchema()Lcom/dyuproject/protostuff/u;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/dyuproject/protostuff/u",
+            "<",
+            "Lcom/kik/xdata/model/browser/XBrowserDomainInfo;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 121
+    sget-object v0, Lcom/kik/xdata/model/browser/XBrowserDomainInfo;->b:Lcom/dyuproject/protostuff/u;
 
     return-object v0
 .end method

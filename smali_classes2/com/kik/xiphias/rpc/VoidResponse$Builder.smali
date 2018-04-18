@@ -716,6 +716,7 @@
     .line 313
     invoke-virtual {p0, v1}, Lcom/kik/xiphias/rpc/VoidResponse$Builder;->mergeFrom(Lcom/kik/xiphias/rpc/VoidResponse;)Lcom/kik/xiphias/rpc/VoidResponse$Builder;
 
+    .line 315
     :cond_1
     throw v0
 

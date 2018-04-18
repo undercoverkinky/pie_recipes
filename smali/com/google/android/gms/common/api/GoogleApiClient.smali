@@ -17,7 +17,7 @@
 
 .field public static final SIGN_IN_MODE_REQUIRED:I = 0x1
 
-.field private static final zzalc:Ljava/util/Set;
+.field private static final zzfgu:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set",
@@ -41,7 +41,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/google/android/gms/common/api/GoogleApiClient;->zzalc:Ljava/util/Set;
+    sput-object v0, Lcom/google/android/gms/common/api/GoogleApiClient;->zzfgu:Ljava/util/Set;
 
     return-void
 .end method
@@ -57,7 +57,7 @@
 .method public static dumpAll(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 7
 
-    sget-object v3, Lcom/google/android/gms/common/api/GoogleApiClient;->zzalc:Ljava/util/Set;
+    sget-object v3, Lcom/google/android/gms/common/api/GoogleApiClient;->zzfgu:Ljava/util/Set;
 
     monitor-enter v3
 
@@ -74,7 +74,7 @@
 
     move-result-object v4
 
-    sget-object v1, Lcom/google/android/gms/common/api/GoogleApiClient;->zzalc:Ljava/util/Set;
+    sget-object v1, Lcom/google/android/gms/common/api/GoogleApiClient;->zzfgu:Ljava/util/Set;
 
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -130,7 +130,7 @@
     throw v0
 .end method
 
-.method public static zzrq()Ljava/util/Set;
+.method public static zzafn()Ljava/util/Set;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -142,12 +142,12 @@
         }
     .end annotation
 
-    sget-object v1, Lcom/google/android/gms/common/api/GoogleApiClient;->zzalc:Ljava/util/Set;
+    sget-object v1, Lcom/google/android/gms/common/api/GoogleApiClient;->zzfgu:Ljava/util/Set;
 
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/google/android/gms/common/api/GoogleApiClient;->zzalc:Ljava/util/Set;
+    sget-object v0, Lcom/google/android/gms/common/api/GoogleApiClient;->zzfgu:Ljava/util/Set;
 
     monitor-exit v1
 
@@ -163,10 +163,10 @@
     throw v0
 .end method
 
-.method static synthetic zzrs()Ljava/util/Set;
+.method static synthetic zzafp()Ljava/util/Set;
     .locals 1
 
-    sget-object v0, Lcom/google/android/gms/common/api/GoogleApiClient;->zzalc:Ljava/util/Set;
+    sget-object v0, Lcom/google/android/gms/common/api/GoogleApiClient;->zzfgu:Ljava/util/Set;
 
     return-object v0
 .end method
@@ -300,7 +300,7 @@
     throw v0
 .end method
 
-.method public zza(Lcom/google/android/gms/internal/zzpe;)V
+.method public zza(Lcom/google/android/gms/common/api/internal/zzdf;)V
     .locals 1
 
     new-instance v0, Ljava/lang/UnsupportedOperationException;
@@ -327,7 +327,7 @@
     throw v0
 .end method
 
-.method public zza(Lcom/google/android/gms/internal/zzpa;)Z
+.method public zza(Lcom/google/android/gms/common/api/internal/zzcv;)Z
     .locals 1
 
     new-instance v0, Ljava/lang/UnsupportedOperationException;
@@ -337,7 +337,7 @@
     throw v0
 .end method
 
-.method public zzb(Lcom/google/android/gms/internal/zzpe;)V
+.method public zzafo()V
     .locals 1
 
     new-instance v0, Ljava/lang/UnsupportedOperationException;
@@ -347,7 +347,17 @@
     throw v0
 .end method
 
-.method public zzc(Lcom/google/android/gms/internal/zznt$zza;)Lcom/google/android/gms/internal/zznt$zza;
+.method public zzb(Lcom/google/android/gms/common/api/internal/zzdf;)V
+    .locals 1
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public zzd(Lcom/google/android/gms/common/api/internal/zzm;)Lcom/google/android/gms/common/api/internal/zzm;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -356,7 +366,7 @@
             "R::",
             "Lcom/google/android/gms/common/api/Result;",
             "T:",
-            "Lcom/google/android/gms/internal/zznt$zza",
+            "Lcom/google/android/gms/common/api/internal/zzm",
             "<TR;TA;>;>(TT;)TT;"
         }
     .end annotation
@@ -368,14 +378,14 @@
     throw v0
 .end method
 
-.method public zzd(Lcom/google/android/gms/internal/zznt$zza;)Lcom/google/android/gms/internal/zznt$zza;
+.method public zze(Lcom/google/android/gms/common/api/internal/zzm;)Lcom/google/android/gms/common/api/internal/zzm;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<A::",
             "Lcom/google/android/gms/common/api/Api$zzb;",
             "T:",
-            "Lcom/google/android/gms/internal/zznt$zza",
+            "Lcom/google/android/gms/common/api/internal/zzm",
             "<+",
             "Lcom/google/android/gms/common/api/Result;",
             "TA;>;>(TT;)TT;"
@@ -389,17 +399,7 @@
     throw v0
 .end method
 
-.method public zzrr()V
-    .locals 1
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public zzs(Ljava/lang/Object;)Lcom/google/android/gms/internal/zzou;
+.method public zzp(Ljava/lang/Object;)Lcom/google/android/gms/common/api/internal/zzcj;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -408,7 +408,7 @@
             ">(T",
             "L;",
             ")",
-            "Lcom/google/android/gms/internal/zzou",
+            "Lcom/google/android/gms/common/api/internal/zzcj",
             "<T",
             "L;",
             ">;"

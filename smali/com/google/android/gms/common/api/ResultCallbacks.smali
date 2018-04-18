@@ -34,6 +34,9 @@
 
 .method public final onResult(Lcom/google/android/gms/common/api/Result;)V
     .locals 6
+    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TR;)V"
@@ -85,23 +88,23 @@
 
     move-result-object v3
 
-    new-instance v4, Ljava/lang/StringBuilder;
-
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-virtual {v5}, Ljava/lang/String;->length()I
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
 
-    move-result v5
+    move-result v4
 
-    add-int/lit8 v5, v5, 0x12
+    add-int/lit8 v4, v4, 0x12
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(I)V
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    const-string v5, "Unable to release "
+    invoke-direct {v5, v4}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v4, "Unable to release "
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
 

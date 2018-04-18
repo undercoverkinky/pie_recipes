@@ -27,6 +27,10 @@
 
 .field public static final enum VIDEOCHAT_BTNUNMUTE_TAP:Lcom/rounds/kik/analytics/group/conference/ConferenceWithParticipantEvents;
 
+.field public static final enum VIDEOCHAT_FULLSCREEN_MUTE_TAP:Lcom/rounds/kik/analytics/group/conference/ConferenceWithParticipantEvents;
+
+.field public static final enum VIDEOCHAT_FULLSCREEN_UNMUTE_TAP:Lcom/rounds/kik/analytics/group/conference/ConferenceWithParticipantEvents;
+
 
 # instance fields
 .field private final mEventName:Ljava/lang/String;
@@ -34,9 +38,13 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 7
 
     .prologue
+    const/4 v6, 0x3
+
+    const/4 v5, 0x2
+
     const/4 v4, 0x1
 
     const/4 v3, 0x0
@@ -63,8 +71,30 @@
 
     sput-object v0, Lcom/rounds/kik/analytics/group/conference/ConferenceWithParticipantEvents;->VIDEOCHAT_BTNUNMUTE_TAP:Lcom/rounds/kik/analytics/group/conference/ConferenceWithParticipantEvents;
 
+    .line 15
+    new-instance v0, Lcom/rounds/kik/analytics/group/conference/ConferenceWithParticipantEvents;
+
+    const-string v1, "VIDEOCHAT_FULLSCREEN_MUTE_TAP"
+
+    const-string v2, "videochat_fullscreen_mute_tap"
+
+    invoke-direct {v0, v1, v5, v2}, Lcom/rounds/kik/analytics/group/conference/ConferenceWithParticipantEvents;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/rounds/kik/analytics/group/conference/ConferenceWithParticipantEvents;->VIDEOCHAT_FULLSCREEN_MUTE_TAP:Lcom/rounds/kik/analytics/group/conference/ConferenceWithParticipantEvents;
+
+    .line 16
+    new-instance v0, Lcom/rounds/kik/analytics/group/conference/ConferenceWithParticipantEvents;
+
+    const-string v1, "VIDEOCHAT_FULLSCREEN_UNMUTE_TAP"
+
+    const-string v2, "videochat_fullscreen_unmute_tap"
+
+    invoke-direct {v0, v1, v6, v2}, Lcom/rounds/kik/analytics/group/conference/ConferenceWithParticipantEvents;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/rounds/kik/analytics/group/conference/ConferenceWithParticipantEvents;->VIDEOCHAT_FULLSCREEN_UNMUTE_TAP:Lcom/rounds/kik/analytics/group/conference/ConferenceWithParticipantEvents;
+
     .line 11
-    const/4 v0, 0x2
+    const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/rounds/kik/analytics/group/conference/ConferenceWithParticipantEvents;
 
@@ -75,6 +105,14 @@
     sget-object v1, Lcom/rounds/kik/analytics/group/conference/ConferenceWithParticipantEvents;->VIDEOCHAT_BTNUNMUTE_TAP:Lcom/rounds/kik/analytics/group/conference/ConferenceWithParticipantEvents;
 
     aput-object v1, v0, v4
+
+    sget-object v1, Lcom/rounds/kik/analytics/group/conference/ConferenceWithParticipantEvents;->VIDEOCHAT_FULLSCREEN_MUTE_TAP:Lcom/rounds/kik/analytics/group/conference/ConferenceWithParticipantEvents;
+
+    aput-object v1, v0, v5
+
+    sget-object v1, Lcom/rounds/kik/analytics/group/conference/ConferenceWithParticipantEvents;->VIDEOCHAT_FULLSCREEN_UNMUTE_TAP:Lcom/rounds/kik/analytics/group/conference/ConferenceWithParticipantEvents;
+
+    aput-object v1, v0, v6
 
     sput-object v0, Lcom/rounds/kik/analytics/group/conference/ConferenceWithParticipantEvents;->$VALUES:[Lcom/rounds/kik/analytics/group/conference/ConferenceWithParticipantEvents;
 
@@ -92,13 +130,13 @@
     .end annotation
 
     .prologue
-    .line 19
+    .line 21
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 20
+    .line 22
     iput-object p3, p0, Lcom/rounds/kik/analytics/group/conference/ConferenceWithParticipantEvents;->mEventName:Ljava/lang/String;
 
-    .line 21
+    .line 23
     return-void
 .end method
 
@@ -149,7 +187,7 @@
     .end annotation
 
     .prologue
-    .line 25
+    .line 27
     iget-object v0, p0, Lcom/rounds/kik/analytics/group/conference/ConferenceWithParticipantEvents;->mEventName:Ljava/lang/String;
 
     const-class v1, Lcom/rounds/kik/analytics/group/conference/ConferenceWithParticipantEvents$Builder;

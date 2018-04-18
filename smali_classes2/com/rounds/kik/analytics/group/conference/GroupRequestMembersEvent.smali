@@ -37,7 +37,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 14
+    .line 15
     new-instance v0, Lcom/rounds/kik/analytics/group/conference/GroupRequestMembersEvent;
 
     const-string v1, "VIDEOCHAT_PROFILETAP_TAP"
@@ -73,13 +73,13 @@
     .end annotation
 
     .prologue
-    .line 19
+    .line 20
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 20
+    .line 21
     iput-object p3, p0, Lcom/rounds/kik/analytics/group/conference/GroupRequestMembersEvent;->mEventName:Ljava/lang/String;
 
-    .line 21
+    .line 22
     return-void
 .end method
 
@@ -130,7 +130,7 @@
     .end annotation
 
     .prologue
-    .line 25
+    .line 26
     iget-object v0, p0, Lcom/rounds/kik/analytics/group/conference/GroupRequestMembersEvent;->mEventName:Ljava/lang/String;
 
     const-class v1, Lcom/rounds/kik/analytics/group/conference/GroupRequestMembersEvent$Builder;

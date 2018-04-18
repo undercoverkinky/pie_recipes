@@ -13,18 +13,14 @@
 
 # instance fields
 .field protected _errorRefreshButton:Landroid/widget/Button;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f110396
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f100409
     .end annotation
 .end field
 
 .field protected _errorView:Landroid/view/View;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f11030a
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f100381
     .end annotation
 .end field
 
@@ -56,7 +52,7 @@
 
     .prologue
     .line 87
-    const v0, 0x7f040101
+    const v0, 0x7f040132
 
     return v0
 .end method
@@ -99,7 +95,7 @@
 
     aput-object v2, v0, v1
 
-    invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->d([Landroid/view/View;)V
 
     .line 70
     return-void
@@ -120,13 +116,13 @@
 
     aput-object v2, v0, v1
 
-    invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->g([Landroid/view/View;)V
 
     .line 76
     return-void
 .end method
 
-.method protected final f_()V
+.method protected final e()V
     .locals 2
 
     .prologue
@@ -176,7 +172,7 @@
     .line 38
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/kik/cards/browser/OnDemandCaptchaFragment;->d(I)V
+    invoke-virtual {p0, v0}, Lcom/kik/cards/browser/OnDemandCaptchaFragment;->setScreenOrientation(I)V
 
     .line 39
     invoke-super {p0, p1, p2, p3}, Lcom/kik/cards/browser/CaptchaWindowFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
@@ -196,7 +192,7 @@
     .line 54
     const/4 v0, -0x1
 
-    invoke-virtual {p0, v0}, Lcom/kik/cards/browser/OnDemandCaptchaFragment;->d(I)V
+    invoke-virtual {p0, v0}, Lcom/kik/cards/browser/OnDemandCaptchaFragment;->setScreenOrientation(I)V
 
     .line 55
     return-void
@@ -210,7 +206,7 @@
     invoke-super {p0, p1, p2}, Lcom/kik/cards/browser/CaptchaWindowFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 46
-    invoke-static {p0, p1}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)V
+    invoke-static {p0, p1}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)Lbutterknife/Unbinder;
 
     .line 1092
     iget-object v0, p0, Lcom/kik/cards/browser/OnDemandCaptchaFragment;->_errorRefreshButton:Landroid/widget/Button;

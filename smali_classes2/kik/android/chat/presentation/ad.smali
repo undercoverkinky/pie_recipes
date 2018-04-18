@@ -4,13 +4,13 @@
 
 # interfaces
 .implements Lkik/android/chat/presentation/ac;
-.implements Lkik/android/widget/bl$a;
+.implements Lkik/android/chat/view/aj$a;
 
 
 # instance fields
-.field private a:Lkik/android/widget/bl;
+.field private a:Lkik/android/chat/presentation/ac$a;
 
-.field private b:Lkik/android/widget/bl$a;
+.field private b:Lkik/android/chat/view/aj;
 
 
 # direct methods
@@ -18,10 +18,9 @@
     .locals 0
 
     .prologue
-    .line 14
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     return-void
 .end method
 
@@ -31,98 +30,167 @@
     .locals 1
 
     .prologue
-    .line 46
-    iget-object v0, p0, Lkik/android/chat/presentation/ad;->b:Lkik/android/widget/bl$a;
+    .line 76
+    iget-object v0, p0, Lkik/android/chat/presentation/ad;->a:Lkik/android/chat/presentation/ac$a;
 
-    invoke-interface {v0}, Lkik/android/widget/bl$a;->a()V
+    if-eqz v0, :cond_0
 
-    .line 47
-    iget-object v0, p0, Lkik/android/chat/presentation/ad;->a:Lkik/android/widget/bl;
+    .line 77
+    iget-object v0, p0, Lkik/android/chat/presentation/ad;->a:Lkik/android/chat/presentation/ac$a;
 
-    invoke-interface {v0}, Lkik/android/widget/bl;->c()V
+    invoke-interface {v0}, Lkik/android/chat/presentation/ac$a;->e()V
 
-    .line 48
+    .line 79
+    :cond_0
     return-void
 .end method
 
 .method public final bridge synthetic a(Ljava/lang/Object;)V
-    .locals 1
-
-    .prologue
-    .line 8
-    check-cast p1, Lkik/android/widget/bl;
-
-    .line 1020
-    iput-object p1, p0, Lkik/android/chat/presentation/ad;->a:Lkik/android/widget/bl;
-
-    .line 1021
-    iget-object v0, p0, Lkik/android/chat/presentation/ad;->a:Lkik/android/widget/bl;
-
-    invoke-interface {v0, p0}, Lkik/android/widget/bl;->a(Lkik/android/widget/bl$a;)V
-
-    .line 8
-    return-void
-.end method
-
-.method public final a(Lkik/android/widget/bl$a;)V
     .locals 0
 
     .prologue
-    .line 34
-    iput-object p1, p0, Lkik/android/chat/presentation/ad;->b:Lkik/android/widget/bl$a;
+    .line 8
+    check-cast p1, Lkik/android/chat/view/aj;
 
-    .line 35
+    .line 1016
+    iput-object p1, p0, Lkik/android/chat/presentation/ad;->b:Lkik/android/chat/view/aj;
+
+    .line 1017
+    invoke-interface {p1, p0}, Lkik/android/chat/view/aj;->a(Lkik/android/chat/view/aj$a;)V
+
+    .line 8
     return-void
 .end method
 
-.method public final aA_()V
+.method public final a(Ljava/lang/String;)V
     .locals 1
 
     .prologue
-    .line 53
-    iget-object v0, p0, Lkik/android/chat/presentation/ad;->b:Lkik/android/widget/bl$a;
+    .line 68
+    iget-object v0, p0, Lkik/android/chat/presentation/ad;->a:Lkik/android/chat/presentation/ac$a;
 
-    invoke-interface {v0}, Lkik/android/widget/bl$a;->aA_()V
+    if-eqz v0, :cond_0
 
-    .line 54
-    iget-object v0, p0, Lkik/android/chat/presentation/ad;->a:Lkik/android/widget/bl;
+    .line 69
+    iget-object v0, p0, Lkik/android/chat/presentation/ad;->a:Lkik/android/chat/presentation/ac$a;
 
-    invoke-interface {v0}, Lkik/android/widget/bl;->d()V
+    invoke-interface {v0, p1}, Lkik/android/chat/presentation/ac$a;->b(Ljava/lang/String;)V
 
-    .line 55
+    .line 71
+    :cond_0
     return-void
 .end method
 
-.method public final aB_()V
+.method public final a(Lkik/android/chat/presentation/ac$a;)V
+    .locals 0
+
+    .prologue
+    .line 32
+    iput-object p1, p0, Lkik/android/chat/presentation/ad;->a:Lkik/android/chat/presentation/ac$a;
+
+    .line 33
+    return-void
+.end method
+
+.method public final a(Z)V
     .locals 1
 
     .prologue
     .line 60
-    iget-object v0, p0, Lkik/android/chat/presentation/ad;->b:Lkik/android/widget/bl$a;
+    iget-object v0, p0, Lkik/android/chat/presentation/ad;->a:Lkik/android/chat/presentation/ac$a;
 
-    invoke-interface {v0}, Lkik/android/widget/bl$a;->aB_()V
+    if-eqz v0, :cond_0
 
     .line 61
-    iget-object v0, p0, Lkik/android/chat/presentation/ad;->a:Lkik/android/widget/bl;
+    iget-object v0, p0, Lkik/android/chat/presentation/ad;->a:Lkik/android/chat/presentation/ac$a;
 
-    invoke-interface {v0}, Lkik/android/widget/bl;->e()V
+    invoke-interface {v0, p1}, Lkik/android/chat/presentation/ac$a;->a(Z)V
 
-    .line 62
+    .line 63
+    :cond_0
     return-void
 .end method
 
-.method public final q_()V
+.method public final b()V
+    .locals 2
+
+    .prologue
+    .line 84
+    iget-object v0, p0, Lkik/android/chat/presentation/ad;->b:Lkik/android/chat/view/aj;
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, v1}, Lkik/android/chat/view/aj;->a(Ljava/lang/String;)V
+
+    .line 85
+    return-void
+.end method
+
+.method public final d()V
+    .locals 2
+
+    .prologue
+    .line 43
+    iget-object v0, p0, Lkik/android/chat/presentation/ad;->b:Lkik/android/chat/view/aj;
+
+    if-eqz v0, :cond_0
+
+    .line 44
+    iget-object v0, p0, Lkik/android/chat/presentation/ad;->b:Lkik/android/chat/view/aj;
+
+    invoke-interface {v0}, Lkik/android/chat/view/aj;->a()V
+
+    .line 45
+    iget-object v0, p0, Lkik/android/chat/presentation/ad;->b:Lkik/android/chat/view/aj;
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, v1}, Lkik/android/chat/view/aj;->a(Ljava/lang/String;)V
+
+    .line 47
+    :cond_0
+    return-void
+.end method
+
+.method public final e()V
     .locals 1
 
     .prologue
-    const/4 v0, 0x0
+    .line 52
+    iget-object v0, p0, Lkik/android/chat/presentation/ad;->b:Lkik/android/chat/view/aj;
+
+    if-eqz v0, :cond_0
+
+    .line 53
+    iget-object v0, p0, Lkik/android/chat/presentation/ad;->b:Lkik/android/chat/view/aj;
+
+    invoke-interface {v0}, Lkik/android/chat/view/aj;->a()V
+
+    .line 55
+    :cond_0
+    return-void
+.end method
+
+.method public final o_()V
+    .locals 2
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 23
+    iget-object v0, p0, Lkik/android/chat/presentation/ad;->b:Lkik/android/chat/view/aj;
+
+    if-eqz v0, :cond_0
+
+    .line 24
+    iget-object v0, p0, Lkik/android/chat/presentation/ad;->b:Lkik/android/chat/view/aj;
+
+    invoke-interface {v0, v1}, Lkik/android/chat/view/aj;->a(Lkik/android/chat/view/aj$a;)V
+
+    .line 26
+    :cond_0
+    iput-object v1, p0, Lkik/android/chat/presentation/ad;->b:Lkik/android/chat/view/aj;
 
     .line 27
-    iput-object v0, p0, Lkik/android/chat/presentation/ad;->a:Lkik/android/widget/bl;
-
-    .line 28
-    iput-object v0, p0, Lkik/android/chat/presentation/ad;->b:Lkik/android/widget/bl$a;
-
-    .line 29
     return-void
 .end method

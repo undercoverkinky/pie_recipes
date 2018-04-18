@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 161
+    .line 163
     iput-object p1, p0, Lkik/android/KikFileProvider$a;->a:Lkik/android/KikFileProvider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +48,7 @@
     .locals 0
 
     .prologue
-    .line 161
+    .line 163
     invoke-direct {p0, p1}, Lkik/android/KikFileProvider$a;-><init>(Lkik/android/KikFileProvider;)V
 
     return-void
@@ -60,12 +60,12 @@
     .locals 4
 
     .prologue
-    .line 161
+    .line 163
     check-cast p1, Ljava/io/File;
 
     check-cast p2, Ljava/io/File;
 
-    .line 1166
+    .line 1168
     invoke-virtual {p2}, Ljava/io/File;->lastModified()J
 
     move-result-wide v0
@@ -78,6 +78,6 @@
 
     long-to-int v0, v0
 
-    .line 161
+    .line 163
     return v0
 .end method

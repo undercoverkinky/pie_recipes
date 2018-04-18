@@ -4,8 +4,13 @@
 
 
 # annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/support/v4/media/MediaBrowserCompatApi21$MediaItem;,
         Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallbackProxy;,
         Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallback;,
         Landroid/support/v4/media/MediaBrowserCompatApi21$ConnectionCallbackProxy;,
@@ -23,10 +28,10 @@
     .locals 0
 
     .prologue
-    .line 29
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 121
+    .line 143
     return-void
 .end method
 
@@ -34,12 +39,12 @@
     .locals 0
 
     .prologue
-    .line 44
+    .line 46
     check-cast p0, Landroid/media/browse/MediaBrowser;
 
     invoke-virtual {p0}, Landroid/media/browse/MediaBrowser;->connect()V
 
-    .line 45
+    .line 47
     return-void
 .end method
 
@@ -47,7 +52,7 @@
     .locals 1
 
     .prologue
-    .line 39
+    .line 41
     new-instance v0, Landroid/media/browse/MediaBrowser;
 
     check-cast p2, Landroid/media/browse/MediaBrowser$ConnectionCallback;
@@ -61,7 +66,7 @@
     .locals 1
 
     .prologue
-    .line 34
+    .line 36
     new-instance v0, Landroid/support/v4/media/MediaBrowserCompatApi21$ConnectionCallbackProxy;
 
     invoke-direct {v0, p0}, Landroid/support/v4/media/MediaBrowserCompatApi21$ConnectionCallbackProxy;-><init>(Landroid/support/v4/media/MediaBrowserCompatApi21$ConnectionCallback;)V
@@ -73,7 +78,7 @@
     .locals 1
 
     .prologue
-    .line 73
+    .line 75
     new-instance v0, Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallbackProxy;
 
     invoke-direct {v0, p0}, Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallbackProxy;-><init>(Landroid/support/v4/media/MediaBrowserCompatApi21$SubscriptionCallback;)V
@@ -85,12 +90,12 @@
     .locals 0
 
     .prologue
-    .line 48
+    .line 50
     check-cast p0, Landroid/media/browse/MediaBrowser;
 
     invoke-virtual {p0}, Landroid/media/browse/MediaBrowser;->disconnect()V
 
-    .line 50
+    .line 52
     return-void
 .end method
 
@@ -98,7 +103,7 @@
     .locals 1
 
     .prologue
-    .line 65
+    .line 67
     check-cast p0, Landroid/media/browse/MediaBrowser;
 
     invoke-virtual {p0}, Landroid/media/browse/MediaBrowser;->getExtras()Landroid/os/Bundle;
@@ -112,7 +117,7 @@
     .locals 1
 
     .prologue
-    .line 61
+    .line 63
     check-cast p0, Landroid/media/browse/MediaBrowser;
 
     invoke-virtual {p0}, Landroid/media/browse/MediaBrowser;->getRoot()Ljava/lang/String;
@@ -126,7 +131,7 @@
     .locals 1
 
     .prologue
-    .line 57
+    .line 59
     check-cast p0, Landroid/media/browse/MediaBrowser;
 
     invoke-virtual {p0}, Landroid/media/browse/MediaBrowser;->getServiceComponent()Landroid/content/ComponentName;
@@ -140,7 +145,7 @@
     .locals 1
 
     .prologue
-    .line 69
+    .line 71
     check-cast p0, Landroid/media/browse/MediaBrowser;
 
     invoke-virtual {p0}, Landroid/media/browse/MediaBrowser;->getSessionToken()Landroid/media/session/MediaSession$Token;
@@ -154,7 +159,7 @@
     .locals 1
 
     .prologue
-    .line 53
+    .line 55
     check-cast p0, Landroid/media/browse/MediaBrowser;
 
     invoke-virtual {p0}, Landroid/media/browse/MediaBrowser;->isConnected()Z
@@ -168,14 +173,14 @@
     .locals 0
 
     .prologue
-    .line 78
+    .line 80
     check-cast p0, Landroid/media/browse/MediaBrowser;
 
     check-cast p2, Landroid/media/browse/MediaBrowser$SubscriptionCallback;
 
     invoke-virtual {p0, p1, p2}, Landroid/media/browse/MediaBrowser;->subscribe(Ljava/lang/String;Landroid/media/browse/MediaBrowser$SubscriptionCallback;)V
 
-    .line 80
+    .line 82
     return-void
 .end method
 
@@ -183,11 +188,11 @@
     .locals 0
 
     .prologue
-    .line 83
+    .line 85
     check-cast p0, Landroid/media/browse/MediaBrowser;
 
     invoke-virtual {p0, p1}, Landroid/media/browse/MediaBrowser;->unsubscribe(Ljava/lang/String;)V
 
-    .line 84
+    .line 86
     return-void
 .end method

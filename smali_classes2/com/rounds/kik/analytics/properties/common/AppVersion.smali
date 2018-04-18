@@ -8,10 +8,17 @@
     .locals 1
 
     .prologue
-    .line 14
+    .line 13
     const-string v0, "app_version"
 
     invoke-direct {p0, v0, p1}, Lcom/rounds/kik/analytics/properties/primitives/StringProperty;-><init>(Ljava/lang/String;Z)V
+
+    .line 14
+    invoke-static {}, Lcom/rounds/kik/VideoAppModule;->isReporterReady()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     .line 15
     invoke-static {}, Lcom/rounds/kik/VideoAppModule;->appVersion()Ljava/lang/String;
@@ -20,6 +27,7 @@
 
     iput-object v0, p0, Lcom/rounds/kik/analytics/properties/common/AppVersion;->mValue:Ljava/lang/Object;
 
-    .line 16
+    .line 17
+    :cond_0
     return-void
 .end method

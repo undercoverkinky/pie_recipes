@@ -74,21 +74,12 @@
 
 
 # virtual methods
-.method public final a()Lcom/dyuproject/protostuff/u;
+.method public final a()Lcom/dyuproject/protostuff/c;
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/dyuproject/protostuff/u",
-            "<",
-            "Lcom/kik/xdata/model/scanning/XScanningNonceSecret;",
-            ">;"
-        }
-    .end annotation
 
     .prologue
-    .line 74
-    sget-object v0, Lcom/kik/xdata/model/scanning/XScanningNonceSecret;->b:Lcom/dyuproject/protostuff/u;
+    .line 49
+    iget-object v0, p0, Lcom/kik/xdata/model/scanning/XScanningNonceSecret;->secret:Lcom/dyuproject/protostuff/c;
 
     return-object v0
 .end method
@@ -104,12 +95,21 @@
     return-object p0
 .end method
 
-.method public final b()Lcom/dyuproject/protostuff/c;
+.method public final cachedSchema()Lcom/dyuproject/protostuff/u;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/dyuproject/protostuff/u",
+            "<",
+            "Lcom/kik/xdata/model/scanning/XScanningNonceSecret;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 49
-    iget-object v0, p0, Lcom/kik/xdata/model/scanning/XScanningNonceSecret;->secret:Lcom/dyuproject/protostuff/c;
+    .line 74
+    sget-object v0, Lcom/kik/xdata/model/scanning/XScanningNonceSecret;->b:Lcom/dyuproject/protostuff/u;
 
     return-object v0
 .end method

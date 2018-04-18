@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lio/fabric/sdk/android/services/common/n$c;
+.implements Lio/fabric/sdk/android/services/cache/a;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lio/fabric/sdk/android/services/common/n;->toString()Ljava/lang/String;
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lio/fabric/sdk/android/services/common/n;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,72 +16,66 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lio/fabric/sdk/android/services/cache/a",
+        "<",
+        "Ljava/lang/String;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field a:Z
-
-.field final synthetic b:Ljava/lang/StringBuilder;
-
-.field final synthetic c:Lio/fabric/sdk/android/services/common/n;
+.field final synthetic a:Lio/fabric/sdk/android/services/common/n;
 
 
 # direct methods
-.method constructor <init>(Lio/fabric/sdk/android/services/common/n;Ljava/lang/StringBuilder;)V
-    .locals 1
+.method constructor <init>(Lio/fabric/sdk/android/services/common/n;)V
+    .locals 0
 
     .prologue
-    .line 563
-    iput-object p1, p0, Lio/fabric/sdk/android/services/common/n$1;->c:Lio/fabric/sdk/android/services/common/n;
-
-    iput-object p2, p0, Lio/fabric/sdk/android/services/common/n$1;->b:Ljava/lang/StringBuilder;
+    .line 36
+    iput-object p1, p0, Lio/fabric/sdk/android/services/common/n$1;->a:Lio/fabric/sdk/android/services/common/n;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 564
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lio/fabric/sdk/android/services/common/n$1;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/io/InputStream;I)V
+.method public final synthetic a(Landroid/content/Context;)Ljava/lang/Object;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/io/IOException;
+            Ljava/lang/Exception;
         }
     .end annotation
 
     .prologue
-    .line 568
-    iget-boolean v0, p0, Lio/fabric/sdk/android/services/common/n$1;->a:Z
+    .line 36
+    .line 1039
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    .line 569
-    const/4 v0, 0x0
+    .line 1040
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    iput-boolean v0, p0, Lio/fabric/sdk/android/services/common/n$1;->a:Z
+    move-result-object v1
 
-    .line 573
-    :goto_0
-    iget-object v0, p0, Lio/fabric/sdk/android/services/common/n$1;->b:Ljava/lang/StringBuilder;
+    .line 1041
+    invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->getInstallerPackageName(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    .line 574
-    return-void
+    .line 1045
+    if-nez v0, :cond_0
 
-    .line 571
+    const-string v0, ""
+
     :cond_0
-    iget-object v0, p0, Lio/fabric/sdk/android/services/common/n$1;->b:Ljava/lang/StringBuilder;
-
-    const-string v1, ", "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto :goto_0
+    return-object v0
 .end method

@@ -3,6 +3,12 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0xb
+.end annotation
+
+
 # static fields
 .field private static final a:Ljava/lang/ThreadLocal;
     .annotation system Ldalvik/annotation/Signature;
@@ -26,34 +32,25 @@
     .end annotation
 .end field
 
-.field private static final c:Landroid/graphics/Matrix;
-
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
     .prologue
-    .line 27
+    .line 31
     new-instance v0, Ljava/lang/ThreadLocal;
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
     sput-object v0, Landroid/support/design/widget/ViewGroupUtilsHoneycomb;->a:Ljava/lang/ThreadLocal;
 
-    .line 28
+    .line 32
     new-instance v0, Ljava/lang/ThreadLocal;
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
     sput-object v0, Landroid/support/design/widget/ViewGroupUtilsHoneycomb;->b:Ljava/lang/ThreadLocal;
-
-    .line 29
-    new-instance v0, Landroid/graphics/Matrix;
-
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
-
-    sput-object v0, Landroid/support/design/widget/ViewGroupUtilsHoneycomb;->c:Landroid/graphics/Matrix;
 
     return-void
 .end method
@@ -64,7 +61,7 @@
     .prologue
     const/high16 v4, 0x3f000000    # 0.5f
 
-    .line 32
+    .line 35
     sget-object v0, Landroid/support/design/widget/ViewGroupUtilsHoneycomb;->a:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -73,26 +70,26 @@
 
     check-cast v0, Landroid/graphics/Matrix;
 
-    .line 33
+    .line 36
     if-nez v0, :cond_1
 
-    .line 34
+    .line 37
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 35
+    .line 38
     sget-object v1, Landroid/support/design/widget/ViewGroupUtilsHoneycomb;->a:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v1, v0}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
     move-object v1, v0
 
-    .line 40
+    .line 43
     :goto_0
     invoke-static {p0, p1, v1}, Landroid/support/design/widget/ViewGroupUtilsHoneycomb;->a(Landroid/view/ViewParent;Landroid/view/View;Landroid/graphics/Matrix;)V
 
-    .line 42
+    .line 45
     sget-object v0, Landroid/support/design/widget/ViewGroupUtilsHoneycomb;->b:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -101,22 +98,27 @@
 
     check-cast v0, Landroid/graphics/RectF;
 
-    .line 43
+    .line 46
     if-nez v0, :cond_0
 
-    .line 44
+    .line 47
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
-    .line 46
+    .line 48
+    sget-object v2, Landroid/support/design/widget/ViewGroupUtilsHoneycomb;->b:Ljava/lang/ThreadLocal;
+
+    invoke-virtual {v2, v0}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+
+    .line 50
     :cond_0
     invoke-virtual {v0, p2}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
 
-    .line 47
+    .line 51
     invoke-virtual {v1, v0}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
 
-    .line 48
+    .line 52
     iget v1, v0, Landroid/graphics/RectF;->left:F
 
     add-float/2addr v1, v4
@@ -143,14 +145,12 @@
 
     invoke-virtual {p2, v1, v2, v3, v0}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 50
+    .line 54
     return-void
 
-    .line 37
+    .line 40
     :cond_1
-    sget-object v1, Landroid/support/design/widget/ViewGroupUtilsHoneycomb;->c:Landroid/graphics/Matrix;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
+    invoke-virtual {v0}, Landroid/graphics/Matrix;->reset()V
 
     move-object v1, v0
 
@@ -161,25 +161,25 @@
     .locals 2
 
     .prologue
-    .line 53
+    .line 57
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
-    .line 54
+    .line 58
     instance-of v1, v0, Landroid/view/View;
 
     if-eqz v1, :cond_0
 
     if-eq v0, p0, :cond_0
 
-    .line 55
+    .line 59
     check-cast v0, Landroid/view/View;
 
-    .line 56
+    .line 60
     invoke-static {p0, v0, p2}, Landroid/support/design/widget/ViewGroupUtilsHoneycomb;->a(Landroid/view/ViewParent;Landroid/view/View;Landroid/graphics/Matrix;)V
 
-    .line 57
+    .line 61
     invoke-virtual {v0}, Landroid/view/View;->getScrollX()I
 
     move-result v1
@@ -198,7 +198,7 @@
 
     invoke-virtual {p2, v1, v0}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
-    .line 60
+    .line 64
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
@@ -214,7 +214,7 @@
 
     invoke-virtual {p2, v0, v1}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
-    .line 62
+    .line 66
     invoke-virtual {p1}, Landroid/view/View;->getMatrix()Landroid/graphics/Matrix;
 
     move-result-object v0
@@ -225,14 +225,14 @@
 
     if-nez v0, :cond_1
 
-    .line 63
+    .line 67
     invoke-virtual {p1}, Landroid/view/View;->getMatrix()Landroid/graphics/Matrix;
 
     move-result-object v0
 
     invoke-virtual {p2, v0}, Landroid/graphics/Matrix;->preConcat(Landroid/graphics/Matrix;)Z
 
-    .line 65
+    .line 69
     :cond_1
     return-void
 .end method

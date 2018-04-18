@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 102
+    .line 104
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
     .locals 1
 
     .prologue
-    .line 105
+    .line 107
     new-instance v0, Landroid/databinding/ViewDataBinding$WeakMapListener;
 
     invoke-direct {v0, p1, p2}, Landroid/databinding/ViewDataBinding$WeakMapListener;-><init>(Landroid/databinding/ViewDataBinding;I)V

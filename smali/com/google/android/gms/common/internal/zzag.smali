@@ -1,139 +1,259 @@
-.class public Lcom/google/android/gms/common/internal/zzag;
-.super Lcom/google/android/gms/common/internal/zzk;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T::",
-        "Landroid/os/IInterface;",
-        ">",
-        "Lcom/google/android/gms/common/internal/zzk",
-        "<TT;>;"
-    }
-.end annotation
+.class public final Lcom/google/android/gms/common/internal/zzag;
+.super Ljava/lang/Object;
 
 
 # instance fields
-.field private final zzasr:Lcom/google/android/gms/common/api/Api$zzg;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/Api$zzg",
-            "<TT;>;"
-        }
-    .end annotation
-.end field
+.field private final zzdmw:Ljava/lang/String;
+
+.field private final zzfup:Ljava/lang/String;
+
+.field private final zzfuq:Landroid/content/ComponentName;
+
+.field private final zzfur:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;ILcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;Lcom/google/android/gms/common/internal/zzg;Lcom/google/android/gms/common/api/Api$zzg;)V
-    .locals 7
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/content/Context;",
-            "Landroid/os/Looper;",
-            "I",
-            "Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;",
-            "Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;",
-            "Lcom/google/android/gms/common/internal/zzg;",
-            "Lcom/google/android/gms/common/api/Api$zzg",
-            "<TT;>;)V"
-        }
-    .end annotation
+.method public constructor <init>(Landroid/content/ComponentName;I)V
+    .locals 1
 
-    move-object v0, p0
+    const/4 v0, 0x0
 
-    move-object v1, p1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object v2, p2
+    iput-object v0, p0, Lcom/google/android/gms/common/internal/zzag;->zzdmw:Ljava/lang/String;
 
-    move v3, p3
+    iput-object v0, p0, Lcom/google/android/gms/common/internal/zzag;->zzfup:Ljava/lang/String;
 
-    move-object v4, p6
+    invoke-static {p1}, Lcom/google/android/gms/common/internal/zzbp;->zzu(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-object v5, p4
+    move-result-object v0
 
-    move-object v6, p5
+    check-cast v0, Landroid/content/ComponentName;
 
-    invoke-direct/range {v0 .. v6}, Lcom/google/android/gms/common/internal/zzk;-><init>(Landroid/content/Context;Landroid/os/Looper;ILcom/google/android/gms/common/internal/zzg;Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)V
+    iput-object v0, p0, Lcom/google/android/gms/common/internal/zzag;->zzfuq:Landroid/content/ComponentName;
 
-    iput-object p7, p0, Lcom/google/android/gms/common/internal/zzag;->zzasr:Lcom/google/android/gms/common/api/Api$zzg;
+    const/16 v0, 0x81
+
+    iput v0, p0, Lcom/google/android/gms/common/internal/zzag;->zzfur:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;I)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {p1}, Lcom/google/android/gms/common/internal/zzbp;->zzgf(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/android/gms/common/internal/zzag;->zzdmw:Ljava/lang/String;
+
+    invoke-static {p2}, Lcom/google/android/gms/common/internal/zzbp;->zzgf(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/android/gms/common/internal/zzag;->zzfup:Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/google/android/gms/common/internal/zzag;->zzfuq:Landroid/content/ComponentName;
+
+    iput p3, p0, Lcom/google/android/gms/common/internal/zzag;->zzfur:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected zzab(Landroid/os/IBinder;)Landroid/os/IInterface;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    if-ne p0, p1, :cond_1
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    instance-of v2, p1, Lcom/google/android/gms/common/internal/zzag;
+
+    if-nez v2, :cond_2
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_2
+    check-cast p1, Lcom/google/android/gms/common/internal/zzag;
+
+    iget-object v2, p0, Lcom/google/android/gms/common/internal/zzag;->zzdmw:Ljava/lang/String;
+
+    iget-object v3, p1, Lcom/google/android/gms/common/internal/zzag;->zzdmw:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Lcom/google/android/gms/common/internal/zzbf;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    iget-object v2, p0, Lcom/google/android/gms/common/internal/zzag;->zzfup:Ljava/lang/String;
+
+    iget-object v3, p1, Lcom/google/android/gms/common/internal/zzag;->zzfup:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Lcom/google/android/gms/common/internal/zzbf;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    iget-object v2, p0, Lcom/google/android/gms/common/internal/zzag;->zzfuq:Landroid/content/ComponentName;
+
+    iget-object v3, p1, Lcom/google/android/gms/common/internal/zzag;->zzfuq:Landroid/content/ComponentName;
+
+    invoke-static {v2, v3}, Lcom/google/android/gms/common/internal/zzbf;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    iget v2, p0, Lcom/google/android/gms/common/internal/zzag;->zzfur:I
+
+    iget v3, p1, Lcom/google/android/gms/common/internal/zzag;->zzfur:I
+
+    if-eq v2, v3, :cond_0
+
+    :cond_3
+    move v0, v1
+
+    goto :goto_0
+.end method
+
+.method public final getComponentName()Landroid/content/ComponentName;
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/os/IBinder;",
-            ")TT;"
-        }
-    .end annotation
 
-    iget-object v0, p0, Lcom/google/android/gms/common/internal/zzag;->zzasr:Lcom/google/android/gms/common/api/Api$zzg;
+    iget-object v0, p0, Lcom/google/android/gms/common/internal/zzag;->zzfuq:Landroid/content/ComponentName;
 
-    invoke-interface {v0, p1}, Lcom/google/android/gms/common/api/Api$zzg;->zzab(Landroid/os/IBinder;)Landroid/os/IInterface;
+    return-object v0
+.end method
+
+.method public final getPackage()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/common/internal/zzag;->zzfup:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    const/4 v0, 0x4
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lcom/google/android/gms/common/internal/zzag;->zzdmw:Ljava/lang/String;
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x1
+
+    iget-object v2, p0, Lcom/google/android/gms/common/internal/zzag;->zzfup:Ljava/lang/String;
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x2
+
+    iget-object v2, p0, Lcom/google/android/gms/common/internal/zzag;->zzfuq:Landroid/content/ComponentName;
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x3
+
+    iget v2, p0, Lcom/google/android/gms/common/internal/zzag;->zzfur:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    aput-object v2, v0, v1
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/common/internal/zzag;->zzdmw:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/gms/common/internal/zzag;->zzfuq:Landroid/content/ComponentName;
+
+    invoke-virtual {v0}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
     move-result-object v0
 
+    :goto_0
     return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/gms/common/internal/zzag;->zzdmw:Ljava/lang/String;
+
+    goto :goto_0
 .end method
 
-.method protected zzc(ILandroid/os/IInterface;)V
+.method public final zzakg()I
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(ITT;)V"
-        }
-    .end annotation
 
-    iget-object v0, p0, Lcom/google/android/gms/common/internal/zzag;->zzasr:Lcom/google/android/gms/common/api/Api$zzg;
+    iget v0, p0, Lcom/google/android/gms/common/internal/zzag;->zzfur:I
 
-    invoke-interface {v0, p1, p2}, Lcom/google/android/gms/common/api/Api$zzg;->zza(ILandroid/os/IInterface;)V
-
-    return-void
+    return v0
 .end method
 
-.method protected zzhT()Ljava/lang/String;
-    .locals 1
+.method public final zzakh()Landroid/content/Intent;
+    .locals 2
 
-    iget-object v0, p0, Lcom/google/android/gms/common/internal/zzag;->zzasr:Lcom/google/android/gms/common/api/Api$zzg;
+    iget-object v0, p0, Lcom/google/android/gms/common/internal/zzag;->zzdmw:Ljava/lang/String;
 
-    invoke-interface {v0}, Lcom/google/android/gms/common/api/Api$zzg;->zzhT()Ljava/lang/String;
+    if-eqz v0, :cond_0
+
+    new-instance v0, Landroid/content/Intent;
+
+    iget-object v1, p0, Lcom/google/android/gms/common/internal/zzag;->zzdmw:Ljava/lang/String;
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/google/android/gms/common/internal/zzag;->zzfup:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v0
 
+    :goto_0
     return-object v0
-.end method
 
-.method protected zzhU()Ljava/lang/String;
-    .locals 1
+    :cond_0
+    new-instance v0, Landroid/content/Intent;
 
-    iget-object v0, p0, Lcom/google/android/gms/common/internal/zzag;->zzasr:Lcom/google/android/gms/common/api/Api$zzg;
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    invoke-interface {v0}, Lcom/google/android/gms/common/api/Api$zzg;->zzhU()Ljava/lang/String;
+    iget-object v1, p0, Lcom/google/android/gms/common/internal/zzag;->zzfuq:Landroid/content/ComponentName;
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object v0
 
-    return-object v0
-.end method
-
-.method public zztX()Lcom/google/android/gms/common/api/Api$zzg;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/google/android/gms/common/api/Api$zzg",
-            "<TT;>;"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lcom/google/android/gms/common/internal/zzag;->zzasr:Lcom/google/android/gms/common/api/Api$zzg;
-
-    return-object v0
+    goto :goto_0
 .end method

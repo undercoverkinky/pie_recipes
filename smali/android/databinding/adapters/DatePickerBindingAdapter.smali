@@ -90,7 +90,7 @@
 
     .line 47
     :cond_2
-    sget v0, Lcom/android/a/a/a/a$a;->b:I
+    sget v0, Lcom/android/databinding/library/baseAdapters/R$id;->onDateChanged:I
 
     invoke-static {p0, v0}, Landroid/databinding/adapters/ListenerUtil;->getListener(Landroid/view/View;I)Ljava/lang/Object;
 
@@ -109,7 +109,7 @@
     invoke-direct {v0, v1}, Landroid/databinding/adapters/DatePickerBindingAdapter$DateChangedListener;-><init>(Landroid/databinding/adapters/DatePickerBindingAdapter$1;)V
 
     .line 50
-    sget v1, Lcom/android/a/a/a/a$a;->b:I
+    sget v1, Lcom/android/databinding/library/baseAdapters/R$id;->onDateChanged:I
 
     invoke-static {p0, v0, v1}, Landroid/databinding/adapters/ListenerUtil;->trackListener(Landroid/view/View;Ljava/lang/Object;I)Ljava/lang/Object;
 

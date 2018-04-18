@@ -3,16 +3,16 @@
 
 
 # instance fields
-.field private final zzabe:I
+.field private final zzdxs:I
 
 
 # direct methods
-.method constructor <init>(ILjava/lang/String;Landroid/content/Intent;)V
+.method public constructor <init>(ILjava/lang/String;Landroid/content/Intent;)V
     .locals 0
 
     invoke-direct {p0, p2, p3}, Lcom/google/android/gms/common/UserRecoverableException;-><init>(Ljava/lang/String;Landroid/content/Intent;)V
 
-    iput p1, p0, Lcom/google/android/gms/common/GooglePlayServicesRepairableException;->zzabe:I
+    iput p1, p0, Lcom/google/android/gms/common/GooglePlayServicesRepairableException;->zzdxs:I
 
     return-void
 .end method
@@ -22,7 +22,7 @@
 .method public getConnectionStatusCode()I
     .locals 1
 
-    iget v0, p0, Lcom/google/android/gms/common/GooglePlayServicesRepairableException;->zzabe:I
+    iget v0, p0, Lcom/google/android/gms/common/GooglePlayServicesRepairableException;->zzdxs:I
 
     return v0
 .end method

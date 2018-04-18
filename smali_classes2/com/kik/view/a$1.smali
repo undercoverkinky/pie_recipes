@@ -43,8 +43,7 @@
     .locals 1
 
     .prologue
-    .line 0
-    .line 1108
+    .line 108
     iget-object v0, p0, Lcom/kik/view/a$1;->c:Lcom/kik/view/a;
 
     invoke-static {v0}, Lcom/kik/view/a;->b(Lcom/kik/view/a;)Z
@@ -61,12 +60,12 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 1109
+    .line 109
     iget-object v0, p0, Lcom/kik/view/a$1;->c:Lcom/kik/view/a;
 
     invoke-virtual {v0, p2}, Lcom/kik/view/a;->a([I)V
 
-    .line 0
+    .line 111
     :cond_0
     return-void
 .end method

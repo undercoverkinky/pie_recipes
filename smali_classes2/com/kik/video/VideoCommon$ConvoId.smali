@@ -224,6 +224,7 @@
 
     invoke-virtual {p0}, Lcom/kik/video/VideoCommon$ConvoId;->makeExtensionsImmutable()V
 
+    .line 121
     throw v0
 
     .line 100

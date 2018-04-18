@@ -1,25 +1,23 @@
-.class public interface abstract Lcom/google/android/gms/internal/zzakb;
+.class public final Lcom/google/android/gms/internal/zzakb;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Lcom/google/android/gms/internal/zzaka;
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;"
-    }
-.end annotation
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract zza(Ljava/lang/reflect/Type;)Ljava/lang/Object;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/reflect/Type;",
-            ")TT;"
-        }
-    .end annotation
+.method public final run()V
+    .locals 0
+
+    return-void
 .end method

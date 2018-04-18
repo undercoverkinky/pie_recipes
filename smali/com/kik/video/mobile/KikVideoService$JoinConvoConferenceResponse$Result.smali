@@ -75,7 +75,7 @@
 
     const/4 v3, 0x0
 
-    .line 2769
+    .line 2632
     new-instance v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;
 
     const-string v1, "OK"
@@ -84,7 +84,7 @@
 
     sput-object v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;->OK:Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;
 
-    .line 2777
+    .line 2640
     new-instance v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;
 
     const-string v1, "FULL"
@@ -93,7 +93,7 @@
 
     sput-object v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;->FULL:Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;
 
-    .line 2786
+    .line 2649
     new-instance v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;
 
     const-string v1, "NOT_ALLOWED"
@@ -102,7 +102,7 @@
 
     sput-object v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;->NOT_ALLOWED:Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;
 
-    .line 2787
+    .line 2650
     new-instance v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;
 
     const-string v1, "UNRECOGNIZED"
@@ -113,7 +113,7 @@
 
     sput-object v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;->UNRECOGNIZED:Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;
 
-    .line 2760
+    .line 2623
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;
@@ -136,14 +136,14 @@
 
     sput-object v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;->$VALUES:[Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;
 
-    .line 2847
+    .line 2710
     new-instance v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result$1;
 
     invoke-direct {v0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result$1;-><init>()V
 
     sput-object v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;->internalValueMap:Lcom/google/protobuf/Internal$EnumLiteMap;
 
-    .line 2867
+    .line 2730
     invoke-static {}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;->values()[Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;
 
     move-result-object v0
@@ -162,13 +162,13 @@
     .end annotation
 
     .prologue
-    .line 2883
+    .line 2746
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 2884
+    .line 2747
     iput p3, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;->value:I
 
-    .line 2885
+    .line 2748
     return-void
 .end method
 
@@ -176,34 +176,34 @@
     .locals 1
 
     .prologue
-    .line 2834
+    .line 2697
     packed-switch p0, :pswitch_data_0
 
-    .line 2838
+    .line 2701
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 2835
+    .line 2698
     :pswitch_0
     sget-object v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;->OK:Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;
 
     goto :goto_0
 
-    .line 2836
+    .line 2699
     :pswitch_1
     sget-object v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;->FULL:Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;
 
     goto :goto_0
 
-    .line 2837
+    .line 2700
     :pswitch_2
     sget-object v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;->NOT_ALLOWED:Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;
 
     goto :goto_0
 
-    .line 2834
+    .line 2697
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -216,7 +216,7 @@
     .locals 2
 
     .prologue
-    .line 2864
+    .line 2727
     invoke-static {}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse;->a()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
@@ -249,7 +249,7 @@
     .end annotation
 
     .prologue
-    .line 2844
+    .line 2707
     sget-object v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;->internalValueMap:Lcom/google/protobuf/Internal$EnumLiteMap;
 
     return-object v0
@@ -261,7 +261,7 @@
     .end annotation
 
     .prologue
-    .line 2830
+    .line 2693
     invoke-static {p0}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;->forNumber(I)Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;
 
     move-result-object v0
@@ -273,7 +273,7 @@
     .locals 2
 
     .prologue
-    .line 2871
+    .line 2734
     invoke-virtual {p0}, Lcom/google/protobuf/Descriptors$EnumValueDescriptor;->getType()Lcom/google/protobuf/Descriptors$EnumDescriptor;
 
     move-result-object v0
@@ -284,7 +284,7 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 2872
+    .line 2735
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "EnumValueDescriptor is not for this type."
@@ -293,7 +293,7 @@
 
     throw v0
 
-    .line 2875
+    .line 2738
     :cond_0
     invoke-virtual {p0}, Lcom/google/protobuf/Descriptors$EnumValueDescriptor;->getIndex()I
 
@@ -303,10 +303,10 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 2876
+    .line 2739
     sget-object v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;->UNRECOGNIZED:Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;
 
-    .line 2878
+    .line 2741
     :goto_0
     return-object v0
 
@@ -326,7 +326,7 @@
     .locals 1
 
     .prologue
-    .line 2760
+    .line 2623
     const-class v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -342,7 +342,7 @@
     .locals 1
 
     .prologue
-    .line 2760
+    .line 2623
     sget-object v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;->$VALUES:[Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;
 
     invoke-virtual {v0}, [Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;->clone()Ljava/lang/Object;
@@ -360,7 +360,7 @@
     .locals 1
 
     .prologue
-    .line 2860
+    .line 2723
     invoke-static {}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;->getDescriptor()Lcom/google/protobuf/Descriptors$EnumDescriptor;
 
     move-result-object v0
@@ -372,12 +372,12 @@
     .locals 2
 
     .prologue
-    .line 2818
+    .line 2681
     sget-object v0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;->UNRECOGNIZED:Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;
 
     if-ne p0, v0, :cond_0
 
-    .line 2819
+    .line 2682
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Can\'t get the number of an unknown enum value."
@@ -386,7 +386,7 @@
 
     throw v0
 
-    .line 2822
+    .line 2685
     :cond_0
     iget v0, p0, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;->value:I
 
@@ -397,7 +397,7 @@
     .locals 2
 
     .prologue
-    .line 2856
+    .line 2719
     invoke-static {}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;->getDescriptor()Lcom/google/protobuf/Descriptors$EnumDescriptor;
 
     move-result-object v0

@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/crashlytics/android/core/g$b;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/crashlytics/android/core/g;->b(Ljava/lang/Thread;Ljava/lang/Throwable;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/crashlytics/android/core/g;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,28 +18,20 @@
 
 
 # instance fields
-.field final synthetic a:Ljava/util/Date;
+.field final synthetic a:Z
 
-.field final synthetic b:Ljava/lang/Thread;
-
-.field final synthetic c:Ljava/lang/Throwable;
-
-.field final synthetic d:Lcom/crashlytics/android/core/g;
+.field final synthetic b:Lcom/crashlytics/android/core/g;
 
 
 # direct methods
-.method constructor <init>(Lcom/crashlytics/android/core/g;Ljava/util/Date;Ljava/lang/Thread;Ljava/lang/Throwable;)V
+.method constructor <init>(Lcom/crashlytics/android/core/g;Z)V
     .locals 0
 
     .prologue
-    .line 347
-    iput-object p1, p0, Lcom/crashlytics/android/core/g$14;->d:Lcom/crashlytics/android/core/g;
+    .line 1130
+    iput-object p1, p0, Lcom/crashlytics/android/core/g$14;->b:Lcom/crashlytics/android/core/g;
 
-    iput-object p2, p0, Lcom/crashlytics/android/core/g$14;->a:Ljava/util/Date;
-
-    iput-object p3, p0, Lcom/crashlytics/android/core/g$14;->b:Ljava/lang/Thread;
-
-    iput-object p4, p0, Lcom/crashlytics/android/core/g$14;->c:Ljava/lang/Throwable;
+    iput-boolean p2, p0, Lcom/crashlytics/android/core/g$14;->a:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,31 +40,24 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final a(Lcom/crashlytics/android/core/CodedOutputStream;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
 
     .prologue
-    .line 350
-    iget-object v0, p0, Lcom/crashlytics/android/core/g$14;->d:Lcom/crashlytics/android/core/g;
+    .line 1133
+    sget-object v0, Landroid/os/Build$VERSION;->RELEASE:Ljava/lang/String;
 
-    invoke-virtual {v0}, Lcom/crashlytics/android/core/g;->c()Z
+    sget-object v1, Landroid/os/Build$VERSION;->CODENAME:Ljava/lang/String;
 
-    move-result v0
+    iget-boolean v2, p0, Lcom/crashlytics/android/core/g$14;->a:Z
 
-    if-nez v0, :cond_0
+    invoke-static {p1, v0, v1, v2}, Lcom/crashlytics/android/core/ag;->a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 351
-    iget-object v0, p0, Lcom/crashlytics/android/core/g$14;->d:Lcom/crashlytics/android/core/g;
-
-    iget-object v1, p0, Lcom/crashlytics/android/core/g$14;->a:Ljava/util/Date;
-
-    iget-object v2, p0, Lcom/crashlytics/android/core/g$14;->b:Ljava/lang/Thread;
-
-    iget-object v3, p0, Lcom/crashlytics/android/core/g$14;->c:Ljava/lang/Throwable;
-
-    invoke-static {v0, v1, v2, v3}, Lcom/crashlytics/android/core/g;->b(Lcom/crashlytics/android/core/g;Ljava/util/Date;Ljava/lang/Thread;Ljava/lang/Throwable;)V
-
-    .line 353
-    :cond_0
+    .line 1139
     return-void
 .end method

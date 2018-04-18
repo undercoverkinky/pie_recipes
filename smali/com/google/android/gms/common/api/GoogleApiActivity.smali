@@ -6,7 +6,7 @@
 
 
 # instance fields
-.field protected zzalb:I
+.field private zzfgt:I
 
 
 # direct methods
@@ -17,29 +17,19 @@
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->zzalb:I
+    iput v0, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->zzfgt:I
 
     return-void
 .end method
 
 .method public static zza(Landroid/content/Context;Landroid/app/PendingIntent;I)Landroid/app/PendingIntent;
-    .locals 1
-
-    const/4 v0, 0x1
-
-    invoke-static {p0, p1, p2, v0}, Lcom/google/android/gms/common/api/GoogleApiActivity;->zza(Landroid/content/Context;Landroid/app/PendingIntent;IZ)Landroid/app/PendingIntent;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static zza(Landroid/content/Context;Landroid/app/PendingIntent;IZ)Landroid/app/PendingIntent;
     .locals 3
 
     const/4 v0, 0x0
 
-    invoke-static {p0, p1, p2, p3}, Lcom/google/android/gms/common/api/GoogleApiActivity;->zzb(Landroid/content/Context;Landroid/app/PendingIntent;IZ)Landroid/content/Intent;
+    const/4 v1, 0x1
+
+    invoke-static {p0, p1, p2, v1}, Lcom/google/android/gms/common/api/GoogleApiActivity;->zza(Landroid/content/Context;Landroid/app/PendingIntent;IZ)Landroid/content/Intent;
 
     move-result-object v1
 
@@ -52,54 +42,7 @@
     return-object v0
 .end method
 
-.method private zza(ILcom/google/android/gms/internal/zzoj;)V
-    .locals 4
-
-    packed-switch p1, :pswitch_data_0
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    new-instance v0, Lcom/google/android/gms/common/ConnectionResult;
-
-    const/16 v1, 0xd
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/common/ConnectionResult;-><init>(ILandroid/app/PendingIntent;)V
-
-    invoke-virtual {p0}, Lcom/google/android/gms/common/api/GoogleApiActivity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v1
-
-    const-string v2, "failing_client_id"
-
-    const/4 v3, -0x1
-
-    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v1
-
-    invoke-virtual {p2, v0, v1}, Lcom/google/android/gms/internal/zzoj;->zza(Lcom/google/android/gms/common/ConnectionResult;I)V
-
-    goto :goto_0
-
-    :pswitch_1
-    invoke-virtual {p2}, Lcom/google/android/gms/internal/zzoj;->zzrA()V
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch -0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static zzb(Landroid/content/Context;Landroid/app/PendingIntent;IZ)Landroid/content/Intent;
+.method public static zza(Landroid/content/Context;Landroid/app/PendingIntent;IZ)Landroid/content/Intent;
     .locals 2
 
     new-instance v0, Landroid/content/Intent;
@@ -123,10 +66,132 @@
     return-object v0
 .end method
 
-.method private zzrp()V
+
+# virtual methods
+.method protected onActivityResult(IILandroid/content/Intent;)V
+    .locals 5
+
+    const/4 v3, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-super {p0, p1, p2, p3}, Landroid/app/Activity;->onActivityResult(IILandroid/content/Intent;)V
+
+    if-ne p1, v3, :cond_1
+
+    invoke-virtual {p0}, Lcom/google/android/gms/common/api/GoogleApiActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string v1, "notify_manager"
+
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    iput v2, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->zzfgt:I
+
+    invoke-virtual {p0, p2, p3}, Lcom/google/android/gms/common/api/GoogleApiActivity;->setResult(ILandroid/content/Intent;)V
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p0}, Lcom/google/android/gms/common/api/internal/zzbp;->zzcb(Landroid/content/Context;)Lcom/google/android/gms/common/api/internal/zzbp;
+
+    move-result-object v0
+
+    packed-switch p2, :pswitch_data_0
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p0}, Lcom/google/android/gms/common/api/GoogleApiActivity;->finish()V
+
+    return-void
+
+    :pswitch_0
+    new-instance v1, Lcom/google/android/gms/common/ConnectionResult;
+
+    const/16 v2, 0xd
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v2, v3}, Lcom/google/android/gms/common/ConnectionResult;-><init>(ILandroid/app/PendingIntent;)V
+
+    invoke-virtual {p0}, Lcom/google/android/gms/common/api/GoogleApiActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v2
+
+    const-string v3, "failing_client_id"
+
+    const/4 v4, -0x1
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/common/api/internal/zzbp;->zza(Lcom/google/android/gms/common/ConnectionResult;I)V
+
+    goto :goto_0
+
+    :pswitch_1
+    invoke-virtual {v0}, Lcom/google/android/gms/common/api/internal/zzbp;->zzafv()V
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x2
+
+    if-ne p1, v0, :cond_0
+
+    iput v2, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->zzfgt:I
+
+    invoke-virtual {p0, p2, p3}, Lcom/google/android/gms/common/api/GoogleApiActivity;->setResult(ILandroid/content/Intent;)V
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch -0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public onCancel(Landroid/content/DialogInterface;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->zzfgt:I
+
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/common/api/GoogleApiActivity;->setResult(I)V
+
+    invoke-virtual {p0}, Lcom/google/android/gms/common/api/GoogleApiActivity;->finish()V
+
+    return-void
+.end method
+
+.method protected onCreate(Landroid/os/Bundle;)V
     .locals 7
 
     const/4 v3, 0x1
+
+    invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
+
+    if-eqz p1, :cond_0
+
+    const-string v0, "resolution"
+
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->zzfgt:I
+
+    :cond_0
+    iget v0, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->zzfgt:I
+
+    if-eq v0, v3, :cond_1
 
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/GoogleApiActivity;->getIntent()Landroid/content/Intent;
 
@@ -136,7 +201,7 @@
 
     move-result-object v1
 
-    if-nez v1, :cond_0
+    if-nez v1, :cond_2
 
     const-string v0, "GoogleApiActivity"
 
@@ -146,10 +211,11 @@
 
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/GoogleApiActivity;->finish()V
 
+    :cond_1
     :goto_0
     return-void
 
-    :cond_0
+    :cond_2
     const-string v0, "pending_intent"
 
     invoke-virtual {v1, v0}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
@@ -166,9 +232,9 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_3
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_3
 
     const-string v0, "GoogleApiActivity"
 
@@ -180,8 +246,8 @@
 
     goto :goto_0
 
-    :cond_1
-    if-eqz v0, :cond_2
+    :cond_3
+    if-eqz v0, :cond_4
 
     :try_start_0
     invoke-virtual {v0}, Landroid/app/PendingIntent;->getIntentSender()Landroid/content/IntentSender;
@@ -204,7 +270,7 @@
 
     const/4 v0, 0x1
 
-    iput v0, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->zzalb:I
+    iput v0, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->zzfgt:I
     :try_end_0
     .catch Landroid/content/IntentSender$SendIntentException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -223,7 +289,7 @@
 
     goto :goto_0
 
-    :cond_2
+    :cond_4
     invoke-static {}, Lcom/google/android/gms/common/GoogleApiAvailability;->getInstance()Lcom/google/android/gms/common/GoogleApiAvailability;
 
     move-result-object v0
@@ -236,104 +302,9 @@
 
     invoke-virtual {v0, p0, v1, v2, p0}, Lcom/google/android/gms/common/GoogleApiAvailability;->showErrorDialogFragment(Landroid/app/Activity;IILandroid/content/DialogInterface$OnCancelListener;)Z
 
-    iput v3, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->zzalb:I
+    iput v3, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->zzfgt:I
 
     goto :goto_0
-.end method
-
-
-# virtual methods
-.method protected onActivityResult(IILandroid/content/Intent;)V
-    .locals 4
-
-    const/4 v3, 0x1
-
-    const/4 v2, 0x0
-
-    invoke-super {p0, p1, p2, p3}, Landroid/app/Activity;->onActivityResult(IILandroid/content/Intent;)V
-
-    if-ne p1, v3, :cond_1
-
-    invoke-virtual {p0}, Lcom/google/android/gms/common/api/GoogleApiActivity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    const-string v1, "notify_manager"
-
-    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    iput v2, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->zzalb:I
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzoj;->zzsq()Lcom/google/android/gms/internal/zzoj;
-
-    move-result-object v1
-
-    invoke-virtual {p0, p2}, Lcom/google/android/gms/common/api/GoogleApiActivity;->setResultCode(I)V
-
-    if-eqz v0, :cond_0
-
-    invoke-direct {p0, p2, v1}, Lcom/google/android/gms/common/api/GoogleApiActivity;->zza(ILcom/google/android/gms/internal/zzoj;)V
-
-    :cond_0
-    :goto_0
-    invoke-virtual {p0}, Lcom/google/android/gms/common/api/GoogleApiActivity;->finish()V
-
-    return-void
-
-    :cond_1
-    const/4 v0, 0x2
-
-    if-ne p1, v0, :cond_0
-
-    iput v2, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->zzalb:I
-
-    invoke-virtual {p0, p2}, Lcom/google/android/gms/common/api/GoogleApiActivity;->setResultCode(I)V
-
-    goto :goto_0
-.end method
-
-.method public onCancel(Landroid/content/DialogInterface;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->zzalb:I
-
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/common/api/GoogleApiActivity;->setResult(I)V
-
-    invoke-virtual {p0}, Lcom/google/android/gms/common/api/GoogleApiActivity;->finish()V
-
-    return-void
-.end method
-
-.method protected onCreate(Landroid/os/Bundle;)V
-    .locals 2
-
-    invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
-
-    if-eqz p1, :cond_0
-
-    const-string v0, "resolution"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->zzalb:I
-
-    :cond_0
-    iget v0, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->zzalb:I
-
-    const/4 v1, 0x1
-
-    if-eq v0, v1, :cond_1
-
-    invoke-direct {p0}, Lcom/google/android/gms/common/api/GoogleApiActivity;->zzrp()V
-
-    :cond_1
-    return-void
 .end method
 
 .method protected onSaveInstanceState(Landroid/os/Bundle;)V
@@ -341,19 +312,11 @@
 
     const-string v0, "resolution"
 
-    iget v1, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->zzalb:I
+    iget v1, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->zzfgt:I
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onSaveInstanceState(Landroid/os/Bundle;)V
-
-    return-void
-.end method
-
-.method protected setResultCode(I)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/GoogleApiActivity;->setResult(I)V
 
     return-void
 .end method

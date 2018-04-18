@@ -4,66 +4,11 @@
 
 
 # virtual methods
-.method public abstract a()I
+.method public abstract a()Landroid/content/SharedPreferences;
 .end method
 
-.method public abstract a(Ljava/lang/String;)V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
+.method public abstract a(Landroid/content/SharedPreferences$Editor;)Z
 .end method
 
-.method public abstract a(Ljava/util/List;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Ljava/io/File;",
-            ">;)V"
-        }
-    .end annotation
-.end method
-
-.method public abstract a([B)V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-.end method
-
-.method public abstract a(II)Z
-.end method
-
-.method public abstract b()Z
-.end method
-
-.method public abstract c()Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Ljava/io/File;",
-            ">;"
-        }
-    .end annotation
-.end method
-
-.method public abstract d()Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Ljava/io/File;",
-            ">;"
-        }
-    .end annotation
-.end method
-
-.method public abstract e()V
+.method public abstract b()Landroid/content/SharedPreferences$Editor;
 .end method

@@ -74,7 +74,7 @@
     return-void
 .end method
 
-.method public static b()Lcom/dyuproject/protostuff/u;
+.method public static a()Lcom/dyuproject/protostuff/u;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -95,7 +95,27 @@
 
 
 # virtual methods
-.method public final a()Lcom/dyuproject/protostuff/u;
+.method public final b()Lcom/dyuproject/protostuff/c;
+    .locals 1
+
+    .prologue
+    .line 49
+    iget-object v0, p0, Lcom/kik/xdata/model/cards/XCardAnonymousKey;->publicKey:Lcom/dyuproject/protostuff/c;
+
+    return-object v0
+.end method
+
+.method public final c()Lcom/dyuproject/protostuff/c;
+    .locals 1
+
+    .prologue
+    .line 62
+    iget-object v0, p0, Lcom/kik/xdata/model/cards/XCardAnonymousKey;->privateKey:Lcom/dyuproject/protostuff/c;
+
+    return-object v0
+.end method
+
+.method public final cachedSchema()Lcom/dyuproject/protostuff/u;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -110,26 +130,6 @@
     .prologue
     .line 87
     sget-object v0, Lcom/kik/xdata/model/cards/XCardAnonymousKey;->b:Lcom/dyuproject/protostuff/u;
-
-    return-object v0
-.end method
-
-.method public final c()Lcom/dyuproject/protostuff/c;
-    .locals 1
-
-    .prologue
-    .line 49
-    iget-object v0, p0, Lcom/kik/xdata/model/cards/XCardAnonymousKey;->publicKey:Lcom/dyuproject/protostuff/c;
-
-    return-object v0
-.end method
-
-.method public final d()Lcom/dyuproject/protostuff/c;
-    .locals 1
-
-    .prologue
-    .line 62
-    iget-object v0, p0, Lcom/kik/xdata/model/cards/XCardAnonymousKey;->privateKey:Lcom/dyuproject/protostuff/c;
 
     return-object v0
 .end method

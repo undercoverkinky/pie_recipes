@@ -10,7 +10,7 @@
 
 .field private static c:Landroid/content/Context;
 
-.field private static d:Lkik/android/util/aq;
+.field private static d:Lkik/android/util/ar;
 
 .field private static final e:[I
 
@@ -24,12 +24,12 @@
     .locals 1
 
     .prologue
-    .line 40
+    .line 42
     const/16 v0, 0x1000
 
     sput v0, Lkik/android/util/DeviceUtils;->a:I
 
-    .line 41
+    .line 43
     const-string v0, "DeviceUtils"
 
     invoke-static {v0}, Lorg/slf4j/c;->a(Ljava/lang/String;)Lorg/slf4j/b;
@@ -38,7 +38,7 @@
 
     sput-object v0, Lkik/android/util/DeviceUtils;->b:Lorg/slf4j/b;
 
-    .line 46
+    .line 48
     const/4 v0, 0x5
 
     new-array v0, v0, [I
@@ -71,10 +71,10 @@
 
     const/4 v3, -0x1
 
-    .line 307
+    .line 314
     const-string v8, ""
 
-    .line 310
+    .line 317
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -88,7 +88,7 @@
 
     move-result v0
 
-    .line 320
+    .line 327
     :goto_0
     const/4 v2, 0x0
 
@@ -102,17 +102,17 @@
 
     move-result-object v4
 
-    .line 321
+    .line 328
     if-eqz v4, :cond_7
 
-    .line 322
+    .line 329
     const-string v2, "plugged"
 
     invoke-virtual {v4, v2, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 323
+    .line 330
     if-eq v2, v7, :cond_0
 
     const/4 v5, 0x2
@@ -122,7 +122,7 @@
     :cond_0
     move v2, v7
 
-    .line 324
+    .line 331
     :goto_1
     const-string v5, "scale"
 
@@ -130,14 +130,14 @@
 
     move-result v5
 
-    .line 325
+    .line 332
     const-string v6, "level"
 
     invoke-virtual {v4, v6, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v6
 
-    .line 326
+    .line 333
     int-to-float v6, v6
 
     int-to-float v5, v5
@@ -150,7 +150,7 @@
 
     float-to-int v5, v5
 
-    .line 327
+    .line 334
     if-ltz v5, :cond_1
 
     const/16 v6, 0xff
@@ -162,7 +162,7 @@
 
     move v6, v2
 
-    .line 2055
+    .line 2057
     :goto_2
     const/16 v2, 0x9
 
@@ -170,10 +170,10 @@
 
     move-result v2
 
-    .line 331
+    .line 338
     if-eqz v2, :cond_5
 
-    .line 333
+    .line 340
     int-to-float v2, v0
 
     :try_start_1
@@ -189,12 +189,12 @@
 
     const/4 v9, -0x1
 
-    .line 334
+    .line 341
     invoke-virtual {v4, v0, v9}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v4
 
-    .line 335
+    .line 342
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
     move-result-object v0
@@ -208,33 +208,33 @@
 
     move v1, p1
 
-    .line 333
+    .line 340
     invoke-static/range {v0 .. v7}, Lkik/android/util/DeviceUtils;->collectDrainInterpolation(Ljava/lang/String;IFIIIZZ)[B
 
     move-result-object v0
 
-    .line 336
+    .line 343
     array-length v1, v0
 
     sget v2, Lkik/android/util/DeviceUtils;->a:I
 
     if-gt v1, v2, :cond_5
 
-    .line 340
+    .line 347
     invoke-static {v0}, Lcom/kik/util/i;->b([B)Ljava/lang/String;
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
 
     move-result-object v0
 
-    .line 348
+    .line 355
     :goto_4
     if-nez v0, :cond_2
 
-    .line 349
+    .line 356
     const-string v0, ""
 
-    .line 351
+    .line 358
     :cond_2
     return-object v0
 
@@ -248,20 +248,17 @@
     :cond_3
     move v2, v1
 
-    .line 323
+    .line 330
     goto :goto_1
 
     :cond_4
     move v7, v1
 
-    .line 335
+    .line 342
     goto :goto_3
 
-    .line 345
     :catch_1
     move-exception v0
-
-    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
 
     :cond_5
     move-object v0, v8
@@ -285,7 +282,7 @@
     .locals 4
 
     .prologue
-    .line 127
+    .line 129
     const-string v0, "Kik/%s (Android %s) %s"
 
     const/4 v1, 0x3
@@ -319,13 +316,13 @@
     return-object v0
 .end method
 
-.method public static a(Landroid/content/Context;Lkik/android/util/ah;)Ljava/util/Hashtable;
+.method public static a(Landroid/content/Context;Lkik/android/util/aj;)Ljava/util/Hashtable;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lkik/android/util/ah;",
+            "Lkik/android/util/aj;",
             ")",
             "Ljava/util/Hashtable",
             "<",
@@ -338,79 +335,79 @@
     .prologue
     const-wide/16 v6, -0x1
 
-    .line 147
+    .line 149
     new-instance v1, Ljava/util/Hashtable;
 
     invoke-direct {v1}, Ljava/util/Hashtable;-><init>()V
 
-    .line 148
+    .line 150
     const-string v0, "device-type"
 
     const-string v2, "android"
 
     invoke-virtual {v1, v0, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 150
+    .line 152
     :try_start_0
     sget-object v0, Landroid/os/Build;->BRAND:Ljava/lang/String;
 
-    invoke-static {v0}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    invoke-static {v0}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 151
+    .line 153
     const-string v0, "brand"
 
     sget-object v2, Landroid/os/Build;->BRAND:Ljava/lang/String;
 
     invoke-virtual {v1, v0, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 153
+    .line 155
     :cond_0
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    invoke-static {v0}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    invoke-static {v0}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 154
+    .line 156
     const-string v0, "model"
 
     sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     invoke-virtual {v1, v0, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 156
+    .line 158
     :cond_1
     sget-object v0, Landroid/os/Build$VERSION;->SDK:Ljava/lang/String;
 
-    invoke-static {v0}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    invoke-static {v0}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 157
+    .line 159
     const-string v0, "android-sdk"
 
     sget-object v2, Landroid/os/Build$VERSION;->SDK:Ljava/lang/String;
 
     invoke-virtual {v1, v0, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 160
+    .line 162
     :cond_2
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
 
-    .line 161
+    .line 163
     if-eqz v0, :cond_3
 
-    .line 162
+    .line 164
     const-string v2, "lang"
 
     invoke-virtual {v0}, Ljava/util/Locale;->toString()Ljava/lang/String;
@@ -421,7 +418,7 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 166
+    .line 168
     :cond_3
     :try_start_1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -434,21 +431,21 @@
 
     move-result-object v0
 
-    .line 167
-    invoke-static {v0}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    .line 169
+    invoke-static {v0}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_4
 
-    .line 168
+    .line 170
     const-string v2, "android-id"
 
     invoke-virtual {v1, v2, v0}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 175
+    .line 177
     :cond_4
     :goto_0
     :try_start_2
@@ -460,27 +457,27 @@
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
-    .line 176
+    .line 178
     if-eqz v0, :cond_5
 
-    .line 177
+    .line 179
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getNetworkOperator()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 178
-    invoke-static {v0}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    .line 180
+    invoke-static {v0}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_5
 
-    .line 179
+    .line 181
     const-string v2, "operator"
 
     invoke-virtual {v1, v2, v0}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 184
+    .line 186
     :cond_5
     const-string v0, "prefix"
 
@@ -488,26 +485,26 @@
 
     invoke-virtual {v1, v0, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 187
+    .line 189
     invoke-static {p0}, Lkik/android/util/DeviceUtils;->b(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 188
+    .line 190
     if-eqz v0, :cond_6
 
-    .line 189
+    .line 191
     const-string v2, "version"
 
     invoke-virtual {v1, v2, v0}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 193
+    .line 195
     :cond_6
-    invoke-interface {p1}, Lkik/android/util/ah;->c()Landroid/content/SharedPreferences;
+    invoke-interface {p1}, Lkik/android/util/aj;->c()Landroid/content/SharedPreferences;
 
     move-result-object v2
 
-    .line 194
+    .line 196
     const-string v0, "kik.install_referrer"
 
     const/4 v3, 0x0
@@ -516,15 +513,15 @@
 
     move-result-object v0
 
-    .line 195
+    .line 197
     if-eqz v0, :cond_7
 
-    .line 196
+    .line 198
     const-string v3, "install-referrer"
 
     invoke-virtual {v1, v3, v0}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 198
+    .line 200
     :cond_7
     const-string v0, "kik.install_date"
 
@@ -534,7 +531,7 @@
 
     move-result-wide v4
 
-    .line 199
+    .line 201
     const-string v3, "install-date"
 
     cmp-long v0, v4, v6
@@ -546,7 +543,7 @@
     :goto_1
     invoke-virtual {v1, v3, v0}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 200
+    .line 202
     const-string v0, "registrations-since-install"
 
     const-string v3, "kik.registration_count"
@@ -563,7 +560,7 @@
 
     invoke-virtual {v1, v0, v3}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 201
+    .line 203
     const-string v0, "logins-since-install"
 
     const-string v3, "kik.install_count"
@@ -580,11 +577,11 @@
 
     invoke-virtual {v1, v0, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 206
+    .line 208
     :goto_2
     return-object v1
 
-    .line 199
+    .line 201
     :cond_8
     invoke-static {v4, v5}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
     :try_end_2
@@ -609,55 +606,55 @@
     .locals 2
 
     .prologue
-    .line 60
+    .line 62
     sput-object p0, Lkik/android/util/DeviceUtils;->c:Landroid/content/Context;
 
-    .line 61
-    new-instance v0, Lkik/android/util/aq;
+    .line 63
+    new-instance v0, Lkik/android/util/ar;
 
     sget-object v1, Lkik/android/util/DeviceUtils;->c:Landroid/content/Context;
 
-    invoke-direct {v0, v1}, Lkik/android/util/aq;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lkik/android/util/ar;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lkik/android/util/DeviceUtils;->d:Lkik/android/util/aq;
+    sput-object v0, Lkik/android/util/DeviceUtils;->d:Lkik/android/util/ar;
 
-    .line 1055
+    .line 1057
     const/16 v0, 0x9
 
     invoke-static {v0}, Lcom/kik/sdkutils/c;->a(I)Z
 
     move-result v0
 
-    .line 62
+    .line 64
     if-eqz v0, :cond_0
 
-    .line 63
+    .line 65
     const-string v0, "helloneon"
 
     invoke-static {v0, p0}, Lkik/android/util/DeviceUtils;->a(Ljava/lang/String;Landroid/content/Context;)Z
 
-    .line 65
+    .line 67
     :cond_0
     const-string v0, "gnustl_shared"
 
     invoke-static {v0, p0}, Lkik/android/util/DeviceUtils;->a(Ljava/lang/String;Landroid/content/Context;)Z
 
-    .line 66
+    .line 68
     const-string v0, "kikcode_encode"
 
     invoke-static {v0, p0}, Lkik/android/util/DeviceUtils;->a(Ljava/lang/String;Landroid/content/Context;)Z
 
-    .line 67
+    .line 69
     const-string v0, "kikcode_scan"
 
     invoke-static {v0, p0}, Lkik/android/util/DeviceUtils;->a(Ljava/lang/String;Landroid/content/Context;)Z
 
-    .line 68
+    .line 70
     const-string v0, "kikhash"
 
     invoke-static {v0, p0}, Lkik/android/util/DeviceUtils;->a(Ljava/lang/String;Landroid/content/Context;)Z
 
-    .line 69
+    .line 71
     sget-object v0, Lkik/android/util/DeviceUtils;->c:Landroid/content/Context;
 
     const-string v1, "audio"
@@ -670,7 +667,7 @@
 
     sput-object v0, Lkik/android/util/DeviceUtils;->g:Landroid/media/AudioManager;
 
-    .line 70
+    .line 72
     return-void
 .end method
 
@@ -678,7 +675,7 @@
     .locals 1
 
     .prologue
-    .line 55
+    .line 57
     const/16 v0, 0x9
 
     invoke-static {v0}, Lcom/kik/sdkutils/c;->a(I)Z
@@ -694,17 +691,17 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 296
+    .line 303
     if-eqz p1, :cond_0
 
     if-nez p0, :cond_1
 
-    .line 301
+    .line 308
     :cond_0
     :goto_0
     return v0
 
-    .line 299
+    .line 306
     :cond_1
     new-instance v1, Landroid/content/Intent;
 
@@ -716,7 +713,7 @@
 
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 300
+    .line 307
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
@@ -725,7 +722,7 @@
 
     move-result-object v1
 
-    .line 301
+    .line 308
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v1
@@ -741,26 +738,23 @@
     .locals 3
 
     .prologue
-    .line 75
+    .line 77
     :try_start_0
     invoke-static {p0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 95
+    .line 97
     :goto_0
     const/4 v0, 0x1
 
     :goto_1
     return v0
 
-    .line 78
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
-
-    .line 80
+    .line 82
     :try_start_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -786,7 +780,7 @@
 
     move-result-object v0
 
-    .line 81
+    .line 83
     const/16 v1, 0x9
 
     invoke-static {v1}, Lcom/kik/sdkutils/c;->a(I)Z
@@ -795,14 +789,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 82
+    .line 84
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
 
     iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
 
-    .line 84
+    .line 86
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -824,7 +818,7 @@
 
     move-result-object v1
 
-    .line 85
+    .line 87
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -841,14 +835,14 @@
 
     move-result-object v0
 
-    .line 86
+    .line 88
     invoke-static {v0}, Ljava/lang/System;->load(Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
 
     goto :goto_0
 
-    .line 89
+    .line 91
     :catch_1
     move-exception v0
 
@@ -858,10 +852,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/LinkageError;-><init>(Ljava/lang/String;)V
 
-    .line 90
-    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
-
-    .line 91
+    .line 93
     const/4 v0, 0x0
 
     goto :goto_1
@@ -873,7 +864,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 135
+    .line 137
     :try_start_0
     sget-object v1, Lkik/android/util/DeviceUtils;->c:Landroid/content/Context;
 
@@ -897,7 +888,7 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 142
+    .line 144
     :goto_0
     return v0
 
@@ -913,48 +904,48 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 100
-    .line 103
+    .line 102
+    .line 105
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    .line 104
+    .line 106
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 106
+    .line 108
     if-eqz v1, :cond_1
 
-    .line 107
+    .line 109
     const/4 v3, 0x0
 
     invoke-virtual {v1, v2, v3}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object v1
 
-    .line 110
+    .line 112
     :goto_0
     if-eqz v1, :cond_0
 
-    .line 111
+    .line 113
     iget-object v0, v1, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 122
+    .line 124
     :goto_1
     return-object v0
 
-    .line 114
+    .line 116
     :cond_0
     const-string v0, "0.0.0"
 
     goto :goto_1
 
-    .line 119
+    .line 121
     :catch_0
     move-exception v1
 
@@ -972,12 +963,12 @@
     .locals 3
 
     .prologue
-    .line 211
+    .line 213
     sget v0, Lkik/android/util/DeviceUtils;->f:I
 
     if-gtz v0, :cond_1
 
-    .line 212
+    .line 214
     sget-object v0, Lkik/android/util/DeviceUtils;->c:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -990,7 +981,7 @@
 
     iget v1, v0, Landroid/util/DisplayMetrics;->densityDpi:I
 
-    .line 213
+    .line 215
     const/4 v0, 0x0
 
     :goto_0
@@ -1000,34 +991,34 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 214
+    .line 216
     sget-object v2, Lkik/android/util/DeviceUtils;->e:[I
 
     aget v2, v2, v0
 
     if-ne v1, v2, :cond_0
 
-    .line 216
+    .line 218
     sput v1, Lkik/android/util/DeviceUtils;->f:I
 
     move v0, v1
 
-    .line 222
+    .line 224
     :goto_1
     return v0
 
-    .line 218
+    .line 220
     :cond_0
     const/16 v2, 0xf0
 
     sput v2, Lkik/android/util/DeviceUtils;->f:I
 
-    .line 213
+    .line 215
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 222
+    .line 224
     :cond_1
     sget v0, Lkik/android/util/DeviceUtils;->f:I
 
@@ -1040,7 +1031,7 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 252
+    .line 254
     const-string v0, "connectivity"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1049,12 +1040,12 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 253
+    .line 255
     invoke-virtual {v0, v1}, Landroid/net/ConnectivityManager;->getNetworkInfo(I)Landroid/net/NetworkInfo;
 
     move-result-object v0
 
-    .line 254
+    .line 256
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnected()Z
@@ -1081,7 +1072,7 @@
     .locals 2
 
     .prologue
-    .line 238
+    .line 240
     sget-object v0, Lkik/android/util/DeviceUtils;->c:Landroid/content/Context;
 
     const-string v1, "connectivity"
@@ -1092,12 +1083,12 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 239
+    .line 241
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v0
 
-    .line 240
+    .line 242
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnected()Z
@@ -1123,7 +1114,7 @@
     .end annotation
 
     .prologue
-    .line 271
+    .line 273
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
@@ -1149,7 +1140,7 @@
     .locals 2
 
     .prologue
-    .line 245
+    .line 247
     sget-object v0, Lkik/android/util/DeviceUtils;->c:Landroid/content/Context;
 
     const-string v1, "connectivity"
@@ -1160,12 +1151,12 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 246
+    .line 248
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v0
 
-    .line 247
+    .line 249
     if-eqz v0, :cond_0
 
     const/4 v0, 0x1
@@ -1185,14 +1176,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 281
+    .line 288
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.media.action.IMAGE_CAPTURE"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 282
+    .line 289
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
@@ -1201,7 +1192,7 @@
 
     move-result-object v1
 
-    .line 283
+    .line 290
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v1
@@ -1218,7 +1209,7 @@
     .locals 1
 
     .prologue
-    .line 401
+    .line 408
     const-string v0, "activity"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1227,12 +1218,12 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 402
+    .line 409
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getMemoryClass()I
 
     move-result v0
 
-    .line 403
+    .line 410
     mul-int/lit16 v0, v0, 0x400
 
     mul-int/lit16 v0, v0, 0x400
@@ -1241,29 +1232,37 @@
 .end method
 
 .method public static f()Z
-    .locals 1
+    .locals 2
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
     .prologue
-    .line 276
-    sget-object v0, Lkik/android/util/DeviceUtils;->c:Landroid/content/Context;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+    .line 280
+    sget-object v1, Lkik/android/util/DeviceUtils;->c:Landroid/content/Context;
 
-    move-result-object v0
+    if-nez v1, :cond_1
 
-    iget v0, v0, Landroid/content/pm/ApplicationInfo;->flags:I
-
-    and-int/lit8 v0, v0, 0x2
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
+    .line 283
+    :cond_0
     :goto_0
     return v0
 
-    :cond_0
-    const/4 v0, 0x0
+    :cond_1
+    sget-object v1, Lkik/android/util/DeviceUtils;->c:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/content/pm/ApplicationInfo;->flags:I
+
+    and-int/lit8 v1, v1, 0x2
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x1
 
     goto :goto_0
 .end method
@@ -1272,7 +1271,7 @@
     .locals 3
 
     .prologue
-    .line 386
+    .line 393
     sget-object v0, Lkik/android/util/DeviceUtils;->g:Landroid/media/AudioManager;
 
     const/4 v1, 0x3
@@ -1281,7 +1280,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/media/AudioManager;->setStreamMute(IZ)V
 
-    .line 387
+    .line 394
     return-void
 .end method
 
@@ -1289,7 +1288,7 @@
     .locals 3
 
     .prologue
-    .line 391
+    .line 398
     sget-object v0, Lkik/android/util/DeviceUtils;->g:Landroid/media/AudioManager;
 
     const/4 v1, 0x3
@@ -1298,6 +1297,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/media/AudioManager;->setStreamMute(IZ)V
 
-    .line 392
+    .line 399
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class final Lcom/kik/util/c$a;
-.super Lrx/f$a;
+.super Lrx/g$a;
 .source "SourceFile"
 
 
@@ -28,7 +28,7 @@
 
     .prologue
     .line 52
-    invoke-direct {p0}, Lrx/f$a;-><init>()V
+    invoke-direct {p0}, Lrx/g$a;-><init>()V
 
     .line 53
     iput-object p1, p0, Lcom/kik/util/c$a;->a:Landroid/os/Handler;
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final a(Lrx/b/a;)Lrx/j;
+.method public final a(Lrx/functions/a;)Lrx/k;
     .locals 3
 
     .prologue
@@ -59,14 +59,14 @@
 
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {p0, p1, v0, v1, v2}, Lcom/kik/util/c$a;->a(Lrx/b/a;JLjava/util/concurrent/TimeUnit;)Lrx/j;
+    invoke-virtual {p0, p1, v0, v1, v2}, Lcom/kik/util/c$a;->a(Lrx/functions/a;JLjava/util/concurrent/TimeUnit;)Lrx/k;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final a(Lrx/b/a;JLjava/util/concurrent/TimeUnit;)Lrx/j;
+.method public final a(Lrx/functions/a;JLjava/util/concurrent/TimeUnit;)Lrx/k;
     .locals 6
 
     .prologue
@@ -76,7 +76,7 @@
     if-eqz v0, :cond_1
 
     .line 74
-    invoke-static {}, Lrx/g/e;->b()Lrx/j;
+    invoke-static {}, Lrx/f/e;->b()Lrx/k;
 
     move-result-object v0
 
@@ -87,7 +87,7 @@
 
     .line 77
     :cond_1
-    invoke-static {p1}, Lrx/a/a/b;->a(Lrx/b/a;)Lrx/b/a;
+    invoke-static {p1}, Lrx/a/a/b;->a(Lrx/functions/a;)Lrx/functions/a;
 
     move-result-object v1
 
@@ -96,7 +96,7 @@
 
     iget-object v2, p0, Lcom/kik/util/c$a;->a:Landroid/os/Handler;
 
-    invoke-direct {v0, v1, v2}, Lcom/kik/util/c$b;-><init>(Lrx/b/a;Landroid/os/Handler;)V
+    invoke-direct {v0, v1, v2}, Lcom/kik/util/c$b;-><init>(Lrx/functions/a;Landroid/os/Handler;)V
 
     .line 81
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
@@ -113,7 +113,7 @@
     invoke-virtual {v0}, Lcom/kik/util/c$b;->run()V
 
     .line 83
-    invoke-static {}, Lrx/g/e;->b()Lrx/j;
+    invoke-static {}, Lrx/f/e;->b()Lrx/k;
 
     move-result-object v0
 
@@ -150,7 +150,7 @@
     invoke-virtual {v1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     .line 93
-    invoke-static {}, Lrx/g/e;->b()Lrx/j;
+    invoke-static {}, Lrx/f/e;->b()Lrx/k;
 
     move-result-object v0
 

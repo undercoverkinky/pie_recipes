@@ -66,29 +66,29 @@
     .end annotation
 
     .prologue
-    .line 1444
+    .line 1454
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/common/cache/LocalCache$v;-><init>(Ljava/lang/ref/ReferenceQueue;Ljava/lang/Object;ILcom/google/common/cache/LocalCache$j;)V
 
-    .line 1449
+    .line 1459
     const-wide v0, 0x7fffffffffffffffL
 
     iput-wide v0, p0, Lcom/google/common/cache/LocalCache$x;->a:J
 
-    .line 1462
+    .line 1472
     invoke-static {}, Lcom/google/common/cache/LocalCache;->k()Lcom/google/common/cache/LocalCache$j;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/common/cache/LocalCache$x;->b:Lcom/google/common/cache/LocalCache$j;
 
-    .line 1475
+    .line 1485
     invoke-static {}, Lcom/google/common/cache/LocalCache;->k()Lcom/google/common/cache/LocalCache$j;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/common/cache/LocalCache$x;->c:Lcom/google/common/cache/LocalCache$j;
 
-    .line 1445
+    .line 1455
     return-void
 .end method
 
@@ -105,7 +105,7 @@
     .end annotation
 
     .prologue
-    .line 1466
+    .line 1476
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$x;->b:Lcom/google/common/cache/LocalCache$j;
 
     return-object v0
@@ -122,7 +122,7 @@
     .end annotation
 
     .prologue
-    .line 1479
+    .line 1489
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$x;->c:Lcom/google/common/cache/LocalCache$j;
 
     return-object v0
@@ -132,7 +132,7 @@
     .locals 2
 
     .prologue
-    .line 1453
+    .line 1463
     iget-wide v0, p0, Lcom/google/common/cache/LocalCache$x;->a:J
 
     return-wide v0
@@ -149,10 +149,10 @@
     .end annotation
 
     .prologue
-    .line 1471
+    .line 1481
     iput-object p1, p0, Lcom/google/common/cache/LocalCache$x;->b:Lcom/google/common/cache/LocalCache$j;
 
-    .line 1472
+    .line 1482
     return-void
 .end method
 
@@ -167,10 +167,10 @@
     .end annotation
 
     .prologue
-    .line 1484
+    .line 1494
     iput-object p1, p0, Lcom/google/common/cache/LocalCache$x;->c:Lcom/google/common/cache/LocalCache$j;
 
-    .line 1485
+    .line 1495
     return-void
 .end method
 
@@ -178,9 +178,9 @@
     .locals 1
 
     .prologue
-    .line 1458
+    .line 1468
     iput-wide p1, p0, Lcom/google/common/cache/LocalCache$x;->a:J
 
-    .line 1459
+    .line 1469
     return-void
 .end method

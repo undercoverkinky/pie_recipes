@@ -57,34 +57,40 @@
     sput-object v0, Lcom/kik/messagepath/model/CoreMessageOptions;->a:Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;
 
     .line 785
-    new-array v0, v5, [Ljava/lang/String;
+    const/4 v0, 0x2
 
-    const-string v1, "\n)messagepath/v1/core_message_options.proto\u0012\u0015common.messagepath.v1\u001a google/protobuf/descriptor.proto\"\u0087\u0001\n\u001cCoreMessageOriginRestriction\u0012H\n\u0004deny\u0018\u0001 \u0003(\u000e2:.common.messagepath.v1.CoreMessageOriginRestriction.Origin\"\u001d\n\u0006Origin\u0012\n\n\u0006MOBILE\u0010\u0000\u0012\u0007\n\u0003BOT\u0010\u0001:p\n\u0012origin_restriction\u0012\u001d.google.protobuf.FieldOptions\u0018\u00db\u00d3\u0004 \u0001(\u000b23.common.messagepath.v1.CoreMessageOriginRestrictionB\u001b\n\u0019com.kik.messagepath.model"
+    new-array v0, v0, [Ljava/lang/String;
+
+    const-string v1, "\n)messagepath/v1/core_message_options.proto\u0012\u0015common.messagepath.v1\u001a google/protobuf/descriptor.proto\"\u0087\u0001\n\u001cCoreMessageOriginRestriction\u0012H\n\u0004deny\u0018\u0001 \u0003(\u000e2:.common.messagepath.v1.CoreMessageOriginRestriction.Origin\"\u001d\n\u0006Origin\u0012\n\n\u0006MOBILE\u0010\u0000\u0012\u0007\n\u0003BOT\u0010\u0001:p\n\u0012origin_restriction\u0012\u001d.google.protobuf.FieldOptions\u0018\u00db\u00d3\u0004 \u0001(\u000b23.common.messagepath.v1.CoreMessageOriginRestrictionBp\n\u0019com.kik.messagepath.modelZSgithub.com/kikint"
 
     aput-object v1, v0, v4
 
-    .line 797
+    const-string v1, "eractive/xiphias-model-common/generated/go/messagepath;messagepath"
+
+    aput-object v1, v0, v5
+
+    .line 799
     new-instance v1, Lcom/kik/messagepath/model/CoreMessageOptions$1;
 
     invoke-direct {v1}, Lcom/kik/messagepath/model/CoreMessageOptions$1;-><init>()V
 
-    .line 805
+    .line 807
     new-array v2, v5, [Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 808
+    .line 810
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v3
 
     aput-object v3, v2, v4
 
-    .line 806
+    .line 808
     invoke-static {v0, v2, v1}, Lcom/google/protobuf/Descriptors$FileDescriptor;->internalBuildGeneratedFileFrom([Ljava/lang/String;[Lcom/google/protobuf/Descriptors$FileDescriptor;Lcom/google/protobuf/Descriptors$FileDescriptor$InternalDescriptorAssigner;)V
 
     .line 1780
     sget-object v0, Lcom/kik/messagepath/model/CoreMessageOptions;->d:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 811
+    .line 813
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getMessageTypes()Ljava/util/List;
 
     move-result-object v0
@@ -97,7 +103,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/CoreMessageOptions;->b:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 812
+    .line 814
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/messagepath/model/CoreMessageOptions;->b:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -112,7 +118,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/CoreMessageOptions;->c:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 816
+    .line 818
     sget-object v1, Lcom/kik/messagepath/model/CoreMessageOptions;->a:Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;
 
     sget-object v0, Lcom/kik/messagepath/model/CoreMessageOptions;->d:Lcom/google/protobuf/Descriptors$FileDescriptor;
@@ -129,10 +135,10 @@
 
     invoke-virtual {v1, v0}, Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;->internalInit(Lcom/google/protobuf/Descriptors$FieldDescriptor;)V
 
-    .line 817
+    .line 819
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 818
+    .line 820
     return-void
 .end method
 

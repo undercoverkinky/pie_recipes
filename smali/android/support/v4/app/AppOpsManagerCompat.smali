@@ -6,7 +6,6 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroid/support/v4/app/AppOpsManagerCompat$1;,
         Landroid/support/v4/app/AppOpsManagerCompat$AppOpsManager23;,
         Landroid/support/v4/app/AppOpsManagerCompat$AppOpsManagerImpl;
     }
@@ -25,34 +24,32 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
     .prologue
-    const/4 v2, 0x0
-
-    .line 83
+    .line 89
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x17
 
     if-lt v0, v1, :cond_0
 
-    .line 84
+    .line 90
     new-instance v0, Landroid/support/v4/app/AppOpsManagerCompat$AppOpsManager23;
 
-    invoke-direct {v0, v2}, Landroid/support/v4/app/AppOpsManagerCompat$AppOpsManager23;-><init>(Landroid/support/v4/app/AppOpsManagerCompat$1;)V
+    invoke-direct {v0}, Landroid/support/v4/app/AppOpsManagerCompat$AppOpsManager23;-><init>()V
 
     sput-object v0, Landroid/support/v4/app/AppOpsManagerCompat;->IMPL:Landroid/support/v4/app/AppOpsManagerCompat$AppOpsManagerImpl;
 
-    .line 88
+    .line 94
     :goto_0
     return-void
 
-    .line 86
+    .line 92
     :cond_0
     new-instance v0, Landroid/support/v4/app/AppOpsManagerCompat$AppOpsManagerImpl;
 
-    invoke-direct {v0, v2}, Landroid/support/v4/app/AppOpsManagerCompat$AppOpsManagerImpl;-><init>(Landroid/support/v4/app/AppOpsManagerCompat$1;)V
+    invoke-direct {v0}, Landroid/support/v4/app/AppOpsManagerCompat$AppOpsManagerImpl;-><init>()V
 
     sput-object v0, Landroid/support/v4/app/AppOpsManagerCompat;->IMPL:Landroid/support/v4/app/AppOpsManagerCompat$AppOpsManagerImpl;
 
@@ -63,7 +60,7 @@
     .locals 0
 
     .prologue
-    .line 90
+    .line 96
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -73,7 +70,7 @@
     .locals 1
 
     .prologue
-    .line 119
+    .line 125
     sget-object v0, Landroid/support/v4/app/AppOpsManagerCompat;->IMPL:Landroid/support/v4/app/AppOpsManagerCompat$AppOpsManagerImpl;
 
     invoke-virtual {v0, p0, p1, p2, p3}, Landroid/support/v4/app/AppOpsManagerCompat$AppOpsManagerImpl;->noteOp(Landroid/content/Context;Ljava/lang/String;ILjava/lang/String;)I
@@ -87,7 +84,7 @@
     .locals 1
 
     .prologue
-    .line 140
+    .line 146
     sget-object v0, Landroid/support/v4/app/AppOpsManagerCompat;->IMPL:Landroid/support/v4/app/AppOpsManagerCompat$AppOpsManagerImpl;
 
     invoke-virtual {v0, p0, p1, p2}, Landroid/support/v4/app/AppOpsManagerCompat$AppOpsManagerImpl;->noteProxyOp(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
@@ -101,7 +98,7 @@
     .locals 1
 
     .prologue
-    .line 99
+    .line 105
     sget-object v0, Landroid/support/v4/app/AppOpsManagerCompat;->IMPL:Landroid/support/v4/app/AppOpsManagerCompat$AppOpsManagerImpl;
 
     invoke-virtual {v0, p0}, Landroid/support/v4/app/AppOpsManagerCompat$AppOpsManagerImpl;->permissionToOp(Ljava/lang/String;)Ljava/lang/String;

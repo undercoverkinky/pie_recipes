@@ -33,8 +33,8 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 16
-    const/4 v0, 0x4
+    .line 19
+    const/4 v0, 0x5
 
     new-array v6, v0, [Lkik/android/b/i$a;
 
@@ -88,6 +88,22 @@
 
     new-instance v0, Lkik/android/b/i$a;
 
+    const-string v1, "Scribble Chat"
+
+    const-string v2, "https://exporter.getscribblechat.com/"
+
+    const-string v3, "https://exporter.getscribblechat.com/icon.png"
+
+    const-string v4, "https://exporter.getscribblechat.com/icon.png"
+
+    invoke-direct/range {v0 .. v5}, Lkik/android/b/i$a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;B)V
+
+    aput-object v0, v6, v7
+
+    const/4 v7, 0x4
+
+    new-instance v0, Lkik/android/b/i$a;
+
     const-string v1, "Web History"
 
     const-string v2, "https://home.kik.com/"
@@ -100,7 +116,7 @@
 
     aput-object v0, v6, v7
 
-    .line 22
+    .line 26
     sput-object v6, Lkik/android/b/i;->a:[Lkik/android/b/i$a;
 
     invoke-static {v6}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -125,8 +141,18 @@
     .end annotation
 
     .prologue
-    .line 26
+    .line 30
     sget-object v0, Lkik/android/b/i;->b:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public static b()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 71
+    const-string v0, "https://my.kik.com/"
 
     return-object v0
 .end method

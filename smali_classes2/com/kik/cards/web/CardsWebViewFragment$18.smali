@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/cards/web/CardsWebViewFragment;->b()V
+    value = Lcom/kik/cards/web/CardsWebViewFragment;->a()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 835
+    .line 860
     iput-object p1, p0, Lcom/kik/cards/web/CardsWebViewFragment$18;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,13 +40,13 @@
     .locals 2
 
     .prologue
-    .line 839
+    .line 864
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$18;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/kik/cards/web/CardsWebViewFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v0, v1}, Lcom/kik/cards/web/CardsWebViewFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 840
+    .line 865
     return-void
 .end method

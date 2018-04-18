@@ -47,11 +47,11 @@
     .line 272
     iget-object v0, p0, Lcom/kik/sdkutils/b$3$4;->b:Lcom/kik/sdkutils/b$3;
 
-    iget-object v0, v0, Lcom/kik/sdkutils/b$3;->a:Lcom/kik/events/l;
+    iget-object v0, v0, Lcom/kik/sdkutils/b$3;->a:Lcom/kik/events/k;
 
     iget-object v1, p0, Lcom/kik/sdkutils/b$3$4;->a:Ljava/lang/Throwable;
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/l;->b(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v1}, Lcom/kik/events/k;->b(Ljava/lang/Throwable;)V
 
     .line 273
     return-void

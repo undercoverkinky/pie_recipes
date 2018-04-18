@@ -24,10 +24,10 @@
     .end annotation
 
     .prologue
-    .line 1368
+    .line 2228
     invoke-direct {p0, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;-><init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat$Token;)V
 
-    .line 1369
+    .line 2229
     return-void
 .end method
 
@@ -35,10 +35,10 @@
     .locals 0
 
     .prologue
-    .line 1363
+    .line 2223
     invoke-direct {p0, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;-><init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;)V
 
-    .line 1364
+    .line 2224
     return-void
 .end method
 
@@ -48,14 +48,14 @@
     .locals 2
 
     .prologue
-    .line 1373
+    .line 2233
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi23;->mControllerObj:Ljava/lang/Object;
 
     invoke-static {v0}, Landroid/support/v4/media/session/MediaControllerCompatApi21;->getTransportControls(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 1374
+    .line 2234
     if-eqz v1, :cond_0
 
     new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi23;

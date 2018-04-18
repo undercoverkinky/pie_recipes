@@ -1,139 +1,58 @@
-.class public interface abstract Lcom/google/android/gms/internal/zzaja;
+.class public final Lcom/google/android/gms/internal/zzaja;
 .super Ljava/lang/Object;
 
 
-# virtual methods
-.method public abstract getCurrentUser()Lcom/google/firebase/auth/b;
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0x11
+.end annotation
+
+.annotation runtime Lcom/google/android/gms/internal/zzzt;
+.end annotation
+
+
+# static fields
+.field private static zzddu:Lcom/google/android/gms/internal/zzaja;
+
+
+# instance fields
+.field zzbwh:Ljava/lang/String;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    sput-object v0, Lcom/google/android/gms/internal/zzaja;->zzddu:Lcom/google/android/gms/internal/zzaja;
+
+    return-void
 .end method
 
-.method public abstract zza(Lcom/google/firebase/auth/b;Lcom/google/firebase/auth/UserProfileChangeRequest;)Lcom/google/android/gms/tasks/Task;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/firebase/auth/b;",
-            "Lcom/google/firebase/auth/UserProfileChangeRequest;",
-            ")",
-            "Lcom/google/android/gms/tasks/Task",
-            "<",
-            "Ljava/lang/Void;",
-            ">;"
-        }
-    .end annotation
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method
 
-.method public abstract zza(Lcom/google/firebase/auth/b;Lcom/google/firebase/auth/a;)Lcom/google/android/gms/tasks/Task;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/firebase/auth/b;",
-            "Lcom/google/firebase/auth/a;",
-            ")",
-            "Lcom/google/android/gms/tasks/Task",
-            "<",
-            "Ljava/lang/Void;",
-            ">;"
-        }
-    .end annotation
-.end method
+.method public static zzrk()Lcom/google/android/gms/internal/zzaja;
+    .locals 1
 
-.method public abstract zza(Lcom/google/firebase/auth/b;Ljava/lang/String;)Lcom/google/android/gms/tasks/Task;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/firebase/auth/b;",
-            "Ljava/lang/String;",
-            ")",
-            "Lcom/google/android/gms/tasks/Task",
-            "<",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-.end method
+    sget-object v0, Lcom/google/android/gms/internal/zzaja;->zzddu:Lcom/google/android/gms/internal/zzaja;
 
-.method public abstract zza(Lcom/google/firebase/auth/b;Z)Lcom/google/android/gms/tasks/Task;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/firebase/auth/b;",
-            "Z)",
-            "Lcom/google/android/gms/tasks/Task",
-            "<",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-.end method
+    if-nez v0, :cond_0
 
-.method public abstract zzb(Lcom/google/firebase/auth/b;)Lcom/google/android/gms/tasks/Task;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/firebase/auth/b;",
-            ")",
-            "Lcom/google/android/gms/tasks/Task",
-            "<",
-            "Ljava/lang/Void;",
-            ">;"
-        }
-    .end annotation
-.end method
+    new-instance v0, Lcom/google/android/gms/internal/zzaja;
 
-.method public abstract zzb(Lcom/google/firebase/auth/b;Lcom/google/firebase/auth/a;)Lcom/google/android/gms/tasks/Task;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/firebase/auth/b;",
-            "Lcom/google/firebase/auth/a;",
-            ")",
-            "Lcom/google/android/gms/tasks/Task",
-            "<",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-.end method
+    invoke-direct {v0}, Lcom/google/android/gms/internal/zzaja;-><init>()V
 
-.method public abstract zzb(Lcom/google/firebase/auth/b;Ljava/lang/String;)Lcom/google/android/gms/tasks/Task;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/firebase/auth/b;",
-            "Ljava/lang/String;",
-            ")",
-            "Lcom/google/android/gms/tasks/Task",
-            "<",
-            "Ljava/lang/Void;",
-            ">;"
-        }
-    .end annotation
-.end method
+    sput-object v0, Lcom/google/android/gms/internal/zzaja;->zzddu:Lcom/google/android/gms/internal/zzaja;
 
-.method public abstract zzc(Lcom/google/firebase/auth/b;)Lcom/google/android/gms/tasks/Task;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/firebase/auth/b;",
-            ")",
-            "Lcom/google/android/gms/tasks/Task",
-            "<",
-            "Ljava/lang/Void;",
-            ">;"
-        }
-    .end annotation
-.end method
+    :cond_0
+    sget-object v0, Lcom/google/android/gms/internal/zzaja;->zzddu:Lcom/google/android/gms/internal/zzaja;
 
-.method public abstract zzc(Lcom/google/firebase/auth/b;Ljava/lang/String;)Lcom/google/android/gms/tasks/Task;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/firebase/auth/b;",
-            "Ljava/lang/String;",
-            ")",
-            "Lcom/google/android/gms/tasks/Task",
-            "<",
-            "Ljava/lang/Void;",
-            ">;"
-        }
-    .end annotation
+    return-object v0
 .end method

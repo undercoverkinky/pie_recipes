@@ -21,7 +21,7 @@
     .locals 2
 
     .prologue
-    .line 86
+    .line 90
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -47,7 +47,7 @@
     .locals 1
 
     .prologue
-    .line 128
+    .line 129
     new-instance v0, Lcom/google/common/hash/Murmur3_128HashFunction;
 
     invoke-direct {v0, p0}, Lcom/google/common/hash/Murmur3_128HashFunction;-><init>(I)V
@@ -57,9 +57,11 @@
 
 .method public static b()Lcom/google/common/hash/d;
     .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
     .prologue
-    .line 182
+    .line 189
     sget-object v0, Lcom/google/common/hash/f$a;->a:Lcom/google/common/hash/d;
 
     return-object v0
@@ -69,7 +71,7 @@
     .locals 1
 
     .prologue
-    .line 44
+    .line 46
     sget v0, Lcom/google/common/hash/f;->a:I
 
     return v0

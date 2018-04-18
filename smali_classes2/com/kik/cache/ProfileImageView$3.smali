@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/kik/cache/aa$e;
+.implements Lcom/kik/cache/KikVolleyImageLoader$d;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/cache/ProfileImageView;->a(Lkik/core/datatypes/o;Lcom/kik/cache/aa;)V
+    value = Lcom/kik/cache/ProfileImageView;->a(Lkik/core/datatypes/l;Lcom/kik/cache/KikVolleyImageLoader;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 140
+    .line 135
     iput-object p1, p0, Lcom/kik/cache/ProfileImageView$3;->a:Lcom/kik/cache/ProfileImageView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 2
 
     .prologue
-    .line 153
+    .line 148
     iget-object v0, p0, Lcom/kik/cache/ProfileImageView$3;->a:Lcom/kik/cache/ProfileImageView;
 
     invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->a(Lcom/kik/cache/ProfileImageView;)Lcom/kik/events/g;
@@ -51,24 +51,24 @@
 
     invoke-virtual {v0, v1}, Lcom/kik/events/g;->a(Ljava/lang/Object;)V
 
-    .line 154
+    .line 149
     return-void
 .end method
 
-.method public final a(Lcom/kik/cache/aa$d;Z)V
+.method public final a(Lcom/kik/cache/KikVolleyImageLoader$c;Z)V
     .locals 2
 
     .prologue
-    .line 145
+    .line 140
     if-eqz p2, :cond_0
 
-    invoke-virtual {p1}, Lcom/kik/cache/aa$d;->b()Landroid/graphics/Bitmap;
+    invoke-virtual {p1}, Lcom/kik/cache/KikVolleyImageLoader$c;->b()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 146
+    .line 141
     iget-object v0, p0, Lcom/kik/cache/ProfileImageView$3;->a:Lcom/kik/cache/ProfileImageView;
 
     invoke-static {v0}, Lcom/kik/cache/ProfileImageView;->b(Lcom/kik/cache/ProfileImageView;)Lcom/kik/events/g;
@@ -79,7 +79,7 @@
 
     invoke-virtual {v0, v1}, Lcom/kik/events/g;->a(Ljava/lang/Object;)V
 
-    .line 148
+    .line 143
     :cond_0
     return-void
 .end method

@@ -3,12 +3,18 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0xe
+.end annotation
+
+
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 28
+    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,7 +24,7 @@
     .locals 1
 
     .prologue
-    .line 31
+    .line 36
     invoke-virtual {p0, p1}, Landroid/view/View;->canScrollHorizontally(I)Z
 
     move-result v0
@@ -30,7 +36,7 @@
     .locals 1
 
     .prologue
-    .line 35
+    .line 40
     invoke-virtual {p0, p1}, Landroid/view/View;->canScrollVertically(I)Z
 
     move-result v0
@@ -42,10 +48,10 @@
     .locals 0
 
     .prologue
-    .line 47
+    .line 52
     invoke-virtual {p0, p1}, Landroid/view/View;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 48
+    .line 53
     return-void
 .end method
 
@@ -53,12 +59,12 @@
     .locals 0
 
     .prologue
-    .line 51
+    .line 56
     check-cast p1, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0, p1}, Landroid/view/View;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 52
+    .line 57
     return-void
 .end method
 
@@ -66,10 +72,10 @@
     .locals 0
 
     .prologue
-    .line 43
+    .line 48
     invoke-virtual {p0, p1}, Landroid/view/View;->onPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 44
+    .line 49
     return-void
 .end method
 
@@ -77,12 +83,12 @@
     .locals 0
 
     .prologue
-    .line 39
+    .line 44
     check-cast p1, Landroid/view/View$AccessibilityDelegate;
 
     invoke-virtual {p0, p1}, Landroid/view/View;->setAccessibilityDelegate(Landroid/view/View$AccessibilityDelegate;)V
 
-    .line 40
+    .line 45
     return-void
 .end method
 
@@ -90,9 +96,9 @@
     .locals 0
 
     .prologue
-    .line 55
+    .line 60
     invoke-virtual {p0, p1}, Landroid/view/View;->setFitsSystemWindows(Z)V
 
-    .line 56
+    .line 61
     return-void
 .end method

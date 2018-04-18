@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 702
+    .line 764
     invoke-direct {p0}, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplKitKat;-><init>()V
 
     return-void
@@ -28,10 +28,10 @@
 
 # virtual methods
 .method public build(Landroid/support/v4/app/NotificationCompat$Builder;Landroid/support/v4/app/NotificationCompat$BuilderExtender;)Landroid/app/Notification;
-    .locals 26
+    .locals 28
 
     .prologue
-    .line 705
+    .line 767
     new-instance v2, Landroid/support/v4/app/NotificationCompatApi20$Builder;
 
     move-object/from16 v0, p1
@@ -42,13 +42,14 @@
 
     iget-object v4, v0, Landroid/support/v4/app/NotificationCompat$Builder;->mNotification:Landroid/app/Notification;
 
-    move-object/from16 v0, p1
+    .line 768
+    invoke-virtual/range {p1 .. p1}, Landroid/support/v4/app/NotificationCompat$Builder;->resolveTitle()Ljava/lang/CharSequence;
 
-    iget-object v5, v0, Landroid/support/v4/app/NotificationCompat$Builder;->mContentTitle:Ljava/lang/CharSequence;
+    move-result-object v5
 
-    move-object/from16 v0, p1
+    invoke-virtual/range {p1 .. p1}, Landroid/support/v4/app/NotificationCompat$Builder;->resolveText()Ljava/lang/CharSequence;
 
-    iget-object v6, v0, Landroid/support/v4/app/NotificationCompat$Builder;->mContentText:Ljava/lang/CharSequence;
+    move-result-object v6
 
     move-object/from16 v0, p1
 
@@ -146,23 +147,35 @@
 
     move-object/from16 v25, v0
 
-    invoke-direct/range {v2 .. v25}, Landroid/support/v4/app/NotificationCompatApi20$Builder;-><init>(Landroid/content/Context;Landroid/app/Notification;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/widget/RemoteViews;ILandroid/app/PendingIntent;Landroid/app/PendingIntent;Landroid/graphics/Bitmap;IIZZZILjava/lang/CharSequence;ZLjava/util/ArrayList;Landroid/os/Bundle;Ljava/lang/String;ZLjava/lang/String;)V
+    move-object/from16 v0, p1
 
-    .line 711
+    iget-object v0, v0, Landroid/support/v4/app/NotificationCompat$Builder;->mContentView:Landroid/widget/RemoteViews;
+
+    move-object/from16 v26, v0
+
+    move-object/from16 v0, p1
+
+    iget-object v0, v0, Landroid/support/v4/app/NotificationCompat$Builder;->mBigContentView:Landroid/widget/RemoteViews;
+
+    move-object/from16 v27, v0
+
+    invoke-direct/range {v2 .. v27}, Landroid/support/v4/app/NotificationCompatApi20$Builder;-><init>(Landroid/content/Context;Landroid/app/Notification;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/widget/RemoteViews;ILandroid/app/PendingIntent;Landroid/app/PendingIntent;Landroid/graphics/Bitmap;IIZZZILjava/lang/CharSequence;ZLjava/util/ArrayList;Landroid/os/Bundle;Ljava/lang/String;ZLjava/lang/String;Landroid/widget/RemoteViews;Landroid/widget/RemoteViews;)V
+
+    .line 773
     move-object/from16 v0, p1
 
     iget-object v3, v0, Landroid/support/v4/app/NotificationCompat$Builder;->mActions:Ljava/util/ArrayList;
 
-    invoke-static {v2, v3}, Landroid/support/v4/app/NotificationCompat;->access$000(Landroid/support/v4/app/NotificationBuilderWithActions;Ljava/util/ArrayList;)V
+    invoke-static {v2, v3}, Landroid/support/v4/app/NotificationCompat;->addActionsToBuilder(Landroid/support/v4/app/NotificationBuilderWithActions;Ljava/util/ArrayList;)V
 
-    .line 712
+    .line 774
     move-object/from16 v0, p1
 
     iget-object v3, v0, Landroid/support/v4/app/NotificationCompat$Builder;->mStyle:Landroid/support/v4/app/NotificationCompat$Style;
 
-    invoke-static {v2, v3}, Landroid/support/v4/app/NotificationCompat;->access$100(Landroid/support/v4/app/NotificationBuilderWithBuilderAccessor;Landroid/support/v4/app/NotificationCompat$Style;)V
+    invoke-static {v2, v3}, Landroid/support/v4/app/NotificationCompat;->addStyleToBuilderJellybean(Landroid/support/v4/app/NotificationBuilderWithBuilderAccessor;Landroid/support/v4/app/NotificationCompat$Style;)V
 
-    .line 713
+    .line 775
     move-object/from16 v0, p2
 
     move-object/from16 v1, p1
@@ -171,6 +184,28 @@
 
     move-result-object v2
 
+    .line 776
+    move-object/from16 v0, p1
+
+    iget-object v3, v0, Landroid/support/v4/app/NotificationCompat$Builder;->mStyle:Landroid/support/v4/app/NotificationCompat$Style;
+
+    if-eqz v3, :cond_0
+
+    .line 777
+    move-object/from16 v0, p1
+
+    iget-object v3, v0, Landroid/support/v4/app/NotificationCompat$Builder;->mStyle:Landroid/support/v4/app/NotificationCompat$Style;
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v2}, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplApi20;->getExtras(Landroid/app/Notification;)Landroid/os/Bundle;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Landroid/support/v4/app/NotificationCompat$Style;->addCompatExtras(Landroid/os/Bundle;)V
+
+    .line 779
+    :cond_0
     return-object v2
 .end method
 
@@ -178,7 +213,7 @@
     .locals 2
 
     .prologue
-    .line 718
+    .line 784
     sget-object v0, Landroid/support/v4/app/NotificationCompat$Action;->FACTORY:Landroid/support/v4/app/NotificationCompatBase$Action$Factory;
 
     sget-object v1, Landroid/support/v4/app/RemoteInput;->FACTORY:Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput$Factory;
@@ -206,7 +241,7 @@
     .end annotation
 
     .prologue
-    .line 725
+    .line 791
     sget-object v0, Landroid/support/v4/app/NotificationCompat$Action;->FACTORY:Landroid/support/v4/app/NotificationCompatBase$Action$Factory;
 
     sget-object v1, Landroid/support/v4/app/RemoteInput;->FACTORY:Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput$Factory;
@@ -224,7 +259,7 @@
     .locals 1
 
     .prologue
-    .line 742
+    .line 808
     invoke-static {p1}, Landroid/support/v4/app/NotificationCompatApi20;->getGroup(Landroid/app/Notification;)Ljava/lang/String;
 
     move-result-object v0
@@ -236,7 +271,7 @@
     .locals 1
 
     .prologue
-    .line 737
+    .line 803
     invoke-static {p1}, Landroid/support/v4/app/NotificationCompatApi20;->getLocalOnly(Landroid/app/Notification;)Z
 
     move-result v0
@@ -259,7 +294,7 @@
     .end annotation
 
     .prologue
-    .line 732
+    .line 798
     invoke-static {p1}, Landroid/support/v4/app/NotificationCompatApi20;->getParcelableArrayListForActions([Landroid/support/v4/app/NotificationCompatBase$Action;)Ljava/util/ArrayList;
 
     move-result-object v0
@@ -271,7 +306,7 @@
     .locals 1
 
     .prologue
-    .line 752
+    .line 818
     invoke-static {p1}, Landroid/support/v4/app/NotificationCompatApi20;->getSortKey(Landroid/app/Notification;)Ljava/lang/String;
 
     move-result-object v0
@@ -283,7 +318,7 @@
     .locals 1
 
     .prologue
-    .line 747
+    .line 813
     invoke-static {p1}, Landroid/support/v4/app/NotificationCompatApi20;->isGroupSummary(Landroid/app/Notification;)Z
 
     move-result v0

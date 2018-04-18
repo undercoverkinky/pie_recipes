@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+.implements Landroid/view/View$OnTouchListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lkik/android/chat/fragment/KikChatFragment;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lkik/android/chat/fragment/KikChatFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 522
+    .line 862
     iput-object p1, p0, Lkik/android/chat/fragment/KikChatFragment$3;->a:Lkik/android/chat/fragment/KikChatFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,45 +36,46 @@
 
 
 # virtual methods
-.method public final onGlobalLayout()V
-    .locals 3
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 1
 
     .prologue
-    .line 526
-    iget-object v0, p0, Lkik/android/chat/fragment/KikChatFragment$3;->a:Lkik/android/chat/fragment/KikChatFragment;
-
-    invoke-static {v0}, Lkik/android/chat/fragment/KikChatFragment;->k(Lkik/android/chat/fragment/KikChatFragment;)I
+    .line 866
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 527
-    iget-object v1, p0, Lkik/android/chat/fragment/KikChatFragment$3;->a:Lkik/android/chat/fragment/KikChatFragment;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v1}, Lkik/android/chat/fragment/KikChatFragment;->l(Lkik/android/chat/fragment/KikChatFragment;)I
+    .line 875
+    :goto_0
+    :pswitch_0
+    const/4 v0, 0x0
 
-    move-result v1
+    return v0
 
-    const/4 v2, 0x1
+    .line 868
+    :pswitch_1
+    const v0, 0x3ecccccd    # 0.4f
 
-    if-ne v1, v2, :cond_0
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    .line 528
-    const/high16 v1, 0x43480000    # 200.0f
+    goto :goto_0
 
-    invoke-static {v1}, Lkik/android/chat/KikApplication;->a(F)I
+    .line 872
+    :pswitch_2
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    move-result v1
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    if-le v0, v1, :cond_0
+    goto :goto_0
 
-    .line 529
-    iget-object v1, p0, Lkik/android/chat/fragment/KikChatFragment$3;->a:Lkik/android/chat/fragment/KikChatFragment;
-
-    iget-object v1, v1, Lkik/android/chat/fragment/KikChatFragment;->u:Lkik/android/chat/presentation/MediaTrayPresenter;
-
-    invoke-interface {v1, v0}, Lkik/android/chat/presentation/MediaTrayPresenter;->a(I)V
-
-    .line 532
-    :cond_0
-    return-void
+    .line 866
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_0
+        :pswitch_2
+    .end packed-switch
 .end method

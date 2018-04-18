@@ -9,13 +9,13 @@
 
     .prologue
     .line 63
-    invoke-virtual {p4}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->q()I
+    invoke-virtual {p4}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->t()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Landroid/support/v7/widget/RecyclerView$State;->e()I
+    invoke-virtual {p0}, Landroid/support/v7/widget/RecyclerView$State;->getItemCount()I
 
     move-result v0
 
@@ -62,6 +62,7 @@
 
     move-result v0
 
+    .line 71
     invoke-virtual {p1, p2}, Landroid/support/v7/widget/OrientationHelper;->a(Landroid/view/View;)I
 
     move-result v1
@@ -87,13 +88,13 @@
     const/4 v0, 0x0
 
     .line 32
-    invoke-virtual {p4}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->q()I
+    invoke-virtual {p4}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->t()I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Landroid/support/v7/widget/RecyclerView$State;->e()I
+    invoke-virtual {p0}, Landroid/support/v7/widget/RecyclerView$State;->getItemCount()I
 
     move-result v1
 
@@ -114,10 +115,12 @@
 
     move-result v1
 
+    .line 37
     invoke-static {p3}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->e(Landroid/view/View;)I
 
     move-result v2
 
+    .line 36
     invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
 
     move-result v1
@@ -127,10 +130,12 @@
 
     move-result v2
 
+    .line 39
     invoke-static {p3}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->e(Landroid/view/View;)I
 
     move-result v3
 
+    .line 38
     invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
 
     move-result v2
@@ -138,7 +143,8 @@
     .line 40
     if-eqz p6, :cond_2
 
-    invoke-virtual {p0}, Landroid/support/v7/widget/RecyclerView$State;->e()I
+    .line 41
+    invoke-virtual {p0}, Landroid/support/v7/widget/RecyclerView$State;->getItemCount()I
 
     move-result v1
 
@@ -159,12 +165,14 @@
 
     move-result v1
 
+    .line 47
     invoke-virtual {p1, p2}, Landroid/support/v7/widget/OrientationHelper;->a(Landroid/view/View;)I
 
     move-result v2
 
     sub-int/2addr v1, v2
 
+    .line 46
     invoke-static {v1}, Ljava/lang/Math;->abs(I)I
 
     move-result v1
@@ -174,12 +182,14 @@
 
     move-result v2
 
+    .line 49
     invoke-static {p3}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->e(Landroid/view/View;)I
 
     move-result v3
 
     sub-int/2addr v2, v3
 
+    .line 48
     invoke-static {v2}, Ljava/lang/Math;->abs(I)I
 
     move-result v2
@@ -202,6 +212,7 @@
 
     move-result v1
 
+    .line 53
     invoke-virtual {p1, p2}, Landroid/support/v7/widget/OrientationHelper;->a(Landroid/view/View;)I
 
     move-result v2
@@ -212,13 +223,14 @@
 
     add-float/2addr v0, v1
 
+    .line 52
     invoke-static {v0}, Ljava/lang/Math;->round(F)I
 
     move-result v0
 
     goto :goto_0
 
-    .line 40
+    .line 42
     :cond_2
     invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
 
@@ -232,13 +244,13 @@
 
     .prologue
     .line 82
-    invoke-virtual {p4}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->q()I
+    invoke-virtual {p4}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->t()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Landroid/support/v7/widget/RecyclerView$State;->e()I
+    invoke-virtual {p0}, Landroid/support/v7/widget/RecyclerView$State;->getItemCount()I
 
     move-result v0
 
@@ -261,7 +273,7 @@
     if-nez p5, :cond_2
 
     .line 87
-    invoke-virtual {p0}, Landroid/support/v7/widget/RecyclerView$State;->e()I
+    invoke-virtual {p0}, Landroid/support/v7/widget/RecyclerView$State;->getItemCount()I
 
     move-result v0
 
@@ -273,6 +285,7 @@
 
     move-result v0
 
+    .line 91
     invoke-virtual {p1, p2}, Landroid/support/v7/widget/OrientationHelper;->a(Landroid/view/View;)I
 
     move-result v1
@@ -284,12 +297,14 @@
 
     move-result v1
 
+    .line 93
     invoke-static {p3}, Landroid/support/v7/widget/RecyclerView$LayoutManager;->e(Landroid/view/View;)I
 
     move-result v2
 
     sub-int/2addr v1, v2
 
+    .line 92
     invoke-static {v1}, Ljava/lang/Math;->abs(I)I
 
     move-result v1
@@ -303,7 +318,7 @@
 
     div-float/2addr v0, v1
 
-    invoke-virtual {p0}, Landroid/support/v7/widget/RecyclerView$State;->e()I
+    invoke-virtual {p0}, Landroid/support/v7/widget/RecyclerView$State;->getItemCount()I
 
     move-result v1
 

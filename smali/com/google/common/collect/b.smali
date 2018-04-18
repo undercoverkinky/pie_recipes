@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 33
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,15 +44,15 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 47
+    .line 46
     instance-of v1, p1, Ljava/util/Map$Entry;
 
     if-eqz v1, :cond_0
 
-    .line 48
+    .line 47
     check-cast p1, Ljava/util/Map$Entry;
 
-    .line 49
+    .line 48
     invoke-virtual {p0}, Lcom/google/common/collect/b;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -61,12 +61,13 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/google/common/base/g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lcom/google/common/base/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 49
     invoke-virtual {p0}, Lcom/google/common/collect/b;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -75,7 +76,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/google/common/base/g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lcom/google/common/base/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -83,7 +84,7 @@
 
     const/4 v0, 0x1
 
-    .line 52
+    .line 51
     :cond_0
     return v0
 .end method
@@ -157,7 +158,7 @@
     .end annotation
 
     .prologue
-    .line 43
+    .line 41
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -166,19 +167,25 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 5
+    .locals 2
 
     .prologue
-    .line 65
+    .line 66
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     invoke-virtual {p0}, Lcom/google/common/collect/b;->getKey()Ljava/lang/Object;
 
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
     move-result-object v0
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    const-string v1, "="
 
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -186,41 +193,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    add-int/lit8 v3, v3, 0x1
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v4
-
-    add-int/2addr v3, v4
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v2, "="
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

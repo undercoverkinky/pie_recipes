@@ -1,159 +1,153 @@
 .class public Lcom/kik/cards/web/profile/ProfilePlugin;
-.super Lcom/kik/cards/web/plugin/d;
+.super Lcom/kik/cards/web/plugin/BridgePlugin;
 .source "SourceFile"
 
 
 # instance fields
-.field private final a:Landroid/app/Activity;
+.field private final _activity:Landroid/app/Activity;
 
-.field private final b:Lcom/kik/cards/web/f;
+.field private final _browser:Lcom/kik/cards/web/browser/BrowserPlugin$a;
 
-.field private final d:Lkik/core/interfaces/x;
+.field private final _browserMetadata:Lcom/kik/cards/web/h;
 
-.field private final e:Lcom/kik/cards/web/browser/BrowserPlugin$a;
+.field private final _conversationInterface:Lkik/core/interfaces/v;
 
-.field private final f:Lcom/kik/cards/web/i;
+.field private final _dialogDelegate:Lcom/kik/cards/web/f;
 
-.field private g:I
+.field private final _navigator:Lkik/android/chat/vm/cc;
 
-.field private h:Ljava/lang/String;
+.field private _userName:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Activity;Lcom/kik/cards/web/f;Lkik/core/interfaces/x;Lcom/kik/cards/web/browser/BrowserPlugin$a;Lcom/kik/cards/web/i;)V
-    .locals 1
+.method public constructor <init>(Landroid/app/Activity;Lcom/kik/cards/web/f;Lkik/core/interfaces/v;Lcom/kik/cards/web/browser/BrowserPlugin$a;Lcom/kik/cards/web/h;)V
+    .locals 2
 
     .prologue
-    .line 39
-    const-string v0, "Profile"
-
-    invoke-direct {p0, v0}, Lcom/kik/cards/web/plugin/d;-><init>(Ljava/lang/String;)V
-
-    .line 34
-    const/4 v0, 0x4
-
-    iput v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->g:I
-
-    .line 40
-    iput-object p1, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->a:Landroid/app/Activity;
-
-    .line 41
-    iput-object p2, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->b:Lcom/kik/cards/web/f;
-
     .line 42
-    iput-object p3, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->d:Lkik/core/interfaces/x;
+    const/4 v0, 0x1
+
+    const-string v1, "Profile"
+
+    invoke-direct {p0, v0, v1}, Lcom/kik/cards/web/plugin/BridgePlugin;-><init>(ILjava/lang/String;)V
 
     .line 43
-    iput-object p4, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->e:Lcom/kik/cards/web/browser/BrowserPlugin$a;
+    iput-object p1, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->_activity:Landroid/app/Activity;
 
     .line 44
-    iput-object p5, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->f:Lcom/kik/cards/web/i;
+    new-instance v0, Lkik/android/chat/vm/cc;
+
+    invoke-direct {v0, p1}, Lkik/android/chat/vm/cc;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->_navigator:Lkik/android/chat/vm/cc;
 
     .line 45
+    iput-object p2, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->_dialogDelegate:Lcom/kik/cards/web/f;
+
+    .line 46
+    iput-object p3, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->_conversationInterface:Lkik/core/interfaces/v;
+
+    .line 47
+    iput-object p4, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->_browser:Lcom/kik/cards/web/browser/BrowserPlugin$a;
+
+    .line 48
+    iput-object p5, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->_browserMetadata:Lcom/kik/cards/web/h;
+
+    .line 49
     return-void
 .end method
 
-.method static synthetic a(Lcom/kik/cards/web/profile/ProfilePlugin;)Lcom/kik/cards/web/f;
+.method static synthetic access$000(Lcom/kik/cards/web/profile/ProfilePlugin;)Lcom/kik/cards/web/f;
     .locals 1
 
     .prologue
-    .line 26
-    iget-object v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->b:Lcom/kik/cards/web/f;
+    .line 29
+    iget-object v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->_dialogDelegate:Lcom/kik/cards/web/f;
 
     return-object v0
 .end method
 
-.method static synthetic a(Lcom/kik/cards/web/profile/ProfilePlugin;Lkik/core/datatypes/o;)V
+.method static synthetic access$100(Lcom/kik/cards/web/profile/ProfilePlugin;Lkik/core/datatypes/l;)V
     .locals 0
 
     .prologue
-    .line 26
-    invoke-direct {p0, p1}, Lcom/kik/cards/web/profile/ProfilePlugin;->a(Lkik/core/datatypes/o;)V
+    .line 29
+    invoke-direct {p0, p1}, Lcom/kik/cards/web/profile/ProfilePlugin;->launchProfile(Lkik/core/datatypes/l;)V
 
     return-void
 .end method
 
-.method private a(Lkik/core/datatypes/o;)V
+.method static synthetic access$200(Lcom/kik/cards/web/profile/ProfilePlugin;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 29
+    iget-object v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->_userName:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$300(Lcom/kik/cards/web/profile/ProfilePlugin;)Lcom/kik/cards/web/browser/BrowserPlugin$a;
+    .locals 1
+
+    .prologue
+    .line 29
+    iget-object v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->_browser:Lcom/kik/cards/web/browser/BrowserPlugin$a;
+
+    return-object v0
+.end method
+
+.method static synthetic access$400(Lcom/kik/cards/web/profile/ProfilePlugin;)Lkik/android/chat/vm/cc;
+    .locals 1
+
+    .prologue
+    .line 29
+    iget-object v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->_navigator:Lkik/android/chat/vm/cc;
+
+    return-object v0
+.end method
+
+.method static synthetic access$500(Lcom/kik/cards/web/profile/ProfilePlugin;)Lcom/kik/cards/web/h;
+    .locals 1
+
+    .prologue
+    .line 29
+    iget-object v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->_browserMetadata:Lcom/kik/cards/web/h;
+
+    return-object v0
+.end method
+
+.method private launchProfile(Lkik/core/datatypes/l;)V
     .locals 2
 
     .prologue
-    .line 101
-    iget-object v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->a:Landroid/app/Activity;
+    .line 106
+    iget-object v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->_activity:Landroid/app/Activity;
 
     if-nez v0, :cond_0
 
-    .line 130
+    .line 144
     :goto_0
     return-void
 
-    .line 105
+    .line 110
     :cond_0
-    iget-object v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->a:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->_activity:Landroid/app/Activity;
 
     new-instance v1, Lcom/kik/cards/web/profile/ProfilePlugin$2;
 
-    invoke-direct {v1, p0, p1}, Lcom/kik/cards/web/profile/ProfilePlugin$2;-><init>(Lcom/kik/cards/web/profile/ProfilePlugin;Lkik/core/datatypes/o;)V
+    invoke-direct {v1, p0, p1}, Lcom/kik/cards/web/profile/ProfilePlugin$2;-><init>(Lcom/kik/cards/web/profile/ProfilePlugin;Lkik/core/datatypes/l;)V
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     goto :goto_0
 .end method
 
-.method static synthetic b(Lcom/kik/cards/web/profile/ProfilePlugin;)Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 26
-    iget-object v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->h:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic c(Lcom/kik/cards/web/profile/ProfilePlugin;)Lcom/kik/cards/web/browser/BrowserPlugin$a;
-    .locals 1
-
-    .prologue
-    .line 26
-    iget-object v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->e:Lcom/kik/cards/web/browser/BrowserPlugin$a;
-
-    return-object v0
-.end method
-
-.method static synthetic d(Lcom/kik/cards/web/profile/ProfilePlugin;)I
-    .locals 1
-
-    .prologue
-    .line 26
-    iget v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->g:I
-
-    return v0
-.end method
-
-.method static synthetic e(Lcom/kik/cards/web/profile/ProfilePlugin;)Landroid/app/Activity;
-    .locals 1
-
-    .prologue
-    .line 26
-    iget-object v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->a:Landroid/app/Activity;
-
-    return-object v0
-.end method
-
-.method static synthetic f(Lcom/kik/cards/web/profile/ProfilePlugin;)Lcom/kik/cards/web/i;
-    .locals 1
-
-    .prologue
-    .line 26
-    iget-object v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->f:Lcom/kik/cards/web/i;
-
-    return-object v0
-.end method
-
 
 # virtual methods
-.method public openProfile(Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/h;
+.method public openProfile(Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/g;
     .locals 3
-    .annotation runtime Lcom/kik/cards/web/plugin/f;
+    .annotation runtime Lcom/kik/cards/web/plugin/e;
     .end annotation
 
     .annotation system Ldalvik/annotation/Throws;
@@ -163,27 +157,27 @@
     .end annotation
 
     .prologue
-    .line 50
-    iget-object v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->e:Lcom/kik/cards/web/browser/BrowserPlugin$a;
+    .line 54
+    iget-object v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->_browser:Lcom/kik/cards/web/browser/BrowserPlugin$a;
 
-    invoke-interface {v0}, Lcom/kik/cards/web/browser/BrowserPlugin$a;->r()Z
+    invoke-interface {v0}, Lcom/kik/cards/web/browser/BrowserPlugin$a;->m()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 51
-    new-instance v0, Lcom/kik/cards/web/plugin/h;
+    .line 55
+    new-instance v0, Lcom/kik/cards/web/plugin/g;
 
     const/16 v1, 0x195
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
 
-    .line 96
+    .line 101
     :goto_0
     return-object v0
 
-    .line 54
+    .line 58
     :cond_0
     const-string v0, "username"
 
@@ -193,10 +187,10 @@
 
     move-result-object v0
 
-    .line 55
-    iput-object v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->h:Ljava/lang/String;
+    .line 59
+    iput-object v0, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->_userName:Ljava/lang/String;
 
-    .line 57
+    .line 61
     const-string v1, ""
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -205,42 +199,42 @@
 
     if-eqz v1, :cond_1
 
-    .line 58
-    new-instance v0, Lcom/kik/cards/web/plugin/h;
+    .line 62
+    new-instance v0, Lcom/kik/cards/web/plugin/g;
 
     const/16 v1, 0x190
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
 
     goto :goto_0
 
-    .line 61
+    .line 65
     :cond_1
-    iget-object v1, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->d:Lkik/core/interfaces/x;
+    iget-object v1, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->_conversationInterface:Lkik/core/interfaces/v;
 
-    invoke-interface {v1, v0}, Lkik/core/interfaces/x;->b(Ljava/lang/String;)Lkik/core/datatypes/o;
+    invoke-interface {v1, v0}, Lkik/core/interfaces/v;->a(Ljava/lang/String;)Lkik/core/datatypes/l;
 
     move-result-object v1
 
-    .line 62
+    .line 66
     if-eqz v1, :cond_2
 
-    .line 63
-    invoke-direct {p0, v1}, Lcom/kik/cards/web/profile/ProfilePlugin;->a(Lkik/core/datatypes/o;)V
+    .line 67
+    invoke-direct {p0, v1}, Lcom/kik/cards/web/profile/ProfilePlugin;->launchProfile(Lkik/core/datatypes/l;)V
 
-    .line 96
+    .line 101
     :goto_1
-    new-instance v0, Lcom/kik/cards/web/plugin/h;
+    new-instance v0, Lcom/kik/cards/web/plugin/g;
 
-    invoke-direct {v0}, Lcom/kik/cards/web/plugin/h;-><init>()V
+    invoke-direct {v0}, Lcom/kik/cards/web/plugin/g;-><init>()V
 
     goto :goto_0
 
-    .line 67
+    .line 71
     :cond_2
-    iget-object v1, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->b:Lcom/kik/cards/web/f;
+    iget-object v1, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->_dialogDelegate:Lcom/kik/cards/web/f;
 
-    const v2, 0x7f0a016a
+    const v2, 0x7f09016b
 
     invoke-static {v2}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
@@ -248,10 +242,10 @@
 
     invoke-interface {v1, v2}, Lcom/kik/cards/web/f;->b(Ljava/lang/String;)V
 
-    .line 68
-    iget-object v1, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->d:Lkik/core/interfaces/x;
+    .line 72
+    iget-object v1, p0, Lcom/kik/cards/web/profile/ProfilePlugin;->_conversationInterface:Lkik/core/interfaces/v;
 
-    invoke-interface {v1, v0}, Lkik/core/interfaces/x;->f(Ljava/lang/String;)Lcom/kik/events/Promise;
+    invoke-interface {v1, v0}, Lkik/core/interfaces/v;->e(Ljava/lang/String;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -259,7 +253,7 @@
 
     invoke-direct {v1, p0}, Lcom/kik/cards/web/profile/ProfilePlugin$1;-><init>(Lcom/kik/cards/web/profile/ProfilePlugin;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
     goto :goto_1
 .end method

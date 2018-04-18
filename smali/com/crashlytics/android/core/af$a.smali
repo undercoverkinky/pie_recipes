@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/crashlytics/android/core/af$b;
+.implements Lcom/crashlytics/android/core/af$d;
 
 
 # annotations
@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 27
+    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
     .locals 1
 
     .prologue
-    .line 30
+    .line 45
     const/4 v0, 0x1
 
     return v0

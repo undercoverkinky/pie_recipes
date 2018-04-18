@@ -1,57 +1,73 @@
-.class final synthetic Lkik/core/d/b;
+.class public interface abstract Lkik/core/d/b;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/kik/events/e;
+.source "SourceFile"
 
 
-# instance fields
-.field private final a:Lrx/i;
-
-
-# direct methods
-.method private constructor <init>(Lrx/i;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lkik/core/d/b;->a:Lrx/i;
-
-    return-void
-.end method
-
-.method public static a(Lrx/i;)Lcom/kik/events/e;
-    .locals 1
-
-    new-instance v0, Lkik/core/d/b;
-
-    invoke-direct {v0, p0}, Lkik/core/d/b;-><init>(Lrx/i;)V
-
-    return-object v0
-.end method
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lkik/core/d/b$a;
+    }
+.end annotation
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 2
-    .annotation runtime Ljava/lang/invoke/LambdaForm$Hidden;
+.method public abstract a()Lcom/kik/events/Promise;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/kik/events/Promise",
+            "<",
+            "Ljava/util/List",
+            "<",
+            "Lkik/core/d/b$a;",
+            ">;>;"
+        }
     .end annotation
+.end method
 
-    .prologue
-    .line 0
-    iget-object v0, p0, Lkik/core/d/b;->a:Lrx/i;
+.method public abstract a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/kik/events/Promise;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ")",
+            "Lcom/kik/events/Promise",
+            "<",
+            "Ljava/lang/Void;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    .line 1043
-    invoke-virtual {v0}, Lrx/i;->isUnsubscribed()Z
+.method public abstract a(Ljava/util/List;)Lcom/kik/events/Promise;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;)",
+            "Lcom/kik/events/Promise",
+            "<",
+            "Ljava/lang/Void;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    .line 1046
-    invoke-virtual {v0, p2}, Lrx/i;->a(Ljava/lang/Object;)V
-
-    .line 0
-    :cond_0
-    return-void
+.method public abstract a(Lkik/core/d/b$a;)Lcom/kik/events/Promise;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkik/core/d/b$a;",
+            ")",
+            "Lcom/kik/events/Promise",
+            "<",
+            "Ljava/lang/Void;",
+            ">;"
+        }
+    .end annotation
 .end method

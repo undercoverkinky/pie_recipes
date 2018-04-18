@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/core/interfaces/t;
+.implements Lkik/core/interfaces/r;
 
 
 # instance fields
@@ -83,7 +83,7 @@
     move-result-object v0
 
     .line 44
-    invoke-static {v0}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    invoke-static {v0}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -118,14 +118,14 @@
     return-object v0
 .end method
 
-.method public final d()Lkik/core/datatypes/n;
+.method public final d()Lkik/core/datatypes/k;
     .locals 1
 
     .prologue
     .line 63
     iget-object v0, p0, Lcom/kik/b/a;->b:Lkik/core/interfaces/ad;
 
-    invoke-static {v0}, Lkik/core/x;->b(Lkik/core/interfaces/ad;)Lkik/core/x;
+    invoke-static {v0}, Lkik/core/z;->b(Lkik/core/interfaces/ad;)Lkik/core/z;
 
     move-result-object v0
 
@@ -133,7 +133,7 @@
     if-eqz v0, :cond_0
 
     .line 65
-    invoke-virtual {v0}, Lkik/core/x;->a()Lkik/core/datatypes/n;
+    invoke-virtual {v0}, Lkik/core/z;->a()Lkik/core/datatypes/k;
 
     move-result-object v0
 

@@ -3,12 +3,18 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0x10
+.end annotation
+
+
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 23
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,7 +24,7 @@
     .locals 1
 
     .prologue
-    .line 25
+    .line 27
     invoke-virtual {p0}, Landroid/widget/TextView;->getMaxLines()I
 
     move-result v0
@@ -30,7 +36,7 @@
     .locals 1
 
     .prologue
-    .line 29
+    .line 31
     invoke-virtual {p0}, Landroid/widget/TextView;->getMinLines()I
 
     move-result v0

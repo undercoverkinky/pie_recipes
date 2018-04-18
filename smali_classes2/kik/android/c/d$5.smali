@@ -23,7 +23,7 @@
     .locals 4
 
     .prologue
-    .line 840
+    .line 866
     iput-object p1, p0, Lkik/android/c/d$5;->a:Lkik/android/c/d;
 
     const-wide/16 v0, 0x3a98
@@ -41,12 +41,12 @@
     .locals 1
 
     .prologue
-    .line 851
+    .line 877
     iget-object v0, p0, Lkik/android/c/d$5;->a:Lkik/android/c/d;
 
     invoke-virtual {v0}, Lkik/android/c/d;->b()V
 
-    .line 852
+    .line 878
     return-void
 .end method
 
@@ -54,7 +54,7 @@
     .locals 7
 
     .prologue
-    .line 844
+    .line 870
     iget-object v0, p0, Lkik/android/c/d$5;->a:Lkik/android/c/d;
 
     const-wide/16 v2, 0x0
@@ -69,23 +69,23 @@
 
     long-to-int v1, v2
 
-    invoke-static {v0, v1}, Lkik/android/c/d;->a(Lkik/android/c/d;I)I
+    invoke-static {v0, v1}, Lkik/android/c/d;->b(Lkik/android/c/d;I)I
 
-    .line 845
+    .line 871
     iget-object v0, p0, Lkik/android/c/d$5;->a:Lkik/android/c/d;
 
-    invoke-static {v0}, Lkik/android/c/d;->e(Lkik/android/c/d;)Lkik/android/chat/presentation/n;
+    invoke-static {v0}, Lkik/android/c/d;->g(Lkik/android/c/d;)Lkik/android/chat/presentation/n;
 
     move-result-object v0
 
     iget-object v1, p0, Lkik/android/c/d$5;->a:Lkik/android/c/d;
 
-    invoke-static {v1}, Lkik/android/c/d;->d(Lkik/android/c/d;)I
+    invoke-static {v1}, Lkik/android/c/d;->f(Lkik/android/c/d;)I
 
     move-result v1
 
     invoke-interface {v0, v1}, Lkik/android/chat/presentation/n;->b(I)V
 
-    .line 846
+    .line 872
     return-void
 .end method

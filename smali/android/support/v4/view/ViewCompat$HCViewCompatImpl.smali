@@ -1,5 +1,5 @@
 .class Landroid/support/v4/view/ViewCompat$HCViewCompatImpl;
-.super Landroid/support/v4/view/ViewCompat$GBViewCompatImpl;
+.super Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;
 .source "SourceFile"
 
 
@@ -19,8 +19,8 @@
     .locals 0
 
     .prologue
-    .line 1094
-    invoke-direct {p0}, Landroid/support/v4/view/ViewCompat$GBViewCompatImpl;-><init>()V
+    .line 1166
+    invoke-direct {p0}, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;-><init>()V
 
     return-void
 .end method
@@ -31,7 +31,7 @@
     .locals 1
 
     .prologue
-    .line 1251
+    .line 1329
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatHC;->combineMeasuredStates(II)I
 
     move-result v0
@@ -43,7 +43,7 @@
     .locals 1
 
     .prologue
-    .line 1101
+    .line 1173
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatHC;->getAlpha(Landroid/view/View;)F
 
     move-result v0
@@ -55,7 +55,7 @@
     .locals 2
 
     .prologue
-    .line 1097
+    .line 1169
     invoke-static {}, Landroid/support/v4/view/ViewCompatHC;->getFrameTime()J
 
     move-result-wide v0
@@ -67,7 +67,7 @@
     .locals 1
 
     .prologue
-    .line 1109
+    .line 1181
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatHC;->getLayerType(Landroid/view/View;)I
 
     move-result v0
@@ -75,11 +75,23 @@
     return v0
 .end method
 
+.method public getMatrix(Landroid/view/View;)Landroid/graphics/Matrix;
+    .locals 1
+
+    .prologue
+    .line 1218
+    invoke-static {p1}, Landroid/support/v4/view/ViewCompatHC;->getMatrix(Landroid/view/View;)Landroid/graphics/Matrix;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public getMeasuredHeightAndState(Landroid/view/View;)I
     .locals 1
 
     .prologue
-    .line 1129
+    .line 1201
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatHC;->getMeasuredHeightAndState(Landroid/view/View;)I
 
     move-result v0
@@ -91,7 +103,7 @@
     .locals 1
 
     .prologue
-    .line 1133
+    .line 1205
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatHC;->getMeasuredState(Landroid/view/View;)I
 
     move-result v0
@@ -103,7 +115,7 @@
     .locals 1
 
     .prologue
-    .line 1125
+    .line 1197
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatHC;->getMeasuredWidthAndState(Landroid/view/View;)I
 
     move-result v0
@@ -115,7 +127,7 @@
     .locals 1
 
     .prologue
-    .line 1228
+    .line 1306
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatHC;->getPivotX(Landroid/view/View;)F
 
     move-result v0
@@ -127,7 +139,7 @@
     .locals 1
 
     .prologue
-    .line 1232
+    .line 1310
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatHC;->getPivotY(Landroid/view/View;)F
 
     move-result v0
@@ -139,7 +151,7 @@
     .locals 1
 
     .prologue
-    .line 1203
+    .line 1281
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatHC;->getRotation(Landroid/view/View;)F
 
     move-result v0
@@ -151,7 +163,7 @@
     .locals 1
 
     .prologue
-    .line 1208
+    .line 1286
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatHC;->getRotationX(Landroid/view/View;)F
 
     move-result v0
@@ -163,7 +175,7 @@
     .locals 1
 
     .prologue
-    .line 1213
+    .line 1291
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatHC;->getRotationY(Landroid/view/View;)F
 
     move-result v0
@@ -175,7 +187,7 @@
     .locals 1
 
     .prologue
-    .line 1218
+    .line 1296
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatHC;->getScaleX(Landroid/view/View;)F
 
     move-result v0
@@ -187,7 +199,7 @@
     .locals 1
 
     .prologue
-    .line 1223
+    .line 1301
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatHC;->getScaleY(Landroid/view/View;)F
 
     move-result v0
@@ -199,7 +211,7 @@
     .locals 1
 
     .prologue
-    .line 1137
+    .line 1209
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatHC;->getTranslationX(Landroid/view/View;)F
 
     move-result v0
@@ -211,7 +223,7 @@
     .locals 1
 
     .prologue
-    .line 1141
+    .line 1213
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatHC;->getTranslationY(Landroid/view/View;)F
 
     move-result v0
@@ -223,7 +235,7 @@
     .locals 1
 
     .prologue
-    .line 1193
+    .line 1271
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatHC;->getX(Landroid/view/View;)F
 
     move-result v0
@@ -235,7 +247,7 @@
     .locals 1
 
     .prologue
-    .line 1198
+    .line 1276
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatHC;->getY(Landroid/view/View;)F
 
     move-result v0
@@ -247,10 +259,10 @@
     .locals 0
 
     .prologue
-    .line 1236
+    .line 1314
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatHC;->jumpDrawablesToCurrentState(Landroid/view/View;)V
 
-    .line 1237
+    .line 1315
     return-void
 .end method
 
@@ -258,10 +270,10 @@
     .locals 0
 
     .prologue
-    .line 1256
+    .line 1334
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatHC;->offsetLeftAndRight(Landroid/view/View;I)V
 
-    .line 1257
+    .line 1335
     return-void
 .end method
 
@@ -269,10 +281,10 @@
     .locals 0
 
     .prologue
-    .line 1261
+    .line 1339
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatHC;->offsetTopAndBottom(Landroid/view/View;I)V
 
-    .line 1262
+    .line 1340
     return-void
 .end method
 
@@ -280,7 +292,7 @@
     .locals 1
 
     .prologue
-    .line 1121
+    .line 1193
     invoke-static {p1, p2, p3}, Landroid/support/v4/view/ViewCompatHC;->resolveSizeAndState(III)I
 
     move-result v0
@@ -292,10 +304,10 @@
     .locals 0
 
     .prologue
-    .line 1246
+    .line 1324
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatHC;->setActivated(Landroid/view/View;Z)V
 
-    .line 1247
+    .line 1325
     return-void
 .end method
 
@@ -303,10 +315,10 @@
     .locals 0
 
     .prologue
-    .line 1153
+    .line 1231
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatHC;->setAlpha(Landroid/view/View;F)V
 
-    .line 1154
+    .line 1232
     return-void
 .end method
 
@@ -314,17 +326,17 @@
     .locals 1
 
     .prologue
-    .line 1115
+    .line 1187
     invoke-virtual {p0, p1}, Landroid/support/v4/view/ViewCompat$HCViewCompatImpl;->getLayerType(Landroid/view/View;)I
 
     move-result v0
 
     invoke-virtual {p0, p1, v0, p2}, Landroid/support/v4/view/ViewCompat$HCViewCompatImpl;->setLayerType(Landroid/view/View;ILandroid/graphics/Paint;)V
 
-    .line 1117
+    .line 1189
     invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
-    .line 1118
+    .line 1190
     return-void
 .end method
 
@@ -332,10 +344,10 @@
     .locals 0
 
     .prologue
-    .line 1105
+    .line 1177
     invoke-static {p1, p2, p3}, Landroid/support/v4/view/ViewCompatHC;->setLayerType(Landroid/view/View;ILandroid/graphics/Paint;)V
 
-    .line 1106
+    .line 1178
     return-void
 .end method
 
@@ -343,10 +355,10 @@
     .locals 0
 
     .prologue
-    .line 1185
+    .line 1263
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatHC;->setPivotX(Landroid/view/View;F)V
 
-    .line 1186
+    .line 1264
     return-void
 .end method
 
@@ -354,10 +366,10 @@
     .locals 0
 
     .prologue
-    .line 1189
+    .line 1267
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatHC;->setPivotY(Landroid/view/View;F)V
 
-    .line 1190
+    .line 1268
     return-void
 .end method
 
@@ -365,10 +377,10 @@
     .locals 0
 
     .prologue
-    .line 1165
+    .line 1243
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatHC;->setRotation(Landroid/view/View;F)V
 
-    .line 1166
+    .line 1244
     return-void
 .end method
 
@@ -376,10 +388,10 @@
     .locals 0
 
     .prologue
-    .line 1169
+    .line 1247
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatHC;->setRotationX(Landroid/view/View;F)V
 
-    .line 1170
+    .line 1248
     return-void
 .end method
 
@@ -387,10 +399,10 @@
     .locals 0
 
     .prologue
-    .line 1173
+    .line 1251
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatHC;->setRotationY(Landroid/view/View;F)V
 
-    .line 1174
+    .line 1252
     return-void
 .end method
 
@@ -398,10 +410,10 @@
     .locals 0
 
     .prologue
-    .line 1241
+    .line 1319
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatHC;->setSaveFromParentEnabled(Landroid/view/View;Z)V
 
-    .line 1242
+    .line 1320
     return-void
 .end method
 
@@ -409,10 +421,10 @@
     .locals 0
 
     .prologue
-    .line 1177
+    .line 1255
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatHC;->setScaleX(Landroid/view/View;F)V
 
-    .line 1178
+    .line 1256
     return-void
 .end method
 
@@ -420,10 +432,10 @@
     .locals 0
 
     .prologue
-    .line 1181
+    .line 1259
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatHC;->setScaleY(Landroid/view/View;F)V
 
-    .line 1182
+    .line 1260
     return-void
 .end method
 
@@ -431,10 +443,10 @@
     .locals 0
 
     .prologue
-    .line 1145
+    .line 1223
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatHC;->setTranslationX(Landroid/view/View;F)V
 
-    .line 1146
+    .line 1224
     return-void
 .end method
 
@@ -442,10 +454,10 @@
     .locals 0
 
     .prologue
-    .line 1149
+    .line 1227
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatHC;->setTranslationY(Landroid/view/View;F)V
 
-    .line 1150
+    .line 1228
     return-void
 .end method
 
@@ -453,10 +465,10 @@
     .locals 0
 
     .prologue
-    .line 1157
+    .line 1235
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatHC;->setX(Landroid/view/View;F)V
 
-    .line 1158
+    .line 1236
     return-void
 .end method
 
@@ -464,9 +476,9 @@
     .locals 0
 
     .prologue
-    .line 1161
+    .line 1239
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatHC;->setY(Landroid/view/View;F)V
 
-    .line 1162
+    .line 1240
     return-void
 .end method

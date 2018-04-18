@@ -11,7 +11,7 @@
     .line 19
     const-class v0, Lkik/core/datatypes/messageExtensions/ContentMessage;
 
-    invoke-static {p0, v0}, Lkik/core/datatypes/messageExtensions/f;->a(Lkik/core/datatypes/Message;Ljava/lang/Class;)Lkik/core/datatypes/messageExtensions/f;
+    invoke-static {p0, v0}, Lkik/core/datatypes/messageExtensions/MessageAttachment;->getAttachment(Lkik/core/datatypes/Message;Ljava/lang/Class;)Lkik/core/datatypes/messageExtensions/MessageAttachment;
 
     move-result-object v0
 
@@ -117,7 +117,7 @@
     move-result-object v15
 
     .line 29
-    invoke-virtual/range {p0 .. p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->h()Ljava/lang/String;
+    invoke-virtual/range {p0 .. p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->i()Ljava/lang/String;
 
     move-result-object v16
 
@@ -129,7 +129,7 @@
 
     move-result-object v17
 
-    invoke-virtual/range {p0 .. p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->C()Z
+    invoke-virtual/range {p0 .. p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->D()Z
 
     move-result v6
 
@@ -138,7 +138,7 @@
     move-result-object v18
 
     .line 30
-    invoke-virtual/range {p0 .. p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->B()Z
+    invoke-virtual/range {p0 .. p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->C()Z
 
     move-result v6
 

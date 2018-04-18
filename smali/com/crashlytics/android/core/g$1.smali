@@ -1,9 +1,6 @@
 .class final Lcom/crashlytics/android/core/g$1;
-.super Ljava/lang/Object;
+.super Lcom/crashlytics/android/core/g$c;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/io/FilenameFilter;
 
 
 # annotations
@@ -18,12 +15,12 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 131
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 152
+    invoke-direct {p0, p1}, Lcom/crashlytics/android/core/g$c;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -31,17 +28,15 @@
 
 # virtual methods
 .method public final accept(Ljava/io/File;Ljava/lang/String;)Z
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 134
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
+    .line 155
+    invoke-super {p0, p1, p2}, Lcom/crashlytics/android/core/g$c;->accept(Ljava/io/File;Ljava/lang/String;)Z
 
     move-result v0
 
-    const/16 v1, 0x27
-
-    if-ne v0, v1, :cond_0
+    if-eqz v0, :cond_0
 
     const-string v0, ".cls"
 

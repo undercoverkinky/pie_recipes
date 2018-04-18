@@ -8,7 +8,7 @@
     .locals 3
 
     .prologue
-    const v2, 0x7f0a017e
+    const v2, 0x7f09017f
 
     .line 34
     if-nez p0, :cond_0
@@ -35,7 +35,7 @@
     if-eqz v0, :cond_1
 
     .line 38
-    const v0, 0x7f0a00a8
+    const v0, 0x7f0900a9
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
@@ -79,7 +79,7 @@
     if-eqz v0, :cond_3
 
     .line 44
-    const v0, 0x7f0a04b7
+    const v0, 0x7f0904cb
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
@@ -178,7 +178,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/kik/cards/web/kik/KikContentMessageParcelable;->a:Ljava/lang/String;
 
-    invoke-static {v0}, Lkik/core/util/j;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lkik/core/util/h;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -465,7 +465,7 @@
     if-nez v2, :cond_2
 
     .line 136
-    invoke-static {v1}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    invoke-static {v1}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -507,7 +507,7 @@
     const-string v0, "image"
 
     .line 189
-    invoke-virtual {p0, v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->d(Ljava/lang/String;)Z
+    invoke-virtual {p0, v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->e(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -516,7 +516,7 @@
     const-string v0, "video"
 
     .line 190
-    invoke-virtual {p0, v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->d(Ljava/lang/String;)Z
+    invoke-virtual {p0, v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->e(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -527,13 +527,13 @@
 
     .line 192
     :goto_0
-    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->g()Ljava/lang/String;
+    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->h()Ljava/lang/String;
 
     move-result-object v3
 
     if-nez v3, :cond_1
 
-    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->h()Ljava/lang/String;
+    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->i()Ljava/lang/String;
 
     move-result-object v3
 

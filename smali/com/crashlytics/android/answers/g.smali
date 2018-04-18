@@ -1,129 +1,28 @@
 .class final Lcom/crashlytics/android/answers/g;
-.super Lio/fabric/sdk/android/a$b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field private final a:Lcom/crashlytics/android/answers/u;
+.field final a:Landroid/content/Context;
 
-.field private final b:Lcom/crashlytics/android/answers/j;
+.field final b:Lio/fabric/sdk/android/services/b/a;
 
 
 # direct methods
-.method public constructor <init>(Lcom/crashlytics/android/answers/u;Lcom/crashlytics/android/answers/j;)V
+.method public constructor <init>(Landroid/content/Context;Lio/fabric/sdk/android/services/b/a;)V
     .locals 0
 
     .prologue
-    .line 14
-    invoke-direct {p0}, Lio/fabric/sdk/android/a$b;-><init>()V
+    .line 25
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
-    iput-object p1, p0, Lcom/crashlytics/android/answers/g;->a:Lcom/crashlytics/android/answers/u;
-
-    .line 16
-    iput-object p2, p0, Lcom/crashlytics/android/answers/g;->b:Lcom/crashlytics/android/answers/j;
-
-    .line 17
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Landroid/app/Activity;)V
-    .locals 0
-
-    .prologue
-    .line 22
-    return-void
-.end method
-
-.method public final b(Landroid/app/Activity;)V
-    .locals 2
-
-    .prologue
     .line 26
-    iget-object v0, p0, Lcom/crashlytics/android/answers/g;->a:Lcom/crashlytics/android/answers/u;
-
-    sget-object v1, Lcom/crashlytics/android/answers/SessionEvent$Type;->START:Lcom/crashlytics/android/answers/SessionEvent$Type;
-
-    invoke-virtual {v0, p1, v1}, Lcom/crashlytics/android/answers/u;->a(Landroid/app/Activity;Lcom/crashlytics/android/answers/SessionEvent$Type;)V
+    iput-object p1, p0, Lcom/crashlytics/android/answers/g;->a:Landroid/content/Context;
 
     .line 27
-    return-void
-.end method
+    iput-object p2, p0, Lcom/crashlytics/android/answers/g;->b:Lio/fabric/sdk/android/services/b/a;
 
-.method public final c(Landroid/app/Activity;)V
-    .locals 3
-
-    .prologue
-    const/4 v2, 0x0
-
-    .line 31
-    iget-object v0, p0, Lcom/crashlytics/android/answers/g;->a:Lcom/crashlytics/android/answers/u;
-
-    sget-object v1, Lcom/crashlytics/android/answers/SessionEvent$Type;->RESUME:Lcom/crashlytics/android/answers/SessionEvent$Type;
-
-    invoke-virtual {v0, p1, v1}, Lcom/crashlytics/android/answers/u;->a(Landroid/app/Activity;Lcom/crashlytics/android/answers/SessionEvent$Type;)V
-
-    .line 32
-    iget-object v0, p0, Lcom/crashlytics/android/answers/g;->b:Lcom/crashlytics/android/answers/j;
-
-    .line 1053
-    iput-boolean v2, v0, Lcom/crashlytics/android/answers/j;->b:Z
-
-    .line 1055
-    iget-object v0, v0, Lcom/crashlytics/android/answers/j;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/concurrent/ScheduledFuture;
-
-    .line 1056
-    if-eqz v0, :cond_0
-
-    .line 1057
-    invoke-interface {v0, v2}, Ljava/util/concurrent/ScheduledFuture;->cancel(Z)Z
-
-    .line 33
-    :cond_0
-    return-void
-.end method
-
-.method public final d(Landroid/app/Activity;)V
-    .locals 2
-
-    .prologue
-    .line 37
-    iget-object v0, p0, Lcom/crashlytics/android/answers/g;->a:Lcom/crashlytics/android/answers/u;
-
-    sget-object v1, Lcom/crashlytics/android/answers/SessionEvent$Type;->PAUSE:Lcom/crashlytics/android/answers/SessionEvent$Type;
-
-    invoke-virtual {v0, p1, v1}, Lcom/crashlytics/android/answers/u;->a(Landroid/app/Activity;Lcom/crashlytics/android/answers/SessionEvent$Type;)V
-
-    .line 38
-    iget-object v0, p0, Lcom/crashlytics/android/answers/g;->b:Lcom/crashlytics/android/answers/j;
-
-    invoke-virtual {v0}, Lcom/crashlytics/android/answers/j;->a()V
-
-    .line 39
-    return-void
-.end method
-
-.method public final e(Landroid/app/Activity;)V
-    .locals 2
-
-    .prologue
-    .line 43
-    iget-object v0, p0, Lcom/crashlytics/android/answers/g;->a:Lcom/crashlytics/android/answers/u;
-
-    sget-object v1, Lcom/crashlytics/android/answers/SessionEvent$Type;->STOP:Lcom/crashlytics/android/answers/SessionEvent$Type;
-
-    invoke-virtual {v0, p1, v1}, Lcom/crashlytics/android/answers/u;->a(Landroid/app/Activity;Lcom/crashlytics/android/answers/SessionEvent$Type;)V
-
-    .line 44
+    .line 28
     return-void
 .end method

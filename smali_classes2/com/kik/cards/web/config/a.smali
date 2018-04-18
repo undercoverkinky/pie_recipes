@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract b()Lkik/android/config/b;
+.method public abstract c()Lkik/android/config/b;
 .end method

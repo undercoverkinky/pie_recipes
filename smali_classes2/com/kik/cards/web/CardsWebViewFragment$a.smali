@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 2395
+    .line 2444
     invoke-direct {p0}, Lcom/kik/ui/fragment/FragmentBase$FragmentBundle;-><init>()V
 
     return-void
@@ -31,12 +31,12 @@
     .locals 1
 
     .prologue
-    .line 2489
+    .line 2538
     const-string v0, "CardsWebViewFragment.EXTRA_CONTENT_MESSAGE"
 
     invoke-virtual {p0, v0, p1}, Lcom/kik/cards/web/CardsWebViewFragment$a;->a(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 2490
+    .line 2539
     return-object p0
 .end method
 
@@ -44,12 +44,12 @@
     .locals 1
 
     .prologue
-    .line 2495
+    .line 2544
     const-string v0, "CardLauncher.EXTRA_KIK_MESSAGE"
 
     invoke-virtual {p0, v0, p1}, Lcom/kik/cards/web/CardsWebViewFragment$a;->a(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 2496
+    .line 2545
     return-object p0
 .end method
 
@@ -57,12 +57,12 @@
     .locals 1
 
     .prologue
-    .line 2445
+    .line 2494
     const-string v0, "CardsWebViewFragment.EXTRA_PICKER_REQUEST"
 
     invoke-virtual {p0, v0, p1}, Lcom/kik/cards/web/CardsWebViewFragment$a;->a(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 2446
+    .line 2495
     return-object p0
 .end method
 
@@ -70,14 +70,14 @@
     .locals 2
 
     .prologue
-    .line 2406
+    .line 2455
     if-nez p1, :cond_0
 
-    .line 2413
+    .line 2462
     :goto_0
     return-object p0
 
-    .line 2409
+    .line 2458
     :cond_0
     const-string v0, "card"
 
@@ -87,7 +87,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 2410
+    .line 2459
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "http"
@@ -108,7 +108,7 @@
 
     move-result-object p1
 
-    .line 2412
+    .line 2461
     :cond_1
     const-string v0, "CardsWebViewFragment.EXTRA_URL_KEY"
 
@@ -121,12 +121,12 @@
     .locals 1
 
     .prologue
-    .line 2517
+    .line 2566
     const-string v0, "CardsWebViewFragment.EXTRA_HIDE_NAV_BAR"
 
     invoke-virtual {p0, v0, p1}, Lcom/kik/cards/web/CardsWebViewFragment$a;->b(Ljava/lang/String;Z)V
 
-    .line 2518
+    .line 2567
     return-object p0
 .end method
 
@@ -134,12 +134,12 @@
     .locals 1
 
     .prologue
-    .line 2423
+    .line 2472
     const-string v0, "CardsWebViewFragment.EXTRA_TAG_KEY"
 
     invoke-virtual {p0, v0, p1}, Lcom/kik/cards/web/CardsWebViewFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2424
+    .line 2473
     return-object p0
 .end method
 
@@ -147,10 +147,10 @@
     .locals 1
 
     .prologue
-    .line 2440
+    .line 2489
     const-string v0, "CardsWebViewFragment.EXTRA_CLEAR_CACHE_KEY"
 
-    invoke-virtual {p0, v0}, Lcom/kik/cards/web/CardsWebViewFragment$a;->k(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {p0, v0}, Lcom/kik/cards/web/CardsWebViewFragment$a;->g(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -161,12 +161,12 @@
     .locals 1
 
     .prologue
-    .line 2467
+    .line 2516
     const-string v0, "CardsWebViewFragment.EXTRA_REFERER_URL"
 
     invoke-virtual {p0, v0, p1}, Lcom/kik/cards/web/CardsWebViewFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2468
+    .line 2517
     return-object p0
 .end method
 
@@ -174,10 +174,10 @@
     .locals 1
 
     .prologue
-    .line 2451
+    .line 2500
     const-string v0, "CardsWebViewFragment.EXTRA_PICKER_REQUEST"
 
-    invoke-virtual {p0, v0}, Lcom/kik/cards/web/CardsWebViewFragment$a;->o(Ljava/lang/String;)Landroid/os/Parcelable;
+    invoke-virtual {p0, v0}, Lcom/kik/cards/web/CardsWebViewFragment$a;->j(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v0
 
@@ -190,12 +190,12 @@
     .locals 1
 
     .prologue
-    .line 2478
+    .line 2527
     const-string v0, "CardsWebViewFragment.EXTRA_CONVO_ID"
 
     invoke-virtual {p0, v0, p1}, Lcom/kik/cards/web/CardsWebViewFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2479
+    .line 2528
     return-object p0
 .end method
 
@@ -203,10 +203,10 @@
     .locals 1
 
     .prologue
-    .line 2473
+    .line 2522
     const-string v0, "CardsWebViewFragment.EXTRA_REFERER_URL"
 
-    invoke-virtual {p0, v0}, Lcom/kik/cards/web/CardsWebViewFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/kik/cards/web/CardsWebViewFragment$a;->h(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -217,10 +217,10 @@
     .locals 1
 
     .prologue
-    .line 2484
+    .line 2533
     const-string v0, "CardsWebViewFragment.EXTRA_CONVO_ID"
 
-    invoke-virtual {p0, v0}, Lcom/kik/cards/web/CardsWebViewFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/kik/cards/web/CardsWebViewFragment$a;->h(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -231,10 +231,10 @@
     .locals 1
 
     .prologue
-    .line 2501
+    .line 2550
     const-string v0, "CardsWebViewFragment.EXTRA_CONTENT_MESSAGE"
 
-    invoke-virtual {p0, v0}, Lcom/kik/cards/web/CardsWebViewFragment$a;->o(Ljava/lang/String;)Landroid/os/Parcelable;
+    invoke-virtual {p0, v0}, Lcom/kik/cards/web/CardsWebViewFragment$a;->j(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v0
 
@@ -243,18 +243,32 @@
     return-object v0
 .end method
 
+.method protected final f_()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 2467
+    const-string v0, "CardsWebViewFragment.EXTRA_URL_KEY"
+
+    invoke-virtual {p0, v0}, Lcom/kik/cards/web/CardsWebViewFragment$a;->h(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public final g()Lcom/kik/cards/web/CardsWebViewFragment$a;
     .locals 2
 
     .prologue
-    .line 2506
+    .line 2555
     const-string v0, "CardsWebViewFragment.FROM_MEDIA_TRAY"
 
     const/4 v1, 0x1
 
     invoke-virtual {p0, v0, v1}, Lcom/kik/cards/web/CardsWebViewFragment$a;->b(Ljava/lang/String;Z)V
 
-    .line 2507
+    .line 2556
     return-object p0
 .end method
 
@@ -262,10 +276,10 @@
     .locals 1
 
     .prologue
-    .line 2523
+    .line 2572
     const-string v0, "CardsWebViewFragment.EXTRA_HIDE_NAV_BAR"
 
-    invoke-virtual {p0, v0}, Lcom/kik/cards/web/CardsWebViewFragment$a;->k(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {p0, v0}, Lcom/kik/cards/web/CardsWebViewFragment$a;->g(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -274,18 +288,4 @@
     move-result v0
 
     return v0
-.end method
-
-.method protected final i_()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 2418
-    const-string v0, "CardsWebViewFragment.EXTRA_URL_KEY"
-
-    invoke-virtual {p0, v0}, Lcom/kik/cards/web/CardsWebViewFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

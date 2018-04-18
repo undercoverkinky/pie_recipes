@@ -23,7 +23,7 @@
 
 
 # virtual methods
-.method public getValue()Lcom/google/gson/j;
+.method public getValue()Lcom/google/gson/k;
     .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {

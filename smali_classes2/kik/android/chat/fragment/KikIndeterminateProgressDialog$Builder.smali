@@ -16,18 +16,14 @@
 
 # instance fields
 .field _progressView:Lcom/github/rahatarmanahmed/cpv/CircularProgressView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f110184
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1001ae
     .end annotation
 .end field
 
 .field _text:Landroid/widget/TextView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f110185
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1001af
     .end annotation
 .end field
 
@@ -50,7 +46,7 @@
     iput-object v0, p0, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;->a:Lkik/android/chat/fragment/KikDialogFragment$a;
 
     .line 34
-    const v0, 0x7f040069
+    const v0, 0x7f04006d
 
     const/4 v1, 0x0
 
@@ -64,7 +60,7 @@
     invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikDialogFragment$a;->a(Landroid/view/View;)Lkik/android/chat/fragment/KikDialogFragment$a;
 
     .line 36
-    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)V
+    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)Lbutterknife/Unbinder;
 
     .line 37
     iget-object v0, p0, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;->a:Lkik/android/chat/fragment/KikDialogFragment$a;
@@ -106,19 +102,6 @@
     return-object p0
 .end method
 
-.method public final a(Landroid/content/DialogInterface$OnCancelListener;)Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;
-    .locals 1
-
-    .prologue
-    .line 63
-    iget-object v0, p0, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;->a:Lkik/android/chat/fragment/KikDialogFragment$a;
-
-    invoke-virtual {v0, p1}, Lkik/android/chat/fragment/KikDialogFragment$a;->a(Landroid/content/DialogInterface$OnCancelListener;)Lkik/android/chat/fragment/KikDialogFragment$a;
-
-    .line 64
-    return-object p0
-.end method
-
 .method public final a(Ljava/lang/String;)Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;
     .locals 3
 
@@ -139,7 +122,7 @@
 
     aput-object v2, v0, v1
 
-    invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->d([Landroid/view/View;)V
 
     .line 50
     return-object p0

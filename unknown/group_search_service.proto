@@ -2,10 +2,12 @@ syntax = "proto3";
 
 package mobile.groups.v1;
 option java_package = "com.kik.groups";
+option go_package = "github.com/kikinteractive/xiphias-api-mobile/generated/go/groups/v1;groups";
 
 import "common_model.proto";
 import "protobuf_validation.proto";
 import "groups/v1/groups_common.proto";
+import "google/protobuf/timestamp.proto";
 
 //----------------------------------------------------------------------------
 // Service Interfaces
@@ -122,6 +124,20 @@ message LimitedGroupDetails {
 
     // Current count of members in the group
     uint32 member_count = 3;
+
+    // The time of the last group activity. If no last activity time was found the field will be empty
+    // There is no guarantee regarding accuracy of this time - it means that at some point the group search service
+    // was told that this group had activity at this time, but there may have been activity since then
+    google.protobuf.Timestamp last_activity_time = 4 [(kik.validation.field_validation) = { mandatory: false }];
+
+    // Maximum number of members group can contain at the present time.
+    // Expect that this can change over time for a given group as we work towards larger groups
+    // therefore, caching these values for a period of time on the order of minutes should be
+    // ok, but it is not recommended to cache them for hours, and definitely not days
+    // This value wouldn't normally be 0, but if it was, assume that it means there's a problem with
+    // the public groups for which the size is 0 (which would probably be all of them) and that
+    // they should be not shown to users.
+    uint32 max_group_size = 5;
 
     // Token which must be provided in order to join this group directly.
     // The byte contents of this token must be base64-encoded and provided

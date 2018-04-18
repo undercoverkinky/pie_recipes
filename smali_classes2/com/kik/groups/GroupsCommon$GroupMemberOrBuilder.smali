@@ -21,6 +21,12 @@
 .method public abstract getIsAdmin()Z
 .end method
 
+.method public abstract getIsBot()Z
+.end method
+
+.method public abstract getIsInactive()Z
+.end method
+
 .method public abstract getIsSuperAdmin()Z
 .end method
 

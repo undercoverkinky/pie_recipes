@@ -47,7 +47,7 @@
     .line 61
     packed-switch p1, :pswitch_data_0
 
-    .line 92
+    .line 93
     :pswitch_0
     invoke-static {}, Lcom/rounds/kik/media/audio/RoundsAudioManager;->access$000()Lcom/rounds/kik/logs/VideoLogger;
 
@@ -69,7 +69,7 @@
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 95
+    .line 96
     :goto_0
     return-void
 
@@ -97,20 +97,11 @@
     invoke-virtual {v0, v2}, Lcom/rounds/kik/participants/LocalParticipant;->setMuted(Z)V
 
     .line 68
-    invoke-virtual {v0}, Lcom/rounds/kik/participants/LocalParticipant;->clientId()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    invoke-static {v0, v1}, Lcom/rounds/kik/media/NativeRoundsVidyoClient;->R3DSetMuteIconVisibility(Ljava/lang/String;F)V
-
-    .line 69
     iget-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager$1;->a:Lcom/rounds/kik/media/audio/RoundsAudioManager;
 
     invoke-static {v0, v3}, Lcom/rounds/kik/media/audio/RoundsAudioManager;->access$102(Lcom/rounds/kik/media/audio/RoundsAudioManager;Z)Z
 
-    .line 70
+    .line 69
     iget-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager$1;->a:Lcom/rounds/kik/media/audio/RoundsAudioManager;
 
     iget-object v0, v0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mAudioRouter:Lcom/rounds/kik/media/audio/AudioRouter;
@@ -119,7 +110,7 @@
 
     goto :goto_0
 
-    .line 75
+    .line 74
     :pswitch_2
     invoke-static {}, Lcom/rounds/kik/media/audio/RoundsAudioManager;->access$000()Lcom/rounds/kik/logs/VideoLogger;
 
@@ -133,7 +124,7 @@
 
     const/4 v0, -0x3
 
-    if-ne p1, v0, :cond_0
+    if-ne p1, v0, :cond_1
 
     const-string v0, ", ducking"
 
@@ -148,17 +139,23 @@
 
     invoke-virtual {v1, v0}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
+    .line 75
+    const/4 v0, -0x2
+
+    if-ne p1, v0, :cond_0
+
     .line 76
     iget-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager$1;->a:Lcom/rounds/kik/media/audio/RoundsAudioManager;
 
     invoke-virtual {v0, v3}, Lcom/rounds/kik/media/audio/RoundsAudioManager;->enableAudio(Z)V
 
-    .line 77
+    .line 78
+    :cond_0
     iget-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager$1;->a:Lcom/rounds/kik/media/audio/RoundsAudioManager;
 
     invoke-static {v0, v3}, Lcom/rounds/kik/media/audio/RoundsAudioManager;->access$102(Lcom/rounds/kik/media/audio/RoundsAudioManager;Z)Z
 
-    .line 78
+    .line 79
     iget-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager$1;->a:Lcom/rounds/kik/media/audio/RoundsAudioManager;
 
     iget-object v0, v0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mAudioRouter:Lcom/rounds/kik/media/audio/AudioRouter;
@@ -167,13 +164,13 @@
 
     goto :goto_0
 
-    .line 75
-    :cond_0
+    .line 74
+    :cond_1
     const-string v0, ""
 
     goto :goto_1
 
-    .line 82
+    .line 83
     :pswitch_3
     invoke-static {}, Lcom/rounds/kik/media/audio/RoundsAudioManager;->access$000()Lcom/rounds/kik/logs/VideoLogger;
 
@@ -183,18 +180,18 @@
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
-    .line 83
+    .line 84
     iget-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager$1;->a:Lcom/rounds/kik/media/audio/RoundsAudioManager;
 
     invoke-virtual {v0, v2}, Lcom/rounds/kik/media/audio/RoundsAudioManager;->enableAudio(Z)V
 
-    .line 84
+    .line 85
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v0
 
-    .line 85
-    if-eqz v0, :cond_1
+    .line 86
+    if-eqz v0, :cond_2
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->getState()I
 
@@ -202,26 +199,24 @@
 
     const/16 v1, 0xc
 
-    if-ne v0, v1, :cond_1
+    if-ne v0, v1, :cond_2
 
-    .line 86
+    .line 87
     iget-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager$1;->a:Lcom/rounds/kik/media/audio/RoundsAudioManager;
 
     invoke-static {v0, v2}, Lcom/rounds/kik/media/audio/RoundsAudioManager;->access$200(Lcom/rounds/kik/media/audio/RoundsAudioManager;Z)V
 
-    .line 88
-    :cond_1
+    .line 89
+    :cond_2
     iget-object v0, p0, Lcom/rounds/kik/media/audio/RoundsAudioManager$1;->a:Lcom/rounds/kik/media/audio/RoundsAudioManager;
 
     iget-object v0, v0, Lcom/rounds/kik/media/audio/RoundsAudioManager;->mAudioRouter:Lcom/rounds/kik/media/audio/AudioRouter;
 
     invoke-virtual {v0, v2}, Lcom/rounds/kik/media/audio/AudioRouter;->setAudioFocusGained(Z)V
 
-    goto/16 :goto_0
+    goto :goto_0
 
     .line 61
-    nop
-
     :pswitch_data_0
     .packed-switch -0x3
         :pswitch_2

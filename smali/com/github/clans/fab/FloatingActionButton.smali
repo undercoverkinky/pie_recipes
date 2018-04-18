@@ -174,7 +174,7 @@
 
     const/high16 v1, 0x40800000    # 4.0f
 
-    invoke-static {v0, v1}, Lcom/github/clans/fab/b;->a(Landroid/content/Context;F)I
+    invoke-static {v0, v1}, Lcom/github/clans/fab/a;->a(Landroid/content/Context;F)I
 
     move-result v0
 
@@ -187,7 +187,7 @@
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    invoke-static {v0, v1}, Lcom/github/clans/fab/b;->a(Landroid/content/Context;F)I
+    invoke-static {v0, v1}, Lcom/github/clans/fab/a;->a(Landroid/content/Context;F)I
 
     move-result v0
 
@@ -200,7 +200,7 @@
 
     const/high16 v1, 0x40400000    # 3.0f
 
-    invoke-static {v0, v1}, Lcom/github/clans/fab/b;->a(Landroid/content/Context;F)I
+    invoke-static {v0, v1}, Lcom/github/clans/fab/a;->a(Landroid/content/Context;F)I
 
     move-result v0
 
@@ -213,7 +213,7 @@
 
     const/high16 v1, 0x41c00000    # 24.0f
 
-    invoke-static {v0, v1}, Lcom/github/clans/fab/b;->a(Landroid/content/Context;F)I
+    invoke-static {v0, v1}, Lcom/github/clans/fab/a;->a(Landroid/content/Context;F)I
 
     move-result v0
 
@@ -226,7 +226,7 @@
 
     const/high16 v1, 0x40c00000    # 6.0f
 
-    invoke-static {v0, v1}, Lcom/github/clans/fab/b;->a(Landroid/content/Context;F)I
+    invoke-static {v0, v1}, Lcom/github/clans/fab/a;->a(Landroid/content/Context;F)I
 
     move-result v0
 
@@ -325,7 +325,7 @@
 
     const/high16 v1, 0x40800000    # 4.0f
 
-    invoke-static {v0, v1}, Lcom/github/clans/fab/b;->a(Landroid/content/Context;F)I
+    invoke-static {v0, v1}, Lcom/github/clans/fab/a;->a(Landroid/content/Context;F)I
 
     move-result v0
 
@@ -338,7 +338,7 @@
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    invoke-static {v0, v1}, Lcom/github/clans/fab/b;->a(Landroid/content/Context;F)I
+    invoke-static {v0, v1}, Lcom/github/clans/fab/a;->a(Landroid/content/Context;F)I
 
     move-result v0
 
@@ -351,7 +351,7 @@
 
     const/high16 v1, 0x40400000    # 3.0f
 
-    invoke-static {v0, v1}, Lcom/github/clans/fab/b;->a(Landroid/content/Context;F)I
+    invoke-static {v0, v1}, Lcom/github/clans/fab/a;->a(Landroid/content/Context;F)I
 
     move-result v0
 
@@ -364,7 +364,7 @@
 
     const/high16 v1, 0x41c00000    # 24.0f
 
-    invoke-static {v0, v1}, Lcom/github/clans/fab/b;->a(Landroid/content/Context;F)I
+    invoke-static {v0, v1}, Lcom/github/clans/fab/a;->a(Landroid/content/Context;F)I
 
     move-result v0
 
@@ -377,7 +377,7 @@
 
     const/high16 v1, 0x40c00000    # 6.0f
 
-    invoke-static {v0, v1}, Lcom/github/clans/fab/b;->a(Landroid/content/Context;F)I
+    invoke-static {v0, v1}, Lcom/github/clans/fab/a;->a(Landroid/content/Context;F)I
 
     move-result v0
 
@@ -616,14 +616,14 @@
     const/4 v3, 0x0
 
     .line 119
-    sget-object v0, Lcom/github/clans/fab/a$e;->a:[I
+    sget-object v0, Lcom/github/clans/fab/R$styleable;->FloatingActionButton:[I
 
     invoke-virtual {p1, p2, v0, p3, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v2
 
     .line 120
-    sget v0, Lcom/github/clans/fab/a$e;->c:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionButton_fab_colorNormal:I
 
     const v1, -0x25bcca
 
@@ -634,7 +634,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionButton;->i:I
 
     .line 121
-    sget v0, Lcom/github/clans/fab/a$e;->d:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionButton_fab_colorPressed:I
 
     const v1, -0x18afbd
 
@@ -645,7 +645,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionButton;->j:I
 
     .line 122
-    sget v0, Lcom/github/clans/fab/a$e;->b:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionButton_fab_colorDisabled:I
 
     const v1, -0x555556
 
@@ -656,7 +656,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionButton;->k:I
 
     .line 123
-    sget v0, Lcom/github/clans/fab/a$e;->e:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionButton_fab_colorRipple:I
 
     const v1, -0x66000001
 
@@ -667,7 +667,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionButton;->l:I
 
     .line 124
-    sget v0, Lcom/github/clans/fab/a$e;->t:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionButton_fab_showShadow:I
 
     invoke-virtual {v2, v0, v4}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -676,7 +676,7 @@
     iput-boolean v0, p0, Lcom/github/clans/fab/FloatingActionButton;->b:Z
 
     .line 125
-    sget v0, Lcom/github/clans/fab/a$e;->o:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionButton_fab_shadowColor:I
 
     const/high16 v1, 0x66000000
 
@@ -687,7 +687,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionButton;->c:I
 
     .line 126
-    sget v0, Lcom/github/clans/fab/a$e;->p:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionButton_fab_shadowRadius:I
 
     iget v1, p0, Lcom/github/clans/fab/FloatingActionButton;->d:I
 
@@ -698,7 +698,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionButton;->d:I
 
     .line 127
-    sget v0, Lcom/github/clans/fab/a$e;->q:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionButton_fab_shadowXOffset:I
 
     iget v1, p0, Lcom/github/clans/fab/FloatingActionButton;->e:I
 
@@ -709,7 +709,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionButton;->e:I
 
     .line 128
-    sget v0, Lcom/github/clans/fab/a$e;->r:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionButton_fab_shadowYOffset:I
 
     iget v1, p0, Lcom/github/clans/fab/FloatingActionButton;->f:I
 
@@ -720,7 +720,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionButton;->f:I
 
     .line 129
-    sget v0, Lcom/github/clans/fab/a$e;->u:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionButton_fab_size:I
 
     invoke-virtual {v2, v0, v3}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -729,7 +729,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionButton;->a:I
 
     .line 130
-    sget v0, Lcom/github/clans/fab/a$e;->h:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionButton_fab_label:I
 
     invoke-virtual {v2, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -738,7 +738,7 @@
     iput-object v0, p0, Lcom/github/clans/fab/FloatingActionButton;->q:Ljava/lang/String;
 
     .line 131
-    sget v0, Lcom/github/clans/fab/a$e;->l:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionButton_fab_progress_indeterminate:I
 
     invoke-virtual {v2, v0, v3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -747,7 +747,7 @@
     iput-boolean v0, p0, Lcom/github/clans/fab/FloatingActionButton;->S:Z
 
     .line 132
-    sget v0, Lcom/github/clans/fab/a$e;->k:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionButton_fab_progress_color:I
 
     const v1, -0xff6978
 
@@ -758,7 +758,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionButton;->x:I
 
     .line 133
-    sget v0, Lcom/github/clans/fab/a$e;->j:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionButton_fab_progress_backgroundColor:I
 
     const/high16 v1, 0x4d000000    # 1.34217728E8f
 
@@ -769,7 +769,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionButton;->y:I
 
     .line 134
-    sget v0, Lcom/github/clans/fab/a$e;->m:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionButton_fab_progress_max:I
 
     iget v1, p0, Lcom/github/clans/fab/FloatingActionButton;->U:I
 
@@ -780,7 +780,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionButton;->U:I
 
     .line 135
-    sget v0, Lcom/github/clans/fab/a$e;->n:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionButton_fab_progress_showBackground:I
 
     invoke-virtual {v2, v0, v4}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -789,7 +789,7 @@
     iput-boolean v0, p0, Lcom/github/clans/fab/FloatingActionButton;->V:Z
 
     .line 137
-    sget v0, Lcom/github/clans/fab/a$e;->i:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionButton_fab_progress:I
 
     invoke-virtual {v2, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -798,7 +798,7 @@
     if-eqz v0, :cond_0
 
     .line 138
-    sget v0, Lcom/github/clans/fab/a$e;->i:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionButton_fab_progress:I
 
     invoke-virtual {v2, v0, v3}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -811,7 +811,7 @@
 
     .line 142
     :cond_0
-    sget v0, Lcom/github/clans/fab/a$e;->f:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionButton_fab_elevationCompat:I
 
     invoke-virtual {v2, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -820,7 +820,7 @@
     if-eqz v0, :cond_1
 
     .line 143
-    sget v0, Lcom/github/clans/fab/a$e;->f:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionButton_fab_elevationCompat:I
 
     invoke-virtual {v2, v0, v3}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
 
@@ -841,9 +841,9 @@
     .line 2169
     :cond_1
     :goto_0
-    sget v0, Lcom/github/clans/fab/a$e;->s:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionButton_fab_showAnimation:I
 
-    sget v1, Lcom/github/clans/fab/a$a;->b:I
+    sget v1, Lcom/github/clans/fab/R$anim;->fab_scale_up:I
 
     invoke-virtual {v2, v0, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -861,9 +861,9 @@
     iput-object v0, p0, Lcom/github/clans/fab/FloatingActionButton;->o:Landroid/view/animation/Animation;
 
     .line 2174
-    sget v0, Lcom/github/clans/fab/a$e;->g:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionButton_fab_hideAnimation:I
 
-    sget v1, Lcom/github/clans/fab/a$a;->a:I
+    sget v1, Lcom/github/clans/fab/R$anim;->fab_scale_down:I
 
     invoke-virtual {v2, v0, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -939,7 +939,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionButton;->f:I
 
     .line 2138
-    invoke-static {}, Lcom/github/clans/fab/b;->b()Z
+    invoke-static {}, Lcom/github/clans/fab/a;->b()Z
 
     move-result v0
 
@@ -1145,7 +1145,7 @@
 
     if-nez v0, :cond_0
 
-    sget v0, Lcom/github/clans/fab/a$b;->b:I
+    sget v0, Lcom/github/clans/fab/R$dimen;->fab_size_normal:I
 
     :goto_0
     invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1155,7 +1155,7 @@
     return v0
 
     :cond_0
-    sget v0, Lcom/github/clans/fab/a$b;->a:I
+    sget v0, Lcom/github/clans/fab/R$dimen;->fab_size_mini:I
 
     goto :goto_0
 .end method
@@ -1406,7 +1406,7 @@
     invoke-virtual {v1, v0, v2}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
 
     .line 405
-    invoke-static {}, Lcom/github/clans/fab/b;->b()Z
+    invoke-static {}, Lcom/github/clans/fab/a;->b()Z
 
     move-result v0
 
@@ -1852,7 +1852,7 @@
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/drawable/LayerDrawable;->setLayerInset(IIIII)V
 
     .line 3432
-    invoke-static {}, Lcom/github/clans/fab/b;->a()Z
+    invoke-static {}, Lcom/github/clans/fab/a;->a()Z
 
     move-result v1
 
@@ -1985,7 +1985,7 @@
     iput-object p1, p0, Lcom/github/clans/fab/FloatingActionButton;->q:Ljava/lang/String;
 
     .line 6511
-    sget v0, Lcom/github/clans/fab/a$d;->a:I
+    sget v0, Lcom/github/clans/fab/R$id;->fab_label:I
 
     invoke-virtual {p0, v0}, Lcom/github/clans/fab/FloatingActionButton;->getTag(I)Ljava/lang/Object;
 
@@ -2161,7 +2161,7 @@
 
     .line 525
     :cond_1
-    invoke-static {}, Lcom/github/clans/fab/b;->b()Z
+    invoke-static {}, Lcom/github/clans/fab/a;->b()Z
 
     move-result v0
 
@@ -2259,7 +2259,7 @@
 
     .line 538
     :cond_1
-    invoke-static {}, Lcom/github/clans/fab/b;->b()Z
+    invoke-static {}, Lcom/github/clans/fab/a;->b()Z
 
     move-result v0
 
@@ -3129,7 +3129,7 @@
     if-eqz v0, :cond_1
 
     .line 549
-    sget v0, Lcom/github/clans/fab/a$d;->a:I
+    sget v0, Lcom/github/clans/fab/R$id;->fab_label:I
 
     invoke-virtual {p0, v0}, Lcom/github/clans/fab/FloatingActionButton;->getTag(I)Ljava/lang/Object;
 
@@ -3212,7 +3212,7 @@
 
     .prologue
     .line 1115
-    invoke-static {}, Lcom/github/clans/fab/b;->b()Z
+    invoke-static {}, Lcom/github/clans/fab/a;->b()Z
 
     move-result v0
 
@@ -3261,7 +3261,7 @@
     invoke-super {p0, p1}, Landroid/widget/ImageButton;->setEnabled(Z)V
 
     .line 1241
-    sget v0, Lcom/github/clans/fab/a$d;->a:I
+    sget v0, Lcom/github/clans/fab/R$id;->fab_label:I
 
     invoke-virtual {p0, v0}, Lcom/github/clans/fab/FloatingActionButton;->getTag(I)Ljava/lang/Object;
 
@@ -3424,7 +3424,7 @@
     iput-object p1, p0, Lcom/github/clans/fab/FloatingActionButton;->r:Landroid/view/View$OnClickListener;
 
     .line 812
-    sget v0, Lcom/github/clans/fab/a$d;->a:I
+    sget v0, Lcom/github/clans/fab/R$id;->fab_label:I
 
     invoke-virtual {p0, v0}, Lcom/github/clans/fab/FloatingActionButton;->getTag(I)Ljava/lang/Object;
 
@@ -3455,7 +3455,7 @@
     invoke-super {p0, p1}, Landroid/widget/ImageButton;->setVisibility(I)V
 
     .line 1250
-    sget v0, Lcom/github/clans/fab/a$d;->a:I
+    sget v0, Lcom/github/clans/fab/R$id;->fab_label:I
 
     invoke-virtual {p0, v0}, Lcom/github/clans/fab/FloatingActionButton;->getTag(I)Ljava/lang/Object;
 

@@ -2,5 +2,13 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lkik/android/chat/vm/widget/aa;
+
+# virtual methods
+.method public abstract a(Lkik/core/datatypes/x;)V
+.end method
+
+.method public abstract b(Lkik/core/datatypes/x;)V
+.end method
+
+.method public abstract d()Lkik/android/internal/platform/PlatformHelper$StickerSource;
+.end method

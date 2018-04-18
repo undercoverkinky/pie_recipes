@@ -24,7 +24,7 @@
 
     .line 33
     :cond_0
-    invoke-static {p1}, Lkik/android/util/l;->a(Ljava/lang/String;)Ljava/util/List;
+    invoke-static {p1}, Lkik/android/util/m;->a(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
@@ -84,7 +84,7 @@
     if-eqz v0, :cond_4
 
     .line 42
-    invoke-static {v0}, Lcom/kik/cards/web/r;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/kik/cards/web/s;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -98,7 +98,7 @@
     if-eqz v0, :cond_5
 
     .line 43
-    invoke-static {v0, v4}, Lcom/kik/cards/web/r;->a(Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v0, v4}, Lcom/kik/cards/web/s;->a(Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v2
 
@@ -112,7 +112,7 @@
     if-eqz v0, :cond_1
 
     .line 44
-    invoke-static {v0}, Lcom/kik/cards/web/r;->g(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/kik/cards/web/s;->h(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -163,11 +163,11 @@
     const-string v1, "Smiley Count"
 
     .line 48
-    invoke-static {}, Lkik/core/util/v;->a()Lkik/core/util/v;
+    invoke-static {}, Lkik/core/util/t;->a()Lkik/core/util/t;
 
     move-result-object v2
 
-    invoke-virtual {v2, p1}, Lkik/core/util/v;->a(Ljava/lang/CharSequence;)I
+    invoke-virtual {v2, p1}, Lkik/core/util/t;->a(Ljava/lang/CharSequence;)I
 
     move-result v2
 
@@ -301,7 +301,7 @@
     const-string v1, "Looping"
 
     .line 92
-    invoke-virtual {p4}, Lkik/core/datatypes/messageExtensions/ContentMessage;->B()Z
+    invoke-virtual {p4}, Lkik/core/datatypes/messageExtensions/ContentMessage;->C()Z
 
     move-result v2
 
@@ -312,7 +312,7 @@
     const-string v1, "Muted"
 
     .line 93
-    invoke-virtual {p4}, Lkik/core/datatypes/messageExtensions/ContentMessage;->C()Z
+    invoke-virtual {p4}, Lkik/core/datatypes/messageExtensions/ContentMessage;->D()Z
 
     move-result v2
 
@@ -363,7 +363,7 @@
     move-result-object v3
 
     .line 110
-    invoke-static {v3}, Lkik/core/net/d/a;->a(Ljava/lang/String;)Z
+    invoke-static {v3}, Lkik/core/net/messageExtensions/a;->a(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -450,7 +450,7 @@
     move-result-object v1
 
     .line 105
-    invoke-static {v1}, Lcom/kik/cards/web/r;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/kik/cards/web/s;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -458,7 +458,7 @@
 
     .line 115
     :cond_4
-    invoke-static {v3}, Lcom/kik/cards/web/r;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/kik/cards/web/s;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -470,7 +470,7 @@
 
     .prologue
     .line 62
-    invoke-static {p3}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    invoke-static {p3}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v2
 

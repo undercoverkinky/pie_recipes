@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/view/KeyEvent;)Z
+.method public abstract a(Ljava/lang/String;Landroid/webkit/GeolocationPermissions$Callback;)V
 .end method

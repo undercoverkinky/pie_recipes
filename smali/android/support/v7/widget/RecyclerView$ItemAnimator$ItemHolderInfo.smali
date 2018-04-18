@@ -29,10 +29,10 @@
     .locals 0
 
     .prologue
-    .line 11016
+    .line 12497
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 11017
+    .line 12498
     return-void
 .end method
 
@@ -42,38 +42,38 @@
     .locals 2
 
     .prologue
-    .line 11027
-    .line 12042
-    iget-object v0, p1, Landroid/support/v7/widget/RecyclerView$ViewHolder;->a:Landroid/view/View;
+    .line 12508
+    .line 13523
+    iget-object v0, p1, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 12043
+    .line 13524
     invoke-virtual {v0}, Landroid/view/View;->getLeft()I
 
     move-result v1
 
     iput v1, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;->a:I
 
-    .line 12044
+    .line 13525
     invoke-virtual {v0}, Landroid/view/View;->getTop()I
 
     move-result v1
 
     iput v1, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;->b:I
 
-    .line 12045
+    .line 13526
     invoke-virtual {v0}, Landroid/view/View;->getRight()I
 
     move-result v1
 
     iput v1, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;->c:I
 
-    .line 12046
+    .line 13527
     invoke-virtual {v0}, Landroid/view/View;->getBottom()I
 
     move-result v0
 
     iput v0, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo;->d:I
 
-    .line 11027
+    .line 12508
     return-object p0
 .end method

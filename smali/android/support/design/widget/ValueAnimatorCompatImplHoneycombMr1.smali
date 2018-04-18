@@ -3,8 +3,14 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0xc
+.end annotation
+
+
 # instance fields
-.field final a:Landroid/animation/ValueAnimator;
+.field private final a:Landroid/animation/ValueAnimator;
 
 
 # direct methods
@@ -12,17 +18,17 @@
     .locals 1
 
     .prologue
-    .line 28
+    .line 32
     invoke-direct {p0}, Landroid/support/design/widget/ValueAnimatorCompat$Impl;-><init>()V
 
-    .line 29
+    .line 33
     new-instance v0, Landroid/animation/ValueAnimator;
 
     invoke-direct {v0}, Landroid/animation/ValueAnimator;-><init>()V
 
     iput-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplHoneycombMr1;->a:Landroid/animation/ValueAnimator;
 
-    .line 30
+    .line 34
     return-void
 .end method
 
@@ -32,12 +38,12 @@
     .locals 1
 
     .prologue
-    .line 34
+    .line 38
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplHoneycombMr1;->a:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 35
+    .line 39
     return-void
 .end method
 
@@ -45,7 +51,7 @@
     .locals 3
 
     .prologue
-    .line 89
+    .line 93
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplHoneycombMr1;->a:Landroid/animation/ValueAnimator;
 
     const/4 v1, 0x2
@@ -62,22 +68,7 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setFloatValues([F)V
 
-    .line 90
-    return-void
-.end method
-
-.method public final a(I)V
-    .locals 4
-
-    .prologue
-    .line 99
-    iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplHoneycombMr1;->a:Landroid/animation/ValueAnimator;
-
-    int-to-long v2, p1
-
-    invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
-
-    .line 100
+    .line 94
     return-void
 .end method
 
@@ -85,7 +76,7 @@
     .locals 3
 
     .prologue
-    .line 79
+    .line 83
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplHoneycombMr1;->a:Landroid/animation/ValueAnimator;
 
     const/4 v1, 0x2
@@ -102,7 +93,20 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setIntValues([I)V
 
-    .line 80
+    .line 84
+    return-void
+.end method
+
+.method public final a(J)V
+    .locals 1
+
+    .prologue
+    .line 103
+    iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplHoneycombMr1;->a:Landroid/animation/ValueAnimator;
+
+    invoke-virtual {v0, p1, p2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    .line 104
     return-void
 .end method
 
@@ -110,7 +114,7 @@
     .locals 2
 
     .prologue
-    .line 59
+    .line 63
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplHoneycombMr1;->a:Landroid/animation/ValueAnimator;
 
     new-instance v1, Landroid/support/design/widget/ValueAnimatorCompatImplHoneycombMr1$2;
@@ -119,7 +123,7 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 75
+    .line 79
     return-void
 .end method
 
@@ -127,7 +131,7 @@
     .locals 2
 
     .prologue
-    .line 49
+    .line 53
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplHoneycombMr1;->a:Landroid/animation/ValueAnimator;
 
     new-instance v1, Landroid/support/design/widget/ValueAnimatorCompatImplHoneycombMr1$1;
@@ -136,7 +140,7 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 55
+    .line 59
     return-void
 .end method
 
@@ -144,12 +148,12 @@
     .locals 1
 
     .prologue
-    .line 44
+    .line 48
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplHoneycombMr1;->a:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0, p1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 45
+    .line 49
     return-void
 .end method
 
@@ -157,7 +161,7 @@
     .locals 1
 
     .prologue
-    .line 39
+    .line 43
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplHoneycombMr1;->a:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
@@ -171,7 +175,7 @@
     .locals 1
 
     .prologue
-    .line 84
+    .line 88
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplHoneycombMr1;->a:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
@@ -191,7 +195,7 @@
     .locals 1
 
     .prologue
-    .line 94
+    .line 98
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplHoneycombMr1;->a:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
@@ -211,12 +215,12 @@
     .locals 1
 
     .prologue
-    .line 104
+    .line 108
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplHoneycombMr1;->a:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 105
+    .line 109
     return-void
 .end method
 
@@ -224,7 +228,7 @@
     .locals 1
 
     .prologue
-    .line 109
+    .line 113
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplHoneycombMr1;->a:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
@@ -232,4 +236,31 @@
     move-result v0
 
     return v0
+.end method
+
+.method public final g()V
+    .locals 1
+
+    .prologue
+    .line 118
+    iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplHoneycombMr1;->a:Landroid/animation/ValueAnimator;
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->end()V
+
+    .line 119
+    return-void
+.end method
+
+.method public final h()J
+    .locals 2
+
+    .prologue
+    .line 123
+    iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplHoneycombMr1;->a:Landroid/animation/ValueAnimator;
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->getDuration()J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method

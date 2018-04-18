@@ -85,7 +85,7 @@
     :cond_2
     iget-object v0, p0, Lcom/github/clans/fab/FloatingActionMenu$4;->a:Lcom/github/clans/fab/FloatingActionButton;
 
-    sget v1, Lcom/github/clans/fab/a$d;->a:I
+    sget v1, Lcom/github/clans/fab/R$id;->fab_label:I
 
     invoke-virtual {v0, v1}, Lcom/github/clans/fab/FloatingActionButton;->getTag(I)Ljava/lang/Object;
 

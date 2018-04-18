@@ -13,15 +13,15 @@
 # instance fields
 .field private a:Landroid/app/Activity;
 
-.field private b:Lcom/kik/cards/web/q;
+.field private b:Lcom/kik/cards/web/r;
 
 .field private c:Lcom/kik/cards/web/b;
 
 .field private d:Lkik/android/b/g;
 
-.field private e:Lcom/kik/cards/web/i;
+.field private e:Lcom/kik/cards/web/h;
 
-.field private f:Lkik/core/datatypes/ad;
+.field private f:Lkik/core/datatypes/aa;
 
 
 # direct methods
@@ -37,7 +37,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/app/Activity;Lcom/kik/cards/web/b;Lcom/kik/cards/web/q;Lkik/android/b/g;Lcom/kik/cards/web/i;Lkik/core/datatypes/ad;)V
+.method public constructor <init>(Landroid/app/Activity;Lcom/kik/cards/web/b;Lcom/kik/cards/web/r;Lkik/android/b/g;Lcom/kik/cards/web/h;Lkik/core/datatypes/aa;)V
     .locals 2
 
     .prologue
@@ -54,13 +54,13 @@
     iput-object p4, p0, Lkik/android/b/e;->d:Lkik/android/b/g;
 
     .line 47
-    iput-object p3, p0, Lkik/android/b/e;->b:Lcom/kik/cards/web/q;
+    iput-object p3, p0, Lkik/android/b/e;->b:Lcom/kik/cards/web/r;
 
     .line 48
-    iput-object p5, p0, Lkik/android/b/e;->e:Lcom/kik/cards/web/i;
+    iput-object p5, p0, Lkik/android/b/e;->e:Lcom/kik/cards/web/h;
 
     .line 49
-    iput-object p6, p0, Lkik/android/b/e;->f:Lkik/core/datatypes/ad;
+    iput-object p6, p0, Lkik/android/b/e;->f:Lkik/core/datatypes/aa;
 
     .line 50
     const-wide/16 v0, 0x0
@@ -81,12 +81,12 @@
     return-wide p0
 .end method
 
-.method static synthetic a(Lkik/android/b/e;)Lkik/core/datatypes/ad;
+.method static synthetic a(Lkik/android/b/e;)Lkik/core/datatypes/aa;
     .locals 1
 
     .prologue
     .line 26
-    iget-object v0, p0, Lkik/android/b/e;->f:Lkik/core/datatypes/ad;
+    iget-object v0, p0, Lkik/android/b/e;->f:Lkik/core/datatypes/aa;
 
     return-object v0
 .end method
@@ -111,12 +111,12 @@
     return-object v0
 .end method
 
-.method static synthetic d(Lkik/android/b/e;)Lcom/kik/cards/web/i;
+.method static synthetic d(Lkik/android/b/e;)Lcom/kik/cards/web/h;
     .locals 1
 
     .prologue
     .line 26
-    iget-object v0, p0, Lkik/android/b/e;->e:Lcom/kik/cards/web/i;
+    iget-object v0, p0, Lkik/android/b/e;->e:Lcom/kik/cards/web/h;
 
     return-object v0
 .end method
@@ -208,10 +208,10 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lkik/android/b/e;->b:Lcom/kik/cards/web/q;
+    iget-object v3, p0, Lkik/android/b/e;->b:Lcom/kik/cards/web/r;
 
     .line 206
-    invoke-interface {v3}, Lcom/kik/cards/web/q;->m()Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;
+    invoke-interface {v3}, Lcom/kik/cards/web/r;->k()Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;
 
     move-result-object v3
 
@@ -220,7 +220,7 @@
     .line 208
     iget-object v2, p0, Lkik/android/b/e;->a:Landroid/app/Activity;
 
-    invoke-static {v1, v2}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    invoke-static {v1, v2}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ae;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v1
 
@@ -233,7 +233,7 @@
 
     invoke-direct {v2, p0, p3, v0}, Lkik/android/b/e$2;-><init>(Lkik/android/b/e;Ljava/util/List;Lcom/kik/events/Promise;)V
 
-    invoke-virtual {v1, v2}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v1, v2}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
     .line 245
     return-object v0
@@ -305,10 +305,10 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lkik/android/b/e;->b:Lcom/kik/cards/web/q;
+    iget-object v3, p0, Lkik/android/b/e;->b:Lcom/kik/cards/web/r;
 
     .line 259
-    invoke-interface {v3}, Lcom/kik/cards/web/q;->m()Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;
+    invoke-interface {v3}, Lcom/kik/cards/web/r;->k()Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;
 
     move-result-object v3
 
@@ -317,7 +317,7 @@
     .line 261
     iget-object v2, p0, Lkik/android/b/e;->a:Landroid/app/Activity;
 
-    invoke-static {v1, v2}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    invoke-static {v1, v2}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ae;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v1
 
@@ -330,7 +330,7 @@
 
     invoke-direct {v2, p0, p3, v0}, Lkik/android/b/e$3;-><init>(Lkik/android/b/e;Ljava/util/List;Lcom/kik/events/Promise;)V
 
-    invoke-virtual {v1, v2}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v1, v2}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
     .line 298
     return-object v0
@@ -370,7 +370,7 @@
 
     .line 103
     :cond_0
-    invoke-static {p3}, Lcom/kik/cards/web/r;->m(Ljava/lang/String;)Z
+    invoke-static {p3}, Lcom/kik/cards/web/s;->n(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -381,7 +381,7 @@
     .line 104
     sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    invoke-static {v0}, Lcom/kik/events/m;->a(Ljava/lang/Object;)Lcom/kik/events/Promise;
+    invoke-static {v0}, Lcom/kik/events/l;->a(Ljava/lang/Object;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -398,7 +398,7 @@
 
     invoke-direct {v2, p0, v1, p3}, Lkik/android/b/e$1;-><init>(Lkik/android/b/e;Lcom/kik/events/Promise;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v2}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v0, v2}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
     move-object v0, v1
 
@@ -426,7 +426,7 @@
 
     .line 56
     .line 60
-    invoke-static {p2}, Lcom/kik/cards/web/r;->m(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/kik/cards/web/s;->n(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -470,7 +470,7 @@
     const-wide/16 v4, 0x32
 
     :try_start_0
-    invoke-static {v0, v4, v5}, Lcom/kik/events/m;->b(Lcom/kik/events/Promise;J)Ljava/lang/Object;
+    invoke-static {v0, v4, v5}, Lcom/kik/events/l;->b(Lcom/kik/events/Promise;J)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 

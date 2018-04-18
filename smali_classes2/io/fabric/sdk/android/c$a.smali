@@ -100,7 +100,7 @@
 .end method
 
 .method public final a()Lio/fabric/sdk/android/c;
-    .locals 9
+    .locals 10
 
     .prologue
     .line 227
@@ -190,24 +190,28 @@
 
     .line 259
     :goto_1
-    new-instance v8, Lio/fabric/sdk/android/services/common/IdManager;
-
     iget-object v0, p0, Lio/fabric/sdk/android/c$a;->a:Landroid/content/Context;
 
-    iget-object v1, p0, Lio/fabric/sdk/android/c$a;->h:Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    .line 261
+    new-instance v8, Lio/fabric/sdk/android/services/common/IdManager;
+
+    iget-object v0, p0, Lio/fabric/sdk/android/c$a;->h:Ljava/lang/String;
 
     iget-object v3, p0, Lio/fabric/sdk/android/c$a;->g:Ljava/lang/String;
 
+    .line 262
     invoke-interface {v2}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     move-result-object v4
 
-    invoke-direct {v8, v0, v1, v3, v4}, Lio/fabric/sdk/android/services/common/IdManager;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)V
+    invoke-direct {v8, v1, v0, v3, v4}, Lio/fabric/sdk/android/services/common/IdManager;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/util/Collection;)V
 
-    .line 262
+    .line 264
     new-instance v0, Lio/fabric/sdk/android/c;
-
-    iget-object v1, p0, Lio/fabric/sdk/android/c$a;->a:Landroid/content/Context;
 
     iget-object v3, p0, Lio/fabric/sdk/android/c$a;->c:Lio/fabric/sdk/android/services/concurrency/h;
 
@@ -219,8 +223,16 @@
 
     iget-object v7, p0, Lio/fabric/sdk/android/c$a;->i:Lio/fabric/sdk/android/f;
 
-    invoke-direct/range {v0 .. v8}, Lio/fabric/sdk/android/c;-><init>(Landroid/content/Context;Ljava/util/Map;Lio/fabric/sdk/android/services/concurrency/h;Landroid/os/Handler;Lio/fabric/sdk/android/k;ZLio/fabric/sdk/android/f;Lio/fabric/sdk/android/services/common/IdManager;)V
+    iget-object v9, p0, Lio/fabric/sdk/android/c$a;->a:Landroid/content/Context;
 
+    .line 265
+    invoke-static {v9}, Lio/fabric/sdk/android/c;->a(Landroid/content/Context;)Landroid/app/Activity;
+
+    move-result-object v9
+
+    invoke-direct/range {v0 .. v9}, Lio/fabric/sdk/android/c;-><init>(Landroid/content/Context;Ljava/util/Map;Lio/fabric/sdk/android/services/concurrency/h;Landroid/os/Handler;Lio/fabric/sdk/android/k;ZLio/fabric/sdk/android/f;Lio/fabric/sdk/android/services/common/IdManager;Landroid/app/Activity;)V
+
+    .line 264
     return-object v0
 
     .line 239

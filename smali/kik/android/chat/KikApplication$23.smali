@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 356
+    .line 418
     iput-object p1, p0, Lkik/android/chat/KikApplication$23;->a:Lkik/android/chat/KikApplication;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,38 +50,38 @@
     .locals 8
 
     .prologue
-    .line 356
+    .line 418
     check-cast p2, Ljava/lang/String;
 
-    .line 1360
+    .line 1422
     iget-object v0, p0, Lkik/android/chat/KikApplication$23;->a:Lkik/android/chat/KikApplication;
 
-    invoke-static {v0}, Lkik/android/chat/KikApplication;->a(Lkik/android/chat/KikApplication;)Lkik/core/interfaces/j;
+    invoke-static {v0}, Lkik/android/chat/KikApplication;->d(Lkik/android/chat/KikApplication;)Lkik/core/interfaces/IConversation;
 
     move-result-object v0
 
-    invoke-interface {v0, p2}, Lkik/core/interfaces/j;->a(Ljava/lang/String;)Lkik/core/datatypes/f;
+    invoke-interface {v0, p2}, Lkik/core/interfaces/IConversation;->a(Ljava/lang/String;)Lkik/core/datatypes/f;
+
+    move-result-object v0
+
+    .line 1423
+    iget-object v1, p0, Lkik/android/chat/KikApplication$23;->a:Lkik/android/chat/KikApplication;
+
+    invoke-static {v1}, Lkik/android/chat/KikApplication;->e(Lkik/android/chat/KikApplication;)Lkik/core/interfaces/v;
 
     move-result-object v1
 
-    .line 1361
-    iget-object v0, p0, Lkik/android/chat/KikApplication$23;->a:Lkik/android/chat/KikApplication;
-
-    invoke-static {v0}, Lkik/android/chat/KikApplication;->b(Lkik/android/chat/KikApplication;)Lkik/core/interfaces/x;
-
-    move-result-object v0
-
-    invoke-virtual {v1}, Lkik/core/datatypes/f;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/f;->g()Ljava/lang/String;
 
     move-result-object v2
 
     const/4 v3, 0x1
 
-    invoke-interface {v0, v2, v3}, Lkik/core/interfaces/x;->a(Ljava/lang/String;Z)Lkik/core/datatypes/o;
+    invoke-interface {v1, v2, v3}, Lkik/core/interfaces/v;->a(Ljava/lang/String;Z)Lkik/core/datatypes/l;
 
-    move-result-object v0
+    move-result-object v1
 
-    .line 1362
+    .line 1424
     iget-object v2, p0, Lkik/android/chat/KikApplication$23;->a:Lkik/android/chat/KikApplication;
 
     iget-object v2, v2, Lkik/android/chat/KikApplication;->a:Lcom/kik/android/Mixpanel;
@@ -94,8 +94,8 @@
 
     const-string v3, "Is Verified"
 
-    .line 1363
-    invoke-virtual {v0}, Lkik/core/datatypes/o;->i()Z
+    .line 1425
+    invoke-virtual {v1}, Lkik/core/datatypes/l;->f()Z
 
     move-result v4
 
@@ -107,82 +107,100 @@
 
     const-string v4, "Expired"
 
-    .line 1364
+    .line 1426
     invoke-virtual {v2, v3, v4}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v2
 
-    const-string v3, "Duration"
+    const-string v3, "Mute Duration"
 
-    .line 1366
-    invoke-virtual {v1}, Lkik/core/datatypes/f;->p()J
+    .line 1428
+    invoke-virtual {v0}, Lkik/core/datatypes/f;->s()J
 
     move-result-wide v4
 
     const-wide/16 v6, -0x1
 
-    cmp-long v1, v4, v6
+    cmp-long v0, v4, v6
 
-    if-nez v1, :cond_0
+    if-nez v0, :cond_0
 
-    const-string v1, "Forever"
+    const-string v0, "Forever"
 
-    .line 1365
+    .line 1427
     :goto_0
-    invoke-virtual {v2, v3, v1}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v1
-
-    const-string v2, "Is Group"
-
-    instance-of v3, v0, Lkik/core/datatypes/s;
-
-    .line 1368
-    invoke-virtual {v1, v2, v3}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Z)Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v2
-
-    const-string v3, "Participants Count"
-
-    instance-of v1, v0, Lkik/core/datatypes/s;
-
-    if-eqz v1, :cond_1
-
-    check-cast v0, Lkik/core/datatypes/s;
-
-    .line 1370
-    invoke-virtual {v0}, Lkik/core/datatypes/s;->y()Ljava/util/List;
+    invoke-virtual {v2, v3, v0}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 1371
+    const-string v2, "Is Group"
+
+    instance-of v3, v1, Lkik/core/datatypes/p;
+
+    .line 1430
+    invoke-virtual {v0, v2, v3}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Z)Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v4
+
+    const-string v5, "Participants Count"
+
+    instance-of v0, v1, Lkik/core/datatypes/p;
+
+    if-eqz v0, :cond_1
+
+    move-object v0, v1
+
+    check-cast v0, Lkik/core/datatypes/p;
+
+    .line 1432
+    invoke-virtual {v0}, Lkik/core/datatypes/p;->c()Ljava/util/List;
+
+    move-result-object v0
+
+    .line 1433
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    int-to-long v0, v0
+    int-to-long v2, v0
 
-    .line 1369
+    .line 1431
     :goto_1
-    invoke-virtual {v2, v3, v0, v1}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;J)Lcom/kik/android/Mixpanel$d;
+    invoke-virtual {v4, v5, v2, v3}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;J)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 1372
+    const-string v2, "Chat Id"
+
+    .line 1434
+    invoke-virtual {v1}, Lkik/core/datatypes/l;->k()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v2, v1}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    .line 1435
+    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    .line 1436
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 356
+    .line 418
     return-void
 
-    .line 1366
+    .line 1428
     :cond_0
-    const-string v1, "Limited Time Duration"
+    const-string v0, "Limited Time Duration"
 
     goto :goto_0
 
-    .line 1371
+    .line 1433
     :cond_1
-    const-wide/16 v0, 0x1
+    const-wide/16 v2, 0x1
 
     goto :goto_1
 .end method

@@ -21,7 +21,7 @@
 .method public abstract onConferenceJoined(Ljava/lang/String;)V
 .end method
 
-.method public abstract onConferenceLeft(ZLjava/lang/String;)V
+.method public abstract onConferenceLeft(ILjava/lang/String;)V
 .end method
 
 .method public abstract onParticipantAdded(Lcom/rounds/kik/participants/ParticipantUri;)V

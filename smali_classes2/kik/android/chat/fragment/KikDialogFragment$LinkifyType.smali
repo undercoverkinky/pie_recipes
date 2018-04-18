@@ -40,7 +40,7 @@
 
     const/4 v2, 0x0
 
-    .line 35
+    .line 34
     new-instance v0, Lkik/android/chat/fragment/KikDialogFragment$LinkifyType;
 
     const-string v1, "HTML"
@@ -57,7 +57,7 @@
 
     sput-object v0, Lkik/android/chat/fragment/KikDialogFragment$LinkifyType;->SPAN:Lkik/android/chat/fragment/KikDialogFragment$LinkifyType;
 
-    .line 34
+    .line 33
     const/4 v0, 0x2
 
     new-array v0, v0, [Lkik/android/chat/fragment/KikDialogFragment$LinkifyType;
@@ -84,7 +84,7 @@
     .end annotation
 
     .prologue
-    .line 34
+    .line 33
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -94,7 +94,7 @@
     .locals 1
 
     .prologue
-    .line 34
+    .line 33
     const-class v0, Lkik/android/chat/fragment/KikDialogFragment$LinkifyType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -110,7 +110,7 @@
     .locals 1
 
     .prologue
-    .line 34
+    .line 33
     sget-object v0, Lkik/android/chat/fragment/KikDialogFragment$LinkifyType;->$VALUES:[Lkik/android/chat/fragment/KikDialogFragment$LinkifyType;
 
     invoke-virtual {v0}, [Lkik/android/chat/fragment/KikDialogFragment$LinkifyType;->clone()Ljava/lang/Object;

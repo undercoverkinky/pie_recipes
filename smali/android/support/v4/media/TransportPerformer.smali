@@ -3,6 +3,11 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
+
 # static fields
 .field static final AUDIOFOCUS_GAIN:I = 0x1
 
@@ -20,11 +25,14 @@
 # direct methods
 .method public constructor <init>()V
     .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
     .prologue
-    .line 29
+    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 40
     return-void
 .end method
 
@@ -32,24 +40,26 @@
 # virtual methods
 .method public onAudioFocusChange(I)V
     .locals 9
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
     .prologue
-    .line 188
+    .line 237
     const/4 v0, 0x0
 
-    .line 189
+    .line 238
     packed-switch p1, :pswitch_data_0
 
-    .line 196
+    .line 245
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 197
+    .line 246
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 198
+    .line 247
     const/16 v0, 0x7f
 
     new-instance v1, Landroid/view/KeyEvent;
@@ -66,7 +76,7 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/support/v4/media/TransportPerformer;->onMediaButtonDown(ILandroid/view/KeyEvent;)Z
 
-    .line 199
+    .line 248
     const/16 v0, 0x7f
 
     new-instance v1, Landroid/view/KeyEvent;
@@ -83,17 +93,17 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/support/v4/media/TransportPerformer;->onMediaButtonUp(ILandroid/view/KeyEvent;)Z
 
-    .line 201
+    .line 250
     :cond_0
     return-void
 
-    .line 193
+    .line 242
     :pswitch_0
     const/16 v0, 0x7f
 
     goto :goto_0
 
-    .line 189
+    .line 238
     :pswitch_data_0
     .packed-switch -0x1
         :pswitch_0
@@ -102,65 +112,77 @@
 
 .method public onGetBufferPercentage()I
     .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
     .prologue
-    .line 76
+    .line 113
     const/16 v0, 0x64
 
     return v0
 .end method
 
 .method public abstract onGetCurrentPosition()J
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 .end method
 
 .method public abstract onGetDuration()J
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 .end method
 
 .method public onGetTransportControlFlags()I
     .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
     .prologue
-    .line 98
+    .line 138
     const/16 v0, 0x3c
 
     return v0
 .end method
 
 .method public abstract onIsPlaying()Z
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 .end method
 
 .method public onMediaButtonDown(ILandroid/view/KeyEvent;)Z
     .locals 2
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
     .prologue
     const/4 v1, 0x1
 
-    .line 127
+    .line 170
     sparse-switch p1, :sswitch_data_0
 
-    .line 145
+    .line 188
     :goto_0
     return v1
 
-    .line 129
+    .line 172
     :sswitch_0
     invoke-virtual {p0}, Landroid/support/v4/media/TransportPerformer;->onStart()V
 
     goto :goto_0
 
-    .line 132
+    .line 175
     :sswitch_1
     invoke-virtual {p0}, Landroid/support/v4/media/TransportPerformer;->onPause()V
 
     goto :goto_0
 
-    .line 135
+    .line 178
     :sswitch_2
     invoke-virtual {p0}, Landroid/support/v4/media/TransportPerformer;->onStop()V
 
     goto :goto_0
 
-    .line 139
+    .line 182
     :sswitch_3
     invoke-virtual {p0}, Landroid/support/v4/media/TransportPerformer;->onIsPlaying()Z
 
@@ -168,18 +190,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 140
+    .line 183
     invoke-virtual {p0}, Landroid/support/v4/media/TransportPerformer;->onPause()V
 
     goto :goto_0
 
-    .line 142
+    .line 185
     :cond_0
     invoke-virtual {p0}, Landroid/support/v4/media/TransportPerformer;->onStart()V
 
     goto :goto_0
 
-    .line 127
+    .line 170
     nop
 
     :sswitch_data_0
@@ -194,22 +216,32 @@
 
 .method public onMediaButtonUp(ILandroid/view/KeyEvent;)Z
     .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
     .prologue
-    .line 164
+    .line 210
     const/4 v0, 0x1
 
     return v0
 .end method
 
 .method public abstract onPause()V
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 .end method
 
 .method public abstract onSeekTo(J)V
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 .end method
 
 .method public abstract onStart()V
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 .end method
 
 .method public abstract onStop()V
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 .end method

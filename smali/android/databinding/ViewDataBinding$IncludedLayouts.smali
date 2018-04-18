@@ -27,25 +27,25 @@
     .locals 1
 
     .prologue
-    .line 1334
+    .line 1430
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1335
+    .line 1431
     new-array v0, p1, [[Ljava/lang/String;
 
     iput-object v0, p0, Landroid/databinding/ViewDataBinding$IncludedLayouts;->layouts:[[Ljava/lang/String;
 
-    .line 1336
+    .line 1432
     new-array v0, p1, [[I
 
     iput-object v0, p0, Landroid/databinding/ViewDataBinding$IncludedLayouts;->indexes:[[I
 
-    .line 1337
+    .line 1433
     new-array v0, p1, [[I
 
     iput-object v0, p0, Landroid/databinding/ViewDataBinding$IncludedLayouts;->layoutIds:[[I
 
-    .line 1338
+    .line 1434
     return-void
 .end method
 
@@ -55,21 +55,21 @@
     .locals 1
 
     .prologue
-    .line 1341
+    .line 1437
     iget-object v0, p0, Landroid/databinding/ViewDataBinding$IncludedLayouts;->layouts:[[Ljava/lang/String;
 
     aput-object p2, v0, p1
 
-    .line 1342
+    .line 1438
     iget-object v0, p0, Landroid/databinding/ViewDataBinding$IncludedLayouts;->indexes:[[I
 
     aput-object p3, v0, p1
 
-    .line 1343
+    .line 1439
     iget-object v0, p0, Landroid/databinding/ViewDataBinding$IncludedLayouts;->layoutIds:[[I
 
     aput-object p4, v0, p1
 
-    .line 1344
+    .line 1440
     return-void
 .end method

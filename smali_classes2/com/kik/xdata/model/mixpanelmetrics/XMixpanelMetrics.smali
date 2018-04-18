@@ -76,25 +76,6 @@
 
 
 # virtual methods
-.method public final a()Lcom/dyuproject/protostuff/u;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/dyuproject/protostuff/u",
-            "<",
-            "Lcom/kik/xdata/model/mixpanelmetrics/XMixpanelMetrics;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 86
-    sget-object v0, Lcom/kik/xdata/model/mixpanelmetrics/XMixpanelMetrics;->b:Lcom/dyuproject/protostuff/u;
-
-    return-object v0
-.end method
-
 .method public final a(Ljava/lang/Boolean;)Lcom/kik/xdata/model/mixpanelmetrics/XMixpanelMetrics;
     .locals 0
 
@@ -117,7 +98,7 @@
     return-object p0
 .end method
 
-.method public final b()Ljava/lang/String;
+.method public final a()Ljava/lang/String;
     .locals 1
 
     .prologue
@@ -127,12 +108,31 @@
     return-object v0
 .end method
 
-.method public final c()Ljava/lang/Boolean;
+.method public final b()Ljava/lang/Boolean;
     .locals 1
 
     .prologue
     .line 61
     iget-object v0, p0, Lcom/kik/xdata/model/mixpanelmetrics/XMixpanelMetrics;->isFirstAccount:Ljava/lang/Boolean;
+
+    return-object v0
+.end method
+
+.method public final cachedSchema()Lcom/dyuproject/protostuff/u;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/dyuproject/protostuff/u",
+            "<",
+            "Lcom/kik/xdata/model/mixpanelmetrics/XMixpanelMetrics;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 86
+    sget-object v0, Lcom/kik/xdata/model/mixpanelmetrics/XMixpanelMetrics;->b:Lcom/dyuproject/protostuff/u;
 
     return-object v0
 .end method

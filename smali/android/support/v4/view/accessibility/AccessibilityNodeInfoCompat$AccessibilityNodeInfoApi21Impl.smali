@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 1758
+    .line 2144
     invoke-direct {p0}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityNodeInfoKitKatImpl;-><init>()V
 
     return-void
@@ -31,10 +31,10 @@
     .locals 0
 
     .prologue
-    .line 1778
+    .line 2164
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi21;->addAction(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 1779
+    .line 2165
     return-void
 .end method
 
@@ -42,7 +42,7 @@
     .locals 1
 
     .prologue
-    .line 1788
+    .line 2174
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi21;->getAccessibilityActionId(Ljava/lang/Object;)I
 
     move-result v0
@@ -54,7 +54,7 @@
     .locals 1
 
     .prologue
-    .line 1793
+    .line 2179
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi21;->getAccessibilityActionLabel(Ljava/lang/Object;)Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -77,7 +77,7 @@
     .end annotation
 
     .prologue
-    .line 1766
+    .line 2152
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi21;->getActionList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
@@ -85,11 +85,23 @@
     return-object v0
 .end method
 
+.method public getCollectionInfoSelectionMode(Ljava/lang/Object;)I
+    .locals 1
+
+    .prologue
+    .line 2231
+    invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi21$CollectionInfo;->getSelectionMode(Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public getError(Ljava/lang/Object;)Ljava/lang/CharSequence;
     .locals 1
 
     .prologue
-    .line 1810
+    .line 2196
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi21;->getError(Ljava/lang/Object;)Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -101,7 +113,7 @@
     .locals 1
 
     .prologue
-    .line 1825
+    .line 2211
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi21;->getMaxTextLength(Ljava/lang/Object;)I
 
     move-result v0
@@ -113,7 +125,7 @@
     .locals 1
 
     .prologue
-    .line 1830
+    .line 2216
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi21;->getWindow(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -125,7 +137,7 @@
     .locals 1
 
     .prologue
-    .line 1805
+    .line 2191
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi21$CollectionItemInfo;->isSelected(Ljava/lang/Object;)Z
 
     move-result v0
@@ -137,7 +149,7 @@
     .locals 1
 
     .prologue
-    .line 1761
+    .line 2147
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi21;->newAccessibilityAction(ILjava/lang/CharSequence;)Ljava/lang/Object;
 
     move-result-object v0
@@ -149,7 +161,7 @@
     .locals 1
 
     .prologue
-    .line 1772
+    .line 2158
     invoke-static {p1, p2, p3, p4}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi21;->obtainCollectionInfo(IIZI)Ljava/lang/Object;
 
     move-result-object v0
@@ -161,7 +173,7 @@
     .locals 1
 
     .prologue
-    .line 1799
+    .line 2185
     invoke-static/range {p1 .. p6}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi21;->obtainCollectionItemInfo(IIIIZZ)Ljava/lang/Object;
 
     move-result-object v0
@@ -173,7 +185,7 @@
     .locals 1
 
     .prologue
-    .line 1783
+    .line 2169
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi21;->removeAction(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
@@ -185,7 +197,7 @@
     .locals 1
 
     .prologue
-    .line 1835
+    .line 2221
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi21;->removeChild(Ljava/lang/Object;Landroid/view/View;)Z
 
     move-result v0
@@ -197,7 +209,7 @@
     .locals 1
 
     .prologue
-    .line 1840
+    .line 2226
     invoke-static {p1, p2, p3}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi21;->removeChild(Ljava/lang/Object;Landroid/view/View;I)Z
 
     move-result v0
@@ -209,10 +221,10 @@
     .locals 0
 
     .prologue
-    .line 1815
+    .line 2201
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi21;->setError(Ljava/lang/Object;Ljava/lang/CharSequence;)V
 
-    .line 1816
+    .line 2202
     return-void
 .end method
 
@@ -220,9 +232,9 @@
     .locals 0
 
     .prologue
-    .line 1820
+    .line 2206
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatApi21;->setMaxTextLength(Ljava/lang/Object;I)V
 
-    .line 1821
+    .line 2207
     return-void
 .end method

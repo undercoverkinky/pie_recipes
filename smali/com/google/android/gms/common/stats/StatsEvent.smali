@@ -1,12 +1,15 @@
 .class public abstract Lcom/google/android/gms/common/stats/StatsEvent;
-.super Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;
+.super Lcom/google/android/gms/common/internal/safeparcel/zza;
+
+# interfaces
+.implements Lcom/google/android/gms/common/internal/ReflectedParcelable;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
+    invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/zza;-><init>()V
 
     return-void
 .end method
@@ -20,7 +23,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 11
+    .locals 10
 
     invoke-virtual {p0}, Lcom/google/android/gms/common/stats/StatsEvent;->getTimeMillis()J
 
@@ -28,35 +31,31 @@
 
     const-string v2, "\t"
 
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
     invoke-virtual {p0}, Lcom/google/android/gms/common/stats/StatsEvent;->getEventType()I
 
     move-result v3
 
     const-string v4, "\t"
 
-    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {p0}, Lcom/google/android/gms/common/stats/StatsEvent;->zzuD()J
+    invoke-virtual {p0}, Lcom/google/android/gms/common/stats/StatsEvent;->zzakz()J
 
     move-result-wide v6
 
-    invoke-virtual {p0}, Lcom/google/android/gms/common/stats/StatsEvent;->zzuG()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/google/android/gms/common/stats/StatsEvent;->zzala()Ljava/lang/String;
 
     move-result-object v5
-
-    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v5
-
-    new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/String;->length()I
+
+    move-result v8
+
+    add-int/lit8 v8, v8, 0x33
+
+    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v9
 
@@ -64,31 +63,23 @@
 
     move-result v9
 
-    add-int/lit8 v9, v9, 0x33
-
-    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v10
-
-    invoke-virtual {v10}, Ljava/lang/String;->length()I
-
-    move-result v10
-
-    add-int/2addr v9, v10
+    add-int/2addr v8, v9
 
     invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v10
+    move-result-object v9
 
-    invoke-virtual {v10}, Ljava/lang/String;->length()I
+    invoke-virtual {v9}, Ljava/lang/String;->length()I
 
-    move-result v10
+    move-result v9
 
-    add-int/2addr v9, v10
+    add-int/2addr v8, v9
 
-    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(I)V
+    new-instance v9, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-direct {v9, v8}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    invoke-virtual {v9, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -119,8 +110,8 @@
     return-object v0
 .end method
 
-.method public abstract zzuD()J
+.method public abstract zzakz()J
 .end method
 
-.method public abstract zzuG()Ljava/lang/String;
+.method public abstract zzala()Ljava/lang/String;
 .end method

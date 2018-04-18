@@ -380,7 +380,7 @@
     :pswitch_9
     iget-object v0, p2, Lcom/kik/xdata/model/cards/XCardDescriptor;->anonymousKey:Lcom/kik/xdata/model/cards/XCardAnonymousKey;
 
-    invoke-static {}, Lcom/kik/xdata/model/cards/XCardAnonymousKey;->b()Lcom/dyuproject/protostuff/u;
+    invoke-static {}, Lcom/kik/xdata/model/cards/XCardAnonymousKey;->a()Lcom/dyuproject/protostuff/u;
 
     move-result-object v1
 
@@ -411,7 +411,7 @@
     :cond_0
     iget-object v0, p2, Lcom/kik/xdata/model/cards/XCardDescriptor;->permissions:Ljava/util/List;
 
-    invoke-static {}, Lcom/kik/xdata/model/cards/XCardPermission;->b()Lcom/dyuproject/protostuff/u;
+    invoke-static {}, Lcom/kik/xdata/model/cards/XCardPermission;->a()Lcom/dyuproject/protostuff/u;
 
     move-result-object v1
 
@@ -450,7 +450,7 @@
     :cond_1
     iget-object v0, p2, Lcom/kik/xdata/model/cards/XCardDescriptor;->backStackEntries:Ljava/util/List;
 
-    invoke-static {}, Lcom/kik/xdata/model/cards/XCardBackstackEntry;->b()Lcom/dyuproject/protostuff/u;
+    invoke-static {}, Lcom/kik/xdata/model/cards/XCardBackstackEntry;->a()Lcom/dyuproject/protostuff/u;
 
     move-result-object v1
 
@@ -637,7 +637,7 @@
 
     iget-object v1, p2, Lcom/kik/xdata/model/cards/XCardDescriptor;->anonymousKey:Lcom/kik/xdata/model/cards/XCardAnonymousKey;
 
-    invoke-static {}, Lcom/kik/xdata/model/cards/XCardAnonymousKey;->b()Lcom/dyuproject/protostuff/u;
+    invoke-static {}, Lcom/kik/xdata/model/cards/XCardAnonymousKey;->a()Lcom/dyuproject/protostuff/u;
 
     move-result-object v2
 
@@ -676,7 +676,7 @@
     .line 1407
     const/16 v2, 0xb
 
-    invoke-static {}, Lcom/kik/xdata/model/cards/XCardPermission;->b()Lcom/dyuproject/protostuff/u;
+    invoke-static {}, Lcom/kik/xdata/model/cards/XCardPermission;->a()Lcom/dyuproject/protostuff/u;
 
     move-result-object v3
 
@@ -730,7 +730,7 @@
     .line 1419
     const/16 v2, 0xd
 
-    invoke-static {}, Lcom/kik/xdata/model/cards/XCardBackstackEntry;->b()Lcom/dyuproject/protostuff/u;
+    invoke-static {}, Lcom/kik/xdata/model/cards/XCardBackstackEntry;->a()Lcom/dyuproject/protostuff/u;
 
     move-result-object v3
 

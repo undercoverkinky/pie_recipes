@@ -3,12 +3,18 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0x17
+.end annotation
+
+
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 24
+    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,9 +24,9 @@
     .locals 0
 
     .prologue
-    .line 26
+    .line 29
     invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextAppearance(I)V
 
-    .line 27
+    .line 30
     return-void
 .end method

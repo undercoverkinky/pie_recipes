@@ -52,7 +52,7 @@
     .locals 2
 
     .prologue
-    .line 22
+    .line 33
     const-string v0, "activity"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -61,22 +61,22 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 23
+    .line 34
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getMemoryClass()I
 
     move-result v0
 
-    .line 24
+    .line 35
     const/16 v1, 0x40
 
     if-gt v0, v1, :cond_0
 
-    .line 25
+    .line 36
     sget-object v0, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;->NanoWebM:Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;
 
     sput-object v0, Lkik/android/gifs/a;->a:Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;
 
-    .line 28
+    .line 39
     :cond_0
     return-void
 .end method
@@ -89,22 +89,22 @@
 
     const/4 v0, 0x0
 
-    .line 35
+    .line 46
     sget-object v2, Lkik/android/gifs/a;->a:Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;
 
     invoke-virtual {p0, v2}, Lkik/core/datatypes/messageExtensions/ContentMessage;->b(Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;)Z
 
     move-result v3
 
-    .line 36
+    .line 47
     sget-object v2, Lkik/android/gifs/a;->b:Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;
 
     invoke-virtual {p0, v2}, Lkik/core/datatypes/messageExtensions/ContentMessage;->b(Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;)Z
 
     move-result v4
 
-    .line 37
-    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->h()Ljava/lang/String;
+    .line 48
+    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->i()Ljava/lang/String;
 
     move-result-object v2
 
@@ -112,7 +112,7 @@
 
     move v2, v1
 
-    .line 39
+    .line 50
     :goto_0
     if-nez v3, :cond_0
 
@@ -129,6 +129,6 @@
     :cond_2
     move v2, v0
 
-    .line 37
+    .line 48
     goto :goto_0
 .end method

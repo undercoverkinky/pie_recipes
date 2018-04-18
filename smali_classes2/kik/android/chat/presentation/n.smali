@@ -13,7 +13,7 @@
 .method public abstract a(Lkik/android/c/c;)V
 .end method
 
-.method public abstract a(Lkik/android/chat/view/e;Lkik/android/chat/view/k;Lkik/android/chat/view/y;Lkik/android/chat/fragment/q;Lkik/android/chat/fragment/CameraFragment$a;)V
+.method public abstract a(Lkik/android/chat/view/m;Lkik/android/chat/view/s;Lkik/android/chat/view/af;Lkik/android/chat/fragment/q;Lkik/android/chat/fragment/CameraFragment$a;)V
 .end method
 
 .method public abstract a(Z)V

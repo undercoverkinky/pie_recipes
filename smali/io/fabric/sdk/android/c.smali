@@ -98,7 +98,7 @@
     return-void
 .end method
 
-.method constructor <init>(Landroid/content/Context;Ljava/util/Map;Lio/fabric/sdk/android/services/concurrency/h;Landroid/os/Handler;Lio/fabric/sdk/android/k;ZLio/fabric/sdk/android/f;Lio/fabric/sdk/android/services/common/IdManager;)V
+.method constructor <init>(Landroid/content/Context;Ljava/util/Map;Lio/fabric/sdk/android/services/concurrency/h;Landroid/os/Handler;Lio/fabric/sdk/android/k;ZLio/fabric/sdk/android/f;Lio/fabric/sdk/android/services/common/IdManager;Landroid/app/Activity;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -118,40 +118,37 @@
             "Z",
             "Lio/fabric/sdk/android/f;",
             "Lio/fabric/sdk/android/services/common/IdManager;",
+            "Landroid/app/Activity;",
             ")V"
         }
     .end annotation
 
     .prologue
-    .line 283
+    .line 284
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 284
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lio/fabric/sdk/android/c;->e:Landroid/content/Context;
-
     .line 285
-    iput-object p2, p0, Lio/fabric/sdk/android/c;->f:Ljava/util/Map;
+    iput-object p1, p0, Lio/fabric/sdk/android/c;->e:Landroid/content/Context;
 
     .line 286
-    iput-object p3, p0, Lio/fabric/sdk/android/c;->g:Ljava/util/concurrent/ExecutorService;
+    iput-object p2, p0, Lio/fabric/sdk/android/c;->f:Ljava/util/Map;
 
     .line 287
-    iput-object p4, p0, Lio/fabric/sdk/android/c;->h:Landroid/os/Handler;
+    iput-object p3, p0, Lio/fabric/sdk/android/c;->g:Ljava/util/concurrent/ExecutorService;
 
     .line 288
-    iput-object p5, p0, Lio/fabric/sdk/android/c;->c:Lio/fabric/sdk/android/k;
+    iput-object p4, p0, Lio/fabric/sdk/android/c;->h:Landroid/os/Handler;
 
     .line 289
-    iput-boolean p6, p0, Lio/fabric/sdk/android/c;->d:Z
+    iput-object p5, p0, Lio/fabric/sdk/android/c;->c:Lio/fabric/sdk/android/k;
 
     .line 290
-    iput-object p7, p0, Lio/fabric/sdk/android/c;->i:Lio/fabric/sdk/android/f;
+    iput-boolean p6, p0, Lio/fabric/sdk/android/c;->d:Z
 
     .line 291
+    iput-object p7, p0, Lio/fabric/sdk/android/c;->i:Lio/fabric/sdk/android/f;
+
+    .line 292
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -160,41 +157,50 @@
 
     iput-object v0, p0, Lio/fabric/sdk/android/c;->n:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 292
+    .line 293
     invoke-interface {p2}, Ljava/util/Map;->size()I
 
     move-result v0
 
-    .line 1590
+    .line 1591
     new-instance v1, Lio/fabric/sdk/android/c$2;
 
     invoke-direct {v1, p0, v0}, Lio/fabric/sdk/android/c$2;-><init>(Lio/fabric/sdk/android/c;I)V
 
-    .line 292
+    .line 293
     iput-object v1, p0, Lio/fabric/sdk/android/c;->j:Lio/fabric/sdk/android/f;
 
-    .line 293
+    .line 294
     iput-object p8, p0, Lio/fabric/sdk/android/c;->k:Lio/fabric/sdk/android/services/common/IdManager;
 
-    .line 2488
-    instance-of v0, p1, Landroid/app/Activity;
+    .line 295
+    invoke-virtual {p0, p9}, Lio/fabric/sdk/android/c;->a(Landroid/app/Activity;)Lio/fabric/sdk/android/c;
+
+    .line 296
+    return-void
+.end method
+
+.method static synthetic a(Landroid/content/Context;)Landroid/app/Activity;
+    .locals 1
+
+    .prologue
+    .line 48
+    .line 7489
+    instance-of v0, p0, Landroid/app/Activity;
 
     if-eqz v0, :cond_0
 
-    .line 2489
-    check-cast p1, Landroid/app/Activity;
+    .line 7490
+    check-cast p0, Landroid/app/Activity;
 
-    .line 294
     :goto_0
-    invoke-virtual {p0, p1}, Lio/fabric/sdk/android/c;->a(Landroid/app/Activity;)Lio/fabric/sdk/android/c;
+    return-object p0
 
-    .line 295
-    return-void
-
-    .line 2491
+    .line 7492
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
+    .line 48
     goto :goto_0
 .end method
 
@@ -202,23 +208,23 @@
     .locals 9
 
     .prologue
-    .line 309
+    .line 310
     sget-object v0, Lio/fabric/sdk/android/c;->a:Lio/fabric/sdk/android/c;
 
     if-nez v0, :cond_5
 
-    .line 310
+    .line 311
     const-class v2, Lio/fabric/sdk/android/c;
 
     monitor-enter v2
 
-    .line 311
+    .line 312
     :try_start_0
     sget-object v0, Lio/fabric/sdk/android/c;->a:Lio/fabric/sdk/android/c;
 
     if-nez v0, :cond_4
 
-    .line 312
+    .line 313
     new-instance v0, Lio/fabric/sdk/android/c$a;
 
     invoke-direct {v0, p0}, Lio/fabric/sdk/android/c$a;-><init>(Landroid/content/Context;)V
@@ -231,10 +237,10 @@
 
     move-result-object v3
 
-    .line 3340
+    .line 2341
     sput-object v3, Lio/fabric/sdk/android/c;->a:Lio/fabric/sdk/android/c;
 
-    .line 3364
+    .line 2365
     new-instance v0, Lio/fabric/sdk/android/a;
 
     iget-object v1, v3, Lio/fabric/sdk/android/c;->e:Landroid/content/Context;
@@ -243,7 +249,7 @@
 
     iput-object v0, v3, Lio/fabric/sdk/android/c;->l:Lio/fabric/sdk/android/a;
 
-    .line 3365
+    .line 2366
     iget-object v0, v3, Lio/fabric/sdk/android/c;->l:Lio/fabric/sdk/android/a;
 
     new-instance v1, Lio/fabric/sdk/android/c$1;
@@ -252,54 +258,55 @@
 
     invoke-virtual {v0, v1}, Lio/fabric/sdk/android/a;->a(Lio/fabric/sdk/android/a$b;)Z
 
-    .line 3383
+    .line 2384
     iget-object v1, v3, Lio/fabric/sdk/android/c;->e:Landroid/content/Context;
 
-    .line 3613
+    .line 2614
     new-instance v0, Lio/fabric/sdk/android/e;
 
+    .line 2615
     invoke-virtual {v1}, Landroid/content/Context;->getPackageCodePath()Ljava/lang/String;
 
     move-result-object v4
 
     invoke-direct {v0, v4}, Lio/fabric/sdk/android/e;-><init>(Ljava/lang/String;)V
 
-    .line 4500
+    .line 3501
     iget-object v4, v3, Lio/fabric/sdk/android/c;->g:Ljava/util/concurrent/ExecutorService;
 
-    .line 3616
+    .line 2617
     invoke-interface {v4, v0}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
     move-result-object v0
 
-    .line 4511
+    .line 3512
     iget-object v4, v3, Lio/fabric/sdk/android/c;->f:Ljava/util/Map;
 
     invoke-interface {v4}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     move-result-object v4
 
-    .line 3407
+    .line 2408
     new-instance v5, Lio/fabric/sdk/android/l;
 
     invoke-direct {v5, v0, v4}, Lio/fabric/sdk/android/l;-><init>(Ljava/util/concurrent/Future;Ljava/util/Collection;)V
 
-    .line 3408
+    .line 2409
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6, v4}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 3409
+    .line 2410
     invoke-static {v6}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 3413
+    .line 2414
     sget-object v0, Lio/fabric/sdk/android/f;->d:Lio/fabric/sdk/android/f;
 
     iget-object v4, v3, Lio/fabric/sdk/android/c;->k:Lio/fabric/sdk/android/services/common/IdManager;
 
     invoke-virtual {v5, v1, v3, v0, v4}, Lio/fabric/sdk/android/l;->a(Landroid/content/Context;Lio/fabric/sdk/android/c;Lio/fabric/sdk/android/f;Lio/fabric/sdk/android/services/common/IdManager;)V
 
-    .line 3414
+    .line 2415
     invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -317,7 +324,7 @@
 
     check-cast v0, Lio/fabric/sdk/android/h;
 
-    .line 3415
+    .line 2416
     iget-object v7, v3, Lio/fabric/sdk/android/c;->j:Lio/fabric/sdk/android/f;
 
     iget-object v8, v3, Lio/fabric/sdk/android/c;->k:Lio/fabric/sdk/android/services/common/IdManager;
@@ -326,7 +333,7 @@
 
     goto :goto_0
 
-    .line 314
+    .line 315
     :catchall_0
     move-exception v0
 
@@ -336,12 +343,12 @@
 
     throw v0
 
-    .line 3420
+    .line 2421
     :cond_0
     :try_start_1
-    invoke-virtual {v5}, Lio/fabric/sdk/android/l;->m()V
+    invoke-virtual {v5}, Lio/fabric/sdk/android/l;->k()V
 
-    .line 3424
+    .line 2425
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     move-result-object v0
@@ -354,16 +361,16 @@
 
     if-eqz v0, :cond_2
 
-    .line 3425
+    .line 2426
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Initializing io.fabric.sdk.android:fabric [Version: 1.3.15.167], with the following kits:\n"
+    const-string v1, "Initializing io.fabric.sdk.android:fabric [Version: 1.4.1.19], with the following kits:\n"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     move-object v1, v0
 
-    .line 3434
+    .line 2435
     :goto_1
     invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -383,25 +390,25 @@
 
     check-cast v0, Lio/fabric/sdk/android/h;
 
-    .line 3435
+    .line 2436
     iget-object v6, v0, Lio/fabric/sdk/android/h;->f:Lio/fabric/sdk/android/g;
 
     iget-object v7, v5, Lio/fabric/sdk/android/l;->f:Lio/fabric/sdk/android/g;
 
     invoke-virtual {v6, v7}, Lio/fabric/sdk/android/g;->a(Lio/fabric/sdk/android/services/concurrency/i;)V
 
-    .line 3437
+    .line 2438
     iget-object v6, v3, Lio/fabric/sdk/android/c;->f:Ljava/util/Map;
 
     invoke-static {v6, v0}, Lio/fabric/sdk/android/c;->a(Ljava/util/Map;Lio/fabric/sdk/android/h;)V
 
-    .line 3439
-    invoke-virtual {v0}, Lio/fabric/sdk/android/h;->m()V
+    .line 2440
+    invoke-virtual {v0}, Lio/fabric/sdk/android/h;->k()V
 
-    .line 3441
+    .line 2442
     if-eqz v1, :cond_1
 
-    .line 3442
+    .line 2443
     invoke-virtual {v0}, Lio/fabric/sdk/android/h;->b()Ljava/lang/String;
 
     move-result-object v6
@@ -412,10 +419,12 @@
 
     const-string v7, " [Version: "
 
+    .line 2444
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
+    .line 2445
     invoke-virtual {v0}, Lio/fabric/sdk/android/h;->a()Ljava/lang/String;
 
     move-result-object v0
@@ -426,11 +435,12 @@
 
     const-string v6, "]\n"
 
+    .line 2446
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 3431
+    .line 2432
     :cond_2
     const/4 v0, 0x0
 
@@ -438,20 +448,20 @@
 
     goto :goto_1
 
-    .line 3449
+    .line 2450
     :cond_3
     if-eqz v1, :cond_4
 
-    .line 3450
+    .line 2451
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
-    .line 314
+    .line 315
     :cond_4
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 316
+    .line 317
     :cond_5
     sget-object v0, Lio/fabric/sdk/android/c;->a:Lio/fabric/sdk/android/c;
 
@@ -471,12 +481,12 @@
     .end annotation
 
     .prologue
-    .line 7272
+    .line 6274
     sget-object v0, Lio/fabric/sdk/android/c;->a:Lio/fabric/sdk/android/c;
 
     if-nez v0, :cond_0
 
-    .line 7273
+    .line 6275
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Must Initialize Fabric before using singleton()"
@@ -485,11 +495,11 @@
 
     throw v0
 
-    .line 7275
+    .line 6277
     :cond_0
     sget-object v0, Lio/fabric/sdk/android/c;->a:Lio/fabric/sdk/android/c;
 
-    .line 524
+    .line 525
     iget-object v0, v0, Lio/fabric/sdk/android/c;->f:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -505,16 +515,17 @@
     .locals 2
 
     .prologue
-    .line 7569
+    .line 6570
     new-instance v0, Ljava/util/HashMap;
 
+    .line 6571
     invoke-interface {p0}, Ljava/util/Collection;->size()I
 
     move-result v1
 
     invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
 
-    .line 7572
+    .line 6573
     invoke-static {v0, p0}, Lio/fabric/sdk/android/c;->a(Ljava/util/Map;Ljava/util/Collection;)V
 
     .line 48
@@ -550,18 +561,18 @@
     .end annotation
 
     .prologue
-    .line 460
+    .line 461
     iget-object v0, p1, Lio/fabric/sdk/android/h;->j:Lio/fabric/sdk/android/services/concurrency/b;
 
-    .line 461
+    .line 462
     if-eqz v0, :cond_4
 
-    .line 462
+    .line 463
     invoke-interface {v0}, Lio/fabric/sdk/android/services/concurrency/b;->a()[Ljava/lang/Class;
 
     move-result-object v2
 
-    .line 463
+    .line 464
     array-length v3, v2
 
     const/4 v0, 0x0
@@ -573,14 +584,14 @@
 
     aget-object v4, v2, v1
 
-    .line 464
+    .line 465
     invoke-virtual {v4}, Ljava/lang/Class;->isInterface()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 466
+    .line 467
     invoke-interface {p0}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     move-result-object v0
@@ -603,7 +614,7 @@
 
     check-cast v0, Lio/fabric/sdk/android/h;
 
-    .line 467
+    .line 468
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v6
@@ -614,7 +625,7 @@
 
     if-eqz v6, :cond_0
 
-    .line 468
+    .line 469
     iget-object v6, p1, Lio/fabric/sdk/android/h;->f:Lio/fabric/sdk/android/g;
 
     iget-object v0, v0, Lio/fabric/sdk/android/h;->f:Lio/fabric/sdk/android/g;
@@ -623,7 +634,7 @@
 
     goto :goto_1
 
-    .line 474
+    .line 475
     :cond_1
     invoke-interface {p0, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -631,10 +642,10 @@
 
     check-cast v0, Lio/fabric/sdk/android/h;
 
-    .line 475
+    .line 476
     if-nez v0, :cond_2
 
-    .line 476
+    .line 477
     new-instance v0, Lio/fabric/sdk/android/services/concurrency/UnmetDependencyException;
 
     const-string v1, "Referenced Kit was null, does the kit exist?"
@@ -643,7 +654,7 @@
 
     throw v0
 
-    .line 480
+    .line 481
     :cond_2
     iget-object v5, p1, Lio/fabric/sdk/android/h;->f:Lio/fabric/sdk/android/g;
 
@@ -657,7 +668,7 @@
 
     invoke-virtual {v5, v0}, Lio/fabric/sdk/android/g;->a(Lio/fabric/sdk/android/services/concurrency/i;)V
 
-    .line 463
+    .line 464
     :cond_3
     add-int/lit8 v0, v1, 0x1
 
@@ -665,7 +676,7 @@
 
     goto :goto_0
 
-    .line 485
+    .line 486
     :cond_4
     return-void
 .end method
@@ -691,7 +702,7 @@
     .end annotation
 
     .prologue
-    .line 580
+    .line 581
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -710,19 +721,19 @@
 
     check-cast v0, Lio/fabric/sdk/android/h;
 
-    .line 581
+    .line 582
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
 
     invoke-interface {p0, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 583
+    .line 584
     instance-of v2, v0, Lio/fabric/sdk/android/i;
 
     if-eqz v2, :cond_0
 
-    .line 584
+    .line 585
     check-cast v0, Lio/fabric/sdk/android/i;
 
     invoke-interface {v0}, Lio/fabric/sdk/android/i;->c()Ljava/util/Collection;
@@ -733,7 +744,7 @@
 
     goto :goto_0
 
-    .line 587
+    .line 588
     :cond_1
     return-void
 .end method
@@ -752,15 +763,15 @@
     .locals 1
 
     .prologue
-    .line 531
+    .line 532
     sget-object v0, Lio/fabric/sdk/android/c;->a:Lio/fabric/sdk/android/c;
 
     if-nez v0, :cond_0
 
-    .line 532
+    .line 533
     sget-object v0, Lio/fabric/sdk/android/c;->b:Lio/fabric/sdk/android/k;
 
-    .line 534
+    .line 535
     :goto_0
     return-object v0
 
@@ -776,15 +787,15 @@
     .locals 1
 
     .prologue
-    .line 541
+    .line 542
     sget-object v0, Lio/fabric/sdk/android/c;->a:Lio/fabric/sdk/android/c;
 
     if-nez v0, :cond_0
 
-    .line 542
+    .line 543
     const/4 v0, 0x0
 
-    .line 544
+    .line 545
     :goto_0
     return v0
 
@@ -802,12 +813,12 @@
     .locals 1
 
     .prologue
-    .line 357
+    .line 358
     iget-object v0, p0, Lio/fabric/sdk/android/c;->m:Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_0
 
-    .line 358
+    .line 359
     iget-object v0, p0, Lio/fabric/sdk/android/c;->m:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -816,7 +827,7 @@
 
     check-cast v0, Landroid/app/Activity;
 
-    .line 360
+    .line 361
     :goto_0
     return-object v0
 
@@ -830,14 +841,14 @@
     .locals 1
 
     .prologue
-    .line 348
+    .line 349
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lio/fabric/sdk/android/c;->m:Ljava/lang/ref/WeakReference;
 
-    .line 349
+    .line 350
     return-object p0
 .end method
 
@@ -845,7 +856,7 @@
     .locals 1
 
     .prologue
-    .line 496
+    .line 497
     iget-object v0, p0, Lio/fabric/sdk/android/c;->l:Lio/fabric/sdk/android/a;
 
     return-object v0
@@ -855,7 +866,7 @@
     .locals 1
 
     .prologue
-    .line 500
+    .line 501
     iget-object v0, p0, Lio/fabric/sdk/android/c;->g:Ljava/util/concurrent/ExecutorService;
 
     return-object v0

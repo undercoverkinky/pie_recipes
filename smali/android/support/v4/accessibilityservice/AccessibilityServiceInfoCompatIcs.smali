@@ -3,12 +3,18 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0xe
+.end annotation
+
+
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 26
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,7 +24,7 @@
     .locals 1
 
     .prologue
-    .line 29
+    .line 34
     invoke-virtual {p0}, Landroid/accessibilityservice/AccessibilityServiceInfo;->getCanRetrieveWindowContent()Z
 
     move-result v0
@@ -30,7 +36,7 @@
     .locals 1
 
     .prologue
-    .line 33
+    .line 38
     invoke-virtual {p0}, Landroid/accessibilityservice/AccessibilityServiceInfo;->getDescription()Ljava/lang/String;
 
     move-result-object v0
@@ -42,7 +48,7 @@
     .locals 1
 
     .prologue
-    .line 37
+    .line 42
     invoke-virtual {p0}, Landroid/accessibilityservice/AccessibilityServiceInfo;->getId()Ljava/lang/String;
 
     move-result-object v0
@@ -54,7 +60,7 @@
     .locals 1
 
     .prologue
-    .line 41
+    .line 46
     invoke-virtual {p0}, Landroid/accessibilityservice/AccessibilityServiceInfo;->getResolveInfo()Landroid/content/pm/ResolveInfo;
 
     move-result-object v0
@@ -66,7 +72,7 @@
     .locals 1
 
     .prologue
-    .line 45
+    .line 50
     invoke-virtual {p0}, Landroid/accessibilityservice/AccessibilityServiceInfo;->getSettingsActivityName()Ljava/lang/String;
 
     move-result-object v0

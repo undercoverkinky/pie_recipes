@@ -27,19 +27,27 @@
 
 .field f:I
 
-.field g:Landroid/view/View;
+.field public g:I
 
-.field h:Landroid/view/View;
+.field public h:I
 
-.field final i:Landroid/graphics/Rect;
+.field i:I
 
-.field j:Ljava/lang/Object;
+.field j:I
 
-.field private k:Z
+.field k:Landroid/view/View;
 
-.field private l:Z
+.field l:Landroid/view/View;
 
-.field private m:Z
+.field final m:Landroid/graphics/Rect;
+
+.field n:Ljava/lang/Object;
+
+.field private o:Z
+
+.field private p:Z
+
+.field private q:Z
 
 
 # direct methods
@@ -53,32 +61,38 @@
 
     const/4 v0, 0x0
 
-    .line 2178
+    .line 2625
     invoke-direct {p0, v1, v1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
 
-    .line 2138
+    .line 2566
     iput-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->b:Z
 
-    .line 2145
+    .line 2575
     iput v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->c:I
 
-    .line 2151
+    .line 2581
     iput v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->d:I
 
-    .line 2158
+    .line 2588
     iput v2, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->e:I
 
-    .line 2164
+    .line 2594
     iput v2, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->f:I
 
-    .line 2173
+    .line 2601
+    iput v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->g:I
+
+    .line 2608
+    iput v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->h:I
+
+    .line 2620
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->i:Landroid/graphics/Rect;
+    iput-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->m:Landroid/graphics/Rect;
 
-    .line 2179
+    .line 2626
     return-void
 .end method
 
@@ -90,40 +104,46 @@
 
     const/4 v2, 0x0
 
-    .line 2182
+    .line 2629
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 2138
+    .line 2566
     iput-boolean v2, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->b:Z
 
-    .line 2145
+    .line 2575
     iput v2, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->c:I
 
-    .line 2151
+    .line 2581
     iput v2, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->d:I
 
-    .line 2158
+    .line 2588
     iput v3, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->e:I
 
-    .line 2164
+    .line 2594
     iput v3, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->f:I
 
-    .line 2173
+    .line 2601
+    iput v2, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->g:I
+
+    .line 2608
+    iput v2, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->h:I
+
+    .line 2620
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->i:Landroid/graphics/Rect;
+    iput-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->m:Landroid/graphics/Rect;
 
-    .line 2184
-    sget-object v0, Landroid/support/design/R$styleable;->D:[I
+    .line 2631
+    sget-object v0, Landroid/support/design/R$styleable;->CoordinatorLayout_Layout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 2187
-    sget v1, Landroid/support/design/R$styleable;->E:I
+    .line 2634
+    sget v1, Landroid/support/design/R$styleable;->CoordinatorLayout_Layout_android_layout_gravity:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getInteger(II)I
 
@@ -131,8 +151,8 @@
 
     iput v1, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->c:I
 
-    .line 2190
-    sget v1, Landroid/support/design/R$styleable;->F:I
+    .line 2637
+    sget v1, Landroid/support/design/R$styleable;->CoordinatorLayout_Layout_layout_anchor:I
 
     invoke-virtual {v0, v1, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -140,8 +160,8 @@
 
     iput v1, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->f:I
 
-    .line 2192
-    sget v1, Landroid/support/design/R$styleable;->G:I
+    .line 2639
+    sget v1, Landroid/support/design/R$styleable;->CoordinatorLayout_Layout_layout_anchorGravity:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getInteger(II)I
 
@@ -149,8 +169,8 @@
 
     iput v1, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->d:I
 
-    .line 2196
-    sget v1, Landroid/support/design/R$styleable;->I:I
+    .line 2643
+    sget v1, Landroid/support/design/R$styleable;->CoordinatorLayout_Layout_layout_keyline:I
 
     invoke-virtual {v0, v1, v3}, Landroid/content/res/TypedArray;->getInteger(II)I
 
@@ -158,8 +178,26 @@
 
     iput v1, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->e:I
 
-    .line 2199
-    sget v1, Landroid/support/design/R$styleable;->H:I
+    .line 2646
+    sget v1, Landroid/support/design/R$styleable;->CoordinatorLayout_Layout_layout_insetEdge:I
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v1
+
+    iput v1, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->g:I
+
+    .line 2647
+    sget v1, Landroid/support/design/R$styleable;->CoordinatorLayout_Layout_layout_dodgeInsetEdges:I
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v1
+
+    iput v1, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->h:I
+
+    .line 2649
+    sget v1, Landroid/support/design/R$styleable;->CoordinatorLayout_Layout_layout_behavior:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -167,13 +205,13 @@
 
     iput-boolean v1, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->b:Z
 
-    .line 2201
+    .line 2651
     iget-boolean v1, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->b:Z
 
     if-eqz v1, :cond_0
 
-    .line 2202
-    sget v1, Landroid/support/design/R$styleable;->H:I
+    .line 2652
+    sget v1, Landroid/support/design/R$styleable;->CoordinatorLayout_Layout_layout_behavior:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -185,11 +223,22 @@
 
     iput-object v1, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->a:Landroid/support/design/widget/CoordinatorLayout$Behavior;
 
-    .line 2206
+    .line 2655
     :cond_0
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 2207
+    .line 2657
+    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->a:Landroid/support/design/widget/CoordinatorLayout$Behavior;
+
+    if-eqz v0, :cond_1
+
+    .line 2659
+    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->a:Landroid/support/design/widget/CoordinatorLayout$Behavior;
+
+    invoke-virtual {v0, p0}, Landroid/support/design/widget/CoordinatorLayout$Behavior;->a(Landroid/support/design/widget/CoordinatorLayout$LayoutParams;)V
+
+    .line 2661
+    :cond_1
     return-void
 .end method
 
@@ -201,32 +250,38 @@
 
     const/4 v0, 0x0
 
-    .line 2210
+    .line 2664
     invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
 
-    .line 2138
+    .line 2566
     iput-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->b:Z
 
-    .line 2145
+    .line 2575
     iput v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->c:I
 
-    .line 2151
+    .line 2581
     iput v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->d:I
 
-    .line 2158
+    .line 2588
     iput v1, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->e:I
 
-    .line 2164
+    .line 2594
     iput v1, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->f:I
 
-    .line 2173
+    .line 2601
+    iput v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->g:I
+
+    .line 2608
+    iput v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->h:I
+
+    .line 2620
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->i:Landroid/graphics/Rect;
+    iput-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->m:Landroid/graphics/Rect;
 
-    .line 2211
+    .line 2665
     return-void
 .end method
 
@@ -238,32 +293,38 @@
 
     const/4 v0, 0x0
 
-    .line 2218
+    .line 2672
     invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 2138
+    .line 2566
     iput-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->b:Z
 
-    .line 2145
+    .line 2575
     iput v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->c:I
 
-    .line 2151
+    .line 2581
     iput v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->d:I
 
-    .line 2158
+    .line 2588
     iput v1, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->e:I
 
-    .line 2164
+    .line 2594
     iput v1, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->f:I
 
-    .line 2173
+    .line 2601
+    iput v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->g:I
+
+    .line 2608
+    iput v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->h:I
+
+    .line 2620
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->i:Landroid/graphics/Rect;
+    iput-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->m:Landroid/graphics/Rect;
 
-    .line 2219
+    .line 2673
     return-void
 .end method
 
@@ -275,32 +336,38 @@
 
     const/4 v0, 0x0
 
-    .line 2214
+    .line 2668
     invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
 
-    .line 2138
+    .line 2566
     iput-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->b:Z
 
-    .line 2145
+    .line 2575
     iput v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->c:I
 
-    .line 2151
+    .line 2581
     iput v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->d:I
 
-    .line 2158
+    .line 2588
     iput v1, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->e:I
 
-    .line 2164
+    .line 2594
     iput v1, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->f:I
 
-    .line 2173
+    .line 2601
+    iput v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->g:I
+
+    .line 2608
+    iput v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->h:I
+
+    .line 2620
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->i:Landroid/graphics/Rect;
+    iput-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->m:Landroid/graphics/Rect;
 
-    .line 2215
+    .line 2669
     return-void
 .end method
 
@@ -310,25 +377,31 @@
     .locals 1
 
     .prologue
-    .line 2269
+    .line 2721
     iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->a:Landroid/support/design/widget/CoordinatorLayout$Behavior;
 
     if-eq v0, p1, :cond_0
 
-    .line 2270
+    .line 2727
     iput-object p1, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->a:Landroid/support/design/widget/CoordinatorLayout$Behavior;
 
-    .line 2271
+    .line 2728
     const/4 v0, 0x0
 
-    iput-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->j:Ljava/lang/Object;
+    iput-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->n:Ljava/lang/Object;
 
-    .line 2272
+    .line 2729
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->b:Z
 
-    .line 2274
+    .line 2731
+    if-eqz p1, :cond_0
+
+    .line 2733
+    invoke-virtual {p1, p0}, Landroid/support/design/widget/CoordinatorLayout$Behavior;->a(Landroid/support/design/widget/CoordinatorLayout$LayoutParams;)V
+
+    .line 2736
     :cond_0
     return-void
 .end method
@@ -337,10 +410,10 @@
     .locals 0
 
     .prologue
-    .line 2351
-    iput-boolean p1, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->l:Z
+    .line 2813
+    iput-boolean p1, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->p:Z
 
-    .line 2352
+    .line 2814
     return-void
 .end method
 
@@ -348,78 +421,58 @@
     .locals 1
 
     .prologue
-    .line 2308
+    .line 2770
     iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->a:Landroid/support/design/widget/CoordinatorLayout$Behavior;
 
     if-nez v0, :cond_0
 
-    .line 2309
+    .line 2771
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->k:Z
+    iput-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->o:Z
 
-    .line 2311
+    .line 2773
     :cond_0
-    iget-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->k:Z
+    iget-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->o:Z
 
     return v0
 .end method
 
-.method final a(Landroid/view/View;)Z
-    .locals 1
+.method final b(Z)V
+    .locals 0
 
     .prologue
-    .line 2379
-    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->h:Landroid/view/View;
+    .line 2825
+    iput-boolean p1, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->q:Z
 
-    if-eq p1, v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->a:Landroid/support/design/widget/CoordinatorLayout$Behavior;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->a:Landroid/support/design/widget/CoordinatorLayout$Behavior;
-
-    invoke-virtual {v0, p1}, Landroid/support/design/widget/CoordinatorLayout$Behavior;->a(Landroid/view/View;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
+    .line 2826
+    return-void
 .end method
 
 .method final b()Z
     .locals 1
 
     .prologue
-    .line 2326
-    iget-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->k:Z
+    .line 2788
+    iget-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->o:Z
 
     if-eqz v0, :cond_0
 
-    .line 2327
+    .line 2789
     const/4 v0, 0x1
 
-    .line 2330
+    .line 2793
     :goto_0
     return v0
 
+    .line 2792
     :cond_0
-    iget-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->k:Z
+    iget-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->o:Z
 
+    .line 2793
     or-int/lit8 v0, v0, 0x0
 
-    iput-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->k:Z
+    iput-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->o:Z
 
     goto :goto_0
 .end method
@@ -428,12 +481,12 @@
     .locals 1
 
     .prologue
-    .line 2343
+    .line 2805
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->k:Z
+    iput-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->o:Z
 
-    .line 2344
+    .line 2806
     return-void
 .end method
 
@@ -441,12 +494,12 @@
     .locals 1
 
     .prologue
-    .line 2347
+    .line 2809
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->l:Z
+    iput-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->p:Z
 
-    .line 2348
+    .line 2810
     return-void
 .end method
 
@@ -454,8 +507,8 @@
     .locals 1
 
     .prologue
-    .line 2355
-    iget-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->l:Z
+    .line 2817
+    iget-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->p:Z
 
     return v0
 .end method
@@ -464,8 +517,8 @@
     .locals 1
 
     .prologue
-    .line 2359
-    iget-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->m:Z
+    .line 2821
+    iget-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->q:Z
 
     return v0
 .end method
@@ -474,24 +527,11 @@
     .locals 1
 
     .prologue
-    .line 2363
+    .line 2829
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->m:Z
+    iput-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->q:Z
 
-    .line 2364
-    return-void
-.end method
-
-.method final h()V
-    .locals 1
-
-    .prologue
-    .line 2367
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Landroid/support/design/widget/CoordinatorLayout$LayoutParams;->m:Z
-
-    .line 2368
+    .line 2830
     return-void
 .end method

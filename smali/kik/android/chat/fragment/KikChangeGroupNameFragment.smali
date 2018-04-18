@@ -13,18 +13,14 @@
 
 # instance fields
 .field _confirmNameButton:Landroid/view/View;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1100a8
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1000e3
     .end annotation
 .end field
 
 .field _groupNameField:Lkik/android/chat/view/ValidateableInputView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1100a9
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1000e4
     .end annotation
 .end field
 
@@ -33,17 +29,17 @@
     .end annotation
 .end field
 
-.field protected b:Lkik/core/interfaces/x;
+.field protected b:Lkik/core/interfaces/v;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
-.field protected c:Lkik/core/interfaces/m;
+.field protected c:Lkik/core/interfaces/l;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
-.field private d:Lkik/core/datatypes/s;
+.field private d:Lkik/core/datatypes/p;
 
 .field private e:Lkik/android/chat/fragment/KikChangeGroupNameFragment$a;
 
@@ -53,10 +49,10 @@
     .locals 1
 
     .prologue
-    .line 37
+    .line 40
     invoke-direct {p0}, Lkik/android/chat/fragment/KikIqFragmentBase;-><init>()V
 
-    .line 44
+    .line 47
     new-instance v0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$a;
 
     invoke-direct {v0}, Lkik/android/chat/fragment/KikChangeGroupNameFragment$a;-><init>()V
@@ -67,11 +63,23 @@
 .end method
 
 .method static synthetic a(Lkik/android/chat/fragment/KikChangeGroupNameFragment;)V
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 37
-    .line 1112
+    .line 119
+    iget-object v0, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->_groupNameField:Lkik/android/chat/view/ValidateableInputView;
+
+    invoke-virtual {v0, p0}, Lkik/android/chat/view/ValidateableInputView;->a(Lkik/android/util/KeyboardManipulator;)V
+
+    return-void
+.end method
+
+.method static synthetic b(Lkik/android/chat/fragment/KikChangeGroupNameFragment;)V
+    .locals 3
+
+    .prologue
+    .line 40
+    .line 1124
     iget-object v0, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->_groupNameField:Lkik/android/chat/view/ValidateableInputView;
 
     invoke-virtual {v0}, Lkik/android/chat/view/ValidateableInputView;->f()Landroid/text/Editable;
@@ -86,44 +94,46 @@
 
     move-result-object v0
 
-    .line 1113
-    iget-object v1, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->d:Lkik/core/datatypes/s;
+    .line 1125
+    iget-object v1, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->d:Lkik/core/datatypes/p;
 
-    invoke-virtual {v1}, Lkik/core/datatypes/s;->c()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lkik/android/util/bq;->c(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1}, Lkik/core/datatypes/p;->b()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1114
+    invoke-static {v1}, Lkik/android/util/br;->c(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 1126
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 1115
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->D()V
+    .line 1127
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->finish()V
 
     :goto_0
     return-void
 
-    .line 1118
+    .line 1130
     :cond_0
     new-instance v1, Lkik/android/chat/fragment/KikChangeGroupNameFragment$3;
 
     invoke-direct {v1, p0, v0}, Lkik/android/chat/fragment/KikChangeGroupNameFragment$3;-><init>(Lkik/android/chat/fragment/KikChangeGroupNameFragment;Ljava/lang/String;)V
 
-    .line 1126
-    const v0, 0x7f0a030c
+    .line 1139
+    const v0, 0x7f090320
 
     invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, v1, v0}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->a(Ljava/util/concurrent/Callable;Ljava/lang/String;)Lcom/kik/events/Promise;
+    const/4 v2, 0x1
+
+    invoke-virtual {p0, v1, v0, v2}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->sendRequest(Ljava/util/concurrent/Callable;Ljava/lang/String;Z)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -131,43 +141,39 @@
 
     invoke-direct {v1, p0}, Lkik/android/chat/fragment/KikChangeGroupNameFragment$4;-><init>(Lkik/android/chat/fragment/KikChangeGroupNameFragment;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
     goto :goto_0
 .end method
 
-.method static synthetic b(Lkik/android/chat/fragment/KikChangeGroupNameFragment;)Lkik/core/datatypes/s;
+.method static synthetic c(Lkik/android/chat/fragment/KikChangeGroupNameFragment;)Lkik/core/datatypes/p;
     .locals 1
 
     .prologue
-    .line 37
-    iget-object v0, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->d:Lkik/core/datatypes/s;
+    .line 40
+    iget-object v0, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->d:Lkik/core/datatypes/p;
 
     return-object v0
 .end method
 
-.method static synthetic c(Lkik/android/chat/fragment/KikChangeGroupNameFragment;)V
-    .locals 1
-
-    .prologue
-    .line 0
-    .line 2107
-    iget-object v0, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->_groupNameField:Lkik/android/chat/view/ValidateableInputView;
-
-    invoke-virtual {v0, p0}, Lkik/android/chat/view/ValidateableInputView;->a(Lkik/android/util/KeyboardManipulator;)V
-
-    .line 0
-    return-void
-.end method
-
 
 # virtual methods
-.method protected final E()I
+.method protected getInputAdjustType()I
     .locals 1
 
     .prologue
-    .line 194
-    const v0, 0x7f0a03f0
+    .line 205
+    const/16 v0, 0x10
+
+    return v0
+.end method
+
+.method protected getTitleResource()I
+    .locals 1
+
+    .prologue
+    .line 211
+    const v0, 0x7f090404
 
     return v0
 .end method
@@ -176,23 +182,17 @@
     .locals 3
 
     .prologue
-    .line 53
-    .line 1088
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikFragmentBase;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    .line 56
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->getCoreComponent()Lcom/kik/components/CoreComponent;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkik/android/util/s;->a(Landroid/app/Activity;)Lcom/kik/components/CoreComponent;
-
-    move-result-object v0
-
-    .line 53
     invoke-interface {v0, p0}, Lcom/kik/components/CoreComponent;->a(Lkik/android/chat/fragment/KikChangeGroupNameFragment;)V
 
-    .line 54
+    .line 57
     invoke-super {p0, p1}, Lkik/android/chat/fragment/KikIqFragmentBase;->onCreate(Landroid/os/Bundle;)V
 
-    .line 56
+    .line 59
     invoke-virtual {p0}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
@@ -201,7 +201,7 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v4/app/FragmentActivity;->setResult(I)V
 
-    .line 57
+    .line 60
     iget-object v0, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->e:Lkik/android/chat/fragment/KikChangeGroupNameFragment$a;
 
     invoke-virtual {p0}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->getArguments()Landroid/os/Bundle;
@@ -210,36 +210,36 @@
 
     invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikChangeGroupNameFragment$a;->a(Landroid/os/Bundle;)V
 
-    .line 58
+    .line 61
     iget-object v0, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->e:Lkik/android/chat/fragment/KikChangeGroupNameFragment$a;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/KikChangeGroupNameFragment$a;->o_()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikChangeGroupNameFragment$a;->m_()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 59
+    .line 62
     if-eqz v0, :cond_0
 
-    .line 60
-    iget-object v1, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->b:Lkik/core/interfaces/x;
+    .line 63
+    iget-object v1, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->b:Lkik/core/interfaces/v;
 
     const/4 v2, 0x0
 
-    invoke-interface {v1, v0, v2}, Lkik/core/interfaces/x;->a(Ljava/lang/String;Z)Lkik/core/datatypes/o;
+    invoke-interface {v1, v0, v2}, Lkik/core/interfaces/v;->a(Ljava/lang/String;Z)Lkik/core/datatypes/l;
 
     move-result-object v0
 
-    .line 61
-    instance-of v1, v0, Lkik/core/datatypes/s;
+    .line 64
+    instance-of v1, v0, Lkik/core/datatypes/p;
 
     if-eqz v1, :cond_0
 
-    .line 62
-    check-cast v0, Lkik/core/datatypes/s;
-
-    iput-object v0, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->d:Lkik/core/datatypes/s;
-
     .line 65
+    check-cast v0, Lkik/core/datatypes/p;
+
+    iput-object v0, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->d:Lkik/core/datatypes/p;
+
+    .line 68
     :cond_0
     return-void
 .end method
@@ -248,8 +248,8 @@
     .locals 3
 
     .prologue
-    .line 71
-    const v0, 0x7f040023
+    .line 81
+    const v0, 0x7f040025
 
     const/4 v1, 0x0
 
@@ -257,10 +257,10 @@
 
     move-result-object v0
 
-    .line 72
-    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)V
+    .line 82
+    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)Lbutterknife/Unbinder;
 
-    .line 74
+    .line 84
     iget-object v1, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->_groupNameField:Lkik/android/chat/view/ValidateableInputView;
 
     new-instance v2, Lkik/android/chat/fragment/KikChangeGroupNameFragment$1;
@@ -269,7 +269,7 @@
 
     invoke-virtual {v1, v2}, Lkik/android/chat/view/ValidateableInputView;->a(Landroid/widget/TextView$OnEditorActionListener;)V
 
-    .line 85
+    .line 96
     iget-object v1, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->_confirmNameButton:Landroid/view/View;
 
     new-instance v2, Lkik/android/chat/fragment/KikChangeGroupNameFragment$2;
@@ -278,34 +278,34 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 93
+    .line 105
     iget-object v1, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->_groupNameField:Lkik/android/chat/view/ValidateableInputView;
 
     const/4 v2, 0x1
 
-    invoke-virtual {p0, v1, v2}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->a(Landroid/view/View;I)V
+    invoke-virtual {p0, v1, v2}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->setKeyboardMode(Landroid/view/View;I)V
 
-    .line 95
-    iget-object v1, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->d:Lkik/core/datatypes/s;
+    .line 107
+    iget-object v1, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->d:Lkik/core/datatypes/p;
 
-    invoke-virtual {v1}, Lkik/core/datatypes/s;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lkik/core/datatypes/p;->b()Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 96
+    .line 108
     iget-object v1, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->_groupNameField:Lkik/android/chat/view/ValidateableInputView;
 
-    iget-object v2, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->d:Lkik/core/datatypes/s;
+    iget-object v2, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->d:Lkik/core/datatypes/p;
 
-    invoke-virtual {v2}, Lkik/core/datatypes/s;->c()Ljava/lang/String;
+    invoke-virtual {v2}, Lkik/core/datatypes/p;->b()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lkik/android/chat/view/ValidateableInputView;->b(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v2}, Lkik/android/chat/view/ValidateableInputView;->e(Ljava/lang/CharSequence;)V
 
-    .line 97
+    .line 109
     iget-object v1, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->_groupNameField:Lkik/android/chat/view/ValidateableInputView;
 
     iget-object v2, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->_groupNameField:Lkik/android/chat/view/ValidateableInputView;
@@ -320,7 +320,7 @@
 
     invoke-virtual {v1, v2}, Lkik/android/chat/view/ValidateableInputView;->c(I)V
 
-    .line 100
+    .line 112
     :cond_0
     return-object v0
 .end method
@@ -329,28 +329,34 @@
     .locals 2
 
     .prologue
-    .line 106
+    .line 118
     invoke-super {p0}, Lkik/android/chat/fragment/KikIqFragmentBase;->onResume()V
 
-    .line 107
+    .line 119
     iget-object v0, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->_groupNameField:Lkik/android/chat/view/ValidateableInputView;
 
-    invoke-static {p0}, Lkik/android/chat/fragment/r;->a(Lkik/android/chat/fragment/KikChangeGroupNameFragment;)Ljava/lang/Runnable;
+    invoke-static {p0}, Lkik/android/chat/fragment/t;->a(Lkik/android/chat/fragment/KikChangeGroupNameFragment;)Ljava/lang/Runnable;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lkik/android/chat/view/ValidateableInputView;->post(Ljava/lang/Runnable;)Z
 
-    .line 108
+    .line 120
     return-void
 .end method
 
-.method protected final v()I
+.method protected screenOpenedEvent()Lcom/kik/metrics/b/t;
     .locals 1
 
     .prologue
-    .line 188
-    const/16 v0, 0x10
+    .line 74
+    invoke-static {}, Lcom/kik/metrics/b/i;->b()Lcom/kik/metrics/b/i$a;
 
-    return v0
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/kik/metrics/b/i$a;->a()Lcom/kik/metrics/b/i;
+
+    move-result-object v0
+
+    return-object v0
 .end method

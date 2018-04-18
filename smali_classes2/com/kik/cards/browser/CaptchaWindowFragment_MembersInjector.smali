@@ -23,18 +23,29 @@
 
 
 # instance fields
-.field private final b:Ldagger/b;
+.field private final b:Ljavax/inject/Provider;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ldagger/b",
+            "Ljavax/inject/Provider",
             "<",
-            "Lkik/android/chat/fragment/KikScopedDialogFragment;",
+            "Lkik/core/interfaces/ad;",
             ">;"
         }
     .end annotation
 .end field
 
 .field private final c:Ljavax/inject/Provider;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljavax/inject/Provider",
+            "<",
+            "Lcom/kik/metrics/c/d;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final d:Ljavax/inject/Provider;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljavax/inject/Provider",
@@ -51,7 +62,7 @@
     .locals 1
 
     .prologue
-    .line 9
+    .line 10
     const-class v0, Lcom/kik/cards/browser/CaptchaWindowFragment_MembersInjector;
 
     invoke-virtual {v0}, Ljava/lang/Class;->desiredAssertionStatus()Z
@@ -73,14 +84,18 @@
     goto :goto_0
 .end method
 
-.method private constructor <init>(Ldagger/b;Ljavax/inject/Provider;)V
+.method private constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ldagger/b",
+            "Ljavax/inject/Provider",
             "<",
-            "Lkik/android/chat/fragment/KikScopedDialogFragment;",
+            "Lkik/core/interfaces/ad;",
+            ">;",
+            "Ljavax/inject/Provider",
+            "<",
+            "Lcom/kik/metrics/c/d;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
@@ -90,10 +105,10 @@
     .end annotation
 
     .prologue
-    .line 14
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
+    .line 26
     sget-boolean v0, Lcom/kik/cards/browser/CaptchaWindowFragment_MembersInjector;->a:Z
 
     if-nez v0, :cond_0
@@ -106,11 +121,11 @@
 
     throw v0
 
-    .line 16
+    .line 27
     :cond_0
-    iput-object p1, p0, Lcom/kik/cards/browser/CaptchaWindowFragment_MembersInjector;->b:Ldagger/b;
+    iput-object p1, p0, Lcom/kik/cards/browser/CaptchaWindowFragment_MembersInjector;->b:Ljavax/inject/Provider;
 
-    .line 17
+    .line 28
     sget-boolean v0, Lcom/kik/cards/browser/CaptchaWindowFragment_MembersInjector;->a:Z
 
     if-nez v0, :cond_1
@@ -123,22 +138,43 @@
 
     throw v0
 
-    .line 18
+    .line 29
     :cond_1
     iput-object p2, p0, Lcom/kik/cards/browser/CaptchaWindowFragment_MembersInjector;->c:Ljavax/inject/Provider;
 
-    .line 19
+    .line 30
+    sget-boolean v0, Lcom/kik/cards/browser/CaptchaWindowFragment_MembersInjector;->a:Z
+
+    if-nez v0, :cond_2
+
+    if-nez p3, :cond_2
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
+
+    throw v0
+
+    .line 31
+    :cond_2
+    iput-object p3, p0, Lcom/kik/cards/browser/CaptchaWindowFragment_MembersInjector;->d:Ljavax/inject/Provider;
+
+    .line 32
     return-void
 .end method
 
-.method public static a(Ldagger/b;Ljavax/inject/Provider;)Ldagger/b;
+.method public static a(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Ldagger/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ldagger/b",
+            "Ljavax/inject/Provider",
             "<",
-            "Lkik/android/chat/fragment/KikScopedDialogFragment;",
+            "Lkik/core/interfaces/ad;",
+            ">;",
+            "Ljavax/inject/Provider",
+            "<",
+            "Lcom/kik/metrics/c/d;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
@@ -152,10 +188,10 @@
     .end annotation
 
     .prologue
-    .line 31
+    .line 38
     new-instance v0, Lcom/kik/cards/browser/CaptchaWindowFragment_MembersInjector;
 
-    invoke-direct {v0, p0, p1}, Lcom/kik/cards/browser/CaptchaWindowFragment_MembersInjector;-><init>(Ldagger/b;Ljavax/inject/Provider;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/kik/cards/browser/CaptchaWindowFragment_MembersInjector;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
 
     return-object v0
 .end method
@@ -166,13 +202,13 @@
     .locals 2
 
     .prologue
-    .line 9
+    .line 10
     check-cast p1, Lcom/kik/cards/browser/CaptchaWindowFragment;
 
-    .line 1023
+    .line 1044
     if-nez p1, :cond_0
 
-    .line 1024
+    .line 1045
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "Cannot inject members into a null reference"
@@ -181,14 +217,19 @@
 
     throw v0
 
-    .line 1026
+    .line 1047
     :cond_0
-    iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment_MembersInjector;->b:Ldagger/b;
+    iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment_MembersInjector;->b:Ljavax/inject/Provider;
 
-    invoke-interface {v0, p1}, Ldagger/b;->injectMembers(Ljava/lang/Object;)V
+    invoke-static {p1, v0}, Lkik/android/chat/fragment/KikScopedDialogFragment_MembersInjector;->a(Lkik/android/chat/fragment/KikScopedDialogFragment;Ljavax/inject/Provider;)V
 
-    .line 1027
+    .line 1049
     iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment_MembersInjector;->c:Ljavax/inject/Provider;
+
+    invoke-static {p1, v0}, Lkik/android/chat/fragment/KikScopedDialogFragment_MembersInjector;->b(Lkik/android/chat/fragment/KikScopedDialogFragment;Ljavax/inject/Provider;)V
+
+    .line 1051
+    iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment_MembersInjector;->d:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
@@ -198,6 +239,6 @@
 
     iput-object v0, p1, Lcom/kik/cards/browser/CaptchaWindowFragment;->f:Lcom/kik/android/Mixpanel;
 
-    .line 9
+    .line 10
     return-void
 .end method

@@ -27,10 +27,10 @@
     .locals 0
 
     .prologue
-    .line 1634
+    .line 1919
     invoke-direct {p0}, Landroid/support/v4/app/NotificationCompat$Style;-><init>()V
 
-    .line 1635
+    .line 1920
     return-void
 .end method
 
@@ -38,13 +38,13 @@
     .locals 0
 
     .prologue
-    .line 1637
+    .line 1922
     invoke-direct {p0}, Landroid/support/v4/app/NotificationCompat$Style;-><init>()V
 
-    .line 1638
+    .line 1923
     invoke-virtual {p0, p1}, Landroid/support/v4/app/NotificationCompat$BigPictureStyle;->setBuilder(Landroid/support/v4/app/NotificationCompat$Builder;)V
 
-    .line 1639
+    .line 1924
     return-void
 .end method
 
@@ -54,15 +54,15 @@
     .locals 1
 
     .prologue
-    .line 1671
+    .line 1956
     iput-object p1, p0, Landroid/support/v4/app/NotificationCompat$BigPictureStyle;->mBigLargeIcon:Landroid/graphics/Bitmap;
 
-    .line 1672
+    .line 1957
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/v4/app/NotificationCompat$BigPictureStyle;->mBigLargeIconSet:Z
 
-    .line 1673
+    .line 1958
     return-object p0
 .end method
 
@@ -70,10 +70,10 @@
     .locals 0
 
     .prologue
-    .line 1663
+    .line 1948
     iput-object p1, p0, Landroid/support/v4/app/NotificationCompat$BigPictureStyle;->mPicture:Landroid/graphics/Bitmap;
 
-    .line 1664
+    .line 1949
     return-object p0
 .end method
 
@@ -81,14 +81,14 @@
     .locals 1
 
     .prologue
-    .line 1646
+    .line 1931
     invoke-static {p1}, Landroid/support/v4/app/NotificationCompat$Builder;->limitCharSequenceLength(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/support/v4/app/NotificationCompat$BigPictureStyle;->mBigContentTitle:Ljava/lang/CharSequence;
 
-    .line 1647
+    .line 1932
     return-object p0
 .end method
 
@@ -96,18 +96,18 @@
     .locals 1
 
     .prologue
-    .line 1654
+    .line 1939
     invoke-static {p1}, Landroid/support/v4/app/NotificationCompat$Builder;->limitCharSequenceLength(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/support/v4/app/NotificationCompat$BigPictureStyle;->mSummaryText:Ljava/lang/CharSequence;
 
-    .line 1655
+    .line 1940
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/v4/app/NotificationCompat$BigPictureStyle;->mSummaryTextSet:Z
 
-    .line 1656
+    .line 1941
     return-object p0
 .end method

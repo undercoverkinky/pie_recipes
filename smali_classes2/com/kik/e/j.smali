@@ -1,113 +1,53 @@
-.class public final Lcom/kik/e/j;
+.class final synthetic Lcom/kik/e/j;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 # interfaces
-.implements Lkik/core/interfaces/i;
+.implements Lrx/functions/g;
 
 
-# instance fields
-.field private a:Lkik/core/datatypes/MessageStubInformation;
-
-.field private final b:Landroid/content/SharedPreferences;
+# static fields
+.field private static final a:Lcom/kik/e/j;
 
 
 # direct methods
-.method public constructor <init>(Lkik/android/util/ah;)V
-    .locals 5
+.method static constructor <clinit>()V
+    .locals 1
 
-    .prologue
-    const/4 v4, 0x0
+    new-instance v0, Lcom/kik/e/j;
 
-    .line 29
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Lcom/kik/e/j;-><init>()V
 
-    .line 30
-    const-string v0, "Kik.Storage.ContentStorage.Pref"
+    sput-object v0, Lcom/kik/e/j;->a:Lcom/kik/e/j;
 
-    invoke-interface {p1, v0}, Lkik/android/util/ah;->a(Ljava/lang/String;)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/kik/e/j;->b:Landroid/content/SharedPreferences;
-
-    .line 31
-    iget-object v0, p0, Lcom/kik/e/j;->a:Lkik/core/datatypes/MessageStubInformation;
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/kik/e/j;->b:Landroid/content/SharedPreferences;
-
-    const-string v1, "MessageStub.Jid"
-
-    invoke-interface {v0, v1}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 32
-    new-instance v0, Lkik/core/datatypes/MessageStubInformation;
-
-    iget-object v1, p0, Lcom/kik/e/j;->b:Landroid/content/SharedPreferences;
-
-    const-string v2, "MessageStub.Jid"
-
-    invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/kik/e/j;->b:Landroid/content/SharedPreferences;
-
-    const-string v3, "MessageStub.FileLocation"
-
-    invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v0, v1, v2}, Lkik/core/datatypes/MessageStubInformation;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput-object v0, p0, Lcom/kik/e/j;->a:Lkik/core/datatypes/MessageStubInformation;
-
-    .line 34
-    :cond_0
     return-void
 .end method
 
+.method private constructor <init>()V
+    .locals 0
 
-# virtual methods
-.method public final a()Lkik/core/datatypes/MessageStubInformation;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static a()Lrx/functions/g;
     .locals 1
 
-    .prologue
-    .line 51
-    iget-object v0, p0, Lcom/kik/e/j;->a:Lkik/core/datatypes/MessageStubInformation;
+    sget-object v0, Lcom/kik/e/j;->a:Lcom/kik/e/j;
 
     return-object v0
 .end method
 
-.method public final b()V
+
+# virtual methods
+.method public final call(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 57
-    iget-object v0, p0, Lcom/kik/e/j;->b:Landroid/content/SharedPreferences;
+    check-cast p1, Lkin/sdk/core/e;
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-static {p1}, Lcom/kik/e/h;->a(Lkin/sdk/core/e;)Ljava/math/BigDecimal;
 
     move-result-object v0
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->clear()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    .line 58
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/kik/e/j;->a:Lkik/core/datatypes/MessageStubInformation;
-
-    .line 59
-    return-void
+    return-object v0
 .end method

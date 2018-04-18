@@ -11,14 +11,18 @@
 .end annotation
 
 
+# static fields
+.field private static final POST_KEY:Ljava/lang/String; = "REQ_POST"
+
+.field private static final POST_PATH_KEY:Ljava/lang/String; = "REQ_POST_PATH"
+
+
 # instance fields
-.field protected a:Ljava/lang/String;
+.field public constructError_:Z
 
-.field protected b:Lio/branch/referral/n;
+.field private disableAndroidIDFetch_:Z
 
-.field c:J
-
-.field final d:Ljava/util/Set;
+.field final locks_:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set",
@@ -29,17 +33,19 @@
     .end annotation
 .end field
 
-.field public e:Z
+.field private params_:Lorg/json/JSONObject;
 
-.field f:Z
+.field protected prefHelper_:Lio/branch/referral/m;
 
-.field private g:Lorg/json/JSONObject;
+.field queueWaitTime_:J
 
-.field private h:Lio/branch/referral/ad;
+.field protected requestPath_:Ljava/lang/String;
 
-.field private i:Z
+.field skipOnTimeOut:Z
 
-.field private j:I
+.field private final systemObserver_:Lio/branch/referral/ab;
+
+.field private waitLockCnt:I
 
 
 # direct methods
@@ -49,62 +55,62 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 52
+    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
+    .line 34
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lio/branch/referral/ServerRequest;->c:J
+    iput-wide v0, p0, Lio/branch/referral/ServerRequest;->queueWaitTime_:J
 
-    .line 33
-    iput v2, p0, Lio/branch/referral/ServerRequest;->j:I
+    .line 36
+    iput v2, p0, Lio/branch/referral/ServerRequest;->waitLockCnt:I
 
-    .line 44
-    iput-boolean v2, p0, Lio/branch/referral/ServerRequest;->e:Z
+    .line 48
+    iput-boolean v2, p0, Lio/branch/referral/ServerRequest;->constructError_:Z
 
-    .line 359
-    iput-boolean v2, p0, Lio/branch/referral/ServerRequest;->f:Z
+    .line 361
+    iput-boolean v2, p0, Lio/branch/referral/ServerRequest;->skipOnTimeOut:Z
 
-    .line 53
-    iput-object p2, p0, Lio/branch/referral/ServerRequest;->a:Ljava/lang/String;
+    .line 57
+    iput-object p2, p0, Lio/branch/referral/ServerRequest;->requestPath_:Ljava/lang/String;
 
-    .line 54
-    invoke-static {p1}, Lio/branch/referral/n;->a(Landroid/content/Context;)Lio/branch/referral/n;
+    .line 58
+    invoke-static {p1}, Lio/branch/referral/m;->a(Landroid/content/Context;)Lio/branch/referral/m;
 
     move-result-object v0
 
-    iput-object v0, p0, Lio/branch/referral/ServerRequest;->b:Lio/branch/referral/n;
+    iput-object v0, p0, Lio/branch/referral/ServerRequest;->prefHelper_:Lio/branch/referral/m;
 
-    .line 55
-    new-instance v0, Lio/branch/referral/ad;
+    .line 59
+    new-instance v0, Lio/branch/referral/ab;
 
-    invoke-direct {v0, p1}, Lio/branch/referral/ad;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lio/branch/referral/ab;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lio/branch/referral/ServerRequest;->h:Lio/branch/referral/ad;
+    iput-object v0, p0, Lio/branch/referral/ServerRequest;->systemObserver_:Lio/branch/referral/ab;
 
-    .line 56
+    .line 60
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    iput-object v0, p0, Lio/branch/referral/ServerRequest;->g:Lorg/json/JSONObject;
+    iput-object v0, p0, Lio/branch/referral/ServerRequest;->params_:Lorg/json/JSONObject;
 
-    .line 57
+    .line 61
     invoke-static {}, Lio/branch/referral/Branch;->b()Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lio/branch/referral/ServerRequest;->i:Z
+    iput-boolean v0, p0, Lio/branch/referral/ServerRequest;->disableAndroidIDFetch_:Z
 
-    .line 58
+    .line 62
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput-object v0, p0, Lio/branch/referral/ServerRequest;->d:Ljava/util/Set;
+    iput-object v0, p0, Lio/branch/referral/ServerRequest;->locks_:Ljava/util/Set;
 
-    .line 59
+    .line 63
     return-void
 .end method
 
@@ -114,72 +120,72 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 69
+    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
+    .line 34
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lio/branch/referral/ServerRequest;->c:J
+    iput-wide v0, p0, Lio/branch/referral/ServerRequest;->queueWaitTime_:J
 
-    .line 33
-    iput v2, p0, Lio/branch/referral/ServerRequest;->j:I
+    .line 36
+    iput v2, p0, Lio/branch/referral/ServerRequest;->waitLockCnt:I
 
-    .line 44
-    iput-boolean v2, p0, Lio/branch/referral/ServerRequest;->e:Z
+    .line 48
+    iput-boolean v2, p0, Lio/branch/referral/ServerRequest;->constructError_:Z
 
-    .line 359
-    iput-boolean v2, p0, Lio/branch/referral/ServerRequest;->f:Z
+    .line 361
+    iput-boolean v2, p0, Lio/branch/referral/ServerRequest;->skipOnTimeOut:Z
 
-    .line 70
-    iput-object p1, p0, Lio/branch/referral/ServerRequest;->a:Ljava/lang/String;
+    .line 74
+    iput-object p1, p0, Lio/branch/referral/ServerRequest;->requestPath_:Ljava/lang/String;
 
-    .line 71
-    iput-object p2, p0, Lio/branch/referral/ServerRequest;->g:Lorg/json/JSONObject;
+    .line 75
+    iput-object p2, p0, Lio/branch/referral/ServerRequest;->params_:Lorg/json/JSONObject;
 
-    .line 72
-    invoke-static {p3}, Lio/branch/referral/n;->a(Landroid/content/Context;)Lio/branch/referral/n;
+    .line 76
+    invoke-static {p3}, Lio/branch/referral/m;->a(Landroid/content/Context;)Lio/branch/referral/m;
 
     move-result-object v0
 
-    iput-object v0, p0, Lio/branch/referral/ServerRequest;->b:Lio/branch/referral/n;
+    iput-object v0, p0, Lio/branch/referral/ServerRequest;->prefHelper_:Lio/branch/referral/m;
 
-    .line 73
-    new-instance v0, Lio/branch/referral/ad;
+    .line 77
+    new-instance v0, Lio/branch/referral/ab;
 
-    invoke-direct {v0, p3}, Lio/branch/referral/ad;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p3}, Lio/branch/referral/ab;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lio/branch/referral/ServerRequest;->h:Lio/branch/referral/ad;
+    iput-object v0, p0, Lio/branch/referral/ServerRequest;->systemObserver_:Lio/branch/referral/ab;
 
-    .line 74
+    .line 78
     invoke-static {}, Lio/branch/referral/Branch;->b()Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lio/branch/referral/ServerRequest;->i:Z
+    iput-boolean v0, p0, Lio/branch/referral/ServerRequest;->disableAndroidIDFetch_:Z
 
-    .line 75
+    .line 79
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput-object v0, p0, Lio/branch/referral/ServerRequest;->d:Ljava/util/Set;
+    iput-object v0, p0, Lio/branch/referral/ServerRequest;->locks_:Ljava/util/Set;
 
-    .line 76
+    .line 80
     return-void
 .end method
 
-.method public static a(Lorg/json/JSONObject;Landroid/content/Context;)Lio/branch/referral/ServerRequest;
+.method public static fromJSON(Lorg/json/JSONObject;Landroid/content/Context;)Lio/branch/referral/ServerRequest;
     .locals 4
 
     .prologue
     const/4 v1, 0x0
 
-    .line 296
-    .line 297
+    .line 300
+    .line 301
     const-string v2, ""
 
-    .line 299
+    .line 303
     :try_start_0
     const-string v0, "REQ_POST"
 
@@ -187,9 +193,9 @@
 
     move-result v0
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_2
 
-    .line 300
+    .line 304
     const-string v0, "REQ_POST"
 
     invoke-virtual {p0, v0}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
@@ -201,7 +207,7 @@
     :goto_0
     move-object v3, v0
 
-    .line 307
+    .line 311
     :goto_1
     :try_start_1
     const-string v0, "REQ_POST_PATH"
@@ -212,7 +218,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 308
+    .line 312
     const-string v0, "REQ_POST_PATH"
 
     invoke-virtual {p0, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -221,7 +227,7 @@
 
     move-result-object v0
 
-    .line 314
+    .line 318
     :goto_2
     if-eqz v0, :cond_0
 
@@ -231,27 +237,13 @@
 
     if-lez v2, :cond_0
 
-    .line 1332
-    sget-object v2, Lio/branch/referral/Defines$RequestPath;->CompletedAction:Lio/branch/referral/Defines$RequestPath;
+    .line 319
+    invoke-static {v0, v3, p1}, Lio/branch/referral/ServerRequest;->getExtendedServerRequest(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)Lio/branch/referral/ServerRequest;
 
-    invoke-virtual {v2}, Lio/branch/referral/Defines$RequestPath;->getPath()Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    .line 1333
-    new-instance v1, Lio/branch/referral/p;
-
-    invoke-direct {v1, v0, v3, p1}, Lio/branch/referral/p;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
-
-    .line 317
+    .line 321
     :cond_0
-    :goto_3
     return-object v1
 
     :catch_0
@@ -269,234 +261,338 @@
 
     goto :goto_2
 
-    .line 1334
     :cond_2
-    sget-object v2, Lio/branch/referral/Defines$RequestPath;->GetURL:Lio/branch/referral/Defines$RequestPath;
-
-    invoke-virtual {v2}, Lio/branch/referral/Defines$RequestPath;->getPath()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    .line 1335
-    new-instance v1, Lio/branch/referral/q;
-
-    invoke-direct {v1, v0, v3, p1}, Lio/branch/referral/q;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
-
-    goto :goto_3
-
-    .line 1336
-    :cond_3
-    sget-object v2, Lio/branch/referral/Defines$RequestPath;->GetCreditHistory:Lio/branch/referral/Defines$RequestPath;
-
-    invoke-virtual {v2}, Lio/branch/referral/Defines$RequestPath;->getPath()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    .line 1337
-    new-instance v1, Lio/branch/referral/r;
-
-    invoke-direct {v1, v0, v3, p1}, Lio/branch/referral/r;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
-
-    goto :goto_3
-
-    .line 1338
-    :cond_4
-    sget-object v2, Lio/branch/referral/Defines$RequestPath;->GetCredits:Lio/branch/referral/Defines$RequestPath;
-
-    invoke-virtual {v2}, Lio/branch/referral/Defines$RequestPath;->getPath()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
-
-    .line 1339
-    new-instance v1, Lio/branch/referral/s;
-
-    invoke-direct {v1, v0, v3, p1}, Lio/branch/referral/s;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
-
-    goto :goto_3
-
-    .line 1340
-    :cond_5
-    sget-object v2, Lio/branch/referral/Defines$RequestPath;->IdentifyUser:Lio/branch/referral/Defines$RequestPath;
-
-    invoke-virtual {v2}, Lio/branch/referral/Defines$RequestPath;->getPath()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_6
-
-    .line 1341
-    new-instance v1, Lio/branch/referral/t;
-
-    invoke-direct {v1, v0, v3, p1}, Lio/branch/referral/t;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
-
-    goto :goto_3
-
-    .line 1342
-    :cond_6
-    sget-object v2, Lio/branch/referral/Defines$RequestPath;->Logout:Lio/branch/referral/Defines$RequestPath;
-
-    invoke-virtual {v2}, Lio/branch/referral/Defines$RequestPath;->getPath()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_7
-
-    .line 1343
-    new-instance v1, Lio/branch/referral/v;
-
-    invoke-direct {v1, v0, v3, p1}, Lio/branch/referral/v;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
-
-    goto :goto_3
-
-    .line 1344
-    :cond_7
-    sget-object v2, Lio/branch/referral/Defines$RequestPath;->RedeemRewards:Lio/branch/referral/Defines$RequestPath;
-
-    invoke-virtual {v2}, Lio/branch/referral/Defines$RequestPath;->getPath()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_8
-
-    .line 1345
-    new-instance v1, Lio/branch/referral/x;
-
-    invoke-direct {v1, v0, v3, p1}, Lio/branch/referral/x;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
-
-    goto :goto_3
-
-    .line 1346
-    :cond_8
-    sget-object v2, Lio/branch/referral/Defines$RequestPath;->RegisterClose:Lio/branch/referral/Defines$RequestPath;
-
-    invoke-virtual {v2}, Lio/branch/referral/Defines$RequestPath;->getPath()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_9
-
-    .line 1347
-    new-instance v1, Lio/branch/referral/y;
-
-    invoke-direct {v1, v0, v3, p1}, Lio/branch/referral/y;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
-
-    goto/16 :goto_3
-
-    .line 1348
-    :cond_9
-    sget-object v2, Lio/branch/referral/Defines$RequestPath;->RegisterInstall:Lio/branch/referral/Defines$RequestPath;
-
-    invoke-virtual {v2}, Lio/branch/referral/Defines$RequestPath;->getPath()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_a
-
-    .line 1349
-    new-instance v1, Lio/branch/referral/z;
-
-    invoke-direct {v1, v0, v3, p1}, Lio/branch/referral/z;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
-
-    goto/16 :goto_3
-
-    .line 1350
-    :cond_a
-    sget-object v2, Lio/branch/referral/Defines$RequestPath;->RegisterOpen:Lio/branch/referral/Defines$RequestPath;
-
-    invoke-virtual {v2}, Lio/branch/referral/Defines$RequestPath;->getPath()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_b
-
-    .line 1351
-    new-instance v1, Lio/branch/referral/aa;
-
-    invoke-direct {v1, v0, v3, p1}, Lio/branch/referral/aa;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
-
-    goto/16 :goto_3
-
-    .line 1352
-    :cond_b
-    sget-object v2, Lio/branch/referral/Defines$RequestPath;->SendAPPList:Lio/branch/referral/Defines$RequestPath;
-
-    invoke-virtual {v2}, Lio/branch/referral/Defines$RequestPath;->getPath()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 1353
-    new-instance v1, Lio/branch/referral/ab;
-
-    invoke-direct {v1, v0, v3, p1}, Lio/branch/referral/ab;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
-
-    goto/16 :goto_3
-
-    :cond_c
     move-object v0, v1
+
+    goto :goto_0
+.end method
+
+.method private static getExtendedServerRequest(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)Lio/branch/referral/ServerRequest;
+    .locals 2
+
+    .prologue
+    .line 334
+    const/4 v0, 0x0
+
+    .line 336
+    sget-object v1, Lio/branch/referral/Defines$RequestPath;->CompletedAction:Lio/branch/referral/Defines$RequestPath;
+
+    invoke-virtual {v1}, Lio/branch/referral/Defines$RequestPath;->getPath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 337
+    new-instance v0, Lio/branch/referral/n;
+
+    invoke-direct {v0, p0, p1, p2}, Lio/branch/referral/n;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
+
+    .line 358
+    :cond_0
+    :goto_0
+    return-object v0
+
+    .line 338
+    :cond_1
+    sget-object v1, Lio/branch/referral/Defines$RequestPath;->GetURL:Lio/branch/referral/Defines$RequestPath;
+
+    invoke-virtual {v1}, Lio/branch/referral/Defines$RequestPath;->getPath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    .line 339
+    new-instance v0, Lio/branch/referral/o;
+
+    invoke-direct {v0, p0, p1, p2}, Lio/branch/referral/o;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
+
+    goto :goto_0
+
+    .line 340
+    :cond_2
+    sget-object v1, Lio/branch/referral/Defines$RequestPath;->GetCreditHistory:Lio/branch/referral/Defines$RequestPath;
+
+    invoke-virtual {v1}, Lio/branch/referral/Defines$RequestPath;->getPath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    .line 341
+    new-instance v0, Lio/branch/referral/p;
+
+    invoke-direct {v0, p0, p1, p2}, Lio/branch/referral/p;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
+
+    goto :goto_0
+
+    .line 342
+    :cond_3
+    sget-object v1, Lio/branch/referral/Defines$RequestPath;->GetCredits:Lio/branch/referral/Defines$RequestPath;
+
+    invoke-virtual {v1}, Lio/branch/referral/Defines$RequestPath;->getPath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    .line 343
+    new-instance v0, Lio/branch/referral/q;
+
+    invoke-direct {v0, p0, p1, p2}, Lio/branch/referral/q;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
+
+    goto :goto_0
+
+    .line 344
+    :cond_4
+    sget-object v1, Lio/branch/referral/Defines$RequestPath;->IdentifyUser:Lio/branch/referral/Defines$RequestPath;
+
+    invoke-virtual {v1}, Lio/branch/referral/Defines$RequestPath;->getPath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    .line 345
+    new-instance v0, Lio/branch/referral/s;
+
+    invoke-direct {v0, p0, p1, p2}, Lio/branch/referral/s;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
+
+    goto :goto_0
+
+    .line 346
+    :cond_5
+    sget-object v1, Lio/branch/referral/Defines$RequestPath;->Logout:Lio/branch/referral/Defines$RequestPath;
+
+    invoke-virtual {v1}, Lio/branch/referral/Defines$RequestPath;->getPath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    .line 347
+    new-instance v0, Lio/branch/referral/u;
+
+    invoke-direct {v0, p0, p1, p2}, Lio/branch/referral/u;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
+
+    goto :goto_0
+
+    .line 348
+    :cond_6
+    sget-object v1, Lio/branch/referral/Defines$RequestPath;->RedeemRewards:Lio/branch/referral/Defines$RequestPath;
+
+    invoke-virtual {v1}, Lio/branch/referral/Defines$RequestPath;->getPath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    .line 349
+    new-instance v0, Lio/branch/referral/w;
+
+    invoke-direct {v0, p0, p1, p2}, Lio/branch/referral/w;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
+
+    goto :goto_0
+
+    .line 350
+    :cond_7
+    sget-object v1, Lio/branch/referral/Defines$RequestPath;->RegisterClose:Lio/branch/referral/Defines$RequestPath;
+
+    invoke-virtual {v1}, Lio/branch/referral/Defines$RequestPath;->getPath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_8
+
+    .line 351
+    new-instance v0, Lio/branch/referral/x;
+
+    invoke-direct {v0, p0, p1, p2}, Lio/branch/referral/x;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
+
+    goto :goto_0
+
+    .line 352
+    :cond_8
+    sget-object v1, Lio/branch/referral/Defines$RequestPath;->RegisterInstall:Lio/branch/referral/Defines$RequestPath;
+
+    invoke-virtual {v1}, Lio/branch/referral/Defines$RequestPath;->getPath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_9
+
+    .line 353
+    new-instance v0, Lio/branch/referral/y;
+
+    invoke-direct {v0, p0, p1, p2}, Lio/branch/referral/y;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
+
+    goto/16 :goto_0
+
+    .line 354
+    :cond_9
+    sget-object v1, Lio/branch/referral/Defines$RequestPath;->RegisterOpen:Lio/branch/referral/Defines$RequestPath;
+
+    invoke-virtual {v1}, Lio/branch/referral/Defines$RequestPath;->getPath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 355
+    new-instance v0, Lio/branch/referral/z;
+
+    invoke-direct {v0, p0, p1, p2}, Lio/branch/referral/z;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
 
     goto/16 :goto_0
 .end method
 
-.method protected static b(Landroid/content/Context;)Z
+.method private static isPackageInstalled(Landroid/content/Context;)Z
+    .locals 4
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 461
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v1
+
+    .line 462
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v2
+
+    .line 463
+    if-nez v2, :cond_1
+
+    .line 467
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 466
+    :cond_1
+    const/high16 v3, 0x10000
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
+
+    move-result-object v1
+
+    .line 467
+    if-eqz v1, :cond_0
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-lez v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+.end method
+
+
+# virtual methods
+.method protected addGetParam(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
     .prologue
-    .line 386
+    .line 265
+    :try_start_0
+    iget-object v0, p0, Lio/branch/referral/ServerRequest;->params_:Lorg/json/JSONObject;
+
+    invoke-virtual {v0, p1, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 268
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+.end method
+
+.method public addProcessWaitLock(Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;)V
+    .locals 1
+
+    .prologue
+    .line 421
+    if-eqz p1, :cond_0
+
+    .line 422
+    iget-object v0, p0, Lio/branch/referral/ServerRequest;->locks_:Ljava/util/Set;
+
+    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    .line 424
+    :cond_0
+    return-void
+.end method
+
+.method public abstract clearCallbacks()V
+.end method
+
+.method protected doesAppHasInternetPermission(Landroid/content/Context;)Z
+    .locals 1
+
+    .prologue
+    .line 388
     const-string v0, "android.permission.INTERNET"
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
+    invoke-virtual {p1, v0}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 387
+    .line 389
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
@@ -510,9 +606,27 @@
     goto :goto_0
 .end method
 
+.method public getGetParams()Lorg/json/JSONObject;
+    .locals 1
 
-# virtual methods
-.method public final a(Ljava/util/concurrent/ConcurrentHashMap;)Lorg/json/JSONObject;
+    .prologue
+    .line 254
+    iget-object v0, p0, Lio/branch/referral/ServerRequest;->params_:Lorg/json/JSONObject;
+
+    return-object v0
+.end method
+
+.method public getPost()Lorg/json/JSONObject;
+    .locals 1
+
+    .prologue
+    .line 192
+    iget-object v0, p0, Lio/branch/referral/ServerRequest;->params_:Lorg/json/JSONObject;
+
+    return-object v0
+.end method
+
+.method public getPostWithInstrumentationValues(Ljava/util/concurrent/ConcurrentHashMap;)Lorg/json/JSONObject;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -527,21 +641,21 @@
     .end annotation
 
     .prologue
-    .line 213
+    .line 217
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
-    .line 216
+    .line 220
     :try_start_0
-    iget-object v0, p0, Lio/branch/referral/ServerRequest;->g:Lorg/json/JSONObject;
+    iget-object v0, p0, Lio/branch/referral/ServerRequest;->params_:Lorg/json/JSONObject;
 
     if-eqz v0, :cond_0
 
-    .line 217
+    .line 221
     new-instance v2, Lorg/json/JSONObject;
 
-    iget-object v0, p0, Lio/branch/referral/ServerRequest;->g:Lorg/json/JSONObject;
+    iget-object v0, p0, Lio/branch/referral/ServerRequest;->params_:Lorg/json/JSONObject;
 
     invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
@@ -549,12 +663,12 @@
 
     invoke-direct {v2, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 218
+    .line 222
     invoke-virtual {v2}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
 
     move-result-object v3
 
-    .line 219
+    .line 223
     :goto_0
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
@@ -562,14 +676,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 220
+    .line 224
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 221
+    .line 225
     invoke-virtual {v2, v0}, Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
@@ -578,17 +692,17 @@
 
     goto :goto_0
 
-    .line 240
+    .line 244
     :catch_0
     move-exception v0
 
     move-object v0, v1
 
-    .line 241
+    .line 245
     :goto_1
     return-object v0
 
-    .line 225
+    .line 229
     :cond_0
     invoke-virtual {p1}, Ljava/util/concurrent/ConcurrentHashMap;->size()I
 
@@ -596,12 +710,12 @@
 
     if-lez v0, :cond_1
 
-    .line 226
+    .line 230
     new-instance v2, Lorg/json/JSONObject;
 
     invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
-    .line 227
+    .line 231
     invoke-virtual {p1}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
@@ -609,7 +723,7 @@
 
     move-result-object v0
 
-    .line 229
+    .line 233
     :try_start_1
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -628,14 +742,14 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 230
+    .line 234
     invoke-virtual {p1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
     invoke-virtual {v2, v0, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 231
+    .line 235
     invoke-virtual {p1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_2
@@ -646,10 +760,10 @@
     :cond_1
     move-object v0, v1
 
-    .line 240
+    .line 244
     goto :goto_1
 
-    .line 233
+    .line 237
     :cond_2
     sget-object v0, Lio/branch/referral/Defines$Jsonkey;->Branch_Instrumentation:Lio/branch/referral/Defines$Jsonkey;
 
@@ -664,111 +778,182 @@
 
     move-object v0, v1
 
-    .line 235
+    .line 239
     goto :goto_1
 
-    .line 239
+    .line 243
     :catch_2
     move-exception v0
 
-    iget-object v0, p0, Lio/branch/referral/ServerRequest;->g:Lorg/json/JSONObject;
+    iget-object v0, p0, Lio/branch/referral/ServerRequest;->params_:Lorg/json/JSONObject;
 
     goto :goto_1
 .end method
 
-.method public abstract a(ILjava/lang/String;)V
+.method public getQueueWaitTime()J
+    .locals 4
+
+    .prologue
+    const-wide/16 v0, 0x0
+
+    .line 405
+    .line 406
+    iget-wide v2, p0, Lio/branch/referral/ServerRequest;->queueWaitTime_:J
+
+    cmp-long v2, v2, v0
+
+    if-lez v2, :cond_0
+
+    .line 407
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iget-wide v2, p0, Lio/branch/referral/ServerRequest;->queueWaitTime_:J
+
+    sub-long/2addr v0, v2
+
+    .line 409
+    :cond_0
+    return-wide v0
 .end method
 
-.method public final a(Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;)V
+.method public final getRequestPath()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 419
-    if-eqz p1, :cond_0
+    .line 139
+    iget-object v0, p0, Lio/branch/referral/ServerRequest;->requestPath_:Ljava/lang/String;
 
-    .line 420
-    iget-object v0, p0, Lio/branch/referral/ServerRequest;->d:Ljava/util/Set;
-
-    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    .line 422
-    :cond_0
-    return-void
+    return-object v0
 .end method
 
-.method public abstract a(Lio/branch/referral/ac;Lio/branch/referral/Branch;)V
-.end method
-
-.method public final a(Lio/branch/referral/ad;)V
-    .locals 3
+.method public getRequestUrl()Ljava/lang/String;
+    .locals 2
 
     .prologue
-    .line 367
-    iget-object v0, p1, Lio/branch/referral/ad;->a:Ljava/lang/String;
+    .line 149
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {}, Lio/branch/referral/m;->a()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lio/branch/referral/ServerRequest;->requestPath_:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public abstract handleErrors(Landroid/content/Context;)Z
+.end method
+
+.method public abstract handleFailure(ILjava/lang/String;)V
+.end method
+
+.method public isGAdsParamsRequired()Z
+    .locals 1
+
+    .prologue
+    .line 204
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public abstract isGetRequest()Z
+.end method
+
+.method public isWaitingOnProcessToFinish()Z
+    .locals 1
+
+    .prologue
+    .line 442
+    iget-object v0, p0, Lio/branch/referral/ServerRequest;->locks_:Ljava/util/Set;
+
+    invoke-interface {v0}, Ljava/util/Set;->size()I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-lez v0, :cond_0
 
-    .line 369
-    :try_start_0
-    iget-object v0, p0, Lio/branch/referral/ServerRequest;->g:Lorg/json/JSONObject;
+    const/4 v0, 0x1
 
-    sget-object v1, Lio/branch/referral/Defines$Jsonkey;->GoogleAdvertisingID:Lio/branch/referral/Defines$Jsonkey;
-
-    invoke-virtual {v1}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v2, p1, Lio/branch/referral/ad;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 370
-    iget-object v0, p0, Lio/branch/referral/ServerRequest;->g:Lorg/json/JSONObject;
-
-    sget-object v1, Lio/branch/referral/Defines$Jsonkey;->LATVal:Lio/branch/referral/Defines$Jsonkey;
-
-    invoke-virtual {v1}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
-
-    move-result-object v1
-
-    iget v2, p1, Lio/branch/referral/ad;->b:I
-
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 375
-    :cond_0
     :goto_0
-    return-void
+    return v0
 
-    .line 372
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
+    :cond_0
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method protected final a(Lorg/json/JSONObject;)V
+.method public onPreExecute()V
+    .locals 0
+
+    .prologue
+    .line 450
+    return-void
+.end method
+
+.method public onRequestQueued()V
+    .locals 2
+
+    .prologue
+    .line 396
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lio/branch/referral/ServerRequest;->queueWaitTime_:J
+
+    .line 397
+    return-void
+.end method
+
+.method public abstract onRequestSucceeded(Lio/branch/referral/aa;Lio/branch/referral/Branch;)V
+.end method
+
+.method public removeProcessWaitLock(Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;)V
+    .locals 1
+
+    .prologue
+    .line 432
+    iget-object v0, p0, Lio/branch/referral/ServerRequest;->locks_:Ljava/util/Set;
+
+    invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    .line 433
+    return-void
+.end method
+
+.method protected setPost(Lorg/json/JSONObject;)V
     .locals 4
 
     .prologue
-    .line 158
+    .line 162
     :try_start_0
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
-    .line 159
-    iget-object v0, p0, Lio/branch/referral/ServerRequest;->b:Lio/branch/referral/n;
+    .line 163
+    iget-object v0, p0, Lio/branch/referral/ServerRequest;->prefHelper_:Lio/branch/referral/m;
 
-    invoke-virtual {v0}, Lio/branch/referral/n;->A()Lorg/json/JSONObject;
+    invoke-virtual {v0}, Lio/branch/referral/m;->C()Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -776,7 +961,7 @@
 
     move-result-object v2
 
-    .line 160
+    .line 164
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -784,17 +969,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 161
+    .line 165
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 162
-    iget-object v3, p0, Lio/branch/referral/ServerRequest;->b:Lio/branch/referral/n;
+    .line 166
+    iget-object v3, p0, Lio/branch/referral/ServerRequest;->prefHelper_:Lio/branch/referral/m;
 
-    invoke-virtual {v3}, Lio/branch/referral/n;->A()Lorg/json/JSONObject;
+    invoke-virtual {v3}, Lio/branch/referral/m;->C()Lorg/json/JSONObject;
 
     move-result-object v3
 
@@ -808,7 +993,7 @@
 
     goto :goto_0
 
-    .line 174
+    .line 178
     :catch_0
     move-exception v0
 
@@ -818,31 +1003,31 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 176
+    .line 180
     :goto_1
-    iput-object p1, p0, Lio/branch/referral/ServerRequest;->g:Lorg/json/JSONObject;
+    iput-object p1, p0, Lio/branch/referral/ServerRequest;->params_:Lorg/json/JSONObject;
 
-    .line 177
-    invoke-static {}, Lio/branch/referral/n;->y()Z
+    .line 181
+    invoke-static {}, Lio/branch/referral/m;->B()Z
 
     move-result v0
 
-    iget-object v1, p0, Lio/branch/referral/ServerRequest;->h:Lio/branch/referral/ad;
+    iget-object v1, p0, Lio/branch/referral/ServerRequest;->systemObserver_:Lio/branch/referral/ab;
 
-    iget-boolean v2, p0, Lio/branch/referral/ServerRequest;->i:Z
+    iget-boolean v2, p0, Lio/branch/referral/ServerRequest;->disableAndroidIDFetch_:Z
 
-    invoke-static {v0, v1, v2}, Lio/branch/referral/l;->a(ZLio/branch/referral/ad;Z)Lio/branch/referral/l;
+    invoke-static {v0, v1, v2}, Lio/branch/referral/k;->a(ZLio/branch/referral/ab;Z)Lio/branch/referral/k;
 
     move-result-object v0
 
-    iget-object v1, p0, Lio/branch/referral/ServerRequest;->g:Lorg/json/JSONObject;
+    iget-object v1, p0, Lio/branch/referral/ServerRequest;->params_:Lorg/json/JSONObject;
 
-    invoke-virtual {v0, v1}, Lio/branch/referral/l;->a(Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1}, Lio/branch/referral/k;->a(Lorg/json/JSONObject;)V
 
-    .line 178
+    .line 182
     return-void
 
-    .line 164
+    .line 168
     :cond_0
     :try_start_1
     sget-object v0, Lio/branch/referral/Defines$Jsonkey;->Metadata:Lio/branch/referral/Defines$Jsonkey;
@@ -857,7 +1042,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 165
+    .line 169
     sget-object v0, Lio/branch/referral/Defines$Jsonkey;->Metadata:Lio/branch/referral/Defines$Jsonkey;
 
     invoke-virtual {v0}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
@@ -872,7 +1057,7 @@
 
     move-result-object v2
 
-    .line 166
+    .line 170
     :goto_2
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -880,14 +1065,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 167
+    .line 171
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 169
+    .line 173
     sget-object v3, Lio/branch/referral/Defines$Jsonkey;->Metadata:Lio/branch/referral/Defines$Jsonkey;
 
     invoke-virtual {v3}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
@@ -906,7 +1091,7 @@
 
     goto :goto_2
 
-    .line 172
+    .line 176
     :cond_1
     sget-object v0, Lio/branch/referral/Defines$Jsonkey;->Metadata:Lio/branch/referral/Defines$Jsonkey;
 
@@ -921,126 +1106,47 @@
     goto :goto_1
 .end method
 
-.method public abstract a()Z
-.end method
-
-.method public abstract a(Landroid/content/Context;)Z
-.end method
-
-.method public abstract b()V
-.end method
-
-.method public c()Z
+.method public shouldRetryOnFail()Z
     .locals 1
 
     .prologue
-    .line 125
+    .line 129
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final d()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 135
-    iget-object v0, p0, Lio/branch/referral/ServerRequest;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public e()Ljava/lang/String;
-    .locals 2
-
-    .prologue
-    .line 145
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-static {}, Lio/branch/referral/n;->a()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lio/branch/referral/ServerRequest;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final f()Lorg/json/JSONObject;
-    .locals 1
-
-    .prologue
-    .line 188
-    iget-object v0, p0, Lio/branch/referral/ServerRequest;->g:Lorg/json/JSONObject;
-
-    return-object v0
-.end method
-
-.method public g()Z
-    .locals 1
-
-    .prologue
-    .line 200
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final h()Lorg/json/JSONObject;
-    .locals 1
-
-    .prologue
-    .line 250
-    iget-object v0, p0, Lio/branch/referral/ServerRequest;->g:Lorg/json/JSONObject;
-
-    return-object v0
-.end method
-
-.method public final i()Lorg/json/JSONObject;
+.method public toJSON()Lorg/json/JSONObject;
     .locals 3
 
     .prologue
-    .line 275
+    .line 279
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    .line 277
+    .line 281
     :try_start_0
     const-string v1, "REQ_POST"
 
-    iget-object v2, p0, Lio/branch/referral/ServerRequest;->g:Lorg/json/JSONObject;
+    iget-object v2, p0, Lio/branch/referral/ServerRequest;->params_:Lorg/json/JSONObject;
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 278
+    .line 282
     const-string v1, "REQ_POST_PATH"
 
-    iget-object v2, p0, Lio/branch/referral/ServerRequest;->a:Ljava/lang/String;
+    iget-object v2, p0, Lio/branch/referral/ServerRequest;->requestPath_:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 282
+    .line 286
     :goto_0
     return-object v0
 
-    .line 280
+    .line 284
     :catch_0
     move-exception v0
 
@@ -1049,10 +1155,109 @@
     goto :goto_0
 .end method
 
-.method public j()V
-    .locals 0
+.method protected updateEnvironment(Landroid/content/Context;Lorg/json/JSONObject;)V
+    .locals 2
 
     .prologue
-    .line 448
+    .line 454
+    :try_start_0
+    invoke-static {p1}, Lio/branch/referral/ServerRequest;->isPackageInstalled(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lio/branch/referral/Defines$Jsonkey;->NativeApp:Lio/branch/referral/Defines$Jsonkey;
+
+    invoke-virtual {v0}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 455
+    :goto_0
+    sget-object v1, Lio/branch/referral/Defines$Jsonkey;->Environment:Lio/branch/referral/Defines$Jsonkey;
+
+    invoke-virtual {v1}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p2, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 458
+    :goto_1
     return-void
+
+    .line 454
+    :cond_0
+    sget-object v0, Lio/branch/referral/Defines$Jsonkey;->InstantApp:Lio/branch/referral/Defines$Jsonkey;
+
+    invoke-virtual {v0}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 458
+    :catch_0
+    move-exception v0
+
+    goto :goto_1
+.end method
+
+.method public updateGAdsParams(Lio/branch/referral/ab;)V
+    .locals 3
+
+    .prologue
+    .line 369
+    iget-object v0, p1, Lio/branch/referral/ab;->a:Ljava/lang/String;
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 371
+    :try_start_0
+    iget-object v0, p0, Lio/branch/referral/ServerRequest;->params_:Lorg/json/JSONObject;
+
+    sget-object v1, Lio/branch/referral/Defines$Jsonkey;->GoogleAdvertisingID:Lio/branch/referral/Defines$Jsonkey;
+
+    invoke-virtual {v1}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v2, p1, Lio/branch/referral/ab;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 372
+    iget-object v0, p0, Lio/branch/referral/ServerRequest;->params_:Lorg/json/JSONObject;
+
+    sget-object v1, Lio/branch/referral/Defines$Jsonkey;->LATVal:Lio/branch/referral/Defines$Jsonkey;
+
+    invoke-virtual {v1}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
+
+    move-result-object v1
+
+    iget v2, p1, Lio/branch/referral/ab;->b:I
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 377
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 374
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
+
+    goto :goto_0
 .end method

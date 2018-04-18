@@ -1,163 +1,97 @@
 .class public final Lcom/kik/cache/ac;
-.super Lcom/kik/cache/w;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/kik/cache/w",
-        "<",
-        "Ljava/lang/String;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Lcom/android/volley/toolbox/e;
 
 
 # instance fields
-.field private final a:Ljava/lang/String;
+.field private final a:Lorg/apache/http/ProtocolVersion;
 
 
 # direct methods
-.method private constructor <init>(Ljava/lang/String;Ljava/lang/String;Lcom/android/volley/i$b;Landroid/graphics/Bitmap$Config;Lcom/android/volley/i$a;)V
-    .locals 8
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Lcom/android/volley/i$b",
-            "<",
-            "Landroid/graphics/Bitmap;",
-            ">;",
-            "Landroid/graphics/Bitmap$Config;",
-            "Lcom/android/volley/i$a;",
-            ")V"
-        }
-    .end annotation
+.method public constructor <init>()V
+    .locals 3
 
     .prologue
-    const/4 v4, 0x0
+    const/4 v2, 0x1
 
-    .line 30
-    move-object v0, p0
+    .line 22
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object v1, p1
+    .line 24
+    new-instance v0, Lorg/apache/http/ProtocolVersion;
 
-    move-object v2, p2
+    const-string v1, "HTTP"
 
-    move-object v3, p3
+    invoke-direct {v0, v1, v2, v2}, Lorg/apache/http/ProtocolVersion;-><init>(Ljava/lang/String;II)V
 
-    move v5, v4
+    iput-object v0, p0, Lcom/kik/cache/ac;->a:Lorg/apache/http/ProtocolVersion;
 
-    move-object v6, p4
-
-    move-object v7, p5
-
-    invoke-direct/range {v0 .. v7}, Lcom/kik/cache/w;-><init>(Ljava/lang/Object;Ljava/lang/String;Lcom/android/volley/i$b;IILandroid/graphics/Bitmap$Config;Lcom/android/volley/i$a;)V
-
-    .line 31
-    iput-object p1, p0, Lcom/kik/cache/ac;->a:Ljava/lang/String;
-
-    .line 32
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;Lcom/android/volley/i$b;Lcom/android/volley/i$a;)Lcom/kik/cache/ac;
-    .locals 6
+
+# virtual methods
+.method public final a(Lcom/android/volley/Request;Ljava/util/Map;)Lorg/apache/http/HttpResponse;
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ljava/lang/String;",
-            "Lcom/android/volley/i$b",
+            "Lcom/android/volley/Request",
+            "<*>;",
+            "Ljava/util/Map",
             "<",
-            "Landroid/graphics/Bitmap;",
-            ">;",
-            "Lcom/android/volley/i$a;",
-            ")",
-            "Lcom/kik/cache/ac;"
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;)",
+            "Lorg/apache/http/HttpResponse;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;,
+            Lcom/android/volley/AuthFailureError;
         }
     .end annotation
 
     .prologue
-    .line 18
-    invoke-static {p0}, Lcom/kik/cache/ac;->e(Ljava/lang/String;)Ljava/lang/String;
+    .line 30
+    new-instance v0, Lorg/apache/http/message/BasicHttpResponse;
 
-    move-result-object v2
+    new-instance v1, Lorg/apache/http/message/BasicStatusLine;
 
-    .line 20
-    if-nez v2, :cond_0
+    iget-object v2, p0, Lcom/kik/cache/ac;->a:Lorg/apache/http/ProtocolVersion;
 
-    .line 22
-    const/4 v0, 0x0
+    const/16 v3, 0xc8
 
-    .line 25
-    :goto_0
+    const-string v4, "OK"
+
+    invoke-direct {v1, v2, v3, v4}, Lorg/apache/http/message/BasicStatusLine;-><init>(Lorg/apache/http/ProtocolVersion;ILjava/lang/String;)V
+
+    invoke-direct {v0, v1}, Lorg/apache/http/message/BasicHttpResponse;-><init>(Lorg/apache/http/StatusLine;)V
+
+    .line 31
+    new-instance v1, Lorg/apache/http/entity/BasicHttpEntity;
+
+    invoke-direct {v1}, Lorg/apache/http/entity/BasicHttpEntity;-><init>()V
+
+    .line 32
+    new-instance v2, Ljava/io/ByteArrayInputStream;
+
+    const/4 v3, 0x0
+
+    new-array v3, v3, [B
+
+    invoke-direct {v2, v3}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+
+    invoke-virtual {v1, v2}, Lorg/apache/http/entity/BasicHttpEntity;->setContent(Ljava/io/InputStream;)V
+
+    .line 33
+    invoke-virtual {v0, v1}, Lorg/apache/http/message/BasicHttpResponse;->setEntity(Lorg/apache/http/HttpEntity;)V
+
+    .line 34
     return-object v0
-
-    .line 24
-    :cond_0
-    new-instance v0, Lcom/kik/cache/ac;
-
-    sget-object v4, Lcom/kik/cache/ac;->b:Landroid/graphics/Bitmap$Config;
-
-    move-object v1, p0
-
-    move-object v3, p1
-
-    move-object v5, p2
-
-    invoke-direct/range {v0 .. v5}, Lcom/kik/cache/ac;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/android/volley/i$b;Landroid/graphics/Bitmap$Config;Lcom/android/volley/i$a;)V
-
-    goto :goto_0
-.end method
-
-.method public static d(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 41
-    invoke-static {p0}, Lcom/kik/cache/ac;->e(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method private static e(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
-
-    .prologue
-    .line 46
-    if-nez p0, :cond_0
-
-    .line 47
-    const/4 v0, 0x0
-
-    .line 49
-    :goto_0
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "http://smiley-cdn.kik.com/smileys/"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "/96x96.png"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
 .end method

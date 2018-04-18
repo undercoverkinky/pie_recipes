@@ -19,25 +19,16 @@
 
 
 # direct methods
-.method private constructor <init>(Landroid/support/v7/widget/ListPopupWindow;)V
+.method constructor <init>(Landroid/support/v7/widget/ListPopupWindow;)V
     .locals 0
 
     .prologue
-    .line 1703
+    .line 1302
     iput-object p1, p0, Landroid/support/v7/widget/ListPopupWindow$PopupDataSetObserver;->a:Landroid/support/v7/widget/ListPopupWindow;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
 
-    return-void
-.end method
-
-.method synthetic constructor <init>(Landroid/support/v7/widget/ListPopupWindow;B)V
-    .locals 0
-
-    .prologue
-    .line 1703
-    invoke-direct {p0, p1}, Landroid/support/v7/widget/ListPopupWindow$PopupDataSetObserver;-><init>(Landroid/support/v7/widget/ListPopupWindow;)V
-
+    .line 1303
     return-void
 .end method
 
@@ -47,21 +38,21 @@
     .locals 1
 
     .prologue
-    .line 1706
+    .line 1307
     iget-object v0, p0, Landroid/support/v7/widget/ListPopupWindow$PopupDataSetObserver;->a:Landroid/support/v7/widget/ListPopupWindow;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/ListPopupWindow;->b()Z
+    invoke-virtual {v0}, Landroid/support/v7/widget/ListPopupWindow;->f()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1708
+    .line 1309
     iget-object v0, p0, Landroid/support/v7/widget/ListPopupWindow$PopupDataSetObserver;->a:Landroid/support/v7/widget/ListPopupWindow;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/ListPopupWindow;->c()V
+    invoke-virtual {v0}, Landroid/support/v7/widget/ListPopupWindow;->b()V
 
-    .line 1710
+    .line 1311
     :cond_0
     return-void
 .end method
@@ -70,11 +61,11 @@
     .locals 1
 
     .prologue
-    .line 1714
+    .line 1315
     iget-object v0, p0, Landroid/support/v7/widget/ListPopupWindow$PopupDataSetObserver;->a:Landroid/support/v7/widget/ListPopupWindow;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/ListPopupWindow;->a()V
+    invoke-virtual {v0}, Landroid/support/v7/widget/ListPopupWindow;->e()V
 
-    .line 1715
+    .line 1316
     return-void
 .end method

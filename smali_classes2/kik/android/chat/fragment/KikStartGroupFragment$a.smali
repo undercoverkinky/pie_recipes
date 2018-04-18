@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 847
+    .line 882
     invoke-direct {p0}, Lkik/android/chat/fragment/KikPickUsersFragment$a;-><init>()V
 
     return-void
@@ -31,7 +31,7 @@
     .locals 1
 
     .prologue
-    .line 847
+    .line 882
     invoke-virtual {p0, p1}, Lkik/android/chat/fragment/KikStartGroupFragment$a;->c(Ljava/util/ArrayList;)Lkik/android/chat/fragment/KikStartGroupFragment$a;
 
     move-result-object v0
@@ -43,12 +43,25 @@
     .locals 1
 
     .prologue
-    .line 879
+    .line 914
     const-string v0, "kik.android.chat.fragment.StartGroupFragment.UserBeingUpgraded"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikStartGroupFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 880
+    .line 915
+    return-object p0
+.end method
+
+.method public final b(Z)Lkik/android/chat/fragment/KikStartGroupFragment$a;
+    .locals 1
+
+    .prologue
+    .line 941
+    const-string v0, "kik.android.chat.fragment.StartGroupFragment.IsCreatingPublicGroup"
+
+    invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikStartGroupFragment$a;->b(Ljava/lang/String;Z)V
+
+    .line 942
     return-object p0
 .end method
 
@@ -56,12 +69,12 @@
     .locals 1
 
     .prologue
-    .line 912
+    .line 947
     const-string v0, "kik.android.chat.fragment.StartGroupFragment.PrefilledHashtag"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikStartGroupFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 913
+    .line 948
     return-object p0
 .end method
 
@@ -79,12 +92,12 @@
     .end annotation
 
     .prologue
-    .line 868
+    .line 903
     const-string v0, "kik.android.chat.fragment.StartGroupFragment.PreselectedUsers"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikStartGroupFragment$a;->a(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 869
+    .line 904
     return-object p0
 .end method
 
@@ -101,10 +114,10 @@
     .end annotation
 
     .prologue
-    .line 874
+    .line 909
     const-string v0, "kik.android.chat.fragment.StartGroupFragment.PreselectedUsers"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikStartGroupFragment$a;->p(Ljava/lang/String;)Ljava/util/ArrayList;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikStartGroupFragment$a;->k(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -115,14 +128,14 @@
     .locals 2
 
     .prologue
-    .line 857
+    .line 892
     const-string v0, "kik.android.chat.fragment.StartGroupFragment.IsFromTalkTo"
 
     const/4 v1, 0x1
 
     invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/KikStartGroupFragment$a;->b(Ljava/lang/String;Z)V
 
-    .line 858
+    .line 893
     return-object p0
 .end method
 
@@ -130,10 +143,10 @@
     .locals 1
 
     .prologue
-    .line 885
+    .line 920
     const-string v0, "kik.android.chat.fragment.StartGroupFragment.UserBeingUpgraded"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikStartGroupFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikStartGroupFragment$a;->h(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -144,10 +157,10 @@
     .locals 1
 
     .prologue
-    .line 901
+    .line 936
     const-string v0, "kik.android.chat.fragment.StartGroupFragment.IsCreatingPublicGroup"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikStartGroupFragment$a;->k(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikStartGroupFragment$a;->g(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -158,29 +171,14 @@
     return v0
 .end method
 
-.method public final k()Lkik/android/chat/fragment/KikStartGroupFragment$a;
-    .locals 2
-
-    .prologue
-    .line 906
-    const-string v0, "kik.android.chat.fragment.StartGroupFragment.IsCreatingPublicGroup"
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/KikStartGroupFragment$a;->b(Ljava/lang/String;Z)V
-
-    .line 907
-    return-object p0
-.end method
-
-.method public final l()Ljava/lang/String;
+.method public final k()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 918
+    .line 953
     const-string v0, "kik.android.chat.fragment.StartGroupFragment.PrefilledHashtag"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikStartGroupFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikStartGroupFragment$a;->h(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

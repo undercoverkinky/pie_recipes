@@ -40,7 +40,7 @@
     return-object p0
 .end method
 
-.method public m_()Ljava/lang/String;
+.method public j_()Ljava/lang/String;
     .locals 2
 
     .prologue

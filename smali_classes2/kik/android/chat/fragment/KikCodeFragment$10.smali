@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/KikCodeFragment;->i()V
+    value = Lkik/android/chat/fragment/KikCodeFragment;->g()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 758
+    .line 790
     iput-object p1, p0, Lkik/android/chat/fragment/KikCodeFragment$10;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 4
 
     .prologue
-    .line 763
+    .line 795
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/view/View;
@@ -53,20 +53,20 @@
 
     aput-object v2, v0, v1
 
-    invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->g([Landroid/view/View;)V
 
-    .line 764
+    .line 796
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$10;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikCodeFragment;->_codeInfo:Landroid/view/ViewGroup;
 
-    invoke-static {v0}, Lkik/android/util/bz;->c(Landroid/view/View;)Z
+    invoke-static {v0}, Lkik/android/util/ca;->c(Landroid/view/View;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 765
+    .line 797
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$10;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/KikCodeFragment;->m(Lkik/android/chat/fragment/KikCodeFragment;)Landroid/view/View;
@@ -81,7 +81,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 774
+    .line 807
     :cond_0
     return-void
 .end method

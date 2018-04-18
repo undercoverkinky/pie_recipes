@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lkik/android/chat/activity/KikApiLandingActivity;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lkik/android/chat/activity/KikApiLandingActivity;->b(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 211
+    .line 239
     iput-object p1, p0, Lkik/android/chat/activity/KikApiLandingActivity$3;->b:Lkik/android/chat/activity/KikApiLandingActivity;
 
     iput-object p2, p0, Lkik/android/chat/activity/KikApiLandingActivity$3;->a:Ljava/lang/String;
@@ -44,15 +44,15 @@
     .locals 2
 
     .prologue
-    .line 216
+    .line 244
     iget-object v0, p0, Lkik/android/chat/activity/KikApiLandingActivity$3;->b:Lkik/android/chat/activity/KikApiLandingActivity;
 
     invoke-virtual {v0}, Lkik/android/chat/activity/KikApiLandingActivity;->a()V
 
-    .line 217
+    .line 245
     iget-object v0, p0, Lkik/android/chat/activity/KikApiLandingActivity$3;->b:Lkik/android/chat/activity/KikApiLandingActivity;
 
-    invoke-static {v0}, Lkik/android/chat/activity/KikApiLandingActivity;->e(Lkik/android/chat/activity/KikApiLandingActivity;)Landroid/widget/Toast;
+    invoke-static {v0}, Lkik/android/chat/activity/KikApiLandingActivity;->f(Lkik/android/chat/activity/KikApiLandingActivity;)Landroid/widget/Toast;
 
     move-result-object v0
 
@@ -60,15 +60,15 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Toast;->setText(Ljava/lang/CharSequence;)V
 
-    .line 218
+    .line 246
     iget-object v0, p0, Lkik/android/chat/activity/KikApiLandingActivity$3;->b:Lkik/android/chat/activity/KikApiLandingActivity;
 
-    invoke-static {v0}, Lkik/android/chat/activity/KikApiLandingActivity;->e(Lkik/android/chat/activity/KikApiLandingActivity;)Landroid/widget/Toast;
+    invoke-static {v0}, Lkik/android/chat/activity/KikApiLandingActivity;->f(Lkik/android/chat/activity/KikApiLandingActivity;)Landroid/widget/Toast;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 219
+    .line 247
     return-void
 .end method

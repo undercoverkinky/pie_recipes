@@ -1,4 +1,4 @@
-.class public Lcom/google/android/gms/ads/mediation/MediationAdapter$zza;
+.class public final Lcom/google/android/gms/ads/mediation/MediationAdapter$zza;
 .super Ljava/lang/Object;
 
 
@@ -14,7 +14,7 @@
 
 
 # instance fields
-.field private zzTf:I
+.field private zzdik:I
 
 
 # direct methods
@@ -28,15 +28,17 @@
 
 
 # virtual methods
-.method public zzZ(I)Lcom/google/android/gms/ads/mediation/MediationAdapter$zza;
-    .locals 0
+.method public final zzaf(I)Lcom/google/android/gms/ads/mediation/MediationAdapter$zza;
+    .locals 1
 
-    iput p1, p0, Lcom/google/android/gms/ads/mediation/MediationAdapter$zza;->zzTf:I
+    const/4 v0, 0x1
+
+    iput v0, p0, Lcom/google/android/gms/ads/mediation/MediationAdapter$zza;->zzdik:I
 
     return-object p0
 .end method
 
-.method public zzki()Landroid/os/Bundle;
+.method public final zztm()Landroid/os/Bundle;
     .locals 3
 
     new-instance v0, Landroid/os/Bundle;
@@ -45,7 +47,7 @@
 
     const-string v1, "capabilities"
 
-    iget v2, p0, Lcom/google/android/gms/ads/mediation/MediationAdapter$zza;->zzTf:I
+    iget v2, p0, Lcom/google/android/gms/ads/mediation/MediationAdapter$zza;->zzdik:I
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 

@@ -1,67 +1,60 @@
 .class public final Lcom/google/android/gms/internal/zzkj;
-.super Lcom/google/android/gms/internal/zzjv;
+.super Lcom/google/android/gms/internal/zzee;
 
-
-# annotations
-.annotation runtime Lcom/google/android/gms/internal/zzig;
-.end annotation
-
-
-# instance fields
-.field private final zzE:Ljava/lang/String;
-
-.field private final zzRj:Lcom/google/android/gms/ads/internal/util/client/zzc;
+# interfaces
+.implements Lcom/google/android/gms/internal/zzki;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+.method constructor <init>(Landroid/os/IBinder;)V
     .locals 1
 
-    invoke-static {}, Lcom/google/android/gms/ads/internal/zzu;->zzck()Lcom/google/android/gms/internal/zzka;
+    const-string v0, "com.google.android.gms.ads.internal.client.IAdManagerCreator"
 
-    move-result-object v0
-
-    invoke-virtual {v0, p1, p2}, Lcom/google/android/gms/internal/zzka;->zzg(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p0, p3, v0}, Lcom/google/android/gms/internal/zzkj;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    invoke-direct {p0}, Lcom/google/android/gms/internal/zzjv;-><init>()V
-
-    new-instance v0, Lcom/google/android/gms/ads/internal/util/client/zzc;
-
-    invoke-direct {v0, p2}, Lcom/google/android/gms/ads/internal/util/client/zzc;-><init>(Ljava/lang/String;)V
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/zzkj;->zzRj:Lcom/google/android/gms/ads/internal/util/client/zzc;
-
-    iput-object p1, p0, Lcom/google/android/gms/internal/zzkj;->zzE:Ljava/lang/String;
+    invoke-direct {p0, p1, v0}, Lcom/google/android/gms/internal/zzee;-><init>(Landroid/os/IBinder;Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onStop()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final zzbQ()V
+.method public final zza(Lcom/google/android/gms/dynamic/IObjectWrapper;Lcom/google/android/gms/internal/zzjb;Ljava/lang/String;Lcom/google/android/gms/internal/zzva;II)Landroid/os/IBinder;
     .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzkj;->zzRj:Lcom/google/android/gms/ads/internal/util/client/zzc;
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzkj;->zzE:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/ads/internal/util/client/zzc;->zzaQ(Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/google/android/gms/internal/zzeg;->zza(Landroid/os/Parcel;Landroid/os/IInterface;)V
 
-    return-void
+    invoke-static {v0, p2}, Lcom/google/android/gms/internal/zzeg;->zza(Landroid/os/Parcel;Landroid/os/Parcelable;)V
+
+    invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    invoke-static {v0, p4}, Lcom/google/android/gms/internal/zzeg;->zza(Landroid/os/Parcel;Landroid/os/IInterface;)V
+
+    const v1, 0xaae600
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-virtual {v0, p6}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 v1, 0x2
+
+    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zza(ILandroid/os/Parcel;)Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-object v1
 .end method

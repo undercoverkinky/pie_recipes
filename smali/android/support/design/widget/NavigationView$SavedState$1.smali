@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable$Creator;
+.implements Landroid/support/v4/os/ParcelableCompatCreatorCallbacks;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Landroid/os/Parcelable$Creator",
+        "Landroid/support/v4/os/ParcelableCompatCreatorCallbacks",
         "<",
         "Landroid/support/design/widget/NavigationView$SavedState;",
         ">;"
@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 400
+    .line 479
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,16 +40,16 @@
 
 
 # virtual methods
-.method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+.method public final synthetic createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
     .locals 1
 
     .prologue
-    .line 2403
+    .line 2482
     new-instance v0, Landroid/support/design/widget/NavigationView$SavedState;
 
-    invoke-direct {v0, p1}, Landroid/support/design/widget/NavigationView$SavedState;-><init>(Landroid/os/Parcel;)V
+    invoke-direct {v0, p1, p2}, Landroid/support/design/widget/NavigationView$SavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
-    .line 400
+    .line 479
     return-object v0
 .end method
 
@@ -57,10 +57,10 @@
     .locals 1
 
     .prologue
-    .line 400
-    .line 1408
+    .line 479
+    .line 1487
     new-array v0, p1, [Landroid/support/design/widget/NavigationView$SavedState;
 
-    .line 400
+    .line 479
     return-object v0
 .end method

@@ -25,6 +25,9 @@
 .end field
 
 .field private transient b:I
+    .annotation runtime Lcom/google/errorprone/annotations/concurrent/LazyInit;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -37,17 +40,17 @@
     .end annotation
 
     .prologue
-    .line 46
+    .line 44
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableSet;-><init>()V
 
-    .line 47
-    invoke-static {p1}, Lcom/google/common/base/h;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 45
+    invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/common/collect/SingletonImmutableSet;->a:Ljava/lang/Object;
 
-    .line 48
+    .line 46
     return-void
 .end method
 
@@ -60,62 +63,90 @@
     .end annotation
 
     .prologue
-    .line 50
+    .line 48
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableSet;-><init>()V
 
-    .line 52
+    .line 50
     iput-object p1, p0, Lcom/google/common/collect/SingletonImmutableSet;->a:Ljava/lang/Object;
 
-    .line 53
+    .line 51
     iput p2, p0, Lcom/google/common/collect/SingletonImmutableSet;->b:I
 
-    .line 54
+    .line 52
     return-void
 .end method
 
 
 # virtual methods
 .method final a([Ljava/lang/Object;I)I
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 79
-    iget-object v0, p0, Lcom/google/common/collect/SingletonImmutableSet;->a:Ljava/lang/Object;
+    .line 81
+    const/4 v0, 0x0
 
-    aput-object v0, p1, p2
+    iget-object v1, p0, Lcom/google/common/collect/SingletonImmutableSet;->a:Ljava/lang/Object;
 
-    .line 80
-    add-int/lit8 v0, p2, 0x1
+    aput-object v1, p1, v0
+
+    .line 82
+    const/4 v0, 0x1
 
     return v0
 .end method
 
-.method public final a()Lcom/google/common/collect/x;
-    .locals 1
+.method public final a()Lcom/google/common/collect/s;
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/google/common/collect/x",
+            "Lcom/google/common/collect/s",
             "<TE;>;"
         }
     .end annotation
 
     .prologue
-    .line 70
+    .line 66
     iget-object v0, p0, Lcom/google/common/collect/SingletonImmutableSet;->a:Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/google/common/collect/l;->a(Ljava/lang/Object;)Lcom/google/common/collect/x;
+    .line 2041
+    new-instance v1, Lcom/google/common/collect/l$3;
 
-    move-result-object v0
+    invoke-direct {v1, v0}, Lcom/google/common/collect/l$3;-><init>(Ljava/lang/Object;)V
 
-    return-object v0
+    .line 66
+    return-object v1
 .end method
 
-.method final c_()Z
+.method final c()Z
     .locals 1
 
     .prologue
-    .line 104
+    .line 76
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 1
+
+    .prologue
+    .line 61
+    iget-object v0, p0, Lcom/google/common/collect/SingletonImmutableSet;->a:Ljava/lang/Object;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method final e()Z
+    .locals 1
+
+    .prologue
+    .line 97
     iget v0, p0, Lcom/google/common/collect/SingletonImmutableSet;->b:I
 
     if-eqz v0, :cond_0
@@ -131,105 +162,38 @@
     goto :goto_0
 .end method
 
-.method public final contains(Ljava/lang/Object;)Z
+.method final f()Lcom/google/common/collect/ImmutableList;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/google/common/collect/ImmutableList",
+            "<TE;>;"
+        }
+    .end annotation
 
     .prologue
-    .line 66
+    .line 71
     iget-object v0, p0, Lcom/google/common/collect/SingletonImmutableSet;->a:Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->a(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
-    move-result v0
+    move-result-object v0
 
-    return v0
-.end method
-
-.method final e()Z
-    .locals 1
-
-    .prologue
-    .line 74
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-    .param p1    # Ljava/lang/Object;
-        .annotation runtime Ljavax/annotation/Nullable;
-        .end annotation
-    .end param
-
-    .prologue
-    const/4 v1, 0x0
-
-    const/4 v0, 0x1
-
-    .line 84
-    if-ne p1, p0, :cond_1
-
-    .line 91
-    :cond_0
-    :goto_0
-    return v0
-
-    .line 87
-    :cond_1
-    instance-of v2, p1, Ljava/util/Set;
-
-    if-eqz v2, :cond_3
-
-    .line 88
-    check-cast p1, Ljava/util/Set;
-
-    .line 89
-    invoke-interface {p1}, Ljava/util/Set;->size()I
-
-    move-result v2
-
-    if-ne v2, v0, :cond_2
-
-    iget-object v2, p0, Lcom/google/common/collect/SingletonImmutableSet;->a:Ljava/lang/Object;
-
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    :cond_2
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_3
-    move v0, v1
-
-    .line 91
-    goto :goto_0
+    return-object v0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
     .prologue
-    .line 96
+    .line 88
     iget v0, p0, Lcom/google/common/collect/SingletonImmutableSet;->b:I
 
-    .line 97
+    .line 89
     if-nez v0, :cond_0
 
-    .line 98
+    .line 90
     iget-object v0, p0, Lcom/google/common/collect/SingletonImmutableSet;->a:Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -238,18 +202,8 @@
 
     iput v0, p0, Lcom/google/common/collect/SingletonImmutableSet;->b:I
 
-    .line 100
+    .line 92
     :cond_0
-    return v0
-.end method
-
-.method public final isEmpty()Z
-    .locals 1
-
-    .prologue
-    .line 62
-    const/4 v0, 0x0
-
     return v0
 .end method
 
@@ -257,15 +211,11 @@
     .locals 1
 
     .prologue
-    .line 32
-    .line 1070
-    iget-object v0, p0, Lcom/google/common/collect/SingletonImmutableSet;->a:Ljava/lang/Object;
-
-    invoke-static {v0}, Lcom/google/common/collect/l;->a(Ljava/lang/Object;)Lcom/google/common/collect/x;
+    .line 29
+    invoke-virtual {p0}, Lcom/google/common/collect/SingletonImmutableSet;->a()Lcom/google/common/collect/s;
 
     move-result-object v0
 
-    .line 32
     return-object v0
 .end method
 
@@ -273,41 +223,30 @@
     .locals 1
 
     .prologue
-    .line 58
+    .line 56
     const/4 v0, 0x1
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
     .prologue
-    .line 108
-    iget-object v0, p0, Lcom/google/common/collect/SingletonImmutableSet;->a:Ljava/lang/Object;
+    .line 102
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    const-string v1, "["
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 109
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lcom/google/common/collect/SingletonImmutableSet;->a:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, 0x2
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const/16 v2, 0x5b
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

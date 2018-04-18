@@ -81,7 +81,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 31
-    invoke-static {p1}, Lcom/google/common/base/l;->b(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/google/common/base/Strings;->isNullOrEmpty(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -213,7 +213,7 @@
 
     .line 148
     :cond_1
-    invoke-static {p1}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    invoke-static {p1}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -317,7 +317,7 @@
     .line 109
     iget-object v1, p0, Lkik/android/challenge/PhoneNumberModel;->b:Ljava/lang/String;
 
-    invoke-static {v1}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    invoke-static {v1}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v1
 

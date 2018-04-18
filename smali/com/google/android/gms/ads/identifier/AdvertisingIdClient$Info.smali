@@ -14,9 +14,9 @@
 
 
 # instance fields
-.field private final zzpO:Ljava/lang/String;
+.field private final zzamh:Ljava/lang/String;
 
-.field private final zzpP:Z
+.field private final zzami:Z
 
 
 # direct methods
@@ -25,9 +25,9 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/gms/ads/identifier/AdvertisingIdClient$Info;->zzpO:Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/gms/ads/identifier/AdvertisingIdClient$Info;->zzamh:Ljava/lang/String;
 
-    iput-boolean p2, p0, Lcom/google/android/gms/ads/identifier/AdvertisingIdClient$Info;->zzpP:Z
+    iput-boolean p2, p0, Lcom/google/android/gms/ads/identifier/AdvertisingIdClient$Info;->zzami:Z
 
     return-void
 .end method
@@ -37,7 +37,7 @@
 .method public final getId()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/identifier/AdvertisingIdClient$Info;->zzpO:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/ads/identifier/AdvertisingIdClient$Info;->zzamh:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -45,7 +45,7 @@
 .method public final isLimitAdTrackingEnabled()Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/google/android/gms/ads/identifier/AdvertisingIdClient$Info;->zzpP:Z
+    iget-boolean v0, p0, Lcom/google/android/gms/ads/identifier/AdvertisingIdClient$Info;->zzami:Z
 
     return v0
 .end method
@@ -53,27 +53,27 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/identifier/AdvertisingIdClient$Info;->zzpO:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/ads/identifier/AdvertisingIdClient$Info;->zzamh:Ljava/lang/String;
 
-    iget-boolean v1, p0, Lcom/google/android/gms/ads/identifier/AdvertisingIdClient$Info;->zzpP:Z
-
-    new-instance v2, Ljava/lang/StringBuilder;
+    iget-boolean v1, p0, Lcom/google/android/gms/ads/identifier/AdvertisingIdClient$Info;->zzami:Z
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
 
-    move-result v3
+    move-result v2
 
-    add-int/lit8 v3, v3, 0x7
+    add-int/lit8 v2, v2, 0x7
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    const-string v3, "{"
+    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "{"
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 

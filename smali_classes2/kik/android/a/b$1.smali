@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 111
+    .line 100
     iput-object p1, p0, Lkik/android/a/b$1;->a:Lkik/android/a/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,8 +50,8 @@
     .locals 4
 
     .prologue
-    .line 111
-    .line 1115
+    .line 100
+    .line 1104
     iget-object v0, p0, Lkik/android/a/b$1;->a:Lkik/android/a/b;
 
     iget-object v0, v0, Lkik/android/a/b;->c:Ljava/lang/String;
@@ -70,12 +70,12 @@
 
     if-nez v0, :cond_0
 
-    .line 1117
+    .line 1106
     iget-object v0, p0, Lkik/android/a/b$1;->a:Lkik/android/a/b;
 
     invoke-virtual {v0}, Lkik/android/a/b;->a()V
 
-    .line 1119
+    .line 1108
     :cond_0
     iget-object v0, p0, Lkik/android/a/b$1;->a:Lkik/android/a/b;
 
@@ -99,7 +99,7 @@
 
     if-gez v0, :cond_1
 
-    .line 1120
+    .line 1109
     iget-object v0, p0, Lkik/android/a/b$1;->a:Lkik/android/a/b;
 
     invoke-static {v0}, Lkik/android/a/b;->a(Lkik/android/a/b;)Lkik/android/a/a;
@@ -108,7 +108,7 @@
 
     invoke-virtual {v0}, Lkik/android/a/a;->b()V
 
-    .line 111
+    .line 100
     :cond_1
     return-void
 .end method

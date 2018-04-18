@@ -3,12 +3,18 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0x15
+.end annotation
+
+
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 25
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,12 +24,12 @@
     .locals 0
 
     .prologue
-    .line 57
+    .line 62
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityWindowInfo;->getBoundsInScreen(Landroid/graphics/Rect;)V
 
-    .line 58
+    .line 63
     return-void
 .end method
 
@@ -31,7 +37,7 @@
     .locals 1
 
     .prologue
-    .line 77
+    .line 82
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityWindowInfo;->getChild(I)Landroid/view/accessibility/AccessibilityWindowInfo;
@@ -45,7 +51,7 @@
     .locals 1
 
     .prologue
-    .line 73
+    .line 78
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityWindowInfo;->getChildCount()I
@@ -59,7 +65,7 @@
     .locals 1
 
     .prologue
-    .line 53
+    .line 58
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityWindowInfo;->getId()I
@@ -73,7 +79,7 @@
     .locals 1
 
     .prologue
-    .line 41
+    .line 46
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityWindowInfo;->getLayer()I
@@ -87,7 +93,7 @@
     .locals 1
 
     .prologue
-    .line 49
+    .line 54
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityWindowInfo;->getParent()Landroid/view/accessibility/AccessibilityWindowInfo;
@@ -101,7 +107,7 @@
     .locals 1
 
     .prologue
-    .line 45
+    .line 50
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityWindowInfo;->getRoot()Landroid/view/accessibility/AccessibilityNodeInfo;
@@ -115,7 +121,7 @@
     .locals 1
 
     .prologue
-    .line 37
+    .line 42
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityWindowInfo;->getType()I
@@ -129,7 +135,7 @@
     .locals 1
 
     .prologue
-    .line 69
+    .line 74
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityWindowInfo;->isAccessibilityFocused()Z
@@ -143,7 +149,7 @@
     .locals 1
 
     .prologue
-    .line 61
+    .line 66
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityWindowInfo;->isActive()Z
@@ -157,7 +163,7 @@
     .locals 1
 
     .prologue
-    .line 65
+    .line 70
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityWindowInfo;->isFocused()Z
@@ -171,7 +177,7 @@
     .locals 1
 
     .prologue
-    .line 28
+    .line 33
     invoke-static {}, Landroid/view/accessibility/AccessibilityWindowInfo;->obtain()Landroid/view/accessibility/AccessibilityWindowInfo;
 
     move-result-object v0
@@ -183,7 +189,7 @@
     .locals 1
 
     .prologue
-    .line 32
+    .line 37
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     invoke-static {p0}, Landroid/view/accessibility/AccessibilityWindowInfo;->obtain(Landroid/view/accessibility/AccessibilityWindowInfo;)Landroid/view/accessibility/AccessibilityWindowInfo;
@@ -197,11 +203,11 @@
     .locals 0
 
     .prologue
-    .line 81
+    .line 86
     check-cast p0, Landroid/view/accessibility/AccessibilityWindowInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityWindowInfo;->recycle()V
 
-    .line 82
+    .line 87
     return-void
 .end method

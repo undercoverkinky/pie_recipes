@@ -36,31 +36,31 @@
     .locals 3
 
     .prologue
-    .line 176
+    .line 179
     iput-object p1, p0, Lkik/android/chat/activity/KikActivityBase$a;->a:Lkik/android/chat/activity/KikActivityBase;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 187
+    .line 190
     new-instance v0, Lkik/android/chat/activity/KikActivityBase$a$1;
 
     invoke-direct {v0, p0}, Lkik/android/chat/activity/KikActivityBase$a$1;-><init>(Lkik/android/chat/activity/KikActivityBase$a;)V
 
     iput-object v0, p0, Lkik/android/chat/activity/KikActivityBase$a;->c:Lcom/kik/events/e;
 
-    .line 177
+    .line 180
     new-instance v0, Lcom/kik/events/d;
 
     invoke-direct {v0}, Lcom/kik/events/d;-><init>()V
 
     iput-object v0, p0, Lkik/android/chat/activity/KikActivityBase$a;->b:Lcom/kik/events/d;
 
-    .line 178
+    .line 181
     iget-object v0, p0, Lkik/android/chat/activity/KikActivityBase$a;->b:Lcom/kik/events/d;
 
-    iget-object v1, p1, Lkik/android/chat/activity/KikActivityBase;->c:Lkik/core/z;
+    iget-object v1, p1, Lkik/android/chat/activity/KikActivityBase;->c:Lkik/core/ICoreEvents;
 
-    invoke-interface {v1}, Lkik/core/z;->a()Lcom/kik/events/c;
+    invoke-interface {v1}, Lkik/core/ICoreEvents;->a()Lcom/kik/events/c;
 
     move-result-object v1
 
@@ -68,12 +68,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/kik/events/d;->a(Lcom/kik/events/c;Lcom/kik/events/e;)Lcom/kik/events/e;
 
-    .line 179
+    .line 182
     iget-object v0, p0, Lkik/android/chat/activity/KikActivityBase$a;->b:Lcom/kik/events/d;
 
-    iget-object v1, p1, Lkik/android/chat/activity/KikActivityBase;->c:Lkik/core/z;
+    iget-object v1, p1, Lkik/android/chat/activity/KikActivityBase;->c:Lkik/core/ICoreEvents;
 
-    invoke-interface {v1}, Lkik/core/z;->c()Lcom/kik/events/c;
+    invoke-interface {v1}, Lkik/core/ICoreEvents;->c()Lcom/kik/events/c;
 
     move-result-object v1
 
@@ -81,7 +81,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/kik/events/d;->a(Lcom/kik/events/c;Lcom/kik/events/e;)Lcom/kik/events/e;
 
-    .line 180
+    .line 183
     return-void
 .end method
 
@@ -89,7 +89,7 @@
     .locals 1
 
     .prologue
-    .line 171
+    .line 174
     iget-object v0, p0, Lkik/android/chat/activity/KikActivityBase$a;->b:Lcom/kik/events/d;
 
     return-object v0
@@ -101,11 +101,11 @@
     .locals 1
 
     .prologue
-    .line 184
+    .line 187
     iget-object v0, p0, Lkik/android/chat/activity/KikActivityBase$a;->b:Lcom/kik/events/d;
 
     invoke-virtual {v0}, Lcom/kik/events/d;->a()V
 
-    .line 185
+    .line 188
     return-void
 .end method

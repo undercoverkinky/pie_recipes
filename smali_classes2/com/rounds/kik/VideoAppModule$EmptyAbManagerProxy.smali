@@ -36,7 +36,7 @@
     .locals 1
 
     .prologue
-    .line 246
+    .line 277
     new-instance v0, Lcom/rounds/kik/VideoAppModule$EmptyAbManagerProxy$1;
 
     invoke-direct {v0}, Lcom/rounds/kik/VideoAppModule$EmptyAbManagerProxy$1;-><init>()V
@@ -50,7 +50,7 @@
     .locals 0
 
     .prologue
-    .line 244
+    .line 275
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -72,7 +72,7 @@
     .end annotation
 
     .prologue
-    .line 255
+    .line 287
     sget-object v0, Lcom/rounds/kik/VideoAppModule$EmptyAbManagerProxy;->EMPTY_MAP:Ljava/util/Map;
 
     return-object v0

@@ -180,7 +180,7 @@
 
     .line 5863
     :try_start_0
-    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->a:Lcom/google/protobuf/Parser;
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->PARSER:Lcom/google/protobuf/Parser;
 
     invoke-interface {v0, p1, p2}, Lcom/google/protobuf/Parser;->parsePartialFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
 
@@ -283,7 +283,7 @@
 
     .prologue
     .line 5706
-    invoke-static {}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->g()Z
+    invoke-static {}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->access$4600()Z
 
     move-result v0
 
@@ -390,15 +390,18 @@
     .prologue
     const/4 v0, 0x1
 
-    const/4 v1, 0x0
-
     .line 5747
     new-instance v2, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
 
-    invoke-direct {v2, p0, v1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;-><init>(Lcom/google/protobuf/GeneratedMessage$Builder;B)V
+    const/4 v1, 0x0
+
+    invoke-direct {v2, p0, v1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;-><init>(Lcom/google/protobuf/GeneratedMessage$Builder;Lcom/kik/clientmetrics/model/Clientmetrics$1;)V
 
     .line 5748
     iget v3, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;->a:I
+
+    .line 5749
+    const/4 v1, 0x0
 
     .line 5750
     and-int/lit8 v4, v3, 0x1
@@ -409,7 +412,7 @@
     :goto_0
     iget-object v1, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;->b:Ljava/lang/Object;
 
-    invoke-static {v2, v1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v2, v1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->access$4802(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 5754
     and-int/lit8 v1, v3, 0x2
@@ -425,7 +428,7 @@
     :cond_0
     iget-object v1, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;->c:Ljava/lang/Object;
 
-    invoke-static {v2, v1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->b(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v2, v1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->access$4902(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 5758
     and-int/lit8 v1, v3, 0x4
@@ -441,7 +444,7 @@
     :cond_1
     iget-object v1, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;->d:Ljava/lang/Object;
 
-    invoke-static {v2, v1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->c(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v2, v1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->access$5002(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 5762
     iget-object v1, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;->f:Lcom/google/protobuf/RepeatedFieldBuilder;
@@ -477,7 +480,7 @@
     :cond_2
     iget-object v1, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;->e:Ljava/util/List;
 
-    invoke-static {v2, v1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;Ljava/util/List;)Ljava/util/List;
+    invoke-static {v2, v1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->access$5102(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;Ljava/util/List;)Ljava/util/List;
 
     .line 5771
     :goto_1
@@ -494,10 +497,10 @@
     :cond_3
     iget-object v1, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;->g:Ljava/lang/Object;
 
-    invoke-static {v2, v1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->d(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v2, v1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->access$5202(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 5775
-    invoke-static {v2, v0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;I)I
+    invoke-static {v2, v0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->access$5302(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;I)I
 
     .line 5776
     invoke-virtual {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;->onBuilt()V
@@ -513,7 +516,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;Ljava/util/List;)Ljava/util/List;
+    invoke-static {v2, v1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->access$5102(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;Ljava/util/List;)Ljava/util/List;
 
     goto :goto_1
 
@@ -634,7 +637,7 @@
     const/4 v0, 0x0
 
     .line 5790
-    invoke-static {}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->f()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+    invoke-static {}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->getDefaultInstance()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
 
     move-result-object v1
 
@@ -646,7 +649,7 @@
 
     .line 5791
     :cond_0
-    invoke-virtual {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->a()Z
+    invoke-virtual {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->hasUserId()Z
 
     move-result v1
 
@@ -660,7 +663,7 @@
     iput v1, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;->a:I
 
     .line 5793
-    invoke-static {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->access$4800(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -671,7 +674,7 @@
 
     .line 5796
     :cond_1
-    invoke-virtual {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->b()Z
+    invoke-virtual {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->hasDevicePrefix()Z
 
     move-result v1
 
@@ -685,7 +688,7 @@
     iput v1, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;->a:I
 
     .line 5798
-    invoke-static {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->b(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->access$4900(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -696,7 +699,7 @@
 
     .line 5801
     :cond_2
-    invoke-virtual {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->c()Z
+    invoke-virtual {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->hasClientVersion()Z
 
     move-result v1
 
@@ -710,7 +713,7 @@
     iput v1, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;->a:I
 
     .line 5803
-    invoke-static {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->c(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->access$5000(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -726,7 +729,7 @@
     if-nez v1, :cond_7
 
     .line 5807
-    invoke-static {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->d(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/util/List;
+    invoke-static {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->access$5100(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/util/List;
 
     move-result-object v0
 
@@ -746,7 +749,7 @@
     if-eqz v0, :cond_6
 
     .line 5809
-    invoke-static {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->d(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/util/List;
+    invoke-static {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->access$5100(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/util/List;
 
     move-result-object v0
 
@@ -766,7 +769,7 @@
     .line 5832
     :cond_4
     :goto_2
-    invoke-virtual {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->d()Z
+    invoke-virtual {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->hasAnonymousId()Z
 
     move-result v0
 
@@ -780,7 +783,7 @@
     iput v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;->a:I
 
     .line 5834
-    invoke-static {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->e(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->access$5200(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -791,7 +794,7 @@
 
     .line 5837
     :cond_5
-    invoke-static {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->f(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Lcom/google/protobuf/UnknownFieldSet;
+    invoke-static {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->access$5500(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Lcom/google/protobuf/UnknownFieldSet;
 
     move-result-object v0
 
@@ -809,7 +812,7 @@
     .line 5813
     iget-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;->e:Ljava/util/List;
 
-    invoke-static {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->d(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/util/List;
+    invoke-static {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->access$5100(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/util/List;
 
     move-result-object v1
 
@@ -819,7 +822,7 @@
 
     .line 5818
     :cond_7
-    invoke-static {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->d(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/util/List;
+    invoke-static {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->access$5100(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/util/List;
 
     move-result-object v1
 
@@ -847,7 +850,7 @@
     iput-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;->f:Lcom/google/protobuf/RepeatedFieldBuilder;
 
     .line 5822
-    invoke-static {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->d(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/util/List;
+    invoke-static {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->access$5100(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/util/List;
 
     move-result-object v1
 
@@ -861,7 +864,7 @@
     iput v1, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;->a:I
 
     .line 5825
-    invoke-static {}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->h()Z
+    invoke-static {}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->access$5400()Z
 
     move-result v1
 
@@ -881,7 +884,7 @@
     :cond_9
     iget-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;->f:Lcom/google/protobuf/RepeatedFieldBuilder;
 
-    invoke-static {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->d(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/util/List;
+    invoke-static {p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->access$5100(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/util/List;
 
     move-result-object v1
 
@@ -1190,7 +1193,7 @@
 
     .prologue
     .line 8735
-    invoke-static {}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->f()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+    invoke-static {}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->getDefaultInstance()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
 
     move-result-object v0
 
@@ -1203,7 +1206,7 @@
 
     .prologue
     .line 7735
-    invoke-static {}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->f()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+    invoke-static {}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->getDefaultInstance()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
 
     move-result-object v0
 

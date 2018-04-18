@@ -6,7 +6,7 @@
 # instance fields
 .field private final a:Landroid/content/Context;
 
-.field private final b:Lio/fabric/sdk/android/services/c/c;
+.field private final b:Lio/fabric/sdk/android/services/b/c;
 
 
 # direct methods
@@ -25,13 +25,13 @@
     iput-object v0, p0, Lio/fabric/sdk/android/services/common/c;->a:Landroid/content/Context;
 
     .line 37
-    new-instance v0, Lio/fabric/sdk/android/services/c/d;
+    new-instance v0, Lio/fabric/sdk/android/services/b/d;
 
     const-string v1, "TwitterAdvertisingInfoPreferences"
 
-    invoke-direct {v0, p1, v1}, Lio/fabric/sdk/android/services/c/d;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v0, p1, v1}, Lio/fabric/sdk/android/services/b/d;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    iput-object v0, p0, Lio/fabric/sdk/android/services/common/c;->b:Lio/fabric/sdk/android/services/c/c;
+    iput-object v0, p0, Lio/fabric/sdk/android/services/common/c;->b:Lio/fabric/sdk/android/services/b/c;
 
     .line 38
     return-void
@@ -66,11 +66,11 @@
     if-eqz v0, :cond_0
 
     .line 83
-    iget-object v0, p0, Lio/fabric/sdk/android/services/common/c;->b:Lio/fabric/sdk/android/services/c/c;
+    iget-object v0, p0, Lio/fabric/sdk/android/services/common/c;->b:Lio/fabric/sdk/android/services/b/c;
 
-    iget-object v1, p0, Lio/fabric/sdk/android/services/common/c;->b:Lio/fabric/sdk/android/services/c/c;
+    iget-object v1, p0, Lio/fabric/sdk/android/services/common/c;->b:Lio/fabric/sdk/android/services/b/c;
 
-    invoke-interface {v1}, Lio/fabric/sdk/android/services/c/c;->b()Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v1}, Lio/fabric/sdk/android/services/b/c;->b()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
@@ -78,6 +78,7 @@
 
     iget-object v3, p1, Lio/fabric/sdk/android/services/common/b;->a:Ljava/lang/String;
 
+    .line 84
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
@@ -86,11 +87,13 @@
 
     iget-boolean v3, p1, Lio/fabric/sdk/android/services/common/b;->b:Z
 
+    .line 85
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lio/fabric/sdk/android/services/c/c;->a(Landroid/content/SharedPreferences$Editor;)Z
+    .line 83
+    invoke-interface {v0, v1}, Lio/fabric/sdk/android/services/b/c;->a(Landroid/content/SharedPreferences$Editor;)Z
 
     .line 94
     :goto_0
@@ -98,27 +101,30 @@
 
     .line 89
     :cond_0
-    iget-object v0, p0, Lio/fabric/sdk/android/services/common/c;->b:Lio/fabric/sdk/android/services/c/c;
+    iget-object v0, p0, Lio/fabric/sdk/android/services/common/c;->b:Lio/fabric/sdk/android/services/b/c;
 
-    iget-object v1, p0, Lio/fabric/sdk/android/services/common/c;->b:Lio/fabric/sdk/android/services/c/c;
+    iget-object v1, p0, Lio/fabric/sdk/android/services/common/c;->b:Lio/fabric/sdk/android/services/b/c;
 
-    invoke-interface {v1}, Lio/fabric/sdk/android/services/c/c;->b()Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v1}, Lio/fabric/sdk/android/services/b/c;->b()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
     const-string v2, "advertising_id"
 
+    .line 90
     invoke-interface {v1, v2}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
     const-string v2, "limit_ad_tracking_enabled"
 
+    .line 91
     invoke-interface {v1, v2}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lio/fabric/sdk/android/services/c/c;->a(Landroid/content/SharedPreferences$Editor;)Z
+    .line 89
+    invoke-interface {v0, v1}, Lio/fabric/sdk/android/services/b/c;->a(Landroid/content/SharedPreferences$Editor;)Z
 
     goto :goto_0
 .end method
@@ -230,9 +236,9 @@
     .prologue
     .line 50
     .line 1097
-    iget-object v0, p0, Lio/fabric/sdk/android/services/common/c;->b:Lio/fabric/sdk/android/services/c/c;
+    iget-object v0, p0, Lio/fabric/sdk/android/services/common/c;->b:Lio/fabric/sdk/android/services/b/c;
 
-    invoke-interface {v0}, Lio/fabric/sdk/android/services/c/c;->a()Landroid/content/SharedPreferences;
+    invoke-interface {v0}, Lio/fabric/sdk/android/services/b/c;->a()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -245,9 +251,9 @@
     move-result-object v1
 
     .line 1098
-    iget-object v0, p0, Lio/fabric/sdk/android/services/common/c;->b:Lio/fabric/sdk/android/services/c/c;
+    iget-object v0, p0, Lio/fabric/sdk/android/services/common/c;->b:Lio/fabric/sdk/android/services/b/c;
 
-    invoke-interface {v0}, Lio/fabric/sdk/android/services/c/c;->a()Landroid/content/SharedPreferences;
+    invoke-interface {v0}, Lio/fabric/sdk/android/services/b/c;->a()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -283,6 +289,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
+    .line 2077
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
     .line 59

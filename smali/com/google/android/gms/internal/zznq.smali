@@ -1,163 +1,39 @@
 .class public final Lcom/google/android/gms/internal/zznq;
-.super Ljava/lang/Object;
+.super Lcom/google/android/gms/internal/zzno;
 
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<O::",
-        "Lcom/google/android/gms/common/api/Api$ApiOptions;",
-        ">",
-        "Ljava/lang/Object;"
-    }
+.annotation runtime Lcom/google/android/gms/internal/zzzt;
 .end annotation
 
 
 # instance fields
-.field private final zzakT:Lcom/google/android/gms/common/api/Api;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/Api",
-            "<TO;>;"
-        }
-    .end annotation
-.end field
-
-.field private final zzakU:Lcom/google/android/gms/common/api/Api$ApiOptions;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "TO;"
-        }
-    .end annotation
-.end field
+.field private final zzbef:Lcom/google/android/gms/ads/doubleclick/OnCustomRenderedAdLoadedListener;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/common/api/Api;Lcom/google/android/gms/common/api/Api$ApiOptions;)V
+.method public constructor <init>(Lcom/google/android/gms/ads/doubleclick/OnCustomRenderedAdLoadedListener;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/api/Api",
-            "<TO;>;TO;)V"
-        }
-    .end annotation
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/google/android/gms/internal/zzno;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/gms/internal/zznq;->zzakT:Lcom/google/android/gms/common/api/Api;
-
-    iput-object p2, p0, Lcom/google/android/gms/internal/zznq;->zzakU:Lcom/google/android/gms/common/api/Api$ApiOptions;
+    iput-object p1, p0, Lcom/google/android/gms/internal/zznq;->zzbef:Lcom/google/android/gms/ads/doubleclick/OnCustomRenderedAdLoadedListener;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final zza(Lcom/google/android/gms/internal/zznk;)V
+    .locals 2
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lcom/google/android/gms/internal/zznq;->zzbef:Lcom/google/android/gms/ads/doubleclick/OnCustomRenderedAdLoadedListener;
 
-    const/4 v1, 0x0
+    new-instance v1, Lcom/google/android/gms/internal/zznj;
 
-    if-ne p1, p0, :cond_1
+    invoke-direct {v1, p1}, Lcom/google/android/gms/internal/zznj;-><init>(Lcom/google/android/gms/internal/zznk;)V
 
-    :cond_0
-    :goto_0
-    return v0
+    invoke-interface {v0, v1}, Lcom/google/android/gms/ads/doubleclick/OnCustomRenderedAdLoadedListener;->onCustomRenderedAdLoaded(Lcom/google/android/gms/ads/doubleclick/CustomRenderedAd;)V
 
-    :cond_1
-    instance-of v2, p1, Lcom/google/android/gms/internal/zznq;
-
-    if-nez v2, :cond_2
-
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_2
-    check-cast p1, Lcom/google/android/gms/internal/zznq;
-
-    iget-object v2, p0, Lcom/google/android/gms/internal/zznq;->zzakT:Lcom/google/android/gms/common/api/Api;
-
-    iget-object v3, p1, Lcom/google/android/gms/internal/zznq;->zzakT:Lcom/google/android/gms/common/api/Api;
-
-    invoke-static {v2, v3}, Lcom/google/android/gms/common/internal/zzz;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    iget-object v2, p0, Lcom/google/android/gms/internal/zznq;->zzakU:Lcom/google/android/gms/common/api/Api$ApiOptions;
-
-    iget-object v3, p1, Lcom/google/android/gms/internal/zznq;->zzakU:Lcom/google/android/gms/common/api/Api$ApiOptions;
-
-    invoke-static {v2, v3}, Lcom/google/android/gms/common/internal/zzz;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    :cond_3
-    move v0, v1
-
-    goto :goto_0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const/4 v0, 0x2
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lcom/google/android/gms/internal/zznq;->zzakT:Lcom/google/android/gms/common/api/Api;
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x1
-
-    iget-object v2, p0, Lcom/google/android/gms/internal/zznq;->zzakU:Lcom/google/android/gms/common/api/Api$ApiOptions;
-
-    aput-object v2, v0, v1
-
-    invoke-static {v0}, Lcom/google/android/gms/common/internal/zzz;->hashCode([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final zzre()Lcom/google/android/gms/common/api/Api$zzc;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/google/android/gms/common/api/Api$zzc",
-            "<*>;"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zznq;->zzakT:Lcom/google/android/gms/common/api/Api;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/common/api/Api;->zzre()Lcom/google/android/gms/common/api/Api$zzc;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final zzrz()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zznq;->zzakT:Lcom/google/android/gms/common/api/Api;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/common/api/Api;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

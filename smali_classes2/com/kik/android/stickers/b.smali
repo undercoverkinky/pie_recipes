@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static a(Lorg/json/JSONObject;)Lkik/core/datatypes/ab;
+.method public static a(Lorg/json/JSONObject;)Lkik/core/datatypes/y;
     .locals 11
 
     .prologue
@@ -98,7 +98,7 @@
 
     move-result-object v10
 
-    invoke-static {v10}, Lcom/kik/android/stickers/a;->a(Lorg/json/JSONObject;)Lkik/core/datatypes/aa;
+    invoke-static {v10}, Lcom/kik/android/stickers/a;->a(Lorg/json/JSONObject;)Lkik/core/datatypes/x;
 
     move-result-object v10
 
@@ -106,7 +106,7 @@
     if-eqz v10, :cond_1
 
     .line 59
-    invoke-virtual {v10, v2}, Lkik/core/datatypes/aa;->a(Ljava/lang/String;)V
+    invoke-virtual {v10, v2}, Lkik/core/datatypes/x;->a(Ljava/lang/String;)V
 
     .line 60
     invoke-virtual {v8, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -119,7 +119,7 @@
 
     .line 65
     :cond_2
-    invoke-static {v5}, Lkik/core/util/w;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v5}, Lkik/core/util/u;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -140,7 +140,7 @@
 
     .line 75
     :goto_3
-    new-instance v0, Lkik/core/datatypes/ab;
+    new-instance v0, Lkik/core/datatypes/y;
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -152,7 +152,7 @@
 
     move-result-object v7
 
-    invoke-direct/range {v0 .. v8}, Lkik/core/datatypes/ab;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/util/List;)V
+    invoke-direct/range {v0 .. v8}, Lkik/core/datatypes/y;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/util/List;)V
 
     goto :goto_0
 

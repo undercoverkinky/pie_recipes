@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/cards/browser/CaptchaWindowFragment;->e_()V
+    value = Lcom/kik/cards/browser/CaptchaWindowFragment;->a()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 288
+    .line 298
     iput-object p1, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$1;->a:Lcom/kik/cards/browser/CaptchaWindowFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 1
 
     .prologue
-    .line 293
+    .line 303
     iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$1;->a:Lcom/kik/cards/browser/CaptchaWindowFragment;
 
     iget-object v0, v0, Lcom/kik/cards/browser/CaptchaWindowFragment;->e:Lkik/android/chat/fragment/ProgressDialogFragment;
@@ -51,19 +51,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 294
+    .line 304
     iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$1;->a:Lcom/kik/cards/browser/CaptchaWindowFragment;
 
     iget-object v0, v0, Lcom/kik/cards/browser/CaptchaWindowFragment;->e:Lkik/android/chat/fragment/ProgressDialogFragment;
 
     invoke-virtual {v0}, Lkik/android/chat/fragment/ProgressDialogFragment;->dismissAllowingStateLoss()V
 
-    .line 295
+    .line 305
     iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$1;->a:Lcom/kik/cards/browser/CaptchaWindowFragment;
 
-    invoke-virtual {v0}, Lcom/kik/cards/browser/CaptchaWindowFragment;->D()V
+    invoke-virtual {v0}, Lcom/kik/cards/browser/CaptchaWindowFragment;->finish()V
 
-    .line 297
+    .line 307
     :cond_0
     return-void
 .end method

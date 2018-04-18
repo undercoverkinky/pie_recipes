@@ -1,8 +1,15 @@
-.class public abstract Lcom/google/android/gms/ads/mediation/NativeAdMapper;
+.class public Lcom/google/android/gms/ads/mediation/NativeAdMapper;
 .super Ljava/lang/Object;
 
 
+# annotations
+.annotation runtime Lcom/google/android/gms/internal/zzzt;
+.end annotation
+
+
 # instance fields
+.field protected mAdChoicesContent:Landroid/view/View;
+
 .field protected mExtras:Landroid/os/Bundle;
 
 .field protected mOverrideClickHandling:Z
@@ -27,6 +34,14 @@
 
 
 # virtual methods
+.method public getAdChoicesContent()Landroid/view/View;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/mediation/NativeAdMapper;->mAdChoicesContent:Landroid/view/View;
+
+    return-object v0
+.end method
+
 .method public final getExtras()Landroid/os/Bundle;
     .locals 1
 
@@ -63,6 +78,14 @@
     return-void
 .end method
 
+.method public setAdChoicesContent(Landroid/view/View;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/google/android/gms/ads/mediation/NativeAdMapper;->mAdChoicesContent:Landroid/view/View;
+
+    return-void
+.end method
+
 .method public final setExtras(Landroid/os/Bundle;)V
     .locals 0
 
@@ -88,6 +111,12 @@
 .end method
 
 .method public trackView(Landroid/view/View;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public untrackView(Landroid/view/View;)V
     .locals 0
 
     return-void

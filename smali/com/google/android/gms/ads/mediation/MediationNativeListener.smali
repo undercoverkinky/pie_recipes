@@ -23,3 +23,9 @@
 
 .method public abstract onAdOpened(Lcom/google/android/gms/ads/mediation/MediationNativeAdapter;)V
 .end method
+
+.method public abstract zza(Lcom/google/android/gms/ads/mediation/MediationNativeAdapter;Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd;)V
+.end method
+
+.method public abstract zza(Lcom/google/android/gms/ads/mediation/MediationNativeAdapter;Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd;Ljava/lang/String;)V
+.end method

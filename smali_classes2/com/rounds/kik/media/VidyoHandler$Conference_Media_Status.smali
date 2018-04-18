@@ -52,7 +52,7 @@
 
     const/4 v2, 0x0
 
-    .line 100
+    .line 121
     new-instance v0, Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;
 
     const-string v1, "NO_CONFERENCE"
@@ -61,6 +61,7 @@
 
     sput-object v0, Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;->NO_CONFERENCE:Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;
 
+    .line 122
     new-instance v0, Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;
 
     const-string v1, "CONFERENCE_CREATED"
@@ -69,6 +70,7 @@
 
     sput-object v0, Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;->CONFERENCE_CREATED:Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;
 
+    .line 123
     new-instance v0, Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;
 
     const-string v1, "LOCAL_CLIENT_JOINED"
@@ -77,6 +79,7 @@
 
     sput-object v0, Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;->LOCAL_CLIENT_JOINED:Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;
 
+    .line 124
     new-instance v0, Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;
 
     const-string v1, "REMOTE_CLIENT_JOINED"
@@ -85,6 +88,7 @@
 
     sput-object v0, Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;->REMOTE_CLIENT_JOINED:Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;
 
+    .line 125
     new-instance v0, Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;
 
     const-string v1, "REMOTE_MEDIA_RECIEVED"
@@ -93,7 +97,7 @@
 
     sput-object v0, Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;->REMOTE_MEDIA_RECIEVED:Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;
 
-    .line 99
+    .line 120
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;
@@ -132,7 +136,7 @@
     .end annotation
 
     .prologue
-    .line 99
+    .line 120
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -142,7 +146,7 @@
     .locals 1
 
     .prologue
-    .line 99
+    .line 120
     const-class v0, Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -158,7 +162,7 @@
     .locals 1
 
     .prologue
-    .line 99
+    .line 120
     sget-object v0, Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;->$VALUES:[Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;
 
     invoke-virtual {v0}, [Lcom/rounds/kik/media/VidyoHandler$Conference_Media_Status;->clone()Ljava/lang/Object;

@@ -60,7 +60,7 @@
     .line 97
     iget-object v0, p0, Lcom/kik/cards/browser/OnDemandCaptchaFragment$2;->a:Lcom/kik/cards/browser/OnDemandCaptchaFragment;
 
-    invoke-virtual {v0}, Lcom/kik/cards/browser/OnDemandCaptchaFragment;->e_()V
+    invoke-virtual {v0}, Lcom/kik/cards/browser/OnDemandCaptchaFragment;->a()V
 
     .line 98
     return-void

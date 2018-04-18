@@ -33,7 +33,7 @@
 
     .prologue
     .line 65
-    invoke-interface {p1}, Lcom/dyuproject/protostuff/p;->a()Lcom/dyuproject/protostuff/u;
+    invoke-interface {p1}, Lcom/dyuproject/protostuff/p;->cachedSchema()Lcom/dyuproject/protostuff/u;
 
     move-result-object v0
 

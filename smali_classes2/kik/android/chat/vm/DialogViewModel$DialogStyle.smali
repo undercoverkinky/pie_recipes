@@ -30,17 +30,21 @@
 
 .field public static final enum PLAIN:Lkik/android/chat/vm/DialogViewModel$DialogStyle;
 
+.field public static final enum SINGLE_SELECT_RADIO:Lkik/android/chat/vm/DialogViewModel$DialogStyle;
+
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 5
 
     .prologue
+    const/4 v4, 0x2
+
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 15
+    .line 16
     new-instance v0, Lkik/android/chat/vm/DialogViewModel$DialogStyle;
 
     const-string v1, "PLAIN"
@@ -57,8 +61,16 @@
 
     sput-object v0, Lkik/android/chat/vm/DialogViewModel$DialogStyle;->CALL_TO_ACTION:Lkik/android/chat/vm/DialogViewModel$DialogStyle;
 
+    new-instance v0, Lkik/android/chat/vm/DialogViewModel$DialogStyle;
+
+    const-string v1, "SINGLE_SELECT_RADIO"
+
+    invoke-direct {v0, v1, v4}, Lkik/android/chat/vm/DialogViewModel$DialogStyle;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lkik/android/chat/vm/DialogViewModel$DialogStyle;->SINGLE_SELECT_RADIO:Lkik/android/chat/vm/DialogViewModel$DialogStyle;
+
     .line 14
-    const/4 v0, 0x2
+    const/4 v0, 0x3
 
     new-array v0, v0, [Lkik/android/chat/vm/DialogViewModel$DialogStyle;
 
@@ -69,6 +81,10 @@
     sget-object v1, Lkik/android/chat/vm/DialogViewModel$DialogStyle;->CALL_TO_ACTION:Lkik/android/chat/vm/DialogViewModel$DialogStyle;
 
     aput-object v1, v0, v3
+
+    sget-object v1, Lkik/android/chat/vm/DialogViewModel$DialogStyle;->SINGLE_SELECT_RADIO:Lkik/android/chat/vm/DialogViewModel$DialogStyle;
+
+    aput-object v1, v0, v4
 
     sput-object v0, Lkik/android/chat/vm/DialogViewModel$DialogStyle;->$VALUES:[Lkik/android/chat/vm/DialogViewModel$DialogStyle;
 

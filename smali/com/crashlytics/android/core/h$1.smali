@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/crashlytics/android/core/h;->s()V
+    value = Lcom/crashlytics/android/core/h;->q()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 673
+    .line 677
     iput-object p1, p0, Lcom/crashlytics/android/core/h$1;->a:Lcom/crashlytics/android/core/h;
 
     invoke-direct {p0}, Lio/fabric/sdk/android/services/concurrency/d;-><init>()V
@@ -46,7 +46,7 @@
     .locals 1
 
     .prologue
-    .line 681
+    .line 685
     sget-object v0, Lio/fabric/sdk/android/services/concurrency/Priority;->IMMEDIATE:Lio/fabric/sdk/android/services/concurrency/Priority;
 
     return-object v0
@@ -61,14 +61,14 @@
     .end annotation
 
     .prologue
-    .line 673
-    .line 1676
+    .line 677
+    .line 1680
     iget-object v0, p0, Lcom/crashlytics/android/core/h$1;->a:Lcom/crashlytics/android/core/h;
 
     invoke-virtual {v0}, Lcom/crashlytics/android/core/h;->c()Ljava/lang/Void;
 
     move-result-object v0
 
-    .line 673
+    .line 677
     return-object v0
 .end method

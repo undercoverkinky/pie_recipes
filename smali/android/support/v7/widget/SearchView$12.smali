@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 1611
+    .line 1756
     iput-object p1, p0, Landroid/support/v7/widget/SearchView$12;->a:Landroid/support/v7/widget/SearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 0
 
     .prologue
-    .line 1621
+    .line 1768
     return-void
 .end method
 
@@ -48,7 +48,7 @@
     .locals 0
 
     .prologue
-    .line 1613
+    .line 1758
     return-void
 .end method
 
@@ -56,11 +56,11 @@
     .locals 1
 
     .prologue
-    .line 1617
+    .line 1763
     iget-object v0, p0, Landroid/support/v7/widget/SearchView$12;->a:Landroid/support/v7/widget/SearchView;
 
-    invoke-static {v0, p1}, Landroid/support/v7/widget/SearchView;->a(Landroid/support/v7/widget/SearchView;Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/SearchView;->b(Ljava/lang/CharSequence;)V
 
-    .line 1618
+    .line 1764
     return-void
 .end method

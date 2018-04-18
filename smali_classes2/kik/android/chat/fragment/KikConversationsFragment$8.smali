@@ -1,14 +1,11 @@
 .class final Lkik/android/chat/fragment/KikConversationsFragment$8;
-.super Ljava/lang/Object;
+.super Lcom/kik/events/k;
 .source "SourceFile"
-
-# interfaces
-.implements Lkik/android/chat/view/aa$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/KikConversationsFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    value = Lkik/android/chat/fragment/KikConversationsFragment;->g()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,189 +13,268 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/kik/events/k",
+        "<",
+        "Ljava/lang/Boolean;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
-.field final synthetic a:Lkik/android/chat/fragment/KikConversationsFragment;
+.field final synthetic a:Z
+
+.field final synthetic b:Lkik/android/chat/fragment/KikConversationsFragment;
 
 
 # direct methods
-.method constructor <init>(Lkik/android/chat/fragment/KikConversationsFragment;)V
+.method constructor <init>(Lkik/android/chat/fragment/KikConversationsFragment;Z)V
     .locals 0
 
     .prologue
-    .line 445
-    iput-object p1, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->a:Lkik/android/chat/fragment/KikConversationsFragment;
+    .line 339
+    iput-object p1, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->b:Lkik/android/chat/fragment/KikConversationsFragment;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-boolean p2, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->a:Z
+
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final synthetic a(Ljava/lang/Object;)V
+    .locals 6
 
     .prologue
-    .line 468
-    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->a:Lkik/android/chat/fragment/KikConversationsFragment;
+    const/4 v2, 0x0
 
-    iget-object v1, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->a:Lkik/android/chat/fragment/KikConversationsFragment;
+    const/4 v1, 0x1
 
-    iget-object v1, v1, Lkik/android/chat/fragment/KikConversationsFragment;->_searchBarView:Lkik/android/chat/view/SearchBarViewImpl;
+    .line 339
+    check-cast p1, Ljava/lang/Boolean;
 
-    invoke-virtual {v1}, Lkik/android/chat/view/SearchBarViewImpl;->d()Lkik/android/widget/RobotoEditText;
+    .line 1343
+    iget-boolean v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->a:Z
+
+    if-nez v0, :cond_3
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    move v0, v1
+
+    .line 1345
+    :goto_0
+    iget-object v3, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->b:Lkik/android/chat/fragment/KikConversationsFragment;
+
+    invoke-virtual {v3}, Lkik/android/chat/fragment/KikConversationsFragment;->b()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_4
+
+    iget-object v3, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->b:Lkik/android/chat/fragment/KikConversationsFragment;
+
+    iget-object v3, v3, Lkik/android/chat/fragment/KikConversationsFragment;->b:Lkik/core/interfaces/IAddressBookIntegration;
+
+    invoke-interface {v3}, Lkik/core/interfaces/IAddressBookIntegration;->f()Lkik/core/interfaces/IAddressBookIntegration$UploadInfoPermissionState;
+
+    move-result-object v3
+
+    sget-object v4, Lkik/core/interfaces/IAddressBookIntegration$UploadInfoPermissionState;->UNSET:Lkik/core/interfaces/IAddressBookIntegration$UploadInfoPermissionState;
+
+    if-ne v3, v4, :cond_4
+
+    move v3, v1
+
+    .line 1348
+    :goto_1
+    iget-object v4, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->b:Lkik/android/chat/fragment/KikConversationsFragment;
+
+    invoke-virtual {v4}, Lkik/android/chat/fragment/KikConversationsFragment;->b()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    iget-object v4, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->b:Lkik/android/chat/fragment/KikConversationsFragment;
+
+    iget-object v4, v4, Lkik/android/chat/fragment/KikConversationsFragment;->b:Lkik/core/interfaces/IAddressBookIntegration;
+
+    invoke-interface {v4}, Lkik/core/interfaces/IAddressBookIntegration;->f()Lkik/core/interfaces/IAddressBookIntegration$UploadInfoPermissionState;
+
+    move-result-object v4
+
+    sget-object v5, Lkik/core/interfaces/IAddressBookIntegration$UploadInfoPermissionState;->FALSE:Lkik/core/interfaces/IAddressBookIntegration$UploadInfoPermissionState;
+
+    if-ne v4, v5, :cond_0
+
+    move v2, v1
+
+    .line 1350
+    :cond_0
+    if-eqz v3, :cond_5
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_5
+
+    .line 1352
+    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->b:Lkik/android/chat/fragment/KikConversationsFragment;
+
+    iget-object v0, v0, Lkik/android/chat/fragment/KikConversationsFragment;->b:Lkik/core/interfaces/IAddressBookIntegration;
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-interface {v0, v2}, Lkik/core/interfaces/IAddressBookIntegration;->a(Ljava/lang/Boolean;)V
+
+    .line 1353
+    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->b:Lkik/android/chat/fragment/KikConversationsFragment;
+
+    iget-object v0, v0, Lkik/android/chat/fragment/KikConversationsFragment;->b:Lkik/core/interfaces/IAddressBookIntegration;
+
+    const-string v2, "upgrade"
+
+    invoke-interface {v0, v2}, Lkik/core/interfaces/IAddressBookIntegration;->b(Ljava/lang/String;)V
+
+    .line 1364
+    :cond_1
+    :goto_2
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 1366
+    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->b:Lkik/android/chat/fragment/KikConversationsFragment;
+
+    invoke-static {v0}, Lkik/android/chat/fragment/KikConversationsFragment;->n(Lkik/android/chat/fragment/KikConversationsFragment;)Lkik/android/chat/fragment/KikConversationsFragment$a;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lkik/android/chat/fragment/KikConversationsFragment$a;->b(Lkik/android/chat/fragment/KikConversationsFragment$a;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "registration"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 1367
+    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->b:Lkik/android/chat/fragment/KikConversationsFragment;
+
+    iget-object v0, v0, Lkik/android/chat/fragment/KikConversationsFragment;->_storage:Lkik/core/interfaces/ad;
+
+    const-string v2, "kik.addressbook.permission"
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    invoke-interface {v0, v2, v3}, Lkik/core/interfaces/ad;->a(Ljava/lang/String;Ljava/lang/Boolean;)Z
+
+    .line 1368
+    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->b:Lkik/android/chat/fragment/KikConversationsFragment;
+
+    iget-object v0, v0, Lkik/android/chat/fragment/KikConversationsFragment;->_storage:Lkik/core/interfaces/ad;
+
+    const-string v2, "kik.addressbook.flow.finished"
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikConversationsFragment;->b(Landroid/view/View;)V
+    invoke-interface {v0, v2, v1}, Lkik/core/interfaces/ad;->a(Ljava/lang/String;Ljava/lang/Boolean;)Z
 
-    .line 469
-    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->a:Lkik/android/chat/fragment/KikConversationsFragment;
+    .line 1370
+    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->b:Lkik/android/chat/fragment/KikConversationsFragment;
 
-    iget-object v0, v0, Lkik/android/chat/fragment/KikConversationsFragment;->_searchBarView:Lkik/android/chat/view/SearchBarViewImpl;
+    iget-object v0, v0, Lkik/android/chat/fragment/KikConversationsFragment;->b:Lkik/core/interfaces/IAddressBookIntegration;
 
-    invoke-virtual {v0}, Lkik/android/chat/view/SearchBarViewImpl;->d()Lkik/android/widget/RobotoEditText;
+    iget-object v1, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->b:Lkik/android/chat/fragment/KikConversationsFragment;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lkik/android/widget/RobotoEditText;->clearFocus()V
-
-    .line 470
-    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->a:Lkik/android/chat/fragment/KikConversationsFragment;
-
-    iget-object v0, v0, Lkik/android/chat/fragment/KikConversationsFragment;->_searchBarView:Lkik/android/chat/view/SearchBarViewImpl;
-
-    invoke-virtual {v0}, Lkik/android/chat/view/SearchBarViewImpl;->d()Lkik/android/widget/RobotoEditText;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lkik/android/widget/RobotoEditText;->getText()Landroid/text/Editable;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 471
-    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->a:Lkik/android/chat/fragment/KikConversationsFragment;
-
-    invoke-static {v0}, Lkik/android/chat/fragment/KikConversationsFragment;->f(Lkik/android/chat/fragment/KikConversationsFragment;)Z
-
-    .line 473
-    :cond_0
-    return-void
-.end method
-
-.method public final a(Ljava/lang/String;)V
-    .locals 3
-
-    .prologue
-    .line 455
-    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->a:Lkik/android/chat/fragment/KikConversationsFragment;
-
-    invoke-static {v0}, Lkik/android/chat/fragment/KikConversationsFragment;->c(Lkik/android/chat/fragment/KikConversationsFragment;)Lkik/android/chat/vm/chats/search/ChatsSearchResultsViewModel;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lkik/android/chat/vm/chats/search/ChatsSearchResultsViewModel;->a(Ljava/lang/String;)V
-
-    .line 456
-    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->a:Lkik/android/chat/fragment/KikConversationsFragment;
-
-    invoke-static {v0}, Lkik/android/chat/fragment/KikConversationsFragment;->d(Lkik/android/chat/fragment/KikConversationsFragment;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 457
-    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->a:Lkik/android/chat/fragment/KikConversationsFragment;
-
-    invoke-static {v0}, Lkik/android/chat/fragment/KikConversationsFragment;->e(Lkik/android/chat/fragment/KikConversationsFragment;)Z
-
-    .line 458
-    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->a:Lkik/android/chat/fragment/KikConversationsFragment;
-
-    iget-object v0, v0, Lkik/android/chat/fragment/KikConversationsFragment;->g:Lcom/kik/android/Mixpanel;
-
-    const-string v1, "Search Started"
-
-    invoke-virtual {v0, v1}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;)Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    const-string v1, "Source"
-
-    const-string v2, "Pull to Search"
-
-    .line 459
-    invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    .line 460
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    .line 461
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
-
-    .line 463
-    :cond_0
-    return-void
-.end method
-
-.method public final a(Z)V
-    .locals 0
-
-    .prologue
-    .line 450
-    return-void
-.end method
-
-.method public final b()V
-    .locals 3
-
-    .prologue
-    .line 478
-    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->a:Lkik/android/chat/fragment/KikConversationsFragment;
-
-    iget-object v0, v0, Lkik/android/chat/fragment/KikConversationsFragment;->_searchBarView:Lkik/android/chat/view/SearchBarViewImpl;
-
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Lkik/android/chat/view/SearchBarViewImpl;->a(Ljava/lang/String;)V
-
-    .line 479
-    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->a:Lkik/android/chat/fragment/KikConversationsFragment;
-
-    iget-object v1, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->a:Lkik/android/chat/fragment/KikConversationsFragment;
-
-    iget-object v1, v1, Lkik/android/chat/fragment/KikConversationsFragment;->_searchBarView:Lkik/android/chat/view/SearchBarViewImpl;
-
-    invoke-virtual {v1}, Lkik/android/chat/view/SearchBarViewImpl;->d()Lkik/android/widget/RobotoEditText;
+    invoke-static {v1}, Lkik/android/chat/fragment/KikConversationsFragment;->n(Lkik/android/chat/fragment/KikConversationsFragment;)Lkik/android/chat/fragment/KikConversationsFragment$a;
 
     move-result-object v1
 
-    const/4 v2, 0x1
+    invoke-static {v1}, Lkik/android/chat/fragment/KikConversationsFragment$a;->b(Lkik/android/chat/fragment/KikConversationsFragment$a;)Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Lkik/android/chat/fragment/KikConversationsFragment;->a(Landroid/view/View;Z)V
+    move-result-object v1
 
-    .line 480
+    invoke-interface {v0, v1}, Lkik/core/interfaces/IAddressBookIntegration;->d(Ljava/lang/String;)V
+
+    .line 339
+    :cond_2
     return-void
+
+    :cond_3
+    move v0, v2
+
+    .line 1343
+    goto/16 :goto_0
+
+    :cond_4
+    move v3, v2
+
+    .line 1345
+    goto :goto_1
+
+    .line 1355
+    :cond_5
+    if-nez v3, :cond_6
+
+    if-eqz v2, :cond_7
+
+    .line 1357
+    :cond_6
+    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->b:Lkik/android/chat/fragment/KikConversationsFragment;
+
+    const-string v2, "upgrade"
+
+    invoke-static {v0, v2}, Lkik/android/chat/fragment/KikConversationsFragment;->b(Lkik/android/chat/fragment/KikConversationsFragment;Ljava/lang/String;)V
+
+    goto :goto_2
+
+    .line 1359
+    :cond_7
+    if-eqz v0, :cond_1
+
+    .line 1361
+    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->b:Lkik/android/chat/fragment/KikConversationsFragment;
+
+    iget-object v2, p0, Lkik/android/chat/fragment/KikConversationsFragment$8;->b:Lkik/android/chat/fragment/KikConversationsFragment;
+
+    invoke-static {v2}, Lkik/android/chat/fragment/KikConversationsFragment;->n(Lkik/android/chat/fragment/KikConversationsFragment;)Lkik/android/chat/fragment/KikConversationsFragment$a;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lkik/android/chat/fragment/KikConversationsFragment$a;->b(Lkik/android/chat/fragment/KikConversationsFragment$a;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lkik/android/chat/fragment/KikConversationsFragment;->b(Lkik/android/chat/fragment/KikConversationsFragment;Ljava/lang/String;)V
+
+    goto :goto_2
 .end method

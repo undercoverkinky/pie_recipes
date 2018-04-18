@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 735
+    .line 766
     iput-object p1, p0, Lkik/android/chat/fragment/KikCodeFragment$9;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,18 +37,16 @@
 
 # virtual methods
 .method public final run()V
-    .locals 8
+    .locals 5
 
     .prologue
-    const-wide/16 v6, 0xc8
-
     const/4 v4, 0x2
 
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 739
+    .line 770
     new-array v0, v3, [Landroid/view/View;
 
     iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment$9;->a:Lkik/android/chat/fragment/KikCodeFragment;
@@ -57,9 +55,9 @@
 
     aput-object v1, v0, v2
 
-    invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->d([Landroid/view/View;)V
 
-    .line 740
+    .line 771
     new-array v0, v4, [Landroid/view/View;
 
     iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment$9;->a:Lkik/android/chat/fragment/KikCodeFragment;
@@ -74,9 +72,9 @@
 
     aput-object v1, v0, v3
 
-    invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->g([Landroid/view/View;)V
 
-    .line 741
+    .line 772
     new-array v0, v4, [Landroid/view/View;
 
     iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment$9;->a:Lkik/android/chat/fragment/KikCodeFragment;
@@ -91,9 +89,9 @@
 
     aput-object v1, v0, v3
 
-    invoke-static {v6, v7, v0}, Lkik/android/util/am;->b(J[Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ao;->b([Landroid/view/View;)V
 
-    .line 742
+    .line 773
     new-array v0, v4, [Landroid/view/View;
 
     iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment$9;->a:Lkik/android/chat/fragment/KikCodeFragment;
@@ -108,8 +106,8 @@
 
     aput-object v1, v0, v3
 
-    invoke-static {v6, v7, v0}, Lkik/android/util/am;->a(J[Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ao;->a([Landroid/view/View;)V
 
-    .line 743
+    .line 774
     return-void
 .end method

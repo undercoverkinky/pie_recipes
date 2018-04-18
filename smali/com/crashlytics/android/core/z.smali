@@ -245,6 +245,7 @@
 
     iget-object v8, v6, Lcom/crashlytics/android/core/a/a/f;->c:[Lcom/crashlytics/android/core/a/a/f$a;
 
+    .line 1576
     invoke-static {v8}, Lcom/crashlytics/android/core/z;->a([Lcom/crashlytics/android/core/a/a/f$a;)Lcom/crashlytics/android/core/z$k;
 
     move-result-object v8
@@ -365,7 +366,7 @@
 
     goto :goto_5
 
-    .line 2546
+    .line 2547
     :cond_5
     invoke-interface {v4}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -428,7 +429,7 @@
 
     goto :goto_6
 
-    .line 1511
+    .line 1512
     :cond_6
     invoke-static {v7}, Lcom/crashlytics/android/core/z;->a([Lcom/crashlytics/android/core/a/a/b;)Lcom/crashlytics/android/core/z$k;
 

@@ -1,1464 +1,549 @@
-.class public abstract Lcom/google/android/gms/internal/zzao;
-.super Lcom/google/android/gms/internal/zzam;
+.class public final Lcom/google/android/gms/internal/zzao;
+.super Ljava/lang/Object;
 
-
-# static fields
-.field private static final TAG:Ljava/lang/String;
-
-.field private static startTime:J
-
-.field protected static volatile zznO:Lcom/google/android/gms/internal/zzav;
-
-.field private static zzoe:Ljava/lang/reflect/Method;
-
-.field static zzog:Z
-
-.field protected static final zzoj:Ljava/lang/Object;
+# interfaces
+.implements Lcom/google/android/gms/internal/zzan;
 
 
 # instance fields
-.field protected zzod:Z
+.field private final zzcb:Lcom/google/android/gms/internal/zzap;
 
-.field protected zzof:Ljava/lang/String;
-
-.field protected zzoh:Z
-
-.field protected zzoi:Z
+.field private final zzcc:Ljavax/net/ssl/SSLSocketFactory;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
-    const-class v0, Lcom/google/android/gms/internal/zzao;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/google/android/gms/internal/zzao;-><init>(Lcom/google/android/gms/internal/zzap;)V
+
+    return-void
+.end method
+
+.method private constructor <init>(Lcom/google/android/gms/internal/zzap;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0, v0}, Lcom/google/android/gms/internal/zzao;-><init>(Lcom/google/android/gms/internal/zzap;Ljavax/net/ssl/SSLSocketFactory;)V
+
+    return-void
+.end method
+
+.method private constructor <init>(Lcom/google/android/gms/internal/zzap;Ljavax/net/ssl/SSLSocketFactory;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzao;->zzcb:Lcom/google/android/gms/internal/zzap;
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzao;->zzcc:Ljavax/net/ssl/SSLSocketFactory;
+
+    return-void
+.end method
+
+.method private static zza(Ljava/net/HttpURLConnection;)Lorg/apache/http/HttpEntity;
+    .locals 4
+
+    new-instance v1, Lorg/apache/http/entity/BasicHttpEntity;
+
+    invoke-direct {v1}, Lorg/apache/http/entity/BasicHttpEntity;-><init>()V
+
+    :try_start_0
+    invoke-virtual {p0}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
-    sput-object v0, Lcom/google/android/gms/internal/zzao;->TAG:Ljava/lang/String;
+    :goto_0
+    invoke-virtual {v1, v0}, Lorg/apache/http/entity/BasicHttpEntity;->setContent(Ljava/io/InputStream;)V
 
-    const-wide/16 v0, 0x0
+    invoke-virtual {p0}, Ljava/net/HttpURLConnection;->getContentLength()I
 
-    sput-wide v0, Lcom/google/android/gms/internal/zzao;->startTime:J
+    move-result v0
 
-    const/4 v0, 0x0
+    int-to-long v2, v0
 
-    sput-boolean v0, Lcom/google/android/gms/internal/zzao;->zzog:Z
+    invoke-virtual {v1, v2, v3}, Lorg/apache/http/entity/BasicHttpEntity;->setContentLength(J)V
 
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Ljava/net/HttpURLConnection;->getContentEncoding()Ljava/lang/String;
 
-    sput-object v0, Lcom/google/android/gms/internal/zzao;->zznO:Lcom/google/android/gms/internal/zzav;
+    move-result-object v0
 
-    new-instance v0, Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Lorg/apache/http/entity/BasicHttpEntity;->setContentEncoding(Ljava/lang/String;)V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Ljava/net/HttpURLConnection;->getContentType()Ljava/lang/String;
 
-    sput-object v0, Lcom/google/android/gms/internal/zzao;->zzoj:Ljava/lang/Object;
+    move-result-object v0
 
-    return-void
+    invoke-virtual {v1, v0}, Lorg/apache/http/entity/BasicHttpEntity;->setContentType(Ljava/lang/String;)V
+
+    return-object v1
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {p0}, Ljava/net/HttpURLConnection;->getErrorStream()Ljava/io/InputStream;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method
 
-.method protected constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1}, Lcom/google/android/gms/internal/zzam;-><init>(Landroid/content/Context;)V
-
-    iput-boolean v0, p0, Lcom/google/android/gms/internal/zzao;->zzod:Z
-
-    iput-boolean v0, p0, Lcom/google/android/gms/internal/zzao;->zzoh:Z
-
-    iput-boolean v0, p0, Lcom/google/android/gms/internal/zzao;->zzoi:Z
-
-    iput-object p2, p0, Lcom/google/android/gms/internal/zzao;->zzof:Ljava/lang/String;
-
-    iput-boolean v0, p0, Lcom/google/android/gms/internal/zzao;->zzod:Z
-
-    return-void
-.end method
-
-.method protected constructor <init>(Landroid/content/Context;Ljava/lang/String;Z)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1}, Lcom/google/android/gms/internal/zzam;-><init>(Landroid/content/Context;)V
-
-    iput-boolean v0, p0, Lcom/google/android/gms/internal/zzao;->zzod:Z
-
-    iput-boolean v0, p0, Lcom/google/android/gms/internal/zzao;->zzoh:Z
-
-    iput-boolean v0, p0, Lcom/google/android/gms/internal/zzao;->zzoi:Z
-
-    iput-object p2, p0, Lcom/google/android/gms/internal/zzao;->zzof:Ljava/lang/String;
-
-    iput-boolean p3, p0, Lcom/google/android/gms/internal/zzao;->zzod:Z
-
-    return-void
-.end method
-
-.method static zza(Lcom/google/android/gms/internal/zzav;Landroid/view/MotionEvent;Landroid/util/DisplayMetrics;)Ljava/util/List;
-    .locals 4
+.method private static zza(Ljava/net/HttpURLConnection;Lcom/google/android/gms/internal/zzp;)V
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/google/android/gms/internal/zzav;",
-            "Landroid/view/MotionEvent;",
-            "Landroid/util/DisplayMetrics;",
-            ")",
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/Long;",
-            ">;"
+            "Ljava/net/HttpURLConnection;",
+            "Lcom/google/android/gms/internal/zzp",
+            "<*>;)V"
         }
     .end annotation
 
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Lcom/google/android/gms/internal/zzau;
+            Ljava/io/IOException;,
+            Lcom/google/android/gms/internal/zza;
         }
     .end annotation
 
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzaB()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/google/android/gms/internal/zzp;->zzg()[B
 
     move-result-object v0
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzaC()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v0, v1}, Lcom/google/android/gms/internal/zzav;->zzc(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/google/android/gms/internal/zzao;->zzoe:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
-    if-nez p1, :cond_1
-
-    :cond_0
-    new-instance v0, Lcom/google/android/gms/internal/zzau;
-
-    invoke-direct {v0}, Lcom/google/android/gms/internal/zzau;-><init>()V
-
-    throw v0
-
-    :cond_1
-    :try_start_0
-    sget-object v0, Lcom/google/android/gms/internal/zzao;->zzoe:Ljava/lang/reflect/Method;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x2
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    aput-object p1, v2, v3
-
-    const/4 v3, 0x1
-
-    aput-object p2, v2, v3
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/ArrayList;
-    :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
-
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Lcom/google/android/gms/internal/zzau;
-
-    invoke-direct {v1, v0}, Lcom/google/android/gms/internal/zzau;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :catch_1
-    move-exception v0
-
-    new-instance v1, Lcom/google/android/gms/internal/zzau;
-
-    invoke-direct {v1, v0}, Lcom/google/android/gms/internal/zzau;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-.end method
-
-.method protected static declared-synchronized zza(Landroid/content/Context;Z)V
-    .locals 6
-
-    const-class v1, Lcom/google/android/gms/internal/zzao;
-
-    monitor-enter v1
-
-    :try_start_0
-    sget-boolean v0, Lcom/google/android/gms/internal/zzao;->zzog:Z
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/Date;->getTime()J
-
-    move-result-wide v2
-
-    const-wide/16 v4, 0x3e8
-
-    div-long/2addr v2, v4
-
-    sput-wide v2, Lcom/google/android/gms/internal/zzao;->startTime:J
-
-    invoke-static {p0, p1}, Lcom/google/android/gms/internal/zzao;->zzb(Landroid/content/Context;Z)Lcom/google/android/gms/internal/zzav;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/google/android/gms/internal/zzao;->zznO:Lcom/google/android/gms/internal/zzav;
-
-    const/4 v0, 0x1
-
-    sput-boolean v0, Lcom/google/android/gms/internal/zzao;->zzog:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_0
-    monitor-exit v1
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-
-    throw v0
-.end method
-
-.method private static zza(Lcom/google/android/gms/internal/zzav;)V
-    .locals 3
-
-    const-class v0, Landroid/content/Context;
-
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzan()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzao()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v1, v2, v0}, Lcom/google/android/gms/internal/zzav;->zza(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Z
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzal()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzam()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v1, v2, v0}, Lcom/google/android/gms/internal/zzav;->zza(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Z
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzax()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzay()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v1, v2, v0}, Lcom/google/android/gms/internal/zzav;->zza(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Z
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzav()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzaw()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v1, v2, v0}, Lcom/google/android/gms/internal/zzav;->zza(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Z
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzaf()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzag()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v1, v2, v0}, Lcom/google/android/gms/internal/zzav;->zza(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Z
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzad()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzae()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v1, v2, v0}, Lcom/google/android/gms/internal/zzav;->zza(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Z
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzab()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzac()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v1, v2, v0}, Lcom/google/android/gms/internal/zzav;->zza(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Z
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzar()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzas()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v1, v2, v0}, Lcom/google/android/gms/internal/zzav;->zza(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Z
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzZ()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzaa()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v1, v2, v0}, Lcom/google/android/gms/internal/zzav;->zza(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Z
-
-    const/4 v0, 0x2
-
-    new-array v0, v0, [Ljava/lang/Class;
-
-    const/4 v1, 0x0
-
-    const-class v2, Landroid/view/MotionEvent;
-
-    aput-object v2, v0, v1
-
     const/4 v1, 0x1
 
-    const-class v2, Landroid/util/DisplayMetrics;
+    invoke-virtual {p0, v1}, Ljava/net/HttpURLConnection;->setDoOutput(Z)V
 
-    aput-object v2, v0, v1
+    const-string v1, "Content-Type"
 
-    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzaB()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzaC()Ljava/lang/String;
+    invoke-static {}, Lcom/google/android/gms/internal/zzp;->zzf()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p0, v1, v2, v0}, Lcom/google/android/gms/internal/zzav;->zza(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Z
+    invoke-virtual {p0, v1, v2}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzaj()Ljava/lang/String;
+    new-instance v1, Ljava/io/DataOutputStream;
 
-    move-result-object v0
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzak()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    invoke-virtual {p0}, Ljava/net/HttpURLConnection;->getOutputStream()Ljava/io/OutputStream;
 
     move-result-object v2
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/google/android/gms/internal/zzav;->zza(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Z
+    invoke-direct {v1, v2}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzaz()Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/io/DataOutputStream;->write([B)V
 
-    move-result-object v0
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzaA()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/google/android/gms/internal/zzav;->zza(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Z
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzat()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzau()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/google/android/gms/internal/zzav;->zza(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Z
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzah()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzai()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/google/android/gms/internal/zzav;->zza(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Z
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzap()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzaq()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/google/android/gms/internal/zzav;->zza(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Z
-
-    return-void
-.end method
-
-.method protected static zzb(Landroid/content/Context;Z)Lcom/google/android/gms/internal/zzav;
-    .locals 3
-
-    sget-object v0, Lcom/google/android/gms/internal/zzao;->zznO:Lcom/google/android/gms/internal/zzav;
-
-    if-nez v0, :cond_1
-
-    sget-object v1, Lcom/google/android/gms/internal/zzao;->zzoj:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_0
-    sget-object v0, Lcom/google/android/gms/internal/zzao;->zznO:Lcom/google/android/gms/internal/zzav;
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->getKey()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzY()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {p0, v0, v2, p1}, Lcom/google/android/gms/internal/zzav;->zza(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Z)Lcom/google/android/gms/internal/zzav;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/zzao;->zza(Lcom/google/android/gms/internal/zzav;)V
-
-    sput-object v0, Lcom/google/android/gms/internal/zzao;->zznO:Lcom/google/android/gms/internal/zzav;
+    invoke-virtual {v1}, Ljava/io/DataOutputStream;->close()V
 
     :cond_0
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_1
-    sget-object v0, Lcom/google/android/gms/internal/zzao;->zznO:Lcom/google/android/gms/internal/zzav;
-
-    return-object v0
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
+    return-void
 .end method
 
 
 # virtual methods
-.method protected zza(Lcom/google/android/gms/internal/zzav;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;)V
-    .locals 1
-
-    invoke-virtual {p1}, Lcom/google/android/gms/internal/zzav;->zzaD()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    :goto_0
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, p1, p2}, Lcom/google/android/gms/internal/zzao;->zzb(Lcom/google/android/gms/internal/zzav;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/zzao;->zza(Ljava/util/List;)V
-
-    goto :goto_0
-.end method
-
-.method protected zza(Ljava/util/List;)V
-    .locals 4
+.method public final zza(Lcom/google/android/gms/internal/zzp;Ljava/util/Map;)Lorg/apache/http/HttpResponse;
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ljava/util/List",
+            "Lcom/google/android/gms/internal/zzp",
+            "<*>;",
+            "Ljava/util/Map",
             "<",
-            "Ljava/util/concurrent/Callable",
-            "<",
-            "Ljava/lang/Void;",
-            ">;>;)V"
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;)",
+            "Lorg/apache/http/HttpResponse;"
         }
     .end annotation
 
-    sget-object v0, Lcom/google/android/gms/internal/zzao;->zznO:Lcom/google/android/gms/internal/zzav;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;,
+            Lcom/google/android/gms/internal/zza;
+        }
+    .end annotation
 
-    if-nez v0, :cond_1
+    const/4 v4, 0x0
 
-    :cond_0
-    :goto_0
-    return-void
+    const/4 v3, 0x1
 
-    :cond_1
-    sget-object v0, Lcom/google/android/gms/internal/zzao;->zznO:Lcom/google/android/gms/internal/zzav;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/zzav;->zzaD()Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {p1}, Lcom/google/android/gms/internal/zzp;->getUrl()Ljava/lang/String;
 
     move-result-object v1
+
+    new-instance v5, Ljava/util/HashMap;
+
+    invoke-direct {v5}, Ljava/util/HashMap;-><init>()V
+
+    invoke-virtual {p1}, Lcom/google/android/gms/internal/zzp;->getHeaders()Ljava/util/Map;
+
+    move-result-object v0
+
+    invoke-virtual {v5, v0}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
+
+    invoke-virtual {v5, p2}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzao;->zzcb:Lcom/google/android/gms/internal/zzap;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzao;->zzcb:Lcom/google/android/gms/internal/zzap;
+
+    invoke-interface {v0, v1}, Lcom/google/android/gms/internal/zzap;->zzg(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_2
+
+    new-instance v2, Ljava/io/IOException;
+
+    const-string v3, "URL blocked by rewriter: "
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v1
 
     if-eqz v1, :cond_0
 
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    :try_start_0
-    sget-object v0, Lcom/google/android/gms/internal/zzcu;->zzyK:Lcom/google/android/gms/internal/zzcq;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/zzcq;->get()Ljava/lang/Object;
+    invoke-virtual {v3, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Long;
+    :goto_0
+    invoke-direct {v2, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+    throw v2
 
-    move-result-wide v2
+    :cond_0
+    new-instance v0, Ljava/lang/String;
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-interface {v1, p1, v2, v3, v0}, Ljava/util/concurrent/ExecutorService;->invokeAll(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/util/List;
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {v0, v3}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
     goto :goto_0
 
-    :catch_0
-    move-exception v0
+    :cond_1
+    move-object v0, v1
 
-    const-string v1, "class methods got exception: %s"
+    :cond_2
+    new-instance v1, Ljava/net/URL;
 
-    const/4 v2, 0x1
+    invoke-direct {v1, v0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/zzaw;->zza(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object v0
 
-    aput-object v0, v2, v3
+    check-cast v0, Ljava/net/HttpURLConnection;
 
-    invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    goto :goto_0
-.end method
-
-.method protected zzb(Lcom/google/android/gms/internal/zzav;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;)Ljava/util/List;
-    .locals 19
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/internal/zzav;",
-            "Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;",
-            ")",
-            "Ljava/util/List",
-            "<",
-            "Ljava/util/concurrent/Callable",
-            "<",
-            "Ljava/lang/Void;",
-            ">;>;"
-        }
-    .end annotation
-
-    invoke-virtual/range {p1 .. p1}, Lcom/google/android/gms/internal/zzav;->zzT()I
-
-    move-result v7
-
-    new-instance v18, Ljava/util/ArrayList;
-
-    invoke-direct/range {v18 .. v18}, Ljava/util/ArrayList;-><init>()V
-
-    new-instance v2, Lcom/google/android/gms/internal/zzaz;
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzan()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzao()Ljava/lang/String;
-
-    move-result-object v5
-
-    const/16 v8, 0x1b
-
-    move-object/from16 v3, p1
-
-    move-object/from16 v6, p2
-
-    invoke-direct/range {v2 .. v8}, Lcom/google/android/gms/internal/zzaz;-><init>(Lcom/google/android/gms/internal/zzav;Ljava/lang/String;Ljava/lang/String;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;II)V
-
-    move-object/from16 v0, v18
-
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v9, Lcom/google/android/gms/internal/zzbe;
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzaj()Ljava/lang/String;
-
-    move-result-object v11
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzak()Ljava/lang/String;
-
-    move-result-object v12
-
-    sget-wide v14, Lcom/google/android/gms/internal/zzao;->startTime:J
-
-    const/16 v17, 0x19
-
-    move-object/from16 v10, p1
-
-    move-object/from16 v13, p2
-
-    move/from16 v16, v7
-
-    invoke-direct/range {v9 .. v17}, Lcom/google/android/gms/internal/zzbe;-><init>(Lcom/google/android/gms/internal/zzav;Ljava/lang/String;Ljava/lang/String;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;JII)V
-
-    move-object/from16 v0, v18
-
-    invoke-interface {v0, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v2, Lcom/google/android/gms/internal/zzbi;
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzat()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzau()Ljava/lang/String;
-
-    move-result-object v5
-
-    const/4 v8, 0x1
-
-    move-object/from16 v3, p1
-
-    move-object/from16 v6, p2
-
-    invoke-direct/range {v2 .. v8}, Lcom/google/android/gms/internal/zzbi;-><init>(Lcom/google/android/gms/internal/zzav;Ljava/lang/String;Ljava/lang/String;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;II)V
-
-    move-object/from16 v0, v18
-
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v2, Lcom/google/android/gms/internal/zzbj;
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzav()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzaw()Ljava/lang/String;
-
-    move-result-object v5
-
-    const/16 v8, 0x1f
-
-    move-object/from16 v3, p1
-
-    move-object/from16 v6, p2
-
-    invoke-direct/range {v2 .. v8}, Lcom/google/android/gms/internal/zzbj;-><init>(Lcom/google/android/gms/internal/zzav;Ljava/lang/String;Ljava/lang/String;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;II)V
-
-    move-object/from16 v0, v18
-
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v2, Lcom/google/android/gms/internal/zzbk;
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzaz()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzaA()Ljava/lang/String;
-
-    move-result-object v5
-
-    const/16 v8, 0x21
-
-    move-object/from16 v3, p1
-
-    move-object/from16 v6, p2
-
-    invoke-direct/range {v2 .. v8}, Lcom/google/android/gms/internal/zzbk;-><init>(Lcom/google/android/gms/internal/zzav;Ljava/lang/String;Ljava/lang/String;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;II)V
-
-    move-object/from16 v0, v18
-
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v2, Lcom/google/android/gms/internal/zzay;
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzax()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzay()Ljava/lang/String;
-
-    move-result-object v5
-
-    const/16 v8, 0x1d
-
-    move-object/from16 v3, p1
-
-    move-object/from16 v6, p2
-
-    invoke-direct/range {v2 .. v8}, Lcom/google/android/gms/internal/zzay;-><init>(Lcom/google/android/gms/internal/zzav;Ljava/lang/String;Ljava/lang/String;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;II)V
-
-    move-object/from16 v0, v18
-
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v2, Lcom/google/android/gms/internal/zzbc;
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzaf()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzag()Ljava/lang/String;
-
-    move-result-object v5
-
-    const/4 v8, 0x5
-
-    move-object/from16 v3, p1
-
-    move-object/from16 v6, p2
-
-    invoke-direct/range {v2 .. v8}, Lcom/google/android/gms/internal/zzbc;-><init>(Lcom/google/android/gms/internal/zzav;Ljava/lang/String;Ljava/lang/String;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;II)V
-
-    move-object/from16 v0, v18
-
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v2, Lcom/google/android/gms/internal/zzbh;
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzar()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzas()Ljava/lang/String;
-
-    move-result-object v5
-
-    const/16 v8, 0xc
-
-    move-object/from16 v3, p1
-
-    move-object/from16 v6, p2
-
-    invoke-direct/range {v2 .. v8}, Lcom/google/android/gms/internal/zzbh;-><init>(Lcom/google/android/gms/internal/zzav;Ljava/lang/String;Ljava/lang/String;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;II)V
-
-    move-object/from16 v0, v18
-
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v2, Lcom/google/android/gms/internal/zzax;
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzZ()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzaa()Ljava/lang/String;
-
-    move-result-object v5
-
-    const/4 v8, 0x3
-
-    move-object/from16 v3, p1
-
-    move-object/from16 v6, p2
-
-    invoke-direct/range {v2 .. v8}, Lcom/google/android/gms/internal/zzax;-><init>(Lcom/google/android/gms/internal/zzav;Ljava/lang/String;Ljava/lang/String;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;II)V
-
-    move-object/from16 v0, v18
-
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v2, Lcom/google/android/gms/internal/zzbb;
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzad()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzae()Ljava/lang/String;
-
-    move-result-object v5
-
-    const/16 v8, 0x22
-
-    move-object/from16 v3, p1
-
-    move-object/from16 v6, p2
-
-    invoke-direct/range {v2 .. v8}, Lcom/google/android/gms/internal/zzbb;-><init>(Lcom/google/android/gms/internal/zzav;Ljava/lang/String;Ljava/lang/String;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;II)V
-
-    move-object/from16 v0, v18
-
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v2, Lcom/google/android/gms/internal/zzba;
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzab()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzac()Ljava/lang/String;
-
-    move-result-object v5
-
-    const/16 v8, 0x23
-
-    move-object/from16 v3, p1
-
-    move-object/from16 v6, p2
-
-    invoke-direct/range {v2 .. v8}, Lcom/google/android/gms/internal/zzba;-><init>(Lcom/google/android/gms/internal/zzav;Ljava/lang/String;Ljava/lang/String;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;II)V
-
-    move-object/from16 v0, v18
-
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    sget-object v2, Lcom/google/android/gms/internal/zzcu;->zzyO:Lcom/google/android/gms/internal/zzcq;
-
-    invoke-virtual {v2}, Lcom/google/android/gms/internal/zzcq;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Boolean;
-
-    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-static {}, Ljava/net/HttpURLConnection;->getFollowRedirects()Z
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    invoke-virtual {v0, v2}, Ljava/net/HttpURLConnection;->setInstanceFollowRedirects(Z)V
 
-    new-instance v2, Lcom/google/android/gms/internal/zzbd;
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzah()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzai()Ljava/lang/String;
-
-    move-result-object v5
-
-    const/16 v8, 0x2c
-
-    move-object/from16 v3, p1
-
-    move-object/from16 v6, p2
-
-    invoke-direct/range {v2 .. v8}, Lcom/google/android/gms/internal/zzbd;-><init>(Lcom/google/android/gms/internal/zzav;Ljava/lang/String;Ljava/lang/String;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;II)V
-
-    move-object/from16 v0, v18
-
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    sget-object v2, Lcom/google/android/gms/internal/zzcu;->zzyR:Lcom/google/android/gms/internal/zzcq;
-
-    invoke-virtual {v2}, Lcom/google/android/gms/internal/zzcq;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Boolean;
-
-    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {p1}, Lcom/google/android/gms/internal/zzp;->zzi()I
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    invoke-virtual {v0, v2}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
 
-    new-instance v2, Lcom/google/android/gms/internal/zzbg;
+    invoke-virtual {v0, v2}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
 
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzap()Ljava/lang/String;
+    invoke-virtual {v0, v4}, Ljava/net/HttpURLConnection;->setUseCaches(Z)V
 
-    move-result-object v4
+    invoke-virtual {v0, v3}, Ljava/net/HttpURLConnection;->setDoInput(Z)V
 
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzaq()Ljava/lang/String;
+    const-string v2, "https"
 
-    move-result-object v5
-
-    const/16 v8, 0x16
-
-    move-object/from16 v3, p1
-
-    move-object/from16 v6, p2
-
-    invoke-direct/range {v2 .. v8}, Lcom/google/android/gms/internal/zzbg;-><init>(Lcom/google/android/gms/internal/zzav;Ljava/lang/String;Ljava/lang/String;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;II)V
-
-    move-object/from16 v0, v18
-
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    return-object v18
-.end method
-
-.method protected zzc(Landroid/content/Context;)Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;
-    .locals 2
-
-    new-instance v0, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;
-
-    invoke-direct {v0}, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;-><init>()V
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzao;->zzof:Ljava/lang/String;
-
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzao;->zzof:Ljava/lang/String;
-
-    iput-object v1, v0, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;->b:Ljava/lang/String;
-
-    :cond_0
-    iget-boolean v1, p0, Lcom/google/android/gms/internal/zzao;->zzod:Z
-
-    invoke-static {p1, v1}, Lcom/google/android/gms/internal/zzao;->zzb(Landroid/content/Context;Z)Lcom/google/android/gms/internal/zzav;
+    invoke-virtual {v1}, Ljava/net/URL;->getProtocol()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/google/android/gms/internal/zzav;->zzaO()V
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzao;->zza(Lcom/google/android/gms/internal/zzav;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;)V
-
-    invoke-virtual {v1}, Lcom/google/android/gms/internal/zzav;->zzaP()V
-
-    return-object v0
-.end method
-
-.method protected zzc(Lcom/google/android/gms/internal/zzav;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;)Ljava/util/List;
-    .locals 19
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/internal/zzav;",
-            "Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;",
-            ")",
-            "Ljava/util/List",
-            "<",
-            "Ljava/util/concurrent/Callable",
-            "<",
-            "Ljava/lang/Void;",
-            ">;>;"
-        }
-    .end annotation
-
-    new-instance v18, Ljava/util/ArrayList;
-
-    invoke-direct/range {v18 .. v18}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual/range {p1 .. p1}, Lcom/google/android/gms/internal/zzav;->zzaD()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v2
-
-    if-nez v2, :cond_0
-
-    move-object/from16 v2, v18
-
-    :goto_0
-    return-object v2
-
-    :cond_0
-    invoke-virtual/range {p1 .. p1}, Lcom/google/android/gms/internal/zzav;->zzT()I
-
-    move-result v7
-
-    new-instance v2, Lcom/google/android/gms/internal/zzbi;
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzat()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzau()Ljava/lang/String;
-
-    move-result-object v5
-
-    const/4 v8, 0x1
-
-    move-object/from16 v3, p1
-
-    move-object/from16 v6, p2
-
-    invoke-direct/range {v2 .. v8}, Lcom/google/android/gms/internal/zzbi;-><init>(Lcom/google/android/gms/internal/zzav;Ljava/lang/String;Ljava/lang/String;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;II)V
-
-    move-object/from16 v0, v18
-
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v9, Lcom/google/android/gms/internal/zzbe;
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzaj()Ljava/lang/String;
-
-    move-result-object v11
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzak()Ljava/lang/String;
-
-    move-result-object v12
-
-    sget-wide v14, Lcom/google/android/gms/internal/zzao;->startTime:J
-
-    const/16 v17, 0x19
-
-    move-object/from16 v10, p1
-
-    move-object/from16 v13, p2
-
-    move/from16 v16, v7
-
-    invoke-direct/range {v9 .. v17}, Lcom/google/android/gms/internal/zzbe;-><init>(Lcom/google/android/gms/internal/zzav;Ljava/lang/String;Ljava/lang/String;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;JII)V
-
-    move-object/from16 v0, v18
-
-    invoke-interface {v0, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    sget-object v2, Lcom/google/android/gms/internal/zzcu;->zzyP:Lcom/google/android/gms/internal/zzcq;
-
-    invoke-virtual {v2}, Lcom/google/android/gms/internal/zzcq;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Boolean;
-
-    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    new-instance v2, Lcom/google/android/gms/internal/zzbd;
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzah()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzai()Ljava/lang/String;
-
-    move-result-object v5
-
-    const/16 v8, 0x2c
-
-    move-object/from16 v3, p1
-
-    move-object/from16 v6, p2
-
-    invoke-direct/range {v2 .. v8}, Lcom/google/android/gms/internal/zzbd;-><init>(Lcom/google/android/gms/internal/zzav;Ljava/lang/String;Ljava/lang/String;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;II)V
-
-    move-object/from16 v0, v18
-
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    new-instance v2, Lcom/google/android/gms/internal/zzax;
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzZ()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzaa()Ljava/lang/String;
-
-    move-result-object v5
-
-    const/4 v8, 0x3
-
-    move-object/from16 v3, p1
-
-    move-object/from16 v6, p2
-
-    invoke-direct/range {v2 .. v8}, Lcom/google/android/gms/internal/zzax;-><init>(Lcom/google/android/gms/internal/zzav;Ljava/lang/String;Ljava/lang/String;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;II)V
-
-    move-object/from16 v0, v18
-
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    sget-object v2, Lcom/google/android/gms/internal/zzcu;->zzyS:Lcom/google/android/gms/internal/zzcq;
-
-    invoke-virtual {v2}, Lcom/google/android/gms/internal/zzcq;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Boolean;
-
-    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    new-instance v2, Lcom/google/android/gms/internal/zzbg;
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzap()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {}, Lcom/google/android/gms/internal/zzat;->zzaq()Ljava/lang/String;
-
-    move-result-object v5
-
-    const/16 v8, 0x16
-
-    move-object/from16 v3, p1
-
-    move-object/from16 v6, p2
-
-    invoke-direct/range {v2 .. v8}, Lcom/google/android/gms/internal/zzbg;-><init>(Lcom/google/android/gms/internal/zzav;Ljava/lang/String;Ljava/lang/String;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;II)V
-
-    move-object/from16 v0, v18
-
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_2
-    move-object/from16 v2, v18
-
-    goto/16 :goto_0
-.end method
-
-.method protected zzd(Landroid/content/Context;)Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;
-    .locals 2
-
-    new-instance v0, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;
-
-    invoke-direct {v0}, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;-><init>()V
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzao;->zzof:Ljava/lang/String;
-
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzao;->zzof:Ljava/lang/String;
-
-    iput-object v1, v0, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;->b:Ljava/lang/String;
-
-    :cond_0
-    iget-boolean v1, p0, Lcom/google/android/gms/internal/zzao;->zzod:Z
-
-    invoke-static {p1, v1}, Lcom/google/android/gms/internal/zzao;->zzb(Landroid/content/Context;Z)Lcom/google/android/gms/internal/zzav;
+    invoke-virtual {v5}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/google/android/gms/internal/zzav;->zzaO()V
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzao;->zzd(Lcom/google/android/gms/internal/zzav;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;)V
-
-    invoke-virtual {v1}, Lcom/google/android/gms/internal/zzav;->zzaP()V
-
-    return-object v0
-.end method
-
-.method protected zzd(Lcom/google/android/gms/internal/zzav;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;)V
-    .locals 8
-
-    const/4 v1, 0x0
-
-    const-wide/16 v6, 0x0
-
-    :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzao;->zznT:Landroid/view/MotionEvent;
-
-    iget-object v2, p0, Lcom/google/android/gms/internal/zzao;->zzob:Landroid/util/DisplayMetrics;
-
-    invoke-static {p1, v0, v2}, Lcom/google/android/gms/internal/zzao;->zza(Lcom/google/android/gms/internal/zzav;Landroid/view/MotionEvent;Landroid/util/DisplayMetrics;)Ljava/util/List;
-
-    move-result-object v2
-
-    const/4 v0, 0x0
-
-    invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    iput-object v0, p2, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;->n:Ljava/lang/Long;
-
-    const/4 v0, 0x1
-
-    invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    iput-object v0, p2, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;->o:Ljava/lang/Long;
-
-    const/4 v0, 0x2
-
-    invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v4
-
-    cmp-long v0, v4, v6
-
-    if-ltz v0, :cond_0
-
-    const/4 v0, 0x2
-
-    invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    iput-object v0, p2, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;->p:Ljava/lang/Long;
-
-    :cond_0
-    const/4 v0, 0x3
-
-    invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    iput-object v0, p2, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;->D:Ljava/lang/Long;
-
-    const/4 v0, 0x4
-
-    invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    iput-object v0, p2, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;->E:Ljava/lang/Long;
-    :try_end_0
-    .catch Lcom/google/android/gms/internal/zzau; {:try_start_0 .. :try_end_0} :catch_1
-
-    :goto_0
-    iget-wide v2, p0, Lcom/google/android/gms/internal/zzao;->zznV:J
-
-    cmp-long v0, v2, v6
-
-    if-lez v0, :cond_1
-
-    iget-wide v2, p0, Lcom/google/android/gms/internal/zzao;->zznV:J
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    iput-object v0, p2, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;->I:Ljava/lang/Long;
-
-    :cond_1
-    iget-wide v2, p0, Lcom/google/android/gms/internal/zzao;->zznW:J
-
-    cmp-long v0, v2, v6
-
-    if-lez v0, :cond_2
-
-    iget-wide v2, p0, Lcom/google/android/gms/internal/zzao;->zznW:J
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    iput-object v0, p2, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;->H:Ljava/lang/Long;
-
-    :cond_2
-    iget-wide v2, p0, Lcom/google/android/gms/internal/zzao;->zznX:J
-
-    cmp-long v0, v2, v6
-
-    if-lez v0, :cond_3
-
-    iget-wide v2, p0, Lcom/google/android/gms/internal/zzao;->zznX:J
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    iput-object v0, p2, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;->G:Ljava/lang/Long;
-
-    :cond_3
-    iget-wide v2, p0, Lcom/google/android/gms/internal/zzao;->zznY:J
-
-    cmp-long v0, v2, v6
-
-    if-lez v0, :cond_4
-
-    iget-wide v2, p0, Lcom/google/android/gms/internal/zzao;->zznY:J
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    iput-object v0, p2, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;->J:Ljava/lang/Long;
-
-    :cond_4
-    iget-wide v2, p0, Lcom/google/android/gms/internal/zzao;->zznZ:J
-
-    cmp-long v0, v2, v6
-
-    if-lez v0, :cond_5
-
-    iget-wide v2, p0, Lcom/google/android/gms/internal/zzao;->zznZ:J
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    iput-object v0, p2, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;->L:Ljava/lang/Long;
-
-    :cond_5
-    :try_start_1
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzao;->zznU:Ljava/util/LinkedList;
-
-    invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
-
-    move-result v0
-
-    add-int/lit8 v2, v0, -0x1
-
-    if-lez v2, :cond_6
-
-    new-array v0, v2, [Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals$TouchInfo;
-
-    iput-object v0, p2, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;->M:[Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals$TouchInfo;
+    move-result-object v6
 
     :goto_1
-    if-ge v1, v2, :cond_6
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzao;->zznU:Ljava/util/LinkedList;
+    move-result v1
 
-    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
+    if-eqz v1, :cond_3
 
-    move-result-object v0
+    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    check-cast v0, Landroid/view/MotionEvent;
+    move-result-object v1
 
-    iget-object v3, p0, Lcom/google/android/gms/internal/zzao;->zzob:Landroid/util/DisplayMetrics;
+    move-object v2, v1
 
-    invoke-static {p1, v0, v3}, Lcom/google/android/gms/internal/zzao;->zza(Lcom/google/android/gms/internal/zzav;Landroid/view/MotionEvent;Landroid/util/DisplayMetrics;)Ljava/util/List;
+    check-cast v2, Ljava/lang/String;
 
-    move-result-object v3
+    invoke-virtual {v5, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v4, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals$TouchInfo;
+    move-result-object v1
 
-    invoke-direct {v4}, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals$TouchInfo;-><init>()V
+    check-cast v1, Ljava/lang/String;
 
-    const/4 v0, 0x0
-
-    invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    iput-object v0, v4, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals$TouchInfo;->a:Ljava/lang/Long;
-
-    const/4 v0, 0x1
-
-    invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    iput-object v0, v4, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals$TouchInfo;->b:Ljava/lang/Long;
-
-    iget-object v0, p2, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;->M:[Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals$TouchInfo;
-
-    aput-object v4, v0, v1
-    :try_end_1
-    .catch Lcom/google/android/gms/internal/zzau; {:try_start_1 .. :try_end_1} :catch_0
-
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
+    invoke-virtual {v0, v2, v1}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
-    :catch_0
-    move-exception v0
+    :cond_3
+    invoke-virtual {p1}, Lcom/google/android/gms/internal/zzp;->getMethod()I
 
-    const/4 v0, 0x0
+    move-result v1
 
-    iput-object v0, p2, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;->M:[Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals$TouchInfo;
+    packed-switch v1, :pswitch_data_0
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Unknown method type."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_0
+    const-string v1, "GET"
+
+    invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
+
+    :goto_2
+    :pswitch_1
+    new-instance v1, Lorg/apache/http/ProtocolVersion;
+
+    const-string v2, "HTTP"
+
+    invoke-direct {v1, v2, v3, v3}, Lorg/apache/http/ProtocolVersion;-><init>(Ljava/lang/String;II)V
+
+    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getResponseCode()I
+
+    move-result v2
+
+    const/4 v5, -0x1
+
+    if-ne v2, v5, :cond_4
+
+    new-instance v0, Ljava/io/IOException;
+
+    const-string v1, "Could not retrieve response code from HttpUrlConnection."
+
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_2
+    const-string v1, "DELETE"
+
+    invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
+
+    goto :goto_2
+
+    :pswitch_3
+    const-string v1, "POST"
+
+    invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
+
+    invoke-static {v0, p1}, Lcom/google/android/gms/internal/zzao;->zza(Ljava/net/HttpURLConnection;Lcom/google/android/gms/internal/zzp;)V
+
+    goto :goto_2
+
+    :pswitch_4
+    const-string v1, "PUT"
+
+    invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
+
+    invoke-static {v0, p1}, Lcom/google/android/gms/internal/zzao;->zza(Ljava/net/HttpURLConnection;Lcom/google/android/gms/internal/zzp;)V
+
+    goto :goto_2
+
+    :pswitch_5
+    const-string v1, "HEAD"
+
+    invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
+
+    goto :goto_2
+
+    :pswitch_6
+    const-string v1, "OPTIONS"
+
+    invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
+
+    goto :goto_2
+
+    :pswitch_7
+    const-string v1, "TRACE"
+
+    invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
+
+    goto :goto_2
+
+    :pswitch_8
+    const-string v1, "PATCH"
+
+    invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
+
+    invoke-static {v0, p1}, Lcom/google/android/gms/internal/zzao;->zza(Ljava/net/HttpURLConnection;Lcom/google/android/gms/internal/zzp;)V
+
+    goto :goto_2
+
+    :cond_4
+    new-instance v2, Lorg/apache/http/message/BasicStatusLine;
+
+    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getResponseCode()I
+
+    move-result v5
+
+    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getResponseMessage()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-direct {v2, v1, v5, v6}, Lorg/apache/http/message/BasicStatusLine;-><init>(Lorg/apache/http/ProtocolVersion;ILjava/lang/String;)V
+
+    new-instance v5, Lorg/apache/http/message/BasicHttpResponse;
+
+    invoke-direct {v5, v2}, Lorg/apache/http/message/BasicHttpResponse;-><init>(Lorg/apache/http/StatusLine;)V
+
+    invoke-virtual {p1}, Lcom/google/android/gms/internal/zzp;->getMethod()I
+
+    move-result v1
+
+    invoke-interface {v2}, Lorg/apache/http/StatusLine;->getStatusCode()I
+
+    move-result v2
+
+    const/4 v6, 0x4
+
+    if-eq v1, v6, :cond_8
+
+    const/16 v1, 0x64
+
+    if-gt v1, v2, :cond_5
+
+    const/16 v1, 0xc8
+
+    if-lt v2, v1, :cond_8
+
+    :cond_5
+    const/16 v1, 0xcc
+
+    if-eq v2, v1, :cond_8
+
+    const/16 v1, 0x130
+
+    if-eq v2, v1, :cond_8
+
+    move v1, v3
+
+    :goto_3
+    if-eqz v1, :cond_6
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzao;->zza(Ljava/net/HttpURLConnection;)Lorg/apache/http/HttpEntity;
+
+    move-result-object v1
+
+    invoke-virtual {v5, v1}, Lorg/apache/http/message/BasicHttpResponse;->setEntity(Lorg/apache/http/HttpEntity;)V
 
     :cond_6
-    invoke-virtual {p0, p1, p2}, Lcom/google/android/gms/internal/zzao;->zzc(Lcom/google/android/gms/internal/zzav;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;)Ljava/util/List;
+    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getHeaderFields()Ljava/util/Map;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/zzao;->zza(Ljava/util/List;)V
+    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
-    return-void
+    move-result-object v0
 
-    :catch_1
-    move-exception v0
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    goto/16 :goto_0
+    move-result-object v2
+
+    :cond_7
+    :goto_4
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    check-cast v1, Ljava/util/Map$Entry;
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_7
+
+    new-instance v3, Lorg/apache/http/message/BasicHeader;
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/List;
+
+    invoke-interface {v1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    invoke-direct {v3, v0, v1}, Lorg/apache/http/message/BasicHeader;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v5, v3}, Lorg/apache/http/message/BasicHttpResponse;->addHeader(Lorg/apache/http/Header;)V
+
+    goto :goto_4
+
+    :cond_8
+    move v1, v4
+
+    goto :goto_3
+
+    :cond_9
+    return-object v5
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch -0x1
+        :pswitch_1
+        :pswitch_0
+        :pswitch_3
+        :pswitch_4
+        :pswitch_2
+        :pswitch_5
+        :pswitch_6
+        :pswitch_7
+        :pswitch_8
+    .end packed-switch
 .end method

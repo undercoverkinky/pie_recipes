@@ -834,6 +834,7 @@
     .line 861
     invoke-virtual {p0, v1}, Lcom/kik/groups/GroupSearchService$FindGroupsRequest$Builder;->mergeFrom(Lcom/kik/groups/GroupSearchService$FindGroupsRequest;)Lcom/kik/groups/GroupSearchService$FindGroupsRequest$Builder;
 
+    .line 863
     :cond_1
     throw v0
 

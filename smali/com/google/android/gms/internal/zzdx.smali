@@ -1,106 +1,86 @@
-.class public Lcom/google/android/gms/internal/zzdx;
-.super Lcom/google/android/gms/dynamic/zzg;
-
-
-# annotations
-.annotation runtime Lcom/google/android/gms/internal/zzig;
-.end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/google/android/gms/dynamic/zzg",
-        "<",
-        "Lcom/google/android/gms/internal/zzdm;",
-        ">;"
-    }
-.end annotation
+.class public final Lcom/google/android/gms/internal/zzdx;
+.super Lcom/google/android/gms/internal/zzed;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lcom/google/android/gms/internal/zzdc;Ljava/lang/String;Ljava/lang/String;Lcom/google/android/gms/internal/zzax;II)V
+    .locals 7
 
-    const-string v0, "com.google.android.gms.ads.NativeAdViewDelegateCreatorImpl"
+    const/16 v6, 0x33
 
-    invoke-direct {p0, v0}, Lcom/google/android/gms/dynamic/zzg;-><init>(Ljava/lang/String;)V
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move-object v4, p4
+
+    move v5, p5
+
+    invoke-direct/range {v0 .. v6}, Lcom/google/android/gms/internal/zzed;-><init>(Lcom/google/android/gms/internal/zzdc;Ljava/lang/String;Ljava/lang/String;Lcom/google/android/gms/internal/zzax;II)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected zzI(Landroid/os/IBinder;)Lcom/google/android/gms/internal/zzdm;
-    .locals 1
+.method protected final zzar()V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/IllegalAccessException;,
+            Ljava/lang/reflect/InvocationTargetException;
+        }
+    .end annotation
 
-    invoke-static {p1}, Lcom/google/android/gms/internal/zzdm$zza;->zzA(Landroid/os/IBinder;)Lcom/google/android/gms/internal/zzdm;
+    iget-object v1, p0, Lcom/google/android/gms/internal/zzdx;->zzajn:Lcom/google/android/gms/internal/zzax;
 
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public zzb(Landroid/content/Context;Landroid/widget/FrameLayout;Landroid/widget/FrameLayout;)Lcom/google/android/gms/internal/zzdl;
-    .locals 5
+    monitor-enter v1
 
     :try_start_0
-    invoke-static {p1}, Lcom/google/android/gms/dynamic/zze;->zzD(Ljava/lang/Object;)Lcom/google/android/gms/dynamic/zzd;
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdx;->zzajw:Ljava/lang/reflect/Method;
 
-    move-result-object v1
+    const/4 v2, 0x0
 
-    invoke-static {p2}, Lcom/google/android/gms/dynamic/zze;->zzD(Ljava/lang/Object;)Lcom/google/android/gms/dynamic/zzd;
+    const/4 v3, 0x0
 
-    move-result-object v2
+    new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {p3}, Lcom/google/android/gms/dynamic/zze;->zzD(Ljava/lang/Object;)Lcom/google/android/gms/dynamic/zzd;
-
-    move-result-object v3
-
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/zzdx;->zzaI(Landroid/content/Context;)Ljava/lang/Object;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/android/gms/internal/zzdm;
+    check-cast v0, Ljava/lang/String;
 
-    const v4, 0x8a8cc0
+    new-instance v2, Lcom/google/android/gms/internal/zzdb;
 
-    invoke-interface {v0, v1, v2, v3, v4}, Lcom/google/android/gms/internal/zzdm;->zza(Lcom/google/android/gms/dynamic/zzd;Lcom/google/android/gms/dynamic/zzd;Lcom/google/android/gms/dynamic/zzd;I)Landroid/os/IBinder;
+    invoke-direct {v2, v0}, Lcom/google/android/gms/internal/zzdb;-><init>(Ljava/lang/String;)V
 
-    move-result-object v0
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdx;->zzajn:Lcom/google/android/gms/internal/zzax;
 
-    invoke-static {v0}, Lcom/google/android/gms/internal/zzdl$zza;->zzz(Landroid/os/IBinder;)Lcom/google/android/gms/internal/zzdl;
+    iget-object v3, v2, Lcom/google/android/gms/internal/zzdb;->zzaic:Ljava/lang/Long;
+
+    iput-object v3, v0, Lcom/google/android/gms/internal/zzax;->zzej:Ljava/lang/Long;
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdx;->zzajn:Lcom/google/android/gms/internal/zzax;
+
+    iget-object v2, v2, Lcom/google/android/gms/internal/zzdb;->zzaid:Ljava/lang/Long;
+
+    iput-object v2, v0, Lcom/google/android/gms/internal/zzax;->zzek:Ljava/lang/Long;
+
+    monitor-exit v1
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
     :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Lcom/google/android/gms/dynamic/zzg$zza; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    :goto_1
-    const-string v1, "Could not create remote NativeAdViewDelegate."
-
-    invoke-static {v1, v0}, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzd(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v0
-
-    goto :goto_1
-.end method
-
-.method protected synthetic zzc(Landroid/os/IBinder;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/zzdx;->zzI(Landroid/os/IBinder;)Lcom/google/android/gms/internal/zzdm;
-
-    move-result-object v0
-
-    return-object v0
+    throw v0
 .end method

@@ -3,35 +3,33 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lkik/android/chat/view/w$a;
-    }
-.end annotation
-
-
 # virtual methods
-.method public abstract a()V
+.method public abstract A()V
 .end method
 
-.method public abstract a(I)V
+.method public abstract C()V
 .end method
 
-.method public abstract a(Ljava/lang/String;)V
-.end method
-
-.method public abstract a(Lkik/android/chat/view/w$a;)V
-.end method
-
-.method public abstract a(Lkik/android/util/KeyboardManipulator;)V
+.method public abstract a(Lkik/core/datatypes/c$b;)V
 .end method
 
 .method public abstract b(I)V
 .end method
 
-.method public abstract b(Ljava/lang/String;)V
+.method public abstract b(Lkik/core/datatypes/c$b;)V
 .end method
 
-.method public abstract c(Ljava/lang/String;)V
+.method public abstract c(Lkik/core/datatypes/Message;)V
+.end method
+
+.method public abstract d(Ljava/lang/String;)V
+.end method
+
+.method public abstract x()Ljava/lang/String;
+.end method
+
+.method public abstract y()V
+.end method
+
+.method public abstract z()Ljava/lang/String;
 .end method

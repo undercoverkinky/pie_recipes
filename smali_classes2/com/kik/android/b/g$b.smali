@@ -25,36 +25,26 @@
 
 
 # direct methods
-.method private constructor <init>(Lcom/kik/android/b/f;JJJ)V
+.method public constructor <init>(Lcom/kik/android/b/f;JJJ)V
     .locals 0
 
     .prologue
-    .line 162
+    .line 168
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 163
+    .line 169
     iput-wide p2, p0, Lcom/kik/android/b/g$b;->d:J
 
-    .line 164
+    .line 170
     iput-object p1, p0, Lcom/kik/android/b/g$b;->a:Lcom/kik/android/b/f;
 
-    .line 165
+    .line 171
     iput-wide p4, p0, Lcom/kik/android/b/g$b;->b:J
 
-    .line 166
+    .line 172
     iput-wide p6, p0, Lcom/kik/android/b/g$b;->c:J
 
-    .line 167
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcom/kik/android/b/f;JJJB)V
-    .locals 0
-
-    .prologue
-    .line 154
-    invoke-direct/range {p0 .. p7}, Lcom/kik/android/b/g$b;-><init>(Lcom/kik/android/b/f;JJJ)V
-
+    .line 173
     return-void
 .end method
 
@@ -62,11 +52,11 @@
     .locals 1
 
     .prologue
-    .line 154
-    .line 1176
+    .line 160
+    .line 1182
     iput-wide p1, p0, Lcom/kik/android/b/g$b;->c:J
 
-    .line 154
+    .line 160
     return-void
 .end method
 
@@ -74,11 +64,11 @@
     .locals 0
 
     .prologue
-    .line 154
-    .line 1171
+    .line 160
+    .line 1177
     iput-object p1, p0, Lcom/kik/android/b/g$b;->a:Lcom/kik/android/b/f;
 
-    .line 154
+    .line 160
     return-void
 .end method
 
@@ -88,7 +78,7 @@
     .locals 2
 
     .prologue
-    .line 186
+    .line 192
     iget-wide v0, p0, Lcom/kik/android/b/g$b;->c:J
 
     return-wide v0
@@ -98,7 +88,7 @@
     .locals 1
 
     .prologue
-    .line 191
+    .line 197
     iget-object v0, p0, Lcom/kik/android/b/g$b;->a:Lcom/kik/android/b/f;
 
     return-object v0
@@ -108,7 +98,7 @@
     .locals 4
 
     .prologue
-    .line 196
+    .line 202
     iget-wide v0, p0, Lcom/kik/android/b/g$b;->c:J
 
     iget-wide v2, p0, Lcom/kik/android/b/g$b;->d:J
@@ -132,7 +122,7 @@
     .locals 4
 
     .prologue
-    .line 217
+    .line 223
     iget-wide v0, p0, Lcom/kik/android/b/g$b;->c:J
 
     iget-wide v2, p0, Lcom/kik/android/b/g$b;->b:J

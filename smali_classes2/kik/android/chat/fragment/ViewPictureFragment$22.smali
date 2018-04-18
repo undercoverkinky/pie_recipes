@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 349
+    .line 392
     iput-object p1, p0, Lkik/android/chat/fragment/ViewPictureFragment$22;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 1
 
     .prologue
-    .line 354
+    .line 397
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$22;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/ViewPictureFragment;->c(Lkik/android/chat/fragment/ViewPictureFragment;)Lkik/android/chat/fragment/ProgressDialogFragment;
@@ -53,7 +53,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 355
+    .line 398
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$22;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/ViewPictureFragment;->c(Lkik/android/chat/fragment/ViewPictureFragment;)Lkik/android/chat/fragment/ProgressDialogFragment;
@@ -62,12 +62,12 @@
 
     invoke-virtual {v0}, Lkik/android/chat/fragment/ProgressDialogFragment;->dismiss()V
 
-    .line 357
+    .line 400
     :cond_0
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$22;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/ViewPictureFragment;->D()V
+    invoke-virtual {v0}, Lkik/android/chat/fragment/ViewPictureFragment;->finish()V
 
-    .line 358
+    .line 401
     return-void
 .end method

@@ -1,11 +1,11 @@
 .class final Lcom/kik/cards/web/userdata/UserDataPlugin$3;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/cards/web/userdata/UserDataPlugin;->pickFilteredUsers(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/h;
+    value = Lcom/kik/cards/web/userdata/UserDataPlugin;->pickFilteredUsers(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/g;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
         "Ljava/util/List",
         "<",
@@ -41,13 +41,13 @@
 
     iput-object p2, p0, Lcom/kik/cards/web/userdata/UserDataPlugin$3;->a:Lcom/kik/cards/web/plugin/a;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
 
 .method private d()V
-    .locals 2
+    .locals 4
 
     .prologue
     .line 292
@@ -56,9 +56,13 @@
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
     .line 294
-    iget-object v1, p0, Lcom/kik/cards/web/userdata/UserDataPlugin$3;->a:Lcom/kik/cards/web/plugin/a;
+    iget-object v1, p0, Lcom/kik/cards/web/userdata/UserDataPlugin$3;->b:Lcom/kik/cards/web/userdata/UserDataPlugin;
 
-    invoke-static {v1, v0}, Lcom/kik/cards/web/userdata/UserDataPlugin;->b(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)V
+    iget-object v2, p0, Lcom/kik/cards/web/userdata/UserDataPlugin$3;->a:Lcom/kik/cards/web/plugin/a;
+
+    const/16 v3, 0x1f4
+
+    invoke-static {v1, v2, v3, v0}, Lcom/kik/cards/web/userdata/UserDataPlugin;->access$400(Lcom/kik/cards/web/userdata/UserDataPlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
 
     .line 295
     return-void
@@ -131,7 +135,7 @@
 
     .line 1283
     :goto_1
-    invoke-static {}, Lcom/kik/cards/web/userdata/UserDataPlugin;->a()Lorg/slf4j/b;
+    invoke-static {}, Lcom/kik/cards/web/userdata/UserDataPlugin;->access$000()Lorg/slf4j/b;
 
     move-result-object v2
 
@@ -153,9 +157,13 @@
 
     .line 1286
     :goto_2
-    iget-object v1, p0, Lcom/kik/cards/web/userdata/UserDataPlugin$3;->a:Lcom/kik/cards/web/plugin/a;
+    iget-object v1, p0, Lcom/kik/cards/web/userdata/UserDataPlugin$3;->b:Lcom/kik/cards/web/userdata/UserDataPlugin;
 
-    invoke-static {v1, v0}, Lcom/kik/cards/web/userdata/UserDataPlugin;->a(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)V
+    iget-object v2, p0, Lcom/kik/cards/web/userdata/UserDataPlugin$3;->a:Lcom/kik/cards/web/plugin/a;
+
+    const/16 v3, 0xc8
+
+    invoke-static {v1, v2, v3, v0}, Lcom/kik/cards/web/userdata/UserDataPlugin;->access$300(Lcom/kik/cards/web/userdata/UserDataPlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
 
     .line 250
     return-void

@@ -3,7 +3,7 @@
 
 
 # annotations
-.annotation build Lcom/google/android/gms/common/annotation/KeepName;
+.annotation build Landroid/support/annotation/Keep;
 .end annotation
 
 

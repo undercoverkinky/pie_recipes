@@ -74,7 +74,7 @@
 
 
 # virtual methods
-.method public final a()Lcom/dyuproject/protostuff/u;
+.method public final cachedSchema()Lcom/dyuproject/protostuff/u;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -89,27 +89,6 @@
     .prologue
     .line 73
     sget-object v0, Lcom/kik/xdata/model/messaging/XMessagingKey;->b:Lcom/dyuproject/protostuff/u;
-
-    return-object v0
-.end method
-
-.method public final a(Lcom/dyuproject/protostuff/c;)Lcom/kik/xdata/model/messaging/XMessagingKey;
-    .locals 0
-
-    .prologue
-    .line 53
-    iput-object p1, p0, Lcom/kik/xdata/model/messaging/XMessagingKey;->key:Lcom/dyuproject/protostuff/c;
-
-    .line 54
-    return-object p0
-.end method
-
-.method public final b()Lcom/dyuproject/protostuff/c;
-    .locals 1
-
-    .prologue
-    .line 48
-    iget-object v0, p0, Lcom/kik/xdata/model/messaging/XMessagingKey;->key:Lcom/dyuproject/protostuff/c;
 
     return-object v0
 .end method

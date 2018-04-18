@@ -1,56 +1,47 @@
-.class public interface abstract Lkik/android/chat/vm/x;
+.class final synthetic Lkik/android/chat/vm/x;
 .super Ljava/lang/Object;
-.source "SourceFile"
+
+# interfaces
+.implements Lrx/functions/g;
+
+
+# instance fields
+.field private final a:Lkik/android/chat/vm/u;
+
+
+# direct methods
+.method private constructor <init>(Lkik/android/chat/vm/u;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lkik/android/chat/vm/x;->a:Lkik/android/chat/vm/u;
+
+    return-void
+.end method
+
+.method public static a(Lkik/android/chat/vm/u;)Lrx/functions/g;
+    .locals 1
+
+    new-instance v0, Lkik/android/chat/vm/x;
+
+    invoke-direct {v0, p0}, Lkik/android/chat/vm/x;-><init>(Lkik/android/chat/vm/u;)V
+
+    return-object v0
+.end method
 
 
 # virtual methods
-.method public abstract A_()Lrx/c;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lrx/c",
-            "<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end method
+.method public final call(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.method public abstract B_()Lrx/c;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lrx/c",
-            "<",
-            "Ljava/lang/Integer;",
-            ">;"
-        }
-    .end annotation
-.end method
+    iget-object v0, p0, Lkik/android/chat/vm/x;->a:Lkik/android/chat/vm/u;
 
-.method public abstract a()Lrx/c;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lrx/c",
-            "<",
-            "Landroid/graphics/Bitmap;",
-            ">;"
-        }
-    .end annotation
-.end method
+    check-cast p1, Lkik/core/chat/profile/EmojiStatus;
 
-.method public abstract c()I
-.end method
+    invoke-static {v0, p1}, Lkik/android/chat/vm/u;->a(Lkik/android/chat/vm/u;Lkik/core/chat/profile/EmojiStatus;)Ljava/lang/Boolean;
 
-.method public abstract d()Lrx/c;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lrx/c",
-            "<",
-            "Ljava/lang/Integer;",
-            ">;"
-        }
-    .end annotation
+    move-result-object v0
+
+    return-object v0
 .end method

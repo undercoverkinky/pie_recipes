@@ -3,6 +3,12 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0xe
+.end annotation
+
+
 # static fields
 .field private static final ACTION_FAST_FORWARD:J = 0x40L
 
@@ -82,7 +88,7 @@
     .locals 0
 
     .prologue
-    .line 28
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -94,15 +100,15 @@
     .prologue
     const/16 v1, 0x64
 
-    .line 162
+    .line 164
     if-nez p0, :cond_1
 
-    .line 225
+    .line 227
     :cond_0
     :goto_0
     return-void
 
-    .line 165
+    .line 167
     :cond_1
     const-string v0, "android.media.metadata.ART"
 
@@ -112,7 +118,7 @@
 
     if-eqz v0, :cond_f
 
-    .line 166
+    .line 168
     const-string v0, "android.media.metadata.ART"
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -121,10 +127,10 @@
 
     check-cast v0, Landroid/graphics/Bitmap;
 
-    .line 167
+    .line 169
     invoke-virtual {p1, v1, v0}, Landroid/media/RemoteControlClient$MetadataEditor;->putBitmap(ILandroid/graphics/Bitmap;)Landroid/media/RemoteControlClient$MetadataEditor;
 
-    .line 173
+    .line 175
     :cond_2
     :goto_1
     const-string v0, "android.media.metadata.ALBUM"
@@ -135,18 +141,20 @@
 
     if-eqz v0, :cond_3
 
-    .line 174
+    .line 176
     const/4 v0, 0x1
 
     const-string v1, "android.media.metadata.ALBUM"
 
+    .line 177
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 176
     invoke-virtual {p1, v0, v1}, Landroid/media/RemoteControlClient$MetadataEditor;->putString(ILjava/lang/String;)Landroid/media/RemoteControlClient$MetadataEditor;
 
-    .line 177
+    .line 179
     :cond_3
     const-string v0, "android.media.metadata.ALBUM_ARTIST"
 
@@ -156,18 +164,20 @@
 
     if-eqz v0, :cond_4
 
-    .line 178
+    .line 180
     const/16 v0, 0xd
 
     const-string v1, "android.media.metadata.ALBUM_ARTIST"
 
+    .line 181
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 180
     invoke-virtual {p1, v0, v1}, Landroid/media/RemoteControlClient$MetadataEditor;->putString(ILjava/lang/String;)Landroid/media/RemoteControlClient$MetadataEditor;
 
-    .line 181
+    .line 183
     :cond_4
     const-string v0, "android.media.metadata.ARTIST"
 
@@ -177,18 +187,20 @@
 
     if-eqz v0, :cond_5
 
-    .line 182
+    .line 184
     const/4 v0, 0x2
 
     const-string v1, "android.media.metadata.ARTIST"
 
+    .line 185
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 184
     invoke-virtual {p1, v0, v1}, Landroid/media/RemoteControlClient$MetadataEditor;->putString(ILjava/lang/String;)Landroid/media/RemoteControlClient$MetadataEditor;
 
-    .line 185
+    .line 187
     :cond_5
     const-string v0, "android.media.metadata.AUTHOR"
 
@@ -198,18 +210,20 @@
 
     if-eqz v0, :cond_6
 
-    .line 186
+    .line 188
     const/4 v0, 0x3
 
     const-string v1, "android.media.metadata.AUTHOR"
 
+    .line 189
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 188
     invoke-virtual {p1, v0, v1}, Landroid/media/RemoteControlClient$MetadataEditor;->putString(ILjava/lang/String;)Landroid/media/RemoteControlClient$MetadataEditor;
 
-    .line 189
+    .line 191
     :cond_6
     const-string v0, "android.media.metadata.COMPILATION"
 
@@ -219,18 +233,20 @@
 
     if-eqz v0, :cond_7
 
-    .line 190
+    .line 192
     const/16 v0, 0xf
 
     const-string v1, "android.media.metadata.COMPILATION"
 
+    .line 193
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 192
     invoke-virtual {p1, v0, v1}, Landroid/media/RemoteControlClient$MetadataEditor;->putString(ILjava/lang/String;)Landroid/media/RemoteControlClient$MetadataEditor;
 
-    .line 193
+    .line 195
     :cond_7
     const-string v0, "android.media.metadata.COMPOSER"
 
@@ -240,18 +256,20 @@
 
     if-eqz v0, :cond_8
 
-    .line 194
+    .line 196
     const/4 v0, 0x4
 
     const-string v1, "android.media.metadata.COMPOSER"
 
+    .line 197
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 196
     invoke-virtual {p1, v0, v1}, Landroid/media/RemoteControlClient$MetadataEditor;->putString(ILjava/lang/String;)Landroid/media/RemoteControlClient$MetadataEditor;
 
-    .line 197
+    .line 199
     :cond_8
     const-string v0, "android.media.metadata.DATE"
 
@@ -261,18 +279,20 @@
 
     if-eqz v0, :cond_9
 
-    .line 198
+    .line 200
     const/4 v0, 0x5
 
     const-string v1, "android.media.metadata.DATE"
 
+    .line 201
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 200
     invoke-virtual {p1, v0, v1}, Landroid/media/RemoteControlClient$MetadataEditor;->putString(ILjava/lang/String;)Landroid/media/RemoteControlClient$MetadataEditor;
 
-    .line 201
+    .line 203
     :cond_9
     const-string v0, "android.media.metadata.DISC_NUMBER"
 
@@ -282,18 +302,20 @@
 
     if-eqz v0, :cond_a
 
-    .line 202
+    .line 204
     const/16 v0, 0xe
 
     const-string v1, "android.media.metadata.DISC_NUMBER"
 
+    .line 205
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v2
 
+    .line 204
     invoke-virtual {p1, v0, v2, v3}, Landroid/media/RemoteControlClient$MetadataEditor;->putLong(IJ)Landroid/media/RemoteControlClient$MetadataEditor;
 
-    .line 205
+    .line 207
     :cond_a
     const-string v0, "android.media.metadata.DURATION"
 
@@ -303,18 +325,20 @@
 
     if-eqz v0, :cond_b
 
-    .line 206
+    .line 208
     const/16 v0, 0x9
 
     const-string v1, "android.media.metadata.DURATION"
 
+    .line 209
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v2
 
+    .line 208
     invoke-virtual {p1, v0, v2, v3}, Landroid/media/RemoteControlClient$MetadataEditor;->putLong(IJ)Landroid/media/RemoteControlClient$MetadataEditor;
 
-    .line 209
+    .line 211
     :cond_b
     const-string v0, "android.media.metadata.GENRE"
 
@@ -324,18 +348,20 @@
 
     if-eqz v0, :cond_c
 
-    .line 210
+    .line 212
     const/4 v0, 0x6
 
     const-string v1, "android.media.metadata.GENRE"
 
+    .line 213
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 212
     invoke-virtual {p1, v0, v1}, Landroid/media/RemoteControlClient$MetadataEditor;->putString(ILjava/lang/String;)Landroid/media/RemoteControlClient$MetadataEditor;
 
-    .line 213
+    .line 215
     :cond_c
     const-string v0, "android.media.metadata.TITLE"
 
@@ -345,18 +371,20 @@
 
     if-eqz v0, :cond_d
 
-    .line 214
+    .line 216
     const/4 v0, 0x7
 
     const-string v1, "android.media.metadata.TITLE"
 
+    .line 217
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 216
     invoke-virtual {p1, v0, v1}, Landroid/media/RemoteControlClient$MetadataEditor;->putString(ILjava/lang/String;)Landroid/media/RemoteControlClient$MetadataEditor;
 
-    .line 217
+    .line 219
     :cond_d
     const-string v0, "android.media.metadata.TRACK_NUMBER"
 
@@ -366,18 +394,20 @@
 
     if-eqz v0, :cond_e
 
-    .line 218
+    .line 220
     const/4 v0, 0x0
 
     const-string v1, "android.media.metadata.TRACK_NUMBER"
 
+    .line 221
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v2
 
+    .line 220
     invoke-virtual {p1, v0, v2, v3}, Landroid/media/RemoteControlClient$MetadataEditor;->putLong(IJ)Landroid/media/RemoteControlClient$MetadataEditor;
 
-    .line 221
+    .line 223
     :cond_e
     const-string v0, "android.media.metadata.WRITER"
 
@@ -387,20 +417,22 @@
 
     if-eqz v0, :cond_0
 
-    .line 222
+    .line 224
     const/16 v0, 0xb
 
     const-string v1, "android.media.metadata.WRITER"
 
+    .line 225
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 224
     invoke-virtual {p1, v0, v1}, Landroid/media/RemoteControlClient$MetadataEditor;->putString(ILjava/lang/String;)Landroid/media/RemoteControlClient$MetadataEditor;
 
     goto/16 :goto_0
 
-    .line 168
+    .line 170
     :cond_f
     const-string v0, "android.media.metadata.ALBUM_ART"
 
@@ -410,7 +442,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 170
+    .line 172
     const-string v0, "android.media.metadata.ALBUM_ART"
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -419,7 +451,7 @@
 
     check-cast v0, Landroid/graphics/Bitmap;
 
-    .line 171
+    .line 173
     invoke-virtual {p1, v1, v0}, Landroid/media/RemoteControlClient$MetadataEditor;->putBitmap(ILandroid/graphics/Bitmap;)Landroid/media/RemoteControlClient$MetadataEditor;
 
     goto/16 :goto_1
@@ -429,7 +461,7 @@
     .locals 1
 
     .prologue
-    .line 74
+    .line 76
     new-instance v0, Landroid/media/RemoteControlClient;
 
     invoke-direct {v0, p0}, Landroid/media/RemoteControlClient;-><init>(Landroid/app/PendingIntent;)V
@@ -441,76 +473,76 @@
     .locals 1
 
     .prologue
-    .line 104
+    .line 106
     packed-switch p0, :pswitch_data_0
 
-    .line 128
+    .line 130
     const/4 v0, -0x1
 
     :goto_0
     return v0
 
-    .line 107
+    .line 109
     :pswitch_0
     const/16 v0, 0x8
 
     goto :goto_0
 
-    .line 109
+    .line 111
     :pswitch_1
     const/16 v0, 0x9
 
     goto :goto_0
 
-    .line 111
+    .line 113
     :pswitch_2
     const/4 v0, 0x4
 
     goto :goto_0
 
-    .line 113
+    .line 115
     :pswitch_3
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 115
+    .line 117
     :pswitch_4
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 117
+    .line 119
     :pswitch_5
     const/4 v0, 0x3
 
     goto :goto_0
 
-    .line 119
+    .line 121
     :pswitch_6
     const/4 v0, 0x5
 
     goto :goto_0
 
-    .line 121
+    .line 123
     :pswitch_7
     const/4 v0, 0x7
 
     goto :goto_0
 
-    .line 124
+    .line 126
     :pswitch_8
     const/4 v0, 0x6
 
     goto :goto_0
 
-    .line 126
+    .line 128
     :pswitch_9
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 104
+    .line 106
     nop
 
     :pswitch_data_0
@@ -536,10 +568,10 @@
     .prologue
     const-wide/16 v4, 0x0
 
-    .line 133
+    .line 135
     const/4 v0, 0x0
 
-    .line 134
+    .line 136
     const-wide/16 v2, 0x1
 
     and-long/2addr v2, p0
@@ -548,10 +580,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 135
+    .line 137
     const/16 v0, 0x20
 
-    .line 137
+    .line 139
     :cond_0
     const-wide/16 v2, 0x2
 
@@ -561,10 +593,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 138
+    .line 140
     or-int/lit8 v0, v0, 0x10
 
-    .line 140
+    .line 142
     :cond_1
     const-wide/16 v2, 0x4
 
@@ -574,10 +606,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 141
+    .line 143
     or-int/lit8 v0, v0, 0x4
 
-    .line 143
+    .line 145
     :cond_2
     const-wide/16 v2, 0x8
 
@@ -587,10 +619,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 144
+    .line 146
     or-int/lit8 v0, v0, 0x2
 
-    .line 146
+    .line 148
     :cond_3
     const-wide/16 v2, 0x10
 
@@ -600,10 +632,10 @@
 
     if-eqz v1, :cond_4
 
-    .line 147
+    .line 149
     or-int/lit8 v0, v0, 0x1
 
-    .line 149
+    .line 151
     :cond_4
     const-wide/16 v2, 0x20
 
@@ -613,10 +645,10 @@
 
     if-eqz v1, :cond_5
 
-    .line 150
+    .line 152
     or-int/lit16 v0, v0, 0x80
 
-    .line 152
+    .line 154
     :cond_5
     const-wide/16 v2, 0x40
 
@@ -626,10 +658,10 @@
 
     if-eqz v1, :cond_6
 
-    .line 153
+    .line 155
     or-int/lit8 v0, v0, 0x40
 
-    .line 155
+    .line 157
     :cond_6
     const-wide/16 v2, 0x200
 
@@ -639,10 +671,10 @@
 
     if-eqz v1, :cond_7
 
-    .line 156
+    .line 158
     or-int/lit8 v0, v0, 0x8
 
-    .line 158
+    .line 160
     :cond_7
     return v0
 .end method
@@ -651,7 +683,7 @@
     .locals 1
 
     .prologue
-    .line 94
+    .line 96
     const-string v0, "audio"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -660,12 +692,12 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 95
+    .line 97
     check-cast p1, Landroid/media/RemoteControlClient;
 
     invoke-virtual {v0, p1}, Landroid/media/AudioManager;->registerRemoteControlClient(Landroid/media/RemoteControlClient;)V
 
-    .line 96
+    .line 98
     return-void
 .end method
 
@@ -673,7 +705,7 @@
     .locals 1
 
     .prologue
-    .line 87
+    .line 89
     check-cast p0, Landroid/media/RemoteControlClient;
 
     const/4 v0, 0x1
@@ -682,13 +714,13 @@
 
     move-result-object v0
 
-    .line 89
+    .line 91
     invoke-static {p1, v0}, Landroid/support/v4/media/session/MediaSessionCompatApi14;->buildOldMetadata(Landroid/os/Bundle;Landroid/media/RemoteControlClient$MetadataEditor;)V
 
-    .line 90
+    .line 92
     invoke-virtual {v0}, Landroid/media/RemoteControlClient$MetadataEditor;->apply()V
 
-    .line 91
+    .line 93
     return-void
 .end method
 
@@ -696,7 +728,7 @@
     .locals 1
 
     .prologue
-    .line 78
+    .line 80
     check-cast p0, Landroid/media/RemoteControlClient;
 
     invoke-static {p1}, Landroid/support/v4/media/session/MediaSessionCompatApi14;->getRccStateFromState(I)I
@@ -705,7 +737,7 @@
 
     invoke-virtual {p0, v0}, Landroid/media/RemoteControlClient;->setPlaybackState(I)V
 
-    .line 79
+    .line 81
     return-void
 .end method
 
@@ -713,16 +745,18 @@
     .locals 1
 
     .prologue
-    .line 82
+    .line 84
     check-cast p0, Landroid/media/RemoteControlClient;
 
+    .line 85
     invoke-static {p1, p2}, Landroid/support/v4/media/session/MediaSessionCompatApi14;->getRccTransportControlFlagsFromActions(J)I
 
     move-result v0
 
+    .line 84
     invoke-virtual {p0, v0}, Landroid/media/RemoteControlClient;->setTransportControlFlags(I)V
 
-    .line 84
+    .line 86
     return-void
 .end method
 
@@ -730,7 +764,7 @@
     .locals 1
 
     .prologue
-    .line 99
+    .line 101
     const-string v0, "audio"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -739,11 +773,11 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 100
+    .line 102
     check-cast p1, Landroid/media/RemoteControlClient;
 
     invoke-virtual {v0, p1}, Landroid/media/AudioManager;->unregisterRemoteControlClient(Landroid/media/RemoteControlClient;)V
 
-    .line 101
+    .line 103
     return-void
 .end method

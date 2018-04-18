@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 11164
+    .line 11127
     invoke-direct {p0}, Lcom/google/protobuf/AbstractParser;-><init>()V
 
     return-void
@@ -45,13 +45,13 @@
     .end annotation
 
     .prologue
-    .line 12169
+    .line 12132
     new-instance v0, Lcom/kik/messagepath/model/Keyboards$SuggestedReply;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p1, p2, v1}, Lcom/kik/messagepath/model/Keyboards$SuggestedReply;-><init>(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;B)V
 
-    .line 11164
+    .line 11127
     return-object v0
 .end method

@@ -3,12 +3,18 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0xe
+.end annotation
+
+
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 28
+    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,7 +24,7 @@
     .locals 1
 
     .prologue
-    .line 39
+    .line 44
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->getAddedCount()I
@@ -32,7 +38,7 @@
     .locals 1
 
     .prologue
-    .line 43
+    .line 48
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->getBeforeText()Ljava/lang/CharSequence;
@@ -46,7 +52,7 @@
     .locals 1
 
     .prologue
-    .line 47
+    .line 52
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->getClassName()Ljava/lang/CharSequence;
@@ -60,7 +66,7 @@
     .locals 1
 
     .prologue
-    .line 51
+    .line 56
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->getContentDescription()Ljava/lang/CharSequence;
@@ -74,7 +80,7 @@
     .locals 1
 
     .prologue
-    .line 55
+    .line 60
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->getCurrentItemIndex()I
@@ -88,7 +94,7 @@
     .locals 1
 
     .prologue
-    .line 59
+    .line 64
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->getFromIndex()I
@@ -102,7 +108,7 @@
     .locals 1
 
     .prologue
-    .line 63
+    .line 68
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->getItemCount()I
@@ -116,7 +122,7 @@
     .locals 1
 
     .prologue
-    .line 67
+    .line 72
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->getParcelableData()Landroid/os/Parcelable;
@@ -130,7 +136,7 @@
     .locals 1
 
     .prologue
-    .line 71
+    .line 76
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->getRemovedCount()I
@@ -144,7 +150,7 @@
     .locals 1
 
     .prologue
-    .line 75
+    .line 80
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->getScrollX()I
@@ -158,7 +164,7 @@
     .locals 1
 
     .prologue
-    .line 79
+    .line 84
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->getScrollY()I
@@ -172,7 +178,7 @@
     .locals 1
 
     .prologue
-    .line 83
+    .line 88
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->getSource()Landroid/view/accessibility/AccessibilityNodeInfo;
@@ -197,7 +203,7 @@
     .end annotation
 
     .prologue
-    .line 87
+    .line 92
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->getText()Ljava/util/List;
@@ -211,7 +217,7 @@
     .locals 1
 
     .prologue
-    .line 91
+    .line 96
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->getToIndex()I
@@ -225,7 +231,7 @@
     .locals 1
 
     .prologue
-    .line 95
+    .line 100
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->getWindowId()I
@@ -239,7 +245,7 @@
     .locals 1
 
     .prologue
-    .line 99
+    .line 104
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->isChecked()Z
@@ -253,7 +259,7 @@
     .locals 1
 
     .prologue
-    .line 103
+    .line 108
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->isEnabled()Z
@@ -267,7 +273,7 @@
     .locals 1
 
     .prologue
-    .line 107
+    .line 112
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->isFullScreen()Z
@@ -281,7 +287,7 @@
     .locals 1
 
     .prologue
-    .line 111
+    .line 116
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->isPassword()Z
@@ -295,7 +301,7 @@
     .locals 1
 
     .prologue
-    .line 115
+    .line 120
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->isScrollable()Z
@@ -309,7 +315,7 @@
     .locals 1
 
     .prologue
-    .line 31
+    .line 36
     invoke-static {}, Landroid/view/accessibility/AccessibilityRecord;->obtain()Landroid/view/accessibility/AccessibilityRecord;
 
     move-result-object v0
@@ -321,7 +327,7 @@
     .locals 1
 
     .prologue
-    .line 35
+    .line 40
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-static {p0}, Landroid/view/accessibility/AccessibilityRecord;->obtain(Landroid/view/accessibility/AccessibilityRecord;)Landroid/view/accessibility/AccessibilityRecord;
@@ -335,12 +341,12 @@
     .locals 0
 
     .prologue
-    .line 119
+    .line 124
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->recycle()V
 
-    .line 120
+    .line 125
     return-void
 .end method
 
@@ -348,12 +354,12 @@
     .locals 0
 
     .prologue
-    .line 123
+    .line 128
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityRecord;->setAddedCount(I)V
 
-    .line 124
+    .line 129
     return-void
 .end method
 
@@ -361,12 +367,12 @@
     .locals 0
 
     .prologue
-    .line 127
+    .line 132
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityRecord;->setBeforeText(Ljava/lang/CharSequence;)V
 
-    .line 128
+    .line 133
     return-void
 .end method
 
@@ -374,12 +380,12 @@
     .locals 0
 
     .prologue
-    .line 131
+    .line 136
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityRecord;->setChecked(Z)V
 
-    .line 132
+    .line 137
     return-void
 .end method
 
@@ -387,12 +393,12 @@
     .locals 0
 
     .prologue
-    .line 135
+    .line 140
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityRecord;->setClassName(Ljava/lang/CharSequence;)V
 
-    .line 136
+    .line 141
     return-void
 .end method
 
@@ -400,12 +406,12 @@
     .locals 0
 
     .prologue
-    .line 139
+    .line 144
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityRecord;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 140
+    .line 145
     return-void
 .end method
 
@@ -413,12 +419,12 @@
     .locals 0
 
     .prologue
-    .line 143
+    .line 148
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityRecord;->setCurrentItemIndex(I)V
 
-    .line 144
+    .line 149
     return-void
 .end method
 
@@ -426,12 +432,12 @@
     .locals 0
 
     .prologue
-    .line 147
+    .line 152
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityRecord;->setEnabled(Z)V
 
-    .line 148
+    .line 153
     return-void
 .end method
 
@@ -439,12 +445,12 @@
     .locals 0
 
     .prologue
-    .line 151
+    .line 156
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityRecord;->setFromIndex(I)V
 
-    .line 152
+    .line 157
     return-void
 .end method
 
@@ -452,12 +458,12 @@
     .locals 0
 
     .prologue
-    .line 155
+    .line 160
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityRecord;->setFullScreen(Z)V
 
-    .line 156
+    .line 161
     return-void
 .end method
 
@@ -465,12 +471,12 @@
     .locals 0
 
     .prologue
-    .line 159
+    .line 164
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityRecord;->setItemCount(I)V
 
-    .line 160
+    .line 165
     return-void
 .end method
 
@@ -478,12 +484,12 @@
     .locals 0
 
     .prologue
-    .line 163
+    .line 168
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityRecord;->setParcelableData(Landroid/os/Parcelable;)V
 
-    .line 164
+    .line 169
     return-void
 .end method
 
@@ -491,12 +497,12 @@
     .locals 0
 
     .prologue
-    .line 167
+    .line 172
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityRecord;->setPassword(Z)V
 
-    .line 168
+    .line 173
     return-void
 .end method
 
@@ -504,12 +510,12 @@
     .locals 0
 
     .prologue
-    .line 171
+    .line 176
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityRecord;->setRemovedCount(I)V
 
-    .line 172
+    .line 177
     return-void
 .end method
 
@@ -517,12 +523,12 @@
     .locals 0
 
     .prologue
-    .line 175
+    .line 180
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityRecord;->setScrollX(I)V
 
-    .line 176
+    .line 181
     return-void
 .end method
 
@@ -530,12 +536,12 @@
     .locals 0
 
     .prologue
-    .line 179
+    .line 184
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityRecord;->setScrollY(I)V
 
-    .line 180
+    .line 185
     return-void
 .end method
 
@@ -543,12 +549,12 @@
     .locals 0
 
     .prologue
-    .line 183
+    .line 188
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityRecord;->setScrollable(Z)V
 
-    .line 184
+    .line 189
     return-void
 .end method
 
@@ -556,12 +562,12 @@
     .locals 0
 
     .prologue
-    .line 187
+    .line 192
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityRecord;->setSource(Landroid/view/View;)V
 
-    .line 188
+    .line 193
     return-void
 .end method
 
@@ -569,11 +575,11 @@
     .locals 0
 
     .prologue
-    .line 191
+    .line 196
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityRecord;->setToIndex(I)V
 
-    .line 192
+    .line 197
     return-void
 .end method

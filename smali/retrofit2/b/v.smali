@@ -7,6 +7,12 @@
 
 
 # annotations
+.annotation system Ldalvik/annotation/AnnotationDefault;
+    value = .subannotation Lretrofit2/b/v;
+        a = false
+    .end subannotation
+.end annotation
+
 .annotation runtime Ljava/lang/annotation/Documented;
 .end annotation
 
@@ -16,6 +22,11 @@
 
 .annotation runtime Ljava/lang/annotation/Target;
     value = {
-        .enum Ljava/lang/annotation/ElementType;->METHOD:Ljava/lang/annotation/ElementType;
+        .enum Ljava/lang/annotation/ElementType;->PARAMETER:Ljava/lang/annotation/ElementType;
     }
 .end annotation
+
+
+# virtual methods
+.method public abstract a()Z
+.end method

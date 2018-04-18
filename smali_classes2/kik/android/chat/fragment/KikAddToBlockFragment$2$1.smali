@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/fragment/KikAddToBlockFragment$2$1;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,9 +15,9 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
-        "Lkik/core/datatypes/o;",
+        "Lkik/core/datatypes/l;",
         ">;"
     }
 .end annotation
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 80
+    .line 90
     iput-object p1, p0, Lkik/android/chat/fragment/KikAddToBlockFragment$2$1;->a:Lkik/android/chat/fragment/KikAddToBlockFragment$2;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -46,18 +46,15 @@
     .locals 2
 
     .prologue
-    .line 80
-    .line 2084
+    .line 90
+    .line 1094
     iget-object v0, p0, Lkik/android/chat/fragment/KikAddToBlockFragment$2$1;->a:Lkik/android/chat/fragment/KikAddToBlockFragment$2;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikAddToBlockFragment$2;->b:Lkik/android/chat/fragment/KikAddToBlockFragment;
 
-    .line 2162
-    const/4 v1, 0x0
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikAddToBlockFragment;->resignWaitDialog()V
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikIqFragmentBase;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
-
-    .line 2085
+    .line 1095
     iget-object v0, p0, Lkik/android/chat/fragment/KikAddToBlockFragment$2$1;->a:Lkik/android/chat/fragment/KikAddToBlockFragment$2;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikAddToBlockFragment$2;->b:Lkik/android/chat/fragment/KikAddToBlockFragment;
@@ -70,7 +67,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->post(Ljava/lang/Runnable;)Z
 
-    .line 80
+    .line 90
     return-void
 .end method
 
@@ -78,17 +75,14 @@
     .locals 2
 
     .prologue
-    .line 98
+    .line 108
     iget-object v0, p0, Lkik/android/chat/fragment/KikAddToBlockFragment$2$1;->a:Lkik/android/chat/fragment/KikAddToBlockFragment$2;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikAddToBlockFragment$2;->b:Lkik/android/chat/fragment/KikAddToBlockFragment;
 
-    .line 1162
-    const/4 v1, 0x0
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikAddToBlockFragment;->resignWaitDialog()V
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikIqFragmentBase;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
-
-    .line 99
+    .line 109
     iget-object v0, p0, Lkik/android/chat/fragment/KikAddToBlockFragment$2$1;->a:Lkik/android/chat/fragment/KikAddToBlockFragment$2;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikAddToBlockFragment$2;->b:Lkik/android/chat/fragment/KikAddToBlockFragment;
@@ -101,6 +95,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->post(Ljava/lang/Runnable;)Z
 
-    .line 106
+    .line 116
     return-void
 .end method

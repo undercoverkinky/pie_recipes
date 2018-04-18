@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 277
+    .line 286
     iput-object p1, p0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationEnterCodeFragment$6;->a:Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationEnterCodeFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,13 +40,13 @@
     .locals 2
 
     .prologue
-    .line 281
+    .line 290
     iget-object v0, p0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationEnterCodeFragment$6;->a:Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationEnterCodeFragment;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationEnterCodeFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationEnterCodeFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 282
+    .line 291
     return-void
 .end method

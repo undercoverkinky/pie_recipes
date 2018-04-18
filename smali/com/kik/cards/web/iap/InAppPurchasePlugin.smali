@@ -1,12 +1,32 @@
 .class public Lcom/kik/cards/web/iap/InAppPurchasePlugin;
-.super Lcom/kik/cards/web/plugin/d;
+.super Lcom/kik/cards/web/plugin/BridgePlugin;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:[Ljava/lang/String;
+.field public static final BILLING_AVAILABLE_SKUS:[Ljava/lang/String;
 
-.field public static final b:Ljava/util/Map;
+.field public static final BILLING_RESPONSE_RESULT_BILLING_UNAVAILABLE:I = 0x3
+
+.field public static final BILLING_RESPONSE_RESULT_DEVELOPER_ERROR:I = 0x5
+
+.field public static final BILLING_RESPONSE_RESULT_ERROR:I = 0x6
+
+.field public static final BILLING_RESPONSE_RESULT_ITEM_ALREADY_OWNED:I = 0x7
+
+.field public static final BILLING_RESPONSE_RESULT_ITEM_NOT_OWNED:I = 0x8
+
+.field public static final BILLING_RESPONSE_RESULT_ITEM_UNAVAILABLE:I = 0x4
+
+.field public static final BILLING_RESPONSE_RESULT_OK:I = 0x0
+
+.field public static final BILLING_RESPONSE_RESULT_USER_CANCELLED:I = 0x1
+
+.field private static final IAP_API_VERSION_NUMBER:I = 0x3
+
+.field private static final IAP_PURCHASE_TYPE:Ljava/lang/String; = "inapp"
+
+.field public static final legacyHostSKUMap:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map",
@@ -18,23 +38,23 @@
     .end annotation
 .end field
 
-.field private static final e:Lorg/slf4j/b;
+.field private static final log:Lorg/slf4j/b;
 
 
 # instance fields
-.field private d:Landroid/content/Context;
+.field private _cardIntentSender:Lcom/kik/cards/web/iap/c;
 
-.field private final f:Lcom/kik/cards/web/iap/d;
+.field private _ctx:Landroid/content/Context;
 
-.field private final g:Lcom/kik/cards/web/userdata/b;
+.field private final _iapManager:Lkik/core/interfaces/m;
 
-.field private final h:Lkik/core/interfaces/n;
+.field private _inAppBillingService:Lcom/android/a/a/a;
 
-.field private i:Ljava/lang/String;
+.field private _packageName:Ljava/lang/String;
 
-.field private j:Lcom/kik/cards/web/iap/c;
+.field private final _signer:Lcom/kik/cards/web/iap/d;
 
-.field private k:Lcom/android/b/a/a;
+.field private final _userDataPluginImpl:Lcom/kik/cards/web/userdata/b;
 
 
 # direct methods
@@ -125,14 +145,14 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a:[Ljava/lang/String;
+    sput-object v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->BILLING_AVAILABLE_SKUS:[Ljava/lang/String;
 
     .line 90
     new-instance v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$1;
 
     invoke-direct {v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin$1;-><init>()V
 
-    sput-object v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->b:Ljava/util/Map;
+    sput-object v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->legacyHostSKUMap:Ljava/util/Map;
 
     .line 105
     const-string v0, "PurchasePlugin"
@@ -141,103 +161,335 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->e:Lorg/slf4j/b;
+    sput-object v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->log:Lorg/slf4j/b;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/kik/cards/web/iap/c;Lcom/kik/cards/web/iap/d;Lcom/android/b/a/a;Lcom/kik/cards/web/userdata/a;Lkik/core/interfaces/n;)V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/kik/cards/web/iap/c;Lcom/kik/cards/web/iap/d;Lcom/android/a/a/a;Lcom/kik/cards/web/userdata/a;Lkik/core/interfaces/m;)V
+    .locals 2
 
     .prologue
     .line 123
-    const-string v0, "IAP"
+    const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/kik/cards/web/plugin/d;-><init>(Ljava/lang/String;)V
+    const-string v1, "IAP"
+
+    invoke-direct {p0, v0, v1}, Lcom/kik/cards/web/plugin/BridgePlugin;-><init>(ILjava/lang/String;)V
 
     .line 124
-    iput-object p1, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->d:Landroid/content/Context;
+    iput-object p1, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_ctx:Landroid/content/Context;
 
     .line 125
-    iput-object p4, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->f:Lcom/kik/cards/web/iap/d;
+    iput-object p4, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_signer:Lcom/kik/cards/web/iap/d;
 
     .line 126
-    iput-object p2, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->i:Ljava/lang/String;
+    iput-object p2, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_packageName:Ljava/lang/String;
 
     .line 127
-    iput-object p3, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->j:Lcom/kik/cards/web/iap/c;
+    iput-object p3, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_cardIntentSender:Lcom/kik/cards/web/iap/c;
 
     .line 128
-    iput-object p5, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->k:Lcom/android/b/a/a;
+    iput-object p5, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_inAppBillingService:Lcom/android/a/a/a;
 
     .line 129
-    invoke-interface {p6}, Lcom/kik/cards/web/userdata/a;->a()Lcom/kik/cards/web/userdata/b;
+    invoke-interface {p6}, Lcom/kik/cards/web/userdata/a;->b()Lcom/kik/cards/web/userdata/b;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->g:Lcom/kik/cards/web/userdata/b;
+    iput-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_userDataPluginImpl:Lcom/kik/cards/web/userdata/b;
 
     .line 130
-    iput-object p7, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->h:Lkik/core/interfaces/n;
+    iput-object p7, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_iapManager:Lkik/core/interfaces/m;
 
     .line 131
     return-void
 .end method
 
-.method static synthetic a(I)I
+.method static synthetic access$000(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 56
-    invoke-static {p0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->b(I)I
+    invoke-direct {p0, p1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->getPriceForSku(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic access$100(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
+    .locals 0
+
+    .prologue
+    .line 56
+    invoke-direct {p0, p1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->trackMetric(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
+
+    return-void
+.end method
+
+.method static synthetic access$1000(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    .locals 0
+
+    .prologue
+    .line 56
+    invoke-virtual {p0, p1, p2, p3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->finishAsyncResult(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+
+    return-void
+.end method
+
+.method static synthetic access$1100(Lcom/kik/cards/web/iap/InAppPurchasePlugin;)Lcom/kik/cards/web/iap/c;
+    .locals 1
+
+    .prologue
+    .line 56
+    iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_cardIntentSender:Lcom/kik/cards/web/iap/c;
+
+    return-object v0
+.end method
+
+.method static synthetic access$1200(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    .locals 0
+
+    .prologue
+    .line 56
+    invoke-virtual {p0, p1, p2, p3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->finishAsyncResult(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+
+    return-void
+.end method
+
+.method static synthetic access$1300(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    .locals 0
+
+    .prologue
+    .line 56
+    invoke-virtual {p0, p1, p2, p3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->finishAsyncResult(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+
+    return-void
+.end method
+
+.method static synthetic access$1400(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    .locals 1
+
+    .prologue
+    .line 56
+    invoke-direct/range {p0 .. p6}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->constructTransactionObject(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic access$1500(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    .locals 0
+
+    .prologue
+    .line 56
+    invoke-virtual {p0, p1, p2, p3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->finishAsyncResult(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+
+    return-void
+.end method
+
+.method static synthetic access$1600(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    .locals 0
+
+    .prologue
+    .line 56
+    invoke-virtual {p0, p1, p2, p3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->finishAsyncResult(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+
+    return-void
+.end method
+
+.method static synthetic access$1700(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    .locals 0
+
+    .prologue
+    .line 56
+    invoke-virtual {p0, p1, p2, p3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->finishAsyncResult(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+
+    return-void
+.end method
+
+.method static synthetic access$1800(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    .locals 0
+
+    .prologue
+    .line 56
+    invoke-virtual {p0, p1, p2, p3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->finishAsyncResult(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+
+    return-void
+.end method
+
+.method static synthetic access$1900(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    .locals 0
+
+    .prologue
+    .line 56
+    invoke-virtual {p0, p1, p2, p3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->finishAsyncResult(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+
+    return-void
+.end method
+
+.method static synthetic access$200(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    .locals 0
+
+    .prologue
+    .line 56
+    invoke-virtual {p0, p1, p2, p3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->finishAsyncResult(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+
+    return-void
+.end method
+
+.method static synthetic access$2000(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    .locals 0
+
+    .prologue
+    .line 56
+    invoke-virtual {p0, p1, p2, p3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->finishAsyncResult(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+
+    return-void
+.end method
+
+.method static synthetic access$2100(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    .locals 0
+
+    .prologue
+    .line 56
+    invoke-virtual {p0, p1, p2, p3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->finishAsyncResult(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+
+    return-void
+.end method
+
+.method static synthetic access$2200(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    .locals 0
+
+    .prologue
+    .line 56
+    invoke-virtual {p0, p1, p2, p3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->finishAsyncResult(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+
+    return-void
+.end method
+
+.method static synthetic access$2300(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    .locals 0
+
+    .prologue
+    .line 56
+    invoke-virtual {p0, p1, p2, p3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->finishAsyncResult(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+
+    return-void
+.end method
+
+.method static synthetic access$2400(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    .locals 0
+
+    .prologue
+    .line 56
+    invoke-virtual {p0, p1, p2, p3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->finishAsyncResult(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+
+    return-void
+.end method
+
+.method static synthetic access$2500(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    .locals 0
+
+    .prologue
+    .line 56
+    invoke-virtual {p0, p1, p2, p3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->finishAsyncResult(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+
+    return-void
+.end method
+
+.method static synthetic access$2600(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    .locals 0
+
+    .prologue
+    .line 56
+    invoke-virtual {p0, p1, p2, p3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->finishAsyncResult(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+
+    return-void
+.end method
+
+.method static synthetic access$300(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    .locals 0
+
+    .prologue
+    .line 56
+    invoke-virtual {p0, p1, p2, p3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->finishAsyncResult(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+
+    return-void
+.end method
+
+.method static synthetic access$400(Lcom/kik/cards/web/iap/InAppPurchasePlugin;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 56
+    iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_packageName:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$500(Lcom/kik/cards/web/iap/InAppPurchasePlugin;)Lcom/android/a/a/a;
+    .locals 1
+
+    .prologue
+    .line 56
+    iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_inAppBillingService:Lcom/android/a/a/a;
+
+    return-object v0
+.end method
+
+.method static synthetic access$600(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    .locals 0
+
+    .prologue
+    .line 56
+    invoke-virtual {p0, p1, p2, p3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->finishAsyncResult(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+
+    return-void
+.end method
+
+.method static synthetic access$700(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    .locals 0
+
+    .prologue
+    .line 56
+    invoke-virtual {p0, p1, p2, p3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->finishAsyncResult(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+
+    return-void
+.end method
+
+.method static synthetic access$800(Lcom/kik/cards/web/iap/InAppPurchasePlugin;I)I
+    .locals 1
+
+    .prologue
+    .line 56
+    invoke-direct {p0, p1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->handleResponseCode(I)I
 
     move-result v0
 
     return v0
 .end method
 
-.method static synthetic a(Lcom/kik/cards/web/iap/InAppPurchasePlugin;)Ljava/lang/String;
-    .locals 1
+.method static synthetic access$900(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    .locals 0
 
     .prologue
     .line 56
-    iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->i:Ljava/lang/String;
+    invoke-virtual {p0, p1, p2, p3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->finishAsyncResult(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
 
-    return-object v0
+    return-void
 .end method
 
-.method static synthetic a(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 56
-    invoke-direct {p0, p1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->b(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method static synthetic a(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
-    .locals 1
-
-    .prologue
-    .line 56
-    invoke-direct/range {p0 .. p6}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method private a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
+.method private constructTransactionObject(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
     .locals 9
 
     .prologue
     const/4 v1, 0x0
 
     .line 235
-    invoke-static {p4}, Lcom/kik/cards/web/r;->k(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p4}, Lcom/kik/cards/web/s;->l(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -332,7 +584,7 @@
 
     .line 260
     :try_start_1
-    iget-object v3, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->f:Lcom/kik/cards/web/iap/d;
+    iget-object v3, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_signer:Lcom/kik/cards/web/iap/d;
 
     invoke-interface {v3, v5, p3, p4}, Lcom/kik/cards/web/iap/d;->a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     :try_end_1
@@ -412,382 +664,28 @@
     goto :goto_0
 .end method
 
-.method static synthetic a(Lcom/kik/cards/web/plugin/a;)V
-    .locals 2
-
-    .prologue
-    .line 56
-    const/16 v0, 0x193
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
-
-    return-void
-.end method
-
-.method static synthetic a(Lcom/kik/cards/web/plugin/a;I)V
-    .locals 1
-
-    .prologue
-    .line 56
-    const/4 v0, 0x0
-
-    invoke-static {p0, p1, v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
-
-    return-void
-.end method
-
-.method static synthetic a(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)V
-    .locals 1
-
-    .prologue
-    .line 56
-    const/16 v0, 0xc8
-
-    invoke-static {p0, v0, p1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
-
-    return-void
-.end method
-
-.method static synthetic a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
-    .locals 0
-
-    .prologue
-    .line 56
-    invoke-static {p0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->b(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
-
-    return-void
-.end method
-
-.method private a()Z
-    .locals 5
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 573
-    :try_start_0
-    iget-object v1, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->k:Lcom/android/b/a/a;
-
-    const/4 v2, 0x3
-
-    iget-object v3, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->i:Ljava/lang/String;
-
-    const-string v4, "inapp"
-
-    invoke-interface {v1, v2, v3, v4}, Lcom/android/b/a/a;->a(ILjava/lang/String;Ljava/lang/String;)I
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const/4 v0, 0x1
-
-    .line 576
-    :cond_0
-    :goto_0
-    return v0
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_0
-.end method
-
-.method public static a(Ljava/lang/String;Ljava/lang/String;)Z
-    .locals 8
-
-    .prologue
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    .line 736
-    invoke-static {}, Lkik/android/util/DeviceUtils;->f()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    move v0, v2
-
-    .line 761
-    :goto_0
-    return v0
-
-    .line 739
-    :cond_0
-    const-string v0, "cards-sticker-dev.herokuapp.com"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 740
-    const-string p0, "stickers.kik.com"
-
-    .line 743
-    :cond_1
-    sget-object v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->b:Ljava/util/Map;
-
-    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    :cond_2
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Map$Entry;
-
-    .line 744
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    move v0, v2
-
-    .line 745
-    goto :goto_0
-
-    .line 750
-    :cond_3
-    const-string v0, "\\."
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 751
-    const-string v0, "\\."
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 752
-    array-length v0, v4
-
-    add-int/lit8 v5, v0, -0x1
-
-    .line 753
-    array-length v0, v1
-
-    if-ge v0, v5, :cond_4
-
-    move v0, v3
-
-    .line 754
-    goto :goto_0
-
-    :cond_4
-    move v0, v3
-
-    .line 756
-    :goto_1
-    if-ge v0, v5, :cond_6
-
-    .line 757
-    add-int/lit8 v6, v5, -0x1
-
-    sub-int/2addr v6, v0
-
-    aget-object v6, v4, v6
-
-    aget-object v7, v1, v0
-
-    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_5
-
-    move v0, v3
-
-    .line 758
-    goto :goto_0
-
-    .line 756
-    :cond_5
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
-
-    :cond_6
-    move v0, v2
-
-    .line 761
-    goto :goto_0
-.end method
-
-.method private static b(I)I
-    .locals 1
-
-    .prologue
-    .line 521
-    packed-switch p0, :pswitch_data_0
-
-    .line 557
-    :goto_0
-    :pswitch_0
-    const/16 v0, 0x1f4
-
-    :goto_1
-    return v0
-
-    .line 523
-    :pswitch_1
-    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->IAP_PURCHASE_ERROR:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
-
-    invoke-static {v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->b(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
-
-    .line 524
-    const/16 v0, 0x201
-
-    goto :goto_1
-
-    .line 527
-    :pswitch_2
-    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->IAP_PURCHASE_ERROR:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
-
-    invoke-static {v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->b(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
-
-    goto :goto_0
-
-    .line 532
-    :pswitch_3
-    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->IAP_PURCHASE_ERROR:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
-
-    invoke-static {v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->b(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
-
-    goto :goto_0
-
-    .line 536
-    :pswitch_4
-    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->IAP_PURCHASE_ERROR:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
-
-    invoke-static {v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->b(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
-
-    goto :goto_0
-
-    .line 542
-    :pswitch_5
-    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->IAP_PURCHASE_ERROR:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
-
-    invoke-static {v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->b(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
-
-    goto :goto_0
-
-    .line 546
-    :pswitch_6
-    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->IAP_PURCHASE_CANCELLED:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
-
-    invoke-static {v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->b(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
-
-    .line 547
-    const/16 v0, 0xc8
-
-    goto :goto_1
-
-    .line 550
-    :pswitch_7
-    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->IAP_PURCHASE_ERROR:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
-
-    invoke-static {v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->b(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
-
-    goto :goto_0
-
-    .line 554
-    :pswitch_8
-    const/16 v0, 0xca
-
-    goto :goto_1
-
-    .line 521
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_8
-        :pswitch_6
-        :pswitch_0
-        :pswitch_1
-        :pswitch_5
-        :pswitch_2
-        :pswitch_7
-        :pswitch_3
-        :pswitch_4
-    .end packed-switch
-.end method
-
-.method static synthetic b(Lcom/kik/cards/web/iap/InAppPurchasePlugin;)Lcom/android/b/a/a;
-    .locals 1
-
-    .prologue
-    .line 56
-    iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->k:Lcom/android/b/a/a;
-
-    return-object v0
-.end method
-
-.method private b(Ljava/lang/String;)Ljava/lang/String;
+.method private getPriceForSku(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
     .prologue
     .line 593
-    iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->h:Lkik/core/interfaces/n;
+    iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_iapManager:Lkik/core/interfaces/m;
 
-    invoke-interface {v0, p1}, Lkik/core/interfaces/n;->a(Ljava/lang/String;)Lkik/core/datatypes/m;
+    invoke-interface {v0, p1}, Lkik/core/interfaces/m;->a(Ljava/lang/String;)Lkik/core/datatypes/j;
 
     move-result-object v0
 
     .line 595
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lkik/core/datatypes/m;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/j;->b()Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
     .line 596
-    invoke-virtual {v0}, Lkik/core/datatypes/m;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/j;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -817,11 +715,11 @@
 
     .line 607
     :try_start_0
-    iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->k:Lcom/android/b/a/a;
+    iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_inAppBillingService:Lcom/android/a/a/a;
 
     const/4 v2, 0x3
 
-    iget-object v3, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->d:Landroid/content/Context;
+    iget-object v3, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_ctx:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -829,7 +727,7 @@
 
     const-string v4, "inapp"
 
-    invoke-interface {v0, v2, v3, v4, v1}, Lcom/android/b/a/a;->a(ILjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+    invoke-interface {v0, v2, v3, v4, v1}, Lcom/android/a/a/a;->a(ILjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -904,13 +802,13 @@
     if-nez v1, :cond_0
 
     .line 626
-    iget-object v1, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->h:Lkik/core/interfaces/n;
+    iget-object v1, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_iapManager:Lkik/core/interfaces/m;
 
-    new-instance v2, Lkik/core/datatypes/m;
+    new-instance v2, Lkik/core/datatypes/j;
 
-    invoke-direct {v2, p1, v0}, Lkik/core/datatypes/m;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, p1, v0}, Lkik/core/datatypes/j;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-interface {v1, v2}, Lkik/core/interfaces/n;->a(Lkik/core/datatypes/m;)Z
+    invoke-interface {v1, v2}, Lkik/core/interfaces/m;->a(Lkik/core/datatypes/j;)Z
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -926,7 +824,7 @@
 
     .line 635
     :cond_3
-    invoke-static {v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->b(I)I
+    invoke-direct {p0, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->handleResponseCode(I)I
 
     .line 636
     const-string v0, ""
@@ -934,33 +832,144 @@
     goto :goto_0
 .end method
 
-.method static synthetic b(Lcom/kik/cards/web/plugin/a;)V
-    .locals 2
-
-    .prologue
-    .line 56
-    const/16 v0, 0x1f4
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
-
-    return-void
-.end method
-
-.method static synthetic b(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)V
+.method private handleResponseCode(I)I
     .locals 1
 
     .prologue
-    .line 56
+    .line 521
+    packed-switch p1, :pswitch_data_0
+
+    .line 557
+    :goto_0
+    :pswitch_0
+    const/16 v0, 0x1f4
+
+    :goto_1
+    return v0
+
+    .line 523
+    :pswitch_1
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->IAP_PURCHASE_ERROR:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
+
+    invoke-direct {p0, v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->trackMetric(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
+
+    .line 524
+    const/16 v0, 0x201
+
+    goto :goto_1
+
+    .line 527
+    :pswitch_2
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->IAP_PURCHASE_ERROR:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
+
+    invoke-direct {p0, v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->trackMetric(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
+
+    goto :goto_0
+
+    .line 532
+    :pswitch_3
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->IAP_PURCHASE_ERROR:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
+
+    invoke-direct {p0, v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->trackMetric(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
+
+    goto :goto_0
+
+    .line 536
+    :pswitch_4
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->IAP_PURCHASE_ERROR:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
+
+    invoke-direct {p0, v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->trackMetric(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
+
+    goto :goto_0
+
+    .line 542
+    :pswitch_5
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->IAP_PURCHASE_ERROR:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
+
+    invoke-direct {p0, v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->trackMetric(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
+
+    goto :goto_0
+
+    .line 546
+    :pswitch_6
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->IAP_PURCHASE_CANCELLED:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
+
+    invoke-direct {p0, v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->trackMetric(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
+
+    .line 547
     const/16 v0, 0xc8
 
-    invoke-static {p0, v0, p1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
+    goto :goto_1
 
-    return-void
+    .line 550
+    :pswitch_7
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;->IAP_PURCHASE_ERROR:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;
+
+    invoke-direct {p0, v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->trackMetric(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
+
+    goto :goto_0
+
+    .line 554
+    :pswitch_8
+    const/16 v0, 0xca
+
+    goto :goto_1
+
+    .line 521
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_8
+        :pswitch_6
+        :pswitch_0
+        :pswitch_1
+        :pswitch_5
+        :pswitch_2
+        :pswitch_7
+        :pswitch_3
+        :pswitch_4
+    .end packed-switch
 .end method
 
-.method private static b(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
+.method private isBillingSupported()Z
+    .locals 5
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 573
+    :try_start_0
+    iget-object v1, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_inAppBillingService:Lcom/android/a/a/a;
+
+    const/4 v2, 0x3
+
+    iget-object v3, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_packageName:Ljava/lang/String;
+
+    const-string v4, "inapp"
+
+    invoke-interface {v1, v2, v3, v4}, Lcom/android/a/a/a;->a(ILjava/lang/String;Ljava/lang/String;)I
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 576
+    :cond_0
+    :goto_0
+    return v0
+
+    :catch_0
+    move-exception v1
+
+    goto :goto_0
+.end method
+
+.method private trackMetric(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;)V
     .locals 4
 
     .prologue
@@ -977,282 +986,181 @@
 
     move-result-object v0
 
-    invoke-static {}, Lkik/core/util/x;->b()J
+    invoke-static {}, Lkik/core/util/v;->b()J
 
     move-result-wide v2
 
-    invoke-virtual {v0, p0, v2, v3}, Lcom/kik/clientmetrics/f;->a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;J)V
+    invoke-virtual {v0, p1, v2, v3}, Lcom/kik/clientmetrics/f;->a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUserEventType;J)V
 
     .line 587
     :cond_0
     return-void
 .end method
 
-.method static synthetic c(Lcom/kik/cards/web/iap/InAppPurchasePlugin;)Lcom/kik/cards/web/iap/c;
-    .locals 1
-
-    .prologue
-    .line 56
-    iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->j:Lcom/kik/cards/web/iap/c;
-
-    return-object v0
-.end method
-
-.method static synthetic c(Lcom/kik/cards/web/plugin/a;)V
-    .locals 2
-
-    .prologue
-    .line 56
-    const/16 v0, 0x1f4
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
-
-    return-void
-.end method
-
-.method static synthetic c(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)V
-    .locals 1
-
-    .prologue
-    .line 56
-    const/16 v0, 0xc8
-
-    invoke-static {p0, v0, p1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
-
-    return-void
-.end method
-
-.method static synthetic d(Lcom/kik/cards/web/plugin/a;)V
-    .locals 2
-
-    .prologue
-    .line 56
-    const/16 v0, 0x1f4
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
-
-    return-void
-.end method
-
-.method static synthetic e(Lcom/kik/cards/web/plugin/a;)V
-    .locals 2
-
-    .prologue
-    .line 56
-    const/16 v0, 0x1f4
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
-
-    return-void
-.end method
-
-.method static synthetic f(Lcom/kik/cards/web/plugin/a;)V
-    .locals 2
-
-    .prologue
-    .line 56
-    const/16 v0, 0x1f4
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
-
-    return-void
-.end method
-
-.method static synthetic g(Lcom/kik/cards/web/plugin/a;)V
-    .locals 2
-
-    .prologue
-    .line 56
-    const/16 v0, 0x1f4
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
-
-    return-void
-.end method
-
-.method static synthetic h(Lcom/kik/cards/web/plugin/a;)V
-    .locals 2
-
-    .prologue
-    .line 56
-    const/16 v0, 0x1f4
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
-
-    return-void
-.end method
-
-.method static synthetic i(Lcom/kik/cards/web/plugin/a;)V
-    .locals 2
-
-    .prologue
-    .line 56
-    const/16 v0, 0x1f4
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
-
-    return-void
-.end method
-
-.method static synthetic j(Lcom/kik/cards/web/plugin/a;)V
-    .locals 2
-
-    .prologue
-    .line 56
-    const/16 v0, 0x1f4
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
-
-    return-void
-.end method
-
-.method static synthetic k(Lcom/kik/cards/web/plugin/a;)V
-    .locals 2
-
-    .prologue
-    .line 56
-    const/16 v0, 0x1f4
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
-
-    return-void
-.end method
-
-.method static synthetic l(Lcom/kik/cards/web/plugin/a;)V
-    .locals 2
-
-    .prologue
-    .line 56
-    const/16 v0, 0x1f4
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
-
-    return-void
-.end method
-
-.method static synthetic m(Lcom/kik/cards/web/plugin/a;)V
-    .locals 2
-
-    .prologue
-    .line 56
-    const/16 v0, 0x1f4
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
-
-    return-void
-.end method
-
-.method static synthetic n(Lcom/kik/cards/web/plugin/a;)V
-    .locals 2
-
-    .prologue
-    .line 56
-    const/16 v0, 0xc8
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
-
-    return-void
-.end method
-
-.method static synthetic o(Lcom/kik/cards/web/plugin/a;)V
-    .locals 2
-
-    .prologue
-    .line 56
-    const/16 v0, 0x195
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
-
-    return-void
-.end method
-
-.method static synthetic p(Lcom/kik/cards/web/plugin/a;)V
-    .locals 2
-
-    .prologue
-    .line 56
-    const/16 v0, 0x1f4
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Lcom/kik/cards/web/plugin/a;ILorg/json/JSONObject;)V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Z
-    .locals 1
+.method public canAccessSKU(Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 8
 
     .prologue
-    .line 563
-    if-eqz p1, :cond_1
+    const/4 v2, 0x1
 
-    invoke-static {p1}, Lcom/kik/cards/web/r;->a(Ljava/lang/String;)Z
+    const/4 v3, 0x0
+
+    .line 736
+    invoke-static {}, Lkik/android/util/DeviceUtils;->f()Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->d:Landroid/content/Context;
+    move v0, v2
 
-    invoke-static {v0}, Lkik/android/util/DeviceUtils;->d(Landroid/content/Context;)Z
+    .line 761
+    :goto_0
+    return v0
+
+    .line 739
+    :cond_0
+    const-string v0, "cards-sticker-dev.herokuapp.com"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    :cond_0
-    invoke-direct {p0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a()Z
+    .line 740
+    const-string p1, "stickers.kik.com"
+
+    .line 743
+    :cond_1
+    sget-object v0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->legacyHostSKUMap:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
+
+    :cond_2
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-eqz v0, :cond_3
 
-    .line 564
-    :cond_1
-    const/4 v0, 0x0
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 566
-    :goto_0
-    return v0
+    move-result-object v0
 
-    :cond_2
-    const/4 v0, 0x1
+    check-cast v0, Ljava/util/Map$Entry;
 
+    .line 744
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    move v0, v2
+
+    .line 745
+    goto :goto_0
+
+    .line 750
+    :cond_3
+    const-string v0, "\\."
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 751
+    const-string v0, "\\."
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v4
+
+    .line 752
+    array-length v0, v4
+
+    add-int/lit8 v5, v0, -0x1
+
+    .line 753
+    array-length v0, v1
+
+    if-ge v0, v5, :cond_4
+
+    move v0, v3
+
+    .line 754
+    goto :goto_0
+
+    :cond_4
+    move v0, v3
+
+    .line 756
+    :goto_1
+    if-ge v0, v5, :cond_6
+
+    .line 757
+    add-int/lit8 v6, v5, -0x1
+
+    sub-int/2addr v6, v0
+
+    aget-object v6, v4, v6
+
+    aget-object v7, v1, v0
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_5
+
+    move v0, v3
+
+    .line 758
+    goto :goto_0
+
+    .line 756
+    :cond_5
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    :cond_6
+    move v0, v2
+
+    .line 761
     goto :goto_0
 .end method
 
-.method public getAvailableItems(Lorg/json/JSONObject;Ljava/lang/String;)Lcom/kik/cards/web/plugin/h;
+.method public getAvailableItems(Lorg/json/JSONObject;Ljava/lang/String;)Lcom/kik/cards/web/plugin/g;
     .locals 11
-    .annotation runtime Lcom/kik/cards/web/plugin/f;
+    .annotation runtime Lcom/kik/cards/web/plugin/e;
     .end annotation
 
     .prologue
@@ -1260,16 +1168,16 @@
 
     .line 662
     :try_start_0
-    iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->k:Lcom/android/b/a/a;
+    iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_inAppBillingService:Lcom/android/a/a/a;
 
     if-nez v0, :cond_0
 
     .line 663
-    new-instance v0, Lcom/kik/cards/web/plugin/h;
+    new-instance v0, Lcom/kik/cards/web/plugin/g;
 
     const/16 v1, 0x201
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
 
     .line 724
     :goto_0
@@ -1284,7 +1192,7 @@
     move-result-object v1
 
     .line 666
-    invoke-static {p2}, Lcom/kik/cards/web/r;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/kik/cards/web/s;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1319,16 +1227,16 @@
     move-result-object v6
 
     .line 676
-    invoke-static {v2, v6}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-virtual {p0, v2, v6}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->canAccessSKU(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v7
 
     if-eqz v7, :cond_1
 
     .line 677
-    iget-object v7, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->h:Lkik/core/interfaces/n;
+    iget-object v7, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_iapManager:Lkik/core/interfaces/m;
 
-    invoke-interface {v7, v6}, Lkik/core/interfaces/n;->a(Ljava/lang/String;)Lkik/core/datatypes/m;
+    invoke-interface {v7, v6}, Lkik/core/interfaces/m;->a(Ljava/lang/String;)Lkik/core/datatypes/j;
 
     move-result-object v7
 
@@ -1343,7 +1251,7 @@
     .line 680
     const-string v8, "sku"
 
-    invoke-virtual {v7}, Lkik/core/datatypes/m;->a()Ljava/lang/String;
+    invoke-virtual {v7}, Lkik/core/datatypes/j;->a()Ljava/lang/String;
 
     move-result-object v9
 
@@ -1352,7 +1260,7 @@
     .line 681
     const-string v8, "formattedPrice"
 
-    invoke-virtual {v7}, Lkik/core/datatypes/m;->b()Ljava/lang/String;
+    invoke-virtual {v7}, Lkik/core/datatypes/j;->b()Ljava/lang/String;
 
     move-result-object v7
 
@@ -1381,9 +1289,9 @@
     :catch_0
     move-exception v0
 
-    new-instance v0, Lcom/kik/cards/web/plugin/h;
+    new-instance v0, Lcom/kik/cards/web/plugin/g;
 
-    invoke-direct {v0, v10}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
+    invoke-direct {v0, v10}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
 
     goto :goto_0
 
@@ -1407,15 +1315,15 @@
     invoke-virtual {v0, v1, v5}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
     .line 695
-    iget-object v1, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->k:Lcom/android/b/a/a;
+    iget-object v1, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_inAppBillingService:Lcom/android/a/a/a;
 
     const/4 v2, 0x3
 
-    iget-object v5, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->i:Ljava/lang/String;
+    iget-object v5, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_packageName:Ljava/lang/String;
 
     const-string v6, "inapp"
 
-    invoke-interface {v1, v2, v5, v6, v0}, Lcom/android/b/a/a;->a(ILjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+    invoke-interface {v1, v2, v5, v6, v0}, Lcom/android/a/a/a;->a(ILjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -1492,13 +1400,13 @@
     invoke-virtual {v4, v5}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
     .line 709
-    iget-object v5, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->h:Lkik/core/interfaces/n;
+    iget-object v5, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_iapManager:Lkik/core/interfaces/m;
 
-    new-instance v6, Lkik/core/datatypes/m;
+    new-instance v6, Lkik/core/datatypes/j;
 
-    invoke-direct {v6, v0, v2}, Lkik/core/datatypes/m;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v6, v0, v2}, Lkik/core/datatypes/j;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-interface {v5, v6}, Lkik/core/interfaces/n;->a(Lkik/core/datatypes/m;)Z
+    invoke-interface {v5, v6}, Lkik/core/interfaces/m;->a(Lkik/core/datatypes/j;)Z
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
@@ -1509,16 +1417,16 @@
     :catch_1
     move-exception v0
 
-    new-instance v0, Lcom/kik/cards/web/plugin/h;
+    new-instance v0, Lcom/kik/cards/web/plugin/g;
 
-    invoke-direct {v0, v10}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
+    invoke-direct {v0, v10}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
 
     goto/16 :goto_0
 
     .line 714
     :cond_4
     :try_start_2
-    invoke-static {v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->b(I)I
+    invoke-direct {p0, v1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->handleResponseCode(I)I
 
     .line 717
     :cond_5
@@ -1527,9 +1435,9 @@
     invoke-virtual {v3, v0, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 718
-    new-instance v0, Lcom/kik/cards/web/plugin/h;
+    new-instance v0, Lcom/kik/cards/web/plugin/g;
 
-    invoke-direct {v0, v3}, Lcom/kik/cards/web/plugin/h;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {v0, v3}, Lcom/kik/cards/web/plugin/g;-><init>(Lorg/json/JSONObject;)V
     :try_end_2
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_0
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_1
@@ -1537,7 +1445,7 @@
     goto/16 :goto_0
 .end method
 
-.method public getAvailableItemsAsynchronously(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;Ljava/lang/String;)Lcom/kik/cards/web/plugin/h;
+.method public getAvailableItemsAsynchronously(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;Ljava/lang/String;)Lcom/kik/cards/web/plugin/g;
     .locals 2
     .annotation runtime Lcom/kik/cards/web/plugin/c;
     .end annotation
@@ -1557,41 +1465,41 @@
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
     .line 654
-    new-instance v0, Lcom/kik/cards/web/plugin/h;
+    new-instance v0, Lcom/kik/cards/web/plugin/g;
 
     const/16 v1, 0xca
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
 
     return-object v0
 .end method
 
-.method public getTransactionList(Lorg/json/JSONObject;Ljava/lang/String;)Lcom/kik/cards/web/plugin/h;
+.method public getTransactionList(Lorg/json/JSONObject;Ljava/lang/String;)Lcom/kik/cards/web/plugin/g;
     .locals 13
-    .annotation runtime Lcom/kik/cards/web/plugin/f;
+    .annotation runtime Lcom/kik/cards/web/plugin/e;
     .end annotation
 
     .prologue
     const/16 v12, 0x1f4
 
     .line 183
-    invoke-static {p2}, Lcom/kik/cards/web/r;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/kik/cards/web/s;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
     .line 188
     :try_start_0
-    iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->k:Lcom/android/b/a/a;
+    iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_inAppBillingService:Lcom/android/a/a/a;
 
     const/4 v1, 0x3
 
-    iget-object v2, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->i:Ljava/lang/String;
+    iget-object v2, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_packageName:Ljava/lang/String;
 
     const-string v3, "inapp"
 
     const/4 v4, 0x0
 
-    invoke-interface {v0, v1, v2, v3, v4}, Lcom/android/b/a/a;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+    invoke-interface {v0, v1, v2, v3, v4}, Lcom/android/a/a/a;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1673,7 +1581,7 @@
     move-result-object v0
 
     .line 207
-    iget-object v2, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->d:Landroid/content/Context;
+    iget-object v2, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_ctx:Landroid/content/Context;
 
     invoke-static {v2}, Lkik/android/util/DeviceUtils;->d(Landroid/content/Context;)Z
 
@@ -1695,7 +1603,7 @@
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->getPriceForSku(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -1716,7 +1624,7 @@
 
     move-object v4, p2
 
-    invoke-direct/range {v0 .. v6}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    invoke-direct/range {v0 .. v6}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->constructTransactionObject(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -1724,11 +1632,11 @@
     if-nez v0, :cond_1
 
     .line 212
-    new-instance v0, Lcom/kik/cards/web/plugin/h;
+    new-instance v0, Lcom/kik/cards/web/plugin/g;
 
     const/16 v1, 0x1f4
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -1740,9 +1648,9 @@
     :catch_0
     move-exception v0
 
-    new-instance v0, Lcom/kik/cards/web/plugin/h;
+    new-instance v0, Lcom/kik/cards/web/plugin/g;
 
-    invoke-direct {v0, v12}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
+    invoke-direct {v0, v12}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
 
     goto :goto_1
 
@@ -1765,9 +1673,9 @@
     :catch_1
     move-exception v0
 
-    new-instance v0, Lcom/kik/cards/web/plugin/h;
+    new-instance v0, Lcom/kik/cards/web/plugin/g;
 
-    invoke-direct {v0, v12}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
+    invoke-direct {v0, v12}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
 
     goto :goto_1
 
@@ -1786,9 +1694,9 @@
     .catch Lorg/json/JSONException; {:try_start_3 .. :try_end_3} :catch_2
 
     .line 229
-    new-instance v0, Lcom/kik/cards/web/plugin/h;
+    new-instance v0, Lcom/kik/cards/web/plugin/g;
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(Lorg/json/JSONObject;)V
 
     goto :goto_1
 
@@ -1796,16 +1704,16 @@
     :catch_2
     move-exception v0
 
-    new-instance v0, Lcom/kik/cards/web/plugin/h;
+    new-instance v0, Lcom/kik/cards/web/plugin/g;
 
-    invoke-direct {v0, v12}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
+    invoke-direct {v0, v12}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
 
     goto :goto_1
 .end method
 
-.method public markTransactionStored(Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/h;
+.method public markTransactionStored(Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/g;
     .locals 7
-    .annotation runtime Lcom/kik/cards/web/plugin/f;
+    .annotation runtime Lcom/kik/cards/web/plugin/e;
     .end annotation
 
     .prologue
@@ -1831,11 +1739,11 @@
 
     .line 140
     :cond_0
-    new-instance v0, Lcom/kik/cards/web/plugin/h;
+    new-instance v0, Lcom/kik/cards/web/plugin/g;
 
     const/16 v1, 0x190
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
 
     .line 173
     :goto_0
@@ -1844,17 +1752,17 @@
     .line 145
     :cond_1
     :try_start_0
-    iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->k:Lcom/android/b/a/a;
+    iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_inAppBillingService:Lcom/android/a/a/a;
 
     const/4 v2, 0x3
 
-    iget-object v3, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->i:Ljava/lang/String;
+    iget-object v3, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_packageName:Ljava/lang/String;
 
     const-string v4, "inapp"
 
     const/4 v5, 0x0
 
-    invoke-interface {v0, v2, v3, v4, v5}, Lcom/android/b/a/a;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+    invoke-interface {v0, v2, v3, v4, v5}, Lcom/android/a/a/a;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
 
@@ -1918,24 +1826,24 @@
     move-result-object v0
 
     .line 161
-    iget-object v3, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->k:Lcom/android/b/a/a;
+    iget-object v3, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_inAppBillingService:Lcom/android/a/a/a;
 
     const/4 v4, 0x3
 
-    iget-object v5, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->i:Ljava/lang/String;
+    iget-object v5, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_packageName:Ljava/lang/String;
 
-    invoke-interface {v3, v4, v5, v0}, Lcom/android/b/a/a;->b(ILjava/lang/String;Ljava/lang/String;)I
+    invoke-interface {v3, v4, v5, v0}, Lcom/android/a/a/a;->b(ILjava/lang/String;Ljava/lang/String;)I
 
     move-result v3
 
     .line 162
-    new-instance v0, Lcom/kik/cards/web/plugin/h;
+    new-instance v0, Lcom/kik/cards/web/plugin/g;
 
-    invoke-static {v3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->b(I)I
+    invoke-direct {p0, v3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->handleResponseCode(I)I
 
     move-result v3
 
-    invoke-direct {v0, v3}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
+    invoke-direct {v0, v3}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_2
@@ -1952,17 +1860,17 @@
     :catch_1
     move-exception v0
 
-    new-instance v0, Lcom/kik/cards/web/plugin/h;
+    new-instance v0, Lcom/kik/cards/web/plugin/g;
 
-    invoke-direct {v0, v6}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
+    invoke-direct {v0, v6}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
 
     goto :goto_0
 
     .line 173
     :cond_3
-    new-instance v0, Lcom/kik/cards/web/plugin/h;
+    new-instance v0, Lcom/kik/cards/web/plugin/g;
 
-    invoke-direct {v0, v6}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
+    invoke-direct {v0, v6}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
 
     goto :goto_0
 
@@ -1973,23 +1881,23 @@
     goto :goto_1
 .end method
 
-.method public purchase(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;Ljava/lang/String;)Lcom/kik/cards/web/plugin/h;
+.method public purchase(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;Ljava/lang/String;)Lcom/kik/cards/web/plugin/g;
     .locals 3
     .annotation runtime Lcom/kik/cards/web/plugin/c;
     .end annotation
 
     .prologue
     .line 288
-    iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->k:Lcom/android/b/a/a;
+    iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_inAppBillingService:Lcom/android/a/a/a;
 
     if-nez v0, :cond_0
 
     .line 289
-    new-instance v0, Lcom/kik/cards/web/plugin/h;
+    new-instance v0, Lcom/kik/cards/web/plugin/g;
 
     const/16 v1, 0x201
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
 
     .line 515
     :goto_0
@@ -2006,7 +1914,7 @@
     move-result v0
 
     .line 293
-    iget-object v1, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->g:Lcom/kik/cards/web/userdata/b;
+    iget-object v1, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_userDataPluginImpl:Lcom/kik/cards/web/userdata/b;
 
     invoke-interface {v1, v0, p3}, Lcom/kik/cards/web/userdata/b;->a(ZLjava/lang/String;)Z
 
@@ -2015,17 +1923,17 @@
     if-eqz v1, :cond_1
 
     .line 294
-    new-instance v0, Lcom/kik/cards/web/plugin/h;
+    new-instance v0, Lcom/kik/cards/web/plugin/g;
 
     const/16 v1, 0x1a4
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
 
     goto :goto_0
 
     .line 297
     :cond_1
-    iget-object v1, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->g:Lcom/kik/cards/web/userdata/b;
+    iget-object v1, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_userDataPluginImpl:Lcom/kik/cards/web/userdata/b;
 
     const/4 v2, 0x1
 
@@ -2038,14 +1946,67 @@
 
     invoke-direct {v1, p0, p2, p3, p1}, Lcom/kik/cards/web/iap/InAppPurchasePlugin$2;-><init>(Lcom/kik/cards/web/iap/InAppPurchasePlugin;Lorg/json/JSONObject;Ljava/lang/String;Lcom/kik/cards/web/plugin/a;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
     .line 515
-    new-instance v0, Lcom/kik/cards/web/plugin/h;
+    new-instance v0, Lcom/kik/cards/web/plugin/g;
 
     const/16 v1, 0xca
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
 
     goto :goto_0
+.end method
+
+.method public requestAccess(Lorg/json/JSONObject;Ljava/lang/String;)Z
+    .locals 1
+
+    .prologue
+    .line 563
+    if-eqz p2, :cond_1
+
+    invoke-static {p2}, Lcom/kik/cards/web/s;->a(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_ctx:Landroid/content/Context;
+
+    invoke-static {v0}, Lkik/android/util/DeviceUtils;->d(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    invoke-direct {p0}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->isBillingSupported()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 564
+    :cond_1
+    const/4 v0, 0x0
+
+    .line 566
+    :goto_0
+    return v0
+
+    :cond_2
+    const/4 v0, 0x1
+
+    goto :goto_0
+.end method
+
+.method public setBillingServices(Lcom/android/a/a/a;)V
+    .locals 0
+
+    .prologue
+    .line 730
+    iput-object p1, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->_inAppBillingService:Lcom/android/a/a/a;
+
+    .line 731
+    return-void
 .end method

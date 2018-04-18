@@ -3,12 +3,18 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0x10
+.end annotation
+
+
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 26
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,12 +24,12 @@
     .locals 0
 
     .prologue
-    .line 29
+    .line 34
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0, p1, p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->addChild(Landroid/view/View;I)V
 
-    .line 30
+    .line 35
     return-void
 .end method
 
@@ -31,7 +37,7 @@
     .locals 1
 
     .prologue
-    .line 61
+    .line 66
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->findFocus(I)Landroid/view/accessibility/AccessibilityNodeInfo;
@@ -45,7 +51,7 @@
     .locals 1
 
     .prologue
-    .line 65
+    .line 70
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->focusSearch(I)Landroid/view/accessibility/AccessibilityNodeInfo;
@@ -59,7 +65,7 @@
     .locals 1
 
     .prologue
-    .line 53
+    .line 58
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getMovementGranularities()I
@@ -73,7 +79,7 @@
     .locals 1
 
     .prologue
-    .line 73
+    .line 78
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isAccessibilityFocused()Z
@@ -87,7 +93,7 @@
     .locals 1
 
     .prologue
-    .line 37
+    .line 42
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isVisibleToUser()Z
@@ -101,7 +107,7 @@
     .locals 1
 
     .prologue
-    .line 57
+    .line 62
     invoke-static {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->obtain(Landroid/view/View;I)Landroid/view/accessibility/AccessibilityNodeInfo;
 
     move-result-object v0
@@ -113,7 +119,7 @@
     .locals 1
 
     .prologue
-    .line 45
+    .line 50
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0, p1, p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->performAction(ILandroid/os/Bundle;)Z
@@ -127,12 +133,12 @@
     .locals 0
 
     .prologue
-    .line 77
+    .line 82
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setAccessibilityFocused(Z)V
 
-    .line 78
+    .line 83
     return-void
 .end method
 
@@ -140,12 +146,12 @@
     .locals 0
 
     .prologue
-    .line 49
+    .line 54
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setMovementGranularities(I)V
 
-    .line 50
+    .line 55
     return-void
 .end method
 
@@ -153,12 +159,12 @@
     .locals 0
 
     .prologue
-    .line 69
+    .line 74
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0, p1, p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->setParent(Landroid/view/View;I)V
 
-    .line 70
+    .line 75
     return-void
 .end method
 
@@ -166,12 +172,12 @@
     .locals 0
 
     .prologue
-    .line 33
+    .line 38
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0, p1, p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->setSource(Landroid/view/View;I)V
 
-    .line 34
+    .line 39
     return-void
 .end method
 
@@ -179,11 +185,11 @@
     .locals 0
 
     .prologue
-    .line 41
+    .line 46
     check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setVisibleToUser(Z)V
 
-    .line 42
+    .line 47
     return-void
 .end method

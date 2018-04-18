@@ -1,5 +1,5 @@
 .class final Lkik/android/gifs/b$3;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,9 +15,9 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
-        "Lkik/android/gifs/view/a;",
+        "Lkik/android/gifs/view/c;",
         ">;"
     }
 .end annotation
@@ -34,12 +34,12 @@
     .locals 0
 
     .prologue
-    .line 157
+    .line 127
     iput-object p1, p0, Lkik/android/gifs/b$3;->b:Lkik/android/gifs/b;
 
     iput-object p2, p0, Lkik/android/gifs/b$3;->a:Lcom/kik/events/Promise;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -50,15 +50,15 @@
     .locals 1
 
     .prologue
-    .line 157
-    check-cast p1, Lkik/android/gifs/view/a;
+    .line 127
+    check-cast p1, Lkik/android/gifs/view/c;
 
-    .line 1161
+    .line 1131
     iget-object v0, p0, Lkik/android/gifs/b$3;->a:Lcom/kik/events/Promise;
 
     invoke-virtual {v0, p1}, Lcom/kik/events/Promise;->a(Ljava/lang/Object;)V
 
-    .line 157
+    .line 127
     return-void
 .end method
 
@@ -66,11 +66,11 @@
     .locals 1
 
     .prologue
-    .line 167
+    .line 137
     iget-object v0, p0, Lkik/android/gifs/b$3;->a:Lcom/kik/events/Promise;
 
     invoke-virtual {v0, p1}, Lcom/kik/events/Promise;->a(Ljava/lang/Throwable;)V
 
-    .line 168
+    .line 138
     return-void
 .end method

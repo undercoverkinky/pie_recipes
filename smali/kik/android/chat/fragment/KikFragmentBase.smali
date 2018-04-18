@@ -12,7 +12,9 @@
 
 
 # instance fields
-.field private a:Ljava/util/Vector;
+.field private _compositeSubscription:Lrx/f/b;
+
+.field private _enqueuedActionsOnResume:Ljava/util/Vector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Vector",
@@ -23,11 +25,9 @@
     .end annotation
 .end field
 
-.field private b:Lcom/kik/events/d;
+.field private _foregroundEventHub:Lcom/kik/events/d;
 
-.field private c:Lcom/kik/events/d;
-
-.field private d:Lrx/g/b;
+.field private _lifecycleEventHub:Lcom/kik/events/d;
 
 
 # direct methods
@@ -43,115 +43,40 @@
 
     invoke-direct {v0}, Ljava/util/Vector;-><init>()V
 
-    iput-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->a:Ljava/util/Vector;
+    iput-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->_enqueuedActionsOnResume:Ljava/util/Vector;
 
     .line 45
     new-instance v0, Lcom/kik/events/d;
 
     invoke-direct {v0}, Lcom/kik/events/d;-><init>()V
 
-    iput-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->b:Lcom/kik/events/d;
+    iput-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->_foregroundEventHub:Lcom/kik/events/d;
 
     .line 46
     new-instance v0, Lcom/kik/events/d;
 
     invoke-direct {v0}, Lcom/kik/events/d;-><init>()V
 
-    iput-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->c:Lcom/kik/events/d;
+    iput-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->_lifecycleEventHub:Lcom/kik/events/d;
 
     .line 47
-    new-instance v0, Lrx/g/b;
+    new-instance v0, Lrx/f/b;
 
-    invoke-direct {v0}, Lrx/g/b;-><init>()V
+    invoke-direct {v0}, Lrx/f/b;-><init>()V
 
-    iput-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->d:Lrx/g/b;
+    iput-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->_compositeSubscription:Lrx/f/b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lkik/android/util/aa;)Lcom/kik/events/Promise;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lkik/android/util/aa;",
-            ")",
-            "Lcom/kik/events/Promise",
-            "<",
-            "Landroid/os/Bundle;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 146
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikFragmentBase;->getActivity()Landroid/support/v4/app/FragmentActivity;
-
-    move-result-object v0
-
-    .line 147
-    if-eqz v0, :cond_0
-
-    .line 148
-    invoke-static {p1, v0}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->e()Lcom/kik/events/Promise;
-
-    move-result-object v0
-
-    .line 153
-    :goto_0
-    return-object v0
-
-    .line 151
-    :cond_0
-    new-instance v0, Lcom/kik/events/Promise;
-
-    invoke-direct {v0}, Lcom/kik/events/Promise;-><init>()V
-
-    .line 152
-    new-instance v1, Ljava/lang/Exception;
-
-    const-string v2, "Unable to start fragment: no activity attached"
-
-    invoke-direct {v1, v2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_0
-.end method
-
-.method protected final a(Lrx/j;)Lrx/j;
-    .locals 1
-
-    .prologue
-    .line 192
-    iget-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->d:Lrx/g/b;
-
-    invoke-virtual {v0, p1}, Lrx/g/b;->a(Lrx/j;)V
-
-    .line 193
-    return-object p1
-.end method
-
-.method protected a(Lcom/kik/events/d;)V
-    .locals 0
-
-    .prologue
-    .line 60
-    return-void
-.end method
-
-.method public final a(Ljava/lang/Runnable;)V
+.method public enqueueForOnResume(Ljava/lang/Runnable;)V
     .locals 1
 
     .prologue
     .line 55
-    iget-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->a:Ljava/util/Vector;
+    iget-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->_enqueuedActionsOnResume:Ljava/util/Vector;
 
     invoke-virtual {v0, p1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
@@ -159,27 +84,43 @@
     return-void
 .end method
 
-.method protected final ae()Lcom/kik/events/d;
+.method public getCoreComponent()Lcom/kik/components/CoreComponent;
+    .locals 1
+
+    .prologue
+    .line 88
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikFragmentBase;->getActivity()Landroid/support/v4/app/FragmentActivity;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lkik/android/util/s;->a(Landroid/content/Context;)Lcom/kik/components/CoreComponent;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method protected getForegroundEventHub()Lcom/kik/events/d;
     .locals 1
 
     .prologue
     .line 73
-    iget-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->b:Lcom/kik/events/d;
+    iget-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->_foregroundEventHub:Lcom/kik/events/d;
 
     return-object v0
 .end method
 
-.method protected final af()Lcom/kik/events/d;
+.method protected getLifecycleEventHub()Lcom/kik/events/d;
     .locals 1
 
     .prologue
     .line 83
-    iget-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->c:Lcom/kik/events/d;
+    iget-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->_lifecycleEventHub:Lcom/kik/events/d;
 
     return-object v0
 .end method
 
-.method protected final ag()V
+.method protected hideKeyboard()V
     .locals 3
 
     .prologue
@@ -224,40 +165,6 @@
     return-void
 .end method
 
-.method protected b(Lcom/kik/events/d;)V
-    .locals 0
-
-    .prologue
-    .line 64
-    return-void
-.end method
-
-.method public final b(Ljava/lang/Runnable;)V
-    .locals 2
-
-    .prologue
-    .line 169
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikFragmentBase;->getActivity()Landroid/support/v4/app/FragmentActivity;
-
-    move-result-object v0
-
-    .line 171
-    if-eqz v0, :cond_0
-
-    if-eqz p1, :cond_0
-
-    .line 172
-    new-instance v1, Lkik/android/chat/fragment/KikFragmentBase$a;
-
-    invoke-direct {v1, p0, p1}, Lkik/android/chat/fragment/KikFragmentBase$a;-><init>(Lkik/android/chat/fragment/KikFragmentBase;Ljava/lang/Runnable;)V
-
-    invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
-
-    .line 174
-    :cond_0
-    return-void
-.end method
-
 .method public onAttach(Landroid/app/Activity;)V
     .locals 0
 
@@ -277,9 +184,9 @@
     invoke-super {p0, p1}, Lcom/kik/ui/fragment/FragmentBase;->onCreate(Landroid/os/Bundle;)V
 
     .line 104
-    iget-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->c:Lcom/kik/events/d;
+    iget-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->_lifecycleEventHub:Lcom/kik/events/d;
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikFragmentBase;->b(Lcom/kik/events/d;)V
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikFragmentBase;->registerLifecycleEvents(Lcom/kik/events/d;)V
 
     .line 105
     return-void
@@ -293,14 +200,14 @@
     invoke-super {p0}, Lcom/kik/ui/fragment/FragmentBase;->onDestroy()V
 
     .line 111
-    iget-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->c:Lcom/kik/events/d;
+    iget-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->_lifecycleEventHub:Lcom/kik/events/d;
 
     invoke-virtual {v0}, Lcom/kik/events/d;->a()V
 
     .line 112
-    iget-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->d:Lrx/g/b;
+    iget-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->_compositeSubscription:Lrx/f/b;
 
-    invoke-virtual {v0}, Lrx/g/b;->unsubscribe()V
+    invoke-virtual {v0}, Lrx/f/b;->unsubscribe()V
 
     .line 113
     return-void
@@ -314,7 +221,7 @@
     invoke-super {p0}, Lcom/kik/ui/fragment/FragmentBase;->onPause()V
 
     .line 96
-    iget-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->b:Lcom/kik/events/d;
+    iget-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->_foregroundEventHub:Lcom/kik/events/d;
 
     invoke-virtual {v0}, Lcom/kik/events/d;->a()V
 
@@ -330,12 +237,12 @@
     invoke-super {p0}, Lcom/kik/ui/fragment/FragmentBase;->onResume()V
 
     .line 131
-    iget-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->b:Lcom/kik/events/d;
+    iget-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->_foregroundEventHub:Lcom/kik/events/d;
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikFragmentBase;->a(Lcom/kik/events/d;)V
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikFragmentBase;->registerForegroundEvents(Lcom/kik/events/d;)V
 
     .line 132
-    iget-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->a:Ljava/util/Vector;
+    iget-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->_enqueuedActionsOnResume:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->iterator()Ljava/util/Iterator;
 
@@ -361,10 +268,135 @@
 
     .line 135
     :cond_0
-    iget-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->a:Ljava/util/Vector;
+    iget-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->_enqueuedActionsOnResume:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->clear()V
 
     .line 136
     return-void
+.end method
+
+.method public onStackedFragmentsPopped()V
+    .locals 0
+
+    .prologue
+    .line 124
+    return-void
+.end method
+
+.method protected poppedFragment()V
+    .locals 0
+
+    .prologue
+    .line 160
+    return-void
+.end method
+
+.method protected registerForegroundEvents(Lcom/kik/events/d;)V
+    .locals 0
+
+    .prologue
+    .line 60
+    return-void
+.end method
+
+.method protected registerLifecycleEvents(Lcom/kik/events/d;)V
+    .locals 0
+
+    .prologue
+    .line 64
+    return-void
+.end method
+
+.method public runOnUiIfAttached(Ljava/lang/Runnable;)V
+    .locals 2
+
+    .prologue
+    .line 169
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikFragmentBase;->getActivity()Landroid/support/v4/app/FragmentActivity;
+
+    move-result-object v0
+
+    .line 171
+    if-eqz v0, :cond_0
+
+    if-eqz p1, :cond_0
+
+    .line 172
+    new-instance v1, Lkik/android/chat/fragment/KikFragmentBase$a;
+
+    invoke-direct {v1, p0, p1}, Lkik/android/chat/fragment/KikFragmentBase$a;-><init>(Lkik/android/chat/fragment/KikFragmentBase;Ljava/lang/Runnable;)V
+
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
+
+    .line 174
+    :cond_0
+    return-void
+.end method
+
+.method protected safeSubscribe(Lrx/k;)Lrx/k;
+    .locals 1
+
+    .prologue
+    .line 192
+    iget-object v0, p0, Lkik/android/chat/fragment/KikFragmentBase;->_compositeSubscription:Lrx/f/b;
+
+    invoke-virtual {v0, p1}, Lrx/f/b;->a(Lrx/k;)V
+
+    .line 193
+    return-object p1
+.end method
+
+.method public startFragmentForResult(Lkik/android/util/ae;)Lcom/kik/events/Promise;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkik/android/util/ae;",
+            ")",
+            "Lcom/kik/events/Promise",
+            "<",
+            "Landroid/os/Bundle;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 146
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikFragmentBase;->getActivity()Landroid/support/v4/app/FragmentActivity;
+
+    move-result-object v0
+
+    .line 147
+    if-eqz v0, :cond_0
+
+    .line 148
+    invoke-static {p1, v0}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ae;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->e()Lcom/kik/events/Promise;
+
+    move-result-object v0
+
+    .line 153
+    :goto_0
+    return-object v0
+
+    .line 151
+    :cond_0
+    new-instance v0, Lcom/kik/events/Promise;
+
+    invoke-direct {v0}, Lcom/kik/events/Promise;-><init>()V
+
+    .line 152
+    new-instance v1, Ljava/lang/Exception;
+
+    const-string v2, "Unable to start fragment: no activity attached"
+
+    invoke-direct {v1, v2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_0
 .end method

@@ -1,124 +1,271 @@
 .class public Lcom/google/android/gms/internal/zzab;
-.super Lcom/google/android/gms/internal/zzk;
+.super Ljava/lang/Object;
 
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
+.annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        "Lcom/google/android/gms/internal/zzk",
-        "<",
-        "Ljava/lang/String;",
-        ">;"
+        Lcom/google/android/gms/internal/zzab$a;
     }
 .end annotation
 
 
-# instance fields
-.field private final zzaG:Lcom/google/android/gms/internal/zzm$zzb;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/internal/zzm$zzb",
-            "<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
+# static fields
+.field public static DEBUG:Z
+
+.field private static TAG:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;Lcom/google/android/gms/internal/zzm$zzb;Lcom/google/android/gms/internal/zzm$zza;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I",
-            "Ljava/lang/String;",
-            "Lcom/google/android/gms/internal/zzm$zzb",
-            "<",
-            "Ljava/lang/String;",
-            ">;",
-            "Lcom/google/android/gms/internal/zzm$zza;",
-            ")V"
-        }
-    .end annotation
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0, p1, p2, p4}, Lcom/google/android/gms/internal/zzk;-><init>(ILjava/lang/String;Lcom/google/android/gms/internal/zzm$zza;)V
+    const-string v0, "Volley"
 
-    iput-object p3, p0, Lcom/google/android/gms/internal/zzab;->zzaG:Lcom/google/android/gms/internal/zzm$zzb;
+    sput-object v0, Lcom/google/android/gms/internal/zzab;->TAG:Ljava/lang/String;
+
+    const/4 v1, 0x2
+
+    invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v0
+
+    sput-boolean v0, Lcom/google/android/gms/internal/zzab;->DEBUG:Z
 
     return-void
 .end method
 
+.method public constructor <init>()V
+    .locals 0
 
-# virtual methods
-.method protected zza(Lcom/google/android/gms/internal/zzi;)Lcom/google/android/gms/internal/zzm;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/internal/zzi;",
-            ")",
-            "Lcom/google/android/gms/internal/zzm",
-            "<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :try_start_0
-    new-instance v0, Ljava/lang/String;
+    return-void
+.end method
 
-    iget-object v1, p1, Lcom/google/android/gms/internal/zzi;->data:[B
+.method public static varargs zza(Ljava/lang/String;[Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v2, p1, Lcom/google/android/gms/internal/zzi;->zzz:Ljava/util/Map;
+    sget-boolean v0, Lcom/google/android/gms/internal/zzab;->DEBUG:Z
 
-    invoke-static {v2}, Lcom/google/android/gms/internal/zzx;->zza(Ljava/util/Map;)Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    move-result-object v2
+    invoke-static {p0, p1}, Lcom/google/android/gms/internal/zzab;->zzd(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
-    :try_end_0
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
+    :cond_0
+    return-void
+.end method
 
-    :goto_0
-    invoke-static {p1}, Lcom/google/android/gms/internal/zzx;->zzb(Lcom/google/android/gms/internal/zzi;)Lcom/google/android/gms/internal/zzb$zza;
+.method public static varargs zza(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    .locals 2
+
+    sget-object v0, Lcom/google/android/gms/internal/zzab;->TAG:Ljava/lang/String;
+
+    invoke-static {p1, p2}, Lcom/google/android/gms/internal/zzab;->zzd(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/google/android/gms/internal/zzm;->zza(Ljava/lang/Object;Lcom/google/android/gms/internal/zzb$zza;)Lcom/google/android/gms/internal/zzm;
+    invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    return-void
+.end method
+
+.method public static varargs zzb(Ljava/lang/String;[Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p0, p1}, Lcom/google/android/gms/internal/zzab;->zzd(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static varargs zzc(Ljava/lang/String;[Ljava/lang/Object;)V
+    .locals 2
+
+    sget-object v0, Lcom/google/android/gms/internal/zzab;->TAG:Ljava/lang/String;
+
+    invoke-static {p0, p1}, Lcom/google/android/gms/internal/zzab;->zzd(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method private static varargs zzd(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    .locals 8
+
+    const/4 v1, 0x2
+
+    if-nez p1, :cond_0
+
+    :goto_0
+    new-instance v0, Ljava/lang/Throwable;
+
+    invoke-direct {v0}, Ljava/lang/Throwable;-><init>()V
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->fillInStackTrace()Ljava/lang/Throwable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
+
+    move-result-object v3
+
+    const-string v2, "<unknown>"
+
+    move v0, v1
+
+    :goto_1
+    array-length v4, v3
+
+    if-ge v0, v4, :cond_2
+
+    aget-object v4, v3, v0
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v4
+
+    const-class v5, Lcom/google/android/gms/internal/zzab;
+
+    invoke-virtual {v4, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
+    aget-object v2, v3, v0
+
+    invoke-virtual {v2}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
+
+    move-result-object v2
+
+    const/16 v4, 0x2e
+
+    invoke-virtual {v2, v4}, Ljava/lang/String;->lastIndexOf(I)I
+
+    move-result v4
+
+    add-int/lit8 v4, v4, 0x1
+
+    invoke-virtual {v2, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/16 v4, 0x24
+
+    invoke-virtual {v2, v4}, Ljava/lang/String;->lastIndexOf(I)I
+
+    move-result v4
+
+    add-int/lit8 v4, v4, 0x1
+
+    invoke-virtual {v2, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    aget-object v0, v3, v0
+
+    invoke-virtual {v0}, Ljava/lang/StackTraceElement;->getMethodName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    add-int/lit8 v3, v3, 0x1
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
+
+    move-result v4
+
+    add-int/2addr v3, v4
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4, v3}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, "."
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_2
+    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    const-string v3, "[%d] %s: %s"
+
+    const/4 v4, 0x3
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/Thread;->getId()J
+
+    move-result-wide v6
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v6
+
+    aput-object v6, v4, v5
+
+    const/4 v5, 0x1
+
+    aput-object v0, v4, v5
+
+    aput-object p0, v4, v1
+
+    invoke-static {v2, v3, v4}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    :catch_0
-    move-exception v0
+    :cond_0
+    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    new-instance v0, Ljava/lang/String;
+    invoke-static {v0, p0, p1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    iget-object v1, p1, Lcom/google/android/gms/internal/zzi;->data:[B
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Ljava/lang/String;-><init>([B)V
+    goto/16 :goto_0
 
-    goto :goto_0
-.end method
+    :cond_1
+    add-int/lit8 v0, v0, 0x1
 
-.method protected synthetic zza(Ljava/lang/Object;)V
-    .locals 0
+    goto/16 :goto_1
 
-    check-cast p1, Ljava/lang/String;
+    :cond_2
+    move-object v0, v2
 
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/zzab;->zzi(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method protected zzi(Ljava/lang/String;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzab;->zzaG:Lcom/google/android/gms/internal/zzm$zzb;
-
-    invoke-interface {v0, p1}, Lcom/google/android/gms/internal/zzm$zzb;->zzb(Ljava/lang/Object;)V
-
-    return-void
+    goto :goto_2
 .end method

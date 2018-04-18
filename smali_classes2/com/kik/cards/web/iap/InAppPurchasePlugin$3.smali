@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/cards/web/iap/InAppPurchasePlugin;->getAvailableItemsAsynchronously(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;Ljava/lang/String;)Lcom/kik/cards/web/plugin/h;
+    value = Lcom/kik/cards/web/iap/InAppPurchasePlugin;->getAvailableItemsAsynchronously(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;Ljava/lang/String;)Lcom/kik/cards/web/plugin/g;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -61,11 +61,11 @@
 
     iget-object v3, p0, Lcom/kik/cards/web/iap/InAppPurchasePlugin$3;->c:Ljava/lang/String;
 
-    invoke-virtual {v1, v2, v3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->getAvailableItems(Lorg/json/JSONObject;Ljava/lang/String;)Lcom/kik/cards/web/plugin/h;
+    invoke-virtual {v1, v2, v3}, Lcom/kik/cards/web/iap/InAppPurchasePlugin;->getAvailableItems(Lorg/json/JSONObject;Ljava/lang/String;)Lcom/kik/cards/web/plugin/g;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/h;)V
+    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/g;)V
 
     .line 650
     return-void

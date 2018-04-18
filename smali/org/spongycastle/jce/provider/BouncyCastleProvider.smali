@@ -402,11 +402,11 @@
     .line 540
     sget-object v0, Lorg/spongycastle/jce/provider/BouncyCastleProvider;->d:Ljava/util/Map;
 
-    invoke-virtual {p0}, Lorg/spongycastle/asn1/pkcs/PrivateKeyInfo;->c()Lorg/spongycastle/asn1/x509/AlgorithmIdentifier;
+    invoke-virtual {p0}, Lorg/spongycastle/asn1/pkcs/PrivateKeyInfo;->a()Lorg/spongycastle/asn1/x509/AlgorithmIdentifier;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lorg/spongycastle/asn1/x509/AlgorithmIdentifier;->d()Lorg/spongycastle/asn1/ASN1ObjectIdentifier;
+    invoke-virtual {v1}, Lorg/spongycastle/asn1/x509/AlgorithmIdentifier;->b()Lorg/spongycastle/asn1/ASN1ObjectIdentifier;
 
     move-result-object v1
 
@@ -446,11 +446,11 @@
     .line 527
     sget-object v0, Lorg/spongycastle/jce/provider/BouncyCastleProvider;->d:Ljava/util/Map;
 
-    invoke-virtual {p0}, Lorg/spongycastle/asn1/x509/SubjectPublicKeyInfo;->c()Lorg/spongycastle/asn1/x509/AlgorithmIdentifier;
+    invoke-virtual {p0}, Lorg/spongycastle/asn1/x509/SubjectPublicKeyInfo;->a()Lorg/spongycastle/asn1/x509/AlgorithmIdentifier;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lorg/spongycastle/asn1/x509/AlgorithmIdentifier;->d()Lorg/spongycastle/asn1/ASN1ObjectIdentifier;
+    invoke-virtual {v1}, Lorg/spongycastle/asn1/x509/AlgorithmIdentifier;->b()Lorg/spongycastle/asn1/ASN1ObjectIdentifier;
 
     move-result-object v1
 
@@ -1065,7 +1065,7 @@
 
     sget-object v1, Lorg/spongycastle/asn1/bc/BCObjectIdentifiers;->l:Lorg/spongycastle/asn1/ASN1ObjectIdentifier;
 
-    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1090,7 +1090,7 @@
 
     sget-object v1, Lorg/spongycastle/asn1/bc/BCObjectIdentifiers;->m:Lorg/spongycastle/asn1/ASN1ObjectIdentifier;
 
-    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1115,7 +1115,7 @@
 
     sget-object v1, Lorg/spongycastle/asn1/bc/BCObjectIdentifiers;->n:Lorg/spongycastle/asn1/ASN1ObjectIdentifier;
 
-    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1140,7 +1140,7 @@
 
     sget-object v1, Lorg/spongycastle/asn1/bc/BCObjectIdentifiers;->o:Lorg/spongycastle/asn1/ASN1ObjectIdentifier;
 
-    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1165,7 +1165,7 @@
 
     sget-object v1, Lorg/spongycastle/asn1/bc/BCObjectIdentifiers;->p:Lorg/spongycastle/asn1/ASN1ObjectIdentifier;
 
-    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1190,7 +1190,7 @@
 
     sget-object v1, Lorg/spongycastle/asn1/bc/BCObjectIdentifiers;->q:Lorg/spongycastle/asn1/ASN1ObjectIdentifier;
 
-    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1488,7 +1488,7 @@
 
     sget-object v1, Lorg/spongycastle/asn1/bc/BCObjectIdentifiers;->l:Lorg/spongycastle/asn1/ASN1ObjectIdentifier;
 
-    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1513,7 +1513,7 @@
 
     sget-object v1, Lorg/spongycastle/asn1/bc/BCObjectIdentifiers;->m:Lorg/spongycastle/asn1/ASN1ObjectIdentifier;
 
-    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1538,7 +1538,7 @@
 
     sget-object v1, Lorg/spongycastle/asn1/bc/BCObjectIdentifiers;->n:Lorg/spongycastle/asn1/ASN1ObjectIdentifier;
 
-    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1563,7 +1563,7 @@
 
     sget-object v1, Lorg/spongycastle/asn1/bc/BCObjectIdentifiers;->o:Lorg/spongycastle/asn1/ASN1ObjectIdentifier;
 
-    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1588,7 +1588,7 @@
 
     sget-object v1, Lorg/spongycastle/asn1/bc/BCObjectIdentifiers;->p:Lorg/spongycastle/asn1/ASN1ObjectIdentifier;
 
-    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1613,7 +1613,7 @@
 
     sget-object v1, Lorg/spongycastle/asn1/bc/BCObjectIdentifiers;->q:Lorg/spongycastle/asn1/ASN1ObjectIdentifier;
 
-    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -2576,7 +2576,7 @@
 
     sget-object v1, Lorg/spongycastle/asn1/bc/BCObjectIdentifiers;->l:Lorg/spongycastle/asn1/ASN1ObjectIdentifier;
 
-    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -2601,7 +2601,7 @@
 
     sget-object v1, Lorg/spongycastle/asn1/bc/BCObjectIdentifiers;->m:Lorg/spongycastle/asn1/ASN1ObjectIdentifier;
 
-    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -2626,7 +2626,7 @@
 
     sget-object v1, Lorg/spongycastle/asn1/bc/BCObjectIdentifiers;->n:Lorg/spongycastle/asn1/ASN1ObjectIdentifier;
 
-    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -2651,7 +2651,7 @@
 
     sget-object v1, Lorg/spongycastle/asn1/bc/BCObjectIdentifiers;->o:Lorg/spongycastle/asn1/ASN1ObjectIdentifier;
 
-    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -2676,7 +2676,7 @@
 
     sget-object v1, Lorg/spongycastle/asn1/bc/BCObjectIdentifiers;->p:Lorg/spongycastle/asn1/ASN1ObjectIdentifier;
 
-    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -2701,7 +2701,7 @@
 
     sget-object v1, Lorg/spongycastle/asn1/bc/BCObjectIdentifiers;->q:Lorg/spongycastle/asn1/ASN1ObjectIdentifier;
 
-    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lorg/spongycastle/asn1/ASN1ObjectIdentifier;->a()Ljava/lang/String;
 
     move-result-object v1
 

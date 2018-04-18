@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 139
+    .line 128
     iput-object p1, p0, Lkik/android/a/b$3;->a:Lkik/android/a/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 2
 
     .prologue
-    .line 144
+    .line 133
     invoke-static {}, Lcom/kik/sdkutils/d;->a()J
 
     move-result-wide v0

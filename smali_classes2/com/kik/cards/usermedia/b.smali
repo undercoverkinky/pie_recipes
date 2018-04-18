@@ -12,7 +12,7 @@
         "Ljava/lang/Object;",
         "Lcom/kik/sdkutils/b/b",
         "<",
-        "Lcom/kik/cache/d;",
+        "Lcom/kik/cache/a;",
         ">;"
     }
 .end annotation
@@ -36,7 +36,7 @@
 
     .prologue
     .line 14
-    check-cast p1, Lcom/kik/cache/d;
+    check-cast p1, Lcom/kik/cache/a;
 
     return-object p1
 .end method

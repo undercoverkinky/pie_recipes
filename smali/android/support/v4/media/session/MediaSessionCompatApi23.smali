@@ -4,6 +4,10 @@
 
 
 # annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0x17
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/support/v4/media/session/MediaSessionCompatApi23$CallbackProxy;,
@@ -17,10 +21,10 @@
     .locals 0
 
     .prologue
-    .line 22
+    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
+    .line 36
     return-void
 .end method
 
@@ -28,7 +32,7 @@
     .locals 1
 
     .prologue
-    .line 25
+    .line 29
     new-instance v0, Landroid/support/v4/media/session/MediaSessionCompatApi23$CallbackProxy;
 
     invoke-direct {v0, p0}, Landroid/support/v4/media/session/MediaSessionCompatApi23$CallbackProxy;-><init>(Landroid/support/v4/media/session/MediaSessionCompatApi23$Callback;)V

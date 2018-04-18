@@ -23,12 +23,12 @@
 
 
 # instance fields
-.field private final b:Ldagger/b;
+.field private final b:Ljavax/inject/Provider;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ldagger/b",
+            "Ljavax/inject/Provider",
             "<",
-            "Landroid/content/BroadcastReceiver;",
+            "Lcom/kik/cache/KikVolleyImageLoader;",
             ">;"
         }
     .end annotation
@@ -39,7 +39,7 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lcom/kik/cache/aa;",
+            "Lkik/core/interfaces/v;",
             ">;"
         }
     .end annotation
@@ -50,7 +50,7 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/x;",
+            "Lkik/core/interfaces/l;",
             ">;"
         }
     .end annotation
@@ -61,7 +61,7 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/m;",
+            "Lkik/core/interfaces/ad;",
             ">;"
         }
     .end annotation
@@ -72,7 +72,7 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/ad;",
+            "Lcom/kik/android/Mixpanel;",
             ">;"
         }
     .end annotation
@@ -83,7 +83,7 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lcom/kik/android/Mixpanel;",
+            "Lkik/core/interfaces/b;",
             ">;"
         }
     .end annotation
@@ -94,7 +94,7 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/b;",
+            "Lkik/android/videochat/c;",
             ">;"
         }
     .end annotation
@@ -105,7 +105,7 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/android/videochat/c;",
+            "Lcom/kik/metrics/c/d;",
             ">;"
         }
     .end annotation
@@ -139,26 +139,22 @@
     goto :goto_0
 .end method
 
-.method private constructor <init>(Ldagger/b;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+.method private constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ldagger/b",
+            "Ljavax/inject/Provider",
             "<",
-            "Landroid/content/BroadcastReceiver;",
+            "Lcom/kik/cache/KikVolleyImageLoader;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lcom/kik/cache/aa;",
+            "Lkik/core/interfaces/v;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/x;",
-            ">;",
-            "Ljavax/inject/Provider",
-            "<",
-            "Lkik/core/interfaces/m;",
+            "Lkik/core/interfaces/l;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
@@ -175,15 +171,19 @@
             "Ljavax/inject/Provider",
             "<",
             "Lkik/android/videochat/c;",
+            ">;",
+            "Ljavax/inject/Provider",
+            "<",
+            "Lcom/kik/metrics/c/d;",
             ">;)V"
         }
     .end annotation
 
     .prologue
-    .line 26
+    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
+    .line 46
     sget-boolean v0, Lkik/android/KikNotificationHandler_MembersInjector;->a:Z
 
     if-nez v0, :cond_0
@@ -196,11 +196,11 @@
 
     throw v0
 
-    .line 28
+    .line 47
     :cond_0
-    iput-object p1, p0, Lkik/android/KikNotificationHandler_MembersInjector;->b:Ldagger/b;
+    iput-object p1, p0, Lkik/android/KikNotificationHandler_MembersInjector;->b:Ljavax/inject/Provider;
 
-    .line 29
+    .line 48
     sget-boolean v0, Lkik/android/KikNotificationHandler_MembersInjector;->a:Z
 
     if-nez v0, :cond_1
@@ -213,11 +213,11 @@
 
     throw v0
 
-    .line 30
+    .line 49
     :cond_1
     iput-object p2, p0, Lkik/android/KikNotificationHandler_MembersInjector;->c:Ljavax/inject/Provider;
 
-    .line 31
+    .line 50
     sget-boolean v0, Lkik/android/KikNotificationHandler_MembersInjector;->a:Z
 
     if-nez v0, :cond_2
@@ -230,11 +230,11 @@
 
     throw v0
 
-    .line 32
+    .line 51
     :cond_2
     iput-object p3, p0, Lkik/android/KikNotificationHandler_MembersInjector;->d:Ljavax/inject/Provider;
 
-    .line 33
+    .line 52
     sget-boolean v0, Lkik/android/KikNotificationHandler_MembersInjector;->a:Z
 
     if-nez v0, :cond_3
@@ -247,11 +247,11 @@
 
     throw v0
 
-    .line 34
+    .line 53
     :cond_3
     iput-object p4, p0, Lkik/android/KikNotificationHandler_MembersInjector;->e:Ljavax/inject/Provider;
 
-    .line 35
+    .line 54
     sget-boolean v0, Lkik/android/KikNotificationHandler_MembersInjector;->a:Z
 
     if-nez v0, :cond_4
@@ -264,11 +264,11 @@
 
     throw v0
 
-    .line 36
+    .line 55
     :cond_4
     iput-object p5, p0, Lkik/android/KikNotificationHandler_MembersInjector;->f:Ljavax/inject/Provider;
 
-    .line 37
+    .line 56
     sget-boolean v0, Lkik/android/KikNotificationHandler_MembersInjector;->a:Z
 
     if-nez v0, :cond_5
@@ -281,11 +281,11 @@
 
     throw v0
 
-    .line 38
+    .line 57
     :cond_5
     iput-object p6, p0, Lkik/android/KikNotificationHandler_MembersInjector;->g:Ljavax/inject/Provider;
 
-    .line 39
+    .line 58
     sget-boolean v0, Lkik/android/KikNotificationHandler_MembersInjector;->a:Z
 
     if-nez v0, :cond_6
@@ -298,11 +298,11 @@
 
     throw v0
 
-    .line 40
+    .line 59
     :cond_6
     iput-object p7, p0, Lkik/android/KikNotificationHandler_MembersInjector;->h:Ljavax/inject/Provider;
 
-    .line 41
+    .line 60
     sget-boolean v0, Lkik/android/KikNotificationHandler_MembersInjector;->a:Z
 
     if-nez v0, :cond_7
@@ -315,34 +315,30 @@
 
     throw v0
 
-    .line 42
+    .line 61
     :cond_7
     iput-object p8, p0, Lkik/android/KikNotificationHandler_MembersInjector;->i:Ljavax/inject/Provider;
 
-    .line 43
+    .line 62
     return-void
 .end method
 
-.method public static a(Ldagger/b;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Ldagger/b;
+.method public static a(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Ldagger/b;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ldagger/b",
+            "Ljavax/inject/Provider",
             "<",
-            "Landroid/content/BroadcastReceiver;",
+            "Lcom/kik/cache/KikVolleyImageLoader;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lcom/kik/cache/aa;",
+            "Lkik/core/interfaces/v;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/x;",
-            ">;",
-            "Ljavax/inject/Provider",
-            "<",
-            "Lkik/core/interfaces/m;",
+            "Lkik/core/interfaces/l;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
@@ -359,6 +355,10 @@
             "Ljavax/inject/Provider",
             "<",
             "Lkik/android/videochat/c;",
+            ">;",
+            "Ljavax/inject/Provider",
+            "<",
+            "Lcom/kik/metrics/c/d;",
             ">;)",
             "Ldagger/b",
             "<",
@@ -368,7 +368,7 @@
     .end annotation
 
     .prologue
-    .line 61
+    .line 73
     new-instance v0, Lkik/android/KikNotificationHandler_MembersInjector;
 
     move-object v1, p0
@@ -387,7 +387,7 @@
 
     move-object/from16 v8, p7
 
-    invoke-direct/range {v0 .. v8}, Lkik/android/KikNotificationHandler_MembersInjector;-><init>(Ldagger/b;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+    invoke-direct/range {v0 .. v8}, Lkik/android/KikNotificationHandler_MembersInjector;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
 
     return-object v0
 .end method
@@ -401,10 +401,10 @@
     .line 15
     check-cast p1, Lkik/android/KikNotificationHandler;
 
-    .line 1047
+    .line 1086
     if-nez p1, :cond_0
 
-    .line 1048
+    .line 1087
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "Cannot inject members into a null reference"
@@ -413,47 +413,42 @@
 
     throw v0
 
-    .line 1050
+    .line 1089
     :cond_0
-    iget-object v0, p0, Lkik/android/KikNotificationHandler_MembersInjector;->b:Ldagger/b;
+    iget-object v0, p0, Lkik/android/KikNotificationHandler_MembersInjector;->b:Ljavax/inject/Provider;
 
-    invoke-interface {v0, p1}, Ldagger/b;->injectMembers(Ljava/lang/Object;)V
+    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 1051
+    move-result-object v0
+
+    check-cast v0, Lcom/kik/cache/KikVolleyImageLoader;
+
+    iput-object v0, p1, Lkik/android/KikNotificationHandler;->a:Lcom/kik/cache/KikVolleyImageLoader;
+
+    .line 1090
     iget-object v0, p0, Lkik/android/KikNotificationHandler_MembersInjector;->c:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/kik/cache/aa;
+    check-cast v0, Lkik/core/interfaces/v;
 
-    iput-object v0, p1, Lkik/android/KikNotificationHandler;->b:Lcom/kik/cache/aa;
+    iput-object v0, p1, Lkik/android/KikNotificationHandler;->b:Lkik/core/interfaces/v;
 
-    .line 1052
+    .line 1091
     iget-object v0, p0, Lkik/android/KikNotificationHandler_MembersInjector;->d:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/interfaces/x;
+    check-cast v0, Lkik/core/interfaces/l;
 
-    iput-object v0, p1, Lkik/android/KikNotificationHandler;->c:Lkik/core/interfaces/x;
+    iput-object v0, p1, Lkik/android/KikNotificationHandler;->c:Lkik/core/interfaces/l;
 
-    .line 1053
+    .line 1092
     iget-object v0, p0, Lkik/android/KikNotificationHandler_MembersInjector;->e:Ljavax/inject/Provider;
-
-    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkik/core/interfaces/m;
-
-    iput-object v0, p1, Lkik/android/KikNotificationHandler;->d:Lkik/core/interfaces/m;
-
-    .line 1054
-    iget-object v0, p0, Lkik/android/KikNotificationHandler_MembersInjector;->f:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
@@ -461,10 +456,10 @@
 
     check-cast v0, Lkik/core/interfaces/ad;
 
-    iput-object v0, p1, Lkik/android/KikNotificationHandler;->e:Lkik/core/interfaces/ad;
+    iput-object v0, p1, Lkik/android/KikNotificationHandler;->d:Lkik/core/interfaces/ad;
 
-    .line 1055
-    iget-object v0, p0, Lkik/android/KikNotificationHandler_MembersInjector;->g:Ljavax/inject/Provider;
+    .line 1093
+    iget-object v0, p0, Lkik/android/KikNotificationHandler_MembersInjector;->f:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
@@ -472,10 +467,10 @@
 
     check-cast v0, Lcom/kik/android/Mixpanel;
 
-    iput-object v0, p1, Lkik/android/KikNotificationHandler;->f:Lcom/kik/android/Mixpanel;
+    iput-object v0, p1, Lkik/android/KikNotificationHandler;->e:Lcom/kik/android/Mixpanel;
 
-    .line 1056
-    iget-object v0, p0, Lkik/android/KikNotificationHandler_MembersInjector;->h:Ljavax/inject/Provider;
+    .line 1094
+    iget-object v0, p0, Lkik/android/KikNotificationHandler_MembersInjector;->g:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
@@ -483,10 +478,10 @@
 
     check-cast v0, Lkik/core/interfaces/b;
 
-    iput-object v0, p1, Lkik/android/KikNotificationHandler;->g:Lkik/core/interfaces/b;
+    iput-object v0, p1, Lkik/android/KikNotificationHandler;->f:Lkik/core/interfaces/b;
 
-    .line 1057
-    iget-object v0, p0, Lkik/android/KikNotificationHandler_MembersInjector;->i:Ljavax/inject/Provider;
+    .line 1095
+    iget-object v0, p0, Lkik/android/KikNotificationHandler_MembersInjector;->h:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
@@ -494,7 +489,18 @@
 
     check-cast v0, Lkik/android/videochat/c;
 
-    iput-object v0, p1, Lkik/android/KikNotificationHandler;->h:Lkik/android/videochat/c;
+    iput-object v0, p1, Lkik/android/KikNotificationHandler;->g:Lkik/android/videochat/c;
+
+    .line 1096
+    iget-object v0, p0, Lkik/android/KikNotificationHandler_MembersInjector;->i:Ljavax/inject/Provider;
+
+    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/kik/metrics/c/d;
+
+    iput-object v0, p1, Lkik/android/KikNotificationHandler;->h:Lcom/kik/metrics/c/d;
 
     .line 15
     return-void

@@ -65,12 +65,12 @@
     .locals 1
 
     .prologue
-    .line 73
+    .line 71
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/support/v7/widget/AdapterHelper;-><init>(Landroid/support/v7/widget/AdapterHelper$Callback;B)V
 
-    .line 74
+    .line 72
     return-void
 .end method
 
@@ -80,10 +80,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 76
+    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
+    .line 54
     new-instance v0, Landroid/support/v4/util/Pools$SimplePool;
 
     const/16 v1, 0x1e
@@ -92,37 +92,37 @@
 
     iput-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->g:Landroid/support/v4/util/Pools$Pool;
 
-    .line 58
+    .line 56
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
 
-    .line 60
+    .line 58
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->b:Ljava/util/ArrayList;
 
-    .line 70
+    .line 68
     iput v2, p0, Landroid/support/v7/widget/AdapterHelper;->h:I
 
-    .line 77
+    .line 75
     iput-object p1, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
 
-    .line 78
+    .line 76
     iput-boolean v2, p0, Landroid/support/v7/widget/AdapterHelper;->e:Z
 
-    .line 79
+    .line 77
     new-instance v0, Landroid/support/v7/widget/OpReorderer;
 
     invoke-direct {v0, p0}, Landroid/support/v7/widget/OpReorderer;-><init>(Landroid/support/v7/widget/OpReorderer$Callback;)V
 
     iput-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->f:Landroid/support/v7/widget/OpReorderer;
 
-    .line 80
+    .line 78
     return-void
 .end method
 
@@ -130,17 +130,17 @@
     .locals 3
 
     .prologue
-    .line 316
+    .line 314
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
 
     invoke-interface {v0, p1}, Landroid/support/v7/widget/AdapterHelper$Callback;->a(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
 
-    .line 317
+    .line 315
     iget v0, p1, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 325
+    .line 323
     :pswitch_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -150,7 +150,7 @@
 
     throw v0
 
-    .line 319
+    .line 317
     :pswitch_1
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
 
@@ -158,11 +158,11 @@
 
     invoke-interface {v0, p2, v1}, Landroid/support/v7/widget/AdapterHelper$Callback;->a(II)V
 
-    .line 323
+    .line 321
     :goto_0
     return-void
 
-    .line 322
+    .line 320
     :pswitch_2
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
 
@@ -174,7 +174,7 @@
 
     goto :goto_0
 
-    .line 317
+    .line 315
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_1
@@ -196,12 +196,12 @@
     .end annotation
 
     .prologue
-    .line 740
+    .line 747
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v2
 
-    .line 741
+    .line 748
     const/4 v0, 0x0
 
     move v1, v0
@@ -209,7 +209,7 @@
     :goto_0
     if-ge v1, v2, :cond_0
 
-    .line 742
+    .line 749
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -218,18 +218,18 @@
 
     invoke-virtual {p0, v0}, Landroid/support/v7/widget/AdapterHelper;->a(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
 
-    .line 741
+    .line 748
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
 
-    .line 744
+    .line 751
     :cond_0
     invoke-interface {p1}, Ljava/util/List;->clear()V
 
-    .line 745
+    .line 752
     return-void
 .end method
 
@@ -241,7 +241,7 @@
 
     const/4 v1, 0x1
 
-    .line 232
+    .line 230
     iget v0, p1, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->a:I
 
     if-eq v0, v1, :cond_0
@@ -252,7 +252,7 @@
 
     if-ne v0, v3, :cond_1
 
-    .line 233
+    .line 231
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -262,25 +262,25 @@
 
     throw v0
 
-    .line 246
+    .line 244
     :cond_1
     iget v0, p1, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
     iget v3, p1, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->a:I
 
-    invoke-direct {p0, v0, v3}, Landroid/support/v7/widget/AdapterHelper;->f(II)I
+    invoke-direct {p0, v0, v3}, Landroid/support/v7/widget/AdapterHelper;->e(II)I
 
     move-result v4
 
-    .line 251
+    .line 249
     iget v3, p1, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
-    .line 253
+    .line 251
     iget v0, p1, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 261
+    .line 259
     :pswitch_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -314,27 +314,27 @@
 
     move v3, v1
 
-    .line 263
+    .line 261
     :goto_1
     iget v7, p1, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
 
     if-ge v3, v7, :cond_6
 
-    .line 264
+    .line 262
     iget v7, p1, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
     mul-int v8, v0, v3
 
     add-int/2addr v7, v8
 
-    .line 265
+    .line 263
     iget v8, p1, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->a:I
 
-    invoke-direct {p0, v7, v8}, Landroid/support/v7/widget/AdapterHelper;->f(II)I
+    invoke-direct {p0, v7, v8}, Landroid/support/v7/widget/AdapterHelper;->e(II)I
 
     move-result v8
 
-    .line 270
+    .line 268
     iget v7, p1, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->a:I
 
     packed-switch v7, :pswitch_data_1
@@ -342,14 +342,14 @@
     :pswitch_2
     move v7, v2
 
-    .line 278
+    .line 276
     :goto_2
     if-eqz v7, :cond_4
 
-    .line 279
+    .line 277
     add-int/lit8 v5, v5, 0x1
 
-    .line 263
+    .line 261
     :goto_3
     add-int/lit8 v3, v3, 0x1
 
@@ -358,10 +358,10 @@
     :pswitch_3
     move v0, v2
 
-    .line 259
+    .line 257
     goto :goto_0
 
-    .line 272
+    .line 270
     :pswitch_4
     add-int/lit8 v7, v6, 0x1
 
@@ -376,7 +376,7 @@
 
     goto :goto_2
 
-    .line 275
+    .line 273
     :pswitch_5
     if-ne v8, v6, :cond_3
 
@@ -389,7 +389,7 @@
 
     goto :goto_2
 
-    .line 282
+    .line 280
     :cond_4
     iget v7, p1, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->a:I
 
@@ -399,20 +399,20 @@
 
     move-result-object v6
 
-    .line 286
+    .line 284
     invoke-direct {p0, v6, v4}, Landroid/support/v7/widget/AdapterHelper;->a(Landroid/support/v7/widget/AdapterHelper$UpdateOp;I)V
 
-    .line 287
+    .line 285
     invoke-virtual {p0, v6}, Landroid/support/v7/widget/AdapterHelper;->a(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
 
-    .line 288
+    .line 286
     iget v6, p1, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->a:I
 
     const/4 v7, 0x4
 
     if-ne v6, v7, :cond_5
 
-    .line 289
+    .line 287
     add-int/2addr v4, v5
 
     :cond_5
@@ -420,37 +420,37 @@
 
     move v6, v8
 
-    .line 292
+    .line 290
     goto :goto_3
 
-    .line 295
+    .line 293
     :cond_6
     iget-object v0, p1, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->c:Ljava/lang/Object;
 
-    .line 296
+    .line 294
     invoke-virtual {p0, p1}, Landroid/support/v7/widget/AdapterHelper;->a(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
 
-    .line 297
+    .line 295
     if-lez v5, :cond_7
 
-    .line 298
+    .line 296
     iget v1, p1, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->a:I
 
     invoke-virtual {p0, v1, v6, v5, v0}, Landroid/support/v7/widget/AdapterHelper;->a(IIILjava/lang/Object;)Landroid/support/v7/widget/AdapterHelper$UpdateOp;
 
     move-result-object v0
 
-    .line 302
+    .line 300
     invoke-direct {p0, v0, v4}, Landroid/support/v7/widget/AdapterHelper;->a(Landroid/support/v7/widget/AdapterHelper$UpdateOp;I)V
 
-    .line 303
+    .line 301
     invoke-virtual {p0, v0}, Landroid/support/v7/widget/AdapterHelper;->a(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
 
-    .line 313
+    .line 311
     :cond_7
     return-void
 
-    .line 253
+    .line 251
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_3
@@ -458,7 +458,7 @@
         :pswitch_1
     .end packed-switch
 
-    .line 270
+    .line 268
     :pswitch_data_1
     .packed-switch 0x2
         :pswitch_5
@@ -471,17 +471,17 @@
     .locals 4
 
     .prologue
-    .line 440
+    .line 438
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 441
+    .line 439
     iget v0, p1, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 456
+    .line 454
     :pswitch_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -503,7 +503,7 @@
 
     throw v0
 
-    .line 443
+    .line 441
     :pswitch_1
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
 
@@ -513,11 +513,11 @@
 
     invoke-interface {v0, v1, v2}, Landroid/support/v7/widget/AdapterHelper$Callback;->c(II)V
 
-    .line 454
+    .line 452
     :goto_0
     return-void
 
-    .line 446
+    .line 444
     :pswitch_2
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
 
@@ -529,7 +529,7 @@
 
     goto :goto_0
 
-    .line 449
+    .line 447
     :pswitch_3
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
 
@@ -541,7 +541,7 @@
 
     goto :goto_0
 
-    .line 453
+    .line 451
     :pswitch_4
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
 
@@ -555,7 +555,7 @@
 
     goto :goto_0
 
-    .line 441
+    .line 439
     nop
 
     :pswitch_data_0
@@ -579,7 +579,7 @@
 
     const/4 v1, 0x1
 
-    .line 412
+    .line 410
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -588,11 +588,11 @@
 
     move v3, v2
 
-    .line 413
+    .line 411
     :goto_0
     if-ge v3, v4, :cond_3
 
-    .line 414
+    .line 412
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -601,14 +601,14 @@
 
     check-cast v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;
 
-    .line 415
+    .line 413
     iget v5, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->a:I
 
     const/16 v6, 0x8
 
     if-ne v5, v6, :cond_0
 
-    .line 416
+    .line 414
     iget v0, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
 
     add-int/lit8 v5, v3, 0x1
@@ -621,30 +621,30 @@
 
     move v0, v1
 
-    .line 429
+    .line 427
     :goto_1
     return v0
 
-    .line 419
+    .line 417
     :cond_0
     iget v5, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->a:I
 
     if-ne v5, v1, :cond_2
 
-    .line 421
+    .line 419
     iget v5, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
     iget v6, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
 
     add-int/2addr v5, v6
 
-    .line 422
+    .line 420
     iget v0, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
     :goto_2
     if-ge v0, v5, :cond_2
 
-    .line 423
+    .line 421
     add-int/lit8 v6, v3, 0x1
 
     invoke-virtual {p0, v0, v6}, Landroid/support/v7/widget/AdapterHelper;->a(II)I
@@ -655,16 +655,16 @@
 
     move v0, v1
 
-    .line 424
+    .line 422
     goto :goto_1
 
-    .line 422
+    .line 420
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 413
+    .line 411
     :cond_2
     add-int/lit8 v0, v3, 0x1
 
@@ -675,11 +675,11 @@
     :cond_3
     move v0, v2
 
-    .line 429
+    .line 427
     goto :goto_1
 .end method
 
-.method private f(II)I
+.method private e(II)I
     .locals 8
 
     .prologue
@@ -689,14 +689,14 @@
 
     const/4 v5, 0x1
 
-    .line 331
+    .line 329
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 332
+    .line 330
     add-int/lit8 v0, v0, -0x1
 
     move v4, v0
@@ -706,7 +706,7 @@
     :goto_0
     if-ltz v4, :cond_e
 
-    .line 333
+    .line 331
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -715,51 +715,51 @@
 
     check-cast v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;
 
-    .line 334
+    .line 332
     iget v2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->a:I
 
     if-ne v2, v7, :cond_9
 
-    .line 336
+    .line 334
     iget v2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
     iget v3, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
 
     if-ge v2, v3, :cond_1
 
-    .line 337
+    .line 335
     iget v3, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
-    .line 338
+    .line 336
     iget v2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
 
-    .line 343
+    .line 341
     :goto_1
     if-lt v1, v3, :cond_6
 
     if-gt v1, v2, :cond_6
 
-    .line 345
+    .line 343
     iget v2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
     if-ne v3, v2, :cond_3
 
-    .line 346
+    .line 344
     if-ne p2, v5, :cond_2
 
-    .line 347
+    .line 345
     iget v2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
 
-    .line 352
+    .line 350
     :cond_0
     :goto_2
     add-int/lit8 v0, v1, 0x1
 
-    .line 332
+    .line 330
     :goto_3
     add-int/lit8 v1, v4, -0x1
 
@@ -769,20 +769,20 @@
 
     goto :goto_0
 
-    .line 340
+    .line 338
     :cond_1
     iget v3, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
 
-    .line 341
+    .line 339
     iget v2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
     goto :goto_1
 
-    .line 348
+    .line 346
     :cond_2
     if-ne p2, v6, :cond_0
 
-    .line 349
+    .line 347
     iget v2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
 
     add-int/lit8 v2, v2, -0x1
@@ -791,29 +791,29 @@
 
     goto :goto_2
 
-    .line 354
+    .line 352
     :cond_3
     if-ne p2, v5, :cond_5
 
-    .line 355
+    .line 353
     iget v2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
-    .line 360
+    .line 358
     :cond_4
     :goto_4
     add-int/lit8 v0, v1, -0x1
 
     goto :goto_3
 
-    .line 356
+    .line 354
     :cond_5
     if-ne p2, v6, :cond_4
 
-    .line 357
+    .line 355
     iget v2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
     add-int/lit8 v2, v2, -0x1
@@ -822,23 +822,23 @@
 
     goto :goto_4
 
-    .line 362
+    .line 360
     :cond_6
     iget v2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
     if-ge v1, v2, :cond_8
 
-    .line 364
+    .line 362
     if-ne p2, v5, :cond_7
 
-    .line 365
+    .line 363
     iget v2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
-    .line 366
+    .line 364
     iget v2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
 
     add-int/lit8 v2, v2, 0x1
@@ -849,18 +849,18 @@
 
     goto :goto_3
 
-    .line 367
+    .line 365
     :cond_7
     if-ne p2, v6, :cond_8
 
-    .line 368
+    .line 366
     iget v2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
     add-int/lit8 v2, v2, -0x1
 
     iput v2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
-    .line 369
+    .line 367
     iget v2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
 
     add-int/lit8 v2, v2, -0x1
@@ -870,45 +870,45 @@
     :cond_8
     move v0, v1
 
-    .line 372
+    .line 370
     goto :goto_3
 
-    .line 373
+    .line 371
     :cond_9
     iget v2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
     if-gt v2, v1, :cond_b
 
-    .line 374
+    .line 372
     iget v2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->a:I
 
     if-ne v2, v5, :cond_a
 
-    .line 375
+    .line 373
     iget v0, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
 
     sub-int v0, v1, v0
 
     goto :goto_3
 
-    .line 376
+    .line 374
     :cond_a
     iget v2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->a:I
 
     if-ne v2, v6, :cond_d
 
-    .line 377
+    .line 375
     iget v0, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
 
     add-int/2addr v0, v1
 
     goto :goto_3
 
-    .line 380
+    .line 378
     :cond_b
     if-ne p2, v5, :cond_c
 
-    .line 381
+    .line 379
     iget v2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
     add-int/lit8 v2, v2, 0x1
@@ -919,11 +919,11 @@
 
     goto :goto_3
 
-    .line 382
+    .line 380
     :cond_c
     if-ne p2, v6, :cond_d
 
-    .line 383
+    .line 381
     iget v2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
     add-int/lit8 v2, v2, -0x1
@@ -935,7 +935,7 @@
 
     goto :goto_3
 
-    .line 396
+    .line 394
     :cond_e
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->b:Ljava/util/ArrayList;
 
@@ -950,7 +950,7 @@
     :goto_5
     if-ltz v2, :cond_12
 
-    .line 397
+    .line 395
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -959,12 +959,12 @@
 
     check-cast v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;
 
-    .line 398
+    .line 396
     iget v3, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->a:I
 
     if-ne v3, v7, :cond_11
 
-    .line 399
+    .line 397
     iget v3, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
 
     iget v4, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
@@ -975,16 +975,16 @@
 
     if-gez v3, :cond_10
 
-    .line 400
+    .line 398
     :cond_f
     iget-object v3, p0, Landroid/support/v7/widget/AdapterHelper;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 401
+    .line 399
     invoke-virtual {p0, v0}, Landroid/support/v7/widget/AdapterHelper;->a(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
 
-    .line 396
+    .line 394
     :cond_10
     :goto_6
     add-int/lit8 v0, v2, -0x1
@@ -993,23 +993,23 @@
 
     goto :goto_5
 
-    .line 403
+    .line 401
     :cond_11
     iget v3, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
 
     if-gtz v3, :cond_10
 
-    .line 404
+    .line 402
     iget-object v3, p0, Landroid/support/v7/widget/AdapterHelper;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 405
+    .line 403
     invoke-virtual {p0, v0}, Landroid/support/v7/widget/AdapterHelper;->a(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
 
     goto :goto_6
 
-    .line 408
+    .line 406
     :cond_12
     return v1
 .end method
@@ -1020,7 +1020,7 @@
     .locals 5
 
     .prologue
-    .line 473
+    .line 471
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -1029,11 +1029,11 @@
 
     move v1, p1
 
-    .line 474
+    .line 472
     :goto_0
     if-ge p2, v2, :cond_4
 
-    .line 475
+    .line 473
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1042,62 +1042,62 @@
 
     check-cast v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;
 
-    .line 476
+    .line 474
     iget v3, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->a:I
 
     const/16 v4, 0x8
 
     if-ne v3, v4, :cond_3
 
-    .line 477
+    .line 475
     iget v3, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
     if-ne v3, v1, :cond_1
 
-    .line 478
+    .line 476
     iget v1, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
 
-    .line 474
+    .line 472
     :cond_0
     :goto_1
     add-int/lit8 p2, p2, 0x1
 
     goto :goto_0
 
-    .line 480
+    .line 478
     :cond_1
     iget v3, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
     if-ge v3, v1, :cond_2
 
-    .line 481
+    .line 479
     add-int/lit8 v1, v1, -0x1
 
-    .line 483
+    .line 481
     :cond_2
     iget v0, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
 
     if-gt v0, v1, :cond_0
 
-    .line 484
+    .line 482
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 487
+    .line 485
     :cond_3
     iget v3, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
     if-gt v3, v1, :cond_0
 
-    .line 488
+    .line 486
     iget v3, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->a:I
 
     const/4 v4, 0x2
 
     if-ne v3, v4, :cond_6
 
-    .line 489
+    .line 487
     iget v3, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
     iget v4, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
@@ -1106,14 +1106,14 @@
 
     if-ge v1, v3, :cond_5
 
-    .line 490
+    .line 488
     const/4 v1, -0x1
 
-    .line 498
+    .line 496
     :cond_4
     return v1
 
-    .line 492
+    .line 490
     :cond_5
     iget v0, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
 
@@ -1121,7 +1121,7 @@
 
     goto :goto_1
 
-    .line 493
+    .line 491
     :cond_6
     iget v3, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->a:I
 
@@ -1129,7 +1129,7 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 494
+    .line 492
     iget v0, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
 
     add-int/2addr v1, v0
@@ -1141,7 +1141,7 @@
     .locals 1
 
     .prologue
-    .line 719
+    .line 726
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->g:Landroid/support/v4/util/Pools$Pool;
 
     invoke-interface {v0}, Landroid/support/v4/util/Pools$Pool;->acquire()Ljava/lang/Object;
@@ -1150,29 +1150,29 @@
 
     check-cast v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;
 
-    .line 720
+    .line 727
     if-nez v0, :cond_0
 
-    .line 721
+    .line 728
     new-instance v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;
 
     invoke-direct {v0, p1, p2, p3, p4}, Landroid/support/v7/widget/AdapterHelper$UpdateOp;-><init>(IIILjava/lang/Object;)V
 
-    .line 728
+    .line 735
     :goto_0
     return-object v0
 
-    .line 723
+    .line 730
     :cond_0
     iput p1, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->a:I
 
-    .line 724
+    .line 731
     iput p2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
-    .line 725
+    .line 732
     iput p3, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
 
-    .line 726
+    .line 733
     iput-object p4, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->c:Ljava/lang/Object;
 
     goto :goto_0
@@ -1182,22 +1182,22 @@
     .locals 1
 
     .prologue
-    .line 88
+    .line 86
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
 
     invoke-direct {p0, v0}, Landroid/support/v7/widget/AdapterHelper;->a(Ljava/util/List;)V
 
-    .line 89
+    .line 87
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->b:Ljava/util/ArrayList;
 
     invoke-direct {p0, v0}, Landroid/support/v7/widget/AdapterHelper;->a(Ljava/util/List;)V
 
-    .line 90
+    .line 88
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/support/v7/widget/AdapterHelper;->h:I
 
-    .line 91
+    .line 89
     return-void
 .end method
 
@@ -1205,22 +1205,22 @@
     .locals 1
 
     .prologue
-    .line 733
+    .line 740
     iget-boolean v0, p0, Landroid/support/v7/widget/AdapterHelper;->e:Z
 
     if-nez v0, :cond_0
 
-    .line 734
+    .line 741
     const/4 v0, 0x0
 
     iput-object v0, p1, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->c:Ljava/lang/Object;
 
-    .line 735
+    .line 742
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->g:Landroid/support/v4/util/Pools$Pool;
 
     invoke-interface {v0, p1}, Landroid/support/v4/util/Pools$Pool;->release(Ljava/lang/Object;)Z
 
-    .line 737
+    .line 744
     :cond_0
     return-void
 .end method
@@ -1229,7 +1229,7 @@
     .locals 1
 
     .prologue
-    .line 465
+    .line 463
     iget v0, p0, Landroid/support/v7/widget/AdapterHelper;->h:I
 
     and-int/2addr v0, p1
@@ -1247,11 +1247,60 @@
     goto :goto_0
 .end method
 
+.method final a(IILjava/lang/Object;)Z
+    .locals 4
+
+    .prologue
+    const/4 v1, 0x1
+
+    const/4 v0, 0x0
+
+    .line 503
+    if-gtz p2, :cond_1
+
+    .line 508
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 506
+    :cond_1
+    iget-object v2, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
+
+    const/4 v3, 0x4
+
+    invoke-virtual {p0, v3, p1, p2, p3}, Landroid/support/v7/widget/AdapterHelper;->a(IIILjava/lang/Object;)Landroid/support/v7/widget/AdapterHelper$UpdateOp;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 507
+    iget v2, p0, Landroid/support/v7/widget/AdapterHelper;->h:I
+
+    or-int/lit8 v2, v2, 0x4
+
+    iput v2, p0, Landroid/support/v7/widget/AdapterHelper;->h:I
+
+    .line 508
+    iget-object v2, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-ne v2, v1, :cond_0
+
+    move v0, v1
+
+    goto :goto_0
+.end method
+
 .method final b(I)I
     .locals 1
 
     .prologue
-    .line 469
+    .line 467
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/support/v7/widget/AdapterHelper;->a(II)I
@@ -1265,7 +1314,7 @@
     .locals 14
 
     .prologue
-    .line 94
+    .line 92
     iget-object v6, p0, Landroid/support/v7/widget/AdapterHelper;->f:Landroid/support/v7/widget/OpReorderer;
 
     iget-object v7, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
@@ -1974,7 +2023,7 @@
 
     goto :goto_a
 
-    .line 95
+    .line 93
     :cond_1d
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
 
@@ -1982,7 +2031,7 @@
 
     move-result v7
 
-    .line 96
+    .line 94
     const/4 v0, 0x0
 
     move v5, v0
@@ -1990,7 +2039,7 @@
     :goto_b
     if-ge v5, v7, :cond_2e
 
-    .line 97
+    .line 95
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1999,24 +2048,24 @@
 
     check-cast v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;
 
-    .line 98
+    .line 96
     iget v1, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->a:I
 
     packed-switch v1, :pswitch_data_1
 
-    .line 112
+    .line 110
     :goto_c
     :pswitch_4
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->d:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_1e
 
-    .line 113
+    .line 111
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->d:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 96
+    .line 94
     :cond_1e
     add-int/lit8 v0, v5, 0x1
 
@@ -2024,30 +2073,30 @@
 
     goto :goto_b
 
-    .line 2433
+    .line 2431
     :pswitch_5
     invoke-direct {p0, v0}, Landroid/support/v7/widget/AdapterHelper;->c(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
 
     goto :goto_c
 
-    .line 3135
+    .line 3133
     :pswitch_6
     iget v8, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
-    .line 3136
+    .line 3134
     const/4 v1, 0x0
 
-    .line 3137
+    .line 3135
     iget v2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
     iget v3, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
 
     add-int/2addr v3, v2
 
-    .line 3138
+    .line 3136
     const/4 v4, -0x1
 
-    .line 3139
+    .line 3137
     iget v2, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
     move v6, v1
@@ -2055,17 +2104,17 @@
     :goto_d
     if-ge v2, v3, :cond_24
 
-    .line 3140
+    .line 3138
     const/4 v1, 0x0
 
-    .line 3141
+    .line 3139
     iget-object v9, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
 
     invoke-interface {v9, v2}, Landroid/support/v7/widget/AdapterHelper$Callback;->a(I)Landroid/support/v7/widget/RecyclerView$ViewHolder;
 
     move-result-object v9
 
-    .line 3142
+    .line 3140
     if-nez v9, :cond_1f
 
     invoke-direct {p0, v2}, Landroid/support/v7/widget/AdapterHelper;->c(I)Z
@@ -2074,11 +2123,11 @@
 
     if-eqz v9, :cond_21
 
-    .line 3149
+    .line 3147
     :cond_1f
     if-nez v4, :cond_20
 
-    .line 3152
+    .line 3150
     const/4 v1, 0x2
 
     const/4 v4, 0x0
@@ -2087,30 +2136,30 @@
 
     move-result-object v1
 
-    .line 3153
+    .line 3151
     invoke-direct {p0, v1}, Landroid/support/v7/widget/AdapterHelper;->b(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
 
-    .line 3154
+    .line 3152
     const/4 v1, 0x1
 
-    .line 3156
+    .line 3154
     :cond_20
     const/4 v4, 0x1
 
-    .line 3169
+    .line 3167
     :goto_e
     if-eqz v1, :cond_23
 
-    .line 3170
+    .line 3168
     sub-int v1, v2, v6
 
-    .line 3171
+    .line 3169
     sub-int v2, v3, v6
 
-    .line 3172
+    .line 3170
     const/4 v3, 0x1
 
-    .line 3139
+    .line 3137
     :goto_f
     add-int/lit8 v1, v1, 0x1
 
@@ -2122,13 +2171,13 @@
 
     goto :goto_d
 
-    .line 3160
+    .line 3158
     :cond_21
     const/4 v9, 0x1
 
     if-ne v4, v9, :cond_22
 
-    .line 3163
+    .line 3161
     const/4 v1, 0x2
 
     const/4 v4, 0x0
@@ -2137,19 +2186,19 @@
 
     move-result-object v1
 
-    .line 3164
+    .line 3162
     invoke-direct {p0, v1}, Landroid/support/v7/widget/AdapterHelper;->c(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
 
-    .line 3165
+    .line 3163
     const/4 v1, 0x1
 
-    .line 3167
+    .line 3165
     :cond_22
     const/4 v4, 0x0
 
     goto :goto_e
 
-    .line 3174
+    .line 3172
     :cond_23
     add-int/lit8 v1, v6, 0x1
 
@@ -2163,16 +2212,16 @@
 
     goto :goto_f
 
-    .line 3177
+    .line 3175
     :cond_24
     iget v1, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
 
     if-eq v6, v1, :cond_25
 
-    .line 3178
+    .line 3176
     invoke-virtual {p0, v0}, Landroid/support/v7/widget/AdapterHelper;->a(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
 
-    .line 3179
+    .line 3177
     const/4 v0, 0x2
 
     const/4 v1, 0x0
@@ -2181,39 +2230,39 @@
 
     move-result-object v0
 
-    .line 3181
+    .line 3179
     :cond_25
     if-nez v4, :cond_26
 
-    .line 3182
+    .line 3180
     invoke-direct {p0, v0}, Landroid/support/v7/widget/AdapterHelper;->b(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
 
     goto :goto_c
 
-    .line 3184
+    .line 3182
     :cond_26
     invoke-direct {p0, v0}, Landroid/support/v7/widget/AdapterHelper;->c(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
 
     goto :goto_c
 
-    .line 3189
+    .line 3187
     :pswitch_7
     iget v4, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
-    .line 3190
+    .line 3188
     const/4 v2, 0x0
 
-    .line 3191
+    .line 3189
     iget v1, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
     iget v3, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
 
     add-int v6, v1, v3
 
-    .line 3192
+    .line 3190
     const/4 v1, -0x1
 
-    .line 3193
+    .line 3191
     iget v3, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
 
     move v13, v1
@@ -2227,14 +2276,14 @@
     :goto_10
     if-ge v3, v6, :cond_2b
 
-    .line 3194
+    .line 3192
     iget-object v8, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
 
     invoke-interface {v8, v3}, Landroid/support/v7/widget/AdapterHelper$Callback;->a(I)Landroid/support/v7/widget/RecyclerView$ViewHolder;
 
     move-result-object v8
 
-    .line 3195
+    .line 3193
     if-nez v8, :cond_27
 
     invoke-direct {p0, v3}, Landroid/support/v7/widget/AdapterHelper;->c(I)Z
@@ -2243,11 +2292,11 @@
 
     if-eqz v8, :cond_29
 
-    .line 3196
+    .line 3194
     :cond_27
     if-nez v4, :cond_28
 
-    .line 3197
+    .line 3195
     const/4 v4, 0x4
 
     iget-object v8, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->c:Ljava/lang/Object;
@@ -2256,15 +2305,15 @@
 
     move-result-object v1
 
-    .line 3199
+    .line 3197
     invoke-direct {p0, v1}, Landroid/support/v7/widget/AdapterHelper;->b(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
 
-    .line 3200
+    .line 3198
     const/4 v1, 0x0
 
     move v2, v3
 
-    .line 3203
+    .line 3201
     :cond_28
     const/4 v4, 0x1
 
@@ -2276,11 +2325,11 @@
 
     move v1, v13
 
-    .line 3214
+    .line 3212
     :goto_11
     add-int/lit8 v2, v2, 0x1
 
-    .line 3193
+    .line 3191
     add-int/lit8 v3, v3, 0x1
 
     move v13, v1
@@ -2293,13 +2342,13 @@
 
     goto :goto_10
 
-    .line 3205
+    .line 3203
     :cond_29
     const/4 v8, 0x1
 
     if-ne v4, v8, :cond_2a
 
-    .line 3206
+    .line 3204
     const/4 v4, 0x4
 
     iget-object v8, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->c:Ljava/lang/Object;
@@ -2308,15 +2357,15 @@
 
     move-result-object v1
 
-    .line 3208
+    .line 3206
     invoke-direct {p0, v1}, Landroid/support/v7/widget/AdapterHelper;->c(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
 
-    .line 3209
+    .line 3207
     const/4 v1, 0x0
 
     move v2, v3
 
-    .line 3212
+    .line 3210
     :cond_2a
     const/4 v4, 0x0
 
@@ -2330,53 +2379,53 @@
 
     goto :goto_11
 
-    .line 3216
+    .line 3214
     :cond_2b
     iget v3, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
 
     if-eq v1, v3, :cond_2c
 
-    .line 3217
+    .line 3215
     iget-object v3, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->c:Ljava/lang/Object;
 
-    .line 3218
+    .line 3216
     invoke-virtual {p0, v0}, Landroid/support/v7/widget/AdapterHelper;->a(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
 
-    .line 3219
+    .line 3217
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0, v2, v1, v3}, Landroid/support/v7/widget/AdapterHelper;->a(IIILjava/lang/Object;)Landroid/support/v7/widget/AdapterHelper$UpdateOp;
 
     move-result-object v0
 
-    .line 3221
+    .line 3219
     :cond_2c
     if-nez v4, :cond_2d
 
-    .line 3222
+    .line 3220
     invoke-direct {p0, v0}, Landroid/support/v7/widget/AdapterHelper;->b(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
 
     goto/16 :goto_c
 
-    .line 3224
+    .line 3222
     :cond_2d
     invoke-direct {p0, v0}, Landroid/support/v7/widget/AdapterHelper;->c(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
 
     goto/16 :goto_c
 
-    .line 4131
+    .line 4129
     :pswitch_8
     invoke-direct {p0, v0}, Landroid/support/v7/widget/AdapterHelper;->c(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
 
     goto/16 :goto_c
 
-    .line 116
+    .line 114
     :cond_2e
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 117
+    .line 115
     return-void
 
     :cond_2f
@@ -2395,7 +2444,7 @@
         :pswitch_3
     .end packed-switch
 
-    .line 98
+    .line 96
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_5
@@ -2413,42 +2462,47 @@
     .locals 4
 
     .prologue
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    .line 505
-    iget-object v1, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
+    const/4 v1, 0x1
 
-    const/4 v2, 0x4
+    .line 515
+    if-gtz p2, :cond_1
 
-    const/4 v3, 0x0
-
-    invoke-virtual {p0, v2, p1, p2, v3}, Landroid/support/v7/widget/AdapterHelper;->a(IIILjava/lang/Object;)Landroid/support/v7/widget/AdapterHelper$UpdateOp;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 506
-    iget v1, p0, Landroid/support/v7/widget/AdapterHelper;->h:I
-
-    or-int/lit8 v1, v1, 0x4
-
-    iput v1, p0, Landroid/support/v7/widget/AdapterHelper;->h:I
-
-    .line 507
-    iget-object v1, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    if-ne v1, v0, :cond_0
-
+    .line 520
+    :cond_0
     :goto_0
     return v0
 
-    :cond_0
-    const/4 v0, 0x0
+    .line 518
+    :cond_1
+    iget-object v2, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p0, v1, p1, p2, v3}, Landroid/support/v7/widget/AdapterHelper;->a(IIILjava/lang/Object;)Landroid/support/v7/widget/AdapterHelper$UpdateOp;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 519
+    iget v2, p0, Landroid/support/v7/widget/AdapterHelper;->h:I
+
+    or-int/lit8 v2, v2, 0x1
+
+    iput v2, p0, Landroid/support/v7/widget/AdapterHelper;->h:I
+
+    .line 520
+    iget-object v2, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-ne v2, v1, :cond_0
+
+    move v0, v1
 
     goto :goto_0
 .end method
@@ -2459,7 +2513,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 120
+    .line 118
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -2468,11 +2522,11 @@
 
     move v1, v2
 
-    .line 121
+    .line 119
     :goto_0
     if-ge v1, v3, :cond_0
 
-    .line 122
+    .line 120
     iget-object v4, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
 
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->b:Ljava/util/ArrayList;
@@ -2485,64 +2539,73 @@
 
     invoke-interface {v4, v0}, Landroid/support/v7/widget/AdapterHelper$Callback;->b(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
 
-    .line 121
+    .line 119
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
 
-    .line 124
+    .line 122
     :cond_0
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->b:Ljava/util/ArrayList;
 
     invoke-direct {p0, v0}, Landroid/support/v7/widget/AdapterHelper;->a(Ljava/util/List;)V
 
-    .line 125
+    .line 123
     iput v2, p0, Landroid/support/v7/widget/AdapterHelper;->h:I
 
-    .line 126
+    .line 124
     return-void
 .end method
 
 .method final c(II)Z
-    .locals 3
+    .locals 5
 
     .prologue
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    .line 514
-    iget-object v1, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
+    const/4 v0, 0x0
 
-    const/4 v2, 0x0
+    .line 527
+    if-gtz p2, :cond_1
 
-    invoke-virtual {p0, v0, p1, p2, v2}, Landroid/support/v7/widget/AdapterHelper;->a(IIILjava/lang/Object;)Landroid/support/v7/widget/AdapterHelper$UpdateOp;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 515
-    iget v1, p0, Landroid/support/v7/widget/AdapterHelper;->h:I
-
-    or-int/lit8 v1, v1, 0x1
-
-    iput v1, p0, Landroid/support/v7/widget/AdapterHelper;->h:I
-
-    .line 516
-    iget-object v1, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    if-ne v1, v0, :cond_0
-
+    .line 532
+    :cond_0
     :goto_0
     return v0
 
-    :cond_0
-    const/4 v0, 0x0
+    .line 530
+    :cond_1
+    iget-object v2, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
+
+    const/4 v3, 0x2
+
+    const/4 v4, 0x0
+
+    invoke-virtual {p0, v3, p1, p2, v4}, Landroid/support/v7/widget/AdapterHelper;->a(IIILjava/lang/Object;)Landroid/support/v7/widget/AdapterHelper$UpdateOp;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 531
+    iget v2, p0, Landroid/support/v7/widget/AdapterHelper;->h:I
+
+    or-int/lit8 v2, v2, 0x2
+
+    iput v2, p0, Landroid/support/v7/widget/AdapterHelper;->h:I
+
+    .line 532
+    iget-object v2, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-ne v2, v1, :cond_0
+
+    move v0, v1
 
     goto :goto_0
 .end method
@@ -2551,7 +2614,7 @@
     .locals 1
 
     .prologue
-    .line 461
+    .line 459
     iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -2572,204 +2635,6 @@
 .end method
 
 .method final d(II)Z
-    .locals 4
-
-    .prologue
-    const/4 v0, 0x1
-
-    .line 523
-    iget-object v1, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
-
-    const/4 v2, 0x2
-
-    const/4 v3, 0x0
-
-    invoke-virtual {p0, v2, p1, p2, v3}, Landroid/support/v7/widget/AdapterHelper;->a(IIILjava/lang/Object;)Landroid/support/v7/widget/AdapterHelper$UpdateOp;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 524
-    iget v1, p0, Landroid/support/v7/widget/AdapterHelper;->h:I
-
-    or-int/lit8 v1, v1, 0x2
-
-    iput v1, p0, Landroid/support/v7/widget/AdapterHelper;->h:I
-
-    .line 525
-    iget-object v1, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    if-ne v1, v0, :cond_0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method final e()V
-    .locals 7
-
-    .prologue
-    const/4 v2, 0x0
-
-    .line 549
-    invoke-virtual {p0}, Landroid/support/v7/widget/AdapterHelper;->c()V
-
-    .line 550
-    iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v3
-
-    move v1, v2
-
-    .line 551
-    :goto_0
-    if-ge v1, v3, :cond_1
-
-    .line 552
-    iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;
-
-    .line 553
-    iget v4, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->a:I
-
-    packed-switch v4, :pswitch_data_0
-
-    .line 571
-    :goto_1
-    :pswitch_0
-    iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->d:Ljava/lang/Runnable;
-
-    if-eqz v0, :cond_0
-
-    .line 572
-    iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->d:Ljava/lang/Runnable;
-
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-
-    .line 551
-    :cond_0
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
-
-    goto :goto_0
-
-    .line 555
-    :pswitch_1
-    iget-object v4, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
-
-    invoke-interface {v4, v0}, Landroid/support/v7/widget/AdapterHelper$Callback;->b(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
-
-    .line 556
-    iget-object v4, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
-
-    iget v5, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
-
-    iget v0, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
-
-    invoke-interface {v4, v5, v0}, Landroid/support/v7/widget/AdapterHelper$Callback;->c(II)V
-
-    goto :goto_1
-
-    .line 559
-    :pswitch_2
-    iget-object v4, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
-
-    invoke-interface {v4, v0}, Landroid/support/v7/widget/AdapterHelper$Callback;->b(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
-
-    .line 560
-    iget-object v4, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
-
-    iget v5, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
-
-    iget v0, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
-
-    invoke-interface {v4, v5, v0}, Landroid/support/v7/widget/AdapterHelper$Callback;->a(II)V
-
-    goto :goto_1
-
-    .line 563
-    :pswitch_3
-    iget-object v4, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
-
-    invoke-interface {v4, v0}, Landroid/support/v7/widget/AdapterHelper$Callback;->b(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
-
-    .line 564
-    iget-object v4, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
-
-    iget v5, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
-
-    iget v6, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
-
-    iget-object v0, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->c:Ljava/lang/Object;
-
-    invoke-interface {v4, v5, v6, v0}, Landroid/support/v7/widget/AdapterHelper$Callback;->a(IILjava/lang/Object;)V
-
-    goto :goto_1
-
-    .line 567
-    :pswitch_4
-    iget-object v4, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
-
-    invoke-interface {v4, v0}, Landroid/support/v7/widget/AdapterHelper$Callback;->b(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
-
-    .line 568
-    iget-object v4, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
-
-    iget v5, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
-
-    iget v0, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
-
-    invoke-interface {v4, v5, v0}, Landroid/support/v7/widget/AdapterHelper$Callback;->d(II)V
-
-    goto :goto_1
-
-    .line 575
-    :cond_1
-    iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
-
-    invoke-direct {p0, v0}, Landroid/support/v7/widget/AdapterHelper;->a(Ljava/util/List;)V
-
-    .line 576
-    iput v2, p0, Landroid/support/v7/widget/AdapterHelper;->h:I
-
-    .line 577
-    return-void
-
-    .line 553
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_2
-        :pswitch_0
-        :pswitch_3
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_4
-    .end packed-switch
-.end method
-
-.method final e(II)Z
     .locals 5
 
     .prologue
@@ -2777,15 +2642,15 @@
 
     const/4 v0, 0x0
 
-    .line 532
+    .line 539
     if-ne p1, p2, :cond_1
 
-    .line 540
+    .line 547
     :cond_0
     :goto_0
     return v0
 
-    .line 538
+    .line 545
     :cond_1
     iget-object v2, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
 
@@ -2799,14 +2664,14 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 539
+    .line 546
     iget v2, p0, Landroid/support/v7/widget/AdapterHelper;->h:I
 
     or-int/lit8 v2, v2, 0x8
 
     iput v2, p0, Landroid/support/v7/widget/AdapterHelper;->h:I
 
-    .line 540
+    .line 547
     iget-object v2, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -2818,4 +2683,158 @@
     move v0, v1
 
     goto :goto_0
+.end method
+
+.method final e()V
+    .locals 7
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 556
+    invoke-virtual {p0}, Landroid/support/v7/widget/AdapterHelper;->c()V
+
+    .line 557
+    iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v3
+
+    move v1, v2
+
+    .line 558
+    :goto_0
+    if-ge v1, v3, :cond_1
+
+    .line 559
+    iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;
+
+    .line 560
+    iget v4, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->a:I
+
+    packed-switch v4, :pswitch_data_0
+
+    .line 578
+    :goto_1
+    :pswitch_0
+    iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->d:Ljava/lang/Runnable;
+
+    if-eqz v0, :cond_0
+
+    .line 579
+    iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->d:Ljava/lang/Runnable;
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
+    .line 558
+    :cond_0
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_0
+
+    .line 562
+    :pswitch_1
+    iget-object v4, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
+
+    invoke-interface {v4, v0}, Landroid/support/v7/widget/AdapterHelper$Callback;->b(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
+
+    .line 563
+    iget-object v4, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
+
+    iget v5, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
+
+    iget v0, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
+
+    invoke-interface {v4, v5, v0}, Landroid/support/v7/widget/AdapterHelper$Callback;->c(II)V
+
+    goto :goto_1
+
+    .line 566
+    :pswitch_2
+    iget-object v4, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
+
+    invoke-interface {v4, v0}, Landroid/support/v7/widget/AdapterHelper$Callback;->b(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
+
+    .line 567
+    iget-object v4, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
+
+    iget v5, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
+
+    iget v0, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
+
+    invoke-interface {v4, v5, v0}, Landroid/support/v7/widget/AdapterHelper$Callback;->a(II)V
+
+    goto :goto_1
+
+    .line 570
+    :pswitch_3
+    iget-object v4, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
+
+    invoke-interface {v4, v0}, Landroid/support/v7/widget/AdapterHelper$Callback;->b(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
+
+    .line 571
+    iget-object v4, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
+
+    iget v5, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
+
+    iget v6, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
+
+    iget-object v0, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->c:Ljava/lang/Object;
+
+    invoke-interface {v4, v5, v6, v0}, Landroid/support/v7/widget/AdapterHelper$Callback;->a(IILjava/lang/Object;)V
+
+    goto :goto_1
+
+    .line 574
+    :pswitch_4
+    iget-object v4, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
+
+    invoke-interface {v4, v0}, Landroid/support/v7/widget/AdapterHelper$Callback;->b(Landroid/support/v7/widget/AdapterHelper$UpdateOp;)V
+
+    .line 575
+    iget-object v4, p0, Landroid/support/v7/widget/AdapterHelper;->c:Landroid/support/v7/widget/AdapterHelper$Callback;
+
+    iget v5, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->b:I
+
+    iget v0, v0, Landroid/support/v7/widget/AdapterHelper$UpdateOp;->d:I
+
+    invoke-interface {v4, v5, v0}, Landroid/support/v7/widget/AdapterHelper$Callback;->d(II)V
+
+    goto :goto_1
+
+    .line 582
+    :cond_1
+    iget-object v0, p0, Landroid/support/v7/widget/AdapterHelper;->a:Ljava/util/ArrayList;
+
+    invoke-direct {p0, v0}, Landroid/support/v7/widget/AdapterHelper;->a(Ljava/util/List;)V
+
+    .line 583
+    iput v2, p0, Landroid/support/v7/widget/AdapterHelper;->h:I
+
+    .line 584
+    return-void
+
+    .line 560
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_2
+        :pswitch_0
+        :pswitch_3
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_4
+    .end packed-switch
 .end method

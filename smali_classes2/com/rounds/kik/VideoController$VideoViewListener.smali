@@ -15,6 +15,9 @@
 
 
 # virtual methods
+.method public abstract onChangeVideoPlaneViewMode(I)V
+.end method
+
 .method public abstract onDoubleTap(FF)V
 .end method
 
@@ -28,7 +31,4 @@
 .end method
 
 .method public abstract onTap(FF)Z
-.end method
-
-.method public abstract onTextureViewStateChange(Lcom/rounds/kik/VideoController$TextureViewState;)V
 .end method

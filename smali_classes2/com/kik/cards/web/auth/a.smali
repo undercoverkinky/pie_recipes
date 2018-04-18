@@ -16,9 +16,9 @@
 
 .field private final c:Lkik/core/interfaces/ad;
 
-.field private final d:Lkik/core/interfaces/aa;
+.field private final d:Lkik/core/interfaces/z;
 
-.field private final e:Lkik/core/interfaces/af;
+.field private final e:Lkik/core/interfaces/ag;
 
 .field private f:Ljava/lang/String;
 
@@ -48,7 +48,7 @@
         value = {
             "Lcom/kik/events/e",
             "<",
-            "Ljava/lang/Void;",
+            "Ljava/lang/String;",
             ">;"
         }
     .end annotation
@@ -72,7 +72,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lkik/core/interfaces/ICommunication;Lkik/core/interfaces/ad;Lkik/core/interfaces/aa;Lkik/core/interfaces/af;)V
+.method public constructor <init>(Lkik/core/interfaces/ICommunication;Lkik/core/interfaces/ad;Lkik/core/interfaces/z;Lkik/core/interfaces/ag;)V
     .locals 3
 
     .prologue
@@ -112,29 +112,29 @@
     iput-object p2, p0, Lcom/kik/cards/web/auth/a;->c:Lkik/core/interfaces/ad;
 
     .line 112
-    iput-object p3, p0, Lcom/kik/cards/web/auth/a;->d:Lkik/core/interfaces/aa;
+    iput-object p3, p0, Lcom/kik/cards/web/auth/a;->d:Lkik/core/interfaces/z;
 
     .line 113
-    iput-object p4, p0, Lcom/kik/cards/web/auth/a;->e:Lkik/core/interfaces/af;
+    iput-object p4, p0, Lcom/kik/cards/web/auth/a;->e:Lkik/core/interfaces/ag;
 
-    .line 1257
+    .line 1258
     iget-object v0, p0, Lcom/kik/cards/web/auth/a;->c:Lkik/core/interfaces/ad;
 
     const-string v1, "kik.auth.manager.store.url"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->q(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 115
     iput-object v0, p0, Lcom/kik/cards/web/auth/a;->f:Ljava/lang/String;
 
-    .line 1262
+    .line 1263
     iget-object v0, p0, Lcom/kik/cards/web/auth/a;->c:Lkik/core/interfaces/ad;
 
     const-string v1, "kik.auth.manager.store.revalidate"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->t(Ljava/lang/String;)Ljava/lang/Long;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->v(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v0
 
@@ -145,24 +145,24 @@
     .line 116
     iput-wide v0, p0, Lcom/kik/cards/web/auth/a;->g:J
 
-    .line 1286
+    .line 1288
     iget-object v0, p0, Lcom/kik/cards/web/auth/a;->c:Lkik/core/interfaces/ad;
 
     const-string v1, "kik.auth.manager.store.signature"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->q(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 117
     iput-object v0, p0, Lcom/kik/cards/web/auth/a;->h:Ljava/lang/String;
 
-    .line 2267
+    .line 2268
     iget-object v0, p0, Lcom/kik/cards/web/auth/a;->c:Lkik/core/interfaces/ad;
 
     const-string v1, "kik.auth.manager.store.username.in.hash"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->q(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -170,11 +170,11 @@
     iput-object v0, p0, Lcom/kik/cards/web/auth/a;->i:Ljava/lang/String;
 
     .line 121
-    invoke-interface {p4}, Lkik/core/interfaces/af;->d()Lkik/core/datatypes/ad;
+    invoke-interface {p4}, Lkik/core/interfaces/ag;->d()Lkik/core/datatypes/aa;
 
     move-result-object v0
 
-    iget-object v0, v0, Lkik/core/datatypes/ad;->c:Ljava/lang/String;
+    iget-object v0, v0, Lkik/core/datatypes/aa;->c:Ljava/lang/String;
 
     invoke-direct {p0, v0}, Lcom/kik/cards/web/auth/a;->a(Ljava/lang/String;)V
 
@@ -194,9 +194,9 @@
     .line 124
     iget-object v0, p0, Lcom/kik/cards/web/auth/a;->k:Lcom/kik/events/d;
 
-    iget-object v1, p0, Lcom/kik/cards/web/auth/a;->e:Lkik/core/interfaces/af;
+    iget-object v1, p0, Lcom/kik/cards/web/auth/a;->e:Lkik/core/interfaces/ag;
 
-    invoke-interface {v1}, Lkik/core/interfaces/af;->a()Lcom/kik/events/c;
+    invoke-interface {v1}, Lkik/core/interfaces/ag;->a()Lcom/kik/events/c;
 
     move-result-object v1
 
@@ -218,7 +218,7 @@
 
     const/4 v8, 0x0
 
-    .line 576
+    .line 578
     :try_start_0
     invoke-static {p1}, Lorg/spongycastle/crypto/util/PrivateKeyFactory;->a([B)Lorg/spongycastle/crypto/params/AsymmetricKeyParameter;
 
@@ -230,105 +230,105 @@
 
     move-object v7, v0
 
-    .line 578
+    .line 580
     const-string v1, "UTF-8"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
     move-result-object v9
 
-    .line 581
+    .line 583
     sget-object v1, Lorg/spongycastle/asn1/sec/SECObjectIdentifiers;->H:Lorg/spongycastle/asn1/ASN1ObjectIdentifier;
 
     invoke-static {v1}, Lorg/spongycastle/asn1/sec/SECNamedCurves;->a(Lorg/spongycastle/asn1/ASN1ObjectIdentifier;)Lorg/spongycastle/asn1/x9/X9ECParameters;
 
     move-result-object v6
 
-    .line 582
+    .line 584
     new-instance v10, Lorg/spongycastle/crypto/digests/SHA256Digest;
 
     invoke-direct {v10}, Lorg/spongycastle/crypto/digests/SHA256Digest;-><init>()V
 
-    .line 584
+    .line 586
     new-instance v1, Lorg/spongycastle/crypto/params/ECDomainParameters;
 
-    .line 585
-    invoke-virtual {v6}, Lorg/spongycastle/asn1/x9/X9ECParameters;->c()Lorg/spongycastle/math/ec/ECCurve;
+    .line 587
+    invoke-virtual {v6}, Lorg/spongycastle/asn1/x9/X9ECParameters;->a()Lorg/spongycastle/math/ec/ECCurve;
 
     move-result-object v2
 
-    .line 586
-    invoke-virtual {v6}, Lorg/spongycastle/asn1/x9/X9ECParameters;->d()Lorg/spongycastle/math/ec/ECPoint;
+    .line 588
+    invoke-virtual {v6}, Lorg/spongycastle/asn1/x9/X9ECParameters;->b()Lorg/spongycastle/math/ec/ECPoint;
 
     move-result-object v3
 
-    .line 587
-    invoke-virtual {v6}, Lorg/spongycastle/asn1/x9/X9ECParameters;->e()Ljava/math/BigInteger;
+    .line 589
+    invoke-virtual {v6}, Lorg/spongycastle/asn1/x9/X9ECParameters;->c()Ljava/math/BigInteger;
 
     move-result-object v4
 
-    .line 588
-    invoke-virtual {v6}, Lorg/spongycastle/asn1/x9/X9ECParameters;->f()Ljava/math/BigInteger;
+    .line 590
+    invoke-virtual {v6}, Lorg/spongycastle/asn1/x9/X9ECParameters;->d()Ljava/math/BigInteger;
 
     move-result-object v5
 
-    .line 589
-    invoke-virtual {v6}, Lorg/spongycastle/asn1/x9/X9ECParameters;->g()[B
+    .line 591
+    invoke-virtual {v6}, Lorg/spongycastle/asn1/x9/X9ECParameters;->e()[B
 
     move-result-object v6
 
     invoke-direct/range {v1 .. v6}, Lorg/spongycastle/crypto/params/ECDomainParameters;-><init>(Lorg/spongycastle/math/ec/ECCurve;Lorg/spongycastle/math/ec/ECPoint;Ljava/math/BigInteger;Ljava/math/BigInteger;[B)V
 
-    .line 591
+    .line 593
     new-instance v2, Lorg/spongycastle/crypto/params/ECPrivateKeyParameters;
 
-    .line 592
+    .line 594
     invoke-virtual {v7}, Lorg/spongycastle/crypto/params/ECPrivateKeyParameters;->c()Ljava/math/BigInteger;
 
     move-result-object v3
 
     invoke-direct {v2, v3, v1}, Lorg/spongycastle/crypto/params/ECPrivateKeyParameters;-><init>(Ljava/math/BigInteger;Lorg/spongycastle/crypto/params/ECDomainParameters;)V
 
-    .line 594
+    .line 596
     const/4 v1, 0x0
 
     array-length v3, v9
 
     invoke-interface {v10, v9, v1, v3}, Lorg/spongycastle/crypto/Digest;->a([BII)V
 
-    .line 595
+    .line 597
     invoke-interface {v10}, Lorg/spongycastle/crypto/Digest;->b()I
 
     move-result v1
 
     new-array v1, v1, [B
 
-    .line 596
+    .line 598
     const/4 v3, 0x0
 
     invoke-interface {v10, v1, v3}, Lorg/spongycastle/crypto/Digest;->a([BI)I
 
-    .line 4631
+    .line 4632
     new-instance v3, Lorg/spongycastle/crypto/signers/ECDSASigner;
 
     invoke-direct {v3}, Lorg/spongycastle/crypto/signers/ECDSASigner;-><init>()V
 
-    .line 4633
+    .line 4634
     const/4 v4, 0x1
 
     invoke-virtual {v3, v4, v2}, Lorg/spongycastle/crypto/signers/ECDSASigner;->a(ZLorg/spongycastle/crypto/CipherParameters;)V
 
-    .line 4634
+    .line 4635
     invoke-virtual {v3, v1}, Lorg/spongycastle/crypto/signers/ECDSASigner;->a([B)[Ljava/math/BigInteger;
 
     move-result-object v1
 
-    .line 4635
+    .line 4636
     const/4 v2, 0x0
 
     aget-object v2, v1, v2
 
-    .line 4636
+    .line 4637
     const/4 v3, 0x1
 
     aget-object v1, v1, v3
@@ -398,13 +398,13 @@
 
     invoke-static {v3, v1, v4, v2, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 600
+    .line 602
     :goto_2
     invoke-static {v4}, Lcom/kik/util/i;->b([B)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 603
+    .line 605
     :goto_3
     return-object v1
 
@@ -422,7 +422,7 @@
 
     goto :goto_1
 
-    .line 603
+    .line 605
     :catch_0
     move-exception v1
 
@@ -456,7 +456,7 @@
     const/4 v1, 0x0
 
     .line 60
-    .line 5475
+    .line 5477
     iget-object v2, p0, Lcom/kik/cards/web/auth/a;->i:Ljava/lang/String;
 
     if-eqz v2, :cond_1
@@ -479,10 +479,10 @@
     :cond_1
     move v2, v1
 
-    .line 5475
+    .line 5477
     goto :goto_0
 
-    .line 5480
+    .line 5482
     :cond_2
     invoke-direct {p0}, Lcom/kik/cards/web/auth/a;->j()Ljava/security/interfaces/RSAPublicKey;
 
@@ -505,7 +505,7 @@
     :cond_3
     move v0, v1
 
-    .line 5480
+    .line 5482
     goto :goto_2
 
     .line 5139
@@ -536,12 +536,12 @@
 
     .prologue
     .line 60
-    .line 6312
+    .line 6314
     invoke-direct {p0}, Lcom/kik/cards/web/auth/a;->h()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 6316
+    .line 6318
     new-instance v1, Ljavax/crypto/spec/DESKeySpec;
 
     const-string v2, "UTF8"
@@ -552,31 +552,31 @@
 
     invoke-direct {v1, v0}, Ljavax/crypto/spec/DESKeySpec;-><init>([B)V
 
-    .line 6317
+    .line 6319
     const-string v0, "DES"
 
     invoke-static {v0}, Ljavax/crypto/SecretKeyFactory;->getInstance(Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;
 
     move-result-object v0
 
-    .line 6318
+    .line 6320
     invoke-virtual {v0, v1}, Ljavax/crypto/SecretKeyFactory;->generateSecret(Ljava/security/spec/KeySpec;)Ljavax/crypto/SecretKey;
 
     move-result-object v0
 
-    .line 6320
+    .line 6322
     const-string v1, "DES"
 
     invoke-static {v1}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
 
     move-result-object v1
 
-    .line 6321
+    .line 6323
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2, v0}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
 
-    .line 6322
+    .line 6324
     invoke-virtual {p1}, Ljava/security/KeyPair;->getPublic()Ljava/security/PublicKey;
 
     move-result-object v0
@@ -593,7 +593,7 @@
 
     move-result-object v0
 
-    .line 6323
+    .line 6325
     invoke-virtual {p1}, Ljava/security/KeyPair;->getPrivate()Ljava/security/PrivateKey;
 
     move-result-object v2
@@ -610,14 +610,14 @@
 
     move-result-object v1
 
-    .line 6325
+    .line 6327
     iget-object v2, p0, Lcom/kik/cards/web/auth/a;->c:Lkik/core/interfaces/ad;
 
     const-string v3, "kik.auth.gen.pub.key"
 
     invoke-interface {v2, v3, v0}, Lkik/core/interfaces/ad;->c(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 6326
+    .line 6328
     iget-object v0, p0, Lcom/kik/cards/web/auth/a;->c:Lkik/core/interfaces/ad;
 
     const-string v2, "kik.auth.gen.priv.key"
@@ -634,7 +634,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 276
+    .line 278
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/kik/cards/web/auth/a;->i:Ljava/lang/String;
@@ -645,27 +645,27 @@
 
     if-nez v0, :cond_0
 
-    .line 3331
+    .line 3333
     iget-object v0, p0, Lcom/kik/cards/web/auth/a;->c:Lkik/core/interfaces/ad;
 
     const-string v1, "kik.auth.gen.pub.key"
 
     invoke-interface {v0, v1, v2}, Lkik/core/interfaces/ad;->c(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 3332
+    .line 3334
     iget-object v0, p0, Lcom/kik/cards/web/auth/a;->c:Lkik/core/interfaces/ad;
 
     const-string v1, "kik.auth.gen.priv.key"
 
     invoke-interface {v0, v1, v2}, Lkik/core/interfaces/ad;->c(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 278
+    .line 280
     invoke-direct {p0}, Lcom/kik/cards/web/auth/a;->d()V
 
-    .line 279
+    .line 281
     iput-object p1, p0, Lcom/kik/cards/web/auth/a;->i:Ljava/lang/String;
 
-    .line 280
+    .line 282
     iget-object v0, p0, Lcom/kik/cards/web/auth/a;->c:Lkik/core/interfaces/ad;
 
     const-string v1, "kik.auth.manager.store.username.in.hash"
@@ -674,7 +674,7 @@
 
     invoke-interface {v0, v1, v2}, Lkik/core/interfaces/ad;->c(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 282
+    .line 284
     :cond_0
     return-void
 .end method
@@ -685,38 +685,38 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 349
+    .line 351
     iget-object v1, p0, Lcom/kik/cards/web/auth/a;->c:Lkik/core/interfaces/ad;
 
-    invoke-static {v1}, Lkik/core/x;->a(Lkik/core/interfaces/ad;)Z
+    invoke-static {v1}, Lkik/core/z;->a(Lkik/core/interfaces/ad;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 377
+    .line 379
     :cond_0
     :goto_0
     return-object v0
 
-    .line 355
+    .line 357
     :cond_1
     :try_start_0
     invoke-direct {p0}, Lcom/kik/cards/web/auth/a;->i()[B
 
     move-result-object v1
 
-    .line 356
+    .line 358
     if-eqz v1, :cond_0
 
-    .line 360
+    .line 362
     const-string v2, "HmacSHA1"
 
     invoke-static {v2}, Ljavax/crypto/Mac;->getInstance(Ljava/lang/String;)Ljavax/crypto/Mac;
 
     move-result-object v2
 
-    .line 362
+    .line 364
     new-instance v3, Ljavax/crypto/spec/SecretKeySpec;
 
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
@@ -729,15 +729,15 @@
 
     invoke-direct {v3, v4, v5}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
-    .line 363
+    .line 365
     invoke-virtual {v2, v3}, Ljavax/crypto/Mac;->init(Ljava/security/Key;)V
 
-    .line 364
+    .line 366
     invoke-virtual {v2, v1}, Ljavax/crypto/Mac;->doFinal([B)[B
 
     move-result-object v1
 
-    .line 365
+    .line 367
     invoke-static {v1}, Lcom/kik/util/i;->a([B)Ljava/lang/String;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
@@ -753,7 +753,7 @@
 
     goto :goto_0
 
-    .line 375
+    .line 377
     :catch_1
     move-exception v1
 
@@ -765,12 +765,12 @@
     goto :goto_0
 .end method
 
-.method static synthetic b(Lcom/kik/cards/web/auth/a;)Lkik/core/interfaces/af;
+.method static synthetic b(Lcom/kik/cards/web/auth/a;)Lkik/core/interfaces/ag;
     .locals 1
 
     .prologue
     .line 60
-    iget-object v0, p0, Lcom/kik/cards/web/auth/a;->e:Lkik/core/interfaces/af;
+    iget-object v0, p0, Lcom/kik/cards/web/auth/a;->e:Lkik/core/interfaces/ag;
 
     return-object v0
 .end method
@@ -779,7 +779,7 @@
     .locals 1
 
     .prologue
-    .line 610
+    .line 612
     :try_start_0
     const-string v0, "UTF-8"
 
@@ -787,14 +787,14 @@
 
     move-result-object v0
 
-    .line 611
+    .line 613
     invoke-static {v0}, Lcom/kik/util/i;->b([B)Ljava/lang/String;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
-    .line 614
+    .line 616
     :goto_0
     return-object v0
 
@@ -867,7 +867,7 @@
     .line 160
     const/4 v0, 0x0
 
-    .line 2424
+    .line 2426
     :try_start_0
     invoke-direct {p0}, Lcom/kik/cards/web/auth/a;->i()[B
 
@@ -883,7 +883,7 @@
     :goto_0
     iget-object v1, p0, Lcom/kik/cards/web/auth/a;->c:Lkik/core/interfaces/ad;
 
-    invoke-static {v1}, Lkik/core/x;->b(Lkik/core/interfaces/ad;)Lkik/core/x;
+    invoke-static {v1}, Lkik/core/z;->b(Lkik/core/interfaces/ad;)Lkik/core/z;
 
     move-result-object v1
 
@@ -896,8 +896,6 @@
     const-string v1, "Generating certificate without credentials"
 
     invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
 
     .line 193
     :cond_0
@@ -919,7 +917,7 @@
 
     .line 175
     :cond_1
-    invoke-virtual {v1}, Lkik/core/x;->b()Ljava/lang/String;
+    invoke-virtual {v1}, Lkik/core/z;->b()Ljava/lang/String;
 
     move-result-object v1
 
@@ -932,8 +930,6 @@
     const-string v1, "Generating certificate without passkey"
 
     invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
@@ -953,18 +949,18 @@
     if-eqz v1, :cond_3
 
     .line 186
-    new-instance v1, Lkik/core/net/outgoing/c;
+    new-instance v1, Lkik/core/net/outgoing/b;
 
     iget-object v2, p0, Lcom/kik/cards/web/auth/a;->h:Ljava/lang/String;
 
     iget-object v3, p0, Lcom/kik/cards/web/auth/a;->f:Ljava/lang/String;
 
-    invoke-direct {v1, p0, v0, v2, v3}, Lkik/core/net/outgoing/c;-><init>(Lkik/core/net/d;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, p0, v0, v2, v3}, Lkik/core/net/outgoing/b;-><init>(Lkik/core/net/d;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 187
     iget-object v0, p0, Lcom/kik/cards/web/auth/a;->b:Lkik/core/interfaces/ICommunication;
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ICommunication;->a(Lkik/core/net/outgoing/ae;)Lcom/kik/events/Promise;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ICommunication;->a(Lkik/core/net/outgoing/j;)Lcom/kik/events/Promise;
 
     goto :goto_1
 
@@ -997,10 +993,10 @@
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    .line 223
+    .line 224
     invoke-virtual {v0, v1}, Lcom/kik/cards/web/auth/a$3;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 224
+    .line 225
     return-void
 .end method
 
@@ -1008,7 +1004,7 @@
     .locals 4
 
     .prologue
-    .line 250
+    .line 251
     iget-object v0, p0, Lcom/kik/cards/web/auth/a;->c:Lkik/core/interfaces/ad;
 
     const-string v1, "kik.auth.manager.store.url"
@@ -1017,7 +1013,7 @@
 
     invoke-interface {v0, v1, v2}, Lkik/core/interfaces/ad;->c(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 251
+    .line 252
     iget-object v0, p0, Lcom/kik/cards/web/auth/a;->c:Lkik/core/interfaces/ad;
 
     const-string v1, "kik.auth.manager.store.revalidate"
@@ -1030,7 +1026,7 @@
 
     invoke-interface {v0, v1, v2}, Lkik/core/interfaces/ad;->a(Ljava/lang/String;Ljava/lang/Long;)Z
 
-    .line 252
+    .line 253
     iget-object v0, p0, Lcom/kik/cards/web/auth/a;->c:Lkik/core/interfaces/ad;
 
     const-string v1, "kik.auth.manager.store.signature"
@@ -1039,7 +1035,7 @@
 
     invoke-interface {v0, v1, v2}, Lkik/core/interfaces/ad;->c(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 253
+    .line 254
     return-void
 .end method
 
@@ -1047,20 +1043,20 @@
     .locals 3
 
     .prologue
-    .line 337
+    .line 339
     iget-object v0, p0, Lcom/kik/cards/web/auth/a;->i:Ljava/lang/String;
 
-    .line 338
+    .line 340
     if-nez v0, :cond_0
 
-    .line 339
+    .line 341
     const/4 v0, 0x0
 
-    .line 343
+    .line 345
     :goto_0
     return-object v0
 
-    .line 342
+    .line 344
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1088,10 +1084,10 @@
 
     move-result-object v0
 
-    .line 343
-    iget-object v1, p0, Lcom/kik/cards/web/auth/a;->d:Lkik/core/interfaces/aa;
+    .line 345
+    iget-object v1, p0, Lcom/kik/cards/web/auth/a;->d:Lkik/core/interfaces/z;
 
-    invoke-interface {v1, v0}, Lkik/core/interfaces/aa;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v1, v0}, Lkik/core/interfaces/z;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1108,27 +1104,27 @@
     .end annotation
 
     .prologue
-    .line 383
-    .line 3465
+    .line 385
+    .line 3467
     iget-object v0, p0, Lcom/kik/cards/web/auth/a;->c:Lkik/core/interfaces/ad;
 
     const-string v1, "kik.auth.gen.pub.key"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->q(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 384
+    .line 386
     if-nez v0, :cond_0
 
-    .line 385
+    .line 387
     const/4 v0, 0x0
 
-    .line 395
+    .line 397
     :goto_0
     return-object v0
 
-    .line 388
+    .line 390
     :cond_0
     new-instance v1, Ljavax/crypto/spec/DESKeySpec;
 
@@ -1144,31 +1140,31 @@
 
     invoke-direct {v1, v2}, Ljavax/crypto/spec/DESKeySpec;-><init>([B)V
 
-    .line 389
+    .line 391
     const-string v2, "DES"
 
     invoke-static {v2}, Ljavax/crypto/SecretKeyFactory;->getInstance(Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;
 
     move-result-object v2
 
-    .line 390
+    .line 392
     invoke-virtual {v2, v1}, Ljavax/crypto/SecretKeyFactory;->generateSecret(Ljava/security/spec/KeySpec;)Ljavax/crypto/SecretKey;
 
     move-result-object v1
 
-    .line 392
+    .line 394
     const-string v2, "DES"
 
     invoke-static {v2}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
 
     move-result-object v2
 
-    .line 393
+    .line 395
     const/4 v3, 0x2
 
     invoke-virtual {v2, v3, v1}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
 
-    .line 394
+    .line 396
     invoke-static {v0}, Lcom/kik/util/i;->a(Ljava/lang/String;)[B
 
     move-result-object v0
@@ -1186,22 +1182,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 448
+    .line 450
     :try_start_0
     invoke-direct {p0}, Lcom/kik/cards/web/auth/a;->i()[B
 
     move-result-object v0
 
-    .line 449
+    .line 451
     if-nez v0, :cond_0
 
     move-object v0, v1
 
-    .line 460
+    .line 462
     :goto_0
     return-object v0
 
-    .line 452
+    .line 454
     :cond_0
     const-string v2, "RSA"
 
@@ -1224,7 +1220,7 @@
 
     goto :goto_0
 
-    .line 455
+    .line 457
     :catch_0
     move-exception v0
 
@@ -1233,10 +1229,10 @@
     :goto_1
     move-object v0, v1
 
-    .line 460
+    .line 462
     goto :goto_0
 
-    .line 458
+    .line 460
     :catch_1
     move-exception v0
 
@@ -1256,22 +1252,22 @@
     .end annotation
 
     .prologue
-    .line 487
+    .line 489
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 489
+    .line 491
     const-string v1, "kikUsr"
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 490
+    .line 492
     const-string v1, "kikCrdDm"
 
     invoke-interface {v0, v1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 491
+    .line 493
     const-string v1, "kikDbg"
 
     invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -1280,21 +1276,21 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 492
-    invoke-static {p4}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    .line 494
+    invoke-static {p4}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 493
+    .line 495
     const-string v1, "kikExt"
 
     invoke-interface {v0, v1, p4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 496
+    .line 498
     :cond_0
-    invoke-static {}, Lkik/core/util/x;->b()J
+    invoke-static {}, Lkik/core/util/v;->b()J
 
     move-result-wide v2
 
@@ -1302,21 +1298,21 @@
 
     div-long/2addr v2, v4
 
-    .line 498
+    .line 500
     const-string v1, "cty"
 
     const-string v4, "text/plain"
 
     invoke-interface {v0, v1, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 499
+    .line 501
     const-string v1, "alg"
 
     const-string v4, "RS256"
 
     invoke-interface {v0, v1, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 500
+    .line 502
     const-string v1, "x5u"
 
     invoke-virtual {p0}, Lcom/kik/cards/web/auth/a;->b()Ljava/net/URL;
@@ -1329,14 +1325,14 @@
 
     invoke-interface {v0, v1, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 501
+    .line 503
     const-string v1, "typ"
 
     const-string v4, "JWT"
 
     invoke-interface {v0, v1, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 502
+    .line 504
     const-string v1, "nbf"
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1345,7 +1341,7 @@
 
     invoke-interface {v0, v1, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 503
+    .line 505
     const-string v1, "exp"
 
     const-wide/16 v4, 0x2a30
@@ -1358,43 +1354,43 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 505
+    .line 507
     new-instance v1, Lnet/minidev/json/JSONObject;
 
     invoke-direct {v1, v0}, Lnet/minidev/json/JSONObject;-><init>(Ljava/util/Map;)V
 
-    .line 506
+    .line 508
     invoke-virtual {v1}, Lnet/minidev/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 507
+    .line 509
     invoke-static {v0}, Lcom/kik/cards/web/auth/a;->c(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 508
+    .line 510
     invoke-static {p5}, Lcom/kik/cards/web/auth/a;->c(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 510
+    .line 512
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 511
+    .line 513
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 512
+    .line 514
     const-string v0, "."
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 513
+    .line 515
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 516
+    .line 518
     :try_start_0
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1404,17 +1400,17 @@
 
     move-result-object v1
 
-    .line 4567
+    .line 4569
     const-string v3, "SHA256withRSA"
 
     invoke-static {v3}, Ljava/security/Signature;->getInstance(Ljava/lang/String;)Ljava/security/Signature;
 
     move-result-object v3
 
-    .line 4568
+    .line 4570
     invoke-virtual {v3, v1}, Ljava/security/Signature;->initSign(Ljava/security/PrivateKey;)V
 
-    .line 4569
+    .line 4571
     const-string v1, "UTF-8"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
@@ -1423,7 +1419,7 @@
 
     invoke-virtual {v3, v0}, Ljava/security/Signature;->update([B)V
 
-    .line 4570
+    .line 4572
     invoke-virtual {v3}, Ljava/security/Signature;->sign()[B
 
     move-result-object v0
@@ -1432,28 +1428,28 @@
 
     move-result-object v0
 
-    .line 517
+    .line 519
     const-string v1, "."
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 518
+    .line 520
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 524
+    .line 526
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    .line 520
+    .line 522
     :catch_0
     move-exception v0
 
-    .line 521
+    .line 523
     new-instance v1, Ljava/lang/Exception;
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -1478,22 +1474,22 @@
     .end annotation
 
     .prologue
-    .line 531
+    .line 533
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 533
+    .line 535
     const-string v1, "kikAnonId"
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 534
+    .line 536
     const-string v1, "kikCrdDm"
 
     invoke-interface {v0, v1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 535
+    .line 537
     const-string v1, "kikDbg"
 
     invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -1502,8 +1498,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 537
-    invoke-static {}, Lkik/core/util/x;->b()J
+    .line 539
+    invoke-static {}, Lkik/core/util/v;->b()J
 
     move-result-wide v2
 
@@ -1511,28 +1507,28 @@
 
     div-long/2addr v2, v4
 
-    .line 539
+    .line 541
     const-string v1, "cty"
 
     const-string v4, "text/plain"
 
     invoke-interface {v0, v1, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 540
+    .line 542
     const-string v1, "alg"
 
     const-string v4, "ES256"
 
     invoke-interface {v0, v1, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 541
+    .line 543
     const-string v1, "typ"
 
     const-string v4, "JWT"
 
     invoke-interface {v0, v1, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 542
+    .line 544
     const-string v1, "nbf"
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1541,7 +1537,7 @@
 
     invoke-interface {v0, v1, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 543
+    .line 545
     const-string v1, "exp"
 
     const-wide/16 v4, 0x2a30
@@ -1554,43 +1550,43 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 545
+    .line 547
     new-instance v1, Lnet/minidev/json/JSONObject;
 
     invoke-direct {v1, v0}, Lnet/minidev/json/JSONObject;-><init>(Ljava/util/Map;)V
 
-    .line 546
+    .line 548
     invoke-virtual {v1}, Lnet/minidev/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 547
+    .line 549
     invoke-static {v0}, Lcom/kik/cards/web/auth/a;->c(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 548
+    .line 550
     invoke-static {p4}, Lcom/kik/cards/web/auth/a;->c(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 550
+    .line 552
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 551
+    .line 553
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 552
+    .line 554
     const-string v0, "."
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 553
+    .line 555
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 555
+    .line 557
     :try_start_0
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1600,28 +1596,28 @@
 
     move-result-object v0
 
-    .line 556
+    .line 558
     const-string v1, "."
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 557
+    .line 559
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 562
+    .line 564
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    .line 559
+    .line 561
     :catch_0
     move-exception v0
 
-    .line 560
+    .line 562
     new-instance v1, Ljava/lang/Exception;
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -1650,91 +1646,22 @@
     return-void
 .end method
 
-.method public final a(Lkik/core/net/outgoing/ae;I)V
-    .locals 4
-
-    .prologue
-    .line 292
-    instance-of v0, p1, Lkik/core/net/outgoing/c;
-
-    if-eqz v0, :cond_0
-
-    .line 293
-    check-cast p1, Lkik/core/net/outgoing/c;
-
-    .line 294
-    packed-switch p2, :pswitch_data_0
-
-    .line 308
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 296
-    :pswitch_0
-    invoke-virtual {p1}, Lkik/core/net/outgoing/c;->a()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/kik/cards/web/auth/a;->f:Ljava/lang/String;
-
-    .line 297
-    invoke-static {}, Lcom/kik/sdkutils/d;->a()J
-
-    move-result-wide v0
-
-    invoke-virtual {p1}, Lkik/core/net/outgoing/c;->b()J
-
-    move-result-wide v2
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lcom/kik/cards/web/auth/a;->g:J
-
-    .line 298
-    invoke-direct {p0}, Lcom/kik/cards/web/auth/a;->g()V
-
-    goto :goto_0
-
-    .line 302
-    :pswitch_1
-    invoke-virtual {p1}, Lkik/core/net/outgoing/c;->e()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 303
-    invoke-direct {p0}, Lcom/kik/cards/web/auth/a;->f()V
-
-    goto :goto_0
-
-    .line 294
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
-.end method
-
 .method public final b()Ljava/net/URL;
     .locals 3
 
     .prologue
     const/4 v1, 0x0
 
-    .line 234
+    .line 235
     iget-object v0, p0, Lcom/kik/cards/web/auth/a;->f:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 245
+    .line 246
     :goto_0
     return-object v1
 
-    .line 240
+    .line 241
     :cond_0
     :try_start_0
     new-instance v0, Ljava/net/URL;
@@ -1748,10 +1675,10 @@
     :goto_1
     move-object v1, v0
 
-    .line 245
+    .line 246
     goto :goto_0
 
-    .line 243
+    .line 244
     :catch_0
     move-exception v0
 
@@ -1768,23 +1695,23 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 430
-    .line 4470
+    .line 432
+    .line 4472
     :try_start_0
     iget-object v0, p0, Lcom/kik/cards/web/auth/a;->c:Lkik/core/interfaces/ad;
 
     const-string v2, "kik.auth.gen.priv.key"
 
-    invoke-interface {v0, v2}, Lkik/core/interfaces/ad;->q(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, v2}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4402
+    .line 4404
     invoke-direct {p0}, Lcom/kik/cards/web/auth/a;->h()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 4403
+    .line 4405
     if-eqz v0, :cond_0
 
     if-nez v2, :cond_1
@@ -1792,17 +1719,17 @@
     :cond_0
     move-object v0, v1
 
-    .line 431
+    .line 433
     :goto_0
     if-nez v0, :cond_2
 
     move-object v0, v1
 
-    .line 442
+    .line 444
     :goto_1
     return-object v0
 
-    .line 4407
+    .line 4409
     :cond_1
     new-instance v3, Ljavax/crypto/spec/DESKeySpec;
 
@@ -1814,31 +1741,31 @@
 
     invoke-direct {v3, v2}, Ljavax/crypto/spec/DESKeySpec;-><init>([B)V
 
-    .line 4408
+    .line 4410
     const-string v2, "DES"
 
     invoke-static {v2}, Ljavax/crypto/SecretKeyFactory;->getInstance(Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;
 
     move-result-object v2
 
-    .line 4409
+    .line 4411
     invoke-virtual {v2, v3}, Ljavax/crypto/SecretKeyFactory;->generateSecret(Ljava/security/spec/KeySpec;)Ljavax/crypto/SecretKey;
 
     move-result-object v2
 
-    .line 4411
+    .line 4413
     const-string v3, "DES"
 
     invoke-static {v3}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
 
     move-result-object v3
 
-    .line 4412
+    .line 4414
     const/4 v4, 0x2
 
     invoke-virtual {v3, v4, v2}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
 
-    .line 4413
+    .line 4415
     invoke-static {v0}, Lcom/kik/util/i;->a(Ljava/lang/String;)[B
 
     move-result-object v0
@@ -1849,7 +1776,7 @@
 
     goto :goto_0
 
-    .line 434
+    .line 436
     :cond_2
     const-string v2, "RSA"
 
@@ -1872,7 +1799,7 @@
 
     goto :goto_1
 
-    .line 437
+    .line 439
     :catch_0
     move-exception v0
 
@@ -1881,14 +1808,83 @@
     :goto_2
     move-object v0, v1
 
-    .line 442
+    .line 444
     goto :goto_1
 
-    .line 440
+    .line 442
     :catch_1
     move-exception v0
 
     invoke-virtual {v0}, Ljava/security/GeneralSecurityException;->printStackTrace()V
 
     goto :goto_2
+.end method
+
+.method public final stanzaStateChanged(Lkik/core/net/outgoing/j;I)V
+    .locals 4
+
+    .prologue
+    .line 294
+    instance-of v0, p1, Lkik/core/net/outgoing/b;
+
+    if-eqz v0, :cond_0
+
+    .line 295
+    check-cast p1, Lkik/core/net/outgoing/b;
+
+    .line 296
+    packed-switch p2, :pswitch_data_0
+
+    .line 310
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 298
+    :pswitch_0
+    invoke-virtual {p1}, Lkik/core/net/outgoing/b;->a()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/kik/cards/web/auth/a;->f:Ljava/lang/String;
+
+    .line 299
+    invoke-static {}, Lcom/kik/sdkutils/d;->a()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1}, Lkik/core/net/outgoing/b;->b()J
+
+    move-result-wide v2
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lcom/kik/cards/web/auth/a;->g:J
+
+    .line 300
+    invoke-direct {p0}, Lcom/kik/cards/web/auth/a;->g()V
+
+    goto :goto_0
+
+    .line 304
+    :pswitch_1
+    invoke-virtual {p1}, Lkik/core/net/outgoing/b;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 305
+    invoke-direct {p0}, Lcom/kik/cards/web/auth/a;->f()V
+
+    goto :goto_0
+
+    .line 296
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method

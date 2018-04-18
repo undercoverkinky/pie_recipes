@@ -1,59 +1,43 @@
-.class public interface abstract Lkik/android/chat/vm/widget/r;
+.class final synthetic Lkik/android/chat/vm/widget/r;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 # interfaces
-.implements Lkik/android/chat/vm/aa;
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field private final a:Lkik/android/chat/vm/widget/c;
+
+
+# direct methods
+.method private constructor <init>(Lkik/android/chat/vm/widget/c;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lkik/android/chat/vm/widget/r;->a:Lkik/android/chat/vm/widget/c;
+
+    return-void
+.end method
+
+.method public static a(Lkik/android/chat/vm/widget/c;)Ljava/lang/Runnable;
+    .locals 1
+
+    new-instance v0, Lkik/android/chat/vm/widget/r;
+
+    invoke-direct {v0, p0}, Lkik/android/chat/vm/widget/r;-><init>(Lkik/android/chat/vm/widget/c;)V
+
+    return-object v0
+.end method
 
 
 # virtual methods
-.method public abstract a()Lrx/c;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lrx/c",
-            "<",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-.end method
+.method public final run()V
+    .locals 1
 
-.method public abstract c()Lrx/c;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lrx/c",
-            "<",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-.end method
+    iget-object v0, p0, Lkik/android/chat/vm/widget/r;->a:Lkik/android/chat/vm/widget/c;
 
-.method public abstract d()Lrx/c;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lrx/c",
-            "<",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-.end method
+    invoke-static {v0}, Lkik/android/chat/vm/widget/c;->h(Lkik/android/chat/vm/widget/c;)V
 
-.method public abstract h()V
-.end method
-
-.method public abstract i()Ljava/lang/String;
-.end method
-
-.method public abstract j()Z
-.end method
-
-.method public abstract k()V
-.end method
-
-.method public abstract l()V
+    return-void
 .end method

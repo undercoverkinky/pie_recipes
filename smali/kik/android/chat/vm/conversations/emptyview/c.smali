@@ -1,5 +1,5 @@
 .class public final Lkik/android/chat/vm/conversations/emptyview/c;
-.super Lkik/android/chat/vm/c;
+.super Lkik/android/chat/vm/e;
 .source "SourceFile"
 
 # interfaces
@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field a:Lkik/core/g/c;
+.field a:Lkik/core/e/c;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
@@ -23,10 +23,22 @@
     .locals 0
 
     .prologue
-    .line 17
-    invoke-direct {p0}, Lkik/android/chat/vm/c;-><init>()V
+    .line 18
+    invoke-direct {p0}, Lkik/android/chat/vm/e;-><init>()V
 
     return-void
+.end method
+
+.method static synthetic a(Lkik/android/chat/vm/conversations/emptyview/c;)Lkik/android/chat/vm/bd;
+    .locals 1
+
+    .prologue
+    .line 18
+    invoke-virtual {p0}, Lkik/android/chat/vm/conversations/emptyview/c;->H_()Lkik/android/chat/vm/bd;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 
@@ -35,7 +47,7 @@
     .locals 2
 
     .prologue
-    .line 32
+    .line 33
     iget-object v0, p0, Lkik/android/chat/vm/conversations/emptyview/c;->b:Lcom/kik/android/Mixpanel;
 
     const-string v1, "Public Groups Empty List Helper Tapped"
@@ -44,16 +56,18 @@
 
     move-result-object v0
 
-    .line 33
+    .line 34
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 34
+    .line 35
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 35
-    invoke-virtual {p0}, Lkik/android/chat/vm/conversations/emptyview/c;->I_()Lkik/android/chat/vm/s;
+    .line 36
+    iget-object v0, p0, Lkik/android/chat/vm/conversations/emptyview/c;->a:Lkik/core/e/c;
+
+    invoke-interface {v0}, Lkik/core/e/c;->a()Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -61,22 +75,22 @@
 
     invoke-direct {v1, p0}, Lkik/android/chat/vm/conversations/emptyview/c$1;-><init>(Lkik/android/chat/vm/conversations/emptyview/c;)V
 
-    invoke-interface {v0, v1}, Lkik/android/chat/vm/s;->a(Lkik/android/chat/vm/u;)V
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
-    .line 56
+    .line 65
     return-void
 .end method
 
-.method public final a(Lcom/kik/components/CoreComponent;Lkik/android/chat/vm/s;)V
+.method public final a(Lcom/kik/components/CoreComponent;Lkik/android/chat/vm/bd;)V
     .locals 0
 
     .prologue
-    .line 25
-    invoke-super {p0, p1, p2}, Lkik/android/chat/vm/c;->a(Lcom/kik/components/CoreComponent;Lkik/android/chat/vm/s;)V
-
     .line 26
-    invoke-interface {p1, p0}, Lcom/kik/components/CoreComponent;->a(Lkik/android/chat/vm/conversations/emptyview/c;)V
+    invoke-super {p0, p1, p2}, Lkik/android/chat/vm/e;->a(Lcom/kik/components/CoreComponent;Lkik/android/chat/vm/bd;)V
 
     .line 27
+    invoke-interface {p1, p0}, Lcom/kik/components/CoreComponent;->a(Lkik/android/chat/vm/conversations/emptyview/c;)V
+
+    .line 28
     return-void
 .end method

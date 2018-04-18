@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 2848
+    .line 2711
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,12 +44,12 @@
     .locals 1
 
     .prologue
-    .line 2848
-    .line 3850
+    .line 2711
+    .line 3713
     invoke-static {p1}, Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;->forNumber(I)Lcom/kik/video/mobile/KikVideoService$JoinConvoConferenceResponse$Result;
 
     move-result-object v0
 
-    .line 2848
+    .line 2711
     return-object v0
 .end method

@@ -14,5 +14,5 @@
 
 
 # virtual methods
-.method public abstract zzt(Lcom/google/android/gms/common/api/Status;)V
+.method public abstract zzp(Lcom/google/android/gms/common/api/Status;)V
 .end method

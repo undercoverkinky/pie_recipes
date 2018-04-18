@@ -38,7 +38,7 @@
     .locals 0
 
     .prologue
-    .line 862
+    .line 911
     iput-object p1, p0, Lcom/google/common/collect/Lists$b$1;->c:Lcom/google/common/collect/Lists$b;
 
     iput-object p2, p0, Lcom/google/common/collect/Lists$b$1;->b:Ljava/util/ListIterator;
@@ -59,22 +59,22 @@
     .end annotation
 
     .prologue
-    .line 867
+    .line 917
     iget-object v0, p0, Lcom/google/common/collect/Lists$b$1;->b:Ljava/util/ListIterator;
 
     invoke-interface {v0, p1}, Ljava/util/ListIterator;->add(Ljava/lang/Object;)V
 
-    .line 868
+    .line 918
     iget-object v0, p0, Lcom/google/common/collect/Lists$b$1;->b:Ljava/util/ListIterator;
 
     invoke-interface {v0}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
 
-    .line 869
+    .line 919
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/google/common/collect/Lists$b$1;->a:Z
 
-    .line 870
+    .line 920
     return-void
 .end method
 
@@ -82,7 +82,7 @@
     .locals 1
 
     .prologue
-    .line 873
+    .line 924
     iget-object v0, p0, Lcom/google/common/collect/Lists$b$1;->b:Ljava/util/ListIterator;
 
     invoke-interface {v0}, Ljava/util/ListIterator;->hasPrevious()Z
@@ -96,7 +96,7 @@
     .locals 1
 
     .prologue
-    .line 877
+    .line 929
     iget-object v0, p0, Lcom/google/common/collect/Lists$b$1;->b:Ljava/util/ListIterator;
 
     invoke-interface {v0}, Ljava/util/ListIterator;->hasNext()Z
@@ -115,27 +115,27 @@
     .end annotation
 
     .prologue
-    .line 881
+    .line 934
     invoke-virtual {p0}, Lcom/google/common/collect/Lists$b$1;->hasNext()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 882
+    .line 935
     new-instance v0, Ljava/util/NoSuchElementException;
 
     invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
     throw v0
 
-    .line 884
+    .line 937
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/google/common/collect/Lists$b$1;->a:Z
 
-    .line 885
+    .line 938
     iget-object v0, p0, Lcom/google/common/collect/Lists$b$1;->b:Ljava/util/ListIterator;
 
     invoke-interface {v0}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
@@ -149,7 +149,7 @@
     .locals 2
 
     .prologue
-    .line 889
+    .line 943
     iget-object v0, p0, Lcom/google/common/collect/Lists$b$1;->c:Lcom/google/common/collect/Lists$b;
 
     iget-object v1, p0, Lcom/google/common/collect/Lists$b$1;->b:Ljava/util/ListIterator;
@@ -174,27 +174,27 @@
     .end annotation
 
     .prologue
-    .line 893
+    .line 948
     invoke-virtual {p0}, Lcom/google/common/collect/Lists$b$1;->hasPrevious()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 894
+    .line 949
     new-instance v0, Ljava/util/NoSuchElementException;
 
     invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
     throw v0
 
-    .line 896
+    .line 951
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/google/common/collect/Lists$b$1;->a:Z
 
-    .line 897
+    .line 952
     iget-object v0, p0, Lcom/google/common/collect/Lists$b$1;->b:Ljava/util/ListIterator;
 
     invoke-interface {v0}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
@@ -208,7 +208,7 @@
     .locals 1
 
     .prologue
-    .line 901
+    .line 957
     invoke-virtual {p0}, Lcom/google/common/collect/Lists$b$1;->nextIndex()I
 
     move-result v0
@@ -222,25 +222,25 @@
     .locals 2
 
     .prologue
-    .line 905
+    .line 962
     iget-boolean v0, p0, Lcom/google/common/collect/Lists$b$1;->a:Z
 
-    .line 1049
+    .line 1065
     const-string v1, "no calls to next() since the last call to remove()"
 
-    invoke-static {v0, v1}, Lcom/google/common/base/h;->b(ZLjava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/Object;)V
 
-    .line 906
+    .line 963
     iget-object v0, p0, Lcom/google/common/collect/Lists$b$1;->b:Ljava/util/ListIterator;
 
     invoke-interface {v0}, Ljava/util/ListIterator;->remove()V
 
-    .line 907
+    .line 964
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/google/common/collect/Lists$b$1;->a:Z
 
-    .line 908
+    .line 965
     return-void
 .end method
 
@@ -253,16 +253,16 @@
     .end annotation
 
     .prologue
-    .line 911
+    .line 969
     iget-boolean v0, p0, Lcom/google/common/collect/Lists$b$1;->a:Z
 
-    invoke-static {v0}, Lcom/google/common/base/h;->b(Z)V
+    invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
-    .line 912
+    .line 970
     iget-object v0, p0, Lcom/google/common/collect/Lists$b$1;->b:Ljava/util/ListIterator;
 
     invoke-interface {v0, p1}, Ljava/util/ListIterator;->set(Ljava/lang/Object;)V
 
-    .line 913
+    .line 971
     return-void
 .end method

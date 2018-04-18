@@ -28,7 +28,7 @@
 
 
 # static fields
-.field static final a:Lcom/google/common/base/Equivalence$Equals;
+.field static final INSTANCE:Lcom/google/common/base/Equivalence$Equals;
 
 .field private static final serialVersionUID:J = 0x1L
 
@@ -38,12 +38,12 @@
     .locals 1
 
     .prologue
-    .line 324
+    .line 331
     new-instance v0, Lcom/google/common/base/Equivalence$Equals;
 
     invoke-direct {v0}, Lcom/google/common/base/Equivalence$Equals;-><init>()V
 
-    sput-object v0, Lcom/google/common/base/Equivalence$Equals;->a:Lcom/google/common/base/Equivalence$Equals;
+    sput-object v0, Lcom/google/common/base/Equivalence$Equals;->INSTANCE:Lcom/google/common/base/Equivalence$Equals;
 
     return-void
 .end method
@@ -52,7 +52,7 @@
     .locals 0
 
     .prologue
-    .line 321
+    .line 329
     invoke-direct {p0}, Lcom/google/common/base/Equivalence;-><init>()V
 
     return-void
@@ -62,32 +62,32 @@
     .locals 1
 
     .prologue
-    .line 334
-    sget-object v0, Lcom/google/common/base/Equivalence$Equals;->a:Lcom/google/common/base/Equivalence$Equals;
+    .line 344
+    sget-object v0, Lcom/google/common/base/Equivalence$Equals;->INSTANCE:Lcom/google/common/base/Equivalence$Equals;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method protected final b(Ljava/lang/Object;)I
+.method protected final doEquivalent(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
-    .line 330
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+    .line 335
+    invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method protected final b(Ljava/lang/Object;Ljava/lang/Object;)Z
+.method protected final doHash(Ljava/lang/Object;)I
     .locals 1
 
     .prologue
-    .line 327
-    invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    .line 340
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 

@@ -32,6 +32,8 @@
 
 .field private build_:Ljava/lang/Object;
 
+.field private devBuild_:Ljava/lang/Object;
+
 .field private major_:I
 
 .field private minor_:I
@@ -42,18 +44,23 @@
     .locals 1
 
     .prologue
-    .line 368
+    .line 443
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;-><init>()V
 
-    .line 576
+    .line 658
     const-string v0, ""
 
     iput-object v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->build_:Ljava/lang/Object;
 
-    .line 369
+    .line 762
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->devBuild_:Ljava/lang/Object;
+
+    .line 444
     invoke-direct {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->maybeForceBuilderInitialization()V
 
-    .line 370
+    .line 445
     return-void
 .end method
 
@@ -61,18 +68,23 @@
     .locals 1
 
     .prologue
-    .line 374
+    .line 449
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
 
-    .line 576
+    .line 658
     const-string v0, ""
 
     iput-object v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->build_:Ljava/lang/Object;
 
-    .line 375
+    .line 762
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->devBuild_:Ljava/lang/Object;
+
+    .line 450
     invoke-direct {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->maybeForceBuilderInitialization()V
 
-    .line 376
+    .line 451
     return-void
 .end method
 
@@ -80,7 +92,7 @@
     .locals 0
 
     .prologue
-    .line 351
+    .line 426
     invoke-direct {p0, p1}, Lcom/kik/ximodel/XiClientVersion$Builder;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
 
     return-void
@@ -90,7 +102,7 @@
     .locals 0
 
     .prologue
-    .line 351
+    .line 426
     invoke-direct {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;-><init>()V
 
     return-void
@@ -100,7 +112,7 @@
     .locals 1
 
     .prologue
-    .line 357
+    .line 432
     sget-object v0, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiClientVersion_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
     return-object v0
@@ -110,10 +122,10 @@
     .locals 0
 
     .prologue
-    .line 379
+    .line 454
     invoke-static {}, Lcom/kik/ximodel/XiClientVersion;->access$200()Z
 
-    .line 381
+    .line 456
     return-void
 .end method
 
@@ -123,7 +135,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0, p1, p2}, Lcom/kik/ximodel/XiClientVersion$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -135,7 +147,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0, p1, p2}, Lcom/kik/ximodel/XiClientVersion$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -147,7 +159,7 @@
     .locals 1
 
     .prologue
-    .line 446
+    .line 524
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -161,7 +173,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->build()Lcom/kik/ximodel/XiClientVersion;
 
     move-result-object v0
@@ -173,7 +185,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->build()Lcom/kik/ximodel/XiClientVersion;
 
     move-result-object v0
@@ -185,26 +197,26 @@
     .locals 2
 
     .prologue
-    .line 405
+    .line 482
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->buildPartial()Lcom/kik/ximodel/XiClientVersion;
 
     move-result-object v0
 
-    .line 406
+    .line 483
     invoke-virtual {v0}, Lcom/kik/ximodel/XiClientVersion;->isInitialized()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 407
+    .line 484
     invoke-static {v0}, Lcom/kik/ximodel/XiClientVersion$Builder;->newUninitializedMessageException(Lcom/google/protobuf/Message;)Lcom/google/protobuf/UninitializedMessageException;
 
     move-result-object v0
 
     throw v0
 
-    .line 409
+    .line 486
     :cond_0
     return-object v0
 .end method
@@ -213,7 +225,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->buildPartial()Lcom/kik/ximodel/XiClientVersion;
 
     move-result-object v0
@@ -225,7 +237,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->buildPartial()Lcom/kik/ximodel/XiClientVersion;
 
     move-result-object v0
@@ -237,37 +249,42 @@
     .locals 2
 
     .prologue
-    .line 413
+    .line 490
     new-instance v0, Lcom/kik/ximodel/XiClientVersion;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p0, v1}, Lcom/kik/ximodel/XiClientVersion;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;Lcom/kik/ximodel/XiClientVersion$1;)V
 
-    .line 414
+    .line 491
     iget v1, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->major_:I
 
     invoke-static {v0, v1}, Lcom/kik/ximodel/XiClientVersion;->access$402(Lcom/kik/ximodel/XiClientVersion;I)I
 
-    .line 415
+    .line 492
     iget v1, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->minor_:I
 
     invoke-static {v0, v1}, Lcom/kik/ximodel/XiClientVersion;->access$502(Lcom/kik/ximodel/XiClientVersion;I)I
 
-    .line 416
+    .line 493
     iget v1, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->bugfix_:I
 
     invoke-static {v0, v1}, Lcom/kik/ximodel/XiClientVersion;->access$602(Lcom/kik/ximodel/XiClientVersion;I)I
 
-    .line 417
+    .line 494
     iget-object v1, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->build_:Ljava/lang/Object;
 
     invoke-static {v0, v1}, Lcom/kik/ximodel/XiClientVersion;->access$702(Lcom/kik/ximodel/XiClientVersion;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 418
+    .line 495
+    iget-object v1, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->devBuild_:Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/kik/ximodel/XiClientVersion;->access$802(Lcom/kik/ximodel/XiClientVersion;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 496
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->onBuilt()V
 
-    .line 419
+    .line 497
     return-object v0
 .end method
 
@@ -275,7 +292,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->clear()Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -287,7 +304,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->clear()Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -299,7 +316,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->clear()Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -311,7 +328,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->clear()Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -325,24 +342,29 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 383
+    .line 458
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clear()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
-    .line 384
+    .line 459
     iput v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->major_:I
 
-    .line 386
+    .line 461
     iput v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->minor_:I
 
-    .line 388
+    .line 463
     iput v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->bugfix_:I
 
-    .line 390
+    .line 465
     const-string v0, ""
 
     iput-object v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->build_:Ljava/lang/Object;
 
-    .line 392
+    .line 467
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->devBuild_:Ljava/lang/Object;
+
+    .line 469
     return-object p0
 .end method
 
@@ -350,15 +372,15 @@
     .locals 1
 
     .prologue
-    .line 571
+    .line 653
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->bugfix_:I
 
-    .line 572
+    .line 654
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->onChanged()V
 
-    .line 573
+    .line 655
     return-object p0
 .end method
 
@@ -366,7 +388,7 @@
     .locals 1
 
     .prologue
-    .line 650
+    .line 736
     invoke-static {}, Lcom/kik/ximodel/XiClientVersion;->getDefaultInstance()Lcom/kik/ximodel/XiClientVersion;
 
     move-result-object v0
@@ -377,10 +399,32 @@
 
     iput-object v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->build_:Ljava/lang/Object;
 
-    .line 651
+    .line 737
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->onChanged()V
 
-    .line 652
+    .line 738
+    return-object p0
+.end method
+
+.method public final clearDevBuild()Lcom/kik/ximodel/XiClientVersion$Builder;
+    .locals 1
+
+    .prologue
+    .line 848
+    invoke-static {}, Lcom/kik/ximodel/XiClientVersion;->getDefaultInstance()Lcom/kik/ximodel/XiClientVersion;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/kik/ximodel/XiClientVersion;->getDevBuild()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->devBuild_:Ljava/lang/Object;
+
+    .line 849
+    invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->onChanged()V
+
+    .line 850
     return-object p0
 .end method
 
@@ -388,7 +432,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0, p1}, Lcom/kik/ximodel/XiClientVersion$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -400,7 +444,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0, p1}, Lcom/kik/ximodel/XiClientVersion$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -412,7 +456,7 @@
     .locals 1
 
     .prologue
-    .line 432
+    .line 510
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -426,15 +470,15 @@
     .locals 1
 
     .prologue
-    .line 519
+    .line 601
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->major_:I
 
-    .line 520
+    .line 602
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->onChanged()V
 
-    .line 521
+    .line 603
     return-object p0
 .end method
 
@@ -442,15 +486,15 @@
     .locals 1
 
     .prologue
-    .line 545
+    .line 627
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->minor_:I
 
-    .line 546
+    .line 628
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->onChanged()V
 
-    .line 547
+    .line 629
     return-object p0
 .end method
 
@@ -458,7 +502,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0, p1}, Lcom/kik/ximodel/XiClientVersion$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -470,7 +514,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0, p1}, Lcom/kik/ximodel/XiClientVersion$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -482,7 +526,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0, p1}, Lcom/kik/ximodel/XiClientVersion$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -494,7 +538,7 @@
     .locals 1
 
     .prologue
-    .line 436
+    .line 514
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -508,7 +552,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->clone()Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -520,7 +564,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->clone()Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -532,7 +576,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->clone()Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -544,7 +588,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->clone()Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -556,7 +600,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->clone()Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -568,7 +612,7 @@
     .locals 1
 
     .prologue
-    .line 423
+    .line 501
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -587,7 +631,7 @@
     .end annotation
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->clone()Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -599,7 +643,7 @@
     .locals 1
 
     .prologue
-    .line 555
+    .line 637
     iget v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->bugfix_:I
 
     return v0
@@ -609,26 +653,26 @@
     .locals 2
 
     .prologue
-    .line 587
+    .line 670
     iget-object v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->build_:Ljava/lang/Object;
 
-    .line 588
+    .line 671
     instance-of v1, v0, Ljava/lang/String;
 
     if-nez v1, :cond_0
 
-    .line 589
+    .line 672
     check-cast v0, Lcom/google/protobuf/ByteString;
 
-    .line 591
+    .line 674
     invoke-virtual {v0}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 592
+    .line 675
     iput-object v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->build_:Ljava/lang/Object;
 
-    .line 595
+    .line 678
     :goto_0
     return-object v0
 
@@ -642,26 +686,26 @@
     .locals 2
 
     .prologue
-    .line 609
+    .line 693
     iget-object v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->build_:Ljava/lang/Object;
 
-    .line 610
+    .line 694
     instance-of v1, v0, Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 611
+    .line 695
     check-cast v0, Ljava/lang/String;
 
-    .line 612
+    .line 696
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
 
     move-result-object v0
 
-    .line 614
+    .line 698
     iput-object v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->build_:Ljava/lang/Object;
 
-    .line 617
+    .line 701
     :goto_0
     return-object v0
 
@@ -675,7 +719,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->getDefaultInstanceForType()Lcom/kik/ximodel/XiClientVersion;
 
     move-result-object v0
@@ -687,7 +731,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->getDefaultInstanceForType()Lcom/kik/ximodel/XiClientVersion;
 
     move-result-object v0
@@ -699,7 +743,7 @@
     .locals 1
 
     .prologue
-    .line 401
+    .line 478
     invoke-static {}, Lcom/kik/ximodel/XiClientVersion;->getDefaultInstance()Lcom/kik/ximodel/XiClientVersion;
 
     move-result-object v0
@@ -711,17 +755,83 @@
     .locals 1
 
     .prologue
-    .line 397
+    .line 474
     sget-object v0, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiClientVersion_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
     return-object v0
+.end method
+
+.method public final getDevBuild()Ljava/lang/String;
+    .locals 2
+
+    .prologue
+    .line 776
+    iget-object v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->devBuild_:Ljava/lang/Object;
+
+    .line 777
+    instance-of v1, v0, Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    .line 778
+    check-cast v0, Lcom/google/protobuf/ByteString;
+
+    .line 780
+    invoke-virtual {v0}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 781
+    iput-object v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->devBuild_:Ljava/lang/Object;
+
+    .line 784
+    :goto_0
+    return-object v0
+
+    :cond_0
+    check-cast v0, Ljava/lang/String;
+
+    goto :goto_0
+.end method
+
+.method public final getDevBuildBytes()Lcom/google/protobuf/ByteString;
+    .locals 2
+
+    .prologue
+    .line 801
+    iget-object v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->devBuild_:Ljava/lang/Object;
+
+    .line 802
+    instance-of v1, v0, Ljava/lang/String;
+
+    if-eqz v1, :cond_0
+
+    .line 803
+    check-cast v0, Ljava/lang/String;
+
+    .line 804
+    invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
+
+    move-result-object v0
+
+    .line 806
+    iput-object v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->devBuild_:Ljava/lang/Object;
+
+    .line 809
+    :goto_0
+    return-object v0
+
+    :cond_0
+    check-cast v0, Lcom/google/protobuf/ByteString;
+
+    goto :goto_0
 .end method
 
 .method public final getMajor()I
     .locals 1
 
     .prologue
-    .line 503
+    .line 585
     iget v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->major_:I
 
     return v0
@@ -731,7 +841,7 @@
     .locals 1
 
     .prologue
-    .line 529
+    .line 611
     iget v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->minor_:I
 
     return v0
@@ -741,19 +851,19 @@
     .locals 3
 
     .prologue
-    .line 362
+    .line 437
     sget-object v0, Lcom/kik/ximodel/CommonModelProto;->internal_static_common_XiClientVersion_fieldAccessorTable:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     const-class v1, Lcom/kik/ximodel/XiClientVersion;
 
     const-class v2, Lcom/kik/ximodel/XiClientVersion$Builder;
 
-    .line 363
+    .line 438
     invoke-virtual {v0, v1, v2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;->ensureFieldAccessorsInitialized(Ljava/lang/Class;Ljava/lang/Class;)Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
 
-    .line 362
+    .line 437
     return-object v0
 .end method
 
@@ -761,7 +871,7 @@
     .locals 1
 
     .prologue
-    .line 477
+    .line 559
     const/4 v0, 0x1
 
     return v0
@@ -776,7 +886,7 @@
     .end annotation
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0, p1, p2}, Lcom/kik/ximodel/XiClientVersion$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -788,7 +898,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0, p1}, Lcom/kik/ximodel/XiClientVersion$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -805,7 +915,7 @@
     .end annotation
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0, p1, p2}, Lcom/kik/ximodel/XiClientVersion$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -822,7 +932,7 @@
     .end annotation
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0, p1, p2}, Lcom/kik/ximodel/XiClientVersion$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -834,7 +944,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0, p1}, Lcom/kik/ximodel/XiClientVersion$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -851,7 +961,7 @@
     .end annotation
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0, p1, p2}, Lcom/kik/ximodel/XiClientVersion$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -868,12 +978,12 @@
     .end annotation
 
     .prologue
-    .line 484
+    .line 566
     const/4 v2, 0x0
 
-    .line 486
+    .line 568
     :try_start_0
-    invoke-static {}, Lcom/kik/ximodel/XiClientVersion;->access$800()Lcom/google/protobuf/Parser;
+    invoke-static {}, Lcom/kik/ximodel/XiClientVersion;->access$900()Lcom/google/protobuf/Parser;
 
     move-result-object v0
 
@@ -886,23 +996,23 @@
     .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 491
+    .line 573
     if-eqz v0, :cond_0
 
-    .line 492
+    .line 574
     invoke-virtual {p0, v0}, Lcom/kik/ximodel/XiClientVersion$Builder;->mergeFrom(Lcom/kik/ximodel/XiClientVersion;)Lcom/kik/ximodel/XiClientVersion$Builder;
 
-    .line 495
+    .line 577
     :cond_0
     return-object p0
 
-    .line 487
+    .line 569
     :catch_0
     move-exception v0
 
     move-object v1, v0
 
-    .line 488
+    .line 570
     :try_start_1
     invoke-virtual {v1}, Lcom/google/protobuf/InvalidProtocolBufferException;->getUnfinishedMessage()Lcom/google/protobuf/MessageLite;
 
@@ -912,7 +1022,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 489
+    .line 571
     :try_start_2
     invoke-virtual {v1}, Lcom/google/protobuf/InvalidProtocolBufferException;->unwrapIOException()Ljava/io/IOException;
 
@@ -922,7 +1032,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 491
+    .line 573
     :catchall_0
     move-exception v1
 
@@ -935,13 +1045,14 @@
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 492
+    .line 574
     invoke-virtual {p0, v1}, Lcom/kik/ximodel/XiClientVersion$Builder;->mergeFrom(Lcom/kik/ximodel/XiClientVersion;)Lcom/kik/ximodel/XiClientVersion$Builder;
 
+    .line 576
     :cond_1
     throw v0
 
-    .line 491
+    .line 573
     :catchall_1
     move-exception v0
 
@@ -954,23 +1065,23 @@
     .locals 1
 
     .prologue
-    .line 449
+    .line 527
     instance-of v0, p1, Lcom/kik/ximodel/XiClientVersion;
 
     if-eqz v0, :cond_0
 
-    .line 450
+    .line 528
     check-cast p1, Lcom/kik/ximodel/XiClientVersion;
 
     invoke-virtual {p0, p1}, Lcom/kik/ximodel/XiClientVersion$Builder;->mergeFrom(Lcom/kik/ximodel/XiClientVersion;)Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object p0
 
-    .line 453
+    .line 531
     :goto_0
     return-object p0
 
-    .line 452
+    .line 530
     :cond_0
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/AbstractMessage$Builder;
 
@@ -981,18 +1092,18 @@
     .locals 1
 
     .prologue
-    .line 458
+    .line 536
     invoke-static {}, Lcom/kik/ximodel/XiClientVersion;->getDefaultInstance()Lcom/kik/ximodel/XiClientVersion;
 
     move-result-object v0
 
     if-ne p1, v0, :cond_0
 
-    .line 473
+    .line 555
     :goto_0
     return-object p0
 
-    .line 459
+    .line 537
     :cond_0
     invoke-virtual {p1}, Lcom/kik/ximodel/XiClientVersion;->getMajor()I
 
@@ -1000,14 +1111,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 460
+    .line 538
     invoke-virtual {p1}, Lcom/kik/ximodel/XiClientVersion;->getMajor()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/kik/ximodel/XiClientVersion$Builder;->setMajor(I)Lcom/kik/ximodel/XiClientVersion$Builder;
 
-    .line 462
+    .line 540
     :cond_1
     invoke-virtual {p1}, Lcom/kik/ximodel/XiClientVersion;->getMinor()I
 
@@ -1015,14 +1126,14 @@
 
     if-eqz v0, :cond_2
 
-    .line 463
+    .line 541
     invoke-virtual {p1}, Lcom/kik/ximodel/XiClientVersion;->getMinor()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/kik/ximodel/XiClientVersion$Builder;->setMinor(I)Lcom/kik/ximodel/XiClientVersion$Builder;
 
-    .line 465
+    .line 543
     :cond_2
     invoke-virtual {p1}, Lcom/kik/ximodel/XiClientVersion;->getBugfix()I
 
@@ -1030,14 +1141,14 @@
 
     if-eqz v0, :cond_3
 
-    .line 466
+    .line 544
     invoke-virtual {p1}, Lcom/kik/ximodel/XiClientVersion;->getBugfix()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/kik/ximodel/XiClientVersion$Builder;->setBugfix(I)Lcom/kik/ximodel/XiClientVersion$Builder;
 
-    .line 468
+    .line 546
     :cond_3
     invoke-virtual {p1}, Lcom/kik/ximodel/XiClientVersion;->getBuild()Ljava/lang/String;
 
@@ -1049,18 +1160,40 @@
 
     if-nez v0, :cond_4
 
-    .line 469
+    .line 547
     invoke-static {p1}, Lcom/kik/ximodel/XiClientVersion;->access$700(Lcom/kik/ximodel/XiClientVersion;)Ljava/lang/Object;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->build_:Ljava/lang/Object;
 
-    .line 470
+    .line 548
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->onChanged()V
 
-    .line 472
+    .line 550
     :cond_4
+    invoke-virtual {p1}, Lcom/kik/ximodel/XiClientVersion;->getDevBuild()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    .line 551
+    invoke-static {p1}, Lcom/kik/ximodel/XiClientVersion;->access$800(Lcom/kik/ximodel/XiClientVersion;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->devBuild_:Ljava/lang/Object;
+
+    .line 552
+    invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->onChanged()V
+
+    .line 554
+    :cond_5
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->onChanged()V
 
     goto :goto_0
@@ -1070,7 +1203,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0, p1}, Lcom/kik/ximodel/XiClientVersion$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -1082,7 +1215,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0, p1}, Lcom/kik/ximodel/XiClientVersion$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -1094,7 +1227,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0, p1}, Lcom/kik/ximodel/XiClientVersion$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -1106,7 +1239,7 @@
     .locals 0
 
     .prologue
-    .line 681
+    .line 882
     return-object p0
 .end method
 
@@ -1114,13 +1247,13 @@
     .locals 0
 
     .prologue
-    .line 562
+    .line 644
     iput p1, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->bugfix_:I
 
-    .line 563
+    .line 645
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->onChanged()V
 
-    .line 564
+    .line 646
     return-object p0
 .end method
 
@@ -1128,24 +1261,24 @@
     .locals 1
 
     .prologue
-    .line 631
+    .line 716
     if-nez p1, :cond_0
 
-    .line 632
+    .line 717
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 635
+    .line 720
     :cond_0
     iput-object p1, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->build_:Ljava/lang/Object;
 
-    .line 636
+    .line 721
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->onChanged()V
 
-    .line 637
+    .line 722
     return-object p0
 .end method
 
@@ -1153,27 +1286,80 @@
     .locals 1
 
     .prologue
-    .line 665
+    .line 752
     if-nez p1, :cond_0
 
-    .line 666
+    .line 753
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 668
+    .line 755
     :cond_0
-    invoke-static {p1}, Lcom/kik/ximodel/XiClientVersion;->access$900(Lcom/google/protobuf/ByteString;)V
+    invoke-static {p1}, Lcom/kik/ximodel/XiClientVersion;->access$1000(Lcom/google/protobuf/ByteString;)V
 
-    .line 670
+    .line 757
     iput-object p1, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->build_:Ljava/lang/Object;
 
-    .line 671
+    .line 758
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->onChanged()V
 
-    .line 672
+    .line 759
+    return-object p0
+.end method
+
+.method public final setDevBuild(Ljava/lang/String;)Lcom/kik/ximodel/XiClientVersion$Builder;
+    .locals 1
+
+    .prologue
+    .line 826
+    if-nez p1, :cond_0
+
+    .line 827
+    new-instance v0, Ljava/lang/NullPointerException;
+
+    invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
+
+    throw v0
+
+    .line 830
+    :cond_0
+    iput-object p1, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->devBuild_:Ljava/lang/Object;
+
+    .line 831
+    invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->onChanged()V
+
+    .line 832
+    return-object p0
+.end method
+
+.method public final setDevBuildBytes(Lcom/google/protobuf/ByteString;)Lcom/kik/ximodel/XiClientVersion$Builder;
+    .locals 1
+
+    .prologue
+    .line 866
+    if-nez p1, :cond_0
+
+    .line 867
+    new-instance v0, Ljava/lang/NullPointerException;
+
+    invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
+
+    throw v0
+
+    .line 869
+    :cond_0
+    invoke-static {p1}, Lcom/kik/ximodel/XiClientVersion;->access$1100(Lcom/google/protobuf/ByteString;)V
+
+    .line 871
+    iput-object p1, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->devBuild_:Ljava/lang/Object;
+
+    .line 872
+    invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->onChanged()V
+
+    .line 873
     return-object p0
 .end method
 
@@ -1181,7 +1367,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0, p1, p2}, Lcom/kik/ximodel/XiClientVersion$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -1193,7 +1379,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0, p1, p2}, Lcom/kik/ximodel/XiClientVersion$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -1205,7 +1391,7 @@
     .locals 1
 
     .prologue
-    .line 428
+    .line 506
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -1219,13 +1405,13 @@
     .locals 0
 
     .prologue
-    .line 510
+    .line 592
     iput p1, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->major_:I
 
-    .line 511
+    .line 593
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->onChanged()V
 
-    .line 512
+    .line 594
     return-object p0
 .end method
 
@@ -1233,13 +1419,13 @@
     .locals 0
 
     .prologue
-    .line 536
+    .line 618
     iput p1, p0, Lcom/kik/ximodel/XiClientVersion$Builder;->minor_:I
 
-    .line 537
+    .line 619
     invoke-virtual {p0}, Lcom/kik/ximodel/XiClientVersion$Builder;->onChanged()V
 
-    .line 538
+    .line 620
     return-object p0
 .end method
 
@@ -1247,7 +1433,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0, p1, p2, p3}, Lcom/kik/ximodel/XiClientVersion$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -1259,7 +1445,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0, p1, p2, p3}, Lcom/kik/ximodel/XiClientVersion$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -1271,7 +1457,7 @@
     .locals 1
 
     .prologue
-    .line 441
+    .line 519
     invoke-super {p0, p1, p2, p3}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -1285,7 +1471,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0, p1}, Lcom/kik/ximodel/XiClientVersion$Builder;->setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -1297,7 +1483,7 @@
     .locals 1
 
     .prologue
-    .line 351
+    .line 426
     invoke-virtual {p0, p1}, Lcom/kik/ximodel/XiClientVersion$Builder;->setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/kik/ximodel/XiClientVersion$Builder;
 
     move-result-object v0
@@ -1309,6 +1495,6 @@
     .locals 0
 
     .prologue
-    .line 676
+    .line 877
     return-object p0
 .end method

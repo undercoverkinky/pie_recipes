@@ -9,17 +9,11 @@
         Lcom/google/android/gms/R$styleable;,
         Lcom/google/android/gms/R$style;,
         Lcom/google/android/gms/R$string;,
-        Lcom/google/android/gms/R$raw;,
-        Lcom/google/android/gms/R$layout;,
-        Lcom/google/android/gms/R$interpolator;,
         Lcom/google/android/gms/R$integer;,
         Lcom/google/android/gms/R$id;,
         Lcom/google/android/gms/R$drawable;,
-        Lcom/google/android/gms/R$dimen;,
         Lcom/google/android/gms/R$color;,
-        Lcom/google/android/gms/R$bool;,
-        Lcom/google/android/gms/R$attr;,
-        Lcom/google/android/gms/R$anim;
+        Lcom/google/android/gms/R$attr;
     }
 .end annotation
 

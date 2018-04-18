@@ -1,5 +1,5 @@
 .class final Lkik/android/gifs/b$2;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
         "Ljava/io/File;",
         ">;"
@@ -42,7 +42,7 @@
     .locals 1
 
     .prologue
-    .line 122
+    .line 90
     iput-object p1, p0, Lkik/android/gifs/b$2;->f:Lkik/android/gifs/b;
 
     iput-object p2, p0, Lkik/android/gifs/b$2;->a:Ljava/lang/String;
@@ -57,7 +57,7 @@
 
     iput-object p5, p0, Lkik/android/gifs/b$2;->e:Ljava/lang/String;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -68,12 +68,12 @@
     .locals 7
 
     .prologue
-    .line 122
+    .line 90
     move-object v2, p1
 
     check-cast v2, Ljava/io/File;
 
-    .line 1132
+    .line 1100
     iget-object v0, p0, Lkik/android/gifs/b$2;->f:Lkik/android/gifs/b;
 
     iget-object v1, p0, Lkik/android/gifs/b$2;->a:Ljava/lang/String;
@@ -88,7 +88,7 @@
 
     invoke-static/range {v0 .. v6}, Lkik/android/gifs/b;->a(Lkik/android/gifs/b;Ljava/lang/String;Ljava/io/File;ILkik/android/gifs/api/GifResponseData$MediaType;Lcom/kik/events/Promise;Ljava/lang/String;)V
 
-    .line 122
+    .line 90
     return-void
 .end method
 
@@ -96,12 +96,12 @@
     .locals 1
 
     .prologue
-    .line 138
+    .line 106
     iget-object v0, p0, Lkik/android/gifs/b$2;->d:Lcom/kik/events/Promise;
 
     invoke-virtual {v0, p1}, Lcom/kik/events/Promise;->a(Ljava/lang/Throwable;)V
 
-    .line 139
+    .line 107
     return-void
 .end method
 
@@ -109,7 +109,7 @@
     .locals 2
 
     .prologue
-    .line 126
+    .line 94
     iget-object v0, p0, Lkik/android/gifs/b$2;->f:Lkik/android/gifs/b;
 
     invoke-static {v0}, Lkik/android/gifs/b;->a(Lkik/android/gifs/b;)Ljava/util/concurrent/ConcurrentMap;
@@ -120,6 +120,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/ConcurrentMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 127
+    .line 95
     return-void
 .end method

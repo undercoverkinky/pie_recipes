@@ -1,5 +1,8 @@
 .class public Lcom/google/android/gms/common/data/BitmapTeleporter;
-.super Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;
+.super Lcom/google/android/gms/common/internal/safeparcel/zza;
+
+# interfaces
+.implements Lcom/google/android/gms/common/internal/ReflectedParcelable;
 
 
 # static fields
@@ -16,17 +19,17 @@
 
 
 # instance fields
-.field final mVersionCode:I
+.field private zzcqp:Landroid/os/ParcelFileDescriptor;
 
-.field zzMq:Landroid/os/ParcelFileDescriptor;
+.field private zzdxt:I
 
-.field final zzagd:I
+.field private zzeda:I
 
-.field private zzaoU:Landroid/graphics/Bitmap;
+.field private zzfpv:Landroid/graphics/Bitmap;
 
-.field private zzaoV:Z
+.field private zzfpw:Z
 
-.field private zzaoW:Ljava/io/File;
+.field private zzfpx:Ljava/io/File;
 
 
 # direct methods
@@ -45,21 +48,21 @@
 .method constructor <init>(ILandroid/os/ParcelFileDescriptor;I)V
     .locals 1
 
-    invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
+    invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/zza;-><init>()V
 
-    iput p1, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->mVersionCode:I
+    iput p1, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzdxt:I
 
-    iput-object p2, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzMq:Landroid/os/ParcelFileDescriptor;
+    iput-object p2, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzcqp:Landroid/os/ParcelFileDescriptor;
 
-    iput p3, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzagd:I
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzaoU:Landroid/graphics/Bitmap;
+    iput p3, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzeda:I
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzaoV:Z
+    iput-object v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzfpv:Landroid/graphics/Bitmap;
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzfpw:Z
 
     return-void
 .end method
@@ -69,30 +72,30 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
+    invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/zza;-><init>()V
 
-    iput v1, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->mVersionCode:I
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzMq:Landroid/os/ParcelFileDescriptor;
+    iput v1, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzdxt:I
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzagd:I
+    iput-object v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzcqp:Landroid/os/ParcelFileDescriptor;
 
-    iput-object p1, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzaoU:Landroid/graphics/Bitmap;
+    const/4 v0, 0x0
 
-    iput-boolean v1, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzaoV:Z
+    iput v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzeda:I
+
+    iput-object p1, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzfpv:Landroid/graphics/Bitmap;
+
+    iput-boolean v1, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzfpw:Z
 
     return-void
 .end method
 
-.method private zza(Ljava/io/Closeable;)V
+.method private static zza(Ljava/io/Closeable;)V
     .locals 3
 
     :try_start_0
-    invoke-interface {p1}, Ljava/io/Closeable;->close()V
+    invoke-interface {p0}, Ljava/io/Closeable;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -111,10 +114,10 @@
     goto :goto_0
 .end method
 
-.method private zzsQ()Ljava/io/FileOutputStream;
+.method private final zzait()Ljava/io/FileOutputStream;
     .locals 3
 
-    iget-object v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzaoW:Ljava/io/File;
+    iget-object v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzfpx:Ljava/io/File;
 
     if-nez v0, :cond_0
 
@@ -132,7 +135,7 @@
 
     const-string v1, ".tmp"
 
-    iget-object v2, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzaoW:Ljava/io/File;
+    iget-object v2, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzfpx:Ljava/io/File;
 
     invoke-static {v0, v1, v2}, Ljava/io/File;->createTempFile(Ljava/lang/String;Ljava/lang/String;Ljava/io/File;)Ljava/io/File;
     :try_end_0
@@ -151,7 +154,7 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzMq:Landroid/os/ParcelFileDescriptor;
+    iput-object v2, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzcqp:Landroid/os/ParcelFileDescriptor;
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -184,15 +187,15 @@
 
 
 # virtual methods
-.method public release()V
+.method public final release()V
     .locals 3
 
-    iget-boolean v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzaoV:Z
+    iget-boolean v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzfpw:Z
 
     if-nez v0, :cond_0
 
     :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzMq:Landroid/os/ParcelFileDescriptor;
+    iget-object v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzcqp:Landroid/os/ParcelFileDescriptor;
 
     invoke-virtual {v0}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_0
@@ -215,13 +218,13 @@
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
-    .locals 4
+    .locals 5
 
-    iget-object v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzMq:Landroid/os/ParcelFileDescriptor;
+    iget-object v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzcqp:Landroid/os/ParcelFileDescriptor;
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzaoU:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzfpv:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getRowBytes()I
 
@@ -243,9 +246,13 @@
 
     move-result-object v1
 
-    invoke-direct {p0}, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzsQ()Ljava/io/FileOutputStream;
+    new-instance v2, Ljava/io/BufferedOutputStream;
 
-    move-result-object v2
+    invoke-direct {p0}, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzait()Ljava/io/FileOutputStream;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
 
     new-instance v3, Ljava/io/DataOutputStream;
 
@@ -283,16 +290,40 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-direct {p0, v3}, Lcom/google/android/gms/common/data/BitmapTeleporter;->zza(Ljava/io/Closeable;)V
+    invoke-static {v3}, Lcom/google/android/gms/common/data/BitmapTeleporter;->zza(Ljava/io/Closeable;)V
 
     :cond_0
     or-int/lit8 v0, p2, 0x1
 
-    invoke-static {p0, p1, v0}, Lcom/google/android/gms/common/data/zza;->zza(Lcom/google/android/gms/common/data/BitmapTeleporter;Landroid/os/Parcel;I)V
+    invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/zzd;->zze(Landroid/os/Parcel;)I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    iget v3, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzdxt:I
+
+    invoke-static {p1, v2, v3}, Lcom/google/android/gms/common/internal/safeparcel/zzd;->zzc(Landroid/os/Parcel;II)V
+
+    const/4 v2, 0x2
+
+    iget-object v3, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzcqp:Landroid/os/ParcelFileDescriptor;
+
+    const/4 v4, 0x0
+
+    invoke-static {p1, v2, v3, v0, v4}, Lcom/google/android/gms/common/internal/safeparcel/zzd;->zza(Landroid/os/Parcel;ILandroid/os/Parcelable;IZ)V
+
+    const/4 v0, 0x3
+
+    iget v2, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzeda:I
+
+    invoke-static {p1, v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/zzd;->zzc(Landroid/os/Parcel;II)V
+
+    invoke-static {p1, v1}, Lcom/google/android/gms/common/internal/safeparcel/zzd;->zzai(Landroid/os/Parcel;I)V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzMq:Landroid/os/ParcelFileDescriptor;
+    iput-object v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzcqp:Landroid/os/ParcelFileDescriptor;
 
     return-void
 
@@ -313,34 +344,15 @@
     :catchall_0
     move-exception v0
 
-    invoke-direct {p0, v3}, Lcom/google/android/gms/common/data/BitmapTeleporter;->zza(Ljava/io/Closeable;)V
+    invoke-static {v3}, Lcom/google/android/gms/common/data/BitmapTeleporter;->zza(Ljava/io/Closeable;)V
 
     throw v0
 .end method
 
-.method public zzd(Ljava/io/File;)V
-    .locals 2
-
-    if-nez p1, :cond_0
-
-    new-instance v0, Ljava/lang/NullPointerException;
-
-    const-string v1, "Cannot set null temp directory"
-
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    iput-object p1, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzaoW:Ljava/io/File;
-
-    return-void
-.end method
-
-.method public zzsP()Landroid/graphics/Bitmap;
+.method public final zzais()Landroid/graphics/Bitmap;
     .locals 5
 
-    iget-boolean v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzaoV:Z
+    iget-boolean v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzfpw:Z
 
     if-nez v0, :cond_0
 
@@ -348,7 +360,7 @@
 
     new-instance v0, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;
 
-    iget-object v2, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzMq:Landroid/os/ParcelFileDescriptor;
+    iget-object v2, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzcqp:Landroid/os/ParcelFileDescriptor;
 
     invoke-direct {v0, v2}, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;-><init>(Landroid/os/ParcelFileDescriptor;)V
 
@@ -382,7 +394,7 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-direct {p0, v1}, Lcom/google/android/gms/common/data/BitmapTeleporter;->zza(Ljava/io/Closeable;)V
+    invoke-static {v1}, Lcom/google/android/gms/common/data/BitmapTeleporter;->zza(Ljava/io/Closeable;)V
 
     invoke-static {v0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
@@ -394,14 +406,14 @@
 
     invoke-virtual {v1, v0}, Landroid/graphics/Bitmap;->copyPixelsFromBuffer(Ljava/nio/Buffer;)V
 
-    iput-object v1, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzaoU:Landroid/graphics/Bitmap;
+    iput-object v1, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzfpv:Landroid/graphics/Bitmap;
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzaoV:Z
+    iput-boolean v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzfpw:Z
 
     :cond_0
-    iget-object v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzaoU:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzfpv:Landroid/graphics/Bitmap;
 
     return-object v0
 
@@ -422,7 +434,26 @@
     :catchall_0
     move-exception v0
 
-    invoke-direct {p0, v1}, Lcom/google/android/gms/common/data/BitmapTeleporter;->zza(Ljava/io/Closeable;)V
+    invoke-static {v1}, Lcom/google/android/gms/common/data/BitmapTeleporter;->zza(Ljava/io/Closeable;)V
 
     throw v0
+.end method
+
+.method public final zzc(Ljava/io/File;)V
+    .locals 2
+
+    if-nez p1, :cond_0
+
+    new-instance v0, Ljava/lang/NullPointerException;
+
+    const-string v1, "Cannot set null temp directory"
+
+    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    iput-object p1, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->zzfpx:Ljava/io/File;
+
+    return-void
 .end method

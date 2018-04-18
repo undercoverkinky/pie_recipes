@@ -40,23 +40,23 @@
     .locals 1
 
     .prologue
-    .line 4509
+    .line 4554
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;-><init>()V
 
-    .line 4634
+    .line 4679
     const-string v0, ""
 
     iput-object v0, p0, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a:Ljava/lang/Object;
 
-    .line 4729
+    .line 4774
     const-string v0, ""
 
     iput-object v0, p0, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->c:Ljava/lang/Object;
 
-    .line 5520
+    .line 5565
     invoke-static {}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;->g()Z
 
-    .line 4511
+    .line 4556
     return-void
 .end method
 
@@ -64,7 +64,7 @@
     .locals 0
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-direct {p0}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;-><init>()V
 
     return-void
@@ -74,23 +74,23 @@
     .locals 1
 
     .prologue
-    .line 4515
+    .line 4560
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
 
-    .line 4634
+    .line 4679
     const-string v0, ""
 
     iput-object v0, p0, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a:Ljava/lang/Object;
 
-    .line 4729
+    .line 4774
     const-string v0, ""
 
     iput-object v0, p0, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->c:Ljava/lang/Object;
 
-    .line 6520
+    .line 6565
     invoke-static {}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;->g()Z
 
-    .line 4517
+    .line 4562
     return-void
 .end method
 
@@ -98,7 +98,7 @@
     .locals 0
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-direct {p0, p1}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
 
     return-void
@@ -113,10 +113,10 @@
     .end annotation
 
     .prologue
-    .line 4620
+    .line 4665
     const/4 v2, 0x0
 
-    .line 4622
+    .line 4667
     :try_start_0
     invoke-static {}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;->h()Lcom/google/protobuf/Parser;
 
@@ -131,23 +131,23 @@
     .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 4627
+    .line 4672
     if-eqz v0, :cond_0
 
-    .line 4628
+    .line 4673
     invoke-virtual {p0, v0}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a(Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;)Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
-    .line 4631
+    .line 4676
     :cond_0
     return-object p0
 
-    .line 4623
+    .line 4668
     :catch_0
     move-exception v0
 
     move-object v1, v0
 
-    .line 4624
+    .line 4669
     :try_start_1
     invoke-virtual {v1}, Lcom/google/protobuf/InvalidProtocolBufferException;->getUnfinishedMessage()Lcom/google/protobuf/MessageLite;
 
@@ -157,7 +157,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 4625
+    .line 4670
     :try_start_2
     invoke-virtual {v1}, Lcom/google/protobuf/InvalidProtocolBufferException;->unwrapIOException()Ljava/io/IOException;
 
@@ -167,7 +167,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 4627
+    .line 4672
     :catchall_0
     move-exception v1
 
@@ -180,13 +180,14 @@
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 4628
+    .line 4673
     invoke-virtual {p0, v1}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a(Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;)Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
+    .line 4675
     :cond_1
     throw v0
 
-    .line 4627
+    .line 4672
     :catchall_1
     move-exception v0
 
@@ -199,7 +200,7 @@
     .locals 1
 
     .prologue
-    .line 4570
+    .line 4615
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -213,7 +214,7 @@
     .locals 1
 
     .prologue
-    .line 4579
+    .line 4624
     invoke-super {p0, p1, p2, p3}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -227,7 +228,7 @@
     .locals 1
 
     .prologue
-    .line 4566
+    .line 4611
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -241,7 +242,7 @@
     .locals 1
 
     .prologue
-    .line 4574
+    .line 4619
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -255,23 +256,23 @@
     .locals 1
 
     .prologue
-    .line 4587
+    .line 4632
     instance-of v0, p1, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
 
     if-eqz v0, :cond_0
 
-    .line 4588
+    .line 4633
     check-cast p1, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
 
     invoke-virtual {p0, p1}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a(Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;)Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
     move-result-object p0
 
-    .line 4591
+    .line 4636
     :goto_0
     return-object p0
 
-    .line 4590
+    .line 4635
     :cond_0
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/AbstractMessage$Builder;
 
@@ -282,25 +283,25 @@
     .locals 1
 
     .prologue
-    .line 4524
+    .line 4569
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clear()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
-    .line 4525
+    .line 4570
     const-string v0, ""
 
     iput-object v0, p0, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a:Ljava/lang/Object;
 
-    .line 4527
+    .line 4572
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->b:I
 
-    .line 4529
+    .line 4574
     const-string v0, ""
 
     iput-object v0, p0, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->c:Ljava/lang/Object;
 
-    .line 4531
+    .line 4576
     return-object p0
 .end method
 
@@ -308,7 +309,7 @@
     .locals 1
 
     .prologue
-    .line 4584
+    .line 4629
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -322,26 +323,26 @@
     .locals 2
 
     .prologue
-    .line 4544
+    .line 4589
     invoke-virtual {p0}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a()Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
 
     move-result-object v0
 
-    .line 4545
+    .line 4590
     invoke-virtual {v0}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;->isInitialized()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 4546
+    .line 4591
     invoke-static {v0}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->newUninitializedMessageException(Lcom/google/protobuf/Message;)Lcom/google/protobuf/UninitializedMessageException;
 
     move-result-object v0
 
     throw v0
 
-    .line 4548
+    .line 4593
     :cond_0
     return-object v0
 .end method
@@ -352,18 +353,18 @@
     .locals 1
 
     .prologue
-    .line 4596
+    .line 4641
     invoke-static {}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;->e()Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
 
     move-result-object v0
 
     if-ne p1, v0, :cond_0
 
-    .line 4609
+    .line 4654
     :goto_0
     return-object p0
 
-    .line 4597
+    .line 4642
     :cond_0
     invoke-virtual {p1}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;->a()Ljava/lang/String;
 
@@ -375,17 +376,17 @@
 
     if-nez v0, :cond_1
 
-    .line 4598
+    .line 4643
     invoke-static {p1}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;->b(Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;)Ljava/lang/Object;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a:Ljava/lang/Object;
 
-    .line 4599
+    .line 4644
     invoke-virtual {p0}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->onChanged()V
 
-    .line 4601
+    .line 4646
     :cond_1
     invoke-virtual {p1}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;->b()I
 
@@ -393,18 +394,18 @@
 
     if-eqz v0, :cond_2
 
-    .line 4602
+    .line 4647
     invoke-virtual {p1}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;->b()I
 
     move-result v0
 
-    .line 6715
+    .line 6760
     iput v0, p0, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->b:I
 
-    .line 6716
+    .line 6761
     invoke-virtual {p0}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->onChanged()V
 
-    .line 4604
+    .line 4649
     :cond_2
     invoke-virtual {p1}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;->c()Ljava/lang/String;
 
@@ -416,17 +417,17 @@
 
     if-nez v0, :cond_3
 
-    .line 4605
+    .line 4650
     invoke-static {p1}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;->c(Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;)Ljava/lang/Object;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->c:Ljava/lang/Object;
 
-    .line 4606
+    .line 4651
     invoke-virtual {p0}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->onChanged()V
 
-    .line 4608
+    .line 4653
     :cond_3
     invoke-virtual {p0}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->onChanged()V
 
@@ -437,32 +438,32 @@
     .locals 2
 
     .prologue
-    .line 4552
+    .line 4597
     new-instance v0, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p0, v1}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;B)V
 
-    .line 4553
+    .line 4598
     iget-object v1, p0, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a:Ljava/lang/Object;
 
     invoke-static {v0, v1}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;->a(Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4554
+    .line 4599
     iget v1, p0, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->b:I
 
     invoke-static {v0, v1}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;->a(Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;I)I
 
-    .line 4555
+    .line 4600
     iget-object v1, p0, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->c:Ljava/lang/Object;
 
     invoke-static {v0, v1}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;->b(Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4556
+    .line 4601
     invoke-virtual {p0}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->onBuilt()V
 
-    .line 4557
+    .line 4602
     return-object v0
 .end method
 
@@ -470,7 +471,7 @@
     .locals 1
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-direct {p0, p1, p2}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->b(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
     move-result-object v0
@@ -482,7 +483,7 @@
     .locals 1
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-direct {p0, p1, p2}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->b(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
     move-result-object v0
@@ -494,7 +495,7 @@
     .locals 1
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-direct {p0}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->c()Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
 
     move-result-object v0
@@ -506,7 +507,7 @@
     .locals 1
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-direct {p0}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->c()Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
 
     move-result-object v0
@@ -518,7 +519,7 @@
     .locals 1
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-virtual {p0}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a()Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
 
     move-result-object v0
@@ -530,7 +531,7 @@
     .locals 1
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-virtual {p0}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a()Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
 
     move-result-object v0
@@ -542,7 +543,7 @@
     .locals 1
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-direct {p0}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->b()Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
     move-result-object v0
@@ -554,7 +555,7 @@
     .locals 1
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-direct {p0}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->b()Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
     move-result-object v0
@@ -566,7 +567,7 @@
     .locals 1
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-direct {p0}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->b()Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
     move-result-object v0
@@ -578,7 +579,7 @@
     .locals 1
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-direct {p0}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->b()Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
     move-result-object v0
@@ -590,7 +591,7 @@
     .locals 1
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-direct {p0, p1}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
     move-result-object v0
@@ -602,7 +603,7 @@
     .locals 1
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-direct {p0, p1}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
     move-result-object v0
@@ -614,7 +615,7 @@
     .locals 1
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-direct {p0, p1}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
     move-result-object v0
@@ -626,7 +627,7 @@
     .locals 1
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-direct {p0, p1}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
     move-result-object v0
@@ -638,7 +639,7 @@
     .locals 1
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-direct {p0, p1}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
     move-result-object v0
@@ -650,15 +651,15 @@
     .locals 1
 
     .prologue
-    .line 4492
-    .line 9561
+    .line 4537
+    .line 9606
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
-    .line 4492
+    .line 4537
     return-object v0
 .end method
 
@@ -666,15 +667,15 @@
     .locals 1
 
     .prologue
-    .line 4492
-    .line 14561
+    .line 4537
+    .line 14606
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
-    .line 4492
+    .line 4537
     return-object v0
 .end method
 
@@ -682,15 +683,15 @@
     .locals 1
 
     .prologue
-    .line 4492
-    .line 8561
+    .line 4537
+    .line 8606
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
-    .line 4492
+    .line 4537
     return-object v0
 .end method
 
@@ -698,15 +699,15 @@
     .locals 1
 
     .prologue
-    .line 4492
-    .line 11561
+    .line 4537
+    .line 11606
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
-    .line 4492
+    .line 4537
     return-object v0
 .end method
 
@@ -714,15 +715,15 @@
     .locals 1
 
     .prologue
-    .line 4492
-    .line 12561
+    .line 4537
+    .line 12606
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
-    .line 4492
+    .line 4537
     return-object v0
 .end method
 
@@ -735,15 +736,15 @@
     .end annotation
 
     .prologue
-    .line 4492
-    .line 15561
+    .line 4537
+    .line 15606
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
-    .line 4492
+    .line 4537
     return-object v0
 .end method
 
@@ -751,12 +752,12 @@
     .locals 1
 
     .prologue
-    .line 14540
+    .line 14585
     invoke-static {}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;->e()Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
 
     move-result-object v0
 
-    .line 4492
+    .line 4537
     return-object v0
 .end method
 
@@ -764,12 +765,12 @@
     .locals 1
 
     .prologue
-    .line 13540
+    .line 13585
     invoke-static {}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;->e()Lcom/kik/video/VideoCommon$ConferenceConnectionInfo;
 
     move-result-object v0
 
-    .line 4492
+    .line 4537
     return-object v0
 .end method
 
@@ -777,7 +778,7 @@
     .locals 1
 
     .prologue
-    .line 4536
+    .line 4581
     invoke-static {}, Lcom/kik/video/VideoCommon;->j()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
@@ -789,7 +790,7 @@
     .locals 3
 
     .prologue
-    .line 4503
+    .line 4548
     invoke-static {}, Lcom/kik/video/VideoCommon;->k()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -798,12 +799,12 @@
 
     const-class v2, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
-    .line 4504
+    .line 4549
     invoke-virtual {v0, v1, v2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;->ensureFieldAccessorsInitialized(Ljava/lang/Class;Ljava/lang/Class;)Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
 
-    .line 4503
+    .line 4548
     return-object v0
 .end method
 
@@ -811,7 +812,7 @@
     .locals 1
 
     .prologue
-    .line 4613
+    .line 4658
     const/4 v0, 0x1
 
     return v0
@@ -826,7 +827,7 @@
     .end annotation
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-direct {p0, p1, p2}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
     move-result-object v0
@@ -838,7 +839,7 @@
     .locals 1
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-direct {p0, p1}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a(Lcom/google/protobuf/Message;)Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
     move-result-object v0
@@ -855,7 +856,7 @@
     .end annotation
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-direct {p0, p1, p2}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
     move-result-object v0
@@ -872,7 +873,7 @@
     .end annotation
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-direct {p0, p1, p2}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
     move-result-object v0
@@ -884,7 +885,7 @@
     .locals 1
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-direct {p0, p1}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a(Lcom/google/protobuf/Message;)Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
     move-result-object v0
@@ -901,7 +902,7 @@
     .end annotation
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-direct {p0, p1, p2}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
     move-result-object v0
@@ -913,7 +914,7 @@
     .locals 0
 
     .prologue
-    .line 4492
+    .line 4537
     return-object p0
 .end method
 
@@ -921,7 +922,7 @@
     .locals 0
 
     .prologue
-    .line 4492
+    .line 4537
     return-object p0
 .end method
 
@@ -929,7 +930,7 @@
     .locals 0
 
     .prologue
-    .line 4492
+    .line 4537
     return-object p0
 .end method
 
@@ -937,7 +938,7 @@
     .locals 1
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-direct {p0, p1, p2}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
     move-result-object v0
@@ -949,7 +950,7 @@
     .locals 1
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-direct {p0, p1, p2}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
     move-result-object v0
@@ -961,7 +962,7 @@
     .locals 1
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-direct {p0, p1, p2, p3}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
     move-result-object v0
@@ -973,7 +974,7 @@
     .locals 1
 
     .prologue
-    .line 4492
+    .line 4537
     invoke-direct {p0, p1, p2, p3}, Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;->a(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/kik/video/VideoCommon$ConferenceConnectionInfo$a;
 
     move-result-object v0
@@ -985,7 +986,7 @@
     .locals 0
 
     .prologue
-    .line 4492
+    .line 4537
     return-object p0
 .end method
 
@@ -993,6 +994,6 @@
     .locals 0
 
     .prologue
-    .line 4492
+    .line 4537
     return-object p0
 .end method

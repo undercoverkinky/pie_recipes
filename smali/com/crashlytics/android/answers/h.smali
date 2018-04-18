@@ -1,84 +1,129 @@
 .class final Lcom/crashlytics/android/answers/h;
-.super Ljava/lang/Object;
+.super Lio/fabric/sdk/android/a$b;
 .source "SourceFile"
 
 
 # instance fields
-.field private final a:Lio/fabric/sdk/android/services/c/c;
+.field private final a:Lcom/crashlytics/android/answers/ab;
+
+.field private final b:Lcom/crashlytics/android/answers/l;
 
 
 # direct methods
-.method constructor <init>(Lio/fabric/sdk/android/services/c/c;)V
+.method public constructor <init>(Lcom/crashlytics/android/answers/ab;Lcom/crashlytics/android/answers/l;)V
     .locals 0
 
     .prologue
-    .line 37
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 14
+    invoke-direct {p0}, Lio/fabric/sdk/android/a$b;-><init>()V
 
-    .line 38
-    iput-object p1, p0, Lcom/crashlytics/android/answers/h;->a:Lio/fabric/sdk/android/services/c/c;
+    .line 15
+    iput-object p1, p0, Lcom/crashlytics/android/answers/h;->a:Lcom/crashlytics/android/answers/ab;
 
-    .line 39
+    .line 16
+    iput-object p2, p0, Lcom/crashlytics/android/answers/h;->b:Lcom/crashlytics/android/answers/l;
+
+    .line 17
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "CommitPrefEdits"
-        }
-    .end annotation
+.method public final a(Landroid/app/Activity;)V
+    .locals 0
 
     .prologue
-    .line 43
-    iget-object v0, p0, Lcom/crashlytics/android/answers/h;->a:Lio/fabric/sdk/android/services/c/c;
-
-    iget-object v1, p0, Lcom/crashlytics/android/answers/h;->a:Lio/fabric/sdk/android/services/c/c;
-
-    invoke-interface {v1}, Lio/fabric/sdk/android/services/c/c;->b()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v1
-
-    const-string v2, "analytics_launched"
-
-    const/4 v3, 0x1
-
-    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lio/fabric/sdk/android/services/c/c;->a(Landroid/content/SharedPreferences$Editor;)Z
-
-    .line 44
+    .line 22
     return-void
 .end method
 
-.method public final b()Z
-    .locals 3
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "CommitPrefEdits"
-        }
-    .end annotation
+.method public final b(Landroid/app/Activity;)V
+    .locals 2
 
     .prologue
-    .line 48
-    iget-object v0, p0, Lcom/crashlytics/android/answers/h;->a:Lio/fabric/sdk/android/services/c/c;
+    .line 26
+    iget-object v0, p0, Lcom/crashlytics/android/answers/h;->a:Lcom/crashlytics/android/answers/ab;
 
-    invoke-interface {v0}, Lio/fabric/sdk/android/services/c/c;->a()Landroid/content/SharedPreferences;
+    sget-object v1, Lcom/crashlytics/android/answers/SessionEvent$Type;->START:Lcom/crashlytics/android/answers/SessionEvent$Type;
+
+    invoke-virtual {v0, p1, v1}, Lcom/crashlytics/android/answers/ab;->a(Landroid/app/Activity;Lcom/crashlytics/android/answers/SessionEvent$Type;)V
+
+    .line 27
+    return-void
+.end method
+
+.method public final c(Landroid/app/Activity;)V
+    .locals 3
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 31
+    iget-object v0, p0, Lcom/crashlytics/android/answers/h;->a:Lcom/crashlytics/android/answers/ab;
+
+    sget-object v1, Lcom/crashlytics/android/answers/SessionEvent$Type;->RESUME:Lcom/crashlytics/android/answers/SessionEvent$Type;
+
+    invoke-virtual {v0, p1, v1}, Lcom/crashlytics/android/answers/ab;->a(Landroid/app/Activity;Lcom/crashlytics/android/answers/SessionEvent$Type;)V
+
+    .line 32
+    iget-object v0, p0, Lcom/crashlytics/android/answers/h;->b:Lcom/crashlytics/android/answers/l;
+
+    .line 1053
+    iput-boolean v2, v0, Lcom/crashlytics/android/answers/l;->b:Z
+
+    .line 1055
+    iget-object v0, v0, Lcom/crashlytics/android/answers/l;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, "analytics_launched"
+    check-cast v0, Ljava/util/concurrent/ScheduledFuture;
 
-    const/4 v2, 0x0
+    .line 1056
+    if-eqz v0, :cond_0
 
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    .line 1057
+    invoke-interface {v0, v2}, Ljava/util/concurrent/ScheduledFuture;->cancel(Z)Z
 
-    move-result v0
+    .line 33
+    :cond_0
+    return-void
+.end method
 
-    return v0
+.method public final d(Landroid/app/Activity;)V
+    .locals 2
+
+    .prologue
+    .line 37
+    iget-object v0, p0, Lcom/crashlytics/android/answers/h;->a:Lcom/crashlytics/android/answers/ab;
+
+    sget-object v1, Lcom/crashlytics/android/answers/SessionEvent$Type;->PAUSE:Lcom/crashlytics/android/answers/SessionEvent$Type;
+
+    invoke-virtual {v0, p1, v1}, Lcom/crashlytics/android/answers/ab;->a(Landroid/app/Activity;Lcom/crashlytics/android/answers/SessionEvent$Type;)V
+
+    .line 38
+    iget-object v0, p0, Lcom/crashlytics/android/answers/h;->b:Lcom/crashlytics/android/answers/l;
+
+    invoke-virtual {v0}, Lcom/crashlytics/android/answers/l;->a()V
+
+    .line 39
+    return-void
+.end method
+
+.method public final e(Landroid/app/Activity;)V
+    .locals 2
+
+    .prologue
+    .line 43
+    iget-object v0, p0, Lcom/crashlytics/android/answers/h;->a:Lcom/crashlytics/android/answers/ab;
+
+    sget-object v1, Lcom/crashlytics/android/answers/SessionEvent$Type;->STOP:Lcom/crashlytics/android/answers/SessionEvent$Type;
+
+    invoke-virtual {v0, p1, v1}, Lcom/crashlytics/android/answers/ab;->a(Landroid/app/Activity;Lcom/crashlytics/android/answers/SessionEvent$Type;)V
+
+    .line 44
+    return-void
 .end method

@@ -23,13 +23,13 @@
     .locals 0
 
     .prologue
-    .line 139
+    .line 157
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 140
+    .line 158
     iput-object p1, p0, Landroid/support/v4/hardware/fingerprint/FingerprintManagerCompatApi23$AuthenticationResultInternal;->mCryptoObject:Landroid/support/v4/hardware/fingerprint/FingerprintManagerCompatApi23$CryptoObject;
 
-    .line 141
+    .line 159
     return-void
 .end method
 
@@ -39,7 +39,7 @@
     .locals 1
 
     .prologue
-    .line 143
+    .line 161
     iget-object v0, p0, Landroid/support/v4/hardware/fingerprint/FingerprintManagerCompatApi23$AuthenticationResultInternal;->mCryptoObject:Landroid/support/v4/hardware/fingerprint/FingerprintManagerCompatApi23$CryptoObject;
 
     return-object v0

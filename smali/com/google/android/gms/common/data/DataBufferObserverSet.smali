@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private zzaoZ:Ljava/util/HashSet;
+.field private zzfqa:Ljava/util/HashSet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashSet",
@@ -29,7 +29,7 @@
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zzaoZ:Ljava/util/HashSet;
+    iput-object v0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zzfqa:Ljava/util/HashSet;
 
     return-void
 .end method
@@ -39,7 +39,7 @@
 .method public final addObserver(Lcom/google/android/gms/common/data/DataBufferObserver;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zzaoZ:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zzfqa:Ljava/util/HashSet;
 
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
@@ -49,7 +49,7 @@
 .method public final clear()V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zzaoZ:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zzfqa:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
@@ -59,7 +59,7 @@
 .method public final hasObservers()Z
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zzaoZ:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zzfqa:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->isEmpty()Z
 
@@ -81,7 +81,7 @@
 .method public final onDataChanged()V
     .locals 2
 
-    iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zzaoZ:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zzfqa:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
@@ -111,7 +111,7 @@
 .method public final onDataRangeChanged(II)V
     .locals 2
 
-    iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zzaoZ:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zzfqa:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
@@ -141,7 +141,7 @@
 .method public final onDataRangeInserted(II)V
     .locals 2
 
-    iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zzaoZ:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zzfqa:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
@@ -171,7 +171,7 @@
 .method public final onDataRangeMoved(III)V
     .locals 2
 
-    iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zzaoZ:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zzfqa:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
@@ -201,7 +201,7 @@
 .method public final onDataRangeRemoved(II)V
     .locals 2
 
-    iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zzaoZ:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zzfqa:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
@@ -231,7 +231,7 @@
 .method public final removeObserver(Lcom/google/android/gms/common/data/DataBufferObserver;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zzaoZ:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zzfqa:Ljava/util/HashSet;
 
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 

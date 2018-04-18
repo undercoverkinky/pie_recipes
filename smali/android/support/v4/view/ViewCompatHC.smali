@@ -3,12 +3,18 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0xb
+.end annotation
+
+
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 24
+    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,7 +24,7 @@
     .locals 1
 
     .prologue
-    .line 162
+    .line 171
     invoke-static {p0, p1}, Landroid/view/View;->combineMeasuredStates(II)I
 
     move-result v0
@@ -30,7 +36,7 @@
     .locals 1
 
     .prologue
-    .line 30
+    .line 35
     invoke-virtual {p0}, Landroid/view/View;->getAlpha()F
 
     move-result v0
@@ -42,7 +48,7 @@
     .locals 2
 
     .prologue
-    .line 26
+    .line 31
     invoke-static {}, Landroid/animation/ValueAnimator;->getFrameDelay()J
 
     move-result-wide v0
@@ -54,7 +60,7 @@
     .locals 1
 
     .prologue
-    .line 38
+    .line 43
     invoke-virtual {p0}, Landroid/view/View;->getLayerType()I
 
     move-result v0
@@ -62,11 +68,23 @@
     return v0
 .end method
 
+.method public static getMatrix(Landroid/view/View;)Landroid/graphics/Matrix;
+    .locals 1
+
+    .prologue
+    .line 107
+    invoke-virtual {p0}, Landroid/view/View;->getMatrix()Landroid/graphics/Matrix;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public static getMeasuredHeightAndState(Landroid/view/View;)I
     .locals 1
 
     .prologue
-    .line 50
+    .line 55
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeightAndState()I
 
     move-result v0
@@ -78,7 +96,7 @@
     .locals 1
 
     .prologue
-    .line 54
+    .line 59
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredState()I
 
     move-result v0
@@ -90,7 +108,7 @@
     .locals 1
 
     .prologue
-    .line 46
+    .line 51
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidthAndState()I
 
     move-result v0
@@ -102,7 +120,7 @@
     .locals 1
 
     .prologue
-    .line 142
+    .line 151
     invoke-virtual {p0}, Landroid/view/View;->getPivotX()F
 
     move-result v0
@@ -114,7 +132,7 @@
     .locals 1
 
     .prologue
-    .line 146
+    .line 155
     invoke-virtual {p0}, Landroid/view/View;->getPivotY()F
 
     move-result v0
@@ -126,7 +144,7 @@
     .locals 1
 
     .prologue
-    .line 74
+    .line 79
     invoke-virtual {p0}, Landroid/view/View;->getRotation()F
 
     move-result v0
@@ -138,7 +156,7 @@
     .locals 1
 
     .prologue
-    .line 78
+    .line 83
     invoke-virtual {p0}, Landroid/view/View;->getRotationX()F
 
     move-result v0
@@ -150,7 +168,7 @@
     .locals 1
 
     .prologue
-    .line 82
+    .line 87
     invoke-virtual {p0}, Landroid/view/View;->getRotationY()F
 
     move-result v0
@@ -162,7 +180,7 @@
     .locals 1
 
     .prologue
-    .line 86
+    .line 91
     invoke-virtual {p0}, Landroid/view/View;->getScaleX()F
 
     move-result v0
@@ -174,7 +192,7 @@
     .locals 1
 
     .prologue
-    .line 90
+    .line 95
     invoke-virtual {p0}, Landroid/view/View;->getScaleY()F
 
     move-result v0
@@ -186,7 +204,7 @@
     .locals 1
 
     .prologue
-    .line 58
+    .line 63
     invoke-virtual {p0}, Landroid/view/View;->getTranslationX()F
 
     move-result v0
@@ -198,7 +216,7 @@
     .locals 1
 
     .prologue
-    .line 62
+    .line 67
     invoke-virtual {p0}, Landroid/view/View;->getTranslationY()F
 
     move-result v0
@@ -210,7 +228,7 @@
     .locals 1
 
     .prologue
-    .line 66
+    .line 71
     invoke-virtual {p0}, Landroid/view/View;->getX()F
 
     move-result v0
@@ -222,7 +240,7 @@
     .locals 1
 
     .prologue
-    .line 70
+    .line 75
     invoke-virtual {p0}, Landroid/view/View;->getY()F
 
     move-result v0
@@ -234,10 +252,10 @@
     .locals 0
 
     .prologue
-    .line 150
+    .line 159
     invoke-virtual {p0}, Landroid/view/View;->jumpDrawablesToCurrentState()V
 
-    .line 151
+    .line 160
     return-void
 .end method
 
@@ -245,8 +263,52 @@
     .locals 2
 
     .prologue
-    .line 176
+    .line 187
     invoke-virtual {p0, p1}, Landroid/view/View;->offsetLeftAndRight(I)V
+
+    .line 188
+    invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 189
+    invoke-static {p0}, Landroid/support/v4/view/ViewCompatHC;->tickleInvalidationFlag(Landroid/view/View;)V
+
+    .line 191
+    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    .line 192
+    instance-of v1, v0, Landroid/view/View;
+
+    if-eqz v1, :cond_0
+
+    .line 193
+    check-cast v0, Landroid/view/View;
+
+    invoke-static {v0}, Landroid/support/v4/view/ViewCompatHC;->tickleInvalidationFlag(Landroid/view/View;)V
+
+    .line 196
+    :cond_0
+    return-void
+.end method
+
+.method static offsetTopAndBottom(Landroid/view/View;I)V
+    .locals 2
+
+    .prologue
+    .line 175
+    invoke-virtual {p0, p1}, Landroid/view/View;->offsetTopAndBottom(I)V
+
+    .line 176
+    invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
 
     .line 177
     invoke-static {p0}, Landroid/support/v4/view/ViewCompatHC;->tickleInvalidationFlag(Landroid/view/View;)V
@@ -266,37 +328,7 @@
 
     invoke-static {v0}, Landroid/support/v4/view/ViewCompatHC;->tickleInvalidationFlag(Landroid/view/View;)V
 
-    .line 183
-    :cond_0
-    return-void
-.end method
-
-.method static offsetTopAndBottom(Landroid/view/View;I)V
-    .locals 2
-
-    .prologue
-    .line 166
-    invoke-virtual {p0, p1}, Landroid/view/View;->offsetTopAndBottom(I)V
-
-    .line 167
-    invoke-static {p0}, Landroid/support/v4/view/ViewCompatHC;->tickleInvalidationFlag(Landroid/view/View;)V
-
-    .line 169
-    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    .line 170
-    instance-of v1, v0, Landroid/view/View;
-
-    if-eqz v1, :cond_0
-
-    .line 171
-    check-cast v0, Landroid/view/View;
-
-    invoke-static {v0}, Landroid/support/v4/view/ViewCompatHC;->tickleInvalidationFlag(Landroid/view/View;)V
-
-    .line 173
+    .line 184
     :cond_0
     return-void
 .end method
@@ -305,7 +337,7 @@
     .locals 1
 
     .prologue
-    .line 42
+    .line 47
     invoke-static {p0, p1, p2}, Landroid/view/View;->resolveSizeAndState(III)I
 
     move-result v0
@@ -317,10 +349,10 @@
     .locals 0
 
     .prologue
-    .line 158
+    .line 167
     invoke-virtual {p0, p1}, Landroid/view/View;->setActivated(Z)V
 
-    .line 159
+    .line 168
     return-void
 .end method
 
@@ -328,10 +360,10 @@
     .locals 0
 
     .prologue
-    .line 102
+    .line 111
     invoke-virtual {p0, p1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 103
+    .line 112
     return-void
 .end method
 
@@ -339,10 +371,10 @@
     .locals 0
 
     .prologue
-    .line 34
+    .line 39
     invoke-virtual {p0, p1, p2}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
 
-    .line 35
+    .line 40
     return-void
 .end method
 
@@ -350,10 +382,10 @@
     .locals 0
 
     .prologue
-    .line 134
+    .line 143
     invoke-virtual {p0, p1}, Landroid/view/View;->setPivotX(F)V
 
-    .line 135
+    .line 144
     return-void
 .end method
 
@@ -361,10 +393,10 @@
     .locals 0
 
     .prologue
-    .line 138
+    .line 147
     invoke-virtual {p0, p1}, Landroid/view/View;->setPivotY(F)V
 
-    .line 139
+    .line 148
     return-void
 .end method
 
@@ -372,10 +404,10 @@
     .locals 0
 
     .prologue
-    .line 114
+    .line 123
     invoke-virtual {p0, p1}, Landroid/view/View;->setRotation(F)V
 
-    .line 115
+    .line 124
     return-void
 .end method
 
@@ -383,10 +415,10 @@
     .locals 0
 
     .prologue
-    .line 118
+    .line 127
     invoke-virtual {p0, p1}, Landroid/view/View;->setRotationX(F)V
 
-    .line 119
+    .line 128
     return-void
 .end method
 
@@ -394,10 +426,10 @@
     .locals 0
 
     .prologue
-    .line 122
+    .line 131
     invoke-virtual {p0, p1}, Landroid/view/View;->setRotationY(F)V
 
-    .line 123
+    .line 132
     return-void
 .end method
 
@@ -405,10 +437,10 @@
     .locals 0
 
     .prologue
-    .line 154
+    .line 163
     invoke-virtual {p0, p1}, Landroid/view/View;->setSaveFromParentEnabled(Z)V
 
-    .line 155
+    .line 164
     return-void
 .end method
 
@@ -416,10 +448,10 @@
     .locals 0
 
     .prologue
-    .line 126
+    .line 135
     invoke-virtual {p0, p1}, Landroid/view/View;->setScaleX(F)V
 
-    .line 127
+    .line 136
     return-void
 .end method
 
@@ -427,10 +459,10 @@
     .locals 0
 
     .prologue
-    .line 130
+    .line 139
     invoke-virtual {p0, p1}, Landroid/view/View;->setScaleY(F)V
 
-    .line 131
+    .line 140
     return-void
 .end method
 
@@ -438,10 +470,10 @@
     .locals 0
 
     .prologue
-    .line 94
+    .line 99
     invoke-virtual {p0, p1}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 95
+    .line 100
     return-void
 .end method
 
@@ -449,10 +481,10 @@
     .locals 0
 
     .prologue
-    .line 98
+    .line 103
     invoke-virtual {p0, p1}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 99
+    .line 104
     return-void
 .end method
 
@@ -460,10 +492,10 @@
     .locals 0
 
     .prologue
-    .line 106
+    .line 115
     invoke-virtual {p0, p1}, Landroid/view/View;->setX(F)V
 
-    .line 107
+    .line 116
     return-void
 .end method
 
@@ -471,10 +503,10 @@
     .locals 0
 
     .prologue
-    .line 110
+    .line 119
     invoke-virtual {p0, p1}, Landroid/view/View;->setY(F)V
 
-    .line 111
+    .line 120
     return-void
 .end method
 
@@ -482,21 +514,21 @@
     .locals 2
 
     .prologue
-    .line 186
+    .line 199
     invoke-virtual {p0}, Landroid/view/View;->getTranslationY()F
 
     move-result v0
 
-    .line 187
+    .line 200
     const/high16 v1, 0x3f800000    # 1.0f
 
     add-float/2addr v1, v0
 
     invoke-virtual {p0, v1}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 188
+    .line 201
     invoke-virtual {p0, v0}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 189
+    .line 202
     return-void
 .end method

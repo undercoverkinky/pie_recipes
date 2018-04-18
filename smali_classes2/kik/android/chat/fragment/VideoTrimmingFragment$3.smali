@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/fragment/VideoTrimmingFragment$3;
-.super Lkik/android/util/ap;
+.super Lkik/android/util/aq;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkik/android/util/ap",
+        "Lkik/android/util/aq",
         "<",
         "Ljava/lang/Void;",
         "Ljava/lang/Void;",
@@ -34,10 +34,10 @@
     .locals 0
 
     .prologue
-    .line 262
+    .line 275
     iput-object p1, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$3;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
-    invoke-direct {p0}, Lkik/android/util/ap;-><init>()V
+    invoke-direct {p0}, Lkik/android/util/aq;-><init>()V
 
     return-void
 .end method
@@ -48,8 +48,8 @@
     .locals 3
 
     .prologue
-    .line 262
-    .line 1267
+    .line 275
+    .line 1280
     :cond_0
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$3;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
@@ -57,9 +57,9 @@
 
     invoke-direct {v1, p0}, Lkik/android/chat/fragment/VideoTrimmingFragment$3$1;-><init>(Lkik/android/chat/fragment/VideoTrimmingFragment$3;)V
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/VideoTrimmingFragment;->b(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/VideoTrimmingFragment;->runOnUiIfAttached(Ljava/lang/Runnable;)V
 
-    .line 1287
+    .line 1300
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$3;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/VideoTrimmingFragment;->_videoView:Landroid/widget/VideoView;
@@ -84,21 +84,21 @@
 
     if-ltz v0, :cond_1
 
-    .line 1288
+    .line 1301
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$3;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lkik/android/chat/fragment/VideoTrimmingFragment;->a(Lkik/android/chat/fragment/VideoTrimmingFragment;Z)Z
 
-    .line 1289
+    .line 1302
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$3;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/VideoTrimmingFragment;->_videoView:Landroid/widget/VideoView;
 
     invoke-virtual {v0}, Landroid/widget/VideoView;->pause()V
 
-    .line 1290
+    .line 1303
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$3;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/VideoTrimmingFragment;->_videoView:Landroid/widget/VideoView;
@@ -115,28 +115,28 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/VideoView;->seekTo(I)V
 
-    .line 1291
+    .line 1304
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$3;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
     new-instance v1, Lkik/android/chat/fragment/VideoTrimmingFragment$3$2;
 
     invoke-direct {v1, p0}, Lkik/android/chat/fragment/VideoTrimmingFragment$3$2;-><init>(Lkik/android/chat/fragment/VideoTrimmingFragment$3;)V
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/VideoTrimmingFragment;->b(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/VideoTrimmingFragment;->runOnUiIfAttached(Ljava/lang/Runnable;)V
 
-    .line 1305
+    .line 1318
     :goto_0
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$3;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
-    invoke-static {v0}, Lkik/android/chat/fragment/VideoTrimmingFragment;->i(Lkik/android/chat/fragment/VideoTrimmingFragment;)Lkik/android/util/ap;
+    invoke-static {v0}, Lkik/android/chat/fragment/VideoTrimmingFragment;->i(Lkik/android/chat/fragment/VideoTrimmingFragment;)Lkik/android/util/aq;
 
-    .line 1306
+    .line 1319
     const/4 v0, 0x0
 
-    .line 262
+    .line 275
     return-object v0
 
-    .line 1301
+    .line 1314
     :cond_1
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$3;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 

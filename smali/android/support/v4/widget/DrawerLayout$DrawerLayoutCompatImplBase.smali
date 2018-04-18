@@ -34,7 +34,7 @@
     .locals 0
 
     .prologue
-    .line 311
+    .line 314
     return-void
 .end method
 
@@ -42,7 +42,7 @@
     .locals 0
 
     .prologue
-    .line 303
+    .line 304
     return-void
 .end method
 
@@ -50,7 +50,7 @@
     .locals 0
 
     .prologue
-    .line 307
+    .line 309
     return-void
 .end method
 
@@ -58,7 +58,7 @@
     .locals 1
 
     .prologue
-    .line 319
+    .line 323
     const/4 v0, 0x0
 
     return-object v0
@@ -68,7 +68,7 @@
     .locals 1
 
     .prologue
-    .line 314
+    .line 318
     const/4 v0, 0x0
 
     return v0

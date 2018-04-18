@@ -1,5 +1,5 @@
 .class final Lcom/kik/cards/web/CardsWebViewFragment$12$1$2;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
         "Ljava/lang/Void;",
         ">;"
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 280
+    .line 290
     iput-object p1, p0, Lcom/kik/cards/web/CardsWebViewFragment$12$1$2;->a:Lcom/kik/cards/web/CardsWebViewFragment$12$1;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -46,7 +46,7 @@
     .locals 3
 
     .prologue
-    .line 284
+    .line 294
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -61,7 +61,7 @@
 
     iget-object v2, v2, Lcom/kik/cards/web/CardsWebViewFragment$12;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
-    invoke-static {v2}, Lcom/kik/cards/web/CardsWebViewFragment;->d(Lcom/kik/cards/web/CardsWebViewFragment;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/kik/cards/web/CardsWebViewFragment;->e(Lcom/kik/cards/web/CardsWebViewFragment;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -75,8 +75,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
-
-    .line 285
+    .line 295
     return-void
 .end method

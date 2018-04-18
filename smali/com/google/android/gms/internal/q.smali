@@ -1,114 +1,26 @@
-.class abstract Lcom/google/android/gms/internal/q;
+.class final Lcom/google/android/gms/internal/q;
 .super Ljava/lang/Object;
 
 
-# annotations
-.annotation runtime Lcom/google/android/gms/internal/zzig;
-.end annotation
-
-
 # instance fields
-.field private final a:Ljava/lang/ref/WeakReference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/ref/WeakReference",
-            "<",
-            "Landroid/view/View;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public final a:Ljava/lang/String;
+
+.field public final b:J
+
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;JJ)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    iput-object p1, p0, Lcom/google/android/gms/internal/q;->a:Ljava/lang/String;
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    iput-wide p2, p0, Lcom/google/android/gms/internal/q;->b:J
 
-    iput-object v0, p0, Lcom/google/android/gms/internal/q;->a:Ljava/lang/ref/WeakReference;
+    iput-wide p4, p0, Lcom/google/android/gms/internal/q;->c:J
 
     return-void
-.end method
-
-.method private c()Landroid/view/ViewTreeObserver;
-    .locals 3
-
-    const/4 v1, 0x0
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/q;->a:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    if-nez v0, :cond_1
-
-    move-object v0, v1
-
-    :cond_0
-    :goto_0
-    return-object v0
-
-    :cond_1
-    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Landroid/view/ViewTreeObserver;->isAlive()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    :cond_2
-    move-object v0, v1
-
-    goto :goto_0
-.end method
-
-
-# virtual methods
-.method public final a()V
-    .locals 1
-
-    invoke-direct {p0}, Lcom/google/android/gms/internal/q;->c()Landroid/view/ViewTreeObserver;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/q;->a(Landroid/view/ViewTreeObserver;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method protected abstract a(Landroid/view/ViewTreeObserver;)V
-.end method
-
-.method public final b()V
-    .locals 1
-
-    invoke-direct {p0}, Lcom/google/android/gms/internal/q;->c()Landroid/view/ViewTreeObserver;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/q;->b(Landroid/view/ViewTreeObserver;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method protected abstract b(Landroid/view/ViewTreeObserver;)V
 .end method

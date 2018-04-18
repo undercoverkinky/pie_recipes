@@ -28,6 +28,8 @@
 
 .field public static final enum Inserted:Lkik/android/chat/vm/IListViewModel$ChangeType;
 
+.field public static final enum Modified:Lkik/android/chat/vm/IListViewModel$ChangeType;
+
 .field public static final enum Moved:Lkik/android/chat/vm/IListViewModel$ChangeType;
 
 .field public static final enum Reloaded:Lkik/android/chat/vm/IListViewModel$ChangeType;
@@ -37,9 +39,11 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 7
 
     .prologue
+    const/4 v6, 0x4
+
     const/4 v5, 0x3
 
     const/4 v4, 0x2
@@ -84,8 +88,17 @@
 
     sput-object v0, Lkik/android/chat/vm/IListViewModel$ChangeType;->Reloaded:Lkik/android/chat/vm/IListViewModel$ChangeType;
 
-    .line 8
-    const/4 v0, 0x4
+    .line 13
+    new-instance v0, Lkik/android/chat/vm/IListViewModel$ChangeType;
+
+    const-string v1, "Modified"
+
+    invoke-direct {v0, v1, v6}, Lkik/android/chat/vm/IListViewModel$ChangeType;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lkik/android/chat/vm/IListViewModel$ChangeType;->Modified:Lkik/android/chat/vm/IListViewModel$ChangeType;
+
+    .line 7
+    const/4 v0, 0x5
 
     new-array v0, v0, [Lkik/android/chat/vm/IListViewModel$ChangeType;
 
@@ -105,6 +118,10 @@
 
     aput-object v1, v0, v5
 
+    sget-object v1, Lkik/android/chat/vm/IListViewModel$ChangeType;->Modified:Lkik/android/chat/vm/IListViewModel$ChangeType;
+
+    aput-object v1, v0, v6
+
     sput-object v0, Lkik/android/chat/vm/IListViewModel$ChangeType;->$VALUES:[Lkik/android/chat/vm/IListViewModel$ChangeType;
 
     return-void
@@ -119,7 +136,7 @@
     .end annotation
 
     .prologue
-    .line 8
+    .line 7
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -129,7 +146,7 @@
     .locals 1
 
     .prologue
-    .line 8
+    .line 7
     const-class v0, Lkik/android/chat/vm/IListViewModel$ChangeType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -145,7 +162,7 @@
     .locals 1
 
     .prologue
-    .line 8
+    .line 7
     sget-object v0, Lkik/android/chat/vm/IListViewModel$ChangeType;->$VALUES:[Lkik/android/chat/vm/IListViewModel$ChangeType;
 
     invoke-virtual {v0}, [Lkik/android/chat/vm/IListViewModel$ChangeType;->clone()Ljava/lang/Object;

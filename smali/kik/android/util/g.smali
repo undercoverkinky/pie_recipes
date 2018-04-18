@@ -26,7 +26,7 @@
 
 
 # instance fields
-.field private f:Lkik/core/interfaces/af;
+.field private f:Lkik/core/interfaces/ag;
 
 
 # direct methods
@@ -84,18 +84,18 @@
     .locals 4
 
     .prologue
-    .line 433
+    .line 427
     :try_start_0
     new-instance v0, Ljava/io/FileOutputStream;
 
     invoke-direct {v0, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 434
+    .line 428
     const/16 v1, 0x400
 
     new-array v1, v1, [B
 
-    .line 436
+    .line 430
     :goto_0
     invoke-virtual {p0, v1}, Ljava/io/InputStream;->read([B)I
 
@@ -103,34 +103,28 @@
 
     if-lez v2, :cond_0
 
-    .line 437
+    .line 431
     const/4 v3, 0x0
 
     invoke-virtual {v0, v1, v3, v2}, Ljava/io/OutputStream;->write([BII)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 443
+    .line 439
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
-
-    .line 445
     :goto_1
     return-void
 
-    .line 439
+    .line 433
     :cond_0
-    :try_start_1
     invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
 
-    .line 440
+    .line 434
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_1
 .end method
@@ -223,75 +217,42 @@
 .end method
 
 .method private static e(Lkik/android/chat/fragment/KikScopedDialogFragment;)V
-    .locals 4
+    .locals 2
 
     .prologue
-    .line 217
+    .line 219
     sget-object v0, Lkik/android/util/g;->b:Ljava/io/File;
 
-    .line 1030
-    new-instance v1, Landroid/content/Intent;
-
-    const-string v2, "android.media.action.IMAGE_CAPTURE"
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
-
-    .line 1031
-    const-string v2, "output"
-
-    invoke-static {v0}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+    invoke-static {v0}, Lkik/android/util/j;->b(Ljava/io/File;)Landroid/content/Intent;
 
     move-result-object v0
 
-    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+    .line 220
+    const/16 v1, 0x285e
 
-    .line 218
-    const/16 v0, 0x285e
+    invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/KikScopedDialogFragment;->startActivityForResult(Landroid/content/Intent;I)V
 
-    invoke-virtual {p0, v1, v0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->startActivityForResult(Landroid/content/Intent;I)V
-
-    .line 219
+    .line 221
     return-void
 .end method
 
 .method private static f(Lkik/android/chat/fragment/KikScopedDialogFragment;)V
-    .locals 4
+    .locals 2
 
     .prologue
-    .line 223
+    .line 225
     sget-object v0, Lkik/android/util/g;->b:Ljava/io/File;
 
-    .line 2019
-    new-instance v1, Landroid/content/Intent;
-
-    const-string v2, "android.intent.action.PICK"
-
-    sget-object v3, Landroid/provider/MediaStore$Images$Media;->INTERNAL_CONTENT_URI:Landroid/net/Uri;
-
-    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
-
-    .line 2020
-    const-string v2, "image/*"
-
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 2021
-    const-string v2, "output"
-
-    invoke-static {v0}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+    invoke-static {v0}, Lkik/android/util/j;->a(Ljava/io/File;)Landroid/content/Intent;
 
     move-result-object v0
 
-    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+    .line 226
+    const/16 v1, 0x285f
 
-    .line 224
-    const/16 v0, 0x285f
+    invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/KikScopedDialogFragment;->startActivityForResult(Landroid/content/Intent;I)V
 
-    invoke-virtual {p0, v1, v0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->startActivityForResult(Landroid/content/Intent;I)V
-
-    .line 225
+    .line 227
     return-void
 .end method
 
@@ -396,19 +357,19 @@
     const-string v0, ""
 
     .line 113
-    iget-object v1, p0, Lkik/android/util/g;->f:Lkik/core/interfaces/af;
+    iget-object v1, p0, Lkik/android/util/g;->f:Lkik/core/interfaces/ag;
 
-    invoke-interface {v1}, Lkik/core/interfaces/af;->d()Lkik/core/datatypes/ad;
+    invoke-interface {v1}, Lkik/core/interfaces/ag;->d()Lkik/core/datatypes/aa;
 
     move-result-object v1
 
     .line 114
-    iget-object v2, v1, Lkik/core/datatypes/ad;->c:Ljava/lang/String;
+    iget-object v2, v1, Lkik/core/datatypes/aa;->c:Ljava/lang/String;
 
     if-eqz v2, :cond_3
 
     .line 115
-    iget-object v0, v1, Lkik/core/datatypes/ad;->c:Ljava/lang/String;
+    iget-object v0, v1, Lkik/core/datatypes/aa;->c:Ljava/lang/String;
 
     .line 117
     :cond_3
@@ -495,13 +456,13 @@
     .locals 0
 
     .prologue
-    .line 229
+    .line 231
     invoke-virtual {p0}, Lkik/android/util/g;->g()V
 
-    .line 230
+    .line 232
     invoke-static {p1}, Lkik/android/util/g;->e(Lkik/android/chat/fragment/KikScopedDialogFragment;)V
 
-    .line 231
+    .line 233
     return-void
 .end method
 
@@ -509,38 +470,38 @@
     .locals 6
 
     .prologue
-    const v5, 0x7f0a03c9
+    const v5, 0x7f0903dd
 
     const/4 v4, 0x1
 
     const/4 v3, 0x0
 
-    .line 184
+    .line 185
     invoke-virtual {p0}, Lkik/android/util/g;->g()V
 
-    .line 186
+    .line 187
     new-instance v1, Lkik/android/chat/fragment/KikDialogFragment$a;
 
     invoke-direct {v1}, Lkik/android/chat/fragment/KikDialogFragment$a;-><init>()V
 
-    .line 187
-    const v0, 0x7f0a042c
+    .line 188
+    const v0, 0x7f090440
 
     invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikDialogFragment$a;->a(I)Lkik/android/chat/fragment/KikDialogFragment$a;
 
-    .line 190
+    .line 191
     invoke-static {p2}, Lkik/android/util/DeviceUtils;->e(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 191
+    .line 192
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/CharSequence;
 
-    const v2, 0x7f0a0452
+    const v2, 0x7f090466
 
     invoke-virtual {p2, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -554,7 +515,7 @@
 
     aput-object v2, v0, v4
 
-    .line 199
+    .line 200
     :goto_0
     new-instance v2, Lkik/android/util/g$1;
 
@@ -562,7 +523,7 @@
 
     invoke-virtual {v1, v0, v2}, Lkik/android/chat/fragment/KikDialogFragment$a;->a([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lkik/android/chat/fragment/KikDialogFragment$a;
 
-    .line 212
+    .line 214
     invoke-virtual {v1}, Lkik/android/chat/fragment/KikDialogFragment$a;->a()Lkik/android/chat/fragment/KikDialogFragment;
 
     move-result-object v0
@@ -571,12 +532,12 @@
 
     const-string v2, "tag"
 
-    invoke-virtual {p1, v0, v1, v2}, Lkik/android/chat/fragment/KikScopedDialogFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;Lkik/android/chat/fragment/KikScopedDialogFragment$DialogScope;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, v1, v2}, Lkik/android/chat/fragment/KikScopedDialogFragment;->show(Lkik/android/chat/fragment/KikDialogFragment;Lkik/android/chat/fragment/KikScopedDialogFragment$DialogScope;Ljava/lang/String;)V
 
-    .line 213
+    .line 215
     return-void
 
-    .line 194
+    .line 195
     :cond_0
     new-array v0, v4, [Ljava/lang/CharSequence;
 
@@ -589,204 +550,18 @@
     goto :goto_0
 .end method
 
-.method public final a(Lkik/core/interfaces/af;)V
+.method public final a(Lkik/core/interfaces/ag;)V
     .locals 0
 
     .prologue
     .line 80
-    iput-object p1, p0, Lkik/android/util/g;->f:Lkik/core/interfaces/af;
+    iput-object p1, p0, Lkik/android/util/g;->f:Lkik/core/interfaces/ag;
 
     .line 81
     return-void
 .end method
 
-.method public final a(Landroid/app/Activity;[B)Z
-    .locals 5
-
-    .prologue
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    .line 506
-    invoke-direct {p0}, Lkik/android/util/g;->k()V
-
-    .line 507
-    const/4 v3, 0x0
-
-    .line 509
-    :try_start_0
-    new-instance v2, Ljava/io/FileOutputStream;
-
-    sget-object v4, Lkik/android/util/g;->b:Ljava/io/File;
-
-    invoke-direct {v2, v4}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 510
-    :try_start_1
-    invoke-virtual {v2, p2}, Ljava/io/FileOutputStream;->write([B)V
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_5
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    .line 520
-    :try_start_2
-    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
-
-    .line 530
-    :goto_0
-    sget-object v2, Lkik/android/util/g;->b:Ljava/io/File;
-
-    invoke-static {v2}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
-
-    move-result-object v2
-
-    sget-object v3, Lkik/android/util/g;->c:Ljava/io/File;
-
-    invoke-static {v3}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
-
-    move-result-object v3
-
-    invoke-static {p1, v2, v3}, Lkik/android/util/f;->a(Landroid/content/Context;Landroid/net/Uri;Landroid/net/Uri;)Landroid/content/Intent;
-
-    move-result-object v2
-
-    .line 532
-    const/16 v3, 0x2860
-
-    :try_start_3
-    invoke-virtual {p1, v2, v3}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
-    :try_end_3
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_3 .. :try_end_3} :catch_4
-
-    .line 538
-    :goto_1
-    return v0
-
-    .line 523
-    :catch_0
-    move-exception v2
-
-    invoke-static {v2}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    .line 512
-    :catch_1
-    move-exception v0
-
-    move-object v2, v3
-
-    .line 513
-    :goto_2
-    :try_start_4
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "could not write image: "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 514
-    const v0, 0x7f0a03e9
-
-    const/4 v3, 0x1
-
-    invoke-static {p1, v0, v3}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    .line 518
-    if-eqz v2, :cond_0
-
-    .line 520
-    :try_start_5
-    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
-    :try_end_5
-    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_2
-
-    :cond_0
-    :goto_3
-    move v0, v1
-
-    .line 515
-    goto :goto_1
-
-    .line 523
-    :catch_2
-    move-exception v0
-
-    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_3
-
-    .line 518
-    :catchall_0
-    move-exception v0
-
-    move-object v2, v3
-
-    :goto_4
-    if-eqz v2, :cond_1
-
-    .line 520
-    :try_start_6
-    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
-    :try_end_6
-    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
-
-    .line 524
-    :cond_1
-    :goto_5
-    throw v0
-
-    .line 523
-    :catch_3
-    move-exception v1
-
-    invoke-static {v1}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_5
-
-    .line 535
-    :catch_4
-    move-exception v0
-
-    invoke-virtual {p0}, Lkik/android/util/g;->g()V
-
-    move v0, v1
-
-    .line 536
-    goto :goto_1
-
-    .line 518
-    :catchall_1
-    move-exception v0
-
-    goto :goto_4
-
-    .line 512
-    :catch_5
-    move-exception v0
-
-    goto :goto_2
-.end method
-
-.method public final a(Landroid/support/v4/app/Fragment;Landroid/content/Context;ILandroid/content/Intent;Lkik/core/interfaces/o;)Z
+.method public final a(Landroid/support/v4/app/Fragment;Landroid/content/Context;ILandroid/content/Intent;Lkik/core/interfaces/n;)Z
     .locals 9
 
     .prologue
@@ -796,15 +571,15 @@
 
     const/4 v3, 0x0
 
-    .line 449
+    .line 443
     invoke-direct {p0}, Lkik/android/util/g;->k()V
 
-    .line 2488
+    .line 1481
     const/16 v0, 0x285e
 
     if-ne p3, v0, :cond_3
 
-    .line 2489
+    .line 1482
     if-eqz p4, :cond_0
 
     invoke-virtual {p4}, Landroid/content/Intent;->getData()Landroid/net/Uri;
@@ -822,13 +597,13 @@
 
     move-object v6, v0
 
-    .line 2490
+    .line 1483
     :goto_0
     invoke-virtual {v6}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2492
+    .line 1485
     const-string v1, "content"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -837,12 +612,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 2493
+    .line 1486
     invoke-virtual {p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 2494
+    .line 1487
     invoke-virtual {p4}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v1
@@ -861,22 +636,22 @@
 
     move-result-object v0
 
-    .line 2495
+    .line 1488
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 2496
+    .line 1489
     invoke-interface {v0, v8}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 2497
+    .line 1490
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 2500
+    .line 1493
     :cond_1
     new-instance v0, Ljava/io/File;
 
@@ -889,13 +664,10 @@
     :cond_2
     invoke-direct {v0, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p5, v0}, Lkik/core/interfaces/o;->a(Ljava/io/File;)Z
+    invoke-interface {p5, v0}, Lkik/core/interfaces/n;->a(Ljava/io/File;)Z
 
-    .line 451
+    .line 448
     :cond_3
-    invoke-static {}, Lkik/android/chat/fragment/KikPreferenceLaunchpad$b;->a()V
-
-    .line 455
     if-eqz p4, :cond_4
 
     invoke-virtual {p4}, Landroid/content/Intent;->getData()Landroid/net/Uri;
@@ -911,23 +683,21 @@
 
     move-result-object v0
 
-    move-object v1, v0
-
-    .line 459
+    .line 452
     :goto_1
-    if-eqz v1, :cond_6
+    if-eqz v0, :cond_6
 
-    .line 461
+    .line 454
     :try_start_0
     invoke-virtual {p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
+    invoke-virtual {v1, v0}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
 
-    move-result-object v0
+    move-result-object v1
 
-    .line 463
+    .line 456
     sget-object v2, Lkik/android/util/g;->d:Ljava/io/File;
 
     if-eqz v2, :cond_5
@@ -940,12 +710,12 @@
 
     if-eqz v2, :cond_5
 
-    .line 464
+    .line 457
     sget-object v2, Lkik/android/util/g;->d:Ljava/io/File;
 
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 467
+    .line 460
     :cond_5
     new-instance v2, Ljava/io/File;
 
@@ -957,41 +727,41 @@
 
     sput-object v2, Lkik/android/util/g;->d:Ljava/io/File;
 
-    .line 468
+    .line 461
     sget-object v2, Lkik/android/util/g;->d:Ljava/io/File;
 
-    invoke-static {v0, v2}, Lkik/android/util/g;->a(Ljava/io/InputStream;Ljava/io/File;)V
+    invoke-static {v1, v2}, Lkik/android/util/g;->a(Ljava/io/InputStream;Ljava/io/File;)V
     :try_end_0
-    .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 475
+    .line 468
     :cond_6
     :goto_2
-    sget-object v0, Lkik/android/util/g;->c:Ljava/io/File;
+    sget-object v1, Lkik/android/util/g;->c:Ljava/io/File;
 
-    invoke-static {v0}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+    invoke-static {v1}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    invoke-static {p2, v0, v1}, Lkik/android/util/f;->a(Landroid/content/Context;Landroid/net/Uri;Landroid/net/Uri;)Landroid/content/Intent;
 
     move-result-object v0
 
-    invoke-static {p2, v1, v0}, Lkik/android/util/f;->a(Landroid/content/Context;Landroid/net/Uri;Landroid/net/Uri;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    .line 477
+    .line 470
     const/16 v1, 0x2860
 
     :try_start_1
     invoke-virtual {p1, v0, v1}, Landroid/support/v4/app/Fragment;->startActivityForResult(Landroid/content/Intent;I)V
     :try_end_1
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
 
     move v0, v7
 
-    .line 483
+    .line 476
     :goto_3
     return v0
 
-    .line 2489
+    .line 1482
     :cond_7
     invoke-virtual {p4}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
@@ -1001,47 +771,42 @@
 
     goto/16 :goto_0
 
-    .line 455
+    .line 448
     :cond_8
     invoke-virtual {p4}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v0
 
-    move-object v1, v0
-
     goto :goto_1
 
-    .line 471
+    .line 473
     :catch_0
-    move-exception v0
-
-    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_2
-
-    .line 480
-    :catch_1
     move-exception v0
 
     invoke-virtual {p0}, Lkik/android/util/g;->g()V
 
     move v0, v8
 
-    .line 481
+    .line 474
     goto :goto_3
+
+    :catch_1
+    move-exception v1
+
+    goto :goto_2
 .end method
 
 .method public final b(Lkik/android/chat/fragment/KikScopedDialogFragment;)V
     .locals 0
 
     .prologue
-    .line 235
+    .line 237
     invoke-virtual {p0}, Lkik/android/util/g;->g()V
 
-    .line 236
+    .line 238
     invoke-static {p1}, Lkik/android/util/g;->f(Lkik/android/chat/fragment/KikScopedDialogFragment;)V
 
-    .line 237
+    .line 239
     return-void
 .end method
 
@@ -1066,10 +831,10 @@
     .locals 2
 
     .prologue
-    .line 278
+    .line 282
     invoke-direct {p0}, Lkik/android/util/g;->k()V
 
-    .line 279
+    .line 283
     new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
     sget-object v1, Lkik/android/util/g;->c:Ljava/io/File;
@@ -1087,10 +852,10 @@
     .locals 1
 
     .prologue
-    .line 284
+    .line 288
     invoke-direct {p0}, Lkik/android/util/g;->k()V
 
-    .line 285
+    .line 289
     sget-object v0, Lkik/android/util/g;->c:Ljava/io/File;
 
     invoke-static {v0}, Lkik/android/util/f;->a(Ljava/io/File;)Landroid/graphics/Bitmap;
@@ -1104,10 +869,10 @@
     .locals 1
 
     .prologue
-    .line 290
+    .line 294
     invoke-direct {p0}, Lkik/android/util/g;->k()V
 
-    .line 291
+    .line 295
     sget-object v0, Lkik/android/util/g;->c:Ljava/io/File;
 
     invoke-static {v0}, Lkik/android/util/f;->a(Ljava/io/File;)Landroid/graphics/Bitmap;
@@ -1131,10 +896,10 @@
     .locals 1
 
     .prologue
-    .line 296
+    .line 300
     invoke-direct {p0}, Lkik/android/util/g;->k()V
 
-    .line 297
+    .line 301
     sget-object v0, Lkik/android/util/g;->b:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
@@ -1143,12 +908,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 298
+    .line 302
     sget-object v0, Lkik/android/util/g;->b:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 300
+    .line 304
     :cond_0
     return-void
 .end method
@@ -1157,10 +922,10 @@
     .locals 1
 
     .prologue
-    .line 304
+    .line 308
     invoke-direct {p0}, Lkik/android/util/g;->k()V
 
-    .line 305
+    .line 309
     sget-object v0, Lkik/android/util/g;->c:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
@@ -1169,12 +934,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 306
+    .line 310
     sget-object v0, Lkik/android/util/g;->c:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 309
+    .line 313
     :cond_0
     sget-object v0, Lkik/android/util/g;->d:Ljava/io/File;
 
@@ -1188,12 +953,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 310
+    .line 314
     sget-object v0, Lkik/android/util/g;->d:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 312
+    .line 316
     :cond_1
     return-void
 .end method

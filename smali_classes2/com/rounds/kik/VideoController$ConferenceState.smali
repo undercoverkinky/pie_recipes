@@ -40,7 +40,7 @@
 
     const/4 v2, 0x0
 
-    .line 81
+    .line 146
     new-instance v0, Lcom/rounds/kik/VideoController$ConferenceState;
 
     const-string v1, "Offline"
@@ -57,7 +57,7 @@
 
     sput-object v0, Lcom/rounds/kik/VideoController$ConferenceState;->Online:Lcom/rounds/kik/VideoController$ConferenceState;
 
-    .line 80
+    .line 144
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/rounds/kik/VideoController$ConferenceState;
@@ -84,7 +84,7 @@
     .end annotation
 
     .prologue
-    .line 80
+    .line 144
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -94,7 +94,7 @@
     .locals 1
 
     .prologue
-    .line 80
+    .line 144
     const-class v0, Lcom/rounds/kik/VideoController$ConferenceState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -110,7 +110,7 @@
     .locals 1
 
     .prologue
-    .line 80
+    .line 144
     sget-object v0, Lcom/rounds/kik/VideoController$ConferenceState;->$VALUES:[Lcom/rounds/kik/VideoController$ConferenceState;
 
     invoke-virtual {v0}, [Lcom/rounds/kik/VideoController$ConferenceState;->clone()Ljava/lang/Object;

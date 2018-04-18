@@ -3,12 +3,18 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0xb
+.end annotation
+
+
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 25
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,7 +24,7 @@
     .locals 1
 
     .prologue
-    .line 39
+    .line 44
     invoke-interface {p0}, Landroid/view/MenuItem;->getActionView()Landroid/view/View;
 
     move-result-object v0
@@ -30,7 +36,7 @@
     .locals 1
 
     .prologue
-    .line 35
+    .line 40
     invoke-interface {p0, p1}, Landroid/view/MenuItem;->setActionView(I)Landroid/view/MenuItem;
 
     move-result-object v0
@@ -42,7 +48,7 @@
     .locals 1
 
     .prologue
-    .line 31
+    .line 36
     invoke-interface {p0, p1}, Landroid/view/MenuItem;->setActionView(Landroid/view/View;)Landroid/view/MenuItem;
 
     move-result-object v0
@@ -54,9 +60,9 @@
     .locals 0
 
     .prologue
-    .line 27
+    .line 32
     invoke-interface {p0, p1}, Landroid/view/MenuItem;->setShowAsAction(I)V
 
-    .line 28
+    .line 33
     return-void
 .end method

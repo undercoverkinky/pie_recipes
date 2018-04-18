@@ -11,7 +11,14 @@
 .end annotation
 
 
+# static fields
+.field public static final ASSET_NAME_VIDEO:Ljava/lang/String; = "_videoMediaView"
+
+
 # virtual methods
+.method public abstract destroy()V
+.end method
+
 .method public abstract getAvailableAssetNames()Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -31,6 +38,12 @@
 .end method
 
 .method public abstract getText(Ljava/lang/String;)Ljava/lang/CharSequence;
+.end method
+
+.method public abstract getVideoController()Lcom/google/android/gms/ads/VideoController;
+.end method
+
+.method public abstract getVideoMediaView()Lcom/google/android/gms/ads/formats/MediaView;
 .end method
 
 .method public abstract performClick(Ljava/lang/String;)V

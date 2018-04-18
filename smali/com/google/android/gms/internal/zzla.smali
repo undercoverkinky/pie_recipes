@@ -1,216 +1,261 @@
-.class public interface abstract Lcom/google/android/gms/internal/zzla;
-.super Ljava/lang/Object;
+.class public final Lcom/google/android/gms/internal/zzla;
+.super Lcom/google/android/gms/internal/zzee;
 
 # interfaces
-.implements Lcom/google/android/gms/ads/internal/zzs;
-.implements Lcom/google/android/gms/internal/zzbw;
-.implements Lcom/google/android/gms/internal/zzfk;
+.implements Lcom/google/android/gms/internal/zzky;
 
 
-# annotations
-.annotation runtime Lcom/google/android/gms/internal/zzig;
-.end annotation
+# direct methods
+.method constructor <init>(Landroid/os/IBinder;)V
+    .locals 1
+
+    const-string v0, "com.google.android.gms.ads.internal.client.IVideoController"
+
+    invoke-direct {p0, p1, v0}, Lcom/google/android/gms/internal/zzee;-><init>(Landroid/os/IBinder;Ljava/lang/String;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract destroy()V
-.end method
-
-.method public abstract getContext()Landroid/content/Context;
-.end method
-
-.method public abstract getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-.end method
-
-.method public abstract getLocationOnScreen([I)V
-.end method
-
-.method public abstract getMeasuredHeight()I
-.end method
-
-.method public abstract getMeasuredWidth()I
-.end method
-
-.method public abstract getParent()Landroid/view/ViewParent;
-.end method
-
-.method public abstract getRequestId()Ljava/lang/String;
-.end method
-
-.method public abstract getRequestedOrientation()I
-.end method
-
-.method public abstract getView()Landroid/view/View;
-.end method
-
-.method public abstract getWebView()Landroid/webkit/WebView;
-.end method
-
-.method public abstract isDestroyed()Z
-.end method
-
-.method public abstract loadData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-.end method
-
-.method public abstract loadDataWithBaseURL(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-.end method
-
-.method public abstract loadUrl(Ljava/lang/String;)V
-.end method
-
-.method public abstract measure(II)V
-.end method
-
-.method public abstract onPause()V
-.end method
-
-.method public abstract onResume()V
-.end method
-
-.method public abstract setBackgroundColor(I)V
-.end method
-
-.method public abstract setContext(Landroid/content/Context;)V
-.end method
-
-.method public abstract setOnClickListener(Landroid/view/View$OnClickListener;)V
-.end method
-
-.method public abstract setOnTouchListener(Landroid/view/View$OnTouchListener;)V
-.end method
-
-.method public abstract setRequestedOrientation(I)V
-.end method
-
-.method public abstract setWebChromeClient(Landroid/webkit/WebChromeClient;)V
-.end method
-
-.method public abstract setWebViewClient(Landroid/webkit/WebViewClient;)V
-.end method
-
-.method public abstract stopLoading()V
-.end method
-
-.method public abstract zzD(I)V
-.end method
-
-.method public abstract zzG(Z)V
-.end method
-
-.method public abstract zzH(Z)V
-.end method
-
-.method public abstract zzI(Z)V
-.end method
-
-.method public abstract zza(Landroid/content/Context;Lcom/google/android/gms/ads/internal/client/AdSizeParcel;Lcom/google/android/gms/internal/zzdc;)V
-.end method
-
-.method public abstract zza(Lcom/google/android/gms/ads/internal/client/AdSizeParcel;)V
-.end method
-
-.method public abstract zza(Lcom/google/android/gms/internal/zzlf;)V
-.end method
-
-.method public abstract zza(Ljava/lang/String;Ljava/util/Map;)V
-    .annotation system Ldalvik/annotation/Signature;
+.method public final getAspectRatio()F
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
         value = {
-            "(",
-            "Ljava/lang/String;",
-            "Ljava/util/Map",
-            "<",
-            "Ljava/lang/String;",
-            "*>;)V"
+            Landroid/os/RemoteException;
         }
     .end annotation
+
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    const/16 v1, 0x9
+
+    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zza(ILandroid/os/Parcel;)Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->readFloat()F
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return v1
 .end method
 
-.method public abstract zza(Ljava/lang/String;Lorg/json/JSONObject;)V
+.method public final getPlaybackState()I
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    const/4 v1, 0x5
+
+    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zza(ILandroid/os/Parcel;)Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return v1
 .end method
 
-.method public abstract zzaX(Ljava/lang/String;)V
+.method public final isCustomControlsEnabled()Z
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    const/16 v1, 0xa
+
+    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zza(ILandroid/os/Parcel;)Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzeg;->zza(Landroid/os/Parcel;)Z
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return v1
 .end method
 
-.method public abstract zzaY(Ljava/lang/String;)V
+.method public final isMuted()Z
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    const/4 v1, 0x4
+
+    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zza(ILandroid/os/Parcel;)Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzeg;->zza(Landroid/os/Parcel;)Z
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return v1
 .end method
 
-.method public abstract zzb(Lcom/google/android/gms/ads/internal/overlay/zzd;)V
+.method public final mute(Z)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Lcom/google/android/gms/internal/zzeg;->zza(Landroid/os/Parcel;Z)V
+
+    const/4 v1, 0x3
+
+    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zzb(ILandroid/os/Parcel;)V
+
+    return-void
 .end method
 
-.method public abstract zzbi()Lcom/google/android/gms/ads/internal/client/AdSizeParcel;
+.method public final pause()V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zzb(ILandroid/os/Parcel;)V
+
+    return-void
 .end method
 
-.method public abstract zzc(Lcom/google/android/gms/ads/internal/overlay/zzd;)V
+.method public final play()V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zzb(ILandroid/os/Parcel;)V
+
+    return-void
 .end method
 
-.method public abstract zzgO()Z
+.method public final zza(Lcom/google/android/gms/internal/zzlb;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Lcom/google/android/gms/internal/zzeg;->zza(Landroid/os/Parcel;Landroid/os/IInterface;)V
+
+    const/16 v1, 0x8
+
+    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zzb(ILandroid/os/Parcel;)V
+
+    return-void
 .end method
 
-.method public abstract zzgu()V
+.method public final zzhx()F
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    const/4 v1, 0x6
+
+    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zza(ILandroid/os/Parcel;)Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->readFloat()F
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return v1
 .end method
 
-.method public abstract zzh(Ljava/lang/String;Ljava/lang/String;)V
-.end method
+.method public final zzhy()F
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
 
-.method public abstract zzjA()Lcom/google/android/gms/ads/internal/zzd;
-.end method
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
 
-.method public abstract zzjB()Lcom/google/android/gms/ads/internal/overlay/zzd;
-.end method
+    move-result-object v0
 
-.method public abstract zzjC()Lcom/google/android/gms/ads/internal/overlay/zzd;
-.end method
+    const/4 v1, 0x7
 
-.method public abstract zzjD()Lcom/google/android/gms/internal/zzlb;
-.end method
+    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zza(ILandroid/os/Parcel;)Landroid/os/Parcel;
 
-.method public abstract zzjE()Z
-.end method
+    move-result-object v0
 
-.method public abstract zzjF()Lcom/google/android/gms/internal/zzaq;
-.end method
+    invoke-virtual {v0}, Landroid/os/Parcel;->readFloat()F
 
-.method public abstract zzjG()Lcom/google/android/gms/ads/internal/util/client/VersionInfoParcel;
-.end method
+    move-result v1
 
-.method public abstract zzjH()Z
-.end method
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-.method public abstract zzjI()V
-.end method
-
-.method public abstract zzjJ()Z
-.end method
-
-.method public abstract zzjK()Lcom/google/android/gms/internal/zzkz;
-.end method
-
-.method public abstract zzjL()Lcom/google/android/gms/internal/zzda;
-.end method
-
-.method public abstract zzjM()Lcom/google/android/gms/internal/zzdb;
-.end method
-
-.method public abstract zzjN()Lcom/google/android/gms/internal/zzlf;
-.end method
-
-.method public abstract zzjO()V
-.end method
-
-.method public abstract zzjP()V
-.end method
-
-.method public abstract zzjQ()Landroid/view/View$OnClickListener;
-.end method
-
-.method public abstract zzjw()V
-.end method
-
-.method public abstract zzjx()V
-.end method
-
-.method public abstract zzjy()Landroid/app/Activity;
-.end method
-
-.method public abstract zzjz()Landroid/content/Context;
+    return v1
 .end method

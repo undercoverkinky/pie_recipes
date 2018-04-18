@@ -4,7 +4,8 @@ package common.abtesting.v1;
 option java_package = "com.kik.abtesting.rpc";
 option objc_class_prefix = "XIAB";
 
-import "common_model.proto";
+option go_package = "github.com/kikinteractive/xiphias-model-common/generated/go/abtesting/v1;abtesting";
+
 import "protobuf_validation.proto";
 
 //*************************************************************************************************

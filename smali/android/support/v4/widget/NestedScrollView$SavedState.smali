@@ -36,7 +36,7 @@
     .locals 1
 
     .prologue
-    .line 1867
+    .line 1875
     new-instance v0, Landroid/support/v4/widget/NestedScrollView$SavedState$1;
 
     invoke-direct {v0}, Landroid/support/v4/widget/NestedScrollView$SavedState$1;-><init>()V
@@ -46,21 +46,21 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;)V
+.method constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
     .prologue
-    .line 1850
+    .line 1858
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 1851
+    .line 1859
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/support/v4/widget/NestedScrollView$SavedState;->scrollPosition:I
 
-    .line 1852
+    .line 1860
     return-void
 .end method
 
@@ -68,10 +68,10 @@
     .locals 0
 
     .prologue
-    .line 1846
+    .line 1854
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 1847
+    .line 1855
     return-void
 .end method
 
@@ -81,13 +81,14 @@
     .locals 2
 
     .prologue
-    .line 1862
+    .line 1870
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "HorizontalScrollView.SavedState{"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 1871
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -129,14 +130,14 @@
     .locals 1
 
     .prologue
-    .line 1856
+    .line 1864
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 1857
+    .line 1865
     iget v0, p0, Landroid/support/v4/widget/NestedScrollView$SavedState;->scrollPosition:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1858
+    .line 1866
     return-void
 .end method

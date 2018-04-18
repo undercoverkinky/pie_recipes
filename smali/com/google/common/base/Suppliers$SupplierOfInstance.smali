@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/google/common/base/m;
+.implements Lcom/google/common/base/Supplier;
 .implements Ljava/io/Serializable;
 
 
@@ -23,7 +23,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/google/common/base/m",
+        "Lcom/google/common/base/Supplier",
         "<TT;>;",
         "Ljava/io/Serializable;"
     }
@@ -58,33 +58,18 @@
     .end annotation
 
     .prologue
-    .line 226
+    .line 260
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 227
+    .line 261
     iput-object p1, p0, Lcom/google/common/base/Suppliers$SupplierOfInstance;->instance:Ljava/lang/Object;
 
-    .line 228
+    .line 262
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()TT;"
-        }
-    .end annotation
-
-    .prologue
-    .line 231
-    iget-object v0, p0, Lcom/google/common/base/Suppliers$SupplierOfInstance;->instance:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
     .param p1    # Ljava/lang/Object;
@@ -93,24 +78,24 @@
     .end param
 
     .prologue
-    .line 235
+    .line 271
     instance-of v0, p1, Lcom/google/common/base/Suppliers$SupplierOfInstance;
 
     if-eqz v0, :cond_0
 
-    .line 236
+    .line 272
     check-cast p1, Lcom/google/common/base/Suppliers$SupplierOfInstance;
 
-    .line 237
+    .line 273
     iget-object v0, p0, Lcom/google/common/base/Suppliers$SupplierOfInstance;->instance:Ljava/lang/Object;
 
     iget-object v1, p1, Lcom/google/common/base/Suppliers$SupplierOfInstance;->instance:Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/google/common/base/g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lcom/google/common/base/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 239
+    .line 275
     :goto_0
     return v0
 
@@ -120,11 +105,26 @@
     goto :goto_0
 .end method
 
+.method public get()Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
+
+    .prologue
+    .line 266
+    iget-object v0, p0, Lcom/google/common/base/Suppliers$SupplierOfInstance;->instance:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
 .method public hashCode()I
     .locals 3
 
     .prologue
-    .line 243
+    .line 280
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -135,47 +135,27 @@
 
     aput-object v2, v0, v1
 
-    .line 1084
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    invoke-static {v0}, Lcom/google/common/base/Objects;->hashCode([Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 243
     return v0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
     .prologue
-    .line 247
-    iget-object v0, p0, Lcom/google/common/base/Suppliers$SupplierOfInstance;->instance:Ljava/lang/Object;
+    .line 285
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    const-string v1, "Suppliers.ofInstance("
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    iget-object v1, p0, Lcom/google/common/base/Suppliers$SupplierOfInstance;->instance:Ljava/lang/Object;
 
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, 0x16
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v2, "Suppliers.ofInstance("
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

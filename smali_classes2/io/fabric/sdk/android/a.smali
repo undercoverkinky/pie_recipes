@@ -88,6 +88,7 @@
 
     iget-object v0, p0, Lio/fabric/sdk/android/a;->b:Lio/fabric/sdk/android/a$a;
 
+    .line 69
     invoke-static {v0, p1}, Lio/fabric/sdk/android/a$a;->a(Lio/fabric/sdk/android/a$a;Lio/fabric/sdk/android/a$b;)Z
 
     move-result v0
@@ -102,5 +103,6 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 68
     goto :goto_0
 .end method

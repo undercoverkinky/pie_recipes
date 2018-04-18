@@ -11,7 +11,7 @@
 
 
 # instance fields
-.field private final b:Lio/fabric/sdk/android/services/c/a;
+.field private final b:Lio/fabric/sdk/android/services/b/a;
 
 .field private final c:Lio/fabric/sdk/android/services/common/j;
 
@@ -31,22 +31,22 @@
     return-void
 .end method
 
-.method public constructor <init>(Lio/fabric/sdk/android/services/c/a;)V
+.method public constructor <init>(Lio/fabric/sdk/android/services/b/a;)V
     .locals 1
 
     .prologue
     .line 24
-    new-instance v0, Lio/fabric/sdk/android/services/common/p;
+    new-instance v0, Lio/fabric/sdk/android/services/common/q;
 
-    invoke-direct {v0}, Lio/fabric/sdk/android/services/common/p;-><init>()V
+    invoke-direct {v0}, Lio/fabric/sdk/android/services/common/q;-><init>()V
 
-    invoke-direct {p0, p1, v0}, Lcom/crashlytics/android/ndk/k;-><init>(Lio/fabric/sdk/android/services/c/a;Lio/fabric/sdk/android/services/common/j;)V
+    invoke-direct {p0, p1, v0}, Lcom/crashlytics/android/ndk/k;-><init>(Lio/fabric/sdk/android/services/b/a;Lio/fabric/sdk/android/services/common/j;)V
 
     .line 25
     return-void
 .end method
 
-.method private constructor <init>(Lio/fabric/sdk/android/services/c/a;Lio/fabric/sdk/android/services/common/j;)V
+.method private constructor <init>(Lio/fabric/sdk/android/services/b/a;Lio/fabric/sdk/android/services/common/j;)V
     .locals 0
 
     .prologue
@@ -54,7 +54,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 28
-    iput-object p1, p0, Lcom/crashlytics/android/ndk/k;->b:Lio/fabric/sdk/android/services/c/a;
+    iput-object p1, p0, Lcom/crashlytics/android/ndk/k;->b:Lio/fabric/sdk/android/services/b/a;
 
     .line 29
     iput-object p2, p0, Lcom/crashlytics/android/ndk/k;->c:Lio/fabric/sdk/android/services/common/j;
@@ -90,9 +90,9 @@
 
     .prologue
     .line 77
-    iget-object v0, p0, Lcom/crashlytics/android/ndk/k;->b:Lio/fabric/sdk/android/services/c/a;
+    iget-object v0, p0, Lcom/crashlytics/android/ndk/k;->b:Lio/fabric/sdk/android/services/b/a;
 
-    invoke-interface {v0}, Lio/fabric/sdk/android/services/c/a;->a()Ljava/io/File;
+    invoke-interface {v0}, Lio/fabric/sdk/android/services/b/a;->a()Ljava/io/File;
 
     move-result-object v0
 

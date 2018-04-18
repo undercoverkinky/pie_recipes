@@ -49,6 +49,34 @@
 
 
 # virtual methods
+.method final a(Landroid/support/v7/widget/RecyclerView$State;)Z
+    .locals 2
+
+    .prologue
+    .line 90
+    iget v0, p0, Landroid/support/v7/widget/LayoutState;->c:I
+
+    if-ltz v0, :cond_0
+
+    iget v0, p0, Landroid/support/v7/widget/LayoutState;->c:I
+
+    invoke-virtual {p1}, Landroid/support/v7/widget/RecyclerView$State;->getItemCount()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public toString()Ljava/lang/String;
     .locals 2
 

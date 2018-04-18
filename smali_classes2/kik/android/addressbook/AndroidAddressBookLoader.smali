@@ -72,7 +72,7 @@
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     .line 45
-    invoke-static {p1}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    invoke-static {p1}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -167,7 +167,7 @@
     sget-object v2, Landroid/provider/ContactsContract$Data;->CONTENT_URI:Landroid/net/Uri;
 
     .line 1099
-    invoke-static {v5}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    invoke-static {v5}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v4
 
@@ -205,7 +205,7 @@
     invoke-direct {v6, v7}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     .line 1112
-    invoke-static {v5}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    invoke-static {v5}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v7
 

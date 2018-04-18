@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public varargs abstract a(Ljava/lang/String;[Ljava/lang/String;)V
+.method public abstract a(Landroid/view/KeyEvent;)Z
 .end method

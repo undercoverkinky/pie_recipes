@@ -1,9 +1,6 @@
 .class final Lkik/android/chat/vm/messaging/AbstractMessageViewModel$2;
-.super Ljava/lang/Object;
+.super Lcom/kik/events/k;
 .source "SourceFile"
-
-# interfaces
-.implements Lkik/android/chat/vm/u;
 
 
 # annotations
@@ -14,6 +11,15 @@
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x0
     name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/kik/events/k",
+        "<",
+        "Ljava/lang/Boolean;",
+        ">;"
+    }
 .end annotation
 
 
@@ -28,66 +34,38 @@
     .locals 0
 
     .prologue
-    .line 181
+    .line 216
     iput-object p1, p0, Lkik/android/chat/vm/messaging/AbstractMessageViewModel$2;->b:Lkik/android/chat/vm/messaging/AbstractMessageViewModel;
 
     iput-object p2, p0, Lkik/android/chat/vm/messaging/AbstractMessageViewModel$2;->a:Ljava/lang/String;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 186
-    const-string v0, "Tag Link"
-
-    return-object v0
-.end method
-
-.method public final b()Ljava/lang/String;
+.method public final synthetic b(Ljava/lang/Object;)V
     .locals 2
 
     .prologue
-    .line 192
-    iget-object v0, p0, Lkik/android/chat/vm/messaging/AbstractMessageViewModel$2;->a:Ljava/lang/String;
+    .line 216
+    check-cast p1, Ljava/lang/Boolean;
 
-    const/4 v1, 0x1
+    .line 1220
+    iget-object v0, p0, Lkik/android/chat/vm/messaging/AbstractMessageViewModel$2;->b:Lkik/android/chat/vm/messaging/AbstractMessageViewModel;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-static {v0}, Lkik/android/chat/vm/messaging/AbstractMessageViewModel;->f(Lkik/android/chat/vm/messaging/AbstractMessageViewModel;)Lkik/android/chat/vm/bd;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    new-instance v1, Lkik/android/chat/vm/messaging/AbstractMessageViewModel$2$1;
 
-.method public final c()Z
-    .locals 1
+    invoke-direct {v1, p0, p1}, Lkik/android/chat/vm/messaging/AbstractMessageViewModel$2$1;-><init>(Lkik/android/chat/vm/messaging/AbstractMessageViewModel$2;Ljava/lang/Boolean;)V
 
-    .prologue
-    .line 198
-    iget-object v0, p0, Lkik/android/chat/vm/messaging/AbstractMessageViewModel$2;->b:Lkik/android/chat/vm/messaging/AbstractMessageViewModel;
+    invoke-interface {v0, v1}, Lkik/android/chat/vm/bd;->a(Lkik/android/chat/vm/bi;)V
 
-    iget-object v0, v0, Lkik/android/chat/vm/messaging/AbstractMessageViewModel;->p:Lkik/core/g/c;
-
-    invoke-interface {v0}, Lkik/core/g/c;->a()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+    .line 216
+    return-void
 .end method

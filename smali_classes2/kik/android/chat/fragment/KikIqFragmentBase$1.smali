@@ -1,11 +1,11 @@
 .class final Lkik/android/chat/fragment/KikIqFragmentBase$1;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/KikIqFragmentBase;->a(Ljava/util/concurrent/Callable;Ljava/lang/String;)Lcom/kik/events/Promise;
+    value = Lkik/android/chat/fragment/KikIqFragmentBase;->sendRequest(Ljava/util/concurrent/Callable;Ljava/lang/String;Z)Lcom/kik/events/Promise;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<TT;>;"
     }
 .end annotation
@@ -33,7 +33,7 @@
     .line 77
     iput-object p1, p0, Lkik/android/chat/fragment/KikIqFragmentBase$1;->a:Lkik/android/chat/fragment/KikIqFragmentBase;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -100,10 +100,7 @@
     :cond_0
     iget-object v0, p0, Lkik/android/chat/fragment/KikIqFragmentBase$1;->a:Lkik/android/chat/fragment/KikIqFragmentBase;
 
-    .line 1162
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikIqFragmentBase;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikIqFragmentBase;->resignWaitDialog()V
 
     goto :goto_0
 .end method

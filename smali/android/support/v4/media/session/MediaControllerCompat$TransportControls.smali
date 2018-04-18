@@ -19,10 +19,10 @@
     .locals 0
 
     .prologue
-    .line 572
+    .line 868
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 573
+    .line 869
     return-void
 .end method
 
@@ -46,6 +46,18 @@
 .method public abstract playFromUri(Landroid/net/Uri;Landroid/os/Bundle;)V
 .end method
 
+.method public abstract prepare()V
+.end method
+
+.method public abstract prepareFromMediaId(Ljava/lang/String;Landroid/os/Bundle;)V
+.end method
+
+.method public abstract prepareFromSearch(Ljava/lang/String;Landroid/os/Bundle;)V
+.end method
+
+.method public abstract prepareFromUri(Landroid/net/Uri;Landroid/os/Bundle;)V
+.end method
+
 .method public abstract rewind()V
 .end method
 
@@ -58,7 +70,16 @@
 .method public abstract sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
 .end method
 
+.method public abstract setCaptioningEnabled(Z)V
+.end method
+
 .method public abstract setRating(Landroid/support/v4/media/RatingCompat;)V
+.end method
+
+.method public abstract setRepeatMode(I)V
+.end method
+
+.method public abstract setShuffleModeEnabled(Z)V
 .end method
 
 .method public abstract skipToNext()V

@@ -86,6 +86,7 @@
 
     const-string v3, "status"
 
+    .line 36
     invoke-virtual {v2, v3, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0

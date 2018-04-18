@@ -193,7 +193,7 @@
 
     .prologue
     .line 287
-    invoke-static {}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->a()Lcom/google/protobuf/Descriptors$Descriptor;
+    invoke-static {}, Lcom/kik/messagepath/model/VisibilityRules$VisibilityRulesAttachment;->getDescriptor()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
 

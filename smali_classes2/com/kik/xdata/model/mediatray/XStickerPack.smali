@@ -103,25 +103,6 @@
 
 
 # virtual methods
-.method public final a()Lcom/dyuproject/protostuff/u;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/dyuproject/protostuff/u",
-            "<",
-            "Lcom/kik/xdata/model/mediatray/XStickerPack;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 233
-    sget-object v0, Lcom/kik/xdata/model/mediatray/XStickerPack;->b:Lcom/dyuproject/protostuff/u;
-
-    return-object v0
-.end method
-
 .method public final a(Ljava/lang/Boolean;)Lcom/kik/xdata/model/mediatray/XStickerPack;
     .locals 0
 
@@ -176,6 +157,16 @@
     return-object p0
 .end method
 
+.method public final a()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 60
+    iget-object v0, p0, Lcom/kik/xdata/model/mediatray/XStickerPack;->title:Ljava/lang/String;
+
+    return-object v0
+.end method
+
 .method public final b(Ljava/lang/String;)Lcom/kik/xdata/model/mediatray/XStickerPack;
     .locals 0
 
@@ -191,8 +182,8 @@
     .locals 1
 
     .prologue
-    .line 60
-    iget-object v0, p0, Lcom/kik/xdata/model/mediatray/XStickerPack;->title:Ljava/lang/String;
+    .line 73
+    iget-object v0, p0, Lcom/kik/xdata/model/mediatray/XStickerPack;->icon:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -212,8 +203,27 @@
     .locals 1
 
     .prologue
-    .line 73
-    iget-object v0, p0, Lcom/kik/xdata/model/mediatray/XStickerPack;->icon:Ljava/lang/String;
+    .line 86
+    iget-object v0, p0, Lcom/kik/xdata/model/mediatray/XStickerPack;->storeLink:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final cachedSchema()Lcom/dyuproject/protostuff/u;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/dyuproject/protostuff/u",
+            "<",
+            "Lcom/kik/xdata/model/mediatray/XStickerPack;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 233
+    sget-object v0, Lcom/kik/xdata/model/mediatray/XStickerPack;->b:Lcom/dyuproject/protostuff/u;
 
     return-object v0
 .end method
@@ -229,28 +239,7 @@
     return-object p0
 .end method
 
-.method public final d()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 86
-    iget-object v0, p0, Lcom/kik/xdata/model/mediatray/XStickerPack;->storeLink:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final e(Ljava/lang/String;)Lcom/kik/xdata/model/mediatray/XStickerPack;
-    .locals 0
-
-    .prologue
-    .line 148
-    iput-object p1, p0, Lcom/kik/xdata/model/mediatray/XStickerPack;->packDescription:Ljava/lang/String;
-
-    .line 149
-    return-object p0
-.end method
-
-.method public final e()Ljava/util/List;
+.method public final d()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -269,7 +258,18 @@
     return-object v0
 .end method
 
-.method public final f()Ljava/lang/String;
+.method public final e(Ljava/lang/String;)Lcom/kik/xdata/model/mediatray/XStickerPack;
+    .locals 0
+
+    .prologue
+    .line 148
+    iput-object p1, p0, Lcom/kik/xdata/model/mediatray/XStickerPack;->packDescription:Ljava/lang/String;
+
+    .line 149
+    return-object p0
+.end method
+
+.method public final e()Ljava/lang/String;
     .locals 1
 
     .prologue
@@ -279,7 +279,7 @@
     return-object v0
 .end method
 
-.method public final g()Ljava/lang/String;
+.method public final f()Ljava/lang/String;
     .locals 1
 
     .prologue
@@ -289,7 +289,7 @@
     return-object v0
 .end method
 
-.method public final h()Ljava/lang/String;
+.method public final g()Ljava/lang/String;
     .locals 1
 
     .prologue
@@ -299,7 +299,7 @@
     return-object v0
 .end method
 
-.method public final i()Ljava/lang/Integer;
+.method public final h()Ljava/lang/Integer;
     .locals 1
 
     .prologue
@@ -309,7 +309,7 @@
     return-object v0
 .end method
 
-.method public final j()Ljava/lang/Boolean;
+.method public final i()Ljava/lang/Boolean;
     .locals 1
 
     .prologue

@@ -32,12 +32,12 @@
     .locals 1
 
     .prologue
-    .line 2311
+    .line 2336
     iput-object p1, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2312
+    .line 2337
     const/4 v0, 0x0
 
     iput v0, p0, Lio/branch/referral/Branch$a;->b:I
@@ -49,7 +49,7 @@
     .locals 0
 
     .prologue
-    .line 2311
+    .line 2336
     invoke-direct {p0, p1}, Lio/branch/referral/Branch$a;-><init>(Lio/branch/referral/Branch;)V
 
     return-void
@@ -61,12 +61,12 @@
     .locals 2
 
     .prologue
-    .line 2317
+    .line 2342
     iget-object v1, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
     iget-object v0, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
-    invoke-static {v0}, Lio/branch/referral/Branch;->e(Lio/branch/referral/Branch;)Z
+    invoke-static {v0}, Lio/branch/referral/Branch;->d(Lio/branch/referral/Branch;)Z
 
     move-result v0
 
@@ -77,8 +77,8 @@
     :goto_0
     invoke-static {v1, v0}, Lio/branch/referral/Branch;->a(Lio/branch/referral/Branch;Lio/branch/referral/Branch$INTENT_STATE;)Lio/branch/referral/Branch$INTENT_STATE;
 
-    .line 2318
-    invoke-static {}, Lio/branch/referral/j;->a()Lio/branch/referral/j;
+    .line 2343
+    invoke-static {}, Lio/branch/referral/i;->a()Lio/branch/referral/i;
 
     move-result-object v0
 
@@ -86,24 +86,24 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/branch/referral/j;->b(Landroid/content/Context;)Z
+    invoke-virtual {v0, v1}, Lio/branch/referral/i;->b(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2319
-    invoke-static {}, Lio/branch/referral/j;->a()Lio/branch/referral/j;
+    .line 2344
+    invoke-static {}, Lio/branch/referral/i;->a()Lio/branch/referral/i;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lio/branch/referral/j;->a(Landroid/content/Context;)Z
+    invoke-virtual {v0, p1}, Lio/branch/referral/i;->a(Landroid/content/Context;)Z
 
-    .line 2321
+    .line 2346
     :cond_0
     return-void
 
-    .line 2317
+    .line 2342
     :cond_1
     sget-object v0, Lio/branch/referral/Branch$INTENT_STATE;->READY:Lio/branch/referral/Branch$INTENT_STATE;
 
@@ -114,16 +114,16 @@
     .locals 1
 
     .prologue
-    .line 2389
+    .line 2416
     iget-object v0, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
-    iget-object v0, v0, Lio/branch/referral/Branch;->b:Ljava/lang/ref/WeakReference;
+    iget-object v0, v0, Lio/branch/referral/Branch;->c:Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
-    iget-object v0, v0, Lio/branch/referral/Branch;->b:Ljava/lang/ref/WeakReference;
+    iget-object v0, v0, Lio/branch/referral/Branch;->c:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -131,22 +131,22 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 2390
+    .line 2417
     iget-object v0, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
-    iget-object v0, v0, Lio/branch/referral/Branch;->b:Ljava/lang/ref/WeakReference;
+    iget-object v0, v0, Lio/branch/referral/Branch;->c:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->clear()V
 
-    .line 2392
+    .line 2419
     :cond_0
-    invoke-static {}, Lio/branch/referral/j;->a()Lio/branch/referral/j;
+    invoke-static {}, Lio/branch/referral/i;->a()Lio/branch/referral/i;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lio/branch/referral/j;->a(Landroid/app/Activity;)V
+    invoke-virtual {v0, p1}, Lio/branch/referral/i;->a(Landroid/app/Activity;)V
 
-    .line 2393
+    .line 2420
     return-void
 .end method
 
@@ -154,7 +154,7 @@
     .locals 2
 
     .prologue
-    .line 2369
+    .line 2396
     iget-object v0, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
     invoke-static {v0}, Lio/branch/referral/Branch;->g(Lio/branch/referral/Branch;)Lio/branch/referral/ShareLinkManager;
@@ -163,7 +163,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2370
+    .line 2397
     iget-object v0, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
     invoke-static {v0}, Lio/branch/referral/Branch;->g(Lio/branch/referral/Branch;)Lio/branch/referral/ShareLinkManager;
@@ -188,7 +188,7 @@
 
     invoke-virtual {v0}, Lio/branch/referral/a;->cancel()V
 
-    .line 2372
+    .line 2399
     :cond_0
     return-void
 .end method
@@ -197,7 +197,7 @@
     .locals 2
 
     .prologue
-    .line 2355
+    .line 2380
     invoke-virtual {p1}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -208,19 +208,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 2356
+    .line 2381
     iget-object v0, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
     sget-object v1, Lio/branch/referral/Branch$SESSION_STATE;->UNINITIALISED:Lio/branch/referral/Branch$SESSION_STATE;
 
     invoke-static {v0, v1}, Lio/branch/referral/Branch;->a(Lio/branch/referral/Branch;Lio/branch/referral/Branch$SESSION_STATE;)Lio/branch/referral/Branch$SESSION_STATE;
 
-    .line 2357
+    .line 2382
     iget-object v0, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
     invoke-static {v0, p1}, Lio/branch/referral/Branch;->a(Lio/branch/referral/Branch;Landroid/app/Activity;)V
 
-    .line 2359
+    .line 2384
     :cond_0
     iget-object v0, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
@@ -228,39 +228,65 @@
 
     invoke-direct {v1, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v1, v0, Lio/branch/referral/Branch;->b:Ljava/lang/ref/WeakReference;
+    iput-object v1, v0, Lio/branch/referral/Branch;->c:Ljava/lang/ref/WeakReference;
 
-    .line 2360
+    .line 2385
     iget-object v0, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
-    invoke-static {v0}, Lio/branch/referral/Branch;->e(Lio/branch/referral/Branch;)Z
+    invoke-static {v0}, Lio/branch/referral/Branch;->d(Lio/branch/referral/Branch;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 2361
+    .line 2386
     iget-object v0, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
     sget-object v1, Lio/branch/referral/Branch$INTENT_STATE;->READY:Lio/branch/referral/Branch$INTENT_STATE;
 
     invoke-static {v0, v1}, Lio/branch/referral/Branch;->a(Lio/branch/referral/Branch;Lio/branch/referral/Branch$INTENT_STATE;)Lio/branch/referral/Branch$INTENT_STATE;
 
-    .line 2362
+    .line 2388
+    invoke-virtual {p1}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
     iget-object v0, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
-    invoke-static {v0, p1}, Lio/branch/referral/Branch;->b(Lio/branch/referral/Branch;Landroid/app/Activity;)V
+    invoke-static {v0}, Lio/branch/referral/Branch;->e(Lio/branch/referral/Branch;)Lio/branch/referral/Branch$SESSION_STATE;
 
-    .line 2364
+    move-result-object v0
+
+    sget-object v1, Lio/branch/referral/Branch$SESSION_STATE;->INITIALISED:Lio/branch/referral/Branch$SESSION_STATE;
+
+    if-eq v0, v1, :cond_2
+
+    const/4 v0, 0x1
+
+    .line 2389
+    :goto_0
+    iget-object v1, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
+
+    invoke-static {v1, p1, v0}, Lio/branch/referral/Branch;->a(Lio/branch/referral/Branch;Landroid/app/Activity;Z)V
+
+    .line 2391
     :cond_1
     return-void
+
+    .line 2388
+    :cond_2
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
 .method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
     .locals 0
 
     .prologue
-    .line 2385
+    .line 2412
     return-void
 .end method
 
@@ -268,12 +294,12 @@
     .locals 2
 
     .prologue
-    .line 2325
+    .line 2350
     iget-object v1, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
     iget-object v0, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
-    invoke-static {v0}, Lio/branch/referral/Branch;->e(Lio/branch/referral/Branch;)Z
+    invoke-static {v0}, Lio/branch/referral/Branch;->d(Lio/branch/referral/Branch;)Z
 
     move-result v0
 
@@ -284,10 +310,10 @@
     :goto_0
     invoke-static {v1, v0}, Lio/branch/referral/Branch;->a(Lio/branch/referral/Branch;Lio/branch/referral/Branch$INTENT_STATE;)Lio/branch/referral/Branch$INTENT_STATE;
 
-    .line 2327
+    .line 2352
     iget-object v0, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
-    invoke-static {v0}, Lio/branch/referral/Branch;->f(Lio/branch/referral/Branch;)Lio/branch/referral/Branch$SESSION_STATE;
+    invoke-static {v0}, Lio/branch/referral/Branch;->e(Lio/branch/referral/Branch;)Lio/branch/referral/Branch$SESSION_STATE;
 
     move-result-object v0
 
@@ -295,7 +321,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2329
+    .line 2354
     :try_start_0
     invoke-static {}, Lio/branch/indexing/a;->a()Lio/branch/indexing/a;
 
@@ -303,23 +329,23 @@
 
     iget-object v1, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
-    iget-object v1, v1, Lio/branch/referral/Branch;->c:Ljava/lang/String;
+    iget-object v1, v1, Lio/branch/referral/Branch;->d:Ljava/lang/String;
 
     invoke-virtual {v0, p1, v1}, Lio/branch/indexing/a;->a(Landroid/app/Activity;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2333
+    .line 2358
     :cond_0
     :goto_1
     iget v0, p0, Lio/branch/referral/Branch$a;->b:I
 
     if-gtz v0, :cond_5
 
-    .line 2334
+    .line 2359
     iget-object v0, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
-    invoke-static {v0}, Lio/branch/referral/Branch;->f(Lio/branch/referral/Branch;)Lio/branch/referral/Branch$SESSION_STATE;
+    invoke-static {v0}, Lio/branch/referral/Branch;->e(Lio/branch/referral/Branch;)Lio/branch/referral/Branch$SESSION_STATE;
 
     move-result-object v0
 
@@ -327,52 +353,52 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 2336
+    .line 2361
     iget-object v0, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
     sget-object v1, Lio/branch/referral/Branch$SESSION_STATE;->UNINITIALISED:Lio/branch/referral/Branch$SESSION_STATE;
 
     invoke-static {v0, v1}, Lio/branch/referral/Branch;->a(Lio/branch/referral/Branch;Lio/branch/referral/Branch$SESSION_STATE;)Lio/branch/referral/Branch$SESSION_STATE;
 
-    .line 2339
+    .line 2364
     :cond_1
     iget-object v0, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
-    invoke-static {v0}, Lio/branch/referral/Branch;->a(Lio/branch/referral/Branch;)Landroid/content/Context;
+    invoke-static {v0}, Lio/branch/referral/Branch;->f(Lio/branch/referral/Branch;)Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lio/branch/referral/i;->a(Landroid/content/Context;)Z
+    invoke-static {v0}, Lio/branch/referral/h;->a(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 2340
+    .line 2365
     iget-object v0, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
-    invoke-static {v0}, Lio/branch/referral/Branch;->b(Lio/branch/referral/Branch;)Lio/branch/referral/n;
+    invoke-static {v0}, Lio/branch/referral/Branch;->a(Lio/branch/referral/Branch;)Lio/branch/referral/m;
 
-    invoke-static {}, Lio/branch/referral/n;->x()V
+    invoke-static {}, Lio/branch/referral/m;->A()V
 
-    .line 2342
+    .line 2367
     :cond_2
     iget-object v0, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
-    invoke-static {v0}, Lio/branch/referral/Branch;->b(Lio/branch/referral/Branch;)Lio/branch/referral/n;
+    invoke-static {v0}, Lio/branch/referral/Branch;->a(Lio/branch/referral/Branch;)Lio/branch/referral/m;
 
-    invoke-static {}, Lio/branch/referral/Branch;->f()Z
+    invoke-static {}, Lio/branch/referral/Branch;->g()Z
 
     move-result v0
 
-    invoke-static {v0}, Lio/branch/referral/n;->b(Z)V
+    invoke-static {v0}, Lio/branch/referral/m;->c(Z)V
 
-    .line 2343
+    .line 2368
     iget-object v0, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
     invoke-static {v0, p1}, Lio/branch/referral/Branch;->a(Lio/branch/referral/Branch;Landroid/app/Activity;)V
 
-    .line 2349
+    .line 2374
     :cond_3
     :goto_2
     iget v0, p0, Lio/branch/referral/Branch$a;->b:I
@@ -381,16 +407,16 @@
 
     iput v0, p0, Lio/branch/referral/Branch$a;->b:I
 
-    .line 2350
+    .line 2375
     return-void
 
-    .line 2325
+    .line 2350
     :cond_4
     sget-object v0, Lio/branch/referral/Branch$INTENT_STATE;->READY:Lio/branch/referral/Branch$INTENT_STATE;
 
     goto :goto_0
 
-    .line 2344
+    .line 2369
     :cond_5
     invoke-virtual {p1}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -402,14 +428,14 @@
 
     if-eqz v0, :cond_3
 
-    .line 2345
+    .line 2370
     iget-object v0, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
     sget-object v1, Lio/branch/referral/Branch$SESSION_STATE;->UNINITIALISED:Lio/branch/referral/Branch$SESSION_STATE;
 
     invoke-static {v0, v1}, Lio/branch/referral/Branch;->a(Lio/branch/referral/Branch;Lio/branch/referral/Branch$SESSION_STATE;)Lio/branch/referral/Branch$SESSION_STATE;
 
-    .line 2347
+    .line 2372
     iget-object v0, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
     invoke-static {v0, p1}, Lio/branch/referral/Branch;->a(Lio/branch/referral/Branch;Landroid/app/Activity;)V
@@ -426,31 +452,31 @@
     .locals 1
 
     .prologue
-    .line 2376
+    .line 2403
     invoke-static {}, Lio/branch/indexing/a;->a()Lio/branch/indexing/a;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Lio/branch/indexing/a;->a(Landroid/app/Activity;)V
 
-    .line 2377
+    .line 2404
     iget v0, p0, Lio/branch/referral/Branch$a;->b:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lio/branch/referral/Branch$a;->b:I
 
-    .line 2378
+    .line 2405
     iget v0, p0, Lio/branch/referral/Branch$a;->b:I
 
     if-gtz v0, :cond_0
 
-    .line 2379
+    .line 2406
     iget-object v0, p0, Lio/branch/referral/Branch$a;->a:Lio/branch/referral/Branch;
 
     invoke-static {v0}, Lio/branch/referral/Branch;->h(Lio/branch/referral/Branch;)V
 
-    .line 2381
+    .line 2408
     :cond_0
     return-void
 .end method

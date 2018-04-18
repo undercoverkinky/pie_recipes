@@ -7,13 +7,18 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/support/percent/PercentLayoutHelper$PercentLayoutParams;,
-        Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;
+        Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;,
+        Landroid/support/percent/PercentLayoutHelper$PercentMarginLayoutParams;
     }
 .end annotation
 
 
 # static fields
+.field private static final DEBUG:Z = false
+
 .field private static final TAG:Ljava/lang/String; = "PercentLayout"
+
+.field private static final VERBOSE:Z
 
 
 # instance fields
@@ -22,16 +27,29 @@
 
 # direct methods
 .method public constructor <init>(Landroid/view/ViewGroup;)V
-    .locals 0
+    .locals 2
 
     .prologue
-    .line 77
+    .line 83
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 78
+    .line 84
+    if-nez p1, :cond_0
+
+    .line 85
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "host must be non-null"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 87
+    :cond_0
     iput-object p1, p0, Landroid/support/percent/PercentLayoutHelper;->mHost:Landroid/view/ViewGroup;
 
-    .line 79
+    .line 88
     return-void
 .end method
 
@@ -41,70 +59,63 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 88
+    .line 97
     invoke-virtual {p1, p2, v1}, Landroid/content/res/TypedArray;->getLayoutDimension(II)I
 
     move-result v0
 
     iput v0, p0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 89
+    .line 98
     invoke-virtual {p1, p3, v1}, Landroid/content/res/TypedArray;->getLayoutDimension(II)I
 
     move-result v0
 
     iput v0, p0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 90
+    .line 99
     return-void
 .end method
 
 .method public static getPercentLayoutInfo(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;
-    .locals 7
+    .locals 6
 
     .prologue
-    const/4 v6, 0x2
-
     const/4 v5, 0x1
 
     const/high16 v4, -0x40800000    # -1.0f
 
-    .line 137
+    .line 149
     const/4 v0, 0x0
 
-    .line 138
+    .line 150
     sget-object v1, Landroid/support/percent/R$styleable;->PercentLayout_Layout:[I
 
     invoke-virtual {p0, p1, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v1
 
-    .line 139
+    .line 151
     sget v2, Landroid/support/percent/R$styleable;->PercentLayout_Layout_layout_widthPercent:I
 
     invoke-virtual {v1, v2, v5, v5, v4}, Landroid/content/res/TypedArray;->getFraction(IIIF)F
 
     move-result v2
 
-    .line 141
+    .line 153
     cmpl-float v3, v2, v4
 
     if-eqz v3, :cond_0
 
-    .line 142
-    const-string v0, "PercentLayout"
-
-    invoke-static {v0, v6}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    .line 145
+    .line 157
     new-instance v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;
 
     invoke-direct {v0}, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;-><init>()V
 
-    .line 146
+    .line 158
     iput v2, v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->widthPercent:F
 
-    .line 148
+    .line 160
     :cond_0
     sget v2, Landroid/support/percent/R$styleable;->PercentLayout_Layout_layout_heightPercent:I
 
@@ -112,60 +123,21 @@
 
     move-result v2
 
-    .line 149
+    .line 161
     cmpl-float v3, v2, v4
 
     if-eqz v3, :cond_1
 
-    .line 150
-    const-string v3, "PercentLayout"
+    .line 165
+    if-eqz v0, :cond_a
 
-    invoke-static {v3, v6}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    .line 153
-    if-eqz v0, :cond_b
-
-    .line 154
+    .line 166
     :goto_0
     iput v2, v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->heightPercent:F
 
-    .line 156
+    .line 168
     :cond_1
     sget v2, Landroid/support/percent/R$styleable;->PercentLayout_Layout_layout_marginPercent:I
-
-    invoke-virtual {v1, v2, v5, v5, v4}, Landroid/content/res/TypedArray;->getFraction(IIIF)F
-
-    move-result v2
-
-    .line 157
-    cmpl-float v3, v2, v4
-
-    if-eqz v3, :cond_2
-
-    .line 158
-    const-string v3, "PercentLayout"
-
-    invoke-static {v3, v6}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    .line 161
-    if-eqz v0, :cond_c
-
-    .line 162
-    :goto_1
-    iput v2, v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->leftMarginPercent:F
-
-    .line 163
-    iput v2, v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->topMarginPercent:F
-
-    .line 164
-    iput v2, v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->rightMarginPercent:F
-
-    .line 165
-    iput v2, v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->bottomMarginPercent:F
-
-    .line 167
-    :cond_2
-    sget v2, Landroid/support/percent/R$styleable;->PercentLayout_Layout_layout_marginLeftPercent:I
 
     invoke-virtual {v1, v2, v5, v5, v4}, Landroid/content/res/TypedArray;->getFraction(IIIF)F
 
@@ -174,21 +146,45 @@
     .line 169
     cmpl-float v3, v2, v4
 
-    if-eqz v3, :cond_3
-
-    .line 170
-    const-string v3, "PercentLayout"
-
-    invoke-static {v3, v6}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+    if-eqz v3, :cond_2
 
     .line 173
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_b
 
     .line 174
+    :goto_1
+    iput v2, v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->leftMarginPercent:F
+
+    .line 175
+    iput v2, v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->topMarginPercent:F
+
+    .line 176
+    iput v2, v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->rightMarginPercent:F
+
+    .line 177
+    iput v2, v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->bottomMarginPercent:F
+
+    .line 179
+    :cond_2
+    sget v2, Landroid/support/percent/R$styleable;->PercentLayout_Layout_layout_marginLeftPercent:I
+
+    invoke-virtual {v1, v2, v5, v5, v4}, Landroid/content/res/TypedArray;->getFraction(IIIF)F
+
+    move-result v2
+
+    .line 181
+    cmpl-float v3, v2, v4
+
+    if-eqz v3, :cond_3
+
+    .line 185
+    if-eqz v0, :cond_c
+
+    .line 186
     :goto_2
     iput v2, v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->leftMarginPercent:F
 
-    .line 176
+    .line 188
     :cond_3
     sget v2, Landroid/support/percent/R$styleable;->PercentLayout_Layout_layout_marginTopPercent:I
 
@@ -196,24 +192,19 @@
 
     move-result v2
 
-    .line 178
+    .line 190
     cmpl-float v3, v2, v4
 
     if-eqz v3, :cond_4
 
-    .line 179
-    const-string v3, "PercentLayout"
+    .line 194
+    if-eqz v0, :cond_d
 
-    invoke-static {v3, v6}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    .line 182
-    if-eqz v0, :cond_e
-
-    .line 183
+    .line 195
     :goto_3
     iput v2, v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->topMarginPercent:F
 
-    .line 185
+    .line 197
     :cond_4
     sget v2, Landroid/support/percent/R$styleable;->PercentLayout_Layout_layout_marginRightPercent:I
 
@@ -221,24 +212,19 @@
 
     move-result v2
 
-    .line 187
+    .line 199
     cmpl-float v3, v2, v4
 
     if-eqz v3, :cond_5
 
-    .line 188
-    const-string v3, "PercentLayout"
+    .line 203
+    if-eqz v0, :cond_e
 
-    invoke-static {v3, v6}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    .line 191
-    if-eqz v0, :cond_f
-
-    .line 192
+    .line 204
     :goto_4
     iput v2, v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->rightMarginPercent:F
 
-    .line 194
+    .line 206
     :cond_5
     sget v2, Landroid/support/percent/R$styleable;->PercentLayout_Layout_layout_marginBottomPercent:I
 
@@ -246,24 +232,19 @@
 
     move-result v2
 
-    .line 196
+    .line 208
     cmpl-float v3, v2, v4
 
     if-eqz v3, :cond_6
 
-    .line 197
-    const-string v3, "PercentLayout"
+    .line 212
+    if-eqz v0, :cond_f
 
-    invoke-static {v3, v6}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    .line 200
-    if-eqz v0, :cond_10
-
-    .line 201
+    .line 213
     :goto_5
     iput v2, v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->bottomMarginPercent:F
 
-    .line 203
+    .line 215
     :cond_6
     sget v2, Landroid/support/percent/R$styleable;->PercentLayout_Layout_layout_marginStartPercent:I
 
@@ -271,24 +252,19 @@
 
     move-result v2
 
-    .line 205
+    .line 217
     cmpl-float v3, v2, v4
 
     if-eqz v3, :cond_7
 
-    .line 206
-    const-string v3, "PercentLayout"
+    .line 221
+    if-eqz v0, :cond_10
 
-    invoke-static {v3, v6}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    .line 209
-    if-eqz v0, :cond_11
-
-    .line 210
+    .line 222
     :goto_6
     iput v2, v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->startMarginPercent:F
 
-    .line 212
+    .line 224
     :cond_7
     sget v2, Landroid/support/percent/R$styleable;->PercentLayout_Layout_layout_marginEndPercent:I
 
@@ -296,24 +272,19 @@
 
     move-result v2
 
-    .line 214
+    .line 226
     cmpl-float v3, v2, v4
 
     if-eqz v3, :cond_8
 
-    .line 215
-    const-string v3, "PercentLayout"
+    .line 230
+    if-eqz v0, :cond_11
 
-    invoke-static {v3, v6}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    .line 218
-    if-eqz v0, :cond_12
-
-    .line 219
+    .line 231
     :goto_7
     iput v2, v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->endMarginPercent:F
 
-    .line 222
+    .line 234
     :cond_8
     sget v2, Landroid/support/percent/R$styleable;->PercentLayout_Layout_layout_aspectRatio:I
 
@@ -321,117 +292,91 @@
 
     move-result v2
 
-    .line 223
+    .line 235
     cmpl-float v3, v2, v4
 
     if-eqz v3, :cond_9
 
-    .line 224
-    const-string v3, "PercentLayout"
+    .line 239
+    if-eqz v0, :cond_12
 
-    invoke-static {v3, v6}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    .line 227
-    if-eqz v0, :cond_13
-
-    .line 228
+    .line 240
     :goto_8
     iput v2, v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->aspectRatio:F
 
-    .line 231
+    .line 243
     :cond_9
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 232
-    const-string v1, "PercentLayout"
-
-    const/4 v2, 0x3
-
-    invoke-static {v1, v2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_a
-
-    .line 233
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "constructed: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 235
-    :cond_a
+    .line 247
     return-object v0
 
-    .line 153
-    :cond_b
+    .line 165
+    :cond_a
     new-instance v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;
 
     invoke-direct {v0}, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;-><init>()V
 
     goto/16 :goto_0
 
-    .line 161
+    .line 173
+    :cond_b
+    new-instance v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;
+
+    invoke-direct {v0}, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;-><init>()V
+
+    goto :goto_1
+
+    .line 185
     :cond_c
     new-instance v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;
 
     invoke-direct {v0}, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;-><init>()V
 
-    goto/16 :goto_1
+    goto :goto_2
 
-    .line 173
+    .line 194
     :cond_d
     new-instance v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;
 
     invoke-direct {v0}, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;-><init>()V
 
-    goto/16 :goto_2
+    goto :goto_3
 
-    .line 182
+    .line 203
     :cond_e
     new-instance v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;
 
     invoke-direct {v0}, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;-><init>()V
 
-    goto/16 :goto_3
+    goto :goto_4
 
-    .line 191
+    .line 212
     :cond_f
-    new-instance v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;
-
-    invoke-direct {v0}, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;-><init>()V
-
-    goto/16 :goto_4
-
-    .line 200
-    :cond_10
     new-instance v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;
 
     invoke-direct {v0}, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;-><init>()V
 
     goto :goto_5
 
-    .line 209
-    :cond_11
+    .line 221
+    :cond_10
     new-instance v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;
 
     invoke-direct {v0}, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;-><init>()V
 
     goto :goto_6
 
-    .line 218
-    :cond_12
+    .line 230
+    :cond_11
     new-instance v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;
 
     invoke-direct {v0}, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;-><init>()V
 
     goto :goto_7
 
-    .line 227
-    :cond_13
+    .line 239
+    :cond_12
     new-instance v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;
 
     invoke-direct {v0}, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;-><init>()V
@@ -443,7 +388,7 @@
     .locals 2
 
     .prologue
-    .line 317
+    .line 329
     invoke-static {p0}, Landroid/support/v4/view/ViewCompat;->getMeasuredHeightAndState(Landroid/view/View;)I
 
     move-result v0
@@ -452,7 +397,7 @@
 
     and-int/2addr v0, v1
 
-    .line 318
+    .line 330
     const/high16 v1, 0x1000000
 
     if-ne v0, v1, :cond_0
@@ -465,9 +410,9 @@
 
     if-ltz v0, :cond_0
 
-    iget-object v0, p1, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->mPreservedParams:Landroid/view/ViewGroup$MarginLayoutParams;
+    iget-object v0, p1, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->mPreservedParams:Landroid/support/percent/PercentLayoutHelper$PercentMarginLayoutParams;
 
-    iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+    iget v0, v0, Landroid/support/percent/PercentLayoutHelper$PercentMarginLayoutParams;->height:I
 
     const/4 v1, -0x2
 
@@ -488,7 +433,7 @@
     .locals 2
 
     .prologue
-    .line 311
+    .line 323
     invoke-static {p0}, Landroid/support/v4/view/ViewCompat;->getMeasuredWidthAndState(Landroid/view/View;)I
 
     move-result v0
@@ -497,7 +442,7 @@
 
     and-int/2addr v0, v1
 
-    .line 312
+    .line 324
     const/high16 v1, 0x1000000
 
     if-ne v0, v1, :cond_0
@@ -510,9 +455,9 @@
 
     if-ltz v0, :cond_0
 
-    iget-object v0, p1, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->mPreservedParams:Landroid/view/ViewGroup$MarginLayoutParams;
+    iget-object v0, p1, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->mPreservedParams:Landroid/support/percent/PercentLayoutHelper$PercentMarginLayoutParams;
 
-    iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+    iget v0, v0, Landroid/support/percent/PercentLayoutHelper$PercentMarginLayoutParams;->width:I
 
     const/4 v1, -0x2
 
@@ -532,71 +477,54 @@
 
 # virtual methods
 .method public adjustChildren(II)V
-    .locals 9
+    .locals 8
 
     .prologue
-    const/4 v8, 0x3
-
-    .line 99
-    const-string v0, "PercentLayout"
-
-    invoke-static {v0, v8}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+    .line 115
+    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    iget-object v1, p0, Landroid/support/percent/PercentLayoutHelper;->mHost:Landroid/view/ViewGroup;
 
-    .line 100
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getPaddingLeft()I
 
-    const-string v1, "adjustChildren: "
+    move-result v1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sub-int/2addr v0, v1
 
     iget-object v1, p0, Landroid/support/percent/PercentLayoutHelper;->mHost:Landroid/view/ViewGroup;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    .line 116
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getPaddingRight()I
 
-    move-result-object v0
+    move-result v1
 
-    const-string v1, " widthMeasureSpec: "
+    sub-int v3, v0, v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-static {p1}, Landroid/view/View$MeasureSpec;->toString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, " heightMeasureSpec: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->toString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 105
-    :cond_0
-    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
-
-    move-result v3
-
-    .line 106
+    .line 117
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
-    move-result v4
+    move-result v0
 
-    .line 107
+    iget-object v1, p0, Landroid/support/percent/PercentLayoutHelper;->mHost:Landroid/view/ViewGroup;
+
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getPaddingTop()I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    iget-object v1, p0, Landroid/support/percent/PercentLayoutHelper;->mHost:Landroid/view/ViewGroup;
+
+    .line 118
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getPaddingBottom()I
+
+    move-result v1
+
+    sub-int v4, v0, v1
+
+    .line 119
     const/4 v0, 0x0
 
     iget-object v1, p0, Landroid/support/percent/PercentLayoutHelper;->mHost:Landroid/view/ViewGroup;
@@ -608,97 +536,50 @@
     move v2, v0
 
     :goto_0
-    if-ge v2, v5, :cond_5
+    if-ge v2, v5, :cond_2
 
-    .line 108
+    .line 120
     iget-object v0, p0, Landroid/support/percent/PercentLayoutHelper;->mHost:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    move-result-object v0
+    move-result-object v6
 
-    .line 109
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    .line 121
+    invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
-    .line 110
-    const-string v6, "PercentLayout"
-
-    invoke-static {v6, v8}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_1
-
-    .line 111
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    const-string v7, "should adjust "
-
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v6, " "
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 113
-    :cond_1
+    .line 125
     instance-of v0, v1, Landroid/support/percent/PercentLayoutHelper$PercentLayoutParams;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_0
 
     move-object v0, v1
 
-    .line 114
+    .line 126
     check-cast v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutParams;
 
+    .line 127
     invoke-interface {v0}, Landroid/support/percent/PercentLayoutHelper$PercentLayoutParams;->getPercentLayoutInfo()Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;
 
     move-result-object v0
 
-    .line 116
-    const-string v6, "PercentLayout"
+    .line 131
+    if-eqz v0, :cond_0
 
-    invoke-static {v6, v8}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+    .line 132
+    instance-of v7, v1, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    move-result v6
+    if-eqz v7, :cond_1
 
-    if-eqz v6, :cond_2
-
-    .line 117
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    const-string v7, "using "
-
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 119
-    :cond_2
-    if-eqz v0, :cond_3
-
-    .line 120
-    instance-of v6, v1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    if-eqz v6, :cond_4
-
-    .line 121
+    .line 133
     check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    invoke-virtual {v0, v1, v3, v4}, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->fillMarginLayoutParams(Landroid/view/ViewGroup$MarginLayoutParams;II)V
+    invoke-virtual {v0, v6, v1, v3, v4}, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->fillMarginLayoutParams(Landroid/view/View;Landroid/view/ViewGroup$MarginLayoutParams;II)V
 
-    .line 107
-    :cond_3
+    .line 119
+    :cond_0
     :goto_1
     add-int/lit8 v0, v2, 0x1
 
@@ -706,31 +587,29 @@
 
     goto :goto_0
 
-    .line 124
-    :cond_4
+    .line 136
+    :cond_1
     invoke-virtual {v0, v1, v3, v4}, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->fillLayoutParams(Landroid/view/ViewGroup$LayoutParams;II)V
 
     goto :goto_1
 
-    .line 129
-    :cond_5
+    .line 141
+    :cond_2
     return-void
 .end method
 
 .method public handleMeasuredStateTooSmall()Z
-    .locals 10
+    .locals 9
 
     .prologue
-    const/4 v9, 0x3
-
     const/4 v2, 0x1
 
     const/4 v0, 0x0
 
     const/4 v8, -0x2
 
-    .line 282
-    .line 283
+    .line 294
+    .line 295
     iget-object v1, p0, Landroid/support/percent/PercentLayoutHelper;->mHost:Landroid/view/ViewGroup;
 
     invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
@@ -742,93 +621,65 @@
     move v3, v0
 
     :goto_0
-    if-ge v4, v5, :cond_2
+    if-ge v4, v5, :cond_1
 
-    .line 284
+    .line 296
     iget-object v0, p0, Landroid/support/percent/PercentLayoutHelper;->mHost:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, v4}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v6
 
-    .line 285
+    .line 297
     invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
-    .line 286
-    const-string v0, "PercentLayout"
-
-    invoke-static {v0, v9}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v0
+    .line 301
+    instance-of v0, v1, Landroid/support/percent/PercentLayoutHelper$PercentLayoutParams;
 
     if-eqz v0, :cond_0
 
-    .line 287
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v7, "should handle measured state too small "
-
-    invoke-direct {v0, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v7, " "
-
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 289
-    :cond_0
-    instance-of v0, v1, Landroid/support/percent/PercentLayoutHelper$PercentLayoutParams;
-
-    if-eqz v0, :cond_1
-
     move-object v0, v1
 
-    .line 290
+    .line 302
     check-cast v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutParams;
 
+    .line 303
     invoke-interface {v0}, Landroid/support/percent/PercentLayoutHelper$PercentLayoutParams;->getPercentLayoutInfo()Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;
 
     move-result-object v7
 
-    .line 292
-    if-eqz v7, :cond_1
+    .line 304
+    if-eqz v7, :cond_0
 
-    .line 293
+    .line 305
     invoke-static {v6, v7}, Landroid/support/percent/PercentLayoutHelper;->shouldHandleMeasuredWidthTooSmall(Landroid/view/View;Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_3
 
-    .line 295
+    .line 307
     iput v8, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     move v0, v2
 
-    .line 297
+    .line 309
     :goto_1
     invoke-static {v6, v7}, Landroid/support/percent/PercentLayoutHelper;->shouldHandleMeasuredHeightTooSmall(Landroid/view/View;Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_2
 
-    .line 299
+    .line 311
     iput v8, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     move v3, v2
 
-    .line 283
-    :cond_1
+    .line 295
+    :cond_0
     :goto_2
     add-int/lit8 v0, v4, 0x1
 
@@ -836,33 +687,26 @@
 
     goto :goto_0
 
-    .line 304
-    :cond_2
-    const-string v0, "PercentLayout"
-
-    invoke-static {v0, v9}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    .line 307
+    .line 319
+    :cond_1
     return v3
 
-    :cond_3
+    :cond_2
     move v3, v0
 
     goto :goto_2
 
-    :cond_4
+    :cond_3
     move v0, v3
 
     goto :goto_1
 .end method
 
 .method public restoreOriginalParams()V
-    .locals 7
+    .locals 5
 
     .prologue
-    const/4 v6, 0x3
-
-    .line 244
+    .line 256
     const/4 v0, 0x0
 
     iget-object v1, p0, Landroid/support/percent/PercentLayoutHelper;->mHost:Landroid/view/ViewGroup;
@@ -874,97 +718,50 @@
     move v2, v0
 
     :goto_0
-    if-ge v2, v3, :cond_4
+    if-ge v2, v3, :cond_2
 
-    .line 245
+    .line 257
     iget-object v0, p0, Landroid/support/percent/PercentLayoutHelper;->mHost:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 246
+    .line 258
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
-    .line 247
-    const-string v4, "PercentLayout"
-
-    invoke-static {v4, v6}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    .line 248
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "should restore "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v4, " "
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 250
-    :cond_0
+    .line 262
     instance-of v0, v1, Landroid/support/percent/PercentLayoutHelper$PercentLayoutParams;
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_0
 
     move-object v0, v1
 
-    .line 251
+    .line 263
     check-cast v0, Landroid/support/percent/PercentLayoutHelper$PercentLayoutParams;
 
+    .line 264
     invoke-interface {v0}, Landroid/support/percent/PercentLayoutHelper$PercentLayoutParams;->getPercentLayoutInfo()Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;
 
     move-result-object v0
 
-    .line 253
-    const-string v4, "PercentLayout"
+    .line 268
+    if-eqz v0, :cond_0
 
-    invoke-static {v4, v6}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v4
+    .line 269
+    instance-of v4, v1, Landroid/view/ViewGroup$MarginLayoutParams;
 
     if-eqz v4, :cond_1
 
-    .line 254
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "using "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 256
-    :cond_1
-    if-eqz v0, :cond_2
-
-    .line 257
-    instance-of v4, v1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    if-eqz v4, :cond_3
-
-    .line 258
+    .line 270
     check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
 
     invoke-virtual {v0, v1}, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->restoreMarginLayoutParams(Landroid/view/ViewGroup$MarginLayoutParams;)V
 
-    .line 244
-    :cond_2
+    .line 256
+    :cond_0
     :goto_1
     add-int/lit8 v0, v2, 0x1
 
@@ -972,13 +769,13 @@
 
     goto :goto_0
 
-    .line 260
-    :cond_3
+    .line 272
+    :cond_1
     invoke-virtual {v0, v1}, Landroid/support/percent/PercentLayoutHelper$PercentLayoutInfo;->restoreLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_1
 
-    .line 265
-    :cond_4
+    .line 277
+    :cond_2
     return-void
 .end method

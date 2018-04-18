@@ -2,132 +2,137 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcom/crashlytics/android/answers/n;
-
-
-# static fields
-.field static final b:Ljava/util/Set;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Set",
-            "<",
-            "Lcom/crashlytics/android/answers/SessionEvent$Type;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 
 # instance fields
-.field final a:I
+.field private final a:Landroid/content/Context;
+
+.field private final b:Lcom/crashlytics/android/answers/t;
+
+.field private c:Lcom/crashlytics/android/answers/q;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
     .prologue
-    .line 19
-    new-instance v0, Lcom/crashlytics/android/answers/SamplingEventFilter$1;
+    .line 17
+    new-instance v0, Lcom/crashlytics/android/answers/t;
 
-    invoke-direct {v0}, Lcom/crashlytics/android/answers/SamplingEventFilter$1;-><init>()V
+    invoke-direct {v0}, Lcom/crashlytics/android/answers/t;-><init>()V
 
-    sput-object v0, Lcom/crashlytics/android/answers/r;->b:Ljava/util/Set;
+    invoke-direct {p0, p1, v0}, Lcom/crashlytics/android/answers/r;-><init>(Landroid/content/Context;Lcom/crashlytics/android/answers/t;)V
 
+    .line 18
     return-void
 .end method
 
-.method public constructor <init>(I)V
+.method private constructor <init>(Landroid/content/Context;Lcom/crashlytics/android/answers/t;)V
     .locals 0
 
     .prologue
-    .line 26
+    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
-    iput p1, p0, Lcom/crashlytics/android/answers/r;->a:I
+    .line 21
+    iput-object p1, p0, Lcom/crashlytics/android/answers/r;->a:Landroid/content/Context;
 
-    .line 28
+    .line 22
+    iput-object p2, p0, Lcom/crashlytics/android/answers/r;->b:Lcom/crashlytics/android/answers/t;
+
+    .line 23
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/crashlytics/android/answers/SessionEvent;)Z
-    .locals 5
+.method public final a(Lcom/crashlytics/android/answers/SessionEvent;)V
+    .locals 4
 
     .prologue
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    .line 32
-    sget-object v0, Lcom/crashlytics/android/answers/r;->b:Ljava/util/Set;
-
-    iget-object v3, p1, Lcom/crashlytics/android/answers/SessionEvent;->c:Lcom/crashlytics/android/answers/SessionEvent$Type;
-
-    invoke-interface {v0, v3}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p1, Lcom/crashlytics/android/answers/SessionEvent;->a:Lcom/crashlytics/android/answers/w;
-
-    iget-object v0, v0, Lcom/crashlytics/android/answers/w;->g:Ljava/lang/String;
+    .line 33
+    .line 1026
+    iget-object v0, p0, Lcom/crashlytics/android/answers/r;->c:Lcom/crashlytics/android/answers/q;
 
     if-nez v0, :cond_0
 
-    move v0, v1
+    .line 1027
+    iget-object v0, p0, Lcom/crashlytics/android/answers/r;->a:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/crashlytics/android/answers/k;->a(Landroid/content/Context;)Lcom/crashlytics/android/answers/q;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/crashlytics/android/answers/r;->c:Lcom/crashlytics/android/answers/q;
+
+    .line 1029
+    :cond_0
+    iget-object v0, p0, Lcom/crashlytics/android/answers/r;->c:Lcom/crashlytics/android/answers/q;
 
     .line 34
-    :goto_0
-    iget-object v3, p1, Lcom/crashlytics/android/answers/SessionEvent;->a:Lcom/crashlytics/android/answers/w;
-
-    iget-object v3, v3, Lcom/crashlytics/android/answers/w;->c:Ljava/lang/String;
+    if-nez v0, :cond_2
 
     .line 35
-    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
+    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
-    move-result v3
+    .line 53
+    :cond_1
+    :goto_0
+    return-void
 
-    iget v4, p0, Lcom/crashlytics/android/answers/r;->a:I
+    .line 40
+    :cond_2
+    invoke-static {p1}, Lcom/crashlytics/android/answers/t;->a(Lcom/crashlytics/android/answers/SessionEvent;)Lcom/crashlytics/android/answers/s;
 
-    rem-int/2addr v3, v4
+    move-result-object v1
 
-    invoke-static {v3}, Ljava/lang/Math;->abs(I)I
+    .line 42
+    if-nez v1, :cond_3
 
-    move-result v3
+    .line 43
+    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
-    if-eqz v3, :cond_1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move v3, v1
+    const-string v1, "Fabric event was not mappable to Firebase event: "
 
-    .line 36
-    :goto_1
-    if-eqz v0, :cond_2
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eqz v3, :cond_2
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :goto_2
-    return v1
-
-    :cond_0
-    move v0, v2
-
-    .line 32
     goto :goto_0
 
-    :cond_1
-    move v3, v2
+    .line 48
+    :cond_3
+    invoke-virtual {v1}, Lcom/crashlytics/android/answers/s;->a()Ljava/lang/String;
 
-    .line 35
-    goto :goto_1
+    move-result-object v2
 
-    :cond_2
-    move v1, v2
+    invoke-virtual {v1}, Lcom/crashlytics/android/answers/s;->b()Landroid/os/Bundle;
 
-    .line 36
-    goto :goto_2
+    move-result-object v3
+
+    invoke-interface {v0, v2, v3}, Lcom/crashlytics/android/answers/q;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    .line 50
+    const-string v2, "levelEnd"
+
+    iget-object v3, p1, Lcom/crashlytics/android/answers/SessionEvent;->g:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 51
+    const-string v2, "post_score"
+
+    invoke-virtual {v1}, Lcom/crashlytics/android/answers/s;->b()Landroid/os/Bundle;
+
+    move-result-object v1
+
+    invoke-interface {v0, v2, v1}, Lcom/crashlytics/android/answers/q;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    goto :goto_0
 .end method

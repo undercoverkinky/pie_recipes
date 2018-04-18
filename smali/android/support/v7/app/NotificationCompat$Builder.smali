@@ -16,60 +16,188 @@
 
 # virtual methods
 .method protected getExtender()Landroid/support/v4/app/NotificationCompat$BuilderExtender;
-    .locals 3
+    .locals 2
 
     .prologue
-    const/4 v2, 0x0
+    .line 440
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 85
+    const/16 v1, 0x18
+
+    if-lt v0, v1, :cond_0
+
+    .line 441
+    new-instance v0, Landroid/support/v7/app/NotificationCompat$Api24Extender;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Landroid/support/v7/app/NotificationCompat$Api24Extender;-><init>(B)V
+
+    .line 449
+    :goto_0
+    return-object v0
+
+    .line 442
+    :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
-    if-lt v0, v1, :cond_0
+    if-lt v0, v1, :cond_1
 
-    .line 86
+    .line 443
     new-instance v0, Landroid/support/v7/app/NotificationCompat$LollipopExtender;
 
-    invoke-direct {v0, v2}, Landroid/support/v7/app/NotificationCompat$LollipopExtender;-><init>(B)V
+    invoke-direct {v0}, Landroid/support/v7/app/NotificationCompat$LollipopExtender;-><init>()V
 
-    .line 92
-    :goto_0
-    return-object v0
+    goto :goto_0
 
-    .line 87
-    :cond_0
+    .line 444
+    :cond_1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x10
 
-    if-lt v0, v1, :cond_1
+    if-lt v0, v1, :cond_2
 
-    .line 88
+    .line 445
     new-instance v0, Landroid/support/v7/app/NotificationCompat$JellybeanExtender;
 
-    invoke-direct {v0, v2}, Landroid/support/v7/app/NotificationCompat$JellybeanExtender;-><init>(B)V
+    invoke-direct {v0}, Landroid/support/v7/app/NotificationCompat$JellybeanExtender;-><init>()V
 
     goto :goto_0
 
-    .line 89
-    :cond_1
+    .line 446
+    :cond_2
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0xe
 
-    if-lt v0, v1, :cond_2
+    if-lt v0, v1, :cond_3
 
-    .line 90
+    .line 447
     new-instance v0, Landroid/support/v7/app/NotificationCompat$IceCreamSandwichExtender;
 
-    invoke-direct {v0, v2}, Landroid/support/v7/app/NotificationCompat$IceCreamSandwichExtender;-><init>(B)V
+    invoke-direct {v0}, Landroid/support/v7/app/NotificationCompat$IceCreamSandwichExtender;-><init>()V
 
     goto :goto_0
 
-    .line 92
-    :cond_2
+    .line 449
+    :cond_3
     invoke-super {p0}, Landroid/support/v4/app/NotificationCompat$Builder;->getExtender()Landroid/support/v4/app/NotificationCompat$BuilderExtender;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method protected resolveText()Ljava/lang/CharSequence;
+    .locals 3
+
+    .prologue
+    .line 403
+    iget-object v0, p0, Landroid/support/v7/app/NotificationCompat$Builder;->mStyle:Landroid/support/v4/app/NotificationCompat$Style;
+
+    instance-of v0, v0, Landroid/support/v4/app/NotificationCompat$MessagingStyle;
+
+    if-eqz v0, :cond_1
+
+    .line 404
+    iget-object v0, p0, Landroid/support/v7/app/NotificationCompat$Builder;->mStyle:Landroid/support/v4/app/NotificationCompat$Style;
+
+    check-cast v0, Landroid/support/v4/app/NotificationCompat$MessagingStyle;
+
+    .line 405
+    invoke-static {v0}, Landroid/support/v7/app/NotificationCompat;->a(Landroid/support/v4/app/NotificationCompat$MessagingStyle;)Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;
+
+    move-result-object v1
+
+    .line 406
+    invoke-virtual {v0}, Landroid/support/v4/app/NotificationCompat$MessagingStyle;->getConversationTitle()Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    .line 407
+    if-eqz v1, :cond_1
+
+    .line 408
+    if-eqz v2, :cond_0
+
+    invoke-static {p0, v0, v1}, Landroid/support/v7/app/NotificationCompat;->a(Landroid/support/v4/app/NotificationCompat$Builder;Landroid/support/v4/app/NotificationCompat$MessagingStyle;Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    .line 412
+    :goto_0
+    return-object v0
+
+    .line 409
+    :cond_0
+    invoke-virtual {v1}, Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 412
+    :cond_1
+    invoke-super {p0}, Landroid/support/v4/app/NotificationCompat$Builder;->resolveText()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method protected resolveTitle()Ljava/lang/CharSequence;
+    .locals 2
+
+    .prologue
+    .line 423
+    iget-object v0, p0, Landroid/support/v7/app/NotificationCompat$Builder;->mStyle:Landroid/support/v4/app/NotificationCompat$Style;
+
+    instance-of v0, v0, Landroid/support/v4/app/NotificationCompat$MessagingStyle;
+
+    if-eqz v0, :cond_2
+
+    .line 424
+    iget-object v0, p0, Landroid/support/v7/app/NotificationCompat$Builder;->mStyle:Landroid/support/v4/app/NotificationCompat$Style;
+
+    check-cast v0, Landroid/support/v4/app/NotificationCompat$MessagingStyle;
+
+    .line 425
+    invoke-static {v0}, Landroid/support/v7/app/NotificationCompat;->a(Landroid/support/v4/app/NotificationCompat$MessagingStyle;)Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;
+
+    move-result-object v1
+
+    .line 426
+    invoke-virtual {v0}, Landroid/support/v4/app/NotificationCompat$MessagingStyle;->getConversationTitle()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    .line 427
+    if-nez v0, :cond_0
+
+    if-eqz v1, :cond_2
+
+    .line 428
+    :cond_0
+    if-eqz v0, :cond_1
+
+    .line 431
+    :goto_0
+    return-object v0
+
+    .line 428
+    :cond_1
+    invoke-virtual {v1}, Landroid/support/v4/app/NotificationCompat$MessagingStyle$Message;->getSender()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 431
+    :cond_2
+    invoke-super {p0}, Landroid/support/v4/app/NotificationCompat$Builder;->resolveTitle()Ljava/lang/CharSequence;
 
     move-result-object v0
 

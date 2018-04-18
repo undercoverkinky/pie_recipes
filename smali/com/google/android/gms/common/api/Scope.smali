@@ -1,5 +1,8 @@
 .class public final Lcom/google/android/gms/common/api/Scope;
-.super Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;
+.super Lcom/google/android/gms/common/internal/safeparcel/zza;
+
+# interfaces
+.implements Lcom/google/android/gms/common/internal/ReflectedParcelable;
 
 
 # static fields
@@ -16,18 +19,18 @@
 
 
 # instance fields
-.field final mVersionCode:I
+.field private zzdxt:I
 
-.field private final zzalv:Ljava/lang/String;
+.field private final zzfho:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/gms/common/api/zze;
+    new-instance v0, Lcom/google/android/gms/common/api/zzg;
 
-    invoke-direct {v0}, Lcom/google/android/gms/common/api/zze;-><init>()V
+    invoke-direct {v0}, Lcom/google/android/gms/common/api/zzg;-><init>()V
 
     sput-object v0, Lcom/google/android/gms/common/api/Scope;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -37,15 +40,15 @@
 .method constructor <init>(ILjava/lang/String;)V
     .locals 1
 
-    invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
+    invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/zza;-><init>()V
 
     const-string v0, "scopeUri must not be null or empty"
 
-    invoke-static {p2, v0}, Lcom/google/android/gms/common/internal/zzaa;->zzh(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p2, v0}, Lcom/google/android/gms/common/internal/zzbp;->zzh(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
-    iput p1, p0, Lcom/google/android/gms/common/api/Scope;->mVersionCode:I
+    iput p1, p0, Lcom/google/android/gms/common/api/Scope;->zzdxt:I
 
-    iput-object p2, p0, Lcom/google/android/gms/common/api/Scope;->zzalv:Ljava/lang/String;
+    iput-object p2, p0, Lcom/google/android/gms/common/api/Scope;->zzfho:Ljava/lang/String;
 
     return-void
 .end method
@@ -82,11 +85,11 @@
     goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Lcom/google/android/gms/common/api/Scope;->zzalv:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/common/api/Scope;->zzfho:Ljava/lang/String;
 
     check-cast p1, Lcom/google/android/gms/common/api/Scope;
 
-    iget-object v1, p1, Lcom/google/android/gms/common/api/Scope;->zzalv:Ljava/lang/String;
+    iget-object v1, p1, Lcom/google/android/gms/common/api/Scope;->zzfho:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -98,7 +101,7 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/common/api/Scope;->zzalv:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/common/api/Scope;->zzfho:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
@@ -110,23 +113,41 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/common/api/Scope;->zzalv:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/common/api/Scope;->zzfho:Ljava/lang/String;
 
     return-object v0
 .end method
 
 .method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    .locals 4
 
-    invoke-static {p0, p1, p2}, Lcom/google/android/gms/common/api/zze;->zza(Lcom/google/android/gms/common/api/Scope;Landroid/os/Parcel;I)V
+    invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/zzd;->zze(Landroid/os/Parcel;)I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    iget v2, p0, Lcom/google/android/gms/common/api/Scope;->zzdxt:I
+
+    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/zzd;->zzc(Landroid/os/Parcel;II)V
+
+    const/4 v1, 0x2
+
+    iget-object v2, p0, Lcom/google/android/gms/common/api/Scope;->zzfho:Ljava/lang/String;
+
+    const/4 v3, 0x0
+
+    invoke-static {p1, v1, v2, v3}, Lcom/google/android/gms/common/internal/safeparcel/zzd;->zza(Landroid/os/Parcel;ILjava/lang/String;Z)V
+
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zzd;->zzai(Landroid/os/Parcel;I)V
 
     return-void
 .end method
 
-.method public final zzrw()Ljava/lang/String;
+.method public final zzafs()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/common/api/Scope;->zzalv:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/gms/common/api/Scope;->zzfho:Ljava/lang/String;
 
     return-object v0
 .end method

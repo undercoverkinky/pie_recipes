@@ -22,7 +22,7 @@
     .line 37
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/android/volley/VolleyError;-><init>(Lcom/android/volley/g;)V
+    invoke-direct {p0, v0}, Lcom/android/volley/VolleyError;-><init>(Lcom/android/volley/f;)V
 
     .line 38
     return-void

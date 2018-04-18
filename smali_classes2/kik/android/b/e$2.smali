@@ -1,5 +1,5 @@
 .class final Lkik/android/b/e$2;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
         "Landroid/os/Bundle;",
         ">;"
@@ -43,7 +43,7 @@
 
     iput-object p3, p0, Lkik/android/b/e$2;->b:Lcom/kik/events/Promise;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method

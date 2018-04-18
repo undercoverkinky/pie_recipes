@@ -2,37 +2,28 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lkik/android/chat/vm/ab;
-
 
 # virtual methods
-.method public abstract a(Lkik/core/datatypes/aa;)V
+.method public abstract j()V
 .end method
 
-.method public abstract d()Lrx/c;
+.method public abstract k()Ljava/lang/String;
+.end method
+
+.method public abstract l()Ljava/lang/String;
+.end method
+
+.method public abstract m()Lkik/android/widget/ExpandableTextView$a;
+.end method
+
+.method public abstract o()Lrx/d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lrx/c",
+            "Lrx/d",
             "<",
             "Ljava/lang/Boolean;",
             ">;"
         }
     .end annotation
-.end method
-
-.method public abstract f()Lrx/c;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lrx/c",
-            "<",
-            "Ljava/lang/Integer;",
-            ">;"
-        }
-    .end annotation
-.end method
-
-.method public abstract g()Ljava/lang/String;
 .end method

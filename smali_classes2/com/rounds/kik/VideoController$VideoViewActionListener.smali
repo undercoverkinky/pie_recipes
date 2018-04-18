@@ -17,3 +17,6 @@
 # virtual methods
 .method public abstract onProfileImageTap()V
 .end method
+
+.method public abstract onVideoScroll()V
+.end method

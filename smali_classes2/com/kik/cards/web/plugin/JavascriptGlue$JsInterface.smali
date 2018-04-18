@@ -82,11 +82,11 @@
     :cond_1
     iget-object v0, p0, Lcom/kik/cards/web/plugin/JavascriptGlue$JsInterface;->a:Lcom/kik/cards/web/plugin/JavascriptGlue;
 
-    invoke-static {v0}, Lcom/kik/cards/web/plugin/JavascriptGlue;->f(Lcom/kik/cards/web/plugin/JavascriptGlue;)Lcom/kik/cards/web/plugin/g;
+    invoke-static {v0}, Lcom/kik/cards/web/plugin/JavascriptGlue;->f(Lcom/kik/cards/web/plugin/JavascriptGlue;)Lcom/kik/cards/web/plugin/f;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/kik/cards/web/plugin/g;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/kik/cards/web/plugin/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -132,11 +132,11 @@
     :cond_1
     iget-object v0, p0, Lcom/kik/cards/web/plugin/JavascriptGlue$JsInterface;->a:Lcom/kik/cards/web/plugin/JavascriptGlue;
 
-    invoke-static {v0}, Lcom/kik/cards/web/plugin/JavascriptGlue;->f(Lcom/kik/cards/web/plugin/JavascriptGlue;)Lcom/kik/cards/web/plugin/g;
+    invoke-static {v0}, Lcom/kik/cards/web/plugin/JavascriptGlue;->f(Lcom/kik/cards/web/plugin/JavascriptGlue;)Lcom/kik/cards/web/plugin/f;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/kik/cards/web/plugin/g;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, p1, p2, p3}, Lcom/kik/cards/web/plugin/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

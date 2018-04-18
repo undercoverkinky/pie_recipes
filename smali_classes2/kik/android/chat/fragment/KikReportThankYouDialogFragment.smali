@@ -13,10 +13,8 @@
 
 # instance fields
 .field _thankYouMessage:Landroid/widget/TextView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f110199
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1001c3
     .end annotation
 .end field
 
@@ -62,14 +60,14 @@
 
     .line 45
     :cond_1
-    const v0, 0x7f11019b
+    const v0, 0x7f1001c5
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     .line 46
-    const v1, 0x7f11019c
+    const v1, 0x7f1001c6
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -87,21 +85,21 @@
 
     aput-object v0, v2, v3
 
-    invoke-static {v2}, Lkik/android/util/bz;->d([Landroid/view/View;)V
+    invoke-static {v2}, Lkik/android/util/ca;->d([Landroid/view/View;)V
 
     .line 49
     new-array v2, v4, [Landroid/view/View;
 
     aput-object v1, v2, v3
 
-    invoke-static {v2}, Lkik/android/util/bz;->g([Landroid/view/View;)V
+    invoke-static {v2}, Lkik/android/util/ca;->g([Landroid/view/View;)V
 
     .line 58
     :goto_1
     if-eqz v0, :cond_0
 
     .line 62
-    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)V
+    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)Lbutterknife/Unbinder;
 
     .line 64
     iget-object v0, p0, Lkik/android/chat/fragment/KikReportThankYouDialogFragment;->_thankYouMessage:Landroid/widget/TextView;
@@ -122,14 +120,14 @@
 
     aput-object v1, v2, v3
 
-    invoke-static {v2}, Lkik/android/util/bz;->d([Landroid/view/View;)V
+    invoke-static {v2}, Lkik/android/util/ca;->d([Landroid/view/View;)V
 
     .line 54
     new-array v2, v4, [Landroid/view/View;
 
     aput-object v0, v2, v3
 
-    invoke-static {v2}, Lkik/android/util/bz;->g([Landroid/view/View;)V
+    invoke-static {v2}, Lkik/android/util/ca;->g([Landroid/view/View;)V
 
     move-object v0, v1
 

@@ -55,18 +55,18 @@
     .end annotation
 
     .prologue
-    .line 4385
+    .line 4500
     iput-object p1, p0, Lcom/google/common/cache/LocalCache$ac;->c:Lcom/google/common/cache/LocalCache;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4386
+    .line 4501
     iput-object p2, p0, Lcom/google/common/cache/LocalCache$ac;->a:Ljava/lang/Object;
 
-    .line 4387
+    .line 4502
     iput-object p3, p0, Lcom/google/common/cache/LocalCache$ac;->b:Ljava/lang/Object;
 
-    .line 4388
+    .line 4503
     return-void
 .end method
 
@@ -82,15 +82,15 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 4403
+    .line 4518
     instance-of v1, p1, Ljava/util/Map$Entry;
 
     if-eqz v1, :cond_0
 
-    .line 4404
+    .line 4519
     check-cast p1, Ljava/util/Map$Entry;
 
-    .line 4405
+    .line 4520
     iget-object v1, p0, Lcom/google/common/cache/LocalCache$ac;->a:Ljava/lang/Object;
 
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -117,7 +117,7 @@
 
     const/4 v0, 0x1
 
-    .line 4407
+    .line 4522
     :cond_0
     return v0
 .end method
@@ -131,7 +131,7 @@
     .end annotation
 
     .prologue
-    .line 4392
+    .line 4507
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$ac;->a:Ljava/lang/Object;
 
     return-object v0
@@ -146,7 +146,7 @@
     .end annotation
 
     .prologue
-    .line 4397
+    .line 4512
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$ac;->b:Ljava/lang/Object;
 
     return-object v0
@@ -156,7 +156,7 @@
     .locals 2
 
     .prologue
-    .line 4413
+    .line 4528
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$ac;->a:Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -175,7 +175,7 @@
 .end method
 
 .method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TV;)TV;"
@@ -183,28 +183,42 @@
     .end annotation
 
     .prologue
-    .line 4418
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    .line 4533
+    iget-object v0, p0, Lcom/google/common/cache/LocalCache$ac;->c:Lcom/google/common/cache/LocalCache;
 
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    iget-object v1, p0, Lcom/google/common/cache/LocalCache$ac;->a:Ljava/lang/Object;
 
-    throw v0
+    invoke-virtual {v0, v1, p1}, Lcom/google/common/cache/LocalCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    .line 4534
+    iput-object p1, p0, Lcom/google/common/cache/LocalCache$ac;->b:Ljava/lang/Object;
+
+    .line 4535
+    return-object v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 2
 
     .prologue
-    .line 4425
+    .line 4540
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     invoke-virtual {p0}, Lcom/google/common/cache/LocalCache$ac;->getKey()Ljava/lang/Object;
 
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
     move-result-object v0
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    const-string v1, "="
 
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -212,41 +226,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    add-int/lit8 v3, v3, 0x1
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v4
-
-    add-int/2addr v3, v4
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v2, "="
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

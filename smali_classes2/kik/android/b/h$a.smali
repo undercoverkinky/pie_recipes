@@ -1,5 +1,5 @@
 .class final Lkik/android/b/h$a;
-.super Lkik/android/g/c;
+.super Lkik/android/i/c;
 .source "SourceFile"
 
 
@@ -31,7 +31,7 @@
 
     const/4 v1, 0x7
 
-    invoke-direct {p0, p2, v0, v1, p3}, Lkik/android/g/c;-><init>(Landroid/content/Context;Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {p0, p2, v0, v1, p3}, Lkik/android/i/c;-><init>(Landroid/content/Context;Ljava/lang/String;ILjava/lang/String;)V
 
     .line 38
     return-void

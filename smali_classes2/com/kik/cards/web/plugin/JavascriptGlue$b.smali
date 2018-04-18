@@ -1,5 +1,5 @@
 .class final Lcom/kik/cards/web/plugin/JavascriptGlue$b;
-.super Lcom/kik/cards/web/n;
+.super Lcom/kik/cards/web/m;
 .source "SourceFile"
 
 
@@ -19,7 +19,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/kik/cards/web/plugin/JavascriptGlue;Lcom/kik/cards/web/h;Lcom/kik/cards/web/m;)V
+.method public constructor <init>(Lcom/kik/cards/web/plugin/JavascriptGlue;Lcom/kik/cards/web/g;Lcom/kik/cards/web/l;)V
     .locals 0
 
     .prologue
@@ -27,7 +27,7 @@
     iput-object p1, p0, Lcom/kik/cards/web/plugin/JavascriptGlue$b;->a:Lcom/kik/cards/web/plugin/JavascriptGlue;
 
     .line 103
-    invoke-direct {p0, p2, p3}, Lcom/kik/cards/web/n;-><init>(Lcom/kik/cards/web/h;Lcom/kik/cards/web/m;)V
+    invoke-direct {p0, p2, p3}, Lcom/kik/cards/web/m;-><init>(Lcom/kik/cards/web/g;Lcom/kik/cards/web/l;)V
 
     .line 104
     return-void
@@ -210,7 +210,7 @@
 
     .prologue
     .line 166
-    invoke-super {p0, p1}, Lcom/kik/cards/web/n;->onConsoleMessage(Landroid/webkit/ConsoleMessage;)Z
+    invoke-super {p0, p1}, Lcom/kik/cards/web/m;->onConsoleMessage(Landroid/webkit/ConsoleMessage;)Z
 
     .line 167
     iget-object v0, p0, Lcom/kik/cards/web/plugin/JavascriptGlue$b;->a:Lcom/kik/cards/web/plugin/JavascriptGlue;

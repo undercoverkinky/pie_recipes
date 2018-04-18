@@ -1,31 +1,42 @@
-.class public interface abstract Lcom/google/android/gms/common/internal/zzs;
+.class public final Lcom/google/android/gms/common/internal/zzs;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/os/IInterface;
 
-
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/google/android/gms/common/internal/zzs$zza;
-    }
-.end annotation
-
-
-# virtual methods
-.method public abstract zzqW()Lcom/google/android/gms/dynamic/zzd;
-    .annotation system Ldalvik/annotation/Throws;
+# instance fields
+.field public final zzecn:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
         value = {
-            Landroid/os/RemoteException;
+            "Ljava/util/Set",
+            "<",
+            "Lcom/google/android/gms/common/api/Scope;",
+            ">;"
         }
     .end annotation
-.end method
+.end field
 
-.method public abstract zzqX()I
-    .annotation system Ldalvik/annotation/Throws;
+
+# direct methods
+.method public constructor <init>(Ljava/util/Set;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
         value = {
-            Landroid/os/RemoteException;
+            "(",
+            "Ljava/util/Set",
+            "<",
+            "Lcom/google/android/gms/common/api/Scope;",
+            ">;)V"
         }
     .end annotation
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {p1}, Lcom/google/android/gms/common/internal/zzbp;->zzu(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {p1}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/android/gms/common/internal/zzs;->zzecn:Ljava/util/Set;
+
+    return-void
 .end method

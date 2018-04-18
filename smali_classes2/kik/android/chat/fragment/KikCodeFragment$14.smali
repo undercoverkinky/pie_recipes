@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/KikCodeFragment;->b(Lcom/kik/events/d;)V
+    value = Lkik/android/chat/fragment/KikCodeFragment;->registerLifecycleEvents(Lcom/kik/events/d;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 292
+    .line 299
     iput-object p1, p0, Lkik/android/chat/fragment/KikCodeFragment$14;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,10 +50,10 @@
     .locals 1
 
     .prologue
-    .line 292
+    .line 299
     check-cast p2, Ljava/lang/String;
 
-    .line 1296
+    .line 1303
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$14;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/KikCodeFragment;->k(Lkik/android/chat/fragment/KikCodeFragment;)Lkik/android/chat/fragment/KikCodeFragment$b;
@@ -62,7 +62,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1297
+    .line 1304
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$14;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/KikCodeFragment;->k(Lkik/android/chat/fragment/KikCodeFragment;)Lkik/android/chat/fragment/KikCodeFragment$b;
@@ -71,12 +71,12 @@
 
     invoke-interface {v0}, Lkik/android/chat/fragment/KikCodeFragment$b;->a()V
 
-    .line 1299
+    .line 1306
     :cond_0
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$14;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     invoke-static {v0, p2}, Lkik/android/chat/fragment/KikCodeFragment;->a(Lkik/android/chat/fragment/KikCodeFragment;Ljava/lang/String;)V
 
-    .line 292
+    .line 299
     return-void
 .end method

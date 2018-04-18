@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 1018
+    .line 1030
     invoke-direct {p0}, Ljava/util/AbstractQueue;-><init>()V
 
     return-void
@@ -49,12 +49,12 @@
     .end annotation
 
     .prologue
-    .line 1041
-    invoke-static {}, Lcom/google/common/collect/ImmutableSet;->g()Lcom/google/common/collect/ImmutableSet;
+    .line 1053
+    invoke-static {}, Lcom/google/common/collect/ImmutableSet;->d()Lcom/google/common/collect/ImmutableSet;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableSet;->a()Lcom/google/common/collect/x;
+    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableSet;->a()Lcom/google/common/collect/s;
 
     move-result-object v0
 
@@ -65,7 +65,7 @@
     .locals 1
 
     .prologue
-    .line 1021
+    .line 1033
     const/4 v0, 0x1
 
     return v0
@@ -75,7 +75,7 @@
     .locals 1
 
     .prologue
-    .line 1026
+    .line 1038
     const/4 v0, 0x0
 
     return-object v0
@@ -85,7 +85,7 @@
     .locals 1
 
     .prologue
-    .line 1031
+    .line 1043
     const/4 v0, 0x0
 
     return-object v0
@@ -95,7 +95,7 @@
     .locals 1
 
     .prologue
-    .line 1036
+    .line 1048
     const/4 v0, 0x0
 
     return v0

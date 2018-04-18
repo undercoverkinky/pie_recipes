@@ -45,15 +45,15 @@
     .locals 1
 
     .prologue
-    .line 93
+    .line 99
     invoke-direct {p0, p1, p3, p4}, Landroid/support/v4/widget/CursorAdapter;-><init>(Landroid/content/Context;Landroid/database/Cursor;I)V
 
-    .line 94
+    .line 100
     iput p2, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mDropDownLayout:I
 
     iput p2, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mLayout:I
 
-    .line 95
+    .line 101
     const-string v0, "layout_inflater"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -64,23 +64,25 @@
 
     iput-object v0, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 96
+    .line 102
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;ILandroid/database/Cursor;Z)V
     .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
     .prologue
-    .line 76
+    .line 82
     invoke-direct {p0, p1, p3, p4}, Landroid/support/v4/widget/CursorAdapter;-><init>(Landroid/content/Context;Landroid/database/Cursor;Z)V
 
-    .line 77
+    .line 83
     iput p2, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mDropDownLayout:I
 
     iput p2, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mLayout:I
 
-    .line 78
+    .line 84
     const-string v0, "layout_inflater"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -91,7 +93,7 @@
 
     iput-object v0, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 79
+    .line 85
     return-void
 .end method
 
@@ -101,7 +103,7 @@
     .locals 3
 
     .prologue
-    .line 111
+    .line 117
     iget-object v0, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     iget v1, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mDropDownLayout:I
@@ -119,7 +121,7 @@
     .locals 3
 
     .prologue
-    .line 106
+    .line 112
     iget-object v0, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     iget v1, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mLayout:I
@@ -137,10 +139,10 @@
     .locals 0
 
     .prologue
-    .line 129
+    .line 135
     iput p1, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mDropDownLayout:I
 
-    .line 130
+    .line 136
     return-void
 .end method
 
@@ -148,9 +150,9 @@
     .locals 0
 
     .prologue
-    .line 120
+    .line 126
     iput p1, p0, Landroid/support/v4/widget/ResourceCursorAdapter;->mLayout:I
 
-    .line 121
+    .line 127
     return-void
 .end method

@@ -14,9 +14,9 @@
     .locals 7
 
     .prologue
-    const/16 v6, -0x6f
+    const/16 v6, -0x70
 
-    const/16 v5, -0x70
+    const/16 v5, -0x72
 
     const/16 v4, -0x73
 
@@ -45,9 +45,7 @@
     move-result-object v1
 
     .line 1087
-    const/16 v0, -0x3f1
-
-    if-ne p2, v0, :cond_0
+    if-ne p2, v2, :cond_0
 
     .line 1088
     iput v2, p0, Lio/branch/referral/e;->b:I
@@ -72,14 +70,10 @@
 
     .line 1090
     :cond_0
-    const/16 v0, -0x4d2
-
-    if-ne p2, v0, :cond_1
+    if-ne p2, v5, :cond_1
 
     .line 1091
-    const/16 v0, -0x72
-
-    iput v0, p0, Lio/branch/referral/e;->b:I
+    iput v5, p0, Lio/branch/referral/e;->b:I
 
     .line 1092
     const-string v0, " Branch API Error: Please enter your branch_key in your project\'s manifest file first."
@@ -232,10 +226,14 @@
 
     .line 1123
     :cond_a
-    if-ne p2, v6, :cond_b
+    const/16 v0, -0x6f
+
+    if-ne p2, v0, :cond_b
 
     .line 1124
-    iput v6, p0, Lio/branch/referral/e;->b:I
+    const/16 v0, -0x6f
+
+    iput v0, p0, Lio/branch/referral/e;->b:I
 
     .line 1125
     const-string v0, " Request to Branch server timed out. Please check your internet connectivity"
@@ -248,11 +246,11 @@
 
     if-ge p2, v0, :cond_c
 
-    if-ne p2, v5, :cond_d
+    if-ne p2, v6, :cond_d
 
     .line 1127
     :cond_c
-    iput v5, p0, Lio/branch/referral/e;->b:I
+    iput v6, p0, Lio/branch/referral/e;->b:I
 
     .line 1128
     const-string v0, " Unable to reach the Branch servers, please try again shortly."

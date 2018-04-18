@@ -27,7 +27,7 @@
     .locals 0
 
     .prologue
-    .line 624
+    .line 608
     iput-object p1, p0, Lkik/android/chat/fragment/KikDialogFragment$b;->a:Lkik/android/chat/fragment/KikDialogFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 1
 
     .prologue
-    .line 631
+    .line 615
     iget-object v0, p0, Lkik/android/chat/fragment/KikDialogFragment$b;->b:Ljava/lang/String;
 
     return-object v0
@@ -51,10 +51,10 @@
     .locals 0
 
     .prologue
-    .line 646
+    .line 630
     iput-object p1, p0, Lkik/android/chat/fragment/KikDialogFragment$b;->c:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 647
+    .line 631
     return-void
 .end method
 
@@ -62,10 +62,10 @@
     .locals 0
 
     .prologue
-    .line 636
+    .line 620
     iput-object p1, p0, Lkik/android/chat/fragment/KikDialogFragment$b;->b:Ljava/lang/String;
 
-    .line 637
+    .line 621
     return-void
 .end method
 
@@ -73,7 +73,7 @@
     .locals 1
 
     .prologue
-    .line 641
+    .line 625
     iget-object v0, p0, Lkik/android/chat/fragment/KikDialogFragment$b;->c:Landroid/content/DialogInterface$OnClickListener;
 
     return-object v0

@@ -43,7 +43,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 67
+    .line 66
     new-instance v0, Lcom/google/common/hash/Funnels$UnencodedCharsFunnel;
 
     const-string v1, "INSTANCE"
@@ -52,7 +52,7 @@
 
     sput-object v0, Lcom/google/common/hash/Funnels$UnencodedCharsFunnel;->INSTANCE:Lcom/google/common/hash/Funnels$UnencodedCharsFunnel;
 
-    .line 66
+    .line 65
     const/4 v0, 0x1
 
     new-array v0, v0, [Lcom/google/common/hash/Funnels$UnencodedCharsFunnel;
@@ -75,7 +75,7 @@
     .end annotation
 
     .prologue
-    .line 66
+    .line 65
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -85,7 +85,7 @@
     .locals 1
 
     .prologue
-    .line 66
+    .line 65
     const-class v0, Lcom/google/common/hash/Funnels$UnencodedCharsFunnel;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -101,7 +101,7 @@
     .locals 1
 
     .prologue
-    .line 66
+    .line 65
     sget-object v0, Lcom/google/common/hash/Funnels$UnencodedCharsFunnel;->$VALUES:[Lcom/google/common/hash/Funnels$UnencodedCharsFunnel;
 
     invoke-virtual {v0}, [Lcom/google/common/hash/Funnels$UnencodedCharsFunnel;->clone()Ljava/lang/Object;
@@ -119,10 +119,10 @@
     .locals 0
 
     .prologue
-    .line 70
+    .line 69
     invoke-interface {p2, p1}, Lcom/google/common/hash/g;->b(Ljava/lang/CharSequence;)Lcom/google/common/hash/g;
 
-    .line 71
+    .line 70
     return-void
 .end method
 
@@ -130,7 +130,7 @@
     .locals 0
 
     .prologue
-    .line 66
+    .line 65
     check-cast p1, Ljava/lang/CharSequence;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/common/hash/Funnels$UnencodedCharsFunnel;->funnel(Ljava/lang/CharSequence;Lcom/google/common/hash/g;)V

@@ -71,23 +71,23 @@
     .end annotation
 
     .prologue
-    .line 1288
+    .line 1300
     invoke-direct {p0, p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V
 
-    .line 1371
+    .line 1383
     invoke-static {}, Lcom/google/common/cache/LocalCache;->j()Lcom/google/common/cache/LocalCache$r;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/common/cache/LocalCache$v;->i:Lcom/google/common/cache/LocalCache$r;
 
-    .line 1289
+    .line 1301
     iput p3, p0, Lcom/google/common/cache/LocalCache$v;->g:I
 
-    .line 1290
+    .line 1302
     iput-object p4, p0, Lcom/google/common/cache/LocalCache$v;->h:Lcom/google/common/cache/LocalCache$j;
 
-    .line 1291
+    .line 1303
     return-void
 .end method
 
@@ -97,7 +97,7 @@
     .locals 1
 
     .prologue
-    .line 1307
+    .line 1319
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -109,7 +109,7 @@
     .locals 1
 
     .prologue
-    .line 1385
+    .line 1397
     iget v0, p0, Lcom/google/common/cache/LocalCache$v;->g:I
 
     return v0
@@ -124,7 +124,7 @@
     .end annotation
 
     .prologue
-    .line 1295
+    .line 1307
     invoke-virtual {p0}, Lcom/google/common/cache/LocalCache$v;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -143,7 +143,7 @@
     .end annotation
 
     .prologue
-    .line 1390
+    .line 1402
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$v;->h:Lcom/google/common/cache/LocalCache$j;
 
     return-object v0
@@ -160,7 +160,7 @@
     .end annotation
 
     .prologue
-    .line 1317
+    .line 1329
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -179,7 +179,7 @@
     .end annotation
 
     .prologue
-    .line 1349
+    .line 1361
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -198,7 +198,7 @@
     .end annotation
 
     .prologue
-    .line 1327
+    .line 1339
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -217,7 +217,7 @@
     .end annotation
 
     .prologue
-    .line 1359
+    .line 1371
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -236,7 +236,7 @@
     .end annotation
 
     .prologue
-    .line 1375
+    .line 1387
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$v;->i:Lcom/google/common/cache/LocalCache$r;
 
     return-object v0
@@ -246,7 +246,7 @@
     .locals 1
 
     .prologue
-    .line 1339
+    .line 1351
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -258,7 +258,7 @@
     .locals 1
 
     .prologue
-    .line 1312
+    .line 1324
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -277,7 +277,7 @@
     .end annotation
 
     .prologue
-    .line 1322
+    .line 1334
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -296,7 +296,7 @@
     .end annotation
 
     .prologue
-    .line 1354
+    .line 1366
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -315,7 +315,7 @@
     .end annotation
 
     .prologue
-    .line 1332
+    .line 1344
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -334,7 +334,7 @@
     .end annotation
 
     .prologue
-    .line 1364
+    .line 1376
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -353,10 +353,10 @@
     .end annotation
 
     .prologue
-    .line 1380
+    .line 1392
     iput-object p1, p0, Lcom/google/common/cache/LocalCache$v;->i:Lcom/google/common/cache/LocalCache$r;
 
-    .line 1381
+    .line 1393
     return-void
 .end method
 
@@ -364,7 +364,7 @@
     .locals 1
 
     .prologue
-    .line 1344
+    .line 1356
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

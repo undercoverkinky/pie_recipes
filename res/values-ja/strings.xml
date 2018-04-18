@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="abc_action_bar_home_description">ホームへ移動</string>
+    <string name="abc_action_bar_home_description_format">%1$s、%2$s</string>
+    <string name="abc_action_bar_home_subtitle_description_format">%1$s、%2$s、%3$s</string>
     <string name="abc_action_bar_up_description">上へ移動</string>
     <string name="abc_action_menu_overflow_description">その他のオプション</string>
     <string name="abc_action_mode_done">完了</string>
     <string name="abc_activity_chooser_view_see_all">すべて表示</string>
     <string name="abc_activitychooserview_choose_application">アプリの選択</string>
+    <string name="abc_capital_off">OFF</string>
+    <string name="abc_capital_on">ON</string>
+    <string name="abc_search_hint">検索…</string>
     <string name="abc_searchview_description_clear">検索キーワードを削除</string>
     <string name="abc_searchview_description_query">検索キーワード</string>
     <string name="abc_searchview_description_search">検索</string>
@@ -13,37 +18,33 @@
     <string name="abc_searchview_description_voice">音声検索</string>
     <string name="abc_shareactionprovider_share_with">共有</string>
     <string name="abc_shareactionprovider_share_with_application">%sと共有</string>
-    <string name="common_google_play_services_api_unavailable_text">%1$sには現在利用されていないGoogle Play開発者サービスが必要です。詳しくはデベロッパーにお問い合わせください。</string>
-    <string name="common_google_play_services_enable_button">Play開発者サービスの有効化</string>
+    <string name="abc_toolbar_collapse_description">折りたたむ</string>
+    <string name="common_google_play_services_enable_button">有効にする</string>
     <string name="common_google_play_services_enable_text">%1$sの実行には、Google Play開発者サービスの有効化が必要です。</string>
     <string name="common_google_play_services_enable_title">Google Play開発者サービスの有効化</string>
-    <string name="common_google_play_services_install_button">Google Play開発者サービスを入手</string>
-    <string name="common_google_play_services_install_text_phone">%1$sの実行にはGoogle Play開発者サービスが必要ですが、お使いのスマートフォンにはインストールされていません。</string>
-    <string name="common_google_play_services_install_text_tablet">%1$sの実行にはGoogle Play開発者サービスが必要ですが、お使いのタブレットにはインストールされていません。</string>
+    <string name="common_google_play_services_install_button">インストール</string>
+    <string name="common_google_play_services_install_text">「%1$s」の実行には Google Play 開発者サービスが必要ですが、お使いの端末にはインストールされていません。</string>
     <string name="common_google_play_services_install_title">Google Play開発者サービスの入手</string>
-    <string name="common_google_play_services_invalid_account_text">指定したアカウントはこの端末上に存在しません。別のアカウントを選択してください。</string>
-    <string name="common_google_play_services_invalid_account_title">無効なアカウント</string>
-    <string name="common_google_play_services_network_error_text">Google Play開発者サービスに接続するには、データ接続が必要です。</string>
-    <string name="common_google_play_services_network_error_title">ネットワークエラー</string>
     <string name="common_google_play_services_notification_ticker">Google Play開発者サービスのエラー</string>
-    <string name="common_google_play_services_resolution_required_text">%1$sに必要な操作を完了してください。</string>
-    <string name="common_google_play_services_resolution_required_title">Google Play 開発者サービスで操作が必要</string>
-    <string name="common_google_play_services_restricted_profile_text">制限付きプロフィールからのアカウントへのアクセスはサポートされていません。</string>
-    <string name="common_google_play_services_restricted_profile_title">制限付きプロフィール</string>
-    <string name="common_google_play_services_sign_in_failed_text">指定されたアカウントへのログイン中にエラーが発生しました。別のアカウントを選択してください。</string>
-    <string name="common_google_play_services_sign_in_failed_title">ログインできませんでした</string>
-    <string name="common_google_play_services_unknown_issue">「%1$s」でGoogle Play開発者サービスに問題が発生しています。問題が解決しない場合は、デベロッパーにお問い合わせください。</string>
-    <string name="common_google_play_services_unsupported_text">%1$sに必要なGoogle Play開発者サービスは、お使いの端末ではサポートされていません。詳しくは端末メーカーにお問い合わせください。</string>
-    <string name="common_google_play_services_unsupported_title">Google Play開発者サービス</string>
+    <string name="common_google_play_services_unknown_issue">「%1$s」で Google Play 開発者サービスに問題が発生しています。もう一度お試しください。</string>
+    <string name="common_google_play_services_unsupported_text">「%1$s」の実行には Google Play 開発者サービスが必要ですが、お使いの端末ではサポートされていません。</string>
     <string name="common_google_play_services_update_button">更新</string>
     <string name="common_google_play_services_update_text">%1$sの実行にはGoogle Play開発者サービスの更新が必要です。</string>
     <string name="common_google_play_services_update_title">Google Play開発者サービスの更新</string>
     <string name="common_google_play_services_updating_text">%1$sの実行にはGoogle Play開発者サービスが必要ですが、このサービスは現在更新中です。</string>
-    <string name="common_google_play_services_updating_title">Google Play開発者サービスの更新中</string>
     <string name="common_google_play_services_wear_update_text">Google Play開発者サービスの新しいバージョンが必要です。まもなく自動更新されます。</string>
     <string name="common_open_on_phone">スマートフォンで開く</string>
     <string name="common_signin_button_text">ログイン</string>
     <string name="common_signin_button_text_long">Googleにログイン</string>
+    <string name="gcm_fallback_notification_channel_label">その他</string>
+    <string name="s1">画像の保存</string>
+    <string name="s2">広告が画像ギャラリーに画像を保存することを許可しますか？</string>
+    <string name="s3">許可する</string>
+    <string name="s4">許可しない</string>
+    <string name="s5">カレンダーの予定の作成</string>
+    <string name="s6">広告がカレンダーの予定を作成することを許可しますか？</string>
+    <string name="search_menu_title">検索</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
     <string name="Blue">青</string>
     <string name="Gold">ゴールド</string>
     <string name="Green">グリーン</string>
@@ -74,8 +75,8 @@
     <string name="abm_options_dialog_hint">あなたの電話番号やメールアドレスを知っている人があなたを見つけられるようになります</string>
     <string name="abm_options_dialog_prompt">検索を許可</string>
     <string name="abm_privacy_options_title">プライバシー設定</string>
-    <string name="about_copyright_text">Copyright © 2014 Kik Interactive Inc All rights reserved</string>
-    <string name="about_copyright_text_extended">"Copyright © 2016 Kik Interactive Inc All rights reserved
+    <string name="about_copyright_text">Copyright © 2018 Kik Interactive Inc All rights reserved</string>
+    <string name="about_copyright_text_extended">"Copyright © 2018 Kik Interactive Inc All rights reserved
 
 Kik Interactive Inc
 420 Weber St North
@@ -83,7 +84,7 @@ Suite I
 Waterloo, ON
 Canada
 N2L 4E7"</string>
-    <string name="about_copyright_text_extended_link">"Copyright © 2016 Kik Interactive Inc All rights reserved
+    <string name="about_copyright_text_extended_link">"Copyright © 2018 Kik Interactive Inc All rights reserved
 
 Kik Interactive Inc
 420 Weber St North
@@ -467,6 +468,51 @@ Kik をお使い続けるにはログインし直す必要があります。"</s
     <string name="inline_bot_error">タップで再試行</string>
     <string name="inline_bot_loading">ボットを探しています…</string>
     <string name="inline_bot_no_results">ボットショップでさらにボットを見つける</string>
+    <string name="instabug_audio_recorder_permission_denied">音声録音の許可が拒否されました</string>
+    <string name="instabug_err_invalid_comment">有用なコメントを入力してください</string>
+    <string name="instabug_err_invalid_email">有効なメールアドレスを入力してください</string>
+    <string name="instabug_err_invalid_extra_field">有効な%1$sを入力してください</string>
+    <string name="instabug_external_storage_permission_denied">ストレージ許可が拒否されました</string>
+    <string name="instabug_str_action_submit">提出する</string>
+    <string name="instabug_str_add_photo">ギャラリーから画像を選択</string>
+    <string name="instabug_str_alert_message_max_attachments">既存の添付ファイルを削除して新しい添付ファイルを追加します。</string>
+    <string name="instabug_str_alert_title_max_attachments">添付ファイルを追加できません</string>
+    <string name="instabug_str_annotate">スクリーンショット上に描画</string>
+    <string name="instabug_str_audio">オーディオ</string>
+    <string name="instabug_str_bug_comment_hint">どのような問題ですか？</string>
+    <string name="instabug_str_bug_header">問題を報告</string>
+    <string name="instabug_str_conversations">会話</string>
+    <string name="instabug_str_dialog_message_preparing">準備…</string>
+    <string name="instabug_str_dismiss">却下する</string>
+    <string name="instabug_str_email_hint">メールアドレスを入力</string>
+    <string name="instabug_str_error_survey_without_answer">アンケートは回答なしで提出することはできません。</string>
+    <string name="instabug_str_feedback_comment_hint">どのように改善して欲しいですか？</string>
+    <string name="instabug_str_feedback_header">改善を提案</string>
+    <string name="instabug_str_hint_enter_your_answer">あなたの答えを入力してください</string>
+    <string name="instabug_str_hold_to_record">長押しして録音</string>
+    <string name="instabug_str_image">画像</string>
+    <string name="instabug_str_image_loading_error">画像をロードできませんでした</string>
+    <string name="instabug_str_invocation_dialog_title">何かお困りでしょうか？</string>
+    <string name="instabug_str_messages">メッセージ</string>
+    <string name="instabug_str_notification_title">%1$s チーム</string>
+    <string name="instabug_str_notifications_body">%2$s とその他の相手から %1$d 通の新規メッセージ</string>
+    <string name="instabug_str_please_wait">少々お待ちください</string>
+    <string name="instabug_str_record_audio">ボイスメモを録音</string>
+    <string name="instabug_str_record_video">携帯画面ビデオを録画</string>
+    <string name="instabug_str_release_stop_record">リリースして添付</string>
+    <string name="instabug_str_sending_message_hint">メッセージを入力</string>
+    <string name="instabug_str_shake_hint">フォードバックをお待ちしています&lt;br/>デバイスを &lt;b>シェイク&lt;/b> すれば弊社担当者とチャットできます。</string>
+    <string name="instabug_str_success_note">"フィードバックを承りました。
+%s 改善へのご協力ありがとうございました。"</string>
+    <string name="instabug_str_swipe_hint">フォードバックをお待ちしています&lt;br/>&lt;b>2 本指でスワイプ&lt;/b> すれば弊社担当者とチャットできます。</string>
+    <string name="instabug_str_take_screenshot">スクリーンショットを撮影</string>
+    <string name="instabug_str_talk_to_us">弊社にご連絡ください</string>
+    <string name="instabug_str_thank_you">ありがとうございます</string>
+    <string name="instabug_str_video">ビデオ</string>
+    <string name="instabug_str_video_encoder_busy">ビデオエンコーダは現在別のビデオをエンコード中です</string>
+    <string name="instabug_str_video_encoding_error">メモリー不足のため、ビデオをエンコードできませんでした</string>
+    <string name="instabug_str_video_player">ビデオプレイヤー</string>
+    <string name="instabug_str_video_recording_hint">準備ができたらレコードを押す</string>
     <string name="invalid_card_num_error">カード番号が無効です</string>
     <string name="invalid_cvv_error">CVV が無効です</string>
     <string name="invalid_expiry_date_error">有効期限が無効です</string>

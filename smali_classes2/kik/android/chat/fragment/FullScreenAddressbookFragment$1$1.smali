@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/fragment/FullScreenAddressbookFragment$1$1;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
         "Ljava/lang/Void;",
         ">;"
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 72
+    .line 78
     iput-object p1, p0, Lkik/android/chat/fragment/FullScreenAddressbookFragment$1$1;->a:Lkik/android/chat/fragment/FullScreenAddressbookFragment$1;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -46,13 +46,13 @@
     .locals 1
 
     .prologue
-    .line 76
+    .line 82
     iget-object v0, p0, Lkik/android/chat/fragment/FullScreenAddressbookFragment$1$1;->a:Lkik/android/chat/fragment/FullScreenAddressbookFragment$1;
 
     iget-object v0, v0, Lkik/android/chat/fragment/FullScreenAddressbookFragment$1;->a:Lkik/android/chat/fragment/FullScreenAddressbookFragment;
 
-    invoke-static {v0}, Lkik/android/chat/fragment/FullScreenAddressbookFragment;->b(Lkik/android/chat/fragment/FullScreenAddressbookFragment;)V
+    invoke-static {v0}, Lkik/android/chat/fragment/FullScreenAddressbookFragment;->c(Lkik/android/chat/fragment/FullScreenAddressbookFragment;)V
 
-    .line 77
+    .line 83
     return-void
 .end method

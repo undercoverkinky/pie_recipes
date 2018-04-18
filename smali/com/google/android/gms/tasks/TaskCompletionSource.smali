@@ -14,10 +14,10 @@
 
 
 # instance fields
-.field private final zzbwx:Lcom/google/android/gms/tasks/h;
+.field private final zzkfw:Lcom/google/android/gms/tasks/n;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/google/android/gms/tasks/h",
+            "Lcom/google/android/gms/tasks/n",
             "<TTResult;>;"
         }
     .end annotation
@@ -30,11 +30,11 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lcom/google/android/gms/tasks/h;
+    new-instance v0, Lcom/google/android/gms/tasks/n;
 
-    invoke-direct {v0}, Lcom/google/android/gms/tasks/h;-><init>()V
+    invoke-direct {v0}, Lcom/google/android/gms/tasks/n;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/gms/tasks/TaskCompletionSource;->zzbwx:Lcom/google/android/gms/tasks/h;
+    iput-object v0, p0, Lcom/google/android/gms/tasks/TaskCompletionSource;->zzkfw:Lcom/google/android/gms/tasks/n;
 
     return-void
 .end method
@@ -51,7 +51,7 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/google/android/gms/tasks/TaskCompletionSource;->zzbwx:Lcom/google/android/gms/tasks/h;
+    iget-object v0, p0, Lcom/google/android/gms/tasks/TaskCompletionSource;->zzkfw:Lcom/google/android/gms/tasks/n;
 
     return-object v0
 .end method
@@ -59,9 +59,9 @@
 .method public setException(Ljava/lang/Exception;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/tasks/TaskCompletionSource;->zzbwx:Lcom/google/android/gms/tasks/h;
+    iget-object v0, p0, Lcom/google/android/gms/tasks/TaskCompletionSource;->zzkfw:Lcom/google/android/gms/tasks/n;
 
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/tasks/h;->a(Ljava/lang/Exception;)V
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/tasks/n;->a(Ljava/lang/Exception;)V
 
     return-void
 .end method
@@ -74,9 +74,38 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/google/android/gms/tasks/TaskCompletionSource;->zzbwx:Lcom/google/android/gms/tasks/h;
+    iget-object v0, p0, Lcom/google/android/gms/tasks/TaskCompletionSource;->zzkfw:Lcom/google/android/gms/tasks/n;
 
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/tasks/h;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/tasks/n;->a(Ljava/lang/Object;)V
 
     return-void
+.end method
+
+.method public trySetException(Ljava/lang/Exception;)Z
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/tasks/TaskCompletionSource;->zzkfw:Lcom/google/android/gms/tasks/n;
+
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/tasks/n;->b(Ljava/lang/Exception;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public trySetResult(Ljava/lang/Object;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TTResult;)Z"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/gms/tasks/TaskCompletionSource;->zzkfw:Lcom/google/android/gms/tasks/n;
+
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/tasks/n;->b(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
 .end method

@@ -1,5 +1,5 @@
 .class final Lkik/android/b/e$1$1$1;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
         "Landroid/os/Bundle;",
         ">;"
@@ -35,7 +35,7 @@
     .line 140
     iput-object p1, p0, Lkik/android/b/e$1$1$1;->a:Lkik/android/b/e$1$1;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -67,7 +67,7 @@
     check-cast p1, Landroid/os/Bundle;
 
     .line 1144
-    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Object;)V
+    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Object;)V
 
     .line 1145
     const-string v0, "kik.permissionFragment.extra.returned.userdata"
@@ -124,7 +124,7 @@
 
     .prologue
     .line 159
-    invoke-super {p0, p1}, Lcom/kik/events/l;->b(Ljava/lang/Throwable;)V
+    invoke-super {p0, p1}, Lcom/kik/events/k;->b(Ljava/lang/Throwable;)V
 
     .line 160
     iget-object v0, p0, Lkik/android/b/e$1$1$1;->a:Lkik/android/b/e$1$1;
@@ -144,7 +144,7 @@
 
     .prologue
     .line 166
-    invoke-super {p0}, Lcom/kik/events/l;->c()V
+    invoke-super {p0}, Lcom/kik/events/k;->c()V
 
     .line 167
     invoke-direct {p0}, Lkik/android/b/e$1$1$1;->d()V

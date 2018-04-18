@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 332
+    .line 349
     iput-object p1, p0, Landroid/support/v7/widget/SearchView$4;->a:Landroid/support/v7/widget/SearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,27 +40,23 @@
     .locals 2
 
     .prologue
-    .line 335
+    .line 352
     iget-object v0, p0, Landroid/support/v7/widget/SearchView$4;->a:Landroid/support/v7/widget/SearchView;
 
-    invoke-static {v0}, Landroid/support/v7/widget/SearchView;->c(Landroid/support/v7/widget/SearchView;)Landroid/view/View$OnFocusChangeListener;
-
-    move-result-object v0
+    iget-object v0, v0, Landroid/support/v7/widget/SearchView;->f:Landroid/view/View$OnFocusChangeListener;
 
     if-eqz v0, :cond_0
 
-    .line 336
+    .line 353
     iget-object v0, p0, Landroid/support/v7/widget/SearchView$4;->a:Landroid/support/v7/widget/SearchView;
 
-    invoke-static {v0}, Landroid/support/v7/widget/SearchView;->c(Landroid/support/v7/widget/SearchView;)Landroid/view/View$OnFocusChangeListener;
-
-    move-result-object v0
+    iget-object v0, v0, Landroid/support/v7/widget/SearchView;->f:Landroid/view/View$OnFocusChangeListener;
 
     iget-object v1, p0, Landroid/support/v7/widget/SearchView$4;->a:Landroid/support/v7/widget/SearchView;
 
     invoke-interface {v0, v1, p2}, Landroid/view/View$OnFocusChangeListener;->onFocusChange(Landroid/view/View;Z)V
 
-    .line 338
+    .line 355
     :cond_0
     return-void
 .end method

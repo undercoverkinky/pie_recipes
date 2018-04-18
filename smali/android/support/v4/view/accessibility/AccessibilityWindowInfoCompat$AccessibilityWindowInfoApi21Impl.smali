@@ -15,25 +15,14 @@
 
 
 # direct methods
-.method private constructor <init>()V
-    .locals 1
-
-    .prologue
-    .line 116
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Landroid/support/v4/view/accessibility/AccessibilityWindowInfoCompat$AccessibilityWindowInfoStubImpl;-><init>(Landroid/support/v4/view/accessibility/AccessibilityWindowInfoCompat$1;)V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Landroid/support/v4/view/accessibility/AccessibilityWindowInfoCompat$1;)V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 116
-    invoke-direct {p0}, Landroid/support/v4/view/accessibility/AccessibilityWindowInfoCompat$AccessibilityWindowInfoApi21Impl;-><init>()V
+    .line 132
+    invoke-direct {p0}, Landroid/support/v4/view/accessibility/AccessibilityWindowInfoCompat$AccessibilityWindowInfoStubImpl;-><init>()V
 
+    .line 133
     return-void
 .end method
 
@@ -43,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 154
+    .line 172
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityWindowInfoCompatApi21;->getBoundsInScreen(Ljava/lang/Object;Landroid/graphics/Rect;)V
 
-    .line 155
+    .line 173
     return-void
 .end method
 
@@ -54,7 +43,7 @@
     .locals 1
 
     .prologue
-    .line 179
+    .line 197
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityWindowInfoCompatApi21;->getChild(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v0
@@ -66,7 +55,7 @@
     .locals 1
 
     .prologue
-    .line 174
+    .line 192
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityWindowInfoCompatApi21;->getChildCount(Ljava/lang/Object;)I
 
     move-result v0
@@ -78,7 +67,7 @@
     .locals 1
 
     .prologue
-    .line 149
+    .line 167
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityWindowInfoCompatApi21;->getId(Ljava/lang/Object;)I
 
     move-result v0
@@ -90,7 +79,7 @@
     .locals 1
 
     .prologue
-    .line 134
+    .line 152
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityWindowInfoCompatApi21;->getLayer(Ljava/lang/Object;)I
 
     move-result v0
@@ -102,7 +91,7 @@
     .locals 1
 
     .prologue
-    .line 144
+    .line 162
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityWindowInfoCompatApi21;->getParent(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -114,7 +103,7 @@
     .locals 1
 
     .prologue
-    .line 139
+    .line 157
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityWindowInfoCompatApi21;->getRoot(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -126,7 +115,7 @@
     .locals 1
 
     .prologue
-    .line 129
+    .line 147
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityWindowInfoCompatApi21;->getType(Ljava/lang/Object;)I
 
     move-result v0
@@ -138,7 +127,7 @@
     .locals 1
 
     .prologue
-    .line 169
+    .line 187
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityWindowInfoCompatApi21;->isAccessibilityFocused(Ljava/lang/Object;)Z
 
     move-result v0
@@ -150,7 +139,7 @@
     .locals 1
 
     .prologue
-    .line 159
+    .line 177
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityWindowInfoCompatApi21;->isActive(Ljava/lang/Object;)Z
 
     move-result v0
@@ -162,7 +151,7 @@
     .locals 1
 
     .prologue
-    .line 164
+    .line 182
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityWindowInfoCompatApi21;->isFocused(Ljava/lang/Object;)Z
 
     move-result v0
@@ -174,7 +163,7 @@
     .locals 1
 
     .prologue
-    .line 119
+    .line 137
     invoke-static {}, Landroid/support/v4/view/accessibility/AccessibilityWindowInfoCompatApi21;->obtain()Ljava/lang/Object;
 
     move-result-object v0
@@ -186,7 +175,7 @@
     .locals 1
 
     .prologue
-    .line 124
+    .line 142
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityWindowInfoCompatApi21;->obtain(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -198,9 +187,9 @@
     .locals 0
 
     .prologue
-    .line 184
+    .line 202
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityWindowInfoCompatApi21;->recycle(Ljava/lang/Object;)V
 
-    .line 185
+    .line 203
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/fragment/ScanCodeTabFragment$8;
-.super Lkik/android/util/bz$a;
+.super Lkik/android/util/ca$a;
 .source "SourceFile"
 
 
@@ -23,10 +23,10 @@
     .locals 0
 
     .prologue
-    .line 340
+    .line 348
     iput-object p1, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$8;->a:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
-    invoke-direct {p0}, Lkik/android/util/bz$a;-><init>()V
+    invoke-direct {p0}, Lkik/android/util/ca$a;-><init>()V
 
     return-void
 .end method
@@ -37,11 +37,11 @@
     .locals 1
 
     .prologue
-    .line 344
+    .line 352
     iget-object v0, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$8;->a:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/ScanCodeTabFragment;->o()Z
+    invoke-virtual {v0}, Lkik/android/chat/fragment/ScanCodeTabFragment;->handleBackPress()Z
 
-    .line 345
+    .line 353
     return-void
 .end method

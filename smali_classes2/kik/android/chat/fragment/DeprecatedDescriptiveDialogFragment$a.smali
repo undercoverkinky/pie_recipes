@@ -47,7 +47,7 @@
     .line 101
     const-string v0, "deprecated.dialog.source"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/DeprecatedDescriptiveDialogFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/DeprecatedDescriptiveDialogFragment$a;->h(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -67,14 +67,14 @@
     return-object p0
 .end method
 
-.method public final n_()Ljava/lang/String;
+.method public final k_()Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 99
     const-string v0, "deprecated.dialog.message"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/DeprecatedDescriptiveDialogFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/DeprecatedDescriptiveDialogFragment$a;->h(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

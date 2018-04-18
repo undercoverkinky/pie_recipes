@@ -400,7 +400,7 @@
     invoke-virtual {v1, v0, v2}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
 
     .line 126
-    invoke-static {}, Lcom/github/clans/fab/b;->b()Z
+    invoke-static {}, Lcom/github/clans/fab/a;->b()Z
 
     move-result v0
 
@@ -672,7 +672,7 @@
 
     .line 1174
     :goto_0
-    invoke-static {}, Lcom/github/clans/fab/b;->a()Z
+    invoke-static {}, Lcom/github/clans/fab/a;->a()Z
 
     move-result v1
 
@@ -803,7 +803,7 @@
 
     .line 204
     :cond_2
-    invoke-static {}, Lcom/github/clans/fab/b;->b()Z
+    invoke-static {}, Lcom/github/clans/fab/a;->b()Z
 
     move-result v0
 
@@ -943,7 +943,7 @@
 
     .line 222
     :cond_2
-    invoke-static {}, Lcom/github/clans/fab/b;->b()Z
+    invoke-static {}, Lcom/github/clans/fab/a;->b()Z
 
     move-result v0
 

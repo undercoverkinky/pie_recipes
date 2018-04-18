@@ -6,7 +6,9 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/support/v4/widget/SearchViewCompat$OnCloseListener;,
         Landroid/support/v4/widget/SearchViewCompat$OnCloseListenerCompat;,
+        Landroid/support/v4/widget/SearchViewCompat$OnQueryTextListener;,
         Landroid/support/v4/widget/SearchViewCompat$OnQueryTextListenerCompat;,
         Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatIcsImpl;,
         Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatHoneycombImpl;,
@@ -25,25 +27,25 @@
     .locals 2
 
     .prologue
-    .line 255
+    .line 275
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0xe
 
     if-lt v0, v1, :cond_0
 
-    .line 256
+    .line 276
     new-instance v0, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatIcsImpl;
 
     invoke-direct {v0}, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatIcsImpl;-><init>()V
 
     sput-object v0, Landroid/support/v4/widget/SearchViewCompat;->IMPL:Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;
 
-    .line 262
+    .line 282
     :goto_0
     return-void
 
-    .line 257
+    .line 277
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -51,7 +53,7 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 258
+    .line 278
     new-instance v0, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatHoneycombImpl;
 
     invoke-direct {v0}, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatHoneycombImpl;-><init>()V
@@ -60,7 +62,7 @@
 
     goto :goto_0
 
-    .line 260
+    .line 280
     :cond_1
     new-instance v0, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatStubImpl;
 
@@ -75,28 +77,18 @@
     .locals 0
 
     .prologue
-    .line 264
+    .line 284
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 266
+    .line 286
     return-void
-.end method
-
-.method static synthetic access$000()Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;
-    .locals 1
-
-    .prologue
-    .line 30
-    sget-object v0, Landroid/support/v4/widget/SearchViewCompat;->IMPL:Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;
-
-    return-object v0
 .end method
 
 .method public static getQuery(Landroid/view/View;)Ljava/lang/CharSequence;
     .locals 1
 
     .prologue
-    .line 408
+    .line 437
     sget-object v0, Landroid/support/v4/widget/SearchViewCompat;->IMPL:Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;->getQuery(Landroid/view/View;)Ljava/lang/CharSequence;
@@ -110,7 +102,7 @@
     .locals 1
 
     .prologue
-    .line 458
+    .line 487
     sget-object v0, Landroid/support/v4/widget/SearchViewCompat;->IMPL:Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;->isIconified(Landroid/view/View;)Z
@@ -124,7 +116,7 @@
     .locals 1
 
     .prologue
-    .line 509
+    .line 538
     sget-object v0, Landroid/support/v4/widget/SearchViewCompat;->IMPL:Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;->isQueryRefinementEnabled(Landroid/view/View;)Z
@@ -138,7 +130,7 @@
     .locals 1
 
     .prologue
-    .line 481
+    .line 510
     sget-object v0, Landroid/support/v4/widget/SearchViewCompat;->IMPL:Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;->isSubmitButtonEnabled(Landroid/view/View;)Z
@@ -152,7 +144,7 @@
     .locals 1
 
     .prologue
-    .line 276
+    .line 296
     sget-object v0, Landroid/support/v4/widget/SearchViewCompat;->IMPL:Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;->newSearchView(Landroid/content/Context;)Landroid/view/View;
@@ -166,12 +158,12 @@
     .locals 1
 
     .prologue
-    .line 447
+    .line 476
     sget-object v0, Landroid/support/v4/widget/SearchViewCompat;->IMPL:Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;->setIconified(Landroid/view/View;Z)V
 
-    .line 448
+    .line 477
     return-void
 .end method
 
@@ -179,12 +171,12 @@
     .locals 1
 
     .prologue
-    .line 303
+    .line 323
     sget-object v0, Landroid/support/v4/widget/SearchViewCompat;->IMPL:Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;->setImeOptions(Landroid/view/View;I)V
 
-    .line 304
+    .line 324
     return-void
 .end method
 
@@ -192,12 +184,12 @@
     .locals 1
 
     .prologue
-    .line 316
+    .line 336
     sget-object v0, Landroid/support/v4/widget/SearchViewCompat;->IMPL:Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;->setInputType(Landroid/view/View;I)V
 
-    .line 317
+    .line 337
     return-void
 .end method
 
@@ -205,42 +197,38 @@
     .locals 1
 
     .prologue
-    .line 517
+    .line 546
     sget-object v0, Landroid/support/v4/widget/SearchViewCompat;->IMPL:Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;->setMaxWidth(Landroid/view/View;I)V
 
-    .line 518
+    .line 547
     return-void
 .end method
 
-.method public static setOnCloseListener(Landroid/view/View;Landroid/support/v4/widget/SearchViewCompat$OnCloseListenerCompat;)V
-    .locals 2
+.method public static setOnCloseListener(Landroid/view/View;Landroid/support/v4/widget/SearchViewCompat$OnCloseListener;)V
+    .locals 1
 
     .prologue
-    .line 376
+    .line 402
     sget-object v0, Landroid/support/v4/widget/SearchViewCompat;->IMPL:Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;
 
-    iget-object v1, p1, Landroid/support/v4/widget/SearchViewCompat$OnCloseListenerCompat;->mListener:Ljava/lang/Object;
+    invoke-interface {v0, p0, p1}, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;->setOnCloseListener(Landroid/view/View;Landroid/support/v4/widget/SearchViewCompat$OnCloseListener;)V
 
-    invoke-interface {v0, p0, v1}, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;->setOnCloseListener(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 377
+    .line 403
     return-void
 .end method
 
-.method public static setOnQueryTextListener(Landroid/view/View;Landroid/support/v4/widget/SearchViewCompat$OnQueryTextListenerCompat;)V
-    .locals 2
+.method public static setOnQueryTextListener(Landroid/view/View;Landroid/support/v4/widget/SearchViewCompat$OnQueryTextListener;)V
+    .locals 1
 
     .prologue
-    .line 327
+    .line 347
     sget-object v0, Landroid/support/v4/widget/SearchViewCompat;->IMPL:Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;
 
-    iget-object v1, p1, Landroid/support/v4/widget/SearchViewCompat$OnQueryTextListenerCompat;->mListener:Ljava/lang/Object;
+    invoke-interface {v0, p0, p1}, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;->setOnQueryTextListener(Landroid/view/View;Landroid/support/v4/widget/SearchViewCompat$OnQueryTextListener;)V
 
-    invoke-interface {v0, p0, v1}, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;->setOnQueryTextListener(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 328
+    .line 348
     return-void
 .end method
 
@@ -248,12 +236,12 @@
     .locals 1
 
     .prologue
-    .line 421
+    .line 450
     sget-object v0, Landroid/support/v4/widget/SearchViewCompat;->IMPL:Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;
 
     invoke-interface {v0, p0, p1, p2}, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;->setQuery(Landroid/view/View;Ljava/lang/CharSequence;Z)V
 
-    .line 422
+    .line 451
     return-void
 .end method
 
@@ -261,12 +249,12 @@
     .locals 1
 
     .prologue
-    .line 432
+    .line 461
     sget-object v0, Landroid/support/v4/widget/SearchViewCompat;->IMPL:Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;->setQueryHint(Landroid/view/View;Ljava/lang/CharSequence;)V
 
-    .line 433
+    .line 462
     return-void
 .end method
 
@@ -274,12 +262,12 @@
     .locals 1
 
     .prologue
-    .line 500
+    .line 529
     sget-object v0, Landroid/support/v4/widget/SearchViewCompat;->IMPL:Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;->setQueryRefinementEnabled(Landroid/view/View;Z)V
 
-    .line 501
+    .line 530
     return-void
 .end method
 
@@ -287,12 +275,12 @@
     .locals 1
 
     .prologue
-    .line 290
+    .line 310
     sget-object v0, Landroid/support/v4/widget/SearchViewCompat;->IMPL:Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;->setSearchableInfo(Landroid/view/View;Landroid/content/ComponentName;)V
 
-    .line 291
+    .line 311
     return-void
 .end method
 
@@ -300,11 +288,11 @@
     .locals 1
 
     .prologue
-    .line 471
+    .line 500
     sget-object v0, Landroid/support/v4/widget/SearchViewCompat;->IMPL:Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatImpl;->setSubmitButtonEnabled(Landroid/view/View;Z)V
 
-    .line 472
+    .line 501
     return-void
 .end method

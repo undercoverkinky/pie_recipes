@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 353
+    .line 355
     iput-object p1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$1;->a:Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,18 +46,18 @@
 
 
 # virtual methods
-.method public final bridge synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 1
 
     .prologue
-    .line 353
+    .line 355
     check-cast p2, Lkik/core/interfaces/IAddressBookIntegration$AddressBookUploadState;
 
-    .line 1357
+    .line 1359
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$1;->a:Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;
 
-    invoke-static {v0, p2}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->a(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;Lkik/core/interfaces/IAddressBookIntegration$AddressBookUploadState;)V
+    invoke-static {v0, p2}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->b(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;Lkik/core/interfaces/IAddressBookIntegration$AddressBookUploadState;)V
 
-    .line 353
+    .line 355
     return-void
 .end method

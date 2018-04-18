@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/crashlytics/android/core/h;->t()V
+    value = Lcom/crashlytics/android/core/h;->r()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 726
+    .line 730
     iput-object p1, p0, Lcom/crashlytics/android/core/h$3;->a:Lcom/crashlytics/android/core/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +53,7 @@
     .end annotation
 
     .prologue
-    .line 730
+    .line 734
     :try_start_0
     iget-object v0, p0, Lcom/crashlytics/android/core/h$3;->a:Lcom/crashlytics/android/core/h;
 
@@ -65,25 +65,25 @@
 
     move-result v0
 
-    .line 731
+    .line 735
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
-    .line 733
+    .line 737
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
-    .line 737
+    .line 741
     :goto_0
     return-object v0
 
-    .line 734
+    .line 738
     :catch_0
     move-exception v0
 
-    .line 735
+    .line 739
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     move-result-object v1
@@ -94,7 +94,7 @@
 
     invoke-interface {v1, v2, v3, v0}, Lio/fabric/sdk/android/k;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 737
+    .line 741
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -115,7 +115,7 @@
     .end annotation
 
     .prologue
-    .line 726
+    .line 730
     invoke-direct {p0}, Lcom/crashlytics/android/core/h$3;->a()Ljava/lang/Boolean;
 
     move-result-object v0

@@ -1,11 +1,11 @@
 .class final Lcom/kik/cards/web/config/XDataPlugin$1;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/cards/web/config/XDataPlugin;->getRecord(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/h;
+    value = Lcom/kik/cards/web/config/XDataPlugin;->getRecord(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/g;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -38,7 +38,7 @@
 
     iput-object p4, p0, Lcom/kik/cards/web/config/XDataPlugin$1;->c:Lcom/kik/cards/web/plugin/a;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -58,18 +58,18 @@
 
     iget-object v2, p0, Lcom/kik/cards/web/config/XDataPlugin$1;->b:Ljava/lang/Class;
 
-    invoke-static {v0, v1, p1, v2}, Lcom/kik/cards/web/config/XDataPlugin;->a(Lcom/kik/cards/web/config/XDataPlugin;Ljava/lang/String;Lcom/dyuproject/protostuff/p;Ljava/lang/Class;)Lorg/json/JSONObject;
+    invoke-static {v0, v1, p1, v2}, Lcom/kik/cards/web/config/XDataPlugin;->access$000(Lcom/kik/cards/web/config/XDataPlugin;Ljava/lang/String;Lcom/dyuproject/protostuff/p;Ljava/lang/Class;)Lorg/json/JSONObject;
 
     move-result-object v0
 
     .line 75
     iget-object v1, p0, Lcom/kik/cards/web/config/XDataPlugin$1;->c:Lcom/kik/cards/web/plugin/a;
 
-    new-instance v2, Lcom/kik/cards/web/plugin/h;
+    new-instance v2, Lcom/kik/cards/web/plugin/g;
 
-    invoke-direct {v2, v0}, Lcom/kik/cards/web/plugin/h;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {v2, v0}, Lcom/kik/cards/web/plugin/g;-><init>(Lorg/json/JSONObject;)V
 
-    invoke-interface {v1, v2}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/h;)V
+    invoke-interface {v1, v2}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/g;)V
 
     .line 76
     return-void

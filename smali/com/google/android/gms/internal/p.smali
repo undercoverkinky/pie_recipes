@@ -1,81 +1,44 @@
 .class final Lcom/google/android/gms/internal/p;
-.super Lcom/google/android/gms/internal/q;
+.super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/ViewTreeObserver$OnScrollChangedListener;
-
-
-# annotations
-.annotation runtime Lcom/google/android/gms/internal/zzig;
-.end annotation
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field private final a:Ljava/lang/ref/WeakReference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/ref/WeakReference",
-            "<",
-            "Landroid/view/ViewTreeObserver$OnScrollChangedListener;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private synthetic a:Ljava/util/concurrent/Future;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Landroid/view/ViewTreeObserver$OnScrollChangedListener;)V
-    .locals 1
+.method constructor <init>(Ljava/util/concurrent/Future;)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Lcom/google/android/gms/internal/q;-><init>(Landroid/view/View;)V
+    iput-object p1, p0, Lcom/google/android/gms/internal/p;->a:Ljava/util/concurrent/Future;
 
-    new-instance v0, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v0, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/p;->a:Ljava/lang/ref/WeakReference;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a(Landroid/view/ViewTreeObserver;)V
-    .locals 0
+.method public final run()V
+    .locals 2
 
-    invoke-virtual {p1, p0}, Landroid/view/ViewTreeObserver;->addOnScrollChangedListener(Landroid/view/ViewTreeObserver$OnScrollChangedListener;)V
+    iget-object v0, p0, Lcom/google/android/gms/internal/p;->a:Ljava/util/concurrent/Future;
 
-    return-void
-.end method
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->isDone()Z
 
-.method protected final b(Landroid/view/ViewTreeObserver;)V
-    .locals 0
+    move-result v0
 
-    invoke-virtual {p1, p0}, Landroid/view/ViewTreeObserver;->removeOnScrollChangedListener(Landroid/view/ViewTreeObserver$OnScrollChangedListener;)V
+    if-nez v0, :cond_0
 
-    return-void
-.end method
+    iget-object v0, p0, Lcom/google/android/gms/internal/p;->a:Ljava/util/concurrent/Future;
 
-.method public final onScrollChanged()V
-    .locals 1
+    const/4 v1, 0x1
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/p;->a:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/ViewTreeObserver$OnScrollChangedListener;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Landroid/view/ViewTreeObserver$OnScrollChangedListener;->onScrollChanged()V
-
-    :goto_0
-    return-void
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
     :cond_0
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/p;->b()V
-
-    goto :goto_0
+    return-void
 .end method

@@ -38,10 +38,10 @@
 
 
 # virtual methods
-.method protected abstract getJsonPrimitive()Lcom/google/gson/l;
+.method protected abstract getJsonPrimitive()Lcom/google/gson/m;
 .end method
 
-.method public getValue()Lcom/google/gson/j;
+.method public getValue()Lcom/google/gson/k;
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -86,7 +86,7 @@
     return-object v0
 
     :cond_1
-    invoke-virtual {p0}, Lcom/rounds/kik/analytics/properties/primitives/a;->getJsonPrimitive()Lcom/google/gson/l;
+    invoke-virtual {p0}, Lcom/rounds/kik/analytics/properties/primitives/a;->getJsonPrimitive()Lcom/google/gson/m;
 
     move-result-object v0
 

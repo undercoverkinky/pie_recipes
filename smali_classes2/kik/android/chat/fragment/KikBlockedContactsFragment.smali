@@ -16,7 +16,7 @@
     .locals 0
 
     .prologue
-    .line 22
+    .line 28
     invoke-direct {p0}, Lkik/android/chat/fragment/KikDefaultContactsListFragment;-><init>()V
 
     return-void
@@ -24,47 +24,51 @@
 
 
 # virtual methods
-.method protected final E()I
-    .locals 1
-
-    .prologue
-    .line 60
-    const v0, 0x7f0a03c1
-
-    return v0
-.end method
-
-.method protected final a(Lkik/core/datatypes/o;)V
-    .locals 0
-
-    .prologue
-    .line 90
-    return-void
-.end method
-
-.method protected final a_(Ljava/lang/String;Ljava/lang/String;)V
+.method protected final a(Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 2
 
     .prologue
-    .line 54
-    .line 1113
-    new-instance v0, Lkik/android/chat/fragment/KikChatInfoFragment$a;
-
-    invoke-direct {v0}, Lkik/android/chat/fragment/KikChatInfoFragment$a;-><init>()V
-
-    invoke-virtual {v0, p1}, Lkik/android/chat/fragment/KikChatInfoFragment$a;->c(Ljava/lang/String;)Lkik/android/chat/fragment/KikChatInfoFragment$a;
+    .line 67
+    .line 1126
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikBlockedContactsFragment;->getNavigator()Lkik/android/chat/vm/bd;
 
     move-result-object v0
 
-    const/4 v1, 0x1
+    invoke-static {p1}, Lcom/kik/core/network/xmpp/jid/a;->a(Ljava/lang/String;)Lcom/kik/core/network/xmpp/jid/a;
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikChatInfoFragment$a;->a(I)Lkik/android/chat/fragment/KikChatInfoFragment$a;
+    move-result-object v1
 
-    move-result-object v0
+    invoke-static {v1}, Lkik/android/chat/vm/profile/ea;->a(Lcom/kik/core/network/xmpp/jid/a;)Lkik/android/chat/vm/profile/ea;
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikBlockedContactsFragment;->a(Lkik/android/util/aa;)Lcom/kik/events/Promise;
+    move-result-object v1
 
-    .line 55
+    .line 1127
+    invoke-virtual {v1}, Lkik/android/chat/vm/profile/ea;->a()Lkik/android/chat/vm/profile/ea;
+
+    move-result-object v1
+
+    .line 1128
+    invoke-virtual {v1, p3}, Lkik/android/chat/vm/profile/ea;->a(Z)Lkik/android/chat/vm/profile/ea;
+
+    move-result-object v1
+
+    .line 1129
+    invoke-virtual {v1}, Lkik/android/chat/vm/profile/ea;->b()Lkik/android/chat/vm/profile/dt;
+
+    move-result-object v1
+
+    .line 1126
+    invoke-interface {v0, v1}, Lkik/android/chat/vm/bd;->a(Lkik/android/chat/vm/profile/dt;)Lrx/d;
+
+    .line 68
+    return-void
+.end method
+
+.method protected final a(Lkik/core/datatypes/l;)V
+    .locals 0
+
+    .prologue
+    .line 103
     return-void
 .end method
 
@@ -72,15 +76,15 @@
     .locals 1
 
     .prologue
-    .line 66
+    .line 79
     sget-object v0, Lkik/android/KikDataProvider;->d:Landroid/net/Uri;
 
     invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikBlockedContactsFragment;->a(Landroid/net/Uri;)V
 
-    .line 67
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikBlockedContactsFragment;->O()V
+    .line 80
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikBlockedContactsFragment;->t()V
 
-    .line 68
+    .line 81
     return-void
 .end method
 
@@ -88,8 +92,8 @@
     .locals 1
 
     .prologue
-    .line 42
-    const v0, 0x7f0a04df
+    .line 55
+    const v0, 0x7f0904f3
 
     invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikBlockedContactsFragment;->getString(I)Ljava/lang/String;
 
@@ -98,12 +102,12 @@
     return-object v0
 .end method
 
-.method protected final f()Ljava/lang/String;
+.method protected final e()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 48
-    const v0, 0x7f0a0175
+    .line 61
+    const v0, 0x7f090176
 
     invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikBlockedContactsFragment;->getString(I)Ljava/lang/String;
 
@@ -112,24 +116,24 @@
     return-object v0
 .end method
 
-.method protected final g()Z
+.method protected final f()Z
     .locals 1
 
     .prologue
-    .line 73
+    .line 86
     const/4 v0, 0x1
 
     return v0
 .end method
 
-.method protected final h()V
+.method protected final g()V
     .locals 2
 
     .prologue
-    .line 82
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikBlockedContactsFragment;->P()V
+    .line 95
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikBlockedContactsFragment;->u()V
 
-    .line 83
+    .line 96
     new-instance v0, Lkik/android/chat/fragment/KikAddToBlockFragment$a;
 
     invoke-direct {v0}, Lkik/android/chat/fragment/KikAddToBlockFragment$a;-><init>()V
@@ -138,21 +142,41 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ae;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->e()Lcom/kik/events/Promise;
 
-    .line 84
+    .line 97
     return-void
 .end method
 
-.method protected final i()Z
+.method protected getTitleResource()I
     .locals 1
 
     .prologue
-    .line 101
+    .line 73
+    const v0, 0x7f0903d5
+
+    return v0
+.end method
+
+.method protected final h()Z
+    .locals 1
+
+    .prologue
+    .line 114
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method protected final j()Z
+    .locals 1
+
+    .prologue
+    .line 135
     const/4 v0, 0x0
 
     return v0
@@ -162,7 +186,7 @@
     .locals 1
 
     .prologue
-    .line 119
+    .line 141
     const/4 v0, 0x0
 
     return v0
@@ -172,52 +196,22 @@
     .locals 1
 
     .prologue
-    .line 125
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method protected final m()Z
-    .locals 1
-
-    .prologue
-    .line 36
+    .line 49
     const/4 v0, 0x1
 
     return v0
 .end method
 
-.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 3
-
-    .prologue
-    .line 27
-    invoke-super {p0, p1, p2, p3}, Lkik/android/chat/fragment/KikDefaultContactsListFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-
-    move-result-object v0
-
-    .line 29
-    iget-object v1, p0, Lkik/android/chat/fragment/KikBlockedContactsFragment;->c:Landroid/widget/ListView;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Landroid/widget/ListView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
-
-    .line 30
-    return-object v0
-.end method
-
-.method protected final q()Landroid/graphics/drawable/Drawable;
+.method protected final m()Landroid/graphics/drawable/Drawable;
     .locals 2
 
     .prologue
-    .line 95
+    .line 108
     invoke-virtual {p0}, Lkik/android/chat/fragment/KikBlockedContactsFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f020168
+    const v1, 0x7f0201af
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -226,12 +220,48 @@
     return-object v0
 .end method
 
-.method protected final r()Z
+.method protected final n()Z
     .locals 1
 
     .prologue
-    .line 107
+    .line 120
     const/4 v0, 0x0
 
     return v0
+.end method
+
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 3
+
+    .prologue
+    .line 33
+    invoke-super {p0, p1, p2, p3}, Lkik/android/chat/fragment/KikDefaultContactsListFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+
+    move-result-object v0
+
+    .line 35
+    iget-object v1, p0, Lkik/android/chat/fragment/KikBlockedContactsFragment;->c:Landroid/widget/ListView;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Landroid/widget/ListView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
+
+    .line 36
+    return-object v0
+.end method
+
+.method protected screenOpenedEvent()Lcom/kik/metrics/b/t;
+    .locals 1
+
+    .prologue
+    .line 43
+    invoke-static {}, Lcom/kik/metrics/b/d;->b()Lcom/kik/metrics/b/d$a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/kik/metrics/b/d$a;->a()Lcom/kik/metrics/b/d;
+
+    move-result-object v0
+
+    return-object v0
 .end method

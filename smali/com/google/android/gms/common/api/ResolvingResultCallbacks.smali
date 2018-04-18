@@ -17,7 +17,7 @@
 # instance fields
 .field private final mActivity:Landroid/app/Activity;
 
-.field private final zzalt:I
+.field private final zzfhm:I
 
 
 # direct methods
@@ -28,7 +28,7 @@
 
     const-string v0, "Activity must not be null"
 
-    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/zzaa;->zzb(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/zzbp;->zzb(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -36,7 +36,7 @@
 
     iput-object v0, p0, Lcom/google/android/gms/common/api/ResolvingResultCallbacks;->mActivity:Landroid/app/Activity;
 
-    iput p2, p0, Lcom/google/android/gms/common/api/ResolvingResultCallbacks;->zzalt:I
+    iput p2, p0, Lcom/google/android/gms/common/api/ResolvingResultCallbacks;->zzfhm:I
 
     return-void
 .end method
@@ -45,6 +45,8 @@
 # virtual methods
 .method public final onFailure(Lcom/google/android/gms/common/api/Status;)V
     .locals 3
+    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
+    .end annotation
 
     invoke-virtual {p1}, Lcom/google/android/gms/common/api/Status;->hasResolution()Z
 
@@ -55,7 +57,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/google/android/gms/common/api/ResolvingResultCallbacks;->mActivity:Landroid/app/Activity;
 
-    iget v1, p0, Lcom/google/android/gms/common/api/ResolvingResultCallbacks;->zzalt:I
+    iget v1, p0, Lcom/google/android/gms/common/api/ResolvingResultCallbacks;->zzfhm:I
 
     invoke-virtual {p1, v0, v1}, Lcom/google/android/gms/common/api/Status;->startResolutionForResult(Landroid/app/Activity;I)V
     :try_end_0

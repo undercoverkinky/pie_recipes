@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final a:Lcom/google/common/base/e;
+.field private static final a:Lcom/google/common/base/Joiner;
 
 
 # direct methods
@@ -12,20 +12,20 @@
     .locals 1
 
     .prologue
-    .line 32
+    .line 30
     const-string v0, ""
 
-    invoke-static {v0}, Lcom/google/common/base/e;->a(Ljava/lang/String;)Lcom/google/common/base/e;
+    invoke-static {v0}, Lcom/google/common/base/Joiner;->on(Ljava/lang/String;)Lcom/google/common/base/Joiner;
 
     move-result-object v0
 
-    sput-object v0, Lcom/google/thirdparty/publicsuffix/b;->a:Lcom/google/common/base/e;
+    sput-object v0, Lcom/google/thirdparty/publicsuffix/b;->a:Lcom/google/common/base/Joiner;
 
     return-void
 .end method
 
 .method private static a(Ljava/util/List;Ljava/lang/CharSequence;Lcom/google/common/collect/ImmutableMap$a;)I
-    .locals 11
+    .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -43,140 +43,118 @@
     .end annotation
 
     .prologue
-    .line 65
+    const/16 v9, 0x3a
+
+    const/16 v8, 0x21
+
+    const/16 v7, 0x3f
+
+    const/16 v6, 0x2c
+
+    const/4 v2, 0x0
+
+    .line 62
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
-    move-result v4
+    move-result v3
 
-    .line 66
-    const/4 v1, 0x0
+    move v0, v2
+
+    move v1, v2
 
     .line 67
-    const/4 v0, 0x0
-
-    move v3, v1
-
-    .line 70
     :goto_0
-    if-ge v3, v4, :cond_0
+    if-ge v1, v3, :cond_0
 
-    .line 71
-    invoke-interface {p1, v3}, Ljava/lang/CharSequence;->charAt(I)C
+    .line 68
+    invoke-interface {p1, v1}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v0
 
-    .line 72
-    const/16 v1, 0x26
+    .line 69
+    const/16 v4, 0x26
 
-    if-eq v0, v1, :cond_0
+    if-eq v0, v4, :cond_0
 
-    const/16 v1, 0x3f
+    if-eq v0, v7, :cond_0
 
-    if-eq v0, v1, :cond_0
+    if-eq v0, v8, :cond_0
 
-    const/16 v1, 0x21
+    if-eq v0, v9, :cond_0
 
-    if-eq v0, v1, :cond_0
+    if-eq v0, v6, :cond_0
 
-    const/16 v1, 0x3a
-
-    if-eq v0, v1, :cond_0
-
-    const/16 v1, 0x2c
-
-    if-eq v0, v1, :cond_0
-
-    .line 70
-    add-int/lit8 v1, v3, 0x1
-
-    move v3, v1
+    .line 67
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 77
+    .line 74
     :cond_0
-    const/4 v5, 0x0
+    invoke-interface {p1, v2, v1}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
-    const/4 v1, 0x0
+    move-result-object v4
 
-    invoke-interface {p1, v1, v3}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+    .line 2104
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    invoke-direct {v5, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 2112
-    invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->reverse()Ljava/lang/StringBuilder;
 
-    move-result v6
+    move-result-object v4
 
-    .line 2113
-    const/4 v2, 0x1
+    .line 74
+    invoke-interface {p0, v2, v4}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    if-gt v6, v2, :cond_6
+    .line 76
+    if-eq v0, v8, :cond_1
 
-    .line 77
-    :goto_1
-    invoke-interface {p0, v5, v1}, Ljava/util/List;->add(ILjava/lang/Object;)V
+    if-eq v0, v7, :cond_1
 
-    .line 79
-    const/16 v1, 0x21
+    if-eq v0, v9, :cond_1
 
-    if-eq v0, v1, :cond_1
+    if-ne v0, v6, :cond_2
 
-    const/16 v1, 0x3f
-
-    if-eq v0, v1, :cond_1
-
-    const/16 v1, 0x3a
-
-    if-eq v0, v1, :cond_1
-
-    const/16 v1, 0x2c
-
-    if-ne v0, v1, :cond_2
-
-    .line 84
+    .line 81
     :cond_1
-    sget-object v1, Lcom/google/thirdparty/publicsuffix/b;->a:Lcom/google/common/base/e;
+    sget-object v4, Lcom/google/thirdparty/publicsuffix/b;->a:Lcom/google/common/base/Joiner;
 
-    invoke-virtual {v1, p0}, Lcom/google/common/base/e;->a(Ljava/lang/Iterable;)Ljava/lang/String;
+    invoke-virtual {v4, p0}, Lcom/google/common/base/Joiner;->join(Ljava/lang/Iterable;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v4
 
-    .line 85
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+    .line 82
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
 
-    move-result v2
+    move-result v5
 
-    if-lez v2, :cond_2
+    if-lez v5, :cond_2
 
-    .line 86
+    .line 83
     invoke-static {v0}, Lcom/google/thirdparty/publicsuffix/PublicSuffixType;->fromCode(C)Lcom/google/thirdparty/publicsuffix/PublicSuffixType;
 
-    move-result-object v2
+    move-result-object v5
 
-    invoke-virtual {p2, v1, v2}, Lcom/google/common/collect/ImmutableMap$a;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap$a;
+    invoke-virtual {p2, v4, v5}, Lcom/google/common/collect/ImmutableMap$a;->a(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap$a;
 
-    .line 89
+    .line 86
     :cond_2
-    add-int/lit8 v1, v3, 0x1
+    add-int/lit8 v1, v1, 0x1
 
-    .line 91
-    const/16 v2, 0x3f
+    .line 88
+    if-eq v0, v7, :cond_6
 
-    if-eq v0, v2, :cond_9
-
-    const/16 v2, 0x2c
-
-    if-eq v0, v2, :cond_9
+    if-eq v0, v6, :cond_6
 
     move v0, v1
 
-    .line 92
+    .line 89
     :cond_3
-    if-ge v0, v4, :cond_5
+    if-ge v0, v3, :cond_5
 
-    .line 94
-    invoke-interface {p1, v0, v4}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+    .line 91
+    invoke-interface {p1, v0, v3}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -186,114 +164,35 @@
 
     add-int/2addr v0, v1
 
-    .line 95
+    .line 92
     invoke-interface {p1, v0}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v1
 
-    const/16 v2, 0x3f
-
-    if-eq v1, v2, :cond_4
+    if-eq v1, v7, :cond_4
 
     invoke-interface {p1, v0}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v1
 
-    const/16 v2, 0x2c
+    if-ne v1, v6, :cond_3
 
-    if-ne v1, v2, :cond_3
-
-    .line 97
+    .line 94
     :cond_4
     add-int/lit8 v0, v0, 0x1
 
-    .line 102
+    .line 99
     :cond_5
-    :goto_2
-    const/4 v1, 0x0
+    :goto_1
+    invoke-interface {p0, v2}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    invoke-interface {p0, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
-
-    .line 103
+    .line 100
     return v0
 
-    .line 2117
     :cond_6
-    new-array v7, v6, [C
-
-    .line 2118
-    const/4 v2, 0x0
-
-    add-int/lit8 v8, v6, -0x1
-
-    invoke-interface {v1, v8}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v8
-
-    aput-char v8, v7, v2
-
-    .line 2120
-    const/4 v2, 0x1
-
-    :goto_3
-    if-ge v2, v6, :cond_8
-
-    .line 2121
-    add-int/lit8 v8, v6, -0x1
-
-    sub-int/2addr v8, v2
-
-    invoke-interface {v1, v8}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v8
-
-    aput-char v8, v7, v2
-
-    .line 2122
-    aget-char v8, v7, v2
-
-    add-int/lit8 v9, v2, -0x1
-
-    aget-char v9, v7, v9
-
-    invoke-static {v8, v9}, Ljava/lang/Character;->isSurrogatePair(CC)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_7
-
-    .line 2123
-    add-int/lit8 v8, v2, -0x1
-
-    .line 2131
-    aget-char v9, v7, v8
-
-    .line 2132
-    aget-char v10, v7, v2
-
-    aput-char v10, v7, v8
-
-    .line 2133
-    aput-char v9, v7, v2
-
-    .line 2120
-    :cond_7
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_3
-
-    .line 2127
-    :cond_8
-    new-instance v1, Ljava/lang/String;
-
-    invoke-direct {v1, v7}, Ljava/lang/String;-><init>([C)V
-
-    goto/16 :goto_1
-
-    :cond_9
     move v0, v1
 
-    goto :goto_2
+    goto :goto_1
 .end method
 
 .method static a(Ljava/lang/CharSequence;)Lcom/google/common/collect/ImmutableMap;
@@ -312,24 +211,24 @@
     .end annotation
 
     .prologue
-    .line 39
-    invoke-static {}, Lcom/google/common/collect/ImmutableMap;->h()Lcom/google/common/collect/ImmutableMap$a;
+    .line 37
+    invoke-static {}, Lcom/google/common/collect/ImmutableMap;->a()Lcom/google/common/collect/ImmutableMap$a;
 
     move-result-object v1
 
-    .line 40
+    .line 38
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v2
 
-    .line 41
+    .line 39
     const/4 v0, 0x0
 
-    .line 42
+    .line 40
     :goto_0
     if-ge v0, v2, :cond_0
 
-    .line 1232
+    .line 1234
     new-instance v3, Ljava/util/LinkedList;
 
     invoke-direct {v3}, Ljava/util/LinkedList;-><init>()V
@@ -339,6 +238,7 @@
 
     move-result-object v4
 
+    .line 42
     invoke-static {v3, v4, v1}, Lcom/google/thirdparty/publicsuffix/b;->a(Ljava/util/List;Ljava/lang/CharSequence;Lcom/google/common/collect/ImmutableMap$a;)I
 
     move-result v3
@@ -347,7 +247,7 @@
 
     goto :goto_0
 
-    .line 48
+    .line 45
     :cond_0
     invoke-virtual {v1}, Lcom/google/common/collect/ImmutableMap$a;->a()Lcom/google/common/collect/ImmutableMap;
 

@@ -15,6 +15,7 @@
 
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi24;,
         Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi23;,
         Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi21;
     }
@@ -24,28 +25,60 @@
 # instance fields
 .field final mCallbackObj:Ljava/lang/Object;
 
+.field mSessionImpl:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImpl;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # direct methods
 .method public constructor <init>()V
-    .locals 3
+    .locals 2
 
     .prologue
-    const/4 v2, 0x0
-
-    .line 535
+    .line 757
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 536
+    .line 758
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x18
+
+    if-lt v0, v1, :cond_0
+
+    .line 759
+    new-instance v0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi24;
+
+    invoke-direct {v0, p0}, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi24;-><init>(Landroid/support/v4/media/session/MediaSessionCompat$Callback;)V
+
+    invoke-static {v0}, Landroid/support/v4/media/session/MediaSessionCompatApi24;->createCallback(Landroid/support/v4/media/session/MediaSessionCompatApi24$Callback;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->mCallbackObj:Ljava/lang/Object;
+
+    .line 767
+    :goto_0
+    return-void
+
+    .line 760
+    :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x17
 
-    if-lt v0, v1, :cond_0
+    if-lt v0, v1, :cond_1
 
-    .line 537
+    .line 761
     new-instance v0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi23;
 
-    invoke-direct {v0, p0, v2}, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi23;-><init>(Landroid/support/v4/media/session/MediaSessionCompat$Callback;Landroid/support/v4/media/session/MediaSessionCompat$1;)V
+    invoke-direct {v0, p0}, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi23;-><init>(Landroid/support/v4/media/session/MediaSessionCompat$Callback;)V
 
     invoke-static {v0}, Landroid/support/v4/media/session/MediaSessionCompatApi23;->createCallback(Landroid/support/v4/media/session/MediaSessionCompatApi23$Callback;)Ljava/lang/Object;
 
@@ -53,22 +86,20 @@
 
     iput-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->mCallbackObj:Ljava/lang/Object;
 
-    .line 543
-    :goto_0
-    return-void
+    goto :goto_0
 
-    .line 538
-    :cond_0
+    .line 762
+    :cond_1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
-    if-lt v0, v1, :cond_1
+    if-lt v0, v1, :cond_2
 
-    .line 539
+    .line 763
     new-instance v0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi21;
 
-    invoke-direct {v0, p0, v2}, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi21;-><init>(Landroid/support/v4/media/session/MediaSessionCompat$Callback;Landroid/support/v4/media/session/MediaSessionCompat$1;)V
+    invoke-direct {v0, p0}, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi21;-><init>(Landroid/support/v4/media/session/MediaSessionCompat$Callback;)V
 
     invoke-static {v0}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->createCallback(Landroid/support/v4/media/session/MediaSessionCompatApi21$Callback;)Ljava/lang/Object;
 
@@ -78,20 +109,38 @@
 
     goto :goto_0
 
-    .line 541
-    :cond_1
-    iput-object v2, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->mCallbackObj:Ljava/lang/Object;
+    .line 765
+    :cond_2
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->mCallbackObj:Ljava/lang/Object;
 
     goto :goto_0
 .end method
 
 
 # virtual methods
+.method public onAddQueueItem(Landroid/support/v4/media/MediaDescriptionCompat;)V
+    .locals 0
+
+    .prologue
+    .line 980
+    return-void
+.end method
+
+.method public onAddQueueItem(Landroid/support/v4/media/MediaDescriptionCompat;I)V
+    .locals 0
+
+    .prologue
+    .line 992
+    return-void
+.end method
+
 .method public onCommand(Ljava/lang/String;Landroid/os/Bundle;Landroid/os/ResultReceiver;)V
     .locals 0
 
     .prologue
-    .line 555
+    .line 779
     return-void
 .end method
 
@@ -99,7 +148,7 @@
     .locals 0
 
     .prologue
-    .line 664
+    .line 970
     return-void
 .end method
 
@@ -107,7 +156,7 @@
     .locals 0
 
     .prologue
-    .line 624
+    .line 893
     return-void
 .end method
 
@@ -115,7 +164,7 @@
     .locals 1
 
     .prologue
-    .line 564
+    .line 788
     const/4 v0, 0x0
 
     return v0
@@ -125,7 +174,7 @@
     .locals 0
 
     .prologue
-    .line 606
+    .line 875
     return-void
 .end method
 
@@ -133,7 +182,7 @@
     .locals 0
 
     .prologue
-    .line 571
+    .line 840
     return-void
 .end method
 
@@ -141,7 +190,7 @@
     .locals 0
 
     .prologue
-    .line 578
+    .line 847
     return-void
 .end method
 
@@ -149,7 +198,7 @@
     .locals 0
 
     .prologue
-    .line 587
+    .line 856
     return-void
 .end method
 
@@ -157,7 +206,55 @@
     .locals 0
 
     .prologue
-    .line 593
+    .line 862
+    return-void
+.end method
+
+.method public onPrepare()V
+    .locals 0
+
+    .prologue
+    .line 798
+    return-void
+.end method
+
+.method public onPrepareFromMediaId(Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 0
+
+    .prologue
+    .line 809
+    return-void
+.end method
+
+.method public onPrepareFromSearch(Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 0
+
+    .prologue
+    .line 823
+    return-void
+.end method
+
+.method public onPrepareFromUri(Landroid/net/Uri;Landroid/os/Bundle;)V
+    .locals 0
+
+    .prologue
+    .line 834
+    return-void
+.end method
+
+.method public onRemoveQueueItem(Landroid/support/v4/media/MediaDescriptionCompat;)V
+    .locals 0
+
+    .prologue
+    .line 1003
+    return-void
+.end method
+
+.method public onRemoveQueueItemAt(I)V
+    .locals 0
+
+    .prologue
+    .line 1012
     return-void
 .end method
 
@@ -165,7 +262,7 @@
     .locals 0
 
     .prologue
-    .line 630
+    .line 899
     return-void
 .end method
 
@@ -173,7 +270,15 @@
     .locals 0
 
     .prologue
-    .line 644
+    .line 913
+    return-void
+.end method
+
+.method public onSetCaptioningEnabled(Z)V
+    .locals 0
+
+    .prologue
+    .line 929
     return-void
 .end method
 
@@ -181,7 +286,23 @@
     .locals 0
 
     .prologue
-    .line 652
+    .line 921
+    return-void
+.end method
+
+.method public onSetRepeatMode(I)V
+    .locals 0
+
+    .prologue
+    .line 944
+    return-void
+.end method
+
+.method public onSetShuffleModeEnabled(Z)V
+    .locals 0
+
+    .prologue
+    .line 956
     return-void
 .end method
 
@@ -189,7 +310,7 @@
     .locals 0
 
     .prologue
-    .line 612
+    .line 881
     return-void
 .end method
 
@@ -197,7 +318,7 @@
     .locals 0
 
     .prologue
-    .line 618
+    .line 887
     return-void
 .end method
 
@@ -205,7 +326,7 @@
     .locals 0
 
     .prologue
-    .line 600
+    .line 869
     return-void
 .end method
 
@@ -213,6 +334,6 @@
     .locals 0
 
     .prologue
-    .line 636
+    .line 905
     return-void
 .end method

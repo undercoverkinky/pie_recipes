@@ -6,7 +6,6 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroid/support/v4/app/NotificationCompatSideChannelService$1;,
         Landroid/support/v4/app/NotificationCompatSideChannelService$NotificationSideChannelStub;
     }
 .end annotation
@@ -24,21 +23,19 @@
     return-void
 .end method
 
-.method static synthetic access$100(Landroid/support/v4/app/NotificationCompatSideChannelService;ILjava/lang/String;)V
-    .locals 0
 
-    .prologue
-    .line 44
-    invoke-direct {p0, p1, p2}, Landroid/support/v4/app/NotificationCompatSideChannelService;->checkPermission(ILjava/lang/String;)V
-
-    return-void
+# virtual methods
+.method public abstract cancel(Ljava/lang/String;ILjava/lang/String;)V
 .end method
 
-.method private checkPermission(ILjava/lang/String;)V
+.method public abstract cancelAll(Ljava/lang/String;)V
+.end method
+
+.method checkPermission(ILjava/lang/String;)V
     .locals 4
 
     .prologue
-    .line 110
+    .line 113
     invoke-virtual {p0}, Landroid/support/v4/app/NotificationCompatSideChannelService;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
@@ -56,23 +53,23 @@
 
     aget-object v3, v1, v0
 
-    .line 111
+    .line 114
     invoke-virtual {v3, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 112
+    .line 115
     return-void
 
-    .line 110
+    .line 113
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 115
+    .line 118
     :cond_1
     new-instance v0, Ljava/lang/SecurityException;
 
@@ -103,14 +100,6 @@
     invoke-direct {v0, v1}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
 
     throw v0
-.end method
-
-
-# virtual methods
-.method public abstract cancel(Ljava/lang/String;ILjava/lang/String;)V
-.end method
-
-.method public abstract cancelAll(Ljava/lang/String;)V
 .end method
 
 .method public abstract notify(Ljava/lang/String;ILjava/lang/String;Landroid/app/Notification;)V
@@ -149,11 +138,9 @@
 
     .line 53
     :cond_1
-    new-instance v1, Landroid/support/v4/app/NotificationCompatSideChannelService$NotificationSideChannelStub;
+    new-instance v0, Landroid/support/v4/app/NotificationCompatSideChannelService$NotificationSideChannelStub;
 
-    invoke-direct {v1, p0, v0}, Landroid/support/v4/app/NotificationCompatSideChannelService$NotificationSideChannelStub;-><init>(Landroid/support/v4/app/NotificationCompatSideChannelService;Landroid/support/v4/app/NotificationCompatSideChannelService$1;)V
-
-    move-object v0, v1
+    invoke-direct {v0, p0}, Landroid/support/v4/app/NotificationCompatSideChannelService$NotificationSideChannelStub;-><init>(Landroid/support/v4/app/NotificationCompatSideChannelService;)V
 
     goto :goto_0
 .end method

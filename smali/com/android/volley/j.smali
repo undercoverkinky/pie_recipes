@@ -4,40 +4,16 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/android/volley/Request;Lcom/android/volley/VolleyError;)V
-    .annotation system Ldalvik/annotation/Signature;
+.method public abstract a()I
+.end method
+
+.method public abstract a(Lcom/android/volley/VolleyError;)V
+    .annotation system Ldalvik/annotation/Throws;
         value = {
-            "(",
-            "Lcom/android/volley/Request",
-            "<*>;",
-            "Lcom/android/volley/VolleyError;",
-            ")V"
+            Lcom/android/volley/VolleyError;
         }
     .end annotation
 .end method
 
-.method public abstract a(Lcom/android/volley/Request;Lcom/android/volley/i;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/android/volley/Request",
-            "<*>;",
-            "Lcom/android/volley/i",
-            "<*>;)V"
-        }
-    .end annotation
-.end method
-
-.method public abstract a(Lcom/android/volley/Request;Lcom/android/volley/i;Ljava/lang/Runnable;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/android/volley/Request",
-            "<*>;",
-            "Lcom/android/volley/i",
-            "<*>;",
-            "Ljava/lang/Runnable;",
-            ")V"
-        }
-    .end annotation
+.method public abstract b()I
 .end method

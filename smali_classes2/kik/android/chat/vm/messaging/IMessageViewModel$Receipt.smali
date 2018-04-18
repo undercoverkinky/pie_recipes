@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/android/chat/vm/ad;
+.implements Lkik/android/chat/vm/by;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "<",
         "Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;",
         ">;",
-        "Lkik/android/chat/vm/ad;"
+        "Lkik/android/chat/vm/by;"
     }
 .end annotation
 
@@ -62,7 +62,7 @@
 
     const/4 v4, 0x0
 
-    .line 32
+    .line 37
     new-instance v0, Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;
 
     const-string v1, "Sending"
@@ -71,7 +71,7 @@
 
     sput-object v0, Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;->Sending:Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;
 
-    .line 33
+    .line 38
     new-instance v0, Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;
 
     const-string v1, "Sent"
@@ -80,7 +80,7 @@
 
     sput-object v0, Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;->Sent:Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;
 
-    .line 34
+    .line 39
     new-instance v0, Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;
 
     const-string v1, "Pushed"
@@ -89,7 +89,7 @@
 
     sput-object v0, Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;->Pushed:Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;
 
-    .line 35
+    .line 40
     new-instance v0, Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;
 
     const-string v1, "Delivered"
@@ -98,7 +98,7 @@
 
     sput-object v0, Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;->Delivered:Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;
 
-    .line 36
+    .line 41
     new-instance v0, Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;
 
     const-string v1, "Read"
@@ -107,7 +107,7 @@
 
     sput-object v0, Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;->Read:Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;
 
-    .line 37
+    .line 42
     new-instance v0, Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;
 
     const-string v1, "Error"
@@ -120,7 +120,7 @@
 
     sput-object v0, Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;->Error:Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;
 
-    .line 31
+    .line 35
     const/4 v0, 0x6
 
     new-array v0, v0, [Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;
@@ -165,13 +165,13 @@
     .end annotation
 
     .prologue
-    .line 42
+    .line 47
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 43
+    .line 48
     iput p3, p0, Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;->_value:I
 
-    .line 44
+    .line 49
     return-void
 .end method
 
@@ -179,7 +179,7 @@
     .locals 1
 
     .prologue
-    .line 31
+    .line 35
     const-class v0, Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -195,7 +195,7 @@
     .locals 1
 
     .prologue
-    .line 31
+    .line 35
     sget-object v0, Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;->$VALUES:[Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;
 
     invoke-virtual {v0}, [Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;->clone()Ljava/lang/Object;
@@ -213,7 +213,7 @@
     .locals 1
 
     .prologue
-    .line 49
+    .line 54
     iget v0, p0, Lkik/android/chat/vm/messaging/IMessageViewModel$Receipt;->_value:I
 
     return v0

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/common/cache/LocalCache$LocalManualCache;->a(Ljava/lang/Object;Ljava/util/concurrent/Callable;)Ljava/lang/Object;
+    value = Lcom/google/common/cache/LocalCache$LocalManualCache;->get(Ljava/lang/Object;Ljava/util/concurrent/Callable;)Ljava/lang/Object;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,7 +34,7 @@
     .locals 0
 
     .prologue
-    .line 4739
+    .line 4901
     iput-object p1, p0, Lcom/google/common/cache/LocalCache$LocalManualCache$1;->b:Lcom/google/common/cache/LocalCache$LocalManualCache;
 
     iput-object p2, p0, Lcom/google/common/cache/LocalCache$LocalManualCache$1;->a:Ljava/util/concurrent/Callable;
@@ -61,7 +61,7 @@
     .end annotation
 
     .prologue
-    .line 4742
+    .line 4904
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$LocalManualCache$1;->a:Ljava/util/concurrent/Callable;
 
     invoke-interface {v0}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;

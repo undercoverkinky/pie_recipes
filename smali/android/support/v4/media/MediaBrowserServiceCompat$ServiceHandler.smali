@@ -15,73 +15,52 @@
 
 
 # instance fields
-.field private final mServiceImpl:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;
+.field private final mServiceBinderImpl:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;
 
 .field final synthetic this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
 
 # direct methods
-.method private constructor <init>(Landroid/support/v4/media/MediaBrowserServiceCompat;)V
-    .locals 3
+.method constructor <init>(Landroid/support/v4/media/MediaBrowserServiceCompat;)V
+    .locals 2
 
     .prologue
-    .line 154
+    .line 387
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 155
-    new-instance v0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;
+    .line 385
+    new-instance v0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;
 
     iget-object v1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v1}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompat;)V
 
-    invoke-direct {v0, v1, v2}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompat;Landroid/support/v4/media/MediaBrowserServiceCompat$1;)V
+    iput-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->mServiceBinderImpl:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;
 
-    iput-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->mServiceImpl:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Landroid/support/v4/media/MediaBrowserServiceCompat;Landroid/support/v4/media/MediaBrowserServiceCompat$1;)V
-    .locals 0
-
-    .prologue
-    .line 154
-    invoke-direct {p0, p1}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompat;)V
-
+    .line 388
     return-void
 .end method
 
 
 # virtual methods
-.method public final getServiceImpl()Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;
-    .locals 1
-
-    .prologue
-    .line 213
-    iget-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->mServiceImpl:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;
-
-    return-object v0
-.end method
-
 .method public final handleMessage(Landroid/os/Message;)V
     .locals 7
 
     .prologue
-    .line 159
+    .line 392
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 160
+    .line 393
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 188
-    const-string v0, "MediaBrowserServiceCompat"
+    .line 438
+    const-string v0, "MBServiceCompat"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -111,13 +90,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 192
+    .line 442
     :goto_0
     return-void
 
-    .line 162
+    .line 395
     :pswitch_0
-    iget-object v1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->mServiceImpl:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;
+    iget-object v1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->mServiceBinderImpl:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;
 
     const-string v2, "data_package_name"
 
@@ -127,6 +106,7 @@
 
     const-string v3, "data_calling_uid"
 
+    .line 396
     invoke-virtual {v0, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v3
@@ -145,13 +125,14 @@
 
     invoke-direct {v4, v5, v6}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacksCompat;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompat;Landroid/os/Messenger;)V
 
-    invoke-virtual {v1, v2, v3, v0, v4}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;->connect(Ljava/lang/String;ILandroid/os/Bundle;Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;)V
+    .line 395
+    invoke-virtual {v1, v2, v3, v0, v4}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;->connect(Ljava/lang/String;ILandroid/os/Bundle;Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;)V
 
     goto :goto_0
 
-    .line 167
+    .line 400
     :pswitch_1
-    iget-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->mServiceImpl:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;
+    iget-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->mServiceBinderImpl:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;
 
     new-instance v1, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacksCompat;
 
@@ -161,13 +142,13 @@
 
     invoke-direct {v1, v2, v3}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacksCompat;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompat;Landroid/os/Messenger;)V
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;->disconnect(Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;)V
+    invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;->disconnect(Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;)V
 
     goto :goto_0
 
-    .line 170
+    .line 403
     :pswitch_2
-    iget-object v1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->mServiceImpl:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;
+    iget-object v1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->mServiceBinderImpl:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;
 
     const-string v2, "data_media_item_id"
 
@@ -175,27 +156,36 @@
 
     move-result-object v2
 
-    const-string v3, "data_options"
+    const-string v3, "data_callback_token"
 
-    invoke-virtual {v0, v3}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+    .line 404
+    invoke-static {v0, v3}, Landroid/support/v4/app/BundleCompat;->getBinder(Landroid/os/Bundle;Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v3
+
+    const-string v4, "data_options"
+
+    .line 405
+    invoke-virtual {v0, v4}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v0
 
-    new-instance v3, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacksCompat;
+    new-instance v4, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacksCompat;
 
-    iget-object v4, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
+    iget-object v5, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
-    iget-object v5, p1, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
+    iget-object v6, p1, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
 
-    invoke-direct {v3, v4, v5}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacksCompat;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompat;Landroid/os/Messenger;)V
+    invoke-direct {v4, v5, v6}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacksCompat;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompat;Landroid/os/Messenger;)V
 
-    invoke-virtual {v1, v2, v0, v3}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;->addSubscription(Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;)V
+    .line 403
+    invoke-virtual {v1, v2, v3, v0, v4}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;->addSubscription(Ljava/lang/String;Landroid/os/IBinder;Landroid/os/Bundle;Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;)V
 
     goto :goto_0
 
-    .line 174
+    .line 409
     :pswitch_3
-    iget-object v1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->mServiceImpl:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;
+    iget-object v1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->mServiceBinderImpl:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;
 
     const-string v2, "data_media_item_id"
 
@@ -203,9 +193,10 @@
 
     move-result-object v2
 
-    const-string v3, "data_options"
+    const-string v3, "data_callback_token"
 
-    invoke-virtual {v0, v3}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+    .line 410
+    invoke-static {v0, v3}, Landroid/support/v4/app/BundleCompat;->getBinder(Landroid/os/Bundle;Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
@@ -217,13 +208,14 @@
 
     invoke-direct {v3, v4, v5}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacksCompat;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompat;Landroid/os/Messenger;)V
 
-    invoke-virtual {v1, v2, v0, v3}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;->removeSubscription(Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;)V
+    .line 409
+    invoke-virtual {v1, v2, v0, v3}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;->removeSubscription(Ljava/lang/String;Landroid/os/IBinder;Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;)V
 
     goto :goto_0
 
-    .line 178
+    .line 414
     :pswitch_4
-    iget-object v1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->mServiceImpl:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;
+    iget-object v1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->mServiceBinderImpl:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;
 
     const-string v2, "data_media_item_id"
 
@@ -233,35 +225,53 @@
 
     const-string v3, "data_result_receiver"
 
+    .line 415
     invoke-virtual {v0, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v0
 
     check-cast v0, Landroid/support/v4/os/ResultReceiver;
 
-    invoke-virtual {v1, v2, v0}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;->getMediaItem(Ljava/lang/String;Landroid/support/v4/os/ResultReceiver;)V
+    new-instance v3, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacksCompat;
 
-    goto :goto_0
+    iget-object v4, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
-    .line 182
+    iget-object v5, p1, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
+
+    invoke-direct {v3, v4, v5}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacksCompat;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompat;Landroid/os/Messenger;)V
+
+    .line 414
+    invoke-virtual {v1, v2, v0, v3}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;->getMediaItem(Ljava/lang/String;Landroid/support/v4/os/ResultReceiver;Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;)V
+
+    goto/16 :goto_0
+
+    .line 419
     :pswitch_5
-    iget-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->mServiceImpl:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;
+    iget-object v1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->mServiceBinderImpl:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;
 
-    new-instance v1, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacksCompat;
+    new-instance v2, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacksCompat;
 
-    iget-object v2, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
+    iget-object v3, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
-    iget-object v3, p1, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
+    iget-object v4, p1, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
 
-    invoke-direct {v1, v2, v3}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacksCompat;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompat;Landroid/os/Messenger;)V
+    invoke-direct {v2, v3, v4}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacksCompat;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompat;Landroid/os/Messenger;)V
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;->registerCallbacks(Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;)V
+    const-string v3, "data_root_hints"
+
+    .line 420
+    invoke-virtual {v0, v3}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v0
+
+    .line 419
+    invoke-virtual {v1, v2, v0}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;->registerCallbacks(Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;Landroid/os/Bundle;)V
 
     goto/16 :goto_0
 
-    .line 185
+    .line 423
     :pswitch_6
-    iget-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->mServiceImpl:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;
+    iget-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->mServiceBinderImpl:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;
 
     new-instance v1, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacksCompat;
 
@@ -271,11 +281,89 @@
 
     invoke-direct {v1, v2, v3}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacksCompat;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompat;Landroid/os/Messenger;)V
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceImpl;->unregisterCallbacks(Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;)V
+    invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;->unregisterCallbacks(Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;)V
 
     goto/16 :goto_0
 
-    .line 160
+    .line 426
+    :pswitch_7
+    iget-object v1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->mServiceBinderImpl:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;
+
+    const-string v2, "data_search_query"
+
+    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "data_search_extras"
+
+    .line 427
+    invoke-virtual {v0, v3}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v3
+
+    const-string v4, "data_result_receiver"
+
+    .line 428
+    invoke-virtual {v0, v4}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v4/os/ResultReceiver;
+
+    new-instance v4, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacksCompat;
+
+    iget-object v5, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
+
+    iget-object v6, p1, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
+
+    invoke-direct {v4, v5, v6}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacksCompat;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompat;Landroid/os/Messenger;)V
+
+    .line 426
+    invoke-virtual {v1, v2, v3, v0, v4}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;->search(Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/os/ResultReceiver;Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;)V
+
+    goto/16 :goto_0
+
+    .line 432
+    :pswitch_8
+    iget-object v1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->mServiceBinderImpl:Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;
+
+    const-string v2, "data_custom_action"
+
+    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "data_custom_action_extras"
+
+    .line 433
+    invoke-virtual {v0, v3}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v3
+
+    const-string v4, "data_result_receiver"
+
+    .line 434
+    invoke-virtual {v0, v4}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/support/v4/os/ResultReceiver;
+
+    new-instance v4, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacksCompat;
+
+    iget-object v5, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
+
+    iget-object v6, p1, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
+
+    invoke-direct {v4, v5, v6}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacksCompat;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompat;Landroid/os/Messenger;)V
+
+    .line 432
+    invoke-virtual {v1, v2, v3, v0, v4}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl;->sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/os/ResultReceiver;Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceCallbacks;)V
+
+    goto/16 :goto_0
+
+    .line 393
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -285,6 +373,8 @@
         :pswitch_4
         :pswitch_5
         :pswitch_6
+        :pswitch_7
+        :pswitch_8
     .end packed-switch
 .end method
 
@@ -292,7 +382,7 @@
     .locals 2
 
     .prologue
-    .line 205
+    .line 455
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -307,14 +397,14 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 206
+    .line 456
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    .line 210
+    .line 460
     :goto_0
     return-void
 
-    .line 208
+    .line 458
     :cond_0
     invoke-virtual {p0, p1}, Landroid/support/v4/media/MediaBrowserServiceCompat$ServiceHandler;->post(Ljava/lang/Runnable;)Z
 
@@ -325,12 +415,12 @@
     .locals 4
 
     .prologue
-    .line 198
+    .line 448
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 199
+    .line 449
     const-class v1, Landroid/support/v4/media/MediaBrowserCompat;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -339,7 +429,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->setClassLoader(Ljava/lang/ClassLoader;)V
 
-    .line 200
+    .line 450
     const-string v1, "data_calling_uid"
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
@@ -348,7 +438,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 201
+    .line 451
     invoke-super {p0, p1, p2, p3}, Landroid/os/Handler;->sendMessageAtTime(Landroid/os/Message;J)Z
 
     move-result v0

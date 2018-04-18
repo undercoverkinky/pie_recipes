@@ -22,7 +22,7 @@
 
 .field public final i:Ljava/lang/String;
 
-.field public final j:Lio/fabric/sdk/android/services/settings/n;
+.field public final j:Lio/fabric/sdk/android/services/settings/IconRequest;
 
 .field public final k:Ljava/util/Collection;
     .annotation system Ldalvik/annotation/Signature;
@@ -37,7 +37,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Lio/fabric/sdk/android/services/settings/n;Ljava/util/Collection;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Lio/fabric/sdk/android/services/settings/IconRequest;Ljava/util/Collection;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -51,7 +51,7 @@
             "I",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
-            "Lio/fabric/sdk/android/services/settings/n;",
+            "Lio/fabric/sdk/android/services/settings/IconRequest;",
             "Ljava/util/Collection",
             "<",
             "Lio/fabric/sdk/android/j;",
@@ -91,7 +91,7 @@
     iput-object p9, p0, Lio/fabric/sdk/android/services/settings/d;->i:Ljava/lang/String;
 
     .line 58
-    iput-object p10, p0, Lio/fabric/sdk/android/services/settings/d;->j:Lio/fabric/sdk/android/services/settings/n;
+    iput-object p10, p0, Lio/fabric/sdk/android/services/settings/d;->j:Lio/fabric/sdk/android/services/settings/IconRequest;
 
     .line 59
     iput-object p11, p0, Lio/fabric/sdk/android/services/settings/d;->k:Ljava/util/Collection;

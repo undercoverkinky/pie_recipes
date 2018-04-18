@@ -11,6 +11,9 @@
 .method public abstract destroy(Landroid/content/Context;)V
 .end method
 
+.method public abstract getMediationAdapterClassName()Ljava/lang/String;
+.end method
+
 .method public abstract getRewardedVideoAdListener()Lcom/google/android/gms/ads/reward/RewardedVideoAdListener;
 .end method
 
@@ -39,6 +42,9 @@
 .end method
 
 .method public abstract resume(Landroid/content/Context;)V
+.end method
+
+.method public abstract setImmersiveMode(Z)V
 .end method
 
 .method public abstract setRewardedVideoAdListener(Lcom/google/android/gms/ads/reward/RewardedVideoAdListener;)V

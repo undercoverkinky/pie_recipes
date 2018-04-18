@@ -3,27 +3,27 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lio/fabric/sdk/android/services/settings/r;
+.implements Lio/fabric/sdk/android/services/settings/q;
 
 
 # instance fields
-.field private final a:Lio/fabric/sdk/android/services/settings/v;
+.field private final a:Lio/fabric/sdk/android/services/settings/SettingsRequest;
 
-.field private final b:Lio/fabric/sdk/android/services/settings/u;
+.field private final b:Lio/fabric/sdk/android/services/settings/t;
 
 .field private final c:Lio/fabric/sdk/android/services/common/j;
 
 .field private final d:Lio/fabric/sdk/android/services/settings/g;
 
-.field private final e:Lio/fabric/sdk/android/services/settings/w;
+.field private final e:Lio/fabric/sdk/android/services/settings/u;
 
 .field private final f:Lio/fabric/sdk/android/h;
 
-.field private final g:Lio/fabric/sdk/android/services/c/c;
+.field private final g:Lio/fabric/sdk/android/services/b/c;
 
 
 # direct methods
-.method public constructor <init>(Lio/fabric/sdk/android/h;Lio/fabric/sdk/android/services/settings/v;Lio/fabric/sdk/android/services/common/j;Lio/fabric/sdk/android/services/settings/u;Lio/fabric/sdk/android/services/settings/g;Lio/fabric/sdk/android/services/settings/w;)V
+.method public constructor <init>(Lio/fabric/sdk/android/h;Lio/fabric/sdk/android/services/settings/SettingsRequest;Lio/fabric/sdk/android/services/common/j;Lio/fabric/sdk/android/services/settings/t;Lio/fabric/sdk/android/services/settings/g;Lio/fabric/sdk/android/services/settings/u;)V
     .locals 2
 
     .prologue
@@ -34,28 +34,28 @@
     iput-object p1, p0, Lio/fabric/sdk/android/services/settings/j;->f:Lio/fabric/sdk/android/h;
 
     .line 55
-    iput-object p2, p0, Lio/fabric/sdk/android/services/settings/j;->a:Lio/fabric/sdk/android/services/settings/v;
+    iput-object p2, p0, Lio/fabric/sdk/android/services/settings/j;->a:Lio/fabric/sdk/android/services/settings/SettingsRequest;
 
     .line 56
     iput-object p3, p0, Lio/fabric/sdk/android/services/settings/j;->c:Lio/fabric/sdk/android/services/common/j;
 
     .line 57
-    iput-object p4, p0, Lio/fabric/sdk/android/services/settings/j;->b:Lio/fabric/sdk/android/services/settings/u;
+    iput-object p4, p0, Lio/fabric/sdk/android/services/settings/j;->b:Lio/fabric/sdk/android/services/settings/t;
 
     .line 58
     iput-object p5, p0, Lio/fabric/sdk/android/services/settings/j;->d:Lio/fabric/sdk/android/services/settings/g;
 
     .line 59
-    iput-object p6, p0, Lio/fabric/sdk/android/services/settings/j;->e:Lio/fabric/sdk/android/services/settings/w;
+    iput-object p6, p0, Lio/fabric/sdk/android/services/settings/j;->e:Lio/fabric/sdk/android/services/settings/u;
 
     .line 60
-    new-instance v0, Lio/fabric/sdk/android/services/c/d;
+    new-instance v0, Lio/fabric/sdk/android/services/b/d;
 
     iget-object v1, p0, Lio/fabric/sdk/android/services/settings/j;->f:Lio/fabric/sdk/android/h;
 
-    invoke-direct {v0, v1}, Lio/fabric/sdk/android/services/c/d;-><init>(Lio/fabric/sdk/android/h;)V
+    invoke-direct {v0, v1}, Lio/fabric/sdk/android/services/b/d;-><init>(Lio/fabric/sdk/android/h;)V
 
-    iput-object v0, p0, Lio/fabric/sdk/android/services/settings/j;->g:Lio/fabric/sdk/android/services/c/c;
+    iput-object v0, p0, Lio/fabric/sdk/android/services/settings/j;->g:Lio/fabric/sdk/android/services/b/c;
 
     .line 61
     return-void
@@ -91,7 +91,7 @@
     return-void
 .end method
 
-.method private b(Lio/fabric/sdk/android/services/settings/SettingsCacheBehavior;)Lio/fabric/sdk/android/services/settings/s;
+.method private b(Lio/fabric/sdk/android/services/settings/SettingsCacheBehavior;)Lio/fabric/sdk/android/services/settings/r;
     .locals 7
 
     .prologue
@@ -119,11 +119,11 @@
     if-eqz v2, :cond_4
 
     .line 112
-    iget-object v1, p0, Lio/fabric/sdk/android/services/settings/j;->b:Lio/fabric/sdk/android/services/settings/u;
+    iget-object v1, p0, Lio/fabric/sdk/android/services/settings/j;->b:Lio/fabric/sdk/android/services/settings/t;
 
     iget-object v3, p0, Lio/fabric/sdk/android/services/settings/j;->c:Lio/fabric/sdk/android/services/common/j;
 
-    invoke-interface {v1, v3, v2}, Lio/fabric/sdk/android/services/settings/u;->a(Lio/fabric/sdk/android/services/common/j;Lorg/json/JSONObject;)Lio/fabric/sdk/android/services/settings/s;
+    invoke-interface {v1, v3, v2}, Lio/fabric/sdk/android/services/settings/t;->a(Lio/fabric/sdk/android/services/common/j;Lorg/json/JSONObject;)Lio/fabric/sdk/android/services/settings/r;
 
     move-result-object v1
 
@@ -149,7 +149,7 @@
     if-nez v4, :cond_0
 
     .line 3052
-    iget-wide v4, v1, Lio/fabric/sdk/android/services/settings/s;->g:J
+    iget-wide v4, v1, Lio/fabric/sdk/android/services/settings/r;->g:J
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -159,7 +159,7 @@
 
     const/4 v2, 0x1
 
-    .line 120
+    .line 121
     :goto_0
     if-nez v2, :cond_3
 
@@ -245,7 +245,7 @@
 
     iget-object v2, p0, Lio/fabric/sdk/android/services/settings/j;->f:Lio/fabric/sdk/android/h;
 
-    invoke-virtual {v2}, Lio/fabric/sdk/android/h;->o()Landroid/content/Context;
+    invoke-virtual {v2}, Lio/fabric/sdk/android/h;->m()Landroid/content/Context;
 
     move-result-object v2
 
@@ -264,21 +264,21 @@
 
 
 # virtual methods
-.method public final a()Lio/fabric/sdk/android/services/settings/s;
+.method public final a()Lio/fabric/sdk/android/services/settings/r;
     .locals 1
 
     .prologue
     .line 64
     sget-object v0, Lio/fabric/sdk/android/services/settings/SettingsCacheBehavior;->USE_CACHE:Lio/fabric/sdk/android/services/settings/SettingsCacheBehavior;
 
-    invoke-virtual {p0, v0}, Lio/fabric/sdk/android/services/settings/j;->a(Lio/fabric/sdk/android/services/settings/SettingsCacheBehavior;)Lio/fabric/sdk/android/services/settings/s;
+    invoke-virtual {p0, v0}, Lio/fabric/sdk/android/services/settings/j;->a(Lio/fabric/sdk/android/services/settings/SettingsCacheBehavior;)Lio/fabric/sdk/android/services/settings/r;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final a(Lio/fabric/sdk/android/services/settings/SettingsCacheBehavior;)Lio/fabric/sdk/android/services/settings/s;
+.method public final a(Lio/fabric/sdk/android/services/settings/SettingsCacheBehavior;)Lio/fabric/sdk/android/services/settings/r;
     .locals 7
 
     .prologue
@@ -294,9 +294,9 @@
     if-nez v0, :cond_0
 
     .line 2151
-    iget-object v0, p0, Lio/fabric/sdk/android/services/settings/j;->g:Lio/fabric/sdk/android/services/c/c;
+    iget-object v0, p0, Lio/fabric/sdk/android/services/settings/j;->g:Lio/fabric/sdk/android/services/b/c;
 
-    invoke-interface {v0}, Lio/fabric/sdk/android/services/c/c;->a()Landroid/content/SharedPreferences;
+    invoke-interface {v0}, Lio/fabric/sdk/android/services/b/c;->a()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -328,7 +328,7 @@
     if-nez v0, :cond_0
 
     .line 76
-    invoke-direct {p0, p1}, Lio/fabric/sdk/android/services/settings/j;->b(Lio/fabric/sdk/android/services/settings/SettingsCacheBehavior;)Lio/fabric/sdk/android/services/settings/s;
+    invoke-direct {p0, p1}, Lio/fabric/sdk/android/services/settings/j;->b(Lio/fabric/sdk/android/services/settings/SettingsCacheBehavior;)Lio/fabric/sdk/android/services/settings/r;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -340,11 +340,11 @@
 
     .line 80
     :try_start_1
-    iget-object v0, p0, Lio/fabric/sdk/android/services/settings/j;->e:Lio/fabric/sdk/android/services/settings/w;
+    iget-object v0, p0, Lio/fabric/sdk/android/services/settings/j;->e:Lio/fabric/sdk/android/services/settings/u;
 
-    iget-object v2, p0, Lio/fabric/sdk/android/services/settings/j;->a:Lio/fabric/sdk/android/services/settings/v;
+    iget-object v2, p0, Lio/fabric/sdk/android/services/settings/j;->a:Lio/fabric/sdk/android/services/settings/SettingsRequest;
 
-    invoke-interface {v0, v2}, Lio/fabric/sdk/android/services/settings/w;->a(Lio/fabric/sdk/android/services/settings/v;)Lorg/json/JSONObject;
+    invoke-interface {v0, v2}, Lio/fabric/sdk/android/services/settings/u;->a(Lio/fabric/sdk/android/services/settings/SettingsRequest;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -352,18 +352,18 @@
     if-eqz v0, :cond_1
 
     .line 83
-    iget-object v2, p0, Lio/fabric/sdk/android/services/settings/j;->b:Lio/fabric/sdk/android/services/settings/u;
+    iget-object v2, p0, Lio/fabric/sdk/android/services/settings/j;->b:Lio/fabric/sdk/android/services/settings/t;
 
     iget-object v3, p0, Lio/fabric/sdk/android/services/settings/j;->c:Lio/fabric/sdk/android/services/common/j;
 
-    invoke-interface {v2, v3, v0}, Lio/fabric/sdk/android/services/settings/u;->a(Lio/fabric/sdk/android/services/common/j;Lorg/json/JSONObject;)Lio/fabric/sdk/android/services/settings/s;
+    invoke-interface {v2, v3, v0}, Lio/fabric/sdk/android/services/settings/t;->a(Lio/fabric/sdk/android/services/common/j;Lorg/json/JSONObject;)Lio/fabric/sdk/android/services/settings/r;
 
     move-result-object v1
 
     .line 85
     iget-object v2, p0, Lio/fabric/sdk/android/services/settings/j;->d:Lio/fabric/sdk/android/services/settings/g;
 
-    iget-wide v4, v1, Lio/fabric/sdk/android/services/settings/s;->g:J
+    iget-wide v4, v1, Lio/fabric/sdk/android/services/settings/r;->g:J
 
     invoke-interface {v2, v4, v5, v0}, Lio/fabric/sdk/android/services/settings/g;->a(JLorg/json/JSONObject;)V
 
@@ -378,9 +378,9 @@
     move-result-object v0
 
     .line 2157
-    iget-object v2, p0, Lio/fabric/sdk/android/services/settings/j;->g:Lio/fabric/sdk/android/services/c/c;
+    iget-object v2, p0, Lio/fabric/sdk/android/services/settings/j;->g:Lio/fabric/sdk/android/services/b/c;
 
-    invoke-interface {v2}, Lio/fabric/sdk/android/services/c/c;->b()Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v2}, Lio/fabric/sdk/android/services/b/c;->b()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v2
 
@@ -390,9 +390,9 @@
     invoke-interface {v2, v3, v0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     .line 2159
-    iget-object v0, p0, Lio/fabric/sdk/android/services/settings/j;->g:Lio/fabric/sdk/android/services/c/c;
+    iget-object v0, p0, Lio/fabric/sdk/android/services/settings/j;->g:Lio/fabric/sdk/android/services/b/c;
 
-    invoke-interface {v0, v2}, Lio/fabric/sdk/android/services/c/c;->a(Landroid/content/SharedPreferences$Editor;)Z
+    invoke-interface {v0, v2}, Lio/fabric/sdk/android/services/b/c;->a(Landroid/content/SharedPreferences$Editor;)Z
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -406,7 +406,7 @@
     :try_start_2
     sget-object v1, Lio/fabric/sdk/android/services/settings/SettingsCacheBehavior;->IGNORE_CACHE_EXPIRATION:Lio/fabric/sdk/android/services/settings/SettingsCacheBehavior;
 
-    invoke-direct {p0, v1}, Lio/fabric/sdk/android/services/settings/j;->b(Lio/fabric/sdk/android/services/settings/SettingsCacheBehavior;)Lio/fabric/sdk/android/services/settings/s;
+    invoke-direct {p0, v1}, Lio/fabric/sdk/android/services/settings/j;->b(Lio/fabric/sdk/android/services/settings/SettingsCacheBehavior;)Lio/fabric/sdk/android/services/settings/r;
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 

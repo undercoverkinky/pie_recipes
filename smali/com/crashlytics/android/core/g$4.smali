@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/crashlytics/android/core/g;->a(Lio/fabric/sdk/android/services/settings/p;)Z
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/crashlytics/android/core/g;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,27 +21,23 @@
         "Ljava/lang/Object;",
         "Ljava/util/concurrent/Callable",
         "<",
-        "Ljava/lang/Boolean;",
+        "Ljava/lang/Void;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lio/fabric/sdk/android/services/settings/p;
-
-.field final synthetic b:Lcom/crashlytics/android/core/g;
+.field final synthetic a:Lcom/crashlytics/android/core/g;
 
 
 # direct methods
-.method constructor <init>(Lcom/crashlytics/android/core/g;Lio/fabric/sdk/android/services/settings/p;)V
+.method constructor <init>(Lcom/crashlytics/android/core/g;)V
     .locals 0
 
     .prologue
-    .line 472
-    iput-object p1, p0, Lcom/crashlytics/android/core/g$4;->b:Lcom/crashlytics/android/core/g;
-
-    iput-object p2, p0, Lcom/crashlytics/android/core/g$4;->a:Lio/fabric/sdk/android/services/settings/p;
+    .line 441
+    iput-object p1, p0, Lcom/crashlytics/android/core/g$4;->a:Lcom/crashlytics/android/core/g;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,7 +47,7 @@
 
 # virtual methods
 .method public final synthetic call()Ljava/lang/Object;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -59,41 +55,15 @@
     .end annotation
 
     .prologue
-    .line 472
-    .line 1475
-    iget-object v0, p0, Lcom/crashlytics/android/core/g$4;->b:Lcom/crashlytics/android/core/g;
+    .line 441
+    .line 1444
+    iget-object v0, p0, Lcom/crashlytics/android/core/g$4;->a:Lcom/crashlytics/android/core/g;
 
-    invoke-virtual {v0}, Lcom/crashlytics/android/core/g;->c()Z
+    invoke-static {v0}, Lcom/crashlytics/android/core/g;->b(Lcom/crashlytics/android/core/g;)V
 
-    move-result v0
+    .line 1445
+    const/4 v0, 0x0
 
-    if-eqz v0, :cond_0
-
-    .line 1476
-    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
-
-    .line 1478
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    :goto_0
+    .line 441
     return-object v0
-
-    .line 1481
-    :cond_0
-    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
-
-    .line 1482
-    iget-object v0, p0, Lcom/crashlytics/android/core/g$4;->b:Lcom/crashlytics/android/core/g;
-
-    iget-object v1, p0, Lcom/crashlytics/android/core/g$4;->a:Lio/fabric/sdk/android/services/settings/p;
-
-    invoke-static {v0, v1}, Lcom/crashlytics/android/core/g;->a(Lcom/crashlytics/android/core/g;Lio/fabric/sdk/android/services/settings/p;)V
-
-    .line 1483
-    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
-
-    .line 1485
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    goto :goto_0
 .end method

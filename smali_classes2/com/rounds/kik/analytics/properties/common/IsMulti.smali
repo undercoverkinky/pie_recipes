@@ -12,7 +12,7 @@
     .locals 1
 
     .prologue
-    .line 12
+    .line 11
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -28,19 +28,19 @@
     .locals 1
 
     .prologue
-    .line 16
+    .line 15
     const-string v0, "is_multi"
 
     invoke-direct {p0, v0, p1}, Lcom/rounds/kik/analytics/properties/primitives/BooleanProperty;-><init>(Ljava/lang/String;Z)V
 
-    .line 18
+    .line 17
     invoke-static {}, Lcom/rounds/kik/analytics/properties/common/IsMulti;->getDefaultValue()Ljava/lang/Boolean;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/rounds/kik/analytics/properties/common/IsMulti;->mValue:Ljava/lang/Object;
 
-    .line 19
+    .line 18
     return-void
 .end method
 
@@ -48,12 +48,26 @@
     .locals 1
 
     .prologue
+    .line 22
+    invoke-static {}, Lcom/rounds/kik/VideoAppModule;->isReporterReady()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
     .line 23
+    sget-object v0, Lcom/rounds/kik/analytics/properties/common/IsMulti;->MISSING_VALUE:Ljava/lang/Boolean;
+
+    .line 25
+    :goto_0
+    return-object v0
+
+    :cond_0
     invoke-static {}, Lcom/rounds/kik/VideoAppModule;->conversation()Lcom/rounds/kik/Conversation;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     invoke-static {}, Lcom/rounds/kik/VideoAppModule;->conversation()Lcom/rounds/kik/Conversation;
 
@@ -67,10 +81,9 @@
 
     move-result-object v0
 
-    :goto_0
-    return-object v0
+    goto :goto_0
 
-    :cond_0
+    :cond_1
     sget-object v0, Lcom/rounds/kik/analytics/properties/common/IsMulti;->MISSING_VALUE:Ljava/lang/Boolean;
 
     goto :goto_0

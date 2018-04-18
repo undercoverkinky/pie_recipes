@@ -1,4 +1,4 @@
-.class public Lkik/android/config/f;
+.class public final Lkik/android/config/f;
 .super Lkik/android/config/Configuration;
 .source "SourceFile"
 
@@ -15,21 +15,33 @@
 
 
 # instance fields
-.field c:Z
+.field a:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/Runnable;Lkik/android/util/ah;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Lkik/android/util/aj;)V
+    .locals 6
 
     .prologue
     .line 14
-    invoke-direct/range {p0 .. p5}, Lkik/android/config/Configuration;-><init>(Ljava/lang/String;Ljava/lang/Object;[Ljava/lang/Object;Ljava/lang/Runnable;Lkik/android/util/ah;)V
+    const/4 v4, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move-object v5, p4
+
+    invoke-direct/range {v0 .. v5}, Lkik/android/config/Configuration;-><init>(Ljava/lang/String;Ljava/lang/Object;[Ljava/lang/Object;Ljava/lang/Runnable;Lkik/android/util/aj;)V
 
     .line 15
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lkik/android/config/f;->c:Z
+    iput-boolean v0, p0, Lkik/android/config/f;->a:Z
 
     .line 16
     return-void
@@ -47,12 +59,12 @@
     return-object v0
 .end method
 
-.method public final a(Lkik/android/util/ah;)V
+.method public final a(Lkik/android/util/aj;)V
     .locals 3
 
     .prologue
     .line 36
-    iget-boolean v0, p0, Lkik/android/config/f;->c:Z
+    iget-boolean v0, p0, Lkik/android/config/f;->a:Z
 
     if-eqz v0, :cond_0
 
@@ -70,7 +82,7 @@
     :cond_0
     const-string v0, "KikConfigurations"
 
-    invoke-interface {p1, v0}, Lkik/android/util/ah;->a(Ljava/lang/String;)Landroid/content/SharedPreferences;
+    invoke-interface {p1, v0}, Lkik/android/util/aj;->a(Ljava/lang/String;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -97,13 +109,13 @@
     goto :goto_0
 .end method
 
-.method protected final synthetic b(Lkik/android/util/ah;)Ljava/lang/Object;
+.method protected final synthetic b(Lkik/android/util/aj;)Ljava/lang/Object;
     .locals 3
 
     .prologue
     .line 8
     .line 1027
-    iget-boolean v0, p0, Lkik/android/config/f;->c:Z
+    iget-boolean v0, p0, Lkik/android/config/f;->a:Z
 
     if-eqz v0, :cond_0
 
@@ -127,7 +139,7 @@
     :cond_0
     const-string v0, "KikConfigurations"
 
-    invoke-interface {p1, v0}, Lkik/android/util/ah;->a(Ljava/lang/String;)Landroid/content/SharedPreferences;
+    invoke-interface {p1, v0}, Lkik/android/util/aj;->a(Ljava/lang/String;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 

@@ -20,7 +20,7 @@
 
 
 # virtual methods
-.method public final J_()Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;
+.method public final ab_()Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;
     .locals 1
 
     .prologue
@@ -30,29 +30,29 @@
     return-object v0
 .end method
 
-.method public final L_()Z
+.method public final ae_()Z
     .locals 3
 
     .prologue
     const/4 v0, 0x0
 
     .line 29
-    iget-object v1, p0, Lkik/android/chat/vm/chats/search/k;->c:Lkik/core/interfaces/m;
+    iget-object v1, p0, Lkik/android/chat/vm/chats/search/k;->c:Lkik/core/interfaces/l;
 
     iget-object v2, p0, Lkik/android/chat/vm/chats/search/k;->g:Ljava/lang/String;
 
-    invoke-interface {v1, v2, v0}, Lkik/core/interfaces/m;->a(Ljava/lang/String;Z)Lkik/core/datatypes/s;
+    invoke-interface {v1, v2, v0}, Lkik/core/interfaces/l;->a(Ljava/lang/String;Z)Lkik/core/datatypes/p;
 
     move-result-object v1
 
     .line 30
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lkik/core/datatypes/s;->t()Ljava/lang/String;
+    invoke-virtual {v1}, Lkik/core/datatypes/p;->z()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    invoke-static {v1}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -67,12 +67,12 @@
     return v0
 .end method
 
-.method public final f()Lrx/c;
+.method public final h()Lrx/d;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lrx/c",
+            "Lrx/d",
             "<",
             "Ljava/lang/String;",
             ">;"
@@ -84,11 +84,11 @@
     iget-object v0, p0, Lkik/android/chat/vm/chats/search/k;->g:Ljava/lang/String;
 
     .line 1045
-    iget-object v1, p0, Lkik/android/chat/vm/chats/search/k;->c:Lkik/core/interfaces/m;
+    iget-object v1, p0, Lkik/android/chat/vm/chats/search/k;->c:Lkik/core/interfaces/l;
 
     const/4 v2, 0x0
 
-    invoke-interface {v1, v0, v2}, Lkik/core/interfaces/m;->a(Ljava/lang/String;Z)Lkik/core/datatypes/s;
+    invoke-interface {v1, v0, v2}, Lkik/core/interfaces/l;->a(Ljava/lang/String;Z)Lkik/core/datatypes/p;
 
     move-result-object v0
 
@@ -100,7 +100,7 @@
 
     .line 39
     :goto_0
-    invoke-static {v0}, Lrx/c;->b(Ljava/lang/Object;)Lrx/c;
+    invoke-static {v0}, Lrx/d;->b(Ljava/lang/Object;)Lrx/d;
 
     move-result-object v0
 
@@ -108,24 +108,24 @@
 
     .line 1049
     :cond_0
-    invoke-virtual {v0}, Lkik/core/datatypes/s;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/p;->b()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    invoke-static {v1}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 1050
-    iget-object v1, p0, Lkik/android/chat/vm/chats/search/k;->b:Lkik/core/interfaces/x;
+    iget-object v1, p0, Lkik/android/chat/vm/chats/search/k;->b:Lkik/core/interfaces/v;
 
-    invoke-static {v0, v1}, Lkik/android/util/bq;->a(Lkik/core/datatypes/s;Lkik/core/interfaces/x;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lkik/android/util/br;->a(Lkik/core/datatypes/p;Lkik/core/interfaces/v;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkik/android/util/bq;->c(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lkik/android/util/br;->c(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -133,11 +133,11 @@
 
     .line 1053
     :cond_1
-    invoke-virtual {v0}, Lkik/core/datatypes/s;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/p;->b()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkik/android/util/bq;->c(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lkik/android/util/br;->c(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

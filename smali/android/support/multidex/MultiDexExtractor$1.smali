@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 264
+    .line 345
     iput-object p1, p0, Landroid/support/multidex/MultiDexExtractor$1;->a:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,14 +40,24 @@
     .locals 2
 
     .prologue
-    .line 268
+    .line 349
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 350
     iget-object v1, p0, Landroid/support/multidex/MultiDexExtractor$1;->a:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const-string v1, "MultiDex.lock"
+
+    .line 351
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 

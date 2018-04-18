@@ -19,7 +19,7 @@
     .locals 1
 
     .prologue
-    .line 393
+    .line 391
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/common/cache/LocalCache$Strength;-><init>(Ljava/lang/String;ILcom/google/common/cache/LocalCache$1;)V
@@ -42,8 +42,8 @@
     .end annotation
 
     .prologue
-    .line 405
-    invoke-static {}, Lcom/google/common/base/Equivalence;->b()Lcom/google/common/base/Equivalence;
+    .line 403
+    invoke-static {}, Lcom/google/common/base/Equivalence;->identity()Lcom/google/common/base/Equivalence;
 
     move-result-object v0
 
@@ -69,7 +69,7 @@
     .end annotation
 
     .prologue
-    .line 397
+    .line 395
     const/4 v0, 0x1
 
     if-ne p4, v0, :cond_0

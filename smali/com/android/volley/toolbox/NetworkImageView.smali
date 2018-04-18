@@ -10,9 +10,9 @@
 
 .field private c:I
 
-.field private d:Lcom/android/volley/toolbox/h;
+.field private d:Lcom/android/volley/toolbox/ImageLoader;
 
-.field private e:Lcom/android/volley/toolbox/h$c;
+.field private e:Lcom/android/volley/toolbox/ImageLoader$a;
 
 .field private f:I
 
@@ -87,20 +87,20 @@
     const/4 v1, 0x0
 
     .line 212
-    iget-object v0, p0, Lcom/android/volley/toolbox/NetworkImageView;->e:Lcom/android/volley/toolbox/h$c;
+    iget-object v0, p0, Lcom/android/volley/toolbox/NetworkImageView;->e:Lcom/android/volley/toolbox/ImageLoader$a;
 
     if-eqz v0, :cond_0
 
     .line 215
-    iget-object v0, p0, Lcom/android/volley/toolbox/NetworkImageView;->e:Lcom/android/volley/toolbox/h$c;
+    iget-object v0, p0, Lcom/android/volley/toolbox/NetworkImageView;->e:Lcom/android/volley/toolbox/ImageLoader$a;
 
-    invoke-virtual {v0}, Lcom/android/volley/toolbox/h$c;->a()V
+    invoke-virtual {v0}, Lcom/android/volley/toolbox/ImageLoader$a;->a()V
 
     .line 216
     invoke-virtual {p0, v1}, Lcom/android/volley/toolbox/NetworkImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     .line 218
-    iput-object v1, p0, Lcom/android/volley/toolbox/NetworkImageView;->e:Lcom/android/volley/toolbox/h$c;
+    iput-object v1, p0, Lcom/android/volley/toolbox/NetworkImageView;->e:Lcom/android/volley/toolbox/ImageLoader$a;
 
     .line 220
     :cond_0
@@ -170,17 +170,17 @@
     if-eqz v0, :cond_4
 
     .line 1139
-    iget-object v0, p0, Lcom/android/volley/toolbox/NetworkImageView;->e:Lcom/android/volley/toolbox/h$c;
+    iget-object v0, p0, Lcom/android/volley/toolbox/NetworkImageView;->e:Lcom/android/volley/toolbox/ImageLoader$a;
 
     if-eqz v0, :cond_1
 
     .line 1140
-    iget-object v0, p0, Lcom/android/volley/toolbox/NetworkImageView;->e:Lcom/android/volley/toolbox/h$c;
+    iget-object v0, p0, Lcom/android/volley/toolbox/NetworkImageView;->e:Lcom/android/volley/toolbox/ImageLoader$a;
 
-    invoke-virtual {v0}, Lcom/android/volley/toolbox/h$c;->a()V
+    invoke-virtual {v0}, Lcom/android/volley/toolbox/ImageLoader$a;->a()V
 
     .line 1141
-    iput-object v3, p0, Lcom/android/volley/toolbox/NetworkImageView;->e:Lcom/android/volley/toolbox/h$c;
+    iput-object v3, p0, Lcom/android/volley/toolbox/NetworkImageView;->e:Lcom/android/volley/toolbox/ImageLoader$a;
 
     .line 1143
     :cond_1
@@ -199,22 +199,22 @@
 
     .line 1148
     :cond_4
-    iget-object v0, p0, Lcom/android/volley/toolbox/NetworkImageView;->e:Lcom/android/volley/toolbox/h$c;
+    iget-object v0, p0, Lcom/android/volley/toolbox/NetworkImageView;->e:Lcom/android/volley/toolbox/ImageLoader$a;
 
     if-eqz v0, :cond_5
 
-    iget-object v0, p0, Lcom/android/volley/toolbox/NetworkImageView;->e:Lcom/android/volley/toolbox/h$c;
+    iget-object v0, p0, Lcom/android/volley/toolbox/NetworkImageView;->e:Lcom/android/volley/toolbox/ImageLoader$a;
 
-    invoke-virtual {v0}, Lcom/android/volley/toolbox/h$c;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/android/volley/toolbox/ImageLoader$a;->c()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_5
 
     .line 1149
-    iget-object v0, p0, Lcom/android/volley/toolbox/NetworkImageView;->e:Lcom/android/volley/toolbox/h$c;
+    iget-object v0, p0, Lcom/android/volley/toolbox/NetworkImageView;->e:Lcom/android/volley/toolbox/ImageLoader$a;
 
-    invoke-virtual {v0}, Lcom/android/volley/toolbox/h$c;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/android/volley/toolbox/ImageLoader$a;->c()Ljava/lang/String;
 
     move-result-object v0
 
@@ -227,16 +227,16 @@
     if-nez v0, :cond_2
 
     .line 1155
-    iget-object v0, p0, Lcom/android/volley/toolbox/NetworkImageView;->e:Lcom/android/volley/toolbox/h$c;
+    iget-object v0, p0, Lcom/android/volley/toolbox/NetworkImageView;->e:Lcom/android/volley/toolbox/ImageLoader$a;
 
-    invoke-virtual {v0}, Lcom/android/volley/toolbox/h$c;->a()V
+    invoke-virtual {v0}, Lcom/android/volley/toolbox/ImageLoader$a;->a()V
 
     .line 1156
     invoke-virtual {p0, v3}, Lcom/android/volley/toolbox/NetworkImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     .line 1162
     :cond_5
-    iget-object v0, p0, Lcom/android/volley/toolbox/NetworkImageView;->d:Lcom/android/volley/toolbox/h;
+    iget-object v0, p0, Lcom/android/volley/toolbox/NetworkImageView;->d:Lcom/android/volley/toolbox/ImageLoader;
 
     iget-object v1, p0, Lcom/android/volley/toolbox/NetworkImageView;->a:Ljava/lang/String;
 
@@ -248,12 +248,12 @@
 
     iget v4, p0, Lcom/android/volley/toolbox/NetworkImageView;->g:I
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/volley/toolbox/h;->a(Ljava/lang/String;Lcom/android/volley/toolbox/h$d;II)Lcom/android/volley/toolbox/h$c;
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/volley/toolbox/ImageLoader;->a(Ljava/lang/String;Lcom/android/volley/toolbox/ImageLoader$b;II)Lcom/android/volley/toolbox/ImageLoader$a;
 
     move-result-object v0
 
     .line 1199
-    iput-object v0, p0, Lcom/android/volley/toolbox/NetworkImageView;->e:Lcom/android/volley/toolbox/h$c;
+    iput-object v0, p0, Lcom/android/volley/toolbox/NetworkImageView;->e:Lcom/android/volley/toolbox/ImageLoader$a;
 
     goto :goto_1
 .end method

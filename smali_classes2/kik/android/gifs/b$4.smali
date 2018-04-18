@@ -1,5 +1,5 @@
 .class final Lkik/android/gifs/b$4;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,9 +15,9 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
-        "Lkik/android/gifs/view/a;",
+        "Lkik/android/gifs/view/c;",
         ">;"
     }
 .end annotation
@@ -36,14 +36,14 @@
     .locals 0
 
     .prologue
-    .line 176
+    .line 147
     iput-object p1, p0, Lkik/android/gifs/b$4;->c:Lkik/android/gifs/b;
 
     iput-object p2, p0, Lkik/android/gifs/b$4;->a:Lkik/android/gifs/b$a;
 
     iput-object p3, p0, Lkik/android/gifs/b$4;->b:Lcom/kik/events/Promise;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -54,15 +54,15 @@
     .locals 1
 
     .prologue
-    .line 176
-    check-cast p1, Lkik/android/gifs/view/a;
+    .line 147
+    check-cast p1, Lkik/android/gifs/view/c;
 
-    .line 1186
+    .line 1157
     iget-object v0, p0, Lkik/android/gifs/b$4;->b:Lcom/kik/events/Promise;
 
     invoke-virtual {v0, p1}, Lcom/kik/events/Promise;->a(Ljava/lang/Object;)V
 
-    .line 176
+    .line 147
     return-void
 .end method
 
@@ -70,12 +70,12 @@
     .locals 1
 
     .prologue
-    .line 192
+    .line 163
     iget-object v0, p0, Lkik/android/gifs/b$4;->b:Lcom/kik/events/Promise;
 
     invoke-virtual {v0, p1}, Lcom/kik/events/Promise;->a(Ljava/lang/Throwable;)V
 
-    .line 193
+    .line 164
     return-void
 .end method
 
@@ -83,7 +83,7 @@
     .locals 2
 
     .prologue
-    .line 180
+    .line 151
     iget-object v0, p0, Lkik/android/gifs/b$4;->c:Lkik/android/gifs/b;
 
     invoke-static {v0}, Lkik/android/gifs/b;->b(Lkik/android/gifs/b;)Ljava/util/concurrent/ConcurrentMap;
@@ -94,6 +94,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/ConcurrentMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 181
+    .line 152
     return-void
 .end method

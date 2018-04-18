@@ -44,10 +44,10 @@
     .locals 1
 
     .prologue
-    .line 3594
+    .line 3698
     invoke-direct {p0}, Ljava/util/AbstractQueue;-><init>()V
 
-    .line 3595
+    .line 3699
     new-instance v0, Lcom/google/common/cache/LocalCache$ab$1;
 
     invoke-direct {v0, p0}, Lcom/google/common/cache/LocalCache$ab$1;-><init>(Lcom/google/common/cache/LocalCache$ab;)V
@@ -68,14 +68,14 @@
     .end annotation
 
     .prologue
-    .line 3646
+    .line 3751
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$ab;->a:Lcom/google/common/cache/LocalCache$j;
 
     invoke-interface {v0}, Lcom/google/common/cache/LocalCache$j;->getNextInWriteQueue()Lcom/google/common/cache/LocalCache$j;
 
     move-result-object v0
 
-    .line 3647
+    .line 3752
     iget-object v1, p0, Lcom/google/common/cache/LocalCache$ab;->a:Lcom/google/common/cache/LocalCache$j;
 
     if-ne v0, v1, :cond_0
@@ -92,33 +92,33 @@
     .locals 2
 
     .prologue
-    .line 3697
+    .line 3803
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$ab;->a:Lcom/google/common/cache/LocalCache$j;
 
     invoke-interface {v0}, Lcom/google/common/cache/LocalCache$j;->getNextInWriteQueue()Lcom/google/common/cache/LocalCache$j;
 
     move-result-object v0
 
-    .line 3698
+    .line 3804
     :goto_0
     iget-object v1, p0, Lcom/google/common/cache/LocalCache$ab;->a:Lcom/google/common/cache/LocalCache$j;
 
     if-eq v0, v1, :cond_0
 
-    .line 3699
+    .line 3805
     invoke-interface {v0}, Lcom/google/common/cache/LocalCache$j;->getNextInWriteQueue()Lcom/google/common/cache/LocalCache$j;
 
     move-result-object v1
 
-    .line 3700
+    .line 3806
     invoke-static {v0}, Lcom/google/common/cache/LocalCache;->b(Lcom/google/common/cache/LocalCache$j;)V
 
     move-object v0, v1
 
-    .line 3702
+    .line 3808
     goto :goto_0
 
-    .line 3704
+    .line 3810
     :cond_0
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$ab;->a:Lcom/google/common/cache/LocalCache$j;
 
@@ -126,14 +126,14 @@
 
     invoke-interface {v0, v1}, Lcom/google/common/cache/LocalCache$j;->setNextInWriteQueue(Lcom/google/common/cache/LocalCache$j;)V
 
-    .line 3705
+    .line 3811
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$ab;->a:Lcom/google/common/cache/LocalCache$j;
 
     iget-object v1, p0, Lcom/google/common/cache/LocalCache$ab;->a:Lcom/google/common/cache/LocalCache$j;
 
     invoke-interface {v0, v1}, Lcom/google/common/cache/LocalCache$j;->setPreviousInWriteQueue(Lcom/google/common/cache/LocalCache$j;)V
 
-    .line 3706
+    .line 3812
     return-void
 .end method
 
@@ -141,10 +141,10 @@
     .locals 2
 
     .prologue
-    .line 3676
+    .line 3781
     check-cast p1, Lcom/google/common/cache/LocalCache$j;
 
-    .line 3677
+    .line 3782
     invoke-interface {p1}, Lcom/google/common/cache/LocalCache$j;->getNextInWriteQueue()Lcom/google/common/cache/LocalCache$j;
 
     move-result-object v0
@@ -168,7 +168,7 @@
     .locals 2
 
     .prologue
-    .line 3682
+    .line 3787
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$ab;->a:Lcom/google/common/cache/LocalCache$j;
 
     invoke-interface {v0}, Lcom/google/common/cache/LocalCache$j;->getNextInWriteQueue()Lcom/google/common/cache/LocalCache$j;
@@ -203,7 +203,7 @@
     .end annotation
 
     .prologue
-    .line 3710
+    .line 3816
     new-instance v0, Lcom/google/common/cache/LocalCache$ab$2;
 
     invoke-direct {p0}, Lcom/google/common/cache/LocalCache$ab;->a()Lcom/google/common/cache/LocalCache$j;
@@ -219,10 +219,10 @@
     .locals 2
 
     .prologue
-    .line 3594
+    .line 3698
     check-cast p1, Lcom/google/common/cache/LocalCache$j;
 
-    .line 5635
+    .line 5740
     invoke-interface {p1}, Lcom/google/common/cache/LocalCache$j;->getPreviousInWriteQueue()Lcom/google/common/cache/LocalCache$j;
 
     move-result-object v0
@@ -233,7 +233,7 @@
 
     invoke-static {v0, v1}, Lcom/google/common/cache/LocalCache;->b(Lcom/google/common/cache/LocalCache$j;Lcom/google/common/cache/LocalCache$j;)V
 
-    .line 5638
+    .line 5743
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$ab;->a:Lcom/google/common/cache/LocalCache$j;
 
     invoke-interface {v0}, Lcom/google/common/cache/LocalCache$j;->getPreviousInWriteQueue()Lcom/google/common/cache/LocalCache$j;
@@ -242,15 +242,15 @@
 
     invoke-static {v0, p1}, Lcom/google/common/cache/LocalCache;->b(Lcom/google/common/cache/LocalCache$j;Lcom/google/common/cache/LocalCache$j;)V
 
-    .line 5639
+    .line 5744
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$ab;->a:Lcom/google/common/cache/LocalCache$j;
 
     invoke-static {p1, v0}, Lcom/google/common/cache/LocalCache;->b(Lcom/google/common/cache/LocalCache$j;Lcom/google/common/cache/LocalCache$j;)V
 
-    .line 5641
+    .line 5746
     const/4 v0, 0x1
 
-    .line 3594
+    .line 3698
     return v0
 .end method
 
@@ -258,7 +258,7 @@
     .locals 1
 
     .prologue
-    .line 3594
+    .line 3698
     invoke-direct {p0}, Lcom/google/common/cache/LocalCache$ab;->a()Lcom/google/common/cache/LocalCache$j;
 
     move-result-object v0
@@ -270,26 +270,26 @@
     .locals 2
 
     .prologue
-    .line 3594
-    .line 4652
+    .line 3698
+    .line 4757
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$ab;->a:Lcom/google/common/cache/LocalCache$j;
 
     invoke-interface {v0}, Lcom/google/common/cache/LocalCache$j;->getNextInWriteQueue()Lcom/google/common/cache/LocalCache$j;
 
     move-result-object v0
 
-    .line 4653
+    .line 4758
     iget-object v1, p0, Lcom/google/common/cache/LocalCache$ab;->a:Lcom/google/common/cache/LocalCache$j;
 
     if-ne v0, v1, :cond_0
 
-    .line 4654
+    .line 4759
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 4657
+    .line 4762
     :cond_0
     invoke-virtual {p0, v0}, Lcom/google/common/cache/LocalCache$ab;->remove(Ljava/lang/Object;)Z
 
@@ -300,26 +300,26 @@
     .locals 2
 
     .prologue
-    .line 3664
+    .line 3769
     check-cast p1, Lcom/google/common/cache/LocalCache$j;
 
-    .line 3665
+    .line 3770
     invoke-interface {p1}, Lcom/google/common/cache/LocalCache$j;->getPreviousInWriteQueue()Lcom/google/common/cache/LocalCache$j;
 
     move-result-object v0
 
-    .line 3666
+    .line 3771
     invoke-interface {p1}, Lcom/google/common/cache/LocalCache$j;->getNextInWriteQueue()Lcom/google/common/cache/LocalCache$j;
 
     move-result-object v1
 
-    .line 3667
+    .line 3772
     invoke-static {v0, v1}, Lcom/google/common/cache/LocalCache;->b(Lcom/google/common/cache/LocalCache$j;Lcom/google/common/cache/LocalCache$j;)V
 
-    .line 3668
+    .line 3773
     invoke-static {p1}, Lcom/google/common/cache/LocalCache;->b(Lcom/google/common/cache/LocalCache$j;)V
 
-    .line 3670
+    .line 3775
     sget-object v0, Lcom/google/common/cache/LocalCache$NullEntry;->INSTANCE:Lcom/google/common/cache/LocalCache$NullEntry;
 
     if-eq v1, v0, :cond_0
@@ -339,32 +339,33 @@
     .locals 3
 
     .prologue
-    .line 3687
+    .line 3792
     const/4 v1, 0x0
 
-    .line 3688
+    .line 3793
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$ab;->a:Lcom/google/common/cache/LocalCache$j;
 
     invoke-interface {v0}, Lcom/google/common/cache/LocalCache$j;->getNextInWriteQueue()Lcom/google/common/cache/LocalCache$j;
 
     move-result-object v0
 
+    .line 3794
     :goto_0
     iget-object v2, p0, Lcom/google/common/cache/LocalCache$ab;->a:Lcom/google/common/cache/LocalCache$j;
 
     if-eq v0, v2, :cond_0
 
-    .line 3690
+    .line 3796
     add-int/lit8 v1, v1, 0x1
 
-    .line 3689
+    .line 3795
     invoke-interface {v0}, Lcom/google/common/cache/LocalCache$j;->getNextInWriteQueue()Lcom/google/common/cache/LocalCache$j;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 3692
+    .line 3798
     :cond_0
     return v1
 .end method

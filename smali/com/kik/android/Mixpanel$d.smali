@@ -31,28 +31,28 @@
     .locals 1
 
     .prologue
-    .line 1444
+    .line 1548
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1441
+    .line 1545
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/kik/android/Mixpanel$d;->f:Z
 
-    .line 1445
+    .line 1549
     iput-object p1, p0, Lcom/kik/android/Mixpanel$d;->b:Ljava/lang/String;
 
-    .line 1446
+    .line 1550
     iput-object p2, p0, Lcom/kik/android/Mixpanel$d;->c:Ljava/lang/String;
 
-    .line 1447
+    .line 1551
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
     iput-object v0, p0, Lcom/kik/android/Mixpanel$d;->d:Lorg/json/JSONObject;
 
-    .line 1448
+    .line 1552
     return-void
 .end method
 
@@ -62,7 +62,7 @@
     .locals 2
 
     .prologue
-    .line 1470
+    .line 1574
     :try_start_0
     iget-object v0, p0, Lcom/kik/android/Mixpanel$d;->d:Lorg/json/JSONObject;
 
@@ -72,7 +72,7 @@
 
     move-result v0
 
-    .line 1472
+    .line 1576
     iget-object v1, p0, Lcom/kik/android/Mixpanel$d;->d:Lorg/json/JSONObject;
 
     add-int/lit8 v0, v0, 0x1
@@ -81,7 +81,7 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1478
+    .line 1582
     :goto_0
     return-object p0
 
@@ -95,7 +95,7 @@
     .locals 2
 
     .prologue
-    .line 1505
+    .line 1609
     :try_start_0
     iget-object v0, p0, Lcom/kik/android/Mixpanel$d;->d:Lorg/json/JSONObject;
 
@@ -103,7 +103,7 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1511
+    .line 1615
     :goto_0
     return-object p0
 
@@ -117,7 +117,7 @@
     .locals 2
 
     .prologue
-    .line 1517
+    .line 1621
     :try_start_0
     iget-object v0, p0, Lcom/kik/android/Mixpanel$d;->d:Lorg/json/JSONObject;
 
@@ -125,7 +125,7 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1523
+    .line 1627
     :goto_0
     return-object p0
 
@@ -139,7 +139,7 @@
     .locals 1
 
     .prologue
-    .line 1557
+    .line 1661
     :try_start_0
     iget-object v0, p0, Lcom/kik/android/Mixpanel$d;->d:Lorg/json/JSONObject;
 
@@ -147,7 +147,7 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1563
+    .line 1667
     :goto_0
     return-object p0
 
@@ -161,7 +161,7 @@
     .locals 1
 
     .prologue
-    .line 1484
+    .line 1588
     :try_start_0
     iget-object v0, p0, Lcom/kik/android/Mixpanel$d;->d:Lorg/json/JSONObject;
 
@@ -169,7 +169,7 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1490
+    .line 1594
     :goto_0
     return-object p0
 
@@ -183,39 +183,39 @@
     .locals 4
 
     .prologue
-    const/4 v1, 0x0
+    .line 1632
+    new-instance v1, Lorg/json/JSONArray;
 
-    .line 1528
-    new-instance v2, Lorg/json/JSONArray;
+    invoke-direct {v1}, Lorg/json/JSONArray;-><init>()V
 
-    invoke-direct {v2}, Lorg/json/JSONArray;-><init>()V
+    .line 1633
+    array-length v2, p2
 
-    move v0, v1
+    const/4 v0, 0x0
 
-    .line 1529
     :goto_0
-    if-gtz v0, :cond_0
+    if-ge v0, v2, :cond_0
 
-    aget-object v3, p2, v1
+    aget-object v3, p2, v0
 
-    .line 1530
-    invoke-virtual {v2, v3}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+    .line 1634
+    invoke-virtual {v1, v3}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
-    .line 1529
+    .line 1633
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1533
+    .line 1637
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/kik/android/Mixpanel$d;->d:Lorg/json/JSONObject;
 
-    invoke-virtual {v0, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, p1, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1539
+    .line 1643
     :goto_1
     return-object p0
 
@@ -239,7 +239,7 @@
     .end annotation
 
     .prologue
-    .line 1495
+    .line 1599
     invoke-interface {p1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v0
@@ -261,7 +261,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 1496
+    .line 1600
     invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -270,7 +270,7 @@
 
     goto :goto_0
 
-    .line 1499
+    .line 1603
     :cond_0
     return-object p0
 .end method
@@ -279,10 +279,10 @@
     .locals 0
 
     .prologue
-    .line 1656
+    .line 1760
     iput-object p1, p0, Lcom/kik/android/Mixpanel$d;->d:Lorg/json/JSONObject;
 
-    .line 1657
+    .line 1761
     return-void
 .end method
 
@@ -290,7 +290,7 @@
     .locals 2
 
     .prologue
-    .line 1569
+    .line 1673
     :try_start_0
     iget-object v0, p0, Lcom/kik/android/Mixpanel$d;->d:Lorg/json/JSONObject;
 
@@ -300,7 +300,7 @@
 
     if-nez v0, :cond_0
 
-    .line 1570
+    .line 1674
     iget-object v0, p0, Lcom/kik/android/Mixpanel$d;->d:Lorg/json/JSONObject;
 
     const/4 v1, 0x0
@@ -309,7 +309,7 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1577
+    .line 1681
     :cond_0
     :goto_0
     return-object p0
@@ -324,7 +324,7 @@
     .locals 2
 
     .prologue
-    .line 1597
+    .line 1701
     :try_start_0
     iget-object v0, p0, Lcom/kik/android/Mixpanel$d;->d:Lorg/json/JSONObject;
 
@@ -334,14 +334,14 @@
 
     if-nez v0, :cond_0
 
-    .line 1598
+    .line 1702
     iget-object v0, p0, Lcom/kik/android/Mixpanel$d;->d:Lorg/json/JSONObject;
 
     invoke-virtual {v0, p1, p2, p3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1605
+    .line 1709
     :cond_0
     :goto_0
     return-object p0
@@ -356,7 +356,7 @@
     .locals 1
 
     .prologue
-    .line 1625
+    .line 1729
     :try_start_0
     iget-object v0, p0, Lcom/kik/android/Mixpanel$d;->d:Lorg/json/JSONObject;
 
@@ -366,14 +366,14 @@
 
     if-nez v0, :cond_0
 
-    .line 1626
+    .line 1730
     iget-object v0, p0, Lcom/kik/android/Mixpanel$d;->d:Lorg/json/JSONObject;
 
     invoke-virtual {v0, p1, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1633
+    .line 1737
     :cond_0
     :goto_0
     return-object p0
@@ -391,7 +391,7 @@
     .locals 1
 
     .prologue
-    .line 1452
+    .line 1556
     iget-object v0, p0, Lcom/kik/android/Mixpanel$d;->b:Ljava/lang/String;
 
     return-object v0
@@ -401,7 +401,7 @@
     .locals 1
 
     .prologue
-    .line 1457
+    .line 1561
     iget-object v0, p0, Lcom/kik/android/Mixpanel$d;->c:Ljava/lang/String;
 
     return-object v0
@@ -411,7 +411,7 @@
     .locals 1
 
     .prologue
-    .line 1462
+    .line 1566
     iget-object v0, p0, Lcom/kik/android/Mixpanel$d;->d:Lorg/json/JSONObject;
 
     return-object v0
@@ -421,12 +421,12 @@
     .locals 1
 
     .prologue
-    .line 1638
+    .line 1742
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/kik/android/Mixpanel$d;->e:Z
 
-    .line 1639
+    .line 1743
     return-object p0
 .end method
 
@@ -436,13 +436,13 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1644
+    .line 1748
     iput-boolean v0, p0, Lcom/kik/android/Mixpanel$d;->e:Z
 
-    .line 1645
+    .line 1749
     iput-boolean v0, p0, Lcom/kik/android/Mixpanel$d;->f:Z
 
-    .line 1646
+    .line 1750
     return-object p0
 .end method
 
@@ -450,15 +450,15 @@
     .locals 2
 
     .prologue
-    .line 1651
+    .line 1755
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2452
+    .line 2556
     iget-object v1, p0, Lcom/kik/android/Mixpanel$d;->b:Ljava/lang/String;
 
-    .line 1651
+    .line 1755
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0

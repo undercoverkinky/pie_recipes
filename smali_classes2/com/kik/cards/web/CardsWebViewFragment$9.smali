@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 486
+    .line 511
     iput-object p1, p0, Lcom/kik/cards/web/CardsWebViewFragment$9;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,13 +50,13 @@
     .locals 3
 
     .prologue
-    .line 486
-    .line 1490
+    .line 511
+    .line 1515
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$9;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
-    invoke-static {v0}, Lcom/kik/cards/web/CardsWebViewFragment;->m(Lcom/kik/cards/web/CardsWebViewFragment;)V
+    invoke-static {v0}, Lcom/kik/cards/web/CardsWebViewFragment;->n(Lcom/kik/cards/web/CardsWebViewFragment;)V
 
-    .line 1491
+    .line 1516
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$9;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
     iget-object v0, v0, Lcom/kik/cards/web/CardsWebViewFragment;->d:Lcom/kik/android/Mixpanel;
@@ -71,8 +71,8 @@
 
     iget-object v2, p0, Lcom/kik/cards/web/CardsWebViewFragment$9;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
-    .line 1492
-    invoke-static {v2}, Lcom/kik/cards/web/CardsWebViewFragment;->d(Lcom/kik/cards/web/CardsWebViewFragment;)Ljava/lang/String;
+    .line 1517
+    invoke-static {v2}, Lcom/kik/cards/web/CardsWebViewFragment;->e(Lcom/kik/cards/web/CardsWebViewFragment;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -84,12 +84,12 @@
 
     iget-object v2, p0, Lcom/kik/cards/web/CardsWebViewFragment$9;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
-    .line 1493
-    invoke-static {v2}, Lcom/kik/cards/web/CardsWebViewFragment;->d(Lcom/kik/cards/web/CardsWebViewFragment;)Ljava/lang/String;
+    .line 1518
+    invoke-static {v2}, Lcom/kik/cards/web/CardsWebViewFragment;->e(Lcom/kik/cards/web/CardsWebViewFragment;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/kik/cards/web/r;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/kik/cards/web/s;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -97,9 +97,9 @@
 
     move-result-object v0
 
-    .line 1494
+    .line 1519
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 486
+    .line 511
     return-void
 .end method

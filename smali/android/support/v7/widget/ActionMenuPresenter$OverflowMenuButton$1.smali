@@ -1,5 +1,5 @@
 .class Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton$1;
-.super Landroid/support/v7/widget/ListPopupWindow$ForwardingListener;
+.super Landroid/support/v7/widget/ForwardingListener;
 .source "SourceFile"
 
 
@@ -25,37 +25,35 @@
     .locals 0
 
     .prologue
-    .line 595
+    .line 650
     iput-object p1, p0, Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton$1;->b:Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton;
 
     iput-object p3, p0, Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton$1;->a:Landroid/support/v7/widget/ActionMenuPresenter;
 
-    invoke-direct {p0, p2}, Landroid/support/v7/widget/ListPopupWindow$ForwardingListener;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p2}, Landroid/support/v7/widget/ForwardingListener;-><init>(Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Landroid/support/v7/widget/ListPopupWindow;
+.method public final a()Landroid/support/v7/view/menu/ShowableListMenu;
     .locals 1
 
     .prologue
-    .line 598
+    .line 653
     iget-object v0, p0, Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton$1;->b:Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton;
 
     iget-object v0, v0, Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton;->a:Landroid/support/v7/widget/ActionMenuPresenter;
 
-    invoke-static {v0}, Landroid/support/v7/widget/ActionMenuPresenter;->a(Landroid/support/v7/widget/ActionMenuPresenter;)Landroid/support/v7/widget/ActionMenuPresenter$OverflowPopup;
-
-    move-result-object v0
+    iget-object v0, v0, Landroid/support/v7/widget/ActionMenuPresenter;->h:Landroid/support/v7/widget/ActionMenuPresenter$OverflowPopup;
 
     if-nez v0, :cond_0
 
-    .line 599
+    .line 654
     const/4 v0, 0x0
 
-    .line 602
+    .line 657
     :goto_0
     return-object v0
 
@@ -64,11 +62,9 @@
 
     iget-object v0, v0, Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton;->a:Landroid/support/v7/widget/ActionMenuPresenter;
 
-    invoke-static {v0}, Landroid/support/v7/widget/ActionMenuPresenter;->a(Landroid/support/v7/widget/ActionMenuPresenter;)Landroid/support/v7/widget/ActionMenuPresenter$OverflowPopup;
+    iget-object v0, v0, Landroid/support/v7/widget/ActionMenuPresenter;->h:Landroid/support/v7/widget/ActionMenuPresenter$OverflowPopup;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/ActionMenuPresenter$OverflowPopup;->f()Landroid/support/v7/widget/ListPopupWindow;
+    invoke-virtual {v0}, Landroid/support/v7/widget/ActionMenuPresenter$OverflowPopup;->c()Landroid/support/v7/view/menu/MenuPopup;
 
     move-result-object v0
 
@@ -79,14 +75,14 @@
     .locals 1
 
     .prologue
-    .line 607
+    .line 662
     iget-object v0, p0, Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton$1;->b:Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton;
 
     iget-object v0, v0, Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton;->a:Landroid/support/v7/widget/ActionMenuPresenter;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/ActionMenuPresenter;->i()Z
+    invoke-virtual {v0}, Landroid/support/v7/widget/ActionMenuPresenter;->h()Z
 
-    .line 608
+    .line 663
     const/4 v0, 0x1
 
     return v0
@@ -96,33 +92,31 @@
     .locals 1
 
     .prologue
-    .line 616
+    .line 671
     iget-object v0, p0, Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton$1;->b:Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton;
 
     iget-object v0, v0, Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton;->a:Landroid/support/v7/widget/ActionMenuPresenter;
 
-    invoke-static {v0}, Landroid/support/v7/widget/ActionMenuPresenter;->b(Landroid/support/v7/widget/ActionMenuPresenter;)Landroid/support/v7/widget/ActionMenuPresenter$OpenOverflowRunnable;
-
-    move-result-object v0
+    iget-object v0, v0, Landroid/support/v7/widget/ActionMenuPresenter;->j:Landroid/support/v7/widget/ActionMenuPresenter$OpenOverflowRunnable;
 
     if-eqz v0, :cond_0
 
-    .line 617
+    .line 672
     const/4 v0, 0x0
 
-    .line 621
+    .line 676
     :goto_0
     return v0
 
-    .line 620
+    .line 675
     :cond_0
     iget-object v0, p0, Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton$1;->b:Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton;
 
     iget-object v0, v0, Landroid/support/v7/widget/ActionMenuPresenter$OverflowMenuButton;->a:Landroid/support/v7/widget/ActionMenuPresenter;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/ActionMenuPresenter;->j()Z
+    invoke-virtual {v0}, Landroid/support/v7/widget/ActionMenuPresenter;->i()Z
 
-    .line 621
+    .line 676
     const/4 v0, 0x1
 
     goto :goto_0

@@ -29,9 +29,37 @@
 
 
 # virtual methods
+.method public abstract isVibratingOnly(Ljava/lang/Boolean;)Lcom/rounds/kik/analytics/group/conference/NotificationEvents$Builder;
+    .annotation runtime Lcom/rounds/kik/analytics/annotations/PropertySetter;
+        value = Lcom/rounds/kik/analytics/properties/notification/Vibrate;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Boolean;",
+            ")TT;"
+        }
+    .end annotation
+.end method
+
 .method public abstract notificationId(Ljava/lang/String;)Lcom/rounds/kik/analytics/group/conference/NotificationEvents$Builder;
     .annotation runtime Lcom/rounds/kik/analytics/annotations/PropertySetter;
         value = Lcom/rounds/kik/analytics/properties/common/NotificationId;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")TT;"
+        }
+    .end annotation
+.end method
+
+.method public abstract notificationSoundFileName(Ljava/lang/String;)Lcom/rounds/kik/analytics/group/conference/NotificationEvents$Builder;
+    .annotation runtime Lcom/rounds/kik/analytics/annotations/PropertySetter;
+        value = Lcom/rounds/kik/analytics/properties/notification/Sound;
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;

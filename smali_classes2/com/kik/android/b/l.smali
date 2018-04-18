@@ -9,16 +9,16 @@
 # instance fields
 .field private final a:Lcom/kik/android/b/e;
 
-.field private final b:Lkik/core/g/e;
+.field private final b:Lkik/core/e/f;
 
 .field private final c:Lkik/core/interfaces/ad;
 
 .field private final d:Lkik/android/config/b;
 
-.field private final e:Lcom/kik/events/q;
+.field private final e:Lcom/kik/events/p;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/kik/events/q",
+            "Lcom/kik/events/p",
             "<",
             "Lcom/kik/xdata/model/smileys/XSmiley;",
             "Lcom/kik/android/b/f;",
@@ -27,10 +27,10 @@
     .end annotation
 .end field
 
-.field private final f:Lcom/kik/events/q;
+.field private final f:Lcom/kik/events/p;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/kik/events/q",
+            "Lcom/kik/events/p",
             "<",
             "Lcom/kik/xdata/model/smileys/XAlternateSmileys;",
             "Lcom/kik/android/b/a;",
@@ -41,7 +41,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/kik/android/b/e;Lkik/core/g/e;Lkik/core/interfaces/ad;Lkik/android/config/b;Lkik/android/util/ah;)V
+.method public constructor <init>(Lcom/kik/android/b/e;Lkik/core/e/f;Lkik/core/interfaces/ad;Lkik/android/config/b;Lkik/android/util/aj;)V
     .locals 10
 
     .prologue
@@ -51,24 +51,24 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 40
-    invoke-static {p0}, Lcom/kik/android/b/m;->a(Lcom/kik/android/b/l;)Lcom/kik/events/q;
+    invoke-static {p0}, Lcom/kik/android/b/m;->a(Lcom/kik/android/b/l;)Lcom/kik/events/p;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/kik/android/b/l;->e:Lcom/kik/events/q;
+    iput-object v0, p0, Lcom/kik/android/b/l;->e:Lcom/kik/events/p;
 
     .line 41
-    invoke-static {p0}, Lcom/kik/android/b/n;->a(Lcom/kik/android/b/l;)Lcom/kik/events/q;
+    invoke-static {p0}, Lcom/kik/android/b/n;->a(Lcom/kik/android/b/l;)Lcom/kik/events/p;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/kik/android/b/l;->f:Lcom/kik/events/q;
+    iput-object v0, p0, Lcom/kik/android/b/l;->f:Lcom/kik/events/p;
 
     .line 45
     iput-object p1, p0, Lcom/kik/android/b/l;->a:Lcom/kik/android/b/e;
 
     .line 46
-    iput-object p2, p0, Lcom/kik/android/b/l;->b:Lkik/core/g/e;
+    iput-object p2, p0, Lcom/kik/android/b/l;->b:Lkik/core/e/f;
 
     .line 47
     iput-object p3, p0, Lcom/kik/android/b/l;->c:Lkik/core/interfaces/ad;
@@ -140,7 +140,7 @@
 
     move-object v5, p5
 
-    invoke-direct/range {v0 .. v5}, Lkik/android/config/e;-><init>(Ljava/lang/String;Ljava/lang/Long;[Ljava/lang/Long;Ljava/lang/Runnable;Lkik/android/util/ah;)V
+    invoke-direct/range {v0 .. v5}, Lkik/android/config/e;-><init>(Ljava/lang/String;Ljava/lang/Long;[Ljava/lang/Long;Ljava/lang/Runnable;Lkik/android/util/aj;)V
 
     .line 49
     invoke-interface {v6, v0}, Lkik/android/config/b;->a(Lkik/android/config/Configuration;)Z
@@ -168,7 +168,7 @@
     .line 169
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lcom/kik/xdata/model/smileys/XAlternateSmileys;->b()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/kik/xdata/model/smileys/XAlternateSmileys;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -182,7 +182,7 @@
     .line 174
     :cond_1
     :try_start_0
-    invoke-virtual {p0}, Lcom/kik/xdata/model/smileys/XAlternateSmileys;->b()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/kik/xdata/model/smileys/XAlternateSmileys;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -208,13 +208,12 @@
     .locals 4
 
     .prologue
-    .line 0
-    .line 1224
+    .line 224
     iget-object v0, p0, Lcom/kik/android/b/l;->c:Lkik/core/interfaces/ad;
 
     const-string v1, "com.kik.android.smileys.xSmileyManagerStorage.restored"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->u(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->w(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -224,59 +223,59 @@
 
     if-nez v0, :cond_0
 
-    .line 1225
-    iget-object v0, p0, Lcom/kik/android/b/l;->b:Lkik/core/g/e;
+    .line 225
+    iget-object v0, p0, Lcom/kik/android/b/l;->b:Lkik/core/e/f;
 
     const-string v1, "smiley_list"
 
     const-class v2, Lcom/kik/xdata/model/smileys/XSmiley;
 
-    invoke-interface {v0, v1, v2}, Lkik/core/g/e;->c(Ljava/lang/String;Ljava/lang/Class;)Lcom/kik/events/Promise;
+    invoke-interface {v0, v1, v2}, Lkik/core/e/f;->c(Ljava/lang/String;Ljava/lang/Class;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
-    .line 1226
-    iget-object v1, p0, Lcom/kik/android/b/l;->e:Lcom/kik/events/q;
+    .line 226
+    iget-object v1, p0, Lcom/kik/android/b/l;->e:Lcom/kik/events/p;
 
-    invoke-static {v1}, Lcom/kik/events/m;->a(Lcom/kik/events/q;)Lcom/kik/events/q;
+    invoke-static {v1}, Lcom/kik/events/l;->a(Lcom/kik/events/p;)Lcom/kik/events/p;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/kik/events/m;->b(Lcom/kik/events/Promise;Lcom/kik/events/q;)Lcom/kik/events/Promise;
+    invoke-static {v0, v1}, Lcom/kik/events/l;->b(Lcom/kik/events/Promise;Lcom/kik/events/p;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
-    .line 1228
-    iget-object v1, p0, Lcom/kik/android/b/l;->b:Lkik/core/g/e;
+    .line 228
+    iget-object v1, p0, Lcom/kik/android/b/l;->b:Lkik/core/e/f;
 
     const-string v2, "smiley_alternate"
 
     const-class v3, Lcom/kik/xdata/model/smileys/XAlternateSmileys;
 
-    invoke-interface {v1, v2, v3}, Lkik/core/g/e;->c(Ljava/lang/String;Ljava/lang/Class;)Lcom/kik/events/Promise;
+    invoke-interface {v1, v2, v3}, Lkik/core/e/f;->c(Ljava/lang/String;Ljava/lang/Class;)Lcom/kik/events/Promise;
 
     move-result-object v1
 
-    .line 1229
-    iget-object v2, p0, Lcom/kik/android/b/l;->f:Lcom/kik/events/q;
+    .line 229
+    iget-object v2, p0, Lcom/kik/android/b/l;->f:Lcom/kik/events/p;
 
-    invoke-static {v2}, Lcom/kik/events/m;->a(Lcom/kik/events/q;)Lcom/kik/events/q;
+    invoke-static {v2}, Lcom/kik/events/l;->a(Lcom/kik/events/p;)Lcom/kik/events/p;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/kik/events/m;->b(Lcom/kik/events/Promise;Lcom/kik/events/q;)Lcom/kik/events/Promise;
+    invoke-static {v1, v2}, Lcom/kik/events/l;->b(Lcom/kik/events/Promise;Lcom/kik/events/p;)Lcom/kik/events/Promise;
 
     move-result-object v1
 
-    .line 1230
+    .line 230
     new-instance v2, Lcom/kik/android/b/l$1;
 
     invoke-direct {v2, p0}, Lcom/kik/android/b/l$1;-><init>(Lcom/kik/android/b/l;)V
 
-    invoke-virtual {v1, v2}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v1, v2}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
-    .line 1241
-    invoke-static {v1, v0}, Lcom/kik/events/m;->a(Lcom/kik/events/Promise;Lcom/kik/events/Promise;)Lcom/kik/events/o;
+    .line 241
+    invoke-static {v1, v0}, Lcom/kik/events/l;->a(Lcom/kik/events/Promise;Lcom/kik/events/Promise;)Lcom/kik/events/n;
 
     move-result-object v1
 
@@ -284,20 +283,20 @@
 
     invoke-direct {v2, p0, p1}, Lcom/kik/android/b/l$2;-><init>(Lcom/kik/android/b/l;Lcom/kik/events/Promise;)V
 
-    invoke-virtual {v1, v2}, Lcom/kik/events/o;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v1, v2}, Lcom/kik/events/n;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
-    .line 1258
+    .line 258
     new-instance v1, Lcom/kik/android/b/l$3;
 
     invoke-direct {v1, p0, p1}, Lcom/kik/android/b/l$3;-><init>(Lcom/kik/android/b/l;Lcom/kik/events/Promise;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
-    .line 1272
+    .line 276
     :goto_0
     return-void
 
-    .line 1274
+    .line 274
     :cond_0
     const/4 v0, 0x0
 
@@ -412,14 +411,14 @@
     .line 209
     const-string v3, "smiley_alternate"
 
-    invoke-static {v3, v1, v0}, Lkik/core/datatypes/ae;->a(Ljava/lang/String;Ljava/lang/String;Lcom/dyuproject/protostuff/p;)Lkik/core/datatypes/ae;
+    invoke-static {v3, v1, v0}, Lkik/core/datatypes/ab;->a(Ljava/lang/String;Ljava/lang/String;Lcom/dyuproject/protostuff/p;)Lkik/core/datatypes/ab;
 
     move-result-object v0
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 210
-    iget-object v1, p0, Lcom/kik/android/b/l;->b:Lkik/core/g/e;
+    iget-object v1, p0, Lcom/kik/android/b/l;->b:Lkik/core/e/f;
 
     iget-object v0, p0, Lcom/kik/android/b/l;->d:Lkik/android/config/b;
 
@@ -435,7 +434,7 @@
 
     check-cast v0, Ljava/lang/Long;
 
-    invoke-interface {v1, v2, v0}, Lkik/core/g/e;->a(Ljava/util/List;Ljava/lang/Long;)Lcom/kik/events/Promise;
+    invoke-interface {v1, v2, v0}, Lkik/core/e/f;->a(Ljava/util/List;Ljava/lang/Long;)Lcom/kik/events/Promise;
 
     goto :goto_0
 .end method
@@ -500,7 +499,7 @@
     .line 80
     const-string v4, "smiley_list"
 
-    invoke-static {v4, v0, v3}, Lkik/core/datatypes/ae;->a(Ljava/lang/String;Ljava/lang/String;Lcom/dyuproject/protostuff/p;)Lkik/core/datatypes/ae;
+    invoke-static {v4, v0, v3}, Lkik/core/datatypes/ab;->a(Ljava/lang/String;Ljava/lang/String;Lcom/dyuproject/protostuff/p;)Lkik/core/datatypes/ab;
 
     move-result-object v0
 
@@ -510,7 +509,7 @@
 
     .line 1164
     :cond_1
-    invoke-virtual {v3}, Lcom/kik/xdata/model/smileys/XSmiley;->c()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/kik/xdata/model/smileys/XSmiley;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -525,9 +524,9 @@
     if-nez v0, :cond_3
 
     .line 85
-    iget-object v0, p0, Lcom/kik/android/b/l;->b:Lkik/core/g/e;
+    iget-object v0, p0, Lcom/kik/android/b/l;->b:Lkik/core/e/f;
 
-    invoke-interface {v0, v1}, Lkik/core/g/e;->a(Ljava/util/List;)Lcom/kik/events/Promise;
+    invoke-interface {v0, v1}, Lkik/core/e/f;->a(Ljava/util/List;)Lcom/kik/events/Promise;
 
     .line 87
     :cond_3
@@ -557,7 +556,7 @@
     invoke-interface {v0, p1}, Lcom/kik/android/b/e;->b(Lcom/kik/android/b/a;)V
 
     .line 108
-    iget-object v0, p0, Lcom/kik/android/b/l;->b:Lkik/core/g/e;
+    iget-object v0, p0, Lcom/kik/android/b/l;->b:Lkik/core/e/f;
 
     const-string v1, "smiley_alternate"
 
@@ -567,7 +566,7 @@
 
     const/4 v3, 0x0
 
-    invoke-interface {v0, v1, v2, v3}, Lkik/core/g/e;->b(Ljava/lang/String;Ljava/lang/String;Lcom/dyuproject/protostuff/p;)Lcom/kik/events/Promise;
+    invoke-interface {v0, v1, v2, v3}, Lkik/core/e/f;->b(Ljava/lang/String;Ljava/lang/String;Lcom/dyuproject/protostuff/p;)Lcom/kik/events/Promise;
 
     .line 109
     return-void
@@ -616,13 +615,13 @@
 
     .line 102
     :cond_1
-    iget-object v0, p0, Lcom/kik/android/b/l;->b:Lkik/core/g/e;
+    iget-object v0, p0, Lcom/kik/android/b/l;->b:Lkik/core/e/f;
 
     const-string v1, "smiley_list"
 
     const/4 v2, 0x0
 
-    invoke-interface {v0, v1, p1, v2}, Lkik/core/g/e;->b(Ljava/lang/String;Ljava/lang/String;Lcom/dyuproject/protostuff/p;)Lcom/kik/events/Promise;
+    invoke-interface {v0, v1, p1, v2}, Lkik/core/e/f;->b(Ljava/lang/String;Ljava/lang/String;Lcom/dyuproject/protostuff/p;)Lcom/kik/events/Promise;
 
     goto :goto_0
 .end method

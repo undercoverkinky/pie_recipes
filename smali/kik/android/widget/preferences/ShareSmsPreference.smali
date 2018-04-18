@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field a:Lkik/core/interfaces/af;
+.field a:Lkik/core/interfaces/ag;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
@@ -48,7 +48,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0351
+    const v1, 0x7f090365
 
     invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikScopedDialogFragment;->getString(I)Ljava/lang/String;
 
@@ -58,13 +58,13 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    iget-object v2, p0, Lkik/android/widget/preferences/ShareSmsPreference;->a:Lkik/core/interfaces/af;
+    iget-object v2, p0, Lkik/android/widget/preferences/ShareSmsPreference;->a:Lkik/core/interfaces/ag;
 
-    invoke-interface {v2}, Lkik/core/interfaces/af;->d()Lkik/core/datatypes/ad;
+    invoke-interface {v2}, Lkik/core/interfaces/ag;->d()Lkik/core/datatypes/aa;
 
     move-result-object v2
 
-    iget-object v2, v2, Lkik/core/datatypes/ad;->c:Ljava/lang/String;
+    iget-object v2, v2, Lkik/core/datatypes/aa;->c:Ljava/lang/String;
 
     aput-object v2, v1, v3
 
@@ -124,7 +124,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a037d
+    const v2, 0x7f090391
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

@@ -66,7 +66,7 @@
 
     const/4 v4, 0x0
 
-    .line 183
+    .line 184
     new-instance v0, Lio/branch/referral/Defines$LinkParam;
 
     const-string v1, "Tags"
@@ -77,7 +77,7 @@
 
     sput-object v0, Lio/branch/referral/Defines$LinkParam;->Tags:Lio/branch/referral/Defines$LinkParam;
 
-    .line 184
+    .line 185
     new-instance v0, Lio/branch/referral/Defines$LinkParam;
 
     const-string v1, "Alias"
@@ -88,7 +88,7 @@
 
     sput-object v0, Lio/branch/referral/Defines$LinkParam;->Alias:Lio/branch/referral/Defines$LinkParam;
 
-    .line 185
+    .line 186
     new-instance v0, Lio/branch/referral/Defines$LinkParam;
 
     const-string v1, "Type"
@@ -99,7 +99,7 @@
 
     sput-object v0, Lio/branch/referral/Defines$LinkParam;->Type:Lio/branch/referral/Defines$LinkParam;
 
-    .line 186
+    .line 187
     new-instance v0, Lio/branch/referral/Defines$LinkParam;
 
     const-string v1, "Duration"
@@ -110,7 +110,7 @@
 
     sput-object v0, Lio/branch/referral/Defines$LinkParam;->Duration:Lio/branch/referral/Defines$LinkParam;
 
-    .line 187
+    .line 188
     new-instance v0, Lio/branch/referral/Defines$LinkParam;
 
     const-string v1, "Channel"
@@ -121,7 +121,7 @@
 
     sput-object v0, Lio/branch/referral/Defines$LinkParam;->Channel:Lio/branch/referral/Defines$LinkParam;
 
-    .line 188
+    .line 189
     new-instance v0, Lio/branch/referral/Defines$LinkParam;
 
     const-string v1, "Feature"
@@ -134,7 +134,7 @@
 
     sput-object v0, Lio/branch/referral/Defines$LinkParam;->Feature:Lio/branch/referral/Defines$LinkParam;
 
-    .line 189
+    .line 190
     new-instance v0, Lio/branch/referral/Defines$LinkParam;
 
     const-string v1, "Stage"
@@ -147,7 +147,7 @@
 
     sput-object v0, Lio/branch/referral/Defines$LinkParam;->Stage:Lio/branch/referral/Defines$LinkParam;
 
-    .line 190
+    .line 191
     new-instance v0, Lio/branch/referral/Defines$LinkParam;
 
     const-string v1, "Campaign"
@@ -160,7 +160,7 @@
 
     sput-object v0, Lio/branch/referral/Defines$LinkParam;->Campaign:Lio/branch/referral/Defines$LinkParam;
 
-    .line 191
+    .line 192
     new-instance v0, Lio/branch/referral/Defines$LinkParam;
 
     const-string v1, "Data"
@@ -173,7 +173,7 @@
 
     sput-object v0, Lio/branch/referral/Defines$LinkParam;->Data:Lio/branch/referral/Defines$LinkParam;
 
-    .line 192
+    .line 193
     new-instance v0, Lio/branch/referral/Defines$LinkParam;
 
     const-string v1, "URL"
@@ -186,7 +186,7 @@
 
     sput-object v0, Lio/branch/referral/Defines$LinkParam;->URL:Lio/branch/referral/Defines$LinkParam;
 
-    .line 182
+    .line 183
     const/16 v0, 0xa
 
     new-array v0, v0, [Lio/branch/referral/Defines$LinkParam;
@@ -257,18 +257,18 @@
     .end annotation
 
     .prologue
-    .line 196
+    .line 197
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 194
+    .line 195
     const-string v0, ""
 
     iput-object v0, p0, Lio/branch/referral/Defines$LinkParam;->key:Ljava/lang/String;
 
-    .line 197
+    .line 198
     iput-object p3, p0, Lio/branch/referral/Defines$LinkParam;->key:Ljava/lang/String;
 
-    .line 198
+    .line 199
     return-void
 .end method
 
@@ -276,7 +276,7 @@
     .locals 1
 
     .prologue
-    .line 182
+    .line 183
     const-class v0, Lio/branch/referral/Defines$LinkParam;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -292,7 +292,7 @@
     .locals 1
 
     .prologue
-    .line 182
+    .line 183
     sget-object v0, Lio/branch/referral/Defines$LinkParam;->$VALUES:[Lio/branch/referral/Defines$LinkParam;
 
     invoke-virtual {v0}, [Lio/branch/referral/Defines$LinkParam;->clone()Ljava/lang/Object;
@@ -310,7 +310,7 @@
     .locals 1
 
     .prologue
-    .line 201
+    .line 202
     iget-object v0, p0, Lio/branch/referral/Defines$LinkParam;->key:Ljava/lang/String;
 
     return-object v0
@@ -320,7 +320,7 @@
     .locals 1
 
     .prologue
-    .line 206
+    .line 207
     iget-object v0, p0, Lio/branch/referral/Defines$LinkParam;->key:Ljava/lang/String;
 
     return-object v0

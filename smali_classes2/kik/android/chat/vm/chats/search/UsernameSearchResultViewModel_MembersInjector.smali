@@ -23,12 +23,12 @@
 
 
 # instance fields
-.field private final b:Ldagger/b;
+.field private final b:Ljavax/inject/Provider;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ldagger/b",
+            "Ljavax/inject/Provider",
             "<",
-            "Lkik/android/chat/vm/chats/search/a;",
+            "Lcom/kik/android/Mixpanel;",
             ">;"
         }
     .end annotation
@@ -52,6 +52,17 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
+            "Lcom/kik/core/domain/users/a;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final e:Ljavax/inject/Provider;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljavax/inject/Provider",
+            "<",
             "Landroid/content/res/Resources;",
             ">;"
         }
@@ -64,7 +75,7 @@
     .locals 1
 
     .prologue
-    .line 10
+    .line 12
     const-class v0, Lkik/android/chat/vm/chats/search/UsernameSearchResultViewModel_MembersInjector;
 
     invoke-virtual {v0}, Ljava/lang/Class;->desiredAssertionStatus()Z
@@ -86,14 +97,14 @@
     goto :goto_0
 .end method
 
-.method private constructor <init>(Ldagger/b;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+.method private constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ldagger/b",
+            "Ljavax/inject/Provider",
             "<",
-            "Lkik/android/chat/vm/chats/search/a;",
+            "Lcom/kik/android/Mixpanel;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
@@ -103,16 +114,20 @@
             ">;>;",
             "Ljavax/inject/Provider",
             "<",
+            "Lcom/kik/core/domain/users/a;",
+            ">;",
+            "Ljavax/inject/Provider",
+            "<",
             "Landroid/content/res/Resources;",
             ">;)V"
         }
     .end annotation
 
     .prologue
-    .line 16
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 17
+    .line 31
     sget-boolean v0, Lkik/android/chat/vm/chats/search/UsernameSearchResultViewModel_MembersInjector;->a:Z
 
     if-nez v0, :cond_0
@@ -125,11 +140,11 @@
 
     throw v0
 
-    .line 18
+    .line 32
     :cond_0
-    iput-object p1, p0, Lkik/android/chat/vm/chats/search/UsernameSearchResultViewModel_MembersInjector;->b:Ldagger/b;
+    iput-object p1, p0, Lkik/android/chat/vm/chats/search/UsernameSearchResultViewModel_MembersInjector;->b:Ljavax/inject/Provider;
 
-    .line 19
+    .line 33
     sget-boolean v0, Lkik/android/chat/vm/chats/search/UsernameSearchResultViewModel_MembersInjector;->a:Z
 
     if-nez v0, :cond_1
@@ -142,11 +157,11 @@
 
     throw v0
 
-    .line 20
+    .line 34
     :cond_1
     iput-object p2, p0, Lkik/android/chat/vm/chats/search/UsernameSearchResultViewModel_MembersInjector;->c:Ljavax/inject/Provider;
 
-    .line 21
+    .line 35
     sget-boolean v0, Lkik/android/chat/vm/chats/search/UsernameSearchResultViewModel_MembersInjector;->a:Z
 
     if-nez v0, :cond_2
@@ -159,22 +174,39 @@
 
     throw v0
 
-    .line 22
+    .line 36
     :cond_2
     iput-object p3, p0, Lkik/android/chat/vm/chats/search/UsernameSearchResultViewModel_MembersInjector;->d:Ljavax/inject/Provider;
 
-    .line 23
+    .line 37
+    sget-boolean v0, Lkik/android/chat/vm/chats/search/UsernameSearchResultViewModel_MembersInjector;->a:Z
+
+    if-nez v0, :cond_3
+
+    if-nez p4, :cond_3
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
+
+    throw v0
+
+    .line 38
+    :cond_3
+    iput-object p4, p0, Lkik/android/chat/vm/chats/search/UsernameSearchResultViewModel_MembersInjector;->e:Ljavax/inject/Provider;
+
+    .line 39
     return-void
 .end method
 
-.method public static a(Ldagger/b;Ljavax/inject/Provider;Ljavax/inject/Provider;)Ldagger/b;
+.method public static a(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Ldagger/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ldagger/b",
+            "Ljavax/inject/Provider",
             "<",
-            "Lkik/android/chat/vm/chats/search/a;",
+            "Lcom/kik/android/Mixpanel;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
@@ -182,6 +214,10 @@
             "<",
             "Landroid/graphics/Bitmap;",
             ">;>;",
+            "Ljavax/inject/Provider",
+            "<",
+            "Lcom/kik/core/domain/users/a;",
+            ">;",
             "Ljavax/inject/Provider",
             "<",
             "Landroid/content/res/Resources;",
@@ -194,10 +230,10 @@
     .end annotation
 
     .prologue
-    .line 36
+    .line 46
     new-instance v0, Lkik/android/chat/vm/chats/search/UsernameSearchResultViewModel_MembersInjector;
 
-    invoke-direct {v0, p0, p1, p2}, Lkik/android/chat/vm/chats/search/UsernameSearchResultViewModel_MembersInjector;-><init>(Ldagger/b;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+    invoke-direct {v0, p0, p1, p2, p3}, Lkik/android/chat/vm/chats/search/UsernameSearchResultViewModel_MembersInjector;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
 
     return-object v0
 .end method
@@ -208,13 +244,13 @@
     .locals 2
 
     .prologue
-    .line 10
+    .line 12
     check-cast p1, Lkik/android/chat/vm/chats/search/n;
 
-    .line 1027
+    .line 1052
     if-nez p1, :cond_0
 
-    .line 1028
+    .line 1053
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "Cannot inject members into a null reference"
@@ -223,13 +259,19 @@
 
     throw v0
 
-    .line 1030
+    .line 1055
     :cond_0
-    iget-object v0, p0, Lkik/android/chat/vm/chats/search/UsernameSearchResultViewModel_MembersInjector;->b:Ldagger/b;
+    iget-object v0, p0, Lkik/android/chat/vm/chats/search/UsernameSearchResultViewModel_MembersInjector;->b:Ljavax/inject/Provider;
 
-    invoke-interface {v0, p1}, Ldagger/b;->injectMembers(Ljava/lang/Object;)V
+    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 1031
+    move-result-object v0
+
+    check-cast v0, Lcom/kik/android/Mixpanel;
+
+    iput-object v0, p1, Lkik/android/chat/vm/chats/search/a;->a:Lcom/kik/android/Mixpanel;
+
+    .line 1056
     iget-object v0, p0, Lkik/android/chat/vm/chats/search/UsernameSearchResultViewModel_MembersInjector;->c:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
@@ -240,8 +282,19 @@
 
     iput-object v0, p1, Lkik/android/chat/vm/chats/search/n;->b:Lkik/core/interfaces/g;
 
-    .line 1032
+    .line 1057
     iget-object v0, p0, Lkik/android/chat/vm/chats/search/UsernameSearchResultViewModel_MembersInjector;->d:Ljavax/inject/Provider;
+
+    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/kik/core/domain/users/a;
+
+    iput-object v0, p1, Lkik/android/chat/vm/chats/search/n;->c:Lcom/kik/core/domain/users/a;
+
+    .line 1058
+    iget-object v0, p0, Lkik/android/chat/vm/chats/search/UsernameSearchResultViewModel_MembersInjector;->e:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
@@ -249,8 +302,8 @@
 
     check-cast v0, Landroid/content/res/Resources;
 
-    iput-object v0, p1, Lkik/android/chat/vm/chats/search/n;->c:Landroid/content/res/Resources;
+    iput-object v0, p1, Lkik/android/chat/vm/chats/search/n;->d:Landroid/content/res/Resources;
 
-    .line 10
+    .line 12
     return-void
 .end method

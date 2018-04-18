@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lio/fabric/sdk/android/services/a/d;
+.implements Lio/fabric/sdk/android/services/cache/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lio/fabric/sdk/android/services/a/d",
+        "Lio/fabric/sdk/android/services/cache/a",
         "<",
         "Ljava/lang/String;",
         ">;"

@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 40
+    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
     .locals 1
 
     .prologue
-    .line 43
+    .line 46
     const/4 v0, 0x0
 
     return v0
@@ -44,7 +44,7 @@
     .locals 1
 
     .prologue
-    .line 63
+    .line 71
     const/4 v0, 0x0
 
     return v0
@@ -54,7 +54,7 @@
     .locals 1
 
     .prologue
-    .line 47
+    .line 51
     const/4 v0, 0x0
 
     return-object v0
@@ -64,7 +64,7 @@
     .locals 1
 
     .prologue
-    .line 51
+    .line 56
     const/4 v0, 0x0
 
     return-object v0
@@ -74,7 +74,7 @@
     .locals 1
 
     .prologue
-    .line 55
+    .line 61
     const/4 v0, 0x0
 
     return-object v0
@@ -84,7 +84,17 @@
     .locals 1
 
     .prologue
-    .line 59
+    .line 66
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public loadDescription(Landroid/accessibilityservice/AccessibilityServiceInfo;Landroid/content/pm/PackageManager;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 76
     const/4 v0, 0x0
 
     return-object v0

@@ -76,25 +76,6 @@
 
 
 # virtual methods
-.method public final a()Lcom/dyuproject/protostuff/u;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/dyuproject/protostuff/u",
-            "<",
-            "Lcom/kik/xdata/model/smileys/XAlternateSmileys;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 86
-    sget-object v0, Lcom/kik/xdata/model/smileys/XAlternateSmileys;->b:Lcom/dyuproject/protostuff/u;
-
-    return-object v0
-.end method
-
 .method public final a(Ljava/lang/String;)Lcom/kik/xdata/model/smileys/XAlternateSmileys;
     .locals 0
 
@@ -104,6 +85,16 @@
 
     .line 54
     return-object p0
+.end method
+
+.method public final a()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 48
+    iget-object v0, p0, Lcom/kik/xdata/model/smileys/XAlternateSmileys;->categoryId:Ljava/lang/String;
+
+    return-object v0
 .end method
 
 .method public final b(Ljava/lang/String;)Lcom/kik/xdata/model/smileys/XAlternateSmileys;
@@ -121,18 +112,27 @@
     .locals 1
 
     .prologue
-    .line 48
-    iget-object v0, p0, Lcom/kik/xdata/model/smileys/XAlternateSmileys;->categoryId:Ljava/lang/String;
+    .line 61
+    iget-object v0, p0, Lcom/kik/xdata/model/smileys/XAlternateSmileys;->activeId:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final c()Ljava/lang/String;
+.method public final cachedSchema()Lcom/dyuproject/protostuff/u;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/dyuproject/protostuff/u",
+            "<",
+            "Lcom/kik/xdata/model/smileys/XAlternateSmileys;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 61
-    iget-object v0, p0, Lcom/kik/xdata/model/smileys/XAlternateSmileys;->activeId:Ljava/lang/String;
+    .line 86
+    sget-object v0, Lcom/kik/xdata/model/smileys/XAlternateSmileys;->b:Lcom/dyuproject/protostuff/u;
 
     return-object v0
 .end method

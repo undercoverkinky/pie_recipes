@@ -6,14 +6,6 @@
 .implements Lio/fabric/sdk/android/services/network/c;
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lio/fabric/sdk/android/services/network/b$1;
-    }
-.end annotation
-
-
 # instance fields
 .field private final a:Lio/fabric/sdk/android/k;
 
@@ -165,6 +157,7 @@
 
     move-result-object v4
 
+    .line 2039
     invoke-interface {v1}, Lio/fabric/sdk/android/services/network/d;->b()Ljava/lang/String;
 
     move-result-object v5
@@ -235,7 +228,7 @@
 
 # virtual methods
 .method public final a(Lio/fabric/sdk/android/services/network/HttpMethod;Ljava/lang/String;Ljava/util/Map;)Lio/fabric/sdk/android/services/network/HttpRequest;
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -251,16 +244,18 @@
     .end annotation
 
     .prologue
+    const/4 v0, 0x1
+
     .line 83
-    sget-object v0, Lio/fabric/sdk/android/services/network/b$1;->a:[I
+    sget-object v1, Lio/fabric/sdk/android/services/network/b$1;->a:[I
 
     invoke-virtual {p1}, Lio/fabric/sdk/android/services/network/HttpMethod;->ordinal()I
 
-    move-result v1
+    move-result v2
 
-    aget v0, v0, v1
+    aget v1, v1, v2
 
-    packed-switch v0, :pswitch_data_0
+    packed-switch v1, :pswitch_data_0
 
     .line 101
     new-instance v0, Ljava/lang/IllegalArgumentException;
@@ -273,31 +268,27 @@
 
     .line 85
     :pswitch_0
-    invoke-static {p2, p3}, Lio/fabric/sdk/android/services/network/HttpRequest;->a(Ljava/lang/CharSequence;Ljava/util/Map;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    invoke-static {p2, p3, v0}, Lio/fabric/sdk/android/services/network/HttpRequest;->get(Ljava/lang/CharSequence;Ljava/util/Map;Z)Lio/fabric/sdk/android/services/network/HttpRequest;
 
-    move-result-object v0
-
-    move-object v1, v0
+    move-result-object v1
 
     .line 1118
     :goto_0
     if-eqz p2, :cond_1
 
-    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
+    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    invoke-virtual {p2, v2}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
-    const-string v2, "https"
+    const-string v3, "https"
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {v2, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result v2
 
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x1
+    if-eqz v2, :cond_1
 
     .line 105
     :goto_1
@@ -316,12 +307,13 @@
     if-eqz v2, :cond_0
 
     .line 109
-    invoke-virtual {v1}, Lio/fabric/sdk/android/services/network/HttpRequest;->a()Ljava/net/HttpURLConnection;
+    invoke-virtual {v1}, Lio/fabric/sdk/android/services/network/HttpRequest;->getConnection()Ljava/net/HttpURLConnection;
 
     move-result-object v0
 
     check-cast v0, Ljavax/net/ssl/HttpsURLConnection;
 
+    .line 110
     invoke-virtual {v0, v2}, Ljavax/net/ssl/HttpsURLConnection;->setSSLSocketFactory(Ljavax/net/ssl/SSLSocketFactory;)V
 
     .line 114
@@ -330,35 +322,26 @@
 
     .line 89
     :pswitch_1
-    invoke-static {p2, p3}, Lio/fabric/sdk/android/services/network/HttpRequest;->b(Ljava/lang/CharSequence;Ljava/util/Map;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    invoke-static {p2, p3, v0}, Lio/fabric/sdk/android/services/network/HttpRequest;->post(Ljava/lang/CharSequence;Ljava/util/Map;Z)Lio/fabric/sdk/android/services/network/HttpRequest;
 
-    move-result-object v0
+    move-result-object v1
 
-    move-object v1, v0
-
-    .line 90
     goto :goto_0
 
     .line 93
     :pswitch_2
-    invoke-static {p2}, Lio/fabric/sdk/android/services/network/HttpRequest;->a(Ljava/lang/CharSequence;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    invoke-static {p2}, Lio/fabric/sdk/android/services/network/HttpRequest;->put(Ljava/lang/CharSequence;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
-    move-result-object v0
+    move-result-object v1
 
-    move-object v1, v0
-
-    .line 94
     goto :goto_0
 
     .line 97
     :pswitch_3
-    invoke-static {p2}, Lio/fabric/sdk/android/services/network/HttpRequest;->b(Ljava/lang/CharSequence;)Lio/fabric/sdk/android/services/network/HttpRequest;
+    invoke-static {p2}, Lio/fabric/sdk/android/services/network/HttpRequest;->delete(Ljava/lang/CharSequence;)Lio/fabric/sdk/android/services/network/HttpRequest;
 
-    move-result-object v0
+    move-result-object v1
 
-    move-object v1, v0
-
-    .line 98
     goto :goto_0
 
     .line 1118

@@ -34,7 +34,7 @@
     .locals 0
 
     .prologue
-    .line 353
+    .line 352
     iput-object p1, p0, Landroid/support/v4/util/MapCollections$ValuesCollection;->this$0:Landroid/support/v4/util/MapCollections;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +53,7 @@
     .end annotation
 
     .prologue
-    .line 357
+    .line 356
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -72,7 +72,7 @@
     .end annotation
 
     .prologue
-    .line 362
+    .line 361
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -84,12 +84,12 @@
     .locals 1
 
     .prologue
-    .line 367
+    .line 366
     iget-object v0, p0, Landroid/support/v4/util/MapCollections$ValuesCollection;->this$0:Landroid/support/v4/util/MapCollections;
 
     invoke-virtual {v0}, Landroid/support/v4/util/MapCollections;->colClear()V
 
-    .line 368
+    .line 367
     return-void
 .end method
 
@@ -97,7 +97,7 @@
     .locals 1
 
     .prologue
-    .line 372
+    .line 371
     iget-object v0, p0, Landroid/support/v4/util/MapCollections$ValuesCollection;->this$0:Landroid/support/v4/util/MapCollections;
 
     invoke-virtual {v0, p1}, Landroid/support/v4/util/MapCollections;->colIndexOfValue(Ljava/lang/Object;)I
@@ -128,12 +128,12 @@
     .end annotation
 
     .prologue
-    .line 377
+    .line 376
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 378
+    .line 377
     :cond_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -141,7 +141,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 379
+    .line 378
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -152,10 +152,10 @@
 
     if-nez v1, :cond_0
 
-    .line 380
+    .line 379
     const/4 v0, 0x0
 
-    .line 383
+    .line 382
     :goto_0
     return v0
 
@@ -169,7 +169,7 @@
     .locals 1
 
     .prologue
-    .line 388
+    .line 387
     iget-object v0, p0, Landroid/support/v4/util/MapCollections$ValuesCollection;->this$0:Landroid/support/v4/util/MapCollections;
 
     invoke-virtual {v0}, Landroid/support/v4/util/MapCollections;->colGetSize()I
@@ -200,7 +200,7 @@
     .end annotation
 
     .prologue
-    .line 393
+    .line 392
     new-instance v0, Landroid/support/v4/util/MapCollections$ArrayIterator;
 
     iget-object v1, p0, Landroid/support/v4/util/MapCollections$ValuesCollection;->this$0:Landroid/support/v4/util/MapCollections;
@@ -216,25 +216,25 @@
     .locals 2
 
     .prologue
-    .line 398
+    .line 397
     iget-object v0, p0, Landroid/support/v4/util/MapCollections$ValuesCollection;->this$0:Landroid/support/v4/util/MapCollections;
 
     invoke-virtual {v0, p1}, Landroid/support/v4/util/MapCollections;->colIndexOfValue(Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 399
+    .line 398
     if-ltz v0, :cond_0
 
-    .line 400
+    .line 399
     iget-object v1, p0, Landroid/support/v4/util/MapCollections$ValuesCollection;->this$0:Landroid/support/v4/util/MapCollections;
 
     invoke-virtual {v1, v0}, Landroid/support/v4/util/MapCollections;->colRemoveAt(I)V
 
-    .line 401
+    .line 400
     const/4 v0, 0x1
 
-    .line 403
+    .line 402
     :goto_0
     return v0
 
@@ -259,7 +259,7 @@
 
     const/4 v0, 0x0
 
-    .line 408
+    .line 407
     iget-object v1, p0, Landroid/support/v4/util/MapCollections$ValuesCollection;->this$0:Landroid/support/v4/util/MapCollections;
 
     invoke-virtual {v1}, Landroid/support/v4/util/MapCollections;->colGetSize()I
@@ -268,46 +268,46 @@
 
     move v1, v0
 
-    .line 410
+    .line 409
     :goto_0
     if-ge v0, v3, :cond_1
 
-    .line 411
+    .line 410
     iget-object v4, p0, Landroid/support/v4/util/MapCollections$ValuesCollection;->this$0:Landroid/support/v4/util/MapCollections;
 
     invoke-virtual {v4, v0, v2}, Landroid/support/v4/util/MapCollections;->colGetEntry(II)Ljava/lang/Object;
 
     move-result-object v4
 
-    .line 412
+    .line 411
     invoke-interface {p1, v4}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 413
+    .line 412
     iget-object v1, p0, Landroid/support/v4/util/MapCollections$ValuesCollection;->this$0:Landroid/support/v4/util/MapCollections;
 
     invoke-virtual {v1, v0}, Landroid/support/v4/util/MapCollections;->colRemoveAt(I)V
 
-    .line 414
+    .line 413
     add-int/lit8 v0, v0, -0x1
 
-    .line 415
+    .line 414
     add-int/lit8 v1, v3, -0x1
 
     move v3, v1
 
     move v1, v2
 
-    .line 410
+    .line 409
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 419
+    .line 418
     :cond_1
     return v1
 .end method
@@ -327,7 +327,7 @@
 
     const/4 v0, 0x0
 
-    .line 424
+    .line 423
     iget-object v1, p0, Landroid/support/v4/util/MapCollections$ValuesCollection;->this$0:Landroid/support/v4/util/MapCollections;
 
     invoke-virtual {v1}, Landroid/support/v4/util/MapCollections;->colGetSize()I
@@ -336,46 +336,46 @@
 
     move v1, v0
 
-    .line 426
+    .line 425
     :goto_0
     if-ge v0, v3, :cond_1
 
-    .line 427
+    .line 426
     iget-object v4, p0, Landroid/support/v4/util/MapCollections$ValuesCollection;->this$0:Landroid/support/v4/util/MapCollections;
 
     invoke-virtual {v4, v0, v2}, Landroid/support/v4/util/MapCollections;->colGetEntry(II)Ljava/lang/Object;
 
     move-result-object v4
 
-    .line 428
+    .line 427
     invoke-interface {p1, v4}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 429
+    .line 428
     iget-object v1, p0, Landroid/support/v4/util/MapCollections$ValuesCollection;->this$0:Landroid/support/v4/util/MapCollections;
 
     invoke-virtual {v1, v0}, Landroid/support/v4/util/MapCollections;->colRemoveAt(I)V
 
-    .line 430
+    .line 429
     add-int/lit8 v0, v0, -0x1
 
-    .line 431
+    .line 430
     add-int/lit8 v1, v3, -0x1
 
     move v3, v1
 
     move v1, v2
 
-    .line 426
+    .line 425
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 435
+    .line 434
     :cond_1
     return v1
 .end method
@@ -384,7 +384,7 @@
     .locals 1
 
     .prologue
-    .line 440
+    .line 439
     iget-object v0, p0, Landroid/support/v4/util/MapCollections$ValuesCollection;->this$0:Landroid/support/v4/util/MapCollections;
 
     invoke-virtual {v0}, Landroid/support/v4/util/MapCollections;->colGetSize()I
@@ -398,7 +398,7 @@
     .locals 2
 
     .prologue
-    .line 445
+    .line 444
     iget-object v0, p0, Landroid/support/v4/util/MapCollections$ValuesCollection;->this$0:Landroid/support/v4/util/MapCollections;
 
     const/4 v1, 0x1
@@ -421,7 +421,7 @@
     .end annotation
 
     .prologue
-    .line 450
+    .line 449
     iget-object v0, p0, Landroid/support/v4/util/MapCollections$ValuesCollection;->this$0:Landroid/support/v4/util/MapCollections;
 
     const/4 v1, 0x1

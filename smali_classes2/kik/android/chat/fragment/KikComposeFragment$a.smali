@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 249
+    .line 250
     invoke-direct {p0}, Lkik/android/chat/fragment/KikContactsListFragment$a;-><init>()V
 
     return-void
@@ -29,11 +29,11 @@
     .locals 1
 
     .prologue
-    .line 249
-    .line 1262
+    .line 250
+    .line 1263
     const-string v0, "isShare"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikComposeFragment$a;->k(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikComposeFragment$a;->g(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -41,7 +41,7 @@
 
     move-result v0
 
-    .line 249
+    .line 250
     return v0
 .end method
 
@@ -49,11 +49,11 @@
     .locals 1
 
     .prologue
-    .line 249
-    .line 1273
+    .line 250
+    .line 1274
     const-string v0, "isShare"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikComposeFragment$a;->k(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikComposeFragment$a;->g(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -61,6 +61,6 @@
 
     move-result v0
 
-    .line 249
+    .line 250
     return v0
 .end method

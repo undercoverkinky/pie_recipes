@@ -40,13 +40,13 @@
     :try_start_0
     new-instance v0, Ljava/io/File;
 
-    new-instance v2, Lio/fabric/sdk/android/services/c/b;
+    new-instance v2, Lio/fabric/sdk/android/services/b/b;
 
     iget-object v3, p0, Lio/fabric/sdk/android/services/settings/i;->a:Lio/fabric/sdk/android/h;
 
-    invoke-direct {v2, v3}, Lio/fabric/sdk/android/services/c/b;-><init>(Lio/fabric/sdk/android/h;)V
+    invoke-direct {v2, v3}, Lio/fabric/sdk/android/services/b/b;-><init>(Lio/fabric/sdk/android/h;)V
 
-    invoke-virtual {v2}, Lio/fabric/sdk/android/services/c/b;->a()Ljava/io/File;
+    invoke-virtual {v2}, Lio/fabric/sdk/android/services/b/b;->a()Ljava/io/File;
 
     move-result-object v2
 
@@ -187,13 +187,13 @@
 
     new-instance v0, Ljava/io/File;
 
-    new-instance v3, Lio/fabric/sdk/android/services/c/b;
+    new-instance v3, Lio/fabric/sdk/android/services/b/b;
 
     iget-object v4, p0, Lio/fabric/sdk/android/services/settings/i;->a:Lio/fabric/sdk/android/h;
 
-    invoke-direct {v3, v4}, Lio/fabric/sdk/android/services/c/b;-><init>(Lio/fabric/sdk/android/h;)V
+    invoke-direct {v3, v4}, Lio/fabric/sdk/android/services/b/b;-><init>(Lio/fabric/sdk/android/h;)V
 
-    invoke-virtual {v3}, Lio/fabric/sdk/android/services/c/b;->a()Ljava/io/File;
+    invoke-virtual {v3}, Lio/fabric/sdk/android/services/b/b;->a()Ljava/io/File;
 
     move-result-object v3
 

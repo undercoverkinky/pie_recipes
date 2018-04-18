@@ -1,49 +1,68 @@
-.class public final Lcom/kik/cache/am;
-.super Lcom/kik/cache/m;
-.source "SourceFile"
+.class final synthetic Lcom/kik/cache/am;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lrx/functions/g;
+
+
+# static fields
+.field private static final a:Lcom/kik/cache/am;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;Ljava/lang/String;)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/kik/cache/am;
+
+    invoke-direct {v0}, Lcom/kik/cache/am;-><init>()V
+
+    sput-object v0, Lcom/kik/cache/am;->a:Lcom/kik/cache/am;
+
+    return-void
+.end method
+
+.method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 12
-    invoke-direct {p0, p1, p2}, Lcom/kik/cache/m;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
     return-void
+.end method
+
+.method public static a()Lrx/functions/g;
+    .locals 1
+
+    sget-object v0, Lcom/kik/cache/am;->a:Lcom/kik/cache/am;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method protected final b(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
+.method public final call(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
     .prologue
-    .line 17
-    invoke-super {p0, p1}, Lcom/kik/cache/m;->b(Ljava/lang/String;)Ljava/lang/String;
+    .line 0
+    check-cast p1, Landroid/graphics/Bitmap;
+
+    .line 1096
+    if-eqz p1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    .line 18
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ".mp4"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
+    .line 0
     return-object v0
+
+    .line 1096
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

@@ -65,7 +65,7 @@
 
     .line 31
     :cond_1
-    invoke-static {p3}, Lcom/kik/cards/web/r;->k(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3}, Lcom/kik/cards/web/s;->l(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 

@@ -42,7 +42,7 @@
     .line 316
     iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog$2;->a:Lkik/android/chat/fragment/TemporaryBanDialog;
 
-    invoke-static {v0}, Lkik/android/chat/fragment/TemporaryBanDialog;->c(Lkik/android/chat/fragment/TemporaryBanDialog;)V
+    invoke-static {v0}, Lkik/android/chat/fragment/TemporaryBanDialog;->f(Lkik/android/chat/fragment/TemporaryBanDialog;)V
 
     .line 317
     return-void

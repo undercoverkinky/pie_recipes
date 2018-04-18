@@ -22,26 +22,46 @@
 
 # direct methods
 .method constructor <init>(J)V
-    .locals 3
+    .locals 7
 
     .prologue
-    .line 145
+    .line 147
     sget-object v0, Ljava/math/RoundingMode;->CEILING:Ljava/math/RoundingMode;
 
     invoke-static {p1, p2, v0}, Lcom/google/common/a/a;->a(JLjava/math/RoundingMode;)J
 
-    move-result-wide v0
+    move-result-wide v2
 
-    invoke-static {v0, v1}, Lcom/google/common/c/a;->a(J)I
+    .line 1086
+    long-to-int v1, v2
 
-    move-result v0
+    .line 1087
+    int-to-long v4, v1
 
-    new-array v0, v0, [J
+    cmp-long v0, v4, v2
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    const-string v4, "Out of range: %s"
+
+    invoke-static {v0, v4, v2, v3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;J)V
+
+    .line 147
+    new-array v0, v1, [J
 
     invoke-direct {p0, v0}, Lcom/google/common/hash/BloomFilterStrategies$a;-><init>([J)V
 
-    .line 146
+    .line 148
     return-void
+
+    .line 1087
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
 .method constructor <init>([J)V
@@ -50,10 +70,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 149
+    .line 151
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 150
+    .line 152
     array-length v0, p1
 
     if-lez v0, :cond_0
@@ -63,15 +83,15 @@
     :goto_0
     const-string v2, "data length is zero!"
 
-    invoke-static {v0, v2}, Lcom/google/common/base/h;->a(ZLjava/lang/Object;)V
-
-    .line 151
-    iput-object p1, p0, Lcom/google/common/hash/BloomFilterStrategies$a;->a:[J
-
-    .line 152
-    const-wide/16 v2, 0x0
+    invoke-static {v0, v2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
     .line 153
+    iput-object p1, p0, Lcom/google/common/hash/BloomFilterStrategies$a;->a:[J
+
+    .line 154
+    const-wide/16 v2, 0x0
+
+    .line 155
     array-length v0, p1
 
     :goto_1
@@ -79,7 +99,7 @@
 
     aget-wide v4, p1, v1
 
-    .line 154
+    .line 156
     invoke-static {v4, v5}, Ljava/lang/Long;->bitCount(J)I
 
     move-result v4
@@ -88,7 +108,7 @@
 
     add-long/2addr v2, v4
 
-    .line 153
+    .line 155
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
@@ -96,14 +116,14 @@
     :cond_0
     move v0, v1
 
-    .line 150
+    .line 152
     goto :goto_0
 
-    .line 156
+    .line 158
     :cond_1
     iput-wide v2, p0, Lcom/google/common/hash/BloomFilterStrategies$a;->b:J
 
-    .line 157
+    .line 159
     return-void
 .end method
 
@@ -113,7 +133,7 @@
     .locals 4
 
     .prologue
-    .line 175
+    .line 177
     iget-object v0, p0, Lcom/google/common/hash/BloomFilterStrategies$a;->a:[J
 
     array-length v0, v0
@@ -133,14 +153,14 @@
     .prologue
     const-wide/16 v6, 0x1
 
-    .line 161
+    .line 163
     invoke-virtual {p0, p1, p2}, Lcom/google/common/hash/BloomFilterStrategies$a;->b(J)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 162
+    .line 164
     iget-object v0, p0, Lcom/google/common/hash/BloomFilterStrategies$a;->a:[J
 
     const/4 v1, 0x6
@@ -159,17 +179,17 @@
 
     aput-wide v2, v0, v1
 
-    .line 163
+    .line 165
     iget-wide v0, p0, Lcom/google/common/hash/BloomFilterStrategies$a;->b:J
 
     add-long/2addr v0, v6
 
     iput-wide v0, p0, Lcom/google/common/hash/BloomFilterStrategies$a;->b:J
 
-    .line 164
+    .line 166
     const/4 v0, 0x1
 
-    .line 166
+    .line 168
     :goto_0
     return v0
 
@@ -183,7 +203,7 @@
     .locals 5
 
     .prologue
-    .line 170
+    .line 172
     iget-object v0, p0, Lcom/google/common/hash/BloomFilterStrategies$a;->a:[J
 
     const/4 v1, 0x6
@@ -221,17 +241,21 @@
 
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
+    .param p1    # Ljava/lang/Object;
+        .annotation runtime Ljavax/annotation/Nullable;
+        .end annotation
+    .end param
 
     .prologue
-    .line 199
+    .line 205
     instance-of v0, p1, Lcom/google/common/hash/BloomFilterStrategies$a;
 
     if-eqz v0, :cond_0
 
-    .line 200
+    .line 206
     check-cast p1, Lcom/google/common/hash/BloomFilterStrategies$a;
 
-    .line 201
+    .line 207
     iget-object v0, p0, Lcom/google/common/hash/BloomFilterStrategies$a;->a:[J
 
     iget-object v1, p1, Lcom/google/common/hash/BloomFilterStrategies$a;->a:[J
@@ -240,7 +264,7 @@
 
     move-result v0
 
-    .line 203
+    .line 209
     :goto_0
     return v0
 
@@ -254,7 +278,7 @@
     .locals 1
 
     .prologue
-    .line 207
+    .line 214
     iget-object v0, p0, Lcom/google/common/hash/BloomFilterStrategies$a;->a:[J
 
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([J)I

@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 187
+    .line 204
     iput-object p1, p0, Lkik/android/chat/fragment/ConversationsBaseFragment$7;->a:Lkik/android/chat/fragment/ConversationsBaseFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,31 +47,15 @@
 
 # virtual methods
 .method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 3
+    .locals 1
 
     .prologue
-    .line 187
-    .line 1191
+    .line 204
+    .line 1208
     iget-object v0, p0, Lkik/android/chat/fragment/ConversationsBaseFragment$7;->a:Lkik/android/chat/fragment/ConversationsBaseFragment;
 
-    iget-object v1, p0, Lkik/android/chat/fragment/ConversationsBaseFragment$7;->a:Lkik/android/chat/fragment/ConversationsBaseFragment;
+    invoke-virtual {v0}, Lkik/android/chat/fragment/ConversationsBaseFragment;->resignWaitDialog()V
 
-    iget-object v1, v1, Lkik/android/chat/fragment/ConversationsBaseFragment;->n:Landroid/view/ViewGroup;
-
-    invoke-virtual {v1}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x7f0a049c
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2}, Lkik/android/chat/fragment/ConversationsBaseFragment;->b(Ljava/lang/String;Z)Lkik/android/chat/fragment/KikDialogFragment;
-
-    .line 187
+    .line 204
     return-void
 .end method

@@ -23,12 +23,12 @@
 
 
 # instance fields
-.field private final b:Ldagger/b;
+.field private final b:Ljavax/inject/Provider;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ldagger/b",
+            "Ljavax/inject/Provider",
             "<",
-            "Landroid/support/v7/app/AppCompatActivity;",
+            "Lkik/core/ICoreEvents;",
             ">;"
         }
     .end annotation
@@ -39,7 +39,7 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/z;",
+            "Lkik/core/interfaces/ad;",
             ">;"
         }
     .end annotation
@@ -50,7 +50,7 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/ad;",
+            "Lkik/core/interfaces/b;",
             ">;"
         }
     .end annotation
@@ -61,7 +61,7 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/interfaces/b;",
+            "Lcom/kik/android/Mixpanel;",
             ">;"
         }
     .end annotation
@@ -95,18 +95,14 @@
     goto :goto_0
 .end method
 
-.method private constructor <init>(Ldagger/b;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+.method private constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ldagger/b",
-            "<",
-            "Landroid/support/v7/app/AppCompatActivity;",
-            ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/z;",
+            "Lkik/core/ICoreEvents;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
@@ -115,15 +111,19 @@
             "Ljavax/inject/Provider",
             "<",
             "Lkik/core/interfaces/b;",
+            ">;",
+            "Ljavax/inject/Provider",
+            "<",
+            "Lcom/kik/android/Mixpanel;",
             ">;)V"
         }
     .end annotation
 
     .prologue
-    .line 18
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
+    .line 29
     sget-boolean v0, Lkik/android/chat/activity/IntroActivity_MembersInjector;->a:Z
 
     if-nez v0, :cond_0
@@ -136,11 +136,11 @@
 
     throw v0
 
-    .line 20
+    .line 30
     :cond_0
-    iput-object p1, p0, Lkik/android/chat/activity/IntroActivity_MembersInjector;->b:Ldagger/b;
+    iput-object p1, p0, Lkik/android/chat/activity/IntroActivity_MembersInjector;->b:Ljavax/inject/Provider;
 
-    .line 21
+    .line 31
     sget-boolean v0, Lkik/android/chat/activity/IntroActivity_MembersInjector;->a:Z
 
     if-nez v0, :cond_1
@@ -153,11 +153,11 @@
 
     throw v0
 
-    .line 22
+    .line 32
     :cond_1
     iput-object p2, p0, Lkik/android/chat/activity/IntroActivity_MembersInjector;->c:Ljavax/inject/Provider;
 
-    .line 23
+    .line 33
     sget-boolean v0, Lkik/android/chat/activity/IntroActivity_MembersInjector;->a:Z
 
     if-nez v0, :cond_2
@@ -170,11 +170,11 @@
 
     throw v0
 
-    .line 24
+    .line 34
     :cond_2
     iput-object p3, p0, Lkik/android/chat/activity/IntroActivity_MembersInjector;->d:Ljavax/inject/Provider;
 
-    .line 25
+    .line 35
     sget-boolean v0, Lkik/android/chat/activity/IntroActivity_MembersInjector;->a:Z
 
     if-nez v0, :cond_3
@@ -187,26 +187,22 @@
 
     throw v0
 
-    .line 26
+    .line 36
     :cond_3
     iput-object p4, p0, Lkik/android/chat/activity/IntroActivity_MembersInjector;->e:Ljavax/inject/Provider;
 
-    .line 27
+    .line 37
     return-void
 .end method
 
-.method public static a(Ldagger/b;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Ldagger/b;
+.method public static a(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)Ldagger/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ldagger/b",
-            "<",
-            "Landroid/support/v7/app/AppCompatActivity;",
-            ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/z;",
+            "Lkik/core/ICoreEvents;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
@@ -215,6 +211,10 @@
             "Ljavax/inject/Provider",
             "<",
             "Lkik/core/interfaces/b;",
+            ">;",
+            "Ljavax/inject/Provider",
+            "<",
+            "Lcom/kik/android/Mixpanel;",
             ">;)",
             "Ldagger/b",
             "<",
@@ -224,10 +224,10 @@
     .end annotation
 
     .prologue
-    .line 41
+    .line 44
     new-instance v0, Lkik/android/chat/activity/IntroActivity_MembersInjector;
 
-    invoke-direct {v0, p0, p1, p2, p3}, Lkik/android/chat/activity/IntroActivity_MembersInjector;-><init>(Ldagger/b;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+    invoke-direct {v0, p0, p1, p2, p3}, Lkik/android/chat/activity/IntroActivity_MembersInjector;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
 
     return-object v0
 .end method
@@ -241,10 +241,10 @@
     .line 11
     check-cast p1, Lkik/android/chat/activity/IntroActivity;
 
-    .line 1031
+    .line 1050
     if-nez p1, :cond_0
 
-    .line 1032
+    .line 1051
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "Cannot inject members into a null reference"
@@ -253,25 +253,20 @@
 
     throw v0
 
-    .line 1034
+    .line 1053
     :cond_0
-    iget-object v0, p0, Lkik/android/chat/activity/IntroActivity_MembersInjector;->b:Ldagger/b;
-
-    invoke-interface {v0, p1}, Ldagger/b;->injectMembers(Ljava/lang/Object;)V
-
-    .line 1035
-    iget-object v0, p0, Lkik/android/chat/activity/IntroActivity_MembersInjector;->c:Ljavax/inject/Provider;
+    iget-object v0, p0, Lkik/android/chat/activity/IntroActivity_MembersInjector;->b:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/z;
+    check-cast v0, Lkik/core/ICoreEvents;
 
-    iput-object v0, p1, Lkik/android/chat/activity/IntroActivity;->a:Lkik/core/z;
+    iput-object v0, p1, Lkik/android/chat/activity/IntroActivity;->a:Lkik/core/ICoreEvents;
 
-    .line 1036
-    iget-object v0, p0, Lkik/android/chat/activity/IntroActivity_MembersInjector;->d:Ljavax/inject/Provider;
+    .line 1054
+    iget-object v0, p0, Lkik/android/chat/activity/IntroActivity_MembersInjector;->c:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
@@ -281,8 +276,8 @@
 
     iput-object v0, p1, Lkik/android/chat/activity/IntroActivity;->b:Lkik/core/interfaces/ad;
 
-    .line 1037
-    iget-object v0, p0, Lkik/android/chat/activity/IntroActivity_MembersInjector;->e:Ljavax/inject/Provider;
+    .line 1055
+    iget-object v0, p0, Lkik/android/chat/activity/IntroActivity_MembersInjector;->d:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
@@ -291,6 +286,17 @@
     check-cast v0, Lkik/core/interfaces/b;
 
     iput-object v0, p1, Lkik/android/chat/activity/IntroActivity;->c:Lkik/core/interfaces/b;
+
+    .line 1056
+    iget-object v0, p0, Lkik/android/chat/activity/IntroActivity_MembersInjector;->e:Ljavax/inject/Provider;
+
+    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/kik/android/Mixpanel;
+
+    iput-object v0, p1, Lkik/android/chat/activity/IntroActivity;->d:Lcom/kik/android/Mixpanel;
 
     .line 11
     return-void

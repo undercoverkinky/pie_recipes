@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 273
+    .line 279
     iput-object p1, p0, Lkik/android/chat/fragment/KikCodeFragment$13;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 2
 
     .prologue
-    .line 277
+    .line 283
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$13;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikCodeFragment;->_drawArea:Lkik/android/widget/KikFinderCodeImageView;
@@ -53,11 +53,11 @@
 
     invoke-virtual {v0, v1}, Lkik/android/widget/KikFinderCodeImageView;->a(Lcom/kik/scan/KikCode;)V
 
-    .line 278
+    .line 284
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$13;->a:Lkik/android/chat/fragment/KikCodeFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/KikCodeFragment;->g(Lkik/android/chat/fragment/KikCodeFragment;)V
 
-    .line 279
+    .line 285
     return-void
 .end method

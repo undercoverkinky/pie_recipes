@@ -41,10 +41,10 @@
     .locals 1
 
     .prologue
-    .line 40
+    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
+    .line 51
     new-instance v0, Landroid/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl$1;
 
     invoke-direct {v0, p0}, Landroid/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl$1;-><init>(Landroid/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl;)V
@@ -60,7 +60,7 @@
     .locals 2
 
     .prologue
-    .line 54
+    .line 60
     iget-object v0, p0, Landroid/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl;->mThreadSocketTags:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -73,7 +73,7 @@
 
     iput v1, v0, Landroid/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl$SocketTags;->statsTag:I
 
-    .line 55
+    .line 61
     return-void
 .end method
 
@@ -81,7 +81,7 @@
     .locals 1
 
     .prologue
-    .line 59
+    .line 65
     iget-object v0, p0, Landroid/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl;->mThreadSocketTags:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -99,7 +99,7 @@
     .locals 0
 
     .prologue
-    .line 64
+    .line 70
     return-void
 .end method
 
@@ -107,7 +107,7 @@
     .locals 0
 
     .prologue
-    .line 68
+    .line 74
     return-void
 .end method
 
@@ -115,7 +115,7 @@
     .locals 1
 
     .prologue
-    .line 72
+    .line 78
     iget-object v0, p0, Landroid/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl;->mThreadSocketTags:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -126,7 +126,15 @@
 
     iput p1, v0, Landroid/support/v4/net/TrafficStatsCompat$BaseTrafficStatsCompatImpl$SocketTags;->statsTag:I
 
-    .line 73
+    .line 79
+    return-void
+.end method
+
+.method public tagDatagramSocket(Ljava/net/DatagramSocket;)V
+    .locals 0
+
+    .prologue
+    .line 91
     return-void
 .end method
 
@@ -134,7 +142,15 @@
     .locals 0
 
     .prologue
-    .line 77
+    .line 83
+    return-void
+.end method
+
+.method public untagDatagramSocket(Ljava/net/DatagramSocket;)V
+    .locals 0
+
+    .prologue
+    .line 95
     return-void
 .end method
 
@@ -142,6 +158,6 @@
     .locals 0
 
     .prologue
-    .line 81
+    .line 87
     return-void
 .end method

@@ -33,9 +33,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/gms/gcm/PeriodicTask$1;
+    new-instance v0, Lcom/google/android/gms/gcm/f;
 
-    invoke-direct {v0}, Lcom/google/android/gms/gcm/PeriodicTask$1;-><init>()V
+    invoke-direct {v0}, Lcom/google/android/gms/gcm/f;-><init>()V
 
     sput-object v0, Lcom/google/android/gms/gcm/PeriodicTask;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -76,7 +76,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/google/android/gms/gcm/PeriodicTask$1;)V
+.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/google/android/gms/gcm/f;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/google/android/gms/gcm/PeriodicTask;-><init>(Landroid/os/Parcel;)V
@@ -116,7 +116,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/google/android/gms/gcm/PeriodicTask$Builder;Lcom/google/android/gms/gcm/PeriodicTask$1;)V
+.method synthetic constructor <init>(Lcom/google/android/gms/gcm/PeriodicTask$Builder;Lcom/google/android/gms/gcm/f;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/google/android/gms/gcm/PeriodicTask;-><init>(Lcom/google/android/gms/gcm/PeriodicTask$Builder;)V
@@ -169,10 +169,6 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
     invoke-virtual {p0}, Lcom/google/android/gms/gcm/PeriodicTask;->getPeriod()J
 
     move-result-wide v2
@@ -181,21 +177,21 @@
 
     move-result-wide v4
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v1
 
-    invoke-virtual {v6}, Ljava/lang/String;->length()I
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    move-result v6
+    move-result v1
 
-    add-int/lit8 v6, v6, 0x36
+    add-int/lit8 v1, v1, 0x36
 
-    invoke-direct {v1, v6}, Ljava/lang/StringBuilder;-><init>(I)V
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v6, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

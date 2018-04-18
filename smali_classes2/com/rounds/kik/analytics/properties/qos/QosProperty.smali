@@ -71,7 +71,7 @@
 
 
 # virtual methods
-.method public getValue()Lcom/google/gson/j;
+.method public getValue()Lcom/google/gson/k;
     .locals 4
 
     .prologue
@@ -83,7 +83,7 @@
     .line 39
     const-string v1, "audio_record_fps"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -95,14 +95,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 40
     const-string v1, "audio_record_frame_count"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -114,14 +114,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 41
     const-string v1, "audio_send_fps"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -133,14 +133,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 42
     const-string v1, "audio_send_deviation"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -152,14 +152,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 43
     const-string v1, "audio_send_frame_count"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -171,14 +171,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 44
     const-string v1, "video_send_success"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -190,14 +190,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 45
     const-string v1, "audio_send_success"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -209,14 +209,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 46
     const-string v1, "video_fetch_fps"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -228,14 +228,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 47
     const-string v1, "video_send_fps"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -247,14 +247,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 48
     const-string v1, "render_fps"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -266,14 +266,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 49
     const-string v1, "received_audio_fps"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -285,14 +285,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 50
     const-string v1, "received_audio_deviation"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -304,14 +304,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 51
     const-string v1, "received_audio_frame_count"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -323,14 +323,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 52
     const-string v1, "play_audio_fps"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -342,14 +342,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 53
     const-string v1, "play_latency_fps"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -361,14 +361,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 54
     const-string v1, "play_audio_frame_count"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -380,14 +380,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 55
     const-string v1, "audioplay_volume_hi"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -399,14 +399,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 56
     const-string v1, "audioplay_volume_dc"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -418,14 +418,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 57
     const-string v1, "localmic_in_volume_hi"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -437,14 +437,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 58
     const-string v1, "localmic_in_volume_dc"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -456,14 +456,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 59
     const-string v1, "localmic_out_volume_hi"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -475,14 +475,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 60
     const-string v1, "localmic_out_volume_dc"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -494,14 +494,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 61
     const-string v1, "received_video_fps"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -513,14 +513,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 62
     const-string v1, "received_video_deviation"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -532,14 +532,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 63
     const-string v1, "transmitted_bytes"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -551,14 +551,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 64
     const-string v1, "received_bytes"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -570,14 +570,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 65
     const-string v1, "local_audio_duration"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -589,14 +589,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 66
     const-string v1, "local_video_duration"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -608,14 +608,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 67
     const-string v1, "remote_audio_duration"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -627,14 +627,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 68
     const-string v1, "remote_video_duration"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -646,14 +646,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 69
     const-string v1, "local_audio_sending_fps_vidyo"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -665,14 +665,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 70
     const-string v1, "local_video_sending_fps_vidyo"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -684,14 +684,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 71
     const-string v1, "remote_audio_receiving_fps_vidyo"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -703,14 +703,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 72
     const-string v1, "remote_video_receiving_fps_vidyo"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -722,14 +722,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 73
     const-string v1, "group_audio_fps"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -741,14 +741,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 74
     const-string v1, "group_video_fps"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -760,14 +760,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 75
     const-string v1, "group_audio_duration"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -779,14 +779,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 76
     const-string v1, "group_video_duration"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -798,14 +798,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 77
     const-string v1, "group_participants_count"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -817,14 +817,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 78
     const-string v1, "audio_breaks_per_minute_play"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -836,14 +836,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 79
     const-string v1, "audio_breaks_per_minute_record"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -855,14 +855,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 80
     const-string v1, "audio_breaks_counter_play"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -874,14 +874,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 81
     const-string v1, "audio_breaks_counter_record"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -893,14 +893,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 82
     const-string v1, "audio_volume_strength_play"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -912,14 +912,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 83
     const-string v1, "audio_volume_strength_record"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -931,14 +931,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 84
     const-string v1, "audio_enqueue_errors_play"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -950,14 +950,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 85
     const-string v1, "audio_enqueue_errors_record"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/qos/QosProperty;->mValues:Lcom/rounds/kik/analytics/properties/qos/QosProperty$Values;
 
@@ -969,9 +969,9 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/Number;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/Number;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 87
     return-object v0

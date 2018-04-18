@@ -1,5 +1,5 @@
 .class final Lcom/kik/cards/web/auth/a$3;
-.super Lkik/android/util/ap;
+.super Lkik/android/util/aq;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkik/android/util/ap",
+        "Lkik/android/util/aq",
         "<",
         "Ljava/lang/Void;",
         "Ljava/lang/Void;",
@@ -34,10 +34,10 @@
     .locals 0
 
     .prologue
-    .line 199
+    .line 200
     iput-object p1, p0, Lcom/kik/cards/web/auth/a$3;->a:Lcom/kik/cards/web/auth/a;
 
-    invoke-direct {p0}, Lkik/android/util/ap;-><init>()V
+    invoke-direct {p0}, Lkik/android/util/aq;-><init>()V
 
     return-void
 .end method
@@ -46,12 +46,12 @@
     .locals 2
 
     .prologue
-    .line 203
+    .line 204
     invoke-static {}, Lcom/kik/cards/web/auth/b;->a()Ljava/security/KeyPair;
 
     move-result-object v0
 
-    .line 205
+    .line 206
     :try_start_0
     iget-object v1, p0, Lcom/kik/cards/web/auth/a$3;->a:Lcom/kik/cards/web/auth/a;
 
@@ -60,13 +60,13 @@
     .catch Ljava/security/GeneralSecurityException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 213
+    .line 214
     :goto_0
     const/4 v0, 0x0
 
     return-object v0
 
-    .line 208
+    .line 209
     :catch_0
     move-exception v0
 
@@ -74,7 +74,7 @@
 
     goto :goto_0
 
-    .line 211
+    .line 212
     :catch_1
     move-exception v0
 
@@ -89,7 +89,7 @@
     .locals 1
 
     .prologue
-    .line 199
+    .line 200
     invoke-direct {p0}, Lcom/kik/cards/web/auth/a$3;->a()Ljava/lang/Void;
 
     move-result-object v0
@@ -101,22 +101,22 @@
     .locals 1
 
     .prologue
-    .line 199
+    .line 200
     check-cast p1, Ljava/lang/Void;
 
-    .line 1219
-    invoke-super {p0, p1}, Lkik/android/util/ap;->onPostExecute(Ljava/lang/Object;)V
-
     .line 1220
-    iget-object v0, p0, Lcom/kik/cards/web/auth/a$3;->a:Lcom/kik/cards/web/auth/a;
-
-    invoke-static {v0}, Lcom/kik/cards/web/auth/a;->c(Lcom/kik/cards/web/auth/a;)Z
+    invoke-super {p0, p1}, Lkik/android/util/aq;->onPostExecute(Ljava/lang/Object;)V
 
     .line 1221
     iget-object v0, p0, Lcom/kik/cards/web/auth/a$3;->a:Lcom/kik/cards/web/auth/a;
 
+    invoke-static {v0}, Lcom/kik/cards/web/auth/a;->c(Lcom/kik/cards/web/auth/a;)Z
+
+    .line 1222
+    iget-object v0, p0, Lcom/kik/cards/web/auth/a$3;->a:Lcom/kik/cards/web/auth/a;
+
     invoke-static {v0}, Lcom/kik/cards/web/auth/a;->d(Lcom/kik/cards/web/auth/a;)V
 
-    .line 199
+    .line 200
     return-void
 .end method

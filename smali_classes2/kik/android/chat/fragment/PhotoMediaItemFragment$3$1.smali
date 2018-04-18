@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/fragment/PhotoMediaItemFragment$3$1;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
         "Landroid/graphics/Bitmap;",
         ">;"
@@ -35,7 +35,7 @@
     .line 154
     iput-object p1, p0, Lkik/android/chat/fragment/PhotoMediaItemFragment$3$1;->a:Lkik/android/chat/fragment/PhotoMediaItemFragment$3;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -61,7 +61,7 @@
 
     invoke-direct {v1, p0, p1}, Lkik/android/chat/fragment/PhotoMediaItemFragment$3$1$1;-><init>(Lkik/android/chat/fragment/PhotoMediaItemFragment$3$1;Landroid/graphics/Bitmap;)V
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/PhotoMediaItemFragment;->b(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/PhotoMediaItemFragment;->runOnUiIfAttached(Ljava/lang/Runnable;)V
 
     .line 154
     :cond_0
@@ -81,7 +81,7 @@
 
     iget-object v0, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment$3;->b:Lkik/android/chat/fragment/PhotoMediaItemFragment;
 
-    iput-boolean v2, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment;->n:Z
+    iput-boolean v2, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment;->m:Z
 
     .line 181
     new-array v0, v3, [Landroid/view/View;
@@ -94,14 +94,14 @@
 
     aput-object v1, v0, v2
 
-    invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->g([Landroid/view/View;)V
 
     .line 182
     iget-object v0, p0, Lkik/android/chat/fragment/PhotoMediaItemFragment$3$1;->a:Lkik/android/chat/fragment/PhotoMediaItemFragment$3;
 
     iget-object v0, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment$3;->b:Lkik/android/chat/fragment/PhotoMediaItemFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/PhotoMediaItemFragment;->q()Z
+    invoke-virtual {v0}, Lkik/android/chat/fragment/PhotoMediaItemFragment;->l()Z
 
     move-result v0
 
@@ -117,21 +117,21 @@
 
     iget-object v0, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment$3;->b:Lkik/android/chat/fragment/PhotoMediaItemFragment;
 
-    iput-boolean v3, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment;->l:Z
+    iput-boolean v3, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment;->k:Z
 
     .line 186
     iget-object v0, p0, Lkik/android/chat/fragment/PhotoMediaItemFragment$3$1;->a:Lkik/android/chat/fragment/PhotoMediaItemFragment$3;
 
     iget-object v0, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment$3;->b:Lkik/android/chat/fragment/PhotoMediaItemFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/PhotoMediaItemFragment;->s()V
+    invoke-virtual {v0}, Lkik/android/chat/fragment/PhotoMediaItemFragment;->n()V
 
     .line 187
     iget-object v0, p0, Lkik/android/chat/fragment/PhotoMediaItemFragment$3$1;->a:Lkik/android/chat/fragment/PhotoMediaItemFragment$3;
 
     iget-object v0, v0, Lkik/android/chat/fragment/PhotoMediaItemFragment$3;->b:Lkik/android/chat/fragment/PhotoMediaItemFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/PhotoMediaItemFragment;->L()V
+    invoke-virtual {v0}, Lkik/android/chat/fragment/PhotoMediaItemFragment;->p()V
 
     goto :goto_0
 .end method

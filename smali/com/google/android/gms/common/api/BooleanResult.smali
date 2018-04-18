@@ -6,9 +6,9 @@
 
 
 # instance fields
-.field private final zzaaO:Lcom/google/android/gms/common/api/Status;
+.field private final mStatus:Lcom/google/android/gms/common/api/Status;
 
-.field private final zzakR:Z
+.field private final zzfgk:Z
 
 
 # direct methods
@@ -19,15 +19,15 @@
 
     const-string v0, "Status must not be null"
 
-    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/zzaa;->zzb(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/zzbp;->zzb(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/android/gms/common/api/Status;
 
-    iput-object v0, p0, Lcom/google/android/gms/common/api/BooleanResult;->zzaaO:Lcom/google/android/gms/common/api/Status;
+    iput-object v0, p0, Lcom/google/android/gms/common/api/BooleanResult;->mStatus:Lcom/google/android/gms/common/api/Status;
 
-    iput-boolean p2, p0, Lcom/google/android/gms/common/api/BooleanResult;->zzakR:Z
+    iput-boolean p2, p0, Lcom/google/android/gms/common/api/BooleanResult;->zzfgk:Z
 
     return-void
 .end method
@@ -59,9 +59,9 @@
     :cond_2
     check-cast p1, Lcom/google/android/gms/common/api/BooleanResult;
 
-    iget-object v2, p0, Lcom/google/android/gms/common/api/BooleanResult;->zzaaO:Lcom/google/android/gms/common/api/Status;
+    iget-object v2, p0, Lcom/google/android/gms/common/api/BooleanResult;->mStatus:Lcom/google/android/gms/common/api/Status;
 
-    iget-object v3, p1, Lcom/google/android/gms/common/api/BooleanResult;->zzaaO:Lcom/google/android/gms/common/api/Status;
+    iget-object v3, p1, Lcom/google/android/gms/common/api/BooleanResult;->mStatus:Lcom/google/android/gms/common/api/Status;
 
     invoke-virtual {v2, v3}, Lcom/google/android/gms/common/api/Status;->equals(Ljava/lang/Object;)Z
 
@@ -69,9 +69,9 @@
 
     if-eqz v2, :cond_3
 
-    iget-boolean v2, p0, Lcom/google/android/gms/common/api/BooleanResult;->zzakR:Z
+    iget-boolean v2, p0, Lcom/google/android/gms/common/api/BooleanResult;->zzfgk:Z
 
-    iget-boolean v3, p1, Lcom/google/android/gms/common/api/BooleanResult;->zzakR:Z
+    iget-boolean v3, p1, Lcom/google/android/gms/common/api/BooleanResult;->zzfgk:Z
 
     if-eq v2, v3, :cond_0
 
@@ -84,7 +84,7 @@
 .method public getStatus()Lcom/google/android/gms/common/api/Status;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/common/api/BooleanResult;->zzaaO:Lcom/google/android/gms/common/api/Status;
+    iget-object v0, p0, Lcom/google/android/gms/common/api/BooleanResult;->mStatus:Lcom/google/android/gms/common/api/Status;
 
     return-object v0
 .end method
@@ -92,7 +92,7 @@
 .method public getValue()Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/google/android/gms/common/api/BooleanResult;->zzakR:Z
+    iget-boolean v0, p0, Lcom/google/android/gms/common/api/BooleanResult;->zzfgk:Z
 
     return v0
 .end method
@@ -100,7 +100,7 @@
 .method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Lcom/google/android/gms/common/api/BooleanResult;->zzaaO:Lcom/google/android/gms/common/api/Status;
+    iget-object v0, p0, Lcom/google/android/gms/common/api/BooleanResult;->mStatus:Lcom/google/android/gms/common/api/Status;
 
     invoke-virtual {v0}, Lcom/google/android/gms/common/api/Status;->hashCode()I
 
@@ -110,7 +110,7 @@
 
     mul-int/lit8 v1, v0, 0x1f
 
-    iget-boolean v0, p0, Lcom/google/android/gms/common/api/BooleanResult;->zzakR:Z
+    iget-boolean v0, p0, Lcom/google/android/gms/common/api/BooleanResult;->zzfgk:Z
 
     if-eqz v0, :cond_0
 

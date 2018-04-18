@@ -83,26 +83,7 @@
 
 
 # virtual methods
-.method public final a()Lcom/dyuproject/protostuff/u;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/dyuproject/protostuff/u",
-            "<",
-            "Lcom/kik/xdata/model/cards/XCardPinnedList;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 93
-    sget-object v0, Lcom/kik/xdata/model/cards/XCardPinnedList;->b:Lcom/dyuproject/protostuff/u;
-
-    return-object v0
-.end method
-
-.method public final b()Ljava/util/List;
+.method public final a()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -117,6 +98,25 @@
     .prologue
     .line 50
     iget-object v0, p0, Lcom/kik/xdata/model/cards/XCardPinnedList;->cardUrlHash:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public final cachedSchema()Lcom/dyuproject/protostuff/u;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/dyuproject/protostuff/u",
+            "<",
+            "Lcom/kik/xdata/model/cards/XCardPinnedList;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 93
+    sget-object v0, Lcom/kik/xdata/model/cards/XCardPinnedList;->b:Lcom/dyuproject/protostuff/u;
 
     return-object v0
 .end method

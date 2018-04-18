@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 398
+    .line 446
     iput-object p1, p0, Lkik/android/chat/fragment/ViewPictureFragment$24$2;->a:Lkik/android/chat/fragment/ViewPictureFragment$24;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,13 +40,13 @@
     .locals 1
 
     .prologue
-    .line 403
+    .line 451
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$24$2;->a:Lkik/android/chat/fragment/ViewPictureFragment$24;
 
     iget-object v0, v0, Lkik/android/chat/fragment/ViewPictureFragment$24;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/ViewPictureFragment;->a(Lkik/android/chat/fragment/ViewPictureFragment;)V
 
-    .line 404
+    .line 452
     return-void
 .end method

@@ -31,42 +31,42 @@
 
     const/4 v5, 0x0
 
-    .line 772
+    .line 790
     new-array v0, v7, [Ljava/lang/String;
 
-    const-string v1, "\n\u001amobile_video_service.proto\u0012\u0015mobileremote.video.v1\u001a\u0019protobuf_validation.proto\u001a\u0012common_model.proto\u001a\u0010common_rpc.proto\u001a\u001bvideo/v1/video_common.proto\"|\n$OnConvoVideoStateChangedNotification\u0012;\n\u0011convo_video_state\u0018\u0001 \u0001(\u000b2 .common.video.v1.ConvoVideoState\u0012\u0017\n\u000fnotification_id\u0018\u0002 \u0001(\t2|\n\u000bMobileVideo\u0012m\n\u0018OnConvoVideoStateChanged\u0012;.mobileremote.video.v1.OnConvoVideoStateChangedNotification\u001a\u0014.common.VoidResponseB\u001c\n"
+    const-string v1, "\n\u001amobile_video_service.proto\u0012\u0015mobileremote.video.v1\u001a\u0019protobuf_validation.proto\u001a\u0012common_model.proto\u001a\u0010common_rpc.proto\u001a\u001bvideo/v1/video_common.proto\"\u0084\u0001\n$OnConvoVideoStateChangedNotification\u0012;\n\u0011convo_video_state\u0018\u0001 \u0001(\u000b2 .common.video.v1.ConvoVideoState\u0012\u001f\n\u000fnotification_id\u0018\u0002 \u0001(\tB\u0006\u00ca\u009d%\u00020$2|\n\u000bMobileVideo\u0012m\n\u0018OnConvoVideoStateChanged\u0012;.mobileremote.video.v1.OnConvoVideoStateChangedNotification\u001a\u0014.common.VoidRe"
 
     aput-object v1, v0, v5
 
-    const-string v1, "\u001acom.kik.video.mobileremoteb\u0006proto3"
+    const-string v1, "sponseBl\n\u001acom.kik.video.mobileremoteZNgithub.com/kikinteractive/xiphias-api-mobileremote/generated/go/video/v1;videob\u0006proto3"
 
     aput-object v1, v0, v6
 
-    .line 785
+    .line 806
     new-instance v1, Lcom/kik/video/mobileremote/MobileVideoService$1;
 
     invoke-direct {v1}, Lcom/kik/video/mobileremote/MobileVideoService$1;-><init>()V
 
-    .line 793
+    .line 814
     const/4 v2, 0x4
 
     new-array v2, v2, [Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 796
+    .line 817
     invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation;->a()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v3
 
     aput-object v3, v2, v5
 
-    .line 797
+    .line 818
     invoke-static {}, Lcom/kik/ximodel/CommonModelProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v3
 
     aput-object v3, v2, v6
 
-    .line 798
+    .line 819
     invoke-static {}, Lcom/kik/xiphias/rpc/CommonRpcProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v3
@@ -75,20 +75,20 @@
 
     const/4 v3, 0x3
 
-    .line 799
+    .line 820
     invoke-static {}, Lcom/kik/video/VideoCommon;->a()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v4
 
     aput-object v4, v2, v3
 
-    .line 794
+    .line 815
     invoke-static {v0, v2, v1}, Lcom/google/protobuf/Descriptors$FileDescriptor;->internalBuildGeneratedFileFrom([Ljava/lang/String;[Lcom/google/protobuf/Descriptors$FileDescriptor;Lcom/google/protobuf/Descriptors$FileDescriptor$InternalDescriptorAssigner;)V
 
-    .line 1767
+    .line 1785
     sget-object v0, Lcom/kik/video/mobileremote/MobileVideoService;->c:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 802
+    .line 823
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getMessageTypes()Ljava/util/List;
 
     move-result-object v0
@@ -101,7 +101,7 @@
 
     sput-object v0, Lcom/kik/video/mobileremote/MobileVideoService;->a:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 803
+    .line 824
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/video/mobileremote/MobileVideoService;->a:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -120,19 +120,35 @@
 
     sput-object v0, Lcom/kik/video/mobileremote/MobileVideoService;->b:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 807
+    .line 829
+    invoke-static {}, Lcom/google/protobuf/ExtensionRegistry;->newInstance()Lcom/google/protobuf/ExtensionRegistry;
+
+    move-result-object v0
+
+    .line 830
+    sget-object v1, Lcom/kik/protovalidation/ProtobufValidation;->a:Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;
+
+    invoke-virtual {v0, v1}, Lcom/google/protobuf/ExtensionRegistry;->add(Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;)V
+
+    .line 831
+    sget-object v1, Lcom/kik/video/mobileremote/MobileVideoService;->c:Lcom/google/protobuf/Descriptors$FileDescriptor;
+
+    .line 832
+    invoke-static {v1, v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->internalUpdateFileDescriptor(Lcom/google/protobuf/Descriptors$FileDescriptor;Lcom/google/protobuf/ExtensionRegistry;)V
+
+    .line 833
     invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation;->a()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 808
+    .line 834
     invoke-static {}, Lcom/kik/ximodel/CommonModelProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 809
+    .line 835
     invoke-static {}, Lcom/kik/xiphias/rpc/CommonRpcProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 810
+    .line 836
     invoke-static {}, Lcom/kik/video/VideoCommon;->a()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 811
+    .line 837
     return-void
 .end method
 

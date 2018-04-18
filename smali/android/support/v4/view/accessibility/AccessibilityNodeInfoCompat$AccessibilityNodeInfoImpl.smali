@@ -72,6 +72,9 @@
 .method public abstract getAccessibilityActionLabel(Ljava/lang/Object;)Ljava/lang/CharSequence;
 .end method
 
+.method public abstract getActionContextClick()Ljava/lang/Object;
+.end method
+
 .method public abstract getActionList(Ljava/lang/Object;)Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -84,6 +87,27 @@
             ">;"
         }
     .end annotation
+.end method
+
+.method public abstract getActionScrollDown()Ljava/lang/Object;
+.end method
+
+.method public abstract getActionScrollLeft()Ljava/lang/Object;
+.end method
+
+.method public abstract getActionScrollRight()Ljava/lang/Object;
+.end method
+
+.method public abstract getActionScrollToPosition()Ljava/lang/Object;
+.end method
+
+.method public abstract getActionScrollUp()Ljava/lang/Object;
+.end method
+
+.method public abstract getActionSetProgress()Ljava/lang/Object;
+.end method
+
+.method public abstract getActionShowOnScreen()Ljava/lang/Object;
 .end method
 
 .method public abstract getActions(Ljava/lang/Object;)I
@@ -113,6 +137,9 @@
 .method public abstract getCollectionInfoRowCount(Ljava/lang/Object;)I
 .end method
 
+.method public abstract getCollectionInfoSelectionMode(Ljava/lang/Object;)I
+.end method
+
 .method public abstract getCollectionItemColumnIndex(Ljava/lang/Object;)I
 .end method
 
@@ -129,6 +156,9 @@
 .end method
 
 .method public abstract getContentDescription(Ljava/lang/Object;)Ljava/lang/CharSequence;
+.end method
+
+.method public abstract getDrawingOrder(Ljava/lang/Object;)I
 .end method
 
 .method public abstract getError(Ljava/lang/Object;)Ljava/lang/CharSequence;
@@ -162,6 +192,9 @@
 .end method
 
 .method public abstract getRangeInfo(Ljava/lang/Object;)Ljava/lang/Object;
+.end method
+
+.method public abstract getRoleDescription(Ljava/lang/Object;)Ljava/lang/CharSequence;
 .end method
 
 .method public abstract getText(Ljava/lang/Object;)Ljava/lang/CharSequence;
@@ -212,6 +245,9 @@
 .method public abstract isContentInvalid(Ljava/lang/Object;)Z
 .end method
 
+.method public abstract isContextClickable(Ljava/lang/Object;)Z
+.end method
+
 .method public abstract isDismissable(Ljava/lang/Object;)Z
 .end method
 
@@ -225,6 +261,9 @@
 .end method
 
 .method public abstract isFocused(Ljava/lang/Object;)Z
+.end method
+
+.method public abstract isImportantForAccessibility(Ljava/lang/Object;)Z
 .end method
 
 .method public abstract isLongClickable(Ljava/lang/Object;)Z
@@ -260,10 +299,19 @@
 .method public abstract obtain(Ljava/lang/Object;)Ljava/lang/Object;
 .end method
 
+.method public abstract obtainCollectionInfo(IIZ)Ljava/lang/Object;
+.end method
+
 .method public abstract obtainCollectionInfo(IIZI)Ljava/lang/Object;
 .end method
 
+.method public abstract obtainCollectionItemInfo(IIIIZ)Ljava/lang/Object;
+.end method
+
 .method public abstract obtainCollectionItemInfo(IIIIZZ)Ljava/lang/Object;
+.end method
+
+.method public abstract obtainRangeInfo(IFFF)Ljava/lang/Object;
 .end method
 
 .method public abstract performAction(Ljava/lang/Object;I)Z
@@ -323,7 +371,13 @@
 .method public abstract setContentInvalid(Ljava/lang/Object;Z)V
 .end method
 
+.method public abstract setContextClickable(Ljava/lang/Object;Z)V
+.end method
+
 .method public abstract setDismissable(Ljava/lang/Object;Z)V
+.end method
+
+.method public abstract setDrawingOrder(Ljava/lang/Object;I)V
 .end method
 
 .method public abstract setEditable(Ljava/lang/Object;Z)V
@@ -339,6 +393,9 @@
 .end method
 
 .method public abstract setFocused(Ljava/lang/Object;Z)V
+.end method
+
+.method public abstract setImportantForAccessibility(Ljava/lang/Object;Z)V
 .end method
 
 .method public abstract setInputType(Ljava/lang/Object;I)V
@@ -384,6 +441,9 @@
 .end method
 
 .method public abstract setRangeInfo(Ljava/lang/Object;Ljava/lang/Object;)V
+.end method
+
+.method public abstract setRoleDescription(Ljava/lang/Object;Ljava/lang/CharSequence;)V
 .end method
 
 .method public abstract setScrollable(Ljava/lang/Object;Z)V

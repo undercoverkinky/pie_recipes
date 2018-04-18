@@ -12,11 +12,11 @@
 
 
 # instance fields
-.field private final a:Lkik/core/g/e;
+.field private final a:Lkik/core/e/f;
 
 
 # direct methods
-.method public constructor <init>(Lkik/core/g/e;)V
+.method public constructor <init>(Lkik/core/e/f;)V
     .locals 0
 
     .prologue
@@ -24,7 +24,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 60
-    iput-object p1, p0, Lkik/android/b/g;->a:Lkik/core/g/e;
+    iput-object p1, p0, Lkik/android/b/g;->a:Lkik/core/e/f;
 
     .line 61
     return-void
@@ -80,7 +80,7 @@
 
     .prologue
     .line 65
-    invoke-static {p1}, Lcom/kik/cards/web/r;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/kik/cards/web/s;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -94,7 +94,7 @@
     .line 67
     const/4 v0, 0x0
 
-    invoke-static {v0}, Lcom/kik/events/m;->a(Ljava/lang/Object;)Lcom/kik/events/Promise;
+    invoke-static {v0}, Lcom/kik/events/l;->a(Ljava/lang/Object;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -103,13 +103,13 @@
     return-object v0
 
     :cond_0
-    iget-object v1, p0, Lkik/android/b/g;->a:Lkik/core/g/e;
+    iget-object v1, p0, Lkik/android/b/g;->a:Lkik/core/e/f;
 
     const-string v2, "browser_domain_info"
 
     const-class v3, Lcom/kik/xdata/model/browser/XBrowserDomainInfo;
 
-    invoke-interface {v1, v2, v0, v3}, Lkik/core/g/e;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;)Lcom/kik/events/Promise;
+    invoke-interface {v1, v2, v0, v3}, Lkik/core/e/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -117,7 +117,7 @@
 
     invoke-direct {v1, p0}, Lkik/android/b/g$1;-><init>(Lkik/android/b/g;)V
 
-    invoke-static {v0, v1}, Lcom/kik/events/m;->b(Lcom/kik/events/Promise;Lcom/kik/events/q;)Lcom/kik/events/Promise;
+    invoke-static {v0, v1}, Lcom/kik/events/l;->b(Lcom/kik/events/Promise;Lcom/kik/events/p;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -140,7 +140,7 @@
 
     .prologue
     .line 122
-    invoke-static {p3}, Lcom/kik/cards/web/r;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3}, Lcom/kik/cards/web/s;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -158,7 +158,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/kik/events/m;->a(Ljava/lang/Throwable;)Lcom/kik/events/Promise;
+    invoke-static {v0}, Lcom/kik/events/l;->a(Ljava/lang/Throwable;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -167,7 +167,7 @@
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lkik/android/b/g;->a:Lkik/core/g/e;
+    iget-object v0, p0, Lkik/android/b/g;->a:Lkik/core/e/f;
 
     const-string v1, "browser_domain_info"
 
@@ -185,11 +185,11 @@
     move-result-object v5
 
     .line 127
-    invoke-interface/range {v0 .. v5}, Lkik/core/g/e;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Lcom/kik/events/q;Ljava/lang/Long;)Lcom/kik/events/Promise;
+    invoke-interface/range {v0 .. v5}, Lkik/core/e/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Lcom/kik/events/p;Ljava/lang/Long;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/kik/events/m;->a(Lcom/kik/events/Promise;)Lcom/kik/events/Promise;
+    invoke-static {v0}, Lcom/kik/events/l;->a(Lcom/kik/events/Promise;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -210,7 +210,7 @@
 
     .prologue
     .line 93
-    invoke-static {p1}, Lcom/kik/cards/web/r;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/kik/cards/web/s;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -224,7 +224,7 @@
     .line 95
     const/4 v0, 0x0
 
-    invoke-static {v0}, Lcom/kik/events/m;->a(Ljava/lang/Object;)Lcom/kik/events/Promise;
+    invoke-static {v0}, Lcom/kik/events/l;->a(Ljava/lang/Object;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -233,13 +233,13 @@
     return-object v0
 
     :cond_0
-    iget-object v1, p0, Lkik/android/b/g;->a:Lkik/core/g/e;
+    iget-object v1, p0, Lkik/android/b/g;->a:Lkik/core/e/f;
 
     const-string v2, "browser_domain_info"
 
     const-class v3, Lcom/kik/xdata/model/browser/XBrowserDomainInfo;
 
-    invoke-interface {v1, v2, v0, v3}, Lkik/core/g/e;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;)Lcom/kik/events/Promise;
+    invoke-interface {v1, v2, v0, v3}, Lkik/core/e/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -247,7 +247,7 @@
 
     invoke-direct {v1, p0}, Lkik/android/b/g$2;-><init>(Lkik/android/b/g;)V
 
-    invoke-static {v0, v1}, Lcom/kik/events/m;->b(Lcom/kik/events/Promise;Lcom/kik/events/q;)Lcom/kik/events/Promise;
+    invoke-static {v0, v1}, Lcom/kik/events/l;->b(Lcom/kik/events/Promise;Lcom/kik/events/p;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -270,7 +270,7 @@
 
     .prologue
     .line 150
-    invoke-static {p1}, Lcom/kik/cards/web/r;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/kik/cards/web/s;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -288,7 +288,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/kik/events/m;->a(Ljava/lang/Object;)Lcom/kik/events/Promise;
+    invoke-static {v0}, Lcom/kik/events/l;->a(Ljava/lang/Object;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -297,13 +297,13 @@
     return-object v0
 
     :cond_0
-    iget-object v1, p0, Lkik/android/b/g;->a:Lkik/core/g/e;
+    iget-object v1, p0, Lkik/android/b/g;->a:Lkik/core/e/f;
 
     const-string v2, "browser_domain_info"
 
     const-class v3, Lcom/kik/xdata/model/browser/XBrowserDomainInfo;
 
-    invoke-interface {v1, v2, v0, v3}, Lkik/core/g/e;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;)Lcom/kik/events/Promise;
+    invoke-interface {v1, v2, v0, v3}, Lkik/core/e/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -313,7 +313,7 @@
 
     invoke-direct {v1, v2}, Lkik/android/b/g$a;-><init>(Lcom/kik/xdata/model/browser/XBrowserPermission$XBrowserPermissionName;)V
 
-    invoke-static {v0, v1}, Lcom/kik/events/m;->b(Lcom/kik/events/Promise;Lcom/kik/events/q;)Lcom/kik/events/Promise;
+    invoke-static {v0, v1}, Lcom/kik/events/l;->b(Lcom/kik/events/Promise;Lcom/kik/events/p;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -321,7 +321,7 @@
 
     invoke-direct {v1, p0}, Lkik/android/b/g$4;-><init>(Lkik/android/b/g;)V
 
-    invoke-static {v0, v1}, Lcom/kik/events/m;->b(Lcom/kik/events/Promise;Lcom/kik/events/q;)Lcom/kik/events/Promise;
+    invoke-static {v0, v1}, Lcom/kik/events/l;->b(Lcom/kik/events/Promise;Lcom/kik/events/p;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -344,7 +344,7 @@
 
     .prologue
     .line 177
-    invoke-static {p1}, Lcom/kik/cards/web/r;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/kik/cards/web/s;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -362,7 +362,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/kik/events/m;->a(Ljava/lang/Throwable;)Lcom/kik/events/Promise;
+    invoke-static {v0}, Lcom/kik/events/l;->a(Ljava/lang/Throwable;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -371,7 +371,7 @@
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lkik/android/b/g;->a:Lkik/core/g/e;
+    iget-object v0, p0, Lkik/android/b/g;->a:Lkik/core/e/f;
 
     const-string v1, "browser_domain_info"
 
@@ -389,11 +389,11 @@
     move-result-object v5
 
     .line 182
-    invoke-interface/range {v0 .. v5}, Lkik/core/g/e;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Lcom/kik/events/q;Ljava/lang/Long;)Lcom/kik/events/Promise;
+    invoke-interface/range {v0 .. v5}, Lkik/core/e/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Lcom/kik/events/p;Ljava/lang/Long;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/kik/events/m;->a(Lcom/kik/events/Promise;)Lcom/kik/events/Promise;
+    invoke-static {v0}, Lcom/kik/events/l;->a(Lcom/kik/events/Promise;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -416,7 +416,7 @@
 
     .prologue
     .line 218
-    invoke-static {p1}, Lcom/kik/cards/web/r;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/kik/cards/web/s;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -434,7 +434,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/kik/events/m;->a(Ljava/lang/Object;)Lcom/kik/events/Promise;
+    invoke-static {v0}, Lcom/kik/events/l;->a(Ljava/lang/Object;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -443,13 +443,13 @@
     return-object v0
 
     :cond_0
-    iget-object v1, p0, Lkik/android/b/g;->a:Lkik/core/g/e;
+    iget-object v1, p0, Lkik/android/b/g;->a:Lkik/core/e/f;
 
     const-string v2, "browser_domain_info"
 
     const-class v3, Lcom/kik/xdata/model/browser/XBrowserDomainInfo;
 
-    invoke-interface {v1, v2, v0, v3}, Lkik/core/g/e;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;)Lcom/kik/events/Promise;
+    invoke-interface {v1, v2, v0, v3}, Lkik/core/e/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -459,7 +459,7 @@
 
     invoke-direct {v1, v2}, Lkik/android/b/g$a;-><init>(Lcom/kik/xdata/model/browser/XBrowserPermission$XBrowserPermissionName;)V
 
-    invoke-static {v0, v1}, Lcom/kik/events/m;->b(Lcom/kik/events/Promise;Lcom/kik/events/q;)Lcom/kik/events/Promise;
+    invoke-static {v0, v1}, Lcom/kik/events/l;->b(Lcom/kik/events/Promise;Lcom/kik/events/p;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -467,7 +467,7 @@
 
     invoke-direct {v1, p0}, Lkik/android/b/g$6;-><init>(Lkik/android/b/g;)V
 
-    invoke-static {v0, v1}, Lcom/kik/events/m;->b(Lcom/kik/events/Promise;Lcom/kik/events/q;)Lcom/kik/events/Promise;
+    invoke-static {v0, v1}, Lcom/kik/events/l;->b(Lcom/kik/events/Promise;Lcom/kik/events/p;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -490,7 +490,7 @@
 
     .prologue
     .line 245
-    invoke-static {p1}, Lcom/kik/cards/web/r;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/kik/cards/web/s;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -508,7 +508,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/kik/events/m;->a(Ljava/lang/Throwable;)Lcom/kik/events/Promise;
+    invoke-static {v0}, Lcom/kik/events/l;->a(Ljava/lang/Throwable;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -517,7 +517,7 @@
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lkik/android/b/g;->a:Lkik/core/g/e;
+    iget-object v0, p0, Lkik/android/b/g;->a:Lkik/core/e/f;
 
     const-string v1, "browser_domain_info"
 
@@ -535,11 +535,11 @@
     move-result-object v5
 
     .line 249
-    invoke-interface/range {v0 .. v5}, Lkik/core/g/e;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Lcom/kik/events/q;Ljava/lang/Long;)Lcom/kik/events/Promise;
+    invoke-interface/range {v0 .. v5}, Lkik/core/e/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Lcom/kik/events/p;Ljava/lang/Long;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/kik/events/m;->a(Lcom/kik/events/Promise;)Lcom/kik/events/Promise;
+    invoke-static {v0}, Lcom/kik/events/l;->a(Lcom/kik/events/Promise;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -562,7 +562,7 @@
 
     .prologue
     .line 266
-    invoke-static {p1}, Lcom/kik/cards/web/r;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/kik/cards/web/s;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -580,7 +580,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/kik/events/m;->a(Ljava/lang/Throwable;)Lcom/kik/events/Promise;
+    invoke-static {v0}, Lcom/kik/events/l;->a(Ljava/lang/Throwable;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -589,7 +589,7 @@
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lkik/android/b/g;->a:Lkik/core/g/e;
+    iget-object v0, p0, Lkik/android/b/g;->a:Lkik/core/e/f;
 
     const-string v1, "browser_domain_info"
 
@@ -607,11 +607,11 @@
     move-result-object v5
 
     .line 271
-    invoke-interface/range {v0 .. v5}, Lkik/core/g/e;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Lcom/kik/events/q;Ljava/lang/Long;)Lcom/kik/events/Promise;
+    invoke-interface/range {v0 .. v5}, Lkik/core/e/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Lcom/kik/events/p;Ljava/lang/Long;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/kik/events/m;->a(Lcom/kik/events/Promise;)Lcom/kik/events/Promise;
+    invoke-static {v0}, Lcom/kik/events/l;->a(Lcom/kik/events/Promise;)Lcom/kik/events/Promise;
 
     move-result-object v0
 

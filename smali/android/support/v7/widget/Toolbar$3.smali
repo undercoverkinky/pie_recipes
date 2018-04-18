@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Landroid/support/v7/widget/Toolbar;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroid/support/v7/widget/Toolbar;->r()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 1008
+    .line 1381
     iput-object p1, p0, Landroid/support/v7/widget/Toolbar$3;->a:Landroid/support/v7/widget/Toolbar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +40,11 @@
     .locals 1
 
     .prologue
-    .line 1011
+    .line 1384
     iget-object v0, p0, Landroid/support/v7/widget/Toolbar$3;->a:Landroid/support/v7/widget/Toolbar;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/Toolbar;->h()V
+    invoke-virtual {v0}, Landroid/support/v7/widget/Toolbar;->l()V
 
-    .line 1012
+    .line 1385
     return-void
 .end method

@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Lcom/kik/events/e",
         "<",
-        "Lkik/core/x;",
+        "Lkik/core/z;",
         ">;"
     }
 .end annotation
@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 125
+    .line 114
     iput-object p1, p0, Lkik/android/a/b$2;->a:Lkik/android/a/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,15 +50,15 @@
     .locals 2
 
     .prologue
-    .line 125
-    .line 1130
+    .line 114
+    .line 1119
     iget-object v0, p0, Lkik/android/a/b$2;->a:Lkik/android/a/b;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lkik/android/a/b;->a:Z
 
-    .line 1131
+    .line 1120
     iget-object v0, p0, Lkik/android/a/b$2;->a:Lkik/android/a/b;
 
     iget-object v0, v0, Lkik/android/a/b;->c:Ljava/lang/String;
@@ -71,12 +71,12 @@
 
     if-nez v0, :cond_0
 
-    .line 1132
+    .line 1121
     iget-object v0, p0, Lkik/android/a/b$2;->a:Lkik/android/a/b;
 
     invoke-virtual {v0}, Lkik/android/a/b;->a()V
 
-    .line 125
+    .line 114
     :cond_0
     return-void
 .end method

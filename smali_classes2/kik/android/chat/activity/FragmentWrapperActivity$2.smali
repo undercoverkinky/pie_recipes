@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 109
+    .line 108
     iput-object p1, p0, Lkik/android/chat/activity/FragmentWrapperActivity$2;->a:Lkik/android/chat/activity/FragmentWrapperActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,10 +50,10 @@
     .locals 1
 
     .prologue
-    .line 109
+    .line 108
     check-cast p2, Ljava/lang/String;
 
-    .line 1113
+    .line 1112
     iget-object v0, p0, Lkik/android/chat/activity/FragmentWrapperActivity$2;->a:Lkik/android/chat/activity/FragmentWrapperActivity;
 
     invoke-static {v0}, Lkik/android/chat/activity/FragmentWrapperActivity;->b(Lkik/android/chat/activity/FragmentWrapperActivity;)Ljava/lang/String;
@@ -76,7 +76,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1114
+    .line 1113
     iget-object v0, p0, Lkik/android/chat/activity/FragmentWrapperActivity$2;->a:Lkik/android/chat/activity/FragmentWrapperActivity;
 
     invoke-static {v0}, Lkik/android/chat/activity/FragmentWrapperActivity;->a(Lkik/android/chat/activity/FragmentWrapperActivity;)Lcom/kik/events/d;
@@ -85,12 +85,12 @@
 
     invoke-virtual {v0}, Lcom/kik/events/d;->a()V
 
-    .line 1115
+    .line 1114
     iget-object v0, p0, Lkik/android/chat/activity/FragmentWrapperActivity$2;->a:Lkik/android/chat/activity/FragmentWrapperActivity;
 
     invoke-virtual {v0}, Lkik/android/chat/activity/FragmentWrapperActivity;->finish()V
 
-    .line 109
+    .line 108
     :cond_0
     return-void
 .end method

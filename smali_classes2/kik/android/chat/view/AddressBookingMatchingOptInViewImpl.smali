@@ -4,77 +4,61 @@
 
 # interfaces
 .implements Lkik/android/chat/view/b;
-.implements Lkik/core/interfaces/ah;
+.implements Lkik/core/interfaces/ai;
 
 
 # instance fields
 .field _bigDevicePhoneNumberImage:Landroid/widget/ImageView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f110095
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1000d0
     .end annotation
 .end field
 
 .field protected _optedInContainer:Landroid/view/View;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f11008f
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1000ca
     .end annotation
 .end field
 
 .field protected _optedOutBigImage:Landroid/widget/ImageView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f11008e
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1000c9
     .end annotation
 .end field
 
 .field protected _optedOutHint:Landroid/widget/TextView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f110096
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1000d1
     .end annotation
 .end field
 
 .field protected _optedOutTitle:Landroid/widget/TextView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f110094
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1000cf
     .end annotation
 .end field
 
 .field protected _phoneNumberField:Lkik/android/chat/view/ValidateableInputView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f110097
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1000d2
     .end annotation
 .end field
 
 .field protected _progressContainer:Landroid/view/View;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f110091
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1000cc
     .end annotation
 .end field
 
 .field protected _syncButton:Landroid/widget/Button;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f110098
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1000d3
     .end annotation
 .end field
 
 .field private a:Lkik/android/chat/view/b$a;
 
-.field private b:Lkik/core/interfaces/ah;
+.field private b:Lkik/core/interfaces/ai;
 
 
 # direct methods
@@ -82,13 +66,13 @@
     .locals 0
 
     .prologue
-    .line 40
+    .line 42
     invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 41
+    .line 43
     invoke-direct {p0, p1}, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->a(Landroid/content/Context;)V
 
-    .line 42
+    .line 44
     return-void
 .end method
 
@@ -96,13 +80,13 @@
     .locals 0
 
     .prologue
-    .line 46
+    .line 48
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 47
+    .line 49
     invoke-direct {p0, p1}, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->a(Landroid/content/Context;)V
 
-    .line 48
+    .line 50
     return-void
 .end method
 
@@ -110,13 +94,13 @@
     .locals 0
 
     .prologue
-    .line 52
+    .line 54
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 53
+    .line 55
     invoke-direct {p0, p1}, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->a(Landroid/content/Context;)V
 
-    .line 54
+    .line 56
     return-void
 .end method
 
@@ -124,13 +108,13 @@
     .locals 0
 
     .prologue
-    .line 58
+    .line 61
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 59
+    .line 62
     invoke-direct {p0, p1}, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->a(Landroid/content/Context;)V
 
-    .line 60
+    .line 63
     return-void
 .end method
 
@@ -138,43 +122,43 @@
     .locals 2
 
     .prologue
-    .line 64
-    const v0, 0x7f04001e
+    .line 67
+    const v0, 0x7f040020
 
     invoke-static {p1, v0, p0}, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    .line 65
+    .line 68
     invoke-virtual {p0}, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->isInEditMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 70
+    .line 73
     :cond_0
     :goto_0
     return-void
 
-    .line 68
+    .line 71
     :cond_1
-    invoke-static {p0}, Lbutterknife/ButterKnife;->bind(Landroid/view/View;)V
+    invoke-static {p0}, Lbutterknife/ButterKnife;->bind(Landroid/view/View;)Lbutterknife/Unbinder;
 
-    .line 69
+    .line 72
     iget-object v0, p0, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->_phoneNumberField:Lkik/android/chat/view/ValidateableInputView;
 
-    .line 1526
+    .line 1667
     iget-object v1, v0, Lkik/android/chat/view/ValidateableInputView;->_inputView:Landroid/widget/EditText;
 
-    instance-of v1, v1, Lkik/android/widget/h;
+    instance-of v1, v1, Lkik/android/widget/f;
 
     if-eqz v1, :cond_0
 
-    .line 1527
+    .line 1668
     iget-object v0, v0, Lkik/android/chat/view/ValidateableInputView;->_inputView:Landroid/widget/EditText;
 
-    check-cast v0, Lkik/android/widget/h;
+    check-cast v0, Lkik/android/widget/f;
 
-    invoke-interface {v0, p0}, Lkik/android/widget/h;->a(Lkik/core/interfaces/ah;)V
+    invoke-interface {v0, p0}, Lkik/android/widget/f;->a(Lkik/core/interfaces/ai;)V
 
     goto :goto_0
 .end method
@@ -183,12 +167,12 @@
     .locals 2
 
     .prologue
-    .line 190
+    .line 193
     const/16 v0, 0x8
 
     if-ne p1, v0, :cond_0
 
-    .line 191
+    .line 194
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/view/View;
@@ -197,13 +181,13 @@
 
     aput-object p0, v0, v1
 
-    invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->g([Landroid/view/View;)V
 
-    .line 196
+    .line 199
     :goto_0
     return-void
 
-    .line 194
+    .line 197
     :cond_0
     invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
 
@@ -214,7 +198,7 @@
     .locals 1
 
     .prologue
-    .line 185
+    .line 188
     iget-object v0, p0, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->_bigDevicePhoneNumberImage:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
@@ -246,12 +230,12 @@
     .locals 1
 
     .prologue
-    .line 95
+    .line 98
     iget-object v0, p0, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->_progressContainer:Landroid/view/View;
 
     invoke-static {v0, p1}, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->a(Landroid/view/View;I)V
 
-    .line 96
+    .line 99
     return-void
 .end method
 
@@ -259,12 +243,12 @@
     .locals 1
 
     .prologue
-    .line 126
+    .line 129
     iget-object v0, p0, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->_phoneNumberField:Lkik/android/chat/view/ValidateableInputView;
 
-    invoke-virtual {v0, p1}, Lkik/android/chat/view/ValidateableInputView;->b(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p1}, Lkik/android/chat/view/ValidateableInputView;->e(Ljava/lang/CharSequence;)V
 
-    .line 127
+    .line 130
     return-void
 .end method
 
@@ -272,10 +256,10 @@
     .locals 0
 
     .prologue
-    .line 83
+    .line 86
     iput-object p1, p0, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->a:Lkik/android/chat/view/b$a;
 
-    .line 84
+    .line 87
     return-void
 .end method
 
@@ -283,29 +267,29 @@
     .locals 2
 
     .prologue
-    .line 157
+    .line 160
     if-eqz p1, :cond_0
 
-    .line 158
+    .line 161
     iget-object v0, p0, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->_phoneNumberField:Lkik/android/chat/view/ValidateableInputView;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, p1, v1}, Lkik/android/chat/view/ValidateableInputView;->a(Lkik/android/util/KeyboardManipulator;Z)V
 
-    .line 160
+    .line 163
     :cond_0
     return-void
 .end method
 
-.method public final a(Lkik/core/interfaces/ah;)V
+.method public final a(Lkik/core/interfaces/ai;)V
     .locals 0
 
     .prologue
-    .line 89
-    iput-object p1, p0, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->b:Lkik/core/interfaces/ah;
+    .line 92
+    iput-object p1, p0, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->b:Lkik/core/interfaces/ai;
 
-    .line 90
+    .line 93
     return-void
 .end method
 
@@ -313,12 +297,12 @@
     .locals 1
 
     .prologue
-    .line 101
+    .line 104
     iget-object v0, p0, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->_optedInContainer:Landroid/view/View;
 
     invoke-static {v0, p1}, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->a(Landroid/view/View;I)V
 
-    .line 102
+    .line 105
     return-void
 .end method
 
@@ -326,18 +310,18 @@
     .locals 1
 
     .prologue
-    .line 165
+    .line 168
     if-eqz p1, :cond_0
 
-    .line 166
+    .line 169
     iget-object v0, p0, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->_phoneNumberField:Lkik/android/chat/view/ValidateableInputView;
 
-    .line 2581
+    .line 2722
     iget-object v0, v0, Lkik/android/chat/view/ValidateableInputView;->_inputView:Landroid/widget/EditText;
 
-    invoke-interface {p1, v0}, Lkik/android/util/KeyboardManipulator;->b(Landroid/view/View;)V
+    invoke-interface {p1, v0}, Lkik/android/util/KeyboardManipulator;->hideKeyBoard(Landroid/view/View;)V
 
-    .line 168
+    .line 171
     :cond_0
     return-void
 .end method
@@ -346,17 +330,17 @@
     .locals 1
 
     .prologue
-    .line 173
-    iget-object v0, p0, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->b:Lkik/core/interfaces/ah;
+    .line 176
+    iget-object v0, p0, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->b:Lkik/core/interfaces/ai;
 
     if-eqz v0, :cond_0
 
-    .line 174
-    iget-object v0, p0, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->b:Lkik/core/interfaces/ah;
+    .line 177
+    iget-object v0, p0, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->b:Lkik/core/interfaces/ai;
 
-    invoke-interface {v0}, Lkik/core/interfaces/ah;->c()V
+    invoke-interface {v0}, Lkik/core/interfaces/ai;->c()V
 
-    .line 176
+    .line 179
     :cond_0
     return-void
 .end method
@@ -365,12 +349,12 @@
     .locals 1
 
     .prologue
-    .line 107
+    .line 110
     iget-object v0, p0, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->_optedOutBigImage:Landroid/widget/ImageView;
 
     invoke-static {v0, p1}, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->a(Landroid/view/View;I)V
 
-    .line 108
+    .line 111
     return-void
 .end method
 
@@ -378,12 +362,12 @@
     .locals 2
 
     .prologue
-    .line 113
+    .line 116
     iget-object v0, p0, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->_optedOutHint:Landroid/widget/TextView;
 
     invoke-static {v0, p1}, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->a(Landroid/view/View;I)V
 
-    .line 114
+    .line 117
     invoke-direct {p0}, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->a()Z
 
     move-result v0
@@ -392,18 +376,18 @@
 
     if-nez p1, :cond_0
 
-    .line 116
+    .line 119
     iget-object v0, p0, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->_optedOutTitle:Landroid/widget/TextView;
 
     const/16 v1, 0x8
 
     invoke-static {v0, v1}, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->a(Landroid/view/View;I)V
 
-    .line 121
+    .line 124
     :goto_0
     return-void
 
-    .line 119
+    .line 122
     :cond_0
     iget-object v0, p0, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->_optedOutTitle:Landroid/widget/TextView;
 
@@ -416,12 +400,12 @@
     .locals 1
 
     .prologue
-    .line 132
+    .line 135
     iget-object v0, p0, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->_syncButton:Landroid/widget/Button;
 
     invoke-static {v0, p1}, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->a(Landroid/view/View;I)V
 
-    .line 133
+    .line 136
     return-void
 .end method
 
@@ -429,28 +413,28 @@
     .locals 2
 
     .prologue
-    .line 138
+    .line 141
     iget-object v0, p0, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->_phoneNumberField:Lkik/android/chat/view/ValidateableInputView;
 
     invoke-static {v0, p1}, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->a(Landroid/view/View;I)V
 
-    .line 139
+    .line 142
     invoke-direct {p0}, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 140
+    .line 143
     iget-object v0, p0, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->_bigDevicePhoneNumberImage:Landroid/widget/ImageView;
 
     invoke-static {v0, p1}, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->a(Landroid/view/View;I)V
 
-    .line 146
+    .line 149
     :goto_0
     return-void
 
-    .line 144
+    .line 147
     :cond_0
     iget-object v0, p0, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->_bigDevicePhoneNumberImage:Landroid/widget/ImageView;
 
@@ -465,36 +449,36 @@
     .locals 2
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f110098
+            0x7f1000d3
         }
     .end annotation
 
     .prologue
-    .line 75
+    .line 78
     iget-object v0, p0, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->a:Lkik/android/chat/view/b$a;
 
     if-eqz v0, :cond_0
 
-    .line 76
+    .line 79
     iget-object v0, p0, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->a:Lkik/android/chat/view/b$a;
 
     iget-object v1, p0, Lkik/android/chat/view/AddressBookingMatchingOptInViewImpl;->_phoneNumberField:Lkik/android/chat/view/ValidateableInputView;
 
-    .line 2473
+    .line 2613
     iget-object v1, v1, Lkik/android/chat/view/ValidateableInputView;->_inputView:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
     move-result-object v1
 
-    .line 76
+    .line 79
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lkik/android/chat/view/b$a;->a(Ljava/lang/String;)V
 
-    .line 78
+    .line 81
     :cond_0
     return-void
 .end method

@@ -1,5 +1,5 @@
-.class public interface abstract Lio/fabric/sdk/android/services/network/HttpRequest$b;
-.super Ljava/lang/Object;
+.class public abstract Lio/fabric/sdk/android/services/network/HttpRequest$b;
+.super Lio/fabric/sdk/android/services/network/HttpRequest$e;
 .source "SourceFile"
 
 
@@ -9,44 +9,99 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x609
+    accessFlags = 0x40c
     name = "b"
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<V:",
+        "Ljava/lang/Object;",
+        ">",
+        "Lio/fabric/sdk/android/services/network/HttpRequest$e",
+        "<TV;>;"
+    }
+.end annotation
 
-# static fields
-.field public static final a:Lio/fabric/sdk/android/services/network/HttpRequest$b;
+
+# instance fields
+.field private final a:Ljava/io/Closeable;
+
+.field private final b:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method protected constructor <init>(Ljava/io/Closeable;Z)V
+    .locals 0
 
     .prologue
-    .line 313
-    new-instance v0, Lio/fabric/sdk/android/services/network/HttpRequest$b$1;
+    .line 625
+    invoke-direct {p0}, Lio/fabric/sdk/android/services/network/HttpRequest$e;-><init>()V
 
-    invoke-direct {v0}, Lio/fabric/sdk/android/services/network/HttpRequest$b$1;-><init>()V
+    .line 626
+    iput-object p1, p0, Lio/fabric/sdk/android/services/network/HttpRequest$b;->a:Ljava/io/Closeable;
 
-    sput-object v0, Lio/fabric/sdk/android/services/network/HttpRequest$b;->a:Lio/fabric/sdk/android/services/network/HttpRequest$b;
+    .line 627
+    iput-boolean p2, p0, Lio/fabric/sdk/android/services/network/HttpRequest$b;->b:Z
 
+    .line 628
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(Ljava/net/URL;)Ljava/net/HttpURLConnection;
+.method protected final b()V
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
-.end method
 
-.method public abstract a(Ljava/net/URL;Ljava/net/Proxy;)Ljava/net/HttpURLConnection;
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
+    .prologue
+    .line 632
+    iget-object v0, p0, Lio/fabric/sdk/android/services/network/HttpRequest$b;->a:Ljava/io/Closeable;
+
+    instance-of v0, v0, Ljava/io/Flushable;
+
+    if-eqz v0, :cond_0
+
+    .line 633
+    iget-object v0, p0, Lio/fabric/sdk/android/services/network/HttpRequest$b;->a:Ljava/io/Closeable;
+
+    check-cast v0, Ljava/io/Flushable;
+
+    invoke-interface {v0}, Ljava/io/Flushable;->flush()V
+
+    .line 634
+    :cond_0
+    iget-boolean v0, p0, Lio/fabric/sdk/android/services/network/HttpRequest$b;->b:Z
+
+    if-eqz v0, :cond_1
+
+    .line 636
+    :try_start_0
+    iget-object v0, p0, Lio/fabric/sdk/android/services/network/HttpRequest$b;->a:Ljava/io/Closeable;
+
+    invoke-interface {v0}, Ljava/io/Closeable;->close()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 642
+    :goto_0
+    return-void
+
+    .line 641
+    :cond_1
+    iget-object v0, p0, Lio/fabric/sdk/android/services/network/HttpRequest$b;->a:Ljava/io/Closeable;
+
+    invoke-interface {v0}, Ljava/io/Closeable;->close()V
+
+    goto :goto_0
+
+    .line 639
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
 .end method

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/common/collect/ImmutableList;->a(I)Lcom/google/common/collect/y;
+    value = Lcom/google/common/collect/ImmutableList;->a(I)Lcom/google/common/collect/t;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,7 +30,7 @@
     .locals 0
 
     .prologue
-    .line 348
+    .line 361
     iput-object p1, p0, Lcom/google/common/collect/ImmutableList$1;->a:Lcom/google/common/collect/ImmutableList;
 
     invoke-direct {p0, p2, p3}, Lcom/google/common/collect/a;-><init>(II)V
@@ -49,7 +49,7 @@
     .end annotation
 
     .prologue
-    .line 351
+    .line 364
     iget-object v0, p0, Lcom/google/common/collect/ImmutableList$1;->a:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {v0, p1}, Lcom/google/common/collect/ImmutableList;->get(I)Ljava/lang/Object;

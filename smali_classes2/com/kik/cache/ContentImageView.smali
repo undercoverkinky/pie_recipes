@@ -12,19 +12,6 @@
 
 
 # instance fields
-.field private final A:Lcom/android/volley/i$b;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/android/volley/i$b",
-            "<",
-            "Landroid/graphics/Bitmap;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private B:Landroid/content/Context;
-
 .field private a:Lkik/core/datatypes/messageExtensions/ContentMessage;
 
 .field private b:Landroid/graphics/Bitmap;
@@ -65,102 +52,50 @@
 
 .field private w:Landroid/view/View$OnTouchListener;
 
-.field private x:Lcom/kik/events/g;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/kik/events/g",
-            "<",
-            "Ljava/lang/Void;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private y:Lcom/kik/events/g;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/kik/events/g",
-            "<",
-            "Ljava/lang/Void;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final z:Lcom/android/volley/i$a;
-
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
     .prologue
-    .line 93
+    .line 58
     invoke-direct {p0, p1}, Lkik/android/widget/KikNetworkedImageView;-><init>(Landroid/content/Context;)V
 
-    .line 38
+    .line 33
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object v0, p0, Lcom/kik/cache/ContentImageView;->c:Landroid/graphics/Matrix;
 
-    .line 44
+    .line 39
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/kik/cache/ContentImageView;->d:I
 
-    .line 47
+    .line 42
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
 
     iput-object v0, p0, Lcom/kik/cache/ContentImageView;->h:Landroid/graphics/PointF;
 
-    .line 48
+    .line 43
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
 
     iput-object v0, p0, Lcom/kik/cache/ContentImageView;->i:Landroid/graphics/PointF;
 
-    .line 55
+    .line 50
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Lcom/kik/cache/ContentImageView;->o:F
 
-    .line 60
-    new-instance v0, Lcom/kik/events/g;
-
-    invoke-direct {v0, p0}, Lcom/kik/events/g;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lcom/kik/cache/ContentImageView;->x:Lcom/kik/events/g;
-
-    .line 61
-    new-instance v0, Lcom/kik/events/g;
-
-    invoke-direct {v0, p0}, Lcom/kik/events/g;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lcom/kik/cache/ContentImageView;->y:Lcom/kik/events/g;
-
-    .line 63
-    new-instance v0, Lcom/kik/cache/ContentImageView$1;
-
-    invoke-direct {v0, p0}, Lcom/kik/cache/ContentImageView$1;-><init>(Lcom/kik/cache/ContentImageView;)V
-
-    iput-object v0, p0, Lcom/kik/cache/ContentImageView;->z:Lcom/android/volley/i$a;
-
-    .line 71
-    new-instance v0, Lcom/kik/cache/ContentImageView$2;
-
-    invoke-direct {v0, p0}, Lcom/kik/cache/ContentImageView$2;-><init>(Lcom/kik/cache/ContentImageView;)V
-
-    iput-object v0, p0, Lcom/kik/cache/ContentImageView;->A:Lcom/android/volley/i$b;
-
-    .line 94
+    .line 59
     invoke-direct {p0, p1}, Lcom/kik/cache/ContentImageView;->a(Landroid/content/Context;)V
 
-    .line 95
+    .line 60
     return-void
 .end method
 
@@ -168,72 +103,44 @@
     .locals 1
 
     .prologue
-    .line 99
+    .line 64
     invoke-direct {p0, p1, p2}, Lkik/android/widget/KikNetworkedImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 38
+    .line 33
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object v0, p0, Lcom/kik/cache/ContentImageView;->c:Landroid/graphics/Matrix;
 
-    .line 44
+    .line 39
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/kik/cache/ContentImageView;->d:I
 
-    .line 47
+    .line 42
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
 
     iput-object v0, p0, Lcom/kik/cache/ContentImageView;->h:Landroid/graphics/PointF;
 
-    .line 48
+    .line 43
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
 
     iput-object v0, p0, Lcom/kik/cache/ContentImageView;->i:Landroid/graphics/PointF;
 
-    .line 55
+    .line 50
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Lcom/kik/cache/ContentImageView;->o:F
 
-    .line 60
-    new-instance v0, Lcom/kik/events/g;
-
-    invoke-direct {v0, p0}, Lcom/kik/events/g;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lcom/kik/cache/ContentImageView;->x:Lcom/kik/events/g;
-
-    .line 61
-    new-instance v0, Lcom/kik/events/g;
-
-    invoke-direct {v0, p0}, Lcom/kik/events/g;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lcom/kik/cache/ContentImageView;->y:Lcom/kik/events/g;
-
-    .line 63
-    new-instance v0, Lcom/kik/cache/ContentImageView$1;
-
-    invoke-direct {v0, p0}, Lcom/kik/cache/ContentImageView$1;-><init>(Lcom/kik/cache/ContentImageView;)V
-
-    iput-object v0, p0, Lcom/kik/cache/ContentImageView;->z:Lcom/android/volley/i$a;
-
-    .line 71
-    new-instance v0, Lcom/kik/cache/ContentImageView$2;
-
-    invoke-direct {v0, p0}, Lcom/kik/cache/ContentImageView$2;-><init>(Lcom/kik/cache/ContentImageView;)V
-
-    iput-object v0, p0, Lcom/kik/cache/ContentImageView;->A:Lcom/android/volley/i$b;
-
-    .line 100
+    .line 65
     invoke-direct {p0, p1}, Lcom/kik/cache/ContentImageView;->a(Landroid/content/Context;)V
 
-    .line 101
+    .line 66
     return-void
 .end method
 
@@ -241,72 +148,44 @@
     .locals 1
 
     .prologue
-    .line 105
+    .line 70
     invoke-direct {p0, p1, p2, p3}, Lkik/android/widget/KikNetworkedImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 38
+    .line 33
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object v0, p0, Lcom/kik/cache/ContentImageView;->c:Landroid/graphics/Matrix;
 
-    .line 44
+    .line 39
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/kik/cache/ContentImageView;->d:I
 
-    .line 47
+    .line 42
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
 
     iput-object v0, p0, Lcom/kik/cache/ContentImageView;->h:Landroid/graphics/PointF;
 
-    .line 48
+    .line 43
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
 
     iput-object v0, p0, Lcom/kik/cache/ContentImageView;->i:Landroid/graphics/PointF;
 
-    .line 55
+    .line 50
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Lcom/kik/cache/ContentImageView;->o:F
 
-    .line 60
-    new-instance v0, Lcom/kik/events/g;
-
-    invoke-direct {v0, p0}, Lcom/kik/events/g;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lcom/kik/cache/ContentImageView;->x:Lcom/kik/events/g;
-
-    .line 61
-    new-instance v0, Lcom/kik/events/g;
-
-    invoke-direct {v0, p0}, Lcom/kik/events/g;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lcom/kik/cache/ContentImageView;->y:Lcom/kik/events/g;
-
-    .line 63
-    new-instance v0, Lcom/kik/cache/ContentImageView$1;
-
-    invoke-direct {v0, p0}, Lcom/kik/cache/ContentImageView$1;-><init>(Lcom/kik/cache/ContentImageView;)V
-
-    iput-object v0, p0, Lcom/kik/cache/ContentImageView;->z:Lcom/android/volley/i$a;
-
     .line 71
-    new-instance v0, Lcom/kik/cache/ContentImageView$2;
-
-    invoke-direct {v0, p0}, Lcom/kik/cache/ContentImageView$2;-><init>(Lcom/kik/cache/ContentImageView;)V
-
-    iput-object v0, p0, Lcom/kik/cache/ContentImageView;->A:Lcom/android/volley/i$b;
-
-    .line 106
     invoke-direct {p0, p1}, Lcom/kik/cache/ContentImageView;->a(Landroid/content/Context;)V
 
-    .line 107
+    .line 72
     return-void
 .end method
 
@@ -314,7 +193,7 @@
     .locals 0
 
     .prologue
-    .line 30
+    .line 25
     iput p1, p0, Lcom/kik/cache/ContentImageView;->o:F
 
     return p1
@@ -324,18 +203,18 @@
     .locals 0
 
     .prologue
-    .line 30
+    .line 25
     iput p1, p0, Lcom/kik/cache/ContentImageView;->d:I
 
     return p1
 .end method
 
-.method static synthetic a(Lcom/kik/cache/ContentImageView;)Lcom/kik/events/g;
+.method static synthetic a(Lcom/kik/cache/ContentImageView;)Landroid/view/View$OnTouchListener;
     .locals 1
 
     .prologue
-    .line 30
-    iget-object v0, p0, Lcom/kik/cache/ContentImageView;->y:Lcom/kik/events/g;
+    .line 25
+    iget-object v0, p0, Lcom/kik/cache/ContentImageView;->w:Landroid/view/View$OnTouchListener;
 
     return-object v0
 .end method
@@ -346,15 +225,12 @@
     .prologue
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 171
+    .line 136
     const/4 v0, 0x1
 
     invoke-super {p0, v0}, Lkik/android/widget/KikNetworkedImageView;->setClickable(Z)V
 
-    .line 172
-    iput-object p1, p0, Lcom/kik/cache/ContentImageView;->B:Landroid/content/Context;
-
-    .line 173
+    .line 137
     new-instance v0, Landroid/view/ScaleGestureDetector;
 
     new-instance v1, Lcom/kik/cache/ContentImageView$a;
@@ -367,36 +243,36 @@
 
     iput-object v0, p0, Lcom/kik/cache/ContentImageView;->v:Landroid/view/ScaleGestureDetector;
 
-    .line 174
+    .line 138
     iget-object v0, p0, Lcom/kik/cache/ContentImageView;->c:Landroid/graphics/Matrix;
 
     invoke-virtual {v0, v3, v3}, Landroid/graphics/Matrix;->setTranslate(FF)V
 
-    .line 175
+    .line 139
     const/16 v0, 0x9
 
     new-array v0, v0, [F
 
     iput-object v0, p0, Lcom/kik/cache/ContentImageView;->j:[F
 
-    .line 176
+    .line 140
     iget-object v0, p0, Lcom/kik/cache/ContentImageView;->c:Landroid/graphics/Matrix;
 
     invoke-virtual {p0, v0}, Lcom/kik/cache/ContentImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
 
-    .line 177
+    .line 141
     sget-object v0, Landroid/widget/ImageView$ScaleType;->MATRIX:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {p0, v0}, Lcom/kik/cache/ContentImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 179
-    new-instance v0, Lcom/kik/cache/ContentImageView$3;
+    .line 143
+    new-instance v0, Lcom/kik/cache/ContentImageView$1;
 
-    invoke-direct {v0, p0}, Lcom/kik/cache/ContentImageView$3;-><init>(Lcom/kik/cache/ContentImageView;)V
+    invoke-direct {v0, p0}, Lcom/kik/cache/ContentImageView$1;-><init>(Lcom/kik/cache/ContentImageView;)V
 
     invoke-virtual {p0, v0}, Lcom/kik/cache/ContentImageView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 263
+    .line 227
     return-void
 .end method
 
@@ -404,18 +280,18 @@
     .locals 0
 
     .prologue
-    .line 30
+    .line 25
     iput p1, p0, Lcom/kik/cache/ContentImageView;->p:F
 
     return p1
 .end method
 
-.method static synthetic b(Lcom/kik/cache/ContentImageView;)Lcom/kik/events/g;
+.method static synthetic b(Lcom/kik/cache/ContentImageView;)Landroid/view/ScaleGestureDetector;
     .locals 1
 
     .prologue
-    .line 30
-    iget-object v0, p0, Lcom/kik/cache/ContentImageView;->x:Lcom/kik/events/g;
+    .line 25
+    iget-object v0, p0, Lcom/kik/cache/ContentImageView;->v:Landroid/view/ScaleGestureDetector;
 
     return-object v0
 .end method
@@ -424,78 +300,78 @@
     .locals 0
 
     .prologue
-    .line 30
+    .line 25
     iput p1, p0, Lcom/kik/cache/ContentImageView;->q:F
 
     return p1
 .end method
 
-.method static synthetic c(Lcom/kik/cache/ContentImageView;)Landroid/view/View$OnTouchListener;
+.method static synthetic c(Lcom/kik/cache/ContentImageView;)[F
     .locals 1
 
     .prologue
-    .line 30
-    iget-object v0, p0, Lcom/kik/cache/ContentImageView;->w:Landroid/view/View$OnTouchListener;
-
-    return-object v0
-.end method
-
-.method static synthetic d(Lcom/kik/cache/ContentImageView;)Landroid/view/ScaleGestureDetector;
-    .locals 1
-
-    .prologue
-    .line 30
-    iget-object v0, p0, Lcom/kik/cache/ContentImageView;->v:Landroid/view/ScaleGestureDetector;
-
-    return-object v0
-.end method
-
-.method static synthetic e(Lcom/kik/cache/ContentImageView;)[F
-    .locals 1
-
-    .prologue
-    .line 30
+    .line 25
     iget-object v0, p0, Lcom/kik/cache/ContentImageView;->j:[F
 
     return-object v0
 .end method
 
-.method static synthetic f(Lcom/kik/cache/ContentImageView;)Landroid/graphics/Matrix;
+.method static synthetic d(Lcom/kik/cache/ContentImageView;)Landroid/graphics/Matrix;
     .locals 1
 
     .prologue
-    .line 30
+    .line 25
     iget-object v0, p0, Lcom/kik/cache/ContentImageView;->c:Landroid/graphics/Matrix;
 
     return-object v0
 .end method
 
-.method static synthetic g(Lcom/kik/cache/ContentImageView;)Landroid/graphics/PointF;
+.method static synthetic e(Lcom/kik/cache/ContentImageView;)Landroid/graphics/PointF;
     .locals 1
 
     .prologue
-    .line 30
+    .line 25
     iget-object v0, p0, Lcom/kik/cache/ContentImageView;->h:Landroid/graphics/PointF;
 
     return-object v0
 .end method
 
-.method static synthetic h(Lcom/kik/cache/ContentImageView;)Landroid/graphics/PointF;
+.method static synthetic f(Lcom/kik/cache/ContentImageView;)Landroid/graphics/PointF;
     .locals 1
 
     .prologue
-    .line 30
+    .line 25
     iget-object v0, p0, Lcom/kik/cache/ContentImageView;->i:Landroid/graphics/PointF;
 
     return-object v0
 .end method
 
-.method static synthetic i(Lcom/kik/cache/ContentImageView;)I
+.method static synthetic g(Lcom/kik/cache/ContentImageView;)I
     .locals 1
 
     .prologue
-    .line 30
+    .line 25
     iget v0, p0, Lcom/kik/cache/ContentImageView;->d:I
+
+    return v0
+.end method
+
+.method static synthetic h(Lcom/kik/cache/ContentImageView;)F
+    .locals 1
+
+    .prologue
+    .line 25
+    iget v0, p0, Lcom/kik/cache/ContentImageView;->r:F
+
+    return v0
+.end method
+
+.method static synthetic i(Lcom/kik/cache/ContentImageView;)F
+    .locals 1
+
+    .prologue
+    .line 25
+    iget v0, p0, Lcom/kik/cache/ContentImageView;->o:F
 
     return v0
 .end method
@@ -504,8 +380,8 @@
     .locals 1
 
     .prologue
-    .line 30
-    iget v0, p0, Lcom/kik/cache/ContentImageView;->r:F
+    .line 25
+    iget v0, p0, Lcom/kik/cache/ContentImageView;->s:F
 
     return v0
 .end method
@@ -514,8 +390,8 @@
     .locals 1
 
     .prologue
-    .line 30
-    iget v0, p0, Lcom/kik/cache/ContentImageView;->o:F
+    .line 25
+    iget v0, p0, Lcom/kik/cache/ContentImageView;->m:F
 
     return v0
 .end method
@@ -524,8 +400,8 @@
     .locals 1
 
     .prologue
-    .line 30
-    iget v0, p0, Lcom/kik/cache/ContentImageView;->s:F
+    .line 25
+    iget v0, p0, Lcom/kik/cache/ContentImageView;->q:F
 
     return v0
 .end method
@@ -534,8 +410,8 @@
     .locals 1
 
     .prologue
-    .line 30
-    iget v0, p0, Lcom/kik/cache/ContentImageView;->m:F
+    .line 25
+    iget v0, p0, Lcom/kik/cache/ContentImageView;->n:F
 
     return v0
 .end method
@@ -544,8 +420,8 @@
     .locals 1
 
     .prologue
-    .line 30
-    iget v0, p0, Lcom/kik/cache/ContentImageView;->q:F
+    .line 25
+    iget v0, p0, Lcom/kik/cache/ContentImageView;->p:F
 
     return v0
 .end method
@@ -554,8 +430,8 @@
     .locals 1
 
     .prologue
-    .line 30
-    iget v0, p0, Lcom/kik/cache/ContentImageView;->n:F
+    .line 25
+    iget v0, p0, Lcom/kik/cache/ContentImageView;->k:F
 
     return v0
 .end method
@@ -564,27 +440,7 @@
     .locals 1
 
     .prologue
-    .line 30
-    iget v0, p0, Lcom/kik/cache/ContentImageView;->p:F
-
-    return v0
-.end method
-
-.method static synthetic q(Lcom/kik/cache/ContentImageView;)F
-    .locals 1
-
-    .prologue
-    .line 30
-    iget v0, p0, Lcom/kik/cache/ContentImageView;->k:F
-
-    return v0
-.end method
-
-.method static synthetic r(Lcom/kik/cache/ContentImageView;)F
-    .locals 1
-
-    .prologue
-    .line 30
+    .line 25
     iget v0, p0, Lcom/kik/cache/ContentImageView;->l:F
 
     return v0
@@ -592,14 +448,14 @@
 
 
 # virtual methods
-.method protected final a(Landroid/graphics/Bitmap;Ljava/lang/String;)Lkik/android/widget/ak;
+.method protected final a(Landroid/graphics/Bitmap;Ljava/lang/String;)Lkik/android/widget/bb;
     .locals 1
 
     .prologue
-    .line 157
-    new-instance v0, Lkik/android/widget/cs;
+    .line 122
+    new-instance v0, Lkik/android/widget/cr;
 
-    invoke-direct {v0, p1, p2}, Lkik/android/widget/cs;-><init>(Landroid/graphics/Bitmap;Ljava/lang/String;)V
+    invoke-direct {v0, p1, p2}, Lkik/android/widget/cr;-><init>(Landroid/graphics/Bitmap;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -608,7 +464,7 @@
     .locals 1
 
     .prologue
-    .line 137
+    .line 102
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/kik/cache/ContentImageView;->b:Landroid/graphics/Bitmap;
@@ -619,17 +475,17 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 139
+    .line 104
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/kik/cache/ContentImageView;->b:Landroid/graphics/Bitmap;
 
-    .line 141
+    .line 106
     :cond_1
     invoke-super {p0, p1}, Lkik/android/widget/KikNetworkedImageView;->a(Landroid/graphics/Bitmap;)V
 
-    .line 142
+    .line 107
     return-void
 .end method
 
@@ -637,76 +493,68 @@
     .locals 0
 
     .prologue
-    .line 166
+    .line 131
     iput-object p1, p0, Lcom/kik/cache/ContentImageView;->w:Landroid/view/View$OnTouchListener;
 
-    .line 167
+    .line 132
     return-void
 .end method
 
-.method protected final a(Lcom/kik/cache/aa$d;Z)V
+.method protected final a(Lcom/kik/cache/KikVolleyImageLoader$c;Z)V
     .locals 1
 
     .prologue
-    .line 128
+    .line 93
     invoke-virtual {p0}, Lcom/kik/cache/ContentImageView;->d()V
 
-    .line 129
-    invoke-virtual {p1}, Lcom/kik/cache/aa$d;->b()Landroid/graphics/Bitmap;
+    .line 94
+    invoke-virtual {p1}, Lcom/kik/cache/KikVolleyImageLoader$c;->b()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 130
-    invoke-virtual {p1}, Lcom/kik/cache/aa$d;->b()Landroid/graphics/Bitmap;
+    .line 95
+    invoke-virtual {p1}, Lcom/kik/cache/KikVolleyImageLoader$c;->b()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/kik/cache/ContentImageView;->b(Landroid/graphics/Bitmap;)V
 
-    .line 132
+    .line 97
     :cond_0
     return-void
 .end method
 
-.method public final a(Lkik/core/datatypes/messageExtensions/ContentMessage;[BLcom/kik/cache/aa;Lcom/kik/android/Mixpanel;Lkik/core/net/e;Lkik/core/x;Lcom/kik/cache/aa$e;)V
-    .locals 7
+.method public final a(Lkik/core/datatypes/messageExtensions/ContentMessage;Lcom/kik/cache/KikVolleyImageLoader;Lcom/kik/android/Mixpanel;Lkik/core/net/e;Lkik/core/z;Lcom/kik/cache/KikVolleyImageLoader$d;)V
+    .locals 6
 
     .prologue
-    const/4 v5, 0x1
-
     const/4 v3, 0x0
 
-    .line 111
+    const/4 v5, 0x1
+
+    .line 76
     iput-object p1, p0, Lcom/kik/cache/ContentImageView;->a:Lkik/core/datatypes/messageExtensions/ContentMessage;
 
-    .line 113
-    invoke-static {p1, p2, p4, p5, p6}, Lcom/kik/cache/k;->a(Lkik/core/datatypes/messageExtensions/ContentMessage;[BLcom/kik/android/Mixpanel;Lkik/core/net/e;Lkik/core/x;)Lcom/kik/cache/y;
+    .line 78
+    invoke-static {p1, p3, p4, p5}, Lcom/kik/cache/ContentImageRequest;->getContentMessageRequest(Lkik/core/datatypes/messageExtensions/ContentMessage;Lcom/kik/android/Mixpanel;Lkik/core/net/e;Lkik/core/z;)Lcom/kik/cache/KikImageRequest;
 
     move-result-object v1
 
-    move-object v0, p0
+    .line 81
+    invoke-virtual {p0, v1, p2, v5, v5}, Lcom/kik/cache/ContentImageView;->a(Lcom/kik/cache/KikImageRequest;Lcom/kik/cache/KikVolleyImageLoader;ZZ)V
 
-    move-object v2, p3
+    move-object v0, p2
 
-    move v4, v3
-
-    move v6, v5
-
-    .line 116
-    invoke-virtual/range {v0 .. v6}, Lcom/kik/cache/ContentImageView;->a(Lcom/kik/cache/y;Lcom/kik/cache/aa;IIZZ)V
-
-    move-object v0, p3
-
-    move-object v2, p7
+    move-object v2, p6
 
     move v4, v3
 
-    .line 117
-    invoke-virtual/range {v0 .. v5}, Lcom/kik/cache/aa;->a(Lcom/kik/cache/y;Lcom/kik/cache/aa$e;IIZ)Lcom/kik/cache/aa$d;
+    .line 82
+    invoke-virtual/range {v0 .. v5}, Lcom/kik/cache/KikVolleyImageLoader;->a(Lcom/kik/cache/KikImageRequest;Lcom/kik/cache/KikVolleyImageLoader$d;IIZ)Lcom/kik/cache/KikVolleyImageLoader$c;
 
-    .line 118
+    .line 83
     return-void
 .end method
 
@@ -714,7 +562,7 @@
     .locals 2
 
     .prologue
-    .line 146
+    .line 111
     iget v0, p0, Lcom/kik/cache/ContentImageView;->o:F
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -740,10 +588,10 @@
     .prologue
     const/high16 v3, 0x40000000    # 2.0f
 
-    .line 371
+    .line 329
     invoke-super {p0, p1, p2}, Lkik/android/widget/KikNetworkedImageView;->onMeasure(II)V
 
-    .line 372
+    .line 330
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
@@ -752,7 +600,7 @@
 
     iput v0, p0, Lcom/kik/cache/ContentImageView;->m:F
 
-    .line 373
+    .line 331
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
@@ -761,41 +609,41 @@
 
     iput v0, p0, Lcom/kik/cache/ContentImageView;->n:F
 
-    .line 376
+    .line 334
     iget v0, p0, Lcom/kik/cache/ContentImageView;->m:F
 
     iget v1, p0, Lcom/kik/cache/ContentImageView;->t:F
 
     div-float/2addr v0, v1
 
-    .line 377
+    .line 335
     iget v1, p0, Lcom/kik/cache/ContentImageView;->n:F
 
     iget v2, p0, Lcom/kik/cache/ContentImageView;->u:F
 
     div-float/2addr v1, v2
 
-    .line 378
+    .line 336
     invoke-static {v0, v1}, Ljava/lang/Math;->min(FF)F
 
     move-result v0
 
-    .line 379
+    .line 337
     iget-object v1, p0, Lcom/kik/cache/ContentImageView;->c:Landroid/graphics/Matrix;
 
     invoke-virtual {v1, v0, v0}, Landroid/graphics/Matrix;->setScale(FF)V
 
-    .line 380
+    .line 338
     iget-object v1, p0, Lcom/kik/cache/ContentImageView;->c:Landroid/graphics/Matrix;
 
     invoke-virtual {p0, v1}, Lcom/kik/cache/ContentImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
 
-    .line 381
+    .line 339
     const/high16 v1, 0x3f800000    # 1.0f
 
     iput v1, p0, Lcom/kik/cache/ContentImageView;->o:F
 
-    .line 384
+    .line 342
     iget v1, p0, Lcom/kik/cache/ContentImageView;->n:F
 
     iget v2, p0, Lcom/kik/cache/ContentImageView;->u:F
@@ -806,7 +654,7 @@
 
     iput v1, p0, Lcom/kik/cache/ContentImageView;->l:F
 
-    .line 385
+    .line 343
     iget v1, p0, Lcom/kik/cache/ContentImageView;->m:F
 
     iget v2, p0, Lcom/kik/cache/ContentImageView;->t:F
@@ -817,21 +665,21 @@
 
     iput v0, p0, Lcom/kik/cache/ContentImageView;->k:F
 
-    .line 386
+    .line 344
     iget v0, p0, Lcom/kik/cache/ContentImageView;->l:F
 
     div-float/2addr v0, v3
 
     iput v0, p0, Lcom/kik/cache/ContentImageView;->l:F
 
-    .line 387
+    .line 345
     iget v0, p0, Lcom/kik/cache/ContentImageView;->k:F
 
     div-float/2addr v0, v3
 
     iput v0, p0, Lcom/kik/cache/ContentImageView;->k:F
 
-    .line 389
+    .line 347
     iget-object v0, p0, Lcom/kik/cache/ContentImageView;->c:Landroid/graphics/Matrix;
 
     iget v1, p0, Lcom/kik/cache/ContentImageView;->k:F
@@ -840,7 +688,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 391
+    .line 349
     iget v0, p0, Lcom/kik/cache/ContentImageView;->m:F
 
     iget v1, p0, Lcom/kik/cache/ContentImageView;->k:F
@@ -851,7 +699,7 @@
 
     iput v0, p0, Lcom/kik/cache/ContentImageView;->r:F
 
-    .line 392
+    .line 350
     iget v0, p0, Lcom/kik/cache/ContentImageView;->n:F
 
     iget v1, p0, Lcom/kik/cache/ContentImageView;->l:F
@@ -862,7 +710,7 @@
 
     iput v0, p0, Lcom/kik/cache/ContentImageView;->s:F
 
-    .line 393
+    .line 351
     iget v0, p0, Lcom/kik/cache/ContentImageView;->m:F
 
     iget v1, p0, Lcom/kik/cache/ContentImageView;->o:F
@@ -885,7 +733,7 @@
 
     iput v0, p0, Lcom/kik/cache/ContentImageView;->p:F
 
-    .line 394
+    .line 352
     iget v0, p0, Lcom/kik/cache/ContentImageView;->n:F
 
     iget v1, p0, Lcom/kik/cache/ContentImageView;->o:F
@@ -908,12 +756,12 @@
 
     iput v0, p0, Lcom/kik/cache/ContentImageView;->q:F
 
-    .line 395
+    .line 353
     iget-object v0, p0, Lcom/kik/cache/ContentImageView;->c:Landroid/graphics/Matrix;
 
     invoke-virtual {p0, v0}, Lcom/kik/cache/ContentImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
 
-    .line 396
+    .line 354
     return-void
 .end method
 
@@ -921,13 +769,13 @@
     .locals 1
 
     .prologue
-    .line 268
+    .line 232
     invoke-super {p0, p1}, Lkik/android/widget/KikNetworkedImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 269
+    .line 233
     if-eqz p1, :cond_0
 
-    .line 270
+    .line 234
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
@@ -936,7 +784,7 @@
 
     iput v0, p0, Lcom/kik/cache/ContentImageView;->t:F
 
-    .line 271
+    .line 235
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v0
@@ -945,7 +793,7 @@
 
     iput v0, p0, Lcom/kik/cache/ContentImageView;->u:F
 
-    .line 273
+    .line 237
     :cond_0
     return-void
 .end method
@@ -954,13 +802,13 @@
     .locals 1
 
     .prologue
-    .line 278
+    .line 242
     invoke-super {p0, p1}, Lkik/android/widget/KikNetworkedImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 280
+    .line 244
     if-eqz p1, :cond_0
 
-    .line 281
+    .line 245
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v0
@@ -969,7 +817,7 @@
 
     iput v0, p0, Lcom/kik/cache/ContentImageView;->t:F
 
-    .line 282
+    .line 246
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v0
@@ -978,7 +826,7 @@
 
     iput v0, p0, Lcom/kik/cache/ContentImageView;->u:F
 
-    .line 284
+    .line 248
     :cond_0
     return-void
 .end method

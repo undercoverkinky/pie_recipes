@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/google/common/cache/f;
+.implements Lcom/google/common/cache/c;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "<",
         "Lcom/google/common/cache/CacheBuilder$NullListener;",
         ">;",
-        "Lcom/google/common/cache/f",
+        "Lcom/google/common/cache/c",
         "<",
         "Ljava/lang/Object;",
         "Ljava/lang/Object;",
@@ -44,7 +44,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 191
+    .line 186
     new-instance v0, Lcom/google/common/cache/CacheBuilder$NullListener;
 
     const-string v1, "INSTANCE"
@@ -53,7 +53,7 @@
 
     sput-object v0, Lcom/google/common/cache/CacheBuilder$NullListener;->INSTANCE:Lcom/google/common/cache/CacheBuilder$NullListener;
 
-    .line 190
+    .line 185
     const/4 v0, 0x1
 
     new-array v0, v0, [Lcom/google/common/cache/CacheBuilder$NullListener;
@@ -76,7 +76,7 @@
     .end annotation
 
     .prologue
-    .line 190
+    .line 185
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -86,7 +86,7 @@
     .locals 1
 
     .prologue
-    .line 190
+    .line 185
     const-class v0, Lcom/google/common/cache/CacheBuilder$NullListener;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -102,7 +102,7 @@
     .locals 1
 
     .prologue
-    .line 190
+    .line 185
     sget-object v0, Lcom/google/common/cache/CacheBuilder$NullListener;->$VALUES:[Lcom/google/common/cache/CacheBuilder$NullListener;
 
     invoke-virtual {v0}, [Lcom/google/common/cache/CacheBuilder$NullListener;->clone()Ljava/lang/Object;
@@ -116,12 +116,12 @@
 
 
 # virtual methods
-.method public final onRemoval(Lcom/google/common/cache/g;)V
+.method public final onRemoval(Lcom/google/common/cache/RemovalNotification;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/google/common/cache/g",
+            "Lcom/google/common/cache/RemovalNotification",
             "<",
             "Ljava/lang/Object;",
             "Ljava/lang/Object;",
@@ -130,6 +130,6 @@
     .end annotation
 
     .prologue
-    .line 194
+    .line 189
     return-void
 .end method

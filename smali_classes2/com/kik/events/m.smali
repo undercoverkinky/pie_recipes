@@ -1,831 +1,466 @@
-.class public final Lcom/kik/events/m;
+.class public Lcom/kik/events/m;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field private static final a:Ljava/util/concurrent/ScheduledExecutorService;
+# instance fields
+.field private a:Lcom/kik/events/g;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/kik/events/g",
+            "<",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private b:Lcom/kik/events/g;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/kik/events/g",
+            "<",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private c:Lcom/kik/events/d;
+
+.field private d:Ljava/util/concurrent/CopyOnWriteArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/concurrent/CopyOnWriteArrayList",
+            "<",
+            "Lcom/kik/events/o;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private e:Ljava/util/concurrent/atomic/AtomicLong;
+
+.field private f:Lcom/kik/events/e;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/kik/events/e",
+            "<",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 1
 
     .prologue
-    .line 25
-    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadScheduledExecutor()Ljava/util/concurrent/ScheduledExecutorService;
+    .line 12
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    .line 14
+    new-instance v0, Lcom/kik/events/g;
 
-    sput-object v0, Lcom/kik/events/m;->a:Ljava/util/concurrent/ScheduledExecutorService;
+    invoke-direct {v0, p0}, Lcom/kik/events/g;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lcom/kik/events/m;->a:Lcom/kik/events/g;
+
+    .line 15
+    new-instance v0, Lcom/kik/events/g;
+
+    invoke-direct {v0, p0}, Lcom/kik/events/g;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lcom/kik/events/m;->b:Lcom/kik/events/g;
+
+    .line 16
+    new-instance v0, Lcom/kik/events/d;
+
+    invoke-direct {v0}, Lcom/kik/events/d;-><init>()V
+
+    iput-object v0, p0, Lcom/kik/events/m;->c:Lcom/kik/events/d;
+
+    .line 18
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/kik/events/m;->d:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    .line 19
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+
+    iput-object v0, p0, Lcom/kik/events/m;->e:Ljava/util/concurrent/atomic/AtomicLong;
+
+    .line 21
+    new-instance v0, Lcom/kik/events/m$1;
+
+    invoke-direct {v0, p0}, Lcom/kik/events/m$1;-><init>(Lcom/kik/events/m;)V
+
+    iput-object v0, p0, Lcom/kik/events/m;->f:Lcom/kik/events/e;
 
     return-void
 .end method
 
-.method public static a(Lcom/kik/events/Promise;)Lcom/kik/events/Promise;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/kik/events/Promise",
-            "<TT;>;)",
-            "Lcom/kik/events/Promise",
-            "<",
-            "Ljava/lang/Void;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 98
-    new-instance v0, Lcom/kik/events/Promise;
-
-    invoke-direct {v0}, Lcom/kik/events/Promise;-><init>()V
-
-    .line 100
-    new-instance v1, Lcom/kik/events/m$12;
-
-    invoke-direct {v1, v0}, Lcom/kik/events/m$12;-><init>(Lcom/kik/events/Promise;)V
-
-    invoke-virtual {p0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
-
-    .line 120
-    return-object v0
-.end method
-
-.method public static a(Lcom/kik/events/Promise;J)Lcom/kik/events/Promise;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/kik/events/Promise",
-            "<TT;>;J)",
-            "Lcom/kik/events/Promise",
-            "<TT;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 164
-    if-nez p0, :cond_0
-
-    .line 165
-    new-instance p0, Lcom/kik/events/Promise;
-
-    invoke-direct {p0}, Lcom/kik/events/Promise;-><init>()V
-
-    .line 169
-    :cond_0
-    sget-object v0, Lcom/kik/events/m;->a:Ljava/util/concurrent/ScheduledExecutorService;
-
-    new-instance v1, Lcom/kik/events/m$14;
-
-    invoke-direct {v1, p0}, Lcom/kik/events/m$14;-><init>(Lcom/kik/events/Promise;)V
-
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-interface {v0, v1, p1, p2, v2}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object v0
-
-    .line 179
-    new-instance v1, Lcom/kik/events/m$15;
-
-    invoke-direct {v1, v0}, Lcom/kik/events/m$15;-><init>(Ljava/util/concurrent/ScheduledFuture;)V
-
-    invoke-virtual {p0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
-
-    .line 187
-    return-object p0
-.end method
-
-.method public static a(Lcom/kik/events/Promise;Lcom/kik/events/Promise;Z)Lcom/kik/events/Promise;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            "U:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/kik/events/Promise",
-            "<TT;>;",
-            "Lcom/kik/events/Promise",
-            "<TU;>;Z)",
-            "Lcom/kik/events/Promise",
-            "<",
-            "Lcom/kik/util/bp",
-            "<TT;TU;>;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 305
-    new-instance v0, Lcom/kik/events/Promise;
-
-    invoke-direct {v0}, Lcom/kik/events/Promise;-><init>()V
-
-    .line 307
-    new-instance v1, Lcom/kik/events/m$2;
-
-    invoke-direct {v1, p1, v0, p2}, Lcom/kik/events/m$2;-><init>(Lcom/kik/events/Promise;Lcom/kik/events/Promise;Z)V
-
-    invoke-virtual {p0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
-
-    .line 343
-    new-instance v1, Lcom/kik/events/m$3;
-
-    invoke-direct {v1, p0, v0, p2}, Lcom/kik/events/m$3;-><init>(Lcom/kik/events/Promise;Lcom/kik/events/Promise;Z)V
-
-    invoke-virtual {p1, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
-
-    .line 379
-    return-object v0
-.end method
-
-.method public static a(Lcom/kik/events/Promise;Lcom/kik/events/q;)Lcom/kik/events/Promise;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            "U:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/kik/events/Promise",
-            "<TT;>;",
-            "Lcom/kik/events/q",
-            "<TT;",
-            "Lcom/kik/events/Promise",
-            "<TU;>;>;)",
-            "Lcom/kik/events/Promise",
-            "<TU;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 463
-    new-instance v0, Lcom/kik/events/Promise;
-
-    invoke-direct {v0}, Lcom/kik/events/Promise;-><init>()V
-
-    .line 465
-    new-instance v1, Lcom/kik/events/m$6;
-
-    invoke-direct {v1, v0, p1}, Lcom/kik/events/m$6;-><init>(Lcom/kik/events/Promise;Lcom/kik/events/q;)V
-
-    invoke-virtual {p0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
-
-    .line 489
-    return-object v0
-.end method
-
-.method public static a(Lcom/kik/events/Promise;Ljava/util/concurrent/Callable;)Lcom/kik/events/Promise;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/kik/events/Promise",
-            "<TT;>;",
-            "Ljava/util/concurrent/Callable",
-            "<",
-            "Lcom/kik/events/Promise",
-            "<TT;>;>;)",
-            "Lcom/kik/events/Promise",
-            "<TT;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 421
-    new-instance v0, Lcom/kik/events/Promise;
-
-    invoke-direct {v0}, Lcom/kik/events/Promise;-><init>()V
-
-    .line 423
-    new-instance v1, Lcom/kik/events/m$5;
-
-    invoke-direct {v1, v0, p1}, Lcom/kik/events/m$5;-><init>(Lcom/kik/events/Promise;Ljava/util/concurrent/Callable;)V
-
-    .line 446
-    invoke-virtual {p0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
-
-    .line 448
-    return-object v0
-.end method
-
-.method public static a(Lcom/kik/events/Promise;Ljava/util/concurrent/ExecutorService;)Lcom/kik/events/Promise;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/kik/events/Promise",
-            "<TT;>;",
-            "Ljava/util/concurrent/ExecutorService;",
-            ")",
-            "Lcom/kik/events/Promise",
-            "<TT;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 615
-    new-instance v0, Lcom/kik/events/Promise;
-
-    invoke-direct {v0}, Lcom/kik/events/Promise;-><init>()V
-
-    .line 617
-    new-instance v1, Lcom/kik/events/m$9;
-
-    invoke-direct {v1, p1, v0}, Lcom/kik/events/m$9;-><init>(Ljava/util/concurrent/ExecutorService;Lcom/kik/events/Promise;)V
-
-    invoke-virtual {p0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
-
-    .line 652
-    return-object v0
-.end method
-
-.method public static a(Lcom/kik/events/c;)Lcom/kik/events/Promise;
+.method static synthetic a(Lcom/kik/events/m;Lcom/kik/events/o;)V
     .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/kik/events/c",
-            "<TT;>;)",
-            "Lcom/kik/events/Promise",
-            "<",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 34
-    invoke-static {p0}, Lcom/kik/events/m;->b(Lcom/kik/events/c;)Lcom/kik/events/Promise;
-
-    move-result-object v0
-
-    .line 36
-    const-wide/16 v2, 0x61a8
-
-    invoke-static {v0, v2, v3}, Lcom/kik/events/m;->a(Lcom/kik/events/Promise;J)Lcom/kik/events/Promise;
-
-    .line 38
-    return-object v0
-.end method
-
-.method public static a(Ljava/lang/Object;)Lcom/kik/events/Promise;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(TT;)",
-            "Lcom/kik/events/Promise",
-            "<TT;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 74
-    new-instance v0, Lcom/kik/events/Promise;
-
-    invoke-direct {v0}, Lcom/kik/events/Promise;-><init>()V
-
-    .line 76
-    invoke-virtual {v0, p0}, Lcom/kik/events/Promise;->a(Ljava/lang/Object;)V
-
-    .line 78
-    return-object v0
-.end method
-
-.method public static a(Ljava/lang/Throwable;)Lcom/kik/events/Promise;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Ljava/lang/Throwable;",
-            ")",
-            "Lcom/kik/events/Promise",
-            "<TT;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 89
-    new-instance v0, Lcom/kik/events/Promise;
-
-    invoke-direct {v0}, Lcom/kik/events/Promise;-><init>()V
-
-    .line 91
-    invoke-virtual {v0, p0}, Lcom/kik/events/Promise;->a(Ljava/lang/Throwable;)V
-
-    .line 93
-    return-object v0
-.end method
-
-.method public static a(Ljava/util/List;)Lcom/kik/events/Promise;
-    .locals 11
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/kik/events/Promise",
-            "<TT;>;>;)",
-            "Lcom/kik/events/Promise",
-            "<",
-            "Ljava/util/List",
-            "<TT;>;>;"
-        }
-    .end annotation
-
-    .prologue
-    const/4 v10, 0x0
-
-    const/4 v7, 0x0
-
-    .line 261
-    new-instance v4, Ljava/util/ArrayList;
-
-    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
-
-    .line 262
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    .line 263
-    new-instance v6, Lcom/kik/events/Promise;
-
-    invoke-direct {v6}, Lcom/kik/events/Promise;-><init>()V
-
-    .line 266
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v9
-
-    move v2, v7
-
-    :goto_0
-    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/kik/events/Promise;
-
-    .line 267
-    add-int/lit8 v8, v2, 0x1
-
-    .line 269
-    invoke-interface {v1, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 271
-    if-eqz v3, :cond_0
-
-    .line 272
-    new-instance v0, Lcom/kik/events/m$18;
-
-    move-object v5, p0
-
-    invoke-direct/range {v0 .. v6}, Lcom/kik/events/m$18;-><init>(Ljava/util/List;ILcom/kik/events/Promise;Ljava/util/List;Ljava/util/List;Lcom/kik/events/Promise;)V
-
-    invoke-virtual {v3, v0}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
-
-    move v2, v8
-
-    goto :goto_0
-
-    .line 286
-    :cond_0
-    invoke-interface {v1, v2, v10}, Ljava/util/List;->add(ILjava/lang/Object;)V
-
-    .line 287
-    invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    invoke-interface {v4, v2, v0}, Ljava/util/List;->add(ILjava/lang/Object;)V
-
-    move v2, v8
-
-    .line 289
-    goto :goto_0
-
-    .line 291
-    :cond_1
-    invoke-interface {v4}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    if-ne v0, v2, :cond_2
-
-    .line 292
-    invoke-virtual {v6, v1}, Lcom/kik/events/Promise;->a(Ljava/lang/Object;)V
-
-    .line 295
-    :cond_2
-    return-object v6
-.end method
-
-.method public static a(Lcom/kik/events/Promise;Lcom/kik/events/Promise;)Lcom/kik/events/o;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            "U:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/kik/events/Promise",
-            "<TT;>;",
-            "Lcom/kik/events/Promise",
-            "<TU;>;)",
-            "Lcom/kik/events/o;"
-        }
-    .end annotation
-
-    .prologue
-    .line 214
-    new-instance v0, Lcom/kik/events/m$16;
-
-    invoke-direct {v0}, Lcom/kik/events/m$16;-><init>()V
-
-    invoke-static {p1, v0}, Lcom/kik/events/m;->b(Lcom/kik/events/Promise;Lcom/kik/events/q;)Lcom/kik/events/Promise;
-
-    move-result-object v0
-
-    .line 1384
-    new-instance v1, Lcom/kik/events/o;
-
-    invoke-direct {v1}, Lcom/kik/events/o;-><init>()V
-
-    .line 1385
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    .line 1387
-    new-instance v3, Lcom/kik/events/m$4;
-
-    invoke-direct {v3, v2, v1}, Lcom/kik/events/m$4;-><init>(Ljava/util/List;Lcom/kik/events/o;)V
-
-    .line 1413
-    invoke-virtual {p0, v3}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
-
-    .line 1414
-    invoke-virtual {v0, v3}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
-
-    .line 214
-    return-object v1
-.end method
-
-.method public static a(Lcom/kik/events/q;)Lcom/kik/events/q;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            "U:",
-            "Ljava/lang/Object;",
-            "V:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/kik/events/q",
-            "<TT;TU;>;)",
-            "Lcom/kik/events/q",
-            "<",
-            "Ljava/util/Map",
-            "<TV;TT;>;",
-            "Ljava/util/Map",
-            "<TV;TU;>;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 556
-    new-instance v0, Lcom/kik/events/m$8;
-
-    invoke-direct {v0, p0}, Lcom/kik/events/m$8;-><init>(Lcom/kik/events/q;)V
-
-    return-object v0
-.end method
-
-.method public static b(Lcom/kik/events/Promise;)Lcom/kik/events/Promise;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            "U:TT;>(",
-            "Lcom/kik/events/Promise",
-            "<TT;>;)",
-            "Lcom/kik/events/Promise",
-            "<TU;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 125
-    new-instance v0, Lcom/kik/events/Promise;
-
-    invoke-direct {v0}, Lcom/kik/events/Promise;-><init>()V
-
-    .line 127
-    if-eqz p0, :cond_0
-
-    .line 128
-    new-instance v1, Lcom/kik/events/m$13;
-
-    invoke-direct {v1, v0}, Lcom/kik/events/m$13;-><init>(Lcom/kik/events/Promise;)V
-
-    invoke-virtual {p0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
-
-    .line 152
-    :goto_0
-    return-object v0
-
-    .line 149
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public static b(Lcom/kik/events/Promise;Lcom/kik/events/Promise;)Lcom/kik/events/Promise;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/kik/events/Promise",
-            "<TT;>;",
-            "Lcom/kik/events/Promise",
-            "<TT;>;)",
-            "Lcom/kik/events/Promise",
-            "<TT;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 232
-    if-eqz p0, :cond_0
-
-    .line 233
-    new-instance v0, Lcom/kik/events/m$17;
-
-    invoke-direct {v0, p1}, Lcom/kik/events/m$17;-><init>(Lcom/kik/events/Promise;)V
-
-    invoke-virtual {p0, v0}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
-
-    .line 256
-    :goto_0
-    return-object p1
-
-    .line 253
-    :cond_0
-    const/4 p1, 0x0
-
-    goto :goto_0
-.end method
-
-.method public static b(Lcom/kik/events/Promise;Lcom/kik/events/q;)Lcom/kik/events/Promise;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            "U:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/kik/events/Promise",
-            "<TT;>;",
-            "Lcom/kik/events/q",
-            "<TT;TU;>;)",
-            "Lcom/kik/events/Promise",
-            "<TU;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 504
-    new-instance v0, Lcom/kik/events/Promise;
-
-    invoke-direct {v0}, Lcom/kik/events/Promise;-><init>()V
-
-    .line 506
-    new-instance v1, Lcom/kik/events/m$7;
-
-    invoke-direct {v1, v0, p1}, Lcom/kik/events/m$7;-><init>(Lcom/kik/events/Promise;Lcom/kik/events/q;)V
-
-    invoke-virtual {p0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
-
-    .line 534
-    return-object v0
-.end method
-
-.method public static b(Lcom/kik/events/c;)Lcom/kik/events/Promise;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/kik/events/c",
-            "<TT;>;)",
-            "Lcom/kik/events/Promise",
-            "<",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 43
-    new-instance v0, Lcom/kik/events/Promise;
-
-    invoke-direct {v0}, Lcom/kik/events/Promise;-><init>()V
-
-    .line 44
-    new-instance v1, Lcom/kik/events/d;
-
-    invoke-direct {v1}, Lcom/kik/events/d;-><init>()V
-
-    .line 45
-    new-instance v2, Lcom/kik/events/m$1;
-
-    invoke-direct {v2, v0}, Lcom/kik/events/m$1;-><init>(Lcom/kik/events/Promise;)V
-
-    .line 53
-    new-instance v3, Lcom/kik/events/m$11;
-
-    invoke-direct {v3, v1, p0, v2}, Lcom/kik/events/m$11;-><init>(Lcom/kik/events/d;Lcom/kik/events/c;Lcom/kik/events/e;)V
-
-    invoke-virtual {v0, v3}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
-
-    .line 61
-    invoke-virtual {v1, p0, v2}, Lcom/kik/events/d;->a(Lcom/kik/events/c;Lcom/kik/events/e;)Lcom/kik/events/e;
-
-    .line 63
-    return-object v0
-.end method
-
-.method public static b(Lcom/kik/events/Promise;J)Ljava/lang/Object;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/kik/events/Promise",
-            "<TT;>;J)TT;"
-        }
-    .end annotation
-
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/lang/InterruptedException;
+            Ljava/lang/IllegalStateException;
         }
     .end annotation
 
     .prologue
-    .line 666
-    new-instance v1, Ljava/lang/Object;
+    .line 12
+    .line 1050
+    iget-object v1, p0, Lcom/kik/events/m;->d:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    .line 668
-    new-instance v0, Lcom/kik/events/m$10;
-
-    invoke-direct {v0, v1}, Lcom/kik/events/m$10;-><init>(Ljava/lang/Object;)V
-
-    invoke-virtual {p0, v0}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
-
-    .line 678
     monitor-enter v1
 
-    .line 679
+    .line 1051
     :try_start_0
-    invoke-virtual {p0}, Lcom/kik/events/Promise;->h()Z
+    iget-object v0, p0, Lcom/kik/events/m;->d:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 680
-    invoke-virtual {v1, p1, p2}, Ljava/lang/Object;->wait(J)V
+    .line 1052
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    .line 682
-    :cond_0
+    const-string v2, "Ticket already added to resource"
+
+    invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1063
+    :catchall_0
+    move-exception v0
+
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 684
-    invoke-virtual {p0}, Lcom/kik/events/Promise;->g()Ljava/lang/Object;
+    throw v0
 
-    move-result-object v0
-
-    return-object v0
-
-    .line 682
-    :catchall_0
-    move-exception v0
-
+    .line 1055
+    :cond_0
     :try_start_1
+    iget-object v0, p0, Lcom/kik/events/m;->c:Lcom/kik/events/d;
+
+    invoke-virtual {p1}, Lcom/kik/events/o;->a()Lcom/kik/events/c;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/kik/events/m;->f:Lcom/kik/events/e;
+
+    invoke-virtual {v0, v2, v3}, Lcom/kik/events/d;->c(Lcom/kik/events/c;Lcom/kik/events/e;)V
+
+    .line 1058
+    invoke-virtual {p1}, Lcom/kik/events/o;->b()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 1059
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/kik/events/m;->a(Z)V
+
+    .line 1062
+    :cond_1
+    iget-object v0, p0, Lcom/kik/events/m;->d:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
+
+    .line 1063
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw v0
+    return-void
 .end method
 
-.method public static c(Lcom/kik/events/Promise;)Lcom/kik/events/Promise;
-    .locals 4
+.method private a(Z)V
+    .locals 8
+
+    .prologue
+    const-wide/16 v6, 0x0
+
+    .line 71
+    iget-object v2, p0, Lcom/kik/events/m;->e:Ljava/util/concurrent/atomic/AtomicLong;
+
+    monitor-enter v2
+
+    .line 72
+    :try_start_0
+    iget-object v0, p0, Lcom/kik/events/m;->e:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
+
+    move-result-wide v4
+
+    .line 74
+    if-eqz p1, :cond_0
+
+    .line 75
+    iget-object v0, p0, Lcom/kik/events/m;->e:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
+
+    move-result-wide v0
+
+    .line 80
+    :goto_0
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 82
+    cmp-long v2, v0, v6
+
+    if-gez v2, :cond_1
+
+    .line 83
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Holders can never be less than 0"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 78
+    :cond_0
+    :try_start_1
+    iget-object v0, p0, Lcom/kik/events/m;->e:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->decrementAndGet()J
+
+    move-result-wide v0
+
+    goto :goto_0
+
+    .line 80
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+
+    .line 85
+    :cond_1
+    cmp-long v2, v0, v6
+
+    if-lez v2, :cond_3
+
+    cmp-long v2, v4, v6
+
+    if-nez v2, :cond_3
+
+    .line 86
+    invoke-virtual {p0}, Lcom/kik/events/m;->a()V
+
+    .line 91
+    :cond_2
+    :goto_1
+    return-void
+
+    .line 88
+    :cond_3
+    cmp-long v0, v0, v6
+
+    if-nez v0, :cond_2
+
+    cmp-long v0, v4, v6
+
+    if-lez v0, :cond_2
+
+    .line 89
+    invoke-virtual {p0}, Lcom/kik/events/m;->b()V
+
+    goto :goto_1
+.end method
+
+
+# virtual methods
+.method protected a()V
+    .locals 2
+
+    .prologue
+    .line 95
+    iget-object v0, p0, Lcom/kik/events/m;->a:Lcom/kik/events/g;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/kik/events/g;->a(Ljava/lang/Object;)V
+
+    .line 96
+    return-void
+.end method
+
+.method protected b()V
+    .locals 2
+
+    .prologue
+    .line 100
+    iget-object v0, p0, Lcom/kik/events/m;->b:Lcom/kik/events/g;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/kik/events/g;->a(Ljava/lang/Object;)V
+
+    .line 101
+    return-void
+.end method
+
+.method public final d()Lcom/kik/events/c;
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "<T:",
+            "()",
+            "Lcom/kik/events/c",
+            "<",
             "Ljava/lang/Object;",
-            ">(",
-            "Lcom/kik/events/Promise",
-            "<TT;>;)",
-            "Lcom/kik/events/Promise",
-            "<TT;>;"
+            ">;"
         }
     .end annotation
 
     .prologue
-    .line 200
-    new-instance v0, Lcom/kik/events/Promise;
+    .line 118
+    iget-object v0, p0, Lcom/kik/events/m;->b:Lcom/kik/events/g;
 
-    invoke-direct {v0}, Lcom/kik/events/Promise;-><init>()V
-
-    invoke-static {p0, v0}, Lcom/kik/events/m;->b(Lcom/kik/events/Promise;Lcom/kik/events/Promise;)Lcom/kik/events/Promise;
-
-    move-result-object v0
-
-    .line 201
-    const-wide/16 v2, 0x64
-
-    invoke-static {v0, v2, v3}, Lcom/kik/events/m;->a(Lcom/kik/events/Promise;J)Lcom/kik/events/Promise;
+    invoke-virtual {v0}, Lcom/kik/events/g;->a()Lcom/kik/events/c;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public static c(Lcom/kik/events/Promise;Lcom/kik/events/Promise;)Lcom/kik/events/Promise;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            "U:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/kik/events/Promise",
-            "<TT;>;",
-            "Lcom/kik/events/Promise",
-            "<TU;>;)",
-            "Lcom/kik/events/Promise",
-            "<",
-            "Lcom/kik/util/bp",
-            "<TT;TU;>;>;"
-        }
-    .end annotation
+.method public final e()V
+    .locals 2
 
     .prologue
-    .line 300
-    const/4 v0, 0x1
+    .line 126
+    iget-object v0, p0, Lcom/kik/events/m;->d:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    invoke-static {p0, p1, v0}, Lcom/kik/events/m;->a(Lcom/kik/events/Promise;Lcom/kik/events/Promise;Z)Lcom/kik/events/Promise;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
+    check-cast v0, Lcom/kik/events/o;
+
+    .line 127
+    invoke-virtual {v0}, Lcom/kik/events/o;->c()V
+
+    goto :goto_0
+
+    .line 129
+    :cond_0
+    return-void
+.end method
+
+.method public final f()Lcom/kik/events/o;
+    .locals 5
+
+    .prologue
+    .line 137
+    new-instance v0, Lcom/kik/events/o;
+
+    invoke-direct {v0}, Lcom/kik/events/o;-><init>()V
+
+    .line 1032
+    iget-object v1, p0, Lcom/kik/events/m;->d:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    monitor-enter v1
+
+    .line 1033
+    :try_start_0
+    iget-object v2, p0, Lcom/kik/events/m;->d:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v2, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 1034
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v2, "Ticket already added to resource"
+
+    invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 1045
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+
+    .line 1038
+    :cond_0
+    :try_start_1
+    invoke-virtual {v0}, Lcom/kik/events/o;->b()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 1039
+    const/4 v2, 0x1
+
+    invoke-direct {p0, v2}, Lcom/kik/events/m;->a(Z)V
+
+    .line 1042
+    :cond_1
+    iget-object v2, p0, Lcom/kik/events/m;->c:Lcom/kik/events/d;
+
+    invoke-virtual {v0}, Lcom/kik/events/o;->a()Lcom/kik/events/c;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/kik/events/m;->f:Lcom/kik/events/e;
+
+    invoke-virtual {v2, v3, v4}, Lcom/kik/events/d;->a(Lcom/kik/events/c;Lcom/kik/events/e;)Lcom/kik/events/e;
+
+    .line 1044
+    iget-object v2, p0, Lcom/kik/events/m;->d:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v2, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 1045
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 141
     return-object v0
 .end method

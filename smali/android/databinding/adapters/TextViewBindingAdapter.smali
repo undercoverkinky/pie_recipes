@@ -1413,7 +1413,7 @@
 
     .line 379
     :goto_0
-    sget v0, Lcom/android/a/a/a/a$a;->c:I
+    sget v0, Lcom/android/databinding/library/baseAdapters/R$id;->textWatcher:I
 
     invoke-static {p0, v1, v0}, Landroid/databinding/adapters/ListenerUtil;->trackListener(Landroid/view/View;Ljava/lang/Object;I)Ljava/lang/Object;
 

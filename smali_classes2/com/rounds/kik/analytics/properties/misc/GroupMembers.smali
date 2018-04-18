@@ -29,6 +29,12 @@
 
     .prologue
     .line 16
+    invoke-static {}, Lcom/rounds/kik/VideoAppModule;->isReporterReady()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
     invoke-static {}, Lcom/rounds/kik/VideoAppModule;->conversation()Lcom/rounds/kik/Conversation;
 
     move-result-object v0

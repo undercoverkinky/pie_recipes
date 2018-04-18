@@ -80,7 +80,7 @@
     return-void
 .end method
 
-.method public static b()Lcom/dyuproject/protostuff/u;
+.method public static a()Lcom/dyuproject/protostuff/u;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -101,25 +101,6 @@
 
 
 # virtual methods
-.method public final a()Lcom/dyuproject/protostuff/u;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/dyuproject/protostuff/u",
-            "<",
-            "Lcom/kik/xdata/model/browser/XBrowserHistoryItem;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 129
-    sget-object v0, Lcom/kik/xdata/model/browser/XBrowserHistoryItem;->b:Lcom/dyuproject/protostuff/u;
-
-    return-object v0
-.end method
-
 .method public final a(Ljava/lang/Long;)Lcom/kik/xdata/model/browser/XBrowserHistoryItem;
     .locals 0
 
@@ -153,6 +134,16 @@
     return-object p0
 .end method
 
+.method public final b()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 52
+    iget-object v0, p0, Lcom/kik/xdata/model/browser/XBrowserHistoryItem;->url:Ljava/lang/String;
+
+    return-object v0
+.end method
+
 .method public final c(Ljava/lang/String;)Lcom/kik/xdata/model/browser/XBrowserHistoryItem;
     .locals 0
 
@@ -168,8 +159,27 @@
     .locals 1
 
     .prologue
-    .line 52
-    iget-object v0, p0, Lcom/kik/xdata/model/browser/XBrowserHistoryItem;->url:Ljava/lang/String;
+    .line 65
+    iget-object v0, p0, Lcom/kik/xdata/model/browser/XBrowserHistoryItem;->title:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final cachedSchema()Lcom/dyuproject/protostuff/u;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/dyuproject/protostuff/u",
+            "<",
+            "Lcom/kik/xdata/model/browser/XBrowserHistoryItem;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 129
+    sget-object v0, Lcom/kik/xdata/model/browser/XBrowserHistoryItem;->b:Lcom/dyuproject/protostuff/u;
 
     return-object v0
 .end method
@@ -189,23 +199,13 @@
     .locals 1
 
     .prologue
-    .line 65
-    iget-object v0, p0, Lcom/kik/xdata/model/browser/XBrowserHistoryItem;->title:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final e()Ljava/lang/String;
-    .locals 1
-
-    .prologue
     .line 78
     iget-object v0, p0, Lcom/kik/xdata/model/browser/XBrowserHistoryItem;->faviconUrl:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final f()Ljava/lang/Long;
+.method public final e()Ljava/lang/Long;
     .locals 1
 
     .prologue
@@ -215,7 +215,7 @@
     return-object v0
 .end method
 
-.method public final g()Ljava/lang/String;
+.method public final f()Ljava/lang/String;
     .locals 1
 
     .prologue

@@ -12,7 +12,7 @@
         "Ljava/lang/Object;",
         "Ldagger/b",
         "<",
-        "Lkik/android/chat/vm/widget/at;",
+        "Lkik/android/chat/vm/widget/bu;",
         ">;"
     }
 .end annotation
@@ -23,12 +23,12 @@
 
 
 # instance fields
-.field private final b:Ldagger/b;
+.field private final b:Ljavax/inject/Provider;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ldagger/b",
+            "Ljavax/inject/Provider",
             "<",
-            "Lkik/android/chat/vm/c;",
+            "Lcom/kik/cache/KikVolleyImageLoader;",
             ">;"
         }
     .end annotation
@@ -39,18 +39,7 @@
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lcom/kik/cache/aa;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final d:Ljavax/inject/Provider;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljavax/inject/Provider",
-            "<",
-            "Lkik/core/interfaces/ac;",
+            "Lkik/core/interfaces/ab;",
             ">;"
         }
     .end annotation
@@ -62,7 +51,7 @@
     .locals 1
 
     .prologue
-    .line 10
+    .line 9
     const-class v0, Lkik/android/chat/vm/widget/StickerTabViewModel_MembersInjector;
 
     invoke-virtual {v0}, Ljava/lang/Class;->desiredAssertionStatus()Z
@@ -84,31 +73,27 @@
     goto :goto_0
 .end method
 
-.method private constructor <init>(Ldagger/b;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+.method private constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ldagger/b",
+            "Ljavax/inject/Provider",
             "<",
-            "Lkik/android/chat/vm/c;",
+            "Lcom/kik/cache/KikVolleyImageLoader;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lcom/kik/cache/aa;",
-            ">;",
-            "Ljavax/inject/Provider",
-            "<",
-            "Lkik/core/interfaces/ac;",
+            "Lkik/core/interfaces/ab;",
             ">;)V"
         }
     .end annotation
 
     .prologue
-    .line 16
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 17
+    .line 22
     sget-boolean v0, Lkik/android/chat/vm/widget/StickerTabViewModel_MembersInjector;->a:Z
 
     if-nez v0, :cond_0
@@ -121,11 +106,11 @@
 
     throw v0
 
-    .line 18
+    .line 23
     :cond_0
-    iput-object p1, p0, Lkik/android/chat/vm/widget/StickerTabViewModel_MembersInjector;->b:Ldagger/b;
+    iput-object p1, p0, Lkik/android/chat/vm/widget/StickerTabViewModel_MembersInjector;->b:Ljavax/inject/Provider;
 
-    .line 19
+    .line 24
     sget-boolean v0, Lkik/android/chat/vm/widget/StickerTabViewModel_MembersInjector;->a:Z
 
     if-nez v0, :cond_1
@@ -138,60 +123,39 @@
 
     throw v0
 
-    .line 20
+    .line 25
     :cond_1
     iput-object p2, p0, Lkik/android/chat/vm/widget/StickerTabViewModel_MembersInjector;->c:Ljavax/inject/Provider;
 
-    .line 21
-    sget-boolean v0, Lkik/android/chat/vm/widget/StickerTabViewModel_MembersInjector;->a:Z
-
-    if-nez v0, :cond_2
-
-    if-nez p3, :cond_2
-
-    new-instance v0, Ljava/lang/AssertionError;
-
-    invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
-
-    throw v0
-
-    .line 22
-    :cond_2
-    iput-object p3, p0, Lkik/android/chat/vm/widget/StickerTabViewModel_MembersInjector;->d:Ljavax/inject/Provider;
-
-    .line 23
+    .line 26
     return-void
 .end method
 
-.method public static a(Ldagger/b;Ljavax/inject/Provider;Ljavax/inject/Provider;)Ldagger/b;
+.method public static a(Ljavax/inject/Provider;Ljavax/inject/Provider;)Ldagger/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ldagger/b",
+            "Ljavax/inject/Provider",
             "<",
-            "Lkik/android/chat/vm/c;",
+            "Lcom/kik/cache/KikVolleyImageLoader;",
             ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lcom/kik/cache/aa;",
-            ">;",
-            "Ljavax/inject/Provider",
-            "<",
-            "Lkik/core/interfaces/ac;",
+            "Lkik/core/interfaces/ab;",
             ">;)",
             "Ldagger/b",
             "<",
-            "Lkik/android/chat/vm/widget/at;",
+            "Lkik/android/chat/vm/widget/bu;",
             ">;"
         }
     .end annotation
 
     .prologue
-    .line 36
+    .line 31
     new-instance v0, Lkik/android/chat/vm/widget/StickerTabViewModel_MembersInjector;
 
-    invoke-direct {v0, p0, p1, p2}, Lkik/android/chat/vm/widget/StickerTabViewModel_MembersInjector;-><init>(Ldagger/b;Ljavax/inject/Provider;Ljavax/inject/Provider;)V
+    invoke-direct {v0, p0, p1}, Lkik/android/chat/vm/widget/StickerTabViewModel_MembersInjector;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;)V
 
     return-object v0
 .end method
@@ -202,13 +166,13 @@
     .locals 2
 
     .prologue
-    .line 10
-    check-cast p1, Lkik/android/chat/vm/widget/at;
+    .line 9
+    check-cast p1, Lkik/android/chat/vm/widget/bu;
 
-    .line 1027
+    .line 1036
     if-nez p1, :cond_0
 
-    .line 1028
+    .line 1037
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "Cannot inject members into a null reference"
@@ -217,34 +181,29 @@
 
     throw v0
 
-    .line 1030
+    .line 1039
     :cond_0
-    iget-object v0, p0, Lkik/android/chat/vm/widget/StickerTabViewModel_MembersInjector;->b:Ldagger/b;
+    iget-object v0, p0, Lkik/android/chat/vm/widget/StickerTabViewModel_MembersInjector;->b:Ljavax/inject/Provider;
 
-    invoke-interface {v0, p1}, Ldagger/b;->injectMembers(Ljava/lang/Object;)V
+    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 1031
+    move-result-object v0
+
+    check-cast v0, Lcom/kik/cache/KikVolleyImageLoader;
+
+    iput-object v0, p1, Lkik/android/chat/vm/widget/bu;->a:Lcom/kik/cache/KikVolleyImageLoader;
+
+    .line 1040
     iget-object v0, p0, Lkik/android/chat/vm/widget/StickerTabViewModel_MembersInjector;->c:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/kik/cache/aa;
+    check-cast v0, Lkik/core/interfaces/ab;
 
-    iput-object v0, p1, Lkik/android/chat/vm/widget/at;->a:Lcom/kik/cache/aa;
+    iput-object v0, p1, Lkik/android/chat/vm/widget/bu;->b:Lkik/core/interfaces/ab;
 
-    .line 1032
-    iget-object v0, p0, Lkik/android/chat/vm/widget/StickerTabViewModel_MembersInjector;->d:Ljavax/inject/Provider;
-
-    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkik/core/interfaces/ac;
-
-    iput-object v0, p1, Lkik/android/chat/vm/widget/at;->b:Lkik/core/interfaces/ac;
-
-    .line 10
+    .line 9
     return-void
 .end method

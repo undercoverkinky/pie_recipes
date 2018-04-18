@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/android/chat/presentation/ca;
+.implements Lkik/android/chat/presentation/bt;
 
 
 # annotations
@@ -16,7 +16,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkik/android/chat/presentation/ca",
+        "Lkik/android/chat/presentation/bt",
         "<",
         "Lkik/android/chat/view/b;",
         ">;"
@@ -37,7 +37,7 @@
 .method public abstract a(Lkik/android/util/KeyboardManipulator;)V
 .end method
 
-.method public abstract a(Lkik/core/interfaces/ah;)V
+.method public abstract a(Lkik/core/interfaces/ai;)V
 .end method
 
 .method public abstract a(Z)V

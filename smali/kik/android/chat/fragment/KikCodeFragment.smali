@@ -14,113 +14,85 @@
 
 
 # instance fields
-.field private final A:Lkik/android/chat/fragment/KikCodeFragment$c;
-
 .field _codeContainer:Landroid/view/ViewGroup;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1101cb
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1001ee
     .end annotation
 .end field
 
 .field _codeInfo:Landroid/view/ViewGroup;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1101d0
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1001f3
     .end annotation
 .end field
 
 .field _drawArea:Lkik/android/widget/KikFinderCodeImageView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1101cd
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1001f0
     .end annotation
 .end field
 
 .field _errorHolder:Landroid/widget/LinearLayout;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1101d2
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1001f6
     .end annotation
 .end field
 
 .field _fakeCode:Lkik/android/widget/KikCodeBackgroundImageView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1101cc
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1001ef
     .end annotation
 .end field
 
 .field _nameText:Landroid/widget/TextView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1100cb
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f100171
     .end annotation
 .end field
 
 .field _profilePic:Lcom/kik/cache/ContactImageView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1100c8
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1001ea
     .end annotation
 .end field
 
 .field _retryImage:Landroid/widget/ImageView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1101cf
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1001f2
     .end annotation
 .end field
 
 .field _scanText:Landroid/widget/TextView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1101d1
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1001f5
     .end annotation
 .end field
 
 .field _spinner:Landroid/widget/ProgressBar;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1101ce
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1001f1
     .end annotation
 .end field
 
 .field _tellAFriendImage:Landroid/widget/ImageView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1101ca
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1001ed
     .end annotation
 .end field
 
 .field _usernameText:Landroid/widget/TextView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1100cc
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f100172
     .end annotation
 .end field
 
 .field _wipeContainer:Landroid/view/View;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1101d3
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1001f7
     .end annotation
 .end field
 
-.field a:Lcom/kik/cache/aa;
+.field a:Lcom/kik/cache/KikVolleyImageLoader;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 
@@ -144,12 +116,12 @@
     .end annotation
 .end field
 
-.field protected e:Lkik/core/interfaces/x;
+.field protected e:Lkik/core/interfaces/v;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
-.field protected f:Lkik/core/interfaces/af;
+.field protected f:Lkik/core/interfaces/ag;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
@@ -169,7 +141,7 @@
     .end annotation
 .end field
 
-.field protected j:Lkik/core/interfaces/m;
+.field protected j:Lkik/core/interfaces/l;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
@@ -199,13 +171,15 @@
 
 .field private r:Z
 
-.field private final s:Lkik/android/util/bw;
+.field private final s:Lkik/android/util/bv;
 
 .field private final t:Lkik/android/chat/fragment/KikCodeFragment$a;
 
-.field private u:Lkik/core/datatypes/s;
+.field private u:Lkik/core/datatypes/p;
 
-.field private final z:Landroid/view/View$OnTouchListener;
+.field private final v:Landroid/view/View$OnTouchListener;
+
+.field private final w:Lkik/android/chat/fragment/KikCodeFragment$c;
 
 
 # direct methods
@@ -230,33 +204,33 @@
     .line 87
     iput-boolean v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->r:Z
 
-    .line 114
-    new-instance v0, Lkik/android/util/bw;
-
-    invoke-direct {v0}, Lkik/android/util/bw;-><init>()V
-
-    iput-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->s:Lkik/android/util/bw;
-
     .line 116
+    new-instance v0, Lkik/android/util/bv;
+
+    invoke-direct {v0}, Lkik/android/util/bv;-><init>()V
+
+    iput-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->s:Lkik/android/util/bv;
+
+    .line 118
     new-instance v0, Lkik/android/chat/fragment/KikCodeFragment$a;
 
     invoke-direct {v0}, Lkik/android/chat/fragment/KikCodeFragment$a;-><init>()V
 
     iput-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->t:Lkik/android/chat/fragment/KikCodeFragment$a;
 
-    .line 119
+    .line 121
     new-instance v0, Lkik/android/chat/fragment/KikCodeFragment$1;
 
     invoke-direct {v0, p0}, Lkik/android/chat/fragment/KikCodeFragment$1;-><init>(Lkik/android/chat/fragment/KikCodeFragment;)V
 
-    iput-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->z:Landroid/view/View$OnTouchListener;
+    iput-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->v:Landroid/view/View$OnTouchListener;
 
-    .line 149
+    .line 152
     new-instance v0, Lkik/android/chat/fragment/KikCodeFragment$11;
 
     invoke-direct {v0, p0}, Lkik/android/chat/fragment/KikCodeFragment$11;-><init>(Lkik/android/chat/fragment/KikCodeFragment;)V
 
-    iput-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->A:Lkik/android/chat/fragment/KikCodeFragment$c;
+    iput-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->w:Lkik/android/chat/fragment/KikCodeFragment$c;
 
     return-void
 .end method
@@ -275,17 +249,17 @@
     .locals 1
 
     .prologue
-    .line 272
+    .line 277
     iput-object p1, p0, Lkik/android/chat/fragment/KikCodeFragment;->l:Lcom/kik/scan/KikCode;
 
-    .line 273
+    .line 278
     new-instance v0, Lkik/android/chat/fragment/KikCodeFragment$13;
 
     invoke-direct {v0, p0}, Lkik/android/chat/fragment/KikCodeFragment$13;-><init>(Lkik/android/chat/fragment/KikCodeFragment;)V
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikCodeFragment;->b(Ljava/lang/Runnable;)V
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikCodeFragment;->runOnUiIfAttached(Ljava/lang/Runnable;)V
 
-    .line 281
+    .line 287
     return-void
 .end method
 
@@ -300,12 +274,12 @@
     const/high16 v4, -0x40800000    # -1.0f
 
     .line 73
-    .line 2581
+    .line 2607
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v1
 
-    .line 2590
+    .line 2616
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->_drawArea:Lkik/android/widget/KikFinderCodeImageView;
 
     invoke-virtual {v0}, Lkik/android/widget/KikFinderCodeImageView;->getHeight()I
@@ -338,12 +312,12 @@
 
     move-result v0
 
-    .line 2591
+    .line 2617
     neg-float v0, v0
 
     mul-float/2addr v0, v6
 
-    .line 2592
+    .line 2618
     iget-object v2, p0, Lkik/android/chat/fragment/KikCodeFragment;->_drawArea:Lkik/android/widget/KikFinderCodeImageView;
 
     invoke-virtual {v2}, Lkik/android/widget/KikFinderCodeImageView;->getHeight()I
@@ -358,16 +332,16 @@
 
     if-gez v1, :cond_0
 
-    .line 2593
+    .line 2619
     mul-float/2addr v0, v4
 
-    .line 2582
+    .line 2608
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v2
 
-    .line 2600
+    .line 2626
     iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->_drawArea:Lkik/android/widget/KikFinderCodeImageView;
 
     invoke-virtual {v1}, Lkik/android/widget/KikFinderCodeImageView;->getWidth()I
@@ -400,10 +374,10 @@
 
     move-result v1
 
-    .line 2601
+    .line 2627
     mul-float/2addr v1, v6
 
-    .line 2602
+    .line 2628
     iget-object v3, p0, Lkik/android/chat/fragment/KikCodeFragment;->_drawArea:Lkik/android/widget/KikFinderCodeImageView;
 
     invoke-virtual {v3}, Lkik/android/widget/KikFinderCodeImageView;->getWidth()I
@@ -418,16 +392,16 @@
 
     if-gez v2, :cond_1
 
-    .line 2603
+    .line 2629
     mul-float/2addr v1, v4
 
-    .line 2584
+    .line 2610
     :cond_1
     iget-object v2, p0, Lkik/android/chat/fragment/KikCodeFragment;->_drawArea:Lkik/android/widget/KikFinderCodeImageView;
 
     invoke-virtual {v2, v0}, Lkik/android/widget/KikFinderCodeImageView;->setRotationX(F)V
 
-    .line 2585
+    .line 2611
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->_drawArea:Lkik/android/widget/KikFinderCodeImageView;
 
     invoke-virtual {v0, v1}, Lkik/android/widget/KikFinderCodeImageView;->setRotationY(F)V
@@ -441,19 +415,19 @@
 
     .prologue
     .line 73
-    .line 7306
+    .line 7313
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->_drawArea:Lkik/android/widget/KikFinderCodeImageView;
 
     if-eqz v0, :cond_0
 
-    .line 7321
+    .line 7329
     new-instance v0, Lkik/android/chat/fragment/KikCodeFragment$16;
 
     invoke-direct {v0, p0}, Lkik/android/chat/fragment/KikCodeFragment$16;-><init>(Lkik/android/chat/fragment/KikCodeFragment;)V
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikCodeFragment;->b(Ljava/lang/Runnable;)V
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikCodeFragment;->runOnUiIfAttached(Ljava/lang/Runnable;)V
 
-    .line 7308
+    .line 7315
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->_drawArea:Lkik/android/widget/KikFinderCodeImageView;
 
     new-instance v1, Lkik/android/chat/fragment/KikCodeFragment$15;
@@ -474,7 +448,7 @@
 
     .prologue
     .line 73
-    .line 7723
+    .line 7752
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->_fakeCode:Lkik/android/widget/KikCodeBackgroundImageView;
 
     new-instance v1, Lkik/android/chat/fragment/KikCodeFragment$8;
@@ -483,78 +457,118 @@
 
     invoke-virtual {v0, v1}, Lkik/android/widget/KikCodeBackgroundImageView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 7735
+    .line 7765
     new-instance v0, Lkik/android/chat/fragment/KikCodeFragment$9;
 
     invoke-direct {v0, p0}, Lkik/android/chat/fragment/KikCodeFragment$9;-><init>(Lkik/android/chat/fragment/KikCodeFragment;)V
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikCodeFragment;->b(Ljava/lang/Runnable;)V
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikCodeFragment;->runOnUiIfAttached(Ljava/lang/Runnable;)V
 
     .line 73
     return-void
 .end method
 
-.method static synthetic a(Lkik/android/chat/fragment/KikCodeFragment;Lkik/core/datatypes/s;)V
+.method static synthetic a(Lkik/android/chat/fragment/KikCodeFragment;Lkik/core/datatypes/p;)V
     .locals 0
 
     .prologue
     .line 73
-    invoke-direct {p0, p1}, Lkik/android/chat/fragment/KikCodeFragment;->a(Lkik/core/datatypes/s;)V
+    invoke-direct {p0, p1}, Lkik/android/chat/fragment/KikCodeFragment;->a(Lkik/core/datatypes/p;)V
 
     return-void
 .end method
 
-.method private a(Lkik/core/datatypes/s;)V
+.method private a(Lkik/core/datatypes/p;)V
     .locals 4
 
     .prologue
-    .line 345
+    .line 354
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->_profilePic:Lcom/kik/cache/ContactImageView;
 
-    iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->a:Lcom/kik/cache/aa;
+    iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->a:Lcom/kik/cache/KikVolleyImageLoader;
 
-    iget-object v2, p0, Lkik/android/chat/fragment/KikCodeFragment;->e:Lkik/core/interfaces/x;
+    iget-object v2, p0, Lkik/android/chat/fragment/KikCodeFragment;->e:Lkik/core/interfaces/v;
 
     iget-object v3, p0, Lkik/android/chat/fragment/KikCodeFragment;->g:Lcom/kik/android/Mixpanel;
 
-    invoke-virtual {v0, p1, v1, v2, v3}, Lcom/kik/cache/ContactImageView;->a(Lkik/core/datatypes/o;Lcom/kik/cache/aa;Lkik/core/interfaces/x;Lcom/kik/android/Mixpanel;)V
+    invoke-virtual {v0, p1, v1, v2, v3}, Lcom/kik/cache/ContactImageView;->a(Lkik/core/datatypes/l;Lcom/kik/cache/KikVolleyImageLoader;Lkik/core/interfaces/v;Lcom/kik/android/Mixpanel;)V
 
-    .line 346
+    .line 355
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->_profilePic:Lcom/kik/cache/ContactImageView;
 
     new-instance v1, Lkik/android/chat/fragment/KikCodeFragment$17;
 
-    invoke-direct {v1, p0, p1}, Lkik/android/chat/fragment/KikCodeFragment$17;-><init>(Lkik/android/chat/fragment/KikCodeFragment;Lkik/core/datatypes/s;)V
+    invoke-direct {v1, p0, p1}, Lkik/android/chat/fragment/KikCodeFragment$17;-><init>(Lkik/android/chat/fragment/KikCodeFragment;Lkik/core/datatypes/p;)V
 
     invoke-virtual {v0, v1}, Lcom/kik/cache/ContactImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 358
-    invoke-virtual {p1}, Lkik/core/datatypes/s;->c()Ljava/lang/String;
+    .line 368
+    invoke-virtual {p1}, Lkik/core/datatypes/p;->b()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 360
-    invoke-static {v0}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    .line 370
+    invoke-static {v0}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 361
-    invoke-virtual {p1}, Lkik/core/datatypes/s;->N()Z
+    .line 371
+    invoke-virtual {p1}, Lkik/core/datatypes/p;->P()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 362
-    invoke-virtual {p1}, Lkik/core/datatypes/s;->O()Ljava/lang/String;
+    .line 372
+    invoke-virtual {p1}, Lkik/core/datatypes/p;->Q()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 368
+    .line 379
     :cond_0
     :goto_0
+    invoke-virtual {p1}, Lkik/core/datatypes/p;->P()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    .line 380
+    invoke-virtual {p1}, Lkik/core/datatypes/p;->Q()Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lkik/android/chat/fragment/KikCodeFragment;->_usernameText:Landroid/widget/TextView;
+
+    invoke-static {v1, v2}, Lkik/android/util/ca;->a(Ljava/lang/CharSequence;Landroid/widget/TextView;)V
+
+    .line 386
+    :goto_1
+    iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->_nameText:Landroid/widget/TextView;
+
+    invoke-static {v0, v1}, Lkik/android/util/ca;->a(Ljava/lang/CharSequence;Landroid/widget/TextView;)V
+
+    .line 387
+    return-void
+
+    .line 375
+    :cond_1
+    invoke-virtual {p1}, Lkik/core/datatypes/p;->c()Ljava/util/List;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->e:Lkik/core/interfaces/v;
+
+    invoke-static {v0, v1}, Lkik/android/util/br;->a(Ljava/util/List;Lkik/core/interfaces/v;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 383
+    :cond_2
     const/4 v1, 0x1
 
     new-array v1, v1, [Landroid/view/View;
@@ -565,29 +579,9 @@
 
     aput-object v3, v1, v2
 
-    invoke-static {v1}, Lkik/android/util/bz;->g([Landroid/view/View;)V
+    invoke-static {v1}, Lkik/android/util/ca;->g([Landroid/view/View;)V
 
-    .line 369
-    iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->_nameText:Landroid/widget/TextView;
-
-    invoke-static {v0, v1}, Lkik/android/util/bz;->a(Ljava/lang/CharSequence;Landroid/widget/TextView;)V
-
-    .line 370
-    return-void
-
-    .line 365
-    :cond_1
-    invoke-virtual {p1}, Lkik/core/datatypes/s;->y()Ljava/util/List;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->e:Lkik/core/interfaces/x;
-
-    invoke-static {v0, v1}, Lkik/android/util/bq;->a(Ljava/util/List;Lkik/core/interfaces/x;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
+    goto :goto_1
 .end method
 
 .method static synthetic a(Lkik/android/chat/fragment/KikCodeFragment;)Z
@@ -600,12 +594,12 @@
     return v0
 .end method
 
-.method static synthetic b(Lkik/android/chat/fragment/KikCodeFragment;)Lkik/android/util/bw;
+.method static synthetic b(Lkik/android/chat/fragment/KikCodeFragment;)Lkik/android/util/bv;
     .locals 1
 
     .prologue
     .line 73
-    iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->s:Lkik/android/util/bw;
+    iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->s:Lkik/android/util/bv;
 
     return-object v0
 .end method
@@ -620,103 +614,103 @@
     return-void
 .end method
 
-.method static synthetic b(Lkik/android/chat/fragment/KikCodeFragment;Lkik/core/datatypes/s;)V
+.method static synthetic b(Lkik/android/chat/fragment/KikCodeFragment;Lkik/core/datatypes/p;)V
     .locals 0
 
     .prologue
     .line 73
-    invoke-direct {p0, p1}, Lkik/android/chat/fragment/KikCodeFragment;->b(Lkik/core/datatypes/s;)V
+    invoke-direct {p0, p1}, Lkik/android/chat/fragment/KikCodeFragment;->b(Lkik/core/datatypes/p;)V
 
     return-void
 .end method
 
-.method private b(Lkik/core/datatypes/s;)V
-    .locals 3
+.method private b(Lkik/core/datatypes/p;)V
+    .locals 4
 
     .prologue
-    .line 374
-    const v0, 0x7f0a019f
+    const/4 v3, 0x0
+
+    .line 391
+    const v0, 0x7f0901a0
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 375
+    .line 392
     iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->_scanText:Landroid/widget/TextView;
 
-    invoke-static {v0, v1}, Lkik/android/util/bz;->a(Ljava/lang/CharSequence;Landroid/widget/TextView;)V
+    invoke-static {v0, v1}, Lkik/android/util/ca;->a(Ljava/lang/CharSequence;Landroid/widget/TextView;)V
 
-    .line 376
+    .line 393
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->_drawArea:Lkik/android/widget/KikFinderCodeImageView;
 
     invoke-virtual {v0}, Lkik/android/widget/KikFinderCodeImageView;->clearAnimation()V
 
-    .line 378
-    invoke-direct {p0, p1}, Lkik/android/chat/fragment/KikCodeFragment;->a(Lkik/core/datatypes/s;)V
+    .line 395
+    invoke-direct {p0, p1}, Lkik/android/chat/fragment/KikCodeFragment;->a(Lkik/core/datatypes/p;)V
 
-    .line 380
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikCodeFragment;->af()Lcom/kik/events/d;
+    .line 397
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikCodeFragment;->getLifecycleEventHub()Lcom/kik/events/d;
 
     move-result-object v0
 
-    iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->j:Lkik/core/interfaces/m;
+    iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->j:Lkik/core/interfaces/l;
 
-    invoke-interface {v1}, Lkik/core/interfaces/m;->f()Lcom/kik/events/c;
+    invoke-interface {v1}, Lkik/core/interfaces/l;->f()Lcom/kik/events/c;
 
     move-result-object v1
 
     new-instance v2, Lkik/android/chat/fragment/KikCodeFragment$18;
 
-    invoke-direct {v2, p0, p1}, Lkik/android/chat/fragment/KikCodeFragment$18;-><init>(Lkik/android/chat/fragment/KikCodeFragment;Lkik/core/datatypes/s;)V
+    invoke-direct {v2, p0, p1}, Lkik/android/chat/fragment/KikCodeFragment$18;-><init>(Lkik/android/chat/fragment/KikCodeFragment;Lkik/core/datatypes/p;)V
 
-    .line 381
+    .line 398
     invoke-static {p0, v2}, Lcom/kik/sdkutils/a;->a(Landroid/support/v4/app/Fragment;Lcom/kik/events/e;)Lcom/kik/events/e;
 
     move-result-object v2
 
-    .line 380
+    .line 397
     invoke-virtual {v0, v1, v2}, Lcom/kik/events/d;->a(Lcom/kik/events/c;Lcom/kik/events/e;)Lcom/kik/events/e;
 
-    .line 395
-    const/4 v0, 0x0
+    .line 413
+    invoke-direct {p0, v3}, Lkik/android/chat/fragment/KikCodeFragment;->a(Lcom/kik/scan/KikCode;)V
 
-    invoke-direct {p0, v0}, Lkik/android/chat/fragment/KikCodeFragment;->a(Lcom/kik/scan/KikCode;)V
-
-    .line 397
-    invoke-virtual {p1}, Lkik/core/datatypes/s;->a()Lkik/core/datatypes/n;
+    .line 415
+    invoke-virtual {p1}, Lkik/core/datatypes/p;->j()Lkik/core/datatypes/k;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lkik/core/datatypes/n;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/k;->b()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkik/core/net/outgoing/o;->a(Ljava/lang/String;)Lkik/core/net/outgoing/o;
+    invoke-static {v3, v0}, Lkik/core/net/outgoing/GetGroupKikCodeRequest;->GetGroupKikCodeRequest(Lkik/core/net/d;Ljava/lang/String;)Lkik/core/net/outgoing/GetGroupKikCodeRequest;
 
     move-result-object v0
 
-    .line 398
-    iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->N:Lkik/core/interfaces/ICommunication;
+    .line 416
+    iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->_comm:Lkik/core/interfaces/ICommunication;
 
-    invoke-interface {v1, v0}, Lkik/core/interfaces/ICommunication;->a(Lkik/core/net/outgoing/ae;)Lcom/kik/events/Promise;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/kik/events/m;->b(Lcom/kik/events/Promise;)Lcom/kik/events/Promise;
+    invoke-interface {v1, v0}, Lkik/core/interfaces/ICommunication;->a(Lkik/core/net/outgoing/j;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
-    .line 399
+    invoke-static {v0}, Lcom/kik/events/l;->b(Lcom/kik/events/Promise;)Lcom/kik/events/Promise;
+
+    move-result-object v0
+
+    .line 417
     if-eqz v0, :cond_0
 
-    .line 400
+    .line 418
     new-instance v1, Lkik/android/chat/fragment/KikCodeFragment$2;
 
-    invoke-direct {v1, p0, p1}, Lkik/android/chat/fragment/KikCodeFragment$2;-><init>(Lkik/android/chat/fragment/KikCodeFragment;Lkik/core/datatypes/s;)V
+    invoke-direct {v1, p0, p1}, Lkik/android/chat/fragment/KikCodeFragment$2;-><init>(Lkik/android/chat/fragment/KikCodeFragment;Lkik/core/datatypes/p;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
-    .line 422
+    .line 442
     :cond_0
     return-void
 .end method
@@ -728,12 +722,12 @@
     const v1, 0x3f7ae148    # 0.98f
 
     .line 73
-    .line 3575
+    .line 3601
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->_drawArea:Lkik/android/widget/KikFinderCodeImageView;
 
     invoke-virtual {v0, v1}, Lkik/android/widget/KikFinderCodeImageView;->setScaleX(F)V
 
-    .line 3576
+    .line 3602
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->_drawArea:Lkik/android/widget/KikFinderCodeImageView;
 
     invoke-virtual {v0, v1}, Lkik/android/widget/KikFinderCodeImageView;->setScaleY(F)V
@@ -750,6 +744,16 @@
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->m:Z
+
+    return v0
+.end method
+
+.method public static e()I
+    .locals 1
+
+    .prologue
+    .line 704
+    const/4 v0, 0x0
 
     return v0
 .end method
@@ -778,14 +782,47 @@
     return v0
 .end method
 
-.method public static g()I
+.method private f()V
     .locals 1
 
     .prologue
-    .line 677
-    const/4 v0, 0x0
+    .line 235
+    iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->i:Lkik/android/scan/c;
 
-    return v0
+    if-eqz v0, :cond_0
+
+    .line 236
+    iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->i:Lkik/android/scan/c;
+
+    invoke-virtual {v0}, Lkik/android/scan/c;->a()V
+
+    .line 237
+    iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->i:Lkik/android/scan/c;
+
+    invoke-virtual {v0}, Lkik/android/scan/c;->b()Lcom/kik/events/Promise;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->o:Lcom/kik/events/Promise;
+
+    .line 239
+    :cond_0
+    return-void
+.end method
+
+.method private g()V
+    .locals 1
+
+    .prologue
+    .line 789
+    new-instance v0, Lkik/android/chat/fragment/KikCodeFragment$10;
+
+    invoke-direct {v0, p0}, Lkik/android/chat/fragment/KikCodeFragment$10;-><init>(Lkik/android/chat/fragment/KikCodeFragment;)V
+
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikCodeFragment;->runOnUiIfAttached(Ljava/lang/Runnable;)V
+
+    .line 809
+    return-void
 .end method
 
 .method static synthetic g(Lkik/android/chat/fragment/KikCodeFragment;)V
@@ -797,33 +834,33 @@
     const/4 v4, 0x0
 
     .line 73
-    .line 4475
+    .line 4496
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->l:Lcom/kik/scan/KikCode;
 
     invoke-static {v0}, Lkik/android/chat/theming/AccentColourManager;->b(Lcom/kik/scan/KikCode;)I
 
     move-result v2
 
-    .line 4476
+    .line 4497
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->l:Lcom/kik/scan/KikCode;
 
     if-nez v0, :cond_1
 
-    .line 4477
+    .line 4498
     invoke-static {}, Lkik/android/chat/theming/AccentColourManager;->a()I
 
     move-result v0
 
-    .line 4478
+    .line 4499
     new-array v1, v5, [Landroid/view/View;
 
     iget-object v2, p0, Lkik/android/chat/fragment/KikCodeFragment;->_spinner:Landroid/widget/ProgressBar;
 
     aput-object v2, v1, v4
 
-    invoke-static {v1}, Lkik/android/util/bz;->d([Landroid/view/View;)V
+    invoke-static {v1}, Lkik/android/util/ca;->d([Landroid/view/View;)V
 
-    .line 4479
+    .line 4500
     iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->_fakeCode:Lkik/android/widget/KikCodeBackgroundImageView;
 
     const/4 v2, 0x0
@@ -832,7 +869,7 @@
 
     move v1, v0
 
-    .line 4510
+    .line 4535
     :goto_0
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->k:Landroid/view/View;
 
@@ -842,9 +879,9 @@
 
     instance-of v0, v0, Lkik/android/scan/widget/a;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
-    .line 4511
+    .line 4536
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->k:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
@@ -853,10 +890,10 @@
 
     check-cast v0, Lkik/android/scan/widget/a;
 
-    .line 4512
-    iget-object v2, p0, Lkik/android/chat/fragment/KikCodeFragment;->s:Lkik/android/util/bw;
+    .line 4537
+    iget-object v2, p0, Lkik/android/chat/fragment/KikCodeFragment;->s:Lkik/android/util/bv;
 
-    invoke-virtual {v2}, Lkik/android/util/bw;->a()Landroid/graphics/Point;
+    invoke-virtual {v2}, Lkik/android/util/bv;->a()Landroid/graphics/Point;
 
     move-result-object v2
 
@@ -866,50 +903,58 @@
     :goto_1
     return-void
 
-    .line 4482
+    .line 4503
     :cond_1
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->l:Lcom/kik/scan/KikCode;
 
-    .line 5558
+    .line 5584
     const-string v1, ""
 
-    .line 5560
+    .line 5586
     instance-of v3, v0, Lcom/kik/scan/UsernameKikCode;
 
-    if-eqz v3, :cond_4
+    if-eqz v3, :cond_5
 
-    .line 5561
+    .line 5587
     check-cast v0, Lcom/kik/scan/UsernameKikCode;
 
     invoke-virtual {v0}, Lcom/kik/scan/UsernameKikCode;->getUsername()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4483
+    .line 4504
     :goto_2
+    invoke-static {v0}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    .line 4505
     iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->_usernameText:Landroid/widget/TextView;
 
-    invoke-static {v0, v1}, Lkik/android/util/bz;->a(Ljava/lang/CharSequence;Landroid/widget/TextView;)V
+    invoke-static {v0, v1}, Lkik/android/util/ca;->a(Ljava/lang/CharSequence;Landroid/widget/TextView;)V
 
-    .line 4484
+    .line 4507
+    :cond_2
     new-array v0, v5, [Landroid/view/View;
 
     iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->_spinner:Landroid/widget/ProgressBar;
 
     aput-object v1, v0, v4
 
-    invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->g([Landroid/view/View;)V
 
-    .line 4486
+    .line 4509
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->_drawArea:Lkik/android/widget/KikFinderCodeImageView;
 
-    invoke-static {v0}, Lkik/android/util/bz;->b(Landroid/view/View;)Z
+    invoke-static {v0}, Lkik/android/util/ca;->b(Landroid/view/View;)Z
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
-    .line 4487
+    .line 4510
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->k:Landroid/view/View;
 
     new-instance v1, Lkik/android/chat/fragment/KikCodeFragment$4;
@@ -920,11 +965,11 @@
 
     invoke-virtual {v0, v1, v4, v5}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 4507
+    .line 4532
     :goto_3
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->_drawArea:Lkik/android/widget/KikFinderCodeImageView;
 
-    iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->z:Landroid/view/View$OnTouchListener;
+    iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->v:Landroid/view/View$OnTouchListener;
 
     invoke-virtual {v0, v1}, Lkik/android/widget/KikFinderCodeImageView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
@@ -932,35 +977,35 @@
 
     goto :goto_0
 
-    .line 4505
-    :cond_2
+    .line 4530
+    :cond_3
     new-array v0, v5, [Landroid/view/View;
 
     iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->_tellAFriendImage:Landroid/widget/ImageView;
 
     aput-object v1, v0, v4
 
-    invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->d([Landroid/view/View;)V
 
     goto :goto_3
 
-    .line 4515
-    :cond_3
+    .line 4540
+    :cond_4
     new-instance v0, Lkik/android/scan/widget/a;
 
     invoke-direct {v0, v1}, Lkik/android/scan/widget/a;-><init>(I)V
 
-    .line 4516
+    .line 4541
     iget-object v2, p0, Lkik/android/chat/fragment/KikCodeFragment;->k:Landroid/view/View;
 
     invoke-virtual {v2, v0}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 6528
+    .line 6553
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->k:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 6529
+    .line 6554
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->k:Landroid/view/View;
 
     new-instance v2, Lkik/android/chat/fragment/KikCodeFragment$5;
@@ -973,38 +1018,10 @@
 
     goto :goto_1
 
-    :cond_4
+    :cond_5
     move-object v0, v1
 
     goto :goto_2
-.end method
-
-.method private h()V
-    .locals 1
-
-    .prologue
-    .line 230
-    iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->i:Lkik/android/scan/c;
-
-    if-eqz v0, :cond_0
-
-    .line 231
-    iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->i:Lkik/android/scan/c;
-
-    invoke-virtual {v0}, Lkik/android/scan/c;->a()V
-
-    .line 232
-    iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->i:Lkik/android/scan/c;
-
-    invoke-virtual {v0}, Lkik/android/scan/c;->b()Lcom/kik/events/Promise;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->o:Lcom/kik/events/Promise;
-
-    .line 234
-    :cond_0
-    return-void
 .end method
 
 .method static synthetic h(Lkik/android/chat/fragment/KikCodeFragment;)V
@@ -1012,7 +1029,7 @@
 
     .prologue
     .line 73
-    invoke-direct {p0}, Lkik/android/chat/fragment/KikCodeFragment;->h()V
+    invoke-direct {p0}, Lkik/android/chat/fragment/KikCodeFragment;->f()V
 
     return-void
 .end method
@@ -1027,27 +1044,12 @@
     return-object v0
 .end method
 
-.method private i()V
-    .locals 1
-
-    .prologue
-    .line 758
-    new-instance v0, Lkik/android/chat/fragment/KikCodeFragment$10;
-
-    invoke-direct {v0, p0}, Lkik/android/chat/fragment/KikCodeFragment$10;-><init>(Lkik/android/chat/fragment/KikCodeFragment;)V
-
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikCodeFragment;->b(Ljava/lang/Runnable;)V
-
-    .line 776
-    return-void
-.end method
-
-.method static synthetic j(Lkik/android/chat/fragment/KikCodeFragment;)Lkik/core/datatypes/s;
+.method static synthetic j(Lkik/android/chat/fragment/KikCodeFragment;)Lkik/core/datatypes/p;
     .locals 1
 
     .prologue
     .line 73
-    iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->u:Lkik/core/datatypes/s;
+    iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->u:Lkik/core/datatypes/p;
 
     return-object v0
 .end method
@@ -1089,7 +1091,7 @@
 
     .prologue
     .line 73
-    iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->z:Landroid/view/View$OnTouchListener;
+    iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->v:Landroid/view/View$OnTouchListener;
 
     return-object v0
 .end method
@@ -1099,7 +1101,7 @@
 
     .prologue
     .line 73
-    iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->A:Lkik/android/chat/fragment/KikCodeFragment$c;
+    iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->w:Lkik/android/chat/fragment/KikCodeFragment$c;
 
     return-object v0
 .end method
@@ -1109,23 +1111,23 @@
 
     .prologue
     .line 73
-    .line 7749
+    .line 7780
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->_fakeCode:Lkik/android/widget/KikCodeBackgroundImageView;
 
     if-eqz v0, :cond_0
 
-    .line 7750
+    .line 7781
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->_fakeCode:Lkik/android/widget/KikCodeBackgroundImageView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lkik/android/widget/KikCodeBackgroundImageView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 7752
+    .line 7783
     :cond_0
-    invoke-direct {p0}, Lkik/android/chat/fragment/KikCodeFragment;->i()V
+    invoke-direct {p0}, Lkik/android/chat/fragment/KikCodeFragment;->g()V
 
-    .line 7753
+    .line 7784
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/view/View;
@@ -1136,7 +1138,7 @@
 
     aput-object v2, v0, v1
 
-    invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->d([Landroid/view/View;)V
 
     .line 73
     return-void
@@ -1144,79 +1146,36 @@
 
 
 # virtual methods
-.method public final F()Z
+.method public final a()V
     .locals 1
 
     .prologue
-    .line 570
-    const/4 v0, 0x1
+    .line 249
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikCodeFragment;->c()V
 
-    return v0
+    .line 250
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->p:Z
+
+    .line 251
+    return-void
 .end method
 
 .method public final a(I)V
     .locals 2
 
     .prologue
-    .line 682
+    .line 709
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->o:Lcom/kik/events/Promise;
 
     new-instance v1, Lkik/android/chat/fragment/KikCodeFragment$7;
 
     invoke-direct {v1, p0, p1}, Lkik/android/chat/fragment/KikCodeFragment$7;-><init>(Lkik/android/chat/fragment/KikCodeFragment;I)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
-    .line 719
-    return-void
-.end method
-
-.method protected final a(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 3
-
-    .prologue
-    .line 611
-    new-instance v0, Lkik/android/chat/fragment/KikDialogFragment$a;
-
-    invoke-direct {v0}, Lkik/android/chat/fragment/KikDialogFragment$a;-><init>()V
-
-    invoke-virtual {v0, p1}, Lkik/android/chat/fragment/KikDialogFragment$a;->a(Ljava/lang/String;)Lkik/android/chat/fragment/KikDialogFragment$a;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p2}, Lkik/android/chat/fragment/KikDialogFragment$a;->b(Ljava/lang/String;)Lkik/android/chat/fragment/KikDialogFragment$a;
-
-    move-result-object v0
-
-    const v1, 0x7f0a0269
-
-    invoke-static {v1}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v2, Lkik/android/chat/fragment/KikCodeFragment$6;
-
-    invoke-direct {v2, p0}, Lkik/android/chat/fragment/KikCodeFragment$6;-><init>(Lkik/android/chat/fragment/KikCodeFragment;)V
-
-    invoke-virtual {v0, v1, v2}, Lkik/android/chat/fragment/KikDialogFragment$a;->a(Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)Lkik/android/chat/fragment/KikDialogFragment$a;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    .line 617
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikDialogFragment$a;->a(Z)Lkik/android/chat/fragment/KikDialogFragment$a;
-
-    move-result-object v0
-
-    .line 618
-    invoke-virtual {v0}, Lkik/android/chat/fragment/KikDialogFragment$a;->a()Lkik/android/chat/fragment/KikDialogFragment;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikCodeFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
-
-    .line 619
+    .line 748
     return-void
 .end method
 
@@ -1224,10 +1183,10 @@
     .locals 0
 
     .prologue
-    .line 285
+    .line 291
     iput-object p1, p0, Lkik/android/chat/fragment/KikCodeFragment;->q:Lkik/android/chat/fragment/KikCodeFragment$b;
 
-    .line 286
+    .line 292
     return-void
 .end method
 
@@ -1235,56 +1194,16 @@
     .locals 1
 
     .prologue
-    .line 244
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikCodeFragment;->d()V
-
-    .line 245
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->p:Z
-
-    .line 246
-    return-void
-.end method
-
-.method protected final b(Lcom/kik/events/d;)V
-    .locals 2
-
-    .prologue
-    .line 291
-    invoke-super {p0, p1}, Lkik/android/chat/fragment/KikIqFragmentBase;->b(Lcom/kik/events/d;)V
-
-    .line 292
-    iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->i:Lkik/android/scan/c;
-
-    invoke-virtual {v0}, Lkik/android/scan/c;->c()Lcom/kik/events/c;
-
-    move-result-object v0
-
-    new-instance v1, Lkik/android/chat/fragment/KikCodeFragment$14;
-
-    invoke-direct {v1, p0}, Lkik/android/chat/fragment/KikCodeFragment$14;-><init>(Lkik/android/chat/fragment/KikCodeFragment;)V
-
-    invoke-virtual {p1, v0, v1}, Lcom/kik/events/d;->a(Lcom/kik/events/c;Lcom/kik/events/e;)Lcom/kik/events/e;
-
-    .line 302
-    return-void
-.end method
-
-.method public final c()V
-    .locals 1
-
-    .prologue
-    .line 267
+    .line 272
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->p:Z
 
-    .line 268
+    .line 273
     return-void
 .end method
 
-.method public final d()V
+.method public final c()V
     .locals 10
 
     .prologue
@@ -1298,32 +1217,32 @@
 
     const/4 v6, 0x0
 
-    .line 623
+    .line 650
     iget-boolean v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->m:Z
 
     if-eqz v0, :cond_0
 
-    .line 624
+    .line 651
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->_drawArea:Lkik/android/widget/KikFinderCodeImageView;
 
-    .line 2544
+    .line 2570
     if-nez v0, :cond_1
 
-    .line 2545
+    .line 2571
     const/4 v0, 0x0
 
-    .line 624
+    .line 651
     :goto_0
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 625
+    .line 652
     iput-boolean v6, p0, Lkik/android/chat/fragment/KikCodeFragment;->m:Z
 
-    .line 627
+    .line 654
     :cond_0
     return-void
 
-    .line 2547
+    .line 2573
     :cond_1
     const/4 v1, 0x4
 
@@ -1335,7 +1254,7 @@
 
     iget-object v4, p0, Lkik/android/chat/fragment/KikCodeFragment;->_drawArea:Lkik/android/widget/KikFinderCodeImageView;
 
-    .line 2548
+    .line 2574
     invoke-virtual {v4}, Lkik/android/widget/KikFinderCodeImageView;->getRotationX()F
 
     move-result v4
@@ -1356,7 +1275,7 @@
 
     iget-object v4, p0, Lkik/android/chat/fragment/KikCodeFragment;->_drawArea:Lkik/android/widget/KikFinderCodeImageView;
 
-    .line 2549
+    .line 2575
     invoke-virtual {v4}, Lkik/android/widget/KikFinderCodeImageView;->getRotationY()F
 
     move-result v4
@@ -1377,7 +1296,7 @@
 
     iget-object v4, p0, Lkik/android/chat/fragment/KikCodeFragment;->_drawArea:Lkik/android/widget/KikFinderCodeImageView;
 
-    .line 2550
+    .line 2576
     invoke-virtual {v4}, Lkik/android/widget/KikFinderCodeImageView;->getScaleX()F
 
     move-result v4
@@ -1400,7 +1319,7 @@
 
     iget-object v5, p0, Lkik/android/chat/fragment/KikCodeFragment;->_drawArea:Lkik/android/widget/KikFinderCodeImageView;
 
-    .line 2551
+    .line 2577
     invoke-virtual {v5}, Lkik/android/widget/KikFinderCodeImageView;->getScaleY()F
 
     move-result v5
@@ -1415,12 +1334,12 @@
 
     aput-object v3, v1, v2
 
-    .line 2547
+    .line 2573
     invoke-static {v0, v1}, Landroid/animation/ObjectAnimator;->ofPropertyValuesHolder(Ljava/lang/Object;[Landroid/animation/PropertyValuesHolder;)Landroid/animation/ObjectAnimator;
 
     move-result-object v0
 
-    .line 2552
+    .line 2578
     new-instance v1, Landroid/view/animation/OvershootInterpolator;
 
     const/high16 v2, 0x40a00000    # 5.0f
@@ -1432,16 +1351,16 @@
     goto :goto_0
 .end method
 
-.method public final f()V
+.method public final d()V
     .locals 4
 
     .prologue
-    .line 666
+    .line 693
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->g:Lcom/kik/android/Mixpanel;
 
     if-eqz v0, :cond_0
 
-    .line 667
+    .line 694
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->g:Lcom/kik/android/Mixpanel;
 
     const-string v1, "Code View Closed"
@@ -1450,7 +1369,7 @@
 
     move-result-object v0
 
-    .line 668
+    .line 695
     const-string v1, "Colour"
 
     iget-object v2, p0, Lkik/android/chat/fragment/KikCodeFragment;->l:Lcom/kik/scan/KikCode;
@@ -1461,7 +1380,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
 
-    .line 669
+    .line 696
     const-string v1, "Colour Change Count"
 
     iget v2, p0, Lkik/android/chat/fragment/KikCodeFragment;->n:I
@@ -1470,66 +1389,119 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;J)Lcom/kik/android/Mixpanel$d;
 
-    .line 670
+    .line 697
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 672
+    .line 699
     :cond_0
     const/4 v0, 0x0
 
     iput v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->n:I
 
-    .line 673
+    .line 700
     return-void
+.end method
+
+.method protected displayErrorDialog(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 3
+
+    .prologue
+    .line 637
+    new-instance v0, Lkik/android/chat/fragment/KikDialogFragment$a;
+
+    invoke-direct {v0}, Lkik/android/chat/fragment/KikDialogFragment$a;-><init>()V
+
+    invoke-virtual {v0, p1}, Lkik/android/chat/fragment/KikDialogFragment$a;->a(Ljava/lang/String;)Lkik/android/chat/fragment/KikDialogFragment$a;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p2}, Lkik/android/chat/fragment/KikDialogFragment$a;->b(Ljava/lang/String;)Lkik/android/chat/fragment/KikDialogFragment$a;
+
+    move-result-object v0
+
+    const v1, 0x7f09027d
+
+    invoke-static {v1}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Lkik/android/chat/fragment/KikCodeFragment$6;
+
+    invoke-direct {v2, p0}, Lkik/android/chat/fragment/KikCodeFragment$6;-><init>(Lkik/android/chat/fragment/KikCodeFragment;)V
+
+    invoke-virtual {v0, v1, v2}, Lkik/android/chat/fragment/KikDialogFragment$a;->a(Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)Lkik/android/chat/fragment/KikDialogFragment$a;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    .line 644
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikDialogFragment$a;->a(Z)Lkik/android/chat/fragment/KikDialogFragment$a;
+
+    move-result-object v0
+
+    .line 645
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikDialogFragment$a;->a()Lkik/android/chat/fragment/KikDialogFragment;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikCodeFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
+
+    .line 646
+    return-void
+.end method
+
+.method public getTransparentStatusBarRequested()Z
+    .locals 1
+
+    .prologue
+    .line 596
+    const/4 v0, 0x1
+
+    return v0
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 2
 
     .prologue
-    .line 161
-    .line 1088
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikFragmentBase;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    .line 165
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikCodeFragment;->getCoreComponent()Lcom/kik/components/CoreComponent;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkik/android/util/s;->a(Landroid/app/Activity;)Lcom/kik/components/CoreComponent;
-
-    move-result-object v0
-
-    .line 161
     invoke-interface {v0, p0}, Lcom/kik/components/CoreComponent;->a(Lkik/android/chat/fragment/KikCodeFragment;)V
 
-    .line 162
+    .line 166
     invoke-super {p0, p1}, Lkik/android/chat/fragment/KikIqFragmentBase;->onCreate(Landroid/os/Bundle;)V
 
-    .line 164
+    .line 168
     invoke-virtual {p0}, Lkik/android/chat/fragment/KikCodeFragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 165
+    .line 169
     iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->t:Lkik/android/chat/fragment/KikCodeFragment$a;
 
     invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikCodeFragment$a;->a(Landroid/os/Bundle;)V
 
-    .line 166
-    invoke-direct {p0}, Lkik/android/chat/fragment/KikCodeFragment;->h()V
+    .line 170
+    invoke-direct {p0}, Lkik/android/chat/fragment/KikCodeFragment;->f()V
 
-    .line 167
+    .line 171
     return-void
 .end method
 
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 4
+    .locals 5
 
     .prologue
     const/4 v2, 0x1
 
     const/4 v3, 0x0
 
-    .line 172
-    const v0, 0x7f04007c
+    .line 176
+    const v0, 0x7f040084
 
     invoke-virtual {p1, v0, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -1537,72 +1509,72 @@
 
     iput-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->k:Landroid/view/View;
 
-    .line 173
+    .line 177
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->k:Landroid/view/View;
 
-    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)V
+    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)Lbutterknife/Unbinder;
 
-    .line 175
+    .line 179
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->t:Lkik/android/chat/fragment/KikCodeFragment$a;
 
     invoke-virtual {v0}, Lkik/android/chat/fragment/KikCodeFragment$a;->b()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 176
+    .line 180
     if-eqz v0, :cond_0
 
-    .line 177
-    iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->j:Lkik/core/interfaces/m;
+    .line 181
+    iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->j:Lkik/core/interfaces/l;
 
-    invoke-interface {v1, v0, v2}, Lkik/core/interfaces/m;->a(Ljava/lang/String;Z)Lkik/core/datatypes/s;
+    invoke-interface {v1, v0, v2}, Lkik/core/interfaces/l;->a(Ljava/lang/String;Z)Lkik/core/datatypes/p;
 
     move-result-object v0
 
-    iput-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->u:Lkik/core/datatypes/s;
+    iput-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->u:Lkik/core/datatypes/p;
 
-    .line 1250
+    .line 1255
     :cond_0
-    invoke-direct {p0}, Lkik/android/chat/fragment/KikCodeFragment;->i()V
+    invoke-direct {p0}, Lkik/android/chat/fragment/KikCodeFragment;->g()V
 
-    .line 1251
-    iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->u:Lkik/core/datatypes/s;
+    .line 1256
+    iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->u:Lkik/core/datatypes/p;
 
     if-eqz v0, :cond_2
 
-    .line 1252
-    iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->u:Lkik/core/datatypes/s;
+    .line 1257
+    iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->u:Lkik/core/datatypes/p;
 
-    invoke-direct {p0, v0}, Lkik/android/chat/fragment/KikCodeFragment;->b(Lkik/core/datatypes/s;)V
+    invoke-direct {p0, v0}, Lkik/android/chat/fragment/KikCodeFragment;->b(Lkik/core/datatypes/p;)V
 
-    .line 182
+    .line 186
     :goto_0
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikCodeFragment;->G()I
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikCodeFragment;->getTransparentStatusHeight()I
 
     move-result v0
 
-    .line 183
+    .line 187
     if-lez v0, :cond_1
 
-    .line 185
+    .line 189
     iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->_tellAFriendImage:Landroid/widget/ImageView;
 
-    invoke-static {v1}, Lkik/android/util/bz;->a(Landroid/view/View;)Lkik/android/util/bz$b;
+    invoke-static {v1}, Lkik/android/util/ca;->a(Landroid/view/View;)Lkik/android/util/ca$b;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lkik/android/util/bz$b;->a(I)Lkik/android/util/bz$b;
+    invoke-virtual {v1, v0}, Lkik/android/util/ca$b;->a(I)Lkik/android/util/ca$b;
 
-    .line 186
+    .line 190
     iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->_codeContainer:Landroid/view/ViewGroup;
 
-    invoke-static {v1}, Lkik/android/util/bz;->a(Landroid/view/View;)Lkik/android/util/bz$b;
+    invoke-static {v1}, Lkik/android/util/ca;->a(Landroid/view/View;)Lkik/android/util/ca$b;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lkik/android/util/bz$b;->a(I)Lkik/android/util/bz$b;
+    invoke-virtual {v1, v0}, Lkik/android/util/ca$b;->a(I)Lkik/android/util/ca$b;
 
-    .line 189
+    .line 193
     :cond_1
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->_tellAFriendImage:Landroid/widget/ImageView;
 
@@ -1612,12 +1584,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 217
+    .line 222
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->k:Landroid/view/View;
 
     return-object v0
 
-    .line 1429
+    .line 1449
     :cond_2
     new-array v0, v2, [Landroid/view/View;
 
@@ -1625,34 +1597,34 @@
 
     aput-object v1, v0, v3
 
-    invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->d([Landroid/view/View;)V
 
-    .line 1430
+    .line 1450
     new-array v0, v2, [Landroid/view/View;
 
     iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->_fakeCode:Lkik/android/widget/KikCodeBackgroundImageView;
 
     aput-object v1, v0, v3
 
-    invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->g([Landroid/view/View;)V
 
-    .line 1431
+    .line 1451
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lkik/android/chat/fragment/KikCodeFragment;->a(Lcom/kik/scan/KikCode;)V
 
-    .line 1432
-    const v0, 0x7f0a031b
+    .line 1452
+    const v0, 0x7f09032f
 
     new-array v1, v2, [Ljava/lang/Object;
 
-    iget-object v2, p0, Lkik/android/chat/fragment/KikCodeFragment;->f:Lkik/core/interfaces/af;
+    iget-object v2, p0, Lkik/android/chat/fragment/KikCodeFragment;->f:Lkik/core/interfaces/ag;
 
-    invoke-interface {v2}, Lkik/core/interfaces/af;->d()Lkik/core/datatypes/ad;
+    invoke-interface {v2}, Lkik/core/interfaces/ag;->d()Lkik/core/datatypes/aa;
 
     move-result-object v2
 
-    iget-object v2, v2, Lkik/core/datatypes/ad;->d:Ljava/lang/String;
+    iget-object v2, v2, Lkik/core/datatypes/aa;->d:Ljava/lang/String;
 
     aput-object v2, v1, v3
 
@@ -1660,34 +1632,36 @@
 
     move-result-object v0
 
-    .line 1433
+    .line 1453
     invoke-virtual {p0, v3}, Lkik/android/chat/fragment/KikCodeFragment;->a(I)V
 
-    .line 1434
+    .line 1454
     iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->_profilePic:Lcom/kik/cache/ContactImageView;
 
-    iget-object v2, p0, Lkik/android/chat/fragment/KikCodeFragment;->f:Lkik/core/interfaces/af;
+    iget-object v2, p0, Lkik/android/chat/fragment/KikCodeFragment;->f:Lkik/core/interfaces/ag;
 
-    invoke-interface {v2}, Lkik/core/interfaces/af;->d()Lkik/core/datatypes/ad;
+    invoke-interface {v2}, Lkik/core/interfaces/ag;->d()Lkik/core/datatypes/aa;
 
     move-result-object v2
 
-    iget-object v3, p0, Lkik/android/chat/fragment/KikCodeFragment;->a:Lcom/kik/cache/aa;
+    iget-object v3, p0, Lkik/android/chat/fragment/KikCodeFragment;->a:Lcom/kik/cache/KikVolleyImageLoader;
 
-    invoke-virtual {v1, v2, v3}, Lcom/kik/cache/ContactImageView;->a(Lkik/core/datatypes/ad;Lcom/kik/cache/aa;)V
+    iget-object v4, p0, Lkik/android/chat/fragment/KikCodeFragment;->g:Lcom/kik/android/Mixpanel;
 
-    .line 1435
+    invoke-virtual {v1, v2, v3, v4}, Lcom/kik/cache/ContactImageView;->a(Lkik/core/datatypes/aa;Lcom/kik/cache/KikVolleyImageLoader;Lcom/kik/android/Mixpanel;)V
+
+    .line 1455
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, p0, Lkik/android/chat/fragment/KikCodeFragment;->f:Lkik/core/interfaces/af;
+    iget-object v2, p0, Lkik/android/chat/fragment/KikCodeFragment;->f:Lkik/core/interfaces/ag;
 
-    invoke-interface {v2}, Lkik/core/interfaces/af;->d()Lkik/core/datatypes/ad;
+    invoke-interface {v2}, Lkik/core/interfaces/ag;->d()Lkik/core/datatypes/aa;
 
     move-result-object v2
 
-    iget-object v2, v2, Lkik/core/datatypes/ad;->d:Ljava/lang/String;
+    iget-object v2, v2, Lkik/core/datatypes/aa;->d:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1699,13 +1673,13 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lkik/android/chat/fragment/KikCodeFragment;->f:Lkik/core/interfaces/af;
+    iget-object v2, p0, Lkik/android/chat/fragment/KikCodeFragment;->f:Lkik/core/interfaces/ag;
 
-    invoke-interface {v2}, Lkik/core/interfaces/af;->d()Lkik/core/datatypes/ad;
+    invoke-interface {v2}, Lkik/core/interfaces/ag;->d()Lkik/core/datatypes/aa;
 
     move-result-object v2
 
-    iget-object v2, v2, Lkik/core/datatypes/ad;->e:Ljava/lang/String;
+    iget-object v2, v2, Lkik/core/datatypes/aa;->e:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1717,27 +1691,27 @@
 
     iget-object v2, p0, Lkik/android/chat/fragment/KikCodeFragment;->_nameText:Landroid/widget/TextView;
 
-    invoke-static {v1, v2}, Lkik/android/util/bz;->a(Ljava/lang/CharSequence;Landroid/widget/TextView;)V
+    invoke-static {v1, v2}, Lkik/android/util/ca;->a(Ljava/lang/CharSequence;Landroid/widget/TextView;)V
 
-    .line 1436
-    iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->f:Lkik/core/interfaces/af;
+    .line 1456
+    iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->f:Lkik/core/interfaces/ag;
 
-    invoke-interface {v1}, Lkik/core/interfaces/af;->d()Lkik/core/datatypes/ad;
+    invoke-interface {v1}, Lkik/core/interfaces/ag;->d()Lkik/core/datatypes/aa;
 
     move-result-object v1
 
-    iget-object v1, v1, Lkik/core/datatypes/ad;->c:Ljava/lang/String;
+    iget-object v1, v1, Lkik/core/datatypes/aa;->c:Ljava/lang/String;
 
     iget-object v2, p0, Lkik/android/chat/fragment/KikCodeFragment;->_usernameText:Landroid/widget/TextView;
 
-    invoke-static {v1, v2}, Lkik/android/util/bz;->a(Ljava/lang/CharSequence;Landroid/widget/TextView;)V
+    invoke-static {v1, v2}, Lkik/android/util/ca;->a(Ljava/lang/CharSequence;Landroid/widget/TextView;)V
 
-    .line 1437
+    .line 1457
     iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment;->_scanText:Landroid/widget/TextView;
 
-    invoke-static {v0, v1}, Lkik/android/util/bz;->a(Ljava/lang/CharSequence;Landroid/widget/TextView;)V
+    invoke-static {v0, v1}, Lkik/android/util/ca;->a(Ljava/lang/CharSequence;Landroid/widget/TextView;)V
 
-    .line 1439
+    .line 1459
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->_profilePic:Lcom/kik/cache/ContactImageView;
 
     new-instance v1, Lkik/android/chat/fragment/KikCodeFragment$3;
@@ -1753,15 +1727,15 @@
     .locals 1
 
     .prologue
-    .line 469
+    .line 490
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->i:Lkik/android/scan/c;
 
     invoke-virtual {v0}, Lkik/android/scan/c;->a()V
 
-    .line 470
+    .line 491
     invoke-super {p0}, Lkik/android/chat/fragment/KikIqFragmentBase;->onDestroy()V
 
-    .line 471
+    .line 492
     return-void
 .end method
 
@@ -1769,16 +1743,16 @@
     .locals 1
 
     .prologue
-    .line 462
-    .line 2267
+    .line 483
+    .line 2272
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->p:Z
 
-    .line 463
+    .line 484
     invoke-super {p0}, Lkik/android/chat/fragment/KikIqFragmentBase;->onPause()V
 
-    .line 464
+    .line 485
     return-void
 .end method
 
@@ -1786,17 +1760,41 @@
     .locals 1
 
     .prologue
-    .line 223
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikCodeFragment;->b()V
+    .line 228
+    invoke-virtual {p0}, Lkik/android/chat/fragment/KikCodeFragment;->a()V
 
-    .line 224
+    .line 229
     invoke-super {p0}, Lkik/android/chat/fragment/KikIqFragmentBase;->onResume()V
 
-    .line 225
+    .line 230
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->r:Z
 
-    .line 226
+    .line 231
+    return-void
+.end method
+
+.method protected registerLifecycleEvents(Lcom/kik/events/d;)V
+    .locals 2
+
+    .prologue
+    .line 297
+    invoke-super {p0, p1}, Lkik/android/chat/fragment/KikIqFragmentBase;->registerLifecycleEvents(Lcom/kik/events/d;)V
+
+    .line 298
+    iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment;->i:Lkik/android/scan/c;
+
+    invoke-virtual {v0}, Lkik/android/scan/c;->c()Lcom/kik/events/c;
+
+    move-result-object v0
+
+    new-instance v1, Lkik/android/chat/fragment/KikCodeFragment$14;
+
+    invoke-direct {v1, p0}, Lkik/android/chat/fragment/KikCodeFragment$14;-><init>(Lkik/android/chat/fragment/KikCodeFragment;)V
+
+    invoke-virtual {p1, v0, v1}, Lcom/kik/events/d;->a(Lcom/kik/events/c;Lcom/kik/events/e;)Lcom/kik/events/e;
+
+    .line 309
     return-void
 .end method

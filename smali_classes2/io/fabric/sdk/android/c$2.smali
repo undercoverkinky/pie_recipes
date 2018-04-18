@@ -30,14 +30,14 @@
     .locals 2
 
     .prologue
-    .line 590
+    .line 591
     iput-object p1, p0, Lio/fabric/sdk/android/c$2;->c:Lio/fabric/sdk/android/c;
 
     iput p2, p0, Lio/fabric/sdk/android/c$2;->b:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 591
+    .line 592
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
     iget v1, p0, Lio/fabric/sdk/android/c$2;->b:I
@@ -55,12 +55,12 @@
     .locals 4
 
     .prologue
-    .line 598
+    .line 599
     iget-object v0, p0, Lio/fabric/sdk/android/c$2;->a:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 599
+    .line 600
     iget-object v0, p0, Lio/fabric/sdk/android/c$2;->a:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
@@ -73,7 +73,7 @@
 
     if-nez v0, :cond_0
 
-    .line 600
+    .line 601
     iget-object v0, p0, Lio/fabric/sdk/android/c$2;->c:Lio/fabric/sdk/android/c;
 
     invoke-static {v0}, Lio/fabric/sdk/android/c;->a(Lio/fabric/sdk/android/c;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -84,7 +84,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 601
+    .line 602
     iget-object v0, p0, Lio/fabric/sdk/android/c$2;->c:Lio/fabric/sdk/android/c;
 
     invoke-static {v0}, Lio/fabric/sdk/android/c;->b(Lio/fabric/sdk/android/c;)Lio/fabric/sdk/android/f;
@@ -93,7 +93,7 @@
 
     invoke-interface {v0}, Lio/fabric/sdk/android/f;->a()V
 
-    .line 603
+    .line 604
     :cond_0
     return-void
 .end method
@@ -102,7 +102,7 @@
     .locals 1
 
     .prologue
-    .line 607
+    .line 608
     iget-object v0, p0, Lio/fabric/sdk/android/c$2;->c:Lio/fabric/sdk/android/c;
 
     invoke-static {v0}, Lio/fabric/sdk/android/c;->b(Lio/fabric/sdk/android/c;)Lio/fabric/sdk/android/f;
@@ -111,6 +111,6 @@
 
     invoke-interface {v0, p1}, Lio/fabric/sdk/android/f;->a(Ljava/lang/Exception;)V
 
-    .line 608
+    .line 609
     return-void
 .end method

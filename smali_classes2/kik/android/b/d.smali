@@ -9,44 +9,53 @@
 # instance fields
 .field private final a:Landroid/app/Activity;
 
-.field private final b:Lcom/kik/cards/web/q;
+.field private final b:Lcom/kik/cards/web/r;
 
 .field private final c:Lcom/kik/cards/web/f;
 
-.field private final d:Lkik/core/interfaces/x;
+.field private final d:Lkik/core/interfaces/v;
 
 .field private final e:Lcom/kik/cards/web/b;
 
-.field private final f:Lcom/kik/cards/web/i;
+.field private final f:Lcom/kik/cards/web/h;
+
+.field private final g:Lkik/android/chat/vm/bd;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Activity;Lcom/kik/cards/web/q;Lcom/kik/cards/web/f;Lkik/core/interfaces/x;Lcom/kik/cards/web/i;Lcom/kik/cards/web/b;)V
-    .locals 0
+.method public constructor <init>(Landroid/app/Activity;Lcom/kik/cards/web/r;Lcom/kik/cards/web/f;Lkik/core/interfaces/v;Lcom/kik/cards/web/h;Lcom/kik/cards/web/b;)V
+    .locals 1
 
     .prologue
-    .line 41
+    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
+    .line 47
     iput-object p1, p0, Lkik/android/b/d;->a:Landroid/app/Activity;
 
-    .line 43
-    iput-object p2, p0, Lkik/android/b/d;->b:Lcom/kik/cards/web/q;
+    .line 48
+    iput-object p2, p0, Lkik/android/b/d;->b:Lcom/kik/cards/web/r;
 
-    .line 44
-    iput-object p4, p0, Lkik/android/b/d;->d:Lkik/core/interfaces/x;
+    .line 49
+    iput-object p4, p0, Lkik/android/b/d;->d:Lkik/core/interfaces/v;
 
-    .line 45
+    .line 50
     iput-object p3, p0, Lkik/android/b/d;->c:Lcom/kik/cards/web/f;
 
-    .line 46
-    iput-object p5, p0, Lkik/android/b/d;->f:Lcom/kik/cards/web/i;
+    .line 51
+    iput-object p5, p0, Lkik/android/b/d;->f:Lcom/kik/cards/web/h;
 
-    .line 47
+    .line 52
     iput-object p6, p0, Lkik/android/b/d;->e:Lcom/kik/cards/web/b;
 
-    .line 48
+    .line 53
+    new-instance v0, Lkik/android/chat/vm/cc;
+
+    invoke-direct {v0, p1}, Lkik/android/chat/vm/cc;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lkik/android/b/d;->g:Lkik/android/chat/vm/bd;
+
+    .line 54
     return-void
 .end method
 
@@ -54,124 +63,27 @@
     .locals 1
 
     .prologue
-    .line 31
+    .line 35
     iget-object v0, p0, Lkik/android/b/d;->e:Lcom/kik/cards/web/b;
 
     return-object v0
-.end method
-
-.method static synthetic a(Lkik/android/b/d;Lkik/core/datatypes/o;Ljava/util/List;Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;)Lcom/kik/events/Promise;
-    .locals 3
-
-    .prologue
-    const/4 v2, 0x1
-
-    .line 2196
-    if-nez p1, :cond_0
-
-    .line 2197
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Contact was null!"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v0}, Lcom/kik/events/m;->a(Ljava/lang/Throwable;)Lcom/kik/events/Promise;
-
-    move-result-object v0
-
-    .line 2206
-    :goto_0
-    return-object v0
-
-    .line 2199
-    :cond_0
-    invoke-static {}, Lkik/android/internal/platform/b;->a()Lkik/android/internal/platform/b;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p2}, Lkik/android/internal/platform/b;->b(Ljava/util/List;)V
-
-    .line 2200
-    new-instance v0, Lkik/android/chat/fragment/KikChatFragment$a;
-
-    invoke-direct {v0}, Lkik/android/chat/fragment/KikChatFragment$a;-><init>()V
-
-    invoke-virtual {v0, v2}, Lkik/android/chat/fragment/KikChatFragment$a;->c(Z)Lkik/android/chat/fragment/KikChatFragment$a;
-
-    move-result-object v0
-
-    .line 2201
-    invoke-virtual {p1}, Lkik/core/datatypes/o;->o()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 2203
-    new-instance v0, Lkik/android/chat/fragment/KikChatInfoFragment$a;
-
-    invoke-direct {v0}, Lkik/android/chat/fragment/KikChatInfoFragment$a;-><init>()V
-
-    .line 2204
-    invoke-virtual {v0, p1}, Lkik/android/chat/fragment/KikChatInfoFragment$a;->a(Lkik/core/datatypes/o;)Lkik/android/chat/fragment/KikChatInfoFragment$a;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v2}, Lkik/android/chat/fragment/KikChatInfoFragment$a;->a(I)Lkik/android/chat/fragment/KikChatInfoFragment$a;
-
-    .line 2205
-    invoke-virtual {v0, p3}, Lkik/android/chat/fragment/KikChatInfoFragment$a;->a(Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;)Lcom/kik/ui/fragment/FragmentBase$FragmentBundle;
-
-    .line 2206
-    iget-object v1, p0, Lkik/android/b/d;->a:Landroid/app/Activity;
-
-    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->e()Lcom/kik/events/Promise;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    .line 2210
-    :cond_1
-    invoke-virtual {v0, p1}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Lkik/core/datatypes/o;)Lkik/android/chat/fragment/KikChatFragment$a;
-
-    .line 2211
-    invoke-virtual {v0, p3}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;)Lcom/kik/ui/fragment/FragmentBase$FragmentBundle;
-
-    .line 2212
-    iget-object v1, p0, Lkik/android/b/d;->a:Landroid/app/Activity;
-
-    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->e()Lcom/kik/events/Promise;
-
-    move-result-object v0
-
-    goto :goto_0
 .end method
 
 .method private a(Ljava/lang/String;ZZLjava/lang/String;)V
     .locals 7
 
     .prologue
-    .line 72
+    .line 78
     iget-object v0, p0, Lkik/android/b/d;->a:Landroid/app/Activity;
 
-    .line 73
+    .line 79
     if-nez v0, :cond_0
 
-    .line 120
+    .line 128
     :goto_0
     return-void
 
-    .line 78
+    .line 84
     :cond_0
     iget-object v6, p0, Lkik/android/b/d;->a:Landroid/app/Activity;
 
@@ -194,58 +106,158 @@
     goto :goto_0
 .end method
 
-.method static synthetic a(Lkik/android/b/d;Lkik/core/datatypes/o;)V
+.method static synthetic a(Lkik/android/b/d;Lkik/core/datatypes/l;)V
     .locals 3
 
     .prologue
-    .line 2124
-    new-instance v0, Lkik/android/chat/fragment/KikChatInfoFragment$a;
+    .line 2132
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Lkik/android/chat/fragment/KikChatInfoFragment$a;-><init>()V
+    .line 2134
+    invoke-virtual {p1}, Lkik/core/datatypes/l;->B()Z
 
-    .line 2125
-    invoke-virtual {p1}, Lkik/core/datatypes/o;->b()Ljava/lang/String;
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    move-object v0, p1
+
+    .line 2135
+    check-cast v0, Lkik/core/datatypes/p;
+
+    invoke-virtual {v0}, Lkik/core/datatypes/p;->H()Lkik/core/datatypes/MemberPermissions;
+
+    move-result-object v0
+
+    .line 2138
+    :cond_0
+    iget-object v1, p0, Lkik/android/b/d;->g:Lkik/android/chat/vm/bd;
+
+    invoke-virtual {p1}, Lkik/core/datatypes/l;->a()Lcom/kik/core/network/xmpp/jid/a;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lkik/android/chat/vm/profile/ea;->a(Lcom/kik/core/network/xmpp/jid/a;)Lkik/android/chat/vm/profile/ea;
+
+    move-result-object v2
+
+    .line 2139
+    invoke-virtual {v2, v0}, Lkik/android/chat/vm/profile/ea;->a(Lkik/core/datatypes/MemberPermissions;)Lkik/android/chat/vm/profile/ea;
+
+    move-result-object v0
+
+    .line 2140
+    invoke-virtual {p1}, Lkik/core/datatypes/l;->f()Z
+
+    move-result v2
+
+    invoke-virtual {v0, v2}, Lkik/android/chat/vm/profile/ea;->a(Z)Lkik/android/chat/vm/profile/ea;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lkik/android/chat/vm/profile/ea;->b()Lkik/android/chat/vm/profile/dt;
+
+    move-result-object v0
+
+    .line 2138
+    invoke-interface {v1, v0}, Lkik/android/chat/vm/bd;->a(Lkik/android/chat/vm/profile/dt;)Lrx/d;
+
+    .line 35
+    return-void
+.end method
+
+.method static synthetic a(Lkik/android/b/d;Lkik/core/datatypes/l;Ljava/util/List;Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;)V
+    .locals 3
+
+    .prologue
+    .line 2210
+    invoke-static {}, Lkik/android/internal/platform/PlatformHelper;->a()Lkik/android/internal/platform/PlatformHelper;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p2}, Lkik/android/internal/platform/PlatformHelper;->b(Ljava/util/List;)V
+
+    .line 2211
+    new-instance v0, Lkik/android/chat/fragment/KikChatFragment$a;
+
+    invoke-direct {v0}, Lkik/android/chat/fragment/KikChatFragment$a;-><init>()V
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikChatFragment$a;->c(Z)Lkik/android/chat/fragment/KikChatFragment$a;
+
+    move-result-object v0
+
+    .line 2212
+    invoke-virtual {p1}, Lkik/core/datatypes/l;->h()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 2213
+    iget-object v0, p0, Lkik/android/b/d;->g:Lkik/android/chat/vm/bd;
+
+    invoke-virtual {p1}, Lkik/core/datatypes/l;->a()Lcom/kik/core/network/xmpp/jid/a;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikChatInfoFragment$a;->c(Ljava/lang/String;)Lkik/android/chat/fragment/KikChatInfoFragment$a;
+    invoke-static {v1}, Lkik/android/chat/vm/profile/ea;->a(Lcom/kik/core/network/xmpp/jid/a;)Lkik/android/chat/vm/profile/ea;
 
     move-result-object v1
 
-    const/4 v2, 0x0
+    invoke-virtual {p1}, Lkik/core/datatypes/l;->f()Z
 
-    .line 2126
-    invoke-virtual {v1, v2}, Lkik/android/chat/fragment/KikChatInfoFragment$a;->a(Z)Lkik/android/chat/fragment/KikChatInfoFragment$a;
+    move-result v2
 
-    .line 2127
+    invoke-virtual {v1, v2}, Lkik/android/chat/vm/profile/ea;->a(Z)Lkik/android/chat/vm/profile/ea;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lkik/android/chat/vm/profile/ea;->b()Lkik/android/chat/vm/profile/dt;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lkik/android/chat/vm/bd;->a(Lkik/android/chat/vm/profile/dt;)Lrx/d;
+
+    :goto_0
+    return-void
+
+    .line 2217
+    :cond_0
+    invoke-virtual {v0, p1}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Lkik/core/datatypes/l;)Lkik/android/chat/fragment/KikChatFragment$a;
+
+    .line 2218
+    invoke-virtual {v0, p3}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;)Lcom/kik/ui/fragment/FragmentBase$FragmentBundle;
+
+    .line 2219
     iget-object v1, p0, Lkik/android/b/d;->a:Landroid/app/Activity;
 
-    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ae;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->e()Lcom/kik/events/Promise;
 
-    .line 31
-    return-void
+    goto :goto_0
 .end method
 
-.method static synthetic b(Lkik/android/b/d;)Lkik/core/interfaces/x;
+.method static synthetic b(Lkik/android/b/d;)Lkik/core/interfaces/v;
     .locals 1
 
     .prologue
-    .line 31
-    iget-object v0, p0, Lkik/android/b/d;->d:Lkik/core/interfaces/x;
+    .line 35
+    iget-object v0, p0, Lkik/android/b/d;->d:Lkik/core/interfaces/v;
 
     return-object v0
 .end method
 
-.method static synthetic c(Lkik/android/b/d;)Lcom/kik/cards/web/q;
+.method static synthetic c(Lkik/android/b/d;)Lcom/kik/cards/web/r;
     .locals 1
 
     .prologue
-    .line 31
-    iget-object v0, p0, Lkik/android/b/d;->b:Lcom/kik/cards/web/q;
+    .line 35
+    iget-object v0, p0, Lkik/android/b/d;->b:Lcom/kik/cards/web/r;
 
     return-object v0
 .end method
@@ -254,18 +266,18 @@
     .locals 1
 
     .prologue
-    .line 31
+    .line 35
     iget-object v0, p0, Lkik/android/b/d;->a:Landroid/app/Activity;
 
     return-object v0
 .end method
 
-.method static synthetic e(Lkik/android/b/d;)Lcom/kik/cards/web/i;
+.method static synthetic e(Lkik/android/b/d;)Lcom/kik/cards/web/h;
     .locals 1
 
     .prologue
-    .line 31
-    iget-object v0, p0, Lkik/android/b/d;->f:Lcom/kik/cards/web/i;
+    .line 35
+    iget-object v0, p0, Lkik/android/b/d;->f:Lcom/kik/cards/web/h;
 
     return-object v0
 .end method
@@ -274,7 +286,7 @@
     .locals 1
 
     .prologue
-    .line 31
+    .line 35
     iget-object v0, p0, Lkik/android/b/d;->c:Lcom/kik/cards/web/f;
 
     return-object v0
@@ -297,8 +309,8 @@
     .end annotation
 
     .prologue
-    .line 140
-    invoke-static {}, Lkik/android/internal/platform/b;->a()Lkik/android/internal/platform/b;
+    .line 153
+    invoke-static {}, Lkik/android/internal/platform/PlatformHelper;->a()Lkik/android/internal/platform/PlatformHelper;
 
     move-result-object v0
 
@@ -306,17 +318,17 @@
 
     iget-object v3, p0, Lkik/android/b/d;->c:Lcom/kik/cards/web/f;
 
-    iget-object v1, p0, Lkik/android/b/d;->b:Lcom/kik/cards/web/q;
+    iget-object v1, p0, Lkik/android/b/d;->b:Lcom/kik/cards/web/r;
 
-    invoke-interface {v1}, Lcom/kik/cards/web/q;->m()Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;
+    invoke-interface {v1}, Lcom/kik/cards/web/r;->k()Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;
 
     move-result-object v4
 
-    iget-object v5, p0, Lkik/android/b/d;->d:Lkik/core/interfaces/x;
+    iget-object v5, p0, Lkik/android/b/d;->d:Lkik/core/interfaces/v;
 
     move-object v1, p1
 
-    invoke-virtual/range {v0 .. v5}, Lkik/android/internal/platform/b;->a(Lcom/kik/cards/web/kik/KikMessageParcelable;Landroid/app/Activity;Lcom/kik/cards/web/f;Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;Lkik/core/interfaces/x;)Lcom/kik/events/Promise;
+    invoke-virtual/range {v0 .. v5}, Lkik/android/internal/platform/PlatformHelper;->a(Lcom/kik/cards/web/kik/KikMessageParcelable;Landroid/app/Activity;Lcom/kik/cards/web/f;Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;Lkik/core/interfaces/v;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -342,20 +354,20 @@
     .end annotation
 
     .prologue
-    .line 155
+    .line 168
     if-eqz p2, :cond_1
 
-    .line 156
+    .line 169
     iget-object v0, p0, Lkik/android/b/d;->c:Lcom/kik/cards/web/f;
 
     if-eqz v0, :cond_0
 
-    .line 157
+    .line 170
     iget-object v0, p0, Lkik/android/b/d;->c:Lcom/kik/cards/web/f;
 
     iget-object v1, p0, Lkik/android/b/d;->a:Landroid/app/Activity;
 
-    const v2, 0x7f0a01f5
+    const v2, 0x7f090209
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -363,39 +375,39 @@
 
     invoke-interface {v0, v1}, Lcom/kik/cards/web/f;->b(Ljava/lang/String;)V
 
-    .line 160
+    .line 173
     :cond_0
     new-instance v0, Lcom/kik/events/Promise;
 
     invoke-direct {v0}, Lcom/kik/events/Promise;-><init>()V
 
-    .line 161
-    iget-object v1, p0, Lkik/android/b/d;->d:Lkik/core/interfaces/x;
+    .line 174
+    iget-object v1, p0, Lkik/android/b/d;->d:Lkik/core/interfaces/v;
 
-    invoke-interface {v1, p2}, Lkik/core/interfaces/x;->f(Ljava/lang/String;)Lcom/kik/events/Promise;
+    invoke-interface {v1, p2}, Lkik/core/interfaces/v;->e(Ljava/lang/String;)Lcom/kik/events/Promise;
 
     move-result-object v1
 
-    .line 162
+    .line 175
     new-instance v2, Lkik/android/b/d$2;
 
     invoke-direct {v2, p0, v0, p1}, Lkik/android/b/d$2;-><init>(Lkik/android/b/d;Lcom/kik/events/Promise;Ljava/util/List;)V
 
-    invoke-virtual {v1, v2}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v1, v2}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
-    .line 1219
+    .line 1226
     :goto_0
     return-object v0
 
-    .line 190
+    .line 204
     :cond_1
-    iget-object v0, p0, Lkik/android/b/d;->b:Lcom/kik/cards/web/q;
+    iget-object v0, p0, Lkik/android/b/d;->b:Lcom/kik/cards/web/r;
 
-    invoke-interface {v0}, Lcom/kik/cards/web/q;->m()Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;
+    invoke-interface {v0}, Lcom/kik/cards/web/r;->k()Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;
 
     move-result-object v0
 
-    .line 1218
+    .line 1225
     if-eqz p1, :cond_2
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -404,7 +416,7 @@
 
     if-gtz v1, :cond_3
 
-    .line 1219
+    .line 1226
     :cond_2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -412,37 +424,37 @@
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/kik/events/m;->a(Ljava/lang/Throwable;)Lcom/kik/events/Promise;
+    invoke-static {v0}, Lcom/kik/events/l;->a(Ljava/lang/Throwable;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 1221
+    .line 1228
     :cond_3
-    invoke-static {}, Lkik/android/internal/platform/b;->a()Lkik/android/internal/platform/b;
+    invoke-static {}, Lkik/android/internal/platform/PlatformHelper;->a()Lkik/android/internal/platform/PlatformHelper;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Lkik/android/internal/platform/b;->b(Ljava/util/List;)V
+    invoke-virtual {v1, p1}, Lkik/android/internal/platform/PlatformHelper;->b(Ljava/util/List;)V
 
-    .line 1222
+    .line 1229
     new-instance v1, Lkik/android/chat/fragment/SendToFragment$a;
 
     invoke-direct {v1}, Lkik/android/chat/fragment/SendToFragment$a;-><init>()V
 
-    .line 1223
+    .line 1230
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Lkik/android/chat/fragment/SendToFragment$a;->a(Z)Lkik/android/chat/fragment/SendToFragment$a;
 
-    .line 1224
+    .line 1231
     invoke-virtual {v1, v0}, Lkik/android/chat/fragment/SendToFragment$a;->a(Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;)Lcom/kik/ui/fragment/FragmentBase$FragmentBundle;
 
-    .line 1225
+    .line 1232
     iget-object v0, p0, Lkik/android/b/d;->a:Landroid/app/Activity;
 
-    invoke-static {v1, v0}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    invoke-static {v1, v0}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ae;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v0
 
@@ -459,12 +471,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 67
+    .line 73
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v1, v1, v0}, Lkik/android/b/d;->a(Ljava/lang/String;ZZLjava/lang/String;)V
 
-    .line 68
+    .line 74
     return-void
 .end method
 
@@ -472,12 +484,12 @@
     .locals 1
 
     .prologue
-    .line 133
+    .line 146
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0, p2, p3}, Lkik/android/b/d;->a(Ljava/lang/String;ZZLjava/lang/String;)V
 
-    .line 134
+    .line 147
     return-void
 .end method
 
@@ -496,19 +508,19 @@
     .end annotation
 
     .prologue
-    .line 146
-    invoke-static {}, Lkik/android/internal/platform/b;->a()Lkik/android/internal/platform/b;
+    .line 159
+    invoke-static {}, Lkik/android/internal/platform/PlatformHelper;->a()Lkik/android/internal/platform/PlatformHelper;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lkik/android/internal/platform/b;->b(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lkik/android/internal/platform/PlatformHelper;->b(Ljava/util/List;)V
 
-    .line 147
+    .line 160
     new-instance v0, Lkik/android/chat/fragment/KikChatFragment$a;
 
     invoke-direct {v0}, Lkik/android/chat/fragment/KikChatFragment$a;-><init>()V
 
-    .line 148
+    .line 161
     invoke-virtual {v0, p2}, Lkik/android/chat/fragment/KikChatFragment$a;->c(Ljava/lang/String;)Lkik/android/chat/fragment/KikChatFragment$a;
 
     move-result-object v0
@@ -519,15 +531,15 @@
 
     move-result-object v0
 
-    .line 149
+    .line 162
     iget-object v1, p0, Lkik/android/b/d;->a:Landroid/app/Activity;
 
-    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ae;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->e()Lcom/kik/events/Promise;
 
-    .line 150
+    .line 163
     return-void
 .end method

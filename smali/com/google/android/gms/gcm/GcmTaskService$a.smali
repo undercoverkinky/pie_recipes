@@ -1,154 +1,214 @@
 .class final Lcom/google/android/gms/gcm/GcmTaskService$a;
-.super Ljava/lang/Thread;
+.super Landroid/os/Handler;
 
 
 # annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0x15
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Lcom/google/android/gms/gcm/GcmTaskService;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x0
     name = "a"
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/google/android/gms/gcm/GcmTaskService;
-
-.field private final b:Ljava/lang/String;
-
-.field private final c:Lcom/google/android/gms/gcm/zzb;
-
-.field private final d:Landroid/os/Bundle;
+.field private synthetic a:Lcom/google/android/gms/gcm/GcmTaskService;
 
 
 # direct methods
-.method constructor <init>(Lcom/google/android/gms/gcm/GcmTaskService;Ljava/lang/String;Landroid/os/IBinder;Landroid/os/Bundle;)V
-    .locals 2
+.method constructor <init>(Lcom/google/android/gms/gcm/GcmTaskService;Landroid/os/Looper;)V
+    .locals 0
 
     iput-object p1, p0, Lcom/google/android/gms/gcm/GcmTaskService$a;->a:Lcom/google/android/gms/gcm/GcmTaskService;
 
-    invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, " GCM Task"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
-
-    iput-object p2, p0, Lcom/google/android/gms/gcm/GcmTaskService$a;->b:Ljava/lang/String;
-
-    invoke-static {p3}, Lcom/google/android/gms/gcm/zzb$zza;->zzch(Landroid/os/IBinder;)Lcom/google/android/gms/gcm/zzb;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/google/android/gms/gcm/GcmTaskService$a;->c:Lcom/google/android/gms/gcm/zzb;
-
-    iput-object p4, p0, Lcom/google/android/gms/gcm/GcmTaskService$a;->d:Landroid/os/Bundle;
+    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
-
-    const/16 v0, 0xa
-
-    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
+.method public final handleMessage(Landroid/os/Message;)V
+    .locals 6
 
     iget-object v0, p0, Lcom/google/android/gms/gcm/GcmTaskService$a;->a:Lcom/google/android/gms/gcm/GcmTaskService;
 
-    new-instance v1, Lcom/google/android/gms/gcm/TaskParams;
+    iget v1, p1, Landroid/os/Message;->sendingUid:I
 
-    iget-object v2, p0, Lcom/google/android/gms/gcm/GcmTaskService$a;->b:Ljava/lang/String;
+    const-string v2, "com.google.android.gms"
 
-    iget-object v3, p0, Lcom/google/android/gms/gcm/GcmTaskService$a;->d:Landroid/os/Bundle;
-
-    invoke-direct {v1, v2, v3}, Lcom/google/android/gms/gcm/TaskParams;-><init>(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/gcm/GcmTaskService;->onRunTask(Lcom/google/android/gms/gcm/TaskParams;)I
+    invoke-static {v0, v1, v2}, Lcom/google/android/gms/common/util/zzv;->zzb(Landroid/content/Context;ILjava/lang/String;)Z
 
     move-result v0
 
-    :try_start_0
-    iget-object v1, p0, Lcom/google/android/gms/gcm/GcmTaskService$a;->c:Lcom/google/android/gms/gcm/zzb;
+    if-nez v0, :cond_1
 
-    invoke-interface {v1, v0}, Lcom/google/android/gms/gcm/zzb;->zzhG(I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const-string v0, "GcmTaskService"
 
-    iget-object v0, p0, Lcom/google/android/gms/gcm/GcmTaskService$a;->a:Lcom/google/android/gms/gcm/GcmTaskService;
+    const-string v1, "unable to verify presence of Google Play Services"
 
-    iget-object v1, p0, Lcom/google/android/gms/gcm/GcmTaskService$a;->b:Ljava/lang/String;
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {v0, v1}, Lcom/google/android/gms/gcm/GcmTaskService;->zza(Lcom/google/android/gms/gcm/GcmTaskService;Ljava/lang/String;)V
-
+    :cond_0
     :goto_0
     return-void
 
-    :catch_0
-    move-exception v0
+    :cond_1
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    :try_start_1
-    const-string v1, "GcmTaskService"
+    packed-switch v0, :pswitch_data_0
 
-    const-string v2, "Error reporting result of operation to scheduler for "
+    :pswitch_0
+    const-string v0, "GcmTaskService"
 
-    iget-object v0, p0, Lcom/google/android/gms/gcm/GcmTaskService$a;->b:Ljava/lang/String;
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v0
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    move-result-object v2
 
-    move-result v3
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
 
-    if-eqz v3, :cond_0
+    move-result v2
 
-    invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    add-int/lit8 v2, v2, 0x1f
 
-    move-result-object v0
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    :goto_1
-    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    iget-object v0, p0, Lcom/google/android/gms/gcm/GcmTaskService$a;->a:Lcom/google/android/gms/gcm/GcmTaskService;
+    const-string v2, "Unrecognized message received: "
 
-    iget-object v1, p0, Lcom/google/android/gms/gcm/GcmTaskService$a;->b:Ljava/lang/String;
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v1}, Lcom/google/android/gms/gcm/GcmTaskService;->zza(Lcom/google/android/gms/gcm/GcmTaskService;Ljava/lang/String;)V
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    :cond_0
-    :try_start_2
-    new-instance v0, Ljava/lang/String;
+    :pswitch_1
+    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
-    invoke-direct {v0, v2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    move-result-object v0
 
-    goto :goto_1
+    invoke-virtual {v0}, Landroid/os/Bundle;->isEmpty()Z
 
-    :catchall_0
-    move-exception v0
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-object v3, p1, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
+
+    if-eqz v3, :cond_0
+
+    const-string v1, "tag"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v1, "triggered_uris"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object v5
 
     iget-object v1, p0, Lcom/google/android/gms/gcm/GcmTaskService$a;->a:Lcom/google/android/gms/gcm/GcmTaskService;
 
-    iget-object v2, p0, Lcom/google/android/gms/gcm/GcmTaskService$a;->b:Ljava/lang/String;
+    invoke-static {v1, v2}, Lcom/google/android/gms/gcm/GcmTaskService;->zza(Lcom/google/android/gms/gcm/GcmTaskService;Ljava/lang/String;)Z
 
-    invoke-static {v1, v2}, Lcom/google/android/gms/gcm/GcmTaskService;->zza(Lcom/google/android/gms/gcm/GcmTaskService;Ljava/lang/String;)V
+    move-result v1
 
-    throw v0
+    if-nez v1, :cond_0
+
+    const-string v1, "extras"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v4
+
+    new-instance v0, Lcom/google/android/gms/gcm/GcmTaskService$b;
+
+    iget-object v1, p0, Lcom/google/android/gms/gcm/GcmTaskService$a;->a:Lcom/google/android/gms/gcm/GcmTaskService;
+
+    invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/gcm/GcmTaskService$b;-><init>(Lcom/google/android/gms/gcm/GcmTaskService;Ljava/lang/String;Landroid/os/Messenger;Landroid/os/Bundle;Ljava/util/List;)V
+
+    iget-object v1, p0, Lcom/google/android/gms/gcm/GcmTaskService$a;->a:Lcom/google/android/gms/gcm/GcmTaskService;
+
+    invoke-static {v1, v0}, Lcom/google/android/gms/gcm/GcmTaskService;->zza(Lcom/google/android/gms/gcm/GcmTaskService;Lcom/google/android/gms/gcm/GcmTaskService$b;)V
+
+    goto :goto_0
+
+    :pswitch_2
+    const-string v0, "GcmTaskService"
+
+    const/4 v1, 0x3
+
+    invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    add-int/lit8 v1, v1, 0x2d
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v1, "ignoring unimplemented stop message for now: "
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto/16 :goto_0
+
+    :pswitch_3
+    iget-object v0, p0, Lcom/google/android/gms/gcm/GcmTaskService$a;->a:Lcom/google/android/gms/gcm/GcmTaskService;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/gcm/GcmTaskService;->onInitializeTasks()V
+
+    goto/16 :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_2
+        :pswitch_0
+        :pswitch_3
+    .end packed-switch
 .end method

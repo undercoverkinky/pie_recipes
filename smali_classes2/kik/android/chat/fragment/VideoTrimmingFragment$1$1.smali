@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/fragment/VideoTrimmingFragment$1$1;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
         "Ljava/lang/String;",
         ">;"
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 152
+    .line 165
     iput-object p1, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$1$1;->a:Lkik/android/chat/fragment/VideoTrimmingFragment$1;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -46,34 +46,34 @@
     .locals 2
 
     .prologue
-    .line 152
+    .line 165
     check-cast p1, Ljava/lang/String;
 
-    .line 1156
+    .line 1169
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1157
+    .line 1170
     const-string v1, "photoUrl"
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1158
+    .line 1171
     iget-object v1, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$1$1;->a:Lkik/android/chat/fragment/VideoTrimmingFragment$1;
 
     iget-object v1, v1, Lkik/android/chat/fragment/VideoTrimmingFragment$1;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
-    invoke-virtual {v1, v0}, Lkik/android/chat/fragment/VideoTrimmingFragment;->a(Landroid/os/Bundle;)V
+    invoke-virtual {v1, v0}, Lkik/android/chat/fragment/VideoTrimmingFragment;->setResultData(Landroid/os/Bundle;)V
 
-    .line 1159
+    .line 1172
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$1$1;->a:Lkik/android/chat/fragment/VideoTrimmingFragment$1;
 
     iget-object v0, v0, Lkik/android/chat/fragment/VideoTrimmingFragment$1;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/VideoTrimmingFragment;->D()V
+    invoke-virtual {v0}, Lkik/android/chat/fragment/VideoTrimmingFragment;->finish()V
 
-    .line 152
+    .line 165
     return-void
 .end method
 
@@ -81,7 +81,7 @@
     .locals 3
 
     .prologue
-    .line 165
+    .line 178
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$1$1;->a:Lkik/android/chat/fragment/VideoTrimmingFragment$1;
 
     iget-object v0, v0, Lkik/android/chat/fragment/VideoTrimmingFragment$1;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
@@ -90,7 +90,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0385
+    const v1, 0x7f090399
 
     const/4 v2, 0x0
 
@@ -100,6 +100,6 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 166
+    .line 179
     return-void
 .end method

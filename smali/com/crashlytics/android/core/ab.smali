@@ -12,11 +12,11 @@
 
 
 # instance fields
-.field private final a:Lio/fabric/sdk/android/services/c/c;
+.field private final a:Lio/fabric/sdk/android/services/b/c;
 
 
 # direct methods
-.method public constructor <init>(Lio/fabric/sdk/android/services/c/c;)V
+.method public constructor <init>(Lio/fabric/sdk/android/services/b/c;)V
     .locals 0
 
     .prologue
@@ -24,7 +24,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 42
-    iput-object p1, p0, Lcom/crashlytics/android/core/ab;->a:Lio/fabric/sdk/android/services/c/c;
+    iput-object p1, p0, Lcom/crashlytics/android/core/ab;->a:Lio/fabric/sdk/android/services/b/c;
 
     .line 43
     return-void
@@ -37,11 +37,11 @@
 
     .prologue
     .line 46
-    iget-object v0, p0, Lcom/crashlytics/android/core/ab;->a:Lio/fabric/sdk/android/services/c/c;
+    iget-object v0, p0, Lcom/crashlytics/android/core/ab;->a:Lio/fabric/sdk/android/services/b/c;
 
-    iget-object v1, p0, Lcom/crashlytics/android/core/ab;->a:Lio/fabric/sdk/android/services/c/c;
+    iget-object v1, p0, Lcom/crashlytics/android/core/ab;->a:Lio/fabric/sdk/android/services/b/c;
 
-    invoke-interface {v1}, Lio/fabric/sdk/android/services/c/c;->b()Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v1}, Lio/fabric/sdk/android/services/b/c;->b()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
@@ -53,7 +53,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lio/fabric/sdk/android/services/c/c;->a(Landroid/content/SharedPreferences$Editor;)Z
+    invoke-interface {v0, v1}, Lio/fabric/sdk/android/services/b/c;->a(Landroid/content/SharedPreferences$Editor;)Z
 
     .line 47
     return-void
@@ -64,9 +64,9 @@
 
     .prologue
     .line 50
-    iget-object v0, p0, Lcom/crashlytics/android/core/ab;->a:Lio/fabric/sdk/android/services/c/c;
+    iget-object v0, p0, Lcom/crashlytics/android/core/ab;->a:Lio/fabric/sdk/android/services/b/c;
 
-    invoke-interface {v0}, Lio/fabric/sdk/android/services/c/c;->a()Landroid/content/SharedPreferences;
+    invoke-interface {v0}, Lio/fabric/sdk/android/services/b/c;->a()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -74,9 +74,11 @@
 
     const/4 v2, 0x0
 
+    .line 51
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
+    .line 50
     return v0
 .end method

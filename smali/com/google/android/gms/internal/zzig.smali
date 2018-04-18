@@ -1,11 +1,7 @@
-.class public interface abstract annotation Lcom/google/android/gms/internal/zzig;
+.class public interface abstract Lcom/google/android/gms/internal/zzig;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Ljava/lang/annotation/Annotation;
 
-
-# annotations
-.annotation runtime Ljava/lang/annotation/Retention;
-    value = .enum Ljava/lang/annotation/RetentionPolicy;->RUNTIME:Ljava/lang/annotation/RetentionPolicy;
-.end annotation
+# virtual methods
+.method public abstract zzh(Landroid/content/Context;)Lorg/json/JSONObject;
+.end method

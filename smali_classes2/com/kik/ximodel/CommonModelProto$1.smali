@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 108
+    .line 112
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,10 +34,10 @@
     .locals 1
 
     .prologue
-    .line 111
+    .line 115
     invoke-static {p1}, Lcom/kik/ximodel/CommonModelProto;->access$002(Lcom/google/protobuf/Descriptors$FileDescriptor;)Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 112
+    .line 116
     const/4 v0, 0x0
 
     return-object v0

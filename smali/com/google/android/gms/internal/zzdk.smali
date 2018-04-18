@@ -1,133 +1,117 @@
-.class public Lcom/google/android/gms/internal/zzdk;
-.super Lcom/google/android/gms/ads/formats/NativeAd$Image;
-
-
-# annotations
-.annotation runtime Lcom/google/android/gms/internal/zzig;
-.end annotation
-
-
-# instance fields
-.field private final mDrawable:Landroid/graphics/drawable/Drawable;
-
-.field private final mUri:Landroid/net/Uri;
-
-.field private final zzAB:D
-
-.field private final zzBw:Lcom/google/android/gms/internal/zzdj;
+.class public final Lcom/google/android/gms/internal/zzdk;
+.super Lcom/google/android/gms/internal/zzed;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/internal/zzdj;)V
-    .locals 4
+.method public constructor <init>(Lcom/google/android/gms/internal/zzdc;Ljava/lang/String;Ljava/lang/String;Lcom/google/android/gms/internal/zzax;II)V
+    .locals 7
 
-    const/4 v1, 0x0
+    const/16 v6, 0x31
 
-    invoke-direct {p0}, Lcom/google/android/gms/ads/formats/NativeAd$Image;-><init>()V
+    move-object v0, p0
 
-    iput-object p1, p0, Lcom/google/android/gms/internal/zzdk;->zzBw:Lcom/google/android/gms/internal/zzdj;
+    move-object v1, p1
 
-    :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzdk;->zzBw:Lcom/google/android/gms/internal/zzdj;
+    move-object v2, p2
 
-    invoke-interface {v0}, Lcom/google/android/gms/internal/zzdj;->zzeM()Lcom/google/android/gms/dynamic/zzd;
+    move-object v3, p3
 
-    move-result-object v0
+    move-object v4, p4
 
-    if-eqz v0, :cond_0
+    move v5, p5
 
-    invoke-static {v0}, Lcom/google/android/gms/dynamic/zze;->zzx(Lcom/google/android/gms/dynamic/zzd;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/drawable/Drawable;
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
-    iput-object v0, p0, Lcom/google/android/gms/internal/zzdk;->mDrawable:Landroid/graphics/drawable/Drawable;
-
-    :try_start_1
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzdk;->zzBw:Lcom/google/android/gms/internal/zzdj;
-
-    invoke-interface {v0}, Lcom/google/android/gms/internal/zzdj;->getUri()Landroid/net/Uri;
-    :try_end_1
-    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
-
-    move-result-object v1
-
-    :goto_1
-    iput-object v1, p0, Lcom/google/android/gms/internal/zzdk;->mUri:Landroid/net/Uri;
-
-    const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
-
-    :try_start_2
-    iget-object v2, p0, Lcom/google/android/gms/internal/zzdk;->zzBw:Lcom/google/android/gms/internal/zzdj;
-
-    invoke-interface {v2}, Lcom/google/android/gms/internal/zzdj;->getScale()D
-    :try_end_2
-    .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_2
-
-    move-result-wide v0
-
-    :goto_2
-    iput-wide v0, p0, Lcom/google/android/gms/internal/zzdk;->zzAB:D
+    invoke-direct/range {v0 .. v6}, Lcom/google/android/gms/internal/zzed;-><init>(Lcom/google/android/gms/internal/zzdc;Ljava/lang/String;Ljava/lang/String;Lcom/google/android/gms/internal/zzax;II)V
 
     return-void
-
-    :catch_0
-    move-exception v0
-
-    const-string v2, "Failed to get drawable."
-
-    invoke-static {v2, v0}, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzb(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_0
-    move-object v0, v1
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v0
-
-    const-string v2, "Failed to get uri."
-
-    invoke-static {v2, v0}, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzb(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    :catch_2
-    move-exception v2
-
-    const-string v3, "Failed to get scale."
-
-    invoke-static {v3, v2}, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzb(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_2
 .end method
 
 
 # virtual methods
-.method public getDrawable()Landroid/graphics/drawable/Drawable;
-    .locals 1
+.method protected final zzar()V
+    .locals 7
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/IllegalAccessException;,
+            Ljava/lang/reflect/InvocationTargetException;
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzdk;->mDrawable:Landroid/graphics/drawable/Drawable;
+    const/4 v1, 0x1
 
-    return-object v0
-.end method
+    const/4 v2, 0x0
 
-.method public getScale()D
-    .locals 2
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdk;->zzajn:Lcom/google/android/gms/internal/zzax;
 
-    iget-wide v0, p0, Lcom/google/android/gms/internal/zzdk;->zzAB:D
+    const/4 v3, 0x2
 
-    return-wide v0
-.end method
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-.method public getUri()Landroid/net/Uri;
-    .locals 1
+    move-result-object v3
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzdk;->mUri:Landroid/net/Uri;
+    iput-object v3, v0, Lcom/google/android/gms/internal/zzax;->zzei:Ljava/lang/Integer;
 
-    return-object v0
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzdk;->zzajw:Ljava/lang/reflect/Method;
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    iget-object v6, p0, Lcom/google/android/gms/internal/zzdk;->zzagk:Lcom/google/android/gms/internal/zzdc;
+
+    invoke-virtual {v6}, Lcom/google/android/gms/internal/zzdc;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v6
+
+    aput-object v6, v4, v5
+
+    invoke-virtual {v0, v3, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    iget-object v3, p0, Lcom/google/android/gms/internal/zzdk;->zzajn:Lcom/google/android/gms/internal/zzax;
+
+    if-eqz v0, :cond_1
+
+    move v0, v1
+
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    iput-object v0, v3, Lcom/google/android/gms/internal/zzax;->zzei:Ljava/lang/Integer;
+    :try_end_0
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
+    return-void
+
+    :cond_1
+    move v0, v2
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/reflect/InvocationTargetException;->getTargetException()Ljava/lang/Throwable;
+
+    move-result-object v1
+
+    instance-of v1, v1, Landroid/provider/Settings$SettingNotFoundException;
+
+    if-nez v1, :cond_0
+
+    throw v0
 .end method

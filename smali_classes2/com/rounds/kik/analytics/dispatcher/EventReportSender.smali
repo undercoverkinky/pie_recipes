@@ -16,13 +16,13 @@
 
 .field private static final EVENT_COLLECTOR_ENDPOINT:Ljava/lang/String; = "https://events.rounds.video/"
 
-.field private static final GSON:Lcom/google/gson/d;
+.field private static final GSON:Lcom/google/gson/e;
 
 .field private static final HTTP_CLIENT_ERROR_400:I = 0x190
 
 .field private static final HTTP_SERVER_ERROR_500:I = 0x1f4
 
-.field private static final JSON_MEDIA_TYPE:Lokhttp3/s;
+.field private static final JSON_MEDIA_TYPE:Lokhttp3/t;
 
 .field private static final LOGGER:Lcom/rounds/kik/logs/VideoLogger;
     .annotation build Landroid/annotation/SuppressLint;
@@ -52,18 +52,18 @@
     .line 33
     const-string v0, "application/json"
 
-    invoke-static {v0}, Lokhttp3/s;->a(Ljava/lang/String;)Lokhttp3/s;
+    invoke-static {v0}, Lokhttp3/t;->a(Ljava/lang/String;)Lokhttp3/t;
 
     move-result-object v0
 
-    sput-object v0, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->JSON_MEDIA_TYPE:Lokhttp3/s;
+    sput-object v0, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->JSON_MEDIA_TYPE:Lokhttp3/t;
 
     .line 41
-    new-instance v0, Lcom/google/gson/d;
+    new-instance v0, Lcom/google/gson/e;
 
-    invoke-direct {v0}, Lcom/google/gson/d;-><init>()V
+    invoke-direct {v0}, Lcom/google/gson/e;-><init>()V
 
-    sput-object v0, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->GSON:Lcom/google/gson/d;
+    sput-object v0, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->GSON:Lcom/google/gson/e;
 
     return-void
 .end method
@@ -79,13 +79,13 @@
     return-void
 .end method
 
-.method private buildErrorMessage(Lcom/rounds/kik/analytics/dispatcher/EventReportSender$a;Lretrofit2/k;)Ljava/lang/String;
+.method private buildErrorMessage(Lcom/rounds/kik/analytics/dispatcher/EventReportSender$a;Lretrofit2/l;)Ljava/lang/String;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/rounds/kik/analytics/dispatcher/EventReportSender$a;",
-            "Lretrofit2/k",
+            "Lretrofit2/l",
             "<",
             "Lcom/rounds/kik/analytics/dispatcher/ReportResponse;",
             ">;)",
@@ -102,7 +102,7 @@
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     .line 145
-    invoke-virtual {p2}, Lretrofit2/k;->a()I
+    invoke-virtual {p2}, Lretrofit2/l;->a()I
 
     move-result v1
 
@@ -239,13 +239,13 @@
     if-nez v0, :cond_0
 
     .line 208
-    new-instance v0, Lretrofit2/l$a;
+    new-instance v0, Lretrofit2/m$a;
 
-    invoke-direct {v0}, Lretrofit2/l$a;-><init>()V
+    invoke-direct {v0}, Lretrofit2/m$a;-><init>()V
 
     const-string v1, "https://events.rounds.video/"
 
-    invoke-virtual {v0, v1}, Lretrofit2/l$a;->a(Ljava/lang/String;)Lretrofit2/l$a;
+    invoke-virtual {v0, v1}, Lretrofit2/m$a;->a(Ljava/lang/String;)Lretrofit2/m$a;
 
     move-result-object v0
 
@@ -253,18 +253,18 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lretrofit2/l$a;->a(Lretrofit2/d$a;)Lretrofit2/l$a;
+    invoke-virtual {v0, v1}, Lretrofit2/m$a;->a(Lretrofit2/e$a;)Lretrofit2/m$a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lretrofit2/l$a;->a()Lretrofit2/l;
+    invoke-virtual {v0}, Lretrofit2/m$a;->a()Lretrofit2/m;
 
     move-result-object v0
 
     .line 209
     const-class v1, Lcom/rounds/kik/analytics/dispatcher/IEventCollectorApi;
 
-    invoke-virtual {v0, v1}, Lretrofit2/l;->a(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lretrofit2/m;->a(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -383,23 +383,23 @@
     move-result-object v0
 
     .line 201
-    sget-object v1, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->JSON_MEDIA_TYPE:Lokhttp3/s;
+    sget-object v1, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->JSON_MEDIA_TYPE:Lokhttp3/t;
 
-    invoke-static {v1, v0}, Lokhttp3/x;->a(Lokhttp3/s;[B)Lokhttp3/x;
+    invoke-static {v1, v0}, Lokhttp3/x;->a(Lokhttp3/t;[B)Lokhttp3/x;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method private handleClientError(Lcom/rounds/kik/analytics/dispatcher/ReportDb;Lcom/rounds/kik/analytics/dispatcher/EventReportSender$a;Lretrofit2/k;)V
+.method private handleClientError(Lcom/rounds/kik/analytics/dispatcher/ReportDb;Lcom/rounds/kik/analytics/dispatcher/EventReportSender$a;Lretrofit2/l;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/rounds/kik/analytics/dispatcher/ReportDb;",
             "Lcom/rounds/kik/analytics/dispatcher/EventReportSender$a;",
-            "Lretrofit2/k",
+            "Lretrofit2/l",
             "<",
             "Lcom/rounds/kik/analytics/dispatcher/ReportResponse;",
             ">;)V"
@@ -415,7 +415,7 @@
     invoke-virtual {v0, v1}, Lcom/rounds/kik/logs/VideoLogger;->videoInfo(Ljava/lang/String;)V
 
     .line 120
-    invoke-direct {p0, p2, p3}, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->buildErrorMessage(Lcom/rounds/kik/analytics/dispatcher/EventReportSender$a;Lretrofit2/k;)Ljava/lang/String;
+    invoke-direct {p0, p2, p3}, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->buildErrorMessage(Lcom/rounds/kik/analytics/dispatcher/EventReportSender$a;Lretrofit2/l;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -470,14 +470,14 @@
     goto :goto_0
 .end method
 
-.method private handleSuccess(Lcom/rounds/kik/analytics/dispatcher/ReportDb;Lcom/rounds/kik/analytics/dispatcher/EventReportSender$a;Lretrofit2/k;)V
+.method private handleSuccess(Lcom/rounds/kik/analytics/dispatcher/ReportDb;Lcom/rounds/kik/analytics/dispatcher/EventReportSender$a;Lretrofit2/l;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/rounds/kik/analytics/dispatcher/ReportDb;",
             "Lcom/rounds/kik/analytics/dispatcher/EventReportSender$a;",
-            "Lretrofit2/k",
+            "Lretrofit2/l",
             "<",
             "Lcom/rounds/kik/analytics/dispatcher/ReportResponse;",
             ">;)V"
@@ -486,7 +486,7 @@
 
     .prologue
     .line 108
-    invoke-virtual {p3}, Lretrofit2/k;->d()Ljava/lang/Object;
+    invoke-virtual {p3}, Lretrofit2/l;->d()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -502,9 +502,9 @@
     if-lez v1, :cond_0
 
     .line 110
-    sget-object v1, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->GSON:Lcom/google/gson/d;
+    sget-object v1, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->GSON:Lcom/google/gson/e;
 
-    invoke-virtual {v1, v0}, Lcom/google/gson/d;->a(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Lcom/google/gson/e;->a(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -534,12 +534,12 @@
     return-void
 .end method
 
-.method private isClientError(Lretrofit2/k;)Z
+.method private isClientError(Lretrofit2/l;)Z
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lretrofit2/k",
+            "Lretrofit2/l",
             "<",
             "Lcom/rounds/kik/analytics/dispatcher/ReportResponse;",
             ">;)Z"
@@ -550,7 +550,7 @@
     .line 138
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lretrofit2/k;->a()I
+    invoke-virtual {p1}, Lretrofit2/l;->a()I
 
     move-result v0
 
@@ -558,7 +558,7 @@
 
     if-lt v0, v1, :cond_0
 
-    invoke-virtual {p1}, Lretrofit2/k;->a()I
+    invoke-virtual {p1}, Lretrofit2/l;->a()I
 
     move-result v0
 
@@ -577,12 +577,12 @@
     goto :goto_0
 .end method
 
-.method private isSuccessful(Lretrofit2/k;)Z
+.method private isSuccessful(Lretrofit2/l;)Z
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lretrofit2/k",
+            "Lretrofit2/l",
             "<",
             "Lcom/rounds/kik/analytics/dispatcher/ReportResponse;",
             ">;)Z"
@@ -593,7 +593,7 @@
     .line 102
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lretrofit2/k;->c()Z
+    invoke-virtual {p1}, Lretrofit2/l;->c()Z
 
     move-result v0
 
@@ -682,7 +682,7 @@
     move-result-object v7
 
     .line 58
-    invoke-interface {v7}, Lretrofit2/b;->a()Lretrofit2/k;
+    invoke-interface {v7}, Lretrofit2/b;->a()Lretrofit2/l;
     :try_end_2
     .catch Lcom/rounds/kik/analytics/dispatcher/ReportDb$CannotOpenReportDatabaseException; {:try_start_2 .. :try_end_2} :catch_9
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_4
@@ -691,7 +691,7 @@
 
     .line 59
     :try_start_3
-    invoke-direct {p0, v3}, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->isSuccessful(Lretrofit2/k;)Z
+    invoke-direct {p0, v3}, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->isSuccessful(Lretrofit2/l;)Z
     :try_end_3
     .catch Lcom/rounds/kik/analytics/dispatcher/ReportDb$CannotOpenReportDatabaseException; {:try_start_3 .. :try_end_3} :catch_a
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_5
@@ -703,7 +703,7 @@
 
     .line 61
     :try_start_4
-    invoke-direct {p0, v6, v5, v3}, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->handleSuccess(Lcom/rounds/kik/analytics/dispatcher/ReportDb;Lcom/rounds/kik/analytics/dispatcher/EventReportSender$a;Lretrofit2/k;)V
+    invoke-direct {p0, v6, v5, v3}, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->handleSuccess(Lcom/rounds/kik/analytics/dispatcher/ReportDb;Lcom/rounds/kik/analytics/dispatcher/EventReportSender$a;Lretrofit2/l;)V
     :try_end_4
     .catch Lcom/rounds/kik/analytics/dispatcher/ReportDb$CannotOpenReportDatabaseException; {:try_start_4 .. :try_end_4} :catch_b
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_6
@@ -731,14 +731,14 @@
     .line 63
     :cond_1
     :try_start_5
-    invoke-direct {p0, v3}, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->isClientError(Lretrofit2/k;)Z
+    invoke-direct {p0, v3}, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->isClientError(Lretrofit2/l;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
     .line 64
-    invoke-direct {p0, v6, v5, v3}, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->handleClientError(Lcom/rounds/kik/analytics/dispatcher/ReportDb;Lcom/rounds/kik/analytics/dispatcher/EventReportSender$a;Lretrofit2/k;)V
+    invoke-direct {p0, v6, v5, v3}, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->handleClientError(Lcom/rounds/kik/analytics/dispatcher/ReportDb;Lcom/rounds/kik/analytics/dispatcher/EventReportSender$a;Lretrofit2/l;)V
 
     move v0, v4
 
@@ -750,12 +750,12 @@
 
     move-result-object v0
 
-    invoke-interface {v0}, Lretrofit2/b;->a()Lretrofit2/k;
+    invoke-interface {v0}, Lretrofit2/b;->a()Lretrofit2/l;
 
     move-result-object v3
 
     .line 69
-    invoke-direct {p0, v3}, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->isSuccessful(Lretrofit2/k;)Z
+    invoke-direct {p0, v3}, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->isSuccessful(Lretrofit2/l;)Z
     :try_end_5
     .catch Lcom/rounds/kik/analytics/dispatcher/ReportDb$CannotOpenReportDatabaseException; {:try_start_5 .. :try_end_5} :catch_b
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_6
@@ -767,7 +767,7 @@
 
     .line 71
     :try_start_6
-    invoke-direct {p0, v6, v5, v3}, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->handleSuccess(Lcom/rounds/kik/analytics/dispatcher/ReportDb;Lcom/rounds/kik/analytics/dispatcher/EventReportSender$a;Lretrofit2/k;)V
+    invoke-direct {p0, v6, v5, v3}, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->handleSuccess(Lcom/rounds/kik/analytics/dispatcher/ReportDb;Lcom/rounds/kik/analytics/dispatcher/EventReportSender$a;Lretrofit2/l;)V
     :try_end_6
     .catch Lcom/rounds/kik/analytics/dispatcher/ReportDb$CannotOpenReportDatabaseException; {:try_start_6 .. :try_end_6} :catch_0
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_1
@@ -819,14 +819,14 @@
     .line 73
     :cond_3
     :try_start_7
-    invoke-direct {p0, v3}, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->isClientError(Lretrofit2/k;)Z
+    invoke-direct {p0, v3}, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->isClientError(Lretrofit2/l;)Z
 
     move-result v4
 
     if-eqz v4, :cond_4
 
     .line 74
-    invoke-direct {p0, v6, v5, v3}, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->handleClientError(Lcom/rounds/kik/analytics/dispatcher/ReportDb;Lcom/rounds/kik/analytics/dispatcher/EventReportSender$a;Lretrofit2/k;)V
+    invoke-direct {p0, v6, v5, v3}, Lcom/rounds/kik/analytics/dispatcher/EventReportSender;->handleClientError(Lcom/rounds/kik/analytics/dispatcher/ReportDb;Lcom/rounds/kik/analytics/dispatcher/EventReportSender$a;Lretrofit2/l;)V
     :try_end_7
     .catch Lcom/rounds/kik/analytics/dispatcher/ReportDb$CannotOpenReportDatabaseException; {:try_start_7 .. :try_end_7} :catch_0
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_1

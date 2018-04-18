@@ -13,32 +13,32 @@
 # static fields
 .field public static final PROVIDER_NAME:Ljava/lang/String; = "GmsCore_OpenSSL"
 
-.field private static final zzbnb:Lcom/google/android/gms/common/zzc;
+.field private static final zzaqm:Ljava/lang/Object;
 
-.field private static zzbnc:Ljava/lang/reflect/Method;
+.field private static final zzjmy:Lcom/google/android/gms/common/zze;
 
-.field private static final zzrs:Ljava/lang/Object;
+.field private static zzjmz:Ljava/lang/reflect/Method;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    invoke-static {}, Lcom/google/android/gms/common/zzc;->zzqV()Lcom/google/android/gms/common/zzc;
+    invoke-static {}, Lcom/google/android/gms/common/zze;->zzaew()Lcom/google/android/gms/common/zze;
 
     move-result-object v0
 
-    sput-object v0, Lcom/google/android/gms/security/ProviderInstaller;->zzbnb:Lcom/google/android/gms/common/zzc;
+    sput-object v0, Lcom/google/android/gms/security/ProviderInstaller;->zzjmy:Lcom/google/android/gms/common/zze;
 
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lcom/google/android/gms/security/ProviderInstaller;->zzrs:Ljava/lang/Object;
+    sput-object v0, Lcom/google/android/gms/security/ProviderInstaller;->zzaqm:Ljava/lang/Object;
 
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/google/android/gms/security/ProviderInstaller;->zzbnc:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/google/android/gms/security/ProviderInstaller;->zzjmz:Ljava/lang/reflect/Method;
 
     return-void
 .end method
@@ -64,13 +64,11 @@
 
     const-string v0, "Context must not be null"
 
-    invoke-static {p0, v0}, Lcom/google/android/gms/common/internal/zzaa;->zzb(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0, v0}, Lcom/google/android/gms/common/internal/zzbp;->zzb(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lcom/google/android/gms/security/ProviderInstaller;->zzbnb:Lcom/google/android/gms/common/zzc;
+    invoke-static {p0}, Lcom/google/android/gms/common/zze;->zzbv(Landroid/content/Context;)V
 
-    invoke-virtual {v0, p0}, Lcom/google/android/gms/common/zzc;->zzaf(Landroid/content/Context;)V
-
-    invoke-static {p0}, Lcom/google/android/gms/common/zze;->getRemoteContext(Landroid/content/Context;)Landroid/content/Context;
+    invoke-static {p0}, Lcom/google/android/gms/common/zzo;->getRemoteContext(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -89,19 +87,45 @@
     throw v0
 
     :cond_0
-    sget-object v1, Lcom/google/android/gms/security/ProviderInstaller;->zzrs:Ljava/lang/Object;
+    sget-object v1, Lcom/google/android/gms/security/ProviderInstaller;->zzaqm:Ljava/lang/Object;
 
     monitor-enter v1
 
     :try_start_0
-    sget-object v2, Lcom/google/android/gms/security/ProviderInstaller;->zzbnc:Ljava/lang/reflect/Method;
+    sget-object v2, Lcom/google/android/gms/security/ProviderInstaller;->zzjmz:Ljava/lang/reflect/Method;
 
     if-nez v2, :cond_1
 
-    invoke-static {v0}, Lcom/google/android/gms/security/ProviderInstaller;->zzbf(Landroid/content/Context;)V
+    invoke-virtual {v0}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v2
+
+    const-string v3, "com.google.android.gms.common.security.ProviderInstallerImpl"
+
+    invoke-virtual {v2, v3}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    new-array v3, v3, [Ljava/lang/Class;
+
+    const/4 v4, 0x0
+
+    const-class v5, Landroid/content/Context;
+
+    aput-object v5, v3, v4
+
+    const-string v4, "insertProvider"
+
+    invoke-virtual {v2, v4, v3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v2
+
+    sput-object v2, Lcom/google/android/gms/security/ProviderInstaller;->zzjmz:Ljava/lang/reflect/Method;
 
     :cond_1
-    sget-object v2, Lcom/google/android/gms/security/ProviderInstaller;->zzbnc:Ljava/lang/reflect/Method;
+    sget-object v2, Lcom/google/android/gms/security/ProviderInstaller;->zzjmz:Ljava/lang/reflect/Method;
 
     const/4 v3, 0x0
 
@@ -184,19 +208,19 @@
 
     const-string v0, "Context must not be null"
 
-    invoke-static {p0, v0}, Lcom/google/android/gms/common/internal/zzaa;->zzb(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0, v0}, Lcom/google/android/gms/common/internal/zzbp;->zzb(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v0, "Listener must not be null"
 
-    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/zzaa;->zzb(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/zzbp;->zzb(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v0, "Must be called on the UI thread"
 
-    invoke-static {v0}, Lcom/google/android/gms/common/internal/zzaa;->zzdc(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/google/android/gms/common/internal/zzbp;->zzfx(Ljava/lang/String;)V
 
-    new-instance v0, Lcom/google/android/gms/security/ProviderInstaller$1;
+    new-instance v0, Lcom/google/android/gms/security/a;
 
-    invoke-direct {v0, p0, p1}, Lcom/google/android/gms/security/ProviderInstaller$1;-><init>(Landroid/content/Context;Lcom/google/android/gms/security/ProviderInstaller$ProviderInstallListener;)V
+    invoke-direct {v0, p0, p1}, Lcom/google/android/gms/security/a;-><init>(Landroid/content/Context;Lcom/google/android/gms/security/ProviderInstaller$ProviderInstallListener;)V
 
     const/4 v1, 0x0
 
@@ -207,50 +231,10 @@
     return-void
 .end method
 
-.method static synthetic zzIN()Lcom/google/android/gms/common/zzc;
+.method static synthetic zzbbs()Lcom/google/android/gms/common/zze;
     .locals 1
 
-    sget-object v0, Lcom/google/android/gms/security/ProviderInstaller;->zzbnb:Lcom/google/android/gms/common/zzc;
+    sget-object v0, Lcom/google/android/gms/security/ProviderInstaller;->zzjmy:Lcom/google/android/gms/common/zze;
 
     return-object v0
-.end method
-
-.method private static zzbf(Landroid/content/Context;)V
-    .locals 4
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/ClassNotFoundException;,
-            Ljava/lang/NoSuchMethodException;
-        }
-    .end annotation
-
-    invoke-virtual {p0}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v0
-
-    const-string v1, "com.google.android.gms.common.security.ProviderInstallerImpl"
-
-    invoke-virtual {v0, v1}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Ljava/lang/Class;
-
-    const/4 v2, 0x0
-
-    const-class v3, Landroid/content/Context;
-
-    aput-object v3, v1, v2
-
-    const-string v2, "insertProvider"
-
-    invoke-virtual {v0, v2, v1}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/google/android/gms/security/ProviderInstaller;->zzbnc:Ljava/lang/reflect/Method;
-
-    return-void
 .end method

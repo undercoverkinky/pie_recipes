@@ -15,12 +15,12 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/android/volley/g;)V
+.method public constructor <init>(Lcom/android/volley/f;)V
     .locals 0
 
     .prologue
     .line 27
-    invoke-direct {p0, p1}, Lcom/android/volley/VolleyError;-><init>(Lcom/android/volley/g;)V
+    invoke-direct {p0, p1}, Lcom/android/volley/VolleyError;-><init>(Lcom/android/volley/f;)V
 
     .line 28
     return-void

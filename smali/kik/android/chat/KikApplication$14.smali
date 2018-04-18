@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/KikApplication$14;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
         "Ljava/lang/Object;",
         ">;"
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 804
+    .line 870
     iput-object p1, p0, Lkik/android/chat/KikApplication$14;->a:Lkik/android/chat/KikApplication;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -46,11 +46,11 @@
     .locals 1
 
     .prologue
-    .line 808
+    .line 874
     iget-object v0, p0, Lkik/android/chat/KikApplication$14;->a:Lkik/android/chat/KikApplication;
 
-    invoke-static {v0}, Lkik/android/chat/KikApplication;->B(Lkik/android/chat/KikApplication;)V
+    invoke-static {v0}, Lkik/android/chat/KikApplication;->F(Lkik/android/chat/KikApplication;)V
 
-    .line 809
+    .line 875
     return-void
 .end method

@@ -1,11 +1,11 @@
 .class final Lcom/kik/cards/web/config/XDataPlugin$3;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/cards/web/config/XDataPlugin;->getAllRecords(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/h;
+    value = Lcom/kik/cards/web/config/XDataPlugin;->getAllRecords(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/g;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
         "Ljava/util/Map",
         "<",
@@ -42,7 +42,7 @@
 
     iput-object p2, p0, Lcom/kik/cards/web/config/XDataPlugin$3;->a:Lcom/kik/cards/web/plugin/a;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -99,11 +99,11 @@
     :goto_0
     iget-object v0, p0, Lcom/kik/cards/web/config/XDataPlugin$3;->a:Lcom/kik/cards/web/plugin/a;
 
-    new-instance v1, Lcom/kik/cards/web/plugin/h;
+    new-instance v1, Lcom/kik/cards/web/plugin/g;
 
-    invoke-direct {v1, v2}, Lcom/kik/cards/web/plugin/h;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {v1, v2}, Lcom/kik/cards/web/plugin/g;-><init>(Lorg/json/JSONObject;)V
 
-    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/h;)V
+    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/g;)V
 
     .line 119
     return-void

@@ -4,12 +4,12 @@
 
 
 # instance fields
-.field protected b:Lkik/core/interfaces/IAddressBookIntegration;
+.field protected c:Lkik/core/interfaces/IAddressBookIntegration;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
-.field protected c:Lcom/kik/android/Mixpanel;
+.field protected d:Lcom/kik/android/Mixpanel;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
@@ -65,7 +65,7 @@
     move-result-object v0
 
     .line 46
-    iget-object v1, p0, Lkik/android/widget/preferences/LetFriendsFindMePreference;->b:Lkik/core/interfaces/IAddressBookIntegration;
+    iget-object v1, p0, Lkik/android/widget/preferences/LetFriendsFindMePreference;->c:Lkik/core/interfaces/IAddressBookIntegration;
 
     invoke-interface {v1}, Lkik/core/interfaces/IAddressBookIntegration;->d()Ljava/lang/Boolean;
 
@@ -78,7 +78,7 @@
     invoke-virtual {p0, v1}, Lkik/android/widget/preferences/LetFriendsFindMePreference;->setChecked(Z)V
 
     .line 47
-    iget-object v1, p0, Lkik/android/widget/preferences/LetFriendsFindMePreference;->b:Lkik/core/interfaces/IAddressBookIntegration;
+    iget-object v1, p0, Lkik/android/widget/preferences/LetFriendsFindMePreference;->c:Lkik/core/interfaces/IAddressBookIntegration;
 
     invoke-interface {v1}, Lkik/core/interfaces/IAddressBookIntegration;->f()Lkik/core/interfaces/IAddressBookIntegration$UploadInfoPermissionState;
 
@@ -115,7 +115,7 @@
     move-result v0
 
     .line 58
-    iget-object v1, p0, Lkik/android/widget/preferences/LetFriendsFindMePreference;->b:Lkik/core/interfaces/IAddressBookIntegration;
+    iget-object v1, p0, Lkik/android/widget/preferences/LetFriendsFindMePreference;->c:Lkik/core/interfaces/IAddressBookIntegration;
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -129,7 +129,7 @@
     invoke-virtual {p1, v0}, Landroid/preference/TwoStatePreference;->setChecked(Z)V
 
     .line 61
-    iget-object v1, p0, Lkik/android/widget/preferences/LetFriendsFindMePreference;->b:Lkik/core/interfaces/IAddressBookIntegration;
+    iget-object v1, p0, Lkik/android/widget/preferences/LetFriendsFindMePreference;->c:Lkik/core/interfaces/IAddressBookIntegration;
 
     const-string v2, "settings"
 
@@ -141,7 +141,7 @@
     move-result-object v0
 
     .line 1072
-    iget-object v1, p0, Lkik/android/widget/preferences/LetFriendsFindMePreference;->c:Lcom/kik/android/Mixpanel;
+    iget-object v1, p0, Lkik/android/widget/preferences/LetFriendsFindMePreference;->d:Lcom/kik/android/Mixpanel;
 
     const-string v2, "ABM Opt Out Options Changed"
 

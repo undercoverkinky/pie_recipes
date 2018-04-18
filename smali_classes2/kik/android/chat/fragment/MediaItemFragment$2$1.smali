@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/fragment/MediaItemFragment$2$1;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
         "Landroid/content/Intent;",
         ">;"
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 241
+    .line 238
     iput-object p1, p0, Lkik/android/chat/fragment/MediaItemFragment$2$1;->a:Lkik/android/chat/fragment/MediaItemFragment$2;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -46,10 +46,10 @@
     .locals 1
 
     .prologue
-    .line 241
+    .line 238
     check-cast p1, Landroid/content/Intent;
 
-    .line 1251
+    .line 1248
     iget-object v0, p0, Lkik/android/chat/fragment/MediaItemFragment$2$1;->a:Lkik/android/chat/fragment/MediaItemFragment$2;
 
     iget-object v0, v0, Lkik/android/chat/fragment/MediaItemFragment$2;->a:Lkik/android/chat/fragment/MediaItemFragment;
@@ -62,7 +62,7 @@
 
     invoke-static {p1, v0}, Lkik/android/chat/activity/KActivityLauncher;->a(Landroid/content/Intent;Landroid/content/Context;)Lcom/kik/events/Promise;
 
-    .line 241
+    .line 238
     return-void
 .end method
 
@@ -70,9 +70,9 @@
     .locals 0
 
     .prologue
-    .line 245
-    invoke-static {}, Lkik/android/util/bv;->a()V
+    .line 242
+    invoke-static {}, Lkik/android/util/bu;->a()V
 
-    .line 246
+    .line 243
     return-void
 .end method

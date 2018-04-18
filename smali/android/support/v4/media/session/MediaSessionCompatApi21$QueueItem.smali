@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 235
+    .line 239
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,7 +29,7 @@
     .locals 1
 
     .prologue
-    .line 238
+    .line 242
     new-instance v0, Landroid/media/session/MediaSession$QueueItem;
 
     check-cast p0, Landroid/media/MediaDescription;
@@ -43,7 +43,7 @@
     .locals 1
 
     .prologue
-    .line 242
+    .line 246
     check-cast p0, Landroid/media/session/MediaSession$QueueItem;
 
     invoke-virtual {p0}, Landroid/media/session/MediaSession$QueueItem;->getDescription()Landroid/media/MediaDescription;
@@ -57,7 +57,7 @@
     .locals 2
 
     .prologue
-    .line 246
+    .line 250
     check-cast p0, Landroid/media/session/MediaSession$QueueItem;
 
     invoke-virtual {p0}, Landroid/media/session/MediaSession$QueueItem;->getQueueId()J

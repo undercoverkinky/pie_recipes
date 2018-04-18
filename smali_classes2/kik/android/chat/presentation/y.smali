@@ -1,44 +1,51 @@
-.class public interface abstract Lkik/android/chat/presentation/y;
+.class final synthetic Lkik/android/chat/presentation/y;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 # interfaces
-.implements Lkik/android/chat/presentation/ca;
+.implements Lrx/functions/g;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lkik/android/chat/presentation/ca",
-        "<",
-        "Lkik/android/widget/bb;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field private final a:Lkik/android/chat/presentation/t;
+
+.field private final b:Ljava/lang/String;
+
+
+# direct methods
+.method private constructor <init>(Lkik/android/chat/presentation/t;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lkik/android/chat/presentation/y;->a:Lkik/android/chat/presentation/t;
+
+    iput-object p2, p0, Lkik/android/chat/presentation/y;->b:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static a(Lkik/android/chat/presentation/t;Ljava/lang/String;)Lrx/functions/g;
+    .locals 1
+
+    new-instance v0, Lkik/android/chat/presentation/y;
+
+    invoke-direct {v0, p0, p1}, Lkik/android/chat/presentation/y;-><init>(Lkik/android/chat/presentation/t;Ljava/lang/String;)V
+
+    return-object v0
+.end method
 
 
 # virtual methods
-.method public abstract a()V
-.end method
+.method public final call(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-.method public abstract a(Ljava/lang/String;)V
-.end method
+    iget-object v0, p0, Lkik/android/chat/presentation/y;->a:Lkik/android/chat/presentation/t;
 
-.method public abstract a(Lkik/android/util/KeyboardManipulator;)V
-.end method
+    iget-object v1, p0, Lkik/android/chat/presentation/y;->b:Ljava/lang/String;
 
-.method public abstract a(Lkik/android/widget/bb$a;)V
-.end method
+    invoke-static {v0, v1}, Lkik/android/chat/presentation/t;->b(Lkik/android/chat/presentation/t;Ljava/lang/String;)Ljava/lang/Boolean;
 
-.method public abstract b()V
-.end method
+    move-result-object v0
 
-.method public abstract d()V
-.end method
-
-.method public abstract e()V
-.end method
-
-.method public abstract f()V
+    return-object v0
 .end method

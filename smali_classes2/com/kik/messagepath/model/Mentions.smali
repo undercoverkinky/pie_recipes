@@ -32,41 +32,41 @@
     .line 683
     new-array v0, v5, [Ljava/lang/String;
 
-    const-string v1, "\n\u001dmessagepath/v1/mentions.proto\u0012\u0015common.messagepath.v1\u001a\u0012common_model.proto\u001a\u0019protobuf_validation.proto\"K\n\u0016MentionReplyAttachment\u00121\n\u0012original_mentioner\u0018\u0001 \u0001(\u000b2\u0015.common.XiBareUserJidB\"\n\u0019com.kik.messagepath.model\u00a2\u0002\u0004MPTHb\u0006proto3"
+    const-string v1, "\n\u001dmessagepath/v1/mentions.proto\u0012\u0015common.messagepath.v1\u001a\u0012common_model.proto\u001a\u0019protobuf_validation.proto\"K\n\u0016MentionReplyAttachment\u00121\n\u0012original_mentioner\u0018\u0001 \u0001(\u000b2\u0015.common.XiBareUserJidBw\n\u0019com.kik.messagepath.modelZSgithub.com/kikinteractive/xiphias-model-common/generated/go/messagepath;messagepath\u00a2\u0002\u0004MPTHb\u0006proto3"
 
     aput-object v1, v0, v4
 
-    .line 691
+    .line 693
     new-instance v1, Lcom/kik/messagepath/model/Mentions$1;
 
     invoke-direct {v1}, Lcom/kik/messagepath/model/Mentions$1;-><init>()V
 
-    .line 699
+    .line 701
     const/4 v2, 0x2
 
     new-array v2, v2, [Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 702
+    .line 704
     invoke-static {}, Lcom/kik/ximodel/CommonModelProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v3
 
     aput-object v3, v2, v4
 
-    .line 703
+    .line 705
     invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation;->a()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v3
 
     aput-object v3, v2, v5
 
-    .line 700
+    .line 702
     invoke-static {v0, v2, v1}, Lcom/google/protobuf/Descriptors$FileDescriptor;->internalBuildGeneratedFileFrom([Ljava/lang/String;[Lcom/google/protobuf/Descriptors$FileDescriptor;Lcom/google/protobuf/Descriptors$FileDescriptor$InternalDescriptorAssigner;)V
 
     .line 1678
     sget-object v0, Lcom/kik/messagepath/model/Mentions;->c:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 706
+    .line 708
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getMessageTypes()Ljava/util/List;
 
     move-result-object v0
@@ -79,7 +79,7 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Mentions;->a:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 707
+    .line 709
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/messagepath/model/Mentions;->a:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -94,13 +94,13 @@
 
     sput-object v0, Lcom/kik/messagepath/model/Mentions;->b:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 711
+    .line 713
     invoke-static {}, Lcom/kik/ximodel/CommonModelProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 712
+    .line 714
     invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation;->a()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 713
+    .line 715
     return-void
 .end method
 

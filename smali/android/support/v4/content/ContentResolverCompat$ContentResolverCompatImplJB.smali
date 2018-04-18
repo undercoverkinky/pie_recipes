@@ -34,6 +34,7 @@
     .line 57
     if-eqz p7, :cond_0
 
+    .line 60
     :try_start_0
     invoke-virtual {p7}, Landroid/support/v4/os/CancellationSignal;->getCancellationSignalObject()Ljava/lang/Object;
 
@@ -52,6 +53,7 @@
 
     move-object v5, p6
 
+    .line 57
     invoke-static/range {v0 .. v6}, Landroid/support/v4/content/ContentResolverCompatJellybean;->query(Landroid/content/ContentResolver;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)Landroid/database/Cursor;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -60,6 +62,7 @@
 
     return-object v0
 
+    .line 60
     :cond_0
     const/4 v6, 0x0
 

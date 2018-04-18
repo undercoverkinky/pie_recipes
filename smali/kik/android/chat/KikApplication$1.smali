@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 337
+    .line 399
     iput-object p1, p0, Lkik/android/chat/KikApplication$1;->a:Lkik/android/chat/KikApplication;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,10 +50,10 @@
     .locals 2
 
     .prologue
-    .line 341
+    .line 403
     iget-object v0, p0, Lkik/android/chat/KikApplication$1;->a:Lkik/android/chat/KikApplication;
 
-    const v1, 0x7f0a01f2
+    const v1, 0x7f090206
 
     invoke-virtual {v0, v1}, Lkik/android/chat/KikApplication;->getString(I)Ljava/lang/String;
 
@@ -61,6 +61,6 @@
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->b(Ljava/lang/String;)V
 
-    .line 342
+    .line 404
     return-void
 .end method

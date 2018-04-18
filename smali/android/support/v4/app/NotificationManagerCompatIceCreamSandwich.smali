@@ -3,6 +3,12 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0xe
+.end annotation
+
+
 # static fields
 .field static final SIDE_CHANNEL_BIND_FLAGS:I = 0x21
 
@@ -12,7 +18,7 @@
     .locals 0
 
     .prologue
-    .line 21
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -9,7 +9,7 @@
 # instance fields
 .field private final a:Lkik/core/interfaces/ICommunication;
 
-.field private final b:Lkik/core/g/d;
+.field private final b:Lkik/core/e/d;
 
 .field private final c:Lkik/core/interfaces/ad;
 
@@ -17,7 +17,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lkik/core/interfaces/ICommunication;Lkik/core/g/d;Lkik/core/interfaces/ad;)V
+.method public constructor <init>(Lkik/core/interfaces/ICommunication;Lkik/core/e/d;Lkik/core/interfaces/ad;)V
     .locals 1
 
     .prologue
@@ -37,7 +37,7 @@
     iput-object p1, p0, Lkik/core/abtesting/f;->a:Lkik/core/interfaces/ICommunication;
 
     .line 38
-    iput-object p2, p0, Lkik/core/abtesting/f;->b:Lkik/core/g/d;
+    iput-object p2, p0, Lkik/core/abtesting/f;->b:Lkik/core/e/d;
 
     .line 39
     iput-object p3, p0, Lkik/core/abtesting/f;->c:Lkik/core/interfaces/ad;
@@ -73,16 +73,16 @@
     .line 65
     iget-object v0, p0, Lkik/core/abtesting/f;->c:Lkik/core/interfaces/ad;
 
-    invoke-static {v0}, Lkik/core/x;->b(Lkik/core/interfaces/ad;)Lkik/core/x;
+    invoke-static {v0}, Lkik/core/z;->b(Lkik/core/interfaces/ad;)Lkik/core/z;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lkik/core/x;->a()Lkik/core/datatypes/n;
+    invoke-virtual {v0}, Lkik/core/z;->a()Lkik/core/datatypes/k;
 
     move-result-object v2
 
     .line 66
-    invoke-static {}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->c()Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
+    invoke-static {}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;->newBuilder()Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest$a;
 
     move-result-object v3
 
@@ -156,7 +156,7 @@
     move-result-object v0
 
     .line 68
-    invoke-static {v2}, Lkik/core/h/f;->a(Lkik/core/datatypes/n;)Lcom/kik/ximodel/XiBareUserJid;
+    invoke-static {v2}, Lkik/core/xiphias/af;->a(Lkik/core/datatypes/k;)Lcom/kik/ximodel/XiBareUserJid;
 
     move-result-object v2
 
@@ -169,14 +169,14 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lkik/core/h/a;->a(Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;)Lkik/core/h/e;
+    invoke-static {v0}, Lkik/core/xiphias/a;->a(Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;)Lkik/core/xiphias/XiphiasRequest;
 
     move-result-object v0
 
     iget-object v2, p0, Lkik/core/abtesting/f;->a:Lkik/core/interfaces/ICommunication;
 
     .line 72
-    invoke-virtual {v0, v2}, Lkik/core/h/e;->a(Lkik/core/interfaces/ICommunication;)Lcom/kik/events/Promise;
+    invoke-virtual {v0, v2}, Lkik/core/xiphias/XiphiasRequest;->send(Lkik/core/interfaces/ICommunication;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -185,7 +185,7 @@
     invoke-direct {v2, p0, v1}, Lkik/core/abtesting/f$1;-><init>(Lkik/core/abtesting/f;Lcom/kik/events/Promise;)V
 
     .line 73
-    invoke-virtual {v0, v2}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v0, v2}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
     .line 96
     return-object v1
@@ -219,7 +219,7 @@
 
     .prologue
     .line 51
-    invoke-static {}, Lkik/core/util/x;->b()J
+    invoke-static {}, Lkik/core/util/v;->b()J
 
     move-result-wide v0
 

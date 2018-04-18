@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 817
+    .line 1309
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,21 +44,21 @@
     .locals 2
 
     .prologue
-    .line 821
+    .line 1313
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
-    .line 822
+    .line 1314
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
     move-result-object v0
 
-    .line 826
+    .line 1318
     :goto_0
     new-instance v1, Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
@@ -66,7 +66,7 @@
 
     return-object v1
 
-    .line 824
+    .line 1316
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -79,7 +79,7 @@
     .locals 1
 
     .prologue
-    .line 817
+    .line 1309
     invoke-virtual {p0, p1}, Landroid/support/v4/media/session/MediaSessionCompat$Token$1;->createFromParcel(Landroid/os/Parcel;)Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
     move-result-object v0
@@ -91,7 +91,7 @@
     .locals 1
 
     .prologue
-    .line 831
+    .line 1323
     new-array v0, p1, [Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
     return-object v0
@@ -101,7 +101,7 @@
     .locals 1
 
     .prologue
-    .line 817
+    .line 1309
     invoke-virtual {p0, p1}, Landroid/support/v4/media/session/MediaSessionCompat$Token$1;->newArray(I)[Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
     move-result-object v0

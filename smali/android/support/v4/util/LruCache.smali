@@ -829,6 +829,7 @@
 
     iget v4, p0, Landroid/support/v4/util/LruCache;->maxSize:I
 
+    .line 341
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -863,6 +864,7 @@
 
     aput-object v0, v2, v3
 
+    .line 340
     invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

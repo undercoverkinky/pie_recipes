@@ -3,111 +3,107 @@
 .source "SourceFile"
 
 
-# instance fields
-.field private final a:Lio/fabric/sdk/android/services/a/d;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lio/fabric/sdk/android/services/a/d",
-            "<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final b:Lio/fabric/sdk/android/services/a/b;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lio/fabric/sdk/android/services/a/b",
-            "<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 51
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
-    new-instance v0, Lio/fabric/sdk/android/services/common/m$1;
-
-    invoke-direct {v0, p0}, Lio/fabric/sdk/android/services/common/m$1;-><init>(Lio/fabric/sdk/android/services/common/m;)V
-
-    iput-object v0, p0, Lio/fabric/sdk/android/services/common/m;->a:Lio/fabric/sdk/android/services/a/d;
-
-    .line 52
-    new-instance v0, Lio/fabric/sdk/android/services/a/b;
-
-    invoke-direct {v0}, Lio/fabric/sdk/android/services/a/b;-><init>()V
-
-    iput-object v0, p0, Lio/fabric/sdk/android/services/common/m;->b:Lio/fabric/sdk/android/services/a/b;
-
-    .line 53
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Landroid/content/Context;)Ljava/lang/String;
-    .locals 5
+.method public static a(Landroid/content/Context;)Z
+    .locals 4
 
     .prologue
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    .line 57
-    :try_start_0
-    iget-object v0, p0, Lio/fabric/sdk/android/services/common/m;->b:Lio/fabric/sdk/android/services/a/b;
+    const/4 v2, 0x0
 
-    iget-object v2, p0, Lio/fabric/sdk/android/services/common/m;->a:Lio/fabric/sdk/android/services/a/d;
+    .line 52
+    const-string v0, "com.crashlytics.useFirebaseAppId"
 
-    invoke-virtual {v0, p1, v2}, Lio/fabric/sdk/android/services/a/b;->a(Landroid/content/Context;Lio/fabric/sdk/android/services/a/d;)Ljava/lang/Object;
+    invoke-static {p0, v0, v2}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Landroid/content/Context;Ljava/lang/String;Z)Z
 
-    move-result-object v0
+    move-result v0
 
-    check-cast v0, Ljava/lang/String;
-
-    .line 59
-    const-string v2, ""
-
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    move-object v0, v1
+    if-eqz v0, :cond_1
 
     .line 62
     :cond_0
     :goto_0
-    return-object v0
+    return v1
+
+    .line 56
+    :cond_1
+    const-string v0, "google_app_id"
+
+    const-string v3, "string"
+
+    invoke-static {p0, v0, v3}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    move v0, v1
+
+    .line 59
+    :goto_1
+    new-instance v3, Lio/fabric/sdk/android/services/common/g;
+
+    invoke-direct {v3}, Lio/fabric/sdk/android/services/common/g;-><init>()V
+
+    invoke-static {p0}, Lio/fabric/sdk/android/services/common/g;->b(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    new-instance v3, Lio/fabric/sdk/android/services/common/g;
+
+    invoke-direct {v3}, Lio/fabric/sdk/android/services/common/g;-><init>()V
 
     .line 60
-    :catch_0
-    move-exception v0
+    invoke-static {p0}, Lio/fabric/sdk/android/services/common/g;->c(Landroid/content/Context;)Ljava/lang/String;
 
-    .line 61
-    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
+    move-result-object v3
 
-    move-result-object v2
+    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    const-string v3, "Fabric"
+    move-result v3
 
-    const-string v4, "Failed to determine installer package name"
+    if-nez v3, :cond_5
 
-    invoke-interface {v2, v3, v4, v0}, Lio/fabric/sdk/android/k;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    move-object v0, v1
+    :cond_2
+    move v3, v1
 
     .line 62
+    :goto_2
+    if-eqz v0, :cond_3
+
+    if-eqz v3, :cond_0
+
+    :cond_3
+    move v1, v2
+
     goto :goto_0
+
+    :cond_4
+    move v0, v2
+
+    .line 56
+    goto :goto_1
+
+    :cond_5
+    move v3, v2
+
+    .line 60
+    goto :goto_2
 .end method

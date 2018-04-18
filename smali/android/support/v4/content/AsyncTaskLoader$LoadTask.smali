@@ -41,12 +41,12 @@
     .locals 2
 
     .prologue
-    .line 42
+    .line 45
     iput-object p1, p0, Landroid/support/v4/content/AsyncTaskLoader$LoadTask;->this$0:Landroid/support/v4/content/AsyncTaskLoader;
 
     invoke-direct {p0}, Landroid/support/v4/content/ModernAsyncTask;-><init>()V
 
-    .line 43
+    .line 46
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
     const/4 v1, 0x1
@@ -64,7 +64,7 @@
     .locals 1
 
     .prologue
-    .line 42
+    .line 45
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Landroid/support/v4/content/AsyncTaskLoader$LoadTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Object;
@@ -85,7 +85,7 @@
     .end annotation
 
     .prologue
-    .line 54
+    .line 57
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/content/AsyncTaskLoader$LoadTask;->this$0:Landroid/support/v4/content/AsyncTaskLoader;
 
@@ -95,25 +95,25 @@
 
     move-result-object v0
 
-    .line 68
+    .line 71
     :goto_0
     return-object v0
 
-    .line 57
+    .line 60
     :catch_0
     move-exception v0
 
-    .line 58
+    .line 61
     invoke-virtual {p0}, Landroid/support/v4/content/AsyncTaskLoader$LoadTask;->isCancelled()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 65
+    .line 68
     throw v0
 
-    .line 68
+    .line 71
     :cond_0
     const/4 v0, 0x0
 
@@ -129,7 +129,7 @@
     .end annotation
 
     .prologue
-    .line 88
+    .line 91
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/content/AsyncTaskLoader$LoadTask;->this$0:Landroid/support/v4/content/AsyncTaskLoader;
 
@@ -137,15 +137,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 90
+    .line 93
     iget-object v0, p0, Landroid/support/v4/content/AsyncTaskLoader$LoadTask;->mDone:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 91
+    .line 94
     return-void
 
-    .line 90
+    .line 93
     :catchall_0
     move-exception v0
 
@@ -165,7 +165,7 @@
     .end annotation
 
     .prologue
-    .line 77
+    .line 80
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/content/AsyncTaskLoader$LoadTask;->this$0:Landroid/support/v4/content/AsyncTaskLoader;
 
@@ -173,15 +173,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 79
+    .line 82
     iget-object v0, p0, Landroid/support/v4/content/AsyncTaskLoader$LoadTask;->mDone:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 80
+    .line 83
     return-void
 
-    .line 79
+    .line 82
     :catchall_0
     move-exception v0
 
@@ -196,17 +196,17 @@
     .locals 1
 
     .prologue
-    .line 98
+    .line 101
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/support/v4/content/AsyncTaskLoader$LoadTask;->waiting:Z
 
-    .line 99
+    .line 102
     iget-object v0, p0, Landroid/support/v4/content/AsyncTaskLoader$LoadTask;->this$0:Landroid/support/v4/content/AsyncTaskLoader;
 
     invoke-virtual {v0}, Landroid/support/v4/content/AsyncTaskLoader;->executePendingTask()V
 
-    .line 100
+    .line 103
     return-void
 .end method
 
@@ -214,7 +214,7 @@
     .locals 1
 
     .prologue
-    .line 105
+    .line 108
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/content/AsyncTaskLoader$LoadTask;->mDone:Ljava/util/concurrent/CountDownLatch;
 
@@ -222,7 +222,7 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 109
+    .line 112
     :goto_0
     return-void
 

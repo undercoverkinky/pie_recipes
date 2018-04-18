@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 444
+    .line 457
     iput-object p1, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$6;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +42,12 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 448
+    .line 461
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$6;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
     invoke-static {v0, v1}, Lkik/android/chat/fragment/VideoTrimmingFragment;->a(Lkik/android/chat/fragment/VideoTrimmingFragment;Z)Z
 
-    .line 449
+    .line 462
     new-array v0, v1, [Landroid/view/View;
 
     const/4 v1, 0x0
@@ -58,30 +58,30 @@
 
     aput-object v2, v0, v1
 
-    invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->g([Landroid/view/View;)V
 
-    .line 450
+    .line 463
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$6;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/VideoTrimmingFragment;->_videoView:Landroid/widget/VideoView;
 
     invoke-virtual {v0}, Landroid/widget/VideoView;->start()V
 
-    .line 451
+    .line 464
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$6;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
-    invoke-static {v0}, Lkik/android/chat/fragment/VideoTrimmingFragment;->k(Lkik/android/chat/fragment/VideoTrimmingFragment;)Lkik/android/util/ap;
+    invoke-static {v0}, Lkik/android/chat/fragment/VideoTrimmingFragment;->k(Lkik/android/chat/fragment/VideoTrimmingFragment;)Lkik/android/util/aq;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 452
+    .line 465
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$6;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/VideoTrimmingFragment;->l(Lkik/android/chat/fragment/VideoTrimmingFragment;)V
 
-    .line 454
+    .line 467
     :cond_0
     return-void
 .end method

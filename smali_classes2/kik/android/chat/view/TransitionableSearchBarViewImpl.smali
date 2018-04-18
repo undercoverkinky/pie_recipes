@@ -98,7 +98,7 @@
     return-void
 .end method
 
-.method public final f()V
+.method public final e()V
     .locals 2
 
     .prologue
@@ -121,7 +121,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b00b7
+    const v1, 0x7f0a0109
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -139,7 +139,7 @@
     return-void
 .end method
 
-.method public final g()V
+.method public final f()V
     .locals 1
 
     .prologue
@@ -149,7 +149,7 @@
     iput-boolean v0, p0, Lkik/android/chat/view/TransitionableSearchBarViewImpl;->a:Z
 
     .line 50
-    const v0, 0x7f020159
+    const v0, 0x7f02018d
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->f(I)Landroid/graphics/drawable/Drawable;
 
@@ -161,7 +161,7 @@
     return-void
 .end method
 
-.method public final h()Z
+.method public final g()Z
     .locals 1
 
     .prologue

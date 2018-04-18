@@ -1,5 +1,5 @@
 .class final Lkik/android/b/e$1$1;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,9 +15,9 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
-        "Lcom/kik/cards/web/i$a;",
+        "Lcom/kik/cards/web/h$a;",
         ">;"
     }
 .end annotation
@@ -35,7 +35,7 @@
     .line 124
     iput-object p1, p0, Lkik/android/b/e$1$1;->a:Lkik/android/b/e$1;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -47,10 +47,10 @@
 
     .prologue
     .line 124
-    check-cast p1, Lcom/kik/cards/web/i$a;
+    check-cast p1, Lcom/kik/cards/web/h$a;
 
     .line 1128
-    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Object;)V
+    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Object;)V
 
     .line 1129
     new-instance v0, Lkik/android/chat/fragment/KikPermissionsFragment$a;
@@ -68,28 +68,28 @@
     if-eqz p1, :cond_0
 
     .line 1132
-    invoke-virtual {p1}, Lcom/kik/cards/web/i$a;->f()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/kik/cards/web/h$a;->f()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikPermissionsFragment$a;->b(Ljava/lang/String;)Lkik/android/chat/fragment/KikPermissionsFragment$a;
 
     .line 1133
-    invoke-virtual {p1}, Lcom/kik/cards/web/i$a;->g()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/kik/cards/web/h$a;->g()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikPermissionsFragment$a;->a(Ljava/lang/String;)Lkik/android/chat/fragment/KikPermissionsFragment$a;
 
     .line 1134
-    invoke-virtual {p1}, Lcom/kik/cards/web/i$a;->h()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/kik/cards/web/h$a;->h()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikPermissionsFragment$a;->d(Ljava/lang/String;)Lkik/android/chat/fragment/KikPermissionsFragment$a;
 
     .line 1135
-    invoke-virtual {p1}, Lcom/kik/cards/web/i$a;->i()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/kik/cards/web/h$a;->i()Ljava/lang/String;
 
     move-result-object v1
 
@@ -105,7 +105,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ae;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v0
 
@@ -118,7 +118,7 @@
 
     invoke-direct {v1, p0}, Lkik/android/b/e$1$1$1;-><init>(Lkik/android/b/e$1$1;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
     .line 124
     return-void
@@ -129,7 +129,7 @@
 
     .prologue
     .line 180
-    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Throwable;)V
+    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Throwable;)V
 
     .line 181
     iget-object v0, p0, Lkik/android/b/e$1$1;->a:Lkik/android/b/e$1;

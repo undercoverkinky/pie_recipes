@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 676
+    .line 664
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,12 +44,12 @@
     .locals 4
 
     .prologue
-    .line 676
+    .line 664
     check-cast p1, Ljava/io/File;
 
     check-cast p2, Ljava/io/File;
 
-    .line 1681
+    .line 1669
     invoke-virtual {p1}, Ljava/io/File;->lastModified()J
 
     move-result-wide v0
@@ -62,6 +62,6 @@
 
     long-to-int v0, v0
 
-    .line 676
+    .line 664
     return v0
 .end method

@@ -1,67 +1,40 @@
-.class public abstract Lcom/google/android/gms/internal/zznp;
-.super Ljava/lang/Object;
+.class public final Lcom/google/android/gms/internal/zznp;
+.super Lcom/google/android/gms/internal/zzee;
 
-
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/google/android/gms/internal/zznp$zzb;,
-        Lcom/google/android/gms/internal/zznp$zza;
-    }
-.end annotation
-
-
-# instance fields
-.field public final zzagd:I
-
-.field public final zzalC:I
+# interfaces
+.implements Lcom/google/android/gms/internal/zznn;
 
 
 # direct methods
-.method public constructor <init>(II)V
-    .locals 0
+.method constructor <init>(Landroid/os/IBinder;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "com.google.android.gms.ads.internal.customrenderedad.client.IOnCustomRenderedAdLoadedListener"
 
-    iput p1, p0, Lcom/google/android/gms/internal/zznp;->zzalC:I
-
-    iput p2, p0, Lcom/google/android/gms/internal/zznp;->zzagd:I
+    invoke-direct {p0, p1, v0}, Lcom/google/android/gms/internal/zzee;-><init>(Landroid/os/IBinder;Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public cancel()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public zza(Landroid/util/SparseArray;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/util/SparseArray",
-            "<",
-            "Lcom/google/android/gms/internal/zzpf;",
-            ">;)V"
-        }
-    .end annotation
-
-    return-void
-.end method
-
-.method public abstract zzb(Lcom/google/android/gms/common/api/Api$zzb;)V
+.method public final zza(Lcom/google/android/gms/internal/zznk;)V
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Landroid/os/DeadObjectException;
+            Landroid/os/RemoteException;
         }
     .end annotation
-.end method
 
-.method public abstract zzv(Lcom/google/android/gms/common/api/Status;)V
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Lcom/google/android/gms/internal/zzeg;->zza(Landroid/os/Parcel;Landroid/os/IInterface;)V
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zzb(ILandroid/os/Parcel;)V
+
+    return-void
 .end method

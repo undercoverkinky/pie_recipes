@@ -1,5 +1,5 @@
 .class public Lkik/android/chat/vm/DialogViewModel;
-.super Ljava/lang/Object;
+.super Lkik/android/chat/vm/e;
 .source "SourceFile"
 
 
@@ -39,6 +39,8 @@
 
 .field private h:Landroid/graphics/drawable/Drawable;
 
+.field private i:I
+
 
 # direct methods
 .method public constructor <init>()V
@@ -46,19 +48,24 @@
 
     .prologue
     .line 11
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lkik/android/chat/vm/e;-><init>()V
 
-    .line 163
+    .line 181
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lkik/android/chat/vm/DialogViewModel;->f:Ljava/util/List;
 
-    .line 164
+    .line 182
     sget-object v0, Lkik/android/chat/vm/DialogViewModel$DialogStyle;->PLAIN:Lkik/android/chat/vm/DialogViewModel$DialogStyle;
 
     iput-object v0, p0, Lkik/android/chat/vm/DialogViewModel;->g:Lkik/android/chat/vm/DialogViewModel$DialogStyle;
+
+    .line 184
+    const/4 v0, -0x1
+
+    iput v0, p0, Lkik/android/chat/vm/DialogViewModel;->i:I
 
     return-void
 .end method
@@ -81,6 +88,16 @@
     iput-object p1, p0, Lkik/android/chat/vm/DialogViewModel;->a:Ljava/lang/String;
 
     return-object p1
+.end method
+
+.method static synthetic a(Lkik/android/chat/vm/DialogViewModel;)Ljava/util/List;
+    .locals 1
+
+    .prologue
+    .line 11
+    iget-object v0, p0, Lkik/android/chat/vm/DialogViewModel;->f:Ljava/util/List;
+
+    return-object v0
 .end method
 
 .method static synthetic a(Lkik/android/chat/vm/DialogViewModel;Lkik/android/chat/vm/DialogViewModel$DialogStyle;)Lkik/android/chat/vm/DialogViewModel$DialogStyle;
@@ -107,50 +124,48 @@
     .locals 1
 
     .prologue
-    .line 136
+    .line 154
     new-instance v0, Lkik/android/chat/vm/DialogViewModel$b;
 
     invoke-direct {v0}, Lkik/android/chat/vm/DialogViewModel$b;-><init>()V
 
-    .line 137
+    .line 155
     invoke-virtual {v0, p0}, Lkik/android/chat/vm/DialogViewModel$b;->a(Ljava/lang/String;)Lkik/android/chat/vm/DialogViewModel$b;
 
     move-result-object v0
 
-    .line 138
+    .line 156
     invoke-virtual {v0, p1}, Lkik/android/chat/vm/DialogViewModel$b;->b(Ljava/lang/String;)Lkik/android/chat/vm/DialogViewModel$b;
 
     move-result-object v0
 
-    .line 139
+    .line 157
     invoke-virtual {v0, p2, p3}, Lkik/android/chat/vm/DialogViewModel$b;->a(Ljava/lang/String;Ljava/lang/Runnable;)Lkik/android/chat/vm/DialogViewModel$b;
 
     move-result-object v0
 
-    .line 140
+    .line 158
     invoke-virtual {v0, p4, p5}, Lkik/android/chat/vm/DialogViewModel$b;->b(Ljava/lang/String;Ljava/lang/Runnable;)Lkik/android/chat/vm/DialogViewModel$b;
 
     move-result-object v0
 
-    .line 141
+    .line 159
     invoke-virtual {v0}, Lkik/android/chat/vm/DialogViewModel$b;->a()Lkik/android/chat/vm/DialogViewModel;
 
     move-result-object v0
 
-    .line 136
+    .line 154
     return-object v0
 .end method
 
-.method static synthetic a(Lkik/android/chat/vm/DialogViewModel;)Z
-    .locals 1
+.method static synthetic a(Lkik/android/chat/vm/DialogViewModel;Z)Z
+    .locals 0
 
     .prologue
     .line 11
-    const/4 v0, 0x1
+    iput-boolean p1, p0, Lkik/android/chat/vm/DialogViewModel;->c:Z
 
-    iput-boolean v0, p0, Lkik/android/chat/vm/DialogViewModel;->c:Z
-
-    return v0
+    return p1
 .end method
 
 .method static synthetic b(Lkik/android/chat/vm/DialogViewModel;Ljava/lang/String;)Ljava/lang/String;
@@ -161,16 +176,6 @@
     iput-object p1, p0, Lkik/android/chat/vm/DialogViewModel;->b:Ljava/lang/String;
 
     return-object p1
-.end method
-
-.method static synthetic b(Lkik/android/chat/vm/DialogViewModel;)Ljava/util/List;
-    .locals 1
-
-    .prologue
-    .line 11
-    iget-object v0, p0, Lkik/android/chat/vm/DialogViewModel;->f:Ljava/util/List;
-
-    return-object v0
 .end method
 
 .method static synthetic b(Lkik/android/chat/vm/DialogViewModel;Lkik/android/chat/vm/DialogViewModel$a;)Lkik/android/chat/vm/DialogViewModel$a;
@@ -185,21 +190,41 @@
 
 
 # virtual methods
-.method public final c()Ljava/lang/String;
+.method public final G_()Lkik/android/chat/vm/DialogViewModel$DialogStyle;
     .locals 1
 
     .prologue
-    .line 174
+    .line 218
+    iget-object v0, p0, Lkik/android/chat/vm/DialogViewModel;->g:Lkik/android/chat/vm/DialogViewModel$DialogStyle;
+
+    return-object v0
+.end method
+
+.method public J_()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 188
+    iget-object v0, p0, Lkik/android/chat/vm/DialogViewModel;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final b()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 193
     iget-object v0, p0, Lkik/android/chat/vm/DialogViewModel;->b:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final d()Z
+.method public d()Z
     .locals 1
 
     .prologue
-    .line 179
+    .line 198
     iget-boolean v0, p0, Lkik/android/chat/vm/DialogViewModel;->c:Z
 
     return v0
@@ -209,23 +234,23 @@
     .locals 1
 
     .prologue
-    .line 184
+    .line 203
     iget-object v0, p0, Lkik/android/chat/vm/DialogViewModel;->d:Lkik/android/chat/vm/DialogViewModel$a;
 
     return-object v0
 .end method
 
-.method public final f()Lkik/android/chat/vm/DialogViewModel$a;
+.method public final g()Lkik/android/chat/vm/DialogViewModel$a;
     .locals 1
 
     .prologue
-    .line 189
+    .line 208
     iget-object v0, p0, Lkik/android/chat/vm/DialogViewModel;->e:Lkik/android/chat/vm/DialogViewModel$a;
 
     return-object v0
 .end method
 
-.method public final g()Ljava/util/List;
+.method public final j()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -238,38 +263,18 @@
     .end annotation
 
     .prologue
-    .line 194
+    .line 213
     iget-object v0, p0, Lkik/android/chat/vm/DialogViewModel;->f:Ljava/util/List;
 
     return-object v0
 .end method
 
-.method public final i()Landroid/graphics/drawable/Drawable;
+.method public final l()Landroid/graphics/drawable/Drawable;
     .locals 1
 
     .prologue
-    .line 204
+    .line 223
     iget-object v0, p0, Lkik/android/chat/vm/DialogViewModel;->h:Landroid/graphics/drawable/Drawable;
-
-    return-object v0
-.end method
-
-.method public final y_()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 169
-    iget-object v0, p0, Lkik/android/chat/vm/DialogViewModel;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final z_()Lkik/android/chat/vm/DialogViewModel$DialogStyle;
-    .locals 1
-
-    .prologue
-    .line 199
-    iget-object v0, p0, Lkik/android/chat/vm/DialogViewModel;->g:Lkik/android/chat/vm/DialogViewModel$DialogStyle;
 
     return-object v0
 .end method

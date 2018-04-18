@@ -28,7 +28,7 @@
 
 
 # static fields
-.field static final a:Lcom/google/common/base/Equivalence$Identity;
+.field static final INSTANCE:Lcom/google/common/base/Equivalence$Identity;
 
 .field private static final serialVersionUID:J = 0x1L
 
@@ -38,12 +38,12 @@
     .locals 1
 
     .prologue
-    .line 342
+    .line 352
     new-instance v0, Lcom/google/common/base/Equivalence$Identity;
 
     invoke-direct {v0}, Lcom/google/common/base/Equivalence$Identity;-><init>()V
 
-    sput-object v0, Lcom/google/common/base/Equivalence$Identity;->a:Lcom/google/common/base/Equivalence$Identity;
+    sput-object v0, Lcom/google/common/base/Equivalence$Identity;->INSTANCE:Lcom/google/common/base/Equivalence$Identity;
 
     return-void
 .end method
@@ -52,7 +52,7 @@
     .locals 0
 
     .prologue
-    .line 339
+    .line 350
     invoke-direct {p0}, Lcom/google/common/base/Equivalence;-><init>()V
 
     return-void
@@ -62,32 +62,32 @@
     .locals 1
 
     .prologue
-    .line 353
-    sget-object v0, Lcom/google/common/base/Equivalence$Identity;->a:Lcom/google/common/base/Equivalence$Identity;
+    .line 365
+    sget-object v0, Lcom/google/common/base/Equivalence$Identity;->INSTANCE:Lcom/google/common/base/Equivalence$Identity;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method protected final b(Ljava/lang/Object;)I
+.method protected final doEquivalent(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
-    .line 349
-    invoke-static {p1}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
-
-    move-result v0
+    .line 356
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method protected final b(Ljava/lang/Object;Ljava/lang/Object;)Z
+.method protected final doHash(Ljava/lang/Object;)I
     .locals 1
 
     .prologue
-    .line 345
-    const/4 v0, 0x0
+    .line 361
+    invoke-static {p1}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v0
 
     return v0
 .end method

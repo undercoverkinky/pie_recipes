@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/fragment/KikStartGroupFragment$4;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,9 +15,9 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
-        "Lkik/core/datatypes/o;",
+        "Lkik/core/datatypes/l;",
         ">;"
     }
 .end annotation
@@ -34,12 +34,12 @@
     .locals 0
 
     .prologue
-    .line 773
+    .line 801
     iput-object p1, p0, Lkik/android/chat/fragment/KikStartGroupFragment$4;->b:Lkik/android/chat/fragment/KikStartGroupFragment;
 
     iput-object p2, p0, Lkik/android/chat/fragment/KikStartGroupFragment$4;->a:Ljava/lang/String;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -50,16 +50,16 @@
     .locals 2
 
     .prologue
-    .line 773
-    check-cast p1, Lkik/core/datatypes/o;
+    .line 801
+    check-cast p1, Lkik/core/datatypes/l;
 
-    .line 1777
+    .line 1805
     iget-object v0, p0, Lkik/android/chat/fragment/KikStartGroupFragment$4;->b:Lkik/android/chat/fragment/KikStartGroupFragment;
 
     iget-object v1, p0, Lkik/android/chat/fragment/KikStartGroupFragment$4;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, p1}, Lkik/android/chat/fragment/KikStartGroupFragment;->a(Ljava/lang/String;Lkik/core/datatypes/o;)V
+    invoke-virtual {v0, v1, p1}, Lkik/android/chat/fragment/KikStartGroupFragment;->a(Ljava/lang/String;Lkik/core/datatypes/l;)V
 
-    .line 773
+    .line 801
     return-void
 .end method

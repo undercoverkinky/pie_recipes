@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 18
+    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +44,7 @@
     .locals 1
 
     .prologue
-    .line 18
+    .line 22
     check-cast p1, Ljavax/annotation/Nonnegative;
 
     invoke-virtual {p0, p1, p2}, Ljavax/annotation/Nonnegative$Checker;->forConstantValue(Ljavax/annotation/Nonnegative;Ljava/lang/Object;)Ljavax/annotation/meta/When;
@@ -62,28 +62,28 @@
 
     const/4 v1, 0x0
 
-    .line 21
+    .line 25
     instance-of v2, p2, Ljava/lang/Number;
 
     if-nez v2, :cond_0
 
-    .line 22
+    .line 26
     sget-object v0, Ljavax/annotation/meta/When;->NEVER:Ljavax/annotation/meta/When;
 
-    .line 37
+    .line 41
     :goto_0
     return-object v0
 
-    .line 24
+    .line 28
     :cond_0
     check-cast p2, Ljava/lang/Number;
 
-    .line 25
+    .line 29
     instance-of v2, p2, Ljava/lang/Long;
 
     if-eqz v2, :cond_3
 
-    .line 26
+    .line 30
     invoke-virtual {p2}, Ljava/lang/Number;->longValue()J
 
     move-result-wide v2
@@ -94,12 +94,12 @@
 
     if-gez v2, :cond_2
 
-    .line 34
+    .line 38
     :cond_1
     :goto_1
     if-eqz v0, :cond_6
 
-    .line 35
+    .line 39
     sget-object v0, Ljavax/annotation/meta/When;->NEVER:Ljavax/annotation/meta/When;
 
     goto :goto_0
@@ -107,16 +107,16 @@
     :cond_2
     move v0, v1
 
-    .line 26
+    .line 30
     goto :goto_1
 
-    .line 27
+    .line 31
     :cond_3
     instance-of v2, p2, Ljava/lang/Double;
 
     if-eqz v2, :cond_4
 
-    .line 28
+    .line 32
     invoke-virtual {p2}, Ljava/lang/Number;->doubleValue()D
 
     move-result-wide v2
@@ -131,13 +131,13 @@
 
     goto :goto_1
 
-    .line 29
+    .line 33
     :cond_4
     instance-of v2, p2, Ljava/lang/Float;
 
     if-eqz v2, :cond_5
 
-    .line 30
+    .line 34
     invoke-virtual {p2}, Ljava/lang/Number;->floatValue()F
 
     move-result v2
@@ -152,7 +152,7 @@
 
     goto :goto_1
 
-    .line 32
+    .line 36
     :cond_5
     invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
 
@@ -164,7 +164,7 @@
 
     goto :goto_1
 
-    .line 37
+    .line 41
     :cond_6
     sget-object v0, Ljavax/annotation/meta/When;->ALWAYS:Ljavax/annotation/meta/When;
 

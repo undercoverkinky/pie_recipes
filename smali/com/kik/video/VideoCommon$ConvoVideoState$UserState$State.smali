@@ -75,7 +75,7 @@
 
     const/4 v3, 0x0
 
-    .line 2082
+    .line 2091
     new-instance v0, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;
 
     const-string v1, "NOT_SET"
@@ -84,7 +84,7 @@
 
     sput-object v0, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;->NOT_SET:Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;
 
-    .line 2096
+    .line 2105
     new-instance v0, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;
 
     const-string v1, "CONNECTING"
@@ -95,7 +95,7 @@
 
     sput-object v0, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;->CONNECTING:Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;
 
-    .line 2104
+    .line 2113
     new-instance v0, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;
 
     const-string v1, "CONNECTED"
@@ -106,7 +106,7 @@
 
     sput-object v0, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;->CONNECTED:Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;
 
-    .line 2105
+    .line 2114
     new-instance v0, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;
 
     const-string v1, "UNRECOGNIZED"
@@ -117,7 +117,7 @@
 
     sput-object v0, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;->UNRECOGNIZED:Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;
 
-    .line 2072
+    .line 2081
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;
@@ -140,14 +140,14 @@
 
     sput-object v0, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;->$VALUES:[Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;
 
-    .line 2171
+    .line 2180
     new-instance v0, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State$1;
 
     invoke-direct {v0}, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State$1;-><init>()V
 
     sput-object v0, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;->internalValueMap:Lcom/google/protobuf/Internal$EnumLiteMap;
 
-    .line 2191
+    .line 2200
     invoke-static {}, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;->values()[Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;
 
     move-result-object v0
@@ -166,13 +166,13 @@
     .end annotation
 
     .prologue
-    .line 2207
+    .line 2216
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 2208
+    .line 2217
     iput p3, p0, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;->value:I
 
-    .line 2209
+    .line 2218
     return-void
 .end method
 
@@ -180,34 +180,34 @@
     .locals 1
 
     .prologue
-    .line 2158
+    .line 2167
     sparse-switch p0, :sswitch_data_0
 
-    .line 2162
+    .line 2171
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 2159
+    .line 2168
     :sswitch_0
     sget-object v0, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;->NOT_SET:Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;
 
     goto :goto_0
 
-    .line 2160
+    .line 2169
     :sswitch_1
     sget-object v0, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;->CONNECTING:Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;
 
     goto :goto_0
 
-    .line 2161
+    .line 2170
     :sswitch_2
     sget-object v0, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;->CONNECTED:Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;
 
     goto :goto_0
 
-    .line 2158
+    .line 2167
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -220,8 +220,8 @@
     .locals 2
 
     .prologue
-    .line 2188
-    invoke-static {}, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState;->a()Lcom/google/protobuf/Descriptors$Descriptor;
+    .line 2197
+    invoke-static {}, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState;->getDescriptor()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
 
@@ -253,7 +253,7 @@
     .end annotation
 
     .prologue
-    .line 2168
+    .line 2177
     sget-object v0, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;->internalValueMap:Lcom/google/protobuf/Internal$EnumLiteMap;
 
     return-object v0
@@ -265,7 +265,7 @@
     .end annotation
 
     .prologue
-    .line 2154
+    .line 2163
     invoke-static {p0}, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;->forNumber(I)Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;
 
     move-result-object v0
@@ -277,7 +277,7 @@
     .locals 2
 
     .prologue
-    .line 2195
+    .line 2204
     invoke-virtual {p0}, Lcom/google/protobuf/Descriptors$EnumValueDescriptor;->getType()Lcom/google/protobuf/Descriptors$EnumDescriptor;
 
     move-result-object v0
@@ -288,7 +288,7 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 2196
+    .line 2205
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "EnumValueDescriptor is not for this type."
@@ -297,7 +297,7 @@
 
     throw v0
 
-    .line 2199
+    .line 2208
     :cond_0
     invoke-virtual {p0}, Lcom/google/protobuf/Descriptors$EnumValueDescriptor;->getIndex()I
 
@@ -307,10 +307,10 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 2200
+    .line 2209
     sget-object v0, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;->UNRECOGNIZED:Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;
 
-    .line 2202
+    .line 2211
     :goto_0
     return-object v0
 
@@ -330,7 +330,7 @@
     .locals 1
 
     .prologue
-    .line 2072
+    .line 2081
     const-class v0, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -346,7 +346,7 @@
     .locals 1
 
     .prologue
-    .line 2072
+    .line 2081
     sget-object v0, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;->$VALUES:[Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;
 
     invoke-virtual {v0}, [Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;->clone()Ljava/lang/Object;
@@ -364,7 +364,7 @@
     .locals 1
 
     .prologue
-    .line 2184
+    .line 2193
     invoke-static {}, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;->getDescriptor()Lcom/google/protobuf/Descriptors$EnumDescriptor;
 
     move-result-object v0
@@ -376,12 +376,12 @@
     .locals 2
 
     .prologue
-    .line 2142
+    .line 2151
     sget-object v0, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;->UNRECOGNIZED:Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;
 
     if-ne p0, v0, :cond_0
 
-    .line 2143
+    .line 2152
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Can\'t get the number of an unknown enum value."
@@ -390,7 +390,7 @@
 
     throw v0
 
-    .line 2146
+    .line 2155
     :cond_0
     iget v0, p0, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;->value:I
 
@@ -401,7 +401,7 @@
     .locals 2
 
     .prologue
-    .line 2180
+    .line 2189
     invoke-static {}, Lcom/kik/video/VideoCommon$ConvoVideoState$UserState$State;->getDescriptor()Lcom/google/protobuf/Descriptors$EnumDescriptor;
 
     move-result-object v0

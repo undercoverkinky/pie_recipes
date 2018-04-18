@@ -35,7 +35,7 @@
     if-eqz p7, :cond_1
 
     .line 36
-    sget v0, Landroid/support/v7/recyclerview/R$id;->a:I
+    sget v0, Landroid/support/v7/recyclerview/R$id;->item_touch_helper_previous_elevation:I
 
     invoke-virtual {p3, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -108,7 +108,7 @@
     invoke-static {p3, v0}, Landroid/support/v4/view/ViewCompat;->setElevation(Landroid/view/View;F)V
 
     .line 41
-    sget v0, Landroid/support/v7/recyclerview/R$id;->a:I
+    sget v0, Landroid/support/v7/recyclerview/R$id;->item_touch_helper_previous_elevation:I
 
     invoke-virtual {p3, v0, v3}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
@@ -130,7 +130,7 @@
 
     .prologue
     .line 65
-    sget v0, Landroid/support/v7/recyclerview/R$id;->a:I
+    sget v0, Landroid/support/v7/recyclerview/R$id;->item_touch_helper_previous_elevation:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -154,7 +154,7 @@
 
     .line 69
     :cond_0
-    sget v0, Landroid/support/v7/recyclerview/R$id;->a:I
+    sget v0, Landroid/support/v7/recyclerview/R$id;->item_touch_helper_previous_elevation:I
 
     const/4 v1, 0x0
 

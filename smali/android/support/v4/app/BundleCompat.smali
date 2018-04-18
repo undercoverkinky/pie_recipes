@@ -35,7 +35,7 @@
     return-object v0
 
     :cond_0
-    invoke-static {p0, p1}, Landroid/support/v4/app/BundleCompatDonut;->getBinder(Landroid/os/Bundle;Ljava/lang/String;)Landroid/os/IBinder;
+    invoke-static {p0, p1}, Landroid/support/v4/app/BundleCompatGingerbread;->getBinder(Landroid/os/Bundle;Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
@@ -62,7 +62,7 @@
 
     .line 57
     :cond_0
-    invoke-static {p0, p1, p2}, Landroid/support/v4/app/BundleCompatDonut;->putBinder(Landroid/os/Bundle;Ljava/lang/String;Landroid/os/IBinder;)V
+    invoke-static {p0, p1, p2}, Landroid/support/v4/app/BundleCompatGingerbread;->putBinder(Landroid/os/Bundle;Ljava/lang/String;Landroid/os/IBinder;)V
 
     goto :goto_0
 .end method

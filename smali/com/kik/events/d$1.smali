@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/events/d;->a(Lcom/kik/events/c;Lcom/kik/events/e;Lcom/kik/events/q;)Lcom/kik/events/e;
+    value = Lcom/kik/events/d;->a(Lcom/kik/events/c;Lcom/kik/events/e;Lcom/kik/events/p;)Lcom/kik/events/e;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,13 +28,13 @@
 # instance fields
 .field final synthetic a:Lcom/kik/events/e;
 
-.field final synthetic b:Lcom/kik/events/q;
+.field final synthetic b:Lcom/kik/events/p;
 
 .field final synthetic c:Lcom/kik/events/d;
 
 
 # direct methods
-.method constructor <init>(Lcom/kik/events/d;Lcom/kik/events/e;Lcom/kik/events/q;)V
+.method constructor <init>(Lcom/kik/events/d;Lcom/kik/events/e;Lcom/kik/events/p;)V
     .locals 0
 
     .prologue
@@ -43,7 +43,7 @@
 
     iput-object p2, p0, Lcom/kik/events/d$1;->a:Lcom/kik/events/e;
 
-    iput-object p3, p0, Lcom/kik/events/d$1;->b:Lcom/kik/events/q;
+    iput-object p3, p0, Lcom/kik/events/d$1;->b:Lcom/kik/events/p;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -66,9 +66,9 @@
     .line 93
     iget-object v0, p0, Lcom/kik/events/d$1;->a:Lcom/kik/events/e;
 
-    iget-object v1, p0, Lcom/kik/events/d$1;->b:Lcom/kik/events/q;
+    iget-object v1, p0, Lcom/kik/events/d$1;->b:Lcom/kik/events/p;
 
-    invoke-interface {v1, p2}, Lcom/kik/events/q;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, p2}, Lcom/kik/events/p;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 

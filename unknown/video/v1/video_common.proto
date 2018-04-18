@@ -3,6 +3,7 @@ syntax = "proto3";
 package common.video.v1;
 
 option java_package = "com.kik.video";
+option go_package = "github.com/kikinteractive/xiphias-model-common/generated/go/video/v1;video";
 
 import "common_model.proto";
 import "protobuf_validation.proto";
@@ -26,6 +27,7 @@ message OneToOneConvoId {
     // MUST be ordered
     repeated XiBareUserJid users = 1 [(kik.validation.field_validation) = {
         mandatory: true
+        ordered: ASC
         min_repetitions: 2
         max_repetitions: 2 }];
 }
@@ -85,11 +87,15 @@ message ConvoVideoState {
         }
     }
 
-    // Timestamp from the Source system (Rounds' media balance server) at the time this ConvoVideoState
-    // is created. This is crucial information needed to handle the ordering of state change events on the
+    // This is crucial information needed to handle the ordering of state change events on the
     // receiving end.
-    google.protobuf.Timestamp timestamp = 3;
-
+    //
+    // Please note, due to Rounds internal implementation needs, this timestamp is not always the clock
+    // time of the event, it is however sequential in the order of actual events. Controlling this
+    // timestamp should only be done at source (Rounds state tracking). DO NOT compare this timestamp
+    // to any other system time to determine sequential ordering of events.
+    google.protobuf.Timestamp timestamp = 3 [(kik.validation.field_validation) = {
+        mandatory: true }];
 }
 
 // TERMINOLOGY: Conference: is an active video chat session on a media server.

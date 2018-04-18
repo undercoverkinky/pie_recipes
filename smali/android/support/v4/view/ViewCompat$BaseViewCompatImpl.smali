@@ -17,6 +17,10 @@
 .end annotation
 
 
+# static fields
+.field private static sChildrenDrawingOrderMethod:Ljava/lang/reflect/Method;
+
+
 # instance fields
 .field private mDispatchFinishTemporaryDetach:Ljava/lang/reflect/Method;
 
@@ -42,10 +46,10 @@
     .locals 1
 
     .prologue
-    .line 462
+    .line 493
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 466
+    .line 497
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->mViewPropertyAnimatorCompatMap:Ljava/util/WeakHashMap;
@@ -57,7 +61,7 @@
     .locals 3
 
     .prologue
-    .line 666
+    .line 707
     :try_start_0
     const-class v0, Landroid/view/View;
 
@@ -73,7 +77,7 @@
 
     iput-object v0, p0, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->mDispatchStartTemporaryDetach:Ljava/lang/reflect/Method;
 
-    .line 668
+    .line 709
     const-class v0, Landroid/view/View;
 
     const-string v1, "dispatchFinishTemporaryDetach"
@@ -90,20 +94,20 @@
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 673
+    .line 714
     :goto_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->mTempDetachBound:Z
 
-    .line 674
+    .line 715
     return-void
 
-    .line 670
+    .line 711
     :catch_0
     move-exception v0
 
-    .line 671
+    .line 712
     const-string v1, "ViewCompat"
 
     const-string v2, "Couldn\'t find method"
@@ -121,42 +125,43 @@
 
     const/4 v0, 0x0
 
-    .line 937
+    .line 1006
     invoke-interface {p1}, Landroid/support/v4/view/ScrollingView;->computeHorizontalScrollOffset()I
 
     move-result v2
 
-    .line 938
+    .line 1007
     invoke-interface {p1}, Landroid/support/v4/view/ScrollingView;->computeHorizontalScrollRange()I
 
     move-result v3
 
+    .line 1008
     invoke-interface {p1}, Landroid/support/v4/view/ScrollingView;->computeHorizontalScrollExtent()I
 
     move-result v4
 
     sub-int/2addr v3, v4
 
-    .line 940
+    .line 1009
     if-nez v3, :cond_1
 
-    .line 944
+    .line 1013
     :cond_0
     :goto_0
     return v0
 
-    .line 941
+    .line 1010
     :cond_1
     if-gez p2, :cond_2
 
-    .line 942
+    .line 1011
     if-lez v2, :cond_0
 
     move v0, v1
 
     goto :goto_0
 
-    .line 944
+    .line 1013
     :cond_2
     add-int/lit8 v3, v3, -0x1
 
@@ -175,42 +180,43 @@
 
     const/4 v0, 0x0
 
-    .line 949
+    .line 1018
     invoke-interface {p1}, Landroid/support/v4/view/ScrollingView;->computeVerticalScrollOffset()I
 
     move-result v2
 
-    .line 950
+    .line 1019
     invoke-interface {p1}, Landroid/support/v4/view/ScrollingView;->computeVerticalScrollRange()I
 
     move-result v3
 
+    .line 1020
     invoke-interface {p1}, Landroid/support/v4/view/ScrollingView;->computeVerticalScrollExtent()I
 
     move-result v4
 
     sub-int/2addr v3, v4
 
-    .line 952
+    .line 1021
     if-nez v3, :cond_1
 
-    .line 956
+    .line 1025
     :cond_0
     :goto_0
     return v0
 
-    .line 953
+    .line 1022
     :cond_1
     if-gez p2, :cond_2
 
-    .line 954
+    .line 1023
     if-lez v2, :cond_0
 
     move v0, v1
 
     goto :goto_0
 
-    .line 956
+    .line 1025
     :cond_2
     add-int/lit8 v3, v3, -0x1
 
@@ -227,7 +233,7 @@
     .locals 1
 
     .prologue
-    .line 733
+    .line 779
     new-instance v0, Landroid/support/v4/view/ViewPropertyAnimatorCompat;
 
     invoke-direct {v0, p1}, Landroid/support/v4/view/ViewPropertyAnimatorCompat;-><init>(Landroid/view/View;)V
@@ -239,13 +245,14 @@
     .locals 1
 
     .prologue
-    .line 470
+    .line 502
     instance-of v0, p1, Landroid/support/v4/view/ScrollingView;
 
     if-eqz v0, :cond_0
 
     check-cast p1, Landroid/support/v4/view/ScrollingView;
 
+    .line 503
     invoke-direct {p0, p1, p2}, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->canScrollingViewScrollHorizontally(Landroid/support/v4/view/ScrollingView;I)Z
 
     move-result v0
@@ -267,13 +274,14 @@
     .locals 1
 
     .prologue
-    .line 474
+    .line 507
     instance-of v0, p1, Landroid/support/v4/view/ScrollingView;
 
     if-eqz v0, :cond_0
 
     check-cast p1, Landroid/support/v4/view/ScrollingView;
 
+    .line 508
     invoke-direct {p0, p1, p2}, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->canScrollingViewScrollVertically(Landroid/support/v4/view/ScrollingView;I)Z
 
     move-result v0
@@ -295,7 +303,7 @@
     .locals 1
 
     .prologue
-    .line 1027
+    .line 1107
     or-int v0, p1, p2
 
     return v0
@@ -305,7 +313,7 @@
     .locals 0
 
     .prologue
-    .line 884
+    .line 947
     return-object p2
 .end method
 
@@ -313,21 +321,21 @@
     .locals 2
 
     .prologue
-    .line 644
+    .line 685
     iget-boolean v0, p0, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->mTempDetachBound:Z
 
     if-nez v0, :cond_0
 
-    .line 645
+    .line 686
     invoke-direct {p0}, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->bindTempDetach()V
 
-    .line 647
+    .line 688
     :cond_0
     iget-object v0, p0, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->mDispatchFinishTemporaryDetach:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_1
 
-    .line 649
+    .line 690
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->mDispatchFinishTemporaryDetach:Ljava/lang/reflect/Method;
 
@@ -339,17 +347,17 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 657
+    .line 698
     :goto_0
     return-void
 
-    .line 655
+    .line 696
     :cond_1
     invoke-virtual {p1}, Landroid/view/View;->onFinishTemporaryDetach()V
 
     goto :goto_0
 
-    .line 652
+    .line 693
     :catch_0
     move-exception v0
 
@@ -360,19 +368,19 @@
     .locals 1
 
     .prologue
-    .line 1005
+    .line 1075
     instance-of v0, p1, Landroid/support/v4/view/NestedScrollingChild;
 
     if-eqz v0, :cond_0
 
-    .line 1006
+    .line 1076
     check-cast p1, Landroid/support/v4/view/NestedScrollingChild;
 
     invoke-interface {p1, p2, p3, p4}, Landroid/support/v4/view/NestedScrollingChild;->dispatchNestedFling(FFZ)Z
 
     move-result v0
 
-    .line 1009
+    .line 1079
     :goto_0
     return v0
 
@@ -386,19 +394,19 @@
     .locals 1
 
     .prologue
-    .line 1014
+    .line 1084
     instance-of v0, p1, Landroid/support/v4/view/NestedScrollingChild;
 
     if-eqz v0, :cond_0
 
-    .line 1015
+    .line 1085
     check-cast p1, Landroid/support/v4/view/NestedScrollingChild;
 
     invoke-interface {p1, p2, p3}, Landroid/support/v4/view/NestedScrollingChild;->dispatchNestedPreFling(FF)Z
 
     move-result v0
 
-    .line 1017
+    .line 1087
     :goto_0
     return v0
 
@@ -412,19 +420,19 @@
     .locals 1
 
     .prologue
-    .line 995
+    .line 1065
     instance-of v0, p1, Landroid/support/v4/view/NestedScrollingChild;
 
     if-eqz v0, :cond_0
 
-    .line 996
+    .line 1066
     check-cast p1, Landroid/support/v4/view/NestedScrollingChild;
 
     invoke-interface {p1, p2, p3, p4, p5}, Landroid/support/v4/view/NestedScrollingChild;->dispatchNestedPreScroll(II[I[I)Z
 
     move-result v0
 
-    .line 999
+    .line 1069
     :goto_0
     return v0
 
@@ -438,14 +446,14 @@
     .locals 6
 
     .prologue
-    .line 985
+    .line 1055
     instance-of v0, p1, Landroid/support/v4/view/NestedScrollingChild;
 
     if-eqz v0, :cond_0
 
     move-object v0, p1
 
-    .line 986
+    .line 1056
     check-cast v0, Landroid/support/v4/view/NestedScrollingChild;
 
     move v1, p2
@@ -462,7 +470,7 @@
 
     move-result v0
 
-    .line 989
+    .line 1059
     :goto_0
     return v0
 
@@ -476,21 +484,21 @@
     .locals 2
 
     .prologue
-    .line 627
+    .line 668
     iget-boolean v0, p0, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->mTempDetachBound:Z
 
     if-nez v0, :cond_0
 
-    .line 628
+    .line 669
     invoke-direct {p0}, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->bindTempDetach()V
 
-    .line 630
+    .line 671
     :cond_0
     iget-object v0, p0, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->mDispatchStartTemporaryDetach:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_1
 
-    .line 632
+    .line 673
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->mDispatchStartTemporaryDetach:Ljava/lang/reflect/Method;
 
@@ -502,17 +510,17 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 640
+    .line 681
     :goto_0
     return-void
 
-    .line 638
+    .line 679
     :cond_1
     invoke-virtual {p1}, Landroid/view/View;->onStartTemporaryDetach()V
 
     goto :goto_0
 
-    .line 635
+    .line 676
     :catch_0
     move-exception v0
 
@@ -523,7 +531,7 @@
     .locals 1
 
     .prologue
-    .line 602
+    .line 643
     const/4 v0, 0x0
 
     return v0
@@ -533,7 +541,7 @@
     .locals 1
 
     .prologue
-    .line 536
+    .line 579
     const/4 v0, 0x0
 
     return-object v0
@@ -543,7 +551,7 @@
     .locals 1
 
     .prologue
-    .line 539
+    .line 583
     const/high16 v0, 0x3f800000    # 1.0f
 
     return v0
@@ -553,7 +561,7 @@
     .locals 1
 
     .prologue
-    .line 918
+    .line 987
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatBase;->getBackgroundTintList(Landroid/view/View;)Landroid/content/res/ColorStateList;
 
     move-result-object v0
@@ -565,7 +573,7 @@
     .locals 1
 
     .prologue
-    .line 933
+    .line 1002
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatBase;->getBackgroundTintMode(Landroid/view/View;)Landroid/graphics/PorterDuff$Mode;
 
     move-result-object v0
@@ -577,8 +585,20 @@
     .locals 1
 
     .prologue
-    .line 848
+    .line 894
     const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public getDisplay(Landroid/view/View;)Landroid/view/Display;
+    .locals 1
+
+    .prologue
+    .line 1162
+    invoke-static {p1}, Landroid/support/v4/view/ViewCompatBase;->getDisplay(Landroid/view/View;)Landroid/view/Display;
+
+    move-result-object v0
 
     return-object v0
 .end method
@@ -587,7 +607,7 @@
     .locals 1
 
     .prologue
-    .line 830
+    .line 876
     const/4 v0, 0x0
 
     return v0
@@ -597,7 +617,7 @@
     .locals 1
 
     .prologue
-    .line 858
+    .line 921
     const/4 v0, 0x0
 
     return v0
@@ -607,7 +627,7 @@
     .locals 2
 
     .prologue
-    .line 521
+    .line 559
     const-wide/16 v0, 0xa
 
     return-wide v0
@@ -617,7 +637,7 @@
     .locals 1
 
     .prologue
-    .line 524
+    .line 563
     const/4 v0, 0x0
 
     return v0
@@ -627,7 +647,7 @@
     .locals 1
 
     .prologue
-    .line 548
+    .line 595
     const/4 v0, 0x0
 
     return v0
@@ -637,7 +657,7 @@
     .locals 1
 
     .prologue
-    .line 545
+    .line 591
     const/4 v0, 0x0
 
     return v0
@@ -647,17 +667,27 @@
     .locals 1
 
     .prologue
-    .line 559
+    .line 608
     const/4 v0, 0x0
 
     return v0
+.end method
+
+.method public getMatrix(Landroid/view/View;)Landroid/graphics/Matrix;
+    .locals 1
+
+    .prologue
+    .line 764
+    const/4 v0, 0x0
+
+    return-object v0
 .end method
 
 .method public getMeasuredHeightAndState(Landroid/view/View;)I
     .locals 1
 
     .prologue
-    .line 592
+    .line 633
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v0
@@ -669,7 +699,7 @@
     .locals 1
 
     .prologue
-    .line 597
+    .line 638
     const/4 v0, 0x0
 
     return v0
@@ -679,7 +709,7 @@
     .locals 1
 
     .prologue
-    .line 587
+    .line 628
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v0
@@ -691,7 +721,7 @@
     .locals 1
 
     .prologue
-    .line 728
+    .line 774
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatBase;->getMinimumHeight(Landroid/view/View;)I
 
     move-result v0
@@ -703,20 +733,10 @@
     .locals 1
 
     .prologue
-    .line 723
+    .line 769
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatBase;->getMinimumWidth(Landroid/view/View;)I
 
     move-result v0
-
-    return v0
-.end method
-
-.method public getOverScrollMode(Landroid/view/View;)I
-    .locals 1
-
-    .prologue
-    .line 478
-    const/4 v0, 0x2
 
     return v0
 .end method
@@ -725,7 +745,7 @@
     .locals 1
 
     .prologue
-    .line 617
+    .line 658
     invoke-virtual {p1}, Landroid/view/View;->getPaddingRight()I
 
     move-result v0
@@ -737,7 +757,7 @@
     .locals 1
 
     .prologue
-    .line 612
+    .line 653
     invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v0
@@ -749,7 +769,7 @@
     .locals 1
 
     .prologue
-    .line 569
+    .line 618
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -761,7 +781,7 @@
     .locals 1
 
     .prologue
-    .line 798
+    .line 844
     const/4 v0, 0x0
 
     return v0
@@ -771,7 +791,7 @@
     .locals 1
 
     .prologue
-    .line 803
+    .line 849
     const/4 v0, 0x0
 
     return v0
@@ -781,7 +801,7 @@
     .locals 1
 
     .prologue
-    .line 698
+    .line 739
     const/4 v0, 0x0
 
     return v0
@@ -791,7 +811,7 @@
     .locals 1
 
     .prologue
-    .line 703
+    .line 744
     const/4 v0, 0x0
 
     return v0
@@ -801,7 +821,7 @@
     .locals 1
 
     .prologue
-    .line 708
+    .line 749
     const/4 v0, 0x0
 
     return v0
@@ -811,7 +831,7 @@
     .locals 1
 
     .prologue
-    .line 713
+    .line 754
     const/4 v0, 0x0
 
     return v0
@@ -821,7 +841,7 @@
     .locals 1
 
     .prologue
-    .line 718
+    .line 759
     const/4 v0, 0x0
 
     return v0
@@ -831,7 +851,7 @@
     .locals 1
 
     .prologue
-    .line 1047
+    .line 1132
     const/4 v0, 0x0
 
     return v0
@@ -841,7 +861,7 @@
     .locals 1
 
     .prologue
-    .line 812
+    .line 858
     const/4 v0, 0x0
 
     return-object v0
@@ -851,7 +871,7 @@
     .locals 1
 
     .prologue
-    .line 678
+    .line 719
     const/4 v0, 0x0
 
     return v0
@@ -861,7 +881,7 @@
     .locals 1
 
     .prologue
-    .line 683
+    .line 724
     const/4 v0, 0x0
 
     return v0
@@ -871,7 +891,7 @@
     .locals 1
 
     .prologue
-    .line 839
+    .line 885
     const/4 v0, 0x0
 
     return v0
@@ -881,7 +901,7 @@
     .locals 1
 
     .prologue
-    .line 817
+    .line 863
     const/4 v0, 0x0
 
     return v0
@@ -891,8 +911,12 @@
     .locals 1
 
     .prologue
-    .line 688
-    const/4 v0, 0x0
+    .line 729
+    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
+
+    move-result v0
+
+    int-to-float v0, v0
 
     return v0
 .end method
@@ -901,8 +925,12 @@
     .locals 1
 
     .prologue
-    .line 693
-    const/4 v0, 0x0
+    .line 734
+    invoke-virtual {p1}, Landroid/view/View;->getTop()I
+
+    move-result v0
+
+    int-to-float v0, v0
 
     return v0
 .end method
@@ -911,7 +939,7 @@
     .locals 2
 
     .prologue
-    .line 1032
+    .line 1112
     invoke-virtual {p0, p1}, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->getTranslationZ(Landroid/view/View;)F
 
     move-result v0
@@ -929,7 +957,7 @@
     .locals 1
 
     .prologue
-    .line 489
+    .line 518
     const/4 v0, 0x0
 
     return v0
@@ -939,19 +967,19 @@
     .locals 1
 
     .prologue
-    .line 976
+    .line 1046
     instance-of v0, p1, Landroid/support/v4/view/NestedScrollingChild;
 
     if-eqz v0, :cond_0
 
-    .line 977
+    .line 1047
     check-cast p1, Landroid/support/v4/view/NestedScrollingChild;
 
     invoke-interface {p1}, Landroid/support/v4/view/NestedScrollingChild;->hasNestedScrollingParent()Z
 
     move-result v0
 
-    .line 979
+    .line 1049
     :goto_0
     return v0
 
@@ -965,7 +993,7 @@
     .locals 1
 
     .prologue
-    .line 1042
+    .line 1127
     const/4 v0, 0x0
 
     return v0
@@ -975,7 +1003,7 @@
     .locals 1
 
     .prologue
-    .line 661
+    .line 702
     const/4 v0, 0x1
 
     return v0
@@ -985,7 +1013,7 @@
     .locals 1
 
     .prologue
-    .line 503
+    .line 536
     const/4 v0, 0x0
 
     return v0
@@ -995,7 +1023,7 @@
     .locals 1
 
     .prologue
-    .line 1037
+    .line 1122
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatBase;->isAttachedToWindow(Landroid/view/View;)Z
 
     move-result v0
@@ -1007,8 +1035,18 @@
     .locals 1
 
     .prologue
-    .line 530
+    .line 571
     const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public isInLayout(Landroid/view/View;)Z
+    .locals 1
+
+    .prologue
+    .line 1092
+    const/4 v0, 0x0
 
     return v0
 .end method
@@ -1017,10 +1055,20 @@
     .locals 1
 
     .prologue
-    .line 1022
+    .line 1097
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatBase;->isLaidOut(Landroid/view/View;)Z
 
     move-result v0
+
+    return v0
+.end method
+
+.method public isLayoutDirectionResolved(Landroid/view/View;)Z
+    .locals 1
+
+    .prologue
+    .line 1102
+    const/4 v0, 0x0
 
     return v0
 .end method
@@ -1029,19 +1077,19 @@
     .locals 1
 
     .prologue
-    .line 910
+    .line 974
     instance-of v0, p1, Landroid/support/v4/view/NestedScrollingChild;
 
     if-eqz v0, :cond_0
 
-    .line 911
+    .line 975
     check-cast p1, Landroid/support/v4/view/NestedScrollingChild;
 
     invoke-interface {p1}, Landroid/support/v4/view/NestedScrollingChild;->isNestedScrollingEnabled()Z
 
     move-result v0
 
-    .line 913
+    .line 977
     :goto_0
     return v0
 
@@ -1051,41 +1099,11 @@
     goto :goto_0
 .end method
 
-.method public isOpaque(Landroid/view/View;)Z
-    .locals 3
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 574
-    invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    .line 575
-    if-eqz v1, :cond_0
-
-    .line 576
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getOpacity()I
-
-    move-result v1
-
-    const/4 v2, -0x1
-
-    if-ne v1, v2, :cond_0
-
-    const/4 v0, 0x1
-
-    .line 578
-    :cond_0
-    return v0
-.end method
-
 .method public isPaddingRelative(Landroid/view/View;)Z
     .locals 1
 
     .prologue
-    .line 899
+    .line 962
     const/4 v0, 0x0
 
     return v0
@@ -1095,7 +1113,7 @@
     .locals 0
 
     .prologue
-    .line 869
+    .line 932
     return-void
 .end method
 
@@ -1103,10 +1121,10 @@
     .locals 0
 
     .prologue
-    .line 1062
+    .line 1147
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatBase;->offsetLeftAndRight(Landroid/view/View;I)V
 
-    .line 1063
+    .line 1148
     return-void
 .end method
 
@@ -1114,10 +1132,10 @@
     .locals 0
 
     .prologue
-    .line 1067
+    .line 1152
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatBase;->offsetTopAndBottom(Landroid/view/View;I)V
 
-    .line 1068
+    .line 1153
     return-void
 .end method
 
@@ -1125,7 +1143,7 @@
     .locals 0
 
     .prologue
-    .line 879
+    .line 942
     return-object p2
 .end method
 
@@ -1133,7 +1151,7 @@
     .locals 0
 
     .prologue
-    .line 497
+    .line 528
     return-void
 .end method
 
@@ -1141,7 +1159,7 @@
     .locals 0
 
     .prologue
-    .line 500
+    .line 532
     return-void
 .end method
 
@@ -1149,7 +1167,7 @@
     .locals 0
 
     .prologue
-    .line 494
+    .line 524
     return-void
 .end method
 
@@ -1157,7 +1175,7 @@
     .locals 1
 
     .prologue
-    .line 533
+    .line 575
     const/4 v0, 0x0
 
     return v0
@@ -1167,10 +1185,10 @@
     .locals 0
 
     .prologue
-    .line 509
+    .line 544
     invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
-    .line 510
+    .line 545
     return-void
 .end method
 
@@ -1178,10 +1196,10 @@
     .locals 0
 
     .prologue
-    .line 512
+    .line 548
     invoke-virtual {p1, p2, p3, p4, p5}, Landroid/view/View;->invalidate(IIII)V
 
-    .line 513
+    .line 549
     return-void
 .end method
 
@@ -1189,14 +1207,14 @@
     .locals 2
 
     .prologue
-    .line 515
+    .line 552
     invoke-virtual {p0}, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->getFrameTime()J
 
     move-result-wide v0
 
     invoke-virtual {p1, p2, v0, v1}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 516
+    .line 553
     return-void
 .end method
 
@@ -1204,7 +1222,7 @@
     .locals 3
 
     .prologue
-    .line 518
+    .line 556
     invoke-virtual {p0}, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->getFrameTime()J
 
     move-result-wide v0
@@ -1213,7 +1231,7 @@
 
     invoke-virtual {p1, p2, v0, v1}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 519
+    .line 557
     return-void
 .end method
 
@@ -1221,7 +1239,7 @@
     .locals 0
 
     .prologue
-    .line 822
+    .line 868
     return-void
 .end method
 
@@ -1229,7 +1247,7 @@
     .locals 1
 
     .prologue
-    .line 582
+    .line 623
     invoke-static {p1, p2}, Landroid/view/View;->resolveSize(II)I
 
     move-result v0
@@ -1241,7 +1259,7 @@
     .locals 0
 
     .prologue
-    .line 485
+    .line 514
     return-void
 .end method
 
@@ -1249,7 +1267,7 @@
     .locals 0
 
     .prologue
-    .line 608
+    .line 649
     return-void
 .end method
 
@@ -1257,7 +1275,7 @@
     .locals 0
 
     .prologue
-    .line 895
+    .line 958
     return-void
 .end method
 
@@ -1265,7 +1283,18 @@
     .locals 0
 
     .prologue
-    .line 754
+    .line 800
+    return-void
+.end method
+
+.method public setBackground(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    .locals 0
+
+    .prologue
+    .line 982
+    invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 983
     return-void
 .end method
 
@@ -1273,10 +1302,10 @@
     .locals 0
 
     .prologue
-    .line 923
+    .line 992
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatBase;->setBackgroundTintList(Landroid/view/View;Landroid/content/res/ColorStateList;)V
 
-    .line 924
+    .line 993
     return-void
 .end method
 
@@ -1284,26 +1313,140 @@
     .locals 0
 
     .prologue
-    .line 928
+    .line 997
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatBase;->setBackgroundTintMode(Landroid/view/View;Landroid/graphics/PorterDuff$Mode;)V
 
-    .line 929
+    .line 998
     return-void
 .end method
 
 .method public setChildrenDrawingOrderEnabled(Landroid/view/ViewGroup;Z)V
-    .locals 0
+    .locals 6
 
     .prologue
-    .line 854
+    const/4 v5, 0x1
+
+    .line 899
+    sget-object v0, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->sChildrenDrawingOrderMethod:Ljava/lang/reflect/Method;
+
+    if-nez v0, :cond_0
+
+    .line 901
+    :try_start_0
+    const-class v0, Landroid/view/ViewGroup;
+
+    const-string v1, "setChildrenDrawingOrderEnabled"
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/Class;
+
+    const/4 v3, 0x0
+
+    sget-object v4, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+
+    aput-object v4, v2, v3
+
+    .line 902
+    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    sput-object v0, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->sChildrenDrawingOrderMethod:Ljava/lang/reflect/Method;
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 906
+    :goto_0
+    sget-object v0, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->sChildrenDrawingOrderMethod:Ljava/lang/reflect/Method;
+
+    invoke-virtual {v0, v5}, Ljava/lang/reflect/Method;->setAccessible(Z)V
+
+    .line 909
+    :cond_0
+    :try_start_1
+    sget-object v0, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;->sChildrenDrawingOrderMethod:Ljava/lang/reflect/Method;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    aput-object v3, v1, v2
+
+    invoke-virtual {v0, p1, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_1
+    .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_1 .. :try_end_1} :catch_3
+
+    .line 917
+    :goto_1
     return-void
+
+    .line 903
+    :catch_0
+    move-exception v0
+
+    .line 904
+    const-string v1, "ViewCompat"
+
+    const-string v2, "Unable to find childrenDrawingOrderEnabled"
+
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_0
+
+    .line 910
+    :catch_1
+    move-exception v0
+
+    .line 911
+    const-string v1, "ViewCompat"
+
+    const-string v2, "Unable to invoke childrenDrawingOrderEnabled"
+
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_1
+
+    .line 912
+    :catch_2
+    move-exception v0
+
+    .line 913
+    const-string v1, "ViewCompat"
+
+    const-string v2, "Unable to invoke childrenDrawingOrderEnabled"
+
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_1
+
+    .line 914
+    :catch_3
+    move-exception v0
+
+    .line 915
+    const-string v1, "ViewCompat"
+
+    const-string v2, "Unable to invoke childrenDrawingOrderEnabled"
+
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_1
 .end method
 
 .method public setClipBounds(Landroid/view/View;Landroid/graphics/Rect;)V
     .locals 0
 
     .prologue
-    .line 844
+    .line 890
     return-void
 .end method
 
@@ -1311,7 +1454,7 @@
     .locals 0
 
     .prologue
-    .line 826
+    .line 872
     return-void
 .end method
 
@@ -1319,7 +1462,7 @@
     .locals 0
 
     .prologue
-    .line 864
+    .line 927
     return-void
 .end method
 
@@ -1327,7 +1470,7 @@
     .locals 0
 
     .prologue
-    .line 507
+    .line 541
     return-void
 .end method
 
@@ -1335,7 +1478,7 @@
     .locals 0
 
     .prologue
-    .line 528
+    .line 568
     return-void
 .end method
 
@@ -1343,7 +1486,7 @@
     .locals 0
 
     .prologue
-    .line 552
+    .line 600
     return-void
 .end method
 
@@ -1351,7 +1494,7 @@
     .locals 0
 
     .prologue
-    .line 555
+    .line 604
     return-void
 .end method
 
@@ -1359,7 +1502,7 @@
     .locals 0
 
     .prologue
-    .line 543
+    .line 588
     return-void
 .end method
 
@@ -1367,7 +1510,7 @@
     .locals 0
 
     .prologue
-    .line 565
+    .line 614
     return-void
 .end method
 
@@ -1375,17 +1518,17 @@
     .locals 1
 
     .prologue
-    .line 903
+    .line 967
     instance-of v0, p1, Landroid/support/v4/view/NestedScrollingChild;
 
     if-eqz v0, :cond_0
 
-    .line 904
+    .line 968
     check-cast p1, Landroid/support/v4/view/NestedScrollingChild;
 
     invoke-interface {p1, p2}, Landroid/support/v4/view/NestedScrollingChild;->setNestedScrollingEnabled(Z)V
 
-    .line 906
+    .line 970
     :cond_0
     return-void
 .end method
@@ -1394,15 +1537,7 @@
     .locals 0
 
     .prologue
-    .line 875
-    return-void
-.end method
-
-.method public setOverScrollMode(Landroid/view/View;I)V
-    .locals 0
-
-    .prologue
-    .line 482
+    .line 938
     return-void
 .end method
 
@@ -1410,10 +1545,10 @@
     .locals 0
 
     .prologue
-    .line 622
+    .line 663
     invoke-virtual {p1, p2, p3, p4, p5}, Landroid/view/View;->setPadding(IIII)V
 
-    .line 623
+    .line 664
     return-void
 .end method
 
@@ -1421,7 +1556,7 @@
     .locals 0
 
     .prologue
-    .line 789
+    .line 835
     return-void
 .end method
 
@@ -1429,7 +1564,15 @@
     .locals 0
 
     .prologue
-    .line 794
+    .line 840
+    return-void
+.end method
+
+.method public setPointerIcon(Landroid/view/View;Landroid/support/v4/view/PointerIconCompat;)V
+    .locals 0
+
+    .prologue
+    .line 1158
     return-void
 .end method
 
@@ -1437,7 +1580,7 @@
     .locals 0
 
     .prologue
-    .line 739
+    .line 785
     return-void
 .end method
 
@@ -1445,7 +1588,7 @@
     .locals 0
 
     .prologue
-    .line 759
+    .line 805
     return-void
 .end method
 
@@ -1453,7 +1596,7 @@
     .locals 0
 
     .prologue
-    .line 764
+    .line 810
     return-void
 .end method
 
@@ -1461,7 +1604,7 @@
     .locals 0
 
     .prologue
-    .line 890
+    .line 953
     return-void
 .end method
 
@@ -1469,7 +1612,7 @@
     .locals 0
 
     .prologue
-    .line 769
+    .line 815
     return-void
 .end method
 
@@ -1477,7 +1620,7 @@
     .locals 0
 
     .prologue
-    .line 774
+    .line 820
     return-void
 .end method
 
@@ -1485,7 +1628,7 @@
     .locals 0
 
     .prologue
-    .line 1053
+    .line 1138
     return-void
 .end method
 
@@ -1493,7 +1636,7 @@
     .locals 0
 
     .prologue
-    .line 1058
+    .line 1143
     return-void
 .end method
 
@@ -1501,7 +1644,7 @@
     .locals 0
 
     .prologue
-    .line 808
+    .line 854
     return-void
 .end method
 
@@ -1509,7 +1652,7 @@
     .locals 0
 
     .prologue
-    .line 744
+    .line 790
     return-void
 .end method
 
@@ -1517,7 +1660,7 @@
     .locals 0
 
     .prologue
-    .line 749
+    .line 795
     return-void
 .end method
 
@@ -1525,7 +1668,7 @@
     .locals 0
 
     .prologue
-    .line 835
+    .line 881
     return-void
 .end method
 
@@ -1533,7 +1676,7 @@
     .locals 0
 
     .prologue
-    .line 779
+    .line 825
     return-void
 .end method
 
@@ -1541,7 +1684,15 @@
     .locals 0
 
     .prologue
-    .line 784
+    .line 830
+    return-void
+.end method
+
+.method public setZ(Landroid/view/View;F)V
+    .locals 0
+
+    .prologue
+    .line 1118
     return-void
 .end method
 
@@ -1549,19 +1700,19 @@
     .locals 1
 
     .prologue
-    .line 961
+    .line 1031
     instance-of v0, p1, Landroid/support/v4/view/NestedScrollingChild;
 
     if-eqz v0, :cond_0
 
-    .line 962
+    .line 1032
     check-cast p1, Landroid/support/v4/view/NestedScrollingChild;
 
     invoke-interface {p1, p2}, Landroid/support/v4/view/NestedScrollingChild;->startNestedScroll(I)Z
 
     move-result v0
 
-    .line 964
+    .line 1034
     :goto_0
     return v0
 
@@ -1575,17 +1726,17 @@
     .locals 1
 
     .prologue
-    .line 969
+    .line 1039
     instance-of v0, p1, Landroid/support/v4/view/NestedScrollingChild;
 
     if-eqz v0, :cond_0
 
-    .line 970
+    .line 1040
     check-cast p1, Landroid/support/v4/view/NestedScrollingChild;
 
     invoke-interface {p1}, Landroid/support/v4/view/NestedScrollingChild;->stopNestedScroll()V
 
-    .line 972
+    .line 1042
     :cond_0
     return-void
 .end method

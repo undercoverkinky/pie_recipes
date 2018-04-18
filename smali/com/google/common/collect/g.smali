@@ -24,7 +24,7 @@
     .locals 0
 
     .prologue
-    .line 53
+    .line 55
     invoke-direct {p0}, Lcom/google/common/collect/h;-><init>()V
 
     return-void
@@ -34,6 +34,9 @@
 # virtual methods
 .method public add(Ljava/lang/Object;)Z
     .locals 1
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TE;)Z"
@@ -41,8 +44,8 @@
     .end annotation
 
     .prologue
-    .line 84
-    invoke-virtual {p0}, Lcom/google/common/collect/g;->c()Ljava/util/Collection;
+    .line 89
+    invoke-virtual {p0}, Lcom/google/common/collect/g;->b()Ljava/util/Collection;
 
     move-result-object v0
 
@@ -55,6 +58,9 @@
 
 .method public addAll(Ljava/util/Collection;)Z
     .locals 1
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -64,8 +70,8 @@
     .end annotation
 
     .prologue
-    .line 99
-    invoke-virtual {p0}, Lcom/google/common/collect/g;->c()Ljava/util/Collection;
+    .line 106
+    invoke-virtual {p0}, Lcom/google/common/collect/g;->b()Ljava/util/Collection;
 
     move-result-object v0
 
@@ -76,19 +82,7 @@
     return v0
 .end method
 
-.method protected synthetic b()Ljava/lang/Object;
-    .locals 1
-
-    .prologue
-    .line 47
-    invoke-virtual {p0}, Lcom/google/common/collect/g;->c()Ljava/util/Collection;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method protected abstract c()Ljava/util/Collection;
+.method protected abstract b()Ljava/util/Collection;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -102,14 +96,14 @@
     .locals 1
 
     .prologue
-    .line 109
-    invoke-virtual {p0}, Lcom/google/common/collect/g;->c()Ljava/util/Collection;
+    .line 117
+    invoke-virtual {p0}, Lcom/google/common/collect/g;->b()Ljava/util/Collection;
 
     move-result-object v0
 
     invoke-interface {v0}, Ljava/util/Collection;->clear()V
 
-    .line 110
+    .line 118
     return-void
 .end method
 
@@ -117,8 +111,8 @@
     .locals 1
 
     .prologue
-    .line 79
-    invoke-virtual {p0}, Lcom/google/common/collect/g;->c()Ljava/util/Collection;
+    .line 83
+    invoke-virtual {p0}, Lcom/google/common/collect/g;->b()Ljava/util/Collection;
 
     move-result-object v0
 
@@ -140,8 +134,8 @@
     .end annotation
 
     .prologue
-    .line 94
-    invoke-virtual {p0}, Lcom/google/common/collect/g;->c()Ljava/util/Collection;
+    .line 100
+    invoke-virtual {p0}, Lcom/google/common/collect/g;->b()Ljava/util/Collection;
 
     move-result-object v0
 
@@ -152,12 +146,24 @@
     return v0
 .end method
 
+.method protected synthetic delegate()Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 50
+    invoke-virtual {p0}, Lcom/google/common/collect/g;->b()Ljava/util/Collection;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public isEmpty()Z
     .locals 1
 
     .prologue
-    .line 74
-    invoke-virtual {p0}, Lcom/google/common/collect/g;->c()Ljava/util/Collection;
+    .line 78
+    invoke-virtual {p0}, Lcom/google/common/collect/g;->b()Ljava/util/Collection;
 
     move-result-object v0
 
@@ -179,8 +185,8 @@
     .end annotation
 
     .prologue
-    .line 59
-    invoke-virtual {p0}, Lcom/google/common/collect/g;->c()Ljava/util/Collection;
+    .line 62
+    invoke-virtual {p0}, Lcom/google/common/collect/g;->b()Ljava/util/Collection;
 
     move-result-object v0
 
@@ -193,10 +199,12 @@
 
 .method public remove(Ljava/lang/Object;)Z
     .locals 1
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
 
     .prologue
-    .line 89
-    invoke-virtual {p0}, Lcom/google/common/collect/g;->c()Ljava/util/Collection;
+    .line 95
+    invoke-virtual {p0}, Lcom/google/common/collect/g;->b()Ljava/util/Collection;
 
     move-result-object v0
 
@@ -209,6 +217,9 @@
 
 .method public removeAll(Ljava/util/Collection;)Z
     .locals 1
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -218,8 +229,8 @@
     .end annotation
 
     .prologue
-    .line 69
-    invoke-virtual {p0}, Lcom/google/common/collect/g;->c()Ljava/util/Collection;
+    .line 73
+    invoke-virtual {p0}, Lcom/google/common/collect/g;->b()Ljava/util/Collection;
 
     move-result-object v0
 
@@ -232,6 +243,9 @@
 
 .method public retainAll(Ljava/util/Collection;)Z
     .locals 1
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -241,8 +255,8 @@
     .end annotation
 
     .prologue
-    .line 104
-    invoke-virtual {p0}, Lcom/google/common/collect/g;->c()Ljava/util/Collection;
+    .line 112
+    invoke-virtual {p0}, Lcom/google/common/collect/g;->b()Ljava/util/Collection;
 
     move-result-object v0
 
@@ -257,8 +271,8 @@
     .locals 1
 
     .prologue
-    .line 64
-    invoke-virtual {p0}, Lcom/google/common/collect/g;->c()Ljava/util/Collection;
+    .line 67
+    invoke-virtual {p0}, Lcom/google/common/collect/g;->b()Ljava/util/Collection;
 
     move-result-object v0
 
@@ -273,8 +287,8 @@
     .locals 1
 
     .prologue
-    .line 114
-    invoke-virtual {p0}, Lcom/google/common/collect/g;->c()Ljava/util/Collection;
+    .line 122
+    invoke-virtual {p0}, Lcom/google/common/collect/g;->b()Ljava/util/Collection;
 
     move-result-object v0
 
@@ -287,6 +301,9 @@
 
 .method public toArray([Ljava/lang/Object;)[Ljava/lang/Object;
     .locals 1
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -296,8 +313,8 @@
     .end annotation
 
     .prologue
-    .line 119
-    invoke-virtual {p0}, Lcom/google/common/collect/g;->c()Ljava/util/Collection;
+    .line 128
+    invoke-virtual {p0}, Lcom/google/common/collect/g;->b()Ljava/util/Collection;
 
     move-result-object v0
 

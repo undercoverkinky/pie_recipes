@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/google/common/base/m;
+.implements Lcom/google/common/base/Supplier;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/google/common/base/m",
+        "Lcom/google/common/base/Supplier",
         "<",
-        "Lcom/google/common/cache/e;",
+        "Lcom/google/common/cache/b;",
         ">;"
     }
 .end annotation
@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 38
+    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,15 +40,15 @@
 
 
 # virtual methods
-.method public final synthetic a()Ljava/lang/Object;
+.method public final synthetic get()Ljava/lang/Object;
     .locals 1
 
     .prologue
-    .line 1041
+    .line 1038
     new-instance v0, Lcom/google/common/cache/LongAdder;
 
     invoke-direct {v0}, Lcom/google/common/cache/LongAdder;-><init>()V
 
-    .line 38
+    .line 35
     return-object v0
 .end method

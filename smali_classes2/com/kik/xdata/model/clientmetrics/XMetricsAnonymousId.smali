@@ -74,7 +74,28 @@
 
 
 # virtual methods
-.method public final a()Lcom/dyuproject/protostuff/u;
+.method public final a(Ljava/lang/String;)Lcom/kik/xdata/model/clientmetrics/XMetricsAnonymousId;
+    .locals 0
+
+    .prologue
+    .line 52
+    iput-object p1, p0, Lcom/kik/xdata/model/clientmetrics/XMetricsAnonymousId;->anonymousId:Ljava/lang/String;
+
+    .line 53
+    return-object p0
+.end method
+
+.method public final a()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 47
+    iget-object v0, p0, Lcom/kik/xdata/model/clientmetrics/XMetricsAnonymousId;->anonymousId:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final cachedSchema()Lcom/dyuproject/protostuff/u;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -89,27 +110,6 @@
     .prologue
     .line 72
     sget-object v0, Lcom/kik/xdata/model/clientmetrics/XMetricsAnonymousId;->b:Lcom/dyuproject/protostuff/u;
-
-    return-object v0
-.end method
-
-.method public final a(Ljava/lang/String;)Lcom/kik/xdata/model/clientmetrics/XMetricsAnonymousId;
-    .locals 0
-
-    .prologue
-    .line 52
-    iput-object p1, p0, Lcom/kik/xdata/model/clientmetrics/XMetricsAnonymousId;->anonymousId:Ljava/lang/String;
-
-    .line 53
-    return-object p0
-.end method
-
-.method public final b()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 47
-    iget-object v0, p0, Lcom/kik/xdata/model/clientmetrics/XMetricsAnonymousId;->anonymousId:Ljava/lang/String;
 
     return-object v0
 .end method

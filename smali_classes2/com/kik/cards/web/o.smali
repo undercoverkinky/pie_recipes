@@ -2,251 +2,131 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lrx/h$b;
 
-# instance fields
-.field private a:Landroid/content/Context;
 
-.field private b:Z
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lrx/h$b",
+        "<",
+        "Lorg/json/JSONObject;",
+        "Lcom/kik/cards/web/plugin/g;",
+        ">;"
+    }
+.end annotation
 
-.field private c:Z
 
-.field private d:Landroid/content/IntentFilter;
-
-.field private e:Landroid/content/BroadcastReceiver;
-
-.field private final f:Lcom/kik/events/g;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/kik/events/g",
-            "<",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-.end field
+# static fields
+.field public static final a:Lcom/kik/cards/web/o;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method static constructor <clinit>()V
     .locals 1
 
     .prologue
-    .line 28
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 17
+    new-instance v0, Lcom/kik/cards/web/o;
 
-    .line 20
-    new-instance v0, Lcom/kik/events/g;
+    invoke-direct {v0}, Lcom/kik/cards/web/o;-><init>()V
 
-    invoke-direct {v0, p0}, Lcom/kik/events/g;-><init>(Ljava/lang/Object;)V
+    sput-object v0, Lcom/kik/cards/web/o;->a:Lcom/kik/cards/web/o;
 
-    iput-object v0, p0, Lcom/kik/cards/web/o;->f:Lcom/kik/events/g;
-
-    .line 29
-    iput-object p1, p0, Lcom/kik/cards/web/o;->a:Landroid/content/Context;
-
-    .line 30
     return-void
 .end method
 
-.method static synthetic a(Lcom/kik/cards/web/o;Z)V
+.method private constructor <init>()V
     .locals 0
 
     .prologue
-    .line 13
-    invoke-direct {p0, p1}, Lcom/kik/cards/web/o;->a(Z)V
+    .line 20
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 22
     return-void
 .end method
 
-.method private a(Z)V
-    .locals 2
+.method static synthetic a(Ljava/lang/Throwable;)Lrx/h;
+    .locals 3
 
     .prologue
-    .line 83
-    iget-boolean v0, p0, Lcom/kik/cards/web/o;->b:Z
+    .line 30
+    new-instance v0, Lorg/json/JSONObject;
 
-    if-ne p1, v0, :cond_0
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    .line 90
-    :goto_0
-    return-void
-
-    .line 87
-    :cond_0
-    iget-object v0, p0, Lcom/kik/cards/web/o;->f:Lcom/kik/events/g;
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    .line 33
+    :try_start_0
+    invoke-virtual {p0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/g;->a(Ljava/lang/Object;)V
+    .line 35
+    if-eqz v1, :cond_0
 
-    .line 89
-    iput-boolean p1, p0, Lcom/kik/cards/web/o;->b:Z
+    .line 36
+    const-string v2, "message"
 
-    goto :goto_0
-.end method
+    invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 44
+    :cond_0
+    new-instance v1, Lcom/kik/cards/web/plugin/g;
 
-# virtual methods
-.method public final a()Lcom/kik/events/c;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/kik/events/c",
-            "<",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
+    const/16 v2, 0x1f4
 
-    .prologue
-    .line 24
-    iget-object v0, p0, Lcom/kik/cards/web/o;->f:Lcom/kik/events/g;
+    invoke-direct {v1, v2, v0}, Lcom/kik/cards/web/plugin/g;-><init>(ILorg/json/JSONObject;)V
 
-    invoke-virtual {v0}, Lcom/kik/events/g;->a()Lcom/kik/events/c;
+    invoke-static {v1}, Lrx/h;->a(Ljava/lang/Object;)Lrx/h;
 
     move-result-object v0
 
     return-object v0
-.end method
 
-.method public final b()Z
-    .locals 1
+    .line 41
+    :catch_0
+    move-exception v0
 
-    .prologue
-    .line 34
-    iget-boolean v0, p0, Lcom/kik/cards/web/o;->b:Z
-
-    return v0
-.end method
-
-.method public final c()V
-    .locals 3
-
-    .prologue
-    .line 39
-    iget-object v0, p0, Lcom/kik/cards/web/o;->a:Landroid/content/Context;
-
-    if-nez v0, :cond_0
-
-    .line 71
-    :goto_0
-    return-void
-
-    .line 44
-    :cond_0
-    iget-object v0, p0, Lcom/kik/cards/web/o;->a:Landroid/content/Context;
-
-    const-string v1, "connectivity"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0}, Lrx/exceptions/a;->a(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object v0
 
-    check-cast v0, Landroid/net/ConnectivityManager;
-
-    .line 45
-    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
-
-    move-result-object v0
-
-    .line 46
-    if-eqz v0, :cond_1
-
-    .line 47
-    invoke-virtual {v0}, Landroid/net/NetworkInfo;->isAvailable()Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lcom/kik/cards/web/o;->b:Z
-
-    .line 50
-    :cond_1
-    iget-boolean v0, p0, Lcom/kik/cards/web/o;->b:Z
-
-    invoke-direct {p0, v0}, Lcom/kik/cards/web/o;->a(Z)V
-
-    .line 52
-    iget-object v0, p0, Lcom/kik/cards/web/o;->d:Landroid/content/IntentFilter;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/kik/cards/web/o;->e:Landroid/content/BroadcastReceiver;
-
-    if-nez v0, :cond_3
-
-    .line 53
-    :cond_2
-    new-instance v0, Landroid/content/IntentFilter;
-
-    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
-
-    iput-object v0, p0, Lcom/kik/cards/web/o;->d:Landroid/content/IntentFilter;
-
-    .line 54
-    iget-object v0, p0, Lcom/kik/cards/web/o;->d:Landroid/content/IntentFilter;
-
-    const-string v1, "android.net.conn.CONNECTIVITY_CHANGE"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    .line 55
-    new-instance v0, Lcom/kik/cards/web/o$1;
-
-    invoke-direct {v0, p0}, Lcom/kik/cards/web/o$1;-><init>(Lcom/kik/cards/web/o;)V
-
-    iput-object v0, p0, Lcom/kik/cards/web/o;->e:Landroid/content/BroadcastReceiver;
-
-    .line 68
-    :cond_3
-    iget-object v0, p0, Lcom/kik/cards/web/o;->a:Landroid/content/Context;
-
-    iget-object v1, p0, Lcom/kik/cards/web/o;->e:Landroid/content/BroadcastReceiver;
-
-    iget-object v2, p0, Lcom/kik/cards/web/o;->d:Landroid/content/IntentFilter;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
-
-    .line 70
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/kik/cards/web/o;->c:Z
-
-    goto :goto_0
+    throw v0
 .end method
 
-.method public final d()V
+
+# virtual methods
+.method public final synthetic call(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
     .prologue
-    .line 75
-    iget-boolean v0, p0, Lcom/kik/cards/web/o;->c:Z
+    .line 15
+    check-cast p1, Lrx/h;
 
-    if-eqz v0, :cond_0
+    .line 1027
+    invoke-static {}, Lcom/kik/cards/web/p;->a()Lrx/functions/g;
 
-    iget-object v0, p0, Lcom/kik/cards/web/o;->a:Landroid/content/Context;
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    .line 1028
+    invoke-virtual {p1, v0}, Lrx/h;->c(Lrx/functions/g;)Lrx/h;
 
-    iget-object v0, p0, Lcom/kik/cards/web/o;->e:Landroid/content/BroadcastReceiver;
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    invoke-static {}, Lcom/kik/cards/web/q;->a()Lrx/functions/g;
 
-    .line 76
-    iget-object v0, p0, Lcom/kik/cards/web/o;->a:Landroid/content/Context;
+    move-result-object v1
 
-    iget-object v1, p0, Lcom/kik/cards/web/o;->e:Landroid/content/BroadcastReceiver;
+    .line 1029
+    invoke-virtual {v0, v1}, Lrx/h;->e(Lrx/functions/g;)Lrx/h;
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    move-result-object v0
 
-    .line 77
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/kik/cards/web/o;->c:Z
-
-    .line 79
-    :cond_0
-    return-void
+    .line 15
+    return-object v0
 .end method

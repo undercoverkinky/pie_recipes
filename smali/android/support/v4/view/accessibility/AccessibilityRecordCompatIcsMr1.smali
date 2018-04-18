@@ -3,12 +3,18 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0xf
+.end annotation
+
+
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 24
+    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,7 +24,7 @@
     .locals 1
 
     .prologue
-    .line 27
+    .line 32
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->getMaxScrollX()I
@@ -32,7 +38,7 @@
     .locals 1
 
     .prologue
-    .line 31
+    .line 36
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityRecord;->getMaxScrollY()I
@@ -46,12 +52,12 @@
     .locals 0
 
     .prologue
-    .line 34
+    .line 39
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityRecord;->setMaxScrollX(I)V
 
-    .line 35
+    .line 40
     return-void
 .end method
 
@@ -59,11 +65,11 @@
     .locals 0
 
     .prologue
-    .line 38
+    .line 43
     check-cast p0, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityRecord;->setMaxScrollY(I)V
 
-    .line 39
+    .line 44
     return-void
 .end method

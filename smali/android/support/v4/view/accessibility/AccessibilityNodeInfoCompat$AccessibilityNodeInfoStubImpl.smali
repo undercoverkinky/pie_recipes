@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 616
+    .line 876
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
     .locals 0
 
     .prologue
-    .line 645
+    .line 905
     return-void
 .end method
 
@@ -42,7 +42,7 @@
     .locals 0
 
     .prologue
-    .line 650
+    .line 910
     return-void
 .end method
 
@@ -50,7 +50,7 @@
     .locals 0
 
     .prologue
-    .line 670
+    .line 930
     return-void
 .end method
 
@@ -58,7 +58,7 @@
     .locals 0
 
     .prologue
-    .line 675
+    .line 935
     return-void
 .end method
 
@@ -66,7 +66,7 @@
     .locals 1
 
     .prologue
-    .line 1133
+    .line 1409
     const/4 v0, 0x0
 
     return v0
@@ -88,7 +88,7 @@
     .end annotation
 
     .prologue
-    .line 689
+    .line 949
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
@@ -112,7 +112,7 @@
     .end annotation
 
     .prologue
-    .line 1142
+    .line 1418
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
@@ -124,7 +124,7 @@
     .locals 1
 
     .prologue
-    .line 929
+    .line 1189
     const/4 v0, 0x0
 
     return-object v0
@@ -134,7 +134,7 @@
     .locals 1
 
     .prologue
-    .line 934
+    .line 1194
     const/4 v0, 0x0
 
     return-object v0
@@ -144,7 +144,7 @@
     .locals 1
 
     .prologue
-    .line 659
+    .line 919
     const/4 v0, 0x0
 
     return v0
@@ -154,7 +154,17 @@
     .locals 1
 
     .prologue
-    .line 664
+    .line 924
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public getActionContextClick()Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 1551
     const/4 v0, 0x0
 
     return-object v0
@@ -175,7 +185,77 @@
     .end annotation
 
     .prologue
-    .line 1001
+    .line 1261
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public getActionScrollDown()Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 1536
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public getActionScrollLeft()Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 1541
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public getActionScrollRight()Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 1546
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public getActionScrollToPosition()Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 1506
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public getActionScrollUp()Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 1531
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public getActionSetProgress()Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 1511
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public getActionShowOnScreen()Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 1526
     const/4 v0, 0x0
 
     return-object v0
@@ -185,7 +265,7 @@
     .locals 1
 
     .prologue
-    .line 694
+    .line 954
     const/4 v0, 0x0
 
     return v0
@@ -195,7 +275,7 @@
     .locals 0
 
     .prologue
-    .line 700
+    .line 960
     return-void
 .end method
 
@@ -203,7 +283,7 @@
     .locals 0
 
     .prologue
-    .line 705
+    .line 965
     return-void
 .end method
 
@@ -211,7 +291,7 @@
     .locals 1
 
     .prologue
-    .line 709
+    .line 969
     const/4 v0, 0x0
 
     return-object v0
@@ -221,7 +301,7 @@
     .locals 1
 
     .prologue
-    .line 714
+    .line 974
     const/4 v0, 0x0
 
     return v0
@@ -231,7 +311,7 @@
     .locals 1
 
     .prologue
-    .line 719
+    .line 979
     const/4 v0, 0x0
 
     return-object v0
@@ -241,7 +321,7 @@
     .locals 1
 
     .prologue
-    .line 974
+    .line 1234
     const/4 v0, 0x0
 
     return-object v0
@@ -251,7 +331,7 @@
     .locals 1
 
     .prologue
-    .line 1012
+    .line 1277
     const/4 v0, 0x0
 
     return v0
@@ -261,7 +341,17 @@
     .locals 1
 
     .prologue
-    .line 1017
+    .line 1282
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getCollectionInfoSelectionMode(Ljava/lang/Object;)I
+    .locals 1
+
+    .prologue
+    .line 1556
     const/4 v0, 0x0
 
     return v0
@@ -271,7 +361,7 @@
     .locals 1
 
     .prologue
-    .line 1033
+    .line 1304
     const/4 v0, 0x0
 
     return v0
@@ -281,7 +371,7 @@
     .locals 1
 
     .prologue
-    .line 1038
+    .line 1309
     const/4 v0, 0x0
 
     return v0
@@ -291,7 +381,7 @@
     .locals 1
 
     .prologue
-    .line 983
+    .line 1243
     const/4 v0, 0x0
 
     return-object v0
@@ -301,7 +391,7 @@
     .locals 1
 
     .prologue
-    .line 1043
+    .line 1314
     const/4 v0, 0x0
 
     return v0
@@ -311,7 +401,7 @@
     .locals 1
 
     .prologue
-    .line 1048
+    .line 1319
     const/4 v0, 0x0
 
     return v0
@@ -321,17 +411,27 @@
     .locals 1
 
     .prologue
-    .line 724
+    .line 984
     const/4 v0, 0x0
 
     return-object v0
+.end method
+
+.method public getDrawingOrder(Ljava/lang/Object;)I
+    .locals 1
+
+    .prologue
+    .line 1561
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public getError(Ljava/lang/Object;)Ljava/lang/CharSequence;
     .locals 1
 
     .prologue
-    .line 1102
+    .line 1378
     const/4 v0, 0x0
 
     return-object v0
@@ -341,7 +441,7 @@
     .locals 1
 
     .prologue
-    .line 1147
+    .line 1423
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
@@ -353,7 +453,7 @@
     .locals 1
 
     .prologue
-    .line 1152
+    .line 1428
     const/4 v0, 0x0
 
     return v0
@@ -363,7 +463,7 @@
     .locals 1
 
     .prologue
-    .line 1115
+    .line 1391
     const/4 v0, 0x0
 
     return-object v0
@@ -373,7 +473,7 @@
     .locals 1
 
     .prologue
-    .line 1128
+    .line 1404
     const/4 v0, 0x0
 
     return-object v0
@@ -383,7 +483,7 @@
     .locals 1
 
     .prologue
-    .line 964
+    .line 1224
     const/4 v0, 0x0
 
     return v0
@@ -393,7 +493,7 @@
     .locals 1
 
     .prologue
-    .line 1165
+    .line 1441
     const/4 v0, -0x1
 
     return v0
@@ -403,7 +503,7 @@
     .locals 1
 
     .prologue
-    .line 824
+    .line 1084
     const/4 v0, 0x0
 
     return v0
@@ -413,7 +513,7 @@
     .locals 1
 
     .prologue
-    .line 729
+    .line 989
     const/4 v0, 0x0
 
     return-object v0
@@ -423,7 +523,7 @@
     .locals 1
 
     .prologue
-    .line 734
+    .line 994
     const/4 v0, 0x0
 
     return-object v0
@@ -433,7 +533,17 @@
     .locals 1
 
     .prologue
-    .line 992
+    .line 1252
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public getRoleDescription(Ljava/lang/Object;)Ljava/lang/CharSequence;
+    .locals 1
+
+    .prologue
+    .line 1497
     const/4 v0, 0x0
 
     return-object v0
@@ -443,7 +553,7 @@
     .locals 1
 
     .prologue
-    .line 739
+    .line 999
     const/4 v0, 0x0
 
     return-object v0
@@ -453,7 +563,7 @@
     .locals 1
 
     .prologue
-    .line 1179
+    .line 1455
     const/4 v0, -0x1
 
     return v0
@@ -463,7 +573,7 @@
     .locals 1
 
     .prologue
-    .line 1174
+    .line 1450
     const/4 v0, -0x1
 
     return v0
@@ -473,7 +583,7 @@
     .locals 1
 
     .prologue
-    .line 1076
+    .line 1352
     const/4 v0, 0x0
 
     return-object v0
@@ -483,7 +593,7 @@
     .locals 1
 
     .prologue
-    .line 1063
+    .line 1339
     const/4 v0, 0x0
 
     return-object v0
@@ -493,7 +603,7 @@
     .locals 1
 
     .prologue
-    .line 954
+    .line 1214
     const/4 v0, 0x0
 
     return-object v0
@@ -503,7 +613,7 @@
     .locals 1
 
     .prologue
-    .line 1184
+    .line 1460
     const/4 v0, 0x0
 
     return-object v0
@@ -513,7 +623,7 @@
     .locals 1
 
     .prologue
-    .line 744
+    .line 1004
     const/4 v0, 0x0
 
     return v0
@@ -523,7 +633,7 @@
     .locals 1
 
     .prologue
-    .line 784
+    .line 1044
     const/4 v0, 0x0
 
     return v0
@@ -533,7 +643,7 @@
     .locals 1
 
     .prologue
-    .line 749
+    .line 1009
     const/4 v0, 0x0
 
     return v0
@@ -543,7 +653,7 @@
     .locals 1
 
     .prologue
-    .line 754
+    .line 1014
     const/4 v0, 0x0
 
     return v0
@@ -553,7 +663,7 @@
     .locals 1
 
     .prologue
-    .line 759
+    .line 1019
     const/4 v0, 0x0
 
     return v0
@@ -563,7 +673,7 @@
     .locals 1
 
     .prologue
-    .line 1022
+    .line 1287
     const/4 v0, 0x0
 
     return v0
@@ -573,7 +683,7 @@
     .locals 1
 
     .prologue
-    .line 1053
+    .line 1324
     const/4 v0, 0x0
 
     return v0
@@ -583,7 +693,7 @@
     .locals 1
 
     .prologue
-    .line 1058
+    .line 1329
     const/4 v0, 0x0
 
     return v0
@@ -593,7 +703,17 @@
     .locals 1
 
     .prologue
-    .line 1093
+    .line 1369
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public isContextClickable(Ljava/lang/Object;)Z
+    .locals 1
+
+    .prologue
+    .line 1516
     const/4 v0, 0x0
 
     return v0
@@ -603,7 +723,7 @@
     .locals 1
 
     .prologue
-    .line 1189
+    .line 1465
     const/4 v0, 0x0
 
     return v0
@@ -613,7 +733,7 @@
     .locals 1
 
     .prologue
-    .line 1198
+    .line 1474
     const/4 v0, 0x0
 
     return v0
@@ -623,7 +743,7 @@
     .locals 1
 
     .prologue
-    .line 764
+    .line 1024
     const/4 v0, 0x0
 
     return v0
@@ -633,7 +753,7 @@
     .locals 1
 
     .prologue
-    .line 769
+    .line 1029
     const/4 v0, 0x0
 
     return v0
@@ -643,8 +763,18 @@
     .locals 1
 
     .prologue
-    .line 774
+    .line 1034
     const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public isImportantForAccessibility(Ljava/lang/Object;)Z
+    .locals 1
+
+    .prologue
+    .line 1570
+    const/4 v0, 0x1
 
     return v0
 .end method
@@ -653,7 +783,7 @@
     .locals 1
 
     .prologue
-    .line 789
+    .line 1049
     const/4 v0, 0x0
 
     return v0
@@ -663,7 +793,7 @@
     .locals 1
 
     .prologue
-    .line 1207
+    .line 1483
     const/4 v0, 0x0
 
     return v0
@@ -673,7 +803,7 @@
     .locals 1
 
     .prologue
-    .line 794
+    .line 1054
     const/4 v0, 0x0
 
     return v0
@@ -683,7 +813,7 @@
     .locals 1
 
     .prologue
-    .line 799
+    .line 1059
     const/4 v0, 0x0
 
     return v0
@@ -693,7 +823,7 @@
     .locals 1
 
     .prologue
-    .line 804
+    .line 1064
     const/4 v0, 0x0
 
     return v0
@@ -703,7 +833,7 @@
     .locals 1
 
     .prologue
-    .line 779
+    .line 1039
     const/4 v0, 0x0
 
     return v0
@@ -713,7 +843,7 @@
     .locals 1
 
     .prologue
-    .line 619
+    .line 879
     const/4 v0, 0x0
 
     return-object v0
@@ -723,7 +853,7 @@
     .locals 1
 
     .prologue
-    .line 624
+    .line 884
     const/4 v0, 0x0
 
     return-object v0
@@ -733,7 +863,7 @@
     .locals 1
 
     .prologue
-    .line 629
+    .line 889
     const/4 v0, 0x0
 
     return-object v0
@@ -743,7 +873,7 @@
     .locals 1
 
     .prologue
-    .line 634
+    .line 894
     const/4 v0, 0x0
 
     return-object v0
@@ -753,7 +883,17 @@
     .locals 1
 
     .prologue
-    .line 639
+    .line 899
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public obtainCollectionInfo(IIZ)Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 1272
     const/4 v0, 0x0
 
     return-object v0
@@ -763,7 +903,17 @@
     .locals 1
 
     .prologue
-    .line 1007
+    .line 1267
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public obtainCollectionItemInfo(IIIIZ)Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 1299
     const/4 v0, 0x0
 
     return-object v0
@@ -773,7 +923,17 @@
     .locals 1
 
     .prologue
-    .line 1028
+    .line 1293
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public obtainRangeInfo(IFFF)Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 1334
     const/4 v0, 0x0
 
     return-object v0
@@ -783,7 +943,7 @@
     .locals 1
 
     .prologue
-    .line 809
+    .line 1069
     const/4 v0, 0x0
 
     return v0
@@ -793,7 +953,7 @@
     .locals 1
 
     .prologue
-    .line 814
+    .line 1074
     const/4 v0, 0x0
 
     return v0
@@ -803,7 +963,7 @@
     .locals 0
 
     .prologue
-    .line 945
+    .line 1205
     return-void
 .end method
 
@@ -811,7 +971,7 @@
     .locals 1
 
     .prologue
-    .line 1216
+    .line 1492
     const/4 v0, 0x0
 
     return v0
@@ -821,7 +981,7 @@
     .locals 1
 
     .prologue
-    .line 654
+    .line 914
     const/4 v0, 0x0
 
     return v0
@@ -831,7 +991,7 @@
     .locals 1
 
     .prologue
-    .line 679
+    .line 939
     const/4 v0, 0x0
 
     return v0
@@ -841,7 +1001,7 @@
     .locals 1
 
     .prologue
-    .line 684
+    .line 944
     const/4 v0, 0x0
 
     return v0
@@ -851,7 +1011,7 @@
     .locals 0
 
     .prologue
-    .line 885
+    .line 1145
     return-void
 .end method
 
@@ -859,7 +1019,7 @@
     .locals 0
 
     .prologue
-    .line 830
+    .line 1090
     return-void
 .end method
 
@@ -867,7 +1027,7 @@
     .locals 0
 
     .prologue
-    .line 835
+    .line 1095
     return-void
 .end method
 
@@ -875,7 +1035,7 @@
     .locals 0
 
     .prologue
-    .line 1138
+    .line 1414
     return-void
 .end method
 
@@ -883,7 +1043,7 @@
     .locals 0
 
     .prologue
-    .line 840
+    .line 1100
     return-void
 .end method
 
@@ -891,7 +1051,7 @@
     .locals 0
 
     .prologue
-    .line 845
+    .line 1105
     return-void
 .end method
 
@@ -899,7 +1059,7 @@
     .locals 0
 
     .prologue
-    .line 850
+    .line 1110
     return-void
 .end method
 
@@ -907,7 +1067,7 @@
     .locals 0
 
     .prologue
-    .line 855
+    .line 1115
     return-void
 .end method
 
@@ -915,7 +1075,7 @@
     .locals 0
 
     .prologue
-    .line 979
+    .line 1239
     return-void
 .end method
 
@@ -923,7 +1083,7 @@
     .locals 0
 
     .prologue
-    .line 988
+    .line 1248
     return-void
 .end method
 
@@ -931,7 +1091,7 @@
     .locals 0
 
     .prologue
-    .line 860
+    .line 1120
     return-void
 .end method
 
@@ -939,7 +1099,15 @@
     .locals 0
 
     .prologue
-    .line 1089
+    .line 1365
+    return-void
+.end method
+
+.method public setContextClickable(Ljava/lang/Object;Z)V
+    .locals 0
+
+    .prologue
+    .line 1522
     return-void
 .end method
 
@@ -947,7 +1115,15 @@
     .locals 0
 
     .prologue
-    .line 1194
+    .line 1470
+    return-void
+.end method
+
+.method public setDrawingOrder(Ljava/lang/Object;I)V
+    .locals 0
+
+    .prologue
+    .line 1566
     return-void
 .end method
 
@@ -955,7 +1131,7 @@
     .locals 0
 
     .prologue
-    .line 1203
+    .line 1479
     return-void
 .end method
 
@@ -963,7 +1139,7 @@
     .locals 0
 
     .prologue
-    .line 865
+    .line 1125
     return-void
 .end method
 
@@ -971,7 +1147,7 @@
     .locals 0
 
     .prologue
-    .line 1098
+    .line 1374
     return-void
 .end method
 
@@ -979,7 +1155,7 @@
     .locals 0
 
     .prologue
-    .line 870
+    .line 1130
     return-void
 .end method
 
@@ -987,7 +1163,15 @@
     .locals 0
 
     .prologue
-    .line 875
+    .line 1135
+    return-void
+.end method
+
+.method public setImportantForAccessibility(Ljava/lang/Object;Z)V
+    .locals 0
+
+    .prologue
+    .line 1575
     return-void
 .end method
 
@@ -995,7 +1179,7 @@
     .locals 0
 
     .prologue
-    .line 1157
+    .line 1433
     return-void
 .end method
 
@@ -1003,7 +1187,7 @@
     .locals 0
 
     .prologue
-    .line 1107
+    .line 1383
     return-void
 .end method
 
@@ -1011,7 +1195,7 @@
     .locals 0
 
     .prologue
-    .line 1111
+    .line 1387
     return-void
 .end method
 
@@ -1019,7 +1203,7 @@
     .locals 0
 
     .prologue
-    .line 1120
+    .line 1396
     return-void
 .end method
 
@@ -1027,7 +1211,7 @@
     .locals 0
 
     .prologue
-    .line 1124
+    .line 1400
     return-void
 .end method
 
@@ -1035,7 +1219,7 @@
     .locals 0
 
     .prologue
-    .line 970
+    .line 1230
     return-void
 .end method
 
@@ -1043,7 +1227,7 @@
     .locals 0
 
     .prologue
-    .line 890
+    .line 1150
     return-void
 .end method
 
@@ -1051,7 +1235,7 @@
     .locals 0
 
     .prologue
-    .line 1161
+    .line 1437
     return-void
 .end method
 
@@ -1059,7 +1243,7 @@
     .locals 0
 
     .prologue
-    .line 820
+    .line 1080
     return-void
 .end method
 
@@ -1067,7 +1251,7 @@
     .locals 0
 
     .prologue
-    .line 1212
+    .line 1488
     return-void
 .end method
 
@@ -1075,7 +1259,7 @@
     .locals 0
 
     .prologue
-    .line 895
+    .line 1155
     return-void
 .end method
 
@@ -1083,7 +1267,7 @@
     .locals 0
 
     .prologue
-    .line 900
+    .line 1160
     return-void
 .end method
 
@@ -1091,7 +1275,7 @@
     .locals 0
 
     .prologue
-    .line 950
+    .line 1210
     return-void
 .end method
 
@@ -1099,7 +1283,7 @@
     .locals 0
 
     .prologue
-    .line 905
+    .line 1165
     return-void
 .end method
 
@@ -1107,7 +1291,15 @@
     .locals 0
 
     .prologue
-    .line 997
+    .line 1257
+    return-void
+.end method
+
+.method public setRoleDescription(Ljava/lang/Object;Ljava/lang/CharSequence;)V
+    .locals 0
+
+    .prologue
+    .line 1502
     return-void
 .end method
 
@@ -1115,7 +1307,7 @@
     .locals 0
 
     .prologue
-    .line 910
+    .line 1170
     return-void
 .end method
 
@@ -1123,7 +1315,7 @@
     .locals 0
 
     .prologue
-    .line 915
+    .line 1175
     return-void
 .end method
 
@@ -1131,7 +1323,7 @@
     .locals 0
 
     .prologue
-    .line 920
+    .line 1180
     return-void
 .end method
 
@@ -1139,7 +1331,7 @@
     .locals 0
 
     .prologue
-    .line 925
+    .line 1185
     return-void
 .end method
 
@@ -1147,7 +1339,7 @@
     .locals 0
 
     .prologue
-    .line 940
+    .line 1200
     return-void
 .end method
 
@@ -1155,7 +1347,7 @@
     .locals 0
 
     .prologue
-    .line 1170
+    .line 1446
     return-void
 .end method
 
@@ -1163,7 +1355,7 @@
     .locals 0
 
     .prologue
-    .line 1081
+    .line 1357
     return-void
 .end method
 
@@ -1171,7 +1363,7 @@
     .locals 0
 
     .prologue
-    .line 1085
+    .line 1361
     return-void
 .end method
 
@@ -1179,7 +1371,7 @@
     .locals 0
 
     .prologue
-    .line 1068
+    .line 1344
     return-void
 .end method
 
@@ -1187,7 +1379,7 @@
     .locals 0
 
     .prologue
-    .line 1072
+    .line 1348
     return-void
 .end method
 
@@ -1195,7 +1387,7 @@
     .locals 0
 
     .prologue
-    .line 960
+    .line 1220
     return-void
 .end method
 
@@ -1203,6 +1395,6 @@
     .locals 0
 
     .prologue
-    .line 880
+    .line 1140
     return-void
 .end method

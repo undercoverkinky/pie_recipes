@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/kik/cards/web/k;
+.implements Lcom/kik/cards/web/j;
 
 
 # annotations
@@ -21,7 +21,7 @@
 
 
 # instance fields
-.field private final a:Lcom/kik/cards/web/plugin/g;
+.field private final a:Lcom/kik/cards/web/plugin/f;
 
 .field private final b:Landroid/webkit/WebView;
 
@@ -75,7 +75,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Landroid/webkit/WebView;Lcom/kik/cards/web/plugin/g;Lcom/kik/cards/web/h;Lcom/kik/cards/web/m;)V
+.method private constructor <init>(Landroid/webkit/WebView;Lcom/kik/cards/web/plugin/f;Lcom/kik/cards/web/g;Lcom/kik/cards/web/l;)V
     .locals 2
 
     .prologue
@@ -103,7 +103,7 @@
     iput-object v0, p0, Lcom/kik/cards/web/plugin/JavascriptGlue;->j:Ljava/util/List;
 
     .line 52
-    iput-object p2, p0, Lcom/kik/cards/web/plugin/JavascriptGlue;->a:Lcom/kik/cards/web/plugin/g;
+    iput-object p2, p0, Lcom/kik/cards/web/plugin/JavascriptGlue;->a:Lcom/kik/cards/web/plugin/f;
 
     .line 53
     iput-object p1, p0, Lcom/kik/cards/web/plugin/JavascriptGlue;->b:Landroid/webkit/WebView;
@@ -127,7 +127,7 @@
     .line 56
     new-instance v0, Lcom/kik/cards/web/plugin/JavascriptGlue$b;
 
-    invoke-direct {v0, p0, p3, p4}, Lcom/kik/cards/web/plugin/JavascriptGlue$b;-><init>(Lcom/kik/cards/web/plugin/JavascriptGlue;Lcom/kik/cards/web/h;Lcom/kik/cards/web/m;)V
+    invoke-direct {v0, p0, p3, p4}, Lcom/kik/cards/web/plugin/JavascriptGlue$b;-><init>(Lcom/kik/cards/web/plugin/JavascriptGlue;Lcom/kik/cards/web/g;Lcom/kik/cards/web/l;)V
 
     iput-object v0, p0, Lcom/kik/cards/web/plugin/JavascriptGlue;->e:Lcom/kik/cards/web/plugin/JavascriptGlue$b;
 
@@ -135,17 +135,17 @@
     return-void
 .end method
 
-.method public static a(Landroid/webkit/WebView;Lcom/kik/cards/web/plugin/g;Lcom/kik/cards/web/h;Lcom/kik/cards/web/m;)Lcom/kik/cards/web/plugin/JavascriptGlue;
+.method public static a(Landroid/webkit/WebView;Lcom/kik/cards/web/plugin/f;Lcom/kik/cards/web/g;Lcom/kik/cards/web/l;)Lcom/kik/cards/web/plugin/JavascriptGlue;
     .locals 2
 
     .prologue
     .line 61
     new-instance v0, Lcom/kik/cards/web/plugin/JavascriptGlue;
 
-    invoke-direct {v0, p0, p1, p2, p3}, Lcom/kik/cards/web/plugin/JavascriptGlue;-><init>(Landroid/webkit/WebView;Lcom/kik/cards/web/plugin/g;Lcom/kik/cards/web/h;Lcom/kik/cards/web/m;)V
+    invoke-direct {v0, p0, p1, p2, p3}, Lcom/kik/cards/web/plugin/JavascriptGlue;-><init>(Landroid/webkit/WebView;Lcom/kik/cards/web/plugin/f;Lcom/kik/cards/web/g;Lcom/kik/cards/web/l;)V
 
     .line 62
-    invoke-virtual {p1, v0}, Lcom/kik/cards/web/plugin/g;->a(Lcom/kik/cards/web/k;)V
+    invoke-virtual {p1, v0}, Lcom/kik/cards/web/plugin/f;->a(Lcom/kik/cards/web/j;)V
 
     .line 63
     iget-object v1, v0, Lcom/kik/cards/web/plugin/JavascriptGlue;->e:Lcom/kik/cards/web/plugin/JavascriptGlue$b;
@@ -236,12 +236,12 @@
     return v0
 .end method
 
-.method static synthetic f(Lcom/kik/cards/web/plugin/JavascriptGlue;)Lcom/kik/cards/web/plugin/g;
+.method static synthetic f(Lcom/kik/cards/web/plugin/JavascriptGlue;)Lcom/kik/cards/web/plugin/f;
     .locals 1
 
     .prologue
     .line 31
-    iget-object v0, p0, Lcom/kik/cards/web/plugin/JavascriptGlue;->a:Lcom/kik/cards/web/plugin/g;
+    iget-object v0, p0, Lcom/kik/cards/web/plugin/JavascriptGlue;->a:Lcom/kik/cards/web/plugin/f;
 
     return-object v0
 .end method
@@ -294,7 +294,7 @@
 
 
 # virtual methods
-.method public final a()Lcom/kik/cards/web/n;
+.method public final a()Lcom/kik/cards/web/m;
     .locals 1
 
     .prologue
@@ -472,11 +472,11 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 78
-    iget-object v0, p0, Lcom/kik/cards/web/plugin/JavascriptGlue;->a:Lcom/kik/cards/web/plugin/g;
+    iget-object v0, p0, Lcom/kik/cards/web/plugin/JavascriptGlue;->a:Lcom/kik/cards/web/plugin/f;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/kik/cards/web/plugin/g;->a(Lcom/kik/cards/web/k;)V
+    invoke-virtual {v0, v1}, Lcom/kik/cards/web/plugin/f;->a(Lcom/kik/cards/web/j;)V
 
     .line 79
     const/4 v0, 0x1

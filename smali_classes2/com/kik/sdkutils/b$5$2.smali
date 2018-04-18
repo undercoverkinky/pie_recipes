@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 507
+    .line 593
     iput-object p1, p0, Lcom/kik/sdkutils/b$5$2;->a:Lcom/kik/sdkutils/b$5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,13 +40,13 @@
     .locals 1
 
     .prologue
-    .line 511
+    .line 597
     iget-object v0, p0, Lcom/kik/sdkutils/b$5$2;->a:Lcom/kik/sdkutils/b$5;
 
-    iget-object v0, v0, Lcom/kik/sdkutils/b$5;->b:Lcom/kik/events/l;
+    iget-object v0, v0, Lcom/kik/sdkutils/b$5;->b:Lcom/kik/events/k;
 
-    invoke-virtual {v0}, Lcom/kik/events/l;->c()V
+    invoke-virtual {v0}, Lcom/kik/events/k;->c()V
 
-    .line 512
+    .line 598
     return-void
 .end method

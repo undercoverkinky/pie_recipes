@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/core/interfaces/aa;
+.implements Lkik/core/interfaces/z;
 
 
 # instance fields
@@ -138,7 +138,7 @@
     move-result-object v0
 
     .line 24
-    invoke-static {v0}, Lkik/core/util/w;->a([B)Ljava/lang/String;
+    invoke-static {v0}, Lkik/core/util/u;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
@@ -203,7 +203,7 @@
     move-exception v0
 
     :try_start_3
-    invoke-static {v0}, Lcom/kik/util/bh;->a(Ljava/security/NoSuchAlgorithmException;)V
+    invoke-static {}, Lcom/kik/util/ck;->a()V
 
     goto :goto_0
 
@@ -217,14 +217,8 @@
 
     throw v0
 
-    .line 1095
     :catch_2
     move-exception v0
-
-    :try_start_4
-    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     goto :goto_0
 .end method

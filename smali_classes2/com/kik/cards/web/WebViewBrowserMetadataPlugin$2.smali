@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/cards/web/WebViewBrowserMetadataPlugin;->a()Lcom/kik/events/Promise;
+    value = Lcom/kik/cards/web/WebViewBrowserMetadataPlugin;->getMetadata()Lcom/kik/events/Promise;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -23,7 +23,7 @@
         "<",
         "Lcom/kik/events/Promise",
         "<",
-        "Lcom/kik/cards/web/i$a;",
+        "Lcom/kik/cards/web/h$a;",
         ">;>;"
     }
 .end annotation
@@ -69,12 +69,12 @@
 
     .line 120
     .line 1124
-    new-instance v0, Lcom/kik/cards/web/i$a;
+    new-instance v0, Lcom/kik/cards/web/h$a;
 
     iget-object v1, p0, Lcom/kik/cards/web/WebViewBrowserMetadataPlugin$2;->c:Lcom/kik/cards/web/WebViewBrowserMetadataPlugin;
 
     .line 1125
-    invoke-static {v1}, Lcom/kik/cards/web/WebViewBrowserMetadataPlugin;->b(Lcom/kik/cards/web/WebViewBrowserMetadataPlugin;)Landroid/webkit/WebView;
+    invoke-static {v1}, Lcom/kik/cards/web/WebViewBrowserMetadataPlugin;->access$100(Lcom/kik/cards/web/WebViewBrowserMetadataPlugin;)Landroid/webkit/WebView;
 
     move-result-object v1
 
@@ -85,7 +85,7 @@
     iget-object v2, p0, Lcom/kik/cards/web/WebViewBrowserMetadataPlugin$2;->c:Lcom/kik/cards/web/WebViewBrowserMetadataPlugin;
 
     .line 1126
-    invoke-static {v2}, Lcom/kik/cards/web/WebViewBrowserMetadataPlugin;->b(Lcom/kik/cards/web/WebViewBrowserMetadataPlugin;)Landroid/webkit/WebView;
+    invoke-static {v2}, Lcom/kik/cards/web/WebViewBrowserMetadataPlugin;->access$100(Lcom/kik/cards/web/WebViewBrowserMetadataPlugin;)Landroid/webkit/WebView;
 
     move-result-object v2
 
@@ -98,7 +98,7 @@
     iget-object v5, p0, Lcom/kik/cards/web/WebViewBrowserMetadataPlugin$2;->c:Lcom/kik/cards/web/WebViewBrowserMetadataPlugin;
 
     .line 1129
-    invoke-static {v5}, Lcom/kik/cards/web/WebViewBrowserMetadataPlugin;->b(Lcom/kik/cards/web/WebViewBrowserMetadataPlugin;)Landroid/webkit/WebView;
+    invoke-static {v5}, Lcom/kik/cards/web/WebViewBrowserMetadataPlugin;->access$100(Lcom/kik/cards/web/WebViewBrowserMetadataPlugin;)Landroid/webkit/WebView;
 
     move-result-object v5
 
@@ -109,7 +109,7 @@
     iget-object v6, p0, Lcom/kik/cards/web/WebViewBrowserMetadataPlugin$2;->c:Lcom/kik/cards/web/WebViewBrowserMetadataPlugin;
 
     .line 1130
-    invoke-static {v6}, Lcom/kik/cards/web/WebViewBrowserMetadataPlugin;->b(Lcom/kik/cards/web/WebViewBrowserMetadataPlugin;)Landroid/webkit/WebView;
+    invoke-static {v6}, Lcom/kik/cards/web/WebViewBrowserMetadataPlugin;->access$100(Lcom/kik/cards/web/WebViewBrowserMetadataPlugin;)Landroid/webkit/WebView;
 
     move-result-object v6
 
@@ -123,10 +123,10 @@
 
     move-object v7, v3
 
-    invoke-direct/range {v0 .. v9}, Lcom/kik/cards/web/i$a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v9}, Lcom/kik/cards/web/h$a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1124
-    invoke-static {v0}, Lcom/kik/events/m;->a(Ljava/lang/Object;)Lcom/kik/events/Promise;
+    invoke-static {v0}, Lcom/kik/events/l;->a(Ljava/lang/Object;)Lcom/kik/events/Promise;
 
     move-result-object v0
 

@@ -1,11 +1,11 @@
 .class final Lcom/kik/android/b/l$1;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/kik/android/b/l;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/kik/android/b/l;->a(Lcom/kik/android/b/l;Lcom/kik/events/Promise;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
         "Ljava/util/Map",
         "<",
@@ -38,7 +38,7 @@
     .line 230
     iput-object p1, p0, Lcom/kik/android/b/l$1;->a:Lcom/kik/android/b/l;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -53,7 +53,7 @@
     check-cast p1, Ljava/util/Map;
 
     .line 1234
-    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Object;)V
+    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Object;)V
 
     .line 1235
     new-instance v0, Ljava/util/ArrayList;

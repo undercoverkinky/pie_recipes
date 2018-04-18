@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 308
+    .line 316
     iput-object p1, p0, Lkik/android/chat/fragment/KikCodeFragment$15;->b:Lkik/android/chat/fragment/KikCodeFragment;
 
     iput-object p2, p0, Lkik/android/chat/fragment/KikCodeFragment$15;->a:Ljava/lang/String;
@@ -44,7 +44,7 @@
     .locals 3
 
     .prologue
-    .line 312
+    .line 320
     new-instance v0, Lkik/android/chat/fragment/KikChatFragment$a;
 
     invoke-direct {v0}, Lkik/android/chat/fragment/KikChatFragment$a;-><init>()V
@@ -69,21 +69,21 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ae;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v0
 
-    const v1, 0x7f050018
+    const v1, 0x7f05001d
 
-    const v2, 0x7f05001c
+    const v2, 0x7f050021
 
-    .line 313
+    .line 321
     invoke-virtual {v0, v1, v2}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->a(II)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->e()Lcom/kik/events/Promise;
 
-    .line 314
+    .line 322
     return-void
 .end method

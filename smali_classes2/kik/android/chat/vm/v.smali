@@ -1,89 +1,51 @@
-.class public interface abstract Lkik/android/chat/vm/v;
+.class final synthetic Lkik/android/chat/vm/v;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 # interfaces
-.implements Lkik/android/chat/vm/aa;
+.implements Lrx/functions/g;
+
+
+# instance fields
+.field private final a:Ljava/lang/String;
+
+
+# direct methods
+.method private constructor <init>(Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lkik/android/chat/vm/v;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static a(Ljava/lang/String;)Lrx/functions/g;
+    .locals 1
+
+    new-instance v0, Lkik/android/chat/vm/v;
+
+    invoke-direct {v0, p0}, Lkik/android/chat/vm/v;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+.end method
 
 
 # virtual methods
-.method public abstract a()V
-.end method
+.method public final call(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.method public abstract h()Ljava/lang/String;
-.end method
+    iget-object v0, p0, Lkik/android/chat/vm/v;->a:Ljava/lang/String;
 
-.method public abstract j()Ljava/lang/String;
-.end method
+    check-cast p1, Ljava/lang/String;
 
-.method public abstract k()Ljava/lang/String;
-.end method
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-.method public abstract l()Ljava/lang/String;
-.end method
+    move-result v0
 
-.method public abstract m()Lrx/c;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lrx/c",
-            "<",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-.end method
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-.method public abstract n()Lrx/c;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lrx/c",
-            "<",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-.end method
+    move-result-object v0
 
-.method public abstract o()Lrx/c;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lrx/c",
-            "<",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-.end method
-
-.method public abstract p()Lrx/c;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lrx/c",
-            "<",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-.end method
-
-.method public abstract s_()V
-.end method
-
-.method public abstract t_()Ljava/lang/String;
-.end method
-
-.method public abstract u_()V
-.end method
-
-.method public abstract v_()V
-.end method
-
-.method public abstract w_()Z
-.end method
-
-.method public abstract x_()V
+    return-object v0
 .end method

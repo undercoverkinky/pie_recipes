@@ -33,7 +33,7 @@
     .locals 2
 
     .prologue
-    .line 80
+    .line 85
     iget-object v0, p0, Landroid/support/v4/provider/SingleDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Landroid/support/v4/provider/SingleDocumentFile;->mUri:Landroid/net/Uri;
@@ -49,7 +49,7 @@
     .locals 2
 
     .prologue
-    .line 85
+    .line 90
     iget-object v0, p0, Landroid/support/v4/provider/SingleDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Landroid/support/v4/provider/SingleDocumentFile;->mUri:Landroid/net/Uri;
@@ -89,7 +89,7 @@
     .locals 2
 
     .prologue
-    .line 90
+    .line 95
     iget-object v0, p0, Landroid/support/v4/provider/SingleDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Landroid/support/v4/provider/SingleDocumentFile;->mUri:Landroid/net/Uri;
@@ -105,7 +105,7 @@
     .locals 2
 
     .prologue
-    .line 95
+    .line 100
     iget-object v0, p0, Landroid/support/v4/provider/SingleDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Landroid/support/v4/provider/SingleDocumentFile;->mUri:Landroid/net/Uri;
@@ -191,11 +191,27 @@
     return v0
 .end method
 
-.method public lastModified()J
+.method public isVirtual()Z
     .locals 2
 
     .prologue
     .line 70
+    iget-object v0, p0, Landroid/support/v4/provider/SingleDocumentFile;->mContext:Landroid/content/Context;
+
+    iget-object v1, p0, Landroid/support/v4/provider/SingleDocumentFile;->mUri:Landroid/net/Uri;
+
+    invoke-static {v0, v1}, Landroid/support/v4/provider/DocumentsContractApi19;->isVirtual(Landroid/content/Context;Landroid/net/Uri;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public lastModified()J
+    .locals 2
+
+    .prologue
+    .line 75
     iget-object v0, p0, Landroid/support/v4/provider/SingleDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Landroid/support/v4/provider/SingleDocumentFile;->mUri:Landroid/net/Uri;
@@ -211,7 +227,7 @@
     .locals 2
 
     .prologue
-    .line 75
+    .line 80
     iget-object v0, p0, Landroid/support/v4/provider/SingleDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Landroid/support/v4/provider/SingleDocumentFile;->mUri:Landroid/net/Uri;
@@ -227,7 +243,7 @@
     .locals 1
 
     .prologue
-    .line 100
+    .line 105
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -239,7 +255,7 @@
     .locals 1
 
     .prologue
-    .line 105
+    .line 110
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

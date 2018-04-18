@@ -12,9 +12,9 @@
         value = {
             "Lcom/kik/events/Promise",
             "<",
-            "Lcom/kik/cache/e",
+            "Lcom/kik/cache/b",
             "<",
-            "Lcom/kik/cache/d;",
+            "Lcom/kik/cache/a;",
             "Ljava/lang/Long;",
             ">;>;"
         }
@@ -23,13 +23,13 @@
 
 .field private b:Landroid/content/ContentResolver;
 
-.field private c:Lcom/kik/cards/usermedia/h;
+.field private c:Lcom/kik/cards/usermedia/g;
 
 .field private d:I
 
 
 # direct methods
-.method public constructor <init>(Lcom/kik/cards/usermedia/h;Landroid/content/ContentResolver;I)V
+.method public constructor <init>(Lcom/kik/cards/usermedia/g;Landroid/content/ContentResolver;I)V
     .locals 1
 
     .prologue
@@ -44,7 +44,7 @@
     iput-object v0, p0, Lcom/kik/cards/usermedia/f;->a:Lcom/kik/events/Promise;
 
     .line 34
-    iput-object p1, p0, Lcom/kik/cards/usermedia/f;->c:Lcom/kik/cards/usermedia/h;
+    iput-object p1, p0, Lcom/kik/cards/usermedia/f;->c:Lcom/kik/cards/usermedia/g;
 
     .line 35
     iput-object p2, p0, Lcom/kik/cards/usermedia/f;->b:Landroid/content/ContentResolver;
@@ -69,9 +69,9 @@
     .line 43
     iget-object v0, p0, Lcom/kik/cards/usermedia/f;->b:Landroid/content/ContentResolver;
 
-    iget-object v2, p0, Lcom/kik/cards/usermedia/f;->c:Lcom/kik/cards/usermedia/h;
+    iget-object v2, p0, Lcom/kik/cards/usermedia/f;->c:Lcom/kik/cards/usermedia/g;
 
-    invoke-virtual {v2}, Lcom/kik/cards/usermedia/h;->a()Ljava/lang/Long;
+    invoke-virtual {v2}, Lcom/kik/cards/usermedia/g;->a()Ljava/lang/Long;
 
     move-result-object v2
 
@@ -86,9 +86,9 @@
     move-result-object v0
 
     .line 44
-    iget-object v2, p0, Lcom/kik/cards/usermedia/f;->c:Lcom/kik/cards/usermedia/h;
+    iget-object v2, p0, Lcom/kik/cards/usermedia/f;->c:Lcom/kik/cards/usermedia/g;
 
-    invoke-virtual {v2}, Lcom/kik/cards/usermedia/h;->b()I
+    invoke-virtual {v2}, Lcom/kik/cards/usermedia/g;->b()I
 
     move-result v2
 
@@ -127,11 +127,11 @@
 
     .line 51
     :cond_0
-    new-instance v1, Lcom/kik/cache/e;
+    new-instance v1, Lcom/kik/cache/b;
 
-    new-instance v2, Lcom/kik/cache/d;
+    new-instance v2, Lcom/kik/cache/a;
 
-    invoke-direct {v2, v0}, Lcom/kik/cache/d;-><init>(Landroid/graphics/Bitmap;)V
+    invoke-direct {v2, v0}, Lcom/kik/cache/a;-><init>(Landroid/graphics/Bitmap;)V
 
     const-wide/16 v4, 0x0
 
@@ -139,7 +139,7 @@
 
     move-result-object v0
 
-    invoke-direct {v1, v2, v0}, Lcom/kik/cache/e;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v1, v2, v0}, Lcom/kik/cache/b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 52
     iget-object v0, p0, Lcom/kik/cards/usermedia/f;->a:Lcom/kik/events/Promise;

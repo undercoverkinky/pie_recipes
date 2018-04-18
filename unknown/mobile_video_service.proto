@@ -2,6 +2,7 @@ syntax = "proto3";
 
 package mobileremote.video.v1;
 option java_package = "com.kik.video.mobileremote";
+option go_package = "github.com/kikinteractive/xiphias-api-mobileremote/generated/go/video/v1;video";
 
 import "protobuf_validation.proto";
 import "common_model.proto";
@@ -29,7 +30,12 @@ service MobileVideo {
 message OnConvoVideoStateChangedNotification {
     common.video.v1.ConvoVideoState convo_video_state = 1;
 
-    // Uniquely identifies a push notification of a state change. This is used to related
+    // Uniquely identifies a push notification of a state change. This is used to relate a
     // push harpy event (sent from InternalKikVideoService) and the client push ack'd harpy event.
-    string notification_id = 2;
+    //
+    // Consumers of this service should _not_ make any assumptions about the underlying data
+    // format of the notification_id.
+    string notification_id = 2 [(kik.validation.field_validation) = {
+        max_byte_length: 36
+    }];
 }

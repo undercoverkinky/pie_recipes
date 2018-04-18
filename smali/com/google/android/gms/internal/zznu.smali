@@ -1,387 +1,316 @@
-.class public abstract Lcom/google/android/gms/internal/zznu;
-.super Lcom/google/android/gms/internal/zzoq;
-
-# interfaces
-.implements Landroid/content/DialogInterface$OnCancelListener;
+.class public final Lcom/google/android/gms/internal/zznu;
+.super Landroid/widget/RelativeLayout;
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/google/android/gms/internal/zznu$a;
-    }
+.annotation runtime Lcom/google/android/gms/internal/zzzt;
 .end annotation
 
 
+# static fields
+.field private static final zzbrm:[F
+
+
 # instance fields
-.field protected mStarted:Z
-
-.field protected zzalQ:Z
-
-.field private zzalR:Lcom/google/android/gms/common/ConnectionResult;
-
-.field private zzalS:I
-
-.field private final zzalT:Landroid/os/Handler;
-
-.field protected final zzaln:Lcom/google/android/gms/common/GoogleApiAvailability;
+.field private zzbrn:Landroid/graphics/drawable/AnimationDrawable;
 
 
 # direct methods
-.method protected constructor <init>(Lcom/google/android/gms/internal/zzor;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-static {}, Lcom/google/android/gms/common/GoogleApiAvailability;->getInstance()Lcom/google/android/gms/common/GoogleApiAvailability;
+    const/16 v0, 0x8
 
-    move-result-object v0
+    new-array v0, v0, [F
 
-    invoke-direct {p0, p1, v0}, Lcom/google/android/gms/internal/zznu;-><init>(Lcom/google/android/gms/internal/zzor;Lcom/google/android/gms/common/GoogleApiAvailability;)V
+    fill-array-data v0, :array_0
+
+    sput-object v0, Lcom/google/android/gms/internal/zznu;->zzbrm:[F
 
     return-void
+
+    :array_0
+    .array-data 4
+        0x40a00000    # 5.0f
+        0x40a00000    # 5.0f
+        0x40a00000    # 5.0f
+        0x40a00000    # 5.0f
+        0x40a00000    # 5.0f
+        0x40a00000    # 5.0f
+        0x40a00000    # 5.0f
+        0x40a00000    # 5.0f
+    .end array-data
 .end method
 
-.method constructor <init>(Lcom/google/android/gms/internal/zzor;Lcom/google/android/gms/common/GoogleApiAvailability;)V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;Lcom/google/android/gms/internal/zznt;Landroid/widget/RelativeLayout$LayoutParams;)V
+    .locals 8
 
-    invoke-direct {p0, p1}, Lcom/google/android/gms/internal/zzoq;-><init>(Lcom/google/android/gms/internal/zzor;)V
+    const/4 v7, 0x0
 
-    const/4 v0, -0x1
+    const/4 v6, 0x4
 
-    iput v0, p0, Lcom/google/android/gms/internal/zznu;->zzalS:I
+    const/4 v5, 0x1
 
-    new-instance v0, Landroid/os/Handler;
+    const/4 v4, 0x0
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    const/4 v3, -0x2
+
+    invoke-direct {p0, p1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
+
+    invoke-static {p2}, Lcom/google/android/gms/common/internal/zzbp;->zzu(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
+
+    new-instance v1, Landroid/graphics/drawable/shapes/RoundRectShape;
+
+    sget-object v2, Lcom/google/android/gms/internal/zznu;->zzbrm:[F
+
+    invoke-direct {v1, v2, v7, v7}, Landroid/graphics/drawable/shapes/RoundRectShape;-><init>([FLandroid/graphics/RectF;[F)V
+
+    invoke-direct {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    invoke-virtual {p2}, Lcom/google/android/gms/internal/zznt;->getBackgroundColor()I
 
-    iput-object v0, p0, Lcom/google/android/gms/internal/zznu;->zzalT:Landroid/os/Handler;
+    move-result v2
 
-    iput-object p2, p0, Lcom/google/android/gms/internal/zznu;->zzaln:Lcom/google/android/gms/common/GoogleApiAvailability;
+    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
+
+    invoke-virtual {p0, p3}, Lcom/google/android/gms/internal/zznu;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-static {}, Lcom/google/android/gms/ads/internal/zzbv;->zzec()Lcom/google/android/gms/internal/zzahk;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0, v0}, Lcom/google/android/gms/internal/zzahk;->setBackground(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+
+    new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
+
+    invoke-direct {v0, v3, v3}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p2}, Lcom/google/android/gms/internal/zznt;->getText()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
+
+    invoke-direct {v1, v3, v3}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+
+    new-instance v2, Landroid/widget/TextView;
+
+    invoke-direct {v2, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const v1, 0x47470001
+
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setId(I)V
+
+    sget-object v1, Landroid/graphics/Typeface;->DEFAULT:Landroid/graphics/Typeface;
+
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
+
+    invoke-virtual {p2}, Lcom/google/android/gms/internal/zznt;->getText()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {p2}, Lcom/google/android/gms/internal/zznt;->getTextColor()I
+
+    move-result v1
+
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    invoke-virtual {p2}, Lcom/google/android/gms/internal/zznt;->getTextSize()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setTextSize(F)V
+
+    invoke-static {}, Lcom/google/android/gms/internal/zzjo;->zzhu()Lcom/google/android/gms/internal/zzaje;
+
+    invoke-static {p1, v6}, Lcom/google/android/gms/internal/zzaje;->zzc(Landroid/content/Context;I)I
+
+    move-result v1
+
+    invoke-static {}, Lcom/google/android/gms/internal/zzjo;->zzhu()Lcom/google/android/gms/internal/zzaje;
+
+    invoke-static {p1, v6}, Lcom/google/android/gms/internal/zzaje;->zzc(Landroid/content/Context;I)I
+
+    move-result v3
+
+    invoke-virtual {v2, v1, v4, v3, v4}, Landroid/widget/TextView;->setPadding(IIII)V
+
+    invoke-virtual {p0, v2}, Lcom/google/android/gms/internal/zznu;->addView(Landroid/view/View;)V
+
+    invoke-virtual {v2}, Landroid/widget/TextView;->getId()I
+
+    move-result v1
+
+    invoke-virtual {v0, v5, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+
+    :cond_0
+    new-instance v1, Landroid/widget/ImageView;
+
+    invoke-direct {v1, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const v0, 0x47470002
+
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setId(I)V
+
+    invoke-virtual {p2}, Lcom/google/android/gms/internal/zznt;->zzjd()Ljava/util/List;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    if-le v2, v5, :cond_3
+
+    new-instance v2, Landroid/graphics/drawable/AnimationDrawable;
+
+    invoke-direct {v2}, Landroid/graphics/drawable/AnimationDrawable;-><init>()V
+
+    iput-object v2, p0, Lcom/google/android/gms/internal/zznu;->zzbrn:Landroid/graphics/drawable/AnimationDrawable;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/gms/internal/zznv;
+
+    :try_start_0
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/zznv;->zzjh()Lcom/google/android/gms/dynamic/IObjectWrapper;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/google/android/gms/dynamic/zzn;->zzab(Lcom/google/android/gms/dynamic/IObjectWrapper;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/drawable/Drawable;
+
+    iget-object v3, p0, Lcom/google/android/gms/internal/zznu;->zzbrn:Landroid/graphics/drawable/AnimationDrawable;
+
+    invoke-virtual {p2}, Lcom/google/android/gms/internal/zznt;->zzje()I
+
+    move-result v4
+
+    invoke-virtual {v3, v0, v4}, Landroid/graphics/drawable/AnimationDrawable;->addFrame(Landroid/graphics/drawable/Drawable;I)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v3, "Error while getting drawable."
+
+    invoke-static {v3, v0}, Lcom/google/android/gms/internal/zzafx;->zzb(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {}, Lcom/google/android/gms/ads/internal/zzbv;->zzec()Lcom/google/android/gms/internal/zzahk;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/zznu;->zzbrn:Landroid/graphics/drawable/AnimationDrawable;
+
+    invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/internal/zzahk;->setBackground(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+
+    :cond_2
+    :goto_1
+    invoke-virtual {p0, v1}, Lcom/google/android/gms/internal/zznu;->addView(Landroid/view/View;)V
 
     return-void
-.end method
 
-.method static synthetic zza(Lcom/google/android/gms/internal/zznu;)Lcom/google/android/gms/common/ConnectionResult;
-    .locals 1
+    :cond_3
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zznu;->zzalR:Lcom/google/android/gms/common/ConnectionResult;
+    move-result v2
 
-    return-object v0
-.end method
+    if-ne v2, v5, :cond_2
 
-.method static synthetic zzb(Lcom/google/android/gms/internal/zznu;)I
-    .locals 1
+    const/4 v2, 0x0
 
-    iget v0, p0, Lcom/google/android/gms/internal/zznu;->zzalS:I
+    :try_start_1
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    return v0
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/gms/internal/zznv;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/zznv;->zzjh()Lcom/google/android/gms/dynamic/IObjectWrapper;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/google/android/gms/dynamic/zzn;->zzab(Lcom/google/android/gms/dynamic/IObjectWrapper;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception v0
+
+    const-string v2, "Error while getting drawable."
+
+    invoke-static {v2, v0}, Lcom/google/android/gms/internal/zzafx;->zzb(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_1
 .end method
 
 
 # virtual methods
-.method public onActivityResult(IILandroid/content/Intent;)V
-    .locals 5
+.method public final onAttachedToWindow()V
+    .locals 1
 
-    const/16 v4, 0x12
-
-    const/16 v2, 0xd
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    packed-switch p1, :pswitch_data_0
-
-    :cond_0
-    :goto_0
-    move v0, v1
-
-    :cond_1
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zznu;->zzrF()V
-
-    :goto_1
-    return-void
-
-    :pswitch_0
-    iget-object v2, p0, Lcom/google/android/gms/internal/zznu;->zzaln:Lcom/google/android/gms/common/GoogleApiAvailability;
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zznu;->getActivity()Landroid/app/Activity;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Lcom/google/android/gms/common/GoogleApiAvailability;->isGooglePlayServicesAvailable(Landroid/content/Context;)I
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    :goto_2
-    iget-object v1, p0, Lcom/google/android/gms/internal/zznu;->zzalR:Lcom/google/android/gms/common/ConnectionResult;
-
-    invoke-virtual {v1}, Lcom/google/android/gms/common/ConnectionResult;->getErrorCode()I
-
-    move-result v1
-
-    if-ne v1, v4, :cond_1
-
-    if-ne v2, v4, :cond_1
-
-    goto :goto_1
-
-    :pswitch_1
-    const/4 v3, -0x1
-
-    if-eq p2, v3, :cond_1
-
-    if-nez p2, :cond_0
-
-    if-eqz p3, :cond_3
-
-    const-string v0, "<<ResolutionFailureErrorDetail>>"
-
-    invoke-virtual {p3, v0, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v0
-
-    :goto_3
-    new-instance v2, Lcom/google/android/gms/common/ConnectionResult;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v0, v3}, Lcom/google/android/gms/common/ConnectionResult;-><init>(ILandroid/app/PendingIntent;)V
-
-    iput-object v2, p0, Lcom/google/android/gms/internal/zznu;->zzalR:Lcom/google/android/gms/common/ConnectionResult;
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lcom/google/android/gms/internal/zznu;->zzalR:Lcom/google/android/gms/common/ConnectionResult;
-
-    iget v1, p0, Lcom/google/android/gms/internal/zznu;->zzalS:I
-
-    invoke-virtual {p0, v0, v1}, Lcom/google/android/gms/internal/zznu;->zza(Lcom/google/android/gms/common/ConnectionResult;I)V
-
-    goto :goto_1
-
-    :cond_3
-    move v0, v2
-
-    goto :goto_3
-
-    :cond_4
-    move v0, v1
-
-    goto :goto_2
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public onCancel(Landroid/content/DialogInterface;)V
-    .locals 3
-
-    new-instance v0, Lcom/google/android/gms/common/ConnectionResult;
-
-    const/16 v1, 0xd
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/common/ConnectionResult;-><init>(ILandroid/app/PendingIntent;)V
-
-    iget v1, p0, Lcom/google/android/gms/internal/zznu;->zzalS:I
-
-    invoke-virtual {p0, v0, v1}, Lcom/google/android/gms/internal/zznu;->zza(Lcom/google/android/gms/common/ConnectionResult;I)V
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zznu;->zzrF()V
-
-    return-void
-.end method
-
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 3
-
-    invoke-super {p0, p1}, Lcom/google/android/gms/internal/zzoq;->onCreate(Landroid/os/Bundle;)V
-
-    if-eqz p1, :cond_0
-
-    const-string v0, "resolving_error"
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lcom/google/android/gms/internal/zznu;->zzalQ:Z
-
-    iget-boolean v0, p0, Lcom/google/android/gms/internal/zznu;->zzalQ:Z
+    iget-object v0, p0, Lcom/google/android/gms/internal/zznu;->zzbrn:Landroid/graphics/drawable/AnimationDrawable;
 
     if-eqz v0, :cond_0
 
-    const-string v0, "failed_client_id"
+    iget-object v0, p0, Lcom/google/android/gms/internal/zznu;->zzbrn:Landroid/graphics/drawable/AnimationDrawable;
 
-    const/4 v1, -0x1
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/google/android/gms/internal/zznu;->zzalS:I
-
-    new-instance v1, Lcom/google/android/gms/common/ConnectionResult;
-
-    const-string v0, "failed_status"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v2
-
-    const-string v0, "failed_resolution"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/app/PendingIntent;
-
-    invoke-direct {v1, v2, v0}, Lcom/google/android/gms/common/ConnectionResult;-><init>(ILandroid/app/PendingIntent;)V
-
-    iput-object v1, p0, Lcom/google/android/gms/internal/zznu;->zzalR:Lcom/google/android/gms/common/ConnectionResult;
+    invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable;->start()V
 
     :cond_0
-    return-void
-.end method
-
-.method public onSaveInstanceState(Landroid/os/Bundle;)V
-    .locals 2
-
-    invoke-super {p0, p1}, Lcom/google/android/gms/internal/zzoq;->onSaveInstanceState(Landroid/os/Bundle;)V
-
-    const-string v0, "resolving_error"
-
-    iget-boolean v1, p0, Lcom/google/android/gms/internal/zznu;->zzalQ:Z
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
-
-    iget-boolean v0, p0, Lcom/google/android/gms/internal/zznu;->zzalQ:Z
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "failed_client_id"
-
-    iget v1, p0, Lcom/google/android/gms/internal/zznu;->zzalS:I
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-
-    const-string v0, "failed_status"
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/zznu;->zzalR:Lcom/google/android/gms/common/ConnectionResult;
-
-    invoke-virtual {v1}, Lcom/google/android/gms/common/ConnectionResult;->getErrorCode()I
-
-    move-result v1
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-
-    const-string v0, "failed_resolution"
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/zznu;->zzalR:Lcom/google/android/gms/common/ConnectionResult;
-
-    invoke-virtual {v1}, Lcom/google/android/gms/common/ConnectionResult;->getResolution()Landroid/app/PendingIntent;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onStart()V
-    .locals 1
-
-    invoke-super {p0}, Lcom/google/android/gms/internal/zzoq;->onStart()V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/google/android/gms/internal/zznu;->mStarted:Z
-
-    return-void
-.end method
-
-.method public onStop()V
-    .locals 1
-
-    invoke-super {p0}, Lcom/google/android/gms/internal/zzoq;->onStop()V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/google/android/gms/internal/zznu;->mStarted:Z
-
-    return-void
-.end method
-
-.method protected abstract zza(Lcom/google/android/gms/common/ConnectionResult;I)V
-.end method
-
-.method public zzb(Lcom/google/android/gms/common/ConnectionResult;I)V
-    .locals 3
-
-    iget-boolean v0, p0, Lcom/google/android/gms/internal/zznu;->zzalQ:Z
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/google/android/gms/internal/zznu;->zzalQ:Z
-
-    iput p2, p0, Lcom/google/android/gms/internal/zznu;->zzalS:I
-
-    iput-object p1, p0, Lcom/google/android/gms/internal/zznu;->zzalR:Lcom/google/android/gms/common/ConnectionResult;
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zznu;->zzalT:Landroid/os/Handler;
-
-    new-instance v1, Lcom/google/android/gms/internal/zznu$a;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p0, v2}, Lcom/google/android/gms/internal/zznu$a;-><init>(Lcom/google/android/gms/internal/zznu;B)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :cond_0
-    return-void
-.end method
-
-.method protected abstract zzrA()V
-.end method
-
-.method protected zzrF()V
-    .locals 1
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lcom/google/android/gms/internal/zznu;->zzalS:I
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/google/android/gms/internal/zznu;->zzalQ:Z
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/zznu;->zzalR:Lcom/google/android/gms/common/ConnectionResult;
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zznu;->zzrA()V
+    invoke-super {p0}, Landroid/widget/RelativeLayout;->onAttachedToWindow()V
 
     return-void
 .end method

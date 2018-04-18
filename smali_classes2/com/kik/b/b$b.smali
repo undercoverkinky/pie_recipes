@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 293
+    .line 336
     iput-object p1, p0, Lcom/kik/b/b$b;->a:Lcom/kik/b/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +48,7 @@
     .locals 0
 
     .prologue
-    .line 293
+    .line 336
     invoke-direct {p0, p1}, Lcom/kik/b/b$b;-><init>(Lcom/kik/b/b;)V
 
     return-void
@@ -64,12 +64,12 @@
 
     const/4 v3, 0x0
 
-    .line 293
+    .line 336
     check-cast p1, Ljava/io/File;
 
     check-cast p2, Ljava/io/File;
 
-    .line 1299
+    .line 1342
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -80,7 +80,7 @@
 
     move-result-object v1
 
-    .line 1300
+    .line 1343
     invoke-virtual {p2}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -91,33 +91,33 @@
 
     move-result-object v2
 
-    .line 1302
+    .line 1345
     aget-object v0, v1, v3
 
     invoke-static {v0}, Ljava/lang/Long;->decode(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v0
 
-    .line 1303
+    .line 1346
     aget-object v3, v2, v3
 
     invoke-static {v3}, Ljava/lang/Long;->decode(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v3
 
-    .line 1305
+    .line 1348
     invoke-virtual {v0, v3}, Ljava/lang/Long;->compareTo(Ljava/lang/Long;)I
 
     move-result v0
 
-    .line 1306
+    .line 1349
     if-eqz v0, :cond_0
 
-    .line 1307
+    .line 1350
     :goto_0
     return v0
 
-    .line 1310
+    .line 1353
     :cond_0
     aget-object v0, v1, v4
 
@@ -125,14 +125,14 @@
 
     move-result-object v0
 
-    .line 1311
+    .line 1354
     aget-object v1, v2, v4
 
     invoke-static {v1}, Ljava/lang/Long;->decode(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v1
 
-    .line 1313
+    .line 1356
     invoke-virtual {v0, v1}, Ljava/lang/Long;->compareTo(Ljava/lang/Long;)I
 
     move-result v0

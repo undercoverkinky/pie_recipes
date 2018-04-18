@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/kik/events/q;
+.implements Lcom/kik/events/p;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/kik/events/q",
+        "Lcom/kik/events/p",
         "<",
         "Lcom/kik/xdata/model/cards/XCardDescriptor;",
         "Lkik/android/b/a$a;",
@@ -74,18 +74,18 @@
     invoke-direct {v1, v0}, Lkik/android/b/a$a;-><init>(B)V
 
     .line 1263
-    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->g()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->f()Ljava/util/List;
 
     move-result-object v2
 
     .line 1264
-    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->h()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->g()Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
-    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -117,7 +117,7 @@
     .line 1269
     sget-object v3, Lkik/android/b/a$5;->a:[I
 
-    invoke-virtual {v0}, Lcom/kik/xdata/model/cards/XCardPermission;->c()Lcom/kik/xdata/model/cards/XCardPermission$XCardPermissionName;
+    invoke-virtual {v0}, Lcom/kik/xdata/model/cards/XCardPermission;->b()Lcom/kik/xdata/model/cards/XCardPermission$XCardPermissionName;
 
     move-result-object v0
 
@@ -139,7 +139,7 @@
 
     .line 1264
     :cond_1
-    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->h()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->g()Ljava/lang/String;
 
     move-result-object v0
 
@@ -153,29 +153,29 @@
 
     .line 1278
     :cond_2
-    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->f()Lcom/kik/xdata/model/cards/XCardAnonymousKey;
+    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->e()Lcom/kik/xdata/model/cards/XCardAnonymousKey;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
     .line 1279
-    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->f()Lcom/kik/xdata/model/cards/XCardAnonymousKey;
+    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->e()Lcom/kik/xdata/model/cards/XCardAnonymousKey;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/kik/xdata/model/cards/XCardAnonymousKey;->d()Lcom/dyuproject/protostuff/c;
+    invoke-virtual {v0}, Lcom/kik/xdata/model/cards/XCardAnonymousKey;->c()Lcom/dyuproject/protostuff/c;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
     .line 1280
-    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->f()Lcom/kik/xdata/model/cards/XCardAnonymousKey;
+    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->e()Lcom/kik/xdata/model/cards/XCardAnonymousKey;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/kik/xdata/model/cards/XCardAnonymousKey;->d()Lcom/dyuproject/protostuff/c;
+    invoke-virtual {v0}, Lcom/kik/xdata/model/cards/XCardAnonymousKey;->c()Lcom/dyuproject/protostuff/c;
 
     move-result-object v0
 
@@ -187,22 +187,22 @@
 
     .line 1282
     :cond_3
-    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->f()Lcom/kik/xdata/model/cards/XCardAnonymousKey;
+    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->e()Lcom/kik/xdata/model/cards/XCardAnonymousKey;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/kik/xdata/model/cards/XCardAnonymousKey;->c()Lcom/dyuproject/protostuff/c;
+    invoke-virtual {v0}, Lcom/kik/xdata/model/cards/XCardAnonymousKey;->b()Lcom/dyuproject/protostuff/c;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
     .line 1283
-    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->f()Lcom/kik/xdata/model/cards/XCardAnonymousKey;
+    invoke-virtual {p1}, Lcom/kik/xdata/model/cards/XCardDescriptor;->e()Lcom/kik/xdata/model/cards/XCardAnonymousKey;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/kik/xdata/model/cards/XCardAnonymousKey;->c()Lcom/dyuproject/protostuff/c;
+    invoke-virtual {v0}, Lcom/kik/xdata/model/cards/XCardAnonymousKey;->b()Lcom/dyuproject/protostuff/c;
 
     move-result-object v0
 

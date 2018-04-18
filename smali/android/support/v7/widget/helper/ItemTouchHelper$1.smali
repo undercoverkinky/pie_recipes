@@ -49,7 +49,7 @@
 
     iget-object v0, p0, Landroid/support/v7/widget/helper/ItemTouchHelper$1;->a:Landroid/support/v7/widget/helper/ItemTouchHelper;
 
-    invoke-static {v0}, Landroid/support/v7/widget/helper/ItemTouchHelper;->a(Landroid/support/v7/widget/helper/ItemTouchHelper;)Z
+    invoke-virtual {v0}, Landroid/support/v7/widget/helper/ItemTouchHelper;->a()Z
 
     move-result v0
 
@@ -69,30 +69,24 @@
 
     iget-object v1, v1, Landroid/support/v7/widget/helper/ItemTouchHelper;->b:Landroid/support/v7/widget/RecyclerView$ViewHolder;
 
-    invoke-static {v0, v1}, Landroid/support/v7/widget/helper/ItemTouchHelper;->a(Landroid/support/v7/widget/helper/ItemTouchHelper;Landroid/support/v7/widget/RecyclerView$ViewHolder;)V
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/helper/ItemTouchHelper;->a(Landroid/support/v7/widget/RecyclerView$ViewHolder;)V
 
     .line 261
     :cond_0
     iget-object v0, p0, Landroid/support/v7/widget/helper/ItemTouchHelper$1;->a:Landroid/support/v7/widget/helper/ItemTouchHelper;
 
-    invoke-static {v0}, Landroid/support/v7/widget/helper/ItemTouchHelper;->c(Landroid/support/v7/widget/helper/ItemTouchHelper;)Landroid/support/v7/widget/RecyclerView;
-
-    move-result-object v0
+    iget-object v0, v0, Landroid/support/v7/widget/helper/ItemTouchHelper;->p:Landroid/support/v7/widget/RecyclerView;
 
     iget-object v1, p0, Landroid/support/v7/widget/helper/ItemTouchHelper$1;->a:Landroid/support/v7/widget/helper/ItemTouchHelper;
 
-    invoke-static {v1}, Landroid/support/v7/widget/helper/ItemTouchHelper;->b(Landroid/support/v7/widget/helper/ItemTouchHelper;)Ljava/lang/Runnable;
-
-    move-result-object v1
+    iget-object v1, v1, Landroid/support/v7/widget/helper/ItemTouchHelper;->q:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/RecyclerView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     .line 262
     iget-object v0, p0, Landroid/support/v7/widget/helper/ItemTouchHelper$1;->a:Landroid/support/v7/widget/helper/ItemTouchHelper;
 
-    invoke-static {v0}, Landroid/support/v7/widget/helper/ItemTouchHelper;->c(Landroid/support/v7/widget/helper/ItemTouchHelper;)Landroid/support/v7/widget/RecyclerView;
-
-    move-result-object v0
+    iget-object v0, v0, Landroid/support/v7/widget/helper/ItemTouchHelper;->p:Landroid/support/v7/widget/RecyclerView;
 
     invoke-static {v0, p0}, Landroid/support/v4/view/ViewCompat;->postOnAnimation(Landroid/view/View;Ljava/lang/Runnable;)V
 

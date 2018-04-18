@@ -11,7 +11,7 @@
 
 .field private final b:I
 
-.field private c:Lio/fabric/sdk/android/services/common/n;
+.field private c:Lio/fabric/sdk/android/services/common/o;
 
 
 # direct methods
@@ -39,19 +39,19 @@
 
     .prologue
     .line 103
-    iget-object v0, p0, Lcom/crashlytics/android/core/ac;->c:Lio/fabric/sdk/android/services/common/n;
+    iget-object v0, p0, Lcom/crashlytics/android/core/ac;->c:Lio/fabric/sdk/android/services/common/o;
 
     if-nez v0, :cond_0
 
     .line 105
     :try_start_0
-    new-instance v0, Lio/fabric/sdk/android/services/common/n;
+    new-instance v0, Lio/fabric/sdk/android/services/common/o;
 
     iget-object v1, p0, Lcom/crashlytics/android/core/ac;->a:Ljava/io/File;
 
-    invoke-direct {v0, v1}, Lio/fabric/sdk/android/services/common/n;-><init>(Ljava/io/File;)V
+    invoke-direct {v0, v1}, Lio/fabric/sdk/android/services/common/o;-><init>(Ljava/io/File;)V
 
-    iput-object v0, p0, Lcom/crashlytics/android/core/ac;->c:Lio/fabric/sdk/android/services/common/n;
+    iput-object v0, p0, Lcom/crashlytics/android/core/ac;->c:Lio/fabric/sdk/android/services/common/o;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -121,7 +121,7 @@
     invoke-direct {p0}, Lcom/crashlytics/android/core/ac;->d()V
 
     .line 58
-    iget-object v1, p0, Lcom/crashlytics/android/core/ac;->c:Lio/fabric/sdk/android/services/common/n;
+    iget-object v1, p0, Lcom/crashlytics/android/core/ac;->c:Lio/fabric/sdk/android/services/common/o;
 
     if-eqz v1, :cond_0
 
@@ -133,9 +133,9 @@
     aput v6, v1, v6
 
     .line 68
-    iget-object v0, p0, Lcom/crashlytics/android/core/ac;->c:Lio/fabric/sdk/android/services/common/n;
+    iget-object v0, p0, Lcom/crashlytics/android/core/ac;->c:Lio/fabric/sdk/android/services/common/o;
 
-    invoke-virtual {v0}, Lio/fabric/sdk/android/services/common/n;->a()I
+    invoke-virtual {v0}, Lio/fabric/sdk/android/services/common/o;->a()I
 
     move-result v0
 
@@ -143,13 +143,13 @@
 
     .line 71
     :try_start_0
-    iget-object v0, p0, Lcom/crashlytics/android/core/ac;->c:Lio/fabric/sdk/android/services/common/n;
+    iget-object v0, p0, Lcom/crashlytics/android/core/ac;->c:Lio/fabric/sdk/android/services/common/o;
 
     new-instance v3, Lcom/crashlytics/android/core/ac$1;
 
     invoke-direct {v3, p0, v2, v1}, Lcom/crashlytics/android/core/ac$1;-><init>(Lcom/crashlytics/android/core/ac;[B[I)V
 
-    invoke-virtual {v0, v3}, Lio/fabric/sdk/android/services/common/n;->a(Lio/fabric/sdk/android/services/common/n$c;)V
+    invoke-virtual {v0, v3}, Lio/fabric/sdk/android/services/common/o;->a(Lio/fabric/sdk/android/services/common/o$c;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -189,7 +189,7 @@
     invoke-direct {p0}, Lcom/crashlytics/android/core/ac;->d()V
 
     .line 1114
-    iget-object v0, p0, Lcom/crashlytics/android/core/ac;->c:Lio/fabric/sdk/android/services/common/n;
+    iget-object v0, p0, Lcom/crashlytics/android/core/ac;->c:Lio/fabric/sdk/android/services/common/o;
 
     if-eqz v0, :cond_1
 
@@ -268,6 +268,7 @@
 
     const/4 v4, 0x0
 
+    .line 1148
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v5
@@ -289,23 +290,23 @@
     move-result-object v0
 
     .line 1150
-    iget-object v1, p0, Lcom/crashlytics/android/core/ac;->c:Lio/fabric/sdk/android/services/common/n;
+    iget-object v1, p0, Lcom/crashlytics/android/core/ac;->c:Lio/fabric/sdk/android/services/common/o;
 
-    invoke-virtual {v1, v0}, Lio/fabric/sdk/android/services/common/n;->a([B)V
+    invoke-virtual {v1, v0}, Lio/fabric/sdk/android/services/common/o;->a([B)V
 
     .line 1153
     :goto_1
-    iget-object v0, p0, Lcom/crashlytics/android/core/ac;->c:Lio/fabric/sdk/android/services/common/n;
+    iget-object v0, p0, Lcom/crashlytics/android/core/ac;->c:Lio/fabric/sdk/android/services/common/o;
 
-    invoke-virtual {v0}, Lio/fabric/sdk/android/services/common/n;->b()Z
+    invoke-virtual {v0}, Lio/fabric/sdk/android/services/common/o;->b()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/crashlytics/android/core/ac;->c:Lio/fabric/sdk/android/services/common/n;
+    iget-object v0, p0, Lcom/crashlytics/android/core/ac;->c:Lio/fabric/sdk/android/services/common/o;
 
-    invoke-virtual {v0}, Lio/fabric/sdk/android/services/common/n;->a()I
+    invoke-virtual {v0}, Lio/fabric/sdk/android/services/common/o;->a()I
 
     move-result v0
 
@@ -314,9 +315,9 @@
     if-le v0, v1, :cond_1
 
     .line 1154
-    iget-object v0, p0, Lcom/crashlytics/android/core/ac;->c:Lio/fabric/sdk/android/services/common/n;
+    iget-object v0, p0, Lcom/crashlytics/android/core/ac;->c:Lio/fabric/sdk/android/services/common/o;
 
-    invoke-virtual {v0}, Lio/fabric/sdk/android/services/common/n;->c()V
+    invoke-virtual {v0}, Lio/fabric/sdk/android/services/common/o;->c()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -352,7 +353,7 @@
 
     .prologue
     .line 92
-    iget-object v0, p0, Lcom/crashlytics/android/core/ac;->c:Lio/fabric/sdk/android/services/common/n;
+    iget-object v0, p0, Lcom/crashlytics/android/core/ac;->c:Lio/fabric/sdk/android/services/common/o;
 
     const-string v1, "There was a problem closing the Crashlytics log file."
 
@@ -361,7 +362,7 @@
     .line 93
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/crashlytics/android/core/ac;->c:Lio/fabric/sdk/android/services/common/n;
+    iput-object v0, p0, Lcom/crashlytics/android/core/ac;->c:Lio/fabric/sdk/android/services/common/o;
 
     .line 94
     return-void

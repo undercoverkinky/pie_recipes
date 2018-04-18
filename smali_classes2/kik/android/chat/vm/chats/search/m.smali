@@ -17,7 +17,7 @@
 
 
 # virtual methods
-.method public final J_()Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;
+.method public final ab_()Lkik/android/chat/vm/chats/search/IChatsSearchResultViewModel$LayoutType;
     .locals 1
 
     .prologue

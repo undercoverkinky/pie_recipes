@@ -86,7 +86,7 @@
     const-string v2, "https://home.kik.com/"
 
     .line 48
-    invoke-static {v2}, Lcom/kik/cards/web/r;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/kik/cards/web/s;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -97,7 +97,7 @@
     const-string v1, "Depth"
 
     .line 49
-    invoke-static {}, Lkik/android/chat/activity/KActivityLauncher;->e()I
+    invoke-static {}, Lkik/android/chat/activity/KActivityLauncher;->f()I
 
     move-result v2
 
@@ -156,7 +156,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->a(Lkik/android/util/aa;)Lcom/kik/events/Promise;
+    invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->startFragmentForResult(Lkik/android/util/ae;)Lcom/kik/events/Promise;
 
     .line 66
     const/4 v0, 0x0

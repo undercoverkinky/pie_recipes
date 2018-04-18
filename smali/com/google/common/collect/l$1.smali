@@ -1,11 +1,11 @@
 .class final Lcom/google/common/collect/l$1;
-.super Lcom/google/common/collect/y;
+.super Lcom/google/common/collect/AbstractIterator;
 .source "SourceFile"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/google/common/collect/l;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/google/common/collect/l;->a(Ljava/util/Iterator;Lcom/google/common/base/Predicate;)Lcom/google/common/collect/s;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,87 +15,78 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/google/common/collect/y",
-        "<",
-        "Ljava/lang/Object;",
-        ">;"
+        "Lcom/google/common/collect/AbstractIterator",
+        "<TT;>;"
     }
 .end annotation
 
 
+# instance fields
+.field final synthetic a:Ljava/util/Iterator;
+
+.field final synthetic b:Lcom/google/common/base/Predicate;
+
+
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Ljava/util/Iterator;Lcom/google/common/base/Predicate;)V
     .locals 0
 
     .prologue
-    .line 73
-    invoke-direct {p0}, Lcom/google/common/collect/y;-><init>()V
+    .line 619
+    iput-object p1, p0, Lcom/google/common/collect/l$1;->a:Ljava/util/Iterator;
+
+    iput-object p2, p0, Lcom/google/common/collect/l$1;->b:Lcom/google/common/base/Predicate;
+
+    invoke-direct {p0}, Lcom/google/common/collect/AbstractIterator;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final hasNext()Z
-    .locals 1
+.method protected final a()Ljava/lang/Object;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
 
     .prologue
-    .line 76
-    const/4 v0, 0x0
+    .line 622
+    :cond_0
+    iget-object v0, p0, Lcom/google/common/collect/l$1;->a:Ljava/util/Iterator;
 
-    return v0
-.end method
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-.method public final hasPrevious()Z
-    .locals 1
+    move-result v0
 
-    .prologue
-    .line 84
-    const/4 v0, 0x0
+    if-eqz v0, :cond_1
 
-    return v0
-.end method
+    .line 623
+    iget-object v0, p0, Lcom/google/common/collect/l$1;->a:Ljava/util/Iterator;
 
-.method public final next()Ljava/lang/Object;
-    .locals 1
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .prologue
-    .line 80
-    new-instance v0, Ljava/util/NoSuchElementException;
+    move-result-object v0
 
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+    .line 624
+    iget-object v1, p0, Lcom/google/common/collect/l$1;->b:Lcom/google/common/base/Predicate;
 
-    throw v0
-.end method
+    invoke-interface {v1, v0}, Lcom/google/common/base/Predicate;->apply(Ljava/lang/Object;)Z
 
-.method public final nextIndex()I
-    .locals 1
+    move-result v1
 
-    .prologue
-    .line 92
-    const/4 v0, 0x0
+    if-eqz v1, :cond_0
 
-    return v0
-.end method
+    .line 628
+    :goto_0
+    return-object v0
 
-.method public final previous()Ljava/lang/Object;
-    .locals 1
+    :cond_1
+    invoke-virtual {p0}, Lcom/google/common/collect/l$1;->b()Ljava/lang/Object;
 
-    .prologue
-    .line 88
-    new-instance v0, Ljava/util/NoSuchElementException;
+    move-result-object v0
 
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final previousIndex()I
-    .locals 1
-
-    .prologue
-    .line 96
-    const/4 v0, -0x1
-
-    return v0
+    goto :goto_0
 .end method

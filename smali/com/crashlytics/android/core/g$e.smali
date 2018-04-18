@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/io/FilenameFilter;
 
 
 # annotations
@@ -12,69 +12,55 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1a
+    accessFlags = 0x8
     name = "e"
 .end annotation
 
 
-# instance fields
-.field private final a:Landroid/content/Context;
-
-.field private final b:Lcom/crashlytics/android/core/ae;
-
-.field private final c:Lcom/crashlytics/android/core/af;
-
-
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/crashlytics/android/core/ae;Lcom/crashlytics/android/core/af;)V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 1426
+    .line 144
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1427
-    iput-object p1, p0, Lcom/crashlytics/android/core/g$e;->a:Landroid/content/Context;
-
-    .line 1428
-    iput-object p2, p0, Lcom/crashlytics/android/core/g$e;->b:Lcom/crashlytics/android/core/ae;
-
-    .line 1429
-    iput-object p3, p0, Lcom/crashlytics/android/core/g$e;->c:Lcom/crashlytics/android/core/af;
-
-    .line 1430
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final accept(Ljava/io/File;Ljava/lang/String;)Z
+    .locals 1
 
     .prologue
-    .line 1434
-    iget-object v0, p0, Lcom/crashlytics/android/core/g$e;->a:Landroid/content/Context;
+    .line 147
+    sget-object v0, Lcom/crashlytics/android/core/d;->a:Ljava/io/FilenameFilter;
 
-    invoke-static {v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->m(Landroid/content/Context;)Z
+    invoke-interface {v0, p1, p2}, Ljava/io/FilenameFilter;->accept(Ljava/io/File;Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 1442
-    :goto_0
-    return-void
+    const-string v0, "SessionMissingBinaryImages"
 
-    .line 1438
+    .line 148
+    invoke-virtual {p2, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
     :cond_0
-    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
+    const/4 v0, 0x1
 
-    .line 1441
-    iget-object v0, p0, Lcom/crashlytics/android/core/g$e;->c:Lcom/crashlytics/android/core/af;
+    :goto_0
+    return v0
 
-    iget-object v1, p0, Lcom/crashlytics/android/core/g$e;->b:Lcom/crashlytics/android/core/ae;
+    :cond_1
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/af;->a(Lcom/crashlytics/android/core/ae;)Z
-
+    .line 147
     goto :goto_0
 .end method

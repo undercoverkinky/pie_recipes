@@ -46,17 +46,17 @@
     .locals 3
 
     .prologue
-    .line 181
+    .line 195
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 255
+    .line 269
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/kik/xdata/model/userpreferences/XUserPreferences$1;->a:Ljava/util/HashMap;
 
-    .line 257
+    .line 271
     iget-object v0, p0, Lcom/kik/xdata/model/userpreferences/XUserPreferences$1;->a:Ljava/util/HashMap;
 
     const-string v1, "enterKeySend"
@@ -69,7 +69,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 258
+    .line 272
     iget-object v0, p0, Lcom/kik/xdata/model/userpreferences/XUserPreferences$1;->a:Ljava/util/HashMap;
 
     const-string v1, "bubbleColor"
@@ -82,7 +82,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 259
+    .line 273
     return-void
 .end method
 
@@ -92,12 +92,12 @@
     .locals 1
 
     .prologue
-    .line 3186
+    .line 3200
     new-instance v0, Lcom/kik/xdata/model/userpreferences/XUserPreferences;
 
     invoke-direct {v0}, Lcom/kik/xdata/model/userpreferences/XUserPreferences;-><init>()V
 
-    .line 181
+    .line 195
     return-object v0
 .end method
 
@@ -110,22 +110,22 @@
     .end annotation
 
     .prologue
-    .line 181
+    .line 195
     check-cast p2, Lcom/kik/xdata/model/userpreferences/XUserPreferences;
 
-    .line 2211
+    .line 2225
     invoke-interface {p1, p0}, Lcom/dyuproject/protostuff/l;->a(Lcom/dyuproject/protostuff/u;)I
 
     move-result v0
 
-    .line 2213
+    .line 2227
     :goto_0
     sparse-switch v0, :sswitch_data_0
 
-    .line 2224
+    .line 2238
     invoke-interface {p1, v0, p0}, Lcom/dyuproject/protostuff/l;->a(ILcom/dyuproject/protostuff/u;)V
 
-    .line 2211
+    .line 2225
     :goto_1
     invoke-interface {p1, p0}, Lcom/dyuproject/protostuff/l;->a(Lcom/dyuproject/protostuff/u;)I
 
@@ -133,7 +133,7 @@
 
     goto :goto_0
 
-    .line 2218
+    .line 2232
     :sswitch_0
     invoke-interface {p1}, Lcom/dyuproject/protostuff/l;->d()Z
 
@@ -147,7 +147,7 @@
 
     goto :goto_1
 
-    .line 2221
+    .line 2235
     :sswitch_1
     invoke-interface {p1}, Lcom/dyuproject/protostuff/l;->f()I
 
@@ -161,11 +161,11 @@
 
     goto :goto_1
 
-    .line 2216
+    .line 2230
     :sswitch_2
     return-void
 
-    .line 2213
+    .line 2227
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_2
@@ -185,15 +185,15 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 181
+    .line 195
     check-cast p2, Lcom/kik/xdata/model/userpreferences/XUserPreferences;
 
-    .line 1232
+    .line 1246
     iget-object v0, p2, Lcom/kik/xdata/model/userpreferences/XUserPreferences;->enterKeySend:Ljava/lang/Boolean;
 
     if-eqz v0, :cond_0
 
-    .line 1233
+    .line 1247
     const/16 v0, 0xa
 
     iget-object v1, p2, Lcom/kik/xdata/model/userpreferences/XUserPreferences;->enterKeySend:Ljava/lang/Boolean;
@@ -204,13 +204,13 @@
 
     invoke-interface {p1, v0, v1, v2}, Lcom/dyuproject/protostuff/q;->a(IZZ)V
 
-    .line 1235
+    .line 1249
     :cond_0
     iget-object v0, p2, Lcom/kik/xdata/model/userpreferences/XUserPreferences;->bubbleColor:Lcom/kik/xdata/model/userpreferences/XUserPreferences$XBubbleColor;
 
     if-eqz v0, :cond_1
 
-    .line 1236
+    .line 1250
     const/16 v0, 0xb
 
     iget-object v1, p2, Lcom/kik/xdata/model/userpreferences/XUserPreferences;->bubbleColor:Lcom/kik/xdata/model/userpreferences/XUserPreferences$XBubbleColor;
@@ -219,7 +219,7 @@
 
     invoke-interface {p1, v0, v1, v2}, Lcom/dyuproject/protostuff/q;->a(IIZ)V
 
-    .line 181
+    .line 195
     :cond_1
     return-void
 .end method
@@ -228,7 +228,7 @@
     .locals 1
 
     .prologue
-    .line 181
+    .line 195
     const/4 v0, 0x1
 
     return v0

@@ -36,7 +36,7 @@
     .locals 1
 
     .prologue
-    .line 78
+    .line 85
     iput-object p1, p0, Lkik/android/b/d$1;->f:Lkik/android/b/d;
 
     iput-object p2, p0, Lkik/android/b/d$1;->b:Ljava/lang/String;
@@ -49,7 +49,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 79
+    .line 86
     new-instance v0, Lkik/android/chat/fragment/KikChatFragment$a;
 
     invoke-direct {v0}, Lkik/android/chat/fragment/KikChatFragment$a;-><init>()V
@@ -65,14 +65,14 @@
     .locals 2
 
     .prologue
-    .line 84
+    .line 91
     iget-object v0, p0, Lkik/android/b/d$1;->f:Lkik/android/b/d;
 
-    invoke-static {v0}, Lkik/android/b/d;->e(Lkik/android/b/d;)Lcom/kik/cards/web/i;
+    invoke-static {v0}, Lkik/android/b/d;->e(Lkik/android/b/d;)Lcom/kik/cards/web/h;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/kik/cards/web/i;->a()Lcom/kik/events/Promise;
+    invoke-interface {v0}, Lcom/kik/cards/web/h;->getMetadata()Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -80,8 +80,8 @@
 
     invoke-direct {v1, p0}, Lkik/android/b/d$1$1;-><init>(Lkik/android/b/d$1;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
-    .line 118
+    .line 126
     return-void
 .end method

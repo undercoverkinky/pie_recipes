@@ -10,7 +10,6 @@
         Lcom/rengwuxian/materialedittext/R$style;,
         Lcom/rengwuxian/materialedittext/R$string;,
         Lcom/rengwuxian/materialedittext/R$layout;,
-        Lcom/rengwuxian/materialedittext/R$integer;,
         Lcom/rengwuxian/materialedittext/R$id;,
         Lcom/rengwuxian/materialedittext/R$drawable;,
         Lcom/rengwuxian/materialedittext/R$dimen;,

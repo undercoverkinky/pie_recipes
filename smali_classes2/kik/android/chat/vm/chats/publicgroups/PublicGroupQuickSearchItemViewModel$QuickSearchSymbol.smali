@@ -56,14 +56,14 @@
 
     const/4 v2, 0x0
 
-    .line 23
+    .line 24
     new-instance v0, Lkik/android/chat/vm/chats/publicgroups/PublicGroupQuickSearchItemViewModel$QuickSearchSymbol;
 
     const-string v1, "HEART"
 
     const-string v4, "heart"
 
-    const v5, 0x7f0201f5
+    const v5, 0x7f020250
 
     move v3, v2
 
@@ -71,14 +71,14 @@
 
     sput-object v0, Lkik/android/chat/vm/chats/publicgroups/PublicGroupQuickSearchItemViewModel$QuickSearchSymbol;->HEART:Lkik/android/chat/vm/chats/publicgroups/PublicGroupQuickSearchItemViewModel$QuickSearchSymbol;
 
-    .line 24
+    .line 25
     new-instance v3, Lkik/android/chat/vm/chats/publicgroups/PublicGroupQuickSearchItemViewModel$QuickSearchSymbol;
 
     const-string v4, "THUMB"
 
     const-string v7, "thumbs-up"
 
-    const v8, 0x7f0201f7
+    const v8, 0x7f020252
 
     move v5, v9
 
@@ -88,14 +88,14 @@
 
     sput-object v3, Lkik/android/chat/vm/chats/publicgroups/PublicGroupQuickSearchItemViewModel$QuickSearchSymbol;->THUMB:Lkik/android/chat/vm/chats/publicgroups/PublicGroupQuickSearchItemViewModel$QuickSearchSymbol;
 
-    .line 25
+    .line 26
     new-instance v3, Lkik/android/chat/vm/chats/publicgroups/PublicGroupQuickSearchItemViewModel$QuickSearchSymbol;
 
     const-string v4, "FIRE"
 
     const-string v7, "fire"
 
-    const v8, 0x7f0201f4
+    const v8, 0x7f02024f
 
     move v5, v10
 
@@ -105,14 +105,14 @@
 
     sput-object v3, Lkik/android/chat/vm/chats/publicgroups/PublicGroupQuickSearchItemViewModel$QuickSearchSymbol;->FIRE:Lkik/android/chat/vm/chats/publicgroups/PublicGroupQuickSearchItemViewModel$QuickSearchSymbol;
 
-    .line 26
+    .line 27
     new-instance v3, Lkik/android/chat/vm/chats/publicgroups/PublicGroupQuickSearchItemViewModel$QuickSearchSymbol;
 
     const-string v4, "SMILE"
 
     const-string v7, "smiley"
 
-    const v8, 0x7f0201f6
+    const v8, 0x7f020251
 
     move v5, v11
 
@@ -122,7 +122,7 @@
 
     sput-object v3, Lkik/android/chat/vm/chats/publicgroups/PublicGroupQuickSearchItemViewModel$QuickSearchSymbol;->SMILE:Lkik/android/chat/vm/chats/publicgroups/PublicGroupQuickSearchItemViewModel$QuickSearchSymbol;
 
-    .line 21
+    .line 22
     const/4 v0, 0x4
 
     new-array v0, v0, [Lkik/android/chat/vm/chats/publicgroups/PublicGroupQuickSearchItemViewModel$QuickSearchSymbol;
@@ -159,19 +159,19 @@
     .end annotation
 
     .prologue
-    .line 29
+    .line 30
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 30
+    .line 31
     iput p3, p0, Lkik/android/chat/vm/chats/publicgroups/PublicGroupQuickSearchItemViewModel$QuickSearchSymbol;->index:I
 
-    .line 31
+    .line 32
     iput-object p4, p0, Lkik/android/chat/vm/chats/publicgroups/PublicGroupQuickSearchItemViewModel$QuickSearchSymbol;->metricName:Ljava/lang/String;
 
-    .line 32
+    .line 33
     iput p5, p0, Lkik/android/chat/vm/chats/publicgroups/PublicGroupQuickSearchItemViewModel$QuickSearchSymbol;->icon:I
 
-    .line 33
+    .line 34
     return-void
 .end method
 
@@ -181,7 +181,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 41
+    .line 42
     invoke-static {}, Lkik/android/chat/vm/chats/publicgroups/PublicGroupQuickSearchItemViewModel$QuickSearchSymbol;->values()[Lkik/android/chat/vm/chats/publicgroups/PublicGroupQuickSearchItemViewModel$QuickSearchSymbol;
 
     move-result-object v2
@@ -195,21 +195,21 @@
 
     aget-object v4, v2, v0
 
-    .line 42
+    .line 43
     iget v5, v4, Lkik/android/chat/vm/chats/publicgroups/PublicGroupQuickSearchItemViewModel$QuickSearchSymbol;->index:I
 
     if-ne v5, p0, :cond_0
 
-    .line 43
+    .line 44
     return-object v4
 
-    .line 41
+    .line 42
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 46
+    .line 47
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -238,7 +238,7 @@
     .locals 1
 
     .prologue
-    .line 21
+    .line 22
     const-class v0, Lkik/android/chat/vm/chats/publicgroups/PublicGroupQuickSearchItemViewModel$QuickSearchSymbol;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -254,7 +254,7 @@
     .locals 1
 
     .prologue
-    .line 21
+    .line 22
     sget-object v0, Lkik/android/chat/vm/chats/publicgroups/PublicGroupQuickSearchItemViewModel$QuickSearchSymbol;->$VALUES:[Lkik/android/chat/vm/chats/publicgroups/PublicGroupQuickSearchItemViewModel$QuickSearchSymbol;
 
     invoke-virtual {v0}, [Lkik/android/chat/vm/chats/publicgroups/PublicGroupQuickSearchItemViewModel$QuickSearchSymbol;->clone()Ljava/lang/Object;

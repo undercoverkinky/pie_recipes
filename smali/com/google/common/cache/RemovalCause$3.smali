@@ -19,7 +19,7 @@
     .locals 1
 
     .prologue
-    .line 65
+    .line 60
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/common/cache/RemovalCause;-><init>(Ljava/lang/String;ILcom/google/common/cache/RemovalCause$1;)V
@@ -33,7 +33,7 @@
     .locals 1
 
     .prologue
-    .line 68
+    .line 63
     const/4 v0, 0x1
 
     return v0

@@ -11,7 +11,6 @@
         Landroid/support/v4/graphics/drawable/DrawableCompat$KitKatDrawableImpl;,
         Landroid/support/v4/graphics/drawable/DrawableCompat$JellybeanMr1DrawableImpl;,
         Landroid/support/v4/graphics/drawable/DrawableCompat$HoneycombDrawableImpl;,
-        Landroid/support/v4/graphics/drawable/DrawableCompat$EclairDrawableImpl;,
         Landroid/support/v4/graphics/drawable/DrawableCompat$BaseDrawableImpl;,
         Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;
     }
@@ -27,32 +26,32 @@
     .locals 2
 
     .prologue
-    .line 290
+    .line 298
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 291
+    .line 299
     const/16 v1, 0x17
 
     if-lt v0, v1, :cond_0
 
-    .line 292
+    .line 300
     new-instance v0, Landroid/support/v4/graphics/drawable/DrawableCompat$MDrawableImpl;
 
     invoke-direct {v0}, Landroid/support/v4/graphics/drawable/DrawableCompat$MDrawableImpl;-><init>()V
 
     sput-object v0, Landroid/support/v4/graphics/drawable/DrawableCompat;->IMPL:Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;
 
-    .line 306
+    .line 312
     :goto_0
     return-void
 
-    .line 293
+    .line 301
     :cond_0
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_1
 
-    .line 294
+    .line 302
     new-instance v0, Landroid/support/v4/graphics/drawable/DrawableCompat$LollipopDrawableImpl;
 
     invoke-direct {v0}, Landroid/support/v4/graphics/drawable/DrawableCompat$LollipopDrawableImpl;-><init>()V
@@ -61,13 +60,13 @@
 
     goto :goto_0
 
-    .line 295
+    .line 303
     :cond_1
     const/16 v1, 0x13
 
     if-lt v0, v1, :cond_2
 
-    .line 296
+    .line 304
     new-instance v0, Landroid/support/v4/graphics/drawable/DrawableCompat$KitKatDrawableImpl;
 
     invoke-direct {v0}, Landroid/support/v4/graphics/drawable/DrawableCompat$KitKatDrawableImpl;-><init>()V
@@ -76,13 +75,13 @@
 
     goto :goto_0
 
-    .line 297
+    .line 305
     :cond_2
     const/16 v1, 0x11
 
     if-lt v0, v1, :cond_3
 
-    .line 298
+    .line 306
     new-instance v0, Landroid/support/v4/graphics/drawable/DrawableCompat$JellybeanMr1DrawableImpl;
 
     invoke-direct {v0}, Landroid/support/v4/graphics/drawable/DrawableCompat$JellybeanMr1DrawableImpl;-><init>()V
@@ -91,13 +90,13 @@
 
     goto :goto_0
 
-    .line 299
+    .line 307
     :cond_3
     const/16 v1, 0xb
 
     if-lt v0, v1, :cond_4
 
-    .line 300
+    .line 308
     new-instance v0, Landroid/support/v4/graphics/drawable/DrawableCompat$HoneycombDrawableImpl;
 
     invoke-direct {v0}, Landroid/support/v4/graphics/drawable/DrawableCompat$HoneycombDrawableImpl;-><init>()V
@@ -106,23 +105,8 @@
 
     goto :goto_0
 
-    .line 301
+    .line 310
     :cond_4
-    const/4 v1, 0x5
-
-    if-lt v0, v1, :cond_5
-
-    .line 302
-    new-instance v0, Landroid/support/v4/graphics/drawable/DrawableCompat$EclairDrawableImpl;
-
-    invoke-direct {v0}, Landroid/support/v4/graphics/drawable/DrawableCompat$EclairDrawableImpl;-><init>()V
-
-    sput-object v0, Landroid/support/v4/graphics/drawable/DrawableCompat;->IMPL:Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;
-
-    goto :goto_0
-
-    .line 304
-    :cond_5
     new-instance v0, Landroid/support/v4/graphics/drawable/DrawableCompat$BaseDrawableImpl;
 
     invoke-direct {v0}, Landroid/support/v4/graphics/drawable/DrawableCompat$BaseDrawableImpl;-><init>()V
@@ -136,7 +120,7 @@
     .locals 0
 
     .prologue
-    .line 526
+    .line 546
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -146,12 +130,12 @@
     .locals 1
 
     .prologue
-    .line 417
+    .line 423
     sget-object v0, Landroid/support/v4/graphics/drawable/DrawableCompat;->IMPL:Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;->applyTheme(Landroid/graphics/drawable/Drawable;Landroid/content/res/Resources$Theme;)V
 
-    .line 418
+    .line 424
     return-void
 .end method
 
@@ -159,7 +143,7 @@
     .locals 1
 
     .prologue
-    .line 424
+    .line 430
     sget-object v0, Landroid/support/v4/graphics/drawable/DrawableCompat;->IMPL:Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;->canApplyTheme(Landroid/graphics/drawable/Drawable;)Z
@@ -169,11 +153,24 @@
     return v0
 .end method
 
+.method public static clearColorFilter(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
+
+    .prologue
+    .line 446
+    sget-object v0, Landroid/support/v4/graphics/drawable/DrawableCompat;->IMPL:Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;
+
+    invoke-interface {v0, p0}, Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;->clearColorFilter(Landroid/graphics/drawable/Drawable;)V
+
+    .line 447
+    return-void
+.end method
+
 .method public static getAlpha(Landroid/graphics/drawable/Drawable;)I
     .locals 1
 
     .prologue
-    .line 410
+    .line 416
     sget-object v0, Landroid/support/v4/graphics/drawable/DrawableCompat;->IMPL:Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;->getAlpha(Landroid/graphics/drawable/Drawable;)I
@@ -187,7 +184,7 @@
     .locals 1
 
     .prologue
-    .line 433
+    .line 439
     sget-object v0, Landroid/support/v4/graphics/drawable/DrawableCompat;->IMPL:Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;->getColorFilter(Landroid/graphics/drawable/Drawable;)Landroid/graphics/ColorFilter;
@@ -201,7 +198,7 @@
     .locals 1
 
     .prologue
-    .line 523
+    .line 543
     sget-object v0, Landroid/support/v4/graphics/drawable/DrawableCompat;->IMPL:Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;->getLayoutDirection(Landroid/graphics/drawable/Drawable;)I
@@ -221,7 +218,7 @@
     .end annotation
 
     .prologue
-    .line 449
+    .line 463
     sget-object v0, Landroid/support/v4/graphics/drawable/DrawableCompat;->IMPL:Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;
 
     move-object v1, p0
@@ -236,7 +233,7 @@
 
     invoke-interface/range {v0 .. v5}, Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;->inflate(Landroid/graphics/drawable/Drawable;Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
 
-    .line 450
+    .line 464
     return-void
 .end method
 
@@ -244,7 +241,7 @@
     .locals 1
 
     .prologue
-    .line 348
+    .line 354
     sget-object v0, Landroid/support/v4/graphics/drawable/DrawableCompat;->IMPL:Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;->isAutoMirrored(Landroid/graphics/drawable/Drawable;)Z
@@ -258,12 +255,12 @@
     .locals 1
 
     .prologue
-    .line 317
+    .line 323
     sget-object v0, Landroid/support/v4/graphics/drawable/DrawableCompat;->IMPL:Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;->jumpToCurrentState(Landroid/graphics/drawable/Drawable;)V
 
-    .line 318
+    .line 324
     return-void
 .end method
 
@@ -271,12 +268,12 @@
     .locals 1
 
     .prologue
-    .line 333
+    .line 339
     sget-object v0, Landroid/support/v4/graphics/drawable/DrawableCompat;->IMPL:Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;->setAutoMirrored(Landroid/graphics/drawable/Drawable;Z)V
 
-    .line 334
+    .line 340
     return-void
 .end method
 
@@ -284,12 +281,12 @@
     .locals 1
 
     .prologue
-    .line 359
+    .line 365
     sget-object v0, Landroid/support/v4/graphics/drawable/DrawableCompat;->IMPL:Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;
 
     invoke-interface {v0, p0, p1, p2}, Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;->setHotspot(Landroid/graphics/drawable/Drawable;FF)V
 
-    .line 360
+    .line 366
     return-void
 .end method
 
@@ -297,7 +294,7 @@
     .locals 6
 
     .prologue
-    .line 370
+    .line 376
     sget-object v0, Landroid/support/v4/graphics/drawable/DrawableCompat;->IMPL:Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;
 
     move-object v1, p0
@@ -312,33 +309,34 @@
 
     invoke-interface/range {v0 .. v5}, Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;->setHotspotBounds(Landroid/graphics/drawable/Drawable;IIII)V
 
-    .line 371
+    .line 377
     return-void
 .end method
 
-.method public static setLayoutDirection(Landroid/graphics/drawable/Drawable;I)V
+.method public static setLayoutDirection(Landroid/graphics/drawable/Drawable;I)Z
     .locals 1
 
     .prologue
-    .line 512
+    .line 532
     sget-object v0, Landroid/support/v4/graphics/drawable/DrawableCompat;->IMPL:Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;
 
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;->setLayoutDirection(Landroid/graphics/drawable/Drawable;I)V
+    invoke-interface {v0, p0, p1}, Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;->setLayoutDirection(Landroid/graphics/drawable/Drawable;I)Z
 
-    .line 513
-    return-void
+    move-result v0
+
+    return v0
 .end method
 
 .method public static setTint(Landroid/graphics/drawable/Drawable;I)V
     .locals 1
 
     .prologue
-    .line 380
+    .line 386
     sget-object v0, Landroid/support/v4/graphics/drawable/DrawableCompat;->IMPL:Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;->setTint(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 381
+    .line 387
     return-void
 .end method
 
@@ -346,12 +344,12 @@
     .locals 1
 
     .prologue
-    .line 390
+    .line 396
     sget-object v0, Landroid/support/v4/graphics/drawable/DrawableCompat;->IMPL:Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;->setTintList(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
-    .line 391
+    .line 397
     return-void
 .end method
 
@@ -359,12 +357,12 @@
     .locals 1
 
     .prologue
-    .line 400
+    .line 406
     sget-object v0, Landroid/support/v4/graphics/drawable/DrawableCompat;->IMPL:Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;->setTintMode(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
 
-    .line 401
+    .line 407
     return-void
 .end method
 
@@ -381,19 +379,19 @@
     .end annotation
 
     .prologue
-    .line 495
+    .line 512
     instance-of v0, p0, Landroid/support/v4/graphics/drawable/DrawableWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 496
+    .line 513
     check-cast p0, Landroid/support/v4/graphics/drawable/DrawableWrapper;
 
     invoke-interface {p0}, Landroid/support/v4/graphics/drawable/DrawableWrapper;->getWrappedDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 
-    .line 498
+    .line 515
     :cond_0
     return-object p0
 .end method
@@ -402,7 +400,7 @@
     .locals 1
 
     .prologue
-    .line 481
+    .line 498
     sget-object v0, Landroid/support/v4/graphics/drawable/DrawableCompat;->IMPL:Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/graphics/drawable/DrawableCompat$DrawableImpl;->wrap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;

@@ -9,7 +9,7 @@
 # static fields
 .field private static final ENABLE_AGAIN:Ljava/lang/Runnable;
 
-.field private static enabled:Z
+.field static enabled:Z
 
 
 # direct methods
@@ -40,16 +40,6 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-.method static synthetic access$002(Z)Z
-    .locals 0
-
-    .prologue
-    .line 9
-    sput-boolean p0, Lbutterknife/internal/DebouncingOnClickListener;->enabled:Z
-
-    return p0
 .end method
 
 

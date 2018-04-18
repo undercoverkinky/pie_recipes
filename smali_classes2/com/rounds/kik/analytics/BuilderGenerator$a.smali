@@ -55,7 +55,7 @@
 
     iput-object v0, p0, Lcom/rounds/kik/analytics/BuilderGenerator$a;->b:Ljava/util/Map;
 
-    .line 1096
+    .line 1110
     :try_start_0
     const-class v0, Lcom/rounds/kik/analytics/properties/common/EventName;
 
@@ -75,21 +75,21 @@
 
     move-result-object v0
 
-    .line 1101
+    .line 1115
     invoke-virtual {v0, v4}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
 
-    .line 1104
+    .line 1118
     :try_start_1
     iget-object v1, p0, Lcom/rounds/kik/analytics/BuilderGenerator$a;->b:Ljava/util/Map;
 
     const-class v2, Lcom/rounds/kik/analytics/properties/common/EventName;
 
-    .line 1258
+    .line 1272
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1104
+    .line 1118
     const/4 v3, 0x1
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -116,7 +116,7 @@
     .line 60
     return-void
 
-    .line 1099
+    .line 1113
     :catch_0
     move-exception v0
 
@@ -128,7 +128,7 @@
 
     throw v0
 
-    .line 1107
+    .line 1121
     :catch_1
     move-exception v0
 
@@ -140,7 +140,7 @@
 
     throw v0
 
-    .line 1110
+    .line 1124
     :catch_2
     move-exception v0
 
@@ -152,7 +152,7 @@
 
     throw v0
 
-    .line 1113
+    .line 1127
     :catch_3
     move-exception v0
 
@@ -188,12 +188,12 @@
 
     const/4 v5, 0x1
 
-    .line 186
+    .line 200
     new-instance v1, Lcom/google/gson/JsonObject;
 
     invoke-direct {v1}, Lcom/google/gson/JsonObject;-><init>()V
 
-    .line 188
+    .line 202
     iget-object v0, p0, Lcom/rounds/kik/analytics/BuilderGenerator$a;->b:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -217,14 +217,14 @@
 
     check-cast v0, Lcom/rounds/kik/analytics/properties/Property;
 
-    .line 189
+    .line 203
     invoke-virtual {v0}, Lcom/rounds/kik/analytics/properties/Property;->isValid()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 190
+    .line 204
     new-instance v1, Lcom/rounds/kik/analytics/properties/PropertyValueMissingException;
 
     new-array v2, v5, [Ljava/lang/String;
@@ -239,21 +239,21 @@
 
     throw v1
 
-    .line 193
+    .line 207
     :cond_0
     invoke-virtual {v0}, Lcom/rounds/kik/analytics/properties/Property;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v0}, Lcom/rounds/kik/analytics/properties/Property;->getValue()Lcom/google/gson/j;
+    invoke-virtual {v0}, Lcom/rounds/kik/analytics/properties/Property;->getValue()Lcom/google/gson/k;
 
     move-result-object v0
 
-    invoke-virtual {v1, v3, v0}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v1, v3, v0}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     goto :goto_0
 
-    .line 198
+    .line 212
     :cond_1
     :try_start_0
     const-class v0, Lcom/rounds/kik/analytics/AnalyticsEvent;
@@ -280,10 +280,10 @@
 
     move-result-object v0
 
-    .line 204
+    .line 218
     invoke-virtual {v0, v5}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
 
-    .line 206
+    .line 220
     const/4 v2, 0x2
 
     :try_start_1
@@ -299,47 +299,47 @@
 
     iget-object v4, p0, Lcom/rounds/kik/analytics/BuilderGenerator$a;->a:Ljava/lang/String;
 
-    .line 5167
+    .line 5181
     new-instance v5, Lcom/google/gson/JsonObject;
 
     invoke-direct {v5}, Lcom/google/gson/JsonObject;-><init>()V
 
-    .line 5168
+    .line 5182
     const-string v6, "payload"
 
-    invoke-virtual {v5, v6, v1}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v5, v6, v1}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
-    .line 5169
+    .line 5183
     const-string v1, "type"
 
-    .line 5177
+    .line 5191
     new-instance v6, Lcom/google/gson/JsonObject;
 
     invoke-direct {v6}, Lcom/google/gson/JsonObject;-><init>()V
 
-    .line 5178
+    .line 5192
     const-string v7, "group_name"
 
     const-string v8, "rkik"
 
     invoke-virtual {v6, v7, v8}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5179
+    .line 5193
     const-string v7, "event_name"
 
     invoke-virtual {v6, v7, v4}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5180
+    .line 5194
     const-string v4, "group_version"
 
     const-string v7, "1"
 
     invoke-virtual {v6, v4, v7}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5169
-    invoke-virtual {v5, v1, v6}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    .line 5183
+    invoke-virtual {v5, v1, v6}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
-    .line 206
+    .line 220
     aput-object v5, v2, v3
 
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
@@ -354,7 +354,7 @@
 
     return-object v0
 
-    .line 201
+    .line 215
     :catch_0
     move-exception v0
 
@@ -366,11 +366,11 @@
 
     throw v0
 
-    .line 208
+    .line 222
     :catch_1
     move-exception v0
 
-    .line 209
+    .line 223
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -395,11 +395,11 @@
 
     throw v1
 
-    .line 211
+    .line 225
     :catch_2
     move-exception v0
 
-    .line 212
+    .line 226
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -424,11 +424,11 @@
 
     throw v1
 
-    .line 214
+    .line 228
     :catch_3
     move-exception v0
 
-    .line 215
+    .line 229
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -460,8 +460,8 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 83
-    .line 4119
+    .line 97
+    .line 4133
     const-class v0, Lcom/rounds/kik/analytics/annotations/Properties;
 
     invoke-virtual {p1, v0}, Ljava/lang/Class;->isAnnotationPresent(Ljava/lang/Class;)Z
@@ -470,7 +470,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 4120
+    .line 4134
     const-class v0, Lcom/rounds/kik/analytics/annotations/Properties;
 
     invoke-virtual {p1, v0}, Ljava/lang/Class;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
@@ -479,7 +479,7 @@
 
     check-cast v0, Lcom/rounds/kik/analytics/annotations/Properties;
 
-    .line 4122
+    .line 4136
     invoke-interface {v0}, Lcom/rounds/kik/analytics/annotations/Properties;->value()[Ljava/lang/Class;
 
     move-result-object v2
@@ -493,17 +493,17 @@
 
     aget-object v4, v2, v0
 
-    .line 4123
+    .line 4137
     const/4 v5, 0x1
 
     invoke-direct {p0, v4, v5}, Lcom/rounds/kik/analytics/BuilderGenerator$a;->a(Ljava/lang/Class;Z)V
 
-    .line 4122
+    .line 4136
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 4130
+    .line 4144
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Class;->getMethods()[Ljava/lang/reflect/Method;
 
@@ -518,7 +518,7 @@
 
     aget-object v0, v3, v2
 
-    .line 4131
+    .line 4145
     const-class v5, Lcom/rounds/kik/analytics/annotations/PropertySetter;
 
     invoke-virtual {v0, v5}, Ljava/lang/reflect/Method;->isAnnotationPresent(Ljava/lang/Class;)Z
@@ -527,7 +527,7 @@
 
     if-eqz v5, :cond_1
 
-    .line 4132
+    .line 4146
     const-class v5, Lcom/rounds/kik/analytics/annotations/PropertySetter;
 
     invoke-virtual {v0, v5}, Ljava/lang/reflect/Method;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
@@ -536,7 +536,7 @@
 
     check-cast v0, Lcom/rounds/kik/analytics/annotations/PropertySetter;
 
-    .line 4133
+    .line 4147
     invoke-interface {v0}, Lcom/rounds/kik/analytics/annotations/PropertySetter;->value()Ljava/lang/Class;
 
     move-result-object v5
@@ -547,7 +547,7 @@
 
     invoke-direct {p0, v5, v0}, Lcom/rounds/kik/analytics/BuilderGenerator$a;->a(Ljava/lang/Class;Z)V
 
-    .line 4130
+    .line 4144
     :cond_1
     add-int/lit8 v0, v2, 0x1
 
@@ -555,7 +555,7 @@
 
     goto :goto_1
 
-    .line 86
+    .line 100
     :cond_2
     invoke-virtual {p1}, Ljava/lang/Class;->getInterfaces()[Ljava/lang/Class;
 
@@ -570,15 +570,15 @@
 
     aget-object v1, v2, v0
 
-    .line 87
+    .line 101
     invoke-direct {p0, v1}, Lcom/rounds/kik/analytics/BuilderGenerator$a;->a(Ljava/lang/Class;)V
 
-    .line 86
+    .line 100
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 89
+    .line 103
     :cond_3
     return-void
 .end method
@@ -596,13 +596,13 @@
     .end annotation
 
     .prologue
-    .line 140
-    .line 4258
+    .line 154
+    .line 4272
     invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 141
+    .line 155
     iget-object v0, p0, Lcom/rounds/kik/analytics/BuilderGenerator$a;->b:Ljava/util/Map;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -611,11 +611,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 161
+    .line 175
     :goto_0
     return-void
 
-    .line 146
+    .line 160
     :cond_0
     const/4 v0, 0x1
 
@@ -632,12 +632,12 @@
 
     move-result-object v0
 
-    .line 147
+    .line 161
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
 
-    .line 148
+    .line 162
     iget-object v2, p0, Lcom/rounds/kik/analytics/BuilderGenerator$a;->b:Ljava/util/Map;
 
     const/4 v3, 0x1
@@ -665,7 +665,7 @@
 
     goto :goto_0
 
-    .line 151
+    .line 165
     :catch_0
     move-exception v0
 
@@ -693,11 +693,11 @@
 
     throw v0
 
-    .line 153
+    .line 167
     :catch_1
     move-exception v0
 
-    .line 154
+    .line 168
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -722,11 +722,11 @@
 
     throw v2
 
-    .line 156
+    .line 170
     :catch_2
     move-exception v0
 
-    .line 157
+    .line 171
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -751,11 +751,11 @@
 
     throw v2
 
-    .line 159
+    .line 173
     :catch_3
     move-exception v0
 
-    .line 160
+    .line 174
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -812,7 +812,7 @@
     .line 66
     const-string v0, "EventBuilder"
 
-    .line 78
+    .line 92
     :goto_0
     return-object v0
 
@@ -839,15 +839,100 @@
 
     .line 73
     :cond_1
+    invoke-virtual {p2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "eventName"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 74
+    iget-object v0, p0, Lcom/rounds/kik/analytics/BuilderGenerator$a;->a:Ljava/lang/String;
+
+    goto :goto_0
+
+    .line 77
+    :cond_2
+    invoke-virtual {p2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "equals"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    .line 78
+    iget-object v0, p0, Lcom/rounds/kik/analytics/BuilderGenerator$a;->a:Ljava/lang/String;
+
+    if-nez v0, :cond_3
+
+    .line 79
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    goto :goto_0
+
+    .line 81
+    :cond_3
+    if-eqz p3, :cond_4
+
+    array-length v0, p3
+
+    if-lez v0, :cond_4
+
+    aget-object v0, p3, v3
+
+    instance-of v0, v0, Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;
+
+    if-nez v0, :cond_5
+
+    .line 82
+    :cond_4
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    goto :goto_0
+
+    .line 84
+    :cond_5
+    iget-object v1, p0, Lcom/rounds/kik/analytics/BuilderGenerator$a;->a:Ljava/lang/String;
+
+    aget-object v0, p3, v3
+
+    check-cast v0, Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;
+
+    invoke-interface {v0}, Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;->eventName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 87
+    :cond_6
     const-class v0, Lcom/rounds/kik/analytics/annotations/PropertySetter;
 
     invoke-virtual {p2, v0}, Ljava/lang/reflect/Method;->isAnnotationPresent(Ljava/lang/Class;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_d
 
-    .line 74
+    .line 88
     const-class v0, Lcom/rounds/kik/analytics/annotations/PropertySetter;
 
     invoke-virtual {p2, v0}, Ljava/lang/reflect/Method;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
@@ -856,17 +941,17 @@
 
     check-cast v0, Lcom/rounds/kik/analytics/annotations/PropertySetter;
 
-    .line 2221
+    .line 2235
     invoke-interface {v0}, Lcom/rounds/kik/analytics/annotations/PropertySetter;->value()Ljava/lang/Class;
 
     move-result-object v5
 
-    .line 2222
+    .line 2236
     invoke-virtual {p2}, Ljava/lang/reflect/Method;->getGenericParameterTypes()[Ljava/lang/reflect/Type;
 
     move-result-object v6
 
-    .line 2225
+    .line 2239
     invoke-virtual {v5}, Ljava/lang/Class;->getMethods()[Ljava/lang/reflect/Method;
 
     move-result-object v7
@@ -876,29 +961,29 @@
     move v4, v3
 
     :goto_1
-    if-ge v4, v8, :cond_5
+    if-ge v4, v8, :cond_a
 
     aget-object v0, v7, v4
 
-    .line 2226
+    .line 2240
     invoke-virtual {v0}, Ljava/lang/reflect/Method;->getGenericParameterTypes()[Ljava/lang/reflect/Type;
 
     move-result-object v9
 
-    .line 2263
+    .line 2277
     array-length v2, v6
 
     array-length v10, v9
 
-    if-eq v2, v10, :cond_2
+    if-eq v2, v10, :cond_7
 
     move v2, v3
 
-    .line 2226
+    .line 2240
     :goto_2
-    if-eqz v2, :cond_9
+    if-eqz v2, :cond_e
 
-    .line 2225
+    .line 2239
     :goto_3
     add-int/lit8 v1, v4, 0x1
 
@@ -908,16 +993,16 @@
 
     goto :goto_1
 
-    :cond_2
+    :cond_7
     move v2, v3
 
-    .line 2267
+    .line 2281
     :goto_4
     array-length v10, v6
 
-    if-ge v2, v10, :cond_4
+    if-ge v2, v10, :cond_9
 
-    .line 2268
+    .line 2282
     aget-object v10, v6, v2
 
     aget-object v11, v9, v2
@@ -926,30 +1011,30 @@
 
     move-result v10
 
-    if-nez v10, :cond_3
+    if-nez v10, :cond_8
 
     move v2, v3
 
-    .line 2269
+    .line 2283
     goto :goto_2
 
-    .line 2267
-    :cond_3
+    .line 2281
+    :cond_8
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_4
 
-    .line 2273
-    :cond_4
+    .line 2287
+    :cond_9
     const/4 v2, 0x1
 
     goto :goto_2
 
-    .line 2231
-    :cond_5
-    if-nez v1, :cond_6
+    .line 2245
+    :cond_a
+    if-nez v1, :cond_b
 
-    .line 2232
+    .line 2246
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "can not find method to invoke"
@@ -958,26 +1043,26 @@
 
     throw v0
 
-    .line 2235
-    :cond_6
+    .line 2249
+    :cond_b
     iget-object v0, p0, Lcom/rounds/kik/analytics/BuilderGenerator$a;->b:Ljava/util/Map;
 
-    .line 3258
+    .line 3272
     invoke-virtual {v5}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 2235
+    .line 2249
     invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/rounds/kik/analytics/properties/Property;
 
-    .line 2236
-    if-nez v0, :cond_7
+    .line 2250
+    if-nez v0, :cond_c
 
-    .line 2237
+    .line 2251
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "can not find annotated property"
@@ -986,24 +1071,24 @@
 
     throw v0
 
-    .line 2241
-    :cond_7
+    .line 2255
+    :cond_c
     :try_start_0
     invoke-virtual {v1, v0, p3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 75
+    .line 89
     iget-object v0, p0, Lcom/rounds/kik/analytics/BuilderGenerator$a;->c:Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 2243
+    .line 2257
     :catch_0
     move-exception v0
 
-    .line 2244
+    .line 2258
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1028,11 +1113,11 @@
 
     throw v1
 
-    .line 2246
+    .line 2260
     :catch_1
     move-exception v0
 
-    .line 2247
+    .line 2261
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1057,13 +1142,13 @@
 
     throw v1
 
-    :cond_8
+    :cond_d
     move-object v0, v1
 
-    .line 78
+    .line 92
     goto/16 :goto_0
 
-    :cond_9
+    :cond_e
     move-object v0, v1
 
     goto :goto_3

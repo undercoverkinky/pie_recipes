@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/fragment/ViewPictureFragment$25;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
         "Ljava/io/File;",
         ">;"
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 426
+    .line 475
     iput-object p1, p0, Lkik/android/chat/fragment/ViewPictureFragment$25;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -46,29 +46,29 @@
     .locals 2
 
     .prologue
-    .line 426
+    .line 475
     check-cast p1, Ljava/io/File;
 
-    .line 1431
+    .line 1480
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$25;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 1432
+    .line 1481
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$25;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment;->a(Lkik/android/chat/fragment/ViewPictureFragment;Z)Z
 
-    .line 1433
+    .line 1482
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$25;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     invoke-static {v0, p1}, Lkik/android/chat/fragment/ViewPictureFragment;->a(Lkik/android/chat/fragment/ViewPictureFragment;Ljava/io/File;)Ljava/io/File;
 
-    .line 1434
+    .line 1483
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$25;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     invoke-virtual {p1}, Ljava/io/File;->getPath()Ljava/lang/String;
@@ -77,7 +77,7 @@
 
     invoke-static {v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment;->a(Lkik/android/chat/fragment/ViewPictureFragment;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1435
+    .line 1484
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$25;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     iget-object v1, p0, Lkik/android/chat/fragment/ViewPictureFragment$25;->a:Lkik/android/chat/fragment/ViewPictureFragment;
@@ -88,16 +88,16 @@
 
     invoke-static {v0, p1, v1}, Lkik/android/chat/fragment/ViewPictureFragment;->a(Lkik/android/chat/fragment/ViewPictureFragment;Ljava/io/File;Lkik/core/datatypes/messageExtensions/ContentMessage;)V
 
-    .line 1436
+    .line 1485
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$25;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     new-instance v1, Lkik/android/chat/fragment/ViewPictureFragment$25$1;
 
     invoke-direct {v1, p0}, Lkik/android/chat/fragment/ViewPictureFragment$25$1;-><init>(Lkik/android/chat/fragment/ViewPictureFragment$25;)V
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment;->b(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment;->runOnUiIfAttached(Ljava/lang/Runnable;)V
 
-    .line 426
+    .line 475
     return-void
 .end method
 
@@ -105,29 +105,29 @@
     .locals 2
 
     .prologue
-    .line 448
+    .line 498
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$25;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 449
+    .line 499
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$25;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment;->a(Lkik/android/chat/fragment/ViewPictureFragment;Z)Z
 
-    .line 450
+    .line 500
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$25;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     new-instance v1, Lkik/android/chat/fragment/ViewPictureFragment$25$2;
 
     invoke-direct {v1, p0, p1}, Lkik/android/chat/fragment/ViewPictureFragment$25$2;-><init>(Lkik/android/chat/fragment/ViewPictureFragment$25;Ljava/lang/Throwable;)V
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment;->b(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment;->runOnUiIfAttached(Ljava/lang/Runnable;)V
 
-    .line 462
+    .line 513
     return-void
 .end method

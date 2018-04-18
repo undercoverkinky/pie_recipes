@@ -2,16 +2,10 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lkik/android/util/aj;
+
 
 # virtual methods
-.method public abstract a(Ljava/lang/String;)Landroid/content/SharedPreferences;
-.end method
-
-.method public abstract b()Landroid/content/SharedPreferences;
-.end method
-
-.method public abstract c()Landroid/content/SharedPreferences;
-.end method
-
-.method public abstract d()Ljava/lang/String;
+.method public abstract a()V
 .end method

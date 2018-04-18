@@ -6,11 +6,11 @@
 # instance fields
 .field private final a:Ljava/lang/String;
 
-.field private final b:Lio/fabric/sdk/android/services/c/a;
+.field private final b:Lio/fabric/sdk/android/services/b/a;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lio/fabric/sdk/android/services/c/a;)V
+.method public constructor <init>(Ljava/lang/String;Lio/fabric/sdk/android/services/b/a;)V
     .locals 0
 
     .prologue
@@ -21,7 +21,7 @@
     iput-object p1, p0, Lcom/crashlytics/android/core/i;->a:Ljava/lang/String;
 
     .line 26
-    iput-object p2, p0, Lcom/crashlytics/android/core/i;->b:Lio/fabric/sdk/android/services/c/a;
+    iput-object p2, p0, Lcom/crashlytics/android/core/i;->b:Lio/fabric/sdk/android/services/b/a;
 
     .line 27
     return-void
@@ -34,9 +34,9 @@
     .line 60
     new-instance v0, Ljava/io/File;
 
-    iget-object v1, p0, Lcom/crashlytics/android/core/i;->b:Lio/fabric/sdk/android/services/c/a;
+    iget-object v1, p0, Lcom/crashlytics/android/core/i;->b:Lio/fabric/sdk/android/services/b/a;
 
-    invoke-interface {v1}, Lio/fabric/sdk/android/services/c/a;->a()Ljava/io/File;
+    invoke-interface {v1}, Lio/fabric/sdk/android/services/b/a;->a()Ljava/io/File;
 
     move-result-object v1
 

@@ -5,18 +5,14 @@
 
 # instance fields
 .field _profilePhotoImageView:Landroid/widget/ImageView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f110351
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1003c7
     .end annotation
 .end field
 
 .field _setPhotoContentsContainer:Landroid/view/View;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f110350
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1003c6
     .end annotation
 .end field
 
@@ -26,13 +22,13 @@
     .locals 0
 
     .prologue
-    .line 26
+    .line 28
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 27
+    .line 29
     invoke-direct {p0, p1}, Lkik/android/chat/view/SetProfilePhotoView;->a(Landroid/content/Context;)V
 
-    .line 28
+    .line 30
     return-void
 .end method
 
@@ -40,13 +36,13 @@
     .locals 0
 
     .prologue
-    .line 32
+    .line 34
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 33
+    .line 35
     invoke-direct {p0, p1}, Lkik/android/chat/view/SetProfilePhotoView;->a(Landroid/content/Context;)V
 
-    .line 34
+    .line 36
     return-void
 .end method
 
@@ -54,13 +50,13 @@
     .locals 0
 
     .prologue
-    .line 38
+    .line 40
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 39
+    .line 41
     invoke-direct {p0, p1}, Lkik/android/chat/view/SetProfilePhotoView;->a(Landroid/content/Context;)V
 
-    .line 40
+    .line 42
     return-void
 .end method
 
@@ -68,13 +64,13 @@
     .locals 0
 
     .prologue
-    .line 44
+    .line 47
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 45
+    .line 48
     invoke-direct {p0, p1}, Lkik/android/chat/view/SetProfilePhotoView;->a(Landroid/content/Context;)V
 
-    .line 46
+    .line 49
     return-void
 .end method
 
@@ -82,20 +78,20 @@
     .locals 1
 
     .prologue
-    .line 50
-    const v0, 0x7f04011d
+    .line 53
+    const v0, 0x7f04015e
 
     invoke-static {p1, v0, p0}, Lkik/android/chat/view/SetProfilePhotoView;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    .line 51
-    invoke-static {p0}, Lbutterknife/ButterKnife;->bind(Landroid/view/View;)V
+    .line 54
+    invoke-static {p0}, Lbutterknife/ButterKnife;->bind(Landroid/view/View;)Lbutterknife/Unbinder;
 
-    .line 52
-    const v0, 0x7f02007b
+    .line 55
+    const v0, 0x7f0200a4
 
     invoke-virtual {p0, v0}, Lkik/android/chat/view/SetProfilePhotoView;->setBackgroundResource(I)V
 
-    .line 53
+    .line 56
     return-void
 .end method
 
@@ -105,7 +101,7 @@
     .locals 3
 
     .prologue
-    .line 58
+    .line 61
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/view/View;
@@ -116,9 +112,9 @@
 
     aput-object v2, v0, v1
 
-    invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->d([Landroid/view/View;)V
 
-    .line 63
+    .line 66
     return-void
 .end method
 
@@ -126,12 +122,12 @@
     .locals 1
 
     .prologue
-    .line 76
+    .line 79
     iget-object v0, p0, Lkik/android/chat/view/SetProfilePhotoView;->_profilePhotoImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 77
+    .line 80
     return-void
 .end method
 
@@ -139,7 +135,7 @@
     .locals 3
 
     .prologue
-    .line 71
+    .line 74
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/view/View;
@@ -150,8 +146,8 @@
 
     aput-object v2, v0, v1
 
-    invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->g([Landroid/view/View;)V
 
-    .line 73
+    .line 76
     return-void
 .end method

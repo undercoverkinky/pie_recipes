@@ -40,7 +40,7 @@
     .line 577
     iget-object v0, p0, Lcom/github/clans/fab/FloatingActionButton$2;->a:Lcom/github/clans/fab/FloatingActionButton;
 
-    sget v1, Lcom/github/clans/fab/a$d;->a:I
+    sget v1, Lcom/github/clans/fab/R$id;->fab_label:I
 
     invoke-virtual {v0, v1}, Lcom/github/clans/fab/FloatingActionButton;->getTag(I)Ljava/lang/Object;
 
@@ -75,7 +75,7 @@
     .line 587
     iget-object v0, p0, Lcom/github/clans/fab/FloatingActionButton$2;->a:Lcom/github/clans/fab/FloatingActionButton;
 
-    sget v1, Lcom/github/clans/fab/a$d;->a:I
+    sget v1, Lcom/github/clans/fab/R$id;->fab_label:I
 
     invoke-virtual {v0, v1}, Lcom/github/clans/fab/FloatingActionButton;->getTag(I)Ljava/lang/Object;
 

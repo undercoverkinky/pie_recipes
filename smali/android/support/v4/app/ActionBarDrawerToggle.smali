@@ -9,7 +9,6 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroid/support/v4/app/ActionBarDrawerToggle$1;,
         Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;,
         Landroid/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImplJellybeanMR2;,
         Landroid/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImplHC;,
@@ -33,7 +32,7 @@
 
 
 # instance fields
-.field private final mActivity:Landroid/app/Activity;
+.field final mActivity:Landroid/app/Activity;
 
 .field private final mActivityImpl:Landroid/support/v4/app/ActionBarDrawerToggle$Delegate;
 
@@ -60,50 +59,48 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
     .prologue
-    const/4 v2, 0x0
-
-    .line 176
+    .line 195
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 177
+    .line 196
     const/16 v1, 0x12
 
     if-lt v0, v1, :cond_0
 
-    .line 178
+    .line 197
     new-instance v0, Landroid/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImplJellybeanMR2;
 
-    invoke-direct {v0, v2}, Landroid/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImplJellybeanMR2;-><init>(Landroid/support/v4/app/ActionBarDrawerToggle$1;)V
+    invoke-direct {v0}, Landroid/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImplJellybeanMR2;-><init>()V
 
     sput-object v0, Landroid/support/v4/app/ActionBarDrawerToggle;->IMPL:Landroid/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImpl;
 
-    .line 184
+    .line 203
     :goto_0
     return-void
 
-    .line 179
+    .line 198
     :cond_0
     const/16 v1, 0xb
 
     if-lt v0, v1, :cond_1
 
-    .line 180
+    .line 199
     new-instance v0, Landroid/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImplHC;
 
-    invoke-direct {v0, v2}, Landroid/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImplHC;-><init>(Landroid/support/v4/app/ActionBarDrawerToggle$1;)V
+    invoke-direct {v0}, Landroid/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImplHC;-><init>()V
 
     sput-object v0, Landroid/support/v4/app/ActionBarDrawerToggle;->IMPL:Landroid/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImpl;
 
     goto :goto_0
 
-    .line 182
+    .line 201
     :cond_1
     new-instance v0, Landroid/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImplBase;
 
-    invoke-direct {v0, v2}, Landroid/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImplBase;-><init>(Landroid/support/v4/app/ActionBarDrawerToggle$1;)V
+    invoke-direct {v0}, Landroid/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImplBase;-><init>()V
 
     sput-object v0, Landroid/support/v4/app/ActionBarDrawerToggle;->IMPL:Landroid/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImpl;
 
@@ -114,7 +111,7 @@
     .locals 7
 
     .prologue
-    .line 229
+    .line 248
     invoke-static {p1}, Landroid/support/v4/app/ActionBarDrawerToggle;->assumeMaterial(Landroid/content/Context;)Z
 
     move-result v0
@@ -138,10 +135,10 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/support/v4/app/ActionBarDrawerToggle;-><init>(Landroid/app/Activity;Landroid/support/v4/widget/DrawerLayout;ZIII)V
 
-    .line 231
+    .line 250
     return-void
 
-    .line 229
+    .line 248
     :cond_0
     const/4 v3, 0x0
 
@@ -149,30 +146,28 @@
 .end method
 
 .method public constructor <init>(Landroid/app/Activity;Landroid/support/v4/widget/DrawerLayout;ZIII)V
-    .locals 3
+    .locals 2
 
     .prologue
-    const/4 v2, 0x0
-
-    .line 261
+    .line 280
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 195
+    .line 214
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mDrawerIndicatorEnabled:Z
 
-    .line 262
+    .line 281
     iput-object p1, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mActivity:Landroid/app/Activity;
 
-    .line 265
+    .line 284
     instance-of v0, p1, Landroid/support/v4/app/ActionBarDrawerToggle$DelegateProvider;
 
     if-eqz v0, :cond_0
 
     move-object v0, p1
 
-    .line 266
+    .line 285
     check-cast v0, Landroid/support/v4/app/ActionBarDrawerToggle$DelegateProvider;
 
     invoke-interface {v0}, Landroid/support/v4/app/ActionBarDrawerToggle$DelegateProvider;->getDrawerToggleDelegate()Landroid/support/v4/app/ActionBarDrawerToggle$Delegate;
@@ -181,43 +176,43 @@
 
     iput-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mActivityImpl:Landroid/support/v4/app/ActionBarDrawerToggle$Delegate;
 
-    .line 271
+    .line 290
     :goto_0
     iput-object p2, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mDrawerLayout:Landroid/support/v4/widget/DrawerLayout;
 
-    .line 272
+    .line 291
     iput p4, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mDrawerImageResource:I
 
-    .line 273
+    .line 292
     iput p5, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mOpenDrawerContentDescRes:I
 
-    .line 274
+    .line 293
     iput p6, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mCloseDrawerContentDescRes:I
 
-    .line 276
+    .line 295
     invoke-virtual {p0}, Landroid/support/v4/app/ActionBarDrawerToggle;->getThemeUpIndicator()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mHomeAsUpIndicator:Landroid/graphics/drawable/Drawable;
 
-    .line 277
+    .line 296
     invoke-static {p1, p4}, Landroid/support/v4/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mDrawerImage:Landroid/graphics/drawable/Drawable;
 
-    .line 278
+    .line 297
     new-instance v0, Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;
 
     iget-object v1, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mDrawerImage:Landroid/graphics/drawable/Drawable;
 
-    invoke-direct {v0, p0, v1, v2}, Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;-><init>(Landroid/support/v4/app/ActionBarDrawerToggle;Landroid/graphics/drawable/Drawable;Landroid/support/v4/app/ActionBarDrawerToggle$1;)V
+    invoke-direct {v0, p0, v1}, Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;-><init>(Landroid/support/v4/app/ActionBarDrawerToggle;Landroid/graphics/drawable/Drawable;)V
 
     iput-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mSlider:Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;
 
-    .line 279
+    .line 298
     iget-object v1, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mSlider:Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;
 
     if-eqz p3, :cond_1
@@ -227,30 +222,22 @@
     :goto_1
     invoke-virtual {v1, v0}, Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;->setOffset(F)V
 
-    .line 280
+    .line 299
     return-void
 
-    .line 268
+    .line 287
     :cond_0
-    iput-object v2, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mActivityImpl:Landroid/support/v4/app/ActionBarDrawerToggle$Delegate;
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mActivityImpl:Landroid/support/v4/app/ActionBarDrawerToggle$Delegate;
 
     goto :goto_0
 
-    .line 279
+    .line 298
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_1
-.end method
-
-.method static synthetic access$400(Landroid/support/v4/app/ActionBarDrawerToggle;)Landroid/app/Activity;
-    .locals 1
-
-    .prologue
-    .line 65
-    iget-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mActivity:Landroid/app/Activity;
-
-    return-object v0
 .end method
 
 .method private static assumeMaterial(Landroid/content/Context;)Z
@@ -259,7 +246,7 @@
     .prologue
     const/16 v1, 0x15
 
-    .line 234
+    .line 253
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
@@ -289,19 +276,19 @@
     .locals 2
 
     .prologue
-    .line 477
+    .line 496
     iget-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mActivityImpl:Landroid/support/v4/app/ActionBarDrawerToggle$Delegate;
 
     if-eqz v0, :cond_0
 
-    .line 478
+    .line 497
     iget-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mActivityImpl:Landroid/support/v4/app/ActionBarDrawerToggle$Delegate;
 
     invoke-interface {v0}, Landroid/support/v4/app/ActionBarDrawerToggle$Delegate;->getThemeUpIndicator()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 480
+    .line 499
     :goto_0
     return-object v0
 
@@ -321,7 +308,7 @@
     .locals 1
 
     .prologue
-    .line 376
+    .line 395
     iget-boolean v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mDrawerIndicatorEnabled:Z
 
     return v0
@@ -331,19 +318,19 @@
     .locals 2
 
     .prologue
-    .line 388
+    .line 407
     iget-boolean v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mHasCustomUpIndicator:Z
 
     if-nez v0, :cond_0
 
-    .line 389
+    .line 408
     invoke-virtual {p0}, Landroid/support/v4/app/ActionBarDrawerToggle;->getThemeUpIndicator()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mHomeAsUpIndicator:Landroid/graphics/drawable/Drawable;
 
-    .line 391
+    .line 410
     :cond_0
     iget-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mActivity:Landroid/app/Activity;
 
@@ -355,10 +342,10 @@
 
     iput-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mDrawerImage:Landroid/graphics/drawable/Drawable;
 
-    .line 392
+    .line 411
     invoke-virtual {p0}, Landroid/support/v4/app/ActionBarDrawerToggle;->syncState()V
 
-    .line 393
+    .line 412
     return-void
 .end method
 
@@ -366,24 +353,24 @@
     .locals 2
 
     .prologue
-    .line 459
+    .line 478
     iget-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mSlider:Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;->setPosition(F)V
 
-    .line 460
+    .line 479
     iget-boolean v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mDrawerIndicatorEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 461
+    .line 480
     iget v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mOpenDrawerContentDescRes:I
 
     invoke-virtual {p0, v0}, Landroid/support/v4/app/ActionBarDrawerToggle;->setActionBarDescription(I)V
 
-    .line 463
+    .line 482
     :cond_0
     return-void
 .end method
@@ -392,24 +379,24 @@
     .locals 2
 
     .prologue
-    .line 444
+    .line 463
     iget-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mSlider:Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-virtual {v0, v1}, Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;->setPosition(F)V
 
-    .line 445
+    .line 464
     iget-boolean v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mDrawerIndicatorEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 446
+    .line 465
     iget v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mCloseDrawerContentDescRes:I
 
     invoke-virtual {p0, v0}, Landroid/support/v4/app/ActionBarDrawerToggle;->setActionBarDescription(I)V
 
-    .line 448
+    .line 467
     :cond_0
     return-void
 .end method
@@ -422,19 +409,19 @@
 
     const/high16 v2, 0x3f000000    # 0.5f
 
-    .line 426
+    .line 445
     iget-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mSlider:Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;
 
     invoke-virtual {v0}, Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;->getPosition()F
 
     move-result v0
 
-    .line 427
+    .line 446
     cmpl-float v1, p2, v2
 
     if-lez v1, :cond_0
 
-    .line 428
+    .line 447
     const/4 v1, 0x0
 
     sub-float v2, p2, v2
@@ -449,16 +436,16 @@
 
     move-result v0
 
-    .line 432
+    .line 451
     :goto_0
     iget-object v1, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mSlider:Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;
 
     invoke-virtual {v1, v0}, Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;->setPosition(F)V
 
-    .line 433
+    .line 452
     return-void
 
-    .line 430
+    .line 449
     :cond_0
     mul-float v1, p2, v3
 
@@ -473,7 +460,7 @@
     .locals 0
 
     .prologue
-    .line 474
+    .line 493
     return-void
 .end method
 
@@ -483,7 +470,7 @@
     .prologue
     const v2, 0x800003
 
-    .line 405
+    .line 424
     if-eqz p1, :cond_1
 
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
@@ -498,7 +485,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 406
+    .line 425
     iget-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mDrawerLayout:Landroid/support/v4/widget/DrawerLayout;
 
     invoke-virtual {v0, v2}, Landroid/support/v4/widget/DrawerLayout;->isDrawerVisible(I)Z
@@ -507,20 +494,20 @@
 
     if-eqz v0, :cond_0
 
-    .line 407
+    .line 426
     iget-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mDrawerLayout:Landroid/support/v4/widget/DrawerLayout;
 
     invoke-virtual {v0, v2}, Landroid/support/v4/widget/DrawerLayout;->closeDrawer(I)V
 
-    .line 411
+    .line 430
     :goto_0
     const/4 v0, 0x1
 
-    .line 413
+    .line 432
     :goto_1
     return v0
 
-    .line 409
+    .line 428
     :cond_0
     iget-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mDrawerLayout:Landroid/support/v4/widget/DrawerLayout;
 
@@ -528,7 +515,7 @@
 
     goto :goto_0
 
-    .line 413
+    .line 432
     :cond_1
     const/4 v0, 0x0
 
@@ -539,21 +526,21 @@
     .locals 3
 
     .prologue
-    .line 493
+    .line 512
     iget-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mActivityImpl:Landroid/support/v4/app/ActionBarDrawerToggle$Delegate;
 
     if-eqz v0, :cond_0
 
-    .line 494
+    .line 513
     iget-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mActivityImpl:Landroid/support/v4/app/ActionBarDrawerToggle$Delegate;
 
     invoke-interface {v0, p1}, Landroid/support/v4/app/ActionBarDrawerToggle$Delegate;->setActionBarDescription(I)V
 
-    .line 499
+    .line 518
     :goto_0
     return-void
 
-    .line 497
+    .line 516
     :cond_0
     sget-object v0, Landroid/support/v4/app/ActionBarDrawerToggle;->IMPL:Landroid/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImpl;
 
@@ -561,6 +548,7 @@
 
     iget-object v2, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mActivity:Landroid/app/Activity;
 
+    .line 517
     invoke-interface {v0, v1, v2, p1}, Landroid/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImpl;->setActionBarDescription(Ljava/lang/Object;Landroid/app/Activity;I)Ljava/lang/Object;
 
     move-result-object v0
@@ -574,21 +562,21 @@
     .locals 3
 
     .prologue
-    .line 484
+    .line 503
     iget-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mActivityImpl:Landroid/support/v4/app/ActionBarDrawerToggle$Delegate;
 
     if-eqz v0, :cond_0
 
-    .line 485
+    .line 504
     iget-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mActivityImpl:Landroid/support/v4/app/ActionBarDrawerToggle$Delegate;
 
     invoke-interface {v0, p1, p2}, Landroid/support/v4/app/ActionBarDrawerToggle$Delegate;->setActionBarUpIndicator(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 490
+    .line 509
     :goto_0
     return-void
 
-    .line 488
+    .line 507
     :cond_0
     sget-object v0, Landroid/support/v4/app/ActionBarDrawerToggle;->IMPL:Landroid/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImpl;
 
@@ -596,6 +584,7 @@
 
     iget-object v2, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mActivity:Landroid/app/Activity;
 
+    .line 508
     invoke-interface {v0, v1, v2, p1, p2}, Landroid/support/v4/app/ActionBarDrawerToggle$ActionBarDrawerToggleImpl;->setActionBarUpIndicator(Ljava/lang/Object;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;I)Ljava/lang/Object;
 
     move-result-object v0
@@ -609,15 +598,15 @@
     .locals 3
 
     .prologue
-    .line 360
+    .line 379
     iget-boolean v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mDrawerIndicatorEnabled:Z
 
     if-eq p1, v0, :cond_0
 
-    .line 361
+    .line 380
     if-eqz p1, :cond_2
 
-    .line 362
+    .line 381
     iget-object v1, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mSlider:Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;
 
     iget-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mDrawerLayout:Landroid/support/v4/widget/DrawerLayout;
@@ -635,21 +624,21 @@
     :goto_0
     invoke-virtual {p0, v1, v0}, Landroid/support/v4/app/ActionBarDrawerToggle;->setActionBarUpIndicator(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 367
+    .line 386
     :goto_1
     iput-boolean p1, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mDrawerIndicatorEnabled:Z
 
-    .line 369
+    .line 388
     :cond_0
     return-void
 
-    .line 362
+    .line 381
     :cond_1
     iget v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mOpenDrawerContentDescRes:I
 
     goto :goto_0
 
-    .line 365
+    .line 384
     :cond_2
     iget-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mHomeAsUpIndicator:Landroid/graphics/drawable/Drawable;
 
@@ -664,24 +653,24 @@
     .locals 1
 
     .prologue
-    .line 341
+    .line 360
     const/4 v0, 0x0
 
-    .line 342
+    .line 361
     if-eqz p1, :cond_0
 
-    .line 343
+    .line 362
     iget-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mActivity:Landroid/app/Activity;
 
     invoke-static {v0, p1}, Landroid/support/v4/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 346
+    .line 365
     :cond_0
     invoke-virtual {p0, v0}, Landroid/support/v4/app/ActionBarDrawerToggle;->setHomeAsUpIndicator(Landroid/graphics/drawable/Drawable;)V
 
-    .line 347
+    .line 366
     return-void
 .end method
 
@@ -691,39 +680,39 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 316
+    .line 335
     if-nez p1, :cond_1
 
-    .line 317
+    .line 336
     invoke-virtual {p0}, Landroid/support/v4/app/ActionBarDrawerToggle;->getThemeUpIndicator()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mHomeAsUpIndicator:Landroid/graphics/drawable/Drawable;
 
-    .line 318
+    .line 337
     iput-boolean v1, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mHasCustomUpIndicator:Z
 
-    .line 324
+    .line 343
     :goto_0
     iget-boolean v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mDrawerIndicatorEnabled:Z
 
     if-nez v0, :cond_0
 
-    .line 325
+    .line 344
     iget-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mHomeAsUpIndicator:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, v0, v1}, Landroid/support/v4/app/ActionBarDrawerToggle;->setActionBarUpIndicator(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 327
+    .line 346
     :cond_0
     return-void
 
-    .line 320
+    .line 339
     :cond_1
     iput-object p1, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mHomeAsUpIndicator:Landroid/graphics/drawable/Drawable;
 
-    .line 321
+    .line 340
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mHasCustomUpIndicator:Z
@@ -737,7 +726,7 @@
     .prologue
     const v2, 0x800003
 
-    .line 292
+    .line 311
     iget-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mDrawerLayout:Landroid/support/v4/widget/DrawerLayout;
 
     invoke-virtual {v0, v2}, Landroid/support/v4/widget/DrawerLayout;->isDrawerOpen(I)Z
@@ -746,20 +735,20 @@
 
     if-eqz v0, :cond_1
 
-    .line 293
+    .line 312
     iget-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mSlider:Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-virtual {v0, v1}, Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;->setPosition(F)V
 
-    .line 298
+    .line 317
     :goto_0
     iget-boolean v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mDrawerIndicatorEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 299
+    .line 318
     iget-object v1, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mSlider:Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;
 
     iget-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mDrawerLayout:Landroid/support/v4/widget/DrawerLayout;
@@ -775,11 +764,11 @@
     :goto_1
     invoke-virtual {p0, v1, v0}, Landroid/support/v4/app/ActionBarDrawerToggle;->setActionBarUpIndicator(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 302
+    .line 321
     :cond_0
     return-void
 
-    .line 295
+    .line 314
     :cond_1
     iget-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mSlider:Landroid/support/v4/app/ActionBarDrawerToggle$SlideDrawable;
 
@@ -789,7 +778,7 @@
 
     goto :goto_0
 
-    .line 299
+    .line 318
     :cond_2
     iget v0, p0, Landroid/support/v4/app/ActionBarDrawerToggle;->mOpenDrawerContentDescRes:I
 

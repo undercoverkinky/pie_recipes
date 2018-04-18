@@ -23,7 +23,7 @@
 
 .field d:Landroid/view/View;
 
-.field e:Lcom/kik/cards/usermedia/h;
+.field e:Lcom/kik/cards/usermedia/g;
 
 .field final synthetic f:Lcom/kik/cards/usermedia/CustomGalleryActivity$a;
 
@@ -33,7 +33,7 @@
     .locals 0
 
     .prologue
-    .line 327
+    .line 329
     iput-object p1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$a$a;->f:Lcom/kik/cards/usermedia/CustomGalleryActivity$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

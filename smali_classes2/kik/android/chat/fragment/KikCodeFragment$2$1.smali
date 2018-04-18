@@ -23,7 +23,7 @@
     .locals 2
 
     .prologue
-    .line 412
+    .line 432
     iput-object p1, p0, Lkik/android/chat/fragment/KikCodeFragment$2$1;->a:Lkik/android/chat/fragment/KikCodeFragment$2;
 
     iget-object v0, p1, Lkik/android/chat/fragment/KikCodeFragment$2;->b:Lkik/android/chat/fragment/KikCodeFragment;
@@ -41,17 +41,17 @@
     .locals 2
 
     .prologue
-    .line 416
+    .line 436
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$2$1;->a:Lkik/android/chat/fragment/KikCodeFragment$2;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikCodeFragment$2;->b:Lkik/android/chat/fragment/KikCodeFragment;
 
     iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment$2$1;->a:Lkik/android/chat/fragment/KikCodeFragment$2;
 
-    iget-object v1, v1, Lkik/android/chat/fragment/KikCodeFragment$2;->a:Lkik/core/datatypes/s;
+    iget-object v1, v1, Lkik/android/chat/fragment/KikCodeFragment$2;->a:Lkik/core/datatypes/p;
 
-    invoke-static {v0, v1}, Lkik/android/chat/fragment/KikCodeFragment;->b(Lkik/android/chat/fragment/KikCodeFragment;Lkik/core/datatypes/s;)V
+    invoke-static {v0, v1}, Lkik/android/chat/fragment/KikCodeFragment;->b(Lkik/android/chat/fragment/KikCodeFragment;Lkik/core/datatypes/p;)V
 
-    .line 417
+    .line 437
     return-void
 .end method

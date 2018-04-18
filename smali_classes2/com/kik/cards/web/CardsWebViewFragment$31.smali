@@ -1,5 +1,5 @@
 .class final Lcom/kik/cards/web/CardsWebViewFragment$31;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
         "Ljava/lang/Boolean;",
         ">;"
@@ -36,14 +36,14 @@
     .locals 0
 
     .prologue
-    .line 2049
+    .line 2094
     iput-object p1, p0, Lcom/kik/cards/web/CardsWebViewFragment$31;->c:Lcom/kik/cards/web/CardsWebViewFragment;
 
     iput-object p2, p0, Lcom/kik/cards/web/CardsWebViewFragment$31;->a:Landroid/webkit/GeolocationPermissions$Callback;
 
     iput-object p3, p0, Lcom/kik/cards/web/CardsWebViewFragment$31;->b:Ljava/lang/String;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -54,20 +54,20 @@
     .locals 4
 
     .prologue
-    .line 2049
+    .line 2094
     check-cast p1, Ljava/lang/Boolean;
 
-    .line 3053
-    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Object;)V
+    .line 3098
+    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Object;)V
 
-    .line 3054
+    .line 3099
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3055
+    .line 3100
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$31;->a:Landroid/webkit/GeolocationPermissions$Callback;
 
     iget-object v1, p0, Lcom/kik/cards/web/CardsWebViewFragment$31;->b:Ljava/lang/String;
@@ -81,7 +81,7 @@
     :goto_0
     return-void
 
-    .line 3058
+    .line 3103
     :cond_0
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$31;->c:Lcom/kik/cards/web/CardsWebViewFragment;
 
@@ -98,10 +98,10 @@
     .locals 3
 
     .prologue
-    .line 2065
-    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Throwable;)V
+    .line 2110
+    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Throwable;)V
 
-    .line 2066
+    .line 2111
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$31;->c:Lcom/kik/cards/web/CardsWebViewFragment;
 
     iget-object v1, p0, Lcom/kik/cards/web/CardsWebViewFragment$31;->b:Ljava/lang/String;
@@ -110,6 +110,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/kik/cards/web/CardsWebViewFragment;->a(Lcom/kik/cards/web/CardsWebViewFragment;Ljava/lang/String;Landroid/webkit/GeolocationPermissions$Callback;)V
 
-    .line 2067
+    .line 2112
     return-void
 .end method

@@ -828,6 +828,7 @@
     .line 372
     invoke-virtual {p0, v1}, Lcom/kik/ximodel/XiLocale$Builder;->mergeFrom(Lcom/kik/ximodel/XiLocale;)Lcom/kik/ximodel/XiLocale$Builder;
 
+    .line 374
     :cond_1
     throw v0
 

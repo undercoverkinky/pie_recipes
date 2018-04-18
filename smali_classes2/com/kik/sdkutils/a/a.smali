@@ -30,52 +30,52 @@
 
     const/4 v1, 0x1
 
-    .line 31
+    .line 32
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 15
+    .line 16
     iput v2, p0, Lcom/kik/sdkutils/a/a;->c:I
 
-    .line 19
+    .line 20
     const/16 v0, 0x258
 
     iput v0, p0, Lcom/kik/sdkutils/a/a;->d:I
 
-    .line 1054
+    .line 1055
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    .line 1055
+    .line 1056
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setDither(Z)V
 
-    .line 1056
+    .line 1057
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
 
-    .line 1057
+    .line 1058
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 22
+    .line 23
     iput-object v0, p0, Lcom/kik/sdkutils/a/a;->g:Landroid/graphics/Paint;
 
-    .line 23
+    .line 24
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/kik/sdkutils/a/a;->h:D
 
-    .line 32
+    .line 33
     iput-object p2, p0, Lcom/kik/sdkutils/a/a;->f:Ljava/lang/String;
 
-    .line 33
+    .line 34
     iput-object p1, p0, Lcom/kik/sdkutils/a/a;->a:Landroid/graphics/Bitmap;
 
-    .line 34
+    .line 35
     iput v2, p0, Lcom/kik/sdkutils/a/a;->c:I
 
-    .line 35
+    .line 36
     invoke-virtual {p0}, Lcom/kik/sdkutils/a/a;->invalidateSelf()V
 
-    .line 36
+    .line 37
     return-void
 .end method
 
@@ -85,18 +85,18 @@
     .locals 1
 
     .prologue
-    .line 67
+    .line 68
     iput-object p1, p0, Lcom/kik/sdkutils/a/a;->a:Landroid/graphics/Bitmap;
 
-    .line 68
+    .line 69
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/kik/sdkutils/a/a;->c:I
 
-    .line 69
+    .line 70
     invoke-virtual {p0}, Lcom/kik/sdkutils/a/a;->invalidateSelf()V
 
-    .line 70
+    .line 71
     return-void
 .end method
 
@@ -104,21 +104,21 @@
     .locals 1
 
     .prologue
-    .line 40
+    .line 41
     iput-object p2, p0, Lcom/kik/sdkutils/a/a;->a:Landroid/graphics/Bitmap;
 
-    .line 41
+    .line 42
     iput-object p1, p0, Lcom/kik/sdkutils/a/a;->b:Landroid/graphics/Bitmap;
 
-    .line 42
+    .line 43
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/kik/sdkutils/a/a;->c:I
 
-    .line 43
+    .line 44
     invoke-virtual {p0}, Lcom/kik/sdkutils/a/a;->invalidateSelf()V
 
-    .line 44
+    .line 45
     return-void
 .end method
 
@@ -126,7 +126,7 @@
     .locals 1
 
     .prologue
-    .line 154
+    .line 155
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->a:Landroid/graphics/Bitmap;
 
     if-nez v0, :cond_0
@@ -152,28 +152,28 @@
 
     const/4 v6, 0x0
 
-    .line 86
+    .line 87
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->a:Landroid/graphics/Bitmap;
 
     if-nez v0, :cond_1
 
-    .line 150
+    .line 151
     :cond_0
     :goto_0
     return-void
 
-    .line 89
+    .line 90
     :cond_1
     iget v0, p0, Lcom/kik/sdkutils/a/a;->c:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 140
+    .line 141
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->g:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v7}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 141
+    .line 142
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->a:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
@@ -182,12 +182,12 @@
 
     if-nez v0, :cond_9
 
-    .line 142
+    .line 143
     sget-object v0, Landroid/graphics/PorterDuff$Mode;->CLEAR:Landroid/graphics/PorterDuff$Mode;
 
     invoke-virtual {p1, v4, v0}, Landroid/graphics/Canvas;->drawColor(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 143
+    .line 144
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->a:Landroid/graphics/Bitmap;
 
     invoke-virtual {p0}, Lcom/kik/sdkutils/a/a;->getBounds()Landroid/graphics/Rect;
@@ -200,7 +200,7 @@
 
     goto :goto_0
 
-    .line 91
+    .line 92
     :pswitch_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -208,22 +208,22 @@
 
     iput-wide v0, p0, Lcom/kik/sdkutils/a/a;->e:J
 
-    .line 92
+    .line 93
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/kik/sdkutils/a/a;->c:I
 
-    .line 93
+    .line 94
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->b:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_2
 
-    .line 94
+    .line 95
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->g:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v7}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 95
+    .line 96
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->b:Landroid/graphics/Bitmap;
 
     invoke-virtual {p0}, Lcom/kik/sdkutils/a/a;->getBounds()Landroid/graphics/Rect;
@@ -234,13 +234,13 @@
 
     invoke-virtual {p1, v0, v6, v1, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 97
+    .line 98
     :cond_2
     invoke-virtual {p0}, Lcom/kik/sdkutils/a/a;->invalidateSelf()V
 
     goto :goto_0
 
-    .line 100
+    .line 101
     :pswitch_1
     iget-wide v0, p0, Lcom/kik/sdkutils/a/a;->e:J
 
@@ -256,24 +256,24 @@
 
     long-to-double v0, v0
 
-    .line 102
+    .line 103
     const-wide/16 v2, 0x0
 
     cmpg-double v2, v0, v2
 
     if-gtz v2, :cond_5
 
-    .line 103
+    .line 104
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/kik/sdkutils/a/a;->c:I
 
-    .line 106
+    .line 107
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->g:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v7}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 108
+    .line 109
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->a:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
@@ -282,12 +282,12 @@
 
     if-nez v0, :cond_4
 
-    .line 109
+    .line 110
     sget-object v0, Landroid/graphics/PorterDuff$Mode;->CLEAR:Landroid/graphics/PorterDuff$Mode;
 
     invoke-virtual {p1, v4, v0}, Landroid/graphics/Canvas;->drawColor(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 110
+    .line 111
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->a:Landroid/graphics/Bitmap;
 
     invoke-virtual {p0}, Lcom/kik/sdkutils/a/a;->getBounds()Landroid/graphics/Rect;
@@ -298,25 +298,25 @@
 
     invoke-virtual {p1, v0, v6, v1, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 116
+    .line 117
     :cond_3
     :goto_1
     invoke-virtual {p0}, Lcom/kik/sdkutils/a/a;->invalidateSelf()V
 
     goto :goto_0
 
-    .line 112
+    .line 113
     :cond_4
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->b:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_3
 
-    .line 113
+    .line 114
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->g:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v7}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 114
+    .line 115
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->b:Landroid/graphics/Bitmap;
 
     invoke-virtual {p0}, Lcom/kik/sdkutils/a/a;->getBounds()Landroid/graphics/Rect;
@@ -329,7 +329,7 @@
 
     goto :goto_1
 
-    .line 119
+    .line 120
     :cond_5
     const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
 
@@ -341,17 +341,17 @@
 
     iput-wide v0, p0, Lcom/kik/sdkutils/a/a;->h:D
 
-    .line 121
+    .line 122
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->b:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_6
 
-    .line 122
+    .line 123
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->g:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v7}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 123
+    .line 124
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->b:Landroid/graphics/Bitmap;
 
     invoke-virtual {p0}, Lcom/kik/sdkutils/a/a;->getBounds()Landroid/graphics/Rect;
@@ -362,7 +362,7 @@
 
     invoke-virtual {p1, v0, v6, v1, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 126
+    .line 127
     :cond_6
     iget-wide v0, p0, Lcom/kik/sdkutils/a/a;->h:D
 
@@ -372,7 +372,7 @@
 
     iput-wide v0, p0, Lcom/kik/sdkutils/a/a;->h:D
 
-    .line 128
+    .line 129
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->g:Landroid/graphics/Paint;
 
     const-wide v2, 0x406fe00000000000L    # 255.0
@@ -385,7 +385,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 129
+    .line 130
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->a:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
@@ -394,7 +394,7 @@
 
     if-nez v0, :cond_8
 
-    .line 130
+    .line 131
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->a:Landroid/graphics/Bitmap;
 
     invoke-virtual {p0}, Lcom/kik/sdkutils/a/a;->getBounds()Landroid/graphics/Rect;
@@ -405,25 +405,25 @@
 
     invoke-virtual {p1, v0, v6, v1, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 136
+    .line 137
     :cond_7
     :goto_2
     invoke-virtual {p0}, Lcom/kik/sdkutils/a/a;->invalidateSelf()V
 
     goto/16 :goto_0
 
-    .line 132
+    .line 133
     :cond_8
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->b:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_7
 
-    .line 133
+    .line 134
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->g:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v7}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 134
+    .line 135
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->b:Landroid/graphics/Bitmap;
 
     invoke-virtual {p0}, Lcom/kik/sdkutils/a/a;->getBounds()Landroid/graphics/Rect;
@@ -436,13 +436,13 @@
 
     goto :goto_2
 
-    .line 145
+    .line 146
     :cond_9
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->b:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    .line 146
+    .line 147
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->b:Landroid/graphics/Bitmap;
 
     invoke-virtual {p0}, Lcom/kik/sdkutils/a/a;->getBounds()Landroid/graphics/Rect;
@@ -455,7 +455,7 @@
 
     goto/16 :goto_0
 
-    .line 89
+    .line 90
     nop
 
     :pswitch_data_0
@@ -469,7 +469,7 @@
     .locals 2
 
     .prologue
-    .line 176
+    .line 177
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->a:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
@@ -484,11 +484,11 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 177
+    .line 178
     :cond_0
     const/16 v0, 0x9c
 
-    .line 180
+    .line 181
     :goto_0
     return v0
 
@@ -506,7 +506,7 @@
     .locals 2
 
     .prologue
-    .line 187
+    .line 188
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->a:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
@@ -521,11 +521,11 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 188
+    .line 189
     :cond_0
     const/16 v0, 0x64
 
-    .line 191
+    .line 192
     :goto_0
     return v0
 
@@ -543,7 +543,7 @@
     .locals 1
 
     .prologue
-    .line 198
+    .line 199
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->a:Landroid/graphics/Bitmap;
 
     if-nez v0, :cond_0
@@ -567,7 +567,7 @@
     .locals 1
 
     .prologue
-    .line 204
+    .line 205
     iget-object v0, p0, Lcom/kik/sdkutils/a/a;->a:Landroid/graphics/Bitmap;
 
     if-nez v0, :cond_0
@@ -591,7 +591,7 @@
     .locals 1
 
     .prologue
-    .line 160
+    .line 161
     const/4 v0, 0x0
 
     return v0
@@ -601,7 +601,7 @@
     .locals 0
 
     .prologue
-    .line 166
+    .line 167
     return-void
 .end method
 
@@ -609,6 +609,6 @@
     .locals 0
 
     .prologue
-    .line 171
+    .line 172
     return-void
 .end method

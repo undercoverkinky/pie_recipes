@@ -27,7 +27,7 @@
     .locals 0
 
     .prologue
-    .line 211
+    .line 220
     iput-object p1, p0, Lkik/android/chat/fragment/AbTestsFragment$d;->c:Lkik/android/chat/fragment/AbTestsFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,7 +39,7 @@
     .locals 0
 
     .prologue
-    .line 211
+    .line 220
     invoke-direct {p0, p1}, Lkik/android/chat/fragment/AbTestsFragment$d;-><init>(Lkik/android/chat/fragment/AbTestsFragment;)V
 
     return-void

@@ -1,1000 +1,258 @@
-.class Lio/branch/referral/w;
-.super Ljava/lang/Object;
+.class final Lio/branch/referral/w;
+.super Lio/branch/referral/ServerRequest;
 .source "SourceFile"
 
 
-# static fields
-.field private static a:Lio/branch/referral/w;
-
-
 # instance fields
-.field private b:Landroid/content/SharedPreferences;
+.field a:Lio/branch/referral/Branch$f;
 
-.field private c:Landroid/content/SharedPreferences$Editor;
-
-.field private final d:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Lio/branch/referral/ServerRequest;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field b:I
 
 
 # direct methods
-.method private constructor <init>(Landroid/content/Context;)V
-    .locals 2
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "CommitPrefEdits"
-        }
-    .end annotation
-
-    .prologue
-    .line 58
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 59
-    const-string v0, "BNC_Server_Request_Queue"
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lio/branch/referral/w;->b:Landroid/content/SharedPreferences;
-
-    .line 60
-    iget-object v0, p0, Lio/branch/referral/w;->b:Landroid/content/SharedPreferences;
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lio/branch/referral/w;->c:Landroid/content/SharedPreferences$Editor;
-
-    .line 61
-    invoke-direct {p0, p1}, Lio/branch/referral/w;->b(Landroid/content/Context;)Ljava/util/List;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lio/branch/referral/w;->d:Ljava/util/List;
-
-    .line 62
-    return-void
-.end method
-
-.method public static a(Landroid/content/Context;)Lio/branch/referral/w;
-    .locals 2
-
-    .prologue
-    .line 41
-    sget-object v0, Lio/branch/referral/w;->a:Lio/branch/referral/w;
-
-    if-nez v0, :cond_1
-
-    .line 42
-    const-class v1, Lio/branch/referral/w;
-
-    monitor-enter v1
-
-    .line 43
-    :try_start_0
-    sget-object v0, Lio/branch/referral/w;->a:Lio/branch/referral/w;
-
-    if-nez v0, :cond_0
-
-    .line 44
-    new-instance v0, Lio/branch/referral/w;
-
-    invoke-direct {v0, p0}, Lio/branch/referral/w;-><init>(Landroid/content/Context;)V
-
-    sput-object v0, Lio/branch/referral/w;->a:Lio/branch/referral/w;
-
-    .line 46
-    :cond_0
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 48
-    :cond_1
-    sget-object v0, Lio/branch/referral/w;->a:Lio/branch/referral/w;
-
-    return-object v0
-
-    .line 46
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method static synthetic a(Lio/branch/referral/w;)Ljava/util/List;
+.method public constructor <init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
     .locals 1
-
-    .prologue
-    .line 23
-    iget-object v0, p0, Lio/branch/referral/w;->d:Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method static synthetic b(Lio/branch/referral/w;)Landroid/content/SharedPreferences$Editor;
-    .locals 1
-
-    .prologue
-    .line 23
-    iget-object v0, p0, Lio/branch/referral/w;->c:Landroid/content/SharedPreferences$Editor;
-
-    return-object v0
-.end method
-
-.method private b(Landroid/content/Context;)Ljava/util/List;
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/content/Context;",
-            ")",
-            "Ljava/util/List",
-            "<",
-            "Lio/branch/referral/ServerRequest;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 97
-    new-instance v0, Ljava/util/LinkedList;
-
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
-
-    invoke-static {v0}, Ljava/util/Collections;->synchronizedList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v1
-
-    .line 98
-    iget-object v0, p0, Lio/branch/referral/w;->b:Landroid/content/SharedPreferences;
-
-    const-string v2, "BNCServerRequestQueue"
-
-    const/4 v3, 0x0
-
-    invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 100
-    if-eqz v0, :cond_1
-
-    .line 102
-    :try_start_0
-    new-instance v2, Lorg/json/JSONArray;
-
-    invoke-direct {v2, v0}, Lorg/json/JSONArray;-><init>(Ljava/lang/String;)V
-
-    .line 103
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
-
-    move-result v3
-
-    const/16 v4, 0x19
-
-    invoke-static {v3, v4}, Ljava/lang/Math;->min(II)I
-
-    move-result v3
-
-    if-ge v0, v3, :cond_1
-
-    .line 104
-    invoke-virtual {v2, v0}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
-
-    move-result-object v3
-
-    .line 105
-    invoke-static {v3, p1}, Lio/branch/referral/ServerRequest;->a(Lorg/json/JSONObject;Landroid/content/Context;)Lio/branch/referral/ServerRequest;
-
-    move-result-object v3
-
-    .line 106
-    if-eqz v3, :cond_0
-
-    .line 108
-    instance-of v4, v3, Lio/branch/referral/y;
-
-    if-nez v4, :cond_0
-
-    instance-of v4, v3, Lio/branch/referral/v;
-
-    if-nez v4, :cond_0
-
-    .line 109
-    invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 103
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    .line 117
-    :cond_1
-    return-object v1
-.end method
-
-.method private h()V
-    .locals 2
 
     .prologue
     .line 65
-    new-instance v0, Ljava/lang/Thread;
+    invoke-direct {p0, p1, p2, p3}, Lio/branch/referral/ServerRequest;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
 
-    new-instance v1, Lio/branch/referral/w$1;
+    .line 18
+    const/4 v0, 0x0
 
-    invoke-direct {v1, p0}, Lio/branch/referral/w$1;-><init>(Lio/branch/referral/w;)V
+    iput v0, p0, Lio/branch/referral/w;->b:I
 
-    invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
-
-    .line 93
-    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
-
-    .line 94
+    .line 66
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
+.method public final clearCallbacks()V
     .locals 1
 
     .prologue
-    .line 128
-    iget-object v0, p0, Lio/branch/referral/w;->d:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final a(I)Lio/branch/referral/ServerRequest;
-    .locals 2
-
-    .prologue
-    .line 188
-    const/4 v1, 0x0
-
-    .line 190
-    :try_start_0
-    iget-object v0, p0, Lio/branch/referral/w;->d:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lio/branch/referral/ServerRequest;
-    :try_end_0
-    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/util/NoSuchElementException; {:try_start_0 .. :try_end_0} :catch_1
-
-    .line 193
-    :goto_0
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    :goto_1
-    move-object v0, v1
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v0
-
-    goto :goto_1
-.end method
-
-.method public final a(Lio/branch/referral/Branch$e;)V
-    .locals 4
-
-    .prologue
-    .line 338
-    iget-object v1, p0, Lio/branch/referral/w;->d:Ljava/util/List;
-
-    monitor-enter v1
-
-    .line 339
-    :try_start_0
-    iget-object v0, p0, Lio/branch/referral/w;->d:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    .line 340
-    :cond_0
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 341
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lio/branch/referral/ServerRequest;
-
-    .line 342
-    if-eqz v0, :cond_0
-
-    .line 343
-    instance-of v3, v0, Lio/branch/referral/z;
-
-    if-eqz v3, :cond_1
-
-    .line 344
-    check-cast v0, Lio/branch/referral/z;
-
-    .line 1125
-    if-eqz p1, :cond_0
-
-    .line 1126
-    iput-object p1, v0, Lio/branch/referral/z;->g:Lio/branch/referral/Branch$e;
-
-    goto :goto_0
-
-    .line 351
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-
-    .line 345
-    :cond_1
-    :try_start_1
-    instance-of v3, v0, Lio/branch/referral/aa;
-
-    if-eqz v3, :cond_0
-
-    .line 346
-    check-cast v0, Lio/branch/referral/aa;
-
-    .line 2106
-    if-eqz p1, :cond_0
-
-    .line 2107
-    iput-object p1, v0, Lio/branch/referral/aa;->g:Lio/branch/referral/Branch$e;
-
-    goto :goto_0
-
-    .line 351
-    :cond_2
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    return-void
-.end method
-
-.method public final a(Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;)V
-    .locals 3
-
-    .prologue
-    .line 358
-    iget-object v1, p0, Lio/branch/referral/w;->d:Ljava/util/List;
-
-    monitor-enter v1
-
-    .line 359
-    :try_start_0
-    iget-object v0, p0, Lio/branch/referral/w;->d:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    .line 360
-    :cond_0
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 361
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lio/branch/referral/ServerRequest;
-
-    .line 362
-    if-eqz v0, :cond_0
-
-    .line 2430
-    iget-object v0, v0, Lio/branch/referral/ServerRequest;->d:Ljava/util/Set;
-
-    invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    .line 366
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-
-    :cond_1
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    return-void
-.end method
-
-.method public final a(Lio/branch/referral/ServerRequest;)V
-    .locals 2
-
-    .prologue
-    .line 137
-    if-eqz p1, :cond_1
-
-    .line 138
-    iget-object v0, p0, Lio/branch/referral/w;->d:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 139
-    invoke-virtual {p0}, Lio/branch/referral/w;->a()I
-
-    move-result v0
-
-    const/16 v1, 0x19
-
-    if-lt v0, v1, :cond_0
-
-    .line 140
-    iget-object v0, p0, Lio/branch/referral/w;->d:Ljava/util/List;
-
-    const/4 v1, 0x1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
-
-    .line 142
-    :cond_0
-    invoke-direct {p0}, Lio/branch/referral/w;->h()V
-
-    .line 144
-    :cond_1
-    return-void
-.end method
-
-.method public final a(Lio/branch/referral/ServerRequest;I)V
-    .locals 1
-
-    .prologue
-    .line 207
-    :try_start_0
-    iget-object v0, p0, Lio/branch/referral/w;->d:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-ge v0, p2, :cond_0
-
-    .line 208
-    iget-object v0, p0, Lio/branch/referral/w;->d:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result p2
-
-    .line 210
-    :cond_0
-    iget-object v0, p0, Lio/branch/referral/w;->d:Ljava/util/List;
-
-    invoke-interface {v0, p2, p1}, Ljava/util/List;->add(ILjava/lang/Object;)V
-
-    .line 211
-    invoke-direct {p0}, Lio/branch/referral/w;->h()V
-    :try_end_0
-    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 214
-    :goto_0
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_0
-.end method
-
-.method public final b()Lio/branch/referral/ServerRequest;
-    .locals 3
-
-    .prologue
-    .line 153
-    const/4 v1, 0x0
-
-    .line 155
-    :try_start_0
-    iget-object v0, p0, Lio/branch/referral/w;->d:Ljava/util/List;
-
-    const/4 v2, 0x0
-
-    invoke-interface {v0, v2}, Ljava/util/List;->remove(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lio/branch/referral/ServerRequest;
-    :try_end_0
-    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/util/NoSuchElementException; {:try_start_0 .. :try_end_0} :catch_2
-
-    .line 156
-    :try_start_1
-    invoke-direct {p0}, Lio/branch/referral/w;->h()V
-    :try_end_1
-    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/util/NoSuchElementException; {:try_start_1 .. :try_end_1} :catch_3
-
-    .line 159
-    :goto_0
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    move-object v0, v1
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v1
-
-    goto :goto_0
-
-    :catch_2
-    move-exception v0
-
-    move-object v0, v1
-
-    goto :goto_0
-
-    :catch_3
-    move-exception v1
-
-    goto :goto_0
-.end method
-
-.method public final b(Lio/branch/referral/ServerRequest;I)V
-    .locals 4
-
-    .prologue
-    .line 312
-    iget-object v1, p0, Lio/branch/referral/w;->d:Ljava/util/List;
-
-    monitor-enter v1
-
-    .line 313
-    :try_start_0
-    iget-object v0, p0, Lio/branch/referral/w;->d:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    .line 314
-    :cond_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 315
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lio/branch/referral/ServerRequest;
-
-    .line 316
-    if-eqz v0, :cond_0
-
-    instance-of v3, v0, Lio/branch/referral/z;
-
-    if-nez v3, :cond_1
-
-    instance-of v0, v0, Lio/branch/referral/aa;
-
-    if-eqz v0, :cond_0
-
-    .line 319
-    :cond_1
-    invoke-interface {v2}, Ljava/util/Iterator;->remove()V
-
-    .line 323
-    :cond_2
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 325
-    if-nez p2, :cond_3
-
-    .line 326
+    .line 125
     const/4 v0, 0x0
 
-    invoke-virtual {p0, p1, v0}, Lio/branch/referral/w;->a(Lio/branch/referral/ServerRequest;I)V
+    iput-object v0, p0, Lio/branch/referral/w;->a:Lio/branch/referral/Branch$f;
 
-    .line 330
-    :goto_0
+    .line 126
     return-void
+.end method
 
-    .line 323
-    :catchall_0
-    move-exception v0
+.method public final handleErrors(Landroid/content/Context;)Z
+    .locals 4
 
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-
-    .line 328
-    :cond_3
+    .prologue
     const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, v0}, Lio/branch/referral/w;->a(Lio/branch/referral/ServerRequest;I)V
+    .line 70
+    invoke-super {p0, p1}, Lio/branch/referral/ServerRequest;->doesAppHasInternetPermission(Landroid/content/Context;)Z
 
-    goto :goto_0
-.end method
+    move-result v1
 
-.method public final b(Lio/branch/referral/ServerRequest;)Z
-    .locals 2
+    if-nez v1, :cond_1
 
-    .prologue
-    .line 243
-    const/4 v0, 0x0
+    .line 71
+    iget-object v1, p0, Lio/branch/referral/w;->a:Lio/branch/referral/Branch$f;
 
-    .line 245
-    :try_start_0
-    iget-object v1, p0, Lio/branch/referral/w;->d:Ljava/util/List;
+    if-eqz v1, :cond_0
 
-    invoke-interface {v1, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+    .line 72
+    new-instance v1, Lio/branch/referral/e;
 
-    move-result v0
+    const-string v2, "Trouble redeeming rewards."
 
-    .line 246
-    invoke-direct {p0}, Lio/branch/referral/w;->h()V
-    :try_end_0
-    .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
+    const/16 v3, -0x66
 
-    .line 249
+    invoke-direct {v1, v2, v3}, Lio/branch/referral/e;-><init>(Ljava/lang/String;I)V
+
+    .line 82
+    :cond_0
     :goto_0
     return v0
 
-    :catch_0
-    move-exception v1
+    .line 76
+    :cond_1
+    iget v1, p0, Lio/branch/referral/w;->b:I
+
+    if-gtz v1, :cond_2
+
+    .line 77
+    iget-object v1, p0, Lio/branch/referral/w;->a:Lio/branch/referral/Branch$f;
+
+    if-eqz v1, :cond_0
+
+    .line 78
+    new-instance v1, Lio/branch/referral/e;
+
+    const-string v2, "Trouble redeeming rewards."
+
+    const/16 v3, -0x6b
+
+    invoke-direct {v1, v2, v3}, Lio/branch/referral/e;-><init>(Ljava/lang/String;I)V
+
+    goto :goto_0
+
+    .line 82
+    :cond_2
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method public final c()Lio/branch/referral/ServerRequest;
+.method public final handleFailure(ILjava/lang/String;)V
     .locals 3
 
     .prologue
-    .line 169
-    const/4 v1, 0x0
+    .line 113
+    iget-object v0, p0, Lio/branch/referral/w;->a:Lio/branch/referral/Branch$f;
 
-    .line 171
-    :try_start_0
-    iget-object v0, p0, Lio/branch/referral/w;->d:Ljava/util/List;
+    if-eqz v0, :cond_0
 
-    const/4 v2, 0x0
+    .line 114
+    new-instance v0, Lio/branch/referral/e;
 
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    const-string v2, "Trouble redeeming rewards. "
 
-    check-cast v0, Lio/branch/referral/ServerRequest;
-    :try_end_0
-    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/util/NoSuchElementException; {:try_start_0 .. :try_end_0} :catch_1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 174
-    :goto_0
-    return-object v0
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :catch_0
-    move-exception v0
+    move-result-object v1
 
-    :goto_1
-    move-object v0, v1
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    goto :goto_0
+    move-result-object v1
 
-    :catch_1
-    move-exception v0
+    invoke-direct {v0, v1, p1}, Lio/branch/referral/e;-><init>(Ljava/lang/String;I)V
 
-    goto :goto_1
+    .line 116
+    :cond_0
+    return-void
 .end method
 
-.method public final d()V
+.method public final isGetRequest()Z
     .locals 1
 
     .prologue
-    .line 257
-    :try_start_0
-    iget-object v0, p0, Lio/branch/referral/w;->d:Ljava/util/List;
+    .line 120
+    const/4 v0, 0x0
 
-    invoke-interface {v0}, Ljava/util/List;->clear()V
-
-    .line 258
-    invoke-direct {p0}, Lio/branch/referral/w;->h()V
-    :try_end_0
-    .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 261
-    :goto_0
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_0
+    return v0
 .end method
 
-.method public final e()Z
+.method public final onRequestSucceeded(Lio/branch/referral/aa;Lio/branch/referral/Branch;)V
     .locals 4
 
     .prologue
-    .line 271
-    iget-object v1, p0, Lio/branch/referral/w;->d:Ljava/util/List;
+    const/4 v0, 0x0
 
-    monitor-enter v1
+    .line 87
+    .line 88
+    invoke-virtual {p0}, Lio/branch/referral/w;->getPost()Lorg/json/JSONObject;
 
-    .line 272
-    :try_start_0
-    iget-object v0, p0, Lio/branch/referral/w;->d:Ljava/util/List;
+    move-result-object v1
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    .line 89
+    if-eqz v1, :cond_1
+
+    .line 90
+    sget-object v2, Lio/branch/referral/Defines$Jsonkey;->Bucket:Lio/branch/referral/Defines$Jsonkey;
+
+    invoke-virtual {v2}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
 
     move-result-object v2
 
-    :cond_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result v2
 
-    if-eqz v0, :cond_1
+    if-eqz v2, :cond_1
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    sget-object v2, Lio/branch/referral/Defines$Jsonkey;->Amount:Lio/branch/referral/Defines$Jsonkey;
 
-    move-result-object v0
+    invoke-virtual {v2}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
 
-    check-cast v0, Lio/branch/referral/ServerRequest;
+    move-result-object v2
 
-    .line 273
-    if-eqz v0, :cond_0
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
-    .line 274
-    invoke-virtual {v0}, Lio/branch/referral/ServerRequest;->d()Ljava/lang/String;
+    move-result v2
 
-    move-result-object v0
+    if-eqz v2, :cond_1
 
-    sget-object v3, Lio/branch/referral/Defines$RequestPath;->RegisterClose:Lio/branch/referral/Defines$RequestPath;
+    .line 92
+    :try_start_0
+    sget-object v2, Lio/branch/referral/Defines$Jsonkey;->Amount:Lio/branch/referral/Defines$Jsonkey;
 
-    invoke-virtual {v3}, Lio/branch/referral/Defines$RequestPath;->getPath()Ljava/lang/String;
+    invoke-virtual {v2}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+
+    move-result v2
+
+    .line 93
+    sget-object v3, Lio/branch/referral/Defines$Jsonkey;->Bucket:Lio/branch/referral/Defines$Jsonkey;
+
+    invoke-virtual {v3}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result v0
+    move-result-object v1
 
-    if-eqz v0, :cond_0
+    .line 94
+    if-lez v2, :cond_0
 
-    .line 275
     const/4 v0, 0x1
 
-    monitor-exit v1
-
-    .line 279
-    :goto_0
-    return v0
-
-    .line 278
-    :cond_1
-    monitor-exit v1
-
-    .line 279
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    .line 278
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-.end method
-
-.method public final f()Z
-    .locals 4
-
-    .prologue
-    .line 290
-    iget-object v1, p0, Lio/branch/referral/w;->d:Ljava/util/List;
-
-    monitor-enter v1
-
-    .line 291
-    :try_start_0
-    iget-object v0, p0, Lio/branch/referral/w;->d:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
+    .line 96
     :cond_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v1}, Lio/branch/referral/m;->r(Ljava/lang/String;)I
 
-    move-result v0
+    move-result v3
 
-    if-eqz v0, :cond_2
+    sub-int v2, v3, v2
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 97
+    invoke-static {v1, v2}, Lio/branch/referral/m;->a(Ljava/lang/String;I)V
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object v0
-
-    check-cast v0, Lio/branch/referral/ServerRequest;
-
-    .line 292
-    if-eqz v0, :cond_0
-
-    instance-of v3, v0, Lio/branch/referral/z;
-
-    if-nez v3, :cond_1
-
-    instance-of v0, v0, Lio/branch/referral/aa;
-
-    if-eqz v0, :cond_0
-
-    .line 294
+    .line 104
     :cond_1
-    const/4 v0, 0x1
-
-    monitor-exit v1
-
-    .line 298
     :goto_0
-    return v0
+    iget-object v1, p0, Lio/branch/referral/w;->a:Lio/branch/referral/Branch$f;
 
-    .line 297
+    if-eqz v1, :cond_2
+
+    .line 105
+    if-nez v0, :cond_2
+
+    new-instance v0, Lio/branch/referral/e;
+
+    const-string v1, "Trouble redeeming rewards."
+
+    const/16 v2, -0x6b
+
+    invoke-direct {v0, v1, v2}, Lio/branch/referral/e;-><init>(Ljava/lang/String;I)V
+
+    .line 109
     :cond_2
-    monitor-exit v1
-
-    .line 298
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    .line 297
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-.end method
-
-.method public final g()V
-    .locals 4
-
-    .prologue
-    .line 373
-    iget-object v1, p0, Lio/branch/referral/w;->d:Ljava/util/List;
-
-    monitor-enter v1
-
-    .line 374
-    :try_start_0
-    iget-object v0, p0, Lio/branch/referral/w;->d:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    .line 375
-    :cond_0
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 376
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lio/branch/referral/ServerRequest;
-
-    .line 377
-    if-eqz v0, :cond_0
-
-    .line 378
-    instance-of v3, v0, Lio/branch/referral/u;
-
-    if-eqz v3, :cond_0
-
-    .line 379
-    sget-object v3, Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;->STRONG_MATCH_PENDING_WAIT_LOCK:Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;
-
-    invoke-virtual {v0, v3}, Lio/branch/referral/ServerRequest;->a(Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;)V
-
-    goto :goto_0
-
-    .line 383
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-
-    :cond_1
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
     return-void
+
+    .line 99
+    :catch_0
+    move-exception v1
+
+    invoke-virtual {v1}, Lorg/json/JSONException;->printStackTrace()V
+
+    goto :goto_0
 .end method

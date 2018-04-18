@@ -1,4 +1,4 @@
-.class final synthetic Lcom/google/common/base/AbstractIterator$1;
+.class synthetic Lcom/google/common/base/AbstractIterator$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic a:[I
+.field static final synthetic $SwitchMap$com$google$common$base$AbstractIterator$State:[I
 
 
 # direct methods
@@ -23,7 +23,7 @@
     .locals 3
 
     .prologue
-    .line 52
+    .line 56
     invoke-static {}, Lcom/google/common/base/AbstractIterator$State;->values()[Lcom/google/common/base/AbstractIterator$State;
 
     move-result-object v0
@@ -32,12 +32,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/google/common/base/AbstractIterator$1;->a:[I
+    sput-object v0, Lcom/google/common/base/AbstractIterator$1;->$SwitchMap$com$google$common$base$AbstractIterator$State:[I
 
     :try_start_0
-    sget-object v0, Lcom/google/common/base/AbstractIterator$1;->a:[I
+    sget-object v0, Lcom/google/common/base/AbstractIterator$1;->$SwitchMap$com$google$common$base$AbstractIterator$State:[I
 
-    sget-object v1, Lcom/google/common/base/AbstractIterator$State;->DONE:Lcom/google/common/base/AbstractIterator$State;
+    sget-object v1, Lcom/google/common/base/AbstractIterator$State;->READY:Lcom/google/common/base/AbstractIterator$State;
 
     invoke-virtual {v1}, Lcom/google/common/base/AbstractIterator$State;->ordinal()I
 
@@ -51,9 +51,9 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/google/common/base/AbstractIterator$1;->a:[I
+    sget-object v0, Lcom/google/common/base/AbstractIterator$1;->$SwitchMap$com$google$common$base$AbstractIterator$State:[I
 
-    sget-object v1, Lcom/google/common/base/AbstractIterator$State;->READY:Lcom/google/common/base/AbstractIterator$State;
+    sget-object v1, Lcom/google/common/base/AbstractIterator$State;->DONE:Lcom/google/common/base/AbstractIterator$State;
 
     invoke-virtual {v1}, Lcom/google/common/base/AbstractIterator$State;->ordinal()I
 

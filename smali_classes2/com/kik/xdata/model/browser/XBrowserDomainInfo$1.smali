@@ -175,7 +175,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {}, Lcom/kik/xdata/model/browser/XBrowserPermission;->b()Lcom/dyuproject/protostuff/u;
+    invoke-static {}, Lcom/kik/xdata/model/browser/XBrowserPermission;->a()Lcom/dyuproject/protostuff/u;
 
     move-result-object v2
 
@@ -191,7 +191,7 @@
     :pswitch_2
     iget-object v0, p2, Lcom/kik/xdata/model/browser/XBrowserDomainInfo;->anonymousKey:Lcom/kik/xdata/model/browser/XBrowserAnonymousKey;
 
-    invoke-static {}, Lcom/kik/xdata/model/browser/XBrowserAnonymousKey;->b()Lcom/dyuproject/protostuff/u;
+    invoke-static {}, Lcom/kik/xdata/model/browser/XBrowserAnonymousKey;->a()Lcom/dyuproject/protostuff/u;
 
     move-result-object v1
 
@@ -278,7 +278,7 @@
     .line 1191
     const/4 v2, 0x2
 
-    invoke-static {}, Lcom/kik/xdata/model/browser/XBrowserPermission;->b()Lcom/dyuproject/protostuff/u;
+    invoke-static {}, Lcom/kik/xdata/model/browser/XBrowserPermission;->a()Lcom/dyuproject/protostuff/u;
 
     move-result-object v3
 
@@ -297,7 +297,7 @@
 
     iget-object v1, p2, Lcom/kik/xdata/model/browser/XBrowserDomainInfo;->anonymousKey:Lcom/kik/xdata/model/browser/XBrowserAnonymousKey;
 
-    invoke-static {}, Lcom/kik/xdata/model/browser/XBrowserAnonymousKey;->b()Lcom/dyuproject/protostuff/u;
+    invoke-static {}, Lcom/kik/xdata/model/browser/XBrowserAnonymousKey;->a()Lcom/dyuproject/protostuff/u;
 
     move-result-object v2
 

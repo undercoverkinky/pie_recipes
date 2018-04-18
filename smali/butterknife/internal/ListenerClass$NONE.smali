@@ -32,7 +32,7 @@
     .locals 1
 
     .prologue
-    .line 32
+    .line 35
     const/4 v0, 0x0
 
     new-array v0, v0, [Lbutterknife/internal/ListenerClass$NONE;
@@ -51,7 +51,7 @@
     .end annotation
 
     .prologue
-    .line 32
+    .line 35
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -61,7 +61,7 @@
     .locals 1
 
     .prologue
-    .line 32
+    .line 35
     const-class v0, Lbutterknife/internal/ListenerClass$NONE;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -77,7 +77,7 @@
     .locals 1
 
     .prologue
-    .line 32
+    .line 35
     sget-object v0, Lbutterknife/internal/ListenerClass$NONE;->$VALUES:[Lbutterknife/internal/ListenerClass$NONE;
 
     invoke-virtual {v0}, [Lbutterknife/internal/ListenerClass$NONE;->clone()Ljava/lang/Object;

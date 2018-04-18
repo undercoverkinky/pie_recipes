@@ -15,41 +15,46 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 119
+    .line 497
     invoke-direct {p0}, Landroid/support/v4/app/NotificationCompat$BuilderExtender;-><init>()V
 
-    return-void
-.end method
-
-.method synthetic constructor <init>(B)V
-    .locals 0
-
-    .prologue
-    .line 119
-    invoke-direct {p0}, Landroid/support/v7/app/NotificationCompat$LollipopExtender;-><init>()V
-
+    .line 498
     return-void
 .end method
 
 
 # virtual methods
 .method public build(Landroid/support/v4/app/NotificationCompat$Builder;Landroid/support/v4/app/NotificationBuilderWithBuilderAccessor;)Landroid/app/Notification;
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 124
-    iget-object v0, p1, Landroid/support/v4/app/NotificationCompat$Builder;->mStyle:Landroid/support/v4/app/NotificationCompat$Style;
-
-    invoke-static {p2, v0}, Landroid/support/v7/app/NotificationCompat;->a(Landroid/support/v4/app/NotificationBuilderWithBuilderAccessor;Landroid/support/v4/app/NotificationCompat$Style;)V
-
-    .line 125
-    invoke-interface {p2}, Landroid/support/v4/app/NotificationBuilderWithBuilderAccessor;->build()Landroid/app/Notification;
+    .line 503
+    invoke-static {p2, p1}, Landroid/support/v7/app/NotificationCompat;->c(Landroid/support/v4/app/NotificationBuilderWithBuilderAccessor;Landroid/support/v4/app/NotificationCompat$Builder;)Landroid/widget/RemoteViews;
 
     move-result-object v0
 
-    return-object v0
+    .line 504
+    invoke-interface {p2}, Landroid/support/v4/app/NotificationBuilderWithBuilderAccessor;->build()Landroid/app/Notification;
+
+    move-result-object v1
+
+    .line 507
+    if-eqz v0, :cond_0
+
+    .line 508
+    iput-object v0, v1, Landroid/app/Notification;->contentView:Landroid/widget/RemoteViews;
+
+    .line 510
+    :cond_0
+    invoke-static {v1, p1}, Landroid/support/v7/app/NotificationCompat;->b(Landroid/app/Notification;Landroid/support/v4/app/NotificationCompat$Builder;)V
+
+    .line 511
+    invoke-static {v1, p1}, Landroid/support/v7/app/NotificationCompat;->c(Landroid/app/Notification;Landroid/support/v4/app/NotificationCompat$Builder;)V
+
+    .line 512
+    return-object v1
 .end method

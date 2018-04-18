@@ -511,9 +511,11 @@
 
     move-result-object v0
 
+    .line 509
     :goto_0
     return-object v0
 
+    .line 508
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -521,6 +523,7 @@
 
     iget-object v1, p0, Landroid/support/v7/widget/ChildHelper$Bucket;->b:Landroid/support/v7/widget/ChildHelper$Bucket;
 
+    .line 509
     invoke-virtual {v1}, Landroid/support/v7/widget/ChildHelper$Bucket;->toString()Ljava/lang/String;
 
     move-result-object v1

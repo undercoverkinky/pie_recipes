@@ -1,99 +1,89 @@
-.class public Lcom/google/android/gms/internal/zzlc;
-.super Ljava/lang/Object;
+.class public abstract Lcom/google/android/gms/internal/zzlc;
+.super Lcom/google/android/gms/internal/zzef;
 
-
-# annotations
-.annotation runtime Lcom/google/android/gms/internal/zzig;
-.end annotation
+# interfaces
+.implements Lcom/google/android/gms/internal/zzlb;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/google/android/gms/internal/zzef;-><init>()V
+
+    const-string v0, "com.google.android.gms.ads.internal.client.IVideoLifecycleCallbacks"
+
+    invoke-virtual {p0, p0, v0}, Lcom/google/android/gms/internal/zzlc;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public zza(Landroid/content/Context;Lcom/google/android/gms/ads/internal/client/AdSizeParcel;ZZLcom/google/android/gms/internal/zzaq;Lcom/google/android/gms/ads/internal/util/client/VersionInfoParcel;)Lcom/google/android/gms/internal/zzla;
-    .locals 10
+.method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
 
-    const/4 v7, 0x0
+    const/4 v0, 0x1
 
-    const/4 v8, 0x0
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/android/gms/internal/zzef;->zza(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    const/4 v9, 0x0
+    move-result v1
 
-    move-object v0, p0
+    if-eqz v1, :cond_0
 
-    move-object v1, p1
+    :goto_0
+    return v0
 
-    move-object v2, p2
+    :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    move v3, p3
+    const/4 v0, 0x0
 
-    move v4, p4
+    goto :goto_0
 
-    move-object v5, p5
+    :pswitch_0
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzlc;->onVideoStart()V
 
-    move-object/from16 v6, p6
+    :goto_1
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    invoke-virtual/range {v0 .. v9}, Lcom/google/android/gms/internal/zzlc;->zza(Landroid/content/Context;Lcom/google/android/gms/ads/internal/client/AdSizeParcel;ZZLcom/google/android/gms/internal/zzaq;Lcom/google/android/gms/ads/internal/util/client/VersionInfoParcel;Lcom/google/android/gms/internal/zzdc;Lcom/google/android/gms/ads/internal/zzs;Lcom/google/android/gms/ads/internal/zzd;)Lcom/google/android/gms/internal/zzla;
+    goto :goto_0
 
-    move-result-object v0
+    :pswitch_1
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzlc;->onVideoPlay()V
 
-    return-object v0
-.end method
+    goto :goto_1
 
-.method public zza(Landroid/content/Context;Lcom/google/android/gms/ads/internal/client/AdSizeParcel;ZZLcom/google/android/gms/internal/zzaq;Lcom/google/android/gms/ads/internal/util/client/VersionInfoParcel;Lcom/google/android/gms/internal/zzdc;Lcom/google/android/gms/ads/internal/zzs;Lcom/google/android/gms/ads/internal/zzd;)Lcom/google/android/gms/internal/zzla;
-    .locals 9
+    :pswitch_2
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzlc;->onVideoPause()V
 
-    new-instance v8, Lcom/google/android/gms/internal/r;
+    goto :goto_1
 
-    move-object v0, p1
+    :pswitch_3
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzlc;->onVideoEnd()V
 
-    move-object v1, p2
+    goto :goto_1
 
-    move v2, p3
+    :pswitch_4
+    invoke-static {p2}, Lcom/google/android/gms/internal/zzeg;->zza(Landroid/os/Parcel;)Z
 
-    move-object v3, p5
+    move-result v1
 
-    move-object v4, p6
+    invoke-virtual {p0, v1}, Lcom/google/android/gms/internal/zzlc;->onVideoMute(Z)V
 
-    move-object/from16 v5, p7
+    goto :goto_1
 
-    move-object/from16 v6, p8
-
-    move-object/from16 v7, p9
-
-    invoke-static/range {v0 .. v7}, Lcom/google/android/gms/internal/zzle;->a(Landroid/content/Context;Lcom/google/android/gms/ads/internal/client/AdSizeParcel;ZLcom/google/android/gms/internal/zzaq;Lcom/google/android/gms/ads/internal/util/client/VersionInfoParcel;Lcom/google/android/gms/internal/zzdc;Lcom/google/android/gms/ads/internal/zzs;Lcom/google/android/gms/ads/internal/zzd;)Lcom/google/android/gms/internal/zzle;
-
-    move-result-object v0
-
-    invoke-direct {v8, v0}, Lcom/google/android/gms/internal/r;-><init>(Lcom/google/android/gms/internal/zzla;)V
-
-    invoke-static {}, Lcom/google/android/gms/ads/internal/zzu;->zzcm()Lcom/google/android/gms/internal/zzkb;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v8, p4}, Lcom/google/android/gms/internal/zzkb;->zzb(Lcom/google/android/gms/internal/zzla;Z)Lcom/google/android/gms/internal/zzlb;
-
-    move-result-object v0
-
-    invoke-interface {v8, v0}, Lcom/google/android/gms/internal/zzla;->setWebViewClient(Landroid/webkit/WebViewClient;)V
-
-    invoke-static {}, Lcom/google/android/gms/ads/internal/zzu;->zzcm()Lcom/google/android/gms/internal/zzkb;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v8}, Lcom/google/android/gms/internal/zzkb;->zzk(Lcom/google/android/gms/internal/zzla;)Landroid/webkit/WebChromeClient;
-
-    move-result-object v0
-
-    invoke-interface {v8, v0}, Lcom/google/android/gms/internal/zzla;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
-
-    return-object v8
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+        :pswitch_4
+    .end packed-switch
 .end method

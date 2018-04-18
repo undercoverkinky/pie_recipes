@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 374
+    .line 383
     invoke-direct {p0}, Lcom/kik/ui/fragment/FragmentBase$FragmentBundle;-><init>()V
 
     return-void
@@ -29,8 +29,8 @@
     .locals 2
 
     .prologue
-    .line 374
-    .line 1394
+    .line 383
+    .line 1403
     const-string v0, "phone-number-auto-detected"
 
     const/4 v1, 0x0
@@ -43,7 +43,7 @@
 
     move-result v0
 
-    .line 374
+    .line 383
     return v0
 .end method
 
@@ -51,15 +51,15 @@
     .locals 1
 
     .prologue
-    .line 374
-    .line 2389
+    .line 383
+    .line 2398
     const-string v0, "phone-number"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment$a;->h(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 374
+    .line 383
     return-object v0
 .end method
 
@@ -69,16 +69,16 @@
     .locals 1
 
     .prologue
-    .line 381
+    .line 390
     const-string v0, "phone-number"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 382
+    .line 391
     const-string v0, "phone-number-auto-detected"
 
     invoke-virtual {p0, v0, p2}, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment$a;->b(Ljava/lang/String;Z)V
 
-    .line 383
+    .line 392
     return-object p0
 .end method

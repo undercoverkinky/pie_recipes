@@ -15,19 +15,21 @@
 
 
 # instance fields
-.field final synthetic a:Landroid/support/design/widget/TabLayout;
+.field a:I
 
-.field private b:I
+.field b:F
 
-.field private final c:Landroid/graphics/Paint;
+.field final synthetic c:Landroid/support/design/widget/TabLayout;
 
 .field private d:I
 
-.field private e:F
+.field private final e:Landroid/graphics/Paint;
 
 .field private f:I
 
 .field private g:I
+
+.field private h:Landroid/support/design/widget/ValueAnimatorCompat;
 
 
 # direct methods
@@ -37,57 +39,35 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 1292
-    iput-object p1, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a:Landroid/support/design/widget/TabLayout;
+    .line 1834
+    iput-object p1, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->c:Landroid/support/design/widget/TabLayout;
 
-    .line 1293
+    .line 1835
     invoke-direct {p0, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 1286
-    iput v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->d:I
+    .line 1826
+    iput v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a:I
 
-    .line 1289
+    .line 1829
     iput v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->f:I
 
-    .line 1290
+    .line 1830
     iput v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->g:I
 
-    .line 1294
+    .line 1836
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->setWillNotDraw(Z)V
 
-    .line 1295
+    .line 1837
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->c:Landroid/graphics/Paint;
+    iput-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->e:Landroid/graphics/Paint;
 
-    .line 1296
+    .line 1838
     return-void
-.end method
-
-.method static synthetic a(Landroid/support/design/widget/TabLayout$SlidingTabStrip;)F
-    .locals 1
-
-    .prologue
-    .line 1282
-    const/4 v0, 0x0
-
-    iput v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->e:F
-
-    return v0
-.end method
-
-.method static synthetic a(Landroid/support/design/widget/TabLayout$SlidingTabStrip;I)I
-    .locals 0
-
-    .prologue
-    .line 1282
-    iput p1, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->d:I
-
-    return p1
 .end method
 
 .method private a()V
@@ -96,14 +76,14 @@
     .prologue
     const/high16 v5, 0x3f800000    # 1.0f
 
-    .line 1385
-    iget v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->d:I
+    .line 1953
+    iget v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a:I
 
     invoke-virtual {p0, v0}, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 1388
+    .line 1956
     if-eqz v1, :cond_1
 
     invoke-virtual {v1}, Landroid/view/View;->getWidth()I
@@ -112,18 +92,18 @@
 
     if-lez v0, :cond_1
 
-    .line 1389
+    .line 1957
     invoke-virtual {v1}, Landroid/view/View;->getLeft()I
 
     move-result v0
 
-    .line 1390
+    .line 1958
     invoke-virtual {v1}, Landroid/view/View;->getRight()I
 
     move-result v1
 
-    .line 1392
-    iget v2, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->e:F
+    .line 1960
+    iget v2, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->b:F
 
     const/4 v3, 0x0
 
@@ -131,7 +111,7 @@
 
     if-lez v2, :cond_0
 
-    iget v2, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->d:I
+    iget v2, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a:I
 
     invoke-virtual {p0}, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->getChildCount()I
 
@@ -141,8 +121,8 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 1394
-    iget v2, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->d:I
+    .line 1962
+    iget v2, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a:I
 
     add-int/lit8 v2, v2, 0x1
 
@@ -150,8 +130,8 @@
 
     move-result-object v2
 
-    .line 1395
-    iget v3, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->e:F
+    .line 1963
+    iget v3, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->b:F
 
     invoke-virtual {v2}, Landroid/view/View;->getLeft()I
 
@@ -161,7 +141,7 @@
 
     mul-float/2addr v3, v4
 
-    iget v4, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->e:F
+    iget v4, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->b:F
 
     sub-float v4, v5, v4
 
@@ -173,8 +153,8 @@
 
     float-to-int v0, v0
 
-    .line 1397
-    iget v3, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->e:F
+    .line 1965
+    iget v3, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->b:F
 
     invoke-virtual {v2}, Landroid/view/View;->getRight()I
 
@@ -184,7 +164,7 @@
 
     mul-float/2addr v2, v3
 
-    iget v3, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->e:F
+    iget v3, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->b:F
 
     sub-float v3, v5, v3
 
@@ -196,15 +176,15 @@
 
     float-to-int v1, v1
 
-    .line 1404
+    .line 1972
     :cond_0
     :goto_0
-    invoke-direct {p0, v0, v1}, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a(II)V
+    invoke-virtual {p0, v0, v1}, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a(II)V
 
-    .line 1405
+    .line 1973
     return-void
 
-    .line 1401
+    .line 1969
     :cond_1
     const/4 v0, -0x1
 
@@ -213,11 +193,75 @@
     goto :goto_0
 .end method
 
-.method private a(II)V
+
+# virtual methods
+.method final a(I)V
     .locals 1
 
     .prologue
-    .line 1408
+    .line 1841
+    iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->e:Landroid/graphics/Paint;
+
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getColor()I
+
+    move-result v0
+
+    if-eq v0, p1, :cond_0
+
+    .line 1842
+    iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->e:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
+
+    .line 1843
+    invoke-static {p0}, Landroid/support/v4/view/ViewCompat;->postInvalidateOnAnimation(Landroid/view/View;)V
+
+    .line 1845
+    :cond_0
+    return-void
+.end method
+
+.method final a(IF)V
+    .locals 1
+
+    .prologue
+    .line 1865
+    iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->h:Landroid/support/design/widget/ValueAnimatorCompat;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->h:Landroid/support/design/widget/ValueAnimatorCompat;
+
+    invoke-virtual {v0}, Landroid/support/design/widget/ValueAnimatorCompat;->b()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 1866
+    iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->h:Landroid/support/design/widget/ValueAnimatorCompat;
+
+    invoke-virtual {v0}, Landroid/support/design/widget/ValueAnimatorCompat;->e()V
+
+    .line 1869
+    :cond_0
+    iput p1, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a:I
+
+    .line 1870
+    iput p2, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->b:F
+
+    .line 1871
+    invoke-direct {p0}, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a()V
+
+    .line 1872
+    return-void
+.end method
+
+.method final a(II)V
+    .locals 1
+
+    .prologue
+    .line 1976
     iget v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->f:I
 
     if-ne p1, v0, :cond_0
@@ -226,67 +270,53 @@
 
     if-eq p2, v0, :cond_1
 
-    .line 1410
+    .line 1978
     :cond_0
     iput p1, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->f:I
 
-    .line 1411
+    .line 1979
     iput p2, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->g:I
 
-    .line 1412
+    .line 1980
     invoke-static {p0}, Landroid/support/v4/view/ViewCompat;->postInvalidateOnAnimation(Landroid/view/View;)V
 
-    .line 1414
+    .line 1982
     :cond_1
     return-void
 .end method
 
-.method static synthetic a(Landroid/support/design/widget/TabLayout$SlidingTabStrip;II)V
-    .locals 0
-
-    .prologue
-    .line 1282
-    invoke-direct {p0, p1, p2}, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a(II)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method final a(I)V
+.method final b(I)V
     .locals 1
 
     .prologue
-    .line 1299
-    iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->c:Landroid/graphics/Paint;
+    .line 1848
+    iget v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->d:I
 
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
+    if-eq v0, p1, :cond_0
 
-    .line 1300
+    .line 1849
+    iput p1, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->d:I
+
+    .line 1850
     invoke-static {p0}, Landroid/support/v4/view/ViewCompat;->postInvalidateOnAnimation(Landroid/view/View;)V
 
-    .line 1301
+    .line 1852
+    :cond_0
     return-void
 .end method
 
-.method final a(IF)V
-    .locals 1
+.method final b(II)V
+    .locals 7
 
     .prologue
-    .line 1319
-    iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a:Landroid/support/design/widget/TabLayout;
+    const/4 v1, 0x1
 
-    invoke-static {v0}, Landroid/support/design/widget/TabLayout;->a(Landroid/support/design/widget/TabLayout;)Landroid/support/design/widget/ValueAnimatorCompat;
-
-    move-result-object v0
+    .line 1985
+    iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->h:Landroid/support/design/widget/ValueAnimatorCompat;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a:Landroid/support/design/widget/TabLayout;
-
-    invoke-static {v0}, Landroid/support/design/widget/TabLayout;->a(Landroid/support/design/widget/TabLayout;)Landroid/support/design/widget/ValueAnimatorCompat;
-
-    move-result-object v0
+    iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->h:Landroid/support/design/widget/ValueAnimatorCompat;
 
     invoke-virtual {v0}, Landroid/support/design/widget/ValueAnimatorCompat;->b()Z
 
@@ -294,44 +324,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 1325
-    :goto_0
-    return-void
+    .line 1986
+    iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->h:Landroid/support/design/widget/ValueAnimatorCompat;
 
-    .line 1322
+    invoke-virtual {v0}, Landroid/support/design/widget/ValueAnimatorCompat;->e()V
+
+    .line 1989
     :cond_0
-    iput p1, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->d:I
-
-    .line 1323
-    iput p2, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->e:F
-
-    .line 1324
-    invoke-direct {p0}, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a()V
-
-    goto :goto_0
-.end method
-
-.method final b(I)V
-    .locals 0
-
-    .prologue
-    .line 1304
-    iput p1, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->b:I
-
-    .line 1305
-    invoke-static {p0}, Landroid/support/v4/view/ViewCompat;->postInvalidateOnAnimation(Landroid/view/View;)V
-
-    .line 1306
-    return-void
-.end method
-
-.method final c(I)V
-    .locals 7
-
-    .prologue
-    const/4 v1, 0x1
-
-    .line 1417
     invoke-static {p0}, Landroid/support/v4/view/ViewCompat;->getLayoutDirection(Landroid/view/View;)I
 
     move-result v0
@@ -340,24 +339,42 @@
 
     move v0, v1
 
-    .line 1420
+    .line 1992
     :goto_0
     invoke-virtual {p0, p1}, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 1421
+    .line 1993
+    if-nez v2, :cond_3
+
+    .line 1995
+    invoke-direct {p0}, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a()V
+
+    .line 2051
+    :cond_1
+    :goto_1
+    return-void
+
+    .line 1989
+    :cond_2
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    .line 1999
+    :cond_3
     invoke-virtual {v2}, Landroid/view/View;->getLeft()I
 
     move-result v3
 
-    .line 1422
+    .line 2000
     invoke-virtual {v2}, Landroid/view/View;->getRight()I
 
     move-result v5
 
-    .line 1426
-    iget v2, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->d:I
+    .line 2004
+    iget v2, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a:I
 
     sub-int v2, p1, v2
 
@@ -365,50 +382,46 @@
 
     move-result v2
 
-    if-gt v2, v1, :cond_3
+    if-gt v2, v1, :cond_5
 
-    .line 1428
+    .line 2006
     iget v2, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->f:I
 
-    .line 1429
+    .line 2007
     iget v4, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->g:I
 
-    .line 1450
-    :goto_1
-    if-ne v2, v3, :cond_0
+    .line 2028
+    :goto_2
+    if-ne v2, v3, :cond_4
 
     if-eq v4, v5, :cond_1
 
-    .line 1451
-    :cond_0
-    iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a:Landroid/support/design/widget/TabLayout;
-
+    .line 2029
+    :cond_4
     invoke-static {}, Landroid/support/design/widget/ViewUtils;->a()Landroid/support/design/widget/ValueAnimatorCompat;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/support/design/widget/TabLayout;->a(Landroid/support/design/widget/TabLayout;Landroid/support/design/widget/ValueAnimatorCompat;)Landroid/support/design/widget/ValueAnimatorCompat;
 
     move-result-object v6
 
-    .line 1452
+    iput-object v6, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->h:Landroid/support/design/widget/ValueAnimatorCompat;
+
+    .line 2030
     sget-object v0, Landroid/support/design/widget/AnimationUtils;->b:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v6, v0}, Landroid/support/design/widget/ValueAnimatorCompat;->a(Landroid/view/animation/Interpolator;)V
 
-    .line 1453
-    const/16 v0, 0x12c
+    .line 2031
+    int-to-long v0, p2
 
-    invoke-virtual {v6, v0}, Landroid/support/design/widget/ValueAnimatorCompat;->a(I)V
+    invoke-virtual {v6, v0, v1}, Landroid/support/design/widget/ValueAnimatorCompat;->a(J)V
 
-    .line 1454
+    .line 2032
     const/4 v0, 0x0
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-virtual {v6, v0, v1}, Landroid/support/design/widget/ValueAnimatorCompat;->a(FF)V
 
-    .line 1455
+    .line 2033
     new-instance v0, Landroid/support/design/widget/TabLayout$SlidingTabStrip$1;
 
     move-object v1, p0
@@ -417,79 +430,71 @@
 
     invoke-virtual {v6, v0}, Landroid/support/design/widget/ValueAnimatorCompat;->a(Landroid/support/design/widget/ValueAnimatorCompat$AnimatorUpdateListener;)V
 
-    .line 1464
+    .line 2042
     new-instance v0, Landroid/support/design/widget/TabLayout$SlidingTabStrip$2;
 
     invoke-direct {v0, p0, p1}, Landroid/support/design/widget/TabLayout$SlidingTabStrip$2;-><init>(Landroid/support/design/widget/TabLayout$SlidingTabStrip;I)V
 
     invoke-virtual {v6, v0}, Landroid/support/design/widget/ValueAnimatorCompat;->a(Landroid/support/design/widget/ValueAnimatorCompat$AnimatorListener;)V
 
-    .line 1477
+    .line 2049
     invoke-virtual {v6}, Landroid/support/design/widget/ValueAnimatorCompat;->a()V
 
-    .line 1479
-    :cond_1
-    return-void
+    goto :goto_1
 
-    .line 1417
-    :cond_2
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    .line 1432
-    :cond_3
-    iget-object v1, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a:Landroid/support/design/widget/TabLayout;
+    .line 2010
+    :cond_5
+    iget-object v1, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->c:Landroid/support/design/widget/TabLayout;
 
     const/16 v2, 0x18
 
-    invoke-static {v1, v2}, Landroid/support/design/widget/TabLayout;->a(Landroid/support/design/widget/TabLayout;I)I
+    invoke-virtual {v1, v2}, Landroid/support/design/widget/TabLayout;->b(I)I
 
     move-result v1
 
-    .line 1433
-    iget v2, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->d:I
+    .line 2011
+    iget v2, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a:I
 
-    if-ge p1, v2, :cond_4
+    if-ge p1, v2, :cond_6
 
-    .line 1435
-    if-nez v0, :cond_5
+    .line 2013
+    if-nez v0, :cond_7
 
-    .line 1438
+    .line 2016
     add-int v4, v5, v1
 
     move v2, v4
 
-    goto :goto_1
+    goto :goto_2
 
-    .line 1442
-    :cond_4
-    if-eqz v0, :cond_5
+    .line 2020
+    :cond_6
+    if-eqz v0, :cond_7
 
-    .line 1443
+    .line 2021
     add-int v4, v5, v1
 
     move v2, v4
 
-    goto :goto_1
+    goto :goto_2
 
-    .line 1445
-    :cond_5
+    .line 2023
+    :cond_7
     sub-int v4, v3, v1
 
     move v2, v4
 
-    goto :goto_1
+    goto :goto_2
 .end method
 
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 6
 
     .prologue
-    .line 1483
+    .line 2055
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1486
+    .line 2058
     iget v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->f:I
 
     if-ltz v0, :cond_0
@@ -500,7 +505,7 @@
 
     if-le v0, v1, :cond_0
 
-    .line 1487
+    .line 2059
     iget v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->f:I
 
     int-to-float v1, v0
@@ -509,7 +514,7 @@
 
     move-result v0
 
-    iget v2, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->b:I
+    iget v2, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->d:I
 
     sub-int/2addr v0, v2
 
@@ -519,193 +524,280 @@
 
     int-to-float v3, v0
 
+    .line 2060
     invoke-virtual {p0}, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->getHeight()I
 
     move-result v0
 
     int-to-float v4, v0
 
-    iget-object v5, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->c:Landroid/graphics/Paint;
+    iget-object v5, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->e:Landroid/graphics/Paint;
 
     move-object v0, p1
 
+    .line 2059
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 1490
+    .line 2062
     :cond_0
     return-void
 .end method
 
 .method protected onLayout(ZIIII)V
-    .locals 0
+    .locals 5
 
     .prologue
-    .line 1379
+    .line 1937
     invoke-super/range {p0 .. p5}, Landroid/widget/LinearLayout;->onLayout(ZIIII)V
 
-    .line 1381
+    .line 1939
+    iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->h:Landroid/support/design/widget/ValueAnimatorCompat;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->h:Landroid/support/design/widget/ValueAnimatorCompat;
+
+    invoke-virtual {v0}, Landroid/support/design/widget/ValueAnimatorCompat;->b()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 1942
+    iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->h:Landroid/support/design/widget/ValueAnimatorCompat;
+
+    invoke-virtual {v0}, Landroid/support/design/widget/ValueAnimatorCompat;->e()V
+
+    .line 1943
+    iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->h:Landroid/support/design/widget/ValueAnimatorCompat;
+
+    invoke-virtual {v0}, Landroid/support/design/widget/ValueAnimatorCompat;->h()J
+
+    move-result-wide v0
+
+    .line 1944
+    iget v2, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a:I
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    iget-object v4, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->h:Landroid/support/design/widget/ValueAnimatorCompat;
+
+    .line 1945
+    invoke-virtual {v4}, Landroid/support/design/widget/ValueAnimatorCompat;->f()F
+
+    move-result v4
+
+    sub-float/2addr v3, v4
+
+    long-to-float v0, v0
+
+    mul-float/2addr v0, v3
+
+    invoke-static {v0}, Ljava/lang/Math;->round(F)I
+
+    move-result v0
+
+    .line 1944
+    invoke-virtual {p0, v2, v0}, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->b(II)V
+
+    .line 1950
+    :goto_0
+    return-void
+
+    .line 1948
+    :cond_0
     invoke-direct {p0}, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a()V
 
-    .line 1382
-    return-void
+    goto :goto_0
 .end method
 
 .method protected onMeasure(II)V
-    .locals 6
+    .locals 8
 
     .prologue
+    const/4 v7, 0x0
+
     const/4 v3, 0x1
 
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    .line 1329
+    .line 1880
     invoke-super {p0, p1, p2}, Landroid/widget/LinearLayout;->onMeasure(II)V
 
-    .line 1331
+    .line 1882
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
-    move-result v1
+    move-result v0
 
-    const/high16 v2, 0x40000000    # 2.0f
+    const/high16 v1, 0x40000000    # 2.0f
 
-    if-eq v1, v2, :cond_1
+    if-eq v0, v1, :cond_1
 
-    .line 1375
+    .line 1933
     :cond_0
     :goto_0
     return-void
 
-    .line 1337
+    .line 1888
     :cond_1
-    iget-object v1, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a:Landroid/support/design/widget/TabLayout;
+    iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->c:Landroid/support/design/widget/TabLayout;
 
-    invoke-static {v1}, Landroid/support/design/widget/TabLayout;->b(Landroid/support/design/widget/TabLayout;)I
+    iget v0, v0, Landroid/support/design/widget/TabLayout;->l:I
 
-    move-result v1
+    if-ne v0, v3, :cond_0
 
-    if-ne v1, v3, :cond_0
+    iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->c:Landroid/support/design/widget/TabLayout;
 
-    iget-object v1, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a:Landroid/support/design/widget/TabLayout;
+    iget v0, v0, Landroid/support/design/widget/TabLayout;->k:I
 
-    invoke-static {v1}, Landroid/support/design/widget/TabLayout;->c(Landroid/support/design/widget/TabLayout;)I
+    if-ne v0, v3, :cond_0
 
-    move-result v1
-
-    if-ne v1, v3, :cond_0
-
-    .line 1338
+    .line 1889
     invoke-virtual {p0}, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->getChildCount()I
 
-    move-result v3
+    move-result v5
 
-    .line 1340
-    invoke-static {v0, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    move v4, v2
 
-    move-result v4
+    move v1, v2
 
-    move v1, v0
-
-    move v2, v0
-
-    .line 1344
+    .line 1893
     :goto_1
-    if-ge v1, v3, :cond_2
+    if-ge v4, v5, :cond_2
 
-    .line 1345
-    invoke-virtual {p0, v1}, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v5
-
-    .line 1346
-    invoke-virtual {v5, v4, p2}, Landroid/view/View;->measure(II)V
-
-    .line 1347
-    invoke-virtual {v5}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v5
-
-    invoke-static {v2, v5}, Ljava/lang/Math;->max(II)I
-
-    move-result v2
-
-    .line 1344
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    .line 1350
-    :cond_2
-    if-lez v2, :cond_0
-
-    .line 1355
-    iget-object v1, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a:Landroid/support/design/widget/TabLayout;
-
-    const/16 v4, 0x10
-
-    invoke-static {v1, v4}, Landroid/support/design/widget/TabLayout;->a(Landroid/support/design/widget/TabLayout;I)I
-
-    move-result v1
-
-    .line 1356
-    mul-int v4, v2, v3
-
-    invoke-virtual {p0}, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->getMeasuredWidth()I
-
-    move-result v5
-
-    mul-int/lit8 v1, v1, 0x2
-
-    sub-int v1, v5, v1
-
-    if-gt v4, v1, :cond_3
-
-    move v1, v0
-
-    .line 1359
-    :goto_2
-    if-ge v1, v3, :cond_4
-
-    .line 1360
-    invoke-virtual {p0, v1}, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->getChildAt(I)Landroid/view/View;
+    .line 1894
+    invoke-virtual {p0, v4}, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 1361
+    .line 1895
+    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+
+    move-result v6
+
+    if-nez v6, :cond_7
+
+    .line 1896
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v0
+
+    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    .line 1893
+    :goto_2
+    add-int/lit8 v1, v4, 0x1
+
+    move v4, v1
+
+    move v1, v0
+
+    goto :goto_1
+
+    .line 1900
+    :cond_2
+    if-lez v1, :cond_0
+
+    .line 1905
+    iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->c:Landroid/support/design/widget/TabLayout;
+
+    const/16 v4, 0x10
+
+    invoke-virtual {v0, v4}, Landroid/support/design/widget/TabLayout;->b(I)I
+
+    move-result v0
+
+    .line 1908
+    mul-int v4, v1, v5
+
+    invoke-virtual {p0}, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->getMeasuredWidth()I
+
+    move-result v6
+
+    mul-int/lit8 v0, v0, 0x2
+
+    sub-int v0, v6, v0
+
+    if-gt v4, v0, :cond_4
+
+    move v4, v2
+
+    .line 1911
+    :goto_3
+    if-ge v4, v5, :cond_5
+
+    .line 1913
+    invoke-virtual {p0, v4}, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v0
+
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 1362
-    iput v2, v0, Landroid/widget/LinearLayout$LayoutParams;->width:I
+    .line 1914
+    iget v6, v0, Landroid/widget/LinearLayout$LayoutParams;->width:I
 
-    .line 1363
-    const/4 v4, 0x0
+    if-ne v6, v1, :cond_3
 
-    iput v4, v0, Landroid/widget/LinearLayout$LayoutParams;->weight:F
+    iget v6, v0, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
-    .line 1359
-    add-int/lit8 v0, v1, 0x1
+    cmpl-float v6, v6, v7
 
-    move v1, v0
+    if-eqz v6, :cond_6
 
-    goto :goto_2
-
-    .line 1368
+    .line 1915
     :cond_3
-    iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a:Landroid/support/design/widget/TabLayout;
+    iput v1, v0, Landroid/widget/LinearLayout$LayoutParams;->width:I
 
-    invoke-static {v0}, Landroid/support/design/widget/TabLayout;->d(Landroid/support/design/widget/TabLayout;)I
+    .line 1916
+    iput v7, v0, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
-    .line 1369
-    iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a:Landroid/support/design/widget/TabLayout;
+    move v0, v3
 
-    invoke-static {v0}, Landroid/support/design/widget/TabLayout;->e(Landroid/support/design/widget/TabLayout;)V
+    .line 1911
+    :goto_4
+    add-int/lit8 v2, v4, 0x1
 
-    .line 1373
+    move v4, v2
+
+    move v2, v0
+
+    goto :goto_3
+
+    .line 1923
     :cond_4
+    iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->c:Landroid/support/design/widget/TabLayout;
+
+    iput v2, v0, Landroid/support/design/widget/TabLayout;->k:I
+
+    .line 1924
+    iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->c:Landroid/support/design/widget/TabLayout;
+
+    invoke-virtual {v0, v2}, Landroid/support/design/widget/TabLayout;->a(Z)V
+
+    move v2, v3
+
+    .line 1928
+    :cond_5
+    if-eqz v2, :cond_0
+
+    .line 1930
     invoke-super {p0, p1, p2}, Landroid/widget/LinearLayout;->onMeasure(II)V
 
     goto :goto_0
+
+    :cond_6
+    move v0, v2
+
+    goto :goto_4
+
+    :cond_7
+    move v0, v1
+
+    goto :goto_2
 .end method

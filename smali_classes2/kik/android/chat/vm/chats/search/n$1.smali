@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/vm/chats/search/n$1;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,9 +15,9 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
-        "Lkik/core/datatypes/o;",
+        "Lkik/core/datatypes/l;",
         ">;"
     }
 .end annotation
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 47
+    .line 55
     iput-object p1, p0, Lkik/android/chat/vm/chats/search/n$1;->a:Lkik/android/chat/vm/chats/search/n;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -46,15 +46,15 @@
     .locals 1
 
     .prologue
-    .line 47
-    check-cast p1, Lkik/core/datatypes/o;
+    .line 55
+    check-cast p1, Lkik/core/datatypes/l;
 
-    .line 1051
+    .line 1059
     iget-object v0, p0, Lkik/android/chat/vm/chats/search/n$1;->a:Lkik/android/chat/vm/chats/search/n;
 
-    invoke-static {v0, p1}, Lkik/android/chat/vm/chats/search/n;->a(Lkik/android/chat/vm/chats/search/n;Lkik/core/datatypes/o;)V
+    invoke-static {v0, p1}, Lkik/android/chat/vm/chats/search/n;->a(Lkik/android/chat/vm/chats/search/n;Lkik/core/datatypes/l;)V
 
-    .line 47
+    .line 55
     return-void
 .end method
 
@@ -62,11 +62,11 @@
     .locals 1
 
     .prologue
-    .line 57
+    .line 65
     iget-object v0, p0, Lkik/android/chat/vm/chats/search/n$1;->a:Lkik/android/chat/vm/chats/search/n;
 
     invoke-static {v0, p1}, Lkik/android/chat/vm/chats/search/n;->a(Lkik/android/chat/vm/chats/search/n;Ljava/lang/Throwable;)V
 
-    .line 58
+    .line 66
     return-void
 .end method

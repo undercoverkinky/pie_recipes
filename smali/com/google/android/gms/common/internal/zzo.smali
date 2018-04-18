@@ -1,147 +1,62 @@
-.class public Lcom/google/android/gms/common/internal/zzo;
-.super Ljava/lang/Object;
+.class public final Lcom/google/android/gms/common/internal/zzo;
+.super Lcom/google/android/gms/common/internal/k;
 
 
-# static fields
-.field private static final zzasc:Landroid/net/Uri;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/google/android/gms/common/internal/k;"
+    }
+.end annotation
 
-.field private static final zzasd:Landroid/net/Uri;
+
+# instance fields
+.field private synthetic zzftf:Lcom/google/android/gms/common/internal/zzd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lcom/google/android/gms/common/internal/zzd;ILandroid/os/Bundle;)V
+    .locals 1
 
-    const-string v0, "http://plus.google.com/"
+    iput-object p1, p0, Lcom/google/android/gms/common/internal/zzo;->zzftf:Lcom/google/android/gms/common/internal/zzd;
 
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    const/4 v0, 0x0
 
-    move-result-object v0
-
-    sput-object v0, Lcom/google/android/gms/common/internal/zzo;->zzasc:Landroid/net/Uri;
-
-    invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
-
-    move-result-object v0
-
-    const-string v1, "circles"
-
-    invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
-
-    move-result-object v0
-
-    const-string v1, "find"
-
-    invoke-virtual {v0, v1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/google/android/gms/common/internal/zzo;->zzasd:Landroid/net/Uri;
+    invoke-direct {p0, p1, p2, v0}, Lcom/google/android/gms/common/internal/k;-><init>(Lcom/google/android/gms/common/internal/zzd;ILandroid/os/Bundle;)V
 
     return-void
 .end method
 
-.method private static zzA(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
+
+# virtual methods
+.method protected final zzajn()Z
     .locals 2
 
-    const-string v0, "market://details"
+    iget-object v0, p0, Lcom/google/android/gms/common/internal/zzo;->zzftf:Lcom/google/android/gms/common/internal/zzd;
 
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    iget-object v0, v0, Lcom/google/android/gms/common/internal/zzd;->zzfsr:Lcom/google/android/gms/common/internal/zzj;
 
-    move-result-object v0
+    sget-object v1, Lcom/google/android/gms/common/ConnectionResult;->zzfez:Lcom/google/android/gms/common/ConnectionResult;
 
-    invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
+    invoke-interface {v0, v1}, Lcom/google/android/gms/common/internal/zzj;->zzf(Lcom/google/android/gms/common/ConnectionResult;)V
 
-    move-result-object v0
+    const/4 v0, 0x1
 
-    const-string v1, "id"
-
-    invoke-virtual {v0, v1, p0}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
-
-    move-result-object v0
-
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string v1, "pcampaignid"
-
-    invoke-virtual {v0, v1, p1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
-
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method
 
-.method public static zzB(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-    .locals 2
+.method protected final zzj(Lcom/google/android/gms/common/ConnectionResult;)V
+    .locals 1
 
-    new-instance v0, Landroid/content/Intent;
+    iget-object v0, p0, Lcom/google/android/gms/common/internal/zzo;->zzftf:Lcom/google/android/gms/common/internal/zzd;
 
-    const-string v1, "android.intent.action.VIEW"
+    iget-object v0, v0, Lcom/google/android/gms/common/internal/zzd;->zzfsr:Lcom/google/android/gms/common/internal/zzj;
 
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/google/android/gms/common/internal/zzj;->zzf(Lcom/google/android/gms/common/ConnectionResult;)V
 
-    invoke-static {p0, p1}, Lcom/google/android/gms/common/internal/zzo;->zzA(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
+    iget-object v0, p0, Lcom/google/android/gms/common/internal/zzo;->zzftf:Lcom/google/android/gms/common/internal/zzd;
 
-    move-result-object v1
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/common/internal/zzd;->onConnectionFailed(Lcom/google/android/gms/common/ConnectionResult;)V
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
-
-    const-string v1, "com.android.vending"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    const/high16 v1, 0x80000
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    return-object v0
-.end method
-
-.method public static zzdi(Ljava/lang/String;)Landroid/content/Intent;
-    .locals 3
-
-    const-string v0, "package"
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, p0, v1}, Landroid/net/Uri;->fromParts(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    new-instance v1, Landroid/content/Intent;
-
-    const-string v2, "android.settings.APPLICATION_DETAILS_SETTINGS"
-
-    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
-
-    return-object v1
-.end method
-
-.method public static zztM()Landroid/content/Intent;
-    .locals 2
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v1, "com.google.android.clockwork.home.UPDATE_ANDROID_WEAR_ACTION"
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    const-string v1, "com.google.android.wearable.app"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    return-object v0
+    return-void
 .end method

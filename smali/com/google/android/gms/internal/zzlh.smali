@@ -1,819 +1,495 @@
-.class public Lcom/google/android/gms/internal/zzlh;
-.super Landroid/webkit/WebChromeClient;
-
-
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0xb
-.end annotation
-
-.annotation runtime Lcom/google/android/gms/internal/zzig;
-.end annotation
+.class public final Lcom/google/android/gms/internal/zzlh;
+.super Ljava/lang/Object;
 
 
 # instance fields
-.field private final zzBb:Lcom/google/android/gms/internal/zzla;
+.field private zzalt:Z
+
+.field private zzbcc:I
+
+.field private zzbcf:I
+
+.field private zzbcg:Ljava/lang/String;
+
+.field private zzbci:Ljava/lang/String;
+
+.field private final zzbck:Landroid/os/Bundle;
+
+.field private zzbcm:Ljava/lang/String;
+
+.field private zzbco:Z
+
+.field private final zzbdq:Landroid/os/Bundle;
+
+.field private final zzbdv:Ljava/util/HashSet;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashSet",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final zzbdw:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/Class",
+            "<+",
+            "Lcom/google/android/gms/ads/mediation/NetworkExtras;",
+            ">;",
+            "Lcom/google/android/gms/ads/mediation/NetworkExtras;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final zzbdx:Ljava/util/HashSet;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashSet",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final zzbdy:Ljava/util/HashSet;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashSet",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private zzha:Ljava/util/Date;
+
+.field private zzhe:Landroid/location/Location;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/internal/zzla;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    invoke-direct {p0}, Landroid/webkit/WebChromeClient;-><init>()V
+    const/4 v1, -0x1
 
-    iput-object p1, p0, Lcom/google/android/gms/internal/zzlh;->zzBb:Lcom/google/android/gms/internal/zzla;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbdv:Ljava/util/HashSet;
+
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbdq:Landroid/os/Bundle;
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbdw:Ljava/util/HashMap;
+
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbdx:Ljava/util/HashSet;
+
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbck:Landroid/os/Bundle;
+
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbdy:Ljava/util/HashSet;
+
+    iput v1, p0, Lcom/google/android/gms/internal/zzlh;->zzbcc:I
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/google/android/gms/internal/zzlh;->zzalt:Z
+
+    iput v1, p0, Lcom/google/android/gms/internal/zzlh;->zzbcf:I
 
     return-void
 .end method
 
-.method private final zza(Landroid/webkit/WebView;)Landroid/content/Context;
+.method static synthetic zza(Lcom/google/android/gms/internal/zzlh;)Ljava/util/Date;
     .locals 1
 
-    instance-of v0, p1, Lcom/google/android/gms/internal/zzla;
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzha:Ljava/util/Date;
 
-    if-nez v0, :cond_1
+    return-object v0
+.end method
 
-    invoke-virtual {p1}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
+.method static synthetic zzb(Lcom/google/android/gms/internal/zzlh;)Ljava/lang/String;
+    .locals 1
 
-    move-result-object v0
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbci:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic zzc(Lcom/google/android/gms/internal/zzlh;)I
+    .locals 1
+
+    iget v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbcc:I
+
+    return v0
+.end method
+
+.method static synthetic zzd(Lcom/google/android/gms/internal/zzlh;)Ljava/util/HashSet;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbdv:Ljava/util/HashSet;
+
+    return-object v0
+.end method
+
+.method static synthetic zze(Lcom/google/android/gms/internal/zzlh;)Landroid/location/Location;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzhe:Landroid/location/Location;
+
+    return-object v0
+.end method
+
+.method static synthetic zzf(Lcom/google/android/gms/internal/zzlh;)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/google/android/gms/internal/zzlh;->zzalt:Z
+
+    return v0
+.end method
+
+.method static synthetic zzg(Lcom/google/android/gms/internal/zzlh;)Landroid/os/Bundle;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbdq:Landroid/os/Bundle;
+
+    return-object v0
+.end method
+
+.method static synthetic zzh(Lcom/google/android/gms/internal/zzlh;)Ljava/util/HashMap;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbdw:Ljava/util/HashMap;
+
+    return-object v0
+.end method
+
+.method static synthetic zzi(Lcom/google/android/gms/internal/zzlh;)Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbcg:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic zzj(Lcom/google/android/gms/internal/zzlh;)Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbcm:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic zzk(Lcom/google/android/gms/internal/zzlh;)I
+    .locals 1
+
+    iget v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbcf:I
+
+    return v0
+.end method
+
+.method static synthetic zzl(Lcom/google/android/gms/internal/zzlh;)Ljava/util/HashSet;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbdx:Ljava/util/HashSet;
+
+    return-object v0
+.end method
+
+.method static synthetic zzm(Lcom/google/android/gms/internal/zzlh;)Landroid/os/Bundle;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbck:Landroid/os/Bundle;
+
+    return-object v0
+.end method
+
+.method static synthetic zzn(Lcom/google/android/gms/internal/zzlh;)Ljava/util/HashSet;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbdy:Ljava/util/HashSet;
+
+    return-object v0
+.end method
+
+.method static synthetic zzo(Lcom/google/android/gms/internal/zzlh;)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbco:Z
+
+    return v0
+.end method
+
+
+# virtual methods
+.method public final setManualImpressionsEnabled(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/google/android/gms/internal/zzlh;->zzalt:Z
+
+    return-void
+.end method
+
+.method public final zza(Lcom/google/android/gms/ads/mediation/NetworkExtras;)V
+    .locals 2
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    instance-of v0, p1, Lcom/google/android/gms/ads/mediation/admob/AdMobExtras;
+
+    if-eqz v0, :cond_0
+
+    const-class v0, Lcom/google/ads/mediation/admob/AdMobAdapter;
+
+    check-cast p1, Lcom/google/android/gms/ads/mediation/admob/AdMobExtras;
+
+    invoke-virtual {p1}, Lcom/google/android/gms/ads/mediation/admob/AdMobExtras;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v0, v1}, Lcom/google/android/gms/internal/zzlh;->zza(Ljava/lang/Class;Landroid/os/Bundle;)V
+
+    :goto_0
+    return-void
 
     :cond_0
-    :goto_0
-    return-object v0
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbdw:Ljava/util/HashMap;
 
-    :cond_1
-    check-cast p1, Lcom/google/android/gms/internal/zzla;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-interface {p1}, Lcom/google/android/gms/internal/zzla;->zzjy()Landroid/app/Activity;
+    move-result-object v1
 
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    invoke-interface {p1}, Lcom/google/android/gms/internal/zzla;->getContext()Landroid/content/Context;
-
-    move-result-object v0
+    invoke-virtual {v0, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 .end method
 
-.method private static zza(Landroid/app/AlertDialog$Builder;Ljava/lang/String;Landroid/webkit/JsResult;)V
+.method public final zza(Ljava/lang/Class;Landroid/os/Bundle;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class",
+            "<+",
+            "Lcom/google/android/gms/ads/mediation/MediationAdapter;",
+            ">;",
+            "Landroid/os/Bundle;",
+            ")V"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbdq:Landroid/os/Bundle;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public final zza(Ljava/util/Date;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/zzlh;->zzha:Ljava/util/Date;
+
+    return-void
+.end method
+
+.method public final zzac(Ljava/lang/String;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbdv:Ljava/util/HashSet;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public final zzad(Ljava/lang/String;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbdx:Ljava/util/HashSet;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public final zzae(Ljava/lang/String;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbdx:Ljava/util/HashSet;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public final zzaf(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/zzlh;->zzbci:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public final zzag(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/zzlh;->zzbcg:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public final zzah(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/zzlh;->zzbcm:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public final zzai(Ljava/lang/String;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbdy:Ljava/util/HashSet;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public final zzb(Landroid/location/Location;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/zzlh;->zzhe:Landroid/location/Location;
+
+    return-void
+.end method
+
+.method public final zzb(Ljava/lang/Class;Landroid/os/Bundle;)V
     .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class",
+            "<+",
+            "Lcom/google/android/gms/ads/mediation/customevent/CustomEvent;",
+            ">;",
+            "Landroid/os/Bundle;",
+            ")V"
+        }
+    .end annotation
 
-    invoke-virtual {p0, p1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbdq:Landroid/os/Bundle;
 
-    move-result-object v0
+    const-string v1, "com.google.android.gms.ads.mediation.customevent.CustomEventAdapter"
 
-    const v1, 0x104000a
-
-    new-instance v2, Lcom/google/android/gms/internal/zzlh$3;
-
-    invoke-direct {v2, p2}, Lcom/google/android/gms/internal/zzlh$3;-><init>(Landroid/webkit/JsResult;)V
-
-    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v0
-
-    const/high16 v1, 0x1040000
-
-    new-instance v2, Lcom/google/android/gms/internal/zzlh$2;
-
-    invoke-direct {v2, p2}, Lcom/google/android/gms/internal/zzlh$2;-><init>(Landroid/webkit/JsResult;)V
-
-    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v0
-
-    new-instance v1, Lcom/google/android/gms/internal/zzlh$1;
-
-    invoke-direct {v1, p2}, Lcom/google/android/gms/internal/zzlh$1;-><init>(Landroid/webkit/JsResult;)V
-
-    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
-
-    return-void
-.end method
-
-.method private static zza(Landroid/content/Context;Landroid/app/AlertDialog$Builder;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsPromptResult;)V
-    .locals 4
-
-    new-instance v0, Landroid/widget/LinearLayout;
-
-    invoke-direct {v0, p0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOrientation(I)V
-
-    new-instance v1, Landroid/widget/TextView;
-
-    invoke-direct {v1, p0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    new-instance v2, Landroid/widget/EditText;
-
-    invoke-direct {v2, p0}, Landroid/widget/EditText;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v2, p3}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
-
-    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
-
-    invoke-virtual {p1, v0}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v0
-
-    const v1, 0x104000a
-
-    new-instance v3, Lcom/google/android/gms/internal/zzlh$6;
-
-    invoke-direct {v3, p4, v2}, Lcom/google/android/gms/internal/zzlh$6;-><init>(Landroid/webkit/JsPromptResult;Landroid/widget/EditText;)V
-
-    invoke-virtual {v0, v1, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v0
-
-    const/high16 v1, 0x1040000
-
-    new-instance v2, Lcom/google/android/gms/internal/zzlh$5;
-
-    invoke-direct {v2, p4}, Lcom/google/android/gms/internal/zzlh$5;-><init>(Landroid/webkit/JsPromptResult;)V
-
-    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/google/android/gms/internal/zzlh$4;
-
-    invoke-direct {v1, p4}, Lcom/google/android/gms/internal/zzlh$4;-><init>(Landroid/webkit/JsPromptResult;)V
-
-    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
-
-    return-void
-.end method
-
-.method private final zzkh()Z
-    .locals 4
-
-    invoke-static {}, Lcom/google/android/gms/ads/internal/zzu;->zzck()Lcom/google/android/gms/internal/zzka;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzlh;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    invoke-interface {v1}, Lcom/google/android/gms/internal/zzla;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/google/android/gms/internal/zzlh;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    invoke-interface {v2}, Lcom/google/android/gms/internal/zzla;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "android.permission.ACCESS_FINE_LOCATION"
-
-    invoke-virtual {v0, v1, v2, v3}, Lcom/google/android/gms/internal/zzka;->zza(Landroid/content/pm/PackageManager;Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lcom/google/android/gms/ads/internal/zzu;->zzck()Lcom/google/android/gms/internal/zzka;
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbdq:Landroid/os/Bundle;
+
+    const-string v1, "com.google.android.gms.ads.mediation.customevent.CustomEventAdapter"
+
+    new-instance v2, Landroid/os/Bundle;
+
+    invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbdq:Landroid/os/Bundle;
+
+    const-string v1, "com.google.android.gms.ads.mediation.customevent.CustomEventAdapter"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzlh;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    invoke-interface {v1}, Lcom/google/android/gms/internal/zzla;->getContext()Landroid/content/Context;
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    move-result-object v1
+    return-void
+.end method
 
-    iget-object v2, p0, Lcom/google/android/gms/internal/zzlh;->zzBb:Lcom/google/android/gms/internal/zzla;
+.method public final zzf(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
-    invoke-interface {v2}, Lcom/google/android/gms/internal/zzla;->getContext()Landroid/content/Context;
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbck:Landroid/os/Bundle;
 
-    move-result-object v2
+    invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    return-void
+.end method
 
-    move-result-object v2
+.method public final zzi(Z)V
+    .locals 1
 
-    const-string v3, "android.permission.ACCESS_COARSE_LOCATION"
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/google/android/gms/internal/zzka;->zza(Landroid/content/pm/PackageManager;Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
     const/4 v0, 0x1
 
     :goto_0
-    return v0
+    iput v0, p0, Lcom/google/android/gms/internal/zzlh;->zzbcf:I
 
-    :cond_1
+    return-void
+
+    :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
+.method public final zzj(Z)V
+    .locals 0
 
-# virtual methods
-.method public final onCloseWindow(Landroid/webkit/WebView;)V
-    .locals 1
-
-    instance-of v0, p1, Lcom/google/android/gms/internal/zzla;
-
-    if-nez v0, :cond_0
-
-    const-string v0, "Tried to close a WebView that wasn\'t an AdWebView."
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/zzjw;->zzaW(Ljava/lang/String;)V
-
-    :goto_0
-    return-void
-
-    :cond_0
-    check-cast p1, Lcom/google/android/gms/internal/zzla;
-
-    invoke-interface {p1}, Lcom/google/android/gms/internal/zzla;->zzjB()Lcom/google/android/gms/ads/internal/overlay/zzd;
-
-    move-result-object v0
-
-    if-nez v0, :cond_1
-
-    const-string v0, "Tried to close an AdWebView not associated with an overlay."
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/zzjw;->zzaW(Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->close()V
-
-    goto :goto_0
-.end method
-
-.method public final onConsoleMessage(Landroid/webkit/ConsoleMessage;)Z
-    .locals 6
-
-    invoke-virtual {p1}, Landroid/webkit/ConsoleMessage;->message()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Landroid/webkit/ConsoleMessage;->sourceId()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Landroid/webkit/ConsoleMessage;->lineNumber()I
-
-    move-result v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
-
-    move-result v4
-
-    add-int/lit8 v4, v4, 0x13
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/String;->length()I
-
-    move-result v5
-
-    add-int/2addr v4, v5
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v4, "JS: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v3, " ("
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ":"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "Application Cache"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-super {p0, p1}, Landroid/webkit/WebChromeClient;->onConsoleMessage(Landroid/webkit/ConsoleMessage;)Z
-
-    move-result v0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    sget-object v1, Lcom/google/android/gms/internal/zzlh$7;->a:[I
-
-    invoke-virtual {p1}, Landroid/webkit/ConsoleMessage;->messageLevel()Landroid/webkit/ConsoleMessage$MessageLevel;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/webkit/ConsoleMessage$MessageLevel;->ordinal()I
-
-    move-result v2
-
-    aget v1, v1, v2
-
-    packed-switch v1, :pswitch_data_0
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/zzjw;->zzaV(Ljava/lang/String;)V
-
-    :goto_1
-    invoke-super {p0, p1}, Landroid/webkit/WebChromeClient;->onConsoleMessage(Landroid/webkit/ConsoleMessage;)Z
-
-    move-result v0
-
-    goto :goto_0
-
-    :pswitch_0
-    invoke-static {v0}, Lcom/google/android/gms/internal/zzjw;->e(Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :pswitch_1
-    invoke-static {v0}, Lcom/google/android/gms/internal/zzjw;->zzaW(Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :pswitch_2
-    invoke-static {v0}, Lcom/google/android/gms/internal/zzjw;->zzaV(Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :pswitch_3
-    invoke-static {v0}, Lcom/google/android/gms/internal/zzjw;->zzaU(Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_2
-        :pswitch_3
-    .end packed-switch
-.end method
-
-.method public final onCreateWindow(Landroid/webkit/WebView;ZZLandroid/os/Message;)Z
-    .locals 3
-
-    iget-object v0, p4, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast v0, Landroid/webkit/WebView$WebViewTransport;
-
-    new-instance v1, Landroid/webkit/WebView;
-
-    invoke-virtual {p1}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;)V
-
-    iget-object v2, p0, Lcom/google/android/gms/internal/zzlh;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    invoke-interface {v2}, Lcom/google/android/gms/internal/zzla;->zzjD()Lcom/google/android/gms/internal/zzlb;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
-
-    invoke-virtual {v0, v1}, Landroid/webkit/WebView$WebViewTransport;->setWebView(Landroid/webkit/WebView;)V
-
-    invoke-virtual {p4}, Landroid/os/Message;->sendToTarget()V
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final onExceededDatabaseQuota(Ljava/lang/String;Ljava/lang/String;JJJLandroid/webkit/WebStorage$QuotaUpdater;)V
-    .locals 5
-
-    const-wide/32 v0, 0x500000
-
-    sub-long/2addr v0, p7
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v2, v0, v2
-
-    if-gtz v2, :cond_0
-
-    invoke-interface {p9, p3, p4}, Landroid/webkit/WebStorage$QuotaUpdater;->updateQuota(J)V
-
-    :goto_0
-    return-void
-
-    :cond_0
-    const-wide/16 v2, 0x0
-
-    cmp-long v2, p3, v2
-
-    if-nez v2, :cond_2
-
-    cmp-long v0, p5, v0
-
-    if-gtz v0, :cond_1
-
-    const-wide/32 v0, 0x100000
-
-    cmp-long v0, p5, v0
-
-    if-gtz v0, :cond_1
-
-    :goto_1
-    invoke-interface {p9, p5, p6}, Landroid/webkit/WebStorage$QuotaUpdater;->updateQuota(J)V
-
-    goto :goto_0
-
-    :cond_1
-    const-wide/16 p5, 0x0
-
-    goto :goto_1
-
-    :cond_2
-    const-wide/16 v2, 0x0
-
-    cmp-long v2, p5, v2
-
-    if-nez v2, :cond_4
-
-    const-wide/32 v2, 0x20000
-
-    invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v0
-
-    add-long/2addr v0, p3
-
-    const-wide/32 v2, 0x100000
-
-    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide p3
-
-    :cond_3
-    :goto_2
-    move-wide p5, p3
-
-    goto :goto_1
-
-    :cond_4
-    const-wide/32 v2, 0x100000
-
-    sub-long/2addr v2, p3
-
-    invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v0
-
-    cmp-long v0, p5, v0
-
-    if-gtz v0, :cond_3
-
-    add-long/2addr p3, p5
-
-    goto :goto_2
-.end method
-
-.method public final onGeolocationPermissionsShowPrompt(Ljava/lang/String;Landroid/webkit/GeolocationPermissions$Callback;)V
-    .locals 2
-
-    if-eqz p2, :cond_0
-
-    invoke-direct {p0}, Lcom/google/android/gms/internal/zzlh;->zzkh()Z
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    invoke-interface {p2, p1, v0, v1}, Landroid/webkit/GeolocationPermissions$Callback;->invoke(Ljava/lang/String;ZZ)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onHideCustomView()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    invoke-interface {v0}, Lcom/google/android/gms/internal/zzla;->zzjB()Lcom/google/android/gms/ads/internal/overlay/zzd;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "Could not get ad overlay when hiding custom view."
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/zzjw;->zzaW(Ljava/lang/String;)V
-
-    :goto_0
-    return-void
-
-    :cond_0
-    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzgo()V
-
-    goto :goto_0
-.end method
-
-.method public final onJsAlert(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsResult;)Z
-    .locals 8
-
-    const/4 v4, 0x0
-
-    invoke-direct {p0, p1}, Lcom/google/android/gms/internal/zzlh;->zza(Landroid/webkit/WebView;)Landroid/content/Context;
-
-    move-result-object v1
-
-    const/4 v7, 0x0
-
-    move-object v0, p0
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v5, p4
-
-    move-object v6, v4
-
-    invoke-virtual/range {v0 .. v7}, Lcom/google/android/gms/internal/zzlh;->zza(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsResult;Landroid/webkit/JsPromptResult;Z)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final onJsBeforeUnload(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsResult;)Z
-    .locals 8
-
-    const/4 v4, 0x0
-
-    invoke-direct {p0, p1}, Lcom/google/android/gms/internal/zzlh;->zza(Landroid/webkit/WebView;)Landroid/content/Context;
-
-    move-result-object v1
-
-    const/4 v7, 0x0
-
-    move-object v0, p0
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v5, p4
-
-    move-object v6, v4
-
-    invoke-virtual/range {v0 .. v7}, Lcom/google/android/gms/internal/zzlh;->zza(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsResult;Landroid/webkit/JsPromptResult;Z)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final onJsConfirm(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsResult;)Z
-    .locals 8
-
-    const/4 v4, 0x0
-
-    invoke-direct {p0, p1}, Lcom/google/android/gms/internal/zzlh;->zza(Landroid/webkit/WebView;)Landroid/content/Context;
-
-    move-result-object v1
-
-    const/4 v7, 0x0
-
-    move-object v0, p0
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v5, p4
-
-    move-object v6, v4
-
-    invoke-virtual/range {v0 .. v7}, Lcom/google/android/gms/internal/zzlh;->zza(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsResult;Landroid/webkit/JsPromptResult;Z)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final onJsPrompt(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsPromptResult;)Z
-    .locals 8
-
-    invoke-direct {p0, p1}, Lcom/google/android/gms/internal/zzlh;->zza(Landroid/webkit/WebView;)Landroid/content/Context;
-
-    move-result-object v1
-
-    const/4 v5, 0x0
-
-    const/4 v7, 0x1
-
-    move-object v0, p0
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move-object v6, p5
-
-    invoke-virtual/range {v0 .. v7}, Lcom/google/android/gms/internal/zzlh;->zza(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsResult;Landroid/webkit/JsPromptResult;Z)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final onReachedMaxAppCacheSize(JJLandroid/webkit/WebStorage$QuotaUpdater;)V
-    .locals 5
-
-    const-wide/32 v0, 0x500000
-
-    sub-long/2addr v0, p3
-
-    const-wide/32 v2, 0x20000
-
-    add-long/2addr v2, p1
-
-    cmp-long v0, v0, v2
-
-    if-gez v0, :cond_0
-
-    const-wide/16 v0, 0x0
-
-    invoke-interface {p5, v0, v1}, Landroid/webkit/WebStorage$QuotaUpdater;->updateQuota(J)V
-
-    :goto_0
-    return-void
-
-    :cond_0
-    invoke-interface {p5, v2, v3}, Landroid/webkit/WebStorage$QuotaUpdater;->updateQuota(J)V
-
-    goto :goto_0
-.end method
-
-.method public final onShowCustomView(Landroid/view/View;Landroid/webkit/WebChromeClient$CustomViewCallback;)V
-    .locals 1
-
-    const/4 v0, -0x1
-
-    invoke-virtual {p0, p1, v0, p2}, Lcom/google/android/gms/internal/zzlh;->zza(Landroid/view/View;ILandroid/webkit/WebChromeClient$CustomViewCallback;)V
+    iput-boolean p1, p0, Lcom/google/android/gms/internal/zzlh;->zzbco:Z
 
     return-void
 .end method
 
-.method protected final zza(Landroid/view/View;ILandroid/webkit/WebChromeClient$CustomViewCallback;)V
-    .locals 1
+.method public final zzp(I)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzlh;->zzBb:Lcom/google/android/gms/internal/zzla;
+    iput p1, p0, Lcom/google/android/gms/internal/zzlh;->zzbcc:I
 
-    invoke-interface {v0}, Lcom/google/android/gms/internal/zzla;->zzjB()Lcom/google/android/gms/ads/internal/overlay/zzd;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "Could not get ad overlay when showing custom view."
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/zzjw;->zzaW(Ljava/lang/String;)V
-
-    invoke-interface {p3}, Landroid/webkit/WebChromeClient$CustomViewCallback;->onCustomViewHidden()V
-
-    :goto_0
     return-void
-
-    :cond_0
-    invoke-virtual {v0, p1, p3}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zza(Landroid/view/View;Landroid/webkit/WebChromeClient$CustomViewCallback;)V
-
-    invoke-virtual {v0, p2}, Lcom/google/android/gms/ads/internal/overlay/zzd;->setRequestedOrientation(I)V
-
-    goto :goto_0
-.end method
-
-.method protected zza(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsResult;Landroid/webkit/JsPromptResult;Z)Z
-    .locals 2
-
-    :try_start_0
-    new-instance v0, Landroid/app/AlertDialog$Builder;
-
-    invoke-direct {v0, p1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v0, p2}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
-
-    if-eqz p7, :cond_0
-
-    invoke-static {p1, v0, p3, p4, p6}, Lcom/google/android/gms/internal/zzlh;->zza(Landroid/content/Context;Landroid/app/AlertDialog$Builder;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsPromptResult;)V
-
-    :goto_0
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    invoke-static {v0, p3, p5}, Lcom/google/android/gms/internal/zzlh;->zza(Landroid/app/AlertDialog$Builder;Ljava/lang/String;Landroid/webkit/JsResult;)V
-    :try_end_0
-    .catch Landroid/view/WindowManager$BadTokenException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "Fail to display Dialog."
-
-    invoke-static {v1, v0}, Lcom/google/android/gms/internal/zzjw;->zzd(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
 .end method

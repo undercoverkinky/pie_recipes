@@ -25,32 +25,32 @@
     .locals 2
 
     .prologue
-    .line 163
+    .line 178
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 164
+    .line 179
     const/16 v1, 0x17
 
     if-lt v0, v1, :cond_0
 
-    .line 165
+    .line 180
     new-instance v0, Landroid/support/v4/widget/TextViewCompat$Api23TextViewCompatImpl;
 
     invoke-direct {v0}, Landroid/support/v4/widget/TextViewCompat$Api23TextViewCompatImpl;-><init>()V
 
     sput-object v0, Landroid/support/v4/widget/TextViewCompat;->IMPL:Landroid/support/v4/widget/TextViewCompat$TextViewCompatImpl;
 
-    .line 175
+    .line 190
     :goto_0
     return-void
 
-    .line 166
+    .line 181
     :cond_0
     const/16 v1, 0x12
 
     if-lt v0, v1, :cond_1
 
-    .line 167
+    .line 182
     new-instance v0, Landroid/support/v4/widget/TextViewCompat$JbMr2TextViewCompatImpl;
 
     invoke-direct {v0}, Landroid/support/v4/widget/TextViewCompat$JbMr2TextViewCompatImpl;-><init>()V
@@ -59,13 +59,13 @@
 
     goto :goto_0
 
-    .line 168
+    .line 183
     :cond_1
     const/16 v1, 0x11
 
     if-lt v0, v1, :cond_2
 
-    .line 169
+    .line 184
     new-instance v0, Landroid/support/v4/widget/TextViewCompat$JbMr1TextViewCompatImpl;
 
     invoke-direct {v0}, Landroid/support/v4/widget/TextViewCompat$JbMr1TextViewCompatImpl;-><init>()V
@@ -74,13 +74,13 @@
 
     goto :goto_0
 
-    .line 170
+    .line 185
     :cond_2
     const/16 v1, 0x10
 
     if-lt v0, v1, :cond_3
 
-    .line 171
+    .line 186
     new-instance v0, Landroid/support/v4/widget/TextViewCompat$JbTextViewCompatImpl;
 
     invoke-direct {v0}, Landroid/support/v4/widget/TextViewCompat$JbTextViewCompatImpl;-><init>()V
@@ -89,7 +89,7 @@
 
     goto :goto_0
 
-    .line 173
+    .line 188
     :cond_3
     new-instance v0, Landroid/support/v4/widget/TextViewCompat$BaseTextViewCompatImpl;
 
@@ -104,17 +104,31 @@
     .locals 0
 
     .prologue
-    .line 35
+    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+.method public static getCompoundDrawablesRelative(Landroid/widget/TextView;)[Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    .prologue
+    .line 290
+    sget-object v0, Landroid/support/v4/widget/TextViewCompat;->IMPL:Landroid/support/v4/widget/TextViewCompat$TextViewCompatImpl;
+
+    invoke-interface {v0, p0}, Landroid/support/v4/widget/TextViewCompat$TextViewCompatImpl;->getCompoundDrawablesRelative(Landroid/widget/TextView;)[Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method public static getMaxLines(Landroid/widget/TextView;)I
     .locals 1
 
     .prologue
-    .line 247
+    .line 262
     sget-object v0, Landroid/support/v4/widget/TextViewCompat;->IMPL:Landroid/support/v4/widget/TextViewCompat$TextViewCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/widget/TextViewCompat$TextViewCompatImpl;->getMaxLines(Landroid/widget/TextView;)I
@@ -128,7 +142,7 @@
     .locals 1
 
     .prologue
-    .line 255
+    .line 270
     sget-object v0, Landroid/support/v4/widget/TextViewCompat;->IMPL:Landroid/support/v4/widget/TextViewCompat$TextViewCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/widget/TextViewCompat$TextViewCompatImpl;->getMinLines(Landroid/widget/TextView;)I
@@ -142,7 +156,7 @@
     .locals 6
 
     .prologue
-    .line 195
+    .line 210
     sget-object v0, Landroid/support/v4/widget/TextViewCompat;->IMPL:Landroid/support/v4/widget/TextViewCompat$TextViewCompatImpl;
 
     move-object v1, p0
@@ -157,7 +171,7 @@
 
     invoke-interface/range {v0 .. v5}, Landroid/support/v4/widget/TextViewCompat$TextViewCompatImpl;->setCompoundDrawablesRelative(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 196
+    .line 211
     return-void
 .end method
 
@@ -165,7 +179,7 @@
     .locals 6
 
     .prologue
-    .line 239
+    .line 254
     sget-object v0, Landroid/support/v4/widget/TextViewCompat;->IMPL:Landroid/support/v4/widget/TextViewCompat$TextViewCompatImpl;
 
     move-object v1, p0
@@ -180,7 +194,7 @@
 
     invoke-interface/range {v0 .. v5}, Landroid/support/v4/widget/TextViewCompat$TextViewCompatImpl;->setCompoundDrawablesRelativeWithIntrinsicBounds(Landroid/widget/TextView;IIII)V
 
-    .line 240
+    .line 255
     return-void
 .end method
 
@@ -188,7 +202,7 @@
     .locals 6
 
     .prologue
-    .line 215
+    .line 230
     sget-object v0, Landroid/support/v4/widget/TextViewCompat;->IMPL:Landroid/support/v4/widget/TextViewCompat$TextViewCompatImpl;
 
     move-object v1, p0
@@ -203,7 +217,7 @@
 
     invoke-interface/range {v0 .. v5}, Landroid/support/v4/widget/TextViewCompat$TextViewCompatImpl;->setCompoundDrawablesRelativeWithIntrinsicBounds(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 216
+    .line 231
     return-void
 .end method
 
@@ -211,11 +225,11 @@
     .locals 1
 
     .prologue
-    .line 270
+    .line 283
     sget-object v0, Landroid/support/v4/widget/TextViewCompat;->IMPL:Landroid/support/v4/widget/TextViewCompat$TextViewCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/widget/TextViewCompat$TextViewCompatImpl;->setTextAppearance(Landroid/widget/TextView;I)V
 
-    .line 271
+    .line 284
     return-void
 .end method

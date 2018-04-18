@@ -82,25 +82,6 @@
 
 
 # virtual methods
-.method public final a()Lcom/dyuproject/protostuff/u;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/dyuproject/protostuff/u",
-            "<",
-            "Lcom/kik/xdata/model/smileys/XSmiley;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 128
-    sget-object v0, Lcom/kik/xdata/model/smileys/XSmiley;->b:Lcom/dyuproject/protostuff/u;
-
-    return-object v0
-.end method
-
 .method public final a(Ljava/lang/Long;)Lcom/kik/xdata/model/smileys/XSmiley;
     .locals 0
 
@@ -123,6 +104,16 @@
     return-object p0
 .end method
 
+.method public final a()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 51
+    iget-object v0, p0, Lcom/kik/xdata/model/smileys/XSmiley;->categoryId:Ljava/lang/String;
+
+    return-object v0
+.end method
+
 .method public final b(Ljava/lang/String;)Lcom/kik/xdata/model/smileys/XSmiley;
     .locals 0
 
@@ -138,8 +129,8 @@
     .locals 1
 
     .prologue
-    .line 51
-    iget-object v0, p0, Lcom/kik/xdata/model/smileys/XSmiley;->categoryId:Ljava/lang/String;
+    .line 64
+    iget-object v0, p0, Lcom/kik/xdata/model/smileys/XSmiley;->id:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -159,8 +150,27 @@
     .locals 1
 
     .prologue
-    .line 64
-    iget-object v0, p0, Lcom/kik/xdata/model/smileys/XSmiley;->id:Ljava/lang/String;
+    .line 77
+    iget-object v0, p0, Lcom/kik/xdata/model/smileys/XSmiley;->title:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final cachedSchema()Lcom/dyuproject/protostuff/u;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/dyuproject/protostuff/u",
+            "<",
+            "Lcom/kik/xdata/model/smileys/XSmiley;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 128
+    sget-object v0, Lcom/kik/xdata/model/smileys/XSmiley;->b:Lcom/dyuproject/protostuff/u;
 
     return-object v0
 .end method
@@ -180,23 +190,13 @@
     .locals 1
 
     .prologue
-    .line 77
-    iget-object v0, p0, Lcom/kik/xdata/model/smileys/XSmiley;->title:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final e()Ljava/lang/String;
-    .locals 1
-
-    .prologue
     .line 90
     iget-object v0, p0, Lcom/kik/xdata/model/smileys/XSmiley;->text:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final f()Ljava/lang/Long;
+.method public final e()Ljava/lang/Long;
     .locals 1
 
     .prologue

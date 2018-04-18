@@ -30,7 +30,7 @@
 
 .field private bottomLines:F
 
-.field bottomLinesAnimator:Lcom/c/a/h;
+.field bottomLinesAnimator:Lcom/a/a/h;
 
 .field private bottomSpacing:I
 
@@ -76,7 +76,7 @@
 
 .field private floatingLabelTextSize:I
 
-.field private focusEvaluator:Lcom/c/a/b;
+.field private focusEvaluator:Lcom/a/a/b;
 
 .field private focusFraction:F
 
@@ -112,9 +112,9 @@
 
 .field private innerPaddingTop:I
 
-.field labelAnimator:Lcom/c/a/h;
+.field labelAnimator:Lcom/a/a/h;
 
-.field labelFocusAnimator:Lcom/c/a/h;
+.field labelFocusAnimator:Lcom/a/a/h;
 
 .field private maxCharacters:I
 
@@ -176,11 +176,11 @@
     iput v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->helperTextColor:I
 
     .line 298
-    new-instance v0, Lcom/c/a/b;
+    new-instance v0, Lcom/a/a/b;
 
-    invoke-direct {v0}, Lcom/c/a/b;-><init>()V
+    invoke-direct {v0}, Lcom/a/a/b;-><init>()V
 
-    iput-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->focusEvaluator:Lcom/c/a/b;
+    iput-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->focusEvaluator:Lcom/a/a/b;
 
     .line 299
     new-instance v0, Landroid/graphics/Paint;
@@ -220,11 +220,11 @@
     iput v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->helperTextColor:I
 
     .line 298
-    new-instance v0, Lcom/c/a/b;
+    new-instance v0, Lcom/a/a/b;
 
-    invoke-direct {v0}, Lcom/c/a/b;-><init>()V
+    invoke-direct {v0}, Lcom/a/a/b;-><init>()V
 
-    iput-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->focusEvaluator:Lcom/c/a/b;
+    iput-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->focusEvaluator:Lcom/a/a/b;
 
     .line 299
     new-instance v0, Landroid/graphics/Paint;
@@ -265,11 +265,11 @@
     iput v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->helperTextColor:I
 
     .line 298
-    new-instance v0, Lcom/c/a/b;
+    new-instance v0, Lcom/a/a/b;
 
-    invoke-direct {v0}, Lcom/c/a/b;-><init>()V
+    invoke-direct {v0}, Lcom/a/a/b;-><init>()V
 
-    iput-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->focusEvaluator:Lcom/c/a/b;
+    iput-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->focusEvaluator:Lcom/a/a/b;
 
     .line 299
     new-instance v0, Landroid/graphics/Paint;
@@ -342,12 +342,12 @@
     return p1
 .end method
 
-.method static synthetic access$400(Lcom/rengwuxian/materialedittext/MaterialEditText;)Lcom/c/a/h;
+.method static synthetic access$400(Lcom/rengwuxian/materialedittext/MaterialEditText;)Lcom/a/a/h;
     .locals 1
 
     .prologue
     .line 49
-    invoke-direct {p0}, Lcom/rengwuxian/materialedittext/MaterialEditText;->getLabelAnimator()Lcom/c/a/h;
+    invoke-direct {p0}, Lcom/rengwuxian/materialedittext/MaterialEditText;->getLabelAnimator()Lcom/a/a/h;
 
     move-result-object v0
 
@@ -364,12 +364,12 @@
     return v0
 .end method
 
-.method static synthetic access$600(Lcom/rengwuxian/materialedittext/MaterialEditText;)Lcom/c/a/h;
+.method static synthetic access$600(Lcom/rengwuxian/materialedittext/MaterialEditText;)Lcom/a/a/h;
     .locals 1
 
     .prologue
     .line 49
-    invoke-direct {p0}, Lcom/rengwuxian/materialedittext/MaterialEditText;->getLabelFocusAnimator()Lcom/c/a/h;
+    invoke-direct {p0}, Lcom/rengwuxian/materialedittext/MaterialEditText;->getLabelFocusAnimator()Lcom/a/a/h;
 
     move-result-object v0
 
@@ -511,11 +511,11 @@
     .line 789
     int-to-float v1, v0
 
-    invoke-direct {p0, v1}, Lcom/rengwuxian/materialedittext/MaterialEditText;->getBottomLinesAnimator(F)Lcom/c/a/h;
+    invoke-direct {p0, v1}, Lcom/rengwuxian/materialedittext/MaterialEditText;->getBottomLinesAnimator(F)Lcom/a/a/h;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/c/a/h;->a()V
+    invoke-virtual {v1}, Lcom/a/a/h;->a()V
 
     .line 791
     :cond_3
@@ -973,7 +973,7 @@
     goto :goto_0
 .end method
 
-.method private getBottomLinesAnimator(F)Lcom/c/a/h;
+.method private getBottomLinesAnimator(F)Lcom/a/a/h;
     .locals 3
 
     .prologue
@@ -982,7 +982,7 @@
     const/4 v2, 0x0
 
     .line 1218
-    iget-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->bottomLinesAnimator:Lcom/c/a/h;
+    iget-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->bottomLinesAnimator:Lcom/a/a/h;
 
     if-nez v0, :cond_0
 
@@ -993,32 +993,32 @@
 
     aput p1, v1, v2
 
-    invoke-static {p0, v0, v1}, Lcom/c/a/h;->a(Ljava/lang/Object;Ljava/lang/String;[F)Lcom/c/a/h;
+    invoke-static {p0, v0, v1}, Lcom/a/a/h;->a(Ljava/lang/Object;Ljava/lang/String;[F)Lcom/a/a/h;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->bottomLinesAnimator:Lcom/c/a/h;
+    iput-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->bottomLinesAnimator:Lcom/a/a/h;
 
     .line 1224
     :goto_0
-    iget-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->bottomLinesAnimator:Lcom/c/a/h;
+    iget-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->bottomLinesAnimator:Lcom/a/a/h;
 
     return-object v0
 
     .line 1221
     :cond_0
-    iget-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->bottomLinesAnimator:Lcom/c/a/h;
+    iget-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->bottomLinesAnimator:Lcom/a/a/h;
 
-    invoke-virtual {v0}, Lcom/c/a/h;->b()V
+    invoke-virtual {v0}, Lcom/a/a/h;->b()V
 
     .line 1222
-    iget-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->bottomLinesAnimator:Lcom/c/a/h;
+    iget-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->bottomLinesAnimator:Lcom/a/a/h;
 
     new-array v1, v1, [F
 
     aput p1, v1, v2
 
-    invoke-virtual {v0, v1}, Lcom/c/a/h;->a([F)V
+    invoke-virtual {v0, v1}, Lcom/a/a/h;->a([F)V
 
     goto :goto_0
 .end method
@@ -1429,12 +1429,12 @@
     return-object v0
 .end method
 
-.method private getLabelAnimator()Lcom/c/a/h;
+.method private getLabelAnimator()Lcom/a/a/h;
     .locals 3
 
     .prologue
     .line 1203
-    iget-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->labelAnimator:Lcom/c/a/h;
+    iget-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->labelAnimator:Lcom/a/a/h;
 
     if-nez v0, :cond_0
 
@@ -1447,15 +1447,15 @@
 
     fill-array-data v1, :array_0
 
-    invoke-static {p0, v0, v1}, Lcom/c/a/h;->a(Ljava/lang/Object;Ljava/lang/String;[F)Lcom/c/a/h;
+    invoke-static {p0, v0, v1}, Lcom/a/a/h;->a(Ljava/lang/Object;Ljava/lang/String;[F)Lcom/a/a/h;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->labelAnimator:Lcom/c/a/h;
+    iput-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->labelAnimator:Lcom/a/a/h;
 
     .line 1206
     :cond_0
-    iget-object v2, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->labelAnimator:Lcom/c/a/h;
+    iget-object v2, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->labelAnimator:Lcom/a/a/h;
 
     iget-boolean v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->floatingLabelAnimating:Z
 
@@ -1464,10 +1464,10 @@
     const-wide/16 v0, 0x12c
 
     :goto_0
-    invoke-virtual {v2, v0, v1}, Lcom/c/a/h;->a(J)Lcom/c/a/h;
+    invoke-virtual {v2, v0, v1}, Lcom/a/a/h;->a(J)Lcom/a/a/h;
 
     .line 1207
-    iget-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->labelAnimator:Lcom/c/a/h;
+    iget-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->labelAnimator:Lcom/a/a/h;
 
     return-object v0
 
@@ -1487,12 +1487,12 @@
     .end array-data
 .end method
 
-.method private getLabelFocusAnimator()Lcom/c/a/h;
+.method private getLabelFocusAnimator()Lcom/a/a/h;
     .locals 2
 
     .prologue
     .line 1211
-    iget-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->labelFocusAnimator:Lcom/c/a/h;
+    iget-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->labelFocusAnimator:Lcom/a/a/h;
 
     if-nez v0, :cond_0
 
@@ -1505,15 +1505,15 @@
 
     fill-array-data v1, :array_0
 
-    invoke-static {p0, v0, v1}, Lcom/c/a/h;->a(Ljava/lang/Object;Ljava/lang/String;[F)Lcom/c/a/h;
+    invoke-static {p0, v0, v1}, Lcom/a/a/h;->a(Ljava/lang/Object;Ljava/lang/String;[F)Lcom/a/a/h;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->labelFocusAnimator:Lcom/c/a/h;
+    iput-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->labelFocusAnimator:Lcom/a/a/h;
 
     .line 1214
     :cond_0
-    iget-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->labelFocusAnimator:Lcom/c/a/h;
+    iget-object v0, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->labelFocusAnimator:Lcom/a/a/h;
 
     return-object v0
 
@@ -3964,7 +3964,7 @@
     .line 1311
     iget-object v2, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->textPaint:Landroid/text/TextPaint;
 
-    iget-object v3, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->focusEvaluator:Lcom/c/a/b;
+    iget-object v3, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->focusEvaluator:Lcom/a/a/b;
 
     iget v4, p0, Lcom/rengwuxian/materialedittext/MaterialEditText;->focusFraction:F
 
@@ -3985,7 +3985,7 @@
 
     move-result-object v5
 
-    invoke-virtual {v3, v4, v0, v5}, Lcom/c/a/b;->a(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v4, v0, v5}, Lcom/a/a/b;->a(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 

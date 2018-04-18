@@ -19,10 +19,9 @@
     .locals 0
 
     .prologue
-    .line 20
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
     return-void
 .end method
 
@@ -30,7 +29,7 @@
     .locals 0
 
     .prologue
-    .line 19
+    .line 22
     invoke-direct {p0}, Lcom/kik/components/b$a;-><init>()V
 
     return-void
@@ -42,7 +41,7 @@
     .locals 2
 
     .prologue
-    .line 24
+    .line 26
     new-instance v0, Lcom/kik/components/b;
 
     const/4 v1, 0x0

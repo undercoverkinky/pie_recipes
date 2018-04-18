@@ -72,26 +72,26 @@
     .end annotation
 
     .prologue
-    .line 1067
+    .line 1079
     invoke-direct {p0}, Lcom/google/common/cache/LocalCache$b;-><init>()V
 
-    .line 1082
+    .line 1094
     invoke-static {}, Lcom/google/common/cache/LocalCache;->j()Lcom/google/common/cache/LocalCache$r;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/common/cache/LocalCache$n;->j:Lcom/google/common/cache/LocalCache$r;
 
-    .line 1068
+    .line 1080
     iput-object p1, p0, Lcom/google/common/cache/LocalCache$n;->g:Ljava/lang/Object;
 
-    .line 1069
+    .line 1081
     iput p2, p0, Lcom/google/common/cache/LocalCache$n;->h:I
 
-    .line 1070
+    .line 1082
     iput-object p3, p0, Lcom/google/common/cache/LocalCache$n;->i:Lcom/google/common/cache/LocalCache$j;
 
-    .line 1071
+    .line 1083
     return-void
 .end method
 
@@ -101,7 +101,7 @@
     .locals 1
 
     .prologue
-    .line 1096
+    .line 1108
     iget v0, p0, Lcom/google/common/cache/LocalCache$n;->h:I
 
     return v0
@@ -116,7 +116,7 @@
     .end annotation
 
     .prologue
-    .line 1075
+    .line 1087
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$n;->g:Ljava/lang/Object;
 
     return-object v0
@@ -133,7 +133,7 @@
     .end annotation
 
     .prologue
-    .line 1101
+    .line 1113
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$n;->i:Lcom/google/common/cache/LocalCache$j;
 
     return-object v0
@@ -150,7 +150,7 @@
     .end annotation
 
     .prologue
-    .line 1086
+    .line 1098
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$n;->j:Lcom/google/common/cache/LocalCache$r;
 
     return-object v0
@@ -167,9 +167,9 @@
     .end annotation
 
     .prologue
-    .line 1091
+    .line 1103
     iput-object p1, p0, Lcom/google/common/cache/LocalCache$n;->j:Lcom/google/common/cache/LocalCache$r;
 
-    .line 1092
+    .line 1104
     return-void
 .end method

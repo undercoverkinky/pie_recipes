@@ -31,3 +31,6 @@
         }
     .end annotation
 .end method
+
+.method public abstract eventName()Ljava/lang/String;
+.end method

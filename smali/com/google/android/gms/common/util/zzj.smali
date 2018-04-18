@@ -3,11 +3,11 @@
 
 
 # static fields
-.field private static zzauf:Landroid/content/IntentFilter;
+.field private static zzfyr:Landroid/content/IntentFilter;
 
-.field private static zzaug:J
+.field private static zzfys:J
 
-.field private static zzauh:F
+.field private static zzfyt:F
 
 
 # direct methods
@@ -20,16 +20,16 @@
 
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lcom/google/android/gms/common/util/zzj;->zzauf:Landroid/content/IntentFilter;
+    sput-object v0, Lcom/google/android/gms/common/util/zzj;->zzfyr:Landroid/content/IntentFilter;
 
     const/high16 v0, 0x7fc00000    # NaNf
 
-    sput v0, Lcom/google/android/gms/common/util/zzj;->zzauh:F
+    sput v0, Lcom/google/android/gms/common/util/zzj;->zzfyt:F
 
     return-void
 .end method
 
-.method public static zzaD(Landroid/content/Context;)I
+.method public static zzcn(Landroid/content/Context;)I
     .locals 6
     .annotation build Landroid/annotation/TargetApi;
         value = 0x14
@@ -62,7 +62,7 @@
 
     const/4 v1, 0x0
 
-    sget-object v5, Lcom/google/android/gms/common/util/zzj;->zzauf:Landroid/content/IntentFilter;
+    sget-object v5, Lcom/google/android/gms/common/util/zzj;->zzfyr:Landroid/content/IntentFilter;
 
     invoke-virtual {v0, v1, v5}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
@@ -109,36 +109,50 @@
     goto :goto_2
 
     :cond_4
-    invoke-static {v0}, Lcom/google/android/gms/common/util/zzj;->zzb(Landroid/os/PowerManager;)Z
+    invoke-static {}, Lcom/google/android/gms/common/util/zzp;->zzali()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_5
+
+    invoke-virtual {v0}, Landroid/os/PowerManager;->isInteractive()Z
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    :goto_3
+    if-eqz v0, :cond_6
 
     move v0, v2
 
-    :goto_3
+    :goto_4
     shl-int/lit8 v0, v0, 0x1
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_7
 
-    :goto_4
+    :goto_5
     or-int/2addr v0, v2
 
     goto :goto_0
 
     :cond_5
-    move v0, v3
+    invoke-virtual {v0}, Landroid/os/PowerManager;->isScreenOn()Z
+
+    move-result v0
 
     goto :goto_3
 
     :cond_6
-    move v2, v3
+    move v0, v3
 
     goto :goto_4
+
+    :cond_7
+    move v2, v3
+
+    goto :goto_5
 .end method
 
-.method public static declared-synchronized zzaE(Landroid/content/Context;)F
+.method public static declared-synchronized zzco(Landroid/content/Context;)F
     .locals 6
 
     const-class v1, Lcom/google/android/gms/common/util/zzj;
@@ -150,7 +164,7 @@
 
     move-result-wide v2
 
-    sget-wide v4, Lcom/google/android/gms/common/util/zzj;->zzaug:J
+    sget-wide v4, Lcom/google/android/gms/common/util/zzj;->zzfys:J
 
     sub-long/2addr v2, v4
 
@@ -160,7 +174,7 @@
 
     if-gez v0, :cond_0
 
-    sget v0, Lcom/google/android/gms/common/util/zzj;->zzauh:F
+    sget v0, Lcom/google/android/gms/common/util/zzj;->zzfyt:F
 
     invoke-static {v0}, Ljava/lang/Float;->isNaN(F)Z
 
@@ -168,7 +182,7 @@
 
     if-nez v0, :cond_0
 
-    sget v0, Lcom/google/android/gms/common/util/zzj;->zzauh:F
+    sget v0, Lcom/google/android/gms/common/util/zzj;->zzfyt:F
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -185,7 +199,7 @@
 
     const/4 v2, 0x0
 
-    sget-object v3, Lcom/google/android/gms/common/util/zzj;->zzauf:Landroid/content/IntentFilter;
+    sget-object v3, Lcom/google/android/gms/common/util/zzj;->zzfyr:Landroid/content/IntentFilter;
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
@@ -215,16 +229,16 @@
 
     div-float v0, v2, v0
 
-    sput v0, Lcom/google/android/gms/common/util/zzj;->zzauh:F
+    sput v0, Lcom/google/android/gms/common/util/zzj;->zzfyt:F
 
     :cond_1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    sput-wide v2, Lcom/google/android/gms/common/util/zzj;->zzaug:J
+    sput-wide v2, Lcom/google/android/gms/common/util/zzj;->zzfys:J
 
-    sget v0, Lcom/google/android/gms/common/util/zzj;->zzauh:F
+    sget v0, Lcom/google/android/gms/common/util/zzj;->zzfyt:F
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -236,31 +250,4 @@
     monitor-exit v1
 
     throw v0
-.end method
-
-.method public static zzb(Landroid/os/PowerManager;)Z
-    .locals 1
-    .annotation build Landroid/annotation/TargetApi;
-        value = 0x14
-    .end annotation
-
-    invoke-static {}, Lcom/google/android/gms/common/util/zzs;->zzvf()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Landroid/os/PowerManager;->isInteractive()Z
-
-    move-result v0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/os/PowerManager;->isScreenOn()Z
-
-    move-result v0
-
-    goto :goto_0
 .end method

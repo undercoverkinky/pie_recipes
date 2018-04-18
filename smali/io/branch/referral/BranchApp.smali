@@ -24,7 +24,7 @@
     invoke-super {p0}, Landroid/app/Application;->onCreate()V
 
     .line 34
-    invoke-static {p0}, Lio/branch/referral/i;->a(Landroid/content/Context;)Z
+    invoke-static {p0}, Lio/branch/referral/h;->a(Landroid/content/Context;)Z
 
     move-result v0
 

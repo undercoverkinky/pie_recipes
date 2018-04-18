@@ -106,7 +106,7 @@
     .line 109
     iget-object v0, p0, Lcom/github/ksoichiro/android/observablescrollview/ObservableWebView;->c:Lcom/github/ksoichiro/android/observablescrollview/a;
 
-    invoke-interface {v0}, Lcom/github/ksoichiro/android/observablescrollview/a;->l_()V
+    invoke-interface {v0}, Lcom/github/ksoichiro/android/observablescrollview/a;->a()V
 
     goto :goto_0
 

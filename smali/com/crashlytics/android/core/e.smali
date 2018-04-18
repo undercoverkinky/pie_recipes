@@ -36,7 +36,7 @@
     return-void
 .end method
 
-.method public static a(Landroid/app/Activity;Lio/fabric/sdk/android/services/settings/o;Lcom/crashlytics/android/core/e$a;)Lcom/crashlytics/android/core/e;
+.method public static a(Landroid/app/Activity;Lio/fabric/sdk/android/services/settings/n;Lcom/crashlytics/android/core/e$a;)Lcom/crashlytics/android/core/e;
     .locals 11
 
     .prologue
@@ -50,7 +50,7 @@
     .line 51
     new-instance v1, Lcom/crashlytics/android/core/r;
 
-    invoke-direct {v1, p0, p1}, Lcom/crashlytics/android/core/r;-><init>(Landroid/content/Context;Lio/fabric/sdk/android/services/settings/o;)V
+    invoke-direct {v1, p0, p1}, Lcom/crashlytics/android/core/r;-><init>(Landroid/content/Context;Lio/fabric/sdk/android/services/settings/n;)V
 
     .line 52
     new-instance v2, Landroid/app/AlertDialog$Builder;
@@ -153,6 +153,7 @@
 
     move-result-object v3
 
+    .line 68
     invoke-virtual {v1}, Lcom/crashlytics/android/core/r;->a()Ljava/lang/String;
 
     move-result-object v5
@@ -161,10 +162,12 @@
 
     move-result-object v3
 
+    .line 69
     invoke-virtual {v3, v10}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
     move-result-object v3
 
+    .line 70
     invoke-virtual {v1}, Lcom/crashlytics/android/core/r;->c()Ljava/lang/String;
 
     move-result-object v5
@@ -172,7 +175,7 @@
     invoke-virtual {v3, v5, v4}, Landroid/app/AlertDialog$Builder;->setNeutralButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 72
-    iget-boolean v3, p1, Lio/fabric/sdk/android/services/settings/o;->d:Z
+    iget-boolean v3, p1, Lio/fabric/sdk/android/services/settings/n;->d:Z
 
     if-eqz v3, :cond_0
 
@@ -190,7 +193,7 @@
 
     .line 85
     :cond_0
-    iget-boolean v3, p1, Lio/fabric/sdk/android/services/settings/o;->f:Z
+    iget-boolean v3, p1, Lio/fabric/sdk/android/services/settings/n;->f:Z
 
     if-eqz v3, :cond_1
 

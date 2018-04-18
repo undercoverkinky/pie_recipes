@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/google/android/gms/tasks/f;
+.implements Lcom/google/android/gms/tasks/k;
 
 
 # annotations
@@ -14,7 +14,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/google/android/gms/tasks/f",
+        "Lcom/google/android/gms/tasks/k",
         "<TTResult;>;"
     }
 .end annotation
@@ -32,10 +32,10 @@
     .end annotation
 .end field
 
-.field private final c:Lcom/google/android/gms/tasks/h;
+.field private final c:Lcom/google/android/gms/tasks/n;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/google/android/gms/tasks/h",
+            "Lcom/google/android/gms/tasks/n",
             "<TTContinuationResult;>;"
         }
     .end annotation
@@ -43,7 +43,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/Continuation;Lcom/google/android/gms/tasks/h;)V
+.method public constructor <init>(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/Continuation;Lcom/google/android/gms/tasks/n;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -51,7 +51,7 @@
             "Ljava/util/concurrent/Executor;",
             "Lcom/google/android/gms/tasks/Continuation",
             "<TTResult;TTContinuationResult;>;",
-            "Lcom/google/android/gms/tasks/h",
+            "Lcom/google/android/gms/tasks/n",
             "<TTContinuationResult;>;)V"
         }
     .end annotation
@@ -62,7 +62,7 @@
 
     iput-object p2, p0, Lcom/google/android/gms/tasks/a;->b:Lcom/google/android/gms/tasks/Continuation;
 
-    iput-object p3, p0, Lcom/google/android/gms/tasks/a;->c:Lcom/google/android/gms/tasks/h;
+    iput-object p3, p0, Lcom/google/android/gms/tasks/a;->c:Lcom/google/android/gms/tasks/n;
 
     return-void
 .end method
@@ -75,10 +75,10 @@
     return-object v0
 .end method
 
-.method static synthetic b(Lcom/google/android/gms/tasks/a;)Lcom/google/android/gms/tasks/h;
+.method static synthetic b(Lcom/google/android/gms/tasks/a;)Lcom/google/android/gms/tasks/n;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/tasks/a;->c:Lcom/google/android/gms/tasks/h;
+    iget-object v0, p0, Lcom/google/android/gms/tasks/a;->c:Lcom/google/android/gms/tasks/n;
 
     return-object v0
 .end method
@@ -107,9 +107,9 @@
 
     iget-object v0, p0, Lcom/google/android/gms/tasks/a;->a:Ljava/util/concurrent/Executor;
 
-    new-instance v1, Lcom/google/android/gms/tasks/a$1;
+    new-instance v1, Lcom/google/android/gms/tasks/b;
 
-    invoke-direct {v1, p0, p1}, Lcom/google/android/gms/tasks/a$1;-><init>(Lcom/google/android/gms/tasks/a;Lcom/google/android/gms/tasks/Task;)V
+    invoke-direct {v1, p0, p1}, Lcom/google/android/gms/tasks/b;-><init>(Lcom/google/android/gms/tasks/a;Lcom/google/android/gms/tasks/Task;)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 

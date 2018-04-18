@@ -11,8 +11,9 @@
         Landroid/support/v4/app/NotificationManagerCompat$Task;,
         Landroid/support/v4/app/NotificationManagerCompat$ServiceConnectedEvent;,
         Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;,
+        Landroid/support/v4/app/NotificationManagerCompat$ImplApi24;,
+        Landroid/support/v4/app/NotificationManagerCompat$ImplKitKat;,
         Landroid/support/v4/app/NotificationManagerCompat$ImplIceCreamSandwich;,
-        Landroid/support/v4/app/NotificationManagerCompat$ImplEclair;,
         Landroid/support/v4/app/NotificationManagerCompat$ImplBase;,
         Landroid/support/v4/app/NotificationManagerCompat$Impl;
     }
@@ -26,11 +27,25 @@
 
 .field private static final IMPL:Landroid/support/v4/app/NotificationManagerCompat$Impl;
 
+.field public static final IMPORTANCE_DEFAULT:I = 0x3
+
+.field public static final IMPORTANCE_HIGH:I = 0x4
+
+.field public static final IMPORTANCE_LOW:I = 0x2
+
+.field public static final IMPORTANCE_MAX:I = 0x5
+
+.field public static final IMPORTANCE_MIN:I = 0x1
+
+.field public static final IMPORTANCE_NONE:I = 0x0
+
+.field public static final IMPORTANCE_UNSPECIFIED:I = -0x3e8
+
 .field static final MAX_SIDE_CHANNEL_SDK_VERSION:I = 0x13
 
 .field private static final SETTING_ENABLED_NOTIFICATION_LISTENERS:Ljava/lang/String; = "enabled_notification_listeners"
 
-.field private static final SIDE_CHANNEL_BIND_FLAGS:I
+.field static final SIDE_CHANNEL_BIND_FLAGS:I
 
 .field private static final SIDE_CHANNEL_RETRY_BASE_INTERVAL_MS:I = 0x3e8
 
@@ -69,42 +84,42 @@
     .locals 2
 
     .prologue
-    .line 88
+    .line 89
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroid/support/v4/app/NotificationManagerCompat;->sEnabledNotificationListenersLock:Ljava/lang/Object;
 
-    .line 92
+    .line 93
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Landroid/support/v4/app/NotificationManagerCompat;->sEnabledNotificationListenerPackages:Ljava/util/Set;
 
-    .line 97
+    .line 98
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Landroid/support/v4/app/NotificationManagerCompat;->sLock:Ljava/lang/Object;
 
-    .line 165
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    .line 228
+    invoke-static {}, Landroid/support/v4/os/BuildCompat;->isAtLeastN()Z
 
-    const/16 v1, 0xe
+    move-result v0
 
-    if-lt v0, v1, :cond_0
+    if-eqz v0, :cond_0
 
-    .line 166
-    new-instance v0, Landroid/support/v4/app/NotificationManagerCompat$ImplIceCreamSandwich;
+    .line 229
+    new-instance v0, Landroid/support/v4/app/NotificationManagerCompat$ImplApi24;
 
-    invoke-direct {v0}, Landroid/support/v4/app/NotificationManagerCompat$ImplIceCreamSandwich;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/app/NotificationManagerCompat$ImplApi24;-><init>()V
 
     sput-object v0, Landroid/support/v4/app/NotificationManagerCompat;->IMPL:Landroid/support/v4/app/NotificationManagerCompat$Impl;
 
-    .line 172
+    .line 237
     :goto_0
     sget-object v0, Landroid/support/v4/app/NotificationManagerCompat;->IMPL:Landroid/support/v4/app/NotificationManagerCompat$Impl;
 
@@ -114,28 +129,45 @@
 
     sput v0, Landroid/support/v4/app/NotificationManagerCompat;->SIDE_CHANNEL_BIND_FLAGS:I
 
-    .line 173
+    .line 238
     return-void
 
-    .line 167
+    .line 230
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/4 v1, 0x5
+    const/16 v1, 0x13
 
     if-lt v0, v1, :cond_1
 
-    .line 168
-    new-instance v0, Landroid/support/v4/app/NotificationManagerCompat$ImplEclair;
+    .line 231
+    new-instance v0, Landroid/support/v4/app/NotificationManagerCompat$ImplKitKat;
 
-    invoke-direct {v0}, Landroid/support/v4/app/NotificationManagerCompat$ImplEclair;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/app/NotificationManagerCompat$ImplKitKat;-><init>()V
 
     sput-object v0, Landroid/support/v4/app/NotificationManagerCompat;->IMPL:Landroid/support/v4/app/NotificationManagerCompat$Impl;
 
     goto :goto_0
 
-    .line 170
+    .line 232
     :cond_1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0xe
+
+    if-lt v0, v1, :cond_2
+
+    .line 233
+    new-instance v0, Landroid/support/v4/app/NotificationManagerCompat$ImplIceCreamSandwich;
+
+    invoke-direct {v0}, Landroid/support/v4/app/NotificationManagerCompat$ImplIceCreamSandwich;-><init>()V
+
+    sput-object v0, Landroid/support/v4/app/NotificationManagerCompat;->IMPL:Landroid/support/v4/app/NotificationManagerCompat$Impl;
+
+    goto :goto_0
+
+    .line 235
+    :cond_2
     new-instance v0, Landroid/support/v4/app/NotificationManagerCompat$ImplBase;
 
     invoke-direct {v0}, Landroid/support/v4/app/NotificationManagerCompat$ImplBase;-><init>()V
@@ -149,13 +181,13 @@
     .locals 2
 
     .prologue
-    .line 106
+    .line 147
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 107
+    .line 148
     iput-object p1, p0, Landroid/support/v4/app/NotificationManagerCompat;->mContext:Landroid/content/Context;
 
-    .line 108
+    .line 149
     iget-object v0, p0, Landroid/support/v4/app/NotificationManagerCompat;->mContext:Landroid/content/Context;
 
     const-string v1, "notification"
@@ -168,25 +200,15 @@
 
     iput-object v0, p0, Landroid/support/v4/app/NotificationManagerCompat;->mNotificationManager:Landroid/app/NotificationManager;
 
-    .line 110
+    .line 151
     return-void
-.end method
-
-.method static synthetic access$000()I
-    .locals 1
-
-    .prologue
-    .line 54
-    sget v0, Landroid/support/v4/app/NotificationManagerCompat;->SIDE_CHANNEL_BIND_FLAGS:I
-
-    return v0
 .end method
 
 .method public static from(Landroid/content/Context;)Landroid/support/v4/app/NotificationManagerCompat;
     .locals 1
 
     .prologue
-    .line 103
+    .line 144
     new-instance v0, Landroid/support/v4/app/NotificationManagerCompat;
 
     invoke-direct {v0, p0}, Landroid/support/v4/app/NotificationManagerCompat;-><init>(Landroid/content/Context;)V
@@ -195,7 +217,7 @@
 .end method
 
 .method public static getEnabledListenerPackages(Landroid/content/Context;)Ljava/util/Set;
-    .locals 6
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -209,105 +231,104 @@
     .end annotation
 
     .prologue
-    .line 233
+    .line 314
+    .line 315
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     const-string v1, "enabled_notification_listeners"
 
+    .line 314
     invoke-static {v0, v1}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 237
+    .line 317
+    sget-object v2, Landroid/support/v4/app/NotificationManagerCompat;->sEnabledNotificationListenersLock:Ljava/lang/Object;
+
+    monitor-enter v2
+
+    .line 319
     if-eqz v1, :cond_2
 
+    :try_start_0
     sget-object v0, Landroid/support/v4/app/NotificationManagerCompat;->sEnabledNotificationListeners:Ljava/lang/String;
 
+    .line 320
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 239
+    .line 321
     const-string v0, ":"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    .line 240
-    new-instance v3, Ljava/util/HashSet;
+    .line 322
+    new-instance v4, Ljava/util/HashSet;
 
-    array-length v0, v2
+    array-length v0, v3
 
-    invoke-direct {v3, v0}, Ljava/util/HashSet;-><init>(I)V
+    invoke-direct {v4, v0}, Ljava/util/HashSet;-><init>(I)V
 
-    .line 241
-    array-length v4, v2
+    .line 323
+    array-length v5, v3
 
     const/4 v0, 0x0
 
     :goto_0
-    if-ge v0, v4, :cond_1
+    if-ge v0, v5, :cond_1
 
-    aget-object v5, v2, v0
+    aget-object v6, v3, v0
 
-    .line 242
-    invoke-static {v5}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
+    .line 324
+    invoke-static {v6}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
-    move-result-object v5
+    move-result-object v6
 
-    .line 243
-    if-eqz v5, :cond_0
+    .line 325
+    if-eqz v6, :cond_0
 
-    .line 244
-    invoke-virtual {v5}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+    .line 326
+    invoke-virtual {v6}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v6
 
-    invoke-interface {v3, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-interface {v4, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 241
+    .line 323
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 247
+    .line 329
     :cond_1
-    sget-object v2, Landroid/support/v4/app/NotificationManagerCompat;->sEnabledNotificationListenersLock:Ljava/lang/Object;
+    sput-object v4, Landroid/support/v4/app/NotificationManagerCompat;->sEnabledNotificationListenerPackages:Ljava/util/Set;
 
-    monitor-enter v2
-
-    .line 248
-    :try_start_0
-    sput-object v3, Landroid/support/v4/app/NotificationManagerCompat;->sEnabledNotificationListenerPackages:Ljava/util/Set;
-
-    .line 249
+    .line 330
     sput-object v1, Landroid/support/v4/app/NotificationManagerCompat;->sEnabledNotificationListeners:Ljava/lang/String;
 
-    .line 250
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 252
+    .line 332
     :cond_2
     sget-object v0, Landroid/support/v4/app/NotificationManagerCompat;->sEnabledNotificationListenerPackages:Ljava/util/Set;
 
+    monitor-exit v2
+
     return-object v0
 
-    .line 250
+    .line 333
     :catchall_0
     move-exception v0
 
-    :try_start_1
     monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
 .end method
@@ -316,18 +337,18 @@
     .locals 3
 
     .prologue
-    .line 267
+    .line 348
     sget-object v1, Landroid/support/v4/app/NotificationManagerCompat;->sLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 268
+    .line 349
     :try_start_0
     sget-object v0, Landroid/support/v4/app/NotificationManagerCompat;->sSideChannelManager:Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;
 
     if-nez v0, :cond_0
 
-    .line 269
+    .line 350
     new-instance v0, Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;
 
     iget-object v2, p0, Landroid/support/v4/app/NotificationManagerCompat;->mContext:Landroid/content/Context;
@@ -340,28 +361,23 @@
 
     sput-object v0, Landroid/support/v4/app/NotificationManagerCompat;->sSideChannelManager:Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;
 
-    .line 271
+    .line 352
     :cond_0
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 272
     sget-object v0, Landroid/support/v4/app/NotificationManagerCompat;->sSideChannelManager:Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;
 
     invoke-virtual {v0, p1}, Landroid/support/v4/app/NotificationManagerCompat$SideChannelManager;->queueTask(Landroid/support/v4/app/NotificationManagerCompat$Task;)V
 
-    .line 273
+    .line 353
+    monitor-exit v1
+
     return-void
 
-    .line 271
     :catchall_0
     move-exception v0
 
-    :try_start_1
     monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
 .end method
@@ -370,12 +386,12 @@
     .locals 2
 
     .prologue
-    .line 259
+    .line 340
     invoke-static {p0}, Landroid/support/v4/app/NotificationCompat;->getExtras(Landroid/app/Notification;)Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 260
+    .line 341
     if-eqz v0, :cond_0
 
     const-string v1, "android.support.useSideChannel"
@@ -399,16 +415,34 @@
 
 
 # virtual methods
+.method public final areNotificationsEnabled()Z
+    .locals 3
+
+    .prologue
+    .line 298
+    sget-object v0, Landroid/support/v4/app/NotificationManagerCompat;->IMPL:Landroid/support/v4/app/NotificationManagerCompat$Impl;
+
+    iget-object v1, p0, Landroid/support/v4/app/NotificationManagerCompat;->mContext:Landroid/content/Context;
+
+    iget-object v2, p0, Landroid/support/v4/app/NotificationManagerCompat;->mNotificationManager:Landroid/app/NotificationManager;
+
+    invoke-interface {v0, v1, v2}, Landroid/support/v4/app/NotificationManagerCompat$Impl;->areNotificationsEnabled(Landroid/content/Context;Landroid/app/NotificationManager;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public final cancel(I)V
     .locals 1
 
     .prologue
-    .line 180
+    .line 245
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1}, Landroid/support/v4/app/NotificationManagerCompat;->cancel(Ljava/lang/String;I)V
 
-    .line 181
+    .line 246
     return-void
 .end method
 
@@ -416,21 +450,21 @@
     .locals 2
 
     .prologue
-    .line 189
+    .line 254
     sget-object v0, Landroid/support/v4/app/NotificationManagerCompat;->IMPL:Landroid/support/v4/app/NotificationManagerCompat$Impl;
 
     iget-object v1, p0, Landroid/support/v4/app/NotificationManagerCompat;->mNotificationManager:Landroid/app/NotificationManager;
 
     invoke-interface {v0, v1, p1, p2}, Landroid/support/v4/app/NotificationManagerCompat$Impl;->cancelNotification(Landroid/app/NotificationManager;Ljava/lang/String;I)V
 
-    .line 190
+    .line 255
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
 
     if-gt v0, v1, :cond_0
 
-    .line 191
+    .line 256
     new-instance v0, Landroid/support/v4/app/NotificationManagerCompat$CancelTask;
 
     iget-object v1, p0, Landroid/support/v4/app/NotificationManagerCompat;->mContext:Landroid/content/Context;
@@ -443,7 +477,7 @@
 
     invoke-direct {p0, v0}, Landroid/support/v4/app/NotificationManagerCompat;->pushSideChannelQueue(Landroid/support/v4/app/NotificationManagerCompat$Task;)V
 
-    .line 193
+    .line 258
     :cond_0
     return-void
 .end method
@@ -452,19 +486,19 @@
     .locals 2
 
     .prologue
-    .line 197
+    .line 262
     iget-object v0, p0, Landroid/support/v4/app/NotificationManagerCompat;->mNotificationManager:Landroid/app/NotificationManager;
 
     invoke-virtual {v0}, Landroid/app/NotificationManager;->cancelAll()V
 
-    .line 198
+    .line 263
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
 
     if-gt v0, v1, :cond_0
 
-    .line 199
+    .line 264
     new-instance v0, Landroid/support/v4/app/NotificationManagerCompat$CancelTask;
 
     iget-object v1, p0, Landroid/support/v4/app/NotificationManagerCompat;->mContext:Landroid/content/Context;
@@ -477,21 +511,37 @@
 
     invoke-direct {p0, v0}, Landroid/support/v4/app/NotificationManagerCompat;->pushSideChannelQueue(Landroid/support/v4/app/NotificationManagerCompat$Task;)V
 
-    .line 201
+    .line 266
     :cond_0
     return-void
+.end method
+
+.method public final getImportance()I
+    .locals 2
+
+    .prologue
+    .line 307
+    sget-object v0, Landroid/support/v4/app/NotificationManagerCompat;->IMPL:Landroid/support/v4/app/NotificationManagerCompat$Impl;
+
+    iget-object v1, p0, Landroid/support/v4/app/NotificationManagerCompat;->mNotificationManager:Landroid/app/NotificationManager;
+
+    invoke-interface {v0, v1}, Landroid/support/v4/app/NotificationManagerCompat$Impl;->getImportance(Landroid/app/NotificationManager;)I
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public final notify(ILandroid/app/Notification;)V
     .locals 1
 
     .prologue
-    .line 209
+    .line 274
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1, p2}, Landroid/support/v4/app/NotificationManagerCompat;->notify(Ljava/lang/String;ILandroid/app/Notification;)V
 
-    .line 210
+    .line 275
     return-void
 .end method
 
@@ -499,14 +549,14 @@
     .locals 2
 
     .prologue
-    .line 219
+    .line 284
     invoke-static {p3}, Landroid/support/v4/app/NotificationManagerCompat;->useSideChannelForNotification(Landroid/app/Notification;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 220
+    .line 285
     new-instance v0, Landroid/support/v4/app/NotificationManagerCompat$NotifyTask;
 
     iget-object v1, p0, Landroid/support/v4/app/NotificationManagerCompat;->mContext:Landroid/content/Context;
@@ -519,18 +569,18 @@
 
     invoke-direct {p0, v0}, Landroid/support/v4/app/NotificationManagerCompat;->pushSideChannelQueue(Landroid/support/v4/app/NotificationManagerCompat$Task;)V
 
-    .line 223
+    .line 288
     sget-object v0, Landroid/support/v4/app/NotificationManagerCompat;->IMPL:Landroid/support/v4/app/NotificationManagerCompat$Impl;
 
     iget-object v1, p0, Landroid/support/v4/app/NotificationManagerCompat;->mNotificationManager:Landroid/app/NotificationManager;
 
     invoke-interface {v0, v1, p1, p2}, Landroid/support/v4/app/NotificationManagerCompat$Impl;->cancelNotification(Landroid/app/NotificationManager;Ljava/lang/String;I)V
 
-    .line 227
+    .line 292
     :goto_0
     return-void
 
-    .line 225
+    .line 290
     :cond_0
     sget-object v0, Landroid/support/v4/app/NotificationManagerCompat;->IMPL:Landroid/support/v4/app/NotificationManagerCompat$Impl;
 

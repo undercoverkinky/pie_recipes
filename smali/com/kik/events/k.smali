@@ -1,46 +1,25 @@
-.class public Lcom/kik/events/k;
+.class public abstract Lcom/kik/events/k;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
+.annotation system Ldalvik/annotation/Signature;
     value = {
-        Lcom/kik/events/k$a;
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
     }
 .end annotation
 
 
-# static fields
-.field public static final a:Lcom/kik/events/i;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    .prologue
-    .line 31
-    new-instance v0, Lcom/kik/events/i;
-
-    new-instance v1, Lcom/kik/events/k$a;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2}, Lcom/kik/events/k$a;-><init>(B)V
-
-    invoke-direct {v0, v1}, Lcom/kik/events/i;-><init>(Lcom/kik/events/i$a;)V
-
-    sput-object v0, Lcom/kik/events/k;->a:Lcom/kik/events/i;
-
-    return-void
-.end method
-
 .method public constructor <init>()V
     .locals 0
 
     .prologue
-    .line 3
+    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,42 +27,68 @@
 
 
 # virtual methods
-.method public h()Z
-    .locals 1
+.method public a()V
+    .locals 0
 
     .prologue
-    .line 35
-    const/4 v0, 0x0
-
-    return v0
+    .line 24
+    return-void
 .end method
 
-.method public i()Z
-    .locals 1
+.method public a(Ljava/lang/Object;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)V"
+        }
+    .end annotation
 
     .prologue
-    .line 40
-    const/4 v0, 0x0
-
-    return v0
+    .line 17
+    return-void
 .end method
 
-.method public j()Z
-    .locals 1
+.method public a(Ljava/lang/Throwable;)V
+    .locals 0
 
     .prologue
-    .line 45
-    const/4 v0, 0x0
-
-    return v0
+    .line 47
+    return-void
 .end method
 
-.method public k()Z
-    .locals 1
+.method public b()V
+    .locals 0
 
     .prologue
-    .line 50
-    const/4 v0, 0x0
+    .line 54
+    return-void
+.end method
 
-    return v0
+.method public b(Ljava/lang/Object;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 61
+    return-void
+.end method
+
+.method public b(Ljava/lang/Throwable;)V
+    .locals 0
+
+    .prologue
+    .line 32
+    return-void
+.end method
+
+.method public c()V
+    .locals 0
+
+    .prologue
+    .line 39
+    return-void
 .end method

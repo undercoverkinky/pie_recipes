@@ -43,9 +43,9 @@
     .line 306
     iget-object v0, p0, Lcom/kik/sdkutils/b$3$6;->a:Lcom/kik/sdkutils/b$3;
 
-    iget-object v0, v0, Lcom/kik/sdkutils/b$3;->a:Lcom/kik/events/l;
+    iget-object v0, v0, Lcom/kik/sdkutils/b$3;->a:Lcom/kik/events/k;
 
-    invoke-virtual {v0}, Lcom/kik/events/l;->a()V
+    invoke-virtual {v0}, Lcom/kik/events/k;->a()V
 
     .line 307
     return-void

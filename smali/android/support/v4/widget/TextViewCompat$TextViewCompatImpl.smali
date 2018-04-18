@@ -15,6 +15,9 @@
 
 
 # virtual methods
+.method public abstract getCompoundDrawablesRelative(Landroid/widget/TextView;)[Landroid/graphics/drawable/Drawable;
+.end method
+
 .method public abstract getMaxLines(Landroid/widget/TextView;)I
 .end method
 

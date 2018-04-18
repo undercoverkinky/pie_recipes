@@ -72,6 +72,7 @@
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
+    .line 79
     invoke-static {v0}, Ljava/util/Collections;->synchronizedSet(Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object v0
@@ -247,6 +248,7 @@
 
     add-int/lit8 v5, v0, 0x1
 
+    .line 193
     invoke-virtual {p0, v5}, Ljava/lang/String;->charAt(I)C
 
     move-result v5
@@ -403,6 +405,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 1143
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -430,6 +433,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 1146
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -452,6 +456,7 @@
 
     move-result-object v3
 
+    .line 1145
     invoke-interface {v0, v2, v3}, Lio/fabric/sdk/android/k;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 180
@@ -468,6 +473,7 @@
     :cond_3
     iget-object v0, p0, Lio/fabric/sdk/android/services/network/e;->c:Lio/fabric/sdk/android/services/network/f;
 
+    .line 1153
     invoke-static {p1, v0}, Lio/fabric/sdk/android/services/network/a;->a([Ljava/security/cert/X509Certificate;Lio/fabric/sdk/android/services/network/f;)[Ljava/security/cert/X509Certificate;
 
     move-result-object v2

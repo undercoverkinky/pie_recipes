@@ -7,11 +7,11 @@
 
 
 # virtual methods
-.method public abstract M_()Lrx/c;
+.method public abstract af_()Lrx/d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lrx/c",
+            "Lrx/d",
             "<",
             "Ljava/lang/Boolean;",
             ">;"
@@ -19,11 +19,11 @@
     .end annotation
 .end method
 
-.method public abstract N_()Lrx/c;
+.method public abstract i()Lrx/d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lrx/c",
+            "Lrx/d",
             "<",
             "Ljava/lang/Boolean;",
             ">;"
@@ -31,11 +31,11 @@
     .end annotation
 .end method
 
-.method public abstract g()Lrx/c;
+.method public abstract n()Lrx/d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lrx/c",
+            "Lrx/d",
             "<",
             "Ljava/lang/Boolean;",
             ">;"
@@ -43,11 +43,11 @@
     .end annotation
 .end method
 
-.method public abstract m()Lrx/c;
+.method public abstract o()Lrx/d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lrx/c",
+            "Lrx/d",
             "<",
             "Ljava/lang/Boolean;",
             ">;"
@@ -55,5 +55,5 @@
     .end annotation
 .end method
 
-.method public abstract n()Ljava/lang/CharSequence;
+.method public abstract p()Ljava/lang/CharSequence;
 .end method

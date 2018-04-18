@@ -21,7 +21,7 @@
 
 .field private g:Lcom/crashlytics/android/a/d;
 
-.field private h:Lio/fabric/sdk/android/services/c/c;
+.field private h:Lio/fabric/sdk/android/services/b/c;
 
 .field private i:Lio/fabric/sdk/android/services/common/j;
 
@@ -76,7 +76,7 @@
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;Lcom/crashlytics/android/a/c;Lio/fabric/sdk/android/services/common/IdManager;Lio/fabric/sdk/android/services/settings/f;Lcom/crashlytics/android/a/d;Lio/fabric/sdk/android/services/c/c;Lio/fabric/sdk/android/services/common/j;Lio/fabric/sdk/android/services/network/c;)V
+.method public final a(Landroid/content/Context;Lcom/crashlytics/android/a/c;Lio/fabric/sdk/android/services/common/IdManager;Lio/fabric/sdk/android/services/settings/f;Lcom/crashlytics/android/a/d;Lio/fabric/sdk/android/services/b/c;Lio/fabric/sdk/android/services/common/j;Lio/fabric/sdk/android/services/network/c;)V
     .locals 2
 
     .prologue
@@ -96,7 +96,7 @@
     iput-object p5, p0, Lcom/crashlytics/android/a/a;->g:Lcom/crashlytics/android/a/d;
 
     .line 86
-    iput-object p6, p0, Lcom/crashlytics/android/a/a;->h:Lio/fabric/sdk/android/services/c/c;
+    iput-object p6, p0, Lcom/crashlytics/android/a/a;->h:Lio/fabric/sdk/android/services/b/c;
 
     .line 87
     iput-object p7, p0, Lcom/crashlytics/android/a/a;->i:Lio/fabric/sdk/android/services/common/j;
@@ -160,15 +160,15 @@
 
     .prologue
     .line 118
-    iget-object v3, p0, Lcom/crashlytics/android/a/a;->h:Lio/fabric/sdk/android/services/c/c;
+    iget-object v3, p0, Lcom/crashlytics/android/a/a;->h:Lio/fabric/sdk/android/services/b/c;
 
     monitor-enter v3
 
     .line 119
     :try_start_0
-    iget-object v2, p0, Lcom/crashlytics/android/a/a;->h:Lio/fabric/sdk/android/services/c/c;
+    iget-object v2, p0, Lcom/crashlytics/android/a/a;->h:Lio/fabric/sdk/android/services/b/c;
 
-    invoke-interface {v2}, Lio/fabric/sdk/android/services/c/c;->a()Landroid/content/SharedPreferences;
+    invoke-interface {v2}, Lio/fabric/sdk/android/services/b/c;->a()Landroid/content/SharedPreferences;
 
     move-result-object v2
 
@@ -181,11 +181,11 @@
     if-eqz v2, :cond_0
 
     .line 120
-    iget-object v2, p0, Lcom/crashlytics/android/a/a;->h:Lio/fabric/sdk/android/services/c/c;
+    iget-object v2, p0, Lcom/crashlytics/android/a/a;->h:Lio/fabric/sdk/android/services/b/c;
 
-    iget-object v4, p0, Lcom/crashlytics/android/a/a;->h:Lio/fabric/sdk/android/services/c/c;
+    iget-object v4, p0, Lcom/crashlytics/android/a/a;->h:Lio/fabric/sdk/android/services/b/c;
 
-    invoke-interface {v4}, Lio/fabric/sdk/android/services/c/c;->b()Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v4}, Lio/fabric/sdk/android/services/b/c;->b()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v4
 
@@ -195,7 +195,7 @@
 
     move-result-object v4
 
-    invoke-interface {v2, v4}, Lio/fabric/sdk/android/services/c/c;->a(Landroid/content/SharedPreferences$Editor;)Z
+    invoke-interface {v2, v4}, Lio/fabric/sdk/android/services/b/c;->a(Landroid/content/SharedPreferences$Editor;)Z
 
     .line 122
     :cond_0
@@ -236,7 +236,7 @@
     .line 1180
     iget-wide v6, p0, Lcom/crashlytics/android/a/a;->k:J
 
-    .line 129
+    .line 130
     invoke-virtual {v4, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     .line 2180
@@ -289,12 +289,13 @@
     .line 3152
     iget-object v2, p0, Lcom/crashlytics/android/a/a;->e:Lio/fabric/sdk/android/services/common/IdManager;
 
-    invoke-virtual {v2}, Lio/fabric/sdk/android/services/common/IdManager;->h()Ljava/util/Map;
+    invoke-virtual {v2}, Lio/fabric/sdk/android/services/common/IdManager;->g()Ljava/util/Map;
 
     move-result-object v2
 
     sget-object v3, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;->FONT_TOKEN:Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
 
+    .line 3153
     invoke-interface {v2, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -313,7 +314,7 @@
     iget-object v4, p0, Lcom/crashlytics/android/a/a;->d:Lcom/crashlytics/android/a/c;
 
     .line 3197
-    invoke-virtual {v4}, Lcom/crashlytics/android/a/c;->o()Landroid/content/Context;
+    invoke-virtual {v4}, Lcom/crashlytics/android/a/c;->m()Landroid/content/Context;
 
     move-result-object v4
 
@@ -323,7 +324,7 @@
 
     move-result-object v4
 
-    .line 3155
+    .line 3157
     iget-object v5, p0, Lcom/crashlytics/android/a/a;->f:Lio/fabric/sdk/android/services/settings/f;
 
     iget-object v5, v5, Lio/fabric/sdk/android/services/settings/f;->a:Ljava/lang/String;

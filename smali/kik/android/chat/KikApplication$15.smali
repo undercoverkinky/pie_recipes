@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 827
+    .line 893
     iput-object p1, p0, Lkik/android/chat/KikApplication$15;->a:Lkik/android/chat/KikApplication;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
@@ -37,16 +37,16 @@
     .locals 1
 
     .prologue
-    .line 833
+    .line 899
     invoke-static {}, Ljava/lang/System;->runFinalization()V
 
-    .line 834
+    .line 900
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
 
     invoke-static {v0}, Landroid/os/Process;->killProcess(I)V
 
-    .line 835
+    .line 901
     return-void
 .end method

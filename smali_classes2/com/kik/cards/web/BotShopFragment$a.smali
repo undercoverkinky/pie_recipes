@@ -19,10 +19,10 @@
     .locals 2
 
     .prologue
-    .line 14
+    .line 26
     invoke-direct {p0}, Lcom/kik/cards/web/CardsWebViewFragment$a;-><init>()V
 
-    .line 15
+    .line 27
     const-string v0, "https://bots.kik.com/kik"
 
     invoke-virtual {p0, v0}, Lcom/kik/cards/web/BotShopFragment$a;->a(Ljava/lang/String;)Lcom/kik/cards/web/CardsWebViewFragment$a;
@@ -33,6 +33,6 @@
 
     invoke-virtual {v0, v1}, Lcom/kik/cards/web/CardsWebViewFragment$a;->a(Z)Lcom/kik/cards/web/CardsWebViewFragment$a;
 
-    .line 16
+    .line 28
     return-void
 .end method

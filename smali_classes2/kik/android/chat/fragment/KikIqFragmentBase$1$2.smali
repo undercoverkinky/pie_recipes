@@ -65,7 +65,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikIqFragmentBase;->a(Lkik/core/net/outgoing/CustomDialogDescriptor;)V
+    invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikIqFragmentBase;->displayErrorDialog(Lkik/core/net/outgoing/CustomDialogDescriptor;)V
 
     .line 115
     :goto_0
@@ -84,7 +84,7 @@
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikIqFragmentBase$1;->a:Lkik/android/chat/fragment/KikIqFragmentBase;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/KikIqFragmentBase;->ah()V
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikIqFragmentBase;->showErrorHelper()V
 
     goto :goto_0
 
@@ -96,11 +96,11 @@
 
     iget-object v1, p0, Lkik/android/chat/fragment/KikIqFragmentBase$1$2;->a:Ljava/lang/Throwable;
 
-    invoke-static {v1}, Lkik/android/util/cd;->a(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v1}, Lkik/android/util/ce;->a(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lkik/android/chat/fragment/KikIqFragmentBase;->L:Ljava/lang/String;
+    iput-object v1, v0, Lkik/android/chat/fragment/KikIqFragmentBase;->_errorText:Ljava/lang/String;
 
     goto :goto_0
 .end method

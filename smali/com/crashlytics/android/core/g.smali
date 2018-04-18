@@ -6,12 +6,17 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/crashlytics/android/core/g$e;,
-        Lcom/crashlytics/android/core/g$d;,
-        Lcom/crashlytics/android/core/g$c;,
-        Lcom/crashlytics/android/core/g$a;,
         Lcom/crashlytics/android/core/g$f;,
-        Lcom/crashlytics/android/core/g$b;
+        Lcom/crashlytics/android/core/g$j;,
+        Lcom/crashlytics/android/core/g$g;,
+        Lcom/crashlytics/android/core/g$h;,
+        Lcom/crashlytics/android/core/g$i;,
+        Lcom/crashlytics/android/core/g$d;,
+        Lcom/crashlytics/android/core/g$b;,
+        Lcom/crashlytics/android/core/g$e;,
+        Lcom/crashlytics/android/core/g$a;,
+        Lcom/crashlytics/android/core/g$k;,
+        Lcom/crashlytics/android/core/g$c;
     }
 .end annotation
 
@@ -19,7 +24,11 @@
 # static fields
 .field static final a:Ljava/io/FilenameFilter;
 
-.field static final b:Ljava/util/Comparator;
+.field static final b:Ljava/io/FilenameFilter;
+
+.field static final c:Ljava/io/FileFilter;
+
+.field static final d:Ljava/util/Comparator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Comparator",
@@ -30,7 +39,7 @@
     .end annotation
 .end field
 
-.field static final c:Ljava/util/Comparator;
+.field static final e:Ljava/util/Comparator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Comparator",
@@ -41,11 +50,9 @@
     .end annotation
 .end field
 
-.field static final d:Ljava/io/FilenameFilter;
+.field private static final f:Ljava/util/regex/Pattern;
 
-.field private static final e:Ljava/util/regex/Pattern;
-
-.field private static final f:Ljava/util/Map;
+.field private static final g:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map",
@@ -57,35 +64,45 @@
     .end annotation
 .end field
 
-.field private static final g:[Ljava/lang/String;
+.field private static final h:[Ljava/lang/String;
 
 
 # instance fields
-.field private final h:Ljava/util/concurrent/atomic/AtomicInteger;
+.field private final i:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field private final i:Lcom/crashlytics/android/core/h;
+.field private final j:Lcom/crashlytics/android/core/h;
 
-.field private final j:Lcom/crashlytics/android/core/f;
+.field private final k:Lcom/crashlytics/android/core/f;
 
-.field private final k:Lio/fabric/sdk/android/services/network/c;
+.field private final l:Lio/fabric/sdk/android/services/network/c;
 
-.field private final l:Lio/fabric/sdk/android/services/common/IdManager;
+.field private final m:Lio/fabric/sdk/android/services/common/IdManager;
 
-.field private final m:Lcom/crashlytics/android/core/ab;
+.field private final n:Lcom/crashlytics/android/core/ab;
 
-.field private final n:Lio/fabric/sdk/android/services/c/a;
+.field private final o:Lio/fabric/sdk/android/services/b/a;
 
-.field private final o:Lcom/crashlytics/android/core/a;
+.field private final p:Lcom/crashlytics/android/core/a;
 
-.field private final p:Lcom/crashlytics/android/core/u;
+.field private final q:Lcom/crashlytics/android/core/g$f;
 
-.field private final q:Lcom/crashlytics/android/core/q;
+.field private final r:Lcom/crashlytics/android/core/u;
 
-.field private final r:Lcom/crashlytics/android/core/ai;
+.field private final s:Lcom/crashlytics/android/core/af$c;
 
-.field private final s:Ljava/lang/String;
+.field private final t:Lcom/crashlytics/android/core/af$b;
 
-.field private t:Lcom/crashlytics/android/core/m;
+.field private final u:Lcom/crashlytics/android/core/q;
+
+.field private final v:Lcom/crashlytics/android/core/ai;
+
+.field private final w:Ljava/lang/String;
+
+.field private final x:Lcom/crashlytics/android/answers/q;
+
+.field private final y:Z
+
+.field private z:Lcom/crashlytics/android/core/m;
 
 
 # direct methods
@@ -93,55 +110,65 @@
     .locals 3
 
     .prologue
-    .line 131
+    .line 152
     new-instance v0, Lcom/crashlytics/android/core/g$1;
 
-    invoke-direct {v0}, Lcom/crashlytics/android/core/g$1;-><init>()V
+    const-string v1, "BeginSession"
+
+    invoke-direct {v0, v1}, Lcom/crashlytics/android/core/g$1;-><init>(Ljava/lang/String;)V
 
     sput-object v0, Lcom/crashlytics/android/core/g;->a:Ljava/io/FilenameFilter;
 
-    .line 139
-    new-instance v0, Lcom/crashlytics/android/core/g$8;
+    .line 162
+    new-instance v0, Lcom/crashlytics/android/core/g$12;
 
-    invoke-direct {v0}, Lcom/crashlytics/android/core/g$8;-><init>()V
+    invoke-direct {v0}, Lcom/crashlytics/android/core/g$12;-><init>()V
 
-    sput-object v0, Lcom/crashlytics/android/core/g;->b:Ljava/util/Comparator;
+    sput-object v0, Lcom/crashlytics/android/core/g;->b:Ljava/io/FilenameFilter;
 
-    .line 146
-    new-instance v0, Lcom/crashlytics/android/core/g$9;
+    .line 170
+    new-instance v0, Lcom/crashlytics/android/core/g$19;
 
-    invoke-direct {v0}, Lcom/crashlytics/android/core/g$9;-><init>()V
+    invoke-direct {v0}, Lcom/crashlytics/android/core/g$19;-><init>()V
 
-    sput-object v0, Lcom/crashlytics/android/core/g;->c:Ljava/util/Comparator;
+    sput-object v0, Lcom/crashlytics/android/core/g;->c:Ljava/io/FileFilter;
 
-    .line 156
-    new-instance v0, Lcom/crashlytics/android/core/g$10;
+    .line 177
+    new-instance v0, Lcom/crashlytics/android/core/g$20;
 
-    invoke-direct {v0}, Lcom/crashlytics/android/core/g$10;-><init>()V
+    invoke-direct {v0}, Lcom/crashlytics/android/core/g$20;-><init>()V
 
-    sput-object v0, Lcom/crashlytics/android/core/g;->d:Ljava/io/FilenameFilter;
+    sput-object v0, Lcom/crashlytics/android/core/g;->d:Ljava/util/Comparator;
 
-    .line 163
+    .line 184
+    new-instance v0, Lcom/crashlytics/android/core/g$21;
+
+    invoke-direct {v0}, Lcom/crashlytics/android/core/g$21;-><init>()V
+
+    sput-object v0, Lcom/crashlytics/android/core/g;->e:Ljava/util/Comparator;
+
+    .line 191
     const-string v0, "([\\d|A-Z|a-z]{12}\\-[\\d|A-Z|a-z]{4}\\-[\\d|A-Z|a-z]{4}\\-[\\d|A-Z|a-z]{12}).+"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
-    sput-object v0, Lcom/crashlytics/android/core/g;->e:Ljava/util/regex/Pattern;
+    sput-object v0, Lcom/crashlytics/android/core/g;->f:Ljava/util/regex/Pattern;
 
-    .line 172
+    .line 200
     const-string v0, "X-CRASHLYTICS-SEND-FLAGS"
 
     const-string v1, "1"
 
+    .line 201
     invoke-static {v0, v1}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
 
     move-result-object v0
 
-    sput-object v0, Lcom/crashlytics/android/core/g;->f:Ljava/util/Map;
+    sput-object v0, Lcom/crashlytics/android/core/g;->g:Ljava/util/Map;
 
-    .line 205
+    .line 227
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/String;
@@ -170,94 +197,127 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/crashlytics/android/core/g;->g:[Ljava/lang/String;
+    sput-object v0, Lcom/crashlytics/android/core/g;->h:[Ljava/lang/String;
 
     return-void
 .end method
 
-.method constructor <init>(Lcom/crashlytics/android/core/h;Lcom/crashlytics/android/core/f;Lio/fabric/sdk/android/services/network/c;Lio/fabric/sdk/android/services/common/IdManager;Lcom/crashlytics/android/core/ab;Lio/fabric/sdk/android/services/c/a;Lcom/crashlytics/android/core/a;Lcom/crashlytics/android/core/ak;)V
-    .locals 5
+.method constructor <init>(Lcom/crashlytics/android/core/h;Lcom/crashlytics/android/core/f;Lio/fabric/sdk/android/services/network/c;Lio/fabric/sdk/android/services/common/IdManager;Lcom/crashlytics/android/core/ab;Lio/fabric/sdk/android/services/b/a;Lcom/crashlytics/android/core/a;Lcom/crashlytics/android/core/ak;Z)V
+    .locals 6
 
     .prologue
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
-    .line 233
+    .line 261
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 209
+    .line 231
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    invoke-direct {v0, v4}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+    invoke-direct {v0, v5}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    iput-object v0, p0, Lcom/crashlytics/android/core/g;->h:Ljava/util/concurrent/atomic/AtomicInteger;
+    iput-object v0, p0, Lcom/crashlytics/android/core/g;->i:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 234
-    iput-object p1, p0, Lcom/crashlytics/android/core/g;->i:Lcom/crashlytics/android/core/h;
+    .line 262
+    iput-object p1, p0, Lcom/crashlytics/android/core/g;->j:Lcom/crashlytics/android/core/h;
 
-    .line 235
-    iput-object p2, p0, Lcom/crashlytics/android/core/g;->j:Lcom/crashlytics/android/core/f;
+    .line 263
+    iput-object p2, p0, Lcom/crashlytics/android/core/g;->k:Lcom/crashlytics/android/core/f;
 
-    .line 236
-    iput-object p3, p0, Lcom/crashlytics/android/core/g;->k:Lio/fabric/sdk/android/services/network/c;
+    .line 264
+    iput-object p3, p0, Lcom/crashlytics/android/core/g;->l:Lio/fabric/sdk/android/services/network/c;
 
-    .line 237
-    iput-object p4, p0, Lcom/crashlytics/android/core/g;->l:Lio/fabric/sdk/android/services/common/IdManager;
+    .line 265
+    iput-object p4, p0, Lcom/crashlytics/android/core/g;->m:Lio/fabric/sdk/android/services/common/IdManager;
 
-    .line 238
-    iput-object p5, p0, Lcom/crashlytics/android/core/g;->m:Lcom/crashlytics/android/core/ab;
+    .line 266
+    iput-object p5, p0, Lcom/crashlytics/android/core/g;->n:Lcom/crashlytics/android/core/ab;
 
-    .line 239
-    iput-object p6, p0, Lcom/crashlytics/android/core/g;->n:Lio/fabric/sdk/android/services/c/a;
+    .line 267
+    iput-object p6, p0, Lcom/crashlytics/android/core/g;->o:Lio/fabric/sdk/android/services/b/a;
 
-    .line 240
-    iput-object p7, p0, Lcom/crashlytics/android/core/g;->o:Lcom/crashlytics/android/core/a;
+    .line 268
+    iput-object p7, p0, Lcom/crashlytics/android/core/g;->p:Lcom/crashlytics/android/core/a;
 
-    .line 242
+    .line 270
     invoke-interface {p8}, Lcom/crashlytics/android/core/ak;->a()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/crashlytics/android/core/g;->s:Ljava/lang/String;
+    iput-object v0, p0, Lcom/crashlytics/android/core/g;->w:Ljava/lang/String;
 
-    .line 244
-    invoke-virtual {p1}, Lcom/crashlytics/android/core/h;->o()Landroid/content/Context;
+    .line 271
+    iput-boolean p9, p0, Lcom/crashlytics/android/core/g;->y:Z
+
+    .line 273
+    invoke-virtual {p1}, Lcom/crashlytics/android/core/h;->m()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 245
+    .line 274
+    new-instance v1, Lcom/crashlytics/android/core/g$f;
+
+    invoke-direct {v1, p6}, Lcom/crashlytics/android/core/g$f;-><init>(Lio/fabric/sdk/android/services/b/a;)V
+
+    iput-object v1, p0, Lcom/crashlytics/android/core/g;->q:Lcom/crashlytics/android/core/g$f;
+
+    .line 275
     new-instance v1, Lcom/crashlytics/android/core/u;
 
-    invoke-direct {v1, v0, p6}, Lcom/crashlytics/android/core/u;-><init>(Landroid/content/Context;Lio/fabric/sdk/android/services/c/a;)V
+    iget-object v2, p0, Lcom/crashlytics/android/core/g;->q:Lcom/crashlytics/android/core/g$f;
 
-    iput-object v1, p0, Lcom/crashlytics/android/core/g;->p:Lcom/crashlytics/android/core/u;
+    invoke-direct {v1, v0, v2}, Lcom/crashlytics/android/core/u;-><init>(Landroid/content/Context;Lcom/crashlytics/android/core/u$a;)V
 
-    .line 246
+    iput-object v1, p0, Lcom/crashlytics/android/core/g;->r:Lcom/crashlytics/android/core/u;
+
+    .line 276
+    new-instance v1, Lcom/crashlytics/android/core/g$h;
+
+    invoke-direct {v1, p0, v5}, Lcom/crashlytics/android/core/g$h;-><init>(Lcom/crashlytics/android/core/g;B)V
+
+    iput-object v1, p0, Lcom/crashlytics/android/core/g;->s:Lcom/crashlytics/android/core/af$c;
+
+    .line 277
+    new-instance v1, Lcom/crashlytics/android/core/g$i;
+
+    invoke-direct {v1, p0, v5}, Lcom/crashlytics/android/core/g$i;-><init>(Lcom/crashlytics/android/core/g;B)V
+
+    iput-object v1, p0, Lcom/crashlytics/android/core/g;->t:Lcom/crashlytics/android/core/af$b;
+
+    .line 278
     new-instance v1, Lcom/crashlytics/android/core/q;
 
     invoke-direct {v1, v0}, Lcom/crashlytics/android/core/q;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/crashlytics/android/core/g;->q:Lcom/crashlytics/android/core/q;
+    iput-object v1, p0, Lcom/crashlytics/android/core/g;->u:Lcom/crashlytics/android/core/q;
 
-    .line 247
-    new-instance v0, Lcom/crashlytics/android/core/x;
+    .line 279
+    new-instance v1, Lcom/crashlytics/android/core/x;
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    new-array v1, v1, [Lcom/crashlytics/android/core/ai;
+    new-array v2, v2, [Lcom/crashlytics/android/core/ai;
 
-    new-instance v2, Lcom/crashlytics/android/core/ad;
+    new-instance v3, Lcom/crashlytics/android/core/ad;
 
-    const/16 v3, 0xa
+    const/16 v4, 0xa
 
-    invoke-direct {v2, v3}, Lcom/crashlytics/android/core/ad;-><init>(I)V
+    invoke-direct {v3, v4}, Lcom/crashlytics/android/core/ad;-><init>(I)V
 
-    aput-object v2, v1, v4
+    aput-object v3, v2, v5
 
-    invoke-direct {v0, v1}, Lcom/crashlytics/android/core/x;-><init>([Lcom/crashlytics/android/core/ai;)V
+    invoke-direct {v1, v2}, Lcom/crashlytics/android/core/x;-><init>([Lcom/crashlytics/android/core/ai;)V
 
-    iput-object v0, p0, Lcom/crashlytics/android/core/g;->r:Lcom/crashlytics/android/core/ai;
+    iput-object v1, p0, Lcom/crashlytics/android/core/g;->v:Lcom/crashlytics/android/core/ai;
 
-    .line 249
+    .line 281
+    invoke-static {v0}, Lcom/crashlytics/android/answers/k;->a(Landroid/content/Context;)Lcom/crashlytics/android/answers/q;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/crashlytics/android/core/g;->x:Lcom/crashlytics/android/answers/q;
+
+    .line 282
     return-void
 .end method
 
@@ -265,8 +325,8 @@
     .locals 1
 
     .prologue
-    .line 59
-    iget-object v0, p0, Lcom/crashlytics/android/core/g;->i:Lcom/crashlytics/android/core/h;
+    .line 66
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->j:Lcom/crashlytics/android/core/h;
 
     return-object v0
 .end method
@@ -275,7 +335,7 @@
     .locals 3
 
     .prologue
-    .line 449
+    .line 485
     invoke-virtual {p0}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -302,14 +362,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1257
+    .line 1430
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 1258
+    .line 1431
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     move-result-object v0
@@ -322,6 +382,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 1432
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v4
@@ -334,13 +395,14 @@
 
     move-result-object v3
 
+    .line 1431
     invoke-interface {v0, v1, v3, v2}, Lio/fabric/sdk/android/k;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 1270
+    .line 1443
     :goto_0
     return-void
 
-    .line 1265
+    .line 1438
     :cond_0
     :try_start_0
     new-instance v1, Ljava/io/FileInputStream;
@@ -349,7 +411,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1267
+    .line 1440
     :try_start_1
     invoke-virtual {p1}, Ljava/io/File;->length()J
 
@@ -361,7 +423,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1269
+    .line 1442
     const-string v0, "Failed to close file input stream."
 
     invoke-static {v1, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
@@ -397,8 +459,8 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1238
-    sget-object v2, Lcom/crashlytics/android/core/g;->g:[Ljava/lang/String;
+    .line 1411
+    sget-object v2, Lcom/crashlytics/android/core/g;->h:[Ljava/lang/String;
 
     array-length v3, v2
 
@@ -409,8 +471,8 @@
 
     aget-object v4, v2, v0
 
-    .line 1239
-    new-instance v5, Lcom/crashlytics/android/core/g$b;
+    .line 1412
+    new-instance v5, Lcom/crashlytics/android/core/g$c;
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -424,22 +486,28 @@
 
     move-result-object v6
 
+    const-string v7, ".cls"
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-direct {v5, v6}, Lcom/crashlytics/android/core/g$b;-><init>(Ljava/lang/String;)V
+    invoke-direct {v5, v6}, Lcom/crashlytics/android/core/g$c;-><init>(Ljava/lang/String;)V
 
     invoke-direct {p0, v5}, Lcom/crashlytics/android/core/g;->a(Ljava/io/FilenameFilter;)[Ljava/io/File;
 
     move-result-object v5
 
-    .line 1242
+    .line 1415
     array-length v6, v5
 
     if-nez v6, :cond_0
 
-    .line 1243
+    .line 1416
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     move-result-object v5
@@ -474,13 +542,13 @@
 
     invoke-interface {v5, v6, v4, v7}, Lio/fabric/sdk/android/k;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 1238
+    .line 1411
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1246
+    .line 1419
     :cond_0
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
@@ -502,14 +570,14 @@
 
     invoke-virtual {v4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1248
+    .line 1421
     aget-object v4, v5, v1
 
     invoke-static {p1, v4}, Lcom/crashlytics/android/core/g;->a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/io/File;)V
 
     goto :goto_1
 
-    .line 1251
+    .line 1424
     :cond_1
     return-void
 .end method
@@ -523,27 +591,27 @@
     .end annotation
 
     .prologue
-    .line 1068
+    .line 1237
     new-instance v6, Lcom/crashlytics/android/core/aj;
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/crashlytics/android/core/g;->r:Lcom/crashlytics/android/core/ai;
+    iget-object v2, v0, Lcom/crashlytics/android/core/g;->v:Lcom/crashlytics/android/core/ai;
 
     move-object/from16 v0, p4
 
     invoke-direct {v6, v0, v2}, Lcom/crashlytics/android/core/aj;-><init>(Ljava/lang/Throwable;Lcom/crashlytics/android/core/ai;)V
 
-    .line 1071
+    .line 1240
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/crashlytics/android/core/g;->i:Lcom/crashlytics/android/core/h;
+    iget-object v2, v0, Lcom/crashlytics/android/core/g;->j:Lcom/crashlytics/android/core/h;
 
-    invoke-virtual {v2}, Lcom/crashlytics/android/core/h;->o()Landroid/content/Context;
+    invoke-virtual {v2}, Lcom/crashlytics/android/core/h;->m()Landroid/content/Context;
 
     move-result-object v11
 
-    .line 1072
+    .line 1241
     invoke-virtual/range {p2 .. p2}, Ljava/util/Date;->getTime()J
 
     move-result-wide v2
@@ -552,30 +620,32 @@
 
     div-long v3, v2, v4
 
-    .line 1073
+    .line 1242
     invoke-static {v11}, Lio/fabric/sdk/android/services/common/CommonUtils;->c(Landroid/content/Context;)Ljava/lang/Float;
 
     move-result-object v17
 
-    .line 1074
+    .line 1243
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/crashlytics/android/core/g;->q:Lcom/crashlytics/android/core/q;
+    iget-object v2, v0, Lcom/crashlytics/android/core/g;->u:Lcom/crashlytics/android/core/q;
 
+    .line 1244
     invoke-virtual {v2}, Lcom/crashlytics/android/core/q;->a()Z
 
     move-result v2
 
+    .line 1243
     invoke-static {v11, v2}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Landroid/content/Context;Z)I
 
     move-result v18
 
-    .line 1076
+    .line 1245
     invoke-static {v11}, Lio/fabric/sdk/android/services/common/CommonUtils;->d(Landroid/content/Context;)Z
 
     move-result v19
 
-    .line 1077
+    .line 1246
     invoke-virtual {v11}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -586,7 +656,7 @@
 
     iget v14, v2, Landroid/content/res/Configuration;->orientation:I
 
-    .line 1078
+    .line 1248
     invoke-static {}, Lio/fabric/sdk/android/services/common/CommonUtils;->b()J
 
     move-result-wide v8
@@ -597,7 +667,7 @@
 
     sub-long v20, v8, v12
 
-    .line 1080
+    .line 1250
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
 
     move-result-object v2
@@ -606,11 +676,12 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lio/fabric/sdk/android/services/common/CommonUtils;->b(Ljava/lang/String;)J
+    .line 1249
+    invoke-static {v2}, Lio/fabric/sdk/android/services/common/CommonUtils;->c(Ljava/lang/String;)J
 
     move-result-wide v22
 
-    .line 1083
+    .line 1253
     invoke-virtual {v11}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -619,51 +690,51 @@
 
     move-result-object v13
 
-    .line 1085
+    .line 1254
     new-instance v10, Ljava/util/LinkedList;
 
     invoke-direct {v10}, Ljava/util/LinkedList;-><init>()V
 
-    .line 1086
+    .line 1255
     iget-object v8, v6, Lcom/crashlytics/android/core/aj;->c:[Ljava/lang/StackTraceElement;
 
-    .line 1087
+    .line 1256
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/crashlytics/android/core/g;->o:Lcom/crashlytics/android/core/a;
+    iget-object v2, v0, Lcom/crashlytics/android/core/g;->p:Lcom/crashlytics/android/core/a;
 
     iget-object v0, v2, Lcom/crashlytics/android/core/a;->b:Ljava/lang/String;
 
     move-object/from16 v16, v0
 
-    .line 1088
+    .line 1257
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/crashlytics/android/core/g;->l:Lio/fabric/sdk/android/services/common/IdManager;
+    iget-object v2, v0, Lcom/crashlytics/android/core/g;->m:Lio/fabric/sdk/android/services/common/IdManager;
 
     invoke-virtual {v2}, Lio/fabric/sdk/android/services/common/IdManager;->c()Ljava/lang/String;
 
     move-result-object v15
 
-    .line 1091
+    .line 1260
     if-eqz p6, :cond_0
 
-    .line 1092
+    .line 1261
     invoke-static {}, Ljava/lang/Thread;->getAllStackTraces()Ljava/util/Map;
 
     move-result-object v5
 
-    .line 1093
+    .line 1262
     invoke-interface {v5}, Ljava/util/Map;->size()I
 
     move-result v2
 
     new-array v9, v2, [Ljava/lang/Thread;
 
-    .line 1094
+    .line 1263
     const/4 v2, 0x0
 
-    .line 1095
+    .line 1264
     invoke-interface {v5}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v5
@@ -687,7 +758,7 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 1096
+    .line 1265
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v5
@@ -696,10 +767,10 @@
 
     aput-object v5, v9, v7
 
-    .line 1097
+    .line 1266
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/crashlytics/android/core/g;->r:Lcom/crashlytics/android/core/ai;
+    iget-object v5, v0, Lcom/crashlytics/android/core/g;->v:Lcom/crashlytics/android/core/ai;
 
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -713,21 +784,21 @@
 
     invoke-interface {v10, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1098
+    .line 1267
     add-int/lit8 v2, v7, 0x1
 
     move v7, v2
 
-    .line 1099
+    .line 1268
     goto :goto_0
 
-    .line 1103
+    .line 1272
     :cond_0
     const/4 v2, 0x0
 
     new-array v9, v2, [Ljava/lang/Thread;
 
-    .line 1107
+    .line 1276
     :cond_1
     const-string v2, "com.crashlytics.CollectCustomKeys"
 
@@ -739,16 +810,16 @@
 
     if-nez v2, :cond_2
 
-    .line 1108
+    .line 1277
     new-instance v11, Ljava/util/TreeMap;
 
     invoke-direct {v11}, Ljava/util/TreeMap;-><init>()V
 
-    .line 1119
+    .line 1288
     :goto_1
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/crashlytics/android/core/g;->p:Lcom/crashlytics/android/core/u;
+    iget-object v12, v0, Lcom/crashlytics/android/core/g;->r:Lcom/crashlytics/android/core/u;
 
     move-object/from16 v2, p1
 
@@ -758,20 +829,20 @@
 
     invoke-static/range {v2 .. v23}, Lcom/crashlytics/android/core/ag;->a(Lcom/crashlytics/android/core/CodedOutputStream;JLjava/lang/String;Lcom/crashlytics/android/core/aj;Ljava/lang/Thread;[Ljava/lang/StackTraceElement;[Ljava/lang/Thread;Ljava/util/List;Ljava/util/Map;Lcom/crashlytics/android/core/u;Landroid/app/ActivityManager$RunningAppProcessInfo;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Float;IZJJ)V
 
-    .line 1124
+    .line 1293
     return-void
 
-    .line 1110
+    .line 1279
     :cond_2
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/crashlytics/android/core/g;->i:Lcom/crashlytics/android/core/h;
+    iget-object v2, v0, Lcom/crashlytics/android/core/g;->j:Lcom/crashlytics/android/core/h;
 
-    invoke-virtual {v2}, Lcom/crashlytics/android/core/h;->g()Ljava/util/Map;
+    invoke-virtual {v2}, Lcom/crashlytics/android/core/h;->f()Ljava/util/Map;
 
     move-result-object v2
 
-    .line 1111
+    .line 1280
     if-eqz v2, :cond_3
 
     invoke-interface {v2}, Ljava/util/Map;->size()I
@@ -782,7 +853,7 @@
 
     if-le v5, v7, :cond_3
 
-    .line 1115
+    .line 1284
     new-instance v11, Ljava/util/TreeMap;
 
     invoke-direct {v11, v2}, Ljava/util/TreeMap;-><init>(Ljava/util/Map;)V
@@ -801,12 +872,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1222
+    .line 1395
     sget-object v1, Lio/fabric/sdk/android/services/common/CommonUtils;->a:Ljava/util/Comparator;
 
     invoke-static {p1, v1}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
 
-    .line 1224
+    .line 1397
     array-length v2, p1
 
     move v1, v0
@@ -816,7 +887,7 @@
 
     aget-object v0, p1, v1
 
-    .line 1226
+    .line 1399
     :try_start_0
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
@@ -834,20 +905,22 @@
 
     const/4 v6, 0x1
 
+    .line 1401
     invoke-virtual {v0}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v7
 
     aput-object v7, v5, v6
 
+    .line 1400
     invoke-static {v3, v4, v5}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 1229
+    .line 1402
     invoke-static {p0, v0}, Lcom/crashlytics/android/core/g;->a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/io/File;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1224
+    .line 1397
     :goto_1
     add-int/lit8 v0, v1, 0x1
 
@@ -855,11 +928,11 @@
 
     goto :goto_0
 
-    .line 1230
+    .line 1403
     :catch_0
     move-exception v0
 
-    .line 1231
+    .line 1404
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     move-result-object v3
@@ -868,11 +941,12 @@
 
     const-string v5, "Error writting non-fatal to session."
 
+    .line 1405
     invoke-interface {v3, v4, v5, v0}, Lio/fabric/sdk/android/k;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_1
 
-    .line 1235
+    .line 1408
     :cond_0
     return-void
 .end method
@@ -892,14 +966,14 @@
 
     const/4 v1, 0x0
 
-    .line 8864
-    .line 9434
+    .line 10919
+    .line 11470
     :try_start_0
     invoke-direct {p0}, Lcom/crashlytics/android/core/g;->h()[Ljava/io/File;
 
     move-result-object v3
 
-    .line 9435
+    .line 11471
     array-length v4, v3
 
     if-le v4, v0, :cond_0
@@ -908,15 +982,16 @@
 
     aget-object v3, v3, v4
 
+    .line 11472
     invoke-static {v3}, Lcom/crashlytics/android/core/g;->a(Ljava/io/File;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 8869
+    .line 10924
     :goto_0
     if-nez v3, :cond_1
 
-    .line 8870
+    .line 10925
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     move-result-object v0
@@ -932,27 +1007,27 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 8902
+    .line 10958
     const-string v0, "Failed to flush to session begin file."
 
     invoke-static {v1, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
 
-    .line 8903
+    .line 10959
     const-string v0, "Failed to close fatal exception file output stream."
 
     invoke-static {v1, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
 
-    .line 8904
+    .line 10960
     :goto_1
     return-void
 
     :cond_0
     move-object v3, v1
 
-    .line 9435
+    .line 11472
     goto :goto_0
 
-    .line 8875
+    .line 10930
     :cond_1
     :try_start_1
     sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -985,7 +1060,7 @@
 
     invoke-static {v3, v4}, Lcom/crashlytics/android/core/g;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8884
+    .line 10939
     iget-object v4, p1, Lcom/crashlytics/android/core/a/a/d;->d:[Lcom/crashlytics/android/core/a/a/a;
 
     if-eqz v4, :cond_2
@@ -996,13 +1071,13 @@
 
     if-lez v4, :cond_2
 
-    .line 8886
+    .line 10941
     :goto_2
     if-eqz v0, :cond_3
 
     const-string v0, "SessionCrash"
 
-    .line 8889
+    .line 10944
     :goto_3
     new-instance v2, Lcom/crashlytics/android/core/d;
 
@@ -1031,15 +1106,16 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 8890
+    .line 10945
     :try_start_2
     invoke-static {v2}, Lcom/crashlytics/android/core/CodedOutputStream;->a(Ljava/io/OutputStream;)Lcom/crashlytics/android/core/CodedOutputStream;
 
     move-result-object v1
 
-    .line 8892
+    .line 10947
     new-instance v0, Lcom/crashlytics/android/core/w;
 
+    .line 10948
     invoke-virtual {p0}, Lcom/crashlytics/android/core/g;->d()Ljava/io/File;
 
     move-result-object v4
@@ -1050,31 +1126,32 @@
 
     move-result-object v0
 
-    .line 8894
+    .line 10949
     new-instance v4, Lcom/crashlytics/android/core/u;
 
-    iget-object v5, p0, Lcom/crashlytics/android/core/g;->i:Lcom/crashlytics/android/core/h;
+    iget-object v5, p0, Lcom/crashlytics/android/core/g;->j:Lcom/crashlytics/android/core/h;
 
-    invoke-virtual {v5}, Lcom/crashlytics/android/core/h;->o()Landroid/content/Context;
+    .line 10950
+    invoke-virtual {v5}, Lcom/crashlytics/android/core/h;->m()Landroid/content/Context;
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/crashlytics/android/core/g;->n:Lio/fabric/sdk/android/services/c/a;
+    iget-object v6, p0, Lcom/crashlytics/android/core/g;->q:Lcom/crashlytics/android/core/g$f;
 
-    invoke-direct {v4, v5, v6, v3}, Lcom/crashlytics/android/core/u;-><init>(Landroid/content/Context;Lio/fabric/sdk/android/services/c/a;Ljava/lang/String;)V
+    invoke-direct {v4, v5, v6, v3}, Lcom/crashlytics/android/core/u;-><init>(Landroid/content/Context;Lcom/crashlytics/android/core/u$a;Ljava/lang/String;)V
 
-    .line 8896
+    .line 10952
     invoke-static {p1, v4, v0, v1}, Lcom/crashlytics/android/core/z;->a(Lcom/crashlytics/android/core/a/a/d;Lcom/crashlytics/android/core/u;Ljava/util/Map;Lcom/crashlytics/android/core/CodedOutputStream;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 8902
+    .line 10958
     const-string v0, "Failed to flush to session begin file."
 
     invoke-static {v1, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
 
-    .line 8903
+    .line 10959
     const-string v0, "Failed to close fatal exception file output stream."
 
     invoke-static {v2, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
@@ -1084,10 +1161,10 @@
     :cond_2
     move v0, v2
 
-    .line 8884
+    .line 10939
     goto :goto_2
 
-    .line 8886
+    .line 10941
     :cond_3
     :try_start_3
     const-string v0, "SessionMissingBinaryImages"
@@ -1097,13 +1174,13 @@
 
     goto :goto_3
 
-    .line 8898
+    .line 10954
     :catch_0
     move-exception v0
 
     move-object v2, v1
 
-    .line 8899
+    .line 10955
     :goto_4
     :try_start_4
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
@@ -1118,19 +1195,19 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 8902
+    .line 10958
     const-string v0, "Failed to flush to session begin file."
 
     invoke-static {v1, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
 
-    .line 8903
+    .line 10959
     const-string v0, "Failed to close fatal exception file output stream."
 
     invoke-static {v2, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
-    .line 8902
+    .line 10958
     :catchall_0
     move-exception v0
 
@@ -1141,27 +1218,27 @@
 
     invoke-static {v1, v3}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
 
-    .line 8903
+    .line 10959
     const-string v1, "Failed to close fatal exception file output stream."
 
     invoke-static {v2, v1}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
 
     throw v0
 
-    .line 8902
+    .line 10958
     :catchall_1
     move-exception v0
 
     goto :goto_5
 
-    .line 8898
+    .line 10954
     :catch_1
     move-exception v0
 
     goto :goto_4
 .end method
 
-.method static synthetic a(Lcom/crashlytics/android/core/g;Lio/fabric/sdk/android/services/settings/p;)V
+.method static synthetic a(Lcom/crashlytics/android/core/g;Lio/fabric/sdk/android/services/settings/o;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1170,10 +1247,10 @@
     .end annotation
 
     .prologue
-    .line 59
+    .line 66
     const/4 v0, 0x1
 
-    invoke-direct {p0, p1, v0}, Lcom/crashlytics/android/core/g;->a(Lio/fabric/sdk/android/services/settings/p;Z)V
+    invoke-direct {p0, p1, v0}, Lcom/crashlytics/android/core/g;->a(Lio/fabric/sdk/android/services/settings/o;Z)V
 
     return-void
 .end method
@@ -1184,17 +1261,17 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 4816
-    .line 4819
+    .line 5869
+    .line 5872
     :try_start_0
     invoke-direct {p0}, Lcom/crashlytics/android/core/g;->g()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4821
+    .line 5874
     if-nez v0, :cond_0
 
-    .line 4822
+    .line 5875
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     move-result-object v0
@@ -1210,21 +1287,21 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4836
+    .line 5890
     const-string v0, "Failed to flush to session begin file."
 
     invoke-static {v1, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
 
-    .line 4837
+    .line 5891
     const-string v0, "Failed to close fatal exception file output stream."
 
     invoke-static {v1, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
 
-    .line 4838
+    .line 5892
     :goto_0
     return-void
 
-    .line 4827
+    .line 5880
     :cond_0
     :try_start_1
     invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -1237,7 +1314,24 @@
 
     invoke-static {v0, v2}, Lcom/crashlytics/android/core/g;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4829
+    .line 5881
+    invoke-virtual {p1}, Ljava/util/Date;->getTime()J
+
+    move-result-wide v2
+
+    .line 6558
+    invoke-static {}, Lcom/crashlytics/android/core/g;->l()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    .line 6559
+    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
+
+    .line 5883
+    :cond_1
+    :goto_1
     new-instance v7, Lcom/crashlytics/android/core/d;
 
     invoke-virtual {p0}, Lcom/crashlytics/android/core/g;->d()Ljava/io/File;
@@ -1267,13 +1361,13 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 4830
+    .line 5884
     :try_start_2
     invoke-static {v7}, Lcom/crashlytics/android/core/CodedOutputStream;->a(Ljava/io/OutputStream;)Lcom/crashlytics/android/core/CodedOutputStream;
 
     move-result-object v1
 
-    .line 4831
+    .line 5885
     const-string v5, "crash"
 
     const/4 v6, 0x1
@@ -1291,27 +1385,80 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 4836
+    .line 5890
     const-string v0, "Failed to flush to session begin file."
 
     invoke-static {v1, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
 
-    .line 4837
+    .line 5891
     const-string v0, "Failed to close fatal exception file output stream."
 
     invoke-static {v7, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 4832
+    .line 6564
+    :cond_2
+    :try_start_3
+    iget-boolean v4, p0, Lcom/crashlytics/android/core/g;->y:Z
+
+    if-eqz v4, :cond_1
+
+    .line 6565
+    iget-object v4, p0, Lcom/crashlytics/android/core/g;->x:Lcom/crashlytics/android/answers/q;
+
+    if-eqz v4, :cond_3
+
+    .line 6566
+    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
+
+    .line 6567
+    new-instance v4, Landroid/os/Bundle;
+
+    invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
+
+    .line 6568
+    const-string v5, "_r"
+
+    const/4 v6, 0x1
+
+    invoke-virtual {v4, v5, v6}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    .line 6569
+    const-string v5, "fatal"
+
+    const/4 v6, 0x1
+
+    invoke-virtual {v4, v5, v6}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    .line 6570
+    const-string v5, "timestamp"
+
+    invoke-virtual {v4, v5, v2, v3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
+
+    .line 6571
+    iget-object v2, p0, Lcom/crashlytics/android/core/g;->x:Lcom/crashlytics/android/answers/q;
+
+    const-string v3, "clx"
+
+    const-string v5, "_ae"
+
+    invoke-interface {v2, v3, v5, v4}, Lcom/crashlytics/android/answers/q;->a(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    goto :goto_1
+
+    .line 5886
     :catch_0
     move-exception v0
 
     move-object v2, v1
 
-    .line 4833
-    :goto_1
-    :try_start_3
+    .line 5887
+    :goto_2
+    :try_start_4
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     move-result-object v3
@@ -1321,63 +1468,73 @@
     const-string v5, "An error occurred in the fatal exception logger"
 
     invoke-interface {v3, v4, v5, v0}, Lio/fabric/sdk/android/k;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 4836
+    .line 5890
     const-string v0, "Failed to flush to session begin file."
 
     invoke-static {v1, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
 
-    .line 4837
+    .line 5891
     const-string v0, "Failed to close fatal exception file output stream."
 
     invoke-static {v2, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 4836
+    .line 6574
+    :cond_3
+    :try_start_5
+    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
+    :try_end_5
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    goto :goto_1
+
+    .line 5890
     :catchall_0
     move-exception v0
 
     move-object v2, v1
 
-    :goto_2
+    :goto_3
     const-string v3, "Failed to flush to session begin file."
 
     invoke-static {v1, v3}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
 
-    .line 4837
+    .line 5891
     const-string v1, "Failed to close fatal exception file output stream."
 
     invoke-static {v2, v1}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
 
     throw v0
 
-    .line 4836
+    .line 5890
     :catchall_1
     move-exception v0
 
     move-object v2, v7
 
-    goto :goto_2
+    goto :goto_3
 
     :catchall_2
     move-exception v0
 
-    goto :goto_2
+    goto :goto_3
 
-    .line 4832
+    .line 5886
     :catch_1
     move-exception v0
 
     move-object v2, v7
 
-    goto :goto_1
+    goto :goto_2
 .end method
 
-.method private a(Lio/fabric/sdk/android/services/settings/p;Z)V
-    .locals 10
+.method private a(Lio/fabric/sdk/android/services/settings/o;Z)V
+    .locals 7
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -1385,305 +1542,178 @@
     .end annotation
 
     .prologue
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    .line 516
+    .line 552
     if-eqz p2, :cond_0
 
-    move v0, v1
+    const/4 v0, 0x1
 
-    .line 518
+    .line 554
     :goto_0
-    add-int/lit8 v4, v0, 0x8
+    add-int/lit8 v2, v0, 0x8
 
-    .line 1670
-    new-instance v5, Ljava/util/HashSet;
+    .line 2725
+    new-instance v3, Ljava/util/HashSet;
 
-    invoke-direct {v5}, Ljava/util/HashSet;-><init>()V
+    invoke-direct {v3}, Ljava/util/HashSet;-><init>()V
 
-    .line 1672
+    .line 2727
     invoke-direct {p0}, Lcom/crashlytics/android/core/g;->h()[Ljava/io/File;
+
+    move-result-object v4
+
+    .line 2728
+    array-length v5, v4
+
+    invoke-static {v2, v5}, Ljava/lang/Math;->min(II)I
+
+    move-result v5
+
+    move v2, v1
+
+    .line 2730
+    :goto_1
+    if-ge v2, v5, :cond_1
+
+    .line 2731
+    aget-object v6, v4, v2
+
+    invoke-static {v6}, Lcom/crashlytics/android/core/g;->a(Ljava/io/File;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 1673
-    array-length v7, v6
+    .line 2732
+    invoke-interface {v3, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    invoke-static {v4, v7}, Ljava/lang/Math;->min(II)I
-
-    move-result v7
-
-    move v4, v2
-
-    .line 1675
-    :goto_1
-    if-ge v4, v7, :cond_1
-
-    .line 1676
-    aget-object v8, v6, v4
-
-    invoke-static {v8}, Lcom/crashlytics/android/core/g;->a(Ljava/io/File;)Ljava/lang/String;
-
-    move-result-object v8
-
-    .line 1677
-    invoke-interface {v5, v8}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    .line 1675
-    add-int/lit8 v4, v4, 0x1
+    .line 2730
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
     :cond_0
-    move v0, v2
+    move v0, v1
 
-    .line 516
+    .line 552
     goto :goto_0
 
-    .line 1680
+    .line 2735
     :cond_1
-    iget-object v4, p0, Lcom/crashlytics/android/core/g;->p:Lcom/crashlytics/android/core/u;
+    iget-object v2, p0, Lcom/crashlytics/android/core/g;->r:Lcom/crashlytics/android/core/u;
 
-    invoke-virtual {v4, v5}, Lcom/crashlytics/android/core/u;->a(Ljava/util/Set;)V
+    invoke-virtual {v2, v3}, Lcom/crashlytics/android/core/u;->a(Ljava/util/Set;)V
 
-    .line 1682
-    new-instance v4, Lcom/crashlytics/android/core/g$a;
+    .line 2737
+    new-instance v2, Lcom/crashlytics/android/core/g$a;
 
-    invoke-direct {v4, v2}, Lcom/crashlytics/android/core/g$a;-><init>(B)V
+    invoke-direct {v2, v1}, Lcom/crashlytics/android/core/g$a;-><init>(B)V
 
-    invoke-direct {p0, v4}, Lcom/crashlytics/android/core/g;->a(Ljava/io/FilenameFilter;)[Ljava/io/File;
+    invoke-direct {p0, v2}, Lcom/crashlytics/android/core/g;->a(Ljava/io/FilenameFilter;)[Ljava/io/File;
 
-    move-result-object v4
+    move-result-object v1
 
-    invoke-static {v4, v5}, Lcom/crashlytics/android/core/g;->a([Ljava/io/File;Ljava/util/Set;)V
+    invoke-static {v1, v3}, Lcom/crashlytics/android/core/g;->a([Ljava/io/File;Ljava/util/Set;)V
 
-    .line 520
+    .line 556
     invoke-direct {p0}, Lcom/crashlytics/android/core/g;->h()[Ljava/io/File;
 
-    move-result-object v6
+    move-result-object v2
 
-    .line 522
-    array-length v4, v6
+    .line 558
+    array-length v1, v2
 
-    if-gt v4, v0, :cond_2
+    if-gt v1, v0, :cond_2
 
-    .line 523
+    .line 559
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
-    .line 541
+    .line 577
     :goto_2
     return-void
 
-    .line 527
+    .line 563
     :cond_2
-    aget-object v4, v6, v0
+    aget-object v1, v2, v0
 
-    invoke-static {v4}, Lcom/crashlytics/android/core/g;->a(Ljava/io/File;)Ljava/lang/String;
-
-    move-result-object v5
-
-    .line 2046
-    :try_start_0
-    new-instance v4, Lcom/crashlytics/android/core/d;
-
-    invoke-virtual {p0}, Lcom/crashlytics/android/core/g;->d()Ljava/io/File;
-
-    move-result-object v7
-
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    const-string v9, "SessionUser"
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-direct {v4, v7, v8}, Lcom/crashlytics/android/core/d;-><init>(Ljava/io/File;Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 2047
-    :try_start_1
-    invoke-static {v4}, Lcom/crashlytics/android/core/CodedOutputStream;->a(Ljava/io/OutputStream;)Lcom/crashlytics/android/core/CodedOutputStream;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    .line 564
+    invoke-static {v1}, Lcom/crashlytics/android/core/g;->a(Ljava/io/File;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 2297
-    :try_start_2
+    .line 3470
     invoke-virtual {p0}, Lcom/crashlytics/android/core/g;->c()Z
 
-    move-result v7
+    move-result v1
 
-    if-eqz v7, :cond_3
+    if-eqz v1, :cond_3
 
-    new-instance v5, Lcom/crashlytics/android/core/al;
+    new-instance v1, Lcom/crashlytics/android/core/al;
 
-    iget-object v7, p0, Lcom/crashlytics/android/core/g;->i:Lcom/crashlytics/android/core/h;
+    iget-object v4, p0, Lcom/crashlytics/android/core/g;->j:Lcom/crashlytics/android/core/h;
 
-    invoke-virtual {v7}, Lcom/crashlytics/android/core/h;->i()Ljava/lang/String;
+    .line 3472
+    invoke-virtual {v4}, Lcom/crashlytics/android/core/h;->g()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v4
 
-    iget-object v8, p0, Lcom/crashlytics/android/core/g;->i:Lcom/crashlytics/android/core/h;
+    iget-object v5, p0, Lcom/crashlytics/android/core/g;->j:Lcom/crashlytics/android/core/h;
 
-    invoke-virtual {v8}, Lcom/crashlytics/android/core/h;->k()Ljava/lang/String;
+    .line 3473
+    invoke-virtual {v5}, Lcom/crashlytics/android/core/h;->i()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v5
 
-    iget-object v9, p0, Lcom/crashlytics/android/core/g;->i:Lcom/crashlytics/android/core/h;
+    iget-object v6, p0, Lcom/crashlytics/android/core/g;->j:Lcom/crashlytics/android/core/h;
 
-    invoke-virtual {v9}, Lcom/crashlytics/android/core/h;->j()Ljava/lang/String;
+    .line 3474
+    invoke-virtual {v6}, Lcom/crashlytics/android/core/h;->h()Ljava/lang/String;
 
-    move-result-object v9
+    move-result-object v6
 
-    invoke-direct {v5, v7, v8, v9}, Lcom/crashlytics/android/core/al;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v4, v5, v6}, Lcom/crashlytics/android/core/al;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3038
+    .line 3220
     :goto_3
-    iget-object v7, v5, Lcom/crashlytics/android/core/al;->b:Ljava/lang/String;
+    const-string v4, "SessionUser"
 
-    if-nez v7, :cond_4
+    new-instance v5, Lcom/crashlytics/android/core/g$18;
 
-    iget-object v7, v5, Lcom/crashlytics/android/core/al;->c:Ljava/lang/String;
+    invoke-direct {v5, p0, v1}, Lcom/crashlytics/android/core/g$18;-><init>(Lcom/crashlytics/android/core/g;Lcom/crashlytics/android/core/al;)V
 
-    if-nez v7, :cond_4
+    invoke-direct {p0, v3, v4, v5}, Lcom/crashlytics/android/core/g;->a(Ljava/lang/String;Ljava/lang/String;Lcom/crashlytics/android/core/g$b;)V
 
-    iget-object v7, v5, Lcom/crashlytics/android/core/al;->d:Ljava/lang/String;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+    .line 570
+    if-nez p1, :cond_4
 
-    if-nez v7, :cond_4
-
-    .line 2052
-    :goto_4
-    if-eqz v1, :cond_5
-
-    .line 2059
-    const-string v1, "Failed to flush session user file."
-
-    invoke-static {v3, v1}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
-
-    .line 2060
-    const-string v1, "Failed to close session user file."
-
-    invoke-static {v4, v1}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
-
-    .line 534
-    :goto_5
-    if-nez p1, :cond_6
-
-    .line 535
+    .line 571
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     goto :goto_2
 
-    .line 2297
+    .line 3474
     :cond_3
-    :try_start_3
-    new-instance v7, Lcom/crashlytics/android/core/w;
+    new-instance v1, Lcom/crashlytics/android/core/w;
 
+    .line 3475
     invoke-virtual {p0}, Lcom/crashlytics/android/core/g;->d()Ljava/io/File;
 
-    move-result-object v8
+    move-result-object v4
 
-    invoke-direct {v7, v8}, Lcom/crashlytics/android/core/w;-><init>(Ljava/io/File;)V
+    invoke-direct {v1, v4}, Lcom/crashlytics/android/core/w;-><init>(Ljava/io/File;)V
 
-    invoke-virtual {v7, v5}, Lcom/crashlytics/android/core/w;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/al;
+    invoke-virtual {v1, v3}, Lcom/crashlytics/android/core/w;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/al;
 
-    move-result-object v5
+    move-result-object v1
 
     goto :goto_3
 
+    .line 576
     :cond_4
-    move v1, v2
+    iget v1, p1, Lio/fabric/sdk/android/services/settings/o;->c:I
 
-    .line 3038
-    goto :goto_4
+    invoke-direct {p0, v2, v0, v1}, Lcom/crashlytics/android/core/g;->a([Ljava/io/File;II)V
 
-    .line 2056
-    :cond_5
-    iget-object v1, v5, Lcom/crashlytics/android/core/al;->b:Ljava/lang/String;
-
-    iget-object v2, v5, Lcom/crashlytics/android/core/al;->c:Ljava/lang/String;
-
-    iget-object v5, v5, Lcom/crashlytics/android/core/al;->d:Ljava/lang/String;
-
-    invoke-static {v3, v1, v2, v5}, Lcom/crashlytics/android/core/ag;->a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
-
-    .line 2059
-    const-string v1, "Failed to flush session user file."
-
-    invoke-static {v3, v1}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
-
-    .line 2060
-    const-string v1, "Failed to close session user file."
-
-    invoke-static {v4, v1}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
-
-    goto :goto_5
-
-    .line 2059
-    :catchall_0
-    move-exception v0
-
-    move-object v1, v3
-
-    :goto_6
-    const-string v2, "Failed to flush session user file."
-
-    invoke-static {v1, v2}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
-
-    .line 2060
-    const-string v1, "Failed to close session user file."
-
-    invoke-static {v3, v1}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
-
-    throw v0
-
-    .line 540
-    :cond_6
-    iget v1, p1, Lio/fabric/sdk/android/services/settings/p;->c:I
-
-    invoke-direct {p0, v6, v0, v1}, Lcom/crashlytics/android/core/g;->a([Ljava/io/File;II)V
-
-    goto/16 :goto_2
-
-    .line 2059
-    :catchall_1
-    move-exception v0
-
-    move-object v1, v3
-
-    move-object v3, v4
-
-    goto :goto_6
-
-    :catchall_2
-    move-exception v0
-
-    move-object v1, v3
-
-    move-object v3, v4
-
-    goto :goto_6
+    goto :goto_2
 .end method
 
 .method private static a(Ljava/io/InputStream;Lcom/crashlytics/android/core/CodedOutputStream;I)V
@@ -1695,13 +1725,13 @@
     .end annotation
 
     .prologue
-    .line 1275
+    .line 1448
     new-array v1, p2, [B
 
-    .line 1276
+    .line 1449
     const/4 v0, 0x0
 
-    .line 1279
+    .line 1452
     :goto_0
     array-length v2, v1
 
@@ -1711,22 +1741,23 @@
 
     sub-int/2addr v2, v0
 
+    .line 1453
     invoke-virtual {p0, v1, v0, v2}, Ljava/io/InputStream;->read([BII)I
 
     move-result v2
 
     if-ltz v2, :cond_0
 
-    .line 1281
+    .line 1454
     add-int/2addr v0, v2
 
     goto :goto_0
 
-    .line 1284
+    .line 1457
     :cond_0
     invoke-virtual {p1, v1}, Lcom/crashlytics/android/core/CodedOutputStream;->a([B)V
 
-    .line 1285
+    .line 1458
     return-void
 .end method
 
@@ -1734,17 +1765,17 @@
     .locals 4
 
     .prologue
-    .line 590
-    .line 4599
-    new-instance v0, Lcom/crashlytics/android/core/g$f;
+    .line 641
+    .line 5650
+    new-instance v0, Lcom/crashlytics/android/core/g$k;
 
-    invoke-direct {v0, p1}, Lcom/crashlytics/android/core/g$f;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lcom/crashlytics/android/core/g$k;-><init>(Ljava/lang/String;)V
 
     invoke-direct {p0, v0}, Lcom/crashlytics/android/core/g;->a(Ljava/io/FilenameFilter;)[Ljava/io/File;
 
     move-result-object v1
 
-    .line 590
+    .line 641
     array-length v2, v1
 
     const/4 v0, 0x0
@@ -1754,15 +1785,15 @@
 
     aget-object v3, v1, v0
 
-    .line 591
+    .line 642
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
-    .line 590
+    .line 641
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 593
+    .line 644
     :cond_0
     return-void
 .end method
@@ -1771,12 +1802,12 @@
     .locals 4
 
     .prologue
-    .line 649
+    .line 700
     invoke-virtual {p0}, Lcom/crashlytics/android/core/g;->d()Ljava/io/File;
 
     move-result-object v0
 
-    new-instance v1, Lcom/crashlytics/android/core/g$b;
+    new-instance v1, Lcom/crashlytics/android/core/g$c;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1796,13 +1827,13 @@
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcom/crashlytics/android/core/g$b;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Lcom/crashlytics/android/core/g$c;-><init>(Ljava/lang/String;)V
 
-    sget-object v2, Lcom/crashlytics/android/core/g;->c:Ljava/util/Comparator;
+    sget-object v2, Lcom/crashlytics/android/core/g;->e:Ljava/util/Comparator;
 
-    invoke-static {v0, v1, p2, v2}, Lcom/crashlytics/android/core/am;->a(Ljava/io/File;Ljava/io/FilenameFilter;ILjava/util/Comparator;)V
+    invoke-static {v0, v1, p2, v2}, Lcom/crashlytics/android/core/am;->a(Ljava/io/File;Ljava/io/FilenameFilter;ILjava/util/Comparator;)I
 
-    .line 652
+    .line 703
     return-void
 .end method
 
@@ -1810,77 +1841,179 @@
     .locals 2
 
     .prologue
-    .line 1365
-    const-class v0, Lcom/crashlytics/android/answers/a;
+    .line 1547
+    const-class v0, Lcom/crashlytics/android/answers/b;
 
     invoke-static {v0}, Lio/fabric/sdk/android/c;->a(Ljava/lang/Class;)Lio/fabric/sdk/android/h;
 
     move-result-object v0
 
-    check-cast v0, Lcom/crashlytics/android/answers/a;
+    check-cast v0, Lcom/crashlytics/android/answers/b;
 
-    .line 1366
+    .line 1548
     if-nez v0, :cond_0
 
-    .line 1367
+    .line 1549
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
-    .line 1371
+    .line 1553
     :goto_0
     return-void
 
-    .line 1370
+    .line 1552
     :cond_0
     new-instance v1, Lio/fabric/sdk/android/services/common/i$a;
 
     invoke-direct {v1, p0, p1}, Lio/fabric/sdk/android/services/common/i$a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/crashlytics/android/answers/a;->a(Lio/fabric/sdk/android/services/common/i$a;)V
+    invoke-virtual {v0, v1}, Lcom/crashlytics/android/answers/b;->a(Lio/fabric/sdk/android/services/common/i$a;)V
 
     goto :goto_0
 .end method
 
-.method private a([Ljava/io/File;II)V
-    .locals 12
+.method private a(Ljava/lang/String;Ljava/lang/String;Lcom/crashlytics/android/core/g$b;)V
+    .locals 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
 
     .prologue
-    .line 549
-    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
+    const/4 v1, 0x0
 
-    .line 551
-    :goto_0
-    array-length v0, p1
+    .line 1023
+    .line 1026
+    :try_start_0
+    new-instance v2, Lcom/crashlytics/android/core/d;
 
-    if-ge p2, v0, :cond_8
+    invoke-virtual {p0}, Lcom/crashlytics/android/core/g;->d()Ljava/io/File;
 
-    .line 552
-    aget-object v6, p1, p2
+    move-result-object v0
 
-    .line 553
-    invoke-static {v6}, Lcom/crashlytics/android/core/g;->a(Ljava/io/File;)Ljava/lang/String;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 556
-    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 3133
-    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
+    move-result-object v3
 
-    .line 3135
-    new-instance v0, Lcom/crashlytics/android/core/g$b;
+    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    move-result-object v3
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v3
+
+    invoke-direct {v2, v0, v3}, Lcom/crashlytics/android/core/d;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 1027
+    :try_start_1
+    invoke-static {v2}, Lcom/crashlytics/android/core/CodedOutputStream;->a(Ljava/io/OutputStream;)Lcom/crashlytics/android/core/CodedOutputStream;
 
     move-result-object v1
 
-    const-string v2, "SessionCrash"
+    .line 1028
+    invoke-interface {p3, v1}, Lcom/crashlytics/android/core/g$b;->a(Lcom/crashlytics/android/core/CodedOutputStream;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 1030
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v3, "Failed to flush to session "
+
+    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v3, " file."
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
+
+    .line 1031
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Failed to close session "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " file."
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
+
+    .line 1032
+    return-void
+
+    .line 1030
+    :catchall_0
+    move-exception v0
+
+    move-object v2, v1
+
+    :goto_0
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Failed to flush to session "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " file."
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
+
+    .line 1031
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v3, "Failed to close session "
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v3, " file."
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -1888,61 +2021,113 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/crashlytics/android/core/g$b;-><init>(Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
 
-    invoke-direct {p0, v0}, Lcom/crashlytics/android/core/g;->a(Ljava/io/FilenameFilter;)[Ljava/io/File;
+    throw v0
+
+    .line 1030
+    :catchall_1
+    move-exception v0
+
+    goto :goto_0
+.end method
+
+.method private a(Ljava/lang/String;Ljava/lang/String;Lcom/crashlytics/android/core/g$d;)V
+    .locals 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    .prologue
+    .line 1040
+    const/4 v2, 0x0
+
+    .line 1042
+    :try_start_0
+    new-instance v1, Ljava/io/FileOutputStream;
+
+    new-instance v0, Ljava/io/File;
+
+    invoke-virtual {p0}, Lcom/crashlytics/android/core/g;->d()Ljava/io/File;
 
     move-result-object v3
 
-    .line 3137
-    if-eqz v3, :cond_3
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    array-length v0, v3
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-lez v0, :cond_3
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x1
+    move-result-object v4
 
-    .line 3138
-    :goto_1
-    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
+    invoke-virtual {v4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
+    move-result-object v4
 
-    const-string v2, "Session %s has fatal exception: %s"
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/4 v4, 0x2
+    move-result-object v4
 
-    new-array v4, v4, [Ljava/lang/Object;
+    invoke-direct {v0, v3, v4}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    const/4 v5, 0x0
+    invoke-direct {v1, v0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    aput-object v7, v4, v5
+    .line 1043
+    :try_start_1
+    invoke-interface {p3, v1}, Lcom/crashlytics/android/core/g$d;->a(Ljava/io/FileOutputStream;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    const/4 v5, 0x1
+    .line 1045
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const-string v2, "Failed to close "
 
-    move-result-object v8
+    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    aput-object v8, v4, v5
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v1, v2, v4}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    move-result-object v0
 
-    .line 3141
-    new-instance v1, Lcom/crashlytics/android/core/g$b;
+    const-string v2, " file."
 
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
+
+    .line 1046
+    return-void
+
+    .line 1045
+    :catchall_0
+    move-exception v0
+
+    move-object v1, v2
+
+    :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v3, "Failed to close "
 
-    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    const-string v4, "SessionEvent"
+    const-string v3, " file."
 
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -1950,368 +2135,541 @@
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcom/crashlytics/android/core/g$b;-><init>(Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
 
-    invoke-direct {p0, v1}, Lcom/crashlytics/android/core/g;->a(Ljava/io/FilenameFilter;)[Ljava/io/File;
+    throw v0
 
-    move-result-object v2
+    :catchall_1
+    move-exception v0
 
-    .line 3143
-    if-eqz v2, :cond_4
+    goto :goto_0
+.end method
 
-    array-length v1, v2
+.method private a([Ljava/io/File;II)V
+    .locals 16
 
-    if-lez v1, :cond_4
+    .prologue
+    .line 585
+    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
-    const/4 v1, 0x1
+    .line 587
+    :goto_0
+    move-object/from16 v0, p1
 
-    .line 3144
+    array-length v2, v0
+
+    move/from16 v0, p2
+
+    if-ge v0, v2, :cond_a
+
+    .line 588
+    aget-object v9, p1, p2
+
+    .line 590
+    invoke-static {v9}, Lcom/crashlytics/android/core/g;->a(Ljava/io/File;)Ljava/lang/String;
+
+    move-result-object v10
+
+    .line 592
+    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
+
+    .line 4302
+    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
+
+    .line 4304
+    new-instance v2, Lcom/crashlytics/android/core/g$c;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, "SessionCrash"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Lcom/crashlytics/android/core/g$c;-><init>(Ljava/lang/String;)V
+
+    move-object/from16 v0, p0
+
+    invoke-direct {v0, v2}, Lcom/crashlytics/android/core/g;->a(Ljava/io/FilenameFilter;)[Ljava/io/File;
+
+    move-result-object v5
+
+    .line 4306
+    if-eqz v5, :cond_4
+
+    array-length v2, v5
+
+    if-lez v2, :cond_4
+
+    const/4 v2, 0x1
+
+    .line 4307
+    :goto_1
+    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
+
+    sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    const-string v4, "Session %s has fatal exception: %s"
+
+    const/4 v6, 0x2
+
+    new-array v6, v6, [Ljava/lang/Object;
+
+    const/4 v7, 0x0
+
+    aput-object v10, v6, v7
+
+    const/4 v7, 0x1
+
+    .line 4308
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v8
+
+    aput-object v8, v6, v7
+
+    .line 4307
+    invoke-static {v3, v4, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 4310
+    new-instance v3, Lcom/crashlytics/android/core/g$c;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v4, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v6, "SessionEvent"
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-direct {v3, v4}, Lcom/crashlytics/android/core/g$c;-><init>(Ljava/lang/String;)V
+
+    move-object/from16 v0, p0
+
+    invoke-direct {v0, v3}, Lcom/crashlytics/android/core/g;->a(Ljava/io/FilenameFilter;)[Ljava/io/File;
+
+    move-result-object v4
+
+    .line 4312
+    if-eqz v4, :cond_5
+
+    array-length v3, v4
+
+    if-lez v3, :cond_5
+
+    const/4 v3, 0x1
+
+    .line 4313
     :goto_2
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
-    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
+    sget-object v6, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    const-string v5, "Session %s has non-fatal exceptions: %s"
+    const-string v7, "Session %s has non-fatal exceptions: %s"
 
     const/4 v8, 0x2
 
     new-array v8, v8, [Ljava/lang/Object;
 
-    const/4 v9, 0x0
+    const/4 v11, 0x0
 
-    aput-object v7, v8, v9
+    aput-object v10, v8, v11
 
-    const/4 v9, 0x1
+    const/4 v11, 0x1
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    .line 4314
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v10
+    move-result-object v12
 
-    aput-object v10, v8, v9
+    aput-object v12, v8, v11
 
-    invoke-static {v4, v5, v8}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    .line 4313
+    invoke-static {v6, v7, v8}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 3147
-    if-nez v0, :cond_0
+    .line 4316
+    if-nez v2, :cond_0
 
-    if-eqz v1, :cond_7
+    if-eqz v3, :cond_9
 
-    .line 3712
+    .line 4767
     :cond_0
-    array-length v1, v2
+    array-length v3, v4
 
-    if-le v1, p3, :cond_9
+    move/from16 v0, p3
 
-    .line 3713
+    if-le v3, v0, :cond_b
+
+    .line 4768
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
-    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
+    sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    const-string v2, "Trimming down to %d logged exceptions."
+    const-string v4, "Trimming down to %d logged exceptions."
 
-    const/4 v4, 0x1
+    const/4 v6, 0x1
 
-    new-array v4, v4, [Ljava/lang/Object;
+    new-array v6, v6, [Ljava/lang/Object;
 
+    const/4 v7, 0x0
+
+    .line 4770
+    invoke-static/range {p3 .. p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    aput-object v8, v6, v7
+
+    .line 4769
+    invoke-static {v3, v4, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 4771
+    move-object/from16 v0, p0
+
+    move/from16 v1, p3
+
+    invoke-direct {v0, v10, v1}, Lcom/crashlytics/android/core/g;->a(Ljava/lang/String;I)V
+
+    .line 4772
+    new-instance v3, Lcom/crashlytics/android/core/g$c;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v4, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v6, "SessionEvent"
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-direct {v3, v4}, Lcom/crashlytics/android/core/g$c;-><init>(Ljava/lang/String;)V
+
+    move-object/from16 v0, p0
+
+    invoke-direct {v0, v3}, Lcom/crashlytics/android/core/g;->a(Ljava/io/FilenameFilter;)[Ljava/io/File;
+
+    move-result-object v3
+
+    move-object v8, v3
+
+    .line 4319
+    :goto_3
+    if-eqz v2, :cond_6
+
+    const/4 v2, 0x0
+
+    aget-object v2, v5, v2
+
+    move-object v7, v2
+
+    .line 5336
+    :goto_4
+    if-eqz v7, :cond_7
+
+    const/4 v2, 0x1
+
+    move v6, v2
+
+    .line 5339
+    :goto_5
+    if-eqz v6, :cond_8
+
+    invoke-direct/range {p0 .. p0}, Lcom/crashlytics/android/core/g;->j()Ljava/io/File;
+
+    move-result-object v2
+
+    .line 5340
+    :goto_6
+    invoke-virtual {v2}, Ljava/io/File;->exists()Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    .line 5341
+    invoke-virtual {v2}, Ljava/io/File;->mkdirs()Z
+
+    .line 5343
+    :cond_1
     const/4 v5, 0x0
 
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    aput-object v8, v4, v5
-
-    invoke-static {v1, v2, v4}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    .line 3716
-    invoke-direct {p0, v7, p3}, Lcom/crashlytics/android/core/g;->a(Ljava/lang/String;I)V
-
-    .line 3717
-    new-instance v1, Lcom/crashlytics/android/core/g$b;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v4, "SessionEvent"
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Lcom/crashlytics/android/core/g$b;-><init>(Ljava/lang/String;)V
-
-    invoke-direct {p0, v1}, Lcom/crashlytics/android/core/g;->a(Ljava/io/FilenameFilter;)[Ljava/io/File;
-
-    move-result-object v1
-
-    move-object v5, v1
-
-    .line 3150
-    :goto_3
-    if-eqz v0, :cond_5
-
-    const/4 v0, 0x0
-
-    aget-object v0, v3, v0
-
-    move-object v4, v0
-
-    .line 4167
-    :goto_4
-    if-eqz v4, :cond_6
-
-    const/4 v0, 0x1
-
-    .line 4170
-    :goto_5
+    .line 5344
     const/4 v3, 0x0
 
-    .line 4171
-    const/4 v1, 0x0
-
-    .line 4173
+    .line 5346
     :try_start_0
-    new-instance v2, Lcom/crashlytics/android/core/d;
+    new-instance v4, Lcom/crashlytics/android/core/d;
 
-    invoke-virtual {p0}, Lcom/crashlytics/android/core/g;->d()Ljava/io/File;
-
-    move-result-object v8
-
-    invoke-direct {v2, v8, v7}, Lcom/crashlytics/android/core/d;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    invoke-direct {v4, v2, v10}, Lcom/crashlytics/android/core/d;-><init>(Ljava/io/File;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4174
+    .line 5347
     :try_start_1
-    invoke-static {v2}, Lcom/crashlytics/android/core/CodedOutputStream;->a(Ljava/io/OutputStream;)Lcom/crashlytics/android/core/CodedOutputStream;
+    invoke-static {v4}, Lcom/crashlytics/android/core/CodedOutputStream;->a(Ljava/io/OutputStream;)Lcom/crashlytics/android/core/CodedOutputStream;
 
-    move-result-object v1
+    move-result-object v3
 
-    .line 4176
+    .line 5349
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
-    .line 4178
-    invoke-static {v1, v6}, Lcom/crashlytics/android/core/g;->a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/io/File;)V
+    .line 5351
+    invoke-static {v3, v9}, Lcom/crashlytics/android/core/g;->a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/io/File;)V
 
-    .line 4180
-    const/4 v3, 0x4
+    .line 5353
+    const/4 v2, 0x4
 
-    new-instance v6, Ljava/util/Date;
+    new-instance v5, Ljava/util/Date;
 
-    invoke-direct {v6}, Ljava/util/Date;-><init>()V
+    invoke-direct {v5}, Ljava/util/Date;-><init>()V
 
-    invoke-virtual {v6}, Ljava/util/Date;->getTime()J
+    invoke-virtual {v5}, Ljava/util/Date;->getTime()J
 
-    move-result-wide v8
+    move-result-wide v12
 
-    const-wide/16 v10, 0x3e8
+    const-wide/16 v14, 0x3e8
 
-    div-long/2addr v8, v10
+    div-long/2addr v12, v14
 
-    invoke-virtual {v1, v3, v8, v9}, Lcom/crashlytics/android/core/CodedOutputStream;->a(IJ)V
+    invoke-virtual {v3, v2, v12, v13}, Lcom/crashlytics/android/core/CodedOutputStream;->a(IJ)V
 
-    .line 4181
-    const/4 v3, 0x5
+    .line 5354
+    const/4 v2, 0x5
 
-    invoke-virtual {v1, v3, v0}, Lcom/crashlytics/android/core/CodedOutputStream;->a(IZ)V
+    invoke-virtual {v3, v2, v6}, Lcom/crashlytics/android/core/CodedOutputStream;->a(IZ)V
 
-    .line 4183
-    const/16 v3, 0xb
+    .line 5356
+    const/16 v2, 0xb
 
-    const/4 v6, 0x1
+    const/4 v5, 0x1
 
-    invoke-virtual {v1, v3, v6}, Lcom/crashlytics/android/core/CodedOutputStream;->a(II)V
+    invoke-virtual {v3, v2, v5}, Lcom/crashlytics/android/core/CodedOutputStream;->a(II)V
 
-    .line 4185
-    const/16 v3, 0xc
+    .line 5358
+    const/16 v2, 0xc
 
-    const/4 v6, 0x3
+    const/4 v5, 0x3
 
-    invoke-virtual {v1, v3, v6}, Lcom/crashlytics/android/core/CodedOutputStream;->b(II)V
+    invoke-virtual {v3, v2, v5}, Lcom/crashlytics/android/core/CodedOutputStream;->b(II)V
 
-    .line 4187
-    invoke-direct {p0, v1, v7}, Lcom/crashlytics/android/core/g;->a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/lang/String;)V
+    .line 5360
+    move-object/from16 v0, p0
 
-    .line 4189
-    invoke-static {v1, v5, v7}, Lcom/crashlytics/android/core/g;->a(Lcom/crashlytics/android/core/CodedOutputStream;[Ljava/io/File;Ljava/lang/String;)V
+    invoke-direct {v0, v3, v10}, Lcom/crashlytics/android/core/g;->a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/lang/String;)V
 
-    .line 4191
-    if-eqz v0, :cond_1
+    .line 5362
+    invoke-static {v3, v8, v10}, Lcom/crashlytics/android/core/g;->a(Lcom/crashlytics/android/core/CodedOutputStream;[Ljava/io/File;Ljava/lang/String;)V
 
-    .line 4192
-    invoke-static {v1, v4}, Lcom/crashlytics/android/core/g;->a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/io/File;)V
+    .line 5364
+    if-eqz v6, :cond_2
+
+    .line 5365
+    invoke-static {v3, v7}, Lcom/crashlytics/android/core/g;->a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/io/File;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 4202
-    :cond_1
-    const-string v0, "Error flushing session file stream"
-
-    invoke-static {v1, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
-
-    .line 4211
-    const-string v0, "Failed to close CLS file"
-
-    invoke-static {v2, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
-
-    .line 3157
+    .line 5375
     :cond_2
-    :goto_6
+    const-string v2, "Error flushing session file stream"
+
+    invoke-static {v3, v2}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
+
+    .line 5384
+    const-string v2, "Failed to close CLS file"
+
+    invoke-static {v4, v2}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
+
+    .line 4326
+    :cond_3
+    :goto_7
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
-    .line 3159
-    invoke-direct {p0, v7}, Lcom/crashlytics/android/core/g;->a(Ljava/lang/String;)V
+    .line 4328
+    move-object/from16 v0, p0
 
-    .line 551
+    invoke-direct {v0, v10}, Lcom/crashlytics/android/core/g;->a(Ljava/lang/String;)V
+
+    .line 587
     add-int/lit8 p2, p2, 0x1
 
     goto/16 :goto_0
 
-    .line 3137
-    :cond_3
-    const/4 v0, 0x0
+    .line 4306
+    :cond_4
+    const/4 v2, 0x0
 
     goto/16 :goto_1
 
-    .line 3143
-    :cond_4
-    const/4 v1, 0x0
+    .line 4312
+    :cond_5
+    const/4 v3, 0x0
 
     goto/16 :goto_2
 
-    .line 3150
-    :cond_5
-    const/4 v0, 0x0
+    .line 4319
+    :cond_6
+    const/4 v2, 0x0
 
-    move-object v4, v0
+    move-object v7, v2
 
     goto :goto_4
 
-    .line 4167
-    :cond_6
-    const/4 v0, 0x0
+    .line 5336
+    :cond_7
+    const/4 v2, 0x0
+
+    move v6, v2
 
     goto :goto_5
 
-    .line 4194
+    .line 5339
+    :cond_8
+    invoke-direct/range {p0 .. p0}, Lcom/crashlytics/android/core/g;->k()Ljava/io/File;
+
+    move-result-object v2
+
+    goto :goto_6
+
+    .line 5367
     :catch_0
-    move-exception v0
+    move-exception v2
 
-    move-object v2, v3
+    move-object v4, v5
 
-    .line 4195
-    :goto_7
+    .line 5368
+    :goto_8
     :try_start_2
+    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
+
+    move-result-object v5
+
+    const-string v6, "CrashlyticsCore"
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    const-string v8, "Failed to write session file for session ID: "
+
+    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v7, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-interface {v5, v6, v7, v2}, Lio/fabric/sdk/android/k;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    .line 5375
+    const-string v2, "Error flushing session file stream"
+
+    invoke-static {v3, v2}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
+
+    .line 5610
+    if-eqz v4, :cond_3
+
+    .line 5615
+    :try_start_3
+    invoke-virtual {v4}, Lcom/crashlytics/android/core/d;->a()V
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
+
+    goto :goto_7
+
+    .line 5616
+    :catch_1
+    move-exception v2
+
+    .line 5617
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     move-result-object v3
 
     const-string v4, "CrashlyticsCore"
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    const-string v5, "Error closing session file stream in the presence of an exception"
 
-    const-string v6, "Failed to write session file for session ID: "
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-interface {v3, v4, v5, v0}, Lio/fabric/sdk/android/k;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    .line 4202
-    const-string v0, "Error flushing session file stream"
-
-    invoke-static {v1, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
-
-    .line 4574
-    if-eqz v2, :cond_2
-
-    .line 4579
-    :try_start_3
-    invoke-virtual {v2}, Lcom/crashlytics/android/core/d;->a()V
-    :try_end_3
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
-
-    goto :goto_6
-
-    .line 4580
-    :catch_1
-    move-exception v0
-
-    .line 4581
-    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
-
-    move-result-object v1
-
-    const-string v2, "CrashlyticsCore"
-
-    const-string v3, "Error closing session file stream in the presence of an exception"
-
-    invoke-interface {v1, v2, v3, v0}, Lio/fabric/sdk/android/k;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_6
-
-    .line 4202
-    :catchall_0
-    move-exception v0
-
-    move-object v2, v3
-
-    :goto_8
-    const-string v3, "Error flushing session file stream"
-
-    invoke-static {v1, v3}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
-
-    .line 4211
-    const-string v1, "Failed to close CLS file"
-
-    invoke-static {v2, v1}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
-
-    throw v0
-
-    .line 3153
-    :cond_7
-    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
-
-    goto :goto_6
-
-    .line 561
-    :cond_8
-    return-void
-
-    .line 4202
-    :catchall_1
-    move-exception v0
-
-    goto :goto_8
-
-    .line 4194
-    :catch_2
-    move-exception v0
+    invoke-interface {v3, v4, v5, v2}, Lio/fabric/sdk/android/k;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_7
 
+    .line 5375
+    :catchall_0
+    move-exception v2
+
+    move-object v4, v5
+
+    :goto_9
+    const-string v5, "Error flushing session file stream"
+
+    invoke-static {v3, v5}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
+
+    .line 5384
+    const-string v3, "Failed to close CLS file"
+
+    invoke-static {v4, v3}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
+
+    throw v2
+
+    .line 4322
     :cond_9
-    move-object v5, v2
+    invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
+
+    goto :goto_7
+
+    .line 597
+    :cond_a
+    return-void
+
+    .line 5375
+    :catchall_1
+    move-exception v2
+
+    goto :goto_9
+
+    .line 5367
+    :catch_2
+    move-exception v2
+
+    goto :goto_8
+
+    :cond_b
+    move-object v8, v4
 
     goto/16 :goto_3
 .end method
@@ -2330,46 +2688,49 @@
     .end annotation
 
     .prologue
-    .line 686
+    .line 741
     array-length v1, p0
 
     const/4 v0, 0x0
 
     :goto_0
-    if-ge v0, v1, :cond_0
+    if-ge v0, v1, :cond_2
 
     aget-object v2, p0, v0
 
-    .line 687
+    .line 742
     invoke-virtual {v2}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 688
-    sget-object v4, Lcom/crashlytics/android/core/g;->e:Ljava/util/regex/Pattern;
+    .line 743
+    sget-object v4, Lcom/crashlytics/android/core/g;->f:Ljava/util/regex/Pattern;
 
     invoke-virtual {v4, v3}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v3
 
-    .line 690
+    .line 745
     invoke-virtual {v3}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
-    .line 691
+    .line 746
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
-    .line 692
+    .line 747
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 703
+    .line 741
     :cond_0
-    return-void
+    :goto_1
+    add-int/lit8 v0, v0, 0x1
 
-    .line 696
+    goto :goto_0
+
+    .line 751
     :cond_1
     const/4 v4, 0x1
 
@@ -2377,61 +2738,63 @@
 
     move-result-object v3
 
-    .line 697
+    .line 752
     invoke-interface {p1, v3}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v3
 
-    if-nez v3, :cond_2
+    if-nez v3, :cond_0
 
-    .line 698
+    .line 753
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
-    .line 700
+    .line 755
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 686
-    :cond_2
-    add-int/lit8 v0, v0, 0x1
+    goto :goto_1
 
-    goto :goto_0
+    .line 758
+    :cond_2
+    return-void
 .end method
 
-.method static synthetic a(Lcom/crashlytics/android/core/g;Lio/fabric/sdk/android/services/settings/s;)Z
+.method static synthetic a(Lcom/crashlytics/android/core/g;Lio/fabric/sdk/android/services/settings/r;)Z
     .locals 1
 
     .prologue
-    .line 59
-    invoke-direct {p0, p1}, Lcom/crashlytics/android/core/g;->a(Lio/fabric/sdk/android/services/settings/s;)Z
+    .line 66
+    invoke-direct {p0, p1}, Lcom/crashlytics/android/core/g;->a(Lio/fabric/sdk/android/services/settings/r;)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method private a(Lio/fabric/sdk/android/services/settings/s;)Z
+.method private a(Lio/fabric/sdk/android/services/settings/r;)Z
     .locals 2
 
     .prologue
     const/4 v0, 0x0
 
-    .line 1318
+    .line 1499
     if-nez p1, :cond_1
 
-    .line 1322
+    .line 1504
     :cond_0
     :goto_0
     return v0
 
+    .line 1503
     :cond_1
-    iget-object v1, p1, Lio/fabric/sdk/android/services/settings/s;->d:Lio/fabric/sdk/android/services/settings/m;
+    iget-object v1, p1, Lio/fabric/sdk/android/services/settings/r;->d:Lio/fabric/sdk/android/services/settings/m;
 
     iget-boolean v1, v1, Lio/fabric/sdk/android/services/settings/m;->a:Z
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/crashlytics/android/core/g;->m:Lcom/crashlytics/android/core/ab;
+    iget-object v1, p0, Lcom/crashlytics/android/core/g;->n:Lcom/crashlytics/android/core/ab;
 
+    .line 1504
     invoke-virtual {v1}, Lcom/crashlytics/android/core/ab;->b()Z
 
     move-result v1
@@ -2447,7 +2810,7 @@
     .locals 1
 
     .prologue
-    .line 59
+    .line 66
     invoke-direct {p0, p1}, Lcom/crashlytics/android/core/g;->a(Ljava/io/FilenameFilter;)[Ljava/io/File;
 
     move-result-object v0
@@ -2459,7 +2822,7 @@
     .locals 1
 
     .prologue
-    .line 628
+    .line 679
     invoke-virtual {p0, p1}, Ljava/io/File;->listFiles(Ljava/io/FilenameFilter;)[Ljava/io/File;
 
     move-result-object v0
@@ -2475,7 +2838,7 @@
     .locals 1
 
     .prologue
-    .line 624
+    .line 675
     invoke-virtual {p0}, Lcom/crashlytics/android/core/g;->d()Ljava/io/File;
 
     move-result-object v0
@@ -2491,26 +2854,27 @@
     .locals 4
 
     .prologue
-    .line 1327
-    iget-object v0, p0, Lcom/crashlytics/android/core/g;->i:Lcom/crashlytics/android/core/h;
+    .line 1508
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->j:Lcom/crashlytics/android/core/h;
 
-    invoke-virtual {v0}, Lcom/crashlytics/android/core/h;->o()Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/crashlytics/android/core/h;->m()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 1328
+    .line 1509
     const-string v1, "com.crashlytics.ApiEndpoint"
 
+    .line 1510
     invoke-static {v0, v1}, Lio/fabric/sdk/android/services/common/CommonUtils;->c(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1331
+    .line 1512
     new-instance v1, Lcom/crashlytics/android/core/p;
 
-    iget-object v2, p0, Lcom/crashlytics/android/core/g;->i:Lcom/crashlytics/android/core/h;
+    iget-object v2, p0, Lcom/crashlytics/android/core/g;->j:Lcom/crashlytics/android/core/h;
 
-    iget-object v3, p0, Lcom/crashlytics/android/core/g;->k:Lio/fabric/sdk/android/services/network/c;
+    iget-object v3, p0, Lcom/crashlytics/android/core/g;->l:Lio/fabric/sdk/android/services/network/c;
 
     invoke-direct {v1, v2, v0, p1, v3}, Lcom/crashlytics/android/core/p;-><init>(Lio/fabric/sdk/android/h;Ljava/lang/String;Ljava/lang/String;Lio/fabric/sdk/android/services/network/c;)V
 
@@ -2518,7 +2882,7 @@
 .end method
 
 .method static synthetic b(Lcom/crashlytics/android/core/g;)V
-    .locals 20
+    .locals 15
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -2526,592 +2890,278 @@
     .end annotation
 
     .prologue
-    .line 5494
-    new-instance v2, Ljava/util/Date;
+    .line 7530
+    new-instance v0, Ljava/util/Date;
 
-    invoke-direct {v2}, Ljava/util/Date;-><init>()V
+    invoke-direct {v0}, Ljava/util/Date;-><init>()V
 
-    .line 5495
-    new-instance v3, Lcom/crashlytics/android/core/c;
+    .line 7531
+    new-instance v1, Lcom/crashlytics/android/core/c;
 
-    move-object/from16 v0, p0
+    iget-object v2, p0, Lcom/crashlytics/android/core/g;->m:Lio/fabric/sdk/android/services/common/IdManager;
 
-    iget-object v4, v0, Lcom/crashlytics/android/core/g;->l:Lio/fabric/sdk/android/services/common/IdManager;
+    invoke-direct {v1, v2}, Lcom/crashlytics/android/core/c;-><init>(Lio/fabric/sdk/android/services/common/IdManager;)V
 
-    invoke-direct {v3, v4}, Lcom/crashlytics/android/core/c;-><init>(Lio/fabric/sdk/android/services/common/IdManager;)V
+    invoke-virtual {v1}, Lcom/crashlytics/android/core/c;->toString()Ljava/lang/String;
 
-    invoke-virtual {v3}, Lcom/crashlytics/android/core/c;->toString()Ljava/lang/String;
+    move-result-object v2
 
-    move-result-object v18
-
-    .line 5497
+    .line 7533
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
-    .line 5955
+    .line 8050
+    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    const-string v3, "Crashlytics Android SDK/%s"
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [Ljava/lang/Object;
+
     const/4 v5, 0x0
 
-    .line 5956
-    const/4 v3, 0x0
+    .line 8359
+    const-string v6, "2.4.1.19"
 
-    .line 5958
-    :try_start_0
-    new-instance v4, Lcom/crashlytics/android/core/d;
+    .line 8051
+    aput-object v6, v4, v5
 
-    invoke-virtual/range {p0 .. p0}, Lcom/crashlytics/android/core/g;->d()Ljava/io/File;
-
-    move-result-object v6
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    move-object/from16 v0, v18
-
-    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    const-string v8, "BeginSession"
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-direct {v4, v6, v7}, Lcom/crashlytics/android/core/d;-><init>(Ljava/io/File;Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 5959
-    :try_start_1
-    invoke-static {v4}, Lcom/crashlytics/android/core/CodedOutputStream;->a(Ljava/io/OutputStream;)Lcom/crashlytics/android/core/CodedOutputStream;
+    .line 8050
+    invoke-static {v1, v3, v4}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 5961
-    sget-object v5, Ljava/util/Locale;->US:Ljava/util/Locale;
+    .line 8052
+    invoke-virtual {v0}, Ljava/util/Date;->getTime()J
 
-    const-string v6, "Crashlytics Android SDK/%s"
+    move-result-wide v0
 
-    const/4 v7, 0x1
+    const-wide/16 v4, 0x3e8
 
-    new-array v7, v7, [Ljava/lang/Object;
+    div-long v4, v0, v4
 
-    const/4 v8, 0x0
+    .line 8054
+    const-string v6, "BeginSession"
 
-    .line 6355
-    const-string v9, "2.3.15.167"
+    new-instance v0, Lcom/crashlytics/android/core/g$9;
 
-    .line 5961
-    aput-object v9, v7, v8
+    move-object v1, p0
 
-    invoke-static {v5, v6, v7}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct/range {v0 .. v5}, Lcom/crashlytics/android/core/g$9;-><init>(Lcom/crashlytics/android/core/g;Ljava/lang/String;Ljava/lang/String;J)V
 
-    move-result-object v5
+    invoke-direct {p0, v2, v6, v0}, Lcom/crashlytics/android/core/g;->a(Ljava/lang/String;Ljava/lang/String;Lcom/crashlytics/android/core/g$b;)V
 
-    .line 5963
-    invoke-virtual {v2}, Ljava/util/Date;->getTime()J
+    .line 8066
+    const-string v6, "BeginSession.json"
 
-    move-result-wide v6
+    new-instance v0, Lcom/crashlytics/android/core/g$10;
 
-    const-wide/16 v8, 0x3e8
+    move-object v1, p0
 
-    div-long/2addr v6, v8
+    invoke-direct/range {v0 .. v5}, Lcom/crashlytics/android/core/g$10;-><init>(Lcom/crashlytics/android/core/g;Ljava/lang/String;Ljava/lang/String;J)V
 
-    .line 5965
-    move-object/from16 v0, v18
+    invoke-direct {p0, v2, v6, v0}, Lcom/crashlytics/android/core/g;->a(Ljava/lang/String;Ljava/lang/String;Lcom/crashlytics/android/core/g$d;)V
 
-    invoke-static {v3, v0, v5, v6, v7}, Lcom/crashlytics/android/core/ag;->a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/lang/String;Ljava/lang/String;J)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_8
+    .line 9083
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->m:Lio/fabric/sdk/android/services/common/IdManager;
 
-    .line 5967
-    const-string v2, "Failed to flush to session begin file."
-
-    invoke-static {v3, v2}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
-
-    .line 5968
-    const-string v2, "Failed to close begin session file."
-
-    invoke-static {v4, v2}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
-
-    .line 6973
-    const/4 v4, 0x0
-
-    .line 6974
-    const/4 v3, 0x0
-
-    .line 6976
-    :try_start_2
-    new-instance v10, Lcom/crashlytics/android/core/d;
-
-    invoke-virtual/range {p0 .. p0}, Lcom/crashlytics/android/core/g;->d()Ljava/io/File;
-
-    move-result-object v2
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    move-object/from16 v0, v18
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lio/fabric/sdk/android/services/common/IdManager;->c()Ljava/lang/String;
 
     move-result-object v5
 
-    const-string v6, "SessionApp"
+    .line 9084
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->p:Lcom/crashlytics/android/core/a;
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v6, v0, Lcom/crashlytics/android/core/a;->e:Ljava/lang/String;
 
-    move-result-object v5
+    .line 9085
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->p:Lcom/crashlytics/android/core/a;
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v7, v0, Lcom/crashlytics/android/core/a;->f:Ljava/lang/String;
 
-    move-result-object v5
+    .line 9086
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->m:Lio/fabric/sdk/android/services/common/IdManager;
 
-    invoke-direct {v10, v2, v5}, Lcom/crashlytics/android/core/d;-><init>(Ljava/io/File;Ljava/lang/String;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    invoke-virtual {v0}, Lio/fabric/sdk/android/services/common/IdManager;->b()Ljava/lang/String;
 
-    .line 6977
-    :try_start_3
-    invoke-static {v10}, Lcom/crashlytics/android/core/CodedOutputStream;->a(Ljava/io/OutputStream;)Lcom/crashlytics/android/core/CodedOutputStream;
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_6
+    move-result-object v8
 
-    move-result-object v2
+    .line 9087
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->p:Lcom/crashlytics/android/core/a;
 
-    .line 6979
-    :try_start_4
-    move-object/from16 v0, p0
+    iget-object v0, v0, Lcom/crashlytics/android/core/a;->c:Ljava/lang/String;
 
-    iget-object v3, v0, Lcom/crashlytics/android/core/g;->l:Lio/fabric/sdk/android/services/common/IdManager;
+    .line 9088
+    invoke-static {v0}, Lio/fabric/sdk/android/services/common/DeliveryMechanism;->determineFrom(Ljava/lang/String;)Lio/fabric/sdk/android/services/common/DeliveryMechanism;
 
-    invoke-virtual {v3}, Lio/fabric/sdk/android/services/common/IdManager;->c()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v3
+    invoke-virtual {v0}, Lio/fabric/sdk/android/services/common/DeliveryMechanism;->getId()I
 
-    .line 6980
-    move-object/from16 v0, p0
+    move-result v9
 
-    iget-object v4, v0, Lcom/crashlytics/android/core/g;->o:Lcom/crashlytics/android/core/a;
+    .line 9090
+    const-string v0, "SessionApp"
 
-    iget-object v5, v4, Lcom/crashlytics/android/core/a;->e:Ljava/lang/String;
+    new-instance v3, Lcom/crashlytics/android/core/g$11;
 
-    .line 6981
-    move-object/from16 v0, p0
+    move-object v4, p0
 
-    iget-object v4, v0, Lcom/crashlytics/android/core/g;->o:Lcom/crashlytics/android/core/a;
+    invoke-direct/range {v3 .. v9}, Lcom/crashlytics/android/core/g$11;-><init>(Lcom/crashlytics/android/core/g;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
-    iget-object v6, v4, Lcom/crashlytics/android/core/a;->f:Ljava/lang/String;
+    invoke-direct {p0, v2, v0, v3}, Lcom/crashlytics/android/core/g;->a(Ljava/lang/String;Ljava/lang/String;Lcom/crashlytics/android/core/g$b;)V
 
-    .line 6982
-    move-object/from16 v0, p0
+    .line 9106
+    const-string v0, "SessionApp.json"
 
-    iget-object v4, v0, Lcom/crashlytics/android/core/g;->l:Lio/fabric/sdk/android/services/common/IdManager;
+    new-instance v3, Lcom/crashlytics/android/core/g$13;
 
-    invoke-virtual {v4}, Lio/fabric/sdk/android/services/common/IdManager;->b()Ljava/lang/String;
+    move-object v4, p0
 
-    move-result-object v7
+    invoke-direct/range {v3 .. v9}, Lcom/crashlytics/android/core/g$13;-><init>(Lcom/crashlytics/android/core/g;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 6983
-    move-object/from16 v0, p0
+    invoke-direct {p0, v2, v0, v3}, Lcom/crashlytics/android/core/g;->a(Ljava/lang/String;Ljava/lang/String;Lcom/crashlytics/android/core/g$d;)V
 
-    iget-object v4, v0, Lcom/crashlytics/android/core/g;->o:Lcom/crashlytics/android/core/a;
+    .line 9128
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->j:Lcom/crashlytics/android/core/h;
 
-    iget-object v4, v4, Lcom/crashlytics/android/core/a;->c:Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/crashlytics/android/core/h;->m()Landroid/content/Context;
 
-    invoke-static {v4}, Lio/fabric/sdk/android/services/common/DeliveryMechanism;->determineFrom(Ljava/lang/String;)Lio/fabric/sdk/android/services/common/DeliveryMechanism;
+    move-result-object v0
 
-    move-result-object v4
+    invoke-static {v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->g(Landroid/content/Context;)Z
 
-    invoke-virtual {v4}, Lio/fabric/sdk/android/services/common/DeliveryMechanism;->getId()I
+    move-result v0
 
-    move-result v8
+    .line 9130
+    const-string v1, "SessionOS"
 
-    .line 6986
-    move-object/from16 v0, p0
+    new-instance v3, Lcom/crashlytics/android/core/g$14;
 
-    iget-object v4, v0, Lcom/crashlytics/android/core/g;->o:Lcom/crashlytics/android/core/a;
+    invoke-direct {v3, p0, v0}, Lcom/crashlytics/android/core/g$14;-><init>(Lcom/crashlytics/android/core/g;Z)V
 
-    iget-object v4, v4, Lcom/crashlytics/android/core/a;->a:Ljava/lang/String;
+    invoke-direct {p0, v2, v1, v3}, Lcom/crashlytics/android/core/g;->a(Ljava/lang/String;Ljava/lang/String;Lcom/crashlytics/android/core/g$b;)V
 
-    move-object/from16 v0, p0
+    .line 9142
+    const-string v1, "SessionOS.json"
 
-    iget-object v9, v0, Lcom/crashlytics/android/core/g;->s:Ljava/lang/String;
+    new-instance v3, Lcom/crashlytics/android/core/g$15;
 
-    invoke-static/range {v2 .. v9}, Lcom/crashlytics/android/core/ag;->a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_7
+    invoke-direct {v3, p0, v0}, Lcom/crashlytics/android/core/g$15;-><init>(Lcom/crashlytics/android/core/g;Z)V
 
-    .line 6989
-    const-string v3, "Failed to flush to session app file."
+    invoke-direct {p0, v2, v1, v3}, Lcom/crashlytics/android/core/g;->a(Ljava/lang/String;Ljava/lang/String;Lcom/crashlytics/android/core/g$d;)V
 
-    invoke-static {v2, v3}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
+    .line 9160
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->j:Lcom/crashlytics/android/core/h;
 
-    .line 6990
-    const-string v2, "Failed to close session app file."
+    invoke-virtual {v0}, Lcom/crashlytics/android/core/h;->m()Landroid/content/Context;
 
-    invoke-static {v10, v2}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
+    move-result-object v0
 
-    .line 6995
-    const/4 v5, 0x0
-
-    .line 6996
-    const/4 v3, 0x0
-
-    .line 6999
-    :try_start_5
-    new-instance v4, Lcom/crashlytics/android/core/d;
-
-    invoke-virtual/range {p0 .. p0}, Lcom/crashlytics/android/core/g;->d()Ljava/io/File;
-
-    move-result-object v2
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    move-object/from16 v0, v18
-
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    const-string v7, "SessionOS"
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-direct {v4, v2, v6}, Lcom/crashlytics/android/core/d;-><init>(Ljava/io/File;Ljava/lang/String;)V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
-
-    .line 7000
-    :try_start_6
-    invoke-static {v4}, Lcom/crashlytics/android/core/CodedOutputStream;->a(Ljava/io/OutputStream;)Lcom/crashlytics/android/core/CodedOutputStream;
-
-    move-result-object v3
-
-    .line 7002
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/crashlytics/android/core/g;->i:Lcom/crashlytics/android/core/h;
-
-    invoke-virtual {v2}, Lcom/crashlytics/android/core/h;->o()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lio/fabric/sdk/android/services/common/CommonUtils;->g(Landroid/content/Context;)Z
-
-    move-result v2
-
-    .line 7004
-    invoke-static {v3, v2}, Lcom/crashlytics/android/core/ag;->a(Lcom/crashlytics/android/core/CodedOutputStream;Z)V
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_5
-
-    .line 7006
-    const-string v2, "Failed to flush to session OS file."
-
-    invoke-static {v3, v2}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
-
-    .line 7007
-    const-string v2, "Failed to close session OS file."
-
-    invoke-static {v4, v2}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
-
-    .line 7013
-    const/4 v4, 0x0
-
-    .line 7014
-    const/4 v3, 0x0
-
-    .line 7016
-    :try_start_7
-    new-instance v17, Lcom/crashlytics/android/core/d;
-
-    invoke-virtual/range {p0 .. p0}, Lcom/crashlytics/android/core/g;->d()Ljava/io/File;
-
-    move-result-object v2
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    move-object/from16 v0, v18
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    const-string v6, "SessionDevice"
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    move-object/from16 v0, v17
-
-    invoke-direct {v0, v2, v5}, Lcom/crashlytics/android/core/d;-><init>(Ljava/io/File;Ljava/lang/String;)V
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_3
-
-    .line 7017
-    :try_start_8
-    invoke-static/range {v17 .. v17}, Lcom/crashlytics/android/core/CodedOutputStream;->a(Ljava/io/OutputStream;)Lcom/crashlytics/android/core/CodedOutputStream;
-
-    move-result-object v3
-
-    .line 7019
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/crashlytics/android/core/g;->i:Lcom/crashlytics/android/core/h;
-
-    invoke-virtual {v2}, Lcom/crashlytics/android/core/h;->o()Landroid/content/Context;
-
-    move-result-object v2
-
-    .line 7020
-    new-instance v6, Landroid/os/StatFs;
+    .line 9161
+    new-instance v1, Landroid/os/StatFs;
 
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-virtual {v4}, Ljava/io/File;->getPath()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/io/File;->getPath()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-direct {v6, v4}, Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v3}, Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
 
-    .line 7022
-    move-object/from16 v0, p0
-
-    iget-object v4, v0, Lcom/crashlytics/android/core/g;->l:Lio/fabric/sdk/android/services/common/IdManager;
-
-    invoke-virtual {v4}, Lio/fabric/sdk/android/services/common/IdManager;->g()Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 7023
+    .line 9163
     invoke-static {}, Lio/fabric/sdk/android/services/common/CommonUtils;->a()I
 
-    move-result v5
+    move-result v6
 
-    .line 7024
+    .line 9164
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
-    move-result-object v7
+    move-result-object v3
 
-    invoke-virtual {v7}, Ljava/lang/Runtime;->availableProcessors()I
+    invoke-virtual {v3}, Ljava/lang/Runtime;->availableProcessors()I
 
     move-result v7
 
-    .line 7025
+    .line 9165
     invoke-static {}, Lio/fabric/sdk/android/services/common/CommonUtils;->b()J
 
     move-result-wide v8
 
-    .line 7026
-    invoke-virtual {v6}, Landroid/os/StatFs;->getBlockCount()I
+    .line 9166
+    invoke-virtual {v1}, Landroid/os/StatFs;->getBlockCount()I
 
-    move-result v10
+    move-result v3
 
-    int-to-long v10, v10
+    int-to-long v4, v3
 
-    invoke-virtual {v6}, Landroid/os/StatFs;->getBlockSize()I
+    invoke-virtual {v1}, Landroid/os/StatFs;->getBlockSize()I
 
-    move-result v6
+    move-result v1
 
-    int-to-long v12, v6
+    int-to-long v10, v1
 
-    mul-long/2addr v10, v12
+    mul-long/2addr v10, v4
 
-    .line 7027
-    invoke-static {v2}, Lio/fabric/sdk/android/services/common/CommonUtils;->f(Landroid/content/Context;)Z
+    .line 9167
+    invoke-static {v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->f(Landroid/content/Context;)Z
 
     move-result v12
 
-    .line 7029
-    move-object/from16 v0, p0
+    .line 9169
+    iget-object v1, p0, Lcom/crashlytics/android/core/g;->m:Lio/fabric/sdk/android/services/common/IdManager;
 
-    iget-object v6, v0, Lcom/crashlytics/android/core/g;->l:Lio/fabric/sdk/android/services/common/IdManager;
-
-    invoke-virtual {v6}, Lio/fabric/sdk/android/services/common/IdManager;->h()Ljava/util/Map;
+    .line 9170
+    invoke-virtual {v1}, Lio/fabric/sdk/android/services/common/IdManager;->g()Ljava/util/Map;
 
     move-result-object v13
 
-    .line 7031
-    invoke-static {v2}, Lio/fabric/sdk/android/services/common/CommonUtils;->h(Landroid/content/Context;)I
+    .line 9171
+    invoke-static {v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->h(Landroid/content/Context;)I
 
     move-result v14
 
-    .line 7033
-    sget-object v6, Landroid/os/Build;->MODEL:Ljava/lang/String;
+    .line 9173
+    const-string v0, "SessionDevice"
 
-    sget-object v15, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+    new-instance v4, Lcom/crashlytics/android/core/g$16;
 
-    sget-object v16, Landroid/os/Build;->PRODUCT:Ljava/lang/String;
+    move-object v5, p0
 
-    invoke-static/range {v3 .. v16}, Lcom/crashlytics/android/core/ag;->a(Lcom/crashlytics/android/core/CodedOutputStream;Ljava/lang/String;ILjava/lang/String;IJJZLjava/util/Map;ILjava/lang/String;Ljava/lang/String;)V
-    :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_4
+    invoke-direct/range {v4 .. v14}, Lcom/crashlytics/android/core/g$16;-><init>(Lcom/crashlytics/android/core/g;IIJJZLjava/util/Map;I)V
 
-    .line 7037
-    const-string v2, "Failed to flush session device info."
+    invoke-direct {p0, v2, v0, v4}, Lcom/crashlytics/android/core/g;->a(Ljava/lang/String;Ljava/lang/String;Lcom/crashlytics/android/core/g$b;)V
 
-    invoke-static {v3, v2}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
+    .line 9194
+    const-string v0, "SessionDevice.json"
 
-    .line 7038
-    const-string v2, "Failed to close session device file."
+    new-instance v4, Lcom/crashlytics/android/core/g$17;
 
-    move-object/from16 v0, v17
+    move-object v5, p0
 
-    invoke-static {v0, v2}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
+    invoke-direct/range {v4 .. v14}, Lcom/crashlytics/android/core/g$17;-><init>(Lcom/crashlytics/android/core/g;IIJJZLjava/util/Map;I)V
 
-    .line 5504
-    move-object/from16 v0, p0
+    invoke-direct {p0, v2, v0, v4}, Lcom/crashlytics/android/core/g;->a(Ljava/lang/String;Ljava/lang/String;Lcom/crashlytics/android/core/g$d;)V
 
-    iget-object v2, v0, Lcom/crashlytics/android/core/g;->p:Lcom/crashlytics/android/core/u;
+    .line 7540
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->r:Lcom/crashlytics/android/core/u;
 
-    move-object/from16 v0, v18
+    invoke-virtual {v0, v2}, Lcom/crashlytics/android/core/u;->a(Ljava/lang/String;)V
 
-    invoke-virtual {v2, v0}, Lcom/crashlytics/android/core/u;->a(Ljava/lang/String;)V
-
-    .line 59
+    .line 66
     return-void
-
-    .line 5967
-    :catchall_0
-    move-exception v2
-
-    move-object v4, v5
-
-    :goto_0
-    const-string v5, "Failed to flush to session begin file."
-
-    invoke-static {v3, v5}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
-
-    .line 5968
-    const-string v3, "Failed to close begin session file."
-
-    invoke-static {v4, v3}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
-
-    throw v2
-
-    .line 6989
-    :catchall_1
-    move-exception v2
-
-    :goto_1
-    const-string v5, "Failed to flush to session app file."
-
-    invoke-static {v3, v5}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
-
-    .line 6990
-    const-string v3, "Failed to close session app file."
-
-    invoke-static {v4, v3}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
-
-    throw v2
-
-    .line 7006
-    :catchall_2
-    move-exception v2
-
-    move-object v4, v5
-
-    :goto_2
-    const-string v5, "Failed to flush to session OS file."
-
-    invoke-static {v3, v5}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
-
-    .line 7007
-    const-string v3, "Failed to close session OS file."
-
-    invoke-static {v4, v3}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
-
-    throw v2
-
-    .line 7037
-    :catchall_3
-    move-exception v2
-
-    :goto_3
-    const-string v5, "Failed to flush session device info."
-
-    invoke-static {v3, v5}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
-
-    .line 7038
-    const-string v3, "Failed to close session device file."
-
-    invoke-static {v4, v3}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
-
-    throw v2
-
-    .line 7037
-    :catchall_4
-    move-exception v2
-
-    move-object/from16 v4, v17
-
-    goto :goto_3
-
-    .line 7006
-    :catchall_5
-    move-exception v2
-
-    goto :goto_2
-
-    .line 6989
-    :catchall_6
-    move-exception v2
-
-    move-object v4, v10
-
-    goto :goto_1
-
-    :catchall_7
-    move-exception v3
-
-    move-object v4, v10
-
-    move-object/from16 v19, v2
-
-    move-object v2, v3
-
-    move-object/from16 v3, v19
-
-    goto :goto_1
-
-    .line 5967
-    :catchall_8
-    move-exception v2
-
-    goto :goto_0
 .end method
 
-.method static synthetic b(Lcom/crashlytics/android/core/g;Lio/fabric/sdk/android/services/settings/s;)V
+.method static synthetic b(Lcom/crashlytics/android/core/g;Lio/fabric/sdk/android/services/settings/r;)V
     .locals 8
 
     .prologue
-    .line 7336
+    .line 9517
     if-nez p1, :cond_1
 
-    .line 7337
+    .line 9518
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     move-result-object v0
@@ -3122,20 +3172,20 @@
 
     invoke-interface {v0, v1, v2}, Lio/fabric/sdk/android/k;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 7339
+    .line 9520
     :cond_0
     return-void
 
-    .line 7342
+    .line 9523
     :cond_1
-    iget-object v0, p0, Lcom/crashlytics/android/core/g;->i:Lcom/crashlytics/android/core/h;
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->j:Lcom/crashlytics/android/core/h;
 
-    invoke-virtual {v0}, Lcom/crashlytics/android/core/h;->o()Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/crashlytics/android/core/h;->m()Landroid/content/Context;
 
     move-result-object v1
 
-    .line 7343
-    iget-object v0, p1, Lio/fabric/sdk/android/services/settings/s;->a:Lio/fabric/sdk/android/services/settings/e;
+    .line 9524
+    iget-object v0, p1, Lio/fabric/sdk/android/services/settings/r;->a:Lio/fabric/sdk/android/services/settings/e;
 
     iget-object v0, v0, Lio/fabric/sdk/android/services/settings/e;->d:Ljava/lang/String;
 
@@ -3143,23 +3193,24 @@
 
     move-result-object v0
 
-    .line 7344
+    .line 9525
     new-instance v2, Lcom/crashlytics/android/core/af;
 
-    iget-object v3, p0, Lcom/crashlytics/android/core/g;->o:Lcom/crashlytics/android/core/a;
+    iget-object v3, p0, Lcom/crashlytics/android/core/g;->p:Lcom/crashlytics/android/core/a;
 
     iget-object v3, v3, Lcom/crashlytics/android/core/a;->a:Ljava/lang/String;
 
-    invoke-direct {v2, v3, v0}, Lcom/crashlytics/android/core/af;-><init>(Ljava/lang/String;Lcom/crashlytics/android/core/o;)V
+    iget-object v4, p0, Lcom/crashlytics/android/core/g;->s:Lcom/crashlytics/android/core/af$c;
 
-    .line 7603
-    sget-object v0, Lcom/crashlytics/android/core/g;->a:Ljava/io/FilenameFilter;
+    iget-object v5, p0, Lcom/crashlytics/android/core/g;->t:Lcom/crashlytics/android/core/af$b;
 
-    invoke-direct {p0, v0}, Lcom/crashlytics/android/core/g;->a(Ljava/io/FilenameFilter;)[Ljava/io/File;
+    invoke-direct {v2, v3, v0, v4, v5}, Lcom/crashlytics/android/core/af;-><init>(Ljava/lang/String;Lcom/crashlytics/android/core/o;Lcom/crashlytics/android/core/af$c;Lcom/crashlytics/android/core/af$b;)V
+
+    .line 9528
+    invoke-virtual {p0}, Lcom/crashlytics/android/core/g;->a()[Ljava/io/File;
 
     move-result-object v3
 
-    .line 7346
     array-length v4, v3
 
     const/4 v0, 0x0
@@ -3169,23 +3220,23 @@
 
     aget-object v5, v3, v0
 
-    .line 7347
+    .line 9529
     new-instance v6, Lcom/crashlytics/android/core/ah;
 
-    sget-object v7, Lcom/crashlytics/android/core/g;->f:Ljava/util/Map;
+    sget-object v7, Lcom/crashlytics/android/core/g;->g:Ljava/util/Map;
 
     invoke-direct {v6, v5, v7}, Lcom/crashlytics/android/core/ah;-><init>(Ljava/io/File;Ljava/util/Map;)V
 
-    .line 7349
-    iget-object v5, p0, Lcom/crashlytics/android/core/g;->j:Lcom/crashlytics/android/core/f;
+    .line 9531
+    iget-object v5, p0, Lcom/crashlytics/android/core/g;->k:Lcom/crashlytics/android/core/f;
 
-    new-instance v7, Lcom/crashlytics/android/core/g$e;
+    new-instance v7, Lcom/crashlytics/android/core/g$j;
 
-    invoke-direct {v7, v1, v6, v2}, Lcom/crashlytics/android/core/g$e;-><init>(Landroid/content/Context;Lcom/crashlytics/android/core/ae;Lcom/crashlytics/android/core/af;)V
+    invoke-direct {v7, v1, v6, v2}, Lcom/crashlytics/android/core/g$j;-><init>(Landroid/content/Context;Lcom/crashlytics/android/core/ae;Lcom/crashlytics/android/core/af;)V
 
     invoke-virtual {v5, v7}, Lcom/crashlytics/android/core/f;->a(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
-    .line 7346
+    .line 9528
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -3197,16 +3248,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 59
-    .line 7911
+    .line 66
+    .line 9967
     invoke-direct {p0}, Lcom/crashlytics/android/core/g;->g()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 7913
+    .line 9969
     if-nez v8, :cond_0
 
-    .line 7914
+    .line 9970
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     move-result-object v0
@@ -3217,11 +3268,11 @@
 
     invoke-interface {v0, v2, v3, v1}, Lio/fabric/sdk/android/k;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 7951
+    .line 10007
     :goto_0
     return-void
 
-    .line 7919
+    .line 9975
     :cond_0
     invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -3231,22 +3282,22 @@
 
     move-result-object v2
 
-    .line 8356
-    const-class v0, Lcom/crashlytics/android/answers/a;
+    .line 10538
+    const-class v0, Lcom/crashlytics/android/answers/b;
 
     invoke-static {v0}, Lio/fabric/sdk/android/c;->a(Ljava/lang/Class;)Lio/fabric/sdk/android/h;
 
     move-result-object v0
 
-    check-cast v0, Lcom/crashlytics/android/answers/a;
+    check-cast v0, Lcom/crashlytics/android/answers/b;
 
-    .line 8357
+    .line 10539
     if-nez v0, :cond_1
 
-    .line 8358
+    .line 10540
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
-    .line 7924
+    .line 9980
     :goto_1
     :try_start_0
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
@@ -3267,24 +3318,27 @@
 
     move-result-object v0
 
+    .line 9982
     invoke-virtual {p2}, Ljava/lang/Thread;->getName()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7928
-    iget-object v0, p0, Lcom/crashlytics/android/core/g;->h:Ljava/util/concurrent/atomic/AtomicInteger;
+    .line 9984
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->i:Ljava/util/concurrent/atomic/AtomicInteger;
 
+    .line 9985
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
     move-result v0
 
+    .line 9984
     invoke-static {v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 7930
+    .line 9986
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3307,7 +3361,7 @@
 
     move-result-object v0
 
-    .line 7932
+    .line 9988
     new-instance v7, Lcom/crashlytics/android/core/d;
 
     invoke-virtual {p0}, Lcom/crashlytics/android/core/g;->d()Ljava/io/File;
@@ -3319,13 +3373,13 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 7934
+    .line 9990
     :try_start_1
     invoke-static {v7}, Lcom/crashlytics/android/core/CodedOutputStream;->a(Ljava/io/OutputStream;)Lcom/crashlytics/android/core/CodedOutputStream;
 
     move-result-object v1
 
-    .line 7935
+    .line 9991
     const-string v5, "error"
 
     const/4 v6, 0x0
@@ -3343,17 +3397,17 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 7940
+    .line 9996
     const-string v0, "Failed to flush to non-fatal file."
 
     invoke-static {v1, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
 
-    .line 7941
+    .line 9997
     const-string v0, "Failed to close non-fatal file output stream."
 
     invoke-static {v7, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
 
-    .line 7947
+    .line 10003
     :goto_2
     const/16 v0, 0x40
 
@@ -3364,11 +3418,11 @@
 
     goto :goto_0
 
-    .line 7948
+    .line 10004
     :catch_0
     move-exception v0
 
-    .line 7949
+    .line 10005
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     move-result-object v1
@@ -3381,7 +3435,7 @@
 
     goto/16 :goto_0
 
-    .line 8361
+    .line 10543
     :cond_1
     new-instance v0, Lio/fabric/sdk/android/services/common/i$b;
 
@@ -3389,13 +3443,13 @@
 
     goto :goto_1
 
-    .line 7936
+    .line 9992
     :catch_1
     move-exception v0
 
     move-object v2, v1
 
-    .line 7937
+    .line 9993
     :goto_3
     :try_start_3
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
@@ -3410,19 +3464,19 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 7940
+    .line 9996
     const-string v0, "Failed to flush to non-fatal file."
 
     invoke-static {v1, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
 
-    .line 7941
+    .line 9997
     const-string v0, "Failed to close non-fatal file output stream."
 
     invoke-static {v2, v0}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
 
     goto :goto_2
 
-    .line 7940
+    .line 9996
     :catchall_0
     move-exception v0
 
@@ -3433,14 +3487,14 @@
 
     invoke-static {v1, v3}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Flushable;Ljava/lang/String;)V
 
-    .line 7941
+    .line 9997
     const-string v1, "Failed to close non-fatal file output stream."
 
     invoke-static {v2, v1}, Lio/fabric/sdk/android/services/common/CommonUtils;->a(Ljava/io/Closeable;Ljava/lang/String;)V
 
     throw v0
 
-    .line 7940
+    .line 9996
     :catchall_1
     move-exception v0
 
@@ -3453,7 +3507,7 @@
 
     goto :goto_4
 
-    .line 7936
+    .line 9992
     :catch_2
     move-exception v0
 
@@ -3466,7 +3520,7 @@
     .locals 1
 
     .prologue
-    .line 636
+    .line 687
     if-nez p0, :cond_0
 
     const/4 v0, 0x0
@@ -3481,8 +3535,8 @@
     .locals 1
 
     .prologue
-    .line 59
-    iget-object v0, p0, Lcom/crashlytics/android/core/g;->p:Lcom/crashlytics/android/core/u;
+    .line 66
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->r:Lcom/crashlytics/android/core/u;
 
     return-object v0
 .end method
@@ -3491,10 +3545,30 @@
     .locals 1
 
     .prologue
-    .line 59
+    .line 66
     invoke-direct {p0}, Lcom/crashlytics/android/core/g;->g()Ljava/lang/String;
 
     move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic e(Lcom/crashlytics/android/core/g;)Lcom/crashlytics/android/core/a;
+    .locals 1
+
+    .prologue
+    .line 66
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->p:Lcom/crashlytics/android/core/a;
+
+    return-object v0
+.end method
+
+.method static synthetic f(Lcom/crashlytics/android/core/g;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 66
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->w:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -3503,8 +3577,8 @@
     .locals 1
 
     .prologue
-    .line 59
-    sget-object v0, Lcom/crashlytics/android/core/g;->e:Ljava/util/regex/Pattern;
+    .line 66
+    sget-object v0, Lcom/crashlytics/android/core/g;->f:Ljava/util/regex/Pattern;
 
     return-object v0
 .end method
@@ -3513,12 +3587,12 @@
     .locals 2
 
     .prologue
-    .line 424
+    .line 460
     invoke-direct {p0}, Lcom/crashlytics/android/core/g;->h()[Ljava/io/File;
 
     move-result-object v0
 
-    .line 425
+    .line 461
     array-length v1, v0
 
     if-lez v1, :cond_0
@@ -3527,6 +3601,7 @@
 
     aget-object v0, v0, v1
 
+    .line 462
     invoke-static {v0}, Lcom/crashlytics/android/core/g;->a(Ljava/io/File;)Ljava/lang/String;
 
     move-result-object v0
@@ -3537,6 +3612,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 461
     goto :goto_0
 .end method
 
@@ -3544,24 +3620,20 @@
     .locals 2
 
     .prologue
-    .line 611
-    .line 4607
-    new-instance v0, Lcom/crashlytics/android/core/g$b;
-
-    const-string v1, "BeginSession"
-
-    invoke-direct {v0, v1}, Lcom/crashlytics/android/core/g$b;-><init>(Ljava/lang/String;)V
+    .line 669
+    .line 5665
+    sget-object v0, Lcom/crashlytics/android/core/g;->a:Ljava/io/FilenameFilter;
 
     invoke-direct {p0, v0}, Lcom/crashlytics/android/core/g;->a(Ljava/io/FilenameFilter;)[Ljava/io/File;
 
     move-result-object v0
 
-    .line 612
-    sget-object v1, Lcom/crashlytics/android/core/g;->b:Ljava/util/Comparator;
+    .line 670
+    sget-object v1, Lcom/crashlytics/android/core/g;->d:Ljava/util/Comparator;
 
     invoke-static {v0, v1}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
 
-    .line 613
+    .line 671
     return-object v0
 .end method
 
@@ -3569,48 +3641,48 @@
     .locals 6
 
     .prologue
-    .line 785
+    .line 840
     invoke-virtual {p0}, Lcom/crashlytics/android/core/g;->e()Ljava/io/File;
 
     move-result-object v1
 
-    .line 786
+    .line 841
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 804
+    .line 859
     :goto_0
     return-void
 
-    .line 790
+    .line 845
     :cond_0
-    new-instance v0, Lcom/crashlytics/android/core/g$c;
+    new-instance v0, Lcom/crashlytics/android/core/g$e;
 
-    invoke-direct {v0}, Lcom/crashlytics/android/core/g$c;-><init>()V
+    invoke-direct {v0}, Lcom/crashlytics/android/core/g$e;-><init>()V
 
     invoke-static {v1, v0}, Lcom/crashlytics/android/core/g;->a(Ljava/io/File;Ljava/io/FilenameFilter;)[Ljava/io/File;
 
     move-result-object v2
 
-    .line 793
+    .line 848
     invoke-static {}, Ljava/util/Collections;->reverseOrder()Ljava/util/Comparator;
 
     move-result-object v0
 
     invoke-static {v2, v0}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
 
-    .line 795
+    .line 850
     new-instance v3, Ljava/util/HashSet;
 
     invoke-direct {v3}, Ljava/util/HashSet;-><init>()V
 
-    .line 797
+    .line 852
     const/4 v0, 0x0
 
-    .line 798
+    .line 853
     :goto_1
     array-length v4, v2
 
@@ -3624,21 +3696,23 @@
 
     if-ge v4, v5, :cond_1
 
-    .line 799
+    .line 854
     aget-object v4, v2, v0
 
+    .line 855
     invoke-static {v4}, Lcom/crashlytics/android/core/g;->a(Ljava/io/File;)Ljava/lang/String;
 
     move-result-object v4
 
+    .line 854
     invoke-interface {v3, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 798
+    .line 853
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 4632
+    .line 5683
     :cond_1
     invoke-virtual {v1}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
@@ -3648,43 +3722,85 @@
 
     move-result-object v0
 
-    .line 803
+    .line 858
     invoke-static {v0, v3}, Lcom/crashlytics/android/core/g;->a([Ljava/io/File;Ljava/util/Set;)V
+
+    goto :goto_0
+.end method
+
+.method private j()Ljava/io/File;
+    .locals 3
+
+    .prologue
+    .line 1487
+    new-instance v0, Ljava/io/File;
+
+    invoke-virtual {p0}, Lcom/crashlytics/android/core/g;->d()Ljava/io/File;
+
+    move-result-object v1
+
+    const-string v2, "fatal-sessions"
+
+    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method private k()Ljava/io/File;
+    .locals 3
+
+    .prologue
+    .line 1491
+    new-instance v0, Ljava/io/File;
+
+    invoke-virtual {p0}, Lcom/crashlytics/android/core/g;->d()Ljava/io/File;
+
+    move-result-object v1
+
+    const-string v2, "nonfatal-sessions"
+
+    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method private static l()Z
+    .locals 1
+
+    .prologue
+    .line 1582
+    :try_start_0
+    const-string v0, "com.google.firebase.crash.FirebaseCrash"
+
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    :try_end_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 1583
+    const/4 v0, 0x1
+
+    .line 1585
+    :goto_0
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
 
 # virtual methods
-.method final a()V
-    .locals 4
+.method final a(FLio/fabric/sdk/android/services/settings/r;)V
+    .locals 6
 
     .prologue
-    .line 665
-    invoke-virtual {p0}, Lcom/crashlytics/android/core/g;->d()Ljava/io/File;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/crashlytics/android/core/g;->a:Ljava/io/FilenameFilter;
-
-    const/4 v2, 0x4
-
-    sget-object v3, Lcom/crashlytics/android/core/g;->c:Ljava/util/Comparator;
-
-    invoke-static {v0, v1, v2, v3}, Lcom/crashlytics/android/core/am;->a(Ljava/io/File;Ljava/io/FilenameFilter;ILjava/util/Comparator;)V
-
-    .line 667
-    return-void
-.end method
-
-.method final a(FLio/fabric/sdk/android/services/settings/s;)V
-    .locals 5
-
-    .prologue
-    .line 307
+    .line 342
     if-nez p2, :cond_0
 
-    .line 308
+    .line 343
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     move-result-object v0
@@ -3695,53 +3811,58 @@
 
     invoke-interface {v0, v1, v2}, Lio/fabric/sdk/android/k;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 320
+    .line 356
     :goto_0
     return-void
 
-    .line 313
+    .line 348
     :cond_0
-    iget-object v0, p2, Lio/fabric/sdk/android/services/settings/s;->a:Lio/fabric/sdk/android/services/settings/e;
+    iget-object v0, p2, Lio/fabric/sdk/android/services/settings/r;->a:Lio/fabric/sdk/android/services/settings/e;
 
     iget-object v0, v0, Lio/fabric/sdk/android/services/settings/e;->d:Ljava/lang/String;
 
-    .line 314
+    .line 349
     invoke-direct {p0, v0}, Lcom/crashlytics/android/core/g;->b(Ljava/lang/String;)Lcom/crashlytics/android/core/o;
 
     move-result-object v1
 
-    .line 315
-    invoke-direct {p0, p2}, Lcom/crashlytics/android/core/g;->a(Lio/fabric/sdk/android/services/settings/s;)Z
+    .line 351
+    invoke-direct {p0, p2}, Lcom/crashlytics/android/core/g;->a(Lio/fabric/sdk/android/services/settings/r;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    new-instance v0, Lcom/crashlytics/android/core/g$d;
+    new-instance v0, Lcom/crashlytics/android/core/g$g;
 
-    iget-object v2, p0, Lcom/crashlytics/android/core/g;->i:Lcom/crashlytics/android/core/h;
+    iget-object v2, p0, Lcom/crashlytics/android/core/g;->j:Lcom/crashlytics/android/core/h;
 
-    iget-object v3, p0, Lcom/crashlytics/android/core/g;->m:Lcom/crashlytics/android/core/ab;
+    iget-object v3, p0, Lcom/crashlytics/android/core/g;->n:Lcom/crashlytics/android/core/ab;
 
-    iget-object v4, p2, Lio/fabric/sdk/android/services/settings/s;->c:Lio/fabric/sdk/android/services/settings/o;
+    iget-object v4, p2, Lio/fabric/sdk/android/services/settings/r;->c:Lio/fabric/sdk/android/services/settings/n;
 
-    invoke-direct {v0, v2, v3, v4}, Lcom/crashlytics/android/core/g$d;-><init>(Lio/fabric/sdk/android/h;Lcom/crashlytics/android/core/ab;Lio/fabric/sdk/android/services/settings/o;)V
+    invoke-direct {v0, v2, v3, v4}, Lcom/crashlytics/android/core/g$g;-><init>(Lio/fabric/sdk/android/h;Lcom/crashlytics/android/core/ab;Lio/fabric/sdk/android/services/settings/n;)V
 
-    .line 319
+    .line 354
     :goto_1
     new-instance v2, Lcom/crashlytics/android/core/af;
 
-    iget-object v3, p0, Lcom/crashlytics/android/core/g;->o:Lcom/crashlytics/android/core/a;
+    iget-object v3, p0, Lcom/crashlytics/android/core/g;->p:Lcom/crashlytics/android/core/a;
 
     iget-object v3, v3, Lcom/crashlytics/android/core/a;->a:Ljava/lang/String;
 
-    invoke-direct {v2, v3, v1}, Lcom/crashlytics/android/core/af;-><init>(Ljava/lang/String;Lcom/crashlytics/android/core/o;)V
+    iget-object v4, p0, Lcom/crashlytics/android/core/g;->s:Lcom/crashlytics/android/core/af$c;
 
-    invoke-virtual {v2, p1, v0}, Lcom/crashlytics/android/core/af;->a(FLcom/crashlytics/android/core/af$b;)V
+    iget-object v5, p0, Lcom/crashlytics/android/core/g;->t:Lcom/crashlytics/android/core/af$b;
+
+    invoke-direct {v2, v3, v1, v4, v5}, Lcom/crashlytics/android/core/af;-><init>(Ljava/lang/String;Lcom/crashlytics/android/core/o;Lcom/crashlytics/android/core/af$c;Lcom/crashlytics/android/core/af$b;)V
+
+    .line 355
+    invoke-virtual {v2, p1, v0}, Lcom/crashlytics/android/core/af;->a(FLcom/crashlytics/android/core/af$d;)V
 
     goto :goto_0
 
-    .line 315
+    .line 351
     :cond_1
     new-instance v0, Lcom/crashlytics/android/core/af$a;
 
@@ -3750,20 +3871,66 @@
     goto :goto_1
 .end method
 
+.method final a(I)V
+    .locals 4
+
+    .prologue
+    .line 716
+    .line 717
+    invoke-direct {p0}, Lcom/crashlytics/android/core/g;->j()Ljava/io/File;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/crashlytics/android/core/g;->e:Ljava/util/Comparator;
+
+    invoke-static {v0, p1, v1}, Lcom/crashlytics/android/core/am;->a(Ljava/io/File;ILjava/util/Comparator;)I
+
+    move-result v0
+
+    sub-int v0, p1, v0
+
+    .line 719
+    invoke-direct {p0}, Lcom/crashlytics/android/core/g;->k()Ljava/io/File;
+
+    move-result-object v1
+
+    sget-object v2, Lcom/crashlytics/android/core/g;->e:Ljava/util/Comparator;
+
+    invoke-static {v1, v0, v2}, Lcom/crashlytics/android/core/am;->a(Ljava/io/File;ILjava/util/Comparator;)I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    .line 721
+    invoke-virtual {p0}, Lcom/crashlytics/android/core/g;->d()Ljava/io/File;
+
+    move-result-object v1
+
+    sget-object v2, Lcom/crashlytics/android/core/g;->b:Ljava/io/FilenameFilter;
+
+    sget-object v3, Lcom/crashlytics/android/core/g;->e:Ljava/util/Comparator;
+
+    invoke-static {v1, v2, v0, v3}, Lcom/crashlytics/android/core/am;->a(Ljava/io/File;Ljava/io/FilenameFilter;ILjava/util/Comparator;)I
+
+    .line 722
+    return-void
+.end method
+
 .method final a(JLjava/lang/String;)V
     .locals 3
 
     .prologue
-    .line 328
-    iget-object v0, p0, Lcom/crashlytics/android/core/g;->j:Lcom/crashlytics/android/core/f;
+    .line 364
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->k:Lcom/crashlytics/android/core/f;
 
-    new-instance v1, Lcom/crashlytics/android/core/g$13;
+    new-instance v1, Lcom/crashlytics/android/core/g$24;
 
-    invoke-direct {v1, p0, p1, p2, p3}, Lcom/crashlytics/android/core/g$13;-><init>(Lcom/crashlytics/android/core/g;JLjava/lang/String;)V
+    invoke-direct {v1, p0, p1, p2, p3}, Lcom/crashlytics/android/core/g$24;-><init>(Lcom/crashlytics/android/core/g;JLjava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/f;->b(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
-    .line 337
+    .line 373
     return-void
 .end method
 
@@ -3771,16 +3938,16 @@
     .locals 2
 
     .prologue
-    .line 842
-    iget-object v0, p0, Lcom/crashlytics/android/core/g;->j:Lcom/crashlytics/android/core/f;
+    .line 897
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->k:Lcom/crashlytics/android/core/f;
 
-    new-instance v1, Lcom/crashlytics/android/core/g$7;
+    new-instance v1, Lcom/crashlytics/android/core/g$8;
 
-    invoke-direct {v1, p0, p1}, Lcom/crashlytics/android/core/g$7;-><init>(Lcom/crashlytics/android/core/g;Lcom/crashlytics/android/core/a/a/d;)V
+    invoke-direct {v1, p0, p1}, Lcom/crashlytics/android/core/g$8;-><init>(Lcom/crashlytics/android/core/g;Lcom/crashlytics/android/core/a/a/d;)V
 
     invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/f;->b(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
-    .line 851
+    .line 906
     return-void
 .end method
 
@@ -3788,16 +3955,16 @@
     .locals 2
 
     .prologue
-    .line 366
-    iget-object v0, p0, Lcom/crashlytics/android/core/g;->j:Lcom/crashlytics/android/core/f;
+    .line 402
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->k:Lcom/crashlytics/android/core/f;
 
-    new-instance v1, Lcom/crashlytics/android/core/g$15;
+    new-instance v1, Lcom/crashlytics/android/core/g$2;
 
-    invoke-direct {v1, p0, p1, p2, p3}, Lcom/crashlytics/android/core/g$15;-><init>(Lcom/crashlytics/android/core/g;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, p0, p1, p2, p3}, Lcom/crashlytics/android/core/g$2;-><init>(Lcom/crashlytics/android/core/g;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/f;->b(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
-    .line 375
+    .line 411
     return-void
 .end method
 
@@ -3805,34 +3972,34 @@
     .locals 2
 
     .prologue
-    .line 257
-    .line 1405
-    iget-object v0, p0, Lcom/crashlytics/android/core/g;->j:Lcom/crashlytics/android/core/f;
+    .line 290
+    .line 2441
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->k:Lcom/crashlytics/android/core/f;
 
-    new-instance v1, Lcom/crashlytics/android/core/g$3;
+    new-instance v1, Lcom/crashlytics/android/core/g$4;
 
-    invoke-direct {v1, p0}, Lcom/crashlytics/android/core/g$3;-><init>(Lcom/crashlytics/android/core/g;)V
+    invoke-direct {v1, p0}, Lcom/crashlytics/android/core/g$4;-><init>(Lcom/crashlytics/android/core/g;)V
 
     invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/f;->b(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
-    .line 258
-    new-instance v0, Lcom/crashlytics/android/core/g$11;
+    .line 291
+    new-instance v0, Lcom/crashlytics/android/core/g$22;
 
-    invoke-direct {v0, p0}, Lcom/crashlytics/android/core/g$11;-><init>(Lcom/crashlytics/android/core/g;)V
+    invoke-direct {v0, p0}, Lcom/crashlytics/android/core/g$22;-><init>(Lcom/crashlytics/android/core/g;)V
 
-    .line 265
+    .line 298
     new-instance v1, Lcom/crashlytics/android/core/m;
 
     invoke-direct {v1, v0, p1}, Lcom/crashlytics/android/core/m;-><init>(Lcom/crashlytics/android/core/m$a;Ljava/lang/Thread$UncaughtExceptionHandler;)V
 
-    iput-object v1, p0, Lcom/crashlytics/android/core/g;->t:Lcom/crashlytics/android/core/m;
+    iput-object v1, p0, Lcom/crashlytics/android/core/g;->z:Lcom/crashlytics/android/core/m;
 
-    .line 266
-    iget-object v0, p0, Lcom/crashlytics/android/core/g;->t:Lcom/crashlytics/android/core/m;
+    .line 299
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->z:Lcom/crashlytics/android/core/m;
 
     invoke-static {v0}, Ljava/lang/Thread;->setDefaultUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V
 
-    .line 267
+    .line 300
     return-void
 .end method
 
@@ -3840,7 +4007,7 @@
     .locals 3
 
     .prologue
-    .line 271
+    .line 304
     monitor-enter p0
 
     :try_start_0
@@ -3862,39 +4029,40 @@
 
     move-result-object v0
 
+    .line 305
     invoke-virtual {p1}, Ljava/lang/Thread;->getName()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 273
-    iget-object v0, p0, Lcom/crashlytics/android/core/g;->q:Lcom/crashlytics/android/core/q;
+    .line 306
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->u:Lcom/crashlytics/android/core/q;
 
     invoke-virtual {v0}, Lcom/crashlytics/android/core/q;->b()V
 
-    .line 277
+    .line 310
     new-instance v0, Ljava/util/Date;
 
     invoke-direct {v0}, Ljava/util/Date;-><init>()V
 
-    .line 278
-    iget-object v1, p0, Lcom/crashlytics/android/core/g;->j:Lcom/crashlytics/android/core/f;
+    .line 311
+    iget-object v1, p0, Lcom/crashlytics/android/core/g;->k:Lcom/crashlytics/android/core/f;
 
-    new-instance v2, Lcom/crashlytics/android/core/g$12;
+    new-instance v2, Lcom/crashlytics/android/core/g$23;
 
-    invoke-direct {v2, p0, v0, p1, p2}, Lcom/crashlytics/android/core/g$12;-><init>(Lcom/crashlytics/android/core/g;Ljava/util/Date;Ljava/lang/Thread;Ljava/lang/Throwable;)V
+    invoke-direct {v2, p0, v0, p1, p2}, Lcom/crashlytics/android/core/g$23;-><init>(Lcom/crashlytics/android/core/g;Ljava/util/Date;Ljava/lang/Thread;Ljava/lang/Throwable;)V
 
     invoke-virtual {v1, v2}, Lcom/crashlytics/android/core/f;->a(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 302
+    .line 337
     monitor-exit p0
 
     return-void
 
-    .line 271
+    .line 304
     :catchall_0
     move-exception v0
 
@@ -3917,16 +4085,16 @@
     .end annotation
 
     .prologue
-    .line 386
-    iget-object v0, p0, Lcom/crashlytics/android/core/g;->j:Lcom/crashlytics/android/core/f;
+    .line 422
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->k:Lcom/crashlytics/android/core/f;
 
-    new-instance v1, Lcom/crashlytics/android/core/g$2;
+    new-instance v1, Lcom/crashlytics/android/core/g$3;
 
-    invoke-direct {v1, p0, p1}, Lcom/crashlytics/android/core/g$2;-><init>(Lcom/crashlytics/android/core/g;Ljava/util/Map;)V
+    invoke-direct {v1, p0, p1}, Lcom/crashlytics/android/core/g$3;-><init>(Lcom/crashlytics/android/core/g;Ljava/util/Map;)V
 
     invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/f;->b(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
-    .line 395
+    .line 431
     return-void
 .end method
 
@@ -3936,12 +4104,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 741
+    .line 796
     new-instance v2, Ljava/util/HashSet;
 
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
-    .line 746
+    .line 801
     array-length v3, p1
 
     move v1, v0
@@ -3951,7 +4119,7 @@
 
     aget-object v4, p1, v1
 
-    .line 747
+    .line 802
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -3962,19 +4130,19 @@
 
     invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 749
+    .line 804
     invoke-static {v4}, Lcom/crashlytics/android/core/g;->a(Ljava/io/File;)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-interface {v2, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 746
+    .line 801
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 752
+    .line 807
     :cond_0
     invoke-interface {v2}, Ljava/util/Set;->isEmpty()Z
 
@@ -3982,33 +4150,33 @@
 
     if-eqz v1, :cond_1
 
-    .line 782
+    .line 837
     :goto_1
     return-void
 
-    .line 756
+    .line 811
     :cond_1
     invoke-virtual {p0}, Lcom/crashlytics/android/core/g;->e()Ljava/io/File;
 
     move-result-object v1
 
-    .line 758
+    .line 813
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v3
 
     if-nez v3, :cond_2
 
-    .line 759
+    .line 814
     invoke-virtual {v1}, Ljava/io/File;->mkdir()Z
 
-    .line 762
+    .line 817
     :cond_2
-    new-instance v3, Lcom/crashlytics/android/core/g$6;
+    new-instance v3, Lcom/crashlytics/android/core/g$7;
 
-    invoke-direct {v3, p0, v2}, Lcom/crashlytics/android/core/g$6;-><init>(Lcom/crashlytics/android/core/g;Ljava/util/Set;)V
+    invoke-direct {v3, p0, v2}, Lcom/crashlytics/android/core/g$7;-><init>(Lcom/crashlytics/android/core/g;Ljava/util/Set;)V
 
-    .line 772
+    .line 827
     invoke-direct {p0, v3}, Lcom/crashlytics/android/core/g;->a(Ljava/io/FilenameFilter;)[Ljava/io/File;
 
     move-result-object v2
@@ -4020,7 +4188,7 @@
 
     aget-object v4, v2, v0
 
-    .line 773
+    .line 828
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -4031,7 +4199,7 @@
 
     invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 774
+    .line 829
     new-instance v5, Ljava/io/File;
 
     invoke-virtual {v4}, Ljava/io/File;->getName()Ljava/lang/String;
@@ -4046,7 +4214,7 @@
 
     if-nez v5, :cond_3
 
-    .line 775
+    .line 830
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -4057,32 +4225,32 @@
 
     invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 777
+    .line 832
     invoke-virtual {v4}, Ljava/io/File;->delete()Z
 
-    .line 772
+    .line 827
     :cond_3
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 781
+    .line 836
     :cond_4
     invoke-direct {p0}, Lcom/crashlytics/android/core/g;->i()V
 
     goto :goto_1
 .end method
 
-.method final a(Lio/fabric/sdk/android/services/settings/p;)Z
+.method final a(Lio/fabric/sdk/android/services/settings/o;)Z
     .locals 2
 
     .prologue
-    .line 472
-    iget-object v0, p0, Lcom/crashlytics/android/core/g;->j:Lcom/crashlytics/android/core/f;
+    .line 508
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->k:Lcom/crashlytics/android/core/f;
 
-    new-instance v1, Lcom/crashlytics/android/core/g$4;
+    new-instance v1, Lcom/crashlytics/android/core/g$5;
 
-    invoke-direct {v1, p0, p1}, Lcom/crashlytics/android/core/g$4;-><init>(Lcom/crashlytics/android/core/g;Lio/fabric/sdk/android/services/settings/p;)V
+    invoke-direct {v1, p0, p1}, Lcom/crashlytics/android/core/g$5;-><init>(Lcom/crashlytics/android/core/g;Lio/fabric/sdk/android/services/settings/o;)V
 
     invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/f;->a(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
 
@@ -4097,24 +4265,91 @@
     return v0
 .end method
 
+.method final a()[Ljava/io/File;
+    .locals 3
+
+    .prologue
+    .line 654
+    new-instance v0, Ljava/util/LinkedList;
+
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+
+    .line 656
+    invoke-direct {p0}, Lcom/crashlytics/android/core/g;->j()Ljava/io/File;
+
+    move-result-object v1
+
+    sget-object v2, Lcom/crashlytics/android/core/g;->b:Ljava/io/FilenameFilter;
+
+    invoke-static {v1, v2}, Lcom/crashlytics/android/core/g;->a(Ljava/io/File;Ljava/io/FilenameFilter;)[Ljava/io/File;
+
+    move-result-object v1
+
+    .line 655
+    invoke-static {v0, v1}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
+
+    .line 658
+    invoke-direct {p0}, Lcom/crashlytics/android/core/g;->k()Ljava/io/File;
+
+    move-result-object v1
+
+    sget-object v2, Lcom/crashlytics/android/core/g;->b:Ljava/io/FilenameFilter;
+
+    invoke-static {v1, v2}, Lcom/crashlytics/android/core/g;->a(Ljava/io/File;Ljava/io/FilenameFilter;)[Ljava/io/File;
+
+    move-result-object v1
+
+    .line 657
+    invoke-static {v0, v1}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
+
+    .line 660
+    invoke-virtual {p0}, Lcom/crashlytics/android/core/g;->d()Ljava/io/File;
+
+    move-result-object v1
+
+    sget-object v2, Lcom/crashlytics/android/core/g;->b:Ljava/io/FilenameFilter;
+
+    invoke-static {v1, v2}, Lcom/crashlytics/android/core/g;->a(Ljava/io/File;Ljava/io/FilenameFilter;)[Ljava/io/File;
+
+    move-result-object v1
+
+    .line 659
+    invoke-static {v0, v1}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
+
+    .line 661
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    new-array v1, v1, [Ljava/io/File;
+
+    invoke-interface {v0, v1}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ljava/io/File;
+
+    return-object v0
+.end method
+
 .method final b()V
     .locals 2
 
     .prologue
-    .line 727
-    iget-object v0, p0, Lcom/crashlytics/android/core/g;->j:Lcom/crashlytics/android/core/f;
+    .line 782
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->k:Lcom/crashlytics/android/core/f;
 
-    new-instance v1, Lcom/crashlytics/android/core/g$5;
+    new-instance v1, Lcom/crashlytics/android/core/g$6;
 
-    invoke-direct {v1, p0}, Lcom/crashlytics/android/core/g$5;-><init>(Lcom/crashlytics/android/core/g;)V
+    invoke-direct {v1, p0}, Lcom/crashlytics/android/core/g$6;-><init>(Lcom/crashlytics/android/core/g;)V
 
     invoke-virtual {v0, v1}, Lcom/crashlytics/android/core/f;->a(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
-    .line 733
+    .line 788
     return-void
 .end method
 
-.method final b(Lio/fabric/sdk/android/services/settings/p;)V
+.method final b(Lio/fabric/sdk/android/services/settings/o;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -4123,12 +4358,12 @@
     .end annotation
 
     .prologue
-    .line 508
+    .line 544
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Lcom/crashlytics/android/core/g;->a(Lio/fabric/sdk/android/services/settings/p;Z)V
+    invoke-direct {p0, p1, v0}, Lcom/crashlytics/android/core/g;->a(Lio/fabric/sdk/android/services/settings/o;Z)V
 
-    .line 509
+    .line 545
     return-void
 .end method
 
@@ -4136,21 +4371,21 @@
     .locals 3
 
     .prologue
-    .line 345
+    .line 381
     new-instance v0, Ljava/util/Date;
 
     invoke-direct {v0}, Ljava/util/Date;-><init>()V
 
-    .line 347
-    iget-object v1, p0, Lcom/crashlytics/android/core/g;->j:Lcom/crashlytics/android/core/f;
+    .line 383
+    iget-object v1, p0, Lcom/crashlytics/android/core/g;->k:Lcom/crashlytics/android/core/f;
 
-    new-instance v2, Lcom/crashlytics/android/core/g$14;
+    new-instance v2, Lcom/crashlytics/android/core/g$25;
 
-    invoke-direct {v2, p0, v0, p1, p2}, Lcom/crashlytics/android/core/g$14;-><init>(Lcom/crashlytics/android/core/g;Ljava/util/Date;Ljava/lang/Thread;Ljava/lang/Throwable;)V
+    invoke-direct {v2, p0, v0, p1, p2}, Lcom/crashlytics/android/core/g$25;-><init>(Lcom/crashlytics/android/core/g;Ljava/util/Date;Ljava/lang/Thread;Ljava/lang/Throwable;)V
 
     invoke-virtual {v1, v2}, Lcom/crashlytics/android/core/f;->a(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
-    .line 355
+    .line 391
     return-void
 .end method
 
@@ -4158,12 +4393,12 @@
     .locals 1
 
     .prologue
-    .line 1306
-    iget-object v0, p0, Lcom/crashlytics/android/core/g;->t:Lcom/crashlytics/android/core/m;
+    .line 1479
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->z:Lcom/crashlytics/android/core/m;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/crashlytics/android/core/g;->t:Lcom/crashlytics/android/core/m;
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->z:Lcom/crashlytics/android/core/m;
 
     invoke-virtual {v0}, Lcom/crashlytics/android/core/m;->a()Z
 
@@ -4186,10 +4421,10 @@
     .locals 1
 
     .prologue
-    .line 1310
-    iget-object v0, p0, Lcom/crashlytics/android/core/g;->n:Lio/fabric/sdk/android/services/c/a;
+    .line 1483
+    iget-object v0, p0, Lcom/crashlytics/android/core/g;->o:Lio/fabric/sdk/android/services/b/a;
 
-    invoke-interface {v0}, Lio/fabric/sdk/android/services/c/a;->a()Ljava/io/File;
+    invoke-interface {v0}, Lio/fabric/sdk/android/services/b/a;->a()Ljava/io/File;
 
     move-result-object v0
 
@@ -4200,7 +4435,7 @@
     .locals 3
 
     .prologue
-    .line 1314
+    .line 1495
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0}, Lcom/crashlytics/android/core/g;->d()Ljava/io/File;

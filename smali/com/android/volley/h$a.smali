@@ -15,12 +15,5 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/android/volley/Request;)Z
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/android/volley/Request",
-            "<*>;)Z"
-        }
-    .end annotation
+.method public abstract a(Lcom/android/volley/VolleyError;)V
 .end method

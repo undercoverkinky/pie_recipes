@@ -4,6 +4,10 @@
 
 
 # annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0xe
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/support/v4/view/MenuItemCompatIcs$OnActionExpandListenerWrapper;,
@@ -17,10 +21,10 @@
     .locals 0
 
     .prologue
-    .line 22
+    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
+    .line 55
     return-void
 .end method
 
@@ -28,7 +32,7 @@
     .locals 1
 
     .prologue
-    .line 28
+    .line 32
     invoke-interface {p0}, Landroid/view/MenuItem;->collapseActionView()Z
 
     move-result v0
@@ -40,7 +44,7 @@
     .locals 1
 
     .prologue
-    .line 24
+    .line 28
     invoke-interface {p0}, Landroid/view/MenuItem;->expandActionView()Z
 
     move-result v0
@@ -52,7 +56,7 @@
     .locals 1
 
     .prologue
-    .line 32
+    .line 36
     invoke-interface {p0}, Landroid/view/MenuItem;->isActionViewExpanded()Z
 
     move-result v0
@@ -64,7 +68,7 @@
     .locals 1
 
     .prologue
-    .line 37
+    .line 41
     new-instance v0, Landroid/support/v4/view/MenuItemCompatIcs$OnActionExpandListenerWrapper;
 
     invoke-direct {v0, p1}, Landroid/support/v4/view/MenuItemCompatIcs$OnActionExpandListenerWrapper;-><init>(Landroid/support/v4/view/MenuItemCompatIcs$SupportActionExpandProxy;)V

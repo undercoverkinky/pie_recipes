@@ -56,7 +56,7 @@
     iget-object v2, p0, Lkik/android/chat/fragment/TemporaryBanDialog$1;->a:Lkik/android/chat/fragment/TemporaryBanDialog;
 
     .line 72
-    invoke-static {v2}, Lkik/android/chat/fragment/TemporaryBanDialog;->a(Lkik/android/chat/fragment/TemporaryBanDialog;)J
+    invoke-static {v2}, Lkik/android/chat/fragment/TemporaryBanDialog;->d(Lkik/android/chat/fragment/TemporaryBanDialog;)J
 
     move-result-wide v2
 
@@ -78,7 +78,7 @@
     .line 74
     iget-object v0, p0, Lkik/android/chat/fragment/TemporaryBanDialog$1;->a:Lkik/android/chat/fragment/TemporaryBanDialog;
 
-    invoke-static {v0}, Lkik/android/chat/fragment/TemporaryBanDialog;->b(Lkik/android/chat/fragment/TemporaryBanDialog;)V
+    invoke-static {v0}, Lkik/android/chat/fragment/TemporaryBanDialog;->e(Lkik/android/chat/fragment/TemporaryBanDialog;)V
 
     .line 75
     return-void

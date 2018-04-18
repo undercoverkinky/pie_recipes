@@ -619,26 +619,26 @@
     .line 532
     if-ne p0, p1, :cond_1
 
-    .line 561
+    .line 586
     :cond_0
     :goto_0
     return v0
 
     .line 535
     :cond_1
-    instance-of v2, p1, Ljava/util/Map;
+    instance-of v2, p1, Landroid/support/v4/util/SimpleArrayMap;
 
     if-eqz v2, :cond_6
 
     .line 536
-    check-cast p1, Ljava/util/Map;
+    check-cast p1, Landroid/support/v4/util/SimpleArrayMap;
 
     .line 537
     invoke-virtual {p0}, Landroid/support/v4/util/SimpleArrayMap;->size()I
 
     move-result v2
 
-    invoke-interface {p1}, Ljava/util/Map;->size()I
+    invoke-virtual {p1}, Landroid/support/v4/util/SimpleArrayMap;->size()I
 
     move-result v3
 
@@ -670,7 +670,7 @@
     move-result-object v4
 
     .line 545
-    invoke-interface {p1, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v3}, Landroid/support/v4/util/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
 
@@ -680,7 +680,7 @@
     .line 547
     if-nez v5, :cond_3
 
-    invoke-interface {p1, v3}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v3}, Landroid/support/v4/util/SimpleArrayMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -730,11 +730,117 @@
 
     goto :goto_0
 
+    .line 560
     :cond_6
-    move v0, v1
+    instance-of v2, p1, Ljava/util/Map;
+
+    if-eqz v2, :cond_b
 
     .line 561
+    check-cast p1, Ljava/util/Map;
+
+    .line 562
+    invoke-virtual {p0}, Landroid/support/v4/util/SimpleArrayMap;->size()I
+
+    move-result v2
+
+    invoke-interface {p1}, Ljava/util/Map;->size()I
+
+    move-result v3
+
+    if-eq v2, v3, :cond_7
+
+    move v0, v1
+
+    .line 563
     goto :goto_0
+
+    :cond_7
+    move v2, v1
+
+    .line 567
+    :goto_2
+    :try_start_1
+    iget v3, p0, Landroid/support/v4/util/SimpleArrayMap;->mSize:I
+
+    if-ge v2, v3, :cond_0
+
+    .line 568
+    invoke-virtual {p0, v2}, Landroid/support/v4/util/SimpleArrayMap;->keyAt(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    .line 569
+    invoke-virtual {p0, v2}, Landroid/support/v4/util/SimpleArrayMap;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    .line 570
+    invoke-interface {p1, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    .line 571
+    if-nez v4, :cond_9
+
+    .line 572
+    if-nez v5, :cond_8
+
+    invoke-interface {p1, v3}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_a
+
+    :cond_8
+    move v0, v1
+
+    .line 573
+    goto :goto_0
+
+    .line 575
+    :cond_9
+    invoke-virtual {v4, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    :try_end_1
+    .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Ljava/lang/ClassCastException; {:try_start_1 .. :try_end_1} :catch_3
+
+    move-result v3
+
+    if-nez v3, :cond_a
+
+    move v0, v1
+
+    .line 576
+    goto :goto_0
+
+    .line 567
+    :cond_a
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_2
+
+    .line 580
+    :catch_2
+    move-exception v0
+
+    move v0, v1
+
+    goto :goto_0
+
+    .line 582
+    :catch_3
+    move-exception v0
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_b
+    move v0, v1
+
+    .line 586
+    goto/16 :goto_0
 .end method
 
 .method public get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -779,13 +885,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 569
+    .line 594
     iget-object v5, p0, Landroid/support/v4/util/SimpleArrayMap;->mHashes:[I
 
-    .line 570
+    .line 595
     iget-object v6, p0, Landroid/support/v4/util/SimpleArrayMap;->mArray:[Ljava/lang/Object;
 
-    .line 572
+    .line 597
     const/4 v0, 0x1
 
     iget v7, p0, Landroid/support/v4/util/SimpleArrayMap;->mSize:I
@@ -799,10 +905,10 @@
     :goto_0
     if-ge v3, v7, :cond_1
 
-    .line 573
+    .line 598
     aget-object v0, v6, v2
 
-    .line 574
+    .line 599
     aget v8, v5, v3
 
     if-nez v0, :cond_0
@@ -814,7 +920,7 @@
 
     add-int/2addr v4, v0
 
-    .line 572
+    .line 597
     add-int/lit8 v3, v3, 0x1
 
     add-int/lit8 v0, v2, 0x2
@@ -823,7 +929,7 @@
 
     goto :goto_0
 
-    .line 574
+    .line 599
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -831,7 +937,7 @@
 
     goto :goto_1
 
-    .line 576
+    .line 601
     :cond_1
     return v4
 .end method
@@ -1774,21 +1880,21 @@
     .locals 3
 
     .prologue
-    .line 588
+    .line 613
     invoke-virtual {p0}, Landroid/support/v4/util/SimpleArrayMap;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 589
+    .line 614
     const-string v0, "{}"
 
-    .line 613
+    .line 638
     :goto_0
     return-object v0
 
-    .line 592
+    .line 617
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1798,12 +1904,12 @@
 
     invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 593
+    .line 618
     const/16 v0, 0x7b
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 594
+    .line 619
     const/4 v0, 0x0
 
     :goto_1
@@ -1811,50 +1917,50 @@
 
     if-ge v0, v2, :cond_4
 
-    .line 595
+    .line 620
     if-lez v0, :cond_1
 
-    .line 596
+    .line 621
     const-string v2, ", "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 598
+    .line 623
     :cond_1
     invoke-virtual {p0, v0}, Landroid/support/v4/util/SimpleArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 599
+    .line 624
     if-eq v2, p0, :cond_2
 
-    .line 600
+    .line 625
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 604
+    .line 629
     :goto_2
     const/16 v2, 0x3d
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 605
+    .line 630
     invoke-virtual {p0, v0}, Landroid/support/v4/util/SimpleArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 606
+    .line 631
     if-eq v2, p0, :cond_3
 
-    .line 607
+    .line 632
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 594
+    .line 619
     :goto_3
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 602
+    .line 627
     :cond_2
     const-string v2, "(this Map)"
 
@@ -1862,7 +1968,7 @@
 
     goto :goto_2
 
-    .line 609
+    .line 634
     :cond_3
     const-string v2, "(this Map)"
 
@@ -1870,13 +1976,13 @@
 
     goto :goto_3
 
-    .line 612
+    .line 637
     :cond_4
     const/16 v0, 0x7d
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 613
+    .line 638
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0

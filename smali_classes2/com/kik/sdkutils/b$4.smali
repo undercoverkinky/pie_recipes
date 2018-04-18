@@ -1,11 +1,11 @@
 .class final Lcom/kik/sdkutils/b$4;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/sdkutils/b;->a(Landroid/view/View;Lcom/kik/events/l;)Lcom/kik/events/l;
+    value = Lcom/kik/sdkutils/b;->a(Landroid/view/View;Lcom/kik/events/k;)Lcom/kik/events/k;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<TT;>;"
     }
 .end annotation
@@ -24,20 +24,20 @@
 # instance fields
 .field final synthetic a:Landroid/view/View;
 
-.field final synthetic b:Lcom/kik/events/l;
+.field final synthetic b:Lcom/kik/events/k;
 
 
 # direct methods
-.method constructor <init>(Landroid/view/View;Lcom/kik/events/l;)V
+.method constructor <init>(Landroid/view/View;Lcom/kik/events/k;)V
     .locals 0
 
     .prologue
     .line 341
     iput-object p1, p0, Lcom/kik/sdkutils/b$4;->a:Landroid/view/View;
 
-    iput-object p2, p0, Lcom/kik/sdkutils/b$4;->b:Lcom/kik/events/l;
+    iput-object p2, p0, Lcom/kik/sdkutils/b$4;->b:Lcom/kik/events/k;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method

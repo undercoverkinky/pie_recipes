@@ -181,7 +181,7 @@
 
     .line 1052
     :cond_1
-    invoke-static {p0}, Lcom/kik/cards/web/r;->c(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/kik/cards/web/s;->c(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -191,7 +191,7 @@
     move-result-object v1
 
     .line 2052
-    invoke-static {p1}, Lcom/kik/cards/web/r;->c(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/kik/cards/web/s;->c(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -219,7 +219,7 @@
 
     .prologue
     .line 52
-    invoke-static {p0}, Lcom/kik/cards/web/r;->c(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/kik/cards/web/s;->c(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -341,7 +341,7 @@
 
     .prologue
     .line 90
-    invoke-static {p0}, Lcom/kik/cards/web/r;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/kik/cards/web/s;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

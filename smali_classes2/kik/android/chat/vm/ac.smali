@@ -1,30 +1,53 @@
-.class public interface abstract Lkik/android/chat/vm/ac;
+.class final synthetic Lkik/android/chat/vm/ac;
 .super Ljava/lang/Object;
-.source "SourceFile"
+
+# interfaces
+.implements Lcom/google/common/base/Function;
+
+
+# static fields
+.field private static final a:Lkik/android/chat/vm/ac;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lkik/android/chat/vm/ac;
+
+    invoke-direct {v0}, Lkik/android/chat/vm/ac;-><init>()V
+
+    sput-object v0, Lkik/android/chat/vm/ac;->a:Lkik/android/chat/vm/ac;
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static a()Lcom/google/common/base/Function;
+    .locals 1
+
+    sget-object v0, Lkik/android/chat/vm/ac;->a:Lkik/android/chat/vm/ac;
+
+    return-object v0
+.end method
 
 
 # virtual methods
-.method public abstract a()Ljava/lang/String;
-.end method
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.method public abstract b()Lkik/core/datatypes/messageExtensions/ContentMessage;
-.end method
+    check-cast p1, Lkik/core/chat/profile/EmojiStatus$Name;
 
-.method public abstract c()Lkik/core/datatypes/Message;
-.end method
+    invoke-static {p1}, Lkik/android/chat/vm/u;->a(Lkik/core/chat/profile/EmojiStatus$Name;)Lkik/core/chat/profile/EmojiStatus;
 
-.method public abstract d()Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Map",
-            "<",
-            "Ljava/lang/String;",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-.end method
+    move-result-object v0
 
-.method public abstract e()Z
+    return-object v0
 .end method

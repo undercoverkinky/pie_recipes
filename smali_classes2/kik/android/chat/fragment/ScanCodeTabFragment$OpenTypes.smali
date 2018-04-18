@@ -60,7 +60,7 @@
 
     const/4 v4, 0x0
 
-    .line 56
+    .line 60
     new-instance v0, Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;
 
     const-string v1, "PULL"
@@ -71,7 +71,7 @@
 
     sput-object v0, Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;->PULL:Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;
 
-    .line 57
+    .line 61
     new-instance v0, Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;
 
     const-string v1, "SETTINGS"
@@ -82,7 +82,7 @@
 
     sput-object v0, Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;->SETTINGS:Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;
 
-    .line 58
+    .line 62
     new-instance v0, Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;
 
     const-string v1, "FIND_PEOPLE"
@@ -93,7 +93,7 @@
 
     sput-object v0, Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;->FIND_PEOPLE:Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;
 
-    .line 59
+    .line 63
     new-instance v0, Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;
 
     const-string v1, "TALK_TO"
@@ -104,7 +104,7 @@
 
     sput-object v0, Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;->TALK_TO:Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;
 
-    .line 60
+    .line 64
     new-instance v0, Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;
 
     const-string v1, "PLUS"
@@ -115,7 +115,7 @@
 
     sput-object v0, Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;->PLUS:Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;
 
-    .line 61
+    .line 65
     new-instance v0, Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;
 
     const-string v1, "GROUP"
@@ -128,7 +128,7 @@
 
     sput-object v0, Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;->GROUP:Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;
 
-    .line 62
+    .line 66
     new-instance v0, Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;
 
     const-string v1, "DEEP_LINK"
@@ -141,7 +141,7 @@
 
     sput-object v0, Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;->DEEP_LINK:Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;
 
-    .line 55
+    .line 59
     const/4 v0, 0x7
 
     new-array v0, v0, [Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;
@@ -194,13 +194,13 @@
     .end annotation
 
     .prologue
-    .line 66
+    .line 70
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 67
+    .line 71
     iput-object p3, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;->_eventName:Ljava/lang/String;
 
-    .line 68
+    .line 72
     return-void
 .end method
 
@@ -208,7 +208,7 @@
     .locals 1
 
     .prologue
-    .line 55
+    .line 59
     const-class v0, Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -224,7 +224,7 @@
     .locals 1
 
     .prologue
-    .line 55
+    .line 59
     sget-object v0, Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;->$VALUES:[Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;
 
     invoke-virtual {v0}, [Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;->clone()Ljava/lang/Object;
@@ -242,7 +242,7 @@
     .locals 1
 
     .prologue
-    .line 72
+    .line 76
     iget-object v0, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$OpenTypes;->_eventName:Ljava/lang/String;
 
     return-object v0

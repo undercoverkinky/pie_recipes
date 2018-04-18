@@ -4,6 +4,10 @@
 
 
 # annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0x13
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/support/v4/app/NotificationCompatKitKat$Builder;
@@ -16,10 +20,10 @@
     .locals 0
 
     .prologue
-    .line 30
+    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
+    .line 35
     return-void
 .end method
 
@@ -27,15 +31,15 @@
     .locals 6
 
     .prologue
-    .line 130
+    .line 145
     iget-object v0, p0, Landroid/app/Notification;->actions:[Landroid/app/Notification$Action;
 
     aget-object v1, v0, p1
 
-    .line 131
+    .line 146
     const/4 v5, 0x0
 
-    .line 132
+    .line 147
     iget-object v0, p0, Landroid/app/Notification;->extras:Landroid/os/Bundle;
 
     const-string v2, "android.support.actionExtras"
@@ -44,10 +48,10 @@
 
     move-result-object v0
 
-    .line 134
+    .line 149
     if-eqz v0, :cond_0
 
-    .line 135
+    .line 150
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -56,7 +60,7 @@
 
     move-object v5, v0
 
-    .line 137
+    .line 152
     :cond_0
     iget v2, v1, Landroid/app/Notification$Action;->icon:I
 
@@ -79,7 +83,7 @@
     .locals 1
 
     .prologue
-    .line 124
+    .line 139
     iget-object v0, p0, Landroid/app/Notification;->actions:[Landroid/app/Notification$Action;
 
     if-eqz v0, :cond_0
@@ -101,7 +105,7 @@
     .locals 1
 
     .prologue
-    .line 120
+    .line 135
     iget-object v0, p0, Landroid/app/Notification;->extras:Landroid/os/Bundle;
 
     return-object v0
@@ -111,7 +115,7 @@
     .locals 2
 
     .prologue
-    .line 146
+    .line 161
     iget-object v0, p0, Landroid/app/Notification;->extras:Landroid/os/Bundle;
 
     const-string v1, "android.support.groupKey"
@@ -127,7 +131,7 @@
     .locals 2
 
     .prologue
-    .line 142
+    .line 157
     iget-object v0, p0, Landroid/app/Notification;->extras:Landroid/os/Bundle;
 
     const-string v1, "android.support.localOnly"
@@ -143,7 +147,7 @@
     .locals 2
 
     .prologue
-    .line 154
+    .line 169
     iget-object v0, p0, Landroid/app/Notification;->extras:Landroid/os/Bundle;
 
     const-string v1, "android.support.sortKey"
@@ -159,7 +163,7 @@
     .locals 2
 
     .prologue
-    .line 150
+    .line 165
     iget-object v0, p0, Landroid/app/Notification;->extras:Landroid/os/Bundle;
 
     const-string v1, "android.support.isGroupSummary"

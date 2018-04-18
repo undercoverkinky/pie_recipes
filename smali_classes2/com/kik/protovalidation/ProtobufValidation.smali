@@ -55,69 +55,69 @@
 
     const/4 v5, 0x0
 
-    .line 1431
+    .line 1666
     const-class v0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
 
-    .line 1434
-    invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->t()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
+    .line 1669
+    invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->w()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
 
     move-result-object v1
 
-    .line 1432
+    .line 1667
     invoke-static {v0, v1}, Lcom/google/protobuf/GeneratedMessage;->newFileScopedGeneratedExtension(Ljava/lang/Class;Lcom/google/protobuf/Message;)Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;
 
     move-result-object v0
 
     sput-object v0, Lcom/kik/protovalidation/ProtobufValidation;->a:Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;
 
-    .line 1446
+    .line 1681
     const-class v0, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
 
-    .line 1449
-    invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->t()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
+    .line 1684
+    invoke-static {}, Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;->w()Lcom/kik/protovalidation/ProtobufValidation$FieldValidation;
 
     move-result-object v1
 
-    .line 1447
+    .line 1682
     invoke-static {v0, v1}, Lcom/google/protobuf/GeneratedMessage;->newFileScopedGeneratedExtension(Ljava/lang/Class;Lcom/google/protobuf/Message;)Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;
 
     move-result-object v0
 
     sput-object v0, Lcom/kik/protovalidation/ProtobufValidation;->b:Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;
 
-    .line 1463
+    .line 1698
     new-array v0, v4, [Ljava/lang/String;
 
-    const-string v1, "\n\u0019protobuf_validation.proto\u0012\u000ekik.validation\u001a google/protobuf/descriptor.proto\"\u00f0\u0001\n\u000fFieldValidation\u0012\u0018\n\tmandatory\u0018\u0001 \u0001(\u0008:\u0005false\u0012\r\n\u0005regex\u0018\u0002 \u0001(\t\u0012\u0017\n\u000fmin_byte_length\u0018\u0005 \u0001(\u0005\u0012\u0017\n\u000fmax_byte_length\u0018\u0006 \u0001(\u0005\u0012\u000f\n\u0007min_val\u0018\u0007 \u0001(\u0010\u0012\u000f\n\u0007max_val\u0018\u0008 \u0001(\u0010\u0012\u0016\n\u000emin_double_val\u0018\u000b \u0001(\u0001\u0012\u0016\n\u000emax_double_val\u0018\u000c \u0001(\u0001\u0012\u0017\n\u000fmin_repetitions\u0018\u000f \u0001(\r\u0012\u0017\n\u000fmax_repetitions\u0018\u0010 \u0001(\r:Z\n\u0010field_validation\u0012\u001d.google.protobuf.FieldOptions\u0018\u00d9\u00d3\u0004 \u0001(\u000b2\u001f.kik.validation.Fie"
+    const-string v1, "\n\u0019protobuf_validation.proto\u0012\u000ekik.validation\u001a google/protobuf/descriptor.proto\"\u00c4\u0002\n\u000fFieldValidation\u0012\u0018\n\tmandatory\u0018\u0001 \u0001(\u0008:\u0005false\u0012\r\n\u0005regex\u0018\u0002 \u0001(\t\u0012\u0017\n\u000fmin_byte_length\u0018\u0005 \u0001(\u0005\u0012\u0017\n\u000fmax_byte_length\u0018\u0006 \u0001(\u0005\u0012\u000f\n\u0007min_val\u0018\u0007 \u0001(\u0010\u0012\u000f\n\u0007max_val\u0018\u0008 \u0001(\u0010\u0012\u0016\n\u000emin_double_val\u0018\u000b \u0001(\u0001\u0012\u0016\n\u000emax_double_val\u0018\u000c \u0001(\u0001\u0012\u0017\n\u000fmin_repetitions\u0018\u000f \u0001(\r\u0012\u0017\n\u000fmax_repetitions\u0018\u0010 \u0001(\r\u00126\n\u0007ordered\u0018\u0011 \u0001(\u000e2%.kik.validation.FieldValidation.Order\"\u001a\n\u0005Order\u0012\u0007\n\u0003ASC\u0010\u0000\u0012\u0008\n\u0004DE"
 
     aput-object v1, v0, v5
 
-    const-string v1, "ldValidation:Q\n\u0007map_key\u0012\u001d.google.protobuf.FieldOptions\u0018\u00da\u00d3\u0004 \u0001(\u000b2\u001f.kik.validation.FieldValidationB\u0019\n\u0017com.kik.protovalidation"
+    const-string v1, "SC\u0010\u0001:Z\n\u0010field_validation\u0012\u001d.google.protobuf.FieldOptions\u0018\u00d9\u00d3\u0004 \u0001(\u000b2\u001f.kik.validation.FieldValidation:Q\n\u0007map_key\u0012\u001d.google.protobuf.FieldOptions\u0018\u00da\u00d3\u0004 \u0001(\u000b2\u001f.kik.validation.FieldValidationBl\n\u0017com.kik.protovalidationZQgithub.com/kikinteractive/xiphias-model-common/generated/go/kikoptions;kikoptions"
 
     aput-object v1, v0, v6
 
-    .line 1479
+    .line 1718
     new-instance v1, Lcom/kik/protovalidation/ProtobufValidation$1;
 
     invoke-direct {v1}, Lcom/kik/protovalidation/ProtobufValidation$1;-><init>()V
 
-    .line 1487
+    .line 1726
     new-array v2, v6, [Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 1490
+    .line 1729
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v3
 
     aput-object v3, v2, v5
 
-    .line 1488
+    .line 1727
     invoke-static {v0, v2, v1}, Lcom/google/protobuf/Descriptors$FileDescriptor;->internalBuildGeneratedFileFrom([Ljava/lang/String;[Lcom/google/protobuf/Descriptors$FileDescriptor;Lcom/google/protobuf/Descriptors$FileDescriptor$InternalDescriptorAssigner;)V
 
-    .line 2458
+    .line 2693
     sget-object v0, Lcom/kik/protovalidation/ProtobufValidation;->e:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 1493
+    .line 1732
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getMessageTypes()Ljava/util/List;
 
     move-result-object v0
@@ -130,12 +130,12 @@
 
     sput-object v0, Lcom/kik/protovalidation/ProtobufValidation;->c:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 1494
+    .line 1733
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/kik/protovalidation/ProtobufValidation;->c:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    const/16 v2, 0xa
+    const/16 v2, 0xb
 
     new-array v2, v2, [Ljava/lang/String;
 
@@ -193,11 +193,17 @@
 
     aput-object v4, v2, v3
 
+    const/16 v3, 0xa
+
+    const-string v4, "Ordered"
+
+    aput-object v4, v2, v3
+
     invoke-direct {v0, v1, v2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;-><init>(Lcom/google/protobuf/Descriptors$Descriptor;[Ljava/lang/String;)V
 
     sput-object v0, Lcom/kik/protovalidation/ProtobufValidation;->d:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
-    .line 1498
+    .line 1737
     sget-object v1, Lcom/kik/protovalidation/ProtobufValidation;->a:Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;
 
     sget-object v0, Lcom/kik/protovalidation/ProtobufValidation;->e:Lcom/google/protobuf/Descriptors$FileDescriptor;
@@ -214,7 +220,7 @@
 
     invoke-virtual {v1, v0}, Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;->internalInit(Lcom/google/protobuf/Descriptors$FieldDescriptor;)V
 
-    .line 1499
+    .line 1738
     sget-object v1, Lcom/kik/protovalidation/ProtobufValidation;->b:Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;
 
     sget-object v0, Lcom/kik/protovalidation/ProtobufValidation;->e:Lcom/google/protobuf/Descriptors$FileDescriptor;
@@ -231,10 +237,10 @@
 
     invoke-virtual {v1, v0}, Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;->internalInit(Lcom/google/protobuf/Descriptors$FieldDescriptor;)V
 
-    .line 1500
+    .line 1739
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 1501
+    .line 1740
     return-void
 .end method
 
@@ -242,7 +248,7 @@
     .locals 1
 
     .prologue
-    .line 1458
+    .line 1693
     sget-object v0, Lcom/kik/protovalidation/ProtobufValidation;->e:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     return-object v0

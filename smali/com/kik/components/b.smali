@@ -46,10 +46,10 @@
     .locals 1
 
     .prologue
-    .line 7
+    .line 10
     invoke-direct {p0}, Lcom/kik/components/a;-><init>()V
 
-    .line 8
+    .line 11
     sget-boolean v0, Lcom/kik/components/b;->a:Z
 
     if-nez v0, :cond_0
@@ -62,7 +62,7 @@
 
     throw v0
 
-    .line 9
+    .line 12
     :cond_0
     return-void
 .end method
@@ -71,7 +71,7 @@
     .locals 0
 
     .prologue
-    .line 6
+    .line 9
     invoke-direct {p0, p1}, Lcom/kik/components/b;-><init>(Lcom/kik/components/b$a;)V
 
     return-void
@@ -81,7 +81,7 @@
     .locals 2
 
     .prologue
-    .line 12
+    .line 15
     new-instance v0, Lcom/kik/components/b$a;
 
     const/4 v1, 0x0

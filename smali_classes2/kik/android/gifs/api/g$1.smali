@@ -1,143 +1,88 @@
-.class final synthetic Lkik/android/gifs/api/g$1;
-.super Ljava/lang/Object;
+.class final Lkik/android/gifs/api/g$1;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lkik/android/gifs/api/g;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lkik/android/gifs/api/g;->a(Lkik/android/gifs/api/GifResponseData;)Lcom/kik/events/Promise;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x0
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/kik/events/k",
+        "<",
+        "Ljava/util/List",
+        "<",
+        "Lkik/android/gifs/api/GifResponseData;",
+        ">;>;"
+    }
+.end annotation
 
-# static fields
-.field static final synthetic a:[I
+
+# instance fields
+.field final synthetic a:Lkik/android/gifs/api/GifResponseData;
+
+.field final synthetic b:Lkik/android/gifs/api/g;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method constructor <init>(Lkik/android/gifs/api/g;Lkik/android/gifs/api/GifResponseData;)V
+    .locals 0
+
+    .prologue
+    .line 95
+    iput-object p1, p0, Lkik/android/gifs/api/g$1;->b:Lkik/android/gifs/api/g;
+
+    iput-object p2, p0, Lkik/android/gifs/api/g$1;->a:Lkik/android/gifs/api/GifResponseData;
+
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b()V
     .locals 3
 
     .prologue
-    .line 174
-    invoke-static {}, Lkik/android/gifs/api/GifApiProvider$GifSearchRating;->values()[Lkik/android/gifs/api/GifApiProvider$GifSearchRating;
+    .line 100
+    iget-object v0, p0, Lkik/android/gifs/api/g$1;->b:Lkik/android/gifs/api/g;
+
+    iget-object v1, p0, Lkik/android/gifs/api/g$1;->a:Lkik/android/gifs/api/GifResponseData;
+
+    invoke-static {v0, v1}, Lkik/android/gifs/api/g;->a(Lkik/android/gifs/api/g;Lkik/android/gifs/api/GifResponseData;)V
+
+    .line 101
+    iget-object v0, p0, Lkik/android/gifs/api/g$1;->b:Lkik/android/gifs/api/g;
+
+    invoke-static {v0}, Lkik/android/gifs/api/g;->a(Lkik/android/gifs/api/g;)Ljava/util/List;
 
     move-result-object v0
 
-    array-length v0, v0
+    const/4 v1, 0x0
 
-    new-array v0, v0, [I
+    iget-object v2, p0, Lkik/android/gifs/api/g$1;->a:Lkik/android/gifs/api/GifResponseData;
 
-    sput-object v0, Lkik/android/gifs/api/g$1;->a:[I
+    invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    :try_start_0
-    sget-object v0, Lkik/android/gifs/api/g$1;->a:[I
+    .line 102
+    iget-object v0, p0, Lkik/android/gifs/api/g$1;->b:Lkik/android/gifs/api/g;
 
-    sget-object v1, Lkik/android/gifs/api/GifApiProvider$GifSearchRating;->GifSearchRatingY:Lkik/android/gifs/api/GifApiProvider$GifSearchRating;
+    invoke-static {v0}, Lkik/android/gifs/api/g;->b(Lkik/android/gifs/api/g;)Lrx/subjects/PublishSubject;
 
-    invoke-virtual {v1}, Lkik/android/gifs/api/GifApiProvider$GifSearchRating;->ordinal()I
+    move-result-object v0
 
-    move-result v1
+    iget-object v1, p0, Lkik/android/gifs/api/g$1;->a:Lkik/android/gifs/api/GifResponseData;
 
-    const/4 v2, 0x1
+    invoke-virtual {v0, v1}, Lrx/subjects/PublishSubject;->a(Ljava/lang/Object;)V
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_4
-
-    :goto_0
-    :try_start_1
-    sget-object v0, Lkik/android/gifs/api/g$1;->a:[I
-
-    sget-object v1, Lkik/android/gifs/api/GifApiProvider$GifSearchRating;->GifSearchRatingG:Lkik/android/gifs/api/GifApiProvider$GifSearchRating;
-
-    invoke-virtual {v1}, Lkik/android/gifs/api/GifApiProvider$GifSearchRating;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_3
-
-    :goto_1
-    :try_start_2
-    sget-object v0, Lkik/android/gifs/api/g$1;->a:[I
-
-    sget-object v1, Lkik/android/gifs/api/GifApiProvider$GifSearchRating;->GifSearchRatingPG:Lkik/android/gifs/api/GifApiProvider$GifSearchRating;
-
-    invoke-virtual {v1}, Lkik/android/gifs/api/GifApiProvider$GifSearchRating;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :goto_2
-    :try_start_3
-    sget-object v0, Lkik/android/gifs/api/g$1;->a:[I
-
-    sget-object v1, Lkik/android/gifs/api/GifApiProvider$GifSearchRating;->GifSearchRatingPG13:Lkik/android/gifs/api/GifApiProvider$GifSearchRating;
-
-    invoke-virtual {v1}, Lkik/android/gifs/api/GifApiProvider$GifSearchRating;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_1
-
-    :goto_3
-    :try_start_4
-    sget-object v0, Lkik/android/gifs/api/g$1;->a:[I
-
-    sget-object v1, Lkik/android/gifs/api/GifApiProvider$GifSearchRating;->GifSearchRatingR:Lkik/android/gifs/api/GifApiProvider$GifSearchRating;
-
-    invoke-virtual {v1}, Lkik/android/gifs/api/GifApiProvider$GifSearchRating;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_0
-
-    :goto_4
+    .line 103
     return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_4
-
-    :catch_1
-    move-exception v0
-
-    goto :goto_3
-
-    :catch_2
-    move-exception v0
-
-    goto :goto_2
-
-    :catch_3
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_4
-    move-exception v0
-
-    goto :goto_0
 .end method

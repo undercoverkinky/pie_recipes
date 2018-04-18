@@ -1,9 +1,6 @@
 .class final Lcom/google/common/collect/l$a;
-.super Ljava/lang/Object;
+.super Lcom/google/common/collect/a;
 .source "SourceFile"
-
-# interfaces
-.implements Lcom/google/common/collect/q;
 
 
 # annotations
@@ -12,206 +9,108 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0xa
+    accessFlags = 0x1a
     name = "a"
 .end annotation
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "<E:",
+        "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Ljava/lang/Object;",
-        "Lcom/google/common/collect/q",
-        "<TE;>;"
+        "Lcom/google/common/collect/a",
+        "<TT;>;"
     }
 .end annotation
 
 
+# static fields
+.field static final a:Lcom/google/common/collect/t;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/common/collect/t",
+            "<",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
 # instance fields
-.field private final a:Ljava/util/Iterator;
+.field private final b:[Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/Iterator",
-            "<+TE;>;"
+            "[TT;"
         }
     .end annotation
 .end field
 
-.field private b:Z
-
-.field private c:Ljava/lang/Object;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "TE;"
-        }
-    .end annotation
-.end field
+.field private final c:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Iterator;)V
+.method static constructor <clinit>()V
+    .locals 3
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 995
+    new-instance v0, Lcom/google/common/collect/l$a;
+
+    new-array v1, v2, [Ljava/lang/Object;
+
+    invoke-direct {v0, v1, v2, v2}, Lcom/google/common/collect/l$a;-><init>([Ljava/lang/Object;II)V
+
+    sput-object v0, Lcom/google/common/collect/l$a;->a:Lcom/google/common/collect/t;
+
+    return-void
+.end method
+
+.method constructor <init>([Ljava/lang/Object;II)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(",
-            "Ljava/util/Iterator",
-            "<+TE;>;)V"
+            "([TT;II)V"
         }
     .end annotation
 
     .prologue
-    .line 1143
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1002
+    invoke-direct {p0, p2, p3}, Lcom/google/common/collect/a;-><init>(II)V
 
-    .line 1144
-    invoke-static {p1}, Lcom/google/common/base/h;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 1003
+    iput-object p1, p0, Lcom/google/common/collect/l$a;->b:[Ljava/lang/Object;
 
-    move-result-object v0
+    .line 1004
+    const/4 v0, 0x0
 
-    check-cast v0, Ljava/util/Iterator;
+    iput v0, p0, Lcom/google/common/collect/l$a;->c:I
 
-    iput-object v0, p0, Lcom/google/common/collect/l$a;->a:Ljava/util/Iterator;
-
-    .line 1145
+    .line 1005
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 1
+.method protected final a(I)Ljava/lang/Object;
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "()TE;"
+            "(I)TT;"
         }
     .end annotation
 
     .prologue
-    .line 1171
-    iget-boolean v0, p0, Lcom/google/common/collect/l$a;->b:Z
+    .line 1009
+    iget-object v0, p0, Lcom/google/common/collect/l$a;->b:[Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    iget v1, p0, Lcom/google/common/collect/l$a;->c:I
 
-    .line 1172
-    iget-object v0, p0, Lcom/google/common/collect/l$a;->a:Ljava/util/Iterator;
+    add-int/2addr v1, p1
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/google/common/collect/l$a;->c:Ljava/lang/Object;
-
-    .line 1173
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/google/common/collect/l$a;->b:Z
-
-    .line 1175
-    :cond_0
-    iget-object v0, p0, Lcom/google/common/collect/l$a;->c:Ljava/lang/Object;
+    aget-object v0, v0, v1
 
     return-object v0
-.end method
-
-.method public final hasNext()Z
-    .locals 1
-
-    .prologue
-    .line 1149
-    iget-boolean v0, p0, Lcom/google/common/collect/l$a;->b:Z
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/google/common/collect/l$a;->a:Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final next()Ljava/lang/Object;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()TE;"
-        }
-    .end annotation
-
-    .prologue
-    .line 1154
-    iget-boolean v0, p0, Lcom/google/common/collect/l$a;->b:Z
-
-    if-nez v0, :cond_0
-
-    .line 1155
-    iget-object v0, p0, Lcom/google/common/collect/l$a;->a:Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    .line 1160
-    :goto_0
-    return-object v0
-
-    .line 1157
-    :cond_0
-    iget-object v0, p0, Lcom/google/common/collect/l$a;->c:Ljava/lang/Object;
-
-    .line 1158
-    const/4 v1, 0x0
-
-    iput-boolean v1, p0, Lcom/google/common/collect/l$a;->b:Z
-
-    .line 1159
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lcom/google/common/collect/l$a;->c:Ljava/lang/Object;
-
-    goto :goto_0
-.end method
-
-.method public final remove()V
-    .locals 2
-
-    .prologue
-    .line 1165
-    iget-boolean v0, p0, Lcom/google/common/collect/l$a;->b:Z
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    const-string v1, "Can\'t remove after you\'ve peeked at next"
-
-    invoke-static {v0, v1}, Lcom/google/common/base/h;->b(ZLjava/lang/Object;)V
-
-    .line 1166
-    iget-object v0, p0, Lcom/google/common/collect/l$a;->a:Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->remove()V
-
-    .line 1167
-    return-void
-
-    .line 1165
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method

@@ -1,59 +1,191 @@
 .class public final Lcom/google/android/gms/common/internal/zzz;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
+
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
+.annotation system Ldalvik/annotation/Signature;
     value = {
-        Lcom/google/android/gms/common/internal/zzz$zza;
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Lcom/google/android/gms/common/internal/zzy;",
+        ">;"
     }
 .end annotation
 
 
 # direct methods
-.method public static equal(Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
-    if-eq p0, p1, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p0, :cond_1
+    return-void
+.end method
 
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+# virtual methods
+.method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 12
 
-    if-eqz v0, :cond_1
+    const/4 v3, 0x0
 
-    :cond_0
-    const/4 v0, 0x1
+    const/4 v9, 0x0
+
+    invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzd(Landroid/os/Parcel;)I
+
+    move-result v10
+
+    move-object v8, v9
+
+    move-object v7, v9
+
+    move-object v6, v9
+
+    move-object v5, v9
+
+    move-object v4, v9
+
+    move v2, v3
+
+    move v1, v3
 
     :goto_0
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public static varargs hashCode([Ljava/lang/Object;)I
-    .locals 1
-
-    invoke-static {p0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v0
 
-    return v0
+    if-ge v0, v10, :cond_0
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    const v11, 0xffff
+
+    and-int/2addr v11, v0
+
+    packed-switch v11, :pswitch_data_0
+
+    :pswitch_0
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzb(Landroid/os/Parcel;I)V
+
+    goto :goto_0
+
+    :pswitch_1
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzg(Landroid/os/Parcel;I)I
+
+    move-result v1
+
+    goto :goto_0
+
+    :pswitch_2
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzg(Landroid/os/Parcel;I)I
+
+    move-result v2
+
+    goto :goto_0
+
+    :pswitch_3
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzg(Landroid/os/Parcel;I)I
+
+    move-result v3
+
+    goto :goto_0
+
+    :pswitch_4
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzq(Landroid/os/Parcel;I)Ljava/lang/String;
+
+    move-result-object v4
+
+    goto :goto_0
+
+    :pswitch_5
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzr(Landroid/os/Parcel;I)Landroid/os/IBinder;
+
+    move-result-object v5
+
+    goto :goto_0
+
+    :pswitch_6
+    sget-object v6, Lcom/google/android/gms/common/api/Scope;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p1, v0, v6}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzb(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcom/google/android/gms/common/api/Scope;
+
+    move-object v6, v0
+
+    goto :goto_0
+
+    :pswitch_7
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzs(Landroid/os/Parcel;I)Landroid/os/Bundle;
+
+    move-result-object v7
+
+    goto :goto_0
+
+    :pswitch_8
+    sget-object v8, Landroid/accounts/Account;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p1, v0, v8}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zza(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/accounts/Account;
+
+    move-object v8, v0
+
+    goto :goto_0
+
+    :pswitch_9
+    sget-object v9, Lcom/google/android/gms/common/zzc;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p1, v0, v9}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzb(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcom/google/android/gms/common/zzc;
+
+    move-object v9, v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {p1, v10}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzaf(Landroid/os/Parcel;I)V
+
+    new-instance v0, Lcom/google/android/gms/common/internal/zzy;
+
+    invoke-direct/range {v0 .. v9}, Lcom/google/android/gms/common/internal/zzy;-><init>(IIILjava/lang/String;Landroid/os/IBinder;[Lcom/google/android/gms/common/api/Scope;Landroid/os/Bundle;Landroid/accounts/Account;[Lcom/google/android/gms/common/zzc;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+        :pswitch_4
+        :pswitch_5
+        :pswitch_6
+        :pswitch_7
+        :pswitch_8
+        :pswitch_0
+        :pswitch_9
+    .end packed-switch
 .end method
 
-.method public static zzy(Ljava/lang/Object;)Lcom/google/android/gms/common/internal/zzz$zza;
-    .locals 2
+.method public final synthetic newArray(I)[Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lcom/google/android/gms/common/internal/zzz$zza;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lcom/google/android/gms/common/internal/zzz$zza;-><init>(Ljava/lang/Object;Lcom/google/android/gms/common/internal/zzz$1;)V
+    new-array v0, p1, [Lcom/google/android/gms/common/internal/zzy;
 
     return-object v0
 .end method

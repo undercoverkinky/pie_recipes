@@ -3,6 +3,12 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0xb
+.end annotation
+
+
 # virtual methods
 .method public abstract build()Landroid/app/Notification;
 .end method

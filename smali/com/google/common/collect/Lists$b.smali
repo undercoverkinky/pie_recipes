@@ -47,11 +47,11 @@
     .end annotation
 
     .prologue
-    .line 801
+    .line 841
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
-    .line 802
-    invoke-static {p1}, Lcom/google/common/base/h;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 842
+    invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -59,7 +59,7 @@
 
     iput-object v0, p0, Lcom/google/common/collect/Lists$b;->a:Ljava/util/List;
 
-    .line 803
+    .line 843
     return-void
 .end method
 
@@ -67,15 +67,15 @@
     .locals 1
 
     .prologue
-    .line 810
+    .line 850
     invoke-virtual {p0}, Lcom/google/common/collect/Lists$b;->size()I
 
     move-result v0
 
-    .line 811
-    invoke-static {p1, v0}, Lcom/google/common/base/h;->a(II)I
+    .line 851
+    invoke-static {p1, v0}, Lcom/google/common/base/Preconditions;->checkElementIndex(II)I
 
-    .line 812
+    .line 852
     add-int/lit8 v0, v0, -0x1
 
     sub-int/2addr v0, p1
@@ -87,7 +87,7 @@
     .locals 1
 
     .prologue
-    .line 798
+    .line 838
     invoke-direct {p0, p1}, Lcom/google/common/collect/Lists$b;->b(I)I
 
     move-result v0
@@ -99,15 +99,15 @@
     .locals 1
 
     .prologue
-    .line 816
+    .line 856
     invoke-virtual {p0}, Lcom/google/common/collect/Lists$b;->size()I
 
     move-result v0
 
-    .line 817
-    invoke-static {p1, v0}, Lcom/google/common/base/h;->b(II)I
+    .line 857
+    invoke-static {p1, v0}, Lcom/google/common/base/Preconditions;->checkPositionIndex(II)I
 
-    .line 818
+    .line 858
     sub-int/2addr v0, p1
 
     return v0
@@ -126,7 +126,7 @@
     .end annotation
 
     .prologue
-    .line 806
+    .line 846
     iget-object v0, p0, Lcom/google/common/collect/Lists$b;->a:Ljava/util/List;
 
     return-object v0
@@ -145,7 +145,7 @@
     .end annotation
 
     .prologue
-    .line 822
+    .line 863
     iget-object v0, p0, Lcom/google/common/collect/Lists$b;->a:Ljava/util/List;
 
     invoke-direct {p0, p1}, Lcom/google/common/collect/Lists$b;->b(I)I
@@ -154,7 +154,7 @@
 
     invoke-interface {v0, v1, p2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 823
+    .line 864
     return-void
 .end method
 
@@ -162,12 +162,12 @@
     .locals 1
 
     .prologue
-    .line 826
+    .line 868
     iget-object v0, p0, Lcom/google/common/collect/Lists$b;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 827
+    .line 869
     return-void
 .end method
 
@@ -180,7 +180,7 @@
     .end annotation
 
     .prologue
-    .line 842
+    .line 888
     iget-object v0, p0, Lcom/google/common/collect/Lists$b;->a:Ljava/util/List;
 
     invoke-direct {p0, p1}, Lcom/google/common/collect/Lists$b;->a(I)I
@@ -205,7 +205,7 @@
     .end annotation
 
     .prologue
-    .line 856
+    .line 904
     invoke-virtual {p0}, Lcom/google/common/collect/Lists$b;->listIterator()Ljava/util/ListIterator;
 
     move-result-object v0
@@ -224,19 +224,19 @@
     .end annotation
 
     .prologue
-    .line 860
+    .line 909
     invoke-direct {p0, p1}, Lcom/google/common/collect/Lists$b;->b(I)I
 
     move-result v0
 
-    .line 861
+    .line 910
     iget-object v1, p0, Lcom/google/common/collect/Lists$b;->a:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
 
     move-result-object v0
 
-    .line 862
+    .line 911
     new-instance v1, Lcom/google/common/collect/Lists$b$1;
 
     invoke-direct {v1, p0, v0}, Lcom/google/common/collect/Lists$b$1;-><init>(Lcom/google/common/collect/Lists$b;Ljava/util/ListIterator;)V
@@ -253,7 +253,7 @@
     .end annotation
 
     .prologue
-    .line 830
+    .line 873
     iget-object v0, p0, Lcom/google/common/collect/Lists$b;->a:Ljava/util/List;
 
     invoke-direct {p0, p1}, Lcom/google/common/collect/Lists$b;->a(I)I
@@ -271,14 +271,14 @@
     .locals 1
 
     .prologue
-    .line 834
+    .line 878
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/Lists$b;->subList(II)Ljava/util/List;
 
     move-result-object v0
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 835
+    .line 879
     return-void
 .end method
 
@@ -295,7 +295,7 @@
     .end annotation
 
     .prologue
-    .line 838
+    .line 883
     iget-object v0, p0, Lcom/google/common/collect/Lists$b;->a:Ljava/util/List;
 
     invoke-direct {p0, p1}, Lcom/google/common/collect/Lists$b;->a(I)I
@@ -313,7 +313,7 @@
     .locals 1
 
     .prologue
-    .line 846
+    .line 893
     iget-object v0, p0, Lcom/google/common/collect/Lists$b;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -334,14 +334,14 @@
     .end annotation
 
     .prologue
-    .line 850
+    .line 898
     invoke-virtual {p0}, Lcom/google/common/collect/Lists$b;->size()I
 
     move-result v0
 
-    invoke-static {p1, p2, v0}, Lcom/google/common/base/h;->a(III)V
+    invoke-static {p1, p2, v0}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V
 
-    .line 851
+    .line 899
     iget-object v0, p0, Lcom/google/common/collect/Lists$b;->a:Ljava/util/List;
 
     invoke-direct {p0, p2}, Lcom/google/common/collect/Lists$b;->b(I)I

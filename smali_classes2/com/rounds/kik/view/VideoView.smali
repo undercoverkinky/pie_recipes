@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/TextureView$SurfaceTextureListener;
+.implements Lcom/rounds/kik/view/masks/MaskViewController$ILoadingView;
 
 
 # annotations
@@ -15,117 +15,219 @@
 
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/rounds/kik/view/VideoView$a;,
+        Lcom/rounds/kik/view/VideoView$b;,
+        Lcom/rounds/kik/view/VideoView$IOnVideoModeChangeListener;,
         Lcom/rounds/kik/view/VideoView$IAnalyticsReporter;
     }
 .end annotation
 
 
 # static fields
+.field private static final AUTOMATIC_FULL_SCREEN_TRANSITION_DURATION:I = 0x15e
+
+.field private static final BOUNCE_BACK_ANIM_INTERPOLATOR:Landroid/animation/TimeInterpolator;
+
+.field private static final CHANGE_MODE_ANIM_INTERPOLATOR:Landroid/animation/TimeInterpolator;
+
+.field private static final CHANGE_VIDEO_MODE_SHORT_ANIMATION:I = 0x96
+
+.field private static final DELAY_ANIM_ON_DISCONNECTION:I = 0x4b0
+
 .field private static final FORCE_CREATE_SURFACE_DELAY:J = 0x226L
 
-.field private static final HIDE_LOCAL_ANIM_DURATION:J = 0xfaL
+.field private static final HINT_ANIMATION_DURATION:J = 0xfaL
 
-.field private static final HIDE_LOCAL_DELAY:J = 0x14L
+.field private static final HINT_ANIM_HIDE_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
-.field private static final HIDE_LOCAL_LONG_DELAY:J = 0x1c2L
+.field private static final HINT_ANIM_SHOW_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 
-.field private static final HIDE_LOCAL_PARTLY_ANIM_DURATION:J = 0x96L
+.field private static final HINT_PAUSE_DURATION:J = 0x384L
 
-.field private static final HIDE_LOCAL_PARTLY_DELAY:J = 0x9c4L
+.field private static final HINT_TO_FULL_VIEW_TIMEOUT:I = 0x61a8
 
-.field private static final HIDE_PARTLY_RATIO:I = 0x4
-
-.field private static final NO_DELAY:J = 0x0L
-
-.field private static final RESIZE_ANIM_DURATION:J = 0x12cL
-
-.field private static final SHOW_LOCAL_ANIM_DURATION:J = 0xfaL
-
-.field private static final SHOW_LOCAL_SHORTEST_ANIM_DURATION:J = 0xaL
+.field private static final VIDEO_SCREEN_MODE_TRANSITION_DURATION:J = 0xc8L
 
 .field private static final VISIBILITY_ANIM_DURATION:J = 0xfaL
 
 
 # instance fields
-.field private final HIDE_X:I
-
-.field private final RING_PADDING:I
+.field private mActionListener:Lcom/rounds/kik/VideoController$VideoViewActionListener;
 
 .field private mAnalyticsReporter:Lcom/rounds/kik/view/VideoView$IAnalyticsReporter;
 
-.field private mAnimateHideLocalPartly:Z
+.field private mBubblesVideoSurface:Lcom/rounds/kik/view/VideoSurface;
 
-.field private mAutoMirrorless:Z
+.field private mChangeHintScrollListener:Landroid/animation/Animator$AnimatorListener;
+
+.field private mChangeToBubbleModeOnDisconnectScrollListener:Landroid/animation/Animator$AnimatorListener;
+
+.field private mChangeToBubbleModeScrollListener:Landroid/animation/Animator$AnimatorListener;
+
+.field private mChangeToFullModeScrollListener:Landroid/animation/Animator$AnimatorListener;
 
 .field private mContext:Landroid/content/Context;
 
-.field private mEnableMirrorless:Z
-
-.field private mEnableScroll:Z
-
 .field private final mFrameContainer:Landroid/widget/FrameLayout;
+
+.field private mFullVideoSurface:Lcom/rounds/kik/view/VideoSurface;
 
 .field private mGestureDetector:Landroid/view/GestureDetector;
 
-.field private volatile mHidePartlyX:I
+.field private final mInputManager:Landroid/view/inputmethod/InputMethodManager;
 
-.field private mLastScrollX:I
+.field private mIsScrolling:Z
+
+.field private mMaskController:Lcom/rounds/kik/view/masks/MaskViewController;
+
+.field private mMaskMenu:Lcom/rounds/kik/view/masks/MaskMenuView;
 
 .field private mNeedRefresh:Z
 
+.field private mNeedToShowHint:Z
+
+.field private mOnVideoModeChanging:Z
+
+.field private mScreenWidth:I
+
+.field private mScrollEnabled:Z
+
 .field private mScrollXAnim:Landroid/animation/ObjectAnimator;
 
-.field private volatile mShowX:I
+.field private mShouldShowHintWhenBackToBubble:Z
 
-.field private mSurfaceTexture:Landroid/graphics/SurfaceTexture;
+.field private mStickerLoader:Landroid/view/View;
 
-.field private mVideoSurface:Lcom/rounds/kik/view/VideoSurface;
+.field private mVideoModeChangeListener:Lcom/rounds/kik/view/VideoView$IOnVideoModeChangeListener;
+
+.field private mVideoModeSlidePanel:Lcom/rounds/kik/view/VideoModeSlidePanel;
+
+.field private mVideoSurfaceBubbleHeight:I
 
 .field private mVideoViewListener:Lcom/rounds/kik/VideoController$VideoViewListener;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Activity;Lcom/rounds/kik/view/VideoView$IAnalyticsReporter;Lcom/rounds/kik/VideoController$VideoViewListener;)V
-    .locals 6
+.method static constructor <clinit>()V
+    .locals 1
 
     .prologue
-    const/4 v1, 0x1
+    .line 62
+    new-instance v0, Landroid/view/animation/AccelerateDecelerateInterpolator;
+
+    invoke-direct {v0}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
+
+    sput-object v0, Lcom/rounds/kik/view/VideoView;->CHANGE_MODE_ANIM_INTERPOLATOR:Landroid/animation/TimeInterpolator;
+
+    .line 63
+    new-instance v0, Landroid/view/animation/DecelerateInterpolator;
+
+    invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
+
+    sput-object v0, Lcom/rounds/kik/view/VideoView;->BOUNCE_BACK_ANIM_INTERPOLATOR:Landroid/animation/TimeInterpolator;
+
+    .line 64
+    new-instance v0, Landroid/view/animation/AccelerateDecelerateInterpolator;
+
+    invoke-direct {v0}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
+
+    sput-object v0, Lcom/rounds/kik/view/VideoView;->HINT_ANIM_SHOW_INTERPOLATOR:Landroid/animation/TimeInterpolator;
+
+    .line 65
+    new-instance v0, Landroid/view/animation/AccelerateInterpolator;
+
+    invoke-direct {v0}, Landroid/view/animation/AccelerateInterpolator;-><init>()V
+
+    sput-object v0, Lcom/rounds/kik/view/VideoView;->HINT_ANIM_HIDE_INTERPOLATOR:Landroid/animation/TimeInterpolator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/app/Activity;Lcom/rounds/kik/view/VideoView$IAnalyticsReporter;Lcom/rounds/kik/VideoController$VideoViewListener;)V
+    .locals 7
+
+    .prologue
+    const/16 v6, 0x8
 
     const/4 v5, 0x0
 
-    .line 85
+    .line 168
     invoke-virtual {p1}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Landroid/widget/HorizontalScrollView;-><init>(Landroid/content/Context;)V
 
-    .line 76
+    .line 78
     iput-boolean v5, p0, Lcom/rounds/kik/view/VideoView;->mNeedRefresh:Z
 
-    .line 81
-    iput-boolean v1, p0, Lcom/rounds/kik/view/VideoView;->mEnableMirrorless:Z
+    .line 83
+    iput-boolean v5, p0, Lcom/rounds/kik/view/VideoView;->mIsScrolling:Z
 
-    .line 86
+    .line 89
+    iput-boolean v5, p0, Lcom/rounds/kik/view/VideoView;->mNeedToShowHint:Z
+
+    .line 90
+    iput-boolean v5, p0, Lcom/rounds/kik/view/VideoView;->mShouldShowHintWhenBackToBubble:Z
+
+    .line 92
+    new-instance v0, Lcom/rounds/kik/view/VideoView$a;
+
+    invoke-direct {v0, p0}, Lcom/rounds/kik/view/VideoView$a;-><init>(Lcom/rounds/kik/view/VideoView;)V
+
+    iput-object v0, p0, Lcom/rounds/kik/view/VideoView;->mChangeToBubbleModeScrollListener:Landroid/animation/Animator$AnimatorListener;
+
+    .line 93
+    new-instance v0, Lcom/rounds/kik/view/VideoView$a;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, v1}, Lcom/rounds/kik/view/VideoView$a;-><init>(Lcom/rounds/kik/view/VideoView;Z)V
+
+    iput-object v0, p0, Lcom/rounds/kik/view/VideoView;->mChangeToBubbleModeOnDisconnectScrollListener:Landroid/animation/Animator$AnimatorListener;
+
+    .line 94
+    new-instance v0, Lcom/rounds/kik/view/VideoView$1;
+
+    invoke-direct {v0, p0}, Lcom/rounds/kik/view/VideoView$1;-><init>(Lcom/rounds/kik/view/VideoView;)V
+
+    iput-object v0, p0, Lcom/rounds/kik/view/VideoView;->mChangeToFullModeScrollListener:Landroid/animation/Animator$AnimatorListener;
+
+    .line 128
+    new-instance v0, Lcom/rounds/kik/view/VideoView$4;
+
+    invoke-direct {v0, p0}, Lcom/rounds/kik/view/VideoView$4;-><init>(Lcom/rounds/kik/view/VideoView;)V
+
+    iput-object v0, p0, Lcom/rounds/kik/view/VideoView;->mChangeHintScrollListener:Landroid/animation/Animator$AnimatorListener;
+
+    .line 169
     invoke-virtual {p1}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/rounds/kik/view/VideoView;->mContext:Landroid/content/Context;
 
-    .line 87
-    iput-boolean v1, p0, Lcom/rounds/kik/view/VideoView;->mAutoMirrorless:Z
+    .line 170
+    const-string v0, "input_method"
 
-    .line 88
+    invoke-virtual {p1, v0}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
+
+    iput-object v0, p0, Lcom/rounds/kik/view/VideoView;->mInputManager:Landroid/view/inputmethod/InputMethodManager;
+
+    .line 171
     iput-boolean v5, p0, Lcom/rounds/kik/view/VideoView;->mNeedRefresh:Z
 
-    .line 89
+    .line 172
     iput-object p3, p0, Lcom/rounds/kik/view/VideoView;->mVideoViewListener:Lcom/rounds/kik/VideoController$VideoViewListener;
 
-    .line 90
+    .line 173
     iput-object p2, p0, Lcom/rounds/kik/view/VideoView;->mAnalyticsReporter:Lcom/rounds/kik/view/VideoView$IAnalyticsReporter;
 
-    .line 91
+    .line 174
     new-instance v0, Landroid/view/GestureDetector;
 
     iget-object v1, p0, Lcom/rounds/kik/view/VideoView;->mContext:Landroid/content/Context;
@@ -138,20 +240,20 @@
 
     iget-object v4, p0, Lcom/rounds/kik/view/VideoView;->mVideoViewListener:Lcom/rounds/kik/VideoController$VideoViewListener;
 
-    invoke-direct {v2, v3, v4, p0}, Lcom/rounds/kik/view/VideoGestureListener;-><init>(Landroid/content/Context;Lcom/rounds/kik/VideoController$VideoViewListener;Landroid/view/View;)V
+    invoke-direct {v2, v3, v4, p0}, Lcom/rounds/kik/view/VideoGestureListener;-><init>(Landroid/content/Context;Lcom/rounds/kik/VideoController$VideoViewListener;Lcom/rounds/kik/view/VideoView;)V
 
     invoke-direct {v0, v1, v2}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
 
     iput-object v0, p0, Lcom/rounds/kik/view/VideoView;->mGestureDetector:Landroid/view/GestureDetector;
 
-    .line 92
+    .line 175
     iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mContext:Landroid/content/Context;
 
     sget v1, Lcom/rounds/kik/R$layout;->video_view:I
 
     invoke-static {v0, v1, p0}, Lcom/rounds/kik/view/VideoView;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    .line 93
+    .line 176
     sget v0, Lcom/rounds/kik/R$id;->video_view:I
 
     invoke-virtual {p0, v0}, Lcom/rounds/kik/view/VideoView;->findViewById(I)Landroid/view/View;
@@ -162,269 +264,412 @@
 
     iput-object v0, p0, Lcom/rounds/kik/view/VideoView;->mFrameContainer:Landroid/widget/FrameLayout;
 
-    .line 94
-    sget v0, Lcom/rounds/kik/R$id;->renderDummyTextureView:I
+    .line 177
+    sget v0, Lcom/rounds/kik/R$id;->video_mode_slide_panel:I
 
     invoke-virtual {p0, v0}, Lcom/rounds/kik/view/VideoView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/view/TextureView;
+    check-cast v0, Lcom/rounds/kik/view/VideoModeSlidePanel;
 
-    .line 95
-    invoke-virtual {v0, p0}, Landroid/view/TextureView;->setSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
+    iput-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoModeSlidePanel:Lcom/rounds/kik/view/VideoModeSlidePanel;
 
-    .line 96
-    sget v1, Lcom/rounds/kik/R$id;->renderGLSurfaceView:I
+    .line 178
+    sget v0, Lcom/rounds/kik/R$id;->bubbleGLSurfaceView:I
 
-    invoke-virtual {p0, v1}, Lcom/rounds/kik/view/VideoView;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/rounds/kik/view/VideoView;->findViewById(I)Landroid/view/View;
 
-    move-result-object v1
+    move-result-object v0
 
-    check-cast v1, Lcom/rounds/kik/view/VideoSurface;
+    check-cast v0, Lcom/rounds/kik/view/VideoSurface;
 
-    iput-object v1, p0, Lcom/rounds/kik/view/VideoView;->mVideoSurface:Lcom/rounds/kik/view/VideoSurface;
+    iput-object v0, p0, Lcom/rounds/kik/view/VideoView;->mBubblesVideoSurface:Lcom/rounds/kik/view/VideoSurface;
 
-    .line 97
-    iget-object v1, p0, Lcom/rounds/kik/view/VideoView;->mVideoSurface:Lcom/rounds/kik/view/VideoSurface;
+    .line 179
+    sget v0, Lcom/rounds/kik/R$id;->fullGLSurfaceView:I
 
-    new-instance v2, Lcom/rounds/kik/view/VideoView$1;
+    invoke-virtual {p0, v0}, Lcom/rounds/kik/view/VideoView;->findViewById(I)Landroid/view/View;
 
-    invoke-direct {v2, p0}, Lcom/rounds/kik/view/VideoView$1;-><init>(Lcom/rounds/kik/view/VideoView;)V
+    move-result-object v0
 
-    invoke-virtual {v1, v2}, Lcom/rounds/kik/view/VideoSurface;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+    check-cast v0, Lcom/rounds/kik/view/VideoSurface;
 
-    .line 105
-    iget-object v1, p0, Lcom/rounds/kik/view/VideoView;->mVideoSurface:Lcom/rounds/kik/view/VideoSurface;
+    iput-object v0, p0, Lcom/rounds/kik/view/VideoView;->mFullVideoSurface:Lcom/rounds/kik/view/VideoSurface;
 
-    invoke-virtual {v1, v0}, Lcom/rounds/kik/view/VideoSurface;->setTextureView(Landroid/view/TextureView;)V
+    .line 180
+    sget v0, Lcom/rounds/kik/R$id;->masks_menu:I
 
-    .line 106
-    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoSurface:Lcom/rounds/kik/view/VideoSurface;
+    invoke-virtual {p0, v0}, Lcom/rounds/kik/view/VideoView;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/rounds/kik/view/masks/MaskMenuView;
+
+    iput-object v0, p0, Lcom/rounds/kik/view/VideoView;->mMaskMenu:Lcom/rounds/kik/view/masks/MaskMenuView;
+
+    .line 181
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mMaskMenu:Lcom/rounds/kik/view/masks/MaskMenuView;
+
+    invoke-virtual {v0, v6}, Lcom/rounds/kik/view/masks/MaskMenuView;->setVisibility(I)V
+
+    .line 182
+    sget v0, Lcom/rounds/kik/R$id;->sticker_loader:I
+
+    invoke-virtual {p0, v0}, Lcom/rounds/kik/view/VideoView;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/rounds/kik/view/VideoView;->mStickerLoader:Landroid/view/View;
+
+    .line 183
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mStickerLoader:Landroid/view/View;
+
+    invoke-virtual {v0, v6}, Landroid/view/View;->setVisibility(I)V
+
+    .line 184
+    new-instance v0, Lcom/rounds/kik/view/VideoView$5;
+
+    invoke-direct {v0, p0}, Lcom/rounds/kik/view/VideoView$5;-><init>(Lcom/rounds/kik/view/VideoView;)V
+
+    .line 193
+    iget-object v1, p0, Lcom/rounds/kik/view/VideoView;->mBubblesVideoSurface:Lcom/rounds/kik/view/VideoSurface;
+
+    invoke-virtual {v1, v0}, Lcom/rounds/kik/view/VideoSurface;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+
+    .line 194
+    iget-object v1, p0, Lcom/rounds/kik/view/VideoView;->mBubblesVideoSurface:Lcom/rounds/kik/view/VideoSurface;
+
+    iget-object v2, p0, Lcom/rounds/kik/view/VideoView;->mVideoViewListener:Lcom/rounds/kik/VideoController$VideoViewListener;
+
+    invoke-virtual {v1, v2}, Lcom/rounds/kik/view/VideoSurface;->setVideoListener(Lcom/rounds/kik/VideoController$VideoViewListener;)V
+
+    .line 195
+    iget-object v1, p0, Lcom/rounds/kik/view/VideoView;->mFullVideoSurface:Lcom/rounds/kik/view/VideoSurface;
+
+    invoke-virtual {v1, v0}, Lcom/rounds/kik/view/VideoSurface;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+
+    .line 196
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mFullVideoSurface:Lcom/rounds/kik/view/VideoSurface;
 
     iget-object v1, p0, Lcom/rounds/kik/view/VideoView;->mVideoViewListener:Lcom/rounds/kik/VideoController$VideoViewListener;
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/view/VideoSurface;->setVideoListener(Lcom/rounds/kik/VideoController$VideoViewListener;)V
 
-    .line 107
+    .line 198
     invoke-virtual {p0, v5}, Lcom/rounds/kik/view/VideoView;->setHorizontalScrollBarEnabled(Z)V
 
-    .line 108
+    .line 199
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0}, Lcom/rounds/kik/view/VideoView;->setOverScrollMode(I)V
 
-    .line 109
+    .line 200
     invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
-    new-instance v1, Lcom/rounds/kik/view/VideoView$2;
+    new-instance v1, Lcom/rounds/kik/view/VideoView$6;
 
-    invoke-direct {v1, p0}, Lcom/rounds/kik/view/VideoView$2;-><init>(Lcom/rounds/kik/view/VideoView;)V
+    invoke-direct {v1, p0}, Lcom/rounds/kik/view/VideoView$6;-><init>(Lcom/rounds/kik/view/VideoView;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 120
+    .line 212
     invoke-direct {p0}, Lcom/rounds/kik/view/VideoView;->isDeviceRefreshContext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 121
-    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoSurface:Lcom/rounds/kik/view/VideoSurface;
+    .line 213
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mBubblesVideoSurface:Lcom/rounds/kik/view/VideoSurface;
 
     invoke-virtual {v0}, Lcom/rounds/kik/view/VideoSurface;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
-    new-instance v1, Lcom/rounds/kik/view/VideoView$3;
+    new-instance v1, Lcom/rounds/kik/view/VideoView$7;
 
-    invoke-direct {v1, p0}, Lcom/rounds/kik/view/VideoView$3;-><init>(Lcom/rounds/kik/view/VideoView;)V
+    invoke-direct {v1, p0}, Lcom/rounds/kik/view/VideoView$7;-><init>(Lcom/rounds/kik/view/VideoView;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 132
+    .line 225
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mFullVideoSurface:Lcom/rounds/kik/view/VideoSurface;
+
+    invoke-virtual {v0}, Lcom/rounds/kik/view/VideoSurface;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/rounds/kik/view/VideoView$8;
+
+    invoke-direct {v1, p0}, Lcom/rounds/kik/view/VideoView$8;-><init>(Lcom/rounds/kik/view/VideoView;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+
+    .line 237
     :cond_0
-    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    sget v1, Lcom/rounds/kik/R$dimen;->rings_padding:I
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
-
-    move-result v0
-
-    float-to-int v0, v0
-
-    iput v0, p0, Lcom/rounds/kik/view/VideoView;->RING_PADDING:I
-
-    .line 133
-    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    sget v1, Lcom/rounds/kik/R$dimen;->ring_max_size:I
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
-
-    move-result v0
-
-    float-to-int v0, v0
-
-    .line 134
-    iget v1, p0, Lcom/rounds/kik/view/VideoView;->RING_PADDING:I
-
-    iput v1, p0, Lcom/rounds/kik/view/VideoView;->HIDE_X:I
-
-    .line 135
-    iget v1, p0, Lcom/rounds/kik/view/VideoView;->RING_PADDING:I
-
-    add-int/2addr v1, v0
-
-    iput v1, p0, Lcom/rounds/kik/view/VideoView;->mShowX:I
-
-    .line 136
-    div-int/lit8 v0, v0, 0x4
-
-    int-to-float v0, v0
-
-    invoke-static {v0}, Ljava/lang/Math;->round(F)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/rounds/kik/view/VideoView;->mHidePartlyX:I
-
-    .line 137
     invoke-direct {p0, p1}, Lcom/rounds/kik/view/VideoView;->updateWidths(Landroid/app/Activity;)V
 
-    .line 138
-    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->hideLocal()V
-
-    .line 139
+    .line 238
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/rounds/kik/view/VideoView;)Landroid/view/GestureDetector;
+.method static synthetic access$100(Lcom/rounds/kik/view/VideoView;)Landroid/widget/FrameLayout;
     .locals 1
 
     .prologue
-    .line 37
+    .line 51
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mFrameContainer:Landroid/widget/FrameLayout;
+
+    return-object v0
+.end method
+
+.method static synthetic access$1002(Lcom/rounds/kik/view/VideoView;Z)Z
+    .locals 0
+
+    .prologue
+    .line 51
+    iput-boolean p1, p0, Lcom/rounds/kik/view/VideoView;->mNeedToShowHint:Z
+
+    return p1
+.end method
+
+.method static synthetic access$1100()Landroid/animation/TimeInterpolator;
+    .locals 1
+
+    .prologue
+    .line 51
+    sget-object v0, Lcom/rounds/kik/view/VideoView;->HINT_ANIM_HIDE_INTERPOLATOR:Landroid/animation/TimeInterpolator;
+
+    return-object v0
+.end method
+
+.method static synthetic access$1200(Lcom/rounds/kik/view/VideoView;IJJLandroid/animation/TimeInterpolator;Landroid/animation/Animator$AnimatorListener;)V
+    .locals 0
+
+    .prologue
+    .line 51
+    invoke-direct/range {p0 .. p7}, Lcom/rounds/kik/view/VideoView;->animateScroll(IJJLandroid/animation/TimeInterpolator;Landroid/animation/Animator$AnimatorListener;)V
+
+    return-void
+.end method
+
+.method static synthetic access$1300(Lcom/rounds/kik/view/VideoView;)Landroid/view/GestureDetector;
+    .locals 1
+
+    .prologue
+    .line 51
     iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mGestureDetector:Landroid/view/GestureDetector;
 
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/rounds/kik/view/VideoView;)V
+.method static synthetic access$1400(Lcom/rounds/kik/view/VideoView;)V
     .locals 0
 
     .prologue
-    .line 37
+    .line 51
     invoke-direct {p0}, Lcom/rounds/kik/view/VideoView;->reportOnViewAdded()V
 
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/rounds/kik/view/VideoView;)Z
+.method static synthetic access$1500(Lcom/rounds/kik/view/VideoView;)Z
     .locals 1
 
     .prologue
-    .line 37
+    .line 51
     iget-boolean v0, p0, Lcom/rounds/kik/view/VideoView;->mNeedRefresh:Z
 
     return v0
 .end method
 
-.method static synthetic access$202(Lcom/rounds/kik/view/VideoView;Z)Z
+.method static synthetic access$1502(Lcom/rounds/kik/view/VideoView;Z)Z
     .locals 0
 
     .prologue
-    .line 37
+    .line 51
     iput-boolean p1, p0, Lcom/rounds/kik/view/VideoView;->mNeedRefresh:Z
 
     return p1
 .end method
 
-.method static synthetic access$300(Lcom/rounds/kik/view/VideoView;)Z
-    .locals 1
-
-    .prologue
-    .line 37
-    iget-boolean v0, p0, Lcom/rounds/kik/view/VideoView;->mAnimateHideLocalPartly:Z
-
-    return v0
-.end method
-
-.method static synthetic access$302(Lcom/rounds/kik/view/VideoView;Z)Z
+.method static synthetic access$1600(Lcom/rounds/kik/view/VideoView;Lcom/rounds/kik/view/VideoModeSlidePanel$Mode;Z)V
     .locals 0
 
     .prologue
-    .line 37
-    iput-boolean p1, p0, Lcom/rounds/kik/view/VideoView;->mAnimateHideLocalPartly:Z
-
-    return p1
-.end method
-
-.method static synthetic access$400(Lcom/rounds/kik/view/VideoView;J)V
-    .locals 1
-
-    .prologue
-    .line 37
-    invoke-direct {p0, p1, p2}, Lcom/rounds/kik/view/VideoView;->hideLocalPartly(J)V
+    .line 51
+    invoke-direct {p0, p1, p2}, Lcom/rounds/kik/view/VideoView;->animateChangeModeTo(Lcom/rounds/kik/view/VideoModeSlidePanel$Mode;Z)V
 
     return-void
 .end method
 
-.method static synthetic access$500(Lcom/rounds/kik/view/VideoView;)V
+.method static synthetic access$1700(Lcom/rounds/kik/view/VideoView;)V
     .locals 0
 
     .prologue
-    .line 37
+    .line 51
     invoke-direct {p0}, Lcom/rounds/kik/view/VideoView;->cancelScrollAnim()V
 
     return-void
 .end method
 
-.method static synthetic access$600(Lcom/rounds/kik/view/VideoView;)Landroid/animation/ObjectAnimator;
+.method static synthetic access$1800(Lcom/rounds/kik/view/VideoView;)Landroid/animation/ObjectAnimator;
     .locals 1
 
     .prologue
-    .line 37
+    .line 51
     iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mScrollXAnim:Landroid/animation/ObjectAnimator;
 
     return-object v0
 .end method
 
-.method static synthetic access$602(Lcom/rounds/kik/view/VideoView;Landroid/animation/ObjectAnimator;)Landroid/animation/ObjectAnimator;
+.method static synthetic access$1802(Lcom/rounds/kik/view/VideoView;Landroid/animation/ObjectAnimator;)Landroid/animation/ObjectAnimator;
     .locals 0
 
     .prologue
-    .line 37
+    .line 51
     iput-object p1, p0, Lcom/rounds/kik/view/VideoView;->mScrollXAnim:Landroid/animation/ObjectAnimator;
 
     return-object p1
 .end method
 
-.method static synthetic access$700(Lcom/rounds/kik/view/VideoView;)Lcom/rounds/kik/view/VideoSurface;
+.method static synthetic access$200(Lcom/rounds/kik/view/VideoView;)Lcom/rounds/kik/view/VideoSurface;
     .locals 1
 
     .prologue
-    .line 37
-    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoSurface:Lcom/rounds/kik/view/VideoSurface;
+    .line 51
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mBubblesVideoSurface:Lcom/rounds/kik/view/VideoSurface;
 
     return-object v0
 .end method
 
-.method static synthetic access$800(Lcom/rounds/kik/view/VideoView;)Landroid/widget/FrameLayout;
+.method static synthetic access$2000(Lcom/rounds/kik/view/VideoView;)Z
     .locals 1
 
     .prologue
-    .line 37
-    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mFrameContainer:Landroid/widget/FrameLayout;
+    .line 51
+    iget-boolean v0, p0, Lcom/rounds/kik/view/VideoView;->mShouldShowHintWhenBackToBubble:Z
+
+    return v0
+.end method
+
+.method static synthetic access$2002(Lcom/rounds/kik/view/VideoView;Z)Z
+    .locals 0
+
+    .prologue
+    .line 51
+    iput-boolean p1, p0, Lcom/rounds/kik/view/VideoView;->mShouldShowHintWhenBackToBubble:Z
+
+    return p1
+.end method
+
+.method static synthetic access$300(Lcom/rounds/kik/view/VideoView;)Lcom/rounds/kik/view/VideoSurface;
+    .locals 1
+
+    .prologue
+    .line 51
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mFullVideoSurface:Lcom/rounds/kik/view/VideoSurface;
 
     return-object v0
+.end method
+
+.method static synthetic access$400(Lcom/rounds/kik/view/VideoView;)Lcom/rounds/kik/view/VideoModeSlidePanel;
+    .locals 1
+
+    .prologue
+    .line 51
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoModeSlidePanel:Lcom/rounds/kik/view/VideoModeSlidePanel;
+
+    return-object v0
+.end method
+
+.method static synthetic access$500(Lcom/rounds/kik/view/VideoView;)Lcom/rounds/kik/view/masks/MaskMenuView;
+    .locals 1
+
+    .prologue
+    .line 51
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mMaskMenu:Lcom/rounds/kik/view/masks/MaskMenuView;
+
+    return-object v0
+.end method
+
+.method static synthetic access$600(Lcom/rounds/kik/view/VideoView;)Z
+    .locals 1
+
+    .prologue
+    .line 51
+    iget-boolean v0, p0, Lcom/rounds/kik/view/VideoView;->mOnVideoModeChanging:Z
+
+    return v0
+.end method
+
+.method static synthetic access$602(Lcom/rounds/kik/view/VideoView;Z)Z
+    .locals 0
+
+    .prologue
+    .line 51
+    iput-boolean p1, p0, Lcom/rounds/kik/view/VideoView;->mOnVideoModeChanging:Z
+
+    return p1
+.end method
+
+.method static synthetic access$700(Lcom/rounds/kik/view/VideoView;)Lcom/rounds/kik/view/VideoView$IOnVideoModeChangeListener;
+    .locals 1
+
+    .prologue
+    .line 51
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoModeChangeListener:Lcom/rounds/kik/view/VideoView$IOnVideoModeChangeListener;
+
+    return-object v0
+.end method
+
+.method static synthetic access$800(Lcom/rounds/kik/view/VideoView;)Lcom/rounds/kik/VideoController$VideoViewListener;
+    .locals 1
+
+    .prologue
+    .line 51
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoViewListener:Lcom/rounds/kik/VideoController$VideoViewListener;
+
+    return-object v0
+.end method
+
+.method static synthetic access$900(Lcom/rounds/kik/view/VideoView;)Z
+    .locals 1
+
+    .prologue
+    .line 51
+    iget-boolean v0, p0, Lcom/rounds/kik/view/VideoView;->mIsScrolling:Z
+
+    return v0
+.end method
+
+.method private animateChangeModeTo(Lcom/rounds/kik/view/VideoModeSlidePanel$Mode;)V
+    .locals 1
+
+    .prologue
+    .line 366
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Lcom/rounds/kik/view/VideoView;->animateChangeModeTo(Lcom/rounds/kik/view/VideoModeSlidePanel$Mode;Z)V
+
+    .line 367
+    return-void
+.end method
+
+.method private animateChangeModeTo(Lcom/rounds/kik/view/VideoModeSlidePanel$Mode;Z)V
+    .locals 2
+
+    .prologue
+    .line 371
+    const-wide/16 v0, 0xc8
+
+    invoke-virtual {p0, p1, p2, v0, v1}, Lcom/rounds/kik/view/VideoView;->animateChangeModeTo(Lcom/rounds/kik/view/VideoModeSlidePanel$Mode;ZJ)V
+
+    .line 372
+    return-void
 .end method
 
 .method private animateScroll(IJJ)V
@@ -433,7 +678,7 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 399
+    .line 543
     move-object v0, p0
 
     move v1, p1
@@ -446,7 +691,7 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/rounds/kik/view/VideoView;->animateScroll(IJJLandroid/animation/TimeInterpolator;Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 400
+    .line 544
     return-void
 .end method
 
@@ -454,7 +699,7 @@
     .locals 8
 
     .prologue
-    .line 394
+    .line 538
     const/4 v7, 0x0
 
     move-object v0, p0
@@ -469,7 +714,7 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/rounds/kik/view/VideoView;->animateScroll(IJJLandroid/animation/TimeInterpolator;Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 395
+    .line 539
     return-void
 .end method
 
@@ -477,12 +722,12 @@
     .locals 10
 
     .prologue
-    .line 404
+    .line 548
     invoke-static {}, Lcom/rounds/kik/VideoAppModule;->concurrency()Lcom/rounds/kik/Concurrency;
 
     move-result-object v0
 
-    new-instance v1, Lcom/rounds/kik/view/VideoView$5;
+    new-instance v1, Lcom/rounds/kik/view/VideoView$10;
 
     move-object v2, p0
 
@@ -496,11 +741,11 @@
 
     move-object/from16 v9, p7
 
-    invoke-direct/range {v1 .. v9}, Lcom/rounds/kik/view/VideoView$5;-><init>(Lcom/rounds/kik/view/VideoView;IJJLandroid/animation/TimeInterpolator;Landroid/animation/Animator$AnimatorListener;)V
+    invoke-direct/range {v1 .. v9}, Lcom/rounds/kik/view/VideoView$10;-><init>(Lcom/rounds/kik/view/VideoView;IJJLandroid/animation/TimeInterpolator;Landroid/animation/Animator$AnimatorListener;)V
 
     invoke-virtual {v0, v1}, Lcom/rounds/kik/Concurrency;->executeOnMainThread(Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 418
+    .line 564
     return-void
 .end method
 
@@ -508,311 +753,279 @@
     .locals 1
 
     .prologue
-    .line 429
+    .line 575
     iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mScrollXAnim:Landroid/animation/ObjectAnimator;
 
     if-eqz v0, :cond_0
 
-    .line 430
+    .line 576
     iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mScrollXAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 431
+    .line 577
     iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mScrollXAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->removeAllListeners()V
 
-    .line 432
+    .line 578
     iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mScrollXAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->removeAllUpdateListeners()V
 
-    .line 434
+    .line 580
     :cond_0
     invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->clearAnimation()V
 
-    .line 435
-    return-void
-.end method
-
-.method private hideLocal(J)V
-    .locals 7
-
-    .prologue
-    .line 354
-    iget v1, p0, Lcom/rounds/kik/view/VideoView;->HIDE_X:I
-
-    const-wide/16 v2, 0xfa
-
-    move-object v0, p0
-
-    move-wide v4, p1
-
-    invoke-direct/range {v0 .. v5}, Lcom/rounds/kik/view/VideoView;->animateScroll(IJJ)V
-
-    .line 355
-    return-void
-.end method
-
-.method private hideLocalPartly(J)V
-    .locals 3
-
-    .prologue
-    .line 377
-    iget-boolean v0, p0, Lcom/rounds/kik/view/VideoView;->mAutoMirrorless:Z
-
-    if-eqz v0, :cond_0
-
-    iget-boolean v0, p0, Lcom/rounds/kik/view/VideoView;->mEnableMirrorless:Z
-
-    if-eqz v0, :cond_0
-
-    .line 378
-    const-wide/16 v0, 0x96
-
-    invoke-direct {p0, p1, p2, v0, v1}, Lcom/rounds/kik/view/VideoView;->hideLocalPartly(JJ)V
-
-    .line 380
-    invoke-static {}, Lcom/rounds/kik/VideoAppModule;->context()Landroid/content/Context;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/rounds/kik/analytics/group/conference/ConferenceEvents;->VIDEOCHAT_SLIDE_UNMIRROR:Lcom/rounds/kik/analytics/group/conference/ConferenceEvents;
-
-    invoke-virtual {v1}, Lcom/rounds/kik/analytics/group/conference/ConferenceEvents;->builder()Lcom/rounds/kik/analytics/group/conference/ConferenceEvents$Builder;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/rounds/kik/analytics/Reporter;->report(Landroid/content/Context;Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;)V
-
-    .line 383
-    :cond_0
-    return-void
-.end method
-
-.method private hideLocalPartly(JJ)V
-    .locals 7
-
-    .prologue
-    .line 387
-    iget-boolean v0, p0, Lcom/rounds/kik/view/VideoView;->mEnableMirrorless:Z
-
-    if-eqz v0, :cond_0
-
-    .line 388
-    iget v1, p0, Lcom/rounds/kik/view/VideoView;->mHidePartlyX:I
-
-    new-instance v6, Landroid/view/animation/AccelerateInterpolator;
-
-    invoke-direct {v6}, Landroid/view/animation/AccelerateInterpolator;-><init>()V
-
-    move-object v0, p0
-
-    move-wide v2, p3
-
-    move-wide v4, p1
-
-    invoke-direct/range {v0 .. v6}, Lcom/rounds/kik/view/VideoView;->animateScroll(IJJLandroid/animation/TimeInterpolator;)V
-
-    .line 390
-    :cond_0
-    return-void
-.end method
-
-.method private hideLocalPartlyImmediate()V
-    .locals 2
-
-    .prologue
-    .line 366
-    const-wide/16 v0, 0x0
-
-    invoke-direct {p0, v0, v1}, Lcom/rounds/kik/view/VideoView;->hideLocalPartly(J)V
-
-    .line 367
+    .line 581
     return-void
 .end method
 
 .method private isDeviceRefreshContext()Z
-    .locals 6
+    .locals 7
 
     .prologue
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
-    .line 143
+    const/4 v1, 0x0
+
+    .line 266
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v3, 0x12
+
+    if-gt v2, v3, :cond_1
+
+    .line 277
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 270
+    :cond_1
     invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    sget v2, Lcom/rounds/kik/R$array;->refreshDeviceListForNewSurface:I
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 144
-    array-length v3, v2
+    sget v3, Lcom/rounds/kik/R$array;->refreshDeviceListForNewSurface:I
 
-    move v1, v0
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
-    :goto_0
-    if-ge v1, v3, :cond_0
+    move-result-object v3
 
-    aget-object v4, v2, v1
+    .line 271
+    array-length v4, v3
 
-    .line 145
-    sget-object v5, Landroid/os/Build;->MODEL:Ljava/lang/String;
+    move v2, v1
 
-    invoke-virtual {v4, v5}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+    :goto_1
+    if-ge v2, v4, :cond_2
 
-    move-result v4
+    aget-object v5, v3, v2
 
-    .line 146
-    const/4 v5, -0x1
-
-    if-eq v4, v5, :cond_1
-
-    .line 147
-    const/4 v0, 0x1
-
-    .line 150
-    :cond_0
-    return v0
-
-    .line 144
-    :cond_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-.end method
-
-.method private isHidden()Z
-    .locals 2
-
-    .prologue
-    .line 209
-    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->getScrollX()I
-
-    move-result v0
-
-    iget v1, p0, Lcom/rounds/kik/view/VideoView;->HIDE_X:I
-
-    if-gt v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method private isMirrorless()Z
-    .locals 2
-
-    .prologue
-    .line 214
-    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->getScrollX()I
-
-    move-result v0
-
-    iget v1, p0, Lcom/rounds/kik/view/VideoView;->mHidePartlyX:I
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method private isShowing()Z
-    .locals 2
-
-    .prologue
-    .line 203
-    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->getScrollX()I
-
-    move-result v0
-
-    iget v1, p0, Lcom/rounds/kik/view/VideoView;->mShowX:I
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method private onMotionUp()V
-    .locals 2
-
-    .prologue
     .line 272
-    iget v0, p0, Lcom/rounds/kik/view/VideoView;->mLastScrollX:I
+    sget-object v6, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    iget v1, p0, Lcom/rounds/kik/view/VideoView;->mShowX:I
+    invoke-virtual {v5, v6}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
-    if-lt v0, v1, :cond_1
+    move-result v5
 
     .line 273
-    const-wide/16 v0, 0xfa
+    const/4 v6, -0x1
 
-    invoke-direct {p0, v0, v1}, Lcom/rounds/kik/view/VideoView;->showAndHideLocalPartly(J)V
+    if-ne v5, v6, :cond_0
 
-    .line 274
-    invoke-static {}, Lcom/rounds/kik/VideoAppModule;->context()Landroid/content/Context;
+    .line 271
+    add-int/lit8 v2, v2, 0x1
 
-    move-result-object v0
+    goto :goto_1
 
-    sget-object v1, Lcom/rounds/kik/analytics/group/conference/ConferenceEvents;->VIDEOCHAT_SLIDE_MIRROR:Lcom/rounds/kik/analytics/group/conference/ConferenceEvents;
+    :cond_2
+    move v0, v1
 
-    invoke-virtual {v1}, Lcom/rounds/kik/analytics/group/conference/ConferenceEvents;->builder()Lcom/rounds/kik/analytics/group/conference/ConferenceEvents$Builder;
+    .line 277
+    goto :goto_0
+.end method
 
-    move-result-object v1
+.method private isInStartScrollX()Z
+    .locals 2
 
-    invoke-static {v0, v1}, Lcom/rounds/kik/analytics/Reporter;->report(Landroid/content/Context;Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;)V
+    .prologue
+    .line 516
+    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->getScrollX()I
 
-    .line 282
+    move-result v0
+
+    iget-object v1, p0, Lcom/rounds/kik/view/VideoView;->mVideoModeSlidePanel:Lcom/rounds/kik/view/VideoModeSlidePanel;
+
+    invoke-virtual {v1}, Lcom/rounds/kik/view/VideoModeSlidePanel;->getStartScrollX()I
+
+    move-result v1
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method private isMaskListVisible()Z
+    .locals 1
+
+    .prologue
+    .line 471
+    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->isInFullVideoMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mMaskMenu:Lcom/rounds/kik/view/masks/MaskMenuView;
+
+    invoke-virtual {v0}, Lcom/rounds/kik/view/masks/MaskMenuView;->isOpen()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method private onMotionUpVideoModeChange()V
+    .locals 1
+
+    .prologue
+    .line 501
+    iget-boolean v0, p0, Lcom/rounds/kik/view/VideoView;->mOnVideoModeChanging:Z
+
+    if-eqz v0, :cond_1
+
+    .line 512
     :cond_0
     :goto_0
     return-void
 
-    .line 277
+    .line 504
     :cond_1
-    invoke-direct {p0}, Lcom/rounds/kik/view/VideoView;->hideLocalPartlyImmediate()V
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoModeSlidePanel:Lcom/rounds/kik/view/VideoModeSlidePanel;
 
-    .line 278
-    iget v0, p0, Lcom/rounds/kik/view/VideoView;->mLastScrollX:I
+    invoke-virtual {v0}, Lcom/rounds/kik/view/VideoModeSlidePanel;->shouldChangeMode()Z
 
-    if-nez v0, :cond_0
+    move-result v0
 
-    .line 279
-    invoke-static {}, Lcom/rounds/kik/VideoAppModule;->context()Landroid/content/Context;
+    if-eqz v0, :cond_2
+
+    .line 505
+    invoke-direct {p0}, Lcom/rounds/kik/view/VideoView;->reportChangeVideoMode()V
+
+    .line 506
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoModeSlidePanel:Lcom/rounds/kik/view/VideoModeSlidePanel;
+
+    invoke-virtual {v0}, Lcom/rounds/kik/view/VideoModeSlidePanel;->getModeToAnimateTo()Lcom/rounds/kik/view/VideoModeSlidePanel$Mode;
 
     move-result-object v0
 
-    sget-object v1, Lcom/rounds/kik/analytics/group/conference/ConferenceEvents;->VIDEOCHAT_SLIDE_UNMIRROR:Lcom/rounds/kik/analytics/group/conference/ConferenceEvents;
+    invoke-direct {p0, v0}, Lcom/rounds/kik/view/VideoView;->animateChangeModeTo(Lcom/rounds/kik/view/VideoModeSlidePanel$Mode;)V
 
-    invoke-virtual {v1}, Lcom/rounds/kik/analytics/group/conference/ConferenceEvents;->builder()Lcom/rounds/kik/analytics/group/conference/ConferenceEvents$Builder;
+    goto :goto_0
 
-    move-result-object v1
+    .line 508
+    :cond_2
+    invoke-direct {p0}, Lcom/rounds/kik/view/VideoView;->isInStartScrollX()Z
 
-    invoke-static {v0, v1}, Lcom/rounds/kik/analytics/Reporter;->report(Landroid/content/Context;Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;)V
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 509
+    invoke-direct {p0}, Lcom/rounds/kik/view/VideoView;->scrollBounceBack()V
+
+    .line 510
+    invoke-direct {p0}, Lcom/rounds/kik/view/VideoView;->reportBounceBack()V
+
+    goto :goto_0
+.end method
+
+.method private reportBounceBack()V
+    .locals 2
+
+    .prologue
+    .line 521
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoModeSlidePanel:Lcom/rounds/kik/view/VideoModeSlidePanel;
+
+    invoke-virtual {v0}, Lcom/rounds/kik/view/VideoModeSlidePanel;->isInFullMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/rounds/kik/analytics/group/conference/ConferenceEvents;->VIDEOCHAT_FULLSCREEN_BUBBLEMODE_PREVIEW_SWIPE:Lcom/rounds/kik/analytics/group/conference/ConferenceEvents;
+
+    .line 524
+    :goto_0
+    iget-object v1, p0, Lcom/rounds/kik/view/VideoView;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Lcom/rounds/kik/analytics/group/conference/ConferenceEvents;->builder()Lcom/rounds/kik/analytics/group/conference/ConferenceEvents$Builder;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcom/rounds/kik/analytics/Reporter;->report(Landroid/content/Context;Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;)V
+
+    .line 525
+    return-void
+
+    .line 521
+    :cond_0
+    sget-object v0, Lcom/rounds/kik/analytics/group/conference/ConferenceEvents;->VIDEOCHAT_FULLSCREEN_PREVIEW_SWIPE:Lcom/rounds/kik/analytics/group/conference/ConferenceEvents;
+
+    goto :goto_0
+.end method
+
+.method private reportChangeVideoMode()V
+    .locals 2
+
+    .prologue
+    .line 529
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoModeSlidePanel:Lcom/rounds/kik/view/VideoModeSlidePanel;
+
+    invoke-virtual {v0}, Lcom/rounds/kik/view/VideoModeSlidePanel;->isInFullMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/rounds/kik/analytics/group/conference/ConferenceEvents;->VIDEOCHAT_FULLSCREEN_BUBBLEMODE_SWIPE:Lcom/rounds/kik/analytics/group/conference/ConferenceEvents;
+
+    .line 532
+    :goto_0
+    iget-object v1, p0, Lcom/rounds/kik/view/VideoView;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Lcom/rounds/kik/analytics/group/conference/ConferenceEvents;->builder()Lcom/rounds/kik/analytics/group/conference/ConferenceEvents$Builder;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcom/rounds/kik/analytics/Reporter;->report(Landroid/content/Context;Lcom/rounds/kik/analytics/AnalyticsEvent$Builder;)V
+
+    .line 533
+    return-void
+
+    .line 529
+    :cond_0
+    sget-object v0, Lcom/rounds/kik/analytics/group/conference/ConferenceEvents;->VIDEOCHAT_FULLSCREEN_SWIPE:Lcom/rounds/kik/analytics/group/conference/ConferenceEvents;
 
     goto :goto_0
 .end method
@@ -821,79 +1034,144 @@
     .locals 2
 
     .prologue
-    .line 471
+    .line 585
     iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mAnalyticsReporter:Lcom/rounds/kik/view/VideoView$IAnalyticsReporter;
 
     if-eqz v0, :cond_0
 
-    .line 472
+    .line 586
     iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mAnalyticsReporter:Lcom/rounds/kik/view/VideoView$IAnalyticsReporter;
 
     sget-object v1, Lcom/rounds/kik/analytics/group/GroupMemberEvents;->VIDEOCHAT_SHOW:Lcom/rounds/kik/analytics/group/GroupMemberEvents;
 
     invoke-interface {v0, v1}, Lcom/rounds/kik/view/VideoView$IAnalyticsReporter;->reportGroupEvent(Lcom/rounds/kik/analytics/group/GroupMemberEvents;)V
 
-    .line 474
+    .line 588
     :cond_0
     return-void
 .end method
 
-.method private showAndHideLocalPartly(J)V
-    .locals 9
-
-    .prologue
-    .line 302
-    iget v1, p0, Lcom/rounds/kik/view/VideoView;->mShowX:I
-
-    const-wide/16 v4, 0x0
-
-    new-instance v6, Landroid/view/animation/OvershootInterpolator;
-
-    invoke-direct {v6}, Landroid/view/animation/OvershootInterpolator;-><init>()V
-
-    new-instance v7, Lcom/rounds/kik/view/VideoView$4;
-
-    invoke-direct {v7, p0}, Lcom/rounds/kik/view/VideoView$4;-><init>(Lcom/rounds/kik/view/VideoView;)V
-
-    move-object v0, p0
-
-    move-wide v2, p1
-
-    invoke-direct/range {v0 .. v7}, Lcom/rounds/kik/view/VideoView;->animateScroll(IJJLandroid/animation/TimeInterpolator;Landroid/animation/Animator$AnimatorListener;)V
-
-    .line 329
-    return-void
-.end method
-
-.method private showLocal(J)V
+.method private scrollBounceBack()V
     .locals 7
 
     .prologue
-    .line 297
-    iget v1, p0, Lcom/rounds/kik/view/VideoView;->mShowX:I
+    .line 384
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoModeSlidePanel:Lcom/rounds/kik/view/VideoModeSlidePanel;
+
+    invoke-virtual {v0}, Lcom/rounds/kik/view/VideoModeSlidePanel;->getStartScrollX()I
+
+    move-result v1
+
+    const-wide/16 v2, 0xc8
 
     const-wide/16 v4, 0x0
 
+    sget-object v6, Lcom/rounds/kik/view/VideoView;->BOUNCE_BACK_ANIM_INTERPOLATOR:Landroid/animation/TimeInterpolator;
+
     move-object v0, p0
 
-    move-wide v2, p1
+    invoke-direct/range {v0 .. v6}, Lcom/rounds/kik/view/VideoView;->animateScroll(IJJLandroid/animation/TimeInterpolator;)V
 
-    invoke-direct/range {v0 .. v5}, Lcom/rounds/kik/view/VideoView;->animateScroll(IJJ)V
-
-    .line 298
+    .line 385
     return-void
+.end method
+
+.method private shouldHandleScroll(Landroid/view/MotionEvent;)Z
+    .locals 4
+
+    .prologue
+    const/4 v1, 0x1
+
+    const/4 v0, 0x0
+
+    .line 459
+    invoke-direct {p0}, Lcom/rounds/kik/view/VideoView;->isMaskListVisible()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    .line 460
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v2
+
+    iget-object v3, p0, Lcom/rounds/kik/view/VideoView;->mMaskMenu:Lcom/rounds/kik/view/masks/MaskMenuView;
+
+    invoke-virtual {v3}, Lcom/rounds/kik/view/masks/MaskMenuView;->getY()F
+
+    move-result v3
+
+    cmpg-float v2, v2, v3
+
+    if-gez v2, :cond_0
+
+    move v0, v1
+
+    .line 461
+    :cond_0
+    if-nez v0, :cond_1
+
+    iget-boolean v1, p0, Lcom/rounds/kik/view/VideoView;->mIsScrolling:Z
+
+    if-eqz v1, :cond_1
+
+    .line 462
+    invoke-direct {p0}, Lcom/rounds/kik/view/VideoView;->onMotionUpVideoModeChange()V
+
+    .line 466
+    :cond_1
+    :goto_0
+    return v0
+
+    :cond_2
+    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->isInFullVideoMode()Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    iget-boolean v2, p0, Lcom/rounds/kik/view/VideoView;->mIsScrolling:Z
+
+    if-nez v2, :cond_3
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v2
+
+    iget v3, p0, Lcom/rounds/kik/view/VideoView;->mVideoSurfaceBubbleHeight:I
+
+    int-to-float v3, v3
+
+    cmpg-float v2, v2, v3
+
+    if-gtz v2, :cond_1
+
+    :cond_3
+    move v0, v1
+
+    goto :goto_0
 .end method
 
 .method private updateWidths(Landroid/app/Activity;)V
     .locals 6
 
     .prologue
-    .line 155
+    const/4 v5, -0x1
+
+    .line 282
+    invoke-static {p1}, Lcom/rounds/kik/utils/DeviceUtils;->getScreenSmallestWidth(Landroid/content/Context;)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/rounds/kik/view/VideoView;->mScreenWidth:I
+
+    .line 283
     invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/rounds/kik/R$dimen;->ring_max_size:I
+    sget v1, Lcom/rounds/kik/R$dimen;->video_layout_height_small:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -901,72 +1179,28 @@
 
     float-to-int v0, v0
 
-    .line 156
-    div-int/lit8 v0, v0, 0x2
+    iput v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoSurfaceBubbleHeight:I
 
-    .line 157
-    invoke-static {p1}, Lcom/rounds/kik/utils/DeviceUtils;->getScreenSmallestWidth(Landroid/app/Activity;)I
+    .line 284
+    iget v1, p0, Lcom/rounds/kik/view/VideoView;->mScreenWidth:I
 
-    move-result v1
+    .line 286
+    iget v0, p0, Lcom/rounds/kik/view/VideoView;->mScreenWidth:I
 
-    .line 158
-    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->getResources()Landroid/content/res/Resources;
+    mul-int/lit8 v0, v0, 0x2
 
-    move-result-object v2
+    .line 287
+    iget-object v2, p0, Lcom/rounds/kik/view/VideoView;->mVideoModeSlidePanel:Lcom/rounds/kik/view/VideoModeSlidePanel;
 
-    sget v3, Lcom/rounds/kik/R$dimen;->rings_padding:I
+    const/4 v3, 0x0
 
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimension(I)F
+    iget v4, p0, Lcom/rounds/kik/view/VideoView;->mScreenWidth:I
 
-    move-result v2
+    int-to-float v4, v4
 
-    float-to-int v2, v2
+    invoke-virtual {v2, v3, v4}, Lcom/rounds/kik/view/VideoModeSlidePanel;->initPositionPoints(FF)V
 
-    .line 159
-    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    sget v4, Lcom/rounds/kik/R$dimen;->ring_max_size:I
-
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimension(I)F
-
-    move-result v3
-
-    float-to-int v3, v3
-
-    .line 160
-    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    sget v5, Lcom/rounds/kik/R$dimen;->video_layout_height:I
-
-    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimension(I)F
-
-    move-result v4
-
-    float-to-int v4, v4
-
-    .line 161
-    add-int/2addr v1, v2
-
-    add-int/2addr v1, v3
-
-    .line 162
-    sget v2, Lcom/rounds/kik/R$id;->renderGLSurfaceView:I
-
-    invoke-virtual {p0, v2}, Lcom/rounds/kik/view/VideoView;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    new-instance v3, Landroid/widget/FrameLayout$LayoutParams;
-
-    invoke-direct {v3, v1, v4}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v2, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 163
+    .line 288
     sget v2, Lcom/rounds/kik/R$id;->overscroll_dummy_layout:I
 
     invoke-virtual {p0, v2}, Lcom/rounds/kik/view/VideoView;->findViewById(I)Landroid/view/View;
@@ -975,31 +1209,245 @@
 
     new-instance v3, Landroid/widget/FrameLayout$LayoutParams;
 
-    add-int/2addr v0, v1
-
-    invoke-direct {v3, v0, v4}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+    invoke-direct {v3, v0, v5}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 164
+    .line 289
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoModeSlidePanel:Lcom/rounds/kik/view/VideoModeSlidePanel;
+
+    invoke-virtual {v0}, Lcom/rounds/kik/view/VideoModeSlidePanel;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    .line 290
+    iget v2, p0, Lcom/rounds/kik/view/VideoView;->mScreenWidth:I
+
+    iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->width:I
+
+    .line 291
+    iget-object v2, p0, Lcom/rounds/kik/view/VideoView;->mVideoModeSlidePanel:Lcom/rounds/kik/view/VideoModeSlidePanel;
+
+    invoke-virtual {v2, v0}, Lcom/rounds/kik/view/VideoModeSlidePanel;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 292
+    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    iget v2, p0, Lcom/rounds/kik/view/VideoView;->mVideoSurfaceBubbleHeight:I
+
+    invoke-direct {v0, v1, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    .line 293
+    const/16 v1, 0x33
+
+    iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    .line 294
+    iget-object v1, p0, Lcom/rounds/kik/view/VideoView;->mBubblesVideoSurface:Lcom/rounds/kik/view/VideoSurface;
+
+    invoke-virtual {v1, v0}, Lcom/rounds/kik/view/VideoSurface;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 296
+    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    iget v1, p0, Lcom/rounds/kik/view/VideoView;->mScreenWidth:I
+
+    invoke-direct {v0, v1, v5}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    .line 297
+    const/4 v1, 0x5
+
+    iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    .line 298
+    iget-object v1, p0, Lcom/rounds/kik/view/VideoView;->mFullVideoSurface:Lcom/rounds/kik/view/VideoSurface;
+
+    invoke-virtual {v1, v0}, Lcom/rounds/kik/view/VideoSurface;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 300
+    sget v0, Lcom/rounds/kik/R$id;->full_screen_layout:I
+
+    invoke-virtual {p0, v0}, Lcom/rounds/kik/view/VideoView;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/FrameLayout;
+
+    .line 301
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/FrameLayout$LayoutParams;
+
+    .line 302
+    iget v2, p0, Lcom/rounds/kik/view/VideoView;->mScreenWidth:I
+
+    iput v2, v1, Landroid/widget/FrameLayout$LayoutParams;->width:I
+
+    .line 303
+    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 304
     return-void
 .end method
 
 
 # virtual methods
-.method public enableScroll(Z)V
+.method public animateChangeModeTo(Lcom/rounds/kik/view/VideoModeSlidePanel$Mode;ZJ)V
+    .locals 9
+
+    .prologue
+    .line 350
+    iget-boolean v0, p0, Lcom/rounds/kik/view/VideoView;->mOnVideoModeChanging:Z
+
+    if-nez v0, :cond_0
+
+    .line 351
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/rounds/kik/view/VideoView;->mOnVideoModeChanging:Z
+
+    .line 353
+    sget-object v0, Lcom/rounds/kik/view/VideoModeSlidePanel$Mode;->ToFull:Lcom/rounds/kik/view/VideoModeSlidePanel$Mode;
+
+    if-ne p1, v0, :cond_1
+
+    .line 354
+    iget-object v7, p0, Lcom/rounds/kik/view/VideoView;->mChangeToFullModeScrollListener:Landroid/animation/Animator$AnimatorListener;
+
+    .line 360
+    :goto_0
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoModeSlidePanel:Lcom/rounds/kik/view/VideoModeSlidePanel;
+
+    invoke-virtual {v0}, Lcom/rounds/kik/view/VideoModeSlidePanel;->getToModeScrollX()I
+
+    move-result v1
+
+    const-wide/16 v4, 0x0
+
+    sget-object v6, Lcom/rounds/kik/view/VideoView;->CHANGE_MODE_ANIM_INTERPOLATOR:Landroid/animation/TimeInterpolator;
+
+    move-object v0, p0
+
+    move-wide v2, p3
+
+    invoke-direct/range {v0 .. v7}, Lcom/rounds/kik/view/VideoView;->animateScroll(IJJLandroid/animation/TimeInterpolator;Landroid/animation/Animator$AnimatorListener;)V
+
+    .line 362
+    :cond_0
+    return-void
+
+    .line 357
+    :cond_1
+    if-eqz p2, :cond_2
+
+    iget-object v7, p0, Lcom/rounds/kik/view/VideoView;->mChangeToBubbleModeOnDisconnectScrollListener:Landroid/animation/Animator$AnimatorListener;
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v7, p0, Lcom/rounds/kik/view/VideoView;->mChangeToBubbleModeScrollListener:Landroid/animation/Animator$AnimatorListener;
+
+    goto :goto_0
+.end method
+
+.method public animateToBubbleVideoMode()V
     .locals 1
 
     .prologue
-    .line 239
-    iget-boolean v0, p0, Lcom/rounds/kik/view/VideoView;->mEnableMirrorless:Z
+    .line 402
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lcom/rounds/kik/view/VideoView;->animateToBubbleVideoMode(Z)V
+
+    .line 403
+    return-void
+.end method
+
+.method public animateToBubbleVideoMode(Z)V
+    .locals 2
+
+    .prologue
+    .line 389
+    invoke-static {}, Lcom/rounds/kik/VideoAppModule;->concurrency()Lcom/rounds/kik/Concurrency;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/rounds/kik/view/VideoView$9;
+
+    invoke-direct {v1, p0, p1}, Lcom/rounds/kik/view/VideoView$9;-><init>(Lcom/rounds/kik/view/VideoView;Z)V
+
+    invoke-virtual {v0, v1}, Lcom/rounds/kik/Concurrency;->executeOnMainThread(Ljava/lang/Runnable;)Ljava/lang/Runnable;
+
+    .line 398
+    return-void
+.end method
+
+.method public animateToFullScreenAutomatically()V
+    .locals 4
+
+    .prologue
+    .line 339
+    iget-boolean v0, p0, Lcom/rounds/kik/view/VideoView;->mOnVideoModeChanging:Z
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->isInFullVideoMode()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 340
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoModeSlidePanel:Lcom/rounds/kik/view/VideoModeSlidePanel;
+
+    invoke-virtual {v0}, Lcom/rounds/kik/view/VideoModeSlidePanel;->clearInfoData()V
+
+    .line 341
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mActionListener:Lcom/rounds/kik/VideoController$VideoViewActionListener;
 
     if-eqz v0, :cond_0
 
-    .line 240
-    iput-boolean p1, p0, Lcom/rounds/kik/view/VideoView;->mEnableScroll:Z
+    .line 342
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mActionListener:Lcom/rounds/kik/VideoController$VideoViewActionListener;
 
-    .line 242
+    invoke-interface {v0}, Lcom/rounds/kik/VideoController$VideoViewActionListener;->onVideoScroll()V
+
+    .line 344
+    :cond_0
+    sget-object v0, Lcom/rounds/kik/view/VideoModeSlidePanel$Mode;->ToFull:Lcom/rounds/kik/view/VideoModeSlidePanel$Mode;
+
+    const/4 v1, 0x0
+
+    const-wide/16 v2, 0x15e
+
+    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/rounds/kik/view/VideoView;->animateChangeModeTo(Lcom/rounds/kik/view/VideoModeSlidePanel$Mode;ZJ)V
+
+    .line 346
+    :cond_1
+    return-void
+.end method
+
+.method public closeMaskMenu()V
+    .locals 1
+
+    .prologue
+    .line 718
+    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->isInFullVideoMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 719
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mMaskMenu:Lcom/rounds/kik/view/masks/MaskMenuView;
+
+    invoke-virtual {v0}, Lcom/rounds/kik/view/masks/MaskMenuView;->closeMenu()V
+
+    .line 721
     :cond_0
     return-void
 .end method
@@ -1008,33 +1456,31 @@
     .locals 0
 
     .prologue
-    .line 229
-    invoke-direct {p0}, Lcom/rounds/kik/view/VideoView;->onMotionUp()V
+    .line 418
+    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->onMotionUp()V
 
-    .line 230
+    .line 419
     return-void
-.end method
-
-.method public getSurfaceTexture()Landroid/graphics/SurfaceTexture;
-    .locals 1
-
-    .prologue
-    .line 466
-    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
-
-    return-object v0
 .end method
 
 .method public hide(Z)V
     .locals 4
 
     .prologue
-    .line 522
-    if-eqz p1, :cond_0
+    .line 639
+    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->isInFullVideoMode()Z
 
-    .line 523
-    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoSurface:Lcom/rounds/kik/view/VideoSurface;
+    move-result v0
 
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mFullVideoSurface:Lcom/rounds/kik/view/VideoSurface;
+
+    .line 640
+    :goto_0
+    if-eqz p1, :cond_1
+
+    .line 641
     invoke-virtual {v0}, Lcom/rounds/kik/view/VideoSurface;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
@@ -1051,355 +1497,462 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/rounds/kik/view/VideoView$7;
+    new-instance v1, Lcom/rounds/kik/view/VideoView$2;
 
-    invoke-direct {v1, p0}, Lcom/rounds/kik/view/VideoView$7;-><init>(Lcom/rounds/kik/view/VideoView;)V
+    invoke-direct {v1, p0}, Lcom/rounds/kik/view/VideoView$2;-><init>(Lcom/rounds/kik/view/VideoView;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
-    .line 553
-    :goto_0
+    .line 672
+    :goto_1
     return-void
 
-    .line 551
+    .line 639
     :cond_0
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mBubblesVideoSurface:Lcom/rounds/kik/view/VideoSurface;
+
+    goto :goto_0
+
+    .line 670
+    :cond_1
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0}, Lcom/rounds/kik/view/VideoView;->setVisibility(I)V
 
-    goto :goto_0
+    goto :goto_1
 .end method
 
-.method public hideLocal()V
+.method public hideLoader()V
     .locals 2
 
     .prologue
-    .line 349
-    const-wide/16 v0, 0x14
+    .line 320
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mStickerLoader:Landroid/view/View;
 
-    invoke-direct {p0, v0, v1}, Lcom/rounds/kik/view/VideoView;->hideLocal(J)V
+    invoke-virtual {v0}, Landroid/view/View;->clearAnimation()V
 
-    .line 350
+    .line 321
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mStickerLoader:Landroid/view/View;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 322
     return-void
 .end method
 
-.method public hideLocalPartly()V
-    .locals 2
+.method public isInFullVideoMode()Z
+    .locals 1
 
     .prologue
-    .line 371
-    const-wide/16 v0, 0x9c4
+    .line 260
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoModeSlidePanel:Lcom/rounds/kik/view/VideoModeSlidePanel;
 
-    invoke-direct {p0, v0, v1}, Lcom/rounds/kik/view/VideoView;->hideLocalPartly(J)V
+    invoke-virtual {v0}, Lcom/rounds/kik/view/VideoModeSlidePanel;->isInFullMode()Z
 
-    .line 372
-    return-void
+    move-result v0
+
+    return v0
 .end method
 
-.method public hideLocalWithLongDelay()V
-    .locals 2
+.method public isVideoModeChangingToFullScreen()Z
+    .locals 1
 
     .prologue
-    .line 359
-    iget-boolean v0, p0, Lcom/rounds/kik/view/VideoView;->mEnableMirrorless:Z
+    .line 163
+    iget-boolean v0, p0, Lcom/rounds/kik/view/VideoView;->mOnVideoModeChanging:Z
 
     if-eqz v0, :cond_0
 
-    .line 360
-    const-wide/16 v0, 0x1c2
+    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->isInFullVideoMode()Z
 
-    invoke-direct {p0, v0, v1}, Lcom/rounds/kik/view/VideoView;->hideLocal(J)V
+    move-result v0
 
-    .line 362
-    :cond_0
-    return-void
-.end method
+    if-nez v0, :cond_0
 
-.method public networkOff()V
-    .locals 1
-
-    .prologue
-    .line 338
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/rounds/kik/view/VideoView;->mAutoMirrorless:Z
-
-    .line 339
-    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->showLocal()V
-
-    .line 340
-    return-void
-.end method
-
-.method public networkOn()V
-    .locals 1
-
-    .prologue
-    .line 333
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/rounds/kik/view/VideoView;->mAutoMirrorless:Z
+    :goto_0
+    return v0
 
-    .line 334
-    return-void
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
 .method protected onDetachedFromWindow()V
     .locals 0
 
     .prologue
-    .line 423
+    .line 569
     invoke-direct {p0}, Lcom/rounds/kik/view/VideoView;->cancelScrollAnim()V
 
-    .line 424
+    .line 570
     invoke-super {p0}, Landroid/widget/HorizontalScrollView;->onDetachedFromWindow()V
 
-    .line 425
+    .line 571
     return-void
 .end method
 
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 2
+    .locals 3
 
     .prologue
     const/4 v0, 0x1
 
-    .line 249
-    iget-boolean v1, p0, Lcom/rounds/kik/view/VideoView;->mEnableScroll:Z
+    const/4 v1, 0x0
 
-    if-eqz v1, :cond_0
+    .line 431
+    invoke-direct {p0, p1}, Lcom/rounds/kik/view/VideoView;->shouldHandleScroll(Landroid/view/MotionEvent;)Z
 
-    .line 250
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    iget-boolean v2, p0, Lcom/rounds/kik/view/VideoView;->mOnVideoModeChanging:Z
+
+    if-eqz v2, :cond_2
+
+    :cond_0
+    move v0, v1
+
+    .line 445
+    :cond_1
+    :goto_0
+    return v0
+
+    .line 435
+    :cond_2
+    iget-boolean v2, p0, Lcom/rounds/kik/view/VideoView;->mScrollEnabled:Z
+
+    if-eqz v2, :cond_3
+
+    .line 436
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
-    move-result v1
+    move-result v2
 
-    if-nez v1, :cond_1
+    if-nez v2, :cond_5
 
-    .line 251
+    .line 437
+    iget-boolean v2, p0, Lcom/rounds/kik/view/VideoView;->mNeedToShowHint:Z
+
+    if-nez v2, :cond_3
+
+    .line 438
     invoke-direct {p0}, Lcom/rounds/kik/view/VideoView;->cancelScrollAnim()V
 
-    .line 257
-    :cond_0
-    :goto_0
-    iget-boolean v1, p0, Lcom/rounds/kik/view/VideoView;->mEnableScroll:Z
+    .line 445
+    :cond_3
+    :goto_1
+    iget-boolean v2, p0, Lcom/rounds/kik/view/VideoView;->mScrollEnabled:Z
 
-    if-eqz v1, :cond_2
+    if-eqz v2, :cond_4
 
     invoke-super {p0, p1}, Landroid/widget/HorizontalScrollView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_2
+    if-nez v2, :cond_1
 
-    :goto_1
-    return v0
-
-    .line 253
-    :cond_1
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v1
-
-    if-ne v1, v0, :cond_0
-
-    .line 254
-    invoke-direct {p0}, Lcom/rounds/kik/view/VideoView;->onMotionUp()V
+    :cond_4
+    move v0, v1
 
     goto :goto_0
 
-    .line 257
-    :cond_2
-    const/4 v0, 0x0
+    .line 441
+    :cond_5
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v2
+
+    if-ne v2, v0, :cond_3
+
+    .line 442
+    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->onMotionUp()V
 
     goto :goto_1
+.end method
+
+.method public onMotionUp()V
+    .locals 0
+
+    .prologue
+    .line 496
+    invoke-direct {p0}, Lcom/rounds/kik/view/VideoView;->onMotionUpVideoModeChange()V
+
+    .line 497
+    return-void
 .end method
 
 .method public onPause()V
     .locals 1
 
     .prologue
-    .line 581
-    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoSurface:Lcom/rounds/kik/view/VideoSurface;
+    .line 701
+    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->setRefreshFlag()V
 
+    .line 702
+    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->isInFullVideoMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mFullVideoSurface:Lcom/rounds/kik/view/VideoSurface;
+
+    .line 703
+    :goto_0
+    if-eqz v0, :cond_0
+
+    .line 704
     invoke-virtual {v0}, Lcom/rounds/kik/view/VideoSurface;->onPause()V
 
-    .line 582
+    .line 706
+    :cond_0
     return-void
+
+    .line 702
+    :cond_1
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mBubblesVideoSurface:Lcom/rounds/kik/view/VideoSurface;
+
+    goto :goto_0
 .end method
 
 .method public onResume()V
     .locals 1
 
     .prologue
-    .line 586
-    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoSurface:Lcom/rounds/kik/view/VideoSurface;
+    .line 710
+    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->isInFullVideoMode()Z
 
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mFullVideoSurface:Lcom/rounds/kik/view/VideoSurface;
+
+    .line 711
+    :goto_0
+    if-eqz v0, :cond_0
+
+    .line 712
     invoke-virtual {v0}, Lcom/rounds/kik/view/VideoSurface;->onResume()V
 
-    .line 587
-    return-void
-.end method
-
-.method protected onScrollChanged(IIII)V
-    .locals 0
-
-    .prologue
-    .line 220
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/HorizontalScrollView;->onScrollChanged(IIII)V
-
-    .line 221
-    iput p1, p0, Lcom/rounds/kik/view/VideoView;->mLastScrollX:I
-
-    .line 222
-    return-void
-.end method
-
-.method public onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
-    .locals 2
-
-    .prologue
-    .line 441
-    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoSurface:Lcom/rounds/kik/view/VideoSurface;
-
-    invoke-virtual {v0}, Lcom/rounds/kik/view/VideoSurface;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/rounds/kik/view/VideoView;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
-
-    .line 442
-    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoViewListener:Lcom/rounds/kik/VideoController$VideoViewListener;
-
-    sget-object v1, Lcom/rounds/kik/VideoController$TextureViewState;->Available:Lcom/rounds/kik/VideoController$TextureViewState;
-
-    invoke-interface {v0, v1}, Lcom/rounds/kik/VideoController$VideoViewListener;->onTextureViewStateChange(Lcom/rounds/kik/VideoController$TextureViewState;)V
-
-    .line 443
-    return-void
-.end method
-
-.method public onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)Z
-    .locals 2
-
-    .prologue
-    .line 448
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/rounds/kik/view/VideoView;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
-
-    .line 449
-    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoViewListener:Lcom/rounds/kik/VideoController$VideoViewListener;
-
-    sget-object v1, Lcom/rounds/kik/VideoController$TextureViewState;->Unavailable:Lcom/rounds/kik/VideoController$TextureViewState;
-
-    invoke-interface {v0, v1}, Lcom/rounds/kik/VideoController$VideoViewListener;->onTextureViewStateChange(Lcom/rounds/kik/VideoController$TextureViewState;)V
-
-    .line 451
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public onSurfaceTextureSizeChanged(Landroid/graphics/SurfaceTexture;II)V
-    .locals 0
-
-    .prologue
-    .line 457
-    return-void
-.end method
-
-.method public onSurfaceTextureUpdated(Landroid/graphics/SurfaceTexture;)V
-    .locals 0
-
-    .prologue
-    .line 462
-    return-void
-.end method
-
-.method public onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 2
-
-    .prologue
-    const/4 v0, 0x1
-
-    .line 264
-    iget-boolean v1, p0, Lcom/rounds/kik/view/VideoView;->mEnableScroll:Z
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v1
-
-    if-ne v1, v0, :cond_0
-
-    .line 265
-    invoke-direct {p0}, Lcom/rounds/kik/view/VideoView;->onMotionUp()V
-
-    .line 267
+    .line 714
     :cond_0
-    iget-boolean v1, p0, Lcom/rounds/kik/view/VideoView;->mEnableScroll:Z
+    return-void
 
-    if-eqz v1, :cond_1
-
-    invoke-super {p0, p1}, Landroid/widget/HorizontalScrollView;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    :goto_0
-    return v0
-
+    .line 710
     :cond_1
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mBubblesVideoSurface:Lcom/rounds/kik/view/VideoSurface;
 
     goto :goto_0
 .end method
 
-.method public refreshView()V
+.method protected onScrollChanged(IIII)V
+    .locals 2
+
+    .prologue
+    .line 409
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/HorizontalScrollView;->onScrollChanged(IIII)V
+
+    .line 410
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoModeSlidePanel:Lcom/rounds/kik/view/VideoModeSlidePanel;
+
+    int-to-float v1, p1
+
+    invoke-virtual {v0, v1}, Lcom/rounds/kik/view/VideoModeSlidePanel;->onScrollChanged(F)V
+
+    .line 411
+    return-void
+.end method
+
+.method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 4
 
     .prologue
-    .line 562
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    .line 478
+    invoke-direct {p0, p1}, Lcom/rounds/kik/view/VideoView;->shouldHandleScroll(Landroid/view/MotionEvent;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    iget-boolean v2, p0, Lcom/rounds/kik/view/VideoView;->mOnVideoModeChanging:Z
+
+    if-eqz v2, :cond_2
+
+    :cond_0
+    move v0, v1
+
+    .line 491
+    :cond_1
+    :goto_0
+    return v0
+
+    .line 481
+    :cond_2
+    iget-boolean v2, p0, Lcom/rounds/kik/view/VideoView;->mScrollEnabled:Z
+
+    if-eqz v2, :cond_5
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v2
+
+    if-ne v2, v0, :cond_5
+
+    .line 482
+    iput-boolean v1, p0, Lcom/rounds/kik/view/VideoView;->mIsScrolling:Z
+
+    .line 483
+    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->onMotionUp()V
+
+    .line 491
+    :cond_3
+    :goto_1
+    iget-boolean v2, p0, Lcom/rounds/kik/view/VideoView;->mScrollEnabled:Z
+
+    if-eqz v2, :cond_4
+
+    invoke-super {p0, p1}, Landroid/widget/HorizontalScrollView;->onTouchEvent(Landroid/view/MotionEvent;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    :cond_4
+    move v0, v1
+
+    goto :goto_0
+
+    .line 485
+    :cond_5
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v2
+
+    const/4 v3, 0x2
+
+    if-ne v2, v3, :cond_3
+
+    .line 486
+    iput-boolean v0, p0, Lcom/rounds/kik/view/VideoView;->mIsScrolling:Z
+
+    .line 487
+    iget-object v2, p0, Lcom/rounds/kik/view/VideoView;->mActionListener:Lcom/rounds/kik/VideoController$VideoViewActionListener;
+
+    if-eqz v2, :cond_3
+
+    .line 488
+    iget-object v2, p0, Lcom/rounds/kik/view/VideoView;->mActionListener:Lcom/rounds/kik/VideoController$VideoViewActionListener;
+
+    invoke-interface {v2}, Lcom/rounds/kik/VideoController$VideoViewActionListener;->onVideoScroll()V
+
+    goto :goto_1
+.end method
+
+.method public refreshVideoSurfaceView(Lcom/rounds/kik/view/VideoSurface;)V
+    .locals 4
+
+    .prologue
+    .line 681
     invoke-static {}, Lcom/rounds/kik/VideoAppModule;->concurrency()Lcom/rounds/kik/Concurrency;
 
     move-result-object v0
 
-    new-instance v1, Lcom/rounds/kik/view/VideoView$8;
+    new-instance v1, Lcom/rounds/kik/view/VideoView$3;
 
-    invoke-direct {v1, p0}, Lcom/rounds/kik/view/VideoView$8;-><init>(Lcom/rounds/kik/view/VideoView;)V
+    invoke-direct {v1, p0, p1}, Lcom/rounds/kik/view/VideoView$3;-><init>(Lcom/rounds/kik/view/VideoView;Lcom/rounds/kik/view/VideoSurface;)V
 
     const-wide/16 v2, 0x226
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/rounds/kik/Concurrency;->executeOnMainThread(Ljava/lang/Runnable;J)Ljava/lang/Runnable;
 
-    .line 577
+    .line 697
     return-void
 .end method
 
-.method public resetNetworkState()V
+.method public scrollXBy(I)V
     .locals 1
 
     .prologue
-    .line 344
-    const/4 v0, 0x1
+    .line 248
+    iget-boolean v0, p0, Lcom/rounds/kik/view/VideoView;->mOnVideoModeChanging:Z
 
-    iput-boolean v0, p0, Lcom/rounds/kik/view/VideoView;->mAutoMirrorless:Z
+    if-nez v0, :cond_0
 
-    .line 345
+    .line 249
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, p1, v0}, Lcom/rounds/kik/view/VideoView;->scrollBy(II)V
+
+    .line 251
+    :cond_0
     return-void
 .end method
 
-.method public setMirrorlessEnabled(Z)V
+.method public setActionListener(Lcom/rounds/kik/VideoController$VideoViewActionListener;)V
     .locals 0
 
     .prologue
-    .line 234
-    iput-boolean p1, p0, Lcom/rounds/kik/view/VideoView;->mEnableMirrorless:Z
+    .line 725
+    iput-object p1, p0, Lcom/rounds/kik/view/VideoView;->mActionListener:Lcom/rounds/kik/VideoController$VideoViewActionListener;
 
-    .line 235
+    .line 726
+    return-void
+.end method
+
+.method public setMasksData(Ljava/util/List;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/rounds/kik/masks/IMaskModel;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 242
+    new-instance v0, Lcom/rounds/kik/view/masks/MaskViewController;
+
+    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1, p0}, Lcom/rounds/kik/view/masks/MaskViewController;-><init>(Landroid/content/Context;Lcom/rounds/kik/view/masks/MaskViewController$ILoadingView;)V
+
+    iput-object v0, p0, Lcom/rounds/kik/view/VideoView;->mMaskController:Lcom/rounds/kik/view/masks/MaskViewController;
+
+    .line 243
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mMaskMenu:Lcom/rounds/kik/view/masks/MaskMenuView;
+
+    iget-object v1, p0, Lcom/rounds/kik/view/VideoView;->mMaskController:Lcom/rounds/kik/view/masks/MaskViewController;
+
+    invoke-virtual {v0, p1, v1}, Lcom/rounds/kik/view/masks/MaskMenuView;->setMasksData(Ljava/util/List;Lcom/rounds/kik/masks/IMaskListener;)V
+
+    .line 244
+    return-void
+.end method
+
+.method public setModeChangeListener(Lcom/rounds/kik/view/VideoView$IOnVideoModeChangeListener;)V
+    .locals 0
+
+    .prologue
+    .line 255
+    iput-object p1, p0, Lcom/rounds/kik/view/VideoView;->mVideoModeChangeListener:Lcom/rounds/kik/view/VideoView$IOnVideoModeChangeListener;
+
+    .line 256
     return-void
 .end method
 
@@ -1407,12 +1960,34 @@
     .locals 1
 
     .prologue
-    .line 557
+    .line 676
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/rounds/kik/view/VideoView;->mNeedRefresh:Z
 
-    .line 558
+    .line 677
+    return-void
+.end method
+
+.method public setScrollEnabled(Z)V
+    .locals 0
+
+    .prologue
+    .line 423
+    iput-boolean p1, p0, Lcom/rounds/kik/view/VideoView;->mScrollEnabled:Z
+
+    .line 424
+    return-void
+.end method
+
+.method public setShouldShowHintWhenBackToBubble(Z)V
+    .locals 0
+
+    .prologue
+    .line 334
+    iput-boolean p1, p0, Lcom/rounds/kik/view/VideoView;->mShouldShowHintWhenBackToBubble:Z
+
+    .line 335
     return-void
 .end method
 
@@ -1420,188 +1995,212 @@
     .locals 1
 
     .prologue
-    .line 479
+    .line 593
     invoke-super {p0, p1}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
-    .line 480
-    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoSurface:Lcom/rounds/kik/view/VideoSurface;
+    .line 594
+    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->isInFullVideoMode()Z
 
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mFullVideoSurface:Lcom/rounds/kik/view/VideoSurface;
+
+    .line 595
+    :goto_0
     invoke-virtual {v0, p1}, Lcom/rounds/kik/view/VideoSurface;->setVisibility(I)V
 
-    .line 481
+    .line 596
     return-void
+
+    .line 594
+    :cond_0
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mBubblesVideoSurface:Lcom/rounds/kik/view/VideoSurface;
+
+    goto :goto_0
 .end method
 
 .method public show(Z)V
     .locals 4
 
     .prologue
-    const/high16 v1, 0x3f800000    # 1.0f
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 485
-    if-eqz p1, :cond_0
-
-    .line 486
-    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoSurface:Lcom/rounds/kik/view/VideoSurface;
-
-    invoke-virtual {v0}, Lcom/rounds/kik/view/VideoSurface;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v0
-
-    const-wide/16 v2, 0xfa
-
-    invoke-virtual {v0, v2, v3}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/rounds/kik/view/VideoView$6;
-
-    invoke-direct {v1, p0}, Lcom/rounds/kik/view/VideoView$6;-><init>(Lcom/rounds/kik/view/VideoView;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
-
-    .line 518
-    :goto_0
-    return-void
-
-    .line 515
-    :cond_0
-    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoSurface:Lcom/rounds/kik/view/VideoSurface;
-
-    invoke-virtual {v0, v1}, Lcom/rounds/kik/view/VideoSurface;->setAlpha(F)V
-
-    .line 516
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lcom/rounds/kik/view/VideoView;->setVisibility(I)V
-
-    goto :goto_0
-.end method
-
-.method public showLocal()V
-    .locals 2
-
-    .prologue
-    .line 286
-    const-wide/16 v0, 0xfa
-
-    invoke-direct {p0, v0, v1}, Lcom/rounds/kik/view/VideoView;->showLocal(J)V
-
-    .line 287
-    return-void
-.end method
-
-.method public showLocalImmediate()V
-    .locals 2
-
-    .prologue
-    .line 292
-    const-wide/16 v0, 0xa
-
-    invoke-direct {p0, v0, v1}, Lcom/rounds/kik/view/VideoView;->showLocal(J)V
-
-    .line 293
-    return-void
-.end method
-
-.method public updateRingDimension(IZZ)V
-    .locals 6
-
-    .prologue
-    const-wide/16 v4, 0x12c
-
-    .line 169
-    invoke-direct {p0}, Lcom/rounds/kik/view/VideoView;->isShowing()Z
-
-    move-result v0
-
-    .line 170
-    invoke-direct {p0}, Lcom/rounds/kik/view/VideoView;->isMirrorless()Z
-
-    move-result v1
-
-    .line 172
-    div-int/lit8 v2, p1, 0x4
-
-    int-to-float v2, v2
-
-    invoke-static {v2}, Ljava/lang/Math;->round(F)I
-
-    move-result v2
-
-    iput v2, p0, Lcom/rounds/kik/view/VideoView;->mHidePartlyX:I
-
-    .line 173
-    iget v2, p0, Lcom/rounds/kik/view/VideoView;->RING_PADDING:I
-
-    add-int/2addr v2, p1
-
-    iput v2, p0, Lcom/rounds/kik/view/VideoView;->mShowX:I
-
-    .line 174
-    if-nez p2, :cond_1
-
-    .line 199
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 178
-    :cond_1
-    if-eqz v0, :cond_3
-
-    .line 179
-    if-eqz p3, :cond_2
-
-    .line 180
-    invoke-direct {p0, v4, v5}, Lcom/rounds/kik/view/VideoView;->showAndHideLocalPartly(J)V
-
-    goto :goto_0
-
-    .line 183
-    :cond_2
-    invoke-direct {p0, v4, v5}, Lcom/rounds/kik/view/VideoView;->showLocal(J)V
-
-    goto :goto_0
-
-    .line 186
-    :cond_3
-    if-eqz v1, :cond_4
-
-    if-eqz p3, :cond_4
-
-    .line 187
-    const-wide/16 v0, 0x0
-
-    invoke-direct {p0, v0, v1, v4, v5}, Lcom/rounds/kik/view/VideoView;->hideLocalPartly(JJ)V
-
-    goto :goto_0
-
-    .line 191
-    :cond_4
-    invoke-direct {p0}, Lcom/rounds/kik/view/VideoView;->isHidden()Z
+    .line 600
+    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->isInFullVideoMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 192
-    if-eqz p3, :cond_5
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mFullVideoSurface:Lcom/rounds/kik/view/VideoSurface;
 
-    .line 193
-    const-wide/16 v0, 0xa
+    .line 601
+    :goto_0
+    if-eqz p1, :cond_1
 
-    invoke-direct {p0, v0, v1}, Lcom/rounds/kik/view/VideoView;->hideLocalPartly(J)V
+    .line 602
+    invoke-virtual {v0}, Lcom/rounds/kik/view/VideoSurface;->animate()Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v1
+
+    const-wide/16 v2, 0xfa
+
+    invoke-virtual {v1, v2, v3}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/rounds/kik/view/VideoView$11;
+
+    invoke-direct {v2, p0, v0}, Lcom/rounds/kik/view/VideoView$11;-><init>(Lcom/rounds/kik/view/VideoView;Lcom/rounds/kik/view/VideoSurface;)V
+
+    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
+
+    .line 635
+    :goto_1
+    return-void
+
+    .line 600
+    :cond_0
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mBubblesVideoSurface:Lcom/rounds/kik/view/VideoSurface;
 
     goto :goto_0
 
-    .line 196
-    :cond_5
-    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->showLocalImmediate()V
+    .line 632
+    :cond_1
+    invoke-virtual {v0, v2}, Lcom/rounds/kik/view/VideoSurface;->setAlpha(F)V
 
-    goto :goto_0
+    .line 633
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lcom/rounds/kik/view/VideoView;->setVisibility(I)V
+
+    goto :goto_1
+.end method
+
+.method public showHintFullScreen()V
+    .locals 8
+
+    .prologue
+    .line 376
+    iget-boolean v0, p0, Lcom/rounds/kik/view/VideoView;->mOnVideoModeChanging:Z
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/rounds/kik/view/VideoView;->isInFullVideoMode()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 377
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/rounds/kik/view/VideoView;->mNeedToShowHint:Z
+
+    .line 378
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mVideoModeSlidePanel:Lcom/rounds/kik/view/VideoModeSlidePanel;
+
+    invoke-virtual {v0}, Lcom/rounds/kik/view/VideoModeSlidePanel;->getHintScrollX()I
+
+    move-result v1
+
+    const-wide/16 v2, 0xfa
+
+    const-wide/16 v4, 0x0
+
+    sget-object v6, Lcom/rounds/kik/view/VideoView;->HINT_ANIM_SHOW_INTERPOLATOR:Landroid/animation/TimeInterpolator;
+
+    iget-object v7, p0, Lcom/rounds/kik/view/VideoView;->mChangeHintScrollListener:Landroid/animation/Animator$AnimatorListener;
+
+    move-object v0, p0
+
+    invoke-direct/range {v0 .. v7}, Lcom/rounds/kik/view/VideoView;->animateScroll(IJJLandroid/animation/TimeInterpolator;Landroid/animation/Animator$AnimatorListener;)V
+
+    .line 380
+    :cond_0
+    return-void
+.end method
+
+.method public showLoader()V
+    .locals 7
+
+    .prologue
+    const/4 v3, 0x1
+
+    const/high16 v4, 0x3f000000    # 0.5f
+
+    .line 309
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mStickerLoader:Landroid/view/View;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 310
+    new-instance v0, Landroid/view/animation/RotateAnimation;
+
+    const/4 v1, 0x0
+
+    const/high16 v2, 0x43b40000    # 360.0f
+
+    move v5, v3
+
+    move v6, v4
+
+    invoke-direct/range {v0 .. v6}, Landroid/view/animation/RotateAnimation;-><init>(FFIFIF)V
+
+    .line 311
+    const-wide/16 v2, 0x2ee
+
+    invoke-virtual {v0, v2, v3}, Landroid/view/animation/RotateAnimation;->setDuration(J)V
+
+    .line 312
+    new-instance v1, Landroid/view/animation/LinearInterpolator;
+
+    invoke-direct {v1}, Landroid/view/animation/LinearInterpolator;-><init>()V
+
+    invoke-virtual {v0, v1}, Landroid/view/animation/RotateAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
+
+    .line 313
+    const/4 v1, -0x1
+
+    invoke-virtual {v0, v1}, Landroid/view/animation/RotateAnimation;->setRepeatCount(I)V
+
+    .line 314
+    iget-object v1, p0, Lcom/rounds/kik/view/VideoView;->mStickerLoader:Landroid/view/View;
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
+
+    .line 315
+    return-void
+.end method
+
+.method public teardown()V
+    .locals 1
+
+    .prologue
+    .line 326
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mMaskController:Lcom/rounds/kik/view/masks/MaskViewController;
+
+    if-eqz v0, :cond_0
+
+    .line 327
+    iget-object v0, p0, Lcom/rounds/kik/view/VideoView;->mMaskController:Lcom/rounds/kik/view/masks/MaskViewController;
+
+    invoke-virtual {v0}, Lcom/rounds/kik/view/masks/MaskViewController;->teardown()V
+
+    .line 328
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/rounds/kik/view/VideoView;->mMaskController:Lcom/rounds/kik/view/masks/MaskViewController;
+
+    .line 330
+    :cond_0
+    return-void
 .end method

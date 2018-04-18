@@ -13,7 +13,7 @@
 # static fields
 .field public static final MAIN_THREAD:Ljava/util/concurrent/Executor;
 
-.field static final zzbwy:Ljava/util/concurrent/Executor;
+.field static final zzkfx:Ljava/util/concurrent/Executor;
 
 
 # direct methods
@@ -26,11 +26,11 @@
 
     sput-object v0, Lcom/google/android/gms/tasks/TaskExecutors;->MAIN_THREAD:Ljava/util/concurrent/Executor;
 
-    new-instance v0, Lcom/google/android/gms/tasks/TaskExecutors$1;
+    new-instance v0, Lcom/google/android/gms/tasks/m;
 
-    invoke-direct {v0}, Lcom/google/android/gms/tasks/TaskExecutors$1;-><init>()V
+    invoke-direct {v0}, Lcom/google/android/gms/tasks/m;-><init>()V
 
-    sput-object v0, Lcom/google/android/gms/tasks/TaskExecutors;->zzbwy:Ljava/util/concurrent/Executor;
+    sput-object v0, Lcom/google/android/gms/tasks/TaskExecutors;->zzkfx:Ljava/util/concurrent/Executor;
 
     return-void
 .end method

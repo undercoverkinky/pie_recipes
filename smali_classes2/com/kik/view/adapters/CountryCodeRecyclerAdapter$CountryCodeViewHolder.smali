@@ -16,24 +16,20 @@
 
 # instance fields
 .field _countryCode:Landroid/widget/TextView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1102d2
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f100336
     .end annotation
 .end field
 
 .field _countryDescription:Landroid/widget/TextView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1102d1
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f100335
     .end annotation
 .end field
 
-.field private l:Lkik/android/challenge/CountryCode;
+.field private a:Lkik/android/challenge/CountryCode;
 
-.field private final m:Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$a;
+.field private final b:Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$a;
 
 
 # direct methods
@@ -45,10 +41,10 @@
     invoke-direct {p0, p1}, Landroid/support/v7/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
     .line 51
-    iput-object p2, p0, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$CountryCodeViewHolder;->m:Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$a;
+    iput-object p2, p0, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$CountryCodeViewHolder;->b:Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$a;
 
     .line 52
-    invoke-static {p0, p1}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)V
+    invoke-static {p0, p1}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)Lbutterknife/Unbinder;
 
     .line 53
     return-void
@@ -61,7 +57,7 @@
 
     .prologue
     .line 57
-    iput-object p1, p0, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$CountryCodeViewHolder;->l:Lkik/android/challenge/CountryCode;
+    iput-object p1, p0, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$CountryCodeViewHolder;->a:Lkik/android/challenge/CountryCode;
 
     .line 58
     iget-object v0, p0, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$CountryCodeViewHolder;->_countryCode:Landroid/widget/TextView;
@@ -85,15 +81,15 @@
     .locals 2
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f1102d0
+            0x7f100334
         }
     .end annotation
 
     .prologue
     .line 65
-    iget-object v0, p0, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$CountryCodeViewHolder;->m:Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$a;
+    iget-object v0, p0, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$CountryCodeViewHolder;->b:Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$a;
 
-    iget-object v1, p0, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$CountryCodeViewHolder;->l:Lkik/android/challenge/CountryCode;
+    iget-object v1, p0, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$CountryCodeViewHolder;->a:Lkik/android/challenge/CountryCode;
 
     invoke-interface {v0, v1}, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$a;->a(Lkik/android/challenge/CountryCode;)V
 

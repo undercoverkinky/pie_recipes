@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 365
+    .line 408
     iput-object p1, p0, Lcom/kik/b/b$a;->a:Lcom/kik/b/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
     .locals 0
 
     .prologue
-    .line 365
+    .line 408
     invoke-direct {p0, p1}, Lcom/kik/b/b$a;-><init>(Lcom/kik/b/b;)V
 
     return-void
@@ -52,7 +52,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 373
+    .line 416
     iget-object v0, p0, Lcom/kik/b/b$a;->a:Lcom/kik/b/b;
 
     invoke-static {v0}, Lcom/kik/b/b;->a(Lcom/kik/b/b;)Ljava/util/concurrent/ScheduledExecutorService;
@@ -61,7 +61,7 @@
 
     monitor-enter v2
 
-    .line 374
+    .line 417
     :try_start_0
     iget-object v0, p0, Lcom/kik/b/b$a;->a:Lcom/kik/b/b;
 
@@ -71,7 +71,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 375
+    .line 418
     iget-object v0, p0, Lcom/kik/b/b$a;->a:Lcom/kik/b/b;
 
     invoke-static {v0}, Lcom/kik/b/b;->b(Lcom/kik/b/b;)Ljava/util/concurrent/ScheduledFuture;
@@ -82,18 +82,18 @@
 
     invoke-interface {v0, v3}, Ljava/util/concurrent/ScheduledFuture;->cancel(Z)Z
 
-    .line 376
+    .line 419
     iget-object v0, p0, Lcom/kik/b/b$a;->a:Lcom/kik/b/b;
 
     invoke-static {v0}, Lcom/kik/b/b;->c(Lcom/kik/b/b;)Ljava/util/concurrent/ScheduledFuture;
 
-    .line 379
+    .line 422
     :cond_0
     iget-object v0, p0, Lcom/kik/b/b$a;->a:Lcom/kik/b/b;
 
     invoke-static {v0}, Lcom/kik/b/b;->d(Lcom/kik/b/b;)Ljava/io/File;
 
-    .line 380
+    .line 423
     iget-object v0, p0, Lcom/kik/b/b$a;->a:Lcom/kik/b/b;
 
     invoke-static {v0}, Lcom/kik/b/b;->e(Lcom/kik/b/b;)Ljava/io/File;
@@ -104,17 +104,17 @@
 
     move-result-object v3
 
-    .line 381
+    .line 424
     monitor-exit v2
 
-    .line 382
+    .line 425
     if-nez v3, :cond_2
 
-    .line 402
+    .line 445
     :cond_1
     return-void
 
-    .line 381
+    .line 424
     :catchall_0
     move-exception v0
 
@@ -124,7 +124,7 @@
 
     throw v0
 
-    .line 386
+    .line 429
     :cond_2
     new-instance v0, Lcom/kik/b/b$b;
 
@@ -134,7 +134,7 @@
 
     invoke-static {v3, v0}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
 
-    .line 389
+    .line 432
     array-length v0, v3
 
     const/16 v2, 0x14
@@ -143,7 +143,7 @@
 
     move v0, v1
 
-    .line 390
+    .line 433
     :goto_0
     array-length v2, v3
 
@@ -151,7 +151,7 @@
 
     if-ge v0, v2, :cond_4
 
-    .line 392
+    .line 435
     aget-object v2, v3, v0
 
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
@@ -160,7 +160,7 @@
 
     if-nez v2, :cond_3
 
-    .line 393
+    .line 436
     invoke-static {}, Lcom/kik/b/b;->b()Lorg/slf4j/b;
 
     move-result-object v2
@@ -171,19 +171,19 @@
 
     invoke-interface {v2, v4, v5}, Lorg/slf4j/b;->warn(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 390
+    .line 433
     :cond_3
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 398
+    .line 441
     :cond_4
     array-length v0, v3
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 399
+    .line 442
     array-length v2, v3
 
     move v0, v1
@@ -193,7 +193,7 @@
 
     aget-object v4, v3, v0
 
-    .line 400
+    .line 443
     iget-object v5, p0, Lcom/kik/b/b$a;->a:Lcom/kik/b/b;
 
     invoke-static {v5}, Lcom/kik/b/b;->a(Lcom/kik/b/b;)Ljava/util/concurrent/ScheduledExecutorService;
@@ -208,7 +208,7 @@
 
     invoke-interface {v5, v6}, Ljava/util/concurrent/ScheduledExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
-    .line 399
+    .line 442
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1

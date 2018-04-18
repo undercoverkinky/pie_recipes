@@ -52,6 +52,7 @@
 
     const/16 v3, 0x80
 
+    .line 27
     invoke-virtual {v1, v2, v3}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v1

@@ -31,16 +31,7 @@
 # instance fields
 .field private final mName:Ljava/lang/String;
 
-.field private final zzajk:Lcom/google/android/gms/common/api/Api$zzf;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/common/api/Api$zzf",
-            "<*>;"
-        }
-    .end annotation
-.end field
-
-.field private final zzakG:Lcom/google/android/gms/common/api/Api$zza;
+.field private final zzffz:Lcom/google/android/gms/common/api/Api$zza;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/android/gms/common/api/Api$zza",
@@ -49,7 +40,7 @@
     .end annotation
 .end field
 
-.field private final zzakH:Lcom/google/android/gms/common/api/Api$zzh;
+.field private final zzfga:Lcom/google/android/gms/common/api/Api$zzh;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/android/gms/common/api/Api$zzh",
@@ -58,7 +49,16 @@
     .end annotation
 .end field
 
-.field private final zzakI:Lcom/google/android/gms/common/api/Api$zzi;
+.field private final zzfgb:Lcom/google/android/gms/common/api/Api$zzf;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/android/gms/common/api/Api$zzf",
+            "<*>;"
+        }
+    .end annotation
+.end field
+
+.field private final zzfgc:Lcom/google/android/gms/common/api/Api$zzi;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/android/gms/common/api/Api$zzi",
@@ -90,21 +90,21 @@
 
     const-string v0, "Cannot construct an Api with a null ClientBuilder"
 
-    invoke-static {p2, v0}, Lcom/google/android/gms/common/internal/zzaa;->zzb(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p2, v0}, Lcom/google/android/gms/common/internal/zzbp;->zzb(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v0, "Cannot construct an Api with a null ClientKey"
 
-    invoke-static {p3, v0}, Lcom/google/android/gms/common/internal/zzaa;->zzb(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p3, v0}, Lcom/google/android/gms/common/internal/zzbp;->zzb(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Lcom/google/android/gms/common/api/Api;->mName:Ljava/lang/String;
 
-    iput-object p2, p0, Lcom/google/android/gms/common/api/Api;->zzakG:Lcom/google/android/gms/common/api/Api$zza;
+    iput-object p2, p0, Lcom/google/android/gms/common/api/Api;->zzffz:Lcom/google/android/gms/common/api/Api$zza;
 
-    iput-object v1, p0, Lcom/google/android/gms/common/api/Api;->zzakH:Lcom/google/android/gms/common/api/Api$zzh;
+    iput-object v1, p0, Lcom/google/android/gms/common/api/Api;->zzfga:Lcom/google/android/gms/common/api/Api$zzh;
 
-    iput-object p3, p0, Lcom/google/android/gms/common/api/Api;->zzajk:Lcom/google/android/gms/common/api/Api$zzf;
+    iput-object p3, p0, Lcom/google/android/gms/common/api/Api;->zzfgb:Lcom/google/android/gms/common/api/Api$zzf;
 
-    iput-object v1, p0, Lcom/google/android/gms/common/api/Api;->zzakI:Lcom/google/android/gms/common/api/Api$zzi;
+    iput-object v1, p0, Lcom/google/android/gms/common/api/Api;->zzfgc:Lcom/google/android/gms/common/api/Api$zzi;
 
     return-void
 .end method
@@ -119,7 +119,7 @@
     return-object v0
 .end method
 
-.method public final zzrb()Lcom/google/android/gms/common/api/Api$zzd;
+.method public final zzafb()Lcom/google/android/gms/common/api/Api$zzd;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -129,24 +129,12 @@
         }
     .end annotation
 
-    invoke-virtual {p0}, Lcom/google/android/gms/common/api/Api;->zzrf()Z
+    iget-object v0, p0, Lcom/google/android/gms/common/api/Api;->zzffz:Lcom/google/android/gms/common/api/Api$zza;
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
     return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lcom/google/android/gms/common/api/Api;->zzakG:Lcom/google/android/gms/common/api/Api$zza;
-
-    goto :goto_0
 .end method
 
-.method public final zzrc()Lcom/google/android/gms/common/api/Api$zza;
+.method public final zzafc()Lcom/google/android/gms/common/api/Api$zza;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -156,7 +144,7 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/google/android/gms/common/api/Api;->zzakG:Lcom/google/android/gms/common/api/Api$zza;
+    iget-object v0, p0, Lcom/google/android/gms/common/api/Api;->zzffz:Lcom/google/android/gms/common/api/Api$zza;
 
     if-eqz v0, :cond_0
 
@@ -165,9 +153,9 @@
     :goto_0
     const-string v1, "This API was constructed with a SimpleClientBuilder. Use getSimpleClientBuilder"
 
-    invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/zzaa;->zza(ZLjava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/zzbp;->zza(ZLjava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/google/android/gms/common/api/Api;->zzakG:Lcom/google/android/gms/common/api/Api$zza;
+    iget-object v0, p0, Lcom/google/android/gms/common/api/Api;->zzffz:Lcom/google/android/gms/common/api/Api$zza;
 
     return-object v0
 
@@ -177,28 +165,7 @@
     goto :goto_0
 .end method
 
-.method public final zzrd()Lcom/google/android/gms/common/api/Api$zzh;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/google/android/gms/common/api/Api$zzh",
-            "<*TO;>;"
-        }
-    .end annotation
-
-    const/4 v0, 0x0
-
-    const-string v1, "This API was constructed with a ClientBuilder. Use getClientBuilder"
-
-    invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/zzaa;->zza(ZLjava/lang/Object;)V
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final zzre()Lcom/google/android/gms/common/api/Api$zzc;
+.method public final zzafd()Lcom/google/android/gms/common/api/Api$zzc;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -208,11 +175,11 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/google/android/gms/common/api/Api;->zzajk:Lcom/google/android/gms/common/api/Api$zzf;
+    iget-object v0, p0, Lcom/google/android/gms/common/api/Api;->zzfgb:Lcom/google/android/gms/common/api/Api$zzf;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/google/android/gms/common/api/Api;->zzajk:Lcom/google/android/gms/common/api/Api$zzf;
+    iget-object v0, p0, Lcom/google/android/gms/common/api/Api;->zzfgb:Lcom/google/android/gms/common/api/Api$zzf;
 
     return-object v0
 
@@ -224,12 +191,4 @@
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
-.end method
-
-.method public final zzrf()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
 .end method

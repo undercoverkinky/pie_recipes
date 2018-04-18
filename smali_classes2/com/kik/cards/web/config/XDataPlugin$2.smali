@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/kik/events/q;
+.implements Lcom/kik/events/p;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/cards/web/config/XDataPlugin;->getAllRecords(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/h;
+    value = Lcom/kik/cards/web/config/XDataPlugin;->getAllRecords(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/g;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/kik/events/q",
+        "Lcom/kik/events/p",
         "<",
         "Ljava/lang/Object;",
         "Lorg/json/JSONObject;",
@@ -55,7 +55,7 @@
 
 
 # virtual methods
-.method public final bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
     .prologue
@@ -69,7 +69,7 @@
 
     iget-object v2, p0, Lcom/kik/cards/web/config/XDataPlugin$2;->b:Ljava/lang/Class;
 
-    invoke-static {v0, v1, p1, v2}, Lcom/kik/cards/web/config/XDataPlugin;->a(Lcom/kik/cards/web/config/XDataPlugin;Ljava/lang/String;Lcom/dyuproject/protostuff/p;Ljava/lang/Class;)Lorg/json/JSONObject;
+    invoke-static {v0, v1, p1, v2}, Lcom/kik/cards/web/config/XDataPlugin;->access$000(Lcom/kik/cards/web/config/XDataPlugin;Ljava/lang/String;Lcom/dyuproject/protostuff/p;Ljava/lang/Class;)Lorg/json/JSONObject;
 
     move-result-object v0
 

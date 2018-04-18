@@ -29,6 +29,10 @@
 
 .field public static final enum CONNECTIVITY_NATIVE_CLIENT_INIT_SUCCESS:Lcom/rounds/kik/analytics/BasicEvents;
 
+.field public static final enum SETTINGS_AUTOFULLSCREEN_SWITCHOFF:Lcom/rounds/kik/analytics/BasicEvents;
+
+.field public static final enum SETTINGS_AUTOFULLSCREEN_SWITCHON:Lcom/rounds/kik/analytics/BasicEvents;
+
 
 # instance fields
 .field private final mEventName:Ljava/lang/String;
@@ -36,9 +40,13 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 8
 
     .prologue
+    const/4 v7, 0x4
+
+    const/4 v6, 0x3
+
     const/4 v5, 0x2
 
     const/4 v4, 0x1
@@ -78,8 +86,30 @@
 
     sput-object v0, Lcom/rounds/kik/analytics/BasicEvents;->CONNECTIVITY_NATIVE_CLIENT_INIT_SUCCESS:Lcom/rounds/kik/analytics/BasicEvents;
 
+    .line 22
+    new-instance v0, Lcom/rounds/kik/analytics/BasicEvents;
+
+    const-string v1, "SETTINGS_AUTOFULLSCREEN_SWITCHON"
+
+    const-string v2, "settings_autofullscreen_switchon"
+
+    invoke-direct {v0, v1, v6, v2}, Lcom/rounds/kik/analytics/BasicEvents;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/rounds/kik/analytics/BasicEvents;->SETTINGS_AUTOFULLSCREEN_SWITCHON:Lcom/rounds/kik/analytics/BasicEvents;
+
+    .line 23
+    new-instance v0, Lcom/rounds/kik/analytics/BasicEvents;
+
+    const-string v1, "SETTINGS_AUTOFULLSCREEN_SWITCHOFF"
+
+    const-string v2, "settings_autofullscreen_switchoff"
+
+    invoke-direct {v0, v1, v7, v2}, Lcom/rounds/kik/analytics/BasicEvents;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/rounds/kik/analytics/BasicEvents;->SETTINGS_AUTOFULLSCREEN_SWITCHOFF:Lcom/rounds/kik/analytics/BasicEvents;
+
     .line 17
-    const/4 v0, 0x3
+    const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/rounds/kik/analytics/BasicEvents;
 
@@ -94,6 +124,14 @@
     sget-object v1, Lcom/rounds/kik/analytics/BasicEvents;->CONNECTIVITY_NATIVE_CLIENT_INIT_SUCCESS:Lcom/rounds/kik/analytics/BasicEvents;
 
     aput-object v1, v0, v5
+
+    sget-object v1, Lcom/rounds/kik/analytics/BasicEvents;->SETTINGS_AUTOFULLSCREEN_SWITCHON:Lcom/rounds/kik/analytics/BasicEvents;
+
+    aput-object v1, v0, v6
+
+    sget-object v1, Lcom/rounds/kik/analytics/BasicEvents;->SETTINGS_AUTOFULLSCREEN_SWITCHOFF:Lcom/rounds/kik/analytics/BasicEvents;
+
+    aput-object v1, v0, v7
 
     sput-object v0, Lcom/rounds/kik/analytics/BasicEvents;->$VALUES:[Lcom/rounds/kik/analytics/BasicEvents;
 
@@ -111,13 +149,13 @@
     .end annotation
 
     .prologue
-    .line 26
+    .line 29
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 27
+    .line 30
     iput-object p3, p0, Lcom/rounds/kik/analytics/BasicEvents;->mEventName:Ljava/lang/String;
 
-    .line 28
+    .line 31
     return-void
 .end method
 
@@ -159,7 +197,7 @@
     .locals 2
 
     .prologue
-    .line 32
+    .line 35
     iget-object v0, p0, Lcom/rounds/kik/analytics/BasicEvents;->mEventName:Ljava/lang/String;
 
     const-class v1, Lcom/rounds/kik/analytics/BasicEvents$Builder;

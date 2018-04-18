@@ -35,13 +35,13 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/google/ads/mediation/AbstractAdViewAdapter$b;->setHeadline(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->setHeadline(Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/google/android/gms/ads/formats/NativeContentAd;->getImages()Ljava/util/List;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/google/ads/mediation/AbstractAdViewAdapter$b;->setImages(Ljava/util/List;)V
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->setImages(Ljava/util/List;)V
 
     invoke-virtual {p1}, Lcom/google/android/gms/ads/formats/NativeContentAd;->getBody()Ljava/lang/CharSequence;
 
@@ -51,14 +51,21 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/google/ads/mediation/AbstractAdViewAdapter$b;->setBody(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->setBody(Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/google/android/gms/ads/formats/NativeContentAd;->getLogo()Lcom/google/android/gms/ads/formats/NativeAd$Image;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/google/ads/mediation/AbstractAdViewAdapter$b;->setLogo(Lcom/google/android/gms/ads/formats/NativeAd$Image;)V
+    if-eqz v0, :cond_0
 
+    invoke-virtual {p1}, Lcom/google/android/gms/ads/formats/NativeContentAd;->getLogo()Lcom/google/android/gms/ads/formats/NativeAd$Image;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->setLogo(Lcom/google/android/gms/ads/formats/NativeAd$Image;)V
+
+    :cond_0
     invoke-virtual {p1}, Lcom/google/android/gms/ads/formats/NativeContentAd;->getCallToAction()Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -67,7 +74,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/google/ads/mediation/AbstractAdViewAdapter$b;->setCallToAction(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->setCallToAction(Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/google/android/gms/ads/formats/NativeContentAd;->getAdvertiser()Ljava/lang/CharSequence;
 
@@ -77,11 +84,17 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/google/ads/mediation/AbstractAdViewAdapter$b;->setAdvertiser(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->setAdvertiser(Ljava/lang/String;)V
 
-    invoke-virtual {p0, v1}, Lcom/google/ads/mediation/AbstractAdViewAdapter$b;->setOverrideImpressionRecording(Z)V
+    invoke-virtual {p0, v1}, Lcom/google/android/gms/ads/mediation/NativeAdMapper;->setOverrideImpressionRecording(Z)V
 
-    invoke-virtual {p0, v1}, Lcom/google/ads/mediation/AbstractAdViewAdapter$b;->setOverrideClickHandling(Z)V
+    invoke-virtual {p0, v1}, Lcom/google/android/gms/ads/mediation/NativeAdMapper;->setOverrideClickHandling(Z)V
+
+    invoke-virtual {p1}, Lcom/google/android/gms/ads/formats/NativeContentAd;->getVideoController()Lcom/google/android/gms/ads/VideoController;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/ads/mediation/NativeContentAdMapper;->zza(Lcom/google/android/gms/ads/VideoController;)V
 
     return-void
 .end method

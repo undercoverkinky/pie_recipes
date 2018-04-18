@@ -31,8 +31,11 @@
             "Ljava/lang/String;",
             "Ljava/util/List",
             "<",
+            "Landroid/support/v4/util/Pair",
+            "<",
+            "Landroid/os/IBinder;",
             "Landroid/os/Bundle;",
-            ">;>;"
+            ">;>;>;"
         }
     .end annotation
 .end field
@@ -41,31 +44,22 @@
 
 
 # direct methods
-.method private constructor <init>(Landroid/support/v4/media/MediaBrowserServiceCompat;)V
+.method constructor <init>(Landroid/support/v4/media/MediaBrowserServiceCompat;)V
     .locals 1
 
     .prologue
-    .line 220
+    .line 473
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;->this$0:Landroid/support/v4/media/MediaBrowserServiceCompat;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 225
+    .line 471
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;->subscriptions:Ljava/util/HashMap;
 
-    return-void
-.end method
-
-.method synthetic constructor <init>(Landroid/support/v4/media/MediaBrowserServiceCompat;Landroid/support/v4/media/MediaBrowserServiceCompat$1;)V
-    .locals 0
-
-    .prologue
-    .line 220
-    invoke-direct {p0, p1}, Landroid/support/v4/media/MediaBrowserServiceCompat$ConnectionRecord;-><init>(Landroid/support/v4/media/MediaBrowserServiceCompat;)V
-
+    .line 474
     return-void
 .end method

@@ -1,11 +1,12 @@
 .class public Lkik/core/datatypes/messageExtensions/ContentMessage;
-.super Lkik/core/datatypes/messageExtensions/f;
+.super Lkik/core/datatypes/messageExtensions/MessageAttachment;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lkik/core/datatypes/messageExtensions/ContentMessage$ContextualLinkAction;,
         Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;,
         Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;,
         Lkik/core/datatypes/messageExtensions/ContentMessage$ContentFileState;
@@ -91,7 +92,7 @@
             "Ljava/util/Map",
             "<",
             "Ljava/lang/String;",
-            "Lkik/core/datatypes/t;",
+            "Lkik/core/datatypes/q;",
             ">;"
         }
     .end annotation
@@ -119,18 +120,31 @@
 
 .field private q:Ljava/lang/String;
 
+.field private r:Ljava/lang/String;
+
+.field private s:Ldagger/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ldagger/a",
+            "<",
+            "Lkik/core/datatypes/messageExtensions/ContentMessage$ContextualLinkAction;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 3
 
     .prologue
-    .line 46
+    .line 50
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 47
+    .line 51
     sput-object v0, Lkik/core/datatypes/messageExtensions/ContentMessage;->a:Ljava/util/Map;
 
     const-string v1, "com.kik.ext.camera"
@@ -139,7 +153,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 48
+    .line 52
     sget-object v0, Lkik/core/datatypes/messageExtensions/ContentMessage;->a:Ljava/util/Map;
 
     const-string v1, "com.kik.ext.gallery"
@@ -148,7 +162,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 49
+    .line 53
     sget-object v0, Lkik/core/datatypes/messageExtensions/ContentMessage;->a:Ljava/util/Map;
 
     const-string v1, "com.kik.ext.video-camera"
@@ -157,7 +171,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 50
+    .line 54
     sget-object v0, Lkik/core/datatypes/messageExtensions/ContentMessage;->a:Ljava/util/Map;
 
     const-string v1, "com.kik.ext.video-gallery"
@@ -166,7 +180,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 51
+    .line 55
     sget-object v0, Lkik/core/datatypes/messageExtensions/ContentMessage;->a:Ljava/util/Map;
 
     const-string v1, "com.kik.ext.gif"
@@ -175,12 +189,12 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 78
+    .line 89
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 80
+    .line 92
     sput-object v0, Lkik/core/datatypes/messageExtensions/ContentMessage;->b:Ljava/util/Map;
 
     sget-object v1, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;->WebM:Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;
@@ -189,7 +203,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 81
+    .line 93
     sget-object v0, Lkik/core/datatypes/messageExtensions/ContentMessage;->b:Ljava/util/Map;
 
     sget-object v1, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;->MP4:Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;
@@ -198,7 +212,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 82
+    .line 94
     sget-object v0, Lkik/core/datatypes/messageExtensions/ContentMessage;->b:Ljava/util/Map;
 
     sget-object v1, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;->TinyMP4:Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;
@@ -207,7 +221,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 83
+    .line 95
     sget-object v0, Lkik/core/datatypes/messageExtensions/ContentMessage;->b:Ljava/util/Map;
 
     sget-object v1, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;->TinyWebM:Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;
@@ -216,7 +230,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 84
+    .line 96
     sget-object v0, Lkik/core/datatypes/messageExtensions/ContentMessage;->b:Ljava/util/Map;
 
     sget-object v1, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;->NanoWebM:Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;
@@ -225,7 +239,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 85
+    .line 97
     sget-object v0, Lkik/core/datatypes/messageExtensions/ContentMessage;->b:Ljava/util/Map;
 
     sget-object v1, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;->NanoMP4:Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;
@@ -234,7 +248,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 86
+    .line 98
     return-void
 .end method
 
@@ -244,47 +258,54 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 260
+    .line 378
     const/16 v0, 0xf
 
-    invoke-direct {p0, v1, v1, v0}, Lkik/core/datatypes/messageExtensions/f;-><init>(ZZI)V
+    invoke-direct {p0, v1, v1, v0}, Lkik/core/datatypes/messageExtensions/MessageAttachment;-><init>(ZZI)V
 
-    .line 170
+    .line 263
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->h:Ljava/util/ArrayList;
 
-    .line 173
+    .line 266
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->i:Ljava/util/Map;
 
-    .line 174
+    .line 267
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->j:Ljava/util/Map;
 
-    .line 175
+    .line 268
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->k:Ljava/util/Map;
 
-    .line 176
+    .line 269
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->l:Ljava/util/Map;
 
-    .line 261
+    .line 277
+    invoke-static {p0}, Lkik/core/datatypes/messageExtensions/c;->a(Lkik/core/datatypes/messageExtensions/ContentMessage;)Ldagger/a;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->s:Ldagger/a;
+
+    .line 379
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
     move-result-object v0
@@ -295,18 +316,18 @@
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->c:Ljava/lang/String;
 
-    .line 262
+    .line 380
     iput-object p1, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->d:Ljava/lang/String;
 
-    .line 263
+    .line 381
     const-string v0, "2"
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->e:Ljava/lang/String;
 
-    .line 265
-    invoke-direct {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->L()V
+    .line 383
+    invoke-direct {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->M()V
 
-    .line 266
+    .line 384
     return-void
 .end method
 
@@ -316,61 +337,68 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 270
+    .line 388
     const/16 v0, 0xf
 
-    invoke-direct {p0, v1, v1, v0}, Lkik/core/datatypes/messageExtensions/f;-><init>(ZZI)V
+    invoke-direct {p0, v1, v1, v0}, Lkik/core/datatypes/messageExtensions/MessageAttachment;-><init>(ZZI)V
 
-    .line 170
+    .line 263
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->h:Ljava/util/ArrayList;
 
-    .line 173
+    .line 266
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->i:Ljava/util/Map;
 
-    .line 174
+    .line 267
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->j:Ljava/util/Map;
 
-    .line 175
+    .line 268
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->k:Ljava/util/Map;
 
-    .line 176
+    .line 269
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->l:Ljava/util/Map;
 
-    .line 271
+    .line 277
+    invoke-static {p0}, Lkik/core/datatypes/messageExtensions/d;->a(Lkik/core/datatypes/messageExtensions/ContentMessage;)Ldagger/a;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->s:Ldagger/a;
+
+    .line 389
     iput-object p2, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->c:Ljava/lang/String;
 
-    .line 272
+    .line 390
     iput-object p1, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->d:Ljava/lang/String;
 
-    .line 273
+    .line 391
     const-string v0, "2"
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->e:Ljava/lang/String;
 
-    .line 275
-    invoke-direct {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->L()V
+    .line 393
+    invoke-direct {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->M()V
 
-    .line 276
+    .line 394
     return-void
 .end method
 
@@ -394,7 +422,7 @@
             "Ljava/util/Map",
             "<",
             "Ljava/lang/String;",
-            "Lkik/core/datatypes/t;",
+            "Lkik/core/datatypes/q;",
             ">;",
             "Ljava/util/Map",
             "<",
@@ -412,114 +440,121 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 317
+    .line 435
     const/16 v0, 0xf
 
-    invoke-direct {p0, v1, v1, v0}, Lkik/core/datatypes/messageExtensions/f;-><init>(ZZI)V
+    invoke-direct {p0, v1, v1, v0}, Lkik/core/datatypes/messageExtensions/MessageAttachment;-><init>(ZZI)V
 
-    .line 170
+    .line 263
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->h:Ljava/util/ArrayList;
 
-    .line 173
+    .line 266
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->i:Ljava/util/Map;
 
-    .line 174
+    .line 267
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->j:Ljava/util/Map;
 
-    .line 175
+    .line 268
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->k:Ljava/util/Map;
 
-    .line 176
+    .line 269
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->l:Ljava/util/Map;
 
-    .line 319
+    .line 277
+    invoke-static {p0}, Lkik/core/datatypes/messageExtensions/f;->a(Lkik/core/datatypes/messageExtensions/ContentMessage;)Ldagger/a;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->s:Ldagger/a;
+
+    .line 437
     iput-object p2, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->d:Ljava/lang/String;
 
-    .line 320
+    .line 438
     iput-object p1, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->c:Ljava/lang/String;
 
-    .line 321
+    .line 439
     iput-object p3, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->e:Ljava/lang/String;
 
-    .line 323
+    .line 441
     if-nez p4, :cond_0
 
-    .line 324
+    .line 442
     new-instance p4, Ljava/util/ArrayList;
 
     invoke-direct {p4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 326
+    .line 444
     :cond_0
     if-nez p7, :cond_1
 
-    .line 327
+    .line 445
     new-instance p7, Ljava/util/LinkedHashMap;
 
     invoke-direct {p7}, Ljava/util/LinkedHashMap;-><init>()V
 
-    .line 329
+    .line 447
     :cond_1
     if-nez p6, :cond_2
 
-    .line 330
+    .line 448
     new-instance p6, Ljava/util/LinkedHashMap;
 
     invoke-direct {p6}, Ljava/util/LinkedHashMap;-><init>()V
 
-    .line 332
+    .line 450
     :cond_2
     if-nez p5, :cond_3
 
-    .line 333
+    .line 451
     new-instance p5, Ljava/util/LinkedHashMap;
 
     invoke-direct {p5}, Ljava/util/LinkedHashMap;-><init>()V
 
-    .line 336
+    .line 454
     :cond_3
     iput-object p7, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->i:Ljava/util/Map;
 
-    .line 337
+    .line 455
     iput-object p6, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->k:Ljava/util/Map;
 
-    .line 338
+    .line 456
     iput-object p5, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->j:Ljava/util/Map;
 
-    .line 340
+    .line 458
     if-eqz p8, :cond_4
 
-    .line 341
+    .line 459
     iput-object p8, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->l:Ljava/util/Map;
 
-    .line 344
+    .line 462
     :cond_4
     iput-object p4, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->h:Ljava/util/ArrayList;
 
-    .line 346
-    invoke-direct {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->L()V
+    .line 464
+    invoke-direct {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->M()V
 
-    .line 347
+    .line 465
     return-void
 .end method
 
@@ -543,7 +578,7 @@
             "Ljava/util/Map",
             "<",
             "Ljava/lang/String;",
-            "Lkik/core/datatypes/t;",
+            "Lkik/core/datatypes/q;",
             ">;",
             "Ljava/util/Map",
             "<",
@@ -566,89 +601,96 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 352
+    .line 470
     const/16 v0, 0xf
 
-    invoke-direct {p0, v1, v1, v0}, Lkik/core/datatypes/messageExtensions/f;-><init>(ZZI)V
+    invoke-direct {p0, v1, v1, v0}, Lkik/core/datatypes/messageExtensions/MessageAttachment;-><init>(ZZI)V
 
-    .line 170
+    .line 263
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->h:Ljava/util/ArrayList;
 
-    .line 173
+    .line 266
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->i:Ljava/util/Map;
 
-    .line 174
+    .line 267
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->j:Ljava/util/Map;
 
-    .line 175
+    .line 268
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->k:Ljava/util/Map;
 
-    .line 176
+    .line 269
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->l:Ljava/util/Map;
 
-    .line 354
+    .line 277
+    invoke-static {p0}, Lkik/core/datatypes/messageExtensions/g;->a(Lkik/core/datatypes/messageExtensions/ContentMessage;)Ldagger/a;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->s:Ldagger/a;
+
+    .line 472
     iput-object p2, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->d:Ljava/lang/String;
 
-    .line 355
+    .line 473
     iput-object p1, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->c:Ljava/lang/String;
 
-    .line 356
+    .line 474
     iput-object p3, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->e:Ljava/lang/String;
 
-    .line 371
+    .line 489
     iput-object p7, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->i:Ljava/util/Map;
 
-    .line 372
+    .line 490
     iput-object p6, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->k:Ljava/util/Map;
 
-    .line 373
+    .line 491
     iput-object p5, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->j:Ljava/util/Map;
 
-    .line 376
+    .line 494
     iput-object p8, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->l:Ljava/util/Map;
 
-    .line 379
+    .line 497
     iput-object p4, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->h:Ljava/util/ArrayList;
 
-    .line 380
+    .line 498
     iput-boolean p13, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->g:Z
 
-    .line 381
+    .line 499
     iput-object p12, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->f:Ljava/lang/String;
 
-    .line 382
+    .line 500
     iput-object p10, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->n:Ljava/lang/String;
 
-    .line 383
+    .line 501
     iput-object p9, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->m:Ljava/lang/String;
 
-    .line 384
+    .line 502
     iput-object p11, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->o:Ljava/lang/String;
 
-    .line 386
-    invoke-direct {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->L()V
+    .line 504
+    invoke-direct {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->M()V
 
-    .line 387
+    .line 505
     return-void
 .end method
 
@@ -672,7 +714,7 @@
             "Ljava/util/Map",
             "<",
             "Ljava/lang/String;",
-            "Lkik/core/datatypes/t;",
+            "Lkik/core/datatypes/q;",
             ">;",
             "Ljava/util/Map",
             "<",
@@ -690,53 +732,60 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 281
+    .line 399
     const/16 v0, 0xf
 
-    invoke-direct {p0, v1, v1, v0}, Lkik/core/datatypes/messageExtensions/f;-><init>(ZZI)V
+    invoke-direct {p0, v1, v1, v0}, Lkik/core/datatypes/messageExtensions/MessageAttachment;-><init>(ZZI)V
 
-    .line 170
+    .line 263
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->h:Ljava/util/ArrayList;
 
-    .line 173
+    .line 266
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->i:Ljava/util/Map;
 
-    .line 174
+    .line 267
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->j:Ljava/util/Map;
 
-    .line 175
+    .line 268
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->k:Ljava/util/Map;
 
-    .line 176
+    .line 269
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->l:Ljava/util/Map;
 
-    .line 283
+    .line 277
+    invoke-static {p0}, Lkik/core/datatypes/messageExtensions/e;->a(Lkik/core/datatypes/messageExtensions/ContentMessage;)Ldagger/a;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->s:Ldagger/a;
+
+    .line 401
     iput-object p2, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->d:Ljava/lang/String;
 
-    .line 284
+    .line 402
     iput-object p3, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->e:Ljava/lang/String;
 
-    .line 286
+    .line 404
     if-eqz p1, :cond_0
 
     const-string v0, ""
@@ -747,7 +796,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 287
+    .line 405
     :cond_0
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
@@ -757,178 +806,288 @@
 
     move-result-object p1
 
-    .line 289
+    .line 407
     :cond_1
     iput-object p1, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->c:Ljava/lang/String;
 
-    .line 291
+    .line 409
     invoke-direct {p0, p4, p5}, Lkik/core/datatypes/messageExtensions/ContentMessage;->a([Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 303
+    .line 421
     iput-object p8, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->i:Ljava/util/Map;
 
-    .line 304
+    .line 422
     iput-object p7, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->k:Ljava/util/Map;
 
-    .line 305
+    .line 423
     iput-object p6, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->j:Ljava/util/Map;
 
-    .line 308
+    .line 426
     iput-object p9, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->l:Ljava/util/Map;
 
-    .line 311
-    invoke-direct {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->L()V
+    .line 429
+    invoke-direct {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->M()V
 
-    .line 312
+    .line 430
     return-void
 .end method
 
 .method public constructor <init>(Lkik/core/datatypes/messageExtensions/ContentMessage;)V
-    .locals 2
+    .locals 1
+
+    .prologue
+    .line 330
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;-><init>(Lkik/core/datatypes/messageExtensions/ContentMessage;Z)V
+
+    .line 331
+    return-void
+.end method
+
+.method public constructor <init>(Lkik/core/datatypes/messageExtensions/ContentMessage;Z)V
+    .locals 4
 
     .prologue
     const/4 v1, 0x1
 
-    .line 233
+    .line 335
     const/16 v0, 0xf
 
-    invoke-direct {p0, v1, v1, v0}, Lkik/core/datatypes/messageExtensions/f;-><init>(ZZI)V
+    invoke-direct {p0, v1, v1, v0}, Lkik/core/datatypes/messageExtensions/MessageAttachment;-><init>(ZZI)V
 
-    .line 170
+    .line 263
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->h:Ljava/util/ArrayList;
 
-    .line 173
+    .line 266
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->i:Ljava/util/Map;
 
-    .line 174
+    .line 267
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->j:Ljava/util/Map;
 
-    .line 175
+    .line 268
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->k:Ljava/util/Map;
 
-    .line 176
+    .line 269
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->l:Ljava/util/Map;
 
-    .line 235
-    iget-object v0, p1, Lkik/core/datatypes/messageExtensions/ContentMessage;->c:Ljava/lang/String;
+    .line 277
+    invoke-static {p0}, Lkik/core/datatypes/messageExtensions/b;->a(Lkik/core/datatypes/messageExtensions/ContentMessage;)Ldagger/a;
 
-    iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->c:Ljava/lang/String;
+    move-result-object v0
 
-    .line 236
+    iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->s:Ldagger/a;
+
+    .line 337
+    if-eqz p2, :cond_2
+
+    .line 338
+    iget-object v2, p1, Lkik/core/datatypes/messageExtensions/ContentMessage;->d:Ljava/lang/String;
+
+    const/4 v0, -0x1
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    sparse-switch v3, :sswitch_data_0
+
+    :cond_0
+    :goto_0
+    packed-switch v0, :pswitch_data_0
+
+    .line 346
     iget-object v0, p1, Lkik/core/datatypes/messageExtensions/ContentMessage;->d:Ljava/lang/String;
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->d:Ljava/lang/String;
 
-    .line 237
+    .line 353
+    :goto_1
+    iget-object v0, p1, Lkik/core/datatypes/messageExtensions/ContentMessage;->c:Ljava/lang/String;
+
+    iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->c:Ljava/lang/String;
+
+    .line 354
     iget-object v0, p1, Lkik/core/datatypes/messageExtensions/ContentMessage;->e:Ljava/lang/String;
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->e:Ljava/lang/String;
 
-    .line 238
+    .line 355
     iget-object v0, p1, Lkik/core/datatypes/messageExtensions/ContentMessage;->f:Ljava/lang/String;
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->f:Ljava/lang/String;
 
-    .line 239
+    .line 356
     iget-boolean v0, p1, Lkik/core/datatypes/messageExtensions/ContentMessage;->g:Z
 
     iput-boolean v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->g:Z
 
-    .line 241
+    .line 358
     iget-object v0, p1, Lkik/core/datatypes/messageExtensions/ContentMessage;->m:Ljava/lang/String;
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->m:Ljava/lang/String;
 
-    .line 242
+    .line 359
     iget-object v0, p1, Lkik/core/datatypes/messageExtensions/ContentMessage;->n:Ljava/lang/String;
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->n:Ljava/lang/String;
 
-    .line 243
+    .line 360
     iget-object v0, p1, Lkik/core/datatypes/messageExtensions/ContentMessage;->o:Ljava/lang/String;
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->o:Ljava/lang/String;
 
-    .line 245
+    .line 361
+    iget-object v0, p1, Lkik/core/datatypes/messageExtensions/ContentMessage;->q:Ljava/lang/String;
+
+    iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->q:Ljava/lang/String;
+
+    .line 363
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->h:Ljava/util/ArrayList;
 
     iget-object v1, p1, Lkik/core/datatypes/messageExtensions/ContentMessage;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 246
+    .line 364
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->i:Ljava/util/Map;
 
     iget-object v1, p1, Lkik/core/datatypes/messageExtensions/ContentMessage;->i:Ljava/util/Map;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    .line 247
+    .line 365
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->j:Ljava/util/Map;
 
     iget-object v1, p1, Lkik/core/datatypes/messageExtensions/ContentMessage;->j:Ljava/util/Map;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    .line 248
+    .line 366
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->k:Ljava/util/Map;
 
     iget-object v1, p1, Lkik/core/datatypes/messageExtensions/ContentMessage;->k:Ljava/util/Map;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    .line 250
+    .line 368
     iget-object v0, p1, Lkik/core/datatypes/messageExtensions/ContentMessage;->l:Ljava/util/Map;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    .line 251
+    .line 369
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->l:Ljava/util/Map;
 
     iget-object v1, p1, Lkik/core/datatypes/messageExtensions/ContentMessage;->l:Ljava/util/Map;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    .line 254
-    :cond_0
+    .line 372
+    :cond_1
     iget-object v0, p1, Lkik/core/datatypes/messageExtensions/ContentMessage;->p:Ljava/lang/String;
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->p:Ljava/lang/String;
 
-    .line 255
-    iget-object v0, p1, Lkik/core/datatypes/messageExtensions/ContentMessage;->q:Ljava/lang/String;
+    .line 373
+    iget-object v0, p1, Lkik/core/datatypes/messageExtensions/ContentMessage;->r:Ljava/lang/String;
 
-    iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->q:Ljava/lang/String;
+    iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->r:Ljava/lang/String;
 
-    .line 256
+    .line 374
     return-void
+
+    .line 338
+    :sswitch_0
+    const-string v1, "com.kik.ext.camera"
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v3, "com.kik.ext.video-camera"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    move v0, v1
+
+    goto :goto_0
+
+    .line 340
+    :pswitch_0
+    const-string v0, "com.kik.ext.gallery"
+
+    iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->d:Ljava/lang/String;
+
+    goto :goto_1
+
+    .line 343
+    :pswitch_1
+    const-string v0, "com.kik.ext.video-gallery"
+
+    iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->d:Ljava/lang/String;
+
+    goto :goto_1
+
+    .line 351
+    :cond_2
+    iget-object v0, p1, Lkik/core/datatypes/messageExtensions/ContentMessage;->d:Ljava/lang/String;
+
+    iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->d:Ljava/lang/String;
+
+    goto :goto_1
+
+    .line 338
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x7aae26a0 -> :sswitch_0
+        -0x220c994e -> :sswitch_1
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method
 
-.method private L()V
+.method private M()V
     .locals 3
 
     .prologue
-    .line 396
+    .line 514
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->d:Ljava/lang/String;
 
     invoke-static {v0}, Lkik/core/datatypes/messageExtensions/a;->a(Ljava/lang/String;)Z
@@ -937,7 +1096,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 397
+    .line 515
     const-string v1, "app-name"
 
     sget-object v0, Lkik/core/datatypes/messageExtensions/ContentMessage;->a:Ljava/util/Map;
@@ -952,16 +1111,16 @@
 
     invoke-virtual {p0, v1, v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 399
+    .line 517
     :cond_0
     return-void
 .end method
 
-.method private M()Z
+.method private N()Z
     .locals 3
 
     .prologue
-    .line 605
+    .line 737
     const-string v0, "true"
 
     iget-object v1, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->i:Ljava/util/Map;
@@ -983,12 +1142,12 @@
     .locals 4
 
     .prologue
-    .line 544
-    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->f()Ljava/util/ArrayList;
+    .line 676
+    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->g()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 546
+    .line 678
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -1006,14 +1165,14 @@
 
     check-cast v0, Lcom/kik/contentlink/model/attachments/ContentUri;
 
-    .line 547
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->c()Ljava/lang/String;
+    .line 679
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->b()Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->b()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1023,20 +1182,20 @@
 
     if-eqz v2, :cond_0
 
-    .line 548
+    .line 680
     if-eqz p2, :cond_2
 
-    .line 549
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->h()Ljava/lang/String;
+    .line 681
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->g()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 550
+    .line 682
     invoke-static {p2}, Lkik/core/datatypes/messageExtensions/ContentMessage;->c(Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 551
+    .line 683
     if-eqz v2, :cond_1
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1045,46 +1204,74 @@
 
     if-eqz v2, :cond_0
 
-    .line 552
+    .line 684
     :cond_1
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->e()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->d()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 561
+    .line 693
     :goto_0
     return-object v0
 
-    .line 556
+    .line 688
     :cond_2
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->e()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->d()Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 561
+    .line 693
     :cond_3
     const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
+.method static synthetic a(Lkik/core/datatypes/messageExtensions/ContentMessage;)Lkik/core/datatypes/messageExtensions/ContentMessage$ContextualLinkAction;
+    .locals 3
+
+    .prologue
+    .line 277
+    new-instance v0, Lkik/core/datatypes/messageExtensions/ContentMessage$ContextualLinkAction;
+
+    const-string v1, "action-type"
+
+    invoke-virtual {p0, v1}, Lkik/core/datatypes/messageExtensions/ContentMessage;->g(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lkik/core/datatypes/messageExtensions/ContentMessage$ContextualLinkAction$ActionType;->fromString(Ljava/lang/String;)Lkik/core/datatypes/messageExtensions/ContentMessage$ContextualLinkAction$ActionType;
+
+    move-result-object v1
+
+    const-string v2, "action-text"
+
+    invoke-virtual {p0, v2}, Lkik/core/datatypes/messageExtensions/ContentMessage;->g(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Lkik/core/datatypes/messageExtensions/ContentMessage$ContextualLinkAction;-><init>(Lkik/core/datatypes/messageExtensions/ContentMessage$ContextualLinkAction$ActionType;Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
 .method private a([Ljava/lang/String;[Ljava/lang/String;)V
     .locals 4
 
     .prologue
-    .line 418
+    .line 546
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->h:Ljava/util/ArrayList;
 
-    .line 419
+    .line 547
     if-eqz p1, :cond_0
 
-    .line 420
+    .line 548
     const/4 v0, 0x0
 
     :goto_0
@@ -1092,7 +1279,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 421
+    .line 549
     new-instance v1, Lcom/kik/contentlink/model/attachments/ContentUri;
 
     aget-object v2, p1, v0
@@ -1101,22 +1288,22 @@
 
     invoke-direct {v1, v2, v3}, Lcom/kik/contentlink/model/attachments/ContentUri;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 422
+    .line 550
     aget-object v2, p2, v0
 
     invoke-virtual {v1, v2}, Lcom/kik/contentlink/model/attachments/ContentUri;->a(Ljava/lang/String;)Lcom/kik/contentlink/model/attachments/ContentUri;
 
-    .line 423
+    .line 551
     iget-object v2, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 420
+    .line 548
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 426
+    .line 554
     :cond_0
     return-void
 .end method
@@ -1125,19 +1312,19 @@
     .locals 2
 
     .prologue
-    .line 1002
+    .line 1123
     invoke-virtual {p0, p1}, Lkik/core/datatypes/messageExtensions/ContentMessage;->g(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1003
-    invoke-static {v0}, Lkik/core/util/w;->a(Ljava/lang/CharSequence;)Z
+    .line 1124
+    invoke-static {v0}, Lkik/core/util/u;->a(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 1007
+    .line 1128
     :goto_0
     return p2
 
@@ -1155,7 +1342,7 @@
     .locals 1
 
     .prologue
-    .line 224
+    .line 321
     const-string v0, "com.kik.ext.video-camera"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1172,11 +1359,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 225
+    .line 322
     :cond_0
     const/4 v0, 0x0
 
-    .line 228
+    .line 325
     :goto_0
     return v0
 
@@ -1190,13 +1377,13 @@
     .locals 1
 
     .prologue
-    .line 566
+    .line 698
     if-nez p0, :cond_0
 
-    .line 567
+    .line 699
     const/4 v0, 0x0
 
-    .line 570
+    .line 702
     :goto_0
     return-object v0
 
@@ -1216,13 +1403,13 @@
     .locals 0
 
     .prologue
-    .line 857
+    .line 976
     if-nez p0, :cond_0
 
-    .line 858
+    .line 977
     const-string p0, "null"
 
-    .line 861
+    .line 980
     :cond_0
     return-object p0
 .end method
@@ -1233,13 +1420,13 @@
     .locals 2
 
     .prologue
-    .line 974
+    .line 1095
     const-string v0, "com.kik.ext.gif"
 
-    .line 8810
+    .line 7929
     iget-object v1, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->d:Ljava/lang/String;
 
-    .line 974
+    .line 1095
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1251,7 +1438,25 @@
     .locals 2
 
     .prologue
-    .line 990
+    .line 1100
+    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->u()Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;
+
+    move-result-object v0
+
+    sget-object v1, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;->CONTENT_LAYOUT_VIDEO:Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;
+
+    invoke-virtual {v0, v1}, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;->equals(Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final C()Z
+    .locals 2
+
+    .prologue
+    .line 1111
     const-string v0, "video-should-loop"
 
     const/4 v1, 0x0
@@ -1263,11 +1468,11 @@
     return v0
 .end method
 
-.method public final C()Z
+.method public final D()Z
     .locals 2
 
     .prologue
-    .line 995
+    .line 1116
     const-string v0, "video-should-be-muted"
 
     const/4 v1, 0x0
@@ -1279,12 +1484,12 @@
     return v0
 .end method
 
-.method public final D()Z
+.method public final E()Z
     .locals 1
 
     .prologue
-    .line 1022
-    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->F()Ljava/lang/String;
+    .line 1143
+    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->G()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1301,11 +1506,11 @@
     goto :goto_0
 .end method
 
-.method public final E()Z
+.method public final F()Z
     .locals 3
 
     .prologue
-    .line 1027
+    .line 1148
     const-string v1, "true"
 
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->i:Ljava/util/Map;
@@ -1325,12 +1530,12 @@
     return v0
 .end method
 
-.method public final F()Ljava/lang/String;
+.method public final G()Ljava/lang/String;
     .locals 4
 
     .prologue
-    .line 1036
-    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->f()Ljava/util/ArrayList;
+    .line 1157
+    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->g()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -1351,10 +1556,10 @@
 
     check-cast v0, Lcom/kik/contentlink/model/attachments/ContentUri;
 
-    .line 1037
+    .line 1158
     const-string v2, "widget"
 
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->a()Ljava/lang/String;
 
     move-result-object v3
 
@@ -1364,12 +1569,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 1038
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->e()Ljava/lang/String;
+    .line 1159
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->d()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1042
+    .line 1163
     :goto_0
     return-object v0
 
@@ -1379,25 +1584,25 @@
     goto :goto_0
 .end method
 
-.method public final G()Lkik/core/util/u;
+.method public final H()Lkik/core/util/s;
     .locals 4
 
     .prologue
     const/4 v0, 0x0
 
-    .line 1051
-    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->D()Z
+    .line 1172
+    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->E()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 1067
+    .line 1188
     :cond_0
     :goto_0
     return-object v0
 
-    .line 1055
+    .line 1176
     :cond_1
     const-string v1, "widgetWidth"
 
@@ -1405,29 +1610,29 @@
 
     move-result-object v2
 
-    .line 1056
+    .line 1177
     const-string v1, "widgetHeight"
 
     invoke-virtual {p0, v1}, Lkik/core/datatypes/messageExtensions/ContentMessage;->h(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1058
-    invoke-static {v2}, Lkik/core/util/w;->a(Ljava/lang/CharSequence;)Z
+    .line 1179
+    invoke-static {v2}, Lkik/core/util/u;->a(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    invoke-static {v3}, Lkik/core/util/w;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v3}, Lkik/core/util/u;->a(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 1063
+    .line 1184
     :try_start_0
-    new-instance v1, Lkik/core/util/u;
+    new-instance v1, Lkik/core/util/s;
 
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -1437,7 +1642,7 @@
 
     move-result v3
 
-    invoke-direct {v1, v2, v3}, Lkik/core/util/u;-><init>(II)V
+    invoke-direct {v1, v2, v3}, Lkik/core/util/s;-><init>(II)V
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1445,18 +1650,18 @@
 
     goto :goto_0
 
-    .line 1067
+    .line 1188
     :catch_0
     move-exception v1
 
     goto :goto_0
 .end method
 
-.method public final H()Z
+.method public final I()Z
     .locals 2
 
     .prologue
-    .line 1073
+    .line 1194
     const-string v0, "allow-forward"
 
     const/4 v1, 0x1
@@ -1468,21 +1673,21 @@
     return v0
 .end method
 
-.method public final I()Ljava/lang/String;
+.method public final J()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 1083
-    iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->q:Ljava/lang/String;
+    .line 1204
+    iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->r:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final J()Z
+.method public final K()Z
     .locals 1
 
     .prologue
-    .line 1088
+    .line 1209
     const-string v0, "sha1-scaled"
 
     invoke-virtual {p0, v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->i(Ljava/lang/String;)Ljava/lang/String;
@@ -1511,11 +1716,27 @@
     goto :goto_0
 .end method
 
+.method public final L()Lkik/core/datatypes/messageExtensions/ContentMessage$ContextualLinkAction;
+    .locals 1
+
+    .prologue
+    .line 1214
+    iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->s:Ldagger/a;
+
+    invoke-interface {v0}, Ldagger/a;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lkik/core/datatypes/messageExtensions/ContentMessage$ContextualLinkAction;
+
+    return-object v0
+.end method
+
 .method public final a()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 185
+    .line 281
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->m:Ljava/lang/String;
 
     return-object v0
@@ -1525,7 +1746,7 @@
     .locals 3
 
     .prologue
-    .line 1017
+    .line 1138
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->j:Ljava/util/Map;
 
     const-string v1, "duration"
@@ -1547,47 +1768,47 @@
     .locals 1
 
     .prologue
-    .line 482
-    .line 2195
+    .line 613
+    .line 2291
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->n:Ljava/lang/String;
 
-    .line 483
+    .line 614
     if-nez v0, :cond_0
 
-    .line 484
+    .line 615
     const-string v0, "file-url"
 
     invoke-virtual {p0, v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->g(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 485
+    .line 616
     if-nez v0, :cond_0
 
-    .line 486
+    .line 617
     const-string v0, "video"
 
     invoke-direct {p0, v0, p1}, Lkik/core/datatypes/messageExtensions/ContentMessage;->a(Ljava/lang/String;Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 489
+    .line 620
     :cond_0
     return-object v0
 .end method
 
-.method public final a(Ljava/lang/String;)Lkik/core/datatypes/t;
+.method public final a(Ljava/lang/String;)Lkik/core/datatypes/q;
     .locals 1
 
     .prologue
-    .line 200
+    .line 296
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->k:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/datatypes/t;
+    check-cast v0, Lkik/core/datatypes/q;
 
     return-object v0
 .end method
@@ -1596,14 +1817,14 @@
     .locals 4
 
     .prologue
-    .line 585
+    .line 717
     if-nez p1, :cond_0
 
-    .line 591
+    .line 723
     :goto_0
     return-void
 
-    .line 588
+    .line 720
     :cond_0
     const-string v0, "int-file-url-local"
 
@@ -1613,7 +1834,7 @@
 
     invoke-virtual {p0, v0, v1}, Lkik/core/datatypes/messageExtensions/ContentMessage;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 589
+    .line 721
     const-string v0, "file-name"
 
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
@@ -1622,7 +1843,7 @@
 
     invoke-virtual {p0, v0, v1}, Lkik/core/datatypes/messageExtensions/ContentMessage;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 590
+    .line 722
     const-string v0, "file-size"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1650,17 +1871,17 @@
     .locals 1
 
     .prologue
-    .line 723
+    .line 857
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 724
+    .line 858
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->j:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 726
+    .line 860
     :cond_0
     return-void
 .end method
@@ -1669,34 +1890,34 @@
     .locals 2
 
     .prologue
-    .line 791
+    .line 910
     new-instance v0, Lcom/kik/contentlink/model/attachments/ContentUri;
 
     iget-object v1, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->d:Ljava/lang/String;
 
     invoke-direct {v0, p1, v1}, Lcom/kik/contentlink/model/attachments/ContentUri;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 792
+    .line 911
     invoke-virtual {v0, p2}, Lcom/kik/contentlink/model/attachments/ContentUri;->a(Ljava/lang/String;)Lcom/kik/contentlink/model/attachments/ContentUri;
 
-    .line 793
+    .line 912
     invoke-virtual {v0, p3}, Lcom/kik/contentlink/model/attachments/ContentUri;->b(Ljava/lang/String;)Lcom/kik/contentlink/model/attachments/ContentUri;
 
-    .line 794
+    .line 913
     invoke-virtual {v0, p4}, Lcom/kik/contentlink/model/attachments/ContentUri;->c(Ljava/lang/String;)Lcom/kik/contentlink/model/attachments/ContentUri;
 
-    .line 795
+    .line 914
     invoke-virtual {v0, p5}, Lcom/kik/contentlink/model/attachments/ContentUri;->e(Ljava/lang/String;)Lcom/kik/contentlink/model/attachments/ContentUri;
 
-    .line 796
+    .line 915
     invoke-virtual {v0, p6}, Lcom/kik/contentlink/model/attachments/ContentUri;->f(Ljava/lang/String;)Lcom/kik/contentlink/model/attachments/ContentUri;
 
-    .line 797
+    .line 916
     iget-object v1, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 798
+    .line 917
     return-void
 .end method
 
@@ -1704,47 +1925,47 @@
     .locals 2
 
     .prologue
-    .line 802
+    .line 921
     new-instance v0, Lcom/kik/contentlink/model/attachments/ContentUri;
 
     iget-object v1, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->d:Ljava/lang/String;
 
     invoke-direct {v0, p1, v1}, Lcom/kik/contentlink/model/attachments/ContentUri;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 803
+    .line 922
     invoke-static {p3}, Lkik/core/datatypes/messageExtensions/ContentMessage;->c(Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/kik/contentlink/model/attachments/ContentUri;->e(Ljava/lang/String;)Lcom/kik/contentlink/model/attachments/ContentUri;
 
-    .line 804
+    .line 923
     invoke-virtual {v0, p2}, Lcom/kik/contentlink/model/attachments/ContentUri;->b(Ljava/lang/String;)Lcom/kik/contentlink/model/attachments/ContentUri;
 
-    .line 805
+    .line 924
     iget-object v1, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 806
+    .line 925
     return-void
 .end method
 
-.method public final a(Ljava/lang/String;Lkik/core/datatypes/t;)V
+.method public final a(Ljava/lang/String;Lkik/core/datatypes/q;)V
     .locals 1
 
     .prologue
-    .line 777
+    .line 896
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 778
+    .line 897
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->k:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 780
+    .line 899
     :cond_0
     return-void
 .end method
@@ -1753,7 +1974,7 @@
     .locals 2
 
     .prologue
-    .line 906
+    .line 1026
     sget-object v0, Lkik/core/datatypes/messageExtensions/ContentMessage$1;->a:[I
 
     invoke-virtual {p1}, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentFileState;->ordinal()I
@@ -1764,11 +1985,11 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 921
+    .line 1041
     :goto_0
     return-void
 
-    .line 908
+    .line 1028
     :pswitch_0
     const-string v0, "int-file-state"
 
@@ -1778,7 +1999,7 @@
 
     goto :goto_0
 
-    .line 912
+    .line 1032
     :pswitch_1
     const-string v0, "int-file-state"
 
@@ -1788,7 +2009,7 @@
 
     goto :goto_0
 
-    .line 915
+    .line 1035
     :pswitch_2
     const-string v0, "int-file-state"
 
@@ -1798,7 +2019,7 @@
 
     goto :goto_0
 
-    .line 918
+    .line 1038
     :pswitch_3
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->j:Ljava/util/Map;
 
@@ -1808,7 +2029,7 @@
 
     goto :goto_0
 
-    .line 906
+    .line 1026
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1823,21 +2044,21 @@
     .locals 2
 
     .prologue
-    .line 595
+    .line 727
     if-eqz p1, :cond_0
 
-    .line 596
+    .line 728
     const-string v0, "needstranscoding"
 
     const-string v1, "true"
 
     invoke-virtual {p0, v0, v1}, Lkik/core/datatypes/messageExtensions/ContentMessage;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 601
+    .line 733
     :goto_0
     return-void
 
-    .line 599
+    .line 731
     :cond_0
     const-string v0, "needstranscoding"
 
@@ -1852,7 +2073,7 @@
     .locals 1
 
     .prologue
-    .line 190
+    .line 286
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->o:Ljava/lang/String;
 
     return-object v0
@@ -1862,17 +2083,17 @@
     .locals 1
 
     .prologue
-    .line 744
+    .line 878
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 745
+    .line 879
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->l:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 747
+    .line 881
     :cond_0
     return-void
 .end method
@@ -1881,12 +2102,12 @@
     .locals 4
 
     .prologue
-    .line 494
-    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->f()Ljava/util/ArrayList;
+    .line 625
+    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->g()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 496
+    .line 627
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -1904,14 +2125,14 @@
 
     check-cast v0, Lcom/kik/contentlink/model/attachments/ContentUri;
 
-    .line 497
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->c()Ljava/lang/String;
+    .line 628
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->b()Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->b()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1923,32 +2144,32 @@
 
     if-eqz v2, :cond_0
 
-    .line 498
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->h()Ljava/lang/String;
+    .line 629
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->g()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 499
+    .line 630
     invoke-static {p1}, Lkik/core/datatypes/messageExtensions/ContentMessage;->c(Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 500
+    .line 631
     if-eqz v0, :cond_0
 
     if-eqz v2, :cond_0
 
-    .line 503
+    .line 634
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 504
+    .line 635
     const/4 v0, 0x1
 
-    .line 510
+    .line 641
     :goto_0
     return v0
 
@@ -1958,116 +2179,37 @@
     goto :goto_0
 .end method
 
-.method public final c(Ljava/lang/String;)Ljava/util/List;
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            ")",
-            "Ljava/util/List",
-            "<",
-            "Lcom/kik/contentlink/model/attachments/ContentUri;",
-            ">;"
-        }
-    .end annotation
+.method public final c(Ljava/lang/String;)V
+    .locals 0
 
     .prologue
-    .line 441
-    new-instance v1, Ljava/util/ArrayList;
+    .line 536
+    iput-object p1, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->q:Ljava/lang/String;
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    .line 442
-    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->f()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    .line 444
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :cond_0
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/kik/contentlink/model/attachments/ContentUri;
-
-    .line 445
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->c()Ljava/lang/String;
-
-    move-result-object v3
-
-    if-nez v3, :cond_0
-
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->b()Ljava/lang/String;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->b()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->b()Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "cards"
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    .line 446
-    :cond_1
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    .line 450
-    :cond_2
-    return-object v1
+    .line 537
+    return-void
 .end method
 
 .method public final c(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
     .prologue
-    .line 784
+    .line 903
     new-instance v0, Lcom/kik/contentlink/model/attachments/ContentUri;
 
     iget-object v1, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->d:Ljava/lang/String;
 
     invoke-direct {v0, p1, v1}, Lcom/kik/contentlink/model/attachments/ContentUri;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 785
+    .line 904
     invoke-virtual {v0, p2}, Lcom/kik/contentlink/model/attachments/ContentUri;->a(Ljava/lang/String;)Lcom/kik/contentlink/model/attachments/ContentUri;
 
-    .line 786
+    .line 905
     iget-object v1, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 787
+    .line 906
     return-void
 .end method
 
@@ -2075,7 +2217,7 @@
     .locals 1
 
     .prologue
-    .line 403
+    .line 521
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->f:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -2095,44 +2237,144 @@
     .locals 1
 
     .prologue
-    .line 408
+    .line 526
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->f:Ljava/lang/String;
 
     return-object v0
+.end method
+
+.method public final d(Ljava/lang/String;)Ljava/util/List;
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Lcom/kik/contentlink/model/attachments/ContentUri;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 570
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    .line 571
+    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->g()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    .line 573
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_0
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/kik/contentlink/model/attachments/ContentUri;
+
+    .line 574
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->b()Ljava/lang/String;
+
+    move-result-object v3
+
+    if-nez v3, :cond_0
+
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->a()Ljava/lang/String;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->a()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->a()Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "cards"
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .line 575
+    :cond_1
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    .line 579
+    :cond_2
+    return-object v1
 .end method
 
 .method public final d(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
     .prologue
-    .line 815
+    .line 934
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 816
+    .line 935
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->i:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 819
+    .line 938
     :cond_0
     return-void
 .end method
 
-.method public final d(Ljava/lang/String;)Z
+.method public final e()Z
     .locals 1
 
     .prologue
-    .line 520
-    .line 2539
+    .line 531
+    iget-boolean v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->g:Z
+
+    return v0
+.end method
+
+.method public final e(Ljava/lang/String;)Z
+    .locals 1
+
+    .prologue
+    .line 652
+    .line 2671
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->a(Ljava/lang/String;Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 521
+    .line 653
     if-eqz v0, :cond_0
 
     const/4 v0, 0x1
@@ -2146,28 +2388,46 @@
     goto :goto_0
 .end method
 
-.method public final e(Ljava/lang/String;)V
-    .locals 0
-
-    .prologue
-    .line 677
-    iput-object p1, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->c:Ljava/lang/String;
-
-    .line 678
-    return-void
-.end method
-
-.method public final e()Z
+.method public final f()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 413
-    iget-boolean v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->g:Z
+    .line 541
+    iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->q:Ljava/lang/String;
 
-    return v0
+    return-object v0
 .end method
 
-.method public final f()Ljava/util/ArrayList;
+.method public final f(Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 826
+    iput-object p1, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->p:Ljava/lang/String;
+
+    .line 827
+    return-void
+.end method
+
+.method public final g(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 831
+    .line 2846
+    iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->j:Ljava/util/Map;
+
+    .line 831
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final g()Ljava/util/ArrayList;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2180,7 +2440,7 @@
     .end annotation
 
     .prologue
-    .line 431
+    .line 559
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clone()Ljava/lang/Object;
@@ -2192,62 +2452,51 @@
     return-object v0
 .end method
 
-.method public final f(Ljava/lang/String;)V
-    .locals 0
-
-    .prologue
-    .line 692
-    iput-object p1, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->p:Ljava/lang/String;
-
-    .line 693
-    return-void
-.end method
-
-.method public final g()Ljava/lang/String;
+.method public final h()Ljava/lang/String;
     .locals 2
 
     .prologue
-    .line 459
-    .line 1195
+    .line 589
+    .line 1291
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->n:Ljava/lang/String;
 
-    .line 460
+    .line 590
     if-nez v0, :cond_0
 
-    .line 461
+    .line 591
     const-string v0, "file-url"
 
     invoke-virtual {p0, v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->g(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 462
+    .line 592
     if-nez v0, :cond_0
 
-    .line 463
+    .line 593
     const-string v0, "image"
 
-    .line 1539
+    .line 1671
     const/4 v1, 0x0
 
     invoke-direct {p0, v0, v1}, Lkik/core/datatypes/messageExtensions/ContentMessage;->a(Ljava/lang/String;Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 466
+    .line 596
     :cond_0
     return-object v0
 .end method
 
-.method public final g(Ljava/lang/String;)Ljava/lang/String;
+.method public final h(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 697
-    .line 3712
-    iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->j:Ljava/util/Map;
+    .line 836
+    .line 3841
+    iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->i:Ljava/util/Map;
 
-    .line 697
+    .line 836
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -2257,11 +2506,11 @@
     return-object v0
 .end method
 
-.method public final h()Ljava/lang/String;
+.method public final i()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 471
+    .line 601
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->a(Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLinkFileType;)Ljava/lang/String;
@@ -2271,29 +2520,11 @@
     return-object v0
 .end method
 
-.method public final h(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 702
-    .line 4707
-    iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->i:Ljava/util/Map;
-
-    .line 702
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    return-object v0
-.end method
-
 .method public final i(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 736
+    .line 870
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->l:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2305,95 +2536,26 @@
     return-object v0
 .end method
 
-.method public final i()Z
-    .locals 4
-
-    .prologue
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    .line 534
-    .line 3526
-    iget-object v2, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->j:Ljava/util/Map;
-
-    const-string v3, "file-url"
-
-    invoke-interface {v2, v3}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    .line 3529
-    iget-object v2, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    iget-object v2, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->d:Ljava/lang/String;
-
-    invoke-static {v2}, Lkik/core/datatypes/messageExtensions/a;->a(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    move v2, v0
-
-    .line 534
-    :goto_0
-    if-nez v2, :cond_1
-
-    const-string v2, "com.kik.ext.gif"
-
-    iget-object v3, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->d:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    :goto_1
-    return v0
-
-    :cond_0
-    move v2, v1
-
-    .line 3529
-    goto :goto_0
-
-    :cond_1
-    move v0, v1
-
-    .line 534
-    goto :goto_1
-.end method
-
 .method public final j()Ljava/io/File;
     .locals 2
 
     .prologue
-    .line 575
+    .line 707
     const-string v0, "int-file-url-local"
 
     invoke-virtual {p0, v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->g(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 576
+    .line 708
     if-eqz v1, :cond_0
 
-    .line 577
+    .line 709
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 580
+    .line 712
     :goto_0
     return-object v0
 
@@ -2407,12 +2569,12 @@
     .locals 1
 
     .prologue
-    .line 944
+    .line 1065
     const-string v0, "disallow-save"
 
     invoke-virtual {p0, v0, p1}, Lkik/core/datatypes/messageExtensions/ContentMessage;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 945
+    .line 1066
     return-void
 .end method
 
@@ -2420,12 +2582,12 @@
     .locals 1
 
     .prologue
-    .line 949
+    .line 1070
     const-string v0, "video-should-autoplay"
 
     invoke-virtual {p0, v0, p1}, Lkik/core/datatypes/messageExtensions/ContentMessage;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 950
+    .line 1071
     return-void
 .end method
 
@@ -2437,7 +2599,7 @@
 
     const/4 v2, 0x0
 
-    .line 614
+    .line 747
     invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->w()Lkik/core/datatypes/messageExtensions/ContentMessage$ContentFileState;
 
     move-result-object v0
@@ -2448,9 +2610,9 @@
 
     move v0, v1
 
-    .line 615
+    .line 748
     :goto_0
-    invoke-direct {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->M()Z
+    invoke-direct {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->N()Z
 
     move-result v3
 
@@ -2464,13 +2626,13 @@
     :cond_0
     move v0, v2
 
-    .line 614
+    .line 747
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 615
+    .line 748
     goto :goto_1
 .end method
 
@@ -2478,12 +2640,12 @@
     .locals 1
 
     .prologue
-    .line 954
+    .line 1075
     const-string v0, "video-should-loop"
 
     invoke-virtual {p0, v0, p1}, Lkik/core/datatypes/messageExtensions/ContentMessage;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 955
+    .line 1076
     return-void
 .end method
 
@@ -2491,7 +2653,7 @@
     .locals 2
 
     .prologue
-    .line 620
+    .line 753
     const-string v0, "com.kik.ext.gallery"
 
     iget-object v1, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->d:Ljava/lang/String;
@@ -2512,11 +2674,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 621
+    .line 754
     :cond_0
     const/4 v0, 0x1
 
-    .line 624
+    .line 757
     :goto_0
     return v0
 
@@ -2539,17 +2701,17 @@
     .end annotation
 
     .prologue
-    .line 634
+    .line 768
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 635
-    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->f()Ljava/util/ArrayList;
+    .line 769
+    invoke-virtual {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->g()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 636
+    .line 770
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -2568,14 +2730,14 @@
 
     check-cast v0, Lcom/kik/contentlink/model/attachments/ContentUri;
 
-    .line 637
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->b()Ljava/lang/String;
+    .line 771
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->a()Ljava/lang/String;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->a()Ljava/lang/String;
 
     move-result-object v3
 
@@ -2587,8 +2749,8 @@
 
     if-eqz v3, :cond_0
 
-    .line 638
-    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->e()Ljava/lang/String;
+    .line 772
+    invoke-virtual {v0}, Lcom/kik/contentlink/model/attachments/ContentUri;->d()Ljava/lang/String;
 
     move-result-object v0
 
@@ -2596,7 +2758,7 @@
 
     goto :goto_0
 
-    .line 642
+    .line 776
     :cond_1
     return-object v1
 .end method
@@ -2605,12 +2767,12 @@
     .locals 1
 
     .prologue
-    .line 959
+    .line 1080
     const-string v0, "video-should-be-muted"
 
     invoke-virtual {p0, v0, p1}, Lkik/core/datatypes/messageExtensions/ContentMessage;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 960
+    .line 1081
     return-void
 .end method
 
@@ -2618,7 +2780,7 @@
     .locals 1
 
     .prologue
-    .line 672
+    .line 806
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->c:Ljava/lang/String;
 
     return-object v0
@@ -2628,10 +2790,10 @@
     .locals 0
 
     .prologue
-    .line 1078
-    iput-object p1, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->q:Ljava/lang/String;
+    .line 1199
+    iput-object p1, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->r:Ljava/lang/String;
 
-    .line 1079
+    .line 1200
     return-void
 .end method
 
@@ -2639,7 +2801,7 @@
     .locals 1
 
     .prologue
-    .line 682
+    .line 816
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->e:Ljava/lang/String;
 
     return-object v0
@@ -2649,7 +2811,7 @@
     .locals 1
 
     .prologue
-    .line 687
+    .line 821
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->p:Ljava/lang/String;
 
     return-object v0
@@ -2669,7 +2831,7 @@
     .end annotation
 
     .prologue
-    .line 707
+    .line 841
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->i:Ljava/util/Map;
 
     return-object v0
@@ -2689,7 +2851,7 @@
     .end annotation
 
     .prologue
-    .line 712
+    .line 846
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->j:Ljava/util/Map;
 
     return-object v0
@@ -2703,13 +2865,13 @@
             "Ljava/util/Map",
             "<",
             "Ljava/lang/String;",
-            "Lkik/core/datatypes/t;",
+            "Lkik/core/datatypes/q;",
             ">;"
         }
     .end annotation
 
     .prologue
-    .line 718
+    .line 852
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->k:Ljava/util/Map;
 
     return-object v0
@@ -2729,7 +2891,7 @@
     .end annotation
 
     .prologue
-    .line 730
+    .line 864
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->l:Ljava/util/Map;
 
     return-object v0
@@ -2739,7 +2901,7 @@
     .locals 6
 
     .prologue
-    .line 823
+    .line 942
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "appId: "
@@ -2762,10 +2924,10 @@
 
     move-result-object v0
 
-    .line 5672
+    .line 4806
     iget-object v1, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->c:Ljava/lang/String;
 
-    .line 823
+    .line 942
     invoke-static {v1}, Lkik/core/datatypes/messageExtensions/ContentMessage;->o(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -2784,15 +2946,15 @@
 
     move-result-object v0
 
-    .line 5712
+    .line 4846
     iget-object v2, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->j:Ljava/util/Map;
 
-    .line 825
+    .line 944
     invoke-interface {v2}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v1
 
-    .line 826
+    .line 945
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -2812,7 +2974,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 827
+    .line 946
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2859,10 +3021,10 @@
 
     move-object v1, v0
 
-    .line 828
+    .line 947
     goto :goto_0
 
-    .line 830
+    .line 949
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2882,15 +3044,15 @@
 
     move-result-object v0
 
-    .line 6707
+    .line 5841
     iget-object v2, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->i:Ljava/util/Map;
 
-    .line 832
+    .line 951
     invoke-interface {v2}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v1
 
-    .line 833
+    .line 952
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -2910,7 +3072,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 834
+    .line 953
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2957,10 +3119,10 @@
 
     move-object v1, v0
 
-    .line 835
+    .line 954
     goto :goto_1
 
-    .line 837
+    .line 956
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2980,15 +3142,15 @@
 
     move-result-object v0
 
-    .line 6730
+    .line 5864
     iget-object v3, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->l:Ljava/util/Map;
 
-    .line 839
+    .line 958
     invoke-interface {v2}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v1
 
-    .line 840
+    .line 959
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -3008,7 +3170,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 841
+    .line 960
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -3055,10 +3217,10 @@
 
     move-object v1, v0
 
-    .line 842
+    .line 961
     goto :goto_2
 
-    .line 844
+    .line 963
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3078,15 +3240,15 @@
 
     move-result-object v0
 
-    .line 7718
+    .line 6852
     iget-object v3, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->k:Ljava/util/Map;
 
-    .line 846
+    .line 965
     invoke-interface {v3}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v1
 
-    .line 847
+    .line 966
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -3106,19 +3268,19 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 848
+    .line 967
     invoke-interface {v3, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lkik/core/datatypes/t;
+    check-cast v1, Lkik/core/datatypes/q;
 
-    .line 849
-    invoke-virtual {v1}, Lkik/core/datatypes/t;->c()[B
+    .line 968
+    invoke-virtual {v1}, Lkik/core/datatypes/q;->c()[B
 
     move-result-object v1
 
-    .line 850
+    .line 969
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -3143,13 +3305,13 @@
 
     move-result-object v2
 
-    .line 7867
+    .line 6986
     if-nez v1, :cond_3
 
-    .line 7868
+    .line 6987
     const-string v0, "null"
 
-    .line 850
+    .line 969
     :goto_4
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3167,10 +3329,10 @@
 
     move-object v2, v0
 
-    .line 851
+    .line 970
     goto :goto_3
 
-    .line 7871
+    .line 6990
     :cond_3
     array-length v0, v1
 
@@ -3180,7 +3342,7 @@
 
     goto :goto_4
 
-    .line 852
+    .line 971
     :cond_4
     return-object v2
 .end method
@@ -3189,7 +3351,7 @@
     .locals 2
 
     .prologue
-    .line 757
+    .line 891
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->j:Ljava/util/Map;
 
     const-string v1, "layout"
@@ -3200,98 +3362,18 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 759
-    if-eqz v0, :cond_0
+    invoke-static {v0}, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;->fromString(Ljava/lang/String;)Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;
 
-    sget-object v1, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;->CONTENT_LAYOUT_DEFAULT:Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;
+    move-result-object v0
 
-    invoke-virtual {v1}, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;->layoutString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 760
-    :cond_0
-    sget-object v0, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;->CONTENT_LAYOUT_DEFAULT:Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;
-
-    .line 772
-    :goto_0
     return-object v0
-
-    .line 762
-    :cond_1
-    sget-object v1, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;->CONTENT_LAYOUT_ARTICLE:Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;
-
-    invoke-virtual {v1}, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;->layoutString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    .line 763
-    sget-object v0, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;->CONTENT_LAYOUT_ARTICLE:Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;
-
-    goto :goto_0
-
-    .line 765
-    :cond_2
-    sget-object v1, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;->CONTENT_LAYOUT_PHOTO:Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;
-
-    invoke-virtual {v1}, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;->layoutString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    .line 766
-    sget-object v0, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;->CONTENT_LAYOUT_PHOTO:Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;
-
-    goto :goto_0
-
-    .line 768
-    :cond_3
-    sget-object v1, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;->CONTENT_LAYOUT_VIDEO:Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;
-
-    invoke-virtual {v1}, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;->layoutString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    .line 769
-    sget-object v0, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;->CONTENT_LAYOUT_VIDEO:Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;
-
-    goto :goto_0
-
-    .line 772
-    :cond_4
-    sget-object v0, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;->CONTENT_LAYOUT_DEFAULT:Lkik/core/datatypes/messageExtensions/ContentMessage$ContentLayout;
-
-    goto :goto_0
 .end method
 
 .method public final v()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 810
+    .line 929
     iget-object v0, p0, Lkik/core/datatypes/messageExtensions/ContentMessage;->d:Ljava/lang/String;
 
     return-object v0
@@ -3301,28 +3383,28 @@
     .locals 2
 
     .prologue
-    .line 887
+    .line 1007
     const-string v0, "int-file-state"
 
     invoke-virtual {p0, v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->g(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 888
-    invoke-static {v0}, Lkik/core/util/w;->a(Ljava/lang/CharSequence;)Z
+    .line 1008
+    invoke-static {v0}, Lkik/core/util/u;->a(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 889
+    .line 1009
     sget-object v0, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentFileState;->None:Lkik/core/datatypes/messageExtensions/ContentMessage$ContentFileState;
 
-    .line 901
+    .line 1021
     :goto_0
     return-object v0
 
-    .line 891
+    .line 1011
     :cond_0
     const-string v1, "1"
 
@@ -3332,12 +3414,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 892
+    .line 1012
     sget-object v0, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentFileState;->Complete:Lkik/core/datatypes/messageExtensions/ContentMessage$ContentFileState;
 
     goto :goto_0
 
-    .line 894
+    .line 1014
     :cond_1
     const-string v1, "0"
 
@@ -3347,8 +3429,8 @@
 
     if-eqz v1, :cond_3
 
-    .line 895
-    invoke-direct {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->M()Z
+    .line 1015
+    invoke-direct {p0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->N()Z
 
     move-result v0
 
@@ -3363,7 +3445,7 @@
 
     goto :goto_0
 
-    .line 897
+    .line 1017
     :cond_3
     const-string v1, "-1"
 
@@ -3373,12 +3455,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 898
+    .line 1018
     sget-object v0, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentFileState;->Error:Lkik/core/datatypes/messageExtensions/ContentMessage$ContentFileState;
 
     goto :goto_0
 
-    .line 901
+    .line 1021
     :cond_4
     sget-object v0, Lkik/core/datatypes/messageExtensions/ContentMessage$ContentFileState;->Error:Lkik/core/datatypes/messageExtensions/ContentMessage$ContentFileState;
 
@@ -3391,25 +3473,25 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 929
+    .line 1050
     const-string v1, "file-size"
 
     invoke-virtual {p0, v1}, Lkik/core/datatypes/messageExtensions/ContentMessage;->g(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 930
-    invoke-static {v1}, Lkik/core/util/w;->a(Ljava/lang/CharSequence;)Z
+    .line 1051
+    invoke-static {v1}, Lkik/core/util/u;->a(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 938
+    .line 1059
     :goto_0
     return v0
 
-    .line 935
+    .line 1056
     :cond_0
     :try_start_0
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -3420,7 +3502,7 @@
 
     goto :goto_0
 
-    .line 938
+    .line 1059
     :catch_0
     move-exception v1
 
@@ -3431,7 +3513,7 @@
     .locals 2
 
     .prologue
-    .line 964
+    .line 1085
     const-string v0, "disallow-save"
 
     const/4 v1, 0x0
@@ -3447,7 +3529,7 @@
     .locals 2
 
     .prologue
-    .line 969
+    .line 1090
     const-string v0, "video-should-autoplay"
 
     const/4 v1, 0x0

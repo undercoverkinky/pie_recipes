@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 90
+    .line 95
     invoke-direct {p0}, Landroid/support/v4/widget/TextViewCompat$BaseTextViewCompatImpl;-><init>()V
 
     return-void
@@ -31,7 +31,7 @@
     .locals 1
 
     .prologue
-    .line 93
+    .line 98
     invoke-static {p1}, Landroid/support/v4/widget/TextViewCompatJb;->getMaxLines(Landroid/widget/TextView;)I
 
     move-result v0
@@ -43,7 +43,7 @@
     .locals 1
 
     .prologue
-    .line 98
+    .line 103
     invoke-static {p1}, Landroid/support/v4/widget/TextViewCompatJb;->getMinLines(Landroid/widget/TextView;)I
 
     move-result v0

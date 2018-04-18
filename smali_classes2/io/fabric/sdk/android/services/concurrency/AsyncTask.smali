@@ -6,7 +6,6 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lio/fabric/sdk/android/services/concurrency/AsyncTask$4;,
         Lio/fabric/sdk/android/services/concurrency/AsyncTask$a;,
         Lio/fabric/sdk/android/services/concurrency/AsyncTask$d;,
         Lio/fabric/sdk/android/services/concurrency/AsyncTask$b;,
@@ -333,7 +332,7 @@
     return-void
 .end method
 
-.method protected static varargs k_()V
+.method protected static varargs h_()V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -473,6 +472,16 @@
     .end annotation
 .end method
 
+.method public final g_()Lio/fabric/sdk/android/services/concurrency/AsyncTask$Status;
+    .locals 1
+
+    .prologue
+    .line 353
+    iget-object v0, p0, Lio/fabric/sdk/android/services/concurrency/AsyncTask;->l:Lio/fabric/sdk/android/services/concurrency/AsyncTask$Status;
+
+    return-object v0
+.end method
+
 .method public final h()Z
     .locals 1
 
@@ -506,14 +515,4 @@
     move-result v0
 
     return v0
-.end method
-
-.method public final j_()Lio/fabric/sdk/android/services/concurrency/AsyncTask$Status;
-    .locals 1
-
-    .prologue
-    .line 353
-    iget-object v0, p0, Lio/fabric/sdk/android/services/concurrency/AsyncTask;->l:Lio/fabric/sdk/android/services/concurrency/AsyncTask$Status;
-
-    return-object v0
 .end method

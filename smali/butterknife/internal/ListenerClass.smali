@@ -10,8 +10,8 @@
 .annotation system Ldalvik/annotation/AnnotationDefault;
     value = .subannotation Lbutterknife/internal/ListenerClass;
         callbacks = Lbutterknife/internal/ListenerClass$NONE;
-        genericArguments = 0x0
         method = {}
+        remover = ""
     .end subannotation
 .end annotation
 
@@ -45,10 +45,10 @@
     .end annotation
 .end method
 
-.method public abstract genericArguments()I
+.method public abstract method()[Lbutterknife/internal/ListenerMethod;
 .end method
 
-.method public abstract method()[Lbutterknife/internal/ListenerMethod;
+.method public abstract remover()Ljava/lang/String;
 .end method
 
 .method public abstract setter()Ljava/lang/String;

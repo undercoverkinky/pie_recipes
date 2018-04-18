@@ -34,12 +34,12 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 123
-    const v0, 0x7f040105
+    const v0, 0x7f040135
 
     invoke-virtual {p0, v0}, Lkik/android/widget/preferences/KikPreference;->setLayoutResource(I)V
 
     .line 124
-    sget-object v0, Lkik/android/m$a;->K:[I
+    sget-object v0, Lkik/android/R$styleable;->KikPreference:[I
 
     invoke-virtual {p1, p2, v0, p3, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -58,7 +58,7 @@
     iput-object p4, p0, Lkik/android/widget/preferences/KikPreference;->b:Lcom/kik/clientmetrics/model/Clientmetrics$ClientMetricsSettingsUsedType;
 
     .line 128
-    sget-object v0, Lkik/android/m$a;->K:[I
+    sget-object v0, Lkik/android/R$styleable;->KikPreference:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -116,14 +116,14 @@
     const/4 v3, 0x0
 
     .line 65
-    const v0, 0x7f110315
+    const v0, 0x7f100384
 
     invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     .line 66
-    const v0, 0x7f110316
+    const v0, 0x7f100386
 
     invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -160,11 +160,11 @@
     invoke-virtual {v1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 79
-    invoke-static {v1}, Lkik/android/util/bz;->a(Landroid/view/View;)Lkik/android/util/bz$b;
+    invoke-static {v1}, Lkik/android/util/ca;->a(Landroid/view/View;)Lkik/android/util/ca$b;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Lkik/android/util/bz$b;->c(I)Lkik/android/util/bz$b;
+    invoke-virtual {v0, v3}, Lkik/android/util/ca$b;->b(I)Lkik/android/util/ca$b;
 
     .line 83
     :cond_0
@@ -198,11 +198,11 @@
     invoke-virtual {v2, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 95
-    invoke-static {v2}, Lkik/android/util/bz;->a(Landroid/view/View;)Lkik/android/util/bz$b;
+    invoke-static {v2}, Lkik/android/util/ca;->a(Landroid/view/View;)Lkik/android/util/ca$b;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Lkik/android/util/bz$b;->c(I)Lkik/android/util/bz$b;
+    invoke-virtual {v0, v3}, Lkik/android/util/ca$b;->b(I)Lkik/android/util/ca$b;
 
     .line 98
     :cond_1
@@ -271,14 +271,14 @@
     move-result-object v0
 
     .line 52
-    invoke-virtual {p2, v0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {p2, v0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
 
     .line 53
     new-instance v1, Lkik/android/widget/preferences/KikPreference$1;
 
     invoke-direct {v1, v0}, Lkik/android/widget/preferences/KikPreference$1;-><init>(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    invoke-virtual {p1, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {p1, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
     .line 61
     :cond_0
@@ -345,7 +345,7 @@
     invoke-static {p1, v0}, Lkik/android/widget/preferences/KikPreference;->a(Landroid/view/View;I)V
 
     .line 149
-    const v0, 0x7f110059
+    const v0, 0x7f10008e
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

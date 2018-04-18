@@ -19,7 +19,7 @@
     .locals 1
 
     .prologue
-    .line 534
+    .line 530
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/common/cache/LocalCache$EntryFactory;-><init>(Ljava/lang/String;ILcom/google/common/cache/LocalCache$1;)V
@@ -50,18 +50,18 @@
     .end annotation
 
     .prologue
-    .line 544
+    .line 540
     invoke-super {p0, p1, p2, p3}, Lcom/google/common/cache/LocalCache$EntryFactory;->copyEntry(Lcom/google/common/cache/LocalCache$Segment;Lcom/google/common/cache/LocalCache$j;Lcom/google/common/cache/LocalCache$j;)Lcom/google/common/cache/LocalCache$j;
 
     move-result-object v0
 
-    .line 545
+    .line 541
     invoke-virtual {p0, p2, v0}, Lcom/google/common/cache/LocalCache$EntryFactory$8;->copyAccessEntry(Lcom/google/common/cache/LocalCache$j;Lcom/google/common/cache/LocalCache$j;)V
 
-    .line 546
+    .line 542
     invoke-virtual {p0, p2, v0}, Lcom/google/common/cache/LocalCache$EntryFactory$8;->copyWriteEntry(Lcom/google/common/cache/LocalCache$j;Lcom/google/common/cache/LocalCache$j;)V
 
-    .line 547
+    .line 543
     return-object v0
 .end method
 
@@ -88,7 +88,7 @@
     .end annotation
 
     .prologue
-    .line 538
+    .line 534
     new-instance v0, Lcom/google/common/cache/LocalCache$u;
 
     iget-object v1, p1, Lcom/google/common/cache/LocalCache$Segment;->keyReferenceQueue:Ljava/lang/ref/ReferenceQueue;

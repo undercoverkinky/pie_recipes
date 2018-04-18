@@ -3,9 +3,9 @@
 
 
 # instance fields
-.field private final zzpi:I
+.field private final zzakv:I
 
-.field private final zzpj:I
+.field private final zzakw:I
 
 
 # direct methods
@@ -14,9 +14,9 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lcom/google/android/gms/common/images/Size;->zzpi:I
+    iput p1, p0, Lcom/google/android/gms/common/images/Size;->zzakv:I
 
-    iput p2, p0, Lcom/google/android/gms/common/images/Size;->zzpj:I
+    iput p2, p0, Lcom/google/android/gms/common/images/Size;->zzakw:I
 
     return-void
 .end method
@@ -57,7 +57,7 @@
     :cond_1
     if-gez v0, :cond_2
 
-    invoke-static {p0}, Lcom/google/android/gms/common/images/Size;->zzdb(Ljava/lang/String;)Ljava/lang/NumberFormatException;
+    invoke-static {p0}, Lcom/google/android/gms/common/images/Size;->zzfw(Ljava/lang/String;)Ljava/lang/NumberFormatException;
 
     move-result-object v0
 
@@ -96,35 +96,35 @@
     :catch_0
     move-exception v0
 
-    invoke-static {p0}, Lcom/google/android/gms/common/images/Size;->zzdb(Ljava/lang/String;)Ljava/lang/NumberFormatException;
+    invoke-static {p0}, Lcom/google/android/gms/common/images/Size;->zzfw(Ljava/lang/String;)Ljava/lang/NumberFormatException;
 
     move-result-object v0
 
     throw v0
 .end method
 
-.method private static zzdb(Ljava/lang/String;)Ljava/lang/NumberFormatException;
+.method private static zzfw(Ljava/lang/String;)Ljava/lang/NumberFormatException;
     .locals 3
 
     new-instance v0, Ljava/lang/NumberFormatException;
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    move-result v2
+    move-result v1
 
-    add-int/lit8 v2, v2, 0x10
+    add-int/lit8 v1, v1, 0x10
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v2, "Invalid Size: \""
+    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "Invalid Size: \""
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -176,15 +176,15 @@
 
     check-cast p1, Lcom/google/android/gms/common/images/Size;
 
-    iget v2, p0, Lcom/google/android/gms/common/images/Size;->zzpi:I
+    iget v2, p0, Lcom/google/android/gms/common/images/Size;->zzakv:I
 
-    iget v3, p1, Lcom/google/android/gms/common/images/Size;->zzpi:I
+    iget v3, p1, Lcom/google/android/gms/common/images/Size;->zzakv:I
 
     if-ne v2, v3, :cond_0
 
-    iget v2, p0, Lcom/google/android/gms/common/images/Size;->zzpj:I
+    iget v2, p0, Lcom/google/android/gms/common/images/Size;->zzakw:I
 
-    iget v3, p1, Lcom/google/android/gms/common/images/Size;->zzpj:I
+    iget v3, p1, Lcom/google/android/gms/common/images/Size;->zzakw:I
 
     if-ne v2, v3, :cond_0
 
@@ -196,7 +196,7 @@
 .method public final getHeight()I
     .locals 1
 
-    iget v0, p0, Lcom/google/android/gms/common/images/Size;->zzpj:I
+    iget v0, p0, Lcom/google/android/gms/common/images/Size;->zzakw:I
 
     return v0
 .end method
@@ -204,7 +204,7 @@
 .method public final getWidth()I
     .locals 1
 
-    iget v0, p0, Lcom/google/android/gms/common/images/Size;->zzpi:I
+    iget v0, p0, Lcom/google/android/gms/common/images/Size;->zzakv:I
 
     return v0
 .end method
@@ -212,13 +212,13 @@
 .method public final hashCode()I
     .locals 3
 
-    iget v0, p0, Lcom/google/android/gms/common/images/Size;->zzpj:I
+    iget v0, p0, Lcom/google/android/gms/common/images/Size;->zzakw:I
 
-    iget v1, p0, Lcom/google/android/gms/common/images/Size;->zzpi:I
+    iget v1, p0, Lcom/google/android/gms/common/images/Size;->zzakv:I
 
     shl-int/lit8 v1, v1, 0x10
 
-    iget v2, p0, Lcom/google/android/gms/common/images/Size;->zzpi:I
+    iget v2, p0, Lcom/google/android/gms/common/images/Size;->zzakv:I
 
     ushr-int/lit8 v2, v2, 0x10
 
@@ -232,17 +232,17 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    iget v0, p0, Lcom/google/android/gms/common/images/Size;->zzpi:I
+    iget v0, p0, Lcom/google/android/gms/common/images/Size;->zzakv:I
 
-    iget v1, p0, Lcom/google/android/gms/common/images/Size;->zzpj:I
+    iget v1, p0, Lcom/google/android/gms/common/images/Size;->zzakw:I
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    const/16 v2, 0x17
 
-    const/16 v3, 0x17
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

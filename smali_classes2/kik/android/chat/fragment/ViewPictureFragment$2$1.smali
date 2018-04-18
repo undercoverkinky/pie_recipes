@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/fragment/ViewPictureFragment$2$1;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
         "Landroid/content/Intent;",
         ">;"
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 548
+    .line 617
     iput-object p1, p0, Lkik/android/chat/fragment/ViewPictureFragment$2$1;->a:Lkik/android/chat/fragment/ViewPictureFragment$2;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -46,10 +46,10 @@
     .locals 1
 
     .prologue
-    .line 548
+    .line 617
     check-cast p1, Landroid/content/Intent;
 
-    .line 1558
+    .line 1627
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$2$1;->a:Lkik/android/chat/fragment/ViewPictureFragment$2;
 
     iget-object v0, v0, Lkik/android/chat/fragment/ViewPictureFragment$2;->a:Lkik/android/chat/fragment/ViewPictureFragment;
@@ -62,7 +62,7 @@
 
     invoke-static {p1, v0}, Lkik/android/chat/activity/KActivityLauncher;->a(Landroid/content/Intent;Landroid/content/Context;)Lcom/kik/events/Promise;
 
-    .line 548
+    .line 617
     return-void
 .end method
 
@@ -70,7 +70,7 @@
     .locals 3
 
     .prologue
-    .line 552
+    .line 621
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$2$1;->a:Lkik/android/chat/fragment/ViewPictureFragment$2;
 
     iget-object v0, v0, Lkik/android/chat/fragment/ViewPictureFragment$2;->a:Lkik/android/chat/fragment/ViewPictureFragment;
@@ -81,7 +81,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0381
+    const v1, 0x7f090395
 
     invoke-static {v1}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
@@ -95,6 +95,6 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 553
+    .line 622
     return-void
 .end method

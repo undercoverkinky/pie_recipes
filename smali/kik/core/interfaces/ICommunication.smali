@@ -14,29 +14,29 @@
 
 
 # virtual methods
-.method public abstract a(Lkik/core/net/outgoing/ae;)Lcom/kik/events/Promise;
+.method public abstract a(Lkik/core/net/outgoing/j;)Lcom/kik/events/Promise;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkik/core/net/outgoing/ae;",
+            "Lkik/core/net/outgoing/j;",
             ")",
             "Lcom/kik/events/Promise",
             "<",
-            "Lkik/core/net/outgoing/ae;",
+            "Lkik/core/net/outgoing/j;",
             ">;"
         }
     .end annotation
 .end method
 
-.method public abstract a(Lkik/core/net/outgoing/ae;Z)Lcom/kik/events/Promise;
+.method public abstract a(Lkik/core/net/outgoing/j;Z)Lcom/kik/events/Promise;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkik/core/net/outgoing/ae;",
+            "Lkik/core/net/outgoing/j;",
             "Z)",
             "Lcom/kik/events/Promise",
             "<",
-            "Lkik/core/net/outgoing/ae;",
+            "Lkik/core/net/outgoing/j;",
             ">;"
         }
     .end annotation
@@ -62,7 +62,7 @@
     .end annotation
 .end method
 
-.method public abstract a(Ljava/util/concurrent/ExecutorService;Lkik/core/net/e;Lkik/core/interfaces/r;Lkik/core/interfaces/ab;)V
+.method public abstract a(Ljava/util/concurrent/ExecutorService;Lkik/core/net/e;Lkik/core/interfaces/aa;)V
 .end method
 
 .method public abstract a(Lkik/core/interfaces/ICommunication$b;J)V
@@ -76,7 +76,7 @@
 .method public abstract a(Lkik/core/net/c;)V
 .end method
 
-.method public abstract a(Lkik/core/x;)V
+.method public abstract a(Lkik/core/z;)V
 .end method
 
 .method public abstract a(Ljava/lang/String;)Z

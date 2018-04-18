@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract a()Lcom/dyuproject/protostuff/u;
+.method public abstract cachedSchema()Lcom/dyuproject/protostuff/u;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",

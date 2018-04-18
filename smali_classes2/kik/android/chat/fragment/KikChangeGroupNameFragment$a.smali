@@ -1,5 +1,5 @@
 .class public final Lkik/android/chat/fragment/KikChangeGroupNameFragment$a;
-.super Lkik/android/util/aa;
+.super Lkik/android/util/ae;
 .source "SourceFile"
 
 
@@ -19,8 +19,8 @@
     .locals 0
 
     .prologue
-    .line 197
-    invoke-direct {p0}, Lkik/android/util/aa;-><init>()V
+    .line 214
+    invoke-direct {p0}, Lkik/android/util/ae;-><init>()V
 
     return-void
 .end method
@@ -31,23 +31,23 @@
     .locals 1
 
     .prologue
-    .line 203
+    .line 220
     const-string v0, "kik.android.chat.fragment.KikChangeGroupNameFragment.GroupJid"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikChangeGroupNameFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 204
+    .line 221
     return-object p0
 .end method
 
-.method public final o_()Ljava/lang/String;
+.method public final m_()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 209
+    .line 226
     const-string v0, "kik.android.chat.fragment.KikChangeGroupNameFragment.GroupJid"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikChangeGroupNameFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikChangeGroupNameFragment$a;->h(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

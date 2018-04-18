@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/android/volley/i$b;
+.implements Lcom/android/volley/h$b;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/android/volley/i$b",
+        "Lcom/android/volley/h$b",
         "<",
         "Landroid/graphics/Bitmap;",
         ">;"
@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 364
+    .line 408
     iput-object p1, p0, Lkik/android/chat/fragment/ViewPictureFragment$23;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,10 +50,10 @@
     .locals 2
 
     .prologue
-    .line 364
+    .line 408
     check-cast p1, Landroid/graphics/Bitmap;
 
-    .line 1368
+    .line 1412
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$23;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/ViewPictureFragment;->d(Lkik/android/chat/fragment/ViewPictureFragment;)Landroid/os/Handler;
@@ -66,6 +66,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 364
+    .line 408
     return-void
 .end method

@@ -25,13 +25,13 @@
     .locals 0
 
     .prologue
-    .line 95
+    .line 97
     invoke-direct {p0}, Landroid/support/v7/widget/RecyclerView$ItemDecoration;-><init>()V
 
-    .line 96
+    .line 98
     iput p1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$c;->a:I
 
-    .line 97
+    .line 99
     return-void
 .end method
 
@@ -43,18 +43,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 102
-    .line 103
-    invoke-virtual {p4}, Landroid/support/v7/widget/RecyclerView$State;->e()I
+    .line 104
+    .line 105
+    invoke-virtual {p4}, Landroid/support/v7/widget/RecyclerView$State;->getItemCount()I
 
     move-result v0
 
-    .line 104
-    invoke-virtual {p3, p2}, Landroid/support/v7/widget/RecyclerView;->c(Landroid/view/View;)I
+    .line 106
+    invoke-virtual {p3, p2}, Landroid/support/v7/widget/RecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
 
     move-result v2
 
-    .line 109
+    .line 111
     iget-boolean v3, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$c;->b:Z
 
     if-eqz v3, :cond_0
@@ -63,7 +63,7 @@
 
     if-le v0, v3, :cond_0
 
-    invoke-virtual {p4}, Landroid/support/v7/widget/RecyclerView$State;->e()I
+    invoke-virtual {p4}, Landroid/support/v7/widget/RecyclerView$State;->getItemCount()I
 
     move-result v0
 
@@ -71,14 +71,14 @@
 
     if-ne v2, v0, :cond_0
 
-    .line 110
+    .line 112
     iget v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$c;->a:I
 
-    .line 112
+    .line 114
     :goto_0
     invoke-virtual {p1, v1, v1, v1, v0}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 113
+    .line 115
     return-void
 
     :cond_0
@@ -91,9 +91,9 @@
     .locals 0
 
     .prologue
-    .line 117
+    .line 119
     iput-boolean p1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$c;->b:Z
 
-    .line 118
+    .line 120
     return-void
 .end method

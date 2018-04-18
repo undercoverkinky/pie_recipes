@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 74
+    .line 85
     iput-object p1, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$1;->a:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 2
 
     .prologue
-    .line 79
+    .line 90
     const/4 v0, 0x2
 
     if-eq p2, v0, :cond_0
@@ -53,13 +53,13 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 80
+    .line 91
     :cond_0
     iget-object v0, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$1;->a:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
 
-    invoke-static {v0}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->a(Lkik/android/chat/fragment/KikChangeGroupNameFragment;)V
+    invoke-static {v0}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->b(Lkik/android/chat/fragment/KikChangeGroupNameFragment;)V
 
-    .line 82
+    .line 93
     :cond_1
     const/4 v0, 0x1
 

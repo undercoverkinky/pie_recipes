@@ -1,5 +1,5 @@
 .class public Landroid/support/design/widget/CoordinatorLayout$SavedState;
-.super Landroid/view/View$BaseSavedState;
+.super Landroid/support/v4/view/AbsSavedState;
 .source "SourceFile"
 
 
@@ -28,7 +28,7 @@
 
 
 # instance fields
-.field a:Landroid/util/SparseArray;
+.field behaviorStates:Landroid/util/SparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray",
@@ -45,60 +45,60 @@
     .locals 1
 
     .prologue
-    .line 2604
+    .line 3111
     new-instance v0, Landroid/support/design/widget/CoordinatorLayout$SavedState$1;
 
     invoke-direct {v0}, Landroid/support/design/widget/CoordinatorLayout$SavedState$1;-><init>()V
 
+    .line 3112
+    invoke-static {v0}, Landroid/support/v4/os/ParcelableCompat;->newCreator(Landroid/support/v4/os/ParcelableCompatCreatorCallbacks;)Landroid/os/Parcelable$Creator;
+
+    move-result-object v0
+
     sput-object v0, Landroid/support/design/widget/CoordinatorLayout$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 
+    .line 3111
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 7
 
     .prologue
-    .line 2565
-    invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
+    .line 3073
+    invoke-direct {p0, p1, p2}, Landroid/support/v4/view/AbsSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
-    .line 2567
+    .line 3075
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 2569
+    .line 3077
     new-array v2, v1, [I
 
-    .line 2570
+    .line 3078
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->readIntArray([I)V
 
-    .line 2572
-    const-class v0, Landroid/support/design/widget/CoordinatorLayout;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelableArray(Ljava/lang/ClassLoader;)[Landroid/os/Parcelable;
+    .line 3080
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelableArray(Ljava/lang/ClassLoader;)[Landroid/os/Parcelable;
 
     move-result-object v3
 
-    .line 2575
+    .line 3082
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0, v1}, Landroid/util/SparseArray;-><init>(I)V
 
-    iput-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$SavedState;->a:Landroid/util/SparseArray;
+    iput-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$SavedState;->behaviorStates:Landroid/util/SparseArray;
 
-    .line 2576
+    .line 3083
     const/4 v0, 0x0
 
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 2577
-    iget-object v4, p0, Landroid/support/design/widget/CoordinatorLayout$SavedState;->a:Landroid/util/SparseArray;
+    .line 3084
+    iget-object v4, p0, Landroid/support/design/widget/CoordinatorLayout$SavedState;->behaviorStates:Landroid/util/SparseArray;
 
     aget v5, v2, v0
 
@@ -106,12 +106,12 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 2576
+    .line 3083
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 2579
+    .line 3086
     :cond_0
     return-void
 .end method
@@ -120,10 +120,10 @@
     .locals 0
 
     .prologue
-    .line 2582
-    invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
+    .line 3089
+    invoke-direct {p0, p1}, Landroid/support/v4/view/AbsSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 2583
+    .line 3090
     return-void
 .end method
 
@@ -135,15 +135,15 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2587
-    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
+    .line 3094
+    invoke-super {p0, p1, p2}, Landroid/support/v4/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 2589
-    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$SavedState;->a:Landroid/util/SparseArray;
+    .line 3096
+    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$SavedState;->behaviorStates:Landroid/util/SparseArray;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$SavedState;->a:Landroid/util/SparseArray;
+    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$SavedState;->behaviorStates:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
@@ -151,22 +151,22 @@
 
     move v1, v0
 
-    .line 2590
+    .line 3097
     :goto_0
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2592
+    .line 3099
     new-array v3, v1, [I
 
-    .line 2593
+    .line 3100
     new-array v4, v1, [Landroid/os/Parcelable;
 
-    .line 2595
+    .line 3102
     :goto_1
     if-ge v2, v1, :cond_1
 
-    .line 2596
-    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$SavedState;->a:Landroid/util/SparseArray;
+    .line 3103
+    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$SavedState;->behaviorStates:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v2}, Landroid/util/SparseArray;->keyAt(I)I
 
@@ -174,8 +174,8 @@
 
     aput v0, v3, v2
 
-    .line 2597
-    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$SavedState;->a:Landroid/util/SparseArray;
+    .line 3104
+    iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$SavedState;->behaviorStates:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
@@ -185,7 +185,7 @@
 
     aput-object v0, v4, v2
 
-    .line 2595
+    .line 3102
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
@@ -193,16 +193,16 @@
     :cond_0
     move v1, v2
 
-    .line 2589
+    .line 3096
     goto :goto_0
 
-    .line 2599
+    .line 3106
     :cond_1
     invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeIntArray([I)V
 
-    .line 2600
+    .line 3107
     invoke-virtual {p1, v4, p2}, Landroid/os/Parcel;->writeParcelableArray([Landroid/os/Parcelable;I)V
 
-    .line 2602
+    .line 3109
     return-void
 .end method

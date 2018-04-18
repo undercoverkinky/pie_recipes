@@ -1,92 +1,49 @@
-.class public interface abstract Lkik/android/chat/vm/messaging/cn;
+.class final synthetic Lkik/android/chat/vm/messaging/cn;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 # interfaces
-.implements Lkik/android/chat/vm/IListViewModel;
+.implements Lrx/functions/b;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lkik/android/chat/vm/IListViewModel",
-        "<",
-        "Lkik/android/chat/vm/messaging/IMessageViewModel;",
-        ">;"
-    }
-.end annotation
+# static fields
+.field private static final a:Lkik/android/chat/vm/messaging/cn;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lkik/android/chat/vm/messaging/cn;
+
+    invoke-direct {v0}, Lkik/android/chat/vm/messaging/cn;-><init>()V
+
+    sput-object v0, Lkik/android/chat/vm/messaging/cn;->a:Lkik/android/chat/vm/messaging/cn;
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static a()Lrx/functions/b;
+    .locals 1
+
+    sget-object v0, Lkik/android/chat/vm/messaging/cn;->a:Lkik/android/chat/vm/messaging/cn;
+
+    return-object v0
+.end method
 
 
 # virtual methods
-.method public abstract Q_()Lrx/c;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lrx/c",
-            "<",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-.end method
+.method public final call(Ljava/lang/Object;)V
+    .locals 0
 
-.method public abstract a(Z)V
-.end method
+    invoke-static {}, Lkik/android/chat/vm/messaging/bx;->aO()V
 
-.method public abstract d()Lrx/c;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lrx/c",
-            "<",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-.end method
-
-.method public abstract f()Lrx/c;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lrx/c",
-            "<",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-.end method
-
-.method public abstract g()Lrx/c;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lrx/c",
-            "<",
-            "Ljava/lang/Integer;",
-            ">;"
-        }
-    .end annotation
-.end method
-
-.method public abstract h()Lrx/c;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lrx/c",
-            "<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end method
-
-.method public abstract i()V
-.end method
-
-.method public abstract j()V
-.end method
-
-.method public abstract k()Lkik/android/chat/vm/t;
+    return-void
 .end method

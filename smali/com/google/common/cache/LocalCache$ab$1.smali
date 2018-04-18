@@ -48,15 +48,15 @@
     .locals 0
 
     .prologue
-    .line 3595
+    .line 3700
     iput-object p1, p0, Lcom/google/common/cache/LocalCache$ab$1;->c:Lcom/google/common/cache/LocalCache$ab;
 
     invoke-direct {p0}, Lcom/google/common/cache/LocalCache$b;-><init>()V
 
-    .line 3605
+    .line 3710
     iput-object p0, p0, Lcom/google/common/cache/LocalCache$ab$1;->a:Lcom/google/common/cache/LocalCache$j;
 
-    .line 3617
+    .line 3722
     iput-object p0, p0, Lcom/google/common/cache/LocalCache$ab$1;->b:Lcom/google/common/cache/LocalCache$j;
 
     return-void
@@ -75,7 +75,7 @@
     .end annotation
 
     .prologue
-    .line 3609
+    .line 3714
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$ab$1;->a:Lcom/google/common/cache/LocalCache$j;
 
     return-object v0
@@ -92,7 +92,7 @@
     .end annotation
 
     .prologue
-    .line 3621
+    .line 3726
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$ab$1;->b:Lcom/google/common/cache/LocalCache$j;
 
     return-object v0
@@ -102,7 +102,7 @@
     .locals 2
 
     .prologue
-    .line 3599
+    .line 3704
     const-wide v0, 0x7fffffffffffffffL
 
     return-wide v0
@@ -119,10 +119,10 @@
     .end annotation
 
     .prologue
-    .line 3614
+    .line 3719
     iput-object p1, p0, Lcom/google/common/cache/LocalCache$ab$1;->a:Lcom/google/common/cache/LocalCache$j;
 
-    .line 3615
+    .line 3720
     return-void
 .end method
 
@@ -137,10 +137,10 @@
     .end annotation
 
     .prologue
-    .line 3626
+    .line 3731
     iput-object p1, p0, Lcom/google/common/cache/LocalCache$ab$1;->b:Lcom/google/common/cache/LocalCache$j;
 
-    .line 3627
+    .line 3732
     return-void
 .end method
 
@@ -148,6 +148,6 @@
     .locals 0
 
     .prologue
-    .line 3603
+    .line 3708
     return-void
 .end method

@@ -6,350 +6,102 @@
 .implements Landroid/support/v4/view/TintableBackgroundView;
 
 
-# static fields
-.field private static final a:[I
-
-
 # instance fields
-.field private b:Landroid/support/v7/internal/widget/TintInfo;
+.field private final a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
 
-.field private c:Landroid/support/v7/internal/widget/TintInfo;
-
-.field private d:Landroid/support/v7/internal/widget/TintManager;
+.field private final b:Landroid/support/v7/widget/AppCompatTextHelper;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    .prologue
-    .line 46
-    const/4 v0, 0x1
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x0
-
-    const v2, 0x10100d4
-
-    aput v2, v0, v1
-
-    sput-object v0, Landroid/support/v7/widget/AppCompatButton;->a:[I
-
-    return-void
-.end method
-
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
     .prologue
-    .line 59
-    sget v0, Landroid/support/v7/appcompat/R$attr;->r:I
+    .line 62
+    sget v0, Landroid/support/v7/appcompat/R$attr;->buttonStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Landroid/support/v7/widget/AppCompatButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 60
+    .line 63
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 6
-
-    .prologue
-    const v5, 0x1010038
-
-    const/4 v4, -0x1
-
-    const/4 v3, 0x0
-
-    .line 63
-    invoke-direct {p0, p1, p2, p3}, Landroid/widget/Button;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    .line 65
-    sget-boolean v0, Landroid/support/v7/internal/widget/TintManager;->a:Z
-
-    if-eqz v0, :cond_1
-
-    .line 66
-    invoke-virtual {p0}, Landroid/support/v7/widget/AppCompatButton;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    sget-object v1, Landroid/support/v7/widget/AppCompatButton;->a:[I
-
-    invoke-static {v0, p2, v1, p3}, Landroid/support/v7/internal/widget/TintTypedArray;->a(Landroid/content/Context;Landroid/util/AttributeSet;[II)Landroid/support/v7/internal/widget/TintTypedArray;
-
-    move-result-object v0
-
-    .line 68
-    invoke-virtual {v0, v3}, Landroid/support/v7/internal/widget/TintTypedArray;->f(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 69
-    invoke-virtual {v0}, Landroid/support/v7/internal/widget/TintTypedArray;->c()Landroid/support/v7/internal/widget/TintManager;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v3, v4}, Landroid/support/v7/internal/widget/TintTypedArray;->f(II)I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Landroid/support/v7/internal/widget/TintManager;->b(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v1
-
-    .line 70
-    if-eqz v1, :cond_0
-
-    .line 71
-    invoke-direct {p0, v1}, Landroid/support/v7/widget/AppCompatButton;->a(Landroid/content/res/ColorStateList;)V
-
-    .line 74
-    :cond_0
-    invoke-virtual {v0}, Landroid/support/v7/internal/widget/TintTypedArray;->c()Landroid/support/v7/internal/widget/TintManager;
-
-    move-result-object v1
-
-    iput-object v1, p0, Landroid/support/v7/widget/AppCompatButton;->d:Landroid/support/v7/internal/widget/TintManager;
-
-    .line 75
-    invoke-virtual {v0}, Landroid/support/v7/internal/widget/TintTypedArray;->b()V
-
-    .line 79
-    :cond_1
-    sget-object v0, Landroid/support/v7/appcompat/R$styleable;->P:[I
-
-    invoke-virtual {p1, p2, v0, p3, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
-
-    move-result-object v0
-
-    .line 81
-    sget v1, Landroid/support/v7/appcompat/R$styleable;->Q:I
-
-    invoke-virtual {v0, v1, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result v1
-
-    .line 82
-    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
-
-    .line 85
-    if-eq v1, v4, :cond_3
-
-    .line 86
-    sget-object v0, Landroid/support/v7/appcompat/R$styleable;->bB:[I
-
-    invoke-virtual {p1, v1, v0}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
-
-    move-result-object v0
-
-    .line 87
-    sget v1, Landroid/support/v7/appcompat/R$styleable;->bG:I
-
-    invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    .line 88
-    sget v1, Landroid/support/v7/appcompat/R$styleable;->bG:I
-
-    invoke-virtual {v0, v1, v3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
-
-    move-result v1
-
-    invoke-virtual {p0, v1}, Landroid/support/v7/widget/AppCompatButton;->setAllCaps(Z)V
-
-    .line 90
-    :cond_2
-    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
-
-    .line 94
-    :cond_3
-    sget-object v0, Landroid/support/v7/appcompat/R$styleable;->P:[I
-
-    invoke-virtual {p1, p2, v0, p3, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
-
-    move-result-object v0
-
-    .line 95
-    sget v1, Landroid/support/v7/appcompat/R$styleable;->R:I
-
-    invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    .line 96
-    sget v1, Landroid/support/v7/appcompat/R$styleable;->R:I
-
-    invoke-virtual {v0, v1, v3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
-
-    move-result v1
-
-    invoke-virtual {p0, v1}, Landroid/support/v7/widget/AppCompatButton;->setAllCaps(Z)V
-
-    .line 98
-    :cond_4
-    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
-
-    .line 100
-    invoke-virtual {p0}, Landroid/support/v7/widget/AppCompatButton;->getTextColors()Landroid/content/res/ColorStateList;
-
-    move-result-object v1
-
-    .line 101
-    if-eqz v1, :cond_5
-
-    invoke-virtual {v1}, Landroid/content/res/ColorStateList;->isStateful()Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    .line 106
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v2, 0x15
-
-    if-ge v0, v2, :cond_6
-
-    .line 109
-    invoke-static {p1, v5}, Landroid/support/v7/internal/widget/ThemeUtils;->c(Landroid/content/Context;I)I
-
-    move-result v0
-
-    .line 119
-    :goto_0
-    invoke-virtual {v1}, Landroid/content/res/ColorStateList;->getDefaultColor()I
-
-    move-result v1
-
-    invoke-static {v1, v0}, Landroid/support/v7/internal/widget/ThemeUtils;->a(II)Landroid/content/res/ColorStateList;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Landroid/support/v7/widget/AppCompatButton;->setTextColor(Landroid/content/res/ColorStateList;)V
-
-    .line 122
-    :cond_5
-    return-void
-
-    .line 115
-    :cond_6
-    invoke-static {p1, v5}, Landroid/support/v7/internal/widget/ThemeUtils;->a(Landroid/content/Context;I)I
-
-    move-result v0
-
-    goto :goto_0
-.end method
-
-.method private a()V
     .locals 1
 
     .prologue
-    .line 204
-    invoke-virtual {p0}, Landroid/support/v7/widget/AppCompatButton;->getBackground()Landroid/graphics/drawable/Drawable;
+    .line 66
+    invoke-static {p1}, Landroid/support/v7/widget/TintContextWrapper;->a(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    invoke-direct {p0, v0, p2, p3}, Landroid/widget/Button;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 205
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->c:Landroid/support/v7/internal/widget/TintInfo;
+    .line 68
+    new-instance v0, Landroid/support/v7/widget/AppCompatBackgroundHelper;
 
-    if-eqz v0, :cond_1
+    invoke-direct {v0, p0}, Landroid/support/v7/widget/AppCompatBackgroundHelper;-><init>(Landroid/view/View;)V
 
-    .line 206
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->c:Landroid/support/v7/internal/widget/TintInfo;
+    iput-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
 
-    invoke-static {p0, v0}, Landroid/support/v7/internal/widget/TintManager;->a(Landroid/view/View;Landroid/support/v7/internal/widget/TintInfo;)V
+    .line 69
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
 
-    .line 211
-    :cond_0
-    :goto_0
+    invoke-virtual {v0, p2, p3}, Landroid/support/v7/widget/AppCompatBackgroundHelper;->a(Landroid/util/AttributeSet;I)V
+
+    .line 71
+    invoke-static {p0}, Landroid/support/v7/widget/AppCompatTextHelper;->a(Landroid/widget/TextView;)Landroid/support/v7/widget/AppCompatTextHelper;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->b:Landroid/support/v7/widget/AppCompatTextHelper;
+
+    .line 72
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->b:Landroid/support/v7/widget/AppCompatTextHelper;
+
+    invoke-virtual {v0, p2, p3}, Landroid/support/v7/widget/AppCompatTextHelper;->a(Landroid/util/AttributeSet;I)V
+
+    .line 73
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->b:Landroid/support/v7/widget/AppCompatTextHelper;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/AppCompatTextHelper;->a()V
+
+    .line 74
     return-void
-
-    .line 207
-    :cond_1
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->b:Landroid/support/v7/internal/widget/TintInfo;
-
-    if-eqz v0, :cond_0
-
-    .line 208
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->b:Landroid/support/v7/internal/widget/TintInfo;
-
-    invoke-static {p0, v0}, Landroid/support/v7/internal/widget/TintManager;->a(Landroid/view/View;Landroid/support/v7/internal/widget/TintInfo;)V
-
-    goto :goto_0
-.end method
-
-.method private a(Landroid/content/res/ColorStateList;)V
-    .locals 2
-
-    .prologue
-    .line 214
-    if-eqz p1, :cond_1
-
-    .line 215
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->b:Landroid/support/v7/internal/widget/TintInfo;
-
-    if-nez v0, :cond_0
-
-    .line 216
-    new-instance v0, Landroid/support/v7/internal/widget/TintInfo;
-
-    invoke-direct {v0}, Landroid/support/v7/internal/widget/TintInfo;-><init>()V
-
-    iput-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->b:Landroid/support/v7/internal/widget/TintInfo;
-
-    .line 218
-    :cond_0
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->b:Landroid/support/v7/internal/widget/TintInfo;
-
-    iput-object p1, v0, Landroid/support/v7/internal/widget/TintInfo;->a:Landroid/content/res/ColorStateList;
-
-    .line 219
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->b:Landroid/support/v7/internal/widget/TintInfo;
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Landroid/support/v7/internal/widget/TintInfo;->d:Z
-
-    .line 223
-    :goto_0
-    invoke-direct {p0}, Landroid/support/v7/widget/AppCompatButton;->a()V
-
-    .line 224
-    return-void
-
-    .line 221
-    :cond_1
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->b:Landroid/support/v7/internal/widget/TintInfo;
-
-    goto :goto_0
 .end method
 
 
 # virtual methods
 .method protected drawableStateChanged()V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 199
+    .line 150
     invoke-super {p0}, Landroid/widget/Button;->drawableStateChanged()V
 
-    .line 200
-    invoke-direct {p0}, Landroid/support/v7/widget/AppCompatButton;->a()V
+    .line 151
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
 
-    .line 201
+    if-eqz v0, :cond_0
+
+    .line 152
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/AppCompatBackgroundHelper;->d()V
+
+    .line 154
+    :cond_0
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->b:Landroid/support/v7/widget/AppCompatTextHelper;
+
+    if-eqz v0, :cond_1
+
+    .line 155
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->b:Landroid/support/v7/widget/AppCompatTextHelper;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/AppCompatTextHelper;->a()V
+
+    .line 157
+    :cond_1
     return-void
 .end method
 
@@ -357,14 +109,17 @@
     .locals 1
 
     .prologue
-    .line 165
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->c:Landroid/support/v7/internal/widget/TintInfo;
+    .line 116
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->c:Landroid/support/v7/internal/widget/TintInfo;
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
 
-    iget-object v0, v0, Landroid/support/v7/internal/widget/TintInfo;->a:Landroid/content/res/ColorStateList;
+    .line 117
+    invoke-virtual {v0}, Landroid/support/v7/widget/AppCompatBackgroundHelper;->b()Landroid/content/res/ColorStateList;
+
+    move-result-object v0
 
     :goto_0
     return-object v0
@@ -379,14 +134,17 @@
     .locals 1
 
     .prologue
-    .line 194
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->c:Landroid/support/v7/internal/widget/TintInfo;
+    .line 144
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->c:Landroid/support/v7/internal/widget/TintInfo;
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
 
-    iget-object v0, v0, Landroid/support/v7/internal/widget/TintInfo;->b:Landroid/graphics/PorterDuff$Mode;
+    .line 145
+    invoke-virtual {v0}, Landroid/support/v7/widget/AppCompatBackgroundHelper;->c()Landroid/graphics/PorterDuff$Mode;
+
+    move-result-object v0
 
     :goto_0
     return-object v0
@@ -401,10 +159,10 @@
     .locals 1
 
     .prologue
-    .line 228
+    .line 169
     invoke-super {p0, p1}, Landroid/widget/Button;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 229
+    .line 170
     const-class v0, Landroid/widget/Button;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -413,18 +171,21 @@
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityEvent;->setClassName(Ljava/lang/CharSequence;)V
 
-    .line 230
+    .line 171
     return-void
 .end method
 
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
     .locals 1
+    .annotation build Landroid/annotation/TargetApi;
+        value = 0xe
+    .end annotation
 
     .prologue
-    .line 234
+    .line 177
     invoke-super {p0, p1}, Landroid/widget/Button;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 235
+    .line 178
     const-class v0, Landroid/widget/Button;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -433,51 +194,29 @@
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setClassName(Ljava/lang/CharSequence;)V
 
-    .line 236
+    .line 179
     return-void
-.end method
-
-.method public setAllCaps(Z)V
-    .locals 2
-
-    .prologue
-    .line 239
-    if-eqz p1, :cond_0
-
-    new-instance v0, Landroid/support/v7/internal/text/AllCapsTransformationMethod;
-
-    invoke-virtual {p0}, Landroid/support/v7/widget/AppCompatButton;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/support/v7/internal/text/AllCapsTransformationMethod;-><init>(Landroid/content/Context;)V
-
-    :goto_0
-    invoke-virtual {p0, v0}, Landroid/support/v7/widget/AppCompatButton;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
-
-    .line 240
-    return-void
-
-    .line 239
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method
 
 .method public setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
     .prologue
-    .line 133
+    .line 86
     invoke-super {p0, p1}, Landroid/widget/Button;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 135
-    const/4 v0, 0x0
+    .line 87
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
 
-    invoke-direct {p0, v0}, Landroid/support/v7/widget/AppCompatButton;->a(Landroid/content/res/ColorStateList;)V
+    if-eqz v0, :cond_0
 
-    .line 136
+    .line 88
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/AppCompatBackgroundHelper;->a()V
+
+    .line 90
+    :cond_0
     return-void
 .end method
 
@@ -485,143 +224,80 @@
     .locals 1
 
     .prologue
-    .line 126
+    .line 78
     invoke-super {p0, p1}, Landroid/widget/Button;->setBackgroundResource(I)V
 
-    .line 128
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->d:Landroid/support/v7/internal/widget/TintManager;
+    .line 79
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->d:Landroid/support/v7/internal/widget/TintManager;
+    .line 80
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
 
-    invoke-virtual {v0, p1}, Landroid/support/v7/internal/widget/TintManager;->b(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/AppCompatBackgroundHelper;->a(I)V
 
-    move-result-object v0
-
-    :goto_0
-    invoke-direct {p0, v0}, Landroid/support/v7/widget/AppCompatButton;->a(Landroid/content/res/ColorStateList;)V
-
-    .line 129
-    return-void
-
-    .line 128
+    .line 82
     :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-void
 .end method
 
 .method public setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 147
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->c:Landroid/support/v7/internal/widget/TintInfo;
+    .line 101
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    .line 148
-    new-instance v0, Landroid/support/v7/internal/widget/TintInfo;
+    .line 102
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
 
-    invoke-direct {v0}, Landroid/support/v7/internal/widget/TintInfo;-><init>()V
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/AppCompatBackgroundHelper;->a(Landroid/content/res/ColorStateList;)V
 
-    iput-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->c:Landroid/support/v7/internal/widget/TintInfo;
-
-    .line 150
+    .line 104
     :cond_0
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->c:Landroid/support/v7/internal/widget/TintInfo;
-
-    iput-object p1, v0, Landroid/support/v7/internal/widget/TintInfo;->a:Landroid/content/res/ColorStateList;
-
-    .line 151
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->c:Landroid/support/v7/internal/widget/TintInfo;
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Landroid/support/v7/internal/widget/TintInfo;->d:Z
-
-    .line 153
-    invoke-direct {p0}, Landroid/support/v7/widget/AppCompatButton;->a()V
-
-    .line 154
     return-void
 .end method
 
 .method public setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 176
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->c:Landroid/support/v7/internal/widget/TintInfo;
+    .line 129
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    .line 177
-    new-instance v0, Landroid/support/v7/internal/widget/TintInfo;
+    .line 130
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->a:Landroid/support/v7/widget/AppCompatBackgroundHelper;
 
-    invoke-direct {v0}, Landroid/support/v7/internal/widget/TintInfo;-><init>()V
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/AppCompatBackgroundHelper;->a(Landroid/graphics/PorterDuff$Mode;)V
 
-    iput-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->c:Landroid/support/v7/internal/widget/TintInfo;
-
-    .line 179
+    .line 132
     :cond_0
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->c:Landroid/support/v7/internal/widget/TintInfo;
-
-    iput-object p1, v0, Landroid/support/v7/internal/widget/TintInfo;->b:Landroid/graphics/PorterDuff$Mode;
-
-    .line 180
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->c:Landroid/support/v7/internal/widget/TintInfo;
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Landroid/support/v7/internal/widget/TintInfo;->c:Z
-
-    .line 182
-    invoke-direct {p0}, Landroid/support/v7/widget/AppCompatButton;->a()V
-
-    .line 183
     return-void
 .end method
 
 .method public setTextAppearance(Landroid/content/Context;I)V
-    .locals 3
+    .locals 1
 
     .prologue
-    .line 244
+    .line 161
     invoke-super {p0, p1, p2}, Landroid/widget/Button;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 246
-    sget-object v0, Landroid/support/v7/appcompat/R$styleable;->bB:[I
+    .line 162
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->b:Landroid/support/v7/widget/AppCompatTextHelper;
 
-    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    .line 163
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatButton;->b:Landroid/support/v7/widget/AppCompatTextHelper;
 
-    .line 247
-    sget v1, Landroid/support/v7/appcompat/R$styleable;->bG:I
+    invoke-virtual {v0, p1, p2}, Landroid/support/v7/widget/AppCompatTextHelper;->a(Landroid/content/Context;I)V
 
-    invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 248
-    sget v1, Landroid/support/v7/appcompat/R$styleable;->bG:I
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
-
-    move-result v1
-
-    invoke-virtual {p0, v1}, Landroid/support/v7/widget/AppCompatButton;->setAllCaps(Z)V
-
-    .line 250
+    .line 165
     :cond_0
-    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
-
-    .line 251
     return-void
 .end method

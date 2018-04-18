@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/cards/web/auth/AuthPlugin;->getAnonymousId(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;Ljava/lang/String;)Lcom/kik/cards/web/plugin/h;
+    value = Lcom/kik/cards/web/auth/AuthPlugin;->getAnonymousId(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;Ljava/lang/String;)Lcom/kik/cards/web/plugin/g;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -53,7 +53,7 @@
 
     iget-object v1, p0, Lcom/kik/cards/web/auth/AuthPlugin$3;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/kik/cards/web/auth/AuthPlugin;->b(Ljava/lang/String;)Lcom/kik/events/Promise;
+    invoke-virtual {v0, v1}, Lcom/kik/cards/web/auth/AuthPlugin;->getCardAnonymousId(Ljava/lang/String;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -61,7 +61,7 @@
 
     invoke-direct {v1, p0}, Lcom/kik/cards/web/auth/AuthPlugin$3$1;-><init>(Lcom/kik/cards/web/auth/AuthPlugin$3;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
     .line 159
     return-void

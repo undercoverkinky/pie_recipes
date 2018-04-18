@@ -23,7 +23,7 @@
         "<",
         "Lcom/kik/events/Promise",
         "<",
-        "Lkik/core/datatypes/s;",
+        "Lkik/core/datatypes/p;",
         ">;>;"
     }
 .end annotation
@@ -40,7 +40,7 @@
     .locals 0
 
     .prologue
-    .line 118
+    .line 131
     iput-object p1, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$3;->b:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
 
     iput-object p2, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$3;->a:Ljava/lang/String;
@@ -61,28 +61,28 @@
     .end annotation
 
     .prologue
-    .line 118
-    .line 1122
+    .line 131
+    .line 1135
     iget-object v0, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$3;->b:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
 
-    iget-object v0, v0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->c:Lkik/core/interfaces/m;
+    iget-object v0, v0, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->c:Lkik/core/interfaces/l;
 
     iget-object v1, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$3;->b:Lkik/android/chat/fragment/KikChangeGroupNameFragment;
 
-    invoke-static {v1}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->b(Lkik/android/chat/fragment/KikChangeGroupNameFragment;)Lkik/core/datatypes/s;
+    invoke-static {v1}, Lkik/android/chat/fragment/KikChangeGroupNameFragment;->c(Lkik/android/chat/fragment/KikChangeGroupNameFragment;)Lkik/core/datatypes/p;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lkik/core/datatypes/s;->b()Ljava/lang/String;
+    invoke-virtual {v1}, Lkik/core/datatypes/p;->k()Ljava/lang/String;
 
     move-result-object v1
 
     iget-object v2, p0, Lkik/android/chat/fragment/KikChangeGroupNameFragment$3;->a:Ljava/lang/String;
 
-    invoke-interface {v0, v1, v2}, Lkik/core/interfaces/m;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/kik/events/Promise;
+    invoke-interface {v0, v1, v2}, Lkik/core/interfaces/l;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
-    .line 118
+    .line 131
     return-object v0
 .end method

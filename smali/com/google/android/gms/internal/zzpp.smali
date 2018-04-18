@@ -1,75 +1,119 @@
-.class public Lcom/google/android/gms/internal/zzpp;
-.super Lcom/google/android/gms/common/internal/zzk;
+.class public interface abstract Lcom/google/android/gms/internal/zzpp;
+.super Ljava/lang/Object;
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/google/android/gms/common/internal/zzk",
-        "<",
-        "Lcom/google/android/gms/internal/zzpr;",
-        ">;"
-    }
-.end annotation
-
-
-# direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;Lcom/google/android/gms/common/internal/zzg;Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)V
-    .locals 7
-
-    const/16 v3, 0x27
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v4, p3
-
-    move-object v5, p4
-
-    move-object v6, p5
-
-    invoke-direct/range {v0 .. v6}, Lcom/google/android/gms/common/internal/zzk;-><init>(Landroid/content/Context;Landroid/os/Looper;ILcom/google/android/gms/common/internal/zzg;Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)V
-
-    return-void
-.end method
+# interfaces
+.implements Landroid/os/IInterface;
 
 
 # virtual methods
-.method protected synthetic zzab(Landroid/os/IBinder;)Landroid/os/IInterface;
-    .locals 1
-
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/zzpp;->zzba(Landroid/os/IBinder;)Lcom/google/android/gms/internal/zzpr;
-
-    move-result-object v0
-
-    return-object v0
+.method public abstract destroy()V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
 .end method
 
-.method protected zzba(Landroid/os/IBinder;)Lcom/google/android/gms/internal/zzpr;
-    .locals 1
-
-    invoke-static {p1}, Lcom/google/android/gms/internal/zzpr$zza;->zzbc(Landroid/os/IBinder;)Lcom/google/android/gms/internal/zzpr;
-
-    move-result-object v0
-
-    return-object v0
+.method public abstract getAdvertiser()Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
 .end method
 
-.method public zzhT()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "com.google.android.gms.common.service.START"
-
-    return-object v0
+.method public abstract getBody()Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
 .end method
 
-.method protected zzhU()Ljava/lang/String;
-    .locals 1
+.method public abstract getCallToAction()Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
 
-    const-string v0, "com.google.android.gms.common.internal.service.ICommonService"
+.method public abstract getExtras()Landroid/os/Bundle;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
 
-    return-object v0
+.method public abstract getHeadline()Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract getImages()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract getVideoController()Lcom/google/android/gms/internal/zzky;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract performClick(Landroid/os/Bundle;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract recordImpression(Landroid/os/Bundle;)Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract reportTouchEvent(Landroid/os/Bundle;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract zzjj()Lcom/google/android/gms/dynamic/IObjectWrapper;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract zzjn()Lcom/google/android/gms/internal/zzoy;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract zzjo()Lcom/google/android/gms/internal/zzpc;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
 .end method

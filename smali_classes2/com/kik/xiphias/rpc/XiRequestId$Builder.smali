@@ -1001,6 +1001,7 @@
     .line 400
     invoke-virtual {p0, v1}, Lcom/kik/xiphias/rpc/XiRequestId$Builder;->mergeFrom(Lcom/kik/xiphias/rpc/XiRequestId;)Lcom/kik/xiphias/rpc/XiRequestId$Builder;
 
+    .line 402
     :cond_1
     throw v0
 

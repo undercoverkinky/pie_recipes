@@ -15,6 +15,27 @@
 
 
 # direct methods
+.method public static a()Ljava/util/ArrayList;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<E:",
+            "Ljava/lang/Object;",
+            ">()",
+            "Ljava/util/ArrayList",
+            "<TE;>;"
+        }
+    .end annotation
+
+    .prologue
+    .line 87
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    return-object v0
+.end method
+
 .method public static a(I)Ljava/util/ArrayList;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
@@ -28,12 +49,12 @@
     .end annotation
 
     .prologue
-    .line 185
+    .line 188
     const-string v0, "initialArraySize"
 
-    invoke-static {p0, v0}, Lcom/google/common/collect/e;->a(ILjava/lang/String;)I
+    invoke-static {p0, v0}, Lcom/google/common/collect/d;->a(ILjava/lang/String;)I
 
-    .line 186
+    .line 189
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, p0}, Ljava/util/ArrayList;-><init>(I)V
@@ -42,7 +63,10 @@
 .end method
 
 .method public static a(Ljava/lang/Iterable;)Ljava/util/ArrayList;
-    .locals 2
+    .locals 1
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<E:",
@@ -56,25 +80,26 @@
     .end annotation
 
     .prologue
-    .line 142
-    invoke-static {p0}, Lcom/google/common/base/h;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 145
+    invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 144
+    .line 147
     instance-of v0, p0, Ljava/util/Collection;
 
     if-eqz v0, :cond_0
 
     new-instance v0, Ljava/util/ArrayList;
 
-    invoke-static {p0}, Lcom/google/common/collect/f;->a(Ljava/lang/Iterable;)Ljava/util/Collection;
+    .line 1328
+    check-cast p0, Ljava/util/Collection;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    .line 148
+    invoke-direct {v0, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     :goto_0
     return-object v0
 
+    .line 149
     :cond_0
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -89,6 +114,9 @@
 
 .method public static a(Ljava/util/Iterator;)Ljava/util/ArrayList;
     .locals 1
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<E:",
@@ -102,20 +130,23 @@
     .end annotation
 
     .prologue
-    .line 2088
+    .line 2087
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 160
+    .line 164
     invoke-static {v0, p0}, Lcom/google/common/collect/l;->a(Ljava/util/Collection;Ljava/util/Iterator;)Z
 
-    .line 161
+    .line 165
     return-object v0
 .end method
 
 .method public static varargs a([Ljava/lang/Object;)Ljava/util/ArrayList;
     .locals 6
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<E:",
@@ -126,19 +157,22 @@
         }
     .end annotation
 
-    .prologue
-    .line 110
-    invoke-static {p0}, Lcom/google/common/base/h;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    .annotation runtime Ljava/lang/SafeVarargs;
+    .end annotation
 
-    .line 112
+    .prologue
+    .line 111
+    invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 113
     array-length v0, p0
 
-    .line 1119
+    .line 1121
     const-string v1, "arraySize"
 
-    invoke-static {v0, v1}, Lcom/google/common/collect/e;->a(ILjava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/google/common/collect/d;->a(ILjava/lang/String;)I
 
-    .line 1122
+    .line 1124
     const-wide/16 v2, 0x5
 
     int-to-long v4, v0
@@ -151,19 +185,19 @@
 
     add-long/2addr v0, v2
 
-    invoke-static {v0, v1}, Lcom/google/common/c/a;->b(J)I
+    invoke-static {v0, v1}, Lcom/google/common/c/a;->a(J)I
 
     move-result v0
 
-    .line 113
+    .line 114
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 114
+    .line 115
     invoke-static {v1, p0}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
-    .line 115
+    .line 116
     return-object v1
 .end method
 
@@ -182,29 +216,29 @@
     .end annotation
 
     .prologue
-    .line 787
+    .line 827
     instance-of v0, p0, Lcom/google/common/collect/ImmutableList;
 
     if-eqz v0, :cond_0
 
-    .line 788
+    .line 828
     check-cast p0, Lcom/google/common/collect/ImmutableList;
 
-    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableList;->g()Lcom/google/common/collect/ImmutableList;
+    invoke-virtual {p0}, Lcom/google/common/collect/ImmutableList;->e()Lcom/google/common/collect/ImmutableList;
 
     move-result-object v0
 
-    .line 794
+    .line 834
     :goto_0
     return-object v0
 
-    .line 789
+    .line 829
     :cond_0
     instance-of v0, p0, Lcom/google/common/collect/Lists$b;
 
     if-eqz v0, :cond_1
 
-    .line 790
+    .line 830
     check-cast p0, Lcom/google/common/collect/Lists$b;
 
     invoke-virtual {p0}, Lcom/google/common/collect/Lists$b;->a()Ljava/util/List;
@@ -213,20 +247,20 @@
 
     goto :goto_0
 
-    .line 791
+    .line 831
     :cond_1
     instance-of v0, p0, Ljava/util/RandomAccess;
 
     if-eqz v0, :cond_2
 
-    .line 792
+    .line 832
     new-instance v0, Lcom/google/common/collect/Lists$a;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/Lists$a;-><init>(Ljava/util/List;)V
 
     goto :goto_0
 
-    .line 794
+    .line 834
     :cond_2
     new-instance v0, Lcom/google/common/collect/Lists$b;
 
@@ -235,7 +269,7 @@
     goto :goto_0
 .end method
 
-.method public static a(Ljava/util/List;Lcom/google/common/base/d;)Ljava/util/List;
+.method public static a(Ljava/util/List;Lcom/google/common/base/Function;)Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -246,7 +280,7 @@
             ">(",
             "Ljava/util/List",
             "<TF;>;",
-            "Lcom/google/common/base/d",
+            "Lcom/google/common/base/Function",
             "<-TF;+TT;>;)",
             "Ljava/util/List",
             "<TT;>;"
@@ -254,14 +288,14 @@
     .end annotation
 
     .prologue
-    .line 543
+    .line 559
     instance-of v0, p0, Ljava/util/RandomAccess;
 
     if-eqz v0, :cond_0
 
     new-instance v0, Lcom/google/common/collect/Lists$TransformingRandomAccessList;
 
-    invoke-direct {v0, p0, p1}, Lcom/google/common/collect/Lists$TransformingRandomAccessList;-><init>(Ljava/util/List;Lcom/google/common/base/d;)V
+    invoke-direct {v0, p0, p1}, Lcom/google/common/collect/Lists$TransformingRandomAccessList;-><init>(Ljava/util/List;Lcom/google/common/base/Function;)V
 
     :goto_0
     return-object v0
@@ -269,7 +303,7 @@
     :cond_0
     new-instance v0, Lcom/google/common/collect/Lists$TransformingSequentialList;
 
-    invoke-direct {v0, p0, p1}, Lcom/google/common/collect/Lists$TransformingSequentialList;-><init>(Ljava/util/List;Lcom/google/common/base/d;)V
+    invoke-direct {v0, p0, p1}, Lcom/google/common/collect/Lists$TransformingSequentialList;-><init>(Ljava/util/List;Lcom/google/common/base/Function;)V
 
     goto :goto_0
 .end method

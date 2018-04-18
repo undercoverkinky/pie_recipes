@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merge
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <kik.android.widget.ImeAwareEditText android:textColorHint="@color/gif_hint_grey" android:layout_gravity="center" android:id="@id/gif_search_edittext" android:background="@color/white" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:hint="@string/gif_search" android:singleLine="true" android:drawableLeft="@drawable/search_icon_8dp_right" android:layout_toLeftOf="@id/gif_search_cancel" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:inputType="text" android:imeOptions="actionSearch" />
-    <View android:background="@color/gif_hint_grey" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="8.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="8.0dip" android:layout_below="@id/gif_search_edittext" />
-    <ImageView android:id="@id/gif_search_cancel" android:padding="5.0dip" android:visibility="invisible" android:layout_width="30.0dip" android:layout_height="30.0dip" android:src="@drawable/delete_gray" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-</merge>

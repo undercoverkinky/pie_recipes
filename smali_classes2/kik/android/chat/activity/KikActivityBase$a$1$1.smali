@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 192
+    .line 196
     iput-object p1, p0, Lkik/android/chat/activity/KikActivityBase$a$1$1;->a:Lkik/android/chat/activity/KikActivityBase$a$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 1
 
     .prologue
-    .line 196
+    .line 200
     iget-object v0, p0, Lkik/android/chat/activity/KikActivityBase$a$1$1;->a:Lkik/android/chat/activity/KikActivityBase$a$1;
 
     iget-object v0, v0, Lkik/android/chat/activity/KikActivityBase$a$1;->a:Lkik/android/chat/activity/KikActivityBase$a;
@@ -51,7 +51,7 @@
 
     invoke-virtual {v0}, Lcom/kik/events/d;->a()V
 
-    .line 197
+    .line 201
     iget-object v0, p0, Lkik/android/chat/activity/KikActivityBase$a$1$1;->a:Lkik/android/chat/activity/KikActivityBase$a$1;
 
     iget-object v0, v0, Lkik/android/chat/activity/KikActivityBase$a$1;->a:Lkik/android/chat/activity/KikActivityBase$a;
@@ -60,7 +60,7 @@
 
     invoke-virtual {v0}, Lkik/android/chat/activity/KikActivityBase;->finish()V
 
-    .line 198
+    .line 202
     iget-object v0, p0, Lkik/android/chat/activity/KikActivityBase$a$1$1;->a:Lkik/android/chat/activity/KikActivityBase$a$1;
 
     iget-object v0, v0, Lkik/android/chat/activity/KikActivityBase$a$1;->a:Lkik/android/chat/activity/KikActivityBase$a;
@@ -69,6 +69,6 @@
 
     invoke-static {v0}, Lkik/android/chat/activity/KikActivityBase;->a(Lkik/android/chat/activity/KikActivityBase;)Lkik/android/chat/activity/KikActivityBase$a;
 
-    .line 199
+    .line 203
     return-void
 .end method

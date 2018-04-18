@@ -19,26 +19,17 @@
 
 
 # instance fields
-.field protected final zzamz:Lcom/google/android/gms/common/data/DataHolder;
+.field protected final zzfkz:Lcom/google/android/gms/common/data/DataHolder;
 
 
 # direct methods
 .method protected constructor <init>(Lcom/google/android/gms/common/data/DataHolder;)V
-    .locals 1
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/gms/common/data/AbstractDataBuffer;->zzamz:Lcom/google/android/gms/common/data/DataHolder;
+    iput-object p1, p0, Lcom/google/android/gms/common/data/AbstractDataBuffer;->zzfkz:Lcom/google/android/gms/common/data/DataHolder;
 
-    iget-object v0, p0, Lcom/google/android/gms/common/data/AbstractDataBuffer;->zzamz:Lcom/google/android/gms/common/data/DataHolder;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/google/android/gms/common/data/AbstractDataBuffer;->zzamz:Lcom/google/android/gms/common/data/DataHolder;
-
-    invoke-virtual {v0, p0}, Lcom/google/android/gms/common/data/DataHolder;->zzu(Ljava/lang/Object;)V
-
-    :cond_0
     return-void
 .end method
 
@@ -65,7 +56,7 @@
 .method public getCount()I
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/common/data/AbstractDataBuffer;->zzamz:Lcom/google/android/gms/common/data/DataHolder;
+    iget-object v0, p0, Lcom/google/android/gms/common/data/AbstractDataBuffer;->zzfkz:Lcom/google/android/gms/common/data/DataHolder;
 
     if-nez v0, :cond_0
 
@@ -75,11 +66,9 @@
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/google/android/gms/common/data/AbstractDataBuffer;->zzamz:Lcom/google/android/gms/common/data/DataHolder;
+    iget-object v0, p0, Lcom/google/android/gms/common/data/AbstractDataBuffer;->zzfkz:Lcom/google/android/gms/common/data/DataHolder;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/common/data/DataHolder;->getCount()I
-
-    move-result v0
+    iget v0, v0, Lcom/google/android/gms/common/data/DataHolder;->zzfqk:I
 
     goto :goto_0
 .end method
@@ -89,11 +78,11 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    iget-object v0, p0, Lcom/google/android/gms/common/data/AbstractDataBuffer;->zzamz:Lcom/google/android/gms/common/data/DataHolder;
+    iget-object v0, p0, Lcom/google/android/gms/common/data/AbstractDataBuffer;->zzfkz:Lcom/google/android/gms/common/data/DataHolder;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/google/android/gms/common/data/AbstractDataBuffer;->zzamz:Lcom/google/android/gms/common/data/DataHolder;
+    iget-object v0, p0, Lcom/google/android/gms/common/data/AbstractDataBuffer;->zzfkz:Lcom/google/android/gms/common/data/DataHolder;
 
     invoke-virtual {v0}, Lcom/google/android/gms/common/data/DataHolder;->isClosed()Z
 
@@ -133,11 +122,11 @@
 .method public release()V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/common/data/AbstractDataBuffer;->zzamz:Lcom/google/android/gms/common/data/DataHolder;
+    iget-object v0, p0, Lcom/google/android/gms/common/data/AbstractDataBuffer;->zzfkz:Lcom/google/android/gms/common/data/DataHolder;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/google/android/gms/common/data/AbstractDataBuffer;->zzamz:Lcom/google/android/gms/common/data/DataHolder;
+    iget-object v0, p0, Lcom/google/android/gms/common/data/AbstractDataBuffer;->zzfkz:Lcom/google/android/gms/common/data/DataHolder;
 
     invoke-virtual {v0}, Lcom/google/android/gms/common/data/DataHolder;->close()V
 
@@ -155,19 +144,19 @@
         }
     .end annotation
 
-    new-instance v0, Lcom/google/android/gms/common/data/zzg;
+    new-instance v0, Lcom/google/android/gms/common/data/zzh;
 
-    invoke-direct {v0, p0}, Lcom/google/android/gms/common/data/zzg;-><init>(Lcom/google/android/gms/common/data/DataBuffer;)V
+    invoke-direct {v0, p0}, Lcom/google/android/gms/common/data/zzh;-><init>(Lcom/google/android/gms/common/data/DataBuffer;)V
 
     return-object v0
 .end method
 
-.method public zzsO()Landroid/os/Bundle;
+.method public final zzafh()Landroid/os/Bundle;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/common/data/AbstractDataBuffer;->zzamz:Lcom/google/android/gms/common/data/DataHolder;
+    iget-object v0, p0, Lcom/google/android/gms/common/data/AbstractDataBuffer;->zzfkz:Lcom/google/android/gms/common/data/DataHolder;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/common/data/DataHolder;->zzsO()Landroid/os/Bundle;
+    invoke-virtual {v0}, Lcom/google/android/gms/common/data/DataHolder;->zzafh()Landroid/os/Bundle;
 
     move-result-object v0
 

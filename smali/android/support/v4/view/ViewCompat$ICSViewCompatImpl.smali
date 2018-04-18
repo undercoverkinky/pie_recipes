@@ -25,7 +25,7 @@
     .locals 1
 
     .prologue
-    .line 1267
+    .line 1345
     const/4 v0, 0x0
 
     sput-boolean v0, Landroid/support/v4/view/ViewCompat$ICSViewCompatImpl;->accessibilityDelegateCheckFailed:Z
@@ -37,7 +37,7 @@
     .locals 0
 
     .prologue
-    .line 1265
+    .line 1343
     invoke-direct {p0}, Landroid/support/v4/view/ViewCompat$HCViewCompatImpl;-><init>()V
 
     return-void
@@ -49,19 +49,19 @@
     .locals 2
 
     .prologue
-    .line 1320
+    .line 1398
     iget-object v0, p0, Landroid/support/v4/view/ViewCompat$ICSViewCompatImpl;->mViewPropertyAnimatorCompatMap:Ljava/util/WeakHashMap;
 
     if-nez v0, :cond_0
 
-    .line 1321
+    .line 1399
     new-instance v0, Ljava/util/WeakHashMap;
 
     invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
 
     iput-object v0, p0, Landroid/support/v4/view/ViewCompat$ICSViewCompatImpl;->mViewPropertyAnimatorCompatMap:Ljava/util/WeakHashMap;
 
-    .line 1324
+    .line 1401
     :cond_0
     iget-object v0, p0, Landroid/support/v4/view/ViewCompat$ICSViewCompatImpl;->mViewPropertyAnimatorCompatMap:Ljava/util/WeakHashMap;
 
@@ -71,20 +71,20 @@
 
     check-cast v0, Landroid/support/v4/view/ViewPropertyAnimatorCompat;
 
-    .line 1325
+    .line 1402
     if-nez v0, :cond_1
 
-    .line 1326
+    .line 1403
     new-instance v0, Landroid/support/v4/view/ViewPropertyAnimatorCompat;
 
     invoke-direct {v0, p1}, Landroid/support/v4/view/ViewPropertyAnimatorCompat;-><init>(Landroid/view/View;)V
 
-    .line 1327
+    .line 1404
     iget-object v1, p0, Landroid/support/v4/view/ViewCompat$ICSViewCompatImpl;->mViewPropertyAnimatorCompatMap:Ljava/util/WeakHashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1329
+    .line 1406
     :cond_1
     return-object v0
 .end method
@@ -93,7 +93,7 @@
     .locals 1
 
     .prologue
-    .line 1270
+    .line 1348
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatICS;->canScrollHorizontally(Landroid/view/View;I)Z
 
     move-result v0
@@ -105,7 +105,7 @@
     .locals 1
 
     .prologue
-    .line 1274
+    .line 1352
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatICS;->canScrollVertically(Landroid/view/View;I)Z
 
     move-result v0
@@ -121,33 +121,34 @@
 
     const/4 v0, 0x0
 
-    .line 1297
+    .line 1375
     sget-boolean v2, Landroid/support/v4/view/ViewCompat$ICSViewCompatImpl;->accessibilityDelegateCheckFailed:Z
 
     if-eqz v2, :cond_1
 
-    .line 1314
+    .line 1392
     :cond_0
     :goto_0
     return v0
 
-    .line 1300
+    .line 1378
     :cond_1
     sget-object v2, Landroid/support/v4/view/ViewCompat$ICSViewCompatImpl;->mAccessibilityDelegateField:Ljava/lang/reflect/Field;
 
     if-nez v2, :cond_2
 
-    .line 1302
+    .line 1380
     :try_start_0
     const-class v2, Landroid/view/View;
 
     const-string v3, "mAccessibilityDelegate"
 
+    .line 1381
     invoke-virtual {v2, v3}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v2
 
-    .line 1304
+    .line 1382
     sput-object v2, Landroid/support/v4/view/ViewCompat$ICSViewCompatImpl;->mAccessibilityDelegateField:Ljava/lang/reflect/Field;
 
     const/4 v3, 0x1
@@ -156,7 +157,7 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1311
+    .line 1389
     :cond_2
     :try_start_1
     sget-object v2, Landroid/support/v4/view/ViewCompat$ICSViewCompatImpl;->mAccessibilityDelegateField:Ljava/lang/reflect/Field;
@@ -173,7 +174,7 @@
 
     goto :goto_0
 
-    .line 1306
+    .line 1384
     :catch_0
     move-exception v2
 
@@ -181,7 +182,7 @@
 
     goto :goto_0
 
-    .line 1313
+    .line 1391
     :catch_1
     move-exception v2
 
@@ -194,10 +195,10 @@
     .locals 0
 
     .prologue
-    .line 1282
+    .line 1360
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatICS;->onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 1283
+    .line 1361
     return-void
 .end method
 
@@ -205,14 +206,14 @@
     .locals 1
 
     .prologue
-    .line 1286
+    .line 1364
     invoke-virtual {p2}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;->getInfo()Ljava/lang/Object;
 
     move-result-object v0
 
     invoke-static {p1, v0}, Landroid/support/v4/view/ViewCompatICS;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Ljava/lang/Object;)V
 
-    .line 1287
+    .line 1365
     return-void
 .end method
 
@@ -220,10 +221,10 @@
     .locals 0
 
     .prologue
-    .line 1278
+    .line 1356
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatICS;->onPopulateAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 1279
+    .line 1357
     return-void
 .end method
 
@@ -231,7 +232,7 @@
     .locals 1
 
     .prologue
-    .line 1291
+    .line 1369
     if-nez p2, :cond_0
 
     const/4 v0, 0x0
@@ -239,10 +240,10 @@
     :goto_0
     invoke-static {p1, v0}, Landroid/support/v4/view/ViewCompatICS;->setAccessibilityDelegate(Landroid/view/View;Ljava/lang/Object;)V
 
-    .line 1293
+    .line 1371
     return-void
 
-    .line 1291
+    .line 1370
     :cond_0
     invoke-virtual {p2}, Landroid/support/v4/view/AccessibilityDelegateCompat;->getBridge()Ljava/lang/Object;
 
@@ -255,9 +256,9 @@
     .locals 0
 
     .prologue
-    .line 1334
+    .line 1411
     invoke-static {p1, p2}, Landroid/support/v4/view/ViewCompatICS;->setFitsSystemWindows(Landroid/view/View;Z)V
 
-    .line 1335
+    .line 1412
     return-void
 .end method

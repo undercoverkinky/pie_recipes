@@ -1,691 +1,552 @@
-.class public Lcom/google/android/gms/internal/zzje;
-.super Lcom/google/android/gms/internal/zzjv;
-
-# interfaces
-.implements Lcom/google/android/gms/internal/zzjd;
+.class public final Lcom/google/android/gms/internal/zzje;
+.super Ljava/lang/Object;
 
 
 # annotations
-.annotation runtime Lcom/google/android/gms/internal/zzig;
+.annotation runtime Lcom/google/android/gms/internal/zzzt;
 .end annotation
 
 
 # instance fields
-.field private final mContext:Landroid/content/Context;
+.field private final zzapb:Ljava/lang/String;
 
-.field private final zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-.field private final zzOO:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList",
-            "<",
-            "Ljava/util/concurrent/Future;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final zzOP:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList",
-            "<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final zzOQ:Ljava/util/HashSet;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/HashSet",
-            "<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final zzOR:Lcom/google/android/gms/internal/zziy;
-
-.field private final zzpp:Ljava/lang/Object;
+.field private final zzbcw:[Lcom/google/android/gms/ads/AdSize;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/google/android/gms/internal/zzjn$zza;Lcom/google/android/gms/internal/zziy;)V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 7
 
-    invoke-direct {p0}, Lcom/google/android/gms/internal/zzjv;-><init>()V
+    const/4 v1, 0x1
 
-    new-instance v0, Ljava/util/ArrayList;
+    const/4 v2, 0x0
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/gms/internal/zzje;->zzOO:Ljava/util/ArrayList;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/zzje;->zzOP:Ljava/util/ArrayList;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/zzje;->zzOQ:Ljava/util/HashSet;
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/zzje;->zzpp:Ljava/lang/Object;
-
-    iput-object p1, p0, Lcom/google/android/gms/internal/zzje;->mContext:Landroid/content/Context;
-
-    iput-object p2, p0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    iput-object p3, p0, Lcom/google/android/gms/internal/zzje;->zzOR:Lcom/google/android/gms/internal/zziy;
-
-    return-void
-.end method
-
-.method static synthetic zza(Lcom/google/android/gms/internal/zzje;)Lcom/google/android/gms/internal/zziy;
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzje;->zzOR:Lcom/google/android/gms/internal/zziy;
-
-    return-object v0
-.end method
-
-.method private zza(ILjava/lang/String;Lcom/google/android/gms/internal/zzfq;)Lcom/google/android/gms/internal/zzjn;
-    .locals 38
-
-    new-instance v2, Lcom/google/android/gms/internal/zzjn;
-
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    iget-object v3, v3, Lcom/google/android/gms/internal/zzjn$zza;->zzPh:Lcom/google/android/gms/ads/internal/request/AdRequestInfoParcel;
-
-    iget-object v3, v3, Lcom/google/android/gms/ads/internal/request/AdRequestInfoParcel;->zzLi:Lcom/google/android/gms/ads/internal/client/AdRequestParcel;
-
-    const/4 v4, 0x0
-
-    move-object/from16 v0, p0
-
-    iget-object v5, v0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    iget-object v5, v5, Lcom/google/android/gms/internal/zzjn$zza;->zzPi:Lcom/google/android/gms/ads/internal/request/AdResponseParcel;
-
-    iget-object v5, v5, Lcom/google/android/gms/ads/internal/request/AdResponseParcel;->zzEF:Ljava/util/List;
-
-    move-object/from16 v0, p0
-
-    iget-object v6, v0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    iget-object v6, v6, Lcom/google/android/gms/internal/zzjn$zza;->zzPi:Lcom/google/android/gms/ads/internal/request/AdResponseParcel;
-
-    iget-object v7, v6, Lcom/google/android/gms/ads/internal/request/AdResponseParcel;->zzEG:Ljava/util/List;
-
-    move-object/from16 v0, p0
-
-    iget-object v6, v0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    iget-object v6, v6, Lcom/google/android/gms/internal/zzjn$zza;->zzPi:Lcom/google/android/gms/ads/internal/request/AdResponseParcel;
-
-    iget-object v8, v6, Lcom/google/android/gms/ads/internal/request/AdResponseParcel;->zzLR:Ljava/util/List;
-
-    move-object/from16 v0, p0
-
-    iget-object v6, v0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    iget-object v6, v6, Lcom/google/android/gms/internal/zzjn$zza;->zzPi:Lcom/google/android/gms/ads/internal/request/AdResponseParcel;
-
-    iget v9, v6, Lcom/google/android/gms/ads/internal/request/AdResponseParcel;->orientation:I
-
-    move-object/from16 v0, p0
-
-    iget-object v6, v0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    iget-object v6, v6, Lcom/google/android/gms/internal/zzjn$zza;->zzPi:Lcom/google/android/gms/ads/internal/request/AdResponseParcel;
-
-    iget-wide v10, v6, Lcom/google/android/gms/ads/internal/request/AdResponseParcel;->zzEL:J
-
-    move-object/from16 v0, p0
-
-    iget-object v6, v0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    iget-object v6, v6, Lcom/google/android/gms/internal/zzjn$zza;->zzPh:Lcom/google/android/gms/ads/internal/request/AdRequestInfoParcel;
-
-    iget-object v12, v6, Lcom/google/android/gms/ads/internal/request/AdRequestInfoParcel;->zzLl:Ljava/lang/String;
-
-    move-object/from16 v0, p0
-
-    iget-object v6, v0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    iget-object v6, v6, Lcom/google/android/gms/internal/zzjn$zza;->zzPi:Lcom/google/android/gms/ads/internal/request/AdResponseParcel;
-
-    iget-boolean v13, v6, Lcom/google/android/gms/ads/internal/request/AdResponseParcel;->zzLP:Z
-
-    const/4 v15, 0x0
-
-    move-object/from16 v0, p0
-
-    iget-object v6, v0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    iget-object v0, v6, Lcom/google/android/gms/internal/zzjn$zza;->zzOY:Lcom/google/android/gms/internal/zzfr;
-
-    move-object/from16 v17, v0
-
-    const/16 v18, 0x0
-
-    move-object/from16 v0, p0
-
-    iget-object v6, v0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    iget-object v6, v6, Lcom/google/android/gms/internal/zzjn$zza;->zzPi:Lcom/google/android/gms/ads/internal/request/AdResponseParcel;
-
-    iget-wide v0, v6, Lcom/google/android/gms/ads/internal/request/AdResponseParcel;->zzLQ:J
-
-    move-wide/from16 v19, v0
-
-    move-object/from16 v0, p0
-
-    iget-object v6, v0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    iget-object v0, v6, Lcom/google/android/gms/internal/zzjn$zza;->zzsB:Lcom/google/android/gms/ads/internal/client/AdSizeParcel;
-
-    move-object/from16 v21, v0
-
-    move-object/from16 v0, p0
-
-    iget-object v6, v0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    iget-object v6, v6, Lcom/google/android/gms/internal/zzjn$zza;->zzPi:Lcom/google/android/gms/ads/internal/request/AdResponseParcel;
-
-    iget-wide v0, v6, Lcom/google/android/gms/ads/internal/request/AdResponseParcel;->zzLO:J
-
-    move-wide/from16 v22, v0
-
-    move-object/from16 v0, p0
-
-    iget-object v6, v0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    iget-wide v0, v6, Lcom/google/android/gms/internal/zzjn$zza;->zzPc:J
-
-    move-wide/from16 v24, v0
-
-    move-object/from16 v0, p0
-
-    iget-object v6, v0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    iget-object v6, v6, Lcom/google/android/gms/internal/zzjn$zza;->zzPi:Lcom/google/android/gms/ads/internal/request/AdResponseParcel;
-
-    iget-wide v0, v6, Lcom/google/android/gms/ads/internal/request/AdResponseParcel;->zzLT:J
-
-    move-wide/from16 v26, v0
-
-    move-object/from16 v0, p0
-
-    iget-object v6, v0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    iget-object v6, v6, Lcom/google/android/gms/internal/zzjn$zza;->zzPi:Lcom/google/android/gms/ads/internal/request/AdResponseParcel;
-
-    iget-object v0, v6, Lcom/google/android/gms/ads/internal/request/AdResponseParcel;->zzLU:Ljava/lang/String;
-
-    move-object/from16 v28, v0
-
-    move-object/from16 v0, p0
-
-    iget-object v6, v0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    iget-object v0, v6, Lcom/google/android/gms/internal/zzjn$zza;->zzOW:Lorg/json/JSONObject;
-
-    move-object/from16 v29, v0
-
-    const/16 v30, 0x0
-
-    move-object/from16 v0, p0
-
-    iget-object v6, v0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    iget-object v6, v6, Lcom/google/android/gms/internal/zzjn$zza;->zzPi:Lcom/google/android/gms/ads/internal/request/AdResponseParcel;
-
-    iget-object v0, v6, Lcom/google/android/gms/ads/internal/request/AdResponseParcel;->zzMf:Lcom/google/android/gms/ads/internal/reward/mediation/client/RewardItemParcel;
-
-    move-object/from16 v31, v0
-
-    move-object/from16 v0, p0
-
-    iget-object v6, v0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    iget-object v6, v6, Lcom/google/android/gms/internal/zzjn$zza;->zzPi:Lcom/google/android/gms/ads/internal/request/AdResponseParcel;
-
-    iget-object v0, v6, Lcom/google/android/gms/ads/internal/request/AdResponseParcel;->zzMg:Ljava/util/List;
-
-    move-object/from16 v32, v0
-
-    move-object/from16 v0, p0
-
-    iget-object v6, v0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    iget-object v6, v6, Lcom/google/android/gms/internal/zzjn$zza;->zzPi:Lcom/google/android/gms/ads/internal/request/AdResponseParcel;
-
-    iget-object v0, v6, Lcom/google/android/gms/ads/internal/request/AdResponseParcel;->zzMh:Ljava/util/List;
-
-    move-object/from16 v33, v0
-
-    move-object/from16 v0, p0
-
-    iget-object v6, v0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    iget-object v6, v6, Lcom/google/android/gms/internal/zzjn$zza;->zzPi:Lcom/google/android/gms/ads/internal/request/AdResponseParcel;
-
-    iget-boolean v0, v6, Lcom/google/android/gms/ads/internal/request/AdResponseParcel;->zzMi:Z
-
-    move/from16 v34, v0
-
-    move-object/from16 v0, p0
-
-    iget-object v6, v0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    iget-object v6, v6, Lcom/google/android/gms/internal/zzjn$zza;->zzPi:Lcom/google/android/gms/ads/internal/request/AdResponseParcel;
-
-    iget-object v0, v6, Lcom/google/android/gms/ads/internal/request/AdResponseParcel;->zzMj:Lcom/google/android/gms/ads/internal/request/AutoClickProtectionConfigurationParcel;
-
-    move-object/from16 v35, v0
-
-    const/16 v36, 0x0
-
-    move-object/from16 v0, p0
-
-    iget-object v6, v0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    iget-object v6, v6, Lcom/google/android/gms/internal/zzjn$zza;->zzPi:Lcom/google/android/gms/ads/internal/request/AdResponseParcel;
-
-    iget-object v0, v6, Lcom/google/android/gms/ads/internal/request/AdResponseParcel;->zzEI:Ljava/util/List;
-
-    move-object/from16 v37, v0
-
-    move/from16 v6, p1
-
-    move-object/from16 v14, p3
-
-    move-object/from16 v16, p2
-
-    invoke-direct/range {v2 .. v37}, Lcom/google/android/gms/internal/zzjn;-><init>(Lcom/google/android/gms/ads/internal/client/AdRequestParcel;Lcom/google/android/gms/internal/zzla;Ljava/util/List;ILjava/util/List;Ljava/util/List;IJLjava/lang/String;ZLcom/google/android/gms/internal/zzfq;Lcom/google/android/gms/internal/zzgb;Ljava/lang/String;Lcom/google/android/gms/internal/zzfr;Lcom/google/android/gms/internal/zzft;JLcom/google/android/gms/ads/internal/client/AdSizeParcel;JJJLjava/lang/String;Lorg/json/JSONObject;Lcom/google/android/gms/ads/internal/formats/zzh$zza;Lcom/google/android/gms/ads/internal/reward/mediation/client/RewardItemParcel;Ljava/util/List;Ljava/util/List;ZLcom/google/android/gms/ads/internal/request/AutoClickProtectionConfigurationParcel;Ljava/lang/String;Ljava/util/List;)V
-
-    return-object v2
-.end method
-
-.method private zza(Ljava/lang/String;Lcom/google/android/gms/internal/zzfq;)Lcom/google/android/gms/internal/zzjn;
-    .locals 1
-
-    const/4 v0, -0x2
-
-    invoke-direct {p0, v0, p1, p2}, Lcom/google/android/gms/internal/zzje;->zza(ILjava/lang/String;Lcom/google/android/gms/internal/zzfq;)Lcom/google/android/gms/internal/zzjn;
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    sget-object v3, Lcom/google/android/gms/R$styleable;->AdsAttrs:[I
 
-.method private zzd(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 3
+    invoke-virtual {v0, p2, v3}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzje;->zzpp:Ljava/lang/Object;
+    move-result-object v3
 
-    monitor-enter v1
+    sget v0, Lcom/google/android/gms/R$styleable;->AdsAttrs_adSize:I
 
-    :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzje;->zzOR:Lcom/google/android/gms/internal/zziy;
+    invoke-virtual {v3, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Lcom/google/android/gms/internal/zziy;->zzaE(Ljava/lang/String;)Lcom/google/android/gms/internal/zzjf;
+    move-result-object v4
 
-    move-result-object v0
+    sget v0, Lcom/google/android/gms/R$styleable;->AdsAttrs_adSizes:I
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v3, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/zzjf;->zziq()Lcom/google/android/gms/internal/zzjc;
+    move-result-object v5
 
-    move-result-object v2
+    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    if-eqz v2, :cond_0
+    move-result v0
 
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/zzjf;->zzip()Lcom/google/android/gms/internal/zzgb;
+    if-nez v0, :cond_0
 
-    move-result-object v2
-
-    if-nez v2, :cond_1
-
-    :cond_0
-    monitor-exit v1
+    move v0, v1
 
     :goto_0
-    return-void
+    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    :cond_1
-    invoke-virtual {p0, p1, p2, p3, v0}, Lcom/google/android/gms/internal/zzje;->zza(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/google/android/gms/internal/zzjf;)Lcom/google/android/gms/internal/zziz;
+    move-result v6
+
+    if-nez v6, :cond_1
+
+    :goto_1
+    if-eqz v0, :cond_2
+
+    if-nez v1, :cond_2
+
+    invoke-static {v4}, Lcom/google/android/gms/internal/zzje;->zzab(Ljava/lang/String;)[Lcom/google/android/gms/ads/AdSize;
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/google/android/gms/internal/zzje;->zzOO:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzje;->zzbcw:[Lcom/google/android/gms/ads/AdSize;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/zzjv;->zzhs()Ljava/lang/Object;
+    :goto_2
+    sget v0, Lcom/google/android/gms/R$styleable;->AdsAttrs_adUnitId:I
+
+    invoke-virtual {v3, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/concurrent/Future;
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzje;->zzapb:Ljava/lang/String;
 
-    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzje;->zzapb:Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzje;->zzOP:Ljava/util/ArrayList;
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result v0
 
-    monitor-exit v1
+    if-eqz v0, :cond_5
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Required XML attribute \"adUnitId\" was missing."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    move v0, v2
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
+    :cond_1
+    move v1, v2
 
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    goto :goto_1
 
-    throw v0
-.end method
+    :cond_2
+    if-nez v0, :cond_3
 
-.method private zzio()Lcom/google/android/gms/internal/zzjn;
-    .locals 2
+    if-eqz v1, :cond_3
 
-    const/4 v1, 0x0
-
-    const/4 v0, 0x3
-
-    invoke-direct {p0, v0, v1, v1}, Lcom/google/android/gms/internal/zzje;->zza(ILjava/lang/String;Lcom/google/android/gms/internal/zzfq;)Lcom/google/android/gms/internal/zzjn;
+    invoke-static {v5}, Lcom/google/android/gms/internal/zzje;->zzab(Ljava/lang/String;)[Lcom/google/android/gms/ads/AdSize;
 
     move-result-object v0
 
-    return-object v0
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzje;->zzbcw:[Lcom/google/android/gms/ads/AdSize;
+
+    goto :goto_2
+
+    :cond_3
+    if-eqz v0, :cond_4
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Either XML attribute \"adSize\" or XML attribute \"supportedAdSizes\" should be specified, but not both."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_4
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Required XML attribute \"adSize\" was missing."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_5
+    return-void
+.end method
+
+.method private static zzab(Ljava/lang/String;)[Lcom/google/android/gms/ads/AdSize;
+    .locals 10
+
+    const/4 v9, 0x1
+
+    const/4 v1, 0x0
+
+    const-string v0, "\\s*,\\s*"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v4
+
+    array-length v0, v4
+
+    new-array v5, v0, [Lcom/google/android/gms/ads/AdSize;
+
+    move v0, v1
+
+    :goto_0
+    array-length v2, v4
+
+    if-ge v0, v2, :cond_e
+
+    aget-object v2, v4, v0
+
+    invoke-virtual {v2}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v6
+
+    const-string v2, "^(\\d+|FULL_WIDTH)\\s*[xX]\\s*(\\d+|AUTO_HEIGHT)$"
+
+    invoke-virtual {v6, v2}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    const-string v2, "[xX]"
+
+    invoke-virtual {v6, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v7
+
+    aget-object v2, v7, v1
+
+    invoke-virtual {v2}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v2
+
+    aput-object v2, v7, v1
+
+    aget-object v2, v7, v9
+
+    invoke-virtual {v2}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v2
+
+    aput-object v2, v7, v9
+
+    :try_start_0
+    const-string v2, "FULL_WIDTH"
+
+    const/4 v3, 0x0
+
+    aget-object v3, v7, v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const/4 v2, -0x1
+
+    move v3, v2
+
+    :goto_1
+    const-string v2, "AUTO_HEIGHT"
+
+    const/4 v8, 0x1
+
+    aget-object v8, v7, v8
+
+    invoke-virtual {v2, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const/4 v2, -0x2
+
+    :goto_2
+    new-instance v6, Lcom/google/android/gms/ads/AdSize;
+
+    invoke-direct {v6, v3, v2}, Lcom/google/android/gms/ads/AdSize;-><init>(II)V
+
+    aput-object v6, v5, v0
+
+    :goto_3
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :try_start_1
+    aget-object v2, v7, v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v2
+
+    move v3, v2
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v2, 0x1
+
+    aget-object v2, v7, v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    :try_end_1
+    .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_0
+
+    move-result v2
+
+    goto :goto_2
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    const-string v2, "Could not parse XML attribute \"adSize\": "
+
+    invoke-static {v6}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_4
+    invoke-direct {v1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_2
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, v2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    goto :goto_4
+
+    :cond_3
+    const-string v2, "BANNER"
+
+    invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    sget-object v2, Lcom/google/android/gms/ads/AdSize;->BANNER:Lcom/google/android/gms/ads/AdSize;
+
+    aput-object v2, v5, v0
+
+    goto :goto_3
+
+    :cond_4
+    const-string v2, "LARGE_BANNER"
+
+    invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    sget-object v2, Lcom/google/android/gms/ads/AdSize;->LARGE_BANNER:Lcom/google/android/gms/ads/AdSize;
+
+    aput-object v2, v5, v0
+
+    goto :goto_3
+
+    :cond_5
+    const-string v2, "FULL_BANNER"
+
+    invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_6
+
+    sget-object v2, Lcom/google/android/gms/ads/AdSize;->FULL_BANNER:Lcom/google/android/gms/ads/AdSize;
+
+    aput-object v2, v5, v0
+
+    goto :goto_3
+
+    :cond_6
+    const-string v2, "LEADERBOARD"
+
+    invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_7
+
+    sget-object v2, Lcom/google/android/gms/ads/AdSize;->LEADERBOARD:Lcom/google/android/gms/ads/AdSize;
+
+    aput-object v2, v5, v0
+
+    goto :goto_3
+
+    :cond_7
+    const-string v2, "MEDIUM_RECTANGLE"
+
+    invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_8
+
+    sget-object v2, Lcom/google/android/gms/ads/AdSize;->MEDIUM_RECTANGLE:Lcom/google/android/gms/ads/AdSize;
+
+    aput-object v2, v5, v0
+
+    goto :goto_3
+
+    :cond_8
+    const-string v2, "SMART_BANNER"
+
+    invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_9
+
+    sget-object v2, Lcom/google/android/gms/ads/AdSize;->SMART_BANNER:Lcom/google/android/gms/ads/AdSize;
+
+    aput-object v2, v5, v0
+
+    goto :goto_3
+
+    :cond_9
+    const-string v2, "WIDE_SKYSCRAPER"
+
+    invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_a
+
+    sget-object v2, Lcom/google/android/gms/ads/AdSize;->WIDE_SKYSCRAPER:Lcom/google/android/gms/ads/AdSize;
+
+    aput-object v2, v5, v0
+
+    goto/16 :goto_3
+
+    :cond_a
+    const-string v2, "FLUID"
+
+    invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_b
+
+    sget-object v2, Lcom/google/android/gms/ads/AdSize;->FLUID:Lcom/google/android/gms/ads/AdSize;
+
+    aput-object v2, v5, v0
+
+    goto/16 :goto_3
+
+    :cond_b
+    const-string v2, "ICON"
+
+    invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_c
+
+    sget-object v2, Lcom/google/android/gms/ads/AdSize;->zzaku:Lcom/google/android/gms/ads/AdSize;
+
+    aput-object v2, v5, v0
+
+    goto/16 :goto_3
+
+    :cond_c
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    const-string v2, "Could not parse XML attribute \"adSize\": "
+
+    invoke-static {v6}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    if-eqz v3, :cond_d
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_5
+    invoke-direct {v1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_d
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, v2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    goto :goto_5
+
+    :cond_e
+    array-length v0, v5
+
+    if-nez v0, :cond_10
+
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    const-string v2, "Could not parse XML attribute \"adSize\": "
+
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    if-eqz v3, :cond_f
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_6
+    invoke-direct {v1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_f
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, v2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    goto :goto_6
+
+    :cond_10
+    return-object v5
 .end method
 
 
 # virtual methods
-.method public onStop()V
-    .locals 0
+.method public final getAdUnitId()Ljava/lang/String;
+    .locals 1
 
-    return-void
-.end method
-
-.method protected zza(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/google/android/gms/internal/zzjf;)Lcom/google/android/gms/internal/zziz;
-    .locals 8
-
-    new-instance v0, Lcom/google/android/gms/internal/zziz;
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzje;->mContext:Landroid/content/Context;
-
-    iget-object v5, p0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    move-object v6, p4
-
-    move-object v7, p0
-
-    invoke-direct/range {v0 .. v7}, Lcom/google/android/gms/internal/zziz;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/google/android/gms/internal/zzjn$zza;Lcom/google/android/gms/internal/zzjf;Lcom/google/android/gms/internal/zzjd;)V
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzje;->zzapb:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public zza(Ljava/lang/String;I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public zzaF(Ljava/lang/String;)V
+.method public final zzh(Z)[Lcom/google/android/gms/ads/AdSize;
     .locals 2
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzje;->zzpp:Ljava/lang/Object;
+    if-nez p1, :cond_0
 
-    monitor-enter v1
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzje;->zzbcw:[Lcom/google/android/gms/ads/AdSize;
 
-    :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzje;->zzOQ:Ljava/util/HashSet;
+    array-length v0, v0
 
-    invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    const/4 v1, 0x1
 
-    monitor-exit v1
+    if-eq v0, v1, :cond_0
 
-    return-void
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    :catchall_0
-    move-exception v0
+    const-string v1, "The adSizes XML attribute is only allowed on PublisherAdViews."
 
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
-.end method
-
-.method public zzbQ()V
-    .locals 6
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    iget-object v0, v0, Lcom/google/android/gms/internal/zzjn$zza;->zzOY:Lcom/google/android/gms/internal/zzfr;
-
-    iget-object v0, v0, Lcom/google/android/gms/internal/zzfr;->zzED:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
 
     :cond_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzje;->zzbcw:[Lcom/google/android/gms/ads/AdSize;
 
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/android/gms/internal/zzfq;
-
-    iget-object v3, v0, Lcom/google/android/gms/internal/zzfq;->zzEv:Ljava/lang/String;
-
-    iget-object v1, v0, Lcom/google/android/gms/internal/zzfq;->zzEp:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    :goto_0
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    const-string v5, "com.google.android.gms.ads.mediation.customevent.CustomEventAdapter"
-
-    invoke-virtual {v5, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_1
-
-    :try_start_0
-    new-instance v1, Lorg/json/JSONObject;
-
-    invoke-direct {v1, v3}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-
-    const-string v5, "class_name"
-
-    invoke-virtual {v1, v5}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v1
-
-    :cond_1
-    iget-object v5, v0, Lcom/google/android/gms/internal/zzfq;->zzEn:Ljava/lang/String;
-
-    invoke-direct {p0, v1, v3, v5}, Lcom/google/android/gms/internal/zzje;->zzd(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    const-string v5, "Unable to determine custom event class name, skipping..."
-
-    invoke-static {v5, v1}, Lcom/google/android/gms/internal/zzjw;->zzb(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_1
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzje;->zzOO:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-ge v1, v0, :cond_4
-
-    :try_start_1
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzje;->zzOO:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/concurrent/Future;
-
-    invoke-interface {v0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
-    :try_end_1
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
-
-    iget-object v2, p0, Lcom/google/android/gms/internal/zzje;->zzpp:Ljava/lang/Object;
-
-    monitor-enter v2
-
-    :try_start_2
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzje;->zzOQ:Ljava/util/HashSet;
-
-    iget-object v3, p0, Lcom/google/android/gms/internal/zzje;->zzOP:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzje;->zzOP:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    iget-object v3, p0, Lcom/google/android/gms/internal/zzje;->zzJJ:Lcom/google/android/gms/internal/zzjn$zza;
-
-    iget-object v3, v3, Lcom/google/android/gms/internal/zzjn$zza;->zzOY:Lcom/google/android/gms/internal/zzfr;
-
-    iget-object v3, v3, Lcom/google/android/gms/internal/zzfr;->zzED:Ljava/util/List;
-
-    invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/google/android/gms/internal/zzfq;
-
-    invoke-direct {p0, v0, v1}, Lcom/google/android/gms/internal/zzje;->zza(Ljava/lang/String;Lcom/google/android/gms/internal/zzfq;)Lcom/google/android/gms/internal/zzjn;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/google/android/gms/ads/internal/util/client/zza;->zzRt:Landroid/os/Handler;
-
-    new-instance v3, Lcom/google/android/gms/internal/zzje$1;
-
-    invoke-direct {v3, p0, v0}, Lcom/google/android/gms/internal/zzje$1;-><init>(Lcom/google/android/gms/internal/zzje;Lcom/google/android/gms/internal/zzjn;)V
-
-    invoke-virtual {v1, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    monitor-exit v2
-
-    :goto_2
-    return-void
-
-    :cond_3
-    monitor-exit v2
-
-    :goto_3
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v2
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw v0
-
-    :catch_1
-    move-exception v0
-
-    :cond_4
-    invoke-direct {p0}, Lcom/google/android/gms/internal/zzje;->zzio()Lcom/google/android/gms/internal/zzjn;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/google/android/gms/ads/internal/util/client/zza;->zzRt:Landroid/os/Handler;
-
-    new-instance v2, Lcom/google/android/gms/internal/zzje$2;
-
-    invoke-direct {v2, p0, v0}, Lcom/google/android/gms/internal/zzje$2;-><init>(Lcom/google/android/gms/internal/zzje;Lcom/google/android/gms/internal/zzjn;)V
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    goto :goto_2
-
-    :catch_2
-    move-exception v0
-
-    goto :goto_3
+    return-object v0
 .end method

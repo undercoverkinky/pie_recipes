@@ -2,6 +2,7 @@ syntax = "proto3";
 
 package mobile.video.v1;
 option java_package = "com.kik.video.mobile";
+option go_package = "github.com/kikinteractive/xiphias-api-mobile/generated/go/video/v1;video";
 
 import "protobuf_validation.proto";
 import "common_model.proto";
@@ -105,10 +106,9 @@ message JoinConvoConferenceRequest {
     common.video.v1.ConvoId convo_id = 1  [(kik.validation.field_validation) = {
         mandatory: true }];
 
-    // TODO: The request_id is only going to be put in the payload of the message temporarily
-    // due to time constraint of the client intial implementation. This will be removed after
-
-    string request_id = 2;
+    // This tag was used for the request_id before Xiphias Client headers came around.
+    // Must be reserved for backwards compatibility.
+    reserved 2;
 }
 
 message JoinConvoConferenceResponse {
@@ -142,10 +142,9 @@ message LeaveConvoConferenceNotification {
     common.video.v1.ConvoId convo_id = 1 [(kik.validation.field_validation) = {
         mandatory: true} ];
 
-    // TODO: The request_id is only going to be put in the payload of the message temporarily
-    // due to time constraint of the client intial implementation. This will be removed after
-
-    string request_id = 2;
+    // This tag was used for the request_id before Xiphias Client headers came around.
+    // Must be reserved for backwards compatibility.
+    reserved 2;
 
     // TAG 3 IS RESERVED FOR "force", so DON'T USE HERE.
     reserved 3;

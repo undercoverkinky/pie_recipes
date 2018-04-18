@@ -1,9 +1,6 @@
 .class final Lcom/kik/b/b$1;
-.super Ljava/lang/Object;
+.super Lcom/kik/performance/metrics/a;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -18,59 +15,47 @@
 
 
 # instance fields
-.field final synthetic a:Z
-
-.field final synthetic b:Lorg/json/JSONObject;
-
-.field final synthetic c:Lcom/kik/b/b;
+.field final synthetic a:Lcom/kik/b/b;
 
 
 # direct methods
-.method constructor <init>(Lcom/kik/b/b;ZLorg/json/JSONObject;)V
+.method constructor <init>(Lcom/kik/b/b;)V
     .locals 0
 
     .prologue
-    .line 202
-    iput-object p1, p0, Lcom/kik/b/b$1;->c:Lcom/kik/b/b;
+    .line 94
+    iput-object p1, p0, Lcom/kik/b/b$1;->a:Lcom/kik/b/b;
 
-    iput-boolean p2, p0, Lcom/kik/b/b$1;->a:Z
-
-    iput-object p3, p0, Lcom/kik/b/b$1;->b:Lorg/json/JSONObject;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/kik/performance/metrics/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final a(Lcom/kik/performance/metrics/OverlordSession;)V
+    .locals 5
 
     .prologue
-    .line 206
-    iget-boolean v0, p0, Lcom/kik/b/b$1;->a:Z
+    .line 98
+    iget-object v0, p0, Lcom/kik/b/b$1;->a:Lcom/kik/b/b;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p1}, Lcom/kik/performance/metrics/OverlordSession;->b()Ljava/lang/String;
 
-    .line 207
-    iget-object v0, p0, Lcom/kik/b/b$1;->c:Lcom/kik/b/b;
+    move-result-object v1
 
-    iget-object v1, p0, Lcom/kik/b/b$1;->b:Lorg/json/JSONObject;
+    new-instance v2, Lorg/json/JSONObject;
 
-    invoke-static {v0, v1}, Lcom/kik/b/b;->a(Lcom/kik/b/b;Lorg/json/JSONObject;)V
+    invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
-    .line 212
-    :goto_0
+    invoke-virtual {p1}, Lcom/kik/performance/metrics/OverlordSession;->a()Lorg/json/JSONObject;
+
+    move-result-object v3
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/kik/b/b;->a(Ljava/lang/String;Lorg/json/JSONObject;Lorg/json/JSONObject;Z)V
+
+    .line 99
     return-void
-
-    .line 210
-    :cond_0
-    iget-object v0, p0, Lcom/kik/b/b$1;->c:Lcom/kik/b/b;
-
-    iget-object v1, p0, Lcom/kik/b/b$1;->b:Lorg/json/JSONObject;
-
-    invoke-static {v0, v1}, Lcom/kik/b/b;->b(Lcom/kik/b/b;Lorg/json/JSONObject;)V
-
-    goto :goto_0
 .end method

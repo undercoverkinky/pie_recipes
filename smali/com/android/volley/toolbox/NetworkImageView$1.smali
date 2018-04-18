@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/android/volley/toolbox/h$d;
+.implements Lcom/android/volley/toolbox/ImageLoader$b;
 
 
 # annotations
@@ -71,7 +71,7 @@
     return-void
 .end method
 
-.method public final a(Lcom/android/volley/toolbox/h$c;Z)V
+.method public final a(Lcom/android/volley/toolbox/ImageLoader$a;Z)V
     .locals 2
 
     .prologue
@@ -87,7 +87,7 @@
 
     new-instance v1, Lcom/android/volley/toolbox/NetworkImageView$1$1;
 
-    invoke-direct {v1, p0, p1}, Lcom/android/volley/toolbox/NetworkImageView$1$1;-><init>(Lcom/android/volley/toolbox/NetworkImageView$1;Lcom/android/volley/toolbox/h$c;)V
+    invoke-direct {v1, p0, p1}, Lcom/android/volley/toolbox/NetworkImageView$1$1;-><init>(Lcom/android/volley/toolbox/NetworkImageView$1;Lcom/android/volley/toolbox/ImageLoader$a;)V
 
     invoke-virtual {v0, v1}, Lcom/android/volley/toolbox/NetworkImageView;->post(Ljava/lang/Runnable;)Z
 
@@ -98,7 +98,7 @@
 
     .line 189
     :cond_1
-    invoke-virtual {p1}, Lcom/android/volley/toolbox/h$c;->b()Landroid/graphics/Bitmap;
+    invoke-virtual {p1}, Lcom/android/volley/toolbox/ImageLoader$a;->b()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -107,7 +107,7 @@
     .line 190
     iget-object v0, p0, Lcom/android/volley/toolbox/NetworkImageView$1;->b:Lcom/android/volley/toolbox/NetworkImageView;
 
-    invoke-virtual {p1}, Lcom/android/volley/toolbox/h$c;->b()Landroid/graphics/Bitmap;
+    invoke-virtual {p1}, Lcom/android/volley/toolbox/ImageLoader$a;->b()Landroid/graphics/Bitmap;
 
     move-result-object v1
 

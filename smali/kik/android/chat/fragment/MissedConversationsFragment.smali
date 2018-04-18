@@ -6,50 +6,41 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lkik/android/chat/fragment/MissedConversationsFragment$a;
+        Lkik/android/chat/fragment/MissedConversationsFragment$a;,
+        Lkik/android/chat/fragment/MissedConversationsFragment$b;
     }
 .end annotation
 
 
 # static fields
-.field private static s:Ljava/lang/String;
+.field private static f:Ljava/lang/String;
 
 
 # instance fields
-.field private A:Landroid/view/View;
-
-.field private B:J
-
 .field _clearButton:Landroid/view/View;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1101d7
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1001fb
     .end annotation
 .end field
 
 .field _muteButton:Landroid/view/View;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1101d5
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1001f9
     .end annotation
 .end field
 
 .field _unmuteButton:Landroid/view/View;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1101d6
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1001fa
     .end annotation
 .end field
 
-.field protected o:Lkik/core/interfaces/b;
+.field protected a:Lkik/core/interfaces/b;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
-.field p:Lcom/kik/cache/aa;
+.field b:Lcom/kik/cache/KikVolleyImageLoader;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 
@@ -58,21 +49,27 @@
     .end annotation
 .end field
 
-.field protected q:Lkik/android/util/ah;
+.field protected c:Lkik/android/util/aj;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
-.field protected r:Lkik/core/g/c;
+.field protected d:Lkik/core/e/c;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
-.field private t:Lcom/kik/view/adapters/i;
+.field e:Lbutterknife/Unbinder;
 
-.field private u:Lcom/kik/view/adapters/i;
+.field private g:Lcom/kik/view/adapters/j;
 
-.field private z:Lcom/kik/view/adapters/m;
+.field private h:Lcom/kik/view/adapters/j;
+
+.field private i:Lcom/kik/view/adapters/q;
+
+.field private j:Landroid/view/View;
+
+.field private k:J
 
 
 # direct methods
@@ -80,10 +77,10 @@
     .locals 1
 
     .prologue
-    .line 46
+    .line 55
     const-string v0, "kik.read.receipts.tooltip"
 
-    sput-object v0, Lkik/android/chat/fragment/MissedConversationsFragment;->s:Ljava/lang/String;
+    sput-object v0, Lkik/android/chat/fragment/MissedConversationsFragment;->f:Ljava/lang/String;
 
     return-void
 .end method
@@ -92,203 +89,57 @@
     .locals 0
 
     .prologue
-    .line 44
+    .line 53
     invoke-direct {p0}, Lkik/android/chat/fragment/ConversationsBaseFragment;-><init>()V
 
     return-void
 .end method
 
-.method static synthetic a(Lkik/android/chat/fragment/MissedConversationsFragment;)V
-    .locals 0
+.method static synthetic a(Lkik/android/chat/fragment/MissedConversationsFragment;Ljava/lang/Boolean;)Ljava/lang/Boolean;
+    .locals 3
 
     .prologue
-    .line 44
-    invoke-direct {p0}, Lkik/android/chat/fragment/MissedConversationsFragment;->g()V
+    .line 388
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->c:Lkik/android/util/aj;
 
-    return-void
-.end method
-
-.method static synthetic b(Lkik/android/chat/fragment/MissedConversationsFragment;)V
-    .locals 0
-
-    .prologue
-    .line 44
-    invoke-direct {p0}, Lkik/android/chat/fragment/MissedConversationsFragment;->f()V
-
-    return-void
-.end method
-
-.method private b(Z)V
-    .locals 4
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 293
-    iget-object v2, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->c:Lkik/core/interfaces/af;
-
-    if-nez p1, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    invoke-interface {v2, v0}, Lkik/core/interfaces/af;->a(Z)Lcom/kik/events/Promise;
+    invoke-interface {v0}, Lkik/android/util/aj;->c()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 295
-    new-instance v2, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;
+    sget-object v1, Lkik/android/chat/fragment/MissedConversationsFragment;->f:Ljava/lang/String;
 
-    invoke-virtual {p0}, Lkik/android/chat/fragment/MissedConversationsFragment;->getContext()Landroid/content/Context;
+    const/4 v2, 0x0
 
-    move-result-object v3
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
-    invoke-direct {v2, v3}, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;-><init>(Landroid/content/Context;)V
+    move-result v0
 
-    .line 296
-    invoke-virtual {v2, v1}, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;->a(Z)Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;
+    if-eqz v0, :cond_0
 
-    move-result-object v1
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    const v2, 0x7f0a049c
+    move-result v0
 
-    .line 7082
-    invoke-static {v2}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
+    if-nez v0, :cond_0
 
-    move-result-object v2
+    .line 389
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->d:Lkik/core/e/c;
 
-    .line 297
-    invoke-virtual {v1, v2}, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;->a(Ljava/lang/String;)Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;
+    invoke-interface {v0}, Lkik/core/e/c;->f()V
 
-    move-result-object v1
+    .line 390
+    const/4 v0, 0x1
 
-    .line 8075
-    iget-object v1, v1, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;->a:Lkik/android/chat/fragment/KikDialogFragment$a;
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    invoke-virtual {v1}, Lkik/android/chat/fragment/KikDialogFragment$a;->a()Lkik/android/chat/fragment/KikDialogFragment;
+    move-result-object p1
 
-    move-result-object v1
-
-    .line 299
-    invoke-virtual {p0, v1}, Lkik/android/chat/fragment/MissedConversationsFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
-
-    .line 301
-    new-instance v2, Lkik/android/chat/fragment/MissedConversationsFragment$2;
-
-    invoke-direct {v2, p0, p1, v1}, Lkik/android/chat/fragment/MissedConversationsFragment$2;-><init>(Lkik/android/chat/fragment/MissedConversationsFragment;ZLkik/android/chat/fragment/KikDialogFragment;)V
-
-    invoke-static {p0, v2}, Lcom/kik/sdkutils/b;->a(Landroid/support/v4/app/Fragment;Lcom/kik/events/l;)Lcom/kik/events/l;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
-
-    .line 332
-    return-void
-
+    .line 392
     :cond_0
-    move v0, v1
-
-    .line 293
-    goto :goto_0
+    return-object p1
 .end method
 
-.method static synthetic c(Lkik/android/chat/fragment/MissedConversationsFragment;)V
-    .locals 2
-
-    .prologue
-    .line 0
-    .line 8092
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->m:Landroid/widget/ListView;
-
-    iget-object v1, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->A:Landroid/view/View;
-
-    invoke-static {v0, v1}, Lcom/kik/util/bm;->a(Landroid/widget/ListView;Landroid/view/View;)V
-
-    .line 8093
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->r:Lkik/core/g/c;
-
-    invoke-interface {v0}, Lkik/core/g/c;->f()V
-
-    .line 0
-    return-void
-.end method
-
-.method static synthetic d(Lkik/android/chat/fragment/MissedConversationsFragment;)V
-    .locals 2
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 0
-    .line 8266
-    const-string v0, "Clearing..."
-
-    invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/MissedConversationsFragment;->b(Ljava/lang/String;Z)Lkik/android/chat/fragment/KikDialogFragment;
-
-    .line 8267
-    new-instance v0, Lkik/android/chat/fragment/MissedConversationsFragment$1;
-
-    invoke-direct {v0, p0}, Lkik/android/chat/fragment/MissedConversationsFragment$1;-><init>(Lkik/android/chat/fragment/MissedConversationsFragment;)V
-
-    new-array v1, v1, [Ljava/lang/Void;
-
-    .line 8288
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/MissedConversationsFragment$1;->a([Ljava/lang/Object;)Landroid/os/AsyncTask;
-
-    .line 8127
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->g:Lcom/kik/android/Mixpanel;
-
-    const-string v1, "Clear New People Confirmed"
-
-    invoke-virtual {v0, v1}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;)Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    .line 8128
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    .line 8129
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
-
-    .line 0
-    return-void
-.end method
-
-.method static synthetic e(Lkik/android/chat/fragment/MissedConversationsFragment;)V
-    .locals 2
-
-    .prologue
-    .line 0
-    .line 9132
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/MissedConversationsFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
-
-    .line 9133
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->g:Lcom/kik/android/Mixpanel;
-
-    const-string v1, "Clear New People Cancelled"
-
-    invoke-virtual {v0, v1}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;)Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    .line 9134
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    .line 9135
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
-
-    .line 0
-    return-void
-.end method
-
-.method private f()V
+.method private a()V
     .locals 4
 
     .prologue
@@ -296,110 +147,39 @@
 
     const/4 v2, 0x0
 
-    .line 336
+    .line 356
     new-array v0, v3, [Landroid/view/View;
 
     iget-object v1, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_muteButton:Landroid/view/View;
 
     aput-object v1, v0, v2
 
-    invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->d([Landroid/view/View;)V
 
-    .line 337
+    .line 357
     new-array v0, v3, [Landroid/view/View;
 
     iget-object v1, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_unmuteButton:Landroid/view/View;
 
     aput-object v1, v0, v2
 
-    invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->g([Landroid/view/View;)V
 
-    .line 338
+    .line 358
     return-void
 .end method
 
-.method static synthetic f(Lkik/android/chat/fragment/MissedConversationsFragment;)V
+.method static synthetic a(Lkik/android/chat/fragment/MissedConversationsFragment;)V
     .locals 3
 
     .prologue
-    .line 0
-    .line 9153
-    const/4 v0, 0x1
-
-    invoke-direct {p0, v0}, Lkik/android/chat/fragment/MissedConversationsFragment;->b(Z)V
-
-    .line 9155
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->g:Lcom/kik/android/Mixpanel;
-
-    const-string v1, "Mute New Chats Confirmed"
-
-    invoke-virtual {v0, v1}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;)Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    const-string v1, "Source"
-
-    const-string v2, "New Chats"
-
-    .line 9156
-    invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    .line 9157
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
-
-    move-result-object v0
-
-    .line 9158
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
-
-    .line 0
-    return-void
-.end method
-
-.method private g()V
-    .locals 4
-
-    .prologue
-    const/4 v3, 0x1
-
-    const/4 v2, 0x0
-
-    .line 342
-    new-array v0, v3, [Landroid/view/View;
-
-    iget-object v1, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_unmuteButton:Landroid/view/View;
-
-    aput-object v1, v0, v2
-
-    invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
-
-    .line 343
-    new-array v0, v3, [Landroid/view/View;
-
-    iget-object v1, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_muteButton:Landroid/view/View;
-
-    aput-object v1, v0, v2
-
-    invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
-
-    .line 344
-    return-void
-.end method
-
-.method static synthetic g(Lkik/android/chat/fragment/MissedConversationsFragment;)V
-    .locals 3
-
-    .prologue
-    .line 0
-    .line 9161
+    .line 202
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/MissedConversationsFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/MissedConversationsFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 9163
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->g:Lcom/kik/android/Mixpanel;
+    .line 204
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_mixpanel:Lcom/kik/android/Mixpanel;
 
     const-string v1, "Mute New Chats Cancelled"
 
@@ -411,293 +191,296 @@
 
     const-string v2, "New Chats"
 
-    .line 9164
+    .line 205
     invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 9165
+    .line 206
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 9166
+    .line 207
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 0
+    .line 208
+    return-void
+.end method
+
+.method private a(Z)V
+    .locals 4
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 312
+    iget-object v2, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_userProfile:Lkik/core/interfaces/ag;
+
+    if-nez p1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    invoke-interface {v2, v0}, Lkik/core/interfaces/ag;->a(Z)Lcom/kik/events/Promise;
+
+    move-result-object v0
+
+    .line 314
+    new-instance v2, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;
+
+    invoke-virtual {p0}, Lkik/android/chat/fragment/MissedConversationsFragment;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    .line 315
+    invoke-virtual {v2, v1}, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;->a(Z)Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;
+
+    move-result-object v1
+
+    const v2, 0x7f0904b0
+
+    .line 316
+    invoke-virtual {p0, v2}, Lkik/android/chat/fragment/MissedConversationsFragment;->getStringFromResource(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;->a(Ljava/lang/String;)Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;
+
+    move-result-object v1
+
+    .line 4075
+    iget-object v1, v1, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;->a:Lkik/android/chat/fragment/KikDialogFragment$a;
+
+    invoke-virtual {v1}, Lkik/android/chat/fragment/KikDialogFragment$a;->a()Lkik/android/chat/fragment/KikDialogFragment;
+
+    move-result-object v1
+
+    .line 318
+    invoke-virtual {p0, v1}, Lkik/android/chat/fragment/MissedConversationsFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
+
+    .line 320
+    new-instance v2, Lkik/android/chat/fragment/MissedConversationsFragment$2;
+
+    invoke-direct {v2, p0, p1, v1}, Lkik/android/chat/fragment/MissedConversationsFragment$2;-><init>(Lkik/android/chat/fragment/MissedConversationsFragment;ZLkik/android/chat/fragment/KikDialogFragment;)V
+
+    invoke-static {p0, v2}, Lcom/kik/sdkutils/b;->a(Landroid/support/v4/app/Fragment;Lcom/kik/events/k;)Lcom/kik/events/k;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
+
+    .line 352
+    return-void
+
+    :cond_0
+    move v0, v1
+
+    .line 312
+    goto :goto_0
+.end method
+
+.method private b()V
+    .locals 4
+
+    .prologue
+    const/4 v3, 0x1
+
+    const/4 v2, 0x0
+
+    .line 362
+    new-array v0, v3, [Landroid/view/View;
+
+    iget-object v1, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_unmuteButton:Landroid/view/View;
+
+    aput-object v1, v0, v2
+
+    invoke-static {v0}, Lkik/android/util/ca;->d([Landroid/view/View;)V
+
+    .line 363
+    new-array v0, v3, [Landroid/view/View;
+
+    iget-object v1, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_muteButton:Landroid/view/View;
+
+    aput-object v1, v0, v2
+
+    invoke-static {v0}, Lkik/android/util/ca;->g([Landroid/view/View;)V
+
+    .line 364
+    return-void
+.end method
+
+.method static synthetic b(Lkik/android/chat/fragment/MissedConversationsFragment;)V
+    .locals 3
+
+    .prologue
+    .line 194
+    const/4 v0, 0x1
+
+    invoke-direct {p0, v0}, Lkik/android/chat/fragment/MissedConversationsFragment;->a(Z)V
+
+    .line 196
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_mixpanel:Lcom/kik/android/Mixpanel;
+
+    const-string v1, "Mute New Chats Confirmed"
+
+    invoke-virtual {v0, v1}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;)Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    const-string v1, "Source"
+
+    const-string v2, "New Chats"
+
+    .line 197
+    invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    .line 198
+    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    .line 199
+    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
+
+    .line 200
+    return-void
+.end method
+
+.method static synthetic c(Lkik/android/chat/fragment/MissedConversationsFragment;)V
+    .locals 2
+
+    .prologue
+    .line 173
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/MissedConversationsFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
+
+    .line 174
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_mixpanel:Lcom/kik/android/Mixpanel;
+
+    const-string v1, "Clear New People Cancelled"
+
+    invoke-virtual {v0, v1}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;)Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    .line 175
+    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    .line 176
+    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
+
+    .line 177
+    return-void
+.end method
+
+.method static synthetic d(Lkik/android/chat/fragment/MissedConversationsFragment;)V
+    .locals 2
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 167
+    .line 4306
+    const-string v0, "Clearing..."
+
+    invoke-virtual {p0, v0, v1}, Lkik/android/chat/fragment/MissedConversationsFragment;->showWaitDialog(Ljava/lang/String;Z)Lkik/android/chat/fragment/KikDialogFragment;
+
+    .line 4307
+    new-instance v0, Lkik/android/chat/fragment/MissedConversationsFragment$a;
+
+    invoke-direct {v0, p0}, Lkik/android/chat/fragment/MissedConversationsFragment$a;-><init>(Lkik/android/chat/fragment/MissedConversationsFragment;)V
+
+    new-array v1, v1, [Ljava/lang/Void;
+
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/MissedConversationsFragment$a;->a([Ljava/lang/Object;)Landroid/os/AsyncTask;
+
+    .line 168
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_mixpanel:Lcom/kik/android/Mixpanel;
+
+    const-string v1, "Clear New People Confirmed"
+
+    invoke-virtual {v0, v1}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;)Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    .line 169
+    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    .line 170
+    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
+
+    .line 171
+    return-void
+.end method
+
+.method static synthetic e(Lkik/android/chat/fragment/MissedConversationsFragment;)Landroid/view/View;
+    .locals 1
+
+    .prologue
+    .line 53
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->j:Landroid/view/View;
+
+    return-object v0
+.end method
+
+.method static synthetic f(Lkik/android/chat/fragment/MissedConversationsFragment;)V
+    .locals 0
+
+    .prologue
+    .line 53
+    invoke-direct {p0}, Lkik/android/chat/fragment/MissedConversationsFragment;->b()V
+
+    return-void
+.end method
+
+.method static synthetic g(Lkik/android/chat/fragment/MissedConversationsFragment;)V
+    .locals 0
+
+    .prologue
+    .line 53
+    invoke-direct {p0}, Lkik/android/chat/fragment/MissedConversationsFragment;->a()V
+
     return-void
 .end method
 
 
 # virtual methods
-.method protected final E()I
+.method public getMixpanelScreenName()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 261
-    const v0, 0x7f0a0235
-
-    return v0
-.end method
-
-.method public final a(Lkik/core/datatypes/f;)V
-    .locals 1
-
-    .prologue
-    .line 214
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->a:Lkik/core/interfaces/j;
-
-    invoke-interface {v0}, Lkik/core/interfaces/j;->F()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/MissedConversationsFragment;->a(I)V
-
-    .line 215
-    return-void
-.end method
-
-.method public final a(Z)V
-    .locals 12
-
-    .prologue
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    .line 220
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->a:Lkik/core/interfaces/j;
-
-    invoke-interface {v0}, Lkik/core/interfaces/j;->F()Ljava/util/List;
-
-    move-result-object v2
-
-    .line 221
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->a:Lkik/core/interfaces/j;
-
-    invoke-interface {v0}, Lkik/core/interfaces/j;->G()Ljava/util/List;
-
-    move-result-object v11
-
-    .line 222
-    if-eqz v2, :cond_4
-
-    invoke-interface {v2}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-gtz v0, :cond_0
-
-    invoke-interface {v11}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-lez v0, :cond_4
-
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 6185
-    :goto_0
-    iget-object v1, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_clearButton:Landroid/view/View;
-
-    if-eqz v1, :cond_1
-
-    .line 6186
-    iget-object v1, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_clearButton:Landroid/view/View;
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->setEnabled(Z)V
-
-    .line 224
-    :cond_1
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->m:Landroid/widget/ListView;
-
-    invoke-virtual {v0}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
-
-    move-result-object v0
-
-    if-nez v0, :cond_5
-
-    .line 225
-    new-instance v0, Lcom/kik/view/adapters/m;
-
-    invoke-virtual {p0}, Lkik/android/chat/fragment/MissedConversationsFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lcom/kik/view/adapters/m;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->z:Lcom/kik/view/adapters/m;
-
-    .line 226
-    new-instance v0, Lcom/kik/view/adapters/i;
-
-    invoke-virtual {p0}, Lkik/android/chat/fragment/MissedConversationsFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
-
-    move-result-object v1
-
-    iget-object v3, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->p:Lcom/kik/cache/aa;
-
-    iget-object v4, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->b:Lkik/core/interfaces/x;
-
-    iget-object v5, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->e:Lkik/core/interfaces/m;
-
-    iget-object v6, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->f:Lkik/core/interfaces/o;
-
-    iget-object v7, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->g:Lcom/kik/android/Mixpanel;
-
-    iget-object v8, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->o:Lkik/core/interfaces/b;
-
-    invoke-direct/range {v0 .. v9}, Lcom/kik/view/adapters/i;-><init>(Landroid/content/Context;Ljava/util/List;Lcom/kik/cache/aa;Lkik/core/interfaces/x;Lkik/core/interfaces/m;Lkik/core/interfaces/o;Lcom/kik/android/Mixpanel;Lkik/core/interfaces/b;Lkik/android/videochat/c;)V
-
-    iput-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->t:Lcom/kik/view/adapters/i;
-
-    .line 227
-    new-instance v0, Lcom/kik/view/adapters/i;
-
-    invoke-virtual {p0}, Lkik/android/chat/fragment/MissedConversationsFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
-
-    move-result-object v1
-
-    iget-object v3, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->p:Lcom/kik/cache/aa;
-
-    iget-object v4, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->b:Lkik/core/interfaces/x;
-
-    iget-object v5, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->e:Lkik/core/interfaces/m;
-
-    iget-object v6, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->f:Lkik/core/interfaces/o;
-
-    iget-object v7, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->g:Lcom/kik/android/Mixpanel;
-
-    iget-object v8, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->o:Lkik/core/interfaces/b;
-
-    move-object v2, v11
-
-    invoke-direct/range {v0 .. v9}, Lcom/kik/view/adapters/i;-><init>(Landroid/content/Context;Ljava/util/List;Lcom/kik/cache/aa;Lkik/core/interfaces/x;Lkik/core/interfaces/m;Lkik/core/interfaces/o;Lcom/kik/android/Mixpanel;Lkik/core/interfaces/b;Lkik/android/videochat/c;)V
-
-    iput-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->u:Lcom/kik/view/adapters/i;
-
-    .line 228
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->z:Lcom/kik/view/adapters/m;
-
-    iget-object v1, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->t:Lcom/kik/view/adapters/i;
-
-    invoke-virtual {v0, v1}, Lcom/kik/view/adapters/m;->a(Landroid/widget/Adapter;)V
-
-    .line 229
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->z:Lcom/kik/view/adapters/m;
-
-    iget-object v1, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->u:Lcom/kik/view/adapters/i;
-
-    invoke-virtual {v0, v1}, Lcom/kik/view/adapters/m;->b(Landroid/widget/Adapter;)V
-
-    .line 230
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->m:Landroid/widget/ListView;
-
-    invoke-virtual {v0, v10}, Landroid/widget/ListView;->setFooterDividersEnabled(Z)V
-
-    .line 231
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->m:Landroid/widget/ListView;
-
-    iget-object v1, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->z:Lcom/kik/view/adapters/m;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
-
-    .line 232
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->m:Landroid/widget/ListView;
-
-    invoke-static {v0}, Lcom/kik/util/bm;->a(Landroid/widget/ListView;)V
-
-    .line 243
-    :goto_1
-    if-nez p1, :cond_2
-
-    invoke-static {}, Lcom/kik/sdkutils/d;->a()J
-
-    move-result-wide v0
-
-    iget-wide v2, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->B:J
-
-    sub-long/2addr v0, v2
-
-    const-wide/16 v2, 0xc8
-
-    cmp-long v0, v0, v2
-
-    if-gez v0, :cond_3
-
-    .line 244
-    :cond_2
-    invoke-static {}, Lcom/kik/sdkutils/d;->a()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->B:J
-
-    .line 245
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->m:Landroid/widget/ListView;
-
-    invoke-virtual {v0, v10}, Landroid/widget/ListView;->setSelection(I)V
-
-    .line 247
-    :cond_3
-    return-void
-
-    :cond_4
-    move v0, v10
-
-    .line 222
-    goto/16 :goto_0
-
-    .line 235
-    :cond_5
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->t:Lcom/kik/view/adapters/i;
-
-    invoke-virtual {v0, v2}, Lcom/kik/view/adapters/i;->a(Ljava/util/List;)V
-
-    .line 236
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->u:Lcom/kik/view/adapters/i;
-
-    invoke-virtual {v0, v11}, Lcom/kik/view/adapters/i;->a(Ljava/util/List;)V
-
-    .line 237
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->t:Lcom/kik/view/adapters/i;
-
-    invoke-virtual {v0}, Lcom/kik/view/adapters/i;->notifyDataSetChanged()V
-
-    .line 238
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->u:Lcom/kik/view/adapters/i;
-
-    invoke-virtual {v0}, Lcom/kik/view/adapters/i;->notifyDataSetChanged()V
-
-    .line 239
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->z:Lcom/kik/view/adapters/m;
-
-    invoke-virtual {v0}, Lcom/kik/view/adapters/m;->notifyDataSetChanged()V
-
-    goto :goto_1
-.end method
-
-.method public final c()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 360
+    .line 380
     const-string v0, "New People"
 
     return-object v0
 .end method
 
-.method public final d()I
+.method public getRelevantConvoType()I
     .locals 1
 
     .prologue
-    .line 349
+    .line 369
     const/16 v0, 0xa
+
+    return v0
+.end method
+
+.method protected getTitleResource()I
+    .locals 1
+
+    .prologue
+    .line 301
+    const v0, 0x7f090249
 
     return v0
 .end method
@@ -706,13 +489,13 @@
     .locals 4
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f1101d7
+            0x7f1001fb
         }
     .end annotation
 
     .prologue
-    .line 118
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->g:Lcom/kik/android/Mixpanel;
+    .line 159
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_mixpanel:Lcom/kik/android/Mixpanel;
 
     const-string v1, "Clear New People Tapped"
 
@@ -720,21 +503,21 @@
 
     move-result-object v0
 
-    .line 119
+    .line 160
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 120
+    .line 161
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 122
+    .line 163
     new-instance v0, Lkik/android/chat/fragment/KikDialogFragment$a;
 
     invoke-direct {v0}, Lkik/android/chat/fragment/KikDialogFragment$a;-><init>()V
 
-    .line 123
-    const v1, 0x7f0a0078
+    .line 164
+    const v1, 0x7f090079
 
     invoke-virtual {p0, v1}, Lkik/android/chat/fragment/MissedConversationsFragment;->getString(I)Ljava/lang/String;
 
@@ -744,9 +527,9 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a00da
+    const v2, 0x7f0900db
 
-    .line 124
+    .line 165
     invoke-virtual {p0, v2}, Lkik/android/chat/fragment/MissedConversationsFragment;->getString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -755,48 +538,48 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a0269
+    const v2, 0x7f09027d
 
-    invoke-static {p0}, Lkik/android/chat/fragment/gf;->a(Lkik/android/chat/fragment/MissedConversationsFragment;)Landroid/content/DialogInterface$OnClickListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/et;->a(Lkik/android/chat/fragment/MissedConversationsFragment;)Landroid/content/DialogInterface$OnClickListener;
 
     move-result-object v3
 
-    .line 125
+    .line 166
     invoke-virtual {v1, v2, v3}, Lkik/android/chat/fragment/KikDialogFragment$a;->a(ILandroid/content/DialogInterface$OnClickListener;)Lkik/android/chat/fragment/KikDialogFragment$a;
 
     move-result-object v1
 
-    const v2, 0x7f0a03c3
+    const v2, 0x7f0903d7
 
-    invoke-static {p0}, Lkik/android/chat/fragment/gg;->a(Lkik/android/chat/fragment/MissedConversationsFragment;)Landroid/content/DialogInterface$OnClickListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/eu;->a(Lkik/android/chat/fragment/MissedConversationsFragment;)Landroid/content/DialogInterface$OnClickListener;
 
     move-result-object v3
 
-    .line 131
+    .line 172
     invoke-virtual {v1, v2, v3}, Lkik/android/chat/fragment/KikDialogFragment$a;->b(ILandroid/content/DialogInterface$OnClickListener;)Lkik/android/chat/fragment/KikDialogFragment$a;
 
-    .line 137
+    .line 178
     invoke-virtual {v0}, Lkik/android/chat/fragment/KikDialogFragment$a;->a()Lkik/android/chat/fragment/KikDialogFragment;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/MissedConversationsFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/MissedConversationsFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 138
+    .line 179
     return-void
 .end method
 
 .method onConversationListClicked(I)V
-    .locals 3
+    .locals 6
     .annotation build Lbutterknife/OnItemClick;
         value = {
-            0x7f1100e3
+            0x7f100110
         }
     .end annotation
 
     .prologue
-    .line 111
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->m:Landroid/widget/ListView;
+    .line 139
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_conversationList:Landroid/widget/ListView;
 
     invoke-virtual {v0}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
 
@@ -806,55 +589,106 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/datatypes/f;
+    check-cast v0, Lkik/android/chat/vm/ai;
 
-    .line 2252
-    if-eqz v0, :cond_0
+    .line 141
+    if-nez v0, :cond_1
 
-    .line 2253
-    new-instance v1, Lkik/android/chat/fragment/KikChatFragment$a;
-
-    invoke-direct {v1}, Lkik/android/chat/fragment/KikChatFragment$a;-><init>()V
-
-    iget-object v2, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->e:Lkik/core/interfaces/m;
-
-    invoke-virtual {v1, v0, v2}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Lkik/core/datatypes/f;Lkik/core/interfaces/m;)Lkik/android/chat/fragment/KikChatFragment$a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lkik/android/chat/fragment/KikChatFragment$a;->d()Lkik/android/chat/fragment/KikChatFragment$a;
-
-    move-result-object v0
-
-    .line 2254
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/MissedConversationsFragment;->a(Lkik/android/util/aa;)Lcom/kik/events/Promise;
-
-    .line 113
+    .line 154
     :cond_0
+    :goto_0
     return-void
+
+    .line 145
+    :cond_1
+    invoke-interface {v0}, Lkik/android/chat/vm/ai;->b()Lkik/core/datatypes/f;
+
+    move-result-object v2
+
+    .line 147
+    if-eqz v2, :cond_0
+
+    .line 148
+    new-instance v0, Lcom/kik/performance/metrics/b;
+
+    iget-object v1, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_profile:Lkik/core/interfaces/v;
+
+    invoke-virtual {v2}, Lkik/core/datatypes/f;->g()Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    invoke-interface {v1, v3, v4}, Lkik/core/interfaces/v;->a(Ljava/lang/String;Z)Lkik/core/datatypes/l;
+
+    move-result-object v1
+
+    iget-object v3, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_comm:Lkik/core/interfaces/ICommunication;
+
+    .line 149
+    invoke-interface {v3}, Lkik/core/interfaces/ICommunication;->l()Z
+
+    move-result v3
+
+    const-string v4, "new_chats"
+
+    iget-object v5, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_overlord:Lcom/kik/performance/metrics/c;
+
+    invoke-virtual {v5}, Lcom/kik/performance/metrics/c;->b()Z
+
+    move-result v5
+
+    invoke-direct/range {v0 .. v5}, Lcom/kik/performance/metrics/b;-><init>(Lkik/core/datatypes/l;Lkik/core/datatypes/f;ZLjava/lang/String;Z)V
+
+    .line 2098
+    const-string v1, "load_duration"
+
+    invoke-virtual {v0, v1}, Lcom/kik/performance/metrics/b;->a(Ljava/lang/String;)Lcom/kik/performance/metrics/d;
+
+    .line 151
+    iget-object v1, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_overlord:Lcom/kik/performance/metrics/c;
+
+    invoke-virtual {v1, v0}, Lcom/kik/performance/metrics/c;->a(Lcom/kik/performance/metrics/OverlordSession;)V
+
+    .line 2292
+    if-eqz v2, :cond_0
+
+    .line 2293
+    new-instance v0, Lkik/android/chat/fragment/KikChatFragment$a;
+
+    invoke-direct {v0}, Lkik/android/chat/fragment/KikChatFragment$a;-><init>()V
+
+    iget-object v1, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_groupManager:Lkik/core/interfaces/l;
+
+    invoke-virtual {v0, v2, v1}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Lkik/core/datatypes/f;Lkik/core/interfaces/l;)Lkik/android/chat/fragment/KikChatFragment$a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikChatFragment$a;->c()Lkik/android/chat/fragment/KikChatFragment$a;
+
+    move-result-object v0
+
+    .line 2294
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/MissedConversationsFragment;->startFragmentForResult(Lkik/android/util/ae;)Lcom/kik/events/Promise;
+
+    goto :goto_0
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 1
 
     .prologue
-    .line 65
-    .line 1088
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikFragmentBase;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    .line 77
+    invoke-virtual {p0}, Lkik/android/chat/fragment/MissedConversationsFragment;->getCoreComponent()Lcom/kik/components/CoreComponent;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkik/android/util/s;->a(Landroid/app/Activity;)Lcom/kik/components/CoreComponent;
-
-    move-result-object v0
-
-    .line 65
     invoke-interface {v0, p0}, Lcom/kik/components/CoreComponent;->a(Lkik/android/chat/fragment/MissedConversationsFragment;)V
 
-    .line 66
+    .line 78
     invoke-super {p0, p1}, Lkik/android/chat/fragment/ConversationsBaseFragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 67
+    .line 79
     return-void
 .end method
 
@@ -869,8 +703,8 @@
 
     const/4 v3, 0x0
 
-    .line 73
-    const v0, 0x7f04007d
+    .line 85
+    const v0, 0x7f040085
 
     invoke-virtual {p1, v0, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -878,17 +712,21 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    iput-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->n:Landroid/view/ViewGroup;
+    iput-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_root:Landroid/view/ViewGroup;
 
-    .line 74
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->n:Landroid/view/ViewGroup;
+    .line 86
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_root:Landroid/view/ViewGroup;
 
-    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)V
+    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)Lbutterknife/Unbinder;
 
-    .line 76
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->n:Landroid/view/ViewGroup;
+    move-result-object v0
 
-    const v1, 0x7f1100e3
+    iput-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->e:Lbutterknife/Unbinder;
+
+    .line 88
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_root:Landroid/view/ViewGroup;
+
+    const v1, 0x7f100110
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -896,30 +734,30 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    iput-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->m:Landroid/widget/ListView;
+    iput-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_conversationList:Landroid/widget/ListView;
 
-    .line 77
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->m:Landroid/widget/ListView;
+    .line 89
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_conversationList:Landroid/widget/ListView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ListView;->setDivider(Landroid/graphics/drawable/Drawable;)V
 
-    .line 78
-    const v0, 0x7f0400f8
+    .line 90
+    const v0, 0x7f040121
 
-    iget-object v1, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->m:Landroid/widget/ListView;
+    iget-object v1, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_conversationList:Landroid/widget/ListView;
 
     invoke-virtual {p1, v0, v1, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->A:Landroid/view/View;
+    iput-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->j:Landroid/view/View;
 
-    .line 80
+    .line 92
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->l:Z
+    iput-boolean v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_returnToMissedConvos:Z
 
-    .line 82
+    .line 94
     const/16 v0, 0x9
 
     invoke-static {v0}, Lcom/kik/sdkutils/c;->b(I)Z
@@ -928,18 +766,18 @@
 
     if-nez v0, :cond_0
 
-    .line 83
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->m:Landroid/widget/ListView;
+    .line 95
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_conversationList:Landroid/widget/ListView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ListView;->setOverscrollFooter(Landroid/graphics/drawable/Drawable;)V
 
-    .line 86
+    .line 98
     :cond_0
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->m:Landroid/widget/ListView;
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_conversationList:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->n:Landroid/view/ViewGroup;
+    iget-object v1, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_root:Landroid/view/ViewGroup;
 
-    const v2, 0x7f110177
+    const v2, 0x7f100191
 
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -947,94 +785,61 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setEmptyView(Landroid/view/View;)V
 
-    .line 87
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->m:Landroid/widget/ListView;
+    .line 99
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_conversationList:Landroid/widget/ListView;
 
     invoke-virtual {v0, p0}, Landroid/widget/ListView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
 
-    .line 1367
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->q:Lkik/android/util/ah;
+    .line 1385
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->d:Lkik/core/e/c;
 
-    invoke-interface {v0}, Lkik/android/util/ah;->c()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    sget-object v1, Lkik/android/chat/fragment/MissedConversationsFragment;->s:Ljava/lang/String;
-
-    invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->r:Lkik/core/g/c;
-
-    invoke-interface {v0}, Lkik/core/g/c;->e()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 1368
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->r:Lkik/core/g/c;
-
-    invoke-interface {v0}, Lkik/core/g/c;->f()V
-
-    .line 1370
-    :cond_1
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->r:Lkik/core/g/c;
-
-    invoke-interface {v0}, Lkik/core/g/c;->e()Z
-
-    move-result v0
-
-    .line 89
-    if-nez v0, :cond_2
-
-    .line 90
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->A:Landroid/view/View;
-
-    const v1, 0x7f1102fd
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-interface {v0}, Lkik/core/e/c;->e()Lcom/kik/events/Promise;
 
     move-result-object v0
 
-    invoke-static {p0}, Lkik/android/chat/fragment/ge;->a(Lkik/android/chat/fragment/MissedConversationsFragment;)Landroid/view/View$OnClickListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/ex;->a(Lkik/android/chat/fragment/MissedConversationsFragment;)Lcom/kik/events/p;
 
     move-result-object v1
 
-    .line 91
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-static {v0, v1}, Lcom/kik/events/l;->b(Lcom/kik/events/Promise;Lcom/kik/events/p;)Lcom/kik/events/Promise;
 
-    .line 95
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->m:Landroid/widget/ListView;
+    move-result-object v0
 
-    iget-object v1, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->A:Landroid/view/View;
+    .line 101
+    new-instance v1, Lkik/android/chat/fragment/MissedConversationsFragment$1;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->addHeaderView(Landroid/view/View;)V
+    invoke-direct {v1, p0}, Lkik/android/chat/fragment/MissedConversationsFragment$1;-><init>(Lkik/android/chat/fragment/MissedConversationsFragment;)V
 
-    .line 97
-    :cond_2
-    invoke-virtual {p0, v3}, Lkik/android/chat/fragment/MissedConversationsFragment;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
-    .line 98
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->n:Landroid/view/ViewGroup;
+    .line 116
+    invoke-virtual {p0, v3}, Lkik/android/chat/fragment/MissedConversationsFragment;->updateConvoList(Z)V
+
+    .line 117
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_root:Landroid/view/ViewGroup;
 
     return-object v0
 .end method
 
 .method public onDestroyView()V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 104
+    .line 130
     invoke-super {p0}, Lkik/android/chat/fragment/ConversationsBaseFragment;->onDestroyView()V
 
-    .line 105
-    invoke-static {p0}, Lbutterknife/ButterKnife;->unbind(Ljava/lang/Object;)V
+    .line 131
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->e:Lbutterknife/Unbinder;
 
-    .line 106
+    if-eqz v0, :cond_0
+
+    .line 132
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->e:Lbutterknife/Unbinder;
+
+    invoke-interface {v0}, Lbutterknife/Unbinder;->unbind()V
+
+    .line 134
+    :cond_0
     return-void
 .end method
 
@@ -1042,13 +847,13 @@
     .locals 4
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f1101d5
+            0x7f1001f9
         }
     .end annotation
 
     .prologue
-    .line 143
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->g:Lcom/kik/android/Mixpanel;
+    .line 184
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_mixpanel:Lcom/kik/android/Mixpanel;
 
     const-string v1, "Mute New Chats Tapped"
 
@@ -1060,7 +865,7 @@
 
     const-string v2, "New Chats"
 
-    .line 144
+    .line 185
     invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
@@ -1069,58 +874,54 @@
 
     const-string v2, "Disabled"
 
-    .line 145
+    .line 186
     invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 146
+    .line 187
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 147
+    .line 188
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 149
+    .line 190
     new-instance v0, Lkik/android/chat/fragment/KikDialogFragment$a;
 
     invoke-direct {v0}, Lkik/android/chat/fragment/KikDialogFragment$a;-><init>()V
 
-    .line 150
-    const v1, 0x7f0a05c8
+    .line 191
+    const v1, 0x7f090697
 
-    .line 3082
-    invoke-static {v1}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lkik/android/chat/fragment/MissedConversationsFragment;->getStringFromResource(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 150
     invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikDialogFragment$a;->a(Ljava/lang/String;)Lkik/android/chat/fragment/KikDialogFragment$a;
 
     move-result-object v1
 
-    const v2, 0x7f0a0512
+    const v2, 0x7f090528
 
-    .line 4082
-    invoke-static {v2}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
+    .line 192
+    invoke-virtual {p0, v2}, Lkik/android/chat/fragment/MissedConversationsFragment;->getStringFromResource(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 151
     invoke-virtual {v1, v2}, Lkik/android/chat/fragment/KikDialogFragment$a;->b(Ljava/lang/String;)Lkik/android/chat/fragment/KikDialogFragment$a;
 
     move-result-object v1
 
-    const v2, 0x7f0a0475
+    const v2, 0x7f090489
 
-    .line 5082
-    invoke-static {v2}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
+    .line 193
+    invoke-virtual {p0, v2}, Lkik/android/chat/fragment/MissedConversationsFragment;->getStringFromResource(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 152
-    invoke-static {p0}, Lkik/android/chat/fragment/gh;->a(Lkik/android/chat/fragment/MissedConversationsFragment;)Landroid/content/DialogInterface$OnClickListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/ev;->a(Lkik/android/chat/fragment/MissedConversationsFragment;)Landroid/content/DialogInterface$OnClickListener;
 
     move-result-object v3
 
@@ -1128,28 +929,27 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a03c3
+    const v2, 0x7f0903d7
 
-    .line 6082
-    invoke-static {v2}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
+    .line 201
+    invoke-virtual {p0, v2}, Lkik/android/chat/fragment/MissedConversationsFragment;->getStringFromResource(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 160
-    invoke-static {p0}, Lkik/android/chat/fragment/gi;->a(Lkik/android/chat/fragment/MissedConversationsFragment;)Landroid/content/DialogInterface$OnClickListener;
+    invoke-static {p0}, Lkik/android/chat/fragment/ew;->a(Lkik/android/chat/fragment/MissedConversationsFragment;)Landroid/content/DialogInterface$OnClickListener;
 
     move-result-object v3
 
     invoke-virtual {v1, v2, v3}, Lkik/android/chat/fragment/KikDialogFragment$a;->b(Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;)Lkik/android/chat/fragment/KikDialogFragment$a;
 
-    .line 168
+    .line 209
     invoke-virtual {v0}, Lkik/android/chat/fragment/KikDialogFragment$a;->a()Lkik/android/chat/fragment/KikDialogFragment;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/MissedConversationsFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/MissedConversationsFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 169
+    .line 210
     return-void
 .end method
 
@@ -1157,21 +957,21 @@
     .locals 2
 
     .prologue
-    .line 193
+    .line 234
     invoke-super {p0}, Lkik/android/chat/fragment/ConversationsBaseFragment;->onPause()V
 
-    .line 195
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->a:Lkik/core/interfaces/j;
+    .line 236
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_convoManager:Lkik/core/interfaces/IConversation;
 
-    iget-object v1, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->a:Lkik/core/interfaces/j;
+    iget-object v1, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_convoManager:Lkik/core/interfaces/IConversation;
 
-    invoke-interface {v1}, Lkik/core/interfaces/j;->P()I
+    invoke-interface {v1}, Lkik/core/interfaces/IConversation;->S()I
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/j;->b(I)V
+    invoke-interface {v0, v1}, Lkik/core/interfaces/IConversation;->b(I)V
 
-    .line 196
+    .line 237
     return-void
 .end method
 
@@ -1179,17 +979,17 @@
     .locals 1
 
     .prologue
-    .line 201
+    .line 242
     invoke-super {p0}, Lkik/android/chat/fragment/ConversationsBaseFragment;->onResume()V
 
-    .line 202
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->c:Lkik/core/interfaces/af;
+    .line 243
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_userProfile:Lkik/core/interfaces/ag;
 
-    invoke-interface {v0}, Lkik/core/interfaces/af;->d()Lkik/core/datatypes/ad;
+    invoke-interface {v0}, Lkik/core/interfaces/ag;->d()Lkik/core/datatypes/aa;
 
     move-result-object v0
 
-    iget-object v0, v0, Lkik/core/datatypes/ad;->h:Ljava/lang/Boolean;
+    iget-object v0, v0, Lkik/core/datatypes/aa;->h:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -1199,26 +999,26 @@
 
     const/4 v0, 0x1
 
-    .line 203
+    .line 244
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 204
-    invoke-direct {p0}, Lkik/android/chat/fragment/MissedConversationsFragment;->g()V
+    .line 245
+    invoke-direct {p0}, Lkik/android/chat/fragment/MissedConversationsFragment;->b()V
 
-    .line 209
+    .line 250
     :goto_1
     return-void
 
-    .line 202
+    .line 243
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 207
+    .line 248
     :cond_1
-    invoke-direct {p0}, Lkik/android/chat/fragment/MissedConversationsFragment;->f()V
+    invoke-direct {p0}, Lkik/android/chat/fragment/MissedConversationsFragment;->a()V
 
     goto :goto_1
 .end method
@@ -1227,13 +1027,13 @@
     .locals 3
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f1101d6
+            0x7f1001fa
         }
     .end annotation
 
     .prologue
-    .line 174
-    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->g:Lcom/kik/android/Mixpanel;
+    .line 215
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_mixpanel:Lcom/kik/android/Mixpanel;
 
     const-string v1, "Mute New Chats Tapped"
 
@@ -1245,7 +1045,7 @@
 
     const-string v2, "New Chats"
 
-    .line 175
+    .line 216
     invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
@@ -1254,24 +1054,276 @@
 
     const-string v2, "Enabled"
 
-    .line 176
+    .line 217
     invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 177
+    .line 218
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 178
+    .line 219
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 180
+    .line 221
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lkik/android/chat/fragment/MissedConversationsFragment;->b(Z)V
+    invoke-direct {p0, v0}, Lkik/android/chat/fragment/MissedConversationsFragment;->a(Z)V
 
-    .line 181
+    .line 222
     return-void
+.end method
+
+.method protected screenOpenedEvent()Lcom/kik/metrics/b/t;
+    .locals 1
+
+    .prologue
+    .line 124
+    invoke-static {}, Lcom/kik/metrics/b/ak;->b()Lcom/kik/metrics/b/ak$a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/kik/metrics/b/ak$a;->a()Lcom/kik/metrics/b/ak;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public scrollToConvo(Lkik/core/datatypes/f;)V
+    .locals 1
+
+    .prologue
+    .line 255
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_convoManager:Lkik/core/interfaces/IConversation;
+
+    invoke-interface {v0}, Lkik/core/interfaces/IConversation;->I()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/MissedConversationsFragment;->scrollToPosition(I)V
+
+    .line 256
+    return-void
+.end method
+
+.method public updateConvoList(Z)V
+    .locals 7
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 261
+    new-instance v2, Lkik/android/chat/vm/m;
+
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_convoManager:Lkik/core/interfaces/IConversation;
+
+    invoke-interface {v0}, Lkik/core/interfaces/IConversation;->I()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Lkik/android/chat/vm/m;-><init>(Ljava/util/List;)V
+
+    .line 262
+    new-instance v3, Lkik/android/chat/vm/m;
+
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_convoManager:Lkik/core/interfaces/IConversation;
+
+    invoke-interface {v0}, Lkik/core/interfaces/IConversation;->J()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-direct {v3, v0}, Lkik/android/chat/vm/m;-><init>(Ljava/util/List;)V
+
+    .line 263
+    invoke-virtual {v2}, Lkik/android/chat/vm/m;->g()I
+
+    move-result v0
+
+    if-gtz v0, :cond_0
+
+    invoke-virtual {v3}, Lkik/android/chat/vm/m;->g()I
+
+    move-result v0
+
+    if-lez v0, :cond_4
+
+    :cond_0
+    const/4 v0, 0x1
+
+    .line 3226
+    :goto_0
+    iget-object v4, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_clearButton:Landroid/view/View;
+
+    if-eqz v4, :cond_1
+
+    .line 3227
+    iget-object v4, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_clearButton:Landroid/view/View;
+
+    invoke-virtual {v4, v0}, Landroid/view/View;->setEnabled(Z)V
+
+    .line 265
+    :cond_1
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_conversationList:Landroid/widget/ListView;
+
+    invoke-virtual {v0}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
+
+    move-result-object v0
+
+    if-nez v0, :cond_5
+
+    .line 266
+    new-instance v0, Lcom/kik/view/adapters/q;
+
+    invoke-virtual {p0}, Lkik/android/chat/fragment/MissedConversationsFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
+
+    move-result-object v4
+
+    invoke-direct {v0, v4}, Lcom/kik/view/adapters/q;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->i:Lcom/kik/view/adapters/q;
+
+    .line 267
+    new-instance v0, Lcom/kik/view/adapters/j;
+
+    invoke-virtual {p0}, Lkik/android/chat/fragment/MissedConversationsFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
+
+    move-result-object v4
+
+    invoke-virtual {p0}, Lkik/android/chat/fragment/MissedConversationsFragment;->getCoreComponent()Lcom/kik/components/CoreComponent;
+
+    move-result-object v5
+
+    invoke-virtual {p0}, Lkik/android/chat/fragment/MissedConversationsFragment;->getNavigator()Lkik/android/chat/vm/bd;
+
+    move-result-object v6
+
+    invoke-direct {v0, v4, v2, v5, v6}, Lcom/kik/view/adapters/j;-><init>(Landroid/content/Context;Lkik/android/chat/vm/m;Lcom/kik/components/CoreComponent;Lkik/android/chat/vm/bd;)V
+
+    iput-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->g:Lcom/kik/view/adapters/j;
+
+    .line 268
+    new-instance v0, Lcom/kik/view/adapters/j;
+
+    invoke-virtual {p0}, Lkik/android/chat/fragment/MissedConversationsFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Lkik/android/chat/fragment/MissedConversationsFragment;->getCoreComponent()Lcom/kik/components/CoreComponent;
+
+    move-result-object v4
+
+    invoke-virtual {p0}, Lkik/android/chat/fragment/MissedConversationsFragment;->getNavigator()Lkik/android/chat/vm/bd;
+
+    move-result-object v5
+
+    invoke-direct {v0, v2, v3, v4, v5}, Lcom/kik/view/adapters/j;-><init>(Landroid/content/Context;Lkik/android/chat/vm/m;Lcom/kik/components/CoreComponent;Lkik/android/chat/vm/bd;)V
+
+    iput-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->h:Lcom/kik/view/adapters/j;
+
+    .line 269
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->i:Lcom/kik/view/adapters/q;
+
+    iget-object v2, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->g:Lcom/kik/view/adapters/j;
+
+    invoke-virtual {v0, v2}, Lcom/kik/view/adapters/q;->a(Landroid/widget/Adapter;)V
+
+    .line 270
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->i:Lcom/kik/view/adapters/q;
+
+    iget-object v2, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->h:Lcom/kik/view/adapters/j;
+
+    invoke-virtual {v0, v2}, Lcom/kik/view/adapters/q;->b(Landroid/widget/Adapter;)V
+
+    .line 271
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_conversationList:Landroid/widget/ListView;
+
+    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setFooterDividersEnabled(Z)V
+
+    .line 272
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_conversationList:Landroid/widget/ListView;
+
+    iget-object v2, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->i:Lcom/kik/view/adapters/q;
+
+    invoke-virtual {v0, v2}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
+
+    .line 273
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_conversationList:Landroid/widget/ListView;
+
+    invoke-static {v0}, Lcom/kik/util/ct;->a(Landroid/widget/ListView;)V
+
+    .line 284
+    :goto_1
+    if-nez p1, :cond_2
+
+    invoke-static {}, Lcom/kik/sdkutils/d;->a()J
+
+    move-result-wide v2
+
+    iget-wide v4, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->k:J
+
+    sub-long/2addr v2, v4
+
+    const-wide/16 v4, 0xc8
+
+    cmp-long v0, v2, v4
+
+    if-gez v0, :cond_3
+
+    .line 285
+    :cond_2
+    invoke-static {}, Lcom/kik/sdkutils/d;->a()J
+
+    move-result-wide v2
+
+    iput-wide v2, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->k:J
+
+    .line 286
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->_conversationList:Landroid/widget/ListView;
+
+    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setSelection(I)V
+
+    .line 288
+    :cond_3
+    return-void
+
+    :cond_4
+    move v0, v1
+
+    .line 263
+    goto :goto_0
+
+    .line 276
+    :cond_5
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->g:Lcom/kik/view/adapters/j;
+
+    invoke-virtual {v0, v2}, Lcom/kik/view/adapters/j;->a(Lkik/android/chat/vm/IListViewModel;)V
+
+    .line 277
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->h:Lcom/kik/view/adapters/j;
+
+    invoke-virtual {v0, v3}, Lcom/kik/view/adapters/j;->a(Lkik/android/chat/vm/IListViewModel;)V
+
+    .line 278
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->g:Lcom/kik/view/adapters/j;
+
+    invoke-virtual {v0}, Lcom/kik/view/adapters/j;->notifyDataSetChanged()V
+
+    .line 279
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->h:Lcom/kik/view/adapters/j;
+
+    invoke-virtual {v0}, Lcom/kik/view/adapters/j;->notifyDataSetChanged()V
+
+    .line 280
+    iget-object v0, p0, Lkik/android/chat/fragment/MissedConversationsFragment;->i:Lcom/kik/view/adapters/q;
+
+    invoke-virtual {v0}, Lcom/kik/view/adapters/q;->notifyDataSetChanged()V
+
+    goto :goto_1
 .end method

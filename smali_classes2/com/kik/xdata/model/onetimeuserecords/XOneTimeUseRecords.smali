@@ -38,11 +38,17 @@
 # instance fields
 .field chatsRestoredTutorialShown:Ljava/lang/Boolean;
 
+.field emojiStatusSettingsTooltipShown:Ljava/lang/Boolean;
+
 .field newChatsReadReceiptsTutorialShown:Ljava/lang/Boolean;
 
 .field publicGroupsTutorialShown:Ljava/lang/Boolean;
 
+.field publicGroupsUgcDialogueShown:Ljava/lang/Boolean;
+
 .field pullToSearchTutorialShown:Ljava/lang/Boolean;
+
+.field suggestedResponseButtonTooltipShown:Ljava/lang/Boolean;
 
 
 # direct methods
@@ -57,7 +63,7 @@
 
     sput-object v0, Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;->a:Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;
 
-    .line 118
+    .line 156
     new-instance v0, Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords$1;
 
     invoke-direct {v0}, Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords$1;-><init>()V
@@ -71,16 +77,79 @@
     .locals 0
 
     .prologue
-    .line 41
+    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
+    .line 46
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lcom/dyuproject/protostuff/u;
+.method public final a(Ljava/lang/Boolean;)Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;
+    .locals 0
+
+    .prologue
+    .line 59
+    iput-object p1, p0, Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;->publicGroupsTutorialShown:Ljava/lang/Boolean;
+
+    .line 60
+    return-object p0
+.end method
+
+.method public final a()Ljava/lang/Boolean;
+    .locals 1
+
+    .prologue
+    .line 54
+    iget-object v0, p0, Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;->publicGroupsTutorialShown:Ljava/lang/Boolean;
+
+    return-object v0
+.end method
+
+.method public final b(Ljava/lang/Boolean;)Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;
+    .locals 0
+
+    .prologue
+    .line 72
+    iput-object p1, p0, Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;->newChatsReadReceiptsTutorialShown:Ljava/lang/Boolean;
+
+    .line 73
+    return-object p0
+.end method
+
+.method public final b()Ljava/lang/Boolean;
+    .locals 1
+
+    .prologue
+    .line 67
+    iget-object v0, p0, Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;->newChatsReadReceiptsTutorialShown:Ljava/lang/Boolean;
+
+    return-object v0
+.end method
+
+.method public final c(Ljava/lang/Boolean;)Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;
+    .locals 0
+
+    .prologue
+    .line 81
+    iput-object p1, p0, Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;->suggestedResponseButtonTooltipShown:Ljava/lang/Boolean;
+
+    .line 82
+    return-object p0
+.end method
+
+.method public final c()Ljava/lang/Boolean;
+    .locals 1
+
+    .prologue
+    .line 78
+    iget-object v0, p0, Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;->suggestedResponseButtonTooltipShown:Ljava/lang/Boolean;
+
+    return-object v0
+.end method
+
+.method public final cachedSchema()Lcom/dyuproject/protostuff/u;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -93,71 +162,71 @@
     .end annotation
 
     .prologue
-    .line 115
+    .line 153
     sget-object v0, Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;->b:Lcom/dyuproject/protostuff/u;
 
     return-object v0
 .end method
 
-.method public final a(Ljava/lang/Boolean;)Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;
+.method public final d(Ljava/lang/Boolean;)Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;
     .locals 0
 
     .prologue
-    .line 56
-    iput-object p1, p0, Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;->publicGroupsTutorialShown:Ljava/lang/Boolean;
-
-    .line 57
-    return-object p0
-.end method
-
-.method public final b(Ljava/lang/Boolean;)Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;
-    .locals 0
-
-    .prologue
-    .line 69
-    iput-object p1, p0, Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;->newChatsReadReceiptsTutorialShown:Ljava/lang/Boolean;
-
-    .line 70
-    return-object p0
-.end method
-
-.method public final b()Ljava/lang/Boolean;
-    .locals 1
-
-    .prologue
-    .line 51
-    iget-object v0, p0, Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;->publicGroupsTutorialShown:Ljava/lang/Boolean;
-
-    return-object v0
-.end method
-
-.method public final c(Ljava/lang/Boolean;)Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;
-    .locals 0
-
-    .prologue
-    .line 95
+    .line 107
     iput-object p1, p0, Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;->pullToSearchTutorialShown:Ljava/lang/Boolean;
 
-    .line 96
+    .line 108
     return-object p0
-.end method
-
-.method public final c()Ljava/lang/Boolean;
-    .locals 1
-
-    .prologue
-    .line 64
-    iget-object v0, p0, Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;->newChatsReadReceiptsTutorialShown:Ljava/lang/Boolean;
-
-    return-object v0
 .end method
 
 .method public final d()Ljava/lang/Boolean;
     .locals 1
 
     .prologue
-    .line 90
+    .line 102
     iget-object v0, p0, Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;->pullToSearchTutorialShown:Ljava/lang/Boolean;
+
+    return-object v0
+.end method
+
+.method public final e(Ljava/lang/Boolean;)Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;
+    .locals 0
+
+    .prologue
+    .line 120
+    iput-object p1, p0, Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;->publicGroupsUgcDialogueShown:Ljava/lang/Boolean;
+
+    .line 121
+    return-object p0
+.end method
+
+.method public final e()Ljava/lang/Boolean;
+    .locals 1
+
+    .prologue
+    .line 115
+    iget-object v0, p0, Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;->publicGroupsUgcDialogueShown:Ljava/lang/Boolean;
+
+    return-object v0
+.end method
+
+.method public final f(Ljava/lang/Boolean;)Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;
+    .locals 0
+
+    .prologue
+    .line 133
+    iput-object p1, p0, Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;->emojiStatusSettingsTooltipShown:Ljava/lang/Boolean;
+
+    .line 134
+    return-object p0
+.end method
+
+.method public final f()Ljava/lang/Boolean;
+    .locals 1
+
+    .prologue
+    .line 128
+    iget-object v0, p0, Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;->emojiStatusSettingsTooltipShown:Ljava/lang/Boolean;
 
     return-object v0
 .end method
@@ -171,12 +240,12 @@
     .end annotation
 
     .prologue
-    .line 103
+    .line 141
     sget-object v0, Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;->b:Lcom/dyuproject/protostuff/u;
 
     invoke-static {p1, p0, v0}, Lcom/dyuproject/protostuff/i;->a(Ljava/io/DataInput;Ljava/lang/Object;Lcom/dyuproject/protostuff/u;)V
 
-    .line 104
+    .line 142
     return-void
 .end method
 
@@ -189,11 +258,11 @@
     .end annotation
 
     .prologue
-    .line 108
+    .line 146
     sget-object v0, Lcom/kik/xdata/model/onetimeuserecords/XOneTimeUseRecords;->b:Lcom/dyuproject/protostuff/u;
 
     invoke-static {p1, p0, v0}, Lcom/dyuproject/protostuff/i;->a(Ljava/io/DataOutput;Ljava/lang/Object;Lcom/dyuproject/protostuff/u;)I
 
-    .line 109
+    .line 147
     return-void
 .end method

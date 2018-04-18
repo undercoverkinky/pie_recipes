@@ -32,17 +32,17 @@
     .locals 1
 
     .prologue
-    .line 1383
+    .line 1488
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1384
+    .line 1489
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/kik/android/Mixpanel$b;->a:Ljava/util/List;
 
-    .line 1385
+    .line 1490
     return-void
 .end method
 
@@ -63,12 +63,12 @@
     .end annotation
 
     .prologue
-    .line 1419
+    .line 1524
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1421
+    .line 1526
     iget-object v0, p0, Lcom/kik/android/Mixpanel$b;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -88,14 +88,14 @@
 
     check-cast v0, Lcom/kik/android/Mixpanel$a;
 
-    .line 1422
+    .line 1527
     iget-object v0, v0, Lcom/kik/android/Mixpanel$a;->a:Ljava/util/Set;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 1425
+    .line 1530
     :cond_0
     return-object v1
 .end method

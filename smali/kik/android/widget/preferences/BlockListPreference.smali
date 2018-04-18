@@ -51,7 +51,7 @@
 
     invoke-direct {v1}, Lkik/android/chat/fragment/KikBlockedContactsFragment$a;-><init>()V
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikScopedDialogFragment;->a(Lkik/android/util/aa;)Lcom/kik/events/Promise;
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikScopedDialogFragment;->startFragmentForResult(Lkik/android/util/ae;)Lcom/kik/events/Promise;
 
     .line 1047
     iget-object v0, p0, Lkik/android/widget/preferences/BlockListPreference;->a:Lcom/kik/android/Mixpanel;

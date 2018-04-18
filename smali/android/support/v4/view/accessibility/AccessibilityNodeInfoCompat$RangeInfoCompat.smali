@@ -23,40 +23,38 @@
 
 
 # instance fields
-.field private final mInfo:Ljava/lang/Object;
+.field final mInfo:Ljava/lang/Object;
 
 
 # direct methods
-.method private constructor <init>(Ljava/lang/Object;)V
+.method constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
     .prologue
-    .line 466
+    .line 681
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 467
+    .line 682
     iput-object p1, p0, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat$RangeInfoCompat;->mInfo:Ljava/lang/Object;
 
-    .line 468
+    .line 683
     return-void
 .end method
 
-.method synthetic constructor <init>(Ljava/lang/Object;Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat$1;)V
-    .locals 0
+.method public static obtain(IFFF)Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat$RangeInfoCompat;
+    .locals 2
 
     .prologue
-    .line 456
-    invoke-direct {p0, p1}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat$RangeInfoCompat;-><init>(Ljava/lang/Object;)V
+    .line 676
+    new-instance v0, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat$RangeInfoCompat;
 
-    return-void
-.end method
+    sget-object v1, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;->IMPL:Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityNodeInfoImpl;
 
-.method static synthetic access$600(Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat$RangeInfoCompat;)Ljava/lang/Object;
-    .locals 1
+    invoke-interface {v1, p0, p1, p2, p3}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityNodeInfoImpl;->obtainRangeInfo(IFFF)Ljava/lang/Object;
 
-    .prologue
-    .line 456
-    iget-object v0, p0, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat$RangeInfoCompat;->mInfo:Ljava/lang/Object;
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat$RangeInfoCompat;-><init>(Ljava/lang/Object;)V
 
     return-object v0
 .end method
@@ -67,7 +65,7 @@
     .locals 1
 
     .prologue
-    .line 471
+    .line 691
     iget-object v0, p0, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat$RangeInfoCompat;->mInfo:Ljava/lang/Object;
 
     invoke-static {v0}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatKitKat$RangeInfo;->getCurrent(Ljava/lang/Object;)F
@@ -81,7 +79,7 @@
     .locals 1
 
     .prologue
-    .line 475
+    .line 700
     iget-object v0, p0, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat$RangeInfoCompat;->mInfo:Ljava/lang/Object;
 
     invoke-static {v0}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatKitKat$RangeInfo;->getMax(Ljava/lang/Object;)F
@@ -95,7 +93,7 @@
     .locals 1
 
     .prologue
-    .line 479
+    .line 709
     iget-object v0, p0, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat$RangeInfoCompat;->mInfo:Ljava/lang/Object;
 
     invoke-static {v0}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatKitKat$RangeInfo;->getMin(Ljava/lang/Object;)F
@@ -109,7 +107,7 @@
     .locals 1
 
     .prologue
-    .line 483
+    .line 722
     iget-object v0, p0, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat$RangeInfoCompat;->mInfo:Ljava/lang/Object;
 
     invoke-static {v0}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatKitKat$RangeInfo;->getType(Ljava/lang/Object;)I

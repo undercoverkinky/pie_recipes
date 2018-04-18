@@ -8,74 +8,56 @@
 
 # instance fields
 .field _matchesFoundText:Landroid/widget/TextView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f11008a
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1000c5
     .end annotation
 .end field
 
 .field _matchesImage1:Lcom/kik/cache/ContactImageView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f110089
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1000c4
     .end annotation
 .end field
 
 .field _matchesImage1Container:Landroid/view/View;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f110088
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1000c3
     .end annotation
 .end field
 
 .field _matchesImage2:Lcom/kik/cache/ContactImageView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f110087
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1000c2
     .end annotation
 .end field
 
 .field _matchesImage2Container:Landroid/view/View;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f110086
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1000c1
     .end annotation
 .end field
 
 .field _matchesImage3:Lcom/kik/cache/ContactImageView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f110085
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1000c0
     .end annotation
 .end field
 
 .field _matchesImage3Container:Landroid/view/View;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f110084
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1000bf
     .end annotation
 .end field
 
 .field _matchesNoneFoundText:Landroid/widget/TextView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f11008c
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1000c7
     .end annotation
 .end field
 
 .field _matchesViewAllText:Landroid/widget/TextView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f11008b
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1000c6
     .end annotation
 .end field
 
@@ -87,13 +69,13 @@
     .locals 0
 
     .prologue
-    .line 42
+    .line 44
     invoke-direct {p0, p1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
-    .line 43
+    .line 45
     invoke-direct {p0, p1}, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->a(Landroid/content/Context;)V
 
-    .line 44
+    .line 46
     return-void
 .end method
 
@@ -101,13 +83,13 @@
     .locals 0
 
     .prologue
-    .line 48
+    .line 50
     invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 49
+    .line 51
     invoke-direct {p0, p1}, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->a(Landroid/content/Context;)V
 
-    .line 50
+    .line 52
     return-void
 .end method
 
@@ -115,13 +97,13 @@
     .locals 0
 
     .prologue
-    .line 54
+    .line 56
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 55
+    .line 57
     invoke-direct {p0, p1}, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->a(Landroid/content/Context;)V
 
-    .line 56
+    .line 58
     return-void
 .end method
 
@@ -129,13 +111,13 @@
     .locals 0
 
     .prologue
-    .line 60
+    .line 63
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 61
+    .line 64
     invoke-direct {p0, p1}, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->a(Landroid/content/Context;)V
 
-    .line 62
+    .line 65
     return-void
 .end method
 
@@ -143,25 +125,25 @@
     .locals 1
 
     .prologue
-    .line 66
-    const v0, 0x7f04001c
+    .line 69
+    const v0, 0x7f04001e
 
     invoke-static {p1, v0, p0}, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    .line 67
+    .line 70
     invoke-virtual {p0}, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->isInEditMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 71
+    .line 74
     :goto_0
     return-void
 
-    .line 70
+    .line 73
     :cond_0
-    invoke-static {p0}, Lbutterknife/ButterKnife;->bind(Landroid/view/View;)V
+    invoke-static {p0}, Lbutterknife/ButterKnife;->bind(Landroid/view/View;)Lbutterknife/Unbinder;
 
     goto :goto_0
 .end method
@@ -170,12 +152,12 @@
     .locals 2
 
     .prologue
-    .line 162
+    .line 165
     const/16 v0, 0x8
 
     if-ne p1, v0, :cond_0
 
-    .line 163
+    .line 166
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/view/View;
@@ -184,13 +166,13 @@
 
     aput-object p0, v0, v1
 
-    invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->g([Landroid/view/View;)V
 
-    .line 168
+    .line 171
     :goto_0
     return-void
 
-    .line 166
+    .line 169
     :cond_0
     invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
 
@@ -203,10 +185,10 @@
     .locals 0
 
     .prologue
-    .line 84
+    .line 87
     invoke-static {p0, p1}, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->a(Landroid/view/View;I)V
 
-    .line 85
+    .line 88
     return-void
 .end method
 
@@ -214,23 +196,23 @@
     .locals 0
 
     .prologue
-    .line 157
+    .line 160
     iput-object p1, p0, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->a:Lkik/android/chat/view/a$a;
 
-    .line 158
+    .line 161
     return-void
 .end method
 
-.method public final a(Lkik/core/datatypes/o;Lcom/kik/cache/aa;Lkik/core/interfaces/x;Lcom/kik/android/Mixpanel;)V
+.method public final a(Lkik/core/datatypes/l;Lcom/kik/cache/KikVolleyImageLoader;Lkik/core/interfaces/v;Lcom/kik/android/Mixpanel;)V
     .locals 1
 
     .prologue
-    .line 120
+    .line 123
     iget-object v0, p0, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->_matchesImage1:Lcom/kik/cache/ContactImageView;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/kik/cache/ContactImageView;->a(Lkik/core/datatypes/o;Lcom/kik/cache/aa;Lkik/core/interfaces/x;Lcom/kik/android/Mixpanel;)V
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/kik/cache/ContactImageView;->a(Lkik/core/datatypes/l;Lcom/kik/cache/KikVolleyImageLoader;Lkik/core/interfaces/v;Lcom/kik/android/Mixpanel;)V
 
-    .line 121
+    .line 124
     return-void
 .end method
 
@@ -238,25 +220,25 @@
     .locals 1
 
     .prologue
-    .line 90
+    .line 93
     iget-object v0, p0, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->_matchesFoundText:Landroid/widget/TextView;
 
     invoke-static {v0, p1}, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->a(Landroid/view/View;I)V
 
-    .line 91
+    .line 94
     return-void
 .end method
 
-.method public final b(Lkik/core/datatypes/o;Lcom/kik/cache/aa;Lkik/core/interfaces/x;Lcom/kik/android/Mixpanel;)V
+.method public final b(Lkik/core/datatypes/l;Lcom/kik/cache/KikVolleyImageLoader;Lkik/core/interfaces/v;Lcom/kik/android/Mixpanel;)V
     .locals 1
 
     .prologue
-    .line 132
+    .line 135
     iget-object v0, p0, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->_matchesImage2:Lcom/kik/cache/ContactImageView;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/kik/cache/ContactImageView;->a(Lkik/core/datatypes/o;Lcom/kik/cache/aa;Lkik/core/interfaces/x;Lcom/kik/android/Mixpanel;)V
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/kik/cache/ContactImageView;->a(Lkik/core/datatypes/l;Lcom/kik/cache/KikVolleyImageLoader;Lkik/core/interfaces/v;Lcom/kik/android/Mixpanel;)V
 
-    .line 133
+    .line 136
     return-void
 .end method
 
@@ -264,25 +246,25 @@
     .locals 1
 
     .prologue
-    .line 96
+    .line 99
     iget-object v0, p0, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->_matchesFoundText:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 97
+    .line 100
     return-void
 .end method
 
-.method public final c(Lkik/core/datatypes/o;Lcom/kik/cache/aa;Lkik/core/interfaces/x;Lcom/kik/android/Mixpanel;)V
+.method public final c(Lkik/core/datatypes/l;Lcom/kik/cache/KikVolleyImageLoader;Lkik/core/interfaces/v;Lcom/kik/android/Mixpanel;)V
     .locals 1
 
     .prologue
-    .line 145
+    .line 148
     iget-object v0, p0, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->_matchesImage3:Lcom/kik/cache/ContactImageView;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/kik/cache/ContactImageView;->a(Lkik/core/datatypes/o;Lcom/kik/cache/aa;Lkik/core/interfaces/x;Lcom/kik/android/Mixpanel;)V
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/kik/cache/ContactImageView;->a(Lkik/core/datatypes/l;Lcom/kik/cache/KikVolleyImageLoader;Lkik/core/interfaces/v;Lcom/kik/android/Mixpanel;)V
 
-    .line 146
+    .line 149
     return-void
 .end method
 
@@ -290,12 +272,12 @@
     .locals 1
 
     .prologue
-    .line 102
+    .line 105
     iget-object v0, p0, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->_matchesNoneFoundText:Landroid/widget/TextView;
 
     invoke-static {v0, p1}, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->a(Landroid/view/View;I)V
 
-    .line 103
+    .line 106
     return-void
 .end method
 
@@ -303,12 +285,12 @@
     .locals 1
 
     .prologue
-    .line 108
+    .line 111
     iget-object v0, p0, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->_matchesViewAllText:Landroid/widget/TextView;
 
     invoke-static {v0, p1}, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->a(Landroid/view/View;I)V
 
-    .line 109
+    .line 112
     return-void
 .end method
 
@@ -316,10 +298,10 @@
     .locals 0
 
     .prologue
-    .line 114
+    .line 117
     invoke-virtual {p0, p1}, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->setBackgroundResource(I)V
 
-    .line 115
+    .line 118
     return-void
 .end method
 
@@ -327,12 +309,12 @@
     .locals 1
 
     .prologue
-    .line 126
+    .line 129
     iget-object v0, p0, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->_matchesImage1Container:Landroid/view/View;
 
     invoke-static {v0, p1}, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->a(Landroid/view/View;I)V
 
-    .line 127
+    .line 130
     return-void
 .end method
 
@@ -340,12 +322,12 @@
     .locals 1
 
     .prologue
-    .line 138
+    .line 141
     iget-object v0, p0, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->_matchesImage2Container:Landroid/view/View;
 
     invoke-static {v0, p1}, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->a(Landroid/view/View;I)V
 
-    .line 140
+    .line 143
     return-void
 .end method
 
@@ -353,12 +335,12 @@
     .locals 1
 
     .prologue
-    .line 151
+    .line 154
     iget-object v0, p0, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->_matchesImage3Container:Landroid/view/View;
 
     invoke-static {v0, p1}, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->a(Landroid/view/View;I)V
 
-    .line 152
+    .line 155
     return-void
 .end method
 
@@ -366,22 +348,22 @@
     .locals 1
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f110083
+            0x7f1000be
         }
     .end annotation
 
     .prologue
-    .line 76
+    .line 79
     iget-object v0, p0, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->a:Lkik/android/chat/view/a$a;
 
     if-eqz v0, :cond_0
 
-    .line 77
+    .line 80
     iget-object v0, p0, Lkik/android/chat/view/AddressBookMatchingMatchesBarViewImpl;->a:Lkik/android/chat/view/a$a;
 
     invoke-interface {v0}, Lkik/android/chat/view/a$a;->d()V
 
-    .line 79
+    .line 82
     :cond_0
     return-void
 .end method

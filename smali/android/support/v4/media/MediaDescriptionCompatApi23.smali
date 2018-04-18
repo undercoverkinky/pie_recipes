@@ -4,6 +4,10 @@
 
 
 # annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0x17
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/support/v4/media/MediaDescriptionCompatApi23$Builder;
@@ -16,10 +20,10 @@
     .locals 0
 
     .prologue
-    .line 21
+    .line 25
     invoke-direct {p0}, Landroid/support/v4/media/MediaDescriptionCompatApi21;-><init>()V
 
-    .line 26
+    .line 30
     return-void
 .end method
 
@@ -27,7 +31,7 @@
     .locals 1
 
     .prologue
-    .line 23
+    .line 27
     check-cast p0, Landroid/media/MediaDescription;
 
     invoke-virtual {p0}, Landroid/media/MediaDescription;->getMediaUri()Landroid/net/Uri;

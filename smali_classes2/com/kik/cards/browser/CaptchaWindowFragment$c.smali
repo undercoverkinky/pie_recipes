@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 342
+    .line 352
     invoke-direct {p0}, Lcom/kik/ui/fragment/FragmentBase$FragmentBundle;-><init>()V
 
     return-void
@@ -31,12 +31,12 @@
     .locals 1
 
     .prologue
-    .line 349
+    .line 359
     const-string v0, "captcha.window.fragment.extra.url"
 
     invoke-virtual {p0, v0, p1}, Lcom/kik/cards/browser/CaptchaWindowFragment$c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 350
+    .line 360
     return-object p0
 .end method
 
@@ -44,12 +44,12 @@
     .locals 1
 
     .prologue
-    .line 355
+    .line 365
     const-string v0, "captcha.window.fragment.extra.type"
 
     invoke-virtual {p0, v0, p1}, Lcom/kik/cards/browser/CaptchaWindowFragment$c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 356
+    .line 366
     return-object p0
 .end method
 
@@ -57,24 +57,24 @@
     .locals 1
 
     .prologue
-    .line 366
+    .line 376
     const-string v0, "captcha.window.fragment.extra.url"
 
-    invoke-virtual {p0, v0}, Lcom/kik/cards/browser/CaptchaWindowFragment$c;->l(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/kik/cards/browser/CaptchaWindowFragment$c;->h(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final g_()Ljava/lang/String;
+.method public final d_()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 361
+    .line 371
     const-string v0, "captcha.window.fragment.extra.type"
 
-    invoke-virtual {p0, v0}, Lcom/kik/cards/browser/CaptchaWindowFragment$c;->l(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/kik/cards/browser/CaptchaWindowFragment$c;->h(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

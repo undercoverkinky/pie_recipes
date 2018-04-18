@@ -2,68 +2,66 @@
 .super Ljava/lang/Object;
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/google/android/gms/common/stats/zzc$zzb;,
-        Lcom/google/android/gms/common/stats/zzc$zza;
-    }
-.end annotation
-
-
-# static fields
-.field public static zzatv:Lcom/google/android/gms/internal/zzpg;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/internal/zzpg",
-            "<",
-            "Ljava/lang/Integer;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static zzatw:Lcom/google/android/gms/internal/zzpg;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/android/gms/internal/zzpg",
-            "<",
-            "Ljava/lang/Integer;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public static zza(Landroid/os/PowerManager$WakeLock;Ljava/lang/String;)Ljava/lang/String;
+    .locals 4
 
-    const/16 v2, 0x64
+    invoke-static {}, Landroid/os/Process;->myPid()I
 
-    const-string v0, "gms:common:stats:max_num_of_events"
+    move-result v0
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    int-to-long v0, v0
 
-    move-result-object v1
+    const/16 v2, 0x20
 
-    invoke-static {v0, v1}, Lcom/google/android/gms/internal/zzpg;->zza(Ljava/lang/String;Ljava/lang/Integer;)Lcom/google/android/gms/internal/zzpg;
+    shl-long/2addr v0, v2
 
-    move-result-object v0
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
-    sput-object v0, Lcom/google/android/gms/common/stats/zzc;->zzatv:Lcom/google/android/gms/internal/zzpg;
+    move-result v2
 
-    const-string v0, "gms:common:stats:max_chunk_size"
+    int-to-long v2, v2
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    or-long/2addr v0, v2
 
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/google/android/gms/internal/zzpg;->zza(Ljava/lang/String;Ljava/lang/Integer;)Lcom/google/android/gms/internal/zzpg;
+    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/google/android/gms/common/stats/zzc;->zzatw:Lcom/google/android/gms/internal/zzpg;
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    return-void
+    move-result-object v1
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string p1, ""
+
+    :cond_0
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    goto :goto_0
 .end method

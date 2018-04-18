@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 804
+    .line 1043
     iput-object p1, p0, Landroid/support/v7/app/AlertController$AlertParams$3;->b:Landroid/support/v7/app/AlertController$AlertParams;
 
     iput-object p2, p0, Landroid/support/v7/app/AlertController$AlertParams$3;->a:Landroid/support/v7/app/AlertController;
@@ -53,36 +53,32 @@
     .end annotation
 
     .prologue
-    .line 807
+    .line 1046
     iget-object v0, p0, Landroid/support/v7/app/AlertController$AlertParams$3;->b:Landroid/support/v7/app/AlertController$AlertParams;
 
     iget-object v0, v0, Landroid/support/v7/app/AlertController$AlertParams;->u:Landroid/content/DialogInterface$OnClickListener;
 
     iget-object v1, p0, Landroid/support/v7/app/AlertController$AlertParams$3;->a:Landroid/support/v7/app/AlertController;
 
-    invoke-static {v1}, Landroid/support/v7/app/AlertController;->g(Landroid/support/v7/app/AlertController;)Landroid/support/v7/app/AppCompatDialog;
-
-    move-result-object v1
+    iget-object v1, v1, Landroid/support/v7/app/AlertController;->a:Landroid/support/v7/app/AppCompatDialog;
 
     invoke-interface {v0, v1, p3}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
 
-    .line 808
+    .line 1047
     iget-object v0, p0, Landroid/support/v7/app/AlertController$AlertParams$3;->b:Landroid/support/v7/app/AlertController$AlertParams;
 
     iget-boolean v0, v0, Landroid/support/v7/app/AlertController$AlertParams;->E:Z
 
     if-nez v0, :cond_0
 
-    .line 809
+    .line 1048
     iget-object v0, p0, Landroid/support/v7/app/AlertController$AlertParams$3;->a:Landroid/support/v7/app/AlertController;
 
-    invoke-static {v0}, Landroid/support/v7/app/AlertController;->g(Landroid/support/v7/app/AlertController;)Landroid/support/v7/app/AppCompatDialog;
-
-    move-result-object v0
+    iget-object v0, v0, Landroid/support/v7/app/AlertController;->a:Landroid/support/v7/app/AppCompatDialog;
 
     invoke-virtual {v0}, Landroid/support/v7/app/AppCompatDialog;->dismiss()V
 
-    .line 811
+    .line 1050
     :cond_0
     return-void
 .end method

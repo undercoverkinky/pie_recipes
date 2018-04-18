@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/kik/ui/fragment/FragmentBase;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/kik/ui/fragment/FragmentBase;->addBackButtonClickListener(Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 126
+    .line 123
     iput-object p1, p0, Lcom/kik/ui/fragment/FragmentBase$1;->a:Lcom/kik/ui/fragment/FragmentBase;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +40,11 @@
     .locals 1
 
     .prologue
-    .line 131
+    .line 128
     iget-object v0, p0, Lcom/kik/ui/fragment/FragmentBase$1;->a:Lcom/kik/ui/fragment/FragmentBase;
 
-    invoke-virtual {v0}, Lcom/kik/ui/fragment/FragmentBase;->o()Z
+    invoke-virtual {v0}, Lcom/kik/ui/fragment/FragmentBase;->handleBackPress()Z
 
-    .line 132
+    .line 129
     return-void
 .end method

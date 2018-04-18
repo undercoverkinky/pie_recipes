@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 98
+    .line 97
     iput-object p1, p0, Lkik/android/chat/activity/FragmentWrapperActivity$1$1;->a:Lkik/android/chat/activity/FragmentWrapperActivity$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 1
 
     .prologue
-    .line 102
+    .line 101
     iget-object v0, p0, Lkik/android/chat/activity/FragmentWrapperActivity$1$1;->a:Lkik/android/chat/activity/FragmentWrapperActivity$1;
 
     iget-object v0, v0, Lkik/android/chat/activity/FragmentWrapperActivity$1;->a:Lkik/android/chat/activity/FragmentWrapperActivity;
@@ -51,13 +51,13 @@
 
     invoke-virtual {v0}, Lcom/kik/events/d;->a()V
 
-    .line 103
+    .line 102
     iget-object v0, p0, Lkik/android/chat/activity/FragmentWrapperActivity$1$1;->a:Lkik/android/chat/activity/FragmentWrapperActivity$1;
 
     iget-object v0, v0, Lkik/android/chat/activity/FragmentWrapperActivity$1;->a:Lkik/android/chat/activity/FragmentWrapperActivity;
 
     invoke-virtual {v0}, Lkik/android/chat/activity/FragmentWrapperActivity;->finish()V
 
-    .line 104
+    .line 103
     return-void
 .end method

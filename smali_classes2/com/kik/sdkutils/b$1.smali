@@ -1,5 +1,5 @@
 .class final Lcom/kik/sdkutils/b$1;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<TT;>;"
     }
 .end annotation
@@ -37,7 +37,7 @@
 
     iput-object p2, p0, Lcom/kik/sdkutils/b$1;->b:Lcom/kik/events/Promise;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method

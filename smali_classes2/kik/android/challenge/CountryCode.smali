@@ -4080,7 +4080,7 @@
     move-result-object v1
 
     .line 348
-    invoke-static {v1}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    invoke-static {v1}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v0
 

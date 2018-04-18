@@ -21,7 +21,7 @@
     .end annotation
 .end method
 
-.method public abstract a(Lkik/core/g/e;)V
+.method public abstract a(Lkik/core/e/f;)V
 .end method
 
 .method public abstract c()Lcom/kik/clientmetrics/f;

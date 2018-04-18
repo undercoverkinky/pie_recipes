@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/android/chat/view/ab;
+.implements Lkik/android/chat/view/ak;
 
 
 # direct methods
@@ -25,13 +25,13 @@
 
     .prologue
     .line 25
-    invoke-virtual {p0}, Lkik/android/chat/view/SuggestedResponseRecyclerView;->a()Landroid/support/v7/widget/RecyclerView$Adapter;
+    invoke-virtual {p0}, Lkik/android/chat/view/SuggestedResponseRecyclerView;->getAdapter()Landroid/support/v7/widget/RecyclerView$Adapter;
 
     move-result-object v0
 
-    check-cast v0, Lkik/android/chat/fragment/hi;
+    check-cast v0, Lkik/android/chat/fragment/fv;
 
-    invoke-virtual {v0, p1, p2}, Lkik/android/chat/fragment/hi;->a(Landroid/view/View;I)V
+    invoke-virtual {v0, p1, p2}, Lkik/android/chat/fragment/fv;->a(Landroid/view/View;I)V
 
     .line 26
     return-void

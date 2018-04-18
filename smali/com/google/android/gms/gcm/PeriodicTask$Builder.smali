@@ -14,9 +14,9 @@
 
 
 # instance fields
-.field private zzaTk:J
+.field private zzhro:J
 
-.field private zzaTl:J
+.field private zzhrp:J
 
 
 # direct methods
@@ -27,9 +27,9 @@
 
     invoke-direct {p0}, Lcom/google/android/gms/gcm/Task$Builder;-><init>()V
 
-    iput-wide v0, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzaTk:J
+    iput-wide v0, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzhro:J
 
-    iput-wide v0, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzaTl:J
+    iput-wide v0, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzhrp:J
 
     const/4 v0, 0x1
 
@@ -41,7 +41,7 @@
 .method static synthetic zza(Lcom/google/android/gms/gcm/PeriodicTask$Builder;)J
     .locals 2
 
-    iget-wide v0, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzaTk:J
+    iget-wide v0, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzhro:J
 
     return-wide v0
 .end method
@@ -49,7 +49,7 @@
 .method static synthetic zzb(Lcom/google/android/gms/gcm/PeriodicTask$Builder;)J
     .locals 2
 
-    iget-wide v0, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzaTl:J
+    iget-wide v0, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzhrp:J
 
     return-wide v0
 .end method
@@ -59,13 +59,13 @@
 .method public build()Lcom/google/android/gms/gcm/PeriodicTask;
     .locals 2
 
-    invoke-virtual {p0}, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->checkConditions()V
+    invoke-virtual {p0}, Lcom/google/android/gms/gcm/Task$Builder;->checkConditions()V
 
     new-instance v0, Lcom/google/android/gms/gcm/PeriodicTask;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcom/google/android/gms/gcm/PeriodicTask;-><init>(Lcom/google/android/gms/gcm/PeriodicTask$Builder;Lcom/google/android/gms/gcm/PeriodicTask$1;)V
+    invoke-direct {v0, p0, v1}, Lcom/google/android/gms/gcm/PeriodicTask;-><init>(Lcom/google/android/gms/gcm/PeriodicTask$Builder;Lcom/google/android/gms/gcm/f;)V
 
     return-object v0
 .end method
@@ -87,7 +87,7 @@
 
     invoke-super {p0}, Lcom/google/android/gms/gcm/Task$Builder;->checkConditions()V
 
-    iget-wide v0, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzaTk:J
+    iget-wide v0, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzhro:J
 
     cmp-long v0, v0, v4
 
@@ -102,7 +102,7 @@
     throw v0
 
     :cond_0
-    iget-wide v0, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzaTk:J
+    iget-wide v0, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzhro:J
 
     const-wide/16 v2, 0x0
 
@@ -112,17 +112,17 @@
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    iget-wide v2, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzaTk:J
+    iget-wide v2, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzhro:J
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const/16 v1, 0x42
 
-    const/16 v4, 0x42
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v4, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    const-string v4, "Period set cannot be less than or equal to 0: "
+    const-string v1, "Period set cannot be less than or equal to 0: "
 
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -139,13 +139,13 @@
     throw v0
 
     :cond_1
-    iget-wide v0, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzaTl:J
+    iget-wide v0, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzhrp:J
 
     cmp-long v0, v0, v4
 
     if-nez v0, :cond_3
 
-    iget-wide v0, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzaTk:J
+    iget-wide v0, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzhro:J
 
     long-to-float v0, v0
 
@@ -155,24 +155,24 @@
 
     float-to-long v0, v0
 
-    iput-wide v0, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzaTl:J
+    iput-wide v0, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzhrp:J
 
     :cond_2
     :goto_0
     return-void
 
     :cond_3
-    iget-wide v0, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzaTl:J
+    iget-wide v0, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzhrp:J
 
-    iget-wide v2, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzaTk:J
+    iget-wide v2, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzhro:J
 
     cmp-long v0, v0, v2
 
     if-lez v0, :cond_2
 
-    iget-wide v0, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzaTk:J
+    iget-wide v0, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzhro:J
 
-    iput-wide v0, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzaTl:J
+    iput-wide v0, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzhrp:J
 
     goto :goto_0
 .end method
@@ -198,7 +198,7 @@
 .method public setFlex(J)Lcom/google/android/gms/gcm/PeriodicTask$Builder;
     .locals 1
 
-    iput-wide p1, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzaTl:J
+    iput-wide p1, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzhrp:J
 
     return-object p0
 .end method
@@ -206,7 +206,7 @@
 .method public setPeriod(J)Lcom/google/android/gms/gcm/PeriodicTask$Builder;
     .locals 1
 
-    iput-wide p1, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzaTk:J
+    iput-wide p1, p0, Lcom/google/android/gms/gcm/PeriodicTask$Builder;->zzhro:J
 
     return-object p0
 .end method

@@ -23,7 +23,7 @@
     .locals 3
 
     .prologue
-    .line 65
+    .line 62
     invoke-static {}, Lcom/kik/events/Promise$State;->values()[Lcom/kik/events/Promise$State;
 
     move-result-object v0

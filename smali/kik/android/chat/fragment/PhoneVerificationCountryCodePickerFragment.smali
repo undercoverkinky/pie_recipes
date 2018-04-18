@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$a;
-.implements Lkik/android/chat/presentation/bu$a;
+.implements Lkik/android/chat/presentation/bn$a;
 
 
 # annotations
@@ -17,22 +17,18 @@
 
 # instance fields
 .field _resultsList:Landroid/support/v7/widget/RecyclerView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1101e1
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f100205
     .end annotation
 .end field
 
-.field _searchView:Lkik/android/chat/view/v;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1101e0
-        }
+.field _searchView:Lkik/android/chat/view/ac;
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f100204
     .end annotation
 .end field
 
-.field a:Lkik/android/chat/presentation/bu;
+.field a:Lkik/android/chat/presentation/bn;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
@@ -58,6 +54,22 @@
 
 
 # virtual methods
+.method public final a()V
+    .locals 1
+
+    .prologue
+    .line 83
+    iget-object v0, p0, Lkik/android/chat/fragment/PhoneVerificationCountryCodePickerFragment;->a:Lkik/android/chat/presentation/bn;
+
+    invoke-interface {v0}, Lkik/android/chat/presentation/bn;->a()V
+
+    .line 84
+    invoke-virtual {p0}, Lkik/android/chat/fragment/PhoneVerificationCountryCodePickerFragment;->hideKeyboard()V
+
+    .line 85
+    return-void
+.end method
+
 .method public final a(Ljava/lang/String;)V
     .locals 1
 
@@ -112,10 +124,10 @@
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     .line 97
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/PhoneVerificationCountryCodePickerFragment;->a(Landroid/os/Bundle;)V
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/PhoneVerificationCountryCodePickerFragment;->setResultData(Landroid/os/Bundle;)V
 
     .line 98
-    invoke-virtual {p0}, Lkik/android/chat/fragment/PhoneVerificationCountryCodePickerFragment;->D()V
+    invoke-virtual {p0}, Lkik/android/chat/fragment/PhoneVerificationCountryCodePickerFragment;->finish()V
 
     .line 99
     return-void
@@ -129,26 +141,10 @@
     if-nez p1, :cond_0
 
     .line 70
-    invoke-virtual {p0}, Lkik/android/chat/fragment/PhoneVerificationCountryCodePickerFragment;->ag()V
+    invoke-virtual {p0}, Lkik/android/chat/fragment/PhoneVerificationCountryCodePickerFragment;->hideKeyboard()V
 
     .line 72
     :cond_0
-    return-void
-.end method
-
-.method public final b()V
-    .locals 1
-
-    .prologue
-    .line 83
-    iget-object v0, p0, Lkik/android/chat/fragment/PhoneVerificationCountryCodePickerFragment;->a:Lkik/android/chat/presentation/bu;
-
-    invoke-interface {v0}, Lkik/android/chat/presentation/bu;->a()V
-
-    .line 84
-    invoke-virtual {p0}, Lkik/android/chat/fragment/PhoneVerificationCountryCodePickerFragment;->ag()V
-
-    .line 85
     return-void
 .end method
 
@@ -159,16 +155,11 @@
     .line 44
     invoke-super {p0, p1}, Lkik/android/chat/fragment/KikScopedDialogFragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 1088
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikFragmentBase;->getActivity()Landroid/support/v4/app/FragmentActivity;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lkik/android/util/s;->a(Landroid/app/Activity;)Lcom/kik/components/CoreComponent;
-
-    move-result-object v0
-
     .line 45
+    invoke-virtual {p0}, Lkik/android/chat/fragment/PhoneVerificationCountryCodePickerFragment;->getCoreComponent()Lcom/kik/components/CoreComponent;
+
+    move-result-object v0
+
     invoke-interface {v0, p0}, Lcom/kik/components/CoreComponent;->a(Lkik/android/chat/fragment/PhoneVerificationCountryCodePickerFragment;)V
 
     .line 46
@@ -182,14 +173,14 @@
     const/4 v4, 0x0
 
     .line 51
-    const v0, 0x7f04007f
+    const v0, 0x7f040087
 
     invoke-virtual {p1, v0, p2, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v0
 
     .line 52
-    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)V
+    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)Lbutterknife/Unbinder;
 
     .line 53
     new-instance v1, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter;
@@ -209,12 +200,12 @@
 
     invoke-direct {v2, v3}, Landroid/support/v7/widget/LinearLayoutManager;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v1, v2}, Landroid/support/v7/widget/RecyclerView;->a(Landroid/support/v7/widget/RecyclerView$LayoutManager;)V
+    invoke-virtual {v1, v2}, Landroid/support/v7/widget/RecyclerView;->setLayoutManager(Landroid/support/v7/widget/RecyclerView$LayoutManager;)V
 
     .line 55
     iget-object v1, p0, Lkik/android/chat/fragment/PhoneVerificationCountryCodePickerFragment;->_resultsList:Landroid/support/v7/widget/RecyclerView;
 
-    new-instance v2, Lkik/android/widget/bw;
+    new-instance v2, Lkik/android/widget/bm;
 
     invoke-virtual {p0}, Lkik/android/chat/fragment/PhoneVerificationCountryCodePickerFragment;->getContext()Landroid/content/Context;
 
@@ -228,28 +219,28 @@
 
     move-result v5
 
-    invoke-direct {v2, v3, v4, v5}, Lkik/android/widget/bw;-><init>(Landroid/content/Context;[II)V
+    invoke-direct {v2, v3, v4, v5}, Lkik/android/widget/bm;-><init>(Landroid/content/Context;[II)V
 
-    invoke-virtual {v1, v2}, Landroid/support/v7/widget/RecyclerView;->a(Landroid/support/v7/widget/RecyclerView$ItemDecoration;)V
+    invoke-virtual {v1, v2}, Landroid/support/v7/widget/RecyclerView;->addItemDecoration(Landroid/support/v7/widget/RecyclerView$ItemDecoration;)V
 
     .line 56
     iget-object v1, p0, Lkik/android/chat/fragment/PhoneVerificationCountryCodePickerFragment;->_resultsList:Landroid/support/v7/widget/RecyclerView;
 
     iget-object v2, p0, Lkik/android/chat/fragment/PhoneVerificationCountryCodePickerFragment;->c:Lcom/kik/view/adapters/CountryCodeRecyclerAdapter;
 
-    invoke-virtual {v1, v2}, Landroid/support/v7/widget/RecyclerView;->a(Landroid/support/v7/widget/RecyclerView$Adapter;)V
+    invoke-virtual {v1, v2}, Landroid/support/v7/widget/RecyclerView;->setAdapter(Landroid/support/v7/widget/RecyclerView$Adapter;)V
 
     .line 57
-    iget-object v1, p0, Lkik/android/chat/fragment/PhoneVerificationCountryCodePickerFragment;->a:Lkik/android/chat/presentation/bu;
+    iget-object v1, p0, Lkik/android/chat/fragment/PhoneVerificationCountryCodePickerFragment;->a:Lkik/android/chat/presentation/bn;
 
-    iget-object v2, p0, Lkik/android/chat/fragment/PhoneVerificationCountryCodePickerFragment;->_searchView:Lkik/android/chat/view/v;
+    iget-object v2, p0, Lkik/android/chat/fragment/PhoneVerificationCountryCodePickerFragment;->_searchView:Lkik/android/chat/view/ac;
 
-    invoke-interface {v1, v2}, Lkik/android/chat/presentation/bu;->a(Ljava/lang/Object;)V
+    invoke-interface {v1, v2}, Lkik/android/chat/presentation/bn;->a(Ljava/lang/Object;)V
 
     .line 58
-    iget-object v1, p0, Lkik/android/chat/fragment/PhoneVerificationCountryCodePickerFragment;->a:Lkik/android/chat/presentation/bu;
+    iget-object v1, p0, Lkik/android/chat/fragment/PhoneVerificationCountryCodePickerFragment;->a:Lkik/android/chat/presentation/bn;
 
-    invoke-interface {v1, p0}, Lkik/android/chat/presentation/bu;->a(Lkik/android/chat/presentation/bu$a;)V
+    invoke-interface {v1, p0}, Lkik/android/chat/presentation/bn;->a(Lkik/android/chat/presentation/bn$a;)V
 
     .line 60
     iget-object v1, p0, Lkik/android/chat/fragment/PhoneVerificationCountryCodePickerFragment;->b:Lcom/kik/android/Mixpanel;

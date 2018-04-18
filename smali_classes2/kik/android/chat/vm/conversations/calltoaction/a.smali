@@ -1,5 +1,5 @@
 .class public abstract Lkik/android/chat/vm/conversations/calltoaction/a;
-.super Lkik/android/chat/vm/c;
+.super Lkik/android/chat/vm/e;
 .source "SourceFile"
 
 # interfaces
@@ -24,7 +24,7 @@
 
     .prologue
     .line 25
-    invoke-direct {p0}, Lkik/android/chat/vm/c;-><init>()V
+    invoke-direct {p0}, Lkik/android/chat/vm/e;-><init>()V
 
     .line 26
     iput-object p1, p0, Lkik/android/chat/vm/conversations/calltoaction/a;->a:Lkik/android/chat/vm/conversations/calltoaction/a$a;

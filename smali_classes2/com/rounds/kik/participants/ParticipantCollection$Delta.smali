@@ -54,31 +54,31 @@
     .locals 1
 
     .prologue
-    .line 222
+    .line 202
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 223
+    .line 203
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/rounds/kik/participants/ParticipantCollection$Delta;->added:Ljava/util/Collection;
 
-    .line 224
+    .line 204
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/rounds/kik/participants/ParticipantCollection$Delta;->removed:Ljava/util/Collection;
 
-    .line 225
+    .line 205
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/rounds/kik/participants/ParticipantCollection$Delta;->changed:Ljava/util/Collection;
 
-    .line 226
+    .line 206
     return-void
 .end method
 
@@ -86,7 +86,7 @@
     .locals 0
 
     .prologue
-    .line 215
+    .line 195
     invoke-direct {p0}, Lcom/rounds/kik/participants/ParticipantCollection$Delta;-><init>()V
 
     return-void
@@ -98,7 +98,7 @@
     .locals 2
 
     .prologue
-    .line 235
+    .line 215
     iget-object v0, p0, Lcom/rounds/kik/participants/ParticipantCollection$Delta;->added:Ljava/util/Collection;
 
     invoke-interface {v0}, Ljava/util/Collection;->size()I
@@ -130,7 +130,7 @@
     .locals 1
 
     .prologue
-    .line 230
+    .line 210
     iget-object v0, p0, Lcom/rounds/kik/participants/ParticipantCollection$Delta;->added:Ljava/util/Collection;
 
     invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z

@@ -1,5 +1,5 @@
 .class public Lcom/kik/cards/web/PicardWebView;
-.super Lcom/kik/cards/web/g;
+.super Lcom/kik/cards/web/ExtendedWebView;
 .source "SourceFile"
 
 
@@ -17,7 +17,7 @@
 
 .field private d:Lcom/kik/cards/web/plugin/JavascriptGlue;
 
-.field private e:Lcom/kik/cards/web/plugin/g;
+.field private e:Lcom/kik/cards/web/plugin/f;
 
 .field private final f:Lcom/kik/events/e;
     .annotation system Ldalvik/annotation/Signature;
@@ -62,7 +62,7 @@
 
     move-object v6, v2
 
-    invoke-direct/range {v0 .. v6}, Lcom/kik/cards/web/PicardWebView;-><init>(Landroid/content/Context;Lcom/kik/cards/web/h;Lcom/kik/util/a;Lcom/kik/cards/web/m;Lkik/core/net/e;Lkik/core/interfaces/u;)V
+    invoke-direct/range {v0 .. v6}, Lcom/kik/cards/web/PicardWebView;-><init>(Landroid/content/Context;Lcom/kik/cards/web/g;Lcom/kik/util/a;Lcom/kik/cards/web/l;Lkik/core/net/e;Lkik/core/interfaces/s;)V
 
     .line 36
     return-void
@@ -79,12 +79,12 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/kik/cards/web/h;Lcom/kik/util/a;Lcom/kik/cards/web/m;Lkik/core/net/e;Lkik/core/interfaces/u;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/kik/cards/web/g;Lcom/kik/util/a;Lcom/kik/cards/web/l;Lkik/core/net/e;Lkik/core/interfaces/s;)V
     .locals 4
 
     .prologue
     .line 45
-    invoke-direct {p0, p1, p6}, Lcom/kik/cards/web/g;-><init>(Landroid/content/Context;Lkik/core/interfaces/u;)V
+    invoke-direct {p0, p1, p6}, Lcom/kik/cards/web/ExtendedWebView;-><init>(Landroid/content/Context;Lkik/core/interfaces/s;)V
 
     .line 21
     new-instance v0, Lcom/kik/events/g;
@@ -141,16 +141,16 @@
 
     .line 59
     :goto_0
-    new-instance v1, Lcom/kik/cards/web/plugin/g;
+    new-instance v1, Lcom/kik/cards/web/plugin/f;
 
-    invoke-direct {v1, p3, v0, p5}, Lcom/kik/cards/web/plugin/g;-><init>(Lcom/kik/util/a;Ljava/lang/String;Lkik/core/net/e;)V
+    invoke-direct {v1, p3, v0, p5}, Lcom/kik/cards/web/plugin/f;-><init>(Lcom/kik/util/a;Ljava/lang/String;Lkik/core/net/e;)V
 
-    iput-object v1, p0, Lcom/kik/cards/web/PicardWebView;->e:Lcom/kik/cards/web/plugin/g;
+    iput-object v1, p0, Lcom/kik/cards/web/PicardWebView;->e:Lcom/kik/cards/web/plugin/f;
 
     .line 60
-    iget-object v0, p0, Lcom/kik/cards/web/PicardWebView;->e:Lcom/kik/cards/web/plugin/g;
+    iget-object v0, p0, Lcom/kik/cards/web/PicardWebView;->e:Lcom/kik/cards/web/plugin/f;
 
-    invoke-static {p0, v0, p2, p4}, Lcom/kik/cards/web/plugin/JavascriptGlue;->a(Landroid/webkit/WebView;Lcom/kik/cards/web/plugin/g;Lcom/kik/cards/web/h;Lcom/kik/cards/web/m;)Lcom/kik/cards/web/plugin/JavascriptGlue;
+    invoke-static {p0, v0, p2, p4}, Lcom/kik/cards/web/plugin/JavascriptGlue;->a(Landroid/webkit/WebView;Lcom/kik/cards/web/plugin/f;Lcom/kik/cards/web/g;Lcom/kik/cards/web/l;)Lcom/kik/cards/web/plugin/JavascriptGlue;
 
     move-result-object v0
 
@@ -163,11 +163,11 @@
 
     iget-object v1, p0, Lcom/kik/cards/web/PicardWebView;->d:Lcom/kik/cards/web/plugin/JavascriptGlue;
 
-    invoke-virtual {v1}, Lcom/kik/cards/web/plugin/JavascriptGlue;->a()Lcom/kik/cards/web/n;
+    invoke-virtual {v1}, Lcom/kik/cards/web/plugin/JavascriptGlue;->a()Lcom/kik/cards/web/m;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/kik/cards/web/n;->a()Lcom/kik/events/c;
+    invoke-virtual {v1}, Lcom/kik/cards/web/m;->a()Lcom/kik/events/c;
 
     move-result-object v1
 
@@ -180,9 +180,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/kik/cards/web/PicardWebView;->e:Lcom/kik/cards/web/plugin/g;
+    iget-object v1, p0, Lcom/kik/cards/web/PicardWebView;->e:Lcom/kik/cards/web/plugin/f;
 
-    invoke-virtual {v1}, Lcom/kik/cards/web/plugin/g;->a()Lcom/kik/events/c;
+    invoke-virtual {v1}, Lcom/kik/cards/web/plugin/f;->a()Lcom/kik/events/c;
 
     move-result-object v1
 
@@ -216,7 +216,7 @@
     invoke-virtual {p0}, Lcom/kik/cards/web/PicardWebView;->v()V
 
     .line 120
-    invoke-super {p0}, Lcom/kik/cards/web/g;->destroy()V
+    invoke-super {p0}, Lcom/kik/cards/web/ExtendedWebView;->destroy()V
 
     .line 121
     return-void
@@ -245,12 +245,12 @@
     return-object v0
 .end method
 
-.method public final s()Lcom/kik/cards/web/plugin/g;
+.method public final s()Lcom/kik/cards/web/plugin/f;
     .locals 1
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/kik/cards/web/PicardWebView;->e:Lcom/kik/cards/web/plugin/g;
+    iget-object v0, p0, Lcom/kik/cards/web/PicardWebView;->e:Lcom/kik/cards/web/plugin/f;
 
     return-object v0
 .end method
@@ -271,11 +271,11 @@
     .line 88
     iget-object v0, p0, Lcom/kik/cards/web/PicardWebView;->d:Lcom/kik/cards/web/plugin/JavascriptGlue;
 
-    invoke-virtual {v0}, Lcom/kik/cards/web/plugin/JavascriptGlue;->a()Lcom/kik/cards/web/n;
+    invoke-virtual {v0}, Lcom/kik/cards/web/plugin/JavascriptGlue;->a()Lcom/kik/cards/web/m;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/kik/cards/web/n;->c()Lcom/kik/events/c;
+    invoke-virtual {v0}, Lcom/kik/cards/web/m;->c()Lcom/kik/events/c;
 
     move-result-object v0
 
@@ -298,11 +298,11 @@
     .line 93
     iget-object v0, p0, Lcom/kik/cards/web/PicardWebView;->d:Lcom/kik/cards/web/plugin/JavascriptGlue;
 
-    invoke-virtual {v0}, Lcom/kik/cards/web/plugin/JavascriptGlue;->a()Lcom/kik/cards/web/n;
+    invoke-virtual {v0}, Lcom/kik/cards/web/plugin/JavascriptGlue;->a()Lcom/kik/cards/web/m;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/kik/cards/web/n;->b()Lcom/kik/events/c;
+    invoke-virtual {v0}, Lcom/kik/cards/web/m;->b()Lcom/kik/events/c;
 
     move-result-object v0
 
@@ -330,17 +330,17 @@
 
     .line 103
     :cond_0
-    iget-object v0, p0, Lcom/kik/cards/web/PicardWebView;->e:Lcom/kik/cards/web/plugin/g;
+    iget-object v0, p0, Lcom/kik/cards/web/PicardWebView;->e:Lcom/kik/cards/web/plugin/f;
 
     if-eqz v0, :cond_1
 
     .line 104
-    iget-object v0, p0, Lcom/kik/cards/web/PicardWebView;->e:Lcom/kik/cards/web/plugin/g;
+    iget-object v0, p0, Lcom/kik/cards/web/PicardWebView;->e:Lcom/kik/cards/web/plugin/f;
 
-    invoke-virtual {v0}, Lcom/kik/cards/web/plugin/g;->c()V
+    invoke-virtual {v0}, Lcom/kik/cards/web/plugin/f;->c()V
 
     .line 105
-    iput-object v1, p0, Lcom/kik/cards/web/PicardWebView;->e:Lcom/kik/cards/web/plugin/g;
+    iput-object v1, p0, Lcom/kik/cards/web/PicardWebView;->e:Lcom/kik/cards/web/plugin/f;
 
     .line 107
     :cond_1
@@ -352,9 +352,9 @@
 
     .prologue
     .line 111
-    iget-object v0, p0, Lcom/kik/cards/web/PicardWebView;->e:Lcom/kik/cards/web/plugin/g;
+    iget-object v0, p0, Lcom/kik/cards/web/PicardWebView;->e:Lcom/kik/cards/web/plugin/f;
 
-    invoke-virtual {v0}, Lcom/kik/cards/web/plugin/g;->b()Z
+    invoke-virtual {v0}, Lcom/kik/cards/web/plugin/f;->b()Z
 
     move-result v0
 

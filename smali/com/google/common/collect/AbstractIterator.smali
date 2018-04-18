@@ -1,12 +1,11 @@
 .class public abstract Lcom/google/common/collect/AbstractIterator;
-.super Lcom/google/common/collect/x;
+.super Lcom/google/common/collect/s;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/google/common/collect/AbstractIterator$1;,
         Lcom/google/common/collect/AbstractIterator$State;
     }
 .end annotation
@@ -16,7 +15,7 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lcom/google/common/collect/x",
+        "Lcom/google/common/collect/s",
         "<TT;>;"
     }
 .end annotation
@@ -40,7 +39,7 @@
 
     .prologue
     .line 68
-    invoke-direct {p0}, Lcom/google/common/collect/x;-><init>()V
+    invoke-direct {p0}, Lcom/google/common/collect/s;-><init>()V
 
     .line 65
     sget-object v0, Lcom/google/common/collect/AbstractIterator$State;->NOT_READY:Lcom/google/common/collect/AbstractIterator$State;
@@ -63,6 +62,9 @@
 
 .method protected final b()Ljava/lang/Object;
     .locals 1
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TT;"
@@ -70,12 +72,12 @@
     .end annotation
 
     .prologue
-    .line 124
+    .line 125
     sget-object v0, Lcom/google/common/collect/AbstractIterator$State;->DONE:Lcom/google/common/collect/AbstractIterator$State;
 
     iput-object v0, p0, Lcom/google/common/collect/AbstractIterator;->a:Lcom/google/common/collect/AbstractIterator$State;
 
-    .line 125
+    .line 126
     const/4 v0, 0x0
 
     return-object v0
@@ -83,13 +85,15 @@
 
 .method public final hasNext()Z
     .locals 4
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
 
     .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 130
+    .line 132
     iget-object v0, p0, Lcom/google/common/collect/AbstractIterator;->a:Lcom/google/common/collect/AbstractIterator$State;
 
     sget-object v3, Lcom/google/common/collect/AbstractIterator$State;->FAILED:Lcom/google/common/collect/AbstractIterator$State;
@@ -99,9 +103,9 @@
     move v0, v1
 
     :goto_0
-    invoke-static {v0}, Lcom/google/common/base/h;->b(Z)V
+    invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
-    .line 131
+    .line 133
     sget-object v0, Lcom/google/common/collect/AbstractIterator$1;->a:[I
 
     iget-object v3, p0, Lcom/google/common/collect/AbstractIterator;->a:Lcom/google/common/collect/AbstractIterator$State;
@@ -114,33 +118,33 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1142
+    .line 1144
     sget-object v0, Lcom/google/common/collect/AbstractIterator$State;->FAILED:Lcom/google/common/collect/AbstractIterator$State;
 
     iput-object v0, p0, Lcom/google/common/collect/AbstractIterator;->a:Lcom/google/common/collect/AbstractIterator$State;
 
-    .line 1143
+    .line 1145
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractIterator;->a()Ljava/lang/Object;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/common/collect/AbstractIterator;->b:Ljava/lang/Object;
 
-    .line 1144
+    .line 1146
     iget-object v0, p0, Lcom/google/common/collect/AbstractIterator;->a:Lcom/google/common/collect/AbstractIterator$State;
 
     sget-object v3, Lcom/google/common/collect/AbstractIterator$State;->DONE:Lcom/google/common/collect/AbstractIterator$State;
 
     if-eq v0, v3, :cond_0
 
-    .line 1145
+    .line 1147
     sget-object v0, Lcom/google/common/collect/AbstractIterator$State;->READY:Lcom/google/common/collect/AbstractIterator$State;
 
     iput-object v0, p0, Lcom/google/common/collect/AbstractIterator;->a:Lcom/google/common/collect/AbstractIterator$State;
 
     move v2, v1
 
-    .line 1146
+    .line 1148
     :cond_0
     :goto_1
     :pswitch_0
@@ -149,16 +153,16 @@
     :cond_1
     move v0, v2
 
-    .line 130
+    .line 132
     goto :goto_0
 
     :pswitch_1
     move v2, v1
 
-    .line 135
+    .line 137
     goto :goto_1
 
-    .line 131
+    .line 133
     nop
 
     :pswitch_data_0
@@ -170,6 +174,9 @@
 
 .method public final next()Ljava/lang/Object;
     .locals 2
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TT;"
@@ -177,34 +184,34 @@
     .end annotation
 
     .prologue
-    .line 153
+    .line 156
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractIterator;->hasNext()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 154
+    .line 157
     new-instance v0, Ljava/util/NoSuchElementException;
 
     invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
     throw v0
 
-    .line 156
+    .line 159
     :cond_0
     sget-object v0, Lcom/google/common/collect/AbstractIterator$State;->NOT_READY:Lcom/google/common/collect/AbstractIterator$State;
 
     iput-object v0, p0, Lcom/google/common/collect/AbstractIterator;->a:Lcom/google/common/collect/AbstractIterator$State;
 
-    .line 157
+    .line 160
     iget-object v0, p0, Lcom/google/common/collect/AbstractIterator;->b:Ljava/lang/Object;
 
-    .line 158
+    .line 161
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/google/common/collect/AbstractIterator;->b:Ljava/lang/Object;
 
-    .line 159
+    .line 162
     return-object v0
 .end method

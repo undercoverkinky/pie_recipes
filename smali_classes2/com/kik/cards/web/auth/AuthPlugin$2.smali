@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/kik/events/q;
+.implements Lcom/kik/events/p;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/kik/cards/web/auth/AuthPlugin;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/kik/cards/web/auth/AuthPlugin;->getCardAnonymousPublicKey(Ljava/lang/String;)Lcom/kik/events/Promise;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/kik/events/q",
+        "Lcom/kik/events/p",
         "<[B[B>;"
     }
 .end annotation
@@ -114,7 +114,7 @@
     .line 109
     iget-object v1, p0, Lcom/kik/cards/web/auth/AuthPlugin$2;->b:Lcom/kik/cards/web/auth/AuthPlugin;
 
-    invoke-static {v1}, Lcom/kik/cards/web/auth/AuthPlugin;->a(Lcom/kik/cards/web/auth/AuthPlugin;)Lkik/android/b/g;
+    invoke-static {v1}, Lcom/kik/cards/web/auth/AuthPlugin;->access$000(Lcom/kik/cards/web/auth/AuthPlugin;)Lkik/android/b/g;
 
     move-result-object v1
 
@@ -150,11 +150,8 @@
 
     throw v1
 
-    .line 119
-    :cond_2
-    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
-
     .line 122
+    :cond_2
     const/4 p1, 0x0
 
     goto :goto_0

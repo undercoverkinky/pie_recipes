@@ -2,20 +2,12 @@
 .super Ljava/lang/Object;
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/google/android/gms/internal/zzb$zza;
-    }
-.end annotation
-
-
 # virtual methods
 .method public abstract initialize()V
 .end method
 
-.method public abstract zza(Ljava/lang/String;)Lcom/google/android/gms/internal/zzb$zza;
+.method public abstract zza(Ljava/lang/String;)Lcom/google/android/gms/internal/zzc;
 .end method
 
-.method public abstract zza(Ljava/lang/String;Lcom/google/android/gms/internal/zzb$zza;)V
+.method public abstract zza(Ljava/lang/String;Lcom/google/android/gms/internal/zzc;)V
 .end method

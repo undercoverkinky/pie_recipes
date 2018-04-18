@@ -43,11 +43,11 @@
     .line 80
     iget-object v0, p0, Lcom/kik/cards/web/iap/b$1;->a:Lcom/kik/cards/web/iap/b;
 
-    invoke-static {p2}, Lcom/android/b/a/a$a;->a(Landroid/os/IBinder;)Lcom/android/b/a/a;
+    invoke-static {p2}, Lcom/android/a/a/a$a;->a(Landroid/os/IBinder;)Lcom/android/a/a/a;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/kik/cards/web/iap/b;->a(Lcom/kik/cards/web/iap/b;Lcom/android/b/a/a;)Lcom/android/b/a/a;
+    invoke-static {v0, v1}, Lcom/kik/cards/web/iap/b;->a(Lcom/kik/cards/web/iap/b;Lcom/android/a/a/a;)Lcom/android/a/a/a;
 
     .line 81
     iget-object v0, p0, Lcom/kik/cards/web/iap/b$1;->a:Lcom/kik/cards/web/iap/b;
@@ -67,7 +67,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/kik/cards/web/iap/b;->a(Lcom/kik/cards/web/iap/b;Lcom/android/b/a/a;)Lcom/android/b/a/a;
+    invoke-static {v0, v1}, Lcom/kik/cards/web/iap/b;->a(Lcom/kik/cards/web/iap/b;Lcom/android/a/a/a;)Lcom/android/a/a/a;
 
     .line 74
     return-void

@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic a:Landroid/app/AlertDialog;
+.field final synthetic a:Landroid/support/v7/app/AlertDialog;
 
 .field final synthetic b:Lkik/android/chat/activity/KikIqActivityBase;
 
 
 # direct methods
-.method constructor <init>(Lkik/android/chat/activity/KikIqActivityBase;Landroid/app/AlertDialog;)V
+.method constructor <init>(Lkik/android/chat/activity/KikIqActivityBase;Landroid/support/v7/app/AlertDialog;)V
     .locals 0
 
     .prologue
-    .line 111
+    .line 113
     iput-object p1, p0, Lkik/android/chat/activity/KikIqActivityBase$1;->b:Lkik/android/chat/activity/KikIqActivityBase;
 
-    iput-object p2, p0, Lkik/android/chat/activity/KikIqActivityBase$1;->a:Landroid/app/AlertDialog;
+    iput-object p2, p0, Lkik/android/chat/activity/KikIqActivityBase$1;->a:Landroid/support/v7/app/AlertDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,11 +44,11 @@
     .locals 1
 
     .prologue
-    .line 115
-    iget-object v0, p0, Lkik/android/chat/activity/KikIqActivityBase$1;->a:Landroid/app/AlertDialog;
+    .line 117
+    iget-object v0, p0, Lkik/android/chat/activity/KikIqActivityBase$1;->a:Landroid/support/v7/app/AlertDialog;
 
-    invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
+    invoke-virtual {v0}, Landroid/support/v7/app/AlertDialog;->dismiss()V
 
-    .line 116
+    .line 118
     return-void
 .end method

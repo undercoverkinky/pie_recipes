@@ -1,9 +1,9 @@
-.class public Lcom/google/android/gms/iid/zza;
+.class public final Lcom/google/android/gms/iid/zza;
 .super Ljava/lang/Object;
 
 
 # direct methods
-.method public static zzCc()Ljava/security/KeyPair;
+.method public static zzaso()Ljava/security/KeyPair;
     .locals 2
 
     :try_start_0

@@ -142,8 +142,10 @@
 
     invoke-interface {v1, v2, v3}, Lcom/kik/cards/web/advertising/b;->a(Ljava/lang/String;Z)V
 
+    .line 47
     throw v0
 
+    .line 46
     :catch_1
     move-exception v0
 

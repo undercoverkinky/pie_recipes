@@ -53,19 +53,19 @@
 
     aput-object v1, v0, v2
 
-    invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->g([Landroid/view/View;)V
 
     .line 36
     iget-object v0, p0, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment$1;->a:Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;
 
-    iget-boolean v0, v0, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->n:Z
+    iget-boolean v0, v0, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->m:Z
 
     if-eqz v0, :cond_0
 
     .line 37
     iget-object v0, p0, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment$1;->a:Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->d()Z
+    invoke-virtual {v0}, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->c()Z
 
     .line 43
     :goto_0
@@ -81,12 +81,12 @@
 
     aput-object v1, v0, v2
 
-    invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->d([Landroid/view/View;)V
 
     .line 41
     iget-object v0, p0, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment$1;->a:Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->O()V
+    invoke-virtual {v0}, Lkik/android/chat/fragment/AutoplayVideoMediaItemFragment;->s()V
 
     goto :goto_0
 .end method

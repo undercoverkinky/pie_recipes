@@ -19,10 +19,10 @@
 
 
 # instance fields
-.field private final a:Lio/fabric/sdk/android/services/a/b;
+.field private final a:Lio/fabric/sdk/android/services/cache/MemoryValueCache;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/fabric/sdk/android/services/a/b",
+            "Lio/fabric/sdk/android/services/cache/MemoryValueCache",
             "<",
             "Ljava/lang/String;",
             ">;"
@@ -44,11 +44,11 @@
     invoke-direct {p0}, Lio/fabric/sdk/android/h;-><init>()V
 
     .line 39
-    new-instance v0, Lio/fabric/sdk/android/services/a/b;
+    new-instance v0, Lio/fabric/sdk/android/services/cache/MemoryValueCache;
 
-    invoke-direct {v0}, Lio/fabric/sdk/android/services/a/b;-><init>()V
+    invoke-direct {v0}, Lio/fabric/sdk/android/services/cache/MemoryValueCache;-><init>()V
 
-    iput-object v0, p0, Lcom/crashlytics/android/a/c;->a:Lio/fabric/sdk/android/services/a/b;
+    iput-object v0, p0, Lcom/crashlytics/android/a/c;->a:Lio/fabric/sdk/android/services/cache/MemoryValueCache;
 
     .line 40
     new-instance v0, Lcom/crashlytics/android/a/h;
@@ -69,11 +69,11 @@
     .line 143
     .line 146
     :try_start_0
-    iget-object v0, p0, Lcom/crashlytics/android/a/c;->a:Lio/fabric/sdk/android/services/a/b;
+    iget-object v0, p0, Lcom/crashlytics/android/a/c;->a:Lio/fabric/sdk/android/services/cache/MemoryValueCache;
 
     iget-object v2, p0, Lcom/crashlytics/android/a/c;->b:Lcom/crashlytics/android/a/h;
 
-    invoke-virtual {v0, p1, v2}, Lio/fabric/sdk/android/services/a/b;->a(Landroid/content/Context;Lio/fabric/sdk/android/services/a/d;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, v2}, Lio/fabric/sdk/android/services/cache/MemoryValueCache;->get(Landroid/content/Context;Lio/fabric/sdk/android/services/cache/a;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -437,12 +437,74 @@
 
     .prologue
     .line 133
-    const-string v0, "1.2.3.167"
+    const-string v0, "1.2.7.19"
 
     return-object v0
 .end method
 
-.method protected final a_()Z
+.method public final b()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 128
+    const-string v0, "com.crashlytics.sdk.android:beta"
+
+    return-object v0
+.end method
+
+.method public final c()Ljava/util/Map;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map",
+            "<",
+            "Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 113
+    invoke-virtual {p0}, Lcom/crashlytics/android/a/c;->l()Lio/fabric/sdk/android/services/common/IdManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lio/fabric/sdk/android/services/common/IdManager;->h()Ljava/lang/String;
+
+    .line 114
+    invoke-virtual {p0}, Lcom/crashlytics/android/a/c;->m()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lcom/crashlytics/android/a/c;->a(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 116
+    new-instance v1, Ljava/util/HashMap;
+
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+
+    .line 119
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    .line 120
+    sget-object v2, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;->FONT_TOKEN:Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
+
+    invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 123
+    :cond_0
+    return-object v1
+.end method
+
+.method protected final c_()Z
     .locals 3
     .annotation build Landroid/annotation/TargetApi;
         value = 0xe
@@ -450,7 +512,7 @@
 
     .prologue
     .line 53
-    invoke-virtual {p0}, Lcom/crashlytics/android/a/c;->o()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/crashlytics/android/a/c;->m()Landroid/content/Context;
 
     move-result-object v0
 
@@ -464,8 +526,8 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 1101
-    invoke-virtual {p0}, Lcom/crashlytics/android/a/c;->p()Lio/fabric/sdk/android/c;
+    .line 1102
+    invoke-virtual {p0}, Lcom/crashlytics/android/a/c;->n()Lio/fabric/sdk/android/c;
 
     move-result-object v0
 
@@ -474,7 +536,7 @@
     move-result-object v1
 
     .line 1103
-    invoke-virtual {p0}, Lcom/crashlytics/android/a/c;->p()Lio/fabric/sdk/android/c;
+    invoke-virtual {p0}, Lcom/crashlytics/android/a/c;->n()Lio/fabric/sdk/android/c;
 
     move-result-object v0
 
@@ -505,68 +567,6 @@
     goto :goto_0
 .end method
 
-.method public final b()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 128
-    const-string v0, "com.crashlytics.sdk.android:beta"
-
-    return-object v0
-.end method
-
-.method public final c()Ljava/util/Map;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Map",
-            "<",
-            "Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 113
-    invoke-virtual {p0}, Lcom/crashlytics/android/a/c;->n()Lio/fabric/sdk/android/services/common/IdManager;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lio/fabric/sdk/android/services/common/IdManager;->i()Ljava/lang/String;
-
-    .line 114
-    invoke-virtual {p0}, Lcom/crashlytics/android/a/c;->o()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Lcom/crashlytics/android/a/c;->a(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 116
-    new-instance v1, Ljava/util/HashMap;
-
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
-
-    .line 119
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    .line 120
-    sget-object v2, Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;->FONT_TOKEN:Lio/fabric/sdk/android/services/common/IdManager$DeviceIdentifierType;
-
-    invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 123
-    :cond_0
-    return-object v1
-.end method
-
 .method protected final synthetic e()Ljava/lang/Object;
     .locals 10
 
@@ -580,17 +580,17 @@
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     .line 3062
-    invoke-virtual {p0}, Lcom/crashlytics/android/a/c;->o()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/crashlytics/android/a/c;->m()Landroid/content/Context;
 
     move-result-object v1
 
     .line 3063
-    invoke-virtual {p0}, Lcom/crashlytics/android/a/c;->n()Lio/fabric/sdk/android/services/common/IdManager;
+    invoke-virtual {p0}, Lcom/crashlytics/android/a/c;->l()Lio/fabric/sdk/android/services/common/IdManager;
 
     move-result-object v3
 
     .line 3064
-    invoke-virtual {v3}, Lio/fabric/sdk/android/services/common/IdManager;->i()Ljava/lang/String;
+    invoke-virtual {v3}, Lio/fabric/sdk/android/services/common/IdManager;->h()Ljava/lang/String;
 
     .line 3065
     invoke-direct {p0, v1}, Lcom/crashlytics/android/a/c;->a(Landroid/content/Context;)Ljava/lang/String;
@@ -620,11 +620,11 @@
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     .line 3158
-    invoke-static {}, Lio/fabric/sdk/android/services/settings/q;->a()Lio/fabric/sdk/android/services/settings/q;
+    invoke-static {}, Lio/fabric/sdk/android/services/settings/p;->a()Lio/fabric/sdk/android/services/settings/p;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lio/fabric/sdk/android/services/settings/q;->b()Lio/fabric/sdk/android/services/settings/s;
+    invoke-virtual {v2}, Lio/fabric/sdk/android/services/settings/p;->b()Lio/fabric/sdk/android/services/settings/r;
 
     move-result-object v2
 
@@ -632,7 +632,7 @@
     if-eqz v2, :cond_3
 
     .line 3161
-    iget-object v4, v2, Lio/fabric/sdk/android/services/settings/s;->f:Lio/fabric/sdk/android/services/settings/f;
+    iget-object v4, v2, Lio/fabric/sdk/android/services/settings/r;->f:Lio/fabric/sdk/android/services/settings/f;
 
     .line 3075
     :goto_1
@@ -645,6 +645,7 @@
 
     iget-object v2, v4, Lio/fabric/sdk/android/services/settings/f;->a:Ljava/lang/String;
 
+    .line 4138
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -662,16 +663,17 @@
     .line 3078
     iget-object v0, p0, Lcom/crashlytics/android/a/c;->c:Lcom/crashlytics/android/a/j;
 
-    new-instance v6, Lio/fabric/sdk/android/services/c/d;
+    new-instance v6, Lio/fabric/sdk/android/services/b/d;
 
-    invoke-direct {v6, p0}, Lio/fabric/sdk/android/services/c/d;-><init>(Lio/fabric/sdk/android/h;)V
+    invoke-direct {v6, p0}, Lio/fabric/sdk/android/services/b/d;-><init>(Lio/fabric/sdk/android/h;)V
 
-    new-instance v7, Lio/fabric/sdk/android/services/common/p;
+    new-instance v7, Lio/fabric/sdk/android/services/common/q;
 
-    invoke-direct {v7}, Lio/fabric/sdk/android/services/common/p;-><init>()V
+    invoke-direct {v7}, Lio/fabric/sdk/android/services/common/q;-><init>()V
 
     new-instance v8, Lio/fabric/sdk/android/services/network/b;
 
+    .line 3086
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
     move-result-object v2
@@ -680,7 +682,8 @@
 
     move-object v2, p0
 
-    invoke-interface/range {v0 .. v8}, Lcom/crashlytics/android/a/j;->a(Landroid/content/Context;Lcom/crashlytics/android/a/c;Lio/fabric/sdk/android/services/common/IdManager;Lio/fabric/sdk/android/services/settings/f;Lcom/crashlytics/android/a/d;Lio/fabric/sdk/android/services/c/c;Lio/fabric/sdk/android/services/common/j;Lio/fabric/sdk/android/services/network/c;)V
+    .line 3078
+    invoke-interface/range {v0 .. v8}, Lcom/crashlytics/android/a/j;->a(Landroid/content/Context;Lcom/crashlytics/android/a/c;Lio/fabric/sdk/android/services/common/IdManager;Lio/fabric/sdk/android/services/settings/f;Lcom/crashlytics/android/a/d;Lio/fabric/sdk/android/services/b/c;Lio/fabric/sdk/android/services/common/j;Lio/fabric/sdk/android/services/network/c;)V
 
     .line 3089
     :cond_2

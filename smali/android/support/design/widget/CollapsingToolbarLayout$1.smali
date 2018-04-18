@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 184
+    .line 224
     iput-object p1, p0, Landroid/support/design/widget/CollapsingToolbarLayout$1;->a:Landroid/support/design/widget/CollapsingToolbarLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,23 +37,46 @@
 
 # virtual methods
 .method public onApplyWindowInsets(Landroid/view/View;Landroid/support/v4/view/WindowInsetsCompat;)Landroid/support/v4/view/WindowInsetsCompat;
-    .locals 1
+    .locals 3
 
     .prologue
-    .line 188
-    iget-object v0, p0, Landroid/support/design/widget/CollapsingToolbarLayout$1;->a:Landroid/support/design/widget/CollapsingToolbarLayout;
+    .line 228
+    iget-object v1, p0, Landroid/support/design/widget/CollapsingToolbarLayout$1;->a:Landroid/support/design/widget/CollapsingToolbarLayout;
 
-    invoke-static {v0, p2}, Landroid/support/design/widget/CollapsingToolbarLayout;->a(Landroid/support/design/widget/CollapsingToolbarLayout;Landroid/support/v4/view/WindowInsetsCompat;)Landroid/support/v4/view/WindowInsetsCompat;
+    .line 1265
+    const/4 v0, 0x0
 
-    .line 189
-    iget-object v0, p0, Landroid/support/design/widget/CollapsingToolbarLayout$1;->a:Landroid/support/design/widget/CollapsingToolbarLayout;
+    .line 1267
+    invoke-static {v1}, Landroid/support/v4/view/ViewCompat;->getFitsSystemWindows(Landroid/view/View;)Z
 
-    invoke-virtual {v0}, Landroid/support/design/widget/CollapsingToolbarLayout;->requestLayout()V
+    move-result v2
 
-    .line 190
+    if-eqz v2, :cond_0
+
+    move-object v0, p2
+
+    .line 1273
+    :cond_0
+    iget-object v2, v1, Landroid/support/design/widget/CollapsingToolbarLayout;->d:Landroid/support/v4/view/WindowInsetsCompat;
+
+    invoke-static {v2, v0}, Landroid/support/design/widget/ViewUtils;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    .line 1274
+    iput-object v0, v1, Landroid/support/design/widget/CollapsingToolbarLayout;->d:Landroid/support/v4/view/WindowInsetsCompat;
+
+    .line 1275
+    invoke-virtual {v1}, Landroid/support/design/widget/CollapsingToolbarLayout;->requestLayout()V
+
+    .line 1280
+    :cond_1
     invoke-virtual {p2}, Landroid/support/v4/view/WindowInsetsCompat;->consumeSystemWindowInsets()Landroid/support/v4/view/WindowInsetsCompat;
 
     move-result-object v0
 
+    .line 228
     return-object v0
 .end method

@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 1244
+    .line 1279
     invoke-direct {p0}, Lcom/kik/ui/fragment/FragmentBase$FragmentBundle;-><init>()V
 
     return-void
@@ -29,14 +29,14 @@
     .locals 2
 
     .prologue
-    .line 1244
-    .line 2256
+    .line 1279
+    .line 2291
     const-string v0, "KikContactsListFragment.EXTRA_DEPENDENT_PROMISE"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikContactsListFragment$a;->n(Ljava/lang/String;)J
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikContactsListFragment$a;->i(Ljava/lang/String;)J
 
     move-result-wide v0
 
-    .line 1244
+    .line 1279
     return-wide v0
 .end method

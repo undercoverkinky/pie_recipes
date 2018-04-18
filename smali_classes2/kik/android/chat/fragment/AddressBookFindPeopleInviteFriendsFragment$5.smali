@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$5;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
         "Ljava/lang/Boolean;",
         ">;"
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 476
+    .line 478
     iput-object p1, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$5;->a:Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -46,10 +46,10 @@
     .locals 2
 
     .prologue
-    .line 476
+    .line 478
     check-cast p1, Ljava/lang/Boolean;
 
-    .line 1481
+    .line 1483
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -58,7 +58,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1485
+    .line 1487
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$5;->a:Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->b:Lcom/kik/android/Mixpanel;
@@ -69,32 +69,32 @@
 
     move-result-object v0
 
-    .line 1486
+    .line 1488
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 1487
+    .line 1489
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 1488
+    .line 1490
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$5;->a:Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;
 
-    invoke-static {v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->d(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;)V
+    invoke-static {v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->e(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;)V
 
     :goto_0
     return-void
 
-    .line 1491
+    .line 1493
     :cond_0
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$5;->a:Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;
 
-    invoke-static {v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->c(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;)V
+    invoke-static {v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->d(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;)V
 
-    .line 1492
+    .line 1494
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$5;->a:Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;
 
-    invoke-static {v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->e(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;)V
+    invoke-static {v0}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->f(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;)V
 
     goto :goto_0
 .end method
@@ -103,15 +103,15 @@
     .locals 2
 
     .prologue
-    .line 499
+    .line 501
     iget-object v0, p0, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$5;->a:Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;
 
     invoke-static {p0}, Lkik/android/chat/fragment/d;->a(Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment$5;)Ljava/lang/Runnable;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->b(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/AddressBookFindPeopleInviteFriendsFragment;->runOnUiIfAttached(Ljava/lang/Runnable;)V
 
-    .line 500
+    .line 502
     return-void
 .end method

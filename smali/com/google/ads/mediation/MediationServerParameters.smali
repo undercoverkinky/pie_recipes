@@ -1,4 +1,4 @@
-.class public abstract Lcom/google/ads/mediation/MediationServerParameters;
+.class public Lcom/google/ads/mediation/MediationServerParameters;
 .super Ljava/lang/Object;
 
 
@@ -26,7 +26,7 @@
 
 # virtual methods
 .method public final a(Ljava/util/Map;)V
-    .locals 7
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -99,7 +99,7 @@
 
     const-string v0, "No server options fields detected. To suppress this message either add a field with the @Parameter annotation, or override the load() method."
 
-    invoke-static {v0}, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzaW(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzaji;->zzcs(Ljava/lang/String;)V
 
     :cond_2
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -156,23 +156,23 @@
 
     check-cast v0, Ljava/lang/String;
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v1
 
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    move-result v4
+    move-result v1
 
-    add-int/lit8 v4, v4, 0x31
+    add-int/lit8 v1, v1, 0x31
 
-    invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(I)V
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    const-string v4, "Server option \""
+    invoke-direct {v4, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "Server option \""
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -190,7 +190,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzaW(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzaji;->zzcs(Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -203,23 +203,23 @@
 
     check-cast v0, Ljava/lang/String;
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v1
 
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    move-result v4
+    move-result v1
 
-    add-int/lit8 v4, v4, 0x2b
+    add-int/lit8 v1, v1, 0x2b
 
-    invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(I)V
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    const-string v4, "Server option \""
+    invoke-direct {v4, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "Server option \""
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -237,7 +237,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzaW(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzaji;->zzcs(Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -254,9 +254,17 @@
 
     check-cast v0, Ljava/lang/String;
 
-    new-instance v4, Ljava/lang/StringBuilder;
-
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
+
+    move-result v4
+
+    add-int/lit8 v4, v4, 0x1f
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -264,23 +272,15 @@
 
     move-result v5
 
-    add-int/lit8 v5, v5, 0x1f
+    add-int/2addr v4, v5
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    invoke-direct {v5, v4}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    invoke-virtual {v6}, Ljava/lang/String;->length()I
+    const-string v4, "Unexpected server option: "
 
-    move-result v6
-
-    add-int/2addr v5, v6
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v5, "Unexpected server option: "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
@@ -308,7 +308,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzaU(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzaji;->zzcb(Ljava/lang/String;)V
 
     goto/16 :goto_1
 
@@ -382,7 +382,7 @@
     move-result-object v1
 
     :goto_3
-    invoke-static {v1}, Lcom/google/android/gms/ads/internal/util/client/zzb;->zzaW(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/google/android/gms/internal/zzaji;->zzcs(Ljava/lang/String;)V
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
 

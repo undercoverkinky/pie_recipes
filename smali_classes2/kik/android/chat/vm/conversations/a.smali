@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/android/chat/vm/conversations/c;
+.implements Lkik/android/chat/vm/conversations/d;
 
 
 # direct methods

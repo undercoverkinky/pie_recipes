@@ -1,108 +1,65 @@
-.class public abstract Lcom/kik/cache/z;
-.super Lcom/kik/cache/y;
-.source "SourceFile"
+.class final synthetic Lcom/kik/cache/z;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lrx/functions/g;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Lcom/kik/cache/y",
-        "<TT;>;"
-    }
-.end annotation
+# instance fields
+.field private final a:Lcom/kik/cache/y;
+
+.field private final b:I
+
+.field private final c:I
+
+.field private final d:Landroid/graphics/Bitmap;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Ljava/lang/String;Lcom/android/volley/i$b;IILandroid/graphics/Bitmap$Config;Lcom/android/volley/i$a;)V
+.method private constructor <init>(Lcom/kik/cache/y;IILandroid/graphics/Bitmap;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;",
-            "Ljava/lang/String;",
-            "Lcom/android/volley/i$b;",
-            "II",
-            "Landroid/graphics/Bitmap$Config;",
-            "Lcom/android/volley/i$a;",
-            ")V"
-        }
-    .end annotation
 
-    .prologue
-    .line 16
-    invoke-direct/range {p0 .. p7}, Lcom/kik/cache/y;-><init>(Ljava/lang/Object;Ljava/lang/String;Lcom/android/volley/i$b;IILandroid/graphics/Bitmap$Config;Lcom/android/volley/i$a;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 17
+    iput-object p1, p0, Lcom/kik/cache/z;->a:Lcom/kik/cache/y;
+
+    iput p2, p0, Lcom/kik/cache/z;->b:I
+
+    iput p3, p0, Lcom/kik/cache/z;->c:I
+
+    iput-object p4, p0, Lcom/kik/cache/z;->d:Landroid/graphics/Bitmap;
+
     return-void
+.end method
+
+.method public static a(Lcom/kik/cache/y;IILandroid/graphics/Bitmap;)Lrx/functions/g;
+    .locals 1
+
+    new-instance v0, Lcom/kik/cache/z;
+
+    invoke-direct {v0, p0, p1, p2, p3}, Lcom/kik/cache/z;-><init>(Lcom/kik/cache/y;IILandroid/graphics/Bitmap;)V
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method protected final a(Lcom/android/volley/g;)Lcom/android/volley/i;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/android/volley/g;",
-            ")",
-            "Lcom/android/volley/i",
-            "<",
-            "Landroid/graphics/Bitmap;",
-            ">;"
-        }
-    .end annotation
+.method public final call(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    .prologue
-    .line 24
-    :try_start_0
-    invoke-virtual {p0, p1}, Lcom/kik/cache/z;->b(Lcom/android/volley/g;)Lcom/android/volley/i;
-    :try_end_0
-    .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v0, p0, Lcom/kik/cache/z;->a:Lcom/kik/cache/y;
+
+    iget v1, p0, Lcom/kik/cache/z;->b:I
+
+    iget v2, p0, Lcom/kik/cache/z;->c:I
+
+    iget-object v3, p0, Lcom/kik/cache/z;->d:Landroid/graphics/Bitmap;
+
+    check-cast p1, Lkik/core/datatypes/aa;
+
+    invoke-static {v0, v1, v2, v3, p1}, Lcom/kik/cache/y;->a(Lcom/kik/cache/y;IILandroid/graphics/Bitmap;Lkik/core/datatypes/aa;)Lrx/d;
 
     move-result-object v0
 
-    .line 28
-    :goto_0
     return-object v0
-
-    .line 27
-    :catch_0
-    move-exception v0
-
-    .line 28
-    new-instance v1, Lcom/android/volley/ParseError;
-
-    invoke-direct {v1, v0}, Lcom/android/volley/ParseError;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-static {v1}, Lcom/android/volley/i;->a(Lcom/android/volley/VolleyError;)Lcom/android/volley/i;
-
-    move-result-object v0
-
-    goto :goto_0
-.end method
-
-.method protected abstract b(Lcom/android/volley/g;)Lcom/android/volley/i;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/android/volley/g;",
-            ")",
-            "Lcom/android/volley/i",
-            "<",
-            "Landroid/graphics/Bitmap;",
-            ">;"
-        }
-    .end annotation
-.end method
-
-.method public final w()Z
-    .locals 1
-
-    .prologue
-    .line 42
-    const/4 v0, 0x0
-
-    return v0
 .end method

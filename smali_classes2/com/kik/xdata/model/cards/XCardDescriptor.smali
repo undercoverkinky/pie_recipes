@@ -116,7 +116,37 @@
 
 
 # virtual methods
-.method public final a()Lcom/dyuproject/protostuff/u;
+.method public final a()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 61
+    iget-object v0, p0, Lcom/kik/xdata/model/cards/XCardDescriptor;->url:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final b()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 74
+    iget-object v0, p0, Lcom/kik/xdata/model/cards/XCardDescriptor;->title:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final c()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 87
+    iget-object v0, p0, Lcom/kik/xdata/model/cards/XCardDescriptor;->iconUrl:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final cachedSchema()Lcom/dyuproject/protostuff/u;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -135,37 +165,7 @@
     return-object v0
 .end method
 
-.method public final b()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 61
-    iget-object v0, p0, Lcom/kik/xdata/model/cards/XCardDescriptor;->url:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final c()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 74
-    iget-object v0, p0, Lcom/kik/xdata/model/cards/XCardDescriptor;->title:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final d()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 87
-    iget-object v0, p0, Lcom/kik/xdata/model/cards/XCardDescriptor;->iconUrl:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final e()Ljava/lang/Long;
+.method public final d()Ljava/lang/Long;
     .locals 1
 
     .prologue
@@ -175,7 +175,7 @@
     return-object v0
 .end method
 
-.method public final f()Lcom/kik/xdata/model/cards/XCardAnonymousKey;
+.method public final e()Lcom/kik/xdata/model/cards/XCardAnonymousKey;
     .locals 1
 
     .prologue
@@ -185,7 +185,7 @@
     return-object v0
 .end method
 
-.method public final g()Ljava/util/List;
+.method public final f()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -204,7 +204,7 @@
     return-object v0
 .end method
 
-.method public final h()Ljava/lang/String;
+.method public final g()Ljava/lang/String;
     .locals 1
 
     .prologue

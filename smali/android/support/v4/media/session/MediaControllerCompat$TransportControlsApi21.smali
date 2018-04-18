@@ -23,13 +23,13 @@
     .locals 0
 
     .prologue
-    .line 1268
+    .line 2078
     invoke-direct {p0}, Landroid/support/v4/media/session/MediaControllerCompat$TransportControls;-><init>()V
 
-    .line 1269
+    .line 2079
     iput-object p1, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->mControlsObj:Ljava/lang/Object;
 
-    .line 1270
+    .line 2080
     return-void
 .end method
 
@@ -39,12 +39,12 @@
     .locals 1
 
     .prologue
-    .line 1294
+    .line 2133
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->mControlsObj:Ljava/lang/Object;
 
     invoke-static {v0}, Landroid/support/v4/media/session/MediaControllerCompatApi21$TransportControls;->fastForward(Ljava/lang/Object;)V
 
-    .line 1295
+    .line 2134
     return-void
 .end method
 
@@ -52,12 +52,12 @@
     .locals 1
 
     .prologue
-    .line 1279
+    .line 2118
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->mControlsObj:Ljava/lang/Object;
 
     invoke-static {v0}, Landroid/support/v4/media/session/MediaControllerCompatApi21$TransportControls;->pause(Ljava/lang/Object;)V
 
-    .line 1280
+    .line 2119
     return-void
 .end method
 
@@ -65,12 +65,12 @@
     .locals 1
 
     .prologue
-    .line 1274
+    .line 2113
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->mControlsObj:Ljava/lang/Object;
 
     invoke-static {v0}, Landroid/support/v4/media/session/MediaControllerCompatApi21$TransportControls;->play(Ljava/lang/Object;)V
 
-    .line 1275
+    .line 2114
     return-void
 .end method
 
@@ -78,12 +78,12 @@
     .locals 1
 
     .prologue
-    .line 1320
+    .line 2180
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->mControlsObj:Ljava/lang/Object;
 
     invoke-static {v0, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompatApi21$TransportControls;->playFromMediaId(Ljava/lang/Object;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 1322
+    .line 2182
     return-void
 .end method
 
@@ -91,12 +91,12 @@
     .locals 1
 
     .prologue
-    .line 1326
+    .line 2186
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->mControlsObj:Ljava/lang/Object;
 
     invoke-static {v0, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompatApi21$TransportControls;->playFromSearch(Ljava/lang/Object;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 1328
+    .line 2188
     return-void
 .end method
 
@@ -104,7 +104,7 @@
     .locals 2
 
     .prologue
-    .line 1332
+    .line 2192
     if-eqz p1, :cond_0
 
     sget-object v0, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
@@ -115,7 +115,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1333
+    .line 2193
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -125,28 +125,127 @@
 
     throw v0
 
-    .line 1336
+    .line 2196
     :cond_1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1337
+    .line 2197
     const-string v1, "android.support.v4.media.session.action.ARGUMENT_URI"
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 1338
+    .line 2198
     const-string v1, "android.support.v4.media.session.action.ARGUMENT_EXTRAS"
 
     invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 1339
+    .line 2199
     const-string v1, "android.support.v4.media.session.action.PLAY_FROM_URI"
 
     invoke-virtual {p0, v1, v0}, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 1340
+    .line 2200
+    return-void
+.end method
+
+.method public prepare()V
+    .locals 2
+
+    .prologue
+    .line 2084
+    const-string v0, "android.support.v4.media.session.action.PREPARE"
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    .line 2085
+    return-void
+.end method
+
+.method public prepareFromMediaId(Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 2
+
+    .prologue
+    .line 2089
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 2090
+    const-string v1, "android.support.v4.media.session.action.ARGUMENT_MEDIA_ID"
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2091
+    const-string v1, "android.support.v4.media.session.action.ARGUMENT_EXTRAS"
+
+    invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    .line 2092
+    const-string v1, "android.support.v4.media.session.action.PREPARE_FROM_MEDIA_ID"
+
+    invoke-virtual {p0, v1, v0}, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    .line 2093
+    return-void
+.end method
+
+.method public prepareFromSearch(Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 2
+
+    .prologue
+    .line 2097
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 2098
+    const-string v1, "android.support.v4.media.session.action.ARGUMENT_QUERY"
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2099
+    const-string v1, "android.support.v4.media.session.action.ARGUMENT_EXTRAS"
+
+    invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    .line 2100
+    const-string v1, "android.support.v4.media.session.action.PREPARE_FROM_SEARCH"
+
+    invoke-virtual {p0, v1, v0}, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    .line 2101
+    return-void
+.end method
+
+.method public prepareFromUri(Landroid/net/Uri;Landroid/os/Bundle;)V
+    .locals 2
+
+    .prologue
+    .line 2105
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 2106
+    const-string v1, "android.support.v4.media.session.action.ARGUMENT_URI"
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    .line 2107
+    const-string v1, "android.support.v4.media.session.action.ARGUMENT_EXTRAS"
+
+    invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    .line 2108
+    const-string v1, "android.support.v4.media.session.action.PREPARE_FROM_URI"
+
+    invoke-virtual {p0, v1, v0}, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    .line 2109
     return-void
 .end method
 
@@ -154,12 +253,12 @@
     .locals 1
 
     .prologue
-    .line 1299
+    .line 2138
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->mControlsObj:Ljava/lang/Object;
 
     invoke-static {v0}, Landroid/support/v4/media/session/MediaControllerCompatApi21$TransportControls;->rewind(Ljava/lang/Object;)V
 
-    .line 1300
+    .line 2139
     return-void
 .end method
 
@@ -167,12 +266,12 @@
     .locals 1
 
     .prologue
-    .line 1289
+    .line 2128
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->mControlsObj:Ljava/lang/Object;
 
     invoke-static {v0, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompatApi21$TransportControls;->seekTo(Ljava/lang/Object;J)V
 
-    .line 1290
+    .line 2129
     return-void
 .end method
 
@@ -180,16 +279,18 @@
     .locals 2
 
     .prologue
-    .line 1349
+    .line 2209
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->mControlsObj:Ljava/lang/Object;
 
+    .line 2210
     invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;->getAction()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 2209
     invoke-static {v0, v1, p2}, Landroid/support/v4/media/session/MediaControllerCompatApi21$TransportControls;->sendCustomAction(Ljava/lang/Object;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 1351
+    .line 2211
     return-void
 .end method
 
@@ -197,12 +298,35 @@
     .locals 1
 
     .prologue
-    .line 1355
+    .line 2215
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->mControlsObj:Ljava/lang/Object;
 
     invoke-static {v0, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompatApi21$TransportControls;->sendCustomAction(Ljava/lang/Object;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 1357
+    .line 2217
+    return-void
+.end method
+
+.method public setCaptioningEnabled(Z)V
+    .locals 2
+
+    .prologue
+    .line 2159
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 2160
+    const-string v1, "android.support.v4.media.session.action.ARGUMENT_CAPTIONING_ENABLED"
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+
+    .line 2161
+    const-string v1, "android.support.v4.media.session.action.SET_CAPTIONING_ENABLED"
+
+    invoke-virtual {p0, v1, v0}, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    .line 2162
     return-void
 .end method
 
@@ -210,38 +334,86 @@
     .locals 2
 
     .prologue
-    .line 1314
+    .line 2153
     iget-object v1, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->mControlsObj:Ljava/lang/Object;
 
     if-eqz p1, :cond_0
 
+    .line 2154
     invoke-virtual {p1}, Landroid/support/v4/media/RatingCompat;->getRating()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 2153
     :goto_0
     invoke-static {v1, v0}, Landroid/support/v4/media/session/MediaControllerCompatApi21$TransportControls;->setRating(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 1316
+    .line 2155
     return-void
 
-    .line 1314
+    .line 2154
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
+.method public setRepeatMode(I)V
+    .locals 2
+
+    .prologue
+    .line 2166
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 2167
+    const-string v1, "android.support.v4.media.session.action.ARGUMENT_REPEAT_MODE"
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    .line 2168
+    const-string v1, "android.support.v4.media.session.action.SET_REPEAT_MODE"
+
+    invoke-virtual {p0, v1, v0}, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    .line 2169
+    return-void
+.end method
+
+.method public setShuffleModeEnabled(Z)V
+    .locals 2
+
+    .prologue
+    .line 2173
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 2174
+    const-string v1, "android.support.v4.media.session.action.ARGUMENT_SHUFFLE_MODE_ENABLED"
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+
+    .line 2175
+    const-string v1, "android.support.v4.media.session.action.SET_SHUFFLE_MODE_ENABLED"
+
+    invoke-virtual {p0, v1, v0}, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    .line 2176
+    return-void
+.end method
+
 .method public skipToNext()V
     .locals 1
 
     .prologue
-    .line 1304
+    .line 2143
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->mControlsObj:Ljava/lang/Object;
 
     invoke-static {v0}, Landroid/support/v4/media/session/MediaControllerCompatApi21$TransportControls;->skipToNext(Ljava/lang/Object;)V
 
-    .line 1305
+    .line 2144
     return-void
 .end method
 
@@ -249,12 +421,12 @@
     .locals 1
 
     .prologue
-    .line 1309
+    .line 2148
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->mControlsObj:Ljava/lang/Object;
 
     invoke-static {v0}, Landroid/support/v4/media/session/MediaControllerCompatApi21$TransportControls;->skipToPrevious(Ljava/lang/Object;)V
 
-    .line 1310
+    .line 2149
     return-void
 .end method
 
@@ -262,12 +434,12 @@
     .locals 1
 
     .prologue
-    .line 1344
+    .line 2204
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->mControlsObj:Ljava/lang/Object;
 
     invoke-static {v0, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompatApi21$TransportControls;->skipToQueueItem(Ljava/lang/Object;J)V
 
-    .line 1345
+    .line 2205
     return-void
 .end method
 
@@ -275,11 +447,11 @@
     .locals 1
 
     .prologue
-    .line 1284
+    .line 2123
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->mControlsObj:Ljava/lang/Object;
 
     invoke-static {v0}, Landroid/support/v4/media/session/MediaControllerCompatApi21$TransportControls;->stop(Ljava/lang/Object;)V
 
-    .line 1285
+    .line 2124
     return-void
 .end method

@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 1936
+    .line 1938
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,10 +34,10 @@
     .locals 1
 
     .prologue
-    .line 1939
+    .line 1941
     invoke-static {p1}, Lcom/kik/groups/GroupSuggestService;->access$3002(Lcom/google/protobuf/Descriptors$FileDescriptor;)Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 1940
+    .line 1942
     const/4 v0, 0x0
 
     return-object v0

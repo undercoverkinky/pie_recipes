@@ -1,4 +1,4 @@
-.class public abstract Lcom/google/android/gms/common/api/Api$zzh;
+.class public Lcom/google/android/gms/common/api/Api$zzh;
 .super Lcom/google/android/gms/common/api/Api$zzd;
 
 
@@ -23,16 +23,3 @@
         "<TT;TO;>;"
     }
 .end annotation
-
-
-# virtual methods
-.method public abstract zzr(Ljava/lang/Object;)Lcom/google/android/gms/common/api/Api$zzg;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TO;)TT;"
-        }
-    .end annotation
-.end method
-
-.method public abstract zzri()I
-.end method

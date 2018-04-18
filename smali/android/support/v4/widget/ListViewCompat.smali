@@ -34,7 +34,7 @@
 
     .line 39
     :cond_0
-    invoke-static {p0, p1}, Landroid/support/v4/widget/ListViewCompatDonut;->scrollListBy(Landroid/widget/ListView;I)V
+    invoke-static {p0, p1}, Landroid/support/v4/widget/ListViewCompatGingerbread;->scrollListBy(Landroid/widget/ListView;I)V
 
     goto :goto_0
 .end method

@@ -3,29 +3,15 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Landroid/support/design/widget/ViewUtils$ViewUtilsImplLollipop;,
-        Landroid/support/design/widget/ViewUtils$ViewUtilsImplBase;,
-        Landroid/support/design/widget/ViewUtils$ViewUtilsImpl;
-    }
-.end annotation
-
-
 # static fields
 .field static final a:Landroid/support/design/widget/ValueAnimatorCompat$Creator;
-
-.field private static final b:Landroid/support/design/widget/ViewUtils$ViewUtilsImpl;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
     .prologue
-    const/4 v2, 0x0
-
     .line 24
     new-instance v0, Landroid/support/design/widget/ViewUtils$1;
 
@@ -33,41 +19,68 @@
 
     sput-object v0, Landroid/support/design/widget/ViewUtils;->a:Landroid/support/design/widget/ValueAnimatorCompat$Creator;
 
-    .line 55
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    .line 56
-    const/16 v1, 0x15
-
-    if-lt v0, v1, :cond_0
-
-    .line 57
-    new-instance v0, Landroid/support/design/widget/ViewUtils$ViewUtilsImplLollipop;
-
-    invoke-direct {v0, v2}, Landroid/support/design/widget/ViewUtils$ViewUtilsImplLollipop;-><init>(B)V
-
-    sput-object v0, Landroid/support/design/widget/ViewUtils;->b:Landroid/support/design/widget/ViewUtils$ViewUtilsImpl;
-
-    .line 61
-    :goto_0
     return-void
+.end method
 
-    .line 59
-    :cond_0
-    new-instance v0, Landroid/support/design/widget/ViewUtils$ViewUtilsImplBase;
+.method static a(I)Landroid/graphics/PorterDuff$Mode;
+    .locals 1
 
-    invoke-direct {v0, v2}, Landroid/support/design/widget/ViewUtils$ViewUtilsImplBase;-><init>(B)V
+    .prologue
+    .line 43
+    sparse-switch p0, :sswitch_data_0
 
-    sput-object v0, Landroid/support/design/widget/ViewUtils;->b:Landroid/support/design/widget/ViewUtils$ViewUtilsImpl;
+    .line 55
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    .line 45
+    :sswitch_0
+    sget-object v0, Landroid/graphics/PorterDuff$Mode;->SRC_OVER:Landroid/graphics/PorterDuff$Mode;
 
     goto :goto_0
+
+    .line 47
+    :sswitch_1
+    sget-object v0, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    goto :goto_0
+
+    .line 49
+    :sswitch_2
+    sget-object v0, Landroid/graphics/PorterDuff$Mode;->SRC_ATOP:Landroid/graphics/PorterDuff$Mode;
+
+    goto :goto_0
+
+    .line 51
+    :sswitch_3
+    sget-object v0, Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
+
+    goto :goto_0
+
+    .line 53
+    :sswitch_4
+    sget-object v0, Landroid/graphics/PorterDuff$Mode;->SCREEN:Landroid/graphics/PorterDuff$Mode;
+
+    goto :goto_0
+
+    .line 43
+    :sswitch_data_0
+    .sparse-switch
+        0x3 -> :sswitch_0
+        0x5 -> :sswitch_1
+        0x9 -> :sswitch_2
+        0xe -> :sswitch_3
+        0xf -> :sswitch_4
+    .end sparse-switch
 .end method
 
 .method static a()Landroid/support/design/widget/ValueAnimatorCompat;
     .locals 1
 
     .prologue
-    .line 68
+    .line 35
     sget-object v0, Landroid/support/design/widget/ViewUtils;->a:Landroid/support/design/widget/ValueAnimatorCompat$Creator;
 
     invoke-interface {v0}, Landroid/support/design/widget/ValueAnimatorCompat$Creator;->a()Landroid/support/design/widget/ValueAnimatorCompat;
@@ -77,15 +90,29 @@
     return-object v0
 .end method
 
-.method static a(Landroid/view/View;)V
+.method static a(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
-    .line 64
-    sget-object v0, Landroid/support/design/widget/ViewUtils;->b:Landroid/support/design/widget/ViewUtils$ViewUtilsImpl;
+    .line 39
+    if-eq p0, p1, :cond_0
 
-    invoke-interface {v0, p0}, Landroid/support/design/widget/ViewUtils$ViewUtilsImpl;->a(Landroid/view/View;)V
+    if-eqz p0, :cond_1
 
-    .line 65
-    return-void
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

@@ -78,25 +78,6 @@
 
 
 # virtual methods
-.method public final a()Lcom/dyuproject/protostuff/u;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/dyuproject/protostuff/u",
-            "<",
-            "Lcom/kik/xdata/model/addressbook/XAddressBookSettings;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 101
-    sget-object v0, Lcom/kik/xdata/model/addressbook/XAddressBookSettings;->b:Lcom/dyuproject/protostuff/u;
-
-    return-object v0
-.end method
-
 .method public final a(Ljava/lang/Boolean;)Lcom/kik/xdata/model/addressbook/XAddressBookSettings;
     .locals 0
 
@@ -106,6 +87,16 @@
 
     .line 56
     return-object p0
+.end method
+
+.method public final a()Ljava/lang/Boolean;
+    .locals 1
+
+    .prologue
+    .line 50
+    iget-object v0, p0, Lcom/kik/xdata/model/addressbook/XAddressBookSettings;->optedIn:Ljava/lang/Boolean;
+
+    return-object v0
 .end method
 
 .method public final b(Ljava/lang/Boolean;)Lcom/kik/xdata/model/addressbook/XAddressBookSettings;
@@ -123,8 +114,8 @@
     .locals 1
 
     .prologue
-    .line 50
-    iget-object v0, p0, Lcom/kik/xdata/model/addressbook/XAddressBookSettings;->optedIn:Ljava/lang/Boolean;
+    .line 63
+    iget-object v0, p0, Lcom/kik/xdata/model/addressbook/XAddressBookSettings;->uploadContactInfoDEPRECATED:Ljava/lang/Boolean;
 
     return-object v0
 .end method
@@ -133,18 +124,27 @@
     .locals 1
 
     .prologue
-    .line 63
-    iget-object v0, p0, Lcom/kik/xdata/model/addressbook/XAddressBookSettings;->uploadContactInfoDEPRECATED:Ljava/lang/Boolean;
+    .line 76
+    iget-object v0, p0, Lcom/kik/xdata/model/addressbook/XAddressBookSettings;->uploadContactInfo:Ljava/lang/Boolean;
 
     return-object v0
 .end method
 
-.method public final d()Ljava/lang/Boolean;
+.method public final cachedSchema()Lcom/dyuproject/protostuff/u;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/dyuproject/protostuff/u",
+            "<",
+            "Lcom/kik/xdata/model/addressbook/XAddressBookSettings;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 76
-    iget-object v0, p0, Lcom/kik/xdata/model/addressbook/XAddressBookSettings;->uploadContactInfo:Ljava/lang/Boolean;
+    .line 101
+    sget-object v0, Lcom/kik/xdata/model/addressbook/XAddressBookSettings;->b:Lcom/dyuproject/protostuff/u;
 
     return-object v0
 .end method

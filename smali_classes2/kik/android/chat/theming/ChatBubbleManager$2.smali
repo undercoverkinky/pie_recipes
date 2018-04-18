@@ -1,11 +1,11 @@
 .class final Lkik/android/chat/theming/ChatBubbleManager$2;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/theming/ChatBubbleManager;-><init>(Landroid/content/Context;Lkik/android/chat/a/a;Lkik/core/interfaces/ad;)V
+    value = Lkik/android/chat/theming/ChatBubbleManager;-><init>(Landroid/content/Context;Lkik/android/chat/b/a;Lkik/core/interfaces/ad;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
         "Lcom/kik/xdata/model/userpreferences/XUserPreferences$XBubbleColor;",
         ">;"
@@ -35,7 +35,7 @@
     .line 153
     iput-object p1, p0, Lkik/android/chat/theming/ChatBubbleManager$2;->a:Lkik/android/chat/theming/ChatBubbleManager;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -50,7 +50,7 @@
     check-cast p1, Lcom/kik/xdata/model/userpreferences/XUserPreferences$XBubbleColor;
 
     .line 1157
-    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Object;)V
+    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Object;)V
 
     .line 1158
     if-eqz p1, :cond_0

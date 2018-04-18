@@ -1,5 +1,5 @@
 .class final Lcom/kik/android/stickers/c$1;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
         "Ljava/util/Map",
         "<",
@@ -42,7 +42,7 @@
 
     iput-object p2, p0, Lcom/kik/android/stickers/c$1;->a:Lcom/kik/events/Promise;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -98,12 +98,12 @@
     check-cast v0, Lcom/kik/xdata/model/mediatray/XStickerPack;
 
     .line 1520
-    new-instance v2, Lkik/core/datatypes/ab;
+    new-instance v2, Lkik/core/datatypes/y;
 
-    invoke-direct {v2, v0}, Lkik/core/datatypes/ab;-><init>(Lcom/kik/xdata/model/mediatray/XStickerPack;)V
+    invoke-direct {v2, v0}, Lkik/core/datatypes/y;-><init>(Lcom/kik/xdata/model/mediatray/XStickerPack;)V
 
     .line 1521
-    invoke-virtual {v2}, Lkik/core/datatypes/ab;->d()Ljava/lang/String;
+    invoke-virtual {v2}, Lkik/core/datatypes/y;->d()Ljava/lang/String;
 
     move-result-object v7
 
@@ -148,10 +148,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/datatypes/ab;
+    check-cast v0, Lkik/core/datatypes/y;
 
     .line 1532
-    invoke-virtual {v0}, Lkik/core/datatypes/ab;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/y;->d()Ljava/lang/String;
 
     move-result-object v0
 
@@ -190,12 +190,12 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/datatypes/ab;
+    check-cast v0, Lkik/core/datatypes/y;
 
     .line 1546
     iget-object v3, p0, Lcom/kik/android/stickers/c$1;->b:Lcom/kik/android/stickers/c;
 
-    invoke-static {v3, v0}, Lcom/kik/android/stickers/c;->a(Lcom/kik/android/stickers/c;Lkik/core/datatypes/ab;)Lkik/core/datatypes/ab;
+    invoke-static {v3, v0}, Lcom/kik/android/stickers/c;->a(Lcom/kik/android/stickers/c;Lkik/core/datatypes/y;)Lkik/core/datatypes/y;
 
     move-result-object v0
 
@@ -225,7 +225,7 @@
     if-nez v1, :cond_7
 
     .line 1556
-    new-instance v0, Lkik/core/datatypes/ab;
+    new-instance v0, Lkik/core/datatypes/y;
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -247,12 +247,12 @@
 
     move-object v6, v4
 
-    invoke-direct/range {v0 .. v8}, Lkik/core/datatypes/ab;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/util/List;)V
+    invoke-direct/range {v0 .. v8}, Lkik/core/datatypes/y;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/util/List;)V
 
     .line 1557
     iget-object v1, p0, Lcom/kik/android/stickers/c$1;->b:Lcom/kik/android/stickers/c;
 
-    invoke-static {v1, v0}, Lcom/kik/android/stickers/c;->b(Lcom/kik/android/stickers/c;Lkik/core/datatypes/ab;)V
+    invoke-static {v1, v0}, Lcom/kik/android/stickers/c;->b(Lcom/kik/android/stickers/c;Lkik/core/datatypes/y;)V
 
     .line 1559
     :goto_3
@@ -300,17 +300,17 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/datatypes/ab;
+    check-cast v0, Lkik/core/datatypes/y;
 
     .line 1567
     iget-object v2, p0, Lcom/kik/android/stickers/c$1;->b:Lcom/kik/android/stickers/c;
 
-    invoke-static {v2, v0}, Lcom/kik/android/stickers/c;->c(Lcom/kik/android/stickers/c;Lkik/core/datatypes/ab;)V
+    invoke-static {v2, v0}, Lcom/kik/android/stickers/c;->c(Lcom/kik/android/stickers/c;Lkik/core/datatypes/y;)V
 
     .line 1568
     iget-object v2, p0, Lcom/kik/android/stickers/c$1;->b:Lcom/kik/android/stickers/c;
 
-    invoke-static {v2, v0}, Lcom/kik/android/stickers/c;->d(Lcom/kik/android/stickers/c;Lkik/core/datatypes/ab;)V
+    invoke-static {v2, v0}, Lcom/kik/android/stickers/c;->d(Lcom/kik/android/stickers/c;Lkik/core/datatypes/y;)V
 
     goto :goto_4
 
@@ -382,7 +382,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lrx/subjects/PublishSubject;->aM_()V
+    invoke-virtual {v0}, Lrx/subjects/PublishSubject;->b()V
 
     goto :goto_0
 .end method

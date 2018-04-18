@@ -19,25 +19,16 @@
 
 
 # direct methods
-.method private constructor <init>(Landroid/support/design/widget/TextInputLayout;)V
+.method constructor <init>(Landroid/support/design/widget/TextInputLayout;)V
     .locals 0
 
     .prologue
-    .line 405
+    .line 1443
     iput-object p1, p0, Landroid/support/design/widget/TextInputLayout$TextInputAccessibilityDelegate;->a:Landroid/support/design/widget/TextInputLayout;
 
     invoke-direct {p0}, Landroid/support/v4/view/AccessibilityDelegateCompat;-><init>()V
 
-    return-void
-.end method
-
-.method synthetic constructor <init>(Landroid/support/design/widget/TextInputLayout;B)V
-    .locals 0
-
-    .prologue
-    .line 405
-    invoke-direct {p0, p1}, Landroid/support/design/widget/TextInputLayout$TextInputAccessibilityDelegate;-><init>(Landroid/support/design/widget/TextInputLayout;)V
-
+    .line 1444
     return-void
 .end method
 
@@ -47,10 +38,10 @@
     .locals 1
 
     .prologue
-    .line 408
+    .line 1448
     invoke-super {p0, p1, p2}, Landroid/support/v4/view/AccessibilityDelegateCompat;->onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 409
+    .line 1449
     const-class v0, Landroid/support/design/widget/TextInputLayout;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -59,7 +50,7 @@
 
     invoke-virtual {p2, v0}, Landroid/view/accessibility/AccessibilityEvent;->setClassName(Ljava/lang/CharSequence;)V
 
-    .line 410
+    .line 1450
     return-void
 .end method
 
@@ -67,10 +58,10 @@
     .locals 2
 
     .prologue
-    .line 424
+    .line 1464
     invoke-super {p0, p1, p2}, Landroid/support/v4/view/AccessibilityDelegateCompat;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;)V
 
-    .line 425
+    .line 1465
     const-class v0, Landroid/support/design/widget/TextInputLayout;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -79,67 +70,57 @@
 
     invoke-virtual {p2, v0}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;->setClassName(Ljava/lang/CharSequence;)V
 
-    .line 427
+    .line 1467
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout$TextInputAccessibilityDelegate;->a:Landroid/support/design/widget/TextInputLayout;
 
-    invoke-static {v0}, Landroid/support/design/widget/TextInputLayout;->d(Landroid/support/design/widget/TextInputLayout;)Landroid/support/design/widget/CollapsingTextHelper;
+    iget-object v0, v0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/CollapsingTextHelper;
+
+    invoke-virtual {v0}, Landroid/support/design/widget/CollapsingTextHelper;->e()Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/design/widget/CollapsingTextHelper;->f()Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    .line 428
+    .line 1468
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 429
+    .line 1469
     invoke-virtual {p2, v0}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;->setText(Ljava/lang/CharSequence;)V
 
-    .line 431
+    .line 1471
     :cond_0
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout$TextInputAccessibilityDelegate;->a:Landroid/support/design/widget/TextInputLayout;
 
-    invoke-static {v0}, Landroid/support/design/widget/TextInputLayout;->e(Landroid/support/design/widget/TextInputLayout;)Landroid/widget/EditText;
-
-    move-result-object v0
+    iget-object v0, v0, Landroid/support/design/widget/TextInputLayout;->a:Landroid/widget/EditText;
 
     if-eqz v0, :cond_1
 
-    .line 432
+    .line 1472
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout$TextInputAccessibilityDelegate;->a:Landroid/support/design/widget/TextInputLayout;
 
-    invoke-static {v0}, Landroid/support/design/widget/TextInputLayout;->e(Landroid/support/design/widget/TextInputLayout;)Landroid/widget/EditText;
-
-    move-result-object v0
+    iget-object v0, v0, Landroid/support/design/widget/TextInputLayout;->a:Landroid/widget/EditText;
 
     invoke-virtual {p2, v0}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;->setLabelFor(Landroid/view/View;)V
 
-    .line 434
+    .line 1474
     :cond_1
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout$TextInputAccessibilityDelegate;->a:Landroid/support/design/widget/TextInputLayout;
 
-    invoke-static {v0}, Landroid/support/design/widget/TextInputLayout;->c(Landroid/support/design/widget/TextInputLayout;)Landroid/widget/TextView;
-
-    move-result-object v0
+    iget-object v0, v0, Landroid/support/design/widget/TextInputLayout;->b:Landroid/widget/TextView;
 
     if-eqz v0, :cond_3
 
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout$TextInputAccessibilityDelegate;->a:Landroid/support/design/widget/TextInputLayout;
 
-    invoke-static {v0}, Landroid/support/design/widget/TextInputLayout;->c(Landroid/support/design/widget/TextInputLayout;)Landroid/widget/TextView;
-
-    move-result-object v0
+    iget-object v0, v0, Landroid/support/design/widget/TextInputLayout;->b:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 435
+    .line 1475
     :goto_0
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -147,19 +128,19 @@
 
     if-nez v1, :cond_2
 
-    .line 436
+    .line 1476
     const/4 v1, 0x1
 
     invoke-virtual {p2, v1}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;->setContentInvalid(Z)V
 
-    .line 437
+    .line 1477
     invoke-virtual {p2, v0}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;->setError(Ljava/lang/CharSequence;)V
 
-    .line 439
+    .line 1479
     :cond_2
     return-void
 
-    .line 434
+    .line 1474
     :cond_3
     const/4 v0, 0x0
 
@@ -170,35 +151,33 @@
     .locals 2
 
     .prologue
-    .line 414
+    .line 1454
     invoke-super {p0, p1, p2}, Landroid/support/v4/view/AccessibilityDelegateCompat;->onPopulateAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 416
+    .line 1456
     iget-object v0, p0, Landroid/support/design/widget/TextInputLayout$TextInputAccessibilityDelegate;->a:Landroid/support/design/widget/TextInputLayout;
 
-    invoke-static {v0}, Landroid/support/design/widget/TextInputLayout;->d(Landroid/support/design/widget/TextInputLayout;)Landroid/support/design/widget/CollapsingTextHelper;
+    iget-object v0, v0, Landroid/support/design/widget/TextInputLayout;->d:Landroid/support/design/widget/CollapsingTextHelper;
+
+    invoke-virtual {v0}, Landroid/support/design/widget/CollapsingTextHelper;->e()Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/design/widget/CollapsingTextHelper;->f()Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    .line 417
+    .line 1457
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 418
+    .line 1458
     invoke-virtual {p2}, Landroid/view/accessibility/AccessibilityEvent;->getText()Ljava/util/List;
 
     move-result-object v1
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 420
+    .line 1460
     :cond_0
     return-void
 .end method

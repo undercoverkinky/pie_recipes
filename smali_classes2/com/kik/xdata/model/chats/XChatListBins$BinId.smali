@@ -83,7 +83,7 @@
     return-void
 .end method
 
-.method public static b()Lcom/dyuproject/protostuff/u;
+.method public static a()Lcom/dyuproject/protostuff/u;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -104,25 +104,6 @@
 
 
 # virtual methods
-.method public final a()Lcom/dyuproject/protostuff/u;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/dyuproject/protostuff/u",
-            "<",
-            "Lcom/kik/xdata/model/chats/XChatListBins$BinId;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 90
-    sget-object v0, Lcom/kik/xdata/model/chats/XChatListBins$BinId;->b:Lcom/dyuproject/protostuff/u;
-
-    return-object v0
-.end method
-
 .method public final a(Lcom/kik/xdata/model/chats/XChatListBins$XDataBareUserJid;)Lcom/kik/xdata/model/chats/XChatListBins$BinId;
     .locals 0
 
@@ -145,7 +126,7 @@
     return-object p0
 .end method
 
-.method public final c()Lcom/kik/xdata/model/chats/XChatListBins$XDataBareUserJid;
+.method public final b()Lcom/kik/xdata/model/chats/XChatListBins$XDataBareUserJid;
     .locals 1
 
     .prologue
@@ -155,12 +136,31 @@
     return-object v0
 .end method
 
-.method public final d()Lcom/kik/xdata/model/chats/XChatListBins$XDataGroupJid;
+.method public final c()Lcom/kik/xdata/model/chats/XChatListBins$XDataGroupJid;
     .locals 1
 
     .prologue
     .line 65
     iget-object v0, p0, Lcom/kik/xdata/model/chats/XChatListBins$BinId;->group:Lcom/kik/xdata/model/chats/XChatListBins$XDataGroupJid;
+
+    return-object v0
+.end method
+
+.method public final cachedSchema()Lcom/dyuproject/protostuff/u;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/dyuproject/protostuff/u",
+            "<",
+            "Lcom/kik/xdata/model/chats/XChatListBins$BinId;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 90
+    sget-object v0, Lcom/kik/xdata/model/chats/XChatListBins$BinId;->b:Lcom/dyuproject/protostuff/u;
 
     return-object v0
 .end method

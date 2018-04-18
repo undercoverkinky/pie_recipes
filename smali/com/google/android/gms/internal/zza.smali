@@ -1,32 +1,20 @@
-.class public Lcom/google/android/gms/internal/zza;
-.super Lcom/google/android/gms/internal/zzr;
+.class public final Lcom/google/android/gms/internal/zza;
+.super Lcom/google/android/gms/internal/zzaa;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/google/android/gms/internal/zzr;-><init>()V
+    invoke-direct {p0}, Lcom/google/android/gms/internal/zzaa;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/google/android/gms/internal/zzi;)V
+.method public constructor <init>(Lcom/google/android/gms/internal/zzn;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/google/android/gms/internal/zzr;-><init>(Lcom/google/android/gms/internal/zzi;)V
+    invoke-direct {p0, p1}, Lcom/google/android/gms/internal/zzaa;-><init>(Lcom/google/android/gms/internal/zzn;)V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public getMessage()Ljava/lang/String;
-    .locals 1
-
-    invoke-super {p0}, Lcom/google/android/gms/internal/zzr;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

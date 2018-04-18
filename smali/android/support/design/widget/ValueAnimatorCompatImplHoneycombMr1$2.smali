@@ -25,7 +25,7 @@
     .locals 0
 
     .prologue
-    .line 59
+    .line 63
     iput-object p1, p0, Landroid/support/design/widget/ValueAnimatorCompatImplHoneycombMr1$2;->b:Landroid/support/design/widget/ValueAnimatorCompatImplHoneycombMr1;
 
     iput-object p2, p0, Landroid/support/design/widget/ValueAnimatorCompatImplHoneycombMr1$2;->a:Landroid/support/design/widget/ValueAnimatorCompat$Impl$AnimatorListenerProxy;
@@ -38,15 +38,10 @@
 
 # virtual methods
 .method public onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 72
-    iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplHoneycombMr1$2;->a:Landroid/support/design/widget/ValueAnimatorCompat$Impl$AnimatorListenerProxy;
-
-    invoke-interface {v0}, Landroid/support/design/widget/ValueAnimatorCompat$Impl$AnimatorListenerProxy;->b()V
-
-    .line 73
+    .line 77
     return-void
 .end method
 
@@ -54,12 +49,12 @@
     .locals 1
 
     .prologue
-    .line 67
+    .line 71
     iget-object v0, p0, Landroid/support/design/widget/ValueAnimatorCompatImplHoneycombMr1$2;->a:Landroid/support/design/widget/ValueAnimatorCompat$Impl$AnimatorListenerProxy;
 
     invoke-interface {v0}, Landroid/support/design/widget/ValueAnimatorCompat$Impl$AnimatorListenerProxy;->a()V
 
-    .line 68
+    .line 72
     return-void
 .end method
 
@@ -67,6 +62,6 @@
     .locals 0
 
     .prologue
-    .line 63
+    .line 67
     return-void
 .end method

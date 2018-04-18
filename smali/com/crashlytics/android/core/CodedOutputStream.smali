@@ -311,6 +311,7 @@
 
     move-result v1
 
+    .line 5603
     invoke-virtual {p1}, Lcom/crashlytics/android/core/b;->a()I
 
     move-result v2

@@ -33,7 +33,7 @@
     .locals 4
 
     .prologue
-    .line 82
+    .line 79
     iget-object v0, p0, Lkik/core/datatypes/c$a;->a:Ljava/lang/String;
 
     const-string v1, "/orig.jpg"
@@ -44,7 +44,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 83
+    .line 80
     iget-object v0, p0, Lkik/core/datatypes/c$a;->a:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -61,7 +61,7 @@
 
     move-result-object v0
 
-    .line 85
+    .line 82
     :goto_0
     return-object v0
 
@@ -75,7 +75,7 @@
     .locals 2
 
     .prologue
-    .line 90
+    .line 87
     iget-wide v0, p0, Lkik/core/datatypes/c$a;->b:J
 
     return-wide v0

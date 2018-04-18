@@ -13,7 +13,7 @@
 # instance fields
 .field private final b:Lkik/android/a;
 
-.field private final c:Lkik/core/interfaces/af;
+.field private final c:Lkik/core/interfaces/ag;
 
 .field private final d:Lkik/android/addressbook/AddressBookRetryPolicy;
 
@@ -52,7 +52,7 @@
 
 .field private q:Z
 
-.field private r:Lkik/core/net/outgoing/x;
+.field private r:Lkik/core/net/outgoing/MatchingRequest;
 
 .field private s:Lcom/kik/events/d;
 
@@ -96,7 +96,7 @@
         value = {
             "Lcom/kik/events/e",
             "<",
-            "Ljava/lang/Void;",
+            "Ljava/lang/String;",
             ">;"
         }
     .end annotation
@@ -108,7 +108,7 @@
     .locals 1
 
     .prologue
-    .line 60
+    .line 61
     const-string v0, "AddressIntegration"
 
     invoke-static {v0}, Lorg/slf4j/c;->a(Ljava/lang/String;)Lorg/slf4j/b;
@@ -120,7 +120,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lkik/android/config/b;Lkik/core/interfaces/ad;Lkik/core/interfaces/ICommunication;Lkik/android/a;Lkik/core/interfaces/af;Ljava/lang/String;)V
+.method public constructor <init>(Lkik/android/config/b;Lkik/core/interfaces/ad;Lkik/core/interfaces/ICommunication;Lkik/android/a;Lkik/core/interfaces/ag;Ljava/lang/String;)V
     .locals 4
 
     .prologue
@@ -128,84 +128,84 @@
 
     const/4 v2, 0x0
 
-    .line 131
+    .line 148
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 80
+    .line 81
     new-instance v0, Lkik/android/addressbook/AddressBookRetryPolicy;
 
     invoke-direct {v0}, Lkik/android/addressbook/AddressBookRetryPolicy;-><init>()V
 
     iput-object v0, p0, Lkik/android/addressbook/a;->d:Lkik/android/addressbook/AddressBookRetryPolicy;
 
-    .line 81
+    .line 82
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lkik/android/addressbook/a;->e:Ljava/lang/Object;
 
-    .line 92
+    .line 93
     iput-boolean v1, p0, Lkik/android/addressbook/a;->p:Z
 
-    .line 93
+    .line 94
     iput-boolean v2, p0, Lkik/android/addressbook/a;->q:Z
 
-    .line 96
+    .line 97
     new-instance v0, Lcom/kik/events/d;
 
     invoke-direct {v0}, Lcom/kik/events/d;-><init>()V
 
     iput-object v0, p0, Lkik/android/addressbook/a;->s:Lcom/kik/events/d;
 
-    .line 97
+    .line 98
     new-instance v0, Ljava/util/Random;
 
     invoke-direct {v0}, Ljava/util/Random;-><init>()V
 
     iput-object v0, p0, Lkik/android/addressbook/a;->t:Ljava/util/Random;
 
-    .line 98
+    .line 99
     new-instance v0, Lcom/kik/events/g;
 
     invoke-direct {v0, p0}, Lcom/kik/events/g;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lkik/android/addressbook/a;->u:Lcom/kik/events/g;
 
-    .line 99
+    .line 100
     new-instance v0, Lcom/kik/events/g;
 
     invoke-direct {v0, p0}, Lcom/kik/events/g;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lkik/android/addressbook/a;->v:Lcom/kik/events/g;
 
-    .line 101
+    .line 102
     new-instance v0, Lkik/android/addressbook/a$1;
 
     invoke-direct {v0, p0}, Lkik/android/addressbook/a$1;-><init>(Lkik/android/addressbook/a;)V
 
     iput-object v0, p0, Lkik/android/addressbook/a;->w:Lcom/kik/events/e;
 
-    .line 114
+    .line 116
     new-instance v0, Lkik/android/addressbook/a$2;
 
     invoke-direct {v0, p0}, Lkik/android/addressbook/a$2;-><init>(Lkik/android/addressbook/a;)V
 
     iput-object v0, p0, Lkik/android/addressbook/a;->x:Lcom/kik/events/e;
 
-    .line 132
+    .line 149
     iput-object p4, p0, Lkik/android/addressbook/a;->b:Lkik/android/a;
 
-    .line 133
+    .line 150
     iput-object p2, p0, Lkik/android/addressbook/a;->j:Lkik/core/interfaces/ad;
 
-    .line 134
+    .line 151
     iput-object p3, p0, Lkik/android/addressbook/a;->k:Lkik/core/interfaces/ICommunication;
 
-    .line 135
-    iput-object p5, p0, Lkik/android/addressbook/a;->c:Lkik/core/interfaces/af;
+    .line 152
+    iput-object p5, p0, Lkik/android/addressbook/a;->c:Lkik/core/interfaces/ag;
 
-    .line 136
+    .line 153
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v3, "AddressBookThread"
@@ -214,12 +214,12 @@
 
     iput-object v0, p0, Lkik/android/addressbook/a;->l:Landroid/os/HandlerThread;
 
-    .line 137
+    .line 154
     iget-object v0, p0, Lkik/android/addressbook/a;->l:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 138
+    .line 155
     new-instance v0, Landroid/os/Handler;
 
     iget-object v3, p0, Lkik/android/addressbook/a;->l:Landroid/os/HandlerThread;
@@ -232,8 +232,8 @@
 
     iput-object v0, p0, Lkik/android/addressbook/a;->m:Landroid/os/Handler;
 
-    .line 140
-    invoke-static {p6}, Lkik/core/util/w;->a(Ljava/lang/CharSequence;)Z
+    .line 157
+    invoke-static {p6}, Lkik/core/util/u;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -250,8 +250,8 @@
     :goto_0
     iput-object v0, p0, Lkik/android/addressbook/a;->f:Ljava/lang/String;
 
-    .line 143
-    invoke-static {p6}, Lkik/core/util/w;->a(Ljava/lang/CharSequence;)Z
+    .line 160
+    invoke-static {p6}, Lkik/core/util/u;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -259,7 +259,7 @@
 
     iget-object v0, p0, Lkik/android/addressbook/a;->f:Ljava/lang/String;
 
-    invoke-static {v0}, Lkik/core/util/w;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lkik/core/util/u;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -267,38 +267,38 @@
 
     move v0, v1
 
-    .line 144
+    .line 161
     :goto_1
     iget-object v1, p0, Lkik/android/addressbook/a;->f:Ljava/lang/String;
 
     invoke-direct {p0, v1, v0}, Lkik/android/addressbook/a;->a(Ljava/lang/String;Z)V
 
-    .line 146
+    .line 163
     iput-object p1, p0, Lkik/android/addressbook/a;->i:Lkik/android/config/b;
 
-    .line 147
-    iget-object v0, p0, Lkik/android/addressbook/a;->c:Lkik/core/interfaces/af;
+    .line 164
+    iget-object v0, p0, Lkik/android/addressbook/a;->c:Lkik/core/interfaces/ag;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lkik/android/addressbook/a;->c:Lkik/core/interfaces/af;
+    iget-object v0, p0, Lkik/android/addressbook/a;->c:Lkik/core/interfaces/ag;
 
-    invoke-interface {v0}, Lkik/core/interfaces/af;->d()Lkik/core/datatypes/ad;
+    invoke-interface {v0}, Lkik/core/interfaces/ag;->d()Lkik/core/datatypes/aa;
 
-    .line 148
-    iget-object v0, p0, Lkik/android/addressbook/a;->c:Lkik/core/interfaces/af;
+    .line 165
+    iget-object v0, p0, Lkik/android/addressbook/a;->c:Lkik/core/interfaces/ag;
 
-    invoke-interface {v0}, Lkik/core/interfaces/af;->d()Lkik/core/datatypes/ad;
+    invoke-interface {v0}, Lkik/core/interfaces/ag;->d()Lkik/core/datatypes/aa;
 
     move-result-object v0
 
     .line 1156
-    iget-object v0, v0, Lkik/core/datatypes/ad;->a:Ljava/lang/String;
+    iget-object v0, v0, Lkik/core/datatypes/aa;->a:Ljava/lang/String;
 
-    .line 148
+    .line 165
     iput-object v0, p0, Lkik/android/addressbook/a;->h:Ljava/lang/String;
 
-    .line 153
+    .line 170
     :goto_2
     iget-object v0, p0, Lkik/android/addressbook/a;->s:Lcom/kik/events/d;
 
@@ -312,12 +312,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/kik/events/d;->a(Lcom/kik/events/c;Lcom/kik/events/e;)Lcom/kik/events/e;
 
-    .line 154
+    .line 171
     iget-object v0, p0, Lkik/android/addressbook/a;->s:Lcom/kik/events/d;
 
-    iget-object v1, p0, Lkik/android/addressbook/a;->c:Lkik/core/interfaces/af;
+    iget-object v1, p0, Lkik/android/addressbook/a;->c:Lkik/core/interfaces/ag;
 
-    invoke-interface {v1}, Lkik/core/interfaces/af;->a()Lcom/kik/events/c;
+    invoke-interface {v1}, Lkik/core/interfaces/ag;->a()Lcom/kik/events/c;
 
     move-result-object v1
 
@@ -325,22 +325,22 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/kik/events/d;->a(Lcom/kik/events/c;Lcom/kik/events/e;)Lcom/kik/events/e;
 
-    .line 155
+    .line 172
     return-void
 
     :cond_0
     move-object v0, p6
 
-    .line 140
+    .line 157
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 143
+    .line 160
     goto :goto_1
 
-    .line 151
+    .line 168
     :cond_2
     const/4 v0, 0x0
 
@@ -349,32 +349,22 @@
     goto :goto_2
 .end method
 
-.method static synthetic a(Lkik/android/addressbook/a;Ljava/lang/String;)Ljava/lang/String;
-    .locals 0
-
-    .prologue
-    .line 45
-    iput-object p1, p0, Lkik/android/addressbook/a;->h:Ljava/lang/String;
-
-    return-object p1
-.end method
-
-.method static synthetic a(Lkik/android/addressbook/a;)Lkik/core/net/outgoing/x;
+.method static synthetic a(Lkik/android/addressbook/a;)Lkik/core/net/outgoing/MatchingRequest;
     .locals 1
 
     .prologue
-    .line 45
-    iget-object v0, p0, Lkik/android/addressbook/a;->r:Lkik/core/net/outgoing/x;
+    .line 46
+    iget-object v0, p0, Lkik/android/addressbook/a;->r:Lkik/core/net/outgoing/MatchingRequest;
 
     return-object v0
 .end method
 
-.method static synthetic a(Lkik/android/addressbook/a;Lkik/core/net/outgoing/x;)Lkik/core/net/outgoing/x;
+.method static synthetic a(Lkik/android/addressbook/a;Lkik/core/net/outgoing/MatchingRequest;)Lkik/core/net/outgoing/MatchingRequest;
     .locals 0
 
     .prologue
-    .line 45
-    iput-object p1, p0, Lkik/android/addressbook/a;->r:Lkik/core/net/outgoing/x;
+    .line 46
+    iput-object p1, p0, Lkik/android/addressbook/a;->r:Lkik/core/net/outgoing/MatchingRequest;
 
     return-object p1
 .end method
@@ -383,10 +373,10 @@
     .locals 3
 
     .prologue
-    .line 393
+    .line 414
     iput-object p1, p0, Lkik/android/addressbook/a;->f:Ljava/lang/String;
 
-    .line 394
+    .line 415
     iget-object v0, p0, Lkik/android/addressbook/a;->j:Lkik/core/interfaces/ad;
 
     const-string v1, "kik.address.book.integration.phone.number"
@@ -395,7 +385,7 @@
 
     invoke-interface {v0, v1, v2}, Lkik/core/interfaces/ad;->c(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 395
+    .line 416
     iget-object v0, p0, Lkik/android/addressbook/a;->j:Lkik/core/interfaces/ad;
 
     const-string v1, "kik.address.book.integration.manually.set"
@@ -406,8 +396,93 @@
 
     invoke-interface {v0, v1, v2}, Lkik/core/interfaces/ad;->a(Ljava/lang/String;Ljava/lang/Boolean;)Z
 
-    .line 396
+    .line 417
     return-void
+.end method
+
+.method static synthetic a(Lkik/android/addressbook/a;Ljava/lang/String;)V
+    .locals 7
+
+    .prologue
+    const/4 v3, 0x0
+
+    .line 46
+    .line 2140
+    iget-object v0, p0, Lkik/android/addressbook/a;->c:Lkik/core/interfaces/ag;
+
+    invoke-interface {v0}, Lkik/core/interfaces/ag;->d()Lkik/core/datatypes/aa;
+
+    move-result-object v0
+
+    .line 2156
+    iget-object v0, v0, Lkik/core/datatypes/aa;->a:Ljava/lang/String;
+
+    .line 2140
+    iput-object v0, p0, Lkik/android/addressbook/a;->h:Ljava/lang/String;
+
+    .line 2141
+    invoke-virtual {p0}, Lkik/android/addressbook/a;->d()Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 2339
+    iget-object v0, p0, Lkik/android/addressbook/a;->d:Lkik/android/addressbook/AddressBookRetryPolicy;
+
+    invoke-virtual {v0}, Lkik/android/addressbook/AddressBookRetryPolicy;->a()V
+
+    .line 2340
+    invoke-virtual {p0}, Lkik/android/addressbook/a;->b()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const-string v6, "opt-in"
+
+    .line 2341
+    :goto_0
+    new-instance v0, Lkik/core/net/outgoing/MatchingRequest;
+
+    iget-object v1, p0, Lkik/android/addressbook/a;->f:Ljava/lang/String;
+
+    iget-object v2, p0, Lkik/android/addressbook/a;->h:Ljava/lang/String;
+
+    invoke-virtual {p0}, Lkik/android/addressbook/a;->b()Z
+
+    move-result v4
+
+    if-nez v4, :cond_2
+
+    const/4 v4, 0x1
+
+    :goto_1
+    move-object v5, p1
+
+    invoke-direct/range {v0 .. v6}, Lkik/core/net/outgoing/MatchingRequest;-><init>(Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Ljava/lang/String;)V
+
+    invoke-direct {p0, v0}, Lkik/android/addressbook/a;->a(Lkik/core/net/outgoing/MatchingRequest;)V
+
+    .line 46
+    :cond_0
+    return-void
+
+    .line 2340
+    :cond_1
+    const-string v6, "opt-out"
+
+    goto :goto_0
+
+    :cond_2
+    move v4, v3
+
+    .line 2341
+    goto :goto_1
 .end method
 
 .method static synthetic a(Lkik/android/addressbook/a;Ljava/lang/String;Ljava/lang/String;)V
@@ -416,8 +491,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 45
-    .line 2485
+    .line 46
+    .line 3506
     iget-object v1, p0, Lkik/android/addressbook/a;->o:Ljava/util/Iterator;
 
     if-eqz v1, :cond_0
@@ -430,7 +505,7 @@
 
     if-nez v1, :cond_1
 
-    .line 2493
+    .line 3514
     :cond_0
     :try_start_0
     iget-object v1, p0, Lkik/android/addressbook/a;->n:Lkik/core/interfaces/d;
@@ -441,32 +516,32 @@
 
     move-result-object v0
 
-    .line 2498
+    .line 3519
     :goto_0
     iget-object v1, p0, Lkik/android/addressbook/a;->e:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 2499
+    .line 3520
     const/4 v2, 0x1
 
     :try_start_1
     iput-boolean v2, p0, Lkik/android/addressbook/a;->p:Z
 
-    .line 2500
+    .line 3521
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lkik/android/addressbook/a;->q:Z
 
-    .line 2501
+    .line 3522
     const/4 v2, 0x0
 
-    iput-object v2, p0, Lkik/android/addressbook/a;->r:Lkik/core/net/outgoing/x;
+    iput-object v2, p0, Lkik/android/addressbook/a;->r:Lkik/core/net/outgoing/MatchingRequest;
 
-    .line 2502
+    .line 3523
     invoke-direct {p0}, Lkik/android/addressbook/a;->l()V
 
-    .line 2503
+    .line 3524
     iget-object v2, p0, Lkik/android/addressbook/a;->b:Lkik/android/a;
 
     invoke-virtual {v2, v0}, Lkik/android/a;->a(Lcom/google/common/hash/BloomFilter;)Ljava/util/Iterator;
@@ -475,12 +550,12 @@
 
     iput-object v0, p0, Lkik/android/addressbook/a;->o:Ljava/util/Iterator;
 
-    .line 2504
+    .line 3525
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1, p2}, Lkik/android/addressbook/a;->a(ZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 2505
+    .line 3526
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -488,11 +563,11 @@
     :cond_1
     return-void
 
-    .line 2495
+    .line 3516
     :catch_0
     move-exception v1
 
-    .line 2496
+    .line 3517
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "Could not retrieve address filter for update! :"
@@ -507,7 +582,7 @@
 
     goto :goto_0
 
-    .line 2505
+    .line 3526
     :catchall_0
     move-exception v0
 
@@ -525,7 +600,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 3336
+    .line 4355
     :try_start_0
     iget-object v0, p0, Lkik/android/addressbook/a;->n:Lkik/core/interfaces/d;
 
@@ -533,13 +608,13 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3341
+    .line 4360
     :goto_0
     iget-boolean v0, p0, Lkik/android/addressbook/a;->p:Z
 
     if-eqz v0, :cond_0
 
-    .line 3342
+    .line 4361
     iget-object v0, p0, Lkik/android/addressbook/a;->j:Lkik/core/interfaces/ad;
 
     const-string v1, "AddressIntegration.LAST_ADDRESS_BOOK_UPDATE_KEY"
@@ -548,8 +623,8 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 3343
-    invoke-static {}, Lkik/core/util/x;->b()J
+    .line 4362
+    invoke-static {}, Lkik/core/util/v;->b()J
 
     move-result-wide v4
 
@@ -561,19 +636,19 @@
 
     move-result-object v2
 
-    .line 3342
+    .line 4361
     invoke-interface {v0, v1, v2}, Lkik/core/interfaces/ad;->c(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 3344
+    .line 4363
     iput-boolean v3, p0, Lkik/android/addressbook/a;->p:Z
 
-    .line 3347
+    .line 4366
     :cond_0
     iget-boolean v0, p0, Lkik/android/addressbook/a;->q:Z
 
     if-eqz v0, :cond_1
 
-    .line 3348
+    .line 4367
     iget-object v0, p0, Lkik/android/addressbook/a;->j:Lkik/core/interfaces/ad;
 
     const-string v1, "AddressIntegration.LAST_ADDRESS_BOOK_FULL_UPDATE_KEY"
@@ -582,8 +657,8 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 3349
-    invoke-static {}, Lkik/core/util/x;->b()J
+    .line 4368
+    invoke-static {}, Lkik/core/util/v;->b()J
 
     move-result-wide v4
 
@@ -595,21 +670,21 @@
 
     move-result-object v2
 
-    .line 3348
+    .line 4367
     invoke-interface {v0, v1, v2}, Lkik/core/interfaces/ad;->c(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 3350
+    .line 4369
     iput-boolean v3, p0, Lkik/android/addressbook/a;->q:Z
 
-    .line 45
+    .line 46
     :cond_1
     return-void
 
-    .line 3338
+    .line 4357
     :catch_0
     move-exception v0
 
-    .line 3339
+    .line 4358
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "Could not update address filter! :"
@@ -625,33 +700,33 @@
     goto :goto_0
 .end method
 
-.method private a(Lkik/core/net/outgoing/x;)V
+.method private a(Lkik/core/net/outgoing/MatchingRequest;)V
     .locals 2
 
     .prologue
-    .line 573
+    .line 595
     iget-object v0, p0, Lkik/android/addressbook/a;->k:Lkik/core/interfaces/ICommunication;
 
-    invoke-interface {v0, p1}, Lkik/core/interfaces/ICommunication;->a(Lkik/core/net/outgoing/ae;)Lcom/kik/events/Promise;
+    invoke-interface {v0, p1}, Lkik/core/interfaces/ICommunication;->a(Lkik/core/net/outgoing/j;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
     new-instance v1, Lkik/android/addressbook/a$6;
 
-    invoke-direct {v1, p0, p1}, Lkik/android/addressbook/a$6;-><init>(Lkik/android/addressbook/a;Lkik/core/net/outgoing/x;)V
+    invoke-direct {v1, p0, p1}, Lkik/android/addressbook/a$6;-><init>(Lkik/android/addressbook/a;Lkik/core/net/outgoing/MatchingRequest;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
-    .line 614
+    .line 637
     return-void
 .end method
 
-.method static synthetic b(Lkik/android/addressbook/a;)Lkik/core/interfaces/af;
+.method static synthetic b(Lkik/android/addressbook/a;)Lkik/core/interfaces/ag;
     .locals 1
 
     .prologue
-    .line 45
-    iget-object v0, p0, Lkik/android/addressbook/a;->c:Lkik/core/interfaces/af;
+    .line 46
+    iget-object v0, p0, Lkik/android/addressbook/a;->c:Lkik/core/interfaces/ag;
 
     return-object v0
 .end method
@@ -660,146 +735,104 @@
     .locals 0
 
     .prologue
-    .line 45
+    .line 46
     invoke-direct {p0, p1}, Lkik/android/addressbook/a;->f(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method static synthetic b(Lkik/android/addressbook/a;Lkik/core/net/outgoing/x;)V
+.method static synthetic b(Lkik/android/addressbook/a;Lkik/core/net/outgoing/MatchingRequest;)V
     .locals 0
 
     .prologue
-    .line 45
-    invoke-direct {p0, p1}, Lkik/android/addressbook/a;->a(Lkik/core/net/outgoing/x;)V
+    .line 46
+    invoke-direct {p0, p1}, Lkik/android/addressbook/a;->a(Lkik/core/net/outgoing/MatchingRequest;)V
 
     return-void
 .end method
 
-.method static synthetic c(Lkik/android/addressbook/a;)Ljava/lang/String;
+.method static synthetic c(Lkik/android/addressbook/a;)Lkik/core/interfaces/b;
     .locals 1
 
     .prologue
-    .line 45
-    iget-object v0, p0, Lkik/android/addressbook/a;->h:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic d(Lkik/android/addressbook/a;)V
-    .locals 7
-
-    .prologue
-    const/4 v3, 0x0
-
-    .line 45
-    .line 1320
-    iget-object v0, p0, Lkik/android/addressbook/a;->d:Lkik/android/addressbook/AddressBookRetryPolicy;
-
-    invoke-virtual {v0}, Lkik/android/addressbook/AddressBookRetryPolicy;->a()V
-
-    .line 1321
-    invoke-virtual {p0}, Lkik/android/addressbook/a;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const-string v6, "opt-in"
-
-    .line 1322
-    :goto_0
-    new-instance v0, Lkik/core/net/outgoing/x;
-
-    iget-object v1, p0, Lkik/android/addressbook/a;->f:Ljava/lang/String;
-
-    iget-object v2, p0, Lkik/android/addressbook/a;->h:Ljava/lang/String;
-
-    invoke-virtual {p0}, Lkik/android/addressbook/a;->b()Z
-
-    move-result v4
-
-    if-nez v4, :cond_1
-
-    const/4 v4, 0x1
-
-    :goto_1
-    const-string v5, "account-settings"
-
-    invoke-direct/range {v0 .. v6}, Lkik/core/net/outgoing/x;-><init>(Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Ljava/lang/String;)V
-
-    invoke-direct {p0, v0}, Lkik/android/addressbook/a;->a(Lkik/core/net/outgoing/x;)V
-
-    .line 45
-    return-void
-
-    .line 1321
-    :cond_0
-    const-string v6, "opt-out"
-
-    goto :goto_0
-
-    :cond_1
-    move v4, v3
-
-    .line 1322
-    goto :goto_1
-.end method
-
-.method static synthetic e(Lkik/android/addressbook/a;)Lkik/core/interfaces/b;
-    .locals 1
-
-    .prologue
-    .line 45
+    .line 46
     iget-object v0, p0, Lkik/android/addressbook/a;->g:Lkik/core/interfaces/b;
 
     return-object v0
 .end method
 
-.method static synthetic f(Lkik/android/addressbook/a;)Lkik/core/interfaces/ad;
+.method static synthetic d(Lkik/android/addressbook/a;)Lkik/core/interfaces/ad;
     .locals 1
 
     .prologue
-    .line 45
+    .line 46
     iget-object v0, p0, Lkik/android/addressbook/a;->j:Lkik/core/interfaces/ad;
 
     return-object v0
+.end method
+
+.method static synthetic e(Lkik/android/addressbook/a;)Z
+    .locals 2
+
+    .prologue
+    .line 46
+    .line 2457
+    iget-object v0, p0, Lkik/android/addressbook/a;->j:Lkik/core/interfaces/ad;
+
+    const-string v1, "AddressIntegration.LAST_ADDRESS_BOOK_UPDATE_KEY"
+
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 46
+    goto :goto_0
 .end method
 
 .method private f(Ljava/lang/String;)V
     .locals 3
 
     .prologue
-    .line 306
+    .line 325
     iget-object v1, p0, Lkik/android/addressbook/a;->e:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 308
+    .line 327
     :try_start_0
     iget-object v0, p0, Lkik/android/addressbook/a;->n:Lkik/core/interfaces/d;
 
     invoke-interface {v0}, Lkik/core/interfaces/d;->j()V
 
-    .line 309
+    .line 328
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lkik/android/addressbook/a;->p:Z
 
-    .line 310
+    .line 329
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lkik/android/addressbook/a;->q:Z
 
-    .line 311
+    .line 330
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lkik/android/addressbook/a;->r:Lkik/core/net/outgoing/x;
+    iput-object v0, p0, Lkik/android/addressbook/a;->r:Lkik/core/net/outgoing/MatchingRequest;
 
-    .line 312
+    .line 331
     invoke-direct {p0}, Lkik/android/addressbook/a;->l()V
 
-    .line 313
+    .line 332
     iget-object v0, p0, Lkik/android/addressbook/a;->b:Lkik/android/a;
 
     invoke-virtual {v0}, Lkik/android/a;->a()Ljava/util/Iterator;
@@ -808,14 +841,14 @@
 
     iput-object v0, p0, Lkik/android/addressbook/a;->o:Ljava/util/Iterator;
 
-    .line 314
+    .line 333
     const/4 v0, 0x1
 
     const-string v2, "opt-in"
 
     invoke-virtual {p0, v0, p1, v2}, Lkik/android/addressbook/a;->a(ZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 315
+    .line 334
     monitor-exit v1
 
     return-void
@@ -830,58 +863,30 @@
     throw v0
 .end method
 
-.method static synthetic g(Lkik/android/addressbook/a;)Z
-    .locals 2
-
-    .prologue
-    .line 45
-    .line 1436
-    iget-object v0, p0, Lkik/android/addressbook/a;->j:Lkik/core/interfaces/ad;
-
-    const-string v1, "AddressIntegration.LAST_ADDRESS_BOOK_UPDATE_KEY"
-
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->q(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 45
-    goto :goto_0
-.end method
-
-.method static synthetic h(Lkik/android/addressbook/a;)Z
+.method static synthetic f(Lkik/android/addressbook/a;)Z
     .locals 6
 
     .prologue
-    .line 45
-    .line 1454
+    .line 46
+    .line 2475
     iget-object v0, p0, Lkik/android/addressbook/a;->j:Lkik/core/interfaces/ad;
 
     const-string v1, "AddressIntegration.LAST_ADDRESS_BOOK_FULL_UPDATE_KEY"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->q(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1456
+    .line 2477
     if-eqz v0, :cond_0
 
-    .line 1457
+    .line 2478
     invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v0
 
-    .line 1458
-    invoke-static {}, Lkik/core/util/x;->b()J
+    .line 2479
+    invoke-static {}, Lkik/core/util/v;->b()J
 
     move-result-wide v2
 
@@ -909,19 +914,19 @@
 
     if-lez v0, :cond_1
 
-    .line 1459
+    .line 2480
     const/4 v0, 0x1
 
     :goto_0
     return v0
 
-    .line 1465
+    .line 2486
     :cond_0
-    invoke-static {}, Lkik/core/util/x;->b()J
+    invoke-static {}, Lkik/core/util/v;->b()J
 
     move-result-wide v0
 
-    .line 1470
+    .line 2491
     iget-object v2, p0, Lkik/android/addressbook/a;->t:Ljava/util/Random;
 
     const/16 v3, 0xa
@@ -930,7 +935,7 @@
 
     move-result v2
 
-    .line 1471
+    .line 2492
     mul-int/lit8 v2, v2, 0x18
 
     mul-int/lit8 v2, v2, 0x3c
@@ -945,7 +950,7 @@
 
     sub-long/2addr v0, v2
 
-    .line 1473
+    .line 2494
     iget-object v2, p0, Lkik/android/addressbook/a;->j:Lkik/core/interfaces/ad;
 
     const-string v3, "AddressIntegration.LAST_ADDRESS_BOOK_FULL_UPDATE_KEY"
@@ -956,38 +961,38 @@
 
     invoke-interface {v2, v3, v0}, Lkik/core/interfaces/ad;->c(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 1477
+    .line 2498
     :cond_1
     const/4 v0, 0x0
 
-    .line 45
+    .line 46
     goto :goto_0
 .end method
 
-.method static synthetic i(Lkik/android/addressbook/a;)Z
+.method static synthetic g(Lkik/android/addressbook/a;)Z
     .locals 4
 
     .prologue
-    .line 45
-    .line 2441
+    .line 46
+    .line 3462
     iget-object v0, p0, Lkik/android/addressbook/a;->j:Lkik/core/interfaces/ad;
 
     const-string v1, "AddressIntegration.LAST_ADDRESS_BOOK_UPDATE_KEY"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->q(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2443
+    .line 3464
     if-eqz v0, :cond_0
 
-    .line 2444
+    .line 3465
     invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v0
 
-    .line 2445
-    invoke-static {}, Lkik/core/util/x;->b()J
+    .line 3466
+    invoke-static {}, Lkik/core/util/v;->b()J
 
     move-result-wide v2
 
@@ -1015,46 +1020,66 @@
 
     if-lez v0, :cond_0
 
-    .line 2446
+    .line 3467
     const/4 v0, 0x1
 
     :goto_0
     return v0
 
-    .line 2449
+    .line 3470
     :cond_0
     const/4 v0, 0x0
 
-    .line 45
+    .line 46
     goto :goto_0
 .end method
 
-.method static synthetic j(Lkik/android/addressbook/a;)Landroid/os/Handler;
+.method static synthetic h(Lkik/android/addressbook/a;)Landroid/os/Handler;
     .locals 1
 
     .prologue
-    .line 45
+    .line 46
     iget-object v0, p0, Lkik/android/addressbook/a;->m:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic k(Lkik/android/addressbook/a;)Ljava/lang/Object;
+.method static synthetic i(Lkik/android/addressbook/a;)Ljava/lang/Object;
     .locals 1
 
     .prologue
-    .line 45
+    .line 46
     iget-object v0, p0, Lkik/android/addressbook/a;->e:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method static synthetic l(Lkik/android/addressbook/a;)Ljava/util/Iterator;
+.method static synthetic j(Lkik/android/addressbook/a;)Ljava/util/Iterator;
     .locals 1
 
     .prologue
-    .line 45
+    .line 46
     iget-object v0, p0, Lkik/android/addressbook/a;->o:Ljava/util/Iterator;
+
+    return-object v0
+.end method
+
+.method static synthetic k(Lkik/android/addressbook/a;)Lcom/kik/events/g;
+    .locals 1
+
+    .prologue
+    .line 46
+    iget-object v0, p0, Lkik/android/addressbook/a;->v:Lcom/kik/events/g;
+
+    return-object v0
+.end method
+
+.method static synthetic l(Lkik/android/addressbook/a;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 46
+    iget-object v0, p0, Lkik/android/addressbook/a;->f:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -1063,12 +1088,12 @@
     .locals 3
 
     .prologue
-    .line 327
+    .line 346
     iget-object v1, p0, Lkik/android/addressbook/a;->e:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 329
+    .line 348
     :try_start_0
     iget-object v0, p0, Lkik/android/addressbook/a;->m:Landroid/os/Handler;
 
@@ -1076,7 +1101,7 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 330
+    .line 349
     monitor-exit v1
 
     return-void
@@ -1091,31 +1116,21 @@
     throw v0
 .end method
 
-.method static synthetic m(Lkik/android/addressbook/a;)Lcom/kik/events/g;
+.method static synthetic m(Lkik/android/addressbook/a;)Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 45
-    iget-object v0, p0, Lkik/android/addressbook/a;->v:Lcom/kik/events/g;
+    .line 46
+    iget-object v0, p0, Lkik/android/addressbook/a;->h:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic n(Lkik/android/addressbook/a;)Ljava/lang/String;
+.method static synthetic n(Lkik/android/addressbook/a;)Ljava/util/Iterator;
     .locals 1
 
     .prologue
-    .line 45
-    iget-object v0, p0, Lkik/android/addressbook/a;->f:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic o(Lkik/android/addressbook/a;)Ljava/util/Iterator;
-    .locals 1
-
-    .prologue
-    .line 45
+    .line 46
     const/4 v0, 0x0
 
     iput-object v0, p0, Lkik/android/addressbook/a;->o:Ljava/util/Iterator;
@@ -1123,21 +1138,21 @@
     return-object v0
 .end method
 
-.method static synthetic p(Lkik/android/addressbook/a;)Z
+.method static synthetic o(Lkik/android/addressbook/a;)Z
     .locals 1
 
     .prologue
-    .line 45
+    .line 46
     iget-boolean v0, p0, Lkik/android/addressbook/a;->p:Z
 
     return v0
 .end method
 
-.method static synthetic q(Lkik/android/addressbook/a;)Lkik/android/addressbook/AddressBookRetryPolicy;
+.method static synthetic p(Lkik/android/addressbook/a;)Lkik/android/addressbook/AddressBookRetryPolicy;
     .locals 1
 
     .prologue
-    .line 45
+    .line 46
     iget-object v0, p0, Lkik/android/addressbook/a;->d:Lkik/android/addressbook/AddressBookRetryPolicy;
 
     return-object v0
@@ -1149,28 +1164,28 @@
     .locals 1
 
     .prologue
-    .line 161
+    .line 178
     iget-object v0, p0, Lkik/android/addressbook/a;->l:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->interrupt()V
 
-    .line 162
+    .line 179
     iget-object v0, p0, Lkik/android/addressbook/a;->n:Lkik/core/interfaces/d;
 
     if-eqz v0, :cond_0
 
-    .line 163
+    .line 180
     iget-object v0, p0, Lkik/android/addressbook/a;->n:Lkik/core/interfaces/d;
 
     invoke-interface {v0}, Lkik/core/interfaces/d;->i()V
 
-    .line 165
+    .line 182
     :cond_0
     iget-object v0, p0, Lkik/android/addressbook/a;->s:Lcom/kik/events/d;
 
     invoke-virtual {v0}, Lcom/kik/events/d;->a()V
 
-    .line 166
+    .line 183
     return-void
 .end method
 
@@ -1178,12 +1193,12 @@
     .locals 1
 
     .prologue
-    .line 249
+    .line 266
     iget-object v0, p0, Lkik/android/addressbook/a;->n:Lkik/core/interfaces/d;
 
     invoke-interface {v0, p1}, Lkik/core/interfaces/d;->a(Ljava/lang/Boolean;)V
 
-    .line 250
+    .line 267
     return-void
 .end method
 
@@ -1193,7 +1208,7 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 184
+    .line 201
     iget-object v0, p0, Lkik/android/addressbook/a;->j:Lkik/core/interfaces/ad;
 
     const-string v1, "kik.addressbook.permission"
@@ -1204,7 +1219,7 @@
 
     invoke-interface {v0, v1, v2}, Lkik/core/interfaces/ad;->a(Ljava/lang/String;Ljava/lang/Boolean;)Z
 
-    .line 185
+    .line 202
     iget-object v0, p0, Lkik/android/addressbook/a;->j:Lkik/core/interfaces/ad;
 
     const-string v1, "kik.addressbook.flow.finished"
@@ -1215,15 +1230,15 @@
 
     invoke-interface {v0, v1, v2}, Lkik/core/interfaces/ad;->a(Ljava/lang/String;Ljava/lang/Boolean;)Z
 
-    .line 188
+    .line 205
     invoke-direct {p0, p1}, Lkik/android/addressbook/a;->f(Ljava/lang/String;)V
 
-    .line 189
+    .line 206
     iget-object v0, p0, Lkik/android/addressbook/a;->n:Lkik/core/interfaces/d;
 
     invoke-interface {v0}, Lkik/core/interfaces/d;->c()V
 
-    .line 190
+    .line 207
     iget-object v0, p0, Lkik/android/addressbook/a;->u:Lcom/kik/events/g;
 
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -1232,7 +1247,7 @@
 
     invoke-virtual {v0, v1}, Lcom/kik/events/g;->a(Ljava/lang/Object;)V
 
-    .line 191
+    .line 208
     return-void
 .end method
 
@@ -1240,10 +1255,10 @@
     .locals 0
 
     .prologue
-    .line 430
+    .line 451
     iput-object p1, p0, Lkik/android/addressbook/a;->g:Lkik/core/interfaces/b;
 
-    .line 431
+    .line 452
     return-void
 .end method
 
@@ -1251,10 +1266,10 @@
     .locals 0
 
     .prologue
-    .line 619
+    .line 642
     iput-object p1, p0, Lkik/android/addressbook/a;->n:Lkik/core/interfaces/d;
 
-    .line 620
+    .line 643
     return-void
 .end method
 
@@ -1262,7 +1277,7 @@
     .locals 2
 
     .prologue
-    .line 510
+    .line 531
     iget-object v0, p0, Lkik/android/addressbook/a;->m:Landroid/os/Handler;
 
     new-instance v1, Lkik/android/addressbook/a$5;
@@ -1271,7 +1286,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 569
+    .line 591
     return-void
 .end method
 
@@ -1285,7 +1300,7 @@
 
     const/4 v4, 0x0
 
-    .line 197
+    .line 214
     invoke-virtual {p0}, Lkik/android/addressbook/a;->b()Z
 
     move-result v0
@@ -1294,7 +1309,7 @@
 
     const-string v6, "opt-in"
 
-    .line 200
+    .line 217
     :goto_0
     invoke-virtual {p0}, Lkik/android/addressbook/a;->d()Ljava/lang/Boolean;
 
@@ -1308,32 +1323,32 @@
 
     move v0, v3
 
-    .line 201
+    .line 218
     :goto_1
     iget-object v5, p0, Lkik/android/addressbook/a;->f:Ljava/lang/String;
 
-    .line 202
+    .line 219
     iget-object v1, p0, Lkik/android/addressbook/a;->h:Ljava/lang/String;
 
-    .line 205
+    .line 222
     if-eqz v0, :cond_2
 
     move-object v1, v2
 
-    .line 209
+    .line 226
     :goto_2
-    new-instance v0, Lkik/core/net/outgoing/x;
+    new-instance v0, Lkik/core/net/outgoing/MatchingRequest;
 
     move-object v5, p1
 
-    invoke-direct/range {v0 .. v6}, Lkik/core/net/outgoing/x;-><init>(Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v6}, Lkik/core/net/outgoing/MatchingRequest;-><init>(Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {p0, v0}, Lkik/android/addressbook/a;->a(Lkik/core/net/outgoing/x;)V
+    invoke-direct {p0, v0}, Lkik/android/addressbook/a;->a(Lkik/core/net/outgoing/MatchingRequest;)V
 
-    .line 210
+    .line 227
     return-void
 
-    .line 197
+    .line 214
     :cond_0
     const-string v6, "opt-out"
 
@@ -1342,7 +1357,7 @@
     :cond_1
     move v0, v4
 
-    .line 200
+    .line 217
     goto :goto_1
 
     :cond_2
@@ -1357,7 +1372,7 @@
     .locals 1
 
     .prologue
-    .line 171
+    .line 188
     iget-object v0, p0, Lkik/android/addressbook/a;->n:Lkik/core/interfaces/d;
 
     invoke-interface {v0}, Lkik/core/interfaces/d;->g()Z
@@ -1380,7 +1395,7 @@
     .end annotation
 
     .prologue
-    .line 178
+    .line 195
     iget-object v0, p0, Lkik/android/addressbook/a;->n:Lkik/core/interfaces/d;
 
     invoke-interface {v0}, Lkik/core/interfaces/d;->b()Lcom/kik/events/Promise;
@@ -1389,7 +1404,7 @@
 
     const-wide/16 v2, 0x1388
 
-    invoke-static {v0, v2, v3}, Lcom/kik/events/m;->a(Lcom/kik/events/Promise;J)Lcom/kik/events/Promise;
+    invoke-static {v0, v2, v3}, Lcom/kik/events/l;->a(Lcom/kik/events/Promise;J)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -1406,36 +1421,36 @@
 
     const/4 v0, 0x1
 
-    .line 215
+    .line 232
     iget-object v1, p0, Lkik/android/addressbook/a;->n:Lkik/core/interfaces/d;
 
     invoke-interface {v1}, Lkik/core/interfaces/d;->d()V
 
-    .line 217
+    .line 234
     iget-object v8, p0, Lkik/android/addressbook/a;->e:Ljava/lang/Object;
 
     monitor-enter v8
 
-    .line 218
+    .line 235
     const/4 v1, 0x1
 
     :try_start_0
     iput-boolean v1, p0, Lkik/android/addressbook/a;->p:Z
 
-    .line 219
+    .line 236
     invoke-direct {p0}, Lkik/android/addressbook/a;->l()V
 
-    .line 220
+    .line 237
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lkik/android/addressbook/a;->r:Lkik/core/net/outgoing/x;
+    iput-object v1, p0, Lkik/android/addressbook/a;->r:Lkik/core/net/outgoing/MatchingRequest;
 
-    .line 221
+    .line 238
     const/4 v1, 0x0
 
     iput-object v1, p0, Lkik/android/addressbook/a;->o:Ljava/util/Iterator;
 
-    .line 223
+    .line 240
     iget-object v1, p0, Lkik/android/addressbook/a;->j:Lkik/core/interfaces/ad;
 
     const-string v3, "kik.addressbook.permission"
@@ -1448,7 +1463,7 @@
 
     invoke-interface {v1, v3, v4}, Lkik/core/interfaces/ad;->a(Ljava/lang/String;Ljava/lang/Boolean;)Z
 
-    .line 224
+    .line 241
     iget-object v1, p0, Lkik/android/addressbook/a;->j:Lkik/core/interfaces/ad;
 
     const-string v3, "kik.addressbook.flow.finished"
@@ -1461,12 +1476,12 @@
 
     invoke-interface {v1, v3, v4}, Lkik/core/interfaces/ad;->a(Ljava/lang/String;Ljava/lang/Boolean;)Z
 
-    .line 227
+    .line 244
     iget-object v1, p0, Lkik/android/addressbook/a;->d:Lkik/android/addressbook/AddressBookRetryPolicy;
 
     invoke-virtual {v1}, Lkik/android/addressbook/AddressBookRetryPolicy;->a()V
 
-    .line 229
+    .line 246
     invoke-virtual {p0}, Lkik/android/addressbook/a;->d()Ljava/lang/Boolean;
 
     move-result-object v1
@@ -1479,21 +1494,21 @@
 
     move v3, v0
 
-    .line 230
+    .line 247
     :goto_0
     iget-object v1, p0, Lkik/android/addressbook/a;->f:Ljava/lang/String;
 
-    .line 231
+    .line 248
     iget-object v0, p0, Lkik/android/addressbook/a;->h:Ljava/lang/String;
 
-    .line 234
+    .line 251
     if-eqz v3, :cond_1
 
     move-object v1, v2
 
-    .line 240
+    .line 257
     :goto_1
-    new-instance v0, Lkik/core/net/outgoing/x;
+    new-instance v0, Lkik/core/net/outgoing/MatchingRequest;
 
     const/4 v3, 0x1
 
@@ -1503,16 +1518,16 @@
 
     move-object v5, p1
 
-    invoke-direct/range {v0 .. v6}, Lkik/core/net/outgoing/x;-><init>(Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v6}, Lkik/core/net/outgoing/MatchingRequest;-><init>(Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {p0, v0}, Lkik/android/addressbook/a;->a(Lkik/core/net/outgoing/x;)V
+    invoke-direct {p0, v0}, Lkik/android/addressbook/a;->a(Lkik/core/net/outgoing/MatchingRequest;)V
 
-    .line 241
+    .line 258
     monitor-exit v8
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 243
+    .line 260
     iget-object v0, p0, Lkik/android/addressbook/a;->u:Lcom/kik/events/g;
 
     invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -1521,16 +1536,16 @@
 
     invoke-virtual {v0, v1}, Lcom/kik/events/g;->a(Ljava/lang/Object;)V
 
-    .line 244
+    .line 261
     return-void
 
     :cond_0
     move v3, v7
 
-    .line 229
+    .line 246
     goto :goto_0
 
-    .line 241
+    .line 258
     :catchall_0
     move-exception v0
 
@@ -1551,7 +1566,7 @@
     .locals 1
 
     .prologue
-    .line 255
+    .line 272
     iget-object v0, p0, Lkik/android/addressbook/a;->n:Lkik/core/interfaces/d;
 
     invoke-interface {v0}, Lkik/core/interfaces/d;->h()Ljava/lang/Boolean;
@@ -1565,7 +1580,7 @@
     .locals 2
 
     .prologue
-    .line 357
+    .line 376
     invoke-virtual {p0}, Lkik/android/addressbook/a;->c()Lcom/kik/events/Promise;
 
     move-result-object v0
@@ -1574,9 +1589,9 @@
 
     invoke-direct {v1, p0, p1}, Lkik/android/addressbook/a$4;-><init>(Lkik/android/addressbook/a;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
-    .line 382
+    .line 403
     return-void
 .end method
 
@@ -1593,12 +1608,12 @@
     .end annotation
 
     .prologue
-    .line 265
+    .line 283
     new-instance v0, Lcom/kik/events/Promise;
 
     invoke-direct {v0}, Lcom/kik/events/Promise;-><init>()V
 
-    .line 266
+    .line 284
     iget-object v1, p0, Lkik/android/addressbook/a;->n:Lkik/core/interfaces/d;
 
     invoke-interface {v1}, Lkik/core/interfaces/d;->e()Lcom/kik/events/Promise;
@@ -1609,9 +1624,9 @@
 
     invoke-direct {v2, p0, v0}, Lkik/android/addressbook/a$3;-><init>(Lkik/android/addressbook/a;Lcom/kik/events/Promise;)V
 
-    invoke-virtual {v1, v2}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v1, v2}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
-    .line 283
+    .line 302
     return-object v0
 .end method
 
@@ -1619,8 +1634,8 @@
     .locals 2
 
     .prologue
-    .line 401
-    invoke-static {p1}, Lkik/android/util/bt;->a(Ljava/lang/String;)Ljava/lang/String;
+    .line 422
+    invoke-static {p1}, Lkik/android/util/bs;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1628,7 +1643,7 @@
 
     invoke-direct {p0, v0, v1}, Lkik/android/addressbook/a;->a(Ljava/lang/String;Z)V
 
-    .line 402
+    .line 423
     return-void
 .end method
 
@@ -1636,26 +1651,26 @@
     .locals 2
 
     .prologue
-    .line 289
+    .line 308
     iget-object v0, p0, Lkik/android/addressbook/a;->j:Lkik/core/interfaces/ad;
 
     const-string v1, "AddressIntegration.UPLOAD_MY_INFO_OPT_IN_KEY"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->q(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 290
+    .line 309
     if-nez v0, :cond_0
 
-    .line 291
+    .line 310
     sget-object v0, Lkik/core/interfaces/IAddressBookIntegration$UploadInfoPermissionState;->UNSET:Lkik/core/interfaces/IAddressBookIntegration$UploadInfoPermissionState;
 
-    .line 297
+    .line 316
     :goto_0
     return-object v0
 
-    .line 293
+    .line 312
     :cond_0
     const-string v1, "true"
 
@@ -1665,12 +1680,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 294
+    .line 313
     sget-object v0, Lkik/core/interfaces/IAddressBookIntegration$UploadInfoPermissionState;->TRUE:Lkik/core/interfaces/IAddressBookIntegration$UploadInfoPermissionState;
 
     goto :goto_0
 
-    .line 297
+    .line 316
     :cond_1
     sget-object v0, Lkik/core/interfaces/IAddressBookIntegration$UploadInfoPermissionState;->FALSE:Lkik/core/interfaces/IAddressBookIntegration$UploadInfoPermissionState;
 
@@ -1678,15 +1693,17 @@
 .end method
 
 .method public final g()Z
-    .locals 2
+    .locals 3
 
     .prologue
-    .line 387
+    .line 408
     iget-object v0, p0, Lkik/android/addressbook/a;->j:Lkik/core/interfaces/ad;
 
     const-string v1, "kik.addressbook.flow.finished"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->v(Ljava/lang/String;)Ljava/lang/Boolean;
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v2}, Lkik/core/interfaces/ad;->a(Ljava/lang/String;Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -1710,7 +1727,7 @@
     .end annotation
 
     .prologue
-    .line 407
+    .line 428
     iget-object v0, p0, Lkik/android/addressbook/a;->u:Lcom/kik/events/g;
 
     invoke-virtual {v0}, Lcom/kik/events/g;->a()Lcom/kik/events/c;
@@ -1733,7 +1750,7 @@
     .end annotation
 
     .prologue
-    .line 413
+    .line 434
     iget-object v0, p0, Lkik/android/addressbook/a;->v:Lcom/kik/events/g;
 
     invoke-virtual {v0}, Lcom/kik/events/g;->a()Lcom/kik/events/c;
@@ -1747,7 +1764,7 @@
     .locals 1
 
     .prologue
-    .line 419
+    .line 440
     iget-object v0, p0, Lkik/android/addressbook/a;->f:Ljava/lang/String;
 
     return-object v0
@@ -1757,12 +1774,12 @@
     .locals 2
 
     .prologue
-    .line 425
+    .line 446
     iget-object v0, p0, Lkik/android/addressbook/a;->j:Lkik/core/interfaces/ad;
 
     const-string v1, "kik.address.book.integration.manually.set"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->u(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->w(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 

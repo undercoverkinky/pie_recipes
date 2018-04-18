@@ -132,7 +132,7 @@
     return-object v0
 .end method
 
-.method public static final values()[Ljavax/annotation/meta/When;
+.method public static values()[Ljavax/annotation/meta/When;
     .locals 1
 
     .prologue

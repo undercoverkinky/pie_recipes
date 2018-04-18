@@ -1,11 +1,11 @@
 .class final Lkik/android/chat/fragment/KikCodeFragment$2;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/KikCodeFragment;->b(Lkik/core/datatypes/s;)V
+    value = Lkik/android/chat/fragment/KikCodeFragment;->b(Lkik/core/datatypes/p;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,31 +15,31 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
-        "Lkik/core/net/outgoing/o;",
+        "Lkik/core/net/outgoing/GetGroupKikCodeRequest;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lkik/core/datatypes/s;
+.field final synthetic a:Lkik/core/datatypes/p;
 
 .field final synthetic b:Lkik/android/chat/fragment/KikCodeFragment;
 
 
 # direct methods
-.method constructor <init>(Lkik/android/chat/fragment/KikCodeFragment;Lkik/core/datatypes/s;)V
+.method constructor <init>(Lkik/android/chat/fragment/KikCodeFragment;Lkik/core/datatypes/p;)V
     .locals 0
 
     .prologue
-    .line 400
+    .line 419
     iput-object p1, p0, Lkik/android/chat/fragment/KikCodeFragment$2;->b:Lkik/android/chat/fragment/KikCodeFragment;
 
-    iput-object p2, p0, Lkik/android/chat/fragment/KikCodeFragment$2;->a:Lkik/core/datatypes/s;
+    iput-object p2, p0, Lkik/android/chat/fragment/KikCodeFragment$2;->a:Lkik/core/datatypes/p;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -50,13 +50,13 @@
     .locals 3
 
     .prologue
-    .line 400
-    check-cast p1, Lkik/core/net/outgoing/o;
+    .line 419
+    check-cast p1, Lkik/core/net/outgoing/GetGroupKikCodeRequest;
 
-    .line 1404
+    .line 1423
     new-instance v0, Lcom/kik/scan/GroupKikCode;
 
-    invoke-virtual {p1}, Lkik/core/net/outgoing/o;->f()[B
+    invoke-virtual {p1}, Lkik/core/net/outgoing/GetGroupKikCodeRequest;->getInviteByteArray()[B
 
     move-result-object v1
 
@@ -64,12 +64,12 @@
 
     invoke-direct {v0, v1, v2}, Lcom/kik/scan/GroupKikCode;-><init>([BI)V
 
-    .line 1405
+    .line 1424
     iget-object v1, p0, Lkik/android/chat/fragment/KikCodeFragment$2;->b:Lkik/android/chat/fragment/KikCodeFragment;
 
     invoke-static {v1, v0}, Lkik/android/chat/fragment/KikCodeFragment;->b(Lkik/android/chat/fragment/KikCodeFragment;Lcom/kik/scan/KikCode;)V
 
-    .line 400
+    .line 419
     return-void
 .end method
 
@@ -77,10 +77,7 @@
     .locals 2
 
     .prologue
-    .line 411
-    invoke-static {p1}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
-
-    .line 412
+    .line 431
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$2;->b:Lkik/android/chat/fragment/KikCodeFragment;
 
     new-instance v1, Lkik/android/chat/fragment/KikCodeFragment$2$1;
@@ -89,6 +86,6 @@
 
     invoke-static {v0, v1}, Lkik/android/chat/fragment/KikCodeFragment;->a(Lkik/android/chat/fragment/KikCodeFragment;Lkik/android/chat/fragment/KikCodeFragment$c;)V
 
-    .line 419
+    .line 439
     return-void
 .end method

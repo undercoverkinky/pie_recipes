@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/google/common/cache/a$b;
+.implements Lcom/google/common/cache/AbstractCache$b;
 
 
 # annotations
@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 159
+    .line 154
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +34,15 @@
     .locals 0
 
     .prologue
-    .line 161
+    .line 168
+    return-void
+.end method
+
+.method public final a(I)V
+    .locals 0
+
+    .prologue
+    .line 156
     return-void
 .end method
 
@@ -42,15 +50,25 @@
     .locals 0
 
     .prologue
-    .line 167
+    .line 162
     return-void
 .end method
 
-.method public final b()V
+.method public final b()Lcom/google/common/cache/a;
+    .locals 1
+
+    .prologue
+    .line 172
+    sget-object v0, Lcom/google/common/cache/CacheBuilder;->b:Lcom/google/common/cache/a;
+
+    return-object v0
+.end method
+
+.method public final b(I)V
     .locals 0
 
     .prologue
-    .line 164
+    .line 159
     return-void
 .end method
 
@@ -58,14 +76,6 @@
     .locals 0
 
     .prologue
-    .line 170
-    return-void
-.end method
-
-.method public final c()V
-    .locals 0
-
-    .prologue
-    .line 173
+    .line 165
     return-void
 .end method

@@ -32,10 +32,11 @@
 .field public static final GAMES:Ljava/lang/String; = "https://www.googleapis.com/auth/games"
 
 .field public static final PLUS_LOGIN:Ljava/lang/String; = "https://www.googleapis.com/auth/plus.login"
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
 
 .field public static final PLUS_ME:Ljava/lang/String; = "https://www.googleapis.com/auth/plus.me"
-
-.field public static final PLUS_MOMENTS:Ljava/lang/String; = "https://www.googleapis.com/auth/plus.moments.write"
 
 .field public static final PROFILE:Ljava/lang/String; = "profile"
 

@@ -15,7 +15,13 @@
 
 
 # virtual methods
+.method public abstract areNotificationsEnabled(Landroid/content/Context;Landroid/app/NotificationManager;)Z
+.end method
+
 .method public abstract cancelNotification(Landroid/app/NotificationManager;Ljava/lang/String;I)V
+.end method
+
+.method public abstract getImportance(Landroid/app/NotificationManager;)I
 .end method
 
 .method public abstract getSideChannelBindFlags()I

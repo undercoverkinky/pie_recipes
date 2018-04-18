@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 277
+    .line 336
     iput-object p1, p0, Lkik/android/chat/fragment/MediaViewerFragment$2;->a:Lkik/android/chat/fragment/MediaViewerFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 281
+    .line 340
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -57,7 +57,7 @@
 
     move-result v0
 
-    .line 282
+    .line 341
     iget-object v1, p0, Lkik/android/chat/fragment/MediaViewerFragment$2;->a:Lkik/android/chat/fragment/MediaViewerFragment;
 
     invoke-static {v1}, Lkik/android/chat/fragment/MediaViewerFragment;->c(Lkik/android/chat/fragment/MediaViewerFragment;)Landroid/widget/FrameLayout;
@@ -66,6 +66,6 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    .line 283
+    .line 342
     return-void
 .end method

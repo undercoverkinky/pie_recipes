@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 180
+    .line 186
     iput-object p1, p0, Lkik/android/chat/fragment/AbTestsFragment$3$1;->a:Lkik/android/chat/fragment/AbTestsFragment$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 1
 
     .prologue
-    .line 184
+    .line 190
     iget-object v0, p0, Lkik/android/chat/fragment/AbTestsFragment$3$1;->a:Lkik/android/chat/fragment/AbTestsFragment$3;
 
     iget-object v0, v0, Lkik/android/chat/fragment/AbTestsFragment$3;->a:Lkik/android/chat/fragment/AbTestsFragment;
@@ -51,6 +51,6 @@
 
     invoke-virtual {v0}, Lcom/kik/view/adapters/x;->notifyDataSetChanged()V
 
-    .line 185
+    .line 191
     return-void
 .end method

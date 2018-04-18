@@ -3,12 +3,18 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0xe
+.end annotation
+
+
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 25
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,12 +24,12 @@
     .locals 0
 
     .prologue
-    .line 32
+    .line 37
     check-cast p1, Landroid/view/accessibility/AccessibilityRecord;
 
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityEvent;->appendRecord(Landroid/view/accessibility/AccessibilityRecord;)V
 
-    .line 33
+    .line 38
     return-void
 .end method
 
@@ -31,7 +37,7 @@
     .locals 1
 
     .prologue
-    .line 36
+    .line 41
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityEvent;->getRecord(I)Landroid/view/accessibility/AccessibilityRecord;
 
     move-result-object v0
@@ -43,7 +49,7 @@
     .locals 1
 
     .prologue
-    .line 28
+    .line 33
     invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityEvent;->getRecordCount()I
 
     move-result v0
@@ -55,9 +61,9 @@
     .locals 0
 
     .prologue
-    .line 40
+    .line 45
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityEvent;->setScrollable(Z)V
 
-    .line 41
+    .line 46
     return-void
 .end method

@@ -24,18 +24,18 @@
 
 
 # instance fields
-.field private final zzaTg:J
+.field private final zzhrk:J
 
-.field private final zzaTh:J
+.field private final zzhrl:J
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/gms/gcm/OneoffTask$1;
+    new-instance v0, Lcom/google/android/gms/gcm/d;
 
-    invoke-direct {v0}, Lcom/google/android/gms/gcm/OneoffTask$1;-><init>()V
+    invoke-direct {v0}, Lcom/google/android/gms/gcm/d;-><init>()V
 
     sput-object v0, Lcom/google/android/gms/gcm/OneoffTask;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -53,18 +53,18 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask;->zzaTg:J
+    iput-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask;->zzhrk:J
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask;->zzaTh:J
+    iput-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask;->zzhrl:J
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/google/android/gms/gcm/OneoffTask$1;)V
+.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/google/android/gms/gcm/d;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/google/android/gms/gcm/OneoffTask;-><init>(Landroid/os/Parcel;)V
@@ -81,18 +81,18 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask;->zzaTg:J
+    iput-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask;->zzhrk:J
 
     invoke-static {p1}, Lcom/google/android/gms/gcm/OneoffTask$Builder;->zzb(Lcom/google/android/gms/gcm/OneoffTask$Builder;)J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask;->zzaTh:J
+    iput-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask;->zzhrl:J
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/google/android/gms/gcm/OneoffTask$Builder;Lcom/google/android/gms/gcm/OneoffTask$1;)V
+.method synthetic constructor <init>(Lcom/google/android/gms/gcm/OneoffTask$Builder;Lcom/google/android/gms/gcm/d;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/google/android/gms/gcm/OneoffTask;-><init>(Lcom/google/android/gms/gcm/OneoffTask$Builder;)V
@@ -105,7 +105,7 @@
 .method public getWindowEnd()J
     .locals 2
 
-    iget-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask;->zzaTh:J
+    iget-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask;->zzhrl:J
 
     return-wide v0
 .end method
@@ -113,7 +113,7 @@
 .method public getWindowStart()J
     .locals 2
 
-    iget-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask;->zzaTg:J
+    iget-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask;->zzhrk:J
 
     return-wide v0
 .end method
@@ -125,13 +125,13 @@
 
     const-string v0, "window_start"
 
-    iget-wide v2, p0, Lcom/google/android/gms/gcm/OneoffTask;->zzaTg:J
+    iget-wide v2, p0, Lcom/google/android/gms/gcm/OneoffTask;->zzhrk:J
 
     invoke-virtual {p1, v0, v2, v3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     const-string v0, "window_end"
 
-    iget-wide v2, p0, Lcom/google/android/gms/gcm/OneoffTask;->zzaTh:J
+    iget-wide v2, p0, Lcom/google/android/gms/gcm/OneoffTask;->zzhrl:J
 
     invoke-virtual {p1, v0, v2, v3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
@@ -145,10 +145,6 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
     invoke-virtual {p0}, Lcom/google/android/gms/gcm/OneoffTask;->getWindowStart()J
 
     move-result-wide v2
@@ -157,21 +153,21 @@
 
     move-result-wide v4
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v1
 
-    invoke-virtual {v6}, Ljava/lang/String;->length()I
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    move-result v6
+    move-result v1
 
-    add-int/lit8 v6, v6, 0x40
+    add-int/lit8 v1, v1, 0x40
 
-    invoke-direct {v1, v6}, Ljava/lang/StringBuilder;-><init>(I)V
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v6, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -207,11 +203,11 @@
 
     invoke-super {p0, p1, p2}, Lcom/google/android/gms/gcm/Task;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask;->zzaTg:J
+    iget-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask;->zzhrk:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    iget-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask;->zzaTh:J
+    iget-wide v0, p0, Lcom/google/android/gms/gcm/OneoffTask;->zzhrl:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 

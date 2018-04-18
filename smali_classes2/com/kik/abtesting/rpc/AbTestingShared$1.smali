@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 955
+    .line 956
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,10 +34,10 @@
     .locals 1
 
     .prologue
-    .line 958
+    .line 959
     invoke-static {p1}, Lcom/kik/abtesting/rpc/AbTestingShared;->a(Lcom/google/protobuf/Descriptors$FileDescriptor;)Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 959
+    .line 960
     const/4 v0, 0x0
 
     return-object v0

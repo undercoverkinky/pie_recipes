@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 2143
+    .line 2192
     iput-object p1, p0, Lcom/kik/cards/web/CardsWebViewFragment$36;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,32 +44,32 @@
 
     const/4 v2, 0x0
 
-    .line 2147
+    .line 2196
     new-array v0, v3, [Landroid/view/View;
 
     iget-object v1, p0, Lcom/kik/cards/web/CardsWebViewFragment$36;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
-    invoke-static {v1}, Lcom/kik/cards/web/CardsWebViewFragment;->w(Lcom/kik/cards/web/CardsWebViewFragment;)Landroid/widget/ImageView;
+    invoke-static {v1}, Lcom/kik/cards/web/CardsWebViewFragment;->x(Lcom/kik/cards/web/CardsWebViewFragment;)Landroid/widget/ImageView;
 
     move-result-object v1
 
     aput-object v1, v0, v2
 
-    invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->g([Landroid/view/View;)V
 
-    .line 2148
+    .line 2197
     new-array v0, v3, [Landroid/view/View;
 
     iget-object v1, p0, Lcom/kik/cards/web/CardsWebViewFragment$36;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
-    invoke-static {v1}, Lcom/kik/cards/web/CardsWebViewFragment;->x(Lcom/kik/cards/web/CardsWebViewFragment;)Landroid/widget/TextView;
+    invoke-static {v1}, Lcom/kik/cards/web/CardsWebViewFragment;->y(Lcom/kik/cards/web/CardsWebViewFragment;)Landroid/widget/TextView;
 
     move-result-object v1
 
     aput-object v1, v0, v2
 
-    invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->d([Landroid/view/View;)V
 
-    .line 2149
+    .line 2198
     return-void
 .end method

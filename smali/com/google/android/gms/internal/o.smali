@@ -1,85 +1,96 @@
 .class final Lcom/google/android/gms/internal/o;
-.super Lcom/google/android/gms/internal/q;
+.super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
-
-
-# annotations
-.annotation runtime Lcom/google/android/gms/internal/zzig;
-.end annotation
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field private final a:Ljava/lang/ref/WeakReference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/ref/WeakReference",
-            "<",
-            "Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private synthetic a:Lcom/google/android/gms/internal/zzaak;
+
+.field private synthetic b:Lcom/google/android/gms/internal/zzaav;
+
+.field private synthetic c:Lcom/google/android/gms/internal/zzabs;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
-    .locals 1
+.method constructor <init>(Lcom/google/android/gms/internal/zzabs;Lcom/google/android/gms/internal/zzaak;Lcom/google/android/gms/internal/zzaav;)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Lcom/google/android/gms/internal/q;-><init>(Landroid/view/View;)V
+    iput-object p1, p0, Lcom/google/android/gms/internal/o;->c:Lcom/google/android/gms/internal/zzabs;
 
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    iput-object p2, p0, Lcom/google/android/gms/internal/o;->a:Lcom/google/android/gms/internal/zzaak;
 
-    invoke-direct {v0, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    iput-object p3, p0, Lcom/google/android/gms/internal/o;->b:Lcom/google/android/gms/internal/zzaav;
 
-    iput-object v0, p0, Lcom/google/android/gms/internal/o;->a:Ljava/lang/ref/WeakReference;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a(Landroid/view/ViewTreeObserver;)V
-    .locals 0
+.method public final run()V
+    .locals 4
 
-    invoke-virtual {p1, p0}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+    const/4 v1, 0x0
 
-    return-void
-.end method
+    :try_start_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/o;->c:Lcom/google/android/gms/internal/zzabs;
 
-.method protected final b(Landroid/view/ViewTreeObserver;)V
-    .locals 1
+    iget-object v2, p0, Lcom/google/android/gms/internal/o;->a:Lcom/google/android/gms/internal/zzaak;
 
-    invoke-static {}, Lcom/google/android/gms/ads/internal/zzu;->zzcm()Lcom/google/android/gms/internal/zzkb;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1, p0}, Lcom/google/android/gms/internal/zzkb;->zza(Landroid/view/ViewTreeObserver;Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
-
-    return-void
-.end method
-
-.method public final onGlobalLayout()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/o;->a:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Lcom/google/android/gms/internal/zzabs;->zzb(Lcom/google/android/gms/internal/zzaak;)Lcom/google/android/gms/internal/zzaao;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
-
-    check-cast v0, Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;->onGlobalLayout()V
 
     :goto_0
-    return-void
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcom/google/android/gms/internal/zzaao;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lcom/google/android/gms/internal/zzaao;-><init>(I)V
 
     :cond_0
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/o;->b()V
+    :try_start_1
+    iget-object v1, p0, Lcom/google/android/gms/internal/o;->b:Lcom/google/android/gms/internal/zzaav;
+
+    invoke-interface {v1, v0}, Lcom/google/android/gms/internal/zzaav;->zza(Lcom/google/android/gms/internal/zzaao;)V
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
+
+    :goto_1
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-static {}, Lcom/google/android/gms/ads/internal/zzbv;->zzee()Lcom/google/android/gms/internal/zzafn;
+
+    move-result-object v2
+
+    const-string v3, "AdRequestServiceImpl.loadAdAsync"
+
+    invoke-virtual {v2, v0, v3}, Lcom/google/android/gms/internal/zzafn;->zza(Ljava/lang/Throwable;Ljava/lang/String;)V
+
+    const-string v2, "Could not fetch ad response due to an Exception."
+
+    invoke-static {v2, v0}, Lcom/google/android/gms/internal/zzafx;->zzc(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    move-object v0, v1
 
     goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    const-string v1, "Fail to forward ad response."
+
+    invoke-static {v1, v0}, Lcom/google/android/gms/internal/zzafx;->zzc(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_1
 .end method

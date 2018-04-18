@@ -15,25 +15,14 @@
 
 
 # direct methods
-.method private constructor <init>()V
-    .locals 1
-
-    .prologue
-    .line 64
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Landroid/support/v4/app/AppOpsManagerCompat$AppOpsManagerImpl;-><init>(Landroid/support/v4/app/AppOpsManagerCompat$1;)V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Landroid/support/v4/app/AppOpsManagerCompat$1;)V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 64
-    invoke-direct {p0}, Landroid/support/v4/app/AppOpsManagerCompat$AppOpsManager23;-><init>()V
+    .line 68
+    invoke-direct {p0}, Landroid/support/v4/app/AppOpsManagerCompat$AppOpsManagerImpl;-><init>()V
 
+    .line 69
     return-void
 .end method
 
@@ -43,7 +32,7 @@
     .locals 1
 
     .prologue
-    .line 72
+    .line 78
     invoke-static {p1, p2, p3, p4}, Landroid/support/v4/app/AppOpsManagerCompat23;->noteOp(Landroid/content/Context;Ljava/lang/String;ILjava/lang/String;)I
 
     move-result v0
@@ -55,7 +44,7 @@
     .locals 1
 
     .prologue
-    .line 77
+    .line 83
     invoke-static {p1, p2, p3}, Landroid/support/v4/app/AppOpsManagerCompat23;->noteProxyOp(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
@@ -67,7 +56,7 @@
     .locals 1
 
     .prologue
-    .line 67
+    .line 73
     invoke-static {p1}, Landroid/support/v4/app/AppOpsManagerCompat23;->permissionToOp(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0

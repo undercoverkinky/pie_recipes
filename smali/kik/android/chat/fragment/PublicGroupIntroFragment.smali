@@ -13,14 +13,12 @@
 
 # instance fields
 .field _body:Landroid/widget/TextView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1101e5
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f100206
     .end annotation
 .end field
 
-.field protected a:Lkik/core/c/e;
+.field protected a:Lkik/core/a/e;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
@@ -30,7 +28,7 @@
     .end annotation
 .end field
 
-.field protected c:Lkik/core/g/c;
+.field protected c:Lkik/core/e/c;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
@@ -56,16 +54,10 @@
 
     .prologue
     .line 37
-    .line 1088
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikFragmentBase;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    invoke-virtual {p0}, Lkik/android/chat/fragment/PublicGroupIntroFragment;->getCoreComponent()Lcom/kik/components/CoreComponent;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkik/android/util/s;->a(Landroid/app/Activity;)Lcom/kik/components/CoreComponent;
-
-    move-result-object v0
-
-    .line 37
     invoke-interface {v0, p0}, Lcom/kik/components/CoreComponent;->a(Lkik/android/chat/fragment/PublicGroupIntroFragment;)V
 
     .line 38
@@ -90,7 +82,7 @@
 
     iput-object v0, p0, Lkik/android/chat/fragment/PublicGroupIntroFragment;->d:Ljava/lang/String;
 
-    .line 2080
+    .line 1082
     iget-object v0, p0, Lkik/android/chat/fragment/PublicGroupIntroFragment;->b:Lcom/kik/android/Mixpanel;
 
     const-string v1, "Public Group Intro Shown"
@@ -103,17 +95,17 @@
 
     iget-object v2, p0, Lkik/android/chat/fragment/PublicGroupIntroFragment;->d:Ljava/lang/String;
 
-    .line 2081
+    .line 1083
     invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 2082
+    .line 1084
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 2083
+    .line 1085
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
     .line 43
@@ -125,7 +117,7 @@
 
     .prologue
     .line 48
-    const v0, 0x7f040081
+    const v0, 0x7f040088
 
     const/4 v1, 0x0
 
@@ -134,7 +126,7 @@
     move-result-object v0
 
     .line 49
-    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)V
+    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)Lbutterknife/Unbinder;
 
     .line 50
     invoke-virtual {p0}, Lkik/android/chat/fragment/PublicGroupIntroFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
@@ -145,26 +137,26 @@
 
     invoke-virtual {v1, v2}, Landroid/support/v4/app/FragmentActivity;->setRequestedOrientation(I)V
 
-    .line 2096
+    .line 1098
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "<b>"
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const v2, 0x7f0a057f
+    const v2, 0x7f090626
 
     invoke-static {v2}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
     move-result-object v2
 
-    const v3, 0x7f1000cd
+    const v3, 0x7f0e00d9
 
     invoke-static {v3}, Lkik/android/chat/KikApplication;->d(I)I
 
     move-result v3
 
-    .line 2103
+    .line 1105
     new-instance v4, Ljava/lang/StringBuilder;
 
     const-string v5, "<font color="
@@ -195,7 +187,7 @@
 
     move-result-object v2
 
-    .line 2096
+    .line 1098
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -210,7 +202,7 @@
 
     move-result-object v1
 
-    .line 2097
+    .line 1099
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -219,7 +211,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a0580
+    const v2, 0x7f090627
 
     invoke-static {v2}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
 
@@ -241,10 +233,10 @@
 
     move-result-object v1
 
-    .line 2098
+    .line 1100
     iget-object v2, p0, Lkik/android/chat/fragment/PublicGroupIntroFragment;->_body:Landroid/widget/TextView;
 
-    invoke-static {v2, v1}, Lkik/android/chat/view/text/c;->a(Landroid/widget/TextView;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkik/android/chat/view/text/d;->a(Landroid/widget/TextView;Ljava/lang/String;)V
 
     .line 52
     return-object v0
@@ -254,7 +246,7 @@
     .locals 2
 
     .prologue
-    .line 74
+    .line 76
     invoke-virtual {p0}, Lkik/android/chat/fragment/PublicGroupIntroFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
@@ -263,28 +255,38 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v4/app/FragmentActivity;->setRequestedOrientation(I)V
 
-    .line 75
+    .line 77
     invoke-super {p0}, Lkik/android/chat/fragment/KikIqFragmentBase;->onDestroyView()V
 
-    .line 76
+    .line 78
     return-void
+.end method
+
+.method public onHardBackPressed()Z
+    .locals 1
+
+    .prologue
+    .line 70
+    const/4 v0, 0x1
+
+    return v0
 .end method
 
 .method public rulesAccepted()V
     .locals 3
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f1101e6
+            0x7f100207
         }
     .end annotation
 
     .prologue
     .line 58
-    iget-object v0, p0, Lkik/android/chat/fragment/PublicGroupIntroFragment;->c:Lkik/core/g/c;
+    iget-object v0, p0, Lkik/android/chat/fragment/PublicGroupIntroFragment;->c:Lkik/core/e/c;
 
-    invoke-interface {v0}, Lkik/core/g/c;->b()V
+    invoke-interface {v0}, Lkik/core/e/c;->b()V
 
-    .line 3088
+    .line 2090
     iget-object v0, p0, Lkik/android/chat/fragment/PublicGroupIntroFragment;->b:Lcom/kik/android/Mixpanel;
 
     const-string v1, "Public Group Intro Ack"
@@ -297,17 +299,17 @@
 
     iget-object v2, p0, Lkik/android/chat/fragment/PublicGroupIntroFragment;->d:Ljava/lang/String;
 
-    .line 3089
+    .line 2091
     invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 3090
+    .line 2092
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 3091
+    .line 2093
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
     .line 60
@@ -315,21 +317,19 @@
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/PublicGroupIntroFragment;->a(Landroid/os/Bundle;)V
-
     .line 61
-    invoke-virtual {p0}, Lkik/android/chat/fragment/PublicGroupIntroFragment;->D()V
+    const-string v1, "Public Group Tutorial Accepted"
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 62
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/PublicGroupIntroFragment;->setResultData(Landroid/os/Bundle;)V
+
+    .line 63
+    invoke-virtual {p0}, Lkik/android/chat/fragment/PublicGroupIntroFragment;->finish()V
+
+    .line 64
     return-void
-.end method
-
-.method public final t()Z
-    .locals 1
-
-    .prologue
-    .line 68
-    const/4 v0, 0x1
-
-    return v0
 .end method

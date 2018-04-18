@@ -3,12 +3,18 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0xb
+.end annotation
+
+
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 26
+    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,10 +24,10 @@
     .locals 0
 
     .prologue
-    .line 29
+    .line 32
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->jumpToCurrentState()V
 
-    .line 30
+    .line 33
     return-void
 .end method
 
@@ -29,19 +35,19 @@
     .locals 1
 
     .prologue
-    .line 33
+    .line 36
     instance-of v0, p0, Landroid/support/v4/graphics/drawable/TintAwareDrawable;
 
     if-nez v0, :cond_0
 
-    .line 34
+    .line 37
     new-instance v0, Landroid/support/v4/graphics/drawable/DrawableWrapperHoneycomb;
 
     invoke-direct {v0, p0}, Landroid/support/v4/graphics/drawable/DrawableWrapperHoneycomb;-><init>(Landroid/graphics/drawable/Drawable;)V
 
     move-object p0, v0
 
-    .line 36
+    .line 39
     :cond_0
     return-object p0
 .end method

@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 365
+    .line 366
     iput-object p1, p0, Lio/fabric/sdk/android/c$1;->a:Lio/fabric/sdk/android/c;
 
     invoke-direct {p0}, Lio/fabric/sdk/android/a$b;-><init>()V
@@ -37,12 +37,12 @@
     .locals 1
 
     .prologue
-    .line 369
+    .line 370
     iget-object v0, p0, Lio/fabric/sdk/android/c$1;->a:Lio/fabric/sdk/android/c;
 
     invoke-virtual {v0, p1}, Lio/fabric/sdk/android/c;->a(Landroid/app/Activity;)Lio/fabric/sdk/android/c;
 
-    .line 370
+    .line 371
     return-void
 .end method
 
@@ -50,12 +50,12 @@
     .locals 1
 
     .prologue
-    .line 374
+    .line 375
     iget-object v0, p0, Lio/fabric/sdk/android/c$1;->a:Lio/fabric/sdk/android/c;
 
     invoke-virtual {v0, p1}, Lio/fabric/sdk/android/c;->a(Landroid/app/Activity;)Lio/fabric/sdk/android/c;
 
-    .line 375
+    .line 376
     return-void
 .end method
 
@@ -63,11 +63,11 @@
     .locals 1
 
     .prologue
-    .line 379
+    .line 380
     iget-object v0, p0, Lio/fabric/sdk/android/c$1;->a:Lio/fabric/sdk/android/c;
 
     invoke-virtual {v0, p1}, Lio/fabric/sdk/android/c;->a(Landroid/app/Activity;)Lio/fabric/sdk/android/c;
 
-    .line 380
+    .line 381
     return-void
 .end method

@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lio/branch/referral/k$a;
+.implements Lio/branch/referral/g$b;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lio/branch/referral/Branch;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lio/branch/referral/Branch;->l()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 2182
+    .line 2265
     iput-object p1, p0, Lio/branch/referral/Branch$2;->a:Lio/branch/referral/Branch;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,73 +36,26 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)V
+.method public final a()V
     .locals 2
 
     .prologue
-    .line 2185
+    .line 2268
     iget-object v0, p0, Lio/branch/referral/Branch$2;->a:Lio/branch/referral/Branch;
 
-    invoke-static {v0}, Lio/branch/referral/Branch;->b(Lio/branch/referral/Branch;)Lio/branch/referral/n;
-
-    const/4 v0, 0x1
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v0}, Lio/branch/referral/Branch;->b(Lio/branch/referral/Branch;)Lio/branch/referral/v;
 
     move-result-object v0
 
-    invoke-static {v0}, Lio/branch/referral/n;->a(Ljava/lang/Boolean;)V
+    sget-object v1, Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;->STRONG_MATCH_PENDING_WAIT_LOCK:Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;
 
-    .line 2186
-    if-eqz p1, :cond_0
+    invoke-virtual {v0, v1}, Lio/branch/referral/v;->a(Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;)V
 
-    .line 2187
-    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    .line 2188
-    sget-object v1, Lio/branch/referral/Defines$Jsonkey;->LinkClickID:Lio/branch/referral/Defines$Jsonkey;
-
-    invoke-virtual {v1}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 2189
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    .line 2190
-    iget-object v1, p0, Lio/branch/referral/Branch$2;->a:Lio/branch/referral/Branch;
-
-    invoke-static {v1}, Lio/branch/referral/Branch;->b(Lio/branch/referral/Branch;)Lio/branch/referral/n;
-
-    invoke-static {v0}, Lio/branch/referral/n;->i(Ljava/lang/String;)V
-
-    .line 2193
-    :cond_0
+    .line 2269
     iget-object v0, p0, Lio/branch/referral/Branch$2;->a:Lio/branch/referral/Branch;
 
-    invoke-static {v0}, Lio/branch/referral/Branch;->c(Lio/branch/referral/Branch;)Lio/branch/referral/w;
+    invoke-static {v0}, Lio/branch/referral/Branch;->c(Lio/branch/referral/Branch;)V
 
-    move-result-object v0
-
-    sget-object v1, Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;->FB_APP_LINK_WAIT_LOCK:Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;
-
-    invoke-virtual {v0, v1}, Lio/branch/referral/w;->a(Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;)V
-
-    .line 2194
-    iget-object v0, p0, Lio/branch/referral/Branch$2;->a:Lio/branch/referral/Branch;
-
-    invoke-static {v0}, Lio/branch/referral/Branch;->d(Lio/branch/referral/Branch;)V
-
-    .line 2195
+    .line 2270
     return-void
 .end method

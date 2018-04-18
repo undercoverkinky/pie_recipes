@@ -80,21 +80,12 @@
 
 
 # virtual methods
-.method public final a()Lcom/dyuproject/protostuff/u;
+.method public final a()Lcom/dyuproject/protostuff/c;
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/dyuproject/protostuff/u",
-            "<",
-            "Lcom/kik/xdata/model/crypto/XPrivateEnvelope;",
-            ">;"
-        }
-    .end annotation
 
     .prologue
-    .line 115
-    sget-object v0, Lcom/kik/xdata/model/crypto/XPrivateEnvelope;->b:Lcom/dyuproject/protostuff/u;
+    .line 51
+    iget-object v0, p0, Lcom/kik/xdata/model/crypto/XPrivateEnvelope;->keyId:Lcom/dyuproject/protostuff/c;
 
     return-object v0
 .end method
@@ -114,8 +105,8 @@
     .locals 1
 
     .prologue
-    .line 51
-    iget-object v0, p0, Lcom/kik/xdata/model/crypto/XPrivateEnvelope;->keyId:Lcom/dyuproject/protostuff/c;
+    .line 64
+    iget-object v0, p0, Lcom/kik/xdata/model/crypto/XPrivateEnvelope;->initializationVector:Lcom/dyuproject/protostuff/c;
 
     return-object v0
 .end method
@@ -135,8 +126,8 @@
     .locals 1
 
     .prologue
-    .line 64
-    iget-object v0, p0, Lcom/kik/xdata/model/crypto/XPrivateEnvelope;->initializationVector:Lcom/dyuproject/protostuff/c;
+    .line 77
+    iget-object v0, p0, Lcom/kik/xdata/model/crypto/XPrivateEnvelope;->payload:Lcom/dyuproject/protostuff/c;
 
     return-object v0
 .end method
@@ -152,12 +143,31 @@
     return-object p0
 .end method
 
+.method public final cachedSchema()Lcom/dyuproject/protostuff/u;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/dyuproject/protostuff/u",
+            "<",
+            "Lcom/kik/xdata/model/crypto/XPrivateEnvelope;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 115
+    sget-object v0, Lcom/kik/xdata/model/crypto/XPrivateEnvelope;->b:Lcom/dyuproject/protostuff/u;
+
+    return-object v0
+.end method
+
 .method public final d()Lcom/dyuproject/protostuff/c;
     .locals 1
 
     .prologue
-    .line 77
-    iget-object v0, p0, Lcom/kik/xdata/model/crypto/XPrivateEnvelope;->payload:Lcom/dyuproject/protostuff/c;
+    .line 90
+    iget-object v0, p0, Lcom/kik/xdata/model/crypto/XPrivateEnvelope;->mac:Lcom/dyuproject/protostuff/c;
 
     return-object v0
 .end method
@@ -171,16 +181,6 @@
 
     .line 96
     return-object p0
-.end method
-
-.method public final e()Lcom/dyuproject/protostuff/c;
-    .locals 1
-
-    .prologue
-    .line 90
-    iget-object v0, p0, Lcom/kik/xdata/model/crypto/XPrivateEnvelope;->mac:Lcom/dyuproject/protostuff/c;
-
-    return-object v0
 .end method
 
 .method public final readExternal(Ljava/io/ObjectInput;)V

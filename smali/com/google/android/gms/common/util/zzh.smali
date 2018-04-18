@@ -2,15 +2,27 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/google/android/gms/common/util/zze;
+.implements Lcom/google/android/gms/common/util/zzd;
 
 
 # static fields
-.field private static zzaua:Lcom/google/android/gms/common/util/zzh;
+.field private static zzfyl:Lcom/google/android/gms/common/util/zzh;
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/google/android/gms/common/util/zzh;
+
+    invoke-direct {v0}, Lcom/google/android/gms/common/util/zzh;-><init>()V
+
+    sput-object v0, Lcom/google/android/gms/common/util/zzh;->zzfyl:Lcom/google/android/gms/common/util/zzh;
+
+    return-void
+.end method
+
+.method private constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -18,39 +30,12 @@
     return-void
 .end method
 
-.method public static declared-synchronized zzuW()Lcom/google/android/gms/common/util/zze;
-    .locals 2
+.method public static zzalc()Lcom/google/android/gms/common/util/zzd;
+    .locals 1
 
-    const-class v1, Lcom/google/android/gms/common/util/zzh;
-
-    monitor-enter v1
-
-    :try_start_0
-    sget-object v0, Lcom/google/android/gms/common/util/zzh;->zzaua:Lcom/google/android/gms/common/util/zzh;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lcom/google/android/gms/common/util/zzh;
-
-    invoke-direct {v0}, Lcom/google/android/gms/common/util/zzh;-><init>()V
-
-    sput-object v0, Lcom/google/android/gms/common/util/zzh;->zzaua:Lcom/google/android/gms/common/util/zzh;
-
-    :cond_0
-    sget-object v0, Lcom/google/android/gms/common/util/zzh;->zzaua:Lcom/google/android/gms/common/util/zzh;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v1
+    sget-object v0, Lcom/google/android/gms/common/util/zzh;->zzfyl:Lcom/google/android/gms/common/util/zzh;
 
     return-object v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-
-    throw v0
 .end method
 
 

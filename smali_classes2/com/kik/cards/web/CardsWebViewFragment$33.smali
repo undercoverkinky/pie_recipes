@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Lcom/kik/events/e",
         "<",
-        "Lcom/kik/cards/web/g$b;",
+        "Lcom/kik/cards/web/ExtendedWebView$NavigationRequest;",
         ">;"
     }
 .end annotation
@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 320
+    .line 332
     iput-object p1, p0, Lcom/kik/cards/web/CardsWebViewFragment$33;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,17 +50,17 @@
     .locals 3
 
     .prologue
-    .line 320
-    check-cast p2, Lcom/kik/cards/web/g$b;
+    .line 332
+    check-cast p2, Lcom/kik/cards/web/ExtendedWebView$NavigationRequest;
 
-    .line 1325
-    iget-object v0, p2, Lcom/kik/cards/web/g$b;->a:Ljava/lang/String;
+    .line 1337
+    iget-object v0, p2, Lcom/kik/cards/web/ExtendedWebView$NavigationRequest;->url:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 1327
+    .line 1339
     invoke-virtual {v0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v1
@@ -109,21 +109,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 1329
+    .line 1341
     :cond_0
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$33;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
-    invoke-virtual {v0}, Lcom/kik/cards/web/CardsWebViewFragment;->k()V
+    invoke-virtual {v0}, Lcom/kik/cards/web/CardsWebViewFragment;->i()V
 
-    .line 1331
-    iget-boolean v0, p2, Lcom/kik/cards/web/g$b;->c:Z
+    .line 1343
+    iget-boolean v0, p2, Lcom/kik/cards/web/ExtendedWebView$NavigationRequest;->popup:Z
 
     if-eqz v0, :cond_2
 
-    .line 1332
+    .line 1344
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$33;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
-    iget-object v1, p2, Lcom/kik/cards/web/g$b;->a:Ljava/lang/String;
+    iget-object v1, p2, Lcom/kik/cards/web/ExtendedWebView$NavigationRequest;->url:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/kik/cards/web/CardsWebViewFragment;->d(Ljava/lang/String;)V
 
@@ -131,11 +131,11 @@
     :goto_0
     return-void
 
-    .line 1335
+    .line 1347
     :cond_2
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$33;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
-    invoke-virtual {v0}, Lcom/kik/cards/web/CardsWebViewFragment;->d()Lcom/kik/cards/web/PicardWebView;
+    invoke-virtual {v0}, Lcom/kik/cards/web/CardsWebViewFragment;->c()Lcom/kik/cards/web/PicardWebView;
 
     move-result-object v0
 
@@ -145,7 +145,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p2, Lcom/kik/cards/web/g$b;->a:Ljava/lang/String;
+    iget-object v2, p2, Lcom/kik/cards/web/ExtendedWebView$NavigationRequest;->url:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

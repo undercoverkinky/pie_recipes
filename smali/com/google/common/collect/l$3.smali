@@ -1,11 +1,11 @@
 .class final Lcom/google/common/collect/l$3;
-.super Lcom/google/common/collect/x;
+.super Lcom/google/common/collect/s;
 .source "SourceFile"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/common/collect/l;->a(Ljava/lang/Object;)Lcom/google/common/collect/x;
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/common/collect/l;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/google/common/collect/x",
+        "Lcom/google/common/collect/s",
         "<TT;>;"
     }
 .end annotation
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 1073
+    .line 1041
     iput-object p1, p0, Lcom/google/common/collect/l$3;->b:Ljava/lang/Object;
 
-    invoke-direct {p0}, Lcom/google/common/collect/x;-><init>()V
+    invoke-direct {p0}, Lcom/google/common/collect/s;-><init>()V
 
     return-void
 .end method
@@ -46,7 +46,7 @@
     .locals 1
 
     .prologue
-    .line 1077
+    .line 1046
     iget-boolean v0, p0, Lcom/google/common/collect/l$3;->a:Z
 
     if-nez v0, :cond_0
@@ -71,25 +71,25 @@
     .end annotation
 
     .prologue
-    .line 1081
+    .line 1051
     iget-boolean v0, p0, Lcom/google/common/collect/l$3;->a:Z
 
     if-eqz v0, :cond_0
 
-    .line 1082
+    .line 1052
     new-instance v0, Ljava/util/NoSuchElementException;
 
     invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
     throw v0
 
-    .line 1084
+    .line 1054
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/google/common/collect/l$3;->a:Z
 
-    .line 1085
+    .line 1055
     iget-object v0, p0, Lcom/google/common/collect/l$3;->b:Ljava/lang/Object;
 
     return-object v0

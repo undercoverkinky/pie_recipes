@@ -29,12 +29,12 @@
     .locals 1
 
     .prologue
-    .line 636
+    .line 664
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/google/common/collect/ImmutableList$a;-><init>(B)V
 
-    .line 637
+    .line 665
     return-void
 .end method
 
@@ -42,10 +42,10 @@
     .locals 0
 
     .prologue
-    .line 641
+    .line 669
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableCollection$a;-><init>()V
 
-    .line 642
+    .line 670
     return-void
 .end method
 
@@ -53,54 +53,51 @@
 # virtual methods
 .method public final bridge synthetic a(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableCollection$a;
     .locals 0
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
 
     .prologue
-    .line 630
-    .line 2652
+    .line 658
+    .line 1682
     invoke-super {p0, p1}, Lcom/google/common/collect/ImmutableCollection$a;->a(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableCollection$a;
 
-    .line 630
+    .line 658
     return-object p0
 .end method
 
 .method public final bridge synthetic a(Ljava/util/Iterator;)Lcom/google/common/collect/ImmutableCollection$b;
     .locals 0
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
 
     .prologue
-    .line 630
-    .line 2691
+    .line 658
+    .line 1727
     invoke-super {p0, p1}, Lcom/google/common/collect/ImmutableCollection$a;->a(Ljava/util/Iterator;)Lcom/google/common/collect/ImmutableCollection$b;
 
-    .line 630
-    return-object p0
-.end method
-
-.method public final bridge synthetic a([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableCollection$b;
-    .locals 0
-
-    .prologue
-    .line 630
-    .line 1678
-    invoke-super {p0, p1}, Lcom/google/common/collect/ImmutableCollection$a;->a([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableCollection$b;
-
-    .line 630
+    .line 658
     return-object p0
 .end method
 
 .method public final synthetic b(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableCollection$b;
     .locals 0
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
 
     .prologue
-    .line 630
-    .line 3652
+    .line 658
+    .line 2682
     invoke-super {p0, p1}, Lcom/google/common/collect/ImmutableCollection$a;->a(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableCollection$a;
 
-    .line 630
+    .line 658
     return-object p0
 .end method
 
 .method public final b(Ljava/util/Iterator;)Lcom/google/common/collect/ImmutableList$a;
     .locals 0
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -112,15 +109,18 @@
     .end annotation
 
     .prologue
-    .line 691
+    .line 727
     invoke-super {p0, p1}, Lcom/google/common/collect/ImmutableCollection$a;->a(Ljava/util/Iterator;)Lcom/google/common/collect/ImmutableCollection$b;
 
-    .line 692
+    .line 728
     return-object p0
 .end method
 
 .method public final c(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$a;
     .locals 0
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TE;)",
@@ -130,9 +130,9 @@
     .end annotation
 
     .prologue
-    .line 652
+    .line 682
     invoke-super {p0, p1}, Lcom/google/common/collect/ImmutableCollection$a;->a(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableCollection$a;
 
-    .line 653
+    .line 683
     return-object p0
 .end method

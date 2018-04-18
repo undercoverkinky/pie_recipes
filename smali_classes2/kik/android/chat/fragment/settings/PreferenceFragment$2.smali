@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/settings/PreferenceFragment;->f()V
+    value = Lkik/android/chat/fragment/settings/PreferenceFragment;->c()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 278
+    .line 305
     iput-object p1, p0, Lkik/android/chat/fragment/settings/PreferenceFragment$2;->b:Lkik/android/chat/fragment/settings/PreferenceFragment;
 
     iput-object p2, p0, Lkik/android/chat/fragment/settings/PreferenceFragment$2;->a:Lkik/android/widget/preferences/KikPreferenceScreen;
@@ -44,12 +44,12 @@
     .locals 3
 
     .prologue
-    .line 283
+    .line 310
     new-instance v0, Lkik/android/chat/fragment/settings/KikPreferenceFragment$a;
 
     invoke-direct {v0}, Lkik/android/chat/fragment/settings/KikPreferenceFragment$a;-><init>()V
 
-    .line 284
+    .line 311
     iget-object v1, p0, Lkik/android/chat/fragment/settings/PreferenceFragment$2;->a:Lkik/android/widget/preferences/KikPreferenceScreen;
 
     invoke-virtual {v1}, Lkik/android/widget/preferences/KikPreferenceScreen;->c()I
@@ -68,20 +68,20 @@
 
     invoke-virtual {v1, v2}, Lkik/android/chat/fragment/settings/PreferenceFragment$a;->b(I)Lkik/android/chat/fragment/settings/PreferenceFragment$a;
 
-    .line 285
+    .line 312
     iget-object v1, p0, Lkik/android/chat/fragment/settings/PreferenceFragment$2;->b:Lkik/android/chat/fragment/settings/PreferenceFragment;
 
     invoke-virtual {v1}, Lkik/android/chat/fragment/settings/PreferenceFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ae;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->e()Lcom/kik/events/Promise;
 
-    .line 286
+    .line 313
     const/4 v0, 0x1
 
     return v0

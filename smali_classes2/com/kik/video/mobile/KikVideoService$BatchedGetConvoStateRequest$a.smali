@@ -132,7 +132,7 @@
 
     .line 451
     :try_start_0
-    invoke-static {}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->e()Lcom/google/protobuf/Parser;
+    invoke-static {}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->access$800()Lcom/google/protobuf/Parser;
 
     move-result-object v0
 
@@ -197,6 +197,7 @@
     .line 457
     invoke-virtual {p0, v1}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest$a;->a(Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;)Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest$a;
 
+    .line 459
     :cond_1
     throw v0
 
@@ -311,7 +312,7 @@
 
     .prologue
     .line 326
-    invoke-static {}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->c()Z
+    invoke-static {}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->access$400()Z
 
     move-result v0
 
@@ -373,7 +374,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;B)V
+    invoke-direct {v0, p0, v1}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;Lcom/kik/video/mobile/KikVideoService$1;)V
 
     .line 361
     iget-object v1, p0, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest$a;->c:Lcom/google/protobuf/RepeatedFieldBuilderV3;
@@ -409,7 +410,7 @@
     :cond_0
     iget-object v1, p0, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest$a;->b:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->a(Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0, v1}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->access$602(Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;Ljava/util/List;)Ljava/util/List;
 
     .line 370
     :goto_0
@@ -426,7 +427,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->a(Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0, v1}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->access$602(Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;Ljava/util/List;)Ljava/util/List;
 
     goto :goto_0
 .end method
@@ -584,7 +585,7 @@
     const/4 v0, 0x0
 
     .line 410
-    invoke-static {}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->b()Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;
+    invoke-static {}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->getDefaultInstance()Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;
 
     move-result-object v1
 
@@ -601,7 +602,7 @@
     if-nez v1, :cond_3
 
     .line 412
-    invoke-static {p1}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->a(Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;)Ljava/util/List;
+    invoke-static {p1}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->access$600(Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;)Ljava/util/List;
 
     move-result-object v0
 
@@ -621,7 +622,7 @@
     if-eqz v0, :cond_2
 
     .line 414
-    invoke-static {p1}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->a(Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;)Ljava/util/List;
+    invoke-static {p1}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->access$600(Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;)Ljava/util/List;
 
     move-result-object v0
 
@@ -652,7 +653,7 @@
     .line 418
     iget-object v0, p0, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest$a;->b:Ljava/util/List;
 
-    invoke-static {p1}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->a(Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;)Ljava/util/List;
+    invoke-static {p1}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->access$600(Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;)Ljava/util/List;
 
     move-result-object v1
 
@@ -662,7 +663,7 @@
 
     .line 423
     :cond_3
-    invoke-static {p1}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->a(Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;)Ljava/util/List;
+    invoke-static {p1}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->access$600(Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;)Ljava/util/List;
 
     move-result-object v1
 
@@ -690,7 +691,7 @@
     iput-object v0, p0, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest$a;->c:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     .line 427
-    invoke-static {p1}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->a(Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;)Ljava/util/List;
+    invoke-static {p1}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->access$600(Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;)Ljava/util/List;
 
     move-result-object v1
 
@@ -704,7 +705,7 @@
     iput v1, p0, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest$a;->a:I
 
     .line 430
-    invoke-static {}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->d()Z
+    invoke-static {}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->access$700()Z
 
     move-result v1
 
@@ -724,7 +725,7 @@
     :cond_5
     iget-object v0, p0, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest$a;->c:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    invoke-static {p1}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->a(Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;)Ljava/util/List;
+    invoke-static {p1}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->access$600(Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;)Ljava/util/List;
 
     move-result-object v1
 
@@ -1047,7 +1048,7 @@
 
     .prologue
     .line 9347
-    invoke-static {}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->b()Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;
+    invoke-static {}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->getDefaultInstance()Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;
 
     move-result-object v0
 
@@ -1060,7 +1061,7 @@
 
     .prologue
     .line 8347
-    invoke-static {}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->b()Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;
+    invoke-static {}, Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;->getDefaultInstance()Lcom/kik/video/mobile/KikVideoService$BatchedGetConvoStateRequest;
 
     move-result-object v0
 

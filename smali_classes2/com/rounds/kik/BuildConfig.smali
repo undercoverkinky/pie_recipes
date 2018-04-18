@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final AAR_GIT_HASH:Ljava/lang/String; = "af16765"
+.field public static final AAR_GIT_HASH:Ljava/lang/String; = "b329c6c"
 
 .field public static final APPLICATION_ID:Ljava/lang/String; = "com.rounds.kik"
 

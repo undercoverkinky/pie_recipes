@@ -139,7 +139,7 @@
     check-cast v0, Lkik/android/sdkutils/a;
 
     .line 1057
-    invoke-interface {v0}, Lkik/android/sdkutils/a;->i()V
+    invoke-interface {v0}, Lkik/android/sdkutils/a;->g()V
 
     goto :goto_0
 

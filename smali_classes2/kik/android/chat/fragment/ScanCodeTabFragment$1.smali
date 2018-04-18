@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 102
+    .line 106
     iput-object p1, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$1;->a:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +40,12 @@
     .locals 1
 
     .prologue
-    .line 106
+    .line 110
     iget-object v0, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$1;->a:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/ScanCodeTabFragment;->a(Lkik/android/chat/fragment/ScanCodeTabFragment;)V
 
-    .line 107
+    .line 111
     return-void
 .end method
 
@@ -53,50 +53,11 @@
     .locals 1
 
     .prologue
-    .line 112
+    .line 116
     iget-object v0, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$1;->a:Lkik/android/chat/fragment/ScanCodeTabFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/ScanCodeTabFragment;->b(Lkik/android/chat/fragment/ScanCodeTabFragment;)V
 
-    .line 113
+    .line 117
     return-void
-.end method
-
-.method public final c()Z
-    .locals 1
-
-    .prologue
-    .line 118
-    iget-object v0, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$1;->a:Lkik/android/chat/fragment/ScanCodeTabFragment;
-
-    invoke-static {v0}, Lkik/android/chat/fragment/ScanCodeTabFragment;->c(Lkik/android/chat/fragment/ScanCodeTabFragment;)Lkik/android/chat/fragment/ScanCodeTabFragment$b;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 119
-    iget-object v0, p0, Lkik/android/chat/fragment/ScanCodeTabFragment$1;->a:Lkik/android/chat/fragment/ScanCodeTabFragment;
-
-    invoke-static {v0}, Lkik/android/chat/fragment/ScanCodeTabFragment;->c(Lkik/android/chat/fragment/ScanCodeTabFragment;)Lkik/android/chat/fragment/ScanCodeTabFragment$b;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lkik/android/chat/fragment/ScanCodeTabFragment$b;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 120
-    const/4 v0, 0x1
-
-    .line 124
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method

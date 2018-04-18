@@ -10,7 +10,7 @@
 # static fields
 .field public static final MODULE_ID:Ljava/lang/String; = "com.google.android.gms.flags"
 
-.field public static final MODULE_VERSION:I = 0x1
+.field public static final MODULE_VERSION:I = 0x2
 
 
 # direct methods

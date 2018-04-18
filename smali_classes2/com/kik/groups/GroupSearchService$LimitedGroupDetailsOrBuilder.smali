@@ -36,6 +36,15 @@
 .method public abstract getJidOrBuilder()Lcom/kik/ximodel/XiGroupJidOrBuilder;
 .end method
 
+.method public abstract getLastActivityTime()Lcom/google/protobuf/Timestamp;
+.end method
+
+.method public abstract getLastActivityTimeOrBuilder()Lcom/google/protobuf/TimestampOrBuilder;
+.end method
+
+.method public abstract getMaxGroupSize()I
+.end method
+
 .method public abstract getMemberCount()I
 .end method
 
@@ -46,4 +55,7 @@
 .end method
 
 .method public abstract hasJid()Z
+.end method
+
+.method public abstract hasLastActivityTime()Z
 .end method

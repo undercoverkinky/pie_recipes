@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Lcom/kik/events/e",
         "<",
-        "Ljava/lang/Integer;",
+        "Lkik/core/datatypes/Message;",
         ">;"
     }
 .end annotation
@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 486
+    .line 579
     iput-object p1, p0, Lkik/android/chat/KikApplication$33;->a:Lkik/android/chat/KikApplication;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,26 +46,18 @@
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 2
+.method public final bridge synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
 
     .prologue
-    .line 486
-    check-cast p2, Ljava/lang/Integer;
+    .line 579
+    check-cast p2, Lkik/core/datatypes/Message;
 
-    .line 1492
+    .line 1584
     iget-object v0, p0, Lkik/android/chat/KikApplication$33;->a:Lkik/android/chat/KikApplication;
 
-    invoke-static {v0}, Lkik/android/chat/KikApplication;->d(Lkik/android/chat/KikApplication;)Landroid/os/Handler;
+    invoke-virtual {v0, p2}, Lkik/android/chat/KikApplication;->a(Lkik/core/datatypes/Message;)V
 
-    move-result-object v0
-
-    new-instance v1, Lkik/android/chat/KikApplication$33$1;
-
-    invoke-direct {v1, p0, p2}, Lkik/android/chat/KikApplication$33$1;-><init>(Lkik/android/chat/KikApplication$33;Ljava/lang/Integer;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 486
+    .line 579
     return-void
 .end method

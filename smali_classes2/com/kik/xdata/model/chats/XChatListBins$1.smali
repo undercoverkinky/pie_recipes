@@ -139,7 +139,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {}, Lcom/kik/xdata/model/chats/XChatListBins$BinId;->b()Lcom/dyuproject/protostuff/u;
+    invoke-static {}, Lcom/kik/xdata/model/chats/XChatListBins$BinId;->a()Lcom/dyuproject/protostuff/u;
 
     move-result-object v2
 
@@ -207,7 +207,7 @@
     if-eqz v0, :cond_0
 
     .line 1581
-    invoke-static {}, Lcom/kik/xdata/model/chats/XChatListBins$BinId;->b()Lcom/dyuproject/protostuff/u;
+    invoke-static {}, Lcom/kik/xdata/model/chats/XChatListBins$BinId;->a()Lcom/dyuproject/protostuff/u;
 
     move-result-object v2
 

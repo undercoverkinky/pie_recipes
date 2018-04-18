@@ -299,7 +299,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {}, Lcom/kik/xdata/model/mediatray/XStickerItem;->b()Lcom/dyuproject/protostuff/u;
+    invoke-static {}, Lcom/kik/xdata/model/mediatray/XStickerItem;->a()Lcom/dyuproject/protostuff/u;
 
     move-result-object v2
 
@@ -496,7 +496,7 @@
     .line 1332
     const/4 v2, 0x4
 
-    invoke-static {}, Lcom/kik/xdata/model/mediatray/XStickerItem;->b()Lcom/dyuproject/protostuff/u;
+    invoke-static {}, Lcom/kik/xdata/model/mediatray/XStickerItem;->a()Lcom/dyuproject/protostuff/u;
 
     move-result-object v3
 

@@ -67,7 +67,7 @@
 
     const/4 v2, 0x0
 
-    .line 47
+    .line 49
     new-instance v0, Lbutterknife/OnPageChange$Callback;
 
     const-string v1, "PAGE_SELECTED"
@@ -76,7 +76,7 @@
 
     sput-object v0, Lbutterknife/OnPageChange$Callback;->PAGE_SELECTED:Lbutterknife/OnPageChange$Callback;
 
-    .line 54
+    .line 56
     new-instance v0, Lbutterknife/OnPageChange$Callback;
 
     const-string v1, "PAGE_SCROLLED"
@@ -85,7 +85,7 @@
 
     sput-object v0, Lbutterknife/OnPageChange$Callback;->PAGE_SCROLLED:Lbutterknife/OnPageChange$Callback;
 
-    .line 65
+    .line 67
     new-instance v0, Lbutterknife/OnPageChange$Callback;
 
     const-string v1, "PAGE_SCROLL_STATE_CHANGED"
@@ -94,7 +94,7 @@
 
     sput-object v0, Lbutterknife/OnPageChange$Callback;->PAGE_SCROLL_STATE_CHANGED:Lbutterknife/OnPageChange$Callback;
 
-    .line 45
+    .line 47
     const/4 v0, 0x3
 
     new-array v0, v0, [Lbutterknife/OnPageChange$Callback;
@@ -125,7 +125,7 @@
     .end annotation
 
     .prologue
-    .line 45
+    .line 47
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -135,7 +135,7 @@
     .locals 1
 
     .prologue
-    .line 45
+    .line 47
     const-class v0, Lbutterknife/OnPageChange$Callback;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -151,7 +151,7 @@
     .locals 1
 
     .prologue
-    .line 45
+    .line 47
     sget-object v0, Lbutterknife/OnPageChange$Callback;->$VALUES:[Lbutterknife/OnPageChange$Callback;
 
     invoke-virtual {v0}, [Lbutterknife/OnPageChange$Callback;->clone()Ljava/lang/Object;

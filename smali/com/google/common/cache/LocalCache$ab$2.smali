@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 3710
+    .line 3816
     iput-object p1, p0, Lcom/google/common/cache/LocalCache$ab$2;->a:Lcom/google/common/cache/LocalCache$ab;
 
     invoke-direct {p0, p2}, Lcom/google/common/collect/c;-><init>(Ljava/lang/Object;)V
@@ -46,15 +46,15 @@
     .locals 2
 
     .prologue
-    .line 3710
+    .line 3816
     check-cast p1, Lcom/google/common/cache/LocalCache$j;
 
-    .line 4713
+    .line 4819
     invoke-interface {p1}, Lcom/google/common/cache/LocalCache$j;->getNextInWriteQueue()Lcom/google/common/cache/LocalCache$j;
 
     move-result-object v0
 
-    .line 4714
+    .line 4820
     iget-object v1, p0, Lcom/google/common/cache/LocalCache$ab$2;->a:Lcom/google/common/cache/LocalCache$ab;
 
     iget-object v1, v1, Lcom/google/common/cache/LocalCache$ab;->a:Lcom/google/common/cache/LocalCache$j;

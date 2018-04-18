@@ -16,18 +16,14 @@
 
 # instance fields
 .field protected _noContactsContainer:Landroid/view/View;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f11007d
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1000b8
     .end annotation
 .end field
 
 .field protected _noSearchResultsText:Landroid/widget/TextView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f11007e
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1000b9
     .end annotation
 .end field
 
@@ -41,7 +37,7 @@
     invoke-direct {p0, p1}, Landroid/support/v7/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
     .line 34
-    invoke-static {p0, p1}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)V
+    invoke-static {p0, p1}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)Lbutterknife/Unbinder;
 
     .line 35
     return-void
@@ -58,7 +54,7 @@
     const/4 v3, 0x0
 
     .line 39
-    invoke-static {p1}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    invoke-static {p1}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -71,7 +67,7 @@
 
     aput-object v1, v0, v3
 
-    invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->d([Landroid/view/View;)V
 
     .line 41
     new-array v0, v4, [Landroid/view/View;
@@ -80,7 +76,7 @@
 
     aput-object v1, v0, v3
 
-    invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->g([Landroid/view/View;)V
 
     .line 48
     :goto_0
@@ -90,7 +86,7 @@
     :cond_0
     iget-object v0, p0, Lcom/kik/view/adapters/AbmContactListRecyclerAdapter$EmptyViewHolder;->_noSearchResultsText:Landroid/widget/TextView;
 
-    const v1, 0x7f0a01ea
+    const v1, 0x7f0901fe
 
     new-array v2, v4, [Ljava/lang/Object;
 
@@ -109,7 +105,7 @@
 
     aput-object v1, v0, v3
 
-    invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->g([Landroid/view/View;)V
 
     .line 46
     new-array v0, v4, [Landroid/view/View;
@@ -118,7 +114,7 @@
 
     aput-object v1, v0, v3
 
-    invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->d([Landroid/view/View;)V
 
     goto :goto_0
 .end method

@@ -329,7 +329,7 @@
     iput-boolean v4, p0, Lkik/android/widget/ProgressWheel;->y:Z
 
     .line 93
-    sget-object v0, Lkik/android/m$a;->ad:[I
+    sget-object v0, Lkik/android/R$styleable;->ProgressWheel:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -507,7 +507,7 @@
     if-eqz v1, :cond_1
 
     .line 1257
-    invoke-direct {p0}, Lkik/android/widget/ProgressWheel;->b()V
+    invoke-direct {p0}, Lkik/android/widget/ProgressWheel;->a()V
 
     .line 1501
     iget-boolean v1, p0, Lkik/android/widget/ProgressWheel;->y:Z
@@ -562,72 +562,7 @@
     return-void
 .end method
 
-.method static synthetic a(Lkik/android/widget/ProgressWheel;Ljava/lang/Float;)V
-    .locals 2
-
-    .prologue
-    .line 3446
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    cmpg-float v0, v0, v1
-
-    if-gez v0, :cond_0
-
-    .line 3447
-    invoke-direct {p0}, Lkik/android/widget/ProgressWheel;->b()V
-
-    :goto_0
-    return-void
-
-    .line 3450
-    :cond_0
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Lkik/android/widget/ProgressWheel;->a(F)V
-
-    goto :goto_0
-.end method
-
-.method public static a(Lkik/android/widget/ProgressWheel;Lrx/c;)V
-    .locals 2
-    .annotation build Landroid/databinding/BindingAdapter;
-        value = {
-            "progress"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lkik/android/widget/ProgressWheel;",
-            "Lrx/c",
-            "<",
-            "Ljava/lang/Float;",
-            ">;)V"
-        }
-    .end annotation
-
-    .prologue
-    .line 445
-    const v0, 0x1010137
-
-    invoke-static {p0}, Lkik/android/widget/cy;->a(Lkik/android/widget/ProgressWheel;)Lrx/b/b;
-
-    move-result-object v1
-
-    invoke-static {v0, v1, p0, p1}, Lcom/kik/util/az;->c(ILrx/b/b;Landroid/view/View;Lrx/c;)V
-
-    .line 453
-    return-void
-.end method
-
-.method private b()V
+.method private a()V
     .locals 2
 
     .prologue
@@ -650,7 +585,149 @@
     return-void
 .end method
 
-.method private c()V
+.method static synthetic a(Lkik/android/widget/ProgressWheel;Ljava/lang/Float;)V
+    .locals 5
+
+    .prologue
+    const/high16 v4, 0x43b40000    # 360.0f
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    const/4 v0, 0x0
+
+    .line 446
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result v1
+
+    cmpg-float v1, v1, v0
+
+    if-gez v1, :cond_1
+
+    .line 447
+    invoke-direct {p0}, Lkik/android/widget/ProgressWheel;->a()V
+
+    .line 452
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 450
+    :cond_1
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result v1
+
+    .line 3463
+    iget-boolean v2, p0, Lkik/android/widget/ProgressWheel;->y:Z
+
+    if-eqz v2, :cond_2
+
+    .line 3464
+    iput v0, p0, Lkik/android/widget/ProgressWheel;->w:F
+
+    .line 3465
+    const/4 v2, 0x0
+
+    iput-boolean v2, p0, Lkik/android/widget/ProgressWheel;->y:Z
+
+    .line 3467
+    invoke-direct {p0}, Lkik/android/widget/ProgressWheel;->b()V
+
+    .line 3470
+    :cond_2
+    cmpl-float v2, v1, v3
+
+    if-lez v2, :cond_5
+
+    .line 3471
+    sub-float v0, v1, v3
+
+    .line 3477
+    :cond_3
+    :goto_1
+    iget v1, p0, Lkik/android/widget/ProgressWheel;->x:F
+
+    cmpl-float v1, v0, v1
+
+    if-eqz v1, :cond_0
+
+    .line 3484
+    iget v1, p0, Lkik/android/widget/ProgressWheel;->w:F
+
+    iget v2, p0, Lkik/android/widget/ProgressWheel;->x:F
+
+    cmpl-float v1, v1, v2
+
+    if-nez v1, :cond_4
+
+    .line 3485
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v2
+
+    iput-wide v2, p0, Lkik/android/widget/ProgressWheel;->t:J
+
+    .line 3488
+    :cond_4
+    mul-float/2addr v0, v4
+
+    invoke-static {v0, v4}, Ljava/lang/Math;->min(FF)F
+
+    move-result v0
+
+    iput v0, p0, Lkik/android/widget/ProgressWheel;->x:F
+
+    .line 3490
+    invoke-virtual {p0}, Lkik/android/widget/ProgressWheel;->invalidate()V
+
+    goto :goto_0
+
+    .line 3473
+    :cond_5
+    cmpg-float v2, v1, v0
+
+    if-ltz v2, :cond_3
+
+    move v0, v1
+
+    goto :goto_1
+.end method
+
+.method public static a(Lkik/android/widget/ProgressWheel;Lrx/d;)V
+    .locals 2
+    .annotation build Landroid/databinding/BindingAdapter;
+        value = {
+            "progress"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkik/android/widget/ProgressWheel;",
+            "Lrx/d",
+            "<",
+            "Ljava/lang/Float;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 445
+    const v0, 0x1010137
+
+    invoke-static {p0}, Lkik/android/widget/cs;->a(Lkik/android/widget/ProgressWheel;)Lrx/functions/b;
+
+    move-result-object v1
+
+    invoke-static {v0, v1, p0, p1}, Lcom/kik/util/bv;->c(ILrx/functions/b;Landroid/view/View;Lrx/d;)V
+
+    .line 453
+    return-void
+.end method
+
+.method private b()V
     .locals 2
 
     .prologue
@@ -679,122 +756,6 @@
 
 
 # virtual methods
-.method public final a()F
-    .locals 2
-
-    .prologue
-    .line 581
-    iget-boolean v0, p0, Lkik/android/widget/ProgressWheel;->y:Z
-
-    if-eqz v0, :cond_0
-
-    const/high16 v0, -0x40800000    # -1.0f
-
-    :goto_0
-    return v0
-
-    :cond_0
-    iget v0, p0, Lkik/android/widget/ProgressWheel;->w:F
-
-    const/high16 v1, 0x43b40000    # 360.0f
-
-    div-float/2addr v0, v1
-
-    goto :goto_0
-.end method
-
-.method public final a(F)V
-    .locals 4
-
-    .prologue
-    const/high16 v3, 0x43b40000    # 360.0f
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    const/4 v0, 0x0
-
-    .line 463
-    iget-boolean v1, p0, Lkik/android/widget/ProgressWheel;->y:Z
-
-    if-eqz v1, :cond_0
-
-    .line 464
-    iput v0, p0, Lkik/android/widget/ProgressWheel;->w:F
-
-    .line 465
-    const/4 v1, 0x0
-
-    iput-boolean v1, p0, Lkik/android/widget/ProgressWheel;->y:Z
-
-    .line 467
-    invoke-direct {p0}, Lkik/android/widget/ProgressWheel;->c()V
-
-    .line 470
-    :cond_0
-    cmpl-float v1, p1, v2
-
-    if-lez v1, :cond_2
-
-    .line 471
-    sub-float/2addr p1, v2
-
-    .line 477
-    :cond_1
-    :goto_0
-    iget v0, p0, Lkik/android/widget/ProgressWheel;->x:F
-
-    cmpl-float v0, p1, v0
-
-    if-nez v0, :cond_3
-
-    .line 491
-    :goto_1
-    return-void
-
-    .line 473
-    :cond_2
-    cmpg-float v1, p1, v0
-
-    if-gez v1, :cond_1
-
-    move p1, v0
-
-    .line 474
-    goto :goto_0
-
-    .line 484
-    :cond_3
-    iget v0, p0, Lkik/android/widget/ProgressWheel;->w:F
-
-    iget v1, p0, Lkik/android/widget/ProgressWheel;->x:F
-
-    cmpl-float v0, v0, v1
-
-    if-nez v0, :cond_4
-
-    .line 485
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lkik/android/widget/ProgressWheel;->t:J
-
-    .line 488
-    :cond_4
-    mul-float v0, p1, v3
-
-    invoke-static {v0, v3}, Ljava/lang/Math;->min(FF)F
-
-    move-result v0
-
-    iput v0, p0, Lkik/android/widget/ProgressWheel;->x:F
-
-    .line 490
-    invoke-virtual {p0}, Lkik/android/widget/ProgressWheel;->invalidate()V
-
-    goto :goto_1
-.end method
-
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .locals 13
 
@@ -974,7 +935,7 @@
     if-eqz v5, :cond_4
 
     .line 329
-    invoke-direct {p0}, Lkik/android/widget/ProgressWheel;->c()V
+    invoke-direct {p0}, Lkik/android/widget/ProgressWheel;->b()V
 
     .line 3364
     :cond_4

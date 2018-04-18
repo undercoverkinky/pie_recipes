@@ -96,7 +96,7 @@
 
     .line 760
     :cond_3
-    sget v2, Lcom/github/clans/fab/a$d;->a:I
+    sget v2, Lcom/github/clans/fab/R$id;->fab_label:I
 
     invoke-virtual {v0, v2}, Lcom/github/clans/fab/FloatingActionButton;->getTag(I)Ljava/lang/Object;
 

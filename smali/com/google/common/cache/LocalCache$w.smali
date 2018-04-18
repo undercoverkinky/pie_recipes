@@ -56,13 +56,13 @@
     .end annotation
 
     .prologue
-    .line 1583
+    .line 1592
     invoke-direct {p0, p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V
 
-    .line 1584
+    .line 1593
     iput-object p3, p0, Lcom/google/common/cache/LocalCache$w;->a:Lcom/google/common/cache/LocalCache$j;
 
-    .line 1585
+    .line 1594
     return-void
 .end method
 
@@ -72,7 +72,7 @@
     .locals 1
 
     .prologue
-    .line 1589
+    .line 1598
     const/4 v0, 0x1
 
     return v0
@@ -93,7 +93,7 @@
     .end annotation
 
     .prologue
-    .line 1603
+    .line 1612
     new-instance v0, Lcom/google/common/cache/LocalCache$w;
 
     invoke-direct {v0, p1, p2, p3}, Lcom/google/common/cache/LocalCache$w;-><init>(Ljava/lang/ref/ReferenceQueue;Ljava/lang/Object;Lcom/google/common/cache/LocalCache$j;)V
@@ -110,7 +110,7 @@
     .end annotation
 
     .prologue
-    .line 1598
+    .line 1607
     return-void
 .end method
 
@@ -125,7 +125,7 @@
     .end annotation
 
     .prologue
-    .line 1594
+    .line 1603
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$w;->a:Lcom/google/common/cache/LocalCache$j;
 
     return-object v0
@@ -135,7 +135,7 @@
     .locals 1
 
     .prologue
-    .line 1608
+    .line 1617
     const/4 v0, 0x0
 
     return v0
@@ -145,7 +145,7 @@
     .locals 1
 
     .prologue
-    .line 1613
+    .line 1622
     const/4 v0, 0x1
 
     return v0
@@ -160,7 +160,7 @@
     .end annotation
 
     .prologue
-    .line 1618
+    .line 1627
     invoke-virtual {p0}, Lcom/google/common/cache/LocalCache$w;->get()Ljava/lang/Object;
 
     move-result-object v0

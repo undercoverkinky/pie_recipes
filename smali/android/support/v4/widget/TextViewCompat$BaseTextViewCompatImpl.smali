@@ -30,12 +30,24 @@
 
 
 # virtual methods
+.method public getCompoundDrawablesRelative(Landroid/widget/TextView;)[Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    .prologue
+    .line 91
+    invoke-static {p1}, Landroid/support/v4/widget/TextViewCompatGingerbread;->getCompoundDrawablesRelative(Landroid/widget/TextView;)[Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public getMaxLines(Landroid/widget/TextView;)I
     .locals 1
 
     .prologue
     .line 76
-    invoke-static {p1}, Landroid/support/v4/widget/TextViewCompatDonut;->getMaxLines(Landroid/widget/TextView;)I
+    invoke-static {p1}, Landroid/support/v4/widget/TextViewCompatGingerbread;->getMaxLines(Landroid/widget/TextView;)I
 
     move-result v0
 
@@ -47,7 +59,7 @@
 
     .prologue
     .line 81
-    invoke-static {p1}, Landroid/support/v4/widget/TextViewCompatDonut;->getMinLines(Landroid/widget/TextView;)I
+    invoke-static {p1}, Landroid/support/v4/widget/TextViewCompatGingerbread;->getMinLines(Landroid/widget/TextView;)I
 
     move-result v0
 
@@ -92,7 +104,7 @@
 
     .prologue
     .line 86
-    invoke-static {p1, p2}, Landroid/support/v4/widget/TextViewCompatDonut;->setTextAppearance(Landroid/widget/TextView;I)V
+    invoke-static {p1, p2}, Landroid/support/v4/widget/TextViewCompatGingerbread;->setTextAppearance(Landroid/widget/TextView;I)V
 
     .line 87
     return-void

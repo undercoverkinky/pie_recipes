@@ -3,12 +3,18 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0x12
+.end annotation
+
+
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 20
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,7 +24,7 @@
     .locals 1
 
     .prologue
-    .line 22
+    .line 26
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->hasMipMap()Z
 
     move-result v0
@@ -30,9 +36,9 @@
     .locals 0
 
     .prologue
-    .line 26
+    .line 30
     invoke-virtual {p0, p1}, Landroid/graphics/Bitmap;->setHasMipMap(Z)V
 
-    .line 27
+    .line 31
     return-void
 .end method

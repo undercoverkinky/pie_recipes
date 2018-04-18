@@ -1,5 +1,5 @@
 .class public final Lkik/android/chat/fragment/KikGroupMembersListFragment$a;
-.super Lkik/android/util/aa;
+.super Lkik/android/util/ae;
 .source "SourceFile"
 
 
@@ -19,8 +19,8 @@
     .locals 0
 
     .prologue
-    .line 743
-    invoke-direct {p0}, Lkik/android/util/aa;-><init>()V
+    .line 807
+    invoke-direct {p0}, Lkik/android/util/ae;-><init>()V
 
     return-void
 .end method
@@ -31,12 +31,12 @@
     .locals 1
 
     .prologue
-    .line 749
+    .line 813
     const-string v0, "KikGroupMembersListFragment.groupJid"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/KikGroupMembersListFragment$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 750
+    .line 814
     return-object p0
 .end method
 
@@ -44,10 +44,10 @@
     .locals 1
 
     .prologue
-    .line 755
+    .line 819
     const-string v0, "KikGroupMembersListFragment.groupJid"
 
-    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikGroupMembersListFragment$a;->l(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lkik/android/chat/fragment/KikGroupMembersListFragment$a;->h(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

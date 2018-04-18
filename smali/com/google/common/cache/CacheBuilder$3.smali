@@ -1,5 +1,5 @@
 .class final Lcom/google/common/cache/CacheBuilder$3;
-.super Lcom/google/common/base/o;
+.super Lcom/google/common/base/Ticker;
 .source "SourceFile"
 
 
@@ -19,19 +19,19 @@
     .locals 0
 
     .prologue
-    .line 206
-    invoke-direct {p0}, Lcom/google/common/base/o;-><init>()V
+    .line 202
+    invoke-direct {p0}, Lcom/google/common/base/Ticker;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
+.method public final read()J
     .locals 2
 
     .prologue
-    .line 209
+    .line 205
     const-wide/16 v0, 0x0
 
     return-wide v0

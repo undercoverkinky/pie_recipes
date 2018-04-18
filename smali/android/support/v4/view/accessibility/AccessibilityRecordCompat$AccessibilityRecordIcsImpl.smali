@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 268
+    .line 314
     invoke-direct {p0}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompat$AccessibilityRecordStubImpl;-><init>()V
 
     return-void
@@ -31,7 +31,7 @@
     .locals 1
 
     .prologue
-    .line 281
+    .line 327
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->getAddedCount(Ljava/lang/Object;)I
 
     move-result v0
@@ -43,7 +43,7 @@
     .locals 1
 
     .prologue
-    .line 286
+    .line 332
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->getBeforeText(Ljava/lang/Object;)Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -55,7 +55,7 @@
     .locals 1
 
     .prologue
-    .line 291
+    .line 337
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->getClassName(Ljava/lang/Object;)Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -67,7 +67,7 @@
     .locals 1
 
     .prologue
-    .line 296
+    .line 342
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->getContentDescription(Ljava/lang/Object;)Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -79,7 +79,7 @@
     .locals 1
 
     .prologue
-    .line 301
+    .line 347
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->getCurrentItemIndex(Ljava/lang/Object;)I
 
     move-result v0
@@ -91,7 +91,7 @@
     .locals 1
 
     .prologue
-    .line 306
+    .line 352
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->getFromIndex(Ljava/lang/Object;)I
 
     move-result v0
@@ -103,7 +103,7 @@
     .locals 1
 
     .prologue
-    .line 311
+    .line 357
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->getItemCount(Ljava/lang/Object;)I
 
     move-result v0
@@ -115,7 +115,7 @@
     .locals 1
 
     .prologue
-    .line 316
+    .line 362
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->getParcelableData(Ljava/lang/Object;)Landroid/os/Parcelable;
 
     move-result-object v0
@@ -127,7 +127,7 @@
     .locals 1
 
     .prologue
-    .line 321
+    .line 367
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->getRemovedCount(Ljava/lang/Object;)I
 
     move-result v0
@@ -139,7 +139,7 @@
     .locals 1
 
     .prologue
-    .line 326
+    .line 372
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->getScrollX(Ljava/lang/Object;)I
 
     move-result v0
@@ -151,7 +151,7 @@
     .locals 1
 
     .prologue
-    .line 331
+    .line 377
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->getScrollY(Ljava/lang/Object;)I
 
     move-result v0
@@ -163,11 +163,13 @@
     .locals 1
 
     .prologue
-    .line 336
+    .line 382
+    .line 383
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->getSource(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 382
     invoke-static {v0}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;->wrapNonNullInstance(Ljava/lang/Object;)Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;
 
     move-result-object v0
@@ -190,7 +192,7 @@
     .end annotation
 
     .prologue
-    .line 342
+    .line 388
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->getText(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
@@ -202,7 +204,7 @@
     .locals 1
 
     .prologue
-    .line 347
+    .line 393
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->getToIndex(Ljava/lang/Object;)I
 
     move-result v0
@@ -214,7 +216,7 @@
     .locals 1
 
     .prologue
-    .line 352
+    .line 398
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->getWindowId(Ljava/lang/Object;)I
 
     move-result v0
@@ -226,7 +228,7 @@
     .locals 1
 
     .prologue
-    .line 357
+    .line 403
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->isChecked(Ljava/lang/Object;)Z
 
     move-result v0
@@ -238,7 +240,7 @@
     .locals 1
 
     .prologue
-    .line 362
+    .line 408
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->isEnabled(Ljava/lang/Object;)Z
 
     move-result v0
@@ -250,7 +252,7 @@
     .locals 1
 
     .prologue
-    .line 367
+    .line 413
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->isFullScreen(Ljava/lang/Object;)Z
 
     move-result v0
@@ -262,7 +264,7 @@
     .locals 1
 
     .prologue
-    .line 372
+    .line 418
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->isPassword(Ljava/lang/Object;)Z
 
     move-result v0
@@ -274,7 +276,7 @@
     .locals 1
 
     .prologue
-    .line 377
+    .line 423
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->isScrollable(Ljava/lang/Object;)Z
 
     move-result v0
@@ -286,7 +288,7 @@
     .locals 1
 
     .prologue
-    .line 271
+    .line 317
     invoke-static {}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->obtain()Ljava/lang/Object;
 
     move-result-object v0
@@ -298,7 +300,7 @@
     .locals 1
 
     .prologue
-    .line 276
+    .line 322
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->obtain(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -310,10 +312,10 @@
     .locals 0
 
     .prologue
-    .line 382
+    .line 428
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->recycle(Ljava/lang/Object;)V
 
-    .line 383
+    .line 429
     return-void
 .end method
 
@@ -321,10 +323,10 @@
     .locals 0
 
     .prologue
-    .line 387
+    .line 433
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->setAddedCount(Ljava/lang/Object;I)V
 
-    .line 388
+    .line 434
     return-void
 .end method
 
@@ -332,10 +334,10 @@
     .locals 0
 
     .prologue
-    .line 392
+    .line 438
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->setBeforeText(Ljava/lang/Object;Ljava/lang/CharSequence;)V
 
-    .line 393
+    .line 439
     return-void
 .end method
 
@@ -343,10 +345,10 @@
     .locals 0
 
     .prologue
-    .line 397
+    .line 443
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->setChecked(Ljava/lang/Object;Z)V
 
-    .line 398
+    .line 444
     return-void
 .end method
 
@@ -354,10 +356,10 @@
     .locals 0
 
     .prologue
-    .line 402
+    .line 448
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->setClassName(Ljava/lang/Object;Ljava/lang/CharSequence;)V
 
-    .line 403
+    .line 449
     return-void
 .end method
 
@@ -365,10 +367,10 @@
     .locals 0
 
     .prologue
-    .line 407
+    .line 453
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->setContentDescription(Ljava/lang/Object;Ljava/lang/CharSequence;)V
 
-    .line 408
+    .line 454
     return-void
 .end method
 
@@ -376,10 +378,10 @@
     .locals 0
 
     .prologue
-    .line 412
+    .line 458
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->setCurrentItemIndex(Ljava/lang/Object;I)V
 
-    .line 413
+    .line 459
     return-void
 .end method
 
@@ -387,10 +389,10 @@
     .locals 0
 
     .prologue
-    .line 417
+    .line 463
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->setEnabled(Ljava/lang/Object;Z)V
 
-    .line 418
+    .line 464
     return-void
 .end method
 
@@ -398,10 +400,10 @@
     .locals 0
 
     .prologue
-    .line 422
+    .line 468
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->setFromIndex(Ljava/lang/Object;I)V
 
-    .line 423
+    .line 469
     return-void
 .end method
 
@@ -409,10 +411,10 @@
     .locals 0
 
     .prologue
-    .line 427
+    .line 473
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->setFullScreen(Ljava/lang/Object;Z)V
 
-    .line 428
+    .line 474
     return-void
 .end method
 
@@ -420,10 +422,10 @@
     .locals 0
 
     .prologue
-    .line 432
+    .line 478
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->setItemCount(Ljava/lang/Object;I)V
 
-    .line 433
+    .line 479
     return-void
 .end method
 
@@ -431,10 +433,10 @@
     .locals 0
 
     .prologue
-    .line 437
+    .line 483
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->setParcelableData(Ljava/lang/Object;Landroid/os/Parcelable;)V
 
-    .line 438
+    .line 484
     return-void
 .end method
 
@@ -442,10 +444,10 @@
     .locals 0
 
     .prologue
-    .line 442
+    .line 488
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->setPassword(Ljava/lang/Object;Z)V
 
-    .line 443
+    .line 489
     return-void
 .end method
 
@@ -453,10 +455,10 @@
     .locals 0
 
     .prologue
-    .line 447
+    .line 493
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->setRemovedCount(Ljava/lang/Object;I)V
 
-    .line 448
+    .line 494
     return-void
 .end method
 
@@ -464,10 +466,10 @@
     .locals 0
 
     .prologue
-    .line 452
+    .line 498
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->setScrollX(Ljava/lang/Object;I)V
 
-    .line 453
+    .line 499
     return-void
 .end method
 
@@ -475,10 +477,10 @@
     .locals 0
 
     .prologue
-    .line 457
+    .line 503
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->setScrollY(Ljava/lang/Object;I)V
 
-    .line 458
+    .line 504
     return-void
 .end method
 
@@ -486,10 +488,10 @@
     .locals 0
 
     .prologue
-    .line 462
+    .line 508
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->setScrollable(Ljava/lang/Object;Z)V
 
-    .line 463
+    .line 509
     return-void
 .end method
 
@@ -497,10 +499,10 @@
     .locals 0
 
     .prologue
-    .line 467
+    .line 513
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->setSource(Ljava/lang/Object;Landroid/view/View;)V
 
-    .line 468
+    .line 514
     return-void
 .end method
 
@@ -508,9 +510,9 @@
     .locals 0
 
     .prologue
-    .line 472
+    .line 518
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityRecordCompatIcs;->setToIndex(Ljava/lang/Object;I)V
 
-    .line 473
+    .line 519
     return-void
 .end method

@@ -25,19 +25,19 @@
     .locals 1
 
     .prologue
-    .line 383
+    .line 392
     iput-object p1, p0, Lkik/android/chat/fragment/AbTestsFragment$a;->a:Lkik/android/chat/fragment/AbTestsFragment;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 384
+    .line 393
     invoke-static {p2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
     iput-object v0, p0, Lkik/android/chat/fragment/AbTestsFragment$a;->b:Landroid/view/LayoutInflater;
 
-    .line 385
+    .line 394
     return-void
 .end method
 
@@ -47,7 +47,7 @@
     .locals 1
 
     .prologue
-    .line 390
+    .line 399
     const/4 v0, 0x1
 
     return v0
@@ -57,7 +57,7 @@
     .locals 1
 
     .prologue
-    .line 396
+    .line 405
     const/4 v0, 0x0
 
     return-object v0
@@ -67,7 +67,7 @@
     .locals 2
 
     .prologue
-    .line 402
+    .line 411
     const-wide/16 v0, 0x0
 
     return-wide v0
@@ -79,26 +79,26 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 410
+    .line 419
     if-nez p2, :cond_0
 
-    .line 411
+    .line 420
     iget-object v0, p0, Lkik/android/chat/fragment/AbTestsFragment$a;->b:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f040107
+    const v1, 0x7f040137
 
     invoke-virtual {v0, v1, p3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p2
 
-    .line 412
+    .line 421
     new-instance v1, Lkik/android/chat/fragment/AbTestsFragment$d;
 
     iget-object v0, p0, Lkik/android/chat/fragment/AbTestsFragment$a;->a:Lkik/android/chat/fragment/AbTestsFragment;
 
     invoke-direct {v1, v0, v4}, Lkik/android/chat/fragment/AbTestsFragment$d;-><init>(Lkik/android/chat/fragment/AbTestsFragment;B)V
 
-    .line 413
+    .line 422
     const v0, 0x1020016
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -109,7 +109,7 @@
 
     iput-object v0, v1, Lkik/android/chat/fragment/AbTestsFragment$d;->a:Landroid/widget/TextView;
 
-    .line 414
+    .line 423
     const v0, 0x1020010
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -122,7 +122,7 @@
 
     move-object v0, v1
 
-    .line 420
+    .line 429
     :goto_0
     iget-object v1, v0, Lkik/android/chat/fragment/AbTestsFragment$d;->a:Landroid/widget/TextView;
 
@@ -130,7 +130,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 421
+    .line 430
     iget-object v1, v0, Lkik/android/chat/fragment/AbTestsFragment$d;->b:Landroid/widget/TextView;
 
     iget-object v2, p0, Lkik/android/chat/fragment/AbTestsFragment$a;->a:Lkik/android/chat/fragment/AbTestsFragment;
@@ -141,21 +141,21 @@
 
     move-result-wide v2
 
-    invoke-static {v2, v3, v4}, Lkik/android/util/bq;->a(JZ)Lkik/android/util/bq$a;
+    invoke-static {v2, v3, v4}, Lkik/android/util/br;->a(JZ)Lkik/android/util/br$a;
 
     move-result-object v2
 
-    iget-object v2, v2, Lkik/android/util/bq$a;->a:Ljava/lang/String;
+    iget-object v2, v2, Lkik/android/util/br$a;->a:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 422
+    .line 431
     invoke-virtual {p2, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 424
+    .line 433
     return-object p2
 
-    .line 417
+    .line 426
     :cond_0
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 

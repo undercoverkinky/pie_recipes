@@ -1,18 +1,16 @@
 .class public Lkik/android/chat/fragment/SuggestedResponseTextViewHolder;
-.super Lkik/android/chat/fragment/hp;
+.super Lkik/android/chat/fragment/gb;
 .source "SourceFile"
 
 
 # static fields
-.field private static final m:I
+.field private static final b:I
 
 
 # instance fields
 .field protected _textView:Landroid/widget/TextView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f110297
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f100301
     .end annotation
 .end field
 
@@ -29,7 +27,7 @@
 
     move-result v0
 
-    sput v0, Lkik/android/chat/fragment/SuggestedResponseTextViewHolder;->m:I
+    sput v0, Lkik/android/chat/fragment/SuggestedResponseTextViewHolder;->b:I
 
     return-void
 .end method
@@ -39,10 +37,10 @@
 
     .prologue
     .line 45
-    invoke-direct {p0, p1}, Lkik/android/chat/fragment/hp;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lkik/android/chat/fragment/gb;-><init>(Landroid/view/View;)V
 
     .line 46
-    invoke-static {p0, p1}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)V
+    invoke-static {p0, p1}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)Lbutterknife/Unbinder;
 
     .line 47
     return-void
@@ -58,7 +56,7 @@
     invoke-direct {v0}, Landroid/text/TextPaint;-><init>()V
 
     .line 37
-    sget v1, Lkik/android/chat/fragment/SuggestedResponseTextViewHolder;->m:I
+    sget v1, Lkik/android/chat/fragment/SuggestedResponseTextViewHolder;->b:I
 
     int-to-float v1, v1
 
@@ -103,7 +101,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0400c6
+    const v1, 0x7f0400e9
 
     const/4 v2, 0x0
 
@@ -121,7 +119,7 @@
 
     .prologue
     .line 57
-    invoke-static {p1}, Lcom/kik/util/bu;->d(Lcom/kik/messagepath/model/Keyboards$SuggestedResponseItem;)Z
+    invoke-static {p1}, Lcom/kik/util/cz;->c(Lcom/kik/messagepath/model/Keyboards$SuggestedResponseItem;)Z
 
     move-result v0
 
@@ -166,7 +164,7 @@
 
     move v6, v4
 
-    invoke-static/range {v0 .. v6}, Lcom/kik/android/b/g;->a(Landroid/content/Context;Ljava/lang/CharSequence;Lcom/kik/message/model/attachments/RenderInstructionSet;IZLkik/android/e/j;Z)Ljava/lang/CharSequence;
+    invoke-static/range {v0 .. v6}, Lcom/kik/android/b/g;->a(Landroid/content/Context;Ljava/lang/CharSequence;Lcom/kik/message/model/attachments/RenderInstructionSet;IZLkik/android/f/i;Z)Ljava/lang/CharSequence;
 
     move-result-object v0
 

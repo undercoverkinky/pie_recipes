@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lokhttp3/r;
+.implements Lokhttp3/s;
 
 
 # static fields
@@ -53,7 +53,7 @@
 
 
 # virtual methods
-.method public intercept(Lokhttp3/r$a;)Lokhttp3/y;
+.method public intercept(Lokhttp3/s$a;)Lokhttp3/y;
     .locals 12
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -71,7 +71,7 @@
     const/4 v2, 0x0
 
     .line 35
-    invoke-interface {p1}, Lokhttp3/r$a;->a()Lokhttp3/w;
+    invoke-interface {p1}, Lokhttp3/s$a;->a()Lokhttp3/Request;
 
     move-result-object v7
 
@@ -89,7 +89,7 @@
 
     .line 42
     :try_start_0
-    invoke-interface {p1, v7}, Lokhttp3/r$a;->a(Lokhttp3/w;)Lokhttp3/y;
+    invoke-interface {p1, v7}, Lokhttp3/s$a;->a(Lokhttp3/Request;)Lokhttp3/y;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -98,7 +98,7 @@
 
     .line 43
     :try_start_1
-    invoke-virtual {v3}, Lokhttp3/y;->d()Z
+    invoke-virtual {v3}, Lokhttp3/y;->c()Z
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
     .catchall {:try_start_1 .. :try_end_1} :catchall_0

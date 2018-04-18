@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/kik/events/q;
+.implements Lcom/kik/events/p;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/kik/events/q",
+        "Lcom/kik/events/p",
         "<",
         "Lcom/kik/xdata/model/browser/XBrowserDomainInfo;",
         "Lcom/kik/xdata/model/browser/XBrowserDomainInfo;",
@@ -81,7 +81,7 @@
 
     .line 1280
     :cond_0
-    invoke-virtual {p1}, Lcom/kik/xdata/model/browser/XBrowserDomainInfo;->b()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/kik/xdata/model/browser/XBrowserDomainInfo;->a()Ljava/util/List;
 
     move-result-object v0
 
@@ -96,7 +96,7 @@
 
     .line 1283
     :cond_1
-    invoke-virtual {p1}, Lcom/kik/xdata/model/browser/XBrowserDomainInfo;->b()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/kik/xdata/model/browser/XBrowserDomainInfo;->a()Ljava/util/List;
 
     move-result-object v0
 
@@ -127,7 +127,7 @@
     .line 1290
     sget-object v3, Lcom/kik/xdata/model/browser/XBrowserPermission$XBrowserPermissionName;->PROFILE:Lcom/kik/xdata/model/browser/XBrowserPermission$XBrowserPermissionName;
 
-    invoke-virtual {v0}, Lcom/kik/xdata/model/browser/XBrowserPermission;->c()Lcom/kik/xdata/model/browser/XBrowserPermission$XBrowserPermissionName;
+    invoke-virtual {v0}, Lcom/kik/xdata/model/browser/XBrowserPermission;->b()Lcom/kik/xdata/model/browser/XBrowserPermission$XBrowserPermissionName;
 
     move-result-object v4
 
@@ -153,7 +153,7 @@
     move-result-object v0
 
     .line 1298
-    invoke-virtual {p1}, Lcom/kik/xdata/model/browser/XBrowserDomainInfo;->b()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/kik/xdata/model/browser/XBrowserDomainInfo;->a()Ljava/util/List;
 
     move-result-object v1
 

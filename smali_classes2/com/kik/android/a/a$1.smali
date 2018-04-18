@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/android/a/a;->a(J)Lcom/kik/events/p;
+    value = Lcom/kik/android/a/a;->a(J)Lcom/kik/events/o;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/kik/events/p;
+.field final synthetic a:Lcom/kik/events/o;
 
 .field final synthetic b:Lcom/kik/android/a/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/kik/android/a/a;Lcom/kik/events/p;)V
+.method constructor <init>(Lcom/kik/android/a/a;Lcom/kik/events/o;)V
     .locals 0
 
     .prologue
     .line 88
     iput-object p1, p0, Lcom/kik/android/a/a$1;->b:Lcom/kik/android/a/a;
 
-    iput-object p2, p0, Lcom/kik/android/a/a$1;->a:Lcom/kik/events/p;
+    iput-object p2, p0, Lcom/kik/android/a/a$1;->a:Lcom/kik/events/o;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,9 +45,9 @@
 
     .prologue
     .line 93
-    iget-object v0, p0, Lcom/kik/android/a/a$1;->a:Lcom/kik/events/p;
+    iget-object v0, p0, Lcom/kik/android/a/a$1;->a:Lcom/kik/events/o;
 
-    invoke-virtual {v0}, Lcom/kik/events/p;->c()V
+    invoke-virtual {v0}, Lcom/kik/events/o;->c()V
 
     .line 94
     return-void

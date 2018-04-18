@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 1542
+    .line 1904
     iput-object p1, p0, Landroid/support/design/widget/CoordinatorLayout$OnPreDrawListener;->a:Landroid/support/design/widget/CoordinatorLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,14 +40,14 @@
     .locals 2
 
     .prologue
-    .line 1545
+    .line 1907
     iget-object v0, p0, Landroid/support/design/widget/CoordinatorLayout$OnPreDrawListener;->a:Landroid/support/design/widget/CoordinatorLayout;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/support/design/widget/CoordinatorLayout;->a(Z)V
+    invoke-virtual {v0, v1}, Landroid/support/design/widget/CoordinatorLayout;->a(I)V
 
-    .line 1546
+    .line 1908
     const/4 v0, 0x1
 
     return v0

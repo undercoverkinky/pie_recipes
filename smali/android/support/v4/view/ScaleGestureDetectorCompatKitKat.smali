@@ -3,15 +3,21 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0x13
+.end annotation
+
+
 # direct methods
 .method private constructor <init>()V
     .locals 0
 
     .prologue
-    .line 29
+    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
+    .line 33
     return-void
 .end method
 
@@ -19,7 +25,7 @@
     .locals 1
 
     .prologue
-    .line 37
+    .line 40
     check-cast p0, Landroid/view/ScaleGestureDetector;
 
     invoke-virtual {p0}, Landroid/view/ScaleGestureDetector;->isQuickScaleEnabled()Z
@@ -33,11 +39,11 @@
     .locals 0
 
     .prologue
-    .line 33
+    .line 36
     check-cast p0, Landroid/view/ScaleGestureDetector;
 
     invoke-virtual {p0, p1}, Landroid/view/ScaleGestureDetector;->setQuickScaleEnabled(Z)V
 
-    .line 34
+    .line 37
     return-void
 .end method

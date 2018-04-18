@@ -61,7 +61,31 @@
     return-object v0
 .end method
 
-.method protected final a_()Z
+.method public final b()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 28
+    const-string v0, "com.crashlytics.sdk.android.crashlytics-ndk"
+
+    return-object v0
+.end method
+
+.method public final c()Lcom/crashlytics/android/core/a/a/d;
+    .locals 1
+
+    .prologue
+    .line 45
+    iget-object v0, p0, Lcom/crashlytics/android/ndk/b;->a:Lcom/crashlytics/android/ndk/f;
+
+    invoke-interface {v0}, Lcom/crashlytics/android/ndk/f;->b()Lcom/crashlytics/android/core/a/a/d;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method protected final c_()Z
     .locals 5
 
     .prologue
@@ -93,14 +117,14 @@
     invoke-direct {v1}, Lcom/crashlytics/android/ndk/JniNativeApi;-><init>()V
 
     .line 1022
-    new-instance v2, Lio/fabric/sdk/android/services/c/b;
+    new-instance v2, Lio/fabric/sdk/android/services/b/b;
 
-    invoke-direct {v2, p0}, Lio/fabric/sdk/android/services/c/b;-><init>(Lio/fabric/sdk/android/h;)V
+    invoke-direct {v2, p0}, Lio/fabric/sdk/android/services/b/b;-><init>(Lio/fabric/sdk/android/h;)V
 
     .line 1023
     new-instance v3, Lcom/crashlytics/android/ndk/k;
 
-    invoke-direct {v3, v2}, Lcom/crashlytics/android/ndk/k;-><init>(Lio/fabric/sdk/android/services/c/a;)V
+    invoke-direct {v3, v2}, Lcom/crashlytics/android/ndk/k;-><init>(Lio/fabric/sdk/android/services/b/a;)V
 
     .line 1024
     new-instance v2, Lcom/crashlytics/android/ndk/d;
@@ -121,7 +145,7 @@
     iput-object v4, p0, Lcom/crashlytics/android/ndk/b;->a:Lcom/crashlytics/android/ndk/f;
 
     .line 1064
-    invoke-virtual {p0}, Lcom/crashlytics/android/ndk/b;->o()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/crashlytics/android/ndk/b;->m()Landroid/content/Context;
 
     move-result-object v1
 
@@ -141,30 +165,6 @@
     .line 55
     :cond_1
     return v1
-.end method
-
-.method public final b()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 28
-    const-string v0, "com.crashlytics.sdk.android.crashlytics-ndk"
-
-    return-object v0
-.end method
-
-.method public final c()Lcom/crashlytics/android/core/a/a/d;
-    .locals 1
-
-    .prologue
-    .line 45
-    iget-object v0, p0, Lcom/crashlytics/android/ndk/b;->a:Lcom/crashlytics/android/ndk/f;
-
-    invoke-interface {v0}, Lcom/crashlytics/android/ndk/f;->b()Lcom/crashlytics/android/core/a/a/d;
-
-    move-result-object v0
-
-    return-object v0
 .end method
 
 .method protected final synthetic e()Ljava/lang/Object;

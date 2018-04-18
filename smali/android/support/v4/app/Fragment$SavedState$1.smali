@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 347
+    .line 363
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +44,7 @@
     .locals 2
 
     .prologue
-    .line 350
+    .line 366
     new-instance v0, Landroid/support/v4/app/Fragment$SavedState;
 
     const/4 v1, 0x0
@@ -58,7 +58,7 @@
     .locals 1
 
     .prologue
-    .line 347
+    .line 363
     invoke-virtual {p0, p1}, Landroid/support/v4/app/Fragment$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Landroid/support/v4/app/Fragment$SavedState;
 
     move-result-object v0
@@ -70,7 +70,7 @@
     .locals 1
 
     .prologue
-    .line 355
+    .line 371
     new-array v0, p1, [Landroid/support/v4/app/Fragment$SavedState;
 
     return-object v0
@@ -80,7 +80,7 @@
     .locals 1
 
     .prologue
-    .line 347
+    .line 363
     invoke-virtual {p0, p1}, Landroid/support/v4/app/Fragment$SavedState$1;->newArray(I)[Landroid/support/v4/app/Fragment$SavedState;
 
     move-result-object v0

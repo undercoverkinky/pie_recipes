@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/fragment/SimpleFragmentWrapperActivity$2;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
         "Landroid/os/Bundle;",
         ">;"
@@ -35,7 +35,7 @@
     .line 112
     iput-object p1, p0, Lkik/android/chat/fragment/SimpleFragmentWrapperActivity$2;->a:Lkik/android/chat/fragment/SimpleFragmentWrapperActivity;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -50,7 +50,7 @@
     check-cast p1, Landroid/os/Bundle;
 
     .line 1117
-    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Object;)V
+    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Object;)V
 
     .line 1118
     new-instance v0, Landroid/content/Intent;
@@ -78,7 +78,7 @@
 
     .prologue
     .line 126
-    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Throwable;)V
+    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Throwable;)V
 
     .line 127
     iget-object v0, p0, Lkik/android/chat/fragment/SimpleFragmentWrapperActivity$2;->a:Lkik/android/chat/fragment/SimpleFragmentWrapperActivity;
@@ -96,7 +96,7 @@
 
     .prologue
     .line 133
-    invoke-super {p0}, Lcom/kik/events/l;->b()V
+    invoke-super {p0}, Lcom/kik/events/k;->b()V
 
     .line 134
     return-void

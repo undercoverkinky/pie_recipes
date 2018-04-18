@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/google/common/base/i;
+.implements Lcom/google/common/base/Predicate;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/google/common/base/i",
+        "Lcom/google/common/base/Predicate",
         "<",
         "Lkik/android/challenge/CountryCode;",
         ">;"
@@ -62,7 +62,7 @@
 
     iget-object v1, p0, Lcom/kik/view/adapters/CountryCodeRecyclerAdapter$1;->a:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lorg/a/a/b/c;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+    invoke-static {v0, v1}, Lorg/apache/commons/b/c;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
 

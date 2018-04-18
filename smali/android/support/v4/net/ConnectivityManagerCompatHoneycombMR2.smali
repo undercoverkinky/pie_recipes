@@ -3,12 +3,18 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0xd
+.end annotation
+
+
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 35
+    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,38 +26,38 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 37
+    .line 42
     invoke-virtual {p0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v1
 
-    .line 38
+    .line 43
     if-nez v1, :cond_0
 
-    .line 58
+    .line 63
     :goto_0
     :pswitch_0
     return v0
 
-    .line 43
+    .line 48
     :cond_0
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->getType()I
 
     move-result v1
 
-    .line 44
+    .line 49
     packed-switch v1, :pswitch_data_0
 
     :pswitch_1
     goto :goto_0
 
-    .line 55
+    .line 60
     :pswitch_2
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 44
+    .line 49
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

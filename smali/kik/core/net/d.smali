@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract a(Lkik/core/net/outgoing/ae;I)V
+.method public abstract stanzaStateChanged(Lkik/core/net/outgoing/j;I)V
 .end method

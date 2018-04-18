@@ -11,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1a
+    accessFlags = 0x18
     name = "c"
 .end annotation
 
@@ -21,10 +21,10 @@
 
 .field private final b:I
 
-.field private final c:Lcom/google/android/gms/tasks/h;
+.field private final c:Lcom/google/android/gms/tasks/n;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/google/android/gms/tasks/h",
+            "Lcom/google/android/gms/tasks/n",
             "<",
             "Ljava/lang/Void;",
             ">;"
@@ -40,12 +40,12 @@
 
 
 # direct methods
-.method public constructor <init>(ILcom/google/android/gms/tasks/h;)V
+.method public constructor <init>(ILcom/google/android/gms/tasks/n;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lcom/google/android/gms/tasks/h",
+            "Lcom/google/android/gms/tasks/n",
             "<",
             "Ljava/lang/Void;",
             ">;)V"
@@ -62,12 +62,12 @@
 
     iput p1, p0, Lcom/google/android/gms/tasks/Tasks$c;->b:I
 
-    iput-object p2, p0, Lcom/google/android/gms/tasks/Tasks$c;->c:Lcom/google/android/gms/tasks/h;
+    iput-object p2, p0, Lcom/google/android/gms/tasks/Tasks$c;->c:Lcom/google/android/gms/tasks/n;
 
     return-void
 .end method
 
-.method private a()V
+.method private final a()V
     .locals 6
 
     iget v0, p0, Lcom/google/android/gms/tasks/Tasks$c;->d:I
@@ -84,18 +84,18 @@
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/google/android/gms/tasks/Tasks$c;->c:Lcom/google/android/gms/tasks/h;
+    iget-object v0, p0, Lcom/google/android/gms/tasks/Tasks$c;->c:Lcom/google/android/gms/tasks/n;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/tasks/h;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/tasks/n;->a(Ljava/lang/Object;)V
 
     :cond_0
     :goto_0
     return-void
 
     :cond_1
-    iget-object v0, p0, Lcom/google/android/gms/tasks/Tasks$c;->c:Lcom/google/android/gms/tasks/h;
+    iget-object v0, p0, Lcom/google/android/gms/tasks/Tasks$c;->c:Lcom/google/android/gms/tasks/n;
 
     new-instance v1, Ljava/util/concurrent/ExecutionException;
 
@@ -103,13 +103,13 @@
 
     iget v3, p0, Lcom/google/android/gms/tasks/Tasks$c;->b:I
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    const/16 v4, 0x36
 
-    const/16 v5, 0x36
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v5, v4}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -137,7 +137,7 @@
 
     invoke-direct {v1, v2, v3}, Ljava/util/concurrent/ExecutionException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/tasks/h;->a(Ljava/lang/Exception;)V
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/tasks/n;->a(Ljava/lang/Exception;)V
 
     goto :goto_0
 .end method

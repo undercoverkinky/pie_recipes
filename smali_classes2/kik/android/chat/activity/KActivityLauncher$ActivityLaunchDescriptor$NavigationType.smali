@@ -44,7 +44,7 @@
 
     const/4 v2, 0x0
 
-    .line 481
+    .line 504
     new-instance v0, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor$NavigationType;
 
     const-string v1, "DEFAULT"
@@ -53,7 +53,7 @@
 
     sput-object v0, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor$NavigationType;->DEFAULT:Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor$NavigationType;
 
-    .line 482
+    .line 505
     new-instance v0, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor$NavigationType;
 
     const-string v1, "UP"
@@ -70,7 +70,7 @@
 
     sput-object v0, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor$NavigationType;->ROOT:Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor$NavigationType;
 
-    .line 480
+    .line 502
     const/4 v0, 0x3
 
     new-array v0, v0, [Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor$NavigationType;
@@ -101,7 +101,7 @@
     .end annotation
 
     .prologue
-    .line 480
+    .line 502
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -111,7 +111,7 @@
     .locals 1
 
     .prologue
-    .line 480
+    .line 502
     const-class v0, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor$NavigationType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -127,7 +127,7 @@
     .locals 1
 
     .prologue
-    .line 480
+    .line 502
     sget-object v0, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor$NavigationType;->$VALUES:[Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor$NavigationType;
 
     invoke-virtual {v0}, [Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor$NavigationType;->clone()Ljava/lang/Object;

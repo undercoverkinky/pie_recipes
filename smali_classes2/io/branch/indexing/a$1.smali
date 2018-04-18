@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 123
+    .line 141
     iput-object p1, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,18 +37,21 @@
 
 # virtual methods
 .method public final run()V
-    .locals 10
+    .locals 8
 
     .prologue
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
-
-    .line 128
+    .line 145
     :try_start_0
     iget-object v0, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
 
-    invoke-static {v0}, Lio/branch/indexing/a;->a(Lio/branch/indexing/a;)Lio/branch/indexing/b;
+    invoke-static {v0}, Lio/branch/indexing/a;->a(Lio/branch/indexing/a;)I
+
+    .line 146
+    iget-object v0, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
+
+    invoke-static {v0}, Lio/branch/indexing/a;->b(Lio/branch/indexing/a;)Lio/branch/indexing/b;
 
     move-result-object v0
 
@@ -60,7 +63,7 @@
 
     iget-object v0, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
 
-    invoke-static {v0}, Lio/branch/indexing/a;->b(Lio/branch/indexing/a;)Ljava/lang/ref/WeakReference;
+    invoke-static {v0}, Lio/branch/indexing/a;->c(Lio/branch/indexing/a;)Ljava/lang/ref/WeakReference;
 
     move-result-object v0
 
@@ -68,7 +71,7 @@
 
     iget-object v0, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
 
-    invoke-static {v0}, Lio/branch/indexing/a;->b(Lio/branch/indexing/a;)Ljava/lang/ref/WeakReference;
+    invoke-static {v0}, Lio/branch/indexing/a;->c(Lio/branch/indexing/a;)Ljava/lang/ref/WeakReference;
 
     move-result-object v0
 
@@ -78,10 +81,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 129
+    .line 147
     iget-object v0, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
 
-    invoke-static {v0}, Lio/branch/indexing/a;->b(Lio/branch/indexing/a;)Ljava/lang/ref/WeakReference;
+    invoke-static {v0}, Lio/branch/indexing/a;->c(Lio/branch/indexing/a;)Ljava/lang/ref/WeakReference;
 
     move-result-object v0
 
@@ -91,7 +94,7 @@
 
     check-cast v4, Landroid/app/Activity;
 
-    .line 130
+    .line 148
     iget-object v0, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
 
     new-instance v1, Lorg/json/JSONObject;
@@ -100,10 +103,10 @@
 
     invoke-static {v0, v1}, Lio/branch/indexing/a;->a(Lio/branch/indexing/a;Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
-    .line 131
+    .line 149
     iget-object v0, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
 
-    invoke-static {v0}, Lio/branch/indexing/a;->c(Lio/branch/indexing/a;)Lorg/json/JSONObject;
+    invoke-static {v0}, Lio/branch/indexing/a;->d(Lio/branch/indexing/a;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -115,10 +118,10 @@
 
     invoke-virtual {v0, v1, v6, v7}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    .line 132
+    .line 150
     iget-object v0, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
 
-    invoke-static {v0}, Lio/branch/indexing/a;->d(Lio/branch/indexing/a;)Ljava/lang/String;
+    invoke-static {v0}, Lio/branch/indexing/a;->e(Lio/branch/indexing/a;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -128,24 +131,24 @@
 
     if-nez v0, :cond_0
 
-    .line 133
+    .line 151
     iget-object v0, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
 
-    invoke-static {v0}, Lio/branch/indexing/a;->c(Lio/branch/indexing/a;)Lorg/json/JSONObject;
+    invoke-static {v0}, Lio/branch/indexing/a;->d(Lio/branch/indexing/a;)Lorg/json/JSONObject;
 
     move-result-object v0
 
     const-string v1, "rl"
 
-    iget-object v5, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
+    iget-object v3, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
 
-    invoke-static {v5}, Lio/branch/indexing/a;->d(Lio/branch/indexing/a;)Ljava/lang/String;
+    invoke-static {v3}, Lio/branch/indexing/a;->e(Lio/branch/indexing/a;)Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v3
 
-    invoke-virtual {v0, v1, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 135
+    .line 153
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -169,10 +172,10 @@
 
     move-result-object v6
 
-    .line 136
+    .line 154
     iget-object v0, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
 
-    invoke-static {v0}, Lio/branch/indexing/a;->c(Lio/branch/indexing/a;)Lorg/json/JSONObject;
+    invoke-static {v0}, Lio/branch/indexing/a;->d(Lio/branch/indexing/a;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -180,7 +183,7 @@
 
     invoke-virtual {v0, v1, v6}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 139
+    .line 156
     const v0, 0x1020002
 
     invoke-virtual {v4, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
@@ -189,83 +192,71 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    .line 141
+    .line 158
     if-eqz v0, :cond_3
 
-    .line 142
+    .line 159
     iget-object v1, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
 
-    invoke-static {v1}, Lio/branch/indexing/a;->a(Lio/branch/indexing/a;)Lio/branch/indexing/b;
+    invoke-static {v1}, Lio/branch/indexing/a;->b(Lio/branch/indexing/a;)Lio/branch/indexing/b;
 
     move-result-object v1
 
     invoke-virtual {v1, v4}, Lio/branch/indexing/b;->a(Landroid/app/Activity;)Lio/branch/indexing/b$a;
 
-    move-result-object v7
+    move-result-object v3
 
-    .line 143
-    if-eqz v7, :cond_4
-
-    invoke-virtual {v7}, Lio/branch/indexing/b$a;->b()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    move v5, v2
-
-    .line 144
-    :goto_0
+    .line 161
     const/4 v1, 0x0
 
-    .line 145
-    if-eqz v7, :cond_1
+    .line 162
+    if-eqz v3, :cond_5
 
-    .line 146
-    invoke-virtual {v7}, Lio/branch/indexing/b$a;->b()Z
+    .line 163
+    invoke-virtual {v3}, Lio/branch/indexing/b$a;->d()Z
 
     move-result v5
 
-    .line 147
+    .line 164
     iget-object v1, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
 
-    invoke-static {v1}, Lio/branch/indexing/a;->c(Lio/branch/indexing/a;)Lorg/json/JSONObject;
-
-    move-result-object v8
-
-    const-string v9, "h"
-
-    if-nez v5, :cond_5
-
-    move v1, v2
-
-    :goto_1
-    invoke-virtual {v8, v9, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
-
-    .line 148
-    invoke-virtual {v7}, Lio/branch/indexing/b$a;->a()Lorg/json/JSONArray;
+    invoke-static {v1}, Lio/branch/indexing/a;->d(Lio/branch/indexing/a;)Lorg/json/JSONObject;
 
     move-result-object v1
 
-    .line 150
+    const-string v7, "h"
+
+    if-nez v5, :cond_1
+
+    const/4 v2, 0x1
+
     :cond_1
-    if-eqz v1, :cond_6
+    invoke-virtual {v1, v7, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+
+    .line 165
+    invoke-virtual {v3}, Lio/branch/indexing/b$a;->c()Lorg/json/JSONArray;
+
+    move-result-object v1
+
+    .line 167
+    :goto_0
+    if-eqz v1, :cond_4
 
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
     move-result v2
 
-    if-lez v2, :cond_6
+    if-lez v2, :cond_4
 
-    .line 151
+    .line 168
     new-instance v3, Lorg/json/JSONArray;
 
     invoke-direct {v3}, Lorg/json/JSONArray;-><init>()V
 
-    .line 152
+    .line 169
     iget-object v0, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
 
-    invoke-static {v0}, Lio/branch/indexing/a;->c(Lio/branch/indexing/a;)Lorg/json/JSONObject;
+    invoke-static {v0}, Lio/branch/indexing/a;->d(Lio/branch/indexing/a;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -273,15 +264,15 @@
 
     invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 154
+    .line 170
     new-instance v2, Lorg/json/JSONArray;
 
     invoke-direct {v2}, Lorg/json/JSONArray;-><init>()V
 
-    .line 155
+    .line 171
     iget-object v0, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
 
-    invoke-static {v0}, Lio/branch/indexing/a;->c(Lio/branch/indexing/a;)Lorg/json/JSONObject;
+    invoke-static {v0}, Lio/branch/indexing/a;->d(Lio/branch/indexing/a;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -289,101 +280,167 @@
 
     invoke-virtual {v0, v7, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 156
+    .line 172
     iget-object v0, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
 
     invoke-static/range {v0 .. v5}, Lio/branch/indexing/a;->a(Lio/branch/indexing/a;Lorg/json/JSONArray;Lorg/json/JSONArray;Lorg/json/JSONArray;Landroid/app/Activity;Z)V
 
-    .line 164
+    .line 180
     :cond_2
-    :goto_2
+    :goto_1
     iget-object v0, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
 
-    invoke-static {v0}, Lio/branch/indexing/a;->e(Lio/branch/indexing/a;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lio/branch/indexing/a;->f(Lio/branch/indexing/a;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     invoke-virtual {v0, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 167
-    invoke-static {v4}, Lio/branch/referral/n;->a(Landroid/content/Context;)Lio/branch/referral/n;
+    .line 183
+    invoke-static {v4}, Lio/branch/referral/m;->a(Landroid/content/Context;)Lio/branch/referral/m;
 
     iget-object v0, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
 
-    invoke-static {v0}, Lio/branch/indexing/a;->c(Lio/branch/indexing/a;)Lorg/json/JSONObject;
+    invoke-static {v0}, Lio/branch/indexing/a;->d(Lio/branch/indexing/a;)Lorg/json/JSONObject;
 
     move-result-object v0
 
-    invoke-static {v0}, Lio/branch/referral/n;->a(Lorg/json/JSONObject;)V
+    invoke-static {v0}, Lio/branch/referral/m;->a(Lorg/json/JSONObject;)V
 
-    .line 168
+    .line 184
     iget-object v0, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
 
-    invoke-static {v0}, Lio/branch/indexing/a;->f(Lio/branch/indexing/a;)Ljava/lang/ref/WeakReference;
+    invoke-static {v0}, Lio/branch/indexing/a;->b(Lio/branch/indexing/a;)Lio/branch/indexing/b;
 
-    .line 174
-    :cond_3
-    :goto_3
-    return-void
+    move-result-object v0
 
-    :cond_4
-    move v5, v3
+    invoke-virtual {v0, v4}, Lio/branch/indexing/b;->a(Landroid/app/Activity;)Lio/branch/indexing/b$a;
 
-    .line 143
-    goto :goto_0
+    move-result-object v0
 
-    :cond_5
-    move v1, v3
+    invoke-virtual {v0}, Lio/branch/indexing/b$a;->a()I
 
-    .line 147
-    goto :goto_1
+    move-result v0
 
-    .line 158
-    :cond_6
-    iget-object v1, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
-
-    invoke-static {v1}, Lio/branch/indexing/a;->e(Lio/branch/indexing/a;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v6}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    .line 159
-    new-instance v1, Lorg/json/JSONArray;
-
-    invoke-direct {v1}, Lorg/json/JSONArray;-><init>()V
-
-    .line 160
+    .line 185
     iget-object v2, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
 
-    invoke-static {v2}, Lio/branch/indexing/a;->c(Lio/branch/indexing/a;)Lorg/json/JSONObject;
+    iget-object v3, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
 
-    move-result-object v2
-
-    const-string v3, "ck"
-
-    invoke-virtual {v2, v3, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 161
-    iget-object v2, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
-
-    invoke-virtual {v4}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+    invoke-static {v3}, Lio/branch/indexing/a;->b(Lio/branch/indexing/a;)Lio/branch/indexing/b;
 
     move-result-object v3
 
-    invoke-static {v2, v0, v1, v3, v5}, Lio/branch/indexing/a;->a(Lio/branch/indexing/a;Landroid/view/ViewGroup;Lorg/json/JSONArray;Landroid/content/res/Resources;Z)V
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v3, v4}, Lio/branch/indexing/b;->a(Landroid/app/Activity;)Lio/branch/indexing/b$a;
 
-    goto :goto_2
+    move-result-object v3
+
+    invoke-virtual {v3}, Lio/branch/indexing/b$a;->b()I
+
+    move-result v3
+
+    invoke-static {v2, v3}, Lio/branch/indexing/a;->a(Lio/branch/indexing/a;I)I
+
+    .line 186
+    iget-object v2, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
+
+    invoke-static {v2}, Lio/branch/indexing/a;->g(Lio/branch/indexing/a;)I
+
+    move-result v2
+
+    iget-object v3, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
+
+    invoke-static {v3}, Lio/branch/indexing/a;->h(Lio/branch/indexing/a;)I
+
+    move-result v3
+
+    if-ge v2, v3, :cond_3
+
+    const/16 v2, 0x1f4
+
+    if-lt v0, v2, :cond_3
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
+
+    move-result v1
+
+    if-lez v1, :cond_3
+
+    .line 187
+    iget-object v1, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
+
+    invoke-static {v1}, Lio/branch/indexing/a;->j(Lio/branch/indexing/a;)Landroid/os/Handler;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
+
+    invoke-static {v2}, Lio/branch/indexing/a;->i(Lio/branch/indexing/a;)Ljava/lang/Runnable;
+
+    move-result-object v2
+
+    int-to-long v4, v0
+
+    invoke-virtual {v1, v2, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    .line 194
+    :cond_3
+    :goto_2
+    return-void
 
     .line 174
+    :cond_4
+    iget-object v2, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
+
+    invoke-static {v2}, Lio/branch/indexing/a;->f(Lio/branch/indexing/a;)Ljava/util/ArrayList;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v6}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    .line 175
+    new-instance v2, Lorg/json/JSONArray;
+
+    invoke-direct {v2}, Lorg/json/JSONArray;-><init>()V
+
+    .line 176
+    iget-object v3, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
+
+    invoke-static {v3}, Lio/branch/indexing/a;->d(Lio/branch/indexing/a;)Lorg/json/JSONObject;
+
+    move-result-object v3
+
+    const-string v5, "ck"
+
+    invoke-virtual {v3, v5, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 177
+    iget-object v3, p0, Lio/branch/indexing/a$1;->a:Lio/branch/indexing/a;
+
+    invoke-virtual {v4}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    invoke-static {v3, v0, v2, v5}, Lio/branch/indexing/a;->a(Lio/branch/indexing/a;Landroid/view/ViewGroup;Lorg/json/JSONArray;Landroid/content/res/Resources;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto/16 :goto_1
+
+    .line 194
     :catch_0
     move-exception v0
 
-    goto :goto_3
+    goto :goto_2
+
+    :cond_5
+    move v5, v2
+
+    goto/16 :goto_0
 .end method

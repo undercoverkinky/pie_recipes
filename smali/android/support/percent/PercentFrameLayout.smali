@@ -20,17 +20,17 @@
     .locals 1
 
     .prologue
-    .line 81
+    .line 83
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 78
+    .line 80
     new-instance v0, Landroid/support/percent/PercentLayoutHelper;
 
     invoke-direct {v0, p0}, Landroid/support/percent/PercentLayoutHelper;-><init>(Landroid/view/ViewGroup;)V
 
     iput-object v0, p0, Landroid/support/percent/PercentFrameLayout;->mHelper:Landroid/support/percent/PercentLayoutHelper;
 
-    .line 82
+    .line 84
     return-void
 .end method
 
@@ -38,17 +38,17 @@
     .locals 1
 
     .prologue
-    .line 85
+    .line 87
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 78
+    .line 80
     new-instance v0, Landroid/support/percent/PercentLayoutHelper;
 
     invoke-direct {v0, p0}, Landroid/support/percent/PercentLayoutHelper;-><init>(Landroid/view/ViewGroup;)V
 
     iput-object v0, p0, Landroid/support/percent/PercentFrameLayout;->mHelper:Landroid/support/percent/PercentLayoutHelper;
 
-    .line 86
+    .line 88
     return-void
 .end method
 
@@ -56,17 +56,17 @@
     .locals 1
 
     .prologue
-    .line 89
+    .line 91
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 78
+    .line 80
     new-instance v0, Landroid/support/percent/PercentLayoutHelper;
 
     invoke-direct {v0, p0}, Landroid/support/percent/PercentLayoutHelper;-><init>(Landroid/view/ViewGroup;)V
 
     iput-object v0, p0, Landroid/support/percent/PercentFrameLayout;->mHelper:Landroid/support/percent/PercentLayoutHelper;
 
-    .line 90
+    .line 92
     return-void
 .end method
 
@@ -78,7 +78,7 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 94
+    .line 96
     new-instance v0, Landroid/support/percent/PercentFrameLayout$LayoutParams;
 
     invoke-direct {v0, v1, v1}, Landroid/support/percent/PercentFrameLayout$LayoutParams;-><init>(II)V
@@ -90,7 +90,7 @@
     .locals 1
 
     .prologue
-    .line 77
+    .line 79
     invoke-virtual {p0}, Landroid/support/percent/PercentFrameLayout;->generateDefaultLayoutParams()Landroid/support/percent/PercentFrameLayout$LayoutParams;
 
     move-result-object v0
@@ -102,7 +102,7 @@
     .locals 1
 
     .prologue
-    .line 77
+    .line 79
     invoke-virtual {p0}, Landroid/support/percent/PercentFrameLayout;->generateDefaultLayoutParams()Landroid/support/percent/PercentFrameLayout$LayoutParams;
 
     move-result-object v0
@@ -114,7 +114,7 @@
     .locals 2
 
     .prologue
-    .line 99
+    .line 101
     new-instance v0, Landroid/support/percent/PercentFrameLayout$LayoutParams;
 
     invoke-virtual {p0}, Landroid/support/percent/PercentFrameLayout;->getContext()Landroid/content/Context;
@@ -130,7 +130,7 @@
     .locals 1
 
     .prologue
-    .line 77
+    .line 79
     invoke-virtual {p0, p1}, Landroid/support/percent/PercentFrameLayout;->generateLayoutParams(Landroid/util/AttributeSet;)Landroid/support/percent/PercentFrameLayout$LayoutParams;
 
     move-result-object v0
@@ -142,7 +142,7 @@
     .locals 1
 
     .prologue
-    .line 77
+    .line 79
     invoke-virtual {p0, p1}, Landroid/support/percent/PercentFrameLayout;->generateLayoutParams(Landroid/util/AttributeSet;)Landroid/support/percent/PercentFrameLayout$LayoutParams;
 
     move-result-object v0
@@ -154,15 +154,15 @@
     .locals 1
 
     .prologue
-    .line 113
+    .line 115
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
-    .line 114
+    .line 116
     iget-object v0, p0, Landroid/support/percent/PercentFrameLayout;->mHelper:Landroid/support/percent/PercentLayoutHelper;
 
     invoke-virtual {v0}, Landroid/support/percent/PercentLayoutHelper;->restoreOriginalParams()V
 
-    .line 115
+    .line 117
     return-void
 .end method
 
@@ -170,15 +170,15 @@
     .locals 1
 
     .prologue
-    .line 104
+    .line 106
     iget-object v0, p0, Landroid/support/percent/PercentFrameLayout;->mHelper:Landroid/support/percent/PercentLayoutHelper;
 
     invoke-virtual {v0, p1, p2}, Landroid/support/percent/PercentLayoutHelper;->adjustChildren(II)V
 
-    .line 105
+    .line 107
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 106
+    .line 108
     iget-object v0, p0, Landroid/support/percent/PercentFrameLayout;->mHelper:Landroid/support/percent/PercentLayoutHelper;
 
     invoke-virtual {v0}, Landroid/support/percent/PercentLayoutHelper;->handleMeasuredStateTooSmall()Z
@@ -187,10 +187,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 107
+    .line 109
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 109
+    .line 111
     :cond_0
     return-void
 .end method

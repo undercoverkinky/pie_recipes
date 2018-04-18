@@ -27,17 +27,17 @@
     .locals 1
 
     .prologue
-    .line 131
+    .line 141
     iput-object p1, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b;->c:Lcom/kik/cards/browser/CaptchaWindowFragment;
 
     invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
 
-    .line 133
+    .line 143
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b;->a:Z
 
-    .line 134
+    .line 144
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b;->b:Z
@@ -49,7 +49,7 @@
     .locals 0
 
     .prologue
-    .line 131
+    .line 141
     invoke-direct {p0, p1}, Lcom/kik/cards/browser/CaptchaWindowFragment$b;-><init>(Lcom/kik/cards/browser/CaptchaWindowFragment;)V
 
     return-void
@@ -59,26 +59,26 @@
     .locals 1
 
     .prologue
-    .line 131
-    .line 2193
+    .line 141
+    .line 2203
     iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b;->c:Lcom/kik/cards/browser/CaptchaWindowFragment;
 
-    invoke-static {v0}, Lcom/kik/cards/browser/CaptchaWindowFragment;->a(Lcom/kik/cards/browser/CaptchaWindowFragment;)Lcom/kik/events/o;
+    invoke-static {v0}, Lcom/kik/cards/browser/CaptchaWindowFragment;->a(Lcom/kik/cards/browser/CaptchaWindowFragment;)Lcom/kik/events/n;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2194
+    .line 2204
     iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b;->c:Lcom/kik/cards/browser/CaptchaWindowFragment;
 
-    invoke-static {v0}, Lcom/kik/cards/browser/CaptchaWindowFragment;->a(Lcom/kik/cards/browser/CaptchaWindowFragment;)Lcom/kik/events/o;
+    invoke-static {v0}, Lcom/kik/cards/browser/CaptchaWindowFragment;->a(Lcom/kik/cards/browser/CaptchaWindowFragment;)Lcom/kik/events/n;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/kik/events/o;->a()V
+    invoke-virtual {v0}, Lcom/kik/events/n;->a()V
 
-    .line 2197
+    .line 2207
     :cond_0
     iget-boolean v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b;->a:Z
 
@@ -88,14 +88,14 @@
 
     if-nez v0, :cond_1
 
-    .line 2198
+    .line 2208
     iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b;->c:Lcom/kik/cards/browser/CaptchaWindowFragment;
 
     iget-object v0, v0, Lcom/kik/cards/browser/CaptchaWindowFragment;->e:Lkik/android/chat/fragment/ProgressDialogFragment;
 
     invoke-virtual {v0}, Lkik/android/chat/fragment/ProgressDialogFragment;->dismissAllowingStateLoss()V
 
-    .line 2199
+    .line 2209
     iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b;->c:Lcom/kik/cards/browser/CaptchaWindowFragment;
 
     invoke-virtual {v0}, Lcom/kik/cards/browser/CaptchaWindowFragment;->d()V
@@ -103,7 +103,7 @@
     :goto_0
     return-void
 
-    .line 2202
+    .line 2212
     :cond_1
     const/4 v0, 0x0
 
@@ -116,8 +116,8 @@
     .locals 1
 
     .prologue
-    .line 131
-    .line 1208
+    .line 141
+    .line 1218
     if-eqz p0, :cond_0
 
     const-string v0, "#success"
@@ -136,7 +136,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 131
+    .line 141
     goto :goto_0
 .end method
 
@@ -148,7 +148,7 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 139
+    .line 149
     new-array v0, v3, [Landroid/view/View;
 
     const/4 v1, 0x0
@@ -159,39 +159,39 @@
 
     aput-object v2, v0, v1
 
-    invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->g([Landroid/view/View;)V
 
-    .line 140
+    .line 150
     iget-boolean v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b;->b:Z
 
     if-nez v0, :cond_0
 
-    .line 141
+    .line 151
     iput-boolean v3, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b;->a:Z
 
-    .line 144
+    .line 154
     :cond_0
     iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b;->c:Lcom/kik/cards/browser/CaptchaWindowFragment;
 
-    invoke-static {v0}, Lcom/kik/cards/browser/CaptchaWindowFragment;->a(Lcom/kik/cards/browser/CaptchaWindowFragment;)Lcom/kik/events/o;
+    invoke-static {v0}, Lcom/kik/cards/browser/CaptchaWindowFragment;->a(Lcom/kik/cards/browser/CaptchaWindowFragment;)Lcom/kik/events/n;
 
     move-result-object v0
 
     if-nez v0, :cond_2
 
-    .line 146
+    .line 156
     iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b;->c:Lcom/kik/cards/browser/CaptchaWindowFragment;
 
-    new-instance v1, Lcom/kik/events/o;
+    new-instance v1, Lcom/kik/events/n;
 
-    invoke-direct {v1}, Lcom/kik/events/o;-><init>()V
+    invoke-direct {v1}, Lcom/kik/events/n;-><init>()V
 
-    invoke-static {v0, v1}, Lcom/kik/cards/browser/CaptchaWindowFragment;->a(Lcom/kik/cards/browser/CaptchaWindowFragment;Lcom/kik/events/o;)Lcom/kik/events/o;
+    invoke-static {v0, v1}, Lcom/kik/cards/browser/CaptchaWindowFragment;->a(Lcom/kik/cards/browser/CaptchaWindowFragment;Lcom/kik/events/n;)Lcom/kik/events/n;
 
-    .line 147
+    .line 157
     iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b;->c:Lcom/kik/cards/browser/CaptchaWindowFragment;
 
-    invoke-static {v0}, Lcom/kik/cards/browser/CaptchaWindowFragment;->a(Lcom/kik/cards/browser/CaptchaWindowFragment;)Lcom/kik/events/o;
+    invoke-static {v0}, Lcom/kik/cards/browser/CaptchaWindowFragment;->a(Lcom/kik/cards/browser/CaptchaWindowFragment;)Lcom/kik/events/n;
 
     move-result-object v0
 
@@ -199,41 +199,41 @@
 
     invoke-direct {v1, p0, p1}, Lcom/kik/cards/browser/CaptchaWindowFragment$b$1;-><init>(Lcom/kik/cards/browser/CaptchaWindowFragment$b;Landroid/webkit/WebView;)V
 
-    invoke-static {p1, v1}, Lcom/kik/sdkutils/b;->a(Landroid/view/View;Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-static {p1, v1}, Lcom/kik/sdkutils/b;->a(Landroid/view/View;Lcom/kik/events/k;)Lcom/kik/events/k;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/o;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v0, v1}, Lcom/kik/events/n;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
-    .line 167
+    .line 177
     const-string v0, "javascript:(function(metas){for(var i=metas.length;i--;)if(metas[i].name===\'kik-captcha\'){window.location.hash=\'#success\';break}})(document.getElementsByTagName(\'meta\'))"
 
     invoke-virtual {p1, v0}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 169
+    .line 179
     iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b;->c:Lcom/kik/cards/browser/CaptchaWindowFragment;
 
-    invoke-static {v0}, Lcom/kik/cards/browser/CaptchaWindowFragment;->a(Lcom/kik/cards/browser/CaptchaWindowFragment;)Lcom/kik/events/o;
+    invoke-static {v0}, Lcom/kik/cards/browser/CaptchaWindowFragment;->a(Lcom/kik/cards/browser/CaptchaWindowFragment;)Lcom/kik/events/n;
 
     move-result-object v0
 
     const-wide/16 v2, 0x3e8
 
-    invoke-static {v0, v2, v3}, Lcom/kik/events/m;->a(Lcom/kik/events/Promise;J)Lcom/kik/events/Promise;
+    invoke-static {v0, v2, v3}, Lcom/kik/events/l;->a(Lcom/kik/events/Promise;J)Lcom/kik/events/Promise;
 
-    .line 187
+    .line 197
     :cond_1
     :goto_0
     invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
 
-    .line 188
+    .line 198
     return-void
 
-    .line 172
+    .line 182
     :cond_2
     if-eqz p1, :cond_1
 
-    .line 173
+    .line 183
     new-instance v0, Lcom/kik/cards/browser/CaptchaWindowFragment$b$2;
 
     invoke-direct {v0, p0, p1}, Lcom/kik/cards/browser/CaptchaWindowFragment$b$2;-><init>(Lcom/kik/cards/browser/CaptchaWindowFragment$b;Landroid/webkit/WebView;)V
@@ -249,12 +249,12 @@
     .locals 1
 
     .prologue
-    .line 215
+    .line 225
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b;->a:Z
 
-    .line 217
+    .line 227
     iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b;->c:Lcom/kik/cards/browser/CaptchaWindowFragment;
 
     invoke-static {v0, p2}, Lcom/kik/cards/browser/CaptchaWindowFragment;->a(Lcom/kik/cards/browser/CaptchaWindowFragment;Ljava/lang/String;)Z
@@ -263,14 +263,14 @@
 
     if-nez v0, :cond_0
 
-    .line 218
+    .line 228
     invoke-super {p0, p1, p2, p3}, Landroid/webkit/WebViewClient;->onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
 
-    .line 223
+    .line 233
     :goto_0
     return-void
 
-    .line 221
+    .line 231
     :cond_0
     invoke-virtual {p1}, Landroid/webkit/WebView;->stopLoading()V
 
@@ -281,20 +281,20 @@
     .locals 1
 
     .prologue
-    .line 257
+    .line 267
     iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b;->c:Lcom/kik/cards/browser/CaptchaWindowFragment;
 
     invoke-virtual {v0}, Lcom/kik/cards/browser/CaptchaWindowFragment;->c()V
 
-    .line 258
+    .line 268
     iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b;->c:Lcom/kik/cards/browser/CaptchaWindowFragment;
 
-    invoke-virtual {v0}, Lcom/kik/cards/browser/CaptchaWindowFragment;->f_()V
+    invoke-virtual {v0}, Lcom/kik/cards/browser/CaptchaWindowFragment;->e()V
 
-    .line 259
+    .line 269
     invoke-super {p0, p1, p2, p3, p4}, Landroid/webkit/WebViewClient;->onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 260
+    .line 270
     return-void
 .end method
 
@@ -302,13 +302,13 @@
     .locals 0
 
     .prologue
-    .line 228
+    .line 238
     invoke-virtual {p2}, Landroid/webkit/SslErrorHandler;->cancel()V
 
-    .line 229
+    .line 239
     invoke-virtual {p1}, Landroid/webkit/WebView;->stopLoading()V
 
-    .line 230
+    .line 240
     return-void
 .end method
 
@@ -318,14 +318,14 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 235
+    .line 245
     if-nez p2, :cond_0
 
-    .line 251
+    .line 261
     :goto_0
     return v1
 
-    .line 240
+    .line 250
     :cond_0
     iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b;->c:Lcom/kik/cards/browser/CaptchaWindowFragment;
 
@@ -335,23 +335,23 @@
 
     if-nez v0, :cond_1
 
-    .line 241
+    .line 251
     iget-object v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b;->c:Lcom/kik/cards/browser/CaptchaWindowFragment;
 
     invoke-virtual {v0, p2}, Lcom/kik/cards/browser/CaptchaWindowFragment;->a(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 245
+    .line 255
     :cond_1
     iget-boolean v0, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b;->a:Z
 
     if-nez v0, :cond_2
 
-    .line 246
+    .line 256
     iput-boolean v1, p0, Lcom/kik/cards/browser/CaptchaWindowFragment$b;->b:Z
 
-    .line 249
+    .line 259
     :cond_2
     const/4 v0, 0x0
 

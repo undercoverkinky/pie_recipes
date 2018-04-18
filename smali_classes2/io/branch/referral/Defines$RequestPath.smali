@@ -26,19 +26,11 @@
 # static fields
 .field private static final synthetic $VALUES:[Lio/branch/referral/Defines$RequestPath;
 
-.field public static final enum ApplyReferralCode:Lio/branch/referral/Defines$RequestPath;
-
 .field public static final enum CompletedAction:Lio/branch/referral/Defines$RequestPath;
-
-.field public static final enum ContentEvent:Lio/branch/referral/Defines$RequestPath;
-
-.field public static final enum DebugConnect:Lio/branch/referral/Defines$RequestPath;
 
 .field public static final enum GetCreditHistory:Lio/branch/referral/Defines$RequestPath;
 
 .field public static final enum GetCredits:Lio/branch/referral/Defines$RequestPath;
-
-.field public static final enum GetReferralCode:Lio/branch/referral/Defines$RequestPath;
 
 .field public static final enum GetURL:Lio/branch/referral/Defines$RequestPath;
 
@@ -48,8 +40,6 @@
 
 .field public static final enum RedeemRewards:Lio/branch/referral/Defines$RequestPath;
 
-.field public static final enum Referrals:Lio/branch/referral/Defines$RequestPath;
-
 .field public static final enum RegisterClose:Lio/branch/referral/Defines$RequestPath;
 
 .field public static final enum RegisterInstall:Lio/branch/referral/Defines$RequestPath;
@@ -57,10 +47,6 @@
 .field public static final enum RegisterOpen:Lio/branch/referral/Defines$RequestPath;
 
 .field public static final enum RegisterView:Lio/branch/referral/Defines$RequestPath;
-
-.field public static final enum SendAPPList:Lio/branch/referral/Defines$RequestPath;
-
-.field public static final enum ValidateReferralCode:Lio/branch/referral/Defines$RequestPath;
 
 
 # instance fields
@@ -82,7 +68,7 @@
 
     const/4 v4, 0x0
 
-    .line 142
+    .line 150
     new-instance v0, Lio/branch/referral/Defines$RequestPath;
 
     const-string v1, "RedeemRewards"
@@ -93,7 +79,7 @@
 
     sput-object v0, Lio/branch/referral/Defines$RequestPath;->RedeemRewards:Lio/branch/referral/Defines$RequestPath;
 
-    .line 143
+    .line 151
     new-instance v0, Lio/branch/referral/Defines$RequestPath;
 
     const-string v1, "GetURL"
@@ -104,7 +90,7 @@
 
     sput-object v0, Lio/branch/referral/Defines$RequestPath;->GetURL:Lio/branch/referral/Defines$RequestPath;
 
-    .line 144
+    .line 152
     new-instance v0, Lio/branch/referral/Defines$RequestPath;
 
     const-string v1, "RegisterInstall"
@@ -115,7 +101,7 @@
 
     sput-object v0, Lio/branch/referral/Defines$RequestPath;->RegisterInstall:Lio/branch/referral/Defines$RequestPath;
 
-    .line 145
+    .line 153
     new-instance v0, Lio/branch/referral/Defines$RequestPath;
 
     const-string v1, "RegisterClose"
@@ -126,7 +112,7 @@
 
     sput-object v0, Lio/branch/referral/Defines$RequestPath;->RegisterClose:Lio/branch/referral/Defines$RequestPath;
 
-    .line 146
+    .line 154
     new-instance v0, Lio/branch/referral/Defines$RequestPath;
 
     const-string v1, "RegisterOpen"
@@ -137,7 +123,7 @@
 
     sput-object v0, Lio/branch/referral/Defines$RequestPath;->RegisterOpen:Lio/branch/referral/Defines$RequestPath;
 
-    .line 147
+    .line 155
     new-instance v0, Lio/branch/referral/Defines$RequestPath;
 
     const-string v1, "RegisterView"
@@ -150,38 +136,12 @@
 
     sput-object v0, Lio/branch/referral/Defines$RequestPath;->RegisterView:Lio/branch/referral/Defines$RequestPath;
 
-    .line 148
-    new-instance v0, Lio/branch/referral/Defines$RequestPath;
-
-    const-string v1, "Referrals"
-
-    const/4 v2, 0x6
-
-    const-string v3, "v1/referrals/"
-
-    invoke-direct {v0, v1, v2, v3}, Lio/branch/referral/Defines$RequestPath;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lio/branch/referral/Defines$RequestPath;->Referrals:Lio/branch/referral/Defines$RequestPath;
-
-    .line 149
-    new-instance v0, Lio/branch/referral/Defines$RequestPath;
-
-    const-string v1, "SendAPPList"
-
-    const/4 v2, 0x7
-
-    const-string v3, "v1/applist"
-
-    invoke-direct {v0, v1, v2, v3}, Lio/branch/referral/Defines$RequestPath;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lio/branch/referral/Defines$RequestPath;->SendAPPList:Lio/branch/referral/Defines$RequestPath;
-
-    .line 150
+    .line 156
     new-instance v0, Lio/branch/referral/Defines$RequestPath;
 
     const-string v1, "GetCredits"
 
-    const/16 v2, 0x8
+    const/4 v2, 0x6
 
     const-string v3, "v1/credits/"
 
@@ -189,12 +149,12 @@
 
     sput-object v0, Lio/branch/referral/Defines$RequestPath;->GetCredits:Lio/branch/referral/Defines$RequestPath;
 
-    .line 151
+    .line 157
     new-instance v0, Lio/branch/referral/Defines$RequestPath;
 
     const-string v1, "GetCreditHistory"
 
-    const/16 v2, 0x9
+    const/4 v2, 0x7
 
     const-string v3, "v1/credithistory"
 
@@ -202,12 +162,12 @@
 
     sput-object v0, Lio/branch/referral/Defines$RequestPath;->GetCreditHistory:Lio/branch/referral/Defines$RequestPath;
 
-    .line 152
+    .line 158
     new-instance v0, Lio/branch/referral/Defines$RequestPath;
 
     const-string v1, "CompletedAction"
 
-    const/16 v2, 0xa
+    const/16 v2, 0x8
 
     const-string v3, "v1/event"
 
@@ -215,12 +175,12 @@
 
     sput-object v0, Lio/branch/referral/Defines$RequestPath;->CompletedAction:Lio/branch/referral/Defines$RequestPath;
 
-    .line 153
+    .line 159
     new-instance v0, Lio/branch/referral/Defines$RequestPath;
 
     const-string v1, "IdentifyUser"
 
-    const/16 v2, 0xb
+    const/16 v2, 0x9
 
     const-string v3, "v1/profile"
 
@@ -228,12 +188,12 @@
 
     sput-object v0, Lio/branch/referral/Defines$RequestPath;->IdentifyUser:Lio/branch/referral/Defines$RequestPath;
 
-    .line 154
+    .line 160
     new-instance v0, Lio/branch/referral/Defines$RequestPath;
 
     const-string v1, "Logout"
 
-    const/16 v2, 0xc
+    const/16 v2, 0xa
 
     const-string v3, "v1/logout"
 
@@ -241,73 +201,8 @@
 
     sput-object v0, Lio/branch/referral/Defines$RequestPath;->Logout:Lio/branch/referral/Defines$RequestPath;
 
-    .line 155
-    new-instance v0, Lio/branch/referral/Defines$RequestPath;
-
-    const-string v1, "GetReferralCode"
-
-    const/16 v2, 0xd
-
-    const-string v3, "v1/referralcode"
-
-    invoke-direct {v0, v1, v2, v3}, Lio/branch/referral/Defines$RequestPath;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lio/branch/referral/Defines$RequestPath;->GetReferralCode:Lio/branch/referral/Defines$RequestPath;
-
-    .line 156
-    new-instance v0, Lio/branch/referral/Defines$RequestPath;
-
-    const-string v1, "ValidateReferralCode"
-
-    const/16 v2, 0xe
-
-    const-string v3, "v1/referralcode/"
-
-    invoke-direct {v0, v1, v2, v3}, Lio/branch/referral/Defines$RequestPath;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lio/branch/referral/Defines$RequestPath;->ValidateReferralCode:Lio/branch/referral/Defines$RequestPath;
-
-    .line 157
-    new-instance v0, Lio/branch/referral/Defines$RequestPath;
-
-    const-string v1, "ApplyReferralCode"
-
-    const/16 v2, 0xf
-
-    const-string v3, "v1/applycode/"
-
-    invoke-direct {v0, v1, v2, v3}, Lio/branch/referral/Defines$RequestPath;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lio/branch/referral/Defines$RequestPath;->ApplyReferralCode:Lio/branch/referral/Defines$RequestPath;
-
-    .line 158
-    new-instance v0, Lio/branch/referral/Defines$RequestPath;
-
-    const-string v1, "DebugConnect"
-
-    const/16 v2, 0x10
-
-    const-string v3, "v1/debug/connect"
-
-    invoke-direct {v0, v1, v2, v3}, Lio/branch/referral/Defines$RequestPath;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lio/branch/referral/Defines$RequestPath;->DebugConnect:Lio/branch/referral/Defines$RequestPath;
-
-    .line 159
-    new-instance v0, Lio/branch/referral/Defines$RequestPath;
-
-    const-string v1, "ContentEvent"
-
-    const/16 v2, 0x11
-
-    const-string v3, "v1/content-events"
-
-    invoke-direct {v0, v1, v2, v3}, Lio/branch/referral/Defines$RequestPath;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lio/branch/referral/Defines$RequestPath;->ContentEvent:Lio/branch/referral/Defines$RequestPath;
-
-    .line 141
-    const/16 v0, 0x12
+    .line 149
+    const/16 v0, 0xb
 
     new-array v0, v0, [Lio/branch/referral/Defines$RequestPath;
 
@@ -339,73 +234,31 @@
 
     const/4 v1, 0x6
 
-    sget-object v2, Lio/branch/referral/Defines$RequestPath;->Referrals:Lio/branch/referral/Defines$RequestPath;
+    sget-object v2, Lio/branch/referral/Defines$RequestPath;->GetCredits:Lio/branch/referral/Defines$RequestPath;
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x7
 
-    sget-object v2, Lio/branch/referral/Defines$RequestPath;->SendAPPList:Lio/branch/referral/Defines$RequestPath;
+    sget-object v2, Lio/branch/referral/Defines$RequestPath;->GetCreditHistory:Lio/branch/referral/Defines$RequestPath;
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x8
 
-    sget-object v2, Lio/branch/referral/Defines$RequestPath;->GetCredits:Lio/branch/referral/Defines$RequestPath;
+    sget-object v2, Lio/branch/referral/Defines$RequestPath;->CompletedAction:Lio/branch/referral/Defines$RequestPath;
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x9
 
-    sget-object v2, Lio/branch/referral/Defines$RequestPath;->GetCreditHistory:Lio/branch/referral/Defines$RequestPath;
+    sget-object v2, Lio/branch/referral/Defines$RequestPath;->IdentifyUser:Lio/branch/referral/Defines$RequestPath;
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xa
 
-    sget-object v2, Lio/branch/referral/Defines$RequestPath;->CompletedAction:Lio/branch/referral/Defines$RequestPath;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0xb
-
-    sget-object v2, Lio/branch/referral/Defines$RequestPath;->IdentifyUser:Lio/branch/referral/Defines$RequestPath;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0xc
-
     sget-object v2, Lio/branch/referral/Defines$RequestPath;->Logout:Lio/branch/referral/Defines$RequestPath;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0xd
-
-    sget-object v2, Lio/branch/referral/Defines$RequestPath;->GetReferralCode:Lio/branch/referral/Defines$RequestPath;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0xe
-
-    sget-object v2, Lio/branch/referral/Defines$RequestPath;->ValidateReferralCode:Lio/branch/referral/Defines$RequestPath;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0xf
-
-    sget-object v2, Lio/branch/referral/Defines$RequestPath;->ApplyReferralCode:Lio/branch/referral/Defines$RequestPath;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0x10
-
-    sget-object v2, Lio/branch/referral/Defines$RequestPath;->DebugConnect:Lio/branch/referral/Defines$RequestPath;
-
-    aput-object v2, v0, v1
-
-    const/16 v1, 0x11
-
-    sget-object v2, Lio/branch/referral/Defines$RequestPath;->ContentEvent:Lio/branch/referral/Defines$RequestPath;
 
     aput-object v2, v0, v1
 
@@ -425,18 +278,18 @@
     .end annotation
 
     .prologue
-    .line 163
+    .line 164
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 161
+    .line 162
     const-string v0, ""
 
     iput-object v0, p0, Lio/branch/referral/Defines$RequestPath;->key:Ljava/lang/String;
 
-    .line 164
+    .line 165
     iput-object p3, p0, Lio/branch/referral/Defines$RequestPath;->key:Ljava/lang/String;
 
-    .line 165
+    .line 166
     return-void
 .end method
 
@@ -444,7 +297,7 @@
     .locals 1
 
     .prologue
-    .line 141
+    .line 149
     const-class v0, Lio/branch/referral/Defines$RequestPath;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -460,7 +313,7 @@
     .locals 1
 
     .prologue
-    .line 141
+    .line 149
     sget-object v0, Lio/branch/referral/Defines$RequestPath;->$VALUES:[Lio/branch/referral/Defines$RequestPath;
 
     invoke-virtual {v0}, [Lio/branch/referral/Defines$RequestPath;->clone()Ljava/lang/Object;
@@ -478,7 +331,7 @@
     .locals 1
 
     .prologue
-    .line 168
+    .line 169
     iget-object v0, p0, Lio/branch/referral/Defines$RequestPath;->key:Ljava/lang/String;
 
     return-object v0
@@ -488,7 +341,7 @@
     .locals 1
 
     .prologue
-    .line 173
+    .line 174
     iget-object v0, p0, Lio/branch/referral/Defines$RequestPath;->key:Ljava/lang/String;
 
     return-object v0

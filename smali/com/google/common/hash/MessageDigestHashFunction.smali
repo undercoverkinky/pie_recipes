@@ -27,18 +27,14 @@
 
 # direct methods
 .method constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 7
+    .locals 3
 
     .prologue
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
     .line 46
     invoke-direct {p0}, Lcom/google/common/hash/c;-><init>()V
 
     .line 47
-    invoke-static {p3}, Lcom/google/common/base/h;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p3}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -58,43 +54,29 @@
 
     invoke-virtual {v0}, Ljava/security/MessageDigest;->getDigestLength()I
 
-    move-result v3
+    move-result v1
 
     .line 50
     const/4 v0, 0x4
 
     if-lt p2, v0, :cond_0
 
-    if-gt p2, v3, :cond_0
+    if-gt p2, v1, :cond_0
 
-    move v0, v1
+    const/4 v0, 0x1
 
     :goto_0
-    const-string v4, "bytes (%s) must be >= 4 and < %s"
+    const-string v2, "bytes (%s) must be >= 4 and < %s"
 
-    const/4 v5, 0x2
-
-    new-array v5, v5, [Ljava/lang/Object;
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    aput-object v6, v5, v2
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    aput-object v2, v5, v1
-
-    invoke-static {v0, v4, v5}, Lcom/google/common/base/h;->a(ZLjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, p2, v1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;II)V
 
     .line 52
     iput p2, p0, Lcom/google/common/hash/MessageDigestHashFunction;->bytes:I
 
     .line 53
-    invoke-direct {p0}, Lcom/google/common/hash/MessageDigestHashFunction;->b()Z
+    iget-object v0, p0, Lcom/google/common/hash/MessageDigestHashFunction;->prototype:Ljava/security/MessageDigest;
+
+    invoke-static {v0}, Lcom/google/common/hash/MessageDigestHashFunction;->a(Ljava/security/MessageDigest;)Z
 
     move-result v0
 
@@ -103,10 +85,10 @@
     .line 54
     return-void
 
-    :cond_0
-    move v0, v2
-
     .line 50
+    :cond_0
+    const/4 v0, 0x0
+
     goto :goto_0
 .end method
 
@@ -134,7 +116,7 @@
     iput v0, p0, Lcom/google/common/hash/MessageDigestHashFunction;->bytes:I
 
     .line 42
-    invoke-static {p2}, Lcom/google/common/base/h;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -143,7 +125,9 @@
     iput-object v0, p0, Lcom/google/common/hash/MessageDigestHashFunction;->toString:Ljava/lang/String;
 
     .line 43
-    invoke-direct {p0}, Lcom/google/common/hash/MessageDigestHashFunction;->b()Z
+    iget-object v0, p0, Lcom/google/common/hash/MessageDigestHashFunction;->prototype:Ljava/security/MessageDigest;
+
+    invoke-static {v0}, Lcom/google/common/hash/MessageDigestHashFunction;->a(Ljava/security/MessageDigest;)Z
 
     move-result v0
 
@@ -157,7 +141,7 @@
     .locals 2
 
     .prologue
-    .line 75
+    .line 77
     :try_start_0
     invoke-static {p0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
     :try_end_0
@@ -167,11 +151,11 @@
 
     return-object v0
 
-    .line 76
+    .line 78
     :catch_0
     move-exception v0
 
-    .line 77
+    .line 79
     new-instance v1, Ljava/lang/AssertionError;
 
     invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -179,15 +163,13 @@
     throw v1
 .end method
 
-.method private b()Z
+.method private static a(Ljava/security/MessageDigest;)Z
     .locals 1
 
     .prologue
     .line 58
     :try_start_0
-    iget-object v0, p0, Lcom/google/common/hash/MessageDigestHashFunction;->prototype:Ljava/security/MessageDigest;
-
-    invoke-virtual {v0}, Ljava/security/MessageDigest;->clone()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/security/MessageDigest;->clone()Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/CloneNotSupportedException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -214,12 +196,12 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 82
+    .line 85
     iget-boolean v0, p0, Lcom/google/common/hash/MessageDigestHashFunction;->supportsClone:Z
 
     if-eqz v0, :cond_0
 
-    .line 84
+    .line 87
     :try_start_0
     new-instance v1, Lcom/google/common/hash/MessageDigestHashFunction$a;
 
@@ -241,7 +223,7 @@
 
     move-object v0, v1
 
-    .line 89
+    .line 92
     :goto_0
     return-object v0
 
@@ -272,7 +254,7 @@
     .locals 1
 
     .prologue
-    .line 70
+    .line 72
     iget-object v0, p0, Lcom/google/common/hash/MessageDigestHashFunction;->toString:Ljava/lang/String;
 
     return-object v0
@@ -282,7 +264,7 @@
     .locals 5
 
     .prologue
-    .line 111
+    .line 114
     new-instance v0, Lcom/google/common/hash/MessageDigestHashFunction$SerializedForm;
 
     iget-object v1, p0, Lcom/google/common/hash/MessageDigestHashFunction;->prototype:Ljava/security/MessageDigest;

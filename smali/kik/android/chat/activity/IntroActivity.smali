@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field protected a:Lkik/core/z;
+.field protected a:Lkik/core/ICoreEvents;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
@@ -19,15 +19,20 @@
     .end annotation
 .end field
 
-.field private d:Landroid/app/ProgressDialog;
+.field protected d:Lcom/kik/android/Mixpanel;
+    .annotation runtime Ljavax/inject/Inject;
+    .end annotation
+.end field
 
-.field private e:Ljava/util/Timer;
+.field private e:Landroid/app/ProgressDialog;
 
-.field private f:Lcom/kik/events/d;
+.field private f:Ljava/util/Timer;
 
-.field private g:Ljava/util/TimerTask;
+.field private g:Lcom/kik/events/d;
 
-.field private h:Lcom/kik/events/e;
+.field private h:Ljava/util/TimerTask;
+
+.field private i:Lcom/kik/events/e;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/kik/events/e",
@@ -44,31 +49,31 @@
     .locals 2
 
     .prologue
-    .line 28
+    .line 32
     invoke-direct {p0}, Landroid/support/v7/app/AppCompatActivity;-><init>()V
 
-    .line 31
+    .line 38
     new-instance v0, Ljava/util/Timer;
 
     const-string v1, "TeardownFail"
 
     invoke-direct {v0, v1}, Ljava/util/Timer;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lkik/android/chat/activity/IntroActivity;->e:Ljava/util/Timer;
+    iput-object v0, p0, Lkik/android/chat/activity/IntroActivity;->f:Ljava/util/Timer;
 
-    .line 38
+    .line 46
     new-instance v0, Lkik/android/chat/activity/IntroActivity$1;
 
     invoke-direct {v0, p0}, Lkik/android/chat/activity/IntroActivity$1;-><init>(Lkik/android/chat/activity/IntroActivity;)V
 
-    iput-object v0, p0, Lkik/android/chat/activity/IntroActivity;->g:Ljava/util/TimerTask;
+    iput-object v0, p0, Lkik/android/chat/activity/IntroActivity;->h:Ljava/util/TimerTask;
 
-    .line 109
+    .line 123
     new-instance v0, Lkik/android/chat/activity/IntroActivity$2;
 
     invoke-direct {v0, p0}, Lkik/android/chat/activity/IntroActivity$2;-><init>(Lkik/android/chat/activity/IntroActivity;)V
 
-    iput-object v0, p0, Lkik/android/chat/activity/IntroActivity;->h:Lcom/kik/events/e;
+    iput-object v0, p0, Lkik/android/chat/activity/IntroActivity;->i:Lcom/kik/events/e;
 
     return-void
 .end method
@@ -77,8 +82,8 @@
     .locals 1
 
     .prologue
-    .line 28
-    iget-object v0, p0, Lkik/android/chat/activity/IntroActivity;->f:Lcom/kik/events/d;
+    .line 32
+    iget-object v0, p0, Lkik/android/chat/activity/IntroActivity;->g:Lcom/kik/events/d;
 
     return-object v0
 .end method
@@ -91,23 +96,23 @@
 
     const/4 v3, 0x0
 
-    .line 83
+    .line 97
     iget-object v0, p0, Lkik/android/chat/activity/IntroActivity;->b:Lkik/core/interfaces/ad;
 
-    invoke-static {v0}, Lkik/core/x;->a(Lkik/core/interfaces/ad;)Z
+    invoke-static {v0}, Lkik/core/z;->a(Lkik/core/interfaces/ad;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 84
+    .line 98
     invoke-direct {p0}, Lkik/android/chat/activity/IntroActivity;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 85
+    .line 99
     new-instance v0, Lkik/android/chat/fragment/KikConversationsFragment$a;
 
     invoke-direct {v0}, Lkik/android/chat/fragment/KikConversationsFragment$a;-><init>()V
@@ -122,20 +127,20 @@
 
     move-result-object v0
 
-    invoke-static {v0, p0}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    invoke-static {v0, p0}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ae;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->e()Lcom/kik/events/Promise;
 
-    .line 106
+    .line 120
     :goto_0
     invoke-virtual {p0}, Lkik/android/chat/activity/IntroActivity;->finish()V
 
-    .line 107
+    .line 121
     return-void
 
-    .line 88
+    .line 102
     :cond_0
     new-instance v0, Lkik/android/chat/fragment/KikConversationsFragment$a;
 
@@ -145,7 +150,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p0}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    invoke-static {v0, p0}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ae;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v0
 
@@ -153,28 +158,28 @@
 
     goto :goto_0
 
-    .line 92
+    .line 106
     :cond_1
     iget-object v0, p0, Lkik/android/chat/activity/IntroActivity;->c:Lkik/core/interfaces/b;
 
     invoke-interface {v0}, Lkik/core/interfaces/b;->a()V
 
-    .line 93
+    .line 107
     invoke-virtual {p0}, Lkik/android/chat/activity/IntroActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 94
+    .line 108
     new-instance v1, Landroid/content/Intent;
 
     const-class v2, Lkik/android/chat/activity/KikWelcomeFragmentActivity;
 
     invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 95
+    .line 109
     if-eqz v0, :cond_2
 
-    .line 96
+    .line 110
     const-string v2, "failedToGetProfile"
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
@@ -183,24 +188,24 @@
 
     if-eqz v2, :cond_3
 
-    .line 97
+    .line 111
     const-string v0, "failedToGetProfile"
 
     invoke-virtual {v1, v0, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 103
+    .line 117
     :cond_2
     :goto_1
     const/high16 v0, 0x4000000
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 104
+    .line 118
     invoke-virtual {p0, v1}, Lkik/android/chat/activity/IntroActivity;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 99
+    .line 113
     :cond_3
     const-string v2, "failedToGetGroup"
 
@@ -210,7 +215,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 100
+    .line 114
     const-string v0, "failedToGetGroup"
 
     invoke-virtual {v1, v0, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
@@ -222,8 +227,8 @@
     .locals 1
 
     .prologue
-    .line 28
-    iget-object v0, p0, Lkik/android/chat/activity/IntroActivity;->g:Ljava/util/TimerTask;
+    .line 32
+    iget-object v0, p0, Lkik/android/chat/activity/IntroActivity;->h:Ljava/util/TimerTask;
 
     return-object v0
 .end method
@@ -232,7 +237,7 @@
     .locals 2
 
     .prologue
-    .line 132
+    .line 146
     invoke-virtual {p0}, Lkik/android/chat/activity/IntroActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -276,8 +281,8 @@
     .locals 1
 
     .prologue
-    .line 28
-    iget-object v0, p0, Lkik/android/chat/activity/IntroActivity;->e:Ljava/util/Timer;
+    .line 32
+    iget-object v0, p0, Lkik/android/chat/activity/IntroActivity;->f:Ljava/util/Timer;
 
     return-object v0
 .end method
@@ -286,8 +291,8 @@
     .locals 1
 
     .prologue
-    .line 28
-    iget-object v0, p0, Lkik/android/chat/activity/IntroActivity;->d:Landroid/app/ProgressDialog;
+    .line 32
+    iget-object v0, p0, Lkik/android/chat/activity/IntroActivity;->e:Landroid/app/ProgressDialog;
 
     return-object v0
 .end method
@@ -296,7 +301,7 @@
     .locals 0
 
     .prologue
-    .line 28
+    .line 32
     invoke-direct {p0}, Lkik/android/chat/activity/IntroActivity;->a()V
 
     return-void
@@ -310,31 +315,31 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 50
+    .line 58
     invoke-super {p0, p1}, Landroid/support/v7/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 51
+    .line 59
     invoke-virtual {p0}, Lkik/android/chat/activity/IntroActivity;->getApplication()Landroid/app/Application;
 
     move-result-object v0
 
-    check-cast v0, Lkik/android/chat/c;
+    check-cast v0, Lkik/android/chat/e;
 
-    invoke-interface {v0}, Lkik/android/chat/c;->a()Lcom/kik/components/CoreComponent;
+    invoke-interface {v0}, Lkik/android/chat/e;->a()Lcom/kik/components/CoreComponent;
 
     move-result-object v0
 
     invoke-interface {v0, p0}, Lcom/kik/components/CoreComponent;->a(Lkik/android/chat/activity/IntroActivity;)V
 
-    .line 1070
+    .line 1084
     invoke-virtual {p0}, Lkik/android/chat/activity/IntroActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 1071
+    .line 1085
     if-eqz v0, :cond_0
 
-    .line 1074
+    .line 1088
     invoke-virtual {p0}, Lkik/android/chat/activity/IntroActivity;->isTaskRoot()Z
 
     move-result v0
@@ -347,45 +352,45 @@
 
     if-eqz v0, :cond_0
 
-    .line 1076
+    .line 1090
     const/4 v0, 0x1
 
-    .line 52
+    .line 66
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 53
+    .line 67
     invoke-virtual {p0}, Lkik/android/chat/activity/IntroActivity;->finish()V
 
-    .line 62
+    .line 76
     :goto_1
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 1078
+    .line 1092
     goto :goto_0
 
-    .line 56
+    .line 70
     :cond_1
     new-instance v0, Lcom/kik/events/d;
 
     invoke-direct {v0}, Lcom/kik/events/d;-><init>()V
 
-    iput-object v0, p0, Lkik/android/chat/activity/IntroActivity;->f:Lcom/kik/events/d;
+    iput-object v0, p0, Lkik/android/chat/activity/IntroActivity;->g:Lcom/kik/events/d;
 
-    .line 57
+    .line 71
     new-instance v0, Landroid/app/ProgressDialog;
 
     invoke-direct {v0, p0}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lkik/android/chat/activity/IntroActivity;->d:Landroid/app/ProgressDialog;
+    iput-object v0, p0, Lkik/android/chat/activity/IntroActivity;->e:Landroid/app/ProgressDialog;
 
-    .line 58
-    iget-object v0, p0, Lkik/android/chat/activity/IntroActivity;->d:Landroid/app/ProgressDialog;
+    .line 72
+    iget-object v0, p0, Lkik/android/chat/activity/IntroActivity;->e:Landroid/app/ProgressDialog;
 
-    const v2, 0x7f0a03a3
+    const v2, 0x7f0903b7
 
     invoke-virtual {p0, v2}, Lkik/android/chat/activity/IntroActivity;->getString(I)Ljava/lang/String;
 
@@ -393,12 +398,12 @@
 
     invoke-virtual {v0, v2}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 59
-    iget-object v0, p0, Lkik/android/chat/activity/IntroActivity;->d:Landroid/app/ProgressDialog;
+    .line 73
+    iget-object v0, p0, Lkik/android/chat/activity/IntroActivity;->e:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setCancelable(Z)V
 
-    .line 61
+    .line 75
     invoke-direct {p0}, Lkik/android/chat/activity/IntroActivity;->a()V
 
     goto :goto_1

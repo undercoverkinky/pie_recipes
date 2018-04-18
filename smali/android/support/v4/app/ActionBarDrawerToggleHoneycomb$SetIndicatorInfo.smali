@@ -33,10 +33,10 @@
 
     const/4 v5, 0x0
 
-    .line 104
+    .line 107
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 106
+    .line 109
     :try_start_0
     const-class v0, Landroid/app/ActionBar;
 
@@ -58,7 +58,7 @@
 
     iput-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;->setHomeAsUpIndicator:Ljava/lang/reflect/Method;
 
-    .line 108
+    .line 111
     const-class v0, Landroid/app/ActionBar;
 
     const-string v1, "setHomeActionContentDescription"
@@ -81,12 +81,12 @@
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 138
+    .line 141
     :cond_0
     :goto_0
     return-void
 
-    .line 117
+    .line 120
     :catch_0
     move-exception v0
 
@@ -94,50 +94,50 @@
 
     move-result-object v0
 
-    .line 118
+    .line 121
     if-eqz v0, :cond_0
 
-    .line 123
+    .line 126
     invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    .line 124
+    .line 127
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v1
 
-    .line 125
+    .line 128
     const/4 v2, 0x2
 
     if-ne v1, v2, :cond_0
 
-    .line 130
+    .line 133
     invoke-virtual {v0, v5}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 131
+    .line 134
     invoke-virtual {v0, v6}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 132
+    .line 135
     invoke-virtual {v1}, Landroid/view/View;->getId()I
 
     move-result v2
 
     if-ne v2, v7, :cond_1
 
-    .line 134
+    .line 137
     :goto_1
     instance-of v1, v0, Landroid/widget/ImageView;
 
     if-eqz v1, :cond_0
 
-    .line 136
+    .line 139
     check-cast v0, Landroid/widget/ImageView;
 
     iput-object v0, p0, Landroid/support/v4/app/ActionBarDrawerToggleHoneycomb$SetIndicatorInfo;->upIndicatorView:Landroid/widget/ImageView;
@@ -147,6 +147,6 @@
     :cond_1
     move-object v0, v1
 
-    .line 132
+    .line 135
     goto :goto_1
 .end method

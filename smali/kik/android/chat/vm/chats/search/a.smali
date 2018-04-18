@@ -1,5 +1,5 @@
 .class public abstract Lkik/android/chat/vm/chats/search/a;
-.super Lkik/android/chat/vm/c;
+.super Lkik/android/chat/vm/e;
 .source "SourceFile"
 
 # interfaces
@@ -27,7 +27,7 @@
 
     .prologue
     .line 28
-    invoke-direct {p0}, Lkik/android/chat/vm/c;-><init>()V
+    invoke-direct {p0}, Lkik/android/chat/vm/e;-><init>()V
 
     .line 29
     iput-boolean p1, p0, Lkik/android/chat/vm/chats/search/a;->b:Z
@@ -55,70 +55,14 @@
     return-void
 .end method
 
-.method public final a()Z
-    .locals 1
-
-    .prologue
-    .line 48
-    iget-boolean v0, p0, Lkik/android/chat/vm/chats/search/a;->b:Z
-
-    return v0
-.end method
-
-.method protected final d()Ljava/lang/String;
-    .locals 2
-
-    .prologue
-    .line 59
-    const-string v0, "Send To"
-
-    iget-object v1, p0, Lkik/android/chat/vm/chats/search/a;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 60
-    const-string v0, "Send To"
-
-    .line 65
-    :goto_0
-    return-object v0
-
-    .line 62
-    :cond_0
-    const-string v0, "Pull to Search"
-
-    iget-object v1, p0, Lkik/android/chat/vm/chats/search/a;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 63
-    const-string v0, "Pull to Search"
-
-    goto :goto_0
-
-    .line 65
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method protected final h()Ljava/lang/String;
+.method protected final ad_()Ljava/lang/String;
     .locals 3
 
     .prologue
-    .line 75
+    .line 81
     const/4 v0, 0x0
 
-    .line 76
+    .line 82
     const-string v1, "Pull to Search"
 
     iget-object v2, p0, Lkik/android/chat/vm/chats/search/a;->e:Ljava/lang/String;
@@ -129,15 +73,15 @@
 
     if-eqz v1, :cond_1
 
-    .line 77
+    .line 83
     const-string v0, "pull-username-search"
 
-    .line 82
+    .line 88
     :cond_0
     :goto_0
     return-object v0
 
-    .line 79
+    .line 85
     :cond_1
     const-string v1, "Send To"
 
@@ -149,17 +93,87 @@
 
     if-eqz v1, :cond_0
 
-    .line 80
+    .line 86
     const-string v0, "send-to-username-search"
 
     goto :goto_0
 .end method
 
-.method protected final i()V
+.method public final b()Z
+    .locals 2
+
+    .prologue
+    .line 48
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    const-string v1, "isFirstInSection not implemented for Chats Search Results. Feel free to implement it."
+
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final d()Z
+    .locals 1
+
+    .prologue
+    .line 54
+    iget-boolean v0, p0, Lkik/android/chat/vm/chats/search/a;->b:Z
+
+    return v0
+.end method
+
+.method protected final e()Ljava/lang/String;
+    .locals 2
+
+    .prologue
+    .line 65
+    const-string v0, "Send To"
+
+    iget-object v1, p0, Lkik/android/chat/vm/chats/search/a;->e:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 66
+    const-string v0, "Send To"
+
+    .line 71
+    :goto_0
+    return-object v0
+
+    .line 68
+    :cond_0
+    const-string v0, "Pull to Search"
+
+    iget-object v1, p0, Lkik/android/chat/vm/chats/search/a;->e:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 69
+    const-string v0, "Pull to Search"
+
+    goto :goto_0
+
+    .line 71
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method protected final j()V
     .locals 6
 
     .prologue
-    .line 90
+    .line 96
     iget-object v0, p0, Lkik/android/chat/vm/chats/search/a;->a:Lcom/kik/android/Mixpanel;
 
     const-string v1, "Chat Search Result Tapped"
@@ -168,16 +182,16 @@
 
     move-result-object v0
 
-    .line 91
+    .line 97
     iget-object v1, p0, Lkik/android/chat/vm/chats/search/a;->e:Ljava/lang/String;
 
-    invoke-static {v1}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    invoke-static {v1}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 92
+    .line 98
     const-string v1, "Source"
 
     iget-object v2, p0, Lkik/android/chat/vm/chats/search/a;->e:Ljava/lang/String;
@@ -192,7 +206,7 @@
 
     int-to-long v4, v3
 
-    .line 93
+    .line 99
     invoke-virtual {v1, v2, v4, v5}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;J)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v1
@@ -205,10 +219,10 @@
 
     int-to-long v4, v3
 
-    .line 94
+    .line 100
     invoke-virtual {v1, v2, v4, v5}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;J)Lcom/kik/android/Mixpanel$d;
 
-    .line 96
+    .line 102
     :cond_0
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
 
@@ -216,6 +230,6 @@
 
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 97
+    .line 103
     return-void
 .end method

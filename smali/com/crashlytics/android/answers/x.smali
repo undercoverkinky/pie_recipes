@@ -2,291 +2,103 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lio/fabric/sdk/android/services/b/a;
 
+# instance fields
+.field a:J
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lio/fabric/sdk/android/services/b/a",
-        "<",
-        "Lcom/crashlytics/android/answers/SessionEvent;",
-        ">;"
-    }
-.end annotation
+.field private b:Lio/fabric/sdk/android/services/concurrency/internal/RetryState;
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>(Lio/fabric/sdk/android/services/concurrency/internal/RetryState;)V
     .locals 0
 
     .prologue
-    .line 12
+    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 26
+    iput-object p1, p0, Lcom/crashlytics/android/answers/x;->b:Lio/fabric/sdk/android/services/concurrency/internal/RetryState;
+
+    .line 27
     return-void
-.end method
-
-.method private static a(Lcom/crashlytics/android/answers/SessionEvent;)Lorg/json/JSONObject;
-    .locals 4
-    .annotation build Landroid/annotation/TargetApi;
-        value = 0x9
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .prologue
-    .line 44
-    :try_start_0
-    new-instance v0, Lorg/json/JSONObject;
-
-    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
-
-    .line 45
-    iget-object v1, p0, Lcom/crashlytics/android/answers/SessionEvent;->a:Lcom/crashlytics/android/answers/w;
-
-    .line 46
-    const-string v2, "appBundleId"
-
-    iget-object v3, v1, Lcom/crashlytics/android/answers/w;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 47
-    const-string v2, "executionId"
-
-    iget-object v3, v1, Lcom/crashlytics/android/answers/w;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 48
-    const-string v2, "installationId"
-
-    iget-object v3, v1, Lcom/crashlytics/android/answers/w;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 49
-    const-string v2, "androidId"
-
-    iget-object v3, v1, Lcom/crashlytics/android/answers/w;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 50
-    const-string v2, "advertisingId"
-
-    iget-object v3, v1, Lcom/crashlytics/android/answers/w;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 51
-    const-string v2, "limitAdTrackingEnabled"
-
-    iget-object v3, v1, Lcom/crashlytics/android/answers/w;->f:Ljava/lang/Boolean;
-
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 52
-    const-string v2, "betaDeviceToken"
-
-    iget-object v3, v1, Lcom/crashlytics/android/answers/w;->g:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 53
-    const-string v2, "buildId"
-
-    iget-object v3, v1, Lcom/crashlytics/android/answers/w;->h:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 54
-    const-string v2, "osVersion"
-
-    iget-object v3, v1, Lcom/crashlytics/android/answers/w;->i:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 55
-    const-string v2, "deviceModel"
-
-    iget-object v3, v1, Lcom/crashlytics/android/answers/w;->j:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 56
-    const-string v2, "appVersionCode"
-
-    iget-object v3, v1, Lcom/crashlytics/android/answers/w;->k:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 57
-    const-string v2, "appVersionName"
-
-    iget-object v1, v1, Lcom/crashlytics/android/answers/w;->l:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 58
-    const-string v1, "timestamp"
-
-    iget-wide v2, p0, Lcom/crashlytics/android/answers/SessionEvent;->b:J
-
-    invoke-virtual {v0, v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
-
-    .line 59
-    const-string v1, "type"
-
-    iget-object v2, p0, Lcom/crashlytics/android/answers/SessionEvent;->c:Lcom/crashlytics/android/answers/SessionEvent$Type;
-
-    invoke-virtual {v2}, Lcom/crashlytics/android/answers/SessionEvent$Type;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 60
-    iget-object v1, p0, Lcom/crashlytics/android/answers/SessionEvent;->d:Ljava/util/Map;
-
-    if-eqz v1, :cond_0
-
-    .line 61
-    const-string v1, "details"
-
-    new-instance v2, Lorg/json/JSONObject;
-
-    iget-object v3, p0, Lcom/crashlytics/android/answers/SessionEvent;->d:Ljava/util/Map;
-
-    invoke-direct {v2, v3}, Lorg/json/JSONObject;-><init>(Ljava/util/Map;)V
-
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 63
-    :cond_0
-    const-string v1, "customType"
-
-    iget-object v2, p0, Lcom/crashlytics/android/answers/SessionEvent;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 64
-    iget-object v1, p0, Lcom/crashlytics/android/answers/SessionEvent;->f:Ljava/util/Map;
-
-    if-eqz v1, :cond_1
-
-    .line 65
-    const-string v1, "customAttributes"
-
-    new-instance v2, Lorg/json/JSONObject;
-
-    iget-object v3, p0, Lcom/crashlytics/android/answers/SessionEvent;->f:Ljava/util/Map;
-
-    invoke-direct {v2, v3}, Lorg/json/JSONObject;-><init>(Ljava/util/Map;)V
-
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 67
-    :cond_1
-    const-string v1, "predefinedType"
-
-    iget-object v2, p0, Lcom/crashlytics/android/answers/SessionEvent;->g:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 68
-    iget-object v1, p0, Lcom/crashlytics/android/answers/SessionEvent;->h:Ljava/util/Map;
-
-    if-eqz v1, :cond_2
-
-    .line 69
-    const-string v1, "predefinedAttributes"
-
-    new-instance v2, Lorg/json/JSONObject;
-
-    iget-object v3, p0, Lcom/crashlytics/android/answers/SessionEvent;->h:Ljava/util/Map;
-
-    invoke-direct {v2, v3}, Lorg/json/JSONObject;-><init>(Ljava/util/Map;)V
-
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 71
-    :cond_2
-    return-object v0
-
-    .line 72
-    :catch_0
-    move-exception v0
-
-    .line 73
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v2, 0x9
-
-    if-lt v1, v2, :cond_3
-
-    .line 74
-    new-instance v1, Ljava/io/IOException;
-
-    invoke-virtual {v0}, Lorg/json/JSONException;->getMessage()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v1
-
-    .line 76
-    :cond_3
-    new-instance v1, Ljava/io/IOException;
-
-    invoke-virtual {v0}, Lorg/json/JSONException;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw v1
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;)[B
+.method public final a()V
     .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
 
     .prologue
-    .line 12
-    check-cast p1, Lcom/crashlytics/android/answers/SessionEvent;
+    .line 49
+    const-wide/16 v0, 0x0
 
-    .line 1036
-    invoke-static {p1}, Lcom/crashlytics/android/answers/x;->a(Lcom/crashlytics/android/answers/SessionEvent;)Lorg/json/JSONObject;
+    iput-wide v0, p0, Lcom/crashlytics/android/answers/x;->a:J
 
-    move-result-object v0
+    .line 50
+    iget-object v0, p0, Lcom/crashlytics/android/answers/x;->b:Lio/fabric/sdk/android/services/concurrency/internal/RetryState;
 
-    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "UTF-8"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
+    invoke-virtual {v0}, Lio/fabric/sdk/android/services/concurrency/internal/RetryState;->initialRetryState()Lio/fabric/sdk/android/services/concurrency/internal/RetryState;
 
     move-result-object v0
 
-    .line 12
-    return-object v0
+    iput-object v0, p0, Lcom/crashlytics/android/answers/x;->b:Lio/fabric/sdk/android/services/concurrency/internal/RetryState;
+
+    .line 51
+    return-void
+.end method
+
+.method public final a(J)Z
+    .locals 5
+
+    .prologue
+    .line 33
+    const-wide/32 v0, 0xf4240
+
+    iget-object v2, p0, Lcom/crashlytics/android/answers/x;->b:Lio/fabric/sdk/android/services/concurrency/internal/RetryState;
+
+    invoke-virtual {v2}, Lio/fabric/sdk/android/services/concurrency/internal/RetryState;->getRetryDelay()J
+
+    move-result-wide v2
+
+    mul-long/2addr v0, v2
+
+    .line 34
+    iget-wide v2, p0, Lcom/crashlytics/android/answers/x;->a:J
+
+    sub-long v2, p1, v2
+
+    cmp-long v0, v2, v0
+
+    if-ltz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final b(J)V
+    .locals 1
+
+    .prologue
+    .line 41
+    iput-wide p1, p0, Lcom/crashlytics/android/answers/x;->a:J
+
+    .line 42
+    iget-object v0, p0, Lcom/crashlytics/android/answers/x;->b:Lio/fabric/sdk/android/services/concurrency/internal/RetryState;
+
+    invoke-virtual {v0}, Lio/fabric/sdk/android/services/concurrency/internal/RetryState;->nextRetryState()Lio/fabric/sdk/android/services/concurrency/internal/RetryState;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/crashlytics/android/answers/x;->b:Lio/fabric/sdk/android/services/concurrency/internal/RetryState;
+
+    .line 43
+    return-void
 .end method

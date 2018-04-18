@@ -22,25 +22,16 @@
 
 
 # direct methods
-.method private constructor <init>(Landroid/support/v7/widget/RecyclerView;)V
+.method constructor <init>(Landroid/support/v7/widget/RecyclerView;)V
     .locals 0
 
     .prologue
-    .line 10282
+    .line 11762
     iput-object p1, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimatorRestoreListener;->a:Landroid/support/v7/widget/RecyclerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-.method synthetic constructor <init>(Landroid/support/v7/widget/RecyclerView;B)V
-    .locals 0
-
-    .prologue
-    .line 10282
-    invoke-direct {p0, p1}, Landroid/support/v7/widget/RecyclerView$ItemAnimatorRestoreListener;-><init>(Landroid/support/v7/widget/RecyclerView;)V
-
+    .line 11763
     return-void
 .end method
 
@@ -52,61 +43,61 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 10286
+    .line 11767
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Landroid/support/v7/widget/RecyclerView$ViewHolder;->a_(Z)V
+    invoke-virtual {p1, v0}, Landroid/support/v7/widget/RecyclerView$ViewHolder;->setIsRecyclable(Z)V
 
-    .line 10287
-    iget-object v0, p1, Landroid/support/v7/widget/RecyclerView$ViewHolder;->g:Landroid/support/v7/widget/RecyclerView$ViewHolder;
+    .line 11768
+    iget-object v0, p1, Landroid/support/v7/widget/RecyclerView$ViewHolder;->mShadowedHolder:Landroid/support/v7/widget/RecyclerView$ViewHolder;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p1, Landroid/support/v7/widget/RecyclerView$ViewHolder;->h:Landroid/support/v7/widget/RecyclerView$ViewHolder;
+    iget-object v0, p1, Landroid/support/v7/widget/RecyclerView$ViewHolder;->mShadowingHolder:Landroid/support/v7/widget/RecyclerView$ViewHolder;
 
     if-nez v0, :cond_0
 
-    .line 10288
-    iput-object v1, p1, Landroid/support/v7/widget/RecyclerView$ViewHolder;->g:Landroid/support/v7/widget/RecyclerView$ViewHolder;
+    .line 11769
+    iput-object v1, p1, Landroid/support/v7/widget/RecyclerView$ViewHolder;->mShadowedHolder:Landroid/support/v7/widget/RecyclerView$ViewHolder;
 
-    .line 10292
+    .line 11773
     :cond_0
-    iput-object v1, p1, Landroid/support/v7/widget/RecyclerView$ViewHolder;->h:Landroid/support/v7/widget/RecyclerView$ViewHolder;
+    iput-object v1, p1, Landroid/support/v7/widget/RecyclerView$ViewHolder;->mShadowingHolder:Landroid/support/v7/widget/RecyclerView$ViewHolder;
 
-    .line 10293
-    invoke-static {p1}, Landroid/support/v7/widget/RecyclerView$ViewHolder;->g(Landroid/support/v7/widget/RecyclerView$ViewHolder;)Z
+    .line 11774
+    invoke-static {p1}, Landroid/support/v7/widget/RecyclerView$ViewHolder;->access$1300(Landroid/support/v7/widget/RecyclerView$ViewHolder;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 10294
+    .line 11775
     iget-object v0, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimatorRestoreListener;->a:Landroid/support/v7/widget/RecyclerView;
 
-    iget-object v1, p1, Landroid/support/v7/widget/RecyclerView$ViewHolder;->a:Landroid/view/View;
+    iget-object v1, p1, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v0, v1}, Landroid/support/v7/widget/RecyclerView;->c(Landroid/support/v7/widget/RecyclerView;Landroid/view/View;)Z
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/RecyclerView;->removeAnimatingView(Landroid/view/View;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    invoke-virtual {p1}, Landroid/support/v7/widget/RecyclerView$ViewHolder;->o()Z
+    invoke-virtual {p1}, Landroid/support/v7/widget/RecyclerView$ViewHolder;->isTmpDetached()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 10295
+    .line 11776
     iget-object v0, p0, Landroid/support/v7/widget/RecyclerView$ItemAnimatorRestoreListener;->a:Landroid/support/v7/widget/RecyclerView;
 
-    iget-object v1, p1, Landroid/support/v7/widget/RecyclerView$ViewHolder;->a:Landroid/view/View;
+    iget-object v1, p1, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v1, v2}, Landroid/support/v7/widget/RecyclerView;->removeDetachedView(Landroid/view/View;Z)V
 
-    .line 10298
+    .line 11779
     :cond_1
     return-void
 .end method

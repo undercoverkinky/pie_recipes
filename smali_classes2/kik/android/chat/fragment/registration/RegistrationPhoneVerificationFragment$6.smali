@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 247
+    .line 256
     iput-object p1, p0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment$6;->a:Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 3
 
     .prologue
-    .line 251
+    .line 260
     iget-object v0, p0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment$6;->a:Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;->b:Lcom/kik/android/Mixpanel;
@@ -55,31 +55,31 @@
 
     const-string v2, "Server Down"
 
-    .line 252
+    .line 261
     invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 253
+    .line 262
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 254
+    .line 263
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 255
+    .line 264
     iget-object v0, p0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment$6;->a:Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 256
+    .line 265
     iget-object v0, p0, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment$6;->a:Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;->a(Lkik/android/chat/fragment/registration/RegistrationPhoneVerificationFragment;)V
 
-    .line 257
+    .line 266
     return-void
 .end method

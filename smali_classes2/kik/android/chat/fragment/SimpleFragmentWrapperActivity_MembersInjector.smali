@@ -23,23 +23,12 @@
 
 
 # instance fields
-.field private final b:Ldagger/b;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ldagger/b",
-            "<",
-            "Landroid/support/v7/app/AppCompatActivity;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final c:Ljavax/inject/Provider;
+.field private final b:Ljavax/inject/Provider;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/z;",
+            "Lkik/core/ICoreEvents;",
             ">;"
         }
     .end annotation
@@ -51,7 +40,7 @@
     .locals 1
 
     .prologue
-    .line 9
+    .line 8
     const-class v0, Lkik/android/chat/fragment/SimpleFragmentWrapperActivity_MembersInjector;
 
     invoke-virtual {v0}, Ljava/lang/Class;->desiredAssertionStatus()Z
@@ -73,27 +62,23 @@
     goto :goto_0
 .end method
 
-.method private constructor <init>(Ldagger/b;Ljavax/inject/Provider;)V
+.method private constructor <init>(Ljavax/inject/Provider;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ldagger/b",
-            "<",
-            "Landroid/support/v7/app/AppCompatActivity;",
-            ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/z;",
+            "Lkik/core/ICoreEvents;",
             ">;)V"
         }
     .end annotation
 
     .prologue
-    .line 14
+    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
+    .line 17
     sget-boolean v0, Lkik/android/chat/fragment/SimpleFragmentWrapperActivity_MembersInjector;->a:Z
 
     if-nez v0, :cond_0
@@ -106,43 +91,22 @@
 
     throw v0
 
-    .line 16
-    :cond_0
-    iput-object p1, p0, Lkik/android/chat/fragment/SimpleFragmentWrapperActivity_MembersInjector;->b:Ldagger/b;
-
-    .line 17
-    sget-boolean v0, Lkik/android/chat/fragment/SimpleFragmentWrapperActivity_MembersInjector;->a:Z
-
-    if-nez v0, :cond_1
-
-    if-nez p2, :cond_1
-
-    new-instance v0, Ljava/lang/AssertionError;
-
-    invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
-
-    throw v0
-
     .line 18
-    :cond_1
-    iput-object p2, p0, Lkik/android/chat/fragment/SimpleFragmentWrapperActivity_MembersInjector;->c:Ljavax/inject/Provider;
+    :cond_0
+    iput-object p1, p0, Lkik/android/chat/fragment/SimpleFragmentWrapperActivity_MembersInjector;->b:Ljavax/inject/Provider;
 
     .line 19
     return-void
 .end method
 
-.method public static a(Ldagger/b;Ljavax/inject/Provider;)Ldagger/b;
+.method public static a(Ljavax/inject/Provider;)Ldagger/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ldagger/b",
-            "<",
-            "Landroid/support/v7/app/AppCompatActivity;",
-            ">;",
             "Ljavax/inject/Provider",
             "<",
-            "Lkik/core/z;",
+            "Lkik/core/ICoreEvents;",
             ">;)",
             "Ldagger/b",
             "<",
@@ -152,12 +116,39 @@
     .end annotation
 
     .prologue
-    .line 31
+    .line 23
     new-instance v0, Lkik/android/chat/fragment/SimpleFragmentWrapperActivity_MembersInjector;
 
-    invoke-direct {v0, p0, p1}, Lkik/android/chat/fragment/SimpleFragmentWrapperActivity_MembersInjector;-><init>(Ldagger/b;Ljavax/inject/Provider;)V
+    invoke-direct {v0, p0}, Lkik/android/chat/fragment/SimpleFragmentWrapperActivity_MembersInjector;-><init>(Ljavax/inject/Provider;)V
 
     return-object v0
+.end method
+
+.method public static a(Lkik/android/chat/fragment/SimpleFragmentWrapperActivity;Ljavax/inject/Provider;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkik/android/chat/fragment/SimpleFragmentWrapperActivity;",
+            "Ljavax/inject/Provider",
+            "<",
+            "Lkik/core/ICoreEvents;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 36
+    invoke-interface {p1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lkik/core/ICoreEvents;
+
+    iput-object v0, p0, Lkik/android/chat/fragment/SimpleFragmentWrapperActivity;->b:Lkik/core/ICoreEvents;
+
+    .line 37
+    return-void
 .end method
 
 
@@ -166,13 +157,13 @@
     .locals 2
 
     .prologue
-    .line 9
+    .line 8
     check-cast p1, Lkik/android/chat/fragment/SimpleFragmentWrapperActivity;
 
-    .line 1023
+    .line 1028
     if-nez p1, :cond_0
 
-    .line 1024
+    .line 1029
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "Cannot inject members into a null reference"
@@ -181,23 +172,18 @@
 
     throw v0
 
-    .line 1026
+    .line 1031
     :cond_0
-    iget-object v0, p0, Lkik/android/chat/fragment/SimpleFragmentWrapperActivity_MembersInjector;->b:Ldagger/b;
-
-    invoke-interface {v0, p1}, Ldagger/b;->injectMembers(Ljava/lang/Object;)V
-
-    .line 1027
-    iget-object v0, p0, Lkik/android/chat/fragment/SimpleFragmentWrapperActivity_MembersInjector;->c:Ljavax/inject/Provider;
+    iget-object v0, p0, Lkik/android/chat/fragment/SimpleFragmentWrapperActivity_MembersInjector;->b:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/z;
+    check-cast v0, Lkik/core/ICoreEvents;
 
-    iput-object v0, p1, Lkik/android/chat/fragment/SimpleFragmentWrapperActivity;->b:Lkik/core/z;
+    iput-object v0, p1, Lkik/android/chat/fragment/SimpleFragmentWrapperActivity;->b:Lkik/core/ICoreEvents;
 
-    .line 9
+    .line 8
     return-void
 .end method

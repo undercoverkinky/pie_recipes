@@ -23,7 +23,7 @@
 
 
 # instance fields
-.field private c:Lkik/android/util/ah;
+.field private c:Lkik/android/util/aj;
 
 .field private d:Ljava/util/Hashtable;
     .annotation system Ldalvik/annotation/Signature;
@@ -43,23 +43,25 @@
     .locals 4
 
     .prologue
-    .line 44
+    .line 45
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
-    .line 47
+    .line 48
     sput-object v0, Lkik/android/config/c;->a:Ljava/util/Hashtable;
 
     const-string v1, "prod"
 
     new-instance v2, Lkik/core/net/k;
 
-    invoke-direct {v2}, Lkik/core/net/k;-><init>()V
+    const-string v3, "13.0.0.7521"
+
+    invoke-direct {v2, v3}, Lkik/core/net/k;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 48
+    .line 49
     sget-object v0, Lkik/android/config/c;->a:Ljava/util/Hashtable;
 
     const-string v1, "beta"
@@ -70,7 +72,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 49
+    .line 50
     sget-object v0, Lkik/android/config/c;->a:Ljava/util/Hashtable;
 
     const-string v1, "piranha"
@@ -81,7 +83,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 50
+    .line 51
     sget-object v0, Lkik/android/config/c;->a:Ljava/util/Hashtable;
 
     const-string v1, "scancode-changes"
@@ -94,18 +96,20 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 51
+    .line 52
     sget-object v0, Lkik/android/config/c;->a:Ljava/util/Hashtable;
 
     const-string v1, "bad-ssl"
 
     new-instance v2, Lkik/android/config/c$1;
 
-    invoke-direct {v2}, Lkik/android/config/c$1;-><init>()V
+    const-string v3, "13.0.0.7521"
+
+    invoke-direct {v2, v3}, Lkik/android/config/c$1;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 59
+    .line 60
     sget-object v0, Lkik/android/config/c;->a:Ljava/util/Hashtable;
 
     const-string v1, "more-attributed-friending"
@@ -118,7 +122,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 60
+    .line 61
     sget-object v0, Lkik/android/config/c;->a:Ljava/util/Hashtable;
 
     const-string v1, "match-context-metrics"
@@ -131,7 +135,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 61
+    .line 62
     return-void
 .end method
 
@@ -139,26 +143,26 @@
     .locals 1
 
     .prologue
-    .line 89
+    .line 90
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 90
+    .line 91
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
     iput-object v0, p0, Lkik/android/config/c;->d:Ljava/util/Hashtable;
 
-    .line 91
+    .line 92
     return-void
 .end method
 
-.method static synthetic a(Lkik/android/config/c;)Lkik/android/util/ah;
+.method static synthetic a(Lkik/android/config/c;)Lkik/android/util/aj;
     .locals 1
 
     .prologue
-    .line 33
-    iget-object v0, p0, Lkik/android/config/c;->c:Lkik/android/util/ah;
+    .line 34
+    iget-object v0, p0, Lkik/android/config/c;->c:Lkik/android/util/aj;
 
     return-object v0
 .end method
@@ -167,19 +171,19 @@
     .locals 1
 
     .prologue
-    .line 71
+    .line 72
     sget-object v0, Lkik/android/config/c;->b:Lkik/android/config/c;
 
     if-nez v0, :cond_0
 
-    .line 72
+    .line 73
     new-instance v0, Lkik/android/config/c;
 
     invoke-direct {v0}, Lkik/android/config/c;-><init>()V
 
     sput-object v0, Lkik/android/config/c;->b:Lkik/android/config/c;
 
-    .line 74
+    .line 75
     :cond_0
     sget-object v0, Lkik/android/config/c;->b:Lkik/android/config/c;
 
@@ -201,7 +205,7 @@
     .end annotation
 
     .prologue
-    .line 309
+    .line 310
     iget-object v0, p0, Lkik/android/config/c;->d:Ljava/util/Hashtable;
 
     invoke-virtual {v0}, Ljava/util/Hashtable;->elements()Ljava/util/Enumeration;
@@ -219,7 +223,7 @@
     .locals 1
 
     .prologue
-    .line 303
+    .line 304
     iget-object v0, p0, Lkik/android/config/c;->d:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -231,7 +235,7 @@
     return-object v0
 .end method
 
-.method public final a(Lkik/android/util/ah;)V
+.method public final a(Lkik/android/util/aj;)V
     .locals 10
 
     .prologue
@@ -243,44 +247,44 @@
 
     const/4 v7, 0x0
 
-    .line 79
-    iput-object p1, p0, Lkik/android/config/c;->c:Lkik/android/util/ah;
+    .line 80
+    iput-object p1, p0, Lkik/android/config/c;->c:Lkik/android/util/aj;
 
-    .line 1095
+    .line 1096
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1097
+    .line 1098
     new-instance v0, Lkik/android/config/a;
 
     const-string v1, "inline_bot_server_search_config"
 
-    iget-object v2, p0, Lkik/android/config/c;->c:Lkik/android/util/ah;
+    iget-object v2, p0, Lkik/android/config/c;->c:Lkik/android/util/aj;
 
-    invoke-direct {v0, v1, v7, v3, v2}, Lkik/android/config/a;-><init>(Ljava/lang/String;ZLjava/lang/Runnable;Lkik/android/util/ah;)V
+    invoke-direct {v0, v1, v7, v3, v2}, Lkik/android/config/a;-><init>(Ljava/lang/String;ZLjava/lang/Runnable;Lkik/android/util/aj;)V
 
     invoke-virtual {v6, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1099
+    .line 1100
     new-instance v0, Lkik/android/config/a;
 
     const-string v1, "show-lock-icon"
 
-    iget-object v2, p0, Lkik/android/config/c;->c:Lkik/android/util/ah;
+    iget-object v2, p0, Lkik/android/config/c;->c:Lkik/android/util/aj;
 
-    invoke-direct {v0, v1, v7, v3, v2}, Lkik/android/config/a;-><init>(Ljava/lang/String;ZLjava/lang/Runnable;Lkik/android/util/ah;)V
+    invoke-direct {v0, v1, v7, v3, v2}, Lkik/android/config/a;-><init>(Ljava/lang/String;ZLjava/lang/Runnable;Lkik/android/util/aj;)V
 
     invoke-virtual {v6, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1101
+    .line 1102
     invoke-static {}, Lkik/android/util/DeviceUtils;->f()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1102
+    .line 1103
     new-instance v0, Lkik/android/config/c$2;
 
     const-string v2, "eula-has-been-accepted"
@@ -303,15 +307,15 @@
 
     aput-object v1, v4, v8
 
-    iget-object v5, p0, Lkik/android/config/c;->c:Lkik/android/util/ah;
+    iget-object v5, p0, Lkik/android/config/c;->c:Lkik/android/util/aj;
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v5}, Lkik/android/config/c$2;-><init>(Lkik/android/config/c;Ljava/lang/String;Ljava/lang/Boolean;[Ljava/lang/Boolean;Lkik/android/util/ah;)V
+    invoke-direct/range {v0 .. v5}, Lkik/android/config/c$2;-><init>(Lkik/android/config/c;Ljava/lang/String;Ljava/lang/Boolean;[Ljava/lang/Boolean;Lkik/android/util/aj;)V
 
     invoke-virtual {v6, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1146
+    .line 1147
     new-instance v0, Lkik/android/config/c$3;
 
     const-string v2, "eula-has-been-accepted"
@@ -334,15 +338,15 @@
 
     aput-object v1, v4, v8
 
-    iget-object v5, p0, Lkik/android/config/c;->c:Lkik/android/util/ah;
+    iget-object v5, p0, Lkik/android/config/c;->c:Lkik/android/util/aj;
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v5}, Lkik/android/config/c$3;-><init>(Lkik/android/config/c;Ljava/lang/String;Ljava/lang/Boolean;[Ljava/lang/Boolean;Lkik/android/util/ah;)V
+    invoke-direct/range {v0 .. v5}, Lkik/android/config/c$3;-><init>(Lkik/android/config/c;Ljava/lang/String;Ljava/lang/Boolean;[Ljava/lang/Boolean;Lkik/android/util/aj;)V
 
     invoke-virtual {v6, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1190
+    .line 1191
     new-instance v0, Lkik/android/config/c$4;
 
     const-string v2, "metrics-use-alt"
@@ -365,15 +369,15 @@
 
     aput-object v1, v4, v8
 
-    iget-object v5, p0, Lkik/android/config/c;->c:Lkik/android/util/ah;
+    iget-object v5, p0, Lkik/android/config/c;->c:Lkik/android/util/aj;
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v5}, Lkik/android/config/c$4;-><init>(Lkik/android/config/c;Ljava/lang/String;Ljava/lang/Boolean;[Ljava/lang/Boolean;Lkik/android/util/ah;)V
+    invoke-direct/range {v0 .. v5}, Lkik/android/config/c$4;-><init>(Lkik/android/config/c;Ljava/lang/String;Ljava/lang/Boolean;[Ljava/lang/Boolean;Lkik/android/util/aj;)V
 
     invoke-virtual {v6, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1227
+    .line 1228
     new-instance v0, Lkik/android/config/c$5;
 
     const-string v2, "force-crash"
@@ -396,15 +400,15 @@
 
     aput-object v1, v4, v8
 
-    iget-object v5, p0, Lkik/android/config/c;->c:Lkik/android/util/ah;
+    iget-object v5, p0, Lkik/android/config/c;->c:Lkik/android/util/aj;
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v5}, Lkik/android/config/c$5;-><init>(Lkik/android/config/c;Ljava/lang/String;Ljava/lang/Boolean;[Ljava/lang/Boolean;Lkik/android/util/ah;)V
+    invoke-direct/range {v0 .. v5}, Lkik/android/config/c$5;-><init>(Lkik/android/config/c;Ljava/lang/String;Ljava/lang/Boolean;[Ljava/lang/Boolean;Lkik/android/util/aj;)V
 
     invoke-virtual {v6, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1264
+    .line 1265
     const/4 v0, 0x3
 
     new-array v4, v0, [Ljava/lang/String;
@@ -433,7 +437,7 @@
 
     aput-object v0, v4, v9
 
-    .line 1265
+    .line 1266
     new-instance v0, Lkik/android/config/c$6;
 
     const-string v2, "abm-reminder-time-units"
@@ -444,15 +448,15 @@
 
     move-result-object v3
 
-    iget-object v5, p0, Lkik/android/config/c;->c:Lkik/android/util/ah;
+    iget-object v5, p0, Lkik/android/config/c;->c:Lkik/android/util/aj;
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v5}, Lkik/android/config/c$6;-><init>(Lkik/android/config/c;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Lkik/android/util/ah;)V
+    invoke-direct/range {v0 .. v5}, Lkik/android/config/c$6;-><init>(Lkik/android/config/c;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Lkik/android/util/aj;)V
 
     invoke-virtual {v6, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 81
+    .line 82
     :cond_0
     invoke-virtual {v6}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -471,7 +475,7 @@
 
     check-cast v0, Lkik/android/config/Configuration;
 
-    .line 82
+    .line 83
     iget-object v2, p0, Lkik/android/config/c;->d:Ljava/util/Hashtable;
 
     invoke-virtual {v0}, Lkik/android/config/Configuration;->c()Ljava/lang/String;
@@ -482,7 +486,7 @@
 
     goto :goto_0
 
-    .line 84
+    .line 85
     :cond_1
     return-void
 .end method
@@ -491,7 +495,7 @@
     .locals 2
 
     .prologue
-    .line 293
+    .line 294
     iget-object v0, p0, Lkik/android/config/c;->d:Ljava/util/Hashtable;
 
     invoke-virtual {p1}, Lkik/android/config/Configuration;->c()Ljava/lang/String;
@@ -504,7 +508,7 @@
 
     if-nez v0, :cond_0
 
-    .line 294
+    .line 295
     iget-object v0, p0, Lkik/android/config/c;->d:Ljava/util/Hashtable;
 
     invoke-virtual {p1}, Lkik/android/config/Configuration;->c()Ljava/lang/String;
@@ -513,10 +517,10 @@
 
     invoke-virtual {v0, v1, p1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 295
+    .line 296
     const/4 v0, 0x1
 
-    .line 297
+    .line 298
     :goto_0
     return v0
 
@@ -526,19 +530,19 @@
     goto :goto_0
 .end method
 
-.method public final b(Lkik/android/util/ah;)Ljava/lang/String;
+.method public final b(Lkik/android/util/aj;)Ljava/lang/String;
     .locals 3
 
     .prologue
-    .line 331
+    .line 332
     invoke-static {}, Lkik/android/util/DeviceUtils;->f()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 332
-    invoke-interface {p1}, Lkik/android/util/ah;->c()Landroid/content/SharedPreferences;
+    .line 333
+    invoke-interface {p1}, Lkik/android/util/aj;->c()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -550,7 +554,7 @@
 
     move-result-object v0
 
-    .line 333
+    .line 334
     if-eqz v0, :cond_0
 
     sget-object v1, Lkik/android/config/c;->a:Ljava/util/Hashtable;
@@ -561,7 +565,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 337
+    .line 338
     :goto_0
     return-object v0
 
@@ -585,7 +589,7 @@
     .end annotation
 
     .prologue
-    .line 343
+    .line 344
     sget-object v0, Lkik/android/config/c;->a:Ljava/util/Hashtable;
 
     invoke-virtual {v0}, Ljava/util/Hashtable;->clone()Ljava/lang/Object;
@@ -603,14 +607,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 315
+    .line 316
     invoke-static {}, Lkik/android/util/DeviceUtils;->f()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 316
+    .line 317
     sget-object v1, Lkik/android/config/c;->a:Ljava/util/Hashtable;
 
     invoke-virtual {v1, p1}, Ljava/util/Hashtable;->containsKey(Ljava/lang/Object;)Z
@@ -619,10 +623,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 317
-    iget-object v1, p0, Lkik/android/config/c;->c:Lkik/android/util/ah;
+    .line 318
+    iget-object v1, p0, Lkik/android/config/c;->c:Lkik/android/util/aj;
 
-    invoke-interface {v1}, Lkik/android/util/ah;->c()Landroid/content/SharedPreferences;
+    invoke-interface {v1}, Lkik/android/util/aj;->c()Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -638,13 +642,13 @@
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 318
+    .line 319
     invoke-static {v0}, Ljava/lang/System;->exit(I)V
 
-    .line 319
+    .line 320
     const/4 v0, 0x1
 
-    .line 322
+    .line 323
     :cond_0
     return v0
 .end method

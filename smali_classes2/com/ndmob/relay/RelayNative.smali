@@ -108,11 +108,8 @@
     .line 53
     return-void
 
-    .line 50
     :catch_0
     move-exception v0
-
-    invoke-static {v0}, Lkik/android/util/ax;->c(Ljava/lang/Throwable;)V
 
     goto :goto_1
 .end method
@@ -158,6 +155,7 @@
 
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
+    .line 288
     throw v0
 .end method
 

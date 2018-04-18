@@ -6,9 +6,16 @@ option java_package = "com.kik.xiphias.rpc";
 option java_multiple_files = true;
 option java_outer_classname = "CommonRpcProto";
 
+option go_package = "github.com/kikinteractive/xiphias-model-common/generated/go;common";
+
+// Being exempted from checkstyle versioning rule
+//  due to _exceedingly_ common and pervasive nature of defined datatypes
+option (kik.checkstyle).ignore_version = true;
+
 import "google/protobuf/descriptor.proto";
 import "protobuf_validation.proto";
 import "common_model.proto";
+import "kik_options.proto";
 
 //----------------------------------------------------------------------------
 // Common gRPC Request/Response messages
@@ -33,6 +40,19 @@ message VoidResponse {
 message XiRequestId {
     XiUuid id = 1 [(kik.validation.field_validation) = {
         mandatory: true
+    }];
+}
+
+// A string token that is used to route calls to services in a
+// deterministic (sticky) way.
+//
+// The contents of the token string is left up to the client, but it should
+// be something consistent such as JID or device ID. The users of this
+// token should not care about what the client has used as the token string.
+message XiRoutingToken {
+    string token = 1 [(kik.validation.field_validation) = {
+        min_byte_length: 1
+        max_byte_length: 128
     }];
 }
 

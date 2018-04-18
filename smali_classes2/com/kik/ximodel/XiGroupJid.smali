@@ -165,8 +165,10 @@
 
     invoke-virtual {p0}, Lcom/kik/ximodel/XiGroupJid;->makeExtensionsImmutable()V
 
+    .line 65
     throw v0
 
+    .line 64
     :cond_1
     invoke-virtual {p0}, Lcom/kik/ximodel/XiGroupJid;->makeExtensionsImmutable()V
 

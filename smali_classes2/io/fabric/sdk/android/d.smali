@@ -178,10 +178,12 @@
 
     .prologue
     .line 56
+    .line 57
     invoke-virtual {p0, p1}, Lio/fabric/sdk/android/d;->getDatabasePath(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 
+    .line 56
     invoke-static {v0, p3}, Landroid/database/sqlite/SQLiteDatabase;->openOrCreateDatabase(Ljava/io/File;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;)Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
@@ -197,6 +199,7 @@
 
     .prologue
     .line 64
+    .line 65
     invoke-virtual {p0, p1}, Lio/fabric/sdk/android/d;->getDatabasePath(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
@@ -205,6 +208,7 @@
 
     move-result-object v0
 
+    .line 64
     invoke-static {v0, p3, p4}, Landroid/database/sqlite/SQLiteDatabase;->openOrCreateDatabase(Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;Landroid/database/DatabaseErrorHandler;)Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0

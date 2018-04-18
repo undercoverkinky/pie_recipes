@@ -50,7 +50,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, p2, v1}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;-><init>(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;B)V
+    invoke-direct {v0, p1, p2, v1}, Lcom/kik/abtesting/rpc/AbService$GetExperimentsRequest;-><init>(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;Lcom/kik/abtesting/rpc/AbService$1;)V
 
     .line 1140
     return-object v0

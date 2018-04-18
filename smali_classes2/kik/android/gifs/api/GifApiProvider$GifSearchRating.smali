@@ -52,7 +52,7 @@
 
     const/4 v2, 0x0
 
-    .line 32
+    .line 30
     new-instance v0, Lkik/android/gifs/api/GifApiProvider$GifSearchRating;
 
     const-string v1, "GifSearchRatingY"
@@ -61,7 +61,7 @@
 
     sput-object v0, Lkik/android/gifs/api/GifApiProvider$GifSearchRating;->GifSearchRatingY:Lkik/android/gifs/api/GifApiProvider$GifSearchRating;
 
-    .line 33
+    .line 31
     new-instance v0, Lkik/android/gifs/api/GifApiProvider$GifSearchRating;
 
     const-string v1, "GifSearchRatingG"
@@ -70,7 +70,7 @@
 
     sput-object v0, Lkik/android/gifs/api/GifApiProvider$GifSearchRating;->GifSearchRatingG:Lkik/android/gifs/api/GifApiProvider$GifSearchRating;
 
-    .line 34
+    .line 32
     new-instance v0, Lkik/android/gifs/api/GifApiProvider$GifSearchRating;
 
     const-string v1, "GifSearchRatingPG"
@@ -79,7 +79,7 @@
 
     sput-object v0, Lkik/android/gifs/api/GifApiProvider$GifSearchRating;->GifSearchRatingPG:Lkik/android/gifs/api/GifApiProvider$GifSearchRating;
 
-    .line 35
+    .line 33
     new-instance v0, Lkik/android/gifs/api/GifApiProvider$GifSearchRating;
 
     const-string v1, "GifSearchRatingPG13"
@@ -88,7 +88,7 @@
 
     sput-object v0, Lkik/android/gifs/api/GifApiProvider$GifSearchRating;->GifSearchRatingPG13:Lkik/android/gifs/api/GifApiProvider$GifSearchRating;
 
-    .line 36
+    .line 34
     new-instance v0, Lkik/android/gifs/api/GifApiProvider$GifSearchRating;
 
     const-string v1, "GifSearchRatingR"
@@ -97,7 +97,7 @@
 
     sput-object v0, Lkik/android/gifs/api/GifApiProvider$GifSearchRating;->GifSearchRatingR:Lkik/android/gifs/api/GifApiProvider$GifSearchRating;
 
-    .line 31
+    .line 28
     const/4 v0, 0x5
 
     new-array v0, v0, [Lkik/android/gifs/api/GifApiProvider$GifSearchRating;
@@ -136,7 +136,7 @@
     .end annotation
 
     .prologue
-    .line 31
+    .line 28
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -146,7 +146,7 @@
     .locals 1
 
     .prologue
-    .line 31
+    .line 28
     const-class v0, Lkik/android/gifs/api/GifApiProvider$GifSearchRating;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -162,7 +162,7 @@
     .locals 1
 
     .prologue
-    .line 31
+    .line 28
     sget-object v0, Lkik/android/gifs/api/GifApiProvider$GifSearchRating;->$VALUES:[Lkik/android/gifs/api/GifApiProvider$GifSearchRating;
 
     invoke-virtual {v0}, [Lkik/android/gifs/api/GifApiProvider$GifSearchRating;->clone()Ljava/lang/Object;

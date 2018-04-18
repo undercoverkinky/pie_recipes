@@ -3,12 +3,18 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0x12
+.end annotation
+
+
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 18
+    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,10 +24,10 @@
     .locals 0
 
     .prologue
-    .line 20
+    .line 24
     invoke-static {p0}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 21
+    .line 25
     return-void
 .end method
 
@@ -29,9 +35,9 @@
     .locals 0
 
     .prologue
-    .line 24
+    .line 28
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 25
+    .line 29
     return-void
 .end method

@@ -18,33 +18,34 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 45
+    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-.method synthetic constructor <init>(Landroid/support/v4/view/accessibility/AccessibilityWindowInfoCompat$1;)V
-    .locals 0
-
-    .prologue
-    .line 45
-    invoke-direct {p0}, Landroid/support/v4/view/accessibility/AccessibilityWindowInfoCompat$AccessibilityWindowInfoStubImpl;-><init>()V
-
+    .line 50
     return-void
 .end method
 
 
 # virtual methods
+.method public getAnchor(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 127
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
 .method public getBoundsInScreen(Ljava/lang/Object;Landroid/graphics/Rect;)V
     .locals 0
 
     .prologue
-    .line 84
+    .line 89
     return-void
 .end method
 
@@ -52,7 +53,7 @@
     .locals 1
 
     .prologue
-    .line 108
+    .line 113
     const/4 v0, 0x0
 
     return-object v0
@@ -62,7 +63,7 @@
     .locals 1
 
     .prologue
-    .line 103
+    .line 108
     const/4 v0, 0x0
 
     return v0
@@ -72,7 +73,7 @@
     .locals 1
 
     .prologue
-    .line 79
+    .line 84
     const/4 v0, -0x1
 
     return v0
@@ -82,7 +83,7 @@
     .locals 1
 
     .prologue
-    .line 64
+    .line 69
     const/4 v0, -0x1
 
     return v0
@@ -92,7 +93,7 @@
     .locals 1
 
     .prologue
-    .line 74
+    .line 79
     const/4 v0, 0x0
 
     return-object v0
@@ -102,7 +103,17 @@
     .locals 1
 
     .prologue
-    .line 69
+    .line 74
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public getTitle(Ljava/lang/Object;)Ljava/lang/CharSequence;
+    .locals 1
+
+    .prologue
+    .line 122
     const/4 v0, 0x0
 
     return-object v0
@@ -112,7 +123,7 @@
     .locals 1
 
     .prologue
-    .line 59
+    .line 64
     const/4 v0, -0x1
 
     return v0
@@ -122,7 +133,7 @@
     .locals 1
 
     .prologue
-    .line 98
+    .line 103
     const/4 v0, 0x1
 
     return v0
@@ -132,7 +143,7 @@
     .locals 1
 
     .prologue
-    .line 88
+    .line 93
     const/4 v0, 0x1
 
     return v0
@@ -142,7 +153,7 @@
     .locals 1
 
     .prologue
-    .line 93
+    .line 98
     const/4 v0, 0x1
 
     return v0
@@ -152,7 +163,7 @@
     .locals 1
 
     .prologue
-    .line 49
+    .line 54
     const/4 v0, 0x0
 
     return-object v0
@@ -162,7 +173,7 @@
     .locals 1
 
     .prologue
-    .line 54
+    .line 59
     const/4 v0, 0x0
 
     return-object v0
@@ -172,6 +183,6 @@
     .locals 0
 
     .prologue
-    .line 113
+    .line 118
     return-void
 .end method

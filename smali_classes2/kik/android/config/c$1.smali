@@ -15,12 +15,12 @@
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 51
-    invoke-direct {p0}, Lkik/core/net/k;-><init>()V
+    .line 52
+    invoke-direct {p0, p1}, Lkik/core/net/k;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -31,7 +31,7 @@
     .locals 1
 
     .prologue
-    .line 56
+    .line 57
     const-string v0, "chris.jairaj.org"
 
     return-object v0

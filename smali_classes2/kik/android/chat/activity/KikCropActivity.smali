@@ -5,10 +5,8 @@
 
 # instance fields
 .field _cropView:Lkik/android/widget/KikCropView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1100f9
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f100128
     .end annotation
 .end field
 
@@ -41,7 +39,7 @@
     .locals 0
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f1100f1
+            0x7f100120
         }
     .end annotation
 
@@ -57,7 +55,7 @@
     .locals 0
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f1100f7
+            0x7f100126
         }
     .end annotation
 
@@ -84,7 +82,7 @@
     .locals 5
 
     .prologue
-    const v4, 0x7f0a00b1
+    const v4, 0x7f0900b2
 
     const/4 v3, 0x1
 
@@ -92,12 +90,12 @@
     invoke-super {p0, p1}, Lkik/android/chat/activity/KikActivityBase;->onCreate(Landroid/os/Bundle;)V
 
     .line 36
-    const v0, 0x7f04002a
+    const v0, 0x7f04002b
 
     invoke-virtual {p0, v0}, Lkik/android/chat/activity/KikCropActivity;->setContentView(I)V
 
     .line 37
-    invoke-static {p0}, Lbutterknife/ButterKnife;->bind(Landroid/app/Activity;)V
+    invoke-static {p0}, Lbutterknife/ButterKnife;->bind(Landroid/app/Activity;)Lbutterknife/Unbinder;
 
     .line 39
     invoke-virtual {p0}, Lkik/android/chat/activity/KikCropActivity;->getIntent()Landroid/content/Intent;
@@ -220,12 +218,12 @@
     .locals 4
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f1100f8
+            0x7f100127
         }
     .end annotation
 
     .prologue
-    const v2, 0x7f0a01b4
+    const v2, 0x7f0901b5
 
     const/4 v1, 0x1
 
@@ -333,7 +331,7 @@
     invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
     .line 95
-    const v0, 0x7f0a01b4
+    const v0, 0x7f0901b5
 
     const/4 v2, 0x1
 
@@ -379,7 +377,7 @@
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 105
+    .line 107
     :cond_4
     :goto_3
     throw v0
@@ -409,7 +407,7 @@
     .locals 1
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f1100f4
+            0x7f100123
         }
     .end annotation
 
@@ -427,7 +425,7 @@
     .locals 1
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f1100f5
+            0x7f100124
         }
     .end annotation
 

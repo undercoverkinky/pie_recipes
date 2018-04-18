@@ -1,16 +1,25 @@
 .class final Lkik/android/chat/KikApplication$26;
-.super Ljava/util/TimerTask;
+.super Lrx/i;
 .source "SourceFile"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/KikApplication;->c(Landroid/app/Activity;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lkik/android/chat/KikApplication;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x0
     name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lrx/i",
+        "<",
+        "Lcom/kik/featureconfig/rpc/FeatureConfigService$GetFeatureConfigsResponse;",
+        ">;"
+    }
 .end annotation
 
 
@@ -23,66 +32,63 @@
     .locals 0
 
     .prologue
-    .line 1594
+    .line 2013
     iput-object p1, p0, Lkik/android/chat/KikApplication$26;->a:Lkik/android/chat/KikApplication;
 
-    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
+    invoke-direct {p0}, Lrx/i;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final synthetic a(Ljava/lang/Object;)V
+    .locals 4
 
     .prologue
-    .line 1598
+    .line 2013
+    check-cast p1, Lcom/kik/featureconfig/rpc/FeatureConfigService$GetFeatureConfigsResponse;
+
+    .line 3017
     iget-object v0, p0, Lkik/android/chat/KikApplication$26;->a:Lkik/android/chat/KikApplication;
 
-    invoke-virtual {v0}, Lkik/android/chat/KikApplication;->p()V
+    iget-object v0, v0, Lkik/android/chat/KikApplication;->q:Ldagger/a;
 
-    .line 1599
-    iget-object v0, p0, Lkik/android/chat/KikApplication$26;->a:Lkik/android/chat/KikApplication;
-
-    invoke-static {v0}, Lkik/android/chat/KikApplication;->G(Lkik/android/chat/KikApplication;)Lcom/kik/events/g;
+    invoke-interface {v0}, Ldagger/a;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    check-cast v0, Lcom/kik/core/a/c;
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/g;->a(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lcom/kik/core/a/c;->a(Lcom/kik/featureconfig/rpc/FeatureConfigService$GetFeatureConfigsResponse;)V
 
-    .line 1600
+    .line 3018
     iget-object v0, p0, Lkik/android/chat/KikApplication$26;->a:Lkik/android/chat/KikApplication;
 
-    invoke-static {v0}, Lkik/android/chat/KikApplication;->H(Lkik/android/chat/KikApplication;)Z
-
-    .line 1601
-    iget-object v0, p0, Lkik/android/chat/KikApplication$26;->a:Lkik/android/chat/KikApplication;
-
-    invoke-static {v0}, Lkik/android/chat/KikApplication;->c(Lkik/android/chat/KikApplication;)Lkik/android/a/b;
+    invoke-static {v0}, Lkik/android/chat/KikApplication;->p(Lkik/android/chat/KikApplication;)Lkik/core/interfaces/ad;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lkik/android/a/b;->c()Lcom/kik/clientmetrics/f;
+    const-string v1, "kik.android.chat.KikApplication.LAST_FEATURE_CONFIG_REFRESH"
 
-    move-result-object v0
+    invoke-static {}, Lkik/core/util/v;->b()J
 
-    invoke-virtual {v0}, Lcom/kik/clientmetrics/f;->b()V
+    move-result-wide v2
 
-    .line 1602
-    iget-object v0, p0, Lkik/android/chat/KikApplication$26;->a:Lkik/android/chat/KikApplication;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget-object v0, v0, Lkik/android/chat/KikApplication;->a:Lcom/kik/android/Mixpanel;
+    move-result-object v2
 
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel;->d()Lcom/kik/android/Mixpanel;
+    invoke-interface {v0, v1, v2}, Lkik/core/interfaces/ad;->a(Ljava/lang/String;Ljava/lang/Long;)Z
 
-    .line 1604
-    iget-object v0, p0, Lkik/android/chat/KikApplication$26;->a:Lkik/android/chat/KikApplication;
+    .line 2013
+    return-void
+.end method
 
-    invoke-static {v0}, Lkik/android/chat/KikApplication;->I(Lkik/android/chat/KikApplication;)V
+.method public final a(Ljava/lang/Throwable;)V
+    .locals 0
 
-    .line 1605
+    .prologue
+    .line 2025
     return-void
 .end method

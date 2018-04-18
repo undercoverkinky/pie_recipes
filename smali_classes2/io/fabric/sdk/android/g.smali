@@ -51,12 +51,12 @@
     return-void
 .end method
 
-.method private a(Ljava/lang/String;)Lio/fabric/sdk/android/services/common/q;
+.method private a(Ljava/lang/String;)Lio/fabric/sdk/android/services/common/r;
     .locals 3
 
     .prologue
     .line 91
-    new-instance v0, Lio/fabric/sdk/android/services/common/q;
+    new-instance v0, Lio/fabric/sdk/android/services/common/r;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -64,6 +64,7 @@
 
     iget-object v2, p0, Lio/fabric/sdk/android/g;->a:Lio/fabric/sdk/android/h;
 
+    .line 92
     invoke-virtual {v2}, Lio/fabric/sdk/android/h;->b()Ljava/lang/String;
 
     move-result-object v2
@@ -88,10 +89,10 @@
 
     const-string v2, "KitInitialization"
 
-    invoke-direct {v0, v1, v2}, Lio/fabric/sdk/android/services/common/q;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lio/fabric/sdk/android/services/common/r;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 93
-    invoke-virtual {v0}, Lio/fabric/sdk/android/services/common/q;->a()V
+    invoke-virtual {v0}, Lio/fabric/sdk/android/services/common/r;->a()V
 
     .line 94
     return-object v0
@@ -119,7 +120,7 @@
     .line 41
     const-string v0, "onPreExecute"
 
-    invoke-direct {p0, v0}, Lio/fabric/sdk/android/g;->a(Ljava/lang/String;)Lio/fabric/sdk/android/services/common/q;
+    invoke-direct {p0, v0}, Lio/fabric/sdk/android/g;->a(Ljava/lang/String;)Lio/fabric/sdk/android/services/common/r;
 
     move-result-object v1
 
@@ -127,7 +128,7 @@
     :try_start_0
     iget-object v0, p0, Lio/fabric/sdk/android/g;->a:Lio/fabric/sdk/android/h;
 
-    invoke-virtual {v0}, Lio/fabric/sdk/android/h;->a_()Z
+    invoke-virtual {v0}, Lio/fabric/sdk/android/h;->c_()Z
     :try_end_0
     .catch Lio/fabric/sdk/android/services/concurrency/UnmetDependencyException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
@@ -136,7 +137,7 @@
     move-result v0
 
     .line 51
-    invoke-virtual {v1}, Lio/fabric/sdk/android/services/common/q;->b()V
+    invoke-virtual {v1}, Lio/fabric/sdk/android/services/common/r;->b()V
 
     .line 52
     if-nez v0, :cond_0
@@ -162,7 +163,7 @@
     :catchall_0
     move-exception v0
 
-    invoke-virtual {v1}, Lio/fabric/sdk/android/services/common/q;->b()V
+    invoke-virtual {v1}, Lio/fabric/sdk/android/services/common/r;->b()V
 
     .line 53
     invoke-virtual {p0}, Lio/fabric/sdk/android/g;->i()Z
@@ -188,7 +189,7 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 51
-    invoke-virtual {v1}, Lio/fabric/sdk/android/services/common/q;->b()V
+    invoke-virtual {v1}, Lio/fabric/sdk/android/services/common/r;->b()V
 
     .line 53
     invoke-virtual {p0}, Lio/fabric/sdk/android/g;->i()Z
@@ -274,7 +275,7 @@
     .line 1060
     const-string v0, "doInBackground"
 
-    invoke-direct {p0, v0}, Lio/fabric/sdk/android/g;->a(Ljava/lang/String;)Lio/fabric/sdk/android/services/common/q;
+    invoke-direct {p0, v0}, Lio/fabric/sdk/android/g;->a(Ljava/lang/String;)Lio/fabric/sdk/android/services/common/r;
 
     move-result-object v1
 
@@ -297,7 +298,7 @@
 
     .line 1066
     :cond_0
-    invoke-virtual {v1}, Lio/fabric/sdk/android/services/common/q;->b()V
+    invoke-virtual {v1}, Lio/fabric/sdk/android/services/common/r;->b()V
 
     .line 28
     return-object v0

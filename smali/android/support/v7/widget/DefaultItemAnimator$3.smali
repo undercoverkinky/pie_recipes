@@ -41,10 +41,10 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 8
 
     .prologue
-    .line 166
+    .line 167
     iget-object v0, p0, Landroid/support/v7/widget/DefaultItemAnimator$3;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -64,30 +64,66 @@
 
     check-cast v0, Landroid/support/v7/widget/RecyclerView$ViewHolder;
 
-    .line 167
+    .line 168
     iget-object v2, p0, Landroid/support/v7/widget/DefaultItemAnimator$3;->b:Landroid/support/v7/widget/DefaultItemAnimator;
 
-    invoke-static {v2, v0}, Landroid/support/v7/widget/DefaultItemAnimator;->a(Landroid/support/v7/widget/DefaultItemAnimator;Landroid/support/v7/widget/RecyclerView$ViewHolder;)V
+    .line 1225
+    iget-object v3, v0, Landroid/support/v7/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
+
+    .line 1226
+    invoke-static {v3}, Landroid/support/v4/view/ViewCompat;->animate(Landroid/view/View;)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+
+    move-result-object v3
+
+    .line 1227
+    iget-object v4, v2, Landroid/support/v7/widget/DefaultItemAnimator;->d:Ljava/util/ArrayList;
+
+    invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 1228
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    invoke-virtual {v3, v4}, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->alpha(F)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+
+    move-result-object v4
+
+    invoke-virtual {v2}, Landroid/support/v7/widget/DefaultItemAnimator;->f()J
+
+    move-result-wide v6
+
+    invoke-virtual {v4, v6, v7}, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->setDuration(J)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+
+    move-result-object v4
+
+    new-instance v5, Landroid/support/v7/widget/DefaultItemAnimator$5;
+
+    invoke-direct {v5, v2, v0, v3}, Landroid/support/v7/widget/DefaultItemAnimator$5;-><init>(Landroid/support/v7/widget/DefaultItemAnimator;Landroid/support/v7/widget/RecyclerView$ViewHolder;Landroid/support/v4/view/ViewPropertyAnimatorCompat;)V
+
+    .line 1229
+    invoke-virtual {v4, v5}, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->setListener(Landroid/support/v4/view/ViewPropertyAnimatorListener;)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
+
+    move-result-object v0
+
+    .line 1246
+    invoke-virtual {v0}, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->start()V
 
     goto :goto_0
 
-    .line 169
+    .line 170
     :cond_0
     iget-object v0, p0, Landroid/support/v7/widget/DefaultItemAnimator$3;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 170
+    .line 171
     iget-object v0, p0, Landroid/support/v7/widget/DefaultItemAnimator$3;->b:Landroid/support/v7/widget/DefaultItemAnimator;
 
-    invoke-static {v0}, Landroid/support/v7/widget/DefaultItemAnimator;->c(Landroid/support/v7/widget/DefaultItemAnimator;)Ljava/util/ArrayList;
-
-    move-result-object v0
+    iget-object v0, v0, Landroid/support/v7/widget/DefaultItemAnimator;->a:Ljava/util/ArrayList;
 
     iget-object v1, p0, Landroid/support/v7/widget/DefaultItemAnimator$3;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 171
+    .line 172
     return-void
 .end method

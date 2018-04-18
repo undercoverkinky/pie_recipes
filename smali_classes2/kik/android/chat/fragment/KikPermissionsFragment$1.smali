@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic a:Lkik/core/datatypes/ad;
+.field final synthetic a:Lkik/core/datatypes/aa;
 
 .field final synthetic b:Lkik/android/chat/fragment/KikPermissionsFragment;
 
 
 # direct methods
-.method constructor <init>(Lkik/android/chat/fragment/KikPermissionsFragment;Lkik/core/datatypes/ad;)V
+.method constructor <init>(Lkik/android/chat/fragment/KikPermissionsFragment;Lkik/core/datatypes/aa;)V
     .locals 0
 
     .prologue
     .line 90
     iput-object p1, p0, Lkik/android/chat/fragment/KikPermissionsFragment$1;->b:Lkik/android/chat/fragment/KikPermissionsFragment;
 
-    iput-object p2, p0, Lkik/android/chat/fragment/KikPermissionsFragment$1;->a:Lkik/core/datatypes/ad;
+    iput-object p2, p0, Lkik/android/chat/fragment/KikPermissionsFragment$1;->a:Lkik/core/datatypes/aa;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,17 +47,17 @@
     .line 95
     new-instance v0, Lcom/kik/cards/util/UserDataParcelable;
 
-    iget-object v1, p0, Lkik/android/chat/fragment/KikPermissionsFragment$1;->a:Lkik/core/datatypes/ad;
+    iget-object v1, p0, Lkik/android/chat/fragment/KikPermissionsFragment$1;->a:Lkik/core/datatypes/aa;
 
-    iget-object v1, v1, Lkik/core/datatypes/ad;->c:Ljava/lang/String;
+    iget-object v1, v1, Lkik/core/datatypes/aa;->c:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v3, p0, Lkik/android/chat/fragment/KikPermissionsFragment$1;->a:Lkik/core/datatypes/ad;
+    iget-object v3, p0, Lkik/android/chat/fragment/KikPermissionsFragment$1;->a:Lkik/core/datatypes/aa;
 
-    iget-object v3, v3, Lkik/core/datatypes/ad;->d:Ljava/lang/String;
+    iget-object v3, v3, Lkik/core/datatypes/aa;->d:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -69,9 +69,9 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lkik/android/chat/fragment/KikPermissionsFragment$1;->a:Lkik/core/datatypes/ad;
+    iget-object v3, p0, Lkik/android/chat/fragment/KikPermissionsFragment$1;->a:Lkik/core/datatypes/aa;
 
-    iget-object v3, v3, Lkik/core/datatypes/ad;->e:Ljava/lang/String;
+    iget-object v3, v3, Lkik/core/datatypes/aa;->e:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -81,9 +81,9 @@
 
     move-result-object v2
 
-    iget-object v3, p0, Lkik/android/chat/fragment/KikPermissionsFragment$1;->a:Lkik/core/datatypes/ad;
+    iget-object v3, p0, Lkik/android/chat/fragment/KikPermissionsFragment$1;->a:Lkik/core/datatypes/aa;
 
-    iget-object v3, v3, Lkik/core/datatypes/ad;->f:Ljava/lang/String;
+    iget-object v3, v3, Lkik/core/datatypes/aa;->f:Ljava/lang/String;
 
     invoke-direct {v0, v1, v2, v3}, Lcom/kik/cards/util/UserDataParcelable;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -100,12 +100,12 @@
     .line 98
     iget-object v0, p0, Lkik/android/chat/fragment/KikPermissionsFragment$1;->b:Lkik/android/chat/fragment/KikPermissionsFragment;
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikPermissionsFragment;->a(Landroid/os/Bundle;)V
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikPermissionsFragment;->setResultData(Landroid/os/Bundle;)V
 
     .line 99
     iget-object v0, p0, Lkik/android/chat/fragment/KikPermissionsFragment$1;->b:Lkik/android/chat/fragment/KikPermissionsFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/KikPermissionsFragment;->D()V
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikPermissionsFragment;->finish()V
 
     .line 100
     return-void

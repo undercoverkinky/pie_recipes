@@ -115,7 +115,7 @@
         }
     .end annotation
 
-    invoke-interface {p0}, Lcom/google/android/gms/common/data/DataBuffer;->zzsO()Landroid/os/Bundle;
+    invoke-interface {p0}, Lcom/google/android/gms/common/data/DataBuffer;->zzafh()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -150,7 +150,7 @@
         }
     .end annotation
 
-    invoke-interface {p0}, Lcom/google/android/gms/common/data/DataBuffer;->zzsO()Landroid/os/Bundle;
+    invoke-interface {p0}, Lcom/google/android/gms/common/data/DataBuffer;->zzafh()Landroid/os/Bundle;
 
     move-result-object v0
 

@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 58
+    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,10 +34,10 @@
     .locals 1
 
     .prologue
-    .line 61
+    .line 69
     invoke-static {p1}, Lcom/kik/xiphias/rpc/CommonRpcProto;->access$002(Lcom/google/protobuf/Descriptors$FileDescriptor;)Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 62
+    .line 70
     const/4 v0, 0x0
 
     return-object v0

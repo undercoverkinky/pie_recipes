@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 146
+    .line 157
     iput-object p1, p0, Lkik/android/KikNotificationHandler$1;->a:Lkik/android/KikNotificationHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,33 +50,33 @@
     .locals 2
 
     .prologue
-    .line 146
+    .line 157
     check-cast p2, Ljava/lang/String;
 
-    .line 1150
+    .line 1161
     iget-object v0, p0, Lkik/android/KikNotificationHandler$1;->a:Lkik/android/KikNotificationHandler;
 
-    invoke-static {v0}, Lkik/android/KikNotificationHandler;->a(Lkik/android/KikNotificationHandler;)Lkik/core/interfaces/j;
+    invoke-static {v0}, Lkik/android/KikNotificationHandler;->a(Lkik/android/KikNotificationHandler;)Lkik/core/interfaces/IConversation;
 
     move-result-object v0
 
-    invoke-interface {v0, p2}, Lkik/core/interfaces/j;->a(Ljava/lang/String;)Lkik/core/datatypes/f;
+    invoke-interface {v0, p2}, Lkik/core/interfaces/IConversation;->a(Ljava/lang/String;)Lkik/core/datatypes/f;
 
     move-result-object v0
 
-    .line 1151
+    .line 1162
     if-eqz v0, :cond_0
 
-    .line 1155
+    .line 1166
     iget-object v1, p0, Lkik/android/KikNotificationHandler$1;->a:Lkik/android/KikNotificationHandler;
 
-    invoke-virtual {v0}, Lkik/core/datatypes/f;->n()Z
+    invoke-virtual {v0}, Lkik/core/datatypes/f;->q()Z
 
     move-result v0
 
     invoke-virtual {v1, v0}, Lkik/android/KikNotificationHandler;->a(Z)V
 
-    .line 146
+    .line 157
     :cond_0
     return-void
 .end method

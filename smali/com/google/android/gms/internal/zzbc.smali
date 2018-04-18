@@ -1,92 +1,247 @@
-.class public Lcom/google/android/gms/internal/zzbc;
-.super Lcom/google/android/gms/internal/zzbm;
+.class public final Lcom/google/android/gms/internal/zzbc;
+.super Lcom/google/android/gms/internal/zzegi;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/google/android/gms/internal/zzegi",
+        "<",
+        "Lcom/google/android/gms/internal/zzbc;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field public data:[B
+
+.field public zzge:[B
+
+.field public zzgf:[B
+
+.field public zzgg:[B
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/internal/zzav;Ljava/lang/String;Ljava/lang/String;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;II)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-direct/range {p0 .. p6}, Lcom/google/android/gms/internal/zzbm;-><init>(Lcom/google/android/gms/internal/zzav;Ljava/lang/String;Ljava/lang/String;Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;II)V
+    const/4 v0, 0x0
+
+    invoke-direct {p0}, Lcom/google/android/gms/internal/zzegi;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzbc;->data:[B
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzbc;->zzge:[B
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzbc;->zzgf:[B
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzbc;->zzgg:[B
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/google/android/gms/internal/zzbc;->zzndd:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected zzaQ()V
-    .locals 6
+.method public final synthetic zza(Lcom/google/android/gms/internal/zzegf;)Lcom/google/android/gms/internal/zzego;
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/lang/IllegalAccessException;,
-            Ljava/lang/reflect/InvocationTargetException;
+            Ljava/io/IOException;
         }
     .end annotation
 
-    const-wide/16 v2, -0x1
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Lcom/google/android/gms/internal/zzegf;->zzcbr()I
 
-    const/4 v5, 0x1
+    move-result v0
 
-    const/4 v4, 0x0
+    sparse-switch v0, :sswitch_data_0
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzbc;->zzoY:Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;
+    invoke-super {p0, p1, v0}, Lcom/google/android/gms/internal/zzegi;->zza(Lcom/google/android/gms/internal/zzegf;I)Z
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result v0
 
-    move-result-object v1
+    if-nez v0, :cond_0
 
-    iput-object v1, v0, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;->e:Ljava/lang/Long;
+    :sswitch_0
+    return-object p0
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzbc;->zzoY:Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;->f:Ljava/lang/Long;
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzbc;->zzoU:Ljava/lang/reflect/Method;
-
-    const/4 v1, 0x0
-
-    new-array v2, v5, [Ljava/lang/Object;
-
-    iget-object v3, p0, Lcom/google/android/gms/internal/zzbc;->zznO:Lcom/google/android/gms/internal/zzav;
-
-    invoke-virtual {v3}, Lcom/google/android/gms/internal/zzav;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    aput-object v3, v2, v4
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :sswitch_1
+    invoke-virtual {p1}, Lcom/google/android/gms/internal/zzegf;->readBytes()[B
 
     move-result-object v0
 
-    check-cast v0, [I
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzbc;->data:[B
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzbc;->zzoY:Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;
+    goto :goto_0
 
-    aget v2, v0, v4
-
-    int-to-long v2, v2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    iput-object v2, v1, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;->e:Ljava/lang/Long;
-
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzbc;->zzoY:Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;
-
-    aget v0, v0, v5
-
-    int-to-long v2, v0
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :sswitch_2
+    invoke-virtual {p1}, Lcom/google/android/gms/internal/zzegf;->readBytes()[B
 
     move-result-object v0
 
-    iput-object v0, v1, Lcom/google/ads/afma/nano/Google3NanoAfmaSignals$AFMASignals;->f:Ljava/lang/Long;
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzbc;->zzge:[B
+
+    goto :goto_0
+
+    :sswitch_3
+    invoke-virtual {p1}, Lcom/google/android/gms/internal/zzegf;->readBytes()[B
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzbc;->zzgf:[B
+
+    goto :goto_0
+
+    :sswitch_4
+    invoke-virtual {p1}, Lcom/google/android/gms/internal/zzegf;->readBytes()[B
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/zzbc;->zzgg:[B
+
+    goto :goto_0
+
+    :sswitch_data_0
+    .sparse-switch
+        0x0 -> :sswitch_0
+        0xa -> :sswitch_1
+        0x12 -> :sswitch_2
+        0x1a -> :sswitch_3
+        0x22 -> :sswitch_4
+    .end sparse-switch
+.end method
+
+.method public final zza(Lcom/google/android/gms/internal/zzegg;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzbc;->data:[B
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/zzbc;->data:[B
+
+    invoke-virtual {p1, v0, v1}, Lcom/google/android/gms/internal/zzegg;->zzc(I[B)V
+
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzbc;->zzge:[B
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x2
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/zzbc;->zzge:[B
+
+    invoke-virtual {p1, v0, v1}, Lcom/google/android/gms/internal/zzegg;->zzc(I[B)V
+
+    :cond_1
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzbc;->zzgf:[B
+
+    if-eqz v0, :cond_2
+
+    const/4 v0, 0x3
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/zzbc;->zzgf:[B
+
+    invoke-virtual {p1, v0, v1}, Lcom/google/android/gms/internal/zzegg;->zzc(I[B)V
+
+    :cond_2
+    iget-object v0, p0, Lcom/google/android/gms/internal/zzbc;->zzgg:[B
+
+    if-eqz v0, :cond_3
+
+    const/4 v0, 0x4
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/zzbc;->zzgg:[B
+
+    invoke-virtual {p1, v0, v1}, Lcom/google/android/gms/internal/zzegg;->zzc(I[B)V
+
+    :cond_3
+    invoke-super {p0, p1}, Lcom/google/android/gms/internal/zzegi;->zza(Lcom/google/android/gms/internal/zzegg;)V
 
     return-void
+.end method
+
+.method protected final zzn()I
+    .locals 3
+
+    invoke-super {p0}, Lcom/google/android/gms/internal/zzegi;->zzn()I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/zzbc;->data:[B
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x1
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/zzbc;->data:[B
+
+    invoke-static {v1, v2}, Lcom/google/android/gms/internal/zzegg;->zzd(I[B)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_0
+    iget-object v1, p0, Lcom/google/android/gms/internal/zzbc;->zzge:[B
+
+    if-eqz v1, :cond_1
+
+    const/4 v1, 0x2
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/zzbc;->zzge:[B
+
+    invoke-static {v1, v2}, Lcom/google/android/gms/internal/zzegg;->zzd(I[B)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_1
+    iget-object v1, p0, Lcom/google/android/gms/internal/zzbc;->zzgf:[B
+
+    if-eqz v1, :cond_2
+
+    const/4 v1, 0x3
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/zzbc;->zzgf:[B
+
+    invoke-static {v1, v2}, Lcom/google/android/gms/internal/zzegg;->zzd(I[B)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_2
+    iget-object v1, p0, Lcom/google/android/gms/internal/zzbc;->zzgg:[B
+
+    if-eqz v1, :cond_3
+
+    const/4 v1, 0x4
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/zzbc;->zzgg:[B
+
+    invoke-static {v1, v2}, Lcom/google/android/gms/internal/zzegg;->zzd(I[B)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_3
+    return v0
 .end method

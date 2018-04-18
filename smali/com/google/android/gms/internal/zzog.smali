@@ -3,56 +3,17 @@
 
 
 # virtual methods
-.method public abstract begin()V
+.method public abstract getCustomTemplateId()Ljava/lang/String;
 .end method
 
-.method public abstract connect()V
+.method public abstract zzb(Lcom/google/android/gms/internal/zzoe;)V
 .end method
 
-.method public abstract disconnect()Z
+.method public abstract zzjk()Ljava/lang/String;
 .end method
 
-.method public abstract onConnected(Landroid/os/Bundle;)V
+.method public abstract zzjl()Lcom/google/android/gms/internal/zznt;
 .end method
 
-.method public abstract onConnectionSuspended(I)V
-.end method
-
-.method public abstract zza(Lcom/google/android/gms/common/ConnectionResult;Lcom/google/android/gms/common/api/Api;I)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/common/ConnectionResult;",
-            "Lcom/google/android/gms/common/api/Api",
-            "<*>;I)V"
-        }
-    .end annotation
-.end method
-
-.method public abstract zzc(Lcom/google/android/gms/internal/zznt$zza;)Lcom/google/android/gms/internal/zznt$zza;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<A::",
-            "Lcom/google/android/gms/common/api/Api$zzb;",
-            "R::",
-            "Lcom/google/android/gms/common/api/Result;",
-            "T:",
-            "Lcom/google/android/gms/internal/zznt$zza",
-            "<TR;TA;>;>(TT;)TT;"
-        }
-    .end annotation
-.end method
-
-.method public abstract zzd(Lcom/google/android/gms/internal/zznt$zza;)Lcom/google/android/gms/internal/zznt$zza;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<A::",
-            "Lcom/google/android/gms/common/api/Api$zzb;",
-            "T:",
-            "Lcom/google/android/gms/internal/zznt$zza",
-            "<+",
-            "Lcom/google/android/gms/common/api/Result;",
-            "TA;>;>(TT;)TT;"
-        }
-    .end annotation
+.method public abstract zzjm()Landroid/view/View;
 .end method

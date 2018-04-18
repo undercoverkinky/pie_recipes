@@ -36,18 +36,18 @@
     .locals 1
 
     .prologue
-    .line 4445
+    .line 4436
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;-><init>()V
 
-    .line 4557
+    .line 4548
     const-string v0, ""
 
     iput-object v0, p0, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a:Ljava/lang/Object;
 
-    .line 5456
+    .line 5447
     invoke-static {}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;->f()Z
 
-    .line 4447
+    .line 4438
     return-void
 .end method
 
@@ -55,7 +55,7 @@
     .locals 0
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;-><init>()V
 
     return-void
@@ -65,18 +65,18 @@
     .locals 1
 
     .prologue
-    .line 4451
+    .line 4442
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
 
-    .line 4557
+    .line 4548
     const-string v0, ""
 
     iput-object v0, p0, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a:Ljava/lang/Object;
 
-    .line 6456
+    .line 6447
     invoke-static {}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;->f()Z
 
-    .line 4453
+    .line 4444
     return-void
 .end method
 
@@ -84,7 +84,7 @@
     .locals 0
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-direct {p0, p1}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
 
     return-void
@@ -99,10 +99,10 @@
     .end annotation
 
     .prologue
-    .line 4543
+    .line 4534
     const/4 v2, 0x0
 
-    .line 4545
+    .line 4536
     :try_start_0
     invoke-static {}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;->g()Lcom/google/protobuf/Parser;
 
@@ -117,23 +117,23 @@
     .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 4550
+    .line 4541
     if-eqz v0, :cond_0
 
-    .line 4551
+    .line 4542
     invoke-virtual {p0, v0}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a(Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;)Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
-    .line 4554
+    .line 4545
     :cond_0
     return-object p0
 
-    .line 4546
+    .line 4537
     :catch_0
     move-exception v0
 
     move-object v1, v0
 
-    .line 4547
+    .line 4538
     :try_start_1
     invoke-virtual {v1}, Lcom/google/protobuf/InvalidProtocolBufferException;->getUnfinishedMessage()Lcom/google/protobuf/MessageLite;
 
@@ -143,7 +143,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 4548
+    .line 4539
     :try_start_2
     invoke-virtual {v1}, Lcom/google/protobuf/InvalidProtocolBufferException;->unwrapIOException()Ljava/io/IOException;
 
@@ -153,7 +153,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 4550
+    .line 4541
     :catchall_0
     move-exception v1
 
@@ -166,13 +166,14 @@
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 4551
+    .line 4542
     invoke-virtual {p0, v1}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a(Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;)Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
+    .line 4544
     :cond_1
     throw v0
 
-    .line 4550
+    .line 4541
     :catchall_1
     move-exception v0
 
@@ -185,7 +186,7 @@
     .locals 1
 
     .prologue
-    .line 4500
+    .line 4491
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -199,7 +200,7 @@
     .locals 1
 
     .prologue
-    .line 4509
+    .line 4500
     invoke-super {p0, p1, p2, p3}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -213,7 +214,7 @@
     .locals 1
 
     .prologue
-    .line 4496
+    .line 4487
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -227,7 +228,7 @@
     .locals 1
 
     .prologue
-    .line 4504
+    .line 4495
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -241,23 +242,23 @@
     .locals 1
 
     .prologue
-    .line 4517
+    .line 4508
     instance-of v0, p1, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;
 
     if-eqz v0, :cond_0
 
-    .line 4518
+    .line 4509
     check-cast p1, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;
 
     invoke-virtual {p0, p1}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a(Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;)Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
     move-result-object p0
 
-    .line 4521
+    .line 4512
     :goto_0
     return-object p0
 
-    .line 4520
+    .line 4511
     :cond_0
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/AbstractMessage$Builder;
 
@@ -268,7 +269,7 @@
     .locals 1
 
     .prologue
-    .line 4514
+    .line 4505
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -282,15 +283,15 @@
     .locals 1
 
     .prologue
-    .line 4460
+    .line 4451
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clear()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
-    .line 4461
+    .line 4452
     const-string v0, ""
 
     iput-object v0, p0, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a:Ljava/lang/Object;
 
-    .line 4463
+    .line 4454
     return-object p0
 .end method
 
@@ -300,18 +301,18 @@
     .locals 1
 
     .prologue
-    .line 4526
+    .line 4517
     invoke-static {}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;->d()Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;
 
     move-result-object v0
 
     if-ne p1, v0, :cond_0
 
-    .line 4532
+    .line 4523
     :goto_0
     return-object p0
 
-    .line 4527
+    .line 4518
     :cond_0
     invoke-virtual {p1}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;->a()Ljava/lang/String;
 
@@ -323,17 +324,17 @@
 
     if-nez v0, :cond_1
 
-    .line 4528
+    .line 4519
     invoke-static {p1}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;->b(Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;)Ljava/lang/Object;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a:Ljava/lang/Object;
 
-    .line 4529
+    .line 4520
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->onChanged()V
 
-    .line 4531
+    .line 4522
     :cond_1
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->onChanged()V
 
@@ -344,24 +345,24 @@
     .locals 1
 
     .prologue
-    .line 4594
+    .line 4585
     if-nez p1, :cond_0
 
-    .line 4595
+    .line 4586
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 4598
+    .line 4589
     :cond_0
     iput-object p1, p0, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a:Ljava/lang/Object;
 
-    .line 4599
+    .line 4590
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->onChanged()V
 
-    .line 4600
+    .line 4591
     return-object p0
 .end method
 
@@ -369,26 +370,26 @@
     .locals 2
 
     .prologue
-    .line 4476
+    .line 4467
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->b()Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;
 
     move-result-object v0
 
-    .line 4477
+    .line 4468
     invoke-virtual {v0}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;->isInitialized()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 4478
+    .line 4469
     invoke-static {v0}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->newUninitializedMessageException(Lcom/google/protobuf/Message;)Lcom/google/protobuf/UninitializedMessageException;
 
     move-result-object v0
 
     throw v0
 
-    .line 4480
+    .line 4471
     :cond_0
     return-object v0
 .end method
@@ -397,7 +398,7 @@
     .locals 1
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-direct {p0, p1, p2}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->b(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
     move-result-object v0
@@ -409,7 +410,7 @@
     .locals 1
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-direct {p0, p1, p2}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->b(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
     move-result-object v0
@@ -421,22 +422,22 @@
     .locals 2
 
     .prologue
-    .line 4484
+    .line 4475
     new-instance v0, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p0, v1}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;B)V
 
-    .line 4485
+    .line 4476
     iget-object v1, p0, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a:Ljava/lang/Object;
 
     invoke-static {v0, v1}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;->a(Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4486
+    .line 4477
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->onBuilt()V
 
-    .line 4487
+    .line 4478
     return-object v0
 .end method
 
@@ -444,7 +445,7 @@
     .locals 1
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a()Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;
 
     move-result-object v0
@@ -456,7 +457,7 @@
     .locals 1
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a()Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;
 
     move-result-object v0
@@ -468,7 +469,7 @@
     .locals 1
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->b()Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;
 
     move-result-object v0
@@ -480,7 +481,7 @@
     .locals 1
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->b()Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;
 
     move-result-object v0
@@ -492,7 +493,7 @@
     .locals 1
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->c()Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
     move-result-object v0
@@ -504,7 +505,7 @@
     .locals 1
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->c()Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
     move-result-object v0
@@ -516,7 +517,7 @@
     .locals 1
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->c()Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
     move-result-object v0
@@ -528,7 +529,7 @@
     .locals 1
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->c()Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
     move-result-object v0
@@ -540,7 +541,7 @@
     .locals 1
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-direct {p0, p1}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
     move-result-object v0
@@ -552,7 +553,7 @@
     .locals 1
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-direct {p0, p1}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
     move-result-object v0
@@ -564,7 +565,7 @@
     .locals 1
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-direct {p0, p1}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
     move-result-object v0
@@ -576,7 +577,7 @@
     .locals 1
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-direct {p0, p1}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
     move-result-object v0
@@ -588,7 +589,7 @@
     .locals 1
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-direct {p0, p1}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
     move-result-object v0
@@ -600,15 +601,15 @@
     .locals 1
 
     .prologue
-    .line 4428
-    .line 9491
+    .line 4419
+    .line 9482
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
-    .line 4428
+    .line 4419
     return-object v0
 .end method
 
@@ -616,15 +617,15 @@
     .locals 1
 
     .prologue
-    .line 4428
-    .line 14491
+    .line 4419
+    .line 14482
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
-    .line 4428
+    .line 4419
     return-object v0
 .end method
 
@@ -632,15 +633,15 @@
     .locals 1
 
     .prologue
-    .line 4428
-    .line 8491
+    .line 4419
+    .line 8482
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
-    .line 4428
+    .line 4419
     return-object v0
 .end method
 
@@ -648,15 +649,15 @@
     .locals 1
 
     .prologue
-    .line 4428
-    .line 11491
+    .line 4419
+    .line 11482
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
-    .line 4428
+    .line 4419
     return-object v0
 .end method
 
@@ -664,15 +665,15 @@
     .locals 1
 
     .prologue
-    .line 4428
-    .line 12491
+    .line 4419
+    .line 12482
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
-    .line 4428
+    .line 4419
     return-object v0
 .end method
 
@@ -685,15 +686,15 @@
     .end annotation
 
     .prologue
-    .line 4428
-    .line 15491
+    .line 4419
+    .line 15482
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
 
     check-cast v0, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
-    .line 4428
+    .line 4419
     return-object v0
 .end method
 
@@ -701,12 +702,12 @@
     .locals 1
 
     .prologue
-    .line 14472
+    .line 14463
     invoke-static {}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;->d()Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;
 
     move-result-object v0
 
-    .line 4428
+    .line 4419
     return-object v0
 .end method
 
@@ -714,12 +715,12 @@
     .locals 1
 
     .prologue
-    .line 13472
+    .line 13463
     invoke-static {}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;->d()Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse;
 
     move-result-object v0
 
-    .line 4428
+    .line 4419
     return-object v0
 .end method
 
@@ -727,7 +728,7 @@
     .locals 1
 
     .prologue
-    .line 4468
+    .line 4459
     invoke-static {}, Lcom/kik/messagepath/model/Keyboards;->j()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
@@ -739,7 +740,7 @@
     .locals 3
 
     .prologue
-    .line 4439
+    .line 4430
     invoke-static {}, Lcom/kik/messagepath/model/Keyboards;->k()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -748,12 +749,12 @@
 
     const-class v2, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
-    .line 4440
+    .line 4431
     invoke-virtual {v0, v1, v2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;->ensureFieldAccessorsInitialized(Ljava/lang/Class;Ljava/lang/Class;)Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
 
-    .line 4439
+    .line 4430
     return-object v0
 .end method
 
@@ -761,7 +762,7 @@
     .locals 1
 
     .prologue
-    .line 4536
+    .line 4527
     const/4 v0, 0x1
 
     return v0
@@ -776,7 +777,7 @@
     .end annotation
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-direct {p0, p1, p2}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
     move-result-object v0
@@ -788,7 +789,7 @@
     .locals 1
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-direct {p0, p1}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a(Lcom/google/protobuf/Message;)Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
     move-result-object v0
@@ -805,7 +806,7 @@
     .end annotation
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-direct {p0, p1, p2}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
     move-result-object v0
@@ -822,7 +823,7 @@
     .end annotation
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-direct {p0, p1, p2}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
     move-result-object v0
@@ -834,7 +835,7 @@
     .locals 1
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-direct {p0, p1}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a(Lcom/google/protobuf/Message;)Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
     move-result-object v0
@@ -851,7 +852,7 @@
     .end annotation
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-direct {p0, p1, p2}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
     move-result-object v0
@@ -863,7 +864,7 @@
     .locals 0
 
     .prologue
-    .line 4428
+    .line 4419
     return-object p0
 .end method
 
@@ -871,7 +872,7 @@
     .locals 0
 
     .prologue
-    .line 4428
+    .line 4419
     return-object p0
 .end method
 
@@ -879,7 +880,7 @@
     .locals 0
 
     .prologue
-    .line 4428
+    .line 4419
     return-object p0
 .end method
 
@@ -887,7 +888,7 @@
     .locals 1
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-direct {p0, p1, p2}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
     move-result-object v0
@@ -899,7 +900,7 @@
     .locals 1
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-direct {p0, p1, p2}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
     move-result-object v0
@@ -911,7 +912,7 @@
     .locals 1
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-direct {p0, p1, p2, p3}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
     move-result-object v0
@@ -923,7 +924,7 @@
     .locals 1
 
     .prologue
-    .line 4428
+    .line 4419
     invoke-direct {p0, p1, p2, p3}, Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;->a(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/kik/messagepath/model/Keyboards$TextSuggestedResponse$a;
 
     move-result-object v0
@@ -935,7 +936,7 @@
     .locals 0
 
     .prologue
-    .line 4428
+    .line 4419
     return-object p0
 .end method
 
@@ -943,6 +944,6 @@
     .locals 0
 
     .prologue
-    .line 4428
+    .line 4419
     return-object p0
 .end method

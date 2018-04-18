@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 683
+    .line 758
     iput-object p1, p0, Lkik/android/chat/fragment/ViewPictureFragment$5$1$2;->a:Lkik/android/chat/fragment/ViewPictureFragment$5$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 3
 
     .prologue
-    .line 687
+    .line 762
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$5$1$2;->a:Lkik/android/chat/fragment/ViewPictureFragment$5$1;
 
     iget-object v0, v0, Lkik/android/chat/fragment/ViewPictureFragment$5$1;->a:Lkik/android/chat/fragment/ViewPictureFragment$5;
@@ -59,7 +59,7 @@
 
     iget-object v1, v1, Lkik/android/chat/fragment/ViewPictureFragment$5;->b:Lkik/android/chat/fragment/ViewPictureFragment;
 
-    const v2, 0x7f0a0309
+    const v2, 0x7f09031d
 
     invoke-virtual {v1, v2}, Lkik/android/chat/fragment/ViewPictureFragment;->getString(I)Ljava/lang/String;
 
@@ -73,7 +73,7 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 688
+    .line 763
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$5$1$2;->a:Lkik/android/chat/fragment/ViewPictureFragment$5$1;
 
     iget-object v0, v0, Lkik/android/chat/fragment/ViewPictureFragment$5$1;->a:Lkik/android/chat/fragment/ViewPictureFragment$5;
@@ -86,6 +86,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setClickable(Z)V
 
-    .line 689
+    .line 764
     return-void
 .end method

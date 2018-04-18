@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static a(Ljava/lang/String;Lcom/kik/e/p;Lkik/android/gifs/api/GifResponseData$MediaType;I)Lkik/android/gifs/a/c;
+.method public static a(Ljava/lang/String;Lcom/kik/storage/s;Lkik/android/gifs/api/GifResponseData$MediaType;I)Lkik/android/gifs/a/c;
     .locals 4
 
     .prologue
@@ -16,7 +16,7 @@
     move-result v0
 
     .line 22
-    invoke-static {}, Lkik/android/chat/KikApplication;->x()Z
+    invoke-static {}, Lkik/android/chat/KikApplication;->y()Z
 
     move-result v2
 
@@ -82,7 +82,7 @@
     :pswitch_1
     new-instance v0, Lkik/android/gifs/a/f;
 
-    invoke-direct {v0, p0, p3, p1, v1}, Lkik/android/gifs/a/f;-><init>(Ljava/lang/String;ILcom/kik/e/p;Z)V
+    invoke-direct {v0, p0, p3, p1, v1}, Lkik/android/gifs/a/f;-><init>(Ljava/lang/String;ILcom/kik/storage/s;Z)V
 
     return-object v0
 

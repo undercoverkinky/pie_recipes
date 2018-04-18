@@ -1,80 +1,49 @@
-.class public final Lcom/kik/util/bt;
+.class final synthetic Lcom/kik/util/bt;
 .super Ljava/lang/Object;
-.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field private final a:Landroid/view/View;
 
 
 # direct methods
-.method public static a(Ljava/io/InputStream;Ljava/io/OutputStream;)J
-    .locals 6
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
+.method private constructor <init>(Landroid/view/View;)V
+    .locals 0
 
-    .prologue
-    .line 46
-    const/16 v0, 0x400
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v1, v0, [B
+    iput-object p1, p0, Lcom/kik/util/bt;->a:Landroid/view/View;
 
-    .line 47
-    const-wide/16 v2, 0x0
-
-    .line 48
-    invoke-virtual {p0, v1}, Ljava/io/InputStream;->read([B)I
-
-    move-result v0
-
-    .line 49
-    :goto_0
-    if-lez v0, :cond_0
-
-    .line 50
-    const/4 v4, 0x0
-
-    invoke-virtual {p1, v1, v4, v0}, Ljava/io/OutputStream;->write([BII)V
-
-    .line 51
-    int-to-long v4, v0
-
-    add-long/2addr v2, v4
-
-    .line 52
-    invoke-virtual {p0, v1}, Ljava/io/InputStream;->read([B)I
-
-    move-result v0
-
-    goto :goto_0
-
-    .line 54
-    :cond_0
-    return-wide v2
+    return-void
 .end method
 
-.method public static a(Ljava/io/OutputStream;)V
+.method public static a(Landroid/view/View;)Ljava/lang/Runnable;
     .locals 1
 
+    new-instance v0, Lcom/kik/util/bt;
+
+    invoke-direct {v0, p0}, Lcom/kik/util/bt;-><init>(Landroid/view/View;)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 2
+
     .prologue
-    .line 34
-    if-eqz p0, :cond_0
+    .line 0
+    iget-object v0, p0, Lcom/kik/util/bt;->a:Landroid/view/View;
 
-    .line 36
-    :try_start_0
-    invoke-virtual {p0}, Ljava/io/OutputStream;->close()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .line 1774
+    const/4 v1, 0x1
 
-    .line 42
-    :cond_0
-    :goto_0
+    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
+
+    .line 0
     return-void
-
-    .line 39
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
-
-    goto :goto_0
 .end method

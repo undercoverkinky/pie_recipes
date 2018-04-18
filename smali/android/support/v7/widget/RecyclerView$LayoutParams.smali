@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field a:Landroid/support/v7/widget/RecyclerView$ViewHolder;
+.field c:Landroid/support/v7/widget/RecyclerView$ViewHolder;
 
-.field final b:Landroid/graphics/Rect;
+.field final d:Landroid/graphics/Rect;
 
-.field c:Z
+.field e:Z
 
-.field d:Z
+.field f:Z
 
 
 # direct methods
@@ -29,27 +29,27 @@
     .locals 1
 
     .prologue
-    .line 9401
+    .line 10788
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
 
-    .line 9389
+    .line 10776
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->b:Landroid/graphics/Rect;
+    iput-object v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->d:Landroid/graphics/Rect;
 
-    .line 9390
+    .line 10777
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->c:Z
+    iput-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->e:Z
 
-    .line 9394
+    .line 10781
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->d:Z
+    iput-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->f:Z
 
-    .line 9402
+    .line 10789
     return-void
 .end method
 
@@ -57,27 +57,27 @@
     .locals 1
 
     .prologue
-    .line 9397
+    .line 10784
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 9389
+    .line 10776
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->b:Landroid/graphics/Rect;
+    iput-object v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->d:Landroid/graphics/Rect;
 
-    .line 9390
+    .line 10777
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->c:Z
+    iput-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->e:Z
 
-    .line 9394
+    .line 10781
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->d:Z
+    iput-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->f:Z
 
-    .line 9398
+    .line 10785
     return-void
 .end method
 
@@ -85,27 +85,27 @@
     .locals 1
 
     .prologue
-    .line 9413
+    .line 10800
     invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 9389
+    .line 10776
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->b:Landroid/graphics/Rect;
+    iput-object v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->d:Landroid/graphics/Rect;
 
-    .line 9390
+    .line 10777
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->c:Z
+    iput-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->e:Z
 
-    .line 9394
+    .line 10781
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->d:Z
+    iput-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->f:Z
 
-    .line 9414
+    .line 10801
     return-void
 .end method
 
@@ -113,27 +113,27 @@
     .locals 1
 
     .prologue
-    .line 9409
+    .line 10796
     invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 9389
+    .line 10776
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->b:Landroid/graphics/Rect;
+    iput-object v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->d:Landroid/graphics/Rect;
 
-    .line 9390
+    .line 10777
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->c:Z
+    iput-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->e:Z
 
-    .line 9394
+    .line 10781
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->d:Z
+    iput-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->f:Z
 
-    .line 9410
+    .line 10797
     return-void
 .end method
 
@@ -141,26 +141,70 @@
     .locals 1
 
     .prologue
-    .line 9405
+    .line 10792
     invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
 
-    .line 9389
+    .line 10776
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->b:Landroid/graphics/Rect;
+    iput-object v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->d:Landroid/graphics/Rect;
 
-    .line 9390
+    .line 10777
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->c:Z
+    iput-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->e:Z
 
-    .line 9394
+    .line 10781
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->d:Z
+    iput-boolean v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->f:Z
 
-    .line 9406
+    .line 10793
     return-void
+.end method
+
+
+# virtual methods
+.method public final a()Z
+    .locals 1
+
+    .prologue
+    .line 10831
+    iget-object v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->c:Landroid/support/v7/widget/RecyclerView$ViewHolder;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$ViewHolder;->isRemoved()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final b()I
+    .locals 1
+
+    .prologue
+    .line 10860
+    iget-object v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->c:Landroid/support/v7/widget/RecyclerView$ViewHolder;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$ViewHolder;->getLayoutPosition()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final c()I
+    .locals 1
+
+    .prologue
+    .line 10872
+    iget-object v0, p0, Landroid/support/v7/widget/RecyclerView$LayoutParams;->c:Landroid/support/v7/widget/RecyclerView$ViewHolder;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
+
+    move-result v0
+
+    return v0
 .end method

@@ -30,7 +30,7 @@
     .locals 0
 
     .prologue
-    .line 709
+    .line 965
     iput-object p1, p0, Landroid/support/design/widget/AppBarLayout$Behavior$1;->c:Landroid/support/design/widget/AppBarLayout$Behavior;
 
     iput-object p2, p0, Landroid/support/design/widget/AppBarLayout$Behavior$1;->a:Landroid/support/design/widget/CoordinatorLayout;
@@ -48,19 +48,21 @@
     .locals 4
 
     .prologue
-    .line 712
+    .line 968
     iget-object v0, p0, Landroid/support/design/widget/AppBarLayout$Behavior$1;->c:Landroid/support/design/widget/AppBarLayout$Behavior;
 
     iget-object v1, p0, Landroid/support/design/widget/AppBarLayout$Behavior$1;->a:Landroid/support/design/widget/CoordinatorLayout;
 
     iget-object v2, p0, Landroid/support/design/widget/AppBarLayout$Behavior$1;->b:Landroid/support/design/widget/AppBarLayout;
 
+    .line 969
     invoke-virtual {p1}, Landroid/support/design/widget/ValueAnimatorCompat;->c()I
 
     move-result v3
 
-    invoke-virtual {v0, v1, v2, v3}, Landroid/support/design/widget/AppBarLayout$Behavior;->a(Landroid/support/design/widget/CoordinatorLayout;Landroid/support/design/widget/AppBarLayout;I)I
+    .line 968
+    invoke-virtual {v0, v1, v2, v3}, Landroid/support/design/widget/AppBarLayout$Behavior;->a_(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;I)I
 
-    .line 714
+    .line 970
     return-void
 .end method

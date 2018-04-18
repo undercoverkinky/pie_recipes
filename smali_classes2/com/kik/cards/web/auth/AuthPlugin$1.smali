@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/kik/events/q;
+.implements Lcom/kik/events/p;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/cards/web/auth/AuthPlugin;->b(Ljava/lang/String;)Lcom/kik/events/Promise;
+    value = Lcom/kik/cards/web/auth/AuthPlugin;->getCardAnonymousId(Ljava/lang/String;)Lcom/kik/events/Promise;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/kik/events/q",
+        "Lcom/kik/events/p",
         "<[B",
         "Ljava/lang/String;",
         ">;"
@@ -78,11 +78,8 @@
 
     throw v1
 
-    .line 77
-    :cond_0
-    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
-
     .line 80
+    :cond_0
     const-string v0, ""
 
     goto :goto_0

@@ -8,22 +8,55 @@
     .locals 0
 
     .prologue
-    .line 28
+    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+.method public static getAttr(Landroid/content/Context;II)I
+    .locals 3
+
+    .prologue
+    .line 90
+    new-instance v0, Landroid/util/TypedValue;
+
+    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
+
+    .line 91
+    invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, p1, v0, v2}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
+
+    .line 92
+    iget v0, v0, Landroid/util/TypedValue;->resourceId:I
+
+    if-eqz v0, :cond_0
+
+    .line 95
+    :goto_0
+    return p1
+
+    :cond_0
+    move p1, p2
+
+    goto :goto_0
 .end method
 
 .method public static getBoolean(Landroid/content/res/TypedArray;IIZ)Z
     .locals 1
 
     .prologue
-    .line 31
+    .line 37
     invoke-virtual {p0, p2, p3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v0
 
-    .line 32
+    .line 38
     invoke-virtual {p0, p1, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v0
@@ -35,20 +68,20 @@
     .locals 1
 
     .prologue
-    .line 37
+    .line 43
     invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 38
+    .line 44
     if-nez v0, :cond_0
 
-    .line 39
+    .line 45
     invoke-virtual {p0, p2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 41
+    .line 47
     :cond_0
     return-object v0
 .end method
@@ -57,12 +90,12 @@
     .locals 1
 
     .prologue
-    .line 46
+    .line 52
     invoke-virtual {p0, p2, p3}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v0
 
-    .line 47
+    .line 53
     invoke-virtual {p0, p1, v0}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v0
@@ -74,12 +107,12 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 58
     invoke-virtual {p0, p2, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v0
 
-    .line 53
+    .line 59
     invoke-virtual {p0, p1, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v0
@@ -91,20 +124,42 @@
     .locals 1
 
     .prologue
-    .line 58
+    .line 64
     invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 59
+    .line 65
     if-nez v0, :cond_0
 
-    .line 60
+    .line 66
     invoke-virtual {p0, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 62
+    .line 68
+    :cond_0
+    return-object v0
+.end method
+
+.method public static getText(Landroid/content/res/TypedArray;II)Ljava/lang/CharSequence;
+    .locals 1
+
+    .prologue
+    .line 73
+    invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    .line 74
+    if-nez v0, :cond_0
+
+    .line 75
+    invoke-virtual {p0, p2}, Landroid/content/res/TypedArray;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    .line 77
     :cond_0
     return-object v0
 .end method
@@ -113,20 +168,20 @@
     .locals 1
 
     .prologue
-    .line 67
+    .line 82
     invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getTextArray(I)[Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 68
+    .line 83
     if-nez v0, :cond_0
 
-    .line 69
+    .line 84
     invoke-virtual {p0, p2}, Landroid/content/res/TypedArray;->getTextArray(I)[Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 71
+    .line 86
     :cond_0
     return-object v0
 .end method

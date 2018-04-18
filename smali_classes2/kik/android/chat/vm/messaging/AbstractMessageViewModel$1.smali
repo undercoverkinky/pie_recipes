@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 133
+    .line 169
     iput-object p1, p0, Lkik/android/chat/vm/messaging/AbstractMessageViewModel$1;->a:Lkik/android/chat/vm/messaging/AbstractMessageViewModel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 2
 
     .prologue
-    .line 137
+    .line 173
     .line 1049
     const-string v0, "#[A-Za-z0-9_.]{2,32}\\b"
 
@@ -48,13 +48,13 @@
 
     move-result v0
 
-    .line 137
+    .line 173
     if-eqz v0, :cond_0
 
-    .line 138
+    .line 174
     iget-object v0, p0, Lkik/android/chat/vm/messaging/AbstractMessageViewModel$1;->a:Lkik/android/chat/vm/messaging/AbstractMessageViewModel;
 
-    iget-object v0, v0, Lkik/android/chat/vm/messaging/AbstractMessageViewModel;->q:Lkik/android/videochat/c;
+    iget-object v0, v0, Lkik/android/chat/vm/messaging/AbstractMessageViewModel;->r:Lkik/android/videochat/c;
 
     invoke-interface {v0}, Lkik/android/videochat/c;->c()Z
 
@@ -62,10 +62,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 139
+    .line 175
     iget-object v0, p0, Lkik/android/chat/vm/messaging/AbstractMessageViewModel$1;->a:Lkik/android/chat/vm/messaging/AbstractMessageViewModel;
 
-    iget-object v0, v0, Lkik/android/chat/vm/messaging/AbstractMessageViewModel;->q:Lkik/android/videochat/c;
+    iget-object v0, v0, Lkik/android/chat/vm/messaging/AbstractMessageViewModel;->r:Lkik/android/videochat/c;
 
     sget-object v1, Lcom/rounds/kik/conference/LeaveReason;->NAVIGATE_AWAY:Lcom/rounds/kik/conference/LeaveReason;
 
@@ -77,18 +77,18 @@
 
     invoke-direct {v1, p0, p1}, Lkik/android/chat/vm/messaging/AbstractMessageViewModel$1$1;-><init>(Lkik/android/chat/vm/messaging/AbstractMessageViewModel$1;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
-    .line 154
+    .line 190
     :cond_0
     :goto_0
     return-void
 
-    .line 151
+    .line 187
     :cond_1
     iget-object v0, p0, Lkik/android/chat/vm/messaging/AbstractMessageViewModel$1;->a:Lkik/android/chat/vm/messaging/AbstractMessageViewModel;
 
-    invoke-static {v0, p1}, Lkik/android/chat/vm/messaging/AbstractMessageViewModel;->a(Lkik/android/chat/vm/messaging/AbstractMessageViewModel;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lkik/android/chat/vm/messaging/AbstractMessageViewModel;->i(Lkik/android/chat/vm/messaging/AbstractMessageViewModel;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

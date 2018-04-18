@@ -20,7 +20,7 @@
 
 .field private final b:Ljava/util/concurrent/ScheduledExecutorService;
 
-.field private final c:Lcom/kik/e/p;
+.field private final c:Lcom/kik/storage/s;
 
 .field private e:Ljava/util/concurrent/ConcurrentMap;
     .annotation system Ldalvik/annotation/Signature;
@@ -36,7 +36,7 @@
 
 
 # direct methods
-.method private constructor <init>(Lcom/kik/e/p;)V
+.method private constructor <init>(Lcom/kik/storage/s;)V
     .locals 1
 
     .prologue
@@ -69,7 +69,7 @@
     iput-object v0, p0, Lkik/android/gifs/a/e;->e:Ljava/util/concurrent/ConcurrentMap;
 
     .line 54
-    iput-object p1, p0, Lkik/android/gifs/a/e;->c:Lcom/kik/e/p;
+    iput-object p1, p0, Lkik/android/gifs/a/e;->c:Lcom/kik/storage/s;
 
     .line 55
     return-void
@@ -101,8 +101,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lkik/android/util/ax;->c(Ljava/lang/Throwable;)V
-
     .line 49
     :cond_0
     sget-object v0, Lkik/android/gifs/a/e;->d:Lkik/android/gifs/a/e;
@@ -110,7 +108,7 @@
     return-object v0
 .end method
 
-.method public static a(Lcom/kik/e/p;)Lkik/android/gifs/a/e;
+.method public static a(Lcom/kik/storage/s;)Lkik/android/gifs/a/e;
     .locals 1
 
     .prologue
@@ -122,7 +120,7 @@
     .line 37
     new-instance v0, Lkik/android/gifs/a/e;
 
-    invoke-direct {v0, p0}, Lkik/android/gifs/a/e;-><init>(Lcom/kik/e/p;)V
+    invoke-direct {v0, p0}, Lkik/android/gifs/a/e;-><init>(Lcom/kik/storage/s;)V
 
     sput-object v0, Lkik/android/gifs/a/e;->d:Lkik/android/gifs/a/e;
 
@@ -183,9 +181,9 @@
 
     .line 69
     :cond_0
-    iget-object v0, p0, Lkik/android/gifs/a/e;->c:Lcom/kik/e/p;
+    iget-object v0, p0, Lkik/android/gifs/a/e;->c:Lcom/kik/storage/s;
 
-    invoke-static {p1, v0, p2, p3}, Lkik/android/gifs/a/d;->a(Ljava/lang/String;Lcom/kik/e/p;Lkik/android/gifs/api/GifResponseData$MediaType;I)Lkik/android/gifs/a/c;
+    invoke-static {p1, v0, p2, p3}, Lkik/android/gifs/a/d;->a(Ljava/lang/String;Lcom/kik/storage/s;Lkik/android/gifs/api/GifResponseData$MediaType;I)Lkik/android/gifs/a/c;
 
     move-result-object v0
 
@@ -223,7 +221,7 @@
 
     invoke-direct {v2, p0, p1}, Lkik/android/gifs/a/e$1;-><init>(Lkik/android/gifs/a/e;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v1, v2}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
     .line 83
     invoke-virtual {v0}, Lkik/android/gifs/a/c;->a()Lcom/kik/events/Promise;

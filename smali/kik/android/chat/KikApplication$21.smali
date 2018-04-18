@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/KikApplication$21;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
         "Ljava/lang/Boolean;",
         ">;"
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 1335
+    .line 1433
     iput-object p1, p0, Lkik/android/chat/KikApplication$21;->a:Lkik/android/chat/KikApplication;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -46,8 +46,7 @@
     .prologue
     const/high16 v6, 0x447a0000    # 1000.0f
 
-    .line 0
-    .line 2340
+    .line 1438
     iget-object v0, p0, Lkik/android/chat/KikApplication$21;->a:Lkik/android/chat/KikApplication;
 
     iget-object v0, v0, Lkik/android/chat/KikApplication;->a:Lcom/kik/android/Mixpanel;
@@ -56,7 +55,7 @@
 
     invoke-virtual {v0, v1}, Lcom/kik/android/Mixpanel;->a(Ljava/lang/String;)Lcom/kik/android/Mixpanel;
 
-    .line 2342
+    .line 1440
     iget-object v0, p0, Lkik/android/chat/KikApplication$21;->a:Lkik/android/chat/KikApplication;
 
     iget-object v0, v0, Lkik/android/chat/KikApplication;->a:Lcom/kik/android/Mixpanel;
@@ -69,7 +68,7 @@
 
     move-result-wide v0
 
-    .line 2344
+    .line 1442
     iget-object v2, p0, Lkik/android/chat/KikApplication$21;->a:Lkik/android/chat/KikApplication;
 
     iget-object v2, v2, Lkik/android/chat/KikApplication;->a:Lcom/kik/android/Mixpanel;
@@ -84,7 +83,7 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/kik/android/Mixpanel;->a(Ljava/lang/String;FF)Lcom/kik/android/Mixpanel;
 
-    .line 2345
+    .line 1443
     iget-object v2, p0, Lkik/android/chat/KikApplication$21;->a:Lkik/android/chat/KikApplication;
 
     iget-object v2, v2, Lkik/android/chat/KikApplication;->a:Lcom/kik/android/Mixpanel;
@@ -99,7 +98,7 @@
 
     invoke-virtual {v2, v3, v0, v1}, Lcom/kik/android/Mixpanel;->a(Ljava/lang/String;FF)Lcom/kik/android/Mixpanel;
 
-    .line 0
+    .line 1444
     return-void
 .end method
 
@@ -109,19 +108,19 @@
     .locals 2
 
     .prologue
-    .line 1339
+    .line 1437
     iget-object v0, p0, Lkik/android/chat/KikApplication$21;->a:Lkik/android/chat/KikApplication;
 
-    invoke-static {v0}, Lkik/android/chat/KikApplication;->d(Lkik/android/chat/KikApplication;)Landroid/os/Handler;
+    invoke-static {v0}, Lkik/android/chat/KikApplication;->g(Lkik/android/chat/KikApplication;)Landroid/os/Handler;
 
     move-result-object v0
 
-    invoke-static {p0}, Lkik/android/chat/f;->a(Lkik/android/chat/KikApplication$21;)Ljava/lang/Runnable;
+    invoke-static {p0}, Lkik/android/chat/i;->a(Lkik/android/chat/KikApplication$21;)Ljava/lang/Runnable;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1347
+    .line 1445
     return-void
 .end method

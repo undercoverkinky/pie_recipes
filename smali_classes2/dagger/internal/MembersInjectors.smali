@@ -25,7 +25,7 @@
     .end annotation
 
     .prologue
-    .line 36
+    .line 49
     sget-object v0, Ldagger/internal/MembersInjectors$NoOpMembersInjector;->INSTANCE:Ldagger/internal/MembersInjectors$NoOpMembersInjector;
 
     return-object v0

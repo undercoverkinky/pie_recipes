@@ -76,11 +76,13 @@
 
     const-string v0, ""
 
+    .line 479
     :goto_0
     invoke-static {v0}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
 
     move-result-object v0
 
+    .line 478
     invoke-static {v2, v0}, Lcom/crashlytics/android/core/CodedOutputStream;->b(ILcom/crashlytics/android/core/b;)I
 
     move-result v0

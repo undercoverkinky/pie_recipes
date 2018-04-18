@@ -1,5 +1,5 @@
 .class final Lkik/android/chat/fragment/settings/EditEmailFragment$3$1;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
         "Ljava/lang/Void;",
         ">;"
@@ -32,10 +32,10 @@
     .locals 0
 
     .prologue
-    .line 164
+    .line 173
     iput-object p1, p0, Lkik/android/chat/fragment/settings/EditEmailFragment$3$1;->a:Lkik/android/chat/fragment/settings/EditEmailFragment$3;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -46,22 +46,22 @@
     .locals 2
 
     .prologue
-    .line 168
+    .line 177
     iget-object v0, p0, Lkik/android/chat/fragment/settings/EditEmailFragment$3$1;->a:Lkik/android/chat/fragment/settings/EditEmailFragment$3;
 
     iget-object v0, v0, Lkik/android/chat/fragment/settings/EditEmailFragment$3;->b:Lkik/android/chat/fragment/settings/EditEmailFragment;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/settings/EditEmailFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/settings/EditEmailFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 169
+    .line 178
     iget-object v0, p0, Lkik/android/chat/fragment/settings/EditEmailFragment$3$1;->a:Lkik/android/chat/fragment/settings/EditEmailFragment$3;
 
     iget-object v0, v0, Lkik/android/chat/fragment/settings/EditEmailFragment$3;->b:Lkik/android/chat/fragment/settings/EditEmailFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/settings/EditEmailFragment;->D()V
+    invoke-virtual {v0}, Lkik/android/chat/fragment/settings/EditEmailFragment;->finish()V
 
-    .line 170
+    .line 179
     return-void
 .end method

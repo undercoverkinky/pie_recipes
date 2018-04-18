@@ -6,7 +6,9 @@
 # instance fields
 .field protected final a:Landroid/support/v7/widget/RecyclerView$LayoutManager;
 
-.field private b:I
+.field final b:Landroid/graphics/Rect;
+
+.field private c:I
 
 
 # direct methods
@@ -14,18 +16,25 @@
     .locals 1
 
     .prologue
-    .line 44
+    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
+    .line 43
     const/high16 v0, -0x80000000
 
-    iput v0, p0, Landroid/support/v7/widget/OrientationHelper;->b:I
+    iput v0, p0, Landroid/support/v7/widget/OrientationHelper;->c:I
 
     .line 45
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v0, p0, Landroid/support/v7/widget/OrientationHelper;->b:Landroid/graphics/Rect;
+
+    .line 48
     iput-object p1, p0, Landroid/support/v7/widget/OrientationHelper;->a:Landroid/support/v7/widget/RecyclerView$LayoutManager;
 
-    .line 46
+    .line 49
     return-void
 .end method
 
@@ -33,7 +42,7 @@
     .locals 0
 
     .prologue
-    .line 32
+    .line 33
     invoke-direct {p0, p1}, Landroid/support/v7/widget/OrientationHelper;-><init>(Landroid/support/v7/widget/RecyclerView$LayoutManager;)V
 
     return-void
@@ -43,10 +52,10 @@
     .locals 2
 
     .prologue
-    .line 199
+    .line 234
     packed-switch p1, :pswitch_data_0
 
-    .line 205
+    .line 240
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "invalid orientation"
@@ -55,17 +64,17 @@
 
     throw v0
 
-    .line 1216
+    .line 1251
     :pswitch_0
     new-instance v0, Landroid/support/v7/widget/OrientationHelper$1;
 
     invoke-direct {v0, p0}, Landroid/support/v7/widget/OrientationHelper$1;-><init>(Landroid/support/v7/widget/RecyclerView$LayoutManager;)V
 
-    .line 203
+    .line 238
     :goto_0
     return-object v0
 
-    .line 1302
+    .line 1349
     :pswitch_1
     new-instance v0, Landroid/support/v7/widget/OrientationHelper$2;
 
@@ -73,7 +82,7 @@
 
     goto :goto_0
 
-    .line 199
+    .line 234
     nop
 
     :pswitch_data_0
@@ -92,14 +101,14 @@
     .locals 1
 
     .prologue
-    .line 54
+    .line 57
     invoke-virtual {p0}, Landroid/support/v7/widget/OrientationHelper;->f()I
 
     move-result v0
 
-    iput v0, p0, Landroid/support/v7/widget/OrientationHelper;->b:I
+    iput v0, p0, Landroid/support/v7/widget/OrientationHelper;->c:I
 
-    .line 55
+    .line 58
     return-void
 .end method
 
@@ -110,10 +119,10 @@
     .locals 2
 
     .prologue
-    .line 68
+    .line 71
     const/high16 v0, -0x80000000
 
-    iget v1, p0, Landroid/support/v7/widget/OrientationHelper;->b:I
+    iget v1, p0, Landroid/support/v7/widget/OrientationHelper;->c:I
 
     if-ne v0, v1, :cond_0
 
@@ -127,7 +136,7 @@
 
     move-result v0
 
-    iget v1, p0, Landroid/support/v7/widget/OrientationHelper;->b:I
+    iget v1, p0, Landroid/support/v7/widget/OrientationHelper;->c:I
 
     sub-int/2addr v0, v1
 
@@ -152,7 +161,13 @@
 .method public abstract e()I
 .end method
 
+.method public abstract e(Landroid/view/View;)I
+.end method
+
 .method public abstract f()I
+.end method
+
+.method public abstract f(Landroid/view/View;)I
 .end method
 
 .method public abstract g()I

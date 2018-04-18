@@ -1,5 +1,5 @@
 .class Landroid/support/v7/widget/ActionMenuPresenter$ActionMenuPopupCallback;
-.super Landroid/support/v7/internal/view/menu/ActionMenuItemView$PopupCallback;
+.super Landroid/support/v7/view/menu/ActionMenuItemView$PopupCallback;
 .source "SourceFile"
 
 
@@ -19,50 +19,37 @@
 
 
 # direct methods
-.method private constructor <init>(Landroid/support/v7/widget/ActionMenuPresenter;)V
+.method constructor <init>(Landroid/support/v7/widget/ActionMenuPresenter;)V
     .locals 0
 
     .prologue
-    .line 763
+    .line 811
     iput-object p1, p0, Landroid/support/v7/widget/ActionMenuPresenter$ActionMenuPopupCallback;->a:Landroid/support/v7/widget/ActionMenuPresenter;
 
-    invoke-direct {p0}, Landroid/support/v7/internal/view/menu/ActionMenuItemView$PopupCallback;-><init>()V
+    invoke-direct {p0}, Landroid/support/v7/view/menu/ActionMenuItemView$PopupCallback;-><init>()V
 
-    return-void
-.end method
-
-.method synthetic constructor <init>(Landroid/support/v7/widget/ActionMenuPresenter;B)V
-    .locals 0
-
-    .prologue
-    .line 763
-    invoke-direct {p0, p1}, Landroid/support/v7/widget/ActionMenuPresenter$ActionMenuPopupCallback;-><init>(Landroid/support/v7/widget/ActionMenuPresenter;)V
-
+    .line 812
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Landroid/support/v7/widget/ListPopupWindow;
+.method public final a()Landroid/support/v7/view/menu/ShowableListMenu;
     .locals 1
 
     .prologue
-    .line 766
+    .line 816
     iget-object v0, p0, Landroid/support/v7/widget/ActionMenuPresenter$ActionMenuPopupCallback;->a:Landroid/support/v7/widget/ActionMenuPresenter;
 
-    invoke-static {v0}, Landroid/support/v7/widget/ActionMenuPresenter;->j(Landroid/support/v7/widget/ActionMenuPresenter;)Landroid/support/v7/widget/ActionMenuPresenter$ActionButtonSubmenu;
-
-    move-result-object v0
+    iget-object v0, v0, Landroid/support/v7/widget/ActionMenuPresenter;->i:Landroid/support/v7/widget/ActionMenuPresenter$ActionButtonSubmenu;
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Landroid/support/v7/widget/ActionMenuPresenter$ActionMenuPopupCallback;->a:Landroid/support/v7/widget/ActionMenuPresenter;
 
-    invoke-static {v0}, Landroid/support/v7/widget/ActionMenuPresenter;->j(Landroid/support/v7/widget/ActionMenuPresenter;)Landroid/support/v7/widget/ActionMenuPresenter$ActionButtonSubmenu;
+    iget-object v0, v0, Landroid/support/v7/widget/ActionMenuPresenter;->i:Landroid/support/v7/widget/ActionMenuPresenter$ActionButtonSubmenu;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/ActionMenuPresenter$ActionButtonSubmenu;->f()Landroid/support/v7/widget/ListPopupWindow;
+    invoke-virtual {v0}, Landroid/support/v7/widget/ActionMenuPresenter$ActionButtonSubmenu;->c()Landroid/support/v7/view/menu/MenuPopup;
 
     move-result-object v0
 

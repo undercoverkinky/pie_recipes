@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/kik/c/b;
+.implements Lcom/kik/d/b;
 
 
 # direct methods
@@ -19,11 +19,11 @@
 
 
 # virtual methods
-.method public final a(Lkik/android/chat/presentation/MediaTrayPresenter$MediaTrayMode;)V
+.method public final a()V
     .locals 0
 
     .prologue
-    .line 27
+    .line 39
     return-void
 .end method
 
@@ -39,23 +39,15 @@
     .locals 0
 
     .prologue
-    .line 39
+    .line 52
     return-void
 .end method
 
-.method public final c()V
-    .locals 0
-
-    .prologue
-    .line 51
-    return-void
-.end method
-
-.method public final d()Z
+.method public final c()Z
     .locals 1
 
     .prologue
-    .line 56
+    .line 57
     const/4 v0, 0x0
 
     return v0

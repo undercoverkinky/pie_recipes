@@ -24,7 +24,17 @@
 
 
 # static fields
-.field public static final a:Lcom/google/protobuf/Parser;
+.field public static final ANONYMOUSID_FIELD_NUMBER:I = 0x6
+
+.field public static final CLIENTVERSION_FIELD_NUMBER:I = 0x5
+
+.field private static final DEFAULT_INSTANCE:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+
+.field public static final DEVICEPREFIX_FIELD_NUMBER:I = 0x2
+
+.field public static final EVENTS_FIELD_NUMBER:I = 0x4
+
+.field public static final PARSER:Lcom/google/protobuf/Parser;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/protobuf/Parser",
@@ -35,7 +45,7 @@
     .end annotation
 .end field
 
-.field private static final b:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+.field public static final USERID_FIELD_NUMBER:I = 0x1
 
 .field private static final serialVersionUID:J
 
@@ -77,14 +87,14 @@
 
     invoke-direct {v0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;-><init>()V
 
-    sput-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->b:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+    sput-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->DEFAULT_INSTANCE:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
 
     .line 6607
     new-instance v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$1;
 
     invoke-direct {v0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$1;-><init>()V
 
-    sput-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->a:Lcom/google/protobuf/Parser;
+    sput-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->PARSER:Lcom/google/protobuf/Parser;
 
     return-void
 .end method
@@ -419,7 +429,7 @@
     .end sparse-switch
 .end method
 
-.method synthetic constructor <init>(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;B)V
+.method synthetic constructor <init>(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;Lcom/kik/clientmetrics/model/Clientmetrics$1;)V
     .locals 0
 
     .prologue
@@ -448,7 +458,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/google/protobuf/GeneratedMessage$Builder;B)V
+.method synthetic constructor <init>(Lcom/google/protobuf/GeneratedMessage$Builder;Lcom/kik/clientmetrics/model/Clientmetrics$1;)V
     .locals 0
 
     .prologue
@@ -458,17 +468,17 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;I)I
-    .locals 0
+.method static synthetic access$4600()Z
+    .locals 1
 
     .prologue
     .line 5147
-    iput p1, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->bitField0_:I
+    sget-boolean v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->alwaysUseFieldBuilders:Z
 
-    return p1
+    return v0
 .end method
 
-.method static synthetic a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/lang/Object;
+.method static synthetic access$4800(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/lang/Object;
     .locals 1
 
     .prologue
@@ -478,7 +488,7 @@
     return-object v0
 .end method
 
-.method static synthetic a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;Ljava/lang/Object;)Ljava/lang/Object;
+.method static synthetic access$4802(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
     .prologue
@@ -488,17 +498,7 @@
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;Ljava/util/List;)Ljava/util/List;
-    .locals 0
-
-    .prologue
-    .line 5147
-    iput-object p1, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->events_:Ljava/util/List;
-
-    return-object p1
-.end method
-
-.method static synthetic b(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/lang/Object;
+.method static synthetic access$4900(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/lang/Object;
     .locals 1
 
     .prologue
@@ -508,7 +508,7 @@
     return-object v0
 .end method
 
-.method static synthetic b(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;Ljava/lang/Object;)Ljava/lang/Object;
+.method static synthetic access$4902(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
     .prologue
@@ -518,7 +518,7 @@
     return-object p1
 .end method
 
-.method static synthetic c(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/lang/Object;
+.method static synthetic access$5000(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/lang/Object;
     .locals 1
 
     .prologue
@@ -528,7 +528,7 @@
     return-object v0
 .end method
 
-.method static synthetic c(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;Ljava/lang/Object;)Ljava/lang/Object;
+.method static synthetic access$5002(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
     .prologue
@@ -538,17 +538,7 @@
     return-object p1
 .end method
 
-.method static synthetic d(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    .prologue
-    .line 5147
-    iput-object p1, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->anonymousId_:Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method static synthetic d(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/util/List;
+.method static synthetic access$5100(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/util/List;
     .locals 1
 
     .prologue
@@ -558,21 +548,17 @@
     return-object v0
 .end method
 
-.method public static e()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
-    .locals 1
+.method static synthetic access$5102(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;Ljava/util/List;)Ljava/util/List;
+    .locals 0
 
     .prologue
-    .line 5656
-    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->b:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+    .line 5147
+    iput-object p1, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->events_:Ljava/util/List;
 
-    invoke-direct {v0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->m()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method
 
-.method static synthetic e(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/lang/Object;
+.method static synthetic access$5200(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Ljava/lang/Object;
     .locals 1
 
     .prologue
@@ -582,7 +568,37 @@
     return-object v0
 .end method
 
-.method static synthetic f(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Lcom/google/protobuf/UnknownFieldSet;
+.method static synthetic access$5202(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    .prologue
+    .line 5147
+    iput-object p1, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->anonymousId_:Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method static synthetic access$5302(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;I)I
+    .locals 0
+
+    .prologue
+    .line 5147
+    iput p1, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->bitField0_:I
+
+    return p1
+.end method
+
+.method static synthetic access$5400()Z
+    .locals 1
+
+    .prologue
+    .line 5147
+    sget-boolean v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->alwaysUseFieldBuilders:Z
+
+    return v0
+.end method
+
+.method static synthetic access$5500(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Lcom/google/protobuf/UnknownFieldSet;
     .locals 1
 
     .prologue
@@ -592,136 +608,337 @@
     return-object v0
 .end method
 
-.method public static f()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+.method public static getDefaultInstance()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
     .locals 1
 
     .prologue
     .line 6604
-    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->b:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->DEFAULT_INSTANCE:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
 
     return-object v0
 .end method
 
-.method static synthetic g()Z
+.method public static final getDescriptor()Lcom/google/protobuf/Descriptors$Descriptor;
     .locals 1
 
     .prologue
-    .line 5147
-    sget-boolean v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->alwaysUseFieldBuilders:Z
+    .line 5240
+    invoke-static {}, Lcom/kik/clientmetrics/model/Clientmetrics;->h()Lcom/google/protobuf/Descriptors$Descriptor;
 
-    return v0
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method static synthetic h()Z
+.method public static newBuilder()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
     .locals 1
 
     .prologue
-    .line 5147
-    sget-boolean v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->alwaysUseFieldBuilders:Z
+    .line 5656
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->DEFAULT_INSTANCE:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
 
-    return v0
+    invoke-virtual {v0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->toBuilder()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method private i()Lcom/google/protobuf/ByteString;
+.method public static newBuilder(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
+    .locals 1
+
+    .prologue
+    .line 5659
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->DEFAULT_INSTANCE:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+
+    invoke-virtual {v0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->toBuilder()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;->a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static parseDelimitedFrom(Ljava/io/InputStream;)Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .prologue
+    .line 5634
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->PARSER:Lcom/google/protobuf/Parser;
+
+    invoke-interface {v0, p0}, Lcom/google/protobuf/Parser;->parseDelimitedFrom(Ljava/io/InputStream;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+
+    return-object v0
+.end method
+
+.method public static parseDelimitedFrom(Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .prologue
+    .line 5640
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->PARSER:Lcom/google/protobuf/Parser;
+
+    invoke-interface {v0, p0, p1}, Lcom/google/protobuf/Parser;->parseDelimitedFrom(Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+
+    return-object v0
+.end method
+
+.method public static parseFrom(Lcom/google/protobuf/ByteString;)Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .prologue
+    .line 5604
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->PARSER:Lcom/google/protobuf/Parser;
+
+    invoke-interface {v0, p0}, Lcom/google/protobuf/Parser;->parseFrom(Lcom/google/protobuf/ByteString;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+
+    return-object v0
+.end method
+
+.method public static parseFrom(Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .prologue
+    .line 5610
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->PARSER:Lcom/google/protobuf/Parser;
+
+    invoke-interface {v0, p0, p1}, Lcom/google/protobuf/Parser;->parseFrom(Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+
+    return-object v0
+.end method
+
+.method public static parseFrom(Lcom/google/protobuf/CodedInputStream;)Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .prologue
+    .line 5645
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->PARSER:Lcom/google/protobuf/Parser;
+
+    invoke-interface {v0, p0}, Lcom/google/protobuf/Parser;->parseFrom(Lcom/google/protobuf/CodedInputStream;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+
+    return-object v0
+.end method
+
+.method public static parseFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .prologue
+    .line 5651
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->PARSER:Lcom/google/protobuf/Parser;
+
+    invoke-interface {v0, p0, p1}, Lcom/google/protobuf/Parser;->parseFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+
+    return-object v0
+.end method
+
+.method public static parseFrom(Ljava/io/InputStream;)Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .prologue
+    .line 5624
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->PARSER:Lcom/google/protobuf/Parser;
+
+    invoke-interface {v0, p0}, Lcom/google/protobuf/Parser;->parseFrom(Ljava/io/InputStream;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+
+    return-object v0
+.end method
+
+.method public static parseFrom(Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .prologue
+    .line 5630
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->PARSER:Lcom/google/protobuf/Parser;
+
+    invoke-interface {v0, p0, p1}, Lcom/google/protobuf/Parser;->parseFrom(Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+
+    return-object v0
+.end method
+
+.method public static parseFrom([B)Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .prologue
+    .line 5614
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->PARSER:Lcom/google/protobuf/Parser;
+
+    invoke-interface {v0, p0}, Lcom/google/protobuf/Parser;->parseFrom([B)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+
+    return-object v0
+.end method
+
+.method public static parseFrom([BLcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .prologue
+    .line 5620
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->PARSER:Lcom/google/protobuf/Parser;
+
+    invoke-interface {v0, p0, p1}, Lcom/google/protobuf/Parser;->parseFrom([BLcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+
+    return-object v0
+.end method
+
+.method public static parser()Lcom/google/protobuf/Parser;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/google/protobuf/Parser",
+            "<",
+            "Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 6627
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->PARSER:Lcom/google/protobuf/Parser;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final getAnonymousId()Ljava/lang/String;
     .locals 2
 
     .prologue
-    .line 5296
-    iget-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->userId_:Ljava/lang/Object;
+    .line 5491
+    iget-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->anonymousId_:Ljava/lang/Object;
 
-    .line 5297
+    .line 5492
     instance-of v1, v0, Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 5298
+    .line 5493
     check-cast v0, Ljava/lang/String;
 
-    .line 5299
-    invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
-
-    move-result-object v0
-
-    .line 5301
-    iput-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->userId_:Ljava/lang/Object;
-
-    .line 5304
+    .line 5501
     :goto_0
     return-object v0
 
+    .line 5495
     :cond_0
     check-cast v0, Lcom/google/protobuf/ByteString;
 
+    .line 5497
+    invoke-virtual {v0}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 5498
+    invoke-virtual {v0}, Lcom/google/protobuf/ByteString;->isValidUtf8()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 5499
+    iput-object v1, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->anonymousId_:Ljava/lang/Object;
+
+    :cond_1
+    move-object v0, v1
+
+    .line 5501
     goto :goto_0
 .end method
 
-.method private j()Lcom/google/protobuf/ByteString;
-    .locals 2
-
-    .prologue
-    .line 5350
-    iget-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->devicePrefix_:Ljava/lang/Object;
-
-    .line 5351
-    instance-of v1, v0, Ljava/lang/String;
-
-    if-eqz v1, :cond_0
-
-    .line 5352
-    check-cast v0, Ljava/lang/String;
-
-    .line 5353
-    invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
-
-    move-result-object v0
-
-    .line 5355
-    iput-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->devicePrefix_:Ljava/lang/Object;
-
-    .line 5358
-    :goto_0
-    return-object v0
-
-    :cond_0
-    check-cast v0, Lcom/google/protobuf/ByteString;
-
-    goto :goto_0
-.end method
-
-.method private k()Lcom/google/protobuf/ByteString;
-    .locals 2
-
-    .prologue
-    .line 5404
-    iget-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->clientVersion_:Ljava/lang/Object;
-
-    .line 5405
-    instance-of v1, v0, Ljava/lang/String;
-
-    if-eqz v1, :cond_0
-
-    .line 5406
-    check-cast v0, Ljava/lang/String;
-
-    .line 5407
-    invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
-
-    move-result-object v0
-
-    .line 5409
-    iput-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->clientVersion_:Ljava/lang/Object;
-
-    .line 5412
-    :goto_0
-    return-object v0
-
-    :cond_0
-    check-cast v0, Lcom/google/protobuf/ByteString;
-
-    goto :goto_0
-.end method
-
-.method private l()Lcom/google/protobuf/ByteString;
+.method public final getAnonymousIdBytes()Lcom/google/protobuf/ByteString;
     .locals 2
 
     .prologue
@@ -754,131 +971,80 @@
     goto :goto_0
 .end method
 
-.method private m()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
+.method public final getClientVersion()Ljava/lang/String;
     .locals 2
 
     .prologue
-    const/4 v1, 0x0
+    .line 5382
+    iget-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->clientVersion_:Ljava/lang/Object;
 
-    .line 5662
-    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->b:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+    .line 5383
+    instance-of v1, v0, Ljava/lang/String;
 
-    if-ne p0, v0, :cond_0
+    if-eqz v1, :cond_0
 
-    new-instance v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
+    .line 5384
+    check-cast v0, Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;-><init>(B)V
-
-    .line 5663
+    .line 5392
     :goto_0
     return-object v0
 
-    .line 5662
+    .line 5386
     :cond_0
-    new-instance v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
+    check-cast v0, Lcom/google/protobuf/ByteString;
 
-    invoke-direct {v0, v1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;-><init>(B)V
+    .line 5388
+    invoke-virtual {v0}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
-    .line 5663
-    invoke-virtual {v0, p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;->a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
+    move-result-object v1
+
+    .line 5389
+    invoke-virtual {v0}, Lcom/google/protobuf/ByteString;->isValidUtf8()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 5390
+    iput-object v1, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->clientVersion_:Ljava/lang/Object;
+
+    :cond_1
+    move-object v0, v1
+
+    .line 5392
+    goto :goto_0
+.end method
+
+.method public final getClientVersionBytes()Lcom/google/protobuf/ByteString;
+    .locals 2
+
+    .prologue
+    .line 5404
+    iget-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->clientVersion_:Ljava/lang/Object;
+
+    .line 5405
+    instance-of v1, v0, Ljava/lang/String;
+
+    if-eqz v1, :cond_0
+
+    .line 5406
+    check-cast v0, Ljava/lang/String;
+
+    .line 5407
+    invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
 
     move-result-object v0
 
-    goto :goto_0
-.end method
+    .line 5409
+    iput-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->clientVersion_:Ljava/lang/Object;
 
-
-# virtual methods
-.method public final a()Z
-    .locals 2
-
-    .prologue
-    const/4 v0, 0x1
-
-    .line 5262
-    iget v1, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->bitField0_:I
-
-    and-int/lit8 v1, v1, 0x1
-
-    if-ne v1, v0, :cond_0
-
+    .line 5412
     :goto_0
-    return v0
+    return-object v0
 
     :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final b()Z
-    .locals 2
-
-    .prologue
-    .line 5318
-    iget v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->bitField0_:I
-
-    and-int/lit8 v0, v0, 0x2
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final c()Z
-    .locals 2
-
-    .prologue
-    .line 5372
-    iget v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->bitField0_:I
-
-    and-int/lit8 v0, v0, 0x4
-
-    const/4 v1, 0x4
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final d()Z
-    .locals 2
-
-    .prologue
-    .line 5481
-    iget v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->bitField0_:I
-
-    and-int/lit8 v0, v0, 0x8
-
-    const/16 v1, 0x8
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
+    check-cast v0, Lcom/google/protobuf/ByteString;
 
     goto :goto_0
 .end method
@@ -887,10 +1053,11 @@
     .locals 1
 
     .prologue
-    .line 11636
-    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->b:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
-
     .line 5147
+    invoke-virtual {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->getDefaultInstanceForType()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+
+    move-result-object v0
+
     return-object v0
 .end method
 
@@ -898,10 +1065,183 @@
     .locals 1
 
     .prologue
-    .line 10636
-    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->b:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
-
     .line 5147
+    invoke-virtual {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->getDefaultInstanceForType()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getDefaultInstanceForType()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+    .locals 1
+
+    .prologue
+    .line 6636
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->DEFAULT_INSTANCE:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+
+    return-object v0
+.end method
+
+.method public final getDevicePrefix()Ljava/lang/String;
+    .locals 2
+
+    .prologue
+    .line 5328
+    iget-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->devicePrefix_:Ljava/lang/Object;
+
+    .line 5329
+    instance-of v1, v0, Ljava/lang/String;
+
+    if-eqz v1, :cond_0
+
+    .line 5330
+    check-cast v0, Ljava/lang/String;
+
+    .line 5338
+    :goto_0
+    return-object v0
+
+    .line 5332
+    :cond_0
+    check-cast v0, Lcom/google/protobuf/ByteString;
+
+    .line 5334
+    invoke-virtual {v0}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 5335
+    invoke-virtual {v0}, Lcom/google/protobuf/ByteString;->isValidUtf8()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 5336
+    iput-object v1, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->devicePrefix_:Ljava/lang/Object;
+
+    :cond_1
+    move-object v0, v1
+
+    .line 5338
+    goto :goto_0
+.end method
+
+.method public final getDevicePrefixBytes()Lcom/google/protobuf/ByteString;
+    .locals 2
+
+    .prologue
+    .line 5350
+    iget-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->devicePrefix_:Ljava/lang/Object;
+
+    .line 5351
+    instance-of v1, v0, Ljava/lang/String;
+
+    if-eqz v1, :cond_0
+
+    .line 5352
+    check-cast v0, Ljava/lang/String;
+
+    .line 5353
+    invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
+
+    move-result-object v0
+
+    .line 5355
+    iput-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->devicePrefix_:Ljava/lang/Object;
+
+    .line 5358
+    :goto_0
+    return-object v0
+
+    :cond_0
+    check-cast v0, Lcom/google/protobuf/ByteString;
+
+    goto :goto_0
+.end method
+
+.method public final getEvents(I)Lcom/kik/clientmetrics/model/Clientmetrics$ClientEventData;
+    .locals 1
+
+    .prologue
+    .line 5457
+    iget-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->events_:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientEventData;
+
+    return-object v0
+.end method
+
+.method public final getEventsCount()I
+    .locals 1
+
+    .prologue
+    .line 5447
+    iget-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->events_:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getEventsList()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/kik/clientmetrics/model/Clientmetrics$ClientEventData;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 5426
+    iget-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->events_:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public final getEventsOrBuilder(I)Lcom/kik/clientmetrics/model/Clientmetrics$a;
+    .locals 1
+
+    .prologue
+    .line 5468
+    iget-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->events_:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/kik/clientmetrics/model/Clientmetrics$a;
+
+    return-object v0
+.end method
+
+.method public final getEventsOrBuilderList()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<+",
+            "Lcom/kik/clientmetrics/model/Clientmetrics$a;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 5437
+    iget-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->events_:Ljava/util/List;
+
     return-object v0
 .end method
 
@@ -919,7 +1259,7 @@
 
     .prologue
     .line 6632
-    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->a:Lcom/google/protobuf/Parser;
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->PARSER:Lcom/google/protobuf/Parser;
 
     return-object v0
 .end method
@@ -957,7 +1297,7 @@
     if-ne v0, v3, :cond_5
 
     .line 5577
-    invoke-direct {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->i()Lcom/google/protobuf/ByteString;
+    invoke-virtual {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->getUserIdBytes()Lcom/google/protobuf/ByteString;
 
     move-result-object v0
 
@@ -976,7 +1316,7 @@
     if-ne v2, v4, :cond_1
 
     .line 5581
-    invoke-direct {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->j()Lcom/google/protobuf/ByteString;
+    invoke-virtual {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->getDevicePrefixBytes()Lcom/google/protobuf/ByteString;
 
     move-result-object v2
 
@@ -1034,7 +1374,7 @@
     const/4 v0, 0x5
 
     .line 5589
-    invoke-direct {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->k()Lcom/google/protobuf/ByteString;
+    invoke-virtual {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->getClientVersionBytes()Lcom/google/protobuf/ByteString;
 
     move-result-object v1
 
@@ -1058,7 +1398,7 @@
     const/4 v0, 0x6
 
     .line 5593
-    invoke-direct {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->l()Lcom/google/protobuf/ByteString;
+    invoke-virtual {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->getAnonymousIdBytes()Lcom/google/protobuf/ByteString;
 
     move-result-object v1
 
@@ -1099,6 +1439,178 @@
     return-object v0
 .end method
 
+.method public final getUserId()Ljava/lang/String;
+    .locals 2
+
+    .prologue
+    .line 5273
+    iget-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->userId_:Ljava/lang/Object;
+
+    .line 5274
+    instance-of v1, v0, Ljava/lang/String;
+
+    if-eqz v1, :cond_0
+
+    .line 5275
+    check-cast v0, Ljava/lang/String;
+
+    .line 5283
+    :goto_0
+    return-object v0
+
+    .line 5277
+    :cond_0
+    check-cast v0, Lcom/google/protobuf/ByteString;
+
+    .line 5279
+    invoke-virtual {v0}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 5280
+    invoke-virtual {v0}, Lcom/google/protobuf/ByteString;->isValidUtf8()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 5281
+    iput-object v1, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->userId_:Ljava/lang/Object;
+
+    :cond_1
+    move-object v0, v1
+
+    .line 5283
+    goto :goto_0
+.end method
+
+.method public final getUserIdBytes()Lcom/google/protobuf/ByteString;
+    .locals 2
+
+    .prologue
+    .line 5296
+    iget-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->userId_:Ljava/lang/Object;
+
+    .line 5297
+    instance-of v1, v0, Ljava/lang/String;
+
+    if-eqz v1, :cond_0
+
+    .line 5298
+    check-cast v0, Ljava/lang/String;
+
+    .line 5299
+    invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
+
+    move-result-object v0
+
+    .line 5301
+    iput-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->userId_:Ljava/lang/Object;
+
+    .line 5304
+    :goto_0
+    return-object v0
+
+    :cond_0
+    check-cast v0, Lcom/google/protobuf/ByteString;
+
+    goto :goto_0
+.end method
+
+.method public final hasAnonymousId()Z
+    .locals 2
+
+    .prologue
+    .line 5481
+    iget v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->bitField0_:I
+
+    and-int/lit8 v0, v0, 0x8
+
+    const/16 v1, 0x8
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final hasClientVersion()Z
+    .locals 2
+
+    .prologue
+    .line 5372
+    iget v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->bitField0_:I
+
+    and-int/lit8 v0, v0, 0x4
+
+    const/4 v1, 0x4
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final hasDevicePrefix()Z
+    .locals 2
+
+    .prologue
+    .line 5318
+    iget v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->bitField0_:I
+
+    and-int/lit8 v0, v0, 0x2
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final hasUserId()Z
+    .locals 2
+
+    .prologue
+    const/4 v0, 0x1
+
+    .line 5262
+    iget v1, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->bitField0_:I
+
+    and-int/lit8 v1, v1, 0x1
+
+    if-ne v1, v0, :cond_0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method protected final internalGetFieldAccessorTable()Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;
     .locals 3
 
@@ -1124,172 +1636,213 @@
     .locals 4
 
     .prologue
-    const/4 v3, 0x1
+    const/4 v2, 0x1
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     .line 5527
     iget-byte v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->memoizedIsInitialized:B
 
     .line 5528
-    if-ne v0, v3, :cond_1
+    if-ne v0, v2, :cond_1
 
-    move v2, v3
+    move v1, v2
 
     .line 5546
     :cond_0
     :goto_0
-    return v2
+    return v1
 
     .line 5529
     :cond_1
     if-eqz v0, :cond_0
 
     .line 5531
-    invoke-virtual {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->a()Z
+    invoke-virtual {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->hasUserId()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
     .line 5532
-    iput-byte v2, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->memoizedIsInitialized:B
+    iput-byte v1, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->memoizedIsInitialized:B
 
     goto :goto_0
 
     .line 5535
     :cond_2
-    invoke-virtual {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->b()Z
+    invoke-virtual {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->hasDevicePrefix()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
     .line 5536
-    iput-byte v2, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->memoizedIsInitialized:B
+    iput-byte v1, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->memoizedIsInitialized:B
 
     goto :goto_0
 
     :cond_3
-    move v1, v2
-
-    .line 7447
-    :goto_1
-    iget-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->events_:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
+    move v0, v1
 
     .line 5539
-    if-ge v1, v0, :cond_5
+    :goto_1
+    invoke-virtual {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->getEventsCount()I
 
-    .line 7457
-    iget-object v0, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->events_:Ljava/util/List;
+    move-result v3
 
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientEventData;
+    if-ge v0, v3, :cond_5
 
     .line 5540
-    invoke-virtual {v0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientEventData;->isInitialized()Z
+    invoke-virtual {p0, v0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->getEvents(I)Lcom/kik/clientmetrics/model/Clientmetrics$ClientEventData;
 
-    move-result v0
+    move-result-object v3
 
-    if-nez v0, :cond_4
+    invoke-virtual {v3}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientEventData;->isInitialized()Z
+
+    move-result v3
+
+    if-nez v3, :cond_4
 
     .line 5541
-    iput-byte v2, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->memoizedIsInitialized:B
+    iput-byte v1, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->memoizedIsInitialized:B
 
     goto :goto_0
 
     .line 5539
     :cond_4
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
     .line 5545
     :cond_5
-    iput-byte v3, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->memoizedIsInitialized:B
+    iput-byte v2, p0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->memoizedIsInitialized:B
 
-    move v2, v3
+    move v1, v2
 
     .line 5546
     goto :goto_0
 .end method
 
-.method public final synthetic newBuilderForType()Lcom/google/protobuf/Message$Builder;
+.method public final bridge synthetic newBuilderForType()Lcom/google/protobuf/Message$Builder;
     .locals 1
 
     .prologue
-    .line 8656
-    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->b:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
-
-    invoke-direct {v0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->m()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
+    .line 5147
+    invoke-virtual {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->newBuilderForType()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
 
     move-result-object v0
 
-    .line 5147
     return-object v0
 .end method
 
-.method protected final synthetic newBuilderForType(Lcom/google/protobuf/GeneratedMessage$BuilderParent;)Lcom/google/protobuf/Message$Builder;
+.method protected final bridge synthetic newBuilderForType(Lcom/google/protobuf/GeneratedMessage$BuilderParent;)Lcom/google/protobuf/Message$Builder;
+    .locals 1
+
+    .prologue
+    .line 5147
+    invoke-virtual {p0, p1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->newBuilderForType(Lcom/google/protobuf/GeneratedMessage$BuilderParent;)Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final bridge synthetic newBuilderForType()Lcom/google/protobuf/MessageLite$Builder;
+    .locals 1
+
+    .prologue
+    .line 5147
+    invoke-virtual {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->newBuilderForType()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final newBuilderForType()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
+    .locals 1
+
+    .prologue
+    .line 5654
+    invoke-static {}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->newBuilder()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method protected final newBuilderForType(Lcom/google/protobuf/GeneratedMessage$BuilderParent;)Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
     .locals 2
 
     .prologue
-    .line 7669
+    .line 5669
     new-instance v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p1, v1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;-><init>(Lcom/google/protobuf/GeneratedMessage$BuilderParent;B)V
 
-    .line 5147
+    .line 5670
     return-object v0
 .end method
 
-.method public final synthetic newBuilderForType()Lcom/google/protobuf/MessageLite$Builder;
-    .locals 1
-
-    .prologue
-    .line 9656
-    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->b:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
-
-    invoke-direct {v0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->m()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
-
-    move-result-object v0
-
-    .line 5147
-    return-object v0
-.end method
-
-.method public final synthetic toBuilder()Lcom/google/protobuf/Message$Builder;
+.method public final bridge synthetic toBuilder()Lcom/google/protobuf/Message$Builder;
     .locals 1
 
     .prologue
     .line 5147
-    invoke-direct {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->m()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
+    invoke-virtual {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->toBuilder()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final synthetic toBuilder()Lcom/google/protobuf/MessageLite$Builder;
+.method public final bridge synthetic toBuilder()Lcom/google/protobuf/MessageLite$Builder;
     .locals 1
 
     .prologue
     .line 5147
-    invoke-direct {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->m()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
+    invoke-virtual {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->toBuilder()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public final toBuilder()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
+    .locals 2
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 5662
+    sget-object v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->DEFAULT_INSTANCE:Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;
+
+    if-ne p0, v0, :cond_0
+
+    new-instance v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
+
+    invoke-direct {v0, v1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;-><init>(B)V
+
+    .line 5663
+    :goto_0
+    return-object v0
+
+    .line 5662
+    :cond_0
+    new-instance v0, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
+
+    invoke-direct {v0, v1}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;-><init>(B)V
+
+    .line 5663
+    invoke-virtual {v0, p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;->a(Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;)Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method
 
 .method public final writeTo(Lcom/google/protobuf/CodedOutputStream;)V
@@ -1315,7 +1868,7 @@
     if-ne v0, v1, :cond_0
 
     .line 5552
-    invoke-direct {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->i()Lcom/google/protobuf/ByteString;
+    invoke-virtual {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->getUserIdBytes()Lcom/google/protobuf/ByteString;
 
     move-result-object v0
 
@@ -1330,7 +1883,7 @@
     if-ne v0, v2, :cond_1
 
     .line 5555
-    invoke-direct {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->j()Lcom/google/protobuf/ByteString;
+    invoke-virtual {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->getDevicePrefixBytes()Lcom/google/protobuf/ByteString;
 
     move-result-object v0
 
@@ -1380,7 +1933,7 @@
     .line 5561
     const/4 v0, 0x5
 
-    invoke-direct {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->k()Lcom/google/protobuf/ByteString;
+    invoke-virtual {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->getClientVersionBytes()Lcom/google/protobuf/ByteString;
 
     move-result-object v1
 
@@ -1399,7 +1952,7 @@
     .line 5564
     const/4 v0, 0x6
 
-    invoke-direct {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->l()Lcom/google/protobuf/ByteString;
+    invoke-virtual {p0}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->getAnonymousIdBytes()Lcom/google/protobuf/ByteString;
 
     move-result-object v1
 

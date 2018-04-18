@@ -15,25 +15,14 @@
 
 
 # direct methods
-.method private constructor <init>()V
-    .locals 1
-
-    .prologue
-    .line 100
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Landroid/support/v4/text/TextUtilsCompat$TextUtilsCompatImpl;-><init>(Landroid/support/v4/text/TextUtilsCompat$1;)V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Landroid/support/v4/text/TextUtilsCompat$1;)V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 100
-    invoke-direct {p0}, Landroid/support/v4/text/TextUtilsCompat$TextUtilsCompatJellybeanMr1Impl;-><init>()V
+    .line 106
+    invoke-direct {p0}, Landroid/support/v4/text/TextUtilsCompat$TextUtilsCompatImpl;-><init>()V
 
+    .line 107
     return-void
 .end method
 
@@ -43,7 +32,7 @@
     .locals 1
 
     .prologue
-    .line 108
+    .line 117
     invoke-static {p1}, Landroid/support/v4/text/TextUtilsCompatJellybeanMr1;->getLayoutDirectionFromLocale(Ljava/util/Locale;)I
 
     move-result v0
@@ -55,7 +44,7 @@
     .locals 1
 
     .prologue
-    .line 103
+    .line 112
     invoke-static {p1}, Landroid/support/v4/text/TextUtilsCompatJellybeanMr1;->htmlEncode(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0

@@ -3,6 +3,7 @@ syntax = "proto3";
 package mobile.abtesting.v1;
 
 option java_package = "com.kik.abtesting.rpc";
+option go_package = "github.com/kikinteractive/xiphias-api-mobile/generated/go/abtesting/v1;abtesting";
 
 import "common_model.proto";
 import "abtesting/v1/ab_testing_shared.proto";

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/cards/web/advertising/AdvertisingPlugin;->getAdvertisingInfo(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;Ljava/lang/String;)Lcom/kik/cards/web/plugin/h;
+    value = Lcom/kik/cards/web/advertising/AdvertisingPlugin;->getAdvertisingInfo(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;Ljava/lang/String;)Lcom/kik/cards/web/plugin/g;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -79,11 +79,11 @@
     .line 63
     iget-object v0, p0, Lcom/kik/cards/web/advertising/AdvertisingPlugin$1;->a:Lcom/kik/cards/web/plugin/a;
 
-    new-instance v2, Lcom/kik/cards/web/plugin/h;
+    new-instance v2, Lcom/kik/cards/web/plugin/g;
 
-    invoke-direct {v2, v1}, Lcom/kik/cards/web/plugin/h;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {v2, v1}, Lcom/kik/cards/web/plugin/g;-><init>(Lorg/json/JSONObject;)V
 
-    invoke-interface {v0, v2}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/h;)V
+    invoke-interface {v0, v2}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/g;)V
 
     .line 64
     :goto_1
@@ -107,11 +107,11 @@
 
     iget-object v0, p0, Lcom/kik/cards/web/advertising/AdvertisingPlugin$1;->a:Lcom/kik/cards/web/plugin/a;
 
-    new-instance v2, Lcom/kik/cards/web/plugin/h;
+    new-instance v2, Lcom/kik/cards/web/plugin/g;
 
-    invoke-direct {v2, v1}, Lcom/kik/cards/web/plugin/h;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {v2, v1}, Lcom/kik/cards/web/plugin/g;-><init>(Lorg/json/JSONObject;)V
 
-    invoke-interface {v0, v2}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/h;)V
+    invoke-interface {v0, v2}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/g;)V
 
     goto :goto_1
 
@@ -120,11 +120,12 @@
 
     iget-object v2, p0, Lcom/kik/cards/web/advertising/AdvertisingPlugin$1;->a:Lcom/kik/cards/web/plugin/a;
 
-    new-instance v3, Lcom/kik/cards/web/plugin/h;
+    new-instance v3, Lcom/kik/cards/web/plugin/g;
 
-    invoke-direct {v3, v1}, Lcom/kik/cards/web/plugin/h;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {v3, v1}, Lcom/kik/cards/web/plugin/g;-><init>(Lorg/json/JSONObject;)V
 
-    invoke-interface {v2, v3}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/h;)V
+    invoke-interface {v2, v3}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/g;)V
 
+    .line 64
     throw v0
 .end method

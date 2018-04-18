@@ -4,8 +4,8 @@
 
 
 # virtual methods
-.method public abstract a(Lkik/android/chat/fragment/KikDialogFragment;)V
+.method public abstract replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
 .end method
 
-.method public abstract a(Lkik/android/chat/fragment/KikDialogFragment;Lkik/android/chat/fragment/KikScopedDialogFragment$DialogScope;Ljava/lang/String;)V
+.method public abstract show(Lkik/android/chat/fragment/KikDialogFragment;Lkik/android/chat/fragment/KikScopedDialogFragment$DialogScope;Ljava/lang/String;)V
 .end method

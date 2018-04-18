@@ -63,7 +63,7 @@
     return-void
 .end method
 
-.method private a()V
+.method private final a()V
     .locals 1
 
     iget-object v0, p0, Lcom/google/android/gms/ads/identifier/AdvertisingIdClient$a;->c:Ljava/lang/ref/WeakReference;

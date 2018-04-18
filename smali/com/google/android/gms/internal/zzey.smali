@@ -1,121 +1,197 @@
-.class public Lcom/google/android/gms/internal/zzey;
-.super Ljava/lang/Object;
+.class public final Lcom/google/android/gms/internal/zzey;
+.super Lcom/google/android/gms/dynamic/zzp;
 
 
 # annotations
-.annotation runtime Lcom/google/android/gms/internal/zzig;
+.annotation runtime Lcom/google/android/gms/internal/zzzt;
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/google/android/gms/dynamic/zzp",
+        "<",
+        "Lcom/google/android/gms/internal/zzfc;",
+        ">;"
+    }
 .end annotation
 
 
-# instance fields
-.field private mContext:Landroid/content/Context;
-
-.field private final zzpY:Lcom/google/android/gms/ads/internal/zzd;
-
-.field private final zzqP:Lcom/google/android/gms/ads/internal/util/client/VersionInfoParcel;
-
-.field private final zzqc:Lcom/google/android/gms/internal/zzga;
+# static fields
+.field private static final zzall:Lcom/google/android/gms/internal/zzey;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;Lcom/google/android/gms/internal/zzga;Lcom/google/android/gms/ads/internal/util/client/VersionInfoParcel;Lcom/google/android/gms/ads/internal/zzd;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lcom/google/android/gms/internal/zzey;
 
-    iput-object p1, p0, Lcom/google/android/gms/internal/zzey;->mContext:Landroid/content/Context;
+    invoke-direct {v0}, Lcom/google/android/gms/internal/zzey;-><init>()V
 
-    iput-object p2, p0, Lcom/google/android/gms/internal/zzey;->zzqc:Lcom/google/android/gms/internal/zzga;
-
-    iput-object p3, p0, Lcom/google/android/gms/internal/zzey;->zzqP:Lcom/google/android/gms/ads/internal/util/client/VersionInfoParcel;
-
-    iput-object p4, p0, Lcom/google/android/gms/internal/zzey;->zzpY:Lcom/google/android/gms/ads/internal/zzd;
+    sput-object v0, Lcom/google/android/gms/internal/zzey;->zzall:Lcom/google/android/gms/internal/zzey;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public getApplicationContext()Landroid/content/Context;
+.method private constructor <init>()V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzey;->mContext:Landroid/content/Context;
+    const-string v0, "com.google.android.gms.ads.adshield.AdShieldCreatorImpl"
 
-    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    invoke-direct {p0, v0}, Lcom/google/android/gms/dynamic/zzp;-><init>(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static zzb(Ljava/lang/String;Landroid/content/Context;Z)Lcom/google/android/gms/internal/zzez;
+    .locals 2
+
+    const/4 v1, 0x0
+
+    invoke-static {}, Lcom/google/android/gms/common/zze;->zzaew()Lcom/google/android/gms/common/zze;
 
     move-result-object v0
 
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/common/zze;->isGooglePlayServicesAvailable(Landroid/content/Context;)I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lcom/google/android/gms/internal/zzey;->zzall:Lcom/google/android/gms/internal/zzey;
+
+    invoke-direct {v0, p0, p1, v1}, Lcom/google/android/gms/internal/zzey;->zzc(Ljava/lang/String;Landroid/content/Context;Z)Lcom/google/android/gms/internal/zzez;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    new-instance v0, Lcom/google/android/gms/internal/zzex;
+
+    invoke-direct {v0, p0, p1, v1}, Lcom/google/android/gms/internal/zzex;-><init>(Ljava/lang/String;Landroid/content/Context;Z)V
+
+    :cond_1
     return-object v0
 .end method
 
-.method public zzab(Ljava/lang/String;)Lcom/google/android/gms/ads/internal/zzl;
-    .locals 7
+.method private final zzc(Ljava/lang/String;Landroid/content/Context;Z)Lcom/google/android/gms/internal/zzez;
+    .locals 4
 
-    new-instance v0, Lcom/google/android/gms/ads/internal/zzl;
+    const/4 v1, 0x0
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzey;->mContext:Landroid/content/Context;
+    invoke-static {p2}, Lcom/google/android/gms/dynamic/zzn;->zzw(Ljava/lang/Object;)Lcom/google/android/gms/dynamic/IObjectWrapper;
 
-    new-instance v2, Lcom/google/android/gms/ads/internal/client/AdSizeParcel;
+    move-result-object v2
 
-    invoke-direct {v2}, Lcom/google/android/gms/ads/internal/client/AdSizeParcel;-><init>()V
+    if-eqz p3, :cond_0
 
-    iget-object v4, p0, Lcom/google/android/gms/internal/zzey;->zzqc:Lcom/google/android/gms/internal/zzga;
+    :try_start_0
+    invoke-virtual {p0, p2}, Lcom/google/android/gms/dynamic/zzp;->zzcv(Landroid/content/Context;)Ljava/lang/Object;
 
-    iget-object v5, p0, Lcom/google/android/gms/internal/zzey;->zzqP:Lcom/google/android/gms/ads/internal/util/client/VersionInfoParcel;
+    move-result-object v0
 
-    iget-object v6, p0, Lcom/google/android/gms/internal/zzey;->zzpY:Lcom/google/android/gms/ads/internal/zzd;
+    check-cast v0, Lcom/google/android/gms/internal/zzfc;
 
-    move-object v3, p1
+    invoke-interface {v0, p1, v2}, Lcom/google/android/gms/internal/zzfc;->zza(Ljava/lang/String;Lcom/google/android/gms/dynamic/IObjectWrapper;)Landroid/os/IBinder;
 
-    invoke-direct/range {v0 .. v6}, Lcom/google/android/gms/ads/internal/zzl;-><init>(Landroid/content/Context;Lcom/google/android/gms/ads/internal/client/AdSizeParcel;Ljava/lang/String;Lcom/google/android/gms/internal/zzga;Lcom/google/android/gms/ads/internal/util/client/VersionInfoParcel;Lcom/google/android/gms/ads/internal/zzd;)V
+    move-result-object v0
 
+    move-object v2, v0
+
+    :goto_0
+    if-nez v2, :cond_1
+
+    move-object v0, v1
+
+    :goto_1
     return-object v0
+
+    :cond_0
+    invoke-virtual {p0, p2}, Lcom/google/android/gms/dynamic/zzp;->zzcv(Landroid/content/Context;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/gms/internal/zzfc;
+
+    invoke-interface {v0, p1, v2}, Lcom/google/android/gms/internal/zzfc;->zzb(Ljava/lang/String;Lcom/google/android/gms/dynamic/IObjectWrapper;)Landroid/os/IBinder;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    goto :goto_0
+
+    :cond_1
+    const-string v0, "com.google.android.gms.ads.adshield.internal.IAdShieldClient"
+
+    invoke-interface {v2, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v0
+
+    instance-of v3, v0, Lcom/google/android/gms/internal/zzez;
+
+    if-eqz v3, :cond_2
+
+    check-cast v0, Lcom/google/android/gms/internal/zzez;
+
+    goto :goto_1
+
+    :cond_2
+    new-instance v0, Lcom/google/android/gms/internal/zzfb;
+
+    invoke-direct {v0, v2}, Lcom/google/android/gms/internal/zzfb;-><init>(Landroid/os/IBinder;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Lcom/google/android/gms/dynamic/zzq; {:try_start_0 .. :try_end_0} :catch_1
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v0
+
+    :goto_2
+    move-object v0, v1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_2
 .end method
 
-.method public zzac(Ljava/lang/String;)Lcom/google/android/gms/ads/internal/zzl;
-    .locals 7
 
-    new-instance v0, Lcom/google/android/gms/ads/internal/zzl;
+# virtual methods
+.method protected final synthetic zzb(Landroid/os/IBinder;)Ljava/lang/Object;
+    .locals 2
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzey;->mContext:Landroid/content/Context;
+    if-nez p1, :cond_0
 
-    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    const/4 v0, 0x0
 
-    move-result-object v1
-
-    new-instance v2, Lcom/google/android/gms/ads/internal/client/AdSizeParcel;
-
-    invoke-direct {v2}, Lcom/google/android/gms/ads/internal/client/AdSizeParcel;-><init>()V
-
-    iget-object v4, p0, Lcom/google/android/gms/internal/zzey;->zzqc:Lcom/google/android/gms/internal/zzga;
-
-    iget-object v5, p0, Lcom/google/android/gms/internal/zzey;->zzqP:Lcom/google/android/gms/ads/internal/util/client/VersionInfoParcel;
-
-    iget-object v6, p0, Lcom/google/android/gms/internal/zzey;->zzpY:Lcom/google/android/gms/ads/internal/zzd;
-
-    move-object v3, p1
-
-    invoke-direct/range {v0 .. v6}, Lcom/google/android/gms/ads/internal/zzl;-><init>(Landroid/content/Context;Lcom/google/android/gms/ads/internal/client/AdSizeParcel;Ljava/lang/String;Lcom/google/android/gms/internal/zzga;Lcom/google/android/gms/ads/internal/util/client/VersionInfoParcel;Lcom/google/android/gms/ads/internal/zzd;)V
-
+    :goto_0
     return-object v0
-.end method
 
-.method public zzfh()Lcom/google/android/gms/internal/zzey;
-    .locals 5
+    :cond_0
+    const-string v0, "com.google.android.gms.ads.adshield.internal.IAdShieldCreator"
 
-    new-instance v0, Lcom/google/android/gms/internal/zzey;
+    invoke-interface {p1, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzey;->getApplicationContext()Landroid/content/Context;
+    move-result-object v0
 
-    move-result-object v1
+    instance-of v1, v0, Lcom/google/android/gms/internal/zzfc;
 
-    iget-object v2, p0, Lcom/google/android/gms/internal/zzey;->zzqc:Lcom/google/android/gms/internal/zzga;
+    if-eqz v1, :cond_1
 
-    iget-object v3, p0, Lcom/google/android/gms/internal/zzey;->zzqP:Lcom/google/android/gms/ads/internal/util/client/VersionInfoParcel;
+    check-cast v0, Lcom/google/android/gms/internal/zzfc;
 
-    iget-object v4, p0, Lcom/google/android/gms/internal/zzey;->zzpY:Lcom/google/android/gms/ads/internal/zzd;
+    goto :goto_0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/google/android/gms/internal/zzey;-><init>(Landroid/content/Context;Lcom/google/android/gms/internal/zzga;Lcom/google/android/gms/ads/internal/util/client/VersionInfoParcel;Lcom/google/android/gms/ads/internal/zzd;)V
+    :cond_1
+    new-instance v0, Lcom/google/android/gms/internal/zzfd;
 
-    return-object v0
+    invoke-direct {v0, p1}, Lcom/google/android/gms/internal/zzfd;-><init>(Landroid/os/IBinder;)V
+
+    goto :goto_0
 .end method

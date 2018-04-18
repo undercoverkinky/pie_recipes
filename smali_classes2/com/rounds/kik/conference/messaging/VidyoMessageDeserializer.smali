@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/google/gson/i;
+.implements Lcom/google/gson/j;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/google/gson/i",
+        "Lcom/google/gson/j",
         "<",
         "Lcom/rounds/kik/conference/messaging/BaseVidyoMessage;",
         ">;"
@@ -57,7 +57,7 @@
 
 
 # virtual methods
-.method public deserialize(Lcom/google/gson/j;Ljava/lang/reflect/Type;Lcom/google/gson/h;)Lcom/rounds/kik/conference/messaging/BaseVidyoMessage;
+.method public deserialize(Lcom/google/gson/k;Ljava/lang/reflect/Type;Lcom/google/gson/i;)Lcom/rounds/kik/conference/messaging/BaseVidyoMessage;
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -77,7 +77,7 @@
     if-eqz v1, :cond_0
 
     .line 30
-    invoke-virtual {p1}, Lcom/google/gson/j;->g()Lcom/google/gson/JsonObject;
+    invoke-virtual {p1}, Lcom/google/gson/k;->g()Lcom/google/gson/JsonObject;
 
     move-result-object v1
 
@@ -94,7 +94,7 @@
 
     move-result-object v0
 
-    invoke-interface {p3, p1, v0}, Lcom/google/gson/h;->a(Lcom/google/gson/j;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    invoke-interface {p3, p1, v0}, Lcom/google/gson/i;->a(Lcom/google/gson/k;Ljava/lang/reflect/Type;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -116,7 +116,7 @@
     goto :goto_0
 .end method
 
-.method public bridge synthetic deserialize(Lcom/google/gson/j;Ljava/lang/reflect/Type;Lcom/google/gson/h;)Ljava/lang/Object;
+.method public bridge synthetic deserialize(Lcom/google/gson/k;Ljava/lang/reflect/Type;Lcom/google/gson/i;)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -126,7 +126,7 @@
 
     .prologue
     .line 21
-    invoke-virtual {p0, p1, p2, p3}, Lcom/rounds/kik/conference/messaging/VidyoMessageDeserializer;->deserialize(Lcom/google/gson/j;Ljava/lang/reflect/Type;Lcom/google/gson/h;)Lcom/rounds/kik/conference/messaging/BaseVidyoMessage;
+    invoke-virtual {p0, p1, p2, p3}, Lcom/rounds/kik/conference/messaging/VidyoMessageDeserializer;->deserialize(Lcom/google/gson/k;Ljava/lang/reflect/Type;Lcom/google/gson/i;)Lcom/rounds/kik/conference/messaging/BaseVidyoMessage;
 
     move-result-object v0
 

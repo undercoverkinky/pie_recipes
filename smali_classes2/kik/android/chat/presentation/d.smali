@@ -5,7 +5,7 @@
 # interfaces
 .implements Lkik/android/chat/presentation/c;
 .implements Lkik/android/chat/view/b$a;
-.implements Lkik/core/interfaces/ah;
+.implements Lkik/core/interfaces/ai;
 
 
 # instance fields
@@ -15,7 +15,7 @@
 
 .field private c:Lkik/android/chat/presentation/c$a;
 
-.field private d:Lkik/core/interfaces/ah;
+.field private d:Lkik/core/interfaces/ai;
 
 
 # direct methods
@@ -87,7 +87,7 @@
     invoke-interface {p1, p0}, Lkik/android/chat/view/b;->a(Lkik/android/chat/view/b$a;)V
 
     .line 2025
-    invoke-interface {p1, p0}, Lkik/android/chat/view/b;->a(Lkik/core/interfaces/ah;)V
+    invoke-interface {p1, p0}, Lkik/android/chat/view/b;->a(Lkik/core/interfaces/ai;)V
 
     .line 13
     return-void
@@ -146,7 +146,7 @@
     invoke-interface {v0, v3}, Lkik/android/chat/view/b;->b(I)V
 
     .line 100
-    invoke-static {p1}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    invoke-static {p1}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -236,12 +236,12 @@
     return-void
 .end method
 
-.method public final a(Lkik/core/interfaces/ah;)V
+.method public final a(Lkik/core/interfaces/ai;)V
     .locals 0
 
     .prologue
     .line 65
-    iput-object p1, p0, Lkik/android/chat/presentation/d;->d:Lkik/core/interfaces/ah;
+    iput-object p1, p0, Lkik/android/chat/presentation/d;->d:Lkik/core/interfaces/ai;
 
     .line 66
     return-void
@@ -326,21 +326,21 @@
 
     .prologue
     .line 45
-    iget-object v0, p0, Lkik/android/chat/presentation/d;->d:Lkik/core/interfaces/ah;
+    iget-object v0, p0, Lkik/android/chat/presentation/d;->d:Lkik/core/interfaces/ai;
 
     if-eqz v0, :cond_0
 
     .line 46
-    iget-object v0, p0, Lkik/android/chat/presentation/d;->d:Lkik/core/interfaces/ah;
+    iget-object v0, p0, Lkik/android/chat/presentation/d;->d:Lkik/core/interfaces/ai;
 
-    invoke-interface {v0}, Lkik/core/interfaces/ah;->c()V
+    invoke-interface {v0}, Lkik/core/interfaces/ai;->c()V
 
     .line 48
     :cond_0
     return-void
 .end method
 
-.method public final q_()V
+.method public final o_()V
     .locals 1
 
     .prologue

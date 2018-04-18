@@ -1,5 +1,5 @@
 .class final Lcom/google/android/gms/common/api/PendingResults$b;
-.super Lcom/google/android/gms/internal/zznv;
+.super Lcom/google/android/gms/common/api/internal/zzs;
 
 
 # annotations
@@ -8,7 +8,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1a
+    accessFlags = 0x18
     name = "b"
 .end annotation
 
@@ -17,7 +17,7 @@
         "<R::",
         "Lcom/google/android/gms/common/api/Result;",
         ">",
-        "Lcom/google/android/gms/internal/zznv",
+        "Lcom/google/android/gms/common/api/internal/zzs",
         "<TR;>;"
     }
 .end annotation
@@ -44,7 +44,7 @@
         }
     .end annotation
 
-    invoke-direct {p0, p1}, Lcom/google/android/gms/internal/zznv;-><init>(Lcom/google/android/gms/common/api/GoogleApiClient;)V
+    invoke-direct {p0, p1}, Lcom/google/android/gms/common/api/internal/zzs;-><init>(Lcom/google/android/gms/common/api/GoogleApiClient;)V
 
     iput-object p2, p0, Lcom/google/android/gms/common/api/PendingResults$b;->a:Lcom/google/android/gms/common/api/Result;
 
@@ -53,7 +53,7 @@
 
 
 # virtual methods
-.method protected final zzc(Lcom/google/android/gms/common/api/Status;)Lcom/google/android/gms/common/api/Result;
+.method protected final zzb(Lcom/google/android/gms/common/api/Status;)Lcom/google/android/gms/common/api/Result;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {

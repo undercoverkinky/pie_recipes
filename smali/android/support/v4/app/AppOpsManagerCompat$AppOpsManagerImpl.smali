@@ -15,23 +15,14 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 50
+    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-.method synthetic constructor <init>(Landroid/support/v4/app/AppOpsManagerCompat$1;)V
-    .locals 0
-
-    .prologue
-    .line 50
-    invoke-direct {p0}, Landroid/support/v4/app/AppOpsManagerCompat$AppOpsManagerImpl;-><init>()V
-
+    .line 52
     return-void
 .end method
 
@@ -41,7 +32,7 @@
     .locals 1
 
     .prologue
-    .line 56
+    .line 59
     const/4 v0, 0x1
 
     return v0
@@ -51,7 +42,7 @@
     .locals 1
 
     .prologue
-    .line 60
+    .line 63
     const/4 v0, 0x1
 
     return v0
@@ -61,7 +52,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 55
     const/4 v0, 0x0
 
     return-object v0

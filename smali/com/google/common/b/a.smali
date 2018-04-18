@@ -4,15 +4,15 @@
 
 
 # static fields
-.field private static final a:Lcom/google/common/base/b;
+.field private static final a:Lcom/google/common/base/CharMatcher;
 
-.field private static final b:Lcom/google/common/base/j;
+.field private static final b:Lcom/google/common/base/Splitter;
 
-.field private static final c:Lcom/google/common/base/e;
+.field private static final c:Lcom/google/common/base/Joiner;
 
-.field private static final g:Lcom/google/common/base/b;
+.field private static final g:Lcom/google/common/base/CharMatcher;
 
-.field private static final h:Lcom/google/common/base/b;
+.field private static final h:Lcom/google/common/base/CharMatcher;
 
 
 # instance fields
@@ -37,77 +37,82 @@
     .locals 2
 
     .prologue
-    .line 79
+    const/16 v1, 0x2e
+
+    .line 72
     const-string v0, ".\u3002\uff0e\uff61"
 
-    invoke-static {v0}, Lcom/google/common/base/b;->a(Ljava/lang/CharSequence;)Lcom/google/common/base/b;
+    invoke-static {v0}, Lcom/google/common/base/CharMatcher;->anyOf(Ljava/lang/CharSequence;)Lcom/google/common/base/CharMatcher;
 
     move-result-object v0
 
-    sput-object v0, Lcom/google/common/b/a;->a:Lcom/google/common/base/b;
+    sput-object v0, Lcom/google/common/b/a;->a:Lcom/google/common/base/CharMatcher;
 
-    .line 81
-    invoke-static {}, Lcom/google/common/base/j;->a()Lcom/google/common/base/j;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/google/common/b/a;->b:Lcom/google/common/base/j;
-
-    .line 82
-    const/16 v0, 0x2e
-
-    invoke-static {v0}, Lcom/google/common/base/e;->a(C)Lcom/google/common/base/e;
+    .line 73
+    invoke-static {v1}, Lcom/google/common/base/Splitter;->on(C)Lcom/google/common/base/Splitter;
 
     move-result-object v0
 
-    sput-object v0, Lcom/google/common/b/a;->c:Lcom/google/common/base/e;
+    sput-object v0, Lcom/google/common/b/a;->b:Lcom/google/common/base/Splitter;
 
-    .line 241
+    .line 74
+    invoke-static {v1}, Lcom/google/common/base/Joiner;->on(C)Lcom/google/common/base/Joiner;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/google/common/b/a;->c:Lcom/google/common/base/Joiner;
+
+    .line 224
     const-string v0, "-_"
 
-    invoke-static {v0}, Lcom/google/common/base/b;->a(Ljava/lang/CharSequence;)Lcom/google/common/base/b;
+    invoke-static {v0}, Lcom/google/common/base/CharMatcher;->anyOf(Ljava/lang/CharSequence;)Lcom/google/common/base/CharMatcher;
 
     move-result-object v0
 
-    sput-object v0, Lcom/google/common/b/a;->g:Lcom/google/common/base/b;
+    sput-object v0, Lcom/google/common/b/a;->g:Lcom/google/common/base/CharMatcher;
 
-    .line 243
-    sget-object v0, Lcom/google/common/base/b;->f:Lcom/google/common/base/b;
-
-    sget-object v1, Lcom/google/common/b/a;->g:Lcom/google/common/base/b;
-
-    invoke-virtual {v0, v1}, Lcom/google/common/base/b;->a(Lcom/google/common/base/b;)Lcom/google/common/base/b;
+    .line 227
+    invoke-static {}, Lcom/google/common/base/CharMatcher;->javaLetterOrDigit()Lcom/google/common/base/CharMatcher;
 
     move-result-object v0
 
-    sput-object v0, Lcom/google/common/b/a;->h:Lcom/google/common/base/b;
+    sget-object v1, Lcom/google/common/b/a;->g:Lcom/google/common/base/CharMatcher;
 
+    invoke-virtual {v0, v1}, Lcom/google/common/base/CharMatcher;->or(Lcom/google/common/base/CharMatcher;)Lcom/google/common/base/CharMatcher;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/google/common/b/a;->h:Lcom/google/common/base/CharMatcher;
+
+    .line 226
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;)V
-    .locals 6
+    .locals 5
 
     .prologue
     const/4 v2, 0x1
 
     const/4 v3, 0x0
 
-    .line 137
+    .line 124
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 143
-    sget-object v0, Lcom/google/common/b/a;->a:Lcom/google/common/base/b;
+    .line 130
+    sget-object v0, Lcom/google/common/b/a;->a:Lcom/google/common/base/CharMatcher;
 
-    invoke-virtual {v0, p1}, Lcom/google/common/base/b;->f(Ljava/lang/CharSequence;)Ljava/lang/String;
+    const/16 v1, 0x2e
 
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/google/common/base/a;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, p1, v1}, Lcom/google/common/base/CharMatcher;->replaceFrom(Ljava/lang/CharSequence;C)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 145
+    invoke-static {v0}, Lcom/google/common/base/Ascii;->toLowerCase(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 132
     const-string v1, "."
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -116,7 +121,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 146
+    .line 133
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -127,7 +132,7 @@
 
     move-result-object v0
 
-    .line 149
+    .line 136
     :cond_0
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -142,19 +147,15 @@
     :goto_0
     const-string v4, "Domain name too long: \'%s\':"
 
-    new-array v5, v2, [Ljava/lang/Object;
+    invoke-static {v1, v4, v0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
 
-    aput-object v0, v5, v3
-
-    invoke-static {v1, v4, v5}, Lcom/google/common/base/h;->a(ZLjava/lang/String;[Ljava/lang/Object;)V
-
-    .line 151
+    .line 137
     iput-object v0, p0, Lcom/google/common/b/a;->d:Ljava/lang/String;
 
-    .line 153
-    sget-object v1, Lcom/google/common/b/a;->b:Lcom/google/common/base/j;
+    .line 139
+    sget-object v1, Lcom/google/common/b/a;->b:Lcom/google/common/base/Splitter;
 
-    invoke-virtual {v1, v0}, Lcom/google/common/base/j;->a(Ljava/lang/CharSequence;)Ljava/lang/Iterable;
+    invoke-virtual {v1, v0}, Lcom/google/common/base/Splitter;->split(Ljava/lang/CharSequence;)Ljava/lang/Iterable;
 
     move-result-object v1
 
@@ -164,7 +165,7 @@
 
     iput-object v1, p0, Lcom/google/common/b/a;->e:Lcom/google/common/collect/ImmutableList;
 
-    .line 154
+    .line 140
     iget-object v1, p0, Lcom/google/common/b/a;->e:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {v1}, Lcom/google/common/collect/ImmutableList;->size()I
@@ -175,52 +176,42 @@
 
     if-gt v1, v4, :cond_2
 
-    move v1, v2
-
     :goto_1
-    const-string v4, "Domain has too many parts: \'%s\'"
+    const-string v1, "Domain has too many parts: \'%s\'"
 
-    new-array v5, v2, [Ljava/lang/Object;
+    invoke-static {v2, v1, v0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
 
-    aput-object v0, v5, v3
-
-    invoke-static {v1, v4, v5}, Lcom/google/common/base/h;->a(ZLjava/lang/String;[Ljava/lang/Object;)V
-
-    .line 156
+    .line 141
     iget-object v1, p0, Lcom/google/common/b/a;->e:Lcom/google/common/collect/ImmutableList;
 
     invoke-static {v1}, Lcom/google/common/b/a;->a(Ljava/util/List;)Z
 
     move-result v1
 
-    const-string v4, "Not a valid domain name: \'%s\'"
+    const-string v2, "Not a valid domain name: \'%s\'"
 
-    new-array v2, v2, [Ljava/lang/Object;
+    invoke-static {v1, v2, v0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
 
-    aput-object v0, v2, v3
-
-    invoke-static {v1, v4, v2}, Lcom/google/common/base/h;->a(ZLjava/lang/String;[Ljava/lang/Object;)V
-
-    .line 158
+    .line 143
     invoke-direct {p0}, Lcom/google/common/b/a;->b()I
 
     move-result v0
 
     iput v0, p0, Lcom/google/common/b/a;->f:I
 
-    .line 159
+    .line 144
     return-void
 
     :cond_1
     move v1, v3
 
-    .line 149
+    .line 136
     goto :goto_0
 
     :cond_2
-    move v1, v3
+    move v2, v3
 
-    .line 154
+    .line 140
     goto :goto_1
 .end method
 
@@ -228,10 +219,10 @@
     .locals 2
 
     .prologue
-    .line 213
+    .line 196
     new-instance v1, Lcom/google/common/b/a;
 
-    invoke-static {p0}, Lcom/google/common/base/h;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -248,7 +239,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 259
+    .line 242
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -263,48 +254,46 @@
 
     if-le v1, v2, :cond_1
 
-    .line 298
+    .line 280
     :cond_0
     :goto_0
     return v0
 
-    .line 273
+    .line 256
     :cond_1
-    sget-object v1, Lcom/google/common/base/b;->b:Lcom/google/common/base/b;
-
-    .line 2095
-    invoke-virtual {v1}, Lcom/google/common/base/b;->a()Lcom/google/common/base/b;
+    invoke-static {}, Lcom/google/common/base/CharMatcher;->ascii()Lcom/google/common/base/CharMatcher;
 
     move-result-object v1
 
-    invoke-virtual {v1, p0}, Lcom/google/common/base/b;->e(Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v1, p0}, Lcom/google/common/base/CharMatcher;->retainFrom(Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 275
-    sget-object v2, Lcom/google/common/b/a;->h:Lcom/google/common/base/b;
+    .line 258
+    sget-object v2, Lcom/google/common/b/a;->h:Lcom/google/common/base/CharMatcher;
 
-    invoke-virtual {v2, v1}, Lcom/google/common/base/b;->b(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v2, v1}, Lcom/google/common/base/CharMatcher;->matchesAllOf(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 281
-    sget-object v1, Lcom/google/common/b/a;->g:Lcom/google/common/base/b;
+    .line 264
+    sget-object v1, Lcom/google/common/b/a;->g:Lcom/google/common/base/CharMatcher;
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Lcom/google/common/base/b;->c(C)Z
+    invoke-virtual {v1, v2}, Lcom/google/common/base/CharMatcher;->matches(C)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    sget-object v1, Lcom/google/common/b/a;->g:Lcom/google/common/base/b;
+    sget-object v1, Lcom/google/common/b/a;->g:Lcom/google/common/base/CharMatcher;
 
+    .line 265
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -315,28 +304,30 @@
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Lcom/google/common/base/b;->c(C)Z
+    invoke-virtual {v1, v2}, Lcom/google/common/base/CharMatcher;->matches(C)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 294
+    .line 276
     if-eqz p1, :cond_2
 
-    sget-object v1, Lcom/google/common/base/b;->c:Lcom/google/common/base/b;
+    invoke-static {}, Lcom/google/common/base/CharMatcher;->digit()Lcom/google/common/base/CharMatcher;
+
+    move-result-object v1
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Lcom/google/common/base/b;->c(C)Z
+    invoke-virtual {v1, v2}, Lcom/google/common/base/CharMatcher;->matches(C)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 298
+    .line 280
     :cond_2
     const/4 v0, 0x1
 
@@ -360,14 +351,14 @@
 
     const/4 v1, 0x0
 
-    .line 223
+    .line 206
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
 
     add-int/lit8 v4, v0, -0x1
 
-    .line 227
+    .line 210
     invoke-interface {p0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -382,25 +373,25 @@
 
     move v0, v1
 
-    .line 238
+    .line 221
     :goto_0
     return v0
 
     :cond_0
     move v3, v1
 
-    .line 231
+    .line 214
     :goto_1
     if-ge v3, v4, :cond_2
 
-    .line 232
+    .line 215
     invoke-interface {p0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 233
+    .line 216
     invoke-static {v0, v1}, Lcom/google/common/b/a;->a(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -409,10 +400,10 @@
 
     move v0, v1
 
-    .line 234
+    .line 217
     goto :goto_0
 
-    .line 231
+    .line 214
     :cond_1
     add-int/lit8 v0, v3, 0x1
 
@@ -423,7 +414,7 @@
     :cond_2
     move v0, v2
 
-    .line 238
+    .line 221
     goto :goto_0
 .end method
 
@@ -437,7 +428,7 @@
 
     const/4 v3, 0x0
 
-    .line 168
+    .line 153
     iget-object v0, p0, Lcom/google/common/b/a;->e:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableList;->size()I
@@ -446,12 +437,12 @@
 
     move v0, v3
 
-    .line 170
+    .line 155
     :goto_0
     if-ge v0, v4, :cond_4
 
-    .line 171
-    sget-object v1, Lcom/google/common/b/a;->c:Lcom/google/common/base/e;
+    .line 156
+    sget-object v1, Lcom/google/common/b/a;->c:Lcom/google/common/base/Joiner;
 
     iget-object v5, p0, Lcom/google/common/b/a;->e:Lcom/google/common/collect/ImmutableList;
 
@@ -459,11 +450,11 @@
 
     move-result-object v5
 
-    invoke-virtual {v1, v5}, Lcom/google/common/base/e;->a(Ljava/lang/Iterable;)Ljava/lang/String;
+    invoke-virtual {v1, v5}, Lcom/google/common/base/Joiner;->join(Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 173
+    .line 158
     sget-object v5, Lcom/google/thirdparty/publicsuffix/a;->a:Lcom/google/common/collect/ImmutableMap;
 
     invoke-virtual {v5, v1}, Lcom/google/common/collect/ImmutableMap;->containsKey(Ljava/lang/Object;)Z
@@ -472,12 +463,12 @@
 
     if-eqz v5, :cond_1
 
-    .line 189
+    .line 174
     :cond_0
     :goto_1
     return v0
 
-    .line 180
+    .line 165
     :cond_1
     sget-object v5, Lcom/google/thirdparty/publicsuffix/a;->c:Lcom/google/common/collect/ImmutableMap;
 
@@ -487,12 +478,12 @@
 
     if-eqz v5, :cond_2
 
-    .line 181
+    .line 166
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 1510
+    .line 1475
     :cond_2
     const-string v5, "\\."
 
@@ -500,7 +491,7 @@
 
     move-result-object v1
 
-    .line 1511
+    .line 1476
     array-length v5, v1
 
     if-ne v5, v6, :cond_3
@@ -517,11 +508,11 @@
 
     move v1, v2
 
-    .line 184
+    .line 169
     :goto_2
     if-nez v1, :cond_0
 
-    .line 170
+    .line 155
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -529,10 +520,10 @@
     :cond_3
     move v1, v3
 
-    .line 1511
+    .line 1476
     goto :goto_2
 
-    .line 189
+    .line 174
     :cond_4
     const/4 v0, -0x1
 
@@ -542,62 +533,56 @@
 
 # virtual methods
 .method public final a()Lcom/google/common/b/a;
-    .locals 5
+    .locals 4
 
     .prologue
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    .line 421
-    .line 2395
-    iget v0, p0, Lcom/google/common/b/a;->f:I
+    .line 390
+    .line 2367
+    iget v2, p0, Lcom/google/common/b/a;->f:I
 
-    if-ne v0, v1, :cond_0
+    if-ne v2, v0, :cond_0
 
-    move v0, v1
+    move v2, v0
 
-    .line 421
+    .line 390
     :goto_0
-    if-eqz v0, :cond_1
+    if-eqz v2, :cond_1
 
-    .line 425
+    .line 394
     :goto_1
     return-object p0
 
     :cond_0
-    move v0, v2
+    move v2, v1
 
-    .line 2395
+    .line 2367
     goto :goto_0
 
-    .line 3371
+    .line 3347
     :cond_1
-    iget v0, p0, Lcom/google/common/b/a;->f:I
+    iget v2, p0, Lcom/google/common/b/a;->f:I
 
-    if-lez v0, :cond_2
+    if-lez v2, :cond_2
 
-    move v0, v1
-
-    .line 424
+    .line 393
     :goto_2
-    const-string v3, "Not under a public suffix: %s"
+    const-string v1, "Not under a public suffix: %s"
 
-    new-array v1, v1, [Ljava/lang/Object;
+    iget-object v2, p0, Lcom/google/common/b/a;->d:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/google/common/b/a;->d:Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/String;Ljava/lang/Object;)V
 
-    aput-object v4, v1, v2
-
-    invoke-static {v0, v3, v1}, Lcom/google/common/base/h;->b(ZLjava/lang/String;[Ljava/lang/Object;)V
-
-    .line 425
+    .line 394
     iget v0, p0, Lcom/google/common/b/a;->f:I
 
     add-int/lit8 v0, v0, -0x1
 
-    .line 3457
-    sget-object v1, Lcom/google/common/b/a;->c:Lcom/google/common/base/e;
+    .line 3424
+    sget-object v1, Lcom/google/common/b/a;->c:Lcom/google/common/base/Joiner;
 
     iget-object v2, p0, Lcom/google/common/b/a;->e:Lcom/google/common/collect/ImmutableList;
 
@@ -611,7 +596,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/google/common/base/e;->a(Ljava/lang/Iterable;)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Lcom/google/common/base/Joiner;->join(Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -622,9 +607,9 @@
     goto :goto_1
 
     :cond_2
-    move v0, v2
+    move v0, v1
 
-    .line 3371
+    .line 3347
     goto :goto_2
 .end method
 
@@ -636,26 +621,26 @@
     .end param
 
     .prologue
-    .line 531
+    .line 495
     if-ne p1, p0, :cond_0
 
-    .line 532
+    .line 496
     const/4 v0, 0x1
 
-    .line 540
+    .line 504
     :goto_0
     return v0
 
-    .line 535
+    .line 499
     :cond_0
     instance-of v0, p1, Lcom/google/common/b/a;
 
     if-eqz v0, :cond_1
 
-    .line 536
+    .line 500
     check-cast p1, Lcom/google/common/b/a;
 
-    .line 537
+    .line 501
     iget-object v0, p0, Lcom/google/common/b/a;->d:Ljava/lang/String;
 
     iget-object v1, p1, Lcom/google/common/b/a;->d:Ljava/lang/String;
@@ -666,7 +651,7 @@
 
     goto :goto_0
 
-    .line 540
+    .line 504
     :cond_1
     const/4 v0, 0x0
 
@@ -677,7 +662,7 @@
     .locals 1
 
     .prologue
-    .line 545
+    .line 509
     iget-object v0, p0, Lcom/google/common/b/a;->d:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -691,7 +676,7 @@
     .locals 1
 
     .prologue
-    .line 519
+    .line 484
     iget-object v0, p0, Lcom/google/common/b/a;->d:Ljava/lang/String;
 
     return-object v0

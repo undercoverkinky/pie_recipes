@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 114
+    .line 119
     invoke-direct {p0}, Lkik/android/chat/fragment/KikComposeFragment$a;-><init>()V
 
     return-void

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroid/support/design/widget/TabLayout$SlidingTabStrip;->c(I)V
+    value = Landroid/support/design/widget/TabLayout$SlidingTabStrip;->b(II)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
     .locals 0
 
     .prologue
-    .line 1464
+    .line 2042
     iput-object p1, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip$2;->b:Landroid/support/design/widget/TabLayout$SlidingTabStrip;
 
     iput p2, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip$2;->a:I
@@ -37,42 +37,24 @@
 
 
 # virtual methods
-.method public final a()V
+.method public final b(Landroid/support/design/widget/ValueAnimatorCompat;)V
     .locals 2
 
     .prologue
-    .line 1467
+    .line 2045
     iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip$2;->b:Landroid/support/design/widget/TabLayout$SlidingTabStrip;
 
     iget v1, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip$2;->a:I
 
-    invoke-static {v0, v1}, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a(Landroid/support/design/widget/TabLayout$SlidingTabStrip;I)I
+    iput v1, v0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a:I
 
-    .line 1468
+    .line 2046
     iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip$2;->b:Landroid/support/design/widget/TabLayout$SlidingTabStrip;
 
-    invoke-static {v0}, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a(Landroid/support/design/widget/TabLayout$SlidingTabStrip;)F
+    const/4 v1, 0x0
 
-    .line 1469
-    return-void
-.end method
+    iput v1, v0, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->b:F
 
-.method public final b()V
-    .locals 2
-
-    .prologue
-    .line 1473
-    iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip$2;->b:Landroid/support/design/widget/TabLayout$SlidingTabStrip;
-
-    iget v1, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip$2;->a:I
-
-    invoke-static {v0, v1}, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a(Landroid/support/design/widget/TabLayout$SlidingTabStrip;I)I
-
-    .line 1474
-    iget-object v0, p0, Landroid/support/design/widget/TabLayout$SlidingTabStrip$2;->b:Landroid/support/design/widget/TabLayout$SlidingTabStrip;
-
-    invoke-static {v0}, Landroid/support/design/widget/TabLayout$SlidingTabStrip;->a(Landroid/support/design/widget/TabLayout$SlidingTabStrip;)F
-
-    .line 1475
+    .line 2047
     return-void
 .end method

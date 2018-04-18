@@ -27,13 +27,13 @@
     .locals 0
 
     .prologue
-    .line 47
+    .line 46
     invoke-direct {p0}, Lcom/google/common/hash/c;-><init>()V
 
-    .line 48
+    .line 47
     iput p1, p0, Lcom/google/common/hash/Murmur3_128HashFunction;->seed:I
 
-    .line 49
+    .line 48
     return-void
 .end method
 
@@ -43,7 +43,7 @@
     .locals 2
 
     .prologue
-    .line 56
+    .line 57
     new-instance v0, Lcom/google/common/hash/Murmur3_128HashFunction$a;
 
     iget v1, p0, Lcom/google/common/hash/Murmur3_128HashFunction;->seed:I
@@ -63,15 +63,15 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 66
+    .line 67
     instance-of v1, p1, Lcom/google/common/hash/Murmur3_128HashFunction;
 
     if-eqz v1, :cond_0
 
-    .line 67
+    .line 68
     check-cast p1, Lcom/google/common/hash/Murmur3_128HashFunction;
 
-    .line 68
+    .line 69
     iget v1, p0, Lcom/google/common/hash/Murmur3_128HashFunction;->seed:I
 
     iget v2, p1, Lcom/google/common/hash/Murmur3_128HashFunction;->seed:I
@@ -80,7 +80,7 @@
 
     const/4 v0, 0x1
 
-    .line 70
+    .line 71
     :cond_0
     return v0
 .end method
@@ -89,7 +89,7 @@
     .locals 2
 
     .prologue
-    .line 75
+    .line 76
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -106,25 +106,19 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
     .prologue
-    .line 61
-    iget v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction;->seed:I
+    .line 62
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v1, "Hashing.murmur3_128("
 
-    const/16 v2, 0x20
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
+    iget v1, p0, Lcom/google/common/hash/Murmur3_128HashFunction;->seed:I
 
-    const-string v2, "Hashing.murmur3_128("
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

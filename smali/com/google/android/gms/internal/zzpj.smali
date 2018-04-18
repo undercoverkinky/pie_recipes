@@ -1,26 +1,15 @@
-.class public final Lcom/google/android/gms/internal/zzpj;
-.super Landroid/support/v4/util/LruCache;
+.class public interface abstract Lcom/google/android/gms/internal/zzpj;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/os/IInterface;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Landroid/support/v4/util/LruCache",
-        "<",
-        "Ljava/lang/Object;",
-        "Landroid/graphics/drawable/Drawable;",
-        ">;"
-    }
-.end annotation
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    const/16 v0, 0xa
-
-    invoke-direct {p0, v0}, Landroid/support/v4/util/LruCache;-><init>(I)V
-
-    return-void
+# virtual methods
+.method public abstract zza(Lcom/google/android/gms/dynamic/IObjectWrapper;Lcom/google/android/gms/dynamic/IObjectWrapper;Lcom/google/android/gms/dynamic/IObjectWrapper;I)Landroid/os/IBinder;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
 .end method

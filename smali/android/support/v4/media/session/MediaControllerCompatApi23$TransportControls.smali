@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 25
+    .line 29
     invoke-direct {p0}, Landroid/support/v4/media/session/MediaControllerCompatApi21$TransportControls;-><init>()V
 
     return-void
@@ -29,11 +29,11 @@
     .locals 0
 
     .prologue
-    .line 27
+    .line 31
     check-cast p0, Landroid/media/session/MediaController$TransportControls;
 
     invoke-virtual {p0, p1, p2}, Landroid/media/session/MediaController$TransportControls;->playFromUri(Landroid/net/Uri;Landroid/os/Bundle;)V
 
-    .line 28
+    .line 32
     return-void
 .end method

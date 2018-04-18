@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/google/common/base/i;
+.implements Lcom/google/common/base/Predicate;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "<",
         "Lcom/google/common/base/Predicates$ObjectPredicate;",
         ">;",
-        "Lcom/google/common/base/i",
+        "Lcom/google/common/base/Predicate",
         "<",
         "Ljava/lang/Object;",
         ">;"
@@ -55,7 +55,7 @@
 
     const/4 v2, 0x0
 
-    .line 277
+    .line 281
     new-instance v0, Lcom/google/common/base/Predicates$ObjectPredicate$1;
 
     const-string v1, "ALWAYS_TRUE"
@@ -64,7 +64,7 @@
 
     sput-object v0, Lcom/google/common/base/Predicates$ObjectPredicate;->ALWAYS_TRUE:Lcom/google/common/base/Predicates$ObjectPredicate;
 
-    .line 286
+    .line 293
     new-instance v0, Lcom/google/common/base/Predicates$ObjectPredicate$2;
 
     const-string v1, "ALWAYS_FALSE"
@@ -73,7 +73,7 @@
 
     sput-object v0, Lcom/google/common/base/Predicates$ObjectPredicate;->ALWAYS_FALSE:Lcom/google/common/base/Predicates$ObjectPredicate;
 
-    .line 295
+    .line 305
     new-instance v0, Lcom/google/common/base/Predicates$ObjectPredicate$3;
 
     const-string v1, "IS_NULL"
@@ -82,7 +82,7 @@
 
     sput-object v0, Lcom/google/common/base/Predicates$ObjectPredicate;->IS_NULL:Lcom/google/common/base/Predicates$ObjectPredicate;
 
-    .line 304
+    .line 317
     new-instance v0, Lcom/google/common/base/Predicates$ObjectPredicate$4;
 
     const-string v1, "NOT_NULL"
@@ -91,7 +91,7 @@
 
     sput-object v0, Lcom/google/common/base/Predicates$ObjectPredicate;->NOT_NULL:Lcom/google/common/base/Predicates$ObjectPredicate;
 
-    .line 275
+    .line 279
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/google/common/base/Predicates$ObjectPredicate;
@@ -126,7 +126,7 @@
     .end annotation
 
     .prologue
-    .line 275
+    .line 279
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -136,7 +136,7 @@
     .locals 0
 
     .prologue
-    .line 275
+    .line 279
     invoke-direct {p0, p1, p2}, Lcom/google/common/base/Predicates$ObjectPredicate;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -146,7 +146,7 @@
     .locals 1
 
     .prologue
-    .line 275
+    .line 279
     const-class v0, Lcom/google/common/base/Predicates$ObjectPredicate;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -162,7 +162,7 @@
     .locals 1
 
     .prologue
-    .line 275
+    .line 279
     sget-object v0, Lcom/google/common/base/Predicates$ObjectPredicate;->$VALUES:[Lcom/google/common/base/Predicates$ObjectPredicate;
 
     invoke-virtual {v0}, [Lcom/google/common/base/Predicates$ObjectPredicate;->clone()Ljava/lang/Object;
@@ -176,19 +176,19 @@
 
 
 # virtual methods
-.method withNarrowedType()Lcom/google/common/base/i;
+.method withNarrowedType()Lcom/google/common/base/Predicate;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">()",
-            "Lcom/google/common/base/i",
+            "Lcom/google/common/base/Predicate",
             "<TT;>;"
         }
     .end annotation
 
     .prologue
-    .line 315
+    .line 331
     return-object p0
 .end method

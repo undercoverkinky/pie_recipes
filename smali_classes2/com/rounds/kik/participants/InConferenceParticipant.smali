@@ -10,7 +10,13 @@
 .method public abstract isMuted()Z
 .end method
 
+.method public abstract isShowUnMuteIcon()Z
+.end method
+
 .method public abstract setMuted(Z)V
+.end method
+
+.method public abstract showUnMuteIcon(Z)V
 .end method
 
 .method public abstract toggleMuted()Z

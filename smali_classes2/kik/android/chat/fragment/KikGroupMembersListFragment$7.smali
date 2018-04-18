@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/KikGroupMembersListFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lkik/android/chat/fragment/KikGroupMembersListFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,24 @@
 
 
 # instance fields
-.field final synthetic a:Lkik/android/chat/fragment/KikGroupMembersListFragment;
+.field final synthetic a:Lkik/core/datatypes/l;
+
+.field final synthetic b:Lkik/core/datatypes/f;
+
+.field final synthetic c:Lkik/android/chat/fragment/KikGroupMembersListFragment;
 
 
 # direct methods
-.method constructor <init>(Lkik/android/chat/fragment/KikGroupMembersListFragment;)V
+.method constructor <init>(Lkik/android/chat/fragment/KikGroupMembersListFragment;Lkik/core/datatypes/l;Lkik/core/datatypes/f;)V
     .locals 0
 
     .prologue
-    .line 268
-    iput-object p1, p0, Lkik/android/chat/fragment/KikGroupMembersListFragment$7;->a:Lkik/android/chat/fragment/KikGroupMembersListFragment;
+    .line 616
+    iput-object p1, p0, Lkik/android/chat/fragment/KikGroupMembersListFragment$7;->c:Lkik/android/chat/fragment/KikGroupMembersListFragment;
+
+    iput-object p2, p0, Lkik/android/chat/fragment/KikGroupMembersListFragment$7;->a:Lkik/core/datatypes/l;
+
+    iput-object p3, p0, Lkik/android/chat/fragment/KikGroupMembersListFragment$7;->b:Lkik/core/datatypes/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,60 +44,25 @@
 
 
 # virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 3
 
     .prologue
-    .line 272
-    iget-object v0, p0, Lkik/android/chat/fragment/KikGroupMembersListFragment$7;->a:Lkik/android/chat/fragment/KikGroupMembersListFragment;
+    .line 620
+    iget-object v0, p0, Lkik/android/chat/fragment/KikGroupMembersListFragment$7;->c:Lkik/android/chat/fragment/KikGroupMembersListFragment;
 
-    iget-object v0, v0, Lkik/android/chat/fragment/KikGroupMembersListFragment;->_groupMembersList:Landroid/widget/ListView;
+    iget-object v0, v0, Lkik/android/chat/fragment/KikGroupMembersListFragment;->a:Lkik/core/interfaces/v;
 
-    invoke-virtual {v0, p3}, Landroid/widget/ListView;->getItemAtPosition(I)Ljava/lang/Object;
+    iget-object v1, p0, Lkik/android/chat/fragment/KikGroupMembersListFragment$7;->a:Lkik/core/datatypes/l;
 
-    move-result-object v0
-
-    .line 273
-    if-eqz v0, :cond_0
-
-    instance-of v1, v0, Lkik/core/datatypes/KikSectionedContact;
-
-    if-eqz v1, :cond_0
-
-    .line 274
-    const v1, 0x7f1100d5
-
-    invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1}, Lkik/core/datatypes/l;->j()Lkik/core/datatypes/k;
 
     move-result-object v1
 
-    .line 276
-    if-nez v1, :cond_1
+    iget-object v2, p0, Lkik/android/chat/fragment/KikGroupMembersListFragment$7;->b:Lkik/core/datatypes/f;
 
-    .line 280
-    :goto_0
-    check-cast v0, Lkik/core/datatypes/KikSectionedContact;
+    invoke-interface {v0, v1, v2}, Lkik/core/interfaces/v;->a(Lkik/core/datatypes/k;Lkik/core/datatypes/f;)Lcom/kik/events/Promise;
 
-    .line 281
-    iget-object v1, p0, Lkik/android/chat/fragment/KikGroupMembersListFragment$7;->a:Lkik/android/chat/fragment/KikGroupMembersListFragment;
-
-    invoke-static {v1, p2, v0}, Lkik/android/chat/fragment/KikGroupMembersListFragment;->a(Lkik/android/chat/fragment/KikGroupMembersListFragment;Landroid/view/View;Lkik/core/datatypes/KikSectionedContact;)V
-
-    .line 283
-    :cond_0
+    .line 621
     return-void
-
-    :cond_1
-    move-object p2, v1
-
-    goto :goto_0
 .end method

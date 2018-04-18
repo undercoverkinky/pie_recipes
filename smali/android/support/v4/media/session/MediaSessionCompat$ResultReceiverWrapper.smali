@@ -39,7 +39,7 @@
     .locals 1
 
     .prologue
-    .line 977
+    .line 1512
     new-instance v0, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper$1;
 
     invoke-direct {v0}, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper$1;-><init>()V
@@ -53,10 +53,10 @@
     .locals 1
 
     .prologue
-    .line 972
+    .line 1507
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 973
+    .line 1508
     sget-object v0, Landroid/os/ResultReceiver;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -67,7 +67,7 @@
 
     iput-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;->mResultReceiver:Landroid/os/ResultReceiver;
 
-    .line 974
+    .line 1509
     return-void
 .end method
 
@@ -75,21 +75,21 @@
     .locals 0
 
     .prologue
-    .line 968
+    .line 1503
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 969
+    .line 1504
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;->mResultReceiver:Landroid/os/ResultReceiver;
 
-    .line 970
+    .line 1505
     return-void
 .end method
 
-.method static synthetic access$800(Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;)Landroid/os/ResultReceiver;
+.method static synthetic access$000(Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;)Landroid/os/ResultReceiver;
     .locals 1
 
     .prologue
-    .line 965
+    .line 1500
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;->mResultReceiver:Landroid/os/ResultReceiver;
 
     return-object v0
@@ -101,7 +101,7 @@
     .locals 1
 
     .prologue
-    .line 991
+    .line 1526
     const/4 v0, 0x0
 
     return v0
@@ -111,11 +111,11 @@
     .locals 1
 
     .prologue
-    .line 996
+    .line 1531
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;->mResultReceiver:Landroid/os/ResultReceiver;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/ResultReceiver;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 997
+    .line 1532
     return-void
 .end method

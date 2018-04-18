@@ -18,23 +18,14 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 37
+    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-.method synthetic constructor <init>(B)V
-    .locals 0
-
-    .prologue
-    .line 37
-    invoke-direct {p0}, Landroid/support/design/widget/ViewGroupUtils$ViewGroupUtilsImplHoneycomb;-><init>()V
-
+    .line 46
     return-void
 .end method
 
@@ -44,9 +35,9 @@
     .locals 0
 
     .prologue
-    .line 40
+    .line 50
     invoke-static {p1, p2, p3}, Landroid/support/design/widget/ViewGroupUtilsHoneycomb;->a(Landroid/view/ViewGroup;Landroid/view/View;Landroid/graphics/Rect;)V
 
-    .line 41
+    .line 51
     return-void
 .end method

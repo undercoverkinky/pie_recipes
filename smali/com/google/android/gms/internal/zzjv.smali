@@ -1,135 +1,101 @@
 .class public abstract Lcom/google/android/gms/internal/zzjv;
-.super Ljava/lang/Object;
+.super Lcom/google/android/gms/internal/zzef;
 
 # interfaces
-.implements Lcom/google/android/gms/internal/zzkc;
-
-
-# annotations
-.annotation runtime Lcom/google/android/gms/internal/zzig;
-.end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lcom/google/android/gms/internal/zzkc",
-        "<",
-        "Ljava/util/concurrent/Future;",
-        ">;"
-    }
-.end annotation
-
-
-# instance fields
-.field private volatile zzQc:Ljava/lang/Thread;
-
-.field private zzQd:Z
-
-.field private final zzw:Ljava/lang/Runnable;
+.implements Lcom/google/android/gms/internal/zzju;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/google/android/gms/internal/zzef;-><init>()V
 
-    new-instance v0, Lcom/google/android/gms/internal/zzjv$1;
+    const-string v0, "com.google.android.gms.ads.internal.client.IAdListener"
 
-    invoke-direct {v0, p0}, Lcom/google/android/gms/internal/zzjv$1;-><init>(Lcom/google/android/gms/internal/zzjv;)V
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/zzjv;->zzw:Ljava/lang/Runnable;
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/google/android/gms/internal/zzjv;->zzQd:Z
+    invoke-virtual {p0, p0, v0}, Lcom/google/android/gms/internal/zzjv;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     return-void
-.end method
-
-.method public constructor <init>(Z)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Lcom/google/android/gms/internal/zzjv$1;
-
-    invoke-direct {v0, p0}, Lcom/google/android/gms/internal/zzjv$1;-><init>(Lcom/google/android/gms/internal/zzjv;)V
-
-    iput-object v0, p0, Lcom/google/android/gms/internal/zzjv;->zzw:Ljava/lang/Runnable;
-
-    iput-boolean p1, p0, Lcom/google/android/gms/internal/zzjv;->zzQd:Z
-
-    return-void
-.end method
-
-.method static synthetic zza(Lcom/google/android/gms/internal/zzjv;Ljava/lang/Thread;)Ljava/lang/Thread;
-    .locals 0
-
-    iput-object p1, p0, Lcom/google/android/gms/internal/zzjv;->zzQc:Ljava/lang/Thread;
-
-    return-object p1
 .end method
 
 
 # virtual methods
-.method public final cancel()V
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzjv;->onStop()V
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzjv;->zzQc:Ljava/lang/Thread;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzjv;->zzQc:Ljava/lang/Thread;
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public abstract onStop()V
-.end method
-
-.method public abstract zzbQ()V
-.end method
-
-.method public synthetic zzhs()Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzjv;->zziU()Ljava/util/concurrent/Future;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final zziU()Ljava/util/concurrent/Future;
+.method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
     .locals 2
-
-    iget-boolean v0, p0, Lcom/google/android/gms/internal/zzjv;->zzQd:Z
-
-    if-eqz v0, :cond_0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
 
     const/4 v0, 0x1
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/zzjv;->zzw:Ljava/lang/Runnable;
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/android/gms/internal/zzef;->zza(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    invoke-static {v0, v1}, Lcom/google/android/gms/internal/zzjz;->zza(ILjava/lang/Runnable;)Lcom/google/android/gms/internal/zzkr;
+    move-result v1
 
-    move-result-object v0
+    if-eqz v1, :cond_0
 
     :goto_0
-    return-object v0
+    return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzjv;->zzw:Ljava/lang/Runnable;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-static {v0}, Lcom/google/android/gms/internal/zzjz;->zza(Ljava/lang/Runnable;)Lcom/google/android/gms/internal/zzkr;
-
-    move-result-object v0
+    const/4 v0, 0x0
 
     goto :goto_0
+
+    :pswitch_0
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzjv;->onAdClosed()V
+
+    :goto_1
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto :goto_0
+
+    :pswitch_1
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    invoke-virtual {p0, v1}, Lcom/google/android/gms/internal/zzjv;->onAdFailedToLoad(I)V
+
+    goto :goto_1
+
+    :pswitch_2
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzjv;->onAdLeftApplication()V
+
+    goto :goto_1
+
+    :pswitch_3
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzjv;->onAdLoaded()V
+
+    goto :goto_1
+
+    :pswitch_4
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzjv;->onAdOpened()V
+
+    goto :goto_1
+
+    :pswitch_5
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzjv;->onAdClicked()V
+
+    goto :goto_1
+
+    :pswitch_6
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzjv;->onAdImpression()V
+
+    goto :goto_1
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+        :pswitch_4
+        :pswitch_5
+        :pswitch_6
+    .end packed-switch
 .end method

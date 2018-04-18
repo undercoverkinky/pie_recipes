@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 36
+    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,15 +34,35 @@
     .locals 0
 
     .prologue
-    .line 41
+    .line 45
     return-void
+.end method
+
+.method public getAction(Landroid/view/accessibility/AccessibilityEvent;)I
+    .locals 1
+
+    .prologue
+    .line 82
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public getContentChangeTypes(Landroid/view/accessibility/AccessibilityEvent;)I
     .locals 1
 
     .prologue
-    .line 60
+    .line 64
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getMovementGranularity(Landroid/view/accessibility/AccessibilityEvent;)I
+    .locals 1
+
+    .prologue
+    .line 73
     const/4 v0, 0x0
 
     return v0
@@ -52,7 +72,7 @@
     .locals 1
 
     .prologue
-    .line 45
+    .line 49
     const/4 v0, 0x0
 
     return-object v0
@@ -62,16 +82,32 @@
     .locals 1
 
     .prologue
-    .line 55
+    .line 59
     const/4 v0, 0x0
 
     return v0
+.end method
+
+.method public setAction(Landroid/view/accessibility/AccessibilityEvent;I)V
+    .locals 0
+
+    .prologue
+    .line 78
+    return-void
 .end method
 
 .method public setContentChangeTypes(Landroid/view/accessibility/AccessibilityEvent;I)V
     .locals 0
 
     .prologue
-    .line 51
+    .line 55
+    return-void
+.end method
+
+.method public setMovementGranularity(Landroid/view/accessibility/AccessibilityEvent;I)V
+    .locals 0
+
+    .prologue
+    .line 69
     return-void
 .end method

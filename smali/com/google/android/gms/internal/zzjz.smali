@@ -1,203 +1,144 @@
 .class public final Lcom/google/android/gms/internal/zzjz;
-.super Ljava/lang/Object;
+.super Lcom/google/android/gms/internal/zzee;
 
-
-# annotations
-.annotation runtime Lcom/google/android/gms/internal/zzig;
-.end annotation
-
-
-# static fields
-.field private static final zzQm:Ljava/util/concurrent/ExecutorService;
-
-.field private static final zzQn:Ljava/util/concurrent/ExecutorService;
+# interfaces
+.implements Lcom/google/android/gms/internal/zzjx;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method constructor <init>(Landroid/os/IBinder;)V
+    .locals 1
 
-    const/16 v0, 0xa
+    const-string v0, "com.google.android.gms.ads.internal.client.IAdLoader"
 
-    const-string v1, "Default"
-
-    invoke-static {v1}, Lcom/google/android/gms/internal/zzjz;->zzaM(Ljava/lang/String;)Ljava/util/concurrent/ThreadFactory;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Ljava/util/concurrent/Executors;->newFixedThreadPool(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/google/android/gms/internal/zzjz;->zzQm:Ljava/util/concurrent/ExecutorService;
-
-    const/4 v0, 0x5
-
-    const-string v1, "Loader"
-
-    invoke-static {v1}, Lcom/google/android/gms/internal/zzjz;->zzaM(Ljava/lang/String;)Ljava/util/concurrent/ThreadFactory;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Ljava/util/concurrent/Executors;->newFixedThreadPool(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/google/android/gms/internal/zzjz;->zzQn:Ljava/util/concurrent/ExecutorService;
+    invoke-direct {p0, p1, v0}, Lcom/google/android/gms/internal/zzee;-><init>(Landroid/os/IBinder;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public static zza(ILjava/lang/Runnable;)Lcom/google/android/gms/internal/zzkr;
+
+# virtual methods
+.method public final getMediationAdapterClassName()Ljava/lang/String;
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
+    .annotation system Ldalvik/annotation/Throws;
         value = {
-            "(I",
-            "Ljava/lang/Runnable;",
-            ")",
-            "Lcom/google/android/gms/internal/zzkr",
-            "<",
-            "Ljava/lang/Void;",
-            ">;"
+            Landroid/os/RemoteException;
         }
     .end annotation
 
-    const/4 v0, 0x1
-
-    if-ne p0, v0, :cond_0
-
-    sget-object v0, Lcom/google/android/gms/internal/zzjz;->zzQn:Ljava/util/concurrent/ExecutorService;
-
-    new-instance v1, Lcom/google/android/gms/internal/zzjz$1;
-
-    invoke-direct {v1, p1}, Lcom/google/android/gms/internal/zzjz$1;-><init>(Ljava/lang/Runnable;)V
-
-    invoke-static {v0, v1}, Lcom/google/android/gms/internal/zzjz;->zza(Ljava/util/concurrent/ExecutorService;Ljava/util/concurrent/Callable;)Lcom/google/android/gms/internal/zzkr;
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
 
     move-result-object v0
 
-    :goto_0
-    return-object v0
+    const/4 v1, 0x2
 
-    :cond_0
-    sget-object v0, Lcom/google/android/gms/internal/zzjz;->zzQm:Ljava/util/concurrent/ExecutorService;
-
-    new-instance v1, Lcom/google/android/gms/internal/zzjz$2;
-
-    invoke-direct {v1, p1}, Lcom/google/android/gms/internal/zzjz$2;-><init>(Ljava/lang/Runnable;)V
-
-    invoke-static {v0, v1}, Lcom/google/android/gms/internal/zzjz;->zza(Ljava/util/concurrent/ExecutorService;Ljava/util/concurrent/Callable;)Lcom/google/android/gms/internal/zzkr;
+    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zza(ILandroid/os/Parcel;)Landroid/os/Parcel;
 
     move-result-object v0
 
-    goto :goto_0
-.end method
+    invoke-virtual {v0}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-.method public static zza(Ljava/lang/Runnable;)Lcom/google/android/gms/internal/zzkr;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/Runnable;",
-            ")",
-            "Lcom/google/android/gms/internal/zzkr",
-            "<",
-            "Ljava/lang/Void;",
-            ">;"
-        }
-    .end annotation
+    move-result-object v1
 
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    invoke-static {v0, p0}, Lcom/google/android/gms/internal/zzjz;->zza(ILjava/lang/Runnable;)Lcom/google/android/gms/internal/zzkr;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static zza(Ljava/util/concurrent/Callable;)Lcom/google/android/gms/internal/zzkr;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Ljava/util/concurrent/Callable",
-            "<TT;>;)",
-            "Lcom/google/android/gms/internal/zzkr",
-            "<TT;>;"
-        }
-    .end annotation
-
-    sget-object v0, Lcom/google/android/gms/internal/zzjz;->zzQm:Ljava/util/concurrent/ExecutorService;
-
-    invoke-static {v0, p0}, Lcom/google/android/gms/internal/zzjz;->zza(Ljava/util/concurrent/ExecutorService;Ljava/util/concurrent/Callable;)Lcom/google/android/gms/internal/zzkr;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static zza(Ljava/util/concurrent/ExecutorService;Ljava/util/concurrent/Callable;)Lcom/google/android/gms/internal/zzkr;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Ljava/util/concurrent/ExecutorService;",
-            "Ljava/util/concurrent/Callable",
-            "<TT;>;)",
-            "Lcom/google/android/gms/internal/zzkr",
-            "<TT;>;"
-        }
-    .end annotation
-
-    new-instance v1, Lcom/google/android/gms/internal/zzko;
-
-    invoke-direct {v1}, Lcom/google/android/gms/internal/zzko;-><init>()V
-
-    :try_start_0
-    new-instance v0, Lcom/google/android/gms/internal/zzjz$3;
-
-    invoke-direct {v0, v1, p1}, Lcom/google/android/gms/internal/zzjz$3;-><init>(Lcom/google/android/gms/internal/zzko;Ljava/util/concurrent/Callable;)V
-
-    invoke-interface {p0, v0}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
-
-    move-result-object v0
-
-    new-instance v2, Lcom/google/android/gms/internal/zzjz$4;
-
-    invoke-direct {v2, v1, v0}, Lcom/google/android/gms/internal/zzjz$4;-><init>(Lcom/google/android/gms/internal/zzko;Ljava/util/concurrent/Future;)V
-
-    invoke-virtual {v1, v2}, Lcom/google/android/gms/internal/zzko;->zzc(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
     return-object v1
-
-    :catch_0
-    move-exception v0
-
-    const-string v2, "Thread execution is rejected."
-
-    invoke-static {v2, v0}, Lcom/google/android/gms/internal/zzjw;->zzd(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const/4 v0, 0x1
-
-    invoke-virtual {v1, v0}, Lcom/google/android/gms/internal/zzko;->cancel(Z)Z
-
-    goto :goto_0
 .end method
 
-.method private static zzaM(Ljava/lang/String;)Ljava/util/concurrent/ThreadFactory;
-    .locals 1
+.method public final isLoading()Z
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
 
-    new-instance v0, Lcom/google/android/gms/internal/zzjz$5;
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
 
-    invoke-direct {v0, p0}, Lcom/google/android/gms/internal/zzjz$5;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    return-object v0
+    const/4 v1, 0x3
+
+    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zza(ILandroid/os/Parcel;)Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzeg;->zza(Landroid/os/Parcel;)Z
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return v1
+.end method
+
+.method public final zza(Lcom/google/android/gms/internal/zzix;I)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Lcom/google/android/gms/internal/zzeg;->zza(Landroid/os/Parcel;Landroid/os/Parcelable;)V
+
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 v1, 0x5
+
+    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zzb(ILandroid/os/Parcel;)V
+
+    return-void
+.end method
+
+.method public final zzch()Ljava/lang/String;
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    const/4 v1, 0x4
+
+    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zza(ILandroid/os/Parcel;)Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-object v1
+.end method
+
+.method public final zzd(Lcom/google/android/gms/internal/zzix;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzee;->zzax()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Lcom/google/android/gms/internal/zzeg;->zza(Landroid/os/Parcel;Landroid/os/Parcelable;)V
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/internal/zzee;->zzb(ILandroid/os/Parcel;)V
+
+    return-void
 .end method

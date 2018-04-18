@@ -85,7 +85,7 @@
     .line 46
     const-string v0, "messageType"
 
-    invoke-virtual {p0, v0}, Lcom/google/gson/JsonObject;->b(Ljava/lang/String;)Lcom/google/gson/j;
+    invoke-virtual {p0, v0}, Lcom/google/gson/JsonObject;->b(Ljava/lang/String;)Lcom/google/gson/k;
 
     move-result-object v0
 
@@ -93,7 +93,7 @@
     if-eqz v0, :cond_1
 
     .line 48
-    invoke-virtual {v0}, Lcom/google/gson/j;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/google/gson/k;->b()Ljava/lang/String;
 
     move-result-object v4
 

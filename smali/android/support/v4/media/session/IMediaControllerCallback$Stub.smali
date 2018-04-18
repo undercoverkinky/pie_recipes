@@ -26,6 +26,8 @@
 # static fields
 .field private static final DESCRIPTOR:Ljava/lang/String; = "android.support.v4.media.session.IMediaControllerCallback"
 
+.field static final TRANSACTION_onCaptioningEnabledChanged:I = 0xb
+
 .field static final TRANSACTION_onEvent:I = 0x1
 
 .field static final TRANSACTION_onExtrasChanged:I = 0x7
@@ -38,7 +40,11 @@
 
 .field static final TRANSACTION_onQueueTitleChanged:I = 0x6
 
+.field static final TRANSACTION_onRepeatModeChanged:I = 0x9
+
 .field static final TRANSACTION_onSessionDestroyed:I = 0x2
+
+.field static final TRANSACTION_onShuffleModeChanged:I = 0xa
 
 .field static final TRANSACTION_onVolumeInfoChanged:I = 0x8
 
@@ -122,6 +128,8 @@
     .end annotation
 
     .prologue
+    const/4 v2, 0x0
+
     const/4 v0, 0x0
 
     const/4 v1, 0x1
@@ -129,13 +137,13 @@
     .line 43
     sparse-switch p1, :sswitch_data_0
 
-    .line 145
+    .line 169
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    move-result v0
+    move-result v1
 
     :goto_0
-    return v0
+    return v1
 
     .line 47
     :sswitch_0
@@ -143,9 +151,6 @@
 
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    move v0, v1
-
-    .line 48
     goto :goto_0
 
     .line 52
@@ -179,9 +184,6 @@
     :cond_0
     invoke-virtual {p0, v2, v0}, Landroid/support/v4/media/session/IMediaControllerCallback$Stub;->onEvent(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    move v0, v1
-
-    .line 63
     goto :goto_0
 
     .line 67
@@ -193,9 +195,6 @@
     .line 68
     invoke-virtual {p0}, Landroid/support/v4/media/session/IMediaControllerCallback$Stub;->onSessionDestroyed()V
 
-    move v0, v1
-
-    .line 69
     goto :goto_0
 
     .line 73
@@ -224,9 +223,6 @@
     :cond_1
     invoke-virtual {p0, v0}, Landroid/support/v4/media/session/IMediaControllerCallback$Stub;->onPlaybackStateChanged(Landroid/support/v4/media/session/PlaybackStateCompat;)V
 
-    move v0, v1
-
-    .line 82
     goto :goto_0
 
     .line 86
@@ -255,9 +251,6 @@
     :cond_2
     invoke-virtual {p0, v0}, Landroid/support/v4/media/session/IMediaControllerCallback$Stub;->onMetadataChanged(Landroid/support/v4/media/MediaMetadataCompat;)V
 
-    move v0, v1
-
-    .line 95
     goto :goto_0
 
     .line 99
@@ -276,9 +269,6 @@
     .line 102
     invoke-virtual {p0, v0}, Landroid/support/v4/media/session/IMediaControllerCallback$Stub;->onQueueChanged(Ljava/util/List;)V
 
-    move v0, v1
-
-    .line 103
     goto :goto_0
 
     .line 107
@@ -307,10 +297,7 @@
     :cond_3
     invoke-virtual {p0, v0}, Landroid/support/v4/media/session/IMediaControllerCallback$Stub;->onQueueTitleChanged(Ljava/lang/CharSequence;)V
 
-    move v0, v1
-
-    .line 116
-    goto/16 :goto_0
+    goto :goto_0
 
     .line 120
     :sswitch_7
@@ -338,9 +325,6 @@
     :cond_4
     invoke-virtual {p0, v0}, Landroid/support/v4/media/session/IMediaControllerCallback$Stub;->onExtrasChanged(Landroid/os/Bundle;)V
 
-    move v0, v1
-
-    .line 129
     goto/16 :goto_0
 
     .line 133
@@ -369,12 +353,75 @@
     :cond_5
     invoke-virtual {p0, v0}, Landroid/support/v4/media/session/IMediaControllerCallback$Stub;->onVolumeInfoChanged(Landroid/support/v4/media/session/ParcelableVolumeInfo;)V
 
+    goto/16 :goto_0
+
+    .line 146
+    :sswitch_9
+    const-string v0, "android.support.v4.media.session.IMediaControllerCallback"
+
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 148
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    .line 149
+    invoke-virtual {p0, v0}, Landroid/support/v4/media/session/IMediaControllerCallback$Stub;->onRepeatModeChanged(I)V
+
+    goto/16 :goto_0
+
+    .line 154
+    :sswitch_a
+    const-string v0, "android.support.v4.media.session.IMediaControllerCallback"
+
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 156
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
     move v0, v1
 
-    .line 142
+    .line 157
+    :goto_1
+    invoke-virtual {p0, v0}, Landroid/support/v4/media/session/IMediaControllerCallback$Stub;->onShuffleModeChanged(Z)V
+
+    goto/16 :goto_0
+
+    :cond_6
+    move v0, v2
+
+    .line 156
+    goto :goto_1
+
+    .line 162
+    :sswitch_b
+    const-string v0, "android.support.v4.media.session.IMediaControllerCallback"
+
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 164
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    move v2, v1
+
+    .line 165
+    :cond_7
+    invoke-virtual {p0, v2}, Landroid/support/v4/media/session/IMediaControllerCallback$Stub;->onCaptioningEnabledChanged(Z)V
+
     goto/16 :goto_0
 
     .line 43
+    nop
+
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1
@@ -385,6 +432,9 @@
         0x6 -> :sswitch_6
         0x7 -> :sswitch_7
         0x8 -> :sswitch_8
+        0x9 -> :sswitch_9
+        0xa -> :sswitch_a
+        0xb -> :sswitch_b
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

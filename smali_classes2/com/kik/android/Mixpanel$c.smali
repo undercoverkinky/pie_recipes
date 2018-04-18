@@ -38,10 +38,10 @@
     .locals 2
 
     .prologue
-    .line 1723
+    .line 1797
     iput-object p1, p0, Lcom/kik/android/Mixpanel$c;->a:Lcom/kik/android/Mixpanel;
 
-    .line 1724
+    .line 1798
     invoke-virtual {p2}, Lcom/kik/android/Mixpanel$d;->d()Ljava/lang/String;
 
     move-result-object v0
@@ -52,20 +52,20 @@
 
     invoke-direct {p0, v0, v1}, Lcom/kik/android/Mixpanel$d;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1726
+    .line 1800
     iget-object v0, p2, Lcom/kik/android/Mixpanel$d;->d:Lorg/json/JSONObject;
 
     iput-object v0, p0, Lcom/kik/android/Mixpanel$c;->d:Lorg/json/JSONObject;
 
-    .line 1727
+    .line 1801
     iput-object p2, p0, Lcom/kik/android/Mixpanel$c;->i:Lcom/kik/android/Mixpanel$d;
 
-    .line 1728
+    .line 1802
     const-wide/16 v0, 0x7530
 
     iput-wide v0, p0, Lcom/kik/android/Mixpanel$c;->h:J
 
-    .line 1729
+    .line 1803
     return-void
 .end method
 
@@ -75,12 +75,12 @@
     .locals 4
 
     .prologue
-    .line 1738
+    .line 1812
     invoke-virtual {p0}, Lcom/kik/android/Mixpanel$c;->d()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1739
+    .line 1813
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -101,7 +101,7 @@
 
     move-result-object v0
 
-    .line 1741
+    .line 1815
     iget-object v1, p0, Lcom/kik/android/Mixpanel$c;->a:Lcom/kik/android/Mixpanel;
 
     invoke-static {v1}, Lcom/kik/android/Mixpanel;->a(Lcom/kik/android/Mixpanel;)Ljava/util/Map;
@@ -134,16 +134,16 @@
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1743
+    .line 1817
     iget-object v1, p0, Lcom/kik/android/Mixpanel$c;->a:Lcom/kik/android/Mixpanel;
 
-    invoke-static {v1}, Lcom/kik/android/Mixpanel;->g(Lcom/kik/android/Mixpanel;)Ljava/util/Map;
+    invoke-static {v1}, Lcom/kik/android/Mixpanel;->e(Lcom/kik/android/Mixpanel;)Ljava/util/Map;
 
     move-result-object v1
 
     monitor-enter v1
 
-    .line 1744
+    .line 1818
     :try_start_0
     iget-object v2, p0, Lcom/kik/android/Mixpanel$c;->j:Ljava/util/concurrent/ScheduledFuture;
 
@@ -153,21 +153,21 @@
 
     if-nez v2, :cond_0
 
-    .line 1745
+    .line 1819
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/kik/android/Mixpanel$c;->g:Z
 
-    .line 1747
+    .line 1821
     iget-object v2, p0, Lcom/kik/android/Mixpanel$c;->a:Lcom/kik/android/Mixpanel;
 
-    invoke-static {v2}, Lcom/kik/android/Mixpanel;->g(Lcom/kik/android/Mixpanel;)Ljava/util/Map;
+    invoke-static {v2}, Lcom/kik/android/Mixpanel;->e(Lcom/kik/android/Mixpanel;)Ljava/util/Map;
 
     move-result-object v2
 
     invoke-interface {v2, v0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1749
+    .line 1823
     iget-object v0, p0, Lcom/kik/android/Mixpanel$c;->i:Lcom/kik/android/Mixpanel$d;
 
     invoke-virtual {p0}, Lcom/kik/android/Mixpanel$c;->f()Lorg/json/JSONObject;
@@ -176,24 +176,24 @@
 
     invoke-virtual {v0, v2}, Lcom/kik/android/Mixpanel$d;->a(Lorg/json/JSONObject;)V
 
-    .line 1750
+    .line 1824
     iget-object v0, p0, Lcom/kik/android/Mixpanel$c;->i:Lcom/kik/android/Mixpanel$d;
 
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 1752
+    .line 1826
     iget-object v0, p0, Lcom/kik/android/Mixpanel$c;->j:Ljava/util/concurrent/ScheduledFuture;
 
     const/4 v2, 0x0
 
     invoke-interface {v0, v2}, Ljava/util/concurrent/ScheduledFuture;->cancel(Z)Z
 
-    .line 1753
+    .line 1827
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/kik/android/Mixpanel$c;->j:Ljava/util/concurrent/ScheduledFuture;
 
-    .line 1755
+    .line 1829
     :cond_0
     monitor-exit v1
 
@@ -213,23 +213,23 @@
     .locals 6
 
     .prologue
-    .line 1761
+    .line 1835
     iget-object v0, p0, Lcom/kik/android/Mixpanel$c;->j:Ljava/util/concurrent/ScheduledFuture;
 
     if-eqz v0, :cond_1
 
-    .line 1787
+    .line 1862
     :cond_0
     :goto_0
     return-void
 
-    .line 1765
+    .line 1839
     :cond_1
     invoke-virtual {p0}, Lcom/kik/android/Mixpanel$c;->d()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1766
+    .line 1840
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -250,10 +250,10 @@
 
     move-result-object v1
 
-    .line 1768
+    .line 1842
     iget-object v0, p0, Lcom/kik/android/Mixpanel$c;->a:Lcom/kik/android/Mixpanel;
 
-    invoke-static {v0}, Lcom/kik/android/Mixpanel;->h(Lcom/kik/android/Mixpanel;)Ljava/util/concurrent/ScheduledExecutorService;
+    invoke-static {v0}, Lcom/kik/android/Mixpanel;->f(Lcom/kik/android/Mixpanel;)Ljava/util/concurrent/ScheduledExecutorService;
 
     move-result-object v0
 
@@ -271,20 +271,20 @@
 
     iput-object v0, p0, Lcom/kik/android/Mixpanel$c;->j:Ljava/util/concurrent/ScheduledFuture;
 
-    .line 1778
+    .line 1853
     iget-object v0, p0, Lcom/kik/android/Mixpanel$c;->a:Lcom/kik/android/Mixpanel;
 
-    invoke-static {v0}, Lcom/kik/android/Mixpanel;->g(Lcom/kik/android/Mixpanel;)Ljava/util/Map;
+    invoke-static {v0}, Lcom/kik/android/Mixpanel;->e(Lcom/kik/android/Mixpanel;)Ljava/util/Map;
 
     move-result-object v2
 
     monitor-enter v2
 
-    .line 1779
+    .line 1854
     :try_start_0
     iget-object v0, p0, Lcom/kik/android/Mixpanel$c;->a:Lcom/kik/android/Mixpanel;
 
-    invoke-static {v0}, Lcom/kik/android/Mixpanel;->g(Lcom/kik/android/Mixpanel;)Ljava/util/Map;
+    invoke-static {v0}, Lcom/kik/android/Mixpanel;->e(Lcom/kik/android/Mixpanel;)Ljava/util/Map;
 
     move-result-object v0
 
@@ -294,31 +294,31 @@
 
     check-cast v0, Lcom/kik/android/Mixpanel$c;
 
-    .line 1781
+    .line 1856
     iget-object v3, p0, Lcom/kik/android/Mixpanel$c;->a:Lcom/kik/android/Mixpanel;
 
-    invoke-static {v3}, Lcom/kik/android/Mixpanel;->g(Lcom/kik/android/Mixpanel;)Ljava/util/Map;
+    invoke-static {v3}, Lcom/kik/android/Mixpanel;->e(Lcom/kik/android/Mixpanel;)Ljava/util/Map;
 
     move-result-object v3
 
     invoke-interface {v3, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1782
+    .line 1857
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1784
+    .line 1859
     if-eqz v0, :cond_0
 
     if-eq v0, p0, :cond_0
 
-    .line 1785
+    .line 1860
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$c;->c()V
 
     goto :goto_0
 
-    .line 1782
+    .line 1857
     :catchall_0
     move-exception v0
 
@@ -334,24 +334,24 @@
     .locals 2
 
     .prologue
-    .line 1791
+    .line 1866
     iget-object v0, p0, Lcom/kik/android/Mixpanel$c;->j:Ljava/util/concurrent/ScheduledFuture;
 
     if-eqz v0, :cond_0
 
-    .line 1792
+    .line 1867
     iget-object v0, p0, Lcom/kik/android/Mixpanel$c;->j:Ljava/util/concurrent/ScheduledFuture;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/ScheduledFuture;->cancel(Z)Z
 
-    .line 1793
+    .line 1868
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/kik/android/Mixpanel$c;->j:Ljava/util/concurrent/ScheduledFuture;
 
-    .line 1795
+    .line 1870
     :cond_0
     return-void
 .end method

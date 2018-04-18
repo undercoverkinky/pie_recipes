@@ -59,7 +59,7 @@
 
     check-cast v0, Landroid/support/design/widget/SnackbarManager$SnackbarRecord;
 
-    invoke-static {v1, v0}, Landroid/support/design/widget/SnackbarManager;->a(Landroid/support/design/widget/SnackbarManager;Landroid/support/design/widget/SnackbarManager$SnackbarRecord;)V
+    invoke-virtual {v1, v0}, Landroid/support/design/widget/SnackbarManager;->a(Landroid/support/design/widget/SnackbarManager$SnackbarRecord;)V
 
     .line 58
     const/4 v0, 0x1

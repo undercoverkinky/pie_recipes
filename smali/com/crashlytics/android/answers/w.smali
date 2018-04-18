@@ -2,249 +2,114 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lio/fabric/sdk/android/services/concurrency/internal/a;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field final a:Lio/fabric/sdk/android/services/concurrency/internal/a;
 
-.field public final b:Ljava/lang/String;
+.field final b:Ljava/util/Random;
 
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/Boolean;
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:Ljava/lang/String;
-
-.field public final i:Ljava/lang/String;
-
-.field public final j:Ljava/lang/String;
-
-.field public final k:Ljava/lang/String;
-
-.field public final l:Ljava/lang/String;
-
-.field private m:Ljava/lang/String;
+.field final c:D
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Lio/fabric/sdk/android/services/concurrency/internal/a;)V
+    .locals 1
 
     .prologue
     .line 27
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/Random;
+
+    invoke-direct {v0}, Ljava/util/Random;-><init>()V
+
+    invoke-direct {p0, p1, v0}, Lcom/crashlytics/android/answers/w;-><init>(Lio/fabric/sdk/android/services/concurrency/internal/a;Ljava/util/Random;)V
 
     .line 28
-    iput-object p1, p0, Lcom/crashlytics/android/answers/w;->a:Ljava/lang/String;
+    return-void
+.end method
 
-    .line 29
-    iput-object p2, p0, Lcom/crashlytics/android/answers/w;->b:Ljava/lang/String;
+.method private constructor <init>(Lio/fabric/sdk/android/services/concurrency/internal/a;Ljava/util/Random;)V
+    .locals 2
 
-    .line 30
-    iput-object p3, p0, Lcom/crashlytics/android/answers/w;->c:Ljava/lang/String;
+    .prologue
+    .line 42
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
-    iput-object p4, p0, Lcom/crashlytics/android/answers/w;->d:Ljava/lang/String;
+    .line 47
+    if-nez p1, :cond_0
 
-    .line 32
-    iput-object p5, p0, Lcom/crashlytics/android/answers/w;->e:Ljava/lang/String;
+    .line 48
+    new-instance v0, Ljava/lang/NullPointerException;
 
-    .line 33
-    iput-object p6, p0, Lcom/crashlytics/android/answers/w;->f:Ljava/lang/Boolean;
+    const-string v1, "backoff must not be null"
 
-    .line 34
-    iput-object p7, p0, Lcom/crashlytics/android/answers/w;->g:Ljava/lang/String;
+    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    .line 35
-    iput-object p8, p0, Lcom/crashlytics/android/answers/w;->h:Ljava/lang/String;
+    throw v0
 
-    .line 36
-    iput-object p9, p0, Lcom/crashlytics/android/answers/w;->i:Ljava/lang/String;
+    .line 55
+    :cond_0
+    iput-object p1, p0, Lcom/crashlytics/android/answers/w;->a:Lio/fabric/sdk/android/services/concurrency/internal/a;
 
-    .line 37
-    iput-object p10, p0, Lcom/crashlytics/android/answers/w;->j:Ljava/lang/String;
+    .line 56
+    const-wide v0, 0x3fb999999999999aL    # 0.1
 
-    .line 38
-    iput-object p11, p0, Lcom/crashlytics/android/answers/w;->k:Ljava/lang/String;
+    iput-wide v0, p0, Lcom/crashlytics/android/answers/w;->c:D
 
-    .line 39
-    iput-object p12, p0, Lcom/crashlytics/android/answers/w;->l:Ljava/lang/String;
+    .line 57
+    iput-object p2, p0, Lcom/crashlytics/android/answers/w;->b:Ljava/util/Random;
 
-    .line 40
+    .line 58
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final a(I)J
+    .locals 6
 
     .prologue
-    .line 44
-    iget-object v0, p0, Lcom/crashlytics/android/answers/w;->m:Ljava/lang/String;
+    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
 
-    if-nez v0, :cond_0
+    .line 62
+    .line 1066
+    iget-wide v0, p0, Lcom/crashlytics/android/answers/w;->c:D
 
-    .line 45
-    new-instance v0, Ljava/lang/StringBuilder;
+    sub-double v0, v4, v0
 
-    const-string v1, "appBundleId="
+    .line 1067
+    iget-wide v2, p0, Lcom/crashlytics/android/answers/w;->c:D
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    add-double/2addr v2, v4
 
-    iget-object v1, p0, Lcom/crashlytics/android/answers/w;->a:Ljava/lang/String;
+    .line 1068
+    iget-object v4, p0, Lcom/crashlytics/android/answers/w;->b:Ljava/util/Random;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4}, Ljava/util/Random;->nextDouble()D
 
-    move-result-object v0
+    move-result-wide v4
 
-    const-string v1, ", executionId="
+    .line 1069
+    sub-double/2addr v2, v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    mul-double/2addr v2, v4
 
-    move-result-object v0
+    add-double/2addr v0, v2
 
-    iget-object v1, p0, Lcom/crashlytics/android/answers/w;->b:Ljava/lang/String;
+    .line 62
+    iget-object v2, p0, Lcom/crashlytics/android/answers/w;->a:Lio/fabric/sdk/android/services/concurrency/internal/a;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {v2, p1}, Lio/fabric/sdk/android/services/concurrency/internal/a;->a(I)J
 
-    move-result-object v0
+    move-result-wide v2
 
-    const-string v1, ", installationId="
+    long-to-double v2, v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    mul-double/2addr v0, v2
 
-    move-result-object v0
+    double-to-long v0, v0
 
-    iget-object v1, p0, Lcom/crashlytics/android/answers/w;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", androidId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/crashlytics/android/answers/w;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", advertisingId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/crashlytics/android/answers/w;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", limitAdTrackingEnabled="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/crashlytics/android/answers/w;->f:Ljava/lang/Boolean;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", betaDeviceToken="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/crashlytics/android/answers/w;->g:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", buildId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/crashlytics/android/answers/w;->h:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", osVersion="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/crashlytics/android/answers/w;->i:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", deviceModel="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/crashlytics/android/answers/w;->j:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", appVersionCode="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/crashlytics/android/answers/w;->k:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", appVersionName="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/crashlytics/android/answers/w;->l:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    .line 58
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/crashlytics/android/answers/w;->m:Ljava/lang/String;
-
-    .line 60
-    :cond_0
-    iget-object v0, p0, Lcom/crashlytics/android/answers/w;->m:Ljava/lang/String;
-
-    return-object v0
+    return-wide v0
 .end method

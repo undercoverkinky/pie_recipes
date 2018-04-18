@@ -1,23 +1,12 @@
-.class public interface abstract annotation Lcom/google/android/gms/internal/zzakw;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/annotation/Annotation;
+.class public final Lcom/google/android/gms/internal/zzakw;
+.super Ljava/lang/Exception;
 
 
-# annotations
-.annotation runtime Ljava/lang/annotation/Retention;
-    value = .enum Ljava/lang/annotation/RetentionPolicy;->RUNTIME:Ljava/lang/annotation/RetentionPolicy;
-.end annotation
+# direct methods
+.method public constructor <init>(Lcom/google/android/gms/internal/zzaku;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
 
-.annotation runtime Ljava/lang/annotation/Target;
-    value = {
-        .enum Ljava/lang/annotation/ElementType;->FIELD:Ljava/lang/annotation/ElementType;,
-        .enum Ljava/lang/annotation/ElementType;->TYPE:Ljava/lang/annotation/ElementType;
-    }
-.end annotation
+    invoke-direct {p0, p2, p3}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-
-# virtual methods
-.method public abstract zzVS()D
+    return-void
 .end method

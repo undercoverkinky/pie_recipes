@@ -1,239 +1,291 @@
 .class final Lio/branch/referral/z;
-.super Lio/branch/referral/u;
+.super Lio/branch/referral/t;
 .source "SourceFile"
 
 
 # instance fields
-.field g:Lio/branch/referral/Branch$e;
+.field a:Lio/branch/referral/Branch$e;
 
-.field h:Lio/branch/referral/ad;
+.field final b:Lio/branch/referral/ab;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lio/branch/referral/Branch$e;Lio/branch/referral/ad;Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Landroid/content/Context;Lio/branch/referral/Branch$e;Lio/branch/referral/ab;)V
     .locals 3
 
     .prologue
     .line 30
-    sget-object v0, Lio/branch/referral/Defines$RequestPath;->RegisterInstall:Lio/branch/referral/Defines$RequestPath;
+    sget-object v0, Lio/branch/referral/Defines$RequestPath;->RegisterOpen:Lio/branch/referral/Defines$RequestPath;
 
     invoke-virtual {v0}, Lio/branch/referral/Defines$RequestPath;->getPath()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {p0, p1, v0}, Lio/branch/referral/u;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-
-    .line 31
-    iput-object p3, p0, Lio/branch/referral/z;->h:Lio/branch/referral/ad;
+    invoke-direct {p0, p1, v0}, Lio/branch/referral/t;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 32
-    iput-object p2, p0, Lio/branch/referral/z;->g:Lio/branch/referral/Branch$e;
+    iput-object p3, p0, Lio/branch/referral/z;->b:Lio/branch/referral/ab;
 
     .line 33
+    iput-object p2, p0, Lio/branch/referral/z;->a:Lio/branch/referral/Branch$e;
+
+    .line 34
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    .line 35
-    :try_start_0
-    const-string v1, "bnc_no_value"
-
-    invoke-virtual {p4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
     .line 36
-    sget-object v1, Lio/branch/referral/Defines$Jsonkey;->LinkClickID:Lio/branch/referral/Defines$Jsonkey;
+    :try_start_0
+    sget-object v1, Lio/branch/referral/Defines$Jsonkey;->DeviceFingerprintID:Lio/branch/referral/Defines$Jsonkey;
 
     invoke-virtual {v1}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1, p4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 38
-    :cond_0
-    const-string v1, "bnc_no_value"
-
-    invoke-virtual {p5, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    .line 39
-    sget-object v1, Lio/branch/referral/Defines$Jsonkey;->GoogleSearchInstallReferrer:Lio/branch/referral/Defines$Jsonkey;
-
-    invoke-virtual {v1}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1, p5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 41
-    :cond_1
-    invoke-virtual {p3}, Lio/branch/referral/ad;->e()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "bnc_no_value"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    .line 42
-    sget-object v1, Lio/branch/referral/Defines$Jsonkey;->AppVersion:Lio/branch/referral/Defines$Jsonkey;
-
-    invoke-virtual {v1}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p3}, Lio/branch/referral/ad;->e()Ljava/lang/String;
+    invoke-static {}, Lio/branch/referral/m;->g()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 46
-    :cond_2
-    invoke-static {}, Lio/branch/referral/n;->y()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    .line 47
-    invoke-virtual {p3}, Lio/branch/referral/ad;->c()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 48
-    const-string v2, "bnc_no_value"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_3
-
-    .line 49
-    sget-object v2, Lio/branch/referral/Defines$Jsonkey;->URIScheme:Lio/branch/referral/Defines$Jsonkey;
-
-    invoke-virtual {v2}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 52
-    :cond_3
-    sget-object v1, Lio/branch/referral/Defines$Jsonkey;->FaceBookAppLinkChecked:Lio/branch/referral/Defines$Jsonkey;
+    .line 37
+    sget-object v1, Lio/branch/referral/Defines$Jsonkey;->IdentityID:Lio/branch/referral/Defines$Jsonkey;
 
     invoke-virtual {v1}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {}, Lio/branch/referral/n;->k()Z
+    invoke-static {}, Lio/branch/referral/m;->i()Ljava/lang/String;
 
-    move-result v2
+    move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 53
+    .line 38
     sget-object v1, Lio/branch/referral/Defines$Jsonkey;->IsReferrable:Lio/branch/referral/Defines$Jsonkey;
 
     invoke-virtual {v1}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {}, Lio/branch/referral/n;->s()I
+    invoke-static {}, Lio/branch/referral/m;->w()I
 
     move-result v2
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 54
+    .line 40
+    invoke-virtual {p3}, Lio/branch/referral/ab;->d()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "bnc_no_value"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 41
+    sget-object v1, Lio/branch/referral/Defines$Jsonkey;->AppVersion:Lio/branch/referral/Defines$Jsonkey;
+
+    invoke-virtual {v1}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p3}, Lio/branch/referral/ab;->d()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 44
+    :cond_0
+    sget-object v1, Lio/branch/referral/Defines$Jsonkey;->FaceBookAppLinkChecked:Lio/branch/referral/Defines$Jsonkey;
+
+    invoke-virtual {v1}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {}, Lio/branch/referral/m;->l()Z
+
+    move-result v2
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+
+    .line 45
     sget-object v1, Lio/branch/referral/Defines$Jsonkey;->Update:Lio/branch/referral/Defines$Jsonkey;
 
     invoke-virtual {v1}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {p3}, Lio/branch/referral/ad;->f()I
+    invoke-virtual {p3}, Lio/branch/referral/ab;->e()I
 
     move-result v2
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 56
+    .line 46
     sget-object v1, Lio/branch/referral/Defines$Jsonkey;->Debug:Lio/branch/referral/Defines$Jsonkey;
 
     invoke-virtual {v1}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {}, Lio/branch/referral/n;->y()Z
+    invoke-static {}, Lio/branch/referral/m;->B()Z
 
     move-result v2
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
-    .line 57
-    invoke-virtual {p0, v0}, Lio/branch/referral/z;->a(Lorg/json/JSONObject;)V
+    .line 48
+    invoke-virtual {p0, v0}, Lio/branch/referral/z;->setPost(Lorg/json/JSONObject;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 65
+    .line 54
     :goto_0
     return-void
 
-    .line 60
+    .line 50
     :catch_0
     move-exception v0
 
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
-    .line 61
+    .line 51
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lio/branch/referral/z;->e:Z
+    iput-boolean v0, p0, Lio/branch/referral/z;->constructError_:Z
 
     goto :goto_0
 .end method
 
 .method public constructor <init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 68
-    invoke-direct {p0, p1, p2, p3}, Lio/branch/referral/u;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
+    .line 57
+    invoke-direct {p0, p1, p2, p3}, Lio/branch/referral/t;-><init>(Ljava/lang/String;Lorg/json/JSONObject;Landroid/content/Context;)V
 
-    .line 69
+    .line 58
+    new-instance v0, Lio/branch/referral/ab;
+
+    invoke-direct {v0, p3}, Lio/branch/referral/ab;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lio/branch/referral/z;->b:Lio/branch/referral/ab;
+
+    .line 59
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/String;)V
-    .locals 5
+.method public final a()Z
+    .locals 1
 
     .prologue
-    .line 132
-    iget-object v0, p0, Lio/branch/referral/z;->g:Lio/branch/referral/Branch$e;
+    .line 150
+    iget-object v0, p0, Lio/branch/referral/z;->a:Lio/branch/referral/Branch$e;
 
     if-eqz v0, :cond_0
 
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final b()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 155
+    const-string v0, "open"
+
+    return-object v0
+.end method
+
+.method public final clearCallbacks()V
+    .locals 1
+
+    .prologue
+    .line 145
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lio/branch/referral/z;->a:Lio/branch/referral/Branch$e;
+
+    .line 146
+    return-void
+.end method
+
+.method public final handleErrors(Landroid/content/Context;)Z
+    .locals 5
+
+    .prologue
+    .line 129
+    invoke-super {p0, p1}, Lio/branch/referral/t;->doesAppHasInternetPermission(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 130
+    iget-object v0, p0, Lio/branch/referral/z;->a:Lio/branch/referral/Branch$e;
+
+    if-eqz v0, :cond_0
+
+    .line 131
+    iget-object v0, p0, Lio/branch/referral/z;->a:Lio/branch/referral/Branch$e;
+
+    const/4 v1, 0x0
+
+    new-instance v2, Lio/branch/referral/e;
+
+    const-string v3, "Trouble initializing Branch."
+
+    const/16 v4, -0x66
+
+    invoke-direct {v2, v3, v4}, Lio/branch/referral/e;-><init>(Ljava/lang/String;I)V
+
+    invoke-interface {v0, v1, v2}, Lio/branch/referral/Branch$e;->a(Lorg/json/JSONObject;Lio/branch/referral/e;)V
+
     .line 133
+    :cond_0
+    const/4 v0, 0x1
+
+    .line 135
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final handleFailure(ILjava/lang/String;)V
+    .locals 5
+
+    .prologue
+    .line 116
+    iget-object v0, p0, Lio/branch/referral/z;->a:Lio/branch/referral/Branch$e;
+
+    if-eqz v0, :cond_0
+
+    .line 117
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
-    .line 135
+    .line 119
     :try_start_0
     const-string v0, "error_message"
 
@@ -243,9 +295,9 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 139
+    .line 123
     :goto_0
-    iget-object v0, p0, Lio/branch/referral/z;->g:Lio/branch/referral/Branch$e;
+    iget-object v0, p0, Lio/branch/referral/z;->a:Lio/branch/referral/Branch$e;
 
     new-instance v2, Lio/branch/referral/e;
 
@@ -267,11 +319,11 @@
 
     invoke-interface {v0, v1, v2}, Lio/branch/referral/Branch$e;->a(Lorg/json/JSONObject;Lio/branch/referral/e;)V
 
-    .line 141
+    .line 125
     :cond_0
     return-void
 
-    .line 137
+    .line 121
     :catch_0
     move-exception v0
 
@@ -280,136 +332,26 @@
     goto :goto_0
 .end method
 
-.method public final a(Lio/branch/referral/ac;Lio/branch/referral/Branch;)V
+.method public final isGetRequest()Z
+    .locals 1
+
+    .prologue
+    .line 140
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final onRequestSucceeded(Lio/branch/referral/aa;Lio/branch/referral/Branch;)V
     .locals 3
 
     .prologue
-    .line 78
-    invoke-super {p0, p1, p2}, Lio/branch/referral/u;->a(Lio/branch/referral/ac;Lio/branch/referral/Branch;)V
+    .line 63
+    invoke-super {p0, p1, p2}, Lio/branch/referral/t;->onRequestSucceeded(Lio/branch/referral/aa;Lio/branch/referral/Branch;)V
 
-    .line 80
+    .line 65
     :try_start_0
-    invoke-virtual {p1}, Lio/branch/referral/ac;->b()Lorg/json/JSONObject;
-
-    move-result-object v0
-
-    sget-object v1, Lio/branch/referral/Defines$Jsonkey;->Link:Lio/branch/referral/Defines$Jsonkey;
-
-    invoke-virtual {v1}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lio/branch/referral/n;->n(Ljava/lang/String;)V
-
-    .line 82
-    invoke-virtual {p1}, Lio/branch/referral/ac;->b()Lorg/json/JSONObject;
-
-    move-result-object v0
-
-    sget-object v1, Lio/branch/referral/Defines$Jsonkey;->Data:Lio/branch/referral/Defines$Jsonkey;
-
-    invoke-virtual {v1}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 83
-    new-instance v0, Lorg/json/JSONObject;
-
-    invoke-virtual {p1}, Lio/branch/referral/ac;->b()Lorg/json/JSONObject;
-
-    move-result-object v1
-
-    sget-object v2, Lio/branch/referral/Defines$Jsonkey;->Data:Lio/branch/referral/Defines$Jsonkey;
-
-    invoke-virtual {v2}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-
-    .line 85
-    sget-object v1, Lio/branch/referral/Defines$Jsonkey;->Clicked_Branch_Link:Lio/branch/referral/Defines$Jsonkey;
-
-    invoke-virtual {v1}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    sget-object v1, Lio/branch/referral/Defines$Jsonkey;->Clicked_Branch_Link:Lio/branch/referral/Defines$Jsonkey;
-
-    .line 86
-    invoke-virtual {v1}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 90
-    invoke-static {}, Lio/branch/referral/n;->q()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "bnc_no_value"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 92
-    invoke-static {}, Lio/branch/referral/n;->s()I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    .line 93
-    invoke-virtual {p1}, Lio/branch/referral/ac;->b()Lorg/json/JSONObject;
-
-    move-result-object v0
-
-    sget-object v1, Lio/branch/referral/Defines$Jsonkey;->Data:Lio/branch/referral/Defines$Jsonkey;
-
-    invoke-virtual {v1}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 94
-    invoke-static {v0}, Lio/branch/referral/n;->m(Ljava/lang/String;)V
-
-    .line 100
-    :cond_0
-    invoke-virtual {p1}, Lio/branch/referral/ac;->b()Lorg/json/JSONObject;
+    invoke-virtual {p1}, Lio/branch/referral/aa;->b()Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -425,8 +367,8 @@
 
     if-eqz v0, :cond_2
 
-    .line 101
-    invoke-virtual {p1}, Lio/branch/referral/ac;->b()Lorg/json/JSONObject;
+    .line 66
+    invoke-virtual {p1}, Lio/branch/referral/aa;->b()Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -440,11 +382,114 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lio/branch/referral/n;->f(Ljava/lang/String;)V
+    invoke-static {v0}, Lio/branch/referral/m;->f(Ljava/lang/String;)V
 
-    .line 106
+    .line 71
     :goto_0
-    invoke-virtual {p1}, Lio/branch/referral/ac;->b()Lorg/json/JSONObject;
+    invoke-virtual {p1}, Lio/branch/referral/aa;->b()Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    sget-object v1, Lio/branch/referral/Defines$Jsonkey;->Data:Lio/branch/referral/Defines$Jsonkey;
+
+    invoke-virtual {v1}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 72
+    new-instance v0, Lorg/json/JSONObject;
+
+    invoke-virtual {p1}, Lio/branch/referral/aa;->b()Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    sget-object v2, Lio/branch/referral/Defines$Jsonkey;->Data:Lio/branch/referral/Defines$Jsonkey;
+
+    invoke-virtual {v2}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+
+    .line 74
+    sget-object v1, Lio/branch/referral/Defines$Jsonkey;->Clicked_Branch_Link:Lio/branch/referral/Defines$Jsonkey;
+
+    invoke-virtual {v1}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    sget-object v1, Lio/branch/referral/Defines$Jsonkey;->Clicked_Branch_Link:Lio/branch/referral/Defines$Jsonkey;
+
+    .line 75
+    invoke-virtual {v1}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 79
+    invoke-static {}, Lio/branch/referral/m;->u()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "bnc_no_value"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 81
+    invoke-static {}, Lio/branch/referral/m;->w()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    .line 82
+    invoke-virtual {p1}, Lio/branch/referral/aa;->b()Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    sget-object v1, Lio/branch/referral/Defines$Jsonkey;->Data:Lio/branch/referral/Defines$Jsonkey;
+
+    invoke-virtual {v1}, Lio/branch/referral/Defines$Jsonkey;->getKey()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 83
+    invoke-static {v0}, Lio/branch/referral/m;->o(Ljava/lang/String;)V
+
+    .line 89
+    :cond_0
+    invoke-virtual {p1}, Lio/branch/referral/aa;->b()Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -460,8 +505,8 @@
 
     if-eqz v0, :cond_3
 
-    .line 107
-    invoke-virtual {p1}, Lio/branch/referral/ac;->b()Lorg/json/JSONObject;
+    .line 90
+    invoke-virtual {p1}, Lio/branch/referral/aa;->b()Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -475,19 +520,19 @@
 
     move-result-object v0
 
-    .line 108
-    invoke-static {v0}, Lio/branch/referral/n;->l(Ljava/lang/String;)V
+    .line 91
+    invoke-static {v0}, Lio/branch/referral/m;->n(Ljava/lang/String;)V
 
-    .line 112
+    .line 96
     :goto_1
-    iget-object v0, p0, Lio/branch/referral/z;->g:Lio/branch/referral/Branch$e;
+    iget-object v0, p0, Lio/branch/referral/z;->a:Lio/branch/referral/Branch$e;
 
     if-eqz v0, :cond_1
 
-    .line 113
-    iget-object v0, p0, Lio/branch/referral/z;->g:Lio/branch/referral/Branch$e;
+    .line 97
+    iget-object v0, p0, Lio/branch/referral/z;->a:Lio/branch/referral/Branch$e;
 
-    invoke-virtual {p2}, Lio/branch/referral/Branch;->e()Lorg/json/JSONObject;
+    invoke-virtual {p2}, Lio/branch/referral/Branch;->f()Lorg/json/JSONObject;
 
     move-result-object v1
 
@@ -495,37 +540,37 @@
 
     invoke-interface {v0, v1, v2}, Lio/branch/referral/Branch$e;->a(Lorg/json/JSONObject;Lio/branch/referral/e;)V
 
-    .line 116
+    .line 100
     :cond_1
-    iget-object v0, p0, Lio/branch/referral/z;->h:Lio/branch/referral/ad;
+    iget-object v0, p0, Lio/branch/referral/z;->b:Lio/branch/referral/ab;
 
-    invoke-virtual {v0}, Lio/branch/referral/ad;->e()Ljava/lang/String;
+    invoke-virtual {v0}, Lio/branch/referral/ab;->d()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lio/branch/referral/n;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lio/branch/referral/m;->a(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 121
+    .line 105
     :goto_2
-    invoke-virtual {p0, p1, p2}, Lio/branch/referral/z;->b(Lio/branch/referral/ac;Lio/branch/referral/Branch;)V
+    invoke-virtual {p0, p1, p2}, Lio/branch/referral/z;->a(Lio/branch/referral/aa;Lio/branch/referral/Branch;)V
 
-    .line 122
+    .line 106
     return-void
 
-    .line 103
+    .line 68
     :cond_2
     :try_start_1
     const-string v0, "bnc_no_value"
 
-    invoke-static {v0}, Lio/branch/referral/n;->f(Ljava/lang/String;)V
+    invoke-static {v0}, Lio/branch/referral/m;->f(Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 119
+    .line 103
     :catch_0
     move-exception v0
 
@@ -533,112 +578,14 @@
 
     goto :goto_2
 
-    .line 110
+    .line 93
     :cond_3
     :try_start_2
     const-string v0, "bnc_no_value"
 
-    invoke-static {v0}, Lio/branch/referral/n;->l(Ljava/lang/String;)V
+    invoke-static {v0}, Lio/branch/referral/m;->n(Ljava/lang/String;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
     goto :goto_1
-.end method
-
-.method public final a()Z
-    .locals 1
-
-    .prologue
-    .line 156
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final a(Landroid/content/Context;)Z
-    .locals 5
-
-    .prologue
-    .line 145
-    invoke-static {p1}, Lio/branch/referral/u;->b(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 146
-    iget-object v0, p0, Lio/branch/referral/z;->g:Lio/branch/referral/Branch$e;
-
-    if-eqz v0, :cond_0
-
-    .line 147
-    iget-object v0, p0, Lio/branch/referral/z;->g:Lio/branch/referral/Branch$e;
-
-    const/4 v1, 0x0
-
-    new-instance v2, Lio/branch/referral/e;
-
-    const-string v3, "Trouble initializing Branch."
-
-    const/16 v4, -0x66
-
-    invoke-direct {v2, v3, v4}, Lio/branch/referral/e;-><init>(Ljava/lang/String;I)V
-
-    invoke-interface {v0, v1, v2}, Lio/branch/referral/Branch$e;->a(Lorg/json/JSONObject;Lio/branch/referral/e;)V
-
-    .line 149
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 151
-    :goto_0
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final b()V
-    .locals 1
-
-    .prologue
-    .line 161
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lio/branch/referral/z;->g:Lio/branch/referral/Branch$e;
-
-    .line 162
-    return-void
-.end method
-
-.method public final k()Z
-    .locals 1
-
-    .prologue
-    .line 73
-    iget-object v0, p0, Lio/branch/referral/z;->g:Lio/branch/referral/Branch$e;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final l()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 166
-    const-string v0, "install"
-
-    return-object v0
 .end method

@@ -39,7 +39,7 @@
     .locals 0
 
     .prologue
-    .line 94
+    .line 91
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,7 +51,7 @@
     .locals 1
 
     .prologue
-    .line 104
+    .line 101
     iget-object v0, p0, Lkik/core/datatypes/c$b;->a:Ljava/lang/String;
 
     return-object v0
@@ -61,7 +61,7 @@
     .locals 1
 
     .prologue
-    .line 109
+    .line 106
     iget-boolean v0, p0, Lkik/core/datatypes/c$b;->b:Z
 
     return v0
@@ -71,7 +71,7 @@
     .locals 1
 
     .prologue
-    .line 114
+    .line 111
     iget-object v0, p0, Lkik/core/datatypes/c$b;->c:[Lcom/kik/messagepath/model/Keyboards$SuggestedResponseItem;
 
     return-object v0

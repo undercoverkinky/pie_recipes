@@ -4,19 +4,19 @@
 
 
 # instance fields
-.field protected b:Lkik/core/interfaces/IAddressBookIntegration;
+.field protected c:Lkik/core/interfaces/IAddressBookIntegration;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
-.field protected c:Lcom/kik/android/Mixpanel;
+.field protected d:Lcom/kik/android/Mixpanel;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
-.field private d:Landroid/preference/PreferenceScreen;
+.field private e:Landroid/preference/PreferenceScreen;
 
-.field private e:Landroid/preference/Preference;
+.field private f:Landroid/preference/Preference;
 
 
 # direct methods
@@ -52,7 +52,7 @@
     .prologue
     .line 26
     .line 2194
-    iget-object v0, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->c:Lcom/kik/android/Mixpanel;
+    iget-object v0, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->d:Lcom/kik/android/Mixpanel;
 
     const-string v1, "ABM Bad Actor Opt In Cancelled"
 
@@ -83,7 +83,7 @@
 
     .prologue
     .line 26
-    iget-object v0, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->e:Landroid/preference/Preference;
+    iget-object v0, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->f:Landroid/preference/Preference;
 
     return-object v0
 .end method
@@ -93,7 +93,7 @@
 
     .prologue
     .line 166
-    iget-object v0, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->c:Lcom/kik/android/Mixpanel;
+    iget-object v0, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->d:Lcom/kik/android/Mixpanel;
 
     const-string v1, "ABM Opt In Confirmed"
 
@@ -124,9 +124,9 @@
 
     .prologue
     .line 96
-    iget-object v0, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->d:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->e:Landroid/preference/PreferenceScreen;
 
-    iget-object v1, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->e:Landroid/preference/Preference;
+    iget-object v1, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->f:Landroid/preference/Preference;
 
     invoke-virtual {v0, v1}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
@@ -138,7 +138,7 @@
     invoke-virtual {p1, v0}, Landroid/preference/TwoStatePreference;->setChecked(Z)V
 
     .line 99
-    iget-object v0, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->b:Lkik/core/interfaces/IAddressBookIntegration;
+    iget-object v0, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->c:Lkik/core/interfaces/IAddressBookIntegration;
 
     const-string v1, "settings"
 
@@ -156,7 +156,7 @@
 
     .prologue
     .line 26
-    iget-object v0, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->d:Landroid/preference/PreferenceScreen;
+    iget-object v0, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->e:Landroid/preference/PreferenceScreen;
 
     return-object v0
 .end method
@@ -177,7 +177,7 @@
     .prologue
     .line 26
     .line 3173
-    iget-object v0, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->c:Lcom/kik/android/Mixpanel;
+    iget-object v0, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->d:Lcom/kik/android/Mixpanel;
 
     const-string v1, "ABM Opt Out Confirmed"
 
@@ -210,7 +210,7 @@
 
     .prologue
     .line 51
-    iput-object p1, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->e:Landroid/preference/Preference;
+    iput-object p1, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->f:Landroid/preference/Preference;
 
     .line 52
     return-void
@@ -221,7 +221,7 @@
 
     .prologue
     .line 46
-    iput-object p1, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->d:Landroid/preference/PreferenceScreen;
+    iput-object p1, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->e:Landroid/preference/PreferenceScreen;
 
     .line 47
     return-void
@@ -248,7 +248,7 @@
     move-result-object v0
 
     .line 64
-    iget-object v1, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->b:Lkik/core/interfaces/IAddressBookIntegration;
+    iget-object v1, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->c:Lkik/core/interfaces/IAddressBookIntegration;
 
     invoke-interface {v1}, Lkik/core/interfaces/IAddressBookIntegration;->b()Z
 
@@ -264,7 +264,7 @@
     .locals 4
 
     .prologue
-    const v3, 0x7f0a03c3
+    const v3, 0x7f0903d7
 
     .line 71
     instance-of v0, p2, Ljava/lang/Boolean;
@@ -286,7 +286,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a01f9
+    const v1, 0x7f09020d
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -300,7 +300,7 @@
     if-eqz v0, :cond_2
 
     .line 77
-    iget-object v0, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->b:Lkik/core/interfaces/IAddressBookIntegration;
+    iget-object v0, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->c:Lkik/core/interfaces/IAddressBookIntegration;
 
     invoke-interface {v0}, Lkik/core/interfaces/IAddressBookIntegration;->d()Ljava/lang/Boolean;
 
@@ -323,7 +323,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a01fb
+    const v2, 0x7f09020f
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -338,7 +338,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a017d
+    const v2, 0x7f09017e
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -353,7 +353,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a0269
+    const v2, 0x7f09027d
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -394,10 +394,10 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
 
     .line 1187
-    iget-object v0, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->c:Lcom/kik/android/Mixpanel;
+    iget-object v0, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->d:Lcom/kik/android/Mixpanel;
 
     const-string v1, "ABM Bad Actor Opt In Shown"
 
@@ -449,7 +449,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a03ba
+    const v2, 0x7f0903ce
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -464,7 +464,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a0209
+    const v2, 0x7f09021d
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -479,7 +479,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a03f5
+    const v2, 0x7f090409
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -520,10 +520,10 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
 
     .line 2180
-    iget-object v0, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->c:Lcom/kik/android/Mixpanel;
+    iget-object v0, p0, Lkik/android/widget/preferences/UsePhoneContactsPreference;->d:Lcom/kik/android/Mixpanel;
 
     const-string v1, "ABM Opt Out Shown"
 

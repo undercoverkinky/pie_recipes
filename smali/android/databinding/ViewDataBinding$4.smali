@@ -30,7 +30,7 @@
     .locals 0
 
     .prologue
-    .line 110
+    .line 112
     invoke-direct {p0}, Landroid/databinding/CallbackRegistry$NotifierCallback;-><init>()V
 
     return-void
@@ -42,15 +42,15 @@
     .locals 1
 
     .prologue
-    .line 114
+    .line 116
     packed-switch p3, :pswitch_data_0
 
-    .line 127
+    .line 129
     :cond_0
     :goto_0
     return-void
 
-    .line 116
+    .line 118
     :pswitch_0
     invoke-virtual {p1, p2}, Landroid/databinding/OnRebindCallback;->onPreBind(Landroid/databinding/ViewDataBinding;)Z
 
@@ -58,26 +58,26 @@
 
     if-nez v0, :cond_0
 
-    .line 117
+    .line 119
     const/4 v0, 0x1
 
     invoke-static {p2, v0}, Landroid/databinding/ViewDataBinding;->access$002(Landroid/databinding/ViewDataBinding;Z)Z
 
     goto :goto_0
 
-    .line 121
+    .line 123
     :pswitch_1
     invoke-virtual {p1, p2}, Landroid/databinding/OnRebindCallback;->onCanceled(Landroid/databinding/ViewDataBinding;)V
 
     goto :goto_0
 
-    .line 124
+    .line 126
     :pswitch_2
     invoke-virtual {p1, p2}, Landroid/databinding/OnRebindCallback;->onBound(Landroid/databinding/ViewDataBinding;)V
 
     goto :goto_0
 
-    .line 114
+    .line 116
     nop
 
     :pswitch_data_0
@@ -92,7 +92,7 @@
     .locals 0
 
     .prologue
-    .line 110
+    .line 112
     check-cast p1, Landroid/databinding/OnRebindCallback;
 
     check-cast p2, Landroid/databinding/ViewDataBinding;

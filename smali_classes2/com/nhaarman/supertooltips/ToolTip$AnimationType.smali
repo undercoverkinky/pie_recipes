@@ -44,7 +44,7 @@
 
     const/4 v2, 0x0
 
-    .line 24
+    .line 25
     new-instance v0, Lcom/nhaarman/supertooltips/ToolTip$AnimationType;
 
     const-string v1, "FROM_MASTER_VIEW"
@@ -53,7 +53,7 @@
 
     sput-object v0, Lcom/nhaarman/supertooltips/ToolTip$AnimationType;->FROM_MASTER_VIEW:Lcom/nhaarman/supertooltips/ToolTip$AnimationType;
 
-    .line 25
+    .line 26
     new-instance v0, Lcom/nhaarman/supertooltips/ToolTip$AnimationType;
 
     const-string v1, "FROM_TOP"
@@ -62,7 +62,7 @@
 
     sput-object v0, Lcom/nhaarman/supertooltips/ToolTip$AnimationType;->FROM_TOP:Lcom/nhaarman/supertooltips/ToolTip$AnimationType;
 
-    .line 26
+    .line 27
     new-instance v0, Lcom/nhaarman/supertooltips/ToolTip$AnimationType;
 
     const-string v1, "NONE"

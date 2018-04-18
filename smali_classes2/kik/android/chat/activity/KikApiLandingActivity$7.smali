@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 96
+    .line 118
     iput-object p1, p0, Lkik/android/chat/activity/KikApiLandingActivity$7;->b:Lkik/android/chat/activity/KikApiLandingActivity;
 
     invoke-direct {p0, p2}, Lcom/kik/a/a;-><init>(Ljava/lang/String;)V
@@ -54,7 +54,7 @@
     .end annotation
 
     .prologue
-    .line 100
+    .line 122
     iget-object v0, p0, Lkik/android/chat/activity/KikApiLandingActivity$7;->b:Lkik/android/chat/activity/KikApiLandingActivity;
 
     invoke-virtual {p0}, Lkik/android/chat/activity/KikApiLandingActivity$7;->b()Ljava/lang/String;
@@ -69,6 +69,6 @@
 
     invoke-static {v0, p1, v1, v2, v3}, Lkik/android/chat/activity/KikApiLandingActivity;->a(Lkik/android/chat/activity/KikApiLandingActivity;Ljava/util/Map;Ljava/lang/String;ZZ)V
 
-    .line 101
+    .line 123
     return-void
 .end method

@@ -20,9 +20,9 @@
 
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field public callingUrl:Ljava/lang/String;
 
-.field public b:Lorg/json/JSONObject;
+.field public requestData:Lorg/json/JSONObject;
 
 
 # direct methods
@@ -52,7 +52,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/kik/cards/web/picker/PickerRequest;->a:Ljava/lang/String;
+    iput-object v0, p0, Lcom/kik/cards/web/picker/PickerRequest;->callingUrl:Ljava/lang/String;
 
     .line 37
     :try_start_0
@@ -64,7 +64,7 @@
 
     invoke-direct {v0, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/kik/cards/web/picker/PickerRequest;->b:Lorg/json/JSONObject;
+    iput-object v0, p0, Lcom/kik/cards/web/picker/PickerRequest;->requestData:Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -80,12 +80,12 @@
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    iput-object v0, p0, Lcom/kik/cards/web/picker/PickerRequest;->b:Lorg/json/JSONObject;
+    iput-object v0, p0, Lcom/kik/cards/web/picker/PickerRequest;->requestData:Lorg/json/JSONObject;
 
     goto :goto_0
 .end method
 
-.method synthetic constructor <init>(Landroid/os/Parcel;B)V
+.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/kik/cards/web/picker/PickerRequest$1;)V
     .locals 0
 
     .prologue
@@ -103,10 +103,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 16
-    iput-object p1, p0, Lcom/kik/cards/web/picker/PickerRequest;->a:Ljava/lang/String;
+    iput-object p1, p0, Lcom/kik/cards/web/picker/PickerRequest;->callingUrl:Ljava/lang/String;
 
     .line 17
-    iput-object p2, p0, Lcom/kik/cards/web/picker/PickerRequest;->b:Lorg/json/JSONObject;
+    iput-object p2, p0, Lcom/kik/cards/web/picker/PickerRequest;->requestData:Lorg/json/JSONObject;
 
     .line 18
     return-void
@@ -129,12 +129,12 @@
 
     .prologue
     .line 29
-    iget-object v0, p0, Lcom/kik/cards/web/picker/PickerRequest;->a:Ljava/lang/String;
+    iget-object v0, p0, Lcom/kik/cards/web/picker/PickerRequest;->callingUrl:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 30
-    iget-object v0, p0, Lcom/kik/cards/web/picker/PickerRequest;->b:Lorg/json/JSONObject;
+    iget-object v0, p0, Lcom/kik/cards/web/picker/PickerRequest;->requestData:Lorg/json/JSONObject;
 
     invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 

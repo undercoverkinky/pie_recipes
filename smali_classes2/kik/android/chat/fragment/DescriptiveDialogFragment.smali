@@ -5,34 +5,26 @@
 
 # instance fields
 .field protected _button:Landroid/widget/Button;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f110183
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f10019f
     .end annotation
 .end field
 
 .field protected _descriptionTextView:Lkik/android/widget/RobotoTextView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f110182
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f10019e
     .end annotation
 .end field
 
 .field protected _iconImageView:Landroid/widget/ImageView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f110180
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f10019c
     .end annotation
 .end field
 
 .field protected _titleTextView:Lkik/android/widget/RobotoTextView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f110181
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f10019d
     .end annotation
 .end field
 
@@ -56,25 +48,25 @@
 
     const/4 v2, 0x0
 
-    .line 64
+    .line 65
     const/4 v0, 0x2
 
     if-ne p1, v0, :cond_0
 
-    .line 65
+    .line 66
     new-array v0, v1, [Landroid/view/View;
 
     iget-object v1, p0, Lkik/android/chat/fragment/DescriptiveDialogFragment;->_iconImageView:Landroid/widget/ImageView;
 
     aput-object v1, v0, v2
 
-    invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->g([Landroid/view/View;)V
 
-    .line 70
+    .line 71
     :goto_0
     return-void
 
-    .line 68
+    .line 69
     :cond_0
     new-array v0, v1, [Landroid/view/View;
 
@@ -82,7 +74,7 @@
 
     aput-object v1, v0, v2
 
-    invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->d([Landroid/view/View;)V
 
     goto :goto_0
 .end method
@@ -109,11 +101,14 @@
 
     .prologue
     .line 59
+    invoke-super {p0, p1}, Lkik/android/chat/fragment/CustomDialogFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+
+    .line 60
     iget v0, p1, Landroid/content/res/Configuration;->orientation:I
 
     invoke-direct {p0, v0}, Lkik/android/chat/fragment/DescriptiveDialogFragment;->a(I)V
 
-    .line 60
+    .line 61
     return-void
 .end method
 
@@ -127,14 +122,14 @@
     invoke-super {p0, p1, p2, p3}, Lkik/android/chat/fragment/CustomDialogFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     .line 33
-    const v0, 0x7f040063
+    const v0, 0x7f04005e
 
     invoke-virtual {p1, v0, p2, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v0
 
     .line 34
-    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)V
+    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)Lbutterknife/Unbinder;
 
     .line 37
     iget-object v1, p0, Lkik/android/chat/fragment/DescriptiveDialogFragment;->_titleTextView:Lkik/android/widget/RobotoTextView;

@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="abc_action_bar_home_description">Visa startsidan</string>
+    <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
+    <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
     <string name="abc_action_bar_up_description">Navigera uppåt</string>
     <string name="abc_action_menu_overflow_description">Fler alternativ</string>
     <string name="abc_action_mode_done">Klart</string>
     <string name="abc_activity_chooser_view_see_all">Visa alla</string>
     <string name="abc_activitychooserview_choose_application">Välj en app</string>
+    <string name="abc_capital_off">AV</string>
+    <string name="abc_capital_on">PÅ</string>
+    <string name="abc_search_hint">Sök …</string>
     <string name="abc_searchview_description_clear">Ta bort frågan</string>
     <string name="abc_searchview_description_query">Sökfråga</string>
     <string name="abc_searchview_description_search">Sök</string>
@@ -13,37 +18,33 @@
     <string name="abc_searchview_description_voice">Röstsökning</string>
     <string name="abc_shareactionprovider_share_with">Dela med</string>
     <string name="abc_shareactionprovider_share_with_application">Dela med %s</string>
-    <string name="common_google_play_services_api_unavailable_text">För %1$s krävs en eller flera Google Play-tjänster som inte är tillgängliga för närvarande. Kontakta utvecklaren om du vill ha hjälp.</string>
-    <string name="common_google_play_services_enable_button">Aktivera Google Play Tjänster</string>
+    <string name="abc_toolbar_collapse_description">Komprimera</string>
+    <string name="common_google_play_services_enable_button">Aktivera</string>
     <string name="common_google_play_services_enable_text">%1$s fungerar inte om du inte aktiverar Google Play-tjänster.</string>
     <string name="common_google_play_services_enable_title">Aktivera Google Play-tjänster</string>
-    <string name="common_google_play_services_install_button">Hämta Google Play-tjänster</string>
-    <string name="common_google_play_services_install_text_phone">Du måste installera Google Play-tjänster för att kunna köra %1$s på mobilen.</string>
-    <string name="common_google_play_services_install_text_tablet">Du måste installera Google Play-tjänster för att kunna köra %1$s på surfplattan.</string>
+    <string name="common_google_play_services_install_button">Installera</string>
+    <string name="common_google_play_services_install_text">%1$s kan inte köras utan Google Play-tjänsterna, som saknas på enheten.</string>
     <string name="common_google_play_services_install_title">Hämta Google Play-tjänster</string>
-    <string name="common_google_play_services_invalid_account_text">Det angivna kontot finns inte på den här enheten. Välj ett annat konto.</string>
-    <string name="common_google_play_services_invalid_account_title">Ogiltigt konto</string>
-    <string name="common_google_play_services_network_error_text">Du måste ha en dataanslutning för att kunna ansluta till Google Play-tjänster.</string>
-    <string name="common_google_play_services_network_error_title">Nätverksfel</string>
     <string name="common_google_play_services_notification_ticker">Fel på Google Play-tjänster</string>
-    <string name="common_google_play_services_resolution_required_text">Slutför åtgärden som krävs av %1$s.</string>
-    <string name="common_google_play_services_resolution_required_title">Google Play-tjänster måste åtgärdas</string>
-    <string name="common_google_play_services_restricted_profile_text">Det går inte att komma åt konton från en begränsad profil.</string>
-    <string name="common_google_play_services_restricted_profile_title">Begränsad profil</string>
-    <string name="common_google_play_services_sign_in_failed_text">Ett fel uppstod när du försökte logga in på kontot. Välj ett annat konto.</string>
-    <string name="common_google_play_services_sign_in_failed_title">Det gick inte att logga in</string>
-    <string name="common_google_play_services_unknown_issue">%1$s har problem med Google Play-tjänster. Om problemet kvarstår kontaktar du utvecklaren.</string>
-    <string name="common_google_play_services_unsupported_text">För %1$s krävs Google Play-tjänster, och dessa stöds inte på enheten. Kontakta tillverkaren om du vill ha hjälp.</string>
-    <string name="common_google_play_services_unsupported_title">Google Play-tjänster</string>
+    <string name="common_google_play_services_unknown_issue">Det har uppstått ett fel mellan %1$s och Google Play-tjänsterna. Försök igen.</string>
+    <string name="common_google_play_services_unsupported_text">%1$s fungerar inte utan Google Play-tjänsterna, som inte stöds på enheten.</string>
     <string name="common_google_play_services_update_button">Uppdatera</string>
     <string name="common_google_play_services_update_text">%1$s kan inte köras om du inte uppdaterar Google Play-tjänsterna.</string>
     <string name="common_google_play_services_update_title">Uppdatera Google Play-tjänster</string>
     <string name="common_google_play_services_updating_text">%1$s kan inte köras utan Google Play-tjänster, och dessa uppdateras för närvarande.</string>
-    <string name="common_google_play_services_updating_title">Google Play-tjänster uppdateras</string>
     <string name="common_google_play_services_wear_update_text">En ny version av Google Play-tjänster krävs. Den uppdateras automatiskt inom kort.</string>
     <string name="common_open_on_phone">Öppna på mobilen</string>
     <string name="common_signin_button_text">Logga in</string>
     <string name="common_signin_button_text_long">Logga in med Google</string>
+    <string name="gcm_fallback_notification_channel_label">Diverse</string>
+    <string name="s1">Spara bild</string>
+    <string name="s2">Tillåter du att annonsen sparar bilden i Bildgalleriet?</string>
+    <string name="s3">Godkänn</string>
+    <string name="s4">Godkänn inte</string>
+    <string name="s5">Skapa kalenderhändelse</string>
+    <string name="s6">Tillåter du att annonsen skapar en kalenderhändelse?</string>
+    <string name="search_menu_title">Sök</string>
+    <string name="status_bar_notification_info_overflow">>999</string>
     <string name="Blue">Blå</string>
     <string name="Gold">Guld</string>
     <string name="Green">Grön</string>
@@ -74,8 +75,8 @@
     <string name="abm_options_dialog_hint">Personer som har ditt telefonnummer eller e-postadress kommer att kunna hitta dig</string>
     <string name="abm_options_dialog_prompt">Tillåt att vänner hittar mig</string>
     <string name="abm_privacy_options_title">Sekretessalternativ</string>
-    <string name="about_copyright_text">Copyright © 2015 Kik Interactive Inc Med ensamrätt</string>
-    <string name="about_copyright_text_extended">"Copyright © 2015 Kik Interactive Inc Med ensamrätt
+    <string name="about_copyright_text">Copyright © 2018 Kik Interactive Inc Med ensamrätt</string>
+    <string name="about_copyright_text_extended">"Copyright © 2018 Kik Interactive Inc Med ensamrätt
 
 Kik Interactive Inc
 420 Weber St North
@@ -83,7 +84,7 @@ Suite I
 Waterloo, ON
 Kanada
 N2L 4E7"</string>
-    <string name="about_copyright_text_extended_link">"Copyright © 2015 Kik Interactive Inc Med ensamrätt
+    <string name="about_copyright_text_extended_link">"Copyright © 2018 Kik Interactive Inc Med ensamrätt
 
 Kik Interactive Inc
 420 Weber St North
@@ -467,6 +468,51 @@ Du måste logga in igen för att fortsätta använda Kik."</string>
     <string name="inline_bot_error">Tryck för att försöka igen</string>
     <string name="inline_bot_loading">Söker bots...</string>
     <string name="inline_bot_no_results">Hitta fler bots i Bot Shop</string>
+    <string name="instabug_audio_recorder_permission_denied">Tillstånd för ljudinspelning nekades</string>
+    <string name="instabug_err_invalid_comment">Vänligen fyll i en giltig kommentar</string>
+    <string name="instabug_err_invalid_email">Vänligen ange en giltig e-postadress</string>
+    <string name="instabug_err_invalid_extra_field">Vänligen skicka in en giltig %1$s</string>
+    <string name="instabug_external_storage_permission_denied">Lagringsåtkomst nekad</string>
+    <string name="instabug_str_action_submit">Skicka</string>
+    <string name="instabug_str_add_photo">Välj bild från galleri</string>
+    <string name="instabug_str_alert_message_max_attachments">Ta bort en befintlig bilagan du vill lägga till en ny.</string>
+    <string name="instabug_str_alert_title_max_attachments">Kan inte lägga till bilaga</string>
+    <string name="instabug_str_annotate">Rita på skärmavbild</string>
+    <string name="instabug_str_audio">Ljud</string>
+    <string name="instabug_str_bug_comment_hint">Vad gick fel?</string>
+    <string name="instabug_str_bug_header">Rapportera ett problem</string>
+    <string name="instabug_str_conversations">Samtal</string>
+    <string name="instabug_str_dialog_message_preparing">Förbereder…</string>
+    <string name="instabug_str_dismiss">avfärda</string>
+    <string name="instabug_str_email_hint">Ange din e-postadress</string>
+    <string name="instabug_str_error_survey_without_answer">Undersökningen kan inte lämnas utan svar.</string>
+    <string name="instabug_str_feedback_comment_hint">Hur kan vi bli bättre?</string>
+    <string name="instabug_str_feedback_header">Föreslå en förbättring</string>
+    <string name="instabug_str_hint_enter_your_answer">Ange ditt svar</string>
+    <string name="instabug_str_hold_to_record">Tryck och håll för att spela in</string>
+    <string name="instabug_str_image">Bild</string>
+    <string name="instabug_str_image_loading_error">Kunde inte läsa in bild</string>
+    <string name="instabug_str_invocation_dialog_title">Hur kan vi hjälpa till?</string>
+    <string name="instabug_str_messages">Meddelanden</string>
+    <string name="instabug_str_notification_title">Teamet för %1$s</string>
+    <string name="instabug_str_notifications_body">%1$d nya meddelanden från bland andra %2$s</string>
+    <string name="instabug_str_please_wait">Vänligen vänta ett ögonblick</string>
+    <string name="instabug_str_record_audio">Spela in en röstnotis</string>
+    <string name="instabug_str_record_video">Gör en skärminspelning</string>
+    <string name="instabug_str_release_stop_record">Släpp för att bifoga</string>
+    <string name="instabug_str_sending_message_hint">Skriv ditt meddelande</string>
+    <string name="instabug_str_shake_hint">Vi vill gärna höra dina synpunkter.&lt;br/>&lt;b>Skaka&lt;/b> din enhet för att prata med oss.</string>
+    <string name="instabug_str_success_note">"Vi har tagit emot dina synpunkter.
+Tack för att du hjälper oss att göra %s bättre."</string>
+    <string name="instabug_str_swipe_hint">Vi vill gärna höra dina synpunkter.&lt;br/>&lt;b>Svep med två fingrar&lt;/b> för att prata med oss.</string>
+    <string name="instabug_str_take_screenshot">Ta en skärmavbild</string>
+    <string name="instabug_str_talk_to_us">Prata med oss</string>
+    <string name="instabug_str_thank_you">Tack</string>
+    <string name="instabug_str_video">Video</string>
+    <string name="instabug_str_video_encoder_busy">Videokodaren är upptage med att koda en annan video</string>
+    <string name="instabug_str_video_encoding_error">Kunde inte koda videon på grund av brist på ledigt minne</string>
+    <string name="instabug_str_video_player">Videospelare</string>
+    <string name="instabug_str_video_recording_hint">Tlačová rekord, keď je pripravený</string>
     <string name="invalid_card_num_error">Ogiltigt kortnummer</string>
     <string name="invalid_cvv_error">Ogiltig CVV</string>
     <string name="invalid_expiry_date_error">Ogiltig utgångsdatum</string>

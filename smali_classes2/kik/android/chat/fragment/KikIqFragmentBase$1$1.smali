@@ -47,7 +47,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikIqFragmentBase;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikIqFragmentBase;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
 
     .line 89
     return-void

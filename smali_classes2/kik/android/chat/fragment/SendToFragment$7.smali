@@ -1,11 +1,11 @@
 .class final Lkik/android/chat/fragment/SendToFragment$7;
-.super Lkik/android/chat/vm/ae;
+.super Lkik/android/chat/vm/cc;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/SendToFragment;->ar()Lkik/android/chat/vm/s;
+    value = Lkik/android/chat/fragment/SendToFragment;->getNavigator()Lkik/android/chat/vm/bd;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -23,38 +23,25 @@
     .locals 0
 
     .prologue
-    .line 596
+    .line 620
     iput-object p1, p0, Lkik/android/chat/fragment/SendToFragment$7;->a:Lkik/android/chat/fragment/SendToFragment;
 
-    invoke-direct {p0, p2}, Lkik/android/chat/vm/ae;-><init>(Lkik/android/chat/fragment/KikScopedDialogFragment;)V
+    invoke-direct {p0, p2}, Lkik/android/chat/vm/cc;-><init>(Lkik/android/chat/fragment/KikScopedDialogFragment;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lkik/android/chat/vm/j;)V
+.method public final a(Lkik/android/chat/vm/ag;)V
     .locals 1
 
     .prologue
-    .line 605
+    .line 624
     iget-object v0, p0, Lkik/android/chat/fragment/SendToFragment$7;->a:Lkik/android/chat/fragment/SendToFragment;
 
-    invoke-static {v0, p1}, Lkik/android/chat/fragment/SendToFragment;->a(Lkik/android/chat/fragment/SendToFragment;Lkik/android/chat/vm/j;)V
+    invoke-static {v0, p1}, Lkik/android/chat/fragment/SendToFragment;->a(Lkik/android/chat/fragment/SendToFragment;Lkik/android/chat/vm/ag;)V
 
-    .line 606
-    return-void
-.end method
-
-.method public final a(Lkik/android/chat/vm/k;)V
-    .locals 1
-
-    .prologue
-    .line 600
-    iget-object v0, p0, Lkik/android/chat/fragment/SendToFragment$7;->a:Lkik/android/chat/fragment/SendToFragment;
-
-    invoke-static {v0, p1}, Lkik/android/chat/fragment/SendToFragment;->a(Lkik/android/chat/fragment/SendToFragment;Lkik/android/chat/vm/k;)V
-
-    .line 601
+    .line 625
     return-void
 .end method

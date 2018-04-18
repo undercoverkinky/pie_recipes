@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/kik/events/q;
+.implements Lcom/kik/events/p;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/kik/events/q",
+        "Lcom/kik/events/p",
         "<",
         "Lcom/kik/xdata/model/browser/XBrowserDomainInfo;",
         "[B>;"
@@ -57,7 +57,7 @@
     if-eqz p1, :cond_0
 
     .line 1075
-    invoke-virtual {p1}, Lcom/kik/xdata/model/browser/XBrowserDomainInfo;->c()Lcom/kik/xdata/model/browser/XBrowserAnonymousKey;
+    invoke-virtual {p1}, Lcom/kik/xdata/model/browser/XBrowserDomainInfo;->b()Lcom/kik/xdata/model/browser/XBrowserAnonymousKey;
 
     move-result-object v0
 
@@ -65,7 +65,7 @@
     if-eqz v0, :cond_0
 
     .line 1078
-    invoke-virtual {v0}, Lcom/kik/xdata/model/browser/XBrowserAnonymousKey;->c()Lcom/dyuproject/protostuff/c;
+    invoke-virtual {v0}, Lcom/kik/xdata/model/browser/XBrowserAnonymousKey;->b()Lcom/dyuproject/protostuff/c;
 
     move-result-object v0
 

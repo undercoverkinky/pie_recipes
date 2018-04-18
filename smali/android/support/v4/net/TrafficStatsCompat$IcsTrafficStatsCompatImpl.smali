@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 84
+    .line 98
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,10 +34,10 @@
     .locals 0
 
     .prologue
-    .line 87
+    .line 101
     invoke-static {}, Landroid/support/v4/net/TrafficStatsCompatIcs;->clearThreadStatsTag()V
 
-    .line 88
+    .line 102
     return-void
 .end method
 
@@ -45,7 +45,7 @@
     .locals 1
 
     .prologue
-    .line 92
+    .line 106
     invoke-static {}, Landroid/support/v4/net/TrafficStatsCompatIcs;->getThreadStatsTag()I
 
     move-result v0
@@ -57,10 +57,10 @@
     .locals 0
 
     .prologue
-    .line 97
+    .line 111
     invoke-static {p1}, Landroid/support/v4/net/TrafficStatsCompatIcs;->incrementOperationCount(I)V
 
-    .line 98
+    .line 112
     return-void
 .end method
 
@@ -68,10 +68,10 @@
     .locals 0
 
     .prologue
-    .line 102
+    .line 116
     invoke-static {p1, p2}, Landroid/support/v4/net/TrafficStatsCompatIcs;->incrementOperationCount(II)V
 
-    .line 103
+    .line 117
     return-void
 .end method
 
@@ -79,10 +79,26 @@
     .locals 0
 
     .prologue
-    .line 107
+    .line 121
     invoke-static {p1}, Landroid/support/v4/net/TrafficStatsCompatIcs;->setThreadStatsTag(I)V
 
-    .line 108
+    .line 122
+    return-void
+.end method
+
+.method public tagDatagramSocket(Ljava/net/DatagramSocket;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/net/SocketException;
+        }
+    .end annotation
+
+    .prologue
+    .line 136
+    invoke-static {p1}, Landroid/support/v4/net/TrafficStatsCompatIcs;->tagDatagramSocket(Ljava/net/DatagramSocket;)V
+
+    .line 137
     return-void
 .end method
 
@@ -95,10 +111,26 @@
     .end annotation
 
     .prologue
-    .line 112
+    .line 126
     invoke-static {p1}, Landroid/support/v4/net/TrafficStatsCompatIcs;->tagSocket(Ljava/net/Socket;)V
 
-    .line 113
+    .line 127
+    return-void
+.end method
+
+.method public untagDatagramSocket(Ljava/net/DatagramSocket;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/net/SocketException;
+        }
+    .end annotation
+
+    .prologue
+    .line 141
+    invoke-static {p1}, Landroid/support/v4/net/TrafficStatsCompatIcs;->untagDatagramSocket(Ljava/net/DatagramSocket;)V
+
+    .line 142
     return-void
 .end method
 
@@ -111,9 +143,9 @@
     .end annotation
 
     .prologue
-    .line 117
+    .line 131
     invoke-static {p1}, Landroid/support/v4/net/TrafficStatsCompatIcs;->untagSocket(Ljava/net/Socket;)V
 
-    .line 118
+    .line 132
     return-void
 .end method

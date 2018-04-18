@@ -1,24 +1,26 @@
 .class public Lcom/kik/cards/web/browser/WebHistoryPlugin;
-.super Lcom/kik/cards/web/plugin/d;
+.super Lcom/kik/cards/web/plugin/BridgePlugin;
 .source "SourceFile"
 
 
 # instance fields
-.field private final a:Lkik/core/f/b;
+.field private final _browserHistory:Lkik/core/d/b;
 
 
 # direct methods
-.method public constructor <init>(Lkik/core/f/b;)V
-    .locals 1
+.method public constructor <init>(Lkik/core/d/b;)V
+    .locals 2
 
     .prologue
     .line 29
-    const-string v0, "WebHistory"
+    const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/kik/cards/web/plugin/d;-><init>(Ljava/lang/String;)V
+    const-string v1, "WebHistory"
+
+    invoke-direct {p0, v0, v1}, Lcom/kik/cards/web/plugin/BridgePlugin;-><init>(ILjava/lang/String;)V
 
     .line 31
-    iput-object p1, p0, Lcom/kik/cards/web/browser/WebHistoryPlugin;->a:Lkik/core/f/b;
+    iput-object p1, p0, Lcom/kik/cards/web/browser/WebHistoryPlugin;->_browserHistory:Lkik/core/d/b;
 
     .line 32
     return-void
@@ -26,7 +28,7 @@
 
 
 # virtual methods
-.method public deleteHistoryItems(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/h;
+.method public deleteHistoryItems(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/g;
     .locals 4
     .annotation runtime Lcom/kik/cards/web/plugin/c;
     .end annotation
@@ -49,11 +51,11 @@
     if-nez v2, :cond_0
 
     .line 77
-    new-instance v0, Lcom/kik/cards/web/plugin/h;
+    new-instance v0, Lcom/kik/cards/web/plugin/g;
 
     const/16 v1, 0x190
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
 
     .line 101
     :goto_0
@@ -95,9 +97,9 @@
 
     .line 87
     :cond_1
-    iget-object v0, p0, Lcom/kik/cards/web/browser/WebHistoryPlugin;->a:Lkik/core/f/b;
+    iget-object v0, p0, Lcom/kik/cards/web/browser/WebHistoryPlugin;->_browserHistory:Lkik/core/d/b;
 
-    invoke-interface {v0, v3}, Lkik/core/f/b;->a(Ljava/util/List;)Lcom/kik/events/Promise;
+    invoke-interface {v0, v3}, Lkik/core/d/b;->a(Ljava/util/List;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -105,28 +107,28 @@
 
     invoke-direct {v1, p0, p1}, Lcom/kik/cards/web/browser/WebHistoryPlugin$2;-><init>(Lcom/kik/cards/web/browser/WebHistoryPlugin;Lcom/kik/cards/web/plugin/a;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
     .line 101
-    new-instance v0, Lcom/kik/cards/web/plugin/h;
+    new-instance v0, Lcom/kik/cards/web/plugin/g;
 
     const/16 v1, 0xca
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
 
     goto :goto_0
 .end method
 
-.method public getBrowsingHistory(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/h;
+.method public getBrowsingHistory(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/g;
     .locals 2
     .annotation runtime Lcom/kik/cards/web/plugin/c;
     .end annotation
 
     .prologue
     .line 37
-    iget-object v0, p0, Lcom/kik/cards/web/browser/WebHistoryPlugin;->a:Lkik/core/f/b;
+    iget-object v0, p0, Lcom/kik/cards/web/browser/WebHistoryPlugin;->_browserHistory:Lkik/core/d/b;
 
-    invoke-interface {v0}, Lkik/core/f/b;->a()Lcom/kik/events/Promise;
+    invoke-interface {v0}, Lkik/core/d/b;->a()Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -134,14 +136,14 @@
 
     invoke-direct {v1, p0, p1}, Lcom/kik/cards/web/browser/WebHistoryPlugin$1;-><init>(Lcom/kik/cards/web/browser/WebHistoryPlugin;Lcom/kik/cards/web/plugin/a;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
     .line 68
-    new-instance v0, Lcom/kik/cards/web/plugin/h;
+    new-instance v0, Lcom/kik/cards/web/plugin/g;
 
     const/16 v1, 0xca
 
-    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
 
     return-object v0
 .end method

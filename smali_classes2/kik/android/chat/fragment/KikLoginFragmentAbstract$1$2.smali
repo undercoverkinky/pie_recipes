@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 332
+    .line 344
     iput-object p1, p0, Lkik/android/chat/fragment/KikLoginFragmentAbstract$1$2;->b:Lkik/android/chat/fragment/KikLoginFragmentAbstract$1;
 
     iput-boolean p2, p0, Lkik/android/chat/fragment/KikLoginFragmentAbstract$1$2;->a:Z
@@ -44,7 +44,7 @@
     .locals 3
 
     .prologue
-    .line 336
+    .line 348
     iget-object v0, p0, Lkik/android/chat/fragment/KikLoginFragmentAbstract$1$2;->b:Lkik/android/chat/fragment/KikLoginFragmentAbstract$1;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikLoginFragmentAbstract$1;->a:Lkik/android/chat/fragment/KikLoginFragmentAbstract;
@@ -55,7 +55,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0204
+    const v1, 0x7f090218
 
     const/4 v2, 0x0
 
@@ -65,7 +65,7 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 337
+    .line 349
     iget-object v0, p0, Lkik/android/chat/fragment/KikLoginFragmentAbstract$1$2;->b:Lkik/android/chat/fragment/KikLoginFragmentAbstract$1;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikLoginFragmentAbstract$1;->a:Lkik/android/chat/fragment/KikLoginFragmentAbstract;
@@ -76,19 +76,16 @@
 
     iget-object v1, v1, Lkik/android/chat/fragment/KikLoginFragmentAbstract;->_userEmailField:Lkik/android/chat/view/ValidateableInputView;
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikLoginFragmentAbstract;->b(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikLoginFragmentAbstract;->hideKeyBoard(Landroid/view/View;)V
 
-    .line 338
+    .line 350
     iget-object v0, p0, Lkik/android/chat/fragment/KikLoginFragmentAbstract$1$2;->b:Lkik/android/chat/fragment/KikLoginFragmentAbstract$1;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikLoginFragmentAbstract$1;->a:Lkik/android/chat/fragment/KikLoginFragmentAbstract;
 
-    .line 1162
-    const/4 v1, 0x0
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikLoginFragmentAbstract;->resignWaitDialog()V
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikIqFragmentBase;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
-
-    .line 341
+    .line 353
     iget-object v0, p0, Lkik/android/chat/fragment/KikLoginFragmentAbstract$1$2;->b:Lkik/android/chat/fragment/KikLoginFragmentAbstract$1;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikLoginFragmentAbstract$1;->a:Lkik/android/chat/fragment/KikLoginFragmentAbstract;
@@ -103,8 +100,8 @@
 
     invoke-direct {v1, p0}, Lkik/android/chat/fragment/KikLoginFragmentAbstract$1$2$1;-><init>(Lkik/android/chat/fragment/KikLoginFragmentAbstract$1$2;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
-    .line 362
+    .line 375
     return-void
 .end method

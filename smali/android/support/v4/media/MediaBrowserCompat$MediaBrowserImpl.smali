@@ -39,8 +39,14 @@
 .method public abstract isConnected()Z
 .end method
 
+.method public abstract search(Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/media/MediaBrowserCompat$SearchCallback;)V
+.end method
+
+.method public abstract sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/media/MediaBrowserCompat$CustomActionCallback;)V
+.end method
+
 .method public abstract subscribe(Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;)V
 .end method
 
-.method public abstract unsubscribe(Ljava/lang/String;Landroid/os/Bundle;)V
+.method public abstract unsubscribe(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;)V
 .end method

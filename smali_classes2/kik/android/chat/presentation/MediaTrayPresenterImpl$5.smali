@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/support/v4/view/ViewPager$OnPageChangeListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 1293
+    .line 2488
     iput-object p1, p0, Lkik/android/chat/presentation/MediaTrayPresenterImpl$5;->a:Lkik/android/chat/presentation/MediaTrayPresenterImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,57 +36,37 @@
 
 
 # virtual methods
-.method public final onPageScrollStateChanged(I)V
-    .locals 2
+.method public final run()V
+    .locals 4
 
     .prologue
-    .line 1311
+    .line 2496
     iget-object v0, p0, Lkik/android/chat/presentation/MediaTrayPresenterImpl$5;->a:Lkik/android/chat/presentation/MediaTrayPresenterImpl;
 
-    invoke-static {v0}, Lkik/android/chat/presentation/MediaTrayPresenterImpl;->x(Lkik/android/chat/presentation/MediaTrayPresenterImpl;)Z
+    invoke-static {v0}, Lkik/android/chat/presentation/MediaTrayPresenterImpl;->U(Lkik/android/chat/presentation/MediaTrayPresenterImpl;)V
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    if-nez p1, :cond_0
-
-    .line 1312
+    .line 2497
     iget-object v0, p0, Lkik/android/chat/presentation/MediaTrayPresenterImpl$5;->a:Lkik/android/chat/presentation/MediaTrayPresenterImpl;
 
-    sget-object v1, Lkik/android/chat/presentation/MediaTrayPresenter$MediaTrayMode;->FINISHED_SCROLLING:Lkik/android/chat/presentation/MediaTrayPresenter$MediaTrayMode;
+    const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lkik/android/chat/presentation/MediaTrayPresenterImpl;->b(Lkik/android/chat/presentation/MediaTrayPresenterImpl;Lkik/android/chat/presentation/MediaTrayPresenter$MediaTrayMode;)V
+    new-array v1, v1, [Landroid/view/View;
 
-    .line 1313
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lkik/android/chat/presentation/MediaTrayPresenterImpl$5;->a:Lkik/android/chat/presentation/MediaTrayPresenterImpl;
+
+    iget-object v3, v3, Lkik/android/chat/presentation/MediaTrayPresenterImpl;->_mediaItemArea:Landroid/support/v4/view/ViewPager;
+
+    aput-object v3, v1, v2
+
+    invoke-static {v0, v1}, Lkik/android/chat/presentation/MediaTrayPresenterImpl;->a(Lkik/android/chat/presentation/MediaTrayPresenterImpl;[Landroid/view/View;)V
+
+    .line 2498
     iget-object v0, p0, Lkik/android/chat/presentation/MediaTrayPresenterImpl$5;->a:Lkik/android/chat/presentation/MediaTrayPresenterImpl;
 
-    invoke-static {v0}, Lkik/android/chat/presentation/MediaTrayPresenterImpl;->y(Lkik/android/chat/presentation/MediaTrayPresenterImpl;)Z
+    invoke-static {v0}, Lkik/android/chat/presentation/MediaTrayPresenterImpl;->V(Lkik/android/chat/presentation/MediaTrayPresenterImpl;)Z
 
-    .line 1315
-    :cond_0
-    return-void
-.end method
-
-.method public final onPageScrolled(IFI)V
-    .locals 0
-
-    .prologue
-    .line 1298
-    return-void
-.end method
-
-.method public final onPageSelected(I)V
-    .locals 2
-
-    .prologue
-    .line 1305
-    iget-object v0, p0, Lkik/android/chat/presentation/MediaTrayPresenterImpl$5;->a:Lkik/android/chat/presentation/MediaTrayPresenterImpl;
-
-    sget-object v1, Lkik/android/chat/presentation/MediaTrayPresenter$MediaTrayMode;->SIMPLE:Lkik/android/chat/presentation/MediaTrayPresenter$MediaTrayMode;
-
-    invoke-static {v0, v1}, Lkik/android/chat/presentation/MediaTrayPresenterImpl;->a(Lkik/android/chat/presentation/MediaTrayPresenterImpl;Lkik/android/chat/presentation/MediaTrayPresenter$MediaTrayMode;)V
-
-    .line 1306
+    .line 2499
     return-void
 .end method

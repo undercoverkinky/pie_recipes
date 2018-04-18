@@ -8,10 +8,10 @@
     .locals 0
 
     .prologue
-    .line 32
+    .line 14
     invoke-direct {p0, p1}, Lkik/android/chat/view/SearchBarViewImpl;-><init>(Landroid/content/Context;)V
 
-    .line 33
+    .line 15
     return-void
 .end method
 
@@ -19,10 +19,10 @@
     .locals 0
 
     .prologue
-    .line 37
+    .line 19
     invoke-direct {p0, p1, p2}, Lkik/android/chat/view/SearchBarViewImpl;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 38
+    .line 20
     return-void
 .end method
 
@@ -30,10 +30,10 @@
     .locals 0
 
     .prologue
-    .line 42
+    .line 24
     invoke-direct {p0, p1, p2, p3}, Lkik/android/chat/view/SearchBarViewImpl;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 43
+    .line 25
     return-void
 .end method
 
@@ -41,10 +41,10 @@
     .locals 0
 
     .prologue
-    .line 47
+    .line 29
     invoke-direct {p0, p1, p2, p3, p4}, Lkik/android/chat/view/SearchBarViewImpl;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 48
+    .line 30
     return-void
 .end method
 
@@ -54,7 +54,7 @@
     .locals 0
 
     .prologue
-    .line 66
+    .line 48
     return-void
 .end method
 
@@ -62,11 +62,11 @@
     .locals 2
 
     .prologue
-    .line 53
+    .line 35
     invoke-super {p0, p1, p2}, Lkik/android/chat/view/SearchBarViewImpl;->a(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 55
-    const v0, 0x7f11034c
+    .line 37
+    const v0, 0x7f1003c2
 
     invoke-virtual {p0, v0}, Lkik/android/chat/view/TransparentSearchBarViewImpl;->findViewById(I)Landroid/view/View;
 
@@ -74,22 +74,22 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 57
+    .line 39
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 58
+    .line 40
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lkik/android/chat/view/TransparentSearchBarViewImpl;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 59
+    .line 41
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0b009e
+    const v1, 0x7f0a00e8
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -97,6 +97,6 @@
 
     invoke-virtual {p0, v0}, Lkik/android/chat/view/TransparentSearchBarViewImpl;->setMinimumHeight(I)V
 
-    .line 60
+    .line 42
     return-void
 .end method

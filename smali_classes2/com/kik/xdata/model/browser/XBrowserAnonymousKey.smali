@@ -74,7 +74,7 @@
     return-void
 .end method
 
-.method public static b()Lcom/dyuproject/protostuff/u;
+.method public static a()Lcom/dyuproject/protostuff/u;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -95,25 +95,6 @@
 
 
 # virtual methods
-.method public final a()Lcom/dyuproject/protostuff/u;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/dyuproject/protostuff/u",
-            "<",
-            "Lcom/kik/xdata/model/browser/XBrowserAnonymousKey;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 88
-    sget-object v0, Lcom/kik/xdata/model/browser/XBrowserAnonymousKey;->b:Lcom/dyuproject/protostuff/u;
-
-    return-object v0
-.end method
-
 .method public final a(Lcom/dyuproject/protostuff/c;)Lcom/kik/xdata/model/browser/XBrowserAnonymousKey;
     .locals 0
 
@@ -123,6 +104,16 @@
 
     .line 56
     return-object p0
+.end method
+
+.method public final b()Lcom/dyuproject/protostuff/c;
+    .locals 1
+
+    .prologue
+    .line 50
+    iget-object v0, p0, Lcom/kik/xdata/model/browser/XBrowserAnonymousKey;->publicKey:Lcom/dyuproject/protostuff/c;
+
+    return-object v0
 .end method
 
 .method public final b(Lcom/dyuproject/protostuff/c;)Lcom/kik/xdata/model/browser/XBrowserAnonymousKey;
@@ -140,18 +131,27 @@
     .locals 1
 
     .prologue
-    .line 50
-    iget-object v0, p0, Lcom/kik/xdata/model/browser/XBrowserAnonymousKey;->publicKey:Lcom/dyuproject/protostuff/c;
+    .line 63
+    iget-object v0, p0, Lcom/kik/xdata/model/browser/XBrowserAnonymousKey;->privateKey:Lcom/dyuproject/protostuff/c;
 
     return-object v0
 .end method
 
-.method public final d()Lcom/dyuproject/protostuff/c;
+.method public final cachedSchema()Lcom/dyuproject/protostuff/u;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/dyuproject/protostuff/u",
+            "<",
+            "Lcom/kik/xdata/model/browser/XBrowserAnonymousKey;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 63
-    iget-object v0, p0, Lcom/kik/xdata/model/browser/XBrowserAnonymousKey;->privateKey:Lcom/dyuproject/protostuff/c;
+    .line 88
+    sget-object v0, Lcom/kik/xdata/model/browser/XBrowserAnonymousKey;->b:Lcom/dyuproject/protostuff/u;
 
     return-object v0
 .end method

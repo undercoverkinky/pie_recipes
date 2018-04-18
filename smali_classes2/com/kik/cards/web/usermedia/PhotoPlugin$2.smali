@@ -1,11 +1,11 @@
 .class final Lcom/kik/cards/web/usermedia/PhotoPlugin$2;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/cards/web/usermedia/PhotoPlugin;->savePhoto(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/h;
+    value = Lcom/kik/cards/web/usermedia/PhotoPlugin;->savePhoto(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/g;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
         "Ljava/lang/Object;",
         ">;"
@@ -43,7 +43,7 @@
 
     iput-object p3, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$2;->b:Ljava/lang/String;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -59,11 +59,11 @@
 
     iget-object v0, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$2;->c:Lcom/kik/cards/web/usermedia/PhotoPlugin;
 
-    invoke-static {v0}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->a(Lcom/kik/cards/web/usermedia/PhotoPlugin;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->access$100(Lcom/kik/cards/web/usermedia/PhotoPlugin;)Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f0a01f5
+    const v1, 0x7f090209
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -71,11 +71,11 @@
 
     iget-object v1, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$2;->c:Lcom/kik/cards/web/usermedia/PhotoPlugin;
 
-    invoke-static {v1}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->a(Lcom/kik/cards/web/usermedia/PhotoPlugin;)Landroid/content/Context;
+    invoke-static {v1}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->access$100(Lcom/kik/cards/web/usermedia/PhotoPlugin;)Landroid/content/Context;
 
     move-result-object v1
 
-    const v2, 0x7f0a03e8
+    const v2, 0x7f0903fc
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -83,11 +83,11 @@
 
     iget-object v2, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$2;->c:Lcom/kik/cards/web/usermedia/PhotoPlugin;
 
-    invoke-static {v2}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->a(Lcom/kik/cards/web/usermedia/PhotoPlugin;)Landroid/content/Context;
+    invoke-static {v2}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->access$100(Lcom/kik/cards/web/usermedia/PhotoPlugin;)Landroid/content/Context;
 
     move-result-object v2
 
-    const v3, 0x7f0a029c
+    const v3, 0x7f0902b0
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -98,7 +98,7 @@
     .line 490
     iget-object v0, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$2;->c:Lcom/kik/cards/web/usermedia/PhotoPlugin;
 
-    invoke-static {v0}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->c(Lcom/kik/cards/web/usermedia/PhotoPlugin;)Lcom/kik/cards/web/usermedia/e;
+    invoke-static {v0}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->access$400(Lcom/kik/cards/web/usermedia/PhotoPlugin;)Lcom/kik/cards/web/usermedia/e;
 
     move-result-object v0
 
@@ -111,7 +111,7 @@
 
     iget-object v2, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$2;->c:Lcom/kik/cards/web/usermedia/PhotoPlugin;
 
-    invoke-static {v2}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->a(Lcom/kik/cards/web/usermedia/PhotoPlugin;)Landroid/content/Context;
+    invoke-static {v2}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->access$100(Lcom/kik/cards/web/usermedia/PhotoPlugin;)Landroid/content/Context;
 
     move-result-object v2
 
@@ -121,7 +121,7 @@
 
     iget-object v5, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$2;->c:Lcom/kik/cards/web/usermedia/PhotoPlugin;
 
-    invoke-static {v5}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->d(Lcom/kik/cards/web/usermedia/PhotoPlugin;)Ljava/lang/String;
+    invoke-static {v5}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->access$500(Lcom/kik/cards/web/usermedia/PhotoPlugin;)Ljava/lang/String;
 
     move-result-object v5
 
@@ -130,11 +130,11 @@
     .line 492
     iget-object v1, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$2;->c:Lcom/kik/cards/web/usermedia/PhotoPlugin;
 
-    invoke-static {v1}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->b(Lcom/kik/cards/web/usermedia/PhotoPlugin;)Lcom/kik/util/br;
+    invoke-static {v1}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->access$300(Lcom/kik/cards/web/usermedia/PhotoPlugin;)Lcom/kik/util/cx;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/kik/util/br;->a(Ljava/util/concurrent/Callable;)Lcom/kik/events/Promise;
+    invoke-virtual {v1, v0}, Lcom/kik/util/cx;->a(Ljava/util/concurrent/Callable;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
@@ -143,7 +143,7 @@
 
     invoke-direct {v1, p0, v6}, Lcom/kik/cards/web/usermedia/PhotoPlugin$2$1;-><init>(Lcom/kik/cards/web/usermedia/PhotoPlugin$2;Lcom/kik/cards/web/usermedia/b;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
     .line 509
     return-void
@@ -156,18 +156,20 @@
     .line 517
     iget-object v0, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$2;->a:Lcom/kik/cards/web/plugin/a;
 
-    new-instance v1, Lcom/kik/cards/web/plugin/h;
+    new-instance v1, Lcom/kik/cards/web/plugin/g;
 
     const/16 v2, 0x191
 
-    invoke-direct {v1, v2}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
+    invoke-direct {v1, v2}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
 
-    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/h;)V
+    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/g;)V
 
     .line 518
     iget-object v0, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$2;->c:Lcom/kik/cards/web/usermedia/PhotoPlugin;
 
-    invoke-static {v0}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->e(Lcom/kik/cards/web/usermedia/PhotoPlugin;)Z
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->access$602(Lcom/kik/cards/web/usermedia/PhotoPlugin;Z)Z
 
     .line 519
     return-void

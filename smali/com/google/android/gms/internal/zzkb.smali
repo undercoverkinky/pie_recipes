@@ -1,501 +1,263 @@
-.class public Lcom/google/android/gms/internal/zzkb;
-.super Ljava/lang/Object;
+.class public abstract Lcom/google/android/gms/internal/zzkb;
+.super Lcom/google/android/gms/internal/zzef;
 
-
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x8
-.end annotation
-
-.annotation runtime Lcom/google/android/gms/internal/zzig;
-.end annotation
-
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/google/android/gms/internal/zzkb$zzh;,
-        Lcom/google/android/gms/internal/zzkb$zzg;,
-        Lcom/google/android/gms/internal/zzkb$zze;,
-        Lcom/google/android/gms/internal/zzkb$zzd;,
-        Lcom/google/android/gms/internal/zzkb$zzf;,
-        Lcom/google/android/gms/internal/zzkb$zzc;,
-        Lcom/google/android/gms/internal/zzkb$zzb;,
-        Lcom/google/android/gms/internal/zzkb$zza;
-    }
-.end annotation
+# interfaces
+.implements Lcom/google/android/gms/internal/zzka;
 
 
 # direct methods
-.method private constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcom/google/android/gms/internal/zzkb$1;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/google/android/gms/internal/zzkb;-><init>()V
-
-    return-void
-.end method
-
-.method public static zzW(I)Lcom/google/android/gms/internal/zzkb;
+.method public constructor <init>()V
     .locals 1
 
-    const/16 v0, 0x15
+    invoke-direct {p0}, Lcom/google/android/gms/internal/zzef;-><init>()V
 
-    if-lt p0, v0, :cond_0
+    const-string v0, "com.google.android.gms.ads.internal.client.IAdLoaderBuilder"
 
-    new-instance v0, Lcom/google/android/gms/internal/zzkb$zzh;
+    invoke-virtual {p0, p0, v0}, Lcom/google/android/gms/internal/zzkb;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    invoke-direct {v0}, Lcom/google/android/gms/internal/zzkb$zzh;-><init>()V
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const/16 v0, 0x13
-
-    if-lt p0, v0, :cond_1
-
-    new-instance v0, Lcom/google/android/gms/internal/zzkb$zzg;
-
-    invoke-direct {v0}, Lcom/google/android/gms/internal/zzkb$zzg;-><init>()V
-
-    goto :goto_0
-
-    :cond_1
-    const/16 v0, 0x12
-
-    if-lt p0, v0, :cond_2
-
-    new-instance v0, Lcom/google/android/gms/internal/zzkb$zze;
-
-    invoke-direct {v0}, Lcom/google/android/gms/internal/zzkb$zze;-><init>()V
-
-    goto :goto_0
-
-    :cond_2
-    const/16 v0, 0x11
-
-    if-lt p0, v0, :cond_3
-
-    new-instance v0, Lcom/google/android/gms/internal/zzkb$zzd;
-
-    invoke-direct {v0}, Lcom/google/android/gms/internal/zzkb$zzd;-><init>()V
-
-    goto :goto_0
-
-    :cond_3
-    const/16 v0, 0x10
-
-    if-lt p0, v0, :cond_4
-
-    new-instance v0, Lcom/google/android/gms/internal/zzkb$zzf;
-
-    invoke-direct {v0}, Lcom/google/android/gms/internal/zzkb$zzf;-><init>()V
-
-    goto :goto_0
-
-    :cond_4
-    const/16 v0, 0xe
-
-    if-lt p0, v0, :cond_5
-
-    new-instance v0, Lcom/google/android/gms/internal/zzkb$zzc;
-
-    invoke-direct {v0}, Lcom/google/android/gms/internal/zzkb$zzc;-><init>()V
-
-    goto :goto_0
-
-    :cond_5
-    const/16 v0, 0xb
-
-    if-lt p0, v0, :cond_6
-
-    new-instance v0, Lcom/google/android/gms/internal/zzkb$zzb;
-
-    invoke-direct {v0}, Lcom/google/android/gms/internal/zzkb$zzb;-><init>()V
-
-    goto :goto_0
-
-    :cond_6
-    const/16 v0, 0x9
-
-    if-lt p0, v0, :cond_7
-
-    new-instance v0, Lcom/google/android/gms/internal/zzkb$zza;
-
-    invoke-direct {v0}, Lcom/google/android/gms/internal/zzkb$zza;-><init>()V
-
-    goto :goto_0
-
-    :cond_7
-    new-instance v0, Lcom/google/android/gms/internal/zzkb;
-
-    invoke-direct {v0}, Lcom/google/android/gms/internal/zzkb;-><init>()V
-
-    goto :goto_0
+    return-void
 .end method
 
 
 # virtual methods
-.method public getDefaultUserAgent(Landroid/content/Context;)Ljava/lang/String;
-    .locals 1
-
-    const-string v0, ""
-
-    return-object v0
-.end method
-
-.method public isAttachedToWindow(Landroid/view/View;)Z
-    .locals 2
-
-    invoke-virtual {p1}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p1}, Landroid/view/View;->getWindowVisibility()I
-
-    move-result v0
-
-    const/16 v1, 0x8
-
-    if-eq v0, v1, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public zzN(Landroid/content/Context;)Landroid/webkit/CookieManager;
-    .locals 1
-
-    invoke-static {p1}, Landroid/webkit/CookieSyncManager;->createInstance(Landroid/content/Context;)Landroid/webkit/CookieSyncManager;
-
-    invoke-static {}, Landroid/webkit/CookieManager;->getInstance()Landroid/webkit/CookieManager;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public zza(Landroid/content/Context;Landroid/graphics/Bitmap;ZF)Landroid/graphics/drawable/Drawable;
-    .locals 2
-
-    new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1, p2}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
-
-    return-object v0
-.end method
-
-.method public zza(Landroid/net/http/SslError;)Ljava/lang/String;
-    .locals 1
-
-    const-string v0, ""
-
-    return-object v0
-.end method
-
-.method public zza(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
-    .locals 0
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    return-void
-.end method
-
-.method public zza(Landroid/view/ViewTreeObserver;Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
-    .locals 0
-
-    invoke-virtual {p1, p2}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
-
-    return-void
-.end method
-
-.method public zza(Landroid/app/DownloadManager$Request;)Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public zza(Landroid/content/Context;Landroid/webkit/WebSettings;)Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public zza(Landroid/view/Window;)Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public zzb(Lcom/google/android/gms/internal/zzla;Z)Lcom/google/android/gms/internal/zzlb;
-    .locals 1
-
-    new-instance v0, Lcom/google/android/gms/internal/zzlb;
-
-    invoke-direct {v0, p1, p2}, Lcom/google/android/gms/internal/zzlb;-><init>(Lcom/google/android/gms/internal/zzla;Z)V
-
-    return-object v0
-.end method
-
-.method public zzb(Landroid/app/Activity;Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
-    .locals 2
-
-    invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0, p2}, Lcom/google/android/gms/internal/zzkb;->zza(Landroid/view/ViewTreeObserver;Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public zzg(Landroid/net/Uri;)Ljava/util/Set;
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
+.method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
         value = {
-            "(",
-            "Landroid/net/Uri;",
-            ")",
-            "Ljava/util/Set",
-            "<",
-            "Ljava/lang/String;",
-            ">;"
+            Landroid/os/RemoteException;
         }
     .end annotation
 
-    const/4 v5, -0x1
-
-    invoke-virtual {p1}, Landroid/net/Uri;->isOpaque()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    invoke-virtual {p1}, Landroid/net/Uri;->getEncodedQuery()Ljava/lang/String;
-
-    move-result-object v3
-
-    if-nez v3, :cond_1
-
-    invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v4, Ljava/util/LinkedHashSet;
-
-    invoke-direct {v4}, Ljava/util/LinkedHashSet;-><init>()V
-
     const/4 v0, 0x0
 
-    :cond_2
-    const/16 v1, 0x26
+    const/4 v1, 0x1
 
-    invoke-virtual {v3, v1, v0}, Ljava/lang/String;->indexOf(II)I
-
-    move-result v1
-
-    if-ne v1, v5, :cond_3
-
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    :cond_3
-    const/16 v2, 0x3d
-
-    invoke-virtual {v3, v2, v0}, Ljava/lang/String;->indexOf(II)I
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/android/gms/internal/zzef;->zza(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v2
 
-    if-gt v2, v1, :cond_4
+    if-eqz v2, :cond_0
 
-    if-ne v2, v5, :cond_5
+    move v0, v1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    packed-switch p1, :pswitch_data_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :pswitch_0
+    invoke-virtual {p0}, Lcom/google/android/gms/internal/zzkb;->zzcy()Lcom/google/android/gms/internal/zzjx;
+
+    move-result-object v0
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-static {p3, v0}, Lcom/google/android/gms/internal/zzeg;->zza(Landroid/os/Parcel;Landroid/os/IInterface;)V
+
+    :goto_1
+    move v0, v1
+
+    goto :goto_0
+
+    :pswitch_1
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v2
+
+    if-nez v2, :cond_1
+
+    :goto_2
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/zzkb;->zzb(Lcom/google/android/gms/internal/zzju;)V
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto :goto_1
+
+    :cond_1
+    const-string v0, "com.google.android.gms.ads.internal.client.IAdListener"
+
+    invoke-interface {v2, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v0
+
+    instance-of v3, v0, Lcom/google/android/gms/internal/zzju;
+
+    if-eqz v3, :cond_2
+
+    check-cast v0, Lcom/google/android/gms/internal/zzju;
+
+    goto :goto_2
+
+    :cond_2
+    new-instance v0, Lcom/google/android/gms/internal/zzjw;
+
+    invoke-direct {v0, v2}, Lcom/google/android/gms/internal/zzjw;-><init>(Landroid/os/IBinder;)V
+
+    goto :goto_2
+
+    :pswitch_2
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzpy;->zzn(Landroid/os/IBinder;)Lcom/google/android/gms/internal/zzpx;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/zzkb;->zza(Lcom/google/android/gms/internal/zzpx;)V
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto :goto_1
+
+    :pswitch_3
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzqb;->zzo(Landroid/os/IBinder;)Lcom/google/android/gms/internal/zzqa;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/zzkb;->zza(Lcom/google/android/gms/internal/zzqa;)V
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto :goto_1
+
+    :pswitch_4
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/google/android/gms/internal/zzqh;->zzq(Landroid/os/IBinder;)Lcom/google/android/gms/internal/zzqg;
+
+    move-result-object v2
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lcom/google/android/gms/internal/zzqe;->zzp(Landroid/os/IBinder;)Lcom/google/android/gms/internal/zzqd;
+
+    move-result-object v3
+
+    invoke-virtual {p0, v0, v2, v3}, Lcom/google/android/gms/internal/zzkb;->zza(Ljava/lang/String;Lcom/google/android/gms/internal/zzqg;Lcom/google/android/gms/internal/zzqd;)V
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto :goto_1
+
+    :pswitch_5
+    sget-object v0, Lcom/google/android/gms/internal/zzot;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, v0}, Lcom/google/android/gms/internal/zzeg;->zza(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/gms/internal/zzot;
+
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/zzkb;->zza(Lcom/google/android/gms/internal/zzot;)V
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto :goto_1
+
+    :pswitch_6
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v2
+
+    if-nez v2, :cond_3
+
+    :goto_3
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/zzkb;->zzb(Lcom/google/android/gms/internal/zzkq;)V
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    goto :goto_1
+
+    :cond_3
+    const-string v0, "com.google.android.gms.ads.internal.client.ICorrelationIdProvider"
+
+    invoke-interface {v2, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v0
+
+    instance-of v3, v0, Lcom/google/android/gms/internal/zzkq;
+
+    if-eqz v3, :cond_4
+
+    check-cast v0, Lcom/google/android/gms/internal/zzkq;
+
+    goto :goto_3
 
     :cond_4
-    move v2, v1
+    new-instance v0, Lcom/google/android/gms/internal/zzks;
 
-    :cond_5
-    invoke-virtual {v3, v0, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-direct {v0, v2}, Lcom/google/android/gms/internal/zzks;-><init>(Landroid/os/IBinder;)V
 
-    move-result-object v0
+    goto :goto_3
 
-    invoke-static {v0}, Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v4, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v0, v1, 0x1
-
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-lt v0, v1, :cond_2
-
-    invoke-static {v4}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+    :pswitch_7
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    goto :goto_0
-.end method
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzqk;->zzr(Landroid/os/IBinder;)Lcom/google/android/gms/internal/zzqj;
 
-.method public zzi(Lcom/google/android/gms/internal/zzla;)Z
-    .locals 1
+    move-result-object v2
 
-    if-nez p1, :cond_0
+    sget-object v0, Lcom/google/android/gms/internal/zzjb;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    const/4 v0, 0x0
+    invoke-static {p2, v0}, Lcom/google/android/gms/internal/zzeg;->zza(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
 
-    :goto_0
-    return v0
+    move-result-object v0
 
-    :cond_0
-    invoke-interface {p1}, Lcom/google/android/gms/internal/zzla;->onPause()V
+    check-cast v0, Lcom/google/android/gms/internal/zzjb;
 
-    const/4 v0, 0x1
+    invoke-virtual {p0, v2, v0}, Lcom/google/android/gms/internal/zzkb;->zza(Lcom/google/android/gms/internal/zzqj;Lcom/google/android/gms/internal/zzjb;)V
 
-    goto :goto_0
-.end method
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-.method public zzj(Lcom/google/android/gms/internal/zzla;)Z
-    .locals 1
+    goto/16 :goto_1
 
-    if-nez p1, :cond_0
+    :pswitch_8
+    sget-object v0, Lcom/google/android/gms/ads/formats/PublisherAdViewOptions;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    const/4 v0, 0x0
+    invoke-static {p2, v0}, Lcom/google/android/gms/internal/zzeg;->zza(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
 
-    :goto_0
-    return v0
+    move-result-object v0
 
-    :cond_0
-    invoke-interface {p1}, Lcom/google/android/gms/internal/zzla;->onResume()V
+    check-cast v0, Lcom/google/android/gms/ads/formats/PublisherAdViewOptions;
 
-    const/4 v0, 0x1
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/zzkb;->zza(Lcom/google/android/gms/ads/formats/PublisherAdViewOptions;)V
 
-    goto :goto_0
-.end method
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-.method public zzje()I
-    .locals 1
+    goto/16 :goto_1
 
-    const/4 v0, 0x0
+    nop
 
-    return v0
-.end method
-
-.method public zzjf()I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public zzjg()I
-    .locals 1
-
-    const/4 v0, 0x5
-
-    return v0
-.end method
-
-.method public zzjh()Landroid/view/ViewGroup$LayoutParams;
-    .locals 2
-
-    const/4 v1, -0x2
-
-    new-instance v0, Landroid/view/ViewGroup$LayoutParams;
-
-    invoke-direct {v0, v1, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    return-object v0
-.end method
-
-.method public zzk(Lcom/google/android/gms/internal/zzla;)Landroid/webkit/WebChromeClient;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public zzp(Landroid/view/View;)Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public zzq(Landroid/view/View;)Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+        :pswitch_4
+        :pswitch_5
+        :pswitch_6
+        :pswitch_7
+        :pswitch_8
+    .end packed-switch
 .end method

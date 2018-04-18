@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public final networkResponse:Lcom/android/volley/g;
+.field public final networkResponse:Lcom/android/volley/f;
 
 
 # direct methods
@@ -18,13 +18,13 @@
     .line 29
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/volley/VolleyError;->networkResponse:Lcom/android/volley/g;
+    iput-object v0, p0, Lcom/android/volley/VolleyError;->networkResponse:Lcom/android/volley/f;
 
     .line 30
     return-void
 .end method
 
-.method public constructor <init>(Lcom/android/volley/g;)V
+.method public constructor <init>(Lcom/android/volley/f;)V
     .locals 0
 
     .prologue
@@ -32,7 +32,7 @@
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
     .line 34
-    iput-object p1, p0, Lcom/android/volley/VolleyError;->networkResponse:Lcom/android/volley/g;
+    iput-object p1, p0, Lcom/android/volley/VolleyError;->networkResponse:Lcom/android/volley/f;
 
     .line 35
     return-void
@@ -48,7 +48,7 @@
     .line 40
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/volley/VolleyError;->networkResponse:Lcom/android/volley/g;
+    iput-object v0, p0, Lcom/android/volley/VolleyError;->networkResponse:Lcom/android/volley/f;
 
     .line 41
     return-void
@@ -64,7 +64,7 @@
     .line 52
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/volley/VolleyError;->networkResponse:Lcom/android/volley/g;
+    iput-object v0, p0, Lcom/android/volley/VolleyError;->networkResponse:Lcom/android/volley/f;
 
     .line 53
     return-void

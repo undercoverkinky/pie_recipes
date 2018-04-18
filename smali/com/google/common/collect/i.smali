@@ -25,7 +25,7 @@
     .locals 0
 
     .prologue
-    .line 49
+    .line 52
     invoke-direct {p0}, Lcom/google/common/collect/g;-><init>()V
 
     return-void
@@ -43,11 +43,11 @@
     .end annotation
 .end method
 
-.method protected synthetic b()Ljava/lang/Object;
+.method protected synthetic b()Ljava/util/Collection;
     .locals 1
 
     .prologue
-    .line 44
+    .line 48
     invoke-virtual {p0}, Lcom/google/common/collect/i;->a()Ljava/util/Queue;
 
     move-result-object v0
@@ -55,11 +55,11 @@
     return-object v0
 .end method
 
-.method protected synthetic c()Ljava/util/Collection;
+.method protected synthetic delegate()Ljava/lang/Object;
     .locals 1
 
     .prologue
-    .line 44
+    .line 48
     invoke-virtual {p0}, Lcom/google/common/collect/i;->a()Ljava/util/Queue;
 
     move-result-object v0
@@ -76,7 +76,7 @@
     .end annotation
 
     .prologue
-    .line 75
+    .line 82
     invoke-virtual {p0}, Lcom/google/common/collect/i;->a()Ljava/util/Queue;
 
     move-result-object v0
@@ -90,6 +90,9 @@
 
 .method public offer(Ljava/lang/Object;)Z
     .locals 1
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TE;)Z"
@@ -97,7 +100,7 @@
     .end annotation
 
     .prologue
-    .line 55
+    .line 60
     invoke-virtual {p0}, Lcom/google/common/collect/i;->a()Ljava/util/Queue;
 
     move-result-object v0
@@ -118,7 +121,7 @@
     .end annotation
 
     .prologue
-    .line 70
+    .line 77
     invoke-virtual {p0}, Lcom/google/common/collect/i;->a()Ljava/util/Queue;
 
     move-result-object v0
@@ -132,6 +135,9 @@
 
 .method public poll()Ljava/lang/Object;
     .locals 1
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TE;"
@@ -139,7 +145,7 @@
     .end annotation
 
     .prologue
-    .line 60
+    .line 66
     invoke-virtual {p0}, Lcom/google/common/collect/i;->a()Ljava/util/Queue;
 
     move-result-object v0
@@ -153,6 +159,9 @@
 
 .method public remove()Ljava/lang/Object;
     .locals 1
+    .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TE;"
@@ -160,7 +169,7 @@
     .end annotation
 
     .prologue
-    .line 65
+    .line 72
     invoke-virtual {p0}, Lcom/google/common/collect/i;->a()Ljava/util/Queue;
 
     move-result-object v0

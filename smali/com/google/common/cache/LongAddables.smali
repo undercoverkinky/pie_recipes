@@ -12,12 +12,12 @@
 
 
 # static fields
-.field private static final a:Lcom/google/common/base/m;
+.field private static final a:Lcom/google/common/base/Supplier;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/google/common/base/m",
+            "Lcom/google/common/base/Supplier",
             "<",
-            "Lcom/google/common/cache/e;",
+            "Lcom/google/common/cache/b;",
             ">;"
         }
     .end annotation
@@ -29,27 +29,27 @@
     .locals 1
 
     .prologue
-    .line 37
+    .line 33
     :try_start_0
     new-instance v0, Lcom/google/common/cache/LongAdder;
 
     invoke-direct {v0}, Lcom/google/common/cache/LongAdder;-><init>()V
 
-    .line 38
+    .line 34
     new-instance v0, Lcom/google/common/cache/LongAddables$1;
 
     invoke-direct {v0}, Lcom/google/common/cache/LongAddables$1;-><init>()V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 52
+    .line 50
     :goto_0
-    sput-object v0, Lcom/google/common/cache/LongAddables;->a:Lcom/google/common/base/m;
+    sput-object v0, Lcom/google/common/cache/LongAddables;->a:Lcom/google/common/base/Supplier;
 
-    .line 53
+    .line 51
     return-void
 
-    .line 45
+    .line 42
     :catch_0
     move-exception v0
 
@@ -60,18 +60,18 @@
     goto :goto_0
 .end method
 
-.method public static a()Lcom/google/common/cache/e;
+.method public static a()Lcom/google/common/cache/b;
     .locals 1
 
     .prologue
-    .line 56
-    sget-object v0, Lcom/google/common/cache/LongAddables;->a:Lcom/google/common/base/m;
+    .line 54
+    sget-object v0, Lcom/google/common/cache/LongAddables;->a:Lcom/google/common/base/Supplier;
 
-    invoke-interface {v0}, Lcom/google/common/base/m;->a()Ljava/lang/Object;
+    invoke-interface {v0}, Lcom/google/common/base/Supplier;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/common/cache/e;
+    check-cast v0, Lcom/google/common/cache/b;
 
     return-object v0
 .end method

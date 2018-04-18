@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 766
+    .line 843
     iput-object p1, p0, Lkik/android/chat/fragment/ViewPictureFragment$7;->b:Lkik/android/chat/fragment/ViewPictureFragment;
 
     iput-object p2, p0, Lkik/android/chat/fragment/ViewPictureFragment$7;->a:Lkik/core/datatypes/messageExtensions/ContentMessage;
@@ -50,16 +50,16 @@
 
     const-wide v6, 0x408f400000000000L    # 1000.0
 
-    .line 770
+    .line 847
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$7;->b:Lkik/android/chat/fragment/ViewPictureFragment;
 
-    invoke-static {v0}, Lkik/android/chat/fragment/ViewPictureFragment;->q(Lkik/android/chat/fragment/ViewPictureFragment;)Z
+    invoke-static {v0}, Lkik/android/chat/fragment/ViewPictureFragment;->p(Lkik/android/chat/fragment/ViewPictureFragment;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 771
+    .line 848
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$7;->b:Lkik/android/chat/fragment/ViewPictureFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/ViewPictureFragment;->f:Lcom/kik/android/Mixpanel;
@@ -74,7 +74,7 @@
 
     iget-object v2, p0, Lkik/android/chat/fragment/ViewPictureFragment$7;->a:Lkik/core/datatypes/messageExtensions/ContentMessage;
 
-    .line 772
+    .line 849
     invoke-virtual {v2}, Lkik/core/datatypes/messageExtensions/ContentMessage;->v()Ljava/lang/String;
 
     move-result-object v2
@@ -85,14 +85,14 @@
 
     const-string v1, "Is Inline"
 
-    .line 773
+    .line 850
     invoke-virtual {v0, v1, v9}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Z)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
     const-string v1, "Video Length"
 
-    .line 774
+    .line 851
     invoke-virtual {p1}, Landroid/media/MediaPlayer;->getDuration()I
 
     move-result v2
@@ -109,14 +109,14 @@
 
     const-string v1, "Loading Duration"
 
-    .line 775
+    .line 852
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     iget-object v4, p0, Lkik/android/chat/fragment/ViewPictureFragment$7;->b:Lkik/android/chat/fragment/ViewPictureFragment;
 
-    invoke-static {v4}, Lkik/android/chat/fragment/ViewPictureFragment;->s(Lkik/android/chat/fragment/ViewPictureFragment;)J
+    invoke-static {v4}, Lkik/android/chat/fragment/ViewPictureFragment;->r(Lkik/android/chat/fragment/ViewPictureFragment;)J
 
     move-result-wide v4
 
@@ -134,8 +134,8 @@
 
     iget-object v2, p0, Lkik/android/chat/fragment/ViewPictureFragment$7;->b:Lkik/android/chat/fragment/ViewPictureFragment;
 
-    .line 776
-    invoke-static {v2}, Lkik/android/chat/fragment/ViewPictureFragment;->r(Lkik/android/chat/fragment/ViewPictureFragment;)Z
+    .line 853
+    invoke-static {v2}, Lkik/android/chat/fragment/ViewPictureFragment;->q(Lkik/android/chat/fragment/ViewPictureFragment;)Z
 
     move-result v2
 
@@ -147,7 +147,7 @@
 
     iget-object v2, p0, Lkik/android/chat/fragment/ViewPictureFragment$7;->a:Lkik/core/datatypes/messageExtensions/ContentMessage;
 
-    .line 777
+    .line 854
     invoke-virtual {v2}, Lkik/core/datatypes/messageExtensions/ContentMessage;->z()Z
 
     move-result v2
@@ -160,8 +160,8 @@
 
     iget-object v2, p0, Lkik/android/chat/fragment/ViewPictureFragment$7;->a:Lkik/core/datatypes/messageExtensions/ContentMessage;
 
-    .line 778
-    invoke-virtual {v2}, Lkik/core/datatypes/messageExtensions/ContentMessage;->B()Z
+    .line 855
+    invoke-virtual {v2}, Lkik/core/datatypes/messageExtensions/ContentMessage;->C()Z
 
     move-result v2
 
@@ -173,8 +173,8 @@
 
     iget-object v2, p0, Lkik/android/chat/fragment/ViewPictureFragment$7;->a:Lkik/core/datatypes/messageExtensions/ContentMessage;
 
-    .line 779
-    invoke-virtual {v2}, Lkik/core/datatypes/messageExtensions/ContentMessage;->C()Z
+    .line 856
+    invoke-virtual {v2}, Lkik/core/datatypes/messageExtensions/ContentMessage;->D()Z
 
     move-result v2
 
@@ -184,48 +184,48 @@
 
     const-string v1, "Did Autoplay"
 
-    .line 780
+    .line 857
     invoke-virtual {v0, v1, v9}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Z)Lcom/kik/android/Mixpanel$d;
 
     move-result-object v0
 
-    .line 781
+    .line 858
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 783
+    .line 860
     :cond_0
-    iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$7;->a:Lkik/core/datatypes/messageExtensions/ContentMessage;
-
-    invoke-virtual {v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->B()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 784
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Landroid/media/MediaPlayer;->setLooping(Z)V
-
-    .line 785
-    iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$7;->b:Lkik/android/chat/fragment/ViewPictureFragment;
-
-    invoke-static {v0}, Lkik/android/chat/fragment/ViewPictureFragment;->t(Lkik/android/chat/fragment/ViewPictureFragment;)Z
-
-    .line 787
-    :cond_1
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$7;->a:Lkik/core/datatypes/messageExtensions/ContentMessage;
 
     invoke-virtual {v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->C()Z
 
     move-result v0
 
+    if-eqz v0, :cond_1
+
+    .line 861
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Landroid/media/MediaPlayer;->setLooping(Z)V
+
+    .line 862
+    iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$7;->b:Lkik/android/chat/fragment/ViewPictureFragment;
+
+    invoke-static {v0}, Lkik/android/chat/fragment/ViewPictureFragment;->s(Lkik/android/chat/fragment/ViewPictureFragment;)Z
+
+    .line 864
+    :cond_1
+    iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$7;->a:Lkik/core/datatypes/messageExtensions/ContentMessage;
+
+    invoke-virtual {v0}, Lkik/core/datatypes/messageExtensions/ContentMessage;->D()Z
+
+    move-result v0
+
     if-eqz v0, :cond_2
 
-    .line 788
+    .line 865
     invoke-virtual {p1, v8, v8}, Landroid/media/MediaPlayer;->setVolume(FF)V
 
-    .line 791
+    .line 868
     :cond_2
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$7;->b:Lkik/android/chat/fragment/ViewPictureFragment;
 
@@ -233,12 +233,12 @@
 
     iget-object v1, p0, Lkik/android/chat/fragment/ViewPictureFragment$7;->b:Lkik/android/chat/fragment/ViewPictureFragment;
 
-    invoke-static {v1}, Lkik/android/chat/fragment/ViewPictureFragment;->u(Lkik/android/chat/fragment/ViewPictureFragment;)I
+    invoke-static {v1}, Lkik/android/chat/fragment/ViewPictureFragment;->t(Lkik/android/chat/fragment/ViewPictureFragment;)I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/widget/VideoView;->seekTo(I)V
 
-    .line 792
+    .line 869
     return-void
 .end method

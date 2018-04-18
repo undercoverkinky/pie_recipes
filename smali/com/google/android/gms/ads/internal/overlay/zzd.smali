@@ -1,1317 +1,533 @@
-.class public Lcom/google/android/gms/ads/internal/overlay/zzd;
-.super Lcom/google/android/gms/internal/zzgz$zza;
+.class public final Lcom/google/android/gms/ads/internal/overlay/zzd;
+.super Lcom/google/android/gms/ads/internal/overlay/zzy;
 
 # interfaces
-.implements Lcom/google/android/gms/ads/internal/overlay/zzu;
+.implements Landroid/media/MediaPlayer$OnBufferingUpdateListener;
+.implements Landroid/media/MediaPlayer$OnCompletionListener;
+.implements Landroid/media/MediaPlayer$OnErrorListener;
+.implements Landroid/media/MediaPlayer$OnInfoListener;
+.implements Landroid/media/MediaPlayer$OnPreparedListener;
+.implements Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
+.implements Landroid/view/TextureView$SurfaceTextureListener;
 
 
 # annotations
-.annotation runtime Lcom/google/android/gms/internal/zzig;
+.annotation build Landroid/annotation/TargetApi;
+    value = 0xe
 .end annotation
 
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/google/android/gms/ads/internal/overlay/zzd$b;,
-        Lcom/google/android/gms/ads/internal/overlay/zzd$a;,
-        Lcom/google/android/gms/ads/internal/overlay/zzd$zzc;,
-        Lcom/google/android/gms/ads/internal/overlay/zzd$zza;
-    }
+.annotation runtime Lcom/google/android/gms/internal/zzzt;
 .end annotation
 
 
 # static fields
-.field static final zzHg:I
+.field private static final zzcfd:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field private final mActivity:Landroid/app/Activity;
+.field private final zzcfe:Lcom/google/android/gms/ads/internal/overlay/zzar;
 
-.field zzBb:Lcom/google/android/gms/internal/zzla;
+.field private final zzcff:Z
 
-.field zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
+.field private zzcfg:I
 
-.field zzHi:Lcom/google/android/gms/ads/internal/overlay/zzd$zzc;
+.field private zzcfh:I
 
-.field zzHj:Lcom/google/android/gms/ads/internal/overlay/zzo;
+.field private zzcfi:Landroid/media/MediaPlayer;
 
-.field zzHk:Z
+.field private zzcfj:Landroid/net/Uri;
 
-.field zzHl:Landroid/widget/FrameLayout;
+.field private zzcfk:I
 
-.field zzHm:Landroid/webkit/WebChromeClient$CustomViewCallback;
+.field private zzcfl:I
 
-.field zzHn:Z
+.field private zzcfm:I
 
-.field zzHo:Z
+.field private zzcfn:I
 
-.field zzHp:Lcom/google/android/gms/ads/internal/overlay/zzd$a;
+.field private zzcfo:I
 
-.field zzHq:Z
+.field private zzcfp:Lcom/google/android/gms/ads/internal/overlay/zzap;
 
-.field zzHr:I
+.field private zzcfq:Z
 
-.field zzHs:Lcom/google/android/gms/ads/internal/overlay/zzl;
+.field private zzcfr:I
 
-.field private zzHt:Z
-
-.field private zzHu:Z
-
-.field private zzHv:Z
+.field private zzcfs:Lcom/google/android/gms/ads/internal/overlay/zzx;
 
 
 # direct methods
 .method static constructor <clinit>()V
+    .locals 4
+
+    const/4 v3, 0x1
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    sput-object v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfd:Ljava/util/Map;
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x11
+
+    if-lt v0, v1, :cond_0
+
+    sget-object v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfd:Ljava/util/Map;
+
+    const/16 v1, -0x3ec
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "MEDIA_ERROR_IO"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfd:Ljava/util/Map;
+
+    const/16 v1, -0x3ef
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "MEDIA_ERROR_MALFORMED"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfd:Ljava/util/Map;
+
+    const/16 v1, -0x3f2
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "MEDIA_ERROR_UNSUPPORTED"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfd:Ljava/util/Map;
+
+    const/16 v1, -0x6e
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "MEDIA_ERROR_TIMED_OUT"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfd:Ljava/util/Map;
+
+    const/4 v1, 0x3
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "MEDIA_INFO_VIDEO_RENDERING_START"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    sget-object v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfd:Ljava/util/Map;
+
+    const/16 v1, 0x64
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "MEDIA_ERROR_SERVER_DIED"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfd:Ljava/util/Map;
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "MEDIA_ERROR_UNKNOWN"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfd:Ljava/util/Map;
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "MEDIA_INFO_UNKNOWN"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfd:Ljava/util/Map;
+
+    const/16 v1, 0x2bc
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "MEDIA_INFO_VIDEO_TRACK_LAGGING"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfd:Ljava/util/Map;
+
+    const/16 v1, 0x2bd
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "MEDIA_INFO_BUFFERING_START"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfd:Ljava/util/Map;
+
+    const/16 v1, 0x2be
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "MEDIA_INFO_BUFFERING_END"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfd:Ljava/util/Map;
+
+    const/16 v1, 0x320
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "MEDIA_INFO_BAD_INTERLEAVING"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfd:Ljava/util/Map;
+
+    const/16 v1, 0x321
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "MEDIA_INFO_NOT_SEEKABLE"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfd:Ljava/util/Map;
+
+    const/16 v1, 0x322
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "MEDIA_INFO_METADATA_UPDATE"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x13
+
+    if-lt v0, v1, :cond_1
+
+    sget-object v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfd:Ljava/util/Map;
+
+    const/16 v1, 0x385
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "MEDIA_INFO_UNSUPPORTED_SUBTITLE"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfd:Ljava/util/Map;
+
+    const/16 v1, 0x386
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "MEDIA_INFO_SUBTITLE_TIMED_OUT"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_1
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;ZZLcom/google/android/gms/ads/internal/overlay/zzaq;Lcom/google/android/gms/ads/internal/overlay/zzar;)V
     .locals 1
 
     const/4 v0, 0x0
 
-    invoke-static {v0, v0, v0, v0}, Landroid/graphics/Color;->argb(IIII)I
+    invoke-direct {p0, p1}, Lcom/google/android/gms/ads/internal/overlay/zzy;-><init>(Landroid/content/Context;)V
 
-    move-result v0
+    iput v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfg:I
 
-    sput v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHg:I
+    iput v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfh:I
 
-    return-void
-.end method
+    invoke-virtual {p0, p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->setSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
 
-.method public constructor <init>(Landroid/app/Activity;)V
-    .locals 1
+    iput-object p5, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfe:Lcom/google/android/gms/ads/internal/overlay/zzar;
 
-    const/4 v0, 0x0
+    iput-boolean p2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfq:Z
 
-    invoke-direct {p0}, Lcom/google/android/gms/internal/zzgz$zza;-><init>()V
+    iput-boolean p3, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcff:Z
 
-    iput-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHk:Z
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfe:Lcom/google/android/gms/ads/internal/overlay/zzar;
 
-    iput-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHn:Z
-
-    iput-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHo:Z
-
-    iput-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHq:Z
-
-    iput v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHr:I
-
-    iput-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHu:Z
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHv:Z
-
-    iput-object p1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    new-instance v0, Lcom/google/android/gms/ads/internal/overlay/zzs;
-
-    invoke-direct {v0}, Lcom/google/android/gms/ads/internal/overlay/zzs;-><init>()V
-
-    iput-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHs:Lcom/google/android/gms/ads/internal/overlay/zzl;
+    invoke-virtual {v0, p0}, Lcom/google/android/gms/ads/internal/overlay/zzar;->zza(Lcom/google/android/gms/ads/internal/overlay/zzy;)V
 
     return-void
 .end method
 
-.method static synthetic zza(Lcom/google/android/gms/ads/internal/overlay/zzd;)Landroid/app/Activity;
+.method static synthetic zza(Lcom/google/android/gms/ads/internal/overlay/zzd;)Lcom/google/android/gms/ads/internal/overlay/zzx;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfs:Lcom/google/android/gms/ads/internal/overlay/zzx;
 
     return-object v0
 .end method
 
-
-# virtual methods
-.method public close()V
+.method private final zza(F)V
     .locals 1
 
-    const/4 v0, 0x2
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
 
-    iput v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHr:I
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
-
-    return-void
-.end method
-
-.method public onActivityResult(IILandroid/content/Intent;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onBackPressed()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHr:I
-
-    return-void
-.end method
-
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 5
-
-    const/4 v4, 0x3
-
-    const/4 v3, 0x1
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    invoke-virtual {v1, v3}, Landroid/app/Activity;->requestWindowFeature(I)Z
-
-    if-eqz p1, :cond_0
-
-    const-string v1, "com.google.android.gms.ads.internal.overlay.hasResumed"
-
-    invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    :cond_0
-    iput-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHn:Z
+    if-eqz v0, :cond_0
 
     :try_start_0
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
 
-    invoke-virtual {v0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzb(Landroid/content/Intent;)Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    if-nez v0, :cond_2
-
-    new-instance v0, Lcom/google/android/gms/ads/internal/overlay/zzd$zza;
-
-    const-string v1, "Could not get info for ad overlay."
-
-    invoke-direct {v0, v1}, Lcom/google/android/gms/ads/internal/overlay/zzd$zza;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    invoke-virtual {v0, p1, p1}, Landroid/media/MediaPlayer;->setVolume(FF)V
     :try_end_0
-    .catch Lcom/google/android/gms/ads/internal/overlay/zzd$zza; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    const-string v0, "AdMediaPlayerView setMediaPlayerVolume() called before onPrepared()."
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzafx;->zzcs(Ljava/lang/String;)V
+
+    goto :goto_0
 
     :catch_0
     move-exception v0
 
-    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/overlay/zzd$zza;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/zzjw;->zzaW(Ljava/lang/String;)V
-
-    iput v4, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHr:I
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :cond_2
-    :try_start_1
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v0, v0, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzsx:Lcom/google/android/gms/ads/internal/util/client/VersionInfoParcel;
-
-    iget v0, v0, Lcom/google/android/gms/ads/internal/util/client/VersionInfoParcel;->zzRD:I
-
-    const v1, 0x7270e0
-
-    if-le v0, v1, :cond_3
-
-    const/4 v0, 0x3
-
-    iput v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHr:I
-
-    :cond_3
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    const-string v1, "shouldCallOnOverlayOpened"
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHv:Z
-
-    :cond_4
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v0, v0, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHO:Lcom/google/android/gms/ads/internal/InterstitialAdParameterParcel;
-
-    if-eqz v0, :cond_8
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v0, v0, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHO:Lcom/google/android/gms/ads/internal/InterstitialAdParameterParcel;
-
-    iget-boolean v0, v0, Lcom/google/android/gms/ads/internal/InterstitialAdParameterParcel;->zzrf:Z
-
-    iput-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHo:Z
-
-    :goto_1
-    sget-object v0, Lcom/google/android/gms/internal/zzcu;->zzyZ:Lcom/google/android/gms/internal/zzcq;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/zzcq;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    iget-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHo:Z
-
-    if-eqz v0, :cond_5
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v0, v0, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHO:Lcom/google/android/gms/ads/internal/InterstitialAdParameterParcel;
-
-    iget v0, v0, Lcom/google/android/gms/ads/internal/InterstitialAdParameterParcel;->zzrk:I
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_5
-
-    new-instance v0, Lcom/google/android/gms/ads/internal/overlay/zzd$b;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lcom/google/android/gms/ads/internal/overlay/zzd$b;-><init>(Lcom/google/android/gms/ads/internal/overlay/zzd;B)V
-
-    invoke-virtual {v0}, Lcom/google/android/gms/internal/zzjv;->zzhs()Ljava/lang/Object;
-
-    :cond_5
-    if-nez p1, :cond_7
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v0, v0, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHE:Lcom/google/android/gms/ads/internal/overlay/zzg;
-
-    if-eqz v0, :cond_6
-
-    iget-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHv:Z
-
-    if-eqz v0, :cond_6
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v0, v0, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHE:Lcom/google/android/gms/ads/internal/overlay/zzg;
-
-    invoke-interface {v0}, Lcom/google/android/gms/ads/internal/overlay/zzg;->zzbt()V
-
-    :cond_6
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget v0, v0, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHL:I
-
-    if-eq v0, v3, :cond_7
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v0, v0, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHD:Lcom/google/android/gms/ads/internal/client/zza;
-
-    if-eqz v0, :cond_7
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v0, v0, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHD:Lcom/google/android/gms/ads/internal/client/zza;
-
-    invoke-interface {v0}, Lcom/google/android/gms/ads/internal/client/zza;->onAdClicked()V
-
-    :cond_7
-    new-instance v0, Lcom/google/android/gms/ads/internal/overlay/zzd$a;
-
-    iget-object v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    iget-object v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v2, v2, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHN:Ljava/lang/String;
-
-    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/ads/internal/overlay/zzd$a;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-
-    iput-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHp:Lcom/google/android/gms/ads/internal/overlay/zzd$a;
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHp:Lcom/google/android/gms/ads/internal/overlay/zzd$a;
-
-    const/16 v1, 0x3e8
-
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/ads/internal/overlay/zzd$a;->setId(I)V
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget v0, v0, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHL:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lcom/google/android/gms/ads/internal/overlay/zzd$zza;
-
-    const-string v1, "Could not determine ad overlay type."
-
-    invoke-direct {v0, v1}, Lcom/google/android/gms/ads/internal/overlay/zzd$zza;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_8
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHo:Z
-
-    goto :goto_1
-
-    :pswitch_0
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzz(Z)V
-
-    goto/16 :goto_0
-
-    :pswitch_1
-    new-instance v0, Lcom/google/android/gms/ads/internal/overlay/zzd$zzc;
-
-    iget-object v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v1, v1, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHF:Lcom/google/android/gms/internal/zzla;
-
-    invoke-direct {v0, v1}, Lcom/google/android/gms/ads/internal/overlay/zzd$zzc;-><init>(Lcom/google/android/gms/internal/zzla;)V
-
-    iput-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHi:Lcom/google/android/gms/ads/internal/overlay/zzd$zzc;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzz(Z)V
-
-    goto/16 :goto_0
-
-    :pswitch_2
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzz(Z)V
-
-    goto/16 :goto_0
-
-    :pswitch_3
-    iget-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHn:Z
-
-    if-eqz v0, :cond_9
-
-    const/4 v0, 0x3
-
-    iput v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHr:I
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
-
-    goto/16 :goto_0
-
-    :cond_9
-    invoke-static {}, Lcom/google/android/gms/ads/internal/zzu;->zzch()Lcom/google/android/gms/ads/internal/overlay/zza;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    iget-object v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v2, v2, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHC:Lcom/google/android/gms/ads/internal/overlay/AdLauncherIntentInfoParcel;
-
-    iget-object v3, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v3, v3, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHK:Lcom/google/android/gms/ads/internal/overlay/zzp;
-
-    invoke-virtual {v0, v1, v2, v3}, Lcom/google/android/gms/ads/internal/overlay/zza;->zza(Landroid/content/Context;Lcom/google/android/gms/ads/internal/overlay/AdLauncherIntentInfoParcel;Lcom/google/android/gms/ads/internal/overlay/zzp;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x3
-
-    iput v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHr:I
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
-    :try_end_1
-    .catch Lcom/google/android/gms/ads/internal/overlay/zzd$zza; {:try_start_1 .. :try_end_1} :catch_0
-
-    goto/16 :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-    .end packed-switch
-.end method
-
-.method public onDestroy()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHp:Lcom/google/android/gms/ads/internal/overlay/zzd$a;
-
-    iget-object v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    invoke-interface {v1}, Lcom/google/android/gms/internal/zzla;->getView()Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/ads/internal/overlay/zzd$a;->removeView(Landroid/view/View;)V
-
-    :cond_0
-    invoke-virtual {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzgs()V
-
-    return-void
-.end method
-
-.method public onPause()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHs:Lcom/google/android/gms/ads/internal/overlay/zzl;
-
-    invoke-interface {v0}, Lcom/google/android/gms/ads/internal/overlay/zzl;->pause()V
-
-    invoke-virtual {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzgo()V
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v0, v0, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHE:Lcom/google/android/gms/ads/internal/overlay/zzg;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v0, v0, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHE:Lcom/google/android/gms/ads/internal/overlay/zzg;
-
-    invoke-interface {v0}, Lcom/google/android/gms/ads/internal/overlay/zzg;->onPause()V
-
-    :cond_0
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->isFinishing()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHi:Lcom/google/android/gms/ads/internal/overlay/zzd$zzc;
-
-    if-nez v0, :cond_2
-
-    :cond_1
-    invoke-static {}, Lcom/google/android/gms/ads/internal/zzu;->zzcm()Lcom/google/android/gms/internal/zzkb;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/internal/zzkb;->zzi(Lcom/google/android/gms/internal/zzla;)Z
-
-    :cond_2
-    invoke-virtual {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzgs()V
-
-    return-void
-.end method
-
-.method public onRestart()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onResume()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget v0, v0, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHL:I
-
-    const/4 v1, 0x4
-
-    if-ne v0, v1, :cond_0
-
-    iget-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHn:Z
-
-    if-eqz v0, :cond_2
-
-    const/4 v0, 0x3
-
-    iput v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHr:I
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
-
-    :cond_0
-    :goto_0
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v0, v0, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHE:Lcom/google/android/gms/ads/internal/overlay/zzg;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v0, v0, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHE:Lcom/google/android/gms/ads/internal/overlay/zzg;
-
-    invoke-interface {v0}, Lcom/google/android/gms/ads/internal/overlay/zzg;->onResume()V
-
-    :cond_1
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    invoke-interface {v0}, Lcom/google/android/gms/internal/zzla;->isDestroyed()Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    invoke-static {}, Lcom/google/android/gms/ads/internal/zzu;->zzcm()Lcom/google/android/gms/internal/zzkb;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/internal/zzkb;->zzj(Lcom/google/android/gms/internal/zzla;)Z
-
-    :goto_1
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHs:Lcom/google/android/gms/ads/internal/overlay/zzl;
-
-    invoke-interface {v0}, Lcom/google/android/gms/ads/internal/overlay/zzl;->resume()V
-
-    return-void
-
-    :cond_2
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHn:Z
-
     goto :goto_0
-
-    :cond_3
-    const-string v0, "The webview does not exit. Ignoring action."
-
-    invoke-static {v0}, Lcom/google/android/gms/internal/zzjw;->zzaW(Ljava/lang/String;)V
-
-    goto :goto_1
 .end method
 
-.method public onSaveInstanceState(Landroid/os/Bundle;)V
-    .locals 2
+.method private final zzmh()V
+    .locals 6
 
-    const-string v0, "com.google.android.gms.ads.internal.overlay.hasResumed"
-
-    iget-boolean v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHn:Z
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
-
-    return-void
-.end method
-
-.method public onStart()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onStop()V
-    .locals 0
-
-    invoke-virtual {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzgs()V
-
-    return-void
-.end method
-
-.method public setRequestedOrientation(I)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    invoke-virtual {v0, p1}, Landroid/app/Activity;->setRequestedOrientation(I)V
-
-    return-void
-.end method
-
-.method protected zzD(I)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    invoke-interface {v0, p1}, Lcom/google/android/gms/internal/zzla;->zzD(I)V
-
-    return-void
-.end method
-
-.method public zza(Landroid/view/View;Landroid/webkit/WebChromeClient$CustomViewCallback;)V
-    .locals 3
-
-    const/4 v2, -0x1
-
-    new-instance v0, Landroid/widget/FrameLayout;
-
-    iget-object v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    invoke-direct {v0, v1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHl:Landroid/widget/FrameLayout;
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHl:Landroid/widget/FrameLayout;
-
-    const/high16 v1, -0x1000000
-
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHl:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v0, p1, v2, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;II)V
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    iget-object v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHl:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v0, v1}, Landroid/app/Activity;->setContentView(Landroid/view/View;)V
-
-    invoke-virtual {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzaW()V
-
-    iput-object p2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHm:Landroid/webkit/WebChromeClient$CustomViewCallback;
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHk:Z
-
-    return-void
-.end method
-
-.method public zza(ZZ)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHj:Lcom/google/android/gms/ads/internal/overlay/zzo;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHj:Lcom/google/android/gms/ads/internal/overlay/zzo;
-
-    invoke-virtual {v0, p1, p2}, Lcom/google/android/gms/ads/internal/overlay/zzo;->zza(ZZ)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public zzaW()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHt:Z
-
-    return-void
-.end method
-
-.method public zzf(Lcom/google/android/gms/internal/zzla;Ljava/util/Map;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/android/gms/internal/zzla;",
-            "Ljava/util/Map",
-            "<",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ">;)V"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHs:Lcom/google/android/gms/ads/internal/overlay/zzl;
-
-    invoke-interface {v0, p1, p2}, Lcom/google/android/gms/ads/internal/overlay/zzl;->zzf(Lcom/google/android/gms/internal/zzla;Ljava/util/Map;)V
-
-    return-void
-.end method
-
-.method public zzgo()V
-    .locals 3
-
-    const/4 v2, 0x0
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    if-eqz v0, :cond_0
-
-    iget-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHk:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget v0, v0, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->orientation:I
-
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->setRequestedOrientation(I)V
-
-    :cond_0
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHl:Landroid/widget/FrameLayout;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    iget-object v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHp:Lcom/google/android/gms/ads/internal/overlay/zzd$a;
-
-    invoke-virtual {v0, v1}, Landroid/app/Activity;->setContentView(Landroid/view/View;)V
-
-    invoke-virtual {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzaW()V
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHl:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->removeAllViews()V
-
-    iput-object v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHl:Landroid/widget/FrameLayout;
-
-    :cond_1
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHm:Landroid/webkit/WebChromeClient$CustomViewCallback;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHm:Landroid/webkit/WebChromeClient$CustomViewCallback;
-
-    invoke-interface {v0}, Landroid/webkit/WebChromeClient$CustomViewCallback;->onCustomViewHidden()V
-
-    iput-object v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHm:Landroid/webkit/WebChromeClient$CustomViewCallback;
-
-    :cond_2
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHk:Z
-
-    return-void
-.end method
-
-.method public zzgp()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHr:I
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
-
-    return-void
-.end method
-
-.method public zzgq()Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    iput v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHr:I
-
-    iget-object v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    if-nez v2, :cond_1
-
-    :cond_0
-    :goto_0
-    return v0
-
-    :cond_1
-    iget-object v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    invoke-interface {v2}, Lcom/google/android/gms/internal/zzla;->zzgO()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHs:Lcom/google/android/gms/ads/internal/overlay/zzl;
-
-    invoke-interface {v2}, Lcom/google/android/gms/ads/internal/overlay/zzl;->zzgO()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    :goto_1
-    if-nez v0, :cond_0
-
-    iget-object v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    const-string v2, "onbackblocked"
-
-    invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
-
-    move-result-object v3
-
-    invoke-interface {v1, v2, v3}, Lcom/google/android/gms/internal/zzla;->zza(Ljava/lang/String;Ljava/util/Map;)V
-
-    goto :goto_0
-
-    :cond_2
-    move v0, v1
-
-    goto :goto_1
-.end method
-
-.method public zzgr()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHp:Lcom/google/android/gms/ads/internal/overlay/zzd$a;
-
-    iget-object v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHj:Lcom/google/android/gms/ads/internal/overlay/zzo;
-
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/ads/internal/overlay/zzd$a;->removeView(Landroid/view/View;)V
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzy(Z)V
-
-    return-void
-.end method
-
-.method protected zzgs()V
-    .locals 5
+    const/4 v5, 0x1
 
     const/4 v4, 0x0
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
+    const-string v0, "AdMediaPlayerView init MediaPlayer"
 
-    invoke-virtual {v0}, Landroid/app/Activity;->isFinishing()Z
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzafx;->v(Ljava/lang/String;)V
 
-    move-result v0
+    invoke-virtual {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
+
+    move-result-object v1
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfj:Landroid/net/Uri;
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHu:Z
-
-    if-eqz v0, :cond_1
+    if-nez v1, :cond_1
 
     :cond_0
     :goto_0
     return-void
 
     :cond_1
-    const/4 v0, 0x1
+    invoke-direct {p0, v4}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzr(Z)V
 
-    iput-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHu:Z
+    :try_start_0
+    invoke-static {}, Lcom/google/android/gms/ads/internal/zzbv;->zzes()Lcom/google/android/gms/ads/internal/overlay/zzah;
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
+    new-instance v0, Landroid/media/MediaPlayer;
+
+    invoke-direct {v0}, Landroid/media/MediaPlayer;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0, p0}, Landroid/media/MediaPlayer;->setOnBufferingUpdateListener(Landroid/media/MediaPlayer$OnBufferingUpdateListener;)V
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0, p0}, Landroid/media/MediaPlayer;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0, p0}, Landroid/media/MediaPlayer;->setOnErrorListener(Landroid/media/MediaPlayer$OnErrorListener;)V
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0, p0}, Landroid/media/MediaPlayer;->setOnInfoListener(Landroid/media/MediaPlayer$OnInfoListener;)V
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0, p0}, Landroid/media/MediaPlayer;->setOnPreparedListener(Landroid/media/MediaPlayer$OnPreparedListener;)V
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0, p0}, Landroid/media/MediaPlayer;->setOnVideoSizeChangedListener(Landroid/media/MediaPlayer$OnVideoSizeChangedListener;)V
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfm:I
+
+    iget-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfq:Z
 
     if-eqz v0, :cond_3
 
-    iget v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHr:I
+    new-instance v0, Lcom/google/android/gms/ads/internal/overlay/zzap;
 
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzD(I)V
+    invoke-virtual {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->getContext()Landroid/content/Context;
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHp:Lcom/google/android/gms/ads/internal/overlay/zzd$a;
+    move-result-object v2
 
-    iget-object v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
+    invoke-direct {v0, v2}, Lcom/google/android/gms/ads/internal/overlay/zzap;-><init>(Landroid/content/Context;)V
 
-    invoke-interface {v1}, Lcom/google/android/gms/internal/zzla;->getView()Landroid/view/View;
+    iput-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfp:Lcom/google/android/gms/ads/internal/overlay/zzap;
 
-    move-result-object v1
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfp:Lcom/google/android/gms/ads/internal/overlay/zzap;
 
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/ads/internal/overlay/zzd$a;->removeView(Landroid/view/View;)V
+    invoke-virtual {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->getWidth()I
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHi:Lcom/google/android/gms/ads/internal/overlay/zzd$zzc;
+    move-result v2
 
-    if-eqz v0, :cond_5
+    invoke-virtual {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->getHeight()I
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
+    move-result v3
 
-    iget-object v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHi:Lcom/google/android/gms/ads/internal/overlay/zzd$zzc;
+    invoke-virtual {v0, v1, v2, v3}, Lcom/google/android/gms/ads/internal/overlay/zzap;->zza(Landroid/graphics/SurfaceTexture;II)V
 
-    iget-object v1, v1, Lcom/google/android/gms/ads/internal/overlay/zzd$zzc;->zzov:Landroid/content/Context;
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfp:Lcom/google/android/gms/ads/internal/overlay/zzap;
 
-    invoke-interface {v0, v1}, Lcom/google/android/gms/internal/zzla;->setContext(Landroid/content/Context;)V
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/overlay/zzap;->start()V
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfp:Lcom/google/android/gms/ads/internal/overlay/zzap;
 
-    const/4 v1, 0x0
-
-    invoke-interface {v0, v1}, Lcom/google/android/gms/internal/zzla;->zzG(Z)V
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHi:Lcom/google/android/gms/ads/internal/overlay/zzd$zzc;
-
-    iget-object v0, v0, Lcom/google/android/gms/ads/internal/overlay/zzd$zzc;->zzHz:Landroid/view/ViewGroup;
-
-    iget-object v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    invoke-interface {v1}, Lcom/google/android/gms/internal/zzla;->getView()Landroid/view/View;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHi:Lcom/google/android/gms/ads/internal/overlay/zzd$zzc;
-
-    iget v2, v2, Lcom/google/android/gms/ads/internal/overlay/zzd$zzc;->index:I
-
-    iget-object v3, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHi:Lcom/google/android/gms/ads/internal/overlay/zzd$zzc;
-
-    iget-object v3, v3, Lcom/google/android/gms/ads/internal/overlay/zzd$zzc;->zzHy:Landroid/view/ViewGroup$LayoutParams;
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
-
-    iput-object v4, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHi:Lcom/google/android/gms/ads/internal/overlay/zzd$zzc;
-
-    :cond_2
-    :goto_1
-    iput-object v4, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    :cond_3
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v0, v0, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHE:Lcom/google/android/gms/ads/internal/overlay/zzg;
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v0, v0, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHE:Lcom/google/android/gms/ads/internal/overlay/zzg;
-
-    invoke-interface {v0}, Lcom/google/android/gms/ads/internal/overlay/zzg;->zzbs()V
-
-    :cond_4
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHs:Lcom/google/android/gms/ads/internal/overlay/zzl;
-
-    invoke-interface {v0}, Lcom/google/android/gms/ads/internal/overlay/zzl;->destroy()V
-
-    goto :goto_0
-
-    :cond_5
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/overlay/zzap;->zznj()Landroid/graphics/SurfaceTexture;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    iget-object v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    invoke-virtual {v1}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lcom/google/android/gms/internal/zzla;->setContext(Landroid/content/Context;)V
-
-    goto :goto_1
-.end method
-
-.method public zzgt()V
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHq:Z
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHq:Z
-
-    invoke-virtual {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzgu()V
-
-    :cond_0
-    return-void
-.end method
-
-.method protected zzgu()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    invoke-interface {v0}, Lcom/google/android/gms/internal/zzla;->zzgu()V
-
-    return-void
-.end method
-
-.method public zzgv()V
-    .locals 2
-
-    .prologue
-    .line 0
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHp:Lcom/google/android/gms/ads/internal/overlay/zzd$a;
-
-    .line 1000
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd$a;->b:Z
-
-    .line 0
-    return-void
-.end method
-
-.method public zzy(Z)V
-    .locals 4
-
-    const/4 v3, -0x2
-
-    if-eqz p1, :cond_0
-
-    const/16 v0, 0x32
-
-    :goto_0
-    new-instance v1, Lcom/google/android/gms/ads/internal/overlay/zzo;
-
-    iget-object v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    invoke-direct {v1, v2, v0, p0}, Lcom/google/android/gms/ads/internal/overlay/zzo;-><init>(Landroid/content/Context;ILcom/google/android/gms/ads/internal/overlay/zzu;)V
-
-    iput-object v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHj:Lcom/google/android/gms/ads/internal/overlay/zzo;
-
-    new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
-
-    invoke-direct {v1, v3, v3}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
-
-    const/16 v0, 0xa
-
-    invoke-virtual {v1, v0}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
-
-    if-eqz p1, :cond_1
-
-    const/16 v0, 0xb
-
     :goto_1
-    invoke-virtual {v1, v0}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+    iget-object v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHj:Lcom/google/android/gms/ads/internal/overlay/zzo;
-
-    iget-object v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-boolean v2, v2, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHI:Z
-
-    invoke-virtual {v0, p1, v2}, Lcom/google/android/gms/ads/internal/overlay/zzo;->zza(ZZ)V
-
-    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHp:Lcom/google/android/gms/ads/internal/overlay/zzd$a;
-
-    iget-object v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHj:Lcom/google/android/gms/ads/internal/overlay/zzo;
-
-    invoke-virtual {v0, v2, v1}, Lcom/google/android/gms/ads/internal/overlay/zzd$a;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
-
-    :cond_0
-    const/16 v0, 0x20
-
-    goto :goto_0
-
-    :cond_1
-    const/16 v0, 0x9
-
-    goto :goto_1
-.end method
-
-.method protected zzz(Z)V
-    .locals 17
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lcom/google/android/gms/ads/internal/overlay/zzd$zza;
-        }
-    .end annotation
-
-    move-object/from16 v0, p0
-
-    iget-boolean v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHt:Z
-
-    if-nez v1, :cond_0
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v2}, Landroid/app/Activity;->requestWindowFeature(I)Z
-
-    :cond_0
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    invoke-virtual {v1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    invoke-virtual {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    if-nez v2, :cond_1
+    iget-object v3, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfj:Landroid/net/Uri;
 
-    new-instance v1, Lcom/google/android/gms/ads/internal/overlay/zzd$zza;
+    invoke-virtual {v1, v2, v3}, Landroid/media/MediaPlayer;->setDataSource(Landroid/content/Context;Landroid/net/Uri;)V
 
-    const-string v2, "Invalid activity, no window available."
+    invoke-static {}, Lcom/google/android/gms/ads/internal/zzbv;->zzet()Lcom/google/android/gms/ads/internal/overlay/zzai;
 
-    invoke-direct {v1, v2}, Lcom/google/android/gms/ads/internal/overlay/zzd$zza;-><init>(Ljava/lang/String;)V
+    new-instance v1, Landroid/view/Surface;
 
-    throw v1
+    invoke-direct {v1, v0}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
 
-    :cond_1
-    move-object/from16 v0, p0
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
 
-    iget-boolean v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHo:Z
+    invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setSurface(Landroid/view/Surface;)V
 
-    if-eqz v1, :cond_2
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
 
-    move-object/from16 v0, p0
+    const/4 v1, 0x3
 
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
+    invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setAudioStreamType(I)V
 
-    iget-object v1, v1, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHO:Lcom/google/android/gms/ads/internal/InterstitialAdParameterParcel;
-
-    if-eqz v1, :cond_3
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v1, v1, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHO:Lcom/google/android/gms/ads/internal/InterstitialAdParameterParcel;
-
-    iget-boolean v1, v1, Lcom/google/android/gms/ads/internal/InterstitialAdParameterParcel;->zzrg:Z
-
-    if-eqz v1, :cond_3
-
-    :cond_2
-    const/16 v1, 0x400
-
-    const/16 v3, 0x400
-
-    invoke-virtual {v2, v1, v3}, Landroid/view/Window;->setFlags(II)V
-
-    :cond_3
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v1, v1, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHF:Lcom/google/android/gms/internal/zzla;
-
-    invoke-interface {v1}, Lcom/google/android/gms/internal/zzla;->zzjD()Lcom/google/android/gms/internal/zzlb;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/google/android/gms/internal/zzlb;->zzdi()Z
-
-    move-result v5
-
-    const/4 v1, 0x0
-
-    move-object/from16 v0, p0
-
-    iput-boolean v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHq:Z
-
-    if-eqz v5, :cond_4
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget v1, v1, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->orientation:I
-
-    invoke-static {}, Lcom/google/android/gms/ads/internal/zzu;->zzcm()Lcom/google/android/gms/internal/zzkb;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcom/google/android/gms/internal/zzkb;->zzje()I
-
-    move-result v3
-
-    if-ne v1, v3, :cond_c
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    invoke-virtual {v1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/content/res/Configuration;->orientation:I
-
-    const/4 v3, 0x1
-
-    if-ne v1, v3, :cond_b
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
 
     const/4 v1, 0x1
 
-    :goto_0
-    move-object/from16 v0, p0
+    invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setScreenOnWhilePlaying(Z)V
 
-    iput-boolean v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHq:Z
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
 
-    :cond_4
-    :goto_1
-    move-object/from16 v0, p0
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->prepareAsync()V
 
-    iget-boolean v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHq:Z
+    const/4 v0, 0x1
+
+    invoke-direct {p0, v0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzv(I)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
+
+    goto/16 :goto_0
+
+    :catch_0
+    move-exception v0
+
+    :goto_2
+    iget-object v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfj:Landroid/net/Uri;
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, 0x24
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    const/16 v4, 0x2e
+    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(I)V
+    const-string v2, "Failed to initialize MediaPlayer at "
 
-    const-string v4, "Delay onShow to next orientation change: "
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    move-result-object v3
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -1319,502 +535,1459 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/google/android/gms/internal/zzjw;->zzaU(Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/google/android/gms/internal/zzafx;->zzc(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
 
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget v1, v1, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->orientation:I
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v1}, Lcom/google/android/gms/ads/internal/overlay/zzd;->setRequestedOrientation(I)V
-
-    invoke-static {}, Lcom/google/android/gms/ads/internal/zzu;->zzcm()Lcom/google/android/gms/internal/zzkb;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v2}, Lcom/google/android/gms/internal/zzkb;->zza(Landroid/view/Window;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    const-string v1, "Hardware acceleration on the AdActivity window enabled."
-
-    invoke-static {v1}, Lcom/google/android/gms/internal/zzjw;->zzaU(Ljava/lang/String;)V
-
-    :cond_5
-    move-object/from16 v0, p0
-
-    iget-boolean v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHo:Z
-
-    if-nez v1, :cond_e
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHp:Lcom/google/android/gms/ads/internal/overlay/zzd$a;
-
-    const/high16 v2, -0x1000000
-
-    invoke-virtual {v1, v2}, Lcom/google/android/gms/ads/internal/overlay/zzd$a;->setBackgroundColor(I)V
-
-    :goto_2
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHp:Lcom/google/android/gms/ads/internal/overlay/zzd$a;
-
-    invoke-virtual {v1, v2}, Landroid/app/Activity;->setContentView(Landroid/view/View;)V
-
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzaW()V
-
-    if-eqz p1, :cond_11
-
-    invoke-static {}, Lcom/google/android/gms/ads/internal/zzu;->zzcl()Lcom/google/android/gms/internal/zzlc;
-
-    move-result-object v1
-
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v3, v3, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHF:Lcom/google/android/gms/internal/zzla;
-
-    invoke-interface {v3}, Lcom/google/android/gms/internal/zzla;->zzbi()Lcom/google/android/gms/ads/internal/client/AdSizeParcel;
-
-    move-result-object v3
-
-    const/4 v4, 0x1
-
-    const/4 v6, 0x0
-
-    move-object/from16 v0, p0
-
-    iget-object v7, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v7, v7, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzsx:Lcom/google/android/gms/ads/internal/util/client/VersionInfoParcel;
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    move-object/from16 v0, p0
-
-    iget-object v10, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v10, v10, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHF:Lcom/google/android/gms/internal/zzla;
-
-    invoke-interface {v10}, Lcom/google/android/gms/internal/zzla;->zzjA()Lcom/google/android/gms/ads/internal/zzd;
-
-    move-result-object v10
-
-    invoke-virtual/range {v1 .. v10}, Lcom/google/android/gms/internal/zzlc;->zza(Landroid/content/Context;Lcom/google/android/gms/ads/internal/client/AdSizeParcel;ZZLcom/google/android/gms/internal/zzaq;Lcom/google/android/gms/ads/internal/util/client/VersionInfoParcel;Lcom/google/android/gms/internal/zzdc;Lcom/google/android/gms/ads/internal/zzs;Lcom/google/android/gms/ads/internal/zzd;)Lcom/google/android/gms/internal/zzla;
-
-    move-result-object v1
-
-    move-object/from16 v0, p0
-
-    iput-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    invoke-interface {v1}, Lcom/google/android/gms/internal/zzla;->zzjD()Lcom/google/android/gms/internal/zzlb;
-
-    move-result-object v6
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v9, v1, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHG:Lcom/google/android/gms/internal/zzed;
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v10, v1, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHK:Lcom/google/android/gms/ads/internal/overlay/zzp;
-
-    const/4 v11, 0x1
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v12, v1, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHM:Lcom/google/android/gms/internal/zzej;
-
-    const/4 v13, 0x0
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v1, v1, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHF:Lcom/google/android/gms/internal/zzla;
-
-    invoke-interface {v1}, Lcom/google/android/gms/internal/zzla;->zzjD()Lcom/google/android/gms/internal/zzlb;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/google/android/gms/internal/zzlb;->zzjR()Lcom/google/android/gms/ads/internal/zze;
-
-    move-result-object v14
-
-    const/4 v15, 0x0
-
-    const/16 v16, 0x0
-
-    invoke-virtual/range {v6 .. v16}, Lcom/google/android/gms/internal/zzlb;->zza(Lcom/google/android/gms/ads/internal/client/zza;Lcom/google/android/gms/ads/internal/overlay/zzg;Lcom/google/android/gms/internal/zzed;Lcom/google/android/gms/ads/internal/overlay/zzp;ZLcom/google/android/gms/internal/zzej;Lcom/google/android/gms/internal/zzel;Lcom/google/android/gms/ads/internal/zze;Lcom/google/android/gms/internal/zzgx;Lcom/google/android/gms/internal/zzjh;)V
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    invoke-interface {v1}, Lcom/google/android/gms/internal/zzla;->zzjD()Lcom/google/android/gms/internal/zzlb;
-
-    move-result-object v1
-
-    new-instance v2, Lcom/google/android/gms/ads/internal/overlay/zzd$1;
-
-    move-object/from16 v0, p0
-
-    invoke-direct {v2, v0}, Lcom/google/android/gms/ads/internal/overlay/zzd$1;-><init>(Lcom/google/android/gms/ads/internal/overlay/zzd;)V
-
-    invoke-virtual {v1, v2}, Lcom/google/android/gms/internal/zzlb;->zza(Lcom/google/android/gms/internal/zzlb$zza;)V
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v1, v1, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->url:Ljava/lang/String;
-
-    if-eqz v1, :cond_f
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v2, v2, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->url:Ljava/lang/String;
-
-    invoke-interface {v1, v2}, Lcom/google/android/gms/internal/zzla;->loadUrl(Ljava/lang/String;)V
-
-    :goto_3
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v1, v1, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHF:Lcom/google/android/gms/internal/zzla;
-
-    if-eqz v1, :cond_6
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
-
-    iget-object v1, v1, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHF:Lcom/google/android/gms/internal/zzla;
-
-    move-object/from16 v0, p0
-
-    invoke-interface {v1, v0}, Lcom/google/android/gms/internal/zzla;->zzc(Lcom/google/android/gms/ads/internal/overlay/zzd;)V
-
-    :cond_6
-    :goto_4
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    move-object/from16 v0, p0
-
-    invoke-interface {v1, v0}, Lcom/google/android/gms/internal/zzla;->zzb(Lcom/google/android/gms/ads/internal/overlay/zzd;)V
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    invoke-interface {v1}, Lcom/google/android/gms/internal/zzla;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_7
-
-    instance-of v2, v1, Landroid/view/ViewGroup;
-
-    if-eqz v2, :cond_7
-
-    check-cast v1, Landroid/view/ViewGroup;
-
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    invoke-interface {v2}, Lcom/google/android/gms/internal/zzla;->getView()Landroid/view/View;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
-
-    :cond_7
-    move-object/from16 v0, p0
-
-    iget-boolean v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHo:Z
-
-    if-eqz v1, :cond_8
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    sget v2, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHg:I
-
-    invoke-interface {v1, v2}, Lcom/google/android/gms/internal/zzla;->setBackgroundColor(I)V
-
-    :cond_8
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHp:Lcom/google/android/gms/ads/internal/overlay/zzd$a;
-
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    invoke-interface {v2}, Lcom/google/android/gms/internal/zzla;->getView()Landroid/view/View;
-
-    move-result-object v2
-
-    const/4 v3, -0x1
-
-    const/4 v4, -0x1
-
-    invoke-virtual {v1, v2, v3, v4}, Lcom/google/android/gms/ads/internal/overlay/zzd$a;->addView(Landroid/view/View;II)V
-
-    if-nez p1, :cond_9
-
-    move-object/from16 v0, p0
-
-    iget-boolean v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHq:Z
-
-    if-nez v1, :cond_9
-
-    invoke-virtual/range {p0 .. p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzgu()V
-
-    :cond_9
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v5}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzy(Z)V
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    invoke-interface {v1}, Lcom/google/android/gms/internal/zzla;->zzjE()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_a
-
-    const/4 v1, 0x1
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0, v5, v1}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zza(ZZ)V
-
-    :cond_a
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    invoke-interface {v1}, Lcom/google/android/gms/internal/zzla;->zzjA()Lcom/google/android/gms/ads/internal/zzd;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_12
-
-    iget-object v1, v1, Lcom/google/android/gms/ads/internal/zzd;->zzqo:Lcom/google/android/gms/ads/internal/overlay/zzm;
-
-    :goto_5
-    if-eqz v1, :cond_13
-
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
-
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
-
-    move-object/from16 v0, p0
-
-    iget-object v4, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHp:Lcom/google/android/gms/ads/internal/overlay/zzd$a;
-
-    invoke-interface {v1, v2, v3, v4}, Lcom/google/android/gms/ads/internal/overlay/zzm;->zza(Landroid/app/Activity;Lcom/google/android/gms/internal/zzla;Landroid/widget/RelativeLayout;)Lcom/google/android/gms/ads/internal/overlay/zzl;
-
-    move-result-object v1
-
-    move-object/from16 v0, p0
-
-    iput-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHs:Lcom/google/android/gms/ads/internal/overlay/zzl;
-
-    :goto_6
-    return-void
-
-    :cond_b
-    const/4 v1, 0x0
+    invoke-virtual {p0, v0, v5, v4}, Lcom/google/android/gms/ads/internal/overlay/zzd;->onError(Landroid/media/MediaPlayer;II)Z
 
     goto/16 :goto_0
 
-    :cond_c
-    move-object/from16 v0, p0
+    :cond_2
+    :try_start_1
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfp:Lcom/google/android/gms/ads/internal/overlay/zzap;
 
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/overlay/zzap;->zzni()V
 
-    iget v1, v1, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->orientation:I
+    const/4 v0, 0x0
 
-    invoke-static {}, Lcom/google/android/gms/ads/internal/zzu;->zzcm()Lcom/google/android/gms/internal/zzkb;
+    iput-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfp:Lcom/google/android/gms/ads/internal/overlay/zzap;
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_1
+
+    :cond_3
+    move-object v0, v1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_2
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_2
+.end method
+
+.method private final zzmi()V
+    .locals 8
+
+    iget-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcff:Z
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    invoke-direct {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzmj()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->getCurrentPosition()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    iget v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfh:I
+
+    const/4 v1, 0x3
+
+    if-eq v0, v1, :cond_0
+
+    const-string v0, "AdMediaPlayerView nudging MediaPlayer"
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzafx;->v(Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zza(F)V
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->start()V
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->getCurrentPosition()I
+
+    move-result v0
+
+    invoke-static {}, Lcom/google/android/gms/ads/internal/zzbv;->zzeg()Lcom/google/android/gms/common/util/zzd;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lcom/google/android/gms/common/util/zzd;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    :cond_2
+    invoke-direct {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzmj()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v1}, Landroid/media/MediaPlayer;->getCurrentPosition()I
+
+    move-result v1
+
+    if-ne v1, v0, :cond_3
+
+    invoke-static {}, Lcom/google/android/gms/ads/internal/zzbv;->zzeg()Lcom/google/android/gms/common/util/zzd;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lcom/google/android/gms/common/util/zzd;->currentTimeMillis()J
+
+    move-result-wide v4
+
+    sub-long/2addr v4, v2
+
+    const-wide/16 v6, 0xfa
+
+    cmp-long v1, v4, v6
+
+    if-lez v1, :cond_2
+
+    :cond_3
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->pause()V
+
+    invoke-virtual {p0}, Lcom/google/android/gms/ads/internal/overlay/zzy;->zzmk()V
+
+    goto :goto_0
+.end method
+
+.method private final zzmj()Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    iget-object v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    if-eqz v1, :cond_0
+
+    iget v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfg:I
+
+    const/4 v2, -0x1
+
+    if-eq v1, v2, :cond_0
+
+    iget v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfg:I
+
+    if-eqz v1, :cond_0
+
+    iget v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfg:I
+
+    if-eq v1, v0, :cond_0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method private final zzr(Z)V
+    .locals 3
+
+    const/4 v2, 0x0
+
+    const/4 v1, 0x0
+
+    const-string v0, "AdMediaPlayerView release"
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzafx;->v(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfp:Lcom/google/android/gms/ads/internal/overlay/zzap;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfp:Lcom/google/android/gms/ads/internal/overlay/zzap;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/overlay/zzap;->zzni()V
+
+    iput-object v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfp:Lcom/google/android/gms/ads/internal/overlay/zzap;
+
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->reset()V
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
+
+    iput-object v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    invoke-direct {p0, v1}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzv(I)V
+
+    if-eqz p1, :cond_1
+
+    iput v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfh:I
+
+    iput v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfh:I
+
+    :cond_1
+    return-void
+.end method
+
+.method private final zzv(I)V
+    .locals 2
+
+    const/4 v1, 0x3
+
+    if-ne p1, v1, :cond_1
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfe:Lcom/google/android/gms/ads/internal/overlay/zzar;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/overlay/zzar;->zznm()V
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzchj:Lcom/google/android/gms/ads/internal/overlay/zzat;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/overlay/zzat;->zznm()V
+
+    :cond_0
+    :goto_0
+    iput p1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfg:I
+
+    return-void
+
+    :cond_1
+    iget v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfg:I
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfe:Lcom/google/android/gms/ads/internal/overlay/zzar;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/overlay/zzar;->zznn()V
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzchj:Lcom/google/android/gms/ads/internal/overlay/zzat;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/overlay/zzat;->zznn()V
+
+    goto :goto_0
+.end method
+
+
+# virtual methods
+.method public final getCurrentPosition()I
+    .locals 1
+
+    invoke-direct {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzmj()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->getCurrentPosition()I
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final getDuration()I
+    .locals 1
+
+    invoke-direct {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzmj()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->getDuration()I
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, -0x1
+
+    goto :goto_0
+.end method
+
+.method public final getVideoHeight()I
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->getVideoHeight()I
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final getVideoWidth()I
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->getVideoWidth()I
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final onBufferingUpdate(Landroid/media/MediaPlayer;I)V
+    .locals 0
+
+    iput p2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfm:I
+
+    return-void
+.end method
+
+.method public final onCompletion(Landroid/media/MediaPlayer;)V
+    .locals 2
+
+    const/4 v1, 0x5
+
+    const-string v0, "AdMediaPlayerView completion"
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzafx;->v(Ljava/lang/String;)V
+
+    invoke-direct {p0, v1}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzv(I)V
+
+    iput v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfh:I
+
+    sget-object v0, Lcom/google/android/gms/internal/zzahf;->zzdbo:Landroid/os/Handler;
+
+    new-instance v1, Lcom/google/android/gms/ads/internal/overlay/k;
+
+    invoke-direct {v1, p0}, Lcom/google/android/gms/ads/internal/overlay/k;-><init>(Lcom/google/android/gms/ads/internal/overlay/zzd;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public final onError(Landroid/media/MediaPlayer;II)Z
+    .locals 5
+
+    const/4 v4, -0x1
+
+    sget-object v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfd:Ljava/util/Map;
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    sget-object v1, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfd:Ljava/util/Map;
+
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, 0x26
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/google/android/gms/internal/zzkb;->zzjf()I
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v3
 
-    if-ne v1, v3, :cond_4
+    add-int/2addr v2, v3
 
-    move-object/from16 v0, p0
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
+    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    invoke-virtual {v1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+    const-string v2, "AdMediaPlayerView MediaPlayer error: "
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ":"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/google/android/gms/internal/zzafx;->zzcs(Ljava/lang/String;)V
+
+    invoke-direct {p0, v4}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzv(I)V
+
+    iput v4, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfh:I
+
+    sget-object v2, Lcom/google/android/gms/internal/zzahf;->zzdbo:Landroid/os/Handler;
+
+    new-instance v3, Lcom/google/android/gms/ads/internal/overlay/l;
+
+    invoke-direct {v3, p0, v0, v1}, Lcom/google/android/gms/ads/internal/overlay/l;-><init>(Lcom/google/android/gms/ads/internal/overlay/zzd;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v2, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final onInfo(Landroid/media/MediaPlayer;II)Z
+    .locals 4
+
+    sget-object v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfd:Ljava/util/Map;
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    sget-object v1, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfd:Ljava/util/Map;
+
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    iget v1, v1, Landroid/content/res/Configuration;->orientation:I
+    check-cast v1, Ljava/lang/String;
 
-    const/4 v3, 0x2
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    if-ne v1, v3, :cond_d
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, 0x25
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v2, "AdMediaPlayerView MediaPlayer info: "
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v2, ":"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzafx;->v(Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method protected final onMeasure(II)V
+    .locals 7
+
+    const/high16 v3, 0x40000000    # 2.0f
+
+    const/high16 v6, -0x80000000
+
+    iget v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfk:I
+
+    invoke-static {v0, p1}, Lcom/google/android/gms/ads/internal/overlay/zzd;->getDefaultSize(II)I
+
+    move-result v1
+
+    iget v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfl:I
+
+    invoke-static {v0, p2}, Lcom/google/android/gms/ads/internal/overlay/zzd;->getDefaultSize(II)I
+
+    move-result v0
+
+    iget v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfk:I
+
+    if-lez v2, :cond_0
+
+    iget v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfl:I
+
+    if-lez v2, :cond_0
+
+    iget-object v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfp:Lcom/google/android/gms/ads/internal/overlay/zzap;
+
+    if-nez v2, :cond_0
+
+    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
+
+    move-result v4
+
+    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
+
+    move-result v2
+
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
+
+    move-result v5
+
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
+
+    move-result v0
+
+    if-ne v4, v3, :cond_7
+
+    if-ne v5, v3, :cond_7
+
+    iget v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfk:I
+
+    mul-int/2addr v1, v0
+
+    iget v3, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfl:I
+
+    mul-int/2addr v3, v2
+
+    if-ge v1, v3, :cond_6
+
+    iget v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfk:I
+
+    mul-int/2addr v1, v0
+
+    iget v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfl:I
+
+    div-int/2addr v1, v2
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->setMeasuredDimension(II)V
+
+    iget-object v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfp:Lcom/google/android/gms/ads/internal/overlay/zzap;
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfp:Lcom/google/android/gms/ads/internal/overlay/zzap;
+
+    invoke-virtual {v2, v1, v0}, Lcom/google/android/gms/ads/internal/overlay/zzap;->zzf(II)V
+
+    :cond_1
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v3, 0x10
+
+    if-ne v2, v3, :cond_5
+
+    iget v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfn:I
+
+    if-lez v2, :cond_2
+
+    iget v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfn:I
+
+    if-ne v2, v1, :cond_3
+
+    :cond_2
+    iget v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfo:I
+
+    if-lez v2, :cond_4
+
+    iget v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfo:I
+
+    if-eq v2, v0, :cond_4
+
+    :cond_3
+    invoke-direct {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzmi()V
+
+    :cond_4
+    iput v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfn:I
+
+    iput v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfo:I
+
+    :cond_5
+    return-void
+
+    :cond_6
+    iget v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfk:I
+
+    mul-int/2addr v1, v0
+
+    iget v3, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfl:I
+
+    mul-int/2addr v3, v2
+
+    if-le v1, v3, :cond_c
+
+    iget v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfl:I
+
+    mul-int/2addr v0, v2
+
+    iget v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfk:I
+
+    div-int/2addr v0, v1
+
+    move v1, v2
+
+    goto :goto_0
+
+    :cond_7
+    if-ne v4, v3, :cond_8
+
+    iget v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfl:I
+
+    mul-int/2addr v1, v2
+
+    iget v3, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfk:I
+
+    div-int/2addr v1, v3
+
+    if-ne v5, v6, :cond_b
+
+    if-le v1, v0, :cond_b
+
+    move v1, v2
+
+    goto :goto_0
+
+    :cond_8
+    if-ne v5, v3, :cond_9
+
+    iget v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfk:I
+
+    mul-int/2addr v1, v0
+
+    iget v3, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfl:I
+
+    div-int/2addr v1, v3
+
+    if-ne v4, v6, :cond_0
+
+    if-le v1, v2, :cond_0
+
+    move v1, v2
+
+    goto :goto_0
+
+    :cond_9
+    iget v3, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfk:I
+
+    iget v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfl:I
+
+    if-ne v5, v6, :cond_a
+
+    if-le v1, v0, :cond_a
+
+    iget v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfk:I
+
+    mul-int/2addr v1, v0
+
+    iget v3, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfl:I
+
+    div-int/2addr v1, v3
+
+    :goto_1
+    if-ne v4, v6, :cond_0
+
+    if-le v1, v2, :cond_0
+
+    iget v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfl:I
+
+    mul-int/2addr v0, v2
+
+    iget v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfk:I
+
+    div-int/2addr v0, v1
+
+    move v1, v2
+
+    goto :goto_0
+
+    :cond_a
+    move v0, v1
+
+    move v1, v3
+
+    goto :goto_1
+
+    :cond_b
+    move v0, v1
+
+    move v1, v2
+
+    goto :goto_0
+
+    :cond_c
+    move v1, v2
+
+    goto :goto_0
+.end method
+
+.method public final onPrepared(Landroid/media/MediaPlayer;)V
+    .locals 4
+
+    const-string v0, "AdMediaPlayerView prepared"
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzafx;->v(Ljava/lang/String;)V
+
+    const/4 v0, 0x2
+
+    invoke-direct {p0, v0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzv(I)V
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfe:Lcom/google/android/gms/ads/internal/overlay/zzar;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/overlay/zzar;->zzmw()V
+
+    sget-object v0, Lcom/google/android/gms/internal/zzahf;->zzdbo:Landroid/os/Handler;
+
+    new-instance v1, Lcom/google/android/gms/ads/internal/overlay/j;
+
+    invoke-direct {v1, p0}, Lcom/google/android/gms/ads/internal/overlay/j;-><init>(Lcom/google/android/gms/ads/internal/overlay/zzd;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    invoke-virtual {p1}, Landroid/media/MediaPlayer;->getVideoWidth()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfk:I
+
+    invoke-virtual {p1}, Landroid/media/MediaPlayer;->getVideoHeight()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfl:I
+
+    iget v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfr:I
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfr:I
+
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/ads/internal/overlay/zzy;->seekTo(I)V
+
+    :cond_0
+    invoke-direct {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzmi()V
+
+    iget v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfk:I
+
+    iget v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfl:I
+
+    const/16 v2, 0x3e
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v2, "AdMediaPlayerView stream dimensions: "
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v2, " x "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzafx;->zzcr(Ljava/lang/String;)V
+
+    iget v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfh:I
+
+    const/4 v1, 0x3
+
+    if-ne v0, v1, :cond_1
+
+    invoke-virtual {p0}, Lcom/google/android/gms/ads/internal/overlay/zzy;->play()V
+
+    :cond_1
+    invoke-virtual {p0}, Lcom/google/android/gms/ads/internal/overlay/zzy;->zzmk()V
+
+    return-void
+.end method
+
+.method public final onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
+    .locals 2
+
+    const-string v0, "AdMediaPlayerView surface created"
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzafx;->v(Ljava/lang/String;)V
+
+    invoke-direct {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzmh()V
+
+    sget-object v0, Lcom/google/android/gms/internal/zzahf;->zzdbo:Landroid/os/Handler;
+
+    new-instance v1, Lcom/google/android/gms/ads/internal/overlay/m;
+
+    invoke-direct {v1, p0}, Lcom/google/android/gms/ads/internal/overlay/m;-><init>(Lcom/google/android/gms/ads/internal/overlay/zzd;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public final onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)Z
+    .locals 3
+
+    const/4 v2, 0x1
+
+    const-string v0, "AdMediaPlayerView surface destroyed"
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzafx;->v(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfr:I
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->getCurrentPosition()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfr:I
+
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfp:Lcom/google/android/gms/ads/internal/overlay/zzap;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfp:Lcom/google/android/gms/ads/internal/overlay/zzap;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/overlay/zzap;->zzni()V
+
+    :cond_1
+    sget-object v0, Lcom/google/android/gms/internal/zzahf;->zzdbo:Landroid/os/Handler;
+
+    new-instance v1, Lcom/google/android/gms/ads/internal/overlay/o;
+
+    invoke-direct {v1, p0}, Lcom/google/android/gms/ads/internal/overlay/o;-><init>(Lcom/google/android/gms/ads/internal/overlay/zzd;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    invoke-direct {p0, v2}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzr(Z)V
+
+    return v2
+.end method
+
+.method public final onSurfaceTextureSizeChanged(Landroid/graphics/SurfaceTexture;II)V
+    .locals 4
 
     const/4 v1, 0x1
 
-    :goto_7
-    move-object/from16 v0, p0
+    const/4 v2, 0x0
 
-    iput-boolean v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHq:Z
+    const-string v0, "AdMediaPlayerView surface changed"
 
-    goto/16 :goto_1
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzafx;->v(Ljava/lang/String;)V
 
-    :cond_d
+    iget v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfh:I
+
+    const/4 v3, 0x3
+
+    if-ne v0, v3, :cond_3
+
+    move v0, v1
+
+    :goto_0
+    iget v3, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfk:I
+
+    if-ne v3, p2, :cond_4
+
+    iget v3, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfl:I
+
+    if-ne v3, p3, :cond_4
+
+    :goto_1
+    iget-object v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    if-eqz v2, :cond_1
+
+    if-eqz v0, :cond_1
+
+    if-eqz v1, :cond_1
+
+    iget v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfr:I
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfr:I
+
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/ads/internal/overlay/zzy;->seekTo(I)V
+
+    :cond_0
+    invoke-virtual {p0}, Lcom/google/android/gms/ads/internal/overlay/zzy;->play()V
+
+    :cond_1
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfp:Lcom/google/android/gms/ads/internal/overlay/zzap;
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfp:Lcom/google/android/gms/ads/internal/overlay/zzap;
+
+    invoke-virtual {v0, p2, p3}, Lcom/google/android/gms/ads/internal/overlay/zzap;->zzf(II)V
+
+    :cond_2
+    sget-object v0, Lcom/google/android/gms/internal/zzahf;->zzdbo:Landroid/os/Handler;
+
+    new-instance v1, Lcom/google/android/gms/ads/internal/overlay/n;
+
+    invoke-direct {v1, p0, p2, p3}, Lcom/google/android/gms/ads/internal/overlay/n;-><init>(Lcom/google/android/gms/ads/internal/overlay/zzd;II)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :cond_3
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_4
+    move v1, v2
+
+    goto :goto_1
+.end method
+
+.method public final onSurfaceTextureUpdated(Landroid/graphics/SurfaceTexture;)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfe:Lcom/google/android/gms/ads/internal/overlay/zzar;
+
+    invoke-virtual {v0, p0}, Lcom/google/android/gms/ads/internal/overlay/zzar;->zzb(Lcom/google/android/gms/ads/internal/overlay/zzy;)V
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzchi:Lcom/google/android/gms/ads/internal/overlay/zzak;
+
+    iget-object v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfs:Lcom/google/android/gms/ads/internal/overlay/zzx;
+
+    invoke-virtual {v0, p1, v1}, Lcom/google/android/gms/ads/internal/overlay/zzak;->zza(Landroid/graphics/SurfaceTexture;Lcom/google/android/gms/ads/internal/overlay/zzx;)V
+
+    return-void
+.end method
+
+.method public final onVideoSizeChanged(Landroid/media/MediaPlayer;II)V
+    .locals 2
+
+    const/16 v0, 0x39
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v0, "AdMediaPlayerView size changed: "
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " x "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzafx;->v(Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Landroid/media/MediaPlayer;->getVideoWidth()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfk:I
+
+    invoke-virtual {p1}, Landroid/media/MediaPlayer;->getVideoHeight()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfl:I
+
+    iget v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfk:I
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfl:I
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->requestLayout()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final pause()V
+    .locals 3
+
+    const/4 v2, 0x4
+
+    const-string v0, "AdMediaPlayerView pause"
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzafx;->v(Ljava/lang/String;)V
+
+    invoke-direct {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzmj()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->isPlaying()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->pause()V
+
+    invoke-direct {p0, v2}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzv(I)V
+
+    sget-object v0, Lcom/google/android/gms/internal/zzahf;->zzdbo:Landroid/os/Handler;
+
+    new-instance v1, Lcom/google/android/gms/ads/internal/overlay/q;
+
+    invoke-direct {v1, p0}, Lcom/google/android/gms/ads/internal/overlay/q;-><init>(Lcom/google/android/gms/ads/internal/overlay/zzd;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_0
+    iput v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfh:I
+
+    return-void
+.end method
+
+.method public final play()V
+    .locals 3
+
+    const/4 v2, 0x3
+
+    const-string v0, "AdMediaPlayerView play"
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzafx;->v(Ljava/lang/String;)V
+
+    invoke-direct {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzmj()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->start()V
+
+    invoke-direct {p0, v2}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzv(I)V
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzchi:Lcom/google/android/gms/ads/internal/overlay/zzak;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/overlay/zzak;->zzmx()V
+
+    sget-object v0, Lcom/google/android/gms/internal/zzahf;->zzdbo:Landroid/os/Handler;
+
+    new-instance v1, Lcom/google/android/gms/ads/internal/overlay/p;
+
+    invoke-direct {v1, p0}, Lcom/google/android/gms/ads/internal/overlay/p;-><init>(Lcom/google/android/gms/ads/internal/overlay/zzd;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_0
+    iput v2, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfh:I
+
+    return-void
+.end method
+
+.method public final seekTo(I)V
+    .locals 2
+
+    const/16 v0, 0x22
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v0, "AdMediaPlayerView seek "
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzafx;->v(Ljava/lang/String;)V
+
+    invoke-direct {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzmj()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0, p1}, Landroid/media/MediaPlayer;->seekTo(I)V
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfr:I
+
+    :goto_0
+    return-void
+
+    :cond_0
+    iput p1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfr:I
+
+    goto :goto_0
+.end method
+
+.method public final setVideoPath(Ljava/lang/String;)V
+    .locals 2
+
+    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzie;->zze(Landroid/net/Uri;)Lcom/google/android/gms/internal/zzie;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    :goto_0
+    iput-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfj:Landroid/net/Uri;
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfr:I
+
+    invoke-direct {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzmh()V
+
+    invoke-virtual {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->requestLayout()V
+
+    invoke-virtual {p0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->invalidate()V
+
+    return-void
+
+    :cond_0
+    iget-object v0, v1, Lcom/google/android/gms/internal/zzie;->url:Ljava/lang/String;
+
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public final stop()V
+    .locals 2
+
     const/4 v1, 0x0
 
-    goto :goto_7
+    const-string v0, "AdMediaPlayerView stop"
 
-    :cond_e
-    move-object/from16 v0, p0
+    invoke-static {v0}, Lcom/google/android/gms/internal/zzafx;->v(Ljava/lang/String;)V
 
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHp:Lcom/google/android/gms/ads/internal/overlay/zzd$a;
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
 
-    sget v2, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHg:I
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v1, v2}, Lcom/google/android/gms/ads/internal/overlay/zzd$a;->setBackgroundColor(I)V
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
 
-    goto/16 :goto_2
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->stop()V
 
-    :cond_f
-    move-object/from16 v0, p0
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
 
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
 
-    iget-object v1, v1, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHJ:Ljava/lang/String;
+    const/4 v0, 0x0
 
-    if-eqz v1, :cond_10
+    iput-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfi:Landroid/media/MediaPlayer;
 
-    move-object/from16 v0, p0
+    invoke-direct {p0, v1}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzv(I)V
 
-    iget-object v6, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
+    iput v1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfh:I
 
-    move-object/from16 v0, p0
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfe:Lcom/google/android/gms/ads/internal/overlay/zzar;
 
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/overlay/zzar;->onStop()V
 
-    iget-object v7, v1, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHH:Ljava/lang/String;
+    return-void
+.end method
 
-    move-object/from16 v0, p0
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v8, v1, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHJ:Ljava/lang/String;
+    move-result-object v0
 
-    const-string v9, "text/html"
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    const-string v10, "UTF-8"
+    move-result-object v0
 
-    const/4 v11, 0x0
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
-    invoke-interface/range {v6 .. v11}, Lcom/google/android/gms/internal/zzla;->loadDataWithBaseURL(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    move-result v1
 
-    goto/16 :goto_3
+    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
-    :cond_10
-    new-instance v1, Lcom/google/android/gms/ads/internal/overlay/zzd$zza;
+    move-result-object v1
 
-    const-string v2, "No URL or HTML to display in ad overlay."
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-direct {v1, v2}, Lcom/google/android/gms/ads/internal/overlay/zzd$zza;-><init>(Ljava/lang/String;)V
+    move-result-object v2
 
-    throw v1
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
 
-    :cond_11
-    move-object/from16 v0, p0
+    move-result v2
 
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzHh:Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;
+    add-int/lit8 v2, v2, 0x1
 
-    iget-object v1, v1, Lcom/google/android/gms/ads/internal/overlay/AdOverlayInfoParcel;->zzHF:Lcom/google/android/gms/internal/zzla;
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-object/from16 v0, p0
+    move-result-object v3
 
-    iput-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
 
-    move-object/from16 v0, p0
+    move-result v3
 
-    iget-object v1, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzBb:Lcom/google/android/gms/internal/zzla;
+    add-int/2addr v2, v3
 
-    move-object/from16 v0, p0
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/google/android/gms/ads/internal/overlay/zzd;->mActivity:Landroid/app/Activity;
+    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    invoke-interface {v1, v2}, Lcom/google/android/gms/internal/zzla;->setContext(Landroid/content/Context;)V
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto/16 :goto_4
+    move-result-object v0
 
-    :cond_12
-    const/4 v1, 0x0
+    const-string v2, "@"
 
-    goto/16 :goto_5
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_13
-    const-string v1, "Appstreaming controller is null."
+    move-result-object v0
 
-    invoke-static {v1}, Lcom/google/android/gms/internal/zzjw;->zzaW(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto/16 :goto_6
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final zza(FF)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfp:Lcom/google/android/gms/ads/internal/overlay/zzap;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfp:Lcom/google/android/gms/ads/internal/overlay/zzap;
+
+    invoke-virtual {v0, p1, p2}, Lcom/google/android/gms/ads/internal/overlay/zzap;->zzb(FF)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final zza(Lcom/google/android/gms/ads/internal/overlay/zzx;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfs:Lcom/google/android/gms/ads/internal/overlay/zzx;
+
+    return-void
+.end method
+
+.method public final zzmg()Ljava/lang/String;
+    .locals 3
+
+    const-string v1, "MediaPlayer"
+
+    iget-boolean v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzcfq:Z
+
+    if-eqz v0, :cond_0
+
+    const-string v0, " spherical"
+
+    :goto_0
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_1
+    return-object v0
+
+    :cond_0
+    const-string v0, ""
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    goto :goto_1
+.end method
+
+.method public final zzmk()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/internal/overlay/zzd;->zzchj:Lcom/google/android/gms/ads/internal/overlay/zzat;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/overlay/zzat;->zznp()F
+
+    move-result v0
+
+    invoke-direct {p0, v0}, Lcom/google/android/gms/ads/internal/overlay/zzd;->zza(F)V
+
+    return-void
 .end method

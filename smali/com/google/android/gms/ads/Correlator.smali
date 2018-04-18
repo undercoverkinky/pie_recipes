@@ -3,12 +3,12 @@
 
 
 # annotations
-.annotation runtime Lcom/google/android/gms/internal/zzig;
+.annotation runtime Lcom/google/android/gms/internal/zzzt;
 .end annotation
 
 
 # instance fields
-.field private zzpm:Lcom/google/android/gms/ads/internal/client/zzn;
+.field private zzakz:Lcom/google/android/gms/internal/zzjp;
 
 
 # direct methods
@@ -17,11 +17,11 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lcom/google/android/gms/ads/internal/client/zzn;
+    new-instance v0, Lcom/google/android/gms/internal/zzjp;
 
-    invoke-direct {v0}, Lcom/google/android/gms/ads/internal/client/zzn;-><init>()V
+    invoke-direct {v0}, Lcom/google/android/gms/internal/zzjp;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/gms/ads/Correlator;->zzpm:Lcom/google/android/gms/ads/internal/client/zzn;
+    iput-object v0, p0, Lcom/google/android/gms/ads/Correlator;->zzakz:Lcom/google/android/gms/internal/zzjp;
 
     return-void
 .end method
@@ -31,17 +31,17 @@
 .method public final reset()V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/Correlator;->zzpm:Lcom/google/android/gms/ads/internal/client/zzn;
+    iget-object v0, p0, Lcom/google/android/gms/ads/Correlator;->zzakz:Lcom/google/android/gms/internal/zzjp;
 
-    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/client/zzn;->zzdS()V
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/zzjp;->zzhw()V
 
     return-void
 .end method
 
-.method public final zzaY()Lcom/google/android/gms/ads/internal/client/zzn;
+.method public final zzba()Lcom/google/android/gms/internal/zzjp;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/ads/Correlator;->zzpm:Lcom/google/android/gms/ads/internal/client/zzn;
+    iget-object v0, p0, Lcom/google/android/gms/ads/Correlator;->zzakz:Lcom/google/android/gms/internal/zzjp;
 
     return-object v0
 .end method

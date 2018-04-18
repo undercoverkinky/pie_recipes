@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/volley/toolbox/NetworkImageView$1;->a(Lcom/android/volley/toolbox/h$c;Z)V
+    value = Lcom/android/volley/toolbox/NetworkImageView$1;->a(Lcom/android/volley/toolbox/ImageLoader$a;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/android/volley/toolbox/h$c;
+.field final synthetic a:Lcom/android/volley/toolbox/ImageLoader$a;
 
 .field final synthetic b:Lcom/android/volley/toolbox/NetworkImageView$1;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/volley/toolbox/NetworkImageView$1;Lcom/android/volley/toolbox/h$c;)V
+.method constructor <init>(Lcom/android/volley/toolbox/NetworkImageView$1;Lcom/android/volley/toolbox/ImageLoader$a;)V
     .locals 0
 
     .prologue
     .line 179
     iput-object p1, p0, Lcom/android/volley/toolbox/NetworkImageView$1$1;->b:Lcom/android/volley/toolbox/NetworkImageView$1;
 
-    iput-object p2, p0, Lcom/android/volley/toolbox/NetworkImageView$1$1;->a:Lcom/android/volley/toolbox/h$c;
+    iput-object p2, p0, Lcom/android/volley/toolbox/NetworkImageView$1$1;->a:Lcom/android/volley/toolbox/ImageLoader$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,11 +47,11 @@
     .line 183
     iget-object v0, p0, Lcom/android/volley/toolbox/NetworkImageView$1$1;->b:Lcom/android/volley/toolbox/NetworkImageView$1;
 
-    iget-object v1, p0, Lcom/android/volley/toolbox/NetworkImageView$1$1;->a:Lcom/android/volley/toolbox/h$c;
+    iget-object v1, p0, Lcom/android/volley/toolbox/NetworkImageView$1$1;->a:Lcom/android/volley/toolbox/ImageLoader$a;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/volley/toolbox/NetworkImageView$1;->a(Lcom/android/volley/toolbox/h$c;Z)V
+    invoke-virtual {v0, v1, v2}, Lcom/android/volley/toolbox/NetworkImageView$1;->a(Lcom/android/volley/toolbox/ImageLoader$a;Z)V
 
     .line 184
     return-void

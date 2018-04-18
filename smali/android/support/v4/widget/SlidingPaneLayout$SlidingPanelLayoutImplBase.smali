@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 1488
+    .line 1502
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
     .locals 4
 
     .prologue
-    .line 1490
+    .line 1505
     invoke-virtual {p2}, Landroid/view/View;->getLeft()I
 
     move-result v0
@@ -43,6 +43,7 @@
 
     move-result v1
 
+    .line 1506
     invoke-virtual {p2}, Landroid/view/View;->getRight()I
 
     move-result v2
@@ -51,8 +52,9 @@
 
     move-result v3
 
+    .line 1505
     invoke-static {p1, v0, v1, v2, v3}, Landroid/support/v4/view/ViewCompat;->postInvalidateOnAnimation(Landroid/view/View;IIII)V
 
-    .line 1492
+    .line 1507
     return-void
 .end method

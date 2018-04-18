@@ -40,7 +40,7 @@
 
     const/4 v2, 0x0
 
-    .line 105
+    .line 176
     new-instance v0, Lcom/rounds/kik/VideoController$TextureViewState;
 
     const-string v1, "Unavailable"
@@ -57,7 +57,7 @@
 
     sput-object v0, Lcom/rounds/kik/VideoController$TextureViewState;->Available:Lcom/rounds/kik/VideoController$TextureViewState;
 
-    .line 104
+    .line 174
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/rounds/kik/VideoController$TextureViewState;
@@ -84,7 +84,7 @@
     .end annotation
 
     .prologue
-    .line 104
+    .line 174
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -94,7 +94,7 @@
     .locals 1
 
     .prologue
-    .line 104
+    .line 174
     const-class v0, Lcom/rounds/kik/VideoController$TextureViewState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -110,7 +110,7 @@
     .locals 1
 
     .prologue
-    .line 104
+    .line 174
     sget-object v0, Lcom/rounds/kik/VideoController$TextureViewState;->$VALUES:[Lcom/rounds/kik/VideoController$TextureViewState;
 
     invoke-virtual {v0}, [Lcom/rounds/kik/VideoController$TextureViewState;->clone()Ljava/lang/Object;

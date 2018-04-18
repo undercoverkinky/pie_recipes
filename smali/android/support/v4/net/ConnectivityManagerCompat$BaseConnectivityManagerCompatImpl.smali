@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 37
+    .line 85
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,46 +30,61 @@
 
 
 # virtual methods
+.method public getRestrictBackgroundStatus(Landroid/net/ConnectivityManager;)I
+    .locals 1
+
+    .prologue
+    .line 113
+    const/4 v0, 0x3
+
+    return v0
+.end method
+
 .method public isActiveNetworkMetered(Landroid/net/ConnectivityManager;)Z
     .locals 2
 
     .prologue
     const/4 v0, 0x1
 
-    .line 40
+    .line 88
     invoke-virtual {p1}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v1
 
-    .line 41
+    .line 89
     if-nez v1, :cond_0
 
-    .line 54
+    .line 107
     :goto_0
     :pswitch_0
     return v0
 
-    .line 46
+    .line 94
     :cond_0
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->getType()I
 
     move-result v1
 
-    .line 47
+    .line 95
     packed-switch v1, :pswitch_data_0
 
     goto :goto_0
 
-    .line 51
+    .line 104
     :pswitch_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 47
+    .line 95
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
         :pswitch_1
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
     .end packed-switch
 .end method

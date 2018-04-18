@@ -1,5 +1,5 @@
 .class final Lcom/google/common/collect/Lists$TransformingSequentialList$1;
-.super Lcom/google/common/collect/v;
+.super Lcom/google/common/collect/q;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/google/common/collect/v",
+        "Lcom/google/common/collect/q",
         "<TF;TT;>;"
     }
 .end annotation
@@ -30,10 +30,10 @@
     .locals 0
 
     .prologue
-    .line 575
+    .line 595
     iput-object p1, p0, Lcom/google/common/collect/Lists$TransformingSequentialList$1;->a:Lcom/google/common/collect/Lists$TransformingSequentialList;
 
-    invoke-direct {p0, p2}, Lcom/google/common/collect/v;-><init>(Ljava/util/ListIterator;)V
+    invoke-direct {p0, p2}, Lcom/google/common/collect/q;-><init>(Ljava/util/ListIterator;)V
 
     return-void
 .end method
@@ -49,12 +49,12 @@
     .end annotation
 
     .prologue
-    .line 578
+    .line 598
     iget-object v0, p0, Lcom/google/common/collect/Lists$TransformingSequentialList$1;->a:Lcom/google/common/collect/Lists$TransformingSequentialList;
 
-    iget-object v0, v0, Lcom/google/common/collect/Lists$TransformingSequentialList;->function:Lcom/google/common/base/d;
+    iget-object v0, v0, Lcom/google/common/collect/Lists$TransformingSequentialList;->function:Lcom/google/common/base/Function;
 
-    invoke-interface {v0, p1}, Lcom/google/common/base/d;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lcom/google/common/base/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 

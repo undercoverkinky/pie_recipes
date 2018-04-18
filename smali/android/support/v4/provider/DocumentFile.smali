@@ -86,6 +86,7 @@
     .line 130
     new-instance v0, Landroid/support/v4/provider/TreeDocumentFile;
 
+    .line 131
     invoke-static {p1}, Landroid/support/v4/provider/DocumentsContractApi21;->prepareTreeUri(Landroid/net/Uri;)Landroid/net/Uri;
 
     move-result-object v2
@@ -153,7 +154,7 @@
     .locals 5
 
     .prologue
-    .line 316
+    .line 324
     invoke-virtual {p0}, Landroid/support/v4/provider/DocumentFile;->listFiles()[Landroid/support/v4/provider/DocumentFile;
 
     move-result-object v2
@@ -169,7 +170,7 @@
 
     aget-object v0, v2, v1
 
-    .line 317
+    .line 325
     invoke-virtual {v0}, Landroid/support/v4/provider/DocumentFile;->getName()Ljava/lang/String;
 
     move-result-object v4
@@ -180,11 +181,11 @@
 
     if-eqz v4, :cond_0
 
-    .line 321
+    .line 329
     :goto_1
     return-object v0
 
-    .line 316
+    .line 324
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -192,7 +193,7 @@
 
     goto :goto_0
 
-    .line 321
+    .line 329
     :cond_1
     const/4 v0, 0x0
 
@@ -222,6 +223,9 @@
 .end method
 
 .method public abstract isFile()Z
+.end method
+
+.method public abstract isVirtual()Z
 .end method
 
 .method public abstract lastModified()J

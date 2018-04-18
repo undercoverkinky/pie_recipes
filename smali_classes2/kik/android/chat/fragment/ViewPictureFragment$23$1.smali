@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 368
+    .line 413
     iput-object p1, p0, Lkik/android/chat/fragment/ViewPictureFragment$23$1;->b:Lkik/android/chat/fragment/ViewPictureFragment$23;
 
     iput-object p2, p0, Lkik/android/chat/fragment/ViewPictureFragment$23$1;->a:Landroid/graphics/Bitmap;
@@ -44,7 +44,7 @@
     .locals 2
 
     .prologue
-    .line 372
+    .line 417
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$23$1;->b:Lkik/android/chat/fragment/ViewPictureFragment$23;
 
     iget-object v0, v0, Lkik/android/chat/fragment/ViewPictureFragment$23;->a:Lkik/android/chat/fragment/ViewPictureFragment;
@@ -53,7 +53,7 @@
 
     invoke-static {v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment;->a(Lkik/android/chat/fragment/ViewPictureFragment;Z)Z
 
-    .line 373
+    .line 418
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$23$1;->b:Lkik/android/chat/fragment/ViewPictureFragment$23;
 
     iget-object v0, v0, Lkik/android/chat/fragment/ViewPictureFragment$23;->a:Lkik/android/chat/fragment/ViewPictureFragment;
@@ -64,15 +64,15 @@
 
     invoke-virtual {v0, v1}, Lcom/kik/cache/ProfileImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 374
+    .line 419
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$23$1;->b:Lkik/android/chat/fragment/ViewPictureFragment$23;
 
     iget-object v0, v0, Lkik/android/chat/fragment/ViewPictureFragment$23;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 375
+    .line 420
     return-void
 .end method

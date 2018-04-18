@@ -15,25 +15,25 @@
 
 
 # static fields
-.field public static final layout_aspectRatio:I = 0x7f010111
+.field public static final layout_aspectRatio:I = 0x7f010201
 
-.field public static final layout_heightPercent:I = 0x7f010109
+.field public static final layout_heightPercent:I = 0x7f0101f9
 
-.field public static final layout_marginBottomPercent:I = 0x7f01010e
+.field public static final layout_marginBottomPercent:I = 0x7f0101fe
 
-.field public static final layout_marginEndPercent:I = 0x7f010110
+.field public static final layout_marginEndPercent:I = 0x7f010200
 
-.field public static final layout_marginLeftPercent:I = 0x7f01010b
+.field public static final layout_marginLeftPercent:I = 0x7f0101fb
 
-.field public static final layout_marginPercent:I = 0x7f01010a
+.field public static final layout_marginPercent:I = 0x7f0101fa
 
-.field public static final layout_marginRightPercent:I = 0x7f01010d
+.field public static final layout_marginRightPercent:I = 0x7f0101fd
 
-.field public static final layout_marginStartPercent:I = 0x7f01010f
+.field public static final layout_marginStartPercent:I = 0x7f0101ff
 
-.field public static final layout_marginTopPercent:I = 0x7f01010c
+.field public static final layout_marginTopPercent:I = 0x7f0101fc
 
-.field public static final layout_widthPercent:I = 0x7f010108
+.field public static final layout_widthPercent:I = 0x7f0101f8
 
 
 # direct methods

@@ -1,16 +1,25 @@
 .class final Lkik/android/chat/fragment/KikConversationsFragment$11;
-.super Landroid/view/GestureDetector$SimpleOnGestureListener;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lkik/android/chat/fragment/KikConversationsFragment;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lkik/android/chat/fragment/KikConversationsFragment;->openPublicGroupSearchScreen()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x0
     name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/kik/events/k",
+        "<",
+        "Ljava/lang/Boolean;",
+        ">;"
+    }
 .end annotation
 
 
@@ -23,84 +32,66 @@
     .locals 0
 
     .prologue
-    .line 931
+    .line 814
     iput-object p1, p0, Lkik/android/chat/fragment/KikConversationsFragment$11;->a:Lkik/android/chat/fragment/KikConversationsFragment;
 
-    invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDown(Landroid/view/MotionEvent;)Z
-    .locals 1
+.method public final synthetic b(Ljava/lang/Object;)V
+    .locals 3
 
     .prologue
-    .line 950
-    const/4 v0, 0x1
+    .line 814
+    check-cast p1, Ljava/lang/Boolean;
 
-    return v0
-.end method
-
-.method public final onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
-    .locals 2
-
-    .prologue
-    .line 935
-    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$11;->a:Lkik/android/chat/fragment/KikConversationsFragment;
-
-    iget-object v0, v0, Lkik/android/chat/fragment/KikConversationsFragment;->_suggestedChatsView:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+    .line 1818
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
-    neg-int v0, v0
+    if-nez v0, :cond_0
 
-    mul-int/lit8 v0, v0, 0x2
+    .line 1819
+    new-instance v0, Lkik/android/chat/fragment/PublicGroupIntroFragment$a;
 
-    int-to-float v0, v0
+    invoke-direct {v0}, Lkik/android/chat/fragment/PublicGroupIntroFragment$a;-><init>()V
 
-    cmpg-float v0, p4, v0
+    const-string v1, "Plus Menu"
 
-    if-gez v0, :cond_0
-
-    .line 937
-    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$11;->a:Lkik/android/chat/fragment/KikConversationsFragment;
-
-    iget-object v0, v0, Lkik/android/chat/fragment/KikConversationsFragment;->g:Lcom/kik/android/Mixpanel;
-
-    const-string v1, "Pull to Search Closed"
-
-    invoke-virtual {v0, v1}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;)Lcom/kik/android/Mixpanel$d;
+    .line 1820
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/PublicGroupIntroFragment$a;->a(Ljava/lang/String;)Lkik/android/chat/fragment/PublicGroupIntroFragment$a;
 
     move-result-object v0
 
-    .line 938
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
+    .line 1821
+    iget-object v1, p0, Lkik/android/chat/fragment/KikConversationsFragment$11;->a:Lkik/android/chat/fragment/KikConversationsFragment;
+
+    invoke-virtual {v1}, Lkik/android/chat/fragment/KikConversationsFragment;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ae;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v0
 
-    .line 939
-    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
+    const v1, 0x7f050021
 
-    .line 940
-    iget-object v0, p0, Lkik/android/chat/fragment/KikConversationsFragment$11;->a:Lkik/android/chat/fragment/KikConversationsFragment;
+    const v2, 0x7f05001e
 
-    iget-object v0, v0, Lkik/android/chat/fragment/KikConversationsFragment;->_pullToSearch:Lkik/android/widget/PullToRevealView;
+    .line 1822
+    invoke-virtual {v0, v1, v2}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->a(II)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
-    invoke-virtual {v0}, Lkik/android/widget/PullToRevealView;->c()V
+    move-result-object v0
 
-    .line 941
-    const/4 v0, 0x1
+    .line 1823
+    invoke-virtual {v0}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->e()Lcom/kik/events/Promise;
 
-    .line 943
-    :goto_0
-    return v0
-
+    .line 814
     :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-void
 .end method

@@ -24,7 +24,22 @@
             ")",
             "Lcom/kik/events/Promise",
             "<",
-            "Landroid/os/Bundle;",
+            "Lorg/json/JSONObject;",
+            ">;"
+        }
+    .end annotation
+.end method
+
+.method public abstract a(Ljava/lang/String;Ljava/lang/String;)Lcom/kik/events/Promise;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ")",
+            "Lcom/kik/events/Promise",
+            "<",
+            "Ljava/lang/String;",
             ">;"
         }
     .end annotation
@@ -42,47 +57,29 @@
 .method public abstract a(Z)V
 .end method
 
-.method public abstract b(Ljava/lang/String;Lcom/kik/cards/web/picker/PickerRequest;)Lcom/kik/events/Promise;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Lcom/kik/cards/web/picker/PickerRequest;",
-            ")",
-            "Lcom/kik/events/Promise",
-            "<",
-            "Lorg/json/JSONObject;",
-            ">;"
-        }
-    .end annotation
+.method public abstract b()Z
 .end method
 
-.method public abstract c()Z
+.method public abstract d()I
+.end method
+
+.method public abstract e()V
 .end method
 
 .method public abstract e(Ljava/lang/String;)V
 .end method
 
-.method public abstract f()I
+.method public abstract f()Z
 .end method
 
 .method public abstract g()V
 .end method
 
-.method public abstract g(Ljava/lang/String;)Z
-.end method
-
 .method public abstract getUrl()Ljava/lang/String;
 .end method
 
-.method public abstract h()Z
+.method public abstract l()Z
 .end method
 
-.method public abstract i()V
-.end method
-
-.method public abstract q()Z
-.end method
-
-.method public abstract r()Z
+.method public abstract m()Z
 .end method

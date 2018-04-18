@@ -1245,6 +1245,7 @@
     .line 510
     invoke-virtual {p0, v1}, Lcom/kik/xiphias/rpc/SelfDescribingMessage$Builder;->mergeFrom(Lcom/kik/xiphias/rpc/SelfDescribingMessage;)Lcom/kik/xiphias/rpc/SelfDescribingMessage$Builder;
 
+    .line 512
     :cond_1
     throw v0
 

@@ -56,16 +56,16 @@
     return-object p0
 .end method
 
-.method final a()Lcom/crashlytics/android/answers/k;
+.method final a()Lcom/crashlytics/android/answers/m;
     .locals 5
 
     .prologue
     .line 27
-    new-instance v2, Lcom/crashlytics/android/answers/k;
+    new-instance v2, Lcom/crashlytics/android/answers/m;
 
     iget-object v0, p0, Lcom/crashlytics/android/answers/a/c;->a:Ljava/lang/String;
 
-    invoke-direct {v2, v0}, Lcom/crashlytics/android/answers/k;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v0}, Lcom/crashlytics/android/answers/m;-><init>(Ljava/lang/String;)V
 
     .line 28
     iget-object v0, p0, Lcom/crashlytics/android/answers/a/c;->b:Ljava/util/Map;
@@ -107,7 +107,7 @@
     .line 31
     check-cast v1, Ljava/lang/String;
 
-    invoke-virtual {v2, v0, v1}, Lcom/crashlytics/android/answers/k;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/crashlytics/android/answers/c;
+    invoke-virtual {v2, v0, v1}, Lcom/crashlytics/android/answers/m;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/crashlytics/android/answers/d;
 
     goto :goto_0
 
@@ -120,7 +120,7 @@
     .line 33
     check-cast v1, Ljava/lang/Number;
 
-    invoke-virtual {v2, v0, v1}, Lcom/crashlytics/android/answers/k;->a(Ljava/lang/String;Ljava/lang/Number;)Lcom/crashlytics/android/answers/c;
+    invoke-virtual {v2, v0, v1}, Lcom/crashlytics/android/answers/m;->a(Ljava/lang/String;Ljava/lang/Number;)Lcom/crashlytics/android/answers/d;
 
     goto :goto_0
 

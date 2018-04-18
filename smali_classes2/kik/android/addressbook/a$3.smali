@@ -1,5 +1,5 @@
 .class final Lkik/android/addressbook/a$3;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
         "Lkik/core/datatypes/a;",
         ">;"
@@ -34,12 +34,12 @@
     .locals 0
 
     .prologue
-    .line 266
+    .line 285
     iput-object p1, p0, Lkik/android/addressbook/a$3;->b:Lkik/android/addressbook/a;
 
     iput-object p2, p0, Lkik/android/addressbook/a$3;->a:Lcom/kik/events/Promise;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -50,29 +50,29 @@
     .locals 3
 
     .prologue
-    .line 266
+    .line 285
     check-cast p1, Lkik/core/datatypes/a;
 
-    .line 1270
+    .line 1289
     invoke-virtual {p1}, Lkik/core/datatypes/a;->b()Ljava/lang/Boolean;
 
     move-result-object v0
 
-    .line 1271
+    .line 1290
     if-eqz v0, :cond_0
 
-    .line 1272
+    .line 1291
     iget-object v1, p0, Lkik/android/addressbook/a$3;->b:Lkik/android/addressbook/a;
 
     iget-object v2, p0, Lkik/android/addressbook/a$3;->b:Lkik/android/addressbook/a;
 
-    invoke-static {v2}, Lkik/android/addressbook/a;->e(Lkik/android/addressbook/a;)Lkik/core/interfaces/b;
+    invoke-static {v2}, Lkik/android/addressbook/a;->c(Lkik/android/addressbook/a;)Lkik/core/interfaces/b;
 
     move-result-object v2
 
     invoke-static {v1, v2, v0}, Lkik/android/addressbook/b;->a(Lkik/core/interfaces/IAddressBookIntegration;Lkik/core/interfaces/b;Ljava/lang/Boolean;)V
 
-    .line 1274
+    .line 1293
     :cond_0
     iget-object v0, p0, Lkik/android/addressbook/a$3;->a:Lcom/kik/events/Promise;
 
@@ -80,7 +80,7 @@
 
     invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Ljava/lang/Object;)V
 
-    .line 266
+    .line 285
     return-void
 .end method
 
@@ -88,11 +88,11 @@
     .locals 1
 
     .prologue
-    .line 280
+    .line 299
     iget-object v0, p0, Lkik/android/addressbook/a$3;->a:Lcom/kik/events/Promise;
 
     invoke-virtual {v0, p1}, Lcom/kik/events/Promise;->a(Ljava/lang/Throwable;)V
 
-    .line 281
+    .line 300
     return-void
 .end method

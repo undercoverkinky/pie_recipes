@@ -116,7 +116,7 @@
 
 # virtual methods
 .method public final synthetic call()Ljava/lang/Object;
-    .locals 8
+    .locals 9
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -130,50 +130,52 @@
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object v7
+    move-result-object v8
 
     :cond_0
     :goto_0
-    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    move-object v6, v0
+    move-object v7, v0
 
-    check-cast v6, Lcom/kik/cards/web/usermedia/PhotoPlugin$b;
+    check-cast v7, Lcom/kik/cards/web/usermedia/PhotoPlugin$b;
 
     .line 1132
-    if-eqz v6, :cond_0
+    if-eqz v7, :cond_0
 
     .line 1135
-    iget-object v0, v6, Lcom/kik/cards/web/usermedia/PhotoPlugin$b;->a:Ljava/lang/String;
+    iget-object v0, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$c;->a:Lcom/kik/cards/web/usermedia/PhotoPlugin;
 
-    iget-object v1, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$c;->h:Ljava/lang/String;
+    iget-object v1, v7, Lcom/kik/cards/web/usermedia/PhotoPlugin$b;->a:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$c;->b:Landroid/graphics/Bitmap$CompressFormat;
+    iget-object v2, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$c;->h:Ljava/lang/String;
 
-    iget v3, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$c;->g:I
+    iget-object v3, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$c;->b:Landroid/graphics/Bitmap$CompressFormat;
 
-    iget v4, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$c;->e:I
+    iget v4, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$c;->g:I
 
-    iget v5, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$c;->f:I
+    iget v5, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$c;->e:I
 
-    iget-object v6, v6, Lcom/kik/cards/web/usermedia/PhotoPlugin$b;->b:Ljava/lang/String;
+    iget v6, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$c;->f:I
 
-    invoke-static/range {v0 .. v6}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->a(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Bitmap$CompressFormat;IIILjava/lang/String;)Lorg/json/JSONObject;
+    iget-object v7, v7, Lcom/kik/cards/web/usermedia/PhotoPlugin$b;->b:Ljava/lang/String;
+
+    invoke-static/range {v0 .. v7}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->access$000(Lcom/kik/cards/web/usermedia/PhotoPlugin;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Bitmap$CompressFormat;IIILjava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object v0
 
     .line 1137
     iget-object v1, p0, Lcom/kik/cards/web/usermedia/PhotoPlugin$c;->a:Lcom/kik/cards/web/usermedia/PhotoPlugin;
 
-    invoke-virtual {v1, v0}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->a(Lorg/json/JSONObject;)V
+    invoke-virtual {v1, v0}, Lcom/kik/cards/web/usermedia/PhotoPlugin;->firePhotoEvent(Lorg/json/JSONObject;)V
 
     goto :goto_0
 

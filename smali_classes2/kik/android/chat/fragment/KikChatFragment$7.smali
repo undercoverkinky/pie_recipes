@@ -1,11 +1,14 @@
 .class final Lkik/android/chat/fragment/KikChatFragment$7;
-.super Lcom/kik/events/l;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lcom/kik/events/e;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/fragment/KikChatFragment;->a(Landroid/os/Bundle;Lcom/kik/messagepath/model/Keyboards$SuggestedResponseItem;Ljava/lang/String;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lkik/android/chat/fragment/KikChatFragment;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,10 +18,13 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Ljava/lang/Object;",
+        "Lcom/kik/events/e",
         "<",
-        "Landroid/os/Bundle;",
-        ">;"
+        "Ljava/util/List",
+        "<",
+        "Ljava/lang/String;",
+        ">;>;"
     }
 .end annotation
 
@@ -32,71 +38,40 @@
     .locals 0
 
     .prologue
-    .line 1593
+    .line 430
     iput-object p1, p0, Lkik/android/chat/fragment/KikChatFragment$7;->a:Lkik/android/chat/fragment/KikChatFragment;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;)V
-    .locals 4
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 2
 
     .prologue
-    .line 1593
-    check-cast p1, Landroid/os/Bundle;
+    .line 430
+    .line 1434
+    iget-object v0, p0, Lkik/android/chat/fragment/KikChatFragment$7;->a:Lkik/android/chat/fragment/KikChatFragment;
 
-    .line 2597
-    new-instance v0, Lkik/android/chat/fragment/PaymentConfirmationFragment$a;
+    iget-object v0, v0, Lkik/android/chat/fragment/KikChatFragment;->_bugmeBar:Lkik/android/widget/BugmeBarView;
 
-    invoke-direct {v0}, Lkik/android/chat/fragment/PaymentConfirmationFragment$a;-><init>()V
+    if-eqz v0, :cond_0
 
-    .line 2598
-    invoke-virtual {v0, p1}, Lkik/android/chat/fragment/PaymentConfirmationFragment$a;->a(Landroid/os/Bundle;)V
+    .line 1435
+    iget-object v0, p0, Lkik/android/chat/fragment/KikChatFragment$7;->a:Lkik/android/chat/fragment/KikChatFragment;
 
-    .line 2600
-    iget-object v1, p0, Lkik/android/chat/fragment/KikChatFragment$7;->a:Lkik/android/chat/fragment/KikChatFragment;
-
-    invoke-virtual {v0}, Lkik/android/chat/fragment/PaymentConfirmationFragment$a;->c()I
-
-    move-result v2
-
-    invoke-virtual {v0}, Lkik/android/chat/fragment/PaymentConfirmationFragment$a;->d()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0}, Lkik/android/chat/fragment/PaymentConfirmationFragment$a;->b()Lcom/kik/messagepath/model/Keyboards$PaymentSuggestedResponse$SavedCard;
+    invoke-static {v0}, Lkik/android/chat/fragment/KikChatFragment;->n(Lkik/android/chat/fragment/KikChatFragment;)Landroid/os/Handler;
 
     move-result-object v0
 
-    invoke-virtual {v1, v2, v3, v0}, Lkik/android/chat/fragment/KikChatFragment;->a(ILjava/lang/String;Lcom/kik/messagepath/model/Keyboards$PaymentSuggestedResponse$SavedCard;)V
+    const/4 v1, 0x6
 
-    .line 1593
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-.method public final b(Ljava/lang/Throwable;)V
-    .locals 3
-
-    .prologue
-    .line 1606
-    iget-object v0, p0, Lkik/android/chat/fragment/KikChatFragment$7;->a:Lkik/android/chat/fragment/KikChatFragment;
-
-    const v1, 0x7f0a0295
-
-    invoke-static {v1}, Lkik/android/chat/fragment/KikChatFragment;->b(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lkik/android/chat/fragment/KikChatFragment;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1607
+    .line 430
+    :cond_0
     return-void
 .end method

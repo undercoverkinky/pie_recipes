@@ -52,37 +52,9 @@
 
     invoke-direct {v1, p0, v0}, Lcom/kik/sdkutils/b$2;-><init>(Landroid/app/Activity;Lcom/kik/events/Promise;)V
 
-    invoke-virtual {p1, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {p1, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
     .line 192
-    return-object v0
-.end method
-
-.method public static a(Landroid/support/v4/app/Fragment;Lcom/kik/events/Promise;)Lcom/kik/events/Promise;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Landroid/support/v4/app/Fragment;",
-            "Lcom/kik/events/Promise",
-            "<TT;>;)",
-            "Lcom/kik/events/Promise",
-            "<TT;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 197
-    invoke-virtual {p0}, Landroid/support/v4/app/Fragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
-
-    move-result-object v0
-
-    invoke-static {v0, p1}, Lcom/kik/sdkutils/b;->a(Landroid/app/Activity;Lcom/kik/events/Promise;)Lcom/kik/events/Promise;
-
-    move-result-object v0
-
     return-object v0
 .end method
 
@@ -112,47 +84,13 @@
 
     invoke-direct {v1, p0, v0}, Lcom/kik/sdkutils/b$1;-><init>(Landroid/view/View;Lcom/kik/events/Promise;)V
 
-    invoke-virtual {p1, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {p1, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
     .line 134
     return-object v0
 .end method
 
-.method public static a(Landroid/content/Context;Lcom/kik/events/l;)Lcom/kik/events/l;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Landroid/content/Context;",
-            "Lcom/kik/events/l",
-            "<TT;>;)",
-            "Lcom/kik/events/l",
-            "<TT;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 489
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-virtual {p0}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    .line 490
-    new-instance v1, Lcom/kik/sdkutils/b$5;
-
-    invoke-direct {v1, v0, p1}, Lcom/kik/sdkutils/b$5;-><init>(Landroid/os/Handler;Lcom/kik/events/l;)V
-
-    .line 553
-    return-object v1
-.end method
-
-.method public static a(Landroid/support/v4/app/Fragment;Lcom/kik/events/l;)Lcom/kik/events/l;
+.method public static a(Landroid/support/v4/app/Fragment;Lcom/kik/events/k;)Lcom/kik/events/k;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -160,24 +98,24 @@
             "Ljava/lang/Object;",
             ">(",
             "Landroid/support/v4/app/Fragment;",
-            "Lcom/kik/events/l",
+            "Lcom/kik/events/k",
             "<TT;>;)",
-            "Lcom/kik/events/l",
+            "Lcom/kik/events/k",
             "<TT;>;"
         }
     .end annotation
 
     .prologue
     .line 564
-    new-instance v0, Lcom/kik/sdkutils/b$6;
+    new-instance v0, Lcom/kik/sdkutils/b$5;
 
-    invoke-direct {v0, p0, p1}, Lcom/kik/sdkutils/b$6;-><init>(Landroid/support/v4/app/Fragment;Lcom/kik/events/l;)V
+    invoke-direct {v0, p0, p1}, Lcom/kik/sdkutils/b$5;-><init>(Landroid/support/v4/app/Fragment;Lcom/kik/events/k;)V
 
     .line 657
     return-object v0
 .end method
 
-.method public static a(Landroid/view/View;Lcom/kik/events/l;)Lcom/kik/events/l;
+.method public static a(Landroid/view/View;Lcom/kik/events/k;)Lcom/kik/events/k;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -185,9 +123,9 @@
             "Ljava/lang/Object;",
             ">(",
             "Landroid/view/View;",
-            "Lcom/kik/events/l",
+            "Lcom/kik/events/k",
             "<TT;>;)",
-            "Lcom/kik/events/l",
+            "Lcom/kik/events/k",
             "<TT;>;"
         }
     .end annotation
@@ -196,22 +134,22 @@
     .line 341
     new-instance v0, Lcom/kik/sdkutils/b$4;
 
-    invoke-direct {v0, p0, p1}, Lcom/kik/sdkutils/b$4;-><init>(Landroid/view/View;Lcom/kik/events/l;)V
+    invoke-direct {v0, p0, p1}, Lcom/kik/sdkutils/b$4;-><init>(Landroid/view/View;Lcom/kik/events/k;)V
 
     .line 404
     return-object v0
 .end method
 
-.method public static a(Lcom/kik/events/l;)Lcom/kik/events/l;
+.method public static a(Lcom/kik/events/k;)Lcom/kik/events/k;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lcom/kik/events/l",
+            "Lcom/kik/events/k",
             "<TT;>;)",
-            "Lcom/kik/events/l",
+            "Lcom/kik/events/k",
             "<TT;>;"
         }
     .end annotation
@@ -220,7 +158,7 @@
     .line 208
     new-instance v0, Lcom/kik/sdkutils/b$3;
 
-    invoke-direct {v0, p0}, Lcom/kik/sdkutils/b$3;-><init>(Lcom/kik/events/l;)V
+    invoke-direct {v0, p0}, Lcom/kik/sdkutils/b$3;-><init>(Lcom/kik/events/k;)V
 
     .line 330
     return-object v0

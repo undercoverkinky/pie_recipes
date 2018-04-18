@@ -44,7 +44,7 @@
 
     const/4 v2, 0x0
 
-    .line 71
+    .line 72
     new-instance v0, Lkik/android/chat/vm/chats/search/ChatsSearchResultsViewModel$ChatSearchResults$ResultType;
 
     const-string v1, "OpenChat"
@@ -53,7 +53,7 @@
 
     sput-object v0, Lkik/android/chat/vm/chats/search/ChatsSearchResultsViewModel$ChatSearchResults$ResultType;->OpenChat:Lkik/android/chat/vm/chats/search/ChatsSearchResultsViewModel$ChatSearchResults$ResultType;
 
-    .line 72
+    .line 73
     new-instance v0, Lkik/android/chat/vm/chats/search/ChatsSearchResultsViewModel$ChatSearchResults$ResultType;
 
     const-string v1, "RosterMatch"
@@ -62,7 +62,7 @@
 
     sput-object v0, Lkik/android/chat/vm/chats/search/ChatsSearchResultsViewModel$ChatSearchResults$ResultType;->RosterMatch:Lkik/android/chat/vm/chats/search/ChatsSearchResultsViewModel$ChatSearchResults$ResultType;
 
-    .line 73
+    .line 74
     new-instance v0, Lkik/android/chat/vm/chats/search/ChatsSearchResultsViewModel$ChatSearchResults$ResultType;
 
     const-string v1, "UsernameMatch"

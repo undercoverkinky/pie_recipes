@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 710
+    .line 714
     iput-object p1, p0, Lcom/crashlytics/android/core/h$2;->a:Lcom/crashlytics/android/core/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -55,8 +55,8 @@
     .end annotation
 
     .prologue
-    .line 710
-    .line 1715
+    .line 714
+    .line 1719
     iget-object v0, p0, Lcom/crashlytics/android/core/h$2;->a:Lcom/crashlytics/android/core/h;
 
     invoke-static {v0}, Lcom/crashlytics/android/core/h;->a(Lcom/crashlytics/android/core/h;)Lcom/crashlytics/android/core/i;
@@ -65,12 +65,12 @@
 
     invoke-virtual {v0}, Lcom/crashlytics/android/core/i;->a()Z
 
-    .line 1716
+    .line 1720
     invoke-static {}, Lio/fabric/sdk/android/c;->d()Lio/fabric/sdk/android/k;
 
-    .line 1717
+    .line 1721
     const/4 v0, 0x0
 
-    .line 710
+    .line 714
     return-object v0
 .end method

@@ -19,13 +19,13 @@
 
 
 # virtual methods
-.method public final a(Lkik/core/interfaces/a;Lkik/core/interfaces/t;)Ljava/util/List;
+.method public final a(Lkik/core/interfaces/a;Lkik/core/interfaces/r;)Ljava/util/List;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lkik/core/interfaces/a;",
-            "Lkik/core/interfaces/t;",
+            "Lkik/core/interfaces/r;",
             ")",
             "Ljava/util/List",
             "<",
@@ -58,11 +58,11 @@
     const-string v0, "prereg_10_6"
 
     .line 30
-    invoke-interface {p2}, Lkik/core/interfaces/t;->a()Ljava/lang/String;
+    invoke-interface {p2}, Lkik/core/interfaces/r;->a()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkik/core/util/o;->a(Ljava/lang/String;Ljava/lang/String;)D
+    invoke-static {v0, v1}, Lkik/core/util/m;->a(Ljava/lang/String;Ljava/lang/String;)D
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -99,7 +99,7 @@
 
     move-result-wide v6
 
-    invoke-static {}, Lkik/core/util/x;->b()J
+    invoke-static {}, Lkik/core/util/v;->b()J
 
     move-result-wide v8
 
@@ -111,7 +111,7 @@
 
     move-result-wide v6
 
-    invoke-static {}, Lkik/core/util/x;->b()J
+    invoke-static {}, Lkik/core/util/v;->b()J
 
     move-result-wide v8
 

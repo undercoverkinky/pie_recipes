@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Lcom/kik/events/e",
         "<",
-        "Ljava/lang/Long;",
+        "Ljava/lang/Boolean;",
         ">;"
     }
 .end annotation
@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 713
+    .line 786
     iput-object p1, p0, Lkik/android/chat/KikApplication$7;->a:Lkik/android/chat/KikApplication;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,31 +47,25 @@
 
 # virtual methods
 .method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 4
+    .locals 3
 
     .prologue
-    .line 713
-    check-cast p2, Ljava/lang/Long;
+    .line 786
+    check-cast p2, Ljava/lang/Boolean;
 
-    .line 1717
+    .line 1790
     iget-object v0, p0, Lkik/android/chat/KikApplication$7;->a:Lkik/android/chat/KikApplication;
 
-    invoke-static {v0}, Lkik/android/chat/KikApplication;->y(Lkik/android/chat/KikApplication;)Z
+    iget-object v0, v0, Lkik/android/chat/KikApplication;->a:Lcom/kik/android/Mixpanel;
 
-    .line 1718
-    iget-object v0, p0, Lkik/android/chat/KikApplication$7;->a:Lkik/android/chat/KikApplication;
+    const-string v1, "ABM Opt In"
 
-    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result-wide v2
+    move-result v2
 
-    invoke-static {v0, v2, v3}, Lkik/android/chat/KikApplication;->e(Lkik/android/chat/KikApplication;J)J
+    invoke-virtual {v0, v1, v2}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;Z)Lcom/kik/android/Mixpanel;
 
-    .line 1719
-    iget-object v0, p0, Lkik/android/chat/KikApplication$7;->a:Lkik/android/chat/KikApplication;
-
-    invoke-static {v0}, Lkik/android/chat/KikApplication;->j(Lkik/android/chat/KikApplication;)V
-
-    .line 713
+    .line 786
     return-void
 .end method

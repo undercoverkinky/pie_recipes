@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 977
+    .line 1512
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +44,7 @@
     .locals 1
 
     .prologue
-    .line 980
+    .line 1515
     new-instance v0, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;
 
     invoke-direct {v0, p1}, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;-><init>(Landroid/os/Parcel;)V
@@ -56,7 +56,7 @@
     .locals 1
 
     .prologue
-    .line 977
+    .line 1512
     invoke-virtual {p0, p1}, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper$1;->createFromParcel(Landroid/os/Parcel;)Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;
 
     move-result-object v0
@@ -68,7 +68,7 @@
     .locals 1
 
     .prologue
-    .line 985
+    .line 1520
     new-array v0, p1, [Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;
 
     return-object v0
@@ -78,7 +78,7 @@
     .locals 1
 
     .prologue
-    .line 977
+    .line 1512
     invoke-virtual {p0, p1}, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper$1;->newArray(I)[Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;
 
     move-result-object v0

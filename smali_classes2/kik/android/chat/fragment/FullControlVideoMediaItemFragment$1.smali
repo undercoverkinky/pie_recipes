@@ -52,7 +52,7 @@
 
     iget-object v1, v1, Lkik/android/chat/fragment/FullControlVideoMediaItemFragment;->_textureView:Lkik/android/widget/KikTextureVideoView;
 
-    invoke-virtual {v1}, Lkik/android/widget/KikTextureVideoView;->c()I
+    invoke-virtual {v1}, Lkik/android/widget/KikTextureVideoView;->d()I
 
     move-result v1
 
@@ -75,11 +75,8 @@
     :cond_0
     return-void
 
-    .line 48
     :catch_0
     move-exception v0
-
-    invoke-static {v0}, Lkik/android/util/ax;->c(Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method

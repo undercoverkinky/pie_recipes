@@ -1,5 +1,5 @@
 .class Landroid/support/v4/graphics/drawable/DrawableWrapperHoneycomb$DrawableWrapperStateHoneycomb;
-.super Landroid/support/v4/graphics/drawable/DrawableWrapperDonut$DrawableWrapperState;
+.super Landroid/support/v4/graphics/drawable/DrawableWrapperGingerbread$DrawableWrapperState;
 .source "SourceFile"
 
 
@@ -15,14 +15,14 @@
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/graphics/drawable/DrawableWrapperDonut$DrawableWrapperState;Landroid/content/res/Resources;)V
+.method constructor <init>(Landroid/support/v4/graphics/drawable/DrawableWrapperGingerbread$DrawableWrapperState;Landroid/content/res/Resources;)V
     .locals 0
 
     .prologue
-    .line 48
-    invoke-direct {p0, p1, p2}, Landroid/support/v4/graphics/drawable/DrawableWrapperDonut$DrawableWrapperState;-><init>(Landroid/support/v4/graphics/drawable/DrawableWrapperDonut$DrawableWrapperState;Landroid/content/res/Resources;)V
+    .line 52
+    invoke-direct {p0, p1, p2}, Landroid/support/v4/graphics/drawable/DrawableWrapperGingerbread$DrawableWrapperState;-><init>(Landroid/support/v4/graphics/drawable/DrawableWrapperGingerbread$DrawableWrapperState;Landroid/content/res/Resources;)V
 
-    .line 49
+    .line 53
     return-void
 .end method
 
@@ -32,10 +32,10 @@
     .locals 1
 
     .prologue
-    .line 53
+    .line 57
     new-instance v0, Landroid/support/v4/graphics/drawable/DrawableWrapperHoneycomb;
 
-    invoke-direct {v0, p0, p1}, Landroid/support/v4/graphics/drawable/DrawableWrapperHoneycomb;-><init>(Landroid/support/v4/graphics/drawable/DrawableWrapperDonut$DrawableWrapperState;Landroid/content/res/Resources;)V
+    invoke-direct {v0, p0, p1}, Landroid/support/v4/graphics/drawable/DrawableWrapperHoneycomb;-><init>(Landroid/support/v4/graphics/drawable/DrawableWrapperGingerbread$DrawableWrapperState;Landroid/content/res/Resources;)V
 
     return-object v0
 .end method

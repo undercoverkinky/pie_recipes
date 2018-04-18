@@ -5,7 +5,7 @@
 # instance fields
 .field private mDialog:Landroid/app/Dialog;
 
-.field private zzakl:Landroid/content/DialogInterface$OnCancelListener;
+.field private zzffb:Landroid/content/DialogInterface$OnCancelListener;
 
 
 # direct methods
@@ -18,7 +18,7 @@
 
     iput-object v0, p0, Lcom/google/android/gms/common/SupportErrorDialogFragment;->mDialog:Landroid/app/Dialog;
 
-    iput-object v0, p0, Lcom/google/android/gms/common/SupportErrorDialogFragment;->zzakl:Landroid/content/DialogInterface$OnCancelListener;
+    iput-object v0, p0, Lcom/google/android/gms/common/SupportErrorDialogFragment;->zzffb:Landroid/content/DialogInterface$OnCancelListener;
 
     return-void
 .end method
@@ -46,7 +46,7 @@
 
     const-string v0, "Cannot display null dialog"
 
-    invoke-static {p0, v0}, Lcom/google/android/gms/common/internal/zzaa;->zzb(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0, v0}, Lcom/google/android/gms/common/internal/zzbp;->zzb(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -60,7 +60,7 @@
 
     if-eqz p1, :cond_0
 
-    iput-object p1, v1, Lcom/google/android/gms/common/SupportErrorDialogFragment;->zzakl:Landroid/content/DialogInterface$OnCancelListener;
+    iput-object p1, v1, Lcom/google/android/gms/common/SupportErrorDialogFragment;->zzffb:Landroid/content/DialogInterface$OnCancelListener;
 
     :cond_0
     return-object v1
@@ -71,11 +71,11 @@
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/common/SupportErrorDialogFragment;->zzakl:Landroid/content/DialogInterface$OnCancelListener;
+    iget-object v0, p0, Lcom/google/android/gms/common/SupportErrorDialogFragment;->zzffb:Landroid/content/DialogInterface$OnCancelListener;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/google/android/gms/common/SupportErrorDialogFragment;->zzakl:Landroid/content/DialogInterface$OnCancelListener;
+    iget-object v0, p0, Lcom/google/android/gms/common/SupportErrorDialogFragment;->zzffb:Landroid/content/DialogInterface$OnCancelListener;
 
     invoke-interface {v0, p1}, Landroid/content/DialogInterface$OnCancelListener;->onCancel(Landroid/content/DialogInterface;)V
 

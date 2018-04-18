@@ -158,7 +158,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/github/rahatarmanahmed/cpv/a$e;->a:[I
+    sget-object v1, Lcom/github/rahatarmanahmed/cpv/R$styleable;->CircularProgressView:[I
 
     invoke-virtual {v0, p1, v1, p2, v6}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -170,9 +170,9 @@
     move-result-object v1
 
     .line 1083
-    sget v2, Lcom/github/rahatarmanahmed/cpv/a$e;->j:I
+    sget v2, Lcom/github/rahatarmanahmed/cpv/R$styleable;->CircularProgressView_cpv_progress:I
 
-    sget v3, Lcom/github/rahatarmanahmed/cpv/a$d;->f:I
+    sget v3, Lcom/github/rahatarmanahmed/cpv/R$integer;->cpv_default_progress:I
 
     .line 1084
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getInteger(I)I
@@ -189,9 +189,9 @@
     iput v2, p0, Lcom/github/rahatarmanahmed/cpv/CircularProgressView;->f:F
 
     .line 1085
-    sget v2, Lcom/github/rahatarmanahmed/cpv/a$e;->i:I
+    sget v2, Lcom/github/rahatarmanahmed/cpv/R$styleable;->CircularProgressView_cpv_maxProgress:I
 
-    sget v3, Lcom/github/rahatarmanahmed/cpv/a$d;->e:I
+    sget v3, Lcom/github/rahatarmanahmed/cpv/R$integer;->cpv_default_max_progress:I
 
     .line 1086
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getInteger(I)I
@@ -208,9 +208,9 @@
     iput v2, p0, Lcom/github/rahatarmanahmed/cpv/CircularProgressView;->g:F
 
     .line 1087
-    sget v2, Lcom/github/rahatarmanahmed/cpv/a$e;->l:I
+    sget v2, Lcom/github/rahatarmanahmed/cpv/R$styleable;->CircularProgressView_cpv_thickness:I
 
-    sget v3, Lcom/github/rahatarmanahmed/cpv/a$c;->a:I
+    sget v3, Lcom/github/rahatarmanahmed/cpv/R$dimen;->cpv_default_thickness:I
 
     .line 1088
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -225,9 +225,9 @@
     iput v2, p0, Lcom/github/rahatarmanahmed/cpv/CircularProgressView;->j:I
 
     .line 1089
-    sget v2, Lcom/github/rahatarmanahmed/cpv/a$e;->h:I
+    sget v2, Lcom/github/rahatarmanahmed/cpv/R$styleable;->CircularProgressView_cpv_indeterminate:I
 
-    sget v3, Lcom/github/rahatarmanahmed/cpv/a$a;->b:I
+    sget v3, Lcom/github/rahatarmanahmed/cpv/R$bool;->cpv_default_is_indeterminate:I
 
     .line 1090
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -242,9 +242,9 @@
     iput-boolean v2, p0, Lcom/github/rahatarmanahmed/cpv/CircularProgressView;->d:Z
 
     .line 1091
-    sget v2, Lcom/github/rahatarmanahmed/cpv/a$e;->b:I
+    sget v2, Lcom/github/rahatarmanahmed/cpv/R$styleable;->CircularProgressView_cpv_animAutostart:I
 
-    sget v3, Lcom/github/rahatarmanahmed/cpv/a$a;->a:I
+    sget v3, Lcom/github/rahatarmanahmed/cpv/R$bool;->cpv_default_anim_autostart:I
 
     .line 1092
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -259,9 +259,9 @@
     iput-boolean v2, p0, Lcom/github/rahatarmanahmed/cpv/CircularProgressView;->e:Z
 
     .line 1093
-    sget v2, Lcom/github/rahatarmanahmed/cpv/a$e;->k:I
+    sget v2, Lcom/github/rahatarmanahmed/cpv/R$styleable;->CircularProgressView_cpv_startAngle:I
 
-    sget v3, Lcom/github/rahatarmanahmed/cpv/a$d;->g:I
+    sget v3, Lcom/github/rahatarmanahmed/cpv/R$integer;->cpv_default_start_angle:I
 
     .line 1094
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getInteger(I)I
@@ -308,7 +308,7 @@
     move-result v2
 
     .line 1100
-    sget v3, Lcom/github/rahatarmanahmed/cpv/a$e;->g:I
+    sget v3, Lcom/github/rahatarmanahmed/cpv/R$styleable;->CircularProgressView_cpv_color:I
 
     invoke-virtual {v0, v3}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -317,9 +317,9 @@
     if-eqz v3, :cond_0
 
     .line 1101
-    sget v2, Lcom/github/rahatarmanahmed/cpv/a$e;->g:I
+    sget v2, Lcom/github/rahatarmanahmed/cpv/R$styleable;->CircularProgressView_cpv_color:I
 
-    sget v3, Lcom/github/rahatarmanahmed/cpv/a$b;->a:I
+    sget v3, Lcom/github/rahatarmanahmed/cpv/R$color;->cpv_default_color:I
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -333,9 +333,9 @@
 
     .line 1119
     :goto_0
-    sget v2, Lcom/github/rahatarmanahmed/cpv/a$e;->c:I
+    sget v2, Lcom/github/rahatarmanahmed/cpv/R$styleable;->CircularProgressView_cpv_animDuration:I
 
-    sget v3, Lcom/github/rahatarmanahmed/cpv/a$d;->a:I
+    sget v3, Lcom/github/rahatarmanahmed/cpv/R$integer;->cpv_default_anim_duration:I
 
     .line 1120
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getInteger(I)I
@@ -350,9 +350,9 @@
     iput v2, p0, Lcom/github/rahatarmanahmed/cpv/CircularProgressView;->l:I
 
     .line 1121
-    sget v2, Lcom/github/rahatarmanahmed/cpv/a$e;->e:I
+    sget v2, Lcom/github/rahatarmanahmed/cpv/R$styleable;->CircularProgressView_cpv_animSwoopDuration:I
 
-    sget v3, Lcom/github/rahatarmanahmed/cpv/a$d;->c:I
+    sget v3, Lcom/github/rahatarmanahmed/cpv/R$integer;->cpv_default_anim_swoop_duration:I
 
     .line 1122
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getInteger(I)I
@@ -367,9 +367,9 @@
     iput v2, p0, Lcom/github/rahatarmanahmed/cpv/CircularProgressView;->m:I
 
     .line 1123
-    sget v2, Lcom/github/rahatarmanahmed/cpv/a$e;->f:I
+    sget v2, Lcom/github/rahatarmanahmed/cpv/R$styleable;->CircularProgressView_cpv_animSyncDuration:I
 
-    sget v3, Lcom/github/rahatarmanahmed/cpv/a$d;->d:I
+    sget v3, Lcom/github/rahatarmanahmed/cpv/R$integer;->cpv_default_anim_sync_duration:I
 
     .line 1124
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getInteger(I)I
@@ -384,9 +384,9 @@
     iput v2, p0, Lcom/github/rahatarmanahmed/cpv/CircularProgressView;->n:I
 
     .line 1125
-    sget v2, Lcom/github/rahatarmanahmed/cpv/a$e;->d:I
+    sget v2, Lcom/github/rahatarmanahmed/cpv/R$styleable;->CircularProgressView_cpv_animSteps:I
 
-    sget v3, Lcom/github/rahatarmanahmed/cpv/a$d;->b:I
+    sget v3, Lcom/github/rahatarmanahmed/cpv/R$integer;->cpv_default_anim_steps:I
 
     .line 1126
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getInteger(I)I
@@ -501,7 +501,7 @@
     move-result-object v2
 
     .line 1112
-    sget v3, Lcom/github/rahatarmanahmed/cpv/a$b;->a:I
+    sget v3, Lcom/github/rahatarmanahmed/cpv/R$color;->cpv_default_color:I
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -517,7 +517,7 @@
 
     .line 1116
     :cond_2
-    sget v2, Lcom/github/rahatarmanahmed/cpv/a$b;->a:I
+    sget v2, Lcom/github/rahatarmanahmed/cpv/R$color;->cpv_default_color:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 

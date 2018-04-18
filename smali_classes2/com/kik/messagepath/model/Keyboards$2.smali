@@ -29,7 +29,7 @@
     .locals 3
 
     .prologue
-    .line 10464
+    .line 10427
     invoke-static {}, Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;->values()[Lcom/kik/messagepath/model/Keyboards$SuggestedReply$TypeCase;
 
     move-result-object v0
@@ -119,7 +119,7 @@
     :try_end_4
     .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_9
 
-    .line 9528
+    .line 9491
     :goto_4
     invoke-static {}, Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$TypeCase;->values()[Lcom/kik/messagepath/model/Keyboards$KeyboardReplyAttachment$TypeCase;
 
@@ -162,7 +162,7 @@
     :try_end_6
     .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_7
 
-    .line 3427
+    .line 3418
     :goto_6
     invoke-static {}, Lcom/kik/messagepath/model/Keyboards$SuggestedResponseItem$TypeCase;->values()[Lcom/kik/messagepath/model/Keyboards$SuggestedResponseItem$TypeCase;
 
@@ -253,7 +253,7 @@
     :try_end_b
     .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_2
 
-    .line 1372
+    .line 1366
     :goto_b
     invoke-static {}, Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;->values()[Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;
 

@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static final refreshDeviceListForNewSurface:I = 0x7f0f0007
+.field public static final refreshDeviceListForNewSurface:I = 0x7f0f0006
 
 
 # direct methods

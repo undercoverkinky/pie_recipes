@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/support/v7/internal/view/menu/MenuBuilder$Callback;
+.implements Landroid/support/v7/view/menu/MenuBuilder$Callback;
 
 
 # annotations
@@ -22,76 +22,60 @@
 
 
 # direct methods
-.method private constructor <init>(Landroid/support/v7/widget/ActionMenuView;)V
+.method constructor <init>(Landroid/support/v7/widget/ActionMenuView;)V
     .locals 0
 
     .prologue
-    .line 737
+    .line 770
     iput-object p1, p0, Landroid/support/v7/widget/ActionMenuView$MenuBuilderCallback;->a:Landroid/support/v7/widget/ActionMenuView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-.method synthetic constructor <init>(Landroid/support/v7/widget/ActionMenuView;B)V
-    .locals 0
-
-    .prologue
-    .line 737
-    invoke-direct {p0, p1}, Landroid/support/v7/widget/ActionMenuView$MenuBuilderCallback;-><init>(Landroid/support/v7/widget/ActionMenuView;)V
-
+    .line 771
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/support/v7/internal/view/menu/MenuBuilder;)V
+.method public final a(Landroid/support/v7/view/menu/MenuBuilder;)V
     .locals 1
 
     .prologue
-    .line 746
+    .line 781
     iget-object v0, p0, Landroid/support/v7/widget/ActionMenuView$MenuBuilderCallback;->a:Landroid/support/v7/widget/ActionMenuView;
 
-    invoke-static {v0}, Landroid/support/v7/widget/ActionMenuView;->b(Landroid/support/v7/widget/ActionMenuView;)Landroid/support/v7/internal/view/menu/MenuBuilder$Callback;
-
-    move-result-object v0
+    iget-object v0, v0, Landroid/support/v7/widget/ActionMenuView;->a:Landroid/support/v7/view/menu/MenuBuilder$Callback;
 
     if-eqz v0, :cond_0
 
-    .line 747
+    .line 782
     iget-object v0, p0, Landroid/support/v7/widget/ActionMenuView$MenuBuilderCallback;->a:Landroid/support/v7/widget/ActionMenuView;
 
-    invoke-static {v0}, Landroid/support/v7/widget/ActionMenuView;->b(Landroid/support/v7/widget/ActionMenuView;)Landroid/support/v7/internal/view/menu/MenuBuilder$Callback;
+    iget-object v0, v0, Landroid/support/v7/widget/ActionMenuView;->a:Landroid/support/v7/view/menu/MenuBuilder$Callback;
 
-    move-result-object v0
+    invoke-interface {v0, p1}, Landroid/support/v7/view/menu/MenuBuilder$Callback;->a(Landroid/support/v7/view/menu/MenuBuilder;)V
 
-    invoke-interface {v0, p1}, Landroid/support/v7/internal/view/menu/MenuBuilder$Callback;->a(Landroid/support/v7/internal/view/menu/MenuBuilder;)V
-
-    .line 749
+    .line 784
     :cond_0
     return-void
 .end method
 
-.method public final a(Landroid/support/v7/internal/view/menu/MenuBuilder;Landroid/view/MenuItem;)Z
+.method public final a(Landroid/support/v7/view/menu/MenuBuilder;Landroid/view/MenuItem;)Z
     .locals 1
 
     .prologue
-    .line 740
+    .line 775
     iget-object v0, p0, Landroid/support/v7/widget/ActionMenuView$MenuBuilderCallback;->a:Landroid/support/v7/widget/ActionMenuView;
 
-    invoke-static {v0}, Landroid/support/v7/widget/ActionMenuView;->a(Landroid/support/v7/widget/ActionMenuView;)Landroid/support/v7/widget/ActionMenuView$OnMenuItemClickListener;
-
-    move-result-object v0
+    iget-object v0, v0, Landroid/support/v7/widget/ActionMenuView;->b:Landroid/support/v7/widget/ActionMenuView$OnMenuItemClickListener;
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Landroid/support/v7/widget/ActionMenuView$MenuBuilderCallback;->a:Landroid/support/v7/widget/ActionMenuView;
 
-    invoke-static {v0}, Landroid/support/v7/widget/ActionMenuView;->a(Landroid/support/v7/widget/ActionMenuView;)Landroid/support/v7/widget/ActionMenuView$OnMenuItemClickListener;
+    iget-object v0, v0, Landroid/support/v7/widget/ActionMenuView;->b:Landroid/support/v7/widget/ActionMenuView$OnMenuItemClickListener;
 
-    move-result-object v0
-
+    .line 776
     invoke-interface {v0}, Landroid/support/v7/widget/ActionMenuView$OnMenuItemClickListener;->a()Z
 
     move-result v0

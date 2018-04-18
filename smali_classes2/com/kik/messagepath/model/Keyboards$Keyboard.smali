@@ -58,14 +58,14 @@
     .locals 1
 
     .prologue
-    .line 1792
+    .line 1783
     new-instance v0, Lcom/kik/messagepath/model/Keyboards$Keyboard;
 
     invoke-direct {v0}, Lcom/kik/messagepath/model/Keyboards$Keyboard;-><init>()V
 
     sput-object v0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->a:Lcom/kik/messagepath/model/Keyboards$Keyboard;
 
-    .line 1800
+    .line 1791
     new-instance v0, Lcom/kik/messagepath/model/Keyboards$Keyboard$1;
 
     invoke-direct {v0}, Lcom/kik/messagepath/model/Keyboards$Keyboard$1;-><init>()V
@@ -81,21 +81,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 861
+    .line 856
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageV3;-><init>()V
 
-    .line 945
+    .line 940
     iput v1, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->typeCase_:I
 
-    .line 1058
+    .line 1052
     const/4 v0, -0x1
 
     iput-byte v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->memoizedIsInitialized:B
 
-    .line 862
+    .line 857
     iput-boolean v1, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->hidden_:Z
 
-    .line 863
+    .line 858
     return-void
 .end method
 
@@ -114,29 +114,29 @@
 
     const/4 v4, 0x1
 
-    .line 874
+    .line 869
     invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$Keyboard;-><init>()V
 
-    .line 877
+    .line 872
     const/4 v0, 0x0
 
     move v3, v0
 
-    .line 878
+    .line 873
     :cond_0
     :goto_0
     if-nez v3, :cond_2
 
-    .line 879
+    .line 874
     :try_start_0
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readTag()I
 
     move-result v0
 
-    .line 880
+    .line 875
     sparse-switch v0, :sswitch_data_0
 
-    .line 885
+    .line 880
     invoke-virtual {p1, v0}, Lcom/google/protobuf/CodedInputStream;->skipField(I)Z
 
     move-result v0
@@ -145,22 +145,22 @@
 
     move v3, v4
 
-    .line 886
+    .line 881
     goto :goto_0
 
     :sswitch_0
     move v3, v4
 
-    .line 883
+    .line 878
     goto :goto_0
 
-    .line 892
+    .line 887
     :sswitch_1
     iget-object v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->to_:Lcom/kik/ximodel/XiBareUserJid;
 
     if-eqz v0, :cond_4
 
-    .line 893
+    .line 888
     iget-object v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->to_:Lcom/kik/ximodel/XiBareUserJid;
 
     invoke-virtual {v0}, Lcom/kik/ximodel/XiBareUserJid;->toBuilder()Lcom/kik/ximodel/XiBareUserJid$Builder;
@@ -169,7 +169,7 @@
 
     move-object v1, v0
 
-    .line 895
+    .line 890
     :goto_1
     invoke-static {}, Lcom/kik/ximodel/XiBareUserJid;->parser()Lcom/google/protobuf/Parser;
 
@@ -183,15 +183,15 @@
 
     iput-object v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->to_:Lcom/kik/ximodel/XiBareUserJid;
 
-    .line 896
+    .line 891
     if-eqz v1, :cond_0
 
-    .line 897
+    .line 892
     iget-object v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->to_:Lcom/kik/ximodel/XiBareUserJid;
 
     invoke-virtual {v1, v0}, Lcom/kik/ximodel/XiBareUserJid$Builder;->mergeFrom(Lcom/kik/ximodel/XiBareUserJid;)Lcom/kik/ximodel/XiBareUserJid$Builder;
 
-    .line 898
+    .line 893
     invoke-virtual {v1}, Lcom/kik/ximodel/XiBareUserJid$Builder;->buildPartial()Lcom/kik/ximodel/XiBareUserJid;
 
     move-result-object v0
@@ -204,7 +204,7 @@
 
     goto :goto_0
 
-    .line 925
+    .line 920
     :catch_0
     move-exception v0
 
@@ -217,15 +217,16 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 930
+    .line 925
     :catchall_0
     move-exception v0
 
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$Keyboard;->makeExtensionsImmutable()V
 
+    .line 926
     throw v0
 
-    .line 905
+    .line 900
     :sswitch_2
     :try_start_2
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readBool()Z
@@ -240,17 +241,17 @@
 
     goto :goto_0
 
-    .line 926
+    .line 921
     :catch_1
     move-exception v0
 
-    .line 927
+    .line 922
     :try_start_3
     new-instance v1, Lcom/google/protobuf/InvalidProtocolBufferException;
 
     invoke-direct {v1, v0}, Lcom/google/protobuf/InvalidProtocolBufferException;-><init>(Ljava/io/IOException;)V
 
-    .line 928
+    .line 923
     invoke-virtual {v1, p0}, Lcom/google/protobuf/InvalidProtocolBufferException;->setUnfinishedMessage(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/InvalidProtocolBufferException;
 
     move-result-object v0
@@ -259,27 +260,27 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 910
+    .line 905
     :sswitch_3
     :try_start_4
     iget v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->typeCase_:I
 
     if-ne v0, v5, :cond_3
 
-    .line 911
+    .line 906
     iget-object v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->type_:Ljava/lang/Object;
 
     check-cast v0, Lcom/kik/messagepath/model/Keyboards$SuggestedResponseKeyboard;
 
-    invoke-virtual {v0}, Lcom/kik/messagepath/model/Keyboards$SuggestedResponseKeyboard;->c()Lcom/kik/messagepath/model/Keyboards$SuggestedResponseKeyboard$a;
+    invoke-virtual {v0}, Lcom/kik/messagepath/model/Keyboards$SuggestedResponseKeyboard;->b()Lcom/kik/messagepath/model/Keyboards$SuggestedResponseKeyboard$a;
 
     move-result-object v0
 
     move-object v1, v0
 
-    .line 914
+    .line 909
     :goto_2
-    invoke-static {}, Lcom/kik/messagepath/model/Keyboards$SuggestedResponseKeyboard;->e()Lcom/google/protobuf/Parser;
+    invoke-static {}, Lcom/kik/messagepath/model/Keyboards$SuggestedResponseKeyboard;->d()Lcom/google/protobuf/Parser;
 
     move-result-object v0
 
@@ -289,24 +290,24 @@
 
     iput-object v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->type_:Ljava/lang/Object;
 
-    .line 915
+    .line 910
     if-eqz v1, :cond_1
 
-    .line 916
+    .line 911
     iget-object v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->type_:Ljava/lang/Object;
 
     check-cast v0, Lcom/kik/messagepath/model/Keyboards$SuggestedResponseKeyboard;
 
     invoke-virtual {v1, v0}, Lcom/kik/messagepath/model/Keyboards$SuggestedResponseKeyboard$a;->a(Lcom/kik/messagepath/model/Keyboards$SuggestedResponseKeyboard;)Lcom/kik/messagepath/model/Keyboards$SuggestedResponseKeyboard$a;
 
-    .line 917
-    invoke-virtual {v1}, Lcom/kik/messagepath/model/Keyboards$SuggestedResponseKeyboard$a;->b()Lcom/kik/messagepath/model/Keyboards$SuggestedResponseKeyboard;
+    .line 912
+    invoke-virtual {v1}, Lcom/kik/messagepath/model/Keyboards$SuggestedResponseKeyboard$a;->a()Lcom/kik/messagepath/model/Keyboards$SuggestedResponseKeyboard;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->type_:Ljava/lang/Object;
 
-    .line 919
+    .line 914
     :cond_1
     const/16 v0, 0x20
 
@@ -318,11 +319,11 @@
 
     goto :goto_0
 
-    .line 930
+    .line 925
     :cond_2
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$Keyboard;->makeExtensionsImmutable()V
 
-    .line 931
+    .line 926
     return-void
 
     :cond_3
@@ -335,7 +336,7 @@
 
     goto :goto_1
 
-    .line 880
+    .line 875
     nop
 
     :sswitch_data_0
@@ -356,7 +357,7 @@
     .end annotation
 
     .prologue
-    .line 853
+    .line 848
     invoke-direct {p0, p1, p2}, Lcom/kik/messagepath/model/Keyboards$Keyboard;-><init>(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)V
 
     return-void
@@ -373,20 +374,20 @@
     .end annotation
 
     .prologue
-    .line 859
+    .line 854
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;)V
 
-    .line 945
+    .line 940
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->typeCase_:I
 
-    .line 1058
+    .line 1052
     const/4 v0, -0x1
 
     iput-byte v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->memoizedIsInitialized:B
 
-    .line 860
+    .line 855
     return-void
 .end method
 
@@ -394,7 +395,7 @@
     .locals 0
 
     .prologue
-    .line 853
+    .line 848
     invoke-direct {p0, p1}, Lcom/kik/messagepath/model/Keyboards$Keyboard;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;)V
 
     return-void
@@ -404,17 +405,35 @@
     .locals 0
 
     .prologue
-    .line 853
+    .line 848
     iput p1, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->typeCase_:I
 
     return p1
+.end method
+
+.method public static a(Lcom/kik/messagepath/model/Keyboards$Keyboard;)Lcom/kik/messagepath/model/Keyboards$Keyboard$a;
+    .locals 1
+
+    .prologue
+    .line 1220
+    sget-object v0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->a:Lcom/kik/messagepath/model/Keyboards$Keyboard;
+
+    invoke-virtual {v0}, Lcom/kik/messagepath/model/Keyboards$Keyboard;->f()Lcom/kik/messagepath/model/Keyboards$Keyboard$a;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lcom/kik/messagepath/model/Keyboards$Keyboard$a;->a(Lcom/kik/messagepath/model/Keyboards$Keyboard;)Lcom/kik/messagepath/model/Keyboards$Keyboard$a;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method static synthetic a(Lcom/kik/messagepath/model/Keyboards$Keyboard;Lcom/kik/ximodel/XiBareUserJid;)Lcom/kik/ximodel/XiBareUserJid;
     .locals 0
 
     .prologue
-    .line 853
+    .line 848
     iput-object p1, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->to_:Lcom/kik/ximodel/XiBareUserJid;
 
     return-object p1
@@ -424,7 +443,7 @@
     .locals 0
 
     .prologue
-    .line 853
+    .line 848
     iput-object p1, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->type_:Ljava/lang/Object;
 
     return-object p1
@@ -434,31 +453,17 @@
     .locals 0
 
     .prologue
-    .line 853
+    .line 848
     iput-boolean p1, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->hidden_:Z
 
     return p1
-.end method
-
-.method public static f()Lcom/kik/messagepath/model/Keyboards$Keyboard$a;
-    .locals 1
-
-    .prologue
-    .line 1223
-    sget-object v0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->a:Lcom/kik/messagepath/model/Keyboards$Keyboard;
-
-    invoke-direct {v0}, Lcom/kik/messagepath/model/Keyboards$Keyboard;->k()Lcom/kik/messagepath/model/Keyboards$Keyboard$a;
-
-    move-result-object v0
-
-    return-object v0
 .end method
 
 .method public static g()Lcom/kik/messagepath/model/Keyboards$Keyboard;
     .locals 1
 
     .prologue
-    .line 1796
+    .line 1787
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->a:Lcom/kik/messagepath/model/Keyboards$Keyboard;
 
     return-object v0
@@ -477,7 +482,7 @@
     .end annotation
 
     .prologue
-    .line 1810
+    .line 1801
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->b:Lcom/google/protobuf/Parser;
 
     return-object v0
@@ -487,7 +492,7 @@
     .locals 1
 
     .prologue
-    .line 853
+    .line 848
     sget-boolean v0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->alwaysUseFieldBuilders:Z
 
     return v0
@@ -497,41 +502,10 @@
     .locals 1
 
     .prologue
-    .line 853
+    .line 848
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->b:Lcom/google/protobuf/Parser;
 
     return-object v0
-.end method
-
-.method private k()Lcom/kik/messagepath/model/Keyboards$Keyboard$a;
-    .locals 2
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 1229
-    sget-object v0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->a:Lcom/kik/messagepath/model/Keyboards$Keyboard;
-
-    if-ne p0, v0, :cond_0
-
-    new-instance v0, Lcom/kik/messagepath/model/Keyboards$Keyboard$a;
-
-    invoke-direct {v0, v1}, Lcom/kik/messagepath/model/Keyboards$Keyboard$a;-><init>(B)V
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    new-instance v0, Lcom/kik/messagepath/model/Keyboards$Keyboard$a;
-
-    invoke-direct {v0, v1}, Lcom/kik/messagepath/model/Keyboards$Keyboard$a;-><init>(B)V
-
-    .line 1230
-    invoke-virtual {v0, p0}, Lcom/kik/messagepath/model/Keyboards$Keyboard$a;->a(Lcom/kik/messagepath/model/Keyboards$Keyboard;)Lcom/kik/messagepath/model/Keyboards$Keyboard$a;
-
-    move-result-object v0
-
-    goto :goto_0
 .end method
 
 
@@ -540,7 +514,7 @@
     .locals 1
 
     .prologue
-    .line 977
+    .line 972
     iget v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->typeCase_:I
 
     invoke-static {v0}, Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;->forNumber(I)Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;
@@ -554,7 +528,7 @@
     .locals 1
 
     .prologue
-    .line 993
+    .line 988
     iget-object v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->to_:Lcom/kik/ximodel/XiBareUserJid;
 
     if-eqz v0, :cond_0
@@ -574,7 +548,7 @@
     .locals 1
 
     .prologue
-    .line 1005
+    .line 1000
     iget-object v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->to_:Lcom/kik/ximodel/XiBareUserJid;
 
     if-nez v0, :cond_0
@@ -596,7 +570,7 @@
     .locals 1
 
     .prologue
-    .line 1035
+    .line 1029
     iget-boolean v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->hidden_:Z
 
     return v0
@@ -606,24 +580,24 @@
     .locals 2
 
     .prologue
-    .line 1043
+    .line 1037
     iget v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->typeCase_:I
 
     const/16 v1, 0x20
 
     if-ne v0, v1, :cond_0
 
-    .line 1044
+    .line 1038
     iget-object v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->type_:Ljava/lang/Object;
 
     check-cast v0, Lcom/kik/messagepath/model/Keyboards$SuggestedResponseKeyboard;
 
-    .line 1046
+    .line 1040
     :goto_0
     return-object v0
 
     :cond_0
-    invoke-static {}, Lcom/kik/messagepath/model/Keyboards$SuggestedResponseKeyboard;->d()Lcom/kik/messagepath/model/Keyboards$SuggestedResponseKeyboard;
+    invoke-static {}, Lcom/kik/messagepath/model/Keyboards$SuggestedResponseKeyboard;->c()Lcom/kik/messagepath/model/Keyboards$SuggestedResponseKeyboard;
 
     move-result-object v0
 
@@ -638,32 +612,32 @@
 
     const/4 v2, 0x0
 
-    .line 1105
+    .line 1099
     if-ne p1, p0, :cond_1
 
-    .line 1132
+    .line 1126
     :cond_0
     :goto_0
     return v1
 
-    .line 1108
+    .line 1102
     :cond_1
     instance-of v0, p1, Lcom/kik/messagepath/model/Keyboards$Keyboard;
 
     if-nez v0, :cond_2
 
-    .line 1109
+    .line 1103
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     goto :goto_0
 
-    .line 1111
+    .line 1105
     :cond_2
     check-cast p1, Lcom/kik/messagepath/model/Keyboards$Keyboard;
 
-    .line 1114
+    .line 1108
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$Keyboard;->b()Z
 
     move-result v0
@@ -676,7 +650,7 @@
 
     move v0, v1
 
-    .line 1115
+    .line 1109
     :goto_1
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$Keyboard;->b()Z
 
@@ -684,14 +658,14 @@
 
     if-eqz v3, :cond_3
 
-    .line 1116
+    .line 1110
     if-eqz v0, :cond_5
 
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$Keyboard;->c()Lcom/kik/ximodel/XiBareUserJid;
 
     move-result-object v0
 
-    .line 1117
+    .line 1111
     invoke-virtual {p1}, Lcom/kik/messagepath/model/Keyboards$Keyboard;->c()Lcom/kik/ximodel/XiBareUserJid;
 
     move-result-object v3
@@ -704,41 +678,41 @@
 
     move v0, v1
 
-    .line 1119
+    .line 1113
     :cond_3
     :goto_2
     if-eqz v0, :cond_6
 
-    .line 2035
+    .line 2029
     iget-boolean v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->hidden_:Z
 
-    .line 3035
+    .line 3029
     iget-boolean v3, p1, Lcom/kik/messagepath/model/Keyboards$Keyboard;->hidden_:Z
 
-    .line 1120
+    .line 1114
     if-ne v0, v3, :cond_6
 
     move v0, v1
 
-    .line 1121
+    .line 1115
     :goto_3
     if-eqz v0, :cond_7
 
-    .line 3977
+    .line 3972
     iget v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->typeCase_:I
 
     invoke-static {v0}, Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;->forNumber(I)Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;
 
     move-result-object v0
 
-    .line 4977
+    .line 4972
     iget v3, p1, Lcom/kik/messagepath/model/Keyboards$Keyboard;->typeCase_:I
 
     invoke-static {v3}, Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;->forNumber(I)Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;
 
     move-result-object v3
 
-    .line 1121
+    .line 1115
     invoke-virtual {v0, v3}, Lcom/kik/messagepath/model/Keyboards$Keyboard$TypeCase;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -747,7 +721,7 @@
 
     move v0, v1
 
-    .line 1123
+    .line 1117
     :goto_4
     if-nez v0, :cond_8
 
@@ -758,28 +732,28 @@
     :cond_4
     move v0, v2
 
-    .line 1114
+    .line 1108
     goto :goto_1
 
     :cond_5
     move v0, v2
 
-    .line 1117
+    .line 1111
     goto :goto_2
 
     :cond_6
     move v0, v2
 
-    .line 1120
+    .line 1114
     goto :goto_3
 
     :cond_7
     move v0, v2
 
-    .line 1121
+    .line 1115
     goto :goto_4
 
-    .line 1124
+    .line 1118
     :cond_8
     iget v3, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->typeCase_:I
 
@@ -789,13 +763,13 @@
 
     goto :goto_0
 
-    .line 1126
+    .line 1120
     :pswitch_0
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$Keyboard;->e()Lcom/kik/messagepath/model/Keyboards$SuggestedResponseKeyboard;
 
     move-result-object v0
 
-    .line 1127
+    .line 1121
     invoke-virtual {p1}, Lcom/kik/messagepath/model/Keyboards$Keyboard;->e()Lcom/kik/messagepath/model/Keyboards$SuggestedResponseKeyboard;
 
     move-result-object v3
@@ -810,7 +784,7 @@
 
     goto :goto_0
 
-    .line 1124
+    .line 1118
     nop
 
     :pswitch_data_0
@@ -819,14 +793,45 @@
     .end packed-switch
 .end method
 
+.method public final f()Lcom/kik/messagepath/model/Keyboards$Keyboard$a;
+    .locals 2
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 1223
+    sget-object v0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->a:Lcom/kik/messagepath/model/Keyboards$Keyboard;
+
+    if-ne p0, v0, :cond_0
+
+    new-instance v0, Lcom/kik/messagepath/model/Keyboards$Keyboard$a;
+
+    invoke-direct {v0, v1}, Lcom/kik/messagepath/model/Keyboards$Keyboard$a;-><init>(B)V
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    new-instance v0, Lcom/kik/messagepath/model/Keyboards$Keyboard$a;
+
+    invoke-direct {v0, v1}, Lcom/kik/messagepath/model/Keyboards$Keyboard$a;-><init>(B)V
+
+    .line 1224
+    invoke-virtual {v0, p0}, Lcom/kik/messagepath/model/Keyboards$Keyboard$a;->a(Lcom/kik/messagepath/model/Keyboards$Keyboard;)Lcom/kik/messagepath/model/Keyboards$Keyboard$a;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
 .method public final bridge synthetic getDefaultInstanceForType()Lcom/google/protobuf/Message;
     .locals 1
 
     .prologue
-    .line 8819
+    .line 8810
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->a:Lcom/kik/messagepath/model/Keyboards$Keyboard;
 
-    .line 853
+    .line 848
     return-object v0
 .end method
 
@@ -834,10 +839,10 @@
     .locals 1
 
     .prologue
-    .line 7819
+    .line 7810
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->a:Lcom/kik/messagepath/model/Keyboards$Keyboard;
 
-    .line 853
+    .line 848
     return-object v0
 .end method
 
@@ -854,7 +859,7 @@
     .end annotation
 
     .prologue
-    .line 1815
+    .line 1806
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->b:Lcom/google/protobuf/Parser;
 
     return-object v0
@@ -866,31 +871,31 @@
     .prologue
     const/16 v3, 0x20
 
-    .line 1082
+    .line 1076
     iget v1, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->memoizedSize:I
 
-    .line 1083
+    .line 1077
     const/4 v0, -0x1
 
     if-eq v1, v0, :cond_0
 
-    .line 1099
+    .line 1093
     :goto_0
     return v1
 
-    .line 1085
+    .line 1079
     :cond_0
     const/4 v0, 0x0
 
-    .line 1086
+    .line 1080
     iget-object v1, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->to_:Lcom/kik/ximodel/XiBareUserJid;
 
     if-eqz v1, :cond_1
 
-    .line 1087
+    .line 1081
     const/4 v0, 0x1
 
-    .line 1088
+    .line 1082
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$Keyboard;->c()Lcom/kik/ximodel/XiBareUserJid;
 
     move-result-object v1
@@ -901,18 +906,18 @@
 
     add-int/lit8 v0, v0, 0x0
 
-    .line 1090
+    .line 1084
     :cond_1
     iget-boolean v1, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->hidden_:Z
 
     if-eqz v1, :cond_3
 
-    .line 1091
+    .line 1085
     const/4 v1, 0x2
 
     iget-boolean v2, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->hidden_:Z
 
-    .line 1092
+    .line 1086
     invoke-static {v1, v2}, Lcom/google/protobuf/CodedOutputStream;->computeBoolSize(IZ)I
 
     move-result v1
@@ -921,25 +926,25 @@
 
     move v1, v0
 
-    .line 1094
+    .line 1088
     :goto_1
     iget v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->typeCase_:I
 
     if-ne v0, v3, :cond_2
 
-    .line 1095
+    .line 1089
     iget-object v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->type_:Ljava/lang/Object;
 
     check-cast v0, Lcom/kik/messagepath/model/Keyboards$SuggestedResponseKeyboard;
 
-    .line 1096
+    .line 1090
     invoke-static {v3, v0}, Lcom/google/protobuf/CodedOutputStream;->computeMessageSize(ILcom/google/protobuf/MessageLite;)I
 
     move-result v0
 
     add-int/2addr v1, v0
 
-    .line 1098
+    .line 1092
     :cond_2
     iput v1, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->memoizedSize:I
 
@@ -955,7 +960,7 @@
     .locals 1
 
     .prologue
-    .line 868
+    .line 863
     invoke-static {}, Lcom/google/protobuf/UnknownFieldSet;->getDefaultInstance()Lcom/google/protobuf/UnknownFieldSet;
 
     move-result-object v0
@@ -967,19 +972,19 @@
     .locals 2
 
     .prologue
-    .line 1137
+    .line 1131
     iget v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->memoizedHashCode:I
 
     if-eqz v0, :cond_0
 
-    .line 1138
+    .line 1132
     iget v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->memoizedHashCode:I
 
-    .line 1159
+    .line 1153
     :goto_0
     return v0
 
-    .line 1141
+    .line 1135
     :cond_0
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$Keyboard;->getDescriptorForType()Lcom/google/protobuf/Descriptors$Descriptor;
 
@@ -991,19 +996,19 @@
 
     add-int/lit16 v0, v0, 0x30b
 
-    .line 1142
+    .line 1136
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$Keyboard;->b()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 1143
+    .line 1137
     mul-int/lit8 v0, v0, 0x25
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 1144
+    .line 1138
     mul-int/lit8 v0, v0, 0x35
 
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$Keyboard;->c()Lcom/kik/ximodel/XiBareUserJid;
@@ -1016,31 +1021,31 @@
 
     add-int/2addr v0, v1
 
-    .line 1146
+    .line 1140
     :cond_1
     mul-int/lit8 v0, v0, 0x25
 
     add-int/lit8 v0, v0, 0x2
 
-    .line 1147
+    .line 1141
     mul-int/lit8 v0, v0, 0x35
 
-    .line 5035
+    .line 5029
     iget-boolean v1, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->hidden_:Z
 
-    .line 1147
+    .line 1141
     invoke-static {v1}, Lcom/google/protobuf/Internal;->hashBoolean(Z)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 1149
+    .line 1143
     iget v1, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->typeCase_:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1157
+    .line 1151
     :goto_1
     mul-int/lit8 v0, v0, 0x1d
 
@@ -1052,18 +1057,18 @@
 
     add-int/2addr v0, v1
 
-    .line 1158
+    .line 1152
     iput v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->memoizedHashCode:I
 
     goto :goto_0
 
-    .line 1151
+    .line 1145
     :pswitch_0
     mul-int/lit8 v0, v0, 0x25
 
     add-int/lit8 v0, v0, 0x20
 
-    .line 1152
+    .line 1146
     mul-int/lit8 v0, v0, 0x35
 
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$Keyboard;->e()Lcom/kik/messagepath/model/Keyboards$SuggestedResponseKeyboard;
@@ -1078,7 +1083,7 @@
 
     goto :goto_1
 
-    .line 1149
+    .line 1143
     :pswitch_data_0
     .packed-switch 0x20
         :pswitch_0
@@ -1089,7 +1094,7 @@
     .locals 3
 
     .prologue
-    .line 940
+    .line 935
     invoke-static {}, Lcom/kik/messagepath/model/Keyboards;->e()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -1098,12 +1103,12 @@
 
     const-class v2, Lcom/kik/messagepath/model/Keyboards$Keyboard$a;
 
-    .line 941
+    .line 936
     invoke-virtual {v0, v1, v2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;->ensureFieldAccessorsInitialized(Ljava/lang/Class;Ljava/lang/Class;)Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
 
-    .line 940
+    .line 935
     return-object v0
 .end method
 
@@ -1113,17 +1118,17 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1060
+    .line 1054
     iget-byte v1, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->memoizedIsInitialized:B
 
-    .line 1061
+    .line 1055
     if-ne v1, v0, :cond_0
 
-    .line 1065
+    .line 1059
     :goto_0
     return v0
 
-    .line 1062
+    .line 1056
     :cond_0
     if-nez v1, :cond_1
 
@@ -1131,7 +1136,7 @@
 
     goto :goto_0
 
-    .line 1064
+    .line 1058
     :cond_1
     iput-byte v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->memoizedIsInitialized:B
 
@@ -1142,14 +1147,14 @@
     .locals 1
 
     .prologue
-    .line 6223
+    .line 6217
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->a:Lcom/kik/messagepath/model/Keyboards$Keyboard;
 
-    invoke-direct {v0}, Lcom/kik/messagepath/model/Keyboards$Keyboard;->k()Lcom/kik/messagepath/model/Keyboards$Keyboard$a;
+    invoke-virtual {v0}, Lcom/kik/messagepath/model/Keyboards$Keyboard;->f()Lcom/kik/messagepath/model/Keyboards$Keyboard$a;
 
     move-result-object v0
 
-    .line 853
+    .line 848
     return-object v0
 .end method
 
@@ -1157,14 +1162,14 @@
     .locals 2
 
     .prologue
-    .line 5236
+    .line 5230
     new-instance v0, Lcom/kik/messagepath/model/Keyboards$Keyboard$a;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p1, v1}, Lcom/kik/messagepath/model/Keyboards$Keyboard$a;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;B)V
 
-    .line 853
+    .line 848
     return-object v0
 .end method
 
@@ -1172,14 +1177,14 @@
     .locals 1
 
     .prologue
-    .line 7223
+    .line 7217
     sget-object v0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->a:Lcom/kik/messagepath/model/Keyboards$Keyboard;
 
-    invoke-direct {v0}, Lcom/kik/messagepath/model/Keyboards$Keyboard;->k()Lcom/kik/messagepath/model/Keyboards$Keyboard$a;
+    invoke-virtual {v0}, Lcom/kik/messagepath/model/Keyboards$Keyboard;->f()Lcom/kik/messagepath/model/Keyboards$Keyboard$a;
 
     move-result-object v0
 
-    .line 853
+    .line 848
     return-object v0
 .end method
 
@@ -1187,8 +1192,8 @@
     .locals 1
 
     .prologue
-    .line 853
-    invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$Keyboard;->k()Lcom/kik/messagepath/model/Keyboards$Keyboard$a;
+    .line 848
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$Keyboard;->f()Lcom/kik/messagepath/model/Keyboards$Keyboard$a;
 
     move-result-object v0
 
@@ -1199,8 +1204,8 @@
     .locals 1
 
     .prologue
-    .line 853
-    invoke-direct {p0}, Lcom/kik/messagepath/model/Keyboards$Keyboard;->k()Lcom/kik/messagepath/model/Keyboards$Keyboard$a;
+    .line 848
+    invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$Keyboard;->f()Lcom/kik/messagepath/model/Keyboards$Keyboard$a;
 
     move-result-object v0
 
@@ -1218,12 +1223,12 @@
     .prologue
     const/16 v2, 0x20
 
-    .line 1070
+    .line 1064
     iget-object v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->to_:Lcom/kik/ximodel/XiBareUserJid;
 
     if-eqz v0, :cond_0
 
-    .line 1071
+    .line 1065
     const/4 v0, 0x1
 
     invoke-virtual {p0}, Lcom/kik/messagepath/model/Keyboards$Keyboard;->c()Lcom/kik/ximodel/XiBareUserJid;
@@ -1232,33 +1237,33 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;)V
 
-    .line 1073
+    .line 1067
     :cond_0
     iget-boolean v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->hidden_:Z
 
     if-eqz v0, :cond_1
 
-    .line 1074
+    .line 1068
     const/4 v0, 0x2
 
     iget-boolean v1, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->hidden_:Z
 
     invoke-virtual {p1, v0, v1}, Lcom/google/protobuf/CodedOutputStream;->writeBool(IZ)V
 
-    .line 1076
+    .line 1070
     :cond_1
     iget v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->typeCase_:I
 
     if-ne v0, v2, :cond_2
 
-    .line 1077
+    .line 1071
     iget-object v0, p0, Lcom/kik/messagepath/model/Keyboards$Keyboard;->type_:Ljava/lang/Object;
 
     check-cast v0, Lcom/kik/messagepath/model/Keyboards$SuggestedResponseKeyboard;
 
     invoke-virtual {p1, v2, v0}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;)V
 
-    .line 1079
+    .line 1073
     :cond_2
     return-void
 .end method

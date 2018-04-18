@@ -47,13 +47,13 @@
     .end annotation
 
     .prologue
-    .line 89
+    .line 93
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 90
+    .line 94
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompatApi19$OnMetadataUpdateListener;->mCallback:Landroid/support/v4/media/session/MediaSessionCompatApi19$Callback;
 
-    .line 91
+    .line 95
     return-void
 .end method
 
@@ -63,7 +63,7 @@
     .locals 1
 
     .prologue
-    .line 95
+    .line 99
     const v0, 0x10000001
 
     if-ne p1, v0, :cond_0
@@ -72,12 +72,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 96
+    .line 100
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompatApi19$OnMetadataUpdateListener;->mCallback:Landroid/support/v4/media/session/MediaSessionCompatApi19$Callback;
 
     invoke-interface {v0, p2}, Landroid/support/v4/media/session/MediaSessionCompatApi19$Callback;->onSetRating(Ljava/lang/Object;)V
 
-    .line 98
+    .line 102
     :cond_0
     return-void
 .end method

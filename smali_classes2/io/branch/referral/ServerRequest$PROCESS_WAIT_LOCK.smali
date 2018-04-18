@@ -30,6 +30,8 @@
 
 .field public static final enum GAID_FETCH_WAIT_LOCK:Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;
 
+.field public static final enum INSTALL_REFERRER_FETCH_WAIT_LOCK:Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;
+
 .field public static final enum INTENT_PENDING_WAIT_LOCK:Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;
 
 .field public static final enum STRONG_MATCH_PENDING_WAIT_LOCK:Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;
@@ -37,9 +39,11 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 7
 
     .prologue
+    const/4 v6, 0x4
+
     const/4 v5, 0x3
 
     const/4 v4, 0x2
@@ -48,7 +52,7 @@
 
     const/4 v2, 0x0
 
-    .line 37
+    .line 40
     new-instance v0, Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;
 
     const-string v1, "FB_APP_LINK_WAIT_LOCK"
@@ -81,8 +85,17 @@
 
     sput-object v0, Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;->STRONG_MATCH_PENDING_WAIT_LOCK:Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;
 
-    .line 36
-    const/4 v0, 0x4
+    .line 41
+    new-instance v0, Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;
+
+    const-string v1, "INSTALL_REFERRER_FETCH_WAIT_LOCK"
+
+    invoke-direct {v0, v1, v6}, Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;->INSTALL_REFERRER_FETCH_WAIT_LOCK:Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;
+
+    .line 39
+    const/4 v0, 0x5
 
     new-array v0, v0, [Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;
 
@@ -102,6 +115,10 @@
 
     aput-object v1, v0, v5
 
+    sget-object v1, Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;->INSTALL_REFERRER_FETCH_WAIT_LOCK:Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;
+
+    aput-object v1, v0, v6
+
     sput-object v0, Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;->$VALUES:[Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;
 
     return-void
@@ -116,7 +133,7 @@
     .end annotation
 
     .prologue
-    .line 36
+    .line 39
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -126,7 +143,7 @@
     .locals 1
 
     .prologue
-    .line 36
+    .line 39
     const-class v0, Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -142,7 +159,7 @@
     .locals 1
 
     .prologue
-    .line 36
+    .line 39
     sget-object v0, Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;->$VALUES:[Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;
 
     invoke-virtual {v0}, [Lio/branch/referral/ServerRequest$PROCESS_WAIT_LOCK;->clone()Ljava/lang/Object;

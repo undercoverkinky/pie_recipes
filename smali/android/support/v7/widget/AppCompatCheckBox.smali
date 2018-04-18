@@ -2,48 +2,25 @@
 .super Landroid/widget/CheckBox;
 .source "SourceFile"
 
-
-# static fields
-.field private static final a:[I
+# interfaces
+.implements Landroid/support/v4/widget/TintableCompoundButton;
 
 
 # instance fields
-.field private b:Landroid/support/v7/internal/widget/TintManager;
-
-.field private c:Landroid/graphics/drawable/Drawable;
+.field private final a:Landroid/support/v7/widget/AppCompatCompoundButtonHelper;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    .prologue
-    .line 37
-    const/4 v0, 0x1
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x0
-
-    const v2, 0x1010107
-
-    aput v2, v0, v1
-
-    sput-object v0, Landroid/support/v7/widget/AppCompatCheckBox;->a:[I
-
-    return-void
-.end method
-
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
     .prologue
-    .line 45
+    .line 52
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/support/v7/widget/AppCompatCheckBox;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 46
+    .line 53
     return-void
 .end method
 
@@ -51,138 +28,194 @@
     .locals 1
 
     .prologue
-    .line 49
-    sget v0, Landroid/support/v7/appcompat/R$attr;->s:I
+    .line 56
+    sget v0, Landroid/support/v7/appcompat/R$attr;->checkboxStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Landroid/support/v7/widget/AppCompatCheckBox;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 50
+    .line 57
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 53
-    invoke-direct {p0, p1, p2, p3}, Landroid/widget/CheckBox;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    .line 55
-    sget-boolean v0, Landroid/support/v7/internal/widget/TintManager;->a:Z
-
-    if-eqz v0, :cond_0
-
-    .line 56
-    invoke-virtual {p0}, Landroid/support/v7/widget/AppCompatCheckBox;->getContext()Landroid/content/Context;
+    .line 60
+    invoke-static {p1}, Landroid/support/v7/widget/TintContextWrapper;->a(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object v0
 
-    sget-object v1, Landroid/support/v7/widget/AppCompatCheckBox;->a:[I
-
-    invoke-static {v0, p2, v1, p3}, Landroid/support/v7/internal/widget/TintTypedArray;->a(Landroid/content/Context;Landroid/util/AttributeSet;[II)Landroid/support/v7/internal/widget/TintTypedArray;
-
-    move-result-object v0
-
-    .line 58
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/support/v7/internal/widget/TintTypedArray;->a(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Landroid/support/v7/widget/AppCompatCheckBox;->setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 59
-    invoke-virtual {v0}, Landroid/support/v7/internal/widget/TintTypedArray;->b()V
+    invoke-direct {p0, v0, p2, p3}, Landroid/widget/CheckBox;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 61
-    invoke-virtual {v0}, Landroid/support/v7/internal/widget/TintTypedArray;->c()Landroid/support/v7/internal/widget/TintManager;
+    new-instance v0, Landroid/support/v7/widget/AppCompatCompoundButtonHelper;
 
-    move-result-object v0
+    invoke-direct {v0, p0}, Landroid/support/v7/widget/AppCompatCompoundButtonHelper;-><init>(Landroid/widget/CompoundButton;)V
 
-    iput-object v0, p0, Landroid/support/v7/widget/AppCompatCheckBox;->b:Landroid/support/v7/internal/widget/TintManager;
+    iput-object v0, p0, Landroid/support/v7/widget/AppCompatCheckBox;->a:Landroid/support/v7/widget/AppCompatCompoundButtonHelper;
+
+    .line 62
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatCheckBox;->a:Landroid/support/v7/widget/AppCompatCompoundButtonHelper;
+
+    invoke-virtual {v0, p2, p3}, Landroid/support/v7/widget/AppCompatCompoundButtonHelper;->a(Landroid/util/AttributeSet;I)V
 
     .line 63
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
 .method public getCompoundPaddingLeft()I
-    .locals 3
+    .locals 2
 
     .prologue
-    .line 82
+    .line 80
     invoke-super {p0}, Landroid/widget/CheckBox;->getCompoundPaddingLeft()I
 
     move-result v0
 
-    .line 83
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v2, 0x11
-
-    if-ge v1, v2, :cond_0
-
-    .line 86
-    iget-object v1, p0, Landroid/support/v7/widget/AppCompatCheckBox;->c:Landroid/graphics/drawable/Drawable;
+    .line 81
+    iget-object v1, p0, Landroid/support/v7/widget/AppCompatCheckBox;->a:Landroid/support/v7/widget/AppCompatCompoundButtonHelper;
 
     if-eqz v1, :cond_0
 
-    .line 87
-    iget-object v1, p0, Landroid/support/v7/widget/AppCompatCheckBox;->c:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Landroid/support/v7/widget/AppCompatCheckBox;->a:Landroid/support/v7/widget/AppCompatCompoundButtonHelper;
 
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+    .line 82
+    invoke-virtual {v1, v0}, Landroid/support/v7/widget/AppCompatCompoundButtonHelper;->a(I)I
 
-    move-result v1
+    move-result v0
 
-    add-int/2addr v0, v1
-
-    .line 90
     :cond_0
     return v0
+.end method
+
+.method public getSupportButtonTintList()Landroid/content/res/ColorStateList;
+    .locals 1
+
+    .prologue
+    .line 106
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatCheckBox;->a:Landroid/support/v7/widget/AppCompatCompoundButtonHelper;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatCheckBox;->a:Landroid/support/v7/widget/AppCompatCompoundButtonHelper;
+
+    .line 107
+    invoke-virtual {v0}, Landroid/support/v7/widget/AppCompatCompoundButtonHelper;->a()Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public getSupportButtonTintMode()Landroid/graphics/PorterDuff$Mode;
+    .locals 1
+
+    .prologue
+    .line 131
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatCheckBox;->a:Landroid/support/v7/widget/AppCompatCompoundButtonHelper;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatCheckBox;->a:Landroid/support/v7/widget/AppCompatCompoundButtonHelper;
+
+    .line 132
+    invoke-virtual {v0}, Landroid/support/v7/widget/AppCompatCompoundButtonHelper;->b()Landroid/graphics/PorterDuff$Mode;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
 .method public setButtonDrawable(I)V
     .locals 1
 
     .prologue
-    .line 73
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatCheckBox;->b:Landroid/support/v7/internal/widget/TintManager;
+    .line 75
+    invoke-virtual {p0}, Landroid/support/v7/widget/AppCompatCheckBox;->getContext()Landroid/content/Context;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    .line 74
-    iget-object v0, p0, Landroid/support/v7/widget/AppCompatCheckBox;->b:Landroid/support/v7/internal/widget/TintManager;
-
-    invoke-virtual {v0, p1}, Landroid/support/v7/internal/widget/TintManager;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Landroid/support/v7/content/res/AppCompatResources;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Landroid/support/v7/widget/AppCompatCheckBox;->setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 78
-    :goto_0
-    return-void
-
     .line 76
-    :cond_0
-    invoke-super {p0, p1}, Landroid/widget/CheckBox;->setButtonDrawable(I)V
-
-    goto :goto_0
+    return-void
 .end method
 
 .method public setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 67
     invoke-super {p0, p1}, Landroid/widget/CheckBox;->setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 68
-    iput-object p1, p0, Landroid/support/v7/widget/AppCompatCheckBox;->c:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatCheckBox;->a:Landroid/support/v7/widget/AppCompatCompoundButtonHelper;
+
+    if-eqz v0, :cond_0
 
     .line 69
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatCheckBox;->a:Landroid/support/v7/widget/AppCompatCompoundButtonHelper;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/AppCompatCompoundButtonHelper;->c()V
+
+    .line 71
+    :cond_0
+    return-void
+.end method
+
+.method public setSupportButtonTintList(Landroid/content/res/ColorStateList;)V
+    .locals 1
+
+    .prologue
+    .line 93
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatCheckBox;->a:Landroid/support/v7/widget/AppCompatCompoundButtonHelper;
+
+    if-eqz v0, :cond_0
+
+    .line 94
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatCheckBox;->a:Landroid/support/v7/widget/AppCompatCompoundButtonHelper;
+
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/AppCompatCompoundButtonHelper;->a(Landroid/content/res/ColorStateList;)V
+
+    .line 96
+    :cond_0
+    return-void
+.end method
+
+.method public setSupportButtonTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    .locals 1
+
+    .prologue
+    .line 118
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatCheckBox;->a:Landroid/support/v7/widget/AppCompatCompoundButtonHelper;
+
+    if-eqz v0, :cond_0
+
+    .line 119
+    iget-object v0, p0, Landroid/support/v7/widget/AppCompatCheckBox;->a:Landroid/support/v7/widget/AppCompatCompoundButtonHelper;
+
+    invoke-virtual {v0, p1}, Landroid/support/v7/widget/AppCompatCompoundButtonHelper;->a(Landroid/graphics/PorterDuff$Mode;)V
+
+    .line 121
+    :cond_0
     return-void
 .end method

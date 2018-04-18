@@ -30,6 +30,10 @@
 # instance fields
 .field private isAdmin_:Z
 
+.field private isBot_:Z
+
+.field private isInactive_:Z
+
 .field private isSuperAdmin_:Z
 
 .field private jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
@@ -53,18 +57,18 @@
     .locals 1
 
     .prologue
-    .line 3677
+    .line 4409
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;-><init>()V
 
-    .line 3808
+    .line 4552
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jid_:Lcom/kik/ximodel/XiBareUserJid;
 
-    .line 3678
+    .line 4410
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->maybeForceBuilderInitialization()V
 
-    .line 3679
+    .line 4411
     return-void
 .end method
 
@@ -72,18 +76,18 @@
     .locals 1
 
     .prologue
-    .line 3683
+    .line 4415
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
 
-    .line 3808
+    .line 4552
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jid_:Lcom/kik/ximodel/XiBareUserJid;
 
-    .line 3684
+    .line 4416
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->maybeForceBuilderInitialization()V
 
-    .line 3685
+    .line 4417
     return-void
 .end method
 
@@ -91,7 +95,7 @@
     .locals 0
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-direct {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
 
     return-void
@@ -101,7 +105,7 @@
     .locals 0
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;-><init>()V
 
     return-void
@@ -111,8 +115,8 @@
     .locals 1
 
     .prologue
-    .line 3666
-    invoke-static {}, Lcom/kik/groups/GroupsCommon;->access$3300()Lcom/google/protobuf/Descriptors$Descriptor;
+    .line 4398
+    invoke-static {}, Lcom/kik/groups/GroupsCommon;->access$3600()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
 
@@ -134,25 +138,25 @@
     .end annotation
 
     .prologue
-    .line 3950
+    .line 4694
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3951
+    .line 4695
     new-instance v0, Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    .line 3953
+    .line 4697
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->getJid()Lcom/kik/ximodel/XiBareUserJid;
 
     move-result-object v1
 
-    .line 3954
+    .line 4698
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->getParentForChildren()Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;
 
     move-result-object v2
 
-    .line 3955
+    .line 4699
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->isClean()Z
 
     move-result v3
@@ -161,12 +165,12 @@
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    .line 3956
+    .line 4700
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jid_:Lcom/kik/ximodel/XiBareUserJid;
 
-    .line 3958
+    .line 4702
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
@@ -177,10 +181,10 @@
     .locals 0
 
     .prologue
-    .line 3688
-    invoke-static {}, Lcom/kik/groups/GroupsCommon$GroupMember;->access$3700()Z
+    .line 4420
+    invoke-static {}, Lcom/kik/groups/GroupsCommon$GroupMember;->access$4000()Z
 
-    .line 3690
+    .line 4422
     return-void
 .end method
 
@@ -190,7 +194,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0, p1, p2}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -202,7 +206,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0, p1, p2}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -214,7 +218,7 @@
     .locals 1
 
     .prologue
-    .line 3760
+    .line 4498
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -228,7 +232,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->build()Lcom/kik/groups/GroupsCommon$GroupMember;
 
     move-result-object v0
@@ -240,7 +244,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->build()Lcom/kik/groups/GroupsCommon$GroupMember;
 
     move-result-object v0
@@ -252,26 +256,26 @@
     .locals 2
 
     .prologue
-    .line 3716
+    .line 4452
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->buildPartial()Lcom/kik/groups/GroupsCommon$GroupMember;
 
     move-result-object v0
 
-    .line 3717
+    .line 4453
     invoke-virtual {v0}, Lcom/kik/groups/GroupsCommon$GroupMember;->isInitialized()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 3718
+    .line 4454
     invoke-static {v0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->newUninitializedMessageException(Lcom/google/protobuf/Message;)Lcom/google/protobuf/UninitializedMessageException;
 
     move-result-object v0
 
     throw v0
 
-    .line 3720
+    .line 4456
     :cond_0
     return-object v0
 .end method
@@ -280,7 +284,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->buildPartial()Lcom/kik/groups/GroupsCommon$GroupMember;
 
     move-result-object v0
@@ -292,7 +296,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->buildPartial()Lcom/kik/groups/GroupsCommon$GroupMember;
 
     move-result-object v0
@@ -304,41 +308,51 @@
     .locals 2
 
     .prologue
-    .line 3724
+    .line 4460
     new-instance v1, Lcom/kik/groups/GroupsCommon$GroupMember;
 
     const/4 v0, 0x0
 
     invoke-direct {v1, p0, v0}, Lcom/kik/groups/GroupsCommon$GroupMember;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;Lcom/kik/groups/GroupsCommon$1;)V
 
-    .line 3725
+    .line 4461
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3726
+    .line 4462
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jid_:Lcom/kik/ximodel/XiBareUserJid;
 
-    invoke-static {v1, v0}, Lcom/kik/groups/GroupsCommon$GroupMember;->access$3902(Lcom/kik/groups/GroupsCommon$GroupMember;Lcom/kik/ximodel/XiBareUserJid;)Lcom/kik/ximodel/XiBareUserJid;
+    invoke-static {v1, v0}, Lcom/kik/groups/GroupsCommon$GroupMember;->access$4202(Lcom/kik/groups/GroupsCommon$GroupMember;Lcom/kik/ximodel/XiBareUserJid;)Lcom/kik/ximodel/XiBareUserJid;
 
-    .line 3730
+    .line 4466
     :goto_0
     iget-boolean v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->isAdmin_:Z
 
-    invoke-static {v1, v0}, Lcom/kik/groups/GroupsCommon$GroupMember;->access$4002(Lcom/kik/groups/GroupsCommon$GroupMember;Z)Z
+    invoke-static {v1, v0}, Lcom/kik/groups/GroupsCommon$GroupMember;->access$4302(Lcom/kik/groups/GroupsCommon$GroupMember;Z)Z
 
-    .line 3731
+    .line 4467
     iget-boolean v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->isSuperAdmin_:Z
 
-    invoke-static {v1, v0}, Lcom/kik/groups/GroupsCommon$GroupMember;->access$4102(Lcom/kik/groups/GroupsCommon$GroupMember;Z)Z
+    invoke-static {v1, v0}, Lcom/kik/groups/GroupsCommon$GroupMember;->access$4402(Lcom/kik/groups/GroupsCommon$GroupMember;Z)Z
 
-    .line 3732
+    .line 4468
+    iget-boolean v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->isInactive_:Z
+
+    invoke-static {v1, v0}, Lcom/kik/groups/GroupsCommon$GroupMember;->access$4502(Lcom/kik/groups/GroupsCommon$GroupMember;Z)Z
+
+    .line 4469
+    iget-boolean v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->isBot_:Z
+
+    invoke-static {v1, v0}, Lcom/kik/groups/GroupsCommon$GroupMember;->access$4602(Lcom/kik/groups/GroupsCommon$GroupMember;Z)Z
+
+    .line 4470
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->onBuilt()V
 
-    .line 3733
+    .line 4471
     return-object v1
 
-    .line 3728
+    .line 4464
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
@@ -348,7 +362,7 @@
 
     check-cast v0, Lcom/kik/ximodel/XiBareUserJid;
 
-    invoke-static {v1, v0}, Lcom/kik/groups/GroupsCommon$GroupMember;->access$3902(Lcom/kik/groups/GroupsCommon$GroupMember;Lcom/kik/ximodel/XiBareUserJid;)Lcom/kik/ximodel/XiBareUserJid;
+    invoke-static {v1, v0}, Lcom/kik/groups/GroupsCommon$GroupMember;->access$4202(Lcom/kik/groups/GroupsCommon$GroupMember;Lcom/kik/ximodel/XiBareUserJid;)Lcom/kik/ximodel/XiBareUserJid;
 
     goto :goto_0
 .end method
@@ -357,7 +371,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->clear()Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -369,7 +383,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->clear()Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -381,7 +395,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->clear()Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -393,7 +407,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->clear()Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -409,33 +423,39 @@
 
     const/4 v1, 0x0
 
-    .line 3692
+    .line 4424
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clear()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
-    .line 3693
+    .line 4425
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3694
-    iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jid_:Lcom/kik/ximodel/XiBareUserJid;
+    .line 4426
+    iput-object v2, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jid_:Lcom/kik/ximodel/XiBareUserJid;
 
-    .line 3699
+    .line 4431
     :goto_0
-    iput-boolean v2, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->isAdmin_:Z
+    iput-boolean v1, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->isAdmin_:Z
 
-    .line 3701
-    iput-boolean v2, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->isSuperAdmin_:Z
+    .line 4433
+    iput-boolean v1, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->isSuperAdmin_:Z
 
-    .line 3703
+    .line 4435
+    iput-boolean v1, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->isInactive_:Z
+
+    .line 4437
+    iput-boolean v1, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->isBot_:Z
+
+    .line 4439
     return-object p0
 
-    .line 3696
+    .line 4428
     :cond_0
-    iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jid_:Lcom/kik/ximodel/XiBareUserJid;
+    iput-object v2, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jid_:Lcom/kik/ximodel/XiBareUserJid;
 
-    .line 3697
-    iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
+    .line 4429
+    iput-object v2, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     goto :goto_0
 .end method
@@ -444,7 +464,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -456,7 +476,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -468,7 +488,7 @@
     .locals 1
 
     .prologue
-    .line 3746
+    .line 4484
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -482,15 +502,47 @@
     .locals 1
 
     .prologue
-    .line 3982
+    .line 4726
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->isAdmin_:Z
 
-    .line 3983
+    .line 4727
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->onChanged()V
 
-    .line 3984
+    .line 4728
+    return-object p0
+.end method
+
+.method public final clearIsBot()Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
+    .locals 1
+
+    .prologue
+    .line 4804
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->isBot_:Z
+
+    .line 4805
+    invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->onChanged()V
+
+    .line 4806
+    return-object p0
+.end method
+
+.method public final clearIsInactive()Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
+    .locals 1
+
+    .prologue
+    .line 4778
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->isInactive_:Z
+
+    .line 4779
+    invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->onChanged()V
+
+    .line 4780
     return-object p0
 .end method
 
@@ -498,15 +550,15 @@
     .locals 1
 
     .prologue
-    .line 4008
+    .line 4752
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->isSuperAdmin_:Z
 
-    .line 4009
+    .line 4753
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->onChanged()V
 
-    .line 4010
+    .line 4754
     return-object p0
 .end method
 
@@ -516,26 +568,26 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 3903
+    .line 4647
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3904
+    .line 4648
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jid_:Lcom/kik/ximodel/XiBareUserJid;
 
-    .line 3905
+    .line 4649
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->onChanged()V
 
-    .line 3911
+    .line 4655
     :goto_0
     return-object p0
 
-    .line 3907
+    .line 4651
     :cond_0
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jid_:Lcom/kik/ximodel/XiBareUserJid;
 
-    .line 3908
+    .line 4652
     iput-object v1, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     goto :goto_0
@@ -545,7 +597,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -557,7 +609,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -569,7 +621,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -581,7 +633,7 @@
     .locals 1
 
     .prologue
-    .line 3750
+    .line 4488
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -595,7 +647,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->clone()Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -607,7 +659,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->clone()Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -619,7 +671,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->clone()Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -631,7 +683,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->clone()Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -643,7 +695,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->clone()Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -655,7 +707,7 @@
     .locals 1
 
     .prologue
-    .line 3737
+    .line 4475
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -674,7 +726,7 @@
     .end annotation
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->clone()Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -686,7 +738,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->getDefaultInstanceForType()Lcom/kik/groups/GroupsCommon$GroupMember;
 
     move-result-object v0
@@ -698,7 +750,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->getDefaultInstanceForType()Lcom/kik/groups/GroupsCommon$GroupMember;
 
     move-result-object v0
@@ -710,7 +762,7 @@
     .locals 1
 
     .prologue
-    .line 3712
+    .line 4448
     invoke-static {}, Lcom/kik/groups/GroupsCommon$GroupMember;->getDefaultInstance()Lcom/kik/groups/GroupsCommon$GroupMember;
 
     move-result-object v0
@@ -722,8 +774,8 @@
     .locals 1
 
     .prologue
-    .line 3708
-    invoke-static {}, Lcom/kik/groups/GroupsCommon;->access$3300()Lcom/google/protobuf/Descriptors$Descriptor;
+    .line 4444
+    invoke-static {}, Lcom/kik/groups/GroupsCommon;->access$3600()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
 
@@ -734,8 +786,28 @@
     .locals 1
 
     .prologue
-    .line 3966
+    .line 4710
     iget-boolean v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->isAdmin_:Z
+
+    return v0
+.end method
+
+.method public final getIsBot()Z
+    .locals 1
+
+    .prologue
+    .line 4788
+    iget-boolean v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->isBot_:Z
+
+    return v0
+.end method
+
+.method public final getIsInactive()Z
+    .locals 1
+
+    .prologue
+    .line 4762
+    iget-boolean v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->isInactive_:Z
 
     return v0
 .end method
@@ -744,7 +816,7 @@
     .locals 1
 
     .prologue
-    .line 3992
+    .line 4736
     iget-boolean v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->isSuperAdmin_:Z
 
     return v0
@@ -754,12 +826,12 @@
     .locals 1
 
     .prologue
-    .line 3829
+    .line 4573
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 3830
+    .line 4574
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jid_:Lcom/kik/ximodel/XiBareUserJid;
 
     if-nez v0, :cond_0
@@ -768,17 +840,17 @@
 
     move-result-object v0
 
-    .line 3832
+    .line 4576
     :goto_0
     return-object v0
 
-    .line 3830
+    .line 4574
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jid_:Lcom/kik/ximodel/XiBareUserJid;
 
     goto :goto_0
 
-    .line 3832
+    .line 4576
     :cond_1
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
@@ -795,10 +867,10 @@
     .locals 1
 
     .prologue
-    .line 3922
+    .line 4666
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->onChanged()V
 
-    .line 3923
+    .line 4667
     invoke-direct {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->getJidFieldBuilder()Lcom/google/protobuf/SingleFieldBuilderV3;
 
     move-result-object v0
@@ -816,12 +888,12 @@
     .locals 1
 
     .prologue
-    .line 3933
+    .line 4677
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-eqz v0, :cond_0
 
-    .line 3934
+    .line 4678
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/SingleFieldBuilderV3;->getMessageOrBuilder()Lcom/google/protobuf/MessageOrBuilder;
@@ -830,17 +902,17 @@
 
     check-cast v0, Lcom/kik/ximodel/XiBareUserJidOrBuilder;
 
-    .line 3937
+    .line 4681
     :goto_0
     return-object v0
 
-    .line 3936
+    .line 4680
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jid_:Lcom/kik/ximodel/XiBareUserJid;
 
     if-nez v0, :cond_1
 
-    .line 3937
+    .line 4681
     invoke-static {}, Lcom/kik/ximodel/XiBareUserJid;->getDefaultInstance()Lcom/kik/ximodel/XiBareUserJid;
 
     move-result-object v0
@@ -857,7 +929,7 @@
     .locals 1
 
     .prologue
-    .line 3819
+    .line 4563
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_0
@@ -882,8 +954,8 @@
     .locals 3
 
     .prologue
-    .line 3671
-    invoke-static {}, Lcom/kik/groups/GroupsCommon;->access$3400()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
+    .line 4403
+    invoke-static {}, Lcom/kik/groups/GroupsCommon;->access$3700()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
 
@@ -891,12 +963,12 @@
 
     const-class v2, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
-    .line 3672
+    .line 4404
     invoke-virtual {v0, v1, v2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;->ensureFieldAccessorsInitialized(Ljava/lang/Class;Ljava/lang/Class;)Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
 
-    .line 3671
+    .line 4403
     return-object v0
 .end method
 
@@ -904,7 +976,7 @@
     .locals 1
 
     .prologue
-    .line 3787
+    .line 4531
     const/4 v0, 0x1
 
     return v0
@@ -919,7 +991,7 @@
     .end annotation
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0, p1, p2}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -931,7 +1003,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -948,7 +1020,7 @@
     .end annotation
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0, p1, p2}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -965,7 +1037,7 @@
     .end annotation
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0, p1, p2}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -977,7 +1049,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -994,7 +1066,7 @@
     .end annotation
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0, p1, p2}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -1011,12 +1083,12 @@
     .end annotation
 
     .prologue
-    .line 3794
+    .line 4538
     const/4 v2, 0x0
 
-    .line 3796
+    .line 4540
     :try_start_0
-    invoke-static {}, Lcom/kik/groups/GroupsCommon$GroupMember;->access$4200()Lcom/google/protobuf/Parser;
+    invoke-static {}, Lcom/kik/groups/GroupsCommon$GroupMember;->access$4700()Lcom/google/protobuf/Parser;
 
     move-result-object v0
 
@@ -1029,23 +1101,23 @@
     .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 3801
+    .line 4545
     if-eqz v0, :cond_0
 
-    .line 3802
+    .line 4546
     invoke-virtual {p0, v0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->mergeFrom(Lcom/kik/groups/GroupsCommon$GroupMember;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
-    .line 3805
+    .line 4549
     :cond_0
     return-object p0
 
-    .line 3797
+    .line 4541
     :catch_0
     move-exception v0
 
     move-object v1, v0
 
-    .line 3798
+    .line 4542
     :try_start_1
     invoke-virtual {v1}, Lcom/google/protobuf/InvalidProtocolBufferException;->getUnfinishedMessage()Lcom/google/protobuf/MessageLite;
 
@@ -1055,7 +1127,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 3799
+    .line 4543
     :try_start_2
     invoke-virtual {v1}, Lcom/google/protobuf/InvalidProtocolBufferException;->unwrapIOException()Ljava/io/IOException;
 
@@ -1065,7 +1137,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 3801
+    .line 4545
     :catchall_0
     move-exception v1
 
@@ -1078,13 +1150,14 @@
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 3802
+    .line 4546
     invoke-virtual {p0, v1}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->mergeFrom(Lcom/kik/groups/GroupsCommon$GroupMember;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
+    .line 4548
     :cond_1
     throw v0
 
-    .line 3801
+    .line 4545
     :catchall_1
     move-exception v0
 
@@ -1097,23 +1170,23 @@
     .locals 1
 
     .prologue
-    .line 3763
+    .line 4501
     instance-of v0, p1, Lcom/kik/groups/GroupsCommon$GroupMember;
 
     if-eqz v0, :cond_0
 
-    .line 3764
+    .line 4502
     check-cast p1, Lcom/kik/groups/GroupsCommon$GroupMember;
 
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->mergeFrom(Lcom/kik/groups/GroupsCommon$GroupMember;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object p0
 
-    .line 3767
+    .line 4505
     :goto_0
     return-object p0
 
-    .line 3766
+    .line 4504
     :cond_0
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/AbstractMessage$Builder;
 
@@ -1124,18 +1197,18 @@
     .locals 1
 
     .prologue
-    .line 3772
+    .line 4510
     invoke-static {}, Lcom/kik/groups/GroupsCommon$GroupMember;->getDefaultInstance()Lcom/kik/groups/GroupsCommon$GroupMember;
 
     move-result-object v0
 
     if-ne p1, v0, :cond_0
 
-    .line 3783
+    .line 4527
     :goto_0
     return-object p0
 
-    .line 3773
+    .line 4511
     :cond_0
     invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupMember;->hasJid()Z
 
@@ -1143,14 +1216,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 3774
+    .line 4512
     invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupMember;->getJid()Lcom/kik/ximodel/XiBareUserJid;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->mergeJid(Lcom/kik/ximodel/XiBareUserJid;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
-    .line 3776
+    .line 4514
     :cond_1
     invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupMember;->getIsAdmin()Z
 
@@ -1158,14 +1231,14 @@
 
     if-eqz v0, :cond_2
 
-    .line 3777
+    .line 4515
     invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupMember;->getIsAdmin()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->setIsAdmin(Z)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
-    .line 3779
+    .line 4517
     :cond_2
     invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupMember;->getIsSuperAdmin()Z
 
@@ -1173,15 +1246,45 @@
 
     if-eqz v0, :cond_3
 
-    .line 3780
+    .line 4518
     invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupMember;->getIsSuperAdmin()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->setIsSuperAdmin(Z)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
-    .line 3782
+    .line 4520
     :cond_3
+    invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupMember;->getIsInactive()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    .line 4521
+    invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupMember;->getIsInactive()Z
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->setIsInactive(Z)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
+
+    .line 4523
+    :cond_4
+    invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupMember;->getIsBot()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    .line 4524
+    invoke-virtual {p1}, Lcom/kik/groups/GroupsCommon$GroupMember;->getIsBot()Z
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->setIsBot(Z)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
+
+    .line 4526
+    :cond_5
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->onChanged()V
 
     goto :goto_0
@@ -1191,20 +1294,20 @@
     .locals 1
 
     .prologue
-    .line 3881
+    .line 4625
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 3882
+    .line 4626
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jid_:Lcom/kik/ximodel/XiBareUserJid;
 
     if-eqz v0, :cond_0
 
-    .line 3883
+    .line 4627
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jid_:Lcom/kik/ximodel/XiBareUserJid;
 
-    .line 3884
+    .line 4628
     invoke-static {v0}, Lcom/kik/ximodel/XiBareUserJid;->newBuilder(Lcom/kik/ximodel/XiBareUserJid;)Lcom/kik/ximodel/XiBareUserJid$Builder;
 
     move-result-object v0
@@ -1219,21 +1322,21 @@
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jid_:Lcom/kik/ximodel/XiBareUserJid;
 
-    .line 3888
+    .line 4632
     :goto_0
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->onChanged()V
 
-    .line 3893
+    .line 4637
     :goto_1
     return-object p0
 
-    .line 3886
+    .line 4630
     :cond_0
     iput-object p1, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jid_:Lcom/kik/ximodel/XiBareUserJid;
 
     goto :goto_0
 
-    .line 3890
+    .line 4634
     :cond_1
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
@@ -1246,7 +1349,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -1258,7 +1361,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -1270,7 +1373,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -1282,7 +1385,7 @@
     .locals 0
 
     .prologue
-    .line 4019
+    .line 4815
     return-object p0
 .end method
 
@@ -1290,7 +1393,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0, p1, p2}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -1302,7 +1405,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0, p1, p2}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -1314,7 +1417,7 @@
     .locals 1
 
     .prologue
-    .line 3742
+    .line 4480
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -1328,13 +1431,41 @@
     .locals 0
 
     .prologue
-    .line 3973
+    .line 4717
     iput-boolean p1, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->isAdmin_:Z
 
-    .line 3974
+    .line 4718
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->onChanged()V
 
-    .line 3975
+    .line 4719
+    return-object p0
+.end method
+
+.method public final setIsBot(Z)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
+    .locals 0
+
+    .prologue
+    .line 4795
+    iput-boolean p1, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->isBot_:Z
+
+    .line 4796
+    invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->onChanged()V
+
+    .line 4797
+    return-object p0
+.end method
+
+.method public final setIsInactive(Z)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
+    .locals 0
+
+    .prologue
+    .line 4769
+    iput-boolean p1, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->isInactive_:Z
+
+    .line 4770
+    invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->onChanged()V
+
+    .line 4771
     return-object p0
 .end method
 
@@ -1342,13 +1473,13 @@
     .locals 0
 
     .prologue
-    .line 3999
+    .line 4743
     iput-boolean p1, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->isSuperAdmin_:Z
 
-    .line 4000
+    .line 4744
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->onChanged()V
 
-    .line 4001
+    .line 4745
     return-object p0
 .end method
 
@@ -1356,26 +1487,26 @@
     .locals 2
 
     .prologue
-    .line 3864
+    .line 4608
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3865
+    .line 4609
     invoke-virtual {p1}, Lcom/kik/ximodel/XiBareUserJid$Builder;->build()Lcom/kik/ximodel/XiBareUserJid;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jid_:Lcom/kik/ximodel/XiBareUserJid;
 
-    .line 3866
+    .line 4610
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->onChanged()V
 
-    .line 3871
+    .line 4615
     :goto_0
     return-object p0
 
-    .line 3868
+    .line 4612
     :cond_0
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
@@ -1392,33 +1523,33 @@
     .locals 1
 
     .prologue
-    .line 3843
+    .line 4587
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 3844
+    .line 4588
     if-nez p1, :cond_0
 
-    .line 3845
+    .line 4589
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 3847
+    .line 4591
     :cond_0
     iput-object p1, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jid_:Lcom/kik/ximodel/XiBareUserJid;
 
-    .line 3848
+    .line 4592
     invoke-virtual {p0}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->onChanged()V
 
-    .line 3853
+    .line 4597
     :goto_0
     return-object p0
 
-    .line 3850
+    .line 4594
     :cond_1
     iget-object v0, p0, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->jidBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
@@ -1431,7 +1562,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0, p1, p2, p3}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -1443,7 +1574,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0, p1, p2, p3}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -1455,7 +1586,7 @@
     .locals 1
 
     .prologue
-    .line 3755
+    .line 4493
     invoke-super {p0, p1, p2, p3}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -1469,7 +1600,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -1481,7 +1612,7 @@
     .locals 1
 
     .prologue
-    .line 3660
+    .line 4392
     invoke-virtual {p0, p1}, Lcom/kik/groups/GroupsCommon$GroupMember$Builder;->setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/kik/groups/GroupsCommon$GroupMember$Builder;
 
     move-result-object v0
@@ -1493,6 +1624,6 @@
     .locals 0
 
     .prologue
-    .line 4014
+    .line 4810
     return-object p0
 .end method

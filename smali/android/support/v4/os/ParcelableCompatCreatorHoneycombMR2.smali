@@ -7,6 +7,10 @@
 
 
 # annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0xd
+.end annotation
+
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T:",
@@ -42,13 +46,13 @@
     .end annotation
 
     .prologue
-    .line 31
+    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
+    .line 38
     iput-object p1, p0, Landroid/support/v4/os/ParcelableCompatCreatorHoneycombMR2;->mCallbacks:Landroid/support/v4/os/ParcelableCompatCreatorCallbacks;
 
-    .line 33
+    .line 39
     return-void
 .end method
 
@@ -65,7 +69,7 @@
     .end annotation
 
     .prologue
-    .line 36
+    .line 42
     iget-object v0, p0, Landroid/support/v4/os/ParcelableCompatCreatorHoneycombMR2;->mCallbacks:Landroid/support/v4/os/ParcelableCompatCreatorCallbacks;
 
     const/4 v1, 0x0
@@ -89,7 +93,7 @@
     .end annotation
 
     .prologue
-    .line 40
+    .line 46
     iget-object v0, p0, Landroid/support/v4/os/ParcelableCompatCreatorHoneycombMR2;->mCallbacks:Landroid/support/v4/os/ParcelableCompatCreatorCallbacks;
 
     invoke-interface {v0, p1, p2}, Landroid/support/v4/os/ParcelableCompatCreatorCallbacks;->createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
@@ -108,7 +112,7 @@
     .end annotation
 
     .prologue
-    .line 44
+    .line 50
     iget-object v0, p0, Landroid/support/v4/os/ParcelableCompatCreatorHoneycombMR2;->mCallbacks:Landroid/support/v4/os/ParcelableCompatCreatorCallbacks;
 
     invoke-interface {v0, p1}, Landroid/support/v4/os/ParcelableCompatCreatorCallbacks;->newArray(I)[Ljava/lang/Object;

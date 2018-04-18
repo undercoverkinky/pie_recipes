@@ -19,7 +19,7 @@
 
 
 # instance fields
-.field public final a:Lcom/crashlytics/android/answers/a;
+.field public final a:Lcom/crashlytics/android/answers/b;
 
 .field public final b:Lcom/crashlytics/android/a/c;
 
@@ -43,9 +43,9 @@
 
     .prologue
     .line 29
-    new-instance v0, Lcom/crashlytics/android/answers/a;
+    new-instance v0, Lcom/crashlytics/android/answers/b;
 
-    invoke-direct {v0}, Lcom/crashlytics/android/answers/a;-><init>()V
+    invoke-direct {v0}, Lcom/crashlytics/android/answers/b;-><init>()V
 
     new-instance v1, Lcom/crashlytics/android/a/c;
 
@@ -55,13 +55,13 @@
 
     invoke-direct {v2}, Lcom/crashlytics/android/core/h;-><init>()V
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/crashlytics/android/a;-><init>(Lcom/crashlytics/android/answers/a;Lcom/crashlytics/android/a/c;Lcom/crashlytics/android/core/h;)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/crashlytics/android/a;-><init>(Lcom/crashlytics/android/answers/b;Lcom/crashlytics/android/a/c;Lcom/crashlytics/android/core/h;)V
 
     .line 30
     return-void
 .end method
 
-.method private constructor <init>(Lcom/crashlytics/android/answers/a;Lcom/crashlytics/android/a/c;Lcom/crashlytics/android/core/h;)V
+.method private constructor <init>(Lcom/crashlytics/android/answers/b;Lcom/crashlytics/android/a/c;Lcom/crashlytics/android/core/h;)V
     .locals 2
 
     .prologue
@@ -69,7 +69,7 @@
     invoke-direct {p0}, Lio/fabric/sdk/android/h;-><init>()V
 
     .line 33
-    iput-object p1, p0, Lcom/crashlytics/android/a;->a:Lcom/crashlytics/android/answers/a;
+    iput-object p1, p0, Lcom/crashlytics/android/a;->a:Lcom/crashlytics/android/answers/b;
 
     .line 34
     iput-object p2, p0, Lcom/crashlytics/android/a;->b:Lcom/crashlytics/android/a/c;
@@ -216,7 +216,7 @@
 
     .prologue
     .line 166
-    const-string v0, "2.6.6.167"
+    const-string v0, "2.7.1.19"
 
     return-object v0
 .end method

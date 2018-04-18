@@ -22,27 +22,16 @@
 
 
 # direct methods
-.method private constructor <init>(Landroid/support/v4/media/session/MediaSessionCompat$Callback;)V
-    .locals 1
-
-    .prologue
-    .line 750
-    iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi23;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi21;-><init>(Landroid/support/v4/media/session/MediaSessionCompat$Callback;Landroid/support/v4/media/session/MediaSessionCompat$1;)V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Landroid/support/v4/media/session/MediaSessionCompat$Callback;Landroid/support/v4/media/session/MediaSessionCompat$1;)V
+.method constructor <init>(Landroid/support/v4/media/session/MediaSessionCompat$Callback;)V
     .locals 0
 
     .prologue
-    .line 750
-    invoke-direct {p0, p1}, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi23;-><init>(Landroid/support/v4/media/session/MediaSessionCompat$Callback;)V
+    .line 1156
+    iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi23;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
+    invoke-direct {p0, p1}, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi21;-><init>(Landroid/support/v4/media/session/MediaSessionCompat$Callback;)V
+
+    .line 1157
     return-void
 .end method
 
@@ -52,11 +41,11 @@
     .locals 1
 
     .prologue
-    .line 754
+    .line 1161
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Callback$StubApi23;->this$0:Landroid/support/v4/media/session/MediaSessionCompat$Callback;
 
     invoke-virtual {v0, p1, p2}, Landroid/support/v4/media/session/MediaSessionCompat$Callback;->onPlayFromUri(Landroid/net/Uri;Landroid/os/Bundle;)V
 
-    .line 755
+    .line 1162
     return-void
 .end method

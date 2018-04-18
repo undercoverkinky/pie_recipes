@@ -4,23 +4,23 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:I
 
-.field public final b:Ljava/lang/String;
+.field public final b:I
 
-.field public final c:Ljava/lang/String;
+.field public final c:I
 
-.field public final d:Z
+.field public final d:I
 
-.field public final e:Ljava/lang/String;
+.field public final e:I
 
 .field public final f:Z
 
-.field public final g:Ljava/lang/String;
+.field public final g:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)V
+.method public constructor <init>(IIIIIZI)V
     .locals 0
 
     .prologue
@@ -28,25 +28,25 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 37
-    iput-object p1, p0, Lio/fabric/sdk/android/services/settings/o;->a:Ljava/lang/String;
+    iput p1, p0, Lio/fabric/sdk/android/services/settings/o;->a:I
 
     .line 38
-    iput-object p2, p0, Lio/fabric/sdk/android/services/settings/o;->b:Ljava/lang/String;
+    iput p2, p0, Lio/fabric/sdk/android/services/settings/o;->b:I
 
     .line 39
-    iput-object p3, p0, Lio/fabric/sdk/android/services/settings/o;->c:Ljava/lang/String;
+    iput p3, p0, Lio/fabric/sdk/android/services/settings/o;->c:I
 
     .line 40
-    iput-boolean p4, p0, Lio/fabric/sdk/android/services/settings/o;->d:Z
+    iput p4, p0, Lio/fabric/sdk/android/services/settings/o;->d:I
 
     .line 41
-    iput-object p5, p0, Lio/fabric/sdk/android/services/settings/o;->e:Ljava/lang/String;
+    iput p5, p0, Lio/fabric/sdk/android/services/settings/o;->e:I
 
     .line 42
     iput-boolean p6, p0, Lio/fabric/sdk/android/services/settings/o;->f:Z
 
     .line 43
-    iput-object p7, p0, Lio/fabric/sdk/android/services/settings/o;->g:Ljava/lang/String;
+    iput p7, p0, Lio/fabric/sdk/android/services/settings/o;->g:I
 
     .line 44
     return-void

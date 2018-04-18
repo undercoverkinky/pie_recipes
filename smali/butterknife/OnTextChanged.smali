@@ -9,6 +9,7 @@
 # annotations
 .annotation runtime Lbutterknife/internal/ListenerClass;
     callbacks = Lbutterknife/OnTextChanged$Callback;
+    remover = "removeTextChangedListener"
     setter = "addTextChangedListener"
     targetType = "android.widget.TextView"
     type = "android.text.TextWatcher"

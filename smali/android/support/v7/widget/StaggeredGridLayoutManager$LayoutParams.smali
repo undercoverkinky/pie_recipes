@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field e:Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;
+.field a:Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;
 
-.field f:Z
+.field b:Z
 
 
 # direct methods
@@ -25,10 +25,10 @@
     .locals 0
 
     .prologue
-    .line 2280
+    .line 2419
     invoke-direct {p0, p1, p2}, Landroid/support/v7/widget/RecyclerView$LayoutParams;-><init>(II)V
 
-    .line 2281
+    .line 2420
     return-void
 .end method
 
@@ -36,10 +36,10 @@
     .locals 0
 
     .prologue
-    .line 2276
+    .line 2415
     invoke-direct {p0, p1, p2}, Landroid/support/v7/widget/RecyclerView$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 2277
+    .line 2416
     return-void
 .end method
 
@@ -47,10 +47,10 @@
     .locals 0
 
     .prologue
-    .line 2288
+    .line 2427
     invoke-direct {p0, p1}, Landroid/support/v7/widget/RecyclerView$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 2289
+    .line 2428
     return-void
 .end method
 
@@ -58,48 +58,35 @@
     .locals 0
 
     .prologue
-    .line 2284
+    .line 2423
     invoke-direct {p0, p1}, Landroid/support/v7/widget/RecyclerView$LayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
 
-    .line 2285
+    .line 2424
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final d()I
     .locals 1
 
     .prologue
-    .line 2304
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Landroid/support/v7/widget/StaggeredGridLayoutManager$LayoutParams;->f:Z
-
-    .line 2305
-    return-void
-.end method
-
-.method public final b()I
-    .locals 1
-
-    .prologue
-    .line 2324
-    iget-object v0, p0, Landroid/support/v7/widget/StaggeredGridLayoutManager$LayoutParams;->e:Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;
+    .line 2463
+    iget-object v0, p0, Landroid/support/v7/widget/StaggeredGridLayoutManager$LayoutParams;->a:Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;
 
     if-nez v0, :cond_0
 
-    .line 2325
+    .line 2464
     const/4 v0, -0x1
 
-    .line 2327
+    .line 2466
     :goto_0
     return v0
 
     :cond_0
-    iget-object v0, p0, Landroid/support/v7/widget/StaggeredGridLayoutManager$LayoutParams;->e:Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;
+    iget-object v0, p0, Landroid/support/v7/widget/StaggeredGridLayoutManager$LayoutParams;->a:Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;
 
-    iget v0, v0, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->d:I
+    iget v0, v0, Landroid/support/v7/widget/StaggeredGridLayoutManager$Span;->e:I
 
     goto :goto_0
 .end method

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/crashlytics/android/answers/r;
+    value = Lcom/crashlytics/android/answers/y;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

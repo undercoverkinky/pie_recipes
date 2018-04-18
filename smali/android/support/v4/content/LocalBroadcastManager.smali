@@ -430,10 +430,12 @@
     .line 203
     iget-object v1, p0, Landroid/support/v4/content/LocalBroadcastManager;->mAppContext:Landroid/content/Context;
 
+    .line 204
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
+    .line 203
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->resolveTypeIfNeeded(Landroid/content/ContentResolver;)Ljava/lang/String;
@@ -455,7 +457,7 @@
 
     move-result-object v6
 
-    .line 209
+    .line 210
     invoke-virtual/range {p1 .. p1}, Landroid/content/Intent;->getFlags()I
 
     move-result v1
@@ -595,7 +597,7 @@
 
     goto :goto_1
 
-    .line 209
+    .line 210
     :cond_3
     const/4 v1, 0x0
 
@@ -625,6 +627,7 @@
 
     invoke-direct {v7, v14}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 235
     invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v1

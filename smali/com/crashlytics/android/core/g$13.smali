@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Lcom/crashlytics/android/core/g$d;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/crashlytics/android/core/g;->a(JLjava/lang/String;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/crashlytics/android/core/g;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,36 +16,38 @@
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/concurrent/Callable",
-        "<",
-        "Ljava/lang/Void;",
-        ">;"
-    }
-.end annotation
-
 
 # instance fields
-.field final synthetic a:J
+.field final synthetic a:Ljava/lang/String;
 
 .field final synthetic b:Ljava/lang/String;
 
-.field final synthetic c:Lcom/crashlytics/android/core/g;
+.field final synthetic c:Ljava/lang/String;
+
+.field final synthetic d:Ljava/lang/String;
+
+.field final synthetic e:I
+
+.field final synthetic f:Lcom/crashlytics/android/core/g;
 
 
 # direct methods
-.method constructor <init>(Lcom/crashlytics/android/core/g;JLjava/lang/String;)V
+.method constructor <init>(Lcom/crashlytics/android/core/g;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 0
 
     .prologue
-    .line 328
-    iput-object p1, p0, Lcom/crashlytics/android/core/g$13;->c:Lcom/crashlytics/android/core/g;
+    .line 1107
+    iput-object p1, p0, Lcom/crashlytics/android/core/g$13;->f:Lcom/crashlytics/android/core/g;
 
-    iput-wide p2, p0, Lcom/crashlytics/android/core/g$13;->a:J
+    iput-object p2, p0, Lcom/crashlytics/android/core/g$13;->a:Ljava/lang/String;
 
-    iput-object p4, p0, Lcom/crashlytics/android/core/g$13;->b:Ljava/lang/String;
+    iput-object p3, p0, Lcom/crashlytics/android/core/g$13;->b:Ljava/lang/String;
+
+    iput-object p4, p0, Lcom/crashlytics/android/core/g$13;->c:Ljava/lang/String;
+
+    iput-object p5, p0, Lcom/crashlytics/android/core/g$13;->d:Ljava/lang/String;
+
+    iput p6, p0, Lcom/crashlytics/android/core/g$13;->e:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -54,8 +56,8 @@
 
 
 # virtual methods
-.method public final synthetic call()Ljava/lang/Object;
-    .locals 4
+.method public final a(Ljava/io/FileOutputStream;)V
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -63,33 +65,27 @@
     .end annotation
 
     .prologue
-    .line 328
-    .line 1331
-    iget-object v0, p0, Lcom/crashlytics/android/core/g$13;->c:Lcom/crashlytics/android/core/g;
+    .line 1110
+    new-instance v0, Lorg/json/JSONObject;
 
-    invoke-virtual {v0}, Lcom/crashlytics/android/core/g;->c()Z
+    new-instance v1, Lcom/crashlytics/android/core/CrashlyticsController$20$1;
 
-    move-result v0
+    invoke-direct {v1, p0}, Lcom/crashlytics/android/core/CrashlyticsController$20$1;-><init>(Lcom/crashlytics/android/core/g$13;)V
 
-    if-nez v0, :cond_0
+    invoke-direct {v0, v1}, Lorg/json/JSONObject;-><init>(Ljava/util/Map;)V
 
-    .line 1332
-    iget-object v0, p0, Lcom/crashlytics/android/core/g$13;->c:Lcom/crashlytics/android/core/g;
-
-    invoke-static {v0}, Lcom/crashlytics/android/core/g;->c(Lcom/crashlytics/android/core/g;)Lcom/crashlytics/android/core/u;
+    .line 1121
+    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-wide v2, p0, Lcom/crashlytics/android/core/g$13;->a:J
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
 
-    iget-object v1, p0, Lcom/crashlytics/android/core/g$13;->b:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-virtual {v0, v2, v3, v1}, Lcom/crashlytics/android/core/u;->a(JLjava/lang/String;)V
+    .line 1110
+    invoke-virtual {p1, v0}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 1334
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 328
-    return-object v0
+    .line 1122
+    return-void
 .end method

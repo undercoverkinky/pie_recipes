@@ -47,15 +47,15 @@
     .end annotation
 
     .prologue
-    .line 501
+    .line 523
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 502
+    .line 524
     iput-object p1, p0, Landroid/support/v4/content/ModernAsyncTask$AsyncTaskResult;->mTask:Landroid/support/v4/content/ModernAsyncTask;
 
-    .line 503
+    .line 525
     iput-object p2, p0, Landroid/support/v4/content/ModernAsyncTask$AsyncTaskResult;->mData:[Ljava/lang/Object;
 
-    .line 504
+    .line 526
     return-void
 .end method

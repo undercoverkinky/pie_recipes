@@ -1,123 +1,62 @@
 .class public final Lcom/google/android/gms/common/internal/safeparcel/zzc;
-.super Ljava/lang/Object;
+.super Ljava/lang/RuntimeException;
 
 
 # direct methods
-.method public static zza(Landroid/content/Intent;Ljava/lang/String;Landroid/os/Parcelable$Creator;)Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T::",
-            "Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable;",
-            ">(",
-            "Landroid/content/Intent;",
-            "Ljava/lang/String;",
-            "Landroid/os/Parcelable$Creator",
-            "<TT;>;)TT;"
-        }
-    .end annotation
+.method public constructor <init>(Ljava/lang/String;Landroid/os/Parcel;)V
+    .locals 4
 
-    invoke-virtual {p0, p1}, Landroid/content/Intent;->getByteArrayExtra(Ljava/lang/String;)[B
+    invoke-virtual {p2}, Landroid/os/Parcel;->dataPosition()I
 
-    move-result-object v0
+    move-result v0
 
-    if-nez v0, :cond_0
+    invoke-virtual {p2}, Landroid/os/Parcel;->dataSize()I
 
-    const/4 v0, 0x0
+    move-result v1
 
-    :goto_0
-    return-object v0
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    :cond_0
-    invoke-static {v0, p2}, Lcom/google/android/gms/common/internal/safeparcel/zzc;->zza([BLandroid/os/Parcelable$Creator;)Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable;
+    move-result-object v2
 
-    move-result-object v0
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
 
-    goto :goto_0
-.end method
+    move-result v2
 
-.method public static zza([BLandroid/os/Parcelable$Creator;)Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T::",
-            "Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable;",
-            ">([B",
-            "Landroid/os/Parcelable$Creator",
-            "<TT;>;)TT;"
-        }
-    .end annotation
+    add-int/lit8 v2, v2, 0x29
 
-    const/4 v2, 0x0
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Lcom/google/android/gms/common/internal/zzaa;->zzz(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v2
 
-    array-length v0, p0
+    const-string v3, " Parcel: pos="
 
-    invoke-virtual {v1, p0, v2, v0}, Landroid/os/Parcel;->unmarshall([BII)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Landroid/os/Parcel;->setDataPosition(I)V
+    move-result-object v2
 
-    invoke-interface {p1, v1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable;
+    const-string v2, " size="
 
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    return-object v0
-.end method
-
-.method public static zza(Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable;Landroid/content/Intent;Ljava/lang/String;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T::",
-            "Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable;",
-            ">(TT;",
-            "Landroid/content/Intent;",
-            "Ljava/lang/String;",
-            ")V"
-        }
-    .end annotation
-
-    invoke-static {p0}, Lcom/google/android/gms/common/internal/safeparcel/zzc;->zza(Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable;)[B
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {p1, p2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[B)Landroid/content/Intent;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     return-void
-.end method
-
-.method public static zza(Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable;)[B
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T::",
-            "Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable;",
-            ">(TT;)[B"
-        }
-    .end annotation
-
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-interface {p0, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable;->writeToParcel(Landroid/os/Parcel;I)V
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->marshall()[B
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    return-object v1
 .end method

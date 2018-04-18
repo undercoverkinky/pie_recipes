@@ -36,7 +36,7 @@
     .locals 0
 
     .prologue
-    .line 162
+    .line 179
     iput-object p1, p0, Lkik/android/chat/fragment/ViewPictureFragment$1;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,25 +46,25 @@
 
 
 # virtual methods
-.method public final bridge synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 2
 
     .prologue
-    .line 162
-    .line 1166
+    .line 179
+    .line 1183
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$1;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment;->a(Lkik/android/chat/fragment/ViewPictureFragment;Z)Z
 
-    .line 1167
+    .line 1184
     iget-object v0, p0, Lkik/android/chat/fragment/ViewPictureFragment$1;->a:Lkik/android/chat/fragment/ViewPictureFragment;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
+    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/ViewPictureFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 162
+    .line 179
     return-void
 .end method

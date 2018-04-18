@@ -17,23 +17,28 @@
 # instance fields
 .field private mMessenger:Landroid/os/Messenger;
 
+.field private mRootHints:Landroid/os/Bundle;
+
 
 # direct methods
-.method public constructor <init>(Landroid/os/IBinder;)V
+.method public constructor <init>(Landroid/os/IBinder;Landroid/os/Bundle;)V
     .locals 1
 
     .prologue
-    .line 1592
+    .line 1945
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1593
+    .line 1946
     new-instance v0, Landroid/os/Messenger;
 
     invoke-direct {v0, p1}, Landroid/os/Messenger;-><init>(Landroid/os/IBinder;)V
 
     iput-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->mMessenger:Landroid/os/Messenger;
 
-    .line 1594
+    .line 1947
+    iput-object p2, p0, Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->mRootHints:Landroid/os/Bundle;
+
+    .line 1948
     return-void
 .end method
 
@@ -46,37 +51,37 @@
     .end annotation
 
     .prologue
-    .line 1641
+    .line 2019
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 1642
+    .line 2020
     iput p1, v0, Landroid/os/Message;->what:I
 
-    .line 1643
+    .line 2021
     const/4 v1, 0x1
 
     iput v1, v0, Landroid/os/Message;->arg1:I
 
-    .line 1644
+    .line 2022
     invoke-virtual {v0, p2}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 1645
+    .line 2023
     iput-object p3, v0, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
 
-    .line 1646
+    .line 2024
     iget-object v1, p0, Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->mMessenger:Landroid/os/Messenger;
 
     invoke-virtual {v1, v0}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
 
-    .line 1647
+    .line 2025
     return-void
 .end method
 
 
 # virtual methods
-.method addSubscription(Ljava/lang/String;Landroid/os/Bundle;Landroid/os/Messenger;)V
+.method addSubscription(Ljava/lang/String;Landroid/os/IBinder;Landroid/os/Bundle;Landroid/os/Messenger;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -85,31 +90,36 @@
     .end annotation
 
     .prologue
-    .line 1610
+    .line 1965
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1611
+    .line 1966
     const-string v1, "data_media_item_id"
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1612
+    .line 1967
+    const-string v1, "data_callback_token"
+
+    invoke-static {v0, v1, p2}, Landroid/support/v4/app/BundleCompat;->putBinder(Landroid/os/Bundle;Ljava/lang/String;Landroid/os/IBinder;)V
+
+    .line 1968
     const-string v1, "data_options"
 
-    invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-virtual {v0, v1, p3}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 1613
+    .line 1969
     const/4 v1, 0x3
 
-    invoke-direct {p0, v1, v0, p3}, Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->sendRequest(ILandroid/os/Bundle;Landroid/os/Messenger;)V
+    invoke-direct {p0, v1, v0, p4}, Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->sendRequest(ILandroid/os/Bundle;Landroid/os/Messenger;)V
 
-    .line 1614
+    .line 1970
     return-void
 .end method
 
-.method connect(Landroid/content/Context;Landroid/os/Bundle;Landroid/os/Messenger;)V
+.method connect(Landroid/content/Context;Landroid/os/Messenger;)V
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -118,12 +128,12 @@
     .end annotation
 
     .prologue
-    .line 1598
+    .line 1952
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1599
+    .line 1953
     const-string v1, "data_package_name"
 
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -132,17 +142,19 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1600
+    .line 1954
     const-string v1, "data_root_hints"
 
-    invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+    iget-object v2, p0, Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->mRootHints:Landroid/os/Bundle;
 
-    .line 1601
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    .line 1955
     const/4 v1, 0x1
 
-    invoke-direct {p0, v1, v0, p3}, Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->sendRequest(ILandroid/os/Bundle;Landroid/os/Messenger;)V
+    invoke-direct {p0, v1, v0, p2}, Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->sendRequest(ILandroid/os/Bundle;Landroid/os/Messenger;)V
 
-    .line 1602
+    .line 1956
     return-void
 .end method
 
@@ -155,18 +167,51 @@
     .end annotation
 
     .prologue
-    .line 1605
+    .line 1959
     const/4 v0, 0x2
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v0, v1, p1}, Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->sendRequest(ILandroid/os/Bundle;Landroid/os/Messenger;)V
 
-    .line 1606
+    .line 1960
     return-void
 .end method
 
-.method getMediaItem(Ljava/lang/String;Landroid/support/v4/os/ResultReceiver;)V
+.method getMediaItem(Ljava/lang/String;Landroid/support/v4/os/ResultReceiver;Landroid/os/Messenger;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 1983
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 1984
+    const-string v1, "data_media_item_id"
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1985
+    const-string v1, "data_result_receiver"
+
+    invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    .line 1986
+    const/4 v1, 0x5
+
+    invoke-direct {p0, v1, v0, p3}, Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->sendRequest(ILandroid/os/Bundle;Landroid/os/Messenger;)V
+
+    .line 1987
+    return-void
+.end method
+
+.method registerCallbackMessenger(Landroid/os/Messenger;)V
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -175,33 +220,28 @@
     .end annotation
 
     .prologue
-    .line 1625
+    .line 1990
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1626
-    const-string v1, "data_media_item_id"
+    .line 1991
+    const-string v1, "data_root_hints"
 
-    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v2, p0, Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->mRootHints:Landroid/os/Bundle;
 
-    .line 1627
-    const-string v1, "data_result_receiver"
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+    .line 1992
+    const/4 v1, 0x6
 
-    .line 1628
-    const/4 v1, 0x5
+    invoke-direct {p0, v1, v0, p1}, Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->sendRequest(ILandroid/os/Bundle;Landroid/os/Messenger;)V
 
-    const/4 v2, 0x0
-
-    invoke-direct {p0, v1, v0, v2}, Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->sendRequest(ILandroid/os/Bundle;Landroid/os/Messenger;)V
-
-    .line 1629
+    .line 1993
     return-void
 .end method
 
-.method registerCallbackMessenger(Landroid/os/Messenger;)V
+.method removeSubscription(Ljava/lang/String;Landroid/os/IBinder;Landroid/os/Messenger;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -210,47 +250,103 @@
     .end annotation
 
     .prologue
-    .line 1632
-    const/4 v0, 0x6
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0, v0, v1, p1}, Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->sendRequest(ILandroid/os/Bundle;Landroid/os/Messenger;)V
-
-    .line 1633
-    return-void
-.end method
-
-.method removeSubscription(Ljava/lang/String;Landroid/os/Bundle;Landroid/os/Messenger;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    .prologue
-    .line 1618
+    .line 1975
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1619
+    .line 1976
     const-string v1, "data_media_item_id"
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1620
-    const-string v1, "data_options"
+    .line 1977
+    const-string v1, "data_callback_token"
 
-    invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-static {v0, v1, p2}, Landroid/support/v4/app/BundleCompat;->putBinder(Landroid/os/Bundle;Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 1621
+    .line 1978
     const/4 v1, 0x4
 
     invoke-direct {p0, v1, v0, p3}, Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->sendRequest(ILandroid/os/Bundle;Landroid/os/Messenger;)V
 
-    .line 1622
+    .line 1979
+    return-void
+.end method
+
+.method search(Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/os/ResultReceiver;Landroid/os/Messenger;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 2001
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 2002
+    const-string v1, "data_search_query"
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2003
+    const-string v1, "data_search_extras"
+
+    invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    .line 2004
+    const-string v1, "data_result_receiver"
+
+    invoke-virtual {v0, v1, p3}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    .line 2005
+    const/16 v1, 0x8
+
+    invoke-direct {p0, v1, v0, p4}, Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->sendRequest(ILandroid/os/Bundle;Landroid/os/Messenger;)V
+
+    .line 2006
+    return-void
+.end method
+
+.method sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/os/ResultReceiver;Landroid/os/Messenger;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .prologue
+    .line 2010
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 2011
+    const-string v1, "data_custom_action"
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2012
+    const-string v1, "data_custom_action_extras"
+
+    invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    .line 2013
+    const-string v1, "data_result_receiver"
+
+    invoke-virtual {v0, v1, p3}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    .line 2014
+    const/16 v1, 0x9
+
+    invoke-direct {p0, v1, v0, p4}, Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->sendRequest(ILandroid/os/Bundle;Landroid/os/Messenger;)V
+
+    .line 2015
     return-void
 .end method
 
@@ -263,13 +359,13 @@
     .end annotation
 
     .prologue
-    .line 1636
+    .line 1996
     const/4 v0, 0x7
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v0, v1, p1}, Landroid/support/v4/media/MediaBrowserCompat$ServiceBinderWrapper;->sendRequest(ILandroid/os/Bundle;Landroid/os/Messenger;)V
 
-    .line 1637
+    .line 1997
     return-void
 .end method

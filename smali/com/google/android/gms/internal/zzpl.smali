@@ -1,78 +1,135 @@
-.class public final Lcom/google/android/gms/internal/zzpl;
+.class public interface abstract Lcom/google/android/gms/internal/zzpl;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Landroid/os/IInterface;
 
-# static fields
-.field public static final API:Lcom/google/android/gms/common/api/Api;
-    .annotation system Ldalvik/annotation/Signature;
+
+# virtual methods
+.method public abstract destroy()V
+    .annotation system Ldalvik/annotation/Throws;
         value = {
-            "Lcom/google/android/gms/common/api/Api",
-            "<",
-            "Lcom/google/android/gms/common/api/Api$ApiOptions$NoOptions;",
-            ">;"
+            Landroid/os/RemoteException;
         }
     .end annotation
-.end field
+.end method
 
-.field private static final zzaaA:Lcom/google/android/gms/common/api/Api$zza;
-    .annotation system Ldalvik/annotation/Signature;
+.method public abstract getBody()Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Throws;
         value = {
-            "Lcom/google/android/gms/common/api/Api$zza",
-            "<",
-            "Lcom/google/android/gms/internal/zzpp;",
-            "Lcom/google/android/gms/common/api/Api$ApiOptions$NoOptions;",
-            ">;"
+            Landroid/os/RemoteException;
         }
     .end annotation
-.end field
+.end method
 
-.field public static final zzaaz:Lcom/google/android/gms/common/api/Api$zzf;
-    .annotation system Ldalvik/annotation/Signature;
+.method public abstract getCallToAction()Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Throws;
         value = {
-            "Lcom/google/android/gms/common/api/Api$zzf",
-            "<",
-            "Lcom/google/android/gms/internal/zzpp;",
-            ">;"
+            Landroid/os/RemoteException;
         }
     .end annotation
-.end field
+.end method
 
-.field public static final zzasx:Lcom/google/android/gms/internal/zzpm;
+.method public abstract getExtras()Landroid/os/Bundle;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
 
+.method public abstract getHeadline()Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public abstract getImages()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
 
-    new-instance v0, Lcom/google/android/gms/common/api/Api$zzf;
+.method public abstract getPrice()Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
 
-    invoke-direct {v0}, Lcom/google/android/gms/common/api/Api$zzf;-><init>()V
+.method public abstract getStarRating()D
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
 
-    sput-object v0, Lcom/google/android/gms/internal/zzpl;->zzaaz:Lcom/google/android/gms/common/api/Api$zzf;
+.method public abstract getStore()Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
 
-    new-instance v0, Lcom/google/android/gms/internal/zzpl$1;
+.method public abstract getVideoController()Lcom/google/android/gms/internal/zzky;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
 
-    invoke-direct {v0}, Lcom/google/android/gms/internal/zzpl$1;-><init>()V
+.method public abstract performClick(Landroid/os/Bundle;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
 
-    sput-object v0, Lcom/google/android/gms/internal/zzpl;->zzaaA:Lcom/google/android/gms/common/api/Api$zza;
+.method public abstract recordImpression(Landroid/os/Bundle;)Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
 
-    new-instance v0, Lcom/google/android/gms/common/api/Api;
+.method public abstract reportTouchEvent(Landroid/os/Bundle;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
 
-    const-string v1, "Common.API"
+.method public abstract zzji()Lcom/google/android/gms/internal/zzpc;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
 
-    sget-object v2, Lcom/google/android/gms/internal/zzpl;->zzaaA:Lcom/google/android/gms/common/api/Api$zza;
+.method public abstract zzjj()Lcom/google/android/gms/dynamic/IObjectWrapper;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
 
-    sget-object v3, Lcom/google/android/gms/internal/zzpl;->zzaaz:Lcom/google/android/gms/common/api/Api$zzf;
-
-    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/common/api/Api;-><init>(Ljava/lang/String;Lcom/google/android/gms/common/api/Api$zza;Lcom/google/android/gms/common/api/Api$zzf;)V
-
-    sput-object v0, Lcom/google/android/gms/internal/zzpl;->API:Lcom/google/android/gms/common/api/Api;
-
-    new-instance v0, Lcom/google/android/gms/internal/zzpn;
-
-    invoke-direct {v0}, Lcom/google/android/gms/internal/zzpn;-><init>()V
-
-    sput-object v0, Lcom/google/android/gms/internal/zzpl;->zzasx:Lcom/google/android/gms/internal/zzpm;
-
-    return-void
+.method public abstract zzjn()Lcom/google/android/gms/internal/zzoy;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
 .end method

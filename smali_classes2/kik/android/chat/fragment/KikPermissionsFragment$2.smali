@@ -43,7 +43,7 @@
     .line 110
     iget-object v0, p0, Lkik/android/chat/fragment/KikPermissionsFragment$2;->a:Lkik/android/chat/fragment/KikPermissionsFragment;
 
-    invoke-virtual {v0}, Lkik/android/chat/fragment/KikPermissionsFragment;->D()V
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikPermissionsFragment;->finish()V
 
     .line 111
     return-void

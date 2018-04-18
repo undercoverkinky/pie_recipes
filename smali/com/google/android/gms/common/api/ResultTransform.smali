@@ -38,9 +38,9 @@
         }
     .end annotation
 
-    new-instance v0, Lcom/google/android/gms/internal/zzoz;
+    new-instance v0, Lcom/google/android/gms/common/api/internal/zzcu;
 
-    invoke-direct {v0, p1}, Lcom/google/android/gms/internal/zzoz;-><init>(Lcom/google/android/gms/common/api/Status;)V
+    invoke-direct {v0, p1}, Lcom/google/android/gms/common/api/internal/zzcu;-><init>(Lcom/google/android/gms/common/api/Status;)V
 
     return-object v0
 .end method

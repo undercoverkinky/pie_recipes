@@ -19,35 +19,33 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
     .prologue
-    const/4 v2, 0x0
-
-    .line 47
+    .line 57
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 48
+    .line 58
     const/16 v1, 0xb
 
     if-lt v0, v1, :cond_0
 
-    .line 49
+    .line 59
     new-instance v0, Landroid/support/design/widget/ViewGroupUtils$ViewGroupUtilsImplHoneycomb;
 
-    invoke-direct {v0, v2}, Landroid/support/design/widget/ViewGroupUtils$ViewGroupUtilsImplHoneycomb;-><init>(B)V
+    invoke-direct {v0}, Landroid/support/design/widget/ViewGroupUtils$ViewGroupUtilsImplHoneycomb;-><init>()V
 
     sput-object v0, Landroid/support/design/widget/ViewGroupUtils;->a:Landroid/support/design/widget/ViewGroupUtils$ViewGroupUtilsImpl;
 
-    .line 53
+    .line 63
     :goto_0
     return-void
 
-    .line 51
+    .line 61
     :cond_0
     new-instance v0, Landroid/support/design/widget/ViewGroupUtils$ViewGroupUtilsImplBase;
 
-    invoke-direct {v0, v2}, Landroid/support/design/widget/ViewGroupUtils$ViewGroupUtilsImplBase;-><init>(B)V
+    invoke-direct {v0}, Landroid/support/design/widget/ViewGroupUtils$ViewGroupUtilsImplBase;-><init>()V
 
     sput-object v0, Landroid/support/design/widget/ViewGroupUtils;->a:Landroid/support/design/widget/ViewGroupUtils$ViewGroupUtilsImpl;
 
@@ -60,7 +58,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 76
+    .line 86
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v0
@@ -71,11 +69,11 @@
 
     invoke-virtual {p2, v2, v2, v0, v1}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 1065
+    .line 1075
     sget-object v0, Landroid/support/design/widget/ViewGroupUtils;->a:Landroid/support/design/widget/ViewGroupUtils$ViewGroupUtilsImpl;
 
     invoke-interface {v0, p0, p1, p2}, Landroid/support/design/widget/ViewGroupUtils$ViewGroupUtilsImpl;->a(Landroid/view/ViewGroup;Landroid/view/View;Landroid/graphics/Rect;)V
 
-    .line 78
+    .line 88
     return-void
 .end method

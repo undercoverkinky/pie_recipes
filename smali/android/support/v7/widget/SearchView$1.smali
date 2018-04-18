@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 173
+    .line 187
     iput-object p1, p0, Landroid/support/v7/widget/SearchView$1;->a:Landroid/support/v7/widget/SearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,9 +40,10 @@
     .locals 3
 
     .prologue
-    .line 175
+    .line 190
     iget-object v0, p0, Landroid/support/v7/widget/SearchView$1;->a:Landroid/support/v7/widget/SearchView;
 
+    .line 191
     invoke-virtual {v0}, Landroid/support/v7/widget/SearchView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -55,17 +56,17 @@
 
     check-cast v0, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 178
+    .line 193
     if-eqz v0, :cond_0
 
-    .line 179
-    sget-object v1, Landroid/support/v7/widget/SearchView;->a:Landroid/support/v7/widget/SearchView$AutoCompleteTextViewReflector;
+    .line 194
+    sget-object v1, Landroid/support/v7/widget/SearchView;->i:Landroid/support/v7/widget/SearchView$AutoCompleteTextViewReflector;
 
     iget-object v2, p0, Landroid/support/v7/widget/SearchView$1;->a:Landroid/support/v7/widget/SearchView;
 
     invoke-virtual {v1, v0, v2}, Landroid/support/v7/widget/SearchView$AutoCompleteTextViewReflector;->a(Landroid/view/inputmethod/InputMethodManager;Landroid/view/View;)V
 
-    .line 181
+    .line 196
     :cond_0
     return-void
 .end method

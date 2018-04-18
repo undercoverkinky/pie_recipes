@@ -5,32 +5,8 @@
 .implements Landroid/os/IInterface;
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/google/android/gms/internal/zzqj$zza;
-    }
-.end annotation
-
-
 # virtual methods
-.method public abstract zza(Lcom/google/android/gms/dynamic/zzd;Ljava/lang/String;Z)I
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-.end method
-
-.method public abstract zza(Lcom/google/android/gms/dynamic/zzd;Ljava/lang/String;I)Lcom/google/android/gms/dynamic/zzd;
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-.end method
-
-.method public abstract zzb(Lcom/google/android/gms/dynamic/zzd;Ljava/lang/String;)I
+.method public abstract zza(Lcom/google/android/gms/internal/zzkf;Lcom/google/android/gms/dynamic/IObjectWrapper;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

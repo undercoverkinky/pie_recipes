@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 189
+    .line 202
     iput-object p1, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$2;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,31 +42,31 @@
     .prologue
     const/high16 v4, 0x447a0000    # 1000.0f
 
-    .line 193
+    .line 206
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$2;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/VideoTrimmingFragment;->_videoView:Landroid/widget/VideoView;
 
     if-nez v0, :cond_0
 
-    .line 234
+    .line 247
     :goto_0
     return-void
 
-    .line 197
+    .line 210
     :cond_0
     packed-switch p2, :pswitch_data_0
 
     goto :goto_0
 
-    .line 200
+    .line 213
     :pswitch_0
     :try_start_0
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$2;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/VideoTrimmingFragment;->f(Lkik/android/chat/fragment/VideoTrimmingFragment;)V
 
-    .line 201
+    .line 214
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$2;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/VideoTrimmingFragment;->_videoView:Landroid/widget/VideoView;
@@ -87,7 +87,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 208
+    .line 221
     :goto_1
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$2;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
@@ -101,7 +101,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 209
+    .line 222
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$2;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
     iget-object v1, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$2;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
@@ -120,7 +120,7 @@
 
     goto :goto_0
 
-    .line 204
+    .line 217
     :catch_0
     move-exception v0
 
@@ -128,7 +128,7 @@
 
     goto :goto_1
 
-    .line 213
+    .line 226
     :pswitch_1
     :try_start_1
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$2;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
@@ -137,7 +137,7 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 220
+    .line 233
     :goto_2
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$2;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
@@ -151,7 +151,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 221
+    .line 234
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$2;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
 
     iget-object v1, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$2;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
@@ -170,7 +170,7 @@
 
     goto :goto_0
 
-    .line 216
+    .line 229
     :catch_1
     move-exception v0
 
@@ -178,7 +178,7 @@
 
     goto :goto_2
 
-    .line 226
+    .line 239
     :pswitch_2
     :try_start_2
     iget-object v0, p0, Lkik/android/chat/fragment/VideoTrimmingFragment$2;->a:Lkik/android/chat/fragment/VideoTrimmingFragment;
@@ -203,7 +203,7 @@
 
     goto :goto_0
 
-    .line 229
+    .line 242
     :catch_2
     move-exception v0
 
@@ -211,7 +211,7 @@
 
     goto :goto_0
 
-    .line 197
+    .line 210
     nop
 
     :pswitch_data_0

@@ -1,34 +1,43 @@
-.class public interface abstract Lkik/android/chat/view/x;
+.class final synthetic Lkik/android/chat/view/x;
 .super Ljava/lang/Object;
-.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lkik/android/chat/view/x$a;
-    }
-.end annotation
+# instance fields
+.field private final a:Lkik/android/chat/view/InlineBotListView;
+
+
+# direct methods
+.method private constructor <init>(Lkik/android/chat/view/InlineBotListView;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lkik/android/chat/view/x;->a:Lkik/android/chat/view/InlineBotListView;
+
+    return-void
+.end method
+
+.method public static a(Lkik/android/chat/view/InlineBotListView;)Ljava/lang/Runnable;
+    .locals 1
+
+    new-instance v0, Lkik/android/chat/view/x;
+
+    invoke-direct {v0, p0}, Lkik/android/chat/view/x;-><init>(Lkik/android/chat/view/InlineBotListView;)V
+
+    return-object v0
+.end method
 
 
 # virtual methods
-.method public abstract a()V
-.end method
+.method public final run()V
+    .locals 1
 
-.method public abstract a(I)V
-.end method
+    iget-object v0, p0, Lkik/android/chat/view/x;->a:Lkik/android/chat/view/InlineBotListView;
 
-.method public abstract a(Ljava/lang/String;)V
-.end method
+    invoke-virtual {v0}, Landroid/widget/ListView;->setSelectionAfterHeaderView()V
 
-.method public abstract a(Ljava/lang/String;Ljava/lang/String;)V
-.end method
-
-.method public abstract a(Lkik/android/chat/view/x$a;)V
-.end method
-
-.method public abstract a(Lkik/android/util/KeyboardManipulator;)V
-.end method
-
-.method public abstract b()V
+    return-void
 .end method

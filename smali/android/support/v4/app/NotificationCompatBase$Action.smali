@@ -25,16 +25,19 @@
     .locals 0
 
     .prologue
-    .line 29
+    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
+    .line 49
     return-void
 .end method
 
 
 # virtual methods
 .method public abstract getActionIntent()Landroid/app/PendingIntent;
+.end method
+
+.method public abstract getAllowGeneratedReplies()Z
 .end method
 
 .method public abstract getExtras()Landroid/os/Bundle;

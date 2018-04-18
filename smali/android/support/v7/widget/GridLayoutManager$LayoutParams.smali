@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field private e:I
+.field a:I
 
-.field private f:I
+.field b:I
 
 
 # direct methods
@@ -25,20 +25,20 @@
     .locals 1
 
     .prologue
-    .line 1091
+    .line 1158
     invoke-direct {p0, p1, p2}, Landroid/support/v7/widget/RecyclerView$LayoutParams;-><init>(II)V
 
-    .line 1082
+    .line 1149
     const/4 v0, -0x1
 
-    iput v0, p0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->e:I
+    iput v0, p0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->a:I
 
-    .line 1084
+    .line 1151
     const/4 v0, 0x0
 
-    iput v0, p0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->f:I
+    iput v0, p0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->b:I
 
-    .line 1092
+    .line 1159
     return-void
 .end method
 
@@ -46,20 +46,20 @@
     .locals 1
 
     .prologue
-    .line 1087
+    .line 1154
     invoke-direct {p0, p1, p2}, Landroid/support/v7/widget/RecyclerView$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 1082
+    .line 1149
     const/4 v0, -0x1
 
-    iput v0, p0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->e:I
+    iput v0, p0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->a:I
 
-    .line 1084
+    .line 1151
     const/4 v0, 0x0
 
-    iput v0, p0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->f:I
+    iput v0, p0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->b:I
 
-    .line 1088
+    .line 1155
     return-void
 .end method
 
@@ -67,20 +67,20 @@
     .locals 1
 
     .prologue
-    .line 1099
+    .line 1166
     invoke-direct {p0, p1}, Landroid/support/v7/widget/RecyclerView$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1082
+    .line 1149
     const/4 v0, -0x1
 
-    iput v0, p0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->e:I
+    iput v0, p0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->a:I
 
-    .line 1084
+    .line 1151
     const/4 v0, 0x0
 
-    iput v0, p0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->f:I
+    iput v0, p0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->b:I
 
-    .line 1100
+    .line 1167
     return-void
 .end method
 
@@ -88,81 +88,19 @@
     .locals 1
 
     .prologue
-    .line 1095
+    .line 1162
     invoke-direct {p0, p1}, Landroid/support/v7/widget/RecyclerView$LayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
 
-    .line 1082
+    .line 1149
     const/4 v0, -0x1
 
-    iput v0, p0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->e:I
+    iput v0, p0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->a:I
 
-    .line 1084
+    .line 1151
     const/4 v0, 0x0
 
-    iput v0, p0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->f:I
+    iput v0, p0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->b:I
 
-    .line 1096
+    .line 1163
     return-void
-.end method
-
-.method static synthetic a(Landroid/support/v7/widget/GridLayoutManager$LayoutParams;)I
-    .locals 1
-
-    .prologue
-    .line 1075
-    iget v0, p0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->e:I
-
-    return v0
-.end method
-
-.method static synthetic a(Landroid/support/v7/widget/GridLayoutManager$LayoutParams;I)I
-    .locals 0
-
-    .prologue
-    .line 1075
-    iput p1, p0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->f:I
-
-    return p1
-.end method
-
-.method static synthetic b(Landroid/support/v7/widget/GridLayoutManager$LayoutParams;)I
-    .locals 1
-
-    .prologue
-    .line 1075
-    iget v0, p0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->f:I
-
-    return v0
-.end method
-
-.method static synthetic b(Landroid/support/v7/widget/GridLayoutManager$LayoutParams;I)I
-    .locals 0
-
-    .prologue
-    .line 1075
-    iput p1, p0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->e:I
-
-    return p1
-.end method
-
-
-# virtual methods
-.method public final a()I
-    .locals 1
-
-    .prologue
-    .line 1120
-    iget v0, p0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->e:I
-
-    return v0
-.end method
-
-.method public final b()I
-    .locals 1
-
-    .prologue
-    .line 1130
-    iget v0, p0, Landroid/support/v7/widget/GridLayoutManager$LayoutParams;->f:I
-
-    return v0
 .end method

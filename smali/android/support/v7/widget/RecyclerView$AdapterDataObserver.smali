@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 9492
+    .line 10880
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,15 +31,23 @@
     .locals 0
 
     .prologue
-    .line 9495
+    .line 10883
     return-void
 .end method
 
-.method public a(II)V
+.method public a(IILjava/lang/Object;)V
     .locals 0
 
     .prologue
-    .line 9505
+    .line 10893
+    return-void
+.end method
+
+.method public a_(II)V
+    .locals 0
+
+    .prologue
+    .line 10897
     return-void
 .end method
 
@@ -47,7 +55,7 @@
     .locals 0
 
     .prologue
-    .line 9509
+    .line 10901
     return-void
 .end method
 
@@ -55,14 +63,6 @@
     .locals 0
 
     .prologue
-    .line 9513
-    return-void
-.end method
-
-.method public d(II)V
-    .locals 0
-
-    .prologue
-    .line 9517
+    .line 10905
     return-void
 .end method

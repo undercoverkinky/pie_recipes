@@ -15,9 +15,7 @@
     .end annotation
 .end field
 
-.field protected a:Lkik/android/f/d;
-
-.field protected b:Lcom/kik/cache/aa;
+.field protected a:Lcom/kik/cache/KikVolleyImageLoader;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 
@@ -26,32 +24,37 @@
     .end annotation
 .end field
 
-.field protected c:Lkik/core/interfaces/x;
+.field protected b:Lkik/core/interfaces/v;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
-.field protected d:Lkik/core/interfaces/m;
+.field protected c:Lkik/core/interfaces/l;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
-.field protected e:Lkik/core/interfaces/ad;
+.field protected d:Lkik/core/interfaces/ad;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
-.field protected f:Lcom/kik/android/Mixpanel;
+.field protected e:Lcom/kik/android/Mixpanel;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
-.field protected g:Lkik/core/interfaces/b;
+.field protected f:Lkik/core/interfaces/b;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
-.field protected h:Lkik/android/videochat/c;
+.field protected g:Lkik/android/videochat/c;
+    .annotation runtime Ljavax/inject/Inject;
+    .end annotation
+.end field
+
+.field protected h:Lcom/kik/metrics/c/d;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
@@ -62,9 +65,9 @@
 
 .field private k:Landroid/content/Context;
 
-.field private l:Lkik/core/interfaces/af;
+.field private l:Lkik/core/interfaces/ag;
 
-.field private m:Lkik/core/interfaces/j;
+.field private m:Lkik/core/interfaces/IConversation;
 
 .field private n:J
 
@@ -87,7 +90,7 @@
 
 .field private final s:Landroid/graphics/Paint;
 
-.field private t:Lkik/android/f/b;
+.field private t:Lkik/android/h/b;
 
 .field private u:Lcom/kik/events/e;
     .annotation system Ldalvik/annotation/Signature;
@@ -154,99 +157,99 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 237
+    .line 255
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 125
+    .line 133
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lkik/android/KikNotificationHandler;->j:Ljava/lang/Object;
 
-    .line 129
+    .line 137
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lkik/android/KikNotificationHandler;->n:J
 
-    .line 130
+    .line 138
     iput v2, p0, Lkik/android/KikNotificationHandler;->o:I
 
-    .line 131
+    .line 139
     iput v2, p0, Lkik/android/KikNotificationHandler;->p:I
 
-    .line 132
+    .line 140
     new-instance v0, Lcom/kik/events/d;
 
     invoke-direct {v0}, Lcom/kik/events/d;-><init>()V
 
     iput-object v0, p0, Lkik/android/KikNotificationHandler;->q:Lcom/kik/events/d;
 
-    .line 133
+    .line 141
     const/4 v0, 0x0
 
     iput-object v0, p0, Lkik/android/KikNotificationHandler;->r:Lcom/kik/events/Promise;
 
-    .line 134
+    .line 142
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lkik/android/KikNotificationHandler;->s:Landroid/graphics/Paint;
 
-    .line 146
+    .line 156
     new-instance v0, Lkik/android/KikNotificationHandler$1;
 
     invoke-direct {v0, p0}, Lkik/android/KikNotificationHandler$1;-><init>(Lkik/android/KikNotificationHandler;)V
 
     iput-object v0, p0, Lkik/android/KikNotificationHandler;->u:Lcom/kik/events/e;
 
-    .line 160
+    .line 171
     new-instance v0, Lkik/android/KikNotificationHandler$2;
 
     invoke-direct {v0, p0}, Lkik/android/KikNotificationHandler$2;-><init>(Lkik/android/KikNotificationHandler;)V
 
     iput-object v0, p0, Lkik/android/KikNotificationHandler;->v:Lcom/kik/events/e;
 
-    .line 169
+    .line 181
     new-instance v0, Lkik/android/KikNotificationHandler$3;
 
     invoke-direct {v0, p0}, Lkik/android/KikNotificationHandler$3;-><init>(Lkik/android/KikNotificationHandler;)V
 
     iput-object v0, p0, Lkik/android/KikNotificationHandler;->w:Landroid/os/Handler;
 
-    .line 184
+    .line 197
     new-instance v0, Lkik/android/KikNotificationHandler$4;
 
     invoke-direct {v0, p0}, Lkik/android/KikNotificationHandler$4;-><init>(Lkik/android/KikNotificationHandler;)V
 
     iput-object v0, p0, Lkik/android/KikNotificationHandler;->x:Lcom/kik/events/e;
 
-    .line 194
+    .line 208
     new-instance v0, Lkik/android/KikNotificationHandler$5;
 
     invoke-direct {v0, p0}, Lkik/android/KikNotificationHandler$5;-><init>(Lkik/android/KikNotificationHandler;)V
 
     iput-object v0, p0, Lkik/android/KikNotificationHandler;->y:Lcom/kik/events/e;
 
-    .line 204
+    .line 219
     new-instance v0, Lkik/android/KikNotificationHandler$6;
 
     invoke-direct {v0, p0}, Lkik/android/KikNotificationHandler$6;-><init>(Lkik/android/KikNotificationHandler;)V
 
     iput-object v0, p0, Lkik/android/KikNotificationHandler;->z:Lcom/kik/events/e;
 
-    .line 226
+    .line 243
     new-instance v0, Lkik/android/KikNotificationHandler$7;
 
     invoke-direct {v0, p0}, Lkik/android/KikNotificationHandler$7;-><init>(Lkik/android/KikNotificationHandler;)V
 
     iput-object v0, p0, Lkik/android/KikNotificationHandler;->A:Lcom/kik/events/e;
 
-    .line 238
+    .line 256
     iput-object p1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
-    .line 240
+    .line 258
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
     new-instance v1, Landroid/content/IntentFilter;
@@ -257,7 +260,7 @@
 
     invoke-virtual {v0, p0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 241
+    .line 259
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
     new-instance v1, Landroid/content/IntentFilter;
@@ -268,7 +271,7 @@
 
     invoke-virtual {v0, p0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 242
+    .line 260
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
     new-instance v1, Landroid/content/IntentFilter;
@@ -279,7 +282,7 @@
 
     invoke-virtual {v0, p0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 243
+    .line 261
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
     new-instance v1, Landroid/content/IntentFilter;
@@ -290,7 +293,18 @@
 
     invoke-virtual {v0, p0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 244
+    .line 262
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
+
+    new-instance v1, Landroid/content/IntentFilter;
+
+    const-string v2, "kik.android.notificationHandler.ACTION_MESSAGE_OPEN_VIDEO"
+
+    invoke-direct {v1, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    .line 263
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
     new-instance v1, Landroid/content/IntentFilter;
@@ -301,7 +315,7 @@
 
     invoke-virtual {v0, p0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 246
+    .line 265
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->s:Landroid/graphics/Paint;
 
     const-string v1, "#87BF2B"
@@ -312,7 +326,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 248
+    .line 267
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/support/v4/app/NotificationManagerCompat;->from(Landroid/content/Context;)Landroid/support/v4/app/NotificationManagerCompat;
@@ -321,18 +335,18 @@
 
     iput-object v0, p0, Lkik/android/KikNotificationHandler;->i:Landroid/support/v4/app/NotificationManagerCompat;
 
-    .line 249
+    .line 268
     return-void
 .end method
 
 .method private a(Ljava/util/List;Ljava/lang/String;)Landroid/app/PendingIntent;
-    .locals 4
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List",
             "<",
-            "Lkik/core/datatypes/o;",
+            "Lkik/core/datatypes/l;",
             ">;",
             "Ljava/lang/String;",
             ")",
@@ -341,7 +355,9 @@
     .end annotation
 
     .prologue
-    .line 985
+    const/4 v2, 0x0
+
+    .line 999
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
@@ -356,90 +372,98 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    move-result-object v1
+    move-result-object v4
 
-    .line 986
+    .line 1000
     if-eqz p1, :cond_1
 
-    .line 11088
-    new-instance v2, Ljava/util/ArrayList;
+    .line 1001
+    const-string v0, "kik.android.notificationHandler.ACTION_MESSAGE_OPEN_VIDEO"
 
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+    invoke-virtual {v4, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 988
+    .line 1002
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    new-array v5, v0, [Ljava/lang/String;
+
+    .line 1004
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object v3
+    move-result-object v6
+
+    move v1, v2
 
     :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/datatypes/o;
+    check-cast v0, Lkik/core/datatypes/l;
 
-    .line 989
-    invoke-virtual {v0}, Lkik/core/datatypes/o;->b()Ljava/lang/String;
+    .line 1005
+    add-int/lit8 v3, v1, 0x1
+
+    invoke-virtual {v0}, Lkik/core/datatypes/l;->k()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    aput-object v0, v5, v1
 
+    move v1, v3
+
+    .line 1006
     goto :goto_0
 
-    .line 991
+    .line 1007
     :cond_0
     const-string v0, "video_chat_notification_id"
 
-    invoke-virtual {v1, v0, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v4, v0, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 992
+    .line 1008
     const-string v0, "video_chat_push_jids"
 
-    invoke-interface {v2}, Ljava/util/List;->toArray()[Ljava/lang/Object;
+    invoke-virtual {v4, v0, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
 
-    move-result-object v2
-
-    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
-
-    .line 994
+    .line 1010
     :cond_1
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
-    const/4 v2, 0x0
+    const/high16 v1, 0x10000000
 
-    const/high16 v3, 0x10000000
-
-    invoke-static {v0, v2, v1, v3}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    invoke-static {v0, v2, v4, v1}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v0
 
-    .line 998
+    .line 1014
     return-object v0
 .end method
 
-.method private a(Lkik/core/datatypes/o;ZLjava/lang/String;)Landroid/app/PendingIntent;
+.method private a(Lkik/core/datatypes/l;ZLjava/lang/String;)Landroid/app/PendingIntent;
     .locals 6
 
     .prologue
-    .line 1025
-    invoke-virtual {p1}, Lkik/core/datatypes/o;->hashCode()I
+    .line 1036
+    invoke-virtual {p1}, Lkik/core/datatypes/l;->hashCode()I
 
     move-result v0
 
-    .line 1026
+    .line 1037
     if-eqz p2, :cond_0
 
-    .line 1029
+    .line 1040
     mul-int/lit8 v0, v0, 0x11
 
-    .line 1038
+    .line 1049
     :cond_0
     new-instance v1, Landroid/content/Intent;
 
@@ -459,7 +483,7 @@
 
     const-string v2, "conversation_jid"
 
-    invoke-virtual {p1}, Lkik/core/datatypes/o;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/l;->k()Ljava/lang/String;
 
     move-result-object v3
 
@@ -467,15 +491,20 @@
 
     move-result-object v1
 
-    .line 1039
+    .line 1050
     if-eqz p3, :cond_1
 
-    .line 1040
+    .line 1051
+    const-string v2, "kik.android.notificationHandler.ACTION_MESSAGE_OPEN_VIDEO"
+
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 1052
     const-string v2, "video_chat_notification_id"
 
     invoke-virtual {v1, v2, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1041
+    .line 1053
     const-string v2, "video_chat_push_jids"
 
     const/4 v3, 0x1
@@ -484,7 +513,7 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {p1}, Lkik/core/datatypes/o;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/l;->k()Ljava/lang/String;
 
     move-result-object v5
 
@@ -492,7 +521,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1043
+    .line 1055
     :cond_1
     iget-object v2, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
@@ -502,7 +531,7 @@
 
     move-result-object v0
 
-    .line 1047
+    .line 1059
     return-object v0
 .end method
 
@@ -510,7 +539,7 @@
     .locals 1
 
     .prologue
-    .line 884
+    .line 889
     const/16 v0, 0x15
 
     invoke-static {v0}, Lcom/kik/sdkutils/c;->a(I)Z
@@ -519,14 +548,72 @@
 
     if-eqz v0, :cond_0
 
-    .line 885
-    invoke-static {p0}, Lcom/kik/util/bl;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    .line 890
+    invoke-static {p0}, Lcom/kik/util/cr;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
-    .line 887
+    .line 892
     :cond_0
     return-object p0
+.end method
+
+.method private a(Lkik/core/datatypes/l;I)Landroid/graphics/Bitmap;
+    .locals 2
+
+    .prologue
+    .line 875
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->a:Lcom/kik/cache/KikVolleyImageLoader;
+
+    invoke-direct {p0, p1}, Lkik/android/KikNotificationHandler;->c(Lkik/core/datatypes/l;)Lcom/kik/cache/KikImageRequest;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lkik/android/util/f;->a(Lcom/kik/cache/KikVolleyImageLoader;Lcom/kik/cache/KikImageRequest;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    .line 876
+    if-nez v0, :cond_0
+
+    .line 877
+    invoke-direct {p0, p1, p2}, Lkik/android/KikNotificationHandler;->b(Lkik/core/datatypes/l;I)V
+
+    .line 878
+    invoke-direct {p0, p1}, Lkik/android/KikNotificationHandler;->b(Lkik/core/datatypes/l;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    .line 880
+    :cond_0
+    invoke-direct {p0, v0}, Lkik/android/KikNotificationHandler;->b(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    .line 881
+    invoke-virtual {p1}, Lkik/core/datatypes/l;->B()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    check-cast p1, Lkik/core/datatypes/p;
+
+    invoke-static {p1}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/p;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    .line 882
+    :cond_1
+    invoke-static {v0}, Lkik/android/KikNotificationHandler;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    .line 884
+    :cond_2
+    return-object v0
 .end method
 
 .method private a(Lkik/core/datatypes/f;Z)Landroid/support/v4/app/NotificationCompat$Builder;
@@ -539,44 +626,44 @@
 
     const/4 v6, 0x0
 
-    .line 431
+    .line 448
     new-instance v0, Landroid/support/v4/app/NotificationCompat$Builder;
 
     iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Landroid/support/v4/app/NotificationCompat$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 433
+    .line 450
     if-nez p1, :cond_0
 
-    .line 455
+    .line 472
     :goto_0
     return-object v0
 
-    .line 436
+    .line 453
     :cond_0
-    invoke-direct {p0, p1}, Lkik/android/KikNotificationHandler;->c(Lkik/core/datatypes/f;)Lkik/core/datatypes/o;
+    invoke-direct {p0, p1}, Lkik/android/KikNotificationHandler;->c(Lkik/core/datatypes/f;)Lkik/core/datatypes/l;
 
     move-result-object v1
 
-    .line 4233
-    invoke-direct {p0, v1, v6, v7}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/o;ZI)Ljava/lang/String;
+    .line 4229
+    invoke-direct {p0, v1, v6, v7}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/l;ZI)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 437
+    .line 454
     invoke-virtual {v0, v2}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/support/v4/app/NotificationCompat$Builder;
 
     move-result-object v2
 
     iget-object v3, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
-    .line 438
+    .line 455
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f10007b
+    const v4, 0x7f0e007f
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -586,16 +673,16 @@
 
     move-result-object v2
 
-    const v3, 0x7f0201aa
+    const v3, 0x7f020202
 
-    .line 439
+    .line 456
     invoke-virtual {v2, v3}, Landroid/support/v4/app/NotificationCompat$Builder;->setSmallIcon(I)Landroid/support/v4/app/NotificationCompat$Builder;
 
     move-result-object v2
 
     const-string v3, "group_key_kik_messages"
 
-    .line 440
+    .line 457
     invoke-virtual {v2, v3}, Landroid/support/v4/app/NotificationCompat$Builder;->setGroup(Ljava/lang/String;)Landroid/support/v4/app/NotificationCompat$Builder;
 
     move-result-object v2
@@ -606,39 +693,39 @@
 
     aput-wide v4, v3, v6
 
-    .line 442
+    .line 459
     invoke-virtual {v2, v3}, Landroid/support/v4/app/NotificationCompat$Builder;->setVibrate([J)Landroid/support/v4/app/NotificationCompat$Builder;
 
     move-result-object v2
 
-    .line 443
+    .line 460
     invoke-virtual {v2, v6}, Landroid/support/v4/app/NotificationCompat$Builder;->setDefaults(I)Landroid/support/v4/app/NotificationCompat$Builder;
 
     move-result-object v2
 
-    .line 444
+    .line 461
     invoke-direct {p0}, Lkik/android/KikNotificationHandler;->d()Landroid/app/PendingIntent;
 
     move-result-object v3
 
     invoke-virtual {v2, v3}, Landroid/support/v4/app/NotificationCompat$Builder;->setDeleteIntent(Landroid/app/PendingIntent;)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    .line 445
+    .line 462
     if-eqz p2, :cond_1
 
-    .line 447
+    .line 464
     iget-object v2, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
-    const v3, 0x7f0a025f
+    const v3, 0x7f090273
 
     new-array v4, v8, [Ljava/lang/Object;
 
-    .line 5233
-    invoke-direct {p0, v1, v6, v7}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/o;ZI)Ljava/lang/String;
+    .line 5229
+    invoke-direct {p0, v1, v6, v7}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/l;ZI)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 447
+    .line 464
     aput-object v5, v4, v6
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
@@ -649,20 +736,20 @@
 
     move-result-object v2
 
-    .line 5969
+    .line 5983
     new-instance v3, Lkik/android/chat/fragment/KikConversationsFragment$a;
 
     invoke-direct {v3}, Lkik/android/chat/fragment/KikConversationsFragment$a;-><init>()V
 
-    .line 5970
+    .line 5984
     invoke-virtual {v3}, Lkik/android/chat/fragment/KikConversationsFragment$a;->d()Lkik/android/chat/fragment/KikConversationsFragment$a;
 
     move-result-object v3
 
-    .line 5971
+    .line 5985
     iget-object v4, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
-    invoke-static {v3, v4}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    invoke-static {v3, v4}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ae;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v3
 
@@ -674,10 +761,10 @@
 
     move-result-object v3
 
-    .line 5972
+    .line 5986
     iget-object v4, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
-    invoke-virtual {v1}, Lkik/core/datatypes/o;->hashCode()I
+    invoke-virtual {v1}, Lkik/core/datatypes/l;->hashCode()I
 
     move-result v1
 
@@ -689,22 +776,22 @@
 
     move-result-object v1
 
-    .line 448
+    .line 465
     invoke-virtual {v2, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentIntent(Landroid/app/PendingIntent;)Landroid/support/v4/app/NotificationCompat$Builder;
 
     goto :goto_0
 
-    .line 452
+    .line 469
     :cond_1
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->c:Lkik/core/interfaces/x;
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->b:Lkik/core/interfaces/v;
 
-    invoke-virtual {p1}, Lkik/core/datatypes/f;->g()Lkik/core/datatypes/Message;
+    invoke-virtual {p1}, Lkik/core/datatypes/f;->j()Lkik/core/datatypes/Message;
 
     move-result-object v2
 
     iget-object v3, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
-    invoke-static {v1, v2, v3}, Lkik/android/f/c;->a(Lkik/core/interfaces/x;Lkik/core/datatypes/Message;Landroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-static {v1, v2, v3}, Lkik/android/h/c;->a(Lkik/core/interfaces/v;Lkik/core/datatypes/Message;Landroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -712,7 +799,7 @@
 
     move-result-object v1
 
-    .line 453
+    .line 470
     invoke-direct {p0, p1, v6}, Lkik/android/KikNotificationHandler;->b(Lkik/core/datatypes/f;Z)Landroid/app/PendingIntent;
 
     move-result-object v2
@@ -730,19 +817,19 @@
 
     const/4 v4, 0x0
 
-    .line 366
-    invoke-direct {p0, p1}, Lkik/android/KikNotificationHandler;->c(Lkik/core/datatypes/f;)Lkik/core/datatypes/o;
+    .line 383
+    invoke-direct {p0, p1}, Lkik/android/KikNotificationHandler;->c(Lkik/core/datatypes/f;)Lkik/core/datatypes/l;
 
     move-result-object v0
 
-    .line 3233
+    .line 3229
     const/4 v1, -0x1
 
-    invoke-direct {p0, v0, v4, v1}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/o;ZI)Ljava/lang/String;
+    invoke-direct {p0, v0, v4, v1}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/l;ZI)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 368
+    .line 385
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -751,7 +838,7 @@
 
     if-le v1, v2, :cond_0
 
-    .line 369
+    .line 386
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -774,13 +861,13 @@
 
     move-result-object v0
 
-    .line 371
+    .line 388
     :cond_0
     new-instance v1, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v1, v0}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 373
+    .line 390
     const/4 v0, 0x1
 
     new-array v0, v0, [I
@@ -789,7 +876,7 @@
 
     aput v2, v0, v4
 
-    .line 377
+    .line 394
     const/16 v2, 0x15
 
     invoke-static {v2}, Lcom/kik/sdkutils/c;->b(I)Z
@@ -798,7 +885,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 378
+    .line 395
     iget-object v2, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
     const v3, 0x1030065
@@ -807,7 +894,7 @@
 
     move-result-object v0
 
-    .line 384
+    .line 401
     :goto_0
     const v2, -0x777778
 
@@ -815,7 +902,7 @@
 
     move-result v0
 
-    .line 385
+    .line 402
     new-instance v2, Landroid/text/style/ForegroundColorSpan;
 
     invoke-direct {v2, v0}, Landroid/text/style/ForegroundColorSpan;-><init>(I)V
@@ -828,30 +915,30 @@
 
     invoke-virtual {v1, v2, v4, v0, v3}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 386
+    .line 403
     const-string v0, "  "
 
     invoke-virtual {v1, v0}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 387
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->c:Lkik/core/interfaces/x;
+    .line 404
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->b:Lkik/core/interfaces/v;
 
-    invoke-virtual {p1}, Lkik/core/datatypes/f;->g()Lkik/core/datatypes/Message;
+    invoke-virtual {p1}, Lkik/core/datatypes/f;->j()Lkik/core/datatypes/Message;
 
     move-result-object v2
 
     iget-object v3, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
-    invoke-static {v0, v2, v3}, Lkik/android/f/c;->a(Lkik/core/interfaces/x;Lkik/core/datatypes/Message;Landroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-static {v0, v2, v3}, Lkik/android/h/c;->a(Lkik/core/interfaces/v;Lkik/core/datatypes/Message;Landroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
     invoke-virtual {v1, v0}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 388
+    .line 405
     return-object v1
 
-    .line 381
+    .line 398
     :cond_1
     iget-object v2, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
@@ -868,69 +955,400 @@
     .locals 0
 
     .prologue
-    .line 85
+    .line 91
     iput-object p1, p0, Lkik/android/KikNotificationHandler;->r:Lcom/kik/events/Promise;
 
     return-object p1
 .end method
 
-.method private a(Lkik/core/datatypes/o;ZI)Ljava/lang/String;
-    .locals 6
+.method private a(Lkik/core/datatypes/l;ZI)Ljava/lang/String;
+    .locals 2
 
     .prologue
-    .line 1238
+    .line 1234
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->c:Lkik/core/interfaces/x;
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->b:Lkik/core/interfaces/v;
 
-    iget-object v5, p0, Lkik/android/KikNotificationHandler;->g:Lkik/core/interfaces/b;
-
-    move-object v2, p1
-
-    move v3, p2
-
-    move v4, p3
-
-    invoke-static/range {v0 .. v5}, Lkik/android/f/c;->a(Landroid/content/Context;Lkik/core/interfaces/x;Lkik/core/datatypes/o;ZILkik/core/interfaces/b;)Ljava/lang/String;
+    invoke-static {v0, v1, p1, p2, p3}, Lkik/android/h/c;->a(Landroid/content/Context;Lkik/core/interfaces/v;Lkik/core/datatypes/l;ZI)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic a(Lkik/android/KikNotificationHandler;)Lkik/core/interfaces/j;
+.method static synthetic a(Lkik/android/KikNotificationHandler;)Lkik/core/interfaces/IConversation;
     .locals 1
 
     .prologue
-    .line 85
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    .line 91
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
     return-object v0
 .end method
 
 .method private a(ILandroid/app/Notification;)V
-    .locals 1
+    .locals 6
 
     .prologue
-    .line 502
+    const-wide/16 v4, 0x0
+
+    .line 520
     :try_start_0
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->i:Landroid/support/v4/app/NotificationManagerCompat;
 
     invoke-virtual {v0, p1, p2}, Landroid/support/v4/app/NotificationManagerCompat;->notify(ILandroid/app/Notification;)V
+
+    .line 8524
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->d:Lkik/core/interfaces/ad;
+
+    const-string v1, "GcmTickleListenerService.GcmTickleTimeMs"
+
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->v(Ljava/lang/String;)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    .line 8525
+    invoke-static {}, Lkik/core/util/v;->b()J
+
+    move-result-wide v2
+
+    sub-long/2addr v2, v0
+
+    .line 8527
+    cmp-long v4, v0, v4
+
+    if-lez v4, :cond_0
+
+    const-wide/16 v4, 0x2710
+
+    cmp-long v2, v2, v4
+
+    if-lez v2, :cond_0
+
+    .line 8528
+    new-instance v2, Ljava/lang/Throwable;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Uh Oh! Time between GCM tickle and notification shown: "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " MS"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v2}, Lkik/android/util/aw;->a(Ljava/lang/Throwable;)V
+
+    .line 8529
+    iget-object v2, p0, Lkik/android/KikNotificationHandler;->h:Lcom/kik/metrics/c/d;
+
+    invoke-static {}, Lcom/kik/metrics/b/am;->b()Lcom/kik/metrics/b/am$a;
+
+    move-result-object v3
+
+    new-instance v4, Lcom/kik/metrics/b/o$b;
+
+    .line 8530
+    invoke-static {v0, v1}, Lkik/core/util/v;->e(J)D
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v0
+
+    invoke-direct {v4, v0}, Lcom/kik/metrics/b/o$b;-><init>(Ljava/lang/Double;)V
+
+    invoke-virtual {v3, v4}, Lcom/kik/metrics/b/am$a;->a(Lcom/kik/metrics/b/o$b;)Lcom/kik/metrics/b/am$a;
+
+    move-result-object v0
+
+    .line 8531
+    invoke-virtual {v0}, Lcom/kik/metrics/b/am$a;->a()Lcom/kik/metrics/b/am;
+
+    move-result-object v0
+
+    .line 8529
+    invoke-virtual {v2, v0}, Lcom/kik/metrics/c/d;->a(Lcom/kik/metrics/b/t;)V
+
+    .line 8533
+    :cond_0
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->d:Lkik/core/interfaces/ad;
+
+    const-string v1, "GcmTickleListenerService.GcmTickleTimeMs"
+
+    const-wide/16 v2, 0x0
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Lkik/core/interfaces/ad;->a(Ljava/lang/String;Ljava/lang/Long;)Z
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 508
+    .line 527
     :goto_0
     return-void
 
-    .line 506
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
+    goto :goto_0
+.end method
+
+.method private a(Landroid/content/Intent;Z)V
+    .locals 8
+
+    .prologue
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    .line 1320
+    if-nez p1, :cond_0
+
+    .line 1366
+    :goto_0
+    return-void
+
+    .line 1324
+    :cond_0
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->e:Lcom/kik/android/Mixpanel;
+
+    const-string v3, "notification_tapped"
+
+    invoke-virtual {v0, v3}, Lcom/kik/android/Mixpanel;->b(Ljava/lang/String;)Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    const-string v3, "platform_specific_properties"
+
+    new-instance v4, Lorg/json/JSONObject;
+
+    invoke-direct {v4}, Lorg/json/JSONObject;-><init>()V
+
+    .line 1325
+    invoke-virtual {v0, v3, v4}, Lcom/kik/android/Mixpanel$d;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    .line 1326
+    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->g()Lcom/kik/android/Mixpanel$d;
+
+    move-result-object v0
+
+    .line 1327
+    invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
+
+    .line 1330
+    if-eqz p2, :cond_6
+
+    .line 1331
+    const-string v0, "video_chat_notification_id"
+
+    invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 1332
+    const-string v0, "video_chat_push_jids"
+
+    invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringArrayExtra(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v4
+
+    .line 1333
+    if-eqz v4, :cond_6
+
+    .line 1334
+    array-length v0, v4
+
+    .line 1335
+    if-ne v0, v2, :cond_1
+
+    .line 1339
+    iget-object v5, p0, Lkik/android/KikNotificationHandler;->g:Lkik/android/videochat/c;
+
+    invoke-interface {v5}, Lkik/android/videochat/c;->g()Lcom/rounds/kik/analytics/IReporterProxy;
+
+    move-result-object v5
+
+    iget-object v6, p0, Lkik/android/KikNotificationHandler;->b:Lkik/core/interfaces/v;
+
+    aget-object v4, v4, v1
+
+    invoke-interface {v6, v4, v2}, Lkik/core/interfaces/v;->a(Ljava/lang/String;Z)Lkik/core/datatypes/l;
+
+    move-result-object v4
+
+    const-string v6, "video_call"
+
+    .line 1340
+    invoke-direct {p0}, Lkik/android/KikNotificationHandler;->k()Z
+
+    move-result v7
+
+    .line 1339
+    invoke-interface {v5, v4, v6, v3, v7}, Lcom/rounds/kik/analytics/IReporterProxy;->onPushTap(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Z)V
+
+    .line 1345
+    :cond_1
+    :goto_1
+    const-string v3, "conversation_jid"
+
+    invoke-virtual {p1, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 1346
+    invoke-static {v3}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    .line 1347
+    new-instance v0, Lkik/android/chat/fragment/KikConversationsFragment$a;
+
+    invoke-direct {v0}, Lkik/android/chat/fragment/KikConversationsFragment$a;-><init>()V
+
+    .line 1348
+    invoke-virtual {v0}, Lkik/android/chat/fragment/KikConversationsFragment$a;->d()Lkik/android/chat/fragment/KikConversationsFragment$a;
+
+    move-result-object v0
+
+    .line 1349
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
+
+    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ae;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->b()Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->d()Landroid/content/Intent;
+
+    move-result-object v0
+
+    .line 1350
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
+
+    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->b(Landroid/content/Intent;Landroid/content/Context;)Lcom/kik/events/Promise;
 
     goto :goto_0
+
+    .line 1352
+    :cond_2
+    iget-object v4, p0, Lkik/android/KikNotificationHandler;->g:Lkik/android/videochat/c;
+
+    iget-object v5, p0, Lkik/android/KikNotificationHandler;->b:Lkik/core/interfaces/v;
+
+    invoke-interface {v5, v3, v2}, Lkik/core/interfaces/v;->a(Ljava/lang/String;Z)Lkik/core/datatypes/l;
+
+    move-result-object v5
+
+    invoke-interface {v4, v5}, Lkik/android/videochat/c;->b(Lkik/core/datatypes/l;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_3
+
+    if-le v0, v2, :cond_4
+
+    .line 1355
+    :cond_3
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
+
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    goto/16 :goto_0
+
+    .line 1358
+    :cond_4
+    new-instance v4, Lkik/android/chat/fragment/KikChatFragment$a;
+
+    invoke-direct {v4}, Lkik/android/chat/fragment/KikChatFragment$a;-><init>()V
+
+    .line 1359
+    invoke-virtual {v4, v3}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Ljava/lang/String;)Lkik/android/chat/fragment/KikChatFragment$a;
+
+    move-result-object v4
+
+    .line 1360
+    invoke-virtual {v4, v3}, Lkik/android/chat/fragment/KikChatFragment$a;->c(Ljava/lang/String;)Lkik/android/chat/fragment/KikChatFragment$a;
+
+    move-result-object v3
+
+    if-ne v0, v2, :cond_5
+
+    move v1, v2
+
+    .line 1361
+    :cond_5
+    invoke-virtual {v3, v1}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Z)Lkik/android/chat/fragment/KikChatFragment$a;
+
+    move-result-object v0
+
+    .line 1362
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
+
+    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ae;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+
+    move-result-object v0
+
+    .line 1363
+    invoke-virtual {v0}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->d()Landroid/content/Intent;
+
+    move-result-object v0
+
+    .line 1364
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
+
+    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->b(Landroid/content/Intent;Landroid/content/Context;)Lcom/kik/events/Promise;
+
+    goto/16 :goto_0
+
+    :cond_6
+    move v0, v1
+
+    goto :goto_1
 .end method
 
 .method private a(Landroid/support/v4/app/NotificationCompat$InboxStyle;Ljava/util/List;)V
@@ -947,14 +1365,14 @@
     .end annotation
 
     .prologue
-    .line 354
+    .line 371
     if-nez p2, :cond_1
 
-    .line 362
+    .line 379
     :cond_0
     return-void
 
-    .line 358
+    .line 375
     :cond_1
     const/4 v0, 0x0
 
@@ -971,21 +1389,21 @@
 
     if-ge v1, v0, :cond_0
 
-    .line 359
+    .line 376
     invoke-interface {p2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lkik/core/datatypes/f;
 
-    .line 360
+    .line 377
     invoke-direct {p0, v0}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/f;)Landroid/text/SpannableStringBuilder;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/support/v4/app/NotificationCompat$InboxStyle;->addLine(Ljava/lang/CharSequence;)Landroid/support/v4/app/NotificationCompat$InboxStyle;
 
-    .line 358
+    .line 375
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
@@ -1006,7 +1424,7 @@
     .end annotation
 
     .prologue
-    .line 491
+    .line 509
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -1025,10 +1443,10 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 492
+    .line 510
     if-eqz v0, :cond_0
 
-    .line 495
+    .line 513
     iget-object v2, p0, Lkik/android/KikNotificationHandler;->i:Landroid/support/v4/app/NotificationManagerCompat;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -1039,356 +1457,9 @@
 
     goto :goto_0
 
-    .line 497
+    .line 515
     :cond_1
     return-void
-.end method
-
-.method private a(Ljava/util/List;Landroid/support/v4/app/NotificationCompat$Builder;)V
-    .locals 9
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lkik/core/datatypes/o;",
-            ">;",
-            "Landroid/support/v4/app/NotificationCompat$Builder;",
-            ")V"
-        }
-    .end annotation
-
-    .prologue
-    const/4 v8, 0x0
-
-    const/16 v7, 0xa
-
-    const/4 v6, 0x1
-
-    const/4 v1, 0x0
-
-    .line 1499
-    invoke-static {p1}, Lkik/core/util/n;->a(Ljava/util/List;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->g:Lkik/core/interfaces/b;
-
-    const-string v2, "hide_video_chat_notifications_android"
-
-    const-string v3, "hide"
-
-    invoke-interface {v0, v2, v3}, Lkik/core/interfaces/b;->a(Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 1500
-    :cond_0
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->i:Landroid/support/v4/app/NotificationManagerCompat;
-
-    invoke-virtual {v0, v7}, Landroid/support/v4/app/NotificationManagerCompat;->cancel(I)V
-
-    .line 1501
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->h:Lkik/android/videochat/c;
-
-    invoke-interface {v0}, Lkik/android/videochat/c;->g()Lcom/rounds/kik/analytics/IReporterProxy;
-
-    move-result-object v0
-
-    const-string v1, "video_call"
-
-    invoke-interface {v0, v1}, Lcom/rounds/kik/analytics/IReporterProxy;->onPushRemoved(Ljava/lang/String;)V
-
-    .line 1519
-    :cond_1
-    return-void
-
-    .line 1505
-    :cond_2
-    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/UUID;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 1506
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
-
-    const v3, 0x7f0a0568
-
-    invoke-virtual {v0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p2, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/support/v4/app/NotificationCompat$Builder;
-
-    move-result-object v3
-
-    .line 14566
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-ne v0, v6, :cond_3
-
-    .line 14567
-    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkik/core/datatypes/o;
-
-    .line 15233
-    const/4 v4, -0x1
-
-    invoke-direct {p0, v0, v1, v4}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/o;ZI)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 1507
-    :goto_0
-    invoke-virtual {v3, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/support/v4/app/NotificationCompat$Builder;
-
-    move-result-object v3
-
-    .line 16063
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-ne v0, v6, :cond_4
-
-    .line 16064
-    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkik/core/datatypes/o;
-
-    invoke-direct {p0, v0, v1, v2}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/o;ZLjava/lang/String;)Landroid/app/PendingIntent;
-
-    move-result-object v0
-
-    .line 1508
-    :goto_1
-    invoke-virtual {v3, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentIntent(Landroid/app/PendingIntent;)Landroid/support/v4/app/NotificationCompat$Builder;
-
-    move-result-object v3
-
-    .line 17579
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    new-array v4, v0, [Ljava/lang/String;
-
-    .line 17580
-    :goto_2
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-ge v1, v0, :cond_6
-
-    .line 17581
-    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkik/core/datatypes/o;
-
-    invoke-virtual {v0}, Lkik/core/datatypes/o;->b()Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, v4, v1
-
-    .line 17580
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
-
-    goto :goto_2
-
-    .line 14570
-    :cond_3
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v4, 0x7f0a05f7
-
-    invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-array v4, v6, [Ljava/lang/Object;
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v5
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v4, v1
-
-    invoke-static {v0, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    .line 16066
-    :cond_4
-    if-eqz v2, :cond_5
-
-    .line 16067
-    invoke-direct {p0, p1, v2}, Lkik/android/KikNotificationHandler;->a(Ljava/util/List;Ljava/lang/String;)Landroid/app/PendingIntent;
-
-    move-result-object v0
-
-    goto :goto_1
-
-    .line 16977
-    :cond_5
-    invoke-direct {p0, v8, v8}, Lkik/android/KikNotificationHandler;->a(Ljava/util/List;Ljava/lang/String;)Landroid/app/PendingIntent;
-
-    move-result-object v0
-
-    goto :goto_1
-
-    .line 17583
-    :cond_6
-    new-instance v0, Landroid/content/Intent;
-
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
-
-    const/16 v1, 0x20
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    move-result-object v0
-
-    const-string v1, "kik.android.notificationHandler.ACTION_DISMISS_VIDEO"
-
-    .line 17584
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    const-string v1, "video_chat_notification_id"
-
-    .line 17585
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    const-string v1, "conversation_jids"
-
-    .line 17586
-    invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    .line 17588
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
-
-    const/16 v4, 0x3901
-
-    const/high16 v5, 0x8000000
-
-    invoke-static {v1, v4, v0, v5}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
-
-    move-result-object v0
-
-    .line 1509
-    invoke-virtual {v3, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setDeleteIntent(Landroid/app/PendingIntent;)Landroid/support/v4/app/NotificationCompat$Builder;
-
-    move-result-object v0
-
-    .line 1510
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v4
-
-    invoke-virtual {v0, v4, v5}, Landroid/support/v4/app/NotificationCompat$Builder;->setWhen(J)Landroid/support/v4/app/NotificationCompat$Builder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
-
-    .line 1511
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v3, 0x7f10007b
-
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setColor(I)Landroid/support/v4/app/NotificationCompat$Builder;
-
-    move-result-object v0
-
-    const v1, 0x7f0201aa
-
-    .line 1512
-    invoke-virtual {v0, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setSmallIcon(I)Landroid/support/v4/app/NotificationCompat$Builder;
-
-    .line 1514
-    invoke-virtual {p2}, Landroid/support/v4/app/NotificationCompat$Builder;->build()Landroid/app/Notification;
-
-    move-result-object v0
-
-    .line 1515
-    invoke-direct {p0, v7, v0}, Lkik/android/KikNotificationHandler;->a(ILandroid/app/Notification;)V
-
-    .line 1516
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_3
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkik/core/datatypes/o;
-
-    .line 1517
-    iget-object v3, p0, Lkik/android/KikNotificationHandler;->h:Lkik/android/videochat/c;
-
-    invoke-interface {v3}, Lkik/android/videochat/c;->g()Lcom/rounds/kik/analytics/IReporterProxy;
-
-    move-result-object v3
-
-    const-string v4, "video_call"
-
-    invoke-interface {v3, v0, v4, v2}, Lcom/rounds/kik/analytics/IReporterProxy;->onPushShow(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_3
 .end method
 
 .method private a(Ljava/util/List;Ljava/util/List;)V
@@ -1412,25 +1483,25 @@
 
     const/4 v2, 0x0
 
-    .line 1276
+    .line 1275
     if-nez p1, :cond_1
 
     .line 1301
     :cond_0
     return-void
 
-    .line 1280
+    .line 1279
     :cond_1
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 1282
+    .line 1281
     invoke-static {v3}, Ljava/util/Collections;->reverse(Ljava/util/List;)V
 
     move v1, v2
 
-    .line 1283
+    .line 1282
     :goto_0
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -1438,35 +1509,35 @@
 
     if-ge v1, v0, :cond_3
 
-    .line 1284
+    .line 1283
     invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lkik/core/datatypes/f;
 
-    .line 1285
-    iget-object v4, p0, Lkik/android/KikNotificationHandler;->c:Lkik/core/interfaces/x;
+    .line 1284
+    iget-object v4, p0, Lkik/android/KikNotificationHandler;->b:Lkik/core/interfaces/v;
 
-    invoke-virtual {v0}, Lkik/core/datatypes/f;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/f;->g()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-interface {v4, v5, v7}, Lkik/core/interfaces/x;->a(Ljava/lang/String;Z)Lkik/core/datatypes/o;
+    invoke-interface {v4, v5, v7}, Lkik/core/interfaces/v;->a(Ljava/lang/String;Z)Lkik/core/datatypes/l;
 
     move-result-object v4
 
-    .line 1286
-    iget-object v5, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/f/b;
+    .line 1285
+    iget-object v5, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/h/b;
 
-    invoke-virtual {v5, v0}, Lkik/android/f/b;->a(Lkik/core/datatypes/f;)I
+    invoke-virtual {v5, v0}, Lkik/android/h/b;->a(Lkik/core/datatypes/f;)I
 
     move-result v5
 
-    .line 1288
-    iget-object v6, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/f/b;
+    .line 1287
+    iget-object v6, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/h/b;
 
-    invoke-virtual {v6, v5}, Lkik/android/f/b;->a(I)Z
+    invoke-virtual {v6, v5}, Lkik/android/h/b;->a(I)Z
 
     move-result v6
 
@@ -1480,12 +1551,21 @@
 
     if-eqz v6, :cond_2
 
-    .line 1289
+    .line 1288
     invoke-direct {p0, v0, v2}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/f;Z)Landroid/support/v4/app/NotificationCompat$Builder;
 
     move-result-object v0
 
+    .line 1289
+    invoke-direct {p0, v4, v2}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/l;I)Landroid/graphics/Bitmap;
+
+    move-result-object v6
+
     .line 1290
+    invoke-virtual {v0, v6}, Landroid/support/v4/app/NotificationCompat$Builder;->setLargeIcon(Landroid/graphics/Bitmap;)Landroid/support/v4/app/NotificationCompat$Builder;
+
+    move-result-object v0
+
     invoke-virtual {v0}, Landroid/support/v4/app/NotificationCompat$Builder;->build()Landroid/app/Notification;
 
     move-result-object v0
@@ -1495,11 +1575,11 @@
 
     .line 1293
     :cond_2
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/f/b;
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/h/b;
 
-    invoke-virtual {v0, v4, v5, v2}, Lkik/android/f/b;->a(Lkik/core/datatypes/o;IZ)V
+    invoke-virtual {v0, v4, v5, v2}, Lkik/android/h/b;->a(Lkik/core/datatypes/l;IZ)V
 
-    .line 1283
+    .line 1282
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
@@ -1525,27 +1605,27 @@
     check-cast v0, Lkik/core/datatypes/f;
 
     .line 1297
-    iget-object v3, p0, Lkik/android/KikNotificationHandler;->c:Lkik/core/interfaces/x;
+    iget-object v3, p0, Lkik/android/KikNotificationHandler;->b:Lkik/core/interfaces/v;
 
-    invoke-virtual {v0}, Lkik/core/datatypes/f;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lkik/core/datatypes/f;->g()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-interface {v3, v4, v7}, Lkik/core/interfaces/x;->a(Ljava/lang/String;Z)Lkik/core/datatypes/o;
+    invoke-interface {v3, v4, v7}, Lkik/core/interfaces/v;->a(Ljava/lang/String;Z)Lkik/core/datatypes/l;
 
     move-result-object v3
 
     .line 1298
-    iget-object v4, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/f/b;
+    iget-object v4, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/h/b;
 
-    invoke-virtual {v4, v0}, Lkik/android/f/b;->a(Lkik/core/datatypes/f;)I
+    invoke-virtual {v4, v0}, Lkik/android/h/b;->a(Lkik/core/datatypes/f;)I
 
     move-result v0
 
     .line 1299
-    iget-object v4, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/f/b;
+    iget-object v4, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/h/b;
 
-    invoke-virtual {v4, v3, v0, v2}, Lkik/android/f/b;->a(Lkik/core/datatypes/o;IZ)V
+    invoke-virtual {v4, v3, v0, v2}, Lkik/android/h/b;->a(Lkik/core/datatypes/l;IZ)V
 
     .line 1295
     add-int/lit8 v0, v1, 0x1
@@ -1555,286 +1635,13 @@
     goto :goto_1
 .end method
 
-.method static synthetic a(Lkik/android/KikNotificationHandler;Landroid/support/v4/app/NotificationCompat$Builder;Lkik/core/datatypes/o;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 7
-
-    .prologue
-    const/16 v6, 0x20
-
-    const/4 v5, 0x0
-
-    .line 0
-    .line 18576
-    invoke-virtual {p2}, Lkik/core/datatypes/o;->c()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 18577
-    invoke-virtual {p2}, Lkik/core/datatypes/o;->v()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    if-eqz v0, :cond_4
-
-    .line 18579
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    .line 18581
-    const/16 v1, 0x14
-
-    if-gt v2, v1, :cond_0
-
-    .line 18467
-    :goto_0
-    invoke-virtual {p1, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/support/v4/app/NotificationCompat$Builder;
-
-    move-result-object v0
-
-    .line 18468
-    invoke-virtual {v0, p3}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/support/v4/app/NotificationCompat$Builder;
-
-    move-result-object v0
-
-    .line 19076
-    invoke-direct {p0, p2, v5, p4}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/o;ZLjava/lang/String;)Landroid/app/PendingIntent;
-
-    move-result-object v1
-
-    .line 18469
-    invoke-virtual {v0, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentIntent(Landroid/app/PendingIntent;)Landroid/support/v4/app/NotificationCompat$Builder;
-
-    move-result-object v0
-
-    .line 19596
-    invoke-virtual {p2}, Lkik/core/datatypes/o;->b()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 19598
-    new-instance v2, Landroid/content/Intent;
-
-    invoke-direct {v2}, Landroid/content/Intent;-><init>()V
-
-    invoke-virtual {v2, v6}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    move-result-object v2
-
-    const-string v3, "kik.android.notificationHandler.ACTION_DISMISS_VIDEO"
-
-    .line 19599
-    invoke-virtual {v2, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object v2
-
-    const-string v3, "video_chat_notification_id"
-
-    .line 19600
-    invoke-virtual {v2, v3, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object v2
-
-    const-string v3, "conversation_jids"
-
-    .line 19601
-    invoke-virtual {v2, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object v1
-
-    .line 19603
-    iget-object v2, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
-
-    const/16 v3, 0x3901
-
-    const/high16 v4, 0x8000000
-
-    invoke-static {v2, v3, v1, v4}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
-
-    move-result-object v1
-
-    .line 18470
-    invoke-virtual {v0, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setDeleteIntent(Landroid/app/PendingIntent;)Landroid/support/v4/app/NotificationCompat$Builder;
-
-    move-result-object v0
-
-    .line 18471
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    invoke-virtual {v0, v2, v3}, Landroid/support/v4/app/NotificationCompat$Builder;->setWhen(J)Landroid/support/v4/app/NotificationCompat$Builder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
-
-    .line 18472
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x7f10007b
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setColor(I)Landroid/support/v4/app/NotificationCompat$Builder;
-
-    move-result-object v0
-
-    const v1, 0x7f0201aa
-
-    .line 18473
-    invoke-virtual {v0, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setSmallIcon(I)Landroid/support/v4/app/NotificationCompat$Builder;
-
-    .line 18475
-    invoke-virtual {p1}, Landroid/support/v4/app/NotificationCompat$Builder;->build()Landroid/app/Notification;
-
-    move-result-object v0
-
-    .line 20513
-    :try_start_0
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->i:Landroid/support/v4/app/NotificationManagerCompat;
-
-    const/16 v2, 0xa
-
-    invoke-virtual {v1, p5, v2, v0}, Landroid/support/v4/app/NotificationManagerCompat;->notify(Ljava/lang/String;ILandroid/app/Notification;)V
-    :try_end_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 18477
-    :goto_1
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->h:Lkik/android/videochat/c;
-
-    invoke-interface {v0}, Lkik/android/videochat/c;->g()Lcom/rounds/kik/analytics/IReporterProxy;
-
-    move-result-object v0
-
-    const-string v1, "video_call"
-
-    invoke-interface {v0, p2, v1, p4}, Lcom/rounds/kik/analytics/IReporterProxy;->onPushShow(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 0
-    return-void
-
-    .line 18589
-    :cond_0
-    const/16 v1, 0x11
-
-    :goto_2
-    if-ge v1, v2, :cond_3
-
-    .line 18590
-    invoke-virtual {v0, v1}, Ljava/lang/String;->charAt(I)C
-
-    move-result v3
-
-    if-eq v3, v6, :cond_1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->charAt(I)C
-
-    move-result v3
-
-    const/16 v4, 0x2c
-
-    if-ne v3, v4, :cond_2
-
-    .line 18591
-    :cond_1
-    invoke-virtual {v0, v5, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "..."
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto/16 :goto_0
-
-    .line 18589
-    :cond_2
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_2
-
-    .line 18594
-    :cond_3
-    invoke-virtual {v0, v5, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "..."
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto/16 :goto_0
-
-    .line 18597
-    :cond_4
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
-
-    const v1, 0x7f0a0568
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto/16 :goto_0
-
-    .line 20517
-    :catch_0
-    move-exception v0
-
-    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_1
-.end method
-
-.method static synthetic a(Lkik/android/KikNotificationHandler;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 3
-
-    .prologue
-    .line 0
-    .line 18285
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->h:Lkik/android/videochat/c;
-
-    invoke-interface {v0}, Lkik/android/videochat/c;->g()Lcom/rounds/kik/analytics/IReporterProxy;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->c:Lkik/core/interfaces/x;
-
-    const/4 v2, 0x0
-
-    invoke-interface {v1, p1, v2}, Lkik/core/interfaces/x;->a(Ljava/lang/String;Z)Lkik/core/datatypes/o;
-
-    move-result-object v1
-
-    const-string v2, "video_call"
-
-    invoke-interface {v0, v1, v2, p2}, Lcom/rounds/kik/analytics/IReporterProxy;->onPushRemoved(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 0
-    return-void
-.end method
-
-.method static synthetic a(Lkik/android/KikNotificationHandler;Lkik/core/datatypes/o;)V
+.method static synthetic a(Lkik/android/KikNotificationHandler;Lkik/core/datatypes/l;)V
     .locals 0
 
     .prologue
-    .line 0
-    .line 18265
-    invoke-virtual {p0, p1}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/o;)V
+    .line 284
+    invoke-virtual {p0, p1}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/l;)V
 
-    .line 0
     return-void
 .end method
 
@@ -1842,56 +1649,56 @@
     .locals 16
 
     .prologue
-    .line 460
+    .line 477
     if-nez p1, :cond_1
 
-    .line 487
+    .line 505
     :cond_0
     :goto_0
     return-void
 
-    .line 463
+    .line 480
     :cond_1
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    iget-object v2, v0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
     invoke-virtual/range {p1 .. p1}, Lkik/core/datatypes/Message;->i()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-interface {v2, v3}, Lkik/core/interfaces/j;->a(Ljava/lang/String;)Lkik/core/datatypes/f;
+    invoke-interface {v2, v3}, Lkik/core/interfaces/IConversation;->a(Ljava/lang/String;)Lkik/core/datatypes/f;
 
     move-result-object v6
 
-    .line 464
+    .line 481
     if-eqz v6, :cond_0
 
-    .line 468
+    .line 485
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lkik/android/KikNotificationHandler;->c:Lkik/core/interfaces/x;
+    iget-object v2, v0, Lkik/android/KikNotificationHandler;->b:Lkik/core/interfaces/v;
 
-    invoke-virtual {v6}, Lkik/core/datatypes/f;->d()Ljava/lang/String;
+    invoke-virtual {v6}, Lkik/core/datatypes/f;->g()Ljava/lang/String;
 
     move-result-object v3
 
     const/4 v4, 0x1
 
-    invoke-interface {v2, v3, v4}, Lkik/core/interfaces/x;->a(Ljava/lang/String;Z)Lkik/core/datatypes/o;
+    invoke-interface {v2, v3, v4}, Lkik/core/interfaces/v;->a(Ljava/lang/String;Z)Lkik/core/datatypes/l;
 
     move-result-object v7
 
-    .line 469
+    .line 486
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lkik/android/KikNotificationHandler;->t:Lkik/android/f/b;
+    iget-object v2, v0, Lkik/android/KikNotificationHandler;->t:Lkik/android/h/b;
 
-    invoke-virtual {v2, v6}, Lkik/android/f/b;->a(Lkik/core/datatypes/f;)I
+    invoke-virtual {v2, v6}, Lkik/android/h/b;->a(Lkik/core/datatypes/f;)I
 
     move-result v8
 
-    .line 472
+    .line 489
     const/16 v2, 0x10
 
     invoke-static {v2}, Lcom/kik/sdkutils/c;->a(I)Z
@@ -1900,7 +1707,7 @@
 
     if-eqz v2, :cond_3
 
-    .line 473
+    .line 490
     move-object/from16 v0, p0
 
     move/from16 v1, p2
@@ -1909,76 +1716,89 @@
 
     move-result-object v9
 
-    .line 475
+    .line 492
     if-nez p2, :cond_2
 
-    .line 6623
+    .line 6616
     if-nez v6, :cond_4
 
-    .line 6624
+    .line 6617
     const/4 v2, 0x0
 
-    .line 479
+    .line 496
     :goto_1
     if-eqz v2, :cond_2
 
-    .line 480
+    .line 497
     invoke-virtual {v9, v2}, Landroid/support/v4/app/NotificationCompat$Builder;->extend(Landroid/support/v4/app/NotificationCompat$Extender;)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    .line 483
+    .line 500
     :cond_2
-    invoke-virtual {v9}, Landroid/support/v4/app/NotificationCompat$Builder;->build()Landroid/app/Notification;
+    const/4 v2, 0x0
+
+    move-object/from16 v0, p0
+
+    invoke-direct {v0, v7, v2}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/l;I)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 484
+    .line 501
+    invoke-virtual {v9, v2}, Landroid/support/v4/app/NotificationCompat$Builder;->setLargeIcon(Landroid/graphics/Bitmap;)Landroid/support/v4/app/NotificationCompat$Builder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/support/v4/app/NotificationCompat$Builder;->build()Landroid/app/Notification;
+
+    move-result-object v2
+
+    .line 502
     move-object/from16 v0, p0
 
     invoke-direct {v0, v8, v2}, Lkik/android/KikNotificationHandler;->a(ILandroid/app/Notification;)V
 
-    .line 486
+    .line 504
     :cond_3
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lkik/android/KikNotificationHandler;->t:Lkik/android/f/b;
+    iget-object v2, v0, Lkik/android/KikNotificationHandler;->t:Lkik/android/h/b;
 
-    invoke-virtual {v2, v7, v8}, Lkik/android/f/b;->a(Lkik/core/datatypes/o;I)V
+    invoke-virtual {v2, v7, v8}, Lkik/android/h/b;->a(Lkik/core/datatypes/l;I)V
 
     goto :goto_0
 
-    .line 6626
+    .line 6619
     :cond_4
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lkik/android/KikNotificationHandler;->c:Lkik/core/interfaces/x;
+    iget-object v2, v0, Lkik/android/KikNotificationHandler;->b:Lkik/core/interfaces/v;
 
-    invoke-virtual {v6}, Lkik/core/datatypes/f;->d()Ljava/lang/String;
+    invoke-virtual {v6}, Lkik/core/datatypes/f;->g()Ljava/lang/String;
 
     move-result-object v3
 
     const/4 v4, 0x1
 
-    invoke-interface {v2, v3, v4}, Lkik/core/interfaces/x;->a(Ljava/lang/String;Z)Lkik/core/datatypes/o;
+    invoke-interface {v2, v3, v4}, Lkik/core/interfaces/v;->a(Ljava/lang/String;Z)Lkik/core/datatypes/l;
 
     move-result-object v10
 
-    .line 6628
+    .line 6621
     new-instance v2, Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation$Builder;
 
     const/4 v3, 0x0
 
     const/4 v4, 0x4
 
-    .line 6629
+    .line 6622
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v10, v3, v4}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/o;ZI)Ljava/lang/String;
+    invoke-direct {v0, v10, v3, v4}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/l;ZI)Ljava/lang/String;
 
     move-result-object v3
 
     invoke-direct {v2, v3}, Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation$Builder;-><init>(Ljava/lang/String;)V
 
-    .line 6630
+    .line 6623
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -1987,12 +1807,12 @@
 
     move-result-object v11
 
-    .line 6632
-    invoke-virtual {v6}, Lkik/core/datatypes/f;->i()Ljava/util/Vector;
+    .line 6625
+    invoke-virtual {v6}, Lkik/core/datatypes/f;->l()Ljava/util/Vector;
 
     move-result-object v12
 
-    .line 6635
+    .line 6628
     invoke-interface {v12}, Ljava/util/List;->size()I
 
     move-result v2
@@ -2004,7 +1824,7 @@
     :goto_2
     if-ltz v5, :cond_9
 
-    .line 6636
+    .line 6629
     invoke-interface {v12, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -2018,7 +1838,7 @@
     .line 7044
     const-class v3, Lkik/core/datatypes/messageExtensions/ContentMessage;
 
-    invoke-static {v2, v3}, Lkik/core/datatypes/messageExtensions/f;->a(Lkik/core/datatypes/Message;Ljava/lang/Class;)Lkik/core/datatypes/messageExtensions/f;
+    invoke-static {v2, v3}, Lkik/core/datatypes/messageExtensions/MessageAttachment;->getAttachment(Lkik/core/datatypes/Message;Ljava/lang/Class;)Lkik/core/datatypes/messageExtensions/MessageAttachment;
 
     move-result-object v3
 
@@ -2069,18 +1889,18 @@
     if-eqz v4, :cond_8
 
     .line 7056
-    const v2, 0x7f0a025c
+    const v2, 0x7f090270
 
     invoke-virtual {v13, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 6636
+    .line 6629
     :cond_7
     :goto_3
     invoke-virtual {v11, v2}, Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation$Builder;->addMessage(Ljava/lang/String;)Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation$Builder;
 
-    .line 6635
+    .line 6628
     add-int/lit8 v2, v5, -0x1
 
     move v5, v2
@@ -2092,7 +1912,7 @@
     if-eqz v3, :cond_7
 
     .line 7059
-    const v2, 0x7f0a025a
+    const v2, 0x7f09026e
 
     const/4 v4, 0x1
 
@@ -2112,43 +1932,43 @@
 
     goto :goto_3
 
-    .line 6642
+    .line 6635
     :cond_9
-    invoke-virtual {v10}, Lkik/core/datatypes/o;->v()Z
+    invoke-virtual {v10}, Lkik/core/datatypes/l;->B()Z
 
     move-result v2
 
     if-eqz v2, :cond_b
 
-    invoke-virtual {v10}, Lkik/core/datatypes/o;->t()Ljava/lang/String;
+    invoke-virtual {v10}, Lkik/core/datatypes/l;->z()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v2}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    invoke-static {v2}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_b
 
-    .line 6643
+    .line 6636
     invoke-direct/range {p0 .. p0}, Lkik/android/KikNotificationHandler;->g()Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 6652
+    .line 6645
     :cond_a
     :goto_4
     invoke-static {v2}, Lkik/android/KikNotificationHandler;->c(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 6655
+    .line 6648
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
-    .line 6656
-    invoke-virtual {v6}, Lkik/core/datatypes/f;->d()Ljava/lang/String;
+    .line 6649
+    invoke-virtual {v6}, Lkik/core/datatypes/f;->g()Ljava/lang/String;
 
     move-result-object v4
 
@@ -2156,12 +1976,12 @@
 
     move-result v4
 
-    .line 6657
-    invoke-virtual {v6}, Lkik/core/datatypes/f;->d()Ljava/lang/String;
+    .line 6650
+    invoke-virtual {v6}, Lkik/core/datatypes/f;->g()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 7560
+    .line 7568
     new-instance v10, Landroid/content/Intent;
 
     invoke-direct {v10}, Landroid/content/Intent;-><init>()V
@@ -2184,15 +2004,15 @@
 
     move-result-object v5
 
-    .line 6657
+    .line 6650
     const/high16 v10, 0x8000000
 
-    .line 6655
+    .line 6648
     invoke-static {v3, v4, v5, v10}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v3
 
-    .line 6661
+    .line 6654
     new-instance v4, Landroid/support/v4/app/RemoteInput$Builder;
 
     const-string v5, "extra_voice_reply"
@@ -2201,23 +2021,23 @@
 
     const-string v5, "reply"
 
-    .line 6662
+    .line 6655
     invoke-virtual {v4, v5}, Landroid/support/v4/app/RemoteInput$Builder;->setLabel(Ljava/lang/CharSequence;)Landroid/support/v4/app/RemoteInput$Builder;
 
     move-result-object v4
 
-    .line 6663
+    .line 6656
     invoke-virtual {v4}, Landroid/support/v4/app/RemoteInput$Builder;->build()Landroid/support/v4/app/RemoteInput;
 
     move-result-object v4
 
-    .line 6666
+    .line 6659
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
-    .line 6667
-    invoke-virtual {v6}, Lkik/core/datatypes/f;->d()Ljava/lang/String;
+    .line 6660
+    invoke-virtual {v6}, Lkik/core/datatypes/f;->g()Ljava/lang/String;
 
     move-result-object v10
 
@@ -2225,12 +2045,12 @@
 
     move-result v10
 
-    .line 6668
-    invoke-virtual {v6}, Lkik/core/datatypes/f;->d()Ljava/lang/String;
+    .line 6661
+    invoke-virtual {v6}, Lkik/core/datatypes/f;->g()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 7612
+    .line 7605
     new-instance v12, Landroid/content/Intent;
 
     invoke-direct {v12}, Landroid/content/Intent;-><init>()V
@@ -2253,15 +2073,15 @@
 
     move-result-object v6
 
-    .line 6668
+    .line 6661
     const/high16 v12, 0x8000000
 
-    .line 6666
+    .line 6659
     invoke-static {v5, v10, v6, v12}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v5
 
-    .line 6672
+    .line 6665
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v12
@@ -2270,20 +2090,20 @@
 
     move-result-object v6
 
-    .line 6673
+    .line 6666
     invoke-virtual {v6, v3}, Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation$Builder;->setReadPendingIntent(Landroid/app/PendingIntent;)Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation$Builder;
 
     move-result-object v3
 
-    .line 6674
+    .line 6667
     invoke-virtual {v3, v5, v4}, Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation$Builder;->setReplyAction(Landroid/app/PendingIntent;Landroid/support/v4/app/RemoteInput;)Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation$Builder;
 
-    .line 6675
+    .line 6668
     new-instance v3, Landroid/support/v4/app/NotificationCompat$CarExtender;
 
     invoke-direct {v3}, Landroid/support/v4/app/NotificationCompat$CarExtender;-><init>()V
 
-    .line 6676
+    .line 6669
     invoke-virtual {v11}, Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation$Builder;->build()Landroid/support/v4/app/NotificationCompat$CarExtender$UnreadConversation;
 
     move-result-object v4
@@ -2296,12 +2116,12 @@
 
     iget-object v4, v0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
-    .line 6677
+    .line 6670
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    const v5, 0x7f10007b
+    const v5, 0x7f0e007f
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -2317,30 +2137,30 @@
 
     goto/16 :goto_1
 
-    .line 6646
+    .line 6639
     :cond_b
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v10}, Lkik/android/KikNotificationHandler;->d(Lkik/core/datatypes/o;)Lcom/kik/cache/y;
+    invoke-direct {v0, v10}, Lkik/android/KikNotificationHandler;->c(Lkik/core/datatypes/l;)Lcom/kik/cache/KikImageRequest;
 
     move-result-object v2
 
-    .line 6647
+    .line 6640
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lkik/android/KikNotificationHandler;->b:Lcom/kik/cache/aa;
+    iget-object v3, v0, Lkik/android/KikNotificationHandler;->a:Lcom/kik/cache/KikVolleyImageLoader;
 
-    invoke-static {v3, v2}, Lkik/android/util/f;->a(Lcom/kik/cache/aa;Lcom/kik/cache/y;)Landroid/graphics/Bitmap;
+    invoke-static {v3, v2}, Lkik/android/util/f;->a(Lcom/kik/cache/KikVolleyImageLoader;Lcom/kik/cache/KikImageRequest;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 6648
+    .line 6641
     if-nez v2, :cond_a
 
-    .line 6649
+    .line 6642
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v10}, Lkik/android/KikNotificationHandler;->c(Lkik/core/datatypes/o;)Landroid/graphics/Bitmap;
+    invoke-direct {v0, v10}, Lkik/android/KikNotificationHandler;->b(Lkik/core/datatypes/l;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
@@ -2348,27 +2168,137 @@
 .end method
 
 .method private a(ZZLkik/core/datatypes/Message;ZZ)V
-    .locals 9
+    .locals 11
 
     .prologue
-    .line 702
+    .line 696
     invoke-direct {p0}, Lkik/android/KikNotificationHandler;->h()I
 
     move-result v1
 
-    .line 703
+    .line 697
     if-gtz v1, :cond_1
 
-    .line 880
+    .line 871
     :cond_0
     :goto_0
     return-void
 
-    .line 708
+    .line 703
     :cond_1
-    if-eqz p2, :cond_3
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->d:Lkik/core/interfaces/ad;
 
-    .line 709
+    const-string v2, "kik.vibrate"
+
+    invoke-interface {v0, v2}, Lkik/core/interfaces/ad;->w(Ljava/lang/String;)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    if-eqz p3, :cond_2
+
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->d:Lkik/core/interfaces/ad;
+
+    const-string v2, "NotificationsViewModel.VibrateSetting.%s"
+
+    const/4 v3, 0x1
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    invoke-virtual {p3}, Lkik/core/datatypes/Message;->i()Ljava/lang/String;
+
+    move-result-object v5
+
+    aput-object v5, v3, v4
+
+    invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    invoke-interface {v0, v2, v3}, Lkik/core/interfaces/ad;->a(Ljava/lang/String;Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    :cond_2
+    const/4 v0, 0x1
+
+    move v3, v0
+
+    .line 704
+    :goto_1
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->d:Lkik/core/interfaces/ad;
+
+    const-string v2, "kik.sound"
+
+    invoke-interface {v0, v2}, Lkik/core/interfaces/ad;->w(Ljava/lang/String;)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    if-eqz p3, :cond_3
+
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->d:Lkik/core/interfaces/ad;
+
+    const-string v2, "NotificationsViewModel.SoundSetting.%s"
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    invoke-virtual {p3}, Lkik/core/datatypes/Message;->i()Ljava/lang/String;
+
+    move-result-object v6
+
+    aput-object v6, v4, v5
+
+    invoke-static {v2, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v4, 0x1
+
+    invoke-interface {v0, v2, v4}, Lkik/core/interfaces/ad;->a(Ljava/lang/String;Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    :cond_3
+    const/4 v0, 0x1
+
+    move v5, v0
+
+    .line 707
+    :goto_2
+    if-eqz p2, :cond_7
+
+    .line 708
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
     const-string v1, "audio"
@@ -2379,8 +2309,8 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 711
-    if-eqz v0, :cond_2
+    .line 710
+    if-eqz v0, :cond_4
 
     invoke-virtual {v0}, Landroid/media/AudioManager;->getRingerMode()I
 
@@ -2388,8 +2318,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 714
-    :cond_2
+    .line 713
+    :cond_4
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
     const-string v1, "vibrator"
@@ -2400,20 +2330,8 @@
 
     check-cast v0, Landroid/os/Vibrator;
 
-    .line 715
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->e:Lkik/core/interfaces/ad;
-
-    const-string v2, "kik.vibrate"
-
-    invoke-interface {v1, v2}, Lkik/core/interfaces/ad;->u(Ljava/lang/String;)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v1
-
-    invoke-static {v1, p2}, Lkik/android/f/c;->a(ZZ)[J
+    .line 714
+    invoke-static {v3, p2}, Lkik/android/h/c;->a(ZZ)[J
 
     move-result-object v1
 
@@ -2421,168 +2339,184 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Vibrator;->vibrate([JI)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 719
-    :cond_3
-    new-instance v4, Landroid/support/v4/app/NotificationCompat$Builder;
+    .line 703
+    :cond_5
+    const/4 v0, 0x0
+
+    move v3, v0
+
+    goto :goto_1
+
+    .line 704
+    :cond_6
+    const/4 v0, 0x0
+
+    move v5, v0
+
+    goto :goto_2
+
+    .line 718
+    :cond_7
+    new-instance v6, Landroid/support/v4/app/NotificationCompat$Builder;
 
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
-    invoke-direct {v4, v0}, Landroid/support/v4/app/NotificationCompat$Builder;-><init>(Landroid/content/Context;)V
+    invoke-direct {v6, v0}, Landroid/support/v4/app/NotificationCompat$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 721
+    .line 720
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v2
+    move-result-wide v8
 
-    invoke-virtual {v4, v2, v3}, Landroid/support/v4/app/NotificationCompat$Builder;->setWhen(J)Landroid/support/v4/app/NotificationCompat$Builder;
+    invoke-virtual {v6, v8, v9}, Landroid/support/v4/app/NotificationCompat$Builder;->setWhen(J)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    .line 723
+    .line 722
     new-instance v2, Ljava/util/ArrayList;
 
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
-    invoke-interface {v0}, Lkik/core/interfaces/j;->O()Ljava/util/List;
+    invoke-interface {v0}, Lkik/core/interfaces/IConversation;->R()Ljava/util/List;
 
     move-result-object v0
 
     invoke-direct {v2, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 724
-    new-instance v3, Ljava/util/ArrayList;
+    .line 723
+    new-instance v4, Ljava/util/ArrayList;
 
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
-    invoke-interface {v0}, Lkik/core/interfaces/j;->N()Ljava/util/List;
+    invoke-interface {v0}, Lkik/core/interfaces/IConversation;->Q()Ljava/util/List;
 
     move-result-object v0
 
-    invoke-direct {v3, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-direct {v4, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 8403
+    .line 9420
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 8404
-    invoke-interface {v0, v3}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+    .line 9421
+    invoke-interface {v0, v4}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 8407
-    iget-object v5, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/f/b;
+    .line 9424
+    iget-object v7, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/h/b;
 
-    invoke-virtual {v5, v0}, Lkik/android/f/b;->b(Ljava/util/List;)Ljava/util/List;
+    invoke-virtual {v7, v0}, Lkik/android/h/b;->b(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 8409
-    const/16 v5, 0x10
+    .line 9426
+    const/16 v7, 0x10
 
-    invoke-static {v5}, Lcom/kik/sdkutils/c;->a(I)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_4
-
-    .line 8411
-    invoke-direct {p0, v0}, Lkik/android/KikNotificationHandler;->a(Ljava/util/List;)V
-
-    .line 729
-    :cond_4
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/f/b;
-
-    invoke-virtual {v0, v2}, Lkik/android/f/b;->c(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v5
-
-    .line 730
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/f/b;
-
-    invoke-virtual {v0, v3}, Lkik/android/f/b;->c(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v6
-
-    .line 8690
-    if-nez p5, :cond_b
-
-    const/4 v0, 0x1
-
-    .line 8691
-    :goto_1
-    invoke-direct {p0}, Lkik/android/KikNotificationHandler;->j()Z
+    invoke-static {v7}, Lcom/kik/sdkutils/c;->a(I)Z
 
     move-result v7
 
-    if-eqz v7, :cond_c
+    if-eqz v7, :cond_8
 
-    .line 8692
-    if-eqz v0, :cond_5
+    .line 9428
+    invoke-direct {p0, v0}, Lkik/android/KikNotificationHandler;->a(Ljava/util/List;)V
 
-    invoke-interface {v5}, Ljava/util/List;->size()I
+    .line 728
+    :cond_8
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/h/b;
 
-    invoke-interface {v6}, Ljava/util/List;->size()I
+    invoke-virtual {v0, v2}, Lkik/android/h/b;->c(Ljava/util/List;)Ljava/util/List;
 
-    .line 736
-    :cond_5
-    :goto_2
-    invoke-direct {p0, v5, v6}, Lkik/android/KikNotificationHandler;->a(Ljava/util/List;Ljava/util/List;)V
+    move-result-object v7
 
-    .line 739
+    .line 729
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/h/b;
+
+    invoke-virtual {v0, v4}, Lkik/android/h/b;->c(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v8
+
+    .line 9684
+    if-nez p5, :cond_f
+
+    const/4 v0, 0x1
+
+    .line 9685
+    :goto_3
+    invoke-direct {p0}, Lkik/android/KikNotificationHandler;->j()Z
+
+    move-result v9
+
+    if-eqz v9, :cond_10
+
+    .line 9686
+    if-eqz v0, :cond_9
+
+    invoke-interface {v7}, Ljava/util/List;->size()I
+
+    invoke-interface {v8}, Ljava/util/List;->size()I
+
+    .line 735
+    :cond_9
+    :goto_4
+    invoke-direct {p0, v7, v8}, Lkik/android/KikNotificationHandler;->a(Ljava/util/List;Ljava/util/List;)V
+
+    .line 738
     invoke-direct {p0, p3, p4}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/Message;Z)V
 
-    .line 743
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/f/b;
+    .line 742
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/h/b;
 
-    invoke-virtual {v0, v2}, Lkik/android/f/b;->c(Ljava/util/List;)Ljava/util/List;
+    invoke-virtual {v0, v2}, Lkik/android/h/b;->c(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 744
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/f/b;
+    .line 743
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/h/b;
 
-    invoke-virtual {v0, v3}, Lkik/android/f/b;->c(Ljava/util/List;)Ljava/util/List;
+    invoke-virtual {v0, v4}, Lkik/android/h/b;->c(Ljava/util/List;)Ljava/util/List;
 
-    move-result-object v3
+    move-result-object v4
 
-    .line 746
+    .line 745
     invoke-direct {p0}, Lkik/android/KikNotificationHandler;->i()I
 
     move-result v0
 
-    .line 749
+    .line 748
     invoke-direct {p0}, Lkik/android/KikNotificationHandler;->e()Landroid/app/PendingIntent;
 
-    move-result-object v5
+    move-result-object v7
 
-    invoke-virtual {v4, v5}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentIntent(Landroid/app/PendingIntent;)Landroid/support/v4/app/NotificationCompat$Builder;
+    invoke-virtual {v6, v7}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentIntent(Landroid/app/PendingIntent;)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    .line 752
-    const/4 v5, 0x1
+    .line 751
+    const/4 v7, 0x1
 
-    if-le v0, v5, :cond_10
+    if-le v0, v7, :cond_14
 
-    .line 754
-    new-instance v5, Ljava/lang/StringBuilder;
+    .line 753
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v5, " "
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const v5, 0x7f0a031e
+    const-string v7, " "
 
-    invoke-static {v5}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v5
+    move-result-object v0
 
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const v7, 0x7f090332
+
+    invoke-static {v7}, Lkik/android/chat/KikApplication;->e(I)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -2590,38 +2524,38 @@
 
     move-result-object v0
 
-    invoke-virtual {v4, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/support/v4/app/NotificationCompat$Builder;
+    invoke-virtual {v6, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/support/v4/app/NotificationCompat$Builder;
+
+    .line 755
+    new-instance v7, Landroid/support/v4/app/NotificationCompat$InboxStyle;
+
+    invoke-direct {v7}, Landroid/support/v4/app/NotificationCompat$InboxStyle;-><init>()V
 
     .line 756
-    new-instance v5, Landroid/support/v4/app/NotificationCompat$InboxStyle;
-
-    invoke-direct {v5}, Landroid/support/v4/app/NotificationCompat$InboxStyle;-><init>()V
-
-    .line 757
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-lez v0, :cond_f
+    if-lez v0, :cond_13
 
-    .line 758
-    invoke-direct {p0, v5, v2}, Lkik/android/KikNotificationHandler;->a(Landroid/support/v4/app/NotificationCompat$InboxStyle;Ljava/util/List;)V
+    .line 757
+    invoke-direct {p0, v7, v2}, Lkik/android/KikNotificationHandler;->a(Landroid/support/v4/app/NotificationCompat$InboxStyle;Ljava/util/List;)V
 
-    .line 760
+    .line 759
     invoke-direct {p0}, Lkik/android/KikNotificationHandler;->j()Z
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_a
 
-    .line 761
-    invoke-direct {p0, v5, v3}, Lkik/android/KikNotificationHandler;->b(Landroid/support/v4/app/NotificationCompat$InboxStyle;Ljava/util/List;)V
+    .line 760
+    invoke-direct {p0, v7, v4}, Lkik/android/KikNotificationHandler;->b(Landroid/support/v4/app/NotificationCompat$InboxStyle;Ljava/util/List;)V
+
+    .line 763
+    :cond_a
+    if-nez p1, :cond_11
 
     .line 764
-    :cond_6
-    if-nez p1, :cond_d
-
-    .line 765
     const/4 v0, 0x0
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2634,32 +2568,32 @@
 
     move-result-object v0
 
-    .line 766
-    invoke-virtual {v4, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/support/v4/app/NotificationCompat$Builder;
+    .line 765
+    invoke-virtual {v6, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    .line 776
-    :goto_3
-    const v0, 0x7f0a0259
+    .line 775
+    :goto_5
+    const v0, 0x7f09026d
 
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
-    new-array v3, v3, [Ljava/lang/Object;
+    new-array v4, v4, [Ljava/lang/Object;
 
-    const/4 v6, 0x0
+    const/4 v8, 0x0
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    aput-object v1, v3, v6
+    aput-object v1, v4, v8
 
-    invoke-static {v0, v3}, Lkik/android/chat/KikApplication;->a(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0, v4}, Lkik/android/chat/KikApplication;->a(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v5, v0}, Landroid/support/v4/app/NotificationCompat$InboxStyle;->setSummaryText(Ljava/lang/CharSequence;)Landroid/support/v4/app/NotificationCompat$InboxStyle;
+    invoke-virtual {v7, v0}, Landroid/support/v4/app/NotificationCompat$InboxStyle;->setSummaryText(Ljava/lang/CharSequence;)Landroid/support/v4/app/NotificationCompat$InboxStyle;
 
-    .line 778
+    .line 777
     const/4 v0, 0x0
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2672,37 +2606,25 @@
 
     move-result-wide v0
 
-    invoke-virtual {v4, v0, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setWhen(J)Landroid/support/v4/app/NotificationCompat$Builder;
+    invoke-virtual {v6, v0, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setWhen(J)Landroid/support/v4/app/NotificationCompat$Builder;
 
     move-result-object v0
 
-    .line 779
-    invoke-virtual {v0, v5}, Landroid/support/v4/app/NotificationCompat$Builder;->setStyle(Landroid/support/v4/app/NotificationCompat$Style;)Landroid/support/v4/app/NotificationCompat$Builder;
+    .line 778
+    invoke-virtual {v0, v7}, Landroid/support/v4/app/NotificationCompat$Builder;->setStyle(Landroid/support/v4/app/NotificationCompat$Style;)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    .line 834
-    :cond_7
-    :goto_4
-    const v0, 0x7f0201aa
+    .line 825
+    :cond_b
+    :goto_6
+    const v0, 0x7f020202
 
-    .line 835
-    invoke-virtual {v4, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setSmallIcon(I)Landroid/support/v4/app/NotificationCompat$Builder;
+    .line 826
+    invoke-virtual {v6, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setSmallIcon(I)Landroid/support/v4/app/NotificationCompat$Builder;
 
     move-result-object v0
 
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->e:Lkik/core/interfaces/ad;
-
-    const-string v2, "kik.vibrate"
-
-    .line 836
-    invoke-interface {v1, v2}, Lkik/core/interfaces/ad;->u(Ljava/lang/String;)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v1
-
-    invoke-static {v1, p2}, Lkik/android/f/c;->a(ZZ)[J
+    .line 827
+    invoke-static {v3, p2}, Lkik/android/h/c;->a(ZZ)[J
 
     move-result-object v1
 
@@ -2712,12 +2634,12 @@
 
     iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
-    .line 837
+    .line 828
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f10007b
+    const v2, 0x7f0e007f
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -2729,63 +2651,63 @@
 
     const-string v1, "group_key_kik_messages"
 
-    .line 838
+    .line 829
     invoke-virtual {v0, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setGroup(Ljava/lang/String;)Landroid/support/v4/app/NotificationCompat$Builder;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 839
+    .line 830
     invoke-virtual {v0, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setGroupSummary(Z)Landroid/support/v4/app/NotificationCompat$Builder;
 
     move-result-object v0
 
-    .line 840
+    .line 831
     invoke-direct {p0}, Lkik/android/KikNotificationHandler;->d()Landroid/app/PendingIntent;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setDeleteIntent(Landroid/app/PendingIntent;)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    .line 844
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/f/b;
+    .line 835
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/h/b;
 
-    invoke-virtual {v0}, Lkik/android/f/b;->c()I
+    invoke-virtual {v0}, Lkik/android/h/b;->c()I
 
     move-result v0
 
-    if-gtz v0, :cond_15
+    if-gtz v0, :cond_17
 
     const/4 v0, 0x1
 
-    :goto_5
-    invoke-virtual {v4, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setLocalOnly(Z)Landroid/support/v4/app/NotificationCompat$Builder;
+    :goto_7
+    invoke-virtual {v6, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setLocalOnly(Z)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    .line 845
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/f/b;
+    .line 836
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/h/b;
 
-    invoke-virtual {v0}, Lkik/android/f/b;->c()I
+    invoke-virtual {v0}, Lkik/android/h/b;->c()I
 
     move-result v0
 
     const/4 v1, 0x1
 
-    if-ne v0, v1, :cond_1a
+    if-ne v0, v1, :cond_1c
 
-    .line 846
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/f/b;
+    .line 837
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/h/b;
 
-    invoke-virtual {v0}, Lkik/android/f/b;->b()Ljava/util/List;
+    invoke-virtual {v0}, Lkik/android/h/b;->b()Ljava/util/List;
 
     move-result-object v0
 
-    .line 847
+    .line 838
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
 
-    if-lez v1, :cond_8
+    if-lez v1, :cond_c
 
     const/4 v1, 0x0
 
@@ -2793,33 +2715,33 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_c
 
-    .line 848
+    .line 839
     const/4 v1, 0x0
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkik/android/f/a;
+    check-cast v0, Lkik/android/h/a;
 
-    invoke-virtual {v0}, Lkik/android/f/a;->a()Lkik/core/datatypes/o;
+    invoke-virtual {v0}, Lkik/android/h/a;->a()Lkik/core/datatypes/l;
 
     move-result-object v1
 
-    .line 10916
-    if-eqz v1, :cond_8
+    .line 11930
+    if-eqz v1, :cond_c
 
-    invoke-virtual {v1}, Lkik/core/datatypes/o;->b()Ljava/lang/String;
+    invoke-virtual {v1}, Lkik/core/datatypes/l;->k()Ljava/lang/String;
 
     move-result-object v0
 
-    if-nez v0, :cond_16
+    if-nez v0, :cond_18
 
-    .line 856
-    :cond_8
-    :goto_6
+    .line 847
+    :cond_c
+    :goto_8
     invoke-static {}, Lcom/kik/sdkutils/d;->a()J
 
     move-result-wide v0
@@ -2832,23 +2754,23 @@
 
     cmp-long v0, v0, v2
 
-    if-gez v0, :cond_1b
+    if-gez v0, :cond_1d
 
     const/4 v0, 0x1
 
-    .line 857
-    :goto_7
-    if-nez v0, :cond_9
+    .line 848
+    :goto_9
+    if-nez v0, :cond_d
 
-    if-eqz p1, :cond_1c
+    if-eqz p1, :cond_1e
 
-    .line 859
-    :cond_9
+    .line 850
+    :cond_d
     const/4 v0, 0x0
 
-    invoke-virtual {v4, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setDefaults(I)Landroid/support/v4/app/NotificationCompat$Builder;
+    invoke-virtual {v6, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setDefaults(I)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    .line 860
+    .line 851
     const/4 v0, 0x1
 
     new-array v0, v0, [J
@@ -2859,28 +2781,28 @@
 
     aput-wide v2, v0, v1
 
-    invoke-virtual {v4, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setVibrate([J)Landroid/support/v4/app/NotificationCompat$Builder;
+    invoke-virtual {v6, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setVibrate([J)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    .line 869
-    :goto_8
+    .line 860
+    :goto_a
     const/16 v0, 0x13
 
     invoke-static {v0}, Lcom/kik/sdkutils/c;->a(I)Z
 
     move-result v0
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_e
 
-    .line 872
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->e:Lkik/core/interfaces/ad;
+    .line 863
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->d:Lkik/core/interfaces/ad;
 
     const-string v1, "kik.led.color"
 
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->q(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkik/android/f/c;->a(Ljava/lang/String;)I
+    invoke-static {v0}, Lkik/android/h/c;->a(Ljava/lang/String;)I
 
     move-result v0
 
@@ -2888,125 +2810,125 @@
 
     const/16 v2, 0x3e8
 
-    invoke-virtual {v4, v0, v1, v2}, Landroid/support/v4/app/NotificationCompat$Builder;->setLights(III)Landroid/support/v4/app/NotificationCompat$Builder;
+    invoke-virtual {v6, v0, v1, v2}, Landroid/support/v4/app/NotificationCompat$Builder;->setLights(III)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    .line 875
-    :cond_a
-    invoke-virtual {v4}, Landroid/support/v4/app/NotificationCompat$Builder;->build()Landroid/app/Notification;
+    .line 866
+    :cond_e
+    invoke-virtual {v6}, Landroid/support/v4/app/NotificationCompat$Builder;->build()Landroid/app/Notification;
 
     move-result-object v0
 
-    .line 876
+    .line 867
     iget v1, v0, Landroid/app/Notification;->flags:I
 
     or-int/lit8 v1, v1, 0x1
 
     iput v1, v0, Landroid/app/Notification;->flags:I
 
-    .line 877
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->e:Lkik/core/interfaces/ad;
+    .line 868
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->d:Lkik/core/interfaces/ad;
 
     const-string v2, "kik.led.color"
 
-    invoke-interface {v1, v2}, Lkik/core/interfaces/ad;->q(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v1, v2}, Lkik/core/interfaces/ad;->s(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lkik/android/f/c;->a(Ljava/lang/String;)I
+    invoke-static {v1}, Lkik/android/h/c;->a(Ljava/lang/String;)I
 
     move-result v1
 
     iput v1, v0, Landroid/app/Notification;->ledARGB:I
 
-    .line 879
+    .line 870
     const/4 v1, 0x0
 
     invoke-direct {p0, v1, v0}, Lkik/android/KikNotificationHandler;->a(ILandroid/app/Notification;)V
 
     goto/16 :goto_0
 
-    .line 8690
-    :cond_b
+    .line 9684
+    :cond_f
     const/4 v0, 0x0
-
-    goto/16 :goto_1
-
-    .line 8695
-    :cond_c
-    if-eqz v0, :cond_5
-
-    invoke-interface {v5}, Ljava/util/List;->size()I
-
-    goto/16 :goto_2
-
-    .line 770
-    :cond_d
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
-
-    iget-object v6, p0, Lkik/android/KikNotificationHandler;->c:Lkik/core/interfaces/x;
-
-    invoke-static {v0, v6, v2}, Lkik/android/f/c;->a(Landroid/content/Context;Lkik/core/interfaces/x;Ljava/util/List;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 771
-    invoke-direct {p0}, Lkik/android/KikNotificationHandler;->j()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_e
-
-    invoke-interface {v3}, Ljava/util/List;->size()I
-
-    move-result v6
-
-    if-lez v6, :cond_e
-
-    .line 772
-    const v6, 0x7f0a0261
-
-    const/4 v7, 0x2
-
-    new-array v7, v7, [Ljava/lang/Object;
-
-    const/4 v8, 0x0
-
-    aput-object v0, v7, v8
-
-    const/4 v0, 0x1
-
-    invoke-interface {v3}, Ljava/util/List;->size()I
-
-    move-result v3
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v7, v0
-
-    invoke-static {v6, v7}, Lkik/android/chat/KikApplication;->a(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 774
-    :cond_e
-    invoke-virtual {v4, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/support/v4/app/NotificationCompat$Builder;
 
     goto/16 :goto_3
 
-    .line 782
-    :cond_f
-    invoke-interface {v3}, Ljava/util/List;->size()I
+    .line 9689
+    :cond_10
+    if-eqz v0, :cond_9
+
+    invoke-interface {v7}, Ljava/util/List;->size()I
+
+    goto/16 :goto_4
+
+    .line 769
+    :cond_11
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
+
+    iget-object v8, p0, Lkik/android/KikNotificationHandler;->b:Lkik/core/interfaces/v;
+
+    invoke-static {v0, v8, v2}, Lkik/android/h/c;->a(Landroid/content/Context;Lkik/core/interfaces/v;Ljava/util/List;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 770
+    invoke-direct {p0}, Lkik/android/KikNotificationHandler;->j()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_12
+
+    invoke-interface {v4}, Ljava/util/List;->size()I
+
+    move-result v8
+
+    if-lez v8, :cond_12
+
+    .line 771
+    const v8, 0x7f090275
+
+    const/4 v9, 0x2
+
+    new-array v9, v9, [Ljava/lang/Object;
+
+    const/4 v10, 0x0
+
+    aput-object v0, v9, v10
+
+    const/4 v0, 0x1
+
+    invoke-interface {v4}, Ljava/util/List;->size()I
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v9, v0
+
+    invoke-static {v8, v9}, Lkik/android/chat/KikApplication;->a(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 773
+    :cond_12
+    invoke-virtual {v6, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/support/v4/app/NotificationCompat$Builder;
+
+    goto/16 :goto_5
+
+    .line 781
+    :cond_13
+    invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-lez v0, :cond_7
+    if-lez v0, :cond_b
 
-    .line 784
+    .line 783
     const/4 v0, 0x0
 
-    invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v4, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -3016,28 +2938,28 @@
 
     move-result-wide v0
 
-    invoke-virtual {v4, v0, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setWhen(J)Landroid/support/v4/app/NotificationCompat$Builder;
+    invoke-virtual {v6, v0, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setWhen(J)Landroid/support/v4/app/NotificationCompat$Builder;
 
     move-result-object v0
 
-    .line 785
-    invoke-direct {p0, v3}, Lkik/android/KikNotificationHandler;->b(Ljava/util/List;)Ljava/lang/CharSequence;
+    .line 784
+    invoke-direct {p0, v4}, Lkik/android/KikNotificationHandler;->b(Ljava/util/List;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    goto/16 :goto_4
+    goto/16 :goto_6
 
-    .line 789
-    :cond_10
+    .line 788
+    :cond_14
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-lez v0, :cond_13
+    if-lez v0, :cond_15
 
-    .line 794
+    .line 793
     const/4 v0, 0x0
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -3052,9 +2974,9 @@
 
     move-result-object v0
 
-    invoke-virtual {v4, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentIntent(Landroid/app/PendingIntent;)Landroid/support/v4/app/NotificationCompat$Builder;
+    invoke-virtual {v6, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentIntent(Landroid/app/PendingIntent;)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    .line 796
+    .line 795
     const/4 v0, 0x0
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -3063,186 +2985,141 @@
 
     check-cast v0, Lkik/core/datatypes/f;
 
-    .line 798
-    invoke-direct {p0, v0}, Lkik/android/KikNotificationHandler;->c(Lkik/core/datatypes/f;)Lkik/core/datatypes/o;
-
-    move-result-object v2
-
-    .line 799
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->b:Lcom/kik/cache/aa;
-
-    invoke-direct {p0, v2}, Lkik/android/KikNotificationHandler;->d(Lkik/core/datatypes/o;)Lcom/kik/cache/y;
-
-    move-result-object v3
-
-    invoke-static {v1, v3}, Lkik/android/util/f;->a(Lcom/kik/cache/aa;Lcom/kik/cache/y;)Landroid/graphics/Bitmap;
+    .line 797
+    invoke-direct {p0, v0}, Lkik/android/KikNotificationHandler;->c(Lkik/core/datatypes/f;)Lkik/core/datatypes/l;
 
     move-result-object v1
+
+    .line 798
+    const/4 v2, 0x0
+
+    invoke-direct {p0, v1, v2}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/l;I)Landroid/graphics/Bitmap;
+
+    move-result-object v2
 
     .line 800
-    if-nez v1, :cond_11
-
-    .line 801
-    invoke-direct {p0, v2}, Lkik/android/KikNotificationHandler;->b(Lkik/core/datatypes/o;)V
-
-    .line 802
-    invoke-direct {p0, v2}, Lkik/android/KikNotificationHandler;->c(Lkik/core/datatypes/o;)Landroid/graphics/Bitmap;
-
-    move-result-object v1
-
-    .line 804
-    :cond_11
-    invoke-direct {p0, v1}, Lkik/android/KikNotificationHandler;->b(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
-
-    move-result-object v3
-
-    .line 805
-    invoke-virtual {v2}, Lkik/core/datatypes/o;->v()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_12
-
-    move-object v1, v2
-
-    check-cast v1, Lkik/core/datatypes/s;
-
-    invoke-direct {p0, v1}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/s;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1f
-
-    .line 806
-    :cond_12
-    invoke-static {v3}, Lkik/android/KikNotificationHandler;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
-
-    move-result-object v1
-
-    .line 809
-    :goto_9
     invoke-static {v0}, Lkik/android/KikNotificationHandler;->b(Lkik/core/datatypes/f;)J
 
-    move-result-wide v6
+    move-result-wide v8
 
-    invoke-virtual {v4, v6, v7}, Landroid/support/v4/app/NotificationCompat$Builder;->setWhen(J)Landroid/support/v4/app/NotificationCompat$Builder;
+    invoke-virtual {v6, v8, v9}, Landroid/support/v4/app/NotificationCompat$Builder;->setWhen(J)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    .line 810
-    invoke-virtual {v4, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setLargeIcon(Landroid/graphics/Bitmap;)Landroid/support/v4/app/NotificationCompat$Builder;
-
-    move-result-object v1
-
-    .line 9233
-    const/4 v3, 0x0
-
-    const/4 v5, -0x1
-
-    invoke-direct {p0, v2, v3, v5}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/o;ZI)Ljava/lang/String;
+    .line 801
+    invoke-virtual {v6, v2}, Landroid/support/v4/app/NotificationCompat$Builder;->setLargeIcon(Landroid/graphics/Bitmap;)Landroid/support/v4/app/NotificationCompat$Builder;
 
     move-result-object v2
 
-    .line 810
-    invoke-virtual {v1, v2}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/support/v4/app/NotificationCompat$Builder;
+    .line 10229
+    const/4 v4, 0x0
+
+    const/4 v7, -0x1
+
+    invoke-direct {p0, v1, v4, v7}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/l;ZI)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v2, p0, Lkik/android/KikNotificationHandler;->c:Lkik/core/interfaces/x;
+    .line 801
+    invoke-virtual {v2, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    invoke-virtual {v0}, Lkik/core/datatypes/f;->g()Lkik/core/datatypes/Message;
+    move-result-object v1
+
+    iget-object v2, p0, Lkik/android/KikNotificationHandler;->b:Lkik/core/interfaces/v;
+
+    invoke-virtual {v0}, Lkik/core/datatypes/f;->j()Lkik/core/datatypes/Message;
 
     move-result-object v0
 
-    iget-object v3, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
+    iget-object v4, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
-    invoke-static {v2, v0, v3}, Lkik/android/f/c;->a(Lkik/core/interfaces/x;Lkik/core/datatypes/Message;Landroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-static {v2, v0, v4}, Lkik/android/h/c;->a(Lkik/core/interfaces/v;Lkik/core/datatypes/Message;Landroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
     invoke-virtual {v1, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    goto/16 :goto_4
+    goto/16 :goto_6
 
-    .line 812
-    :cond_13
-    invoke-interface {v3}, Ljava/util/List;->size()I
+    .line 803
+    :cond_15
+    invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-lez v0, :cond_7
+    if-lez v0, :cond_b
 
-    .line 817
+    .line 808
     invoke-direct {p0}, Lkik/android/KikNotificationHandler;->e()Landroid/app/PendingIntent;
 
     move-result-object v0
 
-    invoke-virtual {v4, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentIntent(Landroid/app/PendingIntent;)Landroid/support/v4/app/NotificationCompat$Builder;
+    invoke-virtual {v6, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentIntent(Landroid/app/PendingIntent;)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    .line 819
+    .line 810
     const/4 v0, 0x0
 
-    invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v4, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lkik/core/datatypes/f;
 
-    .line 820
-    invoke-direct {p0, v0}, Lkik/android/KikNotificationHandler;->c(Lkik/core/datatypes/f;)Lkik/core/datatypes/o;
+    .line 811
+    invoke-direct {p0, v0}, Lkik/android/KikNotificationHandler;->c(Lkik/core/datatypes/f;)Lkik/core/datatypes/l;
 
     move-result-object v2
 
-    .line 821
-    invoke-direct {p0, v2}, Lkik/android/KikNotificationHandler;->c(Lkik/core/datatypes/o;)Landroid/graphics/Bitmap;
+    .line 812
+    invoke-direct {p0, v2}, Lkik/android/KikNotificationHandler;->b(Lkik/core/datatypes/l;)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 822
+    .line 813
     invoke-direct {p0, v1}, Lkik/android/KikNotificationHandler;->b(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    move-result-object v3
+    move-result-object v4
 
-    .line 823
-    invoke-virtual {v2}, Lkik/core/datatypes/o;->v()Z
+    .line 814
+    invoke-virtual {v2}, Lkik/core/datatypes/l;->B()Z
 
     move-result v1
 
-    if-eqz v1, :cond_14
+    if-eqz v1, :cond_16
 
     move-object v1, v2
 
-    check-cast v1, Lkik/core/datatypes/s;
+    check-cast v1, Lkik/core/datatypes/p;
 
-    invoke-direct {p0, v1}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/s;)Z
+    invoke-static {v1}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/p;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_1e
+    if-eqz v1, :cond_20
 
-    .line 824
-    :cond_14
-    invoke-static {v3}, Lkik/android/KikNotificationHandler;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    .line 815
+    :cond_16
+    invoke-static {v4}, Lkik/android/KikNotificationHandler;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 10233
-    :goto_a
-    const/4 v3, 0x0
+    .line 11229
+    :goto_b
+    const/4 v4, 0x0
 
-    const/4 v5, -0x1
+    const/4 v7, -0x1
 
-    invoke-direct {p0, v2, v3, v5}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/o;ZI)Ljava/lang/String;
+    invoke-direct {p0, v2, v4, v7}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/l;ZI)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 828
+    .line 819
     invoke-static {v0}, Lkik/android/KikNotificationHandler;->b(Lkik/core/datatypes/f;)J
 
-    move-result-wide v6
+    move-result-wide v8
 
-    invoke-virtual {v4, v6, v7}, Landroid/support/v4/app/NotificationCompat$Builder;->setWhen(J)Landroid/support/v4/app/NotificationCompat$Builder;
+    invoke-virtual {v6, v8, v9}, Landroid/support/v4/app/NotificationCompat$Builder;->setWhen(J)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    .line 829
-    invoke-virtual {v4, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setLargeIcon(Landroid/graphics/Bitmap;)Landroid/support/v4/app/NotificationCompat$Builder;
+    .line 820
+    invoke-virtual {v6, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setLargeIcon(Landroid/graphics/Bitmap;)Landroid/support/v4/app/NotificationCompat$Builder;
 
     move-result-object v0
 
@@ -3252,312 +3129,256 @@
 
     iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
-    const v3, 0x7f0a025f
+    const v4, 0x7f090273
 
-    const/4 v5, 0x1
+    const/4 v7, 0x1
 
-    new-array v5, v5, [Ljava/lang/Object;
+    new-array v7, v7, [Ljava/lang/Object;
 
-    const/4 v6, 0x0
+    const/4 v8, 0x0
 
-    aput-object v2, v5, v6
+    aput-object v2, v7, v8
 
-    invoke-virtual {v1, v3, v5}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v1, v4, v7}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    goto/16 :goto_4
+    goto/16 :goto_6
 
-    .line 844
-    :cond_15
+    .line 835
+    :cond_17
     const/4 v0, 0x0
 
-    goto/16 :goto_5
+    goto/16 :goto_7
 
-    .line 10920
-    :cond_16
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    .line 11934
+    :cond_18
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
-    iget-object v2, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    iget-object v2, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
-    invoke-virtual {v1}, Lkik/core/datatypes/o;->b()Ljava/lang/String;
+    invoke-virtual {v1}, Lkik/core/datatypes/l;->k()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-interface {v2, v3}, Lkik/core/interfaces/j;->a(Ljava/lang/String;)Lkik/core/datatypes/f;
+    invoke-interface {v2, v3}, Lkik/core/interfaces/IConversation;->a(Ljava/lang/String;)Lkik/core/datatypes/f;
 
     move-result-object v2
 
-    invoke-interface {v0, v2}, Lkik/core/interfaces/j;->a(Lkik/core/datatypes/f;)I
+    invoke-interface {v0, v2}, Lkik/core/interfaces/IConversation;->a(Lkik/core/datatypes/f;)I
 
     move-result v0
 
-    .line 10921
+    .line 11935
     const/4 v2, 0x1
 
-    if-eq v0, v2, :cond_18
+    if-eq v0, v2, :cond_1a
 
-    .line 10923
-    invoke-direct {p0, v1}, Lkik/android/KikNotificationHandler;->c(Lkik/core/datatypes/o;)Landroid/graphics/Bitmap;
+    .line 11937
+    invoke-direct {p0, v1}, Lkik/android/KikNotificationHandler;->b(Lkik/core/datatypes/l;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 10937
-    :cond_17
-    :goto_b
+    .line 11951
+    :cond_19
+    :goto_c
     new-instance v1, Landroid/support/v4/app/NotificationCompat$WearableExtender;
 
     invoke-direct {v1}, Landroid/support/v4/app/NotificationCompat$WearableExtender;-><init>()V
 
-    .line 10938
+    .line 11952
     invoke-virtual {v1, v0}, Landroid/support/v4/app/NotificationCompat$WearableExtender;->setBackground(Landroid/graphics/Bitmap;)Landroid/support/v4/app/NotificationCompat$WearableExtender;
 
-    .line 10939
-    invoke-virtual {v4, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->extend(Landroid/support/v4/app/NotificationCompat$Extender;)Landroid/support/v4/app/NotificationCompat$Builder;
+    .line 11953
+    invoke-virtual {v6, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->extend(Landroid/support/v4/app/NotificationCompat$Extender;)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    goto/16 :goto_6
+    goto/16 :goto_8
 
-    .line 10925
-    :cond_18
-    invoke-virtual {v1}, Lkik/core/datatypes/o;->v()Z
+    .line 11939
+    :cond_1a
+    invoke-virtual {v1}, Lkik/core/datatypes/l;->B()Z
 
     move-result v0
 
-    if-eqz v0, :cond_19
+    if-eqz v0, :cond_1b
 
-    invoke-virtual {v1}, Lkik/core/datatypes/o;->t()Ljava/lang/String;
+    invoke-virtual {v1}, Lkik/core/datatypes/l;->z()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    invoke-static {v0}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_19
+    if-eqz v0, :cond_1b
 
-    .line 10927
+    .line 11941
     invoke-direct {p0}, Lkik/android/KikNotificationHandler;->f()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    goto :goto_b
+    goto :goto_c
 
-    .line 10930
-    :cond_19
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->b:Lcom/kik/cache/aa;
+    .line 11944
+    :cond_1b
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->a:Lcom/kik/cache/KikVolleyImageLoader;
 
-    invoke-direct {p0, v1}, Lkik/android/KikNotificationHandler;->d(Lkik/core/datatypes/o;)Lcom/kik/cache/y;
+    invoke-direct {p0, v1}, Lkik/android/KikNotificationHandler;->c(Lkik/core/datatypes/l;)Lcom/kik/cache/KikImageRequest;
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lkik/android/util/f;->a(Lcom/kik/cache/aa;Lcom/kik/cache/y;)Landroid/graphics/Bitmap;
+    invoke-static {v0, v2}, Lkik/android/util/f;->a(Lcom/kik/cache/KikVolleyImageLoader;Lcom/kik/cache/KikImageRequest;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 10931
-    if-nez v0, :cond_17
+    .line 11945
+    if-nez v0, :cond_19
 
-    .line 10932
-    invoke-direct {p0, v1}, Lkik/android/KikNotificationHandler;->b(Lkik/core/datatypes/o;)V
+    .line 11946
+    const/4 v0, 0x0
 
-    .line 10933
-    invoke-direct {p0, v1}, Lkik/android/KikNotificationHandler;->c(Lkik/core/datatypes/o;)Landroid/graphics/Bitmap;
+    invoke-direct {p0, v1, v0}, Lkik/android/KikNotificationHandler;->b(Lkik/core/datatypes/l;I)V
+
+    .line 11947
+    invoke-direct {p0, v1}, Lkik/android/KikNotificationHandler;->b(Lkik/core/datatypes/l;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    goto :goto_b
+    goto :goto_c
 
-    .line 10957
-    :cond_1a
+    .line 11971
+    :cond_1c
     :try_start_0
     new-instance v0, Landroid/support/v4/app/NotificationCompat$WearableExtender;
 
     invoke-direct {v0}, Landroid/support/v4/app/NotificationCompat$WearableExtender;-><init>()V
 
-    .line 10958
+    .line 11972
     iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f020044
+    const v2, 0x7f02005f
 
     invoke-static {v1, v2}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 10959
+    .line 11973
     invoke-virtual {v0, v1}, Landroid/support/v4/app/NotificationCompat$WearableExtender;->setBackground(Landroid/graphics/Bitmap;)Landroid/support/v4/app/NotificationCompat$WearableExtender;
 
-    .line 10960
-    invoke-virtual {v4, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->extend(Landroid/support/v4/app/NotificationCompat$Extender;)Landroid/support/v4/app/NotificationCompat$Builder;
+    .line 11974
+    invoke-virtual {v6, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->extend(Landroid/support/v4/app/NotificationCompat$Extender;)Landroid/support/v4/app/NotificationCompat$Builder;
     :try_end_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto/16 :goto_6
+    goto/16 :goto_8
 
-    .line 10963
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
+    goto/16 :goto_8
 
-    goto/16 :goto_6
-
-    .line 856
-    :cond_1b
+    .line 847
+    :cond_1d
     const/4 v0, 0x0
 
-    goto/16 :goto_7
+    goto/16 :goto_9
 
-    .line 863
-    :cond_1c
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->e:Lkik/core/interfaces/ad;
+    .line 854
+    :cond_1e
+    if-eqz v5, :cond_1f
 
-    const-string v1, "kik.sound"
-
-    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->u(Ljava/lang/String;)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1d
-
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->h:Lkik/android/videochat/c;
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->g:Lkik/android/videochat/c;
 
     invoke-interface {v0}, Lkik/android/videochat/c;->c()Z
 
     move-result v0
 
-    if-nez v0, :cond_1d
+    if-nez v0, :cond_1f
 
-    .line 864
+    .line 855
     const/4 v0, 0x1
 
-    invoke-virtual {v4, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setDefaults(I)Landroid/support/v4/app/NotificationCompat$Builder;
+    invoke-virtual {v6, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setDefaults(I)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    .line 866
-    :cond_1d
+    .line 857
+    :cond_1f
     invoke-static {}, Lcom/kik/sdkutils/d;->a()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lkik/android/KikNotificationHandler;->n:J
 
-    goto/16 :goto_8
-
-    :cond_1e
-    move-object v1, v3
-
     goto/16 :goto_a
 
-    :cond_1f
-    move-object v1, v3
+    :cond_20
+    move-object v1, v4
 
-    goto/16 :goto_9
+    goto/16 :goto_b
 .end method
 
-.method private a(Lkik/core/datatypes/s;)Z
-    .locals 4
+.method private static a(Lkik/core/datatypes/p;)Z
+    .locals 1
 
     .prologue
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    .line 1429
-    invoke-virtual {p1}, Lkik/core/datatypes/s;->N()Z
+    .line 1443
+    invoke-virtual {p0}, Lkik/core/datatypes/p;->P()Z
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_0
 
-    invoke-virtual {p1}, Lkik/core/datatypes/s;->t()Ljava/lang/String;
+    invoke-virtual {p0}, Lkik/core/datatypes/p;->z()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    invoke-static {v0}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-nez v0, :cond_2
-
-    move v0, v1
-
-    .line 1430
-    :goto_0
-    invoke-virtual {p1}, Lkik/core/datatypes/s;->N()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    iget-object v3, p0, Lkik/android/KikNotificationHandler;->g:Lkik/core/interfaces/b;
-
-    invoke-static {v3}, Lkik/android/util/a;->a(Lkik/core/interfaces/b;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    move v3, v1
-
-    .line 1431
-    :goto_1
     if-nez v0, :cond_0
 
-    if-eqz v3, :cond_1
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
 
     :cond_0
-    move v2, v1
+    const/4 v0, 0x0
 
-    :cond_1
-    return v2
-
-    :cond_2
-    move v0, v2
-
-    .line 1429
     goto :goto_0
-
-    :cond_3
-    move v3, v2
-
-    .line 1430
-    goto :goto_1
 .end method
 
 .method private static b(Lkik/core/datatypes/f;)J
     .locals 2
 
     .prologue
-    .line 944
+    .line 958
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lkik/core/datatypes/f;->g()Lkik/core/datatypes/Message;
+    invoke-virtual {p0}, Lkik/core/datatypes/f;->j()Lkik/core/datatypes/Message;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
-    .line 946
+    .line 960
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 948
+    .line 962
     :goto_0
     return-wide v0
 
     :cond_1
-    invoke-virtual {p0}, Lkik/core/datatypes/f;->g()Lkik/core/datatypes/Message;
+    invoke-virtual {p0}, Lkik/core/datatypes/f;->j()Lkik/core/datatypes/Message;
 
     move-result-object v0
 
@@ -3565,7 +3386,7 @@
 
     move-result-wide v0
 
-    invoke-static {v0, v1}, Lkik/core/util/x;->b(J)J
+    invoke-static {v0, v1}, Lkik/core/util/v;->b(J)J
 
     move-result-wide v0
 
@@ -3578,41 +3399,41 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1003
-    .line 12011
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->d:Lkik/core/interfaces/m;
+    .line 1019
+    .line 12027
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->c:Lkik/core/interfaces/l;
 
-    invoke-virtual {p1}, Lkik/core/datatypes/f;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/f;->g()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-interface {v0, v1, v2}, Lkik/core/interfaces/m;->a(Ljava/lang/String;Z)Lkik/core/datatypes/s;
+    invoke-interface {v0, v1, v2}, Lkik/core/interfaces/l;->a(Ljava/lang/String;Z)Lkik/core/datatypes/p;
 
     move-result-object v0
 
-    .line 12012
+    .line 12028
     if-nez v0, :cond_0
 
-    .line 12013
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->c:Lkik/core/interfaces/x;
+    .line 12029
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->b:Lkik/core/interfaces/v;
 
-    invoke-virtual {p1}, Lkik/core/datatypes/f;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/f;->g()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-interface {v0, v1, v2}, Lkik/core/interfaces/x;->a(Ljava/lang/String;Z)Lkik/core/datatypes/o;
+    invoke-interface {v0, v1, v2}, Lkik/core/interfaces/v;->a(Ljava/lang/String;Z)Lkik/core/datatypes/l;
 
     move-result-object v0
 
-    .line 12015
+    .line 12031
     :cond_0
     const/4 v1, 0x0
 
-    invoke-direct {p0, v0, p2, v1}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/o;ZLjava/lang/String;)Landroid/app/PendingIntent;
+    invoke-direct {p0, v0, p2, v1}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/l;ZLjava/lang/String;)Landroid/app/PendingIntent;
 
     move-result-object v0
 
-    .line 1003
+    .line 1019
     return-object v0
 .end method
 
@@ -3620,14 +3441,14 @@
     .locals 6
 
     .prologue
-    .line 1123
+    .line 1119
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 1125
+    .line 1121
     const v1, 0x1050006
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
@@ -3636,7 +3457,7 @@
 
     float-to-int v1, v1
 
-    .line 1126
+    .line 1122
     const v2, 0x1050005
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -3645,24 +3466,24 @@
 
     float-to-int v0, v0
 
-    .line 1127
+    .line 1123
     if-eqz p1, :cond_0
 
-    .line 1131
+    .line 1127
     :try_start_0
     invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
 
     move-result v2
 
-    .line 1132
+    .line 1128
     invoke-static {p1, v2, v2}, Landroid/media/ThumbnailUtils;->extractThumbnail(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
     :try_end_0
-    .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
-    .line 1134
+    .line 1130
     if-eqz v0, :cond_2
 
     :try_start_1
@@ -3672,7 +3493,7 @@
 
     if-nez v1, :cond_2
 
-    .line 1136
+    .line 1132
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v1
@@ -3682,27 +3503,27 @@
     invoke-virtual {v0, v1, v3}, Landroid/graphics/Bitmap;->copy(Landroid/graphics/Bitmap$Config;Z)Landroid/graphics/Bitmap;
     :try_end_1
     .catch Ljava/lang/OutOfMemoryError; {:try_start_1 .. :try_end_1} :catch_3
-    .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_1
 
     move-result-object v1
 
-    .line 1137
+    .line 1133
     if-nez v1, :cond_1
 
     :goto_0
     move-object p1, v0
 
-    .line 1141
+    .line 1137
     :goto_1
     :try_start_2
     new-instance v0, Landroid/graphics/Canvas;
 
     invoke-direct {v0, p1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 1142
+    .line 1138
     div-int/lit8 v1, v2, 0x2
 
-    .line 1143
+    .line 1139
     new-instance v3, Landroid/graphics/RectF;
 
     int-to-float v4, v1
@@ -3725,10 +3546,10 @@
 
     invoke-virtual {v0, v3, v1}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
     :try_end_2
-    .catch Ljava/lang/OutOfMemoryError; {:try_start_2 .. :try_end_2} :catch_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_2 .. :try_end_2} :catch_1
+    .catch Ljava/lang/OutOfMemoryError; {:try_start_2 .. :try_end_2} :catch_2
+    .catch Ljava/lang/IllegalStateException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 1154
+    .line 1150
     :cond_0
     :goto_2
     return-object p1
@@ -3736,45 +3557,33 @@
     :cond_1
     move-object v0, v1
 
-    .line 1137
+    .line 1133
     goto :goto_0
 
-    .line 1146
     :catch_0
     move-exception v0
 
-    :goto_3
-    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
-
     goto :goto_2
 
-    .line 1151
     :catch_1
-    move-exception v0
-
-    :goto_4
-    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_2
-
-    :catch_2
     move-exception v1
 
     move-object p1, v0
 
-    move-object v0, v1
+    goto :goto_2
 
-    goto :goto_4
+    .line 1148
+    :catch_2
+    move-exception v0
 
-    .line 1146
+    goto :goto_2
+
     :catch_3
     move-exception v1
 
     move-object p1, v0
 
-    move-object v0, v1
-
-    goto :goto_3
+    goto :goto_2
 
     :cond_2
     move-object p1, v0
@@ -3782,14 +3591,57 @@
     goto :goto_1
 .end method
 
-.method static synthetic b(Lkik/android/KikNotificationHandler;)Lcom/kik/events/Promise;
-    .locals 1
+.method private b(Lkik/core/datatypes/l;)Landroid/graphics/Bitmap;
+    .locals 2
 
     .prologue
-    .line 85
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->r:Lcom/kik/events/Promise;
+    .line 1077
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
+    if-nez v0, :cond_0
+
+    .line 1078
+    const/4 v0, 0x0
+
+    .line 1084
+    :goto_0
     return-object v0
+
+    .line 1080
+    :cond_0
+    const v0, 0x7f02039e
+
+    .line 1081
+    invoke-virtual {p1}, Lkik/core/datatypes/l;->B()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    check-cast p1, Lkik/core/datatypes/p;
+
+    invoke-virtual {p1}, Lkik/core/datatypes/p;->P()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 1082
+    const v0, 0x7f0201aa
+
+    .line 1084
+    :cond_1
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method
 
 .method private b(Ljava/util/List;)Ljava/lang/CharSequence;
@@ -3812,7 +3664,7 @@
 
     const/4 v5, 0x1
 
-    .line 537
+    .line 545
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -3821,15 +3673,15 @@
 
     if-gtz v0, :cond_1
 
-    .line 538
+    .line 546
     :cond_0
     const/4 v0, 0x0
 
-    .line 554
+    .line 562
     :goto_0
     return-object v0
 
-    .line 541
+    .line 549
     :cond_1
     new-instance v3, Landroid/text/SpannableStringBuilder;
 
@@ -3837,7 +3689,7 @@
 
     move v1, v2
 
-    .line 542
+    .line 550
     :goto_1
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -3847,26 +3699,26 @@
 
     if-ge v1, v6, :cond_2
 
-    .line 543
+    .line 551
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lkik/core/datatypes/f;
 
-    .line 544
-    invoke-direct {p0, v0}, Lkik/android/KikNotificationHandler;->c(Lkik/core/datatypes/f;)Lkik/core/datatypes/o;
+    .line 552
+    invoke-direct {p0, v0}, Lkik/android/KikNotificationHandler;->c(Lkik/core/datatypes/f;)Lkik/core/datatypes/l;
 
     move-result-object v0
 
-    .line 8233
+    .line 9229
     const/4 v4, -0x1
 
-    invoke-direct {p0, v0, v5, v4}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/o;ZI)Ljava/lang/String;
+    invoke-direct {p0, v0, v5, v4}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/l;ZI)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 545
+    .line 553
     invoke-virtual {v3, v0}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
     move-result-object v0
@@ -3875,14 +3727,14 @@
 
     invoke-virtual {v0, v4}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 542
+    .line 550
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_1
 
-    .line 548
+    .line 556
     :cond_2
     invoke-virtual {v3}, Landroid/text/SpannableStringBuilder;->length()I
 
@@ -3890,7 +3742,7 @@
 
     if-le v0, v5, :cond_3
 
-    .line 549
+    .line 557
     invoke-virtual {v3}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v0
@@ -3905,7 +3757,7 @@
 
     invoke-virtual {v3, v0, v1, v4}, Landroid/text/SpannableStringBuilder;->replace(IILjava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 551
+    .line 559
     :cond_3
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -3913,16 +3765,16 @@
 
     if-le v0, v6, :cond_4
 
-    .line 552
+    .line 560
     const-string v0, "..."
 
     invoke-virtual {v3, v0}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 554
+    .line 562
     :cond_4
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
-    const v1, 0x7f0a0266
+    const v1, 0x7f09027a
 
     new-array v4, v5, [Ljava/lang/Object;
 
@@ -3953,14 +3805,14 @@
     .end annotation
 
     .prologue
-    .line 529
+    .line 537
     if-nez p2, :cond_0
 
-    .line 533
+    .line 541
     :goto_0
     return-void
 
-    .line 532
+    .line 540
     :cond_0
     invoke-direct {p0, p2}, Lkik/android/KikNotificationHandler;->b(Ljava/util/List;)Ljava/lang/CharSequence;
 
@@ -3971,72 +3823,100 @@
     goto :goto_0
 .end method
 
-.method static synthetic b(Lkik/android/KikNotificationHandler;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 3
+.method static synthetic b(Lkik/android/KikNotificationHandler;)V
+    .locals 1
 
     .prologue
-    .line 0
-    .line 21482
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->i:Landroid/support/v4/app/NotificationManagerCompat;
+    .line 91
+    const/4 v0, 0x1
 
-    const/16 v1, 0xa
+    invoke-direct {p0, v0}, Lkik/android/KikNotificationHandler;->b(Z)V
 
-    invoke-virtual {v0, p1, v1}, Landroid/support/v4/app/NotificationManagerCompat;->cancel(Ljava/lang/String;I)V
-
-    .line 21483
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->h:Lkik/android/videochat/c;
-
-    invoke-interface {v0}, Lkik/android/videochat/c;->g()Lcom/rounds/kik/analytics/IReporterProxy;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->c:Lkik/core/interfaces/x;
-
-    const/4 v2, 0x0
-
-    invoke-interface {v1, p1, v2}, Lkik/core/interfaces/x;->a(Ljava/lang/String;Z)Lkik/core/datatypes/o;
-
-    move-result-object v1
-
-    const-string v2, "video_call"
-
-    invoke-interface {v0, v1, v2, p2}, Lcom/rounds/kik/analytics/IReporterProxy;->onPushRemoved(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 0
     return-void
 .end method
 
-.method private b(Lkik/core/datatypes/o;)V
+.method private b(Lkik/core/datatypes/l;I)V
     .locals 3
 
     .prologue
-    .line 897
+    .line 902
     if-nez p1, :cond_0
 
-    .line 912
+    .line 926
     :goto_0
     return-void
 
-    .line 901
+    .line 906
     :cond_0
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->b:Lcom/kik/cache/aa;
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->a:Lcom/kik/cache/KikVolleyImageLoader;
 
-    invoke-direct {p0, p1}, Lkik/android/KikNotificationHandler;->d(Lkik/core/datatypes/o;)Lcom/kik/cache/y;
+    invoke-direct {p0, p1}, Lkik/android/KikNotificationHandler;->c(Lkik/core/datatypes/l;)Lcom/kik/cache/KikImageRequest;
 
     move-result-object v1
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2}, Lkik/android/util/f;->a(Lcom/kik/cache/aa;Lcom/kik/cache/y;Z)Lcom/kik/events/Promise;
+    invoke-static {v0, v1, v2}, Lkik/android/util/f;->a(Lcom/kik/cache/KikVolleyImageLoader;Lcom/kik/cache/KikImageRequest;Z)Lcom/kik/events/Promise;
 
     move-result-object v0
 
-    .line 902
+    .line 907
     new-instance v1, Lkik/android/KikNotificationHandler$8;
 
-    invoke-direct {v1, p0}, Lkik/android/KikNotificationHandler$8;-><init>(Lkik/android/KikNotificationHandler;)V
+    invoke-direct {v1, p0, p2}, Lkik/android/KikNotificationHandler$8;-><init>(Lkik/android/KikNotificationHandler;I)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
+
+    goto :goto_0
+.end method
+
+.method private b(Z)V
+    .locals 3
+
+    .prologue
+    .line 302
+    if-eqz p1, :cond_0
+
+    .line 303
+    :try_start_0
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->i:Landroid/support/v4/app/NotificationManagerCompat;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/app/NotificationManagerCompat;->cancel(I)V
+
+    .line 313
+    :goto_0
+    return-void
+
+    .line 306
+    :cond_0
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->i:Landroid/support/v4/app/NotificationManagerCompat;
+
+    invoke-virtual {v0}, Landroid/support/v4/app/NotificationManagerCompat;->cancelAll()V
+
+    .line 307
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->g:Lkik/android/videochat/c;
+
+    invoke-interface {v0}, Lkik/android/videochat/c;->g()Lcom/rounds/kik/analytics/IReporterProxy;
+
+    move-result-object v0
+
+    const-string v1, "video_call"
+
+    invoke-direct {p0}, Lkik/android/KikNotificationHandler;->k()Z
+
+    move-result v2
+
+    invoke-interface {v0, v1, v2}, Lcom/rounds/kik/analytics/IReporterProxy;->onPushRemoved(Ljava/lang/String;Z)V
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    .line 313
+    :catch_0
+    move-exception v0
 
     goto :goto_0
 .end method
@@ -4045,17 +3925,17 @@
     .locals 1
 
     .prologue
-    .line 1160
+    .line 1156
     const/high16 v0, 0x42600000    # 56.0f
 
     invoke-static {v0}, Lkik/android/chat/KikApplication;->a(F)I
 
     move-result v0
 
-    .line 1161
+    .line 1157
     if-eqz p0, :cond_0
 
-    .line 1165
+    .line 1161
     :try_start_0
     invoke-static {p0, v0, v0}, Landroid/media/ThumbnailUtils;->extractThumbnail(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
     :try_end_0
@@ -4063,107 +3943,131 @@
 
     move-result-object p0
 
-    .line 1171
+    .line 1167
     :cond_0
     :goto_0
     return-object p0
 
-    .line 1168
     :catch_0
     move-exception v0
-
-    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method
 
-.method private c(Lkik/core/datatypes/o;)Landroid/graphics/Bitmap;
-    .locals 2
+.method private c(Lkik/core/datatypes/l;)Lcom/kik/cache/KikImageRequest;
+    .locals 10
 
     .prologue
-    .line 1081
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
+    const/4 v2, 0x0
 
-    if-nez v0, :cond_0
+    .line 1172
+    if-nez p1, :cond_0
 
-    .line 1082
+    .line 1173
     const/4 v0, 0x0
 
-    .line 1088
+    .line 1187
     :goto_0
     return-object v0
 
-    .line 1084
+    .line 1176
     :cond_0
-    const v0, 0x7f020358
+    invoke-virtual {p1}, Lkik/core/datatypes/l;->B()Z
 
-    .line 1085
-    invoke-virtual {p1}, Lkik/core/datatypes/o;->v()Z
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p1}, Lkik/core/datatypes/l;->z()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    move-object v0, p1
+
+    .line 1177
+    check-cast v0, Lkik/core/datatypes/p;
+
+    .line 1178
+    invoke-virtual {v0}, Lkik/core/datatypes/p;->P()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    check-cast p1, Lkik/core/datatypes/s;
+    .line 1179
+    invoke-static {v0}, Lkik/android/KikNotificationHandler;->d(Lkik/core/datatypes/l;)Lcom/kik/cache/KikImageRequest;
 
-    invoke-virtual {p1}, Lkik/core/datatypes/s;->N()Z
+    move-result-object v0
 
-    move-result v1
+    goto :goto_0
 
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->g:Lkik/core/interfaces/b;
-
-    invoke-static {v1}, Lkik/android/util/a;->a(Lkik/core/interfaces/b;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 1086
-    const v0, 0x7f020164
-
-    .line 1088
+    .line 1182
     :cond_1
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
+    sget-object v1, Lcom/kik/cache/KikImageRequest;->EMPTY_BITMAP_LISTENER:Lcom/android/volley/h$b;
 
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    sget-object v4, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    move-result-object v1
+    sget-object v5, Lcom/kik/cache/KikImageRequest;->EMPTY_ERROR_LISTENER:Lcom/android/volley/h$a;
 
-    invoke-static {v1, v0}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
+    iget-object v6, p0, Lkik/android/KikNotificationHandler;->b:Lkik/core/interfaces/v;
+
+    iget-object v8, p0, Lkik/android/KikNotificationHandler;->a:Lcom/kik/cache/KikVolleyImageLoader;
+
+    iget-object v9, p0, Lkik/android/KikNotificationHandler;->e:Lcom/kik/android/Mixpanel;
+
+    move v3, v2
+
+    move v7, v2
+
+    invoke-static/range {v0 .. v9}, Lcom/kik/cache/GroupImageRequest;->makeGroupImageRequest(Lkik/core/datatypes/p;Lcom/android/volley/h$b;IILandroid/graphics/Bitmap$Config;Lcom/android/volley/h$a;Lkik/core/interfaces/v;ZLcom/kik/cache/KikVolleyImageLoader;Lcom/kik/android/Mixpanel;)Lcom/kik/cache/GroupImageRequest;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 1187
+    :cond_2
+    invoke-static {p1}, Lkik/android/KikNotificationHandler;->d(Lkik/core/datatypes/l;)Lcom/kik/cache/KikImageRequest;
 
     move-result-object v0
 
     goto :goto_0
 .end method
 
-.method static synthetic c(Lkik/android/KikNotificationHandler;)Ljava/lang/Object;
+.method static synthetic c(Lkik/android/KikNotificationHandler;)Lcom/kik/events/Promise;
     .locals 1
 
     .prologue
-    .line 85
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->j:Ljava/lang/Object;
+    .line 91
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->r:Lcom/kik/events/Promise;
 
     return-object v0
 .end method
 
-.method private c(Lkik/core/datatypes/f;)Lkik/core/datatypes/o;
+.method private c(Lkik/core/datatypes/f;)Lkik/core/datatypes/l;
     .locals 3
 
     .prologue
     .line 1308
-    invoke-virtual {p1}, Lkik/core/datatypes/f;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/f;->g()Ljava/lang/String;
 
     move-result-object v0
 
     .line 1310
-    invoke-virtual {p1}, Lkik/core/datatypes/f;->g()Lkik/core/datatypes/Message;
+    invoke-virtual {p1}, Lkik/core/datatypes/f;->j()Lkik/core/datatypes/Message;
 
     move-result-object v1
 
     .line 1311
-    invoke-virtual {v1}, Lkik/core/datatypes/Message;->s()Z
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Lkik/core/datatypes/Message;->q()Z
 
     move-result v2
 
@@ -4176,11 +4080,11 @@
 
     .line 1315
     :cond_0
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->c:Lkik/core/interfaces/x;
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->b:Lkik/core/interfaces/v;
 
     const/4 v2, 0x1
 
-    invoke-interface {v1, v0, v2}, Lkik/core/interfaces/x;->a(Ljava/lang/String;Z)Lkik/core/datatypes/o;
+    invoke-interface {v1, v0, v2}, Lkik/core/interfaces/v;->a(Ljava/lang/String;Z)Lkik/core/datatypes/l;
 
     move-result-object v0
 
@@ -4191,7 +4095,7 @@
     .locals 4
 
     .prologue
-    .line 568
+    .line 576
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
@@ -4208,7 +4112,7 @@
 
     move-result-object v0
 
-    .line 570
+    .line 578
     iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
     const/16 v2, 0x3900
@@ -4219,102 +4123,44 @@
 
     move-result-object v0
 
-    .line 574
+    .line 582
     return-object v0
 .end method
 
-.method private d(Lkik/core/datatypes/o;)Lcom/kik/cache/y;
-    .locals 10
+.method private static d(Lkik/core/datatypes/l;)Lcom/kik/cache/KikImageRequest;
+    .locals 7
 
     .prologue
     const/4 v2, 0x0
 
-    .line 1176
-    if-nez p1, :cond_0
+    .line 1193
+    sget-object v1, Lcom/kik/cache/KikImageRequest;->EMPTY_BITMAP_LISTENER:Lcom/android/volley/h$b;
 
-    .line 1177
-    const/4 v0, 0x0
+    sget-object v4, Lcom/kik/cache/KikImageRequest;->EMPTY_ERROR_LISTENER:Lcom/android/volley/h$a;
 
-    .line 1191
-    :goto_0
-    return-object v0
-
-    .line 1180
-    :cond_0
-    invoke-virtual {p1}, Lkik/core/datatypes/o;->v()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p1}, Lkik/core/datatypes/o;->t()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    move-object v0, p1
-
-    .line 1181
-    check-cast v0, Lkik/core/datatypes/s;
-
-    .line 1182
-    invoke-virtual {v0}, Lkik/core/datatypes/s;->N()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->g:Lkik/core/interfaces/b;
-
-    invoke-static {v1}, Lkik/android/util/a;->a(Lkik/core/interfaces/b;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 1183
-    invoke-static {v0}, Lkik/android/KikNotificationHandler;->e(Lkik/core/datatypes/o;)Lcom/kik/cache/y;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    .line 1186
-    :cond_1
-    sget-object v1, Lcom/kik/cache/y;->f:Lcom/android/volley/i$b;
-
-    sget-object v4, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
-
-    sget-object v5, Lcom/kik/cache/y;->e:Lcom/android/volley/i$a;
-
-    iget-object v6, p0, Lkik/android/KikNotificationHandler;->c:Lkik/core/interfaces/x;
-
-    iget-object v8, p0, Lkik/android/KikNotificationHandler;->b:Lcom/kik/cache/aa;
-
-    iget-object v9, p0, Lkik/android/KikNotificationHandler;->f:Lcom/kik/android/Mixpanel;
+    move-object v0, p0
 
     move v3, v2
 
-    move v7, v2
+    move v5, v2
 
-    invoke-static/range {v0 .. v9}, Lcom/kik/cache/r;->a(Lkik/core/datatypes/s;Lcom/android/volley/i$b;IILandroid/graphics/Bitmap$Config;Lcom/android/volley/i$a;Lkik/core/interfaces/x;ZLcom/kik/cache/aa;Lcom/kik/android/Mixpanel;)Lcom/kik/cache/r;
+    move v6, v2
 
-    move-result-object v0
-
-    goto :goto_0
-
-    .line 1191
-    :cond_2
-    invoke-static {p1}, Lkik/android/KikNotificationHandler;->e(Lkik/core/datatypes/o;)Lcom/kik/cache/y;
+    invoke-static/range {v0 .. v6}, Lcom/kik/cache/ContactImageRequest;->getContactImageRequest(Lkik/core/datatypes/l;Lcom/android/volley/h$b;IILcom/android/volley/h$a;ZZ)Lcom/kik/cache/ContactImageRequest;
 
     move-result-object v0
 
-    goto :goto_0
+    return-object v0
+.end method
+
+.method static synthetic d(Lkik/android/KikNotificationHandler;)Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 91
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->j:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
 .method private e()Landroid/app/PendingIntent;
@@ -4323,32 +4169,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 977
+    .line 991
     invoke-direct {p0, v0, v0}, Lkik/android/KikNotificationHandler;->a(Ljava/util/List;Ljava/lang/String;)Landroid/app/PendingIntent;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method private static e(Lkik/core/datatypes/o;)Lcom/kik/cache/y;
-    .locals 6
-
-    .prologue
-    const/4 v2, 0x0
-
-    .line 1197
-    sget-object v1, Lcom/kik/cache/y;->f:Lcom/android/volley/i$b;
-
-    sget-object v4, Lcom/kik/cache/y;->e:Lcom/android/volley/i$a;
-
-    move-object v0, p0
-
-    move v3, v2
-
-    move v5, v2
-
-    invoke-static/range {v0 .. v5}, Lcom/kik/cache/f;->a(Lkik/core/datatypes/o;Lcom/android/volley/i$b;IILcom/android/volley/i$a;Z)Lcom/kik/cache/f;
 
     move-result-object v0
 
@@ -4361,16 +4183,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1093
+    .line 1089
     iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
     if-nez v1, :cond_0
 
-    .line 1103
+    .line 1099
     :goto_0
     return-object v0
 
-    .line 1098
+    .line 1094
     :cond_0
     :try_start_0
     iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
@@ -4379,7 +4201,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f020165
+    const v2, 0x7f0201ab
 
     invoke-static {v1, v2}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
     :try_end_0
@@ -4389,11 +4211,8 @@
 
     goto :goto_0
 
-    .line 1101
     :catch_0
     move-exception v1
-
-    invoke-static {v1}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method
@@ -4404,16 +4223,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1108
+    .line 1104
     iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
     if-nez v1, :cond_0
 
-    .line 1118
+    .line 1114
     :goto_0
     return-object v0
 
-    .line 1113
+    .line 1109
     :cond_0
     :try_start_0
     iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
@@ -4422,7 +4241,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f020166
+    const v2, 0x7f0201ac
 
     invoke-static {v1, v2}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
     :try_end_0
@@ -4432,11 +4251,8 @@
 
     goto :goto_0
 
-    .line 1116
     :catch_0
     move-exception v1
-
-    invoke-static {v1}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method
@@ -4445,23 +4261,23 @@
     .locals 2
 
     .prologue
-    .line 1202
+    .line 1198
     invoke-direct {p0}, Lkik/android/KikNotificationHandler;->j()Z
 
     move-result v0
 
-    .line 1203
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    .line 1199
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
-    invoke-interface {v1}, Lkik/core/interfaces/j;->L()I
+    invoke-interface {v1}, Lkik/core/interfaces/IConversation;->O()I
 
     move-result v1
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
-    invoke-interface {v0}, Lkik/core/interfaces/j;->M()I
+    invoke-interface {v0}, Lkik/core/interfaces/IConversation;->P()I
 
     move-result v0
 
@@ -4480,40 +4296,40 @@
     .locals 2
 
     .prologue
-    .line 1218
-    .line 12208
+    .line 1214
+    .line 12204
     invoke-direct {p0}, Lkik/android/KikNotificationHandler;->j()Z
 
     move-result v0
 
-    .line 12209
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    .line 12205
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
-    invoke-interface {v1}, Lkik/core/interfaces/j;->O()Ljava/util/List;
+    invoke-interface {v1}, Lkik/core/interfaces/IConversation;->R()Ljava/util/List;
 
     move-result-object v1
 
-    .line 12210
+    .line 12206
     if-eqz v0, :cond_0
 
-    .line 12211
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    .line 12207
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
-    invoke-interface {v0}, Lkik/core/interfaces/j;->N()Ljava/util/List;
+    invoke-interface {v0}, Lkik/core/interfaces/IConversation;->Q()Ljava/util/List;
 
     move-result-object v0
 
     invoke-interface {v1, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 12213
+    .line 12209
     :cond_0
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/f/b;
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/h/b;
 
-    invoke-virtual {v0, v1}, Lkik/android/f/b;->c(Ljava/util/List;)Ljava/util/List;
+    invoke-virtual {v0, v1}, Lkik/android/h/b;->c(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 1218
+    .line 1214
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -4525,93 +4341,90 @@
     .locals 3
 
     .prologue
-    .line 1223
+    .line 1219
     const/4 v0, 0x0
 
-    .line 1224
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->l:Lkik/core/interfaces/af;
+    .line 1220
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->l:Lkik/core/interfaces/ag;
 
-    invoke-interface {v1}, Lkik/core/interfaces/af;->d()Lkik/core/datatypes/ad;
+    invoke-interface {v1}, Lkik/core/interfaces/ag;->d()Lkik/core/datatypes/aa;
 
     move-result-object v1
 
-    .line 1225
-    iget-object v2, v1, Lkik/core/datatypes/ad;->h:Ljava/lang/Boolean;
+    .line 1221
+    iget-object v2, v1, Lkik/core/datatypes/aa;->h:Ljava/lang/Boolean;
 
     if-eqz v2, :cond_0
 
-    .line 1226
-    iget-object v0, v1, Lkik/core/datatypes/ad;->h:Ljava/lang/Boolean;
+    .line 1222
+    iget-object v0, v1, Lkik/core/datatypes/aa;->h:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
-    .line 1228
+    .line 1224
     :cond_0
     return v0
 .end method
 
-
-# virtual methods
-.method public final a()V
+.method private k()Z
     .locals 3
 
     .prologue
-    .line 279
-    :try_start_0
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->i:Landroid/support/v4/app/NotificationManagerCompat;
+    .line 1448
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->f:Lkik/core/interfaces/b;
 
-    invoke-virtual {v0}, Landroid/support/v4/app/NotificationManagerCompat;->cancelAll()V
+    const-string v1, "pushnotif_video_chat"
 
-    .line 280
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->g:Lkik/core/interfaces/b;
-
-    const-string v1, "video_chat_notification_display"
-
-    const-string v2, "split_and_names"
+    const-string v2, "show"
 
     invoke-interface {v0, v1, v2}, Lkik/core/interfaces/b;->a(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 
-    .line 283
     if-eqz v0, :cond_0
 
-    .line 284
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->a:Lkik/android/f/d;
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->d:Lkik/core/interfaces/ad;
 
-    invoke-static {p0}, Lkik/android/j;->a(Lkik/android/KikNotificationHandler;)Lkik/android/f/d$b;
+    const-string v1, "kik.sound"
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lkik/android/f/d;->a(Lkik/android/f/d$b;)V
-
-    .line 296
-    :goto_0
-    return-void
-
-    .line 290
-    :cond_0
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->h:Lkik/android/videochat/c;
-
-    invoke-interface {v0}, Lkik/android/videochat/c;->g()Lcom/rounds/kik/analytics/IReporterProxy;
+    .line 1449
+    invoke-interface {v0, v1}, Lkik/core/interfaces/ad;->w(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    const-string v1, "video_call"
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-interface {v0, v1}, Lcom/rounds/kik/analytics/IReporterProxy;->onPushRemoved(Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result v0
 
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 1448
     goto :goto_0
+.end method
 
-    .line 296
-    :catch_0
-    move-exception v0
 
-    goto :goto_0
+# virtual methods
+.method public final a()V
+    .locals 1
+
+    .prologue
+    .line 294
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lkik/android/KikNotificationHandler;->b(Z)V
+
+    .line 295
+    return-void
 .end method
 
 .method public final a(Lkik/core/datatypes/Message;ZZ)V
@@ -4620,7 +4433,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 328
+    .line 345
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Lkik/core/datatypes/Message;->k()Z
@@ -4629,27 +4442,27 @@
 
     if-eqz v0, :cond_1
 
-    .line 344
+    .line 361
     :cond_0
     :goto_0
     return-void
 
-    .line 332
+    .line 349
     :cond_1
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
     invoke-virtual {p1}, Lkik/core/datatypes/Message;->i()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-interface {v0, v2}, Lkik/core/interfaces/j;->a(Ljava/lang/String;)Lkik/core/datatypes/f;
+    invoke-interface {v0, v2}, Lkik/core/interfaces/IConversation;->a(Ljava/lang/String;)Lkik/core/datatypes/f;
 
     move-result-object v0
 
-    .line 334
-    iget-object v2, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    .line 351
+    iget-object v2, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
-    invoke-interface {v2, v0}, Lkik/core/interfaces/j;->a(Lkik/core/datatypes/f;)I
+    invoke-interface {v2, v0}, Lkik/core/interfaces/IConversation;->a(Lkik/core/datatypes/f;)I
 
     move-result v2
 
@@ -4657,16 +4470,16 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 335
+    .line 352
     const/4 v4, 0x1
 
-    .line 337
+    .line 354
     :goto_1
     if-eqz v4, :cond_2
 
-    iget-object v2, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    iget-object v2, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
-    invoke-interface {v2, v0, p1}, Lkik/core/interfaces/j;->a(Lkik/core/datatypes/f;Lkik/core/datatypes/Message;)Z
+    invoke-interface {v2, v0, p1}, Lkik/core/interfaces/IConversation;->a(Lkik/core/datatypes/f;Lkik/core/datatypes/Message;)Z
 
     move-result v0
 
@@ -4681,17 +4494,17 @@
 
     move v5, p3
 
-    .line 341
+    .line 358
     invoke-direct/range {v0 .. v5}, Lkik/android/KikNotificationHandler;->a(ZZLkik/core/datatypes/Message;ZZ)V
 
-    .line 342
+    .line 359
     invoke-direct {p0}, Lkik/android/KikNotificationHandler;->i()I
 
     move-result v0
 
     iput v0, p0, Lkik/android/KikNotificationHandler;->p:I
 
-    .line 343
+    .line 360
     invoke-direct {p0}, Lkik/android/KikNotificationHandler;->h()I
 
     move-result v0
@@ -4706,59 +4519,50 @@
     goto :goto_1
 .end method
 
-.method public final a(Lkik/core/datatypes/o;)V
-    .locals 12
+.method public final a(Lkik/core/datatypes/l;)V
+    .locals 11
 
     .prologue
-    const/4 v11, 0x2
+    const/4 v10, 0x0
 
-    const/4 v6, 0x1
+    const/16 v9, 0xa
 
-    const/4 v7, 0x0
+    const/4 v1, 0x1
 
-    .line 1436
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->g:Lkik/core/interfaces/b;
+    const/4 v2, 0x0
 
-    const-string v1, "video_chat_notification_display"
-
-    const-string v2, "split_and_names"
-
-    invoke-interface {v0, v1, v2}, Lkik/core/interfaces/b;->a(Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result v2
-
-    .line 1438
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->h:Lkik/android/videochat/c;
+    .line 1459
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->g:Lkik/android/videochat/c;
 
     invoke-interface {v0}, Lkik/android/videochat/c;->d()Ljava/util/List;
 
     move-result-object v3
 
-    .line 1440
+    .line 1461
     if-eqz p1, :cond_0
 
-    .line 1441
+    .line 1462
     invoke-interface {v3, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 1444
+    .line 1465
     :cond_0
-    new-instance v1, Landroid/support/v4/app/NotificationCompat$Builder;
+    new-instance v4, Landroid/support/v4/app/NotificationCompat$Builder;
 
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
-    invoke-direct {v1, v0}, Landroid/support/v4/app/NotificationCompat$Builder;-><init>(Landroid/content/Context;)V
+    invoke-direct {v4, v0}, Landroid/support/v4/app/NotificationCompat$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 1445
-    invoke-virtual {v1, v6}, Landroid/support/v4/app/NotificationCompat$Builder;->setOnlyAlertOnce(Z)Landroid/support/v4/app/NotificationCompat$Builder;
+    .line 1466
+    invoke-virtual {v4, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setOnlyAlertOnce(Z)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    move-result-object v4
+    move-result-object v5
 
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->e:Lkik/core/interfaces/ad;
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->d:Lkik/core/interfaces/ad;
 
-    const-string v5, "kik.sound"
+    const-string v6, "kik.sound"
 
-    .line 1446
-    invoke-interface {v0, v5}, Lkik/core/interfaces/ad;->u(Ljava/lang/String;)Ljava/lang/Boolean;
+    .line 1467
+    invoke-interface {v0, v6}, Lkik/core/interfaces/ad;->w(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -4766,181 +4570,118 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_3
 
-    move v0, v6
+    move v0, v1
 
     :goto_0
-    invoke-virtual {v4, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setDefaults(I)Landroid/support/v4/app/NotificationCompat$Builder;
+    invoke-virtual {v5, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setDefaults(I)Landroid/support/v4/app/NotificationCompat$Builder;
 
     move-result-object v0
 
-    iget-object v4, p0, Lkik/android/KikNotificationHandler;->e:Lkik/core/interfaces/ad;
+    iget-object v5, p0, Lkik/android/KikNotificationHandler;->d:Lkik/core/interfaces/ad;
 
-    const-string v5, "kik.vibrate"
+    const-string v6, "kik.vibrate"
 
-    .line 1447
-    invoke-interface {v4, v5}, Lkik/core/interfaces/ad;->u(Ljava/lang/String;)Ljava/lang/Boolean;
+    .line 1468
+    invoke-interface {v5, v6}, Lkik/core/interfaces/ad;->w(Ljava/lang/String;)Ljava/lang/Boolean;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v5}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result v4
+    move-result v5
 
-    invoke-static {v4, v7}, Lkik/android/f/c;->a(ZZ)[J
+    invoke-static {v5, v2}, Lkik/android/h/c;->a(ZZ)[J
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-virtual {v0, v4}, Landroid/support/v4/app/NotificationCompat$Builder;->setVibrate([J)Landroid/support/v4/app/NotificationCompat$Builder;
+    invoke-virtual {v0, v5}, Landroid/support/v4/app/NotificationCompat$Builder;->setVibrate([J)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    .line 1449
-    if-eqz v2, :cond_5
+    .line 14475
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->g:Lkik/android/videochat/c;
 
-    .line 14459
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->a:Lkik/android/f/d;
-
-    invoke-virtual {v0}, Lkik/android/f/d;->a()V
-
-    .line 14461
-    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v8
-
-    :goto_1
-    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v0}, Lkik/android/videochat/c;->h()Z
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-nez v0, :cond_2
 
-    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 14478
+    invoke-static {v3}, Lkik/core/util/l;->a(Ljava/util/List;)Z
 
-    move-result-object v2
+    move-result v0
 
-    check-cast v2, Lkik/core/datatypes/o;
+    if-nez v0, :cond_1
 
-    .line 14524
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->h:Lkik/android/videochat/c;
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->f:Lkik/core/interfaces/b;
 
-    invoke-interface {v0, v2}, Lkik/android/videochat/c;->a(Lkik/core/datatypes/o;)Ljava/util/List;
+    const-string v5, "hide_video_chat_notifications_android"
 
-    move-result-object v3
+    const-string v6, "hide"
 
-    .line 14525
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
+    invoke-interface {v0, v5, v6}, Lkik/core/interfaces/b;->a(Ljava/lang/String;Ljava/lang/String;)Z
 
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    move-result v0
 
-    move-result-object v4
+    if-eqz v0, :cond_4
 
-    .line 14526
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 14479
+    :cond_1
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->i:Landroid/support/v4/app/NotificationManagerCompat;
 
-    const-string v5, " "
+    invoke-virtual {v0, v9}, Landroid/support/v4/app/NotificationManagerCompat;->cancel(I)V
 
-    invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 14480
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->g:Lkik/android/videochat/c;
 
-    const v5, 0x1f388
-
-    invoke-static {v5}, Lkik/android/util/f;->b(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {v0}, Lkik/android/videochat/c;->g()Lcom/rounds/kik/analytics/IReporterProxy;
 
     move-result-object v0
 
-    const v5, 0x1f389
+    const-string v1, "video_call"
 
-    invoke-static {v5}, Lkik/android/util/f;->b(I)Ljava/lang/String;
+    invoke-direct {p0}, Lkik/android/KikNotificationHandler;->k()Z
 
-    move-result-object v5
+    move-result v2
 
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {v0, v1, v2}, Lcom/rounds/kik/analytics/IReporterProxy;->onPushRemoved(Ljava/lang/String;Z)V
 
-    move-result-object v0
+    .line 14481
+    :cond_2
+    return-void
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_3
+    move v0, v2
 
-    move-result-object v5
+    .line 1467
+    goto :goto_0
 
-    .line 14527
+    .line 14484
+    :cond_4
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 14528
-    packed-switch v0, :pswitch_data_0
+    if-ne v0, v1, :cond_5
 
-    .line 14555
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const v9, 0x7f0a0567
-
-    invoke-virtual {v4, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v9
-
-    invoke-virtual {v3, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v9, " "
-
-    invoke-virtual {v3, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const v9, 0x7f0a0566
-
-    new-array v10, v6, [Ljava/lang/Object;
-
-    .line 14557
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 14485
+    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    aput-object v0, v10, v7
+    check-cast v0, Lkik/core/datatypes/l;
 
-    invoke-virtual {v4, v9, v10}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 14486
+    invoke-direct {p0, v0, v9}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/l;I)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 14487
+    invoke-virtual {v4, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setLargeIcon(Landroid/graphics/Bitmap;)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    move-result-object v0
-
-    .line 14561
-    :goto_2
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 14463
-    invoke-virtual {v2}, Lkik/core/datatypes/o;->b()Ljava/lang/String;
-
-    move-result-object v5
-
-    .line 14464
+    .line 14490
+    :cond_5
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
     move-result-object v0
@@ -4951,262 +4692,348 @@
 
     invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
-    .line 14466
-    iget-object v9, p0, Lkik/android/KikNotificationHandler;->a:Lkik/android/f/d;
+    .line 14491
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
-    move-object v0, p0
+    const v6, 0x7f0905c5
 
-    invoke-static/range {v0 .. v5}, Lkik/android/k;->a(Lkik/android/KikNotificationHandler;Landroid/support/v4/app/NotificationCompat$Builder;Lkik/core/datatypes/o;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lkik/android/f/d$a;
+    invoke-virtual {v0, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v9, v5, v4, v3, v0}, Lkik/android/f/d;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkik/android/f/d$a;)V
+    invoke-virtual {v4, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    goto/16 :goto_1
+    move-result-object v6
 
-    :cond_1
-    move v0, v7
+    .line 14514
+    invoke-interface {v3}, Ljava/util/List;->size()I
 
-    .line 1446
-    goto/16 :goto_0
+    move-result v0
 
-    .line 14531
-    :pswitch_0
-    const v0, 0x7f0a0568
+    if-ne v0, v1, :cond_6
 
-    invoke-virtual {v4, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    .line 14515
+    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lkik/core/datatypes/l;
+
+    .line 15229
+    const/4 v7, -0x1
+
+    invoke-direct {p0, v0, v2, v7}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/l;ZI)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 14492
+    :goto_1
+    invoke-virtual {v6, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/support/v4/app/NotificationCompat$Builder;
+
+    move-result-object v6
+
+    .line 16064
+    invoke-interface {v3}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-ne v0, v1, :cond_7
+
+    .line 16065
+    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lkik/core/datatypes/l;
+
+    invoke-direct {p0, v0, v2, v5}, Lkik/android/KikNotificationHandler;->a(Lkik/core/datatypes/l;ZLjava/lang/String;)Landroid/app/PendingIntent;
+
+    move-result-object v0
+
+    .line 14493
+    :goto_2
+    invoke-virtual {v6, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentIntent(Landroid/app/PendingIntent;)Landroid/support/v4/app/NotificationCompat$Builder;
+
+    move-result-object v6
+
+    .line 17587
+    invoke-interface {v3}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    new-array v7, v0, [Ljava/lang/String;
+
+    move v1, v2
+
+    .line 17588
+    :goto_3
+    invoke-interface {v3}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-ge v1, v0, :cond_9
+
+    .line 17589
+    invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lkik/core/datatypes/l;
+
+    invoke-virtual {v0}, Lkik/core/datatypes/l;->k()Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v7, v1
+
+    .line 17588
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_3
+
+    .line 14518
+    :cond_6
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v7, 0x7f0906dd
+
+    invoke-virtual {v0, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-array v7, v1, [Ljava/lang/Object;
+
+    invoke-interface {v3}, Ljava/util/List;->size()I
+
+    move-result v8
+
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    aput-object v8, v7, v2
+
+    invoke-static {v0, v7}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_1
+
+    .line 16067
+    :cond_7
+    if-eqz v5, :cond_8
+
+    .line 16068
+    invoke-direct {p0, v3, v5}, Lkik/android/KikNotificationHandler;->a(Ljava/util/List;Ljava/lang/String;)Landroid/app/PendingIntent;
 
     move-result-object v0
 
     goto :goto_2
 
-    .line 14534
-    :pswitch_1
-    invoke-virtual {v2}, Lkik/core/datatypes/o;->v()Z
+    .line 16991
+    :cond_8
+    invoke-direct {p0, v10, v10}, Lkik/android/KikNotificationHandler;->a(Ljava/util/List;Ljava/lang/String;)Landroid/app/PendingIntent;
+
+    move-result-object v0
+
+    goto :goto_2
+
+    .line 17591
+    :cond_9
+    new-instance v0, Landroid/content/Intent;
+
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+
+    const/16 v1, 0x20
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string v1, "kik.android.notificationHandler.ACTION_DISMISS_VIDEO"
+
+    .line 17592
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string v1, "video_chat_notification_id"
+
+    .line 17593
+    invoke-virtual {v0, v1, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string v1, "conversation_jids"
+
+    .line 17594
+    invoke-virtual {v0, v1, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    .line 17596
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
+
+    const/16 v7, 0x3901
+
+    const/high16 v8, 0x8000000
+
+    invoke-static {v1, v7, v0, v8}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object v0
+
+    .line 14494
+    invoke-virtual {v6, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setDeleteIntent(Landroid/app/PendingIntent;)Landroid/support/v4/app/NotificationCompat$Builder;
+
+    move-result-object v0
+
+    .line 14495
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v6
+
+    invoke-virtual {v0, v6, v7}, Landroid/support/v4/app/NotificationCompat$Builder;->setWhen(J)Landroid/support/v4/app/NotificationCompat$Builder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
+
+    .line 14496
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v6, 0x7f0e007f
+
+    invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setColor(I)Landroid/support/v4/app/NotificationCompat$Builder;
+
+    move-result-object v0
+
+    const v1, 0x7f020202
+
+    .line 14497
+    invoke-virtual {v0, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setSmallIcon(I)Landroid/support/v4/app/NotificationCompat$Builder;
+
+    .line 14499
+    invoke-direct {p0}, Lkik/android/KikNotificationHandler;->k()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    .line 18454
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "android.resource://"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "/2131230735"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    .line 14500
+    invoke-virtual {v4, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setSound(Landroid/net/Uri;)Landroid/support/v4/app/NotificationCompat$Builder;
+
+    .line 14502
+    invoke-virtual {v4, v2}, Landroid/support/v4/app/NotificationCompat$Builder;->setDefaults(I)Landroid/support/v4/app/NotificationCompat$Builder;
+
+    .line 14505
+    :cond_a
+    invoke-virtual {v4}, Landroid/support/v4/app/NotificationCompat$Builder;->build()Landroid/app/Notification;
+
+    move-result-object v0
+
+    .line 14506
+    invoke-direct {p0, v9, v0}, Lkik/android/KikNotificationHandler;->a(ILandroid/app/Notification;)V
+
+    .line 14507
+    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_4
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 14535
-    const v9, 0x7f0a0563
-
-    new-array v10, v6, [Ljava/lang/Object;
-
-    .line 14536
-    invoke-interface {v3, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkik/core/datatypes/o;
+    check-cast v0, Lkik/core/datatypes/l;
 
-    invoke-virtual {v0}, Lkik/core/datatypes/o;->e()Ljava/lang/String;
+    .line 14508
+    iget-object v2, p0, Lkik/android/KikNotificationHandler;->g:Lkik/android/videochat/c;
 
-    move-result-object v0
+    invoke-interface {v2}, Lkik/android/videochat/c;->g()Lcom/rounds/kik/analytics/IReporterProxy;
 
-    aput-object v0, v10, v7
+    move-result-object v2
 
-    .line 14535
-    invoke-virtual {v4, v9, v10}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    const-string v3, "video_call"
 
-    move-result-object v0
+    invoke-direct {p0}, Lkik/android/KikNotificationHandler;->k()Z
 
-    goto :goto_2
+    move-result v4
 
-    .line 14539
-    :cond_2
-    const v9, 0x7f0a0561
+    invoke-interface {v2, v0, v3, v5, v4}, Lcom/rounds/kik/analytics/IReporterProxy;->onPushShow(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    new-array v10, v6, [Ljava/lang/Object;
-
-    .line 14540
-    invoke-interface {v3, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkik/core/datatypes/o;
-
-    invoke-virtual {v0}, Lkik/core/datatypes/o;->e()Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, v10, v7
-
-    .line 14539
-    invoke-virtual {v4, v9, v10}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_2
-
-    .line 14544
-    :pswitch_2
-    const v9, 0x7f0a0564
-
-    new-array v10, v11, [Ljava/lang/Object;
-
-    .line 14545
-    invoke-interface {v3, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkik/core/datatypes/o;
-
-    invoke-virtual {v0}, Lkik/core/datatypes/o;->e()Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, v10, v7
-
-    .line 14546
-    invoke-interface {v3, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkik/core/datatypes/o;
-
-    invoke-virtual {v0}, Lkik/core/datatypes/o;->e()Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, v10, v6
-
-    .line 14544
-    invoke-virtual {v4, v9, v10}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto/16 :goto_2
-
-    .line 14549
-    :pswitch_3
-    const v9, 0x7f0a0565
-
-    const/4 v0, 0x3
-
-    new-array v10, v0, [Ljava/lang/Object;
-
-    .line 14550
-    invoke-interface {v3, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkik/core/datatypes/o;
-
-    invoke-virtual {v0}, Lkik/core/datatypes/o;->e()Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, v10, v7
-
-    .line 14551
-    invoke-interface {v3, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkik/core/datatypes/o;
-
-    invoke-virtual {v0}, Lkik/core/datatypes/o;->e()Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, v10, v6
-
-    .line 14552
-    invoke-interface {v3, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkik/core/datatypes/o;
-
-    invoke-virtual {v0}, Lkik/core/datatypes/o;->e()Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, v10, v11
-
-    .line 14549
-    invoke-virtual {v4, v9, v10}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto/16 :goto_2
-
-    .line 14481
-    :cond_3
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->a:Lkik/android/f/d;
-
-    invoke-static {p0}, Lkik/android/l;->a(Lkik/android/KikNotificationHandler;)Lkik/android/f/d$b;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lkik/android/f/d;->b(Lkik/android/f/d$b;)V
-
-    .line 14489
-    if-eqz p1, :cond_4
-
-    invoke-virtual {p1}, Lkik/core/datatypes/o;->b()Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_4
-
-    .line 14491
-    invoke-virtual {p1}, Lkik/core/datatypes/o;->b()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 14492
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->i:Landroid/support/v4/app/NotificationManagerCompat;
-
-    const/16 v2, 0xa
-
-    invoke-virtual {v1, v0, v2}, Landroid/support/v4/app/NotificationManagerCompat;->cancel(Ljava/lang/String;I)V
-
-    .line 1455
-    :cond_4
-    :goto_3
-    return-void
-
-    .line 1453
-    :cond_5
-    invoke-direct {p0, v3, v1}, Lkik/android/KikNotificationHandler;->a(Ljava/util/List;Landroid/support/v4/app/NotificationCompat$Builder;)V
-
-    goto :goto_3
-
-    .line 14528
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-    .end packed-switch
+    goto :goto_4
 .end method
 
-.method public final a(Lkik/core/interfaces/af;Lkik/core/interfaces/j;Lkik/core/interfaces/ad;Lcom/kik/components/CoreComponent;)V
+.method public final a(Lkik/core/interfaces/ag;Lkik/core/interfaces/IConversation;Lkik/core/interfaces/ad;Lcom/kik/components/CoreComponent;)V
     .locals 3
 
     .prologue
-    .line 253
+    .line 272
     invoke-interface {p4, p0}, Lcom/kik/components/CoreComponent;->a(Lkik/android/KikNotificationHandler;)V
 
-    .line 254
-    iput-object p2, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    .line 273
+    iput-object p2, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
-    .line 255
-    iput-object p1, p0, Lkik/android/KikNotificationHandler;->l:Lkik/core/interfaces/af;
+    .line 274
+    iput-object p1, p0, Lkik/android/KikNotificationHandler;->l:Lkik/core/interfaces/ag;
 
-    .line 256
+    .line 275
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->q:Lcom/kik/events/d;
 
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
-    invoke-interface {v1}, Lkik/core/interfaces/j;->n()Lcom/kik/events/c;
+    invoke-interface {v1}, Lkik/core/interfaces/IConversation;->o()Lcom/kik/events/c;
 
     move-result-object v1
 
@@ -5214,12 +5041,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/kik/events/d;->a(Lcom/kik/events/c;Lcom/kik/events/e;)Lcom/kik/events/e;
 
-    .line 257
+    .line 276
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->q:Lcom/kik/events/d;
 
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
-    invoke-interface {v1}, Lkik/core/interfaces/j;->m()Lcom/kik/events/c;
+    invoke-interface {v1}, Lkik/core/interfaces/IConversation;->n()Lcom/kik/events/c;
 
     move-result-object v1
 
@@ -5227,12 +5054,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/kik/events/d;->a(Lcom/kik/events/c;Lcom/kik/events/e;)Lcom/kik/events/e;
 
-    .line 258
+    .line 277
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->q:Lcom/kik/events/d;
 
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
-    invoke-interface {v1}, Lkik/core/interfaces/j;->o()Lcom/kik/events/c;
+    invoke-interface {v1}, Lkik/core/interfaces/IConversation;->p()Lcom/kik/events/c;
 
     move-result-object v1
 
@@ -5240,12 +5067,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/kik/events/d;->a(Lcom/kik/events/c;Lcom/kik/events/e;)Lcom/kik/events/e;
 
-    .line 259
+    .line 278
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->q:Lcom/kik/events/d;
 
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
-    invoke-interface {v1}, Lkik/core/interfaces/j;->b()Lcom/kik/events/c;
+    invoke-interface {v1}, Lkik/core/interfaces/IConversation;->b()Lcom/kik/events/c;
 
     move-result-object v1
 
@@ -5253,12 +5080,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/kik/events/d;->a(Lcom/kik/events/c;Lcom/kik/events/e;)Lcom/kik/events/e;
 
-    .line 260
+    .line 279
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->q:Lcom/kik/events/d;
 
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
-    invoke-interface {v1}, Lkik/core/interfaces/j;->l()Lcom/kik/events/c;
+    invoke-interface {v1}, Lkik/core/interfaces/IConversation;->m()Lcom/kik/events/c;
 
     move-result-object v1
 
@@ -5266,12 +5093,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/kik/events/d;->a(Lcom/kik/events/c;Lcom/kik/events/e;)Lcom/kik/events/e;
 
-    .line 261
+    .line 280
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->q:Lcom/kik/events/d;
 
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->c:Lkik/core/interfaces/x;
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->b:Lkik/core/interfaces/v;
 
-    invoke-interface {v1}, Lkik/core/interfaces/x;->c()Lcom/kik/events/c;
+    invoke-interface {v1}, Lkik/core/interfaces/v;->e()Lcom/kik/events/c;
 
     move-result-object v1
 
@@ -5279,7 +5106,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/kik/events/d;->a(Lcom/kik/events/c;Lcom/kik/events/e;)Lcom/kik/events/e;
 
-    .line 263
+    .line 282
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -5290,7 +5117,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 264
+    .line 283
     iget-object v1, p0, Lkik/android/KikNotificationHandler;->q:Lcom/kik/events/d;
 
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
@@ -5301,72 +5128,65 @@
 
     check-cast v0, Lkik/android/chat/KikApplication;
 
-    invoke-virtual {v0}, Lkik/android/chat/KikApplication;->v()Lcom/kik/events/c;
+    invoke-virtual {v0}, Lkik/android/chat/KikApplication;->w()Lcom/kik/events/c;
 
     move-result-object v0
 
-    invoke-static {p0}, Lkik/android/i;->a(Lkik/android/KikNotificationHandler;)Lcom/kik/events/e;
+    invoke-static {p0}, Lkik/android/j;->a(Lkik/android/KikNotificationHandler;)Lcom/kik/events/e;
 
     move-result-object v2
 
     invoke-virtual {v1, v0, v2}, Lcom/kik/events/d;->a(Lcom/kik/events/c;Lcom/kik/events/e;)Lcom/kik/events/e;
 
-    .line 268
+    .line 287
     :cond_0
-    new-instance v0, Lkik/android/f/b;
+    new-instance v0, Lkik/android/h/b;
 
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->c:Lkik/core/interfaces/x;
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->b:Lkik/core/interfaces/v;
 
-    invoke-direct {v0, v1, p3}, Lkik/android/f/b;-><init>(Lkik/core/interfaces/x;Lkik/core/interfaces/ad;)V
+    invoke-direct {v0, v1, p3}, Lkik/android/h/b;-><init>(Lkik/core/interfaces/v;Lkik/core/interfaces/ad;)V
 
-    iput-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/f/b;
+    iput-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/h/b;
 
-    .line 269
-    new-instance v0, Lkik/android/f/d;
-
-    invoke-direct {v0, p3}, Lkik/android/f/d;-><init>(Lkik/core/interfaces/ad;)V
-
-    iput-object v0, p0, Lkik/android/KikNotificationHandler;->a:Lkik/android/f/d;
-
-    .line 2420
+    .line 2437
     new-instance v0, Ljava/util/ArrayList;
 
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
-    invoke-interface {v1}, Lkik/core/interfaces/j;->O()Ljava/util/List;
+    invoke-interface {v1}, Lkik/core/interfaces/IConversation;->R()Ljava/util/List;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 2421
+    .line 2438
     new-instance v1, Ljava/util/ArrayList;
 
-    iget-object v2, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    iget-object v2, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
-    invoke-interface {v2}, Lkik/core/interfaces/j;->N()Ljava/util/List;
+    invoke-interface {v2}, Lkik/core/interfaces/IConversation;->Q()Ljava/util/List;
 
     move-result-object v2
 
     invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 2422
+    .line 2439
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2423
+    .line 2440
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 2424
+    .line 2441
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 2425
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/f/b;
+    .line 2442
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/h/b;
 
-    invoke-virtual {v0, v2}, Lkik/android/f/b;->a(Ljava/util/List;)V
+    invoke-virtual {v0, v2}, Lkik/android/h/b;->a(Ljava/util/List;)V
 
-    .line 272
+    .line 290
     return-void
 .end method
 
@@ -5382,20 +5202,20 @@
 
     const/4 v2, 0x0
 
-    .line 306
+    .line 323
     invoke-direct {p0}, Lkik/android/KikNotificationHandler;->i()I
 
     move-result v6
 
-    .line 307
+    .line 324
     invoke-direct {p0}, Lkik/android/KikNotificationHandler;->h()I
 
     move-result v7
 
-    .line 308
+    .line 325
     if-nez v6, :cond_1
 
-    .line 311
+    .line 328
     const-wide/16 v0, 0x0
 
     iget-wide v4, p0, Lkik/android/KikNotificationHandler;->n:J
@@ -5412,7 +5232,7 @@
 
     move-result-wide v0
 
-    .line 312
+    .line 329
     iget-object v3, p0, Lkik/android/KikNotificationHandler;->w:Landroid/os/Handler;
 
     invoke-static {v10, v11, v0, v1}, Ljava/lang/Math;->min(JJ)J
@@ -5421,18 +5241,18 @@
 
     invoke-virtual {v3, v2, v0, v1}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 322
+    .line 339
     :cond_0
     :goto_0
     iput v6, p0, Lkik/android/KikNotificationHandler;->p:I
 
-    .line 323
+    .line 340
     iput v7, p0, Lkik/android/KikNotificationHandler;->o:I
 
-    .line 324
+    .line 341
     return-void
 
-    .line 314
+    .line 331
     :cond_1
     iget v1, p0, Lkik/android/KikNotificationHandler;->p:I
 
@@ -5451,27 +5271,27 @@
 
     move v5, v2
 
-    .line 316
+    .line 333
     invoke-direct/range {v0 .. v5}, Lkik/android/KikNotificationHandler;->a(ZZLkik/core/datatypes/Message;ZZ)V
 
     goto :goto_0
 
-    .line 318
+    .line 335
     :cond_3
     if-ne v6, v0, :cond_0
 
     if-eqz p1, :cond_0
 
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/f/b;
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/h/b;
 
-    .line 3223
-    invoke-virtual {v1}, Lkik/android/f/b;->c()I
+    .line 3228
+    invoke-virtual {v1}, Lkik/android/h/b;->c()I
 
     move-result v1
 
     if-lez v1, :cond_4
 
-    .line 318
+    .line 335
     :goto_1
     if-eqz v0, :cond_0
 
@@ -5483,7 +5303,7 @@
 
     move v5, v2
 
-    .line 320
+    .line 337
     invoke-direct/range {v0 .. v5}, Lkik/android/KikNotificationHandler;->a(ZZLkik/core/datatypes/Message;ZZ)V
 
     goto :goto_0
@@ -5491,7 +5311,7 @@
     :cond_4
     move v0, v2
 
-    .line 3223
+    .line 3228
     goto :goto_1
 .end method
 
@@ -5499,17 +5319,17 @@
     .locals 1
 
     .prologue
-    .line 300
+    .line 317
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->q:Lcom/kik/events/d;
 
     invoke-virtual {v0}, Lcom/kik/events/d;->a()V
 
-    .line 301
+    .line 318
     iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
 
     invoke-virtual {v0, p0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 302
+    .line 319
     return-void
 .end method
 
@@ -5517,22 +5337,22 @@
     .locals 1
 
     .prologue
-    .line 1268
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/f/b;
+    .line 1267
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/h/b;
 
     if-eqz v0, :cond_0
 
+    .line 1268
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/h/b;
+
+    invoke-virtual {v0}, Lkik/android/h/b;->a()V
+
     .line 1269
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/f/b;
-
-    invoke-virtual {v0}, Lkik/android/f/b;->a()V
-
-    .line 1270
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lkik/android/KikNotificationHandler;->a(Z)V
 
-    .line 1272
+    .line 1271
     :cond_0
     return-void
 .end method
@@ -5541,442 +5361,282 @@
     .locals 9
 
     .prologue
+    const/4 v8, 0x1
+
     const/4 v0, 0x0
 
-    const/4 v2, 0x1
-
-    .line 1244
+    .line 1240
     if-nez p2, :cond_1
 
-    .line 14341
+    .line 1262
     :cond_0
     :goto_0
     return-void
 
-    .line 1248
+    .line 1244
     :cond_1
     const-string v1, "kik.android.notificationHandler.ACTION_MESSAGE_READ"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 12381
+    .line 12395
     if-eqz p2, :cond_0
 
-    .line 12384
+    .line 12398
     const-string v0, "conversation_jid"
 
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 12385
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    .line 12399
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
-    invoke-interface {v1, v0}, Lkik/core/interfaces/j;->a(Ljava/lang/String;)Lkik/core/datatypes/f;
+    invoke-interface {v1, v0}, Lkik/core/interfaces/IConversation;->a(Ljava/lang/String;)Lkik/core/datatypes/f;
 
     move-result-object v0
 
-    .line 12386
+    .line 12400
     if-eqz v0, :cond_0
 
-    .line 12387
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    .line 12401
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
-    invoke-interface {v1, v0}, Lkik/core/interfaces/j;->c(Lkik/core/datatypes/f;)V
+    invoke-interface {v1, v0}, Lkik/core/interfaces/IConversation;->b(Lkik/core/datatypes/f;)V
 
     goto :goto_0
 
-    .line 1251
+    .line 1247
     :cond_2
     const-string v1, "kik.android.notificationHandler.ACTION_MESSAGE_REPLY"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 12393
+    .line 12407
     if-eqz p2, :cond_0
 
-    .line 12396
+    .line 12410
     const-string v0, "conversation_jid"
 
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 12397
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    .line 12411
+    iget-object v1, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
-    invoke-interface {v1, v0}, Lkik/core/interfaces/j;->a(Ljava/lang/String;)Lkik/core/datatypes/f;
+    invoke-interface {v1, v0}, Lkik/core/interfaces/IConversation;->a(Ljava/lang/String;)Lkik/core/datatypes/f;
 
     move-result-object v1
 
-    .line 12398
+    .line 12412
     if-eqz v1, :cond_0
 
-    .line 12415
+    .line 12429
     invoke-static {p2}, Landroid/support/v4/app/RemoteInput;->getResultsFromIntent(Landroid/content/Intent;)Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 12416
+    .line 12430
     if-eqz v0, :cond_3
 
-    .line 12417
+    .line 12431
     const-string v2, "extra_voice_reply"
 
     invoke-virtual {v0, v2}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 12400
+    .line 12414
     :goto_1
     if-eqz v0, :cond_0
 
-    .line 12401
-    iget-object v2, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    .line 12415
+    iget-object v2, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
-    invoke-interface {v2, v1}, Lkik/core/interfaces/j;->c(Lkik/core/datatypes/f;)V
+    invoke-interface {v2, v1}, Lkik/core/interfaces/IConversation;->b(Lkik/core/datatypes/f;)V
 
-    .line 12402
-    iget-object v2, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/j;
+    .line 12416
+    iget-object v2, p0, Lkik/android/KikNotificationHandler;->m:Lkik/core/interfaces/IConversation;
 
     invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v1}, Lkik/core/datatypes/f;->d()Ljava/lang/String;
+    invoke-virtual {v1}, Lkik/core/datatypes/f;->g()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 13144
+    .line 13148
     sget-object v3, Lkik/core/datatypes/Message$MessageSource;->DEFAULT:Lkik/core/datatypes/Message$MessageSource;
 
     invoke-static {v0, v1, v3}, Lkik/core/datatypes/Message;->a(Ljava/lang/String;Ljava/lang/String;Lkik/core/datatypes/Message$MessageSource;)Lkik/core/datatypes/Message;
 
     move-result-object v0
 
-    .line 12402
-    invoke-interface {v2, v0}, Lkik/core/interfaces/j;->d(Lkik/core/datatypes/Message;)Lcom/kik/events/Promise;
+    .line 12416
+    invoke-interface {v2, v0}, Lkik/core/interfaces/IConversation;->c(Lkik/core/datatypes/Message;)Lcom/kik/events/Promise;
 
     goto :goto_0
 
-    .line 12419
+    .line 12433
     :cond_3
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 1254
+    .line 1250
     :cond_4
     const-string v1, "kik.android.notificationHandler.ACTION_MESSAGE_DISMISS"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_5
 
-    .line 13373
+    .line 13387
     if-eqz p2, :cond_0
 
-    .line 13376
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/f/b;
+    .line 13390
+    iget-object v0, p0, Lkik/android/KikNotificationHandler;->t:Lkik/android/h/b;
 
-    invoke-virtual {v0}, Lkik/android/f/b;->d()V
+    invoke-virtual {v0}, Lkik/android/h/b;->d()V
 
     goto :goto_0
 
-    .line 1257
+    .line 1253
     :cond_5
     const-string v1, "kik.android.notificationHandler.ACTION_MESSAGE_OPEN"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_a
+    if-eqz v1, :cond_6
 
-    .line 14320
-    if-eqz p2, :cond_0
+    .line 1254
+    invoke-direct {p0, p2, v0}, Lkik/android/KikNotificationHandler;->a(Landroid/content/Intent;Z)V
 
-    .line 14323
-    const-string v1, "video_chat_push_jids"
+    goto/16 :goto_0
 
-    invoke-virtual {p2, v1}, Landroid/content/Intent;->getStringArrayExtra(Ljava/lang/String;)[Ljava/lang/String;
+    .line 1256
+    :cond_6
+    const-string v1, "kik.android.notificationHandler.ACTION_MESSAGE_OPEN_VIDEO"
 
-    move-result-object v3
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    .line 14324
-    const-string v1, "video_chat_notification_id"
+    move-result-object v2
 
-    invoke-virtual {p2, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v4
+    move-result v1
 
-    .line 14325
-    if-eqz v3, :cond_6
-
-    if-eqz v4, :cond_6
-
-    move v1, v2
-
-    .line 14326
-    :goto_2
     if-eqz v1, :cond_7
 
-    .line 14327
-    array-length v5, v3
+    .line 1257
+    invoke-direct {p0, p2, v8}, Lkik/android/KikNotificationHandler;->a(Landroid/content/Intent;Z)V
 
-    :goto_3
-    if-ge v0, v5, :cond_7
+    goto/16 :goto_0
 
-    aget-object v6, v3, v0
-
-    .line 14328
-    iget-object v7, p0, Lkik/android/KikNotificationHandler;->h:Lkik/android/videochat/c;
-
-    invoke-interface {v7}, Lkik/android/videochat/c;->g()Lcom/rounds/kik/analytics/IReporterProxy;
-
-    move-result-object v7
-
-    iget-object v8, p0, Lkik/android/KikNotificationHandler;->c:Lkik/core/interfaces/x;
-
-    invoke-interface {v8, v6, v2}, Lkik/core/interfaces/x;->a(Ljava/lang/String;Z)Lkik/core/datatypes/o;
-
-    move-result-object v6
-
-    const-string v8, "video_call"
-
-    invoke-interface {v7, v6, v8, v4}, Lcom/rounds/kik/analytics/IReporterProxy;->onPushTap(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 14327
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_3
-
-    :cond_6
-    move v1, v0
-
-    .line 14325
-    goto :goto_2
-
-    .line 14332
+    .line 1259
     :cond_7
-    const-string v0, "conversation_jid"
-
-    invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 14333
-    invoke-static {v0}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_8
-
-    .line 14334
-    new-instance v0, Lkik/android/chat/fragment/KikConversationsFragment$a;
-
-    invoke-direct {v0}, Lkik/android/chat/fragment/KikConversationsFragment$a;-><init>()V
-
-    .line 14335
-    invoke-virtual {v0}, Lkik/android/chat/fragment/KikConversationsFragment$a;->d()Lkik/android/chat/fragment/KikConversationsFragment$a;
-
-    move-result-object v0
-
-    .line 14336
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
-
-    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->b()Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->d()Landroid/content/Intent;
-
-    move-result-object v0
-
-    .line 14337
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
-
-    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->b(Landroid/content/Intent;Landroid/content/Context;)Lcom/kik/events/Promise;
-
-    goto/16 :goto_0
-
-    .line 14339
-    :cond_8
-    iget-object v3, p0, Lkik/android/KikNotificationHandler;->h:Lkik/android/videochat/c;
-
-    iget-object v4, p0, Lkik/android/KikNotificationHandler;->c:Lkik/core/interfaces/x;
-
-    invoke-interface {v4, v0, v2}, Lkik/core/interfaces/x;->a(Ljava/lang/String;Z)Lkik/core/datatypes/o;
-
-    move-result-object v2
-
-    invoke-interface {v3, v2}, Lkik/android/videochat/c;->b(Lkik/core/datatypes/o;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_9
-
-    .line 14341
-    iget-object v0, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
-
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
-
-    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    goto/16 :goto_0
-
-    .line 14344
-    :cond_9
-    new-instance v2, Lkik/android/chat/fragment/KikChatFragment$a;
-
-    invoke-direct {v2}, Lkik/android/chat/fragment/KikChatFragment$a;-><init>()V
-
-    .line 14345
-    invoke-virtual {v2, v0}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Ljava/lang/String;)Lkik/android/chat/fragment/KikChatFragment$a;
-
-    move-result-object v2
-
-    .line 14346
-    invoke-virtual {v2, v0}, Lkik/android/chat/fragment/KikChatFragment$a;->c(Ljava/lang/String;)Lkik/android/chat/fragment/KikChatFragment$a;
-
-    move-result-object v0
-
-    .line 14347
-    invoke-virtual {v0, v1}, Lkik/android/chat/fragment/KikChatFragment$a;->a(Z)Lkik/android/chat/fragment/KikChatFragment$a;
-
-    move-result-object v0
-
-    .line 14348
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
-
-    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
-
-    move-result-object v0
-
-    .line 14349
-    invoke-virtual {v0}, Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;->d()Landroid/content/Intent;
-
-    move-result-object v0
-
-    .line 14350
-    iget-object v1, p0, Lkik/android/KikNotificationHandler;->k:Landroid/content/Context;
-
-    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->b(Landroid/content/Intent;Landroid/content/Context;)Lcom/kik/events/Promise;
-
-    goto/16 :goto_0
-
-    .line 1260
-    :cond_a
     const-string v1, "kik.android.notificationHandler.ACTION_DISMISS_VIDEO"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 14356
+    .line 14370
     if-eqz p2, :cond_0
 
-    .line 14360
+    .line 14374
     const-string v1, "conversation_jids"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getStringArrayExtra(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 14361
-    const-string v3, "video_chat_notification_id"
+    .line 14375
+    const-string v2, "video_chat_notification_id"
 
-    invoke-virtual {p2, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p2, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    .line 14362
+    .line 14376
     if-eqz v1, :cond_0
 
-    if-eqz v3, :cond_0
+    if-eqz v2, :cond_0
 
-    .line 14363
-    iget-object v4, p0, Lkik/android/KikNotificationHandler;->h:Lkik/android/videochat/c;
+    .line 14377
+    iget-object v3, p0, Lkik/android/KikNotificationHandler;->g:Lkik/android/videochat/c;
 
-    invoke-interface {v4, v1}, Lkik/android/videochat/c;->a([Ljava/lang/String;)V
+    invoke-interface {v3, v1}, Lkik/android/videochat/c;->a([Ljava/lang/String;)V
 
-    .line 14364
-    array-length v4, v1
+    .line 14378
+    array-length v3, v1
 
-    :goto_4
-    if-ge v0, v4, :cond_0
+    :goto_2
+    if-ge v0, v3, :cond_0
 
-    aget-object v5, v1, v0
+    aget-object v4, v1, v0
 
-    .line 14365
-    iget-object v6, p0, Lkik/android/KikNotificationHandler;->h:Lkik/android/videochat/c;
+    .line 14379
+    iget-object v5, p0, Lkik/android/KikNotificationHandler;->g:Lkik/android/videochat/c;
 
-    invoke-interface {v6}, Lkik/android/videochat/c;->g()Lcom/rounds/kik/analytics/IReporterProxy;
-
-    move-result-object v6
-
-    iget-object v7, p0, Lkik/android/KikNotificationHandler;->c:Lkik/core/interfaces/x;
-
-    invoke-interface {v7, v5, v2}, Lkik/core/interfaces/x;->a(Ljava/lang/String;Z)Lkik/core/datatypes/o;
+    invoke-interface {v5}, Lkik/android/videochat/c;->g()Lcom/rounds/kik/analytics/IReporterProxy;
 
     move-result-object v5
 
-    const-string v7, "video_call"
+    iget-object v6, p0, Lkik/android/KikNotificationHandler;->b:Lkik/core/interfaces/v;
 
-    invoke-interface {v6, v5, v7, v3}, Lcom/rounds/kik/analytics/IReporterProxy;->onPushDismiss(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v6, v4, v8}, Lkik/core/interfaces/v;->a(Ljava/lang/String;Z)Lkik/core/datatypes/l;
 
-    .line 14364
+    move-result-object v4
+
+    const-string v6, "video_call"
+
+    .line 14380
+    invoke-direct {p0}, Lkik/android/KikNotificationHandler;->k()Z
+
+    move-result v7
+
+    .line 14379
+    invoke-interface {v5, v4, v6, v2, v7}, Lcom/rounds/kik/analytics/IReporterProxy;->onPushDismiss(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;Z)V
+
+    .line 14378
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_4
+    goto :goto_2
 .end method

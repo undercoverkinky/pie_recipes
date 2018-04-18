@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 1055
+    .line 1122
     invoke-direct {p0}, Landroid/support/v7/widget/GridLayoutManager$SpanSizeLookup;-><init>()V
 
     return-void
@@ -31,7 +31,7 @@
     .locals 1
 
     .prologue
-    .line 1059
+    .line 1126
     const/4 v0, 0x1
 
     return v0
@@ -41,7 +41,7 @@
     .locals 1
 
     .prologue
-    .line 1064
+    .line 1131
     rem-int v0, p1, p2
 
     return v0

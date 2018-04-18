@@ -40,9 +40,9 @@
     .end annotation
 
     .prologue
-    .line 921
+    .line 978
     invoke-direct {p0, p1}, Lcom/google/common/collect/Lists$b;-><init>(Ljava/util/List;)V
 
-    .line 922
+    .line 979
     return-void
 .end method

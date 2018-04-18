@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 25
+    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +44,7 @@
     .locals 1
 
     .prologue
-    .line 25
+    .line 26
     check-cast p1, Ljavax/annotation/RegEx;
 
     invoke-virtual {p0, p1, p2}, Ljavax/annotation/RegEx$Checker;->forConstantValue(Ljavax/annotation/RegEx;Ljava/lang/Object;)Ljavax/annotation/meta/When;
@@ -58,19 +58,19 @@
     .locals 1
 
     .prologue
-    .line 28
+    .line 29
     instance-of v0, p2, Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 29
+    .line 30
     sget-object v0, Ljavax/annotation/meta/When;->NEVER:Ljavax/annotation/meta/When;
 
-    .line 36
+    .line 37
     :goto_0
     return-object v0
 
-    .line 32
+    .line 33
     :cond_0
     :try_start_0
     check-cast p2, Ljava/lang/String;
@@ -79,12 +79,12 @@
     :try_end_0
     .catch Ljava/util/regex/PatternSyntaxException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 36
+    .line 37
     sget-object v0, Ljavax/annotation/meta/When;->ALWAYS:Ljavax/annotation/meta/When;
 
     goto :goto_0
 
-    .line 34
+    .line 35
     :catch_0
     move-exception v0
 

@@ -1,321 +1,245 @@
-.class public final Lcom/google/android/gms/common/internal/zzaa;
-.super Ljava/lang/Object;
+.class public abstract Lcom/google/android/gms/common/internal/zzaa;
+.super Lcom/google/android/gms/common/internal/zzd;
+
+# interfaces
+.implements Lcom/google/android/gms/common/api/Api$zze;
+.implements Lcom/google/android/gms/common/internal/zzae;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T::",
+        "Landroid/os/IInterface;",
+        ">",
+        "Lcom/google/android/gms/common/internal/zzd",
+        "<TT;>;",
+        "Lcom/google/android/gms/common/api/Api$zze;",
+        "Lcom/google/android/gms/common/internal/zzae;"
+    }
+.end annotation
+
+
+# instance fields
+.field private final zzdva:Landroid/accounts/Account;
+
+.field private final zzecn:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Set",
+            "<",
+            "Lcom/google/android/gms/common/api/Scope;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final zzfkd:Lcom/google/android/gms/common/internal/zzq;
 
 
 # direct methods
-.method public static zza(ILjava/lang/Object;)I
-    .locals 2
+.method protected constructor <init>(Landroid/content/Context;Landroid/os/Looper;ILcom/google/android/gms/common/internal/zzq;Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)V
+    .locals 9
 
-    if-nez p0, :cond_0
+    invoke-static {p1}, Lcom/google/android/gms/common/internal/zzaf;->zzcf(Landroid/content/Context;)Lcom/google/android/gms/common/internal/zzaf;
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    move-result-object v3
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {}, Lcom/google/android/gms/common/GoogleApiAvailability;->getInstance()Lcom/google/android/gms/common/GoogleApiAvailability;
 
-    move-result-object v1
+    move-result-object v4
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-static {p5}, Lcom/google/android/gms/common/internal/zzbp;->zzu(Ljava/lang/Object;)Ljava/lang/Object;
 
-    throw v0
+    move-result-object v7
 
-    :cond_0
-    return p0
-.end method
+    check-cast v7, Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;
 
-.method public static zza(JLjava/lang/Object;)J
-    .locals 2
+    invoke-static {p6}, Lcom/google/android/gms/common/internal/zzbp;->zzu(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-wide/16 v0, 0x0
+    move-result-object v8
 
-    cmp-long v0, p0, v0
+    check-cast v8, Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;
 
-    if-nez v0, :cond_0
+    move-object v0, p0
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    move-object v1, p1
 
-    invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    move-object v2, p2
 
-    move-result-object v1
+    move v5, p3
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    move-object v6, p4
 
-    throw v0
+    invoke-direct/range {v0 .. v8}, Lcom/google/android/gms/common/internal/zzaa;-><init>(Landroid/content/Context;Landroid/os/Looper;Lcom/google/android/gms/common/internal/zzaf;Lcom/google/android/gms/common/GoogleApiAvailability;ILcom/google/android/gms/common/internal/zzq;Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)V
 
-    :cond_0
-    return-wide p0
-.end method
-
-.method public static zza(ZLjava/lang/Object;)V
-    .locals 2
-
-    if-nez p0, :cond_0
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
     return-void
 .end method
 
-.method public static varargs zza(ZLjava/lang/String;[Ljava/lang/Object;)V
-    .locals 2
+.method private constructor <init>(Landroid/content/Context;Landroid/os/Looper;Lcom/google/android/gms/common/internal/zzaf;Lcom/google/android/gms/common/GoogleApiAvailability;ILcom/google/android/gms/common/internal/zzq;Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)V
+    .locals 10
 
-    if-nez p0, :cond_0
+    if-nez p7, :cond_1
 
-    new-instance v0, Ljava/lang/IllegalStateException;
+    const/4 v7, 0x0
 
-    invoke-static {p1, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    :goto_0
+    if-nez p8, :cond_2
+
+    const/4 v8, 0x0
+
+    :goto_1
+    invoke-virtual/range {p6 .. p6}, Lcom/google/android/gms/common/internal/zzq;->zzajv()Ljava/lang/String;
+
+    move-result-object v9
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    move-object v5, p4
+
+    move v6, p5
+
+    invoke-direct/range {v1 .. v9}, Lcom/google/android/gms/common/internal/zzd;-><init>(Landroid/content/Context;Landroid/os/Looper;Lcom/google/android/gms/common/internal/zzaf;Lcom/google/android/gms/common/zze;ILcom/google/android/gms/common/internal/zzf;Lcom/google/android/gms/common/internal/zzg;Ljava/lang/String;)V
+
+    move-object/from16 v0, p6
+
+    iput-object v0, p0, Lcom/google/android/gms/common/internal/zzaa;->zzfkd:Lcom/google/android/gms/common/internal/zzq;
+
+    invoke-virtual/range {p6 .. p6}, Lcom/google/android/gms/common/internal/zzq;->getAccount()Landroid/accounts/Account;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iput-object v1, p0, Lcom/google/android/gms/common/internal/zzaa;->zzdva:Landroid/accounts/Account;
 
-    throw v0
+    invoke-virtual/range {p6 .. p6}, Lcom/google/android/gms/common/internal/zzq;->zzajs()Ljava/util/Set;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v2}, Lcom/google/android/gms/common/internal/zzaa;->zzb(Ljava/util/Set;)Ljava/util/Set;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
 
     :cond_0
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/google/android/gms/common/api/Scope;
+
+    invoke-interface {v2, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    const-string v2, "Expanding scopes is not permitted, use implied scopes instead"
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    new-instance v7, Lcom/google/android/gms/common/internal/a;
+
+    move-object/from16 v0, p7
+
+    invoke-direct {v7, v0}, Lcom/google/android/gms/common/internal/a;-><init>(Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;)V
+
+    goto :goto_0
+
+    :cond_2
+    new-instance v8, Lcom/google/android/gms/common/internal/b;
+
+    move-object/from16 v0, p8
+
+    invoke-direct {v8, v0}, Lcom/google/android/gms/common/internal/b;-><init>(Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)V
+
+    goto :goto_1
+
+    :cond_3
+    iput-object v3, p0, Lcom/google/android/gms/common/internal/zzaa;->zzecn:Ljava/util/Set;
+
     return-void
 .end method
 
-.method public static zzai(Z)V
+
+# virtual methods
+.method public final getAccount()Landroid/accounts/Account;
     .locals 1
 
-    if-nez p0, :cond_0
+    iget-object v0, p0, Lcom/google/android/gms/common/internal/zzaa;->zzdva:Landroid/accounts/Account;
 
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
-
-    :cond_0
-    return-void
+    return-object v0
 .end method
 
-.method public static zzaj(Z)V
+.method public zzajh()[Lcom/google/android/gms/common/zzc;
     .locals 1
 
-    if-nez p0, :cond_0
+    const/4 v0, 0x0
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    new-array v0, v0, [Lcom/google/android/gms/common/zzc;
 
-    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw v0
-
-    :cond_0
-    return-void
+    return-object v0
 .end method
 
-.method public static zzb(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method protected final zzajl()Ljava/util/Set;
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(TT;",
-            "Ljava/lang/Object;",
-            ")TT;"
+            "()",
+            "Ljava/util/Set",
+            "<",
+            "Lcom/google/android/gms/common/api/Scope;",
+            ">;"
         }
     .end annotation
 
-    if-nez p0, :cond_0
+    iget-object v0, p0, Lcom/google/android/gms/common/internal/zzaa;->zzecn:Ljava/util/Set;
 
-    new-instance v0, Ljava/lang/NullPointerException;
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    return-object p0
+    return-object v0
 .end method
 
-.method public static zzb(ZLjava/lang/Object;)V
-    .locals 2
-
-    if-nez p0, :cond_0
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    return-void
-.end method
-
-.method public static varargs zzb(ZLjava/lang/String;[Ljava/lang/Object;)V
-    .locals 2
-
-    if-nez p0, :cond_0
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-static {p1, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    return-void
-.end method
-
-.method public static zzce(I)I
-    .locals 2
-
-    if-nez p0, :cond_0
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Given Integer is zero"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    return p0
-.end method
-
-.method public static zzdc(Ljava/lang/String;)V
-    .locals 2
-
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
-
-    move-result-object v0
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    if-eq v0, v1, :cond_0
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    return-void
-.end method
-
-.method public static zzdd(Ljava/lang/String;)V
-    .locals 2
-
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
-
-    move-result-object v0
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    if-ne v0, v1, :cond_0
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    return-void
-.end method
-
-.method public static zzdl(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
-
-    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Given String is empty or null"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    return-object p0
-.end method
-
-.method public static zzh(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
-    .locals 2
-
-    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    return-object p0
-.end method
-
-.method public static zztO()V
+.method protected final zzakd()Lcom/google/android/gms/common/internal/zzq;
     .locals 1
 
-    const-string v0, "Must not be called on the main application thread"
+    iget-object v0, p0, Lcom/google/android/gms/common/internal/zzaa;->zzfkd:Lcom/google/android/gms/common/internal/zzq;
 
-    invoke-static {v0}, Lcom/google/android/gms/common/internal/zzaa;->zzdd(Ljava/lang/String;)V
-
-    return-void
+    return-object v0
 .end method
 
-.method public static zzz(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method protected zzb(Ljava/util/Set;)Ljava/util/Set;
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(TT;)TT;"
+            "(",
+            "Ljava/util/Set",
+            "<",
+            "Lcom/google/android/gms/common/api/Scope;",
+            ">;)",
+            "Ljava/util/Set",
+            "<",
+            "Lcom/google/android/gms/common/api/Scope;",
+            ">;"
         }
     .end annotation
 
-    if-nez p0, :cond_0
-
-    new-instance v0, Ljava/lang/NullPointerException;
-
-    const-string v1, "null reference"
-
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    return-object p0
+    return-object p1
 .end method

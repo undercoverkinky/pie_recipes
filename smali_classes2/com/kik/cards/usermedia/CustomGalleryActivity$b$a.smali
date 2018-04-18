@@ -30,18 +30,18 @@
     .locals 0
 
     .prologue
-    .line 428
+    .line 430
     iput-object p1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$b$a;->a:Lcom/kik/cards/usermedia/CustomGalleryActivity$b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 429
+    .line 431
     iput p2, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$b$a;->b:I
 
-    .line 430
+    .line 432
     iput-object p3, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$b$a;->c:Lcom/kik/cards/usermedia/CustomGalleryActivity$a$a;
 
-    .line 431
+    .line 433
     return-void
 .end method
 
@@ -55,7 +55,7 @@
 
     const/4 v10, 0x0
 
-    .line 436
+    .line 438
     iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$b$a;->a:Lcom/kik/cards/usermedia/CustomGalleryActivity$b;
 
     iget-object v0, v0, Lcom/kik/cards/usermedia/CustomGalleryActivity$b;->e:Lcom/kik/cards/usermedia/CustomGalleryActivity;
@@ -68,7 +68,7 @@
 
     invoke-interface {v0, v1}, Landroid/database/Cursor;->moveToPosition(I)Z
 
-    .line 437
+    .line 439
     iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$b$a;->a:Lcom/kik/cards/usermedia/CustomGalleryActivity$b;
 
     iget-object v0, v0, Lcom/kik/cards/usermedia/CustomGalleryActivity$b;->e:Lcom/kik/cards/usermedia/CustomGalleryActivity;
@@ -95,7 +95,7 @@
 
     move-result-wide v0
 
-    .line 438
+    .line 440
     iget-object v2, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$b$a;->a:Lcom/kik/cards/usermedia/CustomGalleryActivity$b;
 
     iget-object v2, v2, Lcom/kik/cards/usermedia/CustomGalleryActivity$b;->e:Lcom/kik/cards/usermedia/CustomGalleryActivity;
@@ -122,16 +122,16 @@
 
     move-result v2
 
-    .line 439
-    new-instance v3, Lcom/kik/cards/usermedia/h;
+    .line 441
+    new-instance v3, Lcom/kik/cards/usermedia/g;
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v4
 
-    invoke-direct {v3, v4, v2}, Lcom/kik/cards/usermedia/h;-><init>(Ljava/lang/Long;I)V
+    invoke-direct {v3, v4, v2}, Lcom/kik/cards/usermedia/g;-><init>(Ljava/lang/Long;I)V
 
-    .line 440
+    .line 442
     iget-object v2, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$b$a;->a:Lcom/kik/cards/usermedia/CustomGalleryActivity$b;
 
     iget-object v2, v2, Lcom/kik/cards/usermedia/CustomGalleryActivity$b;->e:Lcom/kik/cards/usermedia/CustomGalleryActivity;
@@ -158,7 +158,7 @@
 
     move-result-object v2
 
-    .line 442
+    .line 444
     iget-object v4, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$b$a;->a:Lcom/kik/cards/usermedia/CustomGalleryActivity$b;
 
     iget-object v4, v4, Lcom/kik/cards/usermedia/CustomGalleryActivity$b;->e:Lcom/kik/cards/usermedia/CustomGalleryActivity;
@@ -199,7 +199,7 @@
 
     if-ge v4, v5, :cond_1
 
-    .line 443
+    .line 445
     iget-object v4, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$b$a;->a:Lcom/kik/cards/usermedia/CustomGalleryActivity$b;
 
     iget-object v4, v4, Lcom/kik/cards/usermedia/CustomGalleryActivity$b;->e:Lcom/kik/cards/usermedia/CustomGalleryActivity;
@@ -230,7 +230,7 @@
 
     invoke-virtual {v4, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 444
+    .line 446
     iget-object v2, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$b$a;->a:Lcom/kik/cards/usermedia/CustomGalleryActivity$b;
 
     iget-object v2, v2, Lcom/kik/cards/usermedia/CustomGalleryActivity$b;->e:Lcom/kik/cards/usermedia/CustomGalleryActivity;
@@ -239,7 +239,7 @@
 
     invoke-virtual {v2, v4}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->a(I)V
 
-    .line 450
+    .line 452
     :cond_0
     :goto_0
     iget-object v2, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$b$a;->a:Lcom/kik/cards/usermedia/CustomGalleryActivity$b;
@@ -260,7 +260,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 451
+    .line 453
     iget-object v2, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$b$a;->a:Lcom/kik/cards/usermedia/CustomGalleryActivity$b;
 
     iget-object v2, v2, Lcom/kik/cards/usermedia/CustomGalleryActivity$b;->e:Lcom/kik/cards/usermedia/CustomGalleryActivity;
@@ -273,7 +273,7 @@
 
     iget-object v4, v4, Lcom/kik/cards/usermedia/CustomGalleryActivity$b;->e:Lcom/kik/cards/usermedia/CustomGalleryActivity;
 
-    invoke-static {v4}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->j(Lcom/kik/cards/usermedia/CustomGalleryActivity;)Lcom/kik/cache/b;
+    invoke-static {v4}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->j(Lcom/kik/cards/usermedia/CustomGalleryActivity;)Lcom/kik/cache/BitmapLRUCache;
 
     move-result-object v4
 
@@ -281,11 +281,11 @@
 
     iget-object v5, v5, Lcom/kik/cards/usermedia/CustomGalleryActivity$b;->e:Lcom/kik/cards/usermedia/CustomGalleryActivity;
 
-    invoke-static {v5}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->d(Lcom/kik/cards/usermedia/CustomGalleryActivity;)Lcom/kik/cache/c;
+    invoke-static {v5}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->d(Lcom/kik/cards/usermedia/CustomGalleryActivity;)Lcom/kik/cache/Cache;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/kik/cache/c;->c()Lcom/kik/sdkutils/b/a;
+    invoke-virtual {v5}, Lcom/kik/cache/Cache;->getTokener()Lcom/kik/sdkutils/b/a;
 
     move-result-object v5
 
@@ -297,9 +297,9 @@
 
     move-result-object v6
 
-    invoke-virtual {v2, v4, v5, v6, v3}, Lkik/android/widget/UserMediaImageThumbNailList;->a(Lcom/kik/cache/b;Lcom/kik/sdkutils/b/a;Lcom/kik/sdkutils/b/b;Ljava/lang/Object;)V
+    invoke-virtual {v2, v4, v5, v6, v3}, Lkik/android/widget/UserMediaImageThumbNailList;->a(Lcom/kik/cache/BitmapLRUCache;Lcom/kik/sdkutils/b/a;Lcom/kik/sdkutils/b/b;Ljava/lang/Object;)V
 
-    .line 457
+    .line 459
     :goto_1
     iget-object v2, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$b$a;->a:Lcom/kik/cards/usermedia/CustomGalleryActivity$b;
 
@@ -307,7 +307,7 @@
 
     invoke-virtual {v2}, Lcom/kik/cards/usermedia/CustomGalleryActivity;->a()V
 
-    .line 459
+    .line 461
     iget-object v2, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$b$a;->a:Lcom/kik/cards/usermedia/CustomGalleryActivity$b;
 
     iget-object v2, v2, Lcom/kik/cards/usermedia/CustomGalleryActivity$b;->e:Lcom/kik/cards/usermedia/CustomGalleryActivity;
@@ -326,16 +326,16 @@
 
     if-eqz v0, :cond_3
 
-    .line 460
+    .line 462
     iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$b$a;->c:Lcom/kik/cards/usermedia/CustomGalleryActivity$a$a;
 
     iget-object v0, v0, Lcom/kik/cards/usermedia/CustomGalleryActivity$a$a;->b:Landroid/widget/ImageView;
 
-    const v1, 0x7f08000f
+    const v1, 0x7f07000e
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 461
+    .line 463
     new-array v0, v11, [Landroid/view/View;
 
     iget-object v1, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$b$a;->c:Lcom/kik/cards/usermedia/CustomGalleryActivity$a$a;
@@ -344,13 +344,13 @@
 
     aput-object v1, v0, v10
 
-    invoke-static {v0}, Lkik/android/util/bz;->d([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->d([Landroid/view/View;)V
 
-    .line 468
+    .line 470
     :goto_2
     return-void
 
-    .line 446
+    .line 448
     :cond_1
     iget-object v2, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$b$a;->a:Lcom/kik/cards/usermedia/CustomGalleryActivity$b;
 
@@ -374,7 +374,7 @@
 
     if-lt v2, v4, :cond_0
 
-    .line 447
+    .line 449
     iget-object v2, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$b$a;->a:Lcom/kik/cards/usermedia/CustomGalleryActivity$b;
 
     iget-object v2, v2, Lcom/kik/cards/usermedia/CustomGalleryActivity$b;->e:Lcom/kik/cards/usermedia/CustomGalleryActivity;
@@ -387,7 +387,7 @@
 
     goto/16 :goto_0
 
-    .line 454
+    .line 456
     :cond_2
     iget-object v2, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$b$a;->a:Lcom/kik/cards/usermedia/CustomGalleryActivity$b;
 
@@ -397,11 +397,11 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v3}, Lkik/android/widget/UserMediaImageThumbNailList;->a(Ljava/lang/Object;)Lcom/kik/events/o;
+    invoke-virtual {v2, v3}, Lkik/android/widget/UserMediaImageThumbNailList;->a(Ljava/lang/Object;)Lcom/kik/events/n;
 
     goto :goto_1
 
-    .line 464
+    .line 466
     :cond_3
     new-array v0, v11, [Landroid/view/View;
 
@@ -411,14 +411,14 @@
 
     aput-object v1, v0, v10
 
-    invoke-static {v0}, Lkik/android/util/bz;->g([Landroid/view/View;)V
+    invoke-static {v0}, Lkik/android/util/ca;->g([Landroid/view/View;)V
 
-    .line 465
+    .line 467
     iget-object v0, p0, Lcom/kik/cards/usermedia/CustomGalleryActivity$b$a;->c:Lcom/kik/cards/usermedia/CustomGalleryActivity$a$a;
 
     iget-object v0, v0, Lcom/kik/cards/usermedia/CustomGalleryActivity$a$a;->b:Landroid/widget/ImageView;
 
-    const v1, 0x7f08000e
+    const v1, 0x7f07000d
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 

@@ -23,7 +23,7 @@
     .locals 3
 
     .prologue
-    .line 352
+    .line 336
     invoke-static {}, Lkik/android/chat/fragment/KikDialogFragment$LinkifyType;->values()[Lkik/android/chat/fragment/KikDialogFragment$LinkifyType;
 
     move-result-object v0

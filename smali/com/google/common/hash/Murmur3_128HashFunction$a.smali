@@ -27,25 +27,25 @@
     .locals 2
 
     .prologue
-    .line 87
-    invoke-direct {p0}, Lcom/google/common/hash/c$a;-><init>()V
-
     .line 88
-    int-to-long v0, p1
-
-    iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
+    invoke-direct {p0}, Lcom/google/common/hash/c$a;-><init>()V
 
     .line 89
     int-to-long v0, p1
 
-    iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
+    iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
 
     .line 90
+    int-to-long v0, p1
+
+    iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
+
+    .line 91
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->c:I
 
-    .line 91
+    .line 92
     return-void
 .end method
 
@@ -55,32 +55,32 @@
     .prologue
     const/16 v4, 0x21
 
-    .line 180
+    .line 184
     ushr-long v0, p0, v4
 
     xor-long/2addr v0, p0
 
-    .line 181
+    .line 185
     const-wide v2, -0xae502812aa7333L
 
     mul-long/2addr v0, v2
 
-    .line 182
+    .line 186
     ushr-long v2, v0, v4
 
     xor-long/2addr v0, v2
 
-    .line 183
+    .line 187
     const-wide v2, -0x3b314601e57a13adL    # -2.902039044684214E23
 
     mul-long/2addr v0, v2
 
-    .line 184
+    .line 188
     ushr-long v2, v0, v4
 
     xor-long/2addr v0, v2
 
-    .line 185
+    .line 189
     return-wide v0
 .end method
 
@@ -88,24 +88,24 @@
     .locals 4
 
     .prologue
-    .line 189
+    .line 193
     const-wide v0, -0x783c846eeebdac2bL
 
     mul-long/2addr v0, p0
 
-    .line 190
+    .line 194
     const/16 v2, 0x1f
 
     invoke-static {v0, v1, v2}, Ljava/lang/Long;->rotateLeft(JI)J
 
     move-result-wide v0
 
-    .line 191
+    .line 195
     const-wide v2, 0x4cf5ad432745937fL    # 5.573325460219186E62
 
     mul-long/2addr v0, v2
 
-    .line 192
+    .line 196
     return-wide v0
 .end method
 
@@ -113,24 +113,24 @@
     .locals 4
 
     .prologue
-    .line 196
+    .line 200
     const-wide v0, 0x4cf5ad432745937fL    # 5.573325460219186E62
 
     mul-long/2addr v0, p0
 
-    .line 197
+    .line 201
     const/16 v2, 0x21
 
     invoke-static {v0, v1, v2}, Ljava/lang/Long;->rotateLeft(JI)J
 
     move-result-wide v0
 
-    .line 198
+    .line 202
     const-wide v2, -0x783c846eeebdac2bL
 
     mul-long/2addr v0, v2
 
-    .line 199
+    .line 203
     return-wide v0
 .end method
 
@@ -142,17 +142,17 @@
     .prologue
     const-wide/16 v6, 0x5
 
-    .line 94
+    .line 96
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getLong()J
 
     move-result-wide v0
 
-    .line 95
+    .line 97
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getLong()J
 
     move-result-wide v2
 
-    .line 1101
+    .line 1103
     iget-wide v4, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
 
     invoke-static {v0, v1}, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b(J)J
@@ -163,7 +163,7 @@
 
     iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
 
-    .line 1103
+    .line 1105
     iget-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
 
     const/16 v4, 0x1b
@@ -174,7 +174,7 @@
 
     iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
 
-    .line 1104
+    .line 1106
     iget-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
 
     iget-wide v4, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
@@ -183,7 +183,7 @@
 
     iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
 
-    .line 1105
+    .line 1107
     iget-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
 
     mul-long/2addr v0, v6
@@ -194,7 +194,7 @@
 
     iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
 
-    .line 1107
+    .line 1109
     iget-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
 
     invoke-static {v2, v3}, Lcom/google/common/hash/Murmur3_128HashFunction$a;->c(J)J
@@ -205,7 +205,7 @@
 
     iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
 
-    .line 1109
+    .line 1111
     iget-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
 
     const/16 v2, 0x1f
@@ -216,7 +216,7 @@
 
     iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
 
-    .line 1110
+    .line 1112
     iget-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
 
     iget-wide v2, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
@@ -225,7 +225,7 @@
 
     iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
 
-    .line 1111
+    .line 1113
     iget-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
 
     mul-long/2addr v0, v6
@@ -236,14 +236,14 @@
 
     iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
 
-    .line 97
+    .line 99
     iget v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->c:I
 
     add-int/lit8 v0, v0, 0x10
 
     iput v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->c:I
 
-    .line 98
+    .line 100
     return-void
 .end method
 
@@ -251,65 +251,29 @@
     .locals 4
 
     .prologue
-    .line 159
-    iget-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
-
-    iget v2, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->c:I
-
-    int-to-long v2, v2
-
-    xor-long/2addr v0, v2
-
-    iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
-
-    .line 160
-    iget-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
-
-    iget v2, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->c:I
-
-    int-to-long v2, v2
-
-    xor-long/2addr v0, v2
-
-    iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
-
-    .line 162
-    iget-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
-
-    iget-wide v2, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
-
     .line 163
-    iget-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
-
-    iget-wide v2, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
-
-    .line 165
     iget-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
 
-    invoke-static {v0, v1}, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a(J)J
+    iget v2, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->c:I
 
-    move-result-wide v0
+    int-to-long v2, v2
+
+    xor-long/2addr v0, v2
 
     iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
+
+    .line 164
+    iget-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
+
+    iget v2, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->c:I
+
+    int-to-long v2, v2
+
+    xor-long/2addr v0, v2
+
+    iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
 
     .line 166
-    iget-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
-
-    invoke-static {v0, v1}, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a(J)J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
-
-    .line 168
     iget-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
 
     iget-wide v2, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
@@ -318,7 +282,7 @@
 
     iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
 
-    .line 169
+    .line 167
     iget-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
 
     iget-wide v2, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
@@ -327,37 +291,79 @@
 
     iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
 
-    .line 171
+    .line 169
+    iget-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
+
+    invoke-static {v0, v1}, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a(J)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
+
+    .line 170
+    iget-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
+
+    invoke-static {v0, v1}, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a(J)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
+
+    .line 172
+    iget-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
+
+    iget-wide v2, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
+
+    .line 173
+    iget-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
+
+    iget-wide v2, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
+
+    .line 175
     const/16 v0, 0x10
 
     new-array v0, v0, [B
 
+    .line 176
     invoke-static {v0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
     sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
+    .line 177
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
     iget-wide v2, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
 
+    .line 178
     invoke-virtual {v0, v2, v3}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
     iget-wide v2, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
 
+    .line 179
     invoke-virtual {v0, v2, v3}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
+    .line 180
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v0
 
+    .line 175
     invoke-static {v0}, Lcom/google/common/hash/HashCode;->a([B)Lcom/google/common/hash/HashCode;
 
     move-result-object v0
@@ -379,8 +385,8 @@
 
     const-wide/16 v2, 0x0
 
-    .line 115
-    .line 117
+    .line 118
+    .line 120
     iget v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->c:I
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
@@ -391,14 +397,14 @@
 
     iput v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->c:I
 
-    .line 118
+    .line 121
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 152
+    .line 155
     new-instance v0, Ljava/lang/AssertionError;
 
     const-string v1, "Should never get here."
@@ -407,7 +413,7 @@
 
     throw v0
 
-    .line 120
+    .line 123
     :pswitch_0
     const/16 v0, 0xe
 
@@ -415,10 +421,10 @@
 
     move-result v0
 
-    .line 2075
+    .line 2071
     and-int/lit16 v0, v0, 0xff
 
-    .line 120
+    .line 123
     int-to-long v0, v0
 
     const/16 v4, 0x30
@@ -427,7 +433,7 @@
 
     xor-long/2addr v0, v2
 
-    .line 122
+    .line 125
     :goto_0
     const/16 v4, 0xd
 
@@ -435,10 +441,10 @@
 
     move-result v4
 
-    .line 3075
+    .line 3071
     and-int/lit16 v4, v4, 0xff
 
-    .line 122
+    .line 125
     int-to-long v4, v4
 
     const/16 v6, 0x28
@@ -447,7 +453,7 @@
 
     xor-long/2addr v0, v4
 
-    .line 124
+    .line 127
     :goto_1
     const/16 v4, 0xc
 
@@ -455,17 +461,17 @@
 
     move-result v4
 
-    .line 4075
+    .line 4071
     and-int/lit16 v4, v4, 0xff
 
-    .line 124
+    .line 127
     int-to-long v4, v4
 
     shl-long/2addr v4, v10
 
     xor-long/2addr v0, v4
 
-    .line 126
+    .line 129
     :goto_2
     const/16 v4, 0xb
 
@@ -473,17 +479,17 @@
 
     move-result v4
 
-    .line 5075
+    .line 5071
     and-int/lit16 v4, v4, 0xff
 
-    .line 126
+    .line 129
     int-to-long v4, v4
 
     shl-long/2addr v4, v9
 
     xor-long/2addr v0, v4
 
-    .line 128
+    .line 131
     :goto_3
     const/16 v4, 0xa
 
@@ -491,17 +497,17 @@
 
     move-result v4
 
-    .line 6075
+    .line 6071
     and-int/lit16 v4, v4, 0xff
 
-    .line 128
+    .line 131
     int-to-long v4, v4
 
     shl-long/2addr v4, v8
 
     xor-long/2addr v0, v4
 
-    .line 130
+    .line 133
     :goto_4
     const/16 v4, 0x9
 
@@ -509,31 +515,31 @@
 
     move-result v4
 
-    .line 7075
+    .line 7071
     and-int/lit16 v4, v4, 0xff
 
-    .line 130
+    .line 133
     int-to-long v4, v4
 
     shl-long/2addr v4, v7
 
     xor-long/2addr v0, v4
 
-    .line 132
+    .line 135
     :goto_5
     invoke-virtual {p1, v7}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result v4
 
-    .line 8075
+    .line 8071
     and-int/lit16 v4, v4, 0xff
 
-    .line 132
+    .line 135
     int-to-long v4, v4
 
     xor-long/2addr v0, v4
 
-    .line 134
+    .line 137
     :goto_6
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getLong()J
 
@@ -541,7 +547,7 @@
 
     xor-long/2addr v2, v4
 
-    .line 154
+    .line 157
     :goto_7
     iget-wide v4, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
 
@@ -553,7 +559,7 @@
 
     iput-wide v2, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->a:J
 
-    .line 155
+    .line 158
     iget-wide v2, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
 
     invoke-static {v0, v1}, Lcom/google/common/hash/Murmur3_128HashFunction$a;->c(J)J
@@ -564,10 +570,10 @@
 
     iput-wide v0, p0, Lcom/google/common/hash/Murmur3_128HashFunction$a;->b:J
 
-    .line 156
+    .line 159
     return-void
 
-    .line 137
+    .line 140
     :pswitch_1
     const/4 v0, 0x6
 
@@ -575,10 +581,10 @@
 
     move-result v0
 
-    .line 9075
+    .line 9071
     and-int/lit16 v0, v0, 0xff
 
-    .line 137
+    .line 140
     int-to-long v0, v0
 
     const/16 v4, 0x30
@@ -587,7 +593,7 @@
 
     xor-long/2addr v0, v2
 
-    .line 139
+    .line 142
     :goto_8
     const/4 v4, 0x5
 
@@ -595,10 +601,10 @@
 
     move-result v4
 
-    .line 10075
+    .line 10071
     and-int/lit16 v4, v4, 0xff
 
-    .line 139
+    .line 142
     int-to-long v4, v4
 
     const/16 v6, 0x28
@@ -607,7 +613,7 @@
 
     xor-long/2addr v0, v4
 
-    .line 141
+    .line 144
     :goto_9
     const/4 v4, 0x4
 
@@ -615,17 +621,17 @@
 
     move-result v4
 
-    .line 11075
+    .line 11071
     and-int/lit16 v4, v4, 0xff
 
-    .line 141
+    .line 144
     int-to-long v4, v4
 
     shl-long/2addr v4, v10
 
     xor-long/2addr v0, v4
 
-    .line 143
+    .line 146
     :goto_a
     const/4 v4, 0x3
 
@@ -633,17 +639,17 @@
 
     move-result v4
 
-    .line 12075
+    .line 12071
     and-int/lit16 v4, v4, 0xff
 
-    .line 143
+    .line 146
     int-to-long v4, v4
 
     shl-long/2addr v4, v9
 
     xor-long/2addr v0, v4
 
-    .line 145
+    .line 148
     :goto_b
     const/4 v4, 0x2
 
@@ -651,17 +657,17 @@
 
     move-result v4
 
-    .line 13075
+    .line 13071
     and-int/lit16 v4, v4, 0xff
 
-    .line 145
+    .line 148
     int-to-long v4, v4
 
     shl-long/2addr v4, v8
 
     xor-long/2addr v0, v4
 
-    .line 147
+    .line 150
     :goto_c
     const/4 v4, 0x1
 
@@ -669,17 +675,17 @@
 
     move-result v4
 
-    .line 14075
+    .line 14071
     and-int/lit16 v4, v4, 0xff
 
-    .line 147
+    .line 150
     int-to-long v4, v4
 
     shl-long/2addr v4, v7
 
     xor-long/2addr v0, v4
 
-    .line 149
+    .line 152
     :goto_d
     const/4 v4, 0x0
 
@@ -687,10 +693,10 @@
 
     move-result v4
 
-    .line 15075
+    .line 15071
     and-int/lit16 v4, v4, 0xff
 
-    .line 149
+    .line 152
     int-to-long v4, v4
 
     xor-long/2addr v0, v4
@@ -701,7 +707,7 @@
 
     move-wide v0, v11
 
-    .line 150
+    .line 153
     goto :goto_7
 
     :pswitch_2
@@ -769,7 +775,7 @@
 
     goto :goto_d
 
-    .line 118
+    .line 121
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_e

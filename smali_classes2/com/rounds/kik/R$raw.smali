@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static final ca_certificates:I = 0x7f090000
+.field public static final ca_certificates:I = 0x7f080000
 
 
 # direct methods
@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 39
+    .line 112
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

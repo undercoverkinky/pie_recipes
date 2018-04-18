@@ -1,11 +1,11 @@
 .class final Lkik/android/chat/KikApplication$25;
-.super Lkik/android/config/Configuration;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lkik/android/chat/KikApplication;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lkik/android/chat/KikApplication;->G()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkik/android/config/Configuration",
+        "Lcom/kik/events/k",
         "<",
         "Ljava/lang/Boolean;",
         ">;"
@@ -24,115 +24,33 @@
 
 
 # instance fields
-.field final synthetic a:Landroid/content/Context;
-
-.field final synthetic b:Lkik/android/chat/KikApplication;
+.field final synthetic a:Lkik/android/chat/KikApplication;
 
 
 # direct methods
-.method constructor <init>(Lkik/android/chat/KikApplication;Ljava/lang/String;Ljava/lang/Boolean;[Ljava/lang/Boolean;Lkik/android/util/ah;Landroid/content/Context;)V
-    .locals 6
+.method constructor <init>(Lkik/android/chat/KikApplication;)V
+    .locals 0
 
     .prologue
-    .line 1499
-    iput-object p1, p0, Lkik/android/chat/KikApplication$25;->b:Lkik/android/chat/KikApplication;
+    .line 1969
+    iput-object p1, p0, Lkik/android/chat/KikApplication$25;->a:Lkik/android/chat/KikApplication;
 
-    iput-object p6, p0, Lkik/android/chat/KikApplication$25;->a:Landroid/content/Context;
-
-    const/4 v4, 0x0
-
-    move-object v0, p0
-
-    move-object v1, p2
-
-    move-object v2, p3
-
-    move-object v3, p4
-
-    move-object v5, p5
-
-    invoke-direct/range {v0 .. v5}, Lkik/android/config/Configuration;-><init>(Ljava/lang/String;Ljava/lang/Object;[Ljava/lang/Object;Ljava/lang/Runnable;Lkik/android/util/ah;)V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lkik/android/config/Configuration$Type;
+.method public final b(Ljava/lang/Throwable;)V
     .locals 1
 
     .prologue
-    .line 1503
-    sget-object v0, Lkik/android/config/Configuration$Type;->Boolean:Lkik/android/config/Configuration$Type;
+    .line 1973
+    const-string v0, "Unexpected failure storing chat IDs to XData."
 
-    return-object v0
-.end method
+    invoke-static {v0}, Lkik/android/util/aw;->a(Ljava/lang/String;)V
 
-.method protected final a(Lkik/android/util/ah;)V
-    .locals 0
-
-    .prologue
-    .line 1537
+    .line 1975
     return-void
-.end method
-
-.method public final synthetic a(Ljava/lang/Object;)Z
-    .locals 2
-
-    .prologue
-    .line 1499
-    .line 2515
-    new-instance v0, Landroid/os/Handler;
-
-    iget-object v1, p0, Lkik/android/chat/KikApplication$25;->a:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    .line 2516
-    new-instance v1, Lkik/android/chat/KikApplication$25$1;
-
-    invoke-direct {v1, p0}, Lkik/android/chat/KikApplication$25$1;-><init>(Lkik/android/chat/KikApplication$25;)V
-
-    .line 2524
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 2525
-    const/4 v0, 0x1
-
-    .line 1499
-    return v0
-.end method
-
-.method public final synthetic b()Ljava/lang/Object;
-    .locals 1
-
-    .prologue
-    .line 3509
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    .line 1499
-    return-object v0
-.end method
-
-.method protected final synthetic b(Lkik/android/util/ah;)Ljava/lang/Object;
-    .locals 1
-
-    .prologue
-    .line 2531
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    .line 1499
-    return-object v0
 .end method

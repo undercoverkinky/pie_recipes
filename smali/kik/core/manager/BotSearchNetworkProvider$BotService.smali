@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract getBotFromUsername(Ljava/lang/String;)Lrx/c;
+.method public abstract getBotFromUsername(Ljava/lang/String;)Lrx/d;
     .param p1    # Ljava/lang/String;
         .annotation runtime Lretrofit2/b/s;
             a = "username"
@@ -26,9 +26,9 @@
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lrx/c",
+            "Lrx/d",
             "<",
-            "Lkik/core/datatypes/z;",
+            "Lkik/core/datatypes/w;",
             ">;"
         }
     .end annotation
@@ -38,7 +38,7 @@
     .end annotation
 .end method
 
-.method public abstract getInlineBots(Ljava/lang/String;)Lrx/c;
+.method public abstract getInlineBots(Ljava/lang/String;)Lrx/d;
     .param p1    # Ljava/lang/String;
         .annotation runtime Lretrofit2/b/t;
             a = "q"
@@ -49,7 +49,7 @@
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lrx/c",
+            "Lrx/d",
             "<",
             "Lkik/core/datatypes/d;",
             ">;"
@@ -61,7 +61,7 @@
     .end annotation
 .end method
 
-.method public abstract getSearchBots(Ljava/lang/String;)Lrx/c;
+.method public abstract getSearchBots(Ljava/lang/String;)Lrx/d;
     .param p1    # Ljava/lang/String;
         .annotation runtime Lretrofit2/b/t;
             a = "q"
@@ -72,7 +72,7 @@
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lrx/c",
+            "Lrx/d",
             "<",
             "Lkik/core/datatypes/d;",
             ">;"

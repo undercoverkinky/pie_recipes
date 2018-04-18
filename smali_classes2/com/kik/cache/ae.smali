@@ -1,211 +1,171 @@
 .class public final Lcom/kik/cache/ae;
-.super Lcom/android/volley/toolbox/l;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lkik/core/interfaces/o;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/android/volley/toolbox/l",
+        "Ljava/lang/Object;",
+        "Lkik/core/interfaces/o",
         "<",
-        "Ljava/lang/Integer;",
+        "Landroid/graphics/Bitmap;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field private a:Lcom/android/volley/i$b;
+.field private final a:Lrx/d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/android/volley/i$b",
+            "Lrx/d",
             "<",
-            "Ljava/lang/Integer;",
+            "Ljava/lang/String;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private b:Lcom/android/volley/i$a;
+.field private final b:Lcom/kik/cache/KikVolleyImageLoader;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Lcom/android/volley/i$b;Lcom/android/volley/i$a;)V
-    .locals 6
+.method public constructor <init>(Lrx/d;Lcom/kik/cache/KikVolleyImageLoader;)V
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Lcom/android/volley/i$b",
+            "Lrx/d",
             "<",
-            "Ljava/lang/Integer;",
+            "Ljava/lang/String;",
             ">;",
-            "Lcom/android/volley/i$a;",
+            "Lcom/kik/cache/KikVolleyImageLoader;",
             ")V"
         }
     .end annotation
 
     .prologue
     .line 24
-    const/4 v1, 0x1
-
-    move-object v0, p0
-
-    move-object v2, p2
-
-    move-object v3, p1
-
-    move-object v4, p3
-
-    move-object v5, p4
-
-    invoke-direct/range {v0 .. v5}, Lcom/android/volley/toolbox/l;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/android/volley/i$b;Lcom/android/volley/i$a;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 25
-    iput-object p3, p0, Lcom/kik/cache/ae;->a:Lcom/android/volley/i$b;
+    iput-object p1, p0, Lcom/kik/cache/ae;->a:Lrx/d;
 
     .line 26
-    iput-object p4, p0, Lcom/kik/cache/ae;->b:Lcom/android/volley/i$a;
+    iput-object p2, p0, Lcom/kik/cache/ae;->b:Lcom/kik/cache/KikVolleyImageLoader;
 
     .line 27
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Lcom/android/volley/g;)Lcom/android/volley/i;
-    .locals 3
+.method private a(IILandroid/graphics/Bitmap;)Lrx/d;
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(",
-            "Lcom/android/volley/g;",
+            "(II",
+            "Landroid/graphics/Bitmap;",
             ")",
-            "Lcom/android/volley/i",
+            "Lrx/d",
             "<",
-            "Ljava/lang/Integer;",
+            "Landroid/graphics/Bitmap;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 38
+    iget-object v0, p0, Lcom/kik/cache/ae;->a:Lrx/d;
+
+    invoke-static {p0, p1, p2, p3}, Lcom/kik/cache/af;->a(Lcom/kik/cache/ae;IILandroid/graphics/Bitmap;)Lrx/functions/g;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lrx/d;->d(Lrx/functions/g;)Lrx/d;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic a(Lcom/kik/cache/ae;Lcom/kik/cache/HundredYearImageRequest;IILrx/Emitter;)V
+    .locals 6
+
+    .prologue
+    .line 51
+    iget-object v0, p0, Lcom/kik/cache/ae;->b:Lcom/kik/cache/KikVolleyImageLoader;
+
+    new-instance v2, Lcom/kik/cache/ae$3;
+
+    invoke-direct {v2, p0, p4}, Lcom/kik/cache/ae$3;-><init>(Lcom/kik/cache/ae;Lrx/Emitter;)V
+
+    const/4 v5, 0x0
+
+    move-object v1, p1
+
+    move v3, p2
+
+    move v4, p3
+
+    invoke-virtual/range {v0 .. v5}, Lcom/kik/cache/KikVolleyImageLoader;->b(Lcom/kik/cache/KikImageRequest;Lcom/kik/cache/KikVolleyImageLoader$d;IIZ)Lcom/kik/cache/KikVolleyImageLoader$c;
+
+    move-result-object v0
+
+    .line 70
+    invoke-virtual {v0}, Lcom/kik/cache/KikVolleyImageLoader$c;->b()Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    .line 71
+    const/4 v0, 0x0
+
+    invoke-interface {p4, v0}, Lrx/Emitter;->a(Ljava/lang/Object;)V
+
+    .line 73
+    :cond_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(II)Lrx/d;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(II)",
+            "Lrx/d",
+            "<",
+            "Landroid/graphics/Bitmap;",
             ">;"
         }
     .end annotation
 
     .prologue
     .line 32
-    iget v0, p1, Lcom/android/volley/g;->a:I
+    const/4 v0, 0x0
 
-    const/16 v1, 0xc8
-
-    if-eq v0, v1, :cond_0
-
-    .line 33
-    new-instance v0, Lcom/android/volley/VolleyError;
-
-    invoke-direct {v0, p1}, Lcom/android/volley/VolleyError;-><init>(Lcom/android/volley/g;)V
-
-    invoke-static {v0}, Lcom/android/volley/i;->a(Lcom/android/volley/VolleyError;)Lcom/android/volley/i;
+    invoke-direct {p0, p1, p2, v0}, Lcom/kik/cache/ae;->a(IILandroid/graphics/Bitmap;)Lrx/d;
 
     move-result-object v0
 
-    .line 51
-    :goto_0
     return-object v0
-
-    .line 37
-    :cond_0
-    :try_start_0
-    new-instance v0, Ljava/lang/String;
-
-    iget-object v1, p1, Lcom/android/volley/g;->b:[B
-
-    iget-object v2, p1, Lcom/android/volley/g;->c:Ljava/util/Map;
-
-    invoke-static {v2}, Lcom/android/volley/toolbox/e;->a(Ljava/util/Map;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
-    :try_end_0
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 45
-    :try_start_1
-    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-    :try_end_1
-    .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_1
-
-    move-result v0
-
-    .line 50
-    invoke-static {p1}, Lcom/android/volley/toolbox/e;->a(Lcom/android/volley/g;)Lcom/android/volley/a$a;
-
-    move-result-object v1
-
-    .line 51
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-static {v0, v1}, Lcom/android/volley/i;->a(Ljava/lang/Object;Lcom/android/volley/a$a;)Lcom/android/volley/i;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    .line 39
-    :catch_0
-    move-exception v0
-
-    .line 40
-    new-instance v1, Lcom/android/volley/VolleyError;
-
-    invoke-direct {v1, v0}, Lcom/android/volley/VolleyError;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-static {v1}, Lcom/android/volley/i;->a(Lcom/android/volley/VolleyError;)Lcom/android/volley/i;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    .line 47
-    :catch_1
-    move-exception v0
-
-    .line 48
-    new-instance v1, Lcom/android/volley/VolleyError;
-
-    invoke-direct {v1, v0}, Lcom/android/volley/VolleyError;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-static {v1}, Lcom/android/volley/i;->a(Lcom/android/volley/VolleyError;)Lcom/android/volley/i;
-
-    move-result-object v0
-
-    goto :goto_0
 .end method
 
-.method public final b(Lcom/android/volley/VolleyError;)V
+.method public final bridge synthetic a(IILjava/lang/Object;)Lrx/d;
     .locals 1
 
     .prologue
-    .line 63
-    iget-object v0, p0, Lcom/kik/cache/ae;->b:Lcom/android/volley/i$a;
+    .line 18
+    check-cast p3, Landroid/graphics/Bitmap;
 
-    invoke-interface {v0, p1}, Lcom/android/volley/i$a;->a(Lcom/android/volley/VolleyError;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/kik/cache/ae;->a(IILandroid/graphics/Bitmap;)Lrx/d;
 
-    .line 64
-    return-void
-.end method
+    move-result-object v0
 
-.method public final synthetic b(Ljava/lang/Object;)V
-    .locals 1
-
-    .prologue
-    .line 17
-    check-cast p1, Ljava/lang/Integer;
-
-    .line 1057
-    iget-object v0, p0, Lcom/kik/cache/ae;->a:Lcom/android/volley/i$b;
-
-    invoke-interface {v0, p1}, Lcom/android/volley/i$b;->a(Ljava/lang/Object;)V
-
-    .line 17
-    return-void
+    return-object v0
 .end method

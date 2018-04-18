@@ -56,7 +56,7 @@
 
 
 # virtual methods
-.method public getValue()Lcom/google/gson/j;
+.method public getValue()Lcom/google/gson/k;
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -109,7 +109,7 @@
     .line 48
     const-string v1, "message"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/ExceptionProperty;->mException:Ljava/lang/Exception;
 
@@ -117,14 +117,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 49
     const-string v1, "class"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/ExceptionProperty;->mException:Ljava/lang/Exception;
 
@@ -136,14 +136,14 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     .line 50
     const-string v1, "stacktrace"
 
-    new-instance v2, Lcom/google/gson/l;
+    new-instance v2, Lcom/google/gson/m;
 
     iget-object v3, p0, Lcom/rounds/kik/analytics/properties/ExceptionProperty;->mException:Ljava/lang/Exception;
 
@@ -151,9 +151,9 @@
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lcom/google/gson/l;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Lcom/google/gson/m;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/j;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/gson/JsonObject;->a(Ljava/lang/String;Lcom/google/gson/k;)V
 
     goto :goto_0
 .end method

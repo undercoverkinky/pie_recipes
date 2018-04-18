@@ -172,7 +172,7 @@
 
     .line 85
     :try_start_1
-    invoke-static {}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->e()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
+    invoke-static {}, Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest;->newBuilder()Lcom/kik/clientmetrics/model/Clientmetrics$ClientUploadRequest$a;
 
     move-result-object v0
 

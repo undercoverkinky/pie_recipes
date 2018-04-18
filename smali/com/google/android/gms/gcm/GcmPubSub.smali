@@ -3,13 +3,13 @@
 
 
 # static fields
-.field private static zzaSO:Lcom/google/android/gms/gcm/GcmPubSub;
+.field private static zzhql:Lcom/google/android/gms/gcm/GcmPubSub;
 
-.field private static final zzaSQ:Ljava/util/regex/Pattern;
+.field private static final zzhqn:Ljava/util/regex/Pattern;
 
 
 # instance fields
-.field private zzaSP:Lcom/google/android/gms/iid/InstanceID;
+.field private zzhqm:Lcom/google/android/gms/iid/InstanceID;
 
 
 # direct methods
@@ -22,7 +22,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/google/android/gms/gcm/GcmPubSub;->zzaSQ:Ljava/util/regex/Pattern;
+    sput-object v0, Lcom/google/android/gms/gcm/GcmPubSub;->zzhqn:Ljava/util/regex/Pattern;
 
     return-void
 .end method
@@ -36,7 +36,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/android/gms/gcm/GcmPubSub;->zzaSP:Lcom/google/android/gms/iid/InstanceID;
+    iput-object v0, p0, Lcom/google/android/gms/gcm/GcmPubSub;->zzhqm:Lcom/google/android/gms/iid/InstanceID;
 
     return-void
 .end method
@@ -49,7 +49,7 @@
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/google/android/gms/gcm/GcmPubSub;->zzaSO:Lcom/google/android/gms/gcm/GcmPubSub;
+    sget-object v0, Lcom/google/android/gms/gcm/GcmPubSub;->zzhql:Lcom/google/android/gms/gcm/GcmPubSub;
 
     if-nez v0, :cond_0
 
@@ -57,10 +57,10 @@
 
     invoke-direct {v0, p0}, Lcom/google/android/gms/gcm/GcmPubSub;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lcom/google/android/gms/gcm/GcmPubSub;->zzaSO:Lcom/google/android/gms/gcm/GcmPubSub;
+    sput-object v0, Lcom/google/android/gms/gcm/GcmPubSub;->zzhql:Lcom/google/android/gms/gcm/GcmPubSub;
 
     :cond_0
-    sget-object v0, Lcom/google/android/gms/gcm/GcmPubSub;->zzaSO:Lcom/google/android/gms/gcm/GcmPubSub;
+    sget-object v0, Lcom/google/android/gms/gcm/GcmPubSub;->zzhql:Lcom/google/android/gms/gcm/GcmPubSub;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -128,7 +128,7 @@
     :cond_2
     if-eqz p2, :cond_3
 
-    sget-object v0, Lcom/google/android/gms/gcm/GcmPubSub;->zzaSQ:Ljava/util/regex/Pattern;
+    sget-object v0, Lcom/google/android/gms/gcm/GcmPubSub;->zzhqn:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
@@ -183,7 +183,7 @@
 
     invoke-virtual {p3, v0, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/google/android/gms/gcm/GcmPubSub;->zzaSP:Lcom/google/android/gms/iid/InstanceID;
+    iget-object v0, p0, Lcom/google/android/gms/gcm/GcmPubSub;->zzhqm:Lcom/google/android/gms/iid/InstanceID;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/google/android/gms/iid/InstanceID;->getToken(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
 
@@ -206,9 +206,9 @@
 
     invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/google/android/gms/gcm/GcmPubSub;->zzaSP:Lcom/google/android/gms/iid/InstanceID;
+    iget-object v1, p0, Lcom/google/android/gms/gcm/GcmPubSub;->zzhqm:Lcom/google/android/gms/iid/InstanceID;
 
-    invoke-virtual {v1, p1, p2, v0}, Lcom/google/android/gms/iid/InstanceID;->zzb(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-virtual {v1, p1, p2, v0}, Lcom/google/android/gms/iid/InstanceID;->zza(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method

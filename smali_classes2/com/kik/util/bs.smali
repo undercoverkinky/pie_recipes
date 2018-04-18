@@ -1,81 +1,49 @@
-.class public final Lcom/kik/util/bs;
+.class final synthetic Lcom/kik/util/bs;
 .super Ljava/lang/Object;
-.source "SourceFile"
+
+# interfaces
+.implements Lrx/functions/b;
+
+
+# instance fields
+.field private final a:Landroid/widget/RatingBar;
 
 
 # direct methods
-.method public static a(Landroid/text/Spannable;[Lcom/kik/android/b/c;)V
-    .locals 7
+.method private constructor <init>(Landroid/widget/RatingBar;)V
+    .locals 0
 
-    .prologue
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
-    if-nez p1, :cond_1
+    iput-object p1, p0, Lcom/kik/util/bs;->a:Landroid/widget/RatingBar;
 
-    .line 38
-    :cond_0
     return-void
+.end method
 
-    .line 22
-    :cond_1
-    invoke-static {}, Lkik/core/util/v;->a()Lkik/core/util/v;
+.method public static a(Landroid/widget/RatingBar;)Lrx/functions/b;
+    .locals 1
 
-    move-result-object v1
+    new-instance v0, Lcom/kik/util/bs;
 
-    invoke-virtual {v1, p0}, Lkik/core/util/v;->b(Ljava/lang/CharSequence;)[Lkik/core/util/m$a;
+    invoke-direct {v0, p0}, Lcom/kik/util/bs;-><init>(Landroid/widget/RatingBar;)V
 
-    move-result-object v2
+    return-object v0
+.end method
 
-    .line 23
-    array-length v1, v2
 
-    array-length v3, p1
+# virtual methods
+.method public final call(Ljava/lang/Object;)V
+    .locals 2
 
-    if-ne v1, v3, :cond_0
+    iget-object v0, p0, Lcom/kik/util/bs;->a:Landroid/widget/RatingBar;
 
-    move v1, v0
+    check-cast p1, Ljava/lang/Float;
 
-    .line 24
-    :goto_0
-    array-length v3, v2
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    if-ge v0, v3, :cond_0
+    move-result v1
 
-    .line 25
-    aget-object v3, v2, v0
+    invoke-virtual {v0, v1}, Landroid/widget/RatingBar;->setRating(F)V
 
-    .line 26
-    aget-object v4, p1, v0
-
-    .line 27
-    if-eqz v3, :cond_2
-
-    if-eqz v4, :cond_2
-
-    .line 31
-    invoke-virtual {v3}, Lkik/core/util/m$a;->a()I
-
-    move-result v5
-
-    invoke-virtual {v3}, Lkik/core/util/m$a;->b()I
-
-    move-result v3
-
-    const/16 v6, 0x21
-
-    invoke-interface {p0, v4, v5, v3, v6}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
-
-    .line 32
-    add-int/lit8 v1, v1, 0x1
-
-    const/16 v3, 0x32
-
-    if-ge v1, v3, :cond_0
-
-    .line 24
-    :cond_2
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
+    return-void
 .end method

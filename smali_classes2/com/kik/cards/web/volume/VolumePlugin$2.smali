@@ -55,7 +55,7 @@
 
     const-string v1, "volumeDown"
 
-    invoke-static {v0, v1}, Lcom/kik/cards/web/volume/VolumePlugin;->b(Lcom/kik/cards/web/volume/VolumePlugin;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/kik/cards/web/volume/VolumePlugin;->access$100(Lcom/kik/cards/web/volume/VolumePlugin;Ljava/lang/String;)V
 
     .line 49
     return-void

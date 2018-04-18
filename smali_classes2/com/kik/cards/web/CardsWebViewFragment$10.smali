@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 498
+    .line 524
     iput-object p1, p0, Lcom/kik/cards/web/CardsWebViewFragment$10;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .locals 4
 
     .prologue
-    .line 502
+    .line 528
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$10;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
     iget-object v0, v0, Lcom/kik/cards/web/CardsWebViewFragment;->d:Lcom/kik/android/Mixpanel;
@@ -55,8 +55,8 @@
 
     iget-object v2, p0, Lcom/kik/cards/web/CardsWebViewFragment$10;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
-    .line 503
-    invoke-static {v2}, Lcom/kik/cards/web/CardsWebViewFragment;->d(Lcom/kik/cards/web/CardsWebViewFragment;)Ljava/lang/String;
+    .line 529
+    invoke-static {v2}, Lcom/kik/cards/web/CardsWebViewFragment;->e(Lcom/kik/cards/web/CardsWebViewFragment;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -68,12 +68,12 @@
 
     iget-object v2, p0, Lcom/kik/cards/web/CardsWebViewFragment$10;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
-    .line 504
-    invoke-static {v2}, Lcom/kik/cards/web/CardsWebViewFragment;->d(Lcom/kik/cards/web/CardsWebViewFragment;)Ljava/lang/String;
+    .line 530
+    invoke-static {v2}, Lcom/kik/cards/web/CardsWebViewFragment;->e(Lcom/kik/cards/web/CardsWebViewFragment;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/kik/cards/web/r;->i(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/kik/cards/web/s;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -81,32 +81,32 @@
 
     move-result-object v0
 
-    .line 505
+    .line 531
     invoke-virtual {v0}, Lcom/kik/android/Mixpanel$d;->b()V
 
-    .line 507
+    .line 533
     new-instance v1, Lkik/android/chat/fragment/KikDialogFragment$a;
 
     invoke-direct {v1}, Lkik/android/chat/fragment/KikDialogFragment$a;-><init>()V
 
-    .line 508
+    .line 534
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$10;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
-    invoke-static {v0}, Lcom/kik/cards/web/CardsWebViewFragment;->d(Lcom/kik/cards/web/CardsWebViewFragment;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/kik/cards/web/CardsWebViewFragment;->e(Lcom/kik/cards/web/CardsWebViewFragment;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v1, v0}, Lkik/android/chat/fragment/KikDialogFragment$a;->a(Ljava/lang/String;)Lkik/android/chat/fragment/KikDialogFragment$a;
 
-    .line 510
+    .line 536
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 511
+    .line 537
     iget-object v2, p0, Lcom/kik/cards/web/CardsWebViewFragment$10;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
-    const v3, 0x7f0a00a2
+    const v3, 0x7f0900a3
 
     invoke-virtual {v2, v3}, Lcom/kik/cards/web/CardsWebViewFragment;->getString(I)Ljava/lang/String;
 
@@ -114,10 +114,10 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 512
+    .line 538
     iget-object v2, p0, Lcom/kik/cards/web/CardsWebViewFragment$10;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
-    const v3, 0x7f0a035c
+    const v3, 0x7f090370
 
     invoke-virtual {v2, v3}, Lcom/kik/cards/web/CardsWebViewFragment;->getString(I)Ljava/lang/String;
 
@@ -125,10 +125,10 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 513
+    .line 539
     iget-object v2, p0, Lcom/kik/cards/web/CardsWebViewFragment$10;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
-    const v3, 0x7f0a027a
+    const v3, 0x7f09028e
 
     invoke-virtual {v2, v3}, Lcom/kik/cards/web/CardsWebViewFragment;->getString(I)Ljava/lang/String;
 
@@ -136,10 +136,10 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 514
+    .line 540
     iget-object v2, p0, Lcom/kik/cards/web/CardsWebViewFragment$10;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
-    const v3, 0x7f0a00ea
+    const v3, 0x7f0900eb
 
     invoke-virtual {v2, v3}, Lcom/kik/cards/web/CardsWebViewFragment;->getString(I)Ljava/lang/String;
 
@@ -147,19 +147,19 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 515
+    .line 541
     iget-object v2, p0, Lcom/kik/cards/web/CardsWebViewFragment$10;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
-    invoke-virtual {v2}, Lcom/kik/cards/web/CardsWebViewFragment;->c()Z
+    invoke-virtual {v2}, Lcom/kik/cards/web/CardsWebViewFragment;->b()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 516
+    .line 542
     iget-object v2, p0, Lcom/kik/cards/web/CardsWebViewFragment$10;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
-    const v3, 0x7f0a00b4
+    const v3, 0x7f0900b5
 
     invoke-virtual {v2, v3}, Lcom/kik/cards/web/CardsWebViewFragment;->getString(I)Ljava/lang/String;
 
@@ -167,7 +167,7 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 519
+    .line 545
     :cond_0
     const/4 v2, 0x0
 
@@ -185,7 +185,7 @@
 
     invoke-virtual {v1, v0, v2}, Lkik/android/chat/fragment/KikDialogFragment$a;->a([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lkik/android/chat/fragment/KikDialogFragment$a;
 
-    .line 617
+    .line 646
     iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$10;->a:Lcom/kik/cards/web/CardsWebViewFragment;
 
     invoke-virtual {v1}, Lkik/android/chat/fragment/KikDialogFragment$a;->a()Lkik/android/chat/fragment/KikDialogFragment;
@@ -196,8 +196,8 @@
 
     const-string v3, "dialog"
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/kik/cards/web/CardsWebViewFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;Lkik/android/chat/fragment/KikScopedDialogFragment$DialogScope;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/kik/cards/web/CardsWebViewFragment;->show(Lkik/android/chat/fragment/KikDialogFragment;Lkik/android/chat/fragment/KikScopedDialogFragment$DialogScope;Ljava/lang/String;)V
 
-    .line 618
+    .line 647
     return-void
 .end method

@@ -1,464 +1,137 @@
-.class public abstract Lcom/google/android/gms/common/data/zzf;
-.super Lcom/google/android/gms/common/data/AbstractDataBuffer;
+.class public final Lcom/google/android/gms/common/data/zzf;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "<T:",
         "Ljava/lang/Object;",
-        ">",
-        "Lcom/google/android/gms/common/data/AbstractDataBuffer",
-        "<TT;>;"
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Lcom/google/android/gms/common/data/DataHolder;",
+        ">;"
     }
 .end annotation
 
 
-# instance fields
-.field private zzaps:Z
-
-.field private zzapt:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList",
-            "<",
-            "Ljava/lang/Integer;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # direct methods
-.method protected constructor <init>(Lcom/google/android/gms/common/data/DataHolder;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
-    invoke-direct {p0, p1}, Lcom/google/android/gms/common/data/AbstractDataBuffer;-><init>(Lcom/google/android/gms/common/data/DataHolder;)V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/google/android/gms/common/data/zzf;->zzaps:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-.method private zzsX()V
-    .locals 6
-
-    const/4 v0, 0x1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-boolean v1, p0, Lcom/google/android/gms/common/data/zzf;->zzaps:Z
-
-    if-nez v1, :cond_2
-
-    iget-object v1, p0, Lcom/google/android/gms/common/data/zzf;->zzamz:Lcom/google/android/gms/common/data/DataHolder;
-
-    invoke-virtual {v1}, Lcom/google/android/gms/common/data/DataHolder;->getCount()I
-
-    move-result v3
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v1, p0, Lcom/google/android/gms/common/data/zzf;->zzapt:Ljava/util/ArrayList;
-
-    if-lez v3, :cond_1
-
-    iget-object v1, p0, Lcom/google/android/gms/common/data/zzf;->zzapt:Ljava/util/ArrayList;
-
-    const/4 v2, 0x0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {p0}, Lcom/google/android/gms/common/data/zzf;->zzsW()Ljava/lang/String;
-
-    move-result-object v4
-
-    iget-object v1, p0, Lcom/google/android/gms/common/data/zzf;->zzamz:Lcom/google/android/gms/common/data/DataHolder;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Lcom/google/android/gms/common/data/DataHolder;->zzbP(I)I
-
-    move-result v1
-
-    iget-object v2, p0, Lcom/google/android/gms/common/data/zzf;->zzamz:Lcom/google/android/gms/common/data/DataHolder;
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v2, v4, v5, v1}, Lcom/google/android/gms/common/data/DataHolder;->zzd(Ljava/lang/String;II)Ljava/lang/String;
-
-    move-result-object v1
-
-    move v2, v0
-
-    :goto_0
-    if-ge v2, v3, :cond_1
-
-    iget-object v0, p0, Lcom/google/android/gms/common/data/zzf;->zzamz:Lcom/google/android/gms/common/data/DataHolder;
-
-    invoke-virtual {v0, v2}, Lcom/google/android/gms/common/data/DataHolder;->zzbP(I)I
-
-    move-result v5
-
-    iget-object v0, p0, Lcom/google/android/gms/common/data/zzf;->zzamz:Lcom/google/android/gms/common/data/DataHolder;
-
-    invoke-virtual {v0, v4, v2, v5}, Lcom/google/android/gms/common/data/DataHolder;->zzd(Ljava/lang/String;II)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/lang/NullPointerException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    add-int/lit8 v3, v3, 0x4e
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v3, "Missing value for markerColumn: "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v3, ", at row: "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ", for window: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-
-    :cond_0
-    :try_start_1
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_3
-
-    iget-object v1, p0, Lcom/google/android/gms/common/data/zzf;->zzapt:Ljava/util/ArrayList;
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    invoke-virtual {v1, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :goto_1
-    add-int/lit8 v1, v2, 0x1
-
-    move v2, v1
-
-    move-object v1, v0
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/google/android/gms/common/data/zzf;->zzaps:Z
-
-    :cond_2
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    return-void
-
-    :cond_3
-    move-object v0, v1
-
-    goto :goto_1
 .end method
 
 
 # virtual methods
-.method public final get(I)Ljava/lang/Object;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I)TT;"
-        }
-    .end annotation
+.method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 8
 
-    invoke-direct {p0}, Lcom/google/android/gms/common/data/zzf;->zzsX()V
+    const/4 v4, 0x0
 
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/common/data/zzf;->zzbT(I)I
+    const/4 v5, 0x0
 
-    move-result v0
+    invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzd(Landroid/os/Parcel;)I
 
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/common/data/zzf;->zzbU(I)I
+    move-result v6
 
-    move-result v1
+    move-object v3, v5
 
-    invoke-virtual {p0, v0, v1}, Lcom/google/android/gms/common/data/zzf;->zzm(II)Ljava/lang/Object;
+    move-object v2, v5
 
-    move-result-object v0
+    move v1, v4
 
-    return-object v0
-.end method
-
-.method public getCount()I
-    .locals 1
-
-    invoke-direct {p0}, Lcom/google/android/gms/common/data/zzf;->zzsX()V
-
-    iget-object v0, p0, Lcom/google/android/gms/common/data/zzf;->zzapt:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method zzbT(I)I
-    .locals 3
-
-    if-ltz p1, :cond_0
-
-    iget-object v0, p0, Lcom/google/android/gms/common/data/zzf;->zzapt:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-lt p1, v0, :cond_1
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const/16 v2, 0x35
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v2, "Position "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " is out of bounds for this buffer"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    iget-object v0, p0, Lcom/google/android/gms/common/data/zzf;->zzapt:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method protected zzbU(I)I
-    .locals 6
-
-    const/4 v1, 0x0
-
-    if-ltz p1, :cond_0
-
-    iget-object v0, p0, Lcom/google/android/gms/common/data/zzf;->zzapt:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-ne p1, v0, :cond_2
-
-    :cond_0
-    move v0, v1
-
-    :cond_1
     :goto_0
-    return v0
-
-    :cond_2
-    iget-object v0, p0, Lcom/google/android/gms/common/data/zzf;->zzapt:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v0
 
-    add-int/lit8 v0, v0, -0x1
+    if-ge v0, v6, :cond_0
 
-    if-ne p1, v0, :cond_3
-
-    iget-object v0, p0, Lcom/google/android/gms/common/data/zzf;->zzamz:Lcom/google/android/gms/common/data/DataHolder;
-
-    invoke-virtual {v0}, Lcom/google/android/gms/common/data/DataHolder;->getCount()I
-
-    move-result v2
-
-    iget-object v0, p0, Lcom/google/android/gms/common/data/zzf;->zzapt:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    sub-int v0, v2, v0
+    const v7, 0xffff
 
-    :goto_1
-    const/4 v2, 0x1
+    and-int/2addr v7, v0
 
-    if-ne v0, v2, :cond_1
+    sparse-switch v7, :sswitch_data_0
 
-    invoke-virtual {p0, p1}, Lcom/google/android/gms/common/data/zzf;->zzbT(I)I
-
-    move-result v2
-
-    iget-object v3, p0, Lcom/google/android/gms/common/data/zzf;->zzamz:Lcom/google/android/gms/common/data/DataHolder;
-
-    invoke-virtual {v3, v2}, Lcom/google/android/gms/common/data/DataHolder;->zzbP(I)I
-
-    move-result v3
-
-    invoke-virtual {p0}, Lcom/google/android/gms/common/data/zzf;->zzsY()Ljava/lang/String;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_1
-
-    iget-object v5, p0, Lcom/google/android/gms/common/data/zzf;->zzamz:Lcom/google/android/gms/common/data/DataHolder;
-
-    invoke-virtual {v5, v4, v2, v3}, Lcom/google/android/gms/common/data/DataHolder;->zzd(Ljava/lang/String;II)Ljava/lang/String;
-
-    move-result-object v2
-
-    if-nez v2, :cond_1
-
-    move v0, v1
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzb(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    :cond_3
-    iget-object v0, p0, Lcom/google/android/gms/common/data/zzf;->zzapt:Ljava/util/ArrayList;
+    :sswitch_0
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzaa(Landroid/os/Parcel;I)[Ljava/lang/String;
 
-    add-int/lit8 v2, p1, 0x1
+    move-result-object v2
 
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object v0
+    :sswitch_1
+    sget-object v3, Landroid/database/CursorWindow;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    iget-object v0, p0, Lcom/google/android/gms/common/data/zzf;->zzapt:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-static {p1, v0, v3}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzb(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)[Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Integer;
+    check-cast v0, [Landroid/database/CursorWindow;
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    move-object v3, v0
 
-    move-result v0
+    goto :goto_0
 
-    sub-int v0, v2, v0
+    :sswitch_2
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzg(Landroid/os/Parcel;I)I
 
-    goto :goto_1
+    move-result v4
+
+    goto :goto_0
+
+    :sswitch_3
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzs(Landroid/os/Parcel;I)Landroid/os/Bundle;
+
+    move-result-object v5
+
+    goto :goto_0
+
+    :sswitch_4
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzg(Landroid/os/Parcel;I)I
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {p1, v6}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzaf(Landroid/os/Parcel;I)V
+
+    new-instance v0, Lcom/google/android/gms/common/data/DataHolder;
+
+    invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/common/data/DataHolder;-><init>(I[Ljava/lang/String;[Landroid/database/CursorWindow;ILandroid/os/Bundle;)V
+
+    invoke-virtual {v0}, Lcom/google/android/gms/common/data/DataHolder;->zzaiv()V
+
+    return-object v0
+
+    :sswitch_data_0
+    .sparse-switch
+        0x1 -> :sswitch_0
+        0x2 -> :sswitch_1
+        0x3 -> :sswitch_2
+        0x4 -> :sswitch_3
+        0x3e8 -> :sswitch_4
+    .end sparse-switch
 .end method
 
-.method protected abstract zzm(II)Ljava/lang/Object;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(II)TT;"
-        }
-    .end annotation
-.end method
-
-.method protected abstract zzsW()Ljava/lang/String;
-.end method
-
-.method protected zzsY()Ljava/lang/String;
+.method public final synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x0
+    new-array v0, p1, [Lcom/google/android/gms/common/data/DataHolder;
 
     return-object v0
 .end method

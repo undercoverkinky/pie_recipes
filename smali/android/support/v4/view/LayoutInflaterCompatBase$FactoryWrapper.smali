@@ -26,13 +26,13 @@
     .locals 0
 
     .prologue
-    .line 30
+    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
+    .line 35
     iput-object p1, p0, Landroid/support/v4/view/LayoutInflaterCompatBase$FactoryWrapper;->mDelegateFactory:Landroid/support/v4/view/LayoutInflaterFactory;
 
-    .line 32
+    .line 36
     return-void
 .end method
 
@@ -42,7 +42,7 @@
     .locals 2
 
     .prologue
-    .line 36
+    .line 40
     iget-object v0, p0, Landroid/support/v4/view/LayoutInflaterCompatBase$FactoryWrapper;->mDelegateFactory:Landroid/support/v4/view/LayoutInflaterFactory;
 
     const/4 v1, 0x0
@@ -58,7 +58,7 @@
     .locals 2
 
     .prologue
-    .line 40
+    .line 44
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

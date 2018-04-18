@@ -1,5 +1,5 @@
 .class public final Lcom/kik/android/a/a;
-.super Lcom/kik/events/n;
+.super Lcom/kik/events/m;
 .source "SourceFile"
 
 
@@ -69,7 +69,7 @@
     const/4 v2, 0x0
 
     .line 45
-    invoke-direct {p0}, Lcom/kik/events/n;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/m;-><init>()V
 
     .line 104
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -394,12 +394,12 @@
 
 
 # virtual methods
-.method public final a(J)Lcom/kik/events/p;
+.method public final a(J)Lcom/kik/events/o;
     .locals 5
 
     .prologue
     .line 86
-    invoke-virtual {p0}, Lcom/kik/android/a/a;->f()Lcom/kik/events/p;
+    invoke-virtual {p0}, Lcom/kik/android/a/a;->f()Lcom/kik/events/o;
 
     move-result-object v0
 
@@ -408,7 +408,7 @@
 
     new-instance v2, Lcom/kik/android/a/a$1;
 
-    invoke-direct {v2, p0, v0}, Lcom/kik/android/a/a$1;-><init>(Lcom/kik/android/a/a;Lcom/kik/events/p;)V
+    invoke-direct {v2, p0, v0}, Lcom/kik/android/a/a$1;-><init>(Lcom/kik/android/a/a;Lcom/kik/events/o;)V
 
     sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -457,7 +457,7 @@
     invoke-direct {p0, v0, v1}, Lcom/kik/android/a/a;->a(ZZ)V
 
     .line 119
-    invoke-super {p0}, Lcom/kik/events/n;->a()V
+    invoke-super {p0}, Lcom/kik/events/m;->a()V
 
     .line 120
     return-void
@@ -468,7 +468,7 @@
 
     .prologue
     .line 125
-    invoke-super {p0}, Lcom/kik/events/n;->b()V
+    invoke-super {p0}, Lcom/kik/events/m;->b()V
 
     .line 128
     iget-object v0, p0, Lcom/kik/android/a/a;->j:Landroid/content/Context;

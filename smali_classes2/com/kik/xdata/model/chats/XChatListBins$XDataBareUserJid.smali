@@ -81,7 +81,7 @@
     return-void
 .end method
 
-.method public static b()Lcom/dyuproject/protostuff/u;
+.method public static a()Lcom/dyuproject/protostuff/u;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -102,7 +102,28 @@
 
 
 # virtual methods
-.method public final a()Lcom/dyuproject/protostuff/u;
+.method public final a(Ljava/lang/String;)Lcom/kik/xdata/model/chats/XChatListBins$XDataBareUserJid;
+    .locals 0
+
+    .prologue
+    .line 217
+    iput-object p1, p0, Lcom/kik/xdata/model/chats/XChatListBins$XDataBareUserJid;->localPart:Ljava/lang/String;
+
+    .line 218
+    return-object p0
+.end method
+
+.method public final b()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 212
+    iget-object v0, p0, Lcom/kik/xdata/model/chats/XChatListBins$XDataBareUserJid;->localPart:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final cachedSchema()Lcom/dyuproject/protostuff/u;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -117,27 +138,6 @@
     .prologue
     .line 237
     sget-object v0, Lcom/kik/xdata/model/chats/XChatListBins$XDataBareUserJid;->b:Lcom/dyuproject/protostuff/u;
-
-    return-object v0
-.end method
-
-.method public final a(Ljava/lang/String;)Lcom/kik/xdata/model/chats/XChatListBins$XDataBareUserJid;
-    .locals 0
-
-    .prologue
-    .line 217
-    iput-object p1, p0, Lcom/kik/xdata/model/chats/XChatListBins$XDataBareUserJid;->localPart:Ljava/lang/String;
-
-    .line 218
-    return-object p0
-.end method
-
-.method public final c()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 212
-    iget-object v0, p0, Lcom/kik/xdata/model/chats/XChatListBins$XDataBareUserJid;->localPart:Ljava/lang/String;
 
     return-object v0
 .end method

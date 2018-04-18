@@ -1,25 +1,16 @@
 .class final Lkik/android/chat/KikApplication$27;
-.super Lcom/kik/events/l;
+.super Ljava/lang/Thread;
 .source "SourceFile"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkik/android/chat/KikApplication;->F()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lkik/android/chat/KikApplication;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x0
     name = null
-.end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/kik/events/l",
-        "<",
-        "Ljava/lang/Boolean;",
-        ">;"
-    }
 .end annotation
 
 
@@ -32,28 +23,29 @@
     .locals 0
 
     .prologue
-    .line 1845
+    .line 2249
     iput-object p1, p0, Lkik/android/chat/KikApplication$27;->a:Lkik/android/chat/KikApplication;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Throwable;)V
+.method public final run()V
     .locals 1
 
     .prologue
-    .line 1849
-    const-string v0, "Unexpected failure storing chat IDs to XData."
+    .line 2252
+    iget-object v0, p0, Lkik/android/chat/KikApplication$27;->a:Lkik/android/chat/KikApplication;
 
-    invoke-static {v0}, Lkik/android/util/ax;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lkik/android/chat/KikApplication;->O(Lkik/android/chat/KikApplication;)Lkik/android/util/bp;
 
-    .line 1850
-    invoke-static {p1}, Lkik/android/util/ax;->a(Ljava/lang/Throwable;)V
+    move-result-object v0
 
-    .line 1851
+    invoke-virtual {v0}, Lkik/android/util/bp;->f()V
+
+    .line 2253
     return-void
 .end method

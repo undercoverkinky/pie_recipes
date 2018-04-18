@@ -91,6 +91,7 @@
 
     iget-object v3, p0, Lcom/crashlytics/android/core/z$b;->c:Ljava/lang/String;
 
+    .line 443
     invoke-static {v3}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
 
     move-result-object v3
@@ -104,6 +105,7 @@
 
     iget-object v4, p0, Lcom/crashlytics/android/core/z$b;->d:Ljava/lang/String;
 
+    .line 445
     invoke-static {v4}, Lcom/crashlytics/android/core/b;->a(Ljava/lang/String;)Lcom/crashlytics/android/core/b;
 
     move-result-object v4

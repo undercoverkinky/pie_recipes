@@ -1,78 +1,42 @@
 .class public final Lio/fabric/sdk/android/services/settings/v;
-.super Ljava/lang/Object;
+.super Lio/fabric/sdk/android/services/settings/a;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:Ljava/lang/String;
-
-.field public final i:Ljava/lang/String;
-
-.field public final j:Ljava/lang/String;
-
-.field public final k:I
-
-.field public final l:Ljava/lang/String;
-
-
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Lio/fabric/sdk/android/h;Ljava/lang/String;Ljava/lang/String;Lio/fabric/sdk/android/services/network/c;)V
+    .locals 6
 
     .prologue
-    .line 40
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 32
+    sget-object v5, Lio/fabric/sdk/android/services/network/HttpMethod;->PUT:Lio/fabric/sdk/android/services/network/HttpMethod;
 
-    .line 41
-    iput-object p1, p0, Lio/fabric/sdk/android/services/settings/v;->a:Ljava/lang/String;
+    move-object v0, p0
 
-    .line 42
-    iput-object p2, p0, Lio/fabric/sdk/android/services/settings/v;->b:Ljava/lang/String;
+    move-object v1, p1
 
-    .line 43
-    iput-object p3, p0, Lio/fabric/sdk/android/services/settings/v;->c:Ljava/lang/String;
+    move-object v2, p2
 
-    .line 44
-    iput-object p4, p0, Lio/fabric/sdk/android/services/settings/v;->d:Ljava/lang/String;
+    move-object v3, p3
 
-    .line 45
-    iput-object p5, p0, Lio/fabric/sdk/android/services/settings/v;->e:Ljava/lang/String;
+    move-object v4, p4
 
-    .line 46
-    iput-object p6, p0, Lio/fabric/sdk/android/services/settings/v;->f:Ljava/lang/String;
+    invoke-direct/range {v0 .. v5}, Lio/fabric/sdk/android/services/settings/a;-><init>(Lio/fabric/sdk/android/h;Ljava/lang/String;Ljava/lang/String;Lio/fabric/sdk/android/services/network/c;Lio/fabric/sdk/android/services/network/HttpMethod;)V
 
-    .line 47
-    iput-object p7, p0, Lio/fabric/sdk/android/services/settings/v;->g:Ljava/lang/String;
-
-    .line 48
-    iput-object p8, p0, Lio/fabric/sdk/android/services/settings/v;->h:Ljava/lang/String;
-
-    .line 49
-    iput-object p9, p0, Lio/fabric/sdk/android/services/settings/v;->i:Ljava/lang/String;
-
-    .line 50
-    iput-object p10, p0, Lio/fabric/sdk/android/services/settings/v;->j:Ljava/lang/String;
-
-    .line 51
-    iput p11, p0, Lio/fabric/sdk/android/services/settings/v;->k:I
-
-    .line 52
-    iput-object p12, p0, Lio/fabric/sdk/android/services/settings/v;->l:Ljava/lang/String;
-
-    .line 53
+    .line 33
     return-void
+.end method
+
+
+# virtual methods
+.method public final bridge synthetic a(Lio/fabric/sdk/android/services/settings/d;)Z
+    .locals 1
+
+    .prologue
+    .line 29
+    invoke-super {p0, p1}, Lio/fabric/sdk/android/services/settings/a;->a(Lio/fabric/sdk/android/services/settings/d;)Z
+
+    move-result v0
+
+    return v0
 .end method

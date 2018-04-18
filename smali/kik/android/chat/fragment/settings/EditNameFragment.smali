@@ -13,35 +13,29 @@
 
 # instance fields
 .field protected _firstNameInput:Lkik/android/chat/view/ValidateableInputView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1101bc
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1001e2
     .end annotation
 .end field
 
 .field protected _lastNameInput:Lkik/android/chat/view/ValidateableInputView;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1101bd
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1001e3
     .end annotation
 .end field
 
 .field protected _saveButton:Landroid/view/View;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f1101bb
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1001e1
     .end annotation
 .end field
 
-.field protected a:Lkik/core/interfaces/af;
+.field protected a:Lkik/core/interfaces/ag;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
 
-.field protected b:Lkik/core/interfaces/x;
+.field protected b:Lkik/core/interfaces/v;
     .annotation runtime Ljavax/inject/Inject;
     .end annotation
 .end field
@@ -58,10 +52,10 @@
     .locals 1
 
     .prologue
-    .line 38
+    .line 40
     invoke-direct {p0}, Lkik/android/chat/fragment/KikScopedDialogFragment;-><init>()V
 
-    .line 50
+    .line 52
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->e:Z
@@ -69,101 +63,11 @@
     return-void
 .end method
 
-.method static synthetic a(Lkik/android/chat/fragment/settings/EditNameFragment;Landroid/content/Context;)Lcom/kik/events/Promise;
-    .locals 1
-
-    .prologue
-    .line 38
-    const v0, 0x7f040138
-
-    invoke-virtual {p0, p1, v0}, Lkik/android/chat/fragment/settings/EditNameFragment;->a(Landroid/content/Context;I)Lcom/kik/events/Promise;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method static synthetic a(Lkik/android/chat/fragment/settings/EditNameFragment;Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
-
-    .prologue
-    .line 3076
-    const-string v0, " "
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 3077
-    const-string v0, " "
-
-    const-string v1, ""
-
-    invoke-virtual {p1, v0, v1}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 3078
-    iget-object v0, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_lastNameInput:Lkik/android/chat/view/ValidateableInputView;
-
-    invoke-virtual {v0}, Lkik/android/chat/view/ValidateableInputView;->requestFocus()Z
-
-    .line 3079
-    iget-object v0, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_lastNameInput:Lkik/android/chat/view/ValidateableInputView;
-
-    invoke-virtual {v0}, Lkik/android/chat/view/ValidateableInputView;->f()Landroid/text/Editable;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/text/Editable;->length()I
-
-    move-result v0
-
-    .line 3080
-    iget-object v1, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_lastNameInput:Lkik/android/chat/view/ValidateableInputView;
-
-    invoke-virtual {v1, v0, v0}, Lkik/android/chat/view/ValidateableInputView;->a(II)V
-
-    .line 3082
-    :cond_0
-    iget-object v0, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_lastNameInput:Lkik/android/chat/view/ValidateableInputView;
-
-    invoke-virtual {v0}, Lkik/android/chat/view/ValidateableInputView;->f()Landroid/text/Editable;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p0, p1, v0}, Lkik/android/chat/fragment/settings/EditNameFragment;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 0
-    return-object p1
-.end method
-
-.method static synthetic a(Lkik/android/chat/fragment/settings/EditNameFragment;)V
     .locals 1
 
     .prologue
-    .line 0
-    .line 3108
-    iget-object v0, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_firstNameInput:Lkik/android/chat/view/ValidateableInputView;
-
-    invoke-virtual {v0, p0}, Lkik/android/chat/view/ValidateableInputView;->a(Lkik/android/util/KeyboardManipulator;)V
-
-    .line 0
-    return-void
-.end method
-
-.method static synthetic b(Lkik/android/chat/fragment/settings/EditNameFragment;Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 0
-    .line 3091
+    .line 100
     iget-object v0, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_firstNameInput:Lkik/android/chat/view/ValidateableInputView;
 
     invoke-virtual {v0}, Lkik/android/chat/view/ValidateableInputView;->f()Landroid/text/Editable;
@@ -174,49 +78,48 @@
 
     move-result-object v0
 
-    invoke-direct {p0, v0, p1}, Lkik/android/chat/fragment/settings/EditNameFragment;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v0, p1}, Lkik/android/chat/fragment/settings/EditNameFragment;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 0
+    .line 101
     return-object p1
 .end method
 
-.method static synthetic b()Lrx/c;
+.method static synthetic a()Lrx/d;
     .locals 1
 
     .prologue
-    .line 3087
+    .line 97
     const/4 v0, 0x1
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    invoke-static {v0}, Lrx/c;->b(Ljava/lang/Object;)Lrx/c;
+    invoke-static {v0}, Lrx/d;->b(Ljava/lang/Object;)Lrx/d;
 
     move-result-object v0
 
-    .line 0
     return-object v0
 .end method
 
-.method private b(Ljava/lang/String;Ljava/lang/String;)V
+.method private a(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
     .prologue
-    .line 187
-    invoke-static {p1}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    .line 196
+    invoke-static {p1}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-static {p2}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    invoke-static {p2}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 188
+    .line 197
     :cond_0
     iget-object v0, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_saveButton:Landroid/view/View;
 
@@ -224,11 +127,11 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
 
-    .line 195
+    .line 204
     :goto_0
     return-void
 
-    .line 191
+    .line 200
     :cond_1
     iget-object v0, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->c:Ljava/lang/String;
 
@@ -246,13 +149,13 @@
 
     if-nez v0, :cond_3
 
-    .line 192
+    .line 201
     :cond_2
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->e:Z
 
-    .line 194
+    .line 203
     :cond_3
     iget-object v0, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_saveButton:Landroid/view/View;
 
@@ -263,33 +166,105 @@
     goto :goto_0
 .end method
 
-.method static synthetic c()Lrx/c;
+.method static synthetic a(Lkik/android/chat/fragment/settings/EditNameFragment;)V
     .locals 1
 
     .prologue
-    .line 3088
+    .line 117
+    iget-object v0, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_firstNameInput:Lkik/android/chat/view/ValidateableInputView;
+
+    invoke-virtual {v0, p0}, Lkik/android/chat/view/ValidateableInputView;->a(Lkik/android/util/KeyboardManipulator;)V
+
+    return-void
+.end method
+
+.method static synthetic b(Lkik/android/chat/fragment/settings/EditNameFragment;Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    .prologue
+    .line 85
+    const-string v0, " "
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 86
+    const-string v0, " "
+
+    const-string v1, ""
+
+    invoke-virtual {p1, v0, v1}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 87
+    iget-object v0, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_lastNameInput:Lkik/android/chat/view/ValidateableInputView;
+
+    invoke-virtual {v0}, Lkik/android/chat/view/ValidateableInputView;->requestFocus()Z
+
+    .line 88
+    iget-object v0, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_lastNameInput:Lkik/android/chat/view/ValidateableInputView;
+
+    invoke-virtual {v0}, Lkik/android/chat/view/ValidateableInputView;->f()Landroid/text/Editable;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/text/Editable;->length()I
+
+    move-result v0
+
+    .line 89
+    iget-object v1, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_lastNameInput:Lkik/android/chat/view/ValidateableInputView;
+
+    invoke-virtual {v1, v0, v0}, Lkik/android/chat/view/ValidateableInputView;->a(II)V
+
+    .line 91
+    :cond_0
+    iget-object v0, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_lastNameInput:Lkik/android/chat/view/ValidateableInputView;
+
+    invoke-virtual {v0}, Lkik/android/chat/view/ValidateableInputView;->f()Landroid/text/Editable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0, p1, v0}, Lkik/android/chat/fragment/settings/EditNameFragment;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 92
+    return-object p1
+.end method
+
+.method static synthetic b()Lrx/d;
+    .locals 1
+
+    .prologue
+    .line 96
     const/4 v0, 0x1
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    invoke-static {v0}, Lrx/c;->b(Ljava/lang/Object;)Lrx/c;
+    invoke-static {v0}, Lrx/d;->b(Ljava/lang/Object;)Lrx/d;
 
     move-result-object v0
 
-    .line 0
     return-object v0
 .end method
 
 
 # virtual methods
-.method protected final E()I
+.method protected getTitleResource()I
     .locals 1
 
     .prologue
-    .line 101
-    const v0, 0x7f0a04e6
+    .line 110
+    const v0, 0x7f0904fa
 
     return v0
 .end method
@@ -298,23 +273,17 @@
     .locals 1
 
     .prologue
-    .line 55
-    .line 1088
-    invoke-virtual {p0}, Lkik/android/chat/fragment/KikFragmentBase;->getActivity()Landroid/support/v4/app/FragmentActivity;
+    .line 57
+    invoke-virtual {p0}, Lkik/android/chat/fragment/settings/EditNameFragment;->getCoreComponent()Lcom/kik/components/CoreComponent;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkik/android/util/s;->a(Landroid/app/Activity;)Lcom/kik/components/CoreComponent;
-
-    move-result-object v0
-
-    .line 55
     invoke-interface {v0, p0}, Lcom/kik/components/CoreComponent;->a(Lkik/android/chat/fragment/settings/EditNameFragment;)V
 
-    .line 56
+    .line 58
     invoke-super {p0, p1}, Lkik/android/chat/fragment/KikScopedDialogFragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 57
+    .line 59
     return-void
 .end method
 
@@ -322,8 +291,8 @@
     .locals 3
 
     .prologue
-    .line 63
-    const v0, 0x7f040079
+    .line 72
+    const v0, 0x7f040080
 
     const/4 v1, 0x0
 
@@ -331,41 +300,41 @@
 
     move-result-object v0
 
-    .line 64
-    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)V
+    .line 73
+    invoke-static {p0, v0}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)Lbutterknife/Unbinder;
 
-    .line 66
-    iget-object v1, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->a:Lkik/core/interfaces/af;
+    .line 75
+    iget-object v1, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->a:Lkik/core/interfaces/ag;
 
-    invoke-interface {v1}, Lkik/core/interfaces/af;->d()Lkik/core/datatypes/ad;
+    invoke-interface {v1}, Lkik/core/interfaces/ag;->d()Lkik/core/datatypes/aa;
 
     move-result-object v1
 
-    .line 68
-    iget-object v2, v1, Lkik/core/datatypes/ad;->d:Ljava/lang/String;
+    .line 77
+    iget-object v2, v1, Lkik/core/datatypes/aa;->d:Ljava/lang/String;
 
     iput-object v2, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->c:Ljava/lang/String;
 
-    .line 69
-    iget-object v1, v1, Lkik/core/datatypes/ad;->e:Ljava/lang/String;
+    .line 78
+    iget-object v1, v1, Lkik/core/datatypes/aa;->e:Ljava/lang/String;
 
     iput-object v1, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->d:Ljava/lang/String;
 
-    .line 72
+    .line 81
     iget-object v1, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_firstNameInput:Lkik/android/chat/view/ValidateableInputView;
 
     iget-object v2, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->c:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lkik/android/chat/view/ValidateableInputView;->b(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v2}, Lkik/android/chat/view/ValidateableInputView;->e(Ljava/lang/CharSequence;)V
 
-    .line 73
+    .line 82
     iget-object v1, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_lastNameInput:Lkik/android/chat/view/ValidateableInputView;
 
     iget-object v2, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->d:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lkik/android/chat/view/ValidateableInputView;->b(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v2}, Lkik/android/chat/view/ValidateableInputView;->e(Ljava/lang/CharSequence;)V
 
-    .line 75
+    .line 84
     iget-object v1, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_firstNameInput:Lkik/android/chat/view/ValidateableInputView;
 
     invoke-static {p0}, Lkik/android/chat/fragment/settings/f;->a(Lkik/android/chat/fragment/settings/EditNameFragment;)Lkik/android/chat/view/ValidateableInputView$a;
@@ -374,7 +343,7 @@
 
     invoke-virtual {v1, v2}, Lkik/android/chat/view/ValidateableInputView;->a(Lkik/android/chat/view/ValidateableInputView$a;)V
 
-    .line 87
+    .line 96
     iget-object v1, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_firstNameInput:Lkik/android/chat/view/ValidateableInputView;
 
     invoke-static {}, Lkik/android/chat/fragment/settings/g;->a()Lkik/android/chat/view/ValidateableInputView$b;
@@ -383,7 +352,7 @@
 
     invoke-virtual {v1, v2}, Lkik/android/chat/view/ValidateableInputView;->a(Lkik/android/chat/view/ValidateableInputView$b;)V
 
-    .line 88
+    .line 97
     iget-object v1, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_lastNameInput:Lkik/android/chat/view/ValidateableInputView;
 
     invoke-static {}, Lkik/android/chat/fragment/settings/h;->a()Lkik/android/chat/view/ValidateableInputView$b;
@@ -392,7 +361,7 @@
 
     invoke-virtual {v1, v2}, Lkik/android/chat/view/ValidateableInputView;->a(Lkik/android/chat/view/ValidateableInputView$b;)V
 
-    .line 90
+    .line 99
     iget-object v1, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_lastNameInput:Lkik/android/chat/view/ValidateableInputView;
 
     invoke-static {p0}, Lkik/android/chat/fragment/settings/i;->a(Lkik/android/chat/fragment/settings/EditNameFragment;)Lkik/android/chat/view/ValidateableInputView$a;
@@ -401,7 +370,7 @@
 
     invoke-virtual {v1, v2}, Lkik/android/chat/view/ValidateableInputView;->a(Lkik/android/chat/view/ValidateableInputView$a;)V
 
-    .line 95
+    .line 104
     return-object v0
 .end method
 
@@ -409,10 +378,10 @@
     .locals 2
 
     .prologue
-    .line 107
+    .line 116
     invoke-super {p0}, Lkik/android/chat/fragment/KikScopedDialogFragment;->onResume()V
 
-    .line 108
+    .line 117
     iget-object v0, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_firstNameInput:Lkik/android/chat/view/ValidateableInputView;
 
     invoke-static {p0}, Lkik/android/chat/fragment/settings/j;->a(Lkik/android/chat/fragment/settings/EditNameFragment;)Ljava/lang/Runnable;
@@ -421,7 +390,7 @@
 
     invoke-virtual {v0, v1}, Lkik/android/chat/view/ValidateableInputView;->post(Ljava/lang/Runnable;)Z
 
-    .line 109
+    .line 118
     return-void
 .end method
 
@@ -429,17 +398,17 @@
     .locals 4
     .annotation build Lbutterknife/OnClick;
         value = {
-            0x7f1101bb
+            0x7f1001e1
         }
     .end annotation
 
     .prologue
-    const v3, 0x7f0a021e
+    const v3, 0x7f090232
 
-    .line 114
-    invoke-virtual {p0}, Lkik/android/chat/fragment/settings/EditNameFragment;->ag()V
+    .line 123
+    invoke-virtual {p0}, Lkik/android/chat/fragment/settings/EditNameFragment;->hideKeyboard()V
 
-    .line 115
+    .line 124
     iget-object v0, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_firstNameInput:Lkik/android/chat/view/ValidateableInputView;
 
     invoke-virtual {v0}, Lkik/android/chat/view/ValidateableInputView;->f()Landroid/text/Editable;
@@ -450,7 +419,7 @@
 
     move-result-object v0
 
-    .line 116
+    .line 125
     iget-object v1, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_lastNameInput:Lkik/android/chat/view/ValidateableInputView;
 
     invoke-virtual {v1}, Lkik/android/chat/view/ValidateableInputView;->f()Landroid/text/Editable;
@@ -461,78 +430,78 @@
 
     move-result-object v1
 
-    .line 118
+    .line 127
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v2}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    invoke-static {v2}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 2044
+    .line 1044
     const-string v2, "^.*((\\b|[^A-Za-z0-9]+)[Kk][Iil](K(\\b|[^A-Z0-9])|k(\\b|[^a-z0-9]))|(\\b|[^A-Za-z]+)[Pp]+[Ee3]+[Dd]+[Oo0]+(\\b|([Pp]+[Hh]+|[Ff]+)[Ii1]+[Ll1]+[Ee3]+|[^A-Za-z]+)).*$"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
 
     move-result v2
 
-    .line 118
+    .line 127
     if-eqz v2, :cond_1
 
-    .line 119
+    .line 128
     :cond_0
     iget-object v0, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_firstNameInput:Lkik/android/chat/view/ValidateableInputView;
 
     invoke-virtual {v0, v3}, Lkik/android/chat/view/ValidateableInputView;->b(I)V
 
-    .line 120
+    .line 129
     iget-object v0, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_firstNameInput:Lkik/android/chat/view/ValidateableInputView;
 
-    invoke-virtual {v0}, Lkik/android/chat/view/ValidateableInputView;->i()V
+    invoke-virtual {v0}, Lkik/android/chat/view/ValidateableInputView;->k()V
 
-    .line 183
+    .line 192
     :goto_0
     return-void
 
-    .line 123
+    .line 132
     :cond_1
     invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v2}, Lkik/android/util/bq;->d(Ljava/lang/String;)Z
+    invoke-static {v2}, Lkik/android/util/br;->d(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_2
 
-    .line 3044
+    .line 2044
     const-string v2, "^.*((\\b|[^A-Za-z0-9]+)[Kk][Iil](K(\\b|[^A-Z0-9])|k(\\b|[^a-z0-9]))|(\\b|[^A-Za-z]+)[Pp]+[Ee3]+[Dd]+[Oo0]+(\\b|([Pp]+[Hh]+|[Ff]+)[Ii1]+[Ll1]+[Ee3]+|[^A-Za-z]+)).*$"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
 
     move-result v2
 
-    .line 123
+    .line 132
     if-eqz v2, :cond_3
 
-    .line 124
+    .line 133
     :cond_2
     iget-object v0, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_lastNameInput:Lkik/android/chat/view/ValidateableInputView;
 
     invoke-virtual {v0, v3}, Lkik/android/chat/view/ValidateableInputView;->b(I)V
 
-    .line 125
+    .line 134
     iget-object v0, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->_lastNameInput:Lkik/android/chat/view/ValidateableInputView;
 
-    invoke-virtual {v0}, Lkik/android/chat/view/ValidateableInputView;->i()V
+    invoke-virtual {v0}, Lkik/android/chat/view/ValidateableInputView;->k()V
 
     goto :goto_0
 
-    .line 129
+    .line 138
     :cond_3
     iget-object v2, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->c:Ljava/lang/String;
 
@@ -550,20 +519,20 @@
 
     if-eqz v2, :cond_4
 
-    .line 130
-    invoke-virtual {p0}, Lkik/android/chat/fragment/settings/EditNameFragment;->D()V
+    .line 139
+    invoke-virtual {p0}, Lkik/android/chat/fragment/settings/EditNameFragment;->finish()V
 
     goto :goto_0
 
-    .line 134
+    .line 143
     :cond_4
-    iget-object v2, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->a:Lkik/core/interfaces/af;
+    iget-object v2, p0, Lkik/android/chat/fragment/settings/EditNameFragment;->a:Lkik/core/interfaces/ag;
 
-    invoke-interface {v2, v0, v1}, Lkik/core/interfaces/af;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/kik/events/Promise;
+    invoke-interface {v2, v0, v1}, Lkik/core/interfaces/ag;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/kik/events/Promise;
 
     move-result-object v0
 
-    .line 136
+    .line 145
     new-instance v1, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;
 
     invoke-virtual {p0}, Lkik/android/chat/fragment/settings/EditNameFragment;->getContext()Landroid/content/Context;
@@ -572,38 +541,54 @@
 
     invoke-direct {v1, v2}, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0a049c
+    const v2, 0x7f0904b0
 
-    .line 137
+    .line 146
     invoke-virtual {v1, v2}, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;->a(I)Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    .line 138
+    .line 147
     invoke-virtual {v1, v2}, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;->a(Z)Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;
 
     move-result-object v1
 
-    .line 139
+    .line 148
     invoke-virtual {v1}, Lkik/android/chat/fragment/KikIndeterminateProgressDialog$Builder;->a()Lkik/android/chat/fragment/KikDialogFragment;
 
     move-result-object v1
 
-    .line 140
-    invoke-virtual {p0, v1}, Lkik/android/chat/fragment/settings/EditNameFragment;->a(Lkik/android/chat/fragment/KikDialogFragment;)V
+    .line 149
+    invoke-virtual {p0, v1}, Lkik/android/chat/fragment/settings/EditNameFragment;->replaceDialog(Lkik/android/chat/fragment/KikDialogFragment;)V
 
-    .line 142
+    .line 151
     new-instance v1, Lkik/android/chat/fragment/settings/EditNameFragment$1;
 
     invoke-direct {v1, p0}, Lkik/android/chat/fragment/settings/EditNameFragment$1;-><init>(Lkik/android/chat/fragment/settings/EditNameFragment;)V
 
-    invoke-static {v1}, Lcom/kik/sdkutils/b;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-static {v1}, Lcom/kik/sdkutils/b;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
     goto :goto_0
+.end method
+
+.method protected screenOpenedEvent()Lcom/kik/metrics/b/t;
+    .locals 1
+
+    .prologue
+    .line 65
+    invoke-static {}, Lcom/kik/metrics/b/k;->b()Lcom/kik/metrics/b/k$a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/kik/metrics/b/k$a;->a()Lcom/kik/metrics/b/k;
+
+    move-result-object v0
+
+    return-object v0
 .end method

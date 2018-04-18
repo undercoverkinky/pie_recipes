@@ -1,21 +1,13 @@
-.class public final Lio/fabric/sdk/android/services/settings/t;
+.class public interface abstract Lio/fabric/sdk/android/services/settings/t;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/lang/String;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    .prologue
-    .line 62
-    const/4 v0, 0x0
-
-    sput-object v0, Lio/fabric/sdk/android/services/settings/t;->a:Ljava/lang/String;
-
-    return-void
+# virtual methods
+.method public abstract a(Lio/fabric/sdk/android/services/common/j;Lorg/json/JSONObject;)Lio/fabric/sdk/android/services/settings/r;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lorg/json/JSONException;
+        }
+    .end annotation
 .end method

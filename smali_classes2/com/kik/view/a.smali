@@ -158,7 +158,7 @@
     .line 71
     iget-object v0, p0, Lcom/kik/view/a;->c:Landroid/view/View;
 
-    const v1, 0x7f1100b3
+    const v1, 0x7f1000ef
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -172,7 +172,7 @@
     .line 74
     iget-object v1, p0, Lcom/kik/view/a;->c:Landroid/view/View;
 
-    const v2, 0x7f1100b2
+    const v2, 0x7f1000ee
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -409,7 +409,7 @@
     .line 125
     iget-object v0, p0, Lcom/kik/view/a;->c:Landroid/view/View;
 
-    const v1, 0x7f1100b3
+    const v1, 0x7f1000ef
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

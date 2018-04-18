@@ -8,18 +8,14 @@
 
 # instance fields
 .field protected _findMeCheckBox:Landroid/widget/CheckBox;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f11009c
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1000d7
     .end annotation
 .end field
 
 .field protected _uploadContactInfoCheckboxContainer:Landroid/view/ViewGroup;
-    .annotation build Lbutterknife/Bind;
-        value = {
-            0x7f11009b
-        }
+    .annotation build Lbutterknife/BindView;
+        value = 0x7f1000d6
     .end annotation
 .end field
 
@@ -171,7 +167,7 @@
     :cond_0
     iget-object v1, p0, Lkik/android/addressbook/PrivacyOptionsDialog;->a:Landroid/content/Context;
 
-    const v2, 0x7f040109
+    const v2, 0x7f04013a
 
     const/4 v3, 0x0
 
@@ -180,7 +176,7 @@
     move-result-object v1
 
     .line 88
-    invoke-static {p0, v1}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)V
+    invoke-static {p0, v1}, Lbutterknife/ButterKnife;->bind(Ljava/lang/Object;Landroid/view/View;)Lbutterknife/Unbinder;
 
     .line 90
     new-instance v2, Lkik/android/chat/fragment/KikDialogFragment$a;
@@ -201,7 +197,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0a03e0
+    const v4, 0x7f0903f4
 
     new-instance v5, Lkik/android/addressbook/PrivacyOptionsDialog$2;
 

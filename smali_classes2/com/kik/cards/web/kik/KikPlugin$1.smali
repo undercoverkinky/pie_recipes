@@ -1,11 +1,11 @@
 .class final Lcom/kik/cards/web/kik/KikPlugin$1;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/cards/web/kik/KikPlugin;->openConversationWithUser(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/h;
+    value = Lcom/kik/cards/web/kik/KikPlugin;->openConversationWithUser(Lcom/kik/cards/web/plugin/a;Lorg/json/JSONObject;)Lcom/kik/cards/web/plugin/g;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,9 +15,9 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
-        "Lkik/core/datatypes/o;",
+        "Lkik/core/datatypes/l;",
         ">;"
     }
 .end annotation
@@ -47,7 +47,7 @@
 
     iput-object p4, p0, Lcom/kik/cards/web/kik/KikPlugin$1;->c:Lcom/kik/cards/web/plugin/a;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -55,20 +55,20 @@
 
 # virtual methods
 .method public final synthetic a(Ljava/lang/Object;)V
-    .locals 4
+    .locals 5
 
     .prologue
     .line 121
-    check-cast p1, Lkik/core/datatypes/o;
+    check-cast p1, Lkik/core/datatypes/l;
 
     .line 1124
     iget-object v0, p0, Lcom/kik/cards/web/kik/KikPlugin$1;->d:Lcom/kik/cards/web/kik/KikPlugin;
 
-    invoke-static {v0}, Lcom/kik/cards/web/kik/KikPlugin;->b(Lcom/kik/cards/web/kik/KikPlugin;)Lcom/kik/cards/web/kik/b;
+    invoke-static {v0}, Lcom/kik/cards/web/kik/KikPlugin;->access$200(Lcom/kik/cards/web/kik/KikPlugin;)Lcom/kik/cards/web/kik/b;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lkik/core/datatypes/o;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lkik/core/datatypes/l;->k()Ljava/lang/String;
 
     move-result-object v1
 
@@ -76,13 +76,17 @@
 
     iget-object v3, p0, Lcom/kik/cards/web/kik/KikPlugin$1;->d:Lcom/kik/cards/web/kik/KikPlugin;
 
-    invoke-static {v3}, Lcom/kik/cards/web/kik/KikPlugin;->a(Lcom/kik/cards/web/kik/KikPlugin;)Lcom/kik/cards/web/browser/BrowserPlugin$a;
+    iget-object v4, p0, Lcom/kik/cards/web/kik/KikPlugin$1;->d:Lcom/kik/cards/web/kik/KikPlugin;
 
-    move-result-object v3
+    invoke-static {v4}, Lcom/kik/cards/web/kik/KikPlugin;->access$000(Lcom/kik/cards/web/kik/KikPlugin;)Lcom/kik/cards/web/browser/BrowserPlugin$a;
 
-    invoke-interface {v3}, Lcom/kik/cards/web/browser/BrowserPlugin$a;->getUrl()Ljava/lang/String;
+    move-result-object v4
 
-    invoke-static {}, Lcom/kik/cards/web/kik/KikPlugin;->a()Ljava/lang/String;
+    invoke-interface {v4}, Lcom/kik/cards/web/browser/BrowserPlugin$a;->getUrl()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Lcom/kik/cards/web/kik/KikPlugin;->access$100(Lcom/kik/cards/web/kik/KikPlugin;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -91,11 +95,11 @@
     .line 1125
     iget-object v0, p0, Lcom/kik/cards/web/kik/KikPlugin$1;->c:Lcom/kik/cards/web/plugin/a;
 
-    new-instance v1, Lcom/kik/cards/web/plugin/h;
+    new-instance v1, Lcom/kik/cards/web/plugin/g;
 
-    invoke-direct {v1}, Lcom/kik/cards/web/plugin/h;-><init>()V
+    invoke-direct {v1}, Lcom/kik/cards/web/plugin/g;-><init>()V
 
-    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/h;)V
+    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/g;)V
 
     .line 121
     return-void
@@ -106,18 +110,18 @@
 
     .prologue
     .line 130
-    invoke-static {}, Lkik/android/util/bv;->a()V
+    invoke-static {}, Lkik/android/util/bu;->a()V
 
     .line 131
     iget-object v0, p0, Lcom/kik/cards/web/kik/KikPlugin$1;->c:Lcom/kik/cards/web/plugin/a;
 
-    new-instance v1, Lcom/kik/cards/web/plugin/h;
+    new-instance v1, Lcom/kik/cards/web/plugin/g;
 
     const/16 v2, 0x194
 
-    invoke-direct {v1, v2}, Lcom/kik/cards/web/plugin/h;-><init>(I)V
+    invoke-direct {v1, v2}, Lcom/kik/cards/web/plugin/g;-><init>(I)V
 
-    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/h;)V
+    invoke-interface {v0, v1}, Lcom/kik/cards/web/plugin/a;->a(Lcom/kik/cards/web/plugin/g;)V
 
     .line 132
     return-void

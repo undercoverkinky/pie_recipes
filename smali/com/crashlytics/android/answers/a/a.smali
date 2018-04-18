@@ -7,11 +7,11 @@
 
 
 # instance fields
-.field private final a:Lcom/crashlytics/android/answers/a;
+.field private final a:Lcom/crashlytics/android/answers/b;
 
 
 # direct methods
-.method private constructor <init>(Lcom/crashlytics/android/answers/a;)V
+.method private constructor <init>(Lcom/crashlytics/android/answers/b;)V
     .locals 0
 
     .prologue
@@ -19,7 +19,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 12
-    iput-object p1, p0, Lcom/crashlytics/android/answers/a/a;->a:Lcom/crashlytics/android/answers/a;
+    iput-object p1, p0, Lcom/crashlytics/android/answers/a/a;->a:Lcom/crashlytics/android/answers/b;
 
     .line 13
     return-void
@@ -36,7 +36,7 @@
 
     .prologue
     .line 17
-    invoke-static {}, Lcom/crashlytics/android/answers/a;->c()Lcom/crashlytics/android/answers/a;
+    invoke-static {}, Lcom/crashlytics/android/answers/b;->c()Lcom/crashlytics/android/answers/b;
 
     move-result-object v0
 
@@ -56,7 +56,7 @@
     :cond_0
     new-instance v1, Lcom/crashlytics/android/answers/a/a;
 
-    invoke-direct {v1, v0}, Lcom/crashlytics/android/answers/a/a;-><init>(Lcom/crashlytics/android/answers/a;)V
+    invoke-direct {v1, v0}, Lcom/crashlytics/android/answers/a/a;-><init>(Lcom/crashlytics/android/answers/b;)V
 
     .line 19
     return-object v1
@@ -70,13 +70,13 @@
     .prologue
     .line 34
     :try_start_0
-    iget-object v0, p0, Lcom/crashlytics/android/answers/a/a;->a:Lcom/crashlytics/android/answers/a;
+    iget-object v0, p0, Lcom/crashlytics/android/answers/a/a;->a:Lcom/crashlytics/android/answers/b;
 
-    invoke-virtual {p1}, Lcom/crashlytics/android/answers/a/c;->a()Lcom/crashlytics/android/answers/k;
+    invoke-virtual {p1}, Lcom/crashlytics/android/answers/a/c;->a()Lcom/crashlytics/android/answers/m;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/crashlytics/android/answers/a;->a(Lcom/crashlytics/android/answers/k;)V
+    invoke-virtual {v0, v1}, Lcom/crashlytics/android/answers/b;->a(Lcom/crashlytics/android/answers/m;)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 

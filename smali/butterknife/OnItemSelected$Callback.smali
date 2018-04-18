@@ -57,7 +57,7 @@
 
     const/4 v2, 0x0
 
-    .line 56
+    .line 57
     new-instance v0, Lbutterknife/OnItemSelected$Callback;
 
     const-string v1, "ITEM_SELECTED"
@@ -66,7 +66,7 @@
 
     sput-object v0, Lbutterknife/OnItemSelected$Callback;->ITEM_SELECTED:Lbutterknife/OnItemSelected$Callback;
 
-    .line 68
+    .line 69
     new-instance v0, Lbutterknife/OnItemSelected$Callback;
 
     const-string v1, "NOTHING_SELECTED"
@@ -75,7 +75,7 @@
 
     sput-object v0, Lbutterknife/OnItemSelected$Callback;->NOTHING_SELECTED:Lbutterknife/OnItemSelected$Callback;
 
-    .line 51
+    .line 52
     const/4 v0, 0x2
 
     new-array v0, v0, [Lbutterknife/OnItemSelected$Callback;
@@ -102,7 +102,7 @@
     .end annotation
 
     .prologue
-    .line 51
+    .line 52
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -112,7 +112,7 @@
     .locals 1
 
     .prologue
-    .line 51
+    .line 52
     const-class v0, Lbutterknife/OnItemSelected$Callback;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -128,7 +128,7 @@
     .locals 1
 
     .prologue
-    .line 51
+    .line 52
     sget-object v0, Lbutterknife/OnItemSelected$Callback;->$VALUES:[Lbutterknife/OnItemSelected$Callback;
 
     invoke-virtual {v0}, [Lbutterknife/OnItemSelected$Callback;->clone()Ljava/lang/Object;

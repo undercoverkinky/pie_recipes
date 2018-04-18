@@ -39,6 +39,8 @@
 
 .field public static final enum SWITCH_LIVE_OFF:Lcom/rounds/kik/conference/LeaveReason;
 
+.field public static final enum SWITCH_LIVE_OFF_FULL_SCREEN:Lcom/rounds/kik/conference/LeaveReason;
+
 .field public static final enum USER_BLOCKED:Lcom/rounds/kik/conference/LeaveReason;
 
 
@@ -93,94 +95,105 @@
 
     sput-object v0, Lcom/rounds/kik/conference/LeaveReason;->SWITCH_LIVE_OFF:Lcom/rounds/kik/conference/LeaveReason;
 
-    .line 28
+    .line 27
     new-instance v0, Lcom/rounds/kik/conference/LeaveReason;
 
-    const-string v1, "BACK_BUTTON_TAP"
+    const-string v1, "SWITCH_LIVE_OFF_FULL_SCREEN"
 
     invoke-direct {v0, v1, v7}, Lcom/rounds/kik/conference/LeaveReason;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/rounds/kik/conference/LeaveReason;->BACK_BUTTON_TAP:Lcom/rounds/kik/conference/LeaveReason;
+    sput-object v0, Lcom/rounds/kik/conference/LeaveReason;->SWITCH_LIVE_OFF_FULL_SCREEN:Lcom/rounds/kik/conference/LeaveReason;
 
     .line 32
     new-instance v0, Lcom/rounds/kik/conference/LeaveReason;
 
-    const-string v1, "USER_BLOCKED"
+    const-string v1, "BACK_BUTTON_TAP"
 
     const/4 v2, 0x5
 
     invoke-direct {v0, v1, v2}, Lcom/rounds/kik/conference/LeaveReason;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/rounds/kik/conference/LeaveReason;->USER_BLOCKED:Lcom/rounds/kik/conference/LeaveReason;
+    sput-object v0, Lcom/rounds/kik/conference/LeaveReason;->BACK_BUTTON_TAP:Lcom/rounds/kik/conference/LeaveReason;
 
     .line 36
     new-instance v0, Lcom/rounds/kik/conference/LeaveReason;
 
-    const-string v1, "NEED_TO_START_GROUP"
+    const-string v1, "USER_BLOCKED"
 
     const/4 v2, 0x6
 
     invoke-direct {v0, v1, v2}, Lcom/rounds/kik/conference/LeaveReason;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/rounds/kik/conference/LeaveReason;->NEED_TO_START_GROUP:Lcom/rounds/kik/conference/LeaveReason;
+    sput-object v0, Lcom/rounds/kik/conference/LeaveReason;->USER_BLOCKED:Lcom/rounds/kik/conference/LeaveReason;
 
     .line 40
     new-instance v0, Lcom/rounds/kik/conference/LeaveReason;
 
-    const-string v1, "CHAT_DELETED"
+    const-string v1, "NEED_TO_START_GROUP"
 
     const/4 v2, 0x7
 
     invoke-direct {v0, v1, v2}, Lcom/rounds/kik/conference/LeaveReason;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/rounds/kik/conference/LeaveReason;->CHAT_DELETED:Lcom/rounds/kik/conference/LeaveReason;
+    sput-object v0, Lcom/rounds/kik/conference/LeaveReason;->NEED_TO_START_GROUP:Lcom/rounds/kik/conference/LeaveReason;
 
     .line 44
     new-instance v0, Lcom/rounds/kik/conference/LeaveReason;
 
-    const-string v1, "CHAT_STOPPED"
+    const-string v1, "CHAT_DELETED"
 
     const/16 v2, 0x8
 
     invoke-direct {v0, v1, v2}, Lcom/rounds/kik/conference/LeaveReason;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/rounds/kik/conference/LeaveReason;->CHAT_STOPPED:Lcom/rounds/kik/conference/LeaveReason;
+    sput-object v0, Lcom/rounds/kik/conference/LeaveReason;->CHAT_DELETED:Lcom/rounds/kik/conference/LeaveReason;
 
     .line 48
     new-instance v0, Lcom/rounds/kik/conference/LeaveReason;
 
-    const-string v1, "NAVIGATE_AWAY"
+    const-string v1, "CHAT_STOPPED"
 
     const/16 v2, 0x9
 
     invoke-direct {v0, v1, v2}, Lcom/rounds/kik/conference/LeaveReason;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/rounds/kik/conference/LeaveReason;->NAVIGATE_AWAY:Lcom/rounds/kik/conference/LeaveReason;
+    sput-object v0, Lcom/rounds/kik/conference/LeaveReason;->CHAT_STOPPED:Lcom/rounds/kik/conference/LeaveReason;
 
     .line 52
     new-instance v0, Lcom/rounds/kik/conference/LeaveReason;
 
-    const-string v1, "LEFT_ALONE_IN_BG"
+    const-string v1, "NAVIGATE_AWAY"
 
     const/16 v2, 0xa
 
     invoke-direct {v0, v1, v2}, Lcom/rounds/kik/conference/LeaveReason;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/rounds/kik/conference/LeaveReason;->LEFT_ALONE_IN_BG:Lcom/rounds/kik/conference/LeaveReason;
+    sput-object v0, Lcom/rounds/kik/conference/LeaveReason;->NAVIGATE_AWAY:Lcom/rounds/kik/conference/LeaveReason;
 
     .line 56
     new-instance v0, Lcom/rounds/kik/conference/LeaveReason;
 
-    const-string v1, "LEFT_GROUP"
+    const-string v1, "LEFT_ALONE_IN_BG"
 
     const/16 v2, 0xb
+
+    invoke-direct {v0, v1, v2}, Lcom/rounds/kik/conference/LeaveReason;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/rounds/kik/conference/LeaveReason;->LEFT_ALONE_IN_BG:Lcom/rounds/kik/conference/LeaveReason;
+
+    .line 60
+    new-instance v0, Lcom/rounds/kik/conference/LeaveReason;
+
+    const-string v1, "LEFT_GROUP"
+
+    const/16 v2, 0xc
 
     invoke-direct {v0, v1, v2}, Lcom/rounds/kik/conference/LeaveReason;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/rounds/kik/conference/LeaveReason;->LEFT_GROUP:Lcom/rounds/kik/conference/LeaveReason;
 
     .line 7
-    const/16 v0, 0xc
+    const/16 v0, 0xd
 
     new-array v0, v0, [Lcom/rounds/kik/conference/LeaveReason;
 
@@ -200,47 +213,53 @@
 
     aput-object v1, v0, v6
 
-    sget-object v1, Lcom/rounds/kik/conference/LeaveReason;->BACK_BUTTON_TAP:Lcom/rounds/kik/conference/LeaveReason;
+    sget-object v1, Lcom/rounds/kik/conference/LeaveReason;->SWITCH_LIVE_OFF_FULL_SCREEN:Lcom/rounds/kik/conference/LeaveReason;
 
     aput-object v1, v0, v7
 
     const/4 v1, 0x5
 
-    sget-object v2, Lcom/rounds/kik/conference/LeaveReason;->USER_BLOCKED:Lcom/rounds/kik/conference/LeaveReason;
+    sget-object v2, Lcom/rounds/kik/conference/LeaveReason;->BACK_BUTTON_TAP:Lcom/rounds/kik/conference/LeaveReason;
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x6
 
-    sget-object v2, Lcom/rounds/kik/conference/LeaveReason;->NEED_TO_START_GROUP:Lcom/rounds/kik/conference/LeaveReason;
+    sget-object v2, Lcom/rounds/kik/conference/LeaveReason;->USER_BLOCKED:Lcom/rounds/kik/conference/LeaveReason;
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x7
 
-    sget-object v2, Lcom/rounds/kik/conference/LeaveReason;->CHAT_DELETED:Lcom/rounds/kik/conference/LeaveReason;
+    sget-object v2, Lcom/rounds/kik/conference/LeaveReason;->NEED_TO_START_GROUP:Lcom/rounds/kik/conference/LeaveReason;
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x8
 
-    sget-object v2, Lcom/rounds/kik/conference/LeaveReason;->CHAT_STOPPED:Lcom/rounds/kik/conference/LeaveReason;
+    sget-object v2, Lcom/rounds/kik/conference/LeaveReason;->CHAT_DELETED:Lcom/rounds/kik/conference/LeaveReason;
 
     aput-object v2, v0, v1
 
     const/16 v1, 0x9
 
-    sget-object v2, Lcom/rounds/kik/conference/LeaveReason;->NAVIGATE_AWAY:Lcom/rounds/kik/conference/LeaveReason;
+    sget-object v2, Lcom/rounds/kik/conference/LeaveReason;->CHAT_STOPPED:Lcom/rounds/kik/conference/LeaveReason;
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xa
 
-    sget-object v2, Lcom/rounds/kik/conference/LeaveReason;->LEFT_ALONE_IN_BG:Lcom/rounds/kik/conference/LeaveReason;
+    sget-object v2, Lcom/rounds/kik/conference/LeaveReason;->NAVIGATE_AWAY:Lcom/rounds/kik/conference/LeaveReason;
 
     aput-object v2, v0, v1
 
     const/16 v1, 0xb
+
+    sget-object v2, Lcom/rounds/kik/conference/LeaveReason;->LEFT_ALONE_IN_BG:Lcom/rounds/kik/conference/LeaveReason;
+
+    aput-object v2, v0, v1
+
+    const/16 v1, 0xc
 
     sget-object v2, Lcom/rounds/kik/conference/LeaveReason;->LEFT_GROUP:Lcom/rounds/kik/conference/LeaveReason;
 

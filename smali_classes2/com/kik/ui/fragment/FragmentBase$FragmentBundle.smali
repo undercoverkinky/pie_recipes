@@ -1,5 +1,5 @@
 .class public Lcom/kik/ui/fragment/FragmentBase$FragmentBundle;
-.super Lkik/android/util/aa;
+.super Lkik/android/util/ae;
 .source "SourceFile"
 
 
@@ -25,8 +25,8 @@
     .locals 0
 
     .prologue
-    .line 636
-    invoke-direct {p0}, Lkik/android/util/aa;-><init>()V
+    .line 610
+    invoke-direct {p0}, Lkik/android/util/ae;-><init>()V
 
     return-void
 .end method
@@ -37,13 +37,13 @@
     .locals 2
 
     .prologue
-    .line 648
+    .line 622
     if-nez p1, :cond_0
 
-    .line 649
+    .line 623
     sget-object p1, Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;->None:Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;
 
-    .line 651
+    .line 625
     :cond_0
     const-string v0, "com.kik.ui.fragment.FragmentBundle.onWebStack"
 
@@ -53,7 +53,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/kik/ui/fragment/FragmentBase$FragmentBundle;->a(Ljava/lang/String;I)V
 
-    .line 652
+    .line 626
     return-object p0
 .end method
 
@@ -61,7 +61,7 @@
     .locals 2
 
     .prologue
-    .line 657
+    .line 631
     const-string v0, "com.kik.ui.fragment.FragmentBundle.onWebStack"
 
     sget-object v1, Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;->None:Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;
@@ -74,7 +74,7 @@
 
     move-result v0
 
-    .line 658
+    .line 632
     if-ltz v0, :cond_0
 
     invoke-static {}, Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;->values()[Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;
@@ -85,14 +85,14 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 659
+    .line 633
     invoke-static {}, Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;->values()[Lcom/kik/ui/fragment/FragmentBase$FragmentBundle$StackType;
 
     move-result-object v1
 
     aget-object v0, v1, v0
 
-    .line 661
+    .line 635
     :goto_0
     return-object v0
 

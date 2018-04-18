@@ -3,12 +3,18 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation build Landroid/annotation/TargetApi;
+    value = 0xe
+.end annotation
+
+
 # direct methods
 .method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 28
+    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,7 +24,7 @@
     .locals 1
 
     .prologue
-    .line 62
+    .line 67
     check-cast p0, Landroid/widget/EdgeEffect;
 
     invoke-virtual {p0, p1}, Landroid/widget/EdgeEffect;->draw(Landroid/graphics/Canvas;)Z
@@ -32,12 +38,12 @@
     .locals 0
 
     .prologue
-    .line 42
+    .line 47
     check-cast p0, Landroid/widget/EdgeEffect;
 
     invoke-virtual {p0}, Landroid/widget/EdgeEffect;->finish()V
 
-    .line 43
+    .line 48
     return-void
 .end method
 
@@ -45,7 +51,7 @@
     .locals 1
 
     .prologue
-    .line 38
+    .line 43
     check-cast p0, Landroid/widget/EdgeEffect;
 
     invoke-virtual {p0}, Landroid/widget/EdgeEffect;->isFinished()Z
@@ -59,7 +65,7 @@
     .locals 1
 
     .prologue
-    .line 30
+    .line 35
     new-instance v0, Landroid/widget/EdgeEffect;
 
     invoke-direct {v0, p0}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;)V
@@ -71,12 +77,12 @@
     .locals 1
 
     .prologue
-    .line 57
+    .line 62
     check-cast p0, Landroid/widget/EdgeEffect;
 
     invoke-virtual {p0, p1}, Landroid/widget/EdgeEffect;->onAbsorb(I)V
 
-    .line 58
+    .line 63
     const/4 v0, 0x1
 
     return v0
@@ -86,12 +92,12 @@
     .locals 1
 
     .prologue
-    .line 46
+    .line 51
     check-cast p0, Landroid/widget/EdgeEffect;
 
     invoke-virtual {p0, p1}, Landroid/widget/EdgeEffect;->onPull(F)V
 
-    .line 47
+    .line 52
     const/4 v0, 0x1
 
     return v0
@@ -101,13 +107,13 @@
     .locals 1
 
     .prologue
-    .line 51
+    .line 56
     check-cast p0, Landroid/widget/EdgeEffect;
 
-    .line 52
+    .line 57
     invoke-virtual {p0}, Landroid/widget/EdgeEffect;->onRelease()V
 
-    .line 53
+    .line 58
     invoke-virtual {p0}, Landroid/widget/EdgeEffect;->isFinished()Z
 
     move-result v0
@@ -119,11 +125,11 @@
     .locals 0
 
     .prologue
-    .line 34
+    .line 39
     check-cast p0, Landroid/widget/EdgeEffect;
 
     invoke-virtual {p0, p1, p2}, Landroid/widget/EdgeEffect;->setSize(II)V
 
-    .line 35
+    .line 40
     return-void
 .end method

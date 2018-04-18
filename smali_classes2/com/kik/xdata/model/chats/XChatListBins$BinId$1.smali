@@ -101,7 +101,7 @@
     return-object v0
 .end method
 
-.method public final synthetic a(Lcom/dyuproject/protostuff/l;Ljava/lang/Object;)V
+.method public final bridge synthetic a(Lcom/dyuproject/protostuff/l;Ljava/lang/Object;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -137,7 +137,7 @@
     :pswitch_0
     iget-object v0, p2, Lcom/kik/xdata/model/chats/XChatListBins$BinId;->user:Lcom/kik/xdata/model/chats/XChatListBins$XDataBareUserJid;
 
-    invoke-static {}, Lcom/kik/xdata/model/chats/XChatListBins$XDataBareUserJid;->b()Lcom/dyuproject/protostuff/u;
+    invoke-static {}, Lcom/kik/xdata/model/chats/XChatListBins$XDataBareUserJid;->a()Lcom/dyuproject/protostuff/u;
 
     move-result-object v1
 
@@ -155,7 +155,7 @@
     :pswitch_1
     iget-object v0, p2, Lcom/kik/xdata/model/chats/XChatListBins$BinId;->group:Lcom/kik/xdata/model/chats/XChatListBins$XDataGroupJid;
 
-    invoke-static {}, Lcom/kik/xdata/model/chats/XChatListBins$XDataGroupJid;->b()Lcom/dyuproject/protostuff/u;
+    invoke-static {}, Lcom/kik/xdata/model/chats/XChatListBins$XDataGroupJid;->a()Lcom/dyuproject/protostuff/u;
 
     move-result-object v1
 
@@ -182,7 +182,7 @@
     .end packed-switch
 .end method
 
-.method public final synthetic a(Lcom/dyuproject/protostuff/q;Ljava/lang/Object;)V
+.method public final bridge synthetic a(Lcom/dyuproject/protostuff/q;Ljava/lang/Object;)V
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -206,7 +206,7 @@
 
     iget-object v1, p2, Lcom/kik/xdata/model/chats/XChatListBins$BinId;->user:Lcom/kik/xdata/model/chats/XChatListBins$XDataBareUserJid;
 
-    invoke-static {}, Lcom/kik/xdata/model/chats/XChatListBins$XDataBareUserJid;->b()Lcom/dyuproject/protostuff/u;
+    invoke-static {}, Lcom/kik/xdata/model/chats/XChatListBins$XDataBareUserJid;->a()Lcom/dyuproject/protostuff/u;
 
     move-result-object v2
 
@@ -223,7 +223,7 @@
 
     iget-object v1, p2, Lcom/kik/xdata/model/chats/XChatListBins$BinId;->group:Lcom/kik/xdata/model/chats/XChatListBins$XDataGroupJid;
 
-    invoke-static {}, Lcom/kik/xdata/model/chats/XChatListBins$XDataGroupJid;->b()Lcom/dyuproject/protostuff/u;
+    invoke-static {}, Lcom/kik/xdata/model/chats/XChatListBins$XDataGroupJid;->a()Lcom/dyuproject/protostuff/u;
 
     move-result-object v2
 

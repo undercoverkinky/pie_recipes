@@ -35,12 +35,12 @@
 
 
 # virtual methods
-.method protected getJsonPrimitive()Lcom/google/gson/l;
+.method protected getJsonPrimitive()Lcom/google/gson/m;
     .locals 2
 
     .prologue
     .line 29
-    new-instance v1, Lcom/google/gson/l;
+    new-instance v1, Lcom/google/gson/m;
 
     iget-object v0, p0, Lcom/rounds/kik/analytics/properties/primitives/EnumStringProperty;->mValue:Ljava/lang/Object;
 
@@ -50,12 +50,12 @@
 
     move-result-object v0
 
-    invoke-direct {v1, v0}, Lcom/google/gson/l;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v0}, Lcom/google/gson/m;-><init>(Ljava/lang/String;)V
 
     return-object v1
 .end method
 
-.method public bridge synthetic getValue()Lcom/google/gson/j;
+.method public bridge synthetic getValue()Lcom/google/gson/k;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -65,7 +65,7 @@
 
     .prologue
     .line 8
-    invoke-super {p0}, Lcom/rounds/kik/analytics/properties/primitives/a;->getValue()Lcom/google/gson/j;
+    invoke-super {p0}, Lcom/rounds/kik/analytics/properties/primitives/a;->getValue()Lcom/google/gson/k;
 
     move-result-object v0
 

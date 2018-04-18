@@ -36,13 +36,13 @@
 
 
 # virtual methods
-.method public abstract zza(Landroid/content/Context;Landroid/os/Looper;Lcom/google/android/gms/common/internal/zzg;Ljava/lang/Object;Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)Lcom/google/android/gms/common/api/Api$zze;
+.method public abstract zza(Landroid/content/Context;Landroid/os/Looper;Lcom/google/android/gms/common/internal/zzq;Ljava/lang/Object;Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)Lcom/google/android/gms/common/api/Api$zze;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             "Landroid/os/Looper;",
-            "Lcom/google/android/gms/common/internal/zzg;",
+            "Lcom/google/android/gms/common/internal/zzq;",
             "TO;",
             "Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;",
             "Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;",

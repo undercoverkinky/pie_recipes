@@ -1,11 +1,11 @@
 .class final Lcom/kik/cards/web/CardsWebViewFragment$26;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/cards/web/CardsWebViewFragment;->b(Ljava/lang/String;Lcom/kik/cards/web/picker/PickerRequest;)Lcom/kik/events/Promise;
+    value = Lcom/kik/cards/web/CardsWebViewFragment;->a(Lorg/json/JSONObject;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,31 +15,31 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<",
-        "Landroid/os/Bundle;",
+        "Lcom/kik/cards/web/h$a;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/kik/events/Promise;
+.field final synthetic a:Lcom/kik/cards/web/kik/KikMessageParcelable;
 
 .field final synthetic b:Lcom/kik/cards/web/CardsWebViewFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/kik/cards/web/CardsWebViewFragment;Lcom/kik/events/Promise;)V
+.method constructor <init>(Lcom/kik/cards/web/CardsWebViewFragment;Lcom/kik/cards/web/kik/KikMessageParcelable;)V
     .locals 0
 
     .prologue
-    .line 1518
+    .line 1655
     iput-object p1, p0, Lcom/kik/cards/web/CardsWebViewFragment$26;->b:Lcom/kik/cards/web/CardsWebViewFragment;
 
-    iput-object p2, p0, Lcom/kik/cards/web/CardsWebViewFragment$26;->a:Lcom/kik/events/Promise;
+    iput-object p2, p0, Lcom/kik/cards/web/CardsWebViewFragment$26;->a:Lcom/kik/cards/web/kik/KikMessageParcelable;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -50,63 +50,79 @@
     .locals 3
 
     .prologue
-    .line 1518
-    check-cast p1, Landroid/os/Bundle;
+    .line 1655
+    check-cast p1, Lcom/kik/cards/web/h$a;
 
-    .line 2522
-    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Object;)V
+    .line 2659
+    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Object;)V
 
-    .line 2523
-    new-instance v1, Lorg/json/JSONObject;
+    .line 2660
+    iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$26;->a:Lcom/kik/cards/web/kik/KikMessageParcelable;
 
-    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+    invoke-virtual {p1}, Lcom/kik/cards/web/h$a;->f()Ljava/lang/String;
 
-    .line 2526
-    :try_start_0
-    new-instance v0, Lorg/json/JSONObject;
+    move-result-object v1
 
-    const-string v2, "CardsWebViewFragment.EXTRA_PICKER_RESULT"
+    iput-object v1, v0, Lcom/kik/cards/web/kik/KikMessageParcelable;->i:Ljava/lang/String;
 
-    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    .line 2662
+    invoke-virtual {p1}, Lcom/kik/cards/web/h$a;->g()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-direct {v0, v2}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    if-eqz v0, :cond_0
 
-    .line 2531
-    :goto_0
-    iget-object v1, p0, Lcom/kik/cards/web/CardsWebViewFragment$26;->a:Lcom/kik/events/Promise;
+    .line 2663
+    iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$26;->a:Lcom/kik/cards/web/kik/KikMessageParcelable;
 
-    invoke-virtual {v1, v0}, Lcom/kik/events/Promise;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1}, Lcom/kik/cards/web/h$a;->g()Ljava/lang/String;
 
-    .line 1518
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/kik/cards/web/CardsWebViewFragment$26;->a:Lcom/kik/cards/web/kik/KikMessageParcelable;
+
+    iget-object v2, v2, Lcom/kik/cards/web/kik/KikMessageParcelable;->j:Ljava/lang/String;
+
+    invoke-static {v1, v2}, Lcom/kik/cards/web/s;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/kik/cards/web/kik/KikMessageParcelable;->k:Ljava/lang/String;
+
+    .line 2665
+    :cond_0
+    iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$26;->a:Lcom/kik/cards/web/kik/KikMessageParcelable;
+
+    iget-object v1, p0, Lcom/kik/cards/web/CardsWebViewFragment$26;->b:Lcom/kik/cards/web/CardsWebViewFragment;
+
+    iget-object v1, v1, Lcom/kik/cards/web/CardsWebViewFragment;->o:Lcom/kik/cache/KikVolleyImageLoader;
+
+    invoke-static {v0, v1}, Lkik/android/internal/platform/PlatformUtils;->a(Lcom/kik/cards/web/kik/KikMessageParcelable;Lcom/kik/cache/KikVolleyImageLoader;)Lcom/kik/events/Promise;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/kik/cards/web/CardsWebViewFragment$26$1;
+
+    invoke-direct {v1, p0}, Lcom/kik/cards/web/CardsWebViewFragment$26$1;-><init>(Lcom/kik/cards/web/CardsWebViewFragment$26;)V
+
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
+
+    .line 1655
     return-void
-
-    .line 2529
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
-
-    move-object v0, v1
-
-    goto :goto_0
 .end method
 
 .method public final a(Ljava/lang/Throwable;)V
     .locals 1
 
     .prologue
-    .line 1537
-    invoke-super {p0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Throwable;)V
+    .line 1687
+    invoke-super {p0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Throwable;)V
 
-    .line 1538
-    iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$26;->a:Lcom/kik/events/Promise;
+    .line 1688
+    iget-object v0, p0, Lcom/kik/cards/web/CardsWebViewFragment$26;->b:Lcom/kik/cards/web/CardsWebViewFragment;
 
-    invoke-virtual {v0}, Lcom/kik/events/Promise;->f()V
+    invoke-virtual {v0}, Lcom/kik/cards/web/CardsWebViewFragment;->finish()V
 
-    .line 1539
+    .line 1689
     return-void
 .end method

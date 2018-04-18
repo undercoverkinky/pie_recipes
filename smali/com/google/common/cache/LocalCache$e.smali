@@ -39,13 +39,13 @@
     .end annotation
 
     .prologue
-    .line 4514
+    .line 4668
     iput-object p1, p0, Lcom/google/common/cache/LocalCache$e;->c:Lcom/google/common/cache/LocalCache;
 
-    .line 4515
+    .line 4669
     invoke-direct {p0, p1, p2}, Lcom/google/common/cache/LocalCache$a;-><init>(Lcom/google/common/cache/LocalCache;Ljava/util/concurrent/ConcurrentMap;)V
 
-    .line 4516
+    .line 4670
     return-void
 .end method
 
@@ -57,36 +57,36 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 4525
+    .line 4679
     instance-of v1, p1, Ljava/util/Map$Entry;
 
     if-nez v1, :cond_1
 
-    .line 4535
+    .line 4689
     :cond_0
     :goto_0
     return v0
 
-    .line 4528
+    .line 4682
     :cond_1
     check-cast p1, Ljava/util/Map$Entry;
 
-    .line 4529
+    .line 4683
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 4530
+    .line 4684
     if-eqz v1, :cond_0
 
-    .line 4533
+    .line 4687
     iget-object v2, p0, Lcom/google/common/cache/LocalCache$e;->c:Lcom/google/common/cache/LocalCache;
 
     invoke-virtual {v2, v1}, Lcom/google/common/cache/LocalCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 4535
+    .line 4689
     if-eqz v1, :cond_0
 
     iget-object v2, p0, Lcom/google/common/cache/LocalCache$e;->c:Lcom/google/common/cache/LocalCache;
@@ -97,7 +97,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3, v1}, Lcom/google/common/base/Equivalence;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3, v1}, Lcom/google/common/base/Equivalence;->equivalent(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -121,7 +121,7 @@
     .end annotation
 
     .prologue
-    .line 4520
+    .line 4674
     new-instance v0, Lcom/google/common/cache/LocalCache$d;
 
     iget-object v1, p0, Lcom/google/common/cache/LocalCache$e;->c:Lcom/google/common/cache/LocalCache;
@@ -137,26 +137,26 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 4540
+    .line 4694
     instance-of v1, p1, Ljava/util/Map$Entry;
 
     if-nez v1, :cond_1
 
-    .line 4545
+    .line 4699
     :cond_0
     :goto_0
     return v0
 
-    .line 4543
+    .line 4697
     :cond_1
     check-cast p1, Ljava/util/Map$Entry;
 
-    .line 4544
+    .line 4698
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 4545
+    .line 4699
     if-eqz v1, :cond_0
 
     iget-object v2, p0, Lcom/google/common/cache/LocalCache$e;->c:Lcom/google/common/cache/LocalCache;

@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/support/design/widget/AppBarLayout;I)V
+.method public abstract a(I)V
 .end method

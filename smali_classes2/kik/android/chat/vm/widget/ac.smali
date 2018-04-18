@@ -3,36 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkik/android/chat/vm/IListViewModel;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lkik/android/chat/vm/IListViewModel",
-        "<",
-        "Lkik/android/chat/vm/widget/ab;",
-        ">;"
-    }
-.end annotation
+.implements Lkik/android/chat/vm/widget/ad;
 
 
 # virtual methods
-.method public abstract a(Lkik/android/chat/fragment/KikChatFragment$b;)V
+.method public abstract f()V
 .end method
 
-.method public abstract a(Z)V
+.method public abstract h()V
 .end method
 
-.method public abstract av_()Lrx/b/g;
+.method public abstract i()Lrx/d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lrx/b/g",
+            "Lrx/d",
             "<",
-            "Ljava/lang/Integer;",
-            "Ljava/lang/Float;",
             "Ljava/lang/Boolean;",
             ">;"
         }

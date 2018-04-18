@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 723
+    .line 753
     iput-object p1, p0, Lkik/android/chat/fragment/KikCodeFragment$8;->b:Lkik/android/chat/fragment/KikCodeFragment;
 
     iput-object p2, p0, Lkik/android/chat/fragment/KikCodeFragment$8;->a:Lkik/android/chat/fragment/KikCodeFragment$c;
@@ -44,7 +44,7 @@
     .locals 2
 
     .prologue
-    .line 727
+    .line 757
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$8;->b:Lkik/android/chat/fragment/KikCodeFragment;
 
     iget-object v0, v0, Lkik/android/chat/fragment/KikCodeFragment;->_fakeCode:Lkik/android/widget/KikCodeBackgroundImageView;
@@ -53,22 +53,22 @@
 
     invoke-virtual {v0, v1}, Lkik/android/widget/KikCodeBackgroundImageView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 728
+    .line 758
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$8;->b:Lkik/android/chat/fragment/KikCodeFragment;
 
     invoke-static {v0}, Lkik/android/chat/fragment/KikCodeFragment;->p(Lkik/android/chat/fragment/KikCodeFragment;)V
 
-    .line 729
+    .line 759
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$8;->a:Lkik/android/chat/fragment/KikCodeFragment$c;
 
     if-eqz v0, :cond_0
 
-    .line 730
+    .line 760
     iget-object v0, p0, Lkik/android/chat/fragment/KikCodeFragment$8;->a:Lkik/android/chat/fragment/KikCodeFragment$c;
 
     invoke-virtual {v0}, Lkik/android/chat/fragment/KikCodeFragment$c;->a()V
 
-    .line 732
+    .line 762
     :cond_0
     const/4 v0, 0x0
 

@@ -9,6 +9,8 @@ option java_generate_equals_and_hash = true;
 
 option objc_class_prefix = "XIACC";
 
+option go_package = "github.com/kikinteractive/xiphias-model-common/generated/go/accounts/v1;accounts";
+
 import "protobuf_validation.proto";
 
 // DisplayNameComponents are the components that make up a user's display name.
@@ -41,11 +43,14 @@ message DisplayNameComponents {
 // in a status change (UNCONFIRMED may be serialized to CONFIRMED).
 //
 // Server definitions: https://github.com/kikinteractive/kik-server/blob/master/server/src/main/java/com/kik/utils/AccountUtils.java#L280
+//
+// Deactivated indicates that the account has been deactivated either by the user (recoverable) or
+// foricibly terminated by support (non-recoverable). Confirmed indicates that the user has confirmed their email.
 enum AccountStatus {
     UNSET = 0;
 
-    DISABLED_CONFIRMED = 10;    //  0 + 10
-    DISABLED_UNCONFIRMED = 9;   // -1 + 10
-    UNCONFIRMED = 11;           //  1 + 10
-    CONFIRMED = 12;             //  2 + 10
+    DEACTIVATED_CONFIRMED = 10;    //  0 + 10
+    DEACTIVATED_UNCONFIRMED = 9;   // -1 + 10
+    UNCONFIRMED = 11;              //  1 + 10
+    CONFIRMED = 12;                //  2 + 10
 }

@@ -1,5 +1,5 @@
 .class public Lkik/android/chat/fragment/settings/PreferenceFragment$a;
-.super Lkik/android/util/aa;
+.super Lkik/android/util/ae;
 .source "SourceFile"
 
 
@@ -19,8 +19,8 @@
     .locals 0
 
     .prologue
-    .line 475
-    invoke-direct {p0}, Lkik/android/util/aa;-><init>()V
+    .line 495
+    invoke-direct {p0}, Lkik/android/util/ae;-><init>()V
 
     return-void
 .end method
@@ -29,8 +29,8 @@
     .locals 2
 
     .prologue
-    .line 475
-    .line 1488
+    .line 495
+    .line 1508
     const-string v0, "PreferenceFragment.PREFERENCE_LIST_XML_ID"
 
     const/4 v1, 0x0
@@ -39,7 +39,7 @@
 
     move-result v0
 
-    .line 475
+    .line 495
     return v0
 .end method
 
@@ -49,12 +49,12 @@
     .locals 1
 
     .prologue
-    .line 482
+    .line 502
     const-string v0, "PreferenceFragment.PREFERENCE_LIST_XML_ID"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/settings/PreferenceFragment$a;->a(Ljava/lang/String;I)V
 
-    .line 483
+    .line 503
     return-object p0
 .end method
 
@@ -62,7 +62,7 @@
     .locals 2
 
     .prologue
-    .line 499
+    .line 519
     const-string v0, "PreferenceFragment.PREFERENCE_BACK_BUTTON"
 
     const/4 v1, 0x0
@@ -78,11 +78,11 @@
     .locals 1
 
     .prologue
-    .line 493
+    .line 513
     const-string v0, "PreferenceFragment.PREFERENCE_BACK_BUTTON"
 
     invoke-virtual {p0, v0, p1}, Lkik/android/chat/fragment/settings/PreferenceFragment$a;->a(Ljava/lang/String;I)V
 
-    .line 494
+    .line 514
     return-object p0
 .end method

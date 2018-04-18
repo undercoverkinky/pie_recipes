@@ -1,77 +1,57 @@
-.class public Lcom/kik/e/k;
-.super Lcom/kik/e/m;
-.source "SourceFile"
+.class final synthetic Lcom/kik/e/k;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lrx/functions/g;
+
+
+# static fields
+.field private static final a:Lcom/kik/e/k;
 
 
 # direct methods
-.method public constructor <init>(Landroid/database/Cursor;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    .prologue
-    .line 20
-    invoke-direct {p0, p1}, Lcom/kik/e/m;-><init>(Landroid/database/Cursor;)V
+    new-instance v0, Lcom/kik/e/k;
 
-    .line 21
+    invoke-direct {v0}, Lcom/kik/e/k;-><init>()V
+
+    sput-object v0, Lcom/kik/e/k;->a:Lcom/kik/e/k;
+
     return-void
 .end method
 
-.method public static a(Lkik/core/datatypes/j;)Landroid/content/ContentValues;
-    .locals 4
+.method private constructor <init>()V
+    .locals 0
 
-    .prologue
-    .line 46
-    new-instance v0, Landroid/content/ContentValues;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
+    return-void
+.end method
 
-    .line 48
-    const-string v1, "jid"
+.method public static a()Lrx/functions/g;
+    .locals 1
 
-    invoke-virtual {p0}, Lkik/core/datatypes/j;->a()Ljava/lang/String;
+    sget-object v0, Lcom/kik/e/k;->a:Lcom/kik/e/k;
 
-    move-result-object v2
+    return-object v0
+.end method
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 49
-    const-string v1, "is_muted"
+# virtual methods
+.method public final call(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {p0}, Lkik/core/datatypes/j;->b()Z
+    check-cast p1, Lcom/google/common/base/Optional;
 
-    move-result v2
+    invoke-virtual {p1}, Lcom/google/common/base/Optional;->isPresent()Z
 
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    move-result v0
 
-    move-result-object v2
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
+    move-result-object v0
 
-    .line 50
-    const-string v1, "unmute_timestamp"
-
-    invoke-virtual {p0}, Lkik/core/datatypes/j;->c()J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
-
-    .line 51
-    const-string v1, "is_dirty"
-
-    invoke-virtual {p0}, Lkik/core/datatypes/j;->d()Z
-
-    move-result v2
-
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
-
-    .line 53
     return-object v0
 .end method

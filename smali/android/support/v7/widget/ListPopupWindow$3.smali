@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 1078
+    .line 1155
     iput-object p1, p0, Landroid/support/v7/widget/ListPopupWindow$3;->a:Landroid/support/v7/widget/ListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,27 +49,25 @@
     .end annotation
 
     .prologue
-    .line 1082
+    .line 1160
     const/4 v0, -0x1
 
     if-eq p3, v0, :cond_0
 
-    .line 1083
+    .line 1161
     iget-object v0, p0, Landroid/support/v7/widget/ListPopupWindow$3;->a:Landroid/support/v7/widget/ListPopupWindow;
 
-    invoke-static {v0}, Landroid/support/v7/widget/ListPopupWindow;->a(Landroid/support/v7/widget/ListPopupWindow;)Landroid/support/v7/widget/ListPopupWindow$DropDownListView;
+    iget-object v0, v0, Landroid/support/v7/widget/ListPopupWindow;->c:Landroid/support/v7/widget/DropDownListView;
 
-    move-result-object v0
-
-    .line 1085
+    .line 1163
     if-eqz v0, :cond_0
 
-    .line 1086
+    .line 1164
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Landroid/support/v7/widget/ListPopupWindow$DropDownListView;->a(Landroid/support/v7/widget/ListPopupWindow$DropDownListView;Z)Z
+    invoke-virtual {v0, v1}, Landroid/support/v7/widget/DropDownListView;->a(Z)V
 
-    .line 1089
+    .line 1167
     :cond_0
     return-void
 .end method
@@ -85,6 +83,6 @@
     .end annotation
 
     .prologue
-    .line 1092
+    .line 1171
     return-void
 .end method

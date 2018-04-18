@@ -211,7 +211,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/github/clans/fab/b;->a(Landroid/content/Context;F)I
+    invoke-static {v0, v1}, Lcom/github/clans/fab/a;->a(Landroid/content/Context;F)I
 
     move-result v0
 
@@ -224,7 +224,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/github/clans/fab/b;->a(Landroid/content/Context;F)I
+    invoke-static {v0, v1}, Lcom/github/clans/fab/a;->a(Landroid/content/Context;F)I
 
     move-result v0
 
@@ -237,7 +237,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/github/clans/fab/b;->a(Landroid/content/Context;F)I
+    invoke-static {v0, v1}, Lcom/github/clans/fab/a;->a(Landroid/content/Context;F)I
 
     move-result v0
 
@@ -257,7 +257,7 @@
 
     const/high16 v1, 0x40800000    # 4.0f
 
-    invoke-static {v0, v1}, Lcom/github/clans/fab/b;->a(Landroid/content/Context;F)I
+    invoke-static {v0, v1}, Lcom/github/clans/fab/a;->a(Landroid/content/Context;F)I
 
     move-result v0
 
@@ -270,7 +270,7 @@
 
     const/high16 v1, 0x41000000    # 8.0f
 
-    invoke-static {v0, v1}, Lcom/github/clans/fab/b;->a(Landroid/content/Context;F)I
+    invoke-static {v0, v1}, Lcom/github/clans/fab/a;->a(Landroid/content/Context;F)I
 
     move-result v0
 
@@ -283,7 +283,7 @@
 
     const/high16 v1, 0x40800000    # 4.0f
 
-    invoke-static {v0, v1}, Lcom/github/clans/fab/b;->a(Landroid/content/Context;F)I
+    invoke-static {v0, v1}, Lcom/github/clans/fab/a;->a(Landroid/content/Context;F)I
 
     move-result v0
 
@@ -296,7 +296,7 @@
 
     const/high16 v1, 0x41000000    # 8.0f
 
-    invoke-static {v0, v1}, Lcom/github/clans/fab/b;->a(Landroid/content/Context;F)I
+    invoke-static {v0, v1}, Lcom/github/clans/fab/a;->a(Landroid/content/Context;F)I
 
     move-result v0
 
@@ -309,7 +309,7 @@
 
     const/high16 v1, 0x40400000    # 3.0f
 
-    invoke-static {v0, v1}, Lcom/github/clans/fab/b;->a(Landroid/content/Context;F)I
+    invoke-static {v0, v1}, Lcom/github/clans/fab/a;->a(Landroid/content/Context;F)I
 
     move-result v0
 
@@ -346,7 +346,7 @@
     iput-boolean v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->W:Z
 
     .line 1127
-    sget-object v0, Lcom/github/clans/fab/a$e;->v:[I
+    sget-object v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu:[I
 
     const/4 v1, 0x0
 
@@ -357,7 +357,7 @@
     move-result-object v2
 
     .line 1128
-    sget v0, Lcom/github/clans/fab/a$e;->A:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_buttonSpacing:I
 
     iget v1, p0, Lcom/github/clans/fab/FloatingActionMenu;->g:I
 
@@ -368,7 +368,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->g:I
 
     .line 1129
-    sget v0, Lcom/github/clans/fab/a$e;->Q:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_labels_margin:I
 
     iget v1, p0, Lcom/github/clans/fab/FloatingActionMenu;->j:I
 
@@ -379,7 +379,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->j:I
 
     .line 1130
-    sget v0, Lcom/github/clans/fab/a$e;->X:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_labels_position:I
 
     const/4 v1, 0x0
 
@@ -390,13 +390,13 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->al:I
 
     .line 1131
-    sget v1, Lcom/github/clans/fab/a$e;->Y:I
+    sget v1, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_labels_showAnimation:I
 
     iget v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->al:I
 
     if-nez v0, :cond_7
 
-    sget v0, Lcom/github/clans/fab/a$a;->d:I
+    sget v0, Lcom/github/clans/fab/R$anim;->fab_slide_in_from_right:I
 
     :goto_0
     invoke-virtual {v2, v1, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -406,13 +406,13 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->p:I
 
     .line 1133
-    sget v1, Lcom/github/clans/fab/a$e;->P:I
+    sget v1, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_labels_hideAnimation:I
 
     iget v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->al:I
 
     if-nez v0, :cond_8
 
-    sget v0, Lcom/github/clans/fab/a$a;->f:I
+    sget v0, Lcom/github/clans/fab/R$anim;->fab_slide_out_to_right:I
 
     :goto_1
     invoke-virtual {v2, v1, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -422,7 +422,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->q:I
 
     .line 1135
-    sget v0, Lcom/github/clans/fab/a$e;->W:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_labels_paddingTop:I
 
     iget v1, p0, Lcom/github/clans/fab/FloatingActionMenu;->r:I
 
@@ -433,7 +433,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->r:I
 
     .line 1136
-    sget v0, Lcom/github/clans/fab/a$e;->V:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_labels_paddingRight:I
 
     iget v1, p0, Lcom/github/clans/fab/FloatingActionMenu;->s:I
 
@@ -444,7 +444,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->s:I
 
     .line 1137
-    sget v0, Lcom/github/clans/fab/a$e;->T:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_labels_paddingBottom:I
 
     iget v1, p0, Lcom/github/clans/fab/FloatingActionMenu;->t:I
 
@@ -455,7 +455,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->t:I
 
     .line 1138
-    sget v0, Lcom/github/clans/fab/a$e;->U:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_labels_paddingLeft:I
 
     iget v1, p0, Lcom/github/clans/fab/FloatingActionMenu;->u:I
 
@@ -466,7 +466,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->u:I
 
     .line 1139
-    sget v0, Lcom/github/clans/fab/a$e;->ac:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_labels_textColor:I
 
     invoke-virtual {v2, v0}, Landroid/content/res/TypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
 
@@ -490,13 +490,13 @@
 
     .line 1144
     :cond_0
-    sget v0, Lcom/github/clans/fab/a$e;->ad:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_labels_textSize:I
 
     invoke-virtual {p0}, Lcom/github/clans/fab/FloatingActionMenu;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    sget v3, Lcom/github/clans/fab/a$b;->c:I
+    sget v3, Lcom/github/clans/fab/R$dimen;->labels_text_size:I
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -509,7 +509,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->w:F
 
     .line 1145
-    sget v0, Lcom/github/clans/fab/a$e;->M:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_labels_cornerRadius:I
 
     iget v1, p0, Lcom/github/clans/fab/FloatingActionMenu;->x:I
 
@@ -520,7 +520,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->x:I
 
     .line 1146
-    sget v0, Lcom/github/clans/fab/a$e;->Z:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_labels_showShadow:I
 
     const/4 v1, 0x1
 
@@ -531,7 +531,7 @@
     iput-boolean v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->y:Z
 
     .line 1147
-    sget v0, Lcom/github/clans/fab/a$e;->J:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_labels_colorNormal:I
 
     const v1, -0xcccccd
 
@@ -542,7 +542,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->z:I
 
     .line 1148
-    sget v0, Lcom/github/clans/fab/a$e;->K:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_labels_colorPressed:I
 
     const v1, -0xbbbbbc
 
@@ -553,7 +553,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->A:I
 
     .line 1149
-    sget v0, Lcom/github/clans/fab/a$e;->L:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_labels_colorRipple:I
 
     const v1, 0x66ffffff
 
@@ -564,7 +564,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->B:I
 
     .line 1150
-    sget v0, Lcom/github/clans/fab/a$e;->al:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_showShadow:I
 
     const/4 v1, 0x1
 
@@ -575,7 +575,7 @@
     iput-boolean v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->C:Z
 
     .line 1151
-    sget v0, Lcom/github/clans/fab/a$e;->ah:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_shadowColor:I
 
     const/high16 v1, 0x66000000
 
@@ -586,7 +586,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->D:I
 
     .line 1152
-    sget v0, Lcom/github/clans/fab/a$e;->ai:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_shadowRadius:I
 
     iget v1, p0, Lcom/github/clans/fab/FloatingActionMenu;->E:F
 
@@ -597,7 +597,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->E:F
 
     .line 1153
-    sget v0, Lcom/github/clans/fab/a$e;->aj:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_shadowXOffset:I
 
     iget v1, p0, Lcom/github/clans/fab/FloatingActionMenu;->F:F
 
@@ -608,7 +608,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->F:F
 
     .line 1154
-    sget v0, Lcom/github/clans/fab/a$e;->ak:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_shadowYOffset:I
 
     iget v1, p0, Lcom/github/clans/fab/FloatingActionMenu;->G:F
 
@@ -619,7 +619,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->G:F
 
     .line 1155
-    sget v0, Lcom/github/clans/fab/a$e;->B:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_colorNormal:I
 
     const v1, -0x25bcca
 
@@ -630,7 +630,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->H:I
 
     .line 1156
-    sget v0, Lcom/github/clans/fab/a$e;->C:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_colorPressed:I
 
     const v1, -0x18afbd
 
@@ -641,7 +641,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->I:I
 
     .line 1157
-    sget v0, Lcom/github/clans/fab/a$e;->D:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_colorRipple:I
 
     const v1, -0x66000001
 
@@ -652,7 +652,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->J:I
 
     .line 1158
-    sget v0, Lcom/github/clans/fab/a$e;->w:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_animationDelayPerItem:I
 
     const/16 v1, 0x32
 
@@ -663,7 +663,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->L:I
 
     .line 1159
-    sget v0, Lcom/github/clans/fab/a$e;->z:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_buttonId:I
 
     const/4 v1, -0x1
 
@@ -674,7 +674,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->M:I
 
     .line 1160
-    sget v0, Lcom/github/clans/fab/a$e;->I:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_icon:I
 
     invoke-virtual {v2, v0}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -692,7 +692,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/github/clans/fab/a$c;->a:I
+    sget v1, Lcom/github/clans/fab/R$drawable;->fab_add:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -702,7 +702,7 @@
 
     .line 1164
     :cond_1
-    sget v0, Lcom/github/clans/fab/a$e;->aa:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_labels_singleLine:I
 
     const/4 v1, 0x0
 
@@ -713,7 +713,7 @@
     iput-boolean v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->Q:Z
 
     .line 1165
-    sget v0, Lcom/github/clans/fab/a$e;->O:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_labels_ellipsize:I
 
     const/4 v1, 0x0
 
@@ -724,7 +724,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->R:I
 
     .line 1166
-    sget v0, Lcom/github/clans/fab/a$e;->R:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_labels_maxLines:I
 
     const/4 v1, -0x1
 
@@ -735,7 +735,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->S:I
 
     .line 1167
-    sget v0, Lcom/github/clans/fab/a$e;->H:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_fab_size:I
 
     const/4 v1, 0x0
 
@@ -746,7 +746,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->T:I
 
     .line 1168
-    sget v0, Lcom/github/clans/fab/a$e;->ab:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_labels_style:I
 
     const/4 v1, 0x0
 
@@ -757,7 +757,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->U:I
 
     .line 1169
-    sget v0, Lcom/github/clans/fab/a$e;->N:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_labels_customFont:I
 
     invoke-virtual {v2, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -790,7 +790,7 @@
 
     .line 1177
     :cond_2
-    sget v0, Lcom/github/clans/fab/a$e;->ae:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_openDirection:I
 
     const/4 v1, 0x0
 
@@ -801,7 +801,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->ag:I
 
     .line 1178
-    sget v0, Lcom/github/clans/fab/a$e;->y:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_backgroundColor:I
 
     const/4 v1, 0x0
 
@@ -812,7 +812,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->ak:I
 
     .line 1180
-    sget v0, Lcom/github/clans/fab/a$e;->F:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_fab_label:I
 
     invoke-virtual {v2, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -826,7 +826,7 @@
     iput-boolean v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->ao:Z
 
     .line 1182
-    sget v0, Lcom/github/clans/fab/a$e;->F:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_fab_label:I
 
     invoke-virtual {v2, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -836,7 +836,7 @@
 
     .line 1185
     :cond_3
-    sget v0, Lcom/github/clans/fab/a$e;->S:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_labels_padding:I
 
     invoke-virtual {v2, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -845,7 +845,7 @@
     if-eqz v0, :cond_4
 
     .line 1186
-    sget v0, Lcom/github/clans/fab/a$e;->S:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_labels_padding:I
 
     const/4 v1, 0x0
 
@@ -894,7 +894,7 @@
     iput-object v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->am:Landroid/content/Context;
 
     .line 1193
-    sget v0, Lcom/github/clans/fab/a$e;->ag:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_plus_rotation_right:I
 
     iget v1, p0, Lcom/github/clans/fab/FloatingActionMenu;->c:F
 
@@ -905,7 +905,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->c:F
 
     .line 1194
-    sget v0, Lcom/github/clans/fab/a$e;->af:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_plus_rotation_left:I
 
     iget v1, p0, Lcom/github/clans/fab/FloatingActionMenu;->b:F
 
@@ -916,7 +916,7 @@
     iput v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->b:F
 
     .line 1195
-    sget v0, Lcom/github/clans/fab/a$e;->x:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_animation_time:I
 
     iget v1, p0, Lcom/github/clans/fab/FloatingActionMenu;->a:I
 
@@ -1079,7 +1079,7 @@
 
     iget v3, p0, Lcom/github/clans/fab/FloatingActionMenu;->E:F
 
-    invoke-static {v1, v3}, Lcom/github/clans/fab/b;->a(Landroid/content/Context;F)I
+    invoke-static {v1, v3}, Lcom/github/clans/fab/a;->a(Landroid/content/Context;F)I
 
     move-result v1
 
@@ -1094,7 +1094,7 @@
 
     iget v3, p0, Lcom/github/clans/fab/FloatingActionMenu;->F:F
 
-    invoke-static {v1, v3}, Lcom/github/clans/fab/b;->a(Landroid/content/Context;F)I
+    invoke-static {v1, v3}, Lcom/github/clans/fab/a;->a(Landroid/content/Context;F)I
 
     move-result v1
 
@@ -1109,7 +1109,7 @@
 
     iget v3, p0, Lcom/github/clans/fab/FloatingActionMenu;->G:F
 
-    invoke-static {v1, v3}, Lcom/github/clans/fab/b;->a(Landroid/content/Context;F)I
+    invoke-static {v1, v3}, Lcom/github/clans/fab/a;->a(Landroid/content/Context;F)I
 
     move-result v1
 
@@ -1295,9 +1295,9 @@
     invoke-virtual {v0, v4, v5}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
     .line 3205
-    sget v0, Lcom/github/clans/fab/a$e;->G:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_fab_show_animation:I
 
-    sget v1, Lcom/github/clans/fab/a$a;->b:I
+    sget v1, Lcom/github/clans/fab/R$anim;->fab_scale_up:I
 
     invoke-virtual {v2, v0, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -1332,9 +1332,9 @@
     iput-object v0, p0, Lcom/github/clans/fab/FloatingActionMenu;->ad:Landroid/view/animation/Animation;
 
     .line 3209
-    sget v0, Lcom/github/clans/fab/a$e;->E:I
+    sget v0, Lcom/github/clans/fab/R$styleable;->FloatingActionMenu_menu_fab_hide_animation:I
 
-    sget v1, Lcom/github/clans/fab/a$a;->a:I
+    sget v1, Lcom/github/clans/fab/R$anim;->fab_scale_down:I
 
     invoke-virtual {v2, v0, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -1376,13 +1376,13 @@
 
     .line 1131
     :cond_7
-    sget v0, Lcom/github/clans/fab/a$a;->c:I
+    sget v0, Lcom/github/clans/fab/R$anim;->fab_slide_in_from_left:I
 
     goto/16 :goto_0
 
     .line 1133
     :cond_8
-    sget v0, Lcom/github/clans/fab/a$a;->e:I
+    sget v0, Lcom/github/clans/fab/R$anim;->fab_slide_out_to_left:I
 
     goto/16 :goto_1
 
@@ -2140,7 +2140,7 @@
     check-cast v0, Lcom/github/clans/fab/FloatingActionButton;
 
     .line 4467
-    sget v3, Lcom/github/clans/fab/a$d;->a:I
+    sget v3, Lcom/github/clans/fab/R$id;->fab_label:I
 
     invoke-virtual {v0, v3}, Lcom/github/clans/fab/FloatingActionButton;->getTag(I)Ljava/lang/Object;
 
@@ -2248,7 +2248,7 @@
     invoke-virtual {p0, v6}, Lcom/github/clans/fab/FloatingActionMenu;->addView(Landroid/view/View;)V
 
     .line 4536
-    sget v3, Lcom/github/clans/fab/a$d;->a:I
+    sget v3, Lcom/github/clans/fab/R$id;->fab_label:I
 
     invoke-virtual {v0, v3, v6}, Lcom/github/clans/fab/FloatingActionButton;->setTag(ILjava/lang/Object;)V
 
@@ -2698,7 +2698,7 @@
 
     .line 412
     :cond_1
-    sget v2, Lcom/github/clans/fab/a$d;->a:I
+    sget v2, Lcom/github/clans/fab/R$id;->fab_label:I
 
     invoke-virtual {v0, v2}, Lcom/github/clans/fab/FloatingActionButton;->getTag(I)Ljava/lang/Object;
 
@@ -3052,7 +3052,7 @@
     add-int v8, v0, v1
 
     .line 340
-    sget v0, Lcom/github/clans/fab/a$d;->a:I
+    sget v0, Lcom/github/clans/fab/R$id;->fab_label:I
 
     invoke-virtual {v2, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 

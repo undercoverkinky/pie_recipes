@@ -25,7 +25,7 @@
     .locals 3
 
     .prologue
-    .line 911
+    .line 915
     invoke-static {}, Lcom/rounds/kik/media/video/LocalCameraManager$CameraOrientation;->values()[Lcom/rounds/kik/media/video/LocalCameraManager$CameraOrientation;
 
     move-result-object v0
@@ -67,7 +67,7 @@
     :try_end_1
     .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_7
 
-    .line 345
+    .line 349
     :goto_1
     invoke-static {}, Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;->values()[Lcom/rounds/kik/media/video/LocalCameraManager$CameraMsgID;
 

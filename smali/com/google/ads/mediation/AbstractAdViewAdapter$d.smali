@@ -2,7 +2,7 @@
 .super Lcom/google/android/gms/ads/AdListener;
 
 # interfaces
-.implements Lcom/google/android/gms/ads/internal/client/zza;
+.implements Lcom/google/android/gms/internal/zzis;
 
 
 # annotations
@@ -17,9 +17,9 @@
 
 
 # instance fields
-.field final a:Lcom/google/ads/mediation/AbstractAdViewAdapter;
+.field private a:Lcom/google/ads/mediation/AbstractAdViewAdapter;
 
-.field final b:Lcom/google/android/gms/ads/mediation/MediationInterstitialListener;
+.field private b:Lcom/google/android/gms/ads/mediation/MediationInterstitialListener;
 
 
 # direct methods

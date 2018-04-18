@@ -1,139 +1,151 @@
 .class final Lio/branch/referral/j$1;
-.super Landroid/webkit/WebViewClient;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/reflect/InvocationHandler;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lio/branch/referral/j;->b(Lio/branch/referral/j$a;Landroid/content/Context;Lio/branch/referral/j$b;)V
+    value = Lio/branch/referral/j;->a(Landroid/content/Context;Lio/branch/referral/j$a;)Ljava/lang/Boolean;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x8
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lio/branch/referral/j$a;
+.field final synthetic a:Ljava/lang/Class;
 
-.field final synthetic b:Lio/branch/referral/j$b;
-
-.field final synthetic c:Landroid/webkit/WebView;
-
-.field final synthetic d:Lio/branch/referral/j;
+.field final synthetic b:Lio/branch/referral/j$a;
 
 
 # direct methods
-.method constructor <init>(Lio/branch/referral/j;Lio/branch/referral/j$a;Lio/branch/referral/j$b;Landroid/webkit/WebView;)V
+.method constructor <init>(Ljava/lang/Class;Lio/branch/referral/j$a;)V
     .locals 0
 
     .prologue
-    .line 135
-    iput-object p1, p0, Lio/branch/referral/j$1;->d:Lio/branch/referral/j;
+    .line 30
+    iput-object p1, p0, Lio/branch/referral/j$1;->a:Ljava/lang/Class;
 
-    iput-object p2, p0, Lio/branch/referral/j$1;->a:Lio/branch/referral/j$a;
+    iput-object p2, p0, Lio/branch/referral/j$1;->b:Lio/branch/referral/j$a;
 
-    iput-object p3, p0, Lio/branch/referral/j$1;->b:Lio/branch/referral/j$b;
-
-    iput-object p4, p0, Lio/branch/referral/j$1;->c:Landroid/webkit/WebView;
-
-    invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Throwable;
+        }
+    .end annotation
 
     .prologue
-    .line 162
-    invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
+    const/4 v1, 0x0
 
-    .line 163
-    iget-object v0, p0, Lio/branch/referral/j$1;->d:Lio/branch/referral/j;
+    const/4 v5, 0x0
 
-    iget-object v1, p0, Lio/branch/referral/j$1;->a:Lio/branch/referral/j$a;
+    .line 33
+    invoke-virtual {p2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
-    iget-object v2, p0, Lio/branch/referral/j$1;->b:Lio/branch/referral/j$b;
+    move-result-object v0
 
-    iget-object v3, p0, Lio/branch/referral/j$1;->c:Landroid/webkit/WebView;
+    const-string v2, "onDeferredAppLinkDataFetched"
 
-    invoke-static {v0, v1, v2, v3}, Lio/branch/referral/j;->a(Lio/branch/referral/j;Lio/branch/referral/j$a;Lio/branch/referral/j$b;Landroid/webkit/WebView;)V
-
-    .line 164
-    return-void
-.end method
-
-.method public final onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
-    .locals 0
-
-    .prologue
-    .line 151
-    invoke-super {p0, p1, p2, p3}, Landroid/webkit/WebViewClient;->onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
-
-    .line 152
-    return-void
-.end method
-
-.method public final onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    .prologue
-    .line 156
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/webkit/WebViewClient;->onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
-
-    .line 157
-    iget-object v0, p0, Lio/branch/referral/j$1;->d:Lio/branch/referral/j;
-
-    invoke-static {v0}, Lio/branch/referral/j;->b(Lio/branch/referral/j;)Z
-
-    .line 158
-    return-void
-.end method
-
-.method public final shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
-    .locals 2
-
-    .prologue
-    .line 138
-    iget-object v0, p0, Lio/branch/referral/j$1;->d:Lio/branch/referral/j;
-
-    invoke-static {v0, p2}, Lio/branch/referral/j;->a(Lio/branch/referral/j;Ljava/lang/String;)Z
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 139
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_1
 
-    .line 140
-    invoke-virtual {p1, p2}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
+    aget-object v0, p3, v5
 
-    .line 146
-    :cond_0
+    if-eqz v0, :cond_1
+
+    .line 35
+    iget-object v0, p0, Lio/branch/referral/j$1;->a:Ljava/lang/Class;
+
+    aget-object v2, p3, v5
+
+    invoke-virtual {v0, v2}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    .line 36
+    iget-object v2, p0, Lio/branch/referral/j$1;->a:Ljava/lang/Class;
+
+    const-string v3, "getArgumentBundle"
+
+    new-array v4, v5, [Ljava/lang/Class;
+
+    invoke-virtual {v2, v3, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v2
+
+    .line 37
+    const-class v3, Landroid/os/Bundle;
+
+    new-array v4, v5, [Ljava/lang/Object;
+
+    invoke-virtual {v2, v0, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/Bundle;
+
+    .line 39
+    if-eqz v0, :cond_2
+
+    .line 40
+    const-string v2, "com.facebook.platform.APPLINK_NATIVE_URL"
+
+    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 43
     :goto_0
-    return v0
+    iget-object v2, p0, Lio/branch/referral/j$1;->b:Lio/branch/referral/j$a;
 
-    .line 142
+    if-eqz v2, :cond_0
+
+    .line 44
+    iget-object v2, p0, Lio/branch/referral/j$1;->b:Lio/branch/referral/j$a;
+
+    invoke-interface {v2, v0}, Lio/branch/referral/j$a;->a(Ljava/lang/String;)V
+
+    .line 52
+    :cond_0
+    :goto_1
+    return-object v1
+
+    .line 48
     :cond_1
-    iget-object v1, p0, Lio/branch/referral/j$1;->d:Lio/branch/referral/j;
+    iget-object v0, p0, Lio/branch/referral/j$1;->b:Lio/branch/referral/j$a;
 
-    invoke-static {v1}, Lio/branch/referral/j;->a(Lio/branch/referral/j;)Landroid/app/Dialog;
+    if-eqz v0, :cond_0
 
-    move-result-object v1
+    .line 49
+    iget-object v0, p0, Lio/branch/referral/j$1;->b:Lio/branch/referral/j$a;
 
-    if-eqz v1, :cond_0
+    invoke-interface {v0, v1}, Lio/branch/referral/j$a;->a(Ljava/lang/String;)V
 
-    .line 143
-    iget-object v1, p0, Lio/branch/referral/j$1;->d:Lio/branch/referral/j;
+    goto :goto_1
 
-    invoke-static {v1}, Lio/branch/referral/j;->a(Lio/branch/referral/j;)Landroid/app/Dialog;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/app/Dialog;->dismiss()V
+    :cond_2
+    move-object v0, v1
 
     goto :goto_0
 .end method

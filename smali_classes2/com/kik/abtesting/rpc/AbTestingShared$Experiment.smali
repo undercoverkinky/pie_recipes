@@ -186,6 +186,7 @@
 
     invoke-virtual {p0}, Lcom/kik/abtesting/rpc/AbTestingShared$Experiment;->makeExtensionsImmutable()V
 
+    .line 154
     throw v0
 
     .line 134

@@ -114,7 +114,7 @@
     return-object p2
 .end method
 
-.method public final a(Lcom/kik/events/c;Lcom/kik/events/e;Lcom/kik/events/q;)Lcom/kik/events/e;
+.method public final a(Lcom/kik/events/c;Lcom/kik/events/e;Lcom/kik/events/p;)Lcom/kik/events/e;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -128,7 +128,7 @@
             "Lcom/kik/events/c",
             "<TT;>;TU",
             "Listen;",
-            "Lcom/kik/events/q",
+            "Lcom/kik/events/p",
             "<TT;TU;>;)",
             "Lcom/kik/events/e",
             "<TT;>;"
@@ -139,7 +139,7 @@
     .line 89
     new-instance v0, Lcom/kik/events/d$1;
 
-    invoke-direct {v0, p0, p2, p3}, Lcom/kik/events/d$1;-><init>(Lcom/kik/events/d;Lcom/kik/events/e;Lcom/kik/events/q;)V
+    invoke-direct {v0, p0, p2, p3}, Lcom/kik/events/d$1;-><init>(Lcom/kik/events/d;Lcom/kik/events/e;Lcom/kik/events/p;)V
 
     invoke-virtual {p0, p1, v0}, Lcom/kik/events/d;->a(Lcom/kik/events/c;Lcom/kik/events/e;)Lcom/kik/events/e;
 

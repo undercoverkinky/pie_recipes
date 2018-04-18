@@ -41,7 +41,7 @@
 
 
 # virtual methods
-.method public getValue()Lcom/google/gson/j;
+.method public getValue()Lcom/google/gson/k;
     .locals 4
 
     .prologue
@@ -52,7 +52,7 @@
 
     .line 39
     :try_start_0
-    new-instance v0, Lcom/google/gson/l;
+    new-instance v0, Lcom/google/gson/m;
 
     sget-object v2, Lcom/rounds/kik/analytics/properties/common/Timestamp;->DATE_FORMATTER:Ljava/text/SimpleDateFormat;
 
@@ -64,7 +64,7 @@
 
     move-result-object v2
 
-    invoke-direct {v0, v2}, Lcom/google/gson/l;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v2}, Lcom/google/gson/m;-><init>(Ljava/lang/String;)V
 
     monitor-exit v1
 

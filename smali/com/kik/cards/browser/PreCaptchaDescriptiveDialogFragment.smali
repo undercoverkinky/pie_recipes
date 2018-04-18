@@ -113,7 +113,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/aa;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
+    invoke-static {v0, v1}, Lkik/android/chat/activity/KActivityLauncher;->a(Lkik/android/util/ae;Landroid/content/Context;)Lkik/android/chat/activity/KActivityLauncher$ActivityLaunchDescriptor;
 
     move-result-object v0
 
@@ -125,7 +125,7 @@
 
     invoke-direct {v1, p0}, Lcom/kik/cards/browser/PreCaptchaDescriptiveDialogFragment$2;-><init>(Lcom/kik/cards/browser/PreCaptchaDescriptiveDialogFragment;)V
 
-    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    invoke-virtual {v0, v1}, Lcom/kik/events/Promise;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 
     .line 99
     return-void
@@ -142,7 +142,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a026e
+    const v1, 0x7f090282
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -160,7 +160,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a026d
+    const v1, 0x7f090281
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -174,7 +174,7 @@
 
     .prologue
     .line 67
-    const v0, 0x7f0201f0
+    const v0, 0x7f02024b
 
     return v0
 .end method
@@ -188,7 +188,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0416
+    const v1, 0x7f09042a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -221,9 +221,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lkik/android/chat/c;
+    check-cast v0, Lkik/android/chat/e;
 
-    invoke-interface {v0}, Lkik/android/chat/c;->a()Lcom/kik/components/CoreComponent;
+    invoke-interface {v0}, Lkik/android/chat/e;->a()Lcom/kik/components/CoreComponent;
 
     move-result-object v0
 
@@ -255,7 +255,7 @@
     iget-object v2, p0, Lcom/kik/cards/browser/PreCaptchaDescriptiveDialogFragment;->b:Lcom/kik/cards/browser/PreCaptchaDescriptiveDialogFragment$a;
 
     .line 47
-    invoke-virtual {v2}, Lcom/kik/cards/browser/PreCaptchaDescriptiveDialogFragment$a;->h_()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/kik/cards/browser/PreCaptchaDescriptiveDialogFragment$a;->e_()Ljava/lang/String;
 
     move-result-object v2
 

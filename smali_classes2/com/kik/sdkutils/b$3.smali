@@ -1,11 +1,11 @@
 .class final Lcom/kik/sdkutils/b$3;
-.super Lcom/kik/events/l;
+.super Lcom/kik/events/k;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/kik/sdkutils/b;->a(Lcom/kik/events/l;)Lcom/kik/events/l;
+    value = Lcom/kik/sdkutils/b;->a(Lcom/kik/events/k;)Lcom/kik/events/k;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,25 +15,25 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/kik/events/l",
+        "Lcom/kik/events/k",
         "<TT;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/kik/events/l;
+.field final synthetic a:Lcom/kik/events/k;
 
 
 # direct methods
-.method constructor <init>(Lcom/kik/events/l;)V
+.method constructor <init>(Lcom/kik/events/k;)V
     .locals 0
 
     .prologue
     .line 208
-    iput-object p1, p0, Lcom/kik/sdkutils/b$3;->a:Lcom/kik/events/l;
+    iput-object p1, p0, Lcom/kik/sdkutils/b$3;->a:Lcom/kik/events/k;
 
-    invoke-direct {p0}, Lcom/kik/events/l;-><init>()V
+    invoke-direct {p0}, Lcom/kik/events/k;-><init>()V
 
     return-void
 .end method
@@ -52,9 +52,9 @@
     if-eqz v0, :cond_0
 
     .line 299
-    iget-object v0, p0, Lcom/kik/sdkutils/b$3;->a:Lcom/kik/events/l;
+    iget-object v0, p0, Lcom/kik/sdkutils/b$3;->a:Lcom/kik/events/k;
 
-    invoke-virtual {v0}, Lcom/kik/events/l;->a()V
+    invoke-virtual {v0}, Lcom/kik/events/k;->a()V
 
     .line 310
     :goto_0
@@ -92,9 +92,9 @@
     if-eqz v0, :cond_0
 
     .line 316
-    iget-object v0, p0, Lcom/kik/sdkutils/b$3;->a:Lcom/kik/events/l;
+    iget-object v0, p0, Lcom/kik/sdkutils/b$3;->a:Lcom/kik/events/k;
 
-    invoke-virtual {v0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Object;)V
 
     .line 327
     :goto_0
@@ -127,9 +127,9 @@
     if-eqz v0, :cond_0
 
     .line 282
-    iget-object v0, p0, Lcom/kik/sdkutils/b$3;->a:Lcom/kik/events/l;
+    iget-object v0, p0, Lcom/kik/sdkutils/b$3;->a:Lcom/kik/events/k;
 
-    invoke-virtual {v0, p1}, Lcom/kik/events/l;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, p1}, Lcom/kik/events/k;->a(Ljava/lang/Throwable;)V
 
     .line 293
     :goto_0
@@ -162,9 +162,9 @@
     if-eqz v0, :cond_0
 
     .line 214
-    iget-object v0, p0, Lcom/kik/sdkutils/b$3;->a:Lcom/kik/events/l;
+    iget-object v0, p0, Lcom/kik/sdkutils/b$3;->a:Lcom/kik/events/k;
 
-    invoke-virtual {v0}, Lcom/kik/events/l;->b()V
+    invoke-virtual {v0}, Lcom/kik/events/k;->b()V
 
     .line 225
     :goto_0
@@ -202,9 +202,9 @@
     if-eqz v0, :cond_0
 
     .line 231
-    iget-object v0, p0, Lcom/kik/sdkutils/b$3;->a:Lcom/kik/events/l;
+    iget-object v0, p0, Lcom/kik/sdkutils/b$3;->a:Lcom/kik/events/k;
 
-    invoke-virtual {v0, p1}, Lcom/kik/events/l;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lcom/kik/events/k;->b(Ljava/lang/Object;)V
 
     .line 242
     :goto_0
@@ -237,9 +237,9 @@
     if-eqz v0, :cond_0
 
     .line 265
-    iget-object v0, p0, Lcom/kik/sdkutils/b$3;->a:Lcom/kik/events/l;
+    iget-object v0, p0, Lcom/kik/sdkutils/b$3;->a:Lcom/kik/events/k;
 
-    invoke-virtual {v0, p1}, Lcom/kik/events/l;->b(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, p1}, Lcom/kik/events/k;->b(Ljava/lang/Throwable;)V
 
     .line 276
     :goto_0
@@ -272,9 +272,9 @@
     if-eqz v0, :cond_0
 
     .line 248
-    iget-object v0, p0, Lcom/kik/sdkutils/b$3;->a:Lcom/kik/events/l;
+    iget-object v0, p0, Lcom/kik/sdkutils/b$3;->a:Lcom/kik/events/k;
 
-    invoke-virtual {v0}, Lcom/kik/events/l;->c()V
+    invoke-virtual {v0}, Lcom/kik/events/k;->c()V
 
     .line 259
     :goto_0

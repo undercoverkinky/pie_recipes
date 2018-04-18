@@ -50,15 +50,15 @@
     .prologue
     const/4 v0, -0x2
 
-    .line 802
+    .line 841
     invoke-direct {p0, v0, v0}, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;-><init>(II)V
 
-    .line 803
+    .line 842
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/support/v7/widget/ActionMenuView$LayoutParams;->a:Z
 
-    .line 804
+    .line 843
     return-void
 .end method
 
@@ -66,10 +66,10 @@
     .locals 0
 
     .prologue
-    .line 789
+    .line 828
     invoke-direct {p0, p1, p2}, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 790
+    .line 829
     return-void
 .end method
 
@@ -77,15 +77,15 @@
     .locals 1
 
     .prologue
-    .line 797
+    .line 836
     invoke-direct {p0, p1}, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 798
+    .line 837
     iget-boolean v0, p1, Landroid/support/v7/widget/ActionMenuView$LayoutParams;->a:Z
 
     iput-boolean v0, p0, Landroid/support/v7/widget/ActionMenuView$LayoutParams;->a:Z
 
-    .line 799
+    .line 838
     return-void
 .end method
 
@@ -93,9 +93,9 @@
     .locals 0
 
     .prologue
-    .line 793
+    .line 832
     invoke-direct {p0, p1}, Landroid/support/v7/widget/LinearLayoutCompat$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 794
+    .line 833
     return-void
 .end method

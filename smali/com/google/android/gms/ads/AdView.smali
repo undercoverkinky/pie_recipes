@@ -6,9 +6,13 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/google/android/gms/ads/BaseAdView;-><init>(Landroid/content/Context;I)V
+
+    const-string v0, "Context cannot be null"
+
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/zzbp;->zzb(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -16,7 +20,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/gms/ads/BaseAdView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -26,7 +30,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 1
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/google/android/gms/ads/BaseAdView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
@@ -73,16 +77,6 @@
     return-object v0
 .end method
 
-.method public final bridge synthetic getInAppPurchaseListener()Lcom/google/android/gms/ads/purchase/InAppPurchaseListener;
-    .locals 1
-
-    invoke-super {p0}, Lcom/google/android/gms/ads/BaseAdView;->getInAppPurchaseListener()Lcom/google/android/gms/ads/purchase/InAppPurchaseListener;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public final bridge synthetic getMediationAdapterClassName()Ljava/lang/String;
     .locals 1
 
@@ -91,6 +85,28 @@
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public final getVideoController()Lcom/google/android/gms/ads/VideoController;
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/AdView;->zzaky:Lcom/google/android/gms/internal/zzli;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/android/gms/ads/AdView;->zzaky:Lcom/google/android/gms/internal/zzli;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/zzli;->getVideoController()Lcom/google/android/gms/ads/VideoController;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
 .method public final bridge synthetic isLoading()Z
@@ -147,22 +163,6 @@
     .locals 0
 
     invoke-super {p0, p1}, Lcom/google/android/gms/ads/BaseAdView;->setAdUnitId(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final bridge synthetic setInAppPurchaseListener(Lcom/google/android/gms/ads/purchase/InAppPurchaseListener;)V
-    .locals 0
-
-    invoke-super {p0, p1}, Lcom/google/android/gms/ads/BaseAdView;->setInAppPurchaseListener(Lcom/google/android/gms/ads/purchase/InAppPurchaseListener;)V
-
-    return-void
-.end method
-
-.method public final bridge synthetic setPlayStorePurchaseParams(Lcom/google/android/gms/ads/purchase/PlayStorePurchaseListener;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-super {p0, p1, p2}, Lcom/google/android/gms/ads/BaseAdView;->setPlayStorePurchaseParams(Lcom/google/android/gms/ads/purchase/PlayStorePurchaseListener;Ljava/lang/String;)V
 
     return-void
 .end method

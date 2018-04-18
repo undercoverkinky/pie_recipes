@@ -32,16 +32,16 @@
     .prologue
     const/4 v0, 0x2
 
-    .line 114
+    .line 115
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 115
+    .line 116
     iput v0, p0, Landroid/support/v4/print/PrintHelper$PrintHelperStubImpl;->mScaleMode:I
 
-    .line 116
+    .line 117
     iput v0, p0, Landroid/support/v4/print/PrintHelper$PrintHelperStubImpl;->mColorMode:I
 
-    .line 117
+    .line 118
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/support/v4/print/PrintHelper$PrintHelperStubImpl;->mOrientation:I
@@ -53,7 +53,7 @@
     .locals 0
 
     .prologue
-    .line 114
+    .line 115
     invoke-direct {p0}, Landroid/support/v4/print/PrintHelper$PrintHelperStubImpl;-><init>()V
 
     return-void
@@ -65,7 +65,7 @@
     .locals 1
 
     .prologue
-    .line 125
+    .line 126
     iget v0, p0, Landroid/support/v4/print/PrintHelper$PrintHelperStubImpl;->mColorMode:I
 
     return v0
@@ -75,7 +75,7 @@
     .locals 1
 
     .prologue
-    .line 137
+    .line 138
     iget v0, p0, Landroid/support/v4/print/PrintHelper$PrintHelperStubImpl;->mOrientation:I
 
     return v0
@@ -85,7 +85,7 @@
     .locals 1
 
     .prologue
-    .line 141
+    .line 142
     iget v0, p0, Landroid/support/v4/print/PrintHelper$PrintHelperStubImpl;->mScaleMode:I
 
     return v0
@@ -95,7 +95,7 @@
     .locals 0
 
     .prologue
-    .line 146
+    .line 147
     return-void
 .end method
 
@@ -103,7 +103,7 @@
     .locals 0
 
     .prologue
-    .line 150
+    .line 151
     return-void
 .end method
 
@@ -111,10 +111,10 @@
     .locals 0
 
     .prologue
-    .line 130
+    .line 131
     iput p1, p0, Landroid/support/v4/print/PrintHelper$PrintHelperStubImpl;->mColorMode:I
 
-    .line 131
+    .line 132
     return-void
 .end method
 
@@ -122,7 +122,7 @@
     .locals 0
 
     .prologue
-    .line 134
+    .line 135
     iput p1, p0, Landroid/support/v4/print/PrintHelper$PrintHelperStubImpl;->mOrientation:I
 
     return-void
@@ -132,9 +132,9 @@
     .locals 0
 
     .prologue
-    .line 120
+    .line 121
     iput p1, p0, Landroid/support/v4/print/PrintHelper$PrintHelperStubImpl;->mScaleMode:I
 
-    .line 121
+    .line 122
     return-void
 .end method

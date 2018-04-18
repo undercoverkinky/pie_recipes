@@ -33,23 +33,23 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 98
+    .line 101
     iput-object p1, p0, Lcom/rounds/kik/media/video/LocalCameraManager$a;->e:Lcom/rounds/kik/media/video/LocalCameraManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 99
+    .line 102
     iput v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager$a;->a:I
 
-    .line 100
+    .line 103
     iput v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager$a;->b:I
 
-    .line 101
+    .line 104
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager$a;->d:[Lcom/vidyo/LmiDeviceManager/LmiVideoCapturerCapability;
 
-    .line 102
+    .line 105
     const/4 v0, 0x2
 
     new-array v0, v0, [I
@@ -58,10 +58,10 @@
 
     iput-object v0, p0, Lcom/rounds/kik/media/video/LocalCameraManager$a;->c:[I
 
-    .line 103
+    .line 106
     return-void
 
-    .line 102
+    .line 105
     :array_0
     .array-data 4
         0x0

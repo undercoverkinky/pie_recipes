@@ -1,4 +1,4 @@
-.class public Lcom/google/android/gms/common/zza;
+.class public final Lcom/google/android/gms/common/zza;
 .super Ljava/lang/Object;
 
 # interfaces
@@ -6,9 +6,9 @@
 
 
 # instance fields
-.field zzakh:Z
+.field private zzfex:Z
 
-.field private final zzaki:Ljava/util/concurrent/BlockingQueue;
+.field private final zzfey:Ljava/util/concurrent/BlockingQueue;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/BlockingQueue",
@@ -28,37 +28,37 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/google/android/gms/common/zza;->zzakh:Z
+    iput-boolean v0, p0, Lcom/google/android/gms/common/zza;->zzfex:Z
 
     new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/gms/common/zza;->zzaki:Ljava/util/concurrent/BlockingQueue;
+    iput-object v0, p0, Lcom/google/android/gms/common/zza;->zzfey:Ljava/util/concurrent/BlockingQueue;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
+.method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/common/zza;->zzaki:Ljava/util/concurrent/BlockingQueue;
+    iget-object v0, p0, Lcom/google/android/gms/common/zza;->zzfey:Ljava/util/concurrent/BlockingQueue;
 
     invoke-interface {v0, p2}, Ljava/util/concurrent/BlockingQueue;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
-.method public onServiceDisconnected(Landroid/content/ComponentName;)V
+.method public final onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 0
 
     return-void
 .end method
 
-.method public zza(JLjava/util/concurrent/TimeUnit;)Landroid/os/IBinder;
-    .locals 3
+.method public final zza(JLjava/util/concurrent/TimeUnit;)Landroid/os/IBinder;
+    .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/InterruptedException;,
@@ -68,9 +68,9 @@
 
     const-string v0, "BlockingServiceConnection.getServiceWithTimeout() called on main thread"
 
-    invoke-static {v0}, Lcom/google/android/gms/common/internal/zzaa;->zzdd(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/google/android/gms/common/internal/zzbp;->zzgg(Ljava/lang/String;)V
 
-    iget-boolean v0, p0, Lcom/google/android/gms/common/zza;->zzakh:Z
+    iget-boolean v0, p0, Lcom/google/android/gms/common/zza;->zzfex:Z
 
     if-eqz v0, :cond_0
 
@@ -85,11 +85,13 @@
     :cond_0
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/google/android/gms/common/zza;->zzakh:Z
+    iput-boolean v0, p0, Lcom/google/android/gms/common/zza;->zzfex:Z
 
-    iget-object v0, p0, Lcom/google/android/gms/common/zza;->zzaki:Ljava/util/concurrent/BlockingQueue;
+    iget-object v0, p0, Lcom/google/android/gms/common/zza;->zzfey:Ljava/util/concurrent/BlockingQueue;
 
-    invoke-interface {v0, p1, p2, p3}, Ljava/util/concurrent/BlockingQueue;->poll(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    const-wide/16 v2, 0x2710
+
+    invoke-interface {v0, v2, v3, p3}, Ljava/util/concurrent/BlockingQueue;->poll(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -109,7 +111,7 @@
     return-object v0
 .end method
 
-.method public zzqU()Landroid/os/IBinder;
+.method public final zzaev()Landroid/os/IBinder;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -119,9 +121,9 @@
 
     const-string v0, "BlockingServiceConnection.getService() called on main thread"
 
-    invoke-static {v0}, Lcom/google/android/gms/common/internal/zzaa;->zzdd(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/google/android/gms/common/internal/zzbp;->zzgg(Ljava/lang/String;)V
 
-    iget-boolean v0, p0, Lcom/google/android/gms/common/zza;->zzakh:Z
+    iget-boolean v0, p0, Lcom/google/android/gms/common/zza;->zzfex:Z
 
     if-eqz v0, :cond_0
 
@@ -136,9 +138,9 @@
     :cond_0
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/google/android/gms/common/zza;->zzakh:Z
+    iput-boolean v0, p0, Lcom/google/android/gms/common/zza;->zzfex:Z
 
-    iget-object v0, p0, Lcom/google/android/gms/common/zza;->zzaki:Ljava/util/concurrent/BlockingQueue;
+    iget-object v0, p0, Lcom/google/android/gms/common/zza;->zzfey:Ljava/util/concurrent/BlockingQueue;
 
     invoke-interface {v0}, Ljava/util/concurrent/BlockingQueue;->take()Ljava/lang/Object;
 

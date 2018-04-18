@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract a()Lcom/kik/cards/web/userdata/b;
+.method public abstract b()Lcom/kik/cards/web/userdata/b;
 .end method

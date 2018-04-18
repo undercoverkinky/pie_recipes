@@ -33,19 +33,33 @@
 
     .prologue
     .line 28
+    invoke-static {}, Lcom/rounds/kik/VideoAppModule;->isReporterReady()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 29
+    const-string v0, "-1"
+
+    .line 32
+    :goto_0
+    return-object v0
+
+    .line 31
+    :cond_0
     invoke-static {}, Lcom/rounds/kik/VideoAppModule;->conversation()Lcom/rounds/kik/Conversation;
 
     move-result-object v0
 
-    .line 29
-    if-eqz v0, :cond_0
+    .line 32
+    if-eqz v0, :cond_1
 
     iget-object v0, v0, Lcom/rounds/kik/Conversation;->id:Ljava/lang/String;
 
-    :goto_0
-    return-object v0
+    goto :goto_0
 
-    :cond_0
+    :cond_1
     const-string v0, "-1"
 
     goto :goto_0

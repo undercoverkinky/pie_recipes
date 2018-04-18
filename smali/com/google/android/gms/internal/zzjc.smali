@@ -1,219 +1,187 @@
-.class public Lcom/google/android/gms/internal/zzjc;
-.super Lcom/google/android/gms/ads/internal/reward/mediation/client/zza$zza;
+.class public final Lcom/google/android/gms/internal/zzjc;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
 
 
 # annotations
-.annotation runtime Lcom/google/android/gms/internal/zzig;
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Lcom/google/android/gms/internal/zzjb;",
+        ">;"
+    }
 .end annotation
 
 
-# instance fields
-.field private zzOF:Lcom/google/android/gms/internal/zzjd;
-
-.field private zzOM:Lcom/google/android/gms/internal/zzja;
-
-.field private zzON:Lcom/google/android/gms/internal/zzjb;
-
-
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/internal/zzjb;)V
+.method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/google/android/gms/ads/internal/reward/mediation/client/zza$zza;-><init>()V
-
-    iput-object p1, p0, Lcom/google/android/gms/internal/zzjc;->zzON:Lcom/google/android/gms/internal/zzjb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public zza(Lcom/google/android/gms/dynamic/zzd;Lcom/google/android/gms/ads/internal/reward/mediation/client/RewardItemParcel;)V
-    .locals 1
+.method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 13
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzjc;->zzON:Lcom/google/android/gms/internal/zzjb;
+    const/4 v7, 0x0
 
-    if-eqz v0, :cond_0
+    const/4 v10, 0x0
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzjc;->zzON:Lcom/google/android/gms/internal/zzjb;
+    invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzd(Landroid/os/Parcel;)I
 
-    invoke-interface {v0, p2}, Lcom/google/android/gms/internal/zzjb;->zzc(Lcom/google/android/gms/ads/internal/reward/mediation/client/RewardItemParcel;)V
+    move-result v11
 
-    :cond_0
-    return-void
-.end method
+    move v9, v10
 
-.method public zza(Lcom/google/android/gms/internal/zzja;)V
-    .locals 0
+    move v8, v10
 
-    iput-object p1, p0, Lcom/google/android/gms/internal/zzjc;->zzOM:Lcom/google/android/gms/internal/zzja;
+    move v6, v10
 
-    return-void
-.end method
+    move v5, v10
 
-.method public zza(Lcom/google/android/gms/internal/zzjd;)V
-    .locals 0
+    move v4, v10
 
-    iput-object p1, p0, Lcom/google/android/gms/internal/zzjc;->zzOF:Lcom/google/android/gms/internal/zzjd;
+    move v3, v10
 
-    return-void
-.end method
+    move v2, v10
 
-.method public zzb(Lcom/google/android/gms/dynamic/zzd;I)V
-    .locals 1
+    move-object v1, v7
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzjc;->zzOM:Lcom/google/android/gms/internal/zzja;
+    :goto_0
+    invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
-    if-eqz v0, :cond_0
+    move-result v0
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzjc;->zzOM:Lcom/google/android/gms/internal/zzja;
+    if-ge v0, v11, :cond_0
 
-    invoke-interface {v0, p2}, Lcom/google/android/gms/internal/zzja;->zzU(I)V
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    :cond_0
-    return-void
-.end method
+    move-result v0
 
-.method public zzc(Lcom/google/android/gms/dynamic/zzd;I)V
-    .locals 2
+    const v12, 0xffff
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzjc;->zzOF:Lcom/google/android/gms/internal/zzjd;
+    and-int/2addr v12, v0
 
-    if-eqz v0, :cond_0
+    packed-switch v12, :pswitch_data_0
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzjc;->zzOF:Lcom/google/android/gms/internal/zzjd;
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzb(Landroid/os/Parcel;I)V
 
-    invoke-static {p1}, Lcom/google/android/gms/dynamic/zze;->zzx(Lcom/google/android/gms/dynamic/zzd;)Ljava/lang/Object;
+    goto :goto_0
+
+    :pswitch_0
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzq(Landroid/os/Parcel;I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    goto :goto_0
 
-    move-result-object v1
+    :pswitch_1
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzg(Landroid/os/Parcel;I)I
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    move-result v2
 
-    move-result-object v1
+    goto :goto_0
 
-    invoke-interface {v0, v1, p2}, Lcom/google/android/gms/internal/zzjd;->zza(Ljava/lang/String;I)V
+    :pswitch_2
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzg(Landroid/os/Parcel;I)I
+
+    move-result v3
+
+    goto :goto_0
+
+    :pswitch_3
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzc(Landroid/os/Parcel;I)Z
+
+    move-result v4
+
+    goto :goto_0
+
+    :pswitch_4
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzg(Landroid/os/Parcel;I)I
+
+    move-result v5
+
+    goto :goto_0
+
+    :pswitch_5
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzg(Landroid/os/Parcel;I)I
+
+    move-result v6
+
+    goto :goto_0
+
+    :pswitch_6
+    sget-object v7, Lcom/google/android/gms/internal/zzjb;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p1, v0, v7}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzb(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcom/google/android/gms/internal/zzjb;
+
+    move-object v7, v0
+
+    goto :goto_0
+
+    :pswitch_7
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzc(Landroid/os/Parcel;I)Z
+
+    move-result v8
+
+    goto :goto_0
+
+    :pswitch_8
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzc(Landroid/os/Parcel;I)Z
+
+    move-result v9
+
+    goto :goto_0
+
+    :pswitch_9
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzc(Landroid/os/Parcel;I)Z
+
+    move-result v10
+
+    goto :goto_0
 
     :cond_0
-    return-void
+    invoke-static {p1, v11}, Lcom/google/android/gms/common/internal/safeparcel/zzb;->zzaf(Landroid/os/Parcel;I)V
+
+    new-instance v0, Lcom/google/android/gms/internal/zzjb;
+
+    invoke-direct/range {v0 .. v10}, Lcom/google/android/gms/internal/zzjb;-><init>(Ljava/lang/String;IIZII[Lcom/google/android/gms/internal/zzjb;ZZZ)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+        :pswitch_4
+        :pswitch_5
+        :pswitch_6
+        :pswitch_7
+        :pswitch_8
+        :pswitch_9
+    .end packed-switch
 .end method
 
-.method public zzo(Lcom/google/android/gms/dynamic/zzd;)V
+.method public final synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzjc;->zzOM:Lcom/google/android/gms/internal/zzja;
+    new-array v0, p1, [Lcom/google/android/gms/internal/zzjb;
 
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzjc;->zzOM:Lcom/google/android/gms/internal/zzja;
-
-    invoke-interface {v0}, Lcom/google/android/gms/internal/zzja;->zzin()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public zzp(Lcom/google/android/gms/dynamic/zzd;)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzjc;->zzOF:Lcom/google/android/gms/internal/zzjd;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzjc;->zzOF:Lcom/google/android/gms/internal/zzjd;
-
-    invoke-static {p1}, Lcom/google/android/gms/dynamic/zze;->zzx(Lcom/google/android/gms/dynamic/zzd;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lcom/google/android/gms/internal/zzjd;->zzaF(Ljava/lang/String;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public zzq(Lcom/google/android/gms/dynamic/zzd;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzjc;->zzON:Lcom/google/android/gms/internal/zzjb;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzjc;->zzON:Lcom/google/android/gms/internal/zzjb;
-
-    invoke-interface {v0}, Lcom/google/android/gms/internal/zzjb;->onRewardedVideoAdOpened()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public zzr(Lcom/google/android/gms/dynamic/zzd;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzjc;->zzON:Lcom/google/android/gms/internal/zzjb;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzjc;->zzON:Lcom/google/android/gms/internal/zzjb;
-
-    invoke-interface {v0}, Lcom/google/android/gms/internal/zzjb;->onRewardedVideoStarted()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public zzs(Lcom/google/android/gms/dynamic/zzd;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzjc;->zzON:Lcom/google/android/gms/internal/zzjb;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzjc;->zzON:Lcom/google/android/gms/internal/zzjb;
-
-    invoke-interface {v0}, Lcom/google/android/gms/internal/zzjb;->onRewardedVideoAdClosed()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public zzt(Lcom/google/android/gms/dynamic/zzd;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzjc;->zzON:Lcom/google/android/gms/internal/zzjb;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzjc;->zzON:Lcom/google/android/gms/internal/zzjb;
-
-    invoke-interface {v0}, Lcom/google/android/gms/internal/zzjb;->zzim()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public zzu(Lcom/google/android/gms/dynamic/zzd;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzjc;->zzON:Lcom/google/android/gms/internal/zzjb;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/google/android/gms/internal/zzjc;->zzON:Lcom/google/android/gms/internal/zzjb;
-
-    invoke-interface {v0}, Lcom/google/android/gms/internal/zzjb;->onRewardedVideoAdLeftApplication()V
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

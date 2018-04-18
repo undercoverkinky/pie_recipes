@@ -49,7 +49,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Lcom/kik/cards/web/picker/PickerRequest;-><init>(Landroid/os/Parcel;B)V
+    invoke-direct {v0, p1, v1}, Lcom/kik/cards/web/picker/PickerRequest;-><init>(Landroid/os/Parcel;Lcom/kik/cards/web/picker/PickerRequest$1;)V
 
     .line 44
     return-object v0

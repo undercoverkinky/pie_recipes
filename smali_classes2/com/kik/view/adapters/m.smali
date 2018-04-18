@@ -1,75 +1,11 @@
-.class public final Lcom/kik/view/adapters/m;
-.super Lcom/kik/view/adapters/x;
+.class public interface abstract Lcom/kik/view/adapters/m;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field private a:Ljava/lang/String;
-
-.field private b:Ljava/lang/String;
-
-
-# direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
-
-    .prologue
-    .line 16
-    invoke-direct {p0}, Lcom/kik/view/adapters/x;-><init>()V
-
-    .line 17
-    const v0, 0x7f0a023c
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/kik/view/adapters/m;->a:Ljava/lang/String;
-
-    .line 18
-    const v0, 0x7f0a0397
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/kik/view/adapters/m;->b:Ljava/lang/String;
-
-    .line 19
-    return-void
-.end method
-
-
 # virtual methods
-.method public final a(Landroid/widget/Adapter;)V
-    .locals 1
-
-    .prologue
-    .line 27
-    iget-object v0, p0, Lcom/kik/view/adapters/m;->a:Ljava/lang/String;
-
-    invoke-super {p0, v0, p1}, Lcom/kik/view/adapters/x;->f(Ljava/lang/String;Landroid/widget/Adapter;)V
-
-    .line 28
-    return-void
+.method public abstract a(Landroid/database/Cursor;)Z
 .end method
 
-.method public final b(Landroid/widget/Adapter;)V
-    .locals 2
-
-    .prologue
-    .line 40
-    iget-object v0, p0, Lcom/kik/view/adapters/m;->b:Ljava/lang/String;
-
-    .line 1172
-    const/4 v1, 0x1
-
-    invoke-virtual {p0, v0, p1, v1}, Lcom/kik/view/adapters/x;->c(Ljava/lang/String;Landroid/widget/Adapter;Z)V
-
-    .line 41
-    return-void
+.method public abstract b()Z
 .end method
